@@ -6,3 +6,4 @@ p=503 alpha=9521/197064: rotation-order excess 11657, natural excess 10563, forw
 p=647 alpha=10901/258330: rotation-order excess 17661, natural excess 14881, forward arcs 113321 vs 111931, beaten: True
 p=983 alpha=376249/642500: rotation-order excess 34225, natural excess 26541, forward arcs 258439 vs 254597, beaten: True
 p=599 alpha=12767/298528: rotation-order excess 15507, natural excess 14975, forward arcs 97304 vs 97038, beaten: True
+p=887 alpha=348751/880400: rotation-order excess 28235, natural excess 25723, forward arcs 210588 vs 209332, beaten: True

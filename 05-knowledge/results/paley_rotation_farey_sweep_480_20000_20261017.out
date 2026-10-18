@@ -1,0 +1,245 @@
+p = 503  L = 2.942  natural 10563  best rotation 11657 at alpha = 33/683 (direct check 11657)  BEATEN
+p = 599  L = 3.209  natural 14975  best rotation 15507 at alpha = 34/795 (direct check 15507)  BEATEN
+p = 647  L = 2.841  natural 14881  best rotation 17661 at alpha = 33/782 (direct check 17661)  BEATEN
+p = 719  L = 3.632  natural 22289  best rotation 22289 at alpha = 1/719 (direct check 22289)  natural is the best rotation order
+p = 743  L = 2.420  natural 15603  best rotation 22249 at alpha = 93/982 (direct check 22249)  BEATEN
+p = 839  L = 3.579  natural 27687  best rotation 27687 at alpha = 1/839 (direct check 27687)  natural is the best rotation order
+p = 887  L = 3.059  natural 25723  best rotation 28235 at alpha = 532/1343 (direct check 28235)  BEATEN
+p = 911  L = 3.227  natural 28241  best rotation 30327 at alpha = 358/1263 (direct check 30327)  BEATEN
+p = 983  L = 2.705  natural 26541  best rotation 34225 at alpha = 667/1139 (direct check 34225)  BEATEN
+p = 1031  L = 3.424  natural 36085  best rotation 37223 at alpha = 757/1121 (direct check 37223)  BEATEN
+p = 1151  L = 3.797  natural 47191  best rotation 47191 at alpha = 1/1151 (direct check 47191)  natural is the best rotation order
+p = 1223  L = 3.144  natural 42805  best rotation 47733 at alpha = 841/1416 (direct check 47733)  BEATEN
+p = 1231  L = 2.418  natural 33237  best rotation 45927 at alpha = 1275/2191 (direct check 45927)  BEATEN
+p = 1319  L = 3.893  natural 59355  best rotation 59355 at alpha = 1/1319 (direct check 59355)  natural is the best rotation order
+p = 1439  L = 3.230  natural 56121  best rotation 64453 at alpha = 1011/1967 (direct check 64453)  BEATEN
+p = 1487  L = 3.014  natural 55019  best rotation 66887 at alpha = 852/1625 (direct check 66887)  BEATEN
+p = 1511  L = 3.960  natural 74039  best rotation 74039 at alpha = 1/1511 (direct check 74039)  natural is the best rotation order
+p = 1559  L = 4.058  natural 79509  best rotation 79509 at alpha = 1/1559 (direct check 79509)  natural is the best rotation order
+p = 1583  L = 2.606  natural 52239  best rotation 71581 at alpha = 59/1861 (direct check 71581)  BEATEN
+p = 1823  L = 3.311  natural 82035  best rotation 92207 at alpha = 1314/2471 (direct check 92207)  BEATEN
+p = 1847  L = 3.143  natural 79421  best rotation 93129 at alpha = 968/2777 (direct check 93129)  BEATEN
+p = 1871  L = 3.268  natural 84195  best rotation 96215 at alpha = 1743/3212 (direct check 96215)  BEATEN
+p = 2039  L = 3.131  natural 91755  best rotation 111279 at alpha = 620/2733 (direct check 111279)  BEATEN
+p = 2063  L = 3.113  natural 92835  best rotation 114991 at alpha = 1489/2143 (direct check 114991)  BEATEN
+p = 2087  L = 2.407  natural 73045  best rotation 114177 at alpha = 1990/2807 (direct check 114177)  BEATEN
+p = 2111  L = 3.350  natural 103439  best rotation 115601 at alpha = 1293/2293 (direct check 115601)  BEATEN
+p = 2207  L = 2.608  natural 86073  best rotation 124401 at alpha = 1875/2209 (direct check 124401)  BEATEN
+p = 2351  L = 4.082  natural 148113  best rotation 148113 at alpha = 1/2351 (direct check 148113)  natural is the best rotation order
+p = 2399  L = 3.784  natural 141541  best rotation 143605 at alpha = 109/4271 (direct check 143605)  BEATEN
+p = 2551  L = 2.550  natural 104591  best rotation 143259 at alpha = 2133/2566 (direct check 143259)  BEATEN
+p = 2591  L = 3.518  natural 147687  best rotation 164131 at alpha = 281/2734 (direct check 164131)  BEATEN
+p = 2663  L = 2.618  natural 114509  best rotation 164841 at alpha = 519/3466 (direct check 164841)  BEATEN
+p = 2687  L = 3.091  natural 137037  best rotation 173573 at alpha = 1393/2729 (direct check 173573)  BEATEN
+p = 2711  L = 3.198  natural 143683  best rotation 170989 at alpha = 4153/4600 (direct check 170989)  BEATEN
+p = 2719  L = 2.470  natural 111479  best rotation 159143 at alpha = 2489/3248 (direct check 159143)  BEATEN
+p = 2879  L = 3.337  natural 164103  best rotation 193993 at alpha = 1510/2897 (direct check 193993)  BEATEN
+p = 2903  L = 3.440  natural 171277  best rotation 191323 at alpha = 771/3895 (direct check 191323)  BEATEN
+p = 2999  L = 4.188  natural 218927  best rotation 218927 at alpha = 1/2999 (direct check 218927)  natural is the best rotation order
+p = 3023  L = 2.686  natural 142081  best rotation 206011 at alpha = 70/3751 (direct check 206011)  BEATEN
+p = 3119  L = 3.881  natural 215211  best rotation 219099 at alpha = 3179/4051 (direct check 219099)  BEATEN
+p = 3167  L = 2.959  natural 167851  best rotation 203455 at alpha = 83/4031 (direct check 203455)  BEATEN
+p = 3191  L = 3.837  natural 220179  best rotation 220179 at alpha = 1/3191 (direct check 220179)  natural is the best rotation order
+p = 3359  L = 3.740  natural 231771  best rotation 250955 at alpha = 3501/5068 (direct check 250955)  BEATEN
+p = 3407  L = 3.068  natural 194199  best rotation 252841 at alpha = 2626/4791 (direct check 252841)  BEATEN
+p = 3527  L = 3.438  natural 229255  best rotation 265599 at alpha = 1895/3637 (direct check 265599)  BEATEN
+p = 3671  L = 4.200  natural 297351  best rotation 297351 at alpha = 1/3671 (direct check 297351)  natural is the best rotation order
+p = 3719  L = 3.452  natural 249173  best rotation 283669 at alpha = 3327/4787 (direct check 283669)  BEATEN
+p = 3863  L = 3.083  natural 235643  best rotation 272345 at alpha = 2714/4621 (direct check 272345)  BEATEN
+p = 3911  L = 4.170  natural 324613  best rotation 324613 at alpha = 1/3911 (direct check 324613)  natural is the best rotation order
+p = 4007  L = 2.829  natural 228399  best rotation 310667 at alpha = 909/4042 (direct check 310667)  BEATEN
+p = 4079  L = 4.181  natural 346715  best rotation 346715 at alpha = 1/4079 (direct check 346715)  natural is the best rotation order
+p = 4231  L = 2.463  natural 215781  best rotation 282725 at alpha = 3161/5151 (direct check 282725)  BEATEN
+p = 4271  L = 3.125  natural 277615  best rotation 340131 at alpha = 2087/7406 (direct check 340131)  BEATEN
+p = 4391  L = 3.745  natural 346889  best rotation 369529 at alpha = 1311/5102 (direct check 369529)  BEATEN
+p = 4463  L = 2.586  natural 245465  best rotation 380505 at alpha = 2479/4853 (direct check 380505)  BEATEN
+p = 4583  L = 2.831  natural 279563  best rotation 399253 at alpha = 483/4943 (direct check 399253)  BEATEN
+p = 4679  L = 4.179  natural 425789  best rotation 425789 at alpha = 1/4679 (direct check 425789)  natural is the best rotation order
+p = 4703  L = 3.436  natural 352725  best rotation 377201 at alpha = 1881/4705 (direct check 377201)  BEATEN
+p = 4751  L = 4.148  natural 432341  best rotation 432341 at alpha = 1/4751 (direct check 432341)  natural is the best rotation order
+p = 4759  L = 2.505  natural 261745  best rotation 348417 at alpha = 2113/6343 (direct check 348417)  BEATEN
+p = 4799  L = 2.857  natural 302337  best rotation 422783 at alpha = 1575/6028 (direct check 422783)  BEATEN
+p = 4871  L = 4.096  natural 443261  best rotation 443261 at alpha = 1/4871 (direct check 443261)  natural is the best rotation order
+p = 4919  L = 4.076  natural 447629  best rotation 460989 at alpha = 6305/6847 (direct check 460989)  BEATEN
+p = 4943  L = 2.458  natural 271865  best rotation 415691 at alpha = 5546/5977 (direct check 415691)  BEATEN
+p = 4967  L = 2.630  natural 293053  best rotation 442191 at alpha = 720/7603 (direct check 442191)  BEATEN
+p = 5039  L = 3.673  natural 418237  best rotation 463713 at alpha = 3825/6236 (direct check 463713)  BEATEN
+p = 5087  L = 3.039  natural 351003  best rotation 464457 at alpha = 1229/7214 (direct check 464457)  BEATEN
+p = 5231  L = 3.258  natural 392325  best rotation 484513 at alpha = 3338/7487 (direct check 484513)  BEATEN
+p = 5279  L = 3.762  natural 459273  best rotation 511949 at alpha = 4289/6334 (direct check 511949)  BEATEN
+p = 5351  L = 3.994  natural 497643  best rotation 505073 at alpha = 2396/8915 (direct check 505073)  BEATEN
+p = 5399  L = 3.378  natural 426521  best rotation 500615 at alpha = 2801/7725 (direct check 500615)  BEATEN
+p = 5431  L = 2.430  natural 309567  best rotation 458349 at alpha = 6059/6638 (direct check 458349)  BEATEN
+p = 5471  L = 3.016  natural 388441  best rotation 484241 at alpha = 4170/6049 (direct check 484241)  BEATEN
+p = 5519  L = 4.102  natural 535343  best rotation 548525 at alpha = 2471/6133 (direct check 548525)  BEATEN
+p = 5591  L = 4.159  natural 553509  best rotation 553509 at alpha = 1/5591 (direct check 553509)  natural is the best rotation order
+p = 5639  L = 3.640  natural 490593  best rotation 532273 at alpha = 5279/6075 (direct check 532273)  BEATEN
+p = 5711  L = 4.531  natural 622499  best rotation 622499 at alpha = 1/5711 (direct check 622499)  natural is the best rotation order
+p = 5807  L = 2.680  natural 377455  best rotation 577237 at alpha = 7138/9375 (direct check 577237)  BEATEN
+p = 5879  L = 4.138  natural 593779  best rotation 593779 at alpha = 1/5879 (direct check 593779)  natural is the best rotation order
+p = 5903  L = 2.985  natural 430919  best rotation 554083 at alpha = 937/6661 (direct check 554083)  BEATEN
+p = 5927  L = 2.897  natural 420817  best rotation 590735 at alpha = 4797/7549 (direct check 590735)  BEATEN
+p = 6047  L = 2.868  natural 429337  best rotation 609957 at alpha = 317/9913 (direct check 609957)  BEATEN
+p = 6263  L = 3.057  natural 482251  best rotation 624359 at alpha = 1340/6751 (direct check 624359)  BEATEN
+p = 6311  L = 3.520  natural 561679  best rotation 634683 at alpha = 6876/7627 (direct check 634683)  BEATEN
+p = 6359  L = 3.979  natural 642259  best rotation 652223 at alpha = 5543/8143 (direct check 652223)  BEATEN
+p = 6551  L = 4.541  natural 766467  best rotation 766467 at alpha = 1/6551 (direct check 766467)  natural is the best rotation order
+p = 6599  L = 4.215  natural 719291  best rotation 719291 at alpha = 1/6599 (direct check 719291)  natural is the best rotation order
+p = 6719  L = 4.024  natural 705495  best rotation 732339 at alpha = 1529/10133 (direct check 732339)  BEATEN
+p = 6791  L = 3.088  natural 550071  best rotation 710759 at alpha = 5657/7372 (direct check 710759)  BEATEN
+p = 6863  L = 3.072  natural 555903  best rotation 741053 at alpha = 2664/10229 (direct check 741053)  BEATEN
+p = 6911  L = 3.288  natural 601257  best rotation 705805 at alpha = 2821/8317 (direct check 705805)  BEATEN
+p = 6959  L = 3.578  natural 661105  best rotation 773607 at alpha = 4823/8219 (direct check 773607)  BEATEN
+p = 6991  L = 2.668  natural 496361  best rotation 652789 at alpha = 3105/9319 (direct check 652789)  BEATEN
+p = 7079  L = 3.174  natural 601715  best rotation 808797 at alpha = 2335/8217 (direct check 808797)  BEATEN
+p = 7103  L = 2.870  natural 546931  best rotation 812691 at alpha = 5014/9719 (direct check 812691)  BEATEN
+p = 7127  L = 2.940  natural 563033  best rotation 782331 at alpha = 1853/8782 (direct check 782331)  BEATEN
+p = 7151  L = 3.158  natural 607835  best rotation 769787 at alpha = 5549/8151 (direct check 769787)  BEATEN
+p = 7159  L = 2.413  natural 465335  best rotation 692159 at alpha = 3157/8704 (direct check 692159)  BEATEN
+p = 7559  L = 4.155  natural 869285  best rotation 901927 at alpha = 2589/9856 (direct check 901927)  BEATEN
+p = 7607  L = 3.206  natural 677023  best rotation 791001 at alpha = 154/12641 (direct check 791001)  BEATEN
+p = 7703  L = 2.899  natural 623943  best rotation 861681 at alpha = 2875/8388 (direct check 861681)  BEATEN
+p = 7727  L = 2.895  natural 625887  best rotation 905295 at alpha = 7233/10618 (direct check 905295)  BEATEN
+p = 7823  L = 2.664  natural 586725  best rotation 955659 at alpha = 601/10385 (direct check 955659)  BEATEN
+p = 7919  L = 3.424  natural 768143  best rotation 935077 at alpha = 7097/11584 (direct check 935077)  BEATEN
+p = 8039  L = 3.959  natural 908407  best rotation 983709 at alpha = 7335/8981 (direct check 983709)  BEATEN
+p = 8087  L = 2.830  natural 655047  best rotation 834725 at alpha = 1241/11144 (direct check 834725)  BEATEN
+p = 8111  L = 4.221  natural 981431  best rotation 981431 at alpha = 1/8111 (direct check 981431)  natural is the best rotation order
+p = 8231  L = 3.705  natural 880717  best rotation 995617 at alpha = 6288/9313 (direct check 995617)  BEATEN
+p = 8423  L = 2.841  natural 699109  best rotation 969057 at alpha = 5175/9422 (direct check 969057)  BEATEN
+p = 8447  L = 3.384  natural 836253  best rotation 1030891 at alpha = 5401/14742 (direct check 1030891)  BEATEN
+p = 8543  L = 3.297  natural 828671  best rotation 1016699 at alpha = 11122/14727 (direct check 1016699)  BEATEN
+p = 8783  L = 2.447  natural 641159  best rotation 1001135 at alpha = 139/12689 (direct check 1001135)  BEATEN
+p = 8807  L = 2.712  natural 713367  best rotation 1095867 at alpha = 3075/10799 (direct check 1095867)  BEATEN
+p = 8831  L = 3.644  natural 962579  best rotation 1072317 at alpha = 4941/11567 (direct check 1072317)  BEATEN
+p = 8839  L = 2.573  natural 680603  best rotation 884271 at alpha = 7854/11783 (direct check 884271)  BEATEN
+p = 8951  L = 4.483  natural 1208385  best rotation 1208385 at alpha = 1/8951 (direct check 1208385)  natural is the best rotation order
+p = 8999  L = 3.279  natural 890901  best rotation 1114675 at alpha = 1101/10405 (direct check 1114675)  BEATEN
+p = 9239  L = 4.543  natural 1284221  best rotation 1284221 at alpha = 1/9239 (direct check 1284221)  natural is the best rotation order
+p = 9311  L = 3.158  natural 903167  best rotation 1152857 at alpha = 12962/15419 (direct check 1152857)  BEATEN
+p = 9431  L = 2.944  natural 858221  best rotation 1238727 at alpha = 5310/9877 (direct check 1238727)  BEATEN
+p = 9439  L = 2.425  natural 707925  best rotation 1052305 at alpha = 7322/11233 (direct check 1052305)  BEATEN
+p = 9479  L = 3.259  natural 957379  best rotation 1271103 at alpha = 3765/12502 (direct check 1271103)  BEATEN
+p = 9551  L = 4.147  natural 1232079  best rotation 1286673 at alpha = 7643/9781 (direct check 1286673)  BEATEN
+p = 9623  L = 3.042  natural 914185  best rotation 1211663 at alpha = 6747/11296 (direct check 1211663)  BEATEN
+p = 9631  L = 2.465  natural 741587  best rotation 1159777 at alpha = 6812/11087 (direct check 1159777)  BEATEN
+p = 9719  L = 4.238  natural 1292627  best rotation 1292627 at alpha = 1/9719 (direct check 1292627)  natural is the best rotation order
+p = 9743  L = 3.342  natural 1023015  best rotation 1209829 at alpha = 8179/12078 (direct check 1209829)  BEATEN
+p = 9767  L = 2.829  natural 869263  best rotation 1319519 at alpha = 8908/13869 (direct check 1319519)  BEATEN
+p = 9791  L = 3.778  natural 1165129  best rotation 1289663 at alpha = 3352/11375 (direct check 1289663)  BEATEN
+p = 9839  L = 2.882  natural 895349  best rotation 1296089 at alpha = 1477/13075 (direct check 1296089)  BEATEN
+p = 10007  L = 2.418  natural 770539  best rotation 1399803 at alpha = 11549/13546 (direct check 1399803)  BEATEN
+p = 10079  L = 4.224  natural 1360665  best rotation 1370119 at alpha = 8361/11924 (direct check 1370119)  BEATEN
+p = 10111  L = 2.718  natural 879657  best rotation 1205835 at alpha = 7538/13799 (direct check 1205835)  BEATEN
+p = 10151  L = 2.900  natural 944043  best rotation 1339141 at alpha = 4402/11471 (direct check 1339141)  BEATEN
+p = 10223  L = 2.455  natural 807617  best rotation 1403659 at alpha = 1953/13123 (direct check 1403659)  BEATEN
+p = 10247  L = 3.259  natural 1075935  best rotation 1388383 at alpha = 257/12124 (direct check 1388383)  BEATEN
+p = 10271  L = 3.503  natural 1160623  best rotation 1402151 at alpha = 211/13390 (direct check 1402151)  BEATEN
+p = 10391  L = 4.715  natural 1589823  best rotation 1589823 at alpha = 1/10391 (direct check 1589823)  natural is the best rotation order
+p = 10463  L = 3.348  natural 1140467  best rotation 1458873 at alpha = 8780/12587 (direct check 1458873)  BEATEN
+p = 10487  L = 2.485  natural 849447  best rotation 1331619 at alpha = 245/11694 (direct check 1331619)  BEATEN
+p = 10559  L = 4.678  natural 1615527  best rotation 1615527 at alpha = 1/10559 (direct check 1615527)  natural is the best rotation order
+p = 10631  L = 4.235  natural 1477709  best rotation 1477709 at alpha = 1/10631 (direct check 1477709)  natural is the best rotation order
+p = 10799  L = 4.625  natural 1652247  best rotation 1652247 at alpha = 1/10799 (direct check 1652247)  natural is the best rotation order
+p = 11087  L = 2.894  natural 1075439  best rotation 1577781 at alpha = 3005/11809 (direct check 1577781)  BEATEN
+p = 11159  L = 2.706  natural 1015469  best rotation 1540053 at alpha = 3637/12019 (direct check 1540053)  BEATEN
+p = 11279  L = 3.106  natural 1184295  best rotation 1624529 at alpha = 8561/12751 (direct check 1624529)  BEATEN
+p = 11351  L = 3.214  natural 1237259  best rotation 1552811 at alpha = 4082/11747 (direct check 1552811)  BEATEN
+p = 11399  L = 4.149  natural 1607259  best rotation 1607259 at alpha = 1/11399 (direct check 1607259)  natural is the best rotation order
+p = 11423  L = 3.145  natural 1222261  best rotation 1566285 at alpha = 6340/12909 (direct check 1566285)  BEATEN
+p = 11471  L = 4.195  natural 1640353  best rotation 1640353 at alpha = 1/11471 (direct check 1640353)  natural is the best rotation order
+p = 11519  L = 3.659  natural 1439875  best rotation 1640241 at alpha = 2634/15641 (direct check 1640241)  BEATEN
+p = 11783  L = 2.749  natural 1119385  best rotation 1770483 at alpha = 8083/13151 (direct check 1770483)  BEATEN
+p = 11807  L = 3.267  natural 1334191  best rotation 1684763 at alpha = 7843/15260 (direct check 1684763)  BEATEN
+p = 11831  L = 4.015  natural 1644509  best rotation 1767643 at alpha = 8999/15795 (direct check 1767643)  BEATEN
+p = 11959  L = 2.729  natural 1136105  best rotation 1516325 at alpha = 5313/15943 (direct check 1516325)  BEATEN
+p = 12071  L = 4.032  natural 1702011  best rotation 1768147 at alpha = 11758/14659 (direct check 1768147)  BEATEN
+p = 12119  L = 3.853  natural 1636065  best rotation 1801461 at alpha = 13006/18551 (direct check 1801461)  BEATEN
+p = 12143  L = 3.450  natural 1469303  best rotation 1671717 at alpha = 7981/15319 (direct check 1671717)  BEATEN
+p = 12239  L = 4.572  natural 1970479  best rotation 1970479 at alpha = 1/12239 (direct check 1970479)  natural is the best rotation order
+p = 12263  L = 2.979  natural 1287615  best rotation 1830185 at alpha = 9169/14424 (direct check 1830185)  BEATEN
+p = 12479  L = 4.472  natural 1984161  best rotation 1984161 at alpha = 1/12479 (direct check 1984161)  natural is the best rotation order
+p = 12503  L = 2.838  natural 1262803  best rotation 1959953 at alpha = 6109/13595 (direct check 1959953)  BEATEN
+p = 12647  L = 3.380  natural 1530287  best rotation 1703493 at alpha = 2203/16531 (direct check 1703493)  BEATEN
+p = 12671  L = 3.656  natural 1659901  best rotation 2028443 at alpha = 8592/16919 (direct check 2028443)  BEATEN
+p = 12743  L = 2.700  natural 1236071  best rotation 1942261 at alpha = 7337/13582 (direct check 1942261)  BEATEN
+p = 12791  L = 2.972  natural 1368637  best rotation 1955591 at alpha = 5039/13073 (direct check 1955591)  BEATEN
+p = 12799  L = 2.583  natural 1190307  best rotation 1562961 at alpha = 5284/19627 (direct check 1562961)  BEATEN
+p = 12911  L = 4.562  natural 2130315  best rotation 2130315 at alpha = 1/12911 (direct check 2130315)  natural is the best rotation order
+p = 12959  L = 2.732  natural 1282941  best rotation 1952093 at alpha = 185/13203 (direct check 1952093)  BEATEN
+p = 12983  L = 2.785  natural 1311283  best rotation 1742897 at alpha = 11407/13537 (direct check 1742897)  BEATEN
+p = 13103  L = 3.595  natural 1716493  best rotation 1956827 at alpha = 3909/15001 (direct check 1956827)  BEATEN
+p = 13151  L = 4.191  natural 2012103  best rotation 2119155 at alpha = 14052/15235 (direct check 2119155)  BEATEN
+p = 13367  L = 2.690  natural 1323333  best rotation 2190105 at alpha = 5759/19285 (direct check 2190105)  BEATEN
+p = 13679  L = 3.949  natural 2010813  best rotation 2308975 at alpha = 17861/19246 (direct check 2308975)  BEATEN
+p = 13751  L = 4.581  natural 2351421  best rotation 2351421 at alpha = 1/13751 (direct check 2351421)  natural is the best rotation order
+p = 13799  L = 2.755  natural 1421297  best rotation 2196543 at alpha = 12505/20414 (direct check 2196543)  BEATEN
+p = 13999  L = 2.416  natural 1273909  best rotation 1947561 at alpha = 16997/19623 (direct check 1947561)  BEATEN
+p = 14087  L = 3.256  natural 1732701  best rotation 2353993 at alpha = 7239/20713 (direct check 2353993)  BEATEN
+p = 14159  L = 4.568  natural 2449507  best rotation 2449507 at alpha = 1/14159 (direct check 2449507)  natural is the best rotation order
+p = 14303  L = 2.443  natural 1330179  best rotation 2009121 at alpha = 2713/20888 (direct check 2009121)  BEATEN
+p = 14327  L = 3.123  natural 1704913  best rotation 2376179 at alpha = 19457/22536 (direct check 2376179)  BEATEN
+p = 14423  L = 2.956  natural 1629799  best rotation 2356167 at alpha = 7645/25178 (direct check 2356167)  BEATEN
+p = 14447  L = 2.535  natural 1401359  best rotation 2356609 at alpha = 10529/14532 (direct check 2356609)  BEATEN
+p = 14519  L = 3.624  natural 2018141  best rotation 2539605 at alpha = 144/17191 (direct check 2539605)  BEATEN
+p = 14551  L = 2.474  natural 1382345  best rotation 2028991 at alpha = 7500/25453 (direct check 2028991)  BEATEN
+p = 14591  L = 3.823  natural 2144877  best rotation 2412099 at alpha = 8679/16661 (direct check 2412099)  BEATEN
+p = 14639  L = 3.505  natural 1976265  best rotation 2286105 at alpha = 8584/18437 (direct check 2286105)  BEATEN
+p = 14759  L = 4.681  natural 2671379  best rotation 2671379 at alpha = 1/14759 (direct check 2671379)  natural is the best rotation order
+p = 14783  L = 3.023  natural 1729611  best rotation 2377569 at alpha = 6762/20047 (direct check 2377569)  BEATEN
+p = 14831  L = 3.637  natural 2091171  best rotation 2474713 at alpha = 3073/16263 (direct check 2474713)  BEATEN
+p = 14879  L = 3.734  natural 2157455  best rotation 2400563 at alpha = 13801/21902 (direct check 2400563)  BEATEN
+p = 14951  L = 4.753  natural 2765935  best rotation 2765935 at alpha = 1/14951 (direct check 2765935)  natural is the best rotation order
+p = 15263  L = 3.331  natural 1999453  best rotation 2569561 at alpha = 9426/15745 (direct check 2569561)  BEATEN
+p = 15287  L = 3.481  natural 2094319  best rotation 2368547 at alpha = 14164/19253 (direct check 2368547)  BEATEN
+p = 15359  L = 2.814  natural 1704849  best rotation 2606849 at alpha = 2615/17373 (direct check 2606849)  BEATEN
+p = 15383  L = 2.660  natural 1615215  best rotation 2355895 at alpha = 15353/19326 (direct check 2355895)  BEATEN
+p = 15551  L = 3.854  natural 2379303  best rotation 2808353 at alpha = 265/18927 (direct check 2808353)  BEATEN
+p = 15671  L = 4.191  natural 2617057  best rotation 2675387 at alpha = 1268/22131 (direct check 2675387)  BEATEN
+p = 15767  L = 2.527  natural 1592467  best rotation 2587495 at alpha = 19294/20711 (direct check 2587495)  BEATEN
+p = 15791  L = 4.875  natural 3079245  best rotation 3079245 at alpha = 1/15791 (direct check 3079245)  natural is the best rotation order
+p = 15887  L = 2.717  natural 1731683  best rotation 2822445 at alpha = 1371/19486 (direct check 2822445)  BEATEN
+p = 15959  L = 4.252  natural 2728989  best rotation 2800475 at alpha = 4449/24806 (direct check 2800475)  BEATEN
+p = 15991  L = 2.609  natural 1679055  best rotation 2220295 at alpha = 5569/19128 (direct check 2220295)  BEATEN
+p = 16007  L = 3.303  natural 2128931  best rotation 2566165 at alpha = 21937/23319 (direct check 2566165)  BEATEN
+p = 16103  L = 3.491  natural 2270523  best rotation 2908257 at alpha = 2766/16163 (direct check 2908257)  BEATEN
+p = 16319  L = 3.763  natural 2496807  best rotation 3005193 at alpha = 13754/17579 (direct check 3005193)  BEATEN
+p = 16519  L = 2.713  natural 1833609  best rotation 2478929 at alpha = 5506/16521 (direct check 2478929)  BEATEN
+p = 16607  L = 2.901  natural 1976233  best rotation 2962187 at alpha = 10703/16794 (direct check 2962187)  BEATEN
+p = 16631  L = 4.458  natural 3043473  best rotation 3043473 at alpha = 1/16631 (direct check 3043473)  natural is the best rotation order
+p = 16871  L = 3.846  natural 2682489  best rotation 3099663 at alpha = 9536/17833 (direct check 3099663)  BEATEN
+p = 16943  L = 3.258  natural 2287305  best rotation 2985023 at alpha = 24224/26951 (direct check 2985023)  BEATEN
+p = 17159  L = 3.813  natural 2728281  best rotation 3127723 at alpha = 17809/27718 (direct check 3127723)  BEATEN
+p = 17183  L = 2.804  natural 2010411  best rotation 3235997 at alpha = 6863/18175 (direct check 3235997)  BEATEN
+p = 17231  L = 2.657  natural 1912641  best rotation 3146655 at alpha = 4087/23987 (direct check 3146655)  BEATEN
+p = 17239  L = 2.608  natural 1879051  best rotation 2799407 at alpha = 15727/25990 (direct check 2799407)  BEATEN
+p = 17327  L = 2.554  natural 1853989  best rotation 3089265 at alpha = 9752/24957 (direct check 3089265)  BEATEN
+p = 17351  L = 3.983  natural 2897617  best rotation 3089815 at alpha = 16730/19973 (direct check 3089815)  BEATEN
+p = 17359  L = 2.504  natural 1822695  best rotation 2957701 at alpha = 13291/22847 (direct check 2957701)  BEATEN
+p = 17471  L = 4.350  natural 3197193  best rotation 3197193 at alpha = 1/17471 (direct check 3197193)  natural is the best rotation order
+p = 17519  L = 4.249  natural 3135901  best rotation 3373161 at alpha = 17557/27854 (direct check 3373161)  BEATEN
+p = 17783  L = 3.510  natural 2649667  best rotation 3282957 at alpha = 17163/21718 (direct check 3282957)  BEATEN
+p = 17807  L = 3.272  natural 2475173  best rotation 3257269 at alpha = 5638/23817 (direct check 3257269)  BEATEN
+p = 17839  L = 2.470  natural 1873095  best rotation 3024595 at alpha = 6794/26511 (direct check 3024595)  BEATEN
+p = 18047  L = 2.596  natural 2003217  best rotation 3318423 at alpha = 23817/25532 (direct check 3318423)  BEATEN
+p = 18119  L = 4.785  natural 3714395  best rotation 3714395 at alpha = 1/18119 (direct check 3714395)  natural is the best rotation order
+p = 18143  L = 2.496  natural 1941301  best rotation 3475519 at alpha = 3556/20071 (direct check 3475519)  BEATEN
+p = 18191  L = 4.961  natural 3874683  best rotation 3874683 at alpha = 1/18191 (direct check 3874683)  natural is the best rotation order
+p = 18287  L = 2.579  natural 2029857  best rotation 3468057 at alpha = 14972/22149 (direct check 3468057)  BEATEN
+p = 18311  L = 4.527  natural 3570645  best rotation 3570645 at alpha = 1/18311 (direct check 3570645)  natural is the best rotation order
+p = 18671  L = 3.196  natural 2595269  best rotation 3606189 at alpha = 19696/23015 (direct check 3606189)  BEATEN
+p = 18719  L = 4.018  natural 3275825  best rotation 3609463 at alpha = 8342/21431 (direct check 3609463)  BEATEN
+p = 18743  L = 2.777  natural 2267903  best rotation 3783533 at alpha = 23547/30922 (direct check 3783533)  BEATEN
+p = 18839  L = 3.365  natural 2769333  best rotation 3617435 at alpha = 11113/21027 (direct check 3617435)  BEATEN
+p = 18911  L = 3.678  natural 3044671  best rotation 3604849 at alpha = 231/22133 (direct check 3604849)  BEATEN
+p = 18919  L = 2.672  natural 2213523  best rotation 2941653 at alpha = 16574/34517 (direct check 2941653)  BEATEN
+p = 18959  L = 4.449  natural 3697005  best rotation 3697005 at alpha = 1/18959 (direct check 3697005)  natural is the best rotation order
+p = 19031  L = 4.623  natural 3863293  best rotation 3863293 at alpha = 1/19031 (direct check 3863293)  natural is the best rotation order
+p = 19079  L = 2.661  natural 2232243  best rotation 3528699 at alpha = 9397/23395 (direct check 3528699)  BEATEN
+p = 19319  L = 4.407  natural 3767205  best rotation 3767205 at alpha = 1/19319 (direct check 3767205)  natural is the best rotation order
+p = 19391  L = 2.459  natural 2113619  best rotation 3762173 at alpha = 9395/21992 (direct check 3762173)  BEATEN
+p = 19463  L = 2.860  natural 2471801  best rotation 3725047 at alpha = 18803/20163 (direct check 3725047)  BEATEN
+p = 19559  L = 3.212  natural 2796937  best rotation 3610761 at alpha = 22893/23990 (direct check 3610761)  BEATEN
+p = 19751  L = 3.823  natural 3377421  best rotation 3952623 at alpha = 1985/21422 (direct check 3952623)  BEATEN
+p = 19919  L = 3.005  natural 2689065  best rotation 4002221 at alpha = 11519/28061 (direct check 4002221)  BEATEN
+p = 19991  L = 4.422  natural 3978209  best rotation 4115583 at alpha = 8918/25671 (direct check 4115583)  BEATEN

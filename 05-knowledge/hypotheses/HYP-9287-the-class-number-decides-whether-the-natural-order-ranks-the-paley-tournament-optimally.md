@@ -6,13 +6,15 @@ status: >
   Both pre-registered tests were genuine (pushed before the runs; reruns byte-identical) and passed as executed, but the
   pre-registered search (12-30 restarts of insertion local search) was too weak for its "unbeaten" claims: certified
   rotation orders beat the natural order at 167, 263, 383 (and 439), so P1 has 4 of 10 high-L primes beaten, the failure
-  its own rule names; in the second test 503, 599 and 647 (audit) and 887, 911 (S40 scan) are beaten, so Q1 fails (at least 3 of 7; at most one allowed). P2 and Q2
+  its own rule names; in the second test 503, 599, 647 and 887 (audit) and 911 (S40 Farey sweep) are beaten, so Q1 fails (5 of 7; at most one allowed). P2 and Q2
   (low L always beaten, certified witnesses) stand. PROVED (finite, via Heegner-Baker-Stark): never optimal for
   h(-p) = 1, p > 7 (11, 19 by exact MAS; 43, 67, 163 by witnesses of excess 183, 393, 1577). FINITE-EXACT: optimal at
   3, 7, 23; not optimal at 11, 19, 31, 43. OPEN (CONJECTURE, revised): the natural order is optimal only on a thin set of
   primes inside L+, characterised by L(1, chi_(-p)) dominating the twisted values that control the rotation orders;
-  whether that set is finite is open (the audit's evidence: the boundary rises from 2.73-2.955 for p <= 500 to above
-  3.21 at p = 599).
+  whether that set is finite was tested by a pre-registered exact scan (THM-4666 1c, the Farey sweep over all rotation
+  orders): the finite-list prediction FAILED, and 46 of the 245 primes with L >= 2.4 in (479, 20000] keep the natural order
+  as their best rotation order (set R+), all with L >= 3.58, with a boundary rising from about 3.4 (p ~ 1000) to
+  4.35-4.47 (p ~ 16000-20000). R+ looks infinite and thin; optimality among all orders is open even on R+.
 session: opus-2026-10-17-S40
 source: 05-knowledge/results/binary_information_class_groups_largest_anomalies_20261017.md
 scripts:
@@ -46,8 +48,8 @@ recomputed in pure Python by the audit or in the S40 scan):
 | 503 | 2.942 | 10563 | `9521/197064` | 11657 | audit |
 | 599 | 3.209 | 14975 | `12767/298528` | 15507 | audit (the S40 scan with m <= 6 missed it) |
 | 647 | 2.841 | 14881 | `10901/258330` | 17661 | audit |
-| 887 | 3.059 | 25723 | `63/(5·887)` | 26853 | S40 scan (not audited) |
-| 911 | 3.227 | 28241 | `964/(5·911)` | 28547 | S40 scan (not audited) |
+| 887 | 3.059 | 25723 | `348751/880400` | 28235 | audit; equals the Farey-sweep maximum (`α = 532/1343`) |
+| 911 | 3.227 | 28241 | `358/1263` | 30327 | S40 Farey sweep (exact maximum over rotation orders; not audited) |
 | 983 | 2.705 | 26541 | `376249/642500` | 34225 | audit (S40 scan: 32103 at `1727/(6·983)`) |
 
 **Unbeaten by any known order** (rotation family, insertion and window-DP polishing, annealing with 480 restarts at 47
@@ -76,6 +78,30 @@ At primes where local search beat the natural order, the best order found is eit
 (normalised Kendall distance 0.11-0.25: 743: 0.114, 103: 0.131, 127: 0.134, 863: 0.166) or generic (0.41-0.46, near the
 random level 0.33-0.45 for `p = 43-991`). These are local-search witnesses only; rotation orders are better at many
 primes, so this describes the search, not the optimum.
+
+## The rotation family exactly (THM-4666 1c, pre-registered scan to 20000)
+
+The Farey sweep computes the best rotation order in `O(p^2)`.
+
+* **Agreement.** It reproduces every audited certificate, and it improves 911 to 30327 (`α = 358/1263`).
+* **Survivors below 480.** `R+ ∩ [3, 479]` is 3, 7, 23, 47, 71, 191, 239, 311, 359, 431, 479; 11, 19, 31, 43 are beaten by
+  other orders.
+* **Survivors in `(479, 20000]`, among the 245 primes with `L >= 2.4`:** 719, 839, 1151, 1319, 1511, 1559, 2351, 2999, 3191, 3671, 3911, 4079, 4679, 4751, 4871, 5591, 5711, 5879, 6551, 6599, 8111, 8951, 9239, 9719, 10391, 10559, 10631, 10799, 11399, 11471, 12239, 12479, 12911, 13751, 14159, 14759, 14951, 15791, 16631, 17471, 18119, 18191, 18311, 18959, 19031, 19319.
+
+Boundary by range (minimum `L` of the survivors / maximum `L` of the beaten):
+
+| `p` range | minimum `L`, survivors | maximum `L`, beaten |
+|---|---:|---:|
+| `[480, 1000)` | 3.579 | 3.227 |
+| `[1000, 2000)` | 3.797 | 3.424 |
+| `[2000, 4000)` | 3.837 | 3.881 |
+| `[4000, 8000)` | 4.096 | 4.155 |
+| `[8000, 12000)` | 4.149 | 4.224 |
+| `[12000, 16000)` | 4.472 | 4.252 |
+| `[16000, 20000]` | 4.350 | 4.422 |
+
+The overlapping ranges show that `L(1, χ_(-p))` alone does not decide even rotation-optimality. The exact criterion is
+the prefix positivity of the Farey jump sequence.
 
 ## Tests
 

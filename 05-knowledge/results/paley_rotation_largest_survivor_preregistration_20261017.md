@@ -27,3 +27,11 @@ and its natural excess is below the generic level).
 
 Either outcome is reported. Surviving the rotation family is necessary, not sufficient, for optimality; being beaten is
 a certificate (an explicit `alpha` is checked by a direct excess computation).
+
+## Outcome (appended after the run)
+
+Run as pre-registered (`paley_rotation_farey_sweep_480_20000_20261017.out` / `.json`): **F FAILED.** 46 of the 245
+primes keep the natural order as their best rotation order (set R+, listed in HYP-9287), all with `L >= 3.58`; 199 are
+beaten, each with a certificate `alpha` checked by a direct excess computation. The survivor boundary rises slowly with
+`p` (minimum survivor `L` 3.58 below 1000, 4.35 near 20000) and overlaps the beaten range, so the rotation-survivor set
+looks infinite and thin rather than finite. The thin-infinite alternative of the pre-registration is the one recorded.

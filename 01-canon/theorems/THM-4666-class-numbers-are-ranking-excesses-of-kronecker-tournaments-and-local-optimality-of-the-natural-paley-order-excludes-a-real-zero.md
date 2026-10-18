@@ -2,8 +2,8 @@
 id: THM-4666
 title: "Class numbers are ranking excesses: the natural order of the Kronecker oriented graph of a negative fundamental discriminant D has forward-minus-backward excess (2/w_D)|D|h(D), the area under the Legendre walk; for the Paley tournament P_p a single-vertex insertion changes the excess by -2S(t), so the natural order is insertion-locally optimal exactly for Kalmynin's primes L+ (all partial sums of (./p) nonnegative), which by Fekete's identity have no real zero of L(s, chi_(-p)); h(-p) = 1 (the least excess) exactly for p = 7, 11, 19, 43, 67, 163, i.e. Euler's lucky numbers; the inverse order has excess 3h(-p) and every pair-block order (1 - 2(2/p))h(-p)"
 status: >
-  PROVED (elementary): statements 1, 1b (discrete-log, inverse and pair-block orders; the residue sub-tournament), 3, 5,
-  5b, 6, from Dirichlet's class number formula, quadratic reciprocity and Jacobsthal sums. CITED: Dirichlet's half-window
+  PROVED (elementary): statements 1, 1b (discrete-log, inverse and pair-block orders; the residue sub-tournament), 1c
+  (the Farey sweep over all rotation orders and the Farey class number identity), 3, 5, 5b, 6, from Dirichlet's class number formula, quadratic reciprocity and Jacobsthal sums. CITED: Dirichlet's half-window
   formula (statement 2), Heegner-Baker-Stark and Rabinowitsch (statement 4), Fekete-Polya (statement 5, proof included),
   Kalmynin (density 0 of L+: his Thm 1, via Baker-Montgomery; upper bound: Thm 2), Alon-Spencer section 9.1 and Alon,
   Ranking tournaments, Cor. 3.2 (order of the spectral bound). FINITE-EXACT: statement 7 and the identity checks of 1b.
@@ -26,6 +26,7 @@ scripts:
   - 04-computation/experiments/paley_arithmetic_orders_20261017.py (+ .out, .json)
   - 04-computation/experiments/paley_mobius_orders_20261017.py (+ .out, .json)
   - 04-computation/experiments/paley_fekete_geometric_moves_20261017.py (+ .out, .json)
+  - 04-computation/experiments/paley_rotation_farey_sweep_20261017.py (+ 480_20000 .out, .json)
 related:
   - HYP-9287 (REFUTED in its threshold form by the audit: rotation orders beat the natural order at high-L primes)
   - THM-871 (rotational tournaments at the Fermat rungs; clock_duality's scope repair: all rotational tournaments are self-converse), THM-4644 (Fermat = rigid circulant)
@@ -63,6 +64,15 @@ the Legendre walk; `<x>` is the least nonnegative residue.
    `φ ∈ PGL_2(F_p)`, the pole first) the affine ones give `±p h(-p)` and the non-affine ones only small odd excesses
    (FINITE: exhaustive for `p <= 23`, extremes `±3, ±3, ±5, ±9 = ±3h` at `p = 7, 11, 19, 23`; samples of 300 at
    `31 <= p <= 71`, extremes `±3h` when `h >= 3` and `±7, ±9` at the class-number-one primes 43, 67).
+1c. **(All rotation orders at once: the Farey sweep, PROVED; added after the audit.)** For `α ∈ (0, 1)` outside the Farey
+   sequence `F_(p-1)`, let `R_α` list `x ∈ {0, ..., p-1}` by `frac(α x)` (vertex 0 first; the keys are distinct). Crossing a
+   Farey fraction `a/b` changes the excess of `R_α` by
+   `Δ_b = 2 χ(b) [S(q) + (b - s) A(q) + s A(q + 1)]`, `p - 1 = q b + s`, `0 <= s < b`, `A(k) = Σ_(t<k) S(t)`,
+   independently of `a`. So the excess on the interval after the `n`-th Farey fraction is `p h(-p)` plus the first `n`
+   jumps, and the best rotation order is the maximal prefix sum, an `O(p^2)` computation. Since `R_α` tends to the
+   reversed natural order as `α -> 1`, this gives the **Farey class number identity**
+   `Σ_(b=2)^(p-1) φ(b) Δ_b = -2 p h(-p)`. The natural order is the best rotation order iff every prefix sum of the jump
+   sequence is `<= 0`; call this set of primes `R+`, the rotation analogue of `L+`.
 2. **(Half window, CITED: Dirichlet.)** For `p ≡ 3 (mod 4)`, `p > 3`: vertex 0 of `P_p` has out-degree minus in-degree
    `S((p-1)/2) = (2 - (2/p)) h(-p)` on the half circle `{1, ..., (p-1)/2}`.
 3. **(Arcs at a vertex are split primes, PROVED.)** For every prime `q ≠ p`, `0 → (q mod p)` in `P_p` iff `q` splits in
@@ -134,6 +144,16 @@ the Legendre walk; `<x>` is the least nonnegative residue.
    *Sub-tournaments.* With `T0 = Σ_(a<b) χ(b - a) = p h`, `T1 = Σ_(a<b) χ(a)χ(b - a) = Σ_a χ(a)S(a) = (p - 1)/2`
    (telescoping `S(a)^2 - S(a)S(a - 1)`) and `T2 = Σ_(a<b) χ(b)χ(b - a) = -T1` (reflection `(a, b) -> (p - b, p - a)`), the
    residue part is `(T0 + T1 + T2 + T3)/4 = (p h - 3h)/4` and the non-residue part `(T0 - T1 - T2 + T3)/4` the same.
+1c. At `a/b` the keys coincide exactly on residue classes mod `b`. For `α = a/b ∓ ε` a class with nonzero key `r/b` is a
+   contiguous block, ordered by decreasing `x` before and increasing `x` after. Its internal pairs have differences
+   `-(j - i)b`, so it contributes `-χ(b)A(k)` before and `+χ(b)A(k)` after. The class of 0 (without the vertex 0) moves
+   from the end, keys `1 - εx`, to just after 0, keys `εx`, and is reversed. Its cross terms with the other vertices
+   change by `2 Σ_(x ∈ B) χ(x) = 2χ(b)S(k_0)`, because `Σ_(r ∈ Z/p) χ(x - r) = 0` and the double sum over the block is
+   antisymmetric; the pairs with 0 are unchanged. There are `s` classes of size `q + 1`, `b - 1 - s` of size `q`, and
+   `k_0 = q`. As `α -> 1^-` the order is `0, p-1, ..., 1`, of excess `-p h(-p)`, and each denominator `b >= 2` occurs
+   `φ(b)` times. Checks: direct excess on every Farey interval for all `p ≡ 3 (mod 4)`, `p <= 47`; the identity for
+   `p <= 400`. The sweep reproduces every audited rotation certificate (167: 1861, 263: 4079, 383: 7519, 439: 9313,
+   503: 11657, 599: 15507, 647: 17661, 887: 28235, 983: 34225).
 3. Reciprocity as displayed; `χ_(-p)(n) = (n/p)`; the series for `L(1, χ_(-p))` and `h(-p) = sqrt(p) L(1, χ_(-p))/π`
    (`p > 3`; at `p = 3` the unit factor gives 1/3).
 5. In the natural order the vertex `v = i` and the vertices it jumps over differ by `1, ..., t`. Jumping forward, each
@@ -154,7 +174,8 @@ the Legendre walk; `<x>` is the least nonnegative residue.
   `(e^γ/π + o(1)) p^(3/2) log log p`, unlike random tournaments (`Θ(n^(3/2))`, Spencer; de la Vega). Typed CITED
   (secondary source).
 * **The natural order is usually not the best ranking.** Rotation (Beatty) orders `x -> {αx}`, which contain the affine
-  orders, beat it at many primes of large `L(1, χ_(-p))` (167, 263, 383, 439, 503, 599, 647, 887, 911, 983; HYP-9287); it
-  is exactly optimal at 3, 7, 23 and unbeaten by any known order at 47, 71, 191, 239, 311, 359, 431, 479 (audit, full
-  rotation family). It is never optimal for `h(-p) = 1`, `p > 7` (11, 19 by exact MAS;
+  orders, beat it at many primes of large `L(1, χ_(-p))` (167, 263, 383, 439, 503, 599, 647, 887, 911, 983; HYP-9287). It
+  is exactly optimal at 3, 7, 23 and unbeaten by any known order at 47, 71, 191, 239, 311, 359, 431, 479 (audit). By the
+  Farey sweep (1c), `R+ ∩ (479, 20000]` (among the 245 primes with `L >= 2.4`) is the 46 primes 719, 839, 1151, 1319, 1511, 1559, 2351, 2999, 3191, 3671, 3911, 4079, 4679, 4751, 4871, 5591, 5711, 5879, 6551, 6599, 8111, 8951, 9239, 9719, 10391, 10559, 10631, 10799, 11399, 11471, 12239, 12479, 12911, 13751, 14159, 14759, 14951, 15791, 16631, 17471, 18119, 18191, 18311, 18959, 19031, 19319, all with
+  `L >= 3.58`. It is never optimal for `h(-p) = 1`, `p > 7` (11, 19 by exact MAS;
   43, 67, 163 by witnesses).

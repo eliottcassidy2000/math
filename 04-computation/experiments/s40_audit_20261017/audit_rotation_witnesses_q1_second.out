@@ -2,3 +2,4 @@
 {'p': 647, 'h': 23, 'L': 2.8407, 'natural': 14881, 'best_rotation_excess': 17661, 'beaten': True, 'farey_interval': '(10/237, 23/545)', 'alpha_midpoint': '10901/258330', 'MAS_lower_bound': 113321, 'natural_forward': 111931}
 {'p': 983, 'h': 27, 'L': 2.7054, 'natural': 26541, 'best_rotation_excess': 34225, 'beaten': True, 'farey_interval': '(366/625, 301/514)', 'alpha_midpoint': '376249/642500', 'MAS_lower_bound': 258439, 'natural_forward': 254597}
 {'p': 599, 'h': 25, 'L': 3.209, 'natural': 14975, 'best_rotation_excess': 15507, 'beaten': True, 'farey_interval': '(13/304, 21/491)', 'alpha_midpoint': '12767/298528', 'MAS_lower_bound': 97304, 'natural_forward': 97038}
+{'p': 887, 'h': 29, 'L': 3.059, 'natural': 25723, 'best_rotation_excess': 28235, 'beaten': True, 'farey_interval': '(225/568, 307/775)', 'alpha_midpoint': '348751/880400', 'MAS_lower_bound': 210588, 'natural_forward': 209332}

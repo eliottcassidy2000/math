@@ -104,7 +104,9 @@ adopted idoneal status, EKN coverage, credits.
      numbers.
    - The natural order is not the best ranking in general. Rotation orders beat it at high-L primes (167, 263, 383, 503,
      599, 647, ...), which refutes the threshold form of HYP-9287. It is never optimal for `h(-p) = 1`, `p > 7`.
-     Whether it is optimal at only finitely many primes (a tournament largest anomaly) is open.
+     The Farey sweep (THM-4666 1c) computes all rotation orders in `O(p^2)`. The natural order is the best rotation order
+     at 46 primes with `L >= 3.58` in `(479, 20000]` and at no prime with smaller `L` there; a pre-registered finite-list
+     prediction failed. The rotation survivors look infinite and thin.
    - Paley tournaments exist exactly on the rational primes that stay prime in `Z[i]`.
 7. **463 (section 7).** Three occurrences are structural:
    - `463 = 1 + 462` is prime **because** 462 is idoneal (Euler's criterion);
@@ -238,7 +240,13 @@ for statements and proofs. The points for this note are the following.
   - Unbeaten by any known order: 47, 71, 191, 239, 311, 359, 431, 479 (audit, full rotation family). 503 (`L = 2.942`) is
     beaten while 191 (`L = 2.955`) is not, so a pure `L`-threshold fails, and the boundary rises quickly with `p`.
   - Revised conjecture: the natural order is optimal only on a thin set inside `L+`, where `L(1, χ_(-p))` dominates the
-    small-conductor twists that govern the rotation orders. Whether that set is finite is open.
+    small-conductor twists that govern the rotation orders.
+  - **The Farey sweep (THM-4666 1c, PROVED).** Crossing a Farey fraction `a/b` changes the excess of the rotation order
+    by `Δ_b = 2χ(b)[S(q) + (b - s)A(q) + sA(q+1)]`, a combination of Legendre-walk areas at scale `p/b`. Hence
+    `Σ φ(b)Δ_b = -2p h(-p)` (a Farey class number identity), and the best rotation order costs `O(p^2)`. A
+    pre-registered exact scan to 20000 found 46 rotation survivors among the 245 primes with `L >= 2.4` (all with
+    `L >= 3.58`, boundary rising to 4.35-4.47). The finite-list prediction failed; the survivors look infinite and
+    thin.
 * **Spectral ceiling.** Every order has excess `<= (p^(3/2)/π)(log p + γ + log(4/π) + o(1))` (trace duality). Exact
   optima at `p <= 43` sit at 0.40-0.50 of this ceiling.
 

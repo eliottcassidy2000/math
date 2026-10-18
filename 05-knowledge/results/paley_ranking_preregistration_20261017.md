@@ -69,9 +69,9 @@ Run: `python paley_ranking_local_search_20261017.py 501:1000 6 40`
 
 * **Q2 PASSED.** All 27 primes with L <= 2.0 are beaten by certified witness orders.
 * **Q1 FAILED.** As executed, the local search left all seven high-L primes unbeaten. But certified rotation orders beat
-  503 (11657 against 10563), 599 (15507 against 14975) and 647 (17661 against 14881) (audit), and the S40 rotation scan
-  also beats 887 (26853 against 25723) and 911 (28547 against 28241). That is at least five of seven, against at most
-  one allowed. 719 and 839 are not beaten in the coarse S40 scan (m <= 6), which missed the 599 witness.
+  503 (11657 against 10563), 599 (15507 against 14975), 647 (17661 against 14881) and 887 (28235 against 25723) (audit),
+  and the exact Farey sweep (THM-4666 1c) also beats 911 (30327 against 28241). That is five of seven, against at most
+  one allowed. The sweep shows that 719 and 839 keep the natural order as their best rotation order.
 * **Exploratory.** 743 and 863 are beaten by the local search; 983 is beaten by rotation orders (audit: 34225 against
   26541; S40 scan: 32103).
 
