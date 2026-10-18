@@ -9,10 +9,11 @@
     reports from computer experiments for Cooper's s7, s10, s18 and the two Hadamard products of his Appendix C. His
     Theorem 1.13 does not cover them. For s7 it is Theorem A of
     `cooper_s7_weight_one_root_frobenius_20261018.md`; the proof here is shorter and different.
-  - Theorem 4 (inert primes) answers, for all of Beukers' third-order families, the case he leaves open in
-    Remark 1.17 ("If p does not split in Q(α) we do not know if our modular form approach is possible"). Single
-    cases were proved earlier by other methods (Corollary 5 is one). A brief literature search found no general result
-    of this kind, so novelty is not established.
+  - Theorem 4 (inert primes) answers the case Beukers leaves open in Remark 1.17 ("If p does not split in Q(α) we do
+    not know if our modular form approach is possible") for every family of his Appendix C except
+    `F(1/6, 1/2, 5/6; 1, 1 | 1728t)`, whose `Θ` is not a modular form (his section 6). Single cases were proved
+    earlier by other methods (Corollary 5 is one). A brief literature search found no general result of this kind, so
+    novelty is not established.
   - Corollary 5 is Z.-W. Sun's conjecture on `Σ_(k<p) A_k (mod p^2)` (arXiv:1101.1946; Conjecture 1.2 in Guo-Zeng,
     J. Number Theory 132 (2012) 1731-1740). C. Wang and Z.-W. Sun proved it with the `p`-adic Gamma function (Nanjing
     Univ. J. Math. Biquarterly 41 (2024) 34-56, as cited in Sun, arXiv:2505.02767). The proof here is different.
@@ -193,8 +194,8 @@ Theorem 4. Split `p >= 5`: Theorem 1.15 with `c = 6y`, `d = x - 2y` gives `cα +
 
 Likewise `Σ_(k<p) (-1)^k A_k ≡ 0 (mod p^2)` for `p ≡ 2 (mod 3)`, `p >= 5` (`t((3+√-3)/6) = -1`). That case was
 already proved by Z.-W. Sun (J. Number Theory 132 (2012) 2673-2699, arXiv:1101.1946). Theorem 4 gives the inert half
-of every CM supercongruence in Beukers' Appendix C. Some of those inert cases were known before by other methods (both
-Apéry sums were); I have not surveyed which others.
+for every rational CM value listed in Beukers' Appendix C. Some of those inert cases were known before by other
+methods (both Apéry sums were); I have not surveyed which others.
 
 ## 6. The rational CM values, and corrections to Beukers' Appendix C
 
