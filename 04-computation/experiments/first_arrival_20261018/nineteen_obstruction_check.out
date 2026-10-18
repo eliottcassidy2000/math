@@ -1,0 +1,5 @@
+denominator of b: 19 (19 | it: True); of c: 19 (19 | it: True)
+points of C 19-integral: True ; all 90 directions 19-integral: True
+spindle differences m - m' with 19 in N_{F/Q}: none (all 21 pairs are 19-units)
+v_19(N(b)) and v_19(N(c)) (negative = non-integral above 19): -48 -48
+PYTHONPATH=first_arrival_20261018/shim python3   0.62s user 0.10s system 70% cpu 1.021 total

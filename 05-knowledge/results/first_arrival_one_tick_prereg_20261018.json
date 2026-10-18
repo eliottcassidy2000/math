@@ -1,0 +1,13 @@
+{
+  "session": "mac-mini-2026-10-18-sixcolour",
+  "written": "2026-10-18, before the scan of the octave 2^26 <= N < 2^27",
+  "object": "integer-clock lag Gram of first arrivals into clock_duality's certified forward-closed frontier V_1000 (627 seeds): h_t(u) = signed source mass first entering seed u with literal shortcut clock t; G(D) = sum_u sum_t h_t(u) h_(t+D)(u); E_V = G(0) + 2 sum_(D>=1) G(D)",
+  "evidence_before": "fap.c, every N < 2^26: octave means of G(1)/G(0) on V_1000 = -0.264, -0.276, -0.279, -0.273, -0.276, -0.277, -0.275, -0.273, -0.281, -0.284, -0.277 (octaves 2^15..2^25); per-N range within [-0.288, -0.256]; E_clk/N = G(0)/N octave means 3.97 (2^15) down to 3.15 (2^25)",
+  "predictions": {
+    "T1": "V_1000, octave 2^26: the octave mean of G(1)/G(0) lies in [-0.290, -0.265]",
+    "T2": "V_1000, octave 2^26: every N has G(1)/G(0) in [-0.300, -0.250]",
+    "T3": "V_1000, octave 2^26: the octave mean of G(0)/N lies in [2.85, 3.20] (slow decline continues, no jump)",
+    "T4": "V_1000, octave 2^26: the octave maximum of E_V/N is <= 2.5 and the octave mean of the cross-port term (E_V - E_port)/N lies in [-0.15, +0.10]"
+  },
+  "command": "04-computation/experiments/first_arrival_20261018/fap V_closed_Y1000.txt 26"
+}

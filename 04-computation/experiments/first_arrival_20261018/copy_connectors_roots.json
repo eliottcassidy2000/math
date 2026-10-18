@@ -1,0 +1,43 @@
+{
+ "b": {
+  "norm": 13.7202841467684,
+  "two_step_tested": 172,
+  "two_step_survivors": [],
+  "three_step_tested": 17854,
+  "three_step_survivors": [
+   [
+    2,
+    4,
+    6,
+    0,
+    39,
+    0.9690567581616947
+   ],
+   [
+    2,
+    4,
+    6,
+    2,
+    88,
+    0.9690567581616947
+   ],
+   [
+    2,
+    6,
+    2,
+    9,
+    24,
+    1.2346340443769346
+   ]
+  ],
+  "three_step_survivor_count": 3
+ },
+ "c": {
+  "norm": 16.957453780991422,
+  "two_step_tested": 118,
+  "two_step_survivors": [],
+  "three_step_tested": 12340,
+  "three_step_survivors": [],
+  "three_step_survivor_count": 0
+ }
+}

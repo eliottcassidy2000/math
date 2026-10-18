@@ -1,0 +1,53 @@
+== start (1,1): N = b^2-ab-a^2 = -1 = {}
+   first 24 terms: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368]
+   no integral Lucas form (5 does not divide 2b - a); G_n = 1 F_(n-1) + 1 F_n
+   period mod 2: 3 (Fibonacci pi = 3);   period mod 3: 8 (Fibonacci pi = 8);   period mod 4: 6 (Fibonacci pi = 6);   period mod 5: 20 (Fibonacci pi = 20);   period mod 8: 12 (Fibonacci pi = 12);   period mod 9: 24 (Fibonacci pi = 24);   period mod 10: 60 (Fibonacci pi = 60);   period mod 11: 10 (Fibonacci pi = 10);   period mod 27: 72 (Fibonacci pi = 72);
+   digital roots (24-cycle): [1, 1, 2, 3, 5, 8, 4, 3, 7, 1, 8, 9, 8, 8, 7, 6, 4, 1, 5, 6, 2, 8, 1, 9] ; 3/6/9 at n mod 4 in [3]
+   golden class mod 9 (norm up to sign): +-1
+== start (2,1): N = b^2-ab-a^2 = -5 = {5: 1}
+   first 24 terms: [2, 1, 3, 4, 7, 11, 18, 29, 47, 76, 123, 199, 322, 521, 843, 1364, 2207, 3571, 5778, 9349, 15127, 24476, 39603, 64079]
+   Lucas form: G_n = 1 L_n + 0 L_(n+1)
+   mod 5: roots of x^2-x-1 = [3]; eigen-sequence G_n = 2 * 3^n mod 5: True; period 4 (pi(5) = 20); any term divisible by 5: False
+   period mod 2: 3 (Fibonacci pi = 3);   period mod 3: 8 (Fibonacci pi = 8);   period mod 4: 6 (Fibonacci pi = 6);   period mod 5: 4 (Fibonacci pi = 20);   period mod 8: 12 (Fibonacci pi = 12);   period mod 9: 24 (Fibonacci pi = 24);   period mod 10: 12 (Fibonacci pi = 60);   period mod 11: 10 (Fibonacci pi = 10);   period mod 27: 72 (Fibonacci pi = 72);
+   digital roots (24-cycle): [2, 1, 3, 4, 7, 2, 9, 2, 2, 4, 6, 1, 7, 8, 6, 5, 2, 7, 9, 7, 7, 5, 3, 8] ; 3/6/9 at n mod 4 in [2]
+   golden class mod 9 (norm up to sign): +-4
+== start (5,1): N = b^2-ab-a^2 = -29 = {29: 1}
+   first 24 terms: [5, 1, 6, 7, 13, 20, 33, 53, 86, 139, 225, 364, 589, 953, 1542, 2495, 4037, 6532, 10569, 17101, 27670, 44771, 72441, 117212]
+   no integral Lucas form (5 does not divide 2b - a); G_n = 5 F_(n-1) + 1 F_n
+   mod 29: roots of x^2-x-1 = [6, 24]; eigen-sequence G_n = 5 * 6^n mod 29: True; period 14 (pi(29) = 14); any term divisible by 29: False
+   period mod 2: 3 (Fibonacci pi = 3);   period mod 3: 8 (Fibonacci pi = 8);   period mod 4: 6 (Fibonacci pi = 6);   period mod 5: 20 (Fibonacci pi = 20);   period mod 8: 12 (Fibonacci pi = 12);   period mod 9: 24 (Fibonacci pi = 24);   period mod 10: 60 (Fibonacci pi = 60);   period mod 11: 10 (Fibonacci pi = 10);   period mod 27: 72 (Fibonacci pi = 72);
+   digital roots (24-cycle): [5, 1, 6, 7, 4, 2, 6, 8, 5, 4, 9, 4, 4, 8, 3, 2, 5, 7, 3, 1, 4, 5, 9, 5] ; 3/6/9 at n mod 4 in [2]
+   golden class mod 9 (norm up to sign): +-2
+== start (7,1): N = b^2-ab-a^2 = -55 = {5: 1, 11: 1}
+   first 24 terms: [7, 1, 8, 9, 17, 26, 43, 69, 112, 181, 293, 474, 767, 1241, 2008, 3249, 5257, 8506, 13763, 22269, 36032, 58301, 94333, 152634]
+   Lucas form: G_n = 4 L_n + -1 L_(n+1)
+   mod 5: roots of x^2-x-1 = [3]; eigen-sequence G_n = 2 * 3^n mod 5: True; period 4 (pi(5) = 20); any term divisible by 5: False
+   mod 11: roots of x^2-x-1 = [4, 8]; eigen-sequence G_n = 7 * 8^n mod 11: True; period 10 (pi(11) = 10); any term divisible by 11: False
+   period mod 2: 3 (Fibonacci pi = 3);   period mod 3: 8 (Fibonacci pi = 8);   period mod 4: 6 (Fibonacci pi = 6);   period mod 5: 4 (Fibonacci pi = 20);   period mod 8: 12 (Fibonacci pi = 12);   period mod 9: 24 (Fibonacci pi = 24);   period mod 10: 12 (Fibonacci pi = 60);   period mod 11: 10 (Fibonacci pi = 10);   period mod 27: 72 (Fibonacci pi = 72);
+   digital roots (24-cycle): [7, 1, 8, 9, 8, 8, 7, 6, 4, 1, 5, 6, 2, 8, 1, 9, 1, 1, 2, 3, 5, 8, 4, 3] ; 3/6/9 at n mod 4 in [3]
+   golden class mod 9 (norm up to sign): +-1
+== golden class mod 9 of the (a,1) family, a = 1..12: N = 1 - a - a^2
+   a= 1 N=  -1  class +-1
+   a= 2 N=  -5  class +-4
+   a= 3 N= -11  class +-2
+   a= 4 N= -19  class +-1
+   a= 5 N= -29  class +-2
+   a= 6 N= -41  class +-4
+   a= 7 N= -55  class +-1
+   a= 8 N= -71  class +-1
+   a= 9 N= -89  class +-1
+   a=10 N=-109  class +-1
+   a=11 N=-131  class +-4
+   a=12 N=-155  class +-2
+== (5,1) mod 9 is in the Q-orbit of 4*(Fibonacci)? True ; of 2*(Fibonacci)? False ; (7,1) = (F_9, F_10) mod 9? True
+== Solfeggio prime factors (p > 3) vs the norms a^2 + a - 1 of the (a,1) starts (NUMEROLOGY check)
+   174 = {2: 1, 3: 1, 29: 1} ; large primes: 29 (split, = N(5,1))
+   285 = {3: 1, 5: 1, 19: 1} ; large primes: 5 (ramified, = N(2,1)), 19 (split, = N(4,1))
+   396 = {2: 2, 3: 2, 11: 1} ; large primes: 11 (split, = N(3,1))
+   417 = {3: 1, 139: 1} ; large primes: 139 (split)
+   528 = {2: 4, 3: 1, 11: 1} ; large primes: 11 (split, = N(3,1))
+   639 = {3: 2, 71: 1} ; large primes: 71 (split, = N(8,1))
+   741 = {3: 1, 13: 1, 19: 1} ; large primes: 13 (inert), 19 (split, = N(4,1))
+   852 = {2: 2, 3: 1, 71: 1} ; large primes: 71 (split, = N(8,1))
+   963 = {3: 2, 107: 1} ; large primes: 107 (inert)
+   share of split primes among primes 7..1000: 0.473 (Chebotarev: 1/2)
