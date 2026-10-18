@@ -61,8 +61,9 @@ factorization and chiral algebras see S43's
   - The `(A_1, A_(2n))` statements survive, since those chiral algebras are classically free. The
     `(A_1, D_(2n+1))` conjecture needs boundary `sl2` freeness (HYP-9293).
   - v1 only, as of 2026-10-18.
-- **Argyres-Douglas chiral algebras.** `(A_(N-1), A_(k-1))` corresponds to the `W_N(N, N+k)` minimal model, and
-  `(A_1, D_(2n+1))` to `L_(-4n/(2n+1))(sl2)` (Cordova-Shao; Creutzig; Song). CITED; used in HYP-9296 and HYP-9297.
+- **Argyres-Douglas chiral algebras.** `(A_(N-1), A_(k-1))` corresponds to the `W_N(N, N+k)` minimal model
+  (Cordova-Shao, arXiv:1506.00265). This is a CONJECTURE there, checked against Schur indices to high order.
+  `(A_1, D_(2n+1))` corresponds to `L_(-4n/(2n+1))(sl2)` (Creutzig; Song). CITED; used in HYP-9296 and HYP-9297.
 
 ## Not found (searches 2026-10-18; a search miss is not novelty)
 

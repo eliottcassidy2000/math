@@ -46,7 +46,8 @@ Let `N >= 2` and let `p, q >= N` be coprime with `(p, q)` admissible. Let `V = W
 model, with the `W_3(3,5)`-type degenerate central charges excluded.
 1. `V` is classically free iff `p = N`.
 2. The boundary models `W_N(N, N+k)` (`gcd(N,k) = 1`) are the chiral algebras of the Argyres-Douglas theories
-   `(A_(N-1), A_(k-1))`. Their `C_2`-algebras are fat points: the Higgs branch is trivial and `X_V` is a point. So
+   `(A_(N-1), A_(k-1))`. This identification is the Cordova-Shao conjecture (arXiv:1506.00265), checked against
+   Schur indices to high order in later work; CITED as a conjecture. Their `C_2`-algebras are fat points: the Higgs branch is trivial and `X_V` is a point. So
    the Schur index of `(A_(N-1), A_(k-1))` equals the Hilbert series of the arc space of a zero-dimensional scheme.
    This is the Andrews-Gordon/Rogers-Ramanujan phenomenon of `(A_1, A_(2n))`, extended to all `N`.
 3. For `p > N` the first non-arc relation appears at the first syzygy of the arc ideal that has a nonvanishing quantum
