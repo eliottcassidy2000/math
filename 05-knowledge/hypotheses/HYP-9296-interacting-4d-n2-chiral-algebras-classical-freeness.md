@@ -8,11 +8,12 @@ status: >
     - (A_1,D_3) = (A_1,A_3), L_{-4/3}(sl2): free to weight 14 (Kac-Wakimoto and D(q^3)/D(q));
     - (A_1,D_5), (A_1,D_7): L_{-8/5}, L_{-12/7}(sl2), free to 14;
     - (A_1,D_9): L_{-16/9}(sl2), free to 13;
-    - (A_1,D_4): L_{-3/2}(sl3), free to weight 7 (boundary product formula D(q^2)/D(q));
+    - (A_1,D_4): L_{-3/2}(sl3), free to weight 7 for all blocks and to weight 8 via the zero-weight cone
+      (root-lattice argument; dim L = 653 = D(q^2)/D(q) zero-weight coefficient);
     - SU(2) N_f = 4: L_{-2}(so8), weight-5 zero-weight block free at two primes; dim L = 756 equals the so(8)
       zero-weight Schur coefficient. Every so(8)-module occurring has root-lattice weights, so the whole of
       ker(pi) is 0 through weight 5;
-    - N=4 SU(2) SYM: small N=4 at c = -9, free to weight 7, two primes to 6, Schur index matched.
+    - N=4 SU(2) SYM: small N=4 at c = -9, free to weight 9, two primes to 6, Schur index matched through weight 9.
   - W_3 boundary minimal models (the (A_2,A_{k-1}) chiral algebras W_3(3,3+k)): free for k = 4, 5 to weight 20 and
     k = 7, 8 to weight 22. Non-boundary W_3(4,5) and W_3(4,7) are not free (HYP-9297).
   - Negative case PROVED: THM-4672.
@@ -45,9 +46,9 @@ HYP-9296 asks for the true domain.
 | `(A_1, A_(2n))` | `Vir_(2,2n+3)` | all (PROVED) | Andrews-Gordon |
 | `(A_1, A_3)` | `L_(-4/3)(sl2)` | 14 | Kac-Wakimoto; `D(q^3)/D(q)` |
 | `(A_1, D_5)`, `(A_1, D_7)`, `(A_1, D_9)` | `L_(-8/5)`, `L_(-12/7)`, `L_(-16/9)` | 14, 14, 13 | Kac-Wakimoto |
-| `(A_1, D_4)` | `L_(-3/2)(sl3)` | 7 | `D(q^2)/D(q)` |
+| `(A_1, D_4)` | `L_(-3/2)(sl3)` | 8 (weight 8 via zero-weight cone) | `D(q^2)/D(q)` |
 | SU(2), `N_f = 4` | `L_(-2)(so8)` | 5 (zero-weight block, all of `ker pi` by root-lattice argument) | flavoured Schur index |
-| `N = 4` SU(2) SYM | small `N = 4`, `c = -9` | 7 | gauge-theory Schur index |
+| `N = 4` SU(2) SYM | small `N = 4`, `c = -9` | 9 | gauge-theory Schur index |
 | `(A_2, A_3)`, `(A_2, A_4)` | `W_3(3,7)`, `W_3(3,8)` (non-Lie, nonlinear bracket) | 20, 20 | maximal-submodule dims (no assumption) |
 | `(A_2, A_6)`, `(A_2, A_7)` | `W_3(3,10)`, `W_3(3,11)` | 22, 22 | maximal-submodule dims |
 | free hyper / `Z_2` | `L_(-1/2)(sl2)` | **fails at 7** | free-field character |

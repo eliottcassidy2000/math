@@ -55,6 +55,32 @@ The `q = 10` and `q = 11` coefficients are as found. A weighted rescaling can no
 - **Curiosity (OBSERVATION).** The cusp alone has
   `HS J_infty(C[x,y]/(y^2 - x^3)) = prod_(n>=2)(1-t^n)^(-1) · 1/((1-t^3)(1-t^4)(1-t^5))` through weight 24.
 
+## Modulus rigidity (FINITE-EXACT, 2026-10-18)
+
+For `q >= 10` the `C_2`-ideal carries a modulus that weighted rescaling cannot remove.
+- `q = 10`: `R = (x y^2 - beta x^4, y^3 - gamma x^3 y)`, where only `beta/gamma` matters. The vertex algebra gives
+  `beta/gamma = 1/12`.
+- `q = 11`: `R = (y^3 - d x^3 y, x^2 y^2 - e x^5)`, where only `d/e` matters. The vertex algebra gives `d/e = 15/2`.
+
+The arc Hilbert series equals the product **only at the vertex-algebra value**, through weight 22.
+
+`q = 10`:
+- ratio `1/12`: equal;
+- ratio `1`: first differs at weight 11 (45 vs 44);
+- ratios `1/6` and `-1/12`: first differ at 12 (65 vs 66).
+
+`q = 11`:
+- ratio `15/2`: equal;
+- ratio `1`: first differs at 13 (93 vs 92);
+- ratios `7` and `8`: first differ at 14 (131 vs 132).
+
+**Reading.** The rank of the arc ideal is lower semicontinuous, so the generic modulus has the smallest arc Hilbert
+series. That generic value falls below the product. The vertex-algebra modulus is a special jump point where the arc
+space is just large enough to carry the character.
+
+So classical freeness of `W_3(3,q)` is not a property of the shape of the `C_2`-ideal. It pins the modulus. This is a
+rigidity phenomenon with no analogue in the one-variable case, where `C[x]/(x^k)` has no modulus.
+
 ## Tests
 
 - **Push and extend.** `q = 7, 8` to weight 34; `q = 13, 14` (needs the engine's `C_2` ideals).

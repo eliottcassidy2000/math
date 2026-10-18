@@ -197,9 +197,9 @@ For a 4d `N = 2` SCFT `T` with chiral algebra `V_T` (Beem et al. 2015):
 | `(A_1, A_(2n))` AD | `Vir_(2,2n+3)` | point | yes (van Ekeren-Heluani; engine to 30) | `n+1` |
 | `(A_1, D_3) = (A_1, A_3)` AD | `L_(-4/3)(sl2)` | `C^2/Z_2` | yes to weight 14 (16 running) | — |
 | `(A_1, D_5)`, `(A_1, D_7)` AD | `L_(-8/5)`, `L_(-12/7)(sl2)` | `C^2/Z_2` | yes to weight 14 | — |
-| `(A_1, D_4)` AD | `L_(-3/2)(sl3)` | `bar O_min(sl3)` | yes to weight 7 (dims = `D(q^2)/D(q)`) | — |
+| `(A_1, D_4)` AD | `L_(-3/2)(sl3)` | `bar O_min(sl3)` | yes to weight 8 (dims = `D(q^2)/D(q)`; weight 8 via the zero-weight cone) | — |
 | SU(2), `N_f = 4` | `L_(-2)(so8)` | `bar O_min(so8)` | **yes through weight 5**; zero-weight block at two primes, `dim L = 756` = Schur | — |
-| `N = 4` SU(2) SYM | small `N = 4`, `c = -9` | `C^2/Z_2` | **yes to weight 7** (two primes to 6) | **2** (matches DMR 2025) |
+| `N = 4` SU(2) SYM | small `N = 4`, `c = -9` | `C^2/Z_2` | **yes to weight 9** (two primes to 6) | **2** (matches DMR 2025) |
 | `(A_2, A_3)`, `(A_2, A_4)` AD | `W_3(3,7)`, `W_3(3,8)` | point | yes to weight 20 | — |
 | `(A_2, A_6)`, `(A_2, A_7)` AD | `W_3(3,10)`, `W_3(3,11)` | point | yes to weight 22 | — |
 | free hypermultiplet / `Z_2` | `L_(-1/2)(sl2) = (beta gamma)^(Z_2)` | `C^2/Z_2` | **no: first failure at weight 7** | **3** |
@@ -283,6 +283,9 @@ generalizing Andrews-Gordon.
 - The monomial degenerations `(xy, y^2)` and `(y^2, x^2 y)` fail, at weights 8 and 10.
 - This is the `A_2` analogue of Bruschek-Mourtada-Schepers' arc-space proof of Rogers-Ramanujan/Andrews-Gordon. It
   is the commutative-algebra face of HYP-9297 for `N = 3`.
+- **Modulus rigidity.** For `q = 10, 11` the ideal has a scale-invariant modulus, with vertex-algebra values
+  `beta/gamma = 1/12` and `d/e = 15/2`. The product identity holds only at that value; ratios 1, 1/6, -1/12 and
+  1, 7, 8 fail by weight 11-14. The chiral algebra sits at a jump point of its family.
 - Curiosity: the cusp alone has
   `HS J_infty(y^2 = x^3) = prod_(n>=2)(1-t^n)^(-1) / ((1-t^3)(1-t^4)(1-t^5))` through weight 24.
 
@@ -333,6 +336,10 @@ The `N = 2` superconformal algebra is a Lie superalgebra (`n2_sca.py`, 600/600 b
    freeness.
 
 ## Sources (CITED)
+
+Literature status pins, with check dates and the audit of external claims, are in
+[CORE-PAPERS-VERTEX-ALGEBRA-CLASSICAL-LIMIT-2026-10-18.md](../reference/CORE-PAPERS-VERTEX-ALGEBRA-CLASSICAL-LIMIT-2026-10-18.md).
+
 
 - G. Andrews, J. van Ekeren, R. Heluani, *The singular support of the Ising model*, arXiv:2005.10769 (IMRN 2023).
 - J. van Ekeren, R. Heluani, *Chiral homology of elliptic curves and the Zhu algebra*, CMP 386 (2021);

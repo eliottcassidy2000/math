@@ -1,0 +1,19 @@
+sl3 k=-3/2: singular vectors at weight 2, charge (1, 1): 1
+PBW basis built (0.8s)
+D=    0 dimV=      1 dimI=      0 dimL=      1 arcHS=      1 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    1 dimV=      8 dimI=      0 dimL=      8 arcHS=      8 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    2 dimV=     44 dimI=      8 dimL=     36 arcHS=     36 ker=    0 gens(Li,charge,#)=[(0, (1, -2), 1), (0, (-1, -1), 1), (0, (-1, 2), 1), (0, (-2, 1), 1), (0, (1, 1), 1), (0, (2, -1), 1), (0, (0, 0), 2)] (0.0s)
+D=    3 dimV=    192 dimI=     64 dimL=    128 arcHS=    128 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    4 dimV=    726 dimI=    332 dimL=    394 arcHS=    394 ker=    0 gens(Li,charge,#)=[] (0.3s)
+D=    5 dimV=   2302 dimI=   1334 dimL=    968 arcHS=    968 ker=    0 gens(Li,charge,#)=[] (2.3s)
+D=    6 dimV=   5430 dimI=   3686 dimL=   1744 arcHS=   1744 ker=    0 gens(Li,charge,#)=[] (18.1s)
+D=    7 dimV=   7522 dimI=   5630 dimL=   1892 arcHS=   1892 ker=    0 gens(Li,charge,#)=[] (86.1s)
+D=    8 dimV=   3207 dimI=   2554 dimL=    653 arcHS=    653 ker=    0 gens(Li,charge,#)=[] (67.1s)
+TOP block weight 8 charge (0, 0): dim V=3207 dim I=2554 dim L=653; ker pi by Li: none
+  weight 2, charge (0, 0): dim ker pi = 0
+  weight 3, charge (0, 0): dim ker pi = 0
+  weight 4, charge (0, 0): dim ker pi = 0
+  weight 5, charge (0, 0): dim ker pi = 0
+  weight 6, charge (0, 0): dim ker pi = 0
+  weight 7, charge (0, 0): dim ker pi = 0
+  weight 8, charge (0, 0): dim ker pi = 0
