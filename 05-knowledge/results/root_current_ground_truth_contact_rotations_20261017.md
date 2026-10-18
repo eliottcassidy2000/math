@@ -8,6 +8,8 @@ mixed-coordinate forcing beyond the spindle cube; companion to clock_duality_oct
 **Typing.**
 - FINITE-EXACT: the full current on every octave `2^8..2^27`; the fold `R = I + B` at every row to `2^26`; the 34
   contact rotations and their port test.
+- Independently audited 2026-10-17 (s40_audit_20261017/REPORT.md): every number for `k = 8..24` and the fold at every
+  row reproduced; two prose errors corrected (MISTAKE-626).
 - PROVED (by citation in the repository): the calibration of section 3 (HYP-9283(C), S37).
 - OPEN: any uniform bound; six-colour forcing.
 - No novelty claim.
@@ -66,9 +68,11 @@ checks `I + B = a_N` at every row of every octave `2^8..2^26` (zero failures) an
 
 (All nineteen rows are in the [output](collatz_root_current_fold_full_20261017.out).)
 
-- The bulk and the rim are anti-correlated at 16 of 19 octaves. The current's energy is what survives a large
+- The bulk and the rim are anti-correlated at 17 of 19 octaves, positive only at 2^18 and 2^22 (corrected after the
+  audit; the first version and commit 309af1b454 said 16 of 19). The current's energy is what survives a large
   cancellation: at `2^23` the bulk energy 8.54 cancels to 1.51.
-- The two highest-energy octaves are where the cancellation fails: `2^22` (correlation +0.61) and `2^12`.
+- The highest-energy octave, `2^22`, is where the cancellation fails (correlation +0.61). At `2^12` bulk and rim still
+  anti-correlate (-0.64); there the energy comes from a large rim (`||B||^2 = 6.57 X^2`).
 - clock_duality's staged cross term at `k = 18`, stage 28 (`<I,B>/X^2 = 0.173301`) is close to the final 0.1735. The
   staged energy 1.634206 differs from the final 1.6042, because the stages have different terminal coverage (as
   clock_duality notes in root_braid_logistic_20261017f.md).
@@ -80,8 +84,9 @@ checks `I + B = a_N` at every row of every octave `2^8..2^26` (zero failures) an
 ## 3. Calibration of a uniform bound (PROVED implication, S37)
 
 The tail-debt target (W) is `Σ_(X <= n < 2X) H(n)^2 = O(X^(2+ε))`. This is exactly the energy `E_X` of HYP-9283; S38's
-THM-4660 is conditional on the same (W). The ground truth is `E_X/X^2 <= 1.769` for dyadic `X <= 2^39` (S37), and Run C
-of S38 extends it to `2^43` (pre-registered, pending).
+THM-4660 is conditional on the same (W). The ground truth is `E_X/X^2 <= 1.769` for dyadic `4 <= X <= 2^39` (S37; `X = 2`
+gives 3.25), S38's first stage adds 0.139 at `2^40` and 1.142 at `2^41`, and Run C of S38 extends the census to `2^43`
+(pre-registered, pending).
 
 HYP-9283(B, C): any certified constant budget `E_X <= 14348 X^2` for dyadic `X >= 2^40` (or a linear-log budget
 `(2 + 9616 j) X^2`) certifies the nonzero Mercator residue at `s_0 ≈ 0.99821 + 240.248i`. Hence `F` has a pole there, and
@@ -94,6 +99,15 @@ unspecified constant does not run the certificate as stated, which needs explici
 clock_duality's anchor "an independent uniform bound on the certified ROOT current": it is not a technical gap. The
 finite data above say the constant is small (`K_X <= 2.4`, energy `<= 4.6 X^2` to `2^27`), not that a proof is near.
 
+**From the current to `E_X`.** A budget for the current reaches `E_X` through THM-4658:
+`sqrt(E_4X) <= 2 sqrt(E_X) + 2 sqrt(D_X) + 4 sqrt(3X)`, with `D_X = Σ_(X <= N < 2X) a_N^2`. So `D_X <= C X^2` for
+`X >= 2^40` gives `E_X <= (max(e_(2^40), e_(2^41), C) + o(1)) X^2`. A constant tail constant `K_X` gives only
+`D_X = O(X^2 log X)` (graded_tail_carrier (T3)), i.e. a linear-log budget, which is one of the certified shapes.
+
+**A floor for every certificate.** clock_duality's `K_X` (graded_tail_carrier (T1)) is computed on certificate
+envelopes `C(N) >= |a_N|`, so the exact values above are floors for any certificate. At `2^22` the floor is 2.398,
+against the certified stage-27 value 3.928 (escape_renewal_idoneal_20261017d.md section 3).
+
 ## 4. Contact rotations stay in the base field (FINITE-EXACT, consistent with clock_duality's degree lemma)
 
 [mixed_spindle_rotations_20261017.py](../../04-computation/experiments/mixed_spindle_rotations_20261017.py) searches
@@ -102,8 +116,11 @@ Here `e` ranges over 570 unit directions (`±zeta15^k` times words of length `<=
 spindle differences. Then `d1 + U d2 = e` is a unit edge of `M + U M` that changes both coordinates. Results:
 
 - **All 34 rotations lie in `K`** (no `w` component). This is forced by clock_duality's lemma (5): `K(w)/K` is cubic,
-  and a contact needs `[K(U):K] <= 2`. The search is an independent confirmation of the lemma in the escape field.
-- The blocks with strictly mixed edges (4 or 2 of them; 47 or 49 points) are four-chromatic.
+  and a contact needs `[K(U):K] <= 2`. The search script does not test it; it was checked separately in S40, and the
+  audit's audit_rotations_field.py confirms 34/34 with zero `w`-coordinates, `|U| = 1`, and six roots of unity.
+  Together these confirm the lemma independently in the escape field.
+- The non-root-of-unity blocks with mixed edges (4 or 2 of them; 47 or 49 points) are four-chromatic. The six
+  root-of-unity rotations also give 3-4 mixed edges on 35-37 points.
 - Attached at the eight ports with the `zeta5` rotations (1778-1858 vertices, about 8000 edges, every edge by exact
   norm), they block none of the 570 boundary patterns.
 

@@ -1,0 +1,18 @@
+k= 8 energy 0.6296 K 0.3672 pos 0.012 chg 9 min 0 max 20 | fold fails 0 | II 1.0166 BB 1.7396 IB -1.0633 | session match True fold match True
+k= 9 energy 1.0204 K 0.4616 pos 0.400 chg 14 min 0 max 48 | fold fails 0 | II 0.9598 BB 0.3970 IB -0.1682 | session match True fold match True
+k=10 energy 1.0615 K 0.4808 pos 0.443 chg 33 min 0 max 76 | fold fails 0 | II 1.3064 BB 2.5486 IB -1.3967 | session match True fold match True
+k=11 energy 1.9539 K 0.8157 pos 0.000 chg 0 min 16 max 114 | fold fails 0 | II 0.8230 BB 2.7444 IB -0.8068 | session match True fold match True
+k=12 energy 3.9777 K 1.5103 pos 0.689 chg 2 min 0 max 268 | fold fails 0 | II 1.8199 BB 6.5687 IB -2.2054 | session match True fold match True
+k=13 energy 2.9457 K 1.3169 pos 0.976 chg 21 min 0 max 286 | fold fails 0 | II 3.9661 BB 4.0397 IB -2.5300 | session match True fold match True
+k=14 energy 0.6608 K 0.2622 pos 0.552 chg 154 min 0 max 284 | fold fails 0 | II 3.3370 BB 2.4349 IB -2.5556 | session match True fold match True
+k=15 energy 2.0387 K 0.9980 pos 0.467 chg 157 min 0 max 448 | fold fails 0 | II 2.4849 BB 2.5395 IB -1.4928 | session match True fold match True
+k=16 energy 0.7818 K 0.3501 pos 0.916 chg 167 min 0 max 532 | fold fails 0 | II 1.2133 BB 1.0043 IB -0.7179 | session match True fold match True
+k=17 energy 0.9850 K 0.4359 pos 1.000 chg 0 min 24 max 654 | fold fails 0 | II 1.0977 BB 0.7189 IB -0.4158 | session match True fold match True
+k=18 energy 1.6042 K 0.7795 pos 1.000 chg 0 min 148 max 1058 | fold fails 0 | II 0.4718 BB 0.7853 IB 0.1735 | session match True fold match True
+k=19 energy 0.8408 K 0.3639 pos 1.000 chg 0 min 80 max 1274 | fold fails 0 | II 1.2210 BB 0.4700 IB -0.4251 | session match True fold match True
+k=20 energy 0.2126 K 0.0720 pos 0.807 chg 1186 min 0 max 1278 | fold fails 0 | II 0.8092 BB 0.6763 IB -0.6365 | session match True fold match True
+k=21 energy 0.2319 K 0.0877 pos 0.643 chg 2246 min 0 max 1932 | fold fails 0 | II 0.4796 BB 0.4893 IB -0.3685 | session match True fold match True
+k=22 energy 4.5367 K 2.3981 pos 1.000 chg 0 min 382 max 6466 | fold fails 0 | II 0.6376 BB 2.3950 IB 0.7521 | session match True fold match True
+k=23 energy 1.5106 K 0.7212 pos 1.000 chg 0 min 1578 max 5814 | fold fails 0 | II 8.5394 BB 3.1536 IB -5.0912 | session match True fold match True
+k=24 energy 0.9822 K 0.3983 pos 0.816 chg 1172 min 0 max 9208 | fold fails 0 | II 1.4855 BB 0.5201 IB -0.5117 | session match True fold match True
+mismatching octaves: [] ; 16.8 s

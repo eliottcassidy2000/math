@@ -1,0 +1,20 @@
+p=23 s=0.5 Gamma(s)L(s,chi) = 4.3520167433  integral = 4.3520167433  diff 2.3e-12
+p=23 s=0.8 Gamma(s)L(s,chi) = 2.4957253763  integral = 2.4957253763  diff 1.6e-14
+p=23 s=1.0 Gamma(s)L(s,chi) = nan  integral = 1.9652020541  diff nan
+p=23 s=2.0 Gamma(s)L(s,chi) = 1.4032169046  integral = 1.4032169046  diff 1.9e-13
+   p=23: min of f_p on (0,1) grid = 0.00010 (sign change: False)
+p=43 s=0.5 Gamma(s)L(s,chi) = 0.9301372469  integral = 0.9301372469  diff 6.3e-13
+p=43 s=0.8 Gamma(s)L(s,chi) = 0.5445983732  integral = 0.5445983732  diff 2.0e-13
+p=43 s=1.0 Gamma(s)L(s,chi) = nan  integral = 0.4790883882  diff nan
+p=43 s=2.0 Gamma(s)L(s,chi) = 0.6905410722  integral = 0.6905410722  diff 1.1e-16
+   p=43: min of f_p on (0,1) grid = -0.00777 (sign change: True)
+p=47 s=0.5 Gamma(s)L(s,chi) = 5.8553871629  integral = 5.8553871629  diff 1.1e-12
+p=47 s=0.8 Gamma(s)L(s,chi) = 3.0558782457  integral = 3.0558782457  diff 3.4e-13
+p=47 s=1.0 Gamma(s)L(s,chi) = nan  integral = 2.2912419285  diff nan
+p=47 s=2.0 Gamma(s)L(s,chi) = 1.4475584889  integral = 1.4475584889  diff 1.6e-15
+   p=47: min of f_p on (0,1) grid = 0.00010 (sign change: False)
+p=163 s=0.5 Gamma(s)L(s,chi) = 0.1214693789  integral = 0.1214693789  diff 4.3e-12
+p=163 s=0.8 Gamma(s)L(s,chi) = 0.1675290301  integral = 0.1675290301  diff 1.1e-13
+p=163 s=1.0 Gamma(s)L(s,chi) = nan  integral = 0.2460685276  diff nan
+p=163 s=2.0 Gamma(s)L(s,chi) = 0.6623863327  integral = 0.6623863327  diff 5.6e-16
+   p=163: min of f_p on (0,1) grid = -0.92543 (sign change: True)

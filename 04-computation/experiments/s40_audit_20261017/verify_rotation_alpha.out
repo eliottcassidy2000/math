@@ -1,0 +1,8 @@
+p=167 alpha=7599/19912: rotation-order excess 1861, natural excess 1837, forward arcs 7861 vs 7849, beaten: True
+p=263 alpha=57115/72812: rotation-order excess 4079, natural excess 3419, forward arcs 19266 vs 18936, beaten: True
+p=383 alpha=38609/72644: rotation-order excess 7519, natural excess 6511, forward arcs 40336 vs 39832, beaten: True
+p=439 alpha=27601/171580: rotation-order excess 9313, natural excess 6585, forward arcs 52727 vs 51363, beaten: True
+p=503 alpha=9521/197064: rotation-order excess 11657, natural excess 10563, forward arcs 68955 vs 68408, beaten: True
+p=647 alpha=10901/258330: rotation-order excess 17661, natural excess 14881, forward arcs 113321 vs 111931, beaten: True
+p=983 alpha=376249/642500: rotation-order excess 34225, natural excess 26541, forward arcs 258439 vs 254597, beaten: True
+p=599 alpha=12767/298528: rotation-order excess 15507, natural excess 14975, forward arcs 97304 vs 97038, beaten: True

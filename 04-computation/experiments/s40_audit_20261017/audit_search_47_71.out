@@ -1,0 +1,2 @@
+{'p': 47, 'h': 5, 'L': 2.2912, 'natural': 235, 'rotation_raw_max': 235, 'rotation_polished': 235, 'sa_best': 235, 'sa_median': 215, 'restarts': 480, 'steps': 940000, 'best': 235, 'beaten': False, 'seconds': 70.7}
+{'p': 71, 'h': 7, 'L': 2.6099, 'natural': 497, 'rotation_raw_max': 497, 'rotation_polished': 497, 'sa_best': 497, 'sa_median': 417, 'restarts': 480, 'steps': 1420000, 'best': 497, 'beaten': False, 'seconds': 92.6}

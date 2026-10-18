@@ -11,7 +11,7 @@ excess p h(-p) (THM-4666 in preparation; Dirichlet's class number formula). Writ
   and not optimal at p = 11, 19, 31 (MAS 35, 107, 285 against 33, 95, 279); at p = 43 the certified MAS 543
   (Chindelevitch-Harutyunyan, arXiv:2607.26690, Thm 7.1) exceeds the natural 473.
 * Iterated insertion local search (paley_ranking_local_search_20261017.py, 30 restarts x 150 kicks), p <= 131: the
-  natural order was not beaten at p = 3, 7, 23, 47, 71 (L = 1.81, 1.19, 1.97, 2.29, 2.61) and was beaten at every other
+  natural order was not beaten at p = 3, 7, 23, 47, 71 (L = 0.60, 1.19, 1.97, 2.29, 2.61; the value 1.81 printed for p = 3 omitted the unit factor w = 6, corrected after the audit) and was beaten at every other
   prime (L <= 1.77). The search reproduced every exact optimum (11, 19, 23, 31, 43).
 
 ## Predictions for 131 < p <= 500 (run with 12 restarts x 80 kicks; any found order is printed)
@@ -54,3 +54,25 @@ Run: `python paley_ranking_local_search_20261017.py 501:1000 6 40` (fewer restar
   727, 739, 751, 787, 811, 823, 827, 859, 883, 907, 919, 947, 967, 971, 991), the natural order **is** beaten. Passes
   if all 27 are beaten.
 * **Exploratory, no prediction:** 743 (L = 2.42), 863 (L = 2.246), 983 (L = 2.705).
+
+## Audit addendum to the first test (2026-10-17, after the independent S40 audit)
+
+Certified rotation orders (rank `x` by `frac(alpha x)`) beat the natural order at 167 (1861), 263 (4079) and 383 (7519),
+and at 439 with excess 9313. So P1 has 4 of 10 high-L primes beaten and, by the failure rule above, the threshold form
+is **refuted**. The PASS recorded in the Outcome section only says that the pre-registered search did not find these
+orders: it was too weak to support "unbeaten" (MISTAKE-626). P2 stands.
+
+## Outcome of the second test (appended after the run and the audit)
+
+Run: `python paley_ranking_local_search_20261017.py 501:1000 6 40`
+(`paley_ranking_local_search_p501_1000_20261017.out` / `.json`).
+
+* **Q2 PASSED.** All 27 primes with L <= 2.0 are beaten by certified witness orders.
+* **Q1 FAILED.** As executed, the local search left all seven high-L primes unbeaten. But certified rotation orders beat
+  503 (11657 against 10563), 599 (15507 against 14975) and 647 (17661 against 14881) (audit), and the S40 rotation scan
+  also beats 887 (26853 against 25723) and 911 (28547 against 28241). That is at least five of seven, against at most
+  one allowed. 719 and 839 are not beaten in the coarse S40 scan (m <= 6), which missed the 599 witness.
+* **Exploratory.** 743 and 863 are beaten by the local search; 983 is beaten by rotation orders (audit: 34225 against
+  26541; S40 scan: 32103).
+
+HYP-9287 is rewritten accordingly: refuted in its threshold form, with a revised conjecture.

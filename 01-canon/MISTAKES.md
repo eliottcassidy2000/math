@@ -18358,3 +18358,47 @@ the ambient space.
 - **Repair / strongest survivor:** the Reading and the note now state the base rates and locate the specificity in the reduction lemma; the parallelogram step is proved directly (two unit circles with distinct centres meet in at most two points for any nondegenerate binary form in characteristic not 2; THM-4663 (2) is the case G_q); 2441 (16) and 2551 (8) are cited from the audit's outputs as the only twisted points among the 38 primes p = 10 (mod 11) below 2600; "all but p = 383 are multiples of 8". Every count was reproduced by a lemma-free embedding search with zero disagreements, the conjugation-fixed sharpening was added (every unit direction is a P-unit there), and the audit identified the third involution (block re-placement (U0, U4) -> (U9, U11)), proving even counts for p > 17.
 - **Evidence:** `04-computation/experiments/s39_audit_ei17_20261017/REPORT.md` and its scripts (a1, a2, a4, a6, a7, a8, a9).
 - **Lesson:** compare a zero count against the control base rate before calling it an obstruction; say which step is special (here the reduction lemma, not the count). Cite a lemma only within the setting its proof covers, or prove the general case in place.
+
+## MISTAKE-626 (2026-10-17, opus-2026-10-17-S40; independent S40 referee) -- a weak heuristic search was used as evidence that a ranking is optimal, an upper bound was cited as a counting function, the repository's adopted idoneal status was overridden without comment, and two classical criteria were misquoted
+
+- **Affected claims:** HYP-9287 (title, status, evidence), its two pre-registration outcomes, the main note
+  (binary_information_class_groups_largest_anomalies_20261017.md) sections 0.6 and 4, and commits e5f823e1dc and
+  3e7bdf95dd, which treated the natural Paley order as optimal for large L(1, chi_-p). THM-4666 statement 5 gave
+  Kalmynin's bound as the counting function of L+ and credited the prime density statement to Baker-Montgomery. The main
+  note opened with "'only 65 idoneal numbers' is a theorem under GRH, not unconditionally" (with "at most one or two"),
+  against THM-4566's adopted status. Gauss's criteria were quoted as "p = x^2 + 27y^2 iff 2 is a cubic residue" and
+  "p = x^2 + 64y^2 iff 2 is a quartic residue". Repository prior art (Paley half-row imbalance, escape_renewal section 7,
+  trees5 merged count) was not credited. The ROOT note said bulk and rim were anti-correlated at "16 of 19" octaves.
+- **First failed implications:**
+  - (i) "a 12-restart insertion search did not beat the natural order, so the natural order is (likely) optimal" fails:
+    certified rotation orders (rank x by frac(alpha x)) beat it at 167, 263, 383, 439 (P1: 4 of 10) and 503, 647 (Q1),
+    with 887, 911, 983 found by the S40 rotation scan.
+  - (ii) Kalmynin's Thm 2 is `#(L+ ∩ [1,x]) << π(x)/(log log x)^0.0368`, an upper bound; Baker-Montgomery is stated for
+    almost all fundamental discriminants.
+  - (iii) THM-4566 records idoneal completeness PROVED modulo openai/math #003 (owner directive 2026-10-07), and Kani
+    (2011) gives "at most two" unconditionally.
+  - (iv) Gauss's criteria need p ≡ 1 (mod 3) and p ≡ 1 (mod 4); counterexamples p = 5, 7.
+  - (v) The fold data show positive correlation only at 2^18 and 2^22, i.e. 17 of 19 anti-correlated.
+- **Repair / strongest survivor:**
+  - HYP-9287 is rewritten as REFUTED in the threshold form, with a certificate table, a revised conjecture (optimality on
+    a thin set where L(1, chi_-p) dominates its small-conductor twists) and a calibration rule for future "unbeaten"
+    claims. The pre-registration file carries the audit addendum and the second outcome (Q1 FAILED, Q2 PASSED).
+  - "Never optimal for h(-p) = 1, p > 7" is PROVED (finite).
+  - THM-4666's citations are corrected and prior art credited.
+  - The note states both idoneal layers (classical and adopted). Gauss's criteria are corrected and credits added.
+  - The ROOT note is corrected.
+  - Every computation in THM-4666 and the notes was reproduced by independent code; the new THM-4666 statements 1b, 5b
+    (arithmetic orders, randomised moves) were added after the audit with proofs.
+- **Evidence:** `04-computation/experiments/s40_audit_20261017/REPORT.md` and its scripts (audit_rotation_witnesses,
+  audit_search, audit_witnesses, rerun/, audit_thm4666_identities, audit_exponent_ladder, audit_ring_class_1848,
+  audit_root_current, audit_rotations_field).
+- **Addenda (same session, after the audit):** (a) the S40 rotation scan with `alpha = k/(mp)`, `m <= 6`, was itself
+  reported as leaving 599, 719, 839 unbeaten; the audit's full Farey-midpoint family beats 599 (15507 against 14975), so
+  a coarse structured scan is no better evidence than the local search; (b) self-found: the docstring and notes said a
+  plain HiGHS MIP "does not finish p = 23 in 600 s"; the stored result shows proven optimality at p = 23 in 72 s (the
+  600 s was the Bash tool timeout), and at p = 31 the 1200 s limit leaves incumbent 283 against bound 307 (MAS 285).
+  Both corrected in HYP-9287, the note, OPEN-QUESTIONS and the script.
+- **Lesson:** an "unbeaten" claim from a heuristic search must include the structured candidates of the problem (here
+  the rotation family, which contains the natural order) and be calibrated on known cases before it is pre-registered.
+  Check the repository's adopted status before correcting an owner premise. Quote the side conditions of classical
+  criteria. Cite the exact form of a bound (upper bound versus asymptotic).

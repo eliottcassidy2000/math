@@ -1,0 +1,2 @@
+primes 13 <= p <= 10000000: represented by x^2+1848y^2: 20639; split completely in Q(i,sqrt2,sqrt3,sqrt7,sqrt11): 20639; mismatches 0
+h(-7392) = 16 ; h(-1848) = 8 ; tower h(-1848*4^k), k=0..5: [8, 16, 32, 64, 128, 256]

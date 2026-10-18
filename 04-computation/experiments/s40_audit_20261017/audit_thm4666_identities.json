@@ -1,0 +1,56 @@
+{
+ "fundamental_20000": {
+  "count": 6079,
+  "failures": [],
+  "max_analytic_dev": 5.115907697472721e-13
+ },
+ "fundamental_random_1e6": {
+  "count": 1500,
+  "failures": [],
+  "max_analytic_dev": 5.6843418860808015e-12
+ },
+ "affine_orders": {
+  "checked": 30388,
+  "failures": 0
+ },
+ "paley": {
+  "primes": 9006,
+  "stmt1_failures": [],
+  "half_failures": [],
+  "area_failures": [],
+  "h1": [
+   3,
+   7,
+   11,
+   19,
+   43,
+   67,
+   163
+  ]
+ },
+ "paley_random_big": {
+  "checked": 400,
+  "failures": []
+ },
+ "split_vs_arc": {
+  "pairs": 42900,
+  "failures": 0
+ },
+ "lucky": [
+  2,
+  3,
+  5,
+  11,
+  17,
+  41
+ ],
+ "rabinowitsch": [
+  1,
+  2,
+  3,
+  5,
+  11,
+  17,
+  41
+ ]
+}

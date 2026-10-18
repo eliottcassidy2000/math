@@ -1,0 +1,5 @@
+{'p': 3, 'natural_forward': 2, 'MAS_dp_last0': 2, 'seconds': 0.8, 'MAS_brute_last0': 2}
+{'p': 7, 'natural_forward': 14, 'MAS_dp_last0': 14, 'seconds': 0.0, 'MAS_brute_last0': 14, 'MAS_dp_last0_pen': 14}
+{'p': 11, 'natural_forward': 33, 'MAS_dp_last0': 35, 'seconds': 0.0, 'MAS_brute_last0': 35, 'MAS_dp_last0_pen': 35}
+{'p': 19, 'natural_forward': 95, 'MAS_dp_last0': 107, 'seconds': 0.0, 'MAS_dp_last0_pen': 107}
+{'p': 23, 'natural_forward': 161, 'MAS_dp_last0': 161, 'seconds': 0.8, 'MAS_dp_last0_pen': 161}

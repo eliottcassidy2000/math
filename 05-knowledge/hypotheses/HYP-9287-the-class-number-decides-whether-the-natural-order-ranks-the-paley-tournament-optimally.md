@@ -1,61 +1,90 @@
 ---
 id: HYP-9287
-title: "The class number decides whether the natural order ranks the Paley tournament optimally: the natural order of P_p (excess p h(-p), THM-4666) is a maximum acyclic ordering exactly when L(1, chi_(-p)) = pi h(-p)/sqrt(p) exceeds a slowly rising threshold (about 2 near p = 50, between 2.25 and 2.52 for 131 < p <= 500); in particular it is never optimal when h(-p) = 1 and p > 7"
+title: "Does the class number decide whether the natural order ranks the Paley tournament optimally? REFUTED in the threshold form (natural order optimal iff L(1, chi_(-p)) exceeds a slowly rising threshold): rotation (Beatty) orders x -> {alpha x} beat the natural order at high-L primes 167, 263, 383, 439, 503, 599, 647, 887, 911, 983, while it stays unbeaten only at 47, 71, 191, 239, 311, 359, 431, 479 (full rotation family, audit); surviving question: is the natural order optimal at only finitely many primes (a largest anomaly), or on a thin infinite set governed by L(1, chi_(-p)) against its small-conductor twists?"
 status: >
-  OPEN (CONJECTURE). Pre-registered test PASSED (paley_ranking_preregistration_20261017.md, pushed before the run):
-  P1 nine of the ten primes with L >= 2.2 in (131, 500] unbeaten (only 439, L = 2.249, beaten; criterion: at most one);
-  P2 all twenty primes with L <= 1.7 beaten by certified orders. FINITE-EXACT: optimality at p = 3, 7, 23 and
-  non-optimality at 11, 19, 31 (exact MAS), 43 (cited MAS 543). "Unbeaten" is local-search evidence, not a proof of
-  optimality; every "beaten" is a certified witness order.
+  REFUTED as first stated (independent S40 audit, 04-computation/experiments/s40_audit_20261017/REPORT.md, MISTAKE-626).
+  Both pre-registered tests were genuine (pushed before the runs; reruns byte-identical) and passed as executed, but the
+  pre-registered search (12-30 restarts of insertion local search) was too weak for its "unbeaten" claims: certified
+  rotation orders beat the natural order at 167, 263, 383 (and 439), so P1 has 4 of 10 high-L primes beaten, the failure
+  its own rule names; in the second test 503, 599 and 647 (audit) and 887, 911 (S40 scan) are beaten, so Q1 fails (at least 3 of 7; at most one allowed). P2 and Q2
+  (low L always beaten, certified witnesses) stand. PROVED (finite, via Heegner-Baker-Stark): never optimal for
+  h(-p) = 1, p > 7 (11, 19 by exact MAS; 43, 67, 163 by witnesses of excess 183, 393, 1577). FINITE-EXACT: optimal at
+  3, 7, 23; not optimal at 11, 19, 31, 43. OPEN (CONJECTURE, revised): the natural order is optimal only on a thin set of
+  primes inside L+, characterised by L(1, chi_(-p)) dominating the twisted values that control the rotation orders;
+  whether that set is finite is open (the audit's evidence: the boundary rises from 2.73-2.955 for p <= 500 to above
+  3.21 at p = 599).
 session: opus-2026-10-17-S40
 source: 05-knowledge/results/binary_information_class_groups_largest_anomalies_20261017.md
 scripts:
-  - 04-computation/experiments/paley_ranking_local_search_20261017.py (runs '131 30 150' and pre-registered '132:500 12 80'; + .out, .json)
-  - 04-computation/experiments/paley_mas_exact_20261017.py (exact MAS, p <= 31)
-  - 04-computation/experiments/paley_legendre_walk_positivity_20261017.py (L+ against L(1, chi))
+  - 04-computation/experiments/paley_ranking_local_search_20261017.py (runs '131 30 150', pre-registered '132:500 12 80' and '501:1000 6 40'; + .out, .json)
+  - 04-computation/experiments/paley_rotation_orders_20261017.py (rotation scans m <= 30 at 47, 71; m <= 12 for 167-479; m <= 6 for 503-983)
+  - 04-computation/experiments/paley_mas_exact_20261017.py (exact MAS, p <= 31); paley_mas_milp_20261017.py (plain 3-dicycle MIP in HiGHS: optimal at p = 23 in 72 s; at p = 31 the 1200 s limit stops it at incumbent 283, bound 307, against MAS 285)
+  - 04-computation/experiments/paley_best_orders_vs_affine_20261017.py (structure of the witnesses)
+  - audit: 04-computation/experiments/s40_audit_20261017/audit_rotation_witnesses.py, audit_search.py (rotation certificates, 480-restart annealing at 47, 71)
 related: [THM-4666, HYP-9286, THM-871, THM-4644, HYP-9277]
 ---
 
 # HYP-9287 — class numbers and optimal rankings of Paley tournaments
 
-## Statement
+## The original statement and its refutation
 
-For primes `p ≡ 3 (mod 4)` write `L = L(1, χ_(-p)) = π h(-p)/sqrt(p)`. There is a threshold `τ(p)`, slowly increasing,
-such that the natural order `0 < 1 < ... < p-1` is a maximum acyclic ordering of `P_p` iff `L >= τ(p)` (up to a thin
-boundary layer). Necessary conditions are proved: the natural order must be insertion-locally optimal, i.e. `p ∈ L+`
-(all partial sums of `(./p)` nonnegative, THM-4666 (5)); hence the set of such `p` has relative density 0
-(Baker-Montgomery).
+For primes `p ≡ 3 (mod 4)` write `L = L(1, χ_(-p)) = π h(-p)/sqrt(p)` (`p > 3`; `L(1, χ_(-3)) = π/(3 sqrt 3) = 0.60`). The
+natural order `0 < 1 < ... < p-1` has excess `p h(-p)` (THM-4666). The first form of this hypothesis said: the natural
+order is a maximum acyclic ordering iff `L >= τ(p)`, a slowly rising threshold. Necessary conditions are proved: the
+natural order must be insertion-locally optimal, i.e. `p ∈ L+` (THM-4666 (5)), a set of relative density 0 (Kalmynin
+Thm 1, via Baker-Montgomery).
 
-## Evidence
+**Certificates against the threshold form** (rotation orders: list `x ∈ {0, ..., p-1}` by `(x·num) mod den`; every excess
+recomputed in pure Python by the audit or in the S40 scan):
 
-| p | h | L | natural excess | best found | natural optimal? |
-|---|---|---|---|---|---|
-| 3, 7 | 1 | 1.81, 1.19 | 1, 7 | 1, 7 (exact) | yes |
-| 11, 19 | 1 | 0.95, 0.72 | 11, 19 | 15, 43 (exact) | no |
-| 23 | 3 | 1.97 | 69 | 69 (exact) | yes |
-| 31 | 3 | 1.69 | 93 | 105 (exact) | no |
-| 43 | 1 | 0.48 | 43 | 183 (cited exact) | no |
-| 47, 71 | 5, 7 | 2.29, 2.61 | 235, 497 | 235, 497 | unbeaten |
-| 151, 199, 271, 439 | 7, 9, 11, 15 | 1.79, 2.00, 2.10, 2.25 | | beaten | no |
-| 167, 191, 239, 263, 311, 359, 383, 431, 479 | 11-25 | 2.52-3.59 | | | unbeaten |
+| p | L | natural `p h` | rotation order | excess | source |
+|---:|---:|---:|---|---:|---|
+| 167 | 2.674 | 1837 | `7599/19912` | 1861 (best known 1863) | audit; S40 scan `k/(mp)` = 701/(11·167) |
+| 263 | 2.518 | 3419 | `57115/72812` | 4079 (best known 4089) | audit; S40 scan |
+| 383 | 2.729 | 6511 | `38609/72644` | 7519 (best known 7529) | audit; S40 scan |
+| 439 | 2.249 | 6585 | `27601/171580` | 9313 | audit (local search had 7353) |
+| 503 | 2.942 | 10563 | `9521/197064` | 11657 | audit |
+| 599 | 3.209 | 14975 | `12767/298528` | 15507 | audit (the S40 scan with m <= 6 missed it) |
+| 647 | 2.841 | 14881 | `10901/258330` | 17661 | audit |
+| 887 | 3.059 | 25723 | `63/(5·887)` | 26853 | S40 scan (not audited) |
+| 911 | 3.227 | 28241 | `964/(5·911)` | 28547 | S40 scan (not audited) |
+| 983 | 2.705 | 26541 | `376249/642500` | 34225 | audit (S40 scan: 32103 at `1727/(6·983)`) |
 
-All other primes `p ≡ 3 (mod 4)` up to 500 (all with `L <= 1.77`) are beaten. The best excess found grows like
-`0.75-0.96 p^(3/2)` at the beaten primes near 400-500, while the natural excess is `L p^(3/2)/π`; the observed threshold
-matches `L/π ≈ 0.75-0.8`, i.e. the natural order wins only when it beats the generic optimum.
+**Unbeaten by any known order** (rotation family, insertion and window-DP polishing, annealing with 480 restarts at 47
+and 71): 3, 7, 23 (exact optima) and 47, 71, 191, 239, 311, 359, 431, 479 (audit, `L >= 1.97`). The coarse S40 scans
+(m <= 6) also left 599, 719, 839 unbeaten, but the audit's full Farey-midpoint family beats 599, so coarse scans are not
+evidence; 719 and 839 await the full family. A pure threshold in `L` fails: 503 (`L = 2.942`) is beaten while 191
+(`L = 2.955`) is not, and the boundary rises quickly with `p` (2.73-2.955 for `p <= 500`, above 3.21 at 599). The local-search optima recorded earlier (best excess
+`0.75-0.96 p^(3/2)`) were search-limited; rotation orders reach `0.96-1.04 p^(3/2)` (263: 4089, 383: 7529, 463: 9553,
+983: 32103).
 
-## Reading
+## Revised conjecture
 
-The natural order is the arithmetic (affine) ranking: all affine orders have excess `±p h(-p)`. Its excess is the
-area under the Legendre walk, and its local optimality is the positivity of that walk, the condition that also excludes
-a real zero of `L(s, χ_(-p))`. The conjecture says the arithmetic ranking is globally optimal only when the class number
-is large; for class number one it is never optimal (`p > 7`). Large `h(-p)` = small primes split = small steps go
-forward. This is a tournament form of the `L(1, χ)` landscape; the conjecture would make `MAS(P_p) - p(p-1)/4`
-equal to `p h(-p)/2` on a density-zero but infinite set (if `L(1, χ_(-p))` is unbounded along `p ≡ 3 (mod 4)`).
+The natural order is a maximum acyclic ordering of `P_p` only on a thin set of primes `p ∈ L+`, and among those exactly
+when `L(1, χ_(-p))` dominates the twisted values `L(1, χ_(-p) ψ)` (`ψ` of small conductor `m`) that govern the rotation
+orders `x -> {kx/(mp)}`. Mechanism (PROVED as an identity, heuristic as a criterion): in multiplier coordinates a rotation
+order sorts first by a block label and then by `<cx>`, so its excess is `χ(c)[p h(-p) - 2 Σ χ(t - s)]` over the pairs whose
+block labels are inverted (for `m = 2` the blocks are the Eisenstein parity sets `floor(d u/p) mod 2`); these crossing
+sums are character analogues of Dedekind sums (Berndt), i.e. combinations of twisted `L`-values. NUMERICAL hint: for
+`p >= 167` the primes beaten with `m = 4, 9, 10, 11` have `L(1, χ_(-8p))/L(1, χ_(-p)) = 0.33-0.50` (167: 0.386, 263:
+0.326, 383: 0.499, 503: 0.337, 647: 0.430) against 0.135-0.226 at the unbeaten primes; the `m = 5` winners 887, 911 are
+not separated by this twist.
+
+## Structure of the earlier witnesses (paley_best_orders_vs_affine_20261017.py)
+
+At primes where local search beat the natural order, the best order found is either close to an affine order
+(normalised Kendall distance 0.11-0.25: 743: 0.114, 103: 0.131, 127: 0.134, 863: 0.166) or generic (0.41-0.46, near the
+random level 0.33-0.45 for `p = 43-991`). These are local-search witnesses only; rotation orders are better at many
+primes, so this describes the search, not the optimum.
 
 ## Tests
 
-* Exact MAS for `p = 47` or `71` (a symmetric branch and bound, or the ILP of Chindelevitch-Harutyunyan, who certified
-  `p = 43`) would turn "unbeaten" into a proof or a refutation at the two smallest high-`L` primes.
-* The threshold law: fit `τ(p)` on `500 < p <= 2000` (pre-register before running), in particular at the primes with
-  `2.2 <= L <= 2.8`.
-* Whether the best orders at beaten primes are perturbations of affine orders (structure of the witnesses in the JSON).
+* An exact MAS for `P_47` or `P_71` (the first unbeaten primes beyond the DP range), e.g. the exact DP modulo
+  `Aut(P_p)` with meet-in-the-middle of Chindelevitch-Harutyunyan (their App. E certified `p = 43`); a plain MIP already
+  leaves a gap of 22 at `p = 31` after 1200 s.
+* The finite-list question: run the full rotation family on every `p ≡ 3 (mod 4)` up to 2000 with `L >= 2.9`
+  (pre-register first) and record the largest prime where the natural order survives.
+* Any future "unbeaten" claim must include the full rotation family (all Farey midpoints of order `p - 1`) and be
+  calibrated on known beaten primes (199, 223, 463).
+* An explicit formula for the rotation-order excess in terms of twisted `L`-values, and a test of the revised criterion
+  on `p <= 2000` (pre-register first).

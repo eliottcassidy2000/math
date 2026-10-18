@@ -1,0 +1,10 @@
+{
+ "p": 31,
+ "h": 3,
+ "natural": 279,
+ "status": 1,
+ "message": "Time limit reached. (HiGHS Status 13: Time limit reached)",
+ "seconds": 1200.0524883270264,
+ "best_found": 283,
+ "dual_bound": 307.0
+}

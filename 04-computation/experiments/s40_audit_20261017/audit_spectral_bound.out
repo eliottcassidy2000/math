@@ -1,0 +1,23 @@
+n=2 max |eig - cot| = 2.22e-16
+n=3 max |eig - cot| = 4.44e-16
+n=5 max |eig - cot| = 8.88e-16
+n=8 max |eig - cot| = 4.44e-15
+n=13 max |eig - cot| = 3.55e-15
+n=31 max |eig - cot| = 5.68e-14
+n=64 max |eig - cot| = 7.11e-14
+p=7 ||S||_op = 2.6457513111, sqrt(p) = 2.6457513111
+p=11 ||S||_op = 3.3166247904, sqrt(p) = 3.3166247904
+p=43 ||S||_op = 6.5574385243, sqrt(p) = 6.5574385243
+p=103 ||S||_op = 10.1488915651, sqrt(p) = 10.1488915651
+n=1000 sum|cot| = 4918.8653942648, asymptotic = 4918.8652197320, rel diff 3.55e-08
+n=100000 sum|cot| = 785060.7615244356, asymptotic = 785060.7615249688, rel diff -6.79e-13
+p=7 exact optimum 7, ceiling B(p) = 16.2, ratio 0.433; Alon Cor 3.2 bound 55 (ratio 0.126)
+p=11 exact optimum 15, ceiling B(p) = 37.3, ratio 0.403; Alon Cor 3.2 bound 145 (ratio 0.103)
+p=19 exact optimum 43, ceiling B(p) = 99.1, ratio 0.434; Alon Cor 3.2 bound 414 (ratio 0.104)
+p=23 exact optimum 69, ceiling B(p) = 138.8, ratio 0.497; Alon Cor 3.2 bound 551 (ratio 0.125)
+p=31 exact optimum 105, ceiling B(p) = 233.6, ratio 0.449; Alon Cor 3.2 bound 863 (ratio 0.122)
+p=43 exact optimum 183, ceiling B(p) = 411.0, ratio 0.445; Alon Cor 3.2 bound 1691 (ratio 0.108)
+p=263 best known excess 4089, ceiling 8676.6, ratio 0.471
+p=383 best known excess 7519, ceiling 16144.8, ratio 0.466
+p=463 best known excess 9553, ceiling 22060.4, ratio 0.433
+p=479 best known excess 11975, ceiling 23327.1, ratio 0.513

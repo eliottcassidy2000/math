@@ -113,7 +113,7 @@ def main():
         nat = 2 * p * h // w
         best, order, nat_local = search(chi, p, RESTARTS, SWEEPS, 12345 + p)
         assert excess_of(order, chi, p) == best
-        L = math.pi * h / math.sqrt(p) if p > 3 else math.pi / (3 * math.sqrt(3)) * 3
+        L = math.pi * h / math.sqrt(p) if p > 3 else math.pi / (3 * math.sqrt(3))   # w = 6 at p = 3 (fixed after the S40 audit; earlier outputs print 1.8138)
         rows.append(dict(p=p, h=h, L=L, natural=nat, natural_local=int(nat_local), best=int(best),
                          best_scaled=best / p ** 1.5, beaten=bool(best > nat), order=[int(x) for x in order]))
         print('%5d %3d %9.4f %8d %12d %14d %10.4f   %s' % (p, h, L, nat, nat_local, best, best / p ** 1.5,

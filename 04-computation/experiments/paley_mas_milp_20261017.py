@@ -3,11 +3,11 @@
 
 Variables x_ij (i < j) = 1 if i precedes j; 3-dicycle inequalities 0 <= x_ij + x_jk - x_ik <= 1 for i < j < k; vertex 0
 first (vertex-transitivity). Objective: number of forward arcs. Intended to test HYP-9287 beyond the subset-DP range
-(p <= 31), after validation against the DP values at p = 23, 31 and the certified MAS(P_43) = 543; the validation
-itself did not finish (below).
+(p <= 31), after validation against the DP values at p = 23, 31 and the certified MAS(P_43) = 543 (results below).
 Usage: python paley_mas_milp_20261017.py P [TIME_LIMIT_SECONDS]
-Result (S40, negative): HiGHS did not finish p = 23 within 600 s (the subset DP of paley_mas_exact_20261017.py takes
-under a second), so this plain formulation cannot certify p = 47; a symmetry-aware branch and bound is needed.
+Result (S40): HiGHS proves optimality at p = 23 in 72 s (161, the DP value). At p = 31 the 1200 s limit stops it with
+incumbent 283 (MAS 285) and dual bound 307, so this plain formulation cannot certify p = 47; a symmetry-aware method is
+needed. (An earlier docstring said p = 23 did not finish in 600 s: that was the Bash tool timeout, not the solver.)
 Session opus-2026-10-17-S40.
 """
 import sys, os, json, time, itertools

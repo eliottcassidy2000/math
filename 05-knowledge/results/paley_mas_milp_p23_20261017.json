@@ -1,0 +1,10 @@
+{
+ "p": 23,
+ "h": 3,
+ "natural": 161,
+ "status": 0,
+ "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+ "seconds": 72.25341153144836,
+ "best_found": 161,
+ "dual_bound": 161.0
+}

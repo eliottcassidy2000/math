@@ -1,0 +1,9 @@
+fundamental D in [-20000, -3]: 6079 discriminants; identity/analytic/direct failures: 0; max |h_L - h_forms| = 5.12e-13
+random fundamental D in [-10^6, -20000): 1500; failures 0; max |h_L - h_forms| = 5.68e-12
+multiplier/shift orders, fundamental |D| <= 230: 30388 orders checked, failures 0
+Paley primes p = 3 mod 4, p <= 2e5: 9006 primes (incl. 3); statement-1 failures 0; half-window failures 0; area != p h failures 0; chi table vs Euler failures 0; max |h_L - h_forms| = 3.52e-12
+h(-p) = 1 for p = 3 mod 4 prime <= 2e5: [3, 7, 11, 19, 43, 67, 163]
+random primes p = 3 mod 4 in (2e5, 1e6]: 400 checked, failures 0
+statement 3: 42900 (p, q) pairs (p < 1200, q < 3000 incl. q = 2), split <=> arc failures 0
+Euler lucky numbers q in [2, 990] (n^2+n+q prime for 0 <= n <= q-2): [2, 3, 5, 11, 17, 41] ; q in [1, 50000] with 4q-1 prime and h(1-4q) = 1: [1, 2, 3, 5, 11, 17, 41]
+elapsed 327.0 s
