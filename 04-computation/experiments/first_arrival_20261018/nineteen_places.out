@@ -1,0 +1,33 @@
+primitive 15th roots in F_361: 8 ; sqrt(-11): 2 ; cubic roots: [(4, 0), (16, 1), (16, 18)] ; homomorphisms 48 ; primes above 19: 24
+prime | h residue type | v(b) v(c) | v(u) v(u2) | v(a)
+ ((1, 2), (0, 1), (4, 0)) | h=(7, 0) | -1 -1 | >=0 0 | 0
+ ((1, 2), (0, 1), (16, 1)) | h=+j | -1 -1 | >=0 0 | 0
+ ((1, 2), (0, 1), (16, 18)) | h=-j | -1 -1 | -1 0 | 0
+ ((1, 2), (0, 18), (4, 0)) | h=(7, 0) | -1 -1 | >=0 0 | 0
+ ((1, 2), (0, 18), (16, 1)) | h=-j | -1 -1 | -1 0 | 0
+ ((1, 2), (0, 18), (16, 18)) | h=+j | -1 -1 | >=0 0 | 0
+ ((3, 9), (0, 1), (4, 0)) | h=(7, 0) | -1 -1 | >=0 0 | 0
+ ((3, 9), (0, 1), (16, 1)) | h=+j | -1 -1 | >=0 0 | 0
+ ((3, 9), (0, 1), (16, 18)) | h=-j | -1 -1 | -1 0 | 0
+ ((3, 9), (0, 18), (4, 0)) | h=(7, 0) | -1 -1 | >=0 0 | 0
+ ((3, 9), (0, 18), (16, 1)) | h=-j | -1 -1 | -1 0 | 0
+ ((3, 9), (0, 18), (16, 18)) | h=+j | -1 -1 | >=0 0 | 0
+ ((11, 3), (0, 1), (4, 0)) | h=(7, 0) | -1 -1 | >=0 0 | 0
+ ((11, 3), (0, 1), (16, 1)) | h=+j | -1 -1 | >=0 0 | 0
+ ((11, 3), (0, 1), (16, 18)) | h=-j | -1 -1 | -1 0 | 0
+ ((11, 3), (0, 18), (4, 0)) | h=(7, 0) | -1 -1 | >=0 0 | 0
+ ((11, 3), (0, 18), (16, 1)) | h=-j | -1 -1 | -1 0 | 0
+ ((11, 3), (0, 18), (16, 18)) | h=+j | -1 -1 | >=0 0 | 0
+ ((14, 4), (0, 1), (4, 0)) | h=(7, 0) | -1 -1 | >=0 0 | 0
+ ((14, 4), (0, 1), (16, 1)) | h=+j | -1 -1 | >=0 0 | 0
+ ((14, 4), (0, 1), (16, 18)) | h=-j | -1 -1 | -1 0 | 0
+ ((14, 4), (0, 18), (4, 0)) | h=(7, 0) | -1 -1 | >=0 0 | 0
+ ((14, 4), (0, 18), (16, 1)) | h=-j | -1 -1 | -1 0 | 0
+ ((14, 4), (0, 18), (16, 18)) | h=+j | -1 -1 | >=0 0 | 0
+primes with v(b) = -1 where u and u2 are both units: 0
+every nonzero spindle difference is a unit at every prime above 19: True ; all spindle differences 19-integral: True
+type h = +j: 8 primes; h - j nonzero at all: False ; h + j nonzero at all: True
+type h = -j: 8 primes; h - j nonzero at all: True ; h + j nonzero at all: False
+type h =  7: 8 primes; h - j nonzero at all: True ; h + j nonzero at all: True
+nonzero (dm2, dm3): number of h = 7 primes at which b dm2 + c dm3 is integral -> count: [(0, 1166), (1, 16), (2, 42)]
+pairs integral at ALL eight h = 7 primes: 0

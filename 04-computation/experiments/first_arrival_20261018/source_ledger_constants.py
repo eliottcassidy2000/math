@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact source-level constants of the ROOT transport (mac-mini-2026-10-18-sixcolour; THM-4670 statement 5).
+"""Exact source-level constants of the ROOT transport (mac-mini-2026-10-18-sixcolour; THM-4690 statement 4).
 
 Sources: every odd m <= 4N carries K_N(m) = w(m) + thr(m)[m < 2N] and is aggregated on its seed x = seed(m) (strip
 B(x) = 4x + 1). So c_0(x) = sum_j K_N(B^j(x)) over the B-chain x, Bx, B^2 x, ... <= 4N. Since B^j(x) = x + j (mod 3),

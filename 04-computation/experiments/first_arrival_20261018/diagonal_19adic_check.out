@@ -1,0 +1,4 @@
+19-integral: a = conj(d): True ; all points of A: True ; all points of C: True ; spindle points: True
+|M - M| = 35
+nonzero (dm2, dm3) with b dm2 + c dm3 19-integral: 0 []
+b / c 19-integral: True ; c / b 19-integral: True ; denominators 7057391671, 1691078020571

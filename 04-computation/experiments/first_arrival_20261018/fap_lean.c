@@ -1,5 +1,5 @@
 /* fap_lean.c -- memory-lean pair ledger of first arrivals into a stopping set V (mac-mini-2026-10-18-sixcolour).
-   Same transport and sources as fap.c (THM-4667 / HYP-9290 / THM-4670); only the integer-clock quantities are kept:
+   Same transport and sources as fap.c (THM-4667 / HYP-9290 / THM-4690); only the integer-clock quantities are kept:
      E_V  = sum_u c_V(u)^2,  G0 = sum_u sum_t h_t(u)^2,  G1 = sum_u sum_t h_t(u) h_(t+1)(u),
      E0   = sum_x c_0(x)^2 (source energy, -> 34/7 N),  SIB = sum over sibling SOURCE pairs (x, 2x+1), x = 1 mod 8, with a
             common entry seed, of c_0(x) c_0(2x+1) (-> 5/7 N),  Gam1 = G1 + SIB (lag-1 pairs other than sibling sources),
