@@ -1,0 +1,12 @@
+{
+  "session": "mac-mini-2026-10-18-unitpath",
+  "registered_before": "the d = 8 line of clock_graded_ladder_d8.out (run started 13:28 local; d <= 7 lines already printed)",
+  "object": "clock-graded ideal ladder (clock_graded_ladder.py 8 64): THM-4667 cross term E_8 - E_7 split by literal clock lag, x2 units",
+  "known_not_tests": {"E_8": 1.590908284, "cross_8": -0.043218, "source": "S41 audit a4 (a4_ideal_ladder.out) ideal ladder"},
+  "predictions": {
+    "P1_twin": "lag-0 (same-clock) part T_8 in [-0.106, -0.098]  (d = 6, 7 gave -0.10228, -0.10183)",
+    "P2_lag1": "lag-1 part positive and larger than at d = 7 (+0.04012)",
+    "P3_sum": "the remaining lags (all lags >= 1) sum to cross_8 - T_8, i.e. between +0.055 and +0.063"
+  },
+  "falsification": "any of P1-P3 outside the stated range"
+}
