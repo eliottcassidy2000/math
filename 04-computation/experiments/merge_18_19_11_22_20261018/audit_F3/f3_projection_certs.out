@@ -1,0 +1,4 @@
+q = 19: best line (1, 1), quotient chi = 5; certificate kappa_19_colouring_k5_projection.txt: colours used 5, monochromatic edges 0 -> PROPER
+q = 37: best line (1, 3), quotient chi = 8; certificate kappa_37_colouring_k8_projection.txt: colours used 8, monochromatic edges 0 -> PROPER
+q = 41: best line (1, 2), quotient chi = 9; certificate kappa_41_colouring_k9_projection.txt: colours used 9, monochromatic edges 0 -> PROPER
+q = 43: best line (1, 1), quotient chi = 8; certificate kappa_43_colouring_k8_projection.txt: colours used 8, monochromatic edges 0 -> PROPER

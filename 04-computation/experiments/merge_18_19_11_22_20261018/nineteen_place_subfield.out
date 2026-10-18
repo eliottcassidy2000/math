@@ -1,9 +1,9 @@
 F : primes above 19 = 24, conjugation-stable = 0
 F': primes above 19 = 12, conjugation-stable = 4, their w-images [(4, 0)] (w = 4 means h = 7)
-   stable prime [((2, 6), (0, 1), (4, 0)), ((2, 13), (0, 18), (4, 0))] : conj(hom) = Frobenius(hom)? True
-   stable prime [((7, 5), (0, 18), (4, 0)), ((7, 14), (0, 1), (4, 0))] : conj(hom) = Frobenius(hom)? True
-   stable prime [((7, 5), (0, 1), (4, 0)), ((7, 14), (0, 18), (4, 0))] : conj(hom) = Frobenius(hom)? True
-   stable prime [((2, 6), (0, 18), (4, 0)), ((2, 13), (0, 1), (4, 0))] : conj(hom) = Frobenius(hom)? True
+   stable prime [((2, 6), (0, 1), (4, 0)), ((2, 13), (0, 18), (4, 0))] : conj(hom) = Frobenius(hom)? True ; conj(hom) = hom? False
+   stable prime [((7, 5), (0, 18), (4, 0)), ((7, 14), (0, 1), (4, 0))] : conj(hom) = Frobenius(hom)? True ; conj(hom) = hom? False
+   stable prime [((7, 5), (0, 1), (4, 0)), ((7, 14), (0, 18), (4, 0))] : conj(hom) = Frobenius(hom)? True ; conj(hom) = hom? False
+   stable prime [((2, 6), (0, 18), (4, 0)), ((2, 13), (0, 1), (4, 0))] : conj(hom) = Frobenius(hom)? True ; conj(hom) = hom? False
 E_0 = 34/7 : denominator 7 ; (2^(2*3^(d+1)) - 1) / den = 9
 E_1 = 32898/9709 : denominator 9709 ; (2^(2*3^(d+1)) - 1) / den = 27
 E_2 = 572764898734162/222399981598543 : denominator 222399981598543 ; (2^(2*3^(d+1)) - 1) / den = 81

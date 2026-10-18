@@ -35,7 +35,7 @@ types = sorted({next(iter(o))[2] for o in stab})
 print("F': primes above 19 = %d, conjugation-stable = %d, their w-images %s (w = 4 means h = 7)" % (len(orbsFp), len(stab), types))
 for o in stab:
     t = next(iter(o)); c = conjFp(t)
-    print('   stable prime', sorted(o), ': conj(hom) = Frobenius(hom)?', c == frob(t) or c == t)
+    print('   stable prime', sorted(o), ': conj(hom) = Frobenius(hom)?', c == frob(t), '; conj(hom) = hom?', c == t)
 # clock-tower denominators of the exact ideal energies
 from fractions import Fraction as Fr
 E = [Fr(34, 7), Fr(32898, 9709), Fr(572764898734162, 222399981598543)]

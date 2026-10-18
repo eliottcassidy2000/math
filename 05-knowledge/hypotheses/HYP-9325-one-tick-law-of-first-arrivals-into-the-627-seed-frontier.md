@@ -77,10 +77,14 @@ For the certified frontier `V_1000` (627 seeds) and the height frontier `H_1000`
    `|R(N)| <= sqrt(627 · 2.60 N) + o(sqrt N) ≈ 40.4 sqrt(N)` for `N >= 2^13`. (Below 2^10, `E_V/N` reaches 5.60, so no
    bound of this form holds for all N.)
 4. **A density exponent (PROVED implication chain).**
+   - Convention (Lemma F): `E_V`, `h_t` and `G` are taken over sources that reach `V`, with `1 ∈ V`; sources that never
+     reach `V` have `f = 0`. Without this the hypothesis presupposes convergence.
    - Statement 3 gives `δ_X = X^-2 Σ_(X<=N<2X) R(N)^2 <= 627·2.60·(3/2) + o(1) ≈ 2445`.
    - THM-4658's normalized descent `√e_(4X) <= (√e_X + √δ_X)/2 + √(3/X)`, run from the exact census values
      `e_(2^40) = 0.139` and `e_(2^41) = 1.142` (S38), gives `e_X <= 2445 + o(1)` for every dyadic `X >= 2^40`.
-   - That is inside HYP-9283(B)'s interval-certified budget `14348 X^2`. So the Mercator residue at
+   - That is inside HYP-9283(B)'s interval-certified budget `14348 X^2`. HYP-9283(B) needs the budget at every dyadic
+     `X >= 2^40`, so the `O(log N)` and `o(1)` terms must be explicit; the margin `14348/2445 ≈ 5.9` makes any
+     explicit bound sufficient. Then the Mercator residue at
      `s_0 ≈ 0.99821 + 240.248i` is nonzero, and `limsup log B(X)/log X >= 0.99821` (Krasikov–Lagarias: 0.84).
    - Calibration: any bound `E_V(N) <= C·N` for `N >= 2^40` suffices on V_1000 once `C <= 15.2` (on H_1000,
      `C <= 25.5`; on V_100, `C <= 129`).

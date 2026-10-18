@@ -1,0 +1,55 @@
+== PART A: depth one (first transport), exact ==
+  M_1  = -5/7                   = -7.142857142857e-01   (denominator 7)
+  M_5  = 1/112                  = +8.928571428571e-03   (denominator 112)
+  M_6  = -17/448                = -3.794642857143e-02   (denominator 448)
+  M_7  = 1/112                  = +8.928571428571e-03   (denominator 112)
+  M_11 = 1/1792                 = +5.580357142857e-04   (denominator 1792)
+  M_12 = -17/28672              = -5.929129464286e-04   (denominator 28672)
+  M_13 = 1/28672                = +3.487723214286e-05   (denominator 28672)
+  M_17 = -5/458752              = -1.089913504464e-05   (denominator 458752)
+  M_18 = 17/917504              = +1.852852957589e-05   (denominator 917504)
+  M_19 = -5/1835008             = -2.724783761161e-06   (denominator 1835008)
+  M_23 = 1/29360128             = +3.405979701451e-08   (denominator 29360128)
+  M_24 = -17/117440512          = -1.447541373117e-07   (denominator 117440512)
+  M_25 = 1/29360128             = +3.405979701451e-08   (denominator 29360128)
+  M_29 = 1/469762048            = +2.128737313407e-09   (denominator 469762048)
+  M_30 = -17/7516192768         = -2.261783395495e-09   (denominator 7516192768)
+  M_31 = 1/7516192768           = +1.330460820879e-10   (denominator 7516192768)
+  recurrence M_(D+18) = 2^-18 M_D for 2 <= D < 60: True ; M_19 - 2^-18 M_1 = 0
+  denominators of all nonzero M_D, D < 80: of the form 7*2^k only: True ; any divisible by 19 or 73: False
+  E_0 = 34/7 (34/7: True )
+  E_0 + 2 sum_D M_D = 32898/9709 = 3.3884025131321454 ; equals 32898/9709: True
+  E_1 - E_0 = -14260/9709 = -1.4687403440107116
+  partial sums: lags 1-13 give 2*sum = -47/32 = -1.4687500000; lags >= 17 give 2*sum = 3/310688 = 9.656e-06
+  band coefficients have period 18 in b (b < 60): True
+  l1 first-transport mass = 155896/87381 (155896/87381: True )
+  E_1 from band coefficients = 32898/9709 (32898/9709: True )
+  9709 = (2^18-1)/27: True ; E_1 - E_0 = -99820/67963: True
+== PART B: depth two, exact ==
+  K_2 has period 54 in b (b < 30 checked against b + 54): True
+  E_2 = 572764898734162/222399981598543 ; equals 572764898734162/222399981598543: True
+  (E_2 - E_1)/2 = -0.406510280565753
+  child cutoff 6, b < 90: total meet sum = -0.406510280565753 ; |total - (E_2-E_1)/2| = 7.616e-26
+    lag  0: -0.0467312620
+    lag  1: -0.3090141774
+    lag  2: -0.0685876947
+    lag  3: +0.0283292759
+    lag  4: -0.0144790027
+    lag  5: +0.0076739629
+    lag  6: -0.0067976634
+    lag  7: +0.0042677674
+    lag  8: +0.0031179780
+    lag  9: -0.0044905491
+    lag 10: +0.0000414500
+    lag 11: +0.0000409245
+    lag 12: -0.0001712672
+    lag 13: +0.0003048051
+    lag 14: -0.0000387459
+    lag 15: +0.0000294202
+    lag 16: -0.0000039291
+    lag 17: +0.0000079608
+    lag 18: -0.0000117529
+    lag 19: +0.0000014938
+    all lags >= 10 together: +2.011e-04
+  child cutoff 4 (b < 60): total -0.212310192700754, lag 0 -0.0457513691
+  child cutoff 12 (b < 60): total -0.406510280565753, lag 0 -0.0467312620

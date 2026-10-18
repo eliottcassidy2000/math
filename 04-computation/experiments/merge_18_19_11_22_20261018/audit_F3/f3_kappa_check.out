@@ -1,0 +1,31 @@
+== 1. colouring certificates (independent mu_(q+1) from a primitive element) ==
+kappa_19_colouring_k5.txt: q = 19, r = 2 (non-residue: True), colours used = 5 (labels 0..4), monochromatic edges = 0 -> PROPER
+kappa_23_colouring_k8.txt: q = 23, r = 5 (non-residue: True), colours used = 8 (labels 0..7), monochromatic edges = 0 -> PROPER
+kappa_29_colouring_k7.txt: q = 29, r = 2 (non-residue: True), colours used = 7 (labels 0..6), monochromatic edges = 0 -> PROPER
+kappa_31_colouring_k8.txt: q = 31, r = 3 (non-residue: True), colours used = 8 (labels 0..7), monochromatic edges = 0 -> PROPER
+
+== 2. Hoffman bounds (50 digits; lambda_min over all nontrivial additive characters) ==
+q = 13: lambda_max = 14.0, lambda_min = -6.296229810558755007, Hoffman = 3.22355289137, max|lambda| = 6.2962298 <= 2 sqrt(q) = 7.2111026: True
+q = 17: lambda_max = 18.0, lambda_min = -6.5607365496978317872, Hoffman = 3.74359439122, max|lambda| = 7.9603461 <= 2 sqrt(q) = 8.2462113: True
+q = 19: lambda_max = 20.0, lambda_min = -7.6097286320518643262, Hoffman = 3.62821461409, max|lambda| = 7.6097286 <= 2 sqrt(q) = 8.7177979: True
+q = 23: lambda_max = 24.0, lambda_min = -7.9606871865669720446, Hoffman = 4.01481510798, max|lambda| = 7.9606872 <= 2 sqrt(q) = 9.591663: True
+q = 29: lambda_max = 30.0, lambda_min = -9.0682422524182328876, Hoffman = 4.30824862911, max|lambda| = 9.5002809 <= 2 sqrt(q) = 10.77033: True
+q = 31: lambda_max = 32.0, lambda_min = -10.66651049380006396, Hoffman = 4.00004392426, max|lambda| = 10.66651 <= 2 sqrt(q) = 11.135529: True
+   q = 31 margin: Hoffman - 4 = 4.392426184e-5 ; 3*lambda_min + 32 = 0.0004685185998 (> 0 means kappa(31) >= 5)
+   interval evaluation of lambda_min at character (0, 3): [-10.6665104938000639596205278718896332477600831, -10.6665104938000639596205278718896332477549403] ; 3*lambda+32 in [0.000468518599808121138416384331100256719750619981, 0.000468518599808121138416384331100256735178983336]
+q = 37: lambda_max = 38.0, lambda_min = -11.472583207417406049, Hoffman = 4.31224444512, max|lambda| = 11.472583 <= 2 sqrt(q) = 12.165525: True
+q = 41: lambda_max = 42.0, lambda_min = -11.336395216263573015, Hoffman = 4.70488141943, max|lambda| = 11.336395 <= 2 sqrt(q) = 12.806248: True
+q = 43: lambda_max = 44.0, lambda_min = -11.96223012259715734, Hoffman = 4.67824390177, max|lambda| = 11.96223 <= 2 sqrt(q) = 13.114877: True
+q = 47: lambda_max = 48.0, lambda_min = -12.846527721843387684, Hoffman = 4.73641820104, max|lambda| = 13.246764 <= 2 sqrt(q) = 13.711309: True
+
+== 3. eigenvalues are minus Kloosterman sums: max |lambda_a + Kl(N(a))| over q ==
+q = 7: max deviation 8.88e-16
+q = 11: max deviation 1.78e-15
+q = 13: max deviation 3.11e-15
+q = 29: max deviation 7.11e-15
+q = 31: max deviation 7.99e-15
+q = 101: max deviation 1.60e-14
+Weil |Kl(n)| <= 2 sqrt(q) then gives |lambda| <= 2 sqrt(q) for every nontrivial character.
+smallest prime with 1 + (q+1)/(2 sqrt q) > 6: 101 (value 6.0747); at 97: 5.9752
+exact threshold: (q+1)/(2 sqrt q) > 5 iff sqrt q > 5 + sqrt 24 = 9.898979 iff q > 97.9898
+at q = 239: 1 + 240/(2 sqrt 239) = 8.7622 ; at q = 149^3: 910.4

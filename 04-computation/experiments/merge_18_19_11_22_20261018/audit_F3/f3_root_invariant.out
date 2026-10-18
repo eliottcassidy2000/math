@@ -1,0 +1,1 @@
+N = 1..1500: R(N) = sum_x c_0(x) t(x) equals H(4N) - H(N) at every N: True (failures 0)

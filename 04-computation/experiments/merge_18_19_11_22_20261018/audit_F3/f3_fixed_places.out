@@ -1,0 +1,30 @@
+  ***   Warning: new stack size = 400000000 (381.470 Mbytes).
+deg R1 = 16, deg R2 = 48
+c(theta) is an automorphism of order 2: OK
+nf degree 48 signature [0, 24]
+c = complex conjugation at every complex embedding (24 roots listed): 1
+p : #primes of F above p ; c-fixed primes as [e, f, c = Frob^(f/2) on residue field?]
+    2 (p mod 15 =  2, (p/11) = -1, cubic mod p = [Mod(1, 2)*x]):   4 primes; fixed: []
+    3 (p mod 15 =  3, (p/11) =  1, cubic mod p = [Mod(1, 3)*x^3 + Mod(2, 3)*x^2 + Mod(2, 3)*x + Mod(2, 3)]):   2 primes; fixed: []
+    5 (p mod 15 =  5, (p/11) =  1, cubic mod p = [Mod(1, 5)*x + Mod(4, 5), Mod(1, 5)*x^2 + Mod(3, 5)*x + Mod(4, 5)]):   6 primes; fixed: []
+    7 (p mod 15 =  7, (p/11) = -1, cubic mod p = [Mod(1, 7)*x^3 + Mod(2, 7)*x^2 + Mod(3, 7)*x + Mod(3, 7)]):   4 primes; fixed: []
+   11 (p mod 15 = 11, (p/11) =  0, cubic mod p = [Mod(1, 11)*x^3 + Mod(2, 11)*x^2 + Mod(7, 11)*x + Mod(7, 11)]):   4 primes; fixed: []
+   13 (p mod 15 = 13, (p/11) = -1, cubic mod p = [Mod(1, 13)*x + Mod(7, 13), Mod(1, 13)*x^2 + Mod(8, 13)*x + Mod(5, 13)]):  12 primes; fixed: []
+   17 (p mod 15 =  2, (p/11) = -1, cubic mod p = [Mod(1, 17)*x + Mod(7, 17), Mod(1, 17)*x^2 + Mod(12, 17)*x + Mod(14, 17)]):  12 primes; fixed: []
+   19 (p mod 15 =  4, (p/11) = -1, cubic mod p = [Mod(1, 19)*x + Mod(15, 19), Mod(1, 19)*x^2 + Mod(6, 19)*x + Mod(1, 19)]):  24 primes; fixed: []
+   23 (p mod 15 =  8, (p/11) =  1, cubic mod p = [Mod(1, 23)*x + Mod(14, 23), Mod(1, 23)*x^2 + Mod(11, 23)*x + Mod(3, 23)]):  12 primes; fixed: []
+   29 (p mod 15 = 14, (p/11) = -1, cubic mod p = [Mod(1, 29)*x + Mod(26, 29), Mod(1, 29)*x^2 + Mod(5, 29)*x + Mod(11, 29)]):  24 primes; fixed: [[1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1]]
+   31 (p mod 15 =  1, (p/11) =  1, cubic mod p = [Mod(1, 31)*x + Mod(6, 31), Mod(1, 31)*x^2 + Mod(27, 31)*x + Mod(20, 31)]):  32 primes; fixed: []
+   37 (p mod 15 =  7, (p/11) =  1, cubic mod p = [Mod(1, 37)*x + Mod(24, 37), Mod(1, 37)*x + Mod(28, 37)]):   8 primes; fixed: []
+   41 (p mod 15 = 11, (p/11) = -1, cubic mod p = [Mod(1, 41)*x^3 + Mod(2, 41)*x^2 + Mod(37, 41)*x + Mod(37, 41)]):   8 primes; fixed: []
+  149 (p mod 15 = 14, (p/11) = -1, cubic mod p = [Mod(1, 149)*x^3 + Mod(2, 149)*x^2 + Mod(145, 149)*x + Mod(145, 149)]):   8 primes; fixed: [[1, 6, 1], [1, 6, 1], [1, 6, 1], [1, 6, 1], [1, 6, 1], [1, 6, 1], [1, 6, 1], [1, 6, 1]]
+  239 (p mod 15 = 14, (p/11) = -1, cubic mod p = [Mod(1, 239)*x + Mod(62, 239), Mod(1, 239)*x^2 + Mod(179, 239)*x + Mod(131, 239)]):  24 primes; fixed: [[1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1]]
+  359 (p mod 15 = 14, (p/11) = -1, cubic mod p = [Mod(1, 359)*x^3 + Mod(2, 359)*x^2 + Mod(355, 359)*x + Mod(355, 359)]):   8 primes; fixed: [[1, 6, 1], [1, 6, 1], [1, 6, 1], [1, 6, 1], [1, 6, 1], [1, 6, 1], [1, 6, 1], [1, 6, 1]]
+  479 (p mod 15 = 14, (p/11) = -1, cubic mod p = [Mod(1, 479)*x + Mod(98, 479), Mod(1, 479)*x^2 + Mod(383, 479)*x + Mod(303, 479)]):  24 primes; fixed: [[1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1]]
+  569 (p mod 15 = 14, (p/11) = -1, cubic mod p = [Mod(1, 569)*x + Mod(445, 569), Mod(1, 569)*x^2 + Mod(126, 569)*x + Mod(257, 569)]):  24 primes; fixed: [[1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1]]
+  659 (p mod 15 = 14, (p/11) = -1, cubic mod p = [Mod(1, 659)*x^3 + Mod(2, 659)*x^2 + Mod(655, 659)*x + Mod(655, 659)]):   8 primes; fixed: [[1, 6, 1], [1, 6, 1], [1, 6, 1], [1, 6, 1], [1, 6, 1], [1, 6, 1], [1, 6, 1], [1, 6, 1]]
+  809 (p mod 15 = 14, (p/11) = -1, cubic mod p = [Mod(1, 809)*x + Mod(632, 809), Mod(1, 809)*x^2 + Mod(179, 809)*x + Mod(128, 809)]):  24 primes; fixed: [[1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1]]
+ 1019 (p mod 15 = 14, (p/11) = -1, cubic mod p = [Mod(1, 1019)*x + Mod(977, 1019), Mod(1, 1019)*x^2 + Mod(44, 1019)*x + Mod(825, 1019)]):  24 primes; fixed: [[1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1]]
+ 1229 (p mod 15 = 14, (p/11) = -1, cubic mod p = [Mod(1, 1229)*x + Mod(147, 1229), Mod(1, 1229)*x^2 + Mod(1084, 1229)*x + Mod(418, 1229)]):  24 primes; fixed: [[1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1]]
+ 1289 (p mod 15 = 14, (p/11) = -1, cubic mod p = [Mod(1, 1289)*x + Mod(119, 1289), Mod(1, 1289)*x^2 + Mod(1172, 1289)*x + Mod(1029, 1289)]):  24 primes; fixed: [[1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1], [1, 2, 1]]
+done

@@ -1,0 +1,3 @@
+ideal depth-2 clock twins (c_0 != 0), bands b < 60:
+  pair density per N: 0.033375 ; share with 3 | Delta: 0.120306 ; shares by Delta mod 3: ['0.1203', '0.8652', '0.0145']
+  sums of c0 c0' per N: 3|Delta +0.014803, Delta != 0 mod 3 -0.061534, total -0.0467313

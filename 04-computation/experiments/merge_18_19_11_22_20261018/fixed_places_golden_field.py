@@ -25,12 +25,15 @@ for p in primerange(7, 3000):
     if p % 15 != 14: continue
     leg = legendre_symbol(p % 11, 11)
     roots = cubic_roots_mod(p)
+    # K = Q(zeta15, j) has [K:Q]/(e f) = 16/2 = 8 primes above such p (f = 2), each c-fixed when (p/11) = -1; over each,
+    # exactly one prime of F is c-fixed: the one attached to the F_p root of the cubic (residue F_(p^2)) if the cubic
+    # has a root mod p, or the unique prime above it (residue F_(p^6)) if the cubic is irreducible mod p.
     if leg == 1:
         desc = 'none (j-primes swapped by c)'
     elif roots:
-        desc = '%d prime(s) with residue F_(%d^2): chi(G(F)) <= kappa(%d)' % (2 * len(roots), p, p)
+        desc = '8 c-fixed primes with residue F_(%d^2): chi(G(F)) <= kappa(%d)' % (p, p)
         rows.append((p, len(roots)))
     else:
-        desc = '2 primes with residue F_(%d^6): chi(G(F)) <= kappa(%d^3)' % (p, p)
+        desc = '8 c-fixed primes with residue F_(%d^6): chi(G(F)) <= kappa(%d^3)' % (p, p)
     print('%5d | %2d | %+d | %s | %s' % (p, p % 15, leg, roots, desc))
 print('smallest q with a residue-F_(q^2) fixed place:', rows[:6])

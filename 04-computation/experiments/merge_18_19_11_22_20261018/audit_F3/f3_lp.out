@@ -1,0 +1,6 @@
+q = 19: two-point LP alpha <= 99.4980 ; Hoffman ratio alpha <= 99.4980 ; chi >= q^2/LP = 3.6282
+q = 23: two-point LP alpha <= 131.7620 ; Hoffman ratio alpha <= 131.7620 ; chi >= q^2/LP = 4.0148
+q = 29: two-point LP alpha <= 195.2069 ; Hoffman ratio alpha <= 195.2069 ; chi >= q^2/LP = 4.3082
+q = 31: two-point LP alpha <= 240.2474 ; Hoffman ratio alpha <= 240.2474 ; chi >= q^2/LP = 4.0000
+q = 37: two-point LP alpha <= 317.4681 ; Hoffman ratio alpha <= 317.4681 ; chi >= q^2/LP = 4.3122
+q = 41: two-point LP alpha <= 357.2885 ; Hoffman ratio alpha <= 357.2885 ; chi >= q^2/LP = 4.7049

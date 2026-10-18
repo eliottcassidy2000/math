@@ -18842,3 +18842,49 @@ the ambient space.
     upgrades "no N=2 minimal model is classically free" to PROVED for all k (THM-4673 part B).
 - **Repairs:** all items were applied in the same session. See 04-computation/voa_singular_support/audit2_20261018/REPORT.md
   (MAJOR 2, MINOR 10, NOTE 11). w3_c2_relations.py now reconstructs by two-prime CRT and flags disagreements.
+
+## MISTAKE-634 (2026-10-18, mac-mini-2026-10-18-sixcolour, second brief; independent audit F3) -- a lower bound and two upper bounds already in decalion89's notes (and recorded in the repo) were presented as new or omitted, a tabu stall was used as evidence where explicit colourings existed, an ill-typed "different components" claim, a fixed-prime count off by a factor of 4, and two hidden assumptions in a conditional chain
+
+- **Affected claims:** `05-knowledge/results/merge_18_19_11_22_collatz_hn_20261018.md` (sections 1, 2.1, 2.2, 2.2b, 2.3,
+  3.1, 3.1b, 3.2, 4, 5), the THM-4690 remark "Why the h = 7 primes", HYP-9325 consequence 4, and the results INDEX
+  entry.
+- **First failed implications:**
+  - (i) **Prior art on κ(29).** decalion89 (`notes/local_colourings.md` §4/§14) certifies κ(29) >= 6 by a three-point
+    bound, α(G_29) <= 163.25. The repo already records this in `oai2_openai_math_second_reading_20261006.md` §4.4. The
+    note gave only Hoffman's ">= 5" and posed "κ(29) ∈ {5, 6, 7}"; the correct range is {6, 7}.
+  - (ii) **Prior art in the κ table.** decalion89 has κ(23), κ(31) ∈ [5, 8] with interval 8-colourings. "Proven here
+    <= 8" reproduced KNOWN bounds; only κ(29) <= 7 is new.
+  - (iii) **A wrong row from tabu stalls.** "37, 41: 9 colours not reached" was wrong. Explicit line-projection
+    colourings give κ(37) <= 8, κ(41) <= 9 and κ(43) <= 8. Tabu stalls are weak evidence; κ(31) "so 8" became
+    "7 or 8".
+  - (iv) **Counting.** Each fixed p has 8 c-fixed primes of F, not 2. The "third condition" was vacuous.
+  - (v) **Ill-typed claim.** "In G(F') the copies lie in different components": the copies are not subsets of F'. The
+    correct statement is about cosets of Γ(F') and steps in μ_30·U(F'). Separately, the 19 in the denominators of
+    b, c comes from N(h ± j) = -4·19, which is distinct from the c-fixedness of the 19-places.
+  - (vi) **Lag table.** E_1 - E_0 was written unreduced. The "about 1e-5" lags 17-19 have exact values
+    (-5/458752, 17/917504, -5/1835008, with M_(D+18) = 2^-18 M_D). The finite-N split was not new; the ideal
+    evaluation is.
+  - (vii) **Conditional chain.** It was stated without the off-basin convention and without the requirement that the
+    O(log N) and o(1) terms be explicit at every dyadic X >= 2^40. The quoted observed maximum "about 1.4 from 2^14"
+    was wrong: it is 1.790 at 2^14.
+- **Missing coordinates:**
+  - decalion89's κ brackets and three-point bounds, and the repo's oai2 note §4.4, before any κ claim;
+  - explicit structured colourings (line projections) before trusting a local-search stall;
+  - the field in which a "component" lives;
+  - the exact receipts (iteration counts, seeds) for every heuristic run.
+- **Survivors:**
+  - MAJOR mathematics: none wrong.
+  - Audit F3 confirmed, with PARI and its own code:
+    - the fixed-place classification to p <= 1300;
+    - the four colouring certificates;
+    - the Hoffman margins, including 4.0000439 at q = 31;
+    - the F' 19-places and the valuations of u, u_2;
+    - the exact energy denominators through d = 3;
+    - the twin table, exactly;
+    - the ideal depth-2 split;
+    - the clock-graded table for d <= 6;
+    - the density-exponent chain (thresholds 15.26 / 25.51 / 129.26).
+  - κ(29) <= 7 stands as new. Audit F3's independent-set search found 127 but never 128, against the 141 a
+    6-colouring needs, which strengthens the heuristic κ(29) = 7.
+- **Repairs:** all items above were applied in the same session. See
+  `04-computation/experiments/merge_18_19_11_22_20261018/audit_F3/REPORT.md`.

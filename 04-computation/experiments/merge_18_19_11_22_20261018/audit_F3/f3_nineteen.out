@@ -1,0 +1,27 @@
+  ***   Warning: new stack size = 400000000 (381.470 Mbytes).
+K' = Q(zeta5, sqrt-11): degree 8, disc factorization [5, 6; 11, 4]
+primes of K' above 19: 4 with [e, f] = [[1, 2], [1, 2], [1, 2], [1, 2]]
+  P1: c-fixed 1, c = Frobenius 1, v(b) = -1, v(c) = -1, v(b/c) = 0
+  P2: c-fixed 1, c = Frobenius 1, v(b) = -1, v(c) = -1, v(b/c) = 0
+  P3: c-fixed 1, c = Frobenius 1, v(b) = -1, v(c) = -1, v(b/c) = 0
+  P4: c-fixed 1, c = Frobenius 1, v(b) = -1, v(c) = -1, v(b/c) = 0
+norm of b: [5, 1; 19, -8; 331, 1; 401, 1; 12740641, 1] ; norm of c: [5, 1; 11, 3; 19, -8; 58325551, 1]
+F' = Q(zeta5, sqrt-11, w): degree 24 signature [0, 12]
+u * c(u) = 1: 1 ; u2 * c(u2) = 1: 1
+primes of F' above 19: 12, [e,f] = [[1, 2]]
+  P 1: type h=-j, w mod P = 15*x + 6, c-fixed 0, c = Frob 0, v(b) -1, v(c) -1, v(u) -1, v(u2) 0
+  P 2: type h=-j, w mod P = 16*x + 3, c-fixed 0, c = Frob 0, v(b) -1, v(c) -1, v(u) -1, v(u2) 0
+  P 3: type  h=j, w mod P = 3*x + 10, c-fixed 0, c = Frob 0, v(b) -1, v(c) -1, v(u) 1, v(u2) 0
+  P 4: type  h=7, w mod P = 4, c-fixed 1, c = Frob 1, v(b) -1, v(c) -1, v(u) 0, v(u2) 0
+  P 5: type h=-j, w mod P = 4*x + 7, c-fixed 0, c = Frob 0, v(b) -1, v(c) -1, v(u) -1, v(u2) 0
+  P 6: type  h=7, w mod P = 4, c-fixed 1, c = Frob 1, v(b) -1, v(c) -1, v(u) 0, v(u2) 0
+  P 7: type h=-j, w mod P = 3*x + 10, c-fixed 0, c = Frob 0, v(b) -1, v(c) -1, v(u) -1, v(u2) 0
+  P 8: type  h=7, w mod P = 4, c-fixed 1, c = Frob 1, v(b) -1, v(c) -1, v(u) 0, v(u2) 0
+  P 9: type  h=j, w mod P = 4*x + 7, c-fixed 0, c = Frob 0, v(b) -1, v(c) -1, v(u) 1, v(u2) 0
+  P10: type  h=7, w mod P = 4, c-fixed 1, c = Frob 1, v(b) -1, v(c) -1, v(u) 0, v(u2) 0
+  P11: type  h=j, w mod P = 15*x + 6, c-fixed 0, c = Frob 0, v(b) -1, v(c) -1, v(u) 1, v(u2) 0
+  P12: type  h=j, w mod P = 16*x + 3, c-fixed 0, c = Frob 0, v(b) -1, v(c) -1, v(u) 1, v(u2) 0
+c-fixed primes of F' above 19: 4
+degrees of compositum F'(sqrt-3): [48] (48 means sqrt-3 is not in F')
+degrees of compositum K'(sqrt-3): [16] (16 means sqrt-3 is not in K')
+done

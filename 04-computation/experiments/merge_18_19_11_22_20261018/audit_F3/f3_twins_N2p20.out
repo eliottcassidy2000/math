@@ -1,0 +1,16 @@
+N = 2^20: 1572864 seeds <= 4N, 1381457 with c_0 != 0; E_0/N = 4.857140 (34/7 = 4.857143); c_0 values [-3, -1, 0, 2, 3]
+c0!=0 depth 1: twin pairs 0, share 3|Delta = 0.0000 (0); sums/N: 3|D +0.0000, D=1 +0.0000, D=2 +0.0000, total +0.00000
+c0!=0 depth 2: twin pairs 35002, share 3|Delta = 0.1204 (4213); sums/N: 3|D +0.0148, D=1 -0.0605, D=2 -0.0010, total -0.04673
+c0!=0 depth 3: twin pairs 96656, share 3|Delta = 0.2379 (22996); sums/N: 3|D +0.0808, D=1 -0.0990, D=2 -0.0483, total -0.06645
+c0!=0 depth 4: twin pairs 201843, share 3|Delta = 0.3189 (64362); sums/N: 3|D +0.2260, D=1 -0.1550, D=2 -0.1200, total -0.04899
+c0!=0 depth 5: twin pairs 386023, share 3|Delta = 0.3295 (127182); sums/N: 3|D +0.4486, D=1 -0.2743, D=2 -0.2445, total -0.07024
+energies E_k/N, k = 0..3: ['4.857140', '3.388405', '2.575420', '2.137405']
+depth-1 meet sums by lag (per N): total -0.734367, (E_1 - E_0)/2 = -0.734367
+   lag 1: -0.71428, lag 5: +0.00893, lag 6: -0.03794, lag 7: +0.00893, lag 11: +0.00056, lag 12: -0.00059, lag 13: +0.00003, lag 17: -0.00001, lag 18: +0.00002
+depth-2 meet sums by lag (per N): total -0.406492, (E_2 - E_1)/2 = -0.406492
+   lag 0: -0.04673, lag 1: -0.30899, lag 2: -0.06857, lag 3: +0.02832, lag 4: -0.01445, lag 5: +0.00767, lag 6: -0.00681, lag 7: +0.00428, lag 8: +0.00308, lag 9: -0.00446, lag 10: +0.00004, lag 11: +0.00001, lag 12: -0.00016, lag 13: +0.00029, lag 14: -0.00002, lag 15: +0.00002, lag 17: +0.00002, lag 18: -0.00002
+all seeds depth 1: twin pairs 0, share 3|Delta = 0.0000 (0); sums/N: 3|D +0.0000, D=1 +0.0000, D=2 +0.0000, total +0.00000
+all seeds depth 2: twin pairs 44646, share 3|Delta = 0.1074 (4793); sums/N: 3|D +0.0148, D=1 -0.0605, D=2 -0.0010, total -0.04673
+all seeds depth 3: twin pairs 121537, share 3|Delta = 0.2155 (26189); sums/N: 3|D +0.0808, D=1 -0.0990, D=2 -0.0483, total -0.06645
+all seeds depth 4: twin pairs 251374, share 3|Delta = 0.2921 (73415); sums/N: 3|D +0.2260, D=1 -0.1550, D=2 -0.1200, total -0.04899
+all seeds depth 5: twin pairs 479951, share 3|Delta = 0.3018 (144861); sums/N: 3|D +0.4486, D=1 -0.2743, D=2 -0.2445, total -0.07024

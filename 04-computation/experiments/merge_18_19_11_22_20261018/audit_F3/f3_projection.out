@@ -1,0 +1,13 @@
+q = 11: 6 admissible lines (L cap mu empty); quotient circulant |S| = [6]; chi over lines = [6]; alpha over lines = [2] => kappa(q) <= 6, alpha(G_q) >= 22 (q^2/alpha >= 5.500)
+q = 13: 7 admissible lines (L cap mu empty); quotient circulant |S| = [8]; chi over lines = [7]; alpha over lines = [2] => kappa(q) <= 7, alpha(G_q) >= 26 (q^2/alpha >= 6.500)
+q = 17: 9 admissible lines (L cap mu empty); quotient circulant |S| = [10]; chi over lines = [6]; alpha over lines = [3] => kappa(q) <= 6, alpha(G_q) >= 51 (q^2/alpha >= 5.667)
+q = 19: 10 admissible lines (L cap mu empty); quotient circulant |S| = [10]; chi over lines = [5]; alpha over lines = [4] => kappa(q) <= 5, alpha(G_q) >= 76 (q^2/alpha >= 4.750)
+q = 23: 12 admissible lines (L cap mu empty); quotient circulant |S| = [12]; chi over lines = [8]; alpha over lines = [3] => kappa(q) <= 8, alpha(G_q) >= 69 (q^2/alpha >= 7.667)
+q = 29: 15 admissible lines (L cap mu empty); quotient circulant |S| = [16]; chi over lines = [8]; alpha over lines = [4] => kappa(q) <= 8, alpha(G_q) >= 116 (q^2/alpha >= 7.250)
+q = 31: 16 admissible lines (L cap mu empty); quotient circulant |S| = [16]; chi over lines = [8]; alpha over lines = [4] => kappa(q) <= 8, alpha(G_q) >= 124 (q^2/alpha >= 7.750)
+q = 37: 19 admissible lines (L cap mu empty); quotient circulant |S| = [20]; chi over lines = [8]; alpha over lines = [5] => kappa(q) <= 8, alpha(G_q) >= 185 (q^2/alpha >= 7.400)
+
+kappa_19_colouring_k5.txt: invariant under translation by lines [] ; colour-class sizes [75, 75, 75, 69, 67]
+kappa_23_colouring_k8.txt: invariant under translation by lines [] ; colour-class sizes [72, 68, 67, 67, 67, 67, 63, 58]
+kappa_29_colouring_k7.txt: invariant under translation by lines [] ; colour-class sizes [122, 121, 121, 120, 120, 119, 118]
+kappa_31_colouring_k8.txt: invariant under translation by lines [] ; colour-class sizes [132, 130, 129, 126, 123, 115, 106, 100]

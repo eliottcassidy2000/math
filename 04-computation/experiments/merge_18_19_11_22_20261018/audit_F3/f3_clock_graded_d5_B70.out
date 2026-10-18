@@ -1,0 +1,6 @@
+d = 0: E_d = 4.857142857143
+d = 1: E_d = 3.388402513132 ; cross term E_d - E_(d-1) = -1.468740 (direct -1.468740); twice the pair sums by lag: lag 0 +0.000000, lag 1 -1.428571, lag 2 +0.000000, lag 3 +0.000000, lag 4 +0.000000, lag 5 +0.017857, lag 6 -0.075893, lag 7 +0.017857
+d = 2: E_d = 2.575381952001 ; cross term E_d - E_(d-1) = -0.813021 (direct -0.813021); twice the pair sums by lag: lag 0 -0.093463, lag 1 -0.618028, lag 2 -0.137175, lag 3 +0.056659, lag 4 -0.028958, lag 5 +0.015348, lag 6 -0.013595, lag 7 +0.008536
+d = 3: E_d = 2.137429991172 ; cross term E_d - E_(d-1) = -0.437952 (direct -0.437952); twice the pair sums by lag: lag 0 -0.132676, lag 1 -0.236963, lag 2 -0.081676, lag 3 +0.038317, lag 4 -0.021296, lag 5 +0.008566, lag 6 -0.004340, lag 7 -0.006382
+d = 4: E_d = 1.915078985284 ; cross term E_d - E_(d-1) = -0.222351 (direct -0.222351); twice the pair sums by lag: lag 0 -0.095944, lag 1 -0.096464, lag 2 -0.042999, lag 3 +0.019410, lag 4 -0.011476, lag 5 +0.006104, lag 6 -0.004582, lag 7 +0.000546
+d = 5: E_d = 1.778418992240 ; cross term E_d - E_(d-1) = -0.136660 (direct -0.136660); twice the pair sums by lag: lag 0 -0.138557, lag 1 +0.012761, lag 2 -0.019256, lag 3 +0.011487, lag 4 -0.007344, lag 5 +0.000835, lag 6 +0.004124, lag 7 -0.002024
