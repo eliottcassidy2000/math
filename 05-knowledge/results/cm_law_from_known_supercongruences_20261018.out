@@ -1,0 +1,3 @@
+m =   1 (z = 64): reflection (R) mod p^2 failures none; law at m' = 4096/m failures none
+m =  -8 (z = -8): reflection (R) mod p^2 failures none; law at m' = 4096/m failures none
+m =  16 (z = 4): reflection (R) mod p^2 failures none; law at m' = 4096/m failures none
