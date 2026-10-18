@@ -1,0 +1,4 @@
+E1 (exact, n < 40): True
+E2 (exact Clausen identity, n <= 40): True
+S  (exact symmetry, n < 40): True
+C1, C2, L, T (all odd primes 3 <= p < 400): True True True True

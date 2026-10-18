@@ -1,0 +1,6 @@
+1. SU(2) N_f = 4 Schur index: half-integer powers vanish: True
+   I(q) = 1 q^0 + 28 q^1 + 329 q^2 + 2632 q^3 + 16380 q^4 + 85764 q^5 + 393589 q^6 + 1628548 q^7
+   MLDE D^(2) f = (35/144) E_4 f with f = q^(7/12) I: residuals n = 0..8 all zero: True; alpha = 35/144
+2. Lee-Yang: vacuum H(q) = ['1', '0', '1', '1', '1', '1', '2', '2', '3', '3', '4', '4'] ...; MLDE (alpha = 11/3600) residuals zero to q^60: vacuum q^(11/60)H True, primary q^(-1/60)G True
+3. Beukers level 5: sum b_n t^n = ['1', '3', '4', '2', '1', '3', '6', '4', '0', '-1', '4', '6', '4', '2', '2', '2']
+   matches the weight-1 Eisenstein form 1 + sum Re[(3-i) sum_{d|n} chi(d)] q^n on Gamma_1(5) to q^50: True

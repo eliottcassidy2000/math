@@ -6714,6 +6714,9 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 - S42 atlas (preprint_connections_solfeggio_digits_20261017.md): L1 (averaged octave bounds give pointwise N^(2/3)),
   L2 ((-1)^sigma_T(n) = prod (u/3)), L4 (Solfeggio = three-lift fibres), L5 (divergent orbit => Theta(n) not in
   Q(phi); transcendental if low complexity, citation to verify).
+- S43 (factorization_vertex_supersymmetric_bridge_20261018.md): THM-4669 PROVED (Cooper s_7 and Apery agree at the
+  half-period mod p^2; s_7((p-1)/2) == (-1/p) a_(4A)(p)). OPEN: HYP-9291 (all Frobenius points (p^r-1)/2); a conceptual
+  (K3-family / motive 8.4) reason; the Witten-index reading of the ROOT current (supercharge on sources?).
 - S42 six colours: all three golden contact families coupled are additively free (0/570, contact2 finished); OPEN:
   a difference-forcing layer (all five nonzero phi-differences in every contact direction; 4 of 22 directions reached)
   or a no-go theorem for these golden sources.

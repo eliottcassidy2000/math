@@ -1,0 +1,10 @@
+C(n,k)^2 C(n+k,k)  [A vs s7]                               mod p^2 with eps (-1)^n; mod p^1 with eps (-1)^n
+C(n,k)^2           [Apery b vs sum C(n,k)^2 C(2k,n)]       no swap
+C(n,k) C(n+k,k)                                            no swap
+C(n,k)                                                     no swap
+C(n,k)^3                                                   no swap
+C(n,k)^2 C(2k,k)                                           no swap
+C(n,k)^2 C(n+k,k)^2                                        no swap
+C(n,k)^3 C(n+k,k)                                          no swap
+C(n,k)^4                                                   no swap
+1                                                          no swap
