@@ -83,6 +83,18 @@ space is just large enough to carry the character.
 So classical freeness of `W_3(3,q)` is not a property of the shape of the `C_2`-ideal. It pins the modulus. This is a
 rigidity phenomenon with no analogue in the one-variable case, where `C[x]/(x^k)` has no modulus.
 
+## Derived reading (OBSERVATION, elementary)
+
+In every case `R_q` is a complete intersection, with generators in weights `q-2` and `q-1`. So the Koszul complex of
+the arc ideal (the derived arc space) has graded Euler characteristic
+```
+1 / ( prod_(m=2)^(q-3) (1-t^m) · prod_(m=3)^(q-2) (1-t^m) ).
+```
+The factor multiset is `{2..q-2} + {3..q-3}`, which is exactly the `n < q` truncation of `P_q`. The `A_1` analogue
+holds too: the Euler characteristic of the derived arc space of `x^N` is the `n < 2N+1` truncation of `AG_N`. So the
+conjecture says that `H_0` alone carries the full product, while the higher Koszul homology accounts for the factors
+`n >= q`.
+
 ## Proof route (lead, not a result)
 
 Bruschek-Mourtada-Schepers count the standard monomials of an initial ideal of the arc ideal, as partitions with
