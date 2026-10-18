@@ -54,3 +54,40 @@ Predictions:
   test, discriminant >= -4000). The j-map for Gamma_1(5) is obtained numerically from the t-expansion; tau is found
   by Newton iteration.
 - (P5) Control. Non-CM rational parameters (e.g. m = 3, 5, 11, 100 for s7) fail the j-match.
+
+## Outcome of P3', P4, P5 (recorded after running cm_archimedean.py; predictions above unchanged)
+
+Step 0 (identities, relative error < 1e-78 at three random tau):
+- (chi_1 chi_2 chi_3)^2 = (eta(7tau)/eta(tau))^4 for the Virasoro (2,7) = (A_1,A_4) characters.
+- (chi_0/chi_{-1/5})^5 = q prod (1-q^n)^{5(n/5)} and chi_0 chi_{-1/5} = eta(5tau)/eta(tau) for Lee-Yang.
+- Level 7: CORRECTION OF A LABEL. The pre-registered (t^2+13t+49)(t^2+5t+1)^3/t is j(7tau), not j(tau);
+  j(tau) = (t^2+13t+49)(t^2+245t+2401)^3/t^7. Since tau is CM iff 7tau is, the test itself is unaffected.
+- Level 5: j(tau) = -(t^4-228t^3+494t^2+228t+1)^3/(t(t^2+11t-1)^5) and
+  j(5tau) = -(t^4+12t^3+14t^2-12t+1)^3/(t^5(t^2+11t-1)), with t = r^5.
+
+- P4 PASSED. All 7 non-singular s7 survivors are CM points: for both roots h, the pre-registered j equals
+  j(tau_Q) to < 1e-75 relative error. The discriminants (reduced forms, root 1 / root 2) are:
+
+  | m | D | forms |
+  |---|---|---|
+  | -10648 | -427 | (1,-1,107) / (7,7,17) |
+  | -64 | -91 | (1,-1,23) / (5,-3,5) |
+  | -8 | -35 | (1,-1,9) / (3,1,3) |
+  | 2 | -12 | (1,0,3) |
+  | 8 | -19 | (1,+-1,5) |
+  | 24 | -27 | (1,+-1,7) |
+  | 125 | -112 | (4,0,7) / (1,0,28) |
+
+  - Hauptmodul cross-check: among the 8 Gamma_0(7)-classes of tau' with 7tau' ~ tau_Q, one has
+    (eta(7tau')/eta(tau'))^4 = h_0 to < 2e-78, for every root.
+  - Post hoc, not pre-registered: the singular fibres -1 and 27 are CM too, with D = -7 and D = -28. They are the
+    two fixed points h = -+1/7 of the Fricke involution h -> 1/(49h), i.e. the elliptic points of Gamma_0(7)+.
+- P5 PASSED. For m = 3, 5, 11, 100, no reduced form with |D| <= 4000 matches either root.
+- P3' FAILED. S_D is EMPTY: every 0 < |m| <= 3000 has D-density < 0.2. The density histogram over the bins
+  [0,.05), [.05,.1), [.1,.2), [.2,1] is 3318, 2642, 40, 0.
+  - Post-hoc explanation: t = r^5 is a Hauptmodul for Gamma_1(5), and j(5tau) above is the j-invariant of the Tate
+    normal form with s = -t.
+  - So a rational non-cuspidal t gives an elliptic curve over Q with a rational point of order 5.
+  - No CM elliptic curve over Q has one (Olson 1974: torsion is 0, Z/2, Z/3, Z/4, Z/6 or Z/2 x Z/2).
+  - Hence family D has no rational CM fibres at all, and P3 and P3' were ill-posed. This is not evidence about the
+    detector.
