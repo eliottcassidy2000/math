@@ -1,0 +1,18 @@
+{
+ "A1": {
+  "checks": 5359,
+  "failures": 0
+ },
+ "A2": {
+  "checks": 2431,
+  "failures": 0
+ },
+ "A3": {
+  "checks": 1406,
+  "failures": 0
+ },
+ "A4": {
+  "checks": 647,
+  "failures": 0
+ }
+}

@@ -1,0 +1,4 @@
+A1: A(ap+j) == A(a)A(j)(1 + ap w_j) mod p^2 for carry-free a, j, 7 <= p <= 61: 5359 checks, 0 failures
+A2: A(ap+j) == A(a)A(j)(1 + ap w_j) mod p^2 for carry-free a, j, 7 <= p <= 61: 2431 checks, 0 failures
+A3: A(ap+j) == A(a)A(j)(1 + ap w_j) mod p^2 for carry-free a, j, 7 <= p <= 61: 1406 checks, 0 failures
+A4: A(ap+j) == A(a)A(j)(1 + ap w_j) mod p^2 for carry-free a, j, 7 <= p <= 61: 647 checks, 0 failures
