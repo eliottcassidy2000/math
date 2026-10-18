@@ -443,6 +443,6 @@ Arbitrary/larger cells and certificate import remain open; none proves AK.
 
 ## Cross-domain connection discipline
 
-[Transfer directory](FRONTIER-CONNECTION-SIDECARS.md): prior transfers.
+[Transfers](FRONTIER-CONNECTION-SIDECARS.md): current HN/cubic/PR93 routes.
 Require source/target/map, preserved predicate, lost coordinate,
 sidecar and cheap hostile. HYP-8810 is a wildcard, not a JC/LRC reduction.
