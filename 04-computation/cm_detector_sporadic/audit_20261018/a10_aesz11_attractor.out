@@ -1,0 +1,7 @@
+u = [1, 72, 37800, 31046400, 31216185000]
+Lucas congruence fails at []
+(B1') survivors 0<|m|<=1000000: [-432, 1728]   (B1'_ord): [-432, 1728]
+m=-432: ordinary v_p {3: 39, 4: 4}; non-ordinary v_p {}
+m=1728: ordinary v_p {4: 21}; non-ordinary v_p {3: 21, 4: 1}
+m=5: ordinary v_p {1: 41}; non-ordinary v_p {1: 2}
+m=7: ordinary v_p {1: 41}; non-ordinary v_p {1: 1}

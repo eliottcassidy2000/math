@@ -221,3 +221,17 @@ Predictions, using the (B1') scan of P1 over 0 < |m| <= 10^4 (filter 7..43, conf
 - Post hoc, not predicted. (B1'_ord) additionally passes m = -256 for C(2k,k)^4 (z = -1, the second fixed point of
   the symmetry z <-> 1/z). Its non-ordinary primes (p <= 199) are exactly p == 3 (mod 4), where v = 1; elsewhere
   v = 2. So it behaves like a point with CM by Q(i), and (B1') rejects it as it rejects weight-1 CM points.
+
+## Corrections after the independent audit (audit_20261018/REPORT.md; appended, nothing above edited)
+
+- **M4.** P2 was scored only on its survivor clause. Its control clause ("non-survivor controls m in
+  {2, 3, 5, 7, 11, 100, -100, 999} have density < 0.10") FAILED in weight 2: Apery m = 100 has 0.130 and Domb
+  m = 999 has 0.110 (sporadic_cm_detector_M100000.out; reproduced by the referee). P2 in weight 2 is PARTLY FAILED;
+  in weight 1 it FAILED, as recorded. There is no mathematical consequence: survivor densities are 0.446-0.560, and
+  the largest non-survivor density over |m| <= 10^5 is 0.264.
+- **m1.** In the P7 outcome, "of the 41 primes" should read "of the 43 primes 7 <= p <= 199". The code used all 43.
+- **M2.** The post hoc P7 finding (simple roots of F_p exactly at the singular fibres, at the primes inert in their
+  CM field) is prior art: Caruso, Fürnsinn, Vargas-Montoya and Zudilin, arXiv:2510.23298. They prove it for Apery,
+  Domb and Almkvist-Zudilin (Thms 2-4) and observe it for s_7, s_10 and A274786 (Table 2).
+- **P9 wording (m3).** Generic m = 5 has v_p = 2 at a few ordinary primes (chance level, about 1/p). For C(2k,k)^4
+  at m = -256, v_p = 3 at p = 127, the one exception to "v_p = 1 at p == 3 mod 4".

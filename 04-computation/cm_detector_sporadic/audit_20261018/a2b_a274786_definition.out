@@ -1,0 +1,1 @@
+A274786 definition == C(2n,n) b_n for 0 <= n < 300: True  []

@@ -1,0 +1,12 @@
+sequences built in 2s; heads: {'C(2k,k)^2': [1, 4, 36, 400, 4900], '(3k)!/k!^3': [1, 6, 90, 1680, 34650], '(4k)!/((2k)!k!^2)': [1, 12, 420, 18480, 900900], '(6k)!/((3k)!(2k)!k!)': [1, 60, 13860, 4084080, 1338557220], 'C(2k,k)^3': [1, 8, 216, 8000, 343000], 'C(2k,k)^2C(3k,k)': [1, 12, 540, 33600, 2425500], 'C(2k,k)^2C(4k,2k)': [1, 24, 2520, 369600, 63063000], 'C(2k,k)C(3k,k)C(6k,3k)': [1, 120, 83160, 81681600, 93699005400], 'Almkvist-Zudilin': [1, 3, 9, 3, -279], 'Cooper s18': [1, 6, 54, 564, 6390], 'Franel(x)central': [1, 4, 60, 1120, 24220]}
+w1 C(2k,k)^2               : Lucas fails at []; (B) fails at []
+w1 (3k)!/k!^3              : Lucas fails at []; (B) fails at []
+w1 (4k)!/((2k)!k!^2)       : Lucas fails at []; (B) fails at []
+w1 (6k)!/((3k)!(2k)!k!)    : Lucas fails at []; (B) fails at []
+w2 C(2k,k)^3               : Lucas fails at []; rad(F_p)|V_p fails at []; simple roots at 23 primes
+w2 C(2k,k)^2C(3k,k)        : Lucas fails at []; rad(F_p)|V_p fails at []; simple roots at 22 primes
+w2 C(2k,k)^2C(4k,2k)       : Lucas fails at []; rad(F_p)|V_p fails at []; simple roots at 24 primes
+w2 C(2k,k)C(3k,k)C(6k,3k)  : Lucas fails at []; rad(F_p)|V_p fails at []; simple roots at 23 primes
+w2 Almkvist-Zudilin        : Lucas fails at []; rad(F_p)|V_p fails at []; simple roots at 24 primes
+w2 Cooper s18              : Lucas fails at []; rad(F_p)|V_p fails at []; simple roots at 35 primes
+w2 Franel(x)central        : Lucas fails at []; rad(F_p)|V_p fails at []; simple roots at 33 primes

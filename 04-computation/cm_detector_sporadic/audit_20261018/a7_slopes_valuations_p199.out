@@ -1,0 +1,141 @@
+A        w=1 CM    m=     -4: ordinary v_p {2: 21}; non-ordinary v_p {1: 22}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {False: 22}
+A        w=1 CM    m=      2: ordinary v_p {3: 21}; non-ordinary v_p {1: 22}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {False: 22}
+A        w=1 cusp  m=     -1: ordinary v_p {2: 43}; non-ordinary v_p {}; slope=1 at 0/0 ordinary primes; V(1/m)==0 at non-ord: {}
+A        w=1 cusp  m=      8: ordinary v_p {2: 43}; non-ordinary v_p {}; slope=1 at 43/43 ordinary primes; V(1/m)==0 at non-ord: {}
+A        w=1 ctrl  m=      3: ordinary v_p {1: 35, 2: 1}; non-ordinary v_p {1: 7}; slope=1 at 1/36 ordinary primes; V(1/m)==0 at non-ord: {False: 7}
+A        w=1 ctrl  m=      5: ordinary v_p {1: 40}; non-ordinary v_p {1: 3}; slope=1 at 0/40 ordinary primes; V(1/m)==0 at non-ord: {False: 3}
+A        w=1 ctrl  m=     10: ordinary v_p {1: 37}; non-ordinary v_p {1: 6}; slope=1 at 0/37 ordinary primes; V(1/m)==0 at non-ord: {False: 6}
+A        w=1 ctrl  m=    100: ordinary v_p {1: 35, 2: 2}; non-ordinary v_p {1: 6}; slope=1 at 2/37 ordinary primes; V(1/m)==0 at non-ord: {False: 6}
+B        w=1 CM    m=      3: ordinary v_p {2: 20, 3: 1}; non-ordinary v_p {1: 22}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {False: 22}
+B        w=1 CM    m=      9: ordinary v_p {3: 21}; non-ordinary v_p {1: 22}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {False: 22}
+B        w=1 ctrl  m=      2: ordinary v_p {1: 37}; non-ordinary v_p {1: 6}; slope=1 at 0/37 ordinary primes; V(1/m)==0 at non-ord: {False: 6}
+B        w=1 ctrl  m=      5: ordinary v_p {1: 40}; non-ordinary v_p {1: 3}; slope=1 at 0/40 ordinary primes; V(1/m)==0 at non-ord: {False: 3}
+B        w=1 ctrl  m=     10: ordinary v_p {1: 40}; non-ordinary v_p {1: 3}; slope=1 at 0/40 ordinary primes; V(1/m)==0 at non-ord: {False: 3}
+B        w=1 ctrl  m=    100: ordinary v_p {1: 42}; non-ordinary v_p {1: 1}; slope=1 at 0/42 ordinary primes; V(1/m)==0 at non-ord: {False: 1}
+C        w=1 CM    m=     -3: ordinary v_p {2: 21}; non-ordinary v_p {1: 22}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {False: 22}
+C        w=1 CM    m=      3: ordinary v_p {2: 21}; non-ordinary v_p {1: 22}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {False: 22}
+C        w=1 cusp  m=      1: ordinary v_p {2: 43}; non-ordinary v_p {}; slope=1 at 0/0 ordinary primes; V(1/m)==0 at non-ord: {}
+C        w=1 cusp  m=      9: ordinary v_p {2: 43}; non-ordinary v_p {}; slope=1 at 42/42 ordinary primes; V(1/m)==0 at non-ord: {}
+C        w=1 ctrl  m=      2: ordinary v_p {1: 39}; non-ordinary v_p {1: 4}; slope=1 at 0/39 ordinary primes; V(1/m)==0 at non-ord: {False: 4}
+C        w=1 ctrl  m=      5: ordinary v_p {1: 41}; non-ordinary v_p {1: 2}; slope=1 at 0/41 ordinary primes; V(1/m)==0 at non-ord: {False: 2}
+C        w=1 ctrl  m=     10: ordinary v_p {1: 35, 2: 1}; non-ordinary v_p {1: 7}; slope=1 at 1/36 ordinary primes; V(1/m)==0 at non-ord: {False: 7}
+C        w=1 ctrl  m=    100: ordinary v_p {1: 39}; non-ordinary v_p {1: 4}; slope=1 at 0/39 ordinary primes; V(1/m)==0 at non-ord: {False: 4}
+D        w=1 ctrl  m=      2: ordinary v_p {1: 38, 2: 1}; non-ordinary v_p {1: 4}; slope=1 at 1/39 ordinary primes; V(1/m)==0 at non-ord: {False: 4}
+D        w=1 ctrl  m=      3: ordinary v_p {1: 39, 2: 2}; non-ordinary v_p {1: 2}; slope=1 at 2/40 ordinary primes; V(1/m)==0 at non-ord: {False: 2}
+D        w=1 ctrl  m=      5: ordinary v_p {1: 39, 2: 1}; non-ordinary v_p {1: 3}; slope=1 at 1/40 ordinary primes; V(1/m)==0 at non-ord: {False: 3}
+D        w=1 ctrl  m=    100: ordinary v_p {1: 41, 2: 1}; non-ordinary v_p {1: 1}; slope=1 at 1/42 ordinary primes; V(1/m)==0 at non-ord: {False: 1}
+E        w=1 cusp  m=      4: ordinary v_p {2: 42, 3: 1}; non-ordinary v_p {}; slope=1 at 43/43 ordinary primes; V(1/m)==0 at non-ord: {}
+E        w=1 cusp  m=      8: ordinary v_p {2: 42, 3: 1}; non-ordinary v_p {}; slope=1 at 43/43 ordinary primes; V(1/m)==0 at non-ord: {}
+E        w=1 ctrl  m=      2: ordinary v_p {1: 40}; non-ordinary v_p {1: 3}; slope=1 at 0/40 ordinary primes; V(1/m)==0 at non-ord: {False: 3}
+E        w=1 ctrl  m=      3: ordinary v_p {1: 38}; non-ordinary v_p {1: 5}; slope=1 at 0/37 ordinary primes; V(1/m)==0 at non-ord: {False: 5}
+E        w=1 ctrl  m=      5: ordinary v_p {1: 38}; non-ordinary v_p {1: 5}; slope=1 at 0/38 ordinary primes; V(1/m)==0 at non-ord: {False: 5}
+E        w=1 ctrl  m=    100: ordinary v_p {1: 38}; non-ordinary v_p {1: 5}; slope=1 at 0/38 ordinary primes; V(1/m)==0 at non-ord: {False: 5}
+F        w=1 CM    m=      6: ordinary v_p {2: 21}; non-ordinary v_p {1: 22}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {False: 22}
+F        w=1 CM    m=     12: ordinary v_p {2: 20, 4: 1}; non-ordinary v_p {1: 22}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {False: 22}
+F        w=1 cusp  m=      8: ordinary v_p {2: 43}; non-ordinary v_p {}; slope=1 at 43/43 ordinary primes; V(1/m)==0 at non-ord: {}
+F        w=1 cusp  m=      9: ordinary v_p {2: 42, 3: 1}; non-ordinary v_p {}; slope=1 at 42/42 ordinary primes; V(1/m)==0 at non-ord: {}
+F        w=1 ctrl  m=      2: ordinary v_p {1: 41}; non-ordinary v_p {1: 2}; slope=1 at 0/41 ordinary primes; V(1/m)==0 at non-ord: {False: 2}
+F        w=1 ctrl  m=      3: ordinary v_p {1: 40}; non-ordinary v_p {1: 3}; slope=1 at 0/39 ordinary primes; V(1/m)==0 at non-ord: {False: 3}
+F        w=1 ctrl  m=      5: ordinary v_p {1: 35, 2: 1}; non-ordinary v_p {1: 7}; slope=1 at 1/36 ordinary primes; V(1/m)==0 at non-ord: {False: 7}
+F        w=1 ctrl  m=    100: ordinary v_p {1: 39, 2: 1}; non-ordinary v_p {1: 3}; slope=1 at 1/40 ordinary primes; V(1/m)==0 at non-ord: {False: 3}
+Apery    w=2 CM    m=     -1: ordinary v_p {3: 20, 4: 1}; non-ordinary v_p {2: 22}; slope=1 at 0/0 ordinary primes; V(1/m)==0 at non-ord: {True: 22}
+Apery    w=2 CM    m=      1: ordinary v_p {3: 19}; non-ordinary v_p {2: 24}; slope=1 at 0/0 ordinary primes; V(1/m)==0 at non-ord: {True: 24}
+Apery    w=2 ctrl  m=      2: ordinary v_p {1: 38}; non-ordinary v_p {2: 4, 3: 1}; slope=1 at 0/38 ordinary primes; V(1/m)==0 at non-ord: {True: 5}
+Apery    w=2 ctrl  m=      3: ordinary v_p {1: 39}; non-ordinary v_p {2: 4}; slope=1 at 0/39 ordinary primes; V(1/m)==0 at non-ord: {True: 4}
+Apery    w=2 ctrl  m=      5: ordinary v_p {1: 41, 2: 1}; non-ordinary v_p {2: 1}; slope=1 at 1/42 ordinary primes; V(1/m)==0 at non-ord: {True: 1}
+Apery    w=2 ctrl  m=    100: ordinary v_p {1: 32, 2: 2}; non-ordinary v_p {2: 8, 3: 1}; slope=1 at 2/34 ordinary primes; V(1/m)==0 at non-ord: {True: 9}
+Domb     w=2 CM    m=    -32: ordinary v_p {3: 19, 4: 2}; non-ordinary v_p {2: 22}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {True: 22}
+Domb     w=2 CM    m=     -8: ordinary v_p {3: 22}; non-ordinary v_p {2: 21}; slope=1 at 22/22 ordinary primes; V(1/m)==0 at non-ord: {True: 21}
+Domb     w=2 CM    m=     -2: ordinary v_p {3: 20, 4: 1}; non-ordinary v_p {2: 21, 3: 1}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {True: 22}
+Domb     w=2 CM    m=      1: ordinary v_p {3: 20}; non-ordinary v_p {2: 23}; slope=1 at 0/0 ordinary primes; V(1/m)==0 at non-ord: {True: 23}
+Domb     w=2 CM    m=      8: ordinary v_p {3: 19}; non-ordinary v_p {2: 24}; slope=1 at 19/19 ordinary primes; V(1/m)==0 at non-ord: {True: 24}
+Domb     w=2 CM    m=     64: ordinary v_p {3: 20}; non-ordinary v_p {2: 23}; slope=1 at 20/20 ordinary primes; V(1/m)==0 at non-ord: {True: 23}
+Domb     w=2 sing  m=      4: ordinary v_p {3: 20, 4: 1}; non-ordinary v_p {2: 22}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {True: 22}
+Domb     w=2 sing  m=     16: ordinary v_p {3: 19, 4: 2}; non-ordinary v_p {2: 22}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {True: 22}
+Domb     w=2 ctrl  m=      2: ordinary v_p {1: 39, 2: 2}; non-ordinary v_p {2: 2}; slope=1 at 2/41 ordinary primes; V(1/m)==0 at non-ord: {True: 2}
+Domb     w=2 ctrl  m=      3: ordinary v_p {1: 38, 2: 1}; non-ordinary v_p {2: 4}; slope=1 at 1/38 ordinary primes; V(1/m)==0 at non-ord: {True: 4}
+Domb     w=2 ctrl  m=      5: ordinary v_p {1: 33, 2: 3}; non-ordinary v_p {2: 7}; slope=1 at 3/36 ordinary primes; V(1/m)==0 at non-ord: {True: 7}
+Domb     w=2 ctrl  m=    100: ordinary v_p {1: 36, 2: 1}; non-ordinary v_p {2: 5, 3: 1}; slope=1 at 1/37 ordinary primes; V(1/m)==0 at non-ord: {True: 6}
+s7       w=2 CM    m= -10648: ordinary v_p {2: 17, 3: 1}; non-ordinary v_p {2: 23, 3: 1}; slope=1 at 18/18 ordinary primes; V(1/m)==0 at non-ord: {True: 24}
+s7       w=2 CM    m=    -64: ordinary v_p {2: 20}; non-ordinary v_p {2: 23}; slope=1 at 20/20 ordinary primes; V(1/m)==0 at non-ord: {True: 23}
+s7       w=2 CM    m=     -8: ordinary v_p {2: 19}; non-ordinary v_p {2: 23, 3: 1}; slope=1 at 19/19 ordinary primes; V(1/m)==0 at non-ord: {True: 24}
+s7       w=2 CM    m=      2: ordinary v_p {3: 19, 4: 2}; non-ordinary v_p {2: 22}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {True: 22}
+s7       w=2 CM    m=      8: ordinary v_p {2: 19}; non-ordinary v_p {2: 24}; slope=1 at 19/19 ordinary primes; V(1/m)==0 at non-ord: {True: 24}
+s7       w=2 CM    m=     24: ordinary v_p {2: 21}; non-ordinary v_p {2: 22}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {True: 22}
+s7       w=2 CM    m=    125: ordinary v_p {2: 19, 3: 2}; non-ordinary v_p {2: 22}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {True: 22}
+s7       w=2 sing  m=     -1: ordinary v_p {3: 21}; non-ordinary v_p {2: 21, 3: 1}; slope=1 at 0/0 ordinary primes; V(1/m)==0 at non-ord: {True: 22}
+s7       w=2 sing  m=     27: ordinary v_p {2: 20, 3: 1}; non-ordinary v_p {2: 22}; slope=1 at 20/20 ordinary primes; V(1/m)==0 at non-ord: {True: 22}
+s7       w=2 ctrl  m=      3: ordinary v_p {1: 37, 2: 1}; non-ordinary v_p {2: 5}; slope=1 at 1/37 ordinary primes; V(1/m)==0 at non-ord: {True: 5}
+s7       w=2 ctrl  m=      5: ordinary v_p {1: 39}; non-ordinary v_p {2: 4}; slope=1 at 0/39 ordinary primes; V(1/m)==0 at non-ord: {True: 4}
+s7       w=2 ctrl  m=     11: ordinary v_p {1: 38}; non-ordinary v_p {2: 4}; slope=1 at 0/37 ordinary primes; V(1/m)==0 at non-ord: {True: 4}
+s7       w=2 ctrl  m=    100: ordinary v_p {1: 38, 2: 2}; non-ordinary v_p {2: 3}; slope=1 at 2/40 ordinary primes; V(1/m)==0 at non-ord: {True: 3}
+s10      w=2 CM    m=   -324: ordinary v_p {2: 22, 3: 1}; non-ordinary v_p {2: 20}; slope=1 at 22/22 ordinary primes; V(1/m)==0 at non-ord: {True: 20}
+s10      w=2 CM    m=    -64: ordinary v_p {2: 18, 3: 1}; non-ordinary v_p {2: 24}; slope=1 at 19/19 ordinary primes; V(1/m)==0 at non-ord: {True: 24}
+s10      w=2 CM    m=    -20: ordinary v_p {2: 19, 3: 1}; non-ordinary v_p {2: 23}; slope=1 at 20/20 ordinary primes; V(1/m)==0 at non-ord: {True: 23}
+s10      w=2 CM    m=     -9: ordinary v_p {2: 20}; non-ordinary v_p {2: 23}; slope=1 at 20/20 ordinary primes; V(1/m)==0 at non-ord: {True: 23}
+s10      w=2 CM    m=     -2: ordinary v_p {3: 20}; non-ordinary v_p {3: 22, 4: 1}; slope=1 at 20/20 ordinary primes; V(1/m)==0 at non-ord: {True: 23}
+s10      w=2 CM    m=      1: ordinary v_p {3: 20}; non-ordinary v_p {2: 23}; slope=1 at 0/0 ordinary primes; V(1/m)==0 at non-ord: {True: 23}
+s10      w=2 CM    m=      4: ordinary v_p {2: 22}; non-ordinary v_p {2: 20, 3: 1}; slope=1 at 22/22 ordinary primes; V(1/m)==0 at non-ord: {True: 21}
+s10      w=2 CM    m=     12: ordinary v_p {2: 19, 3: 1}; non-ordinary v_p {2: 23}; slope=1 at 20/20 ordinary primes; V(1/m)==0 at non-ord: {True: 23}
+s10      w=2 CM    m=     36: ordinary v_p {2: 21, 3: 2}; non-ordinary v_p {2: 20}; slope=1 at 23/23 ordinary primes; V(1/m)==0 at non-ord: {True: 20}
+s10      w=2 CM    m=    196: ordinary v_p {2: 22, 3: 2}; non-ordinary v_p {2: 18}; slope=1 at 24/24 ordinary primes; V(1/m)==0 at non-ord: {True: 18}
+s10      w=2 CM    m=   1296: ordinary v_p {2: 20, 4: 1}; non-ordinary v_p {2: 22}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {True: 22}
+s10      w=2 CM    m=   5776: ordinary v_p {2: 18}; non-ordinary v_p {2: 23, 3: 1}; slope=1 at 18/18 ordinary primes; V(1/m)==0 at non-ord: {True: 24}
+s10      w=2 sing  m=     -4: ordinary v_p {2: 19}; non-ordinary v_p {2: 22, 3: 2}; slope=1 at 19/19 ordinary primes; V(1/m)==0 at non-ord: {True: 24}
+s10      w=2 sing  m=     16: ordinary v_p {2: 19, 3: 1}; non-ordinary v_p {2: 22, 3: 1}; slope=1 at 20/20 ordinary primes; V(1/m)==0 at non-ord: {True: 23}
+s10      w=2 ctrl  m=      2: ordinary v_p {1: 36, 2: 2}; non-ordinary v_p {2: 5}; slope=1 at 2/38 ordinary primes; V(1/m)==0 at non-ord: {True: 5}
+s10      w=2 ctrl  m=      3: ordinary v_p {1: 39}; non-ordinary v_p {2: 4}; slope=1 at 0/38 ordinary primes; V(1/m)==0 at non-ord: {True: 4}
+s10      w=2 ctrl  m=      5: ordinary v_p {1: 37}; non-ordinary v_p {2: 6}; slope=1 at 0/37 ordinary primes; V(1/m)==0 at non-ord: {True: 6}
+s10      w=2 ctrl  m=    100: ordinary v_p {1: 40}; non-ordinary v_p {2: 3}; slope=1 at 0/40 ordinary primes; V(1/m)==0 at non-ord: {True: 3}
+A274786  w=2 CM    m= -15228: ordinary v_p {2: 21}; non-ordinary v_p {2: 19, 3: 2}; slope=1 at 21/21 ordinary primes; V(1/m)==0 at non-ord: {True: 21}
+A274786  w=2 CM    m=   -828: ordinary v_p {2: 23}; non-ordinary v_p {2: 19}; slope=1 at 23/23 ordinary primes; V(1/m)==0 at non-ord: {True: 19}
+A274786  w=2 CM    m=    -28: ordinary v_p {2: 18, 3: 1}; non-ordinary v_p {2: 23}; slope=1 at 19/19 ordinary primes; V(1/m)==0 at non-ord: {True: 23}
+A274786  w=2 CM    m=     -3: ordinary v_p {2: 20}; non-ordinary v_p {2: 23}; slope=1 at 20/20 ordinary primes; V(1/m)==0 at non-ord: {True: 23}
+A274786  w=2 CM    m=      4: ordinary v_p {2: 19}; non-ordinary v_p {2: 22, 3: 2}; slope=1 at 19/19 ordinary primes; V(1/m)==0 at non-ord: {True: 24}
+A274786  w=2 CM    m=     18: ordinary v_p {2: 20}; non-ordinary v_p {2: 21, 3: 2}; slope=1 at 19/19 ordinary primes; V(1/m)==0 at non-ord: {True: 23}
+A274786  w=2 CM    m=     36: ordinary v_p {2: 19}; non-ordinary v_p {2: 23, 3: 1}; slope=1 at 19/19 ordinary primes; V(1/m)==0 at non-ord: {True: 24}
+A274786  w=2 CM    m=     72: ordinary v_p {2: 18, 3: 1, 4: 1}; non-ordinary v_p {2: 23}; slope=1 at 20/20 ordinary primes; V(1/m)==0 at non-ord: {True: 23}
+A274786  w=2 CM    m=    147: ordinary v_p {2: 20}; non-ordinary v_p {2: 21, 3: 1}; slope=1 at 19/19 ordinary primes; V(1/m)==0 at non-ord: {True: 22}
+A274786  w=2 ctrl  m=      3: ordinary v_p {1: 38, 2: 1}; non-ordinary v_p {2: 4}; slope=1 at 1/38 ordinary primes; V(1/m)==0 at non-ord: {True: 4}
+A274786  w=2 ctrl  m=      5: ordinary v_p {1: 39, 2: 1}; non-ordinary v_p {2: 3}; slope=1 at 1/40 ordinary primes; V(1/m)==0 at non-ord: {True: 3}
+A274786  w=2 ctrl  m=     11: ordinary v_p {1: 40}; non-ordinary v_p {2: 2}; slope=1 at 0/39 ordinary primes; V(1/m)==0 at non-ord: {True: 2}
+A274786  w=2 ctrl  m=    100: ordinary v_p {1: 42}; non-ordinary v_p {2: 1}; slope=1 at 0/42 ordinary primes; V(1/m)==0 at non-ord: {True: 1}
+HV       w=3 attr  m=     -7: ordinary v_p {2: 37, 3: 4}; non-ordinary v_p {2: 1}; slope=1 at 41/41 ordinary primes; V(1/m)==0 at non-ord: {True: 1}
+          v_p by prime: {11: 3, 13: 2, 17: 3, 19: 2, 23: 2, 29: 2, 31: 2, 37: 2, 41: 2, 43: 2, 47: 2, 53: 2, 59: 2, 61: 2, 67: 2, 71: 2, 73: 2, 79: 2, 83: 2, 89: 3, 97: 2, 101: 2, 103: 2, 107: 2, 109: 3, 113: 2, 127: 2, 131: 2, 137: 2, 139: 2, 149: 2, 151: 2, 157: 2, 163: 2, 167: 2, 173: 2, 179: 2, 181: 2, 191: 2, 193: 2, 197: 2, 199: 2}
+HV       w=3 sing  m=      1: ordinary v_p {2: 42, 3: 1}; non-ordinary v_p {}; slope=1 at 0/0 ordinary primes; V(1/m)==0 at non-ord: {}
+          v_p by prime: {7: 3, 11: 2, 13: 2, 17: 2, 19: 2, 23: 2, 29: 2, 31: 2, 37: 2, 41: 2, 43: 2, 47: 2, 53: 2, 59: 2, 61: 2, 67: 2, 71: 2, 73: 2, 79: 2, 83: 2, 89: 2, 97: 2, 101: 2, 103: 2, 107: 2, 109: 2, 113: 2, 127: 2, 131: 2, 137: 2, 139: 2, 149: 2, 151: 2, 157: 2, 163: 2, 167: 2, 173: 2, 179: 2, 181: 2, 191: 2, 193: 2, 197: 2, 199: 2}
+HV       w=3 sing  m=      9: ordinary v_p {2: 41, 3: 2}; non-ordinary v_p {}; slope=1 at 42/42 ordinary primes; V(1/m)==0 at non-ord: {}
+          v_p by prime: {7: 2, 11: 2, 13: 2, 17: 2, 19: 2, 23: 2, 29: 2, 31: 2, 37: 2, 41: 3, 43: 2, 47: 2, 53: 2, 59: 2, 61: 2, 67: 2, 71: 2, 73: 2, 79: 2, 83: 2, 89: 2, 97: 2, 101: 2, 103: 2, 107: 2, 109: 2, 113: 2, 127: 2, 131: 2, 137: 2, 139: 2, 149: 2, 151: 2, 157: 2, 163: 2, 167: 2, 173: 2, 179: 2, 181: 2, 191: 2, 193: 2, 197: 3, 199: 2}
+HV       w=3 sing  m=     25: ordinary v_p {2: 40}; non-ordinary v_p {2: 3}; slope=1 at 40/40 ordinary primes; V(1/m)==0 at non-ord: {True: 3}
+          v_p by prime: {7: 2, 11: 2, 13: 2, 17: 2, 19: 2, 23: 2, 29: 2, 31: 2, 37: 2, 41: 2, 43: 2, 47: 2, 53: 2, 59: 2, 61: 2, 67: 2, 71: 2, 73: 2, 79: 2, 83: 2, 89: 2, 97: 2, 101: 2, 103: 2, 107: 2, 109: 2, 113: 2, 127: 2, 131: 2, 137: 2, 139: 2, 149: 2, 151: 2, 157: 2, 163: 2, 167: 2, 173: 2, 179: 2, 181: 2, 191: 2, 193: 2, 197: 2, 199: 2}
+HV       w=3 ctrl  m=      5: ordinary v_p {1: 41, 2: 2}; non-ordinary v_p {}; slope=1 at 2/43 ordinary primes; V(1/m)==0 at non-ord: {}
+          v_p by prime: {7: 1, 11: 1, 13: 2, 17: 1, 19: 1, 23: 1, 29: 1, 31: 1, 37: 1, 41: 1, 43: 1, 47: 1, 53: 1, 59: 1, 61: 1, 67: 2, 71: 1, 73: 1, 79: 1, 83: 1, 89: 1, 97: 1, 101: 1, 103: 1, 107: 1, 109: 1, 113: 1, 127: 1, 131: 1, 137: 1, 139: 1, 149: 1, 151: 1, 157: 1, 163: 1, 167: 1, 173: 1, 179: 1, 181: 1, 191: 1, 193: 1, 197: 1, 199: 1}
+HV       w=3 ctrl  m=      2: ordinary v_p {1: 42}; non-ordinary v_p {2: 1}; slope=1 at 0/42 ordinary primes; V(1/m)==0 at non-ord: {True: 1}
+          v_p by prime: {7: 1, 11: 1, 13: 1, 17: 1, 19: 1, 23: 2, 29: 1, 31: 1, 37: 1, 41: 1, 43: 1, 47: 1, 53: 1, 59: 1, 61: 1, 67: 1, 71: 1, 73: 1, 79: 1, 83: 1, 89: 1, 97: 1, 101: 1, 103: 1, 107: 1, 109: 1, 113: 1, 127: 1, 131: 1, 137: 1, 139: 1, 149: 1, 151: 1, 157: 1, 163: 1, 167: 1, 173: 1, 179: 1, 181: 1, 191: 1, 193: 1, 197: 1, 199: 1}
+HV       w=3 ctrl  m=      3: ordinary v_p {1: 42, 2: 1}; non-ordinary v_p {}; slope=1 at 1/42 ordinary primes; V(1/m)==0 at non-ord: {}
+          v_p by prime: {7: 1, 11: 1, 13: 1, 17: 2, 19: 1, 23: 1, 29: 1, 31: 1, 37: 1, 41: 1, 43: 1, 47: 1, 53: 1, 59: 1, 61: 1, 67: 1, 71: 1, 73: 1, 79: 1, 83: 1, 89: 1, 97: 1, 101: 1, 103: 1, 107: 1, 109: 1, 113: 1, 127: 1, 131: 1, 137: 1, 139: 1, 149: 1, 151: 1, 157: 1, 163: 1, 167: 1, 173: 1, 179: 1, 181: 1, 191: 1, 193: 1, 197: 1, 199: 1}
+HV       w=3 ctrl  m=    100: ordinary v_p {1: 43}; non-ordinary v_p {}; slope=1 at 0/43 ordinary primes; V(1/m)==0 at non-ord: {}
+          v_p by prime: {7: 1, 11: 1, 13: 1, 17: 1, 19: 1, 23: 1, 29: 1, 31: 1, 37: 1, 41: 1, 43: 1, 47: 1, 53: 1, 59: 1, 61: 1, 67: 1, 71: 1, 73: 1, 79: 1, 83: 1, 89: 1, 97: 1, 101: 1, 103: 1, 107: 1, 109: 1, 113: 1, 127: 1, 131: 1, 137: 1, 139: 1, 149: 1, 151: 1, 157: 1, 163: 1, 167: 1, 173: 1, 179: 1, 181: 1, 191: 1, 193: 1, 197: 1, 199: 1}
+H333     w=3 attr  m=  -5832: ordinary v_p {3: 42, 4: 1}; non-ordinary v_p {}; slope=1 at 41/41 ordinary primes; V(1/m)==0 at non-ord: {}
+          v_p by prime: {7: 3, 11: 3, 13: 3, 17: 3, 19: 3, 23: 3, 29: 3, 31: 3, 37: 3, 41: 3, 43: 3, 47: 3, 53: 3, 59: 3, 61: 3, 67: 3, 71: 3, 73: 3, 79: 3, 83: 3, 89: 3, 97: 3, 101: 3, 103: 3, 107: 3, 109: 4, 113: 3, 127: 3, 131: 3, 137: 3, 139: 3, 149: 3, 151: 3, 157: 3, 163: 3, 167: 3, 173: 3, 179: 3, 181: 3, 191: 3, 193: 3, 197: 3, 199: 3}
+H333     w=3 sing  m=    729: ordinary v_p {3: 39, 4: 2, 5: 1}; non-ordinary v_p {3: 1}; slope=1 at 41/41 ordinary primes; V(1/m)==0 at non-ord: {True: 1}
+H333     w=3 ctrl  m=      5: ordinary v_p {1: 41, 2: 1}; non-ordinary v_p {1: 1}; slope=1 at 1/42 ordinary primes; V(1/m)==0 at non-ord: {False: 1}
+H333     w=3 ctrl  m=      2: ordinary v_p {1: 41}; non-ordinary v_p {1: 2}; slope=1 at 0/41 ordinary primes; V(1/m)==0 at non-ord: {False: 2}
+H333     w=3 ctrl  m=      7: ordinary v_p {1: 40, 2: 1}; non-ordinary v_p {1: 1}; slope=1 at 1/41 ordinary primes; V(1/m)==0 at non-ord: {False: 1}
+H333     w=3 ctrl  m=    100: ordinary v_p {1: 42}; non-ordinary v_p {1: 1}; slope=1 at 0/42 ordinary primes; V(1/m)==0 at non-ord: {False: 1}
+B2k4     w=3 z=-1  m=   -256: ordinary v_p {2: 20}; non-ordinary v_p {1: 22, 3: 1}; slope=1 at 20/20 ordinary primes; V(1/m)==0 at non-ord: {False: 22, True: 1}
+          non-ordinary primes: [7, 11, 19, 23, 31, 43, 47, 59, 67, 71, 79, 83, 103, 107, 127, 131, 139, 151, 163, 167, 179, 191, 199]  all == 3 mod 4: True  all p==3 mod 4 are non-ordinary: True
+          v_p by prime: {7: 1, 11: 1, 13: 2, 17: 2, 19: 1, 23: 1, 29: 2, 31: 1, 37: 2, 41: 2, 43: 1, 47: 1, 53: 2, 59: 1, 61: 2, 67: 1, 71: 1, 73: 2, 79: 1, 83: 1, 89: 2, 97: 2, 101: 2, 103: 1, 107: 1, 109: 2, 113: 2, 127: 3, 131: 1, 137: 2, 139: 1, 149: 2, 151: 1, 157: 2, 163: 1, 167: 1, 173: 2, 179: 1, 181: 2, 191: 1, 193: 2, 197: 2, 199: 1}
+B2k4     w=3 sing  m=    256: ordinary v_p {3: 41, 4: 1}; non-ordinary v_p {3: 1}; slope=1 at 42/42 ordinary primes; V(1/m)==0 at non-ord: {True: 1}
+B2k4     w=3 ctrl  m=      5: ordinary v_p {1: 39, 2: 3}; non-ordinary v_p {1: 1}; slope=1 at 3/42 ordinary primes; V(1/m)==0 at non-ord: {False: 1}
+B2k4     w=3 ctrl  m=      2: ordinary v_p {1: 42}; non-ordinary v_p {1: 1}; slope=1 at 0/42 ordinary primes; V(1/m)==0 at non-ord: {False: 1}
+B2k4     w=3 ctrl  m=      3: ordinary v_p {1: 40, 2: 1}; non-ordinary v_p {1: 1, 2: 1}; slope=1 at 1/41 ordinary primes; V(1/m)==0 at non-ord: {False: 1, True: 1}
+B2k4     w=3 ctrl  m=    100: ordinary v_p {1: 42, 2: 1}; non-ordinary v_p {}; slope=1 at 1/43 ordinary primes; V(1/m)==0 at non-ord: {}
+Quintic  w=3 sing  m=   3125: ordinary v_p {3: 41, 4: 1}; non-ordinary v_p {3: 1}; slope=1 at 42/42 ordinary primes; V(1/m)==0 at non-ord: {True: 1}
+Quintic  w=3 ctrl  m=      5: ordinary v_p {1: 43}; non-ordinary v_p {}; slope=1 at 0/43 ordinary primes; V(1/m)==0 at non-ord: {}
+Quintic  w=3 ctrl  m=      2: ordinary v_p {1: 41}; non-ordinary v_p {1: 2}; slope=1 at 0/41 ordinary primes; V(1/m)==0 at non-ord: {False: 2}
+Quintic  w=3 ctrl  m=      3: ordinary v_p {1: 41, 2: 1}; non-ordinary v_p {1: 1}; slope=1 at 1/41 ordinary primes; V(1/m)==0 at non-ord: {False: 1}
+Quintic  w=3 ctrl  m=      7: ordinary v_p {1: 42}; non-ordinary v_p {}; slope=1 at 0/42 ordinary primes; V(1/m)==0 at non-ord: {}
+Quintic  w=3 ctrl  m=    100: ordinary v_p {1: 41, 2: 2}; non-ordinary v_p {}; slope=1 at 2/43 ordinary primes; V(1/m)==0 at non-ord: {}
+
+Lemma (A) check: (B1') <=> V == u_1 q_p F (mod p) agreed at 5492/5492 (m,p) pairs

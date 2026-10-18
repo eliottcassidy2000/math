@@ -18981,3 +18981,55 @@ the ambient space.
     quartic cases, verification ranges, Chilakamarri 1988, walk lengths as upper bounds).
   - The brief-2 note's twin heuristic was marked REFUTED in section 3.1b.
 
+## MISTAKE-638 (2026-10-18, kind-pasteur-2026-10-18-S2; independent S2 referee, audit_20261018) -- results presented as new were already tabulated or proved in sources the session cited or linked, an inert-prime valuation "law" was stated against the session's own output, and a pre-registered prediction was scored on one of its two clauses
+
+- **Affected claims:**
+  - THM-4708 (credit for parts 2-3, title, physics reading, class-number citation);
+  - HYP-9330 (title, (C), (D), (E) Beukers B table, (F), status line on P2);
+  - HYP-9331 (wording of the generic and m = -256 valuations);
+  - results note §§1-3, 4, 5, 7;
+  - PREREGISTRATION P2 and P7 outcomes.
+- **First failed implications:**
+  - (i) **Uncredited tabulation.**
+    - Beukers arXiv:2403.03301 v3, App. C §9.11 / §9.14, tabulates the nine nonzero rational CM values at levels 7
+      and 5, with tau.
+    - §9.14 also gives the level-5 operator, mirror map h_5/(1+22h_5+125h_5^2) and -4 Theta = E_{2,5}.
+    - Z.-W. Sun (arXiv:1103.4325, 2011, §3) lists the nine level-5 values.
+    - The session read only Beukers' Zagier tables (App. B), wrote "checked against Beukers (appendix tables)", and
+      called the values "expected to appear" and "presumably" known.
+  - (ii) **Uncredited proof and description.**
+    - Caruso, Fürnsinn, Vargas-Montoya and Zudilin (arXiv:2510.23298) is linked from OEIS A274786, a page the
+      session opened. They prove F_p = B_p^2 versus (singular polynomial) x B_p^2 according to inertness for Apery,
+      Domb and Almkvist-Zudilin, and tabulate it for s_7, s_10 and A274786. This was the session's post hoc P7
+      finding and stated mechanism.
+    - Straub (arXiv:2301.12248, Thm 1.3) describes V_p as a truncated derivative series.
+  - (iii) **A law against the data.** "At inert primes the defect valuation equals the weight" went into a title
+    although `defect_valuation_probe.out` line 49 shows v_p >= 3 at all 23 non-ordinary primes for s_10 at m = -2
+    (CM by Z[i]).
+  - (iv) **Partial scoring.** P2 was scored PASSED in weight 2 on its survivor clause only. Its control clause
+    failed: Apery m = 100 at 0.130, Domb m = 999 at 0.110.
+  - (v) **Minor.**
+    - 41 versus 43 primes.
+    - "Arno" cited for h = 2 orders.
+    - Beukers' version numbering (v3) and the exception list of his Rem. 1.14 were misreported.
+    - "Expected from" Beukers should be "suggested by": the truncation has a gap.
+    - The slope is undefined at m = +-1.
+    - The physics reading overstated: CM is only the necessary half of Gukov-Vafa.
+    - The "levels 5, 7, 9 = 2K+1" remark was numerology; the operative condition is (N-1) | 24.
+- **Repairs (all applied):**
+  - THM-4708 retitled "Rational CM values of the Fricke Hauptmoduln T_5A + 16 and T_7A + 9 ...". Part 2 typed CITED
+    (Beukers App. C, Cooper, Chan-Cooper, OEIS). Part 3 records the prior tabulation, the v3 misprint 1/588 -> 1/147,
+    the routine completeness (Galbraith) and the structural description. Citations corrected. The physics reading is
+    typed as ANALOGY.
+  - HYP-9330: (C) second bullet typed PRIOR ART (CFVZ); Straub cited; (F) restated as v_p >= w with the s_10 m = -2
+    exception; (D) says "where defined" and "suggested by"; B's table slip noted; status and novelty restricted.
+  - HYP-9331: wording fixed, and the referee's two out-of-sample confirmations added (AESZ 11 at -432, AESZ 36 at
+    -64).
+  - PREREGISTRATION.md: corrections appended.
+  - Results note rewritten accordingly.
+- **Prevention rule:**
+  - When a paper is cited as "checked", read every table and section that could contain the claimed objects,
+    appendices included.
+  - Open every paper linked from an OEIS entry before claiming novelty for a structure of that sequence.
+  - Before naming a "law" that summarizes a histogram file, grep the file for counterexample rows.
+  - Score each clause of a pre-registered prediction separately.

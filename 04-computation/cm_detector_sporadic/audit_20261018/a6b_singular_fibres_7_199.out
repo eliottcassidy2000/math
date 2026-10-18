@@ -1,0 +1,8 @@
+Apery    x^2-34x+1     : simple root at 21/43 primes; = inert set of D in [-24]  (ignoring p|D: [-24])
+Domb     1-4x (m=4)    : simple root at 22/43 primes; = inert set of D in [-3, -12, -27, -48, -75, -147]  (ignoring p|D: [-3, -12, -27, -48, -75, -147])
+Domb     1-16x (m=16)  : simple root at 22/43 primes; = inert set of D in [-3, -12, -27, -48, -75, -147]  (ignoring p|D: [-3, -12, -27, -48, -75, -147])
+s7       1+x (m=-1)    : simple root at 21/43 primes; = inert set of D in [-7, -28, -112]  (ignoring p|D: [-7, -28, -112])
+s7       1-27x (m=27)  : simple root at 21/43 primes; = inert set of D in [-7, -28, -112]  (ignoring p|D: [-7, -28, -112])
+s10      1+4x (m=-4)   : simple root at 24/43 primes; = inert set of D in [-20]  (ignoring p|D: [-20])
+s10      1-16x (m=16)  : simple root at 23/43 primes; = inert set of D in [-40]  (ignoring p|D: [-40])
+A274786  1-44x-16x^2   : simple root at 24/43 primes; = inert set of D in [-20]  (ignoring p|D: [-20])

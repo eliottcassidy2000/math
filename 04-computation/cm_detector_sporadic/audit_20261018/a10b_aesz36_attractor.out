@@ -1,0 +1,7 @@
+A = [1, 16, 720, 44800, 3312400] ; satisfies the AESZ 36 operator for 2 <= n < 420: True [] ; n=1: True
+Lucas congruence fails at []
+(B1') survivors 0<|m|<=1000000: [-64, 64, 128]   (B1'_ord): [-64, 64, 128]
+m=-64: ordinary v_p {2: 43}; non-ordinary v_p {}
+m=64: ordinary v_p {2: 41, 3: 1}; non-ordinary v_p {2: 1}
+m=128: ordinary v_p {3: 20}; non-ordinary v_p {3: 21, 4: 2}
+m=5: ordinary v_p {1: 42}; non-ordinary v_p {1: 1}

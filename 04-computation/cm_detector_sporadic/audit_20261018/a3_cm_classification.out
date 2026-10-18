@@ -1,0 +1,29 @@
+fundamental D with h<=2, |D|<=20000: 27 (max |D| = 427)
+all orders with h(D)=1: 13: [-3, -4, -7, -8, -11, -12, -16, -19, -27, -28, -43, -67, -163]
+all orders with h(D)=2: 29: [-15, -20, -24, -32, -35, -36, -40, -48, -51, -52, -60, -64, -72, -75, -88, -91, -99, -100, -112, -115, -123, -147, -148, -187, -232, -235, -267, -403, -427]
+
+N = 5: worst |coefficient - nearest integer| over all 42 polynomials = 2.0646e-234
+  m_5 =   -15228: (D(tau), D(N tau)) over its points = [(-235, -235)]; #points = 2
+  m_5 =     -828: (D(tau), D(N tau)) over its points = [(-115, -115)]; #points = 2
+  m_5 =      -28: (D(tau), D(N tau)) over its points = [(-35, -35)]; #points = 2
+  m_5 =       -3: (D(tau), D(N tau)) over its points = [(-15, -15)]; #points = 2
+  m_5 =        0: (D(tau), D(N tau)) over its points = [(-4, -4)]; #points = 2
+  m_5 =        4: (D(tau), D(N tau)) over its points = [(-11, -11)]; #points = 2
+  m_5 =       18: (D(tau), D(N tau)) over its points = [(-16, -16)]; #points = 2
+  m_5 =       36: (D(tau), D(N tau)) over its points = [(-19, -19)]; #points = 2
+  m_5 =       72: (D(tau), D(N tau)) over its points = [(-40, -40)]; #points = 2
+  m_5 =      147: (D(tau), D(N tau)) over its points = [(-60, -60)]; #points = 2
+
+N = 7: worst |coefficient - nearest integer| over all 42 polynomials = 1.8588e-234
+  m_7 =   -10648: (D(tau), D(N tau)) over its points = [(-427, -427)]; #points = 2
+  m_7 =      -64: (D(tau), D(N tau)) over its points = [(-91, -91)]; #points = 2
+  m_7 =       -8: (D(tau), D(N tau)) over its points = [(-35, -35)]; #points = 2
+  m_7 =       -1: (D(tau), D(N tau)) over its points = [(-7, -7)]; #points = 1
+  m_7 =        0: (D(tau), D(N tau)) over its points = [(-3, -3)]; #points = 2
+  m_7 =        2: (D(tau), D(N tau)) over its points = [(-12, -12)]; #points = 2
+  m_7 =        8: (D(tau), D(N tau)) over its points = [(-19, -19)]; #points = 2
+  m_7 =       24: (D(tau), D(N tau)) over its points = [(-27, -27)]; #points = 2
+  m_7 =       27: (D(tau), D(N tau)) over its points = [(-28, -28)]; #points = 1
+  m_7 =      125: (D(tau), D(N tau)) over its points = [(-112, -112)]; #points = 2
+N=5: value list matches THM-4708: True; D labels match (single D at both Fricke points): True
+N=7: value list matches THM-4708: True; D labels match (single D at both Fricke points): True

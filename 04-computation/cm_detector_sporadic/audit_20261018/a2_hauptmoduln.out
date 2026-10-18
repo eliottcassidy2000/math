@@ -1,0 +1,9 @@
+(i) m_5 - T_5A to O(q^1499): nonzero diffs at q^k: {0: 16}
+    m_7 - T_7A to O(q^1499): nonzero diffs at q^k: {0: 9}
+    m_5 = 1q^-1 + 16q^0 + 134q^1 + 760q^2 + 3345q^3 ...
+    m_7 = 1q^-1 + 9q^0 + 51q^1 + 204q^2 + 681q^3 ...
+(ii) sum s7(n) m_7^-n == (7E2(q^7)-E2(q))/6 to O(q^161): True   head [1, 4, 12, 16, 28, 24, 48, 4] vs [1, 4, 12, 16, 28, 24, 48, 4]
+     sum C(2n,n)b_n m_5^-n == (5E2(q^5)-E2(q))/4 to O(q^161): True   head [1, 6, 18, 24, 42, 6, 72, 48] vs [1, 6, 18, 24, 42, 6, 72, 48]
+(iii) U_n = C(2n,n) b_n satisfies (n+1)^3U_(n+1) = 2(2n+1)(11n^2+11n+3)U_n + 4n(4n^2-1)U_(n-1) for 1<=n<699: failures []
+      s7 satisfies (n+1)^3s_(n+1) = (2n+1)(13n^2+13n+4)s_n + 3n(9n^2-1)s_(n-1) for 1<=n<699: failures []
+      n=0 step: U_1 = 6 = 2*1*3 = 6 ; s7_1 = 4 = 1*4 = 4

@@ -2,15 +2,28 @@
 id: HYP-9331
 title: "The Lucas-block detector finds rank-two attractor points. In a blind, pre-registered (B1') scan over 0 < |m| <= 10^4 of four Calabi-Yau threefold families, the survivors are exactly the two known rational rank-2 attractor points (Hulek-Verrill, m = -7; 4F3(1/3,1/3,2/3,2/3), m = -5832) together with the rational singular points. At ordinary primes the block defect has valuation 2 resp. 3, the moduli of Beukers' conjectured supercongruences there. Conjecture: for Lucas CY3 families, a nonsingular rational point survives (B1') iff it is a rank-2 attractor point."
 status: >
-  OPEN. FINITE-EXACT evidence: 4 families, 0 < |m| <= 10^4, filter primes 7..43, confirm primes 47..200.
+  OPEN. FINITE-EXACT evidence: 6 families and 4 rational attractor points. Wording repaired after the independent
+  audit (audit_20261018, MISTAKE-638).
+  - Author: 4 families, 0 < |m| <= 10^4, filter primes 7..43, confirm primes 47..200. The referee re-ran these to
+    |m| <= 10^7 with no change.
   - Prediction P9 (pre-registered and pushed in 1846da553b before the run; outcome in ceb77fcd33) PASSED.
+  - Referee (audit n5): two OUT-OF-SAMPLE confirmations, with the prediction written before each run. The families
+    were chosen from Table 1 of Boenisch-Elmi-Kashani-Poor-Klemm.
+    - AESZ 11, 4F3(1/4,1/3,2/3,3/4), u_k = (4k)!(3k)!/((2k)!k!^5): survivors in 0 < |m| <= 10^6 are exactly
+      {-432, 1728}, the attractor z_0 = -1/432 plus the conifold. v_p = 3 at 39 of 43 primes and 4 at 4.
+    - AESZ 36, A_n = C(2n,n)^2 sum_k C(n,k)C(2k,k)C(2n-2k,n-k): survivors exactly {-64, 64, 128}, the attractor
+      z_0 = -1/64 plus both conifolds. v_p = 2 at all 43 primes.
+    - That table has no entry for AESZ 1 (quintic) or AESZ 3 (C(2k,k)^4), consistent with the controls below.
   - The attractor points are CITED:
     - Hulek-Verrill t_0 = -1/7 (AESZ 34): Candelas, de la Ossa, Elmi, van Straten, JHEP 10 (2020) 202,
       arXiv:1912.06146;
     - 4F3(1/3,1/3,2/3,2/3), t_0 = -1/8 in t = 729x: Boenisch, Elmi, Kashani-Poor, Klemm, "Time reversal and CP
       invariance in Calabi-Yau compactifications", JHEP 09 (2022) 019, arXiv:2204.06506, Table 1 (Beukers' [4]).
-    - Both appear as Conjectures 1.27 (mod p^2) and 1.28 (mod p^3) in Beukers arXiv:2403.03301.
-  - The conjectural "iff" goes beyond the data: only two attractor points and four families were tested.
+    - Both appear as Conjectures 1.27 (mod p^2) and 1.28 (mod p^3) in Beukers arXiv:2403.03301 v3; they are 1.28
+      and 1.29 in v2. Beukers also states mod-p^2 analogues at the Hulek-Verrill singular points 1, 1/9, 1/25,
+      consistent with the observed v_p = 2 there.
+  - The conjectural "iff" goes beyond the data: four attractor points, six families. The natural next test is the
+    remaining 21 points of that Table 1.
   - The physics reading (BPS attractors, flux vacua) is an ANALOGY, as in S43's bridge note section 4.4; no mechanism
     is claimed.
 session: kind-pasteur-2026-10-18-S2
@@ -35,13 +48,22 @@ every prime `7 <= p <= 200` not dividing `m`.
 | `C(2k,k)^4` (control) | 256 | none known | 256 | 3 |
 | `(5k)!/k!^5` (quintic, control) | 3125 | none known | 3125 | 3 |
 
-- Generic `m = 5`: `v_p = 1` at ordinary primes, in every family.
+- Generic `m = 5`: `v_p = 1` at ordinary primes, apart from sporadic coincidences of frequency about `1/p`. These
+  are `v_p = 2` at 2 primes for Hulek-Verrill (`p = 13, 67`), at 1 prime for the `4F3` family and at 3 primes for
+  `C(2k,k)^4`.
+- **Out-of-sample (referee).**
+
+  | family | survivors | attractor | `v_p` at the attractor |
+  |---|---|---|---|
+  | AESZ 11 = 4F3(1/4,1/3,2/3,3/4) | {-432, 1728} | -432 | 3 (39 of 43), 4 (4) |
+  | AESZ 36 | {-64, 64, 128} | -64 | 2 at all 43 primes |
 - The modulus of Beukers' conjectured supercongruence is `p^2` at the Hulek-Verrill point (Conj. 1.27) and `p^3` at
   `t_0 = -1/8` (Conj. 1.28). These match the observed `v_p`.
 - **Post hoc, not predicted.** The ordinary-restricted test (B1'_ord) of HYP-9330 also passes `m = -256` for
   `C(2k,k)^4`, i.e. `z = 256x = -1`, the second fixed point of the symmetry `z <-> 1/z` of the `(1/2)^4` operator.
-  Its non-ordinary primes (`p <= 199`) are exactly `p == 3 (mod 4)`; there `v_p = 1`, and elsewhere `v_p = 2`. It
-  behaves like a point with CM by `Q(i)`. (B1') rejects it, as it rejects weight-1 CM points (HYP-9330(B)).
+  - Its non-ordinary primes (`p <= 199`) are exactly `p == 3 (mod 4)`, all 23 of them. There `v_p = 1`, except at
+    `p = 127`, where `v_p = 3` and `V(1/m) == 0`. At the 20 ordinary primes `v_p = 2`.
+  - It behaves like a point with CM by `Q(i)`. (B1') rejects it, as it rejects weight-1 CM points (HYP-9330(B)).
 
 ## Conjecture
 
