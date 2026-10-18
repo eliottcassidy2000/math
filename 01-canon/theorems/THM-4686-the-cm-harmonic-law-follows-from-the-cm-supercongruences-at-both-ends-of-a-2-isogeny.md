@@ -1,6 +1,6 @@
 ---
 id: THM-4686
-title: "The CM harmonic law for sum C(2k,k)^3 m^-k holds at all eight of Sun's CM values: 6 sum_{k<=(p-1)/2} C(2k,k)^3 m^-k (H_2k - H_k) == q_p(m) sum_{k<=(p-1)/2} C(2k,k)^3 m^-k (mod p) for m in {1, -8, 16, -64, 64, 256, -512, 4096} and every prime p >= 5 not dividing m. It follows from the mod-p^2 CM supercongruences at both ends of each reflection pair m <-> 4096/m (Kibelbek-Long-Moss-Sheller-Yuan, Theorem 2; van Hamme / Ishikawa / Ahlgren at m = 64) and the elementary mod-p^2 reflection F(z) == (-1)^n z^n [F(1/z) + 3p G(1/z)]. Hence also: the census twins sum_j C(2j,j) C(p-1-j,j)^2 == sum_j C(2j,j)^3 (mod p^2) (class 3) and the class-7 twin; the twin form T_m == (1 - p q_p(m)/3) F_m and the Lucas-block factorization at every CM point"
+title: "The CM harmonic law for sum C(2k,k)^3 m^-k holds at all eight of Sun's CM values (and hence KLMSY Conjecture 9 at s = 1 for every odd m at these points): 6 sum_{k<=(p-1)/2} C(2k,k)^3 m^-k (H_2k - H_k) == q_p(m) sum_{k<=(p-1)/2} C(2k,k)^3 m^-k (mod p) for m in {1, -8, 16, -64, 64, 256, -512, 4096} and every prime p >= 5 not dividing m. It follows from the mod-p^2 CM supercongruences at both ends of each reflection pair m <-> 4096/m (Kibelbek-Long-Moss-Sheller-Yuan, Theorem 2; van Hamme / Ishikawa / Ahlgren at m = 64) and the elementary mod-p^2 reflection F(z) == (-1)^n z^n [F(1/z) + 3p G(1/z)]. Hence also: the census twins sum_j C(2j,j) C(p-1-j,j)^2 == sum_j C(2j,j)^3 (mod p^2) (class 3) and the class-7 twin; the twin form T_m == (1 - p q_p(m)/3) F_m and the Lucas-block factorization at every CM point"
 status: >
   PROVED, given CITED published theorems.
   - Input: the mod-p^2 supercongruences at both points of each pair. These are Kibelbek-Long-Moss-Sheller-Yuan,
@@ -26,6 +26,7 @@ scripts:
   - 04-computation/experiments/cm_law_from_known_supercongruences_20261018.py (+ .out, .json)
   - 04-computation/experiments/cm_points_forms_legendre_20261018.py (+ .out, .json): the eight supercongruence values (FINITE-EXACT, p <= 200)
   - 04-computation/experiments/cm_harmonic_log_law_20261018.py, cm_harmonic_log_law_extended_20261018.py: the law directly
+  - 04-computation/experiments/klmsy_conjecture9_s1_check_20261018.py (+ .out, .json): the Conjecture-9 (s = 1) corollary, M <= 11, p <= 150
 related: [THM-4685, HYP-9310, HYP-9311, THM-4670, Kibelbek-Long-Moss-Sheller-Yuan 2016 Theorem 2, Ahlgren 2001]
 ---
 
@@ -93,6 +94,34 @@ non-self-dual points. The self-dual points `m = ±64` are THM-4685(ii). ∎
 - **Lucas-block factorization** at every CM point:
   `Σ_(k=p)^(p+n) C(2k,k)^3 m^(-k) ≡ (8/m) Σ_(k<=n) C(2k,k)^3 m^(-k) (mod p^2)`. Hence `F_(p^2) ≡ F_p^2 (mod p^2)`
   (HYP-9310, Lucas-block form).
+
+## Corollary: KLMSY Conjecture 9 at `s = 1`
+
+**Statement.** KLMSY (Conjecture 9) predict, for CM `λ`, ordinary `p`, odd `M` and `s >= 1`,
+```
+F_((Mp^s - 1)/2)(λ) ≡ ((λ-1)/p) α_(p,λ)^2 F_((Mp^(s-1) - 1)/2)(λ)   (mod p^(2s)),
+```
+with `F_N(λ) = Σ_(k<=N) ((1/2)_k/k!)^3 λ^k`. They prove `M = s = 1` (their Theorem 2). For each of the eight rational
+CM values `λ = 64/m`, the case **`s = 1`, every odd `M`**, follows from the law above.
+
+**Proof.**
+- **p-shift lemma** (THM-4685, HYP-9310). For every digit `a >= 0` and carry-free `j <= n`,
+  `C(2(ap+j), ap+j) ≡ C(2a,a) C(2j,j)(1 + 2ap(H_(2j) - H_j)) (mod p^2)`.
+- **Block sums.** With `t_k = C(2k,k)^3 m^(-k)`, the block with base-`p` digit `a` is
+  `Σ_(j<=n) t_(ap+j) ≡ t_a m^(-a(p-1)) (F_m + 6ap h_m)`. By the law this is `≡ t_a F_m (mod p^2)`.
+- **Negligible terms.** Terms with `n < j < p` carry, so their cubes are divisible by `p^3`.
+- **Summation.** Summing the blocks of `[0, (Mp-1)/2]`, whose last block has `j <= n`, gives
+  ```
+  (D)   F_((Mp-1)/2) ≡ F_((p-1)/2) · F_((M-1)/2)   (mod p^2).
+  ```
+- **Conclusion.** Theorem 2 gives `F_((p-1)/2) ≡ ((λ-1)/p) α^2`. At supersingular `p` both sides vanish mod `p^2`.
+
+**Checks** (FINITE-EXACT, `klmsy_conjecture9_s1_check_20261018.py`):
+- (D) holds at all eight CM values for `M = 3, 5, 7, 9, 11` and every prime `5 <= p <= 150`.
+- (D) fails at 25-30 of about 34 primes for each generic `λ = 64/3, 64/5, 64/7, 32/5`.
+
+**Novelty.** KLMSY state that their paper does not prove the general-`M` truncated-sum case. No later proof was found in
+the S43 searches; the auditor is asked to check.
 
 ## Remarks
 

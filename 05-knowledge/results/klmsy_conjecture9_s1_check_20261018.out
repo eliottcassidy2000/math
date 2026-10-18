@@ -1,0 +1,12 @@
+CM m =     1 (lambda = 64): M=3 ok; M=5 ok; M=7 ok; M=9 ok; M=11 ok
+CM m =    -8 (lambda = -8): M=3 ok; M=5 ok; M=7 ok; M=9 ok; M=11 ok
+CM m =    16 (lambda = 4): M=3 ok; M=5 ok; M=7 ok; M=9 ok; M=11 ok
+CM m =   -64 (lambda = -1): M=3 ok; M=5 ok; M=7 ok; M=9 ok; M=11 ok
+CM m =    64 (lambda = 1): M=3 ok; M=5 ok; M=7 ok; M=9 ok; M=11 ok
+CM m =   256 (lambda = 1/4): M=3 ok; M=5 ok; M=7 ok; M=9 ok; M=11 ok
+CM m =  -512 (lambda = -1/8): M=3 ok; M=5 ok; M=7 ok; M=9 ok; M=11 ok
+CM m =  4096 (lambda = 1/64): M=3 ok; M=5 ok; M=7 ok; M=9 ok; M=11 ok
+gen m =     3 (lambda = 64/3): M=3 fails 27 (first [5, 13, 17, 19]); M=5 fails 26 (first [5, 13, 17, 29]); M=7 fails 27 (first [5, 13, 17, 19]); M=9 fails 26 (first [5, 13, 17, 29]); M=11 fails 27 (first [5, 13, 17, 19])
+gen m =     5 (lambda = 64/5): M=3 fails 27 (first [7, 13, 17, 19]); M=5 fails 27 (first [7, 13, 17, 19]); M=7 fails 27 (first [7, 13, 17, 19]); M=9 fails 25 (first [7, 13, 17, 19]); M=11 fails 27 (first [7, 13, 17, 19])
+gen m =     7 (lambda = 64/7): M=3 fails 27 (first [5, 11, 17, 23]); M=5 fails 26 (first [5, 11, 17, 23]); M=7 fails 25 (first [5, 11, 17, 29]); M=9 fails 25 (first [5, 11, 17, 23]); M=11 fails 25 (first [5, 11, 17, 29])
+gen m =    10 (lambda = 32/5): M=3 fails 30 (first [7, 11, 13, 17]); M=5 fails 30 (first [7, 11, 13, 17]); M=7 fails 28 (first [11, 17, 19, 23]); M=9 fails 28 (first [13, 17, 19, 23]); M=11 fails 27 (first [11, 13, 19, 23])
