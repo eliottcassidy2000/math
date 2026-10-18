@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""l2 matching error between the actual ROOT transport and clock_duality's ideal coefficients (S41).
+"""Support-only matching error between actual and ideal ROOT coefficients (S41).
+
+Scope correction 2026-10-17: ideal-only seeds are omitted here. These outputs
+are not full l2 errors. Use root_full_support_20261017i.py for whole-support
+comparisons; retained historical outputs are unchanged.
 
 clock_duality_oct15's R8 gives ideal coefficients K_d(r, b): the actual coefficient of a seed t after d odd transports
 equals K_d(t mod 3^(d+1), b(t)) up to threshold effects, where M_d/2^(b+1) < t/N <= M_d/2^b, M_d = 4 (3/2)^d, and K_d is
@@ -45,8 +49,8 @@ def main():
             ideal = np.zeros(len(S), dtype=np.int64)
             ok = b >= 0
             ideal[ok] = K[b[ok] % period, S[ok] % mod]
-            # seeds absent from the actual support but with nonzero ideal coefficient are not enumerated here;
-            # count them separately through the ideal energy comparison below
+            # Ideal-only seeds are NOT enumerated or counted below. The
+            # ideal_energy_on_support field also uses this restricted support.
             err = C - ideal
             e_err = float(np.sum(err.astype(np.float64) ** 2)) / N
             e_act = float(np.sum(C.astype(np.float64) ** 2)) / N

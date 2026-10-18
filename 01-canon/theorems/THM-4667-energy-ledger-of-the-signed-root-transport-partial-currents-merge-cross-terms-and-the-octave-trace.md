@@ -102,11 +102,13 @@ related:
        `2^18..2^21` every profile peaks at `d = 0`.
      - **Ideal regime.** The actual `E_6/N` octave means (1.6914-1.6990 in `2^18..2^22`) agree with the ideal 1.693330 to
        within 0.35%.
-     - **Matching.** For `d <= 6` and `N = 2^16, 2^18`, the actual `c_d` equals clock_duality's ideal
-       `K_d(t mod 3^(d+1), b(t))` at every seed except ROOT, the band-boundary seed `3^d`, and at most one other small
-       seed. The total `l2` error is at most `0.002 N` (root_transport_l2_matching_20261017.out).
-       - To `d = 10`, the differences are at ROOT and at most three small seeds near ROOT, with off-ROOT `l2` error at
-         most `0.0014 N` (root_transport_l2_matching_deep_20261017.out).
+     - **Matching (scope corrected 2026-10-17).** The two matching scripts inspect only nonzero actual support.
+       Their reported squared errors and small exception sets are restricted to that support; ideal-only seeds
+       must also be counted. At N=4096,d=6 the support-only squared error9 becomes38 on the union of supports.
+       The actual-energy census and ideal ladder are unchanged. See
+       [whole-support audit and all-depth sparse-boundary localization](../../05-knowledge/results/root_sparse_boundary_module_20261017i.md)
+       for exact complete comparisons and the repaired matching target. No full matching bound follows from
+       the old support-only numbers alone.
      - **Shells.** `Σ_(X <= N < 2X) max_d c_d(1)^2 <= 5.20 X^2` for every octave `2^9..2^22`. This is the shell maximal
        inequality, with the maximum inside the sum. It is stronger than the uniform shell bound
        `sup_d Σ_N c_d(1)^2` implied by HYP-9288 (B), and is observed, not implied.

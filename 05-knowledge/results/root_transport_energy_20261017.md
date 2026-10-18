@@ -12,6 +12,11 @@ implication needs no assumption that every source converges. Primitive Fourier p
 from [positive ROOT transport, section2](root_positive_transport_20261017g.md). See
 [outer packets, section7](outer_packet_golden_clocks_20261017h.md) and the dated MISTAKES entry.
 
+**Matching scope repair, 2026-10-17, clock_duality_oct15.** The old matching scripts evaluated only nonzero actual
+support, omitting ideal-only coefficients. Their restricted errors are not full l2 norms. The
+[whole-support audit](root_sparse_boundary_module_20261017i.md) corrects the measurement and proves a sparse
+boundary-forcing support theorem at every depth. Its R3--R4 add exact source-clock periods and energy matching through d<c*sqrt(log2 N), c<0.562. Uniform arbitrary-depth energy remains open. The actual-energy census and ideal ladder are unchanged.
+
 **Typing.**
 - PROVED (elementary): THM-4667, which contains:
   - the energy ledger;
@@ -242,20 +247,23 @@ point masses. So all depths can be maintained at once, by walking one path of th
 2. **Matching (integer clocks).** At fixed depth the actual coefficients differ from the ideal ones only near affine
    thresholds. In `l^2`, the target is matching errors that add in quadrature.
    - `root_transport_l2_matching_20261017.py` compares the actual `c_d(t)` with clock_duality's ideal
-     `K_d(t mod 3^(d+1), b(t))` at **every** seed, for `d <= 6` and `N = 2^12..2^18`.
-   - For `N = 2^16, 2^18` the coefficients differ at **ROOT and at most two other seeds**:
+     `K_d(t mod 3^(d+1), b(t))` only on nonzero actual support, for `d <= 6` and `N = 2^12..2^18`.
+   - On that restricted support, for `N = 2^16, 2^18` the coefficients differ at **ROOT and at most two other seeds**:
      - the seed `3^d` (9, 27, 81, 243, 729). For dyadic `N` it lies exactly on an ideal band boundary
        `M_d N/2^b = 3^d 2^(k+2-d-b)`;
      - occasionally one more small seed (15 at `d = 5`, 91 at `d = 6`).
-   - The total `l2` error is at most `0.002 N`. Off ROOT it is at most `0.0014 N`, and `l1` error/N falls with `N`.
+   - The reported support-only squared error is at most `0.002 N`. Off ROOT it is at most `0.0014 N`, and the
+     restricted `l1` error/N falls with `N`. These statements do not include ideal-only seeds.
    - To depth 10 (`root_transport_l2_matching_deep_20261017.py`, ideal coefficients recovered exactly from the banded
-     positive gauge), the coefficients still differ only at ROOT and at most three small seeds near ROOT (3, 7, 17, 19,
+     positive gauge), the coefficients on that restricted support differ only at ROOT and at most three small seeds near ROOT (3, 7, 17, 19,
      51, ...).
      - Off ROOT the `l2` error stays at most `0.0014 N`.
      - The ROOT part grows with depth, up to `0.013 N` at `d = 7`, `N = 2^16`. It is the absorbed mass.
-   - So at fixed depth the whole matching problem is the ROOT accumulation, i.e. the termination regime, plus `O(1)`
-     boundary seeds. This finite evidence merges items 2 and 3. Section 6b records clock_duality's P3, a uniform `l1`
-     version to `d <= m/16`.
+   - The restricted measurements did not establish the whole matching claim. The
+     [new exact boundary module](root_sparse_boundary_module_20261017i.md) proves that all discrepancies are confined
+     to O(d^2) candidate seeds for dyadic sources, independently of source scale. The injection amplitudes and
+     the ideal-to-lattice energy comparison remain separate bills. P3 concerns an l1 envelope versus its density
+     integral, not a full coefficient-vector l1 matching norm.
 3. **Termination regime.** In the sampled large-current rows the late energy is ROOT-dominated;
    `Vroot[d]` is exactly a shell partial sum.
    - HYP-9288(B) implies the uniform shell bound `sup_d Σ_N Vroot_d^2` (not the stronger maximal inequality of
@@ -290,7 +298,8 @@ before this note's first commit at 20:07, but read only afterwards) attacks the 
     exponent. What the energy needs is therefore an `l^2` estimate for the joint offset/exponent law, which is their
     question 2.
 - **P3 (uniform remainder).** P3 proves `|A^(d)(N) - γ_d N| <= 87(m + 1) 3^(m/4)` for every `d <= m/16`
-  (`m = ceil(log_2 4N)`). That is the matching item 2 of section 6, in `l1`, on a logarithmic depth range.
+  (`m = ceil(log_2 4N)`). It compares an l1 envelope with its density integral; it does not itself bound the
+  l1 norm of the difference between actual and sampled ideal coefficient vectors.
 - **P4 (slow packet).** P4 shows `A^(d)(N) >= N 2^(-d) - 12`. The outer word (all exponents 1) blocks `l1` envelopes
   below `d ≈ (log_2 N)/2`.
   - In `l2` the same packet costs only `O(N 2^(-d))` energy: it has `O(1)` coefficients on about `N 2^(-d)` columns.

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""l2 matching between actual and ideal ROOT-transport coefficients to depth 10, via the banded positive gauge (S41).
+"""Support-only ROOT matching to depth10 via the banded positive gauge (S41).
+
+Scope correction 2026-10-17: absent actual seeds can have nonzero ideal
+coefficients. These historical numbers omit that energy. Whole-support
+integer comparisons are in root_full_support_20261017i.py.
 
 Ideal coefficients K_d(r, b) = (-1)^(b+d) 4 2^(d+b) nu_d(r, b) are recovered from clock_duality's positive gauge
 (root_transport_energy_ladder_banded_20261017.step, bands b < BMAX), rounded to integers (a check reports the largest

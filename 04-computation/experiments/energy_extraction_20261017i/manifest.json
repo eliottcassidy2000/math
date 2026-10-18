@@ -1,0 +1,129 @@
+{
+  "session": "clock_duality_oct15",
+  "date": "2026-10-17",
+  "base_commit": "6f078dca77fb7e012b245b808b124f9daf7b419e",
+  "status": "PROVED scoped/self-audited analytic statements; FINITE-EXACT declared integer/field/SAT controls; VERIFIED numerical complex supplements; global targets OPEN",
+  "python": "3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:19) [Clang 12.0.5 (clang-1205.0.22.11)]",
+  "packages": {
+    "numpy": "2.2.6",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "python-sat": "1.9.dev4",
+    "numba": "0.68.0",
+    "llvmlite": "0.50.0"
+  },
+  "environment_note": "Geometry used PYTHONPATH=/tmp/math-numba-20261017i for temporary numba installation; other runs used the normal Python environment. Install listed packages for portable reproduction.",
+  "sources": {
+    "04-computation/experiments/escaped_ports_20261017d.py": {
+      "bytes": 10728,
+      "sha256": "311e7fe4f13de40a93b54624e01f963046f5d6f7943f877b73c99f2c609ec8f9"
+    },
+    "04-computation/experiments/finite_extraction_bridges_20261017i.py": {
+      "bytes": 4310,
+      "sha256": "ef62a79269027d444fad5a1e3a6c58d89ff6f61a96e1ce02e31314f20a5a3ba0"
+    },
+    "04-computation/experiments/golden_boundary_20261017c.py": {
+      "bytes": 6418,
+      "sha256": "f48f34b4ecb7037a509b4a64993eacef7b2985952b2424bd731ec62f74b728a5"
+    },
+    "04-computation/experiments/golden_contact_circuit_20261017i.py": {
+      "bytes": 7649,
+      "sha256": "e6aec8d9471db9a2c8f0ff9893673810f1446e3657b715ef9798fab08824fbf5"
+    },
+    "04-computation/experiments/golden_forcing_search_20261017.py": {
+      "bytes": 11947,
+      "sha256": "0a1a5a9c2241ea7bf040b115d5aa814834be5861b2db4a70ff4e3a731a623846"
+    },
+    "04-computation/experiments/golden_vsquare_unit_census_20261017.py": {
+      "bytes": 7623,
+      "sha256": "c5fa5a580e7e5fa84e5e232fdaab1a5b3c418ec720b51a8dc117662f31ecb7fd"
+    },
+    "04-computation/experiments/root_boundary_clock_20261017i.py": {
+      "bytes": 6365,
+      "sha256": "d8eb41ef0604f7d0a6a53ad771f28e7780e2f6312cb5a1926160e943f44508e6"
+    },
+    "04-computation/experiments/root_full_support_20261017i.py": {
+      "bytes": 7219,
+      "sha256": "9ca2fe9b54fb98300f3ecf6d5611135ccb70cbddcf42435ea8dd2c3e45b7cf04"
+    },
+    "04-computation/experiments/root_transport_energy_profile_20261017.py": {
+      "bytes": 3172,
+      "sha256": "1eb561a3c8c773deff43c0d13b1e08052c50809b13d6284b364259f41d177569"
+    }
+  },
+  "notes": {
+    "05-knowledge/results/root_sparse_boundary_module_20261017i.md": {
+      "bytes": 19727,
+      "sha256": "98db15bd36ee30145b7c6aa6e398f92a3eaab40bfe6291c10e66d2b7b86082d5"
+    },
+    "05-knowledge/results/golden_contact_circuit_20261017i.md": {
+      "bytes": 9851,
+      "sha256": "17b78a4f9882e12f390519398d02274aba997665ef346498d64a7eefce7608eb"
+    },
+    "05-knowledge/results/finite_extraction_and_inverse_clocks_20261017i.md": {
+      "bytes": 14726,
+      "sha256": "ce594d5c2dfd10ba69dff23c7f688990c9e62b8b76067b36e2d74fda67942f1d"
+    }
+  },
+  "attachments": {
+    "/Users/e/Downloads/2602.09253v1.pdf": {
+      "bytes": 484807,
+      "sha256": "b74830c8c89522e6206201a408bef11b4cafc80a76deda8ebbbb08e62b5ee5f8"
+    },
+    "/Users/e/Downloads/finite-extraction.pdf": {
+      "bytes": 1003537,
+      "sha256": "cc4ebf4aebaf1a685e7d17152a29a716b923bc8477133fb06a040c7613d10322"
+    }
+  },
+  "receipts": {
+    "golden_MM.json": {
+      "bytes": 577221,
+      "sha256": "1f0d90be0a27434bf2403baa846f407c6e96d8fa2f37b3ed5f0098838dda9779"
+    },
+    "golden_base.json": {
+      "bytes": 137202,
+      "sha256": "2fbdace12e863a61625b725c10e13fbfff5cf2034527e9d66600f1428daa05dc"
+    },
+    "golden_cubic.json": {
+      "bytes": 628082,
+      "sha256": "0884be0d5bb6284f1dc4d8f5092637a012eeb29398e7af86f1b89bcfb6f88e62"
+    },
+    "golden_dM.json": {
+      "bytes": 490572,
+      "sha256": "1c417de922e114bbadbfb5600cf69d885a5e4d4483bef495f288d3ee72200b06"
+    },
+    "paper_controls.json": {
+      "bytes": 985,
+      "sha256": "c38f75da073a80b07eac40309b4c1d4ccc598a328e1d5030f890732365cb7cc6"
+    },
+    "root_clock.json": {
+      "bytes": 139574,
+      "sha256": "894c03bf0479ff3548ee5157f8d203ed3f82fc103b8b5fad6fd90841cc27af5c"
+    },
+    "root_full_support.json": {
+      "bytes": 77947,
+      "sha256": "50adb3340e701304870961fc07c12253147d9c35a512fa4fbf90cb488f3aaaf9"
+    }
+  },
+  "commands": [
+    "python3 04-computation/experiments/root_full_support_20261017i.py --out 04-computation/experiments/energy_extraction_20261017i/root_full_support.json",
+    "python3 04-computation/experiments/root_boundary_clock_20261017i.py --depth 5 --max-k 1600 --out 04-computation/experiments/energy_extraction_20261017i/root_clock.json",
+    "python3 04-computation/experiments/golden_contact_circuit_20261017i.py --recipe base --out 04-computation/experiments/energy_extraction_20261017i/golden_base.json",
+    "python3 04-computation/experiments/golden_contact_circuit_20261017i.py --recipe dM --out 04-computation/experiments/energy_extraction_20261017i/golden_dM.json",
+    "python3 04-computation/experiments/golden_contact_circuit_20261017i.py --recipe MM --out 04-computation/experiments/energy_extraction_20261017i/golden_MM.json",
+    "python3 04-computation/experiments/golden_contact_circuit_20261017i.py --recipe base --cubic --out 04-computation/experiments/energy_extraction_20261017i/golden_cubic.json",
+    "python3 04-computation/experiments/finite_extraction_bridges_20261017i.py --out 04-computation/experiments/energy_extraction_20261017i/paper_controls.json"
+  ],
+  "validation": {
+    "original_source_controls": 768,
+    "whole_support_localization_controls": 768,
+    "local_forcing_controls": 640,
+    "declared_large_whole_support_cases": 90,
+    "sparse_signed_vector_cross_checks": 18,
+    "exact_sampling_bound_cross_checks": 18,
+    "clock_bank": "all k=0..1600, depths0..5; complete source-uniform banks using R3",
+    "geometry": "570 port patterns each in four selected-edge graphs; every saved colouring checked directly; no full unit-distance census",
+    "complex_values": "70-digit numerical residuals supplement analytic proofs, not interval certificates",
+    "serialization": "Golden and clock receipts compacted losslessly; JSON objects compared before/after. Earlier dM/MM receipts omit later optional cubic=false metadata; mathematical payload is unchanged."
+  }
+}

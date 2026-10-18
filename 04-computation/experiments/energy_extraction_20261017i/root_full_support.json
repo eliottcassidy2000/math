@@ -1,0 +1,4463 @@
+{
+  "status": "FINITE-EXACT",
+  "depth": 8,
+  "bands": 32,
+  "independent_controls": 768,
+  "small_source_support_controls": 768,
+  "local_forcing_controls": 640,
+  "rows": [
+    {
+      "N": 4095,
+      "d": 0,
+      "universe": 6143,
+      "actual_support": 5395,
+      "full_error": 1,
+      "support_only_error": 0,
+      "off_root_error": 1,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        4095
+      ],
+      "error_count": 1,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        4095
+      ],
+      "error_vector": [
+        [
+          4095,
+          1
+        ]
+      ],
+      "actual_energy": 19890,
+      "ideal_lattice_energy": 19891,
+      "root_error": 0,
+      "full_l1": 1,
+      "predicted_support": [
+        1,
+        4095
+      ],
+      "predicted_support_size": 2
+    },
+    {
+      "N": 4096,
+      "d": 0,
+      "universe": 6144,
+      "actual_support": 5397,
+      "full_error": 4,
+      "support_only_error": 4,
+      "off_root_error": 0,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 1,
+      "off_root_error_count": 0,
+      "error_seeds": [
+        1
+      ],
+      "error_vector": [
+        [
+          1,
+          -2
+        ]
+      ],
+      "actual_energy": 19900,
+      "ideal_lattice_energy": 19892,
+      "root_error": -2,
+      "full_l1": 2,
+      "predicted_support": [
+        1
+      ],
+      "predicted_support_size": 1
+    },
+    {
+      "N": 4097,
+      "d": 0,
+      "universe": 6146,
+      "actual_support": 5398,
+      "full_error": 5,
+      "support_only_error": 5,
+      "off_root_error": 1,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 2,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        1,
+        4097
+      ],
+      "error_vector": [
+        [
+          1,
+          -2
+        ],
+        [
+          4097,
+          1
+        ]
+      ],
+      "actual_energy": 19904,
+      "ideal_lattice_energy": 19891,
+      "root_error": -2,
+      "full_l1": 3,
+      "predicted_support": [
+        1,
+        2049,
+        4097
+      ],
+      "predicted_support_size": 3
+    },
+    {
+      "N": 7910,
+      "d": 0,
+      "universe": 11865,
+      "actual_support": 10421,
+      "full_error": 5,
+      "support_only_error": 5,
+      "off_root_error": 5,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 2,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        247,
+        3955
+      ],
+      "error_vector": [
+        [
+          247,
+          2
+        ],
+        [
+          3955,
+          -1
+        ]
+      ],
+      "actual_energy": 38414,
+      "ideal_lattice_energy": 38421,
+      "root_error": 0,
+      "full_l1": 3,
+      "predicted_support": [
+        1,
+        31,
+        247,
+        3955
+      ],
+      "predicted_support_size": 4
+    },
+    {
+      "N": 16383,
+      "d": 0,
+      "universe": 24575,
+      "actual_support": 21583,
+      "full_error": 1,
+      "support_only_error": 0,
+      "off_root_error": 1,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        16383
+      ],
+      "error_count": 1,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        16383
+      ],
+      "error_vector": [
+        [
+          16383,
+          1
+        ]
+      ],
+      "actual_energy": 79566,
+      "ideal_lattice_energy": 79567,
+      "root_error": 0,
+      "full_l1": 1,
+      "predicted_support": [
+        1,
+        16383
+      ],
+      "predicted_support_size": 2
+    },
+    {
+      "N": 16384,
+      "d": 0,
+      "universe": 24576,
+      "actual_support": 21585,
+      "full_error": 1,
+      "support_only_error": 0,
+      "off_root_error": 0,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        1
+      ],
+      "error_count": 1,
+      "off_root_error_count": 0,
+      "error_seeds": [
+        1
+      ],
+      "error_vector": [
+        [
+          1,
+          1
+        ]
+      ],
+      "actual_energy": 79576,
+      "ideal_lattice_energy": 79577,
+      "root_error": 1,
+      "full_l1": 1,
+      "predicted_support": [
+        1
+      ],
+      "predicted_support_size": 1
+    },
+    {
+      "N": 16385,
+      "d": 0,
+      "universe": 24578,
+      "actual_support": 21586,
+      "full_error": 2,
+      "support_only_error": 1,
+      "off_root_error": 1,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        1
+      ],
+      "error_count": 2,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        1,
+        16385
+      ],
+      "error_vector": [
+        [
+          1,
+          1
+        ],
+        [
+          16385,
+          1
+        ]
+      ],
+      "actual_energy": 79580,
+      "ideal_lattice_energy": 79576,
+      "root_error": 1,
+      "full_l1": 2,
+      "predicted_support": [
+        1,
+        8193,
+        16385
+      ],
+      "predicted_support_size": 3
+    },
+    {
+      "N": 65535,
+      "d": 0,
+      "universe": 98303,
+      "actual_support": 86339,
+      "full_error": 1,
+      "support_only_error": 0,
+      "off_root_error": 1,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        65535
+      ],
+      "error_count": 1,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        65535
+      ],
+      "error_vector": [
+        [
+          65535,
+          1
+        ]
+      ],
+      "actual_energy": 318306,
+      "ideal_lattice_energy": 318307,
+      "root_error": 0,
+      "full_l1": 1,
+      "predicted_support": [
+        1,
+        65535
+      ],
+      "predicted_support_size": 2
+    },
+    {
+      "N": 65536,
+      "d": 0,
+      "universe": 98304,
+      "actual_support": 86341,
+      "full_error": 1,
+      "support_only_error": 0,
+      "off_root_error": 0,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        1
+      ],
+      "error_count": 1,
+      "off_root_error_count": 0,
+      "error_seeds": [
+        1
+      ],
+      "error_vector": [
+        [
+          1,
+          1
+        ]
+      ],
+      "actual_energy": 318316,
+      "ideal_lattice_energy": 318317,
+      "root_error": 1,
+      "full_l1": 1,
+      "predicted_support": [
+        1
+      ],
+      "predicted_support_size": 1
+    },
+    {
+      "N": 65537,
+      "d": 0,
+      "universe": 98306,
+      "actual_support": 86342,
+      "full_error": 2,
+      "support_only_error": 1,
+      "off_root_error": 1,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        1
+      ],
+      "error_count": 2,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        1,
+        65537
+      ],
+      "error_vector": [
+        [
+          1,
+          1
+        ],
+        [
+          65537,
+          1
+        ]
+      ],
+      "actual_energy": 318320,
+      "ideal_lattice_energy": 318316,
+      "root_error": 1,
+      "full_l1": 2,
+      "predicted_support": [
+        1,
+        32769,
+        65537
+      ],
+      "predicted_support_size": 3
+    },
+    {
+      "N": 4095,
+      "d": 1,
+      "universe": 9214,
+      "actual_support": 4669,
+      "full_error": 0,
+      "support_only_error": 0,
+      "off_root_error": 0,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 0,
+      "off_root_error_count": 0,
+      "error_seeds": [],
+      "error_vector": [],
+      "actual_energy": 13864,
+      "ideal_lattice_energy": 13864,
+      "root_error": 0,
+      "full_l1": 0,
+      "predicted_support": [
+        1,
+        3,
+        3071,
+        6143
+      ],
+      "predicted_support_size": 4
+    },
+    {
+      "N": 4096,
+      "d": 1,
+      "universe": 9216,
+      "actual_support": 4671,
+      "full_error": 1,
+      "support_only_error": 1,
+      "off_root_error": 1,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 1,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        3
+      ],
+      "error_vector": [
+        [
+          3,
+          1
+        ]
+      ],
+      "actual_energy": 13874,
+      "ideal_lattice_energy": 13877,
+      "root_error": 0,
+      "full_l1": 1,
+      "predicted_support": [
+        1,
+        3
+      ],
+      "predicted_support_size": 2
+    },
+    {
+      "N": 4097,
+      "d": 1,
+      "universe": 9218,
+      "actual_support": 4672,
+      "full_error": 1,
+      "support_only_error": 1,
+      "off_root_error": 1,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 1,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        3
+      ],
+      "error_vector": [
+        [
+          3,
+          1
+        ]
+      ],
+      "actual_energy": 13878,
+      "ideal_lattice_energy": 13881,
+      "root_error": 0,
+      "full_l1": 1,
+      "predicted_support": [
+        1,
+        3,
+        1537,
+        3073,
+        12291
+      ],
+      "predicted_support_size": 5
+    },
+    {
+      "N": 7910,
+      "d": 1,
+      "universe": 17798,
+      "actual_support": 9019,
+      "full_error": 10,
+      "support_only_error": 9,
+      "off_root_error": 10,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        1483
+      ],
+      "error_count": 2,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        23,
+        1483
+      ],
+      "error_vector": [
+        [
+          23,
+          -3
+        ],
+        [
+          1483,
+          1
+        ]
+      ],
+      "actual_energy": 26808,
+      "ideal_lattice_energy": 26806,
+      "root_error": 0,
+      "full_l1": 4,
+      "predicted_support": [
+        1,
+        3,
+        23,
+        47,
+        371,
+        1483,
+        11865
+      ],
+      "predicted_support_size": 7
+    },
+    {
+      "N": 16383,
+      "d": 1,
+      "universe": 36862,
+      "actual_support": 18684,
+      "full_error": 0,
+      "support_only_error": 0,
+      "off_root_error": 0,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 0,
+      "off_root_error_count": 0,
+      "error_seeds": [],
+      "error_vector": [],
+      "actual_energy": 55510,
+      "ideal_lattice_energy": 55510,
+      "root_error": 0,
+      "full_l1": 0,
+      "predicted_support": [
+        1,
+        3,
+        12287,
+        24575
+      ],
+      "predicted_support_size": 4
+    },
+    {
+      "N": 16384,
+      "d": 1,
+      "universe": 36864,
+      "actual_support": 18686,
+      "full_error": 1,
+      "support_only_error": 1,
+      "off_root_error": 1,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 1,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        3
+      ],
+      "error_vector": [
+        [
+          3,
+          -1
+        ]
+      ],
+      "actual_energy": 55520,
+      "ideal_lattice_energy": 55519,
+      "root_error": 0,
+      "full_l1": 1,
+      "predicted_support": [
+        1,
+        3
+      ],
+      "predicted_support_size": 2
+    },
+    {
+      "N": 16385,
+      "d": 1,
+      "universe": 36866,
+      "actual_support": 18687,
+      "full_error": 1,
+      "support_only_error": 1,
+      "off_root_error": 1,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 1,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        3
+      ],
+      "error_vector": [
+        [
+          3,
+          -1
+        ]
+      ],
+      "actual_energy": 55524,
+      "ideal_lattice_energy": 55523,
+      "root_error": 0,
+      "full_l1": 1,
+      "predicted_support": [
+        1,
+        3,
+        6145,
+        12289,
+        49155
+      ],
+      "predicted_support_size": 5
+    },
+    {
+      "N": 65535,
+      "d": 1,
+      "universe": 147454,
+      "actual_support": 74739,
+      "full_error": 0,
+      "support_only_error": 0,
+      "off_root_error": 0,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 0,
+      "off_root_error_count": 0,
+      "error_seeds": [],
+      "error_vector": [],
+      "actual_energy": 222052,
+      "ideal_lattice_energy": 222052,
+      "root_error": 0,
+      "full_l1": 0,
+      "predicted_support": [
+        1,
+        3,
+        49151,
+        98303
+      ],
+      "predicted_support_size": 4
+    },
+    {
+      "N": 65536,
+      "d": 1,
+      "universe": 147456,
+      "actual_support": 74741,
+      "full_error": 0,
+      "support_only_error": 0,
+      "off_root_error": 0,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 0,
+      "off_root_error_count": 0,
+      "error_seeds": [],
+      "error_vector": [],
+      "actual_energy": 222062,
+      "ideal_lattice_energy": 222062,
+      "root_error": 0,
+      "full_l1": 0,
+      "predicted_support": [
+        1,
+        3
+      ],
+      "predicted_support_size": 2
+    },
+    {
+      "N": 65537,
+      "d": 1,
+      "universe": 147458,
+      "actual_support": 74742,
+      "full_error": 0,
+      "support_only_error": 0,
+      "off_root_error": 0,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 0,
+      "off_root_error_count": 0,
+      "error_seeds": [],
+      "error_vector": [],
+      "actual_energy": 222066,
+      "ideal_lattice_energy": 222066,
+      "root_error": 0,
+      "full_l1": 0,
+      "predicted_support": [
+        1,
+        3,
+        24577,
+        49153,
+        196611
+      ],
+      "predicted_support_size": 5
+    },
+    {
+      "N": 4095,
+      "d": 2,
+      "universe": 13821,
+      "actual_support": 4000,
+      "full_error": 5,
+      "support_only_error": 4,
+      "off_root_error": 1,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        4607
+      ],
+      "error_count": 2,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        1,
+        4607
+      ],
+      "error_vector": [
+        [
+          1,
+          -2
+        ],
+        [
+          4607,
+          1
+        ]
+      ],
+      "actual_energy": 10560,
+      "ideal_lattice_energy": 10569,
+      "root_error": -2,
+      "full_l1": 3,
+      "predicted_support": [
+        1,
+        9,
+        4607,
+        9215,
+        36855
+      ],
+      "predicted_support_size": 5
+    },
+    {
+      "N": 4096,
+      "d": 2,
+      "universe": 13824,
+      "actual_support": 4002,
+      "full_error": 8,
+      "support_only_error": 8,
+      "off_root_error": 4,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 2,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        1,
+        9
+      ],
+      "error_vector": [
+        [
+          1,
+          -2
+        ],
+        [
+          9,
+          2
+        ]
+      ],
+      "actual_energy": 10570,
+      "ideal_lattice_energy": 10578,
+      "root_error": -2,
+      "full_l1": 4,
+      "predicted_support": [
+        1,
+        9
+      ],
+      "predicted_support_size": 2
+    },
+    {
+      "N": 4097,
+      "d": 2,
+      "universe": 13828,
+      "actual_support": 4003,
+      "full_error": 8,
+      "support_only_error": 8,
+      "off_root_error": 4,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 2,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        1,
+        9
+      ],
+      "error_vector": [
+        [
+          1,
+          -2
+        ],
+        [
+          9,
+          2
+        ]
+      ],
+      "actual_energy": 10574,
+      "ideal_lattice_energy": 10582,
+      "root_error": -2,
+      "full_l1": 4,
+      "predicted_support": [
+        1,
+        9,
+        1153,
+        2305,
+        4609,
+        36873
+      ],
+      "predicted_support_size": 6
+    },
+    {
+      "N": 7910,
+      "d": 2,
+      "universe": 26696,
+      "actual_support": 7722,
+      "full_error": 10,
+      "support_only_error": 6,
+      "off_root_error": 9,
+      "omitted_energy": 4,
+      "omitted_seeds": [
+        2225
+      ],
+      "error_count": 4,
+      "off_root_error_count": 3,
+      "error_seeds": [
+        1,
+        35,
+        139,
+        2225
+      ],
+      "error_vector": [
+        [
+          1,
+          1
+        ],
+        [
+          35,
+          1
+        ],
+        [
+          139,
+          2
+        ],
+        [
+          2225,
+          -2
+        ]
+      ],
+      "actual_energy": 20388,
+      "ideal_lattice_energy": 20374,
+      "root_error": 1,
+      "full_l1": 6,
+      "predicted_support": [
+        1,
+        9,
+        35,
+        71,
+        139,
+        2225,
+        8899,
+        35595
+      ],
+      "predicted_support_size": 8
+    },
+    {
+      "N": 16383,
+      "d": 2,
+      "universe": 55293,
+      "actual_support": 16001,
+      "full_error": 37,
+      "support_only_error": 36,
+      "off_root_error": 1,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        18431
+      ],
+      "error_count": 2,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        1,
+        18431
+      ],
+      "error_vector": [
+        [
+          1,
+          6
+        ],
+        [
+          18431,
+          1
+        ]
+      ],
+      "actual_energy": 42190,
+      "ideal_lattice_energy": 42203,
+      "root_error": 6,
+      "full_l1": 7,
+      "predicted_support": [
+        1,
+        9,
+        18431,
+        36863,
+        147447
+      ],
+      "predicted_support_size": 5
+    },
+    {
+      "N": 16384,
+      "d": 2,
+      "universe": 55296,
+      "actual_support": 16003,
+      "full_error": 37,
+      "support_only_error": 37,
+      "off_root_error": 1,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 2,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        1,
+        9
+      ],
+      "error_vector": [
+        [
+          1,
+          6
+        ],
+        [
+          9,
+          -1
+        ]
+      ],
+      "actual_energy": 42200,
+      "ideal_lattice_energy": 42211,
+      "root_error": 6,
+      "full_l1": 7,
+      "predicted_support": [
+        1,
+        9
+      ],
+      "predicted_support_size": 2
+    },
+    {
+      "N": 16385,
+      "d": 2,
+      "universe": 55300,
+      "actual_support": 16004,
+      "full_error": 37,
+      "support_only_error": 37,
+      "off_root_error": 1,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 2,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        1,
+        9
+      ],
+      "error_vector": [
+        [
+          1,
+          6
+        ],
+        [
+          9,
+          -1
+        ]
+      ],
+      "actual_energy": 42204,
+      "ideal_lattice_energy": 42215,
+      "root_error": 6,
+      "full_l1": 7,
+      "predicted_support": [
+        1,
+        9,
+        4609,
+        9217,
+        18433,
+        147465
+      ],
+      "predicted_support_size": 6
+    },
+    {
+      "N": 65535,
+      "d": 2,
+      "universe": 221181,
+      "actual_support": 64001,
+      "full_error": 17,
+      "support_only_error": 16,
+      "off_root_error": 1,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        73727
+      ],
+      "error_count": 2,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        1,
+        73727
+      ],
+      "error_vector": [
+        [
+          1,
+          -4
+        ],
+        [
+          73727,
+          1
+        ]
+      ],
+      "actual_energy": 168786,
+      "ideal_lattice_energy": 168779,
+      "root_error": -4,
+      "full_l1": 5,
+      "predicted_support": [
+        1,
+        9,
+        73727,
+        147455,
+        589815
+      ],
+      "predicted_support_size": 5
+    },
+    {
+      "N": 65536,
+      "d": 2,
+      "universe": 221184,
+      "actual_support": 64003,
+      "full_error": 25,
+      "support_only_error": 25,
+      "off_root_error": 9,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 2,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        1,
+        9
+      ],
+      "error_vector": [
+        [
+          1,
+          -4
+        ],
+        [
+          9,
+          3
+        ]
+      ],
+      "actual_energy": 168796,
+      "ideal_lattice_energy": 168791,
+      "root_error": -4,
+      "full_l1": 7,
+      "predicted_support": [
+        1,
+        9
+      ],
+      "predicted_support_size": 2
+    },
+    {
+      "N": 65537,
+      "d": 2,
+      "universe": 221188,
+      "actual_support": 64004,
+      "full_error": 25,
+      "support_only_error": 25,
+      "off_root_error": 9,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 2,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        1,
+        9
+      ],
+      "error_vector": [
+        [
+          1,
+          -4
+        ],
+        [
+          9,
+          3
+        ]
+      ],
+      "actual_energy": 168800,
+      "ideal_lattice_energy": 168795,
+      "root_error": -4,
+      "full_l1": 7,
+      "predicted_support": [
+        1,
+        9,
+        18433,
+        36865,
+        73729,
+        589833
+      ],
+      "predicted_support_size": 6
+    },
+    {
+      "N": 4095,
+      "d": 3,
+      "universe": 20731,
+      "actual_support": 3462,
+      "full_error": 1,
+      "support_only_error": 0,
+      "off_root_error": 1,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        6911
+      ],
+      "error_count": 1,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        6911
+      ],
+      "error_vector": [
+        [
+          6911,
+          -1
+        ]
+      ],
+      "actual_energy": 8816,
+      "ideal_lattice_energy": 8817,
+      "root_error": 0,
+      "full_l1": 1,
+      "predicted_support": [
+        1,
+        7,
+        27,
+        3455,
+        6911,
+        13823,
+        27641,
+        55283
+      ],
+      "predicted_support_size": 8
+    },
+    {
+      "N": 4096,
+      "d": 3,
+      "universe": 20736,
+      "actual_support": 3464,
+      "full_error": 4,
+      "support_only_error": 4,
+      "off_root_error": 4,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 1,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        27
+      ],
+      "error_vector": [
+        [
+          27,
+          -2
+        ]
+      ],
+      "actual_energy": 8826,
+      "ideal_lattice_energy": 8810,
+      "root_error": 0,
+      "full_l1": 2,
+      "predicted_support": [
+        1,
+        7,
+        27
+      ],
+      "predicted_support_size": 3
+    },
+    {
+      "N": 4097,
+      "d": 3,
+      "universe": 20741,
+      "actual_support": 3465,
+      "full_error": 8,
+      "support_only_error": 8,
+      "off_root_error": 8,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 2,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        27,
+        3457
+      ],
+      "error_vector": [
+        [
+          27,
+          -2
+        ],
+        [
+          3457,
+          2
+        ]
+      ],
+      "actual_energy": 8830,
+      "ideal_lattice_energy": 8814,
+      "root_error": 0,
+      "full_l1": 4,
+      "predicted_support": [
+        1,
+        7,
+        27,
+        865,
+        1729,
+        3457,
+        27655,
+        110619
+      ],
+      "predicted_support_size": 8
+    },
+    {
+      "N": 7910,
+      "d": 3,
+      "universe": 40045,
+      "actual_support": 6682,
+      "full_error": 44,
+      "support_only_error": 19,
+      "off_root_error": 44,
+      "omitted_energy": 25,
+      "omitted_seeds": [
+        3
+      ],
+      "error_count": 4,
+      "off_root_error_count": 4,
+      "error_seeds": [
+        3,
+        209,
+        417,
+        3337
+      ],
+      "error_vector": [
+        [
+          3,
+          -5
+        ],
+        [
+          209,
+          -3
+        ],
+        [
+          417,
+          -3
+        ],
+        [
+          3337,
+          1
+        ]
+      ],
+      "actual_energy": 16894,
+      "ideal_lattice_energy": 16922,
+      "root_error": 0,
+      "full_l1": 12,
+      "predicted_support": [
+        1,
+        3,
+        7,
+        107,
+        209,
+        417,
+        3337,
+        53393,
+        106785
+      ],
+      "predicted_support_size": 9
+    },
+    {
+      "N": 16383,
+      "d": 3,
+      "universe": 82939,
+      "actual_support": 13844,
+      "full_error": 1,
+      "support_only_error": 0,
+      "off_root_error": 1,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        27647
+      ],
+      "error_count": 1,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        27647
+      ],
+      "error_vector": [
+        [
+          27647,
+          -1
+        ]
+      ],
+      "actual_energy": 34968,
+      "ideal_lattice_energy": 34969,
+      "root_error": 0,
+      "full_l1": 1,
+      "predicted_support": [
+        1,
+        7,
+        27,
+        13823,
+        27647,
+        55295,
+        110585,
+        221171
+      ],
+      "predicted_support_size": 8
+    },
+    {
+      "N": 16384,
+      "d": 3,
+      "universe": 82944,
+      "actual_support": 13846,
+      "full_error": 4,
+      "support_only_error": 4,
+      "off_root_error": 4,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 1,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        27
+      ],
+      "error_vector": [
+        [
+          27,
+          2
+        ]
+      ],
+      "actual_energy": 34978,
+      "ideal_lattice_energy": 34986,
+      "root_error": 0,
+      "full_l1": 2,
+      "predicted_support": [
+        1,
+        7,
+        27
+      ],
+      "predicted_support_size": 3
+    },
+    {
+      "N": 16385,
+      "d": 3,
+      "universe": 82949,
+      "actual_support": 13847,
+      "full_error": 8,
+      "support_only_error": 8,
+      "off_root_error": 8,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 2,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        27,
+        13825
+      ],
+      "error_vector": [
+        [
+          27,
+          2
+        ],
+        [
+          13825,
+          2
+        ]
+      ],
+      "actual_energy": 34982,
+      "ideal_lattice_energy": 34990,
+      "root_error": 0,
+      "full_l1": 4,
+      "predicted_support": [
+        1,
+        7,
+        27,
+        3457,
+        6913,
+        13825,
+        110599,
+        442395
+      ],
+      "predicted_support_size": 8
+    },
+    {
+      "N": 65535,
+      "d": 3,
+      "universe": 331771,
+      "actual_support": 55375,
+      "full_error": 1,
+      "support_only_error": 0,
+      "off_root_error": 1,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        110591
+      ],
+      "error_count": 1,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        110591
+      ],
+      "error_vector": [
+        [
+          110591,
+          -1
+        ]
+      ],
+      "actual_energy": 139964,
+      "ideal_lattice_energy": 139965,
+      "root_error": 0,
+      "full_l1": 1,
+      "predicted_support": [
+        1,
+        7,
+        27,
+        55295,
+        110591,
+        221183,
+        442361,
+        884723
+      ],
+      "predicted_support_size": 8
+    },
+    {
+      "N": 65536,
+      "d": 3,
+      "universe": 331776,
+      "actual_support": 55377,
+      "full_error": 0,
+      "support_only_error": 0,
+      "off_root_error": 0,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 0,
+      "off_root_error_count": 0,
+      "error_seeds": [],
+      "error_vector": [],
+      "actual_energy": 139974,
+      "ideal_lattice_energy": 139974,
+      "root_error": 0,
+      "full_l1": 0,
+      "predicted_support": [
+        1,
+        7,
+        27
+      ],
+      "predicted_support_size": 3
+    },
+    {
+      "N": 65537,
+      "d": 3,
+      "universe": 331781,
+      "actual_support": 55378,
+      "full_error": 4,
+      "support_only_error": 4,
+      "off_root_error": 4,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 1,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        55297
+      ],
+      "error_vector": [
+        [
+          55297,
+          2
+        ]
+      ],
+      "actual_energy": 139978,
+      "ideal_lattice_energy": 139978,
+      "root_error": 0,
+      "full_l1": 2,
+      "predicted_support": [
+        1,
+        7,
+        27,
+        13825,
+        27649,
+        55297,
+        442375,
+        1769499
+      ],
+      "predicted_support_size": 8
+    },
+    {
+      "N": 4095,
+      "d": 4,
+      "universe": 31097,
+      "actual_support": 3037,
+      "full_error": 58,
+      "support_only_error": 57,
+      "off_root_error": 9,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        10367
+      ],
+      "error_count": 4,
+      "off_root_error_count": 3,
+      "error_seeds": [
+        1,
+        5183,
+        10367,
+        20731
+      ],
+      "error_vector": [
+        [
+          1,
+          7
+        ],
+        [
+          5183,
+          2
+        ],
+        [
+          10367,
+          1
+        ],
+        [
+          20731,
+          2
+        ]
+      ],
+      "actual_energy": 7930,
+      "ideal_lattice_energy": 7928,
+      "root_error": 7,
+      "full_l1": 12,
+      "predicted_support": [
+        1,
+        3,
+        11,
+        41,
+        81,
+        5183,
+        10367,
+        20731,
+        20735,
+        331695
+      ],
+      "predicted_support_size": 10
+    },
+    {
+      "N": 4096,
+      "d": 4,
+      "universe": 31104,
+      "actual_support": 3039,
+      "full_error": 65,
+      "support_only_error": 65,
+      "off_root_error": 16,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 2,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        1,
+        81
+      ],
+      "error_vector": [
+        [
+          1,
+          7
+        ],
+        [
+          81,
+          -4
+        ]
+      ],
+      "actual_energy": 7940,
+      "ideal_lattice_energy": 7957,
+      "root_error": 7,
+      "full_l1": 11,
+      "predicted_support": [
+        1,
+        3,
+        11,
+        41,
+        81
+      ],
+      "predicted_support_size": 5
+    },
+    {
+      "N": 4097,
+      "d": 4,
+      "universe": 31112,
+      "actual_support": 3040,
+      "full_error": 69,
+      "support_only_error": 69,
+      "off_root_error": 20,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 3,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        1,
+        81,
+        2593
+      ],
+      "error_vector": [
+        [
+          1,
+          7
+        ],
+        [
+          81,
+          -4
+        ],
+        [
+          2593,
+          2
+        ]
+      ],
+      "actual_energy": 7944,
+      "ideal_lattice_energy": 7961,
+      "root_error": 7,
+      "full_l1": 13,
+      "predicted_support": [
+        1,
+        3,
+        11,
+        41,
+        81,
+        649,
+        1297,
+        2593,
+        5185,
+        10371,
+        41483,
+        165929,
+        331857
+      ],
+      "predicted_support_size": 13
+    },
+    {
+      "N": 7910,
+      "d": 4,
+      "universe": 60067,
+      "actual_support": 5879,
+      "full_error": 26,
+      "support_only_error": 22,
+      "off_root_error": 17,
+      "omitted_energy": 4,
+      "omitted_seeds": [
+        313
+      ],
+      "error_count": 4,
+      "off_root_error_count": 3,
+      "error_seeds": [
+        1,
+        39,
+        313,
+        2503
+      ],
+      "error_vector": [
+        [
+          1,
+          -3
+        ],
+        [
+          39,
+          -3
+        ],
+        [
+          313,
+          -2
+        ],
+        [
+          2503,
+          -2
+        ]
+      ],
+      "actual_energy": 15386,
+      "ideal_lattice_energy": 15330,
+      "root_error": -3,
+      "full_l1": 10,
+      "predicted_support": [
+        1,
+        11,
+        39,
+        161,
+        313,
+        2503,
+        10011,
+        80089,
+        320355
+      ],
+      "predicted_support_size": 9
+    },
+    {
+      "N": 16383,
+      "d": 4,
+      "universe": 124409,
+      "actual_support": 12182,
+      "full_error": 34,
+      "support_only_error": 33,
+      "off_root_error": 9,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        41471
+      ],
+      "error_count": 4,
+      "off_root_error_count": 3,
+      "error_seeds": [
+        1,
+        20735,
+        41471,
+        82939
+      ],
+      "error_vector": [
+        [
+          1,
+          -5
+        ],
+        [
+          20735,
+          2
+        ],
+        [
+          41471,
+          1
+        ],
+        [
+          82939,
+          2
+        ]
+      ],
+      "actual_energy": 31108,
+      "ideal_lattice_energy": 31088,
+      "root_error": -5,
+      "full_l1": 10,
+      "predicted_support": [
+        1,
+        3,
+        11,
+        41,
+        81,
+        20735,
+        41471,
+        82939,
+        82943,
+        1327023
+      ],
+      "predicted_support_size": 10
+    },
+    {
+      "N": 16384,
+      "d": 4,
+      "universe": 124416,
+      "actual_support": 12184,
+      "full_error": 26,
+      "support_only_error": 26,
+      "off_root_error": 1,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 2,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        1,
+        81
+      ],
+      "error_vector": [
+        [
+          1,
+          -5
+        ],
+        [
+          81,
+          -1
+        ]
+      ],
+      "actual_energy": 31118,
+      "ideal_lattice_energy": 31086,
+      "root_error": -5,
+      "full_l1": 6,
+      "predicted_support": [
+        1,
+        3,
+        11,
+        41,
+        81
+      ],
+      "predicted_support_size": 5
+    },
+    {
+      "N": 16385,
+      "d": 4,
+      "universe": 124424,
+      "actual_support": 12185,
+      "full_error": 30,
+      "support_only_error": 30,
+      "off_root_error": 5,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 3,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        1,
+        81,
+        10369
+      ],
+      "error_vector": [
+        [
+          1,
+          -5
+        ],
+        [
+          81,
+          -1
+        ],
+        [
+          10369,
+          2
+        ]
+      ],
+      "actual_energy": 31122,
+      "ideal_lattice_energy": 31090,
+      "root_error": -5,
+      "full_l1": 8,
+      "predicted_support": [
+        1,
+        3,
+        11,
+        41,
+        81,
+        2593,
+        5185,
+        10369,
+        20737,
+        41475,
+        165899,
+        663593,
+        1327185
+      ],
+      "predicted_support_size": 13
+    },
+    {
+      "N": 65535,
+      "d": 4,
+      "universe": 497657,
+      "actual_support": 48731,
+      "full_error": 130,
+      "support_only_error": 129,
+      "off_root_error": 9,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        165887
+      ],
+      "error_count": 4,
+      "off_root_error_count": 3,
+      "error_seeds": [
+        1,
+        82943,
+        165887,
+        331771
+      ],
+      "error_vector": [
+        [
+          1,
+          -11
+        ],
+        [
+          82943,
+          2
+        ],
+        [
+          165887,
+          1
+        ],
+        [
+          331771,
+          2
+        ]
+      ],
+      "actual_energy": 125318,
+      "ideal_lattice_energy": 125224,
+      "root_error": -11,
+      "full_l1": 16,
+      "predicted_support": [
+        1,
+        3,
+        11,
+        41,
+        81,
+        82943,
+        165887,
+        331771,
+        331775,
+        5308335
+      ],
+      "predicted_support_size": 10
+    },
+    {
+      "N": 65536,
+      "d": 4,
+      "universe": 497664,
+      "actual_support": 48733,
+      "full_error": 125,
+      "support_only_error": 125,
+      "off_root_error": 4,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 2,
+      "off_root_error_count": 1,
+      "error_seeds": [
+        1,
+        81
+      ],
+      "error_vector": [
+        [
+          1,
+          -11
+        ],
+        [
+          81,
+          2
+        ]
+      ],
+      "actual_energy": 125328,
+      "ideal_lattice_energy": 125241,
+      "root_error": -11,
+      "full_l1": 13,
+      "predicted_support": [
+        1,
+        3,
+        11,
+        41,
+        81
+      ],
+      "predicted_support_size": 5
+    },
+    {
+      "N": 65537,
+      "d": 4,
+      "universe": 497672,
+      "actual_support": 48734,
+      "full_error": 129,
+      "support_only_error": 129,
+      "off_root_error": 8,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 3,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        1,
+        81,
+        41473
+      ],
+      "error_vector": [
+        [
+          1,
+          -11
+        ],
+        [
+          81,
+          2
+        ],
+        [
+          41473,
+          2
+        ]
+      ],
+      "actual_energy": 125332,
+      "ideal_lattice_energy": 125245,
+      "root_error": -11,
+      "full_l1": 15,
+      "predicted_support": [
+        1,
+        3,
+        11,
+        41,
+        81,
+        10369,
+        20737,
+        41473,
+        82945,
+        165891,
+        663563,
+        2654249,
+        5308497
+      ],
+      "predicted_support_size": 13
+    },
+    {
+      "N": 4095,
+      "d": 5,
+      "universe": 46645,
+      "actual_support": 2705,
+      "full_error": 27,
+      "support_only_error": 26,
+      "off_root_error": 18,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        15551
+      ],
+      "error_count": 5,
+      "off_root_error_count": 4,
+      "error_seeds": [
+        1,
+        15,
+        7775,
+        15551,
+        31097
+      ],
+      "error_vector": [
+        [
+          1,
+          -3
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          7775,
+          -2
+        ],
+        [
+          15551,
+          -1
+        ],
+        [
+          31097,
+          -2
+        ]
+      ],
+      "actual_energy": 7450,
+      "ideal_lattice_energy": 7467,
+      "root_error": -3,
+      "full_l1": 11,
+      "predicted_support": [
+        1,
+        15,
+        17,
+        31,
+        243,
+        3887,
+        7775,
+        15551,
+        31097,
+        31103,
+        62193,
+        248771,
+        497543
+      ],
+      "predicted_support_size": 13
+    },
+    {
+      "N": 4096,
+      "d": 5,
+      "universe": 46656,
+      "actual_support": 2707,
+      "full_error": 34,
+      "support_only_error": 18,
+      "off_root_error": 25,
+      "omitted_energy": 16,
+      "omitted_seeds": [
+        243
+      ],
+      "error_count": 3,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        1,
+        15,
+        243
+      ],
+      "error_vector": [
+        [
+          1,
+          -3
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          243,
+          4
+        ]
+      ],
+      "actual_energy": 7460,
+      "ideal_lattice_energy": 7488,
+      "root_error": -3,
+      "full_l1": 10,
+      "predicted_support": [
+        1,
+        15,
+        17,
+        31,
+        243
+      ],
+      "predicted_support_size": 5
+    },
+    {
+      "N": 4097,
+      "d": 5,
+      "universe": 46667,
+      "actual_support": 2708,
+      "full_error": 42,
+      "support_only_error": 26,
+      "off_root_error": 33,
+      "omitted_energy": 16,
+      "omitted_seeds": [
+        243
+      ],
+      "error_count": 5,
+      "off_root_error_count": 4,
+      "error_seeds": [
+        1,
+        15,
+        243,
+        1945,
+        3889
+      ],
+      "error_vector": [
+        [
+          1,
+          -3
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          243,
+          4
+        ],
+        [
+          1945,
+          2
+        ],
+        [
+          3889,
+          2
+        ]
+      ],
+      "actual_energy": 7464,
+      "ideal_lattice_energy": 7488,
+      "root_error": -3,
+      "full_l1": 14,
+      "predicted_support": [
+        1,
+        15,
+        17,
+        31,
+        243,
+        487,
+        1945,
+        3889,
+        62223,
+        62225,
+        124447,
+        995571
+      ],
+      "predicted_support_size": 12
+    },
+    {
+      "N": 7910,
+      "d": 5,
+      "universe": 90100,
+      "actual_support": 5222,
+      "full_error": 57,
+      "support_only_error": 57,
+      "off_root_error": 21,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 5,
+      "off_root_error_count": 4,
+      "error_seeds": [
+        1,
+        7,
+        59,
+        235,
+        3755
+      ],
+      "error_vector": [
+        [
+          1,
+          -6
+        ],
+        [
+          7,
+          -2
+        ],
+        [
+          59,
+          3
+        ],
+        [
+          235,
+          -2
+        ],
+        [
+          3755,
+          2
+        ]
+      ],
+      "actual_energy": 13774,
+      "ideal_lattice_energy": 13771,
+      "root_error": -6,
+      "full_l1": 15,
+      "predicted_support": [
+        1,
+        7,
+        15,
+        17,
+        59,
+        121,
+        235,
+        939,
+        3755,
+        15017,
+        30033,
+        60067,
+        961065
+      ],
+      "predicted_support_size": 13
+    },
+    {
+      "N": 16383,
+      "d": 5,
+      "universe": 186613,
+      "actual_support": 10824,
+      "full_error": 35,
+      "support_only_error": 34,
+      "off_root_error": 34,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        62207
+      ],
+      "error_count": 5,
+      "off_root_error_count": 4,
+      "error_seeds": [
+        1,
+        15,
+        31103,
+        62207,
+        124409
+      ],
+      "error_vector": [
+        [
+          1,
+          1
+        ],
+        [
+          15,
+          -5
+        ],
+        [
+          31103,
+          -2
+        ],
+        [
+          62207,
+          -1
+        ],
+        [
+          124409,
+          -2
+        ]
+      ],
+      "actual_energy": 29392,
+      "ideal_lattice_energy": 29313,
+      "root_error": 1,
+      "full_l1": 11,
+      "predicted_support": [
+        1,
+        15,
+        17,
+        31,
+        243,
+        15551,
+        31103,
+        62207,
+        124409,
+        124415,
+        248817,
+        995267,
+        1990535
+      ],
+      "predicted_support_size": 13
+    },
+    {
+      "N": 16384,
+      "d": 5,
+      "universe": 186624,
+      "actual_support": 10826,
+      "full_error": 27,
+      "support_only_error": 27,
+      "off_root_error": 26,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 3,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        1,
+        15,
+        243
+      ],
+      "error_vector": [
+        [
+          1,
+          1
+        ],
+        [
+          15,
+          -5
+        ],
+        [
+          243,
+          -1
+        ]
+      ],
+      "actual_energy": 29402,
+      "ideal_lattice_energy": 29323,
+      "root_error": 1,
+      "full_l1": 7,
+      "predicted_support": [
+        1,
+        15,
+        17,
+        31,
+        243
+      ],
+      "predicted_support_size": 5
+    },
+    {
+      "N": 16385,
+      "d": 5,
+      "universe": 186635,
+      "actual_support": 10827,
+      "full_error": 35,
+      "support_only_error": 35,
+      "off_root_error": 34,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 5,
+      "off_root_error_count": 4,
+      "error_seeds": [
+        1,
+        15,
+        243,
+        7777,
+        15553
+      ],
+      "error_vector": [
+        [
+          1,
+          1
+        ],
+        [
+          15,
+          -5
+        ],
+        [
+          243,
+          -1
+        ],
+        [
+          7777,
+          2
+        ],
+        [
+          15553,
+          2
+        ]
+      ],
+      "actual_energy": 29406,
+      "ideal_lattice_energy": 29323,
+      "root_error": 1,
+      "full_l1": 11,
+      "predicted_support": [
+        1,
+        15,
+        17,
+        31,
+        243,
+        1945,
+        3889,
+        7777,
+        15553,
+        248847,
+        248849,
+        497695,
+        3981555
+      ],
+      "predicted_support_size": 13
+    },
+    {
+      "N": 65535,
+      "d": 5,
+      "universe": 746485,
+      "actual_support": 43308,
+      "full_error": 19,
+      "support_only_error": 17,
+      "off_root_error": 10,
+      "omitted_energy": 2,
+      "omitted_seeds": [
+        15,
+        248831
+      ],
+      "error_count": 5,
+      "off_root_error_count": 4,
+      "error_seeds": [
+        1,
+        15,
+        124415,
+        248831,
+        497657
+      ],
+      "error_vector": [
+        [
+          1,
+          -3
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          124415,
+          -2
+        ],
+        [
+          248831,
+          -1
+        ],
+        [
+          497657,
+          -2
+        ]
+      ],
+      "actual_energy": 116202,
+      "ideal_lattice_energy": 116259,
+      "root_error": -3,
+      "full_l1": 9,
+      "predicted_support": [
+        1,
+        15,
+        17,
+        31,
+        243,
+        62207,
+        124415,
+        248831,
+        497657,
+        497663,
+        995313,
+        3981251,
+        7962503
+      ],
+      "predicted_support_size": 13
+    },
+    {
+      "N": 65536,
+      "d": 5,
+      "universe": 746496,
+      "actual_support": 43310,
+      "full_error": 26,
+      "support_only_error": 25,
+      "off_root_error": 17,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        15
+      ],
+      "error_count": 3,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        1,
+        15,
+        243
+      ],
+      "error_vector": [
+        [
+          1,
+          -3
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          243,
+          -4
+        ]
+      ],
+      "actual_energy": 116212,
+      "ideal_lattice_energy": 116240,
+      "root_error": -3,
+      "full_l1": 8,
+      "predicted_support": [
+        1,
+        15,
+        17,
+        31,
+        243
+      ],
+      "predicted_support_size": 5
+    },
+    {
+      "N": 65537,
+      "d": 5,
+      "universe": 746507,
+      "actual_support": 43311,
+      "full_error": 34,
+      "support_only_error": 33,
+      "off_root_error": 25,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        15
+      ],
+      "error_count": 5,
+      "off_root_error_count": 4,
+      "error_seeds": [
+        1,
+        15,
+        243,
+        31105,
+        62209
+      ],
+      "error_vector": [
+        [
+          1,
+          -3
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          243,
+          -4
+        ],
+        [
+          31105,
+          2
+        ],
+        [
+          62209,
+          2
+        ]
+      ],
+      "actual_energy": 116216,
+      "ideal_lattice_energy": 116240,
+      "root_error": -3,
+      "full_l1": 12,
+      "predicted_support": [
+        1,
+        15,
+        17,
+        31,
+        243,
+        7777,
+        15553,
+        31105,
+        62209,
+        995343,
+        995345,
+        1990687,
+        15925491
+      ],
+      "predicted_support_size": 13
+    },
+    {
+      "N": 4095,
+      "d": 6,
+      "universe": 69967,
+      "actual_support": 2425,
+      "full_error": 47,
+      "support_only_error": 21,
+      "off_root_error": 38,
+      "omitted_energy": 26,
+      "omitted_seeds": [
+        91,
+        23327
+      ],
+      "error_count": 6,
+      "off_root_error_count": 5,
+      "error_seeds": [
+        1,
+        91,
+        5831,
+        11663,
+        23323,
+        23327
+      ],
+      "error_vector": [
+        [
+          1,
+          -3
+        ],
+        [
+          91,
+          -5
+        ],
+        [
+          5831,
+          2
+        ],
+        [
+          11663,
+          2
+        ],
+        [
+          23323,
+          -2
+        ],
+        [
+          23327,
+          1
+        ]
+      ],
+      "actual_energy": 7110,
+      "ideal_lattice_energy": 7203,
+      "root_error": -3,
+      "full_l1": 15,
+      "predicted_support": [
+        1,
+        3,
+        23,
+        47,
+        91,
+        729,
+        2915,
+        5831,
+        11663,
+        23323,
+        23327,
+        46655,
+        93289,
+        746315,
+        2985255
+      ],
+      "predicted_support_size": 15
+    },
+    {
+      "N": 4096,
+      "d": 6,
+      "universe": 69984,
+      "actual_support": 2427,
+      "full_error": 38,
+      "support_only_error": 9,
+      "off_root_error": 29,
+      "omitted_energy": 29,
+      "omitted_seeds": [
+        91,
+        729
+      ],
+      "error_count": 3,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        1,
+        91,
+        729
+      ],
+      "error_vector": [
+        [
+          1,
+          -3
+        ],
+        [
+          91,
+          -5
+        ],
+        [
+          729,
+          -2
+        ]
+      ],
+      "actual_energy": 7120,
+      "ideal_lattice_energy": 7212,
+      "root_error": -3,
+      "full_l1": 10,
+      "predicted_support": [
+        1,
+        3,
+        23,
+        47,
+        91,
+        729
+      ],
+      "predicted_support_size": 6
+    },
+    {
+      "N": 4097,
+      "d": 6,
+      "universe": 70001,
+      "actual_support": 2428,
+      "full_error": 38,
+      "support_only_error": 13,
+      "off_root_error": 29,
+      "omitted_energy": 25,
+      "omitted_seeds": [
+        91
+      ],
+      "error_count": 3,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        1,
+        91,
+        1459
+      ],
+      "error_vector": [
+        [
+          1,
+          -3
+        ],
+        [
+          91,
+          -5
+        ],
+        [
+          1459,
+          2
+        ]
+      ],
+      "actual_energy": 7124,
+      "ideal_lattice_energy": 7212,
+      "root_error": -3,
+      "full_l1": 10,
+      "predicted_support": [
+        1,
+        3,
+        23,
+        47,
+        91,
+        729,
+        731,
+        1459,
+        11667,
+        93335,
+        186671,
+        373339,
+        2986713
+      ],
+      "predicted_support_size": 13
+    },
+    {
+      "N": 7910,
+      "d": 6,
+      "universe": 135150,
+      "actual_support": 4669,
+      "full_error": 78,
+      "support_only_error": 78,
+      "off_root_error": 42,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 5,
+      "off_root_error_count": 4,
+      "error_seeds": [
+        1,
+        11,
+        89,
+        353,
+        5633
+      ],
+      "error_vector": [
+        [
+          1,
+          -6
+        ],
+        [
+          11,
+          -5
+        ],
+        [
+          89,
+          -3
+        ],
+        [
+          353,
+          2
+        ],
+        [
+          5633,
+          -2
+        ]
+      ],
+      "actual_energy": 13140,
+      "ideal_lattice_energy": 13236,
+      "root_error": -6,
+      "full_l1": 18,
+      "predicted_support": [
+        1,
+        3,
+        11,
+        23,
+        89,
+        91,
+        353,
+        1409,
+        5631,
+        5633,
+        11263,
+        720799,
+        2883195
+      ],
+      "predicted_support_size": 13
+    },
+    {
+      "N": 16383,
+      "d": 6,
+      "universe": 279919,
+      "actual_support": 9702,
+      "full_error": 23,
+      "support_only_error": 22,
+      "off_root_error": 22,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        93311
+      ],
+      "error_count": 6,
+      "off_root_error_count": 5,
+      "error_seeds": [
+        1,
+        91,
+        23327,
+        46655,
+        93307,
+        93311
+      ],
+      "error_vector": [
+        [
+          1,
+          1
+        ],
+        [
+          91,
+          3
+        ],
+        [
+          23327,
+          2
+        ],
+        [
+          46655,
+          2
+        ],
+        [
+          93307,
+          -2
+        ],
+        [
+          93311,
+          1
+        ]
+      ],
+      "actual_energy": 28878,
+      "ideal_lattice_energy": 28991,
+      "root_error": 1,
+      "full_l1": 11,
+      "predicted_support": [
+        1,
+        3,
+        23,
+        47,
+        91,
+        729,
+        11663,
+        23327,
+        46655,
+        93307,
+        93311,
+        186623,
+        373225,
+        2985803,
+        11943207
+      ],
+      "predicted_support_size": 15
+    },
+    {
+      "N": 16384,
+      "d": 6,
+      "universe": 279936,
+      "actual_support": 9704,
+      "full_error": 14,
+      "support_only_error": 10,
+      "off_root_error": 13,
+      "omitted_energy": 4,
+      "omitted_seeds": [
+        729
+      ],
+      "error_count": 3,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        1,
+        91,
+        729
+      ],
+      "error_vector": [
+        [
+          1,
+          1
+        ],
+        [
+          91,
+          3
+        ],
+        [
+          729,
+          2
+        ]
+      ],
+      "actual_energy": 28888,
+      "ideal_lattice_energy": 29000,
+      "root_error": 1,
+      "full_l1": 6,
+      "predicted_support": [
+        1,
+        3,
+        23,
+        47,
+        91,
+        729
+      ],
+      "predicted_support_size": 6
+    },
+    {
+      "N": 16385,
+      "d": 6,
+      "universe": 279953,
+      "actual_support": 9705,
+      "full_error": 22,
+      "support_only_error": 18,
+      "off_root_error": 21,
+      "omitted_energy": 4,
+      "omitted_seeds": [
+        729
+      ],
+      "error_count": 5,
+      "off_root_error_count": 4,
+      "error_seeds": [
+        1,
+        91,
+        729,
+        5833,
+        11665
+      ],
+      "error_vector": [
+        [
+          1,
+          1
+        ],
+        [
+          91,
+          3
+        ],
+        [
+          729,
+          2
+        ],
+        [
+          5833,
+          2
+        ],
+        [
+          11665,
+          2
+        ]
+      ],
+      "actual_energy": 28892,
+      "ideal_lattice_energy": 29000,
+      "root_error": 1,
+      "full_l1": 10,
+      "predicted_support": [
+        1,
+        3,
+        23,
+        47,
+        91,
+        729,
+        1459,
+        5833,
+        11665,
+        46659,
+        373271,
+        746543,
+        1493083,
+        11944665
+      ],
+      "predicted_support_size": 14
+    },
+    {
+      "N": 65535,
+      "d": 6,
+      "universe": 1119727,
+      "actual_support": 38783,
+      "full_error": 103,
+      "support_only_error": 102,
+      "off_root_error": 94,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        373247
+      ],
+      "error_count": 6,
+      "off_root_error_count": 5,
+      "error_seeds": [
+        1,
+        91,
+        93311,
+        186623,
+        373243,
+        373247
+      ],
+      "error_vector": [
+        [
+          1,
+          -3
+        ],
+        [
+          91,
+          9
+        ],
+        [
+          93311,
+          2
+        ],
+        [
+          186623,
+          2
+        ],
+        [
+          373243,
+          -2
+        ],
+        [
+          373247,
+          1
+        ]
+      ],
+      "actual_energy": 111468,
+      "ideal_lattice_energy": 111467,
+      "root_error": -3,
+      "full_l1": 19,
+      "predicted_support": [
+        1,
+        3,
+        23,
+        47,
+        91,
+        729,
+        46655,
+        93311,
+        186623,
+        373243,
+        373247,
+        746495,
+        1492969,
+        11943755,
+        47775015
+      ],
+      "predicted_support_size": 15
+    },
+    {
+      "N": 65536,
+      "d": 6,
+      "universe": 1119744,
+      "actual_support": 38785,
+      "full_error": 99,
+      "support_only_error": 99,
+      "off_root_error": 90,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 3,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        1,
+        91,
+        729
+      ],
+      "error_vector": [
+        [
+          1,
+          -3
+        ],
+        [
+          91,
+          9
+        ],
+        [
+          729,
+          3
+        ]
+      ],
+      "actual_energy": 111478,
+      "ideal_lattice_energy": 111457,
+      "root_error": -3,
+      "full_l1": 15,
+      "predicted_support": [
+        1,
+        3,
+        23,
+        47,
+        91,
+        729
+      ],
+      "predicted_support_size": 6
+    },
+    {
+      "N": 65537,
+      "d": 6,
+      "universe": 1119761,
+      "actual_support": 38786,
+      "full_error": 107,
+      "support_only_error": 107,
+      "off_root_error": 98,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 5,
+      "off_root_error_count": 4,
+      "error_seeds": [
+        1,
+        91,
+        729,
+        23329,
+        46657
+      ],
+      "error_vector": [
+        [
+          1,
+          -3
+        ],
+        [
+          91,
+          9
+        ],
+        [
+          729,
+          3
+        ],
+        [
+          23329,
+          2
+        ],
+        [
+          46657,
+          2
+        ]
+      ],
+      "actual_energy": 111482,
+      "ideal_lattice_energy": 111457,
+      "root_error": -3,
+      "full_l1": 19,
+      "predicted_support": [
+        1,
+        3,
+        23,
+        47,
+        91,
+        729,
+        5833,
+        11665,
+        23329,
+        46657,
+        186627,
+        1493015,
+        2986031,
+        5972059,
+        47776473
+      ],
+      "predicted_support_size": 15
+    },
+    {
+      "N": 4095,
+      "d": 7,
+      "universe": 104951,
+      "actual_support": 2178,
+      "full_error": 120,
+      "support_only_error": 119,
+      "off_root_error": 39,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        34991
+      ],
+      "error_count": 7,
+      "off_root_error_count": 6,
+      "error_seeds": [
+        1,
+        17,
+        137,
+        8747,
+        17495,
+        34985,
+        34991
+      ],
+      "error_vector": [
+        [
+          1,
+          -9
+        ],
+        [
+          17,
+          5
+        ],
+        [
+          137,
+          -1
+        ],
+        [
+          8747,
+          -2
+        ],
+        [
+          17495,
+          -2
+        ],
+        [
+          34985,
+          2
+        ],
+        [
+          34991,
+          -1
+        ]
+      ],
+      "actual_energy": 6988,
+      "ideal_lattice_energy": 7234,
+      "root_error": -9,
+      "full_l1": 22,
+      "predicted_support": [
+        1,
+        9,
+        17,
+        35,
+        71,
+        137,
+        273,
+        547,
+        8747,
+        17495,
+        34985,
+        34991,
+        69967,
+        69983,
+        559735,
+        1119471,
+        1119473,
+        4477883
+      ],
+      "predicted_support_size": 18
+    },
+    {
+      "N": 4096,
+      "d": 7,
+      "universe": 104976,
+      "actual_support": 2180,
+      "full_error": 107,
+      "support_only_error": 107,
+      "off_root_error": 26,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 3,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        1,
+        17,
+        137
+      ],
+      "error_vector": [
+        [
+          1,
+          -9
+        ],
+        [
+          17,
+          5
+        ],
+        [
+          137,
+          -1
+        ]
+      ],
+      "actual_energy": 6998,
+      "ideal_lattice_energy": 7239,
+      "root_error": -9,
+      "full_l1": 15,
+      "predicted_support": [
+        1,
+        9,
+        17,
+        35,
+        71,
+        137,
+        547,
+        2187
+      ],
+      "predicted_support_size": 8
+    },
+    {
+      "N": 4097,
+      "d": 7,
+      "universe": 105002,
+      "actual_support": 2180,
+      "full_error": 107,
+      "support_only_error": 107,
+      "off_root_error": 26,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 3,
+      "off_root_error_count": 2,
+      "error_seeds": [
+        1,
+        17,
+        137
+      ],
+      "error_vector": [
+        [
+          1,
+          -9
+        ],
+        [
+          17,
+          5
+        ],
+        [
+          137,
+          -1
+        ]
+      ],
+      "actual_energy": 6998,
+      "ideal_lattice_energy": 7239,
+      "root_error": -9,
+      "full_l1": 15,
+      "predicted_support": [
+        1,
+        9,
+        17,
+        35,
+        71,
+        137,
+        547,
+        1097,
+        4375,
+        35001,
+        70001,
+        140003,
+        280007,
+        560009,
+        2240035,
+        8960139
+      ],
+      "predicted_support_size": 16
+    },
+    {
+      "N": 7910,
+      "d": 7,
+      "universe": 202725,
+      "actual_support": 4198,
+      "full_error": 718,
+      "support_only_error": 718,
+      "off_root_error": 42,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 5,
+      "off_root_error_count": 4,
+      "error_seeds": [
+        1,
+        17,
+        67,
+        265,
+        4225
+      ],
+      "error_vector": [
+        [
+          1,
+          -26
+        ],
+        [
+          17,
+          5
+        ],
+        [
+          67,
+          -3
+        ],
+        [
+          265,
+          2
+        ],
+        [
+          4225,
+          -2
+        ]
+      ],
+      "actual_energy": 12974,
+      "ideal_lattice_energy": 13976,
+      "root_error": -26,
+      "full_l1": 38,
+      "predicted_support": [
+        1,
+        17,
+        33,
+        35,
+        67,
+        137,
+        265,
+        1057,
+        4225,
+        8447,
+        16895,
+        67575,
+        540599,
+        1081199,
+        4324793,
+        8649585
+      ],
+      "predicted_support_size": 16
+    },
+    {
+      "N": 16383,
+      "d": 7,
+      "universe": 419879,
+      "actual_support": 8744,
+      "full_error": 193,
+      "support_only_error": 192,
+      "off_root_error": 129,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        139967
+      ],
+      "error_count": 7,
+      "off_root_error_count": 6,
+      "error_seeds": [
+        1,
+        17,
+        137,
+        34991,
+        69983,
+        139961,
+        139967
+      ],
+      "error_vector": [
+        [
+          1,
+          8
+        ],
+        [
+          17,
+          -10
+        ],
+        [
+          137,
+          4
+        ],
+        [
+          34991,
+          -2
+        ],
+        [
+          69983,
+          -2
+        ],
+        [
+          139961,
+          2
+        ],
+        [
+          139967,
+          -1
+        ]
+      ],
+      "actual_energy": 27132,
+      "ideal_lattice_energy": 27441,
+      "root_error": 8,
+      "full_l1": 29,
+      "predicted_support": [
+        1,
+        9,
+        17,
+        35,
+        71,
+        137,
+        547,
+        2187,
+        17495,
+        34991,
+        69983,
+        139961,
+        139967,
+        279919,
+        279935,
+        2239351,
+        4478703,
+        4478705,
+        17914811
+      ],
+      "predicted_support_size": 19
+    },
+    {
+      "N": 16384,
+      "d": 7,
+      "universe": 419904,
+      "actual_support": 8746,
+      "full_error": 184,
+      "support_only_error": 180,
+      "off_root_error": 120,
+      "omitted_energy": 4,
+      "omitted_seeds": [
+        2187
+      ],
+      "error_count": 4,
+      "off_root_error_count": 3,
+      "error_seeds": [
+        1,
+        17,
+        137,
+        2187
+      ],
+      "error_vector": [
+        [
+          1,
+          8
+        ],
+        [
+          17,
+          -10
+        ],
+        [
+          137,
+          4
+        ],
+        [
+          2187,
+          -2
+        ]
+      ],
+      "actual_energy": 27142,
+      "ideal_lattice_energy": 27450,
+      "root_error": 8,
+      "full_l1": 24,
+      "predicted_support": [
+        1,
+        9,
+        17,
+        35,
+        71,
+        137,
+        547,
+        2187
+      ],
+      "predicted_support_size": 8
+    },
+    {
+      "N": 16385,
+      "d": 7,
+      "universe": 419930,
+      "actual_support": 8747,
+      "full_error": 184,
+      "support_only_error": 184,
+      "off_root_error": 120,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 4,
+      "off_root_error_count": 3,
+      "error_seeds": [
+        1,
+        17,
+        137,
+        4375
+      ],
+      "error_vector": [
+        [
+          1,
+          8
+        ],
+        [
+          17,
+          -10
+        ],
+        [
+          137,
+          4
+        ],
+        [
+          4375,
+          2
+        ]
+      ],
+      "actual_energy": 27146,
+      "ideal_lattice_energy": 27450,
+      "root_error": 8,
+      "full_l1": 24,
+      "predicted_support": [
+        1,
+        9,
+        17,
+        35,
+        71,
+        137,
+        547,
+        2187,
+        4375,
+        17497,
+        139977,
+        279953,
+        559907,
+        1119815,
+        2239625,
+        8958499,
+        35833995
+      ],
+      "predicted_support_size": 17
+    },
+    {
+      "N": 65535,
+      "d": 7,
+      "universe": 1679591,
+      "actual_support": 34947,
+      "full_error": 859,
+      "support_only_error": 858,
+      "off_root_error": 18,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        559871
+      ],
+      "error_count": 7,
+      "off_root_error_count": 6,
+      "error_seeds": [
+        1,
+        17,
+        137,
+        139967,
+        279935,
+        559865,
+        559871
+      ],
+      "error_vector": [
+        [
+          1,
+          -29
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          137,
+          -2
+        ],
+        [
+          139967,
+          -2
+        ],
+        [
+          279935,
+          -2
+        ],
+        [
+          559865,
+          2
+        ],
+        [
+          559871,
+          -1
+        ]
+      ],
+      "actual_energy": 108214,
+      "ideal_lattice_energy": 108441,
+      "root_error": -29,
+      "full_l1": 39,
+      "predicted_support": [
+        1,
+        9,
+        17,
+        35,
+        71,
+        137,
+        547,
+        2187,
+        69983,
+        139967,
+        279935,
+        559865,
+        559871,
+        1119727,
+        1119743,
+        8957815,
+        17915631,
+        17915633,
+        71662523
+      ],
+      "predicted_support_size": 19
+    },
+    {
+      "N": 65536,
+      "d": 7,
+      "universe": 1679616,
+      "actual_support": 34949,
+      "full_error": 855,
+      "support_only_error": 846,
+      "off_root_error": 14,
+      "omitted_energy": 9,
+      "omitted_seeds": [
+        2187
+      ],
+      "error_count": 4,
+      "off_root_error_count": 3,
+      "error_seeds": [
+        1,
+        17,
+        137,
+        2187
+      ],
+      "error_vector": [
+        [
+          1,
+          -29
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          137,
+          -2
+        ],
+        [
+          2187,
+          3
+        ]
+      ],
+      "actual_energy": 108224,
+      "ideal_lattice_energy": 108455,
+      "root_error": -29,
+      "full_l1": 35,
+      "predicted_support": [
+        1,
+        9,
+        17,
+        35,
+        71,
+        137,
+        547,
+        2187
+      ],
+      "predicted_support_size": 8
+    },
+    {
+      "N": 65537,
+      "d": 7,
+      "universe": 1679642,
+      "actual_support": 34950,
+      "full_error": 863,
+      "support_only_error": 854,
+      "off_root_error": 22,
+      "omitted_energy": 9,
+      "omitted_seeds": [
+        2187
+      ],
+      "error_count": 6,
+      "off_root_error_count": 5,
+      "error_seeds": [
+        1,
+        17,
+        137,
+        2187,
+        17497,
+        34993
+      ],
+      "error_vector": [
+        [
+          1,
+          -29
+        ],
+        [
+          17,
+          1
+        ],
+        [
+          137,
+          -2
+        ],
+        [
+          2187,
+          3
+        ],
+        [
+          17497,
+          2
+        ],
+        [
+          34993,
+          2
+        ]
+      ],
+      "actual_energy": 108228,
+      "ideal_lattice_energy": 108455,
+      "root_error": -29,
+      "full_l1": 39,
+      "predicted_support": [
+        1,
+        9,
+        17,
+        35,
+        71,
+        137,
+        547,
+        2187,
+        4375,
+        17497,
+        34993,
+        69985,
+        559881,
+        1119761,
+        2239523,
+        4479047,
+        8958089,
+        35832355,
+        143329419
+      ],
+      "predicted_support_size": 19
+    },
+    {
+      "N": 4095,
+      "d": 8,
+      "universe": 157426,
+      "actual_support": 1971,
+      "full_error": 352,
+      "support_only_error": 349,
+      "off_root_error": 96,
+      "omitted_energy": 3,
+      "omitted_seeds": [
+        51,
+        103,
+        52487
+      ],
+      "error_count": 8,
+      "off_root_error_count": 7,
+      "error_seeds": [
+        1,
+        3,
+        51,
+        103,
+        13121,
+        26239,
+        26243,
+        52487
+      ],
+      "error_vector": [
+        [
+          1,
+          16
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          51,
+          1
+        ],
+        [
+          103,
+          -1
+        ],
+        [
+          13121,
+          2
+        ],
+        [
+          26239,
+          2
+        ],
+        [
+          26243,
+          2
+        ],
+        [
+          52487,
+          1
+        ]
+      ],
+      "actual_energy": 6590,
+      "ideal_lattice_energy": 7454,
+      "root_error": 16,
+      "full_l1": 34,
+      "predicted_support": [
+        1,
+        3,
+        7,
+        51,
+        103,
+        107,
+        13119,
+        13121,
+        26239,
+        26243,
+        52475,
+        52487,
+        104951,
+        104975,
+        839603,
+        1679207,
+        6716825,
+        26867295
+      ],
+      "predicted_support_size": 18
+    },
+    {
+      "N": 4096,
+      "d": 8,
+      "universe": 157464,
+      "actual_support": 1973,
+      "full_error": 339,
+      "support_only_error": 337,
+      "off_root_error": 83,
+      "omitted_energy": 2,
+      "omitted_seeds": [
+        51,
+        103
+      ],
+      "error_count": 4,
+      "off_root_error_count": 3,
+      "error_seeds": [
+        1,
+        3,
+        51,
+        103
+      ],
+      "error_vector": [
+        [
+          1,
+          16
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          51,
+          1
+        ],
+        [
+          103,
+          -1
+        ]
+      ],
+      "actual_energy": 6600,
+      "ideal_lattice_energy": 7459,
+      "root_error": 16,
+      "full_l1": 27,
+      "predicted_support": [
+        1,
+        3,
+        7,
+        51,
+        103,
+        107,
+        3281,
+        6561
+      ],
+      "predicted_support_size": 8
+    },
+    {
+      "N": 4097,
+      "d": 8,
+      "universe": 157502,
+      "actual_support": 1973,
+      "full_error": 339,
+      "support_only_error": 337,
+      "off_root_error": 83,
+      "omitted_energy": 2,
+      "omitted_seeds": [
+        51,
+        103
+      ],
+      "error_count": 4,
+      "off_root_error_count": 3,
+      "error_seeds": [
+        1,
+        3,
+        51,
+        103
+      ],
+      "error_vector": [
+        [
+          1,
+          16
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          51,
+          1
+        ],
+        [
+          103,
+          -1
+        ]
+      ],
+      "actual_energy": 6600,
+      "ideal_lattice_energy": 7459,
+      "root_error": 16,
+      "full_l1": 27,
+      "predicted_support": [
+        1,
+        3,
+        7,
+        51,
+        103,
+        107,
+        823,
+        1641,
+        3281,
+        6563,
+        26251,
+        210003,
+        420007,
+        420011,
+        13440209,
+        26880417
+      ],
+      "predicted_support_size": 16
+    },
+    {
+      "N": 7910,
+      "d": 8,
+      "universe": 304087,
+      "actual_support": 3825,
+      "full_error": 422,
+      "support_only_error": 422,
+      "off_root_error": 341,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 5,
+      "off_root_error_count": 4,
+      "error_seeds": [
+        1,
+        3,
+        25,
+        199,
+        3169
+      ],
+      "error_vector": [
+        [
+          1,
+          -9
+        ],
+        [
+          3,
+          -18
+        ],
+        [
+          25,
+          3
+        ],
+        [
+          199,
+          2
+        ],
+        [
+          3169,
+          -2
+        ]
+      ],
+      "actual_energy": 12628,
+      "ideal_lattice_energy": 12900,
+      "root_error": -9,
+      "full_l1": 34,
+      "predicted_support": [
+        1,
+        3,
+        25,
+        99,
+        103,
+        199,
+        793,
+        3169,
+        6335,
+        12671,
+        25343,
+        50681,
+        101363,
+        405449,
+        810899,
+        1621799,
+        3243595,
+        25948755
+      ],
+      "predicted_support_size": 18
+    },
+    {
+      "N": 16383,
+      "d": 8,
+      "universe": 629818,
+      "actual_support": 7914,
+      "full_error": 1711,
+      "support_only_error": 1710,
+      "off_root_error": 111,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        209951
+      ],
+      "error_count": 8,
+      "off_root_error_count": 7,
+      "error_seeds": [
+        1,
+        3,
+        51,
+        103,
+        52487,
+        104971,
+        104975,
+        209951
+      ],
+      "error_vector": [
+        [
+          1,
+          -40
+        ],
+        [
+          3,
+          -9
+        ],
+        [
+          51,
+          1
+        ],
+        [
+          103,
+          4
+        ],
+        [
+          52487,
+          2
+        ],
+        [
+          104971,
+          2
+        ],
+        [
+          104975,
+          2
+        ],
+        [
+          209951,
+          1
+        ]
+      ],
+      "actual_energy": 26176,
+      "ideal_lattice_energy": 28319,
+      "root_error": -40,
+      "full_l1": 61,
+      "predicted_support": [
+        1,
+        3,
+        7,
+        51,
+        103,
+        107,
+        3281,
+        6561,
+        13121,
+        26243,
+        52487,
+        104971,
+        104975,
+        209939,
+        209951,
+        419879,
+        419903,
+        3359027,
+        6718055,
+        26872217,
+        107488863
+      ],
+      "predicted_support_size": 21
+    },
+    {
+      "N": 16384,
+      "d": 8,
+      "universe": 629856,
+      "actual_support": 7916,
+      "full_error": 1698,
+      "support_only_error": 1698,
+      "off_root_error": 98,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 4,
+      "off_root_error_count": 3,
+      "error_seeds": [
+        1,
+        3,
+        51,
+        103
+      ],
+      "error_vector": [
+        [
+          1,
+          -40
+        ],
+        [
+          3,
+          -9
+        ],
+        [
+          51,
+          1
+        ],
+        [
+          103,
+          4
+        ]
+      ],
+      "actual_energy": 26186,
+      "ideal_lattice_energy": 28324,
+      "root_error": -40,
+      "full_l1": 54,
+      "predicted_support": [
+        1,
+        3,
+        7,
+        51,
+        103,
+        107,
+        3281,
+        6561
+      ],
+      "predicted_support_size": 8
+    },
+    {
+      "N": 16385,
+      "d": 8,
+      "universe": 629894,
+      "actual_support": 7917,
+      "full_error": 1706,
+      "support_only_error": 1706,
+      "off_root_error": 106,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 6,
+      "off_root_error_count": 5,
+      "error_seeds": [
+        1,
+        3,
+        51,
+        103,
+        3281,
+        6563
+      ],
+      "error_vector": [
+        [
+          1,
+          -40
+        ],
+        [
+          3,
+          -9
+        ],
+        [
+          51,
+          1
+        ],
+        [
+          103,
+          4
+        ],
+        [
+          3281,
+          -2
+        ],
+        [
+          6563,
+          -2
+        ]
+      ],
+      "actual_energy": 26190,
+      "ideal_lattice_energy": 28324,
+      "root_error": -40,
+      "full_l1": 58,
+      "predicted_support": [
+        1,
+        3,
+        7,
+        51,
+        103,
+        107,
+        3281,
+        6563,
+        13123,
+        52491,
+        104983,
+        839859,
+        1679719,
+        1679723,
+        53750993,
+        107501985
+      ],
+      "predicted_support_size": 16
+    },
+    {
+      "N": 65535,
+      "d": 8,
+      "universe": 2519386,
+      "actual_support": 31641,
+      "full_error": 606,
+      "support_only_error": 605,
+      "off_root_error": 30,
+      "omitted_energy": 1,
+      "omitted_seeds": [
+        839807
+      ],
+      "error_count": 8,
+      "off_root_error_count": 7,
+      "error_seeds": [
+        1,
+        3,
+        51,
+        103,
+        209951,
+        419899,
+        419903,
+        839807
+      ],
+      "error_vector": [
+        [
+          1,
+          24
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          51,
+          -2
+        ],
+        [
+          103,
+          -2
+        ],
+        [
+          209951,
+          2
+        ],
+        [
+          419899,
+          2
+        ],
+        [
+          419903,
+          2
+        ],
+        [
+          839807,
+          1
+        ]
+      ],
+      "actual_energy": 105370,
+      "ideal_lattice_energy": 106904,
+      "root_error": 24,
+      "full_l1": 38,
+      "predicted_support": [
+        1,
+        3,
+        7,
+        51,
+        103,
+        107,
+        3281,
+        6561,
+        52487,
+        104975,
+        209951,
+        419899,
+        419903,
+        839795,
+        839807,
+        1679591,
+        1679615,
+        13436723,
+        26873447,
+        107493785,
+        429975135
+      ],
+      "predicted_support_size": 21
+    },
+    {
+      "N": 65536,
+      "d": 8,
+      "universe": 2519424,
+      "actual_support": 31643,
+      "full_error": 597,
+      "support_only_error": 593,
+      "off_root_error": 21,
+      "omitted_energy": 4,
+      "omitted_seeds": [
+        6561
+      ],
+      "error_count": 5,
+      "off_root_error_count": 4,
+      "error_seeds": [
+        1,
+        3,
+        51,
+        103,
+        6561
+      ],
+      "error_vector": [
+        [
+          1,
+          24
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          51,
+          -2
+        ],
+        [
+          103,
+          -2
+        ],
+        [
+          6561,
+          -2
+        ]
+      ],
+      "actual_energy": 105380,
+      "ideal_lattice_energy": 106913,
+      "root_error": 24,
+      "full_l1": 33,
+      "predicted_support": [
+        1,
+        3,
+        7,
+        51,
+        103,
+        107,
+        3281,
+        6561
+      ],
+      "predicted_support_size": 8
+    },
+    {
+      "N": 65537,
+      "d": 8,
+      "universe": 2519462,
+      "actual_support": 31644,
+      "full_error": 597,
+      "support_only_error": 597,
+      "off_root_error": 21,
+      "omitted_energy": 0,
+      "omitted_seeds": [],
+      "error_count": 5,
+      "off_root_error_count": 4,
+      "error_seeds": [
+        1,
+        3,
+        51,
+        103,
+        13123
+      ],
+      "error_vector": [
+        [
+          1,
+          24
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          51,
+          -2
+        ],
+        [
+          103,
+          -2
+        ],
+        [
+          13123,
+          2
+        ]
+      ],
+      "actual_energy": 105384,
+      "ideal_lattice_energy": 106913,
+      "root_error": 24,
+      "full_l1": 33,
+      "predicted_support": [
+        1,
+        3,
+        7,
+        51,
+        103,
+        107,
+        3281,
+        6561,
+        6563,
+        13123,
+        52489,
+        209955,
+        419911,
+        3359283,
+        6718567,
+        6718571,
+        214994129,
+        429988257
+      ],
+      "predicted_support_size": 18
+    }
+  ]
+}
