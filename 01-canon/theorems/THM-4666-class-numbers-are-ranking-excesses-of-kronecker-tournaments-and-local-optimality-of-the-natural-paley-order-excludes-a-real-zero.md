@@ -72,7 +72,12 @@ the Legendre walk; `<x>` is the least nonnegative residue.
    jumps, and the best rotation order is the maximal prefix sum, an `O(p^2)` computation. Since `R_α` tends to the
    reversed natural order as `α -> 1`, this gives the **Farey class number identity**
    `Σ_(b=2)^(p-1) φ(b) Δ_b = -2 p h(-p)`. The natural order is the best rotation order iff every prefix sum of the jump
-   sequence is `<= 0`; call this set of primes `R+`, the rotation analogue of `L+`.
+   sequence is `<= 0`; call this set of primes `R+`, the rotation analogue of `L+`. Since
+   `frac((1 - α)x) = 1 - frac(αx)`, the excess is antisymmetric, `E(1 - α) = -E(α)`. In particular the order
+   `(0, p-2, p-4, ..., 1, p-1, p-3, ..., 2)` (just below `α = 1/2`) has excess
+   `-Δ_2/2 = -χ(2)[S((p-1)/2) + 2A((p-1)/2)]`. The first `(p-1)/2` jumps (`b = p - k`, `q = 1`) are `-2kχ(k)`, so `p ∈ R+`
+   requires the weighted walk positivity `Σ_(k<=K) kχ(k) >= 0` for `K <= (p-1)/2`. This is necessary, but it fails to
+   decide at 118 of the 245 scanned primes.
 2. **(Half window, CITED: Dirichlet.)** For `p ≡ 3 (mod 4)`, `p > 3`: vertex 0 of `P_p` has out-degree minus in-degree
    `S((p-1)/2) = (2 - (2/p)) h(-p)` on the half circle `{1, ..., (p-1)/2}`.
 3. **(Arcs at a vertex are split primes, PROVED.)** For every prime `q ≠ p`, `0 → (q mod p)` in `P_p` iff `q` splits in
@@ -151,8 +156,8 @@ the Legendre walk; `<x>` is the least nonnegative residue.
    change by `2 Σ_(x ∈ B) χ(x) = 2χ(b)S(k_0)`, because `Σ_(r ∈ Z/p) χ(x - r) = 0` and the double sum over the block is
    antisymmetric; the pairs with 0 are unchanged. There are `s` classes of size `q + 1`, `b - 1 - s` of size `q`, and
    `k_0 = q`. As `α -> 1^-` the order is `0, p-1, ..., 1`, of excess `-p h(-p)`, and each denominator `b >= 2` occurs
-   `φ(b)` times. Checks: direct excess on every Farey interval for all `p ≡ 3 (mod 4)`, `p <= 47`; the identity for
-   `p <= 400`. The sweep reproduces every audited rotation certificate (167: 1861, 263: 4079, 383: 7519, 439: 9313,
+   `φ(b)` times. Checks: direct excess on every Farey interval for all `p ≡ 3 (mod 4)`, `p <= 47`; the identity at all
+   338 primes `p ≡ 3 (mod 4)` up to 5000; the `α = 1/2` corollary at 154 primes below 2000. The sweep reproduces every audited rotation certificate (167: 1861, 263: 4079, 383: 7519, 439: 9313,
    503: 11657, 599: 15507, 647: 17661, 887: 28235, 983: 34225).
 3. Reciprocity as displayed; `χ_(-p)(n) = (n/p)`; the series for `L(1, χ_(-p))` and `h(-p) = sqrt(p) L(1, χ_(-p))/π`
    (`p > 3`; at `p = 3` the unit factor gives 1/3).

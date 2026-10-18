@@ -1,0 +1,1 @@
+Farey class number identity sum_b phi(b) Delta_b = -2 p h(-p): checked at 338 primes p = 3 (mod 4), 7 <= p <= 5000; failures: [] (30.1 s)
