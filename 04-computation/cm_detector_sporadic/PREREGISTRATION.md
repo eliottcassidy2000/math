@@ -140,3 +140,21 @@ Predictions:
     p == 3, 5, 6 (mod 7), inert in Q(sqrt-7), consistent with D = -7 and D = -28.
   - Reading: F_p is a square pulled back along the 2:1 Fricke quotient. It is simple only at the branch points, the
     elliptic CM points of Gamma_0(N)+.
+
+## Fourth pre-registration (written BEFORE running): the Lee-Yang weight-2 family on Gamma_0(5)+
+
+Context (exploratory, scratch): let H = (eta(5tau)/eta(tau))^6 = (chi_0 chi_{-1/5})^6, the Lee-Yang product to the
+sixth power, and x = H/(1 + 22H + 125H^2), which is Fricke-invariant (H -> 1/(125H)). Expanding
+Z = (5E_2(5tau) - E_2(tau))/4 in x gives U = 1, 6, 114, 2940, 87570, ..., with exact recurrence
+(found by nullspace from 50 terms; a = 21 and a = 23 admit none):
+
+    (n+1)^3 U_{n+1} = 2(2n+1)(11n^2+11n+3) U_n + 4n(4n^2-1) U_{n-1}.
+
+Predictions, for the recurrence-defined U (integrality checked to n = 520):
+- (P8a) The (B1') survivors in 0 < |m| <= 10^5 are nonempty and equal the density >= 0.3 set. (B1'_ord) gives
+  the same set.
+- (P8b) Every survivor is a CM point. Test: both roots s of s^2 + (22-m)s + 125 = 0, with s = 1/H. The value
+  j(5tau) = (s^2+10s+5)^3/s (to be verified numerically first, together with j(tau) = (s^2+250s+3125)^3/s^5) must
+  match j(tau_Q) for a reduced form with -4000 <= D < 0. Controls m = 3, 5, 11, 100 must fail.
+- (P8c) For 7 <= p <= 199, rad(F_p) | V, and the simple-root part of F_p divides 1 - 44x - 16x^2, the singular
+  polynomial with m = 22 +- 10 sqrt5 (D = -20 expected there).
