@@ -1,0 +1,453 @@
+{
+  "status": "PROVED scoped identities / FINITE-EXACT bounded checks",
+  "universe": {
+    "sequence_indices": [
+      0,
+      193
+    ],
+    "primes": [
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97
+    ],
+    "carry_indices": "every 0 <= r < p",
+    "source": [
+      7,
+      2,
+      -8
+    ]
+  },
+  "presentations": [
+    {
+      "d": 0,
+      "epsilon": -1,
+      "parameters": [
+        -7,
+        -2,
+        -8
+      ]
+    },
+    {
+      "d": 0,
+      "epsilon": 1,
+      "parameters": [
+        7,
+        2,
+        -8
+      ]
+    },
+    {
+      "d": -1,
+      "epsilon": -1,
+      "parameters": [
+        -10,
+        -3,
+        9
+      ]
+    },
+    {
+      "d": -1,
+      "epsilon": 1,
+      "parameters": [
+        10,
+        3,
+        9
+      ]
+    },
+    {
+      "d": 8,
+      "epsilon": -1,
+      "parameters": [
+        17,
+        6,
+        72
+      ]
+    },
+    {
+      "d": 8,
+      "epsilon": 1,
+      "parameters": [
+        -17,
+        -6,
+        72
+      ]
+    }
+  ],
+  "transforms": [
+    {
+      "target": "C",
+      "parameters": [
+        10,
+        3,
+        9
+      ],
+      "root": -1,
+      "orientation": 1,
+      "initial_terms": [
+        1,
+        3,
+        15,
+        93,
+        639,
+        4653,
+        35169,
+        272835,
+        2157759,
+        17319837
+      ],
+      "naive_transport_failures": 1001,
+      "first_naive_failure": {
+        "p": 7,
+        "r": 1,
+        "actual": 5,
+        "naive": 6,
+        "correction_before_orientation": 6
+      },
+      "primes": [
+        {
+          "p": 7,
+          "nonzero_corrections": 6,
+          "correction_sha256": "a0a7bb806e69a0f9e82844baa57e5f28a9cb3d6e7c2de4534c845f116a622c4c"
+        },
+        {
+          "p": 11,
+          "nonzero_corrections": 6,
+          "correction_sha256": "8659db0143ceefd7f450c24fbd0dc7ab4d48875a0b6e4d020cd116ad9403515c"
+        },
+        {
+          "p": 13,
+          "nonzero_corrections": 12,
+          "correction_sha256": "56321d2e487891411329fdb2ad51c480a36115511cdd56de2b38390ee07a46ce"
+        },
+        {
+          "p": 17,
+          "nonzero_corrections": 16,
+          "correction_sha256": "319171c18c5e601e745b4df85f39313b9317a2028b752acbe37978d266157dd5"
+        },
+        {
+          "p": 19,
+          "nonzero_corrections": 17,
+          "correction_sha256": "e26f456fdb44895415296682057a90a4b44cbe4f802fca4a069387c873a84939"
+        },
+        {
+          "p": 23,
+          "nonzero_corrections": 20,
+          "correction_sha256": "3e19859ac467ffd58653f1e787dc636662c332974d22efe6a485c6d8274e031b"
+        },
+        {
+          "p": 29,
+          "nonzero_corrections": 27,
+          "correction_sha256": "3dde3463d2650ee5b87e32662136d9c929602bfd93879dca218d66e026f74090"
+        },
+        {
+          "p": 31,
+          "nonzero_corrections": 30,
+          "correction_sha256": "993807e7277b90ef3df9c4c72682844ceb78d4665dbf516f7fd8b2e74746bc4e"
+        },
+        {
+          "p": 37,
+          "nonzero_corrections": 35,
+          "correction_sha256": "64fbbfb00bceb55e1a929a25f196940bd2b575433e8b232880fc86c8f3beef37"
+        },
+        {
+          "p": 41,
+          "nonzero_corrections": 39,
+          "correction_sha256": "7ac08fca50fac336c569e3486fcf146360b800a2015c30da06eab6b128fe4bcf"
+        },
+        {
+          "p": 43,
+          "nonzero_corrections": 41,
+          "correction_sha256": "a7f9cdc5713e76422b0537c2c7b4b031e343dee51d3926f068195e246de7f9e5"
+        },
+        {
+          "p": 47,
+          "nonzero_corrections": 44,
+          "correction_sha256": "d859b0d8b9442995e8441143ee3f83c561cf66749d98346077b7ab3b14815912"
+        },
+        {
+          "p": 53,
+          "nonzero_corrections": 51,
+          "correction_sha256": "c083f67f7278fee174b0dac51c63028ffbfba3af391f35ee41766e18c5201e2e"
+        },
+        {
+          "p": 59,
+          "nonzero_corrections": 57,
+          "correction_sha256": "5388fec0fc83fa119e09944c200aebad6e158c282921706708f02dfc7c70162d"
+        },
+        {
+          "p": 61,
+          "nonzero_corrections": 57,
+          "correction_sha256": "e0cdbbd701a9c244e0c9cf9e7a7430c143205648aed5a968b6f62fc206ed802a"
+        },
+        {
+          "p": 67,
+          "nonzero_corrections": 64,
+          "correction_sha256": "d6d2579e87ae14a46d053b45bd625d76bb50f6dded3eefcb457747746c0a4e68"
+        },
+        {
+          "p": 71,
+          "nonzero_corrections": 69,
+          "correction_sha256": "39d668193562a48803c20c22d7ee12d102b9579bbd070737c454e1221f233e6b"
+        },
+        {
+          "p": 73,
+          "nonzero_corrections": 71,
+          "correction_sha256": "1040deb24ac9adfe0d1ee1c6a0260d170737954e25a78ad44785864b28b2088e"
+        },
+        {
+          "p": 79,
+          "nonzero_corrections": 77,
+          "correction_sha256": "60bf9819201f2c66674118f43fce534c23426421167567c139d163247fa51743"
+        },
+        {
+          "p": 83,
+          "nonzero_corrections": 80,
+          "correction_sha256": "2ea56f11e609e58a50f3d08194afed1061ecb26862a7297072e262fd9b00d72f"
+        },
+        {
+          "p": 89,
+          "nonzero_corrections": 88,
+          "correction_sha256": "5f7c9d83e5455f0bf28f5dfd4f4c32292392e4297dd9c47c3e4143687223f8e8"
+        },
+        {
+          "p": 97,
+          "nonzero_corrections": 94,
+          "correction_sha256": "e807f768998fa7aeda782bd46b40a59c284d67a98cc310bdcfca18244ceb0e6a"
+        }
+      ]
+    },
+    {
+      "target": "F",
+      "parameters": [
+        17,
+        6,
+        72
+      ],
+      "root": 8,
+      "orientation": -1,
+      "initial_terms": [
+        1,
+        6,
+        42,
+        312,
+        2394,
+        18756,
+        149136,
+        1199232,
+        9729882,
+        79527084
+      ],
+      "naive_transport_failures": 1010,
+      "first_naive_failure": {
+        "p": 7,
+        "r": 1,
+        "actual": 2,
+        "naive": 6,
+        "correction_before_orientation": 3
+      },
+      "primes": [
+        {
+          "p": 7,
+          "nonzero_corrections": 5,
+          "correction_sha256": "f9eb85565d68f0801367124faf4b0d99fa7df15edd2831028528d2598d699d77"
+        },
+        {
+          "p": 11,
+          "nonzero_corrections": 10,
+          "correction_sha256": "c55cfcda4baf7041c5a19b9eca53404ba1ad3a04cae3b502a45a94d59975031c"
+        },
+        {
+          "p": 13,
+          "nonzero_corrections": 12,
+          "correction_sha256": "f861ced5bf8b08c9267422b1f99b471d0fd38fb0c6bfe930334db5180705b003"
+        },
+        {
+          "p": 17,
+          "nonzero_corrections": 16,
+          "correction_sha256": "40b8ed07cab7981451ae3e72d90f27b5ce8b53095823839cf0cf011c644510ab"
+        },
+        {
+          "p": 19,
+          "nonzero_corrections": 16,
+          "correction_sha256": "a5680910aa5a22d5c046e6d25374004ada054d55c7212f3be7b9311aafac2e82"
+        },
+        {
+          "p": 23,
+          "nonzero_corrections": 22,
+          "correction_sha256": "94b066acc1b415c2cc58198f041aaa254dbca2756598248a9a02bbbe056489d2"
+        },
+        {
+          "p": 29,
+          "nonzero_corrections": 27,
+          "correction_sha256": "d11af4f833bf2054a7e9dea7cf8edcb9788bd8d022fbb9e13f0367cabf50e63b"
+        },
+        {
+          "p": 31,
+          "nonzero_corrections": 28,
+          "correction_sha256": "f6230515443f2bb298270e6e1a5b77a3c120117fb4a2b09e2f39ddd2d0566e9d"
+        },
+        {
+          "p": 37,
+          "nonzero_corrections": 35,
+          "correction_sha256": "6a05dd715b328c0c928b3b2527a3b1d201b1f552b4af80af463f682695abca5e"
+        },
+        {
+          "p": 41,
+          "nonzero_corrections": 39,
+          "correction_sha256": "b0e77b1cfe7c6bb93fd1e34bb5400fe9ee110a63bd06ce2da429824dc5cae9dc"
+        },
+        {
+          "p": 43,
+          "nonzero_corrections": 42,
+          "correction_sha256": "5aafcf641c98ce95ec7399ef6d0fd494403fbae98b93006b544f16e52d5b5b08"
+        },
+        {
+          "p": 47,
+          "nonzero_corrections": 45,
+          "correction_sha256": "ff965b41074c6121c8d7875a5b324ded9e922778dc03328c251868e32d21795e"
+        },
+        {
+          "p": 53,
+          "nonzero_corrections": 50,
+          "correction_sha256": "8a585837c9948da101d45f6e14641c5f3340e8139d5f0260006ff49815eddb34"
+        },
+        {
+          "p": 59,
+          "nonzero_corrections": 57,
+          "correction_sha256": "7b48402f5e4d9776be9665e088c6f16efb6435e7b67be78476be96cab9ea20bc"
+        },
+        {
+          "p": 61,
+          "nonzero_corrections": 59,
+          "correction_sha256": "84f77af2dad0581631f1396ff5f325412e8a2d79aad3c95f3f0bc43d19efe221"
+        },
+        {
+          "p": 67,
+          "nonzero_corrections": 66,
+          "correction_sha256": "0d85476b61fc89c0adf8ce68efa759a48e33893d59c11ceb6fa016d4fbb54fda"
+        },
+        {
+          "p": 71,
+          "nonzero_corrections": 69,
+          "correction_sha256": "d5d86693177c0c5e0448b119558d1dd604877affa37f81bdf9390cdb8243646b"
+        },
+        {
+          "p": 73,
+          "nonzero_corrections": 72,
+          "correction_sha256": "c1870959c5b5676c06c863c2b5b48b3ccd8c780824fd5dd989aea6e2990cd6cb"
+        },
+        {
+          "p": 79,
+          "nonzero_corrections": 78,
+          "correction_sha256": "ab48a65bad74b5bb6afd1e7d6ffd7249713db908a7a2486aee955255f0c277a1"
+        },
+        {
+          "p": 83,
+          "nonzero_corrections": 80,
+          "correction_sha256": "6452c7c3b9a1ebe76f7723e8b29e39d72a97d1cb2d86959adb72d791a3ac8305"
+        },
+        {
+          "p": 89,
+          "nonzero_corrections": 87,
+          "correction_sha256": "169d9c75081c97af37e471e62a08c21ca5d5cf749ef6b532655ca32723bf2359"
+        },
+        {
+          "p": 97,
+          "nonzero_corrections": 95,
+          "correction_sha256": "d787b570ce11d16d64ae7c56ec6bb6463fb53cdcf7fdb3a84fef855cfa57c08c"
+        }
+      ]
+    }
+  ],
+  "S4_hostile": {
+    "ordered_frames": 24,
+    "edge_action_kernel_size": 1,
+    "crossratio_action_kernel_size": 4,
+    "witness_permutation": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "witness_edge_action": [
+      0,
+      4,
+      3,
+      2,
+      1,
+      5
+    ],
+    "witness_matching_action": [
+      0,
+      1,
+      2
+    ],
+    "consequence": "No S4-equivariant bijection between the six K4 edges and a generic six-value crossratio orbit."
+  },
+  "variable_pair_labels": {
+    "graph": "abstract K4; no plane embedding claimed",
+    "labels": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "basis": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        2,
+        3
+      ]
+    ],
+    "missed_odd_cycle": [
+      1,
+      2,
+      3
+    ],
+    "labelings_tested": 81,
+    "labelings_with_six_colour_lift": 54,
+    "pin_guard_hostile": {
+      "vertices": 1,
+      "edges": [],
+      "pin_colour": 0,
+      "proposed_label": 1
+    },
+    "consequence": "A cycle basis does not suffice to constrain all monochromatic odd cycles."
+  },
+  "checks": 10704,
+  "limitations": [
+    "No Hadwiger-Nelson or Collatz reduction.",
+    "Classical binomial transform is attributed to Zagier and Liu.",
+    "Carry theorem assumes first-block Lucas; bounded checks are not that theorem.",
+    "Integer rescaling API is restricted to epsilon=+1 or -1."
+  ]
+}

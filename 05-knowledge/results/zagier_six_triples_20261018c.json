@@ -1,0 +1,442 @@
+{
+  "canonical": [
+    {
+      "branch_carrier_j": "1556068/81",
+      "coefficients_0_to_8": [
+        "1",
+        "2",
+        "10",
+        "56",
+        "346",
+        "2252",
+        "15184",
+        "104960",
+        "739162"
+      ],
+      "name": "A",
+      "root_discriminant": 81,
+      "triple": [
+        7,
+        2,
+        -8
+      ]
+    },
+    {
+      "branch_carrier_j": "0",
+      "coefficients_0_to_8": [
+        "1",
+        "3",
+        "9",
+        "21",
+        "9",
+        "-297",
+        "-2421",
+        "-12933",
+        "-52407"
+      ],
+      "name": "B",
+      "root_discriminant": -27,
+      "triple": [
+        9,
+        3,
+        27
+      ]
+    },
+    {
+      "branch_carrier_j": "1556068/81",
+      "coefficients_0_to_8": [
+        "1",
+        "3",
+        "15",
+        "93",
+        "639",
+        "4653",
+        "35169",
+        "272835",
+        "2157759"
+      ],
+      "name": "C",
+      "root_discriminant": 64,
+      "triple": [
+        10,
+        3,
+        9
+      ]
+    },
+    {
+      "branch_carrier_j": "488095744/125",
+      "coefficients_0_to_8": [
+        "1",
+        "3",
+        "19",
+        "147",
+        "1251",
+        "11253",
+        "104959",
+        "1004307",
+        "9793891"
+      ],
+      "name": "D",
+      "root_discriminant": 125,
+      "triple": [
+        11,
+        3,
+        -1
+      ]
+    },
+    {
+      "branch_carrier_j": "1728",
+      "coefficients_0_to_8": [
+        "1",
+        "4",
+        "20",
+        "112",
+        "676",
+        "4304",
+        "28496",
+        "194240",
+        "1353508"
+      ],
+      "name": "E",
+      "root_discriminant": 16,
+      "triple": [
+        12,
+        4,
+        32
+      ]
+    },
+    {
+      "branch_carrier_j": "1556068/81",
+      "coefficients_0_to_8": [
+        "1",
+        "6",
+        "42",
+        "312",
+        "2394",
+        "18756",
+        "149136",
+        "1199232",
+        "9729882"
+      ],
+      "name": "F",
+      "root_discriminant": 1,
+      "triple": [
+        17,
+        6,
+        72
+      ]
+    }
+  ],
+  "checks": 9938,
+  "divisor_records": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      12,
+      6
+    ],
+    [
+      24,
+      8
+    ],
+    [
+      36,
+      9
+    ],
+    [
+      48,
+      10
+    ],
+    [
+      60,
+      12
+    ],
+    [
+      120,
+      16
+    ]
+  ],
+  "golden_signatures": [
+    {
+      "c": -1,
+      "power": 1,
+      "signature": [
+        1,
+        1,
+        5
+      ]
+    },
+    {
+      "c": 1,
+      "power": 2,
+      "signature": [
+        3,
+        1,
+        5
+      ]
+    },
+    {
+      "c": -1,
+      "power": 3,
+      "signature": [
+        4,
+        2,
+        20
+      ]
+    },
+    {
+      "c": 1,
+      "power": 4,
+      "signature": [
+        7,
+        3,
+        45
+      ]
+    },
+    {
+      "c": -1,
+      "power": 5,
+      "signature": [
+        11,
+        5,
+        125
+      ]
+    },
+    {
+      "c": 1,
+      "power": 6,
+      "signature": [
+        18,
+        8,
+        320
+      ]
+    }
+  ],
+  "integer_atlas": [
+    {
+      "context_route": "abc_difference_families_20261011c.md",
+      "integer": -1,
+      "recurrence_role": "D: signed c; odd golden norm",
+      "retained_boundary": "L5^2-5F5^2=-4 determines c=-1, but not accessory b"
+    },
+    {
+      "context_route": "lucas_block_cm_detector_sporadic_ad_hauptmoduln_20261018.md",
+      "integer": 3,
+      "recurrence_role": "B,C,D: accessory b; B also has discriminant -27",
+      "retained_boundary": "accessory coefficient and bad-prime/splitting data are different roles"
+    },
+    {
+      "context_route": "divisor_equation_recursions_20261011f.md",
+      "integer": 4,
+      "recurrence_role": "E: accessory b and one reciprocal singular slope",
+      "retained_boundary": "also a divisor-record input; no map from divisor records to an operator"
+    },
+    {
+      "context_route": "abc_difference_families_20261011c.md",
+      "integer": 5,
+      "recurrence_role": "D: square-root field and F5; supplied accessory mistakes",
+      "retained_boundary": "the square-root coefficient is not the recurrence accessory"
+    },
+    {
+      "context_route": "digit_idoneal_difference_20261018b.md",
+      "integer": 9,
+      "recurrence_role": "B: a; C: c and reciprocal singular slope",
+      "retained_boundary": "the C9 digit tournament is a different marked object"
+    },
+    {
+      "context_route": "paley_next_cores_20261014i.md",
+      "integer": 10,
+      "recurrence_role": "C: a",
+      "retained_boundary": "ten-edge core count does not supply a recurrence transformation"
+    },
+    {
+      "context_route": "jacobian_elliptic_bridge_20261016c.md",
+      "integer": 11,
+      "recurrence_role": "D: a=L5",
+      "retained_boundary": "golden singular splitting is Q(sqrt5), not the HN field Q(sqrt(-11))"
+    },
+    {
+      "context_route": "divisor_equation_recursions_20261011f.md",
+      "integer": 12,
+      "recurrence_role": "E: a",
+      "retained_boundary": "strict divisor record12 is distinct from twelve-valued torsion markings"
+    },
+    {
+      "context_route": "fermat_wieferich_order_20261014e.md",
+      "integer": 17,
+      "recurrence_role": "F: a",
+      "retained_boundary": "Fermat prime17 gives no accessory b; canonical F requires6"
+    },
+    {
+      "context_route": "wheel_apery_extension_20261014h.md",
+      "integer": 27,
+      "recurrence_role": "B: c=3^3, discriminant=-27",
+      "retained_boundary": "prime-power field size and recurrence coefficient require separate inputs"
+    },
+    {
+      "context_route": "divisor_equation_recursions_20261011f.md",
+      "integer": 32,
+      "recurrence_role": "E: c=2^5",
+      "retained_boundary": "a prime power need not be a strict divisor record"
+    },
+    {
+      "context_route": "lucas_block_cm_detector_sporadic_ad_hauptmoduln_20261018.md",
+      "integer": 72,
+      "recurrence_role": "F: c=8*9",
+      "retained_boundary": "the two slopes8,9 survive accessory perturbation b6 to b5"
+    },
+    {
+      "context_route": "abc_difference_families_20261011c.md",
+      "integer": 125,
+      "recurrence_role": "D: discriminant=5^3; supplied alternative c",
+      "retained_boundary": "putting a discriminant in the c slot changes the singular set"
+    }
+  ],
+  "literal_supplied": [
+    {
+      "branch_carrier_j": "0",
+      "canonical_names": [
+        "B"
+      ],
+      "prefix": [
+        "1",
+        "3",
+        "9",
+        "21",
+        "9",
+        "-297"
+      ],
+      "triple": [
+        9,
+        3,
+        27
+      ]
+    },
+    {
+      "branch_carrier_j": "488095744/125",
+      "canonical_names": [
+        "D"
+      ],
+      "prefix": [
+        "1",
+        "3",
+        "19",
+        "147",
+        "1251",
+        "11253"
+      ],
+      "triple": [
+        11,
+        3,
+        -1
+      ]
+    },
+    {
+      "branch_carrier_j": "1556068/81",
+      "canonical_names": [
+        "C"
+      ],
+      "prefix": [
+        "1",
+        "3",
+        "15",
+        "93",
+        "639",
+        "4653"
+      ],
+      "triple": [
+        10,
+        3,
+        9
+      ]
+    },
+    {
+      "branch_carrier_j": "4195088384/5921875",
+      "canonical_names": [],
+      "prefix": [
+        "1",
+        "5",
+        "5/2",
+        "-4645/18",
+        "-343495/144",
+        "-118655/144"
+      ],
+      "triple": [
+        11,
+        5,
+        125
+      ]
+    },
+    {
+      "branch_carrier_j": "1728",
+      "canonical_names": [
+        "E"
+      ],
+      "prefix": [
+        "1",
+        "4",
+        "20",
+        "112",
+        "676",
+        "4304"
+      ],
+      "triple": [
+        12,
+        4,
+        32
+      ]
+    },
+    {
+      "branch_carrier_j": "1556068/81",
+      "canonical_names": [],
+      "prefix": [
+        "1",
+        "5",
+        "123/4",
+        "2467/12",
+        "276491/192",
+        "16639217/1600"
+      ],
+      "triple": [
+        17,
+        5,
+        72
+      ]
+    }
+  ],
+  "not_claimed": [
+    "all integral triples classified",
+    "accessory recovered from j",
+    "auxiliary branch cover identified with a Picard-Fuchs fibre",
+    "all golden powers produce integral sporadic recurrences"
+  ],
+  "status": "FINITE-EXACT controls of the proved typed identities; not global integrality classification",
+  "universe": {
+    "binomial_sum_last_index": 16,
+    "canonical_last_index": 24,
+    "divisor_record_bound": 125,
+    "golden_power_indices": [
+      1,
+      24
+    ],
+    "integer_parameter_cube": [
+      -3,
+      5
+    ],
+    "jet_decoded_count": 720
+  }
+}
