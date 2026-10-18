@@ -1,0 +1,8 @@
+(1) 3280 triples to depth 7: all a^2 + b^2 = c^2 with every prime factor of c = 1 mod 4: True
+(2) no n in 2..10^6 has 4n^2 - 1 a perfect square: True
+(3) branch C,A,C,A,...: [(3, 4, 5), (15, 8, 17), (33, 56, 65), (209, 120, 241), (451, 780, 901), (2911, 1680, 3361)]
+    hypotenuses [5, 17, 65, 241, 901, 3361, 12545, 46817, 174725] ; each has a leg (c +- 1)/2 (symmetric 3-step walk): True
+    Pell data (c, X, Y = other leg, X^2 - 3Y^2): [(5, 7, 4, 1), (17, 26, 15, 1), (65, 97, 56, 1), (241, 362, 209, 1), (901, 1351, 780, 1), (3361, 5042, 2911, 1)]
+    exact: 1/c = delta + conj(delta) - 1 (or 1 - delta - conj(delta)) for the first seven branch triples: True
+    near-60 triples (leg = (c +- 1)/2) among all triples to depth 9: [5, 17, 65, 241, 901, 3361, 12545, 46817, 174725, 652081] ; branch hypotenuses [5, 17, 65, 241, 901, 3361, 12545, 46817, 174725]
+(4) branch B,B,B,...: [(3, 4, 5), (21, 20, 29), (119, 120, 169), (697, 696, 985), (4059, 4060, 5741)] ; legs differ by one: True

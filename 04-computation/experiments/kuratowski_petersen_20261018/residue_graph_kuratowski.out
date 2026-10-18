@@ -1,0 +1,37 @@
+(1) characteristic two
+  G_2: 4 vertices, complete graph K_4: True
+  G_4 isomorphic to the Clebsch graph: True ; chromatic number of Clebsch = 4 is classical
+  non-neighbours of 0: 10 = the ten two-sums of mu_5: True ; they induce the Petersen graph: True ; adjacency = disjoint pairs (Kneser K(5,2)): True
+(2) local Kuratowski data of G_q
+  q =  2: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 2 ; K_4 present: True
+  q =  3: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 1 ; K_4 present: False
+  q =  4: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 0 ; K_4 present: False
+  q =  5: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 2 ; K_4 present: False
+  q =  7: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 0 ; K_4 present: False
+  q =  8: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 2 ; K_4 present: True
+  q =  9: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 1 ; K_4 present: False
+  q = 11: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 2 ; K_4 present: False
+  q = 13: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 0 ; K_4 present: False
+  q = 16: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 0 ; K_4 present: False
+  q = 17: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 2 ; K_4 present: False
+  q = 19: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 0 ; K_4 present: False
+  q = 23: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 2 ; K_4 present: False
+  q = 25: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 0 ; K_4 present: False
+  q = 27: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 1 ; K_4 present: False
+  q = 29: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 2 ; K_4 present: False
+  q = 31: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 0 ; K_4 present: False
+  q = 32: max common neighbours of distinct vertices 2 (K_(2,3)-free: True) ; common neighbours of an edge 2 ; K_4 present: True
+(3) the Petersen graph inside G_q, symmetry-reduced backtracking (vertex 0 -> 0 and 1 -> 1 by transitivity)
+  q =  3: Petersen graph is a subgraph of G_q: False
+  q =  5: Petersen graph is a subgraph of G_q: False
+  q =  7: Petersen graph is a subgraph of G_q: False
+  q =  9: Petersen graph is a subgraph of G_q: False
+  q = 11: Petersen graph is a subgraph of G_q: False
+  q = 13: Petersen graph is a subgraph of G_q: False
+  q = 17: Petersen graph is a subgraph of G_q: True ; e.g. images of vertices 0..9: [(0, 0), (1, 0), (7, 15), (7, 16), (6, 15), (2, 8), (2, 1), (1, 7), (8, 16), (0, 7)]
+  q = 19: Petersen graph is a subgraph of G_q: True ; e.g. images of vertices 0..9: [(0, 0), (1, 0), (16, 17), (16, 18), (12, 16), (2, 15), (3, 4), (17, 17), (0, 11), (10, 1)]
+  q = 23: Petersen graph is a subgraph of G_q: False
+  q = 25: Petersen graph is a subgraph of G_q: False
+  q = 27: Petersen graph is a subgraph of G_q: False
+  q = 29: Petersen graph is a subgraph of G_q: False
+  q = 31: Petersen graph is a subgraph of G_q: False

@@ -1,0 +1,12 @@
+kappa = b: over the 21 copy pairs, min_(x,y) house(y - x + kappa (m' - m)) ranges 1.4368 .. 5.5965
+   => every unit walk between two distinct copies of C + bM has length >= 2
+   pair (m1, m4): house 1.436832 at (x, y) = (8, 9)
+   pair (m2, m5): house 2.058082 at (x, y) = (0, 5)
+   pair (m0, m4): house 2.832321 at (x, y) = (8, 7)
+   pair (m5, m6): house 2.832321 at (x, y) = (8, 7)
+kappa = c: over the 21 copy pairs, min_(x,y) house(y - x + kappa (m' - m)) ranges 1.0755 .. 6.1677
+   => every unit walk between two distinct copies of C + cM has length >= 2
+   pair (m1, m4): house 1.075509 at (x, y) = (7, 4)
+   pair (m2, m5): house 1.928180 at (x, y) = (7, 5)
+   pair (m3, m6): house 2.432644 at (x, y) = (7, 6)
+   pair (m0, m4): house 3.172463 at (x, y) = (0, 1)

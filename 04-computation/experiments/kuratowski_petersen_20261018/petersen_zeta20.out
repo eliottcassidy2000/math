@@ -1,0 +1,6 @@
+60-digit check: R^2 = 0.72360679774997896964, (5 + sqrt5)/10 = 0.72360679774997896964 ; max |edge^2 - 1| over the 15 edges = 6.223e-61
+rigidity matrix rank 15 (smallest singular values [1.4406 1.1896 1.1896]): real realizations near this one form a 2-parameter family modulo motions
+q =  19: ten distinct points: True ; all fifteen Petersen edges of norm 1 in F_(q^2): True ; N(R) + N(r) = 1: True
+q =  59: ten distinct points: True ; all fifteen Petersen edges of norm 1 in F_(q^2): True ; N(R) + N(r) = 1: True
+q =  79: ten distinct points: True ; all fifteen Petersen edges of norm 1 in F_(q^2): True ; N(R) + N(r) = 1: True
+q = 139: ten distinct points: True ; all fifteen Petersen edges of norm 1 in F_(q^2): True ; N(R) + N(r) = 1: True

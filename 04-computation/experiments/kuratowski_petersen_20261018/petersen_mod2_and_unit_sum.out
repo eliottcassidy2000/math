@@ -1,0 +1,2 @@
+(a) ten distinct reduced points: True ; equal to the non-neighbours of 0 in G_4: True ; all 15 edges map to unit (norm-1) differences: True
+(b) for all 45 pairs of two-sums: s + s' is a unit vector exactly when the index pairs are disjoint: True

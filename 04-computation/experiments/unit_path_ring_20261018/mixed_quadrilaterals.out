@@ -1,0 +1,4 @@
+k = a: conic point True ; two-sum norms True/True ; closed walk u1 + u2 + (e1 + e2)/k = 0: True ; steps are units: True ; non-parallelogram: True ; 4 distinct vertices: True
+k = b: conic point True ; two-sum norms True/True ; closed walk u1 + u2 + (e1 + e2)/k = 0: True ; steps are units: True ; non-parallelogram: True ; 4 distinct vertices: True
+k = c: conic point True ; two-sum norms True/True ; closed walk u1 + u2 + (e1 + e2)/k = 0: True ; steps are units: True ; non-parallelogram: True ; 4 distinct vertices: True
+ALL MIXED QUADRILATERALS VERIFIED

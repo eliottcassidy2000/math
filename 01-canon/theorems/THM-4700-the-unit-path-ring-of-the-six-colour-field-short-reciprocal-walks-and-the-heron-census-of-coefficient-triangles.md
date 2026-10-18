@@ -1,6 +1,6 @@
 ---
 id: THM-4700
-title: "The unit-path ring of the six-colour field F = Q(zeta15, sqrt-11, w): clock_duality's B2 holds in F, so the component of 0 in the unit-distance graph is the intersection of the localizations at the conjugation-fixed primes, which lie exactly over the primes p = 14 mod 15 with (p/11) = -1 (8 or 24 of them per p); 1/n is unit-reachable iff n has no such prime factor (least excluded prime 29); short reciprocal walks, with the two-step reciprocals given by four Pell equations; the Heron criterion for triangles in a CM field; and the census of coefficient triangles of the cubic recipe (only equilateral and golden), so its b- and c-fibres admit no translation matching while single reflection links always exist"
+title: "The unit-path ring of the six-colour field F = Q(zeta15, sqrt-11, w): clock_duality's B2 holds in F, so the component of 0 in the unit-distance graph is the intersection of the localizations at the conjugation-fixed primes, which lie exactly over the primes p = 14 mod 15 with (p/11) = -1 (8 or 24 of them per p); 1/n is unit-reachable iff n has no such prime factor (least excluded prime 29); short reciprocal walks, with the two-step reciprocals given by the Pell equations x^2 - D y^2 = 1 of the four imaginary quadratic subfields Q(sqrt-D) of F; the Heron criterion for triangles in a CM field; and the census of coefficient triangles of the cubic recipe (only equilateral and golden), so its b- and c-fibres admit no translation matching, while single reflection links and mixed quadrilaterals (split by the coefficient itself through the quaternion algebra (N, -3)) always exist"
 status: >
   PROVED: statements 1-3 and 5. Statement 4 is PROVED for the six realizable triangles (explicit constructions) and
   FINITE-EXACT for the fourteen excluded ones: each has an explicit quadratic non-residue certificate at a degree-one
@@ -22,7 +22,10 @@ verification:
   - 04-computation/experiments/unit_path_ring_20261018/unit_path_ring_six_colour.py (+ .out): generators of O_F in Gamma, every walk of statement 2, the reflection link, recipe denominators (17 exact checks)
   - 04-computation/experiments/unit_path_ring_20261018/heron_census.py (+ .out, .json): the twenty side multisets of statement 4
   - 04-computation/experiments/unit_path_ring_20261018/matching_criterion.py (+ .out, .json): 1 - 4N for a, b, c; spindle pair denominators
-  - 04-computation/experiments/unit_path_ring_20261018/two_step_reciprocals.out: the n <= 3000 with L(1/n) = 2
+  - 04-computation/experiments/unit_path_ring_20261018/two_step_reciprocals.out: the n <= 12000 with L(1/n) = 2
+  - 04-computation/experiments/unit_path_ring_20261018/mixed_quadrilaterals.py (+ .out): statement 5(e) for a, b, c
+  - 04-computation/experiments/unit_path_ring_20261018/house_bound.py (+ .out, .json): conjugate-modulus bounds for the 21 copy pairs
+  - 04-computation/experiments/kuratowski_petersen_20261018/pythagorean_tree_walks.py (+ .out): the rational-plane remark
   - 04-computation/experiments/unit_path_ring_20261018/explicit_inverses.py (+ .out): the first explicit walks (session start)
   - 04-computation/experiments/merge_18_19_11_22_20261018/fixed_places_golden_field.py (+ .out): the fixed places for p <= 2099 (PARI-confirmed to 1300 by audit F3)
 ---
@@ -82,9 +85,13 @@ The components of `G(F)` are the cosets `x + Gamma`.
 | `1/17` | `18 delta + 18 delta^-1 - 28`, `g = (11 + sqrt-15)/2` | 64 |
 | `1/11` | clock_duality's connector `11 sum beta_r - 38` | 82 |
 
-- **Two-step reciprocals.** For `n >= 2`, `L(1/n) = 2` iff `2n = x` for a solution of `x^2 - 3k y^2 = 1` with
-  `k ∈ {1, 5, 33}`. The class `k = 165` would also be allowed, but `x^2 - 495 y^2 = 1` has no solution with `x` even.
-  The values are `n = 2, 5, 13, 122, 181, 1985, 2521, 7562, ...`, from `k = 5, 33, 1, 5, 1, 33, 1, 5`.
+- **Two-step reciprocals.** For `n >= 2`, `L(1/n) = 2` iff `(2n)^2 - D y^2 = 1` for some integer `y` and some
+  `D ∈ {3, 11, 15, 55}`. These are the imaginary quadratic subfields `Q(sqrt-D)` of `F`, and the walk is then
+  `1/n = v + conj(v)` with `v = (1 + y sqrt-D)/(2n)`.
+  - `D = 55` contributes nothing: its fundamental solution `(89, 12)` has odd `x`, and the recurrence preserves parity.
+  - The values are `n = 2, 5, 13, 122, 181, 1985, 2521, 7562, ...`, from `D = 15, 11, 3, 15, 3, 11, 3, 15`.
+  - They are the leg-one solutions `1 + D y^2 = (2n)^2`. Compare the Pell branch (legs differing by one) of Berggren's
+    tree, in the remarks.
 
 **3. The Heron criterion.** Let `R_1, R_2, R_3` in `F+` be totally positive, and suppose some `z_1` in `F` has
 `N(z_1) = R_1`. Then there is `z_2` in `F` with `N(z_2) = R_2`, `N(z_1 - z_2) = R_3` and `z_2/z_1` not in `F+` iff
@@ -120,7 +127,17 @@ that are not both equal to it.
   available.
 - **(d) Connector length.** No walk of one or two unit steps joins two copies of `C + bM` or of `C + cM`. The one-step
   case is clock_duality's observation; the two-step case is THM-4690's connector census, with certified non-squares.
-  The least connector length is therefore at least 3, and finite by (a).
+  The least connector length is therefore at least 3, and finite by (a). For some copy pairs the conjugate-modulus
+  bound `L(x) >= max_sigma |sigma(x)|` gives more: up to 6 or 7 for the farthest pairs, though only 2 for the closest
+  (`house_bound.out`).
+- **(e) Mixed quadrilaterals always exist.** For every `k` in `F^*` there is a closed walk `u_1 + u_2 + (e_1 + e_2)/k = 0`
+  with units `u_i`, `e_i`, `u_1 + u_2 ≠ 0` and four distinct vertices: two unit sides and two sides `d_k`.
+  - Explicitly, write `k = A + B sqrt-3` with `A, B` in `F+` and `B ≠ 0`; replace `k` by `ek` if necessary. Put
+    `N = k conj(k)`, `t = (1 + A)/(3B)` and `sigma = (A + N)/(3B)`.
+  - Then `sigma^2 - N t^2 = (N - 1)/3`, and `z = u_1 + u_2 = 2/(conj(k)(1 + t sqrt-3))`.
+  - Checked exactly for `a`, `b` and `c` (`mixed_quadrilaterals.py`).
+  - By contrast, a quadrilateral with three `d_k` sides and one unit side would need `L(k) <= 3`. This is excluded for
+    `b` and `c`, since `max|sigma(b)| = 3.70` and `max|sigma(c)| = 4.12`.
 
 ## Proofs
 
@@ -172,16 +189,17 @@ in `S`, no fixed prime lies over `p`, and `1/p` is in every `(O_F)_P` occurring 
 - **The `delta` trick.** If `g` is in `F^*`, put `t = g + conj g` and `n = g conj g`. Then `delta = conj(g)/g` is in `U`
   and `delta + delta^-1 = t^2/n - 2`. With `t = 1` this gives `1/n = delta + delta^-1 + 2`. For `1/23` and `1/17`,
   Bezout combines `t^2/n` with integers.
-- **Two-step reciprocals.** Statement 3 with `N = 1/n^2` asks for `(4n^2 - 1)/3` to lie in `(F+)^{*2}`. A positive
-  rational is a square in `F+` iff its square class lies in `{1, 5, 33, 165}`:
-  - the real quadratic subfields of `F+` are those of `K+`, because `[F+ : K+] = 3` is odd;
-  - and those are `Q(sqrt5)`, `Q(sqrt33)`, `Q(sqrt165)`.
-
-  If `3 | n`, the square class contains 3, so this cannot happen. Otherwise `4n^2 - 1 = 3k y^2`, which gives four
-  Pell equations `x^2 - 3k y^2 = 1` with `x = 2n` even. Their fundamental solutions are `(2, 1)`, `(4, 1)`, `(10, 1)`
-  and `(89, 4)`. In the first three, `x` is even exactly at the odd powers. For `k = 165`, the recurrence
-  `x' = 89x + 1980y` keeps `x` odd, so there is no solution. The list `n <= 12000` was cross-checked by brute force
-  (`two_step_reciprocals.out`).
+- **Two-step reciprocals.**
+  - If `1/n = u_1 + u_2` with `u_i` in `U`, then `|1/n - u_1| = 1` gives `u_1 + conj(u_1) = 1/n`, so `u_2 = conj(u_1)`.
+    Write `u_1 = (1 + s)/(2n)` with `s` in `sqrt-3·F+`.
+  - Then `N(u_1) = 1` iff `s^2 = -(4n^2 - 1)`. So `sqrt(-(4n^2 - 1))` must lie in `F`.
+  - Equivalently, `Q(sqrt(-D))` must lie in `F`, where `D` is the squarefree part of `4n^2 - 1`.
+  - The imaginary quadratic subfields of `F` are those of `K`: `[F : K] = 3` is odd, and `K`'s quadratic subfields are
+    generated by `sqrt-3`, `sqrt5`, `sqrt-11`. They are `Q(sqrt-3)`, `Q(sqrt-11)`, `Q(sqrt-15)`, `Q(sqrt-55)`, which
+    gives the four Pell equations.
+  - The equivalent square-class test, `(4n^2 - 1)/3` in `(F+)^{*2}` (statement 3), uses the real quadratic subfields
+    `Q(sqrt5)`, `Q(sqrt33)`, `Q(sqrt165)`. The list `n <= 12000` was cross-checked by brute force
+    (`two_step_reciprocals.out`).
 
 **3.** Put `y = z_2/z_1`. Then `y + conj y = (R_1 + R_2 - R_3)/R_1 =: T` and `y conj y = R_2/R_1`, so `y` is a root of
 `Y^2 - T Y + R_2/R_1`. Its discriminant is `T^2 - 4R_2/R_1 = -H/R_1^2`. The root `y` lies in `F` iff `-H` is a square
@@ -217,9 +235,42 @@ fourteen also fail total positivity of `H` in some embedding, which is a second,
   meeting point is the reflection of `kq` in the line through 0 and `kq - s`. That point is
   `((kq - s)/conj(kq - s)) · conj(kq)`, which lies in `F`. Divide by `k`. The script checks it for `b`, `c` and every
   unit of `M`.
-- (d) is cited.
+- (d) is cited, and the house bound holds because every embedding maps a unit walk to a unit walk.
+- (e) The closed walk exists iff `L(z) <= 2` and `L(kz) <= 2` for some `z ≠ 0`. With `nu = N(z)` and `mu = N(kz) = N nu`,
+  statement 3 asks for two things:
+  - `nu(4 - nu)/3` and `mu(4 - mu)/3` both lie in `(F+)^2`.
+  - The first conic `3 s^2 = nu(4 - nu)` is parametrized by `nu = 4/(3t^2 + 1)`. With `mu = 4/(3t^2 + 1)` instead,
+    the second condition becomes the conic `sigma^2 - N t^2 = (N - 1)/3`.
+
+  Its quaternion algebra is `(N, (N - 1)/3) = (N, -3)`. This uses `(N, N) = (N, -1)`, `(N, 1 - N) = 1` and the square
+  class of `1/3`. It is split because `N = N_(F/F+)(k)`, and it is split explicitly:
+  - `-3 = N_(F+(sqrt N)/F+)((A + sqrt N)/B)`;
+  - `1 - N = N(1 + sqrt N)`;
+  - so `sigma + t sqrt N = (1 + sqrt N)(A + sqrt N)/(3B)`.
+
+  The two-sum splittings `x = (x/2)(1 ± sqrt-3 s/N(x))` then give the four steps.
 
 ## Remarks
+
+**Pythagorean and Eisenstein triples behind the walks.**
+- *Eisenstein triangles.* The `delta` walks are rational points of the unit circle, i.e. triangles with integer sides
+  and a 60- or 120-degree angle:
+  - `1/7` and `1/19` come from the 120-degree triangles `(3, 5, 7)` and `(5, 16, 19)`
+    (`g = (1 + 3 sqrt-3)/2`, `(1 + 5 sqrt-3)/2`);
+  - the two-step `1/13` comes from the 60-degree triangle `(7, 13, 15)`.
+- *The rational plane.* In `Q(i)` (that is, `Q^2`), B2 gives the classical component `Gamma = Z[i][1/p : p = 1 mod 4]`:
+  the denominators of the unit vectors `(a + b i)/c` are exactly the hypotenuses of Berggren's ternary tree of
+  primitive Pythagorean triples.
+  - `L(1/n) = 2` never happens there, since `4n^2 - 1` is never a square.
+  - The symmetric three-step walk `1/c = delta + conj(delta) ∓ 1` exists exactly for triples with a leg `(c ± 1)/2`.
+    These are the near-60-degree triples, governed by the Pell equation `X^2 - 3Y^2 = 1` with `X = (3c ∓ 1)/2` and
+    `Y` the other leg.
+  - In the tree they form the alternating branch `C, A, C, A, ...`: `(3,4,5)`, `(15,8,17)`, `(33,56,65)`,
+    `(209,120,241)`, ... Up to depth 9 these are all of the near-60-degree triples (`pythagorean_tree_walks.out`).
+  - That is the `sqrt3` analogue of the classical `sqrt2` branch `B, B, ...` (legs differing by one) that the
+    six-colour field's Pell branches parallel.
+
+## Remarks, continued
 
 **Walk-length geometry.**
 - `L(x) <= 1` is a norm condition: `U` is the conic `P^1(F+)`, through `u_lambda = (lambda + sqrt-3)/(lambda - sqrt-3)`.
