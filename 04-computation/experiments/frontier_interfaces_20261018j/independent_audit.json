@@ -1,0 +1,28 @@
+{
+  "status": "FINITE-EXACT and symbolic identities",
+  "critical_sources": [
+    {
+      "N": 1204,
+      "source_trace": 17538,
+      "final_trace": 20076,
+      "max_prefix_trace": 20154,
+      "peak_depth": 45,
+      "final_contracts": false,
+      "prefix_contracts": false
+    },
+    {
+      "N": 5997,
+      "source_trace": 87372,
+      "final_trace": 86520,
+      "max_prefix_trace": 86658,
+      "peak_depth": 66,
+      "final_contracts": true,
+      "prefix_contracts": true
+    }
+  ],
+  "literal_integer_clock_checks": 108202,
+  "independent_gram_entry_checks": 513,
+  "matching_C_mode_dyadics": 20,
+  "reflection_formal_identities": 3,
+  "nondegeneracy": "k*kb != 1 and nonzero displayed denominators"
+}

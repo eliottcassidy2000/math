@@ -1,0 +1,277 @@
+{
+  "status": "FINITE-EXACT",
+  "petersen_coordinates": [
+    {
+      "edge": [
+        1,
+        2
+      ],
+      "grid": [
+        0,
+        0
+      ]
+    },
+    {
+      "edge": [
+        0,
+        3
+      ],
+      "grid": [
+        1,
+        2
+      ]
+    },
+    {
+      "edge": [
+        0,
+        4
+      ],
+      "grid": [
+        2,
+        1
+      ]
+    },
+    {
+      "edge": [
+        0,
+        2
+      ],
+      "grid": [
+        1,
+        1
+      ]
+    },
+    {
+      "edge": [
+        1,
+        3
+      ],
+      "grid": [
+        2,
+        0
+      ]
+    },
+    {
+      "edge": [
+        1,
+        4
+      ],
+      "grid": [
+        0,
+        2
+      ]
+    },
+    {
+      "edge": [
+        0,
+        1
+      ],
+      "grid": [
+        2,
+        2
+      ]
+    },
+    {
+      "edge": [
+        2,
+        3
+      ],
+      "grid": [
+        0,
+        1
+      ]
+    },
+    {
+      "edge": [
+        2,
+        4
+      ],
+      "grid": [
+        1,
+        0
+      ]
+    }
+  ],
+  "seidel_shore": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "finite_field_degrees": [
+    {
+      "q": 3,
+      "nonsquare": 2,
+      "norm_one": 4,
+      "norm_square": 4,
+      "rook": 4
+    },
+    {
+      "q": 5,
+      "nonsquare": 2,
+      "norm_one": 6,
+      "norm_square": 12,
+      "rook": 8
+    },
+    {
+      "q": 7,
+      "nonsquare": 3,
+      "norm_one": 8,
+      "norm_square": 24,
+      "rook": 12
+    },
+    {
+      "q": 11,
+      "nonsquare": 2,
+      "norm_one": 12,
+      "norm_square": 60,
+      "rook": 20
+    },
+    {
+      "q": 19,
+      "nonsquare": 2,
+      "norm_one": 20,
+      "norm_square": 180,
+      "rook": 36
+    }
+  ],
+  "star_assignment_checks": 1989,
+  "star_table": [
+    {
+      "q": 4,
+      "numerator": 5,
+      "defect": "5"
+    },
+    {
+      "q": 5,
+      "numerator": 11,
+      "defect": "11/4"
+    },
+    {
+      "q": 6,
+      "numerator": 19,
+      "defect": "19/9"
+    },
+    {
+      "q": 7,
+      "numerator": 29,
+      "defect": "29/16"
+    },
+    {
+      "q": 8,
+      "numerator": 41,
+      "defect": "41/25"
+    },
+    {
+      "q": 9,
+      "numerator": 55,
+      "defect": "55/36"
+    }
+  ],
+  "source_shell_checks": 74321,
+  "source_rows": [
+    {
+      "N": 1024,
+      "norm": 2485,
+      "atomic_mass": 1998,
+      "bound": "18087/7"
+    },
+    {
+      "N": 4096,
+      "norm": 9949,
+      "atomic_mass": 7998,
+      "bound": "70395/7"
+    },
+    {
+      "N": 7910,
+      "norm": 19208,
+      "atomic_mass": 15442,
+      "bound": "19331"
+    },
+    {
+      "N": 16384,
+      "norm": 39790,
+      "atomic_mass": 31988,
+      "bound": "279375/7"
+    }
+  ],
+  "unit_zero_circuits": [
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ]
+  ],
+  "odd_lag_quotient_checks": 32,
+  "star_cycle": {
+    "parameter": "-(q^2-3q+1)/(q-3)^2",
+    "integer_q_at_least_4_with_rational_3cycle": [
+      7
+    ],
+    "cycle": [
+      "-1/4",
+      "-7/4",
+      "5/4"
+    ],
+    "multiplier": "35/8",
+    "trace_discriminants": {
+      "1": 13,
+      "2": 16,
+      "3": 13,
+      "4": 4
+    }
+  },
+  "gram_hostile": {
+    "N": 524288,
+    "direction": [
+      -1,
+      3,
+      -2
+    ],
+    "excess": 2763090
+  },
+  "scope": "Small graph maps and algebraic identities; no transfer of convergence or six-colour forcing."
+}

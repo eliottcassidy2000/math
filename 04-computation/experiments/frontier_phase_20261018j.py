@@ -85,12 +85,21 @@ def main():
         byclock=np.zeros((len(V)*maxclock,3),dtype=np.int64)
         for r in range(3): np.add.at(byclock[:,r],rr[:,0]*maxclock+rr[:,1],signed[:,r])
         G=arrival.T@arrival; H=byclock.T@byclock; E=c.T@c
+        # First-arrival prefixes are cut by native depth, without changing
+        # any edge's integer clock. Never infer this bound from final energy.
+        depth_hist=np.zeros((int(rr[:,2].max())+1,len(V),3),dtype=np.int64)
+        for r in range(3):np.add.at(depth_hist[:,:,r],(rr[:,2],rr[:,0]),signed[:,r])
+        prefixes=np.cumsum(depth_hist,axis=0)
+        prefix_traces=np.sum(prefixes*prefixes,axis=(1,2))
         assert np.all(G.sum(axis=0)==0) and np.all(H.sum(axis=0)==0)
         row=dict(N=N,source_gram=E.tolist(),arrival_gram=G.tolist(),clock_diagonal_gram=H.tolist(),
                  energies_per_N=(np.diag(G)/N).tolist(),clock_energies_per_N=(np.diag(H)/N).tolist(),
                  max_depth=int(rr[:,2].max()),max_clock=int(rr[:,1].max()))
+        row['first_arrival_prefix_traces']=prefix_traces.tolist()
+        row['max_prefix_trace_per_source_trace']=float(prefix_traces.max()/np.trace(E))
+        row['max_prefix_trace_depth']=int(prefix_traces.argmax())
         rows.append(row)
-        print(N,row['energies_per_N'],row['clock_energies_per_N'],flush=True)
+        print(N,row['energies_per_N'],'prefix/source',row['max_prefix_trace_per_source_trace'],flush=True)
     result=dict(status='FINITE-EXACT',universe=f'all primitive seeds < 4*2^{args.max_power}',
                 frontier=V,route_cap=10000,independent_route_checks=checked,rows=rows,
                 scope='Auxiliary source weights rotate residues; routes, ports, and integer clocks are unchanged. No universal entry claim.')

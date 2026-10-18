@@ -31,6 +31,7 @@ def main():
     ap.add_argument('--patterns', type=int, default=570)
     ap.add_argument('--copy-blind',action='store_true',help='force b/c colour factors to ignore the copy label')
     ap.add_argument('--overlap',type=int,default=0,choices=[0,1,2],help='add coefficient labels 1/b,1/b+1 and optionally 1/c,1/c+1')
+    ap.add_argument('--inverse',action='store_true',help='add u^-1 circuit sharing its Y coefficient with u^2')
     args = ap.parse_args()
     geo = Geo(); f = geo.f
     A,C = recipe(geo,args.recipe)
@@ -59,6 +60,7 @@ def main():
             geo.M.extend([inv,f.add(inv,f.one)])
         for i in range(args.links):
             co=(cb,cc)[i%2]
+            require(not geo.is_unit(co),'nondegenerate Mobius generator')
             q=geo.M[1+i//2] if 1+i//2<len(oldM) else f.one
             require(geo.is_unit(q),'reflection starts on unit circle')
             s=f.one
@@ -74,6 +76,12 @@ def main():
         for axis,co in zip((0,1,4),cubic_coefficients):
             # dict order keeps the old ports and zero coefficient at their old indices.
             sets[axis]=list(dict.fromkeys(sets[axis]+[f.add(x,f.mul(co,m)) for x in sets[axis] for m in geo.M]))
+        if args.inverse:
+            inverse_coefficients=(f.sub(db,m1),f.sub(cb,m2),cc)
+            require(f.inv(u)==f.add(f.add(inverse_coefficients[0],f.mul(inverse_coefficients[1],u)),f.mul(cc,Y)),
+                    'inverse cubic circuit')
+            for axis,co,base in ((0,inverse_coefficients[0],A),(1,inverse_coefficients[1],C)):
+                sets[axis]=list(dict.fromkeys(sets[axis]+[f.add(x,f.mul(co,m)) for x in base for m in geo.M]))
     edge_sets=[geo.unit_edges(s) for s in sets]
     print('coordinate sizes',list(map(len,sets)),'axis edges',list(map(len,edge_sets)),flush=True)
     yi = f.inv(Y)
@@ -97,6 +105,7 @@ def main():
     ]
     if args.cubic:
         families.append(('u_square_circuit',list(zip((0,1,4),cubic_coefficients))))
+        if args.inverse:families.append(('u_inverse_circuit',list(zip((0,1,4),inverse_coefficients))))
     for name,terms in families:
         value = zero
         for axis,co in terms:
@@ -190,12 +199,14 @@ def main():
                 require(sum(col[axis][j]-col[axis][i] for axis,i,j in row)%6 != 0,'contact edge')
                 checks += 1
             witnesses.append(dict(pattern=pat,colours=col))
+            if len(witnesses)%100==0:print('verified patterns',len(witnesses),'blocked',len(blocked),flush=True)
     out = dict(status='FINITE-EXACT',recipe=args.recipe,coordinate_sizes=list(map(len,sets)),
                cubic=args.cubic,cubic_coefficients=None if cubic_coefficients is None else
                     [[str(x) for x in co] for co in cubic_coefficients],
                reflection_receipts=reflection_receipts,
                copy_blind=args.copy_blind,
                overlap=args.overlap,
+               inverse=args.inverse,
                vertex_count=__import__('math').prod(map(len,sets)),
                selected_families=family_counts,axis_edge_counts=list(map(len,edge_sets)),
                blocked=blocked,patterns=len(pats),witness_checks=checks,witnesses=witnesses,

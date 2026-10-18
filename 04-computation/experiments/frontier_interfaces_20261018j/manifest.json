@@ -1,0 +1,160 @@
+{
+  "status": "PROVED elementary reductions; FINITE-EXACT specified universes; OPEN uniform ROOT energy/entry and six-colour forcing",
+  "session": "clock_duality-20261018j",
+  "hash_convention": "SHA256 of LF-normalized source bytes; manifest excludes itself",
+  "inherited_start_commit": "ceb77fcd33a0",
+  "runtime": {
+    "python": "3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:19) [Clang 12.0.5 (clang-1205.0.22.11)]",
+    "packages": {
+      "numpy": "2.2.6",
+      "sympy": "1.14.0",
+      "networkx": "3.4.2",
+      "python-sat": "1.9.dev4"
+    },
+    "numba": "0.68.0, installed under /tmp/math-numba-20261017i; another environment with these packages can omit this PYTHONPATH"
+  },
+  "scripts": [
+    {
+      "path": "04-computation/experiments/frontier_phase_20261018j.py",
+      "sha256": "ac52e5a78f584c8b5e1a0587e4d93cca93c5a782a0a1e63b44f71b7614b88c1b",
+      "bytes_LF": 4810
+    },
+    {
+      "path": "04-computation/experiments/frontier_phase_20261018j.c",
+      "sha256": "638d0aa3b5c8da1174b804cc4a55fb931876487e0084b55152fd970c563861c3",
+      "bytes_LF": 5499
+    },
+    {
+      "path": "04-computation/experiments/frontier_interface_audit_20261018j.py",
+      "sha256": "8397a67938a1af68953d99b7a63e801bf3ac4e4c64b985eb1f52a734df930a2a",
+      "bytes_LF": 4257
+    },
+    {
+      "path": "04-computation/experiments/golden_reflection_context_20261018j.py",
+      "sha256": "66aaf1878cc4b503f025e934fb58783f367fb95a1a0bc1271fc7e8cbe120c99b",
+      "bytes_LF": 10730
+    },
+    {
+      "path": "04-computation/experiments/ternary_interfaces_20261018j.py",
+      "sha256": "6fb386d7adb600432dd1efc08ac43ff479b10469e7def42d3cc9c8829f926c07",
+      "bytes_LF": 7712
+    }
+  ],
+  "inherited_inputs": [
+    {
+      "path": "04-computation/experiments/first_arrival_20261018/V_closed_Y1000.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26",
+      "bytes_LF": 4620
+    },
+    {
+      "path": "04-computation/experiments/golden_forcing_search_20261017.py",
+      "sha256": "0a1a5a9c2241ea7bf040b115d5aa814834be5861b2db4a70ff4e3a731a623846",
+      "bytes_LF": 11947
+    },
+    {
+      "path": "04-computation/experiments/golden_boundary_20261017c.py",
+      "sha256": "f48f34b4ecb7037a509b4a64993eacef7b2985952b2424bd731ec62f74b728a5",
+      "bytes_LF": 6418
+    },
+    {
+      "path": "04-computation/experiments/escaped_ports_20261017d.py",
+      "sha256": "311e7fe4f13de40a93b54624e01f963046f5d6f7943f877b73c99f2c609ec8f9",
+      "bytes_LF": 10728
+    },
+    {
+      "path": "04-computation/experiments/golden_vsquare_unit_census_20261017.py",
+      "sha256": "c5fa5a580e7e5fa84e5e232fdaab1a5b3c418ec720b51a8dc117662f31ecb7fd",
+      "bytes_LF": 7623
+    }
+  ],
+  "notes": [
+    {
+      "path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "a617152c5ed7c9e1303844e09d8e06508e98131961da59016c596bc0ad72f73e",
+      "bytes_LF": 14419
+    },
+    {
+      "path": "05-knowledge/results/ternary_ports_golden_defect_20261018j.md",
+      "sha256": "f399a3cb7e2b81532066fdf6096a8c7504ee1e526f1ccf977b0dde71cfec25e9",
+      "bytes_LF": 18080
+    }
+  ],
+  "receipts": [
+    {
+      "path": "04-computation/experiments/frontier_interfaces_20261018j/golden_inverse.json",
+      "sha256": "1f2de677e28f5a02715ecda0a530cdb1fa5226fc4710073025c33e6adc42648c",
+      "bytes_LF": 1065943
+    },
+    {
+      "path": "04-computation/experiments/frontier_interfaces_20261018j/golden_overlap_2.json",
+      "sha256": "f63251a7e4e851be9a13e5f455b450f2f3a69692fa60f3c502ecea923219e72c",
+      "bytes_LF": 940503
+    },
+    {
+      "path": "04-computation/experiments/frontier_interfaces_20261018j/golden_reflection_2.json",
+      "sha256": "86132438c5579262cccfe3e53ff79d74c6b9dcd05a6a99761a582d253ddaae16",
+      "bytes_LF": 798308
+    },
+    {
+      "path": "04-computation/experiments/frontier_interfaces_20261018j/golden_reflection_blind.json",
+      "sha256": "0ddd0dfab5fc7e17a38645bc7d2510ec2e0c9044bd5b7506ba6e597326bae2f2",
+      "bytes_LF": 628831
+    },
+    {
+      "path": "04-computation/experiments/frontier_interfaces_20261018j/independent_audit.json",
+      "sha256": "61c73b0009b112f44b49aaf60f7f85acff70120415ce4485c9653efa9945eed7",
+      "bytes_LF": 716
+    },
+    {
+      "path": "04-computation/experiments/frontier_interfaces_20261018j/preregister.json",
+      "sha256": "dfa460e30bb670ee968e815dff0b3944a2689d0e7877b390dff2cb5e9b36b6ea",
+      "bytes_LF": 798
+    },
+    {
+      "path": "04-computation/experiments/frontier_interfaces_20261018j/root_phase.json",
+      "sha256": "c23b800bdfb856caf81ccc4c27b46627014e78bef763b08cdac13373d1da6299",
+      "bytes_LF": 43485
+    },
+    {
+      "path": "04-computation/experiments/frontier_interfaces_20261018j/root_phase_everyN.json",
+      "sha256": "05e2fc371cda7424c6167b3e67a2df52596f7298fd8f418de4e2e5dd90785e2a",
+      "bytes_LF": 8843
+    },
+    {
+      "path": "04-computation/experiments/frontier_interfaces_20261018j/root_phase_prefix_everyN.json",
+      "sha256": "3ba74ebe327a3fc4535a6be2361ae7b8d5aefed61516e6d526ebeed824bb3a7b",
+      "bytes_LF": 7033
+    },
+    {
+      "path": "04-computation/experiments/frontier_interfaces_20261018j/root_phase_prefixes.json",
+      "sha256": "9986cdcba98623dda5a8db8a1d0f501b078dbef57d79d995a33d52d8bfabc892",
+      "bytes_LF": 53436
+    },
+    {
+      "path": "04-computation/experiments/frontier_interfaces_20261018j/ternary_controls.json",
+      "sha256": "504a83cd85336368a35fc38fb0a25dac8fbc1856d5165f2c2a9af2c262d41558",
+      "bytes_LF": 3595
+    }
+  ],
+  "commands_from_repo_root": [
+    "python3 04-computation/experiments/frontier_phase_20261018j.py --max-power 19 --out 04-computation/experiments/frontier_interfaces_20261018j/root_phase.json",
+    "python3 04-computation/experiments/frontier_phase_20261018j.py --max-power 21 --out 04-computation/experiments/frontier_interfaces_20261018j/root_phase_prefixes.json",
+    "cc -O3 -Wall -Wextra 04-computation/experiments/frontier_phase_20261018j.c -o /tmp/frontier_phase_20261018j",
+    "/tmp/frontier_phase_20261018j 04-computation/experiments/first_arrival_20261018/V_closed_Y1000.txt 24 > 04-computation/experiments/frontier_interfaces_20261018j/root_phase_everyN.json",
+    "/tmp/frontier_phase_20261018j 04-computation/experiments/first_arrival_20261018/V_closed_Y1000.txt 20 prefix > 04-computation/experiments/frontier_interfaces_20261018j/root_phase_prefix_everyN.json",
+    "python3 04-computation/experiments/frontier_interface_audit_20261018j.py --out 04-computation/experiments/frontier_interfaces_20261018j/independent_audit.json",
+    "python3 04-computation/experiments/ternary_interfaces_20261018j.py --out 04-computation/experiments/frontier_interfaces_20261018j/ternary_controls.json",
+    "PYTHONPATH=/tmp/math-numba-20261017i python3 04-computation/experiments/golden_reflection_context_20261018j.py --cubic --links 2 --out 04-computation/experiments/frontier_interfaces_20261018j/golden_reflection_2.json",
+    "PYTHONPATH=/tmp/math-numba-20261017i python3 04-computation/experiments/golden_reflection_context_20261018j.py --cubic --links 2 --copy-blind --out 04-computation/experiments/frontier_interfaces_20261018j/golden_reflection_blind.json",
+    "PYTHONPATH=/tmp/math-numba-20261017i python3 04-computation/experiments/golden_reflection_context_20261018j.py --cubic --links 0 --overlap 2 --out 04-computation/experiments/frontier_interfaces_20261018j/golden_overlap_2.json",
+    "PYTHONPATH=/tmp/math-numba-20261017i python3 04-computation/experiments/golden_reflection_context_20261018j.py --cubic --links 0 --inverse --out 04-computation/experiments/frontier_interfaces_20261018j/golden_inverse.json"
+  ],
+  "provenance": [
+    "Predictions in preregister.json were written before the first scan in the tool sequence, but committed with its output. This was not an independently committed preregistration.",
+    "Older geometry receipts omit option fields added later when their options are false. Their specified graphs and checked constraints are unchanged. Reproduction should compare mathematical counts and direct witnesses, not JSON byte identity or the solver-selected witness.",
+    "C final scan: every 4096<=N<2^24; C prefix scan: every 4096<=N<2^20 and every arrival depth. Orbits and arithmetic have explicit guards. These finite results do not prove universal entry.",
+    "Geometry receipts certify additive colourings on axis edges and explicitly named contact families only. They do not certify every unit difference in the ambient coordinate set.",
+    "All 570 patterns are all canonical equality patterns of at most six colours on the fixed eight ports satisfying the original nine port edges. Global colour relabelling gives every labelled assignment.",
+    "The independent audit checks 108202 physical-clock identities and 513 Gram entries; the shell controls cover 74321 seeds. Symbolic identities and written proofs have their separately stated infinite scopes."
+  ]
+}
