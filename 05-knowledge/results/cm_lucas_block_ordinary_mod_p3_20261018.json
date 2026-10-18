@@ -1,0 +1,237 @@
+{
+ "A1": {
+  "-512": {
+   "ordinary": 28,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": [
+    11
+   ]
+  },
+  "-64": {
+   "ordinary": 27,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 32,
+   "supersingular_hold_mod_p3": []
+  },
+  "-8": {
+   "ordinary": 28,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": []
+  },
+  "1": {
+   "ordinary": 27,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 32,
+   "supersingular_hold_mod_p3": [
+    7,
+    17
+   ]
+  },
+  "16": {
+   "ordinary": 28,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": []
+  },
+  "64": {
+   "ordinary": 28,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": []
+  },
+  "256": {
+   "ordinary": 28,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": []
+  },
+  "4096": {
+   "ordinary": 27,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 32,
+   "supersingular_hold_mod_p3": [
+    7
+   ]
+  }
+ },
+ "A2": {
+  "-8640": {
+   "ordinary": 28,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": []
+  },
+  "-1728": {
+   "ordinary": 25,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 34,
+   "supersingular_hold_mod_p3": [
+    7,
+    17
+   ]
+  },
+  "-192": {
+   "ordinary": 28,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": [
+    23
+   ]
+  },
+  "-27": {
+   "ordinary": 29,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 30,
+   "supersingular_hold_mod_p3": []
+  },
+  "8": {
+   "ordinary": 27,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 32,
+   "supersingular_hold_mod_p3": [
+    23
+   ]
+  },
+  "64": {
+   "ordinary": 24,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 35,
+   "supersingular_hold_mod_p3": [
+    11
+   ]
+  },
+  "108": {
+   "ordinary": 28,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": []
+  },
+  "216": {
+   "ordinary": 29,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 30,
+   "supersingular_hold_mod_p3": []
+  },
+  "1458": {
+   "ordinary": 28,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": [
+    41
+   ]
+  },
+  "3375": {
+   "ordinary": 29,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 30,
+   "supersingular_hold_mod_p3": []
+  }
+ },
+ "A3": {
+  "-82944": {
+   "ordinary": 29,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 30,
+   "supersingular_hold_mod_p3": [
+    13,
+    109
+   ]
+  },
+  "-12288": {
+   "ordinary": 28,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": []
+  },
+  "-3969": {
+   "ordinary": 27,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": []
+  },
+  "-1024": {
+   "ordinary": 27,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 32,
+   "supersingular_hold_mod_p3": []
+  },
+  "-144": {
+   "ordinary": 28,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": []
+  },
+  "81": {
+   "ordinary": 27,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 32,
+   "supersingular_hold_mod_p3": [
+    7
+   ]
+  },
+  "256": {
+   "ordinary": 27,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 32,
+   "supersingular_hold_mod_p3": []
+  },
+  "648": {
+   "ordinary": 28,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": []
+  },
+  "2304": {
+   "ordinary": 29,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 30,
+   "supersingular_hold_mod_p3": [
+    17
+   ]
+  },
+  "20736": {
+   "ordinary": 28,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": []
+  }
+ },
+ "A4": {
+  "-32768": {
+   "ordinary": 24,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 35,
+   "supersingular_hold_mod_p3": [
+    11
+   ]
+  },
+  "-3375": {
+   "ordinary": 27,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 32,
+   "supersingular_hold_mod_p3": [
+    7
+   ]
+  },
+  "1728": {
+   "ordinary": 28,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": []
+  },
+  "8000": {
+   "ordinary": 27,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 32,
+   "supersingular_hold_mod_p3": []
+  },
+  "54000": {
+   "ordinary": 28,
+   "ordinary_fail_mod_p3": [],
+   "supersingular": 31,
+   "supersingular_hold_mod_p3": []
+  }
+ }
+}

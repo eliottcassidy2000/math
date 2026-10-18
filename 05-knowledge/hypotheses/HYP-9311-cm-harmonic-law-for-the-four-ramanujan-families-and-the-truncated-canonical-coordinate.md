@@ -11,12 +11,17 @@ status: >
     of A(k).
   - For A = C(2k,k)^3 the law is HYP-9310, since its terms with (p-1)/2 < k < p vanish mod p.
   - PROVED ingredient: the p-shift lemma below.
+  - Part (O), PASSED (pre-registered in commit eb53cfd571 before the run): the Lucas-block congruence holds mod p^3
+    at every ordinary prime of every CM parameter (908 instances, 0 failures) and only mod p^2 at supersingular primes
+    (16 sporadic exceptions out of 1038).
 session: opus-2026-10-18-S43
 source: 05-knowledge/results/halfperiod_twin_classes_cm_log_law_20261018.md
 scripts:
   - 04-computation/experiments/cm_harmonic_law_four_families_20261018.py (+ .out, .json): the law, 7 <= p <= 300
   - 04-computation/experiments/pshift_lemma_four_families_20261018.py (+ .out, .json): the p-shift lemma, exact, p <= 61
   - 04-computation/experiments/cm_detector_lucas_block_scan_20261018.py (+ .out, .json): the CM parameters
+  - 04-computation/experiments/cm_lucas_block_mod_p3_probe_20261018.py (+ .out, .json): mod p^3 probe (split vs inert)
+  - 04-computation/experiments/cm_lucas_block_ordinary_mod_p3_20261018.py (+ .out, .json): part (O), pre-registered in eb53cfd571
 related: [HYP-9310, THM-4685, Sun Conjecture 29 (arXiv:2210.07238), Beukers-Vlasenko Dwork crystals III (arXiv:2105.14841), Kibelbek-Long-Moss-Sheller-Yuan (arXiv:1210.4489), Gukov-Vafa 2002]
 ---
 
@@ -96,6 +101,31 @@ Serre-Tate coordinate is a root of unity. Their Corollary 8.2 gives the mod-`p^2
 - why the correction is a Fermat quotient (the `p`-adic log of `x_0`);
 - why the same `6 <-> q_p(m)` pairing appears in Sun's Conjecture 29. Sun's `k`-weighted Ramanujan-type sums are the
   `θ`-derivative of the same structure, with `log|m|` on the archimedean side.
+
+## Part (O): third order at ordinary primes (pre-registered, PASSED)
+
+At every CM parameter, the Lucas-block congruence
+```
+Σ_(k=p)^(2p-1) t_k ≡ t_1 Σ_(k<p) t_k
+```
+holds **modulo `p^3` at every ordinary prime** (`F_p = Σ_(k<p) t_k` a `p`-adic unit). At supersingular primes
+(`F_p ≡ 0 mod p`) it holds only modulo `p^2`.
+
+**Evidence.**
+- Probe: `cm_lucas_block_mod_p3_probe_20261018.out`, at 8 parameters. The mod-`p^3` survivors were exactly the
+  primes split in the CM field, apart from one sporadic inert prime.
+- Prediction (O)/(S) committed in eb53cfd571 (10:45:22), before the output was written (10:45:43):
+  `cm_lucas_block_ordinary_mod_p3_20261018.py`.
+- Result for all 33 parameters, `7 <= p <= 300`:
+  - 908 ordinary prime-instances with 0 failures mod `p^3`;
+  - 1038 supersingular instances, of which 16 hold mod `p^3` sporadically, at `p ∈ {7, 11, 13, 17, 23, 41, 109}`.
+    That is consistent with a chance rate of about `1/p`, since about 21 would be expected.
+
+**Reading.** Expanding `A(p+j)` to second order and `m^(-(p-1)) = (1 + p q_p(m))^(-1)` mod `p^3` turns (O) into a
+mod-`p^2` refinement of `(L_p^A)`. The refinement involves second-order weights
+`w_j^(2) = Σ ±c^2 H^(2)_(cj)` and the terms `q_p(m) w_j` and `q_p(m)^2`, in the style of Sun's mod-`p^3` conjectures.
+In the heuristic above, this is the next order of "the truncated canonical coordinate is Teichmüller". At
+supersingular primes there is no unit root, and the expansion stops at first order.
 
 ## Context
 
