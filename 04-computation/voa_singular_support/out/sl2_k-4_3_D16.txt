@@ -14,3 +14,4 @@ D=   11 dimV=   4599 dimI=   2385 dimL=   2214 arcHS=   2214 ker=    0 gens(Li,c
 D=   12 dimV=   7868 dimI=   4327 dimL=   3541 arcHS=   3541 ker=    0 gens(Li,charge,#)=[] (20.2s)
 D=   13 dimV=  13209 dimI=   7665 dimL=   5544 arcHS=   5544 ker=    0 gens(Li,charge,#)=[] (92.8s)
 D=   14 dimV=  21843 dimI=  13257 dimL=   8586 arcHS=   8586 ker=    0 gens(Li,charge,#)=[] (310.4s)
+D=   15 dimV=  35581 dimI=  22499 dimL=  13082 arcHS=  13082 ker=    0 gens(Li,charge,#)=[] (796.6s)

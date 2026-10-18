@@ -109,7 +109,7 @@ The engine lives in `04-computation/voa_singular_support/`. It is exact over `F_
   - `kw_char.py` gives the Kac-Wakimoto integral-Weyl-group character of admissible `L_k(sl2)`, which matches every
     engine dimension in every run.
   - `n4_schur_index.py` gives the gauge-theory contour integral for the Schur index of 4d `N = 4` SU(2) SYM. It matches
-    `dim L` of the simple small `N = 4` algebra at `c = -9` through weight 7.
+    `dim L` of the simple small `N = 4` algebra at `c = -9` through weight 9.
   - The free-field Schur index of the `Z_2`-gauged free hypermultiplet matches `L_(-1/2)(sl2)` through weight 11.
   - `jacobi_test.py` checks the small `N = 4` bracket table: 1500 random consistency checks, 0 failures.
 - **Literature reproductions (positive controls):**
@@ -206,7 +206,7 @@ For a 4d `N = 2` SCFT `T` with chiral algebra `V_T` (Beem et al. 2015):
 | 4d theory | chiral algebra | Higgs branch | classically free? | `T` nilpotency index in `R_V` |
 |---|---|---|---|---|
 | `(A_1, A_(2n))` AD | `Vir_(2,2n+3)` | point | yes (van Ekeren-Heluani; engine to 30) | `n+1` |
-| `(A_1, D_3) = (A_1, A_3)` AD | `L_(-4/3)(sl2)` | `C^2/Z_2` | yes to weight 14 (16 running) | — |
+| `(A_1, D_3) = (A_1, A_3)` AD | `L_(-4/3)(sl2)` | `C^2/Z_2` | yes to weight 15 (dims = Kac-Wakimoto) | — |
 | `(A_1, D_5)`, `(A_1, D_7)` AD | `L_(-8/5)`, `L_(-12/7)(sl2)` | `C^2/Z_2` | yes to weight 14 | — |
 | `(A_1, D_4)` AD | `L_(-3/2)(sl3)` | `bar O_min(sl3)` | yes to weight 8 (dims = `D(q^2)/D(q)`; weight 8 via the zero-weight cone) | — |
 | SU(2), `N_f = 4` | `L_(-2)(so8)` | `bar O_min(so8)` | **yes through weight 5**; zero-weight block at two primes, `dim L = 756` = Schur | — |

@@ -5,7 +5,7 @@ status: >
   OPEN.
   - (A_1,A_{2n}) is PROVED (van Ekeren-Heluani: Vir_{2,2n+3}).
   - The remaining positive cases are FINITE-EXACT. Each is cross-checked against an independent character:
-    - (A_1,D_3) = (A_1,A_3), L_{-4/3}(sl2): free to weight 14 (Kac-Wakimoto and D(q^3)/D(q));
+    - (A_1,D_3) = (A_1,A_3), L_{-4/3}(sl2): free to weight 15 (Kac-Wakimoto and D(q^3)/D(q));
     - (A_1,D_5), (A_1,D_7): L_{-8/5}, L_{-12/7}(sl2), free to 14;
     - (A_1,D_9): L_{-16/9}(sl2), free to 13;
     - (A_1,D_4): L_{-3/2}(sl3), free to weight 7 for all blocks and to weight 8 via the zero-weight cone
@@ -44,7 +44,7 @@ HYP-9296 asks for the true domain.
 | theory | chiral algebra | free through weight | independent character check |
 |---|---|---|---|
 | `(A_1, A_(2n))` | `Vir_(2,2n+3)` | all (PROVED) | Andrews-Gordon |
-| `(A_1, A_3)` | `L_(-4/3)(sl2)` | 14 | Kac-Wakimoto; `D(q^3)/D(q)` |
+| `(A_1, A_3)` | `L_(-4/3)(sl2)` | 15 | Kac-Wakimoto; `D(q^3)/D(q)` |
 | `(A_1, D_5)`, `(A_1, D_7)`, `(A_1, D_9)` | `L_(-8/5)`, `L_(-12/7)`, `L_(-16/9)` | 14, 14, 13 | Kac-Wakimoto |
 | `(A_1, D_4)` | `L_(-3/2)(sl3)` | 8 (weight 8 via zero-weight cone) | `D(q^2)/D(q)` |
 | SU(2), `N_f = 4` | `L_(-2)(so8)` | 5 (zero-weight block, all of `ker pi` by root-lattice argument) | flavoured Schur index |
