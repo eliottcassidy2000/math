@@ -1,0 +1,167 @@
+[
+ {
+  "base": "C(n,k) C(n,k) C(n+k,k)",
+  "base_eps": "+",
+  "members": [
+   {
+    "seq": "C(n+k,k) C(n+k,k) C(n+k,k)",
+    "eps": "+"
+   },
+   {
+    "seq": "C(n+k,k) C(n+k,k) C(n+k,k)",
+    "eps": "(-1)^n"
+   }
+  ],
+  "aliases": {
+   "C(n+k,k) C(n+k,k) C(n+k,k)": [
+    "C(n+k,k) C(n+k,k) C(n+k,k)"
+   ],
+   "C(n,k) C(n,k) C(n+k,k)": [
+    "C(n,k) C(n,k) C(n+k,k)",
+    "C(n,k) C(2k,k) C(n+k,2k)"
+   ]
+  }
+ },
+ {
+  "base": "C(n+k,k) C(2k,k) C(2n-2k,n-k)",
+  "base_eps": "+",
+  "members": [
+   {
+    "seq": "C(n,k) C(n,k) C(2k,n) C(n,2k)",
+    "eps": "+"
+   },
+   {
+    "seq": "C(n,k) C(n,k) C(2k,n) C(n,2k)",
+    "eps": "(-1)^n"
+   }
+  ],
+  "aliases": {
+   "C(n+k,k) C(2k,k) C(2n-2k,n-k)": [
+    "C(n+k,k) C(2k,k) C(2n-2k,n-k)"
+   ],
+   "C(n,k) C(n,k) C(2k,n) C(n,2k)": [
+    "C(n,k) C(n,k) C(2k,n) C(n,2k)",
+    "C(n,k) C(n,k) C(k,n-k) C(n,2k)",
+    "C(n,k) C(2k,k) C(2k,n) C(n,2k)",
+    "C(n,k) C(2k,k) C(k,n-k) C(n,2k)",
+    "C(n,k) C(2k,n) C(2n-2k,n-k) C(n,2k)",
+    "C(n,k) C(2k,n) C(n,2k) C(2k,n-k)",
+    "C(n,k) C(2n-2k,n-k) C(k,n-k) C(n,2k)",
+    "C(n,k) C(k,n-k) C(n,2k) C(2k,n-k)",
+    "C(2k,k) C(2k,k) C(2k,n) C(n,2k)",
+    "C(2k,k) C(2k,k) C(k,n-k) C(n,2k)",
+    "C(2k,k) C(2k,n) C(2n-2k,n-k) C(n,2k)",
+    "C(2k,k) C(2k,n) C(n,2k) C(2k,n-k)",
+    "C(2k,k) C(2n-2k,n-k) C(k,n-k) C(n,2k)",
+    "C(2k,k) C(k,n-k) C(n,2k) C(2k,n-k)",
+    "C(2k,n) C(2n-2k,n-k) C(2n-2k,n-k) C(n,2k)",
+    "C(2k,n) C(2n-2k,n-k) C(n,2k) C(2k,n-k)",
+    "C(2k,n) C(n,2k) C(2k,n-k) C(2k,n-k)",
+    "C(2n-2k,n-k) C(2n-2k,n-k) C(k,n-k) C(n,2k)",
+    "C(2n-2k,n-k) C(k,n-k) C(n,2k) C(2k,n-k)",
+    "C(k,n-k) C(n,2k) C(2k,n-k) C(2k,n-k)"
+   ]
+  }
+ },
+ {
+  "base": "C(2k,k) C(2k,k) C(2k,k)",
+  "base_eps": "+",
+  "members": [
+   {
+    "seq": "C(2n-2k,n-k) C(n+k,2k) C(n+k,2k)",
+    "eps": "+"
+   }
+  ],
+  "aliases": {
+   "C(2k,k) C(2k,k) C(2k,k)": [
+    "C(2k,k) C(2k,k) C(2k,k)",
+    "C(2n-2k,n-k) C(2n-2k,n-k) C(2n-2k,n-k)"
+   ],
+   "C(2n-2k,n-k) C(n+k,2k) C(n+k,2k)": [
+    "C(2n-2k,n-k) C(n+k,2k) C(n+k,2k)"
+   ]
+  }
+ },
+ {
+  "base": "C(n,k) C(n,k) C(n,k) C(2n,n+k)",
+  "base_eps": "+",
+  "members": [
+   {
+    "seq": "C(n,k) C(n+k,k) C(n+k,k) C(2n,n+k)",
+    "eps": "+"
+   },
+   {
+    "seq": "C(n,k) C(n+k,k) C(n+k,k) C(2n,n+k)",
+    "eps": "(-1)^n"
+   }
+  ],
+  "aliases": {
+   "C(n,k) C(n+k,k) C(n+k,k) C(2n,n+k)": [
+    "C(n,k) C(n+k,k) C(n+k,k) C(2n,n+k)",
+    "C(n+k,k) C(2k,k) C(n+k,2k) C(2n,n+k)"
+   ],
+   "C(n,k) C(n,k) C(n,k) C(2n,n+k)": [
+    "C(n,k) C(n,k) C(n,k) C(2n,n+k)"
+   ]
+  }
+ },
+ {
+  "base": "C(n,k) C(n,k) C(n+k,k) C(n+k,k)",
+  "base_eps": "+",
+  "members": [
+   {
+    "seq": "C(n,k) C(n,k) C(n+k,k) C(2k,n)",
+    "eps": "(-1)^n"
+   }
+  ],
+  "aliases": {
+   "C(n,k) C(n,k) C(n+k,k) C(2k,n)": [
+    "C(n,k) C(n,k) C(n+k,k) C(2k,n)",
+    "C(n,k) C(n+k,k) C(2k,k) C(k,n-k)",
+    "C(n,k) C(2k,k) C(2k,n) C(n+k,2k)",
+    "C(2k,k) C(2k,k) C(k,n-k) C(n+k,2k)"
+   ],
+   "C(n,k) C(n,k) C(n+k,k) C(n+k,k)": [
+    "C(n,k) C(n,k) C(n+k,k) C(n+k,k)",
+    "C(n,k) C(n+k,k) C(2k,k) C(n+k,2k)",
+    "C(2k,k) C(2k,k) C(n+k,2k) C(n+k,2k)"
+   ]
+  }
+ },
+ {
+  "base": "C(n+k,k) C(n+k,k) C(n+k,k) C(n,2k)",
+  "base_eps": "+",
+  "members": [
+   {
+    "seq": "C(n+k,k) C(2k,k) C(2k,n) C(2n-2k,n-k)",
+    "eps": "(-1)^n"
+   }
+  ],
+  "aliases": {
+   "C(n+k,k) C(2k,k) C(2k,n) C(2n-2k,n-k)": [
+    "C(n+k,k) C(2k,k) C(2k,n) C(2n-2k,n-k)"
+   ],
+   "C(n+k,k) C(n+k,k) C(n+k,k) C(n,2k)": [
+    "C(n+k,k) C(n+k,k) C(n+k,k) C(n,2k)"
+   ]
+  }
+ },
+ {
+  "base": "C(2n-2k,n-k) C(2n-2k,n-k) C(n+k,2k) C(2n,n+k)",
+  "base_eps": "+",
+  "members": [
+   {
+    "seq": "C(n+k,2k) C(n+k,2k) C(n+k,2k) C(2n,n+k)",
+    "eps": "+"
+   }
+  ],
+  "aliases": {
+   "C(2n-2k,n-k) C(2n-2k,n-k) C(n+k,2k) C(2n,n+k)": [
+    "C(2n-2k,n-k) C(2n-2k,n-k) C(n+k,2k) C(2n,n+k)"
+   ],
+   "C(n+k,2k) C(n+k,2k) C(n+k,2k) C(2n,n+k)": [
+    "C(n+k,2k) C(n+k,2k) C(n+k,2k) C(2n,n+k)"
+   ]
+  }
+ }
+]

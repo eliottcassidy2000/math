@@ -1,0 +1,5 @@
+primes 5..20000 (2260 primes):
+  (L_p) at m =   1: failures none
+  (L_p) at m =  -8: failures none
+  (L_p) at m =  16: failures none
+  (K) class-6 congruence: failures none

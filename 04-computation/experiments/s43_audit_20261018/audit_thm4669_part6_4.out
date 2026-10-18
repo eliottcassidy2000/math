@@ -1,0 +1,4 @@
+[6] to order 60: Clausen 2F1(1/4,1/4;1;z)^2 = 3F2(1/2,1/2,1/2;1,1;z): True; quadratic 2F1(1/4,1/4;1;4x(1-x)) = 2F1(1/2,1/2;1;x): True; 3F2(..;4x(1-x)) = 2F1(1/2,1/2;1;x)^2: True; (E2) coefficientwise: True; (E1) for n < 200: True
+[4] n = p-1, primes 5..300: holds mod p^2 at []; mod p at []; with opposite sign mod p at []
+[4] n = (3p-1)/2, primes 5..300: holds mod p^2 at []; mod p at [11]; with opposite sign mod p at [11]
+[4] s7(p-1) mod p for p < 60: [(5, 0), (7, 0), (11, 0), (13, 0), (17, 0), (19, 0), (23, 0), (29, 0), (31, 0), (37, 0), (41, 0), (43, 0), (47, 0), (53, 0), (59, 0)]

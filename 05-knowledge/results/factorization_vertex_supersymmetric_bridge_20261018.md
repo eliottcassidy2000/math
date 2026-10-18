@@ -269,6 +269,18 @@ rewriting, or `s_7` in disguise.
 
 Each of the two Apéry classes at the half-period (4A for ζ(3), 4C for ζ(2)) thus has a proven Clausen twin.
 
+**All twin classes (THM-4685, HYP-9310).** A census of all 648 distinct three- and four-factor binomial sums finds
+exactly seven half-period twin classes. They are governed by the M24 classes 4A, 4C and 7AB
+([note](halfperiod_twin_classes_cm_log_law_20261018.md)).
+- The three 4C classes are PROVED from the Dixon lemma and the reflection `k -> n-k`. Their values are `F`, `4^n F`
+  and `16^n F`, with `F = Σ C(2k,k)^3/64^k`.
+- The 7AB classes reduce to `Σ_(k<=n) C(2k,k)^3 (H_(2k) - H_k) ≡ 0 (mod p)`. This is the case `m = 1` of a new
+  pre-registered CM harmonic law: `6 Σ C(2k,k)^3 m^(-k) (H_(2k) - H_k) ≡ q_p(m) Σ C(2k,k)^3 m^(-k) (mod p)` at all
+  eight of Sun's CM values.
+  - The law is proved at the self-dual points `m = ±64` and is invariant under `m -> 4096/m`, the 2-isogeny.
+  - It has no failures to `p < 20000` and fails at generic `m`.
+- At `m = 16, 256` the governing form `η(2τ)^3 η(6τ)^3` is not an M24 cycle shape.
+
 ### 3.3 Supersymmetric meaning of the eta-products (CITED + OBSERVATION)
 
 **Twisted Fock spaces.** `1/η_g(τ)` is the trace of `g q^(L_0 - 1)` on the Fock space of 24 chiral bosons: the rank-24
@@ -339,6 +351,9 @@ group.
 **New.**
 - **THM-4669** (PROVED at every Frobenius point `(p^r - 1)/2`), with the Clausen-identity mechanism.
 - **THM-4670** (PROVED), the ζ(2)-class twin, via the derivative of Dixon's summation.
+- **THM-4685** (PROVED): the census of seven twin classes, the three 4C classes, the reflection lemma, and the CM
+  harmonic law at `m = ±64`.
+- **HYP-9310** (OPEN, pre-registered and passed): the CM harmonic log law at the other six CM points.
 - The classification of Apéry-like half-period congruences against the M24 eta-products (FINITE-EXACT).
 - The congruence method that derives twining genera.
 - The Paley `P_23` → 11A/23A twining observation.

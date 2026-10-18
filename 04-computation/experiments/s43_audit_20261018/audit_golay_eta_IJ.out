@@ -1,0 +1,27 @@
+[I] Apery A                                                                  first terms [1, 5, 73, 1445, 33001, 819005, 21460825]; recurrence [('Cooper (a,b,c,d)', (17, 5, 1, 0))]
+[I] Apery b (Zagier D)                                                       first terms [1, 3, 19, 147, 1251, 11253, 104959]; recurrence [('Zagier (a,b,c)', (11, 3, -1))]
+[I] session Zagier D = sum C(n,k)C(2k,k)C(2n-2k,n-k)                         first terms [1, 4, 20, 112, 676, 4304, 28496]; recurrence [('Zagier (a,b,c)', (12, 4, 32))]
+[I] session Zagier E = sum C(n,2k)C(2k,k)^2 4^(n-2k)                         first terms [1, 4, 20, 112, 676, 4304, 28496]; recurrence [('Zagier (a,b,c)', (12, 4, 32))]
+[I] Cooper s18 (OSS 2016 / Cooper 2012)                                      first terms [1, 6, 54, 564, 6390, 76356, 948276]; recurrence [('Cooper (a,b,c,d)', (14, 6, 192, -12))]
+[I] session s18 = sum (-1)^k C(n,k)C(2k,k)C(2n-2k,n-k)(C(2k,n)+C(2n-2k,n))   first terms [2, 0, 56, 0, 5432, 0, 774272]; recurrence none of the two shapes
+[I] Cooper s10 = Yang-Zudilin = sum C(n,k)^4                                 first terms [1, 2, 18, 164, 1810, 21252, 263844]; recurrence [('Cooper (a,b,c,d)', (6, 2, -64, 4))]
+[I] session Yang-Zudilin = sum C(n,k)^2 C(2k,k)^2                            first terms [1, 5, 53, 761, 12661, 229705, 4410665]; recurrence none of the two shapes
+[I] Cooper s7                                                                first terms [1, 4, 48, 760, 13840, 273504, 5703096]; recurrence [('Cooper (a,b,c,d)', (13, 4, -27, 3))]
+[I] Domb                                                                     first terms [1, 4, 28, 256, 2716, 31504, 387136]; recurrence [('Cooper (a,b,c,d)', (10, 4, 64, 0))]
+[I] Almkvist-Zudilin (delta)                                                 first terms [1, 3, 9, 3, -279, -2997, -19431]; recurrence [('Cooper (a,b,c,d)', (7, 3, 81, 0))]
+[I] (epsilon) sum C(n,k)^2 C(2k,n)^2                                         first terms [1, 4, 40, 544, 8536, 145504, 2618176]; recurrence [('Cooper (a,b,c,d)', (12, 4, 16, 0))]
+[I] Franel                                                                   first terms [1, 2, 10, 56, 346, 2252, 15184]; recurrence [('Zagier (a,b,c)', (7, 2, -8))]
+[I] Zagier C                                                                 first terms [1, 3, 15, 93, 639, 4653, 35169]; recurrence [('Zagier (a,b,c)', (10, 3, 9))]
+[I] Zagier B                                                                 first terms [1, 3, 9, 21, 9, -297, -2421]; recurrence [('Zagier (a,b,c)', (9, 3, 27))]
+[I] Zagier F                                                                 first terms [1, 6, 42, 312, 2394, 18756, 149136]; recurrence [('Zagier (a,b,c)', (17, 6, 72))]
+[I] session "Zagier D" == session "Zagier E" for n < 40: True; session s18 == OSS s18 for n < 40: False
+[I] Apery A                                                      at (p-1)/2 vs eps*a_4A(p), primes 5..600: +1: mod p True, mod p^2 True; (-1/p): mod p False, mod p^2 False
+[I] Cooper s7                                                    at (p-1)/2 vs eps*a_4A(p), primes 5..600: +1: mod p False, mod p^2 False; (-1/p): mod p True, mod p^2 True
+[I] Domb                                                         at (p-1)/2 vs eps*a_4A(p), primes 5..600: +1: mod p False, mod p^2 False; (-1/p): mod p True, mod p^2 False
+[I] Cooper s10 = Yang-Zudilin = sum C(n,k)^4                     at (p-1)/2 vs eps*a_4A(p), primes 5..600: +1: mod p True, mod p^2 False; (-1/p): mod p False, mod p^2 False
+[I] Almkvist-Zudilin (delta)                                     at (p-1)/2 vs eps*a_4A(p), primes 5..600: +1: mod p False, mod p^2 False; (-1/p): mod p False, mod p^2 False
+[I] (epsilon) sum C(n,k)^2 C(2k,n)^2                             at (p-1)/2 vs eps*a_4A(p), primes 5..600: +1: mod p False, mod p^2 False; (-1/p): mod p False, mod p^2 False
+[I] Cooper s18 (OSS 2016 / Cooper 2012)                          at (p-1)/2 vs eps*a_4A(p), primes 5..600: +1: mod p False, mod p^2 False; (-1/p): mod p False, mod p^2 False
+[I] session s18 = sum (-1)^k C(n,k)C(2k,k)C(2n-2k,n-k)(C(2k,n)+C(2n-2k,n)) at (p-1)/2 vs eps*a_4A(p), primes 5..600: +1: mod p False, mod p^2 False; (-1/p): mod p False, mod p^2 False
+[J] s7(n), n == -1/3 mod p (least n), vs a(p) of eta(3tau)^8 mod p, primes 7 <= p < 1500: 236 tested, failures []; number also holding mod p^2: 2 (4.0s)
+[J] mechanism at s = 1/3 (primes 7..300): {'A vs sum b^2 mod p^1': True, 'A vs sum b^2 mod p^2': False, 's7 vs conv mod p^1': True, 's7 vs conv mod p^2': False}

@@ -1,0 +1,6 @@
+Cooper s18 (correct)                 half-period matches (primes 5..400): none
+Almkvist-Zudilin (delta)             half-period matches (primes 5..400): none
+(epsilon) sum C(n,k)^2 C(2k,n)^2     half-period matches (primes 5..400): none
+Zagier E (= session "Zagier D")      half-period matches (primes 5..400): 8A*(1/p) mod p, 8A*(-2/p) mod p
+Zagier C                             half-period matches (primes 5..400): none
+Zagier F                             half-period matches (primes 5..400): none

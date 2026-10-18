@@ -1,0 +1,26 @@
+(L_p): 6 sum_{k<=n} C(2k,k)^3 m^-k (H_2k - H_k) == q_p(m) sum_{k<=n} C(2k,k)^3 m^-k (mod p), 5 <= p <= 2000
+  CM  m =      1 : tested  301 primes, failures    0 (F == 0 mod p at  159 primes)
+  CM  m =     -8 : tested  301 primes, failures    0 (F == 0 mod p at  154 primes)
+  CM  m =     16 : tested  301 primes, failures    0 (F == 0 mod p at  153 primes)
+  CM  m =    -64 : tested  301 primes, failures    0 (F == 0 mod p at  157 primes)
+  CM  m =     64 : tested  301 primes, failures    0 (F == 0 mod p at  154 primes)
+  CM  m =    256 : tested  301 primes, failures    0 (F == 0 mod p at  153 primes)
+  CM  m =   -512 : tested  301 primes, failures    0 (F == 0 mod p at  154 primes)
+  CM  m =   4096 : tested  301 primes, failures    0 (F == 0 mod p at  159 primes)
+  gen m =      3 : tested  301 primes, failures  293 (F == 0 mod p at    7 primes), first failures [5, 13, 17, 19, 29, 31, 37, 41]
+  gen m =      5 : tested  300 primes, failures  288 (F == 0 mod p at   12 primes), first failures [7, 13, 17, 19, 29, 31, 37, 41]
+  gen m =      7 : tested  300 primes, failures  288 (F == 0 mod p at   10 primes), first failures [5, 11, 17, 23, 29, 31, 37, 41]
+  gen m =     10 : tested  300 primes, failures  291 (F == 0 mod p at    9 primes), first failures [7, 11, 13, 17, 19, 23, 29, 31]
+  gen m =    100 : tested  300 primes, failures  292 (F == 0 mod p at    5 primes), first failures [7, 11, 13, 17, 19, 23, 29, 31]
+  gen m =     -3 : tested  301 primes, failures  293 (F == 0 mod p at    6 primes), first failures [5, 7, 11, 13, 17, 19, 23, 29]
+  gen m =      2 : tested  301 primes, failures  292 (F == 0 mod p at    8 primes), first failures [5, 7, 11, 13, 17, 19, 23, 29]
+  gen m =     -1 : tested  301 primes, failures  287 (F == 0 mod p at   14 primes), first failures [5, 11, 13, 19, 23, 29, 31, 37]
+  gen m =     32 : tested  301 primes, failures  296 (F == 0 mod p at    4 primes), first failures [5, 7, 11, 13, 17, 19, 23, 29]
+  gen m =    128 : tested  301 primes, failures  296 (F == 0 mod p at    4 primes), first failures [5, 7, 11, 13, 17, 19, 23, 29]
+(L_inf): sum_k C(2k,k)^3 m^-k (H_2k - H_k)  vs  (log|m|/6) sum_k C(2k,k)^3 m^-k
+  m =   -512: h/F = -0.007476780356680 ; log|m|/6 = 1.039720770839918 ; diff -1.047e+00
+  m =    256: h/F = 0.017296558629485 ; log|m|/6 = 0.924196240746594 ; diff -9.069e-01
+  m =   4096: h/F = 0.000982214108877 ; log|m|/6 = 1.386294361119891 ; diff -1.385e+00
+  m =  -4096: h/F = -0.000971007449301 ; log|m|/6 = 1.386294361119891 ; diff -1.387e+00
+  m =   1000: h/F = 0.004097462841714 ; log|m|/6 = 1.151292546497023 ; diff -1.147e+00
+  m =    512: h/F = 0.008198017963415 ; log|m|/6 = 1.039720770839918 ; diff -1.032e+00

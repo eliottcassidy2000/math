@@ -1,0 +1,13 @@
+[A] quartic Z_4 LG orbifold = 2 phi_{0,1}: max relative error over 8 random points 1.57e-30; Z_{x^n}(tau, z->0) for n = 3..6: ['(2.0 + 1.54866371868e-26j)', '(3.0 + 3.48449336702e-26j)', '(4.0 + 5.57518938723e-26j)', '(5.0 + 7.74331859338e-26j)']
+[C] A_n from (-2E2+48F2)/eta^3: [-1, 45, 231, 770, 2277, 5796, 13915, 30843, 65550, 132825, 260568, 494385, 915124]
+[C] 2A: Tr(g|K_n) = 2 A_n(g), n = 1..7: ['-6', '14', '-28', '42', '-56', '86', '-138']
+[C] 3A: Tr(g|K_n) = 2 A_n(g), n = 1..7: ['0', '-6', '10', '0', '-18', '20', '0']
+[C] 5A: Tr(g|K_n) = 2 A_n(g), n = 1..7: ['0', '2', '0', '-6', '2', '0', '6']
+[C] 7A: Tr(g|K_n) = 2 A_n(g), n = 1..7: ['-1', '0', '0', '4', '0', '-2', '2']
+[C] 11A (Cheng App. C): A_n, n = 0..12: ['-1', '1', '0', '0', '0', '-1', '0', '-1', '1', '0', '0', '1', '1']; traces integral and == dim mod 11 for n <= 60: True
+[C] level 23: eta eta(23) = (theta_Q1 - theta_Q2)/2: True; T_2 preserves span(u, w) (checked to q^30): True; T_2 matrix columns (u-coord, w-coord): T2u = (Fraction(-2, 1), Fraction(1, 1)), T2w = (Fraction(-1, 1), Fraction(1, 1))
+[C] Hecke eigenforms f = alpha u + w: (alpha, a_2) = [(-3/2 - sqrt(5)/2, -sqrt(5)/2 - 1/2), (-3/2 + sqrt(5)/2, -1/2 + sqrt(5)/2)]
+[C] Cheng f~_{23,1} = (1)q^1 + (-1/2 + sqrt(5)/2)q^2 + (-sqrt(5))q^3 + (-sqrt(5)/2 - 1/2)q^4 + (-1 + sqrt(5))q^5 + (-5/2 + sqrt(5)/2)q^6 ...
+[C] f_{23,1} = [2, -1, 0, -1, -2, -5, 2, 0]; f_{23,2} = [0, 1, -2, -1, 2, 1, 2, -2] (q^1..q^8)
+[C] session 23AB cusp form == Cheng -(23/22) f_{23,1} - (161/22) f_{23,2} to q^60: True; f_{23,2} == eta^2 eta(23)^2: True
+[C] 23A: A_n, n = 0..12: ['-1', '-1', '1', '-1/2', '0', '0', '0', '0', '0', '0', '1', '0', '0']; traces integral and == dim mod 23 for n <= 60: True

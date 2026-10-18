@@ -1,0 +1,11 @@
+[G] dimension 12; weight enumerator {0: 1, 8: 759, 12: 2576, 16: 759, 24: 1}
+[G] generators map a basis into the code (hence preserve it): {'alpha': True, 'beta': True, 'gamma': True, 'delta': True}
+[G] |<alpha,beta,gamma,delta>| = 244823040 (|M24| = 244823040); transitivity degree check: True
+[G] Aut(P_23) = {x -> a x + b : a in QR}: cycle shapes {((1, 24),): 1, ((1, 1), (23, 1)): 22, ((1, 2), (11, 2)): 230}
+[G] affine maps x -> ax+b preserving P_23: 253 (all automorphisms of P_p are affine: x -> a x + b, a in QR)
+[H] 11a1 vs eta-product {1: 2, 11: 2}: mismatches at good primes < 200: []
+[H] 14a1 vs eta-product {1: 1, 2: 1, 7: 1, 14: 1}: mismatches at good primes < 200: []
+[H] 15a1 vs eta-product {1: 1, 3: 1, 5: 1, 15: 1}: mismatches at good primes < 200: []
+[H] 20a1 vs eta-product {2: 2, 10: 2}: mismatches at good primes < 200: []
+[H] 24a1 vs eta-product {2: 1, 4: 1, 6: 1, 12: 1}: mismatches at good primes < 200: []
+[H] 36a1 vs eta-product {6: 4}: mismatches at good primes < 200: []
