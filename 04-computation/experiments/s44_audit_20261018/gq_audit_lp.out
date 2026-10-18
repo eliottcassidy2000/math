@@ -1,0 +1,7 @@
+q=13: Delsarte LP bound on alpha = 52.426625 ; Hoffman alpha bound = 52.426625 ; equal: True
+q=17: Delsarte LP bound on alpha = 77.198534 ; Hoffman alpha bound = 77.198534 ; equal: True
+q=19: Delsarte LP bound on alpha = 99.497973 ; Hoffman alpha bound = 99.497973 ; equal: True
+q=23: Delsarte LP bound on alpha = 131.761983 ; Hoffman alpha bound = 131.761983 ; equal: True
+q=29: Delsarte LP bound on alpha = 195.206933 ; Hoffman alpha bound = 195.206933 ; equal: True
+q=31: Delsarte LP bound on alpha = 240.247362 ; Hoffman alpha bound = 240.247362 ; equal: True
+q=37: Delsarte LP bound on alpha = 317.468088 ; Hoffman alpha bound = 317.468088 ; equal: True

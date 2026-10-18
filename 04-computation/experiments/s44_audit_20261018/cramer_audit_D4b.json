@@ -1,0 +1,11 @@
+{
+ "curve": "D4b",
+ "gens": "x0^1,y0^1",
+ "qdeg": 7,
+ "index": 3,
+ "weight": 10,
+ "dimZ": 9,
+ "dimB": 8,
+ "dimH1": 1,
+ "cramer_is_boundary": false
+}

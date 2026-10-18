@@ -1,0 +1,11 @@
+{
+ "curve": "A3",
+ "gens": "x0^1,y0^1,y1^1",
+ "qdeg": 11,
+ "index": 5,
+ "weight": 16,
+ "dimZ": 39,
+ "dimB": 38,
+ "dimH1": 1,
+ "cramer_is_boundary": false
+}

@@ -1,0 +1,8 @@
+(3,4) N=3: relative level 2p-1=5, dim ker Phi = 1; (source length of top, #terms, top == x0^(p-2) s1): [(5, 2, True)]
+(3,5) N=4: relative level 2p-1=5, dim ker Phi = 1; (source length of top, #terms, top == x0^(p-2) s1): [(6, 2, True)]
+(3,7) N=6: relative level 2p-1=5, dim ker Phi = 1; (source length of top, #terms, top == x0^(p-2) s1): [(8, 2, True)]
+(4,5) N=6: relative level 2p-1=7, dim ker Phi = 1; (source length of top, #terms, top == x0^(p-2) s1): [(9, 2, True)]
+(4,7) N=9: relative level 2p-1=7, dim ker Phi = 1; (source length of top, #terms, top == x0^(p-2) s1): [(12, 2, True)]
+(5,6) N=10: relative level 2p-1=9, dim ker Phi = 1; (source length of top, #terms, top == x0^(p-2) s1): [(14, 2, True)]
+(5,7) N=12: relative level 2p-1=9, dim ker Phi = 1; (source length of top, #terms, top == x0^(p-2) s1): [(16, 2, True)]
+(6,7) N=15: relative level 2p-1=11, dim ker Phi = 1; (source length of top, #terms, top == x0^(p-2) s1): [(20, 2, True)]

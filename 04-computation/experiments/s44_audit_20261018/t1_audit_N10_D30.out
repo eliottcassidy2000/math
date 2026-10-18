@@ -1,0 +1,27 @@
+D=23 r=11: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=24 r=11: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=25 r=11: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=25 r=12: 1 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+D=26 r=11: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=26 r=12: 2 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=27 r=11: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=27 r=12: 3 cycles, 0 boundary gens, rank T_1 mod J per model [2, 2, 0]
+D=27 r=13: 1 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+D=28 r=11: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=28 r=12: 4 cycles, 0 boundary gens, rank T_1 mod J per model [3, 3, 0]
+D=28 r=13: 2 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+D=29 r=11: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=29 r=12: 5 cycles, 0 boundary gens, rank T_1 mod J per model [4, 4, 0]
+D=29 r=13: 4 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+D=29 r=14: 1 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+D=30 r=11: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=30 r=12: 6 cycles, 0 boundary gens, rank T_1 mod J per model [5, 5, 0]
+D=30 r=13: 6 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=30 r=14: 2 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+lift_indep: True
+in_J_bnd: True
+bnd_checked: 0
+images_equal: True
+proportional: True
+p2_zero: True
+bidegrees: 20

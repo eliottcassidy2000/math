@@ -1,0 +1,14 @@
+=== audit Vir_(5,7) c=11/35 N=12 prime=2147483647 (setup 0.8s)
+D=24 - (0.0s)
+D=25 - (0.0s)
+D=26 - (0.0s)
+D=27 s=12(Li 3) ker 1 {1: 1} (0.0s)
+D=28 s=12(Li 4) ker 1 {1: 1} (0.0s)
+D=29 s=12(Li 5) ker 2 {1: 1, 2: 1} (0.0s)
+D=30 s=12(Li 6) ker 2 {1: 1, 2: 1}; s=13(Li 4) ker 1 {1: 1} (0.1s)
+D=31 s=12(Li 7) ker 3 {1: 1, 2: 1, 3: 1}; s=13(Li 5) ker 2 {1: 2} (0.1s)
+D=32 s=12(Li 8) ker 3 {1: 1, 2: 1, 3: 1}; s=13(Li 6) ker 4 {1: 3, 2: 1} (0.1s)
+D=33 s=12(Li 9) ker 3 {1: 1, 2: 1, 3: 1}; s=13(Li 7) ker 7 {1: 4, 2: 3} (0.2s)
+D=34 s=12(Li 10) ker 3 {1: 1, 2: 1, 3: 1}; s=13(Li 8) ker 10 {1: 5, 2: 4, 3: 1}; s=14(Li 6) ker 1 {1: 1} (0.4s)
+TOTAL by order through D=34: {1: 24, 2: 14, 3: 5}; dim ker pi = 43
+COMPARE with C:/Users/Eliott/AppData/Local/Temp/math-wt-explicit-modal-38/04-computation/quantum_transfer_s44/vir_transfer_orders_5_7_D34.json: 14 bidegrees, 0 differences

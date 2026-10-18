@@ -1,0 +1,37 @@
+D=15 r= 7: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=16 r= 7: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=17 r= 7: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=17 r= 8: 1 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+D=18 r= 7: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=18 r= 8: 2 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=19 r= 7: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=19 r= 8: 3 cycles, 0 boundary gens, rank T_1 mod J per model [2, 2, 0]
+D=19 r= 9: 1 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+D=20 r= 7: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=20 r= 8: 4 cycles, 0 boundary gens, rank T_1 mod J per model [3, 3, 0]
+D=20 r= 9: 2 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+D=21 r= 7: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=21 r= 8: 5 cycles, 0 boundary gens, rank T_1 mod J per model [4, 4, 0]
+D=21 r= 9: 4 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+D=21 r=10: 1 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+D=22 r= 7: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=22 r= 8: 6 cycles, 0 boundary gens, rank T_1 mod J per model [5, 5, 0]
+D=22 r= 9: 6 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=22 r=10: 2 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+D=23 r= 7: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=23 r= 8: 7 cycles, 0 boundary gens, rank T_1 mod J per model [6, 6, 0]
+D=23 r= 9: 9 cycles, 0 boundary gens, rank T_1 mod J per model [2, 2, 0]
+D=23 r=10: 4 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+D=23 r=11: 1 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+D=24 r= 7: 1 cycles, 0 boundary gens, rank T_1 mod J per model [1, 1, 0]
+D=24 r= 8: 8 cycles, 0 boundary gens, rank T_1 mod J per model [7, 7, 0]
+D=24 r= 9: 12 cycles, 0 boundary gens, rank T_1 mod J per model [4, 4, 0]
+D=24 r=10: 7 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+D=24 r=11: 2 cycles, 0 boundary gens, rank T_1 mod J per model [0, 0, 0]
+lift_indep: True
+in_J_bnd: True
+bnd_checked: 0
+images_equal: True
+proportional: True
+p2_zero: True
+bidegrees: 30

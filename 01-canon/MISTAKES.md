@@ -19033,3 +19033,72 @@ the ambient space.
   - Open every paper linked from an OEIS entry before claiming novelty for a structure of that sequence.
   - Before naming a "law" that summarizes a histogram file, grep the file for counterexample rows.
   - Score each clause of a pre-registered prediction separately.
+
+## MISTAKE-640 (2026-10-18, opus-2026-10-18-S44; independent S44 referee, s44_audit_20261018) -- several S44 errors: a known theorem (cyclicity of H_1 for the jets of x^N) was filed as an open hypothesis; Lovász's theta theorem was stretched to cover Schrijver's theta' and to "explain" an LP value; a pre-registered stability window was read off the data instead of the known BGG thresholds, so "ALL PASSED" was an artifact of the data range; a docstring claimed a group equality that the script's own output refuted
+
+- **Affected claims:**
+  - HYP-9315(a) (status "OPEN"; "not proved here"); results note sections 4 and 7; THM-4695 Remarks;
+    00-navigation/OPEN-QUESTIONS.md S44 entry.
+  - li_spectral_sequence_quantum_transfer_20261018.md section 6(iii); the results INDEX line;
+    gq_kloosterman_hoffman_20261018.py docstring (iii).
+  - PREREGISTRATION_stability_20261018.md: the window W(N) = {L <= N+i-1} of P4 and P6, and the outcome "ALL PASSED".
+  - pythagorean_conic_dictionary_20261018.py docstring ("acts as the full automorphism group"). This was caught and
+    repaired by clock_duality-20261018j and is recorded at the top of this file.
+  - Smaller items:
+    - THM-4695 "13 models" (11 are checked);
+    - HYP-9315(c) "order p-2+i occurs" (overgeneralized);
+    - HYP-9316 wording (it admits the unit ideal; the searched class was unstated);
+    - the Mustata/EMY sentence (lci theorems assume normality);
+    - missing artifacts for A3 = 16 and the node;
+    - "recovers AvEH" (should be "consistent through weight 30");
+    - THM-4628(b) not cited for the Kloosterman identity.
+- **First failed implications:**
+  - (i) **Unread literature.** The session searched Calinescu-Lepowsky-Milas and Feigin-Stoyanovsky, which give
+    presentations, not syzygies, and stopped there. The statement was already in the literature:
+    - Feigin, Funkts. Anal. Prilozh. 45:4 (2011), Prop. 3.6 (the vacuum complex of K(p) is acyclic; the Euler relation
+      is gr of the level-3 singular vector) gives H_1 = C[x][d] s_1 + B_1 for all N, up to a step he omits;
+    - N = 2 is a theorem: Kanade (2015/2018, Thm 4.3.1), Bai-Gorsky-Kivinen (2020, Thm 2.2),
+      Gorsky-Oblomkov-Rasmussen (2013, Cor. 3.20);
+    - Gorsky-Lewark 2014, Conj. 4, is the truncated all-N form.
+  - (ii) **Theorem scope.** Lovász 1979, Thm 9, gives theta = Hoffman for edge-transitive graphs and nothing about
+    theta' (the Delsarte LP). LP = Hoffman for q = 13..37 is a computation. The three-point bound already gave
+    kappa(29) >= 6 (MISTAKE-634), so "no Delsarte/Lovász relaxation can improve" was false.
+  - (iii) **Window fitted to data.** W(N) was read off where earlier tables happened to agree.
+    - The BGG/Rocha-Caridi structure puts the second relation of the Verma map at relative level 2q - 1, so
+      dim ker pi(2N+m) = p(m-3) - p(m-2p+1) - p(m-2q+1). The (5,6) table must therefore split from (5,7) at m = 11,
+      inside W(10).
+    - The session's (5,6) data stopped at m = 10, so the failing bidegrees (9,1) and (10,1) were never compared.
+    - The audit's run to weight 32, reproduced by the session (orders_56_D32.out: (9,1) {3:2} vs {3:3}), refutes P4
+      and P6 as stated.
+    - The agreement of totals was forced by characters, so only the refined (length, order) data carried content.
+  - (iv) **Docstring versus output.** The docstring promised the Berggren image mod 5 = Aut(Petersen), order 120. The
+    output reported 60, i.e. PSL(2,5) = A_5.
+- **Missing coordinates:**
+  - the Koszul-homology-of-jets literature: Feigin 2011; the knot-homology line (GOR, BGK, Gorsky-Lewark); Kanade;
+    DMOW 2026;
+  - the exact hypothesis of a cited theorem (theta versus theta');
+  - for a stability window: the structural thresholds (2p - 1 and 2q - 1 from the BGG resolution), and test data that
+    cross the predicted boundary;
+  - a check of what the characters force before calling an agreement "universality".
+- **Survivors:**
+  - THM-4695: correct; new as stated, with precedents AvEH section 2.4 and Feigin 2011; c - c_(2,2N+1) = (3/(2N+1))
+    Kac_3(c, 2N).
+  - All transfer-order data (independent engine, two primes, 0 differences).
+  - HYP-9315(b): the pre-registered k = 3, 4 tests passed.
+  - HYP-9315(d), now PROVED (audit N2).
+  - Refined universality on m < min(2p-1, 2p'-1); q-stability on m < 2 min(q,q') - 1; saturation. 0 disagreements in
+    all S44 tables (16 models) and the audit's 45 pairs; the windows are sharp.
+  - HYP-9316: all weights reproduced; 7 new curves pass; the Cramer mechanism is not in the literature.
+  - Section 6(i)-(ii) (= THM-4628(b)).
+  - The conic dictionary (Petersen, L(Heawood) replayed independently by clock_duality).
+  - THM-4710 (Witt rigidity), found after the audit.
+- **Evidence:** 04-computation/experiments/s44_audit_20261018/REPORT.md and scripts;
+  04-computation/quantum_transfer_s44/evaluate_corrected_windows.out.
+- **Lesson:**
+  - Before filing a homological statement about jets or arc spaces of a fat point or curve, search the Koszul homology
+    of jets: Feigin 2011, the knot-homology literature, and DMOW.
+  - Quote a cited theorem with its exact scope.
+  - Derive a pre-registered window from known structure (BGG/character thresholds), and make the data reach past its
+    boundary.
+  - Before claiming universality, compute what the characters force.
+  - Keep docstrings in step with outputs.

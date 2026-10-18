@@ -1,0 +1,11 @@
+{
+ "curve": "cusp",
+ "gens": "x0^1,x1^1,y0^1,y1^1,y2^1",
+ "qdeg": 23,
+ "index": 11,
+ "weight": 34,
+ "dimZ": 948,
+ "dimB": 947,
+ "dimH1": 1,
+ "cramer_is_boundary": false
+}

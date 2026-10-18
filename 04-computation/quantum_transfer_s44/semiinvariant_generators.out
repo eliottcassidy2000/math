@@ -1,0 +1,42 @@
+Cayley A_j products are D_1-invariant in mu-coordinates for L = 2..9: OK
+Vir(4,5) N=6 c=7/10: lowest weight vectors in grI_N at Li degrees {0: 1, 3: 1, 5: 1}
+    L=3: A[3]: 1
+    L=5: A[5]: 1, A[3, 2]: -29/25
+Vir(4,7) N=9 c=-13/14: lowest weight vectors in grI_N at Li degrees {0: 1, 3: 1, 5: 1}
+    L=3: A[3]: 1
+    L=5: A[5]: 1, A[3, 2]: -44/37
+Vir(4,9) N=12 c=-19/6: lowest weight vectors in grI_N at Li degrees {0: 1, 3: 1, 5: 1}
+    L=3: A[3]: 1
+    L=5: A[5]: 1, A[3, 2]: -59/49
+Vir(4,11) N=15 c=-125/22: lowest weight vectors in grI_N at Li degrees {0: 1, 3: 1, 5: 1}
+    L=3: A[3]: 1
+    L=5: A[5]: 1, A[3, 2]: -74/61
+Vir(5,6) N=10 c=4/5: lowest weight vectors in grI_N at Li degrees {0: 1, 3: 1, 5: 1, 7: 1}
+    L=3: A[3]: 1
+    L=5: A[5]: 1, A[3, 2]: -49/41
+    L=7: A[7]: 1, A[5, 2]: -247/246, A[4, 3]: -10339/7052, A[3, 2, 2]: 104419/84624
+Vir(5,7) N=12 c=11/35: lowest weight vectors in grI_N at Li degrees {0: 1, 3: 1, 5: 1, 7: 1}
+    L=3: A[3]: 1
+    L=5: A[5]: 1, A[3, 2]: -59/49
+    L=7: A[7]: 1, A[5, 2]: -101/98, A[4, 3]: -39181/26656, A[3, 2, 2]: 135271/106624
+Vir(5,8) N=14 c=-7/20: lowest weight vectors in grI_N at Li degrees {0: 1, 3: 1, 5: 1, 7: 1}
+    L=3: A[3]: 1
+    L=5: A[5]: 1, A[3, 2]: -23/19
+    L=7: A[7]: 1, A[5, 2]: -359/342, A[4, 3]: -59443/40356, A[3, 2, 2]: 208897/161424
+Vir(5,9) N=16 c=-17/15: lowest weight vectors in grI_N at Li degrees {0: 1, 3: 1, 5: 1, 7: 1}
+    L=3: A[3]: 1
+    L=5: A[5]: 1, A[3, 2]: -79/65
+    L=7: A[7]: 1, A[5, 2]: -83/78, A[4, 3]: -51407/34840, A[3, 2, 2]: 549143/418080
+Vir(6,7) N=15 c=6/7: lowest weight vectors in grI_N at Li degrees {0: 1, 3: 1, 5: 1, 7: 1, 9: 1}
+    L=3: A[3]: 1
+    L=5: A[5]: 1, A[3, 2]: -74/61
+    L=7: A[7]: 1, A[5, 2]: -129/122, A[4, 3]: -11961/8113, A[3, 2, 2]: 126991/97356
+    L=9: A[9]: 1, A[7, 2]: -111/122, A[6, 3]: -10616933/5817448, A[5, 4]: -725981/623298, A[5, 2, 2]: 7078789/7479576, A[4, 3, 2]: 51248551/17452344, A[3, 3, 3]: 59476757/69809376, A[3, 2, 2, 2]: -258064445/209428128
+Vir(3,4) N=3 c=1/2: lowest weight vectors in grI_N at Li degrees {0: 1, 3: 1}
+    L=3: A[3]: 1
+Vir(3,5) N=4 c=-3/5: lowest weight vectors in grI_N at Li degrees {0: 1, 3: 1}
+    L=3: A[3]: 1
+Vir(3,7) N=6 c=-25/7: lowest weight vectors in grI_N at Li degrees {0: 1, 3: 1}
+    L=3: A[3]: 1
+Vir(3,8) N=7 c=-21/4: lowest weight vectors in grI_N at Li degrees {0: 1, 3: 1}
+    L=3: A[3]: 1

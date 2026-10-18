@@ -1,0 +1,50 @@
+D4: minimal Cramer weights (w, K, first jet index, generators):
+    (10, 2, 0, ('x0^1', 'y0^1'))
+    (15, 4, 0, ('x0^1', 'y0^1', 'x1^2', 'y1^2'))
+    (17, 4, 0, ('x0^1', 'y0^1', 'x1^1', 'y1^2'))
+X4: minimal Cramer weights (w, K, first jet index, generators):
+    (11, 2, 0, ('x0^2', 'y0^2'))
+    (12, 2, 0, ('x0^1', 'y0^2'))
+    (12, 2, 0, ('x0^2', 'y0^1'))
+A3: minimal Cramer weights (w, K, first jet index, generators):
+    (16, 3, 0, ('x0^1', 'y0^1', 'y1^1'))
+    (23, 5, 0, ('x0^1', 'y0^1', 'x1^3', 'y1^1', 'y2^1'))
+    (25, 5, 0, ('x0^1', 'y0^1', 'x1^2', 'y1^1', 'y2^1'))
+E6: minimal Cramer weights (w, K, first jet index, generators):
+    (29, 2, 0, ('x0^2', 'y0^1'))
+    (32, 2, 0, ('x0^1', 'y0^1'))
+    (32, 3, 0, ('x0^1', 'y0^1', 'y1^3'))
+A4: minimal Cramer weights (w, K, first jet index, generators):
+    (31, 3, 0, ('x0^2', 'y0^1', 'y1^1'))
+    (33, 3, 0, ('x0^1', 'y0^1', 'y1^1'))
+    (33, 4, 0, ('x0^1', 'y0^1', 'y1^1', 'y2^2'))
+cusp: minimal Cramer weights (w, K, first jet index, generators):
+    (34, 5, 0, ('x0^1', 'y0^1', 'x1^1', 'y1^1', 'y2^1'))
+A5: minimal Cramer weights (w, K, first jet index, generators):
+    (20, 3, 0, ('x0^3', 'y0^1', 'y1^1'))
+    (21, 3, 0, ('x0^2', 'y0^1', 'y1^1'))
+    (21, 4, 0, ('x0^2', 'y0^1', 'y1^1', 'y2^2'))
+E7: minimal Cramer weights (w, K, first jet index, generators):
+    (23, 2, 0, ('x0^1', 'y0^2'))
+    (25, 2, 0, ('x0^1', 'y0^1'))
+    (25, 3, 0, ('x0^1', 'y0^1', 'x1^3'))
+D5: minimal Cramer weights (w, K, first jet index, generators):
+    (22, 2, 0, ('x0^1', 'y0^1'))
+    (25, 3, 0, ('x0^1', 'y0^1', 'x1^2'))
+    (29, 3, 0, ('x0^1', 'y0^1', 'x1^1'))
+X5: minimal Cramer weights (w, K, first jet index, generators):
+    (12, 2, 0, ('x0^3', 'y0^3'))
+    (13, 2, 0, ('x0^2', 'y0^3'))
+    (13, 2, 0, ('x0^3', 'y0^2'))
+E8: minimal Cramer weights (w, K, first jet index, generators):
+    (34, 2, 0, ('x0^3', 'y0^1'))
+    (37, 2, 0, ('x0^2', 'y0^1'))
+    (37, 3, 0, ('x0^2', 'y0^1', 'y1^3'))
+A6: minimal Cramer weights (w, K, first jet index, generators):
+    (39, 3, 0, ('x0^4', 'y0^1', 'y1^1'))
+    (41, 3, 0, ('x0^3', 'y0^1', 'y1^1'))
+    (41, 4, 0, ('x0^3', 'y0^1', 'y1^1', 'y2^2'))
+D6: minimal Cramer weights (w, K, first jet index, generators):
+    (15, 2, 0, ('x0^1', 'y0^1'))
+    (17, 3, 0, ('x0^1', 'y0^1', 'x1^2'))
+    (19, 3, 0, ('x0^1', 'y0^2', 'x1^1'))

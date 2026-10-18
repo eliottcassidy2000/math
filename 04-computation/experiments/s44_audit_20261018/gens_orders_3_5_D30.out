@@ -1,0 +1,4 @@
+generator(s) at (D=8, s=4, Li 0): 1, transfer orders {0: 1}
+generator(s) at (D=11, s=4, Li 3): 1, transfer orders {1: 1}
+generator(s) at (D=19, s=5, Li 9): 1, transfer orders {2: 1}
+Vir_(3,5) N=4 through D=30: generators [(8, 4), (11, 4), (19, 5)]  (23.5s)

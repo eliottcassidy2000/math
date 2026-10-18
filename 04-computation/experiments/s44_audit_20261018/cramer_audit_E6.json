@@ -1,0 +1,11 @@
+{
+ "curve": "E6",
+ "gens": "x0^2,y0^1",
+ "qdeg": 26,
+ "index": 3,
+ "weight": 29,
+ "dimZ": 1,
+ "dimB": 0,
+ "dimH1": 1,
+ "cramer_is_boundary": false
+}

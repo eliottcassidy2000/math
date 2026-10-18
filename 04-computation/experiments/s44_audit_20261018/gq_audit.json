@@ -1,0 +1,64 @@
+{
+ "5": {
+  "eig_err": 6.661338147750939e-16,
+  "arc_transitive_stabilizer": true
+ },
+ "7": {
+  "eig_err": 1.047382306668854e-15,
+  "arc_transitive_stabilizer": true
+ },
+ "11": {
+  "eig_err": 2.4126604949548913e-15,
+  "arc_transitive_stabilizer": true
+ },
+ "13": {
+  "eig_err": 3.756755865433588e-15,
+  "arc_transitive_stabilizer": true,
+  "delsarte_lp": 52.42662543320598,
+  "hoffman_alpha": 52.4266254332058
+ },
+ "17": {
+  "eig_err": 4.669540497562317e-15,
+  "arc_transitive_stabilizer": true,
+  "delsarte_lp": 77.19853429582957,
+  "hoffman_alpha": 77.19853429582918
+ },
+ "19": {
+  "eig_err": 3.3820826609804605e-15,
+  "arc_transitive_stabilizer": true,
+  "delsarte_lp": 99.49797307973641,
+  "hoffman_alpha": 99.49797307973637
+ },
+ "23": {
+  "eig_err": 3.972054645195637e-15,
+  "arc_transitive_stabilizer": true,
+  "maxKl": "7.9606871865669720446",
+  "hoffman": "4.0148151079844081333",
+  "delsarte_lp": 131.76198299841013,
+  "hoffman_alpha": 131.76198299840968
+ },
+ "29": {
+  "eig_err": 6.114295653343033e-15,
+  "arc_transitive_stabilizer": true,
+  "maxKl": "9.0682422524182328876",
+  "hoffman": "4.3082486291100002721",
+  "delsarte_lp": 195.20693265414917,
+  "hoffman_alpha": 195.20693265414775
+ },
+ "31": {
+  "eig_err": 7.527148867197718e-15,
+  "arc_transitive_stabilizer": true,
+  "maxKl": "10.66651049380006396",
+  "hoffman": "4.000043924261836188",
+  "delsarte_lp": 240.24736182799646,
+  "hoffman_alpha": 240.2473618279934
+ },
+ "59": {
+  "maxKl": "14.917577001778746665",
+  "hoffman": "5.0221009077309070651"
+ },
+ "37": {
+  "delsarte_lp": 317.46808823598656,
+  "hoffman_alpha": 317.46808823598354
+ }
+}

@@ -1,0 +1,12 @@
+(3,4) N=3 c=1/2: T_1(s_1) = A b_N + mu f_3 with A = 429/16, mu = -17/48, residual 0; predicted A = 429/16; match True
+(3,5) N=4 c=-3/5: T_1(s_1) = A b_N + mu f_3 with A = 663/10, mu = -67/120, residual 0; predicted A = 663/10; match True
+(4,5) N=6 c=7/10: T_1(s_1) = A b_N + mu f_3 with A = 10773/40, mu = -89/80, residual 0; predicted A = 10773/40; match True
+(3,7) N=6 c=-25/7: T_1(s_1) = A b_N + mu f_3 with A = 6375/28, mu = -157/168, residual 0; predicted A = 6375/28; match True
+(3,8) N=7 c=-21/4: T_1(s_1) = A b_N + mu f_3 with A = 11571/32, mu = -107/96, residual 0; predicted A = 11571/32; match True
+(5,6) N=10 c=4/5: T_1(s_1) = A b_N + mu f_3 with A = 2697/2, mu = -127/60, residual 0; predicted A = 2697/2; match True
+(4,7) N=9 c=-13/14: T_1(s_1) = A b_N + mu f_3 with A = 104625/112, mu = -201/112, residual 0; predicted A = 104625/112; match True
+(3,10) N=9 c=-44/5: T_1(s_1) = A b_N + mu f_3 with A = 7659/10, mu = -22/15, residual 0; predicted A = 7659/10; match True
+(2,7) N=3 c=-68/7: T_1(s_1) = A b_N + mu f_3 with A = 0, mu = 1/14, residual 0; predicted A = 0; match True
+(2,9) N=4 c=-46/3: T_1(s_1) = A b_N + mu f_3 with A = 0, mu = 1/18, residual 0; predicted A = 0; match True
+(2,13) N=6 c=-350/13: T_1(s_1) = A b_N + mu f_3 with A = 0, mu = 1/26, residual 0; predicted A = 0; match True
+ALL MATCH: True

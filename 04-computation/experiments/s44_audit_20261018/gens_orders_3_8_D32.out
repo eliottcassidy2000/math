@@ -1,0 +1,6 @@
+generator(s) at (D=14, s=7, Li 0): 1, transfer orders {0: 1}
+generator(s) at (D=17, s=7, Li 3): 1, transfer orders {1: 1}
+generator(s) at (D=23, s=8, Li 7): 1, transfer orders {2: 1}
+generator(s) at (D=25, s=8, Li 9): 1, transfer orders {2: 1}
+generator(s) at (D=31, s=9, Li 13): 1, transfer orders {3: 1}
+Vir_(3,8) N=7 through D=32: generators [(14, 7), (17, 7), (23, 8), (25, 8), (31, 9)]  (12.7s)

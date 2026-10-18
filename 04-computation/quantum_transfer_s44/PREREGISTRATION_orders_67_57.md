@@ -24,3 +24,10 @@ k (k = 1, ..., p-2). The generator weights are from kind-pasteur's table (singul
 - **P2 PASSED.** In Vir_(5,7), N = 12, the first appearances at length 12 are: order 1 at 27, order 2 at 29, order 3 at 31.
 - **P3 PASSED.** There are 0 MISMATCH lines. The totals are {1: 24, 2: 14, 3: 5} = 43 = dim ker π for (5,7) through 34,
   and {1: 24, 2: 14, 3: 5, 4: 2} = 45 = dim ker π for (6,7) through 40.
+
+**Audit note (N4).** All three are satisfied and were re-verified at two primes. Not every clause was informative:
+- P3 is automatic for a correct implementation.
+- The "order <= k" halves and "no order >= 5 through weight 40" are forced by weight counting.
+- k = 2 is forced by HYP-9315(a) + (d).
+
+The informative content was k = 3, 4.

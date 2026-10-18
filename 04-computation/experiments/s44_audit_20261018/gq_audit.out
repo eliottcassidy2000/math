@@ -1,0 +1,20 @@
+q= 5: max |lambda(a) + Kl(N(a))| over all 24 nonzero a = 6.66e-16; stabilizer transitive on neighbours: True
+q= 7: max |lambda(a) + Kl(N(a))| over all 48 nonzero a = 1.05e-15; stabilizer transitive on neighbours: True
+q=11: max |lambda(a) + Kl(N(a))| over all 120 nonzero a = 2.41e-15; stabilizer transitive on neighbours: True
+q=13: max |lambda(a) + Kl(N(a))| over all 168 nonzero a = 3.76e-15; stabilizer transitive on neighbours: True
+q=17: max |lambda(a) + Kl(N(a))| over all 288 nonzero a = 4.67e-15; stabilizer transitive on neighbours: True
+q=19: max |lambda(a) + Kl(N(a))| over all 360 nonzero a = 3.38e-15; stabilizer transitive on neighbours: True
+q=23: max |lambda(a) + Kl(N(a))| over all 528 nonzero a = 3.97e-15; stabilizer transitive on neighbours: True
+q=29: max |lambda(a) + Kl(N(a))| over all 840 nonzero a = 6.11e-15; stabilizer transitive on neighbours: True
+q=31: max |lambda(a) + Kl(N(a))| over all 960 nonzero a = 7.53e-15; stabilizer transitive on neighbours: True
+q=23: max Kl = 7.96068718656697, Hoffman = 4.01481510798441, (q+1)/3 - maxKl = 0.039313
+q=29: max Kl = 9.06824225241823, Hoffman = 4.30824862911, (q+1)/3 - maxKl = 0.93176
+q=31: max Kl = 10.6665104938001, Hoffman = 4.00004392426184, (q+1)/3 - maxKl = 0.00015617
+q=59: max Kl = 14.9175770017787, Hoffman = 5.02210090773091, (q+1)/3 - maxKl = 5.0824
+q=13: Delsarte LP bound on alpha = 52.426625 ; Hoffman alpha bound = 52.426625 ; equal: True
+q=17: Delsarte LP bound on alpha = 77.198534 ; Hoffman alpha bound = 77.198534 ; equal: True
+q=19: Delsarte LP bound on alpha = 99.497973 ; Hoffman alpha bound = 99.497973 ; equal: True
+q=23: Delsarte LP bound on alpha = 131.761983 ; Hoffman alpha bound = 131.761983 ; equal: True
+q=29: Delsarte LP bound on alpha = 195.206933 ; Hoffman alpha bound = 195.206933 ; equal: True
+q=31: Delsarte LP bound on alpha = 240.247362 ; Hoffman alpha bound = 240.247362 ; equal: True
+q=37: Delsarte LP bound on alpha = 317.468088 ; Hoffman alpha bound = 317.468088 ; equal: True

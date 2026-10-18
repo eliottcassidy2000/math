@@ -76,3 +76,24 @@ The comparison data already on disk:
 
 The order-(p-1) part is a proper subset of the saturated count. For example, (9,1) has `{3:1}` for p = 4 against
 `{3:3}` for p = 5, 6, and (10,1) has `{3:2}` against `{3:5}`.
+
+## Outcome AMENDED after the independent audit (s44_audit_20261018, M3): P4 and P6 REFUTED as stated
+
+- The evaluation above compared only bidegrees computed in both tables. The (5,6) data stopped at weight 30
+  (m = L + 2i <= 10).
+- The audit ran (5,6) to weight 32, at two primes. S44 reproduced it: `orders_56_D32.out`.
+- That run contradicts P4 and P6 inside the stated window `W(N)`:
+  - (L,i) = (9,1): (5,6) gives {1:6, 2:6, 3:2}; (5,7) and (6,7) give {1:6, 2:6, 3:3}.
+  - (L,i) = (10,1): (5,6) gives {1:7, 2:7, 3:4}; (5,7) gives {1:7, 2:7, 3:5}.
+- The break is forced. The Verma map of (5,6) has its second relation at relative level `2q - 1 = 11`, and
+  `dim ker π(2N+m) = p(m-3) - p(m-2p+1) - p(m-2q+1)`.
+- So "ALL PASSED" was an artifact of the data range, and `W(N)` was the wrong window. It was read off the data, not
+  derived from the BGG thresholds (MISTAKE-640).
+- P5, P7 and P8 remain consistent with all data.
+
+**Corrected statements.** These are post hoc, NOT pre-registered.
+- (U) All models agree for `m < min(2p-1, 2p'-1)`.
+- (Q) For the same `p`, models agree for `m < 2 min(q,q') - 1`.
+- (S) Orders `k <= p_min - 2` agree for `m < 2 q_min - 1`.
+- `evaluate_corrected_windows_20261018.py` finds 0 disagreements in all 16 S44 models: 388 + 452 bidegree comparisons
+  and 2401 order counts. Every same-`p` pair first disagrees exactly at `m = 2 q_min - 1`. The audit's 45 pairs agree.

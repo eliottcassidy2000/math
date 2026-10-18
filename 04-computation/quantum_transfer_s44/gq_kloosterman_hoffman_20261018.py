@@ -7,8 +7,11 @@ Claims checked (q an odd prime):
       = -Kl_q(N(a)),  Kl_q(c) = sum_{x in F_q^x} e((x + c/x)/q)   [circle sum = minus Kloosterman sum];
  (ii) hence lambda_min = -max_c Kl_q(c), and Hoffman's ratio bound for the chromatic number is
       kappa(q) >= 1 + (q+1) / max_{c in F_q^x} Kl_q(c);
- (iii) G_q is arc-transitive (u -> zeta u, x -> x + b), so the Lovasz theta function equals the Hoffman ratio bound:
-      no LP/SDP of Delsarte-Lovasz type can improve it (consistent with mac-mini's Delsarte/Schrijver LP at q = 29).
+ (iii) G_q is arc-transitive (u -> zeta u, x -> x + b), so by Lovasz 1979 Thm 9 the theta function equals the
+      Hoffman ratio bound: the Lovasz theta bound cannot improve on Hoffman.  CORRECTED (S44 audit M2, MISTAKE-640): this
+      says nothing about Schrijver's theta' (the Delsarte LP), which happens to equal Hoffman for q = 13..37 (audit
+      computation).  Stronger SDP bounds DO improve it: the three-point bound gives alpha(G_29) <= 163.25, so
+      kappa(29) >= 6 (decalion89; mac-mini; MISTAKE-634).
 Prints the table of max Kl, Hoffman bound and its margin above the next-lower integer, for primes 5 <= q <= QMAX.
 Usage: python gq_kloosterman_hoffman_20261018.py [QMAX]
 Session opus-2026-10-18-S44.
