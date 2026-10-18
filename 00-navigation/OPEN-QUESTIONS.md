@@ -6715,7 +6715,8 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
   L2 ((-1)^sigma_T(n) = prod (u/3)), L4 (Solfeggio = three-lift fibres), L5 (divergent orbit => Theta(n) not in
   Q(phi); transcendental if low complexity, citation to verify).
 - S43 (factorization_vertex_supersymmetric_bridge_20261018.md): THM-4669 PROVED (Cooper s_7 and Apery agree mod p^2
-  at every Frobenius point (p^r-1)/2; s_7((p-1)/2) == (-1/p) a_(4A)(p); HYP-9291 resolved). OPEN: a mod-p^3 form; a
+  at every Frobenius point (p^r-1)/2; s_7((p-1)/2) == (-1/p) a_(4A)(p); HYP-9291 resolved) and THM-4670 PROVED (the
+  zeta(2)-class twin sum C(n+k,k)^3 == b(n) mod p^2 at the half-period, via Dixon's derivative; HYP-9292 resolved). OPEN: a mod-p^3 form; a
   conceptual (K3-family / motive 8.4) reason; the Witten-index reading of the ROOT current (supercharge on sources?).
 - S42 six colours: all three golden contact families coupled are additively free (0/570, contact2 finished); OPEN:
   a difference-forcing layer (all five nonzero phi-differences in every contact direction; 4 of 22 directions reached)

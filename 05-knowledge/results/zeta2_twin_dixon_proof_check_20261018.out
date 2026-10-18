@@ -1,0 +1,4 @@
+odd-n closed form for S_n (n <= 40): True
+even-n closed form for E_n and Dixon value (n <= 40): True
+theorem for all primes 5 <= p < 1200: True
+H_(3m) - H_m == 0 mod p for all primes p = 4m + 1 < 1200: True

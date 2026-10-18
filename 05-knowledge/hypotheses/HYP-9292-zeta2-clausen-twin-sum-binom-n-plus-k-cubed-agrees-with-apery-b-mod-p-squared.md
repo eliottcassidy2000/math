@@ -1,8 +1,10 @@
 ---
 id: HYP-9292
-title: "The zeta(2)-class Clausen twin: for every prime p >= 5, with n = (p-1)/2, sum_{k=0}^{n} C(n+k,k)^3 == b(n) (mod p^2), where b(n) = sum_k C(n,k)^2 C(n+k,k) are Apery's zeta(2) numbers (governed at the half-period by the M24 class-4C eta-product eta(4 tau)^6); equivalently sum_{k<=n} a_k^3 O_k == 0 (mod p), a_k = C(2k,k)/4^k, O_k = sum_{j<=k} 1/(2j-1); equivalently the harmonic Dixon congruence H_n D_n == S_n (mod p)"
+title: "The zeta(2)-class Clausen twin: for every prime p >= 5, with n = (p-1)/2, sum_{k=0}^{n} C(n+k,k)^3 == b(n) (mod p^2), where b(n) = sum_k C(n,k)^2 C(n+k,k) are Apery's zeta(2) numbers (governed at the half-period by the M24 class-4C eta-product eta(4 tau)^6); equivalently sum_{k<=n} a_k^3 O_k == 0 (mod p), a_k = C(2k,k)/4^k, O_k = sum_{j<=k} 1/(2j-1); equivalently the harmonic Dixon congruence H_n D_n == S_n (mod p). RESOLVED: PROVED in S43 as THM-4670"
 status: >
-  OPEN (CONJECTURE).
+  PROVED (resolved the same session): THM-4670 proves it by differentiating Dixon's well-poised summation.
+  - odd n: the closed form S_n = Gamma(1-n/2) Gamma(1+3n/2)/(3n Gamma(1+n/2)^2) is divisible by p;
+  - n = 2m: E_n = (D_n/2)(H_m - H_(3m)), and H_(3m) - H_m == 0 (mod 4m+1) by the reflection j <-> p - j.
   FINITE-EXACT: the twin congruence holds for all primes 5 <= p < 1000; both equivalent forms hold for all primes
   p < 400.
   Here D_n = sum_k (-1)^k C(n,k)^3 (Dixon's sum, zero for odd n) and S_n = sum_k (-1)^k C(n,k)^3 H_(n-k).
@@ -60,6 +62,6 @@ The odd case therefore looks closed-form provable; the even case needs the full 
 
 ## Tests
 
-- **A proof.** Differentiate the three-parameter Dixon identity
+- **Proof: done (THM-4670).** Differentiate the three-parameter Dixon identity
   `Σ_k (-1)^k C(a+b,a+k) C(b+c,b+k) C(c+a,c+k) = (a+b+c)!/(a! b! c!)` along the diagonal.
 - **Literature.** Search for `Σ C(2k,k)^3 H_k/64^k`-type congruences (Z.-W. Sun and coauthors).

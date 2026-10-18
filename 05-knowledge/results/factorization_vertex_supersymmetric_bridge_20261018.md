@@ -257,6 +257,18 @@ Every step was checked for all odd `p < 400`, and the theorem for all 237 primes
 - **Frobenius points.** The congruence holds at every `n = (p^r - 1)/2`. HYP-9291 was filed after 13 numerical cases
   with `r = 2, 3` and resolved by the same proof with `p`-adic valuation bounds; THM-4669 now covers every `r >= 1`.
 
+**THM-4670, the ζ(2)-class twin.** An exhaustive search over three- and four-factor binomial summands
+(clausen_twin_search_20261018.py) found exactly one more half-period twin of the Apéry numbers. Every other hit is a
+rewriting, or `s_7` in disguise.
+- **Statement.** For every prime `p >= 5`, `Σ_(k<=(p-1)/2) C(n+k,k)^3 ≡ b((p-1)/2) (mod p^2)`, with `b` Apéry's ζ(2)
+  numbers, governed by `η(4τ)^6`, class 4C.
+- **Proof.** The congruence reduces to `Σ a_k^3 O_k ≡ 0 (mod p)` and is proved by differentiating Dixon's well-poised
+  summation at `a = -n`:
+  - odd `n`: `Σ (-1)^k C(n,k)^3 H_(n-k) = Γ(1-n/2)Γ(1+3n/2)/(3n Γ(1+n/2)^2)`, which is divisible by `p`;
+  - `n = 2m`: the defect is `(D_n/2)(H_m - H_(3m))`, and `H_(3m) ≡ H_m (mod 4m+1)` by reflection.
+
+Each of the two Apéry classes at the half-period (4A for ζ(3), 4C for ζ(2)) thus has a proven Clausen twin.
+
 ### 3.3 Supersymmetric meaning of the eta-products (CITED + OBSERVATION)
 
 **Twisted Fock spaces.** `1/η_g(τ)` is the trace of `g q^(L_0 - 1)` on the Fock space of 24 chiral bosons: the rank-24
@@ -326,6 +338,7 @@ group.
 
 **New.**
 - **THM-4669** (PROVED at every Frobenius point `(p^r - 1)/2`), with the Clausen-identity mechanism.
+- **THM-4670** (PROVED), the ζ(2)-class twin, via the derivative of Dixon's summation.
 - The classification of Apéry-like half-period congruences against the M24 eta-products (FINITE-EXACT).
 - The congruence method that derives twining genera.
 - The Paley `P_23` → 11A/23A twining observation.
