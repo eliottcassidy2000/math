@@ -112,6 +112,14 @@ So on the stated range `2^12 <= N < 2^28` (not the untested finite-prefix calibr
 At six arg-max points in octaves `2^23-2^25` (P6), merges above `Y = 1000` remove `3.58-3.63 N`, and arrivals add at
 most `0.245 N`.
 
+**Certified closed frontiers** (clock_duality's R6; `root_transport_closed_frontier_energy_20261017.py`, P11-P12
+pre-registered, passed).
+- Setting: stop on first entry into the forward-closed sets `V_100` (74 seeds) and `V_1000` (627 seeds). There the
+  stopped and unstopped transports agree outside `V`.
+- Result: over `2^12 <= N < 2^26`, `E_(V_1000)/N <= 2.47` and `E_(V_100)/N <= 2.56`, octave profiles close to the
+  height frontiers'.
+- Consequence: the frontier cone does not depend on the return kernel that the height frontier hides.
+
 **Scale profiles** (`root_transport_frontier_profile_20261017.py`). These show `E_Y/N` as the frontier height `Y` comes
 down from `4N`.
 

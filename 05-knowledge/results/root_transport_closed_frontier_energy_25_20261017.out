@@ -1,0 +1,39 @@
+clock parities to 268435456 [2 s]
+closed frontier from Y = 100: |V| = 74, max seed 2051 (R(N) invariant at every N: True) [8 s]
+   octave 2^ 8: E_V/N mean 2.7052  max 3.0658 (N = 319)  min 2.2849
+   octave 2^ 9: E_V/N mean 2.1116  max 2.8391 (N = 522)  min 1.6340
+   octave 2^10: E_V/N mean 1.9527  max 2.3785 (N = 1226)  min 1.4966
+   octave 2^11: E_V/N mean 1.6298  max 2.3839 (N = 3959)  min 1.1395
+   octave 2^12: E_V/N mean 1.8205  max 2.4703 (N = 4810)  min 1.3360
+   octave 2^13: E_V/N mean 1.4056  max 1.9437 (N = 15414)  min 0.9290
+   octave 2^14: E_V/N mean 1.3014  max 1.9547 (N = 17217)  min 0.7699
+   octave 2^15: E_V/N mean 1.0285  max 1.5909 (N = 42576)  min 0.7270
+   octave 2^16: E_V/N mean 1.3858  max 1.8099 (N = 75306)  min 0.9432
+   octave 2^17: E_V/N mean 0.9844  max 1.3407 (N = 230962)  min 0.6755
+   octave 2^18: E_V/N mean 1.0371  max 1.4834 (N = 289970)  min 0.7209
+   octave 2^19: E_V/N mean 1.1744  max 1.4856 (N = 1041364)  min 0.7919
+   octave 2^20: E_V/N mean 1.1083  max 1.3763 (N = 1052938)  min 0.8865
+   octave 2^21: E_V/N mean 1.1580  max 1.4745 (N = 3269067)  min 0.8176
+   octave 2^22: E_V/N mean 1.3627  max 1.7868 (N = 8377947)  min 0.9399
+   octave 2^23: E_V/N mean 1.4092  max 1.9207 (N = 8431082)  min 0.9456
+   octave 2^24: E_V/N mean 0.8912  max 1.2615 (N = 33553199)  min 0.6841
+   octave 2^25: E_V/N mean 1.6574  max 2.5544 (N = 48192687)  min 0.9542
+closed frontier from Y = 1000: |V| = 627, max seed 63665 (R(N) invariant at every N: True) [12 s]
+   octave 2^ 8: E_V/N mean 4.9903  max 5.4567 (N = 508)  min 4.7219
+   octave 2^ 9: E_V/N mean 5.0007  max 5.6000 (N = 565)  min 4.3363
+   octave 2^10: E_V/N mean 3.7690  max 4.3164 (N = 1024)  min 3.2428
+   octave 2^11: E_V/N mean 2.7687  max 3.2986 (N = 2073)  min 2.4329
+   octave 2^12: E_V/N mean 2.1823  max 2.4684 (N = 4120)  min 2.0579
+   octave 2^13: E_V/N mean 1.8632  max 2.1093 (N = 8287)  min 1.6555
+   octave 2^14: E_V/N mean 1.5351  max 1.7904 (N = 18963)  min 1.2863
+   octave 2^15: E_V/N mean 1.3094  max 1.4573 (N = 35236)  min 1.2014
+   octave 2^16: E_V/N mean 1.3416  max 1.5131 (N = 122972)  min 1.2109
+   octave 2^17: E_V/N mean 1.3604  max 1.5172 (N = 191036)  min 1.2443
+   octave 2^18: E_V/N mean 1.2577  max 1.3926 (N = 323332)  min 1.0612
+   octave 2^19: E_V/N mean 1.2816  max 1.4646 (N = 1042203)  min 1.1124
+   octave 2^20: E_V/N mean 1.3996  max 1.5341 (N = 1067833)  min 1.2714
+   octave 2^21: E_V/N mean 1.3680  max 1.5571 (N = 2319788)  min 1.2371
+   octave 2^22: E_V/N mean 1.2289  max 1.3755 (N = 4380896)  min 1.1271
+   octave 2^23: E_V/N mean 1.1582  max 1.3282 (N = 9667901)  min 1.0417
+   octave 2^24: E_V/N mean 1.0486  max 1.2281 (N = 32246119)  min 0.9193
+   octave 2^25: E_V/N mean 1.2782  max 1.4212 (N = 47930133)  min 1.1526

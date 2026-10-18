@@ -1,0 +1,9 @@
+[    0 s] W C: |W| = 10 with 15 unit edges; |A| 54 (146 edges), |C| 10 (15 edges); v-contact 112, reflected 16; conj(d)q-pairs in W per direction: min 0 max 1
+[    0 s] additive pre-screen (shared): blocked 0 of 570; sizes of conj(d)q-difference sets in one W-colouring: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+[    0 s] additive pre-screen (independent): blocked 0 of 570; sizes of conj(d)q-difference sets in one W-colouring: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+[    0 s] W Cd: |W| = 211 with 468 unit edges; |A| 54 (146 edges), |C| 10 (15 edges); v-contact 112, reflected 1900; conj(d)q-pairs in W per direction: min 20 max 56
+[    1 s] additive pre-screen (shared): blocked 0 of 570; sizes of conj(d)q-difference sets in one W-colouring: [1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5]
+[    1 s] additive pre-screen (independent): blocked 0 of 570; sizes of conj(d)q-difference sets in one W-colouring: [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5]
+[    3 s] W Cdd: |W| = 2113 with 6349 unit edges; |A| 54 (146 edges), |C| 10 (15 edges); v-contact 112, reflected 33556; conj(d)q-pairs in W per direction: min 460 max 896
+[   16 s] additive pre-screen (shared): blocked 0 of 570; sizes of conj(d)q-difference sets in one W-colouring: [4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+[   31 s] additive pre-screen (independent): blocked 0 of 570; sizes of conj(d)q-difference sets in one W-colouring: [4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]

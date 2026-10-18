@@ -1,0 +1,28 @@
+{
+ "A_recipe": "contact1",
+ "C_recipe": "MM",
+ "A": 1099,
+ "C": 29,
+ "edges_A": 3794,
+ "edges_C": 73,
+ "directions": 22,
+ "v_contact": 329340,
+ "reflected": 296,
+ "e2_contact": 9664,
+ "results": {
+  "shared": {
+   "clauses": 12438649,
+   "variables": 37248,
+   "satisfiable_without_ports": true,
+   "blocked": 0,
+   "blocked_list": []
+  },
+  "independent": {
+   "clauses": 12444808,
+   "variables": 38298,
+   "satisfiable_without_ports": true,
+   "blocked": 0,
+   "blocked_list": []
+  }
+ }
+}

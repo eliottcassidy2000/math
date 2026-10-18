@@ -168,3 +168,33 @@ Stopping on first entry into `V` leaves no return kernel, and `R(N)^2 <= |V| E_V
 `[2^12, 2^26)`:
 - **P11.** `max E_(V_1000)(N)/N <= 2.5`.
 - **P12.** `max E_(V_100)(N)/N <= 3.5`.
+
+### Outcome of P11-P12 (every `N < 2^26`, `root_transport_closed_frontier_energy_20261017.py 25`)
+
+| octave | `2^12` | `2^13` | `2^14` | `2^16` | `2^18` | `2^20` | `2^22` | `2^23` | `2^24` | `2^25` | test | verdict |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `max E_(V_1000)/N` | **2.468** | 2.109 | 1.790 | 1.513 | 1.393 | 1.534 | 1.376 | 1.328 | 1.228 | 1.421 | P11 `<= 2.5` | PASSED |
+| `max E_(V_100)/N` | 2.470 | 1.944 | 1.955 | 1.810 | 1.483 | 1.376 | 1.787 | 1.921 | 1.262 | **2.554** | P12 `<= 3.5` | PASSED |
+
+The invariant `R(N) = Σ_(u ∈ V) f(u) c_V(u)` was checked at every `N`.
+
+The renewal-free closed frontiers behave like the height frontiers:
+- `E_(V_1000)` is within about 15% of `E_1000` octave by octave;
+- the `2^25` octave that carried the `E_100` record carries the `E_(V_100)` maximum too.
+
+So the frontier cone is equally supported in clock_duality's R6 setting, where stopped and unstopped transport agree
+outside `V`. The Cauchy-Schwarz constant there is `sqrt(627 · 2.47) < 40`.
+
+## Pre-registered P13-P14 (statistics of the plateau; written before the measurement)
+
+**Model (the HEURISTIC behind (A')).** In octaves `2^24-2^27` the frontier coefficients are treated as approximately
+independent centred Gaussians: `c_Y(u) ≈ sqrt(N s_u) Z_u`. Then
+- `E_Y/N ≈ Σ s_u Z_u^2`, with mean `m = Σ s_u`;
+- standard deviation `sqrt(2 Σ s_u^2)`;
+- effective degrees of freedom `F_eff = m^2 / Σ s_u^2`.
+
+Predictions, with `N` sampled on a regular grid:
+- **P13.** The kurtosis of `c_Y(u)/sqrt(N s_u)`, pooled over seeds carrying 90% of the energy, lies in `[2, 5]` (a
+  Gaussian has 3), for `Y = 100` and `Y = 1000`.
+- **P14.** The model standard deviation `sqrt(2 Σ s_u^2)` is within a factor 2 of the observed standard deviation of
+  `E_Y/N` over the samples, for both `Y`.
