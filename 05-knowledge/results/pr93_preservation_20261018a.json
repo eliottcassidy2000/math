@@ -1,0 +1,199 @@
+{
+  "baseRefName": "main",
+  "baseRefOid": "d5fb4859f238309010120f2e69b91172b69ead0f",
+  "body": "<!-- claude-projects-attribution: {\"github_login\":\"eliottcassidy2000\"} -->\n_Requested by **butch** · [project thread](https://claude.ai/code/project/chan_01DfXSfaWMc2kCAhrqxCVLKx?thread=cmsg_01DfXSfaWMc2kCAhrqxCVLKx1oPMUpLNschnjLwAKCRdyq)_\n\nBefore: Beukers (arXiv:2403.03301v3) proves `F(t) ≡ F_p(t)F(t^σ)` and his CM supercongruences only for families whose weight-two form vanishes to order `r < 1/3`. In Remark 1.14(2) he reports, from computer experiments only, the mod `p²` congruence for Cooper's `s7`, `s10`, `s18` and the Hadamard products Apéry2 ⊙ central and Franel ⊙ central. In Remark 1.17 he says he does not know whether his modular approach works at primes that do not split in the CM field. Chan–Cooper–Sica's Conjecture 5.4 (`c7(pn) ≡ c7(n) mod p²` for the weight-one root of `s7`) is listed as open by Cooper (arXiv:2302.00757v2, §11). HYP-9310 is an open hypothesis.\n\nAfter:\n- `05-knowledge/results/beukers_remark114_power_structure_and_inert_cm_20261018.md` proves Beukers' Remark 1.14(2) for all five families at every `p ∤ N`, his CM Theorems 1.15/1.16 mod `p²` for them, and a new inert-prime theorem: for every family in his setting (Assumption (II) or these five) and every rational CM value `t(α)`, `F_p(t(α)) ≡ 0 (mod p²)` when `p` is inert in `Q(α)`. As a corollary it gives a modular proof of Z.-W. Sun's congruence `Σ_{k<p} A_k ≡ 4x² − 2p` or `0 (mod p²)` for Apéry numbers (first proved by C. Wang and Z.-W. Sun, 2024, with the `p`-adic Gamma function). It also records eight misprints in Beukers' Appendix C.\n- `05-knowledge/results/cooper_s7_weight_one_root_frobenius_20261018.md` proves the Chan–Cooper–Sica conjecture in both directions (`c7(pn) ≡ c7(n) mod p²` for all `n` iff `p = 7` or `p ≡ 1, 2, 4 mod 7`), the \"only if\" half of O'Brien's Lucas conjecture, and a companion congruence at inert primes. It now points to the new note for the other families.\n- `05-knowledge/results/hyp9310_is_klmsy_corollary_reflection_proof_20261018.md` shows that HYP-9310's law is Corollary 3 of Kibelbek–Long–Moss–Sheller–Yuan (JNT 2016), with an independent proof. Part (K) stays OPEN.\n\nHow (new note): when `t^a Θ^b` is an η-product, the leading coefficient of Beukers' polynomial is an `a`-th power, `T_{p,p+1} = ±Q^a` with `Q ≡ 1 (mod p)` of degree `≤ (p+1)/b`. For these five families `a = b − 1`, and this closes the degree count his Theorem 1.13 cannot close when `r ≥ 1/3`. At inert primes, Shimura's reciprocity law makes the inertia group at `p` act on the `p+1` roots of `T_p(x, t(α))` through a non-split Cartan subgroup, which is transitive on `P¹(F_p)`; so all roots have valuation `2p/(p+1)`, which forces `F_p(t(α)) ≡ 0 (mod p²)`.\n\nChecks: `gp -q 04-computation/experiments/beukers_remark114_power_structure_check_20261018.gp` (16 s) verifies the identities, Lemma 1 for `p ≤ 61`, Theorem 1 for `p < 110`, 24 Newton polygons, all 118 rational CM values of Beukers' Appendix C for `5 ≤ p < 400` (4600 inert, 4268 split, 38 ramified prime-value pairs) and Sun's congruence for `p < 400`. `gp -q 04-computation/experiments/cooper_s7_weight1_frobenius_check_20261018.gp` (3.5 min) checks the `s7` note. Both outputs are committed and every check prints 1.\n\nTyping: PROVED (Lemma 1, Theorems 1, 3, 4, Corollaries 2, 5 of the new note; Theorems A, B, C(ii), D, E, Corollary F of the `s7` note), CITED (Beukers' `T_p` construction and Proposition 5.1, Shimura's reciprocity law, Beukers–Tsai–Ye, Cooper 2012, Babbage), FINITE-EXACT (the checks), VERIFIED only numerically (the congruence at `p | N`; valuation 1 at ramified primes), OPEN (higher powers `p^{2r}`, primes `p | N`, ramified primes, level 11). Every congruence fails mod `p³`. No canonical THM/HYP files or IDs are created or changed.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nhttps://claude.ai/code/session_01QyWXH3Q75NNxku7vUmohSe",
+  "comments": [],
+  "commits": [
+    {
+      "authoredDate": "2026-10-18T16:31:31Z",
+      "authors": [
+        {
+          "email": "noreply@anthropic.com",
+          "id": "MDQ6VXNlcjgxODQ3",
+          "login": "claude",
+          "name": "Claude"
+        }
+      ],
+      "committedDate": "2026-10-18T16:31:31Z",
+      "messageBody": "…their Cor. 4); independent proof via reflection, Morley and the 2-isogeny\n\nProposition E (every m, p >= 5, p not dividing m): the CM harmonic law\n6 h_m == q_p(m) F_m (mod p) at m is equivalent to\nF_(4096/m) == (-m/p) F_m (mod p^2). With KLMSY Theorem 2 at lambda and\n1/lambda and the 2-isogeny E_lambda ~ (-2)-twist of E_(1/lambda), this\nproves (L_p) at the six non-self-dual CM points for every p >= 5\n(p = 7 at m = 1, 4096 checked directly). Part (K) stays OPEN.\nEvery proof step checked for 5 <= p < 600; the equivalence for all\n1 <= |m| <= 64. KLMSY Thm 2's Legendre symbol must read ((1-lambda)/p).\n\nCo-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01QyWXH3Q75NNxku7vUmohSe",
+      "messageHeadline": "cloud-2026-10-18-M1: HYP-9310 (L_p) is KLMSY 2016 Cor. 3 (and (H) is …",
+      "oid": "199dbc117a239c367716c2bff8979ba96adcdb40"
+    },
+    {
+      "authoredDate": "2026-10-18T18:22:55Z",
+      "authors": [
+        {
+          "email": "noreply@anthropic.com",
+          "id": "MDQ6VXNlcjgxODQ3",
+          "login": "claude",
+          "name": "Claude"
+        }
+      ],
+      "committedDate": "2026-10-18T18:22:55Z",
+      "messageBody": "…roved: c7(pn) == c7(n) mod p^2 iff p = 7 or (p/7) = 1; Beukers' mod p^2 congruence for s7\n\nWork with G = sqrt(F) = theta(x^2+xy+2y^2) on Gamma0(7), whose Hauptmodul t\nlives on Gamma0(7)+. Beukers' weight-one T_p polynomial has W7-eigen\ncoefficients in Z[t] + s Z[t] (s^2 = (1+t)(1-27t)) of degree <= m/3, which\ncloses the degree count Beukers' Theorem 1.13 cannot close for s7.\n\n- Theorem B: G == G_p G(t^sigma) mod p^2 (split p); G/s == H_p G(t^sigma)\n  (inert p). Theorem A: F == F_p F(t^sigma) mod p^2 for every p != 7\n  (Beukers, Remark 1.14(2): previously experimental).\n- Theorem C: c7 has the Lucas property mod p iff p = 7 or (p/7) = 1; the\n  \"only if\" half (O'Brien 9.2) is new, the \"if\" half is BTY 2025.\n- Theorem D (Chan-Cooper-Sica 2010, Conj. 5.4; O'Brien 9.3): Cartier\n  reduction C(G) == G + p C(eps_p G_p) theta G, Lemma E\n  (prod(1-q^pn)/prod(1-q^n)^p == E_{p-1}^{-1/2} mod p^2), Proposition F and\n  Lemma W (Atkin-Lehner on (E_{p-1}(tau)+E_{p-1}(7tau))/2theta^{p-1});\n  p = 2 and p = 7 by Sturm-bounded identities and U_7 on a weight-3\n  Eisenstein series; inert primes fail mod p.\n- Theorem E: at inert p, d7(pn) == c7(n) mod p^2 for G/s = sum d7(n) t^n.\n- Corollary F: Beukers' Theorems 1.15/1.16 hold for s7 mod p^2.\nAll ingredients checked (split 11..43, inert 5..41, p = 2, 3, 7); every\nstatement for p < 60 (CM table p < 400); all fail mod p^3.\n\nCo-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01QyWXH3Q75NNxku7vUmohSe",
+      "messageHeadline": "cloud-2026-10-18-M1: Chan-Cooper-Sica Conj. 5.4 + O'Brien Conj. 9.3 p…",
+      "oid": "82da750aa6b2cd7f081b82298631b07a99369e9d"
+    },
+    {
+      "authoredDate": "2026-10-18T20:07:36Z",
+      "authors": [
+        {
+          "email": "noreply@anthropic.com",
+          "id": "MDQ6VXNlcjgxODQ3",
+          "login": "claude",
+          "name": "Claude"
+        }
+      ],
+      "committedDate": "2026-10-18T20:07:36Z",
+      "messageBody": "…both Hadamard products (T_{p,p+1} is an a-th power); inert CM primes F_p(t(alpha)) == 0 mod p^2 for all of Beukers' third-order families\n\n- Lemma 1: when t^a Theta^b is an eta-product, T_{p,p+1} = (-1)^(p+1) Q^a with\n  Q in 1 + pZ[t], deg Q <= floor((p+1)/b). With a = b - 1 this closes the\n  degree count that Beukers' Theorem 1.13 cannot close for r >= 1/3, giving\n  F(t) == F_p(t) F(t^sigma) mod p^2 for s7, s10, s18, Apery2*central and\n  Franel*central at every p not dividing N (a second proof for s7).\n- Split CM primes: Beukers' Theorems 1.15/1.16 hold mod p^2 for these five.\n- Theorem 4 (inert CM primes, Beukers' Remark 1.17): via Shimura reciprocity\n  the inertia group at p permutes all p+1 roots of T_p(x, t(alpha)) transitively,\n  so they share the valuation 2p/(p+1) and F_p(t(alpha)) == 0 mod p^2.\n- Corollary: a new (modular) proof of Z.-W. Sun's congruence for\n  sum_{k<p} A_k mod p^2 (first proved by C. Wang and Z.-W. Sun, 2024).\n- Eight misprints in Beukers' Appendix C (arXiv v3) corrected and recorded.\n- FINITE-EXACT: identities n <= 120; Lemma 1 for p <= 61; Theorem 1 for\n  p < 110; 24 Newton polygons; all 118 rational CM values of Appendix C for\n  5 <= p < 400 (4600 inert, 4268 split, 38 ramified prime-value pairs).\n- The s7 note now points to the new note for these cases.\n\nCo-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01QyWXH3Q75NNxku7vUmohSe",
+      "messageHeadline": "cloud-2026-10-18-M1: Beukers' Remark 1.14(2) proved for s10, s18 and …",
+      "oid": "9ee1b75ce7ca7c785bb5a69bb9bbda564a5b9288"
+    },
+    {
+      "authoredDate": "2026-10-18T20:10:16Z",
+      "authors": [
+        {
+          "email": "noreply@anthropic.com",
+          "id": "MDQ6VXNlcjgxODQ3",
+          "login": "claude",
+          "name": "Claude"
+        }
+      ],
+      "committedDate": "2026-10-18T20:10:16Z",
+      "messageBody": "….14(2) note\n\n- Theorem 4 covers every family of Beukers' Appendix C except\n  F(1/6,1/2,5/6;1,1|1728t), whose Theta is not modular; say so.\n- Sun's congruence for sum_{k<p} A_k mod p^2 was first proved by C. Wang and\n  Z.-W. Sun (Nanjing Univ. J. Math. Biquarterly 41 (2024) 34-56); Corollary 5\n  is now credited as a second, modular proof.\n- s18 binomial formula: sum over k <= n/2 with C(-1,0) = 0, as in the script.\n- Clearer wording of the Newton-polygon factor degrees and open problem 4.\n\nCo-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01QyWXH3Q75NNxku7vUmohSe",
+      "messageHeadline": "cloud-2026-10-18-M1: scope and priority fixes in the Beukers Remark 1…",
+      "oid": "5b7f276c3274046af1688a382b4cb183e3c23be5"
+    }
+  ],
+  "files": [
+    {
+      "path": "04-computation/experiments/beukers_remark114_power_structure_check_20261018.gp",
+      "additions": 283,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "04-computation/experiments/cooper_s7_weight1_frobenius_check_20261018.gp",
+      "additions": 346,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "04-computation/experiments/hyp9310_reflection_proof_check_20261018.py",
+      "additions": 122,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "05-knowledge/results/beukers_remark114_power_structure_and_inert_cm_20261018.md",
+      "additions": 235,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "05-knowledge/results/beukers_remark114_power_structure_check_20261018.out",
+      "additions": 196,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "05-knowledge/results/cooper_s7_weight1_frobenius_check_20261018.out",
+      "additions": 157,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "05-knowledge/results/cooper_s7_weight_one_root_frobenius_20261018.md",
+      "additions": 288,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "05-knowledge/results/hyp9310_is_klmsy_corollary_reflection_proof_20261018.md",
+      "additions": 133,
+      "deletions": 0,
+      "changeType": "ADDED"
+    },
+    {
+      "path": "05-knowledge/results/hyp9310_reflection_proof_check_20261018.out",
+      "additions": 13,
+      "deletions": 0,
+      "changeType": "ADDED"
+    }
+  ],
+  "headRefName": "claude/project-thread-4wk8wh",
+  "headRefOid": "5b7f276c3274046af1688a382b4cb183e3c23be5",
+  "number": 93,
+  "reviews": [],
+  "state": "OPEN",
+  "title": "cloud-2026-10-18-M1: Beukers' open mod p² supercongruences (s7, s10, s18, Hadamard products, inert CM primes) and the Chan–Cooper–Sica conjecture",
+  "url": "https://github.com/eliottcassidy2000/math/pull/93",
+  "preservation": {
+    "status": "IMPORTED source material; source-authored status retained, no new canonical promotion by import",
+    "source_tip": "5b7f276c3274046af1688a382b4cb183e3c23be5",
+    "method": "All four commits cherry-picked in order, preserving authorship and intermediate revisions; all nine final file blobs match the source tip after LF normalization.",
+    "local_commits": [
+      "9a8701f7469ab7ea0e094744ff1df40b5d15b262",
+      "92a4e0455ac22bd6962f9e51ec4c3942d29c58a1",
+      "f8a793f025a4de9dd70cdb54b3d30ab711bac8d2",
+      "ab30f1bcc0ee2d6bbe8cdf741ab0fe626479305d"
+    ],
+    "files": [
+      {
+        "path": "04-computation/experiments/beukers_remark114_power_structure_check_20261018.gp",
+        "source_git_blob": "5187b39ce01afd1e79fa9e8d9cab3f335949bb31",
+        "lf_sha256": "6132d682f5ef6c7a60f801f643f9a13b8560b6885de5da66dab7ac4d0d076bb0",
+        "bytes_lf": 19880
+      },
+      {
+        "path": "04-computation/experiments/cooper_s7_weight1_frobenius_check_20261018.gp",
+        "source_git_blob": "2b38937f3fd1f511582baba95f2ad0cfe3042192",
+        "lf_sha256": "9034554ca861d527726ae4436a35be42b977cfae1f77f7d8eb0a527c401aca64",
+        "bytes_lf": 17826
+      },
+      {
+        "path": "04-computation/experiments/hyp9310_reflection_proof_check_20261018.py",
+        "source_git_blob": "031db9a9420d030bdbba3011492b712058177909",
+        "lf_sha256": "4d5faa18c7dce381d400b6aac5957d764c7856ecd8247fbc3f1f3cfe453afd04",
+        "bytes_lf": 5005
+      },
+      {
+        "path": "05-knowledge/results/beukers_remark114_power_structure_and_inert_cm_20261018.md",
+        "source_git_blob": "228eaf696b7f1bdc212bba7e89e7785fcb9a1420",
+        "lf_sha256": "83e0049b1dfc24b87e33a83482281d4b395b7e1d7355f9edaabe248730f70ad6",
+        "bytes_lf": 16915
+      },
+      {
+        "path": "05-knowledge/results/beukers_remark114_power_structure_check_20261018.out",
+        "source_git_blob": "a36e4a9cbafb231caa7018f83498e59c57d739e5",
+        "lf_sha256": "a4292ef6c2c19f2b18085942a97cd95c46c2e785542f3e32908b693e7f2c4544",
+        "bytes_lf": 23344
+      },
+      {
+        "path": "05-knowledge/results/cooper_s7_weight1_frobenius_check_20261018.out",
+        "source_git_blob": "9aaee3852d9f929240ba3b6dcf6659a44f88cda0",
+        "lf_sha256": "f42e870e36b692fc96b3be90d6ecca970133c764d944e2c5296adf71e2bef506",
+        "bytes_lf": 10307
+      },
+      {
+        "path": "05-knowledge/results/cooper_s7_weight_one_root_frobenius_20261018.md",
+        "source_git_blob": "0f7843111beb576c920dd19c609c90aea122ffb8",
+        "lf_sha256": "fd7935e86a41854f67817d4f1b3b16d4fcd52134a72757debd2a9d1489ea66b4",
+        "bytes_lf": 18712
+      },
+      {
+        "path": "05-knowledge/results/hyp9310_is_klmsy_corollary_reflection_proof_20261018.md",
+        "source_git_blob": "63300a0a1fc4bdffd48b17cd376c4dc2319b474e",
+        "lf_sha256": "f2cd136bc1619f2b328d51196f4a87a0378ba2cf4824799d3ecbb87514fcea11",
+        "bytes_lf": 8106
+      },
+      {
+        "path": "05-knowledge/results/hyp9310_reflection_proof_check_20261018.out",
+        "source_git_blob": "09a6416d0fd00eda45255704b089c42063e81904",
+        "lf_sha256": "d4bd257484aef2843edf34e689846a42c8d5d5c3be68938f92d6b3fe8f570ac8",
+        "bytes_lf": 117
+      }
+    ],
+    "date": "2026-10-18"
+  }
+}
