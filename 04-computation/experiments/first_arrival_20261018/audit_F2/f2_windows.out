@@ -1,0 +1,40 @@
+a =  1, N = -(a^2+a-1) =    -1 : [('Fib', 2, 0, 1)]
+a =  2, N = -(a^2+a-1) =    -5 : [('Luc', 2, -1, 1), ('Fib', 4, -2, 1)]
+a =  3, N = -(a^2+a-1) =   -11 : no window representation
+a =  4, N = -(a^2+a-1) =   -19 : no window representation
+a =  5, N = -(a^2+a-1) =   -29 : [('Fib', 7, -4, 1)]
+a =  6, N = -(a^2+a-1) =   -41 : no window representation
+a =  7, N = -(a^2+a-1) =   -55 : [('Luc', 5, -3, 1)]
+a =  8, N = -(a^2+a-1) =   -71 : no window representation
+a =  9, N = -(a^2+a-1) =   -89 : no window representation
+a = 10, N = -(a^2+a-1) =  -109 : no window representation
+a = 11, N = -(a^2+a-1) =  -131 : no window representation
+a = 12, N = -(a^2+a-1) =  -155 : no window representation
+a = 13, N = -(a^2+a-1) =  -181 : no window representation
+a = 14, N = -(a^2+a-1) =  -209 : no window representation
+a = 15, N = -(a^2+a-1) =  -239 : no window representation
+a = 16, N = -(a^2+a-1) =  -271 : no window representation
+a = 17, N = -(a^2+a-1) =  -305 : no window representation
+a = 18, N = -(a^2+a-1) =  -341 : no window representation
+a = 19, N = -(a^2+a-1) =  -379 : no window representation
+a = 20, N = -(a^2+a-1) =  -419 : no window representation
+a = 21, N = -(a^2+a-1) =  -461 : no window representation
+a = 22, N = -(a^2+a-1) =  -505 : no window representation
+a = 23, N = -(a^2+a-1) =  -551 : no window representation
+a = 24, N = -(a^2+a-1) =  -599 : no window representation
+a = 25, N = -(a^2+a-1) =  -649 : no window representation
+a = 26, N = -(a^2+a-1) =  -701 : no window representation
+a = 27, N = -(a^2+a-1) =  -755 : no window representation
+a = 28, N = -(a^2+a-1) =  -811 : no window representation
+a = 29, N = -(a^2+a-1) =  -869 : no window representation
+a = 30, N = -(a^2+a-1) =  -929 : no window representation
+a = 31, N = -(a^2+a-1) =  -991 : no window representation
+a = 32, N = -(a^2+a-1) = -1055 : no window representation
+a = 33, N = -(a^2+a-1) = -1121 : no window representation
+a = 34, N = -(a^2+a-1) = -1189 : no window representation
+a = 35, N = -(a^2+a-1) = -1259 : no window representation
+a = 36, N = -(a^2+a-1) = -1331 : no window representation
+a = 37, N = -(a^2+a-1) = -1405 : no window representation
+a = 38, N = -(a^2+a-1) = -1481 : no window representation
+a = 39, N = -(a^2+a-1) = -1559 : no window representation
+a = 40, N = -(a^2+a-1) = -1639 : no window representation

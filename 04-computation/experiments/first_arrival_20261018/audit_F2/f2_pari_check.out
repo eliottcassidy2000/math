@@ -1,0 +1,19 @@
+K: degree 16, zeta of order 15: 1, j^2 = -11: 1
+primes of K above 19: 8 ; (e, f) = [[1, 2], [1, 2], [1, 2], [1, 2], [1, 2], [1, 2], [1, 2], [1, 2]]
+v(b) at the K-primes: [-1, -1, -1, -1, -1, -1, -1, -1]
+v(c) at the K-primes: [-1, -1, -1, -1, -1, -1, -1, -1]
+v(b/c): [0, 0, 0, 0, 0, 0, 0, 0] ; v(a): [0, 0, 0, 0, 0, 0, 0, 0]
+|M - M| (with 0) = 35
+nonzero spindle differences: v = 0 at all K-primes: 1
+sheet moves: 1224 nonzero pairs; [#K-primes where b dm2 + c dm3 is integral, count]: [[0, 1166], [1, 16], [2, 42], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0]]
+pairs 19-integral: 0
+complex conjugation found: 1
+primes of K above 19 fixed by complex conjugation: 0 of 8
+delta = conj(gamma)/gamma: delta*conj(delta) = 1: 1 ; v at the K-primes above 19: [-1, 0, 1, 0, 0, 0, 0, 0]
+L: degree 6 ; N_{L/Q}(h + j) = 5776 ; N_{L/Q}(h - j) = 5776 ; 76^2 = 5776
+primes of L above 19: 3 ; (e, f) = [[1, 2], [1, 2], [1, 2]]
+  L-prime 1 type h=7 : v(h - j) = 0, v(h + j) = 0, v(u) = 0
+  L-prime 2 type h=+j : v(h - j) = 1, v(h + j) = 0, v(u) = 1
+  L-prime 3 type h=-j : v(h - j) = 0, v(h + j) = 1, v(u) = -1
+Q(w,j,sqrt5): degree 12 ; primes above 19: 6 ; v(u2) = [0, 0, 0, 0, 0, 0]
+   and v(u) there = [1, 1, -1, 0, -1, 0] ; phi^2 = phi + 1: 1

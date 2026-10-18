@@ -1,0 +1,23 @@
+F_361 = F_19[s]/(s^2-2): primitive 15th roots 8, sqrt(-11) [(0, 2), (0, 17)], roots of w^3+2w^2-4w-4: [(4, 0), (16, 2), (16, 17)]
+ring homomorphisms Z[zeta,j,w] -> F_361: 48 ; Frobenius orbits (= primes above 19): 24 ; orbit sizes [(2, 24)]
+types: [('+j', 8), ('-j', 8), ('7', 8)]
+per-prime valuations (type, v(b), v(c), v(u), v(u2), v(a), v(b/c)), grouped:
+    ('+j', '-1', '-1', '>=0', '0', '0', '0') x 8
+    ('-j', '-1', '-1', '-1', '0', '0', '0') x 8
+    ('7', '-1', '-1', '>=0', '0', '0', '0') x 8
+19/u has 19-free denominators: True ; 19 u has 19-free denominators: True
+  type +j: 19/u nonzero at all: True ; 19 u nonzero at all: False ; (h-j) nonzero: False ; (h+j) nonzero: True
+  type -j: 19/u nonzero at all: False ; 19 u nonzero at all: True ; (h-j) nonzero: True ; (h+j) nonzero: False
+  type  7: 19/u nonzero at all: False ; 19 u nonzero at all: False ; (h-j) nonzero: True ; (h+j) nonzero: True
+  => v(u) = +1 exactly at the +j primes iff 19/u is nonzero there; v(u) = -1 at -j iff 19u nonzero there.
+points of C 19-integral: True ; points of A 19-integral: True ; spindle points 19-integral: True
+a = conj(d) unit at all 24: True ; u2 unit at all 24: True ; 30 roots of unity units at all 24: True
+|M - M| = 35 (including 0); nonzero differences 34 ; all units at all 24 primes: True
+the 21 spindle pairs m != m': all differences units at all 24 primes: True
+b: 19 || den: True, 19 b nonzero at all 24: True ; c: 19 || den: True, 19 c nonzero at all 24: True
+b/c and c/b 19-integral: True True ; b/c unit at all 24: True
+sheet moves: 1224 nonzero pairs (dm2, dm3) in (M-M)^2 ; max 19-power in denominators 1
+  number of h=7 primes at which b dm2 + c dm3 is integral -> count: [(0, 1166), (1, 16), (2, 42)]
+  same distribution at the +j / -j primes: [(0, 1166), (1, 16), (2, 42)] [(0, 1166), (1, 16), (2, 42)]
+  pairs integral at all 24 primes (i.e. 19-integral): 0
+single factor: every nonzero b*dm, c*dm has a pole at all 24 primes: True

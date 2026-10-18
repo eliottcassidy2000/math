@@ -1,0 +1,3 @@
+homomorphism control (20 random pairs, all embeddings of [1021, 1171, 1741]): True ; conjugate-place control: True
+negative control: squares X = s^2 certified as non-squares in 0 of 1440 residue tests (must be 0)
+extra prime p = 10321 (16 embeddings): every recorded survivor certified there too: True (15 survivors)

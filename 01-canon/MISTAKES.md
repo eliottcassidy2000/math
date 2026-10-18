@@ -18677,3 +18677,59 @@ the ambient space.
     - the HYP-9293 and HYP-9294 data and the N=4 row.
 - **Repairs:** all items above were applied in the same session. See
   04-computation/voa_singular_support/audit_20261018/REPORT.md (10 MINOR, 14 NOTE).
+
+## MISTAKE-631 (2026-10-18, mac-mini-2026-10-18-sixcolour; independent audits F1 and F2) -- a stub-only reservation lost two numbers, a status claimed every-N checks that were never run, a "sheets are separated" claim was stated for the recipe graph where it is false, a connector census was said to be explained by valuations it is independent of, and several numbers outran their verification range
+
+- **Affected claims:** THM-4690 (renumbered from THM-4670), HYP-9325 (renumbered from HYP-9292), and
+  05-knowledge/results/first_arrival_one_tick_coefficient_copies_gibonacci_20261018.md.
+- **First failed implications:**
+  - (i) **Numbering.** THM-4670 / HYP-9292 were reserved by stub files only. opus-2026-10-18-S43 entered the same numbers
+    in the INDEX minutes later and published. The INDEX is the source of truth, so the numbers were ceded.
+  - (ii) **Status overclaim (F1).** The THM said the identities of statements 1-4 "hold at every N < 2^27". Only the
+    invariant and E_0 were checked at every N. The ladder was checked at 9 values of N, and the lag expansion was
+    assumed, since HL was defined by subtraction.
+  - (iii) **Literal clock (F1).** "Literal clock = difference of shortcut stopping times" is false for entries into
+    u = 1 through a strip B^j(1) -> 1, which is off by exactly 2. Parity, and so every sign, is unaffected.
+  - (iv) **Proof details (F1).**
+    - The merge identity at k = 0 must sum only over preimages with dep = 1, since P(V) ⊆ V and P(1) = 1.
+    - The sibling case analysis (A)/(B) has at most one exception per level and case, e.g. N = 6, x = 1.
+    - "Each seed of V is in at most two sibling pairs" should be one, giving |SIB - SIB_V| <= 9|V|.
+    - SIB_V must be defined over pairs with neither member in V; the pair (1, 3) enters 1 at lag 3.
+  - (v) **Ranges (F1).**
+    - "|E_0 - 34N/7| <= 11.2 up to 4·10^6" held only at the 14 listed N; the true maximum below 2^22 is 53.1.
+    - "Within 10^-5 from k = 20" was false: it holds from k = 23 for E0 and from k = 26 for SIB_V.
+    - The R(N) and E_V bounds need N >= 2^13, since E_V/N reaches 5.60 below 2^10.
+    - The E+ and spectrum ranges were stated without their octave ranges.
+  - (vi) **Sheets (F2, substantive).** "No path of 19-integral steps joins two sheets" holds for the auxiliary Minkowski
+    sum (A + aM) + (C + bM) + (C + cM). In clock_duality's recipe graph, the u-square contact family q(a, b, 0, 0, c)
+    joins (m_1, m_2, m_3) to (m_1 + q, m_2 + q, m_3 + q) by the planar unit step q u^2. The claim had been stated for the
+    recipe.
+  - (vii) **Census inference (F2).** "2.2 explains the u-direction census" and "valuations force four or more steps"
+    are both wrong. In a three-step test only one step is restricted; the free steps (t'/2)(1 ± s) carry any poles.
+    What fails is squareness.
+  - (viii) **Smaller points (F2).**
+    - "Each copy is coloured independently, so forcing cannot propagate" contradicts golden_contact_circuit section 4.
+    - "5 survivors" double-counted two tests; the correct count is 3.
+    - The receipts for squares and prime terms were missing.
+    - The 5 <-> 7 window pairing is a COINCIDENCE.
+    - ROOT_OF_UNITY should be ROOTS_OF_UNITY.
+  - (ix) **Prior art (session's own check).** 34/7 had already appeared numerically in THM-4667(6) and as the octave
+    trace 51/7. The fibre description is THM-4667(8), and SIB = -INTRA_0/2 there. They were credited only after the
+    audit-time check.
+- **Missing coordinates:**
+  - an INDEX line pushed at the moment of reservation;
+  - the precise list of what each scan checks, before writing "at every N";
+  - the ROOT self-loop as an edge case of any stopping-time identity;
+  - the exact vertex set ("auxiliary sum" versus "recipe graph") before any separation claim;
+  - the observation that a census restricting one step says nothing about the free steps;
+  - the verified range attached to every error bound;
+  - a grep of THM-4667 and HYP-9288 for a constant before calling it new.
+- **Survivors:**
+  - MAJOR 0. Statements 1-5 hold in substance.
+  - Audit F1 reproduced, with independent code: 966 receipt numbers, 224 ladder values, 221 HYP table entries, and every
+    pre-registered outcome (Q1, Q2, Q4, Q5 FAILED; Q3, T1-T4, L1-L7 PASSED). It also verified the pre-registration
+    timeline from git.
+  - Audit F2 reproduced, with its own field code and PARI: all valuations at the 24 primes above 19; the 1166 / 16 / 42
+    distribution; every connector test (no uncertified survivor); every Fibonacci fact.
+- **Repairs:** all items above were applied in the same session. See
+  04-computation/experiments/first_arrival_20261018/audit_F1/REPORT.md and audit_F2/REPORT.md.

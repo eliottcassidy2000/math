@@ -1,0 +1,21 @@
+direct sums over b < 90 (tail < 2^-80 * poly): E_1 direct = 3.388402513132145, periodic formula 3.388402513132145
+l1 first-transport mass A_2/N = 155896/87381 = 1.7840949405477162 ; clock_duality R7: 155896/87381 = 1.7840949405477162 ; match: True
+diagonal part (= E_0/N), direct sum: 4.857142857142857 ; 34/7 = 4.857142857142857
+E_1/N exact = 32898/9709 = 3.3884025131321454 ; THM-4667 ideal E_1 = 3.388403
+E_1 - E_0 (34/7) = -1.468740344010712 ; 2 * sum of lag parts = -1.468740344010712
+  lag  1: M_D = -0.714285714286   (best small fit: -5/7)
+  lag  5: M_D = 0.008928571429   (best small fit: 1/112)
+  lag  6: M_D = -0.037946428571   (best small fit: -17/448)
+  lag  7: M_D = 0.008928571429   (best small fit: 1/112)
+  lag 11: M_D = 0.000558035714   (best small fit: 1/1792)
+  lag 12: M_D = -0.000592912946   (best small fit: -17/28672)
+  lag 13: M_D = 0.000034877232   (best small fit: 1/28672)
+  lag 17: M_D = -0.000010899135   (best small fit: -2/183501)
+  lag 18: M_D = 0.000018528530   (best small fit: 3/161912)
+  lag 19: M_D = -0.000002724784   (best small fit: -1/200000)
+  lag 23: M_D = 0.000000034060   (best small fit: 0)
+  lag 24: M_D = -0.000000144754   (best small fit: 0)
+  lag 25: M_D = 0.000000034060   (best small fit: 0)
+  lag 29: M_D = 0.000000002129   (best small fit: 0)
+  lag 30: M_D = -0.000000002262   (best small fit: 0)
+denominator of E_1: 9709 = {7: 1, 19: 1, 73: 1}

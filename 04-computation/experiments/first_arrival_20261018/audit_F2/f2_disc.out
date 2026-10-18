@@ -1,0 +1,6 @@
+disc(Phi_15) = 1265625 = {3: 4, 5: 6} ; disc(x^2+11) = -44 ; disc(cubic) = 592 = {2: 4, 37: 1}
+trace of 1 = 48
+det(trace form) = disc(O): sign +1, |disc| has 121 digits
+equals the tensor-product prediction (3^4 5^6)^6 (-44)^24 592^16: True
+factorisation over {2,3,5,11,37}: {2: 112, 3: 24, 5: 36, 11: 24, 37: 16} ; cofactor: 1
+19 divides disc(O): False

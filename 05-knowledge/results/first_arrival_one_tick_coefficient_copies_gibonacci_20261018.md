@@ -33,7 +33,7 @@ renumbering still use the old numbers.
 | 5 | One-tick law `G(1)/G(0) ≈ -0.28`: T1-T4 PASSED at 2^26 | FINITE-EXACT, HYP-9325(A) |
 | 6 | Pair-sign laws and higher-lag bound: L1-L7 PASSED at 2^27 | FINITE-EXACT, HYP-9325(B, C) |
 | 7 | (A) + (B1) + (C) ⇒ `E_V <= 2.60N + O(log N)` for `N >= 2^13`, so `\|R(N)\| <= 40.4 sqrt(N)` there | PROVED implication; the hypotheses are OPEN |
-| 8 | 19-adic obstruction: the coefficient copies, and all 49 sheets of the recipe sum, are separated for every path whose steps are integral at the eight `h ≡ 7` primes above 19, which covers every power of the contact unit `u` | PROVED (THM-4690(5)) |
+| 8 | 19-adic obstruction: the coefficient copies, and the 49 sheets of the auxiliary Minkowski sum of the three translated factors, are separated for every path whose steps are integral at the eight `h ≡ 7` primes above 19, which covers every power of the contact unit `u`. In the recipe graph itself, sheets are joined by the `u`-square contact family. | PROVED (THM-4690(5)) |
 | 9 | Connector census inside `F`: no 2-step connector; no 3-step connector through 450 named directions (integral, `u`-powers, K-directions with poles above 19) | FINITE-EXACT |
 | 10 | Fibonacci from (5,1) and (7,1): values, closed forms, `Z[φ]` factorisations `φ^-4(φ^7 - 1)` and `φ^-3 √5 (φ^5 - 1)`, Cassini constants `-L_7` and `-5L_5` | KNOWN / PROVED (elementary) |
 | 11 | Solfeggio merge: the ROOT denominators 7 come from the period 3 of B-chain residues mod 3 (`4^3 - 1 = 63`), whose mod-9 refinement is the Solfeggio three-lift; mod 9, (5,1) is 4·Fibonacci (the linear part of `B`) and (7,1) is Fibonacci shifted by 9 | PROVED (mod-9 facts, the origin of 7); STRUCTURAL (the Solfeggio identification) |
@@ -268,10 +268,13 @@ clock_duality's cubic recipe has factors `A + aM`, `C + bM` and `C + cM`. Here:
 - `M` is the Moser spindle, `C` the 10-point coefficient set, `a = conj(d)`;
 - `b, c` are the coefficients of the `u`-square circuit, with denominator 19.
 
-Each 19-adic factor is seven disjoint translated copies of `C`. Each copy is coloured independently, so forcing cannot
-propagate between copies. The recorded target was a coefficient context that connects them.
+Each 19-adic factor is seven disjoint translated copies of `C`. No axis unit edge joins two copies, so each copy is
+coloured independently within the factor's own unit graph. The contact families do couple choices across copies
+(golden_contact_circuit section 4: the `u`-square family shifts all three spindle indices together). The saved witnesses
+show that this coupling blocks none of the 570 patterns. The recorded target was a coefficient context that connects
+the copies within a factor.
 
-### 2.2 Why short connectors cannot exist: 19-adic separation (THM-4690(5))
+### 2.2 What 19-adic valuations exclude (THM-4690(5))
 
 **The primes above 19.**
 - The tower order `Z[ζ15][j][w]` is 19-maximal.
@@ -288,12 +291,18 @@ propagate between copies. The recorded target was a coefficient context that con
 **Consequences.**
 - A path between two copies `C + bm`, `C + bm'` must, at **every** prime above 19, contain a step with a pole there.
   The displacement `b(m' - m) + (integral)` has a pole at every prime.
-- For the whole recipe sum, every nonzero sheet move `(Δm_2, Δm_3)` has a pole at some `h ≡ 7` prime: 1166 of 1224 at
-  all eight, the rest at six or seven. No move is 19-integral (`diagonal_19adic_check.py`).
-- So the 49 sheets `(m_2, m_3)` are mutually unreachable by paths whose steps are integral at the `h ≡ 7` primes. This
-  covers every direction `ζ^l u^k q` with `q` 19-integral, at every length.
+- For the auxiliary Minkowski sum `(A + aM) + (C + bM) + (C + cM)`, every nonzero sheet move `(Δm_2, Δm_3)` has a pole
+  at some `h ≡ 7` prime: 1166 of 1224 at all eight, the rest at six or seven. No move is 19-integral
+  (`diagonal_19adic_check.py`).
+- So the 49 sheets `(m_2, m_3)` of that sum are mutually unreachable by paths whose steps are integral at the `h ≡ 7`
+  primes. This covers every direction `ζ^l u^k q` with `q` 19-integral, at every length.
+- **Scope.** The auxiliary sum is not the recipe graph. In the recipe graph, the `u`-square contact family
+  `q(a, b, 0, 0, c)` joins `(m_1, m_2, m_3)` to `(m_1 + q, m_2 + q, m_3 + q)` by the planar unit step `q u^2`. So the
+  recipe graph's sheets are joined (audit F2, fix 1).
 
-**A connecting context must use a unit direction with a pole at an `h ≡ 7` prime.**
+**A path of named steps changing sheets of the auxiliary sum must use a unit direction with a pole at an `h ≡ 7`
+prime.** If clock_duality's B2 (unit-path rings, `cubic_adelic_20261016e.md`) extends to `F`, then unrestricted unit
+walks inside `F` do join the copies, because no prime of `F` above 19 is fixed by conjugation.
 
 ### 2.3 Census inside F (FINITE-EXACT)
 
@@ -310,8 +319,11 @@ propagate between copies. The recorded target was a coefficient context that con
   - 240 K-directions `ζ^l δ_𝔮^(±1)` with poles above 19, as in 2.4, one `δ` per conjugate pair of primes of `K`:
     47515 + 33031 tests, 37 survivors of the 12-place screen, all certified non-squares at the 80-place screen.
 
-2.2 explains the second family completely: `u` cannot touch the poles at the `h ≡ 7` primes. The third family has the
-right kind of pole, but one `δ` covers only 3 of the 24 primes.
+2.2 does not explain these negative results.
+- Only one step of each three-step test is restricted. The other two are arbitrary unit vectors of `F`: in a two-step
+  remainder `e_1 + e_2 = t'` the steps are `(t'/2)(1 ± s)`, and they carry every pole of `t'`.
+- Valuations allow such connectors in all three families. What fails is the squareness of `N(t')(N(t') - 4)`.
+- Audit F2 recounted every test with independent code and certified every survivor.
 
 ### 2.4 Next target (concrete)
 
@@ -319,8 +331,12 @@ Every prime of `K = Q(ζ15, √-11)` above 19 is split from its complex conjugat
 `γ ∈ 𝔮 ∖ conj(𝔮)` is a unit vector in `K` with a pole at the three primes of `F` above `𝔮`, including an `h ≡ 7` one.
 
 A first probe, with one `δ` from each conjugate pair and the exact two-step test for the remainder, found nothing
-(2.3). The next search should combine several `δ`'s so that the step poles can cover all 24 poles of `b(m' - m)`. That
-means four or more steps, or `δ`'s attached to products of primes. Its outcome decides whether the recipe can carry cross-copy forcing at all.
+(2.3).
+- The steps of a connector must jointly clear the poles at all 24 primes. Free steps can supply poles, so this forces
+  neither four or more steps nor named `δ`'s.
+- Combining several `δ`'s is a search heuristic only.
+- A more decisive question is whether `F` as a whole can carry forcing at all. Section 2.5 takes this up through the
+  conjugation-fixed place of `F` above 29.
 
 Any connector must also be checked against the saved additive witnesses: the 570 port patterns and their contact
 families, HYP-9289. A new point with at most five neighbours inside one factor never blocks a 6-colouring by itself.
@@ -355,7 +371,10 @@ With `G_0 = a`, `G_1 = b`, `G_(n+1) = G_n + G_(n-1)`:
 - `θ(5,1) = 5φ - 4 = φ^-4 (φ^7 - 1)`, which is the Fibonacci orbit times `φ^7 - 1`.
 - `θ(7,1) = 7φ - 6 = φ^-3 √5 (φ^5 - 1)`, which is the Lucas orbit times `φ^5 - 1`.
 
-So the start 5 pairs with a window of 7, and the start 7 pairs with a window of 5. Since `N(φ^r - 1) = -L_r` for odd `r`:
+So the start 5 pairs with a window of 7, and the start 7 pairs with a window of 5. This is a COINCIDENCE of small
+numbers: `5^2 + 5 - 1 = 29 = L_7` and `7^2 + 7 - 1 = 55 = 5 L_5`. Among the starts `(a, 1)` with `a <= 40`, only
+`a = 1, 2, 5, 7` are window sums of Fibonacci or Lucas numbers; `(3, 1)`, of norm `-11 = -L_5`, is not
+(`audit_F2/f2_windows.out`). Since `N(φ^r - 1) = -L_r` for odd `r`:
 - the Cassini constants are `-29 = -L_7` and `-55 = -5·L_5`;
 - `G_n^2 - G_(n-1)G_(n+1) = (-1)^n · 29`, resp. `(-1)^n · 55`.
 
@@ -373,18 +392,26 @@ where `λ` is a root of `x^2 - x - 1`. So `p` never divides a term:
 - 29 never divides a (5,1) term (`λ = 6`, period 14);
 - 5 and 11 never divide a (7,1) term (period 4 mod 5, 10 mod 11).
 
-**Periods.** At all other moduli the periods are Pisano's. (7,1) has exactly the Lucas Pisano periods (Purath 2019,
-OEIS A022098).
+**Periods.**
+- (5,1) has the Pisano periods at every `m < 3000`, multiples of 29 included, because `ord_29(6) = 14 = π(29)`.
+- (7,1) has the Lucas periods (Purath 2019, OEIS A022098), checked for `m < 3000` (audit F2).
+- PROVED for `gcd(m, N) = 1`: `G = (aI + Q)·F` with `det(aI + Q) = a^2 + a - 1 = -N`, and `(7,1) = (4I - Q)·L` with
+  determinant 11.
 
-**Primes.** Prime terms of (5,1): 5, 7, 13, 53, 139, 953, 44771, ... Of (7,1): 7, 17, 43, 181, 293, 13763, ...
+**Primes.**
+- Prime terms of (5,1): 5, 7, 13, 53, 139, 953, 44771, ... From 53 on these match OEIS A161611, "primes that are a sum of
+  7 consecutive Fibonacci numbers".
+- Prime terms of (7,1): 7, 17, 43, 181, 293, 13763, ...
+- Receipts: `audit_F2/f2_gibonacci.out`, prime terms for `n < 120`.
 
 **Squares.**
-- Fibonacci itself: 1 and 144 (Cohn).
+- Fibonacci itself: 0, 1 and 144 (J. H. E. Cohn, J. London Math. Soc. 39 (1964) 537-540).
 - (5,1): `1` and `225 = 15^2`.
 - (7,1): `1`, `9 = 3^2` and `3249 = 57^2` (n = 15).
 
-These lists are FINITE-EXACT for `n < 1500`. Finiteness is KNOWN (Siegel): `G_n = y^2` gives `z^2 = 5y^4 ± 4N` with
-`z = 2G_(n+1) - G_n`. A complete determination was not attempted.
+These lists are FINITE-EXACT for `n < 3000` (`audit_F2/f2_gibonacci.out`; the session's own check went to `n < 1500`).
+Finiteness is KNOWN (Siegel): `G_n = y^2` gives `z^2 = 5y^4 ± 4N` with `z = 2G_(n+1) - G_n`. A complete determination
+was not attempted.
 
 ### 3.4 The Solfeggio merge
 
@@ -396,8 +423,9 @@ These lists are FINITE-EXACT for `n < 1500`. Finiteness is KNOWN (Siegel): `G_n 
 What the two new starts do in this dictionary (PROVED):
 - **(7,1) is Fibonacci shifted by 9 mod 9.** `(7, 1) ≡ (F_9, F_10) (mod 9)`. So its digital roots are Fibonacci's,
   shifted, the golden class is ±1, and the Solfeggio digits 3, 6, 9 occur exactly at `n ≡ 3 (mod 4)`.
-- **(5,1) is the Fibonacci sequence pushed through the linear part of `B`.** `G_n ≡ 4 F_(n+14) (mod 9)`, golden class
-  ±2. Multiplication by `4 = 2^2`, the linear part of `B`, fixes each Solfeggio fibre and cycles the golden classes (L4).
+- **(5,1) mod 9 is a multiple of Fibonacci.** `G_n ≡ 4 F_(n+14) ≡ 5 F_(n+2) (mod 9)`, golden class ±2. The multiplier
+  `±4` is forced by the norm class ±2. Reading it as "Fibonacci pushed through the linear part `4 = 2^2` of `B`" is an
+  ANALOGY: multiplication by 4 fixes each Solfeggio fibre and cycles the golden classes (L4).
   The digits 3, 6, 9 occur exactly at `n ≡ 2 (mod 4)`.
 
   Its 24-cycle of digital roots is 5,1,6,7,4,2,6,8,5,4,9,4,4,8,3,2,5,7,3,1,4,5,9,5.
@@ -414,9 +442,10 @@ What the two new starts do in this dictionary (PROVED):
   - 29 is the (5,1) Cassini prime `L_7`, and divides 174.
   - 11 `= L_5` divides 396 and 528.
   - 139 and 13 are terms of (5,1); they divide 417 and 741.
-  - Six of the eight primes split or ramify in `Q(√5)`, against Chebotarev's 1/2.
-- The overlap between the Solfeggio primes and the prime terms of (5,1) below 150 is 3 of 8. A hypergeometric tail
-  gives `p ≈ 0.07`, before any correction for the many features one could have compared.
+  - Five of the eight primes split and one ramifies in `Q(√5)`. The binomial tail for 5 split of 8 is 0.36.
+- The overlap between the Solfeggio primes and the prime terms of (5,1) below 150 is 3 of 8. A hypergeometric tail gives
+  `p ≈ 0.07` (0.078 if 2 and 3 are excluded from the population), before any correction for the many features one
+  could have compared. Without the seed `G_0 = 5` the overlap is {13, 139}, with `p ≈ 0.22`.
 - No mechanism links these.
 
 ## 4. Files
@@ -431,8 +460,10 @@ All scripts are in `04-computation/experiments/first_arrival_20261018/`. The `.o
   - `V_closed_Y{3,10,100,1000}.txt` (from clock_duality's `frontier_renewal.json`) and `V_height_Y1000.txt`.
 - **Six-colour.**
   - `nineteen_obstruction_check.py`, `nineteen_places.py`, `diagonal_19adic_check.py`: the valuations and sheet moves.
-  - `copy_connectors.py` and `copy_connectors_screen.py`, with environment variables `ROOT_OF_UNITY` / `U_DIRECTIONS`
-    selecting the direction families.
+  - `copy_connectors.py` and `copy_connectors_screen.py`, with environment variables `ROOTS_OF_UNITY` / `U_DIRECTIONS`
+    / `K_DIRECTIONS` selecting the direction families (`kdirs.py` builds the K-directions; receipts
+    `copy_connectors_kdirs*`). These scripts need `pysat` at import, through `golden_forcing_search_20261017.py`.
+  - Audits: `audit_F1/REPORT.md` and `audit_F2/REPORT.md`, with independent code.
   - `shim/numba.py`: a no-op `njit` so the S41 helpers import without numba.
 - **Fibonacci.**
   - `gibonacci_51_71.py`.

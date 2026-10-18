@@ -1,0 +1,26 @@
+[    0 s] C: 10 points, 15 unit edges; |U0| = 22, |D90| = 90, |D120| = 120
+[    0 s] all directions are unit vectors: True
+[    0 s] embedding check: |u| = 1.000000000000000, |rho| = 1.000000000000000, w = 1.709275359
+[    1 s] places: 40 primes from 1021 to 9421, 928 embeddings in all
+[    1 s] copy_connectors.json b copies (2,4) points (6,0) q#8: |t|^2 recorded 0.969057, recomputed 0.969057 ; non-residue at primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311]
+[    1 s] copy_connectors.json b copies (2,4) points (6,2) q#20: |t|^2 recorded 0.969057, recomputed 0.969057 ; non-residue at primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311]
+[    1 s] copy_connectors_roots.json b copies (2,4) points (6,0) q#39: |t|^2 recorded 0.969057, recomputed 0.969057 ; non-residue at primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311]
+[    1 s] copy_connectors_roots.json b copies (2,4) points (6,2) q#88: |t|^2 recorded 0.969057, recomputed 0.969057 ; non-residue at primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311]
+[    1 s] copy_connectors_roots.json b copies (2,6) points (2,9) q#24: |t|^2 recorded 1.234634, recomputed 1.234634 ; non-residue at primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311]
+[    1 s] copy_connectors_udirs.json b copies (0,2) points (3,7) q#42: |t|^2 recorded 3.542448, recomputed 3.542448 ; non-residue at primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311]
+[    1 s] copy_connectors_udirs.json b copies (1,3) points (3,7) q#42: |t|^2 recorded 3.542448, recomputed 3.542448 ; non-residue at primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311]
+[    1 s] copy_connectors_udirs.json b copies (1,4) points (2,1) q#66: |t|^2 recorded 0.963220, recomputed 0.963220 ; non-residue at primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311]
+[    1 s] copy_connectors_udirs.json b copies (1,4) points (8,9) q#115: |t|^2 recorded 1.205874, recomputed 1.205874 ; non-residue at primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311]
+[    1 s] copy_connectors_udirs.json b copies (2,5) points (0,1) q#27: |t|^2 recorded 0.963220, recomputed 0.963220 ; non-residue at primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311]
+[    1 s] copy_connectors_udirs.json b copies (2,5) points (2,3) q#27: |t|^2 recorded 0.963220, recomputed 0.963220 ; non-residue at primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311]
+[    1 s] copy_connectors_udirs.json b copies (2,6) points (5,3) q#71: |t|^2 recorded 2.833081, recomputed 2.833081 ; non-residue at primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311]
+[    1 s] copy_connectors_udirs.json c copies (2,5) points (1,6) q#118: |t|^2 recorded 0.007673, recomputed 0.007673 ; non-residue at primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311]
+[    1 s] copy_connectors_udirs.json c copies (2,5) points (1,8) q#100: |t|^2 recorded 1.487731, recomputed 1.487731 ; non-residue at primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311]
+[    1 s] copy_connectors_udirs.json c copies (2,5) points (9,8) q#88: |t|^2 recorded 3.459571, recomputed 3.459571 ; non-residue at primes [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311]
+[    1 s] U0[8] == D90[39]: True ; U0[20] == D90[88]: True
+[    1 s] U0 b: two-step tests 172 (uncertified at 12 primes: 0) ; three-step tests 4377 (uncertified at 12 primes: 0) ; uncertified after 40 primes: 0 ; near-boundary numeric cases: 0
+[    1 s] U0 c: two-step tests 118 (uncertified at 12 primes: 0) ; three-step tests 3017 (uncertified at 12 primes: 0) ; uncertified after 40 primes: 0 ; near-boundary numeric cases: 0
+[    1 s] D90 b: two-step tests - (uncertified at 12 primes: -) ; three-step tests 17854 (uncertified at 12 primes: 0) ; uncertified after 40 primes: 0 ; near-boundary numeric cases: 0
+[    1 s] D90 c: two-step tests - (uncertified at 12 primes: -) ; three-step tests 12340 (uncertified at 12 primes: 0) ; uncertified after 40 primes: 0 ; near-boundary numeric cases: 0
+[    2 s] D120 b: two-step tests - (uncertified at 12 primes: -) ; three-step tests 23729 (uncertified at 12 primes: 0) ; uncertified after 40 primes: 0 ; near-boundary numeric cases: 0
+[    2 s] D120 c: two-step tests - (uncertified at 12 primes: -) ; three-step tests 16508 (uncertified at 12 primes: 0) ; uncertified after 40 primes: 0 ; near-boundary numeric cases: 0

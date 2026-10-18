@@ -1,6 +1,6 @@
 ---
 id: THM-4690
-title: "First arrivals of the signed ROOT transport into a stopping set: the backward ladder, port-diagonal energy, integer-clock Gram and clock spectrum (E_V is the clock spectrum at the Nyquist frequency), and the exact source pair ledger E0 = 34N/7, sibling pairs 5N/7, so E_V = 24N/7 + (non-sibling pair sums) + O(|V| + log N); plus the 19-adic obstruction: no path of unit steps integral at the eight h = 7 primes above 19 joins two translated coefficient copies (or two sheets) of clock_duality's cubic golden recipe"
+title: "First arrivals of the signed ROOT transport into a stopping set: the backward ladder, port-diagonal energy, integer-clock Gram and clock spectrum (E_V is the clock spectrum at the Nyquist frequency), and the exact source pair ledger E0 = 34N/7, sibling pairs 5N/7, so E_V = 24N/7 + (non-sibling pair sums) + O(|V| + log N); plus the 19-adic obstruction: no path of unit steps integral at the eight h = 7 primes above 19 joins two translated coefficient copies of clock_duality's cubic golden recipe (or two sheets of the Minkowski sum of its three translated factors)"
 status: >
   PROVED. Statements 1-3 are elementary bookkeeping. Statement 4 is an elementary residue computation along B-chains. Statement 5 is a
   valuation argument with exact field checks.
@@ -31,7 +31,8 @@ verification:
   - 04-computation/experiments/first_arrival_20261018/fap.c, fap_lean.c (+ fap_*.out): port, sibling-pair, depth, integer-clock, spectrum and pair-ledger quantities at every N, with the invariant checked
   - 04-computation/experiments/first_arrival_20261018/fap_levels.c (+ fap_levels_*.out): the backward ladder E^(k)(N)
   - 04-computation/experiments/first_arrival_20261018/source_ledger_constants.py (+ .out): derivation of 34/7 and 5/7 and brute-force check
-  - 04-computation/experiments/first_arrival_20261018/nineteen_obstruction_check.py, nineteen_places.py, diagonal_19adic_check.py, copy_connectors.py, copy_connectors_screen.py (+ .out, .json)
+  - 04-computation/experiments/first_arrival_20261018/nineteen_obstruction_check.py, nineteen_places.py, diagonal_19adic_check.py, copy_connectors.py, copy_connectors_screen.py, kdirs.py (+ .out, .json; environment switches ROOTS_OF_UNITY / U_DIRECTIONS / K_DIRECTIONS)
+  - audits: 04-computation/experiments/first_arrival_20261018/audit_F1/REPORT.md (statements 1-4), audit_F2/REPORT.md (statement 5; independent field code and PARI)
 note: 05-knowledge/results/first_arrival_one_tick_coefficient_copies_gibonacci_20261018.md
 related: [HYP-9325, HYP-9290, HYP-9289, THM-4667, THM-4668]
 ---
@@ -149,8 +150,8 @@ This uses the notation of THM-4667 and HYP-9290.
    - **Statement.** No path of unit steps whose directions all lie in a 19-integral set joins a point of `C + b m` to a
      point of `C + b m'` for `m ≠ m'`; the same holds for `c`. Here 19-integral means integral at every prime above 19 of
      `F` (or of any finite extension of `F` containing the steps).
-   - **Example.** This applies to the 90 directions `{ζ^l q}`, where `ζ^l` runs over the 30 roots of unity of `F` and `q`
-     over the unit differences of `C` together with 1.
+   - **Example.** This applies to the 90 directions `{±ζ15^l q}`, where `±ζ15^l` runs over the 30 roots of unity of `F`
+     (`μ(F) = μ_30`) and `q` over the unit differences of `C` together with 1.
    - **Prime by prime.** The 19-maximal tower order has exactly 24 primes above 19, all with residue field `F_361`. They
      fall into three types of eight: `h ≡ j`, `h ≡ -j` and `h ≡ 7 (mod 𝔭)`, where `h = w + 3`.
      - `b` and `c` have simple poles at all 24 primes, and `b/c` is a 19-unit.
@@ -158,17 +159,25 @@ This uses the notation of THM-4667 and HYP-9290.
      - At the eight `h ≡ 7` primes the following are all units: the contact unit `u = (h - j)/(h + j)`, the mixed-golden
        unit `u_2 = (h + φ - j)/(h + φ + j)` and the 30 roots of unity.
      - `u` has valuation -1 / +1 at the primes of type `h ≡ -j` / `h ≡ j`.
-   - **Sheets of the whole recipe sum.** Take the sum `(A + aM) + (C + bM) + (C + cM)` with `a = conj(d)`; `A`, `C` and
-     `a` are 19-integral. For every nonzero `(Δm_2, Δm_3) ∈ (M - M)^2`, the element `b Δm_2 + c Δm_3` has a pole at some
-     `h ≡ 7` prime: of the 1224 pairs, 1166 have poles at all eight, 16 at seven and 42 at six. Hence no path whose
-     steps are integral at all eight `h ≡ 7` primes joins two different sheets `(m_2, m_3)`. In particular this holds at
-     every length for paths with steps in `{roots of unity}·u^Z·u_2^Z·{19-integral elements}`. It also holds for two
-     copies inside one coefficient factor.
-   - **Consequence.** A coefficient context connecting the seven copies must use unit directions with a pole above 19.
-     To change sheets it needs a pole at an `h ≡ 7` prime, which `u` does not have.
-     The contact unit `u = (h - j)/(h + j)`, with `h = w + 3` and `j = √-11`, is one. Its relative norms are
-     `N_(Q(w,j)/Q(j))(h ± j) = -p(∓j) = -76 = -4·19`, where `p(x) = x^3 - 7x^2 + 11x - 1` is the minimal polynomial of
-     `h`. So `u` has valuation `-1` at the prime above 19 where `h ≡ -j`.
+   - **Sheets of the auxiliary Minkowski sum.** Take the plain Minkowski sum `(A + aM) + (C + bM) + (C + cM)` in `F`,
+     with `a = conj(d)`; `A`, `C` and `a` are 19-integral. A sheet is its subset with fixed `(m_2, m_3)`.
+     - For every nonzero `(Δm_2, Δm_3) ∈ (M - M)^2`, the element `b Δm_2 + c Δm_3` has a pole at some `h ≡ 7` prime: of
+       the 1224 pairs, 1166 have poles at all eight, 16 at seven and 42 at six.
+     - Hence no path whose steps are integral at all eight `h ≡ 7` primes joins two different sheets. In particular this
+       holds at every length for paths with steps in `{roots of unity}·u^Z·u_2^Z·{19-integral elements}`.
+     - For two copies inside one coefficient factor, integrality of the steps at a single prime above 19 already
+       suffices.
+
+     **Scope.** This sum is not the vertex set `x_0 + u x_1 + v x_2 + uv x_3 + Y x_4` of clock_duality's recipe graph.
+     There the `u`-square contact family `q(a, b, 0, 0, c)`, with `q` a spindle unit difference, joins
+     `(m_1, m_2, m_3)` to `(m_1 + q, m_2 + q, m_3 + q)` by the planar unit step `q u^2`. For example `q = 1` joins
+     sheet `(0, 0)` to `(1, 1)`. So the recipe graph's sheets are **not** separated (audit F2, fix 1).
+   - **Consequence.** A path of named steps connecting the copies must use unit directions with a pole above 19. To
+     change sheets of the auxiliary sum it needs a pole at an `h ≡ 7` prime.
+     - The contact unit `u = (h - j)/(h + j)`, with `h = w + 3` and `j = √-11`, has poles above 19, but only at the
+       eight `h ≡ -j` primes; it is a unit at the `h ≡ 7` primes.
+     - Its relative norms are `N_(Q(w,j)/Q(j))(h ± j) = -p(∓j) = -76 = -4·19`, where `p(x) = x^3 - 7x^2 + 11x - 1`
+       is the minimal polynomial of `h`.
 
 ## Proofs
 
@@ -262,17 +271,19 @@ The table computation is carried out symbolically in `source_ledger_constants.py
 - Up to `N = 10^29` the deviations reach about `0.9 log_2 N`. ∎
 
 **5.** Four facts, then the conclusion.
-- **Maximality at 19.** The tower order `Z[ζ15][j][w]` has discriminant supported on `{2, 3, 5, 11, 37}`; the cubic has
-  discriminant `592 = 2^4·37`. So the order is maximal at 19, and an element with 19 in a coordinate denominator is
-  non-integral at some `𝔭 | 19`.
+- **Maximality at 19.** `F = Q(ζ15) ⊗ Q(j) ⊗ Q(w)` has degree 48: `√-11 ∉ Q(ζ15)`, and the non-Galois cubic meets the
+  abelian field `K` only in `Q`. The tower order is the tensor product of the three monogenic orders, so its
+  discriminant is `disc(Φ15)^6 disc(x^2+11)^24 disc(g)^16 = 2^112 3^24 5^36 11^24 37^16` (audit F2, `f2_disc.out`;
+  `disc(g) = 592 = 2^4·37`). Hence the order is maximal at 19, and an element is integral at every `𝔭 | 19` iff its
+  coordinate denominators are prime to 19.
 - **The coefficients.** By exact computation, `b` and `c` have coordinate denominator exactly 19, and
   `v_19(N_(F/Q)(b)) = v_19(N_(F/Q)(c)) = -48`. So `v_𝔭(b) < 0` for some `𝔭 | 19`.
-- **The spindle.** For all 21 pairs `m ≠ m'` of the spindle, `N_(F/Q)(m - m')` is prime to 19. So `m - m'` is a
-  `𝔭`-unit, and `v_𝔭(b(m - m')) = v_𝔭(b) < 0`.
-- **C is integral.** The points of `C` are 19-integral, so `v_𝔭((c' + b m') - (c + b m)) < 0`.
+- **The spindle.** The spindle points are 19-integral, and for all 21 pairs `m ≠ m'` the norm `N_(F/Q)(m - m')` is
+  prime to 19. So `m - m'` is a `𝔭`-unit, and `v_𝔭(b(m - m')) = v_𝔭(b) < 0`.
+- **C is integral.** The points of `C` are 19-integral, so `v_𝔭((γ' + b m') - (γ + b m)) < 0` for `γ, γ' ∈ C`.
 
-A path with steps in a set that is integral at every prime above `𝔭` has an integral displacement. So no such path
-exists.
+A path whose steps are all integral at `𝔭` has a displacement integral at `𝔭` (ultrametric inequality). So no such
+path exists.
 
 The 90 named directions are 19-integral by exact check (`nineteen_obstruction_check.out`).
 
@@ -282,22 +293,29 @@ For the contact unit:
 - Mod 19, `p(x) ≡ (x^2 + 11)(x - 7)`. So over `Q(j)` the prime 19 splits into three primes of `Q(w, j)` of relative
   degree 1, with `h ≡ j`, `h ≡ -j` and `h ≡ 7` respectively.
 - The relative norm `-76` then gives `v(h + j) = 1` exactly at the prime with `h ≡ -j`, and `v(h - j) = 0` there.
+  Symmetrically, `v(h - j) = 1` exactly at the prime with `h ≡ j`.
 - 19 is unramified in `Q(ζ15)`, so these valuations persist in `F`.
 
 Prime by prime (`nineteen_places.py`):
 - The 24 primes are the Frobenius orbits of the 48 homomorphisms `Z[ζ15, j, w] -> F_361` (8 × 2 × 3 choices).
 - `v_𝔭(x) = -k` when 19^k exactly divides the coordinate denominators and `19^k x` does not vanish at `𝔭`.
-- With this, the listed valuations and the counts 1166 / 16 / 42 are exact finite computations.
+- With this, the valuations of `b`, `c` and the counts 1166 / 16 / 42 are exact finite computations. A vanishing
+  reduction only gives `v >= 1 - k`, and `nineteen_places.out` prints `>=0` for `u` at the `h ≡ j` and `h ≡ 7` primes.
+  The exact values `v(u) = +1` and `0` there come from the relative norms above, and are confirmed by PARI `nfeltval`
+  in audit F2.
 - The sheet statement follows as in the single-factor case, applied at the `h ≡ 7` prime where `b Δm_2 + c Δm_3` has its
   pole.
-- `diagonal_19adic_check.py` confirms independently that no nonzero `b Δm_2 + c Δm_3` is 19-integral. ∎
+- `diagonal_19adic_check.py` confirms, by a second criterion with the same field code, that no nonzero
+  `b Δm_2 + c Δm_3` is 19-integral. Audit F2 reproduced everything with independent code and PARI. ∎
 
 ## Remarks
 
-- **Connector census, inside `F`, agrees with 5.** `copy_connectors.py` and `copy_connectors_screen.py` found:
+- **Connector census inside `F` (consistent with 5, not implied by it).** `copy_connectors.py` and
+  `copy_connectors_screen.py` found:
   - no two-step connector between copies (172 + 118 point pairs at distance `<= 2`, all certified non-squares);
-  - no three-step connector whose first step lies in the 90 integral directions (5 survivors of the 12-place screen,
-    each certified non-square at a degree-1 place, `p = 4051` or `4261`);
+  - no three-step connector whose first step lies in the 90 integral directions (3 distinct survivors of the 12-place
+    screen, each certified non-square at a degree-1 place, `p = 4051` or `4261`; the 2 survivors of the 22-direction run
+    are 2 of these 3);
   - none whose first step lies in the 120 19-adic directions `ζ^l u^k`, `k = ±1, ±2` (10 survivors, each certified
     non-square at `p = 3631`, `4051` or `4261`);
   - none whose first step lies in the 240 K-directions `ζ^l δ_𝔮^(±1)`. Here `δ_𝔮 = conj(γ_𝔮)/γ_𝔮`,
@@ -306,16 +324,24 @@ Prime by prime (`nineteen_places.py`):
     screen; places where an element is not integral are skipped).
 
   A single quadratic non-residue at a degree-1 place where the element is a unit proves that it is not a square in `F`.
-  Connectors with intermediate points outside `F` are not covered.
+  Connectors with intermediate points outside `F` are not covered. Audit F2 recounted every test independently.
+
+  Statement 5 does not explain these negative results. Each three-step test restricts only one step; the other two are
+  arbitrary unit vectors of `F` and can carry any poles. What fails is the squareness of `N(t')(N(t') - 4)`.
 - **Where connectors must come from.** Unit directions with a pole at an `h ≡ 7` prime exist already in
   `K = Q(ζ15, √-11)`:
   - every prime of `K` above 19 is split from its complex conjugate, since `ζ̄^(-1) = ζ̄^4` would force `ζ̄^5 = 1`;
   - so `δ = conj(γ)/γ` with `γ ∈ 𝔮 ∖ conj(𝔮)` is a unit vector with a pole at the three primes of `F` above `𝔮`, one
     of which has type `h ≡ 7`.
 
-  The census above includes a first probe with one such `δ` per conjugate pair. It finds no three-step connector. A
-  connector must clear the poles at all 24 primes, so `δ`-steps covering several pairs (two or more `δ`'s, or `δ`'s
-  attached to products of primes) are the next family to try.
+  The census above includes a first probe with one such `δ` per conjugate pair. It finds no three-step connector.
+  The steps of a connector must jointly clear the poles at all 24 primes, but free steps can supply poles; the two-step
+  remainder already does. So this does not force four or more steps. Covering the poles with named `δ`'s is a search
+  heuristic, not a consequence of 5.
+- **Unit walks in all of `F` (CONDITIONAL).** clock_duality's B2 (`cubic_adelic_20261016e.md`) proves, for its field
+  `M`, that the additive group generated by unit vectors is `Γ_M = ∩_(c(𝔭) = 𝔭) A_𝔭`. No prime of `F` above 19 is
+  fixed by conjugation (19 ≡ 4 mod 15). So if B2's description extends to `F`, then `b(m' - m) ∈ Γ_F`, and the copies
+  are joined by unit walks inside `F`. Statement 5 is then purely a statement about restricted step sets.
 - **Witnesses.** Inside a coefficient factor's own unit graph, a new connector point with at most five neighbours never
   blocks a 6-colouring. A connector can invalidate saved additive witnesses only through the contact families it creates.
 - **Ports versus HYP-9290.** `X(N)` (statement 2) plays the role of HYP-9290's frontier terms (`MF` and the same-step

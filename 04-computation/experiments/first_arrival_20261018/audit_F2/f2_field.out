@@ -1,0 +1,9 @@
+sizes |M| = 7, |C| = 10, |A| = 54
+u conj(u) = 1: True ; u2 conj(u2) = 1: True
+u^3 = m2 u^2 + m1 u + 1: True
+u^2 = a + b u + c Y (the u-square circuit): True
+|d|^2 - 1 = phi: True ; phi^2 = phi + 1: True
+b, c in K = Q(zeta15, j) (no w): True
+denominators: b 19, c 19
+spindle unit edges: 11
+[0.1 s]

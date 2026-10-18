@@ -1,0 +1,52 @@
+[    0 s] delta conj(delta) = 1 for all four: True
+[    0 s] K: 8 primes above 19 in 4 conjugate pairs; no prime self-conjugate: True
+[    0 s] gamma = j - (9) - (-9) zeta: vanishes at 1 K-prime(s); its conjugate prime not among them: True
+[    0 s] gamma = j - (-9) - (9) zeta: vanishes at 1 K-prime(s); its conjugate prime not among them: True
+[    0 s] gamma = j - (6) - (-2) zeta: vanishes at 1 K-prime(s); its conjugate prime not among them: True
+[    0 s] gamma = j - (-6) - (2) zeta: vanishes at 1 K-prime(s); its conjugate prime not among them: True
+[    0 s] conjugate pairs hit by the four gammas: 4 of 4
+[    0 s] delta: 19-power in denominator 1 (inverse 1); F-primes by (type, valuation): [(('+j', 'v=+1'), 1), (('+j', 'v=-1'), 1), (('+j', 'v=0 or undecided'), 6), (('-j', 'v=+1'), 1), (('-j', 'v=-1'), 1), (('-j', 'v=0 or undecided'), 6), (('7', 'v=+1'), 1), (('7', 'v=-1'), 1), (('7', 'v=0 or undecided'), 6)]
+[    0 s] delta: 19-power in denominator 1 (inverse 1); F-primes by (type, valuation): [(('+j', 'v=+1'), 1), (('+j', 'v=-1'), 1), (('+j', 'v=0 or undecided'), 6), (('-j', 'v=+1'), 1), (('-j', 'v=-1'), 1), (('-j', 'v=0 or undecided'), 6), (('7', 'v=+1'), 1), (('7', 'v=-1'), 1), (('7', 'v=0 or undecided'), 6)]
+[    0 s] delta: 19-power in denominator 1 (inverse 1); F-primes by (type, valuation): [(('+j', 'v=+1'), 1), (('+j', 'v=-1'), 1), (('+j', 'v=0 or undecided'), 6), (('-j', 'v=+1'), 1), (('-j', 'v=-1'), 1), (('-j', 'v=0 or undecided'), 6), (('7', 'v=+1'), 1), (('7', 'v=-1'), 1), (('7', 'v=0 or undecided'), 6)]
+[    0 s] delta: 19-power in denominator 1 (inverse 1); F-primes by (type, valuation): [(('+j', 'v=+1'), 1), (('+j', 'v=-1'), 1), (('+j', 'v=0 or undecided'), 6), (('-j', 'v=+1'), 1), (('-j', 'v=-1'), 1), (('-j', 'v=0 or undecided'), 6), (('7', 'v=+1'), 1), (('7', 'v=-1'), 1), (('7', 'v=0 or undecided'), 6)]
+[    1 s] |D240| = 240
+[    1 s] survivor b (0,1) pts (3,8) q#193: |t|^2 3.743087 (recorded 3.743087), certificate 1021
+[    1 s] survivor b (0,1) pts (3,9) q#49: |t|^2 2.072056 (recorded 2.072056), certificate 1021
+[    1 s] survivor b (0,2) pts (5,1) q#224: |t|^2 3.492990 (recorded 3.492990), certificate 1021
+[    1 s] survivor b (1,2) pts (0,9) q#31: |t|^2 3.472936 (recorded 3.472936), certificate 1021
+[    1 s] survivor b (1,3) pts (5,1) q#224: |t|^2 3.492990 (recorded 3.492990), certificate 1021
+[    1 s] survivor b (1,4) pts (2,8) q#152: |t|^2 3.142151 (recorded 3.142151), certificate 1021
+[    1 s] survivor b (1,4) pts (7,8) q#82: |t|^2 2.793123 (recorded 2.793123), certificate 1021
+[    1 s] survivor b (1,4) pts (8,1) q#34: |t|^2 1.916667 (recorded 1.916667), certificate 1021
+[    1 s] survivor b (2,3) pts (3,8) q#193: |t|^2 3.743087 (recorded 3.743087), certificate 1021
+[    1 s] survivor b (2,3) pts (3,9) q#49: |t|^2 2.072056 (recorded 2.072056), certificate 1021
+[    1 s] survivor b (2,4) pts (1,5) q#101: |t|^2 3.841637 (recorded 3.841637), certificate 1021
+[    1 s] survivor b (2,4) pts (3,4) q#47: |t|^2 0.762620 (recorded 0.762620), certificate 1021
+[    1 s] survivor b (2,4) pts (8,7) q#229: |t|^2 0.983425 (recorded 0.983425), certificate 1021
+[    1 s] survivor b (2,4) pts (9,0) q#92: |t|^2 0.238887 (recorded 0.238887), certificate 1021
+[    1 s] survivor b (2,5) pts (7,1) q#3: |t|^2 0.859089 (recorded 0.859089), certificate 1021
+[    1 s] survivor b (2,6) pts (3,7) q#72: |t|^2 2.016703 (recorded 2.016703), certificate 1021
+[    1 s] survivor b (2,6) pts (4,8) q#216: |t|^2 3.386415 (recorded 3.386415), certificate 1021
+[    1 s] survivor b (2,6) pts (6,1) q#165: |t|^2 1.734092 (recorded 1.734092), certificate 1021
+[    1 s] survivor b (3,4) pts (0,4) q#11: |t|^2 1.956853 (recorded 1.956853), certificate 1021
+[    1 s] survivor b (3,4) pts (5,6) q#11: |t|^2 1.956853 (recorded 1.956853), certificate 1021
+[    1 s] survivor b (3,4) pts (7,4) q#63: |t|^2 0.180644 (recorded 0.180644), certificate 1021
+[    1 s] survivor b (3,4) pts (7,4) q#149: |t|^2 1.867523 (recorded 1.867523), certificate 1021
+[    1 s] survivor c (1,2) pts (7,4) q#87: |t|^2 3.502228 (recorded 3.502228), certificate 1021
+[    1 s] survivor c (1,4) pts (2,6) q#146: |t|^2 3.321672 (recorded 3.321672), certificate 1021
+[    1 s] survivor c (1,4) pts (7,6) q#193: |t|^2 3.001472 (recorded 3.001472), certificate 1021
+[    1 s] survivor c (2,4) pts (3,5) q#117: |t|^2 2.194692 (recorded 2.194692), certificate 1021
+[    1 s] survivor c (2,4) pts (4,7) q#166: |t|^2 0.028156 (recorded 0.028156), certificate 1021
+[    1 s] survivor c (2,4) pts (7,8) q#176: |t|^2 3.702591 (recorded 3.702591), certificate 1021
+[    1 s] survivor c (2,4) pts (8,7) q#0: |t|^2 3.788738 (recorded 3.788738), certificate 1021
+[    1 s] survivor c (2,5) pts (0,8) q#7: |t|^2 2.865105 (recorded 2.865105), certificate 1021
+[    1 s] survivor c (2,5) pts (7,8) q#36: |t|^2 1.524934 (recorded 1.524934), certificate 1021
+[    1 s] survivor c (2,5) pts (9,5) q#136: |t|^2 2.018421 (recorded 2.018421), certificate 1021
+[    1 s] survivor c (3,4) pts (1,7) q#47: |t|^2 3.635872 (recorded 3.635872), certificate 1021
+[    1 s] survivor c (3,4) pts (4,0) q#57: |t|^2 2.739579 (recorded 2.739579), certificate 1021
+[    1 s] survivor c (3,4) pts (6,5) q#57: |t|^2 2.739579 (recorded 2.739579), certificate 1021
+[    1 s] survivor c (3,6) pts (9,5) q#60: |t|^2 3.599294 (recorded 3.599294), certificate 1021
+[    1 s] survivor c (4,5) pts (7,5) q#84: |t|^2 3.325024 (recorded 3.325024), certificate 1021
+[    1 s] all 37 recorded K-direction survivors reproduced and certified: True
+[    2 s] K-directions, coefficient b: three-step tests 47515 ; uncertified at 12 primes 0 ; after 40 primes 0
+[    2 s] K-directions, coefficient c: three-step tests 33031 ; uncertified at 12 primes 0 ; after 40 primes 0

@@ -1,0 +1,17 @@
+(7,1) = (F_9, F_10) mod 9: True ; G_n = F_(n+9) mod 9 for n < 380: True
+(5,1): G_n = 4 F_(n+14) mod 9 for n < 380: True ; also G_n = 5 F_(n+2) = -4 F_(n+2) mod 9: True
+   all representations G = c F_(n+k) mod 9 (c unit, k mod 24): [(4, 14), (5, 2)]
+(7,1) digits 3,6,9 at n mod 4: [3] ; (5,1): [2]
+(5,1) 24-cycle of digital roots: [5, 1, 6, 7, 4, 2, 6, 8, 5, 4, 9, 4, 4, 8, 3, 2, 5, 7, 3, 1, 4, 5, 9, 5]
+golden class (norm b^2-ab-a^2 mod 9 up to sign): Fib +-1 ; (5,1) +-2 ; (7,1) +-1 ; 4*Fib +-2
+x -> 4x fixes each fibre of Z/9 -> Z/3: True ; norm class under pair -> 4 * pair (norm x16): {'+-1': '+-2', '+-2': '+-4', '+-4': '+-1'}
+E0/N = 34/7 ; SIB/N = 5/7 ; sum_{3|L, L>=1} 4^-L = 1/(4^3-1) = 1/63
+   factors multiplying S_not3: E0: 3/8*24 = 9 ; SIB: 1/8*3*6 = 9/4  -> the 9 of 63 = 9*7 cancels against these weight factors
+B(x) = x + 1 mod 3 for all x: True ; B^3(x) = 64x + 21 = x + 3 mod 9: True
+Solfeggio primes > 3: [5, 11, 13, 19, 29, 71, 107, 139] {5: 'ramified', 11: 'split', 13: 'inert', 19: 'split', 29: 'split', 71: 'split', 107: 'inert', 139: 'split'}
+  split or ramified: 6 of 8 ; binomial tail P(>= 5 split of 8 | 1/2) = 0.363
+(5,1) prime terms below 150: [5, 7, 13, 53, 139] ; overlap with Solfeggio primes: [5, 13, 139]
+primes <= 150: 35
+  hypergeometric P(overlap >= 3 | pop 35, K = 8, n = 5) = 0.0665
+  same with population = primes 5..150 (2, 3 excluded as in the Solfeggio list) = 0.0784
+  excluding the seed G_0 = 5 (prime terms 7, 13, 53, 139; overlap {13, 139}): P(>= 2 | 35, 8, 4) = 0.2179 ; pop 33: 0.2412
