@@ -14,6 +14,10 @@ status: >
     - k=3: (6,1,+-2), (17/2,3,+-3), (9,3,+-2), (10,3,0);
     - k=4: (7,1,+-2), (19/2,3,+-3), (10,3,+-2).
   For k >= 2 the second layer sits at weights k+11/2, k+6 and k+7.
+  PRE-REGISTERED TEST PASSED: k = 5 (c = 15/7, LG x^7). The prediction, stated before the run, was a first
+  failure exactly at (8, Li 1, +-2) = (k+3, 1, +-2). Observed: the singular vector at weight 6, charge 0; dims
+  match the maximal submodule through weight 9; non-arc generators exactly (8, 1, +-2) and none earlier
+  (out/n2_k5_D9.txt).
   No literature statement on classical freeness of N=2 minimal models was found (2026-10-18). N=1: Hao Li, classically
   free iff (p,q) = (2,4k).
 session: kind-pasteur-2026-10-18-S1
