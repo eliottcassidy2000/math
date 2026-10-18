@@ -1,0 +1,44 @@
+[
+ {
+  "p": 719,
+  "h": 31,
+  "natural": 22289,
+  "best_rotation": 22289,
+  "polished_rotation": 22289,
+  "sa_best": 16025,
+  "sa_median": 15959,
+  "restarts": 48,
+  "steps": 14380000,
+  "best": 22289,
+  "beaten": false,
+  "seconds": 255.8
+ },
+ {
+  "p": 839,
+  "h": 33,
+  "natural": 27687,
+  "best_rotation": 27687,
+  "polished_rotation": 27687,
+  "sa_best": 20327,
+  "sa_median": 20201,
+  "restarts": 48,
+  "steps": 16780000,
+  "best": 27687,
+  "beaten": false,
+  "seconds": 345.6
+ },
+ {
+  "p": 1151,
+  "h": 41,
+  "natural": 47191,
+  "best_rotation": 47191,
+  "polished_rotation": 47191,
+  "sa_best": 32839,
+  "sa_median": 32675,
+  "restarts": 48,
+  "steps": 23020000,
+  "best": 47191,
+  "beaten": false,
+  "seconds": 635.2
+ }
+]

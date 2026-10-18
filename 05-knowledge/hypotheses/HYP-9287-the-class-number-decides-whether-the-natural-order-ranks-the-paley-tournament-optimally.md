@@ -103,6 +103,29 @@ Boundary by range (minimum `L` of the survivors / maximum `L` of the beaten):
 The overlapping ranges show that `L(1, χ_(-p))` alone does not decide even rotation-optimality. The exact criterion is
 the prefix positivity of the Farey jump sequence.
 
+**Full census to 20000** (all 1136 primes `p ≡ 3 (mod 4)`; `paley_rotation_farey_sweep_3_20000_20261017.out`):
+
+* **`R+` has 57 members:** 3, 7, 23, 47, 71, 191, 239, 311, 359, 431, 479 and the 46 above.
+* **Low-`L` members.** The only ones with `L < 2.4` are 3, 7, 23, 47 (`L(1, χ_(-3)) = 0.60`; the script prints 1.81 at
+  `p = 3`, the same unit-factor display bug).
+* **`R+ ⊂ L+`** at every member (observed, not proved).
+* **Per 2000-block:** 17, 5, 7, 2, 4, 6, 4, 4, 2, 6. The count does not thin out, so `R+` looks infinite.
+* **A necessary condition.** The first `(p-1)/2` Farey jumps are `-2kχ(k)`, so `R+` requires
+  `Σ_(k<=K) kχ(k) >= 0` for `K <= (p-1)/2`. This is necessary but far from sufficient: 118 of the 245 high-`L` primes
+  satisfy it and are still beaten.
+
+**Beyond rotation orders on `R+`** (`paley_rplus_anneal_20261017.py`, the audit's polishing and annealing routines):
+
+| p | natural | after insertion + window-DP polishing | annealing best, 48 random restarts |
+|---:|---:|---:|---:|
+| 719 | 22289 | 22289 | 16025 |
+| 839 | 27687 | 27687 | 20327 |
+| 1151 | 47191 | 47191 | 32839 |
+
+So the natural order is a local optimum in a larger neighbourhood. Annealing from random starts reaches only 0.70-0.73
+of its excess. That is consistent with optimality on `R+`, but only weak evidence: by the calibration rule above,
+"unbeaten" is not a certificate.
+
 ## Tests
 
 * An exact MAS for `P_47` or `P_71` (the first unbeaten primes beyond the DP range), e.g. the exact DP modulo
