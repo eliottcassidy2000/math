@@ -41,6 +41,23 @@ Hence `Σ C(n+k,k)^3 - b(n) ≡ 4p Σ_k a_k^3 O_k (mod p^2)`.
 Modulo `p`, `a_k ≡ (-1)^k C(n,k)` and `O_k ≡ -(H_n - H_(n-k))/2`. So the statement is equivalent to
 `H_n D_n ≡ S_n (mod p)`.
 
+## Structure of the defect (FINITE-EXACT, n <= 24)
+
+Let `E_n = S_n - H_n D_n` (exact rationals).
+- **Odd `n`.** `D_n = 0`, and the numerator of `S_n` is, up to small primes, the product of the primes in
+  `(n + 1, 3n]`:
+  - `S_3 = -35/3 = -5·7/3`;
+  - `S_5 = 1001/5 = 7·11·13/5`;
+  - `S_9 = 5·11·13·17·19·23/63`;
+  - `S_23 = -3·5^2·29·31·...·67/7429`.
+
+  So `p = 2n + 1 ∈ (n+1, 3n]` divides `S_n`. This is the signature of a Gamma-ratio closed form, obtained by
+  differentiating Dixon's well-poised `3F2(1)` summation at a zero of `1/Γ`.
+- **Even `n`.** The numerator of `E_n` has large irregular prime factors, for example `74587` at `n = 10`. It is still
+  divisible by `2n + 1` whenever `2n + 1` is prime (`n = 2, 6, 8, 14, 18, 20, 24`).
+
+The odd case therefore looks closed-form provable; the even case needs the full derivative of Dixon's theorem.
+
 ## Tests
 
 - **A proof.** Differentiate the three-parameter Dixon identity
