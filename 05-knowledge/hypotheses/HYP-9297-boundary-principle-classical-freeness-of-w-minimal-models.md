@@ -18,6 +18,8 @@ status: >
       - W_3(4,7): first at 12 = D_0+2, Li 1; second prime agrees to 18;
       - W_3(5,7): first at 17 = D_0+2, Li 1 (D_0 = 15).
     The non-boundary first-failure rule (p-2)(q-2) + 2, Li 1 holds in all three cases.
+  - Second prime 2^31-19: W_3(3,8), W_3(3,10), W_3(3,11) free to weight 20 (dims match the maximal submodule);
+    W_3(5,7) not free; W_3(4,5), W_3(4,7) agree.
   - Affine analogue: HYP-9293 (admissible sl2 free iff boundary or integrable).
   - Affine sl3 (zero-weight cone; every module occurring has root-lattice weights):
     - boundary k = -3/2 (A_1,D_4): free through weight 8;

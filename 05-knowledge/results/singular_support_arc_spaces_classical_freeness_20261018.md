@@ -25,6 +25,11 @@
 - CITED: literature.
 - OPEN: HYP-9293, HYP-9294, HYP-9295, HYP-9296, HYP-9297, HYP-9298.
 - OBSERVATION: section 1.3.
+- AUDITS:
+  - Independent referee 1 (`04-computation/voa_singular_support/audit_20261018/REPORT.md`): MAJOR 0,
+    MINOR 10, NOTE 14. All were repaired; see MISTAKE-630, including the credit to Andrews-van Ekeren-Heluani in
+    THM-4671.
+  - Referee 2 covers THM-4673, HYP-9295 to HYP-9298 and sections 5a/5b.
 
 ## 1. Definitions (CITED unless marked)
 
