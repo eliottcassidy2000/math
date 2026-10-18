@@ -1,0 +1,20 @@
+N=49: dims_ok=True, coefficient mismatches=0
+Traceback (most recent call last):
+  File "C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\quantum_transfer_s44\check_witt_closed_forms_20261018.py", line 67, in <module>
+    main(int(a[0]) if a else 49, int(a[1]) if len(a) > 1 else 64)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\quantum_transfer_s44\check_witt_closed_forms_20261018.py", line 29, in main
+    dims, g = forced_generators(N)
+              ~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\quantum_transfer_s44\witt_rigidity_interpolation_20261018.py", line 21, in forced_generators
+    per = [closure(N, Lmax, P, gen_pattern={3, 5, 7, 9})[0] for P in PRIMES]
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\quantum_transfer_s44\witt_closure_forces_generators_20261018.py", line 67, in closure
+    cols = block(D, N)
+  File "C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\quantum_transfer_s44\..\voa_singular_support\vir_ss.py", line 51, in block
+    return tuple(sorted((lam for lam in parts_ge2(D, D) if len(lam) == r), reverse=True))
+                                        ~~~~~~~~~^^^^^^
+  File "C:\Users\Eliott\AppData\Local\Temp\math-wt-explicit-modal-38\04-computation\quantum_transfer_s44\..\voa_singular_support\vir_ss.py", line 45, in parts_ge2
+    out.append((k,) + rest)
+               ~~~~~^~~~~~
+MemoryError

@@ -18,3 +18,24 @@ Written and committed BEFORE any computation at the values below. The closed for
 **Runs.**
 - `witt_rigidity_interpolation_20261018.py 49 64`, compared with the formulas by `check_witt_closed_forms_20261018.py`.
 - `semiinvariant_generators`-style extraction for (4,13).
+
+## Outcome (recorded after the runs): P9 and P10 PASSED
+
+- **Timing.** The pre-registration was committed in 22048565d9 at 15:50:16 and pushed. The first run produced N = 49
+  at 15:56.
+- **Deviation in method, forced by memory.**
+  - The pre-registered PBW-basis run passed at N = 49 (dims 1, 0 mismatches). It then died with MemoryError at
+    N = 50. `vir_ss.block(2N+L, N)` enumerates every partition of `2N+L` into parts `>= 2`, about `10^8` at N = 50,
+    and the stuck process was killed at 16 GB.
+  - The test was completed by `check_witt_closed_forms_stable_20261018.py`. It is the same recursion in the faithful
+    stable-range coordinates `mu`, partitions of `L`, where `d` and `D_n` are exact formulas in `N`; it is valid for
+    `N >= L`.
+  - That implementation was first validated: on N = 9..49 it reproduces the PBW-basis results exactly ("validation
+    OK").
+  - The predictions themselves were not changed.
+- **P9 PASSED.** For every N = 49..64, `dim S_L = 1` at L = 3, 5, 7, 9, and every Cayley coefficient of `G_5`, `G_7`
+  and `G_9` equals the closed form fitted on N = 9..48. There are 0 mismatches.
+- **P10 PASSED.** Vir_(4,13) (N = 18, c = -217/26) has degree-18 lowest-weight generators exactly at Li 0, 3, 5, none at
+  Li 6 or 7, and its Li-5 generator is `A_5 - (89/73) A_3 A_2 = G_5(18)`.
+- Outputs: `check_witt_closed_forms_stable.out` and `.json`. The PBW-basis partial output is
+  `check_witt_closed_forms.out`.

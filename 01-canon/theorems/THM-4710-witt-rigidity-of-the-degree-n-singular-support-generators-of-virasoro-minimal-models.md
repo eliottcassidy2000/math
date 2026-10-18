@@ -2,14 +2,18 @@
 id: THM-4710
 title: "Witt rigidity of the degree-N singular support: the minimal generators of grI in degree N of a Virasoro minimal model Vir_(p,q) (N = (p-1)(q-1)/2), taken as sl_2 lowest-weight vectors at Li degrees 3, 5, 7, 9, are the unique vectors admissible under the c-independent action of the positive Witt modes; hence they depend only on N, not on c. In Cayley semi-invariant coordinates G_3 = A_3 and G_5 = A_5 - ((5N-1)/(4N+1)) A_3 A_2, with G_7, G_9 given by explicit rational functions of N"
 status: >
-  PROVED for 3 <= N <= 48: dim_Q S_L <= 1 at L = 3, 5, 7, 9, and = 0 when N < L. This is exact linear algebra mod three
+  PROVED for 3 <= N <= 64: dim_Q S_L <= 1 at L = 3, 5, 7, 9, and = 0 when N < L. This is exact linear algebra mod three
   or six primes; a mod-P nullity bounds the nullity over Q from above.
-  - Runs: N = 3..16 (witt_closure_forces_generators) and N = 9..48 (witt_rigidity_interpolation). The theorem is conditional on the generator pattern of
+  - Runs: N = 3..16 (witt_closure_forces_generators), N = 9..48 (witt_rigidity_interpolation), and N = 9..64 in the
+    stable-range implementation (check_witt_closed_forms_stable, validated against the PBW-basis runs on 9..49). The theorem is conditional on the generator pattern of
   HYP-9315(b) (degree-N generators of grI at Li degrees 0, 3, 5, ..., 2p-3), which holds in every computed model.
   - Checked directly against the singular support of 9 models: (4,5), (4,7), (4,9), (4,11), (5,6), (5,7), (5,8),
     (5,9), (6,7). All 18 generator comparisons at Li 5, 7, 9 are equalities.
   - The closed forms in N are CONJECTURAL for all N. Each coefficient is the smallest rational function fitting the
     first points and reproduces the remaining 27-37 of 40 exact values (N = 9..48).
+  - PRE-REGISTERED out-of-sample test PASSED (PREREGISTRATION_witt_closed_forms_20261018.md, commit 22048565d9,
+    before the runs): every coefficient is exact at N = 49..64; the unused model Vir_(4,13) (N = 18, c = -217/26) has
+    generators at Li 0, 3, 5 with G_5(18) = A_5 - (89/73) A_3 A_2.
   - The c-independent Witt action on symbols is elementary (proof below).
   - Novelty: not in the literature reviewed by the S44 audit (Feigin-Frenkel 1993 Remark 2 asks for the extra
     generators; AvEH treat Ising only). Self-checked; independent audit pending.
@@ -62,12 +66,12 @@ Let `M_0 = C x_0^N`. Recursively, for `L >= 1`:
 
 Then:
 
-1. **Uniqueness.** For `3 <= N <= 48` and `L ∈ {3, 5, 7, 9}`: `dim_Q S_L <= 1` when `L <= N`, and `S_L = 0` when
+1. **Uniqueness.** For `3 <= N <= 64` and `L ∈ {3, 5, 7, 9}`: `dim_Q S_L <= 1` when `L <= N`, and `S_L = 0` when
    `N < L`.
    - The mod-`P` nullity is exactly 1 for every `N >= L` and every prime used.
    - `dim_Q S_L = 1` whenever a model with `p >= (L+3)/2` has this `N`. Its generator lies in `S_L`.
    - Write `G_L(N)` for the spanning vector. It is reconstructed rationally, consistently over all primes, for
-     `9 <= N <= 48`.
+     `9 <= N <= 64`.
 2. **Forcing.** Let `Vir_(p,q)` be a minimal model with `(p-1)(q-1) = 2N`, `N` in these ranges. Suppose its degree-`N`
    generators at Li degrees `<= L` sit at `0, 3, ..., L`, as in HYP-9315(b), which needs `p >= (L+3)/2`. Then its
    generator at Li degree `L` is `G_L(N)` up to scalar. In particular it is independent of `c`, so it is the same for
@@ -87,7 +91,8 @@ Then:
    - The other six coefficients of `G_9` are degree-6 rational functions. Their common denominator is
      `(N+5)(4N+1)(4N+3)(4N+5)(4N^2+4N-43)`; see `witt_rigidity_interpolation_9_48.json`.
    - None of these denominators vanishes at a positive integer.
-   - The closed forms are exact at every computed `N`. Their validity for all `N` is conjectural.
+   - The closed forms are exact at every computed `N` (9..64; the values 49..64 were pre-registered).
+   - Their validity for all `N` is conjectural.
 
 ## Proof of 1 and 2
 
