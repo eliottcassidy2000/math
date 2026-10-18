@@ -62,9 +62,9 @@ evidence; 719 and 839 await the full family. A pure threshold in `L` fails: 503 
 
 ## Revised conjecture
 
-The natural order is a maximum acyclic ordering of `P_p` only on a thin set of primes `p ∈ L+`, and among those exactly
-when `L(1, χ_(-p))` dominates the twisted values `L(1, χ_(-p) ψ)` (`ψ` of small conductor `m`) that govern the rotation
-orders `x -> {kx/(mp)}`. Mechanism (PROVED as an identity, heuristic as a criterion): in multiplier coordinates a rotation
+The natural order is a maximum acyclic ordering of `P_p` only on a thin, apparently infinite set of primes inside
+`R+ ⊂ L+`. Here `R+` is decided exactly by the Farey prefix positivity of THM-4666 1c, and empirically by a slowly rising
+threshold in `L(1, χ_(-p))` (96% leave-one-out accuracy up to 20000; the twists by `χ_8`, `χ_5` add nothing). Mechanism (PROVED as an identity, heuristic as a criterion): in multiplier coordinates a rotation
 order sorts first by a block label and then by `<cx>`, so its excess is `χ(c)[p h(-p) - 2 Σ χ(t - s)]` over the pairs whose
 block labels are inverted (for `m = 2` the blocks are the Eisenstein parity sets `floor(d u/p) mod 2`); these crossing
 sums are character analogues of Dedekind sums (Berndt), i.e. combinations of twisted `L`-values. NUMERICAL: the twist hint seen for `p <= 1000` does not generalise. On the 245 primes with `L >= 2.4` in

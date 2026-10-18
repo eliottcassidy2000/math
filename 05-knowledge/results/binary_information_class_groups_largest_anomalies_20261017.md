@@ -239,8 +239,9 @@ for statements and proofs. The points for this note are the following.
     predictions fail; both "low L is beaten" predictions stand.
   - Unbeaten by any known order: 47, 71, 191, 239, 311, 359, 431, 479 (audit, full rotation family). 503 (`L = 2.942`) is
     beaten while 191 (`L = 2.955`) is not, so a pure `L`-threshold fails, and the boundary rises quickly with `p`.
-  - Revised conjecture: the natural order is optimal only on a thin set inside `L+`, where `L(1, χ_(-p))` dominates the
-    small-conductor twists that govern the rotation orders.
+  - Revised conjecture: the natural order is optimal only on a thin, apparently infinite set inside `R+ ⊂ L+`. `R+` is
+    decided by the Farey prefix positivity, empirically by a slowly rising `L(1, χ_(-p))`-threshold (96% accuracy to
+    20000; small-conductor twists add nothing).
   - **The Farey sweep (THM-4666 1c, PROVED).** Crossing a Farey fraction `a/b` changes the excess of the rotation order
     by `Δ_b = 2χ(b)[S(q) + (b - s)A(q) + sA(q+1)]`, a combination of Legendre-walk areas at scale `p/b`. Hence
     `Σ φ(b)Δ_b = -2p h(-p)` (a Farey class number identity), and the best rotation order costs `O(p^2)`. A
