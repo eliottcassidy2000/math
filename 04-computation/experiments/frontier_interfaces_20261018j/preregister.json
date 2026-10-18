@@ -1,0 +1,11 @@
+{
+  "status": "OPEN; predictions before the every-N C scan",
+  "frontier": "627-seed forward closure of seeds at most 1000",
+  "source": "three cyclic residue rotations of the original source; identical entry routes and integer clocks",
+  "universe": "every 1 <= N < 2^24",
+  "P1": "trace(arrival Gram) <= 3 trace(source Gram)/2 for every N >= 4096",
+  "P2": "trace(arrival Gram) <= trace(source Gram) for every N >= 4096 (stronger exploratory prediction)",
+  "P3": "trace(clock-diagonal Gram) <= trace(source Gram) for every N >= 4096",
+  "known_hostile": "source Gram minus arrival Gram is not positive semidefinite at N=524288, despite a lower trace",
+  "nonconsequence": "No uniform bound or universal entry follows from a finite census. The phase-zero row is the actual Collatz observable."
+}
