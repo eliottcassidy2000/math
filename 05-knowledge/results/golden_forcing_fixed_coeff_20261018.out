@@ -1,0 +1,12 @@
+[    0 s] A base |A| = 54 (146 edges); |C| = 10 (15 edges); directions 22; d-step pairs in A 70
+[    0 s] coefficient CSP: 125169 clauses
+[    0 s] best coefficient colouring after 40 solutions: total shift-set size 38; c_u = [0, 1, 2, 0, 1, 2, 3, 0, 1, 2], c_l = [0, 1, 2, 0, 1, 2, 3, 0, 1, 2]
+[    0 s] first-coordinate CSP: 2748 clauses
+[    0 s] fixed-coefficient additive test: 60 of 570 patterns extend; 510 inconclusive [0 s]
+[    2 s] A contact1 |A| = 1099 (3794 edges); |C| = 10 (15 edges); directions 22; d-step pairs in A 4856
+[    2 s] coefficient CSP: 125169 clauses
+[    2 s] best coefficient colouring after 40 solutions: total shift-set size 38; c_u = [0, 1, 2, 0, 1, 2, 3, 0, 1, 2], c_l = [0, 1, 2, 0, 1, 2, 3, 0, 1, 2]
+[    2 s] first-coordinate CSP: 94900 clauses
+[    2 s] fixed-coefficient additive test: 60 of 570 patterns extend; 510 inconclusive [0 s]
+[    0 s] coefficient CSP: 125169 clauses
+[    2 s] coverage over 400 coefficient colourings: best single 120 of 570 patterns; union 120; mean 28.7

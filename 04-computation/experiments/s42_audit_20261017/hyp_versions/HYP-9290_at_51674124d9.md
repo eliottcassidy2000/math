@@ -1,0 +1,117 @@
+---
+id: HYP-9290
+title: "Frontier energy cone: stop every source of the signed ROOT transport at its first seed <= Y; for a fixed frontier height Y_0 (about 100-1000) the stopped energy E_(Y_0)(N) = sum_u c_(Y_0)(u)^2 stays below C N for every N. By the one-line frontier lemma R(N)^2 <= F_Y E_Y(N), this gives |R(N)| <= sqrt(F_(Y_0) C N) without any input from the termination regime"
+status: >
+  OPEN (CONJECTURE). Lemma F is PROVED (Cauchy-Schwarz on the stopped invariant).
+
+  Evidence (FINITE-EXACT, every N < 2^23):
+  - sup E_1000(N)/N = 2.08 and sup E_100(N)/N = 2.35 over 2^12 <= N < 2^23;
+  - the unstopped ratio R(N)^2/N reaches 9.08 (N = 7910).
+
+  The decomposition E_Y = E_0 + 2(MM_hi + MM_lo + MF), synchronous in depth, was computed at four N with N >= 6Y:
+  - merges above the frontier remove 54-75% of E_0;
+  - same-step merges at frozen seeds add at most 0.011 N;
+  - arrivals at frozen seeds add at most 0.24 N for Y >= 100.
+
+  The coherent climbs that make R(N)^2/N large (the termination regime of THM-4667) are arrivals at frozen seeds
+  below about 30-100.
+
+  Pre-registered 2026-10-17, before the scan beyond 2^23: tests P1-P6 below.
+session: opus-2026-10-17-S42
+source: 05-knowledge/results/root_frontier_penrose_20261017.md
+scripts:
+  - 04-computation/experiments/root_transport_frontier_energy_20261017.py (every N, several Y; checks R(N) at every N)
+  - 04-computation/experiments/root_transport_frontier_profile_20261017.py (profiles in Y at fixed N)
+  - 04-computation/experiments/root_transport_frontier_decomposition_20261017.py (cross-term decomposition)
+related: [THM-4667, HYP-9288, HYP-9283, THM-4658, THM-4581]
+---
+
+# HYP-9290: frontier energy cone of the stopped ROOT transport
+
+## Setting
+
+The notation is that of THM-4667 and HYP-9288. The ROOT current is `R(N) = H(4N) - H(N)`, and `c_0` are its initial
+seed coefficients. The odd transport is `s -> P(s) = seed((3s+1)/2^a)`, with sign `+` if `a = 2` and `-` if `a = 1`.
+`f(u) = (-1)^(total stopping time of u)`.
+
+**Stopped transport.** Fix a height `Y >= 1`. Every source is transported until its first seed `u <= Y`, and stays
+there. Seeds `<= Y` never move. The frontier coefficients are `c_Y(u)` for `u <= Y`. The frontier energy is
+`E_Y(N) = Σ_u c_Y(u)^2`, and `F_Y = #{seeds <= Y}` (`F_100 = 38`, `F_1000 = 375`).
+
+**Lemma F (PROVED).** `R(N) = Σ_(u <= Y) f(u) c_Y(u)`; hence `R(N)^2 <= F_Y E_Y(N)`.
+
+*Proof.* Each transport step preserves `Σ_u f(u) c(u)`, because `f(P(s)) = ± f(s)` with exactly the transport sign.
+Stopping only freezes coordinates. So the identity holds for the stopped vector, and Cauchy-Schwarz over the `F_Y`
+frontier seeds gives the inequality. ∎
+
+## Statement
+
+- **(A, frontier cone)** There are `Y_0` and `C` with `E_(Y_0)(N) <= C N` for all `N >= 1`. The data suggest
+  `Y_0 = 100` and `C = 2.4`, or `Y_0 = 1000` and `C = 2.1`. Consequence: `|R(N)| <= sqrt(F_(Y_0) C N)`, e.g.
+  `<= 28 sqrt(N)`.
+- **(A', logarithmic)** The same with `C` replaced by `C log log (N + 16)`.
+  - Heuristic: if the `F_Y` frontier coefficients fluctuate like independent Gaussian sums, `E_Y/N` deviates from its
+    mean by a factor `1 + O(F_Y^(-1/2))`.
+  - The running maximum over about one effectively independent value per octave then drifts by
+    `O(sqrt(log log N / F_Y))`.
+  - This is a model, not a theorem.
+- **(B, mechanism)** In the depth-synchronous decomposition `E_Y = E_0 + 2(MM_hi + MM_lo + MF)`:
+  - `MM_hi` is the merges of two moving currents above `Y`;
+  - `MM_lo` is the same-step merges at frozen seeds;
+  - `MF` is the arrival of moving current at a frozen seed already carrying current.
+
+  For `Y >= Y_0`, `MM_hi + MM_lo <= 0` and `MF <= c N` for a constant `c`. Together these imply (A) with
+  `C = 34/7 + 2c + o(1)`.
+
+`E_0(N)/N -> 34/7 = 4.857` (the octave trace `T_0(X) = (51/7)X^2` of HYP-9288).
+
+## Why
+
+1. **The termination regime.** It never enters `E_Y`. The coherent merging that makes `R(N)^2/N` large happens when a
+   few dozen frontier currents finally coalesce into ROOT. In the decomposition it is an *arrival* term against frozen
+   seeds below about 30-100. For example, at `N = 6904411`, `Y = 30`: `MF = +2.92 N`, which accounts for the climb
+   from `E_100 = 1.37 N` to `E_30 = 4.09 N`.
+2. **Above the frontier the transport is dissipative.** `MM_hi` lies between `-3.65 N` and `-2.64 N` at every computed
+   `(N, Y)` with `Y <= 10^4 <= N/6`. It is concentrated in the first third of the stopped depth (the ideal regime of
+   THM-4667, sibling anti-correlation).
+3. **Relation to HYP-9288.** (A) is not implied by HYP-9288 and does not imply it. Its advantage: it only needs the
+   transport *down to a fixed scale*. That is where the S41 matching between actual and ideal transport was exact; it
+   failed only at ROOT and `O(1)` near-ROOT seeds.
+4. **Conditional power saving.** With `Y = N^θ`, `|R(N)| <= sqrt(F_Y E_Y)`, which is `O(N^((1+θ)/2))` whenever
+   `E_(N^θ)(N) = O(N)`.
+
+## Evidence (FINITE-EXACT; `R(N)` checked at every `N`)
+
+| octave | `2^12` | `2^13` | `2^14` | `2^15` | `2^16` | `2^17` | `2^18` | `2^19` | `2^20` | `2^21` | `2^22` |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| `max E_100/N` | 2.35 | 1.68 | 1.80 | 1.65 | 1.85 | 1.22 | 1.60 | 1.48 | 1.24 | 1.46 | 2.03 |
+| `max E_1000/N` | 2.08 | 1.92 | 1.75 | 1.41 | 1.42 | 1.44 | 1.38 | 1.45 | 1.50 | 1.52 | 1.31 |
+| `mean E_1000/N` | 1.91 | 1.74 | 1.49 | 1.30 | 1.27 | 1.31 | 1.20 | 1.28 | 1.34 | 1.30 | 1.19 |
+| `max E_30/N` | 2.40 | 2.65 | 1.27 | 2.55 | 1.66 | 2.29 | 2.52 | 2.25 | 1.16 | 1.57 | 4.64 |
+| `max R^2/N` | 9.08 | 7.53 | 2.55 | 3.36 | 4.23 | 2.77 | 3.92 | 1.66 | 1.56 | 0.98 | 6.06 |
+
+Decomposition (`/N`):
+
+| `N` | `Y` | `E_0` | `MM_hi` | `MM_lo` | `MF` | `E_Y` | `R^2` |
+|---|---|---|---|---|---|---|---|
+| 7910 | 100 | 4.856 | -3.250 | -0.059 | +0.235 | 1.783 | 9.080 |
+| 7910 | 1000 | 4.856 | -2.739 | -0.366 | +0.164 | 1.916 | 9.080 |
+| 66463 | 1000 | 4.857 | -3.267 | -0.103 | -0.240 | 1.248 | 4.226 |
+| 1048576 | 1000 | 4.857 | -3.489 | -0.036 | +0.041 | 1.374 | 1.533 |
+| 6904411 | 30 | 4.857 | -3.653 | -0.031 | **+2.915** | 4.088 | 6.055 |
+| 6904411 | 100 | 4.857 | -3.643 | -0.037 | +0.195 | 1.372 | 6.055 |
+| 6904411 | 1000 | 4.857 | -3.547 | -0.039 | -0.101 | 1.170 | 6.055 |
+
+(The table entries are `2·MM/N`, i.e. the actual energy contributions.)
+
+## Pre-registered tests (written before the scan of `2^23 <= N < 2^26`)
+
+- **P1.** `max E_1000(N)/N <= 2.08` over `2^23 <= N < 2^26` (no record beyond the `[2^12, 2^23)` maximum).
+- **P2.** `max E_100(N)/N <= 3.0` over the same range (log log allowance over 2.35).
+- **P3.** `max E_10000(N)/N <= 1.55` over the same range (the decline toward a plateau continues).
+- **P4.** Each octave mean of `E_1000/N` lies in `[1.0, 1.5]`.
+- **P5.** The `Y = 30` octave mean (3.19 at `2^22`) returns to `<= 2.0` in at least two of the three new octaves.
+- **P6.** At the arg-max of `E_1000/N` and at the arg-max of `R^2/N` in each new octave, the decomposition at
+  `Y = 1000` has `MM_hi <= -3.0 N` and `|MF| <= 0.5 N`.
+
+A failure of P1 or P2 would not refute (A'), but would weaken the case for an absolute constant.
