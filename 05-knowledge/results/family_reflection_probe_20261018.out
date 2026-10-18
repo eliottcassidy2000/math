@@ -1,0 +1,32 @@
+A1 c = 64
+  p=13: degree of A(k) mod p = 6; reflection m -> c^2/m: (6, 'eps=+1')
+  p=17: degree of A(k) mod p = 8; reflection m -> c^2/m: (8, 'eps=+1')
+  p=19: degree of A(k) mod p = 9; reflection m -> c^2/m: (9, 'eps=-1')
+  p=23: degree of A(k) mod p = 11; reflection m -> c^2/m: (11, 'eps=-1')
+  p=29: degree of A(k) mod p = 14; reflection m -> c^2/m: (14, 'eps=+1')
+  p=31: degree of A(k) mod p = 15; reflection m -> c^2/m: (15, 'eps=-1')
+  p=37: degree of A(k) mod p = 18; reflection m -> c^2/m: (18, 'eps=+1')
+A2 c = 108
+  p=13: degree of A(k) mod p = 4; reflection m -> c^2/m: None
+  p=17: degree of A(k) mod p = 5; reflection m -> c^2/m: None
+  p=19: degree of A(k) mod p = 6; reflection m -> c^2/m: None
+  p=23: degree of A(k) mod p = 7; reflection m -> c^2/m: None
+  p=29: degree of A(k) mod p = 9; reflection m -> c^2/m: None
+  p=31: degree of A(k) mod p = 10; reflection m -> c^2/m: None
+  p=37: degree of A(k) mod p = 12; reflection m -> c^2/m: None
+A3 c = 256
+  p=13: degree of A(k) mod p = 3; reflection m -> c^2/m: None
+  p=17: degree of A(k) mod p = 4; reflection m -> c^2/m: None
+  p=19: degree of A(k) mod p = 4; reflection m -> c^2/m: None
+  p=23: degree of A(k) mod p = 5; reflection m -> c^2/m: None
+  p=29: degree of A(k) mod p = 7; reflection m -> c^2/m: None
+  p=31: degree of A(k) mod p = 7; reflection m -> c^2/m: None
+  p=37: degree of A(k) mod p = 9; reflection m -> c^2/m: None
+A4 c = 1728
+  p=13: degree of A(k) mod p = 2; reflection m -> c^2/m: None
+  p=17: degree of A(k) mod p = 2; reflection m -> c^2/m: None
+  p=19: degree of A(k) mod p = 3; reflection m -> c^2/m: None
+  p=23: degree of A(k) mod p = 3; reflection m -> c^2/m: None
+  p=29: degree of A(k) mod p = 4; reflection m -> c^2/m: None
+  p=31: degree of A(k) mod p = 5; reflection m -> c^2/m: None
+  p=37: degree of A(k) mod p = 6; reflection m -> c^2/m: None
