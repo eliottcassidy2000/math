@@ -1,0 +1,8 @@
+clock_duality G2 rows at p = 31 (zeta15, j, w) -> (N, D, R, chi(D), chi(R), chi(DR)):
+  (7, 19, 25): N = 12, D = 11, R = 23, chi = (-1, -1, 1)
+  (10, 19, 25): N = 28, D = 23, R = 7, chi = (-1, 1, -1)
+degree-one places examined (31 <= p < 3000): 320
+  places where D is a non-residue (first three): [(31, 7, 19, 25), (31, 9, 12, 25), (31, 10, 12, 25)]
+  places where R is a non-residue (first three): [(31, 7, 19, 25), (31, 9, 12, 25), (31, 10, 12, 25)]
+  places where DR is a non-residue (first three): [(31, 10, 19, 25), (31, 18, 12, 25), (31, 19, 19, 25)]
+=> D, R, DR are all non-squares in F; [F(s,h):F] = 4 and [E':Q] = 192: True

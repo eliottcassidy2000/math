@@ -1,0 +1,12 @@
+sizes: |A| 54 |C| 10 |L| 13 |D(A)| 1602 |D(C)| 82 |D(C) u D(L)| 130; candidates per direction 1603 x 83 x 83 x 130 = 1435598710
+embedding: w = 1.709275359436923, N = 2.709118460297952, R = 1.290881539702048, D = -0.476495051294315, |u| 1.000000000000000 |v| 1.000000000000000 |e| 1.000000000000000 |d+u+v| 1.000000000000000
+identity checks: |u + v + conj(d) uv| - 1 = -2.22e-16; |uv conj(d+u+v) - (u + v + conj(d) uv)| = 1.57e-16; |d + u + conj(d) e^2 - Z conj(u)/conj(Z)| = 2.99e-16; e^2 + Z/conj(Z) = 2.22e-16
+exact unit elements of D(C) u D(L): 26
+direction e  : 26 candidates with ||x|^2-1| < 1e-8 -> pure Y-axis 26, claimed family 0, other 0; tiers(<1e-12,1e-10,1e-8,1e-6,1e-4) = [np.int64(26), np.int64(26), np.int64(26), np.int64(370), np.int64(31658)]; smallest other deviation 1.947e-08 [2.0 s]
+direction ue : 26 candidates with ||x|^2-1| < 1e-8 -> pure Y-axis 26, claimed family 0, other 0; tiers(<1e-12,1e-10,1e-8,1e-6,1e-4) = [np.int64(26), np.int64(26), np.int64(26), np.int64(352), np.int64(31710)]; smallest other deviation 1.498e-08 [1.3 s]
+direction ve : 28 candidates with ||x|^2-1| < 1e-8 -> pure Y-axis 26, claimed family 0, other 2; tiers(<1e-12,1e-10,1e-8,1e-6,1e-4) = [np.int64(26), np.int64(26), np.int64(28), np.int64(370), np.int64(31826)]; smallest other deviation 1.381e-08 [1.3 s]
+   OTHER candidate (needs exact check): (1324, 36, 0, 26)
+   OTHER candidate (needs exact check): (1498, 27, 0, 35)
+direction uv : 36 candidates with ||x|^2-1| < 1e-8 -> pure Y-axis 26, claimed family 10, other 0; tiers(<1e-12,1e-10,1e-8,1e-6,1e-4) = [np.int64(36), np.int64(36), np.int64(36), np.int64(340), np.int64(32088)]; smallest other deviation 1.262e-08 [1.3 s]
+direction ee : 36 candidates with ||x|^2-1| < 1e-8 -> pure Y-axis 26, claimed family 10, other 0; tiers(<1e-12,1e-10,1e-8,1e-6,1e-4) = [np.int64(36), np.int64(36), np.int64(36), np.int64(368), np.int64(31796)]; smallest other deviation 1.254e-08 [1.3 s]
+total 7 s

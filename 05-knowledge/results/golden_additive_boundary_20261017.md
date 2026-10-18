@@ -155,6 +155,10 @@ mixed families in the golden program.
 additive pre-screen still blocks **no** pattern, with or without shared coefficient colourings. Two coupled contact
 families sharing an `(A, u)`-step are absorbed by independent coefficient shifts.
 
+The reflected family gives the source `A + uC + vC + (uv)C` (`golden_forcing_search_uv_20261017.py`). Its edges are the
+`v`-contact patterns plus 8 reflected-contact patterns (16 directed) per first-coordinate layer. It is additively free
+too: 0 of 570 patterns are blocked.
+
 ## 4. A design loop, and what four larger sources show
 
 `golden_forcing_search_20261017.py` builds `A' + uC' + vC'` for `A', C' ⊂ K` directly from G1: unit edges by a

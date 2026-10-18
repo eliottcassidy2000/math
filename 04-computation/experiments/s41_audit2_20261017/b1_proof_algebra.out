@@ -1,0 +1,48 @@
+=== 1. norm components ===
+  coeff of 1 : -D*R*c3*cb3 - D*c1*cb1 + R*c2*cb2 + c0*cb0
+  coeff of s : -R*c2*cb3 + R*c3*cb2 - c0*cb1 + c1*cb0
+  coeff of h : -D*c1*cb3 - D*c3*cb1 + c0*cb2 + c2*cb0
+  coeff of h*s : -c0*cb3 + c1*cb2 - c2*cb1 + c3*cb0
+  with c2 = 0: (i), (ii), (iii)*(-D), (iv) residuals: 0 0 0 0
+=== 2. coordinates of x = a + u b + v c + e g ===
+  x - [c0 + c1 s + c3 sh] (times hR): 0
+=== 3. case identities ===
+  (iii) c1 c3b + c3 c1b = -N*(c*gb + cb*g)/(2*(N - 4))  [claimed (N/(2R))(c gb + g cb)]
+  (i) with c0 = 0: -(N*c*cb - 4*c*cb - 4*g*gb)/4  minus claim: 0
+  (i) with c = 0, c0 = t Z g: g*gb*(N*t**2 + 1)  minus claim: 0
+  u (c0^2 N - k Z^2 g^2)/Z - [c0^2 (1 + dbar u) - k g^2 u (d + u)] = 0
+=== 4. coefficient equations ===
+  [u^0] coefficient: a**2 + b**2*dbar*m0  | minus claimed: 0
+  [u^1] coefficient: a**2*dbar + 2*a*b + b**2*dbar*m1 - d*kp  | minus claimed: 0
+  [u^2] coefficient: 2*a*b*dbar + b**2*dbar*m2 + b**2 - kp  | minus claimed: 0
+  [u] after a = lam b and kp from [u^2]: -d*dbar*m2 - d + dbar*lam**2 + dbar*m1 + lam*(-2*d*dbar + 2)   (quadratic in lam: needs [1] to linearise)
+  lambda from [u] with lam^2 = -dbar m0: (-d*dbar*m2 - d - dbar**2*m0 + dbar*m1)/(2*(d*dbar - 1)) ; minus THM/script formula: 0
+=== 5. minimal polynomial of u over Q(j) ===
+  cubic in h = w + 3: h**3 - 7*h**2 + 11*h - 1
+  monic cubic: U^3 + (11*j/19 + 20/19) U^2 + (11*j/19 - 20/19) U + (-1)
+  u^3 = m2 u^2 + m1 u + m0 with m2 = -11*j/19 - 20/19 , m1 = 20/19 - 11*j/19 , m0 = 1
+  equals THM values (m2 = -(20+11j)/19, m1 = (20-11j)/19, m0 = 1): True True True
+  factorisation over Q(sqrt(-11)): [(3, 1)]
+  w = 1.70927535943692283922913166712 ; |u^3 - m2 u^2 - m1 u - 1| at the embedding (50 digits): 2.6728e-51
+=== 6. field degrees ===
+  Phi_15 over Q(sqrt(-11)) factor degrees: [8] => [K:Q] = 16
+  primes p = 1 mod 15 with (-11/p) = 1 (split completely in K) where w^3+2w^2-4w-4 has NO root mod p: [181, 751, 1291]
+  => the monic integral cubic has no root in K (a root would be integral in K and reduce to F_p), so [F:K] = 3, [F:Q] = 48
+  disc of the cubic over Q: 592 {2: 4, 37: 1} (not a square: S3 cubic, three real roots)
+=== 7. N, D, R at the intended embedding and at tau ===
+  intended (j = +i sqrt11): u = (0.336895498784 - 0.94154204521j), N = 2.7091184602979521973, 37/15 < N < 59/20: True, R = 4 - N = 1.29088153970205, D = 1 - 4/N = -0.476495051294315
+  tau (j = -i sqrt11): u = (0.336895498784 + 0.94154204521j), N = 6.2909572501505091541, 37/15 < N < 59/20: False, R = 4 - N = -2.29095725015051, D = 1 - 4/N = 0.364166717250495
+  (at the intended embedding R > 0, so h = sqrt(R) is real and conj fixes h; D < 0 so s is imaginary and conj s = -s)
+  (other embeddings are irrelevant: the theorem is about |x| = 1 at the intended embedding)
+=== 8. exact lambda^2 + dbar in Q(zeta5, j), own arithmetic ===
+  |d|^2 = {(2, 0): Fraction(-1, 1), (3, 0): Fraction(-1, 1), (0, 0): Fraction(1, 1)}  (= 2 + z + z^4; equals 1? False )
+  lambda = {(2, 0): '-21/38', (1, 0): '1/2', (3, 0): '-1/38', (3, 1): '-11/38'}
+  lambda^2 + dbar = {(0, 0): '-1/4', (1, 0): '-3177/1444', (2, 0): '-743/722', (3, 0): '-2645/1444', (0, 1): '220/361', (1, 1): '110/361', (2, 1): '11/38', (3, 1): '11/38'}
+  lambda^2 + dbar is zero? False
+  absolute norm N_{Q(zeta5,j)/Q}(lambda^2 + dbar) = 216653667872750440164246601/18903296479567620845142016 = num {11: 2, 1639885141: 1, 1091860726096141: 1} / den {2: 16, 19: 16}
+  Res = (q0 - dbar^2)^2 + q1^2 dbar equals q1^2 (lambda^2 + dbar): True ; Res nonzero: True
+  printed numerator / printed den^2 equals my lambda^2 + dbar: True
+  |lambda^2 + dbar| over the 8 embeddings: min 0.26471936, max 4.0481021
+  (cross-check) roots of dbar lam^2 + q1 lam + q0 at the intended embedding and lam^2 + dbar there:
+     root (1.210020025 + 0.9713753204j)  |root^2 + dbar| = 2.303607913
+     root (0.4080139642 + 0.2041951842j)  |root^2 + dbar| = 1.634349899

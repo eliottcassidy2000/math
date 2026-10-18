@@ -3,8 +3,9 @@ id: HYP-9289
 title: "The golden linear contact space is additively free: for every finite source A' + uC' + vC' with A', C' in K = Q(zeta15, sqrt(-11)), the golden contact d = 1 + zeta5 and clock_duality_oct15's eight literal ports, every six-colour port pattern that extends to the unit graph of A' extends to the whole source by an additive colouring c_A(a) + c_1(b) + c_2(c) mod 6; hence six-colour forcing needs edges outside the linear space K + uK + vK, and the natural product coordinate v^2 supplies none"
 status: >
   OPEN (CONJECTURE), with a proved reduction and FINITE-EXACT evidence.
-  PROVED (elementary): the additive extension lemma, and its reformulation as a Z/6 colouring with forbidden difference sets (correspondence colouring when singletons) colouring of
-  the golden two-distance graph on A'.
+  PROVED (elementary): the additive extension lemma (clock_duality's coordinate-sum method, graded_tail_carrier_20261017b.md),
+  and its reformulation as a Z/6 colouring of the golden two-distance graph on A' with forbidden difference sets (a
+  correspondence colouring when the sets are singletons).
   FINITE-EXACT evidence:
   - all 570 patterns of clock_duality's 5400-vertex receipt extend additively with c_1 = c_2, checked on all 30,856 edges;
   - four larger linear sources (up to 1,099 first-coordinate points or 2,297,178 mixed edges; contact2 with 10,597 points was built but its pre-screen did not finish) have no additively blocked
