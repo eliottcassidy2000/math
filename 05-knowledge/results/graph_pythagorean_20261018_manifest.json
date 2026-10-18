@@ -1,20 +1,20 @@
 {
   "session": "codex-graph-pythagorean-20261018",
   "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
-  "comparison": "decoded text with universal newline normalization; SHA256 on raw bytes",
+  "comparison": "Normal/optimized/saved outputs match as decoded text; sources and outputs use canonical LF bytes, checked against committed Git blobs; SHA256 on those bytes.",
   "records": [
     {
       "source": "04-computation/graph_pythagorean_20261018_arithmetic_probe.py",
       "source_sha256": "3799de43d16faf6863965571e20ad651cf18077e88eabb3e99af170d172e830e",
       "output": "05-knowledge/results/graph_pythagorean_20261018_arithmetic_probe.out",
-      "output_sha256": "02c4815b28815d284d36dab14468699d8a1369bd0bc520c098a9682b17f6ef4f",
+      "output_sha256": "fb250abe924f3d1907a293efb15f261e67032a357646f66e76b92bc059ec3a5f",
       "normal_optimized_saved_text_match": true
     },
     {
       "source": "04-computation/graph_pythagorean_20261018_graph_probe.py",
       "source_sha256": "272775917e4b49ca3397d3017965f54ee182627af46d938ae926f28142c88da0",
       "output": "04-computation/graph_pythagorean_20261018_graph_probe.out",
-      "output_sha256": "6e64b6716cccbf543cf9e49709913a8d2b86d698734f31188a660444208d7520",
+      "output_sha256": "91a69fac350b02db182013bb701c5558005008b7db33fb12e706cd6b4bfd6ec4",
       "normal_optimized_saved_text_match": true
     },
     {
