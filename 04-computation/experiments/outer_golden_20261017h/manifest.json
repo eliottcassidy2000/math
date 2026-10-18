@@ -1,0 +1,110 @@
+{
+  "base_commit": "21dbf2b40093",
+  "commands": [
+    "python3 04-computation/experiments/outer_packet_20261017h.py --output 04-computation/experiments/outer_golden_20261017h/outer.json",
+    "python3 04-computation/experiments/golden_square_layer_20261017h.py --output 04-computation/experiments/outer_golden_20261017h/golden.json",
+    "python3 04-computation/experiments/golden_square_layer_20261017h.py --mode rotate --output 04-computation/experiments/outer_golden_20261017h/rotate.json",
+    "python3 04-computation/experiments/golden_square_layer_20261017h.py --mode conjugate --output 04-computation/experiments/outer_golden_20261017h/conjugate.json",
+    "python3 04-computation/experiments/golden_signature_escape_20261017h.py --output 04-computation/experiments/outer_golden_20261017h/signature.json",
+    "python3 04-computation/experiments/outer_golden_audit_20261017h.py --output 04-computation/experiments/outer_golden_20261017h/audit.json"
+  ],
+  "dependencies": {
+    "04-computation/experiments/collatz_pair_mass_20261013b.py": "131fea3836c4fcb1faf86089f61d8f1e49a0dc3b6a35969568a521fbf6974caf",
+    "04-computation/experiments/escaped_ports_20261017d.py": "311e7fe4f13de40a93b54624e01f963046f5d6f7943f877b73c99f2c609ec8f9",
+    "04-computation/experiments/golden_boundary_20261017c.py": "f48f34b4ecb7037a509b4a64993eacef7b2985952b2424bd731ec62f74b728a5",
+    "04-computation/experiments/root_positive_transport_20261017g/golden_shared.json": "d11da1afad2734f5b898c19e681cfa08e0b9537f66ab293e32137cee7ba16ba3",
+    "04-computation/experiments/shared_golden_contact_20261017g.py": "04ffe93bbd2b57fe67d260b158bd80197c2ff1e4da12abf930a9be78a66baf04"
+  },
+  "files": {
+    "04-computation/experiments/golden_signature_escape_20261017h.py": {
+      "bytes": 6845,
+      "sha256": "fb36299e1ce732b02c8f7191e1a5a46ed3c009e4ce6a6fd9bb698d3d17bc43e7"
+    },
+    "04-computation/experiments/golden_square_layer_20261017h.py": {
+      "bytes": 6462,
+      "sha256": "d47842037f8fc1c3d435236c9cac03f60eda07bba5cfad7415732141194d6612"
+    },
+    "04-computation/experiments/outer_golden_20261017h/audit.json": {
+      "bytes": 1252,
+      "sha256": "31b988a2c3e5bb1e871fcb71d65bf42a051b7aaa85934924b0b72fd791502519"
+    },
+    "04-computation/experiments/outer_golden_20261017h/conjugate.json": {
+      "bytes": 874133,
+      "sha256": "2d4a638c51b6e503ba7572041c1cbe4a38de3922846a9599720739853359607d"
+    },
+    "04-computation/experiments/outer_golden_20261017h/golden.json": {
+      "bytes": 925262,
+      "sha256": "d4b969cbff3ec1b9230f6517271c96ed64f126708e685472b98acdba58bf269c"
+    },
+    "04-computation/experiments/outer_golden_20261017h/outer.json": {
+      "bytes": 70463,
+      "sha256": "5a19783754aefba84dd879e1b8b1febdb3039adf65b7a0a50e6519296f18077f"
+    },
+    "04-computation/experiments/outer_golden_20261017h/rotate.json": {
+      "bytes": 6950450,
+      "sha256": "92a743714cb0141f21fcc2868e6e463257fba1bbc47d75eedd46c5edf1ee7387"
+    },
+    "04-computation/experiments/outer_golden_20261017h/signature.json": {
+      "bytes": 384263,
+      "sha256": "ac053d8bbb3cc6b38c14a475e8a2daa99fb5eb71d47ea3e254295e796b460c44"
+    },
+    "04-computation/experiments/outer_golden_audit_20261017h.py": {
+      "bytes": 8080,
+      "sha256": "40c1b2537fb8f708e083fa4dca6a40c5c853d250480dae36ac97d1c4f9798a12"
+    },
+    "04-computation/experiments/outer_packet_20261017h.py": {
+      "bytes": 7606,
+      "sha256": "c1edef9b1d4173e45466189093df376305d51d6472b3e28b12d61f84416bdc93"
+    },
+    "05-knowledge/results/golden_square_contexts_20261017h.md": {
+      "bytes": 9326,
+      "sha256": "31b7797f9856696e9ee18366eb41611ee412ba063d24ca226d31d7d3484eef91"
+    },
+    "05-knowledge/results/outer_packet_golden_clocks_20261017h.md": {
+      "bytes": 22566,
+      "sha256": "90cb141032eff162ea324d9b7b1509086795af97989ca53d8128339a01e43abf"
+    }
+  },
+  "incoming_read_through": "a430c818f99960e41a8ef27104fd60c4722a0210",
+  "limits": [
+    "Outer o(N) is one signed packet and inherits only THM-4581 statement3, not its sketch rate.",
+    "The improved scalar envelope remainder is not an l2 density-matching estimate.",
+    "All four geometric contexts extend all570 six-colour boundary patterns.",
+    "ROOT projection is not unitary outside its basin; energy sufficiency uses the eventual ROOT coefficient instead."
+  ],
+  "runtime_requirements": [
+    "Python 3",
+    "numpy",
+    "sympy",
+    "python-sat"
+  ],
+  "status": "PROVED scoped self-audited notes; FINITE-EXACT receipts; full ROOT energy, universal Collatz and six-colour forcing OPEN",
+  "validation": {
+    "boundary_edge_replays": 125011830,
+    "energy_scope": {
+      "ROOT_projection": 9,
+      "abstract_energy": 34,
+      "actual_clock": 3,
+      "homogeneous_clock": 5,
+      "ordinary_phase_mod9": 8,
+      "primitive_phase_mod9": 1,
+      "rounding_energy_profiles": 2870,
+      "source": 11,
+      "terminal_braid": 1,
+      "terminal_integer": 13,
+      "terminal_seed": 3
+    },
+    "normal_optimized_byte_identical": [
+      "outer.json",
+      "golden.json",
+      "rotate.json",
+      "conjugate.json",
+      "signature.json",
+      "audit.json"
+    ],
+    "triple_controls": {
+      "conditioned_literal_pairs": 12288,
+      "cropped_interval_cases": 2827
+    }
+  }
+}
