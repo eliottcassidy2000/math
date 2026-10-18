@@ -7,7 +7,9 @@ status: >
   - through weight 26 for q = 7 (ideal (xy, y^2 - a x^3), any a != 0 up to rescaling);
   - through weight 26 for q = 8 ((y^2 - a x^3, x^2 y));
   - through weight 24 for q = 10 ((x y^2 - b x^4, y^3 - c x^3 y));
-  - through weight 24 for q = 11 ((y^3 - d x^3 y, x^2 y^2 - e x^5)).
+  - through weight 24 for q = 11 ((y^3 - d x^3 y, x^2 y^2 - e x^5));
+  - through weight 22 for q = 13 ((x y^3 - (13/448) x^4 y, y^4 - (13/56) x^3 y^2 - (28529/3278) x^6), two moduli).
+    Perturbing the x^6 coefficient alone breaks the identity at weight 16 (268 vs 269).
   The ideals are the Li-degree-0 parts of grI computed by the singular-support engine (w3_c2_relations.py); the
   coefficients for q = 10, 11 are the engine's exact rationals.
   Vertex-algebra side: the W_3(3,q) vacuum characters equal the same products through weights 20-24
