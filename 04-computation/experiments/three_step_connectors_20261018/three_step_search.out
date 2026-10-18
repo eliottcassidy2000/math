@@ -1,0 +1,7 @@
+[    0 s] places [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311, 2971, 3271, 3301, 3391, 3631, 4051, 4261, 4651, 5281, 5581, 5641, 5701, 5791, 6121, 6271, 6301]
+[    0 s] unit candidates: 78810
+[    8 s] residues of units computed
+[    9 s] targets with house <= 3: 220
+[   45 s] survivors of 24 places: 0
+first survivors: []
+[   46 s] positive control: 6 of 6 random three-unit sums detected
