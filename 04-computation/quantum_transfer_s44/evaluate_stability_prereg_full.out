@@ -1,0 +1,146 @@
+P8 no mismatches: True
+P5 length-N row: [((3, 11), True), ((3, 13), True), ((4, 9), True), ((4, 11), True), ((5, 7), True), ((5, 8), True), ((5, 9), True), ((6, 7), True)]
+P4 q-stability (pair, #common stable bidegrees, failures):
+   (3, 8) vs (3, 11): 37 common, 0 failures []
+   (3, 8) vs (3, 13): 37 common, 0 failures []
+   (3, 10) vs (3, 11): 41 common, 0 failures []
+   (3, 10) vs (3, 13): 41 common, 0 failures []
+   (3, 11) vs (3, 13): 43 common, 0 failures []
+   (4, 7) vs (4, 9): 41 common, 0 failures []
+   (4, 7) vs (4, 11): 41 common, 0 failures []
+   (4, 9) vs (4, 11): 45 common, 0 failures []
+   (5, 6) vs (5, 7): 32 common, 0 failures []
+   (5, 6) vs (5, 8): 32 common, 0 failures []
+   (5, 6) vs (5, 9): 32 common, 0 failures []
+   (5, 7) vs (5, 8): 45 common, 0 failures []
+   (5, 7) vs (5, 9): 33 common, 0 failures []
+   (5, 8) vs (5, 9): 33 common, 0 failures []
+P6 saturation (k <= p-2):
+   (3, 8) vs (4, 9): 40 common, 0 failures []
+   (3, 8) vs (4, 11): 40 common, 0 failures []
+   (3, 8) vs (5, 7): 40 common, 0 failures []
+   (3, 8) vs (5, 8): 40 common, 0 failures []
+   (3, 8) vs (5, 9): 31 common, 0 failures []
+   (3, 8) vs (6, 7): 35 common, 0 failures []
+   (3, 10) vs (4, 9): 44 common, 0 failures []
+   (3, 10) vs (4, 11): 44 common, 0 failures []
+   (3, 10) vs (5, 7): 44 common, 0 failures []
+   (3, 10) vs (5, 8): 44 common, 0 failures []
+   (3, 10) vs (5, 9): 34 common, 0 failures []
+   (3, 10) vs (6, 7): 39 common, 0 failures []
+   (3, 11) vs (4, 7): 44 common, 0 failures []
+   (3, 11) vs (4, 9): 46 common, 0 failures []
+   (3, 11) vs (4, 11): 46 common, 0 failures []
+   (3, 11) vs (5, 6): 35 common, 0 failures []
+   (3, 11) vs (5, 7): 46 common, 0 failures []
+   (3, 11) vs (5, 8): 46 common, 0 failures []
+   (3, 11) vs (5, 9): 35 common, 0 failures []
+   (3, 11) vs (6, 7): 40 common, 0 failures []
+   (3, 13) vs (4, 7): 44 common, 0 failures []
+   (3, 13) vs (4, 9): 48 common, 0 failures []
+   (3, 13) vs (4, 11): 48 common, 0 failures []
+   (3, 13) vs (5, 6): 35 common, 0 failures []
+   (3, 13) vs (5, 7): 48 common, 0 failures []
+   (3, 13) vs (5, 8): 48 common, 0 failures []
+   (3, 13) vs (5, 9): 36 common, 0 failures []
+   (3, 13) vs (6, 7): 42 common, 0 failures []
+   (4, 7) vs (5, 7): 44 common, 0 failures []
+   (4, 7) vs (5, 8): 44 common, 0 failures []
+   (4, 7) vs (5, 9): 34 common, 0 failures []
+   (4, 7) vs (6, 7): 39 common, 0 failures []
+   (4, 9) vs (5, 6): 35 common, 0 failures []
+   (4, 9) vs (5, 7): 48 common, 0 failures []
+   (4, 9) vs (5, 8): 48 common, 0 failures []
+   (4, 9) vs (5, 9): 36 common, 0 failures []
+   (4, 9) vs (6, 7): 42 common, 0 failures []
+   (4, 11) vs (5, 6): 35 common, 0 failures []
+   (4, 11) vs (5, 7): 48 common, 0 failures []
+   (4, 11) vs (5, 8): 49 common, 0 failures []
+   (4, 11) vs (5, 9): 36 common, 0 failures []
+   (4, 11) vs (6, 7): 42 common, 0 failures []
+   (5, 6) vs (6, 7): 35 common, 0 failures []
+   (5, 7) vs (6, 7): 42 common, 0 failures []
+   (5, 8) vs (6, 7): 42 common, 0 failures []
+   (5, 9) vs (6, 7): 36 common, 0 failures []
+P7 monotonicity:
+   (3, 8) vs (4, 9): 40 common, 0 failures []
+   (3, 8) vs (4, 11): 40 common, 0 failures []
+   (3, 8) vs (5, 7): 40 common, 0 failures []
+   (3, 8) vs (5, 8): 40 common, 0 failures []
+   (3, 8) vs (5, 9): 31 common, 0 failures []
+   (3, 8) vs (6, 7): 35 common, 0 failures []
+   (3, 10) vs (4, 9): 44 common, 0 failures []
+   (3, 10) vs (4, 11): 44 common, 0 failures []
+   (3, 10) vs (5, 7): 44 common, 0 failures []
+   (3, 10) vs (5, 8): 44 common, 0 failures []
+   (3, 10) vs (5, 9): 34 common, 0 failures []
+   (3, 10) vs (6, 7): 39 common, 0 failures []
+   (3, 11) vs (4, 7): 44 common, 0 failures []
+   (3, 11) vs (4, 9): 46 common, 0 failures []
+   (3, 11) vs (4, 11): 46 common, 0 failures []
+   (3, 11) vs (5, 6): 35 common, 0 failures []
+   (3, 11) vs (5, 7): 46 common, 0 failures []
+   (3, 11) vs (5, 8): 46 common, 0 failures []
+   (3, 11) vs (5, 9): 35 common, 0 failures []
+   (3, 11) vs (6, 7): 40 common, 0 failures []
+   (3, 13) vs (4, 7): 44 common, 0 failures []
+   (3, 13) vs (4, 9): 48 common, 0 failures []
+   (3, 13) vs (4, 11): 48 common, 0 failures []
+   (3, 13) vs (5, 6): 35 common, 0 failures []
+   (3, 13) vs (5, 7): 48 common, 0 failures []
+   (3, 13) vs (5, 8): 48 common, 0 failures []
+   (3, 13) vs (5, 9): 36 common, 0 failures []
+   (3, 13) vs (6, 7): 42 common, 0 failures []
+   (4, 7) vs (5, 7): 44 common, 0 failures []
+   (4, 7) vs (5, 8): 44 common, 0 failures []
+   (4, 7) vs (5, 9): 34 common, 0 failures []
+   (4, 7) vs (6, 7): 39 common, 0 failures []
+   (4, 9) vs (5, 6): 35 common, 0 failures []
+   (4, 9) vs (5, 7): 48 common, 0 failures []
+   (4, 9) vs (5, 8): 48 common, 0 failures []
+   (4, 9) vs (5, 9): 36 common, 0 failures []
+   (4, 9) vs (6, 7): 42 common, 0 failures []
+   (4, 11) vs (5, 6): 35 common, 0 failures []
+   (4, 11) vs (5, 7): 48 common, 0 failures []
+   (4, 11) vs (5, 8): 49 common, 0 failures []
+   (4, 11) vs (5, 9): 36 common, 0 failures []
+   (4, 11) vs (6, 7): 42 common, 0 failures []
+   (5, 6) vs (6, 7): 35 common, 0 failures []
+   (5, 7) vs (6, 7): 42 common, 0 failures []
+   (5, 8) vs (6, 7): 42 common, 0 failures []
+   (5, 9) vs (6, 7): 36 common, 0 failures []
+
+Nonempty common stable bidegrees per P4 pair (where the test has content):
+   (3, 8) vs (3, 11): 11 nonempty, 2 with an order >= 2 class
+   (3, 8) vs (3, 13): 11 nonempty, 2 with an order >= 2 class
+   (3, 10) vs (3, 11): 15 nonempty, 4 with an order >= 2 class
+   (3, 10) vs (3, 13): 15 nonempty, 4 with an order >= 2 class
+   (3, 11) vs (3, 13): 17 nonempty, 5 with an order >= 2 class
+   (4, 7) vs (4, 9): 15 nonempty, 9 with an order >= 2 class
+   (4, 7) vs (4, 11): 15 nonempty, 9 with an order >= 2 class
+   (4, 9) vs (4, 11): 19 nonempty, 13 with an order >= 2 class
+   (5, 6) vs (5, 7): 13 nonempty, 8 with an order >= 2 class
+   (5, 6) vs (5, 8): 13 nonempty, 8 with an order >= 2 class
+   (5, 6) vs (5, 9): 13 nonempty, 8 with an order >= 2 class
+   (5, 7) vs (5, 8): 19 nonempty, 13 with an order >= 2 class
+   (5, 7) vs (5, 9): 14 nonempty, 9 with an order >= 2 class
+   (5, 8) vs (5, 9): 14 nonempty, 9 with an order >= 2 class
+Nonempty common stable bidegrees with an order-k class, k <= p_lo - 2, k >= 2 (P6 content):
+   (4, 7) vs (5, 7): 9 bidegrees with order 2..2 content
+   (4, 7) vs (5, 8): 9 bidegrees with order 2..2 content
+   (4, 7) vs (5, 9): 7 bidegrees with order 2..2 content
+   (4, 7) vs (6, 7): 8 bidegrees with order 2..2 content
+   (4, 9) vs (5, 6): 8 bidegrees with order 2..2 content
+   (4, 9) vs (5, 7): 13 bidegrees with order 2..2 content
+   (4, 9) vs (5, 8): 13 bidegrees with order 2..2 content
+   (4, 9) vs (5, 9): 9 bidegrees with order 2..2 content
+   (4, 9) vs (6, 7): 11 bidegrees with order 2..2 content
+   (4, 11) vs (5, 6): 8 bidegrees with order 2..2 content
+   (4, 11) vs (5, 7): 13 bidegrees with order 2..2 content
+   (4, 11) vs (5, 8): 14 bidegrees with order 2..2 content
+   (4, 11) vs (5, 9): 9 bidegrees with order 2..2 content
+   (4, 11) vs (6, 7): 11 bidegrees with order 2..2 content
+   (5, 6) vs (6, 7): 8 bidegrees with order 2..3 content
+   (5, 7) vs (6, 7): 11 bidegrees with order 2..3 content
+   (5, 8) vs (6, 7): 11 bidegrees with order 2..3 content
+   (5, 9) vs (6, 7): 9 bidegrees with order 2..3 content

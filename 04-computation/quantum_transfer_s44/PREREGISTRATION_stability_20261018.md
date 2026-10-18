@@ -51,3 +51,28 @@ The comparison data already on disk:
 **Side remark (not a prediction).** Of these models, (3,8), (3,10), (3,13), (4,7), (4,9), (4,11), (5,6), (5,8) and
 (6,7) have `pq` even. They are nodes of the Berggren tree of primitive Pythagorean triples under
 `(p, q) -> (q^2 - p^2, 2pq, q^2 + p^2)`; see the S44 note.
+
+## Outcome (recorded after the runs): ALL PASSED
+
+- The pre-registration was committed in dcbb7ffa8a at 14:29:53 and pushed. The runs started at 14:30. All eight
+  outputs were written between 14:30:11 and 14:31:24.
+- The evaluation is mechanical: `evaluate_stability_prereg_20261018.py`, with outputs `evaluate_stability_prereg.out`
+  (informative counts) and `evaluate_stability_prereg_full.out` (every pair).
+
+**Results.**
+- **P8 PASSED.** There are 0 MISMATCH lines in all 12 outputs.
+- **P5 PASSED.** All eight new models have exactly the predicted length-N row.
+- **P4 PASSED.** There are 0 failures in 14 pairs. Counting only bidegrees where at least one side is nonempty:
+  - (5,7) vs (5,8): 19 nonempty, 13 with order >= 2;
+  - (4,9) vs (4,11): 19 nonempty, 13 with order >= 2;
+  - (3,11) vs (3,13): 17 nonempty, 5 with order >= 2.
+- **P6 PASSED.** There are 0 failures. The tests with content are:
+  - order 2 between p = 4 and p = 5, 6: 7-14 bidegrees per pair;
+  - orders 2-3 between p = 5 and p = 6: 8-11 bidegrees per pair.
+- **P7 PASSED.** There are 0 failures.
+
+**The stable table.** Wherever both are computed, every p-family is identical. Examples for orders 1 and 2:
+- `(6,1) {1:3, 2:1}`, `(7,1) {1:4, 2:3}`, `(8,1) {1:5, 2:4}` (order 3 added for p >= 5), `(8,2) {1:4, 2:1}`.
+
+The order-(p-1) part is a proper subset of the saturated count. For example, (9,1) has `{3:1}` for p = 4 against
+`{3:3}` for p = 5, 6, and (10,1) has `{3:2}` against `{3:5}`.

@@ -1,0 +1,34 @@
+Nonempty common stable bidegrees per P4 pair (where the test has content):
+   (3, 8) vs (3, 11): 11 nonempty, 2 with an order >= 2 class
+   (3, 8) vs (3, 13): 11 nonempty, 2 with an order >= 2 class
+   (3, 10) vs (3, 11): 15 nonempty, 4 with an order >= 2 class
+   (3, 10) vs (3, 13): 15 nonempty, 4 with an order >= 2 class
+   (3, 11) vs (3, 13): 17 nonempty, 5 with an order >= 2 class
+   (4, 7) vs (4, 9): 15 nonempty, 9 with an order >= 2 class
+   (4, 7) vs (4, 11): 15 nonempty, 9 with an order >= 2 class
+   (4, 9) vs (4, 11): 19 nonempty, 13 with an order >= 2 class
+   (5, 6) vs (5, 7): 13 nonempty, 8 with an order >= 2 class
+   (5, 6) vs (5, 8): 13 nonempty, 8 with an order >= 2 class
+   (5, 6) vs (5, 9): 13 nonempty, 8 with an order >= 2 class
+   (5, 7) vs (5, 8): 19 nonempty, 13 with an order >= 2 class
+   (5, 7) vs (5, 9): 14 nonempty, 9 with an order >= 2 class
+   (5, 8) vs (5, 9): 14 nonempty, 9 with an order >= 2 class
+Nonempty common stable bidegrees with an order-k class, k <= p_lo - 2, k >= 2 (P6 content):
+   (4, 7) vs (5, 7): 9 bidegrees with order 2..2 content
+   (4, 7) vs (5, 8): 9 bidegrees with order 2..2 content
+   (4, 7) vs (5, 9): 7 bidegrees with order 2..2 content
+   (4, 7) vs (6, 7): 8 bidegrees with order 2..2 content
+   (4, 9) vs (5, 6): 8 bidegrees with order 2..2 content
+   (4, 9) vs (5, 7): 13 bidegrees with order 2..2 content
+   (4, 9) vs (5, 8): 13 bidegrees with order 2..2 content
+   (4, 9) vs (5, 9): 9 bidegrees with order 2..2 content
+   (4, 9) vs (6, 7): 11 bidegrees with order 2..2 content
+   (4, 11) vs (5, 6): 8 bidegrees with order 2..2 content
+   (4, 11) vs (5, 7): 13 bidegrees with order 2..2 content
+   (4, 11) vs (5, 8): 14 bidegrees with order 2..2 content
+   (4, 11) vs (5, 9): 9 bidegrees with order 2..2 content
+   (4, 11) vs (6, 7): 11 bidegrees with order 2..2 content
+   (5, 6) vs (6, 7): 8 bidegrees with order 2..3 content
+   (5, 7) vs (6, 7): 11 bidegrees with order 2..3 content
+   (5, 8) vs (6, 7): 11 bidegrees with order 2..3 content
+   (5, 9) vs (6, 7): 9 bidegrees with order 2..3 content

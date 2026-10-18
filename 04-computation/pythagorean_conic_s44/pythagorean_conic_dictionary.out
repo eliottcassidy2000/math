@@ -1,0 +1,16 @@
+[tree] Berggren dets [1, -1, 1]; primitive triples with c <= 2000: 319; tree lists each exactly once: True
+[p=5] |conic|=6 |ext|=15 |int|=10; G_int ~ Petersen: True; G_ext components [3, 3, 3, 3, 3] all triangles: True
+[p=5] self-polar triangles: 20; by number of interior vertices: {0: 5, 2: 15}
+[p=5] interior synthemes distinct: 10; exterior-triangle synthemes: 5; together all 15 synthemes of K6: True
+[p=5] Berggren group mod 5 acting on PG(2,5): order 60; on interior points: 60 distinct permutations, all automorphisms of G_int: True; |Aut(Petersen)| = 120
+[p=5 Kuratowski b] 6 perfect matchings <-> 6 conic points (equal stabilizers, order 10); per matching: [5, 5, 5, 5, 5, 5]; contractions are K5: True
+   relation histogram (|d(f)&a|,|d(f)&b|,|a&b|, x in d(f)) for matching 0: {'(0, 0, 1, False)': 10}
+[p=5 Kuratowski a] Petersen - P suppressed is K3,3 for all P: True; Stab(P) orbit signatures far [1, 1, 1, 1, 1, 1] conic [2, 2, 2, 2, 2, 2]; equivariant bijections far->conic: 0; canonical splits per P: 1; bipartition -> canonical split: []
+[p=7] |conic|=8 |ext|=28 |int|=21; G_ext ~ Coxeter graph: True (girth 7, Coxeter girth 7); G_int ~ L(Heawood): True
+[p=7] Berggren group mod 7 on PG(2,7): order 336 (|PGL(2,7)| = 336)
+[survey p=3] int {'order': 3, 'degree': [2], 'connected': True, 'girth': 3, 'hamiltonian': True}  ext {'order': 6, 'degree': [1], 'connected': False, 'girth': None, 'hamiltonian': None}  Berggren image 24 vs |PGL(2,p)| 24
+[survey p=5] int {'order': 10, 'degree': [3], 'connected': True, 'girth': 5, 'hamiltonian': False}  ext {'order': 15, 'degree': [2], 'connected': False, 'girth': 3, 'hamiltonian': None}  Berggren image 60 vs |PGL(2,p)| 120
+[survey p=7] int {'order': 21, 'degree': [4], 'connected': True, 'girth': 3, 'hamiltonian': True}  ext {'order': 28, 'degree': [3], 'connected': True, 'girth': 7, 'hamiltonian': None}  Berggren image 336 vs |PGL(2,p)| 336
+[survey p=11] int {'order': 55, 'degree': [6], 'connected': True, 'girth': 3, 'hamiltonian': True}  ext {'order': 66, 'degree': [5], 'connected': True, 'girth': 5, 'hamiltonian': True}  Berggren image 1320 vs |PGL(2,p)| 1320
+[survey p=13] int {'order': 78, 'degree': [7], 'connected': True, 'girth': 5, 'hamiltonian': True}  ext {'order': 91, 'degree': [6], 'connected': True, 'girth': 3, 'hamiltonian': True}  Berggren image 1092 vs |PGL(2,p)| 2184
+[ham] Petersen = G_int(5) Hamiltonian (exhaustive): False

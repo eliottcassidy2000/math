@@ -1,0 +1,426 @@
+{
+ "tree": {
+  "X": 2000,
+  "dets": [
+   1,
+   -1,
+   1
+  ],
+  "triples": 319,
+  "exact_once": true
+ },
+ "p5_group_order": 60,
+ "p5": {
+  "conic": 6,
+  "ext": 15,
+  "int": 10,
+  "Gint_is_Petersen": true,
+  "Gext_components": [
+   3,
+   3,
+   3,
+   3,
+   3
+  ],
+  "Gext_triangles": true,
+  "selfpolar_types": {
+   "0": 5,
+   "2": 15
+  },
+  "synthemes_all15": true,
+  "berggren_group_order": 60,
+  "acts_as_Aut_Petersen": false
+ },
+ "kuratowski": {
+  "a": [
+   {
+    "isK33": true,
+    "equivariant_bijections": 0,
+    "sig_far": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "sig_conic": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "canonical_splits": 1,
+    "K33_bipartition_maps_to_canonical_split": []
+   },
+   {
+    "isK33": true,
+    "equivariant_bijections": 0,
+    "sig_far": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "sig_conic": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "canonical_splits": 1,
+    "K33_bipartition_maps_to_canonical_split": []
+   },
+   {
+    "isK33": true,
+    "equivariant_bijections": 0,
+    "sig_far": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "sig_conic": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "canonical_splits": 1,
+    "K33_bipartition_maps_to_canonical_split": []
+   },
+   {
+    "isK33": true,
+    "equivariant_bijections": 0,
+    "sig_far": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "sig_conic": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "canonical_splits": 1,
+    "K33_bipartition_maps_to_canonical_split": []
+   },
+   {
+    "isK33": true,
+    "equivariant_bijections": 0,
+    "sig_far": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "sig_conic": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "canonical_splits": 1,
+    "K33_bipartition_maps_to_canonical_split": []
+   },
+   {
+    "isK33": true,
+    "equivariant_bijections": 0,
+    "sig_far": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "sig_conic": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "canonical_splits": 1,
+    "K33_bipartition_maps_to_canonical_split": []
+   },
+   {
+    "isK33": true,
+    "equivariant_bijections": 0,
+    "sig_far": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "sig_conic": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "canonical_splits": 1,
+    "K33_bipartition_maps_to_canonical_split": []
+   },
+   {
+    "isK33": true,
+    "equivariant_bijections": 0,
+    "sig_far": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "sig_conic": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "canonical_splits": 1,
+    "K33_bipartition_maps_to_canonical_split": []
+   },
+   {
+    "isK33": true,
+    "equivariant_bijections": 0,
+    "sig_far": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "sig_conic": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "canonical_splits": 1,
+    "K33_bipartition_maps_to_canonical_split": []
+   },
+   {
+    "isK33": true,
+    "equivariant_bijections": 0,
+    "sig_far": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "sig_conic": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "canonical_splits": 1,
+    "K33_bipartition_maps_to_canonical_split": []
+   }
+  ],
+  "b": [
+   {
+    "matching_edges_whose_duad_contains_x": 5,
+    "contraction_is_K5": true,
+    "relation_hist": {
+     "(0, 0, 1, False)": 10
+    }
+   },
+   {
+    "matching_edges_whose_duad_contains_x": 5,
+    "contraction_is_K5": true,
+    "relation_hist": {
+     "(0, 0, 1, False)": 10
+    }
+   },
+   {
+    "matching_edges_whose_duad_contains_x": 5,
+    "contraction_is_K5": true,
+    "relation_hist": {
+     "(0, 0, 1, False)": 10
+    }
+   },
+   {
+    "matching_edges_whose_duad_contains_x": 5,
+    "contraction_is_K5": true,
+    "relation_hist": {
+     "(0, 0, 1, False)": 10
+    }
+   },
+   {
+    "matching_edges_whose_duad_contains_x": 5,
+    "contraction_is_K5": true,
+    "relation_hist": {
+     "(0, 0, 1, False)": 10
+    }
+   },
+   {
+    "matching_edges_whose_duad_contains_x": 5,
+    "contraction_is_K5": true,
+    "relation_hist": {
+     "(0, 0, 1, False)": 10
+    }
+   }
+  ]
+ },
+ "p7": {
+  "Gext_is_Coxeter": true,
+  "Gint_is_LHeawood": true,
+  "berggren_group_order": 336,
+  "girth_ext": 7
+ },
+ "survey": [
+  {
+   "p": 3,
+   "int": {
+    "order": 3,
+    "degree": [
+     2
+    ],
+    "connected": true,
+    "girth": 3,
+    "hamiltonian": true
+   },
+   "ext": {
+    "order": 6,
+    "degree": [
+     1
+    ],
+    "connected": false,
+    "girth": null,
+    "hamiltonian": null
+   },
+   "berggren_group_order": 24,
+   "PGL2_order": 24
+  },
+  {
+   "p": 5,
+   "int": {
+    "order": 10,
+    "degree": [
+     3
+    ],
+    "connected": true,
+    "girth": 5,
+    "hamiltonian": false
+   },
+   "ext": {
+    "order": 15,
+    "degree": [
+     2
+    ],
+    "connected": false,
+    "girth": 3,
+    "hamiltonian": null
+   },
+   "berggren_group_order": 60,
+   "PGL2_order": 120
+  },
+  {
+   "p": 7,
+   "int": {
+    "order": 21,
+    "degree": [
+     4
+    ],
+    "connected": true,
+    "girth": 3,
+    "hamiltonian": true
+   },
+   "ext": {
+    "order": 28,
+    "degree": [
+     3
+    ],
+    "connected": true,
+    "girth": 7,
+    "hamiltonian": null
+   },
+   "berggren_group_order": 336,
+   "PGL2_order": 336
+  },
+  {
+   "p": 11,
+   "int": {
+    "order": 55,
+    "degree": [
+     6
+    ],
+    "connected": true,
+    "girth": 3,
+    "hamiltonian": true
+   },
+   "ext": {
+    "order": 66,
+    "degree": [
+     5
+    ],
+    "connected": true,
+    "girth": 5,
+    "hamiltonian": true
+   },
+   "berggren_group_order": 1320,
+   "PGL2_order": 1320
+  },
+  {
+   "p": 13,
+   "int": {
+    "order": 78,
+    "degree": [
+     7
+    ],
+    "connected": true,
+    "girth": 5,
+    "hamiltonian": true
+   },
+   "ext": {
+    "order": 91,
+    "degree": [
+     6
+    ],
+    "connected": true,
+    "girth": 3,
+    "hamiltonian": true
+   },
+   "berggren_group_order": 1092,
+   "PGL2_order": 2184
+  }
+ ],
+ "ham_G_int_5": false
+}
