@@ -1,0 +1,9 @@
+half-period: primes tested 237 max 1499 failures []
+p=5 r=2 n=12: s7(n) == (-1)^n A(n) mod p^2: True
+p=5 r=3 n=62: s7(n) == (-1)^n A(n) mod p^2: True
+p=7 r=2 n=24: s7(n) == (-1)^n A(n) mod p^2: True
+p=7 r=3 n=171: s7(n) == (-1)^n A(n) mod p^2: True
+p=11 r=2 n=60: s7(n) == (-1)^n A(n) mod p^2: True
+p=11 r=3 n=665: s7(n) == (-1)^n A(n) mod p^2: True
+p=13 r=2 n=84: s7(n) == (-1)^n A(n) mod p^2: True
+p=13 r=3 n=1098: s7(n) == (-1)^n A(n) mod p^2: True

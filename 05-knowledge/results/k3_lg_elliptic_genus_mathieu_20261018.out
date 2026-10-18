@@ -1,0 +1,11 @@
+Part 1a: LG W = x^n, Z(tau, z -> 0) = [(3, 2.0), (4, 3.0), (5, 4.0), (6, 5.0)] (expected n - 1)
+Part 1b: quartic LG orbifold vs 2 phi_{0,1} (K3 elliptic genus): max relative error 1.75e-15 over 6 random points
+Part 2: H(tau) = 2 q^(-1/8) (sum A_n q^n), A_0..A_12 = [-1, 45, 231, 770, 2277, 5796, 13915, 30843, 65550, 132825, 260568, 494385, 915124]
+   2A   chi = 8: A_n(g), n = 0..12: ['-1', '-3', '7', '-14', '21', '-28', '43', '-69', '94', '-119', '168', '-239', '308'] ; integral True ; A_n(g) == A_n mod 2 for n <= 40: True
+   3A   chi = 6: A_n(g), n = 0..12: ['-1', '0', '-3', '5', '0', '-9', '10', '0', '-15', '21', '0', '-30', '31'] ; integral True ; A_n(g) == A_n mod 3 for n <= 40: True
+   5A   chi = 4: A_n(g), n = 0..12: ['-1', '0', '1', '0', '-3', '1', '0', '3', '0', '-5', '3', '0', '4'] ; integral True ; A_n(g) == A_n mod 5 for n <= 40: True
+   7AB  chi = 3: A_n(g), n = 0..12: ['-1', '-1/2', '0', '0', '2', '0', '-1', '1', '-3/2', '0', '0', '3', '0'] ; integral True ; A_n(g) == A_n mod 7 for n <= 40: True
+   11A: cusp coefficients c (eta^2(tau) eta^2(11 tau)) giving integral A_n(11A) == A_n mod 11 for n <= 40: ['-22/5', '33/5']
+   11A: smallest-coefficient solution c = -22/5: A_n(11A), n = 0..12: ['-1', '1', '0', '0', '0', '-1', '0', '-1', '1', '0', '0', '1', '1']
+   23AB: (c1, c2) with integral traces == dim mod 23 for n <= 40: [('-46/11', '-23/11')]
+   23AB: smallest solution c1 = -46/11, c2 = -23/11: A_n(23AB), n = 0..12: ['-1', '-1', '1', '-1/2', '0', '0', '0', '0', '0', '0', '1', '0', '0']

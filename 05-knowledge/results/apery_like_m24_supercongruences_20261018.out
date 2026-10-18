@@ -1,0 +1,25 @@
+mod p^2 matches  u((p-1)/2) == (d/p) a_g(p), all primes 5 <= p <= 300 with p not dividing 6*level*d:
+  Apery A (zeta3)            p^2: 4A(w4,N8)*(1/p)
+  Domb                       p^2: -
+                              p only: 4A*(-1/p)
+  Almkvist-Zudilin           p^2: -
+  Franel4 (=s10)             p^2: -
+                              p only: 4A*(1/p)
+  Cooper s7                  p^2: 4A(w4,N8)*(-1/p)
+  Cooper s18                 p^2: -
+  Yang-Zudilin               p^2: -
+  Apery b (zeta2)            p^2: 4C(w3,N16)*(1/p), 4C(w3,N16)*(-1/p)
+  Franel                     p^2: -
+                              p only: 8A*(-1/p), 8A*(2/p)
+  Zagier C                   p^2: -
+  Zagier D                   p^2: -
+                              p only: 8A*(1/p), 8A*(-2/p)
+  Zagier E                   p^2: -
+                              p only: 8A*(1/p), 8A*(-2/p)
+  Zagier F                   p^2: -
+  Zagier A (Franel-type #A)  p^2: -
+                              p only: 8A*(-1/p), 8A*(2/p)
+  Zagier B                   p^2: -
+                              p only: 4C*(1/p), 4C*(-1/p)
+  binom(2n,n)^2 (control)    p^2: -
+  binom(2n,n)^3 (control)    p^2: -

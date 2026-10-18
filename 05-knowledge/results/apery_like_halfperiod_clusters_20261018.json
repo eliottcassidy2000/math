@@ -1,0 +1,179 @@
+{
+ "PMAX": 400,
+ "pairs": [
+  {
+   "u": "Apery A (zeta3)",
+   "v": "Domb",
+   "d": -1,
+   "mod": "p"
+  },
+  {
+   "u": "Apery A (zeta3)",
+   "v": "Franel4 (=s10)",
+   "d": 1,
+   "mod": "p"
+  },
+  {
+   "u": "Apery A (zeta3)",
+   "v": "Cooper s7",
+   "d": -1,
+   "mod": "p^2"
+  },
+  {
+   "u": "Apery A (zeta3)",
+   "v": "sum C(2k,k)^2 C(2n-2k,n-k)^2",
+   "d": 1,
+   "mod": "p"
+  },
+  {
+   "u": "Apery A (zeta3)",
+   "v": "trunc 4F3 sum_{k<=(p-1)/2} C(2k,k)^4/256^k",
+   "d": 1,
+   "mod": "p^2"
+  },
+  {
+   "u": "Domb",
+   "v": "Franel4 (=s10)",
+   "d": -1,
+   "mod": "p"
+  },
+  {
+   "u": "Domb",
+   "v": "Cooper s7",
+   "d": 1,
+   "mod": "p"
+  },
+  {
+   "u": "Domb",
+   "v": "sum C(2k,k)^2 C(2n-2k,n-k)^2",
+   "d": -1,
+   "mod": "p"
+  },
+  {
+   "u": "Domb",
+   "v": "trunc 4F3 sum_{k<=(p-1)/2} C(2k,k)^4/256^k",
+   "d": -1,
+   "mod": "p"
+  },
+  {
+   "u": "Franel4 (=s10)",
+   "v": "Cooper s7",
+   "d": -1,
+   "mod": "p"
+  },
+  {
+   "u": "Franel4 (=s10)",
+   "v": "sum C(2k,k)^2 C(2n-2k,n-k)^2",
+   "d": 1,
+   "mod": "p"
+  },
+  {
+   "u": "Franel4 (=s10)",
+   "v": "trunc 4F3 sum_{k<=(p-1)/2} C(2k,k)^4/256^k",
+   "d": 1,
+   "mod": "p"
+  },
+  {
+   "u": "Cooper s7",
+   "v": "sum C(2k,k)^2 C(2n-2k,n-k)^2",
+   "d": -1,
+   "mod": "p"
+  },
+  {
+   "u": "Cooper s7",
+   "v": "trunc 4F3 sum_{k<=(p-1)/2} C(2k,k)^4/256^k",
+   "d": -1,
+   "mod": "p^2"
+  },
+  {
+   "u": "Apery b (zeta2)",
+   "v": "Zagier B",
+   "d": 1,
+   "mod": "p"
+  },
+  {
+   "u": "Apery b (zeta2)",
+   "v": "Zagier B",
+   "d": -1,
+   "mod": "p"
+  },
+  {
+   "u": "Apery b (zeta2)",
+   "v": "trunc 3F2 sum_{k<=(p-1)/2} C(2k,k)^3/64^k",
+   "d": 1,
+   "mod": "p^2"
+  },
+  {
+   "u": "Apery b (zeta2)",
+   "v": "trunc 3F2 sum_{k<=(p-1)/2} C(2k,k)^3/64^k",
+   "d": -1,
+   "mod": "p^2"
+  },
+  {
+   "u": "Franel",
+   "v": "Zagier D",
+   "d": -1,
+   "mod": "p"
+  },
+  {
+   "u": "Franel",
+   "v": "Zagier D",
+   "d": 2,
+   "mod": "p"
+  },
+  {
+   "u": "Franel",
+   "v": "Zagier E",
+   "d": -1,
+   "mod": "p"
+  },
+  {
+   "u": "Franel",
+   "v": "Zagier E",
+   "d": 2,
+   "mod": "p"
+  },
+  {
+   "u": "Zagier C",
+   "v": "sum C(n,k)C(2k,k)C(2n-2k,n-k)^2/...: C(2n,n)sum C(n,k)^2 C(2k,k)",
+   "d": -1,
+   "mod": "p"
+  },
+  {
+   "u": "Zagier C",
+   "v": "sum C(n,k)C(2k,k)C(2n-2k,n-k)^2/...: C(2n,n)sum C(n,k)^2 C(2k,k)",
+   "d": 3,
+   "mod": "p"
+  },
+  {
+   "u": "Zagier D",
+   "v": "Zagier E",
+   "d": 1,
+   "mod": "p^2"
+  },
+  {
+   "u": "Zagier D",
+   "v": "Zagier E",
+   "d": -2,
+   "mod": "p"
+  },
+  {
+   "u": "Zagier B",
+   "v": "trunc 3F2 sum_{k<=(p-1)/2} C(2k,k)^3/64^k",
+   "d": 1,
+   "mod": "p"
+  },
+  {
+   "u": "Zagier B",
+   "v": "trunc 3F2 sum_{k<=(p-1)/2} C(2k,k)^3/64^k",
+   "d": -1,
+   "mod": "p"
+  },
+  {
+   "u": "sum C(2k,k)^2 C(2n-2k,n-k)^2",
+   "v": "trunc 4F3 sum_{k<=(p-1)/2} C(2k,k)^4/256^k",
+   "d": 1,
+   "mod": "p"
+  }
+ ]
+}
