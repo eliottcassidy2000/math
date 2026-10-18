@@ -8,9 +8,27 @@ Builds on clock_duality_oct15's golden contact:
 - [shared_golden_contact_20261017g.md](shared_golden_contact_20261017g.md) (the 5400-vertex source `A + uC + vC`, all 570
   port patterns extend; proposed next step: `v^2` coordinates).
 
+**Concurrent work (read after the computations below).**
+[golden_square_contexts_20261017h.md](golden_square_contexts_20261017h.md) (clock_duality_oct15, committed at 20:25) uses
+the same certificate type for its constructions.
+- Its section 2 shows that the single translate `G ∪ (G + v^2)` is a Cartesian matching context: add 1 mod `k` on the
+  copy. Section 3 below extends this to every `v^2 C` layer over the same coefficient sets.
+- Its formula (3), `c(p + e l) = c(p) + c_L(l) mod k`, is an additive colouring.
+
+What is new here:
+- the additive extension lemma for the non-Cartesian contact edges;
+- the shared-coefficient result for all 570 patterns;
+- the complete `v^2` census;
+- the correspondence reformulation and the design loop.
+
+Their degree-192 escape `E' = F(s, h)` with the direction `e` (their G1/G2) lies outside `K + uK + vK`, so HYP-9289 does
+not cover it. The pre-screen is the cheap necessary test for their stated next target: a unit edge joining different
+port and `e`-coefficient fibres.
+
 **Typing.**
 - PROVED (elementary): the additive extension lemma, and the reduction of the additive problem to a cyclic-shift
   correspondence colouring of the first coordinate.
+- PROVED: THM-4668 (clock_duality's degree-192 direction `e` is Cartesian on `K + uK + vK + eK`).
 - FINITE-EXACT:
   - every pattern of clock_duality's receipt extends additively (verified on all 30,856 edges);
   - the `v^2` census (every unit difference with a nonzero `v^2` part is a pure `v^2`-axis unit);
@@ -77,6 +95,24 @@ cross edges.
 So `A + uC + vC + v^2 C` has the old edges plus Cartesian `v^2`-axis edges only. Adding `c_3 = c_C` extends the
 additive colourings of section 2. **The `v^2` candidate cannot force at any size** with these coefficient sets.
 
+## 3b. clock_duality's degree-192 direction e is Cartesian on the whole linear space (THM-4668, PROVED)
+
+clock_duality's escape `e = Zs/h` (`h^2 = 4 - N`, degree 192; golden_square_contexts_20261017h.md G2) makes `σ`-mates
+unit-distance pairs. They named the next target: a unit edge joining different port and `e`-coefficient fibres.
+- **Census.** `golden_e_direction_census_20261017.py` tests all `9.1 x 10^8` differences `dA + u d1 + v d2 + e d3` with
+  `d3 ∈ D(C) ∪ D(L) \ {0}`, where `L` is their 13-point attachment set. Exactly the 26 pure `e`-axis units survive.
+- **THM-4668** proves the general statement. In `K + uK + vK + eK` every unit with a nonzero `e`-coefficient is a pure
+  `e`-axis unit `q e`, `|q| = 1`.
+  - If the `v`-coefficient is nonzero, the norm equation forces `4 - N ∈ K`, which is impossible because `u` has degree
+    3 over `K`.
+  - If the `v`-coefficient is zero but the `u`-coefficient is not, the equation reduces modulo the exact cubic
+    `u^3 = m2 u^2 + m1 u + 1` to an explicit nonzero element of `Q(zeta5, j)`
+    (golden_e_direction_proof_check_20261017.py).
+
+So every source `A + uC + vC + eL` over `K` is the old source multiplied Cartesianly along `e`; every boundary colouring
+extends, and the named target edge does not exist in this space. Together with section 3 (`v^2`), the two natural
+nonlinear moves of the golden program add no cross edges.
+
 ## 4. A design loop, and what five larger sources show
 
 `golden_forcing_search_20261017.py` builds `A' + uC' + vC'` for `A', C' ⊂ K` directly from G5: unit edges by a
@@ -112,7 +148,8 @@ constraint. This is evidence, not a theorem, that the linear golden space is bou
    natural targets.
    - The `MM` recipe (Eisenstein-rigid `M + M`) tests this; see section 4.
 3. **Leave the linear space only where the census says edges appear.** The `v^2` census shows that the natural product
-   coordinate adds no edges. Any future coordinate should be census-tested with `golden_vsquare_unit_census_20261017.py`
+   coordinate adds no edges, and THM-4668 shows the same for the degree-192 direction `e` over `K`. Products such as
+   `ue` and `ve`, or coefficients outside `K`, are the remaining candidates. Any future coordinate should be census-tested with `golden_vsquare_unit_census_20261017.py`
    adapted to it, before a graph is built.
 4. **Gluing at literal shared vertices.** clock_duality's other route, certified incompatible extensions glued at shared
    ports, needs two sources whose *additive* boundary relations already disagree. The pre-screen also evaluates that
@@ -128,5 +165,7 @@ The remaining difficulty is whether the coupling can be made rigid (forcing) or 
 ```
 python 04-computation/experiments/golden_additive_colourings_20261017.py
 python 04-computation/experiments/golden_vsquare_unit_census_20261017.py
+python 04-computation/experiments/golden_e_direction_census_20261017.py
+python 04-computation/experiments/golden_e_direction_proof_check_20261017.py
 python 04-computation/experiments/golden_forcing_search_20261017.py base     # also dM, contact1, dM_C2, MM, contact2
 ```

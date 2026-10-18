@@ -1,0 +1,6 @@
+field ready; |D(A)| = 1602, |D(C)| = 82, |D(C) u D(L)| = 130 [1 s]
+e verified [1 s]
+prime 1021: 86 survivors [2 s]
+prime 1171: 26 survivors [2 s]
+prime 1741: 26 survivors [2 s]
+exact units with a nonzero e part: 26 (pure e-axis: 26; unit differences in D(C) u D(L): 26; mixed: 0) [3 s]

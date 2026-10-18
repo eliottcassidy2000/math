@@ -159,6 +159,19 @@ transport becomes an analytic Toeplitz operator with matrix symbol
 - **Integer clock.** If the initial and terminal braid indices are j_0,j_d, the physical clock is
   `Σ A_i+2j_0-2j_d`. For11 ->17 ->13=B(3) it is3, while the canonical exponent sum is5.
 
+**Two-point form (PROVED, elementary).** In clock_duality's positive gauge the ideal transport is a Markov kernel `Π`
+on (residue, band): `(r, b) -> (F_A(r), b + A - 1)` with probability `2^(-A)`. Then `ν_d = ν_0 Π^d` and
+
+    E_d^ideal = Σ_(x, x') ν_0(x) ν_0(x') G_d(x, x'),      G_d(x, x') = 4·2^d Σ_y 2^(b_y) Π^d(x, y) Π^d(x', y).
+
+- `G_d` is a weighted coalescence kernel. It measures how often two **independent** copies of the primitive affine chain,
+  started at `x` and `x'`, sit at the same residue mod `3^(d+1)` and the same band at time `d`.
+- `ν_0` is last-digit balanced, so any part of `G_d` independent of the starting residue cancels. The ideal energy
+  measures only how fast two chains forget their starting residues mod 3, with matched exponent sums.
+- So the `l^2` estimate behind HYP-9288 (C), clock_duality's question 2 in energy form, is a **two-point coalescence**
+  estimate for the joint offset/exponent law. A one-point characteristic-function bound such as Tao's is not enough.
+- The natural precedent in the repository is S20's coupled-orbit covariance (THM-4565, "two readers of one tape").
+
 ## 5. The actual transport for every N < 2^23
 
 The initial source vector changes in only three entries when `N -> N + 1`, and the transport maps point masses to signed

@@ -1,0 +1,16 @@
+{
+ "sizes": {
+  "DA": 1602,
+  "DC": 82,
+  "D3": 130
+ },
+ "primes": [
+  1021,
+  1171,
+  1741
+ ],
+ "units": 26,
+ "pure_axis": 26,
+ "unit_differences_D3": 26,
+ "mixed": []
+}

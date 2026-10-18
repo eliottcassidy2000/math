@@ -6708,7 +6708,11 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
   - The proposed v^2 coordinate creates no cross edges (exact census of 9.1e8 differences), so it cannot force.
   - A design loop (G5 classification -> additive pre-screen -> SAT) finds no additively blocked pattern in six larger
     golden sources, up to 2,297,178 mixed edges.
-  - OPEN: additive freedom of all of K + uK + vK; which edges outside the linear space could break it.
+  - THM-4668 (PROVED): clock_duality's degree-192 direction e = Zs/h is Cartesian on K + uK + vK + eK. Every unit with
+    a nonzero e-part is a pure e-axis unit, so their next target edge (joining different port and e-fibres) does not
+    exist over K.
+  - OPEN: additive freedom of all of K + uK + vK; which edges outside the linear space (ue, ve, coefficients outside K)
+    could break it.
 
 ### UPDATE (2026-10-17, opus-2026-10-17-S40; audited, MISTAKE-626): class numbers as tournament rankings, the exponent ladder, the full ROOT current
 - THM-4666 (PROVED, elementary; audited): the natural order of the Kronecker oriented graph of D < 0 has excess (2/w)|D|h(D) (Paley: p h(-p), the area under the Legendre walk); inverse order 3h(-p), pair-block orders (1 - 2(2/p))h(-p), randomised moves = Fekete positivity; arcs at a vertex = split primes; h = 1 (least excess) exactly at P_7, P_11, P_19, P_43, P_67, P_163 = Euler's lucky numbers; a single-vertex insertion changes the excess by -2S(t), so local optimality <=> Kalmynin's L+ (density 0), which excludes a real zero of L(s, chi_-p). OPEN: a combinatorial certificate against Siegel zeros beyond L+ (block moves = weighted positivity of the Legendre walk).

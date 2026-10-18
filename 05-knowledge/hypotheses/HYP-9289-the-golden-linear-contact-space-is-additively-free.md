@@ -14,7 +14,7 @@ session: opus-2026-10-17-S41
 source: 05-knowledge/results/golden_additive_boundary_20261017.md
 scripts:
   - 04-computation/experiments/golden_additive_colourings_20261017.py, golden_vsquare_unit_census_20261017.py, golden_forcing_search_20261017.py (+ .out, .json)
-related: [clock_duality_oct15 joint_contact_field_20261017f.md (G5, section 5), shared_golden_contact_20261017g.md, THM-4661, THM-4662, HYP-9247, THM-4614]
+related: [clock_duality_oct15 joint_contact_field_20261017f.md (G5, section 5), shared_golden_contact_20261017g.md, golden_square_contexts_20261017h.md (concurrent: G union (G + v^2) Cartesian, additive formula (3), degree-192 escape outside the linear space), THM-4661, THM-4662, HYP-9247, THM-4614]
 ---
 
 # HYP-9289 — the golden linear contact space is additively free
@@ -31,6 +31,9 @@ six-colour port pattern that extends to the unit graph of `A'` extends to `A' + 
 **Weaker form.** The same holds with `c_1 = c_2`, i.e. one colouring of the shared coefficients.
 
 **Consequence.** Every six-colour forcing construction in the golden contact field needs edges outside `K + uK + vK`.
+For example, clock_duality's degree-192 direction `e` of golden_square_contexts_20261017h.md lies outside it. THM-4668
+(PROVED) shows `e` is Cartesian on `K + uK + vK + eK`, so adjoining `e` over `K` preserves additive freedom (it adds a
+Cartesian factor), and no `e`-edge changes the old coordinates.
 Before building a graph, any new coordinate should be census-tested for cross edges, as was done for `v^2`.
 
 ## Evidence
