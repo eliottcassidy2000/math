@@ -337,7 +337,13 @@ Prime by prime (`nineteen_places.py`):
   is computed directly and the two sides agree to every printed digit):
   - `d = 1`: total -1.468735; lag 1: -1.4286 (= -10/7, siblings); lags 5, 6, 7: +0.0179, -0.0759, +0.0179;
   - `d = 2`: total -0.812984; lag 0: -0.0935, lag 1: -0.6180, lag 2: -0.1371, lag 3: +0.0566;
-  - `d = 3`: total -0.438015; lag 0: -0.1329, lag 1: -0.2366, lag 2: -0.0819.
+  - `d = 3`: total -0.438015; lag 0: -0.1329, lag 1: -0.2366, lag 2: -0.0819;
+  - `d = 4`: total -0.222681; lag 0: -0.0980, lag 1: -0.0946;
+  - `d = 5`: total -0.136883; lag 0: -0.1405, lag 1: +0.0149;
+  - `d = 6`: total -0.082550; lag 0: -0.1027, lag 1: +0.0219 (`sync_vs_meets_d6.out`).
+
+  So THM-4667's dissipation is one-tick, lag 1, at depths 1-3, and purely same-clock from depth 5 on, where the lag-1
+  part turns slightly positive.
 
   The first-arrival ledger of statement 4 is therefore THM-4667's synchronous ledger, resolved by clock, restricted to
   meets before entry, plus the unequal-depth meets. The synchronous transport never sees the latter except at ROOT.

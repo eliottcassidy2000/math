@@ -236,8 +236,11 @@ meeting node). A pair of sources first meets at a node `y`, `k_1` and `k_2` step
   - `d = 1`: -1.4687 = -10/7 (lag 1) + 0.0179 - 0.0759 + 0.0179 (lags 5, 6, 7).
   - `d = 2`: -0.8130, of which lag 1 is -0.618 and lag 0 is -0.094.
   - `d = 3`: -0.4380, of which lag 1 is -0.237 and lag 0 is -0.133.
+  - `d = 4, 5, 6`: -0.2227, -0.1369, -0.0826. The lag-0 parts are -0.098, -0.141, -0.103, and the lag-1 parts
+    -0.095, +0.015, +0.022.
 
-  The one-tick law is the shallow part of THM-4667's dissipation; the same-clock part takes over with depth.
+  The one-tick law is the shallow part of THM-4667's dissipation (depths 1-3). From depth 5 on, the dissipation is
+  purely same-clock, and the lag-1 part turns slightly positive.
 
   An equal-depth, equal-clock pair has the same number of 3-divisions and the same total power of 2 on both paths. Such
   "clock twins" sit at the same scale, so their chain parameters are locked, as for the siblings in the 34/7 and 5/7
