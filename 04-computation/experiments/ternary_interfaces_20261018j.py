@@ -50,6 +50,14 @@ def main():
         assert circle==p+1 and paley==(p*p-1)//2
         assert (circle==rook)==(p==3)
         field_degrees.append(dict(q=p,nonsquare=eta,norm_one=circle,norm_square=paley,rook=rook))
+    # Golden reduction is F9; Eisenstein reduction is ramified, not F9.
+    def f9mul(x,y):return ((x[0]*y[0]-x[1]*y[1])%3,(x[0]*y[1]+x[1]*y[0])%3)
+    phi9=(2,2);v=(1,0);orbit=[]
+    for _ in range(8):v=f9mul(v,phi9);orbit.append(v)
+    assert len(set(orbit))==8 and orbit[-1]==(1,0)
+    eps=(2,1) # omega-1 in the Eisenstein basis modulo 3
+    assert tuple(t%3 for t in mul(eps,eps))==(0,0) and eps!=(0,0)
+    for a,b in it.product(range(3),repeat=2):assert norm((a,b))%3==(a+b)**2%3
     # K5 Delta-Y is K3,3 plus the extra edge on the opposite two vertices.
     D=nx.complete_graph(5);D.remove_edges_from(it.combinations(range(3),2));D.add_node(5)
     D.add_edges_from((5,i) for i in range(3));D.remove_edge(3,4)
@@ -139,7 +147,7 @@ def main():
         if debt>0:hostile=dict(N=dat['N'],direction=v,excess=int(debt));break
     assert hostile
     out=dict(status='FINITE-EXACT',petersen_coordinates=[dict(edge=k,grid=v) for k,v in coord.items()],
-             seidel_shore=sorted(shore),finite_field_degrees=field_degrees,star_assignment_checks=star_checks,star_table=table,
+             seidel_shore=sorted(shore),finite_field_degrees=field_degrees,ternary_ring_controls=dict(golden_phi_order=8,eisenstein_nonzero_nilpotent=eps),star_assignment_checks=star_checks,star_table=table,
              source_shell_checks=shell_checks,source_rows=source_rows,unit_zero_circuits=primitive,
              odd_lag_quotient_checks=32,
              star_cycle=dict(parameter='-(q^2-3q+1)/(q-3)^2',integer_q_at_least_4_with_rational_3cycle=[7],

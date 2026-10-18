@@ -92,6 +92,19 @@ controls at q=3,5,7,11,19 check both norm predicates and this failure
 boundary. This distinguishes a genuine recursive family from an
 accidental equality of its smallest members.
 
+A second boundary separates the two ternary arithmetic carriers.
+Golden integers modulo 3 really do give F9: `phi^2-phi-1` is irreducible
+there, and `i=2phi-1` satisfies `i^2=-1`. In this chart phi has order 8.
+In contrast, Eisenstein integers modulo 3 give
+`F3[epsilon]/(epsilon^2)`, with `omega=1+epsilon`: their discriminant
+ramifies, and epsilon is a nonzero nilpotent. Both rings have additive
+group F3^2, but only the first is a field. Their norms reduce respectively
+to a nondegenerate quadratic form and `(a+b)^2` in the basis `1,omega`.
+Thus the reductions of the ROOT phase lattice and the golden integers
+share the additive group F3^2, while multiplication and norm
+cannot be transported by a ring isomorphism. This is a concrete example
+of the extra information a ternary analogy must retain.
+
 ## 3. The exact three-port term lost by a star-triangle replacement
 
 Let a,b,c be boundary colours from q labelled colours. Write
@@ -214,7 +227,9 @@ Put `d=q-3>=1`. Here
 
 For d>=5 this is negative. At d=1,2,3,4 its numerator is 13,16,13,4,
 leaving only d=2 and d=4. For d=2, `c=-11/4`: valuation growth forces
-every rational periodic point to have exact denominator 2. The escape
+every rational periodic point to have exact denominator 2: odd-prime
+denominator valuations double, while a 2-adic valuation other than -1
+either becomes -2 immediately or thereafter doubles in magnitude. The escape
 bound `|x|<5/2` leaves only `+-1/2,+-3/2`, all of which reach `-5/2`
 and escape. For d=4 the cycle is
 

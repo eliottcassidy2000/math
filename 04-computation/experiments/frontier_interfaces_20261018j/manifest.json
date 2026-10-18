@@ -36,8 +36,8 @@
     },
     {
       "path": "04-computation/experiments/ternary_interfaces_20261018j.py",
-      "sha256": "6fb386d7adb600432dd1efc08ac43ff479b10469e7def42d3cc9c8829f926c07",
-      "bytes_LF": 7712
+      "sha256": "b52baaedae92bf6e4911f4ba0ccfc3a63fcafb058b541c486bbfc413bb7851a4",
+      "bytes_LF": 8278
     }
   ],
   "inherited_inputs": [
@@ -75,8 +75,8 @@
     },
     {
       "path": "05-knowledge/results/ternary_ports_golden_defect_20261018j.md",
-      "sha256": "f399a3cb7e2b81532066fdf6096a8c7504ee1e526f1ccf977b0dde71cfec25e9",
-      "bytes_LF": 18080
+      "sha256": "da5edc2ea5b71bc54bedc6b9c660611f2362393f454cad47f0307a4d61aa1bb9",
+      "bytes_LF": 19032
     }
   ],
   "receipts": [
@@ -132,8 +132,8 @@
     },
     {
       "path": "04-computation/experiments/frontier_interfaces_20261018j/ternary_controls.json",
-      "sha256": "504a83cd85336368a35fc38fb0a25dac8fbc1856d5165f2c2a9af2c262d41558",
-      "bytes_LF": 3595
+      "sha256": "442727c3d156262abf9c2a5cf5bc18c8d9bcf097b6a8d075e5775144cfd1a6f1",
+      "bytes_LF": 3717
     }
   ],
   "commands_from_repo_root": [

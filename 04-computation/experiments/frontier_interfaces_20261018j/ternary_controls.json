@@ -143,6 +143,13 @@
       "rook": 36
     }
   ],
+  "ternary_ring_controls": {
+    "golden_phi_order": 8,
+    "eisenstein_nonzero_nilpotent": [
+      2,
+      1
+    ]
+  },
   "star_assignment_checks": 1989,
   "star_table": [
     {
