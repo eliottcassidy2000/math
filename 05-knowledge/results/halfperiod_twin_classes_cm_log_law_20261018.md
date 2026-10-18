@@ -109,6 +109,19 @@ Beukers-Vlasenko's mod-`p^(2s)` Dwork congruence at fixed points of the excellen
 the CM points are the fixed points), whose hypercubic `n = 3` family is exactly `3F2(1/2,1/2,1/2;1,1;64t^2)`. Their
 Corollary 6.4 has a `log(t^σ/t^p)` correction, which matches the `q_p(m)` here.
 
+**A `p`-adic CM detector** (pre-registered, PASSED;
+[`cm_detector_lucas_block_scan_20261018.py`](../../04-computation/experiments/cm_detector_lucas_block_scan_20261018.py)).
+The test is the block congruence `Σ_(k=p)^(2p-1) t_k ≡ t_1 Σ_(k<p) t_k (mod p^2)`, with `t_k = A(k) m^(-k)`, over
+all `0 < |m| <= 10^5` and four families:
+- `A = C(2k,k)^3`: the survivors are exactly Sun's eight CM values.
+- `C(2k,k)^2 C(3k,k)`: 10 survivors.
+- `C(2k,k)^2 C(4k,2k)`: 10 survivors.
+- `C(2k,k) C(3k,k) C(6k,3k)`: the survivors `{-32768, -3375, 1728, 8000, 54000}`, exactly the rational CM
+  `j`-invariants in range (this is the `j`-line family `3F2(1/6,1/2,5/6;1,1;1728/j)`).
+
+All 33 survivors are supersingular at density `0.50-0.54`, measured modulo `p` independently of the test; the controls
+lie at `0.01-0.09`. The mod-`p^2` Lucas factorization therefore detects CM. This is HYP-9310(c).
+
 ## 4. Literature
 
 Z.-W. Sun, *Series with summands involving harmonic numbers* (arXiv:2210.07238), was read in this session.

@@ -20,6 +20,7 @@ scripts:
   - 04-computation/experiments/cm_points_forms_legendre_20261018.py
   - 04-computation/experiments/cm_harmonic_log_law_extended_20261018.py
   - 04-computation/experiments/cm_law_lucas_block_form_20261018.py (Lucas-block form, F_(p^2) == F_p^2)
+  - 04-computation/experiments/cm_detector_lucas_block_scan_20261018.py (CM detector, four families, |m| <= 10^5)
 related: [THM-4685, THM-4670, THM-4669, Beukers-Vlasenko Dwork crystals III (arXiv:2105.14841), Sun Conjecture 29 and 36 (arXiv:2210.07238), Kibelbek-Long-Moss-Sheller-Yuan (arXiv:1210.4489), Guillera-Zudilin divergent series, Coster-van Hamme 1991]
 ---
 
@@ -122,6 +123,37 @@ towards supercongruences* (IMRN 2023, arXiv:2105.14841), was read in this sessio
   `F_(p^2) ≡ F_p^2 (mod p^2)`.
 - `(B1)` is the block refinement of that statement, so a proof of `(L_p)` should come from running the Cartier
   argument blockwise at the CM fixed point.
+
+## Part (c): the Lucas-block congruence detects CM
+
+The test is
+```
+(B1')   Σ_(k=p)^(2p-1) t_k ≡ t_1 Σ_(k=0)^(p-1) t_k   (mod p^2),     t_k = A(k) m^(-k).
+```
+It holds modulo `p` for every `m` by the Lucas property. For `A = C(2k,k)^3` it is equivalent to `(L_p)`.
+
+**Scan.** `cm_detector_lucas_block_scan_20261018.py` ran over all `0 < |m| <= 10^5`: filter primes `7..43`, then
+confirmation on all primes up to `200`. Survivors:
+
+| family | survivors |
+|---|---|
+| `A1 = C(2k,k)^3` | exactly Sun's eight CM values `{-512, -64, -8, 1, 16, 64, 256, 4096}` |
+| `A2 = C(2k,k)^2 C(3k,k)` | `{-8640, -1728, -192, -27, 8, 64, 108, 216, 1458, 3375}` |
+| `A3 = C(2k,k)^2 C(4k,2k)` | `{-82944, -12288, -3969, -1024, -144, 81, 256, 648, 2304, 20736}` |
+| `A4 = C(2k,k) C(3k,k) C(6k,3k)` | `{-32768, -3375, 1728, 8000, 54000}` |
+
+`A4` is the `j`-line family `3F2(1/6,1/2,5/6;1,1;1728/j)`. Its survivors are exactly the rational CM `j`-invariants
+with `0 < |j| <= 10^5` (discriminants `-11, -7, -4, -8, -12`).
+
+**Pre-registered predictions** (written in the docstring before the run): both **PASSED**.
+- **(P1)** The `A1` survivors are exactly Sun's eight values.
+- **(P2)** Every survivor is supersingular at density about `1/2`, meaning `Σ_(k<p) t_k ≡ 0 (mod p)` at 50-54% of the
+  primes `7..500`. This CM signature is measured modulo `p`, independently of the mod-`p^2` test. Non-survivor
+  controls lie at 1-9%.
+
+**Conjecture (c).** For each family, `(B1')` holds for every prime `p ∤ 6m` if and only if the parameter is a CM point.
+- The "if" direction is the supercongruence. For `A1` it is HYP-9310 by the equivalence above.
+- The "only if" direction is what the scan shows for `|m| <= 10^5`.
 
 ## Falsifiers
 
