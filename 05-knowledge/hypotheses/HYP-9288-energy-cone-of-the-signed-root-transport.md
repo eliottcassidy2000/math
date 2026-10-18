@@ -66,7 +66,7 @@ for the calibration, provided the budget is written as in HYP-9283(B), `a + b lo
 - (B) implies the uniform shell bound and the current-energy budget. Its converse additionally needs uniform control
   of nonterminal coefficient energy. The full ideal bound remains open. The old matching census inspected only
   nonzero actual support. The [whole-support repair](../results/root_sparse_boundary_module_20261017i.md) proves
-  localization to an explicit O(d^2) candidate set for every dyadic source and every depth. Its R3--R4 add exact clock periods and a growing-depth energy-matching window d<c*sqrt(log2 N), c<0.562. Uniform control at arbitrary depth remains open.
+  localization to an explicit O(d^2) candidate set for every dyadic source and every depth. Its R3--R4 add exact clock periods and a growing-depth energy-matching window d<c*sqrt(log2 N), c<0.5616. Uniform control at arbitrary depth remains open.
 
 ## Evidence
 

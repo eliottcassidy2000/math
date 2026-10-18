@@ -15,7 +15,7 @@ from [positive ROOT transport, section2](root_positive_transport_20261017g.md). 
 **Matching scope repair, 2026-10-17, clock_duality_oct15.** The old matching scripts evaluated only nonzero actual
 support, omitting ideal-only coefficients. Their restricted errors are not full l2 norms. The
 [whole-support audit](root_sparse_boundary_module_20261017i.md) corrects the measurement and proves a sparse
-boundary-forcing support theorem at every depth. Its R3--R4 add exact source-clock periods and energy matching through d<c*sqrt(log2 N), c<0.562. Uniform arbitrary-depth energy remains open. The actual-energy census and ideal ladder are unchanged.
+boundary-forcing support theorem at every depth. Its R3--R4 add exact source-clock periods and energy matching through d<c*sqrt(log2 N), c<0.5616. Uniform arbitrary-depth energy remains open. The actual-energy census and ideal ladder are unchanged.
 
 **Typing.**
 - PROVED (elementary): THM-4667, which contains:

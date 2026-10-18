@@ -8,7 +8,8 @@ seeds <= Y are frozen. Contributions landing on one seed create cross terms of t
     MM_lo : two moving contributions arriving at the same frozen seed <= Y in the same step
     MF    : a moving contribution arriving at a frozen seed that already carries current (arrival against the frontier)
 
-and E_Y(N) = E_0(N) + 2 (MM_hi + MM_lo + MF) exactly (checked). The invariant sum_u f(u) c_Y(u) = R(N) is checked too.
+At finite depth E_frozen + E_moving = E_0 + 2 (MM_hi + MM_lo + MF).
+The E_Y endpoint identity below applies after the finite run's moving vector vanishes (checked). The invariant sum_u f(u) c_Y(u) = R(N) is checked too.
 This separates the part of the frontier energy that is a statement about the ideal regime (MM_hi) from the arrival
 terms that only exist because the process is stopped.
 Usage: python root_transport_frontier_decomposition_20261017.py "N1,N2,..." "Y1,Y2,..."

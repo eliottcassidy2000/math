@@ -2,7 +2,8 @@
 
 2026-10-17, clock_duality_oct15. **PROVED, scoped and self-audited:** the
 all-source localization theorem below, its dyadic specialization, the
-eventual clock-period theorem R3, and the growing-depth matching window R4.
+eventual clock-period theorem R3, the growing-depth matching window R4,
+and the source-preserving frontier renewal laws R5--R6.
 **FINITE-EXACT:** whole-support comparisons, including their omitted-mass
 correction, and complete phase banks giving all-source dyadic error bounds
 through depth5. **OPEN:** uniform energy at arbitrary depth and universal Collatz.
@@ -425,3 +426,140 @@ controls a different remainder. Its separate uniform o(N) result concerns
 one signed outer packet. It does not estimate the full coefficient energy
 or the inner forcing in(6). R4 therefore supplements those results; it does
 not supersede them or reprove their stronger statements for their observables.
+
+
+## 8. Incoming first-hit frontiers: an exact renewal interface
+
+Incoming commits51674124d9,1dafe2fa3a anddd9b0d1f0f introduced
+[root_frontier_penrose_20261017.md](root_frontier_penrose_20261017.md) and
+[HYP-9290](../hypotheses/HYP-9290-frontier-energy-cone-of-the-stopped-root-transport.md).
+Their first-hit frontier avoids transporting small coefficients onward to
+ROOT. The enlarged census through N<2^28 is incoming evidence, not a new
+reproduction here. The old C=2.4 suggestion at cutoff100 is superseded by
+its E_100/N>2.62 record. At N=1, E_Y=10 for every Y>=3, so all-N constants
+also need a finite-prefix payment. The conjecture with an unspecified C
+remains open.
+
+Let pi select the finite primitive frontier U={s<=Y}, and split the native
+signed transport on low/high coordinates:
+
+    L = [ A  B ],  A=pi L pi, B=pi L(1-pi),
+        [ C  D ]   C=(1-pi)L pi, D=(1-pi)L(1-pi).
+
+Here A,B,C,D name operators, not the previous exponent or coefficient bound.
+The genuinely stopped operator is [I B;0 D]. For initial vector(a0,h0),
+put g0=a0 and g_j=B D^(j-1)h0 for j>=1. These are signed **first-arrival
+increments**; the stopped frontier vector at depth d is sum_(j<=d) g_j.
+The moving remainder is D^d h0 and is not discarded.
+
+**R5 (PROVED, formal renewal).** If a_d is the low projection of the
+unstopped vector L^d(a0,h0), then
+
+    a_d = g_d + sum_(ell=1)^d K_ell a_(d-ell),
+    K_1=A, K_ell=B D^(ell-2) C for ell>=2.                  (16)
+
+Equivalently, as formal power series only,
+
+    a(z)=[I-zA-z^2 B(I-zD)^(-1)C]^(-1)
+                        [a0+zB(I-zD)^(-1)h0].             (17)
+
+**Proof.** Partition each native path ending at a frontier state according
+to whether it has a previous frontier visit. No previous visit gives g_d.
+Otherwise its last frontier visit is followed either by one low-to-low
+edge or by an excursion through high states, giving exactly K_ell. Every
+word is counted once with its original source weight and sign. The formal
+geometric series has finite meaning at each coefficient; no analytic
+convergence or eventual hitting assertion is required.
+
+The same identity holds with full native edge words as labels. Retain each
+edge's a and output braid j, hence canonical A=a+2j, and recover the literal
+shortcut clock as sum A+2j_initial-2j_terminal. The variable z above counts
+primitive stages, not physical elapsed time. Frozen waiting steps do not
+advance a source's actual clock. Evaluating these labels prematurely would
+lose precisely the marked-clock Gram information still needed for energy.
+
+The frontier lemma survives without universal entry. Define f=0 off the
+ROOT basin. Every initially ROOT-supported source eventually hits U, and
+nonhitting sources have f=0. Since initial support is finite, the frozen
+vector stabilizes after all hitting arrivals even if a moving complement
+persists. Thus R(N)=<f,c_U> and R(N)^2<=|U| ||c_U||_2^2. At finite depth,
+however, the energy identity is
+
+    ||frozen_d||^2+||moving_d||^2
+       =E_0+2(MM_hi,d+MM_lo,d+MF_d).                       (18)
+
+The incoming statement that only above-frontier merges contribute was
+incorrect: frozen arrivals MF remain, as its own decomposition measures.
+The endpoint identity without moving energy is valid only when that vector
+vanishes. These scope repairs are applied to the incoming note and hypothesis.
+
+For a height frontier, C is usually nonzero. Thus neither the complete K
+clock period nor R4's matching theorem automatically passes through the
+first-hit restriction. The finite matrix in(17) contains infinite-memory
+series; finite frontier size does not make those series finite polynomials.
+This is the finite-extraction manuscript's degree obligation in a concrete
+new form. The next sufficient bound is the source-wise two-time Gram sum
+sum_(i,j)<g_i,g_j>, with the original integer clocks attached.
+
+## 9. A forward-closed frontier removes the unknown return kernel
+
+There is a more direct reroute than treating C as an uncontrolled error.
+Enlarge the frontier until it is forward closed under the actual P map,
+provided that enlargement has a finite certificate. This is a change of
+stopping set, not of the original source or dynamics.
+
+**R6 (PROVED, finite-set criterion).** Let V be a finite set containing1,
+with P(V) subset V, and suppose a rank r:V->nonnegative integers has
+r(1)=0 and r(P(s))<r(s) for s!=1. Stop on first entry into V. Then:
+
+1. Every point of V is certified to reach ROOT, with its exact native word.
+2. The outside vector of stopped and unstopped transport is identical at
+   every finite depth: C=0 in the block matrix, so both are D^d h0.
+3. If R=max r, the internal signed matrix satisfies A^R=Pi, where
+   Pi=delta_1 f|_V^T, and A^j=Pi for j>=R. Therefore
+
+       (I-zA)^(-1)=sum_(j=0)^(R-1) z^j A^j
+                                      + z^R Pi/(1-z).      (19)
+
+4. The frontier current inequality remains R(N)^2<=|V| E_V(N).
+
+**Proof.** Strict rank descent proves1 and the stated power of A; the ROOT
+self-edge has sign+1. Forward closure gives C=0, establishing2. Splitting
+the formal geometric series at R gives3. The same finite-source argument
+used after(17) gives4; universal entry into V is not assumed.
+
+Exact closure witnesses, including every vertex and its descending rank:
+
+| original height Y | closed frontier size | largest seed | maximum native rank |
+|---:|---:|---:|---:|
+|3|2|3|1|
+|10|6|17|5|
+|100|74|2051|42|
+|1000|627|63665|64|
+
+For example, replacing the375-point height1000 frontier by this627-point
+certified set completely removes excursions from the frontier back into
+its complement. This costs a known larger Cauchy-Schwarz factor; it does
+not prove an energy comparison between the two stopping sets. The full
+clock-labelled internal paths remain in the certificate. Formula(19) is
+for primitive-depth bookkeeping and does not identify primitive and literal
+shortcut times.
+
+The external arrival series g(z) is still the open part. A finite controller
+with a known transient polynomial and ROOT pole is now available; the
+remaining task is to bound its source-specific influx rather than assume
+that every source enters it. This is a concrete finite-extraction/renewal
+bridge, and an example of changing the stopping set to eliminate a return
+term instead of estimating it indefinitely.
+
+`root_frontier_renewal_20261017i.py` checks(16),(18), and direct original-source
+aggregation in3328 cases each (N=1..64, four frontiers, depths0..12), plus
+87709 literal shortcut-clock and endpoint-braid comparisons. No test waits
+for universal hitting. The four finite closure constructions have a10000-step
+cap per new path, a cycle check, and independently checked descent ranks.
+
+```bash
+python3 04-computation/experiments/root_frontier_renewal_20261017i.py --out /tmp/frontier-renewal.json
+```
+
+Receipt: `04-computation/experiments/energy_extraction_20261017i/frontier_renewal.json`.

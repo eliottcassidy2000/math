@@ -49,12 +49,16 @@
     "04-computation/experiments/root_transport_energy_profile_20261017.py": {
       "bytes": 3172,
       "sha256": "1eb561a3c8c773deff43c0d13b1e08052c50809b13d6284b364259f41d177569"
+    },
+    "04-computation/experiments/root_frontier_renewal_20261017i.py": {
+      "bytes": 5797,
+      "sha256": "897bd4ec0ac8fb9455a21f7309ea449a68f5e4638436a40b57a96910fe4f7f85"
     }
   },
   "notes": {
     "05-knowledge/results/root_sparse_boundary_module_20261017i.md": {
-      "bytes": 19727,
-      "sha256": "98db15bd36ee30145b7c6aa6e398f92a3eaab40bfe6291c10e66d2b7b86082d5"
+      "bytes": 26664,
+      "sha256": "2a82460174f806daa64cae31b1fe856ff6b24812e4d90e285a50d51c03805dec"
     },
     "05-knowledge/results/golden_contact_circuit_20261017i.md": {
       "bytes": 9851,
@@ -103,6 +107,10 @@
     "root_full_support.json": {
       "bytes": 77947,
       "sha256": "50adb3340e701304870961fc07c12253147d9c35a512fa4fbf90cb488f3aaaf9"
+    },
+    "frontier_renewal.json": {
+      "bytes": 35794,
+      "sha256": "c18883d73ce700174f6719dc1ca8a1483f38296d5372a7418d71654c7e7de91b"
     }
   },
   "commands": [
@@ -112,7 +120,8 @@
     "python3 04-computation/experiments/golden_contact_circuit_20261017i.py --recipe dM --out 04-computation/experiments/energy_extraction_20261017i/golden_dM.json",
     "python3 04-computation/experiments/golden_contact_circuit_20261017i.py --recipe MM --out 04-computation/experiments/energy_extraction_20261017i/golden_MM.json",
     "python3 04-computation/experiments/golden_contact_circuit_20261017i.py --recipe base --cubic --out 04-computation/experiments/energy_extraction_20261017i/golden_cubic.json",
-    "python3 04-computation/experiments/finite_extraction_bridges_20261017i.py --out 04-computation/experiments/energy_extraction_20261017i/paper_controls.json"
+    "python3 04-computation/experiments/finite_extraction_bridges_20261017i.py --out 04-computation/experiments/energy_extraction_20261017i/paper_controls.json",
+    "python3 04-computation/experiments/root_frontier_renewal_20261017i.py --out 04-computation/experiments/energy_extraction_20261017i/frontier_renewal.json"
   ],
   "validation": {
     "original_source_controls": 768,
@@ -124,6 +133,33 @@
     "clock_bank": "all k=0..1600, depths0..5; complete source-uniform banks using R3",
     "geometry": "570 port patterns each in four selected-edge graphs; every saved colouring checked directly; no full unit-distance census",
     "complex_values": "70-digit numerical residuals supplement analytic proofs, not interval certificates",
-    "serialization": "Golden and clock receipts compacted losslessly; JSON objects compared before/after. Earlier dM/MM receipts omit later optional cubic=false metadata; mathematical payload is unchanged."
-  }
+    "serialization": "Golden and clock receipts compacted losslessly; JSON objects compared before/after. Earlier dM/MM receipts omit later optional cubic=false metadata; mathematical payload is unchanged.",
+    "frontier_renewal_cases": 3328,
+    "frontier_source_aggregation_cases": 3328,
+    "frontier_energy_ledger_cases": 3328,
+    "literal_shortcut_clock_checks": 87709,
+    "certified_closed_frontiers": [
+      {
+        "height": 3,
+        "size": 2
+      },
+      {
+        "height": 10,
+        "size": 6
+      },
+      {
+        "height": 100,
+        "size": 74
+      },
+      {
+        "height": 1000,
+        "size": 627
+      }
+    ]
+  },
+  "incoming_frontier_commits": [
+    "51674124d9",
+    "1dafe2fa3a",
+    "dd9b0d1f0f"
+  ]
 }

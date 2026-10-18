@@ -46,7 +46,7 @@ The ROOT transport of THM-4667 has the same skeleton, with the same factor 2:
 | mass-capacity `μ >= 0` | dissipation `Cross_d <= 0` (ideal regime, `d <= 12`) |
 | doubling by odd reflection `±φ` across a seam | sibling pairs `(s, 2s+1)` merged with opposite signs (statement 8) |
 | normalised coordinate `x = e^(-2t/d) y` | band normalisation `M_d = 4(3/2)^d` of clock_duality's R8 |
-| Schwarzschild equality `m = (A/ω)^(d/k)/2` | `E_∞ = R(N)^2` |
+| Schwarzschild equality `m = (A/ω)^(d/k)/2` | `E_∞ = R(N)^2` only when the unrooted energy vanishes |
 | singular minimizing frontier (codimension 8) | ROOT, where coherent merging spoils monotonicity |
 | outer-minimizing hull + enclosing spheres | **a frontier at seed height `Y` + Cauchy-Schwarz** (this note) |
 
@@ -71,8 +71,8 @@ The odd transport preserves the `f`-weighted sum at every step, and stopping onl
 
     R(N)^2 <= F_Y · E_Y(N).
 
-- `E_Y` is the energy at the end of the *stopped* process.
-- Its cross terms come only from merges *above* the frontier.
+- `E_Y` is the energy of all actual hitting contributions. Nonhitting sources remain in a moving complement. Define f=0 off the ROOT basin; only initially ROOT-supported sources are needed for Lemma F. Their finitely many arrivals suffice for the invariant, without asserting that the moving complement disappears.
+- Its cross terms include moving/moving merges above and at the frontier, and moving/frozen arrivals. Only transport after freezing is omitted.
 - The final coherent merging near ROOT is replaced by the factor `F_Y`. This is the analogue of the enclosing-sphere
   comparison, and the Cauchy-Schwarz form of clock_duality's label-free terminal bound.
 
@@ -91,7 +91,7 @@ from `N` to `N + 1`, so every `N` costs `O(1)`. `R(N) = H(4N) - H(N)` is verifie
 
 - In octave `2^12`, where `R^2/N` reaches 9.08, the `Y = 1000` frontier energy never exceeds `2.08 N`. In octave `2^22`
   (`R^2/N` up to 6.06) it stays below `1.31 N`.
-- Lemma F with `Y = 1000` gives `|R(N)| <= 27.9 sqrt(N)` for every `N` in `[2^12, 2^23)`. This is lossy by about 9
+- Lemma F with `Y = 1000` gives `|R(N)| <= 28 sqrt(N)` for every `N` in `[2^12, 2^23)`. This is lossy by about 9
   against the truth, but it is a square-root bound obtained without the termination regime.
 
 **Out of sample: every `N < 2^28`** (`root_transport_frontier_energy_big_20261017.py`, memory-lean; ten tests
@@ -104,10 +104,10 @@ pre-registered in HYP-9290 before the scans, all passed).
 | `max E_10000/N` | 1.40 | 1.42 | 1.38 | 1.26 | 1.27 |
 | `max R(N)^2/N` | 3.08 | 2.63 | 4.36 | 7.48 | 7.37 |
 
-So over all `N < 2^28`:
+So on the stated range `2^12 <= N < 2^28` (not the untested finite-prefix calibration):
 - `E_1000(N) <= 2.08 N`;
-- `E_100(N) <= 2.62 N`;
-- `|R(N)| <= sqrt(375 · 2.08 N) = 27.9 sqrt(N)` by Lemma F (with `Y = 1000`, for `N >= 2^12`).
+- `E_100(N) <= 2.63 N`;
+- `|R(N)| <= sqrt(375 · 2.08 N) < 28 sqrt(N)` by Lemma F (with `Y = 1000`, for `N >= 2^12`).
 
 At six arg-max points in octaves `2^23-2^25` (P6), merges above `Y = 1000` remove `3.58-3.63 N`, and arrivals add at
 most `0.245 N`.
@@ -145,7 +145,7 @@ synchronously in depth, and every energy increment is split into three kinds:
 - `MM_lo`, two moving currents arriving at the same frozen seed in the same step;
 - `MF`, a moving current arriving at a frozen seed that already carries current.
 
-Then `E_Y = E_0 + 2(MM_hi + MM_lo + MF)` exactly (checked). Values below are `/N`, with the factor 2 included.
+At each finite depth, `E_frozen + E_moving = E_0 + 2(MM_hi + MM_lo + MF)` exactly. In the completed finite runs below the moving vector vanishes, giving the displayed E_Y identity. Values below are `/N`, with the factor2 included.
 
 | `N` | `Y` | `E_0` | merges above `Y` | same-step at frontier | arrivals | `E_Y` | `R^2` |
 |---|---|---|---|---|---|---|---|
@@ -173,23 +173,20 @@ current frozen at a few small seeds, with the same sign.
    `sqrt(F_(Y_0))`, provided the frontier energy above `Y_0` is controlled.
 2. **What the frontier cone needs (HEURISTIC reduction, not an implication).**
    - By the decomposition, the frontier cone follows from two statements:
-     - (i) merges above `Y` are dissipative, `MM_hi + MM_lo <= 0`;
-     - (ii) arrivals at frozen seeds `>= Y_0` stay `O(N)`.
+     - (i) moving/moving merges, including simultaneous frontier arrivals, satisfy `MM_hi + MM_lo <= 0` uniformly in finite depth;
+     - (ii) arrivals at frozen seeds, for a cutoff `Y>=Y_0`, stay `O(N)` uniformly in depth. Individual landing seeds can be smaller than Y_0.
    - Statement (i) is the stopped-process form of HYP-9288 (C), ideal dissipation. It is not the same statement.
      - The stopped process cuts every path at first entrance, so its coefficients above `Y` differ from the unstopped
        ones by the currents that dipped below `Y` and came back.
-     - Its merges above `Y` are those of large seeds only, which is where S41 found the actual transport to match the
-       ideal one exactly; matching failed only at ROOT and `O(1)` near-ROOT seeds.
+     - S41's old matching test omitted ideal-only seeds. The [whole-support repair](root_sparse_boundary_module_20261017i.md) proves O(d^2) dyadic error support and a growing-depth window, but does not identify stopped and unstopped moving vectors. R5 there retains the first-return kernel explicitly.
    - Statement (ii) is new. It asks that a current coming down to the frontier be incoherent with what is already
      frozen there. In the data this holds at `Y >= 100` and fails at `Y = 30`.
    - Neither statement involves the coherent final merging.
 3. **Conditional power saving.** Take `Y = N^θ`. Lemma F gives `|R(N)| <= sqrt(F_Y E_Y) ≪ N^((1+θ)/2)`, provided
    `E_(N^θ)(N) ≪ N`.
-   - This needs the ideal regime and matching only down to scale `N^θ`, i.e. depth about `(1-θ) log_(4/3) N`, where every
-     seed is large.
+   - HEURISTIC depth scale: about `(1-θ) log_(4/3) N`. This is not a deterministic stopping-time bound; one step can overshoot far below N^θ. Uniform stopped-flow and arrival estimates remain necessary.
    - With clock_duality's horizons (P3/O3, `l1`, depth `m/10`) one would need their `l2` analogue to depth
-     `(1-θ)·2.4 log_2 N`. The gap between `m/10` and that depth is the remaining work. It is a *matching* gap, not a
-     termination gap.
+     `(1-θ)·2.4 log_2 N`. Comparing those heuristic horizons does not by itself remove the stopped-flow, arrival or coverage obligations.
 4. **Relation to the octave cone.** HYP-9288 (B) bounds the unstopped traces. HYP-9290 bounds the stopped energy.
    - Neither implies the other.
    - HYP-9290 at a fixed `Y_0` gives the pointwise bound `|R(N)| <= sqrt(F_(Y_0) C N)`.
@@ -199,7 +196,7 @@ current frozen at a few small seeds, with the same sign.
 ## 5. HYP-9290 (filed)
 
 **Frontier energy cone.** [HYP-9290](../hypotheses/HYP-9290-frontier-energy-cone-of-the-stopped-root-transport.md): there
-are `Y_0` and `C` with `E_(Y_0)(N) <= C N` for all `N`; the data suggest `Y_0 = 100`, `C = 2.4`. A weaker form allows
+are `Y_0` and `C` with `E_(Y_0)(N) <= C N` for all `N`. The initial Y_0=100,C=2.4 proposal was surpassed by the incoming E_100/N>2.62 record at N=48,251,574. The large-source test now uses C=3. Any all-N C must also be at least10, from N=1 and Y>=3. A weaker form allows
 `C log log N`. Consequence (Lemma F): `|R(N)| <= sqrt(F_(Y_0) C N)`.
 
 Ten tests were pre-registered before the corresponding scans: P1-P6 for `2^23 <= N < 2^26`, P7-P10 for

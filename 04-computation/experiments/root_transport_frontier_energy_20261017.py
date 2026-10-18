@@ -9,7 +9,9 @@ sum_u c(u) f(u) = R(N) survives stopping, so with frontier coefficients c_Y(u) =
     R(N) = sum_{u <= Y} f(u) c_Y(u),      R(N)^2 <= F_Y * E_Y(N),      E_Y(N) = sum_u c_Y(u)^2,
 
 by Cauchy-Schwarz, where F_Y is the number of seeds <= Y. The coherent merging near ROOT (the termination regime of
-THM-4667 / HYP-9288) never enters E_Y: only merges above the frontier do. The script computes E_Y(N)/N for every
+THM-4667 / HYP-9288) is replaced by freezing; moving/frozen arrivals still enter E_Y.
+Scope repair: first-hit maps below are computed only for the finite sources whose paths complete;
+the mathematical frontier identity uses f=0 on nonhitting ROOT-complement sources, not universal entry. The script computes E_Y(N)/N for every
 N < 2^(KMAX+1) incrementally (three source updates per N), for several fixed Y, and checks R(N) against H(4N) - H(N).
 Usage: python root_transport_frontier_energy_20261017.py KMAX Y1 Y2 ...
 Session opus-2026-10-17-S42.
