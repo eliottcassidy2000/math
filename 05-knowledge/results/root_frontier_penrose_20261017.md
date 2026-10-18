@@ -8,8 +8,9 @@ transfer that produced a concrete new result. The broader dictionary is in
 
 **Typing.**
 - PROVED (one line): the frontier inequality `R(N)^2 <= F_Y E_Y(N)`.
-- FINITE-EXACT: the stopped energies for every `N < 2^23` (`Y = 30, 100, 1000, 10^4`) and every `N < 2^21`
-  (`Y = 3, 10, 10^5`); the `R(N)` invariant is checked at every `N`.
+- FINITE-EXACT: the stopped energies for every `N < 2^23` (`Y = 30, 100, 1000, 10^4`), every `N < 2^21`
+  (`Y = 3, 10, 10^5`), every `N < 2^26` (`Y = 30, 100, 1000, 10^4, 10^5`) and every `N < 2^28`
+  (`Y = 100, 1000, 10^4`). The `R(N)` invariant is checked at every `N`.
 - FINITE-EXACT: the scale profiles and the cross-term decomposition (exact integer arithmetic at the listed `N`).
 - ANALOGY: the Penrose dictionary.
 - OPEN (CONJECTURE): HYP-9290, the frontier energy cone.
@@ -92,6 +93,24 @@ from `N` to `N + 1`, so every `N` costs `O(1)`. `R(N) = H(4N) - H(N)` is verifie
   (`R^2/N` up to 6.06) it stays below `1.31 N`.
 - Lemma F with `Y = 1000` gives `|R(N)| <= 27.9 sqrt(N)` for every `N` in `[2^12, 2^23)`. This is lossy by about 9
   against the truth, but it is a square-root bound obtained without the termination regime.
+
+**Out of sample: every `N < 2^28`** (`root_transport_frontier_energy_big_20261017.py`, memory-lean; ten tests
+pre-registered in HYP-9290 before the scans, all passed).
+
+| octave | `2^23` | `2^24` | `2^25` | `2^26` | `2^27` |
+|---|---|---|---|---|---|
+| `max E_100/N` | 2.08 | 1.59 | 2.62 | 1.38 | 1.79 |
+| `max E_1000/N` | 1.34 | 1.24 | 1.45 | 1.30 | 1.25 |
+| `max E_10000/N` | 1.40 | 1.42 | 1.38 | 1.26 | 1.27 |
+| `max R(N)^2/N` | 3.08 | 2.63 | 4.36 | 7.48 | 7.37 |
+
+So over all `N < 2^28`:
+- `E_1000(N) <= 2.08 N`;
+- `E_100(N) <= 2.62 N`;
+- `|R(N)| <= sqrt(375 · 2.08 N) = 27.9 sqrt(N)` by Lemma F (with `Y = 1000`, for `N >= 2^12`).
+
+At six arg-max points in octaves `2^23-2^25` (P6), merges above `Y = 1000` remove `3.58-3.63 N`, and arrivals add at
+most `0.245 N`.
 
 **Scale profiles** (`root_transport_frontier_profile_20261017.py`). These show `E_Y/N` as the frontier height `Y` comes
 down from `4N`.
@@ -183,13 +202,17 @@ current frozen at a few small seeds, with the same sign.
 are `Y_0` and `C` with `E_(Y_0)(N) <= C N` for all `N`; the data suggest `Y_0 = 100`, `C = 2.4`. A weaker form allows
 `C log log N`. Consequence (Lemma F): `|R(N)| <= sqrt(F_(Y_0) C N)`.
 
-Six tests (P1-P6) were pre-registered for `2^23 <= N < 2^26` before that scan was run.
+Ten tests were pre-registered before the corresponding scans: P1-P6 for `2^23 <= N < 2^26`, P7-P10 for
+`2^26 <= N < 2^28`. All ten passed (HYP-9290).
 
 ## Reproduction
 
 ```
 python 04-computation/experiments/root_transport_frontier_energy_20261017.py 22 30 100 1000 10000
 python 04-computation/experiments/root_transport_frontier_energy_20261017.py 20 3 10 100 1000 10000 100000
+python 04-computation/experiments/root_transport_frontier_energy_big_20261017.py 25 30 100 1000 10000 100000
+python 04-computation/experiments/root_transport_frontier_energy_big_20261017.py 27 100 1000 10000
+python 04-computation/experiments/root_transport_frontier_decomposition_20261017.py 9666088,32532811,47930131,8429844,32184394,37675352 1000
 python 04-computation/experiments/root_transport_frontier_profile_20261017.py 7910 66463 1048576 6904411
 python 04-computation/experiments/root_transport_frontier_decomposition_20261017.py 7910,66463,1048576,6904411 30,100,1000,10000
 ```

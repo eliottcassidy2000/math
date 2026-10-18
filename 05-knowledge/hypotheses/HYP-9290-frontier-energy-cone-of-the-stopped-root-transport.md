@@ -18,7 +18,8 @@ status: >
 
   Pre-registered 2026-10-17, before the scan beyond 2^23: tests P1-P6 below. ALL SIX PASSED (scan of every
   N < 2^26, invariant checked at every N). New record E_100/N = 2.62 at N = 48,251,574 (inside P2's 3.0).
-  P7-P10 pre-registered for 2^26 <= N < 2^28 before that scan.
+  P7-P10, pre-registered for 2^26 <= N < 2^28 before that scan, ALL PASSED: over every N < 2^28,
+  E_1000/N <= 1.30 and E_100/N <= 1.80 in octaves 2^26-2^27, while R^2/N reaches 7.48 (N = 133,970,036).
 session: opus-2026-10-17-S42
 source: 05-knowledge/results/root_frontier_penrose_20261017.md
 scripts:
@@ -146,3 +147,18 @@ coherent arrival climb reaches up to height about 100 in that octave. Both the m
 - **P8.** `max E_100(N)/N <= 3.0`.
 - **P9.** `max E_10000(N)/N <= 1.55`.
 - **P10.** Each octave mean of `E_1000/N` lies in `[1.0, 1.5]`.
+
+## Outcome of P7-P10 (every `N < 2^28`, `root_transport_frontier_energy_big_20261017.py 27 100 1000 10000`)
+
+| octave | `2^26` | `2^27` | test | verdict |
+|---|---|---|---|---|
+| `max E_1000/N` | 1.299 | 1.245 | P7 `<= 2.08` | PASSED |
+| `max E_100/N` | 1.385 | 1.794 | P8 `<= 3.0` | PASSED |
+| `max E_10000/N` | 1.263 | 1.268 | P9 `<= 1.55` | PASSED |
+| `mean E_1000/N` | 1.214 | 1.099 | P10 `in [1.0, 1.5]` | PASSED |
+| `max R^2/N` | 7.483 | 7.370 | | |
+
+The invariant `R(N) = Σ f(u) c_Y(u)` was checked against `H(4N) - H(N)` at every one of the `2^28 - 1` values of `N`.
+
+In octaves `2^26-2^27` the ROOT current reaches `R^2/N = 7.48`, close to the 9.08 record of `2^12`. Meanwhile the
+`Y = 1000` frontier energy never exceeds `1.30 N`. All ten pre-registered tests have passed.
