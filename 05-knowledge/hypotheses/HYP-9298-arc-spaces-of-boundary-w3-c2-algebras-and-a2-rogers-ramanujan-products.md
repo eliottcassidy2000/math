@@ -81,6 +81,19 @@ space is just large enough to carry the character.
 So classical freeness of `W_3(3,q)` is not a property of the shape of the `C_2`-ideal. It pins the modulus. This is a
 rigidity phenomenon with no analogue in the one-variable case, where `C[x]/(x^k)` has no modulus.
 
+## Proof route (lead, not a result)
+
+Bruschek-Mourtada-Schepers count the standard monomials of an initial ideal of the arc ideal, as partitions with
+difference conditions. `arc_initial_ideal.py` computes, for `q = 7`, the minimal generators of the initial ideal under
+lex with the largest variable of highest weight (`out/arc_initial_ideal_q7_rwtx_W15.txt`). There are 49 generators up
+to weight 15. They begin with:
+- the infinite families `x_0 y_j` and `y_0 y_j`;
+- `x_0^4` and `x_0^3 x_j`;
+- `x_1 y_1^2`, `y_1^3` and further degree-3 families.
+
+Turning these into a two-colour partition rule whose generating function is `P_7` would prove the `q = 7` case. That
+would be an `A_2` analogue of BMS.
+
 ## Tests
 
 - **Push and extend.** `q = 7, 8` to weight 34; `q = 13, 14` (needs the engine's `C_2` ideals).
