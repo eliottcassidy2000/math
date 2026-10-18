@@ -1,0 +1,6 @@
+q=43 k=5 |mu|=44 best_conflicts=3239 final_conflicts(verified)=3542
+q=43 k=6 |mu|=44 best_conflicts=1184 final_conflicts(verified)=1360
+q=43 k=7 |mu|=44 best_conflicts=627 final_conflicts(verified)=715
+q=43 k=8 |mu|=44 best_conflicts=146 final_conflicts(verified)=156
+q=43 k=9 |mu|=44 best_conflicts=45 final_conflicts(verified)=49
+q=43 k=10 |mu|=44 best_conflicts=87 final_conflicts(verified)=94
