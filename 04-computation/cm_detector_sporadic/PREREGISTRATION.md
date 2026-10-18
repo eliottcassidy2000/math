@@ -185,3 +185,19 @@ Step 0 (relative errors < 3e-80):
 - P8c PASSED. For every 7 <= p <= 199, rad(F_p) | V, and the simple-root part of F_p divides 1 - 44x - 16x^2.
   Simple roots occur exactly at p = 11, 13, 17, 19, 31, 37, 53, 59, ...; these are the primes inert in Q(sqrt-5)
   (spot-checked), consistent with D = -20 at m = 22 +- 10 sqrt5.
+
+## Fifth pre-registration (written BEFORE running): weight 3 (Calabi-Yau threefold families) and attractor points
+
+Context: Beukers (arXiv:2403.03301, Conj. 1.27 and 1.28) conjectures supercongruences at two rational rank-2
+attractor points.
+- Hulek-Verrill hv_n = sum over m_1+...+m_5 = n of (n!/prod m_i!)^2 (AESZ 34), at t_0 = -1/7 (Candelas-de la
+  Ossa-Elmi-van Straten), i.e. m = -7.
+- A(k) = ((3k)!/k!^3)^2, the 4F3(1/3,1/3,2/3,2/3) family, at t_0 = -1/8 in t = 729x, i.e. m = -5832.
+
+Controls (no rational attractor point known): C(2k,k)^4 (conifold m = 256) and (5k)!/k!^5 (quintic, conifold m = 3125).
+
+Predictions, using the (B1') scan of P1 over 0 < |m| <= 10^4 (filter 7..43, confirm 47..200):
+- (P9a) m = -7 survives for Hulek-Verrill, and m = -5832 survives for ((3k)!/k!^3)^2.
+- (P9b) Every survivor is an attractor point or a singular point. The singular points are {1, 9, 25} for
+  Hulek-Verrill, {729} for ((3k)!/k!^3)^2, {256} for C(2k,k)^4 and {3125} for the quintic. Whether the singular
+  points survive is not predicted.
