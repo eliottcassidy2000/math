@@ -1,0 +1,40 @@
+=== Vir_(3,8)  c=-21/4  N=7  prime=2147483647
+D=  0 dimV=     1 dimL=     1 arcHS=     1 ker(pi)=    0 newgens=0 []  (0.0s)
+D=  1 dimV=     0 dimL=     0 arcHS=     0 ker(pi)=    0 newgens=0 []  (0.0s)
+D=  2 dimV=     1 dimL=     1 arcHS=     1 ker(pi)=    0 newgens=0 []  (0.0s)
+D=  3 dimV=     1 dimL=     1 arcHS=     1 ker(pi)=    0 newgens=0 []  (0.0s)
+D=  4 dimV=     2 dimL=     2 arcHS=     2 ker(pi)=    0 newgens=0 []  (0.0s)
+D=  5 dimV=     2 dimL=     2 arcHS=     2 ker(pi)=    0 newgens=0 []  (0.0s)
+D=  6 dimV=     4 dimL=     4 arcHS=     4 ker(pi)=    0 newgens=0 []  (0.0s)
+D=  7 dimV=     4 dimL=     4 arcHS=     4 ker(pi)=    0 newgens=0 []  (0.0s)
+D=  8 dimV=     7 dimL=     7 arcHS=     7 ker(pi)=    0 newgens=0 []  (0.0s)
+D=  9 dimV=     8 dimL=     8 arcHS=     8 ker(pi)=    0 newgens=0 []  (0.0s)
+D= 10 dimV=    12 dimL=    12 arcHS=    12 ker(pi)=    0 newgens=0 []  (0.0s)
+D= 11 dimV=    14 dimL=    14 arcHS=    14 ker(pi)=    0 newgens=0 []  (0.0s)
+D= 12 dimV=    21 dimL=    21 arcHS=    21 ker(pi)=    0 newgens=0 []  (0.0s)
+D= 13 dimV=    24 dimL=    24 arcHS=    24 ker(pi)=    0 newgens=0 []  (0.0s)
+D= 14 dimV=    34 dimL=    33 arcHS=    33 ker(pi)=    0 newgens=1 [(7, 1)]  (0.0s)
+D= 15 dimV=    41 dimL=    40 arcHS=    40 ker(pi)=    0 newgens=0 []  (0.0s)
+D= 16 dimV=    55 dimL=    53 arcHS=    53 ker(pi)=    0 newgens=0 []  (0.0s)
+D= 17 dimV=    66 dimL=    63 arcHS=    64 ker(pi)=    1 newgens=1 [(7, 1)]  (0.0s)
+D= 18 dimV=    88 dimL=    83 arcHS=    84 ker(pi)=    1 newgens=0 []  (0.0s)
+D= 19 dimV=   105 dimL=    99 arcHS=   100 ker(pi)=    1 newgens=0 []  (0.0s)
+D= 20 dimV=   137 dimL=   127 arcHS=   129 ker(pi)=    2 newgens=0 []  (0.0s)
+D= 21 dimV=   165 dimL=   152 arcHS=   155 ker(pi)=    3 newgens=0 []  (0.0s)
+D= 22 dimV=   210 dimL=   191 arcHS=   195 ker(pi)=    4 newgens=0 []  (0.0s)
+D= 23 dimV=   253 dimL=   228 arcHS=   234 ker(pi)=    6 newgens=1 [(8, 1)]  (0.0s)
+D= 24 dimV=   320 dimL=   285 arcHS=   293 ker(pi)=    8 newgens=0 []  (0.0s)
+D= 25 dimV=   383 dimL=   338 arcHS=   349 ker(pi)=   11 newgens=1 [(8, 1)]  (0.1s)
+D= 26 dimV=   478 dimL=   416 arcHS=   431 ker(pi)=   15 newgens=0 []  (0.1s)
+D= 27 dimV=   574 dimL=   495 arcHS=   515 ker(pi)=   20 newgens=0 []  (0.2s)
+D= 28 dimV=   708 dimL=   603 arcHS=   629 ker(pi)=   26 newgens=0 []  (0.2s)
+D= 29 dimV=   847 dimL=   714 arcHS=   748 ker(pi)=   34 newgens=0 []  (0.5s)
+D= 30 dimV=  1039 dimL=   865 arcHS=   909 ker(pi)=   44 newgens=0 []  (0.7s)
+D= 31 dimV=  1238 dimL=  1020 arcHS=  1076 ker(pi)=   56 newgens=1 [(9, 1)]  (1.0s)
+D= 32 dimV=  1507 dimL=  1226 arcHS=  1298 ker(pi)=   72 newgens=0 []  (1.5s)
+generators (D, r): [(14, 7), (17, 7), (23, 8), (25, 8), (31, 9)]
+  gen at weight 14, degree 7: (1)L-2*L-2*L-2*L-2*L-2*L-2*L-2
+  gen at weight 17, degree 7: (1)L-4*L-3*L-2*L-2*L-2*L-2*L-2 + (7/12)L-3*L-3*L-3*L-2*L-2*L-2*L-2
+  gen at weight 23, degree 8: (1)L-4*L-4*L-4*L-3*L-2*L-2*L-2*L-2 + (3/4)L-4*L-4*L-3*L-3*L-3*L-2*L-2*L-2 + (-151/240)L-4*L-3*L-3*L-3*L-3*L-3*L-2*L-2 + (-283/6720)L-3*L-3*L-3*L-3*L-3*L-3*L-3*L-2
+  gen at weight 25, degree 8: (1)L-6*L-4*L-3*L-3*L-3*L-2*L-2*L-2 + (3/10)L-6*L-3*L-3*L-3*L-3*L-3*L-2*L-2 + (5/73)L-5*L-5*L-5*L-2*L-2*L-2*L-2*L-2 + (180/73)L-5*L-5*L-4*L-3*L-2*L-2*L-2*L-2 + (513/292)L-5*L-5*L-3*L-3*L-3*L-2*L-2*L-2 + (70/73)L-5*L-4*L-4*L-4*L-2*L-2*L-2*L-2 + (468/73)L-5*L-4*L-4*L-3*L-3*L-2*L-2*L-2 + (258/73)L-5*L-4*L-3*L-3*L-3*L-3*L-2*L-2 + (94/365)L-5*L-3*L-3*L-3*L-3*L-3*L-3*L-2 + (302/219)L-4*L-4*L-4*L-4*L-3*L-2*L-2*L-2 + (589/219)L-4*L-4*L-4*L-3*L-3*L-3*L-2*L-2 + (2641/2920)L-4*L-4*L-3*L-3*L-3*L-3*L-3*L-2 + (None)L-4*L-3*L-3*L-3*L-3*L-3*L-3*L-3
+  gen at weight 31, degree 9: (1)L-6*L-4*L-4*L-4*L-4*L-3*L-2*L-2*L-2 + (-9323/25327)L-6*L-4*L-4*L-4*L-3*L-3*L-3*L-2*L-2 + (None)L-6*L-4*L-4*L-3*L-3*L-3*L-3*L-3*L-2 + (-19357/6138)L-6*L-4*L-3*L-3*L-3*L-3*L-3*L-3*L-3 + (6939/26479)L-5*L-5*L-5*L-5*L-3*L-2*L-2*L-2*L-2 + (None)L-5*L-5*L-5*L-4*L-4*L-2*L-2*L-2*L-2 + (None)L-5*L-5*L-5*L-4*L-3*L-3*L-2*L-2*L-2 + (None)L-5*L-5*L-5*L-3*L-3*L-3*L-3*L-2*L-2 + (23358/4703)L-5*L-5*L-4*L-4*L-4*L-3*L-2*L-2*L-2 + (-17024/6725)L-5*L-5*L-4*L-4*L-3*L-3*L-3*L-2*L-2 + (None)L-5*L-5*L-4*L-3*L-3*L-3*L-3*L-3*L-2 + (None)L-5*L-5*L-3*L-3*L-3*L-3*L-3*L-3*L-3 + (None)L-5*L-4*L-4*L-4*L-4*L-4*L-2*L-2*L-2 + (11159/15163)L-5*L-4*L-4*L-4*L-4*L-3*L-3*L-2*L-2 + (-13679/27492)L-5*L-4*L-4*L-4*L-3*L-3*L-3*L-3*L-2 + (-25425/1012)L-5*L-4*L-4*L-3*L-3*L-3*L-3*L-3*L-3 + (None)L-4*L-4*L-4*L-4*L-4*L-4*L-3*L-2*L-2 + (None)L-4*L-4*L-4*L-4*L-4*L-3*L-3*L-3*L-2 + (-12916/31813)L-4*L-4*L-4*L-4*L-3*L-3*L-3*L-3*L-3
