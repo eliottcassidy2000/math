@@ -383,9 +383,9 @@ Prime by prime (`nineteen_places.py`):
   part turns slightly positive.
 
   The same split holds in the ideal `N -> ∞` model, computed to 12 digits by the clock-graded band recursion
-  (`merge_18_19_11_22_20261018/clock_graded_ladder.py`; it reproduces the exact `E_1, ..., E_5` of the S41 audit).
-  - Lag 0 by depth: `0, -0.0935, -0.1327, -0.0959, -0.1386`.
-  - Lag 1 by depth: `-10/7, -0.6180, -0.2370, -0.0965, +0.0128`.
+  (`merge_18_19_11_22_20261018/clock_graded_ladder.py`; it reproduces the exact `E_1, ..., E_6` of the S41 audit).
+  - Lag 0 by depth: `0, -0.0935, -0.1327, -0.0959, -0.1386, -0.1023`.
+  - Lag 1 by depth: `-10/7, -0.6180, -0.2370, -0.0965, +0.0128, +0.0191`.
   - The twin part does not decay. The shrinking total comes from growing positive odd lags
     (`merge_18_19_11_22_collatz_hn_20261018.md` §3.1b).
 
