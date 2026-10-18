@@ -1,0 +1,4 @@
+[2] p = 127, r = 2, n = 8064: mod p^2 True, mod p^3 False, v_p(diff) = 2  (230.1s)
+[2] p = 103, r = 2, n = 5304: mod p^2 True, mod p^3 False, v_p(diff) = 2  (69.5s)
+[2] p = 83, r = 2, n = 3444: mod p^2 True, mod p^3 False, v_p(diff) = 2  (23.3s)
+[2] p = 73, r = 2, n = 2664: mod p^2 True, mod p^3 False, v_p(diff) = 2  (12.3s)

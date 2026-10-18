@@ -17,12 +17,29 @@ status: >
   FINITE-EXACT control: the theorem for all 237 primes 5 <= p < 1500 (and p = 3); every proof step for all odd primes
   p < 400 at r = 1, and p-adically at (p, r) = (5, 2), (7, 2), (11, 2), (13, 2), (5, 3), (7, 3)
   (s7_apery_frobenius_proof_check_20261018.py); the statement at 13 Frobenius points with r = 2, 3; the exact identities
-  for n <= 40. The congruence fails modulo p^3 (0 of 53 primes) and at n = p - 1 and
-  (3p-1)/2.
+  for n <= 40.
+  - At r = 1 it never holds modulo p^3: all primes 5 <= p < 250 here, and all odd p < 4000 in the S43 audit.
+  - At r >= 2 it fails modulo p^3 except at the non-ordinary prime p = 11 (a(11) = -44). There
+    v_11(A) = v_11(s_7) = r and the difference has v_11 = r + 1 (r = 2, 3; audit m9).
+  - It fails at n = p - 1 (even mod p) and at n = (3p-1)/2 (mod p^2; it holds mod p only at p = 11), for
+    5 <= p <= 300.
+  - Every one of these lines is produced by s7_apery_halfperiod_extended_20261018.py, rewritten after audit m10
+    because the committed version could not produce the earlier .out.
+  Independent audit confirmation:
+  - r = 1: all 549 odd primes p < 4000;
+  - Frobenius points up to n = 9841 (p = 3, r = 9) and n = 8403 (p = 7, r = 5);
+  - the Ahlgren-Ono corollary for all 429 odd primes p < 3000.
+  The audit re-derived every step (s43_audit_20261018/REPORT.md).
 
-  Novelty: not found in Osburn-Sahu-Straub (Gauss-type s_7(mp) == s_7(m) mod p^3), Gorodetsky (2021/23; Lucas
-  congruences), Beukers (2024; sums to p - 1, main text), or Z.-W. Sun's papers (abstract-level search). Novelty is
-  unverified.
+  Novelty: no prior statement was found in any of the following:
+  - Osburn-Sahu-Straub 2016 (Gauss-type s_7(mp) == s_7(m) mod p^3);
+  - Gorodetsky 2021/23 (Lucas congruences);
+  - Straub 2023;
+  - Beukers 2024, including Appendix C, entry 9.11 on s_7;
+  - two Z.-H. Sun conjecture papers;
+  - Z.-W. Sun's open-conjecture list;
+  - OEIS A183204 and A036917.
+  These were searched in S43 and by the audit. Novelty is unverified.
 session: opus-2026-10-18-S43
 source: 05-knowledge/results/factorization_vertex_supersymmetric_bridge_20261018.md
 scripts:
@@ -32,7 +49,7 @@ scripts:
   - 04-computation/experiments/s7_apery_proof_check_20261018.py (+ .out): every step of the proof
   - 04-computation/experiments/swap_lemma_halfperiod_20261018.py (+ .out): the swap C(n+k,k) <-> C(2k,n) fails for nine other weights
   - 04-computation/experiments/s7_apery_frobenius_proof_check_20261018.py (+ .out): the proof steps at Frobenius points (p-adic)
-related: [HYP-9291, THM-4528, Ahlgren-Ono 2000, Kilbourn 2006, Cooper 2012 (s_7), Mason 1985 (M24 eta-products)]
+related: [HYP-9291, THM-4652, HYP-9274, THM-4670, THM-4685, Ahlgren-Ono 2000, Kilbourn 2006, Cooper 2012 (s_7), Mason 1985 (M24 eta-products)]
 ---
 
 # THM-4669 — s_7 and the Apéry numbers at the half-period
@@ -52,7 +69,8 @@ related: [HYP-9291, THM-4528, Ahlgren-Ono 2000, Kilbourn 2006, Cooper 2012 (s_7)
 3. (Ahlgren-Ono, CITED; `r = 1`) `A((p-1)/2) ≡ a(p) (mod p^2)`, where `Σ a(m) q^m = η(2τ)^4 η(4τ)^4` is the weight-4 newform of
    level 8. Hence `s_7((p-1)/2) ≡ (-1/p) a(p) (mod p^2)`.
    - `η(2τ)^4 η(4τ)^4` is Mason's eta-product of the M24 class with cycle shape `2^4 4^4`, class 4A.
-   - It is the trace of that element on the Fock space of 24 chiral bosons (see the source note).
+   - `1/η_g = Tr(g q^(L_0 - 1))` is the trace of that element on the Fock space of 24 chiral bosons. `η_g` itself is a
+     supertrace on a fermionic Fock space (corrected after audit m8; see the source note, section 3.3).
 
 ## Proof
 
@@ -108,10 +126,11 @@ This proves statement 1. Statement 3 follows from Ahlgren-Ono. ∎
 
 ## Remarks
 
-- **Why `p^2` and not `p^3`.** (C1) and (C2) discard the `ε^2` terms. The congruence fails modulo `p^3` for every
-  tested prime.
-- **Not a general swap.** Replacing `C(n+k,k)` by `C(2k,n)` preserves half-period values only for the weight
-  `C(n,k)^2 C(n+k,k)`. It fails, even modulo `p`, for nine other weights (swap_lemma_halfperiod_20261018.out). The
+- **Why `p^2` and not `p^3`.** (C1) and (C2) discard the `ε^2` terms.
+  - At `r = 1` the congruence fails modulo `p^3` for every tested prime.
+  - At `r >= 2` the non-ordinary prime `11` is the exception: there both sides have `11`-adic valuation `r`.
+- **Not a general swap** (among the ten weights tested). Replacing `C(n+k,k)` by `C(2k,n)` preserves half-period values
+  only for the weight `C(n,k)^2 C(n+k,k)`. It fails, even modulo `p`, for the nine other tested weights (swap_lemma_halfperiod_20261018.out). The
   mechanism is the Clausen identity (E2), which is specific to the `1/2`-hypergeometric structure.
 - **Frobenius points.** The statement at `n = (p^r - 1)/2`, `r >= 2`, was filed as
   [HYP-9291](../../05-knowledge/hypotheses/HYP-9291-s7-and-apery-agree-at-every-frobenius-point-modulo-p-squared.md).

@@ -18,3 +18,6 @@
 [2] p = 7, r = 5, n = 8403: mod p^2 True, mod p^3 False, v_p(diff) = 2  (63.9s)
 [2] p = 11, r = 2, n = 60: mod p^2 True, mod p^3 True, v_p(diff) = 3  (0.0s)
 [2] p = 11, r = 3, n = 665: mod p^2 True, mod p^3 True, v_p(diff) = 4  (0.1s)
+[2] p = 11, r = 4, n = 7320: mod p^2 True, mod p^3 True, v_p(diff) = 5  (43.1s)
+[2] p = 13, r = 2, n = 84: mod p^2 True, mod p^3 False, v_p(diff) = 2  (0.0s)
+[2] p = 13, r = 3, n = 1098: mod p^2 True, mod p^3 False, v_p(diff) = 2  (0.2s)

@@ -1,0 +1,3 @@
+A(n_{1/3}(p)) == a_3B(p) mod p for all primes 7..400: False; == -a_3B(p): False; truncated 4F3(1/3,2/3,1/3,2/3) to p-1 == a_3B(p) mod p: False
+first rows (p, p mod 3, n, A mod p, a3B mod p, trunc mod p, -a3B mod p): [(7, 1, 2, 3, 6, 3, 1), (11, 2, 7, 4, 0, 4, 0), (13, 1, 4, 7, 8, 7, 5), (17, 2, 11, 13, 0, 13, 0), (19, 1, 6, 2, 18, 2, 1), (23, 2, 15, 1, 0, 1, 0), (29, 2, 19, 28, 0, 28, 0), (31, 1, 10, 8, 29, 8, 2), (37, 1, 12, 14, 36, 14, 1), (41, 2, 27, 30, 0, 30, 0)]
+A(n_{1/3}(p)) == truncated sum_{k<p} ((1/3)_k (2/3)_k/k!^2)^2 mod p for all primes 7..400: True

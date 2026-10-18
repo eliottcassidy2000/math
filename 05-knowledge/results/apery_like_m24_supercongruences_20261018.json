@@ -1,5 +1,5 @@
 {
- "PMAX": 900,
+ "PMAX": 300,
  "results": [
   {
    "seq": "Apery A (zeta3)",
@@ -8,7 +8,7 @@
    "level": 8,
    "d": 1,
    "mod": "p^2",
-   "primes": 152
+   "primes": 60
   },
   {
    "seq": "Domb",
@@ -17,7 +17,7 @@
    "level": 8,
    "d": -1,
    "mod": "p",
-   "primes": 152
+   "primes": 60
   },
   {
    "seq": "Franel4 (=s10)",
@@ -26,7 +26,7 @@
    "level": 8,
    "d": 1,
    "mod": "p",
-   "primes": 152
+   "primes": 60
   },
   {
    "seq": "Cooper s7",
@@ -35,7 +35,7 @@
    "level": 8,
    "d": -1,
    "mod": "p^2",
-   "primes": 152
+   "primes": 60
   },
   {
    "seq": "Apery b (zeta2)",
@@ -44,7 +44,7 @@
    "level": 16,
    "d": 1,
    "mod": "p^2",
-   "primes": 152
+   "primes": 60
   },
   {
    "seq": "Apery b (zeta2)",
@@ -53,7 +53,7 @@
    "level": 16,
    "d": -1,
    "mod": "p^2",
-   "primes": 152
+   "primes": 60
   },
   {
    "seq": "Franel",
@@ -62,7 +62,7 @@
    "level": 8,
    "d": -1,
    "mod": "p",
-   "primes": 152
+   "primes": 60
   },
   {
    "seq": "Franel",
@@ -71,25 +71,7 @@
    "level": 8,
    "d": 2,
    "mod": "p",
-   "primes": 152
-  },
-  {
-   "seq": "Zagier D",
-   "cls": "8A",
-   "weight": 3,
-   "level": 8,
-   "d": 1,
-   "mod": "p",
-   "primes": 152
-  },
-  {
-   "seq": "Zagier D",
-   "cls": "8A",
-   "weight": 3,
-   "level": 8,
-   "d": -2,
-   "mod": "p",
-   "primes": 152
+   "primes": 60
   },
   {
    "seq": "Zagier E",
@@ -98,7 +80,7 @@
    "level": 8,
    "d": 1,
    "mod": "p",
-   "primes": 152
+   "primes": 60
   },
   {
    "seq": "Zagier E",
@@ -107,25 +89,7 @@
    "level": 8,
    "d": -2,
    "mod": "p",
-   "primes": 152
-  },
-  {
-   "seq": "Zagier A (Franel-type #A)",
-   "cls": "8A",
-   "weight": 3,
-   "level": 8,
-   "d": -1,
-   "mod": "p",
-   "primes": 152
-  },
-  {
-   "seq": "Zagier A (Franel-type #A)",
-   "cls": "8A",
-   "weight": 3,
-   "level": 8,
-   "d": 2,
-   "mod": "p",
-   "primes": 152
+   "primes": 60
   },
   {
    "seq": "Zagier B",
@@ -134,7 +98,7 @@
    "level": 16,
    "d": 1,
    "mod": "p",
-   "primes": 152
+   "primes": 60
   },
   {
    "seq": "Zagier B",
@@ -143,7 +107,7 @@
    "level": 16,
    "d": -1,
    "mod": "p",
-   "primes": 152
+   "primes": 60
   }
  ]
 }

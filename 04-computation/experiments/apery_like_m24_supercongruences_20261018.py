@@ -25,6 +25,10 @@ def kron(d, p):
     return 1 if pow(d, (p - 1) // 2, p) == 1 else -1
 
 
+def _C0(a, b):
+    return comb(a, b) if 0 <= b <= a else 0
+
+
 SEQ = {
     # zeta(3)-type (second-order recurrences of degree 3)
     'Apery A (zeta3)': lambda n: sum(comb(n, k) ** 2 * comb(n + k, k) ** 2 for k in range(n + 1)),
@@ -33,18 +37,22 @@ SEQ = {
                                       * math.factorial(3 * k) // math.factorial(k) ** 3 for k in range(n // 3 + 1)),
     'Franel4 (=s10)': lambda n: sum(comb(n, k) ** 4 for k in range(n + 1)),
     'Cooper s7': lambda n: sum(comb(n, k) ** 2 * comb(n + k, k) * comb(2 * k, n) for k in range(n + 1)),
+    # Cooper s_18 corrected after the S43 audit (m2b): Osburn-Sahu-Straub 2016 eq. (7), Beukers 2024 sec. 9.13;
+    # 1, 6, 54, 564, 6390, ...  (the earlier formula gave 2, 0, 56, 0, 5432, ... and was not s_18)
     'Cooper s18': lambda n: sum((-1) ** k * comb(n, k) * comb(2 * k, k) * comb(2 * n - 2 * k, n - k)
-                                * (comb(2 * k, n) + comb(2 * n - 2 * k, n)) for k in range(n + 1)),
-    'Yang-Zudilin': lambda n: sum(comb(n, k) ** 2 * comb(2 * k, k) ** 2 for k in range(n + 1)),
+                                * (_C0(2 * n - 3 * k - 1, n) + _C0(2 * n - 3 * k, n)) for k in range(n // 3 + 1)),
+    # 'Yang-Zudilin' removed (S43 audit m2c): sum C(n,k)^2 C(2k,k)^2 is not Apery-like; the Yang-Zudilin sequence is
+    # sum C(n,k)^4 (Beukers 2024 sec. 9.12), already present as 'Franel4 (=s10)'.
     # zeta(2)-type (second-order recurrences of degree 2)
     'Apery b (zeta2)': lambda n: sum(comb(n, k) ** 2 * comb(n + k, k) for k in range(n + 1)),
     'Franel': lambda n: sum(comb(n, k) ** 3 for k in range(n + 1)),
     'Zagier C': lambda n: sum(comb(n, k) ** 2 * comb(2 * k, k) for k in range(n + 1)),
-    'Zagier D': lambda n: sum(comb(n, k) * comb(2 * k, k) * comb(2 * n - 2 * k, n - k) for k in range(n + 1)),
+    # 'Zagier D' removed (S43 audit m2a): sum C(n,k) C(2k,k) C(2n-2k,n-k) is Zagier's #E (identical to 'Zagier E'
+    # below); Zagier's #D is Apery's b, already present as 'Apery b (zeta2)'.
     'Zagier E': lambda n: sum(comb(n, 2 * k) * comb(2 * k, k) ** 2 * 4 ** (n - 2 * k) for k in range(n // 2 + 1)),
     'Zagier F': lambda n: sum((-1) ** k * 8 ** (n - k) * comb(n, k) * sum(comb(k, j) ** 3 for j in range(k + 1))
                               for k in range(n + 1)),
-    'Zagier A (Franel-type #A)': lambda n: sum(comb(n, k) ** 3 for k in range(n + 1)),
+    # 'Zagier A' removed (S43 audit m2): it duplicated 'Franel' (Zagier's #A is the Franel sequence).
     'Zagier B': lambda n: sum((-1) ** k * 3 ** (n - 3 * k) * comb(n, 3 * k) * math.factorial(3 * k) // math.factorial(k) ** 3
                               for k in range(n // 3 + 1)),
     'binom(2n,n)^2 (control)': lambda n: comb(2 * n, n) ** 2,

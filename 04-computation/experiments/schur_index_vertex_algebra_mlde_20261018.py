@@ -9,8 +9,9 @@ differential equations, computed from scratch (S43).
    character of so(8) at level -2, c_2d = -14, and f = q^(7/12) I satisfies the second-order MLDE
        D^(2) f = alpha E_4 f,   alpha = h (h - 1/6),  h = -c/24 = 7/12,  alpha = 35/144,
    with D^(2) = (q d/dq - E_2/6)(q d/dq).
-2. The (A1, A2) Argyres-Douglas theory: Schur index = Rogers-Ramanujan G(q) = prod 1/((1-q^(5n+1))(1-q^(5n+4))), the
-   vacuum character of the Lee-Yang model M(2,5), c = -22/5; check the MLDE with alpha = h(h - 1/6), h = 11/60.
+2. The (A1, A2) Argyres-Douglas theory: Schur index = q^(11/60) H(q), H = prod 1/((1-q^(5n+2))(1-q^(5n+3))), the
+   vacuum character of the Lee-Yang model M(2,5), c = -22/5 (corrected after S43 audit n1: G(q) =
+   prod 1/((1-q^(5n+1))(1-q^(5n+4))) is the h = -1/5 character); check the MLDE with alpha = 11/3600.
 3. Level-5 link to the repository's Apery zeta(2) numbers: Beukers' Hauptmodul t(tau) = q prod (1-q^n)^(5 (n/5))
    (the fifth power of the Rogers-Ramanujan continued fraction); we expand sum b_n t^n with b_n = sum C(n,k)^2 C(n+k,k)
    and test whether it is a weight-1 form on Gamma_1(5): an eigenform of the diamond/Hecke structure is checked through

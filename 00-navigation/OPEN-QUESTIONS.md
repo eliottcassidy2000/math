@@ -6716,7 +6716,7 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
   Q(phi); transcendental if low complexity, citation to verify).
 - S43 (factorization_vertex_supersymmetric_bridge_20261018.md): THM-4669 PROVED (Cooper s_7 and Apery agree mod p^2
   at every Frobenius point (p^r-1)/2; s_7((p-1)/2) == (-1/p) a_(4A)(p); HYP-9291 resolved) and THM-4670 PROVED (the
-  zeta(2)-class twin sum C(n+k,k)^3 == b(n) mod p^2 at the half-period, via Dixon's derivative; HYP-9292 resolved). OPEN: a mod-p^3 form; a
+  zeta(2)-class twin sum C(n+k,k)^3 == b(n) mod p^2 at the half-period, via Dixon's derivative; HYP-9292 resolved; audit M1: a corollary of the classical van Hamme/Ishikawa/Ahlgren supercongruences, MISTAKE-629). OPEN: a mod-p^3 form; a
   conceptual (K3-family / motive 8.4) reason; the Witten-index reading of the ROOT current (supercharge on sources?).
 - S43 twins (halfperiod_twin_classes_cm_log_law_20261018.md): THM-4685 PROVED (7 twin classes; three 4C classes from
   Dixon + reflection; CM harmonic law at m = +-64; invariance m -> 4096/m). OPEN HYP-9310: the law

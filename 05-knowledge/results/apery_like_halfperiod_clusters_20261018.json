@@ -56,6 +56,12 @@
    "mod": "p"
   },
   {
+   "u": "Almkvist-Zudilin",
+   "v": "Cooper s18",
+   "d": -1,
+   "mod": "p"
+  },
+  {
    "u": "Franel4 (=s10)",
    "v": "Cooper s7",
    "d": -1,
@@ -111,18 +117,6 @@
   },
   {
    "u": "Franel",
-   "v": "Zagier D",
-   "d": -1,
-   "mod": "p"
-  },
-  {
-   "u": "Franel",
-   "v": "Zagier D",
-   "d": 2,
-   "mod": "p"
-  },
-  {
-   "u": "Franel",
    "v": "Zagier E",
    "d": -1,
    "mod": "p"
@@ -143,18 +137,6 @@
    "u": "Zagier C",
    "v": "sum C(n,k)C(2k,k)C(2n-2k,n-k)^2/...: C(2n,n)sum C(n,k)^2 C(2k,k)",
    "d": 3,
-   "mod": "p"
-  },
-  {
-   "u": "Zagier D",
-   "v": "Zagier E",
-   "d": 1,
-   "mod": "p^2"
-  },
-  {
-   "u": "Zagier D",
-   "v": "Zagier E",
-   "d": -2,
    "mod": "p"
   },
   {

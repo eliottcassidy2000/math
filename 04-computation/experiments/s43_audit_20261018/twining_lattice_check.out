@@ -1,0 +1,8 @@
+11A  c = -22/5    integral & == dim mod 11 for n <= 60: True
+11A  c = 33/5     integral & == dim mod 11 for n <= 60: True
+11A  c = -77/5    integral & == dim mod 11 for n <= 60: True
+11A  c = 528/5    integral & == dim mod 11 for n <= 60: True
+23A  (c1, c2) = (-46/11, -23/11) integral & == dim mod 23 for n <= 60: True
+23A  (c1, c2) = (207/11, -23/11) integral & == dim mod 23 for n <= 60: True
+23A  (c1, c2) = (-46/11, -276/11) integral & == dim mod 23 for n <= 60: True
+23A  (c1, c2) = (-299/11, 483/11) integral & == dim mod 23 for n <= 60: True

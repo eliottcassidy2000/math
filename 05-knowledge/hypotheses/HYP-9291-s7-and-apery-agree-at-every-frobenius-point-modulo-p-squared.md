@@ -6,14 +6,16 @@ status: >
   n = (p^r - 1)/2 by valuation bounds; s7_apery_frobenius_proof_check_20261018.py checks them p-adically.
   History: filed as OPEN for r >= 2 after the r = 1 proof; the obstacle named below dissolved.
 
-  FINITE-EXACT evidence for r >= 2 (13 cases, all hold; none holds modulo p^3):
+  FINITE-EXACT evidence for r >= 2 (13 cases, all hold). None holds modulo p^3 except at the non-ordinary prime
+  p = 11, where v_11(A) = v_11(s_7) = r. The congruence then holds mod 11^3 at r = 2 and mod 11^4 at r = 3. The
+  earlier wording 'none holds modulo p^3' was false there (S43 audit m9).
   - r = 2: p = 5, 7, 11, 13, 17, 19, 23, 29, 31 (n up to 480);
   - r = 3: p = 5, 7, 11, 13 (n up to 1098).
 session: opus-2026-10-18-S43
 source: 05-knowledge/results/factorization_vertex_supersymmetric_bridge_20261018.md
 scripts:
   - 04-computation/experiments/s7_apery_halfperiod_extended_20261018.py (+ .out, .json)
-related: [THM-4669, THM-4528, Ahlgren-Ono 2000, Cooper 2012]
+related: [THM-4669, THM-4652, HYP-9274, Ahlgren-Ono 2000, Cooper 2012]
 ---
 
 # HYP-9291 — s_7 and Apéry at the Frobenius points
@@ -49,5 +51,6 @@ The alternative route, kept for the record, was the Lucas/Dwork factorisation of
 ## Tests
 
 - **Proof: done.** The valuation-bound argument, in THM-4669.
-- **Still open: higher powers of `p`.** No congruence holds modulo `p^3`, even at `r = 1`. Ask whether a corrected
+- **Still open: higher powers of `p`.** At `r = 1` no congruence holds modulo `p^3` for any odd `p < 4000`. At
+  `r >= 2` the only exception found is `p = 11`, which is non-ordinary. Ask whether a corrected
   form, with an explicit `p^2` term, holds modulo `p^3`.

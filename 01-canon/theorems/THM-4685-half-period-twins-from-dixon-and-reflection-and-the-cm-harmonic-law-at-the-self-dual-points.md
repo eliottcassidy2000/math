@@ -16,8 +16,12 @@ status: >
   - the shadow formulas for p < 200;
   - the law at m = +-64 for p < 2000.
   The six remaining CM points are HYP-9310.
-  Novelty not established. Part (i) is new as far as the S43 searches go; the law at m = 64 may already be in the
-  harmonic-congruence literature.
+  Calibration (S43 audit M1 on THM-4670): Lemma 2(a), sum a_k^3 O_k == 0 (mod p), is exactly the agreement mod p^2 of
+  the two classical guises of Beukers' zeta(2) supercongruence (van Hamme 1986, Ishikawa 1990, Ahlgren 2001).
+  - Part (i) is therefore a corollary of those classical results, plus the elementary shadows and reflection. The Dixon
+    route makes it self-contained.
+  - What is new in (i) is only the list of further binomial sums with these values: 4^n F, 16^n F.
+  Novelty not established. The law at m = 64 may already be in the harmonic-congruence literature.
 session: opus-2026-10-18-S43
 source: 05-knowledge/results/halfperiod_twin_classes_cm_log_law_20261018.md
 scripts:
