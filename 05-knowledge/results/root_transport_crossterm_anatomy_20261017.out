@@ -1,0 +1,5 @@
+d = 1: diagonal 4.856988, cross: siblings -0.490833, equal -0.977753, other 0.000000 (total cross -1.468586); lag profile (1..8): -1.4285 0.0178 -0.0758 0.0178 0.0011 -0.0011 0.0001 0.0000
+d = 2: diagonal 3.388403, cross: siblings -0.244152, equal -0.473560, other -0.095309 (total cross -0.813021); lag profile (1..8): -0.8139 0.0318 -0.0348 0.0038 0.0000 0.0000 -0.0000 0.0000
+d = 3: diagonal 2.575382, cross: siblings -0.116362, equal -0.240560, other -0.081030 (total cross -0.437952); lag profile (1..8): -0.4064 -0.0315 -0.0030 0.0030 -0.0004 0.0004 -0.0001 0.0000
+d = 4: diagonal 2.137430, cross: siblings -0.058751, equal -0.119415, other -0.044185 (total cross -0.222351); lag profile (1..8): -0.2242 -0.0082 0.0095 0.0008 -0.0002 0.0001 -0.0000 -0.0000
+d = 5: diagonal 1.915079, cross: siblings -0.029400, equal -0.060106, other -0.047154 (total cross -0.136660); lag profile (1..8): -0.1291 -0.0062 -0.0037 0.0018 0.0003 0.0004 -0.0000 0.0000

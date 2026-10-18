@@ -1,0 +1,7 @@
+d = 0  modulus        3  gamma_d = 2.2857142857  E_d = 4.857143  max|K| =      3  nonzero         13 (0.722)  mean|K| 1.846  balance True  [1 s]
+d = 1  modulus        9  gamma_d = 1.7840949405  E_d = 3.388403  max|K| =      4  nonzero        116 (0.716)  mean|K| 1.517  balance True  [1 s]
+d = 2  modulus       27  gamma_d = 1.4488781081  E_d = 2.575382  max|K| =      7  nonzero       1069 (0.733)  mean|K| 2.032  balance True  [1 s]
+d = 3  modulus       81  gamma_d = 1.2280701518  E_d = 2.137430  max|K| =     24  nonzero      11277 (0.859)  mean|K| 5.416  balance True  [1 s]
+d = 4  modulus      243  gamma_d = 1.0798430602  E_d = 1.915079  max|K| =    151  nonzero     112805 (0.955)  mean|K| 29.573  balance True  [1 s]
+d = 5  modulus      729  gamma_d = 0.9670859599  E_d = 1.778419  max|K| =   1915  nonzero    1047250 (0.985)  mean|K| 296.866  balance True  [2 s]
+d = 6  modulus     2187  gamma_d = 0.8773352247  E_d = 1.693330  max|K| =  33548  nonzero    9516784 (0.995)  mean|K| 4759.386  balance True  [83 s]

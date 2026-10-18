@@ -1,0 +1,100 @@
+octave 2^10 (sums / X^2): depth, E_d, dE_d, INTRA (sibling), INTER
+  d =   0  E 7.2831  dE -2.1976  INTRA -2.1425  INTER -0.0551
+  d =   1  E 5.0855  dE -1.2404  INTRA -1.2266  INTER -0.0138
+  d =   2  E 3.8451  dE -0.6956  INTRA -0.6331  INTER -0.0625
+  d =   3  E 3.1495  dE -0.3349  INTRA -0.3027  INTER -0.0322
+  d =   4  E 2.8146  dE -0.2400  INTRA -0.1816  INTER -0.0583
+  d =   5  E 2.5746  dE -0.1279  INTRA -0.1444  INTER +0.0165
+  d =   6  E 2.4467  dE -0.0608  INTRA -0.0892  INTER +0.0284
+  d =   7  E 2.3859  dE +0.0756  INTRA +0.0250  INTER +0.0506
+  d =   8  E 2.4615  dE -0.0245  INTRA -0.0605  INTER +0.0361
+  d =   9  E 2.4371  dE -0.2900  INTRA -0.3048  INTER +0.0148
+  d =  10  E 2.1471  dE -0.0990  INTRA +0.0213  INTER -0.1203
+  d =  11  E 2.0482  dE -0.1138  INTRA -0.1224  INTER +0.0086
+  d =  12  E 1.9344  dE +0.0508  INTRA +0.0593  INTER -0.0085
+  d =  18  E 1.9155  dE +0.1339  INTRA +0.1083  INTER +0.0256
+  d =  24  E 1.8982  dE -0.3076  INTRA -0.3353  INTER +0.0277
+  d =  30  E 1.6806  dE +0.0984  INTRA +0.1003  INTER -0.0018
+  d =  36  E 1.0887  dE -0.0295  INTRA -0.0135  INTER -0.0160
+  d =  42  E 1.0064  dE +0.0890  INTRA +0.0890  INTER +0.0000
+  d =  48  E 0.9079  dE +0.0158  INTRA +0.0158  INTER +0.0000
+  d =  54  E 0.9577  dE -0.0231  INTRA -0.0231  INTER +0.0000
+  d =  60  E 1.1275  dE -0.1431  INTRA -0.1431  INTER +0.0000
+  d =  66  E 0.9265  dE -0.0215  INTRA -0.0215  INTER +0.0000
+  d =  72  E 1.0045  dE +0.0046  INTRA +0.0046  INTER +0.0000
+  d =  78  E 1.0584  dE +0.0108  INTRA +0.0108  INTER +0.0000
+  d =  84  E 1.0477  dE +0.0392  INTRA +0.0392  INTER +0.0000
+  d =  90  E 1.0696  dE -0.0055  INTRA -0.0055  INTER +0.0000
+  total: INTRA -5.9426, INTER -0.2789; up to the trace minimum (d = 41): INTRA -6.1616 INTER -0.2789; after: INTRA 0.2190 INTER 0.0000
+octave 2^11 (sums / X^2): depth, E_d, dE_d, INTRA (sibling), INTER
+  d =   0  E 7.2874  dE -2.2057  INTRA -2.1422  INTER -0.0635
+  d =   1  E 5.0817  dE -1.2226  INTRA -1.2234  INTER +0.0008
+  d =   2  E 3.8591  dE -0.6275  INTRA -0.5909  INTER -0.0365
+  d =   3  E 3.2317  dE -0.3632  INTRA -0.3606  INTER -0.0026
+  d =   4  E 2.8684  dE -0.2103  INTRA -0.1430  INTER -0.0673
+  d =   5  E 2.6581  dE -0.0983  INTRA -0.0876  INTER -0.0107
+  d =   6  E 2.5598  dE -0.0620  INTRA -0.0758  INTER +0.0138
+  d =   7  E 2.4978  dE -0.1138  INTRA -0.1146  INTER +0.0008
+  d =   8  E 2.3841  dE +0.0235  INTRA +0.0432  INTER -0.0197
+  d =   9  E 2.4075  dE -0.0517  INTRA -0.0379  INTER -0.0138
+  d =  10  E 2.3558  dE -0.0841  INTRA -0.1569  INTER +0.0728
+  d =  11  E 2.2717  dE +0.2236  INTRA +0.1339  INTER +0.0897
+  d =  12  E 2.4953  dE -0.4969  INTRA -0.5428  INTER +0.0459
+  d =  18  E 2.5499  dE -0.3661  INTRA -0.2441  INTER -0.1220
+  d =  24  E 2.2092  dE -0.0393  INTRA -0.0027  INTER -0.0366
+  d =  30  E 2.6592  dE +0.2992  INTRA +0.2965  INTER +0.0027
+  d =  36  E 2.5913  dE -0.1140  INTRA -0.1070  INTER -0.0070
+  d =  42  E 2.0092  dE +0.1543  INTRA +0.1561  INTER -0.0017
+  d =  48  E 1.4776  dE -0.0774  INTRA -0.0745  INTER -0.0029
+  d =  54  E 1.7892  dE +0.2898  INTRA +0.2439  INTER +0.0459
+  d =  60  E 2.4037  dE -0.4264  INTRA -0.4422  INTER +0.0158
+  d =  66  E 1.7012  dE -0.1301  INTRA -0.1301  INTER +0.0000
+  d =  72  E 2.2182  dE -0.2368  INTRA -0.2368  INTER +0.0000
+  d =  78  E 2.1387  dE +0.0634  INTRA +0.0634  INTER +0.0000
+  d =  84  E 1.9468  dE +0.1119  INTRA +0.1119  INTER +0.0000
+  d =  90  E 2.0055  dE -0.0711  INTRA -0.0711  INTER +0.0000
+  d =  96  E 1.9905  dE -0.0412  INTRA -0.0412  INTER +0.0000
+  total: INTRA -5.4237, INTER 0.0903; up to the trace minimum (d = 49): INTRA -5.8809 INTER -0.0064; after: INTRA 0.4571 INTER 0.0967
+octave 2^12 (sums / X^2): depth, E_d, dE_d, INTRA (sibling), INTER
+  d =   0  E 7.2848  dE -2.2037  INTRA -2.1437  INTER -0.0599
+  d =   1  E 5.0812  dE -1.2131  INTRA -1.2165  INTER +0.0034
+  d =   2  E 3.8681  dE -0.6517  INTRA -0.6111  INTER -0.0406
+  d =   3  E 3.2164  dE -0.2973  INTRA -0.3019  INTER +0.0046
+  d =   4  E 2.9191  dE -0.2467  INTRA -0.2065  INTER -0.0402
+  d =   5  E 2.6724  dE -0.1301  INTRA -0.1091  INTER -0.0209
+  d =   6  E 2.5424  dE -0.0014  INTRA -0.0120  INTER +0.0107
+  d =   7  E 2.5410  dE -0.0800  INTRA -0.0676  INTER -0.0124
+  d =   8  E 2.4610  dE -0.0081  INTRA -0.0758  INTER +0.0678
+  d =   9  E 2.4529  dE +0.0155  INTRA +0.0165  INTER -0.0010
+  d =  10  E 2.4684  dE -0.2574  INTRA -0.2381  INTER -0.0193
+  d =  11  E 2.2110  dE -0.1024  INTRA -0.0174  INTER -0.0850
+  d =  12  E 2.1086  dE -0.0801  INTRA -0.0117  INTER -0.0684
+  d =  18  E 2.0127  dE +0.1475  INTRA +0.0980  INTER +0.0495
+  d =  24  E 3.5269  dE +1.1113  INTRA +1.1825  INTER -0.0712
+  d =  30  E 3.2728  dE -0.0439  INTRA -0.1538  INTER +0.1099
+  d =  36  E 3.8359  dE -0.2246  INTRA -0.2206  INTER -0.0039
+  d =  42  E 3.4283  dE +0.0877  INTRA +0.1206  INTER -0.0329
+  d =  48  E 2.6423  dE +0.5623  INTRA +0.5996  INTER -0.0373
+  d =  54  E 3.3977  dE -0.0834  INTRA -0.0557  INTER -0.0277
+  d =  60  E 3.9700  dE +0.3946  INTRA +0.3457  INTER +0.0489
+  d =  66  E 3.3563  dE -0.2097  INTRA -0.2097  INTER +0.0000
+  d =  72  E 3.6100  dE +0.0528  INTRA +0.0528  INTER +0.0000
+  d =  78  E 3.7384  dE +0.0320  INTRA +0.0320  INTER +0.0000
+  d =  84  E 4.2271  dE -0.0192  INTRA -0.0192  INTER +0.0000
+  d =  90  E 4.4135  dE +0.1445  INTRA +0.1445  INTER +0.0000
+  d =  96  E 4.1710  dE +0.0788  INTRA +0.0788  INTER +0.0000
+  d = 102  E 4.0254  dE -0.0163  INTRA -0.0163  INTER +0.0000
+  d = 108  E 4.0091  dE +0.0000  INTRA +0.0000  INTER +0.0000
+  total: INTRA -2.8788, INTER -0.4283; up to the trace minimum (d = 14): INTRA -5.0455 INTER -0.2622; after: INTRA 2.1667 INTER -0.1661
+N = 109060: E_0/N 4.857, min E/N 0.026 at d = 103, final 0.029; INTRA before/after min -5.267 / +0.003, INTER +0.436 / -0.000
+N = 128067: E_0/N 4.857, min E/N 0.173 at d = 78, final 0.569; INTRA before/after min -5.105 / +0.411, INTER +0.421 / -0.015
+N = 119852: E_0/N 4.857, min E/N 0.001 at d = 143, final 0.003; INTRA before/after min -5.171 / +0.002, INTER +0.315 / +0.000
+N = 115863: E_0/N 4.857, min E/N 0.011 at d = 121, final 0.042; INTRA before/after min -5.195 / +0.032, INTER +0.348 / -0.000
+N = 111937: E_0/N 4.857, min E/N 0.003 at d = 165, final 0.003; INTRA before/after min -5.241 / +0.000, INTER +0.387 / +0.000
+N = 73791: E_0/N 4.857, min E/N 0.259 at d = 74, final 0.807; INTRA before/after min -4.501 / +0.609, INTER -0.098 / -0.061
+N = 82194: E_0/N 4.857, min E/N 0.170 at d = 78, final 0.516; INTRA before/after min -4.647 / +0.368, INTER -0.040 / -0.022
+N = 119733: E_0/N 4.857, min E/N 0.002 at d = 127, final 0.007; INTRA before/after min -5.138 / +0.005, INTER +0.283 / +0.000
+N = 87418: E_0/N 4.857, min E/N 0.405 at d = 78, final 0.923; INTRA before/after min -4.559 / +0.561, INTER +0.107 / -0.043
+N = 121180: E_0/N 4.857, min E/N 0.051 at d = 86, final 0.058; INTRA before/after min -5.090 / +0.006, INTER +0.284 / +0.001
+N = 77100: E_0/N 4.857, min E/N 0.275 at d = 78, final 0.837; INTRA before/after min -4.526 / +0.600, INTER -0.057 / -0.038
+N = 88459: E_0/N 4.857, min E/N 0.566 at d = 78, final 1.086; INTRA before/after min -4.318 / +0.571, INTER +0.027 / -0.051

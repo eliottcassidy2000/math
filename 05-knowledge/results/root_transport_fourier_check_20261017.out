@@ -1,0 +1,4 @@
+d = 1 max |Khat_d - Fourier recursion| = 5.139936936952796e-14  scale 10.596266658713866
+d = 2 max |Khat_d - Fourier recursion| = 7.216733871561151e-13  scale 35.5779397974083
+d = 3 max |Khat_d - Fourier recursion| = 1.1702941738664138e-11  scale 287.0938290886897
+d = 4 max |Khat_d - Fourier recursion| = 5.55002561208477e-10  scale 3429.852882660798

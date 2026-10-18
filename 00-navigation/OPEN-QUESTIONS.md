@@ -6677,6 +6677,25 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 
 ---
 
+### UPDATE (2026-10-17, opus-2026-10-17-S41): uniform depth control of the ROOT transport as an energy process
+- THM-4667 (PROVED, elementary): the energy ledger of clock_duality_oct15's signed odd transport. It contains:
+  - the energy is the sum of squared partial currents, it changes only at merges, and it ends at R(N)^2;
+  - every fibre is sibling pairs (s, 2s+1) at scales spaced by 64 plus at most one singleton, so the energy change is
+    the sibling covariance plus inter-block terms;
+  - the ROOT coefficient at depth d is the current of the sources with at most d odd transports (shell partial sums);
+  - the octave trace ends at D_X;
+  - the ideal transport is a diagonal isometry, and in Fourier it is the band-sliced Syracuse characteristic function.
+- Data. FINITE-EXACT: the ideal ladder to d = 6, with every cross term negative. NUMERICAL: sibling covariance carries
+  94-100% of the early energy change, and the ideal operator is NOT a contraction on balanced vectors (norm 1.28-1.35).
+- Every N < 2^23 by an exact incremental algorithm: octave traces never exceed T_0 = 51/7 X^2 (X = 4..2^22), and the
+  pointwise maximum of sup_d E_d(N)/N is 10.06 (N = 7910).
+- HYP-9288 (OPEN; revised before testing to logarithmic forms): energy cone. (A) pointwise sup_d E_d <= C N log N;
+  (B) octave traces with a logarithmic budget, which in the termination regime is a mean-square maximal inequality for
+  the stopping-time shell sums of the current; (C) ideal dissipation for all d. Calibrated: (B) certifies the Mercator
+  pole (via THM-4658 and HYP-9283(B)), so it is beyond Krasikov-Lagarias.
+- OPEN: (C) for all d (the cross-term ratio is about 0.6: a spectral gap of the two-path correlation operator?); an
+  l2-over-frequencies analogue of Tao's characteristic-function decay; a Lyapunov weight on the cone of actual vectors.
+
 ### UPDATE (2026-10-17, opus-2026-10-17-S40; audited, MISTAKE-626): class numbers as tournament rankings, the exponent ladder, the full ROOT current
 - THM-4666 (PROVED, elementary; audited): the natural order of the Kronecker oriented graph of D < 0 has excess (2/w)|D|h(D) (Paley: p h(-p), the area under the Legendre walk); inverse order 3h(-p), pair-block orders (1 - 2(2/p))h(-p), randomised moves = Fekete positivity; arcs at a vertex = split primes; h = 1 (least excess) exactly at P_7, P_11, P_19, P_43, P_67, P_163 = Euler's lucky numbers; a single-vertex insertion changes the excess by -2S(t), so local optimality <=> Kalmynin's L+ (density 0), which excludes a real zero of L(s, chi_-p). OPEN: a combinatorial certificate against Siegel zeros beyond L+ (block moves = weighted positivity of the Legendre walk).
 - HYP-9287: the threshold form (natural order optimal iff L(1, chi_-p) exceeds a slowly rising threshold) is REFUTED by the S40 audit: rotation orders x -> {alpha x} beat the natural order at 167, 263, 383, 439, 503, 599, 647, 887, 911, 983, while only 47, 71, 191, 239, 311, 359, 431, 479 stay unbeaten (full rotation family); never optimal for h = 1, p > 7 (PROVED, finite). Revised conjecture: optimal only on a thin set where L(1, chi_-p) dominates its small-conductor twists. THM-4666 1c (Farey sweep, PROVED) computes every rotation order in O(p^2); a pre-registered finite-list test FAILED: 46 of 245 high-L primes in (479, 20000] keep the natural order as their best rotation order (R+, all L >= 3.58). OPEN: is R+ infinite; optimality among all orders on R+. OPEN: exact MAS(P_47), MAS(P_71) (a plain 3-dicycle MIP in HiGHS solves p = 23 in 72 s but stops at p = 31 with a gap of 22 after 1200 s; the subset DP reaches p = 31); whether the natural order is optimal at only finitely many primes; the threshold law on 500 < p <= 2000 (pre-register first); whether L(1, chi_-p) is unbounded along p = 3 mod 4 (then best Paley rankings exceed the random scale Theta(n^1.5)).

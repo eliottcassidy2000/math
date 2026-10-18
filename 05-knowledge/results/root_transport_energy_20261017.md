@@ -1,0 +1,220 @@
+# Uniform depth control from the other end: the signed ROOT transport as an energy process
+
+2026-10-17, opus-2026-10-17-S41. Owner prompt: uniform depth and scale bounds for ROOT transport; close the remaining
+Collatz gap (uniform control of cancellation and error as depth grows) by first imagining a system where that control is
+inherent, then merging. Sources, ports and integer clocks are preserved throughout: every quantity below is computed on
+the literal seeds with their actual odd-step clocks and the ROOT port.
+
+**Typing.**
+- PROVED (elementary): THM-4667, which contains:
+  - the energy ledger;
+  - the sibling factorisation of every fibre;
+  - the ROOT/shell identity for the termination regime;
+  - the Fourier form of the ideal transport.
+- FINITE-EXACT:
+  - the ideal energy ladder to `d = 6` (7 pending);
+  - the actual energy profiles of **every** `N < 2^23` (an exact incremental algorithm; invariant checked against the
+    direct current at every `N`).
+- NUMERICAL: the cross-term anatomies and the operator norms.
+- OPEN: HYP-9288, revised. No claim of closing the gap.
+
+**Bottom line.** The energy reading splits the gap cleanly.
+- **Ideal regime.** The ideal regime dissipates. The mechanism is identified: anti-correlated partial currents through
+  sibling seeds `s` and `2s + 1`. It is a property of the actual vectors, not of the operator, which is not a
+  contraction.
+- **Termination regime.** Whenever the final current is large, the energy sits almost entirely at ROOT from depth about
+  40 on. The ROOT coefficient is a partial sum of the current over stopping-time shells, which is the census object of
+  HYP-9283/9285.
+
+So the remaining gap, in energy form, is a maximal inequality for shell partial sums. The exact data to `2^23` support
+it with room to spare in the octave average.
+
+## 1. Where clock_duality left the gap
+
+In [root_braid_logistic_20261017f.md](root_braid_logistic_20261017f.md) section 3c the current `R(N) = H(4N) - H(N)` is
+pushed through `d` exact odd transports. The l1 mass of the transported source vector bounds `|R(N)|` for every
+compatible profile:
+
+    A^(d)(N) = γ_d N + O_d(log^(d+1) N),   γ_0, ..., γ_3 = 2.2857, 1.7841, 1.4489, 1.2281.
+
+Their next critical target is a coupled depth/source-scale estimate: `γ_d` decaying at a rate that survives
+`d ≍ log N`, with a remainder uniform in `d`. Extending their exact recursion gives `γ_4, γ_5, γ_6` = 1.0798, 0.9671,
+0.8773; the recursion is validated on `γ_0..γ_3`.
+- The successive ratios are 0.78, 0.81, 0.85, 0.88, 0.90, 0.91. They creep towards 1.
+- l1 is the worst case over all sign profiles. It throws away exactly the cancellation the signs provide.
+
+## 2. The other end: systems whose cancellation is controlled at every depth
+
+**Rudin-Shapiro.** The archetype is the Rudin-Shapiro pair. A butterfly `(P, Q) -> (P + zQ, P - zQ)` conserves
+`|P|^2 + |Q|^2` exactly (parallelogram law), so the partial sums are `O(sqrt N)` at every scale.
+
+**Martingale.** The same control holds for a random-merge process. If every merge combined currents with independent
+fair relative signs, the energy `Σ c^2` would be a martingale. Doob's inequality would then control it at every depth;
+the square-root law is energy conservation.
+
+**The Collatz transport is half a butterfly.** clock_duality's R5 pairs the seeds `s ≡ 1 (mod 8)` with `2s + 1`:
+- `U(2s + 1) = B(U(s))`, so the siblings merge after one odd transport;
+- they have opposite clock parity: `a(s) = 2` and `a(2s + 1) = 1`.
+
+THM-4667 statement 8 completes this. **Every fibre is a disjoint union of sibling pairs**, at scales spaced by 64, plus
+one singleton `(2u - 1)/3` when `u ≡ 2 (mod 3)`. So
+
+    (Tc)(u) = -[u ≡ 2 (3)] c((2u - 1)/3) + Σ_k (c(s_k) - c(2 s_k + 1)).
+
+A merge keeps only the difference channel `c - c'` of each butterfly and drops the sum channel `c + c'`. The energy change
+of one pair is `((c - c')^2 - (c + c')^2)/2 = -2 c c'`. So the energy falls exactly when the siblings carry correlated
+coefficients, which means anti-correlated partial currents, since `f(2s + 1) = -f(s)`. The energy ledger (THM-4667
+statements 1-5) makes this global:
+
+    E_(d+1) - E_d = INTRA_d + INTER_d,     INTRA_d = -2 Σ_(s ≡ 1 (8)) c_d(s) c_d(2s + 1),
+
+where INTER_d collects the cross terms between different blocks of one fibre (scale ratio at least 32). At full depth
+`E = R(N)^2`.
+
+## 3. The sibling covariance carries almost all of the energy change
+
+Octave sums of the energy, `/X^2`, are from `root_transport_sibling_anatomy_20261017.py`:
+
+| octave | total INTRA | total INTER | INTRA after the trace minimum | INTER after |
+|---|---|---|---|---|
+| `2^10` | -5.94 | -0.28 | +0.22 | 0.00 |
+| `2^11` | -5.42 | +0.09 | +0.46 | +0.10 |
+| `2^12` | -2.88 | -0.43 | +2.17 | -0.17 |
+
+- **Depth by depth.** At `2^12` the INTRA share of the change is:
+  - 97%, 100% and 94% at `d = 0, 1, 2`;
+  - still the bulk at `d = 3..5`.
+- **The termination climb.** The climb back from the trace minimum, from 1.98 to 3.98 at `2^12`, is entirely sibling
+  covariance with the opposite sign.
+- **Sampled `N` near `2^16`.** INTRA before the minimum is -4.3 to -5.3 per `N`. INTER is between -0.1 and +0.44.
+
+The ideal dissipation is therefore anti-correlation of the partial currents through sibling seeds. That is the transport
+form of S37's "two-octave memory, exact but cancelled" and of HYP-9284's odd-step suppression.
+
+## 4. The ideal regime: exact ladder, rate, non-contraction, Fourier form
+
+**Ladder (FINITE-EXACT; THM-4667 statement 6).** The diagonal factor is `(1/2)(3/2) Σ 4^(-j) = 1`, so only cross terms
+change the energy.
+
+| d | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+|---|---|---|---|---|---|---|---|
+| `E_d` | 4.857143 | 3.388403 | 2.575382 | 2.137430 | 1.915079 | 1.778419 | 1.693330 |
+| cross term | | -1.4686 | -0.8130 | -0.4380 | -0.2224 | -0.1373 | -0.0851 |
+| `γ_d` | 2.285714 | 1.784095 | 1.448878 | 1.228070 | 1.079843 | 0.967086 | 0.877335 |
+
+- **Rate.** Consecutive cross-term ratios are 0.55, 0.54, 0.51, 0.62, 0.62. If the geometric decay continues, the ideal
+  limit is `E_∞ ≈ 1.55` (NUMERICAL extrapolation).
+- **Sanity check.** The actual transport averages `E_6/N` = 1.693 (octaves `2^18..2^22`), and `E_0(N)/N -> 34/7`.
+
+**Not a contraction (NUMERICAL; `root_transport_symbol_norm_20261017.py`).** Weight band `b` by `2^(-b/2)`. The ideal
+transport becomes an analytic Toeplitz operator with matrix symbol
+`T(z) = 2^(-1/2) Σ_(j,a) (-1)^a (z/sqrt 2)^(a - 1 + 2j) Π_(j,a)`; its norm is `sup_(|z|=1) ||T(z)||`.
+- On the last-digit-balanced subspace (invariant by R8.2) the norm is 1.283, 1.324, 1.335, 1.346 for `d = 1..4`. On the
+  full space it is 1.447.
+- So the operator expands some balanced vectors. Dissipation is a property of the actual vectors `K_(d-1)`: the
+  correlation structure of the backward trees.
+- This rules out the "contraction plus additive matching errors" route. That route would have given
+  `sqrt(E_∞) <= sqrt(E_0) + Σ_d ||err_d||`, so it has to be done on the cone of actual vectors.
+
+**Fourier form (PROVED; THM-4667 statement 10).** Write `o = a - 1 + 2j` (so `a = o + 1 - 2j` and `o + 1` is the full
+2-adic exponent of the Syracuse step including the stripped `B`-steps). In additive characters mod `3^(d+1)`:
+
+    K̂_d(ξ, b) = Σ_(o=0)^(b) (-1)^(o+1) e(-μ_o ξ / 3^(d+1)) K̂_(d-1)(2^(-(o+1)) ξ mod 3^d, b - o),
+    μ_o = 2^(-(o+1)) - (1 - 4^(-j))/3.
+
+- **Syracuse characteristic function.** Unfolding `d` steps, `K̂_d(ξ, ·)` is the band-convolution of `K̂_0` with the
+  band-sliced characteristic function of the Syracuse offset. Its exponents `o_i + 1` are i.i.d. geometric(1/2) under
+  the band weights, and the sign is constant on each band slice.
+- **Tao.** The dissipation is the statement that the Syracuse masses on `Z/3^(d+1)` × band have sub-Poissonian number
+  variance. Tao's estimate (pointwise decay of the characteristic function) is the existing "uniform at every depth"
+  input of this type. An `l^2`-over-frequencies version is what the energy needs.
+
+## 5. The actual transport for every N < 2^23
+
+The initial source vector changes in only three entries when `N -> N + 1`, and the transport maps point masses to signed
+point masses. So all depths can be maintained at once, by walking one path of the odd-transport tree per update
+(`root_transport_incremental_trace_20261017.py`). The cost for every `N < 2^23` is 161 s, with 120,409,136 tree nodes.
+`R(N) = H(4N) - H(N)` was checked at every `N`.
+
+- **Octave traces** `T_d(X) = Σ_(X <= N < 2X) E_d(N)`, for every octave `X = 2^2, ..., 2^22`:
+  - the maximum over `d` is at `d = 0`, with `T_0/X^2 -> 51/7 = 7.2857`;
+  - the final value equals `D_X/X^2`;
+  - the only exception is `X = 2`, where `T_5 = 4 > T_0 = 2`.
+- **Final values `D_X/X^2`.** For `2^9..2^22`: 1.02, 1.06, 1.95, 3.98, 2.95, 0.66, 2.04, 0.78, 0.99, 1.60, 0.84, 0.21,
+  0.23, 4.54. The closest approach to `T_0` is `2^22`, at 0.62 of it.
+- **Profile.** The octave profile per `N` is universal in the ideal regime:
+
+  | d | 0 | 3 | 6 | 10 | 15 |
+  |---|---|---|---|---|---|
+  | `E_d/N` | 4.857 | 2.137 | 1.693 | about 1.53 | about 1.43 |
+
+  From about `d = 25` it becomes octave-specific.
+- **Pointwise.**
+  - `max_(N < 2^23) sup_d E_d(N)/N = 10.06`, at `N = 7910`. There `R^2/N = 9.08`, which is also the largest
+    `R(N)^2/N` for `2^10 <= N < 2^23`.
+  - In the octaves `2^18..2^21` (3.9 million values of `N`) every energy profile has its maximum at `d = 0`.
+  - The octaves with large current energy have a share of `N` whose energy climbs above `E_0` at some depth: `2^12`
+    13%, `2^13` 34%, `2^22` 17% (maximum 6.27).
+- **The termination regime is ROOT accumulation.** For `N` = 7910, 10870 and 66463, ROOT holds this share of the energy:
+
+  | depth | 20 | 40 | 60 |
+  |---|---|---|---|
+  | ROOT share | 40% (8% at 66463) | 75-89% | 92-98% |
+
+  - The participation ratio is 1.0-1.3 from `d = 40` on.
+  - Since `E_d = Vroot[d]^2 + Σ_(u ≠ 1) c_d(u)^2`, the late energy of these `N` is essentially the square of the ROOT
+    coefficient.
+  - When the final current is small the picture differs. At `N = 116599` (`R^2/N = 0.018`) ROOT holds 27-36% at
+    `d = 40..60`, and the remaining energy (0.4N at `d = 60`) is spread over about 10 effective seeds before it cancels.
+  - For upper bounds only large currents matter, and for those the late energy is ROOT-dominated.
+  - By THM-4667 statement 9, the ROOT coefficient is the partial sum of the current over the sources with at most `d`
+    odd transports: `Vroot[d] = Σ_(depth(x) <= d) c_0(x) f(x)`.
+
+## 6. Merging what we have with where we need to go
+
+1. **Ideal regime.** Target: ideal dissipation, or a summable bound on the ideal sibling covariance, for all `d`.
+   - Statement 10 of THM-4667 makes this an `l^2` estimate over primitive frequencies for the band-sliced Syracuse
+     characteristic function, which is Tao's object.
+   - The observed geometric rate (cross-term ratio about 0.6) suggests a spectral gap for the pair (two-path)
+     correlation operator, in the spirit of S20's coupled-orbit covariances.
+2. **Matching (integer clocks).** At fixed depth the actual coefficients differ from the ideal ones only near affine
+   thresholds. In `l^2`, the target is matching errors that add in quadrature. Statement 7 shows the actual `E_6/N`
+   equals the ideal value to 3 decimals in every octave `2^18..2^22`.
+3. **Termination regime.** For the `N` with large current the energy is `Vroot[d]^2` up to a few per cent, and
+   `Vroot[d]` is a shell partial sum of the current.
+   - HYP-9288 (B) is therefore a maximal inequality, in octave mean square, for the stopping-time shell partial sums of
+     the Collatz current. In the random-merge model that is Doob's inequality.
+   - Its endpoint `d = ∞` is the current-energy budget. Its content is the census and explicit-formula machinery:
+     THM-4659/4660, the zeros of `D`, and the near-return structure that produces the octave-specific profiles.
+
+**Calibration.** With THM-4658, `sqrt(e_(4X)) <= (sqrt(e_X) + sqrt(δ_X))/2 + sqrt(3/X)`. So a budget `δ_X <= a + b log X`
+for the current energy gives a budget of the same type for the census energy. Constant budgets up to 1806.6, and
+logarithmic budgets with `b` of order `10^3`, certify the Mercator pole (HYP-9283(B)). Either way this forces
+`limsup log B(X)/log X >= 0.99821`. The averaged cone (B), even with a logarithmic budget, is therefore beyond
+Krasikov-Lagarias.
+
+## 7. What fails, and what was corrected during the session
+
+- **l1 contraction.** Fails: a singleton unmerged terminal keeps its mass (clock_duality).
+- **Weighted `l^2` contraction for all vectors.** Fails for pure power weights `s^β`. The first fibre element
+  `(2u - 1)/3` lies below `u`, and the fibre extends to all scales `4^j u`.
+- **Operator contraction on balanced vectors.** Fails, by section 4 (norms 1.28-1.35).
+- **An absolute pointwise constant.** Not expected, so the pointwise form of HYP-9288 was weakened before testing:
+  - in the random-merge model `R(N)^2/N` has chi-square-like fluctuations with about one effective value per octave;
+  - so `sup_N R(N)^2/N` would grow like `log log N`.
+
+  The statement now carries a logarithmic factor, and the averaged form a logarithmic budget, which is all the
+  calibration needs. A first draft stated `sup_d E_d(N) <= 8.33 N` from 320 sampled `N`. The complete scan to `2^23`
+  gives 10.06 at `N = 7910`.
+
+## Reproduction
+
+```
+python 04-computation/experiments/root_transport_depth_ladder_20261017.py 6
+python 04-computation/experiments/root_transport_crossterm_anatomy_20261017.py 5
+python 04-computation/experiments/root_transport_symbol_norm_20261017.py 4 360
+python 04-computation/experiments/root_transport_incremental_trace_20261017.py 22
+python 04-computation/experiments/root_transport_sibling_anatomy_20261017.py 10 11 12 --sample 16 12
+python 04-computation/experiments/root_transport_energy_profile_20261017.py 10 17 40
+python 04-computation/experiments/root_transport_octave_trace_20261017.py 9 10 11 12
+```

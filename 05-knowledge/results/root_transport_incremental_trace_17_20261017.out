@@ -1,0 +1,21 @@
+tree: 393215 sources, 3729982 nodes, 194 levels (DMAX 195) [2 s]
+clock parities done [3 s]
+transport run done [4 s]
+invariant check R(N) = H(4N) - H(N) for all N < 2^18: True
+X = 2^ 1: T_0 2.0000  T_6 4.0000  min 2.0000 (d   0)  max 4.0000 (d   5)  final 4.0000 = D_X 4.0000 | pointwise sup_d E_d/N max 5.333 (N = 3), at d = 0: 0.500; climb max 2.67 mean 1.833; E_6/N mean 2.6667; max R^2/N 5.333
+X = 2^ 2: T_0 6.6250  T_6 2.6250  min 2.1250 (d   3)  max 6.6250 (d   0)  final 2.5000 = D_X 2.5000 | pointwise sup_d E_d/N max 9.000 (N = 4), at d = 0: 0.750; climb max 2.57 mean 1.685; E_6/N mean 2.5214; max R^2/N 9.000
+X = 2^ 3: T_0 6.8750  T_6 1.5625  min 0.3125 (d  40)  max 6.8750 (d   0)  final 0.3125 = D_X 0.3125 | pointwise sup_d E_d/N max 5.385 (N = 13), at d = 0: 1.000; climb max 2.00 mean 1.823; E_6/N mean 0.9773; max R^2/N 0.364
+X = 2^ 4: T_0 7.1172  T_6 2.6953  min 0.5391 (d  39)  max 7.1172 (d   0)  final 0.9531 = D_X 0.9531 | pointwise sup_d E_d/N max 5.200 (N = 25), at d = 0: 1.000; climb max 4.00 mean 2.308; E_6/N mean 1.8059; max R^2/N 2.207
+X = 2^ 5: T_0 7.3906  T_6 2.2539  min 0.5020 (d  39)  max 7.3906 (d   0)  final 1.3008 = D_X 1.3008 | pointwise sup_d E_d/N max 5.297 (N = 37), at d = 0: 1.000; climb max 6.40 mean 4.230; E_6/N mean 1.5310; max R^2/N 3.030
+X = 2^ 6: T_0 7.2314  T_6 2.7505  min 0.7998 (d  46)  max 7.2314 (d   0)  final 0.9951 = D_X 0.9951 | pointwise sup_d E_d/N max 5.059 (N = 85), at d = 0: 1.000; climb max 5.56 mean 3.199; E_6/N mean 1.8126; max R^2/N 2.613
+X = 2^ 7: T_0 7.2119  T_6 2.5505  min 0.4904 (d  43)  max 7.2119 (d   0)  final 0.8230 = D_X 0.8230 | pointwise sup_d E_d/N max 4.947 (N = 133), at d = 0: 1.000; climb max 5.16 mean 3.226; E_6/N mean 1.7288; max R^2/N 2.038
+X = 2^ 8: T_0 7.2751  T_6 2.4266  min 0.5174 (d  59)  max 7.2751 (d   0)  final 0.6296 = D_X 0.6296 | pointwise sup_d E_d/N max 4.905 (N = 325), at d = 0: 1.000; climb max 4.75 mean 2.930; E_6/N mean 1.6155; max R^2/N 1.124
+X = 2^ 9: T_0 7.2798  T_6 2.5608  min 0.6412 (d  48)  max 7.2798 (d   0)  final 1.0204 = D_X 1.0204 | pointwise sup_d E_d/N max 6.413 (N = 989), at d = 0: 0.891; climb max 4.74 mean 2.867; E_6/N mean 1.7124; max R^2/N 2.645
+X = 2^10: T_0 7.2831  T_6 2.4467  min 0.8426 (d  41)  max 7.2831 (d   0)  final 1.0615 = D_X 1.0615 | pointwise sup_d E_d/N max 4.873 (N = 1477), at d = 0: 1.000; climb max 7.54 mean 3.484; E_6/N mean 1.6348; max R^2/N 2.910
+X = 2^11: T_0 7.2874  T_6 2.5598  min 1.4001 (d  49)  max 7.2874 (d   0)  final 1.9539 = D_X 1.9539 | pointwise sup_d E_d/N max 5.816 (N = 2721), at d = 0: 0.953; climb max 4.63 mean 2.830; E_6/N mean 1.6985; max R^2/N 4.783
+X = 2^12: T_0 7.2848  T_6 2.5424  min 1.9771 (d  14)  max 7.2848 (d   0)  final 3.9777 = D_X 3.9777 | pointwise sup_d E_d/N max 10.063 (N = 7910), at d = 0: 0.868; climb max 6.74 mean 3.540; E_6/N mean 1.6989; max R^2/N 9.080
+X = 2^13: T_0 7.2846  T_6 2.5512  min 1.8672 (d  18)  max 7.2846 (d   0)  final 2.9457 = D_X 2.9457 | pointwise sup_d E_d/N max 9.760 (N = 10870), at d = 0: 0.655; climb max 7.02 mean 4.206; E_6/N mean 1.6962; max R^2/N 7.525
+X = 2^14: T_0 7.2855  T_6 2.5949  min 0.6608 (d 129)  max 7.2855 (d   0)  final 0.6608 = D_X 0.6608 | pointwise sup_d E_d/N max 5.478 (N = 31800), at d = 0: 0.970; climb max 6.25 mean 3.450; E_6/N mean 1.7345; max R^2/N 2.548
+X = 2^15: T_0 7.2856  T_6 2.5369  min 1.7356 (d  38)  max 7.2856 (d   0)  final 2.0387 = D_X 2.0387 | pointwise sup_d E_d/N max 6.246 (N = 43944), at d = 0: 0.940; climb max 6.44 mean 3.582; E_6/N mean 1.6906; max R^2/N 3.356
+X = 2^16: T_0 7.2857  T_6 2.5469  min 0.5043 (d  81)  max 7.2857 (d   0)  final 0.7818 = D_X 0.7818 | pointwise sup_d E_d/N max 4.886 (N = 66463), at d = 0: 1.000; climb max 8.21 mean 3.157; E_6/N mean 1.6987; max R^2/N 4.230
+X = 2^17: T_0 7.2857  T_6 2.5247  min 0.6134 (d  81)  max 7.2857 (d   0)  final 0.9850 = D_X 0.9850 | pointwise sup_d E_d/N max 5.743 (N = 169309), at d = 0: 0.912; climb max 7.27 mean 3.776; E_6/N mean 1.6837; max R^2/N 2.767
