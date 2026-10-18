@@ -1,0 +1,4 @@
+1. A edges 146, u-axis 15, v-axis 15 (same graph True), every axis family Cartesian: True; mixed 56 (all change three coordinates)
+2. induced port graph [(0, 1), (0, 4), (0, 5), (0, 7), (1, 2), (2, 3), (3, 4), (5, 6), (6, 7)]; canonical proper 6-colourings: 570; receipt patterns identical: True
+3. patterns with a verified additive colouring with c_1 = c_2 = c_C: 570 of 570 (every receipt edge checked) [3 s]
+4. two-distance graph on A: 181 edges; ports 0..4 span K_5: True; patterns extending 105, blocked 465

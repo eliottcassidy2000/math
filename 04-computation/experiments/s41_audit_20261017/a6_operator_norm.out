@@ -1,0 +1,17 @@
+1. d = 1: sup_z ||T(z)|_balanced|| = 1.283080 at theta/2pi = 0.40755; full space 1.447009; image of balanced is balanced (max defect 3.3e-16)
+2.        L =  50 bands: largest singular value of the truncated operator on balanced inputs = 1.280217
+2.        L = 100 bands: largest singular value of the truncated operator on balanced inputs = 1.282335
+2.        L = 200 bands: largest singular value of the truncated operator on balanced inputs = 1.282890
+2.        L = 400 bands: largest singular value of the truncated operator on balanced inputs = 1.283033
+3.        explicit real balanced input on 600 bands (max lift defect 2.2e-16): ||T K||^2/||K||^2 = 1.6462
+1. d = 2: sup_z ||T(z)|_balanced|| = 1.323878 at theta/2pi = 0.80074; full space 1.447009; image of balanced is balanced (max defect 3.3e-16)
+2.        L =  50 bands: largest singular value of the truncated operator on balanced inputs = 1.315789
+2.        L = 100 bands: largest singular value of the truncated operator on balanced inputs = 1.321711
+2.        L = 200 bands: largest singular value of the truncated operator on balanced inputs = 1.323319
+3.        explicit real balanced input on 600 bands (max lift defect 2.0e-16): ||T K||^2/||K||^2 = 1.7524
+1. d = 3: sup_z ||T(z)|_balanced|| = 1.335294 at theta/2pi = 0.98877; full space 1.447009; image of balanced is balanced (max defect 2.5e-16)
+2.        L =  40 bands: largest singular value of the truncated operator on balanced inputs = 1.329125
+2.        L =  80 bands: largest singular value of the truncated operator on balanced inputs = 1.333743
+3.        explicit real balanced input on 600 bands (max lift defect 1.3e-16): ||T K||^2/||K||^2 = 1.7828
+1. d = 4: sup_z ||T(z)|_balanced|| = 1.346489 at theta/2pi = -0.00000; full space 1.447009; image of balanced is balanced (max defect 2.2e-16)
+3.        explicit real balanced input on 600 bands (max lift defect 8.3e-17): ||T K||^2/||K||^2 = 1.8128

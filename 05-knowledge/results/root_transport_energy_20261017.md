@@ -241,6 +241,11 @@ point masses. So all depths can be maintained at once, by walking one path of th
        `M_d N/2^b = 3^d 2^(k+2-d-b)`;
      - occasionally one more small seed (15 at `d = 5`, 91 at `d = 6`).
    - The total `l2` error is at most `0.002 N`. Off ROOT it is at most `0.0014 N`, and `l1` error/N falls with `N`.
+   - To depth 10 (`root_transport_l2_matching_deep_20261017.py`, ideal coefficients recovered exactly from the banded
+     positive gauge), the coefficients still differ only at ROOT and at most three small seeds near ROOT (3, 7, 17, 19,
+     51, ...).
+     - Off ROOT the `l2` error stays at most `0.0014 N`.
+     - The ROOT part grows with depth, up to `0.013 N` at `d = 7`, `N = 2^16`. It is the absorbed mass.
    - So at fixed depth the whole matching problem is the ROOT accumulation, i.e. the termination regime, plus `O(1)`
      boundary seeds. This finite evidence merges items 2 and 3. Section 6b records clock_duality's P3, a uniform `l1`
      version to `d <= m/16`.

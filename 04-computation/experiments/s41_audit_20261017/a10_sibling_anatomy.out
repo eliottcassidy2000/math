@@ -1,0 +1,4 @@
+2^10: total INTRA -5.9426 INTER -0.2789; trace minimum 0.8426 at d = 41 (final 1.0615); after the minimum INTRA +0.2190 INTER +0.0000; INTRA share of dE at d = 0..5: 0.975 0.989 0.910 0.904 0.757 1.129
+2^11: total INTRA -5.4237 INTER 0.0903; trace minimum 1.4001 at d = 49 (final 1.9539); after the minimum INTRA +0.4571 INTER +0.0967; INTRA share of dE at d = 0..5: 0.971 1.001 0.942 0.993 0.680 0.891
+2^12: total INTRA -2.8788 INTER -0.4283; trace minimum 1.9771 at d = 14 (final 3.9777); after the minimum INTRA +2.1667 INTER -0.1661; INTRA share of dE at d = 0..5: 0.973 1.003 0.938 1.015 0.837 0.839
+sampled N near 2^16: INTRA before the minimum in [-5.267, -4.318]; INTER before in [-0.098, 0.436] [4 s]

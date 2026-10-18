@@ -95,6 +95,8 @@ related:
      - **Matching.** For `d <= 6` and `N = 2^16, 2^18`, the actual `c_d` equals clock_duality's ideal
        `K_d(t mod 3^(d+1), b(t))` at every seed except ROOT, the band-boundary seed `3^d`, and at most one other small
        seed. The total `l2` error is at most `0.002 N` (root_transport_l2_matching_20261017.out).
+       - To `d = 10`, the differences are at ROOT and at most three small seeds near ROOT, with off-ROOT `l2` error at
+         most `0.0014 N` (root_transport_l2_matching_deep_20261017.out).
      - **Shells.** `Σ_(X <= N < 2X) max_d c_d(1)^2 <= 5.20 X^2` for every octave `2^9..2^22`. This is statement 9's shell
        partial sums with the maximum inside the sum.
    - *Sibling anatomy* (octaves `2^10..2^12` in full, samples at `2^16`):

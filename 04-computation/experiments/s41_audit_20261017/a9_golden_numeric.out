@@ -1,0 +1,5 @@
+1. |A| = 54, |C| = 10; w = 1.709275; N = |Z|^2 = 2.709118 in (37/15, 59/20): True; |v| = 1.000000000000000, |Z+v| = 1.000000000000000; |d|^2 = 2.618034
+2. numerically unit pairs among the 5400 points: 30856 (receipt 30856, identical True); rule axis + mixed (dq, q, q): 30856 (identical True); A edges 146, C edges 15, mixed 56; closest non-unit distance | |x-y| - 1 | = 7.36e-07 [0 s]
+3. |D(A)| = 1602, |D(C)| = 82; candidates 905531494
+   float census: cumulative counts of ||x|^2 - 1| below 1e-12, 1e-10, 1e-9, 1e-8, 1e-7, 1e-6: [22, 22, 22, 24, 48, 246]
+   pure v^2-axis candidates 22 (largest deviation 6.7e-16); unit differences of C: 22; smallest deviation among all other candidates 3.412e-09 [2 s]

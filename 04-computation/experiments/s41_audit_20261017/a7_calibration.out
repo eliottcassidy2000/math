@@ -1,0 +1,5 @@
+Mercator zero s_0 = (0.998209220765 + 240.247830141j), sigma_0 = 0.99820922, q = 0.70798504
+N = 2^37: S(a_max, 0) = 145.5546, S(2, b_max) = 145.5534, S(4c, c) = 145.5549  (one level set: spread 1.00e-05)
+   budgets a + b log2 X: largest certified b with a = 51/7: 45.70; with a = 0: 45.88; at b = 1000 S/S* = 4.67
+N = 2^40: S(a_max, 0) = 410.1952, S(2, b_max) = 410.1940, S(4c, c) = 410.1967  (one level set: spread 6.65e-06)
+   budgets a + b log2 X: largest certified b with a = 51/7: 338.39; with a = 0: 338.57; at b = 1000 S/S* = 1.72

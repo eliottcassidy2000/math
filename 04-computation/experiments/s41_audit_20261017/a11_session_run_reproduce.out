@@ -1,0 +1,24 @@
+tree: 6291455 sources, 60199468 nodes, DMAX 263 [35 s]
+run done [49 s]; invariant at every N < 2^22: True
+2^ 1: T0 2.0000 Tmax 4.0000 (d 5) final 4.0000 = D_X 4.0000; sup 5.3333 at 3; peak at 0: 0.500000; E6 mean 2.66667; shell 4.2500; max |diff vs committed| 0.0e+00
+2^ 2: T0 6.6250 Tmax 6.6250 (d 0) final 2.5000 = D_X 2.5000; sup 9.0000 at 4; peak at 0: 0.750000; E6 mean 2.52143; shell 3.6250; max |diff vs committed| 0.0e+00
+2^ 3: T0 6.8750 Tmax 6.8750 (d 0) final 0.3125 = D_X 0.3125; sup 5.3846 at 13; peak at 0: 1.000000; E6 mean 0.97732; shell 1.8281; max |diff vs committed| 0.0e+00
+2^ 4: T0 7.1172 Tmax 7.1172 (d 0) final 0.9531 = D_X 0.9531; sup 5.2000 at 25; peak at 0: 1.000000; E6 mean 1.80589; shell 1.8164; max |diff vs committed| 0.0e+00
+2^ 5: T0 7.3906 Tmax 7.3906 (d 0) final 1.3008 = D_X 1.3008; sup 5.2973 at 37; peak at 0: 1.000000; E6 mean 1.53099; shell 2.2686; max |diff vs committed| 0.0e+00
+2^ 6: T0 7.2314 Tmax 7.2314 (d 0) final 0.9951 = D_X 0.9951; sup 5.0588 at 85; peak at 0: 1.000000; E6 mean 1.81260; shell 2.0493; max |diff vs committed| 0.0e+00
+2^ 7: T0 7.2119 Tmax 7.2119 (d 0) final 0.8230 = D_X 0.8230; sup 4.9474 at 133; peak at 0: 1.000000; E6 mean 1.72876; shell 1.6517; max |diff vs committed| 0.0e+00
+2^ 8: T0 7.2751 Tmax 7.2751 (d 0) final 0.6296 = D_X 0.6296; sup 4.9046 at 325; peak at 0: 1.000000; E6 mean 1.61553; shell 1.7276; max |diff vs committed| 0.0e+00
+2^ 9: T0 7.2798 Tmax 7.2798 (d 0) final 1.0204 = D_X 1.0204; sup 6.4125 at 989; peak at 0: 0.890625; E6 mean 1.71236; shell 3.8482; max |diff vs committed| 0.0e+00
+2^10: T0 7.2831 Tmax 7.2831 (d 0) final 1.0615 = D_X 1.0615; sup 4.8734 at 1477; peak at 0: 1.000000; E6 mean 1.63477; shell 1.8996; max |diff vs committed| 0.0e+00
+2^11: T0 7.2874 Tmax 7.2874 (d 0) final 1.9539 = D_X 1.9539; sup 5.8155 at 2721; peak at 0: 0.953125; E6 mean 1.69849; shell 3.2103; max |diff vs committed| 0.0e+00
+2^12: T0 7.2848 Tmax 7.2848 (d 0) final 3.9777 = D_X 3.9777; sup 10.0627 at 7910; peak at 0: 0.867676; E6 mean 1.69888; shell 5.1996; max |diff vs committed| 0.0e+00
+2^13: T0 7.2846 Tmax 7.2846 (d 0) final 2.9457 = D_X 2.9457; sup 9.7595 at 10870; peak at 0: 0.655273; E6 mean 1.69623; shell 4.7267; max |diff vs committed| 0.0e+00
+2^14: T0 7.2855 Tmax 7.2855 (d 0) final 0.6608 = D_X 0.6608; sup 5.4781 at 31800; peak at 0: 0.970215; E6 mean 1.73452; shell 1.8804; max |diff vs committed| 0.0e+00
+2^15: T0 7.2856 Tmax 7.2856 (d 0) final 2.0387 = D_X 2.0387; sup 6.2456 at 43944; peak at 0: 0.939758; E6 mean 1.69063; shell 3.4982; max |diff vs committed| 0.0e+00
+2^16: T0 7.2857 Tmax 7.2857 (d 0) final 0.7818 = D_X 0.7818; sup 4.8860 at 66463; peak at 0: 0.999924; E6 mean 1.69874; shell 1.6870; max |diff vs committed| 0.0e+00
+2^17: T0 7.2857 Tmax 7.2857 (d 0) final 0.9850 = D_X 0.9850; sup 5.7425 at 169309; peak at 0: 0.911858; E6 mean 1.68369; shell 2.4434; max |diff vs committed| 0.0e+00
+2^18: T0 7.2857 Tmax 7.2857 (d 0) final 1.6042 = D_X 1.6042; sup 4.8573 at 263749; peak at 0: 1.000000; E6 mean 1.69138; shell 2.7387; max |diff vs committed| 0.0e+00
+2^19: T0 7.2857 Tmax 7.2857 (d 0) final 0.8408 = D_X 0.8408; sup 4.8572 at 536773; peak at 0: 1.000000; E6 mean 1.69902; shell 1.8684; max |diff vs committed| 0.0e+00
+2^20: T0 7.2857 Tmax 7.2857 (d 0) final 0.2126 = D_X 0.2126; sup 4.8572 at 1148485; peak at 0: 1.000000; E6 mean 1.69322; shell 1.1022; max |diff vs committed| 0.0e+00
+2^21: T0 7.2857 Tmax 7.2857 (d 0) final 0.2319 = D_X 0.2319; sup 4.8572 at 2109637; peak at 0: 1.000000; E6 mean 1.69333; shell 1.0324; max |diff vs committed| 0.0e+00
+global: max over 1 <= N < 2^22 of sup_d E_d(N)/N = 10.062705 at N = 7910; top five [(7910, 10.0627), (1, 10.0), (7896, 9.9382), (7911, 9.9194), (7912, 9.9181)]; worst diff vs committed 0.0e+00

@@ -1,0 +1,7 @@
+base      |A|    54 |C|  10  A edges    146  C edges   15  mixed       56  two-distance    181   claimed (54, 10, 146, 15, 56, 181)  [0 s]
+contact1  |A|  1099 |C|  10  A edges   3794  C edges   15  mixed     5302  two-distance   6222   claimed (1099, 10, 3794, 15, 5302, 6222)  [0 s]
+dM        |A|   364 |C|  10  A edges   1139  C edges   15  mixed     2142  two-distance   1943   claimed (364, 10, 1139, 15, 2142, 1943)  [0 s]
+dM_C2     |A|   364 |C| 174  A edges   1139  C edges  532  mixed  2297178  two-distance   1943   claimed (364, 174, 1139, 532, 2297178, 1943)  [0 s]
+MM        |A|   364 |C|  29  A edges   1139  C edges   73  mixed    72358  two-distance   1943   claimed (364, 29, 1139, 73, 72358, 1943)  [0 s]
+contact2  |A| 10597 |C|  10  A edges  44745  C edges   15  mixed    87846  two-distance  83505   claimed (10597, 10, 44745, 15, 87846, None)  [1 s]
+e-direction: |e| = 1.000000000000000, |D(C) u D(L)| = 130, candidates 1435598710 (= 1.44e+09); ||x|^2-1| < 1e-11: 26 (pure e-axis 26, unit elements of D3: 26); smallest deviation among other candidates 1.95e-08 [3 s]

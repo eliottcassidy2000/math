@@ -45,8 +45,12 @@ def h(r, x):
     return tot
 
 
-def K0_table(B):
-    return np.array([[h(r, Fr(3, 2 ** b)) for r in range(3)] for b in range(B)], dtype=np.int64)   # [b][r]
+def K0_table(B, BEXACT=60):
+    """h_r(3/2^b) from the definition for b < BEXACT; the period 6 in b (h_r(x/64) = h_r(x), R7 of clock_duality) is
+    checked there and then used to fill the remaining bands."""
+    base = np.array([[h(r, Fr(3, 2 ** b)) for r in range(3)] for b in range(BEXACT)], dtype=np.int64)
+    assert all(np.array_equal(base[b], base[b % 6]) for b in range(BEXACT)), 'period 6 of K_0 on b < BEXACT'
+    return np.array([base[b % 6] for b in range(B)], dtype=np.int64)   # [b][r]
 
 
 def maps(Q, A):
@@ -212,9 +216,10 @@ def main():
         bb = np.arange(LONG)
         return 4 * 2.0 ** d * float(np.sum((2.0 ** bb[BMAX:]) * mu[BMAX:] ** 2)), float(np.sum(mu[BMAX:]))
     BMAX = 200
+    LONGF = 1020                                    # 2^b overflows float64 beyond b = 1023
     mu_session = np.zeros(BMAX)
-    mu_full = np.zeros(4000)
-    for b in range(4000):
+    mu_full = np.zeros(LONGF)
+    for b in range(LONGF):
         v = np.abs(K0[b % 6]).sum() / (4.0 * 2.0 ** b)
         mu_full[b] = v
         if b < BMAX:
@@ -222,10 +227,10 @@ def main():
     tails = []
     for d in (1, 6, 10, 12):
         s_e, s_g = tail(mu_session, d, BMAX, 1000)
-        f_e, f_g = tail(mu_full, d, BMAX, 4000)
+        f_e, f_g = tail(mu_full, d, BMAX, LONGF)
         tails.append(dict(d=d, session_E_tail=s_e, corrected_E_tail=f_e, session_gamma_tail=s_g, corrected_gamma_tail=f_g))
-        print('(c) d = %2d: session tail bound E %.3e gamma %.3e | corrected (initial bands >= 200 included, horizon 4000) '
-              'E %.3e gamma %.3e' % (d, s_e, s_g, f_e, f_g))
+        print('(c) d = %2d: session tail bound E %.3e gamma %.3e | corrected (initial bands 200..1019 included, horizon %d) '
+              'E %.3e gamma %.3e' % (d, s_e, s_g, LONGF, f_e, f_g))
     out['tails'] = tails
     json.dump(out, open(os.path.join(HERE, 'a4_ideal_ladder.json'), 'w'), indent=1)
     print('[%.0f s]' % (time.time() - t0))

@@ -1,0 +1,273 @@
+[
+ {
+  "k": 16,
+  "d": 0,
+  "err_energy": 0.0,
+  "err_energy_off_root": 0.0,
+  "n_err": 0,
+  "seeds": [],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 16,
+  "d": 1,
+  "err_energy": 0.0,
+  "err_energy_off_root": 0.0,
+  "n_err": 0,
+  "seeds": [],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 16,
+  "d": 2,
+  "err_energy": 0.0003814697265625,
+  "err_energy_off_root": 0.0001373291015625,
+  "n_err": 2,
+  "seeds": [
+   9
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 16,
+  "d": 3,
+  "err_energy": 0.0,
+  "err_energy_off_root": 0.0,
+  "n_err": 0,
+  "seeds": [],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 16,
+  "d": 4,
+  "err_energy": 0.0019073486328125,
+  "err_energy_off_root": 6.103515625e-05,
+  "n_err": 2,
+  "seeds": [
+   81
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 16,
+  "d": 5,
+  "err_energy": 0.0003814697265625,
+  "err_energy_off_root": 0.000244140625,
+  "n_err": 2,
+  "seeds": [
+   243
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 16,
+  "d": 6,
+  "err_energy": 0.0015106201171875,
+  "err_energy_off_root": 0.001373291015625,
+  "n_err": 3,
+  "seeds": [
+   91,
+   729
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 16,
+  "d": 7,
+  "err_energy": 0.012908935546875,
+  "err_energy_off_root": 7.62939453125e-05,
+  "n_err": 3,
+  "seeds": [
+   17,
+   137
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 16,
+  "d": 8,
+  "err_energy": 0.0090484619140625,
+  "err_energy_off_root": 0.0002593994140625,
+  "n_err": 4,
+  "seeds": [
+   3,
+   51,
+   103
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 16,
+  "d": 9,
+  "err_energy": 0.008331298828125,
+  "err_energy_off_root": 0.0002593994140625,
+  "n_err": 4,
+  "seeds": [
+   19,
+   155,
+   615
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 16,
+  "d": 10,
+  "err_energy": 0.000823974609375,
+  "err_energy_off_root": 7.62939453125e-05,
+  "n_err": 3,
+  "seeds": [
+   7,
+   233
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 18,
+  "d": 0,
+  "err_energy": 1.52587890625e-05,
+  "err_energy_off_root": 0.0,
+  "n_err": 1,
+  "seeds": [],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 18,
+  "d": 1,
+  "err_energy": 0.0,
+  "err_energy_off_root": 0.0,
+  "n_err": 0,
+  "seeds": [],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 18,
+  "d": 2,
+  "err_energy": 0.000156402587890625,
+  "err_energy_off_root": 9.5367431640625e-05,
+  "n_err": 2,
+  "seeds": [
+   9
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 18,
+  "d": 3,
+  "err_energy": 1.9073486328125e-05,
+  "err_energy_off_root": 1.52587890625e-05,
+  "n_err": 2,
+  "seeds": [
+   27
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 18,
+  "d": 4,
+  "err_energy": 0.001880645751953125,
+  "err_energy_off_root": 3.4332275390625e-05,
+  "n_err": 2,
+  "seeds": [
+   81
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 18,
+  "d": 5,
+  "err_energy": 0.00048065185546875,
+  "err_energy_off_root": 9.918212890625e-05,
+  "n_err": 3,
+  "seeds": [
+   15,
+   243
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 18,
+  "d": 6,
+  "err_energy": 0.00102996826171875,
+  "err_energy_off_root": 0.00064849853515625,
+  "n_err": 3,
+  "seeds": [
+   91,
+   729
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 18,
+  "d": 7,
+  "err_energy": 0.009815216064453125,
+  "err_energy_off_root": 0.000278472900390625,
+  "n_err": 4,
+  "seeds": [
+   17,
+   137,
+   2187
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 18,
+  "d": 8,
+  "err_energy": 0.00276947021484375,
+  "err_energy_off_root": 0.000385284423828125,
+  "n_err": 4,
+  "seeds": [
+   3,
+   51,
+   103
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 18,
+  "d": 9,
+  "err_energy": 0.00240325927734375,
+  "err_energy_off_root": 0.000385284423828125,
+  "n_err": 4,
+  "seeds": [
+   19,
+   155,
+   615
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ },
+ {
+  "k": 18,
+  "d": 10,
+  "err_energy": 0.002033233642578125,
+  "err_energy_off_root": 0.000186920166015625,
+  "n_err": 4,
+  "seeds": [
+   7,
+   115,
+   233
+  ],
+  "rounding_residue": 0.0,
+  "beyond_band": 0
+ }
+]

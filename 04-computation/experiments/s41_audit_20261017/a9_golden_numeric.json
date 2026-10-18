@@ -1,0 +1,33 @@
+{
+ "w": 1.7092753594369219,
+ "N": 2.7091184602979514,
+ "absv": 1.0,
+ "absZv": 1.0,
+ "sizeA": 54,
+ "sizeC": 10,
+ "numeric_unit_pairs": 30856,
+ "receipt_edges": 30856,
+ "equal_to_receipt": true,
+ "rule_edges": 30856,
+ "rule_equals_numeric": true,
+ "EA": 146,
+ "EC": 15,
+ "mixed": 56,
+ "nearest_nonunit_gap": 7.364428273870516e-07,
+ "DA": 1602,
+ "DC": 82,
+ "census_hits_1e6": 246,
+ "pure_axis": 22,
+ "pure_axis_max_dev": 6.661338147750939e-16,
+ "unit_differences_C": 22,
+ "hist": {
+  "1e-12": 22,
+  "1e-10": 22,
+  "1e-09": 22,
+  "1e-08": 24,
+  "1e-07": 48,
+  "1e-06": 246
+ },
+ "smallest_non_axis_deviation": 3.4121518943663887e-09,
+ "nearest_outside_window": 1.0192837263112153e-06
+}

@@ -1,0 +1,31 @@
+(a) d = 0: gamma 2.2857142857  E 4.857142857 (truncated sum 4.857142857)  period True balance True max|K| 3 [0 s]
+      exact: gamma = 16/7, E = 34/7
+(a) d = 1: gamma 1.7840949405  E 3.388402513 (truncated sum 3.388402513)  period True balance True max|K| 4  diag - E_(d-1) = -4.53e-14, cross -1.468740 [1 s]
+      exact: gamma = 155896/87381, E = 32898/9709
+(a) d = 2: gamma 1.4488781081  E 2.575381952 (truncated sum 2.575381952)  period True balance True max|K| 7  diag - E_(d-1) = -6.93e-14, cross -0.813021 [1 s]
+      exact: gamma = 26100667631514128/18014398509481983, E = 572764898734162/222399981598543
+(a) d = 3: gamma 1.2280701518  E 2.137429991 (truncated sum 2.137429991)  period True balance True max|K| 24  diag - E_(d-1) = -2.62e-13, cross -0.437952 [2 s]
+      exact: gamma = 7179306150160597784599925253066127671320925923560/5846006549323611672814739330865132078623730171903, E = 51421521510746145563132153541180878430962713618/24057640120673299065081231814259802792690247621
+(a) d = 4: gamma 1.0798430602  E 1.915078985 (truncated sum 1.915078985)  period True balance True max|K| 151  diag - E_(d-1) = -8.18e-13, cross -0.222351 [3 s]
+(a) d = 5: gamma 0.9670859599  E 1.778418992 (truncated sum 1.778418992)  period True balance True max|K| 1915  diag - E_(d-1) = -1.40e-12, cross -0.136660 [10 s]
+(a) d = 6: gamma 0.8773352247  E 1.693329901 (truncated sum 1.693329901)  period None balance True max|K| 33548  diag - E_(d-1) = -4.27e-12, cross -0.085089 [33 s]
+(b) d =  0: E 4.857142857 gamma 2.285714285714 cross - [33 s]
+(b) d =  1: E 3.388402513 gamma 1.784094940548 cross -1.468740 [33 s]
+(b) d =  2: E 2.575381952 gamma 1.448878108130 cross -0.813021 [33 s]
+(b) d =  3: E 2.137429991 gamma 1.228070151750 cross -0.437952 [33 s]
+(b) d =  4: E 1.915078985 gamma 1.079843060221 cross -0.222351 [33 s]
+(b) d =  5: E 1.778418992 gamma 0.967085959924 cross -0.136660 [33 s]
+(b) d =  6: E 1.693329901 gamma 0.877335224707 cross -0.085089 [33 s]
+(b) d =  7: E 1.634125798 gamma 0.802929800548 cross -0.059204 [33 s]
+(b) d =  8: E 1.590908284 gamma 0.738891220381 cross -0.043218 [34 s]
+(b) d =  9: E 1.556295497 gamma 0.682907714873 cross -0.034613 [35 s]
+(b) d = 10: E 1.527640161 gamma 0.633171196420 cross -0.028655 [38 s]
+(b) d = 11: E 1.501753864 gamma 0.588440140212 cross -0.025886 [48 s]
+(b) d = 12: E 1.479358488 gamma 0.548051196347 cross -0.022395 [80 s]
+    cross-term ratios: 0.5535 0.5387 0.5077 0.6146 0.6226 0.6958 0.7300 0.8009 0.8279 0.9034 0.8651
+(c) d =  1: session tail bound E 1.001e-55 gamma 1.248e-58 | corrected (initial bands 200..1019 included, horizon 1020) E 1.022e-55 gamma 1.261e-58
+(c) d =  6: session tail bound E 8.283e-40 gamma 2.005e-51 | corrected (initial bands 200..1019 included, horizon 1020) E 8.283e-40 gamma 2.005e-51
+(c) d = 10: session tail bound E 7.746e-30 gamma 4.838e-47 | corrected (initial bands 200..1019 included, horizon 1020) E 7.746e-30 gamma 4.838e-47
+(c) d = 12: session tail bound E 2.296e-25 gamma 4.160e-45 | corrected (initial bands 200..1019 included, horizon 1020) E 2.296e-25 gamma 4.160e-45
+[80 s]
+a4 exit 0

@@ -1,0 +1,10 @@
+1. d = 1: max |Khat_d - recursion| = 5.14e-14 (scale 10.6)
+1. d = 2: max |Khat_d - recursion| = 7.22e-13 (scale 35.6)
+1. d = 3: max |Khat_d - recursion| = 1.17e-11 (scale 287.1)
+1. d = 4: max |Khat_d - recursion| = 5.55e-10 (scale 3429.9)
+2. F_A = 3 2^-A s + mu_o = B^-j((3s+1)/2^a) mod 3^(d+1), d <= 4, all o < 2 3^(d+1): 0 disagreements
+3. d = 1: 8 words (letters 1..8): composed offset = ordinary Syracuse offset in 2; = C S^(d-1) A form in 8
+3. d = 2: 64 words (letters 1..8): composed offset = ordinary Syracuse offset in 4; = C S^(d-1) A form in 64
+3. d = 3: 512 words (letters 1..8): composed offset = ordinary Syracuse offset in 10; = C S^(d-1) A form in 512
+4. A = 3 mod 9: P_3(0) = 1, S_3(0) = 8; P_3(r) = (3r-1)/8: True
+   11 -> 13 in 3 shortcut steps: [11, 17, 26, 13]; seeds: P(11) = 17 (a = 1, braid 0), P(17) = seed(13) = 3 (a = 2, 13 = B(3))

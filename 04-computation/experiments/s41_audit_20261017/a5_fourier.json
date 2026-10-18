@@ -1,0 +1,41 @@
+{
+ "fourier_d1": {
+  "max_err": 5.139936936952796e-14,
+  "scale": 10.596266658713866
+ },
+ "fourier_d2": {
+  "max_err": 7.216733871561151e-13,
+  "scale": 35.5779397974083
+ },
+ "fourier_d3": {
+  "max_err": 1.1702941738664138e-11,
+  "scale": 287.0938290886897
+ },
+ "fourier_d4": {
+  "max_err": 5.55002561208477e-10,
+  "scale": 3429.852882660798
+ },
+ "branch_map_forms_bad": 0,
+ "offsets": {
+  "1": {
+   "words": 8,
+   "equal_to_ordinary_syracuse_offset": 2,
+   "equal_to_CSA": 8
+  },
+  "2": {
+   "words": 64,
+   "equal_to_ordinary_syracuse_offset": 4,
+   "equal_to_CSA": 64
+  },
+  "3": {
+   "words": 512,
+   "equal_to_ordinary_syracuse_offset": 10,
+   "equal_to_CSA": 512
+  }
+ },
+ "examples": {
+  "P3_0": 1,
+  "S3_0": 8,
+  "clock_11_to_13": 3
+ }
+}

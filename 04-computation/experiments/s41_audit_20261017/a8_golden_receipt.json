@@ -1,0 +1,17 @@
+{
+ "vertices": 5400,
+ "edges": 30856,
+ "mixed": 56,
+ "EA": 146,
+ "EU": 15,
+ "EV": 15,
+ "same_coefficient_graph": true,
+ "cartesian_axis_families": true,
+ "mixed_classified": 56,
+ "patterns_equal_canonical": true,
+ "additive_shared_found_and_verified": 570,
+ "two_distance_edges": 181,
+ "pentagon_K5": true,
+ "two_distance_extending": 105,
+ "two_distance_blocked": 465
+}
