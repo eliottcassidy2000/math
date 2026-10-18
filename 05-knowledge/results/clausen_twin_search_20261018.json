@@ -1,0 +1,122 @@
+[
+ {
+  "summand": "C(n,k) C(n,k) C(n+k,k)",
+  "target": "b",
+  "eps": "+1",
+  "identical": true
+ },
+ {
+  "summand": "C(n,k) C(n,k) C(n+k,k)",
+  "target": "b",
+  "eps": "(-1)^n",
+  "identical": true
+ },
+ {
+  "summand": "C(n,k) C(2k,k) C(n+k,2k)",
+  "target": "b",
+  "eps": "+1",
+  "identical": true
+ },
+ {
+  "summand": "C(n,k) C(2k,k) C(n+k,2k)",
+  "target": "b",
+  "eps": "(-1)^n",
+  "identical": true
+ },
+ {
+  "summand": "C(n,k) C(2k,k) C(n+k,n-k)",
+  "target": "b",
+  "eps": "+1",
+  "identical": true
+ },
+ {
+  "summand": "C(n,k) C(2k,k) C(n+k,n-k)",
+  "target": "b",
+  "eps": "(-1)^n",
+  "identical": true
+ },
+ {
+  "summand": "C(n+k,k) C(n+k,k) C(n+k,k)",
+  "target": "b",
+  "eps": "+1",
+  "identical": false
+ },
+ {
+  "summand": "C(n+k,k) C(n+k,k) C(n+k,k)",
+  "target": "b",
+  "eps": "(-1)^n",
+  "identical": false
+ },
+ {
+  "summand": "C(n,k) C(n,k) C(n+k,k) C(n+k,k)",
+  "target": "A",
+  "eps": "+1",
+  "identical": true
+ },
+ {
+  "summand": "C(n,k) C(n,k) C(n+k,k) C(2k,n)",
+  "target": "A",
+  "eps": "(-1)^n",
+  "identical": false
+ },
+ {
+  "summand": "C(n,k) C(n+k,k) C(2k,k) C(k,n-k)",
+  "target": "A",
+  "eps": "(-1)^n",
+  "identical": false
+ },
+ {
+  "summand": "C(n,k) C(n+k,k) C(2k,k) C(n+k,2k)",
+  "target": "A",
+  "eps": "+1",
+  "identical": true
+ },
+ {
+  "summand": "C(n,k) C(n+k,k) C(2k,k) C(n+k,n-k)",
+  "target": "A",
+  "eps": "+1",
+  "identical": true
+ },
+ {
+  "summand": "C(n,k) C(2k,k) C(2k,n) C(n+k,2k)",
+  "target": "A",
+  "eps": "(-1)^n",
+  "identical": false
+ },
+ {
+  "summand": "C(n,k) C(2k,k) C(2k,n) C(n+k,n-k)",
+  "target": "A",
+  "eps": "(-1)^n",
+  "identical": false
+ },
+ {
+  "summand": "C(2k,k) C(2k,k) C(k,n-k) C(n+k,2k)",
+  "target": "A",
+  "eps": "(-1)^n",
+  "identical": false
+ },
+ {
+  "summand": "C(2k,k) C(2k,k) C(k,n-k) C(n+k,n-k)",
+  "target": "A",
+  "eps": "(-1)^n",
+  "identical": false
+ },
+ {
+  "summand": "C(2k,k) C(2k,k) C(n+k,2k) C(n+k,2k)",
+  "target": "A",
+  "eps": "+1",
+  "identical": true
+ },
+ {
+  "summand": "C(2k,k) C(2k,k) C(n+k,2k) C(n+k,n-k)",
+  "target": "A",
+  "eps": "+1",
+  "identical": true
+ },
+ {
+  "summand": "C(2k,k) C(2k,k) C(n+k,n-k) C(n+k,n-k)",
+  "target": "A",
+  "eps": "+1",
+  "identical": true
+ }
+]

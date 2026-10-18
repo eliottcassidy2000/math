@@ -1,0 +1,21 @@
+HIT  u = sum C(n,k) C(n,k) C(n+k,k)                           == +1 * b (mod p^2), p <= 300   [identical sequence]
+HIT  u = sum C(n,k) C(n,k) C(n+k,k)                           == (-1)^n * b (mod p^2), p <= 300   [identical sequence]
+HIT  u = sum C(n,k) C(2k,k) C(n+k,2k)                         == +1 * b (mod p^2), p <= 300   [identical sequence]
+HIT  u = sum C(n,k) C(2k,k) C(n+k,2k)                         == (-1)^n * b (mod p^2), p <= 300   [identical sequence]
+HIT  u = sum C(n,k) C(2k,k) C(n+k,n-k)                        == +1 * b (mod p^2), p <= 300   [identical sequence]
+HIT  u = sum C(n,k) C(2k,k) C(n+k,n-k)                        == (-1)^n * b (mod p^2), p <= 300   [identical sequence]
+HIT  u = sum C(n+k,k) C(n+k,k) C(n+k,k)                       == +1 * b (mod p^2), p <= 300
+HIT  u = sum C(n+k,k) C(n+k,k) C(n+k,k)                       == (-1)^n * b (mod p^2), p <= 300
+HIT  u = sum C(n,k) C(n,k) C(n+k,k) C(n+k,k)                  == +1 * A (mod p^2), p <= 300   [identical sequence]
+HIT  u = sum C(n,k) C(n,k) C(n+k,k) C(2k,n)                   == (-1)^n * A (mod p^2), p <= 300
+HIT  u = sum C(n,k) C(n+k,k) C(2k,k) C(k,n-k)                 == (-1)^n * A (mod p^2), p <= 300
+HIT  u = sum C(n,k) C(n+k,k) C(2k,k) C(n+k,2k)                == +1 * A (mod p^2), p <= 300   [identical sequence]
+HIT  u = sum C(n,k) C(n+k,k) C(2k,k) C(n+k,n-k)               == +1 * A (mod p^2), p <= 300   [identical sequence]
+HIT  u = sum C(n,k) C(2k,k) C(2k,n) C(n+k,2k)                 == (-1)^n * A (mod p^2), p <= 300
+HIT  u = sum C(n,k) C(2k,k) C(2k,n) C(n+k,n-k)                == (-1)^n * A (mod p^2), p <= 300
+HIT  u = sum C(2k,k) C(2k,k) C(k,n-k) C(n+k,2k)               == (-1)^n * A (mod p^2), p <= 300
+HIT  u = sum C(2k,k) C(2k,k) C(k,n-k) C(n+k,n-k)              == (-1)^n * A (mod p^2), p <= 300
+HIT  u = sum C(2k,k) C(2k,k) C(n+k,2k) C(n+k,2k)              == +1 * A (mod p^2), p <= 300   [identical sequence]
+HIT  u = sum C(2k,k) C(2k,k) C(n+k,2k) C(n+k,n-k)             == +1 * A (mod p^2), p <= 300   [identical sequence]
+HIT  u = sum C(2k,k) C(2k,k) C(n+k,n-k) C(n+k,n-k)            == +1 * A (mod p^2), p <= 300   [identical sequence]
+total hits: 20

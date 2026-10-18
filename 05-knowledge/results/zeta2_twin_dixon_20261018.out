@@ -1,0 +1,3 @@
+sum C(n+k,k)^3 == b(n) mod p^2, all primes 5..997: True
+sum a_k^3 O_k == 0 mod p, primes < 400: True
+H_n D_n == S_n mod p, primes < 400: True
