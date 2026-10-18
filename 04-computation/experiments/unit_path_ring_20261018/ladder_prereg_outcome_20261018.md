@@ -15,7 +15,8 @@ The Python run was stopped before printing d = 8.
 
 - **P1 FAILED**: T_8 = -0.0877 is outside [-0.106, -0.098].
 - **P2 FAILED**: lag 1 at d = 8 is +0.0383, below d = 7's +0.0401.
-- **P3 FAILED**: the other lags sum to +0.0445, outside [+0.055, +0.063].
+- **P3 FAILED**: the other lags sum to +0.0445, outside [+0.055, +0.063]. P3 was implied by P1, since cross_8 was known in
+  advance (audit G1, N7), so it is not an independent test.
 - **Q1 FAILED**: T_9 = -0.0786 and T_10 = -0.0715.
 - **Q2 FAILED**: lag 1 decreases, +0.0373 then +0.0364.
 - **Q3 PASSED**: E_9 = 1.556295496813 and E_10 = 1.527640161230 agree with S41 a4.

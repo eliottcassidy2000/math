@@ -110,14 +110,17 @@ In `G_q = Cay(F_(q^2), mu_(q+1))`, the residue graph of Lemma R:
     `R^2 + r^2 = 1`, `R/r = phi`, `R r = 1/sqrt5`: a golden Pythagorean triple.
   - It lives in `Q(zeta20)`. At the prime above 2 it reduces exactly onto that Clebsch layer: `R -> w`, `r -> w^2`, so
     the image is `w mu_5 ∪ w^2 mu_5 = F_16^× ∖ mu_5`.
-  - At `q = 19 (mod 20)` it reduces into `G_q`.
+  - At every `q = 19 (mod 20)` it reduces injectively into `G_q`, because all 45 difference norms are powers of 5.
   - In characteristic 0 the Petersen graph is the unit-sum graph of the two-sums, since a disjoint pair sums to minus
     the fifth root.
 - **Census.** For primes `q <= 397`, the Petersen graph embeds in `G_q` exactly for
   `{17, 19} ∪ {41..397} ∖ {73}`.
   - Python to 113 was recounted independently by audit G1; an O(q^3) C counter takes it to 397.
   - The counts through a fixed directed edge are irregular: 480, 768, 240, 3840, 480 at `q = 17, 19, 41, 43, 47`.
-    For `q > 200`, `count/q^2` lies between 0.31 and 1.26.
+    For `q > 200`, `count/q^2` lies between 0.31 and 1.26. In the large-`q` sample (the 19 primes
+    `1009 <= q <= 1117`, `petersen_count_1000_1400.out`) it lies between 0.865 and 1.059, mean 0.977.
+  - So the copies grow like `q^2`, with fluctuations consistent with `O(q^(3/2))`. That suggests one rational
+    top-dimensional component of the realization variety for all large `q` (HEURISTIC).
   - The real realization space is a smooth 2-parameter family (rigidity rank 15). The gaps could come from Frobenius
     permuting geometric components, from Lang–Weil error terms of a high-degree variety, or from removing
     non-injective points (HEURISTIC). The law is OPEN.
@@ -219,10 +222,10 @@ STRUCTURAL / CONDITIONAL use).
 Read with the owner's download permission, they could be compared with THM-4700's reflection mechanism and with the
 ladder's crossover.
 
-## 6. Collatz: the clock-graded ladder to depth 7 or 8 (FINITE-EXACT, ideal model)
+## 6. Collatz: the clock-graded ladder to depth 10 (FINITE-EXACT, ideal model)
 
 `clock_graded_ladder.py` (Python, to `d = 7`) and its C port `clock_graded_ladder.c` reproduce `E_1`-`E_10` against S41
-a4's exact values. The C port runs `d <= 9` in 56 s and `d = 10` in 123 s, using 1.5 GB. New rows, in THM-4667 units:
+a4's values (exact rationals for `d <= 6`, float64 beyond). The C port runs `d <= 9` in 56 s and `d = 10` in 123 s, using 1.5 GB. New rows, in THM-4667 units:
 
 | `d` | Cross term | Lag 0 (twins) | Lag 1 | Lag 2 | Lag 3 |
 |---:|---:|---:|---:|---:|---:|
@@ -238,6 +241,7 @@ a4's exact values. The C port runs `d <= 9` in 56 s and `d = 10` in 123 s, using
 - **FAILED:** a persistent twin part in `[-0.106, -0.098]` at `d = 8, 9, 10`; lag 1 growing; the other lags at
   `d = 8` summing to `[+0.055, +0.063]`.
 - **PASSED:** reproduction of S41's `E_9`, `E_10`.
+- P3 was implied by P1, since `cross_8` was known in advance (audit G1, N7).
 
 The brief-2 heuristic of a persistent same-clock dissipation is refuted. The twin part decays by about 0.9 per depth
 from `d = 8`, while staying negative: the sign law holds through `d = 10`. Lag 1 peaks at `d = 7`.
@@ -264,8 +268,9 @@ from `d = 8`, while staying negative: the sign law holds through `d = 10`. Lag 1
 - **Three-step copy connectors.** Points on the genus-one quartics of THM-4700 for `x = b(m' - m) + s`. Local
   solubility at the places above 2, 3 and 19 would either kill them (proving connector length at least 4) or license a
   search.
-- **Petersen census.** The geometric components of the Petersen realization variety, their fields of definition, and
-  the resulting Chebotarev law. This includes why `q = 73` fails and why 43 has 3840 copies.
+- **Petersen census.** Prove `count(q) = q^2 + O(q^(3/2))`: identify the realization variety's top component and show
+  it is absolutely irreducible over `Q`. Then explain the small-`q` gaps (`q <= 37`, and 73) as error-term effects or
+  through lower-dimensional strata.
 - **Ladder.** The C port reaches `d = 10` (1.5 GB); `d = 11` needs a memory-lean version. Determine the decay laws of
   the twin and lag-1 parts, and so whether `E_d` has a positive limit.
 - **Yang–Mills.** With permission, read Theorem 0 and the rotation-invariance PDF, and test whether reflection

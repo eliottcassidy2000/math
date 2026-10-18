@@ -200,6 +200,9 @@ range over a unit circle. Every later vertex has at least two placed neighbours,
   - the removal of non-injective points.
 - The golden component guarantees copies at every `q = 19 (mod 20)` by (4b). The data suggest copies for every prime
   `q >= 79`.
+- **Large-`q` sample.** For the 19 primes `1009 <= q <= 1117`, `count/q^2` lies in `[0.865, 1.059]`, with mean 0.977
+  (`petersen_count_1000_1400.out`, run stopped at 1117). This fits `count(q) = q^2 + O(q^(3/2))`, i.e. one rational
+  top-dimensional component for all large `q`, with the small-`q` gaps as error-term effects. HEURISTIC; OPEN.
 - Identifying all components and their fields of definition is open.
 
 **Six-colour programme (HYP-9289).**

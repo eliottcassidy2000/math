@@ -1,0 +1,20 @@
+q = 1009  q mod 20 =  9  q mod 60 = 49  count =  1052160  count/q^2 = 1.0335
+q = 1013  q mod 20 = 13  q mod 60 = 53  count =  1050720  count/q^2 = 1.0239
+q = 1019  q mod 20 = 19  q mod 60 = 59  count =   898368  count/q^2 = 0.8652
+q = 1021  q mod 20 =  1  q mod 60 =  1  count =   921600  count/q^2 = 0.8841
+q = 1031  q mod 20 = 11  q mod 60 = 11  count =  1014720  count/q^2 = 0.9546
+q = 1033  q mod 20 = 13  q mod 60 = 13  count =  1102080  count/q^2 = 1.0328
+q = 1039  q mod 20 = 19  q mod 60 = 19  count =  1026048  count/q^2 = 0.9505
+q = 1049  q mod 20 =  9  q mod 60 = 29  count =   977520  count/q^2 = 0.8883
+q = 1051  q mod 20 = 11  q mod 60 = 31  count =  1036800  count/q^2 = 0.9386
+q = 1061  q mod 20 =  1  q mod 60 = 41  count =  1126080  count/q^2 = 1.0003
+q = 1063  q mod 20 =  3  q mod 60 = 43  count =  1098240  count/q^2 = 0.9719
+q = 1069  q mod 20 =  9  q mod 60 = 49  count =  1167360  count/q^2 = 1.0215
+q = 1087  q mod 20 =  7  q mod 60 =  7  count =  1236480  count/q^2 = 1.0465
+q = 1091  q mod 20 = 11  q mod 60 = 11  count =  1162560  count/q^2 = 0.9767
+q = 1093  q mod 20 = 13  q mod 60 = 13  count =  1182720  count/q^2 = 0.9900
+q = 1097  q mod 20 = 17  q mod 60 = 17  count =  1198560  count/q^2 = 0.9960
+q = 1103  q mod 20 =  3  q mod 60 = 23  count =  1257120  count/q^2 = 1.0333
+q = 1109  q mod 20 =  9  q mod 60 = 29  count =  1100160  count/q^2 = 0.8945
+q = 1117  q mod 20 = 17  q mod 60 = 37  count =  1320960  count/q^2 = 1.0587
+(stopped by the session after these primes; the remaining primes up to 1400 were not run)
