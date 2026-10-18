@@ -32,6 +32,9 @@
     "04-computation/experiments/charge_contexts_20261018k/source_concentration_everyN.json": "20ae8c89f63f5f0f7f55be0ccf26d6216c5ad6e1db5b821ac74604b5a1dec5ce",
     "04-computation/experiments/charge_contexts_20261018k/source_tensor.json": "77339eb43d8561dfb8c91f4da8b583bcd5c02c6be7458618e76c2376fc444e63",
     "04-computation/experiments/charge_contexts_20261018k/support_compiler_control.json": "3e19de5e21232d85479d6159d761ec34c7b317c8d1e385ab2a10379ba68f0fb5",
-    "05-knowledge/results/source_orientation_boundary_contexts_20261018k.md": "b647a3030a495c640dcd74a6d29b89735ab3eb36723024950f97975f63dae96c"
-  }
+    "05-knowledge/results/source_orientation_boundary_contexts_20261018k.md": "70422a7184642a440751338a78229702449e36271fc99c25718604356f91f485",
+    "04-computation/experiments/periodic_support_branches_20261018k.py": "dd7c3a024f03708f4c8b8ce2478abcaa92806935eb2a78a0402b0c298c2f355b",
+    "04-computation/experiments/charge_contexts_20261018k/periodic_branches.json": "da6a9d8be2d2c9b2fc21e38d7757d44451a4e6f7ec792fa037561dfe53f69742"
+  },
+  "later_incoming_commit": "82c9e40041bfa2bdd26549f0a57925ba09813edb"
 }

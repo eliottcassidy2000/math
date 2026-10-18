@@ -391,6 +391,77 @@ six-way witness/group combinations, the numbers of rich factors are
 five would be impossible by G2. This is a description of these witnesses,
 not a maximum over all colourings of the graph.
 
+### Incoming shade controls and a complete local branch cover
+
+The meaningful later pull is `82c9e40041`: [marked snark shade
+lifts](snark_boundary_transfer_20261018a.md), [generic cubic retractions
+and exceptional phases](cubic_boundary_search_20261018a.md), and the
+[thirteen-new-projected-pair filter](exceptional_factor_support_20261018a.md).
+The last filter requires a loopless projection to its exact eight anchors;
+we do not apply it just by counting physical edges in our larger product.
+The cubic packet's complete-graph retractions also reinforce why our
+selected-family tests must retain their narrower scope.
+
+The shade-lift mechanism gives a concrete next refinement of G2. Its
+pair labels lie in the nonzero elements of `F_2^2`, with a separate binary
+shade; these pair labels are **not** `Z/3` flow values. In contrast, the
+following uses the actual reductions of our additive colour difference
+in `Z/6` modulo 2 and 3. The two constructions share a cycle-consistency
+test, not an identification of these label spaces.
+
+**G4 (PROVED).** Every additive six-colouring satisfying one six-way
+Cartesian contact belongs to a union of 375 explicitly specified local
+congruence branches. A branch chooses two distinct factors and, for each,
+one of the five conditions
+
+```
+all directional colour differences = a mod p,
+(p,a) in {(2,0),(2,1),(3,0),(3,1),(3,2)}.               (13)
+```
+
+Proof: G2 leaves at least two non-rich factors. The classification of
+non-rich subsets above says exactly that each is contained in a coset
+modulo 2 or modulo 3. There are `binomial(6,2)*5^2=375` choices. They
+overlap (singletons satisfy two types), but cover every permitted additive
+colouring. They are necessary branches, not sufficient colourings. QED.
+
+Each choice gives equations `f(y)-f(x)=a mod p` on **every original
+factor pair** in that directional pair set. Several contacts may share
+these vertices. For a fixed global branch selection these linear
+equations are consistent iff every oriented cycle has total increment
+zero modulo p. A spanning-tree potential proves sufficiency; summing a
+cycle proves necessity. An inconsistent system returns the literal
+cycle of source edges and its nonzero sum. Isolated factor vertices
+remain in the state. The remaining unit-edge and contact constraints
+still have to be checked after this necessary test passes.
+
+This is an implementable reroute: eliminate periodic-support branches
+with authenticated cross-interior contacts, rather than assuming a
+single generic coefficient shift. It does not yet eliminate the additive
+ansatz, much less all graph colourings. Across many contacts the cover is
+not a claim of only 375 global cases; choices must be made consistently
+at every contact.
+
+**FINITE-EXACT:** all 63 nonempty difference masks satisfy the classification.
+The decoder handles all 570 saved six-coordinate witnesses and eleven
+six-way groups, checking 6,840 original-vertex congruence systems with
+415,867 equations. It retains one explicit compatible branch selection
+per witness. No one local branch is common to all 570 saved witnesses in
+any of the eleven groups; the most frequent branches cover between 234
+and 353 witnesses. This is witness adaptivity, not a proof that no
+alternative common-branch family of witnesses exists. Hostile controls
+are a nonzero mod-2 triangle and a nonzero mod-3 triangle; a zero-sum
+mod-3 triangle with an isolated vertex is the positive control.
+
+There is also an exact averaging connection with the incoming snark
+calculation. Averaging its fixed-pairing defect count over all fifteen
+palette pairings gives a constant. Averaging our three residue phases
+kills the leading sibling tensor's directional signal. Both operations
+project onto an invariant statistic and discard the diagnostic carried
+by the marked representation. This explains why restoring the sidecar
+is useful; it supplies no transfer of a snark obstruction into a Collatz
+energy estimate.
+
 ## 8. Petersen minors do not retain the boundary relation
 
 **G3 (PROVED; abstract graph control).** Mark all ten vertices of the
@@ -446,6 +517,7 @@ python3 golden_reflection_context_20261018j.py --cubic --links 0 --mixed-quads 2
 python3 six_coordinate_context_20261018k.py --mixed-quads 2 --out charge_contexts_20261018k/support_compiler_control.json
 python3 six_coordinate_context_20261018k.py --six --dense-six --mixed-quads 2 --out charge_contexts_20261018k/six_dense.json
 python3 interface_audit_20261018k.py --directory charge_contexts_20261018k
+python3 periodic_support_branches_20261018k.py --input charge_contexts_20261018k/six_dense.json --out charge_contexts_20261018k/periodic_branches.json
 ```
 
 The next source target is a cumulative orientation-debt certificate for
@@ -455,7 +527,8 @@ baseline. The boundary term is now completely controlled, so neither
 target should spend effort bounding that term again.
 
 The next geometric target is a small, exact context that forces the
-required directional support richness, checked by its marked extension
-relation. More copies of an unchanged port-full context are insufficient.
+required directional support richness or eliminates all consistent
+periodic branches, checked by its marked extension relation. More copies
+of an unchanged port-full context are insufficient.
 The support compiler makes additional authenticated unit families cheap
 to test without pretending that family membership is a complete census.
