@@ -1,0 +1,6 @@
+p = 5, r = 2, n = 12: C1 True, C2 True, L True, T True
+p = 7, r = 2, n = 24: C1 True, C2 True, L True, T True
+p = 11, r = 2, n = 60: C1 True, C2 True, L True, T True
+p = 13, r = 2, n = 84: C1 True, C2 True, L True, T True
+p = 5, r = 3, n = 62: C1 True, C2 True, L True, T True
+p = 7, r = 3, n = 171: C1 True, C2 True, L True, T True

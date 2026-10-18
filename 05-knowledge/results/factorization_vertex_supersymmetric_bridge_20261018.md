@@ -254,7 +254,8 @@ Proof outline:
 
 Every step was checked for all odd `p < 400`, and the theorem for all 237 primes below 1500.
 - **Specificity.** The congruence fails modulo `p^3`. The swap `C(n+k,k) <-> C(2k,n)` fails for nine other weights.
-- **Frobenius points (HYP-9291).** The congruence holds at `n = (p^r - 1)/2` in all 13 cases tested with `r = 2, 3`.
+- **Frobenius points.** The congruence holds at every `n = (p^r - 1)/2`. HYP-9291 was filed after 13 numerical cases
+  with `r = 2, 3` and resolved by the same proof with `p`-adic valuation bounds; THM-4669 now covers every `r >= 1`.
 
 ### 3.3 Supersymmetric meaning of the eta-products (CITED + OBSERVATION)
 
@@ -324,7 +325,7 @@ group.
 ## 6. What is new, credited, open
 
 **New.**
-- **THM-4669** (PROVED), with the Clausen-identity mechanism.
+- **THM-4669** (PROVED at every Frobenius point `(p^r - 1)/2`), with the Clausen-identity mechanism.
 - The classification of Apéry-like half-period congruences against the M24 eta-products (FINITE-EXACT).
 - The congruence method that derives twining genera.
 - The Paley `P_23` → 11A/23A twining observation.
@@ -336,7 +337,8 @@ group.
 (special_primes_curling_genus_zero_langlands_20261015.md) are the prior repository context.
 
 **Open.**
-- **HYP-9291.** The Frobenius points `n = (p^r - 1)/2`, `r >= 2`.
+- **Higher powers.** HYP-9291 (the Frobenius points) is resolved within THM-4669. Open: a corrected form modulo
+  `p^3`; the plain congruence fails there.
 - **A conceptual reason for THM-4669.** Both supercongruences point to the weight-4 motive 8.4. An explanation via the
   K3 families of the levels 6 and 7 is open.
 - **A factorization-algebra meaning of the M24 twining.** The trace of a symmetry of a vertex algebra is a

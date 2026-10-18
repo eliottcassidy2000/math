@@ -1,8 +1,10 @@
 ---
 id: HYP-9291
-title: "Cooper's s_7 and Apery's numbers agree at every Frobenius point modulo p^2: for every odd prime p and every r >= 1, with n = (p^r - 1)/2, s_7(n) == (-1)^n A(n) (mod p^2). The case r = 1 is THM-4669; the cases r >= 2 are conjectural"
+title: "Cooper's s_7 and Apery's numbers agree at every Frobenius point modulo p^2: for every odd prime p and every r >= 1, with n = (p^r - 1)/2, s_7(n) == (-1)^n A(n) (mod p^2). RESOLVED: PROVED in S43 as part of THM-4669"
 status: >
-  OPEN (CONJECTURE) for r >= 2. PROVED for r = 1 (THM-4669).
+  PROVED (resolved the same session): THM-4669 now covers every r >= 1. The steps (C1) and (C2) of its proof hold at
+  n = (p^r - 1)/2 by valuation bounds; s7_apery_frobenius_proof_check_20261018.py checks them p-adically.
+  History: filed as OPEN for r >= 2 after the r = 1 proof; the obstacle named below dissolved.
 
   FINITE-EXACT evidence for r >= 2 (13 cases, all hold; none holds modulo p^3):
   - r = 2: p = 5, 7, 11, 13, 17, 19, 23, 29, 31 (n up to 480);
@@ -20,12 +22,12 @@ related: [THM-4669, THM-4528, Ahlgren-Ono 2000, Cooper 2012]
 
 `A(n) = Σ_k C(n,k)^2 C(n+k,k)^2` and `s_7(n) = Σ_k C(n,k)^2 C(n+k,k) C(2k,n)`.
 
-**Conjecture.** For every odd prime `p` and every `r >= 1`, with `n = (p^r - 1)/2`,
+**Statement (now PROVED as THM-4669).** For every odd prime `p` and every `r >= 1`, with `n = (p^r - 1)/2`,
 ```
 s_7(n) ≡ (-1)^n A(n)   (mod p^2).
 ```
 
-## Why the proof of THM-4669 does not extend directly
+## Why the proof of THM-4669 seemed not to extend (resolved)
 
 THM-4669 uses three steps:
 - the exact identity `s_7(n) = Σ_k [C(n,k) C(n+k,k)] C(2k,k) C(k,n-k)`;
@@ -35,11 +37,17 @@ THM-4669 uses three steps:
 For `n = (p^r - 1)/2` with `r >= 2`, multiples of `p` occur among the `j`, so (C1) and (C2) fail termwise. The exact
 identities survive.
 
-A natural route is the Lucas/Dwork factorisation of `C(n,k)` along `p`-adic digits. Writing
+**Resolution.** No digit factorisation is needed.
+- In (C1), compare the ratio `C(n,k) C(n+k,k)/((-1)^k a_k^2) = Π_j (1 - p^(2r)/(2j-1)^2)`. Each factor is
+  `≡ 1 (mod p^2)`, because `v_p(2j-1) <= r - 1`.
+- In (C2), each `p^r/(2(n-i))` lies in `p Z_p`.
+
+The alternative route, kept for the record, was the Lucas/Dwork factorisation of `C(n,k)` along `p`-adic digits. Writing
 `n = (p-1)/2 + p (p^(r-1) - 1)/2`, it reduces the conjecture to THM-4669 at each digit, plus a carry analysis modulo
 `p^2`. This is the usual mechanism behind "Frobenius-point" supercongruences of Dwork type.
 
 ## Tests
 
-- **A proof.** Carry out the Lucas/Dwork factorisation at the Frobenius points.
-- **Larger `r`.** Check `r = 3` for `p >= 17`, and `r = 4` for `p = 5, 7`.
+- **Proof: done.** The valuation-bound argument, in THM-4669.
+- **Still open: higher powers of `p`.** No congruence holds modulo `p^3`, even at `r = 1`. Ask whether a corrected
+  form, with an explicit `p^2` term, holds modulo `p^3`.
