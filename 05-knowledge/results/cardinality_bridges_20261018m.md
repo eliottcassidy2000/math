@@ -266,7 +266,7 @@ later proofs and counterexamples.
 | [18/19/11/22 merge](merge_18_19_11_22_collatz_hn_20261018.md) | 11,18,19,22,29 | A denominator norm and a multiplicative order are distinct invariants even when the integer agrees. |
 | [Pythagorean/conic graph dictionary](pythagorean_form_conic_graphs_rp_margin_20261018.md) | 5,7,10,14,28 | Classical Petersen/Coxeter/Heawood identifications are real graph isomorphisms; the generated group can be smaller than the full automorphism group. |
 | [Pinned shade support](shade_difference_support_20261018b.md) | 6,15,30 | All fifteen palette matchings are real charts. Their fibres overlap, so counts cannot be added as disjoint masses. |
-| [Carry descent and transport](carry_descent_transport_branches_20261018l.md) | 15,375,4125 | The 15×25 branch bookkeeping has labelled source conditions; the genus-two dictionary can reorganize charts but cannot supply missing unit-distance edges. |
+| [Carry descent and transport](carry_descent_transport_branches_20261018l.md) | 15,375,4125 | Here 15 counts pairs of six factors, not palette matchings: these are the doily's point and line roles respectively. The branch conditions retain directed factor pairs; see the incoming integration in §9. |
 | [Seventeen Vitali atoms](../../07-reflections/seventeen-vitali-atoms.md) | 17 | Seventeen is the author's list length, not a classified universe. Its existing warning restricts the old girth claim. Reuse the partition/choice question, not an asserted universal seventeen. |
 
 The recovered trajectory is useful: early reflections notice numbers and
@@ -366,6 +366,10 @@ candidate fifteen-object geometry. A degree mismatch or stabilizer mismatch
 would cheaply reject that specific model. The recent derivative/Clausen
 work remains at its proved family scope; the catalogue size does not extend
 its congruences to untouched families.
+The incoming [reanchoring packet](reanchoring_kernel_20261018c.md) already
+supplies the A/C/F component with explicit carry transport. Use those edges
+as inherited data rather than rediscovering them; §9 records the stronger
+marked comparison they require.
 
 **Tilings — retain overlaps and moduli (OPEN).**
 For each of the fifteen pentagon families, encode angle and edge constraints,
@@ -425,3 +429,81 @@ action and relation → test the next size → identify the missing primitive �
 verify the original predicate**. The archive already contains both successes
 and sharp failures of each step. The genus-three Hamming complement supplies
 a compact, completely checked example of the whole move.
+
+## 9. Incoming work: two fifteens, two sixes, and a retained first response
+
+Commit `63fab03129` arrived during close-out. Its
+[Zagier parameter atlas](zagier_six_triples_20261018c.md),
+[reanchoring kernel](reanchoring_kernel_20261018c.md),
+[coupled branch compiler](coupled_support_branches_20261018c.md), and
+[fractional geometry](coupled_fractional_geometry_20261018c.md) sharpen the
+present comparisons. The first two proofs were read and their optimized
+checkers independently invoked here: **9,938 and 10,704 checks**, with
+byte-identical saved receipts. The large geometric census below is inherited
+from its authenticated packet, not recomputed in this session.
+
+**The two fifteens in the active colouring work are distinct roles.** The
+375 local branches choose two of six direction factors and one of five cosets
+for each: binom(6,2)·5². Its fifteen objects are **duads**. The palette charts
+pair all six colour names: 5·3·1. Its fifteen objects are **synthemes**.
+After identifying their abstract six-label sets, the doily relates them by
+incidence, not by a relabelling-equivariant point/line identification. The
+fixed-point witness 7 versus 3 in §3 applies immediately. A line contains
+three duads, every duad belongs to three lines, and the resulting 45 flags
+are a common incidence refinement. A branch's cosets and directed factor
+constraints still have to be retained; these flags do not create a branch
+equivalence. This is a concrete reason to preserve the two meanings of 15
+in the research data schema.
+
+**The two sixes require a common frame.** The incoming packet compares the
+six K4 edges with the six generic cross-ratio expressions of four ordered
+points. The former S4 action is faithful; the latter factors through S3 with
+kernel V4. A double transposition fixes every cross-ratio expression but
+moves four edges. Both are quotients of 24 ordered frames, by different
+four-element stabilizers. Retaining a frame gives a correspondence; silently
+identifying the quotients discards different information. This gives a second
+repair move beside the missing-H8 completion: **lift to a shared marked
+space before comparing two incompatible quotients**.
+
+**The sequence transformation must carry its first response.** For the
+Zagier convention of §2, put P(t)=t(t²−at+c). At a root d of P and nonzero
+scale epsilon, reanchoring t=d+epsilon·z sends
+
+    (a,b,c) -> ((a−3d)/epsilon, (b−d)/epsilon, P'(d)/epsilon²).
+
+The corresponding sequence transform is
+
+    u'_n = epsilon^(−n) sum_(k=0..n) binom(n,k)(−d)^(n−k) u_k.
+
+For A=(7,2,−8), roots d=−1 with epsilon=1 and d=8 with epsilon=−1 give
+C=(10,3,9) and F=(17,6,72). These are actual edges in the proposed recurrence
+graph. The first-block divided carry transforms **affinely**, with a correction
+from binomial and power carries. At p=7, r=1, A→C has actual residue5, naive
+residue6 and correction6; 6+6=5 modulo7. A→F has actual2, naive6 and oriented
+correction3. The correction is the retained first response, exactly the
+kind of coordinate a count or zeroth-order polynomial forgets.
+
+The golden triple (11,5,125) in that packet means
+(L5,F5,5F5²), with signed norm −1. It is not the recurrence parameter triple
+(a,b,c); that literal interpretation gives u2=5/2. Likewise F's accessory
+b=6 cannot be changed to5 while retaining integrality, although its singular
+set and auxiliary elliptic j-invariant stay unchanged. This connects the
+number atlas to golden arithmetic through an explicit slot decoder.
+
+**The geometric gate remains complete boundary support.** The new 714-point
+configuration retains 94 mixed edges inside its relative six-core, but all
+570 boundary patterns still extend. Its 8,550 fixed-pair chart tests all fail,
+already forced by a same-anchor unit triangle. Thus the next meaningful
+colour representation permits a variable ternary pair label and retains
+the binary shade and both coordinates of every source pin. Its lift condition
+is bipartiteness of each same-label edge graph plus pinned path parity.
+An arbitrary cycle basis is insufficient: in K4, giving one vertex label1
+and the other three label0 makes the three triangles through the first
+vertex mixed while the remaining triangle is monochromatic. The predicate
+is nonlinear even though the cycle space is linear.
+
+The resulting research sequence has three distinct repairs: complete a
+carrier by its missing primitive objects; lift incompatible quotients to
+their common frame; and transport a first-response correction with the
+compressed object. Each is useful because it identifies the data a proposed
+analogy would otherwise erase.
