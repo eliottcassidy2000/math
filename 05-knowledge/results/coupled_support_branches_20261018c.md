@@ -226,4 +226,15 @@ The JSON stores source hashes, literal negative receipts, complete positive
 colour words (one digit 0--5 per physical vertex), and every palette-chart
 obstruction. These words certify the unchanged finite graphs; neither a
 finite support result nor the inherited G4 cover settles the whole plane.
-Final reproduction and independent audit metadata are appended below.
+Normal and optimized runs both pass **12,458 checks** and reproduce the
+saved JSON exactly after LF normalization. Its SHA256 is
+`3fc76dde4a41e7eb099a720dc1f58da9cbcd2a1fddf473900a924c9ceaa69d11`.
+
+**Independent proof/API and solver-free receipt audit: PASS.** The reviewer
+independently rebuilt all 570 source patterns, authenticated both coordinate
+and edge hashes, replayed all 1,140 full words and all 8,550 palette charts,
+and checked the source-preserving peeling data (2,253,721 gates). A separate
+unit-propagation tree consumer checked freshly reconstructed K4 and
+\(K_7-e\) CNFs and their 3-node and 47-node negative trees; all 375 marked
+voltage cycles were also authenticated (1,580 further gates). No correction
+remained at freeze.

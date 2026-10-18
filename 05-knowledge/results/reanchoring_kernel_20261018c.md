@@ -308,3 +308,15 @@ all 16 binary shade assignments. This supplies a cheap hostile for any future
 compression of the variable-label search. A useful compact certificate must
 preserve the monochromatic-cycle and pinned-path predicates, rather than
 only preserve the linear span of cycles.
+
+The final incoming [cardinality-carrier atlas](cardinality_bridges_20261018m.md),
+commit `cb2022c170`, supplies a related finite model of completion: all fifteen
+matchings on six labels give the binary symplectic Lagrangians there, whereas
+the 105 matchings on eight labels omit thirty of 135 Lagrangians; the omitted
+objects have an affine/Hamming description. Its lesson here is specific:
+testing every object in one presentation family need not exhaust a larger
+target family. Our fifteen palette charts really are all palette matchings,
+but fixing their pair labels by the old anchor still omits valid colourings.
+The missing objects in this problem are variable-label colourings, not
+additional six-label matchings. No transfer from a Hamming code to unit
+incidence or boundary forcing is asserted.
