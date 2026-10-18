@@ -19,6 +19,14 @@ status: >
       - W_3(5,7): first at 17 = D_0+2, Li 1 (D_0 = 15).
     The non-boundary first-failure rule (p-2)(q-2) + 2, Li 1 holds in all three cases.
   - Affine analogue: HYP-9293 (admissible sl2 free iff boundary or integrable).
+  - Affine sl3 (zero-weight cone; every module occurring has root-lattice weights):
+    - boundary k = -3/2 (A_1,D_4): free through weight 8;
+    - boundary k = -9/4: free through weight 8; dim L = 2777 = the D(q^4)/D(q) zero-weight coefficient;
+    - non-boundary k = -1/2 (k+3 = 5/2): NOT free. The singular vector sits at weight 6, charge 3theta, and the
+      first non-arc generators appear at weight 8 = D_0 + 2, Li 1.
+    - Pre-registered test (this session): non-freeness PASSED. The offset prediction 'D_0 + 3, copied from sl2'
+      FAILED: the offset is +2, as for W_3. Observed so far, rank 1 (Vir, sl2) fails at +3 and rank 2
+      (W_3, sl3) at +2.
   - 4d relevance: HYP-9296.
   W_3(3,5) is excluded: there 22 + 5c = 0 and the W_3 algebra degenerates; its simple quotient is Vir_{2,5}.
   Literature (2026-10-18): N = 2 as cited. For N >= 3 no classical-freeness statement for W-minimal models was found;

@@ -276,6 +276,8 @@ a nonlinear-bracket hook (`w3.py`):
 | `W_3(4,7)` | — | weight 12 = `D_0 + 2`, Li 1 | 20 (two primes to 18) |
 | `W_3(5,7)` | — | weight 17 = `D_0 + 2`, Li 1 | 24 |
 | `W_3(3,13)` | `(A_2, A_9)` | none | 24 |
+| `L_(-9/4)(sl3)` (boundary) | — | none (zero-weight cone; `dim L` = product formula 2777 at weight 8) | 8 |
+| `L_(-1/2)(sl3)` (non-boundary) | — | weight 8 = `D_0 + 2`, Li 1. The pre-registered `D_0 + 3` offset failed; non-freeness passed | 9 |
 
 Three families now show the same pattern: `Vir` (`p = 2`, a theorem), admissible `sl2` (boundary or integrable,
 HYP-9293) and `W_3` (`p = 3`). The **boundary** models, which are exactly the chiral algebras of the Argyres-Douglas

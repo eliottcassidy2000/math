@@ -6714,6 +6714,11 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 - S42 atlas (preprint_connections_solfeggio_digits_20261017.md): L1 (averaged octave bounds give pointwise N^(2/3)),
   L2 ((-1)^sigma_T(n) = prod (u/3)), L4 (Solfeggio = three-lift fibres), L5 (divergent orbit => Theta(n) not in
   Q(phi); transcendental if low complexity, citation to verify).
+- kind-pasteur S1 (singular_support_arc_spaces_classical_freeness_20261018.md): OPEN: HYP-9293 (admissible sl2 classically
+  free iff boundary/integrable), HYP-9297 (boundary principle: W_N(p,q) free iff p = N = (A_{N-1},A_{k-1}) chiral algebras),
+  HYP-9298 (arc spaces of C[x,y]/(xy,y^2-x^3), ... realise A_2 Rogers-Ramanujan products; modulus rigidity at q = 10, 11),
+  HYP-9296 (which 4d N=2 chiral algebras are classically free; discrete gauging breaks it, THM-4672), HYP-9295 (N=2 minimal
+  models never free; THM-4673 k=1), HYP-9294 (Virasoro degree-N layer, finite generation). Rank-1 failures at D_0+3, rank-2 at D_0+2.
 - S43 (factorization_vertex_supersymmetric_bridge_20261018.md): THM-4669 PROVED (Cooper s_7 and Apery agree mod p^2
   at every Frobenius point (p^r-1)/2; s_7((p-1)/2) == (-1/p) a_(4A)(p); HYP-9291 resolved) and THM-4670 PROVED (the
   zeta(2)-class twin sum C(n+k,k)^3 == b(n) mod p^2 at the half-period, via Dixon's derivative; HYP-9292 resolved; audit M1: a corollary of the classical van Hamme/Ishikawa/Ahlgren supercongruences, MISTAKE-629). OPEN: a mod-p^3 form; a

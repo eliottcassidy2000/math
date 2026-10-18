@@ -1,0 +1,17 @@
+sl3 k=-1/2: singular vectors at weight 6, charge (3, 3): 1
+PBW basis built (2.2s)
+D=    0 dimV=      1 dimI=      0 dimL=      1 arcHS=      1 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    1 dimV=      8 dimI=      0 dimL=      8 arcHS=      8 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    2 dimV=     44 dimI=      0 dimL=     44 arcHS=     44 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    3 dimV=    192 dimI=      0 dimL=    192 arcHS=    192 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    4 dimV=    726 dimI=      0 dimL=    726 arcHS=    726 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    5 dimV=   2434 dimI=      0 dimL=   2434 arcHS=   2434 ker=    0 gens(Li,charge,#)=[] (0.0s)
+D=    6 dimV=   6906 dimI=     64 dimL=   6842 arcHS=   6842 ker=    0 gens(Li,charge,#)=[(0, (1, -2), 3), (0, (-1, -1), 3), (0, (-1, 2), 3), (0, (-2, 1), 3), (0, (1, 1), 3), (0, (2, -1), 3), (0, (0, 0), 4), (0, (2, -4), 2), (0, (0, -3), 2), (0, (3, -3), 2), (0, (-2, -2), 2), (0, (-3, 0), 2), (0, (-2, 4), 2), (0, (-3, 3), 2), (0, (0, 3), 2), (0, (-4, 2), 2), (0, (2, 2), 2), (0, (3, 0), 2), (0, (4, -2), 2), (0, (3, -6), 1), (0, (1, -5), 1), (0, (4, -5), 1), (0, (-1, -4), 1), (0, (5, -4), 1), (0, (-3, -3), 1), (0, (-4, -1), 1), (0, (-5, 1), 1), (0, (-3, 6), 1), (0, (-4, 5), 1), (0, (-1, 5), 1), (0, (-5, 4), 1), (0, (1, 4), 1), (0, (-6, 3), 1), (0, (3, 3), 1), (0, (4, 1), 1), (0, (5, -1), 1), (0, (6, -3), 1)] (2.6s)
+D=    7 dimV=  14686 dimI=    338 dimL=  14348 arcHS=  14348 ker=    0 gens(Li,charge,#)=[] (11.3s)
+D=    8 dimV=  18747 dimI=    746 dimL=  18001 arcHS=  18023 ker=   22 gens(Li,charge,#)=[(1, (1, -2), 3), (1, (-1, -1), 3), (1, (-1, 2), 3), (1, (-2, 1), 3), (1, (1, 1), 3), (1, (2, -1), 3), (1, (0, 0), 4)]  <-- NON-ARC (68.1s)
+D=    9 dimV=   7552 dimI=    456 dimL=   7096 arcHS=   7113 ker=   17 gens(Li,charge,#)=[] (35.7s)
+TOP block weight 9 charge (0, 0): dim V=7552 dim I=456 dim L=7096; ker pi by Li: {1: 13, 2: 4}
+  weight 6, charge (0, 0): dim ker pi = 0
+  weight 7, charge (0, 0): dim ker pi = 0
+  weight 8, charge (0, 0): dim ker pi = 4
+  weight 9, charge (0, 0): dim ker pi = 17
