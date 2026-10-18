@@ -1,0 +1,25 @@
+field degree 48 ; 48 complex embeddings
+  side 1    squared length: min/max over the 48 embeddings 1.00000 / 1.00000 ; value at the first listed embedding 1.000000
+  side d_a  squared length: min/max over the 48 embeddings 0.38197 / 2.61803 ; value at the first listed embedding 0.381966
+  side d_b  squared length: min/max over the 48 embeddings 0.07288 / 0.70134 ; value at the first listed embedding 0.280124
+  side d_c  squared length: min/max over the 48 embeddings 0.05897 / 6.73597 ; value at the first listed embedding 1.282521
+1 , 1 , 1                    H range [   3.0000,    3.0000] tot.pos True  H/3: square at all 60 places      -> TRIANGLE EXISTS in F
+1 , 1 , d_a                  H range [   1.3820,    3.6180] tot.pos True  H/3: square at all 60 places      -> TRIANGLE EXISTS in F
+1 , 1 , d_b                  H range [   0.2862,    2.3135] tot.pos True  H/3: NON-square (p = 1021)        -> no
+1 , 1 , d_c                  H range [ -18.4294,    3.4852] tot.pos False H/3: NON-square (p = 1021)        -> no
+1 , d_a , d_a                H range [   0.5279,    9.4721] tot.pos True  H/3: square at all 60 places      -> TRIANGLE EXISTS in F
+1 , d_a , d_b                H range [  -2.0959,    1.9651] tot.pos False H/3: NON-square (p = 1171)        -> no
+1 , d_a , d_c                H range [  -2.1948,    1.5180] tot.pos False H/3: NON-square (p = 1021)        -> no
+1 , d_b , d_b                H range [  -0.7085,    1.8054] tot.pos False H/3: NON-square (p = 1021)        -> no
+1 , d_b , d_c                H range [ -22.5421,    1.1205] tot.pos False H/3: NON-square (p = 1741)        -> no
+1 , d_c , d_c                H range [  -0.7641,   25.9439] tot.pos False H/3: NON-square (p = 1021)        -> no
+d_a , d_a , d_a              H range [   0.4377,   20.5623] tot.pos True  H/3: square at all 60 places      -> TRIANGLE EXISTS in F
+d_a , d_a , d_b              H range [   0.1946,    6.8527] tot.pos True  H/3: NON-square (p = 1171)        -> no
+d_a , d_a , d_c              H range [   0.1238,   25.1667] tot.pos True  H/3: NON-square (p = 1741)        -> no
+d_a , d_b , d_b              H range [  -6.0908,    0.4905] tot.pos False H/3: NON-square (p = 2011)        -> no
+d_a , d_b , d_c              H range [  -6.1639,    0.0431] tot.pos False H/3: NON-square (p = 1021)        -> no
+d_a , d_c , d_c              H range [  -6.2365,   63.6859] tot.pos False H/3: NON-square (p = 1021)        -> no
+d_b , d_b , d_b              H range [   0.0159,    1.4757] tot.pos True  H/3: square at all 60 places      -> TRIANGLE EXISTS in F
+d_b , d_b , d_c              H range [ -26.4763,    0.0408] tot.pos False H/3: NON-square (p = 1021)        -> no
+d_b , d_c , d_c              H range [   0.0119,   18.4050] tot.pos True  H/3: NON-square (p = 1021)        -> no
+d_c , d_c , d_c              H range [   0.0104,  136.1198] tot.pos True  H/3: square at all 60 places      -> TRIANGLE EXISTS in F

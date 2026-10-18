@@ -1,0 +1,35 @@
+{
+ "a = conj(d)": {
+  "den": 1,
+  "den_factors": [],
+  "one_minus_4N": [
+   "residue at all",
+   "60"
+  ]
+ },
+ "b": {
+  "den": 19,
+  "den_factors": [
+   19
+  ],
+  "one_minus_4N": [
+   "NON-square",
+   "1021"
+  ]
+ },
+ "c": {
+  "den": 19,
+  "den_factors": [
+   19
+  ],
+  "one_minus_4N": [
+   "NON-square",
+   "1021"
+  ]
+ },
+ "pair_denominators": [
+  19,
+  114
+ ],
+ "pair_unit": false
+}

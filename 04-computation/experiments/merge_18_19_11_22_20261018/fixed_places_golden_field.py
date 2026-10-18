@@ -25,13 +25,14 @@ for p in primerange(7, 3000):
     if p % 15 != 14: continue
     leg = legendre_symbol(p % 11, 11)
     roots = cubic_roots_mod(p)
-    # K = Q(zeta15, j) has [K:Q]/(e f) = 16/2 = 8 primes above such p (f = 2), each c-fixed when (p/11) = -1; over each,
-    # exactly one prime of F is c-fixed: the one attached to the F_p root of the cubic (residue F_(p^2)) if the cubic
-    # has a root mod p, or the unique prime above it (residue F_(p^6)) if the cubic is irreducible mod p.
+    # K = Q(zeta15, j) has [K:Q]/(e f) = 16/2 = 8 primes above such p (f = 2), each c-fixed when (p/11) = -1; c acts on
+    # each residue field F_(p^2) as Frob_p. Over each, the c-fixed primes of F are those attached to the F_p roots of
+    # the cubic (residue F_(p^2); 1 or 3 of them), or the unique prime above it (residue F_(p^6)) if the cubic is
+    # irreducible mod p. So 8 * #roots or 8 fixed primes per p (corrected 2026-10-18, MISTAKE-635: 24 at p = 2549).
     if leg == 1:
         desc = 'none (j-primes swapped by c)'
     elif roots:
-        desc = '8 c-fixed primes with residue F_(%d^2): chi(G(F)) <= kappa(%d)' % (p, p)
+        desc = '%d c-fixed primes with residue F_(%d^2): chi(G(F)) <= kappa(%d)' % (8 * len(roots), p, p)
         rows.append((p, len(roots)))
     else:
         desc = '8 c-fixed primes with residue F_(%d^6): chi(G(F)) <= kappa(%d^3)' % (p, p)

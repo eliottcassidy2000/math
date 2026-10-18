@@ -1,0 +1,242 @@
+[
+ {
+  "sides": [
+   "1",
+   "1",
+   "1"
+  ],
+  "H_min": 3.0,
+  "H_max": 3.0,
+  "totally_positive": true,
+  "H_over_3": "square at all 60 places",
+  "verdict": "TRIANGLE EXISTS in F"
+ },
+ {
+  "sides": [
+   "1",
+   "1",
+   "d_a"
+  ],
+  "H_min": 1.381966011250105,
+  "H_max": 3.618033988749895,
+  "totally_positive": true,
+  "H_over_3": "square at all 60 places",
+  "verdict": "TRIANGLE EXISTS in F"
+ },
+ {
+  "sides": [
+   "1",
+   "1",
+   "d_b"
+  ],
+  "H_min": 0.28622695930261854,
+  "H_max": 2.313493247784712,
+  "totally_positive": true,
+  "H_over_3": "NON-square (p = 1021)",
+  "verdict": "no"
+ },
+ {
+  "sides": [
+   "1",
+   "1",
+   "d_c"
+  ],
+  "H_min": -18.429405540929714,
+  "H_max": 3.485224098878507,
+  "totally_positive": false,
+  "H_over_3": "NON-square (p = 1021)",
+  "verdict": "no"
+ },
+ {
+  "sides": [
+   "1",
+   "d_a",
+   "d_a"
+  ],
+  "H_min": 0.5278640450004195,
+  "H_max": 9.47213595499958,
+  "totally_positive": true,
+  "H_over_3": "square at all 60 places",
+  "verdict": "TRIANGLE EXISTS in F"
+ },
+ {
+  "sides": [
+   "1",
+   "d_a",
+   "d_b"
+  ],
+  "H_min": -2.0959469012689556,
+  "H_max": 1.965056933634886,
+  "totally_positive": false,
+  "H_over_3": "NON-square (p = 1171)",
+  "verdict": "no"
+ },
+ {
+  "sides": [
+   "1",
+   "d_a",
+   "d_c"
+  ],
+  "H_min": -2.194792566266363,
+  "H_max": 1.5179747644432722,
+  "totally_positive": false,
+  "H_over_3": "NON-square (p = 1021)",
+  "verdict": "no"
+ },
+ {
+  "sides": [
+   "1",
+   "d_b",
+   "d_b"
+  ],
+  "H_min": -0.7084608483897813,
+  "H_max": 1.8053770073811322,
+  "totally_positive": false,
+  "H_over_3": "NON-square (p = 1021)",
+  "verdict": "no"
+ },
+ {
+  "sides": [
+   "1",
+   "d_b",
+   "d_c"
+  ],
+  "H_min": -22.54207271934758,
+  "H_max": 1.1204894766607687,
+  "totally_positive": false,
+  "H_over_3": "NON-square (p = 1741)",
+  "verdict": "no"
+ },
+ {
+  "sides": [
+   "1",
+   "d_c",
+   "d_c"
+  ],
+  "H_min": -0.7641155298631146,
+  "H_max": 25.943877339522537,
+  "totally_positive": false,
+  "H_over_3": "NON-square (p = 1021)",
+  "verdict": "no"
+ },
+ {
+  "sides": [
+   "d_a",
+   "d_a",
+   "d_a"
+  ],
+  "H_min": 0.4376941012509432,
+  "H_max": 20.562305898749056,
+  "totally_positive": true,
+  "H_over_3": "square at all 60 places",
+  "verdict": "TRIANGLE EXISTS in F"
+ },
+ {
+  "sides": [
+   "d_a",
+   "d_a",
+   "d_b"
+  ],
+  "H_min": 0.19464273443482893,
+  "H_max": 6.852688596984848,
+  "totally_positive": true,
+  "H_over_3": "NON-square (p = 1171)",
+  "verdict": "no"
+ },
+ {
+  "sides": [
+   "d_a",
+   "d_a",
+   "d_c"
+  ],
+  "H_min": 0.12384452653359546,
+  "H_max": 25.166703783125847,
+  "totally_positive": true,
+  "H_over_3": "NON-square (p = 1741)",
+  "verdict": "no"
+ },
+ {
+  "sides": [
+   "d_a",
+   "d_b",
+   "d_b"
+  ],
+  "H_min": -6.090842558282824,
+  "H_max": 0.49047039033158435,
+  "totally_positive": false,
+  "H_over_3": "NON-square (p = 2011)",
+  "verdict": "no"
+ },
+ {
+  "sides": [
+   "d_a",
+   "d_b",
+   "d_c"
+  ],
+  "H_min": -6.163889072371051,
+  "H_max": 0.04305605341931229,
+  "totally_positive": false,
+  "H_over_3": "NON-square (p = 1021)",
+  "verdict": "no"
+ },
+ {
+  "sides": [
+   "d_a",
+   "d_c",
+   "d_c"
+  ],
+  "H_min": -6.236548406013068,
+  "H_max": 63.68588469732841,
+  "totally_positive": false,
+  "H_over_3": "NON-square (p = 1021)",
+  "verdict": "no"
+ },
+ {
+  "sides": [
+   "d_b",
+   "d_b",
+   "d_b"
+  ],
+  "H_min": 0.01593657692280076,
+  "H_max": 1.475651278789259,
+  "totally_positive": true,
+  "H_over_3": "square at all 60 places",
+  "verdict": "TRIANGLE EXISTS in F"
+ },
+ {
+  "sides": [
+   "d_b",
+   "d_b",
+   "d_c"
+  ],
+  "H_min": -26.476349385953746,
+  "H_max": 0.04081352189131948,
+  "totally_positive": false,
+  "H_over_3": "NON-square (p = 1021)",
+  "verdict": "no"
+ },
+ {
+  "sides": [
+   "d_b",
+   "d_c",
+   "d_c"
+  ],
+  "H_min": 0.011880197267826631,
+  "H_max": 18.405049734902086,
+  "totally_positive": true,
+  "H_over_3": "NON-square (p = 1021)",
+  "verdict": "no"
+ },
+ {
+  "sides": [
+   "d_c",
+   "d_c",
+   "d_c"
+  ],
+  "H_min": 0.01043277810965293,
+  "H_max": 136.11984864135675,
+  "totally_positive": true,
+  "H_over_3": "square at all 60 places",
+  "verdict": "TRIANGLE EXISTS in F"
+ }
+]

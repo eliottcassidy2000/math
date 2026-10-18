@@ -1,0 +1,8 @@
+[    0 s] field degree 48 ; u^2 = a + b u + c Y verified exactly
+[    1 s] screening places: [1021, 1171, 1741, 1831, 2011, 2161, 2281, 2311, 2971, 3271, 3301, 3391] ... (60 places)
+[    1 s] a = conj(d)  den(kappa) = 1 = [] ; N = kappa conj(kappa) real: True ; 1 - 4N: ('residue at all', 60)
+[    1 s] b            den(kappa) = 19 = [19] ; N = kappa conj(kappa) real: True ; 1 - 4N: ('NON-square', 1021)
+[    1 s] c            den(kappa) = 19 = [19] ; N = kappa conj(kappa) real: True ; 1 - 4N: ('NON-square', 1021)
+[    1 s] spindle coefficient set M has 7 points
+[    1 s] kappa (m' - m) unit for any pair: False ; denominators: [19, 114]
+[    1 s] done

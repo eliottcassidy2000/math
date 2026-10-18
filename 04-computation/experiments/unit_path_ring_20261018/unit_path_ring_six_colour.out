@@ -1,0 +1,28 @@
+(A) O_F inside Gamma_F
+  zeta15 is a unit vector                                                    True
+  1/2 = v + conj(v), v = (1 + sqrt-15)/4 unit  [2 steps]                     True
+  1/11 = 11 (beta_1 + ... + beta_4) - 38, beta_r = (a^r - 3)/(a^-r - 3)  [82 steps, clock_duality] True
+  j = 6 rho - 5, rho = (5 + j)/6 unit  [11 steps]                            True
+  w = (19 (u + conj u) + 6)/11 with u = (w + 3 - j)/(w + 3 + j) unit         True
+    => zeta15, (1 + j)/2 = (1/2)(1 + j), w and w^2/2 = (1/2) w^2 lie in the ring Gamma_F; O_F = Z[zeta15][(1+j)/2][1, w, w^2/2]
+(B) short walks to 1/p, p < 29 (delta = conj(g)/g, delta + 1/delta = t^2/n - 2)
+  1/2  = v + conj v, v = (1 + 1 sqrt-15)/4  [2 steps]                        True
+  1/5  = v + conj v, v = (1 + 3 sqrt-11)/10  [2 steps]                       True
+  1/13 = v + conj v, v = (1 + 15 sqrt-3)/26  [2 steps]                       True
+  1/3  = delta + 1/delta + 2, g = (1 + 1 sqrt-11)/2 of norm 3  [4 steps]     True
+  1/7  = delta + 1/delta + 2, g = (1 + 3 sqrt-3)/2 of norm 7  [4 steps]      True
+  1/19 = delta + 1/delta + 2, g = (1 + 5 sqrt-3)/2 of norm 19  [4 steps]     True
+  1/4  = delta + 1/delta + 2, g = (1 + 1 sqrt-15)/2 of norm 4  [4 steps]     True
+  1/23 = 2 delta + 2/delta - 3, g = (9 + sqrt-11)/2 of norm 23  [7 steps]    True
+    (no element of norm 17 in the small coefficient box; 1/17 in Gamma_F follows from B2 since 17 is not in S)
+    1/11 in Gamma_F: 82 steps (clock_duality); no 1/29: 29 lies under a c-fixed prime (w = 3 branch)
+(C) reflection links between coefficient copies of the cubic recipe
+  kappa = b: every unit q in M gets a unit q' with x + kappa q ~ y + kappa q' (s = y - x) True
+  kappa = c: every unit q in M gets a unit q' with x + kappa q ~ y + kappa q' (s = y - x) True
+(D) every coordinate factor of the cubic recipe lies in Gamma_F
+  A + aM    364 points ; primes in power-basis denominators: [2, 3]
+  C + bM     70 points ; primes in power-basis denominators: [2, 3, 19]
+  C + cM     70 points ; primes in power-basis denominators: [2, 3, 19]
+  denominator primes avoid S = {p = 14 mod 15, (p/11) = -1} (power basis Z[zeta15, j, w] is in O_F) True
+  1/17 = 18 delta + 18/delta - 28, g = (11 + sqrt-15)/2 of norm 34  [64 steps] True
+ALL CHECKS PASSED

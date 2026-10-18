@@ -18888,3 +18888,24 @@ the ambient space.
     6-colouring needs, which strengthens the heuristic κ(29) = 7.
 - **Repairs:** all items above were applied in the same session. See
   `04-computation/experiments/merge_18_19_11_22_20261018/audit_F3/REPORT.md`.
+
+## MISTAKE-635
+
+- **Date / session:** 2026-10-18, mac-mini-2026-10-18-unitpath (self-caught while proving THM-4700(1)).
+- **Claim:** the merge note `05-knowledge/results/merge_18_19_11_22_collatz_hn_20261018.md` section 2.1 said:
+  "over each of these 8 primes exactly one prime of F is c-fixed, so there are 8 per p".
+  - The same count was hard-coded in `fixed_places_golden_field.py`.
+  - Audit F3 confirmed it with PARI, but only to p <= 1300.
+- **Error:**
+  - The c-fixed primes of F above a fixed prime of K = Q(zeta15, sqrt-11) are the `F_p`-roots of
+    `w^3 + 2w^2 - 4w - 4`, because c acts on the residue field `F_(p^2)` as `Frob_p`.
+  - So there are three fixed primes when the cubic splits completely mod p, giving 24 per p. The first such p in S is
+    2549, then 2879, 3119, ...
+  - Below 2549 every p in S has at most one root, so every printed row through p = 2099 was correct. Only the general
+    sentence and the hard-coded label were wrong.
+- **Impact:** none on the κ conclusions. Every such p is far above 239, where Hoffman already gives κ(p) > 8.7.
+  The census of THM-4700(1) states 8 or 24.
+- **Fix:** the note text and the script were corrected, and the script was rerun; it now prints 24 at 2549 and 2879.
+- **Lesson:** a "one prime per branch" count over a non-Galois cubic depends on the splitting type mod p. State it as
+  `8 × #roots(f mod p)` (or 8 when f is irreducible mod p), and test it beyond the first exceptional prime.
+
