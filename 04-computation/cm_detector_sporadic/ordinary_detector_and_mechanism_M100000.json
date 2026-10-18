@@ -1,0 +1,975 @@
+{
+ "Zagier A (Franel)": {
+  "weight": 1,
+  "survivors_B1prime": [
+   -1,
+   8
+  ],
+  "survivors_B1prime_ord": [
+   -4,
+   -1,
+   2,
+   8
+  ],
+  "P7_holds_all_p": true,
+  "P7_exceptions": {}
+ },
+ "Zagier B": {
+  "weight": 1,
+  "survivors_B1prime": [],
+  "survivors_B1prime_ord": [
+   3,
+   9
+  ],
+  "P7_holds_all_p": true,
+  "P7_exceptions": {}
+ },
+ "Zagier C": {
+  "weight": 1,
+  "survivors_B1prime": [
+   1,
+   9
+  ],
+  "survivors_B1prime_ord": [
+   -3,
+   1,
+   3,
+   9
+  ],
+  "P7_holds_all_p": true,
+  "P7_exceptions": {}
+ },
+ "Zagier D (Apery zeta2)": {
+  "weight": 1,
+  "survivors_B1prime": [],
+  "survivors_B1prime_ord": [],
+  "P7_holds_all_p": true,
+  "P7_exceptions": {}
+ },
+ "Zagier E": {
+  "weight": 1,
+  "survivors_B1prime": [
+   4,
+   8
+  ],
+  "survivors_B1prime_ord": [
+   4,
+   8
+  ],
+  "P7_holds_all_p": true,
+  "P7_exceptions": {}
+ },
+ "Zagier F": {
+  "weight": 1,
+  "survivors_B1prime": [
+   8,
+   9
+  ],
+  "survivors_B1prime_ord": [
+   6,
+   8,
+   9,
+   12
+  ],
+  "P7_holds_all_p": true,
+  "P7_exceptions": {}
+ },
+ "Apery zeta3": {
+  "weight": 2,
+  "survivors_B1prime": [
+   -1,
+   1
+  ],
+  "survivors_B1prime_ord": [
+   -1,
+   1
+  ],
+  "P7_holds_all_p": false,
+  "P7_exceptions": {
+   "13": {
+    "deg F": 12,
+    "deg rad": 7,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "17": {
+    "deg F": 16,
+    "deg rad": 9,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "19": {
+    "deg F": 18,
+    "deg rad": 10,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "23": {
+    "deg F": 22,
+    "deg rad": 12,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "37": {
+    "deg F": 36,
+    "deg rad": 19,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "41": {
+    "deg F": 40,
+    "deg rad": 21,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "43": {
+    "deg F": 42,
+    "deg rad": 22,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "47": {
+    "deg F": 46,
+    "deg rad": 24,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "61": {
+    "deg F": 60,
+    "deg rad": 31,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "67": {
+    "deg F": 66,
+    "deg rad": 34,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "71": {
+    "deg F": 70,
+    "deg rad": 36,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "89": {
+    "deg F": 88,
+    "deg rad": 45,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "109": {
+    "deg F": 108,
+    "deg rad": 55,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "113": {
+    "deg F": 112,
+    "deg rad": 57,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "137": {
+    "deg F": 136,
+    "deg rad": 69,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "139": {
+    "deg F": 138,
+    "deg rad": 70,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "157": {
+    "deg F": 156,
+    "deg rad": 79,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "163": {
+    "deg F": 162,
+    "deg rad": 82,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "167": {
+    "deg F": 166,
+    "deg rad": 84,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "181": {
+    "deg F": 180,
+    "deg rad": 91,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "191": {
+    "deg F": 190,
+    "deg rad": 96,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   }
+  }
+ },
+ "Domb": {
+  "weight": 2,
+  "survivors_B1prime": [
+   -32,
+   -8,
+   -2,
+   1,
+   4,
+   8,
+   16,
+   64
+  ],
+  "survivors_B1prime_ord": [
+   -32,
+   -8,
+   -2,
+   1,
+   4,
+   8,
+   16,
+   64
+  ],
+  "P7_holds_all_p": false,
+  "P7_exceptions": {
+   "11": {
+    "deg F": 10,
+    "deg rad": 6,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "17": {
+    "deg F": 16,
+    "deg rad": 9,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "23": {
+    "deg F": 22,
+    "deg rad": 12,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "29": {
+    "deg F": 28,
+    "deg rad": 15,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "41": {
+    "deg F": 40,
+    "deg rad": 21,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "47": {
+    "deg F": 46,
+    "deg rad": 24,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "53": {
+    "deg F": 52,
+    "deg rad": 27,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "59": {
+    "deg F": 58,
+    "deg rad": 30,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "71": {
+    "deg F": 70,
+    "deg rad": 36,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "83": {
+    "deg F": 82,
+    "deg rad": 42,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "89": {
+    "deg F": 88,
+    "deg rad": 45,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "101": {
+    "deg F": 100,
+    "deg rad": 51,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "107": {
+    "deg F": 106,
+    "deg rad": 54,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "113": {
+    "deg F": 112,
+    "deg rad": 57,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "131": {
+    "deg F": 130,
+    "deg rad": 66,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "137": {
+    "deg F": 136,
+    "deg rad": 69,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "149": {
+    "deg F": 148,
+    "deg rad": 75,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "167": {
+    "deg F": 166,
+    "deg rad": 84,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "173": {
+    "deg F": 172,
+    "deg rad": 87,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "179": {
+    "deg F": 178,
+    "deg rad": 90,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "191": {
+    "deg F": 190,
+    "deg rad": 96,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "197": {
+    "deg F": 196,
+    "deg rad": 99,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   }
+  }
+ },
+ "Cooper s7": {
+  "weight": 2,
+  "survivors_B1prime": [
+   -10648,
+   -64,
+   -8,
+   -1,
+   2,
+   8,
+   24,
+   27,
+   125
+  ],
+  "survivors_B1prime_ord": [
+   -10648,
+   -64,
+   -8,
+   -1,
+   2,
+   8,
+   24,
+   27,
+   125
+  ],
+  "P7_holds_all_p": false,
+  "P7_exceptions": {
+   "13": {
+    "deg F": 8,
+    "deg rad": 5,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "17": {
+    "deg F": 10,
+    "deg rad": 6,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "19": {
+    "deg F": 12,
+    "deg rad": 7,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "31": {
+    "deg F": 20,
+    "deg rad": 11,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "41": {
+    "deg F": 26,
+    "deg rad": 14,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "47": {
+    "deg F": 30,
+    "deg rad": 16,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "59": {
+    "deg F": 38,
+    "deg rad": 20,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "61": {
+    "deg F": 40,
+    "deg rad": 21,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "73": {
+    "deg F": 48,
+    "deg rad": 25,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "83": {
+    "deg F": 54,
+    "deg rad": 28,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "89": {
+    "deg F": 58,
+    "deg rad": 30,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "97": {
+    "deg F": 64,
+    "deg rad": 33,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "101": {
+    "deg F": 66,
+    "deg rad": 34,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "103": {
+    "deg F": 68,
+    "deg rad": 35,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "131": {
+    "deg F": 86,
+    "deg rad": 44,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "139": {
+    "deg F": 92,
+    "deg rad": 47,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "157": {
+    "deg F": 104,
+    "deg rad": 53,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "167": {
+    "deg F": 110,
+    "deg rad": 56,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "173": {
+    "deg F": 114,
+    "deg rad": 58,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "181": {
+    "deg F": 120,
+    "deg rad": 61,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "199": {
+    "deg F": 132,
+    "deg rad": 67,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   }
+  }
+ },
+ "Cooper s10": {
+  "weight": 2,
+  "survivors_B1prime": [
+   -324,
+   -64,
+   -20,
+   -9,
+   -4,
+   -2,
+   1,
+   4,
+   12,
+   16,
+   36,
+   196,
+   1296,
+   5776
+  ],
+  "survivors_B1prime_ord": [
+   -324,
+   -64,
+   -20,
+   -9,
+   -4,
+   -2,
+   1,
+   4,
+   12,
+   16,
+   36,
+   196,
+   1296,
+   5776
+  ],
+  "P7_holds_all_p": false,
+  "P7_exceptions": {
+   "11": {
+    "deg F": 7,
+    "deg rad": 4,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "13": {
+    "deg F": 9,
+    "deg rad": 5,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "17": {
+    "deg F": 12,
+    "deg rad": 7,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "19": {
+    "deg F": 13,
+    "deg rad": 7,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "29": {
+    "deg F": 21,
+    "deg rad": 11,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "31": {
+    "deg F": 22,
+    "deg rad": 12,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "37": {
+    "deg F": 27,
+    "deg rad": 14,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "43": {
+    "deg F": 31,
+    "deg rad": 16,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "53": {
+    "deg F": 39,
+    "deg rad": 20,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "59": {
+    "deg F": 43,
+    "deg rad": 22,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "61": {
+    "deg F": 45,
+    "deg rad": 23,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "67": {
+    "deg F": 49,
+    "deg rad": 25,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "71": {
+    "deg F": 52,
+    "deg rad": 27,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "73": {
+    "deg F": 54,
+    "deg rad": 28,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "79": {
+    "deg F": 58,
+    "deg rad": 30,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "83": {
+    "deg F": 61,
+    "deg rad": 31,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "97": {
+    "deg F": 72,
+    "deg rad": 37,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "101": {
+    "deg F": 75,
+    "deg rad": 38,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "107": {
+    "deg F": 79,
+    "deg rad": 40,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "109": {
+    "deg F": 81,
+    "deg rad": 41,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "113": {
+    "deg F": 84,
+    "deg rad": 43,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "131": {
+    "deg F": 97,
+    "deg rad": 49,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "137": {
+    "deg F": 102,
+    "deg rad": 52,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "139": {
+    "deg F": 103,
+    "deg rad": 52,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "149": {
+    "deg F": 111,
+    "deg rad": 56,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "151": {
+    "deg F": 112,
+    "deg rad": 57,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "157": {
+    "deg F": 117,
+    "deg rad": 59,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "163": {
+    "deg F": 121,
+    "deg rad": 61,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "173": {
+    "deg F": 129,
+    "deg rad": 65,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "179": {
+    "deg F": 133,
+    "deg rad": 67,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "181": {
+    "deg F": 135,
+    "deg rad": 68,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "191": {
+    "deg F": 142,
+    "deg rad": 72,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "193": {
+    "deg F": 144,
+    "deg rad": 73,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "197": {
+    "deg F": 147,
+    "deg rad": 74,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   },
+   "199": {
+    "deg F": 148,
+    "deg rad": 75,
+    "rad|V": true,
+    "all roots multiple": false,
+    "squarefree": false,
+    "gcd(F,V)=1": false
+   }
+  }
+ }
+}

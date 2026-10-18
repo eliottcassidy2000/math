@@ -116,3 +116,27 @@ Predictions:
   - In each weight-2 family (Apery, Domb, s7, s10), V vanishes at every root of F_p in the algebraic closure
     of F_p (the radical of F_p divides V mod p), and F_p has no simple root other than possibly x = 0.
   - In each weight-1 family (A..F), F_p is squarefree mod p and gcd(F_p, V) = 1.
+
+## Outcome of P6 and P7 (recorded after running ordinary_detector_and_mechanism.py, M = 10^5; predictions above unchanged)
+
+- P6 PASSED, exactly as predicted. The (B1'_ord) survivors are:
+  - A {-4, -1, 2, 8};
+  - B {3, 9};
+  - C {-3, 1, 3, 9};
+  - D {};
+  - E {4, 8};
+  - F {6, 8, 9, 12}.
+
+  For the four weight-2 families, (B1'_ord) and (B1') have identical survivors.
+- P7, weight-1 half PASSED: for all six Zagier families and every 7 <= p <= 199, F_p is squarefree mod p and
+  gcd(F_p, V) = 1.
+- P7, weight-2 half SPLIT.
+  - "rad(F_p) | V" PASSED: V vanishes at every root of F_p in the algebraic closure of F_p, for all four families
+    and every 7 <= p <= 199.
+  - "no simple root" FAILED: F_p has simple roots at 21 (Apery), 22 (Domb), 21 (s7) and 35 (s10) of the 41 primes.
+  - Post hoc, checked for all p <= 199: the simple-root part of F_p always divides the singular-fibre polynomial.
+    The singular fibres are x^2-34x+1 (Apery), (1-4x)(1-16x) (Domb), (1+x)(1-27x) (s7) and (1+4x)(1-16x) (s10).
+  - So the simple roots are exactly the singular fibres that are supersingular at p. For s7 these are the primes
+    p == 3, 5, 6 (mod 7), inert in Q(sqrt-7), consistent with D = -7 and D = -28.
+  - Reading: F_p is a square pulled back along the 2:1 Fricke quotient. It is simple only at the branch points, the
+    elliptic CM points of Gamma_0(N)+.
