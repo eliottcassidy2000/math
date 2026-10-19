@@ -1,0 +1,909 @@
+{
+  "conductor_veronese": {
+    "all_triples_independent": true,
+    "cases": [
+      {
+        "branch_conductor_exponents": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "configuration": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          6
+        ],
+        "r": 6,
+        "seminormal_defect": 4
+      },
+      {
+        "branch_conductor_exponents": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "configuration": "off_conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          6
+        ],
+        "r": 6,
+        "seminormal_defect": 3
+      },
+      {
+        "branch_conductor_exponents": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "configuration": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          7
+        ],
+        "r": 7,
+        "seminormal_defect": 6
+      },
+      {
+        "branch_conductor_exponents": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2
+        ],
+        "configuration": "off_conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          7,
+          7
+        ],
+        "r": 7,
+        "seminormal_defect": 5
+      },
+      {
+        "branch_conductor_exponents": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "configuration": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          8
+        ],
+        "r": 8,
+        "seminormal_defect": 9
+      },
+      {
+        "branch_conductor_exponents": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2
+        ],
+        "configuration": "off_conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          8,
+          8
+        ],
+        "r": 8,
+        "seminormal_defect": 7
+      },
+      {
+        "branch_conductor_exponents": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "configuration": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          9
+        ],
+        "r": 9,
+        "seminormal_defect": 12
+      },
+      {
+        "branch_conductor_exponents": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          2
+        ],
+        "configuration": "off_conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          8,
+          9,
+          9
+        ],
+        "r": 9,
+        "seminormal_defect": 10
+      },
+      {
+        "branch_conductor_exponents": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "configuration": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          10
+        ],
+        "r": 10,
+        "seminormal_defect": 16
+      },
+      {
+        "branch_conductor_exponents": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          2
+        ],
+        "configuration": "off_conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          8,
+          10,
+          10
+        ],
+        "r": 10,
+        "seminormal_defect": 13
+      },
+      {
+        "branch_conductor_exponents": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "configuration": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          11
+        ],
+        "r": 11,
+        "seminormal_defect": 20
+      },
+      {
+        "branch_conductor_exponents": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          2
+        ],
+        "configuration": "off_conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          8,
+          10,
+          11,
+          11
+        ],
+        "r": 11,
+        "seminormal_defect": 17
+      },
+      {
+        "branch_conductor_exponents": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "configuration": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          12
+        ],
+        "r": 12,
+        "seminormal_defect": 25
+      },
+      {
+        "branch_conductor_exponents": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          2
+        ],
+        "configuration": "off_conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          8,
+          10,
+          12,
+          12
+        ],
+        "r": 12,
+        "seminormal_defect": 21
+      },
+      {
+        "branch_conductor_exponents": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "configuration": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          13
+        ],
+        "r": 13,
+        "seminormal_defect": 30
+      },
+      {
+        "branch_conductor_exponents": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          2
+        ],
+        "configuration": "off_conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          8,
+          10,
+          12,
+          13,
+          13
+        ],
+        "r": 13,
+        "seminormal_defect": 26
+      },
+      {
+        "branch_conductor_exponents": [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "configuration": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          14
+        ],
+        "r": 14,
+        "seminormal_defect": 36
+      },
+      {
+        "branch_conductor_exponents": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          2
+        ],
+        "configuration": "off_conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          8,
+          10,
+          12,
+          14,
+          14
+        ],
+        "r": 14,
+        "seminormal_defect": 31
+      },
+      {
+        "branch_conductor_exponents": [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "configuration": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          15,
+          15
+        ],
+        "r": 15,
+        "seminormal_defect": 42
+      },
+      {
+        "branch_conductor_exponents": [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          2
+        ],
+        "configuration": "off_conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          8,
+          10,
+          12,
+          14,
+          15,
+          15
+        ],
+        "r": 15,
+        "seminormal_defect": 37
+      },
+      {
+        "branch_conductor_exponents": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "configuration": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          15,
+          16
+        ],
+        "r": 16,
+        "seminormal_defect": 49
+      },
+      {
+        "branch_conductor_exponents": [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          2
+        ],
+        "configuration": "off_conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          16
+        ],
+        "r": 16,
+        "seminormal_defect": 43
+      },
+      {
+        "branch_conductor_exponents": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "configuration": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          15,
+          17,
+          17
+        ],
+        "r": 17,
+        "seminormal_defect": 56
+      },
+      {
+        "branch_conductor_exponents": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          2
+        ],
+        "configuration": "off_conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          17,
+          17
+        ],
+        "r": 17,
+        "seminormal_defect": 50
+      },
+      {
+        "branch_conductor_exponents": [
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9,
+          9
+        ],
+        "configuration": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          15,
+          17,
+          18
+        ],
+        "r": 18,
+        "seminormal_defect": 64
+      },
+      {
+        "branch_conductor_exponents": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          2
+        ],
+        "configuration": "off_conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18,
+          18
+        ],
+        "r": 18,
+        "seminormal_defect": 57
+      }
+    ],
+    "quadratic_relation_r6": [
+      -1,
+      5,
+      -10,
+      10,
+      -5,
+      1
+    ],
+    "r_range": [
+      6,
+      18
+    ]
+  },
+  "critical_character_repair": {
+    "degrees": {
+      "2": 5,
+      "3": 3,
+      "7": 2,
+      "10": 4,
+      "11": 3,
+      "13": 4,
+      "16": 4,
+      "17": 3,
+      "18": 3,
+      "19": 3,
+      "21": 3,
+      "22": 7
+    },
+    "involution_preserving_cost": 6,
+    "involution_preserving_repair_count": 27,
+    "odd_vertices": [
+      2,
+      3,
+      11,
+      17,
+      18,
+      19,
+      21,
+      22
+    ],
+    "optimal_cost": 4,
+    "optimal_repairs": [
+      [
+        [
+          2,
+          17
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          21,
+          22
+        ]
+      ],
+      [
+        [
+          2,
+          21
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          17,
+          22
+        ],
+        [
+          18,
+          19
+        ]
+      ]
+    ],
+    "smith_controls": {
+      "optimal": {
+        "group_order": 393248,
+        "harmonic_cut": true,
+        "nonunit_invariants": [
+          2,
+          4,
+          49156
+        ]
+      },
+      "original": {
+        "group_order": 74748,
+        "harmonic_cut": false,
+        "nonunit_invariants": [
+          74748
+        ]
+      },
+      "symmetric": {
+        "group_order": 745920,
+        "harmonic_cut": true,
+        "nonunit_invariants": [
+          4,
+          4,
+          46620
+        ]
+      }
+    },
+    "symmetric_witness": [
+      [
+        2,
+        10
+      ],
+      [
+        2,
+        17
+      ],
+      [
+        2,
+        21
+      ],
+      [
+        3,
+        11
+      ],
+      [
+        10,
+        22
+      ],
+      [
+        18,
+        19
+      ]
+    ]
+  },
+  "interval_moments": {
+    "decode_counts_by_k": {
+      "1": 79,
+      "2": 794,
+      "3": 2510
+    },
+    "shifted_and_zero_endpoint_decodes": 848,
+    "shifted_universe": "all subsets of {-5,...,4} with at most 3 runs",
+    "three_moment_hostile": {
+      "A": [
+        1,
+        5,
+        6
+      ],
+      "B": [
+        2,
+        3,
+        7
+      ],
+      "moments_A": [
+        3,
+        12,
+        62,
+        342
+      ],
+      "moments_B": [
+        3,
+        12,
+        62,
+        378
+      ]
+    },
+    "total_positive_decodes": 3383,
+    "universe": "all subsets of {1,...,12} with at most k runs"
+  },
+  "status": "PASS: all exact checks completed"
+}

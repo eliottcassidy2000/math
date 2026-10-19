@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-19",
+  "receipts": [
+    {
+      "checker": "verify_geometry_independent.py",
+      "normal_command": "python3 -B verify_geometry_independent.py",
+      "optimized_command": "python3 -O -B verify_geometry_independent.py",
+      "result": "PASS",
+      "normal_optimized_byte_identical": true,
+      "output_bytes": 3709,
+      "output_sha256": "f11df98e9ca4e793499f97d11f92e2c2e653682f5c9df8e515eb50916442fb3a"
+    },
+    {
+      "checker": "verify_bridges_independent.py",
+      "normal_command": "python3 -B verify_bridges_independent.py",
+      "optimized_command": "python3 -O -B verify_bridges_independent.py",
+      "result": "PASS",
+      "normal_optimized_byte_identical": true,
+      "output_bytes": 12973,
+      "output_sha256": "0a07010b3a5bb95d85b1d75aa86e80146565022e6b150d28272c4fc7a05fb45f"
+    }
+  ],
+  "independence": "No producer script imported; no assert verification gates; no checkout or Git writes."
+}

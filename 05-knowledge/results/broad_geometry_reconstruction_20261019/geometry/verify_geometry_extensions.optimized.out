@@ -1,0 +1,31 @@
+SEIFERT NORMALIZED-GAUGE COUNTS: PASS
+Universe: ordered 2 <= a,b <= 32; all signed-p residue classes modulo ab.
+Residue classes independently enumerated: 277729
+Gauge matrices independently checked: 961
+Hostile: a=b=5,p=10 has 3 admissible marked gauge classes.
+Normalized (ell0,ell1,ell2) representatives: [(1, 1, 2), (1, 2, 1), (2, 4, 4)]
+Even-prime boundary: a=b=2,p=2 count= 0 ; p=4 count= 1
+Zero-clutch boundary: a=b=m gives phi(m); a!=b gives zero: PASS
+
+RANK-TWO SQUARE-ZERO EXTERIOR SMITH PROFILE: PASS
+Universe: 1 <= s <= 10, t=s*m with 1 <= m <= 10; all q=0,...,4.
+Exterior matrices checked: 500
+B=diag(1,1): wedge2 nonzero Smith=(1, 1); cusp components=1; Euler=2
+B=diag(1,2): wedge2 nonzero Smith=(1, 1); cusp components=2; Euler=4
+B=diag(1,3): wedge2 nonzero Smith=(1, 1); cusp components=3; Euler=6
+B=diag(1,5): wedge2 nonzero Smith=(1, 1); cusp components=5; Euler=10
+B=diag(1,12): wedge2 nonzero Smith=(1, 1); cusp components=12; Euler=24
+B=diag(1,101): wedge2 nonzero Smith=(1, 1); cusp components=101; Euler=202
+Nondiagonal/sign-mixed shear controls: 4 PASS
+Scope: exact lattice algebra and conditional toric cell count only; no analytic quotient verified.
+
+THETA-CONDUCTOR LINE-BUNDLE HOLONOMY: PASS
+endpoint ratios (1, 1, 1) => (h0,h1)= (1, 2) trivial= True
+endpoint ratios (2, 2, 2) => (h0,h1)= (1, 2) trivial= True
+endpoint ratios (1, 2, 1) => (h0,h1)= (0, 1) trivial= False
+endpoint ratios (2, 3, 5) => (h0,h1)= (0, 1) trivial= False
+endpoint ratios (1, -1, 1) => (h0,h1)= (0, 1) trivial= False
+
+TORIC t-CHARACTER AND CONORMAL FRAME: PASS
+All symbolic height-preserving shears fix m0; A2 chart products checked: 50
+Every t-preserving deck transition fixes the dual-conormal T^1 frame.

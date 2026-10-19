@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-19",
+  "scope": "Read-only source snapshot; no checkout mutations",
+  "sources": [
+    {
+      "path": "session7-torus-geometry/seifert_gauge_torsion_count.md",
+      "bytes": 8185,
+      "sha256": "8d4d2e6b83c2bca58b562e866e34f51f08d3d7f4c72470aac2fd58d204e9d53f"
+    },
+    {
+      "path": "session7-torus-geometry/monodromy_smith_cusp_index.md",
+      "bytes": 9203,
+      "sha256": "7d17a7b5a44c2bad7550c698e3b15b8a3d1d34a701ba2bc6b92b606bf7fc2f00"
+    },
+    {
+      "path": "session7-torus-geometry/conductor_smoothing_holonomy.md",
+      "bytes": 12563,
+      "sha256": "bbc38ae702afeb53b9d79a751520481a59773d33ac495be010417c0d84c95bcf"
+    },
+    {
+      "path": "session7-torus-geometry/source.txt",
+      "bytes": 551847,
+      "sha256": "e3a403c0ef610e2aefb22f56b59dd495931dc7015b045cdc30f1403a31a65040"
+    },
+    {
+      "path": "session7-unprompted/unprompted_bridges_session7.md",
+      "bytes": 28872,
+      "sha256": "8f3e80aea09733363f9848ce736b67deff38b11b36e1d2da1b5620843ff709b2"
+    },
+    {
+      "path": "math/01-canon/theorems/THM-3991-periodic-unimodular-toric-cusp-factorial-euler-obstruction.md",
+      "bytes": 10254,
+      "sha256": "83231416e7729de73194c4f58bb265cf43b7254f3e00813be212f402a5102518"
+    }
+  ]
+}
