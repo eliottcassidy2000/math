@@ -1,0 +1,90 @@
+{
+  "status": "FINITE-EXACT identities; numerical constants labelled separately",
+  "general_cyclic_symmetric_cases": 365,
+  "equal_energy_opposite_surplus": [
+    {
+      "B": [
+        1,
+        5,
+        8,
+        12
+      ],
+      "energy": 36,
+      "triples": 0,
+      "conditional_mean": "793/729",
+      "variance": "212/6561"
+    },
+    {
+      "B": [
+        1,
+        2,
+        11,
+        12
+      ],
+      "energy": 36,
+      "triples": 6,
+      "conditional_mean": "715/729",
+      "variance": "212/6561"
+    }
+  ],
+  "prime_residue_cases": 4222,
+  "crt_wheel": {
+    "W": 385,
+    "allowed": 135,
+    "min_pair_residues": 21,
+    "max_pair_residues": 135,
+    "second_moment": "27257153/22143375",
+    "conditioned_mean": "686147/492075"
+  },
+  "rough_sum_interval_targets": 434,
+  "prime_power_at_10": {
+    "weighted": "11/3",
+    "primes": "3"
+  },
+  "boolean_prime_pair_masses": {
+    "r": 4,
+    "minus": 0,
+    "plus": 32,
+    "total_mass": 256
+  },
+  "floating_products_p_le_1000000": {
+    "G": 0.39688047143172744,
+    "variance": 0.2419597325415459,
+    "internal_target_boost": 1.4118882432942599,
+    "twin_singular_constant": 7.9219423270780585,
+    "four_form_floor": 24.907095308012863
+  },
+  "certified_internal_target_boost": {
+    "prime_cutoff": 1000000,
+    "lower": "1.41188824329665943969327923841603421673627157",
+    "upper": "1.41188824330230701525676813013037419105105626",
+    "method": "45-digit directed rounding and all-integers tail bound"
+  },
+  "arithmetic_moment_experiment": {
+    "N": 100000,
+    "using_G_p_le_1000000": true,
+    "mean": 0.9999198064147723,
+    "second_moment": 1.2413697481579011,
+    "minimum_at": [
+      1
+    ]
+  },
+  "finite_twin_rank_holes_2_to_20000": [
+    16,
+    67,
+    86,
+    131,
+    151,
+    186,
+    191,
+    211,
+    226,
+    541,
+    701
+  ],
+  "finite_twin_rank_701": {
+    "representations": 0,
+    "local_weight": 1.007703071973605
+  },
+  "all_checks_passed": true
+}
