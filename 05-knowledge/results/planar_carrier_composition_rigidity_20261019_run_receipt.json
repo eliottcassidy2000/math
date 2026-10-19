@@ -1,0 +1,17 @@
+{
+  "packet": 110,
+  "status": "PASS",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "checks": 470,
+  "commands": [
+    "python -B 04-computation/experiments/planar_carrier_composition_rigidity_20261019.py",
+    "python -B -O 04-computation/experiments/planar_carrier_composition_rigidity_20261019.py"
+  ],
+  "normal_output": "05-knowledge/results/planar_carrier_composition_rigidity_20261019.json",
+  "optimized_output": "05-knowledge/results/planar_carrier_composition_rigidity_20261019_optimized.json",
+  "normal_sha256": "d92c484ee92c4705410474940fc16c23657b355f8f9551d69649264eb93620bd",
+  "optimized_sha256": "d92c484ee92c4705410474940fc16c23657b355f8f9551d69649264eb93620bd",
+  "byte_identical": true,
+  "scope": "Finite exact controls; universal conclusion relies on written proofs and cited Gwozdziewicz theorem."
+}

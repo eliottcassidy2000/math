@@ -1,0 +1,87 @@
+{
+  "carrier_controls": [
+    {
+      "R": "0",
+      "common_s_order": null,
+      "common_tau_order": null
+    },
+    {
+      "R": "1",
+      "common_s_order": 1,
+      "common_tau_order": 2
+    },
+    {
+      "R": "p",
+      "common_s_order": 1,
+      "common_tau_order": 2
+    },
+    {
+      "R": "y",
+      "common_s_order": 1,
+      "common_tau_order": 2
+    },
+    {
+      "R": "p + y + 1",
+      "common_s_order": 1,
+      "common_tau_order": 2
+    },
+    {
+      "R": "p**3 - y**2",
+      "common_s_order": 2,
+      "common_tau_order": 3
+    },
+    {
+      "R": "(p - y)*(p**3 - y**2)",
+      "common_s_order": 2,
+      "common_tau_order": 3
+    }
+  ],
+  "checks": 470,
+  "claims": "Universal conclusion uses written proof and Gwozdziewicz fixed-line theorem; finite partial sums are not claimed to be exact maps.",
+  "finite_word_controls": [
+    [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    [
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        -1
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ]
+    ]
+  ],
+  "normal_form_basis_controls": 50,
+  "partial_exponential_order": 2,
+  "sigma_address_controls": 221,
+  "status": "PASS"
+}
