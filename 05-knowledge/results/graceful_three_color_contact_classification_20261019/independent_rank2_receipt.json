@@ -1,0 +1,2004 @@
+{
+  "algorithm": {
+    "imports_original_checker_or_helpers": false,
+    "obstruction_test": "set equality with all tree-pair permutations",
+    "state_components": "DSU of shared coordinate-value incidence buckets",
+    "support_rank": "Boolean vertex-set reachability",
+    "tree_test": "precomputed connected three-edge bit masks"
+  },
+  "all_disconnected_cases_have_two_singleton_components": true,
+  "checker": "verify_rank2_independent.py",
+  "component_count_histogram": {
+    "0": 1621,
+    "1": 13908,
+    "2": 96
+  },
+  "disconnected_tree_shape_counts": {
+    "path": 72,
+    "star": 24
+  },
+  "disconnected_witnesses": [
+    {
+      "states": [
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ]
+      ],
+      "support_masks": [
+        3,
+        5,
+        6
+      ],
+      "tree_mask": 7
+    },
+    {
+      "states": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "support_masks": [
+        3,
+        6,
+        5
+      ],
+      "tree_mask": 7
+    },
+    {
+      "states": [
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          1,
+          0,
+          4
+        ]
+      ],
+      "support_masks": [
+        3,
+        17,
+        18
+      ],
+      "tree_mask": 19
+    },
+    {
+      "states": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          1,
+          4,
+          0
+        ]
+      ],
+      "support_masks": [
+        3,
+        18,
+        17
+      ],
+      "tree_mask": 19
+    },
+    {
+      "states": [
+        [
+          0,
+          5,
+          1
+        ],
+        [
+          1,
+          0,
+          5
+        ]
+      ],
+      "support_masks": [
+        3,
+        33,
+        34
+      ],
+      "tree_mask": 35
+    },
+    {
+      "states": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          1,
+          5,
+          0
+        ]
+      ],
+      "support_masks": [
+        3,
+        34,
+        33
+      ],
+      "tree_mask": 35
+    },
+    {
+      "states": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      "support_masks": [
+        5,
+        3,
+        6
+      ],
+      "tree_mask": 7
+    },
+    {
+      "states": [
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "support_masks": [
+        5,
+        6,
+        3
+      ],
+      "tree_mask": 7
+    },
+    {
+      "states": [
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ]
+      ],
+      "support_masks": [
+        5,
+        9,
+        12
+      ],
+      "tree_mask": 13
+    },
+    {
+      "states": [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          0
+        ]
+      ],
+      "support_masks": [
+        5,
+        12,
+        9
+      ],
+      "tree_mask": 13
+    },
+    {
+      "states": [
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          2,
+          0,
+          5
+        ]
+      ],
+      "support_masks": [
+        5,
+        33,
+        36
+      ],
+      "tree_mask": 37
+    },
+    {
+      "states": [
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          2,
+          5,
+          0
+        ]
+      ],
+      "support_masks": [
+        5,
+        36,
+        33
+      ],
+      "tree_mask": 37
+    },
+    {
+      "states": [
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "support_masks": [
+        6,
+        3,
+        5
+      ],
+      "tree_mask": 7
+    },
+    {
+      "states": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      "support_masks": [
+        6,
+        5,
+        3
+      ],
+      "tree_mask": 7
+    },
+    {
+      "states": [
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ]
+      ],
+      "support_masks": [
+        6,
+        10,
+        12
+      ],
+      "tree_mask": 14
+    },
+    {
+      "states": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          1
+        ]
+      ],
+      "support_masks": [
+        6,
+        12,
+        10
+      ],
+      "tree_mask": 14
+    },
+    {
+      "states": [
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          2,
+          1,
+          4
+        ]
+      ],
+      "support_masks": [
+        6,
+        18,
+        20
+      ],
+      "tree_mask": 22
+    },
+    {
+      "states": [
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          2,
+          4,
+          1
+        ]
+      ],
+      "support_masks": [
+        6,
+        20,
+        18
+      ],
+      "tree_mask": 22
+    },
+    {
+      "states": [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          3,
+          0,
+          2
+        ]
+      ],
+      "support_masks": [
+        9,
+        5,
+        12
+      ],
+      "tree_mask": 13
+    },
+    {
+      "states": [
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          3,
+          2,
+          0
+        ]
+      ],
+      "support_masks": [
+        9,
+        12,
+        5
+      ],
+      "tree_mask": 13
+    },
+    {
+      "states": [
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          3,
+          0,
+          4
+        ]
+      ],
+      "support_masks": [
+        9,
+        17,
+        24
+      ],
+      "tree_mask": 25
+    },
+    {
+      "states": [
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          3,
+          4,
+          0
+        ]
+      ],
+      "support_masks": [
+        9,
+        24,
+        17
+      ],
+      "tree_mask": 25
+    },
+    {
+      "states": [
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          3,
+          0,
+          5
+        ]
+      ],
+      "support_masks": [
+        9,
+        33,
+        40
+      ],
+      "tree_mask": 41
+    },
+    {
+      "states": [
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          3,
+          5,
+          0
+        ]
+      ],
+      "support_masks": [
+        9,
+        40,
+        33
+      ],
+      "tree_mask": 41
+    },
+    {
+      "states": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          3,
+          1,
+          2
+        ]
+      ],
+      "support_masks": [
+        10,
+        6,
+        12
+      ],
+      "tree_mask": 14
+    },
+    {
+      "states": [
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          3,
+          2,
+          1
+        ]
+      ],
+      "support_masks": [
+        10,
+        12,
+        6
+      ],
+      "tree_mask": 14
+    },
+    {
+      "states": [
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          3,
+          1,
+          4
+        ]
+      ],
+      "support_masks": [
+        10,
+        18,
+        24
+      ],
+      "tree_mask": 26
+    },
+    {
+      "states": [
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "support_masks": [
+        10,
+        24,
+        18
+      ],
+      "tree_mask": 26
+    },
+    {
+      "states": [
+        [
+          1,
+          5,
+          3
+        ],
+        [
+          3,
+          1,
+          5
+        ]
+      ],
+      "support_masks": [
+        10,
+        34,
+        40
+      ],
+      "tree_mask": 42
+    },
+    {
+      "states": [
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          3,
+          5,
+          1
+        ]
+      ],
+      "support_masks": [
+        10,
+        40,
+        34
+      ],
+      "tree_mask": 42
+    },
+    {
+      "states": [
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          2,
+          0
+        ]
+      ],
+      "support_masks": [
+        12,
+        5,
+        9
+      ],
+      "tree_mask": 13
+    },
+    {
+      "states": [
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          3,
+          2,
+          1
+        ]
+      ],
+      "support_masks": [
+        12,
+        6,
+        10
+      ],
+      "tree_mask": 14
+    },
+    {
+      "states": [
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          3,
+          0,
+          2
+        ]
+      ],
+      "support_masks": [
+        12,
+        9,
+        5
+      ],
+      "tree_mask": 13
+    },
+    {
+      "states": [
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ]
+      ],
+      "support_masks": [
+        12,
+        10,
+        6
+      ],
+      "tree_mask": 14
+    },
+    {
+      "states": [
+        [
+          2,
+          4,
+          3
+        ],
+        [
+          3,
+          2,
+          4
+        ]
+      ],
+      "support_masks": [
+        12,
+        20,
+        24
+      ],
+      "tree_mask": 28
+    },
+    {
+      "states": [
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          3,
+          4,
+          2
+        ]
+      ],
+      "support_masks": [
+        12,
+        24,
+        20
+      ],
+      "tree_mask": 28
+    },
+    {
+      "states": [
+        [
+          2,
+          5,
+          3
+        ],
+        [
+          3,
+          2,
+          5
+        ]
+      ],
+      "support_masks": [
+        12,
+        36,
+        40
+      ],
+      "tree_mask": 44
+    },
+    {
+      "states": [
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          3,
+          5,
+          2
+        ]
+      ],
+      "support_masks": [
+        12,
+        40,
+        36
+      ],
+      "tree_mask": 44
+    },
+    {
+      "states": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "support_masks": [
+        17,
+        3,
+        18
+      ],
+      "tree_mask": 19
+    },
+    {
+      "states": [
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          4,
+          0,
+          3
+        ]
+      ],
+      "support_masks": [
+        17,
+        9,
+        24
+      ],
+      "tree_mask": 25
+    },
+    {
+      "states": [
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          4,
+          1,
+          0
+        ]
+      ],
+      "support_masks": [
+        17,
+        18,
+        3
+      ],
+      "tree_mask": 19
+    },
+    {
+      "states": [
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          4,
+          3,
+          0
+        ]
+      ],
+      "support_masks": [
+        17,
+        24,
+        9
+      ],
+      "tree_mask": 25
+    },
+    {
+      "states": [
+        [
+          0,
+          5,
+          4
+        ],
+        [
+          4,
+          0,
+          5
+        ]
+      ],
+      "support_masks": [
+        17,
+        33,
+        48
+      ],
+      "tree_mask": 49
+    },
+    {
+      "states": [
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          4,
+          5,
+          0
+        ]
+      ],
+      "support_masks": [
+        17,
+        48,
+        33
+      ],
+      "tree_mask": 49
+    },
+    {
+      "states": [
+        [
+          1,
+          0,
+          4
+        ],
+        [
+          4,
+          1,
+          0
+        ]
+      ],
+      "support_masks": [
+        18,
+        3,
+        17
+      ],
+      "tree_mask": 19
+    },
+    {
+      "states": [
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          4,
+          1,
+          2
+        ]
+      ],
+      "support_masks": [
+        18,
+        6,
+        20
+      ],
+      "tree_mask": 22
+    },
+    {
+      "states": [
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          4,
+          1,
+          3
+        ]
+      ],
+      "support_masks": [
+        18,
+        10,
+        24
+      ],
+      "tree_mask": 26
+    },
+    {
+      "states": [
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ]
+      ],
+      "support_masks": [
+        18,
+        17,
+        3
+      ],
+      "tree_mask": 19
+    },
+    {
+      "states": [
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          4,
+          2,
+          1
+        ]
+      ],
+      "support_masks": [
+        18,
+        20,
+        6
+      ],
+      "tree_mask": 22
+    },
+    {
+      "states": [
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          4,
+          3,
+          1
+        ]
+      ],
+      "support_masks": [
+        18,
+        24,
+        10
+      ],
+      "tree_mask": 26
+    },
+    {
+      "states": [
+        [
+          1,
+          5,
+          4
+        ],
+        [
+          4,
+          1,
+          5
+        ]
+      ],
+      "support_masks": [
+        18,
+        34,
+        48
+      ],
+      "tree_mask": 50
+    },
+    {
+      "states": [
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          4,
+          5,
+          1
+        ]
+      ],
+      "support_masks": [
+        18,
+        48,
+        34
+      ],
+      "tree_mask": 50
+    },
+    {
+      "states": [
+        [
+          2,
+          1,
+          4
+        ],
+        [
+          4,
+          2,
+          1
+        ]
+      ],
+      "support_masks": [
+        20,
+        6,
+        18
+      ],
+      "tree_mask": 22
+    },
+    {
+      "states": [
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          4,
+          2,
+          3
+        ]
+      ],
+      "support_masks": [
+        20,
+        12,
+        24
+      ],
+      "tree_mask": 28
+    },
+    {
+      "states": [
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          4,
+          1,
+          2
+        ]
+      ],
+      "support_masks": [
+        20,
+        18,
+        6
+      ],
+      "tree_mask": 22
+    },
+    {
+      "states": [
+        [
+          2,
+          4,
+          3
+        ],
+        [
+          4,
+          3,
+          2
+        ]
+      ],
+      "support_masks": [
+        20,
+        24,
+        12
+      ],
+      "tree_mask": 28
+    },
+    {
+      "states": [
+        [
+          2,
+          5,
+          4
+        ],
+        [
+          4,
+          2,
+          5
+        ]
+      ],
+      "support_masks": [
+        20,
+        36,
+        48
+      ],
+      "tree_mask": 52
+    },
+    {
+      "states": [
+        [
+          2,
+          4,
+          5
+        ],
+        [
+          4,
+          5,
+          2
+        ]
+      ],
+      "support_masks": [
+        20,
+        48,
+        36
+      ],
+      "tree_mask": 52
+    },
+    {
+      "states": [
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          4,
+          3,
+          0
+        ]
+      ],
+      "support_masks": [
+        24,
+        9,
+        17
+      ],
+      "tree_mask": 25
+    },
+    {
+      "states": [
+        [
+          3,
+          1,
+          4
+        ],
+        [
+          4,
+          3,
+          1
+        ]
+      ],
+      "support_masks": [
+        24,
+        10,
+        18
+      ],
+      "tree_mask": 26
+    },
+    {
+      "states": [
+        [
+          3,
+          2,
+          4
+        ],
+        [
+          4,
+          3,
+          2
+        ]
+      ],
+      "support_masks": [
+        24,
+        12,
+        20
+      ],
+      "tree_mask": 28
+    },
+    {
+      "states": [
+        [
+          3,
+          4,
+          0
+        ],
+        [
+          4,
+          0,
+          3
+        ]
+      ],
+      "support_masks": [
+        24,
+        17,
+        9
+      ],
+      "tree_mask": 25
+    },
+    {
+      "states": [
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          4,
+          1,
+          3
+        ]
+      ],
+      "support_masks": [
+        24,
+        18,
+        10
+      ],
+      "tree_mask": 26
+    },
+    {
+      "states": [
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          4,
+          2,
+          3
+        ]
+      ],
+      "support_masks": [
+        24,
+        20,
+        12
+      ],
+      "tree_mask": 28
+    },
+    {
+      "states": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          5,
+          0,
+          1
+        ]
+      ],
+      "support_masks": [
+        33,
+        3,
+        34
+      ],
+      "tree_mask": 35
+    },
+    {
+      "states": [
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          5,
+          0,
+          2
+        ]
+      ],
+      "support_masks": [
+        33,
+        5,
+        36
+      ],
+      "tree_mask": 37
+    },
+    {
+      "states": [
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          5,
+          0,
+          3
+        ]
+      ],
+      "support_masks": [
+        33,
+        9,
+        40
+      ],
+      "tree_mask": 41
+    },
+    {
+      "states": [
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          5,
+          0,
+          4
+        ]
+      ],
+      "support_masks": [
+        33,
+        17,
+        48
+      ],
+      "tree_mask": 49
+    },
+    {
+      "states": [
+        [
+          0,
+          5,
+          1
+        ],
+        [
+          5,
+          1,
+          0
+        ]
+      ],
+      "support_masks": [
+        33,
+        34,
+        3
+      ],
+      "tree_mask": 35
+    },
+    {
+      "states": [
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          5,
+          2,
+          0
+        ]
+      ],
+      "support_masks": [
+        33,
+        36,
+        5
+      ],
+      "tree_mask": 37
+    },
+    {
+      "states": [
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "support_masks": [
+        33,
+        40,
+        9
+      ],
+      "tree_mask": 41
+    },
+    {
+      "states": [
+        [
+          0,
+          5,
+          4
+        ],
+        [
+          5,
+          4,
+          0
+        ]
+      ],
+      "support_masks": [
+        33,
+        48,
+        17
+      ],
+      "tree_mask": 49
+    },
+    {
+      "states": [
+        [
+          1,
+          0,
+          5
+        ],
+        [
+          5,
+          1,
+          0
+        ]
+      ],
+      "support_masks": [
+        34,
+        3,
+        33
+      ],
+      "tree_mask": 35
+    },
+    {
+      "states": [
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          5,
+          1,
+          3
+        ]
+      ],
+      "support_masks": [
+        34,
+        10,
+        40
+      ],
+      "tree_mask": 42
+    },
+    {
+      "states": [
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          5,
+          1,
+          4
+        ]
+      ],
+      "support_masks": [
+        34,
+        18,
+        48
+      ],
+      "tree_mask": 50
+    },
+    {
+      "states": [
+        [
+          1,
+          5,
+          0
+        ],
+        [
+          5,
+          0,
+          1
+        ]
+      ],
+      "support_masks": [
+        34,
+        33,
+        3
+      ],
+      "tree_mask": 35
+    },
+    {
+      "states": [
+        [
+          1,
+          5,
+          3
+        ],
+        [
+          5,
+          3,
+          1
+        ]
+      ],
+      "support_masks": [
+        34,
+        40,
+        10
+      ],
+      "tree_mask": 42
+    },
+    {
+      "states": [
+        [
+          1,
+          5,
+          4
+        ],
+        [
+          5,
+          4,
+          1
+        ]
+      ],
+      "support_masks": [
+        34,
+        48,
+        18
+      ],
+      "tree_mask": 50
+    },
+    {
+      "states": [
+        [
+          2,
+          0,
+          5
+        ],
+        [
+          5,
+          2,
+          0
+        ]
+      ],
+      "support_masks": [
+        36,
+        5,
+        33
+      ],
+      "tree_mask": 37
+    },
+    {
+      "states": [
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          5,
+          2,
+          3
+        ]
+      ],
+      "support_masks": [
+        36,
+        12,
+        40
+      ],
+      "tree_mask": 44
+    },
+    {
+      "states": [
+        [
+          2,
+          4,
+          5
+        ],
+        [
+          5,
+          2,
+          4
+        ]
+      ],
+      "support_masks": [
+        36,
+        20,
+        48
+      ],
+      "tree_mask": 52
+    },
+    {
+      "states": [
+        [
+          2,
+          5,
+          0
+        ],
+        [
+          5,
+          0,
+          2
+        ]
+      ],
+      "support_masks": [
+        36,
+        33,
+        5
+      ],
+      "tree_mask": 37
+    },
+    {
+      "states": [
+        [
+          2,
+          5,
+          3
+        ],
+        [
+          5,
+          3,
+          2
+        ]
+      ],
+      "support_masks": [
+        36,
+        40,
+        12
+      ],
+      "tree_mask": 44
+    },
+    {
+      "states": [
+        [
+          2,
+          5,
+          4
+        ],
+        [
+          5,
+          4,
+          2
+        ]
+      ],
+      "support_masks": [
+        36,
+        48,
+        20
+      ],
+      "tree_mask": 52
+    },
+    {
+      "states": [
+        [
+          3,
+          0,
+          5
+        ],
+        [
+          5,
+          3,
+          0
+        ]
+      ],
+      "support_masks": [
+        40,
+        9,
+        33
+      ],
+      "tree_mask": 41
+    },
+    {
+      "states": [
+        [
+          3,
+          1,
+          5
+        ],
+        [
+          5,
+          3,
+          1
+        ]
+      ],
+      "support_masks": [
+        40,
+        10,
+        34
+      ],
+      "tree_mask": 42
+    },
+    {
+      "states": [
+        [
+          3,
+          2,
+          5
+        ],
+        [
+          5,
+          3,
+          2
+        ]
+      ],
+      "support_masks": [
+        40,
+        12,
+        36
+      ],
+      "tree_mask": 44
+    },
+    {
+      "states": [
+        [
+          3,
+          5,
+          0
+        ],
+        [
+          5,
+          0,
+          3
+        ]
+      ],
+      "support_masks": [
+        40,
+        33,
+        9
+      ],
+      "tree_mask": 41
+    },
+    {
+      "states": [
+        [
+          3,
+          5,
+          1
+        ],
+        [
+          5,
+          1,
+          3
+        ]
+      ],
+      "support_masks": [
+        40,
+        34,
+        10
+      ],
+      "tree_mask": 42
+    },
+    {
+      "states": [
+        [
+          3,
+          5,
+          2
+        ],
+        [
+          5,
+          2,
+          3
+        ]
+      ],
+      "support_masks": [
+        40,
+        36,
+        12
+      ],
+      "tree_mask": 44
+    },
+    {
+      "states": [
+        [
+          4,
+          0,
+          5
+        ],
+        [
+          5,
+          4,
+          0
+        ]
+      ],
+      "support_masks": [
+        48,
+        17,
+        33
+      ],
+      "tree_mask": 49
+    },
+    {
+      "states": [
+        [
+          4,
+          1,
+          5
+        ],
+        [
+          5,
+          4,
+          1
+        ]
+      ],
+      "support_masks": [
+        48,
+        18,
+        34
+      ],
+      "tree_mask": 50
+    },
+    {
+      "states": [
+        [
+          4,
+          2,
+          5
+        ],
+        [
+          5,
+          4,
+          2
+        ]
+      ],
+      "support_masks": [
+        48,
+        20,
+        36
+      ],
+      "tree_mask": 52
+    },
+    {
+      "states": [
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          5,
+          0,
+          4
+        ]
+      ],
+      "support_masks": [
+        48,
+        33,
+        17
+      ],
+      "tree_mask": 49
+    },
+    {
+      "states": [
+        [
+          4,
+          5,
+          1
+        ],
+        [
+          5,
+          1,
+          4
+        ]
+      ],
+      "support_masks": [
+        48,
+        34,
+        18
+      ],
+      "tree_mask": 50
+    },
+    {
+      "states": [
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          5,
+          2,
+          4
+        ]
+      ],
+      "support_masks": [
+        48,
+        36,
+        20
+      ],
+      "tree_mask": 52
+    }
+  ],
+  "edge_index": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "expected_disconnected_patterns": 96,
+  "labeled_tree_count": 16,
+  "nonempty_graph_masks_checked": 63,
+  "ordered_support_triples": 15625,
+  "outcome_counts": {
+    "connected_nonempty": 13908,
+    "disconnected_nonempty": 96,
+    "empty": 1621
+  },
+  "rank_at_most_two_supports": 25,
+  "source_sha256": {
+    "THREE_FREE_COLOR_CLASSIFICATION.md": "5e2f65baa1f2010a6660fd2c2a1458823b4292b5d65b6b6d6c30810b948a8fd9",
+    "classification.json": "ec858e0e417e2d7c90085f8afedb93b5dda5cdf342b2356ea7ba65882119fc16",
+    "classify_rank2.py": "9fbacba53314dc38bcff63f1080c55cd6a601642ea642a7b3c2bfee5e7ed1238",
+    "exact_utils.py": "2a980a2e9dae4ccc1df9112ca801a554b8fbed99d720a1e35f37f119ef75fa59"
+  },
+  "state_count_histogram": {
+    "0": 1621,
+    "1": 2184,
+    "2": 3624,
+    "3": 1872,
+    "4": 3192,
+    "5": 432,
+    "6": 1584,
+    "7": 48,
+    "8": 792,
+    "10": 180,
+    "12": 72,
+    "14": 24
+  },
+  "support_size_counts": {
+    "1": 6,
+    "2": 15,
+    "3": 4
+  },
+  "verified": true
+}

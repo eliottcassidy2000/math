@@ -1,0 +1,9 @@
+{
+  "connected_nonempty": 13908,
+  "disconnected": 96,
+  "empty": 1621,
+  "independent_checker": "exact mathematical match; proof-source hash refreshed for arithmetic-status update",
+  "original_checker": "exact match",
+  "status": "passed",
+  "support_triples": 15625
+}

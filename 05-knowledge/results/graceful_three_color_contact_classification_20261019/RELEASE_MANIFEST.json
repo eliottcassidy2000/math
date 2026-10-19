@@ -1,0 +1,18 @@
+{
+  "claim": "Exact finite classification of all three rank<=2 contact supports on four vertices; 96 cyclic spanning-tree obstructions",
+  "date": "2026-10-19",
+  "dependencies": "co-located Python standard library only",
+  "destination": "05-knowledge/results/graceful_three_color_contact_classification_20261019",
+  "files_sha256": {
+    "INDEPENDENT_RANK2_AUDIT.md": "a573ba5cfeefeddadf2099503c0db80af3b1f47a93f077326ae8e00362eeb74a",
+    "README.md": "877ad9be23cd09f56a09fa9cf46d780b942203c0614ec8ba7fafdcb083cee87e",
+    "REPLAY_RECEIPT.json": "b5d4e4075683f74efd7949e3f7697d509a2d39ac94c97817eb3b0f3b39bf2f3c",
+    "THREE_FREE_COLOR_CLASSIFICATION.md": "5e2f65baa1f2010a6660fd2c2a1458823b4292b5d65b6b6d6c30810b948a8fd9",
+    "classification.json": "ec858e0e417e2d7c90085f8afedb93b5dda5cdf342b2356ea7ba65882119fc16",
+    "classify_rank2.py": "9fbacba53314dc38bcff63f1080c55cd6a601642ea642a7b3c2bfee5e7ed1238",
+    "exact_utils.py": "2a980a2e9dae4ccc1df9112ca801a554b8fbed99d720a1e35f37f119ef75fa59",
+    "independent_rank2_receipt.json": "ce8a9cdda9748d07472d69fb8be857d1a96cf8f675574ed18cdb491aedcea117",
+    "verify_rank2_independent.py": "ff0609792b0223cfdda74bf6c29fa5c7f63ff84a05deb0efa9089ad67e4c087e"
+  },
+  "packet": 101
+}

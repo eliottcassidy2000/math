@@ -1,0 +1,8 @@
+{
+  "disconnected_by_type": {
+    "(3, (2, 2, 2), 2)": 96
+  },
+  "ordered_support_triples": 15625,
+  "supports": 25,
+  "unexpected": 0
+}
