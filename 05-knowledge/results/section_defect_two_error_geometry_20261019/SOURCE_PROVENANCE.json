@@ -1,0 +1,101 @@
+{
+  "description": "Presentation updates audited status, navigation, reproduction cautions and package-relative provenance; internal source/Git process prose is removed. Mathematical text and verifier logic are unchanged. Independent receipts differ only in frozen_readme_sha256. The separate path-complement audit is published with its own companion package.",
+  "files": [
+    {
+      "path": "README.md",
+      "source_sha256": "2ea9c2a21fec044d5424443998ef6b6710c281a1dc214d456372e448772e1960",
+      "published_sha256": "8c60c500e3e94ae1adaf18fe88ddae90febd5c0c7cd80c7ceaae89ed907858e8",
+      "presentation_updates": true
+    },
+    {
+      "path": "verify_two_extra.py",
+      "source_sha256": "9057b3f3a8f3409286dfd21ab6ded76fc65952407fd19779264545b94f2cbfe4",
+      "published_sha256": "9057b3f3a8f3409286dfd21ab6ded76fc65952407fd19779264545b94f2cbfe4",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify_two_extra.out",
+      "source_sha256": "030c90b6e8fb801386eae74e17aa7fbd80a613528a9c68f13c78a3854904e909",
+      "published_sha256": "030c90b6e8fb801386eae74e17aa7fbd80a613528a9c68f13c78a3854904e909",
+      "presentation_updates": false
+    },
+    {
+      "path": "two-extra-exact-results.json",
+      "source_sha256": "6a7e84293b6b9092436ee42e52ec4fae2d88981f0f7dc350751663e67d4d4ce3",
+      "published_sha256": "6a7e84293b6b9092436ee42e52ec4fae2d88981f0f7dc350751663e67d4d4ce3",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/REVIEW.md",
+      "source_sha256": "2a9e5b1a367be5615a3ba60918f65247806020b92d8a9335e973c846e9611822",
+      "published_sha256": "6d26bf8c3fc9e841e8e8c345870d9b84f18d0a4f153f6090fc95779f7a8ffb5b",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-normal.json",
+      "source_sha256": "539a04c624288716d048f2a89d6bfa73a4971db0a8e1de190825621518d77ccc",
+      "published_sha256": "c9321fcdab5e0cff69b70247d70e44382c8e0aef278c9438f2c45aeb78f267e8",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-normal.out",
+      "source_sha256": "9d497db70ebd587bea067e4b8e8245966887b1bb67c9d750cdd3c99de7f85f30",
+      "published_sha256": "adc4d1d40aaaf5c7487191b0adb1cd734390b0752b551ce23d3967a88249ca8c",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-optimized.json",
+      "source_sha256": "539a04c624288716d048f2a89d6bfa73a4971db0a8e1de190825621518d77ccc",
+      "published_sha256": "c9321fcdab5e0cff69b70247d70e44382c8e0aef278c9438f2c45aeb78f267e8",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-optimized.out",
+      "source_sha256": "9d497db70ebd587bea067e4b8e8245966887b1bb67c9d750cdd3c99de7f85f30",
+      "published_sha256": "adc4d1d40aaaf5c7487191b0adb1cd734390b0752b551ce23d3967a88249ca8c",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-results.json",
+      "source_sha256": "539a04c624288716d048f2a89d6bfa73a4971db0a8e1de190825621518d77ccc",
+      "published_sha256": "c9321fcdab5e0cff69b70247d70e44382c8e0aef278c9438f2c45aeb78f267e8",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent_controls.py",
+      "source_sha256": "f6ee7d5dfba471c45752b3a7d62c5229b80e57a8b5d0f4ec481b0fb5af2c51f4",
+      "published_sha256": "8e95f20ebd2063da7a00107a2d32ec350eb8797c3a2cfb5101cbbc59b291eeb9",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/input-sha256.txt",
+      "source_sha256": "afe0d1b090448d8c6fc5db5975942e31679c494eee20070899779566b10d601d",
+      "published_sha256": "03bdffa1ffc8c2d9988b6efa4cb7870cac9748e20c77f311ff23d623ccae13d4",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/submitted-replay/stdout.txt",
+      "source_sha256": "030c90b6e8fb801386eae74e17aa7fbd80a613528a9c68f13c78a3854904e909",
+      "published_sha256": "030c90b6e8fb801386eae74e17aa7fbd80a613528a9c68f13c78a3854904e909",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/submitted-replay/two-extra-exact-results.json",
+      "source_sha256": "6a7e84293b6b9092436ee42e52ec4fae2d88981f0f7dc350751663e67d4d4ce3",
+      "published_sha256": "6a7e84293b6b9092436ee42e52ec4fae2d88981f0f7dc350751663e67d4d4ce3",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/submitted-replay/verify_two_extra.py",
+      "source_sha256": "9057b3f3a8f3409286dfd21ab6ded76fc65952407fd19779264545b94f2cbfe4",
+      "published_sha256": "9057b3f3a8f3409286dfd21ab6ded76fc65952407fd19779264545b94f2cbfe4",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/review-manifest.json",
+      "source_sha256": "5ab9f039c5ee8a4fe2e7b57c8bdca73c401fd01d3f1e6f8fd75eaeb70c814574",
+      "published_sha256": "402393f2b22b1be7a329fe247368508acba4f7273da44d6fbd6808885564b6c5",
+      "presentation_updates": true
+    }
+  ]
+}

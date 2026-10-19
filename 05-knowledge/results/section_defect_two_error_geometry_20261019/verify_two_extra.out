@@ -1,0 +1,10 @@
+42 single-cube controls: pair dimensions [2, 2, 2]; coupled homogeneous dimension 2.
+1134 three-failure-cycle geometries: support size 12; coupled homogeneous dimension 4 in every case.
+All 1134 direct 36-variable constraint systems have rank 32; explicit model rank 4.
+Largest-gap path normalization: maximum path length 19; all support bounds pass.
+Disjoint-cube hostile: 16 points; pair dimensions [6, 4, 6]; coupled rank 10; homogeneous dimension 6.
+The intermediate cube supplies exactly the two additional local-motion modes.
+Separated example: pair dimensions [4, 4, 4]; coupled rank 8; homogeneous dimension 4.
+Normalization boundary hostile: 28 changes per column can hide a nonbinary additive array.
+Scoped theorem: any 89-failure section must have two distinct double-failure cycles.
+Numerical bounds remain 89 on the triple and 445 on the full graph; attainment is unresolved.

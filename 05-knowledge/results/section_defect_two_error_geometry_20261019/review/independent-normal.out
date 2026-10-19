@@ -1,0 +1,363 @@
+{
+  "verdict": "PASS",
+  "prime": 29,
+  "single_cube_geometries": 84,
+  "three_failure_geometries": 1134,
+  "histogram": [
+    {
+      "e": 0,
+      "pair_kernel_dimensions": [
+        3,
+        4,
+        4
+      ],
+      "coupled_rank": 7,
+      "count": 372
+    },
+    {
+      "e": 0,
+      "pair_kernel_dimensions": [
+        3,
+        4,
+        5
+      ],
+      "coupled_rank": 8,
+      "count": 3
+    },
+    {
+      "e": 0,
+      "pair_kernel_dimensions": [
+        3,
+        5,
+        4
+      ],
+      "coupled_rank": 8,
+      "count": 3
+    },
+    {
+      "e": 1,
+      "pair_kernel_dimensions": [
+        4,
+        3,
+        4
+      ],
+      "coupled_rank": 7,
+      "count": 372
+    },
+    {
+      "e": 1,
+      "pair_kernel_dimensions": [
+        4,
+        3,
+        5
+      ],
+      "coupled_rank": 8,
+      "count": 3
+    },
+    {
+      "e": 1,
+      "pair_kernel_dimensions": [
+        5,
+        3,
+        4
+      ],
+      "coupled_rank": 8,
+      "count": 3
+    },
+    {
+      "e": 2,
+      "pair_kernel_dimensions": [
+        4,
+        4,
+        3
+      ],
+      "coupled_rank": 7,
+      "count": 372
+    },
+    {
+      "e": 2,
+      "pair_kernel_dimensions": [
+        4,
+        5,
+        3
+      ],
+      "coupled_rank": 8,
+      "count": 3
+    },
+    {
+      "e": 2,
+      "pair_kernel_dimensions": [
+        5,
+        4,
+        3
+      ],
+      "coupled_rank": 8,
+      "count": 3
+    }
+  ],
+  "column_small_grid_candidate_arrays": 3603,
+  "crossing_small_grid_exhaustive_tests": [
+    {
+      "n": 5,
+      "r": 1,
+      "s": 1,
+      "integer_arrays": 28,
+      "feasible_arrays": 10
+    },
+    {
+      "n": 7,
+      "r": 1,
+      "s": 2,
+      "integer_arrays": 118,
+      "feasible_arrays": 14
+    },
+    {
+      "n": 7,
+      "r": 2,
+      "s": 1,
+      "integer_arrays": 124,
+      "feasible_arrays": 14
+    },
+    {
+      "n": 7,
+      "r": 2,
+      "s": 2,
+      "integer_arrays": 350,
+      "feasible_arrays": 14
+    },
+    {
+      "n": 9,
+      "r": 2,
+      "s": 2,
+      "integer_arrays": 474,
+      "feasible_arrays": 18
+    }
+  ],
+  "hostile": {
+    "support_size": 16,
+    "pair_kernel_dimensions": [
+      6,
+      4,
+      6
+    ],
+    "direct_constraint_rank": 42,
+    "homogeneous_dimension": 6,
+    "coupled_rank": 10,
+    "model_rank": 4
+  },
+  "hostile_full_basis": {
+    "support_size": 16,
+    "pair_kernel_dimensions": [
+      6,
+      4,
+      6
+    ],
+    "direct_constraint_rank": 42,
+    "homogeneous_dimension": 6,
+    "coupled_rank": 10,
+    "model_rank": 6
+  },
+  "passing_example": {
+    "support_size": 16,
+    "pair_kernel_dimensions": [
+      4,
+      4,
+      4
+    ],
+    "direct_constraint_rank": 44,
+    "homogeneous_dimension": 4,
+    "coupled_rank": 8,
+    "model_rank": 4
+  },
+  "motion_controls": [
+    {
+      "exceptional_directions": [
+        0,
+        0
+      ],
+      "t": [
+        14,
+        7
+      ],
+      "h": [
+        [
+          17,
+          7
+        ],
+        [
+          11,
+          10
+        ]
+      ]
+    },
+    {
+      "exceptional_directions": [
+        0,
+        1
+      ],
+      "t": [
+        14,
+        12
+      ],
+      "h": [
+        [
+          17,
+          7
+        ],
+        [
+          12,
+          1
+        ]
+      ]
+    },
+    {
+      "exceptional_directions": [
+        0,
+        2
+      ],
+      "t": [
+        14,
+        8
+      ],
+      "h": [
+        [
+          17,
+          7
+        ],
+        [
+          16,
+          22
+        ]
+      ]
+    },
+    {
+      "exceptional_directions": [
+        1,
+        0
+      ],
+      "t": [
+        24,
+        7
+      ],
+      "h": [
+        [
+          19,
+          18
+        ],
+        [
+          11,
+          10
+        ]
+      ]
+    },
+    {
+      "exceptional_directions": [
+        1,
+        1
+      ],
+      "t": [
+        24,
+        12
+      ],
+      "h": [
+        [
+          19,
+          18
+        ],
+        [
+          12,
+          1
+        ]
+      ]
+    },
+    {
+      "exceptional_directions": [
+        1,
+        2
+      ],
+      "t": [
+        24,
+        8
+      ],
+      "h": [
+        [
+          19,
+          18
+        ],
+        [
+          16,
+          22
+        ]
+      ]
+    },
+    {
+      "exceptional_directions": [
+        2,
+        0
+      ],
+      "t": [
+        16,
+        7
+      ],
+      "h": [
+        [
+          27,
+          2
+        ],
+        [
+          11,
+          10
+        ]
+      ]
+    },
+    {
+      "exceptional_directions": [
+        2,
+        1
+      ],
+      "t": [
+        16,
+        12
+      ],
+      "h": [
+        [
+          27,
+          2
+        ],
+        [
+          12,
+          1
+        ]
+      ]
+    },
+    {
+      "exceptional_directions": [
+        2,
+        2
+      ],
+      "t": [
+        16,
+        8
+      ],
+      "h": [
+        [
+          27,
+          2
+        ],
+        [
+          16,
+          22
+        ]
+      ]
+    }
+  ],
+  "fault_controls": {
+    "mutated_cube_sign_rejected": true,
+    "duplicated_origin_rejected": true,
+    "missing_last_coordinate_rejected": true,
+    "disjoint_implies_rank_four_rejected": true,
+    "wrong_stress_sign_rejected": true
+  },
+  "frozen_readme_sha256": "8c60c500e3e94ae1adaf18fe88ddae90febd5c0c7cd80c7ceaae89ed907858e8",
+  "scope": "Excludes one three-failure cycle at total 89; conditional two-dipole criterion; bounds remain 89 and 445."
+}
