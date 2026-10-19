@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "checks": {
+    "prefixes": 87380,
+    "append_one": 18282,
+    "append_two_iff": 18282,
+    "append_zero": 12384,
+    "all_continuations_safe": 9214,
+    "alphabet_four_hostile": 1
+  },
+  "widths": [
+    {
+      "width": 1,
+      "states": 4,
+      "good_prefixes": 2,
+      "shield_prefixes": 1,
+      "can_fail_states": 2
+    },
+    {
+      "width": 2,
+      "states": 16,
+      "good_prefixes": 5,
+      "shield_prefixes": 3,
+      "can_fail_states": 11
+    },
+    {
+      "width": 3,
+      "states": 64,
+      "good_prefixes": 16,
+      "shield_prefixes": 9,
+      "can_fail_states": 50
+    },
+    {
+      "width": 4,
+      "states": 256,
+      "good_prefixes": 58,
+      "shield_prefixes": 31,
+      "can_fail_states": 201
+    },
+    {
+      "width": 5,
+      "states": 1024,
+      "good_prefixes": 222,
+      "shield_prefixes": 115,
+      "can_fail_states": 830
+    },
+    {
+      "width": 6,
+      "states": 4096,
+      "good_prefixes": 869,
+      "shield_prefixes": 443,
+      "can_fail_states": 3277
+    },
+    {
+      "width": 7,
+      "states": 16384,
+      "good_prefixes": 3438,
+      "shield_prefixes": 1737,
+      "can_fail_states": 13035
+    },
+    {
+      "width": 8,
+      "states": 65536,
+      "good_prefixes": 13672,
+      "shield_prefixes": 6875,
+      "can_fail_states": 51979
+    }
+  ],
+  "hostile": {
+    "row": [
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "left_edge": [
+      1,
+      1,
+      0,
+      0,
+      2
+    ]
+  }
+}

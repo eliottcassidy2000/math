@@ -1,0 +1,26 @@
+F 3 states 16 mixed 2 acyclic True maxdepth 2
+prob 13/16 scaled_excess 1/2 initial_depth 2
+F 4 states 59 mixed 2 acyclic True maxdepth 2
+prob 17/32 scaled_excess 1/2 initial_depth 2
+F 5 states 177 mixed 16 acyclic True maxdepth 6
+prob 349/1024 scaled_excess 29/32 initial_depth 6
+F 6 states 495 mixed 16 acyclic True maxdepth 6
+prob 413/2048 scaled_excess 29/32 initial_depth 6
+F 7 states 1278 mixed 18 acyclic True maxdepth 6
+prob 493/4096 scaled_excess 45/32 initial_depth 6
+F 8 states 3167 mixed 18 acyclic True maxdepth 6
+prob 557/8192 scaled_excess 45/32 initial_depth 6
+F 9 states 7424 mixed 100 acyclic True maxdepth 14
+prob 159469/4194304 scaled_excess 12013/8192 initial_depth 14
+F 10 states 17179 mixed 100 acyclic True maxdepth 14
+prob 175853/8388608 scaled_excess 12013/8192 initial_depth 14
+F 11 states 38719 mixed 102 acyclic True maxdepth 14
+prob 196333/16777216 scaled_excess 16109/8192 initial_depth 14
+F 12 states 88813 mixed 102 acyclic True maxdepth 14
+prob 212717/33554432 scaled_excess 16109/8192 initial_depth 14
+F 13 states 197363 mixed 120 acyclic True maxdepth 14
+prob 232429/67108864 scaled_excess 19437/8192 initial_depth 14
+F 14 states 435844 mixed 120 acyclic True maxdepth 14
+prob 248813/134217728 scaled_excess 19437/8192 initial_depth 14
+F 15 states 950019 mixed 122 acyclic True maxdepth 14
+prob 269293/268435456 scaled_excess 23533/8192 initial_depth 14

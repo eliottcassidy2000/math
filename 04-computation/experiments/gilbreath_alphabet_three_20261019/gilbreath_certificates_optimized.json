@@ -1,0 +1,413 @@
+{
+  "age2_dfa_states": 23,
+  "age2_language": "(0000)*11 OR (0000)*1110*",
+  "age2_product_states": 23,
+  "age2_table": [
+    {
+      "accepting": false,
+      "id": 0,
+      "next": [
+        1,
+        2
+      ],
+      "state": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 1,
+      "next": [
+        3,
+        4
+      ],
+      "state": [
+        3,
+        0,
+        3
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 2,
+      "next": [
+        5,
+        6
+      ],
+      "state": [
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 3,
+      "next": [
+        7,
+        5
+      ],
+      "state": [
+        3,
+        3,
+        0
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 4,
+      "next": [
+        8,
+        9
+      ],
+      "state": [
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 5,
+      "next": [
+        10,
+        11
+      ],
+      "state": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "accepting": true,
+      "id": 6,
+      "next": [
+        12,
+        13
+      ],
+      "state": [
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 7,
+      "next": [
+        0,
+        14
+      ],
+      "state": [
+        3,
+        0,
+        0
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 8,
+      "next": [
+        4,
+        9
+      ],
+      "state": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 9,
+      "next": [
+        15,
+        16
+      ],
+      "state": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 10,
+      "next": [
+        5,
+        15
+      ],
+      "state": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 11,
+      "next": [
+        9,
+        17
+      ],
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 12,
+      "next": [
+        11,
+        18
+      ],
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "accepting": true,
+      "id": 13,
+      "next": [
+        13,
+        12
+      ],
+      "state": [
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 14,
+      "next": [
+        19,
+        12
+      ],
+      "state": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 15,
+      "next": [
+        12,
+        20
+      ],
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 16,
+      "next": [
+        18,
+        11
+      ],
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 17,
+      "next": [
+        17,
+        9
+      ],
+      "state": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 18,
+      "next": [
+        16,
+        15
+      ],
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 19,
+      "next": [
+        21,
+        12
+      ],
+      "state": [
+        2,
+        0,
+        2
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 20,
+      "next": [
+        20,
+        12
+      ],
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 21,
+      "next": [
+        22,
+        12
+      ],
+      "state": [
+        2,
+        2,
+        0
+      ]
+    },
+    {
+      "accepting": false,
+      "id": 22,
+      "next": [
+        14,
+        12
+      ],
+      "state": [
+        2,
+        0,
+        0
+      ]
+    }
+  ],
+  "all_F_count_certificates": [
+    {
+      "age": 2,
+      "coaccessible_states": 7,
+      "coefficients_checked": 12,
+      "gf_denominator_cycle": 4,
+      "gf_numerator_coefficient": 1,
+      "gf_numerator_degree": 2,
+      "reachable_states": 23
+    },
+    {
+      "age": 4,
+      "coaccessible_states": 18,
+      "coefficients_checked": 27,
+      "gf_denominator_cycle": 8,
+      "gf_numerator_coefficient": 3,
+      "gf_numerator_degree": 4,
+      "reachable_states": 79
+    },
+    {
+      "age": 6,
+      "coaccessible_states": 15,
+      "coefficients_checked": 24,
+      "gf_denominator_cycle": 8,
+      "gf_numerator_coefficient": 1,
+      "gf_numerator_degree": 4,
+      "reachable_states": 200
+    },
+    {
+      "age": 8,
+      "coaccessible_states": 52,
+      "coefficients_checked": 69,
+      "gf_denominator_cycle": 16,
+      "gf_numerator_coefficient": 7,
+      "gf_numerator_degree": 8,
+      "reachable_states": 705
+    },
+    {
+      "age": 10,
+      "coaccessible_states": 34,
+      "coefficients_checked": 51,
+      "gf_denominator_cycle": 16,
+      "gf_numerator_coefficient": 2,
+      "gf_numerator_degree": 8,
+      "reachable_states": 2346
+    },
+    {
+      "age": 12,
+      "coaccessible_states": 50,
+      "coefficients_checked": 67,
+      "gf_denominator_cycle": 16,
+      "gf_numerator_coefficient": 3,
+      "gf_numerator_degree": 8,
+      "reachable_states": 8566
+    },
+    {
+      "age": 14,
+      "coaccessible_states": 31,
+      "coefficients_checked": 48,
+      "gf_denominator_cycle": 16,
+      "gf_numerator_coefficient": 1,
+      "gf_numerator_degree": 8,
+      "reachable_states": 33195
+    }
+  ],
+  "c6_linear_liminf_lower_bound": "23533/131072",
+  "odd_age_controls": [
+    {
+      "accepting": 0,
+      "age": 1,
+      "reachable_states": 9
+    },
+    {
+      "accepting": 0,
+      "age": 3,
+      "reachable_states": 33
+    },
+    {
+      "accepting": 0,
+      "age": 5,
+      "reachable_states": 125
+    },
+    {
+      "accepting": 0,
+      "age": 7,
+      "reachable_states": 334
+    },
+    {
+      "accepting": 0,
+      "age": 9,
+      "reachable_states": 1275
+    },
+    {
+      "accepting": 0,
+      "age": 11,
+      "reachable_states": 4424
+    },
+    {
+      "accepting": 0,
+      "age": 13,
+      "reachable_states": 16788
+    }
+  ],
+  "probability_ratio_liminf_lower_bound": "285677/262144",
+  "ratio_lower_decimal": 1.0897712707519531,
+  "rotated_direct_seeds": 2047,
+  "scope": "All-F exact threshold counts only for ages2,4,6,8,10,12,14. No all-age asymptotic claimed."
+}

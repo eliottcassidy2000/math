@@ -1,0 +1,30 @@
+{
+  "family_exact_checks": 996,
+  "family_formula": "k(N)=N-3, maxgap6, allpositive leftedges1",
+  "prime_scalar_replays": [
+    {
+      "N": 1000,
+      "depth": 35,
+      "maxgap": 34,
+      "pN": 7919
+    },
+    {
+      "N": 2814,
+      "depth": 51,
+      "maxgap": 52,
+      "pN": 25561
+    },
+    {
+      "N": 31569,
+      "depth": 69,
+      "maxgap": 112,
+      "pN": 370609
+    }
+  ],
+  "recovery_prime_seed": [
+    2,
+    3,
+    7,
+    13
+  ]
+}
