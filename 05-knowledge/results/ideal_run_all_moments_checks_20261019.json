@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "scope": "54 exact shuffle laws, moment orders 0 through 6",
+  "tests": 378,
+  "general_proof": "Stanley rank log-concavity, tail submultiplicativity, compositions, Vandermonde"
+}
