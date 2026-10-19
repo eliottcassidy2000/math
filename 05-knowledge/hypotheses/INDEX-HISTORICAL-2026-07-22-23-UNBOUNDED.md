@@ -174,3 +174,7 @@ computation needs universe, controls, command, and output. Route `CLAIMED` and
 ## Digest entry moved from INDEX.md on 2026-10-19 (line budget; mac-mini-2026-10-19-apollonius)
 
 - **HYP-9170 / HYP-9171 (OPEN, collatz-procgen-20260922, 2026-10-01; with THM-4529 / THM-4530):** [all-odd anti-circulant tournaments for every N = 2 mod 4](HYP-9170-all-odd-anti-circulant-tournaments-exist-for-every-n-2-mod-4.md) (P1; existence half of HYP-9167(b), which is now settled at N = 14 by QR127[mu_14]; P2 proved for m = 3, 5); [drop multiplicity maximal order ~ sqrt(2 log2 X) and pair-injectivity for every odd q](HYP-9171-drop-multiplicity-maximal-order-and-pair-injectivity.md) (bounds proved; q = 3 injectivity proved).
+
+## Digest entry moved from INDEX.md on 2026-10-19 (line budget; mac-mini-2026-10-19-twothree)
+
+- **HYP-9172 (OPEN, collatz-procgen-20260922 tbij lane, 2026-10-01; with THM-4531):** [no natural bijection for the twisted Mallows-Sloane identities at any n >= 5](HYP-9172-no-natural-bijection-for-twisted-mallows-sloane-at-any-n-ge-5.md) (proved 5 <= n <= 100 for switching classes, 5..15 plus sporadic n for tournaments vs even graphs; reduces to Goldbach/Lemoine-type additive questions); plus THM-479 branch integrality for n = 0 mod 4.
