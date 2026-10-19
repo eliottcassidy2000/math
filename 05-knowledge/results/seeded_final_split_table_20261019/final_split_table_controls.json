@@ -1,0 +1,9 @@
+{
+  "certificate_bytes": 986763,
+  "certificate_sha256": "3a035b14c8caa9f1293f66bbb0c9e77e9f1e933b7e5a07e523e2a5e7f59dbffe",
+  "checks": 234025,
+  "conclusion": "Every admissible input pair produces a square-sum Hamiltonian cycle containing 482-3362-6242.",
+  "scope": "All 392 conditional final-lift states, independent of input length and internal order.",
+  "states": 392,
+  "status": "passed"
+}
