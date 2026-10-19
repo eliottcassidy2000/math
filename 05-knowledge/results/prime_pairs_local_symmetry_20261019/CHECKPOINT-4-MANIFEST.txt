@@ -1,0 +1,13 @@
+Checkpoint 4: short intervals and singular-series resolution
+Status: root-reviewed mathematical note; finite exact supporting controls passed.
+Destination: 05-knowledge/results/prime_pairs_local_symmetry_20261019/
+Copy these four files without changing earlier checkpoint files:
+  short-interval-local-resolution.md
+  short_interval_checks.py
+  short_interval_checks.json
+  short_interval_checks.txt
+Include this manifest and CHECKPOINT-4-SHA256.txt as publication provenance.
+Core results: uniform interval sieve, sharp singular-series tail envelope,
+primorial saturation, fixed power-of-log boundary, separate power-length P74 corollary.
+The primorial numerical examples use ordinary floating arithmetic and are illustrative.
+Same-directory links are already normalized for the destination.

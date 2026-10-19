@@ -1,0 +1,45 @@
+{
+  "exact_status": "all finite exact controls passed",
+  "finite_tail_factorization_and_envelope_cases": 600,
+  "translated_interval_cases": 212,
+  "maximum_interval_error_divided_by_residue_count": "3/5",
+  "primorial_diagnostics": [
+    {
+      "primorial_cutoff_y": 100,
+      "sieve_cutoff_sqrt_y": 10.0,
+      "finite_tail_product_through_1000000": 3.4581351568324754,
+      "illustrative_lower_from_analytic_log_tail_bound": 3.4580902013676478,
+      "illustrative_upper_from_analytic_log_tail_bound": 3.4583888608730025,
+      "predicted_limit": 4,
+      "rounding_status": "ordinary floating arithmetic; not a certified numeric interval"
+    },
+    {
+      "primorial_cutoff_y": 500,
+      "sieve_cutoff_sqrt_y": 22.360679774997898,
+      "finite_tail_product_through_1000000": 3.5982745843503645,
+      "illustrative_lower_from_analytic_log_tail_bound": 3.598227807084821,
+      "illustrative_upper_from_analytic_log_tail_bound": 3.599760362806475,
+      "predicted_limit": 4,
+      "rounding_status": "ordinary floating arithmetic; not a certified numeric interval"
+    },
+    {
+      "primorial_cutoff_y": 2000,
+      "sieve_cutoff_sqrt_y": 44.721359549995796,
+      "finite_tail_product_through_1000000": 3.684758686329701,
+      "illustrative_lower_from_analytic_log_tail_bound": 3.6847107847781397,
+      "illustrative_upper_from_analytic_log_tail_bound": 3.690974802144202,
+      "predicted_limit": 4,
+      "rounding_status": "ordinary floating arithmetic; not a certified numeric interval"
+    },
+    {
+      "primorial_cutoff_y": 10000,
+      "sieve_cutoff_sqrt_y": 100.0,
+      "finite_tail_product_through_1000000": 3.897977374226642,
+      "illustrative_lower_from_analytic_log_tail_bound": 3.8979267008501544,
+      "illustrative_upper_from_analytic_log_tail_bound": 3.9316295419989795,
+      "predicted_limit": 4,
+      "rounding_status": "ordinary floating arithmetic; not a certified numeric interval"
+    }
+  ],
+  "scope": "Finite checks support formulas; asymptotic uniformity and limits are proved in the note."
+}

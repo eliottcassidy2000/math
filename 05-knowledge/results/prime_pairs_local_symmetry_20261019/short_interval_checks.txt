@@ -1,0 +1,9 @@
+exact_status: all finite exact controls passed
+finite tail cases: 600
+translated interval cases: 212
+maximum discrepancy ratio: 3/5
+Primorial diagnostics (floating, not certified intervals):
+  y=100; finite product=3.458135157; analytical-tail interval illustrated numerically=[3.458090201, 3.458388861]; limit=4
+  y=500; finite product=3.598274584; analytical-tail interval illustrated numerically=[3.598227807, 3.599760363]; limit=4
+  y=2000; finite product=3.684758686; analytical-tail interval illustrated numerically=[3.684710785, 3.690974802]; limit=4
+  y=10000; finite product=3.897977374; analytical-tail interval illustrated numerically=[3.897926701, 3.931629542]; limit=4
