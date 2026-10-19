@@ -2,7 +2,7 @@
 
 19 October 2026, 13:34 UTC. **Root-reviewed final research map.** Fresh terminal replays have passed for both the any-root mixed-(2,2,4) and canonical-(3,3,1) exclusions. The two-slack structural note is approved and frozen. This map summarizes the precise theorem statements without replacing their certificates. No historical novelty or major-conjecture resolution is claimed.
 
-Publication and mathematical status are separate. The last independently verified remote `main` was `ae24c5100d27353f72022a368778df9a9bf1dd1e` at 13:34 UTC, covering results through packet63. Later approved work has backups, but its remote publication remains unverified because writes are blocked by an existing tool approval. Links below are repository-relative destinations, not claims that every destination is already live.
+Publication update, 19 October 2026: the earlier tool-review failure was resolved, and the approved overnight packets and this synthesis have now been published on main with their dependency links verified. The mathematics below is the 13:34 research snapshot. Later advances, including the two-sided Gold core theorem and extended Collatz guard repair, are recorded in the [current session research map](liouville_session2_20261019_progress.md).
 
 ## The theorem/status map
 
