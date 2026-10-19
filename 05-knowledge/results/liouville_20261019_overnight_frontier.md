@@ -149,7 +149,7 @@ with arbitrary common-neighbor order and arbitrary exterior. Exact nonnegative p
 
 The [all-factorial-moment lemma](ideal_run_all_moments_20261019.md) extends the earlier ideal-run bound to E binom(R,k)≤(ER)^k, with sharp limiting examples from two-chain shuffles. The [core-only Gold obstruction](rooted_five_core_gold_obstruction_20261019.md) shows why a balance theorem cannot automatically be promoted to a Gold strategy on the same five endpoints: an actual eight-point poset defeats every such strategy, while exterior comparisons give a strict Gold certificate.
 
-The [seed-preserving interval certificate](seeded_interval_cycle_6242_20261019/square_sum_seeded_interval_cycle_6242_20261019.md) now gives an explicit square-sum cycle on every integer1…6242 beginning482,3362,6242. A controlled split of49-lifted blocks first produces6247 vertices; a fixed24-move repair trace removes the excess without cutting the seed edges. The endpoint6242 is minimal simply because the seed contains6242. This is one exact finite witness, not a uniform theorem for all larger intervals. The [common-pair parity obstruction](square_sum_affine_lift_protected_edge_obstruction_20261019.md) explains why an unchanged intact-block recursion cannot simply preserve the first seed edge at every residue.
+The [seed-preserving interval certificate](seeded_interval_cycle_6242_20261019/square_sum_seeded_interval_cycle_6242_20261019.md) now gives an explicit square-sum cycle on every integer1…6242 beginning482,3362,6242. A controlled split of49-lifted blocks first produces6247 vertices; a fixed24-move repair trace removes the excess without cutting the seed edges. The endpoint6242 is minimal simply because the seed contains6242. This was initially one exact finite witness; section 15 below closes the all-larger-interval statement. The [common-pair parity obstruction](square_sum_affine_lift_protected_edge_obstruction_20261019.md) explains why an unchanged intact-block recursion cannot simply preserve the first seed edge at every residue.
 
 The [Berggren absorber forest](square_sum_berggren_absorber_bijection_20261019.md) supplies another exact link to the ternary-tree theme. The classical three matrices generate all positive norm-one triples a²+b²−c²=1 in three parity-sector trees, rooted at(1,1,1),(2,1,2),(1,2,2). Unique addresses give branch-preserving bijections with three copies of the primitive-Pythagorean tree. Non-boundary nodes are precisely the nondegenerate coefficient gadgets of the stated linear absorber form. The central branch gives the Pell coefficients(5,5,7),(29,29,41), while the seed's AAA address gives(8,31,32) in the even-first sector. No historical priority claim is attached to the norm-one tree.
 
@@ -159,7 +159,7 @@ The [odd adjacent-return theorem](collatz_odd_adjacent_return_20261019.md) dispr
 
 The [one-sided three-slave theorem](one_sided_three_slave_aggregate_20261019.md) proves the same aggregate4c/3 bound with no exclusive neighbors on one side and at most three on the other, including arbitrary orders and arbitrary exteriors. Its integer-boundary polynomial certificate is distinct from ordinary coefficientwise positivity. Tiny exact suffix certificates close the c=0 case. Four one-sided slaves already admit an actual-poset violation of this aggregate, although that poset still has a balanced pair; the method's boundary is explicit.
 
-The [complete final split-lift](seeded_final_split_table_20261019/square_sum_complete_final_split_lift_20261019.md) now has verified certificates for all392 combinations of input parity, output residue, and cut-edge orientations. Given the precisely stated protected input nice pair, it produces an interval-spanning cycle with the seed for every residue24…72. The final transformation has no missing state. A uniform all-large-N theorem still requires the upstream protected input-state transformations and a complete consecutive base interval. The single6242 certificate does not replace those hypotheses.
+The [complete final split-lift](seeded_final_split_table_20261019/square_sum_complete_final_split_lift_20261019.md) now has verified certificates for all392 combinations of input parity, output residue, and cut-edge orientations. Given the precisely stated protected input nice pair, it produces an interval-spanning cycle with the seed for every residue24…72. The final transformation has no missing state. Those upstream hypotheses are now supplied by the complete base interval and repaired transition table described in section 15.
 
 ## 14. Current proof targets
 
@@ -167,6 +167,26 @@ The [complete final split-lift](seeded_final_split_table_20261019/square_sum_com
 2. Extend the Gold prefix injection schema to more general attachment geometry while preserving exact count deficits.
 3. Find port-compatible algebraic contact correspondences beyond the finite rational-map and normalized elliptic-coordinate barriers.
 4. Prove source entry or a common descent potential for Collatz return banks despite center-relative rank recharge.
-5. Complete the upstream protected input-state transformations and consecutive base interval for the uniform prescribed-seed construction. All392 final split states and the exact6242 witness are established; the remaining input-existence argument is separate.
+5. Extend the now-complete prescribed-seed theorem to structurally defined families of prescribed paths, with explicit sufficient hypotheses and thresholds.
 
 Each target has a specified obstacle and carrier. None is inferred merely from numerical resonance or a common finite quotient.
+
+## 15. Closed: the prescribed-seed threshold is exactly 6242
+
+The [exact-threshold theorem](seeded_optimal_threshold_6242_20261019/OPTIMAL_THRESHOLD_THEOREM.md) establishes:
+
+> A square-sum Hamiltonian cycle on [1,N] contains 482,3362,6242 consecutively if and only if N ≥ 6242.
+
+This is a constructive computer-assisted theorem. No historical priority claim is made. Ordinary interval square-sum Hamiltonicity is credited to Gerbicz (2018); the added conclusion fixes the indicated consecutive path.
+
+The infinite component is the [eventual prescribed-seed theorem](seeded_eventual_cycle_theorem_20261019/SEEDED_INTERVAL_THEOREM.md), valid for every N ≥ 128453. It combines the complete 2,568-pair base interval 53 through 2620, all 294 typed intermediate transitions, and the 392 final split-lift states. Six intermediate states require splitting the guaranteed input prefix 1–3. The remaining 288 use intact blocks. The finite certificates imply universal transformations by exact coverage and positional-parity identities, so the proof is not a finite extrapolation.
+
+The remaining interval 6242 through 128452 is covered by a compact extension trace. Each record inserts the next integer and makes protected two-edge reversals. A single cyclic ordering, interval coverage, preservation of both seed edges, and the exact nonsquare-edge set are maintained inductively. Every extension ends with no nonsquare edge. Normal and optimized Python replay agree; a second explicit-vector C++ implementation independently agrees on all 122,211 cycles and the final sequence. Necessity of N ≥ 6242 is simply presence of the prescribed vertex.
+
+## 16. New poset boundary tools
+
+The [mixed-(1,2) theorem](mixed12_witness_migration_20261019/mixed12_witness_migration_20261019.md) excludes maximum-span majority roots with one lower exclusive neighbor, two upper exclusive neighbors, and at most three common incomparable neighbors, for arbitrary actual exteriors. Weighted comparison witnesses migrate to upper-exclusive endpoints when root-only aggregates fail. The exact finite proof covers 5,228 cores and 626,105 admissible majority projections. It does not cover all seven-thin posets.
+
+The [saturation lemma](c4_saturation_frontier_20261019/mixed12-c4-frontier-stage/seven_thin_saturation_increment_lemma_20261019.md) uses the global incomparability-degree budget: a core vertex already at the budget is comparable with every exterior vertex. All boundary-tree increments containing such a vertex vanish. This strengthens the cone relaxation for the remaining four-common-neighbor morphology. A complete scan of that morphology is ongoing; no conclusion from an unfinished scan is asserted.
+
+General Collatz, the 1/3–2/3 conjecture, the Gold partition conjecture, and the graceful tree conjecture remain unresolved in this session.
