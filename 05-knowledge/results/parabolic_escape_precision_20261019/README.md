@@ -22,3 +22,7 @@ The leading pi-law and additive O(1) refinement are established prior literature
 The proof and strict-threshold conventions have been mathematically reviewed; the companion verifier passed. No separate independent audit is claimed in this initial checkpoint.
 
 These results do not imply digit normality, primality transfer, a global analytic embedding, any LRC statement, or a solution to a Collatz problem.
+
+## Later result
+
+Hypothesis (H) in the frozen note is proved in the [next-order extension](../parabolic_escape_next_order_20261019/parabolic_escape_next_order_20261019.md), whose quantitative matching proof has passed independent audit. The initial mathematical note remains unchanged as a record of the first checkpoint.
