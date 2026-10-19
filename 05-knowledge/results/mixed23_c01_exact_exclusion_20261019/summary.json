@@ -1,0 +1,36 @@
+{
+  "status": "ALL_CERTIFIED",
+  "stats": [
+    {
+      "c": 0,
+      "cores": 357,
+      "complete": 357,
+      "analytic_balanced": 0,
+      "analytic_cycles": 0,
+      "short_span_orders": 1452,
+      "analytic_orders": 20870,
+      "residual_orders": 865,
+      "kinds": {
+        "two": 168,
+        "one": 693,
+        "dual": 4
+      }
+    },
+    {
+      "c": 1,
+      "cores": 4824,
+      "complete": 4824,
+      "analytic_balanced": 142,
+      "analytic_cycles": 0,
+      "short_span_orders": 4442,
+      "analytic_orders": 810230,
+      "residual_orders": 22332,
+      "kinds": {
+        "one": 18224,
+        "two": 3806,
+        "dual": 302
+      }
+    }
+  ],
+  "seconds": 25.24386978149414
+}

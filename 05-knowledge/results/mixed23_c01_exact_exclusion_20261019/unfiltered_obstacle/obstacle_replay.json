@@ -1,0 +1,7 @@
+{
+  "status": "EXACT_CONE_OBSTACLE_REPLAYED",
+  "core_extensions": 73,
+  "projected_root_span": 3,
+  "minimum_3p_minus_2": "1690812899/24123027536",
+  "scope": "Core-only relaxed cone obstruction, not an actual counterexample. Root span3 is excluded globally using the known six-thin theorem."
+}

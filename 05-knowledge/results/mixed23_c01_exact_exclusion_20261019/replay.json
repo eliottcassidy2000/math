@@ -1,0 +1,27 @@
+{
+  "status": "EXACT_REPLAY_PASSED",
+  "certificate_sha256": "eb2f3f545fb741478329c532cd09412e70d2cf96be74bb8d32b7d827eac105c2",
+  "catalogue_and_replay": [
+    {
+      "c": 0,
+      "cores": 357,
+      "analytic_balanced_cores": 0,
+      "analytic_cycle_cores": 0,
+      "short_span_orders": 1452,
+      "directed_screen_orders": 20870,
+      "exact_generator_orders": 865,
+      "distinct_generator_certificates": 250
+    },
+    {
+      "c": 1,
+      "cores": 4824,
+      "analytic_balanced_cores": 142,
+      "analytic_cycle_cores": 0,
+      "short_span_orders": 4442,
+      "directed_screen_orders": 810230,
+      "exact_generator_orders": 22332,
+      "distinct_generator_certificates": 4445
+    }
+  ],
+  "seconds": 22.92458987236023
+}
