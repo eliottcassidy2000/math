@@ -1,0 +1,111 @@
+{
+  "scope": "Parent approved the frozen mathematical packet and stated reviews. Only review status, relative links, and runnable command presentation changed. Original reviewed hashes remain identified as source hashes.",
+  "files": [
+    {
+      "path": "LINEAR_PARTITION_DIAMETER.md",
+      "source_sha256": "9adbbf668476ef42d00d681f1543eab497750d32be06f2d74504f20383591f6b",
+      "published_sha256": "9fe5f70ec12c931ed6b07e2f1c33e11aff0307cdb8da817614026c3f56efcb53",
+      "presentation_changes": [
+        {
+          "before": "independent review requested",
+          "after": "independently [reviewed](review-algebra/REVIEW.md)"
+        },
+        {
+          "before": "Independent review is requested.",
+          "after": "Independent [review has passed](review-algebra/REVIEW.md)."
+        },
+        {
+          "before": "`POLYNOMIAL_STAIRCASE_DIAMETER.md`",
+          "after": "[polynomial rank-staircase theorem](../graceful_polynomial_diameter_20261019/POLYNOMIAL_STAIRCASE_DIAMETER.md)"
+        }
+      ]
+    },
+    {
+      "path": "verify_partition_routes.py",
+      "source_sha256": "91b1aa356816c764bb4e21accb8d970b700ef258cfb4dc06d737bca3a164d171",
+      "published_sha256": "91b1aa356816c764bb4e21accb8d970b700ef258cfb4dc06d737bca3a164d171",
+      "presentation_changes": []
+    },
+    {
+      "path": "controls.json",
+      "source_sha256": "040f6e39cc8cf81b4ad73694fd65af0fadfc875bc37036a08201154987f01283",
+      "published_sha256": "040f6e39cc8cf81b4ad73694fd65af0fadfc875bc37036a08201154987f01283",
+      "presentation_changes": []
+    },
+    {
+      "path": "controls.optimized.json",
+      "source_sha256": "040f6e39cc8cf81b4ad73694fd65af0fadfc875bc37036a08201154987f01283",
+      "published_sha256": "040f6e39cc8cf81b4ad73694fd65af0fadfc875bc37036a08201154987f01283",
+      "presentation_changes": []
+    },
+    {
+      "path": "arithmetic_partition_controls.py",
+      "source_sha256": "38f92787f5e1c88894609d783eacefaea54d45bf4e0a4a7cd59ed6ffce94d634",
+      "published_sha256": "38f92787f5e1c88894609d783eacefaea54d45bf4e0a4a7cd59ed6ffce94d634",
+      "presentation_changes": []
+    },
+    {
+      "path": "arithmetic_controls.json",
+      "source_sha256": "bfc438f36ac7c5b12688120ff921d015c1184154dab922f33c9b2a9f04615979",
+      "published_sha256": "bfc438f36ac7c5b12688120ff921d015c1184154dab922f33c9b2a9f04615979",
+      "presentation_changes": []
+    },
+    {
+      "path": "arithmetic_controls.optimized.json",
+      "source_sha256": "bfc438f36ac7c5b12688120ff921d015c1184154dab922f33c9b2a9f04615979",
+      "published_sha256": "bfc438f36ac7c5b12688120ff921d015c1184154dab922f33c9b2a9f04615979",
+      "presentation_changes": []
+    },
+    {
+      "path": "deep_relay_control.py",
+      "source_sha256": "8d3eca8b4309abbb5098c7c7f6b2b4a65095c687ce42ab2dc32298fb39089394",
+      "published_sha256": "8d3eca8b4309abbb5098c7c7f6b2b4a65095c687ce42ab2dc32298fb39089394",
+      "presentation_changes": []
+    },
+    {
+      "path": "deep_relay_control.json",
+      "source_sha256": "cdd3f2b6cbd1d5d891ec37c4a005b2449b184ae45995104ae85da6ae74111486",
+      "published_sha256": "cdd3f2b6cbd1d5d891ec37c4a005b2449b184ae45995104ae85da6ae74111486",
+      "presentation_changes": []
+    },
+    {
+      "path": "deep_relay_control.optimized.json",
+      "source_sha256": "cdd3f2b6cbd1d5d891ec37c4a005b2449b184ae45995104ae85da6ae74111486",
+      "published_sha256": "cdd3f2b6cbd1d5d891ec37c4a005b2449b184ae45995104ae85da6ae74111486",
+      "presentation_changes": []
+    },
+    {
+      "path": "review-algebra/REVIEW.md",
+      "source_sha256": "a9d3177e3138d1c7761e3b98b0222d657aebc956964b186a7d7c698f5dd384a5",
+      "published_sha256": "f0653f3d815c5aac86fd72e3b534bb615a52da5e57345ce26393500690a946a9",
+      "presentation_changes": [
+        {
+          "before": "Reproduce from the staging directory:",
+          "after": "Reproduce from the packet directory:"
+        },
+        {
+          "before": "    python ",
+          "after": "    python3 -B "
+        }
+      ]
+    },
+    {
+      "path": "review-algebra/independent_partition_audit.py",
+      "source_sha256": "3a7f94f911afd253793b034984848507d0d10a1936bfc245eb7ce5c9535a8016",
+      "published_sha256": "3a7f94f911afd253793b034984848507d0d10a1936bfc245eb7ce5c9535a8016",
+      "presentation_changes": []
+    },
+    {
+      "path": "review-algebra/independent_receipt.json",
+      "source_sha256": "37e020f7429e175136af0796214124888e9afa2b1efe42e2ed2dd05092bf5930",
+      "published_sha256": "37e020f7429e175136af0796214124888e9afa2b1efe42e2ed2dd05092bf5930",
+      "presentation_changes": []
+    },
+    {
+      "path": "review-algebra/independent_receipt.optimized.json",
+      "source_sha256": "37e020f7429e175136af0796214124888e9afa2b1efe42e2ed2dd05092bf5930",
+      "published_sha256": "37e020f7429e175136af0796214124888e9afa2b1efe42e2ed2dd05092bf5930",
+      "presentation_changes": []
+    }
+  ]
+}

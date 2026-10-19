@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "checks": 2737046,
+  "systems": 960,
+  "routes": 71738,
+  "validated_moves": 355829,
+  "largest_rank": 16,
+  "maximum_route_to_rank_ratio": 1.6363636363636365,
+  "target_preservation_hostile_length": 4,
+  "scope": "Explicit polynomial cycle-arborescence routing, not state-graph BFS. Random finite controls plus complete endpoint pairs in bounded small systems; universal bounds are proved separately."
+}

@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "checks": 1880058,
+  "support_universe": "All labelled support systems satisfying |A_i| >= r-i for zero-indexed i; rank at most four.",
+  "pure_support_controls": [
+    {
+      "rank": 1,
+      "all_support_systems": 1,
+      "all_endpoint_pairs": 1,
+      "maximum_exact_diameter": 0
+    },
+    {
+      "rank": 2,
+      "all_support_systems": 3,
+      "all_endpoint_pairs": 6,
+      "maximum_exact_diameter": 1
+    },
+    {
+      "rank": 3,
+      "all_support_systems": 28,
+      "all_endpoint_pairs": 228,
+      "maximum_exact_diameter": 2
+    },
+    {
+      "rank": 4,
+      "all_support_systems": 825,
+      "all_endpoint_pairs": 45408,
+      "maximum_exact_diameter": 4
+    }
+  ],
+  "parallel_universe": "All such support systems of rank at most three, with two distinguishable elements per available color/part pair and one loop per color.",
+  "actual_realization_controls": [
+    {
+      "rank": 1,
+      "all_support_systems": 1,
+      "all_actual_endpoint_pairs": 4,
+      "maximum_exact_diameter": 1
+    },
+    {
+      "rank": 2,
+      "all_support_systems": 3,
+      "all_actual_endpoint_pairs": 96,
+      "maximum_exact_diameter": 1
+    },
+    {
+      "rank": 3,
+      "all_support_systems": 28,
+      "all_actual_endpoint_pairs": 14592,
+      "maximum_exact_diameter": 2
+    }
+  ],
+  "independently_constructed_routes": 60335,
+  "validated_moves": 193916,
+  "scope": "Independent implementation and exact BFS; no producer imports. Finite controls supplement the manuscript proof."
+}

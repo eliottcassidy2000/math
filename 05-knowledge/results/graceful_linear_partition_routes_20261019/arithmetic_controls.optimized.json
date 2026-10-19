@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "all_m_at_most": 10,
+  "free_colors_at_most": 5,
+  "partition_contact_fibers": 79446,
+  "endpoint_routes": 100890,
+  "by_m": [
+    {
+      "m": 1,
+      "partition_contact_fibers": 1
+    },
+    {
+      "m": 2,
+      "partition_contact_fibers": 1
+    },
+    {
+      "m": 3,
+      "partition_contact_fibers": 2
+    },
+    {
+      "m": 4,
+      "partition_contact_fibers": 6
+    },
+    {
+      "m": 5,
+      "partition_contact_fibers": 18
+    },
+    {
+      "m": 6,
+      "partition_contact_fibers": 76
+    },
+    {
+      "m": 7,
+      "partition_contact_fibers": 338
+    },
+    {
+      "m": 8,
+      "partition_contact_fibers": 1784
+    },
+    {
+      "m": 9,
+      "partition_contact_fibers": 10264
+    },
+    {
+      "m": 10,
+      "partition_contact_fibers": 66956
+    }
+  ],
+  "by_free_rank": {
+    "1": 72952,
+    "2": 6494
+  },
+  "constructed_factorial_max_rank": 12,
+  "constructed_factorial_routes": 120,
+  "first_nonstar_contact_trees": [],
+  "first_noncomplete_assignment_fibers": [],
+  "scope": "Exhaustive fixed upper-tail choices only in the displayed bounded range; loops retained as unavailable actual choices and parallel realizations remain distinct."
+}

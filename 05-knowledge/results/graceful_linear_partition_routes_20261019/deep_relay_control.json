@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "rank": 1100,
+  "route_length": 2197,
+  "arborescence_depth": 1098,
+  "note": "Buffer-only routing stress; the full width-two distance here is one, so this is not a diameter lower bound."
+}
