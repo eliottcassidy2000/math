@@ -1,0 +1,149 @@
+{
+  "Euler_numbers_sech_3_4_5": {
+    "3": 0,
+    "4": 5,
+    "5": 0
+  },
+  "Euler_polynomials_3_4_5": {
+    "3": "x**3 - 3*x**2/2 + 1/4",
+    "4": "x**4 - 2*x**3 + x",
+    "5": "x**5 - 5*x**4/2 + 5*x**2/2 - 1/2"
+  },
+  "Eulerian_metagraphs": {
+    "3": {
+      "path_envelope": [
+        2,
+        1
+      ],
+      "star": [
+        2,
+        1
+      ]
+    },
+    "4": {
+      "path_envelope": [
+        3,
+        3
+      ],
+      "star": [
+        3,
+        2
+      ]
+    },
+    "5": {
+      "path_envelope": [
+        7,
+        16
+      ],
+      "star": [
+        7,
+        8
+      ]
+    }
+  },
+  "checks_passed": 1190,
+  "cited_graph_period_prefactors": {
+    "4": {
+      "wheel_coefficient": 20,
+      "zeta_weight": 5,
+      "zigzag_coefficient": "20"
+    },
+    "5": {
+      "wheel_coefficient": 70,
+      "zeta_weight": 7,
+      "zigzag_coefficient": "441/8"
+    },
+    "6": {
+      "wheel_coefficient": 252,
+      "zeta_weight": 9,
+      "zigzag_coefficient": "168"
+    }
+  },
+  "connected_graph_signless_rank_census": 771,
+  "del_pezzo_E3_E4_E5": {
+    "3": {
+      "curve_edges": 6,
+      "curve_vertices": 6,
+      "degree": 2,
+      "root_count": 8
+    },
+    "4": {
+      "curve_edges": 15,
+      "curve_vertices": 10,
+      "degree": 3,
+      "root_count": 20
+    },
+    "5": {
+      "curve_edges": 40,
+      "curve_vertices": 16,
+      "degree": 5,
+      "root_count": 40
+    }
+  },
+  "endpoint_reversal_paths": {
+    "3": 3,
+    "4": 5,
+    "5": 9,
+    "6": 17,
+    "7": 33,
+    "8": 65
+  },
+  "named_signless_ranks": {
+    "K33": 5,
+    "K5": 5,
+    "Petersen": 10,
+    "Q14": 13,
+    "Q15": 15
+  },
+  "quadratic_cycles": {
+    "parabolic_multiplier": "1",
+    "parabolic_polynomial": "x**3 + x**2/2 - 9*x/4 - 1/8",
+    "parabolic_secant_product": "1",
+    "rational_multiplier": "35/8",
+    "rational_secant_product": "1",
+    "rational_sums": [
+      "-1/2",
+      "1",
+      "-2"
+    ]
+  },
+  "real_analytic_Eisenstein_scattering": {
+    "3": {
+      "coefficient_times_pi_power": "2835/8",
+      "pi_denominator_power": 5,
+      "zeta_weight": 5
+    },
+    "4": {
+      "coefficient_times_pi_power": "23625/8",
+      "pi_denominator_power": 7,
+      "zeta_weight": 7
+    },
+    "5": {
+      "coefficient_times_pi_power": "3274425/128",
+      "pi_denominator_power": 9,
+      "zeta_weight": 9
+    }
+  },
+  "same_set_distinct_observers": {
+    "Schur_E3": 10,
+    "elementary_symmetric": {
+      "3": 225,
+      "4": 274,
+      "5": 120
+    },
+    "energy": {
+      "2": 85,
+      "3": 325,
+      "4": 1333,
+      "5": 5725
+    },
+    "set": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "status": "PASS: exact finite controls; no new irrationality, graceful existence, or global period claim"
+}
