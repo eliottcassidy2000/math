@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "method": "nested ideals/filters; integer core-word gap transfer counts",
+  "core_extensions": 11971,
+  "boundary_groups": 3546,
+  "profile_counts": [
+    46,
+    48
+  ],
+  "compatible_atoms": 1764,
+  "ambient_orders": [
+    10,
+    17
+  ],
+  "count_table_sha256": "2f83a7b75f377b5160c37b83b30f64da1ec3207531dcd575983a5d48da9c767d",
+  "safe_minima": [
+    "19831/72503",
+    "2000/242141",
+    "2393/169533",
+    "5641/42972",
+    "13003/172835",
+    "2113/28965",
+    "41591/128838"
+  ],
+  "certificate_minima": [
+    "1163/178770",
+    "1164/62011",
+    "715/114938",
+    "2139/160244"
+  ],
+  "residual_failure_patterns": 4,
+  "selection_counts": [
+    657,
+    196,
+    911
+  ],
+  "max_gap_weight": 364,
+  "max_atom_extensions": 430148,
+  "universal_strict_margin": "1/200"
+}
