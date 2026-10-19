@@ -1,0 +1,21 @@
+{
+  "centered_quotients": [
+    10,
+    69
+  ],
+  "centered_residues": [
+    -8,
+    -19
+  ],
+  "checks": 104983,
+  "n_range": [
+    2,
+    1001
+  ],
+  "scope": "one common parity-compatible pair, all intact affine blocks, residues 24 and 72",
+  "seed_edge": [
+    482,
+    3362
+  ],
+  "status": "passed"
+}
