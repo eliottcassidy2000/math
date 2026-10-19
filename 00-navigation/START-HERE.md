@@ -3,7 +3,7 @@
 **Rolling brief — 2026-09-06.**
 [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status.
 
-**Current 2026-10-19 assignment:** [Parabolic scaling, arithmetic, and global invariants](../05-knowledge/results/parabolic_scaling_session_20261019.md); [preceding extended-session results](../05-knowledge/results/liouville_session2_20261019_progress.md). The September LRC orientation below is historical context, not the current assignment.
+**Current 2026-10-19 assignment:** [Descent and global obstructions](../05-knowledge/results/descent_and_global_obstructions_session_20261019.md); [preceding parabolic session](../05-knowledge/results/parabolic_scaling_session_20261019.md). Scoped proofs and open boundaries are mapped there; the September LRC orientation below is historical.
 
 ## The five-minute orientation
 

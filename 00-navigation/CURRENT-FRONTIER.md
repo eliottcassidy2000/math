@@ -4,7 +4,7 @@
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
-**2026-10-19 current assignment:** [Parabolic scaling](../05-knowledge/results/parabolic_scaling_session_20261019.md) covers cusp clocks, arithmetic, Collatz and planar flows; [preceding results](../05-knowledge/results/liouville_session2_20261019_progress.md) also cover unit-distance graphs, Gold/balance and labeling. The September LRC material below is historical. Major conjectures remain open.
+**2026-10-19 current assignment:** [Descent and global obstructions](../05-knowledge/results/descent_and_global_obstructions_session_20261019.md) covers cofactor dynamics, scoped Collatz descent, section defects, Gold strategies, prime phases and inverse geometry. [Previous session](../05-knowledge/results/parabolic_scaling_session_20261019.md). Major conjectures remain open.
 ## LRC(14)
 
 ### Headline
