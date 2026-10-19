@@ -1,0 +1,119 @@
+{
+  "all_words_through_length": 12,
+  "contracting_square_all_lift_certificates": 6423,
+  "endpoint_source_length_pairs": 5120,
+  "enumerated_phase_period": 146768,
+  "explicit_checks": 1124584,
+  "inherited_short_all_lift_exclusions": 13,
+  "near_neutral_examples": [
+    {
+      "F_blocks": 3,
+      "K_blocks": 11,
+      "length": 336
+    },
+    {
+      "F_blocks": 11,
+      "K_blocks": 40,
+      "length": 1222
+    },
+    {
+      "F_blocks": 19,
+      "K_blocks": 69,
+      "length": 2108
+    }
+  ],
+  "phase_digest": "dee8ed48f2cc50b1ce7a19a237d81d41ae71f6e9a53a91b27e5f1f79807899a7",
+  "positive_lifted_repetitions": 73674,
+  "positive_overshoot_endpoint_controls": 8,
+  "rational_anchor_controls": [
+    {
+      "coefficient_stop": 92,
+      "d": 4,
+      "sufficient_K_blocks": 4
+    },
+    {
+      "coefficient_stop": 135,
+      "d": 12852,
+      "sufficient_K_blocks": 5
+    },
+    {
+      "coefficient_stop": 191,
+      "d": 14196,
+      "sufficient_K_blocks": 7
+    },
+    {
+      "coefficient_stop": 161,
+      "d": 15364,
+      "sufficient_K_blocks": 6
+    },
+    {
+      "coefficient_stop": 156,
+      "d": 18436,
+      "sufficient_K_blocks": 6
+    },
+    {
+      "coefficient_stop": 180,
+      "d": 49324,
+      "sufficient_K_blocks": 6
+    },
+    {
+      "coefficient_stop": 156,
+      "d": 128308,
+      "sufficient_K_blocks": 6
+    },
+    {
+      "coefficient_stop": 199,
+      "d": 215276,
+      "sufficient_K_blocks": 7
+    },
+    {
+      "coefficient_stop": 151,
+      "d": 266092,
+      "sufficient_K_blocks": 6
+    },
+    {
+      "coefficient_stop": 207,
+      "d": 288932,
+      "sufficient_K_blocks": 7
+    },
+    {
+      "coefficient_stop": 157,
+      "d": 295660,
+      "sufficient_K_blocks": 6
+    },
+    {
+      "coefficient_stop": 172,
+      "d": 310916,
+      "sufficient_K_blocks": 6
+    },
+    {
+      "coefficient_stop": 188,
+      "d": 390388,
+      "sufficient_K_blocks": 7
+    },
+    {
+      "coefficient_stop": 197,
+      "d": 394148,
+      "sufficient_K_blocks": 7
+    },
+    {
+      "coefficient_stop": 170,
+      "d": 480032,
+      "sufficient_K_blocks": 6
+    },
+    {
+      "coefficient_stop": 165,
+      "d": 522404,
+      "sufficient_K_blocks": 6
+    },
+    {
+      "coefficient_stop": 153,
+      "d": 529652,
+      "sufficient_K_blocks": 6
+    }
+  ],
+  "repetition_digest": "4339345a2d1089a9ccd0914fdc0a59bd2c56ed1db81677dde9f356e2d9988f22",
+  "scope": "finite independent controls; written proofs carry all-size quantifiers",
+  "status": "PASS",
+  "word_count": 8190
+}

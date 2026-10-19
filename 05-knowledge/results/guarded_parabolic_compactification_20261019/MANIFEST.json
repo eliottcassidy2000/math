@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-19",
+  "destination": "05-knowledge/results/guarded_parabolic_compactification_20261019/",
+  "title": "Guarded parabolic compactification and original-height Collatz repair",
+  "status": "PROVED-scoped; independently reviewed PASS-scoped",
+  "proof_revision": {
+    "predecessor_sha256": "981bb25c14ea474f84b800bf50622ff9711410b1f6caa0252b581833a3527416",
+    "publication_sha256": "563a91175935b7eb1bd8f5663f3166342848db976150c8f0f04d9f7bc3686114",
+    "changes": [
+      "Declare displacement d a positive integer in Sections 4\u20136.",
+      "Declare matching-bit length ell a nonnegative integer in Corollary A2.",
+      "Resolve repository-relative source links and receipt links.",
+      "Spell out the complete optimized checker command."
+    ],
+    "mathematical_claims_changed": false,
+    "main_verifier_changed": false,
+    "main_receipt_changed": false
+  },
+  "independent_review": {
+    "verdict": "PASS-scoped",
+    "source_report_sha256": "8775255946b6655d0523eb97428526a3754945e6a34e28752450b5b2ce98965f",
+    "publication_report_sha256": "2c7cd60ce2e7d969b5ebfcd4ddc7ecd189fcfaf649cc499cc356f54df391f884",
+    "report_presentation_changes": [
+      "Use working relative links for the proof, checker, and receipts.",
+      "Omit a workspace-operation sentence unrelated to the mathematical review."
+    ],
+    "checker_sha256": "d5a3a7e6881e357dc2f71e2ccfe8eca27e7440f0dccc50374c1d092cd8f37e08",
+    "explicit_checks": 1124584
+  },
+  "replay": {
+    "main_normal_and_optimized_match_receipt": true,
+    "main_explicit_checks": 137320,
+    "main_receipt_sha256": "d9dc7001a55cd0d076d2e8957f86fbed6d97e9199205d8130bcc3bfebc3c7b00",
+    "independent_normal_and_optimized_match_receipts": true,
+    "independent_receipt_sha256": "716d79ea7aa227c1e988f6627463137c0ba78f26bb4085c1add5606afa2f2834"
+  },
+  "upstream": [
+    "../collatz_guard_refined_repair_20261019/GUARD_REFINED_REPAIR.md",
+    "../collatz_interleaved_height_repair_20261019/INTERLEAVED_HEIGHT_REPAIR.md",
+    "../collatz_original_height_repair_20261019/ORIGINAL_HEIGHT_REPAIR.md",
+    "../collatz_height_controlled_entry_20261019/HEIGHT_CONTROLLED_ENTRY.md",
+    "../collatz_guarded_pumping_memory_20261004.md",
+    "../quadratic_cycle_phase_20261015b.md"
+  ],
+  "files": [
+    {
+      "path": "GUARDED_PARABOLIC_COMPACTIFICATION.md",
+      "bytes": 22265,
+      "sha256": "563a91175935b7eb1bd8f5663f3166342848db976150c8f0f04d9f7bc3686114"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1742,
+      "sha256": "25489a7b3fc8217b25d003290621509b91722b014a18735c350b636599292914"
+    },
+    {
+      "path": "independent-review/INDEPENDENT_REVIEW.md",
+      "bytes": 8306,
+      "sha256": "2c7cd60ce2e7d969b5ebfcd4ddc7ecd189fcfaf649cc499cc356f54df391f884"
+    },
+    {
+      "path": "independent-review/independent-normal.json",
+      "bytes": 2518,
+      "sha256": "716d79ea7aa227c1e988f6627463137c0ba78f26bb4085c1add5606afa2f2834"
+    },
+    {
+      "path": "independent-review/independent-optimized.json",
+      "bytes": 2518,
+      "sha256": "716d79ea7aa227c1e988f6627463137c0ba78f26bb4085c1add5606afa2f2834"
+    },
+    {
+      "path": "independent-review/independent_controls.py",
+      "bytes": 9894,
+      "sha256": "d5a3a7e6881e357dc2f71e2ccfe8eca27e7440f0dccc50374c1d092cd8f37e08"
+    },
+    {
+      "path": "independent-review/supplied-normal.json",
+      "bytes": 11406,
+      "sha256": "d9dc7001a55cd0d076d2e8957f86fbed6d97e9199205d8130bcc3bfebc3c7b00"
+    },
+    {
+      "path": "independent-review/supplied-optimized.json",
+      "bytes": 11406,
+      "sha256": "d9dc7001a55cd0d076d2e8957f86fbed6d97e9199205d8130bcc3bfebc3c7b00"
+    },
+    {
+      "path": "verification-receipt.json",
+      "bytes": 11406,
+      "sha256": "d9dc7001a55cd0d076d2e8957f86fbed6d97e9199205d8130bcc3bfebc3c7b00"
+    },
+    {
+      "path": "verify_guarded_compactification.py",
+      "bytes": 8484,
+      "sha256": "d96a48bb79e5758330c4e9df64160569b353713e5eef260e3fe9a365c8ad5326"
+    }
+  ],
+  "relative_link_validation": "All Markdown file links resolve within the package or to an existing repository source."
+}
