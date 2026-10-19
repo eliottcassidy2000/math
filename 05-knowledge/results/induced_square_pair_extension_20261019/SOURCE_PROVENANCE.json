@@ -1,0 +1,126 @@
+{
+  "scope": "The frozen 16-file inventory and all input hashes were checked before copying. Only review status, relative links, runnable commands and this provenance pointer changed. All proofs and exact receipts are preserved.",
+  "files": [
+    {
+      "path": "INDEPENDENT_REVIEW.md",
+      "source_sha256": "a36d73b7de88e88a91ea99f9d153fa534a0c42a0b7a6f2f8d15e7a0e0b1d8b72",
+      "published_sha256": "f282f98472cb396e869226f479a818cc0b4028c232c35828a05a08e4b064838f",
+      "presentation_changes": [],
+      "relative_links_normalized": true
+    },
+    {
+      "path": "MOD7_MINIMAL_RESIDUE_ADDENDUM.md",
+      "source_sha256": "35ab5c52c6820f47443c5fbeb430fd280db6607e0f70186502596416c92eb8a8",
+      "published_sha256": "35ab5c52c6820f47443c5fbeb430fd280db6607e0f70186502596416c92eb8a8",
+      "presentation_changes": [],
+      "relative_links_normalized": true
+    },
+    {
+      "path": "ODD_PRIME_ONE_SUBDIVISION.md",
+      "source_sha256": "bebae143554f4e98d44f642a21f32a742751b4e42f22c809e59773a5e9f71b7f",
+      "published_sha256": "bebae143554f4e98d44f642a21f32a742751b4e42f22c809e59773a5e9f71b7f",
+      "presentation_changes": [],
+      "relative_links_normalized": true
+    },
+    {
+      "path": "README.md",
+      "source_sha256": "651b09311617a9e8939c893fca58c2a957caf32c17c1bc39192304d3dafdafb5",
+      "published_sha256": "af521c9b5a4fd3d2b24c301be0ab42b0ecc9c2962956badac2b1dce439f7f2f5",
+      "presentation_changes": [
+        {
+          "scope": "Runnable python3 -B commands and exact source-provenance pointer."
+        }
+      ],
+      "relative_links_normalized": true
+    },
+    {
+      "path": "SCALED_PAIR_EXTENSION_AND_TWO_DEGENERATE.md",
+      "source_sha256": "5f447ae400b02ed489822fd5ae554ab970c2ed069e04dc367b1c9f823b443ade",
+      "published_sha256": "d70391de79ec7ef76619cd4614a4f8cf3cdf5813d33d625d91b678bc56935fa9",
+      "presentation_changes": [],
+      "relative_links_normalized": true
+    },
+    {
+      "path": "one_subdivision_results.json",
+      "source_sha256": "cbb37c55fe8190523c84c1dd1d9a2e2babc4affe5ffbb22f9c1608d2e7b9dcc4",
+      "published_sha256": "cbb37c55fe8190523c84c1dd1d9a2e2babc4affe5ffbb22f9c1608d2e7b9dcc4",
+      "presentation_changes": [],
+      "relative_links_normalized": false
+    },
+    {
+      "path": "one_subdivision_results_optimized.json",
+      "source_sha256": "cbb37c55fe8190523c84c1dd1d9a2e2babc4affe5ffbb22f9c1608d2e7b9dcc4",
+      "published_sha256": "cbb37c55fe8190523c84c1dd1d9a2e2babc4affe5ffbb22f9c1608d2e7b9dcc4",
+      "presentation_changes": [],
+      "relative_links_normalized": false
+    },
+    {
+      "path": "prime_family_results.json",
+      "source_sha256": "73b4118b1c4ab1ae0331606a889accd917ce479723454231889547a3278e38ba",
+      "published_sha256": "73b4118b1c4ab1ae0331606a889accd917ce479723454231889547a3278e38ba",
+      "presentation_changes": [],
+      "relative_links_normalized": false
+    },
+    {
+      "path": "prime_family_results_optimized.json",
+      "source_sha256": "73b4118b1c4ab1ae0331606a889accd917ce479723454231889547a3278e38ba",
+      "published_sha256": "73b4118b1c4ab1ae0331606a889accd917ce479723454231889547a3278e38ba",
+      "presentation_changes": [],
+      "relative_links_normalized": false
+    },
+    {
+      "path": "provenance/ONE_SUBDIVISION_DYADIC_GUARD.md",
+      "source_sha256": "f4e34ebe21ff41d99792885dec502f1dadb5b2684ad7e9099c00ad47125e85cb",
+      "published_sha256": "fa4d4eed4d59aa854746fdd80393d5e2ee4f8a8f49fdcd60ea628830f982f5cc",
+      "presentation_changes": [
+        {
+          "before": "Proof candidate under independent review.",
+          "after": "Independently [reviewed](../INDEPENDENT_REVIEW.md); retained as an alternative construction and provenance. Its height constant is superseded by the [main pair-extension proof](../SCALED_PAIR_EXTENSION_AND_TWO_DEGENERATE.md)."
+        }
+      ],
+      "relative_links_normalized": true
+    },
+    {
+      "path": "review-root/PROOF_REVIEW.md",
+      "source_sha256": "2d26bfca2c606d6cb97e4bb1626565791d99dc7ec9c93e217ab209f57eb71097",
+      "published_sha256": "2d26bfca2c606d6cb97e4bb1626565791d99dc7ec9c93e217ab209f57eb71097",
+      "presentation_changes": [],
+      "relative_links_normalized": true
+    },
+    {
+      "path": "two_degenerate_results.json",
+      "source_sha256": "4ba1dc192f22336aae7b11084459276b45de1a9d448fc3fc3135a5159696a087",
+      "published_sha256": "4ba1dc192f22336aae7b11084459276b45de1a9d448fc3fc3135a5159696a087",
+      "presentation_changes": [],
+      "relative_links_normalized": false
+    },
+    {
+      "path": "two_degenerate_results_optimized.json",
+      "source_sha256": "4ba1dc192f22336aae7b11084459276b45de1a9d448fc3fc3135a5159696a087",
+      "published_sha256": "4ba1dc192f22336aae7b11084459276b45de1a9d448fc3fc3135a5159696a087",
+      "presentation_changes": [],
+      "relative_links_normalized": false
+    },
+    {
+      "path": "verify_one_subdivision.py",
+      "source_sha256": "357b7f477662aeca52ee33f652319c5e680430885ad3a62fe64395da8feecff3",
+      "published_sha256": "357b7f477662aeca52ee33f652319c5e680430885ad3a62fe64395da8feecff3",
+      "presentation_changes": [],
+      "relative_links_normalized": false
+    },
+    {
+      "path": "verify_prime_family.py",
+      "source_sha256": "d57ff69a9d9e824357b8ad0d3523148c239591ff76936beb0a9068ba2e90f098",
+      "published_sha256": "d57ff69a9d9e824357b8ad0d3523148c239591ff76936beb0a9068ba2e90f098",
+      "presentation_changes": [],
+      "relative_links_normalized": false
+    },
+    {
+      "path": "verify_two_degenerate.py",
+      "source_sha256": "825c60ba6c2da384059646c7fb13eb230eeed6c7340908edce28bb1bfb6018fc",
+      "published_sha256": "825c60ba6c2da384059646c7fb13eb230eeed6c7340908edce28bb1bfb6018fc",
+      "presentation_changes": [],
+      "relative_links_normalized": false
+    }
+  ]
+}

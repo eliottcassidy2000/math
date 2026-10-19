@@ -1,0 +1,870 @@
+{
+  "always_active_checks": 1453434,
+  "complete_graph_rows": [
+    {
+      "height": 108,
+      "n": 1,
+      "prime": 3,
+      "vertices": 1
+    },
+    {
+      "height": 6292,
+      "n": 2,
+      "prime": 3,
+      "vertices": 3
+    },
+    {
+      "height": 25813,
+      "n": 3,
+      "prime": 3,
+      "vertices": 6
+    },
+    {
+      "height": 58456,
+      "n": 4,
+      "prime": 3,
+      "vertices": 10
+    },
+    {
+      "height": 104221,
+      "n": 5,
+      "prime": 3,
+      "vertices": 15
+    },
+    {
+      "height": 163108,
+      "n": 6,
+      "prime": 3,
+      "vertices": 21
+    },
+    {
+      "height": 19122157,
+      "n": 7,
+      "prime": 3,
+      "vertices": 28
+    },
+    {
+      "height": 26029432,
+      "n": 8,
+      "prime": 3,
+      "vertices": 36
+    },
+    {
+      "height": 33999589,
+      "n": 9,
+      "prime": 3,
+      "vertices": 45
+    },
+    {
+      "height": 43032628,
+      "n": 10,
+      "prime": 3,
+      "vertices": 55
+    },
+    {
+      "height": 53128549,
+      "n": 11,
+      "prime": 3,
+      "vertices": 66
+    },
+    {
+      "height": 64287352,
+      "n": 12,
+      "prime": 3,
+      "vertices": 78
+    },
+    {
+      "height": 76509037,
+      "n": 13,
+      "prime": 3,
+      "vertices": 91
+    },
+    {
+      "height": 89793604,
+      "n": 14,
+      "prime": 3,
+      "vertices": 105
+    },
+    {
+      "height": 104141053,
+      "n": 15,
+      "prime": 3,
+      "vertices": 120
+    },
+    {
+      "height": 119551384,
+      "n": 16,
+      "prime": 3,
+      "vertices": 136
+    },
+    {
+      "height": 136024597,
+      "n": 17,
+      "prime": 3,
+      "vertices": 153
+    },
+    {
+      "height": 153560692,
+      "n": 18,
+      "prime": 3,
+      "vertices": 171
+    },
+    {
+      "height": 172159669,
+      "n": 19,
+      "prime": 3,
+      "vertices": 190
+    },
+    {
+      "height": 191821528,
+      "n": 20,
+      "prime": 3,
+      "vertices": 210
+    },
+    {
+      "height": 212546269,
+      "n": 21,
+      "prime": 3,
+      "vertices": 231
+    },
+    {
+      "height": 234333892,
+      "n": 22,
+      "prime": 3,
+      "vertices": 253
+    },
+    {
+      "height": 257184397,
+      "n": 23,
+      "prime": 3,
+      "vertices": 276
+    },
+    {
+      "height": 281097784,
+      "n": 24,
+      "prime": 3,
+      "vertices": 300
+    },
+    {
+      "height": 500,
+      "n": 1,
+      "prime": 5,
+      "vertices": 1
+    },
+    {
+      "height": 388876,
+      "n": 2,
+      "prime": 5,
+      "vertices": 3
+    },
+    {
+      "height": 1559501,
+      "n": 3,
+      "prime": 5,
+      "vertices": 6
+    },
+    {
+      "height": 3511376,
+      "n": 4,
+      "prime": 5,
+      "vertices": 10
+    },
+    {
+      "height": 6244501,
+      "n": 5,
+      "prime": 5,
+      "vertices": 15
+    },
+    {
+      "height": 9758876,
+      "n": 6,
+      "prime": 5,
+      "vertices": 21
+    },
+    {
+      "height": 14054501,
+      "n": 7,
+      "prime": 5,
+      "vertices": 28
+    },
+    {
+      "height": 19131376,
+      "n": 8,
+      "prime": 5,
+      "vertices": 36
+    },
+    {
+      "height": 24989501,
+      "n": 9,
+      "prime": 5,
+      "vertices": 45
+    },
+    {
+      "height": 31628876,
+      "n": 10,
+      "prime": 5,
+      "vertices": 55
+    },
+    {
+      "height": 39049501,
+      "n": 11,
+      "prime": 5,
+      "vertices": 66
+    },
+    {
+      "height": 47251376,
+      "n": 12,
+      "prime": 5,
+      "vertices": 78
+    },
+    {
+      "height": 56234501,
+      "n": 13,
+      "prime": 5,
+      "vertices": 91
+    },
+    {
+      "height": 65998876,
+      "n": 14,
+      "prime": 5,
+      "vertices": 105
+    },
+    {
+      "height": 76544501,
+      "n": 15,
+      "prime": 5,
+      "vertices": 120
+    },
+    {
+      "height": 87871376,
+      "n": 16,
+      "prime": 5,
+      "vertices": 136
+    },
+    {
+      "height": 99979501,
+      "n": 17,
+      "prime": 5,
+      "vertices": 153
+    },
+    {
+      "height": 112868876,
+      "n": 18,
+      "prime": 5,
+      "vertices": 171
+    },
+    {
+      "height": 126539501,
+      "n": 19,
+      "prime": 5,
+      "vertices": 190
+    },
+    {
+      "height": 140991376,
+      "n": 20,
+      "prime": 5,
+      "vertices": 210
+    },
+    {
+      "height": 156224501,
+      "n": 21,
+      "prime": 5,
+      "vertices": 231
+    },
+    {
+      "height": 172238876,
+      "n": 22,
+      "prime": 5,
+      "vertices": 253
+    },
+    {
+      "height": 189034501,
+      "n": 23,
+      "prime": 5,
+      "vertices": 276
+    },
+    {
+      "height": 206611376,
+      "n": 24,
+      "prime": 5,
+      "vertices": 300
+    },
+    {
+      "height": 44,
+      "n": 1,
+      "prime": 11,
+      "vertices": 1
+    },
+    {
+      "height": 14356,
+      "n": 2,
+      "prime": 11,
+      "vertices": 3
+    },
+    {
+      "height": 857371637,
+      "n": 3,
+      "prime": 11,
+      "vertices": 6
+    },
+    {
+      "height": 1929136760,
+      "n": 4,
+      "prime": 11,
+      "vertices": 10
+    },
+    {
+      "height": 3429619645,
+      "n": 5,
+      "prime": 11,
+      "vertices": 15
+    },
+    {
+      "height": 5358820292,
+      "n": 6,
+      "prime": 11,
+      "vertices": 21
+    },
+    {
+      "height": 7716738701,
+      "n": 7,
+      "prime": 11,
+      "vertices": 28
+    },
+    {
+      "height": 10503374872,
+      "n": 8,
+      "prime": 11,
+      "vertices": 36
+    },
+    {
+      "height": 13718728805,
+      "n": 9,
+      "prime": 11,
+      "vertices": 45
+    },
+    {
+      "height": 17362800500,
+      "n": 10,
+      "prime": 11,
+      "vertices": 55
+    },
+    {
+      "height": 21435589957,
+      "n": 11,
+      "prime": 11,
+      "vertices": 66
+    },
+    {
+      "height": 25937097176,
+      "n": 12,
+      "prime": 11,
+      "vertices": 78
+    },
+    {
+      "height": 30867322157,
+      "n": 13,
+      "prime": 11,
+      "vertices": 91
+    },
+    {
+      "height": 36226264900,
+      "n": 14,
+      "prime": 11,
+      "vertices": 105
+    },
+    {
+      "height": 42013925405,
+      "n": 15,
+      "prime": 11,
+      "vertices": 120
+    },
+    {
+      "height": 48230303672,
+      "n": 16,
+      "prime": 11,
+      "vertices": 136
+    },
+    {
+      "height": 54875399701,
+      "n": 17,
+      "prime": 11,
+      "vertices": 153
+    },
+    {
+      "height": 61949213492,
+      "n": 18,
+      "prime": 11,
+      "vertices": 171
+    },
+    {
+      "height": 69451745045,
+      "n": 19,
+      "prime": 11,
+      "vertices": 190
+    },
+    {
+      "height": 77382994360,
+      "n": 20,
+      "prime": 11,
+      "vertices": 210
+    },
+    {
+      "height": 85742961437,
+      "n": 21,
+      "prime": 11,
+      "vertices": 231
+    },
+    {
+      "height": 94531646276,
+      "n": 22,
+      "prime": 11,
+      "vertices": 253
+    },
+    {
+      "height": 103749048877,
+      "n": 23,
+      "prime": 11,
+      "vertices": 276
+    },
+    {
+      "height": 113395169240,
+      "n": 24,
+      "prime": 11,
+      "vertices": 300
+    },
+    {
+      "height": 52,
+      "n": 1,
+      "prime": 13,
+      "vertices": 1
+    },
+    {
+      "height": 28172,
+      "n": 2,
+      "prime": 13,
+      "vertices": 3
+    },
+    {
+      "height": 3262799853,
+      "n": 3,
+      "prime": 13,
+      "vertices": 6
+    },
+    {
+      "height": 7341396336,
+      "n": 4,
+      "prime": 13,
+      "vertices": 10
+    },
+    {
+      "height": 13051454261,
+      "n": 5,
+      "prime": 13,
+      "vertices": 15
+    },
+    {
+      "height": 20392973628,
+      "n": 6,
+      "prime": 13,
+      "vertices": 21
+    },
+    {
+      "height": 29365954437,
+      "n": 7,
+      "prime": 13,
+      "vertices": 28
+    },
+    {
+      "height": 39970396688,
+      "n": 8,
+      "prime": 13,
+      "vertices": 36
+    },
+    {
+      "height": 52206300381,
+      "n": 9,
+      "prime": 13,
+      "vertices": 45
+    },
+    {
+      "height": 66073665516,
+      "n": 10,
+      "prime": 13,
+      "vertices": 55
+    },
+    {
+      "height": 81572492093,
+      "n": 11,
+      "prime": 13,
+      "vertices": 66
+    },
+    {
+      "height": 98702780112,
+      "n": 12,
+      "prime": 13,
+      "vertices": 78
+    },
+    {
+      "height": 117464529573,
+      "n": 13,
+      "prime": 13,
+      "vertices": 91
+    },
+    {
+      "height": 137857740476,
+      "n": 14,
+      "prime": 13,
+      "vertices": 105
+    },
+    {
+      "height": 159882412821,
+      "n": 15,
+      "prime": 13,
+      "vertices": 120
+    },
+    {
+      "height": 183538546608,
+      "n": 16,
+      "prime": 13,
+      "vertices": 136
+    },
+    {
+      "height": 208826141837,
+      "n": 17,
+      "prime": 13,
+      "vertices": 153
+    },
+    {
+      "height": 235745198508,
+      "n": 18,
+      "prime": 13,
+      "vertices": 171
+    },
+    {
+      "height": 264295716621,
+      "n": 19,
+      "prime": 13,
+      "vertices": 190
+    },
+    {
+      "height": 294477696176,
+      "n": 20,
+      "prime": 13,
+      "vertices": 210
+    },
+    {
+      "height": 326291137173,
+      "n": 21,
+      "prime": 13,
+      "vertices": 231
+    },
+    {
+      "height": 359736039612,
+      "n": 22,
+      "prime": 13,
+      "vertices": 253
+    },
+    {
+      "height": 394812403493,
+      "n": 23,
+      "prime": 13,
+      "vertices": 276
+    },
+    {
+      "height": 431520228816,
+      "n": 24,
+      "prime": 13,
+      "vertices": 300
+    },
+    {
+      "height": 76,
+      "n": 1,
+      "prime": 19,
+      "vertices": 1
+    },
+    {
+      "height": 129524,
+      "n": 2,
+      "prime": 19,
+      "vertices": 3
+    },
+    {
+      "height": 519765,
+      "n": 3,
+      "prime": 19,
+      "vertices": 6
+    },
+    {
+      "height": 1170648,
+      "n": 4,
+      "prime": 19,
+      "vertices": 10
+    },
+    {
+      "height": 271735938653,
+      "n": 5,
+      "prime": 19,
+      "vertices": 15
+    },
+    {
+      "height": 424587745380,
+      "n": 6,
+      "prime": 19,
+      "vertices": 21
+    },
+    {
+      "height": 611406678189,
+      "n": 7,
+      "prime": 19,
+      "vertices": 28
+    },
+    {
+      "height": 832192737080,
+      "n": 8,
+      "prime": 19,
+      "vertices": 36
+    },
+    {
+      "height": 1086945922053,
+      "n": 9,
+      "prime": 19,
+      "vertices": 45
+    },
+    {
+      "height": 1375666233108,
+      "n": 10,
+      "prime": 19,
+      "vertices": 55
+    },
+    {
+      "height": 1698353670245,
+      "n": 11,
+      "prime": 19,
+      "vertices": 66
+    },
+    {
+      "height": 2055008233464,
+      "n": 12,
+      "prime": 19,
+      "vertices": 78
+    },
+    {
+      "height": 2445629922765,
+      "n": 13,
+      "prime": 19,
+      "vertices": 91
+    },
+    {
+      "height": 2870218738148,
+      "n": 14,
+      "prime": 19,
+      "vertices": 105
+    },
+    {
+      "height": 3328774679613,
+      "n": 15,
+      "prime": 19,
+      "vertices": 120
+    },
+    {
+      "height": 3821297747160,
+      "n": 16,
+      "prime": 19,
+      "vertices": 136
+    },
+    {
+      "height": 4347787940789,
+      "n": 17,
+      "prime": 19,
+      "vertices": 153
+    },
+    {
+      "height": 4908245260500,
+      "n": 18,
+      "prime": 19,
+      "vertices": 171
+    },
+    {
+      "height": 5502669706293,
+      "n": 19,
+      "prime": 19,
+      "vertices": 190
+    },
+    {
+      "height": 6131061278168,
+      "n": 20,
+      "prime": 19,
+      "vertices": 210
+    },
+    {
+      "height": 6793419976125,
+      "n": 21,
+      "prime": 19,
+      "vertices": 231
+    },
+    {
+      "height": 7489745800164,
+      "n": 22,
+      "prime": 19,
+      "vertices": 253
+    },
+    {
+      "height": 8220038750285,
+      "n": 23,
+      "prime": 19,
+      "vertices": 276
+    },
+    {
+      "height": 8984298826488,
+      "n": 24,
+      "prime": 19,
+      "vertices": 300
+    },
+    {
+      "height": 116,
+      "n": 1,
+      "prime": 29,
+      "vertices": 1
+    },
+    {
+      "height": 705484,
+      "n": 2,
+      "prime": 29,
+      "vertices": 3
+    },
+    {
+      "height": 2825645,
+      "n": 3,
+      "prime": 29,
+      "vertices": 6
+    },
+    {
+      "height": 6360368,
+      "n": 4,
+      "prime": 29,
+      "vertices": 10
+    },
+    {
+      "height": 11309653,
+      "n": 5,
+      "prime": 29,
+      "vertices": 15
+    },
+    {
+      "height": 17673500,
+      "n": 6,
+      "prime": 29,
+      "vertices": 21
+    },
+    {
+      "height": 18008862281669,
+      "n": 7,
+      "prime": 29,
+      "vertices": 28
+    },
+    {
+      "height": 24512064235600,
+      "n": 8,
+      "prime": 29,
+      "vertices": 36
+    },
+    {
+      "height": 32015759015453,
+      "n": 9,
+      "prime": 29,
+      "vertices": 45
+    },
+    {
+      "height": 40519946621228,
+      "n": 10,
+      "prime": 29,
+      "vertices": 55
+    },
+    {
+      "height": 50024627052925,
+      "n": 11,
+      "prime": 29,
+      "vertices": 66
+    },
+    {
+      "height": 60529800310544,
+      "n": 12,
+      "prime": 29,
+      "vertices": 78
+    },
+    {
+      "height": 72035466394085,
+      "n": 13,
+      "prime": 29,
+      "vertices": 91
+    },
+    {
+      "height": 84541625303548,
+      "n": 14,
+      "prime": 29,
+      "vertices": 105
+    },
+    {
+      "height": 98048277038933,
+      "n": 15,
+      "prime": 29,
+      "vertices": 120
+    },
+    {
+      "height": 112555421600240,
+      "n": 16,
+      "prime": 29,
+      "vertices": 136
+    },
+    {
+      "height": 128063058987469,
+      "n": 17,
+      "prime": 29,
+      "vertices": 153
+    },
+    {
+      "height": 144571189200620,
+      "n": 18,
+      "prime": 29,
+      "vertices": 171
+    },
+    {
+      "height": 162079812239693,
+      "n": 19,
+      "prime": 29,
+      "vertices": 190
+    },
+    {
+      "height": 180588928104688,
+      "n": 20,
+      "prime": 29,
+      "vertices": 210
+    },
+    {
+      "height": 200098536795605,
+      "n": 21,
+      "prime": 29,
+      "vertices": 231
+    },
+    {
+      "height": 220608638312444,
+      "n": 22,
+      "prime": 29,
+      "vertices": 253
+    },
+    {
+      "height": 242119232655205,
+      "n": 23,
+      "prime": 29,
+      "vertices": 276
+    },
+    {
+      "height": 264630319823888,
+      "n": 24,
+      "prime": 29,
+      "vertices": 300
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,15 @@
+{
+  "all_common_neighbors_of_first_two_tested": 2384,
+  "always_active_checks": 28747,
+  "exhaustive_ordered_two_parent_graphs": {
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 56,
+    "5": 616
+  },
+  "maximum_random_label_bit_length": 16349,
+  "random_order_six_or_seven": 100,
+  "status": "PASS",
+  "triple_seed_scales_through": 500
+}

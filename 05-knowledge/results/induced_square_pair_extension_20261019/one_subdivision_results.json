@@ -1,0 +1,314 @@
+{
+  "always_active_checks": 6509625,
+  "complete_graphs": [
+    {
+      "heights": {
+        "dyadic_mod7": 20057854,
+        "odd_power_three": 163108,
+        "square_scale": 1635585
+      },
+      "m": 15,
+      "n": 6
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 28887038,
+        "odd_power_three": 19122157,
+        "square_scale": 2355969
+      },
+      "m": 21,
+      "n": 7
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 39321854,
+        "odd_power_three": 26029432,
+        "square_scale": 3207425
+      },
+      "m": 28,
+      "n": 8
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 205485054,
+        "odd_power_three": 33999589,
+        "square_scale": 4189953
+      },
+      "m": 36,
+      "n": 9
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 260072958,
+        "odd_power_three": 43032628,
+        "square_scale": 5303553
+      },
+      "m": 45,
+      "n": 10
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 321083390,
+        "odd_power_three": 53128549,
+        "square_scale": 6548225
+      },
+      "m": 55,
+      "n": 11
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 388516350,
+        "odd_power_three": 64287352,
+        "square_scale": 7923969
+      },
+      "m": 66,
+      "n": 12
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 462371838,
+        "odd_power_three": 76509037,
+        "square_scale": 9430785
+      },
+      "m": 78,
+      "n": 13
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 542649854,
+        "odd_power_three": 89793604,
+        "square_scale": 11068673
+      },
+      "m": 91,
+      "n": 14
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 629350398,
+        "odd_power_three": 104141053,
+        "square_scale": 12837633
+      },
+      "m": 105,
+      "n": 15
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 722473470,
+        "odd_power_three": 119551384,
+        "square_scale": 14737665
+      },
+      "m": 120,
+      "n": 16
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 3288205310,
+        "odd_power_three": 136024597,
+        "square_scale": 268401665
+      },
+      "m": 136,
+      "n": 17
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 3712084990,
+        "odd_power_three": 153560692,
+        "square_scale": 303002625
+      },
+      "m": 153,
+      "n": 18
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 4161654782,
+        "odd_power_three": 172159669,
+        "square_scale": 339700737
+      },
+      "m": 171,
+      "n": 19
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 4636914686,
+        "odd_power_three": 191821528,
+        "square_scale": 378496001
+      },
+      "m": 190,
+      "n": 20
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 5137864702,
+        "odd_power_three": 212546269,
+        "square_scale": 419388417
+      },
+      "m": 210,
+      "n": 21
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 5664504830,
+        "odd_power_three": 234333892,
+        "square_scale": 462377985
+      },
+      "m": 231,
+      "n": 22
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 6216835070,
+        "odd_power_three": 257184397,
+        "square_scale": 507464705
+      },
+      "m": 253,
+      "n": 23
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 6794855422,
+        "odd_power_three": 281097784,
+        "square_scale": 554648577
+      },
+      "m": 276,
+      "n": 24
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 7398565886,
+        "odd_power_three": 306074053,
+        "square_scale": 603929601
+      },
+      "m": 300,
+      "n": 25
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 8027966462,
+        "odd_power_three": 332113204,
+        "square_scale": 655307777
+      },
+      "m": 325,
+      "n": 26
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 8683057150,
+        "odd_power_three": 359215237,
+        "square_scale": 708783105
+      },
+      "m": 351,
+      "n": 27
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 9363837950,
+        "odd_power_three": 387380152,
+        "square_scale": 764355585
+      },
+      "m": 378,
+      "n": 28
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 10070308862,
+        "odd_power_three": 416607949,
+        "square_scale": 822025217
+      },
+      "m": 406,
+      "n": 29
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 10802469886,
+        "odd_power_three": 446898628,
+        "square_scale": 881792001
+      },
+      "m": 435,
+      "n": 30
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 11560321022,
+        "odd_power_three": 478252189,
+        "square_scale": 943655937
+      },
+      "m": 465,
+      "n": 31
+    },
+    {
+      "heights": {
+        "dyadic_mod7": 12343862270,
+        "odd_power_three": 510668632,
+        "square_scale": 1007617025
+      },
+      "m": 496,
+      "n": 32
+    }
+  ],
+  "exhaustive_graphs": {
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 1024
+  },
+  "minimal_prime_pattern": [
+    {
+      "admissible": [],
+      "prime": 2,
+      "squares": [
+        0,
+        1
+      ],
+      "triples": []
+    },
+    {
+      "admissible": [
+        1
+      ],
+      "prime": 3,
+      "squares": [
+        0,
+        1
+      ],
+      "triples": []
+    },
+    {
+      "admissible": [
+        1,
+        4
+      ],
+      "prime": 5,
+      "squares": [
+        0,
+        1,
+        4
+      ],
+      "triples": []
+    },
+    {
+      "admissible": [
+        3,
+        5,
+        6
+      ],
+      "prime": 7,
+      "squares": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "triples": [
+        [
+          3,
+          5,
+          6
+        ]
+      ]
+    }
+  ],
+  "random_graphs": 100,
+  "scaled_seed_cases": 130,
+  "status": "PASS"
+}
