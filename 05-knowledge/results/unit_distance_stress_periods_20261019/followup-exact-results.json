@@ -1,0 +1,91 @@
+{
+  "prime_controls": [
+    {
+      "p": 5,
+      "selected_edges": 15,
+      "cycles": 15,
+      "integer_wheels_checked": 25,
+      "x_period_defect": 4,
+      "y_period_defect": 1
+    },
+    {
+      "p": 11,
+      "selected_edges": 33,
+      "cycles": 33,
+      "integer_wheels_checked": 121,
+      "x_period_defect": 10,
+      "y_period_defect": 1
+    },
+    {
+      "p": 17,
+      "selected_edges": 51,
+      "cycles": 51,
+      "integer_wheels_checked": 289,
+      "x_period_defect": 16,
+      "y_period_defect": 1
+    },
+    {
+      "p": 23,
+      "selected_edges": 69,
+      "cycles": 69,
+      "integer_wheels_checked": 529,
+      "x_period_defect": 22,
+      "y_period_defect": 1
+    },
+    {
+      "p": 29,
+      "selected_edges": 87,
+      "cycles": 87,
+      "integer_wheels_checked": 841,
+      "x_period_defect": 28,
+      "y_period_defect": 1
+    }
+  ],
+  "stress_dimension_controls": [
+    {
+      "p": 5,
+      "rigidity_rank": 47,
+      "full_stress_dimension": 28,
+      "wheel_span_dimension": 22,
+      "cycles_and_wheels_span_dimension": 27,
+      "missing_period_dimensions": 1
+    },
+    {
+      "p": 11,
+      "rigidity_rank": 239,
+      "full_stress_dimension": 124,
+      "wheel_span_dimension": 118,
+      "cycles_and_wheels_span_dimension": 123,
+      "missing_period_dimensions": 1
+    }
+  ],
+  "full_q29_hostile": {
+    "p": 29,
+    "triangular_family_representatives": [
+      [
+        0,
+        1
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        3,
+        17
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        5,
+        14
+      ]
+    ],
+    "selected_edges": 435,
+    "cycle_checks": 435,
+    "integer_wheel_checks": 4205,
+    "scope": "Explicit support passes these local checks but fails the proved global period certificate; it is not a section."
+  }
+}

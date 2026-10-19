@@ -1,0 +1,8 @@
+p=5: 15 one-error cycles and 25 integer wheel checks pass; global period defects are -1,+1.
+p=11: 33 one-error cycles and 121 integer wheel checks pass; global period defects are -1,+1.
+p=17: 51 one-error cycles and 289 integer wheel checks pass; global period defects are -1,+1.
+p=23: 69 one-error cycles and 529 integer wheel checks pass; global period defects are -1,+1.
+p=29: 87 one-error cycles and 841 integer wheel checks pass; global period defects are -1,+1.
+p=5: wheel rank 22, cycles-plus-wheels rank 27, full stress dimension 28; exactly one missing period.
+p=11: wheel rank 118, cycles-plus-wheels rank 123, full stress dimension 124; exactly one missing period.
+Full q29 hostile: 435 selected edges, all 435 cycle checks and 4205 integer wheel checks pass; no section realizes it.

@@ -1,0 +1,303 @@
+{
+  "rigidity": [
+    {
+      "p": 3,
+      "edges": 18,
+      "offset_rank": 0,
+      "full_rank": 12,
+      "direct_full_matrix_rank": 12,
+      "stress_dimension": 6,
+      "extra_after_cycles": 0
+    },
+    {
+      "p": 5,
+      "edges": 75,
+      "offset_rank": 7,
+      "full_rank": 47,
+      "direct_full_matrix_rank": 47,
+      "stress_dimension": 28,
+      "extra_after_cycles": 13
+    },
+    {
+      "p": 7,
+      "edges": 196,
+      "offset_rank": 11,
+      "full_rank": 95,
+      "direct_full_matrix_rank": 95,
+      "stress_dimension": 101,
+      "extra_after_cycles": 73
+    },
+    {
+      "p": 11,
+      "edges": 726,
+      "offset_rank": 19,
+      "full_rank": 239,
+      "direct_full_matrix_rank": null,
+      "stress_dimension": 487,
+      "extra_after_cycles": 421
+    },
+    {
+      "p": 13,
+      "edges": 1183,
+      "offset_rank": 23,
+      "full_rank": 335,
+      "direct_full_matrix_rank": null,
+      "stress_dimension": 848,
+      "extra_after_cycles": 757
+    },
+    {
+      "p": 17,
+      "edges": 2601,
+      "offset_rank": 31,
+      "full_rank": 575,
+      "direct_full_matrix_rank": null,
+      "stress_dimension": 2026,
+      "extra_after_cycles": 1873
+    },
+    {
+      "p": 19,
+      "edges": 3610,
+      "offset_rank": 35,
+      "full_rank": 719,
+      "direct_full_matrix_rank": null,
+      "stress_dimension": 2891,
+      "extra_after_cycles": 2701
+    },
+    {
+      "p": 23,
+      "edges": 6348,
+      "offset_rank": 43,
+      "full_rank": 1055,
+      "direct_full_matrix_rank": null,
+      "stress_dimension": 5293,
+      "extra_after_cycles": 5017
+    },
+    {
+      "p": 29,
+      "edges": 12615,
+      "offset_rank": 55,
+      "full_rank": 1679,
+      "direct_full_matrix_rank": null,
+      "stress_dimension": 10936,
+      "extra_after_cycles": 10501
+    }
+  ],
+  "positive_controls": [
+    {
+      "p": 3,
+      "edges": 18,
+      "failures": 6,
+      "cycles": 6,
+      "fixed_error": 1,
+      "affine_and_orientation_checked": true
+    },
+    {
+      "p": 5,
+      "edges": 75,
+      "failures": 15,
+      "cycles": 15,
+      "fixed_error": 3,
+      "affine_and_orientation_checked": true
+    }
+  ],
+  "seams": [
+    {
+      "p": 5,
+      "full_graph": false,
+      "vertices": 25,
+      "edges": 75,
+      "triangular_families": 1,
+      "selected_edges": 15,
+      "cycles": 15,
+      "wheel_support_and_carry_checks": 25,
+      "reduced_rank": 7,
+      "augmented_rank": 8,
+      "periods": [
+        4,
+        1
+      ],
+      "representatives": [
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "p": 11,
+      "full_graph": false,
+      "vertices": 121,
+      "edges": 363,
+      "triangular_families": 1,
+      "selected_edges": 33,
+      "cycles": 33,
+      "wheel_support_and_carry_checks": 121,
+      "reduced_rank": 19,
+      "augmented_rank": 20,
+      "periods": [
+        10,
+        1
+      ],
+      "representatives": [
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "p": 17,
+      "full_graph": false,
+      "vertices": 289,
+      "edges": 867,
+      "triangular_families": 1,
+      "selected_edges": 51,
+      "cycles": 51,
+      "wheel_support_and_carry_checks": 289,
+      "reduced_rank": 31,
+      "augmented_rank": 32,
+      "periods": [
+        16,
+        1
+      ],
+      "representatives": [
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "p": 23,
+      "full_graph": false,
+      "vertices": 529,
+      "edges": 1587,
+      "triangular_families": 1,
+      "selected_edges": 69,
+      "cycles": 69,
+      "wheel_support_and_carry_checks": 529,
+      "reduced_rank": 43,
+      "augmented_rank": 44,
+      "periods": [
+        22,
+        1
+      ],
+      "representatives": [
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "p": 29,
+      "full_graph": false,
+      "vertices": 841,
+      "edges": 2523,
+      "triangular_families": 1,
+      "selected_edges": 87,
+      "cycles": 87,
+      "wheel_support_and_carry_checks": 841,
+      "reduced_rank": 55,
+      "augmented_rank": 56,
+      "periods": [
+        28,
+        1
+      ],
+      "representatives": [
+        [
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "full_q29": {
+    "p": 29,
+    "full_graph": true,
+    "vertices": 841,
+    "edges": 12615,
+    "triangular_families": 5,
+    "selected_edges": 435,
+    "cycles": 435,
+    "wheel_support_and_carry_checks": 4205,
+    "reduced_rank": 55,
+    "augmented_rank": 56,
+    "periods": null,
+    "representatives": [
+      [
+        0,
+        1
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        3,
+        17
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        5,
+        14
+      ]
+    ]
+  },
+  "wheel_spans": [
+    {
+      "p": 5,
+      "scope": "three-direction triangular graph only",
+      "edges": 75,
+      "full_stress_dimension": 28,
+      "wheel_rank": 22,
+      "cycle_rank": 15,
+      "cycle_and_wheel_rank": 27,
+      "missing_dimension": 1
+    },
+    {
+      "p": 7,
+      "scope": "three-direction triangular graph only",
+      "edges": 147,
+      "full_stress_dimension": 52,
+      "wheel_rank": 46,
+      "cycle_rank": 21,
+      "cycle_and_wheel_rank": 51,
+      "missing_dimension": 1
+    },
+    {
+      "p": 11,
+      "scope": "three-direction triangular graph only",
+      "edges": 363,
+      "full_stress_dimension": 124,
+      "wheel_rank": 118,
+      "cycle_rank": 33,
+      "cycle_and_wheel_rank": 123,
+      "missing_dimension": 1
+    },
+    {
+      "p": 17,
+      "scope": "three-direction triangular graph only",
+      "edges": 867,
+      "full_stress_dimension": 292,
+      "wheel_rank": 286,
+      "cycle_rank": 51,
+      "cycle_and_wheel_rank": 291,
+      "missing_dimension": 1
+    },
+    {
+      "p": 29,
+      "scope": "three-direction triangular graph only",
+      "edges": 2523,
+      "full_stress_dimension": 844,
+      "wheel_rank": 838,
+      "cycle_rank": 87,
+      "cycle_and_wheel_rank": 843,
+      "missing_dimension": 1
+    }
+  ]
+}
+ALL INDEPENDENT EXACT CONTROLS PASSED
