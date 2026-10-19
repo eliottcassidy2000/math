@@ -162,6 +162,23 @@ def main():
     for i,j in combinations(range(27),2):
         dif=tuple(a-b for a,b in zip(classes[i],classes[j]))
         check((ip(dif,dif)==-2)==(not meets(i,j)), 'root difference means skew lines, not meeting')
+    # Classical ternary Heisenberg coordinates: the central coordinate
+    # restores the area lost by projection onto the nine-point affine plane.
+    H=list(product(range(3),repeat=3))
+    area=lambda v,w:(v[0]*w[1]-v[1]*w[0])%3
+    def mul(v,w):return ((v[0]+w[0])%3,(v[1]+w[1])%3,(v[2]+w[2]+area(v,w))%3)
+    def adjacent(v,w):return v!=w and (v[:2]==w[:2] or (w[2]-v[2])%3==area(v,w))
+    HL=[a for a in combinations(H,3) if all(adjacent(v,w) for v,w in combinations(a,2))]
+    hmap=incidence_map(P,L,H,HL)
+    vertical=[line for line in HL if len({p[:2] for p in line})==1]
+    horizontal=[line for line in HL if line not in vertical]
+    projected=Counter(tuple(sorted(p[:2] for p in line)) for line in horizontal)
+    check((len(vertical),len(horizontal),len(projected))==(9,36,12),'Heisenberg 9+36 lines')
+    check(set(projected.values())=={3},'each affine line has three central lifts')
+    for v,w in combinations(H,2):
+        common=sum(adjacent(v,a) and adjacent(w,a) for a in H)
+        check(common==(1 if adjacent(v,w) else 5),'common neighbour obstruction to planar unit distances')
+    for v,w,r in product(H,repeat=3):check(mul(mul(v,w),r)==mul(v,mul(w,r)),'central cocycle associative')
     # Nine points of the Hermitian curve inside the 21-point plane over F4.
     PG=sorted({normalize(v) for v in product(range(4),repeat=3) if any(v)})
     lines=[tuple(i for i,p in enumerate(PG) if dot(a,p)==0) for a in PG]
@@ -174,6 +191,7 @@ def main():
     A=list(product(range(3),repeat=2))
     AL=sorted({tuple(sorted(((x+t*a)%3,(y+t*b)%3) for t in range(3)))
                for x,y in A for a,b in A if (a,b)!=(0,0)})
+    check(set(projected)==set(AL),'same literal nine-point affine line universe')
     u_to_affine=incidence_map(U,UL,A,AL)
     W=witt10(); WL=[tuple(x for x in b if x!=9) for b in W if 9 in b]
     w_to_affine=incidence_map(list(range(9)),WL,A,AL)
@@ -208,6 +226,10 @@ def main():
             new=frozenset(frozenset(map(relabel,ch)) for ch in original_charts)
             atlas_orbit.add(new);atlas_stabilizer+=new==original_charts
         GL.append(dict(matrix=[a,b,c,d],determinant=det,port_permutation=perm))
+        action=lambda v:((a*v[0]+b*v[1])%3,(c*v[0]+d*v[1])%3,det*v[2]%3)
+        for v,w in product(H,repeat=2):
+            check(action(mul(v,w))==mul(action(v),action(w)),'same determinant transports central area')
+            check(adjacent(v,w)==adjacent(action(v),action(w)),'GL2 action preserves Heisenberg collinearity')
     check(len(GL)==48 and code_stabilizer==24,'GL and SL local actions')
     ordered_atlases=sorted(atlas_orbit,key=lambda a:sorted(sorted(c) for c in a))
     atlas_actions=set()
@@ -273,7 +295,9 @@ def main():
     out=dict(status='FINITE-EXACT; accompanying proofs scoped in note',checks=CHECKS,
         quadric=dict(points=P,lines=L,local_matchings=local,doily_section_h=h,
                      section_to_duads=[[p,doily_map[p]] for p in S],section_count=len(sections),
-                     to_cubic_line=[[p,names[cubic_map[p]]] for p in P],picard_classes=dict(zip(names,classes))),
+                     to_cubic_line=[[p,names[cubic_map[p]]] for p in P],picard_classes=dict(zip(names,classes)),
+                     to_heisenberg=[[p,hmap[p]] for p in P],heisenberg_lines=HL,
+                     projected_affine_lines=[[line,count] for line,count in sorted(projected.items())]),
         unital=dict(PG_points=PG,PG_lines=lines,points=U,secants=UL,
                     to_affine=[[p,u_to_affine[p]] for p in U]),
         witt=dict(blocks=W,derived_at=9,to_affine=[[p,w_to_affine[p]] for p in range(9)],

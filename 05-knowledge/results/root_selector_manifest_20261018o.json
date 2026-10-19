@@ -1,0 +1,26 @@
+{
+  "status": "scoped proved and finite-exact artifacts; unbounded ROOT and geometric selector OPEN",
+  "inherited_revision": "acc88b273c1dfa9b340a71257ab0c25625355337",
+  "integrated_concurrent_commits": [
+    "190ea97bf4",
+    "269c5e124b"
+  ],
+  "audit": "self-audited proofs; independent algorithm/path implementations, no independent subagent referee",
+  "sha256": {
+    "04-computation/experiments/root_clock_channels_20261018o.py": "6349cd853a933e49dc31cfc3dd6d733ee0271977c1cf5339ac8fa9bc56970385",
+    "04-computation/experiments/root_wiener_scan_20261018o.c": "b877eae078abb818932de2c81d9af09d1a38b97eda9087cef2a2dfee88e216bd",
+    "04-computation/experiments/root_clock_finite_certificate_20261018o.py": "33cc392f417dcf1aa382652642fdc885ae63f06416c9cfa7b9126a7db1cb0876",
+    "04-computation/experiments/root_clock_finite_certificate_20261018o.c": "7e6c37fca572430268aa1238a216dc8cf219dc5439f9d7cdbec7152cc061cdb6",
+    "04-computation/experiments/root_clock_certificate_audit_20261018o.py": "c6479979f493022de9c0f61a1a8467d2c169069e8497ef7c077ca3c1b904640f",
+    "04-computation/experiments/marked_geometries_selectors_20261018o.py": "4614443ba6da86451f4c4499ea76402eb460357655785f7559916d1e276e638d",
+    "05-knowledge/results/root_actual_clock_certificate_20261018o.md": "943963021dacacbca4c635caa5eea1b5e326967a0176ba137fba4b51f473d481",
+    "05-knowledge/results/marked_geometries_selectors_20261018o.md": "9f2656aa315a8229820d1c0ce50291e093b1536f7cb31ee7356f091c0c4c165b",
+    "05-knowledge/results/root_clock_channels_20261018o.json": "ac7bd81469eb0a97b0df41ac60d0e9bc0552704cf0431a3f392f7bf5fc5dba2d",
+    "05-knowledge/results/root_wiener_scan_20261018o.json": "612b5ff694917eb4562e11ef127ae011a167872e1b7c8d32ecb552dc8c1fff3a",
+    "05-knowledge/results/root_clock_tree_20261018o.json": "fca1da90446e63c7018bcb307e1fdf341254624073a2c7eaebb76178cb53da0f",
+    "05-knowledge/results/root_clock_finite_certificate_20261018o.json": "95fd237bf5dba37325ad02cde9d79819921d6aec9ec38a3341a3492bb543f7c2",
+    "05-knowledge/results/root_clock_certificate_audit_20261018o.json": "144c22b96ba0ddd09d673fb069f91f0c48a044000c4526ca713732e242c4a150",
+    "05-knowledge/results/marked_geometries_selectors_20261018o.json": "3f83031ba95ffa89de7a1f338ccfd717a198cf47855842ff318005388ac000af",
+    "04-computation/experiments/first_arrival_20261018/V_closed_Y1000.txt": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+  }
+}

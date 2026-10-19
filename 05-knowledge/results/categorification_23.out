@@ -212,11 +212,11 @@ Exceptional collection sizes for del Pezzo surfaces:
   del Pezzo surface dP_k: k+3 exceptional objects (blowup of P^2 at k points)
   dP_0 = P^2: KEY2 objects
   dP_2: KEY_SUM objects
-  dP_3: h(G2) objects (the cubic surface!)
+  dP_3: h(G2) objects (degree six, not the cubic surface)
   dP_4: H_forb_1 objects
   dP_7: V(Pet) objects (related to E_7 root system!)
 
-  The CUBIC SURFACE dP_3 has h(G2) = 6 exceptional objects
+  The CUBIC SURFACE dP_6 has 9 exceptional objects
   and 27 = KEY2^3 lines!
 
 ======================================================================
@@ -454,12 +454,12 @@ Points of projective spaces over F_2 and F_3:
   Part 11: THE 27 LINES AND THE E_6 ROOT SYSTEM
 ======================================================================
 
-The cubic surface (= dP_3, blowup of P^2 at 6 points) contains
+The cubic surface (= dP_6 in the blowup-count convention, blowup of P^2 at 6 points) contains
 exactly 27 = KEY2^3 lines.
 
 The configuration of these 27 lines is governed by the E_6 root system!
   - The 27 lines ↔ weights of the 27-dim irrep of E_6
-  - Two lines meet iff the corresponding weight vectors differ by a root
+  - Two distinct lines are skew iff their corresponding weight vectors differ by a root
   - The symmetry group of the configuration = W(E_6), order 51840
 
   27 = KEY2^3

@@ -3,6 +3,10 @@
 categorification_23.py — Categorification, derived categories, and the (2,3) meta-structure
 opus-2026-03-14-S82
 
+Historical exploratory script, not current canon. Selected cubic-surface
+claims repaired 2026-10-18 (MISTAKE-643): dP_k below counts blowups, so the
+cubic is dP_6 with rank K_0=9; root differences correspond to skew lines.
+
 Exploring:
 1. Euler characteristic of D^b(Rep(Q)) for ADE quivers — why (2,3,5) dominates
 2. Hall algebras and quantum groups at q=KEY1, q=KEY2
@@ -306,11 +310,11 @@ print(f"""
   del Pezzo surface dP_k: k+3 exceptional objects (blowup of P^2 at k points)
   dP_0 = P^2: KEY2 objects
   dP_2: KEY_SUM objects
-  dP_3: h(G2) objects (the cubic surface!)
+  dP_3: h(G2) objects (degree six, not the cubic surface)
   dP_4: H_forb_1 objects
   dP_7: V(Pet) objects (related to E_7 root system!)
 
-  The CUBIC SURFACE dP_3 has h(G2) = 6 exceptional objects
+  The CUBIC SURFACE dP_6 has 9 exceptional objects
   and 27 = KEY2^3 lines!
 """)
 
@@ -649,12 +653,12 @@ print("  Part 11: THE 27 LINES AND THE E_6 ROOT SYSTEM")
 print("=" * 70)
 
 print("""
-The cubic surface (= dP_3, blowup of P^2 at 6 points) contains
+The cubic surface (= dP_6 in the blowup-count convention, blowup of P^2 at 6 points) contains
 exactly 27 = KEY2^3 lines.
 
 The configuration of these 27 lines is governed by the E_6 root system!
   - The 27 lines ↔ weights of the 27-dim irrep of E_6
-  - Two lines meet iff the corresponding weight vectors differ by a root
+  - Two distinct lines are skew iff their corresponding weight vectors differ by a root
   - The symmetry group of the configuration = W(E_6), order 51840
 
   27 = KEY2^3

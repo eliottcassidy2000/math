@@ -19157,3 +19157,12 @@ the ambient space.
 - **Missing coordinate / lesson:** retain the affine origin when moving from signed frames to linear binary carriers. Norm preservation is not preservation of a marked zero or source.
 - **Evidence:** [cube script](../04-computation/experiments/cube_flow_packets_20261018n.py), [repaired note](../05-knowledge/results/cube_unitary_clock_packets_20261018n.md), [exact receipt](../05-knowledge/results/cube_flow_packets_20261018n.json).
 
+## MISTAKE-643 (2026-10-18, frontier_petersen_oct18 / 20261018o) — a historical cubic-line relation was complemented and a del Pezzo convention changed mid-argument
+
+- **Affected source:** `04-computation/categorification_23.py` and its saved exploratory output. The local convention explicitly used dP_k for the blowup of the plane at k points, with k+3 exceptional objects, but later called the cubic surface dP_3 with six objects while also describing six blowups. The correct index in that convention is dP_6, with nine objects. Degree-three notation is another convention and must not be spliced into the same table.
+- **False relation:** the historical text said two cubic lines meet iff their weight difference is an E6 root. For distinct line classes L,M in the marked Picard lattice, `(L-M)^2=-2-2(L.M)` and the canonical degree cancels. Thus the root difference corresponds to skew lines, not meeting lines. A minimal pair is E_0,E_1: intersection zero, difference square -2.
+- **Repair and survivor:** both displays and the saved output are corrected, and the source is marked historical. The 27 lines, 45 tritangent triples, 36 doily sections and five-pair neighbourhoods survive. The new checker constructs both the Picard and F2-quadric models, verifies all 351 distinct pairs, and replays their incidence bijection.
+- **Missing coordinate:** graph complement / intersection predicate, and whether the surface subscript records degree or number of blowups. Shared E6 and 27 labels do not fix either choice.
+- **Local prepublication checks:** the first pendant-triangle draft placed its third port at distance sqrt(3), not one; the full pair-distance test rejected it and the port was moved to `(1/2,1+sqrt(3)/2)`. An arbitrary incidence isomorphism initially varied with Python hash order; stable integer graph IDs now make the saved map reproducible. Neither failed receipt was published.
+- **Evidence:** [marked geometry note](../05-knowledge/results/marked_geometries_selectors_20261018o.md), [exact checker](../04-computation/experiments/marked_geometries_selectors_20261018o.py).
+
