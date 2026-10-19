@@ -1,0 +1,133 @@
+{
+  "checks": 1399045,
+  "pell_pairs": [
+    [
+      1,
+      1
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      29,
+      41
+    ],
+    [
+      169,
+      239
+    ],
+    [
+      985,
+      1393
+    ],
+    [
+      5741,
+      8119
+    ],
+    [
+      33461,
+      47321
+    ],
+    [
+      195025,
+      275807
+    ],
+    [
+      1136689,
+      1607521
+    ],
+    [
+      6625109,
+      9369319
+    ],
+    [
+      38613965,
+      54608393
+    ],
+    [
+      225058681,
+      318281039
+    ]
+  ],
+  "rotation_windows": [
+    {
+      "absorbed_vertices": 6384,
+      "first_index": 1,
+      "pairs": 1596,
+      "s": 57
+    },
+    {
+      "absorbed_vertices": 6608,
+      "first_index": 1,
+      "pairs": 1652,
+      "s": 59
+    },
+    {
+      "absorbed_vertices": 7952,
+      "first_index": 1,
+      "pairs": 1988,
+      "s": 71
+    },
+    {
+      "absorbed_vertices": 11312,
+      "first_index": 1,
+      "pairs": 2828,
+      "s": 101
+    },
+    {
+      "absorbed_vertices": 22512,
+      "first_index": 1,
+      "pairs": 5628,
+      "s": 201
+    },
+    {
+      "absorbed_vertices": 22512,
+      "first_index": 5629,
+      "pairs": 5628,
+      "s": 201
+    },
+    {
+      "absorbed_vertices": 22512,
+      "first_index": 11257,
+      "pairs": 5628,
+      "s": 201
+    },
+    {
+      "absorbed_vertices": 33712,
+      "first_index": 1,
+      "pairs": 8428,
+      "s": 301
+    },
+    {
+      "absorbed_vertices": 33712,
+      "first_index": 8429,
+      "pairs": 8428,
+      "s": 301
+    },
+    {
+      "absorbed_vertices": 33712,
+      "first_index": 16857,
+      "pairs": 8428,
+      "s": 301
+    },
+    {
+      "absorbed_vertices": 33712,
+      "first_index": 25285,
+      "pairs": 8428,
+      "s": 301
+    },
+    {
+      "absorbed_vertices": 33712,
+      "first_index": 33713,
+      "pairs": 8428,
+      "s": 301
+    }
+  ],
+  "scope": "local identities and prescribed-host conditional absorption; no new unrestricted interval theorem",
+  "singleton_range": [
+    1,
+    100000
+  ],
+  "status": "passed"
+}
