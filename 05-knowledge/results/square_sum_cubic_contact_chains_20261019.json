@@ -1,0 +1,148 @@
+{
+  "status": "FINITE-EXACT controls; universal theorem proved separately",
+  "checks": {
+    "plus_same_port_identity": 1,
+    "minus_same_port_identity": 1,
+    "reciprocal_relation": 1,
+    "degree_exactly_three": 2,
+    "coprime_cubic_forms": 2,
+    "plus_above_boundary": 1,
+    "minus_above_boundary": 1,
+    "plus_growth_identity": 1,
+    "minus_decrease_identity": 1,
+    "plus_derivative_identity": 1,
+    "minus_derivative_identity": 1,
+    "plus_growth_upper_identity": 1,
+    "integer_sign_coefficients": 10,
+    "uniform_chart_sign": 6,
+    "two_step_F_squared": 1,
+    "two_step_decrease_identity": 1,
+    "positive_two_step_denominator": 1,
+    "parabolic_cubic_coefficient": 2,
+    "entire_chart_admissible": 1,
+    "homogeneous_norm_identity": 1,
+    "gaussian_factorization": 1,
+    "resultant_only_two": 1,
+    "new_factor_old_prime_residue": 2,
+    "uniform_cubic_height_ratio": 4,
+    "plus_ratio_endpoint": 1,
+    "minus_ratio_endpoint": 1,
+    "exact_gcd_parity_probe": 3043,
+    "output_parity_probe": 3043,
+    "primitive_ppt": 18,
+    "orbit_in_fixed_chart": 14,
+    "orbit_admissible": 14,
+    "positive_contact_square": 14,
+    "rational_square_exact": 14,
+    "primitive_exact_transport": 14,
+    "primitive_cubic_bounds": 14,
+    "primitive_strict_growth": 14,
+    "petal_distinctness": 4,
+    "last_hypotenuse_is_common_scale": 4,
+    "cycle_vertices_distinct": 4,
+    "cycle_label_interval": 4,
+    "integer_cycle_edge_square": 40,
+    "two_step_orbit_decrease": 6
+  },
+  "normalization_probes": 3043,
+  "uniform_chart_gaps": {
+    "negative_A": "511/256",
+    "minus_positive": "479/256",
+    "plus_derivative": "2",
+    "minus_derivative": "13/8",
+    "plus_growth_under_two": "4087/2048",
+    "spread_derivative": "262079/65536",
+    "ratio_sign_6": "2",
+    "ratio_sign_7": "1/256",
+    "ratio_sign_8": "1/8",
+    "ratio_sign_9": "2"
+  },
+  "cycles": [
+    {
+      "first_same_port": 1,
+      "contact_count": 1,
+      "petal_count": 2,
+      "integer_vertices": 5,
+      "hypotenuse_bits": [
+        14,
+        40
+      ],
+      "largest_label_bits": 80,
+      "certificate_sha256": "3eea0cfb806e4895ebd8f303787f8e9e0475b3896c3e64bfc7fa57394a61f06f",
+      "labels": [
+        706005180228844650988082,
+        662229805590942639201842,
+        749780554866746662774322,
+        750448635913544093357522,
+        661561724544145208618642
+      ],
+      "integer_square_roots": [
+        1169715771382,
+        1188280421642,
+        1224838434562,
+        1188280421642,
+        1169430162418
+      ]
+    },
+    {
+      "first_same_port": 1,
+      "contact_count": 6,
+      "petal_count": 7,
+      "integer_vertices": 15,
+      "hypotenuse_bits": [
+        14,
+        40,
+        118,
+        352,
+        1056,
+        3168,
+        9502
+      ],
+      "largest_label_bits": 19004,
+      "certificate_sha256": "0ea79725d8e0d9179bef15ee4d7462b0a23c17c712148ab7948f5f9dcfc263ae"
+    },
+    {
+      "first_same_port": -1,
+      "contact_count": 1,
+      "petal_count": 2,
+      "integer_vertices": 5,
+      "hypotenuse_bits": [
+        14,
+        40
+      ],
+      "largest_label_bits": 80,
+      "certificate_sha256": "cf01c20711071f7cb1f106122e330a30387c001d0ef20cece013081101bf0861",
+      "labels": [
+        623649857080394671784450,
+        662318845497333952808450,
+        584980868663455390760450,
+        585589613557923461463554,
+        661710100602865882105346
+      ],
+      "integer_square_roots": [
+        1134005600770,
+        1116825731330,
+        1081929056002,
+        1116825731330,
+        1133737164286
+      ]
+    },
+    {
+      "first_same_port": -1,
+      "contact_count": 6,
+      "petal_count": 7,
+      "integer_vertices": 15,
+      "hypotenuse_bits": [
+        14,
+        40,
+        118,
+        352,
+        1054,
+        3162,
+        9486
+      ],
+      "largest_label_bits": 18972,
+      "certificate_sha256": "7311420312d08dada197b7248cb58957ac254bdcc0e3c860093b8b67ba839db9"
+    }
+  ]
+}
