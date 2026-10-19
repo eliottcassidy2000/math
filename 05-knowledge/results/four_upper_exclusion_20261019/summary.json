@@ -1,0 +1,39 @@
+{
+  "status": "ALL_CERTIFIED",
+  "stats": [
+    {
+      "c": 0,
+      "cores": 40,
+      "complete": 40,
+      "analytic_balanced": 0,
+      "analytic_orders": 630,
+      "residual_orders": 9,
+      "kinds": {
+        "one": 9
+      }
+    },
+    {
+      "c": 1,
+      "cores": 357,
+      "complete": 357,
+      "analytic_balanced": 40,
+      "analytic_orders": 12320,
+      "residual_orders": 530,
+      "kinds": {
+        "one": 530
+      }
+    },
+    {
+      "c": 2,
+      "cores": 4824,
+      "complete": 4824,
+      "analytic_balanced": 813,
+      "analytic_orders": 427489,
+      "residual_orders": 12251,
+      "kinds": {
+        "one": 12251
+      }
+    }
+  ],
+  "seconds": 18.417133569717407
+}
