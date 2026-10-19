@@ -1,0 +1,78 @@
+{
+  "files": [
+    {
+      "path": "PERFECT_CORE_TWIN_EDGES.md",
+      "source_sha256": "9407d89e5a211e35fbd238b31a4a2ea86738b427b2891587108034153e454e49",
+      "published_sha256": "84555d68b2e1342a7dd9967f962c5edeb83a49c25862eee58b8a3f8f7905fcb8",
+      "presentation_updates": true
+    },
+    {
+      "path": "verify_perfect_core_edges.py",
+      "source_sha256": "5ed315d84925202cee8b0fa67bc82320fd63367f55232a9c1ad8ec7ce01fb388",
+      "published_sha256": "5ed315d84925202cee8b0fa67bc82320fd63367f55232a9c1ad8ec7ce01fb388",
+      "presentation_updates": false
+    },
+    {
+      "path": "verification.out",
+      "source_sha256": "081580599ff0222a9406c9bec6f232f266034bbb3392628eed5fa0a50d36c997",
+      "published_sha256": "081580599ff0222a9406c9bec6f232f266034bbb3392628eed5fa0a50d36c997",
+      "presentation_updates": false
+    },
+    {
+      "path": "verification_optimized.out",
+      "source_sha256": "081580599ff0222a9406c9bec6f232f266034bbb3392628eed5fa0a50d36c997",
+      "published_sha256": "081580599ff0222a9406c9bec6f232f266034bbb3392628eed5fa0a50d36c997",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/INDEPENDENT_REVIEW.md",
+      "source_sha256": "166d1f41e12aca9b03029ccea68f564bbdc3cd3d965e5bdc2d591487e9861e2b",
+      "published_sha256": "de6bb04be8a7ff1cfd18cd95bf72b71f5f611bd46903d8ccea4ed5b941aee2a3",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent_controls.py",
+      "source_sha256": "40f7f251cf2d82bb751563759d6ad2068f94f5ac5a517b69973a0213885adf6e",
+      "published_sha256": "40f7f251cf2d82bb751563759d6ad2068f94f5ac5a517b69973a0213885adf6e",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/independent_controls.out",
+      "source_sha256": "bc2c7b86dedd11fe5836cad07d5185c423b32025a882d84232ea91e8aafcb1da",
+      "published_sha256": "bc2c7b86dedd11fe5836cad07d5185c423b32025a882d84232ea91e8aafcb1da",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/independent_controls_optimized.out",
+      "source_sha256": "bc2c7b86dedd11fe5836cad07d5185c423b32025a882d84232ea91e8aafcb1da",
+      "published_sha256": "bc2c7b86dedd11fe5836cad07d5185c423b32025a882d84232ea91e8aafcb1da",
+      "presentation_updates": false
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "05-knowledge/results/aliquot_guarded_cycles_20261014e.md",
+      "sha256": "fe76f92a23425d3e8e1377eea4171e557d2ba1be87e257cacc7cfa0a8c84e2fe"
+    },
+    {
+      "path": "05-knowledge/results/dyadic_cofactor_global_descent_20261019/COFACTOR_MAP_GLOBAL_CLASSIFICATION.md",
+      "sha256": "029056fccbc226d7a2915a4df71b2654c77c62aa3b0902a955839f93e6b25aee"
+    }
+  ],
+  "description": "The reviewer-approved scope wording was incorporated before publication. Publication adds live relative links, a reproduction guide, and review-path clarification; all verifier logic and numerical receipts are byte-identical to source.",
+  "proof_clarification_overlay": {
+    "reviewed_input_sha256": "a9b4d15e924e03ba5dd4d28ce3b685b90224aa2d6e18e39c740d0a083a41c4f2",
+    "reviewed_input_snapshot": "Reconstructed pre-clarification snapshot by reversing the two recorded literal replacements; supplied and attested by the author.",
+    "approved_final_source_sha256": "9407d89e5a211e35fbd238b31a4a2ea86738b427b2891587108034153e454e49",
+    "changes": [
+      {
+        "before": "A fixed integer core C",
+        "after": "A fixed positive integer core C"
+      },
+      {
+        "before": "its exact changing-core dynamics were globally classified.",
+        "after": "its associated auxiliary cofactor-map dynamics were globally classified, with the aliquot interpretation retained only on the odd-prime domain."
+      }
+    ]
+  }
+}
