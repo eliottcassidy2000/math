@@ -1,0 +1,1189 @@
+{
+  "status": "PASS",
+  "check_count": 166,
+  "field": "exact rationals (finite controls only)",
+  "scope": "N=3..14 sharp cubic jets; exact rational words N<=7; arbitrary-site and density controls",
+  "checks": [
+    "M additive subgroup",
+    "T additive subgroup",
+    "conjugated vertical shear",
+    "canonical coordinate bracket",
+    "M Jacobian one",
+    "G=x^2*y vector field",
+    "N=3: distinct nonzero sites",
+    "N=3: all residues nonzero",
+    "N=3: zero-site coefficient",
+    "N=3: jet moments",
+    "N=3: exact next moment",
+    "N=3: no zero-time factors",
+    "N=3: sharp factor count",
+    "N=3: reduced denominator degree",
+    "N=3: rational jet and first error",
+    "N=3: chronological word realizes residues",
+    "N=4: distinct nonzero sites",
+    "N=4: all residues nonzero",
+    "N=4: zero-site coefficient",
+    "N=4: jet moments",
+    "N=4: exact next moment",
+    "N=4: no zero-time factors",
+    "N=4: sharp factor count",
+    "N=4: reduced denominator degree",
+    "N=4: rational jet and first error",
+    "N=4: chronological word realizes residues",
+    "N=5: distinct nonzero sites",
+    "N=5: all residues nonzero",
+    "N=5: zero-site coefficient",
+    "N=5: jet moments",
+    "N=5: exact next moment",
+    "N=5: no zero-time factors",
+    "N=5: sharp factor count",
+    "N=5: reduced denominator degree",
+    "N=5: rational jet and first error",
+    "N=5: chronological word realizes residues",
+    "N=6: distinct nonzero sites",
+    "N=6: all residues nonzero",
+    "N=6: zero-site coefficient",
+    "N=6: jet moments",
+    "N=6: exact next moment",
+    "N=6: no zero-time factors",
+    "N=6: sharp factor count",
+    "N=6: reduced denominator degree",
+    "N=6: rational jet and first error",
+    "N=6: chronological word realizes residues",
+    "N=7: distinct nonzero sites",
+    "N=7: all residues nonzero",
+    "N=7: zero-site coefficient",
+    "N=7: jet moments",
+    "N=7: exact next moment",
+    "N=7: no zero-time factors",
+    "N=7: sharp factor count",
+    "N=7: reduced denominator degree",
+    "N=7: rational jet and first error",
+    "N=7: chronological word realizes residues",
+    "N=8: distinct nonzero sites",
+    "N=8: all residues nonzero",
+    "N=8: zero-site coefficient",
+    "N=8: jet moments",
+    "N=8: exact next moment",
+    "N=8: no zero-time factors",
+    "N=8: sharp factor count",
+    "N=9: distinct nonzero sites",
+    "N=9: all residues nonzero",
+    "N=9: zero-site coefficient",
+    "N=9: jet moments",
+    "N=9: exact next moment",
+    "N=9: no zero-time factors",
+    "N=9: sharp factor count",
+    "N=10: distinct nonzero sites",
+    "N=10: all residues nonzero",
+    "N=10: zero-site coefficient",
+    "N=10: jet moments",
+    "N=10: exact next moment",
+    "N=10: no zero-time factors",
+    "N=10: sharp factor count",
+    "N=11: distinct nonzero sites",
+    "N=11: all residues nonzero",
+    "N=11: zero-site coefficient",
+    "N=11: jet moments",
+    "N=11: exact next moment",
+    "N=11: no zero-time factors",
+    "N=11: sharp factor count",
+    "N=12: distinct nonzero sites",
+    "N=12: all residues nonzero",
+    "N=12: zero-site coefficient",
+    "N=12: jet moments",
+    "N=12: exact next moment",
+    "N=12: no zero-time factors",
+    "N=12: sharp factor count",
+    "N=13: distinct nonzero sites",
+    "N=13: all residues nonzero",
+    "N=13: zero-site coefficient",
+    "N=13: jet moments",
+    "N=13: exact next moment",
+    "N=13: no zero-time factors",
+    "N=13: sharp factor count",
+    "N=14: distinct nonzero sites",
+    "N=14: all residues nonzero",
+    "N=14: zero-site coefficient",
+    "N=14: jet moments",
+    "N=14: exact next moment",
+    "N=14: no zero-time factors",
+    "N=14: sharp factor count",
+    "arbitrary sites p=1, moment 0",
+    "arbitrary sites p=1, moment 1",
+    "arbitrary sites p=1: c0 reciprocal formula",
+    "arbitrary sites p=2, moment 0",
+    "arbitrary sites p=2, moment 1",
+    "arbitrary sites p=2, moment 2",
+    "arbitrary sites p=2: c0 reciprocal formula",
+    "arbitrary sites p=3, moment 0",
+    "arbitrary sites p=3, moment 1",
+    "arbitrary sites p=3, moment 2",
+    "arbitrary sites p=3, moment 3",
+    "arbitrary sites p=3: c0 reciprocal formula",
+    "arbitrary sites p=4, moment 0",
+    "arbitrary sites p=4, moment 1",
+    "arbitrary sites p=4, moment 2",
+    "arbitrary sites p=4, moment 3",
+    "arbitrary sites p=4, moment 4",
+    "arbitrary sites p=4: c0 reciprocal formula",
+    "arbitrary sites p=5, moment 0",
+    "arbitrary sites p=5, moment 1",
+    "arbitrary sites p=5, moment 2",
+    "arbitrary sites p=5, moment 3",
+    "arbitrary sites p=5, moment 4",
+    "arbitrary sites p=5, moment 5",
+    "arbitrary sites p=5: c0 reciprocal formula",
+    "arbitrary sites p=6, moment 0",
+    "arbitrary sites p=6, moment 1",
+    "arbitrary sites p=6, moment 2",
+    "arbitrary sites p=6, moment 3",
+    "arbitrary sites p=6, moment 4",
+    "arbitrary sites p=6, moment 5",
+    "arbitrary sites p=6, moment 6",
+    "arbitrary sites p=6: c0 reciprocal formula",
+    "arbitrary sites p=7, moment 0",
+    "arbitrary sites p=7, moment 1",
+    "arbitrary sites p=7, moment 2",
+    "arbitrary sites p=7, moment 3",
+    "arbitrary sites p=7, moment 4",
+    "arbitrary sites p=7, moment 5",
+    "arbitrary sites p=7, moment 6",
+    "arbitrary sites p=7, moment 7",
+    "arbitrary sites p=7: c0 reciprocal formula",
+    "arbitrary sites p=8, moment 0",
+    "arbitrary sites p=8, moment 1",
+    "arbitrary sites p=8, moment 2",
+    "arbitrary sites p=8, moment 3",
+    "arbitrary sites p=8, moment 4",
+    "arbitrary sites p=8, moment 5",
+    "arbitrary sites p=8, moment 6",
+    "arbitrary sites p=8, moment 7",
+    "arbitrary sites p=8, moment 8",
+    "arbitrary sites p=8: c0 reciprocal formula",
+    "density N=2: arbitrary rational target jet",
+    "density N=3: arbitrary rational target jet",
+    "density N=4: arbitrary rational target jet",
+    "density N=5: arbitrary rational target jet",
+    "density N=6: arbitrary rational target jet",
+    "density N=7: arbitrary rational target jet",
+    "density N=8: arbitrary rational target jet",
+    "density N=9: arbitrary rational target jet",
+    "density N=10: arbitrary rational target jet"
+  ],
+  "sharp_cubic_approximants": [
+    {
+      "N": 3,
+      "nonzero_sites": 1,
+      "nodes": [
+        "1"
+      ],
+      "coefficients": [
+        "1/4"
+      ],
+      "zero_site_coefficient": "-1/4",
+      "word": [
+        [
+          "T",
+          "-1/4"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "1/4"
+        ],
+        [
+          "M",
+          "-1"
+        ]
+      ],
+      "word_length": 4,
+      "reduced_denominator_degree": 4,
+      "first_error_degree": 4,
+      "first_error_coefficient": "5/2"
+    },
+    {
+      "N": 4,
+      "nonzero_sites": 2,
+      "nodes": [
+        "1",
+        "-1"
+      ],
+      "coefficients": [
+        "1/8",
+        "-1/8"
+      ],
+      "zero_site_coefficient": "0",
+      "word": [
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "1/8"
+        ],
+        [
+          "M",
+          "-2"
+        ],
+        [
+          "T",
+          "-1/8"
+        ],
+        [
+          "M",
+          "1"
+        ]
+      ],
+      "word_length": 5,
+      "reduced_denominator_degree": 8,
+      "first_error_degree": 5,
+      "first_error_coefficient": "5"
+    },
+    {
+      "N": 5,
+      "nonzero_sites": 3,
+      "nodes": [
+        "1",
+        "2",
+        "-2/3"
+      ],
+      "coefficients": [
+        "1/5",
+        "-1/32",
+        "-27/160"
+      ],
+      "zero_site_coefficient": "0",
+      "word": [
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "1/5"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-1/32"
+        ],
+        [
+          "M",
+          "-8/3"
+        ],
+        [
+          "T",
+          "-27/160"
+        ],
+        [
+          "M",
+          "2/3"
+        ]
+      ],
+      "word_length": 7,
+      "reduced_denominator_degree": 12,
+      "first_error_degree": 6,
+      "first_error_coefficient": "-35/3"
+    },
+    {
+      "N": 6,
+      "nonzero_sites": 4,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "-6/11"
+      ],
+      "coefficients": [
+        "9/34",
+        "-9/112",
+        "1/78",
+        "-14641/74256"
+      ],
+      "zero_site_coefficient": "0",
+      "word": [
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "9/34"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-9/112"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "1/78"
+        ],
+        [
+          "M",
+          "-39/11"
+        ],
+        [
+          "T",
+          "-14641/74256"
+        ],
+        [
+          "M",
+          "6/11"
+        ]
+      ],
+      "word_length": 9,
+      "reduced_denominator_degree": 16,
+      "first_error_degree": 7,
+      "first_error_coefficient": "504/11"
+    },
+    {
+      "N": 7,
+      "nonzero_sites": 5,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "-12/25"
+      ],
+      "coefficients": [
+        "12/37",
+        "-9/62",
+        "4/87",
+        "-3/448",
+        "-9765625/44705472"
+      ],
+      "zero_site_coefficient": "0",
+      "word": [
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "12/37"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-9/62"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "4/87"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-3/448"
+        ],
+        [
+          "M",
+          "-112/25"
+        ],
+        [
+          "T",
+          "-9765625/44705472"
+        ],
+        [
+          "M",
+          "12/25"
+        ]
+      ],
+      "word_length": 11,
+      "reduced_denominator_degree": 20,
+      "first_error_degree": 8,
+      "first_error_coefficient": "-6048/25"
+    },
+    {
+      "N": 8,
+      "nonzero_sites": 6,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "-60/137"
+      ],
+      "coefficients": [
+        "75/197",
+        "-75/334",
+        "50/471",
+        "-75/2432",
+        "3/745",
+        "-6611856250609/28075238079360"
+      ],
+      "zero_site_coefficient": "0",
+      "word": [
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "75/197"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-75/334"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "50/471"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-75/2432"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "3/745"
+        ],
+        [
+          "M",
+          "-745/137"
+        ],
+        [
+          "T",
+          "-6611856250609/28075238079360"
+        ],
+        [
+          "M",
+          "60/137"
+        ]
+      ],
+      "word_length": 13,
+      "reduced_denominator_degree": 24,
+      "first_error_degree": 9,
+      "first_error_coefficient": "216000/137"
+    },
+    {
+      "N": 9,
+      "nonzero_sites": 7,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "-20/49"
+      ],
+      "coefficients": [
+        "10/23",
+        "-75/236",
+        "100/501",
+        "-25/288",
+        "6/265",
+        "-5/1884",
+        "-678223072849/2715403246560"
+      ],
+      "zero_site_coefficient": "0",
+      "word": [
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "10/23"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-75/236"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "100/501"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-25/288"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "6/265"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-5/1884"
+        ],
+        [
+          "M",
+          "-314/49"
+        ],
+        [
+          "T",
+          "-678223072849/2715403246560"
+        ],
+        [
+          "M",
+          "20/49"
+        ]
+      ],
+      "word_length": 15,
+      "reduced_denominator_degree": 28,
+      "first_error_degree": 10,
+      "first_error_coefficient": "-594000/49"
+    },
+    {
+      "N": 10,
+      "nonzero_sites": 8,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "-140/363"
+      ],
+      "coefficients": [
+        "245/503",
+        "-735/1732",
+        "1225/3687",
+        "-1225/6368",
+        "147/1955",
+        "-245/13908",
+        "5/2681",
+        "-2713285598714072534889/10354707387006087260960"
+      ],
+      "zero_site_coefficient": "0",
+      "word": [
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "245/503"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-735/1732"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "1225/3687"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-1225/6368"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "147/1955"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-245/13908"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "5/2681"
+        ],
+        [
+          "M",
+          "-2681/363"
+        ],
+        [
+          "T",
+          "-2713285598714072534889/10354707387006087260960"
+        ],
+        [
+          "M",
+          "140/363"
+        ]
+      ],
+      "word_length": 17,
+      "reduced_denominator_degree": 32,
+      "first_error_degree": 11,
+      "first_error_coefficient": "1176000/11"
+    },
+    {
+      "N": 11,
+      "nonzero_sites": 9,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "-280/761"
+      ],
+      "coefficients": [
+        "560/1041",
+        "-490/901",
+        "3920/7689",
+        "-1225/3324",
+        "784/4085",
+        "-490/7269",
+        "80/5607",
+        "-35/25472",
+        "-85597663644117187118144441/313777441988984869124423040"
+      ],
+      "zero_site_coefficient": "0",
+      "word": [
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "560/1041"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-490/901"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "3920/7689"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-1225/3324"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "784/4085"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-490/7269"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "80/5607"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-35/25472"
+        ],
+        [
+          "M",
+          "-6368/761"
+        ],
+        [
+          "T",
+          "-85597663644117187118144441/313777441988984869124423040"
+        ],
+        [
+          "M",
+          "280/761"
+        ]
+      ],
+      "word_length": 19,
+      "reduced_denominator_degree": 36,
+      "first_error_degree": 12,
+      "first_error_coefficient": "-807206400/761"
+    },
+    {
+      "N": 12,
+      "nonzero_sites": 10,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "-2520/7129"
+      ],
+      "coefficients": [
+        "5670/9649",
+        "-5670/8389",
+        "5880/7969",
+        "-19845/31036",
+        "15876/38165",
+        "-1470/7549",
+        "3240/52423",
+        "-2835/238208",
+        "70/66681",
+        "-339067486704048510461441467313780449201/1200707128970507757189265999458783143040"
+      ],
+      "zero_site_coefficient": "0",
+      "word": [
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "5670/9649"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-5670/8389"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "5880/7969"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-19845/31036"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "15876/38165"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-1470/7549"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "3240/52423"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-2835/238208"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "70/66681"
+        ],
+        [
+          "M",
+          "-66681/7129"
+        ],
+        [
+          "T",
+          "-339067486704048510461441467313780449201/1200707128970507757189265999458783143040"
+        ],
+        [
+          "M",
+          "2520/7129"
+        ]
+      ],
+      "word_length": 21,
+      "reduced_denominator_degree": 40,
+      "first_error_degree": 13,
+      "first_error_coefficient": "83215641600/7129"
+    },
+    {
+      "N": 13,
+      "nonzero_sites": 11,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "-2520/7381"
+      ],
+      "coefficients": [
+        "6300/9901",
+        "-14175/17282",
+        "8400/8221",
+        "-33075/32044",
+        "31752/39425",
+        "-3675/7801",
+        "10800/54187",
+        "-14175/246272",
+        "700/68949",
+        "-63/76330",
+        "-3542152530163304598038450441101320693903181/12170538778533698162768253759399503305382400"
+      ],
+      "zero_site_coefficient": "0",
+      "word": [
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "6300/9901"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-14175/17282"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "8400/8221"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-33075/32044"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "31752/39425"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-3675/7801"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "10800/54187"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-14175/246272"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "700/68949"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-63/76330"
+        ],
+        [
+          "M",
+          "-76330/7381"
+        ],
+        [
+          "T",
+          "-3542152530163304598038450441101320693903181/12170538778533698162768253759399503305382400"
+        ],
+        [
+          "M",
+          "2520/7381"
+        ]
+      ],
+      "word_length": 23,
+      "reduced_denominator_degree": 44,
+      "first_error_degree": 14,
+      "first_error_coefficient": "-1040195520000/7381"
+    },
+    {
+      "N": 14,
+      "nonzero_sites": 12,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "-27720/83711"
+      ],
+      "coefficients": [
+        "76230/111431",
+        "-190575/195142",
+        "127050/92951",
+        "-571725/362564",
+        "640332/446275",
+        "-88935/88331",
+        "326700/613697",
+        "-571725/2789632",
+        "42350/781119",
+        "-7623/864830",
+        "630/948541",
+        "-118410539481719289978292230412267689231363011880847609605121/396119495130442750611350140876741594414062478095613928467200"
+      ],
+      "zero_site_coefficient": "0",
+      "word": [
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "76230/111431"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-190575/195142"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "127050/92951"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-571725/362564"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "640332/446275"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-88935/88331"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "326700/613697"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-571725/2789632"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "42350/781119"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "-7623/864830"
+        ],
+        [
+          "M",
+          "1"
+        ],
+        [
+          "T",
+          "630/948541"
+        ],
+        [
+          "M",
+          "-948541/83711"
+        ],
+        [
+          "T",
+          "-118410539481719289978292230412267689231363011880847609605121/396119495130442750611350140876741594414062478095613928467200"
+        ],
+        [
+          "M",
+          "27720/83711"
+        ]
+      ],
+      "word_length": 25,
+      "reduced_denominator_degree": 48,
+      "first_error_degree": 15,
+      "first_error_coefficient": "154909117440000/83711"
+    }
+  ],
+  "proof_warning": "All-order minimality and closure are proved in the companion note, not inferred from these finite checks."
+}
