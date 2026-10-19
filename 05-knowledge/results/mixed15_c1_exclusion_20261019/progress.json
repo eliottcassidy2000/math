@@ -1,0 +1,6 @@
+{
+  "status": "PAUSED_FOR_SHARDS",
+  "completed_residual_cores": 0,
+  "last_core_index": -1,
+  "committed_bytes": 0
+}

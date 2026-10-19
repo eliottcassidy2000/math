@@ -1,0 +1,15 @@
+{
+  "status": "SCAN_STOPPED_PARTIAL_REPLAY_PASSED",
+  "cover_sha256": "a99ba7c793b29098b7d243c4234fb1c94386ad16ca5984ab614d3eac3fc4232e",
+  "cover_hist": {
+    "balanced_pair": 28604,
+    "residual": 63000
+  },
+  "independent_catalogue_total": 96428,
+  "independent_degree_valid": 91604,
+  "verified_residual_cores": 0,
+  "verified_residual_orders": 0,
+  "verified_bytes": 0,
+  "last_core_index": -1,
+  "start_unix": 1792400762.4949365
+}
