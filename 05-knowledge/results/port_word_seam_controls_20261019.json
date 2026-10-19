@@ -1,0 +1,1754 @@
+{
+  "status": "all fixed exact controls passed; not a census or an all-length computational proof",
+  "alpha_profiles": [
+    [],
+    [
+      6
+    ],
+    [
+      8
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      8,
+      6
+    ]
+  ],
+  "beta_profiles": [
+    [],
+    [
+      0
+    ],
+    [
+      3
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "graph_names": [
+    "matching_identity",
+    "matching_swap",
+    "star_at_8",
+    "L_at_0",
+    "L_at_3"
+  ],
+  "deleted_comparison_graphs": [
+    [
+      [
+        6,
+        0
+      ],
+      [
+        8,
+        3
+      ]
+    ],
+    [
+      [
+        6,
+        3
+      ],
+      [
+        8,
+        0
+      ]
+    ],
+    [
+      [
+        8,
+        0
+      ],
+      [
+        8,
+        3
+      ]
+    ],
+    [
+      [
+        6,
+        0
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        8,
+        3
+      ]
+    ],
+    [
+      [
+        6,
+        3
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        8,
+        3
+      ]
+    ]
+  ],
+  "full_5_by_5_shuffle_kernels": [
+    [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        1,
+        2,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        2
+      ]
+    ],
+    [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      [
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      [
+        1,
+        3,
+        2,
+        5,
+        3
+      ],
+      [
+        1,
+        3,
+        1,
+        3,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      [
+        1,
+        2,
+        3,
+        3,
+        5
+      ],
+      [
+        1,
+        1,
+        3,
+        1,
+        3
+      ]
+    ]
+  ],
+  "left_row_generators": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      2,
+      1,
+      2
+    ],
+    [
+      1,
+      1,
+      3,
+      1,
+      3
+    ],
+    [
+      1,
+      2,
+      1,
+      2,
+      1
+    ],
+    [
+      1,
+      2,
+      2,
+      3,
+      3
+    ],
+    [
+      1,
+      2,
+      3,
+      3,
+      5
+    ],
+    [
+      1,
+      3,
+      1,
+      3,
+      1
+    ],
+    [
+      1,
+      3,
+      2,
+      5,
+      3
+    ]
+  ],
+  "right_column_generators": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      2,
+      2,
+      1
+    ],
+    [
+      1,
+      1,
+      3,
+      3,
+      1
+    ],
+    [
+      1,
+      2,
+      1,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      2,
+      3,
+      3
+    ],
+    [
+      1,
+      2,
+      3,
+      5,
+      3
+    ]
+  ],
+  "cores": {
+    "B9": {
+      "prefix_by_nonempty_suffix_counts": [
+        [
+          0,
+          85,
+          20,
+          20
+        ],
+        [
+          4,
+          90,
+          30,
+          30
+        ],
+        [
+          4,
+          69,
+          30,
+          30
+        ],
+        [
+          6,
+          60,
+          30,
+          30
+        ],
+        [
+          6,
+          60,
+          30,
+          30
+        ]
+      ],
+      "marked_counts": [
+        [
+          0,
+          40,
+          10,
+          10
+        ],
+        [
+          1,
+          30,
+          9,
+          9
+        ],
+        [
+          3,
+          45,
+          21,
+          21
+        ],
+        [
+          3,
+          30,
+          15,
+          15
+        ],
+        [
+          3,
+          30,
+          15,
+          15
+        ]
+      ],
+      "probability_range": [
+        "1375/3072",
+        "265/494"
+      ],
+      "minimum_lower_deficit": 819,
+      "minimum_upper_deficit": 1937,
+      "all_48_generator_checks": [
+        {
+          "left_generator": 0,
+          "right_generator": 0,
+          "denominator": 664,
+          "numerator": 325,
+          "probability": "325/664",
+          "lower_deficit_55C_minus_24N": 1939,
+          "upper_deficit_31N_minus_55C": 2709
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 1,
+          "denominator": 1168,
+          "numerator": 570,
+          "probability": "285/584",
+          "lower_deficit_55C_minus_24N": 3318,
+          "upper_deficit_31N_minus_55C": 4858
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 2,
+          "denominator": 1672,
+          "numerator": 815,
+          "probability": "815/1672",
+          "lower_deficit_55C_minus_24N": 4697,
+          "upper_deficit_31N_minus_55C": 7007
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 3,
+          "denominator": 824,
+          "numerator": 405,
+          "probability": "405/824",
+          "lower_deficit_55C_minus_24N": 2499,
+          "upper_deficit_31N_minus_55C": 3269
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 4,
+          "denominator": 1608,
+          "numerator": 790,
+          "probability": "395/804",
+          "lower_deficit_55C_minus_24N": 4858,
+          "upper_deficit_31N_minus_55C": 6398
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 5,
+          "denominator": 2252,
+          "numerator": 1105,
+          "probability": "1105/2252",
+          "lower_deficit_55C_minus_24N": 6727,
+          "upper_deficit_31N_minus_55C": 9037
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 0,
+          "denominator": 923,
+          "numerator": 478,
+          "probability": "478/923",
+          "lower_deficit_55C_minus_24N": 4138,
+          "upper_deficit_31N_minus_55C": 2323
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 1,
+          "denominator": 1616,
+          "numerator": 834,
+          "probability": "417/808",
+          "lower_deficit_55C_minus_24N": 7086,
+          "upper_deficit_31N_minus_55C": 4226
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 2,
+          "denominator": 2309,
+          "numerator": 1190,
+          "probability": "1190/2309",
+          "lower_deficit_55C_minus_24N": 10034,
+          "upper_deficit_31N_minus_55C": 6129
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 3,
+          "denominator": 1153,
+          "numerator": 600,
+          "probability": "600/1153",
+          "lower_deficit_55C_minus_24N": 5328,
+          "upper_deficit_31N_minus_55C": 2743
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 4,
+          "denominator": 2246,
+          "numerator": 1168,
+          "probability": "584/1123",
+          "lower_deficit_55C_minus_24N": 10336,
+          "upper_deficit_31N_minus_55C": 5386
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 5,
+          "denominator": 3139,
+          "numerator": 1630,
+          "probability": "1630/3139",
+          "lower_deficit_55C_minus_24N": 14314,
+          "upper_deficit_31N_minus_55C": 7659
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 0,
+          "denominator": 1182,
+          "numerator": 631,
+          "probability": "631/1182",
+          "lower_deficit_55C_minus_24N": 6337,
+          "upper_deficit_31N_minus_55C": 1937
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 1,
+          "denominator": 2064,
+          "numerator": 1098,
+          "probability": "183/344",
+          "lower_deficit_55C_minus_24N": 10854,
+          "upper_deficit_31N_minus_55C": 3594
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 2,
+          "denominator": 2946,
+          "numerator": 1565,
+          "probability": "1565/2946",
+          "lower_deficit_55C_minus_24N": 15371,
+          "upper_deficit_31N_minus_55C": 5251
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 3,
+          "denominator": 1482,
+          "numerator": 795,
+          "probability": "265/494",
+          "lower_deficit_55C_minus_24N": 8157,
+          "upper_deficit_31N_minus_55C": 2217
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 4,
+          "denominator": 2884,
+          "numerator": 1546,
+          "probability": "773/1442",
+          "lower_deficit_55C_minus_24N": 15814,
+          "upper_deficit_31N_minus_55C": 4374
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 5,
+          "denominator": 4026,
+          "numerator": 2155,
+          "probability": "2155/4026",
+          "lower_deficit_55C_minus_24N": 21901,
+          "upper_deficit_31N_minus_55C": 6281
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 0,
+          "denominator": 944,
+          "numerator": 437,
+          "probability": "437/944",
+          "lower_deficit_55C_minus_24N": 1379,
+          "upper_deficit_31N_minus_55C": 5229
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 1,
+          "denominator": 1658,
+          "numerator": 766,
+          "probability": "383/829",
+          "lower_deficit_55C_minus_24N": 2338,
+          "upper_deficit_31N_minus_55C": 9268
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 2,
+          "denominator": 2372,
+          "numerator": 1095,
+          "probability": "1095/2372",
+          "lower_deficit_55C_minus_24N": 3297,
+          "upper_deficit_31N_minus_55C": 13307
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 3,
+          "denominator": 1174,
+          "numerator": 545,
+          "probability": "545/1174",
+          "lower_deficit_55C_minus_24N": 1799,
+          "upper_deficit_31N_minus_55C": 6419
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 4,
+          "denominator": 2288,
+          "numerator": 1062,
+          "probability": "531/1144",
+          "lower_deficit_55C_minus_24N": 3498,
+          "upper_deficit_31N_minus_55C": 12518
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 5,
+          "denominator": 3202,
+          "numerator": 1485,
+          "probability": "1485/3202",
+          "lower_deficit_55C_minus_24N": 4827,
+          "upper_deficit_31N_minus_55C": 17587
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 0,
+          "denominator": 1455,
+          "numerator": 716,
+          "probability": "716/1455",
+          "lower_deficit_55C_minus_24N": 4460,
+          "upper_deficit_31N_minus_55C": 5725
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 1,
+          "denominator": 2538,
+          "numerator": 1246,
+          "probability": "623/1269",
+          "lower_deficit_55C_minus_24N": 7618,
+          "upper_deficit_31N_minus_55C": 10148
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 2,
+          "denominator": 3621,
+          "numerator": 1776,
+          "probability": "592/1207",
+          "lower_deficit_55C_minus_24N": 10776,
+          "upper_deficit_31N_minus_55C": 14571
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 3,
+          "denominator": 1827,
+          "numerator": 902,
+          "probability": "902/1827",
+          "lower_deficit_55C_minus_24N": 5762,
+          "upper_deficit_31N_minus_55C": 7027
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 4,
+          "denominator": 3550,
+          "numerator": 1752,
+          "probability": "876/1775",
+          "lower_deficit_55C_minus_24N": 11160,
+          "upper_deficit_31N_minus_55C": 13690
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 5,
+          "denominator": 4953,
+          "numerator": 2442,
+          "probability": "814/1651",
+          "lower_deficit_55C_minus_24N": 15438,
+          "upper_deficit_31N_minus_55C": 19233
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 0,
+          "denominator": 1840,
+          "numerator": 932,
+          "probability": "233/460",
+          "lower_deficit_55C_minus_24N": 7100,
+          "upper_deficit_31N_minus_55C": 5780
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 1,
+          "denominator": 3202,
+          "numerator": 1618,
+          "probability": "809/1601",
+          "lower_deficit_55C_minus_24N": 12142,
+          "upper_deficit_31N_minus_55C": 10272
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 2,
+          "denominator": 4564,
+          "numerator": 2304,
+          "probability": "576/1141",
+          "lower_deficit_55C_minus_24N": 17184,
+          "upper_deficit_31N_minus_55C": 14764
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 3,
+          "denominator": 2318,
+          "numerator": 1178,
+          "probability": "31/61",
+          "lower_deficit_55C_minus_24N": 9158,
+          "upper_deficit_31N_minus_55C": 7068
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 4,
+          "denominator": 4500,
+          "numerator": 2286,
+          "probability": "127/250",
+          "lower_deficit_55C_minus_24N": 17730,
+          "upper_deficit_31N_minus_55C": 13770
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 5,
+          "denominator": 6272,
+          "numerator": 3183,
+          "probability": "3183/6272",
+          "lower_deficit_55C_minus_24N": 24537,
+          "upper_deficit_31N_minus_55C": 19367
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 0,
+          "denominator": 1224,
+          "numerator": 549,
+          "probability": "61/136",
+          "lower_deficit_55C_minus_24N": 819,
+          "upper_deficit_31N_minus_55C": 7749
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 1,
+          "denominator": 2148,
+          "numerator": 962,
+          "probability": "481/1074",
+          "lower_deficit_55C_minus_24N": 1358,
+          "upper_deficit_31N_minus_55C": 13678
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 2,
+          "denominator": 3072,
+          "numerator": 1375,
+          "probability": "1375/3072",
+          "lower_deficit_55C_minus_24N": 1897,
+          "upper_deficit_31N_minus_55C": 19607
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 3,
+          "denominator": 1524,
+          "numerator": 685,
+          "probability": "685/1524",
+          "lower_deficit_55C_minus_24N": 1099,
+          "upper_deficit_31N_minus_55C": 9569
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 4,
+          "denominator": 2968,
+          "numerator": 1334,
+          "probability": "667/1484",
+          "lower_deficit_55C_minus_24N": 2138,
+          "upper_deficit_31N_minus_55C": 18638
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 5,
+          "denominator": 4152,
+          "numerator": 1865,
+          "probability": "1865/4152",
+          "lower_deficit_55C_minus_24N": 2927,
+          "upper_deficit_31N_minus_55C": 26137
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 0,
+          "denominator": 1861,
+          "numerator": 891,
+          "probability": "891/1861",
+          "lower_deficit_55C_minus_24N": 4341,
+          "upper_deficit_31N_minus_55C": 8686
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 1,
+          "denominator": 3244,
+          "numerator": 1550,
+          "probability": "775/1622",
+          "lower_deficit_55C_minus_24N": 7394,
+          "upper_deficit_31N_minus_55C": 15314
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 2,
+          "denominator": 4627,
+          "numerator": 2209,
+          "probability": "2209/4627",
+          "lower_deficit_55C_minus_24N": 10447,
+          "upper_deficit_31N_minus_55C": 21942
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 3,
+          "denominator": 2339,
+          "numerator": 1123,
+          "probability": "1123/2339",
+          "lower_deficit_55C_minus_24N": 5629,
+          "upper_deficit_31N_minus_55C": 10744
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 4,
+          "denominator": 4542,
+          "numerator": 2180,
+          "probability": "1090/2271",
+          "lower_deficit_55C_minus_24N": 10892,
+          "upper_deficit_31N_minus_55C": 20902
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 5,
+          "denominator": 6335,
+          "numerator": 3038,
+          "probability": "434/905",
+          "lower_deficit_55C_minus_24N": 15050,
+          "upper_deficit_31N_minus_55C": 29295
+        }
+      ]
+    },
+    "B8": {
+      "prefix_by_nonempty_suffix_counts": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          26,
+          4,
+          4
+        ],
+        [
+          0,
+          11,
+          4,
+          4
+        ],
+        [
+          0,
+          24,
+          6,
+          6
+        ],
+        [
+          0,
+          24,
+          6,
+          6
+        ]
+      ],
+      "marked_counts": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          1,
+          1
+        ],
+        [
+          0,
+          8,
+          3,
+          3
+        ],
+        [
+          0,
+          12,
+          3,
+          3
+        ],
+        [
+          0,
+          12,
+          3,
+          3
+        ]
+      ],
+      "probability_range": [
+        "24/55",
+        "146/275"
+      ],
+      "minimum_lower_deficit": 0,
+      "minimum_upper_deficit": 465,
+      "all_48_generator_checks": [
+        {
+          "left_generator": 0,
+          "right_generator": 0,
+          "denominator": 125,
+          "numerator": 60,
+          "probability": "12/25",
+          "lower_deficit_55C_minus_24N": 300,
+          "upper_deficit_31N_minus_55C": 575
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 1,
+          "denominator": 230,
+          "numerator": 110,
+          "probability": "11/23",
+          "lower_deficit_55C_minus_24N": 530,
+          "upper_deficit_31N_minus_55C": 1080
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 2,
+          "denominator": 335,
+          "numerator": 160,
+          "probability": "32/67",
+          "lower_deficit_55C_minus_24N": 760,
+          "upper_deficit_31N_minus_55C": 1585
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 3,
+          "denominator": 145,
+          "numerator": 70,
+          "probability": "14/29",
+          "lower_deficit_55C_minus_24N": 370,
+          "upper_deficit_31N_minus_55C": 645
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 4,
+          "denominator": 290,
+          "numerator": 140,
+          "probability": "14/29",
+          "lower_deficit_55C_minus_24N": 740,
+          "upper_deficit_31N_minus_55C": 1290
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 5,
+          "denominator": 415,
+          "numerator": 200,
+          "probability": "40/83",
+          "lower_deficit_55C_minus_24N": 1040,
+          "upper_deficit_31N_minus_55C": 1865
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 0,
+          "denominator": 180,
+          "numerator": 92,
+          "probability": "23/45",
+          "lower_deficit_55C_minus_24N": 740,
+          "upper_deficit_31N_minus_55C": 520
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 1,
+          "denominator": 330,
+          "numerator": 168,
+          "probability": "28/55",
+          "lower_deficit_55C_minus_24N": 1320,
+          "upper_deficit_31N_minus_55C": 990
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 2,
+          "denominator": 480,
+          "numerator": 244,
+          "probability": "61/120",
+          "lower_deficit_55C_minus_24N": 1900,
+          "upper_deficit_31N_minus_55C": 1460
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 3,
+          "denominator": 210,
+          "numerator": 108,
+          "probability": "18/35",
+          "lower_deficit_55C_minus_24N": 900,
+          "upper_deficit_31N_minus_55C": 570
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 4,
+          "denominator": 420,
+          "numerator": 216,
+          "probability": "18/35",
+          "lower_deficit_55C_minus_24N": 1800,
+          "upper_deficit_31N_minus_55C": 1140
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 5,
+          "denominator": 600,
+          "numerator": 308,
+          "probability": "77/150",
+          "lower_deficit_55C_minus_24N": 2540,
+          "upper_deficit_31N_minus_55C": 1660
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 0,
+          "denominator": 235,
+          "numerator": 124,
+          "probability": "124/235",
+          "lower_deficit_55C_minus_24N": 1180,
+          "upper_deficit_31N_minus_55C": 465
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 1,
+          "denominator": 430,
+          "numerator": 226,
+          "probability": "113/215",
+          "lower_deficit_55C_minus_24N": 2110,
+          "upper_deficit_31N_minus_55C": 900
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 2,
+          "denominator": 625,
+          "numerator": 328,
+          "probability": "328/625",
+          "lower_deficit_55C_minus_24N": 3040,
+          "upper_deficit_31N_minus_55C": 1335
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 3,
+          "denominator": 275,
+          "numerator": 146,
+          "probability": "146/275",
+          "lower_deficit_55C_minus_24N": 1430,
+          "upper_deficit_31N_minus_55C": 495
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 4,
+          "denominator": 550,
+          "numerator": 292,
+          "probability": "146/275",
+          "lower_deficit_55C_minus_24N": 2860,
+          "upper_deficit_31N_minus_55C": 990
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 5,
+          "denominator": 785,
+          "numerator": 416,
+          "probability": "416/785",
+          "lower_deficit_55C_minus_24N": 4040,
+          "upper_deficit_31N_minus_55C": 1455
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 0,
+          "denominator": 195,
+          "numerator": 88,
+          "probability": "88/195",
+          "lower_deficit_55C_minus_24N": 160,
+          "upper_deficit_31N_minus_55C": 1205
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 1,
+          "denominator": 360,
+          "numerator": 162,
+          "probability": "9/20",
+          "lower_deficit_55C_minus_24N": 270,
+          "upper_deficit_31N_minus_55C": 2250
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 2,
+          "denominator": 525,
+          "numerator": 236,
+          "probability": "236/525",
+          "lower_deficit_55C_minus_24N": 380,
+          "upper_deficit_31N_minus_55C": 3295
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 3,
+          "denominator": 225,
+          "numerator": 102,
+          "probability": "34/75",
+          "lower_deficit_55C_minus_24N": 210,
+          "upper_deficit_31N_minus_55C": 1365
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 4,
+          "denominator": 450,
+          "numerator": 204,
+          "probability": "34/75",
+          "lower_deficit_55C_minus_24N": 420,
+          "upper_deficit_31N_minus_55C": 2730
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 5,
+          "denominator": 645,
+          "numerator": 292,
+          "probability": "292/645",
+          "lower_deficit_55C_minus_24N": 580,
+          "upper_deficit_31N_minus_55C": 3935
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 0,
+          "denominator": 322,
+          "numerator": 156,
+          "probability": "78/161",
+          "lower_deficit_55C_minus_24N": 852,
+          "upper_deficit_31N_minus_55C": 1402
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 1,
+          "denominator": 592,
+          "numerator": 286,
+          "probability": "143/296",
+          "lower_deficit_55C_minus_24N": 1522,
+          "upper_deficit_31N_minus_55C": 2622
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 2,
+          "denominator": 862,
+          "numerator": 416,
+          "probability": "208/431",
+          "lower_deficit_55C_minus_24N": 2192,
+          "upper_deficit_31N_minus_55C": 3842
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 3,
+          "denominator": 374,
+          "numerator": 182,
+          "probability": "91/187",
+          "lower_deficit_55C_minus_24N": 1034,
+          "upper_deficit_31N_minus_55C": 1584
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 4,
+          "denominator": 748,
+          "numerator": 364,
+          "probability": "91/187",
+          "lower_deficit_55C_minus_24N": 2068,
+          "upper_deficit_31N_minus_55C": 3168
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 5,
+          "denominator": 1070,
+          "numerator": 520,
+          "probability": "52/107",
+          "lower_deficit_55C_minus_24N": 2920,
+          "upper_deficit_31N_minus_55C": 4570
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 0,
+          "denominator": 413,
+          "numerator": 206,
+          "probability": "206/413",
+          "lower_deficit_55C_minus_24N": 1418,
+          "upper_deficit_31N_minus_55C": 1473
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 1,
+          "denominator": 758,
+          "numerator": 377,
+          "probability": "377/758",
+          "lower_deficit_55C_minus_24N": 2543,
+          "upper_deficit_31N_minus_55C": 2763
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 2,
+          "denominator": 1103,
+          "numerator": 548,
+          "probability": "548/1103",
+          "lower_deficit_55C_minus_24N": 3668,
+          "upper_deficit_31N_minus_55C": 4053
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 3,
+          "denominator": 481,
+          "numerator": 241,
+          "probability": "241/481",
+          "lower_deficit_55C_minus_24N": 1711,
+          "upper_deficit_31N_minus_55C": 1656
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 4,
+          "denominator": 962,
+          "numerator": 482,
+          "probability": "241/481",
+          "lower_deficit_55C_minus_24N": 3422,
+          "upper_deficit_31N_minus_55C": 3312
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 5,
+          "denominator": 1375,
+          "numerator": 688,
+          "probability": "688/1375",
+          "lower_deficit_55C_minus_24N": 4840,
+          "upper_deficit_31N_minus_55C": 4785
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 0,
+          "denominator": 265,
+          "numerator": 116,
+          "probability": "116/265",
+          "lower_deficit_55C_minus_24N": 20,
+          "upper_deficit_31N_minus_55C": 1835
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 1,
+          "denominator": 490,
+          "numerator": 214,
+          "probability": "107/245",
+          "lower_deficit_55C_minus_24N": 10,
+          "upper_deficit_31N_minus_55C": 3420
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 2,
+          "denominator": 715,
+          "numerator": 312,
+          "probability": "24/55",
+          "lower_deficit_55C_minus_24N": 0,
+          "upper_deficit_31N_minus_55C": 5005
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 3,
+          "denominator": 305,
+          "numerator": 134,
+          "probability": "134/305",
+          "lower_deficit_55C_minus_24N": 50,
+          "upper_deficit_31N_minus_55C": 2085
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 4,
+          "denominator": 610,
+          "numerator": 268,
+          "probability": "134/305",
+          "lower_deficit_55C_minus_24N": 100,
+          "upper_deficit_31N_minus_55C": 4170
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 5,
+          "denominator": 875,
+          "numerator": 384,
+          "probability": "384/875",
+          "lower_deficit_55C_minus_24N": 120,
+          "upper_deficit_31N_minus_55C": 6005
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 0,
+          "denominator": 428,
+          "numerator": 202,
+          "probability": "101/214",
+          "lower_deficit_55C_minus_24N": 838,
+          "upper_deficit_31N_minus_55C": 2158
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 1,
+          "denominator": 788,
+          "numerator": 371,
+          "probability": "371/788",
+          "lower_deficit_55C_minus_24N": 1493,
+          "upper_deficit_31N_minus_55C": 4023
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 2,
+          "denominator": 1148,
+          "numerator": 540,
+          "probability": "135/287",
+          "lower_deficit_55C_minus_24N": 2148,
+          "upper_deficit_31N_minus_55C": 5888
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 3,
+          "denominator": 496,
+          "numerator": 235,
+          "probability": "235/496",
+          "lower_deficit_55C_minus_24N": 1021,
+          "upper_deficit_31N_minus_55C": 2451
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 4,
+          "denominator": 992,
+          "numerator": 470,
+          "probability": "235/496",
+          "lower_deficit_55C_minus_24N": 2042,
+          "upper_deficit_31N_minus_55C": 4902
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 5,
+          "denominator": 1420,
+          "numerator": 672,
+          "probability": "168/355",
+          "lower_deficit_55C_minus_24N": 2880,
+          "upper_deficit_31N_minus_55C": 7060
+        }
+      ]
+    }
+  },
+  "fixed_poset_controls": [
+    {
+      "word": [
+        "B9",
+        "B9"
+      ],
+      "seam_indices": [
+        0
+      ],
+      "vertices": 18,
+      "extensions": 616232,
+      "marked_probabilities": [
+        "301655/616232",
+        "38854/77029"
+      ],
+      "graph": {
+        "max_degree": 7,
+        "bridges": [],
+        "incomparability_edges": 46,
+        "max_reference_span": 7
+      }
+    },
+    {
+      "word": [
+        "B9",
+        "B9"
+      ],
+      "seam_indices": [
+        1
+      ],
+      "vertices": 18,
+      "extensions": 623456,
+      "marked_probabilities": [
+        "9535/19483",
+        "37091/77932"
+      ],
+      "graph": {
+        "max_degree": 7,
+        "bridges": [],
+        "incomparability_edges": 46,
+        "max_reference_span": 7
+      }
+    },
+    {
+      "word": [
+        "B9",
+        "B9"
+      ],
+      "seam_indices": [
+        2
+      ],
+      "vertices": 18,
+      "extensions": 839560,
+      "marked_probabilities": [
+        "81919/167912",
+        "51608/104945"
+      ],
+      "graph": {
+        "max_degree": 7,
+        "bridges": [],
+        "incomparability_edges": 46,
+        "max_reference_span": 7
+      }
+    },
+    {
+      "word": [
+        "B9",
+        "B9"
+      ],
+      "seam_indices": [
+        3
+      ],
+      "vertices": 18,
+      "extensions": 980400,
+      "marked_probabilities": [
+        "32001/65360",
+        "39247/81700"
+      ],
+      "graph": {
+        "max_degree": 7,
+        "bridges": [],
+        "incomparability_edges": 47,
+        "max_reference_span": 7
+      }
+    },
+    {
+      "word": [
+        "B9",
+        "B9"
+      ],
+      "seam_indices": [
+        4
+      ],
+      "vertices": 18,
+      "extensions": 971160,
+      "marked_probabilities": [
+        "31693/64744",
+        "122251/242790"
+      ],
+      "graph": {
+        "max_degree": 7,
+        "bridges": [],
+        "incomparability_edges": 47,
+        "max_reference_span": 7
+      }
+    },
+    {
+      "word": [
+        "B8",
+        "B9"
+      ],
+      "seam_indices": [
+        2
+      ],
+      "vertices": 17,
+      "extensions": 166055,
+      "marked_probabilities": [
+        "15878/33211",
+        "16336/33211"
+      ],
+      "graph": {
+        "max_degree": 7,
+        "bridges": [
+          [
+            5,
+            7
+          ]
+        ],
+        "incomparability_edges": 39,
+        "max_reference_span": 7
+      }
+    },
+    {
+      "word": [
+        "B8",
+        "B9",
+        "B8",
+        "B9"
+      ],
+      "seam_indices": [
+        4,
+        2,
+        3
+      ],
+      "vertices": 34,
+      "extensions": 74147517850,
+      "marked_probabilities": [
+        "712164622/1482950357",
+        "15094233/30264293",
+        "718118791/1482950357",
+        "3585776188/7414751785"
+      ],
+      "graph": {
+        "max_degree": 7,
+        "bridges": [],
+        "incomparability_edges": 82,
+        "max_reference_span": 7
+      }
+    },
+    {
+      "word": [
+        "B9",
+        "B8",
+        "B9"
+      ],
+      "seam_indices": [
+        3,
+        4
+      ],
+      "vertices": 26,
+      "extensions": 321256816,
+      "marked_probabilities": [
+        "78654035/160628408",
+        "18981141/40157102",
+        "20089817/40157102"
+      ],
+      "graph": {
+        "max_degree": 7,
+        "bridges": [],
+        "incomparability_edges": 65,
+        "max_reference_span": 7
+      }
+    }
+  ],
+  "long_product_control": {
+    "blocks": 48,
+    "vertices": 409,
+    "word": [
+      "B9",
+      "B8",
+      "B8",
+      "B9",
+      "B8",
+      "B9",
+      "B9",
+      "B8",
+      "B8",
+      "B9",
+      "B9",
+      "B8",
+      "B9",
+      "B8",
+      "B8",
+      "B9",
+      "B8",
+      "B9",
+      "B9",
+      "B8",
+      "B9",
+      "B8",
+      "B8",
+      "B9",
+      "B9",
+      "B8",
+      "B8",
+      "B9",
+      "B8",
+      "B9",
+      "B9",
+      "B8",
+      "B8",
+      "B9",
+      "B9",
+      "B8",
+      "B9",
+      "B8",
+      "B8",
+      "B9",
+      "B9",
+      "B8",
+      "B8",
+      "B9",
+      "B8",
+      "B9",
+      "B9",
+      "B9"
+    ],
+    "seam_indices": [
+      2,
+      3,
+      0,
+      4,
+      0,
+      1,
+      3,
+      0,
+      0,
+      1,
+      3,
+      3,
+      3,
+      4,
+      1,
+      1,
+      0,
+      1,
+      3,
+      3,
+      3,
+      4,
+      1,
+      3,
+      3,
+      4,
+      1,
+      0,
+      1,
+      2,
+      4,
+      3,
+      0,
+      1,
+      3,
+      3,
+      3,
+      4,
+      1,
+      3,
+      3,
+      4,
+      1,
+      0,
+      1,
+      2,
+      4
+    ],
+    "extensions": 2085870074191753064772672488236442070484593437901932633123843272789167405686232722576992469302474308677851811469103209908105379840000,
+    "all_marked_probabilities": [
+      "15785162333199806293771068282342116734138736738045225285471256346875863545479617431645745285639569412180794643385/32370879071561923873422177706027548334407158579245372754038782191288076373508833739004187884000909620821581417572",
+      "15679305831281077775267645272191998240303540288408512054252955448400147530565313468421328134485471661192226326701/32370879071561923873422177706027548334407158579245372754038782191288076373508833739004187884000909620821581417572",
+      "26956578268664958824126916551343892925193564541008401108337940652272221536593378304152177590342653684920704720759/56649038375233366778488810985548209585212527513679402319567868834754133653640459043257328797001591836437767480751",
+      "4117359479760137482924576261357112322479685548158542724263685808487976201581114710806261454159694830229060137117/8092719767890480968355544426506887083601789644811343188509695547822019093377208434751046971000227405205395354393",
+      "4013343002604640415235399646420426035230635640024550848911092937359656442312040555682776065686161719432092902734/8092719767890480968355544426506887083601789644811343188509695547822019093377208434751046971000227405205395354393",
+      "4116258105029452737060544750635519923636582479199029362841477070154587690698420068466036655814959695379456232125/8092719767890480968355544426506887083601789644811343188509695547822019093377208434751046971000227405205395354393",
+      "1341342858657979474119754841201848553077801375599894034166394558250635809534731375916866857590135512168831307087/2814859049701036858558450235306743333426709441673510674264241929677224032479029020782972859478339967027963601528",
+      "1330094918163952879445699599380920162779450146651667596460544369788941490292272019861017399143473884934362782409/2814859049701036858558450235306743333426709441673510674264241929677224032479029020782972859478339967027963601528",
+      "240398976964628851599724646780475173788525067069760432855969126710497442316081356795673129180842670447383078138/479805519835404009981554017381831250015916382103439319476859419831345005536198128542552191956535221652493795715",
+      "1431643203112871921466907398592893875991941561876030508017041232125663767774750518615539401946695628734004109085/2814859049701036858558450235306743333426709441673510674264241929677224032479029020782972859478339967027963601528",
+      "1341340076003517948428761636058744643423047596204024047841994376096005630519860463741279305776024155569411516487/2814859049701036858558450235306743333426709441673510674264241929677224032479029020782972859478339967027963601528",
+      "2660663780989659849452981251503699655872102382555838706190405375238490098614666565067508469542482863492716101843/5629718099402073717116900470613486666853418883347021348528483859354448064958058041565945718956679934055927203056",
+      "1362039081077238538054100155227604036368664787064120341439870027054414737421403101586010859336823664820144137141/2814859049701036858558450235306743333426709441673510674264241929677224032479029020782972859478339967027963601528",
+      "2657020758447481062422249368587457029134054411264145566546759379308930390893734433802237402715144676018454706727/5629718099402073717116900470613486666853418883347021348528483859354448064958058041565945718956679934055927203056",
+      "62990381191172875216526955881324568812505797880986483446087960172812832599925678368548484419442010942896820795/127948138622774402661747737968488333337577701894250485193829178621692001476319500944680584521742725773998345524",
+      "15928929808405224111550887403158912186196230577118309140463389260212746990915550848072705075519586187252652803469/33778308596412442302701402823680920001120513300082128091170903156126688389748348249395674313740079604335563218336",
+      "669486609983887416135657931560645146677748226191250438068639865228613559756030056995759201317955000521732168864/1439416559506212029944662052145493750047749146310317958430578259494035016608594385627656575869605664957481387145",
+      "4298552980880499182503348140316687412029478037219227902769156325711737322438078356555567718757762189930827359005/8444577149103110575675350705920230000280128325020532022792725789031672097437087062348918578435019901083890804584",
+      "670673351154256988986066093782123462048452233366312706087138195404217091518792697725042205422001741405090730681/1407429524850518429279225117653371666713354720836755337132120964838612016239514510391486429739169983513981800764",
+      "166291482247894745960951490390372651890051866015004427051505697515108935137635778077177126238403104006163046248/351857381212629607319806279413342916678338680209188834283030241209653004059878627597871607434792495878495450191",
+      "170254885126186519010662775021089012530263150337561400612526032610339535710161041565523571481496376104009751127/351857381212629607319806279413342916678338680209188834283030241209653004059878627597871607434792495878495450191",
+      "166063803750986254178385650023032085375015733799350392805228728212273382365478208472478017387280912328687080147/351857381212629607319806279413342916678338680209188834283030241209653004059878627597871607434792495878495450191",
+      "173224258163978756791074674449946681951194306105148448337906192044412539449564196949195331517195615462476253405/351857381212629607319806279413342916678338680209188834283030241209653004059878627597871607434792495878495450191",
+      "332054811845730904719852416281592473853000661176358191599515707014594368495087401355649500346087309773515428723/703714762425259214639612558826685833356677360418377668566060482419306008119757255195743214869584991756990900382",
+      "169028765091830227559456544425696049628379820094891786502421252565672718189181633711389856189573423267192603625/351857381212629607319806279413342916678338680209188834283030241209653004059878627597871607434792495878495450191",
+      "166074007516374114116993341899227760960336142775816659669115602439084044415367491786353440761966587294506205042/351857381212629607319806279413342916678338680209188834283030241209653004059878627597871607434792495878495450191",
+      "15747681569336923788944888753089025251837388551965623156886613995357400966765407475524262936232616409677193785/31987034655693600665436934492122083334394425473562621298457294655423000369079875236170146130435681443499586381",
+      "332066928731926720325313601764602905748442847081508788242188408821694802901806282564843780807816075579048762329/703714762425259214639612558826685833356677360418377668566060482419306008119757255195743214869584991756990900382",
+      "2615117516961406921316068941831416152285983263880602548733085233415139764334646289696385913120393482857917625607/5277860718189444109797094191200143750175080203137832514245453618144795060898179413968074111521887438177431752865",
+      "331127725069622579457873295830338404493625873962822966037171132659156848102371495434021416132509234806162520573/703714762425259214639612558826685833356677360418377668566060482419306008119757255195743214869584991756990900382",
+      "31453068067403330170245425215780754372862939073766610476302704710545535758334945991138446989636263372134711725/63974069311387201330873868984244166668788850947125242596914589310846000738159750472340292260871362886999172762",
+      "111164522521203177109430502142120052958504216073661970009418036484454194576343034912030006129522254306039688313/223909242589855204658058541444854583340760978314938349089201062587961002583559126653191022913049770104497104667",
+      "745621908642506244940745735897896375047456033233373193845130373443344819899674091728094144876065249016081744001/1567364698128986432606409790113982083385326848204568443624407438115727018084913886572337160391348390731479732669",
+      "8773566243452149826746918452674374669056474889147150671578194017527070720222594193014361956259152386463733401550/17241011679418850758670507691253802917238595330250252879868481819272997198934052752295708764304832298046277059359",
+      "1173676290624811235107882903657669328501964799545881837658001031505875673234319359556907577677039442252493063003/2463001668488407251238643955893400416748370761464321839981211688467571028419150393185101252043547471149468151337",
+      "166291483701700166848682690478793749151539009428058064112647798909079445960120905191284725718804203814047123148/351857381212629607319806279413342916678338680209188834283030241209653004059878627597871607434792495878495450191",
+      "170254885109589976400896675654578595114695340160619793900557169557405620217028150350217741042094628882046992877/351857381212629607319806279413342916678338680209188834283030241209653004059878627597871607434792495878495450191",
+      "166063803751092059355952202562343210914800034669588581195672585330420114151215475070982548831369120316216807647/351857381212629607319806279413342916678338680209188834283030241209653004059878627597871607434792495878495450191",
+      "173224258163979920112693822312388523170334871468002895419850364902469145396539443081068185789930660672535881530/351857381212629607319806279413342916678338680209188834283030241209653004059878627597871607434792495878495450191",
+      "332054811845730931288047295049265118400749735131658418758533003486038021666338896278201632578902326297937589973/703714762425259214639612558826685833356677360418377668566060482419306008119757255195743214869584991756990900382",
+      "169028765091830209629385122148097118668684273338630622523493742901437567418130728046291001629724120857660374250/351857381212629607319806279413342916678338680209188834283030241209653004059878627597871607434792495878495450191",
+      "166074007516376239062905787619887048605409235188808717581403745107488517411819913540454445584970995173455382917/351857381212629607319806279413342916678338680209188834283030241209653004059878627597871607434792495878495450191",
+      "31495363138717042981551098319561858479138121252504938730037414156040170076298375881218153584172090735696688845/63974069311387201330873868984244166668788850947125242596914589310846000738159750472340292260871362886999172762",
+      "1992401572756520899043754000082509125776283761779301325693125250951233925059521696776371345980897440734441088639/4222288574551555287837675352960115000140064162510266011396362894515836048718543531174459289217509950541945402292",
+      "1743411635950219881401309650000101487743138464159338177100583564193370873912633187193350481451079944741921754933/3518573812126296073198062794133429166783386802091888342830302412096530040598786275978716074347924958784954501910",
+      "5960284015232444159046350433353295288605013851799693834178335341157184853029919550591747648945927636057923700877/12666865723654665863513026058880345000420192487530798034189088683547508146155630593523377867652529851625836206876",
+      "94385382038521672942348193476947302218848791317403242217699580821622875702740817628705611066127521465426683423/191922207934161603992621606952732500006366552841375727790743767932538002214479251417020876782614088660997518286",
+      "1596120611998374413226652556552289120045227125789831615499580910900100138505529530267103450373683809668451022066/3166716430913666465878256514720086250105048121882699508547272170886877036538907648380844466913132462906459051719"
+    ],
+    "minimum_probability": "669486609983887416135657931560645146677748226191250438068639865228613559756030056995759201317955000521732168864/1439416559506212029944662052145493750047749146310317958430578259494035016608594385627656575869605664957481387145",
+    "maximum_probability": "4298552980880499182503348140316687412029478037219227902769156325711737322438078356555567718757762189930827359005/8444577149103110575675350705920230000280128325020532022792725789031672097437087062348918578435019901083890804584",
+    "graph": {
+      "max_degree": 7,
+      "bridges": [],
+      "incomparability_edges": 1013,
+      "max_reference_span": 7
+    },
+    "full_poset_ideal_DP_performed": false
+  }
+}

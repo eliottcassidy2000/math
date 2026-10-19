@@ -1,0 +1,1022 @@
+{
+  "status": "all 48 refined generator tests per core passed; actual-context sharpness not claimed",
+  "alpha_profiles_nonempty": [
+    [
+      6
+    ],
+    [
+      8
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      8,
+      6
+    ]
+  ],
+  "beta_profiles": [
+    [],
+    [
+      0
+    ],
+    [
+      3
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "primitive_left_generators": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      2,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      1,
+      2,
+      1
+    ],
+    [
+      1,
+      2,
+      2,
+      3,
+      3
+    ],
+    [
+      2,
+      3,
+      3,
+      3,
+      3
+    ],
+    [
+      2,
+      3,
+      3,
+      4,
+      4
+    ],
+    [
+      2,
+      3,
+      6,
+      4,
+      8
+    ],
+    [
+      2,
+      6,
+      3,
+      8,
+      4
+    ]
+  ],
+  "primitive_right_generators": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      2,
+      1
+    ],
+    [
+      1,
+      3,
+      3,
+      1
+    ],
+    [
+      2,
+      1,
+      1,
+      2
+    ],
+    [
+      2,
+      2,
+      3,
+      3
+    ],
+    [
+      3,
+      6,
+      8,
+      4
+    ]
+  ],
+  "common_balance_bound": "236/525",
+  "improvement_over_base_bound": "76/5775",
+  "distance_below_matching_bound_9_over_20": "1/2100",
+  "cores": {
+    "B9": {
+      "probability_range": [
+        "1095/2372",
+        "600/1153"
+      ],
+      "minimum_lower_deficit": 6641,
+      "minimum_upper_deficit": 15797,
+      "all_48_generator_checks": [
+        {
+          "left_generator": 0,
+          "right_generator": 0,
+          "numerator": 325,
+          "denominator": 664,
+          "probability": "325/664",
+          "lower_deficit_525C_minus_236N": 13921,
+          "upper_deficit_289N_minus_525C": 21271
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 1,
+          "numerator": 570,
+          "denominator": 1168,
+          "probability": "285/584",
+          "lower_deficit_525C_minus_236N": 23602,
+          "upper_deficit_289N_minus_525C": 38302
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 2,
+          "numerator": 815,
+          "denominator": 1672,
+          "probability": "815/1672",
+          "lower_deficit_525C_minus_236N": 33283,
+          "upper_deficit_289N_minus_525C": 55333
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 3,
+          "numerator": 405,
+          "denominator": 824,
+          "probability": "405/824",
+          "lower_deficit_525C_minus_236N": 18161,
+          "upper_deficit_289N_minus_525C": 25511
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 4,
+          "numerator": 790,
+          "denominator": 1608,
+          "probability": "395/804",
+          "lower_deficit_525C_minus_236N": 35262,
+          "upper_deficit_289N_minus_525C": 49962
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 5,
+          "numerator": 1920,
+          "denominator": 3924,
+          "probability": "160/327",
+          "lower_deficit_525C_minus_236N": 81936,
+          "upper_deficit_289N_minus_525C": 126036
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 0,
+          "numerator": 478,
+          "denominator": 923,
+          "probability": "478/923",
+          "lower_deficit_525C_minus_236N": 33122,
+          "upper_deficit_289N_minus_525C": 15797
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 1,
+          "numerator": 834,
+          "denominator": 1616,
+          "probability": "417/808",
+          "lower_deficit_525C_minus_236N": 56474,
+          "upper_deficit_289N_minus_525C": 29174
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 2,
+          "numerator": 1190,
+          "denominator": 2309,
+          "probability": "1190/2309",
+          "lower_deficit_525C_minus_236N": 79826,
+          "upper_deficit_289N_minus_525C": 42551
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 3,
+          "numerator": 600,
+          "denominator": 1153,
+          "probability": "600/1153",
+          "lower_deficit_525C_minus_236N": 42892,
+          "upper_deficit_289N_minus_525C": 18217
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 4,
+          "numerator": 1168,
+          "denominator": 2246,
+          "probability": "584/1123",
+          "lower_deficit_525C_minus_236N": 83144,
+          "upper_deficit_289N_minus_525C": 35894
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 5,
+          "numerator": 2820,
+          "denominator": 5448,
+          "probability": "235/454",
+          "lower_deficit_525C_minus_236N": 194772,
+          "upper_deficit_289N_minus_525C": 93972
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 0,
+          "numerator": 437,
+          "denominator": 944,
+          "probability": "437/944",
+          "lower_deficit_525C_minus_236N": 6641,
+          "upper_deficit_289N_minus_525C": 43391
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 1,
+          "numerator": 766,
+          "denominator": 1658,
+          "probability": "383/829",
+          "lower_deficit_525C_minus_236N": 10862,
+          "upper_deficit_289N_minus_525C": 77012
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 2,
+          "numerator": 1095,
+          "denominator": 2372,
+          "probability": "1095/2372",
+          "lower_deficit_525C_minus_236N": 15083,
+          "upper_deficit_289N_minus_525C": 110633
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 3,
+          "numerator": 545,
+          "denominator": 1174,
+          "probability": "545/1174",
+          "lower_deficit_525C_minus_236N": 9061,
+          "upper_deficit_289N_minus_525C": 53161
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 4,
+          "numerator": 1062,
+          "denominator": 2288,
+          "probability": "531/1144",
+          "lower_deficit_525C_minus_236N": 17582,
+          "upper_deficit_289N_minus_525C": 103682
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 5,
+          "numerator": 2580,
+          "denominator": 5574,
+          "probability": "430/929",
+          "lower_deficit_525C_minus_236N": 39036,
+          "upper_deficit_289N_minus_525C": 256386
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 0,
+          "numerator": 716,
+          "denominator": 1455,
+          "probability": "716/1455",
+          "lower_deficit_525C_minus_236N": 32520,
+          "upper_deficit_289N_minus_525C": 44595
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 1,
+          "numerator": 1246,
+          "denominator": 2538,
+          "probability": "623/1269",
+          "lower_deficit_525C_minus_236N": 55182,
+          "upper_deficit_289N_minus_525C": 79332
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 2,
+          "numerator": 1776,
+          "denominator": 3621,
+          "probability": "592/1207",
+          "lower_deficit_525C_minus_236N": 77844,
+          "upper_deficit_289N_minus_525C": 114069
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 3,
+          "numerator": 902,
+          "denominator": 1827,
+          "probability": "902/1827",
+          "lower_deficit_525C_minus_236N": 42378,
+          "upper_deficit_289N_minus_525C": 54453
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 4,
+          "numerator": 1752,
+          "denominator": 3550,
+          "probability": "876/1775",
+          "lower_deficit_525C_minus_236N": 82000,
+          "upper_deficit_289N_minus_525C": 106150
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 5,
+          "numerator": 4218,
+          "denominator": 8574,
+          "probability": "703/1429",
+          "lower_deficit_525C_minus_236N": 190986,
+          "upper_deficit_289N_minus_525C": 263436
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 0,
+          "numerator": 915,
+          "denominator": 1867,
+          "probability": "915/1867",
+          "lower_deficit_525C_minus_236N": 39763,
+          "upper_deficit_289N_minus_525C": 59188
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 1,
+          "numerator": 1600,
+          "denominator": 3274,
+          "probability": "800/1637",
+          "lower_deficit_525C_minus_236N": 67336,
+          "upper_deficit_289N_minus_525C": 106186
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 2,
+          "numerator": 2285,
+          "denominator": 4681,
+          "probability": "2285/4681",
+          "lower_deficit_525C_minus_236N": 94909,
+          "upper_deficit_289N_minus_525C": 153184
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 3,
+          "numerator": 1145,
+          "denominator": 2327,
+          "probability": "1145/2327",
+          "lower_deficit_525C_minus_236N": 51953,
+          "upper_deficit_289N_minus_525C": 71378
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 4,
+          "numerator": 2230,
+          "denominator": 4534,
+          "probability": "1115/2267",
+          "lower_deficit_525C_minus_236N": 100726,
+          "upper_deficit_289N_minus_525C": 139576
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 5,
+          "numerator": 5400,
+          "denominator": 11022,
+          "probability": "900/1837",
+          "lower_deficit_525C_minus_236N": 233808,
+          "upper_deficit_289N_minus_525C": 350358
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 0,
+          "numerator": 1041,
+          "denominator": 2119,
+          "probability": "1041/2119",
+          "lower_deficit_525C_minus_236N": 46441,
+          "upper_deficit_289N_minus_525C": 65866
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 1,
+          "numerator": 1816,
+          "denominator": 3706,
+          "probability": "908/1853",
+          "lower_deficit_525C_minus_236N": 78784,
+          "upper_deficit_289N_minus_525C": 117634
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 2,
+          "numerator": 2591,
+          "denominator": 5293,
+          "probability": "2591/5293",
+          "lower_deficit_525C_minus_236N": 111127,
+          "upper_deficit_289N_minus_525C": 169402
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 3,
+          "numerator": 1307,
+          "denominator": 2651,
+          "probability": "1307/2651",
+          "lower_deficit_525C_minus_236N": 60539,
+          "upper_deficit_289N_minus_525C": 79964
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 4,
+          "numerator": 2542,
+          "denominator": 5158,
+          "probability": "1271/2579",
+          "lower_deficit_525C_minus_236N": 117262,
+          "upper_deficit_289N_minus_525C": 156112
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 5,
+          "numerator": 6138,
+          "denominator": 12498,
+          "probability": "1023/2083",
+          "lower_deficit_525C_minus_236N": 272922,
+          "upper_deficit_289N_minus_525C": 389472
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 0,
+          "numerator": 1563,
+          "denominator": 3022,
+          "probability": "1563/3022",
+          "lower_deficit_525C_minus_236N": 107383,
+          "upper_deficit_289N_minus_525C": 52783
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 1,
+          "numerator": 2716,
+          "denominator": 5266,
+          "probability": "1358/2633",
+          "lower_deficit_525C_minus_236N": 183124,
+          "upper_deficit_289N_minus_525C": 95974
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 2,
+          "numerator": 3869,
+          "denominator": 7510,
+          "probability": "3869/7510",
+          "lower_deficit_525C_minus_236N": 258865,
+          "upper_deficit_289N_minus_525C": 139165
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 3,
+          "numerator": 1973,
+          "denominator": 3800,
+          "probability": "1973/3800",
+          "lower_deficit_525C_minus_236N": 139025,
+          "upper_deficit_289N_minus_525C": 62375
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 4,
+          "numerator": 3832,
+          "denominator": 7384,
+          "probability": "479/923",
+          "lower_deficit_525C_minus_236N": 269176,
+          "upper_deficit_289N_minus_525C": 122176
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 5,
+          "numerator": 9207,
+          "denominator": 17808,
+          "probability": "3069/5936",
+          "lower_deficit_525C_minus_236N": 630987,
+          "upper_deficit_289N_minus_525C": 312837
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 0,
+          "numerator": 1440,
+          "denominator": 3085,
+          "probability": "288/617",
+          "lower_deficit_525C_minus_236N": 27940,
+          "upper_deficit_289N_minus_525C": 135565
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 1,
+          "numerator": 2512,
+          "denominator": 5392,
+          "probability": "157/337",
+          "lower_deficit_525C_minus_236N": 46288,
+          "upper_deficit_289N_minus_525C": 239488
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 2,
+          "numerator": 3584,
+          "denominator": 7699,
+          "probability": "3584/7699",
+          "lower_deficit_525C_minus_236N": 64636,
+          "upper_deficit_289N_minus_525C": 343411
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 3,
+          "numerator": 1808,
+          "denominator": 3863,
+          "probability": "1808/3863",
+          "lower_deficit_525C_minus_236N": 37532,
+          "upper_deficit_289N_minus_525C": 167207
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 4,
+          "numerator": 3514,
+          "denominator": 7510,
+          "probability": "1757/3755",
+          "lower_deficit_525C_minus_236N": 72490,
+          "upper_deficit_289N_minus_525C": 325540
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 5,
+          "numerator": 8487,
+          "denominator": 18186,
+          "probability": "2829/6062",
+          "lower_deficit_525C_minus_236N": 163779,
+          "upper_deficit_289N_minus_525C": 800079
+        }
+      ]
+    },
+    "B8": {
+      "probability_range": [
+        "236/525",
+        "18/35"
+      ],
+      "minimum_lower_deficit": 0,
+      "minimum_upper_deficit": 3720,
+      "all_48_generator_checks": [
+        {
+          "left_generator": 0,
+          "right_generator": 0,
+          "numerator": 60,
+          "denominator": 125,
+          "probability": "12/25",
+          "lower_deficit_525C_minus_236N": 2000,
+          "upper_deficit_289N_minus_525C": 4625
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 1,
+          "numerator": 110,
+          "denominator": 230,
+          "probability": "11/23",
+          "lower_deficit_525C_minus_236N": 3470,
+          "upper_deficit_289N_minus_525C": 8720
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 2,
+          "numerator": 160,
+          "denominator": 335,
+          "probability": "32/67",
+          "lower_deficit_525C_minus_236N": 4940,
+          "upper_deficit_289N_minus_525C": 12815
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 3,
+          "numerator": 70,
+          "denominator": 145,
+          "probability": "14/29",
+          "lower_deficit_525C_minus_236N": 2530,
+          "upper_deficit_289N_minus_525C": 5155
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 4,
+          "numerator": 140,
+          "denominator": 290,
+          "probability": "14/29",
+          "lower_deficit_525C_minus_236N": 5060,
+          "upper_deficit_289N_minus_525C": 10310
+        },
+        {
+          "left_generator": 0,
+          "right_generator": 5,
+          "numerator": 360,
+          "denominator": 750,
+          "probability": "12/25",
+          "lower_deficit_525C_minus_236N": 12000,
+          "upper_deficit_289N_minus_525C": 27750
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 0,
+          "numerator": 92,
+          "denominator": 180,
+          "probability": "23/45",
+          "lower_deficit_525C_minus_236N": 5820,
+          "upper_deficit_289N_minus_525C": 3720
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 1,
+          "numerator": 168,
+          "denominator": 330,
+          "probability": "28/55",
+          "lower_deficit_525C_minus_236N": 10320,
+          "upper_deficit_289N_minus_525C": 7170
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 2,
+          "numerator": 244,
+          "denominator": 480,
+          "probability": "61/120",
+          "lower_deficit_525C_minus_236N": 14820,
+          "upper_deficit_289N_minus_525C": 10620
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 3,
+          "numerator": 108,
+          "denominator": 210,
+          "probability": "18/35",
+          "lower_deficit_525C_minus_236N": 7140,
+          "upper_deficit_289N_minus_525C": 3990
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 4,
+          "numerator": 216,
+          "denominator": 420,
+          "probability": "18/35",
+          "lower_deficit_525C_minus_236N": 14280,
+          "upper_deficit_289N_minus_525C": 7980
+        },
+        {
+          "left_generator": 1,
+          "right_generator": 5,
+          "numerator": 552,
+          "denominator": 1080,
+          "probability": "23/45",
+          "lower_deficit_525C_minus_236N": 34920,
+          "upper_deficit_289N_minus_525C": 22320
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 0,
+          "numerator": 88,
+          "denominator": 195,
+          "probability": "88/195",
+          "lower_deficit_525C_minus_236N": 180,
+          "upper_deficit_289N_minus_525C": 10155
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 1,
+          "numerator": 162,
+          "denominator": 360,
+          "probability": "9/20",
+          "lower_deficit_525C_minus_236N": 90,
+          "upper_deficit_289N_minus_525C": 18990
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 2,
+          "numerator": 236,
+          "denominator": 525,
+          "probability": "236/525",
+          "lower_deficit_525C_minus_236N": 0,
+          "upper_deficit_289N_minus_525C": 27825
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 3,
+          "numerator": 102,
+          "denominator": 225,
+          "probability": "34/75",
+          "lower_deficit_525C_minus_236N": 450,
+          "upper_deficit_289N_minus_525C": 11475
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 4,
+          "numerator": 204,
+          "denominator": 450,
+          "probability": "34/75",
+          "lower_deficit_525C_minus_236N": 900,
+          "upper_deficit_289N_minus_525C": 22950
+        },
+        {
+          "left_generator": 2,
+          "right_generator": 5,
+          "numerator": 528,
+          "denominator": 1170,
+          "probability": "88/195",
+          "lower_deficit_525C_minus_236N": 1080,
+          "upper_deficit_289N_minus_525C": 60930
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 0,
+          "numerator": 156,
+          "denominator": 322,
+          "probability": "78/161",
+          "lower_deficit_525C_minus_236N": 5908,
+          "upper_deficit_289N_minus_525C": 11158
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 1,
+          "numerator": 286,
+          "denominator": 592,
+          "probability": "143/296",
+          "lower_deficit_525C_minus_236N": 10438,
+          "upper_deficit_289N_minus_525C": 20938
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 2,
+          "numerator": 416,
+          "denominator": 862,
+          "probability": "208/431",
+          "lower_deficit_525C_minus_236N": 14968,
+          "upper_deficit_289N_minus_525C": 30718
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 3,
+          "numerator": 182,
+          "denominator": 374,
+          "probability": "91/187",
+          "lower_deficit_525C_minus_236N": 7286,
+          "upper_deficit_289N_minus_525C": 12536
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 4,
+          "numerator": 364,
+          "denominator": 748,
+          "probability": "91/187",
+          "lower_deficit_525C_minus_236N": 14572,
+          "upper_deficit_289N_minus_525C": 25072
+        },
+        {
+          "left_generator": 3,
+          "right_generator": 5,
+          "numerator": 936,
+          "denominator": 1932,
+          "probability": "78/161",
+          "lower_deficit_525C_minus_236N": 35448,
+          "upper_deficit_289N_minus_525C": 66948
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 0,
+          "numerator": 180,
+          "denominator": 375,
+          "probability": "12/25",
+          "lower_deficit_525C_minus_236N": 6000,
+          "upper_deficit_289N_minus_525C": 13875
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 1,
+          "numerator": 330,
+          "denominator": 690,
+          "probability": "11/23",
+          "lower_deficit_525C_minus_236N": 10410,
+          "upper_deficit_289N_minus_525C": 26160
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 2,
+          "numerator": 480,
+          "denominator": 1005,
+          "probability": "32/67",
+          "lower_deficit_525C_minus_236N": 14820,
+          "upper_deficit_289N_minus_525C": 38445
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 3,
+          "numerator": 210,
+          "denominator": 435,
+          "probability": "14/29",
+          "lower_deficit_525C_minus_236N": 7590,
+          "upper_deficit_289N_minus_525C": 15465
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 4,
+          "numerator": 420,
+          "denominator": 870,
+          "probability": "14/29",
+          "lower_deficit_525C_minus_236N": 15180,
+          "upper_deficit_289N_minus_525C": 30930
+        },
+        {
+          "left_generator": 4,
+          "right_generator": 5,
+          "numerator": 1080,
+          "denominator": 2250,
+          "probability": "12/25",
+          "lower_deficit_525C_minus_236N": 36000,
+          "upper_deficit_289N_minus_525C": 83250
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 0,
+          "numerator": 216,
+          "denominator": 447,
+          "probability": "72/149",
+          "lower_deficit_525C_minus_236N": 7908,
+          "upper_deficit_289N_minus_525C": 15783
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 1,
+          "numerator": 396,
+          "denominator": 822,
+          "probability": "66/137",
+          "lower_deficit_525C_minus_236N": 13908,
+          "upper_deficit_289N_minus_525C": 29658
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 2,
+          "numerator": 576,
+          "denominator": 1197,
+          "probability": "64/133",
+          "lower_deficit_525C_minus_236N": 19908,
+          "upper_deficit_289N_minus_525C": 43533
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 3,
+          "numerator": 252,
+          "denominator": 519,
+          "probability": "84/173",
+          "lower_deficit_525C_minus_236N": 9816,
+          "upper_deficit_289N_minus_525C": 17691
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 4,
+          "numerator": 504,
+          "denominator": 1038,
+          "probability": "84/173",
+          "lower_deficit_525C_minus_236N": 19632,
+          "upper_deficit_289N_minus_525C": 35382
+        },
+        {
+          "left_generator": 5,
+          "right_generator": 5,
+          "numerator": 1296,
+          "denominator": 2682,
+          "probability": "72/149",
+          "lower_deficit_525C_minus_236N": 47448,
+          "upper_deficit_289N_minus_525C": 94698
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 0,
+          "numerator": 330,
+          "denominator": 648,
+          "probability": "55/108",
+          "lower_deficit_525C_minus_236N": 20322,
+          "upper_deficit_289N_minus_525C": 14022
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 1,
+          "numerator": 603,
+          "denominator": 1188,
+          "probability": "67/132",
+          "lower_deficit_525C_minus_236N": 36207,
+          "upper_deficit_289N_minus_525C": 26757
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 2,
+          "numerator": 876,
+          "denominator": 1728,
+          "probability": "73/144",
+          "lower_deficit_525C_minus_236N": 52092,
+          "upper_deficit_289N_minus_525C": 39492
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 3,
+          "numerator": 387,
+          "denominator": 756,
+          "probability": "43/84",
+          "lower_deficit_525C_minus_236N": 24759,
+          "upper_deficit_289N_minus_525C": 15309
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 4,
+          "numerator": 774,
+          "denominator": 1512,
+          "probability": "43/84",
+          "lower_deficit_525C_minus_236N": 49518,
+          "upper_deficit_289N_minus_525C": 30618
+        },
+        {
+          "left_generator": 6,
+          "right_generator": 5,
+          "numerator": 1980,
+          "denominator": 3888,
+          "probability": "55/108",
+          "lower_deficit_525C_minus_236N": 121932,
+          "upper_deficit_289N_minus_525C": 84132
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 0,
+          "numerator": 318,
+          "denominator": 693,
+          "probability": "106/231",
+          "lower_deficit_525C_minus_236N": 3402,
+          "upper_deficit_289N_minus_525C": 33327
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 1,
+          "numerator": 585,
+          "denominator": 1278,
+          "probability": "65/142",
+          "lower_deficit_525C_minus_236N": 5517,
+          "upper_deficit_289N_minus_525C": 62217
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 2,
+          "numerator": 852,
+          "denominator": 1863,
+          "probability": "284/621",
+          "lower_deficit_525C_minus_236N": 7632,
+          "upper_deficit_289N_minus_525C": 91107
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 3,
+          "numerator": 369,
+          "denominator": 801,
+          "probability": "41/89",
+          "lower_deficit_525C_minus_236N": 4689,
+          "upper_deficit_289N_minus_525C": 37764
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 4,
+          "numerator": 738,
+          "denominator": 1602,
+          "probability": "41/89",
+          "lower_deficit_525C_minus_236N": 9378,
+          "upper_deficit_289N_minus_525C": 75528
+        },
+        {
+          "left_generator": 7,
+          "right_generator": 5,
+          "numerator": 1908,
+          "denominator": 4158,
+          "probability": "106/231",
+          "lower_deficit_525C_minus_236N": 20412,
+          "upper_deficit_289N_minus_525C": 199962
+        }
+      ]
+    }
+  },
+  "scope": "Permutation-orbit outer cone for uniform exterior-poset laws, including whole prefixes/suffixes. No claim of exact realization of its individual rays."
+}
