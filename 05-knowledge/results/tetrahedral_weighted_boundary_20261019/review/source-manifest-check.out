@@ -1,0 +1,7 @@
+A4_WEIGHTED_BOUNDARY.md: OK
+README.md: OK
+SOURCE-DEPENDENCIES.json: OK
+verify_a4_weighted_boundary.py: OK
+verification-results.json: OK
+verify.out: OK
+verify.optimized.out: OK

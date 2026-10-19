@@ -1,0 +1,125 @@
+{
+  "description": "The final accepted paper, all mathematical verifier logic and all textual numerical receipts are retained exactly. Presentation removes internal staging prose, adds links/instructions and makes independent provenance paths package-relative. The independent JSON changes only source_hashes. Checksum manifests describe published artifacts.",
+  "files": [
+    {
+      "path": "A4_WEIGHTED_BOUNDARY.md",
+      "source_sha256": "4ac39451579cd75ef0026c4e45b198a7ce5c48dcf8bc7705d8b2ebae86afab97",
+      "published_sha256": "4ac39451579cd75ef0026c4e45b198a7ce5c48dcf8bc7705d8b2ebae86afab97",
+      "presentation_updates": false
+    },
+    {
+      "path": "README.md",
+      "source_sha256": "48b5efcc62566d9592c7846a4a3bd6e2ee128b5962186da68b6d64a7ef813490",
+      "published_sha256": "e73b72e019d25a6814bf126440548fe9aae374778fb2a446bf0633383ea03f27",
+      "presentation_updates": true
+    },
+    {
+      "path": "SOURCE-DEPENDENCIES.json",
+      "source_sha256": "bf48a88c91d943f4b29ea03417e68a75869878ba33d94099d73ba00d0ede4c63",
+      "published_sha256": "bf48a88c91d943f4b29ea03417e68a75869878ba33d94099d73ba00d0ede4c63",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify_a4_weighted_boundary.py",
+      "source_sha256": "155aa283f461a649a9bcf112eac8658160662de273f352434a29d19c6c4c71be",
+      "published_sha256": "155aa283f461a649a9bcf112eac8658160662de273f352434a29d19c6c4c71be",
+      "presentation_updates": false
+    },
+    {
+      "path": "verification-results.json",
+      "source_sha256": "9a9c6dc9a8398d1f1a82c575d75e69f7c77fbb49c4441775702ecaf2dbb91b7d",
+      "published_sha256": "9a9c6dc9a8398d1f1a82c575d75e69f7c77fbb49c4441775702ecaf2dbb91b7d",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify.out",
+      "source_sha256": "3d73c536159df2e858dafa7d2244402732e578939013dea868b269fb97af0005",
+      "published_sha256": "3d73c536159df2e858dafa7d2244402732e578939013dea868b269fb97af0005",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify.optimized.out",
+      "source_sha256": "3d73c536159df2e858dafa7d2244402732e578939013dea868b269fb97af0005",
+      "published_sha256": "3d73c536159df2e858dafa7d2244402732e578939013dea868b269fb97af0005",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/README.md",
+      "source_sha256": "3510cb820e619d3ea4052a3dde2cb919003a5995e95c987164d3fe8944c8afb0",
+      "published_sha256": "6ce5192cbb3998a6bfe2d7b8060f1769137b352adfccd8a6eed1f63215befd1a",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/REVIEW.md",
+      "source_sha256": "a179a58e467b371dfddb403a632768f5d49aefbb2e9f00568c8a66457c06a25f",
+      "published_sha256": "20b0f28f950fbe56ef1a39fa26a69137c8e4bf7461cefdfd90db40ac8da05a9e",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-results.json",
+      "source_sha256": "c3edce9aae96083addd32ed6088347cfb1cf3ef56b90aa22a1bde0e5ba4582eb",
+      "published_sha256": "b416d41edf32de8d940c42456c3adf3139e1db59ea3def616c280b8dfae2dc6a",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent.optimized.out",
+      "source_sha256": "1753dd66ea0ce3af4aa022e5bb6137307970c6476afc7474d608ba963ad5502c",
+      "published_sha256": "1753dd66ea0ce3af4aa022e5bb6137307970c6476afc7474d608ba963ad5502c",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/independent.out",
+      "source_sha256": "1753dd66ea0ce3af4aa022e5bb6137307970c6476afc7474d608ba963ad5502c",
+      "published_sha256": "1753dd66ea0ce3af4aa022e5bb6137307970c6476afc7474d608ba963ad5502c",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/independent_checks.py",
+      "source_sha256": "cf73a3996b1737770d41619cce0087f47d7a0e8baadf136a3c4fbd2975517a4b",
+      "published_sha256": "271c9c2e472a668eab78b8505ffe24f4c45e7de1b8acedc2f84a21bf0c595c00",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/reproduction/verification-results.json",
+      "source_sha256": "9a9c6dc9a8398d1f1a82c575d75e69f7c77fbb49c4441775702ecaf2dbb91b7d",
+      "published_sha256": "9a9c6dc9a8398d1f1a82c575d75e69f7c77fbb49c4441775702ecaf2dbb91b7d",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/reproduction/verify.optimized.out",
+      "source_sha256": "3d73c536159df2e858dafa7d2244402732e578939013dea868b269fb97af0005",
+      "published_sha256": "3d73c536159df2e858dafa7d2244402732e578939013dea868b269fb97af0005",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/reproduction/verify.out",
+      "source_sha256": "3d73c536159df2e858dafa7d2244402732e578939013dea868b269fb97af0005",
+      "published_sha256": "3d73c536159df2e858dafa7d2244402732e578939013dea868b269fb97af0005",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/reproduction/verify_a4_weighted_boundary.py",
+      "source_sha256": "155aa283f461a649a9bcf112eac8658160662de273f352434a29d19c6c4c71be",
+      "published_sha256": "155aa283f461a649a9bcf112eac8658160662de273f352434a29d19c6c4c71be",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/source-manifest-check.out",
+      "source_sha256": "d6b8e21e6af34b74caf7cfa0d06fc163f67b88ba4e9c18cc74b877a313d2ace1",
+      "published_sha256": "d6b8e21e6af34b74caf7cfa0d06fc163f67b88ba4e9c18cc74b877a313d2ace1",
+      "presentation_updates": false
+    },
+    {
+      "path": "SHA256SUMS",
+      "source_sha256": "3fc4e0f14b7b906ace8aeb5f5dfc31fe2d14a2a7e075e896ad9b01a1e57e053e",
+      "published_sha256": "95e2d348c3aafe7a47a3ecfb57936cf4f94fe9c0b2bd353a5b97d2d5d639fc90",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/SHA256SUMS",
+      "source_sha256": "4ae908934733ed8f757810eda01c7e90ba35827e8456c37c3a78e7807cfc112f",
+      "published_sha256": "5cc73646d2061144329a3ee5610419f2a88f5a826b115a16d91680efd2b5775a",
+      "presentation_updates": true
+    }
+  ]
+}

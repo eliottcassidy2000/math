@@ -1,0 +1,6 @@
+PASS: A4 weighted-boundary exact companion
+checks: 130
+groups: G4=24, A4=12, Q8=8, H=6; core(H)=C2
+quartic normalization, global hostile, trace packet and dual derivations: PASS
+weighted graphs: A1 determinant 2; D4 Smith 1,1,2,2
+scope: finite identities checked; geometric proofs remain separately stated

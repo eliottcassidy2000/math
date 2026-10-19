@@ -1,0 +1,75 @@
+{
+  "corpus": [
+    {
+      "id": "THM-3922",
+      "path": "01-canon/theorems/THM-3922-affine-plane-open-boundary-basis-class-group-obstruction.md",
+      "sha256": "5a130cff2868f7b4a8d000399f4af1d347455329e8f68066152d3c5688c6addf"
+    },
+    {
+      "id": "THM-3951",
+      "path": "01-canon/theorems/THM-3951-affine-plane-boundary-incidence-forest-and-equianharmonic-survivor-nonentry.md",
+      "sha256": "f90e98143dc673fe66036f09b80e7c6cbaf262236bfc129146d7f9dfb64d3c4a"
+    },
+    {
+      "id": "THM-2633",
+      "path": "01-canon/theorems/THM-2633-derangement-character-obstruction-and-d4-keller-exclusion.md",
+      "sha256": "9fcbe24d057d756b39675a31db072df85e9a93852e4e6ecdbb37e6d678fe1ab3"
+    },
+    {
+      "id": "THM-2655",
+      "path": "01-canon/theorems/THM-2655-quartic-keller-resolvent-v4-quasietale-torsor-and-kummer-class-group-gate.md",
+      "sha256": "984be710e30c2fa1a34fd91d1fc767a41bf3f45c286b075968936385207389b2"
+    },
+    {
+      "id": "THM-2703",
+      "path": "01-canon/theorems/THM-2703-c3-boundary-tree-arm-determinant-standard-plane-gate.md",
+      "sha256": "2ea340805e929ad9428056e4de593806f8a0b85c9db71ec5cd45b6afc72d48be"
+    },
+    {
+      "id": "THM-2690",
+      "path": "01-canon/theorems/THM-2690-normal-crossing-cyclic-cubic-resolvent-exclusion-and-reflection-completion-boundary.md",
+      "sha256": "845d0b756ac9e5040cc44ef0899ae40ad5d5af98a143b98adf53e42a21295965"
+    },
+    {
+      "id": "THM-2746",
+      "path": "01-canon/theorems/THM-2746-c3-quotient-affine-v4-lifts-and-a4-projector-defect.md",
+      "sha256": "02363a6233250ce2fe27417ab70c738d6de864203b2e5b2bd009b66aca1a9505"
+    }
+  ],
+  "date": "2026-10-19",
+  "primary_sources": [
+    {
+      "role": "Classical tetrahedral covariants and reflection twist; October 31 section",
+      "url": "https://abel.math.harvard.edu/~elkies/M263.12/index.html"
+    },
+    {
+      "role": "Normalization form of Zariski Main",
+      "url": "https://stacks.math.columbia.edu/tag/03GT"
+    },
+    {
+      "role": "Normal domain as intersection of height-one valuation rings",
+      "url": "https://stacks.math.columbia.edu/tag/0AVB"
+    },
+    {
+      "role": "Norm and pushforward of principal divisors",
+      "url": "https://stacks.math.columbia.edu/tag/02RT"
+    },
+    {
+      "role": "Purity on the regular locus of the cubic resolvent",
+      "url": "https://stacks.math.columbia.edu/tag/0BMB"
+    },
+    {
+      "role": "Theorem 21.3 complex Riemann existence for finite etale covers",
+      "url": "https://www.jmilne.org/math/CourseNotes/LEC210.pdf"
+    },
+    {
+      "role": "Mikosz-Weber Section 7.1, classical Q8/D4 identification and resolution",
+      "url": "https://link.springer.com/article/10.1007/s10801-020-00938-3"
+    },
+    {
+      "role": "Nguyen Van Chau 1999 Theorem 1.1: stronger all-degree obstruction when full nonproper set is homeomorphic to C",
+      "url": "https://math.ac.vn/uploads/files/9901109.pdf"
+    }
+  ],
+  "scope": "scoped synthesis, no historical novelty claim; trace-pole predecessor remains frozen"
+}
