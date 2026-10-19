@@ -1,0 +1,32 @@
+{
+  "checks": 9368,
+  "date": "2026-10-19",
+  "dependencies": [
+    "../dynamics_labeling_entry_20261019/GRACEFUL_RELEASE_AND_MATCHING_SUPPORT.md"
+  ],
+  "files": [
+    {
+      "bytes": 1260,
+      "path": "README.md",
+      "sha256": "572143b6223e13334d389ce67da6407a0d79bf020a6ad3bc834b9c71d3ab8e98"
+    },
+    {
+      "bytes": 14046,
+      "path": "THREE_COLOR_RELEASE_DICHOTOMY.md",
+      "sha256": "cdc84dae40eeee1c7f7dc01e30186db9e2931958e5f19a2440a34b591aab8348"
+    },
+    {
+      "bytes": 7746,
+      "path": "verify_three_color_release.py",
+      "sha256": "3d3cff8f629df599cb6870cb707ae5cdcd290829af27add50f4c81257dddd0e9"
+    },
+    {
+      "bytes": 18298,
+      "path": "three-color-release-receipt.json",
+      "sha256": "45f040061213687989463aaab3bf2c2d19cec95ed47c8a9e971a47b7c23069f6"
+    }
+  ],
+  "package": "graceful_three_color_release_20261019",
+  "status": "PROVED_AND_EXACTLY_VERIFIED",
+  "verification": "Normal and python -O receipts are byte-identical."
+}
