@@ -1,6 +1,6 @@
 # Overnight proof frontier: exact results and falsifiable next steps
 
-Snapshot: 19 October 2026, 09:49 UTC. This is a new successor to the [earlier overnight frontier](liouville_20261019_overnight_frontier.md); it does not overwrite that record. The [structural synthesis](preserved_structure_and_proof_transfer_20261019.md) explains the proof mechanisms. This document reports completed proofs and explicitly distinguishes unfinished work. It makes no claim that publication has completed or that historical novelty is established.
+Original snapshot: 19 October 2026, 09:49 UTC. Correction at 09:58 UTC: the height-three good-pair target below has been falsified by an explicit example that nevertheless satisfies strict Gold. Other sections retain their original snapshot scope. This is a new successor to the [earlier overnight frontier](liouville_20261019_overnight_frontier.md); it does not overwrite that record. The [structural synthesis](preserved_structure_and_proof_transfer_20261019.md) explains the proof mechanisms. This document reports completed proofs and explicitly distinguishes unfinished work. It makes no claim that publication has completed or that historical novelty is established.
 
 ## 1. Square-sum cycles: the prescribed seed is settled exactly
 
@@ -33,7 +33,15 @@ The [attributed good-pair synthesis](good_pair_gold_synthesis_20261019.md) prove
 
 A very good pair permits the required orientation. The [full height-two theorem](seven_thin_height_two_very_good_gold_20261019.md) proves that every finite non-total seven-thin height-at-most-two poset contains such a pair, hence has weak Gold. Isolated vertices are allowed. This strengthens the [earlier c=0 theorem](seven_thin_height_two_c0_very_good_pair_20261019.md): no critical pair or common-neighbor restriction is required. An elementary separated-set-family argument proves the structural result; ordinary height-two balance was already known. It does not assume that higher-height orders can be replaced by an incidence matrix.
 
-**Next structural hypothesis.** Every non-total seven-thin poset of height at most three contains a very good pair. This is unproved. A finite poset with no four-element chain, all incomparability degrees at most seven, and no very good pair in the poset or its dual is a complete falsifier. Failure would not disprove Gold; it would identify the need for a different strategy. Unlike the settled height-two case, both predecessor and successor data can vary at the middle level.
+**The proposed height-three structural hypothesis is false.** The [exact ten-point obstruction](height_three_seven_thin_no_good_pair_20261019.md), with predecessor masks
+
+    (0,0,0,6,0,19,2,18,86,151),
+
+has height three, maximum incomparability degree seven, and 11,971 extensions. It has no very good pair and, more strongly, no good pair in the poset or its dual: all 48 structurally eligible orientations have probability at least 6,547/11,971>1/2. It is rigid and has no half-probability comparison. Thus the earlier proposed extension of the height-two theorem is refuted.
+
+The example still has strict Gold. Compare (3,5), then (2,4), regardless of the first answer. The four cell counts are (3281,3281,1899,3510), giving deficits E−t₁−t₂ equal to (2128,2128,4663,3052). This distinguishes absence of a good pair from failure of Gold.
+
+**Remaining exact decision problem.** For a poset P, define G(P) as the maximum, over all two-comparison decision trees with endpoints in P, of the minimum E−t₁−t₂ over realized paths. The second comparison may depend on the first answer; determined and repeated comparisons are allowed. Then G(P)≥0 is exactly weak Gold under the stated convention. Is there a non-total seven-thin height-at-most-three poset with no good pair for which G(P)<0? The displayed example has G(P)≥2128, so does not answer that question. A negative answer requires a new certificate or coverage argument beyond the good-pair criterion; no replacement universal structural assertion is made here.
 
 ## 4. Seven-thin balance: the remaining maximum-span morphologies are explicit
 

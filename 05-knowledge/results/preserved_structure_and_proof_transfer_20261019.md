@@ -1,6 +1,6 @@
 # What must a repair preserve?
 
-Proof synthesis, 19 October 2026. This note separates established mechanisms from new research targets. It makes no historical-priority claim and does not settle the general Gold Partition, 1/3–2/3, Graceful Tree, Collatz, or planar Jacobian conjecture. The [companion frontier](liouville_20261019_overnight_frontier_after112.md) records exact scopes and remaining cases.
+Proof synthesis, 19 October 2026. Amended at 09:58 UTC with the height-three obstruction and its strict Gold certificate. This note separates established mechanisms from new research targets. It makes no historical-priority claim and does not settle the general Gold Partition, 1/3–2/3, Graceful Tree, Collatz, or planar Jacobian conjecture. The [companion frontier](liouville_20261019_overnight_frontier_after112.md) records exact scopes and remaining cases.
 
 ## 1. A precise transfer principle, and two different failure modes
 
@@ -28,6 +28,8 @@ The [chain-surplus theorem](chain_surplus_gold_theorem_20261019.md) replaces thr
 Zaguia's insertion swaps give decreasing bins; adjacent cuts at the half-mass crossing give the two-comparison weak Gold strategy. This combines explicitly attributed arguments, without asserting priority. Under skeleton-invariant reweighting the bin inequalities survive, but the half-probability condition must be tested again. For a very good pair, equal downsets and chain differences in both directions allow orientation using the current measure.
 
 The [initial height-two c=0 theorem](seven_thin_height_two_c0_very_good_pair_20261019.md) is now strengthened to [every non-total seven-thin height-at-most-two poset](seven_thin_height_two_very_good_gold_20261019.md), including isolated vertices. The proof uses actual all-vertex incomparability budgets: after choosing the larger level, a separated missing-incidence row family is too small, or forces a near column pair. Near means each directed set difference has size at most one, exactly the required very-good-pair condition. No critical-pair or common-neighbor restriction remains.
+
+The [ten-point height-three obstruction](height_three_seven_thin_no_good_pair_20261019.md) now shows that the height-two structural conclusion cannot be extended even to height three: the example is seven-thin and has no good pair in either orientation or dual, hence no very good pair. Nevertheless, comparing (3,5) and then (2,4) gives a strict Gold certificate with minimum deficit 2,128 among 11,971 extensions. Good-pair injections are therefore sufficient, not necessary, for the two-comparison inequality. Ordinal sums of copies preserve both the absence of good pairs and the normalized Gold margin; their height grows. A repair program must admit certificates without a distinguished good pair, rather than mistake failure of that structural search for failure of Gold.
 
 The endpoint boundary is concrete: two incomparable extra successors admit a six-point example with no Gold strategy confined to the four marked vertices, while an exterior endpoint gives a strict strategy. Keeping all witnesses inside the original gadget is too restrictive.
 
