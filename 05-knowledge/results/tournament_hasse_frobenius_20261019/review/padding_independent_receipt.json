@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "checks": {
+    "class_counts": 1,
+    "divided_power": 56,
+    "source_commutator": 15,
+    "integral_unimodularity": 6,
+    "hP_zero": 6,
+    "P_idempotent": 6,
+    "integral_diagonalization": 21,
+    "p_contraction": 17,
+    "carry_scalar": 16900,
+    "borrow_commutator": 1152,
+    "cyclic_embedding_blindness": 27
+  },
+  "class_counts": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12
+  ],
+  "source_free_ranks": [
+    1,
+    0,
+    0,
+    1,
+    2,
+    8
+  ],
+  "basis_determinants": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ]
+}

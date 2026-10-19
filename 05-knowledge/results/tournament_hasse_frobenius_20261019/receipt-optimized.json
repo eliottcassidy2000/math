@@ -1,0 +1,832 @@
+{
+  "abstract_embedding_d_cubed": [
+    [
+      6
+    ],
+    [
+      2
+    ]
+  ],
+  "checks_by_family": {
+    "abstract_embedding_not_p_nilpotent": 1,
+    "bareiss_exact_division": 12025,
+    "carry_support": 16900,
+    "digit_nilpotence_valuation": 16,
+    "embedding_lattice_integrality": 60,
+    "explicit_kernel_primitive": 12,
+    "full_digit_contraction": 147,
+    "hasse_escape": 1,
+    "integral_basis_left_inverse": 6,
+    "integral_basis_right_inverse": 6,
+    "integral_diagonalization": 15,
+    "integral_divided_power": 56,
+    "integral_source_relation": 106,
+    "kernel_image_rank": 52,
+    "labelled_isolate_erasure": 1,
+    "lucas_product": 16900,
+    "odd_tournament_automorphisms": 6,
+    "pointwise_reduction_p_nilpotent": 1,
+    "smith_determinantal_divisor": 20,
+    "source_free_basis_size": 6,
+    "triangle_embedding_blindness": 27,
+    "typed_composition": 468,
+    "unimodular_basis_determinant": 6,
+    "unsaturated_abstract_reduction_hostile": 1
+  },
+  "class_counts": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12
+  ],
+  "contractions": [
+    {
+      "base_degrees": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "digit": 0,
+      "prime": 2,
+      "step": 1,
+      "terms": 42
+    },
+    {
+      "base_degrees": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "digit": 0,
+      "prime": 3,
+      "step": 1,
+      "terms": 63
+    },
+    {
+      "base_degrees": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "digit": 0,
+      "prime": 5,
+      "step": 1,
+      "terms": 105
+    },
+    {
+      "base_degrees": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "digit": 0,
+      "prime": 7,
+      "step": 1,
+      "terms": 147
+    },
+    {
+      "base_degrees": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "digit": 1,
+      "prime": 2,
+      "step": 2,
+      "terms": 42
+    },
+    {
+      "base_degrees": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "digit": 2,
+      "prime": 2,
+      "step": 4,
+      "terms": 42
+    },
+    {
+      "base_degrees": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "digit": 1,
+      "prime": 3,
+      "step": 3,
+      "terms": 63
+    }
+  ],
+  "integral_smith_cases": [
+    {
+      "deletion_size": 1,
+      "diagonal_entries": [
+        1
+      ],
+      "free_cokernel_rank": 0,
+      "smith_invariant_factors": [
+        1
+      ],
+      "source_degree": 0
+    },
+    {
+      "deletion_size": 2,
+      "diagonal_entries": [
+        1
+      ],
+      "free_cokernel_rank": 0,
+      "smith_invariant_factors": [
+        1
+      ],
+      "source_degree": 0
+    },
+    {
+      "deletion_size": 3,
+      "diagonal_entries": [
+        1
+      ],
+      "free_cokernel_rank": 1,
+      "smith_invariant_factors": [
+        1
+      ],
+      "source_degree": 0
+    },
+    {
+      "deletion_size": 4,
+      "diagonal_entries": [
+        1
+      ],
+      "free_cokernel_rank": 3,
+      "smith_invariant_factors": [
+        1
+      ],
+      "source_degree": 0
+    },
+    {
+      "deletion_size": 5,
+      "diagonal_entries": [
+        1
+      ],
+      "free_cokernel_rank": 11,
+      "smith_invariant_factors": [
+        1
+      ],
+      "source_degree": 0
+    },
+    {
+      "deletion_size": 1,
+      "diagonal_entries": [
+        2
+      ],
+      "free_cokernel_rank": 0,
+      "smith_invariant_factors": [
+        2
+      ],
+      "source_degree": 1
+    },
+    {
+      "deletion_size": 2,
+      "diagonal_entries": [
+        3
+      ],
+      "free_cokernel_rank": 1,
+      "smith_invariant_factors": [
+        3
+      ],
+      "source_degree": 1
+    },
+    {
+      "deletion_size": 3,
+      "diagonal_entries": [
+        4
+      ],
+      "free_cokernel_rank": 3,
+      "smith_invariant_factors": [
+        4
+      ],
+      "source_degree": 1
+    },
+    {
+      "deletion_size": 4,
+      "diagonal_entries": [
+        5
+      ],
+      "free_cokernel_rank": 11,
+      "smith_invariant_factors": [
+        5
+      ],
+      "source_degree": 1
+    },
+    {
+      "deletion_size": 1,
+      "diagonal_entries": [
+        3
+      ],
+      "free_cokernel_rank": 1,
+      "smith_invariant_factors": [
+        3
+      ],
+      "source_degree": 2
+    },
+    {
+      "deletion_size": 2,
+      "diagonal_entries": [
+        6
+      ],
+      "free_cokernel_rank": 3,
+      "smith_invariant_factors": [
+        6
+      ],
+      "source_degree": 2
+    },
+    {
+      "deletion_size": 3,
+      "diagonal_entries": [
+        10
+      ],
+      "free_cokernel_rank": 11,
+      "smith_invariant_factors": [
+        10
+      ],
+      "source_degree": 2
+    },
+    {
+      "deletion_size": 1,
+      "diagonal_entries": [
+        4,
+        1
+      ],
+      "free_cokernel_rank": 2,
+      "smith_invariant_factors": [
+        1,
+        4
+      ],
+      "source_degree": 3
+    },
+    {
+      "deletion_size": 2,
+      "diagonal_entries": [
+        10,
+        1
+      ],
+      "free_cokernel_rank": 10,
+      "smith_invariant_factors": [
+        1,
+        10
+      ],
+      "source_degree": 3
+    },
+    {
+      "deletion_size": 1,
+      "diagonal_entries": [
+        5,
+        2,
+        1,
+        1
+      ],
+      "free_cokernel_rank": 8,
+      "smith_invariant_factors": [
+        1,
+        1,
+        1,
+        10
+      ],
+      "source_degree": 4
+    }
+  ],
+  "integral_source_free_counts": [
+    1,
+    0,
+    0,
+    1,
+    2,
+    8
+  ],
+  "rank_and_kernel_cases": [
+    {
+      "degree": 0,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 2
+    },
+    {
+      "degree": 1,
+      "dimension": 1,
+      "e": 0,
+      "image": 1,
+      "k": 1,
+      "kernel": 1,
+      "p": 2
+    },
+    {
+      "degree": 2,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 2
+    },
+    {
+      "degree": 3,
+      "dimension": 2,
+      "e": 0,
+      "image": 1,
+      "k": 1,
+      "kernel": 1,
+      "p": 2
+    },
+    {
+      "degree": 4,
+      "dimension": 4,
+      "e": 0,
+      "image": 1,
+      "k": 1,
+      "kernel": 1,
+      "p": 2
+    },
+    {
+      "degree": 0,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 3
+    },
+    {
+      "degree": 1,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 3
+    },
+    {
+      "degree": 2,
+      "dimension": 1,
+      "e": 0,
+      "image": 1,
+      "k": 1,
+      "kernel": 1,
+      "p": 3
+    },
+    {
+      "degree": 3,
+      "dimension": 2,
+      "e": 0,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 3
+    },
+    {
+      "degree": 4,
+      "dimension": 4,
+      "e": 0,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 3
+    },
+    {
+      "degree": 0,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 2,
+      "kernel": 0,
+      "p": 3
+    },
+    {
+      "degree": 1,
+      "dimension": 1,
+      "e": 0,
+      "image": 1,
+      "k": 2,
+      "kernel": 1,
+      "p": 3
+    },
+    {
+      "degree": 2,
+      "dimension": 1,
+      "e": 0,
+      "image": 1,
+      "k": 2,
+      "kernel": 1,
+      "p": 3
+    },
+    {
+      "degree": 3,
+      "dimension": 2,
+      "e": 0,
+      "image": 0,
+      "k": 2,
+      "kernel": 0,
+      "p": 3
+    },
+    {
+      "degree": 0,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 5
+    },
+    {
+      "degree": 1,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 5
+    },
+    {
+      "degree": 2,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 5
+    },
+    {
+      "degree": 3,
+      "dimension": 2,
+      "e": 0,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 5
+    },
+    {
+      "degree": 4,
+      "dimension": 4,
+      "e": 0,
+      "image": 1,
+      "k": 1,
+      "kernel": 1,
+      "p": 5
+    },
+    {
+      "degree": 0,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 2,
+      "kernel": 0,
+      "p": 5
+    },
+    {
+      "degree": 1,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 2,
+      "kernel": 0,
+      "p": 5
+    },
+    {
+      "degree": 2,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 2,
+      "kernel": 0,
+      "p": 5
+    },
+    {
+      "degree": 3,
+      "dimension": 2,
+      "e": 0,
+      "image": 1,
+      "k": 2,
+      "kernel": 1,
+      "p": 5
+    },
+    {
+      "degree": 0,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 3,
+      "kernel": 0,
+      "p": 5
+    },
+    {
+      "degree": 1,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 3,
+      "kernel": 0,
+      "p": 5
+    },
+    {
+      "degree": 2,
+      "dimension": 1,
+      "e": 0,
+      "image": 1,
+      "k": 3,
+      "kernel": 1,
+      "p": 5
+    },
+    {
+      "degree": 0,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 4,
+      "kernel": 0,
+      "p": 5
+    },
+    {
+      "degree": 1,
+      "dimension": 1,
+      "e": 0,
+      "image": 1,
+      "k": 4,
+      "kernel": 1,
+      "p": 5
+    },
+    {
+      "degree": 0,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 7
+    },
+    {
+      "degree": 1,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 7
+    },
+    {
+      "degree": 2,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 7
+    },
+    {
+      "degree": 3,
+      "dimension": 2,
+      "e": 0,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 7
+    },
+    {
+      "degree": 4,
+      "dimension": 4,
+      "e": 0,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 7
+    },
+    {
+      "degree": 0,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 2,
+      "kernel": 0,
+      "p": 7
+    },
+    {
+      "degree": 1,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 2,
+      "kernel": 0,
+      "p": 7
+    },
+    {
+      "degree": 2,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 2,
+      "kernel": 0,
+      "p": 7
+    },
+    {
+      "degree": 3,
+      "dimension": 2,
+      "e": 0,
+      "image": 0,
+      "k": 2,
+      "kernel": 0,
+      "p": 7
+    },
+    {
+      "degree": 0,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 3,
+      "kernel": 0,
+      "p": 7
+    },
+    {
+      "degree": 1,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 3,
+      "kernel": 0,
+      "p": 7
+    },
+    {
+      "degree": 2,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 3,
+      "kernel": 0,
+      "p": 7
+    },
+    {
+      "degree": 0,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 4,
+      "kernel": 0,
+      "p": 7
+    },
+    {
+      "degree": 1,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 4,
+      "kernel": 0,
+      "p": 7
+    },
+    {
+      "degree": 0,
+      "dimension": 1,
+      "e": 0,
+      "image": 0,
+      "k": 5,
+      "kernel": 0,
+      "p": 7
+    },
+    {
+      "degree": 0,
+      "dimension": 1,
+      "e": 1,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 2
+    },
+    {
+      "degree": 1,
+      "dimension": 1,
+      "e": 1,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 2
+    },
+    {
+      "degree": 2,
+      "dimension": 1,
+      "e": 1,
+      "image": 1,
+      "k": 1,
+      "kernel": 1,
+      "p": 2
+    },
+    {
+      "degree": 3,
+      "dimension": 2,
+      "e": 1,
+      "image": 1,
+      "k": 1,
+      "kernel": 1,
+      "p": 2
+    },
+    {
+      "degree": 0,
+      "dimension": 1,
+      "e": 2,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 2
+    },
+    {
+      "degree": 1,
+      "dimension": 1,
+      "e": 2,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 2
+    },
+    {
+      "degree": 0,
+      "dimension": 1,
+      "e": 1,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 3
+    },
+    {
+      "degree": 1,
+      "dimension": 1,
+      "e": 1,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 3
+    },
+    {
+      "degree": 2,
+      "dimension": 1,
+      "e": 1,
+      "image": 0,
+      "k": 1,
+      "kernel": 0,
+      "p": 3
+    }
+  ],
+  "scope": "All class-basis functions at degrees 0..5 for seven prime/digit pairs; integral matrix identities through degree five; bounded ranks and explicit primitives when target degree <=5; all 27 oriented order-three source graphs at cyclic host; scalar Lucas/carry atlas 0<=a,b<=64 and p=2,3,5,7; integral source-free induced-count basis and two-sided inverse through degree five; all positive subset-deletion Smith matrices with target degree at most five, independently checked through every determinantal divisor. Universal theorems are proved in PADDING_FROBENIUS_PROOF.md.",
+  "status": "PASS",
+  "total_checks": 46839,
+  "triangle_embedding_counts": [
+    6,
+    3,
+    3,
+    3,
+    0,
+    3,
+    3,
+    3,
+    0,
+    3,
+    3,
+    0,
+    0,
+    0,
+    0,
+    3,
+    3,
+    0,
+    3,
+    0,
+    3,
+    3,
+    0,
+    3,
+    0,
+    0,
+    0
+  ],
+  "triangle_host_mask": 2
+}

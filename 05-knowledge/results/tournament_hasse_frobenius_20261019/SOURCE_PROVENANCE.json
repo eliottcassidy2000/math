@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-19",
+  "repository_commit": "4288fc00d901",
+  "inherited_sources": [
+    {
+      "path": "05-knowledge/results/tournament_padding_complex_20261019/PADDING_COMPLEX.md",
+      "sha256": "cd61a0fb35a36e982f5115e4d54243ce27d6fdd3d5130a64ec5b37f0ea3be9b5"
+    },
+    {
+      "path": "01-canon/theorems/THM-4210-rule30-lossless-dyadic-block-current-cartier-tree.md",
+      "sha256": "c568a93f3f016dc8348f6825b1625263dbbf81cbcb16d2b6f216d76e6d44de39"
+    },
+    {
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "737c1142a96b88a0d2a895ae2ba7899d6722653544d8bfbab0b867af3996b621"
+    }
+  ],
+  "external_framework_source": {
+    "author": "M. M. Kapranov",
+    "title": "On the q-analog of homological algebra",
+    "url": "https://arxiv.org/html/q-alg/9611005v1",
+    "sections": [
+      "Definition 0.1",
+      "Definition 1.1"
+    ],
+    "use": "Terminology/framework attribution only; no theorem imported"
+  },
+  "priority_boundary": "No external priority claim; N-complexes, divided powers, and Lucas arithmetic are classical."
+}
