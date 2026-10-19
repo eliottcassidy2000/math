@@ -54,6 +54,8 @@ The bounded search succeeds for all 528 admitted primitive triples of hypotenuse
 
 12. For every fixed count `r`, odd cusp sections and an amplified circle argument give `r` pairwise distinct contacts at either port, all with polynomial numerical height in the seed. This permits avoidance of fewer than `r` forbidden petals without their heights entering the output bound. Consequently every fixed odd cycle length can be realized through the three integer-square-scaled seed labels, with polynomial numerical labels; the exponent may depend on the length. Fixed rooted trees of petals can likewise be glued as non-induced contact subgraphs. See [fixed-count contacts and finite gluing](square_sum_fixed_count_contacts_20261019.md). These are sparse selected-label constructions, with no consecutive-interval or graceful-rank conclusion.
 
+13. The neighbor-count dependence is now uniform: requesting `r` distinct contacts takes time polynomial in `r` and the seed bit length, with per-output bits `O(r^8 log²(r+1)(log C+log(r+1)))`. Integer polynomial arrays control the entire cutoff construction; no factor-height assumption or unevaluated symbolic-expression cost is hidden. This retains linear seed-bit growth, unlike the simpler global-recurrence construction with cubic seed-bit growth. See [uniform-count height and complexity](square_sum_uniform_count_contacts_20261019.md). It is polynomial in `r`, not merely its binary encoding length, and does not give polynomial complexity for a growing contact chain.
+
 ## 4. Odd zeta and graph geometry: exact maps
 
 The signed primitive-triangle Dirichlet series is
@@ -81,7 +83,7 @@ See [graceful exchange packet](graceful_square_exchange_20261019.md). Neither co
 
 ### A. Quantitative Pythagorean contact construction
 
-For either prescribed port and every fixed count, finite rational-section atlases now give distinct neighbors and finite forbidden-set avoidance with polynomial numerical height. This yields polynomial label bounds for each fixed-size fan, odd cycle, or rooted tree of petals through a square-scaled seed. The remaining quantitative questions concern dependence on a growing requested count or chain length, and prescribed narrow spread windows. None of these sparse constructions supplies consecutive-interval coverage or a graceful labeling of a prescribed tree shape.
+For either prescribed port, the requested number of distinct neighbors is now handled with polynomial dependence on that count and essentially linear dependence on seed bit length. Finite forbidden-set avoidance and fixed-size fan/cycle/tree gluing are established. The remaining quantitative bottleneck is controlling label growth through a growing chain, rather than at a single anchor; prescribed narrow spread windows and simultaneous contacts to multiple existing petals are also separate constraints. None of the sparse constructions supplies consecutive-interval coverage or a graceful labeling of a prescribed tree shape.
 
 ### B. Denominator-controlled common-neighbor gluing
 

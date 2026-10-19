@@ -1,0 +1,335 @@
+{
+  "checks": {
+    "exact_integer": 94,
+    "exact_rational": 64,
+    "exact_symbolic": 2,
+    "exact_symbolic_jet": 53
+  },
+  "cutoff_controls": [
+    {
+      "J": 13,
+      "b": 11,
+      "coefficient_bits": 10
+    },
+    {
+      "J": 23,
+      "b": 21,
+      "coefficient_bits": 20
+    },
+    {
+      "J": 33,
+      "b": 31,
+      "coefficient_bits": 30
+    },
+    {
+      "J": 6,
+      "b": 4,
+      "coefficient_bits": 1
+    }
+  ],
+  "ports": [
+    {
+      "jets": [
+        {
+          "d": 3,
+          "v_constant": "1",
+          "v_linear": "3",
+          "z_constant": "2"
+        },
+        {
+          "d": 5,
+          "v_constant": "1",
+          "v_linear": "5",
+          "z_constant": "2"
+        },
+        {
+          "d": 7,
+          "v_constant": "1",
+          "v_linear": "7",
+          "z_constant": "2"
+        }
+      ],
+      "polynomials": [
+        {
+          "degree": 0,
+          "n": 1,
+          "norm_bits": 1
+        },
+        {
+          "degree": 0,
+          "n": 2,
+          "norm_bits": 1
+        },
+        {
+          "degree": 14,
+          "n": 3,
+          "norm_bits": 37
+        },
+        {
+          "degree": 21,
+          "n": 4,
+          "norm_bits": 55
+        },
+        {
+          "degree": 42,
+          "n": 5,
+          "norm_bits": 109
+        },
+        {
+          "degree": 56,
+          "n": 6,
+          "norm_bits": 144
+        },
+        {
+          "degree": 84,
+          "n": 7,
+          "norm_bits": 216
+        },
+        {
+          "degree": 105,
+          "n": 8,
+          "norm_bits": 269
+        },
+        {
+          "degree": 140,
+          "n": 9,
+          "norm_bits": 360
+        },
+        {
+          "degree": 168,
+          "n": 10,
+          "norm_bits": 431
+        },
+        {
+          "degree": 210,
+          "n": 11,
+          "norm_bits": 539
+        },
+        {
+          "degree": 245,
+          "n": 12,
+          "norm_bits": 630
+        },
+        {
+          "degree": 294,
+          "n": 13,
+          "norm_bits": 755
+        },
+        {
+          "degree": 336,
+          "n": 14,
+          "norm_bits": 863
+        }
+      ],
+      "port": 1,
+      "rational_probes": [
+        {
+          "admissible": true,
+          "d": 3,
+          "h": "1/64",
+          "parameter_bits": 72
+        },
+        {
+          "admissible": true,
+          "d": 5,
+          "h": "1/64",
+          "parameter_bits": 215
+        },
+        {
+          "admissible": true,
+          "d": 7,
+          "h": "1/64",
+          "parameter_bits": 437
+        },
+        {
+          "admissible": true,
+          "d": 3,
+          "h": "1/1024",
+          "parameter_bits": 116
+        },
+        {
+          "admissible": true,
+          "d": 5,
+          "h": "1/1024",
+          "parameter_bits": 347
+        },
+        {
+          "admissible": true,
+          "d": 7,
+          "h": "1/1024",
+          "parameter_bits": 704
+        },
+        {
+          "admissible": false,
+          "d": 3,
+          "h": "1/8",
+          "parameter_bits": 40
+        },
+        {
+          "admissible": false,
+          "d": 5,
+          "h": "1/8",
+          "parameter_bits": 120
+        },
+        {
+          "admissible": false,
+          "d": 7,
+          "h": "1/8",
+          "parameter_bits": 244
+        }
+      ]
+    },
+    {
+      "jets": [
+        {
+          "d": 3,
+          "v_constant": "1",
+          "v_linear": "3",
+          "z_constant": "-2"
+        },
+        {
+          "d": 5,
+          "v_constant": "1",
+          "v_linear": "5",
+          "z_constant": "-2"
+        },
+        {
+          "d": 7,
+          "v_constant": "1",
+          "v_linear": "7",
+          "z_constant": "-2"
+        }
+      ],
+      "polynomials": [
+        {
+          "degree": 0,
+          "n": 1,
+          "norm_bits": 1
+        },
+        {
+          "degree": 0,
+          "n": 2,
+          "norm_bits": 1
+        },
+        {
+          "degree": 14,
+          "n": 3,
+          "norm_bits": 33
+        },
+        {
+          "degree": 21,
+          "n": 4,
+          "norm_bits": 49
+        },
+        {
+          "degree": 42,
+          "n": 5,
+          "norm_bits": 98
+        },
+        {
+          "degree": 56,
+          "n": 6,
+          "norm_bits": 131
+        },
+        {
+          "degree": 84,
+          "n": 7,
+          "norm_bits": 197
+        },
+        {
+          "degree": 105,
+          "n": 8,
+          "norm_bits": 246
+        },
+        {
+          "degree": 140,
+          "n": 9,
+          "norm_bits": 327
+        },
+        {
+          "degree": 168,
+          "n": 10,
+          "norm_bits": 392
+        },
+        {
+          "degree": 210,
+          "n": 11,
+          "norm_bits": 491
+        },
+        {
+          "degree": 245,
+          "n": 12,
+          "norm_bits": 572
+        },
+        {
+          "degree": 294,
+          "n": 13,
+          "norm_bits": 687
+        },
+        {
+          "degree": 336,
+          "n": 14,
+          "norm_bits": 785
+        }
+      ],
+      "port": -1,
+      "rational_probes": [
+        {
+          "admissible": true,
+          "d": 3,
+          "h": "1/64",
+          "parameter_bits": 72
+        },
+        {
+          "admissible": true,
+          "d": 5,
+          "h": "1/64",
+          "parameter_bits": 215
+        },
+        {
+          "admissible": true,
+          "d": 7,
+          "h": "1/64",
+          "parameter_bits": 436
+        },
+        {
+          "admissible": true,
+          "d": 3,
+          "h": "1/1024",
+          "parameter_bits": 116
+        },
+        {
+          "admissible": true,
+          "d": 5,
+          "h": "1/1024",
+          "parameter_bits": 347
+        },
+        {
+          "admissible": true,
+          "d": 7,
+          "h": "1/1024",
+          "parameter_bits": 704
+        },
+        {
+          "admissible": false,
+          "d": 3,
+          "h": "1/8",
+          "parameter_bits": 39
+        },
+        {
+          "admissible": false,
+          "d": 5,
+          "h": "1/8",
+          "parameter_bits": 117
+        },
+        {
+          "admissible": false,
+          "d": 7,
+          "h": "1/8",
+          "parameter_bits": 237
+        }
+      ]
+    }
+  ],
+  "status": "FINITE-EXACT"
+}
