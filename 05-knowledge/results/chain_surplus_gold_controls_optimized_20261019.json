@@ -1,0 +1,174 @@
+{
+  "status": "EXACT_CONTROLS_PASSED",
+  "scope": "All-size theorem proved symbolically; finite controls through six vertices and monotone-bin lengths through seven.",
+  "stats": {
+    "integer_monotone_laws": 912,
+    "posets": 5228,
+    "skeleton_laws": 335382,
+    "marked_gadgets": 14450
+  },
+  "gadget_counts_by_extra_chain_length": {
+    "1": 11518,
+    "2": 2652,
+    "3": 268,
+    "4": 12
+  },
+  "digest": "1f4edecd341ec08cefd36c8abc0850f120b20c1784ddd682f23c1b01a321a9d3",
+  "incomparable_extra_endpoint_obstruction": {
+    "pred": [
+      0,
+      0,
+      1,
+      7,
+      3,
+      1
+    ],
+    "u": 0,
+    "v": 1,
+    "extras": [
+      2,
+      5
+    ],
+    "extensions": 37,
+    "optimized_first_pair_rows": [
+      {
+        "first_pair": [
+          0,
+          1
+        ],
+        "branches": [
+          {
+            "answer": false,
+            "survivors": 12,
+            "best_larger_second_cell": 8,
+            "deficit": 17
+          },
+          {
+            "answer": true,
+            "survivors": 25,
+            "best_larger_second_cell": 15,
+            "deficit": -3
+          }
+        ],
+        "best_worst_deficit": -3
+      },
+      {
+        "first_pair": [
+          0,
+          2
+        ],
+        "branches": [
+          {
+            "answer": true,
+            "survivors": 37,
+            "best_larger_second_cell": 24,
+            "deficit": -24
+          }
+        ],
+        "best_worst_deficit": -24
+      },
+      {
+        "first_pair": [
+          0,
+          5
+        ],
+        "branches": [
+          {
+            "answer": true,
+            "survivors": 37,
+            "best_larger_second_cell": 24,
+            "deficit": -24
+          }
+        ],
+        "best_worst_deficit": -24
+      },
+      {
+        "first_pair": [
+          1,
+          2
+        ],
+        "branches": [
+          {
+            "answer": false,
+            "survivors": 10,
+            "best_larger_second_cell": 6,
+            "deficit": 21
+          },
+          {
+            "answer": true,
+            "survivors": 27,
+            "best_larger_second_cell": 15,
+            "deficit": -5
+          }
+        ],
+        "best_worst_deficit": -5
+      },
+      {
+        "first_pair": [
+          1,
+          5
+        ],
+        "branches": [
+          {
+            "answer": false,
+            "survivors": 7,
+            "best_larger_second_cell": 4,
+            "deficit": 26
+          },
+          {
+            "answer": true,
+            "survivors": 30,
+            "best_larger_second_cell": 18,
+            "deficit": -11
+          }
+        ],
+        "best_worst_deficit": -11
+      },
+      {
+        "first_pair": [
+          2,
+          5
+        ],
+        "branches": [
+          {
+            "answer": false,
+            "survivors": 13,
+            "best_larger_second_cell": 8,
+            "deficit": 16
+          },
+          {
+            "answer": true,
+            "survivors": 24,
+            "best_larger_second_cell": 16,
+            "deficit": -3
+          }
+        ],
+        "best_worst_deficit": -3
+      }
+    ],
+    "best_restricted_deficit": -3,
+    "unrestricted_strategy": {
+      "comparisons": [
+        [
+          4,
+          5
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "table_false_true": [
+        [
+          11,
+          11
+        ],
+        [
+          2,
+          13
+        ]
+      ],
+      "minimum_deficit": 4
+    }
+  }
+}
