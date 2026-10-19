@@ -1,0 +1,17 @@
+{
+  "packet": 119,
+  "status": "PASS",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "checks": 726,
+  "commands": [
+    "python -B 04-computation/experiments/planar_joint_boundary_newton_cone_20261019.py",
+    "python -B -O 04-computation/experiments/planar_joint_boundary_newton_cone_20261019.py"
+  ],
+  "normal_output": "05-knowledge/results/planar_joint_boundary_newton_cone_20261019.json",
+  "optimized_output": "05-knowledge/results/planar_joint_boundary_newton_cone_20261019_optimized.json",
+  "normal_sha256": "e560c82b13b2718f645eeaeacc536766e76d8d9f068edaf0a397b8d84d08aedd",
+  "optimized_sha256": "e560c82b13b2718f645eeaeacc536766e76d8d9f068edaf0a397b8d84d08aedd",
+  "byte_identical": true,
+  "scope": "Finite exact controls; universal conclusion and conditional closure corollary use the written proof and cited fixed-line theorem."
+}

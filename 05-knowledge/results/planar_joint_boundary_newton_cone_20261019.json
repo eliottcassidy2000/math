@@ -1,0 +1,131 @@
+{
+  "R_controls": [
+    {
+      "R": "1",
+      "boundary_velocity": "s**4",
+      "weight_H": 4,
+      "weight_R": 0
+    },
+    {
+      "R": "x",
+      "boundary_velocity": "-s**3",
+      "weight_H": 3,
+      "weight_R": -1
+    },
+    {
+      "R": "x**2",
+      "boundary_velocity": "s**2",
+      "weight_H": 2,
+      "weight_R": -2
+    },
+    {
+      "R": "t",
+      "boundary_velocity": "-s**6",
+      "weight_H": 6,
+      "weight_R": 2
+    },
+    {
+      "R": "t*x",
+      "boundary_velocity": "s**5",
+      "weight_H": 5,
+      "weight_R": 1
+    },
+    {
+      "R": "t*x**2",
+      "boundary_velocity": "-s**4",
+      "weight_H": 4,
+      "weight_R": 0
+    },
+    {
+      "R": "t*x**3",
+      "boundary_velocity": "s**3",
+      "weight_H": 3,
+      "weight_R": -1
+    },
+    {
+      "R": "t*x**4",
+      "boundary_velocity": "-s**2",
+      "weight_H": 2,
+      "weight_R": -2
+    },
+    {
+      "R": "t**2",
+      "boundary_velocity": "s**8",
+      "weight_H": 8,
+      "weight_R": 4
+    },
+    {
+      "R": "t**2*x",
+      "boundary_velocity": "-s**7",
+      "weight_H": 7,
+      "weight_R": 3
+    },
+    {
+      "R": "t**2*x**2",
+      "boundary_velocity": "s**6",
+      "weight_H": 6,
+      "weight_R": 2
+    },
+    {
+      "R": "t**2*x**3",
+      "boundary_velocity": "-s**5",
+      "weight_H": 5,
+      "weight_R": 1
+    },
+    {
+      "R": "t**2*x**4",
+      "boundary_velocity": "s**4",
+      "weight_H": 4,
+      "weight_R": 0
+    },
+    {
+      "R": "t**2*x**5",
+      "boundary_velocity": "-s**3",
+      "weight_H": 3,
+      "weight_R": -1
+    },
+    {
+      "R": "t**2*x**6",
+      "boundary_velocity": "s**2",
+      "weight_H": 2,
+      "weight_R": -2
+    },
+    {
+      "R": "x**2 + x + 1",
+      "boundary_velocity": "s**4 - s**3 + s**2",
+      "weight_H": 2,
+      "weight_R": -2
+    },
+    {
+      "R": "x**2*(t*x**2 + 1)",
+      "boundary_velocity": "0",
+      "weight_H": 2,
+      "weight_R": -2
+    },
+    {
+      "R": "t**2*x + t*x**4",
+      "boundary_velocity": "-s**7 - s**2",
+      "weight_H": 2,
+      "weight_R": -2
+    }
+  ],
+  "checks": 726,
+  "finite_word_controls": 3,
+  "input_polynomials_per_R": 6,
+  "partial_exponential_order": 2,
+  "scope": "Finite controls of the written universal theorem; no unrestricted Jacobian claim.",
+  "status": "PASS",
+  "weight_stability_bounds": [
+    -1,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}
