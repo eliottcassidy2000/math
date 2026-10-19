@@ -1,0 +1,5 @@
+q=3: 9 vertices, 18 edges; exactly 6 fail; every straight p-cycle has exactly one failure. OPTIMAL by cycle bound.
+Rigidity rank 12; stress dimension 6, with 0 beyond the 6 disjoint-cycle stresses.
+q=5: 25 vertices, 75 edges; exactly 15 fail; every straight p-cycle has exactly one failure. OPTIMAL by cycle bound.
+Rigidity rank 47; stress dimension 28, with 13 beyond the 15 disjoint-cycle stresses.
+INDEPENDENT DIRECT NORM CHECKS PASSED

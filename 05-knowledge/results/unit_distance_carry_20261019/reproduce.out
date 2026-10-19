@@ -1,0 +1,20 @@
+EXACT CHECKS PASSED
+p=3: rank=2, augmented=3, stress defect=2
+p=5: rank=4, augmented=5, stress defect=2
+p=7: rank=6, augmented=7, stress defect=2
+p=11: rank=10, augmented=11, stress defect=2
+p=13: rank=12, augmented=13, stress defect=2
+p=17: rank=16, augmented=17, stress defect=2
+p=19: rank=18, augmented=19, stress defect=2
+p=23: rank=22, augmented=23, stress defect=2
+p=29: rank=28, augmented=29, stress defect=2
+p=31: rank=30, augmented=31, stress defect=2
+p=43: rank=42, augmented=43, stress defect=2
+p=53: rank=52, augmented=53, stress defect=2
+p=101: rank=100, augmented=101, stress defect=2
+independent p=3: 3 permitted steps, zero reachable=False
+independent p=5: 5 permitted steps, zero reachable=False
+independent p=7: 7 permitted steps, zero reachable=False
+independent p=11: 11 permitted steps, zero reachable=False
+Sharp degree-divisible-by-p and equal-characteristic controls pass.
+Tensor diagonal/projection controls pass for q=3,5,7.

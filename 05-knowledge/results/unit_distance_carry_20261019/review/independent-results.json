@@ -1,0 +1,158 @@
+{
+  "local_norm_one_checks": [
+    {
+      "p": 2,
+      "depth": 1,
+      "unit_count": 3,
+      "hilbert90_quotients_equal_norm_one": true
+    },
+    {
+      "p": 2,
+      "depth": 2,
+      "unit_count": 6,
+      "hilbert90_quotients_equal_norm_one": true
+    },
+    {
+      "p": 2,
+      "depth": 3,
+      "unit_count": 12,
+      "hilbert90_quotients_equal_norm_one": true
+    },
+    {
+      "p": 3,
+      "depth": 1,
+      "unit_count": 4,
+      "hilbert90_quotients_equal_norm_one": true
+    },
+    {
+      "p": 3,
+      "depth": 2,
+      "unit_count": 12,
+      "hilbert90_quotients_equal_norm_one": true
+    },
+    {
+      "p": 5,
+      "depth": 2,
+      "unit_count": 30,
+      "hilbert90_quotients_equal_norm_one": true
+    },
+    {
+      "p": 7,
+      "depth": 2,
+      "unit_count": 56,
+      "hilbert90_quotients_equal_norm_one": true
+    }
+  ],
+  "mixed_depth_additive_generation": [
+    {
+      "p": 2,
+      "depths": [
+        1,
+        2
+      ],
+      "vertices_generated": 64,
+      "full_vertex_image": true
+    },
+    {
+      "p": 3,
+      "depths": [
+        1,
+        2
+      ],
+      "vertices_generated": 729,
+      "full_vertex_image": true
+    }
+  ],
+  "prime_power_residue_carry": {
+    "p": 3,
+    "q": 9,
+    "base_nonsquare": [
+      1,
+      1
+    ],
+    "steps_reducing_to_one": 9,
+    "three_step_endpoints": 9,
+    "zero_endpoint_possible": false
+  },
+  "independently_checked_defect_witnesses": [
+    {
+      "p": 3,
+      "edges": 18,
+      "straight_cycles": 6,
+      "failed_edges": 6,
+      "one_failure_per_cycle": true,
+      "exact_minimum_defect": 6
+    },
+    {
+      "p": 5,
+      "edges": 75,
+      "straight_cycles": 15,
+      "failed_edges": 15,
+      "one_failure_per_cycle": true,
+      "exact_minimum_defect": 15
+    }
+  ],
+  "rigidity_barrier_sharpness": {
+    "p": 17,
+    "vertices": 7,
+    "edges": 11,
+    "rigidity_rank": 11,
+    "independent_minor_columns": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "minor_determinant_mod_p": 15,
+    "chromatic_number": 4,
+    "degeneracy": 3,
+    "exact_lift_moduli": [
+      289,
+      4913
+    ]
+  },
+  "higher_depth_cycle_checks": [
+    {
+      "p": 3,
+      "lower_depth": 2,
+      "cycle_length": 9,
+      "upper_depth": 3,
+      "permitted_steps": 3,
+      "zero_endpoint_possible": false,
+      "depth_r_q3_three_coloring_checked": true
+    },
+    {
+      "p": 3,
+      "lower_depth": 3,
+      "cycle_length": 27,
+      "upper_depth": 4,
+      "permitted_steps": 3,
+      "zero_endpoint_possible": false,
+      "depth_r_q3_three_coloring_checked": true
+    },
+    {
+      "p": 5,
+      "lower_depth": 2,
+      "cycle_length": 25,
+      "upper_depth": 3,
+      "permitted_steps": 5,
+      "zero_endpoint_possible": false,
+      "depth_r_q3_three_coloring_checked": null
+    }
+  ],
+  "field_application": {
+    "p": 29,
+    "cubic_roots": [
+      3
+    ],
+    "remaining_quadratic_discriminant": 10,
+    "discriminant_is_nonsquare": true
+  }
+}

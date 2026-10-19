@@ -1,0 +1,5 @@
+EXACT RIGIDITY BARRIER CONTROL PASSED
+Moser spindle over F_17^2: 7 distinct vertices, exactly 11 unit edges, rank 11.
+All 2187 labeled three-color assignments fail; explicit four-coloring passes.
+All 120 induced subgraphs with at least two vertices satisfy m <= 2v-3.
+Exact carry solutions give distinct-vertex lifts modulo 17^2 and 17^3.
