@@ -1,0 +1,22 @@
+{
+  "date_utc": "2026-10-19",
+  "verdict": "PASS",
+  "mathematical_changes_required": false,
+  "review_status_wording_at_audit": "Independent audit pending in source; this review completes the audit.",
+  "packages": {
+    "session3-parabolic": {
+      "MANIFEST.sha256": "4762e3f1356a0324a1026ba7004e550e0ce2acd0dd8f6b7c4e314b628d0d1e9a",
+      "README.md": "c6cd7bd015dc89d9ea7b6de5060e19cdab2eb069918e2a3ac6134c886c8710bd",
+      "parabolic_escape_precision_20261019.md": "b95f7e6f7f307b17bc6937bf6d11e4246cd2fbcbe7082167132f523294c8b21a",
+      "parabolic_escape_precision_20261019.out": "abc9449c1555c7e7d81aea5fb6430ca99bde2f6a723d097e22f1d93021e9909c",
+      "verify_parabolic_escape_precision_20261019.py": "14bc9234834566a1c418c8a45e0f0c4170ac04bc2b3626c5ef2e66b2a824c538"
+    },
+    "session3-parabolic-next-order": {
+      "MANIFEST.sha256": "62baa690a252c1899d4da9a4da249e41e035c0ba2194be7e9e1c5604b341b3e9",
+      "README.md": "a5484d525460995e024902f8ac106eeb34f43faa20fc013017a985c4457e641a",
+      "parabolic_escape_next_order_20261019.md": "0982c26e4ba12643eb4506f595d0a05fda2c92346d56bff722d4e8a2260d1004",
+      "parabolic_escape_next_order_20261019.out": "0cf9669ae77da9494f7f384e1ca46fb1dd88213328f5e57ddee82c14113ad397",
+      "verify_parabolic_escape_next_order_20261019.py": "ec5836b561d3c6185778d48bcaac58a1f161b0a8ba41aad227715ea6944f673b"
+    }
+  }
+}

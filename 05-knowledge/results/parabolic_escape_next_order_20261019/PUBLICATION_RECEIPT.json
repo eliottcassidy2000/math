@@ -1,0 +1,64 @@
+{
+  "date_utc": "2026-10-19",
+  "destination": "05-knowledge/results/parabolic_escape_next_order_20261019/",
+  "status": "PROVED; independent audit PASS; finite controls separately labeled",
+  "predecessor_manifests_sha256": {
+    "initial_phase": "4762e3f1356a0324a1026ba7004e550e0ce2acd0dd8f6b7c4e314b628d0d1e9a",
+    "next_order": "62baa690a252c1899d4da9a4da249e41e035c0ba2194be7e9e1c5604b341b3e9",
+    "independent_review": "3ac0d3bcdf289f81b4bd06b05dc729280cf1833ac7839320e62d561b4118dc5d"
+  },
+  "initial_dependency": {
+    "relative_path": "../parabolic_escape_precision_20261019/parabolic_escape_precision_20261019.md",
+    "sha256": "b95f7e6f7f307b17bc6937bf6d11e4246cd2fbcbe7082167132f523294c8b21a"
+  },
+  "review_copies": "All files under review/ are byte-identical to the reviewed packet; its own MANIFEST.sha256 is retained.",
+  "source_transformations": [
+    {
+      "path": "parabolic_escape_next_order_20261019.md",
+      "predecessor_sha256": "0982c26e4ba12643eb4506f595d0a05fda2c92346d56bff722d4e8a2260d1004",
+      "published_sha256": "f4554b389f9297f69566d1a65c58c9ff421eae2eac7ae9b61c75549ef42933cd",
+      "changes": "Review-completion wording and relative links only; equations and proof unchanged."
+    },
+    {
+      "path": "README.md",
+      "predecessor_sha256": "a5484d525460995e024902f8ac106eeb34f43faa20fc013017a985c4457e641a",
+      "published_sha256": "ae3f8c6835661f6082ab2d1c888cc648da3733af2abfea850d6ccd2e5e83c6af",
+      "changes": "Review-completion wording and relative links only."
+    }
+  ],
+  "unchanged_source_files": [
+    {
+      "path": "verify_parabolic_escape_next_order_20261019.py",
+      "sha256": "ec5836b561d3c6185778d48bcaac58a1f161b0a8ba41aad227715ea6944f673b"
+    },
+    {
+      "path": "parabolic_escape_next_order_20261019.out",
+      "sha256": "0cf9669ae77da9494f7f384e1ca46fb1dd88213328f5e57ddee82c14113ad397"
+    }
+  ],
+  "scope": "No mathematical changes relative to the independently audited next-order theorem. No worldwide novelty claim. The initial phase checkpoint is unchanged.",
+  "reproduction": {
+    "python": "3.12.14",
+    "mpmath": "1.3.0",
+    "sympy": "1.14.0",
+    "commands": [
+      {
+        "cwd": ".",
+        "command": "python verify_parabolic_escape_next_order_20261019.py",
+        "captured_output": "parabolic_escape_next_order_20261019.out",
+        "result": "PASS; fresh output byte-matches captured output"
+      },
+      {
+        "cwd": "review/",
+        "command": "python independent_phase_controls.py",
+        "captured_output": "independent_phase_controls.out",
+        "result": "PASS; fresh output byte-matches captured output"
+      },
+      {
+        "cwd": "review/",
+        "command": "sha256sum -c MANIFEST.sha256",
+        "result": "PASS; every independent-review source and receipt unchanged"
+      }
+    ]
+  }
+}

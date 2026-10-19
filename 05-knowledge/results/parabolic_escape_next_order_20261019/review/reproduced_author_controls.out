@@ -1,0 +1,9 @@
+NUMERICAL: 15 improved-clock and exact derivative controls passed
+NUMERICAL: 6 endpoint-side regimes passed
+NUMERICAL: threshold residual after universal pi*delta/3 correction
+n | delta_n | residual lower | residual upper | residual/(delta^2 log(1/delta)) midpoint
+20 | 0.140845277241 | 0.01106872643738 | 0.01106874743738 | 0.284666748206
+100 | 0.0306703190389 | 0.00067950007051068 | 0.00067952107051068 | 0.207311865202
+500 | 0.00625245748555 | 2.9543138166128e-5 | 2.9564138166128e-5 | 0.148967722474
+1000 | 0.00313388158941 | 7.4552435112032e-6 | 7.4762435112032e-6 | 0.131847594163
+PASS: all finite numerical controls; the theorem rests on its analytic proof
