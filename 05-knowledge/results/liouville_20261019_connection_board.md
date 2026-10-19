@@ -44,6 +44,8 @@ The bounded search succeeds for all 528 admitted primitive triples of hypotenuse
 
 7. For the prescribed plus-port search, the preceding upper order is sharp near either zero-spread cusp: the first successful signed index is `Theta(log(1/f))`, including odd indices and both accepted charts. The proof uses two bounded admissibility arcs separated by half a diverging real period. Along either outer Berggren spine of depth `j`, this becomes `Theta(log j)`, while the input hypotenuse is `Theta(j²)`. See [matching cusp lower bound](square_sum_contact_cusp_lower_bound_20261019.md).
 
+8. The index bound upgrades to a deterministic polynomial-bit algorithm for one neighbor at either prescribed port: output bit length is `O((log C)^3)`, with a conservative `O((log C)^10)` running-time bound. An explicit integral model and division-polynomial coefficient bounds control every intermediate rational value, uniformly at the cusps. See [output-height and bit-complexity theorem](square_sum_contact_output_height_20261019.md). This does not give a fixed-power numerical bound `C' <= C^A` or polynomial complexity for an arbitrarily narrow prescribed spread window.
+
 ## 4. Odd zeta and graph geometry: exact maps
 
 The signed primitive-triangle Dirichlet series is
@@ -71,7 +73,7 @@ See [graceful exchange packet](graceful_square_exchange_20261019.md). Neither co
 
 ### A. Quantitative Pythagorean contact construction
 
-The existence problem and adaptive index bounds are settled for these ports; for the prescribed plus-port search the first index has matching logarithmic order at the cusps. The next useful theorem bounds the output hypotenuse or bit complexity, including a prescribed spread window. Another refinement would determine whether the normalized first index has a limit or several accumulation values; matching order alone does not give an asymptotic equivalent. These questions require more than the number of elliptic additions.
+Existence, adaptive index bounds, and polynomial bit complexity are settled for one unrestricted-direction neighbor at either port. The prescribed plus-port index has matching logarithmic order at the cusps. Further quantitative targets are a fixed-power numerical-height bound for some contact, sharper output-bit growth for this orbit, and explicit dependence on a prescribed spread window. Another refinement would determine whether the normalized first index has a limit or several accumulation values; matching order alone does not give an asymptotic equivalent.
 
 ### B. Denominator-controlled common-neighbor gluing
 

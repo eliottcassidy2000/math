@@ -1,0 +1,308 @@
+{
+  "checks": {
+    "integer": 556,
+    "rational": 1804,
+    "symbolic": 13
+  },
+  "status": "FINITE-EXACT",
+  "symbolic_polynomial_controls": [
+    {
+      "coefficient_norm_bits": 1,
+      "monomials": 1,
+      "n": 1,
+      "weighted_degree": 0
+    },
+    {
+      "coefficient_norm_bits": 1,
+      "monomials": 1,
+      "n": 2,
+      "weighted_degree": 0
+    },
+    {
+      "coefficient_norm_bits": 5,
+      "monomials": 4,
+      "n": 3,
+      "weighted_degree": 8
+    },
+    {
+      "coefficient_norm_bits": 7,
+      "monomials": 7,
+      "n": 4,
+      "weighted_degree": 12
+    },
+    {
+      "coefficient_norm_bits": 13,
+      "monomials": 19,
+      "n": 5,
+      "weighted_degree": 24
+    },
+    {
+      "coefficient_norm_bits": 17,
+      "monomials": 29,
+      "n": 6,
+      "weighted_degree": 32
+    },
+    {
+      "coefficient_norm_bits": 26,
+      "monomials": 61,
+      "n": 7,
+      "weighted_degree": 48
+    },
+    {
+      "coefficient_norm_bits": 32,
+      "monomials": 91,
+      "n": 8,
+      "weighted_degree": 60
+    },
+    {
+      "coefficient_norm_bits": 43,
+      "monomials": 153,
+      "n": 9,
+      "weighted_degree": 80
+    },
+    {
+      "coefficient_norm_bits": 51,
+      "monomials": 217,
+      "n": 10,
+      "weighted_degree": 96
+    },
+    {
+      "coefficient_norm_bits": 64,
+      "monomials": 331,
+      "n": 11,
+      "weighted_degree": 120
+    },
+    {
+      "coefficient_norm_bits": 74,
+      "monomials": 443,
+      "n": 12,
+      "weighted_degree": 140
+    }
+  ],
+  "witnesses": [
+    {
+      "J": 3,
+      "budget": 200,
+      "certificate_bits": 209,
+      "input_C": "61",
+      "input_C_bits": 6,
+      "input_t": "6/5",
+      "neighbor_C_bits": 215,
+      "normalization_divisor": 1,
+      "port": 1,
+      "q": 4,
+      "scalar_control_max_bits": 2529,
+      "search_coordinate_max_bits": 158
+    },
+    {
+      "J": 3,
+      "budget": 200,
+      "certificate_bits": 1232,
+      "input_C": "61",
+      "input_C_bits": 6,
+      "input_t": "6/5",
+      "neighbor_C_bits": 1238,
+      "normalization_divisor": 1,
+      "port": -1,
+      "q": 10,
+      "scalar_control_max_bits": 2387,
+      "search_coordinate_max_bits": 922
+    },
+    {
+      "J": 3,
+      "budget": 200,
+      "certificate_bits": 192,
+      "input_C": "41",
+      "input_C_bits": 6,
+      "input_t": "9",
+      "neighbor_C_bits": 197,
+      "normalization_divisor": 1,
+      "port": 1,
+      "q": 4,
+      "scalar_control_max_bits": 2327,
+      "search_coordinate_max_bits": 145
+    },
+    {
+      "J": 3,
+      "budget": 200,
+      "certificate_bits": 10184,
+      "input_C": "41",
+      "input_C_bits": 6,
+      "input_t": "9",
+      "neighbor_C_bits": 10189,
+      "normalization_divisor": 1,
+      "port": -1,
+      "q": -30,
+      "scalar_control_max_bits": 2163,
+      "search_coordinate_max_bits": 7909
+    },
+    {
+      "J": 3,
+      "budget": 200,
+      "certificate_bits": 233,
+      "input_C": "101",
+      "input_C_bits": 7,
+      "input_t": "11/9",
+      "neighbor_C_bits": 239,
+      "normalization_divisor": 1,
+      "port": 1,
+      "q": -4,
+      "scalar_control_max_bits": 2817,
+      "search_coordinate_max_bits": 232
+    },
+    {
+      "J": 3,
+      "budget": 200,
+      "certificate_bits": 2703,
+      "input_C": "101",
+      "input_C_bits": 7,
+      "input_t": "11/9",
+      "neighbor_C_bits": 2709,
+      "normalization_divisor": 1,
+      "port": -1,
+      "q": -14,
+      "scalar_control_max_bits": 2666,
+      "search_coordinate_max_bits": 2186
+    },
+    {
+      "J": 6,
+      "budget": 284,
+      "certificate_bits": 8224,
+      "input_C": "5101",
+      "input_C_bits": 13,
+      "input_t": "101",
+      "neighbor_C_bits": 8237,
+      "normalization_divisor": 1,
+      "port": 1,
+      "q": -18,
+      "scalar_control_max_bits": 4867,
+      "search_coordinate_max_bits": 6540
+    },
+    {
+      "J": 6,
+      "budget": 284,
+      "certificate_bits": 6455,
+      "input_C": "5101",
+      "input_C_bits": 13,
+      "input_t": "101",
+      "neighbor_C_bits": 6467,
+      "normalization_divisor": 1,
+      "port": -1,
+      "q": 16,
+      "scalar_control_max_bits": 4850,
+      "search_coordinate_max_bits": 4850
+    },
+    {
+      "J": 9,
+      "budget": 370,
+      "certificate_bits": 35406,
+      "input_C": "131585",
+      "input_C_bits": 18,
+      "input_t": "257/256",
+      "neighbor_C_bits": 35423,
+      "normalization_divisor": 1,
+      "port": 1,
+      "q": -32,
+      "scalar_control_max_bits": 6635,
+      "search_coordinate_max_bits": 27425
+    },
+    {
+      "J": 9,
+      "budget": 370,
+      "certificate_bits": 11202,
+      "input_C": "131585",
+      "input_C_bits": 18,
+      "input_t": "257/256",
+      "neighbor_C_bits": 11218,
+      "normalization_divisor": 1,
+      "port": -1,
+      "q": -18,
+      "scalar_control_max_bits": 6632,
+      "search_coordinate_max_bits": 8926
+    },
+    {
+      "J": 8,
+      "budget": 342,
+      "certificate_bits": 4703,
+      "input_C": "65537",
+      "input_C_bits": 17,
+      "input_t": "256",
+      "neighbor_C_bits": 4719,
+      "normalization_divisor": 1,
+      "port": 1,
+      "q": 12,
+      "scalar_control_max_bits": 6261,
+      "search_coordinate_max_bits": 3525
+    },
+    {
+      "J": 8,
+      "budget": 342,
+      "certificate_bits": 22002,
+      "input_C": "65537",
+      "input_C_bits": 17,
+      "input_t": "256",
+      "neighbor_C_bits": 22017,
+      "normalization_divisor": 1,
+      "port": -1,
+      "q": -26,
+      "scalar_control_max_bits": 6254,
+      "search_coordinate_max_bits": 17168
+    },
+    {
+      "J": 17,
+      "budget": 600,
+      "certificate_bits": 193417,
+      "input_C": "8590065665",
+      "input_C_bits": 34,
+      "input_t": "65537/65536",
+      "neighbor_C_bits": 193450,
+      "normalization_divisor": 1,
+      "port": 1,
+      "q": -54,
+      "scalar_control_max_bits": 12735,
+      "search_coordinate_max_bits": 147827
+    },
+    {
+      "J": 17,
+      "budget": 600,
+      "certificate_bits": 152794,
+      "input_C": "8590065665",
+      "input_C_bits": 34,
+      "input_t": "65537/65536",
+      "neighbor_C_bits": 152827,
+      "normalization_divisor": 1,
+      "port": -1,
+      "q": 48,
+      "scalar_control_max_bits": 12735,
+      "search_coordinate_max_bits": 114607
+    },
+    {
+      "J": 16,
+      "budget": 570,
+      "certificate_bits": 57917,
+      "input_C": "4294967297",
+      "input_C_bits": 33,
+      "input_t": "65536",
+      "neighbor_C_bits": 57949,
+      "normalization_divisor": 1,
+      "port": 1,
+      "q": 30,
+      "scalar_control_max_bits": 12354,
+      "search_coordinate_max_bits": 43366
+    },
+    {
+      "J": 16,
+      "budget": 570,
+      "certificate_bits": 12616,
+      "input_C": "4294967297",
+      "input_C_bits": 33,
+      "input_t": "65536",
+      "neighbor_C_bits": 12648,
+      "normalization_divisor": 1,
+      "port": -1,
+      "q": 14,
+      "scalar_control_max_bits": 12354,
+      "search_coordinate_max_bits": 9395
+    }
+  ]
+}
