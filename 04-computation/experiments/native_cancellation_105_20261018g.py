@@ -85,6 +85,34 @@ def independent_charge(s, n):
     return result
 
 
+OUTER_NORMS = (0, 1, 3, 1, 3, 1)
+
+
+def outer_band_norm(s, n):
+    """Exact source norm at scale64N, only for the newly admitted annulus."""
+    primitive(s)
+    integer(n, 1)
+    if not 4*n <= s < 256*n:
+        raise ValueError('source outside the new annulus')
+    return OUTER_NORMS[(s // (4*n)).bit_length()-1]
+
+
+def outer_annulus(n):
+    """Analytic integer counts; this does not discover any arrival route."""
+    integer(n, 1)
+    bands = []
+    for i, norm in enumerate(OUTER_NORMS):
+        lo, hi = (4*n << i), (8*n << i)
+        count = sum((hi-1-r)//8 - (lo-1-r)//8 for r in (1, 3, 7))
+        bands.append({'lower': lo, 'upper': hi, 'sources': count,
+                      'source_norm_each': norm, 'source_norm': norm*count})
+    if sum(b['source_norm'] for b in bands) != 153*n:
+        raise RuntimeError('exact annular norm formula failed')
+    return {'N': n, 'new_scale': 64*n, 'bands': bands,
+            'new_sources': sum(b['sources'] for b in bands),
+            'source_norm': 153*n}
+
+
 class Routes:
     def __init__(self, frontier):
         if type(frontier) is not frozenset or len(frontier) != 627:
@@ -305,6 +333,46 @@ def run():
             for k in (1, 2, 5):
                 check(charge(s, large) == charge(s, large*64**k), 'iterated large-scale fixed source')
 
+    # Complete small annuli check the six band norms independently.  No
+    # first-arrival search is performed for these newly exposed sources.
+    annulus_controls = []
+    for n in range(1, 33):
+        report = outer_annulus(n)
+        counts, masses = [0]*6, [0]*6
+        for s in range(4*n+1, 256*n, 2):
+            if s % 8 == 5:
+                continue
+            i = (s // (4*n)).bit_length()-1
+            actual = inherited.norm(independent_charge(s, 64*n))
+            check(actual == outer_band_norm(s, n), 'complete small outer-band norm')
+            counts[i] += 1
+            masses[i] += actual
+        check(counts == [b['sources'] for b in report['bands']], 'analytic primitive band counts')
+        check(masses == [b['source_norm'] for b in report['bands']], 'analytic band masses')
+        old_mass = sum(inherited.norm(independent_charge(s, n))
+                       for s in range(1, 4*n, 2) if s % 8 != 5)
+        new_mass = sum(inherited.norm(independent_charge(s, 64*n))
+                       for s in range(1, 256*n, 2) if s % 8 != 5)
+        check(new_mass-old_mass == 153*n, 'complete small source norm renewal')
+        check(7*new_mass-17*(64*n) == 7*old_mass-17*n, 'exact centered source norm invariant')
+        annulus_controls.append([n, old_mass, new_mass])
+    # One inherited scale receives an independent larger source-only sum.
+    n = SCALES[0]
+    direct_large_mass = sum(inherited.norm(independent_charge(s, 64*n))
+                            for s in range(1, 256*n, 2) if s % 8 != 5)
+    check(direct_large_mass == scales[0]['statistics']['source_norm']+153*n,
+          'independent source sum at4096 to262144')
+    analytic_annuli = [outer_annulus(n) for n in (*SCALES, large)]
+    for report in analytic_annuli:
+        n = report['N']
+        check(report['source_norm'] == 153*n, 'analytic large-scale annular mass')
+        for band in report['bands']:
+            for seed in (band['lower'], band['upper']-8):
+                for s in range(seed, seed+8):
+                    if s & 1 and s % 8 != 5:
+                        check(inherited.norm(independent_charge(s, 64*n)) == band['source_norm_each'],
+                              'exact integer endpoints of each large band')
+
     # Public-boundary mutation hostiles, including a whole-packet duplicate.
     first = scales[0]
     rows, packets = first['source_rows'], first['packets']
@@ -324,6 +392,11 @@ def run():
     expected_rejection(lambda: charge(1, True), 'Boolean scale rejected')
     expected_rejection(lambda: charge(5, 2), 'nonprimitive braid source rejected')
     expected_rejection(lambda: charge(9, 2), 'source outside scale rejected')
+    expected_rejection(lambda: outer_annulus(True), 'Boolean annular scale rejected')
+    expected_rejection(lambda: outer_annulus(1.0), 'float annular scale rejected')
+    expected_rejection(lambda: outer_band_norm(3, 1), 'old source not a new-annulus source')
+    expected_rejection(lambda: outer_band_norm(257, 1), 'outer endpoint rejected')
+    expected_rejection(lambda: outer_band_norm(5, 1), 'nonprimitive annular source rejected')
 
     # Every retained route node has one authenticated successor and strictly smaller
     # remaining depth; this independently verifies the memoized first-arrival DAG.
@@ -343,7 +416,12 @@ def run():
             'route_schema': ['source', 'next', 'edge_clock', 'terminal', 'remaining_clock', 'remaining_depth'],
             'route_dag': edge_rows, 'route_dag_sha256': digest(edge_rows),
             'alphabet': ALPHABET, 'zero_triple_types': TRIPLES, 'scale4_hostile': four_hostile,
-            'packet_scale4_hostile': packet_four_hostile}
+            'packet_scale4_hostile': packet_four_hostile,
+            'outer_annulus_norm_law': {'coefficient': 153, 'band_norms': OUTER_NORMS,
+                'small_controls_N_oldmass_newmass': annulus_controls,
+                'analytic_controls': analytic_annuli,
+                'direct_large_control': [SCALES[0], scales[0]['statistics']['source_norm'], direct_large_mass],
+                'scope': 'source norms only; new-source routes and cross terms remain unpaid'}}
 
 
 def main():

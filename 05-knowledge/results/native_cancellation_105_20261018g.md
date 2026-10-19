@@ -1,7 +1,8 @@
 # Native zero packets, compatible registers, and fixed-source scale transport
 
 **PROVED:** exact removal of source-authenticated zero packets and transport of
-each fixed packet from integer scale N to every 64^k N. **FINITE-EXACT:** the
+each fixed packet from integer scale N to every 64^k N, and the exact
+new-annulus source norm153N. **FINITE-EXACT:** the
 four complete source universes below. **OPEN:** uniform native cancellation,
 the new outer-source interaction, a global first-arrival bound, and universal
 Collatz entry. No optimality or historical-priority claim.
@@ -88,6 +89,11 @@ charge order, choosing the least remaining source in each charge bucket.
 The twelve-vector alphabet has ten unordered zero-sum triple types.
 No maximum-packing claim is needed or made.
 
+The [primitive-circuit companion](eisenstein_circuit_completion_20261018g.md)
+extends these same authenticated rows to packets of four to six sources.
+It retains source multiplicities and complete-arrival cuts, and distinguishes
+primitive-circuit exhaustion from exhaustion of all zero-sum submultisets.
+
 At N=4096, the first pair is
 
 | s | mod15 | mod35 | terminal | clock | A_N(s) | source norm |
@@ -134,6 +140,62 @@ The old sources remain fixed. All newly admitted sources in
 Equation (2) does not replicate one packet's mass into new source labels,
 bound the energy of the enlarged universe, or prove a uniform arrival rate.
 
+### Exact new-annulus norm and the remaining renewal bill
+
+Let S(N)=sum_{s in S_N}Q(A_N(s)). The leading coefficient17/7 was already
+proved, with a logarithmic error, in Proposition E3 of
+[the inherited Eisenstein note](root_eisenstein_first_arrival_20261018j.md).
+The same charge definition gives the sharper exact scale identity
+
+    S(64N)-S(N)=153N,                                  (3)
+    S(64N)-17(64N)/7 = S(N)-17N/7.
+
+Here is a source-only proof, independent of arrival or cancellation. A new
+source has4N<=s<256N and at most three B-chain terms below256N. Write U_r
+for the upper-shell coordinate weight at residue r, and
+L_r=U_r-U_(r+1) for the lower-shell weight. The consecutive residues are
+r,r+1,r+2. Integer endpoints give exactly these six cases:
+
+| new-source interval | shell pattern | charge norm | primitive source count | source norm sum |
+|---|---|---:|---:|---:|
+|[4N,8N)|LLL|0|floor(3N/2)|0|
+|[8N,16N)|LLU|1|3N|3N|
+|[16N,32N)|LL|3|6N|18N|
+|[32N,64N)|LU|1|12N|12N|
+|[64N,128N)|L|3|24N|72N|
+|[128N,256N)|U|1|48N|48N|
+
+For example B^2(s)=16s+5 is below128N precisely when s<8N,
+and below256N precisely when s<16N; the analogous B(s)=4s+1 cutoffs
+are s<32N and s<64N. There is no fractional-endpoint relaxation.
+The LLL sum is zero; LLU and LU telescope to U_r; LL is
+U_r-U_(r+2), of norm3. The remaining norms follow directly.
+Every positive-norm interval starts and ends at multiples of8, so the
+primitive residues1,3,7 mod8 give the displayed exact counts. Thus the
+new source norm is63N+90N=153N. The old sources have their original
+norms by(2), proving(3).
+
+In particular, along each fixed integer scale ray N,64N,64^2N,...,
+the centered source norm is constant and S(64^kN)/(64^kN) tends to17/7.
+This source identity is not a terminal-energy estimate.
+
+The remaining bill can be stated exactly. At a fixed finite P-depth d,
+let W_u(N,d) contain only original sources already arrived at u by d,
+and let H_u(N,d) contain only new sources4N<=s<256N arrived by d.
+The unchanged old routes and(2) give
+
+    W_u(64N,d)=W_u(N,d)+H_u(N,d),
+    E(64N,d)-E(N,d)
+      = sum_u [Q(H_u)+cross(W_u,H_u)].                 (4)
+
+The bilinear cross expression is the bracket in(1). All the new sources
+have total available source norm153N; their still-moving members have
+not thereby arrived or cancelled. For a fixed c>=0, an increment bound
+by153cN in(4) would transport E(N,d)<=cS(N) to the next scale. Iterating
+such a bound only treats the stated64-scale ray; finitely many base scales
+do not cover all integers. Neither the increment bound nor new-source
+entry is proved here.
+
 ## 4. Exact finite results
 
 The declared universe is every source in S_N at exactly the following four
@@ -178,15 +240,25 @@ double spending are rejected. The packet-at4N and non-Nyquist examples are
 retained as exact hostiles. Normal and optimized runs use explicit checks,
 not Python assertions.
 
+The annulus delta additionally checks every new primitive source for
+N=1,...,32 against independent shell charges, with exact per-band counts,
+and directly sums the entire source universe at4096->262144:
+S(4096)=9949 and S(262144)=636637. Analytic integer band counts also run
+at the four inherited scales and N=10^40+7, with direct endpoint controls.
+No new first-arrival searches are performed for these outer sources.
+
 The finite certificate and scale lemma leave a specific next obligation:
 control the original weighted terminal vector of the newly exposed sources,
 including its cross terms with the old vector. A small mod15/mod35
 projection statistic or repeated use of (2) does not pay that obligation.
 
-Normal and optimized verification both pass **230,928** explicit checks.
+Normal and optimized verification both pass **281,135** explicit checks.
 The LF-normalized saved JSON SHA-256 is
-`a08449d8305704521773d74882fd0220d255ed111c5325d0530f1367cf7e585d`.
+`d2d4d152593a03eb653d1fd6fecfbc13f573a6eb74e1310f59b7a6cb78b01721`.
 
 Independent proof/API review and optimized saved-receipt replay pass. The
-review also distinguished the nine unsigned charge values from the twelve
-clock-signed alphabet values; the prose above retains that distinction.
+review of the original packet also distinguished the nine unsigned charge
+values from the twelve clock-signed alphabet values; the prose above retains
+that distinction. The exact annulus delta received a separate independent
+proof/API review and optimized saved-receipt replay at281135 checks; both
+passed, including the integer endpoints,153N count and remaining energy bill.

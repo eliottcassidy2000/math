@@ -221,6 +221,14 @@ first-arrival paths. At the same scale,1857 pairs and130 triples remove
 The residual source norm is3545, but terminal energy is9629: the surviving
 coherence is still an obligation. There is no claimed transport contraction.
 
+The [primitive-circuit extension](eisenstein_circuit_completion_20261018g.md)
+also retains repeated charge types within a packet. Its46 elementary
+relations include four-to-six-source packets that a pair/triple selector
+misses. On the same four source universes they pay75,195,285 and408
+additional units of cross debt, respectively, preserving every terminal
+vector. Primitive-circuit exhaustion is still weaker than exhausting all
+zero-sum submultisets; a four-support zero remainder is retained as a hostile.
+
 There is also an exact recursive transfer: B^3(m)=64m+21 and a full period
 of the three source weights imply A_(64N)(s)=A_N(s) for each old s<4N.
 Thus every retained packet persists at64^k N with the same sources, route,
@@ -228,6 +236,14 @@ clock and debt. These are scale changes of the source-weight definition,
 not forward Collatz iterations or new certificates for new integers. Newly
 admitted outer sources, and partial packets before all members arrive,
 remain in the payment ledger.
+
+Their available norm is nevertheless explicit. If S(N) is the original
+source norm, the six new dyadic annuli have norms0,1,3,1,3,1 per source,
+giving S(64N)-S(N)=153N exactly. For a fixed finite arrival depth, write H
+for the new sources' terminal vector. Then the exact energy increment is
+sum[Q(H)+cross(W,H)]. Bounding this by153cN would propagate E<=cS along
+that64-scale ray. The increment bound, entry of all new sources, and
+coverage of all integer scales are separate open obligations.
 
 Next precise targets:
 
