@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-19",
+  "verdict": "PASS",
+  "mathematical_corrections_required": false,
+  "lower_bounds": {
+    "three_families": 89,
+    "full_section": 445,
+    "residue_edges": 12615
+  },
+  "scope": "Independent proof audit and exact controls only; no sharpness, chromatic, Euclidean-realization, or literature-priority claim.",
+  "inputs": [
+    {
+      "path": "README.md",
+      "reviewed_sha256": "c3b05ada18143db426cceeafa8cbd4a51e5acbdb969a2eeaa4e35dc356231272",
+      "published_sha256": "1a5b6bb6de14925e985fe16a861d6c05e94e9f4d883b1e59d66f46955f76be76"
+    },
+    {
+      "path": "verify_one_extra.py",
+      "reviewed_sha256": "ee4650ead4ec7d6f22cb56afa65f2aa8f18751f3fbbe4a76eba266327a831b35",
+      "published_sha256": "ee4650ead4ec7d6f22cb56afa65f2aa8f18751f3fbbe4a76eba266327a831b35"
+    },
+    {
+      "path": "one-extra-exact-results.json",
+      "reviewed_sha256": "7914d80eb4139f33bdd925f2f3208594c6984dc15a27ba36b78d5d657001625b",
+      "published_sha256": "7914d80eb4139f33bdd925f2f3208594c6984dc15a27ba36b78d5d657001625b"
+    }
+  ],
+  "dependency": {
+    "path": "05-knowledge/results/balanced_digit_section_defect_20261019/README.md",
+    "sha256": "bbb2ded584c0d19973b545ea2d9c56c0568c71f8770fb45ea2ad8359878a6334"
+  },
+  "submitted_reproduction": {
+    "assertions_enabled": true,
+    "verifier_sha256_matches_input": true,
+    "json_byte_identical": true
+  },
+  "independent_reproduction": {
+    "normal_and_optimized_receipts_equal": true,
+    "normal_and_optimized_stdout_equal": true,
+    "uses_runtime_require_checks_not_assertions": true,
+    "geometry_cases": 84,
+    "normalized_88_error_parameter_tuples": 42576,
+    "seam_offset_combinations": 195112,
+    "total_require_checks": 328679
+  },
+  "reproduction_caution": "Run the submitted verifier without -O; its assertions are essential. The independent verifier keeps checks enabled under -O.",
+  "artifacts": [
+    {
+      "path": "REVIEW.md",
+      "sha256": "e4c0649bbee0a8443649ec583db87ed05eb9a81b55bd1b1486548fd9c20a4fec"
+    },
+    {
+      "path": "independent-normal.json",
+      "sha256": "13471b7f82f18097c917fb1f89c572c3adaf33674ea6879ca871c61ba73e43a2"
+    },
+    {
+      "path": "independent-normal.out",
+      "sha256": "cadf9c1aba7373df77fa4d342722088aa40e8ff81cd1a3ab4a133dad10df4c65"
+    },
+    {
+      "path": "independent-optimized.json",
+      "sha256": "13471b7f82f18097c917fb1f89c572c3adaf33674ea6879ca871c61ba73e43a2"
+    },
+    {
+      "path": "independent-optimized.out",
+      "sha256": "cadf9c1aba7373df77fa4d342722088aa40e8ff81cd1a3ab4a133dad10df4c65"
+    },
+    {
+      "path": "independent-results.json",
+      "sha256": "13471b7f82f18097c917fb1f89c572c3adaf33674ea6879ca871c61ba73e43a2"
+    },
+    {
+      "path": "independent_controls.py",
+      "sha256": "2be93a56e0b11bc4e098fe72dd2d1fa5b01dc81693238f16d4fda4e296904de1"
+    },
+    {
+      "path": "input-sha256.txt",
+      "sha256": "7e3a8e8a0c211223308fc9b996aab354e3ad2881597d396ad0467346f3262d01"
+    },
+    {
+      "path": "submitted-replay/one-extra-exact-results.json",
+      "sha256": "7914d80eb4139f33bdd925f2f3208594c6984dc15a27ba36b78d5d657001625b"
+    },
+    {
+      "path": "submitted-replay/stdout.txt",
+      "sha256": "43919d7dca6e3dd0acdbf88c7542bb988ce4a54ee632b25097f95caaf067ffd3"
+    },
+    {
+      "path": "submitted-replay/verify_one_extra.py",
+      "sha256": "ee4650ead4ec7d6f22cb56afa65f2aa8f18751f3fbbe4a76eba266327a831b35"
+    }
+  ],
+  "source_review_manifest_sha256": "f8ebaded22cee0ca9dfa3fb1268cf71a876b34985b610ae112d0d5cd189bac4b"
+}

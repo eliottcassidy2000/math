@@ -1,0 +1,1404 @@
+{
+  "p": 29,
+  "scope": "First unramified quadratic carry; directions (1,0),(0,1),(3,9).",
+  "cube_controls": [
+    {
+      "exceptional_direction": 0,
+      "short_separation": 1,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 2,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 3,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 4,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 5,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 6,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 7,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 8,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 9,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 10,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 11,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 12,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 13,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 14,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 1,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 2,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 3,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 4,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 5,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 6,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 7,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 8,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 9,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 10,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 11,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 12,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 13,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 14,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 1,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 2,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 3,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 4,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 5,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 6,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 7,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 8,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 9,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 10,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 11,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 12,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 13,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 14,
+      "support_size": 8,
+      "pair_kernel_dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "homogeneous_dimension": 2,
+      "shared_incidence_vertices": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "cube_cases_checked": 42,
+  "near_seam_hostiles": [
+    {
+      "exceptional_direction": 0,
+      "short_separation": 1,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 16
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 1,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 27
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 2,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 16
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 2,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 27
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 3,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 16
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 3,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 27
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 4,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 16
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 4,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 27
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 5,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 16
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 5,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 27
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 6,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 16
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 6,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 27
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 7,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 16
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 7,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 27
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 8,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 16
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 8,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 27
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 9,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 16
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 9,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 27
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 10,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 16
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 10,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 27
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 11,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 16
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 11,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 27
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 12,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 16
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 12,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 27
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 13,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 16
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 13,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 27
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 14,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 16
+    },
+    {
+      "exceptional_direction": 0,
+      "short_separation": 14,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 15,
+      "period_obstruction": 27
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 1,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 14
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 1,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 2
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 2,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 14
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 2,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 2
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 3,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 14
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 3,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 2
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 4,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 14
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 4,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 2
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 5,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 14
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 5,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 2
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 6,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 14
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 6,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 2
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 7,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 14
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 7,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 2
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 8,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 14
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 8,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 2
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 9,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 14
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 9,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 2
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 10,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 14
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 10,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 2
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 11,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 14
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 11,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 2
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 12,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 14
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 12,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 2
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 13,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 14
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 13,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 2
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 14,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 14
+    },
+    {
+      "exceptional_direction": 1,
+      "short_separation": 14,
+      "exceptional_seam_parallel_to": 2,
+      "failures": 88,
+      "dipole_amplitude": 23,
+      "period_obstruction": 2
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 1,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 15
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 1,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 13
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 2,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 15
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 2,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 13
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 3,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 15
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 3,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 13
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 4,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 15
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 4,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 13
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 5,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 15
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 5,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 13
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 6,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 15
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 6,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 13
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 7,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 15
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 7,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 13
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 8,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 15
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 8,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 13
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 9,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 15
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 9,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 13
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 10,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 15
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 10,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 13
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 11,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 15
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 11,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 13
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 12,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 15
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 12,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 13
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 13,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 15
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 13,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 13
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 14,
+      "exceptional_seam_parallel_to": 0,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 15
+    },
+    {
+      "exceptional_direction": 2,
+      "short_separation": 14,
+      "exceptional_seam_parallel_to": 1,
+      "failures": 88,
+      "dipole_amplitude": 5,
+      "period_obstruction": 13
+    }
+  ],
+  "explicit_88_error_hostiles_checked": 84,
+  "binary_normalization_boundary_hostile": {
+    "modified_points_per_column": 28,
+    "I_weight": 29,
+    "J_weight": 29,
+    "J_binary": false
+  },
+  "proven_three_direction_lower_bound": 89,
+  "proven_full_section_defect_lower_bound": 445
+}

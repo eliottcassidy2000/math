@@ -1,0 +1,1498 @@
+{
+  "verdict": "PASS",
+  "modulus": 29,
+  "geometry_cases": 84,
+  "geometries": [
+    {
+      "exceptional": 0,
+      "separation": 1,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 2,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 3,
+      "shared_vertices": [
+        1,
+        0,
+        1
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 4,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 5,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 6,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 7,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 8,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 9,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 10,
+      "shared_vertices": [
+        1,
+        1,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 11,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 12,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 13,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 14,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 15,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 16,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 17,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 18,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 19,
+      "shared_vertices": [
+        1,
+        1,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 20,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 21,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 22,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 23,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 24,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 25,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 26,
+      "shared_vertices": [
+        1,
+        0,
+        1
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 27,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 0,
+      "separation": 28,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 1,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 2,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 3,
+      "shared_vertices": [
+        1,
+        1,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 4,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 5,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 6,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 7,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 8,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 9,
+      "shared_vertices": [
+        0,
+        1,
+        1
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 10,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 11,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 12,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 13,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 14,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 15,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 16,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 17,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 18,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 19,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 20,
+      "shared_vertices": [
+        0,
+        1,
+        1
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 21,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 22,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 23,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 24,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 25,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 26,
+      "shared_vertices": [
+        1,
+        1,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 27,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 1,
+      "separation": 28,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 1,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 2,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 3,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 4,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 5,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 6,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 7,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 8,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 9,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 10,
+      "shared_vertices": [
+        1,
+        0,
+        1
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 11,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 12,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 13,
+      "shared_vertices": [
+        0,
+        1,
+        1
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 14,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 15,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 16,
+      "shared_vertices": [
+        0,
+        1,
+        1
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 17,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 18,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 19,
+      "shared_vertices": [
+        1,
+        0,
+        1
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 20,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 21,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 22,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 23,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 24,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 25,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 26,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 27,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    },
+    {
+      "exceptional": 2,
+      "separation": 28,
+      "shared_vertices": [
+        0,
+        0,
+        0
+      ],
+      "bounded_face_solutions": 125,
+      "modular_only_solutions": 0
+    }
+  ],
+  "normalization_exhaustion": [
+    {
+      "p_or_grid_size": 5,
+      "admissible_configurations": 225,
+      "nonbinary_counterexamples": 0
+    },
+    {
+      "p_or_grid_size": 6,
+      "admissible_configurations": 396,
+      "nonbinary_counterexamples": 0
+    },
+    {
+      "p_or_grid_size": 7,
+      "admissible_configurations": 637,
+      "nonbinary_counterexamples": 0
+    },
+    {
+      "p_or_grid_size": 8,
+      "admissible_configurations": 960,
+      "nonbinary_counterexamples": 0
+    },
+    {
+      "p_or_grid_size": 9,
+      "admissible_configurations": 1377,
+      "nonbinary_counterexamples": 0
+    }
+  ],
+  "normalization_boundary_hostiles": {
+    "relaxed_support_p_minus_1": {
+      "size": 5,
+      "I_and_J_weight": 5,
+      "changed_positions_by_column": [
+        4,
+        4,
+        0,
+        0,
+        0
+      ]
+    },
+    "removed_weight_p": {
+      "size": 5,
+      "I_and_J_weight": 10,
+      "changed_positions_by_column": [
+        3,
+        3,
+        0,
+        0,
+        0
+      ]
+    },
+    "removed_p_at_least_5": {
+      "size": 4,
+      "I_and_J_weight": 4,
+      "changed_positions_by_column": [
+        2,
+        2,
+        0,
+        0
+      ]
+    }
+  },
+  "seam_offset_combinations_directly_integrated_by_additivity": 195112,
+  "seam_period_counts": {
+    "2": 24389,
+    "4": 24389,
+    "13": 24389,
+    "14": 24389,
+    "15": 24389,
+    "16": 24389,
+    "25": 24389,
+    "27": 24389
+  },
+  "normalized_88_error_candidates": 42576,
+  "normalized_geometry_cases": [
+    {
+      "exceptional": 0,
+      "separation": 1,
+      "family_option_counts": [
+        4,
+        62,
+        62
+      ],
+      "88_error_candidates": 1920
+    },
+    {
+      "exceptional": 0,
+      "separation": 2,
+      "family_option_counts": [
+        4,
+        60,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 0,
+      "separation": 3,
+      "family_option_counts": [
+        4,
+        60,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 0,
+      "separation": 4,
+      "family_option_counts": [
+        4,
+        60,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 0,
+      "separation": 5,
+      "family_option_counts": [
+        4,
+        60,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 0,
+      "separation": 6,
+      "family_option_counts": [
+        4,
+        60,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 0,
+      "separation": 7,
+      "family_option_counts": [
+        4,
+        60,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 0,
+      "separation": 8,
+      "family_option_counts": [
+        4,
+        60,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 0,
+      "separation": 9,
+      "family_option_counts": [
+        4,
+        60,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 0,
+      "separation": 10,
+      "family_option_counts": [
+        4,
+        60,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 0,
+      "separation": 11,
+      "family_option_counts": [
+        4,
+        60,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 0,
+      "separation": 12,
+      "family_option_counts": [
+        4,
+        60,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 0,
+      "separation": 13,
+      "family_option_counts": [
+        4,
+        60,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 0,
+      "separation": 14,
+      "family_option_counts": [
+        4,
+        60,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 1,
+      "separation": 1,
+      "family_option_counts": [
+        62,
+        4,
+        62
+      ],
+      "88_error_candidates": 1920
+    },
+    {
+      "exceptional": 1,
+      "separation": 2,
+      "family_option_counts": [
+        60,
+        4,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 1,
+      "separation": 3,
+      "family_option_counts": [
+        60,
+        4,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 1,
+      "separation": 4,
+      "family_option_counts": [
+        60,
+        4,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 1,
+      "separation": 5,
+      "family_option_counts": [
+        60,
+        4,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 1,
+      "separation": 6,
+      "family_option_counts": [
+        60,
+        4,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 1,
+      "separation": 7,
+      "family_option_counts": [
+        60,
+        4,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 1,
+      "separation": 8,
+      "family_option_counts": [
+        60,
+        4,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 1,
+      "separation": 9,
+      "family_option_counts": [
+        60,
+        4,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 1,
+      "separation": 10,
+      "family_option_counts": [
+        60,
+        4,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 1,
+      "separation": 11,
+      "family_option_counts": [
+        60,
+        4,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 1,
+      "separation": 12,
+      "family_option_counts": [
+        60,
+        4,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 1,
+      "separation": 13,
+      "family_option_counts": [
+        60,
+        4,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 1,
+      "separation": 14,
+      "family_option_counts": [
+        60,
+        4,
+        60
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 2,
+      "separation": 1,
+      "family_option_counts": [
+        62,
+        62,
+        4
+      ],
+      "88_error_candidates": 1920
+    },
+    {
+      "exceptional": 2,
+      "separation": 2,
+      "family_option_counts": [
+        60,
+        60,
+        4
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 2,
+      "separation": 3,
+      "family_option_counts": [
+        60,
+        60,
+        4
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 2,
+      "separation": 4,
+      "family_option_counts": [
+        60,
+        60,
+        4
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 2,
+      "separation": 5,
+      "family_option_counts": [
+        60,
+        60,
+        4
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 2,
+      "separation": 6,
+      "family_option_counts": [
+        60,
+        60,
+        4
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 2,
+      "separation": 7,
+      "family_option_counts": [
+        60,
+        60,
+        4
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 2,
+      "separation": 8,
+      "family_option_counts": [
+        60,
+        60,
+        4
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 2,
+      "separation": 9,
+      "family_option_counts": [
+        60,
+        60,
+        4
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 2,
+      "separation": 10,
+      "family_option_counts": [
+        60,
+        60,
+        4
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 2,
+      "separation": 11,
+      "family_option_counts": [
+        60,
+        60,
+        4
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 2,
+      "separation": 12,
+      "family_option_counts": [
+        60,
+        60,
+        4
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 2,
+      "separation": 13,
+      "family_option_counts": [
+        60,
+        60,
+        4
+      ],
+      "88_error_candidates": 944
+    },
+    {
+      "exceptional": 2,
+      "separation": 14,
+      "family_option_counts": [
+        60,
+        60,
+        4
+      ],
+      "88_error_candidates": 944
+    }
+  ],
+  "dipole_amplitude_counts": {
+    "3": 1774,
+    "5": 1808,
+    "6": 3514,
+    "7": 34,
+    "8": 3514,
+    "9": 3480,
+    "11": 5220,
+    "12": 68,
+    "13": 1740,
+    "14": 102,
+    "15": 34,
+    "16": 34,
+    "17": 102,
+    "18": 1740,
+    "19": 68,
+    "20": 5220,
+    "22": 3480,
+    "23": 3514,
+    "24": 34,
+    "25": 3514,
+    "26": 1808,
+    "28": 1774
+  },
+  "checks": {
+    "actual_derivative_grid_short_columns": 126,
+    "actual_section_all_cycle_sums": 9,
+    "actual_section_full_affine_stress": 3,
+    "actual_section_period_zero": 3,
+    "all_125_balanced_digit_triples": 125,
+    "all_direction_carry_cycle_sums": 3,
+    "all_eight_expected_period_values": 1,
+    "all_nonzero_exceptional_error_pairs": 1134,
+    "all_normalized_candidates_actual_local_motion": 42576,
+    "all_normalized_candidates_global_period_nonzero": 42576,
+    "all_offsets_direct_integrated_period_nonzero": 195112,
+    "all_seam_offsets_one_per_cycle": 174,
+    "all_thirty_norm_one_lifts": 30,
+    "bounded_coupling_exactly_125_scalar_triples": 84,
+    "coupled_rank_four_over_Q_and_F29": 84,
+    "derivative_each_own_cycle_zero": 126,
+    "derivative_total_zero": 126,
+    "dipole_orientation": 84,
+    "direct_precision_two_section_error": 7569,
+    "eight_distinct_cube_vertices": 84,
+    "exhaustive_bounded_coupling_forces_integer_scalars": 10500,
+    "exhaustive_normalization_no_nonbinary_solution": 105,
+    "expanded_hostile_actual_local_motion": 126,
+    "expanded_hostile_compact_stress_zero": 42,
+    "expanded_hostile_direct_period_preserved": 42,
+    "expanded_hostile_has_88_errors": 42,
+    "face_is_incidence_four_cycle": 504,
+    "final_445_count": 1,
+    "hostile_I_binary": 3,
+    "hostile_J_nonbinary": 3,
+    "hostile_equal_weight": 3,
+    "integer_and_field_face_nullity_two": 252,
+    "integer_cube_line_sums": 252,
+    "integer_face_cycle_kernel": 252,
+    "literal_carry_divisibility": 2523,
+    "norm_circle_has_fifteen_pairs": 1,
+    "normalized_candidate_integer_mixed_derivative": 5220,
+    "normalized_candidate_still_one_per_cycle": 5220,
+    "normalized_hostiles_exist_every_short_geometry": 42,
+    "period_u_integrability": 6380,
+    "period_v_integrability": 6380,
+    "rotated_triples_count_every_family_three_times": 1,
+    "saturated_integer_face_basis": 252,
+    "two_faces_share_at_most_one_vertex": 252,
+    "two_independent_integer_face_cycles": 252
+  },
+  "proof_scope": "Exact controls supplement a universal proof; no enumeration of arbitrary sections, sharpness claim, or chromatic implication."
+}

@@ -1,0 +1,4 @@
+42 eight-point cube geometries: all pair-kernel dimensions 2, coupled rank 4, homogeneous dimension 2.
+84 explicit 88-error hostiles: every straight cycle and mixed stress passes; all global periods are nonzero.
+Binary-normalization boundary hostile checked: p-1 changes per exceptional column can conceal a nonbinary additive array.
+Proved lower bounds: 89 on the mixed triple; 445 on the full norm-circle graph.
