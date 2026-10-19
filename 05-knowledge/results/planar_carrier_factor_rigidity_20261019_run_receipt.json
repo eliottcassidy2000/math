@@ -1,0 +1,17 @@
+{
+  "packet": 105,
+  "status": "PASS",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "checks": 448,
+  "commands": [
+    "python -B 04-computation/experiments/planar_carrier_factor_rigidity_20261019.py",
+    "python -B -O 04-computation/experiments/planar_carrier_factor_rigidity_20261019.py"
+  ],
+  "normal_output": "05-knowledge/results/planar_carrier_factor_rigidity_20261019.json",
+  "optimized_output": "05-knowledge/results/planar_carrier_factor_rigidity_20261019_optimized.json",
+  "normal_sha256": "ca335cdf65b8d5e7ae94f5cf124879f753ffd176b6cd24596a572502322cf02d",
+  "optimized_sha256": "ca335cdf65b8d5e7ae94f5cf124879f753ffd176b6cd24596a572502322cf02d",
+  "byte_identical": true,
+  "scope": "Finite exact controls corroborate the written universal proofs; no general planar JC claim."
+}
