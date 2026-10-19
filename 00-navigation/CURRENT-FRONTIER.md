@@ -4,7 +4,7 @@
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
-**2026-10-19 current assignment:** Start with [the parabolic scaling session](../05-knowledge/results/parabolic_scaling_session_20261019.md) for cusp clocks, exact guarded arithmetic transfers, Collatz, and planar-flow results; [the preceding session](../05-knowledge/results/liouville_session2_20261019_progress.md) also covers Hadwiger–Nelson, poset Gold/balance, and graph labeling. The September LRC brief below is retained as historical context, not the current assignment. No general major-conjecture resolution is claimed.
+**2026-10-19 current assignment:** [Parabolic scaling](../05-knowledge/results/parabolic_scaling_session_20261019.md) covers cusp clocks, arithmetic, Collatz and planar flows; [preceding results](../05-knowledge/results/liouville_session2_20261019_progress.md) also cover unit-distance graphs, Gold/balance and labeling. The September LRC material below is historical. Major conjectures remain open.
 ## LRC(14)
 
 ### Headline
