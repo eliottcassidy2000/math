@@ -1,0 +1,43 @@
+{
+  "abstract_parallel_swap_geometry": "passed",
+  "boundaries": [
+    {
+      "diameter": 3,
+      "m": 5,
+      "states": 40
+    },
+    {
+      "diameter": 3,
+      "m": 6,
+      "states": 164
+    }
+  ],
+  "checks": 86115,
+  "generic_rank_two_bad_selections": 2,
+  "moves_replayed": 8409,
+  "repair_branches": {
+    "BC_type_swap": 0,
+    "common_A": 260,
+    "direct_single": 2958,
+    "parallel_swap": 0
+  },
+  "status": "passed",
+  "three_bad_controls": [
+    {
+      "all_source_states": 752,
+      "m": 7,
+      "max_moves": 6,
+      "proved_bound": 9,
+      "source_target_checks": 2256,
+      "three_bad_tails": 2
+    },
+    {
+      "all_source_states": 0,
+      "m": 8,
+      "max_moves": 0,
+      "proved_bound": 9,
+      "source_target_checks": 0,
+      "three_bad_tails": 0
+    }
+  ]
+}

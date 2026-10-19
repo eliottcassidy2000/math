@@ -1,0 +1,30 @@
+{
+  "claim": "Three disconnected free-color contacts with one of rank>=3 imply width-two diameter<=r+4; every five-free-color upper-tail graceful fiber has diameter<=9.",
+  "dependency_manifest_sha256": {
+    "../graceful_two_bad_color_contacts_20261019/RELEASE_MANIFEST.json": "dcc0543b832db870f6359f9f64bb53685520d001a58c4e9a97b438b99655279a"
+  },
+  "files": {
+    "LITERATURE_SCOPE.md": "92e965b462c92327000f304759a0d36b933d9e23c323b5797d905430d115e19c",
+    "THREE_BAD_RANK_CONTACTS.md": "84fa06c38aed51d3ccd53f1f3e822ca13745e1e629f3e2045f53042e726368a7",
+    "three_bad_controls.json": "ac62ff1eb569ee2472ba83d28ef41bec10ba05f4d19553ab08849ca3bd4642e1",
+    "three_bad_controls.optimized.json": "ac62ff1eb569ee2472ba83d28ef41bec10ba05f4d19553ab08849ca3bd4642e1",
+    "verify_three_bad_rank.py": "a35073fb4d1e63d0e010f2df1614459cf493748d0c8f43771f915f877bc02b06"
+  },
+  "limits": [
+    "No arbitrary-fiber conclusion",
+    "No one-color GT1 claim",
+    "Abstract tree shape can change",
+    "No historical novelty claim"
+  ],
+  "replay": {
+    "abstract_parallel_swap_geometry": "passed",
+    "boundary_m5_diameter": 3,
+    "boundary_m6_diameter": 3,
+    "checks": 86115,
+    "moves_replayed": 8409,
+    "normal_optimized_identical": true,
+    "source_target_controls": 2256
+  },
+  "repository_destination": "05-knowledge/results/graceful_three_bad_rank_contacts_20261019",
+  "status": "frozen and exact-replayed"
+}
