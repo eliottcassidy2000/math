@@ -1,0 +1,162 @@
+{
+  "status": "PASS",
+  "seven_exact_certificates": [
+    {
+      "shape": [
+        0,
+        0,
+        0
+      ],
+      "core_word_count": 30,
+      "positive_monomials": 15,
+      "minimum_coefficient": 1
+    },
+    {
+      "shape": [
+        0,
+        1,
+        0
+      ],
+      "core_word_count": 20,
+      "positive_monomials": 12,
+      "minimum_coefficient": 1
+    },
+    {
+      "shape": [
+        0,
+        0,
+        1
+      ],
+      "core_word_count": 20,
+      "positive_monomials": 12,
+      "minimum_coefficient": 1
+    },
+    {
+      "shape": [
+        1,
+        0,
+        0
+      ],
+      "core_word_count": 25,
+      "positive_monomials": 16,
+      "minimum_coefficient": 1
+    },
+    {
+      "shape": [
+        1,
+        1,
+        0
+      ],
+      "core_word_count": 18,
+      "positive_monomials": 12,
+      "minimum_coefficient": 1
+    },
+    {
+      "shape": [
+        1,
+        0,
+        1
+      ],
+      "core_word_count": 18,
+      "positive_monomials": 12,
+      "minimum_coefficient": 1
+    },
+    {
+      "shape": [
+        1,
+        1,
+        1
+      ],
+      "core_word_count": 11,
+      "positive_monomials": 8,
+      "minimum_coefficient": 2
+    }
+  ],
+  "actual_exterior_factorization": {
+    "posets_checked": 420,
+    "maximum_order": 13,
+    "all_exact_factorizations_match": true,
+    "minimum_normalized_deficit": "0"
+  },
+  "maximum_span_selection": {
+    "2": {
+      "naturally_labelled_posets": 2,
+      "maxspan_pairs_checked": 1
+    },
+    "3": {
+      "naturally_labelled_posets": 7,
+      "maxspan_pairs_checked": 7
+    },
+    "4": {
+      "naturally_labelled_posets": 40,
+      "maxspan_pairs_checked": 49
+    },
+    "5": {
+      "naturally_labelled_posets": 357,
+      "maxspan_pairs_checked": 455
+    }
+  },
+  "adjacency_obstruction": {
+    "extension_count": 10,
+    "majority_order": [
+      0,
+      3,
+      1,
+      4,
+      2
+    ],
+    "forward_counts": [
+      [
+        0,
+        3,
+        6
+      ],
+      [
+        0,
+        1,
+        10
+      ],
+      [
+        0,
+        4,
+        9
+      ],
+      [
+        0,
+        2,
+        10
+      ],
+      [
+        3,
+        1,
+        7
+      ],
+      [
+        3,
+        4,
+        10
+      ],
+      [
+        3,
+        2,
+        9
+      ],
+      [
+        1,
+        4,
+        7
+      ],
+      [
+        1,
+        2,
+        10
+      ],
+      [
+        4,
+        2,
+        6
+      ]
+    ],
+    "no_adjacent_forward_critical_pair": true
+  }
+}
