@@ -1,0 +1,59 @@
+{
+  "checks": 269721,
+  "explicit_induced_witness": {
+    "A": [
+      1,
+      193,
+      673
+    ],
+    "B": [
+      3,
+      168,
+      483
+    ],
+    "roots": [
+      [
+        2,
+        13,
+        22
+      ],
+      [
+        14,
+        19,
+        26
+      ],
+      [
+        26,
+        29,
+        34
+      ]
+    ]
+  },
+  "independent_pair_intersection_scans": [
+    {
+      "N": 672,
+      "eligible_pairs": 780,
+      "found": false,
+      "pairs_examined": 225456
+    },
+    {
+      "N": 673,
+      "eligible_pairs": 8,
+      "found": true,
+      "left": [
+        1,
+        193,
+        673
+      ],
+      "pairs_examined": 192,
+      "right": [
+        3,
+        168,
+        483
+      ]
+    }
+  ],
+  "minimum_K33_height": 673,
+  "scope": "Finite exact threshold and affine controls; arbitrary m existence uses the cited sumset theorem plus the proved affine cleanup.",
+  "status": "PASS"
+}

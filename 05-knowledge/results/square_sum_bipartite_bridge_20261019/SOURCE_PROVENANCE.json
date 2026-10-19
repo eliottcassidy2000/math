@@ -1,0 +1,47 @@
+{
+  "scope": "Parent approved the frozen mathematical packet and stated reviews. Only review status, relative links, and runnable command presentation changed. Original reviewed hashes remain identified as source hashes.",
+  "files": [
+    {
+      "path": "SQUARE_SUM_BIPARTITE_CLEANUP.md",
+      "source_sha256": "e1fc74b527a08345c44dfe57c209bc1285691ad2cc1d0cf28f61674b57495430",
+      "published_sha256": "e1fc74b527a08345c44dfe57c209bc1285691ad2cc1d0cf28f61674b57495430",
+      "presentation_changes": []
+    },
+    {
+      "path": "verify_bipartite_bridge.py",
+      "source_sha256": "55fdea82b642b99fe1a0c23fd29ba808bfeb2593e3eabf988ae1778c53534b18",
+      "published_sha256": "55fdea82b642b99fe1a0c23fd29ba808bfeb2593e3eabf988ae1778c53534b18",
+      "presentation_changes": []
+    },
+    {
+      "path": "receipt.json",
+      "source_sha256": "63228d0970da83a30c17296629b987c454c4f7ceae63461bac7b823731203ecf",
+      "published_sha256": "63228d0970da83a30c17296629b987c454c4f7ceae63461bac7b823731203ecf",
+      "presentation_changes": []
+    },
+    {
+      "path": "receipt-optimized.json",
+      "source_sha256": "63228d0970da83a30c17296629b987c454c4f7ceae63461bac7b823731203ecf",
+      "published_sha256": "63228d0970da83a30c17296629b987c454c4f7ceae63461bac7b823731203ecf",
+      "presentation_changes": []
+    },
+    {
+      "path": "review-root/check_first_k33.py",
+      "source_sha256": "5151a9dbb9757b7b5fb3a076f400110cd8e0ae2a72e2dad2202f34ce4469b407",
+      "published_sha256": "5151a9dbb9757b7b5fb3a076f400110cd8e0ae2a72e2dad2202f34ce4469b407",
+      "presentation_changes": []
+    },
+    {
+      "path": "review-root/receipt.json",
+      "source_sha256": "7eaa2d212102ff72c5cf8eb1cf690f11ded7adb1686950185d37c0911a552c63",
+      "published_sha256": "7eaa2d212102ff72c5cf8eb1cf690f11ded7adb1686950185d37c0911a552c63",
+      "presentation_changes": []
+    },
+    {
+      "path": "review-root/receipt_optimized.json",
+      "source_sha256": "7eaa2d212102ff72c5cf8eb1cf690f11ded7adb1686950185d37c0911a552c63",
+      "published_sha256": "7eaa2d212102ff72c5cf8eb1cf690f11ded7adb1686950185d37c0911a552c63",
+      "presentation_changes": []
+    }
+  ]
+}

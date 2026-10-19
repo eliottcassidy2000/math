@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "lower_complete_scan": {
+    "N": 672,
+    "contains_K33": false,
+    "all_neighbor_triples": 306968,
+    "distinct_triples": 305921
+  },
+  "upper_witness": {
+    "N": 673,
+    "contains_K33": true,
+    "parts": [
+      [
+        1,
+        193,
+        673
+      ],
+      [
+        3,
+        168,
+        483
+      ]
+    ],
+    "tested_neighbor_triples_before_witness": 272967,
+    "induced": true,
+    "cross_roots": [
+      [
+        2,
+        13,
+        22
+      ],
+      [
+        14,
+        19,
+        26
+      ],
+      [
+        26,
+        29,
+        34
+      ]
+    ]
+  },
+  "scope": "Finite exact threshold; absence of any K3,3 subgraph at672 and induced witness at673"
+}
