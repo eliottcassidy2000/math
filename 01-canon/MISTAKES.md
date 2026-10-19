@@ -19188,3 +19188,11 @@ the ambient space.
 - **Repair and strongest survivor:** a current-truth warning now precedes the unchanged historical body. Oriented K4 presentations, the binary cube, L(K4), actual Platonic rotation groups, and marked character/boundary maps each survive with their own source and relation. None establishes the asserted universal five-way correspondence. [Fivefold boundary interfaces](../05-knowledge/results/fivefold_boundary_20261018g.md) supplies exact weighted-cancellation, lattice and graph-reduction maps rather than count identifications.
 - **Missing coordinates:** ambient dimension, the chosen adjacency or duality operation, and the actual group action. Preserve these before transferring colouring support, energy, or weighted cancellation.
 
+
+## 2026-10-19 — Gilbreath finite-range patterns omitted defect multiplicity and source hypotheses
+
+- **Affected claims:** HYP-9163's logarithmic size-six excess and front-only asymptotic exactness; HYP-9336's narrow depth/gap band and isolated-gap mechanism.
+- **Decisive witnesses:** the exact delay-two language `(0000)*11(ε|10*)` contains `floor((F+1)/4)` left-front words, forcing linear excess and liminf risk ratio at least 17/16. The prime prefix N=31,569 has k/G=69/112. The increasing nonprime family `2,3,5,9,15,17,19,…` has fixed maximal gap 6 but k(N)=N−3 and a safe left edge.
+- **Missing coordinates:** multiplicity of compatible initial words, all descendants rather than one central cancellation, and primality/consecutiveness when transferring a deterministic gap model. Later sea entry also does not certify an unchecked earlier edge.
+- **Repair and survivors:** retain exact historical finite chains and tables; prove the alphabet-three shield, all-F dyadic zero-run formula and seven fixed-age certificates; keep paired halving and the full asymptotic open. The wider prime ratio band survives only in the checked finite range.
+- **Evidence:** [size-six proof packet](../05-knowledge/results/gilbreath_alphabet_three_size_six_20261019.md), [depth correction and hostile controls](../05-knowledge/results/gilbreath_depth_corrections_20261019.md). Normal and optimized runs agree, and independent reviewers certify the shield and finite automata.

@@ -1,5 +1,7 @@
 # The size-6 extinction law of Gilbreath's automaton: exact Markov reduction, exact rationals, and the dyadic anatomy of the re-emission excess
 
+> **Current-truth notice, 2026-10-19.** This is the historical September 26 note. Its exact finite Markov reduction and exact rationals through F=11 survive. Its conjectural logarithmic size-six excess and the predicted return of `p6(F)/(F 2^(1-F))` to 1 have since been refuted: the exact all-F delay-two count gives a liminf ratio of at least 17/16, and seven independently checked fixed-age certificates improve this to 285677/262144. Dyadic rationality for every F is now proved by a zero-run reduction. The old all-F paired-halving and per-z formulas remain open. Later floating values are superseded by exact calculations; for example `c6(13)=19437/8192`, not the old 2.372697 approximation. See [the October 19 proof packet](gilbreath_alphabet_three_size_six_20261019.md). The historical body is preserved below.
+
 **Session:** opus, `gilbreath6-collatz-precision-20260926`, 2026-09-26.
 **Owner's directive:** "attack the size 6 extinction law next".
 **Inherits:** [THM-4511](../../01-canon/theorems/THM-4511-gilbreath-size-four-wall-theorem.md)
