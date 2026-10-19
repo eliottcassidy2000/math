@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "checks": 5464,
+  "tree_census": [
+    {
+      "n": 1,
+      "trees": 1,
+      "all_orientations_automorphic_trees": 0
+    },
+    {
+      "n": 2,
+      "trees": 1,
+      "all_orientations_automorphic_trees": 0
+    },
+    {
+      "n": 3,
+      "trees": 1,
+      "all_orientations_automorphic_trees": 0
+    },
+    {
+      "n": 4,
+      "trees": 2,
+      "all_orientations_automorphic_trees": 1
+    },
+    {
+      "n": 5,
+      "trees": 3,
+      "all_orientations_automorphic_trees": 1
+    },
+    {
+      "n": 6,
+      "trees": 6,
+      "all_orientations_automorphic_trees": 2
+    },
+    {
+      "n": 7,
+      "trees": 11,
+      "all_orientations_automorphic_trees": 4
+    },
+    {
+      "n": 8,
+      "trees": 23,
+      "all_orientations_automorphic_trees": 9
+    }
+  ],
+  "nine_vertex_witness": {
+    "automorphisms": 6,
+    "asymmetric_oriented_classes": 0
+  },
+  "factorial_budget_k_range": [
+    1,
+    8
+  ],
+  "factorial_budget_m_range": [
+    0,
+    64
+  ],
+  "scope": "Independent permutation-group verification of every orientation on every unlabeled tree through eight vertices and the specific nine-vertex witness; no embedding-parity minimality claim from capacity alone."
+}

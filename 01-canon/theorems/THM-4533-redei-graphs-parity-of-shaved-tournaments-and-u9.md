@@ -17,8 +17,9 @@ status: >
     and the 5-vertex class, credited to Havet 2000; existence goes back to Grunbaum 1971.
   - THM-4526 Theorem C's constant is settled: Linial-Saks-Sos, Combinatorica 3 (1983) 101-104, give
     u(n) = n log n - O(n log log n), so c = 1.
-  OPEN (HYP-9173): whether r(n) is of order n log n or linear; "good iff hereditarily symmetric" for all trees; the path +
-  chords lists for every n.
+  OPEN (HYP-9173(a),(c)): whether r(n) is of order n log n or linear; the path + chords lists for every n.
+  CORRECTION (2026-10-19): the converse "good implies hereditarily symmetric" is REFUTED by a minimal nine-vertex tree;
+  the proved sufficient direction above is unchanged. See 05-knowledge/results/twin_signature_parity_20261019/TWIN_SIGNATURE_PARITY.md.
   Definitions: for a spanning oriented graph S on [n] and an n-tournament T, emb(S,T) is the number of bijections
   mapping S into T. S is Redei if emb(S,T) is odd for every T, and parity-rigid if emb(S, .) mod 2 is constant.
 source: collatz-procgen-20260922 session, shave4 lane (2026-10-01; resumed after a reboot), the owner's "shaved down tournament as fundamental object ... as the size increases", building on opus S15's THM-4526 (directions D69-D72); audited and promoted by the session orchestrator 2026-10-01

@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "scope": "Exact capacity/filter census, not a classification of good trees beyond eight vertices.",
+  "orientation_masks_checked": 15943,
+  "minimality_nonconstancy_pairs": 8,
+  "P5_tournaments_checked": 1024,
+  "factorial_budget_cases": 520,
+  "census": [
+    {
+      "n": 1,
+      "unlabelled_trees": 1,
+      "hereditarily_symmetric": 1,
+      "automorphism_forced_even": 0,
+      "nonhereditary_automorphism_forced_even": 0
+    },
+    {
+      "n": 2,
+      "unlabelled_trees": 1,
+      "hereditarily_symmetric": 1,
+      "automorphism_forced_even": 0,
+      "nonhereditary_automorphism_forced_even": 0
+    },
+    {
+      "n": 3,
+      "unlabelled_trees": 1,
+      "hereditarily_symmetric": 1,
+      "automorphism_forced_even": 0,
+      "nonhereditary_automorphism_forced_even": 0
+    },
+    {
+      "n": 4,
+      "unlabelled_trees": 2,
+      "hereditarily_symmetric": 2,
+      "automorphism_forced_even": 1,
+      "nonhereditary_automorphism_forced_even": 0
+    },
+    {
+      "n": 5,
+      "unlabelled_trees": 3,
+      "hereditarily_symmetric": 3,
+      "automorphism_forced_even": 1,
+      "nonhereditary_automorphism_forced_even": 0
+    },
+    {
+      "n": 6,
+      "unlabelled_trees": 6,
+      "hereditarily_symmetric": 6,
+      "automorphism_forced_even": 2,
+      "nonhereditary_automorphism_forced_even": 0
+    },
+    {
+      "n": 7,
+      "unlabelled_trees": 11,
+      "hereditarily_symmetric": 10,
+      "automorphism_forced_even": 4,
+      "nonhereditary_automorphism_forced_even": 0
+    },
+    {
+      "n": 8,
+      "unlabelled_trees": 23,
+      "hereditarily_symmetric": 16,
+      "automorphism_forced_even": 9,
+      "nonhereditary_automorphism_forced_even": 0
+    },
+    {
+      "n": 9,
+      "unlabelled_trees": 47,
+      "hereditarily_symmetric": 24,
+      "automorphism_forced_even": 19,
+      "nonhereditary_automorphism_forced_even": 3
+    },
+    {
+      "n": 10,
+      "unlabelled_trees": 106,
+      "hereditarily_symmetric": 35,
+      "automorphism_forced_even": 46,
+      "nonhereditary_automorphism_forced_even": 18
+    },
+    {
+      "n": 11,
+      "unlabelled_trees": 235,
+      "hereditarily_symmetric": 49,
+      "automorphism_forced_even": 106,
+      "nonhereditary_automorphism_forced_even": 64
+    }
+  ]
+}

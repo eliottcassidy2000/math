@@ -1,0 +1,103 @@
+{
+  "review": "Parent approved after independent proof and finite-universe audit; author confirmed exact frozen hashes. Only review status and relative links changed in the core note.",
+  "files": [
+    {
+      "path": "TWIN_SIGNATURE_PARITY.md",
+      "source_sha256": "8a57eefbc83790c88fc15363d974c2be62c77702194960410d86dbe589339d88",
+      "published_sha256": "8c3babadebc8233edf2764ea4c071c15290b36ed9ba2a88fe841ff0930ffdec0",
+      "presentation_changes": [
+        {
+          "before": "Independent review is requested;",
+          "after": "Independently [reviewed](review/INDEPENDENT_REVIEW.md);"
+        },
+        {
+          "before": "`01-canon/theorems/THM-4533-redei-graphs-parity-of-shaved-tournaments-and-u9.md`",
+          "after": "[THM-4533](../../../01-canon/theorems/THM-4533-redei-graphs-parity-of-shaved-tournaments-and-u9.md)"
+        },
+        {
+          "before": "`05-knowledge/hypotheses/HYP-9173-redei-graphs-growth-and-trees.md`",
+          "after": "[HYP-9173](../../hypotheses/HYP-9173-redei-graphs-growth-and-trees.md)"
+        },
+        {
+          "before": "`05-knowledge/results/procgen_shave4_20261001_redei_graphs.md`",
+          "after": "[the original Rédei note](../procgen_shave4_20261001_redei_graphs.md)"
+        },
+        {
+          "before": "The later `trees5_tournaments4_erdos_sos_20261005.md` inheritance bullet drops that open qualifier and must also be corrected.",
+          "after": "The later [inheritance bullet](../trees5_tournaments4_erdos_sos_20261005.md) had dropped that open qualifier; this packet corrects it along with the hypothesis and theorem routing."
+        }
+      ]
+    },
+    {
+      "path": "verify_twin_signature.py",
+      "source_sha256": "2f9aa4c18968ce487cdaadf3b9683979864dca564271e6d42c8ca3be08ff6984",
+      "published_sha256": "2f9aa4c18968ce487cdaadf3b9683979864dca564271e6d42c8ca3be08ff6984",
+      "presentation_changes": []
+    },
+    {
+      "path": "minimality_witnesses.json",
+      "source_sha256": "b6c88f197419f9bdc3fe9e70aed1382d15b238d2543890c7c7d9320006aace83",
+      "published_sha256": "b6c88f197419f9bdc3fe9e70aed1382d15b238d2543890c7c7d9320006aace83",
+      "presentation_changes": []
+    },
+    {
+      "path": "twin_signature_receipt.json",
+      "source_sha256": "edaa25527a49fdf23318fb491b826d4886cb566a1e08a4ecc8d763617b155d8b",
+      "published_sha256": "edaa25527a49fdf23318fb491b826d4886cb566a1e08a4ecc8d763617b155d8b",
+      "presentation_changes": []
+    },
+    {
+      "path": "twin_signature_receipt_optimized.json",
+      "source_sha256": "edaa25527a49fdf23318fb491b826d4886cb566a1e08a4ecc8d763617b155d8b",
+      "published_sha256": "edaa25527a49fdf23318fb491b826d4886cb566a1e08a4ecc8d763617b155d8b",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/INDEPENDENT_REVIEW.md",
+      "source_sha256": "37576074d6e4a1f142ece72ff7af8096ad3f89a50843fc6880ecba814e629616",
+      "published_sha256": "6fe4bf8f6a8e44e2a7e71955ae79123944434643d6a20d647b6e8c597da17f60",
+      "presentation_changes": [
+        {
+          "before": "`session5-algebra/TWIN_SIGNATURE_PARITY.md`",
+          "after": "[the proof](../TWIN_SIGNATURE_PARITY.md)"
+        }
+      ]
+    },
+    {
+      "path": "review/independent_tree_capacity.py",
+      "source_sha256": "5675e3a13f5c541cf209cf5b3b8fc694a5bd71445a262d968ed6060afd85e03f",
+      "published_sha256": "5675e3a13f5c541cf209cf5b3b8fc694a5bd71445a262d968ed6060afd85e03f",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/capacity_receipt.json",
+      "source_sha256": "e37c2876af5e63b1b93ffafd525004ea052240de7371f780e72e2af743f726d8",
+      "published_sha256": "e37c2876af5e63b1b93ffafd525004ea052240de7371f780e72e2af743f726d8",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/independent_embedding_witnesses.py",
+      "source_sha256": "baa40d1ed68c0063fa6193dbc8a90a3ef21c7b1a4ccefdd6143e392409fd8ac7",
+      "published_sha256": "baa40d1ed68c0063fa6193dbc8a90a3ef21c7b1a4ccefdd6143e392409fd8ac7",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/embedding_receipt.json",
+      "source_sha256": "103d997d060d0c36f05364c5aaa5bb86869944ebce52811fb7b6b56c43ea98de",
+      "published_sha256": "103d997d060d0c36f05364c5aaa5bb86869944ebce52811fb7b6b56c43ea98de",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/embedding_receipt.optimized.json",
+      "source_sha256": "103d997d060d0c36f05364c5aaa5bb86869944ebce52811fb7b6b56c43ea98de",
+      "published_sha256": "103d997d060d0c36f05364c5aaa5bb86869944ebce52811fb7b6b56c43ea98de",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/minimality_witnesses.json",
+      "source_sha256": "b6c88f197419f9bdc3fe9e70aed1382d15b238d2543890c7c7d9320006aace83",
+      "published_sha256": "b6c88f197419f9bdc3fe9e70aed1382d15b238d2543890c7c7d9320006aace83",
+      "presentation_changes": []
+    }
+  ]
+}

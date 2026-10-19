@@ -31,8 +31,8 @@ output: `trees5_tournaments4_erdos_sos_20261005.out` (this directory).
   (`07-reflections/the-recursion-modes-are-cyclotomic-factors-depth-times-phi-d.md`; THM-1955/1960):
   EVEN mode `(x-1)^2`, FULL `(x-1)^3`, ODD `(x-1)^3 Φ_2`; and Mode A (`n -> n-1`) vs Mode B
   (`n -> n-2`, "the natural recursion", `the-two-staircases.md:72`).
-- Trees inside tournaments already in canon: THM-4533 / HYP-9173 (Rédei graphs; a tree is good iff
-  hereditarily symmetric). Erdős–Sós and Sumner are greenfield (`PROBLEM-LEDGER.md:379`; the S10 note
+- Trees inside tournaments already in canon: THM-4533 / HYP-9173 (Rédei graphs; hereditary symmetry is sufficient
+  for goodness; the converse, still open in that session, is now [refuted at nine vertices](twin_signature_parity_20261019/TWIN_SIGNATURE_PARITY.md)). Erdős–Sós and Sumner are greenfield (`PROBLEM-LEDGER.md:379`; the S10 note
   of 2026-10-05 names Erdős–Sós once, as a heuristic rhyme).
 - Board: {end-defect Klein group; converse vs reflection; `K_4` as the hinge clique; handshake parity;
   `Φ_2` and `Φ_4`; the AM-fair quadruple}.

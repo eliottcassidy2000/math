@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "minimality_witnesses": [
+    {
+      "n": 7,
+      "transitive_embeddings": 66,
+      "other_embeddings": 81
+    },
+    {
+      "n": 8,
+      "transitive_embeddings": 572,
+      "other_embeddings": 213
+    },
+    {
+      "n": 8,
+      "transitive_embeddings": 165,
+      "other_embeddings": 302
+    },
+    {
+      "n": 8,
+      "transitive_embeddings": 200,
+      "other_embeddings": 323
+    },
+    {
+      "n": 8,
+      "transitive_embeddings": 46,
+      "other_embeddings": 255
+    },
+    {
+      "n": 8,
+      "transitive_embeddings": 18,
+      "other_embeddings": 427
+    },
+    {
+      "n": 8,
+      "transitive_embeddings": 4,
+      "other_embeddings": 245
+    },
+    {
+      "n": 8,
+      "transitive_embeddings": 145,
+      "other_embeddings": 310
+    }
+  ],
+  "nonhereditary_trees_by_order": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 1,
+    "8": 7
+  },
+  "P5_tournament_embedding_spectrum": {
+    "4": 120,
+    "6": 160,
+    "8": 600,
+    "10": 144
+  },
+  "P5_selfhost_embeddings": 1,
+  "source_sha256": "b6c88f197419f9bdc3fe9e70aed1382d15b238d2543890c7c7d9320006aace83",
+  "scope": "Minimality certificate complete through order eight; P5 universal tournament-even conclusion is finite-exact at its fixed order five and does not assert evenness in arbitrary directed hosts."
+}
