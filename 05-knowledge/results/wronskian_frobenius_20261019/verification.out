@@ -1,0 +1,320 @@
+All exact gates passed. No floating point arithmetic used.
+Finite universe: weighted supports D<=17,k<=6,e all,ell<=7;
+matched ranks D<=9,k<=5,m=E+1..E+3,3 deterministic permutations;
+jets p=2,3,5,h<=4,r<min(p,3),s<=2,a<=min(12,r+p*h)+1,b<=h+s+1,6 nodes;
+assignments n<=5,entries 0..3; 24 exact same-minor controls;
+CA rules:4 fixed plus12 deterministic, p=2/3/5,n<=8/5/3,m<=4;
+all binomial entries at these power times; precise counts follow.
+{
+  "counts": {
+    "binomial_exact_valuation": 1012,
+    "cellular_finite_template": 928,
+    "certified_matched_jet_rank": 315,
+    "colliding_degrees_do_not_force_zero": 4,
+    "first_carry_layer": 36,
+    "hasse_jet_bound": 35514,
+    "inseparable_zero_wronskian": 4,
+    "integral_carry_polynomial": 12,
+    "minor_factorial_bound": 12,
+    "minor_full_rank_control": 24,
+    "minor_nonzero": 24,
+    "minor_valuation_bound": 24,
+    "noncommuting_lift_hostile": 1,
+    "normalized_derivative_hostile": 3,
+    "ordinary_hasse_factorials": 35514,
+    "ordinary_jet_bound": 35514,
+    "pascal_exact_support": 65,
+    "pascal_support_count": 65,
+    "pascal_template_residues": 740,
+    "reference_unweighted_threshold": 1,
+    "reference_weighted_threshold": 1,
+    "rule30_dilation_failure": 1,
+    "rule30_exact_hostile": 1,
+    "rule_lift_erasure": 928,
+    "same_minor_unitriangular": 24,
+    "seed_content_and_truncation": 1,
+    "sharp_local_jet_budget": 49,
+    "sharp_rule_erasure_cutoff": 30,
+    "sharp_template_depth": 46,
+    "sorted_assignment_exact": 4877,
+    "torus_aliasing_hostile": 1,
+    "weighted_degree_budget_equality": 1573,
+    "wrong_direction_hostile": 3,
+    "wronskian_leading_vandermonde": 1573
+  },
+  "same_minor_records": [
+    {
+      "D": 5,
+      "bound": 0,
+      "factorial_bound": null,
+      "k": 1,
+      "ordinary": false,
+      "p": 2,
+      "rows": 21,
+      "valuation": 26,
+      "z_only": false
+    },
+    {
+      "D": 5,
+      "bound": 0,
+      "factorial_bound": 18,
+      "k": 1,
+      "ordinary": true,
+      "p": 2,
+      "rows": 21,
+      "valuation": 44,
+      "z_only": false
+    },
+    {
+      "D": 5,
+      "bound": 3,
+      "factorial_bound": null,
+      "k": 1,
+      "ordinary": false,
+      "p": 2,
+      "rows": 21,
+      "valuation": 55,
+      "z_only": true
+    },
+    {
+      "D": 5,
+      "bound": 13,
+      "factorial_bound": 13,
+      "k": 1,
+      "ordinary": true,
+      "p": 2,
+      "rows": 21,
+      "valuation": 65,
+      "z_only": true
+    },
+    {
+      "D": 7,
+      "bound": 0,
+      "factorial_bound": null,
+      "k": 2,
+      "ordinary": false,
+      "p": 2,
+      "rows": 20,
+      "valuation": 7,
+      "z_only": false
+    },
+    {
+      "D": 7,
+      "bound": 3,
+      "factorial_bound": 14,
+      "k": 2,
+      "ordinary": true,
+      "p": 2,
+      "rows": 20,
+      "valuation": 21,
+      "z_only": false
+    },
+    {
+      "D": 7,
+      "bound": 10,
+      "factorial_bound": null,
+      "k": 2,
+      "ordinary": false,
+      "p": 2,
+      "rows": 20,
+      "valuation": 53,
+      "z_only": true
+    },
+    {
+      "D": 7,
+      "bound": 20,
+      "factorial_bound": 20,
+      "k": 2,
+      "ordinary": true,
+      "p": 2,
+      "rows": 20,
+      "valuation": 63,
+      "z_only": true
+    },
+    {
+      "D": 5,
+      "bound": 0,
+      "factorial_bound": null,
+      "k": 1,
+      "ordinary": false,
+      "p": 3,
+      "rows": 21,
+      "valuation": 10,
+      "z_only": false
+    },
+    {
+      "D": 5,
+      "bound": 0,
+      "factorial_bound": 5,
+      "k": 1,
+      "ordinary": true,
+      "p": 3,
+      "rows": 21,
+      "valuation": 15,
+      "z_only": false
+    },
+    {
+      "D": 5,
+      "bound": 1,
+      "factorial_bound": null,
+      "k": 1,
+      "ordinary": false,
+      "p": 3,
+      "rows": 21,
+      "valuation": 32,
+      "z_only": true
+    },
+    {
+      "D": 5,
+      "bound": 6,
+      "factorial_bound": 6,
+      "k": 1,
+      "ordinary": true,
+      "p": 3,
+      "rows": 21,
+      "valuation": 37,
+      "z_only": true
+    },
+    {
+      "D": 7,
+      "bound": 0,
+      "factorial_bound": null,
+      "k": 2,
+      "ordinary": false,
+      "p": 3,
+      "rows": 20,
+      "valuation": 12,
+      "z_only": false
+    },
+    {
+      "D": 7,
+      "bound": 0,
+      "factorial_bound": 4,
+      "k": 2,
+      "ordinary": true,
+      "p": 3,
+      "rows": 20,
+      "valuation": 16,
+      "z_only": false
+    },
+    {
+      "D": 7,
+      "bound": 7,
+      "factorial_bound": null,
+      "k": 2,
+      "ordinary": false,
+      "p": 3,
+      "rows": 20,
+      "valuation": 29,
+      "z_only": true
+    },
+    {
+      "D": 7,
+      "bound": 11,
+      "factorial_bound": 11,
+      "k": 2,
+      "ordinary": true,
+      "p": 3,
+      "rows": 20,
+      "valuation": 33,
+      "z_only": true
+    },
+    {
+      "D": 8,
+      "bound": 0,
+      "factorial_bound": null,
+      "k": 3,
+      "ordinary": false,
+      "p": 3,
+      "rows": 18,
+      "valuation": 8,
+      "z_only": false
+    },
+    {
+      "D": 8,
+      "bound": 3,
+      "factorial_bound": 5,
+      "k": 3,
+      "ordinary": true,
+      "p": 3,
+      "rows": 18,
+      "valuation": 13,
+      "z_only": false
+    },
+    {
+      "D": 8,
+      "bound": 6,
+      "factorial_bound": null,
+      "k": 3,
+      "ordinary": false,
+      "p": 3,
+      "rows": 18,
+      "valuation": 17,
+      "z_only": true
+    },
+    {
+      "D": 8,
+      "bound": 12,
+      "factorial_bound": 12,
+      "k": 3,
+      "ordinary": true,
+      "p": 3,
+      "rows": 18,
+      "valuation": 23,
+      "z_only": true
+    },
+    {
+      "D": 9,
+      "bound": 0,
+      "factorial_bound": null,
+      "k": 4,
+      "ordinary": false,
+      "p": 5,
+      "rows": 18,
+      "valuation": 4,
+      "z_only": false
+    },
+    {
+      "D": 9,
+      "bound": 0,
+      "factorial_bound": 0,
+      "k": 4,
+      "ordinary": true,
+      "p": 5,
+      "rows": 18,
+      "valuation": 4,
+      "z_only": false
+    },
+    {
+      "D": 9,
+      "bound": 6,
+      "factorial_bound": null,
+      "k": 4,
+      "ordinary": false,
+      "p": 5,
+      "rows": 18,
+      "valuation": 11,
+      "z_only": true
+    },
+    {
+      "D": 9,
+      "bound": 6,
+      "factorial_bound": 6,
+      "k": 4,
+      "ordinary": true,
+      "p": 5,
+      "rows": 18,
+      "valuation": 11,
+      "z_only": true
+    }
+  ],
+  "threshold_example": {
+    "D": 99,
+    "k": 10,
+    "m": 20,
+    "monomials": 550,
+    "unweighted_nodes": 82,
+    "weighted_nodes": 46
+  },
+  "total_gates": 118920
+}

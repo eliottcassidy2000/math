@@ -1,0 +1,292 @@
+All exact scalar-template and lift-classification gates passed.
+{
+  "counts": {
+    "carry_derivative_identity": 1275,
+    "carry_integrality": 2550,
+    "change_of_lift_law": 1275,
+    "complete_kernel_granularity": 5760,
+    "constructed_compatible_first_lift": 70,
+    "cyclotomic_exact_double_factor": 21,
+    "cyclotomic_exact_factor": 44,
+    "cyclotomic_exact_simple_factor": 23,
+    "exhaustive_lift_existence_iff": 7,
+    "exhaustive_lift_necessity": 83085,
+    "explicit_all_precision_lift": 56,
+    "explicit_lift_reduces_correctly": 56,
+    "finite_logarithm_coefficients": 45,
+    "finite_logarithm_critical_points": 4135,
+    "finite_logarithm_exact_double_roots": 78,
+    "finite_logarithm_fermat_specialization": 45,
+    "finite_logarithm_inversion": 4135,
+    "finite_logarithm_nonzero_second_derivative": 4135,
+    "finite_logarithm_reflection": 4135,
+    "finite_logarithm_simple_endpoints": 45,
+    "intrinsic_first_obstruction_iff": 1275,
+    "lift_preserves_degree_interval": 56,
+    "minimal_exponent_exact_coefficient": 5760,
+    "monomial_kernel_classification": 198,
+    "wieferich_double_root_controls": 2,
+    "wieferich_known_positive_controls": 2,
+    "zero_kernel_classification": 18
+  },
+  "exhaustive_lift_universes": [
+    {
+      "D": 3,
+      "admissible_mod_p_patterns": 7,
+      "all_lifts": 256,
+      "all_mod_p_patterns": 16,
+      "compatible_lifts": 7,
+      "m": 2,
+      "p": 2
+    },
+    {
+      "D": 3,
+      "admissible_mod_p_patterns": 5,
+      "all_lifts": 4096,
+      "all_mod_p_patterns": 16,
+      "compatible_lifts": 5,
+      "m": 3,
+      "p": 2
+    },
+    {
+      "D": 4,
+      "admissible_mod_p_patterns": 7,
+      "all_lifts": 32768,
+      "all_mod_p_patterns": 32,
+      "compatible_lifts": 7,
+      "m": 3,
+      "p": 2
+    },
+    {
+      "D": 2,
+      "admissible_mod_p_patterns": 4,
+      "all_lifts": 4096,
+      "all_mod_p_patterns": 8,
+      "compatible_lifts": 4,
+      "m": 4,
+      "p": 2
+    },
+    {
+      "D": 3,
+      "admissible_mod_p_patterns": 13,
+      "all_lifts": 6561,
+      "all_mod_p_patterns": 81,
+      "compatible_lifts": 13,
+      "m": 2,
+      "p": 3
+    },
+    {
+      "D": 2,
+      "admissible_mod_p_patterns": 7,
+      "all_lifts": 19683,
+      "all_mod_p_patterns": 27,
+      "compatible_lifts": 7,
+      "m": 3,
+      "p": 3
+    },
+    {
+      "D": 2,
+      "admissible_mod_p_patterns": 13,
+      "all_lifts": 15625,
+      "all_mod_p_patterns": 125,
+      "compatible_lifts": 13,
+      "m": 2,
+      "p": 5
+    }
+  ],
+  "finite_logarithm_nontrivial_roots_below_200": {
+    "101": [],
+    "103": [
+      46,
+      56
+    ],
+    "107": [],
+    "109": [
+      45,
+      63
+    ],
+    "11": [],
+    "113": [],
+    "127": [
+      19,
+      107
+    ],
+    "13": [
+      3,
+      9
+    ],
+    "131": [],
+    "137": [],
+    "139": [
+      42,
+      96
+    ],
+    "149": [],
+    "151": [
+      32,
+      118
+    ],
+    "157": [
+      12,
+      144
+    ],
+    "163": [
+      58,
+      104
+    ],
+    "167": [],
+    "17": [],
+    "173": [],
+    "179": [
+      2,
+      59,
+      88,
+      90,
+      119,
+      176
+    ],
+    "181": [
+      48,
+      132
+    ],
+    "19": [
+      7,
+      11
+    ],
+    "191": [],
+    "193": [
+      70,
+      84,
+      86,
+      91,
+      101,
+      106,
+      108,
+      122
+    ],
+    "197": [],
+    "199": [
+      92,
+      106
+    ],
+    "23": [],
+    "29": [],
+    "3": [],
+    "31": [
+      5,
+      25
+    ],
+    "37": [
+      10,
+      26
+    ],
+    "41": [],
+    "43": [
+      6,
+      36
+    ],
+    "47": [],
+    "5": [],
+    "53": [],
+    "59": [
+      3,
+      4,
+      11,
+      14,
+      15,
+      20,
+      38,
+      43,
+      44,
+      47,
+      54,
+      55
+    ],
+    "61": [
+      13,
+      47
+    ],
+    "67": [
+      29,
+      37
+    ],
+    "7": [
+      2,
+      4
+    ],
+    "71": [],
+    "73": [
+      8,
+      64
+    ],
+    "79": [
+      11,
+      23,
+      32,
+      36,
+      42,
+      46,
+      55,
+      67
+    ],
+    "83": [
+      8,
+      30,
+      36,
+      46,
+      52,
+      74
+    ],
+    "89": [],
+    "97": [
+      35,
+      61
+    ]
+  },
+  "first_obstruction_universes": [
+    {
+      "all_mod_p_rules": 64,
+      "degree_bound": 5,
+      "p": 2
+    },
+    {
+      "all_mod_p_rules": 243,
+      "degree_bound": 4,
+      "p": 3
+    },
+    {
+      "all_mod_p_rules": 625,
+      "degree_bound": 3,
+      "p": 5
+    },
+    {
+      "all_mod_p_rules": 343,
+      "degree_bound": 2,
+      "p": 7
+    }
+  ],
+  "granularity_universes": [
+    {
+      "all_mod_p_rules": 128,
+      "degree_bound": 6,
+      "m": "1..3",
+      "n": "m-1 and m",
+      "p": 2
+    },
+    {
+      "all_mod_p_rules": 243,
+      "degree_bound": 4,
+      "m": "1..3",
+      "n": "m-1 and m",
+      "p": 3
+    },
+    {
+      "all_mod_p_rules": 625,
+      "degree_bound": 3,
+      "m": "1..3",
+      "n": "m-1 and m",
+      "p": 5
+    }
+  ],
+  "total_gates": 118286
+}

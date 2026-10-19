@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "universes": [
+    {
+      "p": 2,
+      "m": 3,
+      "D": 4,
+      "all_lifts": 32768,
+      "admissible_mod_p_rules": 7
+    },
+    {
+      "p": 3,
+      "m": 2,
+      "D": 3,
+      "all_lifts": 6561,
+      "admissible_mod_p_rules": 13
+    },
+    {
+      "p": 5,
+      "m": 2,
+      "D": 2,
+      "all_lifts": 15625,
+      "admissible_mod_p_rules": 13
+    },
+    {
+      "p": 2,
+      "m": 4,
+      "D": 3,
+      "all_lifts": 65536,
+      "admissible_mod_p_rules": 5
+    }
+  ]
+}
