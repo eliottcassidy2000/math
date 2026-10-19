@@ -4,6 +4,8 @@ Date: 2026-10-19. Status: **PROVED, independently audited, with a finite-exact p
 
 ## Outcome
 
+**Dated continuation (19 October 2026).** The [path-complement addendum](path-complement/README.md) removes the apparent same-direction sparsity exception below. Disjoint mixed-cube supports and homogeneous incidence dimension four now suffice for the two-double-cycle exclusion, without an additional normalization hypothesis. The rank-six and overlapping-support cases remain open, and the numerical bounds stay 89/445. The original argument and stated historical boundary below are retained.
+
 For the three norm-one direction families
 
     u=(1,0), v=(0,1), w=(3,9),   Q(x,y)=x^2+xy+y^2 over F_29,

@@ -1,0 +1,101 @@
+{
+  "description": "Presentation updates audited status, navigation, reproduction cautions and package-relative provenance; internal source/Git process prose is removed. Mathematical text and verifier logic are unchanged. Independent receipts differ only in frozen_readme_sha256.",
+  "files": [
+    {
+      "path": "README.md",
+      "source_sha256": "546196c69c31bdb368ad562d6c2a9fca734cd6b211d0829236e9f4db71c205c3",
+      "published_sha256": "514df64f180733cc265b8598ac8bb5d3e164ea42b85dc501852b9fef9019b5c9",
+      "presentation_updates": true
+    },
+    {
+      "path": "verify_path_complement.py",
+      "source_sha256": "5f57949dedbe46a3918682047e66127ea479de83be33f9118f73153e53a89403",
+      "published_sha256": "5f57949dedbe46a3918682047e66127ea479de83be33f9118f73153e53a89403",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify_path_complement.out",
+      "source_sha256": "97eb0ede9d9da2a32857a3bf6d5a5a39a255c6dc1c54621922abf355a73ff54a",
+      "published_sha256": "97eb0ede9d9da2a32857a3bf6d5a5a39a255c6dc1c54621922abf355a73ff54a",
+      "presentation_updates": false
+    },
+    {
+      "path": "path-complement-exact-results.json",
+      "source_sha256": "6b9d949f06c8ad27c802a38ee73a8516419b8ff3c775bc4be7b2f1553111dfb0",
+      "published_sha256": "6b9d949f06c8ad27c802a38ee73a8516419b8ff3c775bc4be7b2f1553111dfb0",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/REVIEW.md",
+      "source_sha256": "794f965e8fc372c6112b94e84c1c33e55122ab08130cbc841c9977170e4fe41e",
+      "published_sha256": "e8fdc9e6574461fca0b77fed0266a32148b1675ecad7d76dcabae8369a9390c2",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-normal.json",
+      "source_sha256": "085b2b0c067c717fedb136a204c476b8fa3bc5e88f7b5f2817c839ee58bb34d4",
+      "published_sha256": "12afc5328f5fe781de1e3fec3b887d04ccffda24a2a14fc5ece73b02d0f3e13f",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-normal.out",
+      "source_sha256": "e0e7c27ba988559db47a75573e4f476b274984f696f53abb0aea06736c3f04f4",
+      "published_sha256": "8199d698a1458691280c68144df8c304eb1155fb18beeebb511d8d03cd0750c1",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-optimized.json",
+      "source_sha256": "085b2b0c067c717fedb136a204c476b8fa3bc5e88f7b5f2817c839ee58bb34d4",
+      "published_sha256": "12afc5328f5fe781de1e3fec3b887d04ccffda24a2a14fc5ece73b02d0f3e13f",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-optimized.out",
+      "source_sha256": "e0e7c27ba988559db47a75573e4f476b274984f696f53abb0aea06736c3f04f4",
+      "published_sha256": "8199d698a1458691280c68144df8c304eb1155fb18beeebb511d8d03cd0750c1",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-results.json",
+      "source_sha256": "085b2b0c067c717fedb136a204c476b8fa3bc5e88f7b5f2817c839ee58bb34d4",
+      "published_sha256": "12afc5328f5fe781de1e3fec3b887d04ccffda24a2a14fc5ece73b02d0f3e13f",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent_controls.py",
+      "source_sha256": "d0708757f1b2756819ae26e34fb39c3c0f49da852ca77599a36a141f8e5e4281",
+      "published_sha256": "7e95baeef9508a50fcfe0dfdd14027b35d1d28ad0c487ed1ef148d421413c584",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/input-sha256.txt",
+      "source_sha256": "65cbdb15f693b260f912b578082c898d21f46ff68b9f027e95a8f9bf48bb4831",
+      "published_sha256": "5f794fac654d1d64ba65cd91946bcdc4d6298d26e1349a847f204498d521e2f2",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/submitted-replay/path-complement-exact-results.json",
+      "source_sha256": "6b9d949f06c8ad27c802a38ee73a8516419b8ff3c775bc4be7b2f1553111dfb0",
+      "published_sha256": "6b9d949f06c8ad27c802a38ee73a8516419b8ff3c775bc4be7b2f1553111dfb0",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/submitted-replay/stdout.txt",
+      "source_sha256": "97eb0ede9d9da2a32857a3bf6d5a5a39a255c6dc1c54621922abf355a73ff54a",
+      "published_sha256": "97eb0ede9d9da2a32857a3bf6d5a5a39a255c6dc1c54621922abf355a73ff54a",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/submitted-replay/verify_path_complement.py",
+      "source_sha256": "5f57949dedbe46a3918682047e66127ea479de83be33f9118f73153e53a89403",
+      "published_sha256": "5f57949dedbe46a3918682047e66127ea479de83be33f9118f73153e53a89403",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/review-manifest.json",
+      "source_sha256": "b8dc56e9ec6bfd7bfda0bfebc48930de6a2e0b2e2de704d834cb23684cd1e61f",
+      "published_sha256": "1b1480c88f03a10c4ac0fead493a356d23b7447083218ccec888a412f55f3150",
+      "presentation_updates": true
+    }
+  ]
+}

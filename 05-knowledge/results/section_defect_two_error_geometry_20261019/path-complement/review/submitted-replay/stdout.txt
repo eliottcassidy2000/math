@@ -1,0 +1,7 @@
+348 potentially crowded geometries checked; exactly 24 require repair.
+At most one component shares correction columns, by unequal quotient projections.
+Every repair preserves its endpoint dipole and mixed cube exactly over the integers.
+Every repaired nonexceptional component has at most 15 positions per column.
+All 348 final support patterns satisfy the r-column normalization bounds.
+Two disjoint cubes with homogeneous incidence dimension four are therefore excluded without an extra sparsity hypothesis.
+Numerical bounds remain 89 and 445; interacting or overlapping two-cycle cases remain open.

@@ -1,0 +1,30 @@
+{
+  "verdict": "PASS",
+  "reduced_geometries": 348,
+  "reduced_repairs": 24,
+  "complete_short_same_direction_geometries": 477456,
+  "complete_repairs": 24,
+  "frozen_readme_sha256": "514df64f180733cc265b8598ac8bb5d3e164ea42b85dc501852b9fef9019b5c9",
+  "checks": {
+    "all_complement_repairs_have_capacity_fifteen": 24,
+    "all_integer_cycle_sums_zero": 2088,
+    "all_repaired_column_bounds": 1044,
+    "all_short_same_direction_geometries_normalize": 477456,
+    "all_submitted_before_after_records_match": 1,
+    "complete_348_cases_and_24_repairs": 1,
+    "complete_477456_geometry_universe": 1,
+    "complete_quotient_at_most_one_shared_component": 84,
+    "exact_crowded_phases": 348,
+    "negative_fifteen_point_complement": 24,
+    "nonparallel_grid_coordinate": 6,
+    "only_one_shared_component": 348,
+    "only_two_length_fourteen_paths_can_crowd": 24,
+    "quotients_distinct_up_to_sign": 3,
+    "repair_stronger_bound_fifteen": 48,
+    "unchanged_integer_dipole": 24,
+    "unchanged_integer_mixed_cube": 24,
+    "unique_reduced_origin": 348,
+    "wrong_complement_sign_rejected": 1
+  },
+  "scope": "Normalization is automatic for same-direction dipoles on distinct cycles; disjoint cube supports and homogeneous dimension four still required for exclusion."
+}

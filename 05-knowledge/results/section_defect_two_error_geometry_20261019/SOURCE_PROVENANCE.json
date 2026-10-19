@@ -97,5 +97,50 @@
       "published_sha256": "402393f2b22b1be7a329fe247368508acba4f7273da44d6fbd6808885564b6c5",
       "presentation_updates": true
     }
+  ],
+  "publication_overlays": [
+    {
+      "date": "2026-10-19",
+      "kind": "Dated historical-scope continuation pointer; no mathematical proof or test change.",
+      "previous_provenance_sha256": "50249d82d384ce04a546714edd8ce2d24d4d95655fb3b21c8f6b64176ebde16e",
+      "exact_inserted_text": "\n**Dated continuation (19 October 2026).** The [path-complement addendum](path-complement/README.md) removes the apparent same-direction sparsity exception below. Disjoint mixed-cube supports and homogeneous incidence dimension four now suffice for the two-double-cycle exclusion, without an additional normalization hypothesis. The rank-six and overlapping-support cases remain open, and the numerical bounds stay 89/445. The original argument and stated historical boundary below are retained.\n",
+      "files": [
+        {
+          "path": "README.md",
+          "before_sha256": "8c60c500e3e94ae1adaf18fe88ddae90febd5c0c7cd80c7ceaae89ed907858e8",
+          "after_sha256": "ca85cc9a705f9ea4453ea0a4241defee90e3b3459c46039cf2ff9c895669f6d4"
+        },
+        {
+          "path": "review/independent-normal.json",
+          "before_sha256": "c9321fcdab5e0cff69b70247d70e44382c8e0aef278c9438f2c45aeb78f267e8",
+          "after_sha256": "4246d18b0206077aad5e7ed90eca7180fc7b5e681690019eeefef54a64e66bd0"
+        },
+        {
+          "path": "review/independent-optimized.json",
+          "before_sha256": "c9321fcdab5e0cff69b70247d70e44382c8e0aef278c9438f2c45aeb78f267e8",
+          "after_sha256": "4246d18b0206077aad5e7ed90eca7180fc7b5e681690019eeefef54a64e66bd0"
+        },
+        {
+          "path": "review/independent-results.json",
+          "before_sha256": "c9321fcdab5e0cff69b70247d70e44382c8e0aef278c9438f2c45aeb78f267e8",
+          "after_sha256": "4246d18b0206077aad5e7ed90eca7180fc7b5e681690019eeefef54a64e66bd0"
+        },
+        {
+          "path": "review/independent-normal.out",
+          "before_sha256": "adc4d1d40aaaf5c7487191b0adb1cd734390b0752b551ce23d3967a88249ca8c",
+          "after_sha256": "4d4e53e52d61a1cebe77c057d64990164ff53bb08494d1f7dcbe5e944a967b81"
+        },
+        {
+          "path": "review/independent-optimized.out",
+          "before_sha256": "adc4d1d40aaaf5c7487191b0adb1cd734390b0752b551ce23d3967a88249ca8c",
+          "after_sha256": "4d4e53e52d61a1cebe77c057d64990164ff53bb08494d1f7dcbe5e944a967b81"
+        },
+        {
+          "path": "review/review-manifest.json",
+          "before_sha256": "402393f2b22b1be7a329fe247368508acba4f7273da44d6fbd6808885564b6c5",
+          "after_sha256": "9c5caadd160262e41a54d7d45775a0e97d401f33756b2bb080738bc174f39ff0"
+        }
+      ]
+    }
   ]
 }

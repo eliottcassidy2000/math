@@ -358,6 +358,6 @@
     "disjoint_implies_rank_four_rejected": true,
     "wrong_stress_sign_rejected": true
   },
-  "frozen_readme_sha256": "8c60c500e3e94ae1adaf18fe88ddae90febd5c0c7cd80c7ceaae89ed907858e8",
+  "frozen_readme_sha256": "ca85cc9a705f9ea4453ea0a4241defee90e3b3459c46039cf2ff9c895669f6d4",
   "scope": "Excludes one three-failure cycle at total 89; conditional two-dipole criterion; bounds remain 89 and 445."
 }

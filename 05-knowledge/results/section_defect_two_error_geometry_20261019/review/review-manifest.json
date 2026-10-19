@@ -5,11 +5,11 @@
   "publication_list_sha256": "8e481a3e210228028284876914299fb904718fe2b36fbeadb7648cea61d82e11",
   "review_files": {
     "REVIEW.md": "6d26bf8c3fc9e841e8e8c345870d9b84f18d0a4f153f6090fc95779f7a8ffb5b",
-    "independent-normal.json": "c9321fcdab5e0cff69b70247d70e44382c8e0aef278c9438f2c45aeb78f267e8",
-    "independent-normal.out": "adc4d1d40aaaf5c7487191b0adb1cd734390b0752b551ce23d3967a88249ca8c",
-    "independent-optimized.json": "c9321fcdab5e0cff69b70247d70e44382c8e0aef278c9438f2c45aeb78f267e8",
-    "independent-optimized.out": "adc4d1d40aaaf5c7487191b0adb1cd734390b0752b551ce23d3967a88249ca8c",
-    "independent-results.json": "c9321fcdab5e0cff69b70247d70e44382c8e0aef278c9438f2c45aeb78f267e8",
+    "independent-normal.json": "4246d18b0206077aad5e7ed90eca7180fc7b5e681690019eeefef54a64e66bd0",
+    "independent-normal.out": "4d4e53e52d61a1cebe77c057d64990164ff53bb08494d1f7dcbe5e944a967b81",
+    "independent-optimized.json": "4246d18b0206077aad5e7ed90eca7180fc7b5e681690019eeefef54a64e66bd0",
+    "independent-optimized.out": "4d4e53e52d61a1cebe77c057d64990164ff53bb08494d1f7dcbe5e944a967b81",
+    "independent-results.json": "4246d18b0206077aad5e7ed90eca7180fc7b5e681690019eeefef54a64e66bd0",
     "independent_controls.py": "8e95f20ebd2063da7a00107a2d32ec350eb8797c3a2cfb5101cbbc59b291eeb9",
     "input-sha256.txt": "03bdffa1ffc8c2d9988b6efa4cb7870cac9748e20c77f311ff23d623ccae13d4",
     "submitted-replay/stdout.txt": "030c90b6e8fb801386eae74e17aa7fbd80a613528a9c68f13c78a3854904e909",
@@ -32,10 +32,11 @@
     "two-extra-exact-results.json": "6a7e84293b6b9092436ee42e52ec4fae2d88981f0f7dc350751663e67d4d4ce3"
   },
   "published_source_files": {
-    "README.md": "8c60c500e3e94ae1adaf18fe88ddae90febd5c0c7cd80c7ceaae89ed907858e8",
+    "README.md": "ca85cc9a705f9ea4453ea0a4241defee90e3b3459c46039cf2ff9c895669f6d4",
     "verify_two_extra.py": "9057b3f3a8f3409286dfd21ab6ded76fc65952407fd19779264545b94f2cbfe4",
     "verify_two_extra.out": "030c90b6e8fb801386eae74e17aa7fbd80a613528a9c68f13c78a3854904e909",
     "two-extra-exact-results.json": "6a7e84293b6b9092436ee42e52ec4fae2d88981f0f7dc350751663e67d4d4ce3"
   },
-  "source_review_manifest_sha256": "5ab9f039c5ee8a4fe2e7b57c8bdca73c401fd01d3f1e6f8fd75eaeb70c814574"
+  "source_review_manifest_sha256": "5ab9f039c5ee8a4fe2e7b57c8bdca73c401fd01d3f1e6f8fd75eaeb70c814574",
+  "dated_continuation": "The original review retains its historical hypotheses. The separately audited path-complement addendum removes the extra normalization condition; the dated README pointer changes no original argument."
 }

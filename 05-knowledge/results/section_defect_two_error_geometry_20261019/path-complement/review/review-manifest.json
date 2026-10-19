@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-19",
+  "verdict": "PASS",
+  "packet": "path_complement_addendum",
+  "publication_list_sha256": "e36c1eeb173fb74add1afcb19285f573aeb005a7595456fc5ee25e318558d204",
+  "review_files": {
+    "REVIEW.md": "e8fdc9e6574461fca0b77fed0266a32148b1675ecad7d76dcabae8369a9390c2",
+    "independent-normal.json": "12afc5328f5fe781de1e3fec3b887d04ccffda24a2a14fc5ece73b02d0f3e13f",
+    "independent-normal.out": "8199d698a1458691280c68144df8c304eb1155fb18beeebb511d8d03cd0750c1",
+    "independent-optimized.json": "12afc5328f5fe781de1e3fec3b887d04ccffda24a2a14fc5ece73b02d0f3e13f",
+    "independent-optimized.out": "8199d698a1458691280c68144df8c304eb1155fb18beeebb511d8d03cd0750c1",
+    "independent-results.json": "12afc5328f5fe781de1e3fec3b887d04ccffda24a2a14fc5ece73b02d0f3e13f",
+    "independent_controls.py": "7e95baeef9508a50fcfe0dfdd14027b35d1d28ad0c487ed1ef148d421413c584",
+    "input-sha256.txt": "5f794fac654d1d64ba65cd91946bcdc4d6298d26e1349a847f204498d521e2f2",
+    "submitted-replay/path-complement-exact-results.json": "6b9d949f06c8ad27c802a38ee73a8516419b8ff3c775bc4be7b2f1553111dfb0",
+    "submitted-replay/stdout.txt": "97eb0ede9d9da2a32857a3bf6d5a5a39a255c6dc1c54621922abf355a73ff54a",
+    "submitted-replay/verify_path_complement.py": "5f57949dedbe46a3918682047e66127ea479de83be33f9118f73153e53a89403"
+  },
+  "submitted_replay_json_and_stdout_identical": true,
+  "independent_normal_and_optimized_receipts_identical": true,
+  "numerical_lower_bounds_unchanged": {
+    "triple": 89,
+    "full_graph": 445
+  },
+  "scope": "Normalization automatic for same-direction dipoles on distinct cycles. Disjoint mixed-cube supports and homogeneous kernel dimension four remain required for the resulting exclusion criterion.",
+  "independent_universes": {
+    "reduced": 348,
+    "full_short_same_direction_up_to_translation": 477456,
+    "repairs": 24
+  },
+  "original_packet_readme_sha256": "2ea9c2a21fec044d5424443998ef6b6710c281a1dc214d456372e448772e1960",
+  "reviewed_source_files": {
+    "README.md": "546196c69c31bdb368ad562d6c2a9fca734cd6b211d0829236e9f4db71c205c3",
+    "verify_path_complement.py": "5f57949dedbe46a3918682047e66127ea479de83be33f9118f73153e53a89403",
+    "verify_path_complement.out": "97eb0ede9d9da2a32857a3bf6d5a5a39a255c6dc1c54621922abf355a73ff54a",
+    "path-complement-exact-results.json": "6b9d949f06c8ad27c802a38ee73a8516419b8ff3c775bc4be7b2f1553111dfb0"
+  },
+  "published_source_files": {
+    "README.md": "514df64f180733cc265b8598ac8bb5d3e164ea42b85dc501852b9fef9019b5c9",
+    "verify_path_complement.py": "5f57949dedbe46a3918682047e66127ea479de83be33f9118f73153e53a89403",
+    "verify_path_complement.out": "97eb0ede9d9da2a32857a3bf6d5a5a39a255c6dc1c54621922abf355a73ff54a",
+    "path-complement-exact-results.json": "6b9d949f06c8ad27c802a38ee73a8516419b8ff3c775bc4be7b2f1553111dfb0"
+  },
+  "source_review_manifest_sha256": "b8dc56e9ec6bfd7bfda0bfebc48930de6a2e0b2e2de704d834cb23684cd1e61f"
+}
