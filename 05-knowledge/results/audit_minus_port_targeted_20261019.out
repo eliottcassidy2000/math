@@ -1,0 +1,29 @@
+PASS 28 targeted exact controls
+- negative-sheet anchor X
+- negative-sheet anchor Y
+- anchor on cubic
+- anchor square
+- doubling X
+- 3Q inverse parameter
+- 3Q inverse z
+- integer polynomial square identity
+- v_minus = 1/u_plus(1/t)
+- W = reciprocal Z
+- reciprocal plus numerator
+- reciprocal plus denominator
+- spread under reciprocal
+- E shifted coefficients
+- displacement coefficients
+- endpoint coefficients
+- E lower bound >31
+- displacement coefficient lower bound >63
+- endpoint lower bound >4
+- spread derivative
+- spread endpoint cap
+- fallback cutoff
+- fallback signed-even endpoint
+- fallback candidate count
+- minus polynomial degrees
+- N coefficient norm
+- E coefficient norm
+- cusp height constant

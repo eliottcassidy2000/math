@@ -50,6 +50,8 @@ The bounded search succeeds for all 528 admitted primitive triples of hypotenuse
 
 10. A second independent section escapes that orbit barrier. After swapping to the low parameter cone, `3Q+2P` supplies a valid increasing-spread contact throughout `1<t<=17/16`; its parameter is a degree-11 rational function. Outside that cusp chart a fixed list of even translates with `|q|<=256` suffices. Thus every plus-port anchor has a distinct contact with `C' <= B C^A`, linear output bit length, and a five-vertex square-sum construction with polynomial numerical labels. The sections `P,Q` are independent over `Q(t)`: their nodal reductions differ by a 2-torsion point, while `2(P+Q)` is a nonzero section approaching the identity. See [bounded-section atlas](square_sum_bounded_section_contacts_20261019.md). The old cubic lower bound remains a theorem about its specified coset.
 
+11. The minus port has its own bounded cusp section: triple the negative-sheet anchor, then use the positive-sheet finite fallback elsewhere. Together the two atlases give polynomial numerical height and linear output bits for either prescribed port. Their degree-11 maps are related exactly by `v_minus(t)=1/u_plus(1/t)`; the underlying quartic involution acts on the cubic as `R -> -R-P`, taking the plus section `3Q+2P` to the minus section `3Q_minus`. See [minus atlas and reciprocal duality](square_sum_minus_bounded_section_contacts_20261019.md).
+
 ## 4. Odd zeta and graph geometry: exact maps
 
 The signed primitive-triangle Dirichlet series is
@@ -77,7 +79,7 @@ See [graceful exchange packet](graceful_square_exchange_20261019.md). Neither co
 
 ### A. Quantitative Pythagorean contact construction
 
-Existence and polynomial bit complexity are settled for one unrestricted-direction neighbor at either port. For the plus port, the independent-section atlas now strengthens this to fixed-power numerical height and linear output bits, escaping the sharp logarithmic-index/cubic-output barrier of the original coset. The next precise targets are an analogous bounded atlas for the minus port, prescribed narrow spread windows, and enough choices to avoid an arbitrary finite set while controlling height. These extra quantifiers are needed for economical long-chain gluing and do not follow from a one-neighbor theorem.
+For either prescribed port, finite rational-section atlases now give one neighbor with fixed-power numerical height and linear output bits, escaping the original plus-coset barrier. The next precise targets are multiple distinct choices with controlled height, avoidance of a supplied finite set, and prescribed narrow spread windows. Odd-multiplier cusp sections suggest a fixed-count extension, but those additional quantifiers need their own proof before transferring the one-neighbor bounds to long-chain gluing.
 
 ### B. Denominator-controlled common-neighbor gluing
 
