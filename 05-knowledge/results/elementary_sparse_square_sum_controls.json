@@ -1,0 +1,43 @@
+{
+  "status": "FINITE-EXACT elementary sparse bounds; standard library only",
+  "checks": {
+    "seed_triangle": 1,
+    "exact_four_cycle": 1,
+    "closing_parity": 41650,
+    "closing_edges": 41650,
+    "closing_distinctness_and_bound": 41650,
+    "maximum_at_endpoint": 1001,
+    "linear_closure_delta_bound": 1001,
+    "linear_closure_edges": 1001,
+    "linear_closure_distinctness_and_bound": 1001,
+    "cycle_vertex_count_and_distinctness": 1001,
+    "exact_seed_retained": 1001,
+    "complete_cycle_edges": 1001,
+    "global_quadratic_numeric_bound": 1001,
+    "greedy_strict_growth": 3998,
+    "greedy_edge": 3998,
+    "tree_quadratic_numeric_bound": 2997
+  },
+  "cycle_samples": {
+    "5": {
+      "max_label": 599042,
+      "max_bits": 20
+    },
+    "6": {
+      "max_label": 553202,
+      "max_bits": 20
+    },
+    "10": {
+      "max_label": 487449,
+      "max_bits": 19
+    },
+    "100": {
+      "max_label": 1614546,
+      "max_bits": 21
+    },
+    "1000": {
+      "max_label": 52940979,
+      "max_bits": 26
+    }
+  }
+}
