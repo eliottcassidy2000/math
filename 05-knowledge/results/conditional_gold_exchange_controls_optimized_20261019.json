@@ -1,0 +1,1039 @@
+{
+  "status": "ALL_SELECTED_EXACT_CONTROLS_PASSED",
+  "scope": "No poset census; two fixed ten-point witnesses, two-block ordinal products, tiny hostile controls, bounded integer probability tables.",
+  "statistics": {
+    "checks": 1993,
+    "four_cell_tables": 354,
+    "cyclic_weight_laws": 99,
+    "conditional_transfer_cases": 224
+  },
+  "witnesses": [
+    {
+      "label": "packet117 Q",
+      "pred": [
+        0,
+        0,
+        0,
+        6,
+        0,
+        19,
+        2,
+        18,
+        86,
+        151
+      ],
+      "degrees": [
+        7,
+        3,
+        6,
+        7,
+        5,
+        6,
+        7,
+        6,
+        5,
+        4
+      ],
+      "E": 11971,
+      "R_pred": [
+        0,
+        0,
+        0,
+        6,
+        0,
+        31,
+        2,
+        18,
+        86,
+        151
+      ],
+      "b": 6562,
+      "first": [
+        3,
+        5
+      ],
+      "second": [
+        2,
+        4
+      ],
+      "cells_11_10_01_00": [
+        3281,
+        3281,
+        1899,
+        3510
+      ],
+      "gold_margins": [
+        2128,
+        2128,
+        4663,
+        3052
+      ],
+      "sigma": [
+        0,
+        1,
+        4,
+        7,
+        2,
+        9,
+        6,
+        3,
+        8,
+        5
+      ],
+      "overlap": 6562,
+      "imbalance": 0,
+      "defect": 0,
+      "tolerance": 4256,
+      "original_signatures": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "branch_signatures": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "eligible_good_orientations": [
+        {
+          "dual": 0,
+          "a": 0,
+          "b": 3,
+          "numerator": 10308,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 0,
+          "b": 6,
+          "numerator": 8268,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 0,
+          "b": 7,
+          "numerator": 9435,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 0,
+          "b": 8,
+          "numerator": 11214,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 1,
+          "b": 0,
+          "numerator": 8443,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 1,
+          "b": 2,
+          "numerator": 8021,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 1,
+          "b": 4,
+          "numerator": 7304,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 2,
+          "b": 0,
+          "numerator": 6547,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 2,
+          "b": 5,
+          "numerator": 11065,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 2,
+          "b": 6,
+          "numerator": 8968,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 2,
+          "b": 7,
+          "numerator": 9941,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 3,
+          "b": 8,
+          "numerator": 7636,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 3,
+          "b": 9,
+          "numerator": 8185,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 4,
+          "b": 0,
+          "numerator": 7381,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 4,
+          "b": 2,
+          "numerator": 6791,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 4,
+          "b": 3,
+          "numerator": 11156,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 4,
+          "b": 6,
+          "numerator": 9724,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 5,
+          "b": 9,
+          "numerator": 7741,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 6,
+          "b": 3,
+          "numerator": 8925,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 6,
+          "b": 5,
+          "numerator": 9447,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 6,
+          "b": 7,
+          "numerator": 7249,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 6,
+          "b": 9,
+          "numerator": 10701,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 7,
+          "b": 5,
+          "numerator": 8754,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 7,
+          "b": 8,
+          "numerator": 9724,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 0,
+          "b": 1,
+          "numerator": 8443,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 0,
+          "b": 4,
+          "numerator": 7381,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 2,
+          "b": 1,
+          "numerator": 8021,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 3,
+          "b": 0,
+          "numerator": 10308,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 3,
+          "b": 4,
+          "numerator": 11156,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 3,
+          "b": 6,
+          "numerator": 8925,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 3,
+          "b": 7,
+          "numerator": 8006,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 4,
+          "b": 1,
+          "numerator": 7304,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 5,
+          "b": 2,
+          "numerator": 11065,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 5,
+          "b": 3,
+          "numerator": 6562,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 5,
+          "b": 6,
+          "numerator": 9447,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 5,
+          "b": 7,
+          "numerator": 8754,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 6,
+          "b": 2,
+          "numerator": 8968,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 6,
+          "b": 4,
+          "numerator": 9724,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 7,
+          "b": 0,
+          "numerator": 9435,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 7,
+          "b": 2,
+          "numerator": 9941,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 0,
+          "numerator": 11214,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 3,
+          "numerator": 7636,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 5,
+          "numerator": 7052,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 7,
+          "numerator": 9724,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 9,
+          "b": 3,
+          "numerator": 8185,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 9,
+          "b": 5,
+          "numerator": 7741,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 9,
+          "b": 6,
+          "numerator": 10701,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 9,
+          "b": 8,
+          "numerator": 6640,
+          "good": false
+        }
+      ],
+      "eligible_count": 48,
+      "minimum_eligible_numerator": 6547
+    },
+    {
+      "label": "Q plus 6<7",
+      "pred": [
+        0,
+        0,
+        0,
+        6,
+        0,
+        19,
+        2,
+        82,
+        86,
+        215
+      ],
+      "degrees": [
+        7,
+        3,
+        6,
+        7,
+        5,
+        6,
+        5,
+        5,
+        5,
+        3
+      ],
+      "E": 7249,
+      "R_pred": [
+        0,
+        0,
+        0,
+        6,
+        0,
+        31,
+        2,
+        82,
+        86,
+        215
+      ],
+      "b": 4072,
+      "first": [
+        3,
+        5
+      ],
+      "second": [
+        2,
+        4
+      ],
+      "cells_11_10_01_00": [
+        2221,
+        1851,
+        1224,
+        1953
+      ],
+      "gold_margins": [
+        956,
+        1326,
+        2848,
+        2119
+      ],
+      "sigma": [
+        0,
+        1,
+        4,
+        3,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "overlap": 3192,
+      "imbalance": 370,
+      "defect": 880,
+      "tolerance": 2282,
+      "original_signatures": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "branch_signatures": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "eligible_good_orientations": [
+        {
+          "dual": 0,
+          "a": 0,
+          "b": 3,
+          "numerator": 6156,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 0,
+          "b": 7,
+          "numerator": 6189,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 0,
+          "b": 8,
+          "numerator": 6624,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 1,
+          "b": 0,
+          "numerator": 5269,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 1,
+          "b": 2,
+          "numerator": 4939,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 1,
+          "b": 4,
+          "numerator": 4848,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 2,
+          "b": 0,
+          "numerator": 4072,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 2,
+          "b": 5,
+          "numerator": 6745,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 2,
+          "b": 6,
+          "numerator": 4710,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 2,
+          "b": 7,
+          "numerator": 6571,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 3,
+          "b": 8,
+          "numerator": 4282,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 3,
+          "b": 9,
+          "numerator": 5269,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 4,
+          "b": 0,
+          "numerator": 4282,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 4,
+          "b": 2,
+          "numerator": 3804,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 4,
+          "b": 3,
+          "numerator": 6624,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 4,
+          "b": 6,
+          "numerator": 5002,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 5,
+          "b": 9,
+          "numerator": 4939,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 6,
+          "b": 3,
+          "numerator": 6189,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 6,
+          "b": 5,
+          "numerator": 6571,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 7,
+          "b": 8,
+          "numerator": 5002,
+          "good": false
+        },
+        {
+          "dual": 0,
+          "a": 8,
+          "b": 9,
+          "numerator": 4848,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 0,
+          "b": 1,
+          "numerator": 5269,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 0,
+          "b": 4,
+          "numerator": 4282,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 2,
+          "b": 1,
+          "numerator": 4939,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 3,
+          "b": 0,
+          "numerator": 6156,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 3,
+          "b": 4,
+          "numerator": 6624,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 3,
+          "b": 6,
+          "numerator": 6189,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 4,
+          "b": 1,
+          "numerator": 4848,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 5,
+          "b": 2,
+          "numerator": 6745,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 5,
+          "b": 3,
+          "numerator": 4072,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 5,
+          "b": 6,
+          "numerator": 6571,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 5,
+          "b": 7,
+          "numerator": 4710,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 6,
+          "b": 4,
+          "numerator": 5002,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 7,
+          "b": 0,
+          "numerator": 6189,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 7,
+          "b": 2,
+          "numerator": 6571,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 0,
+          "numerator": 6624,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 3,
+          "numerator": 4282,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 5,
+          "numerator": 3804,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 7,
+          "numerator": 5002,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 9,
+          "b": 3,
+          "numerator": 5269,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 9,
+          "b": 5,
+          "numerator": 4939,
+          "good": false
+        },
+        {
+          "dual": 1,
+          "a": 9,
+          "b": 8,
+          "numerator": 4848,
+          "good": false
+        }
+      ],
+      "eligible_count": 42,
+      "minimum_eligible_numerator": 3804
+    }
+  ],
+  "selected_prior_dichotomy_controls": [
+    {
+      "label": "packet117 twelve-point witness",
+      "pred": [
+        0,
+        0,
+        0,
+        0,
+        7,
+        13,
+        14,
+        12,
+        206,
+        5,
+        685,
+        535
+      ],
+      "E": 61180,
+      "good_orientations": 0,
+      "two_fifths_comparison": [
+        0,
+        1,
+        34082
+      ]
+    },
+    {
+      "label": "previous nine-point collar witness",
+      "pred": [
+        0,
+        0,
+        1,
+        0,
+        8,
+        24,
+        3,
+        5,
+        189
+      ],
+      "E": 664,
+      "good_orientations": 3,
+      "two_fifths_comparison": [
+        0,
+        3,
+        350
+      ]
+    },
+    {
+      "label": "previous eight-point rooted-five obstruction",
+      "pred": [
+        0,
+        224,
+        1,
+        225,
+        231,
+        0,
+        32,
+        96
+      ],
+      "E": 53,
+      "good_orientations": 2,
+      "two_fifths_comparison": [
+        0,
+        6,
+        31
+      ]
+    }
+  ]
+}
