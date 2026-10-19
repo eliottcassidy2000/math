@@ -1,0 +1,125 @@
+{
+  "description": "The approved scope-reviewed proof overlay is used, followed only by a completed-audit status update. The exact reviewed overlay and its patch/metadata are also retained. README scope clarification distinguishes the closed endpoint goal from the still-open different-types-only occurrence hypothesis. Other changes are publication links, reproduction instructions, removal of internal process prose, and package-relative verifier provenance. Mathematical tests are unchanged; independent receipts change only source_hashes.",
+  "scope_overlay": {
+    "changes": [
+      "Different-types-only finite occurrence hypothesis remains separate from the proved anchored-or-different-types endpoint criterion.",
+      "The two-copy match starts at y_1, after iteration 1 and before iteration 2."
+    ],
+    "formulas_or_theorem_scope_changed": false,
+    "patch": "SCOPE_ONLY_OVERLAY.patch",
+    "reviewed_file": "ALL_GREEDY_ENDPOINT_DESCENT.scope-reviewed.md",
+    "reviewed_sha256": "a65677f28afb8a736f99985375d7e8e44740c7949386906dc5b82ebaba4f1b28",
+    "source_file": "ALL_GREEDY_ENDPOINT_DESCENT.md",
+    "source_sha256": "d4fed9827b5de52240486490389cbdd299d90fb830eb64a3ad707418a1b20558"
+  },
+  "files": [
+    {
+      "path": "ALL_GREEDY_ENDPOINT_DESCENT.md",
+      "source_sha256": "a65677f28afb8a736f99985375d7e8e44740c7949386906dc5b82ebaba4f1b28",
+      "published_sha256": "c7ae20aa091b0d8e56bc50bbaa7ae21f87b25146509678256bc23e4e7cd7cd83",
+      "presentation_updates": true
+    },
+    {
+      "path": "README.md",
+      "source_sha256": "e466701be00857d4967626ae45c2caf47cf93b66c54b8eb90bd84494d0f7aff0",
+      "published_sha256": "18fd0cf1a2ca30db8a284529dcee62e380a2fd0d74ab8d83633202880c25e002",
+      "presentation_updates": true
+    },
+    {
+      "path": "verification-optimized.json",
+      "source_sha256": "b2ef2c6bed9f051e3e8968cf1c1f8471eda2e10d67173abb94c05a782c46a187",
+      "published_sha256": "b2ef2c6bed9f051e3e8968cf1c1f8471eda2e10d67173abb94c05a782c46a187",
+      "presentation_updates": false
+    },
+    {
+      "path": "verification-receipt.json",
+      "source_sha256": "b2ef2c6bed9f051e3e8968cf1c1f8471eda2e10d67173abb94c05a782c46a187",
+      "published_sha256": "b2ef2c6bed9f051e3e8968cf1c1f8471eda2e10d67173abb94c05a782c46a187",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify_all_greedy.py",
+      "source_sha256": "054389e778111ceb97577d0b3cb5c0d4902603ddaa6d8a4440e38b6bf241208d",
+      "published_sha256": "054389e778111ceb97577d0b3cb5c0d4902603ddaa6d8a4440e38b6bf241208d",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/ALL_GREEDY_ENDPOINT_DESCENT.scope-reviewed.md",
+      "source_sha256": "a65677f28afb8a736f99985375d7e8e44740c7949386906dc5b82ebaba4f1b28",
+      "published_sha256": "a65677f28afb8a736f99985375d7e8e44740c7949386906dc5b82ebaba4f1b28",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/ALL_GREEDY_ENDPOINT_DESCENT_REVIEW.md",
+      "source_sha256": "b9821f4ee342b05ebf2093e7f18d84bf2776bae1d924be5ea7e82cf91153dc72",
+      "published_sha256": "aafad25f854402c533170a825df6535f806addaa980be7ff91915ab2eb26001f",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/SCOPE_ONLY_OVERLAY.patch",
+      "source_sha256": "5ce04587c460990334fb570bec609756b0d686352ede29dde93c7a68c9c33ca1",
+      "published_sha256": "5ce04587c460990334fb570bec609756b0d686352ede29dde93c7a68c9c33ca1",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/SCOPE_OVERLAY.json",
+      "source_sha256": "84218c143e60e75c279b9da9ddf0d4498398813909f76e4e9d8bc6e33b99ea42",
+      "published_sha256": "84218c143e60e75c279b9da9ddf0d4498398813909f76e4e9d8bc6e33b99ea42",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/independent-optimized.json",
+      "source_sha256": "755a7ef2f1c5014632fbdd169533f7f8e9bf86da6b46891cdeff6e43cae70c17",
+      "published_sha256": "2a7face2d7365154e885a383ac9c2e282a9099046201e950df8c410895846c54",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-receipt.json",
+      "source_sha256": "755a7ef2f1c5014632fbdd169533f7f8e9bf86da6b46891cdeff6e43cae70c17",
+      "published_sha256": "2a7face2d7365154e885a383ac9c2e282a9099046201e950df8c410895846c54",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent_all_greedy_controls.py",
+      "source_sha256": "a29d6d0a2c7f952c44645ccf9d54000b838635117a7c437b9d6d3cc712a59617",
+      "published_sha256": "c67969bdbc0516ac23206cf2c7e12ad9ee5e201071d052b497cb016a5de84acd",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/submitted-optimized.json",
+      "source_sha256": "b2ef2c6bed9f051e3e8968cf1c1f8471eda2e10d67173abb94c05a782c46a187",
+      "published_sha256": "b2ef2c6bed9f051e3e8968cf1c1f8471eda2e10d67173abb94c05a782c46a187",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/submitted-rerun.json",
+      "source_sha256": "b2ef2c6bed9f051e3e8968cf1c1f8471eda2e10d67173abb94c05a782c46a187",
+      "published_sha256": "b2ef2c6bed9f051e3e8968cf1c1f8471eda2e10d67173abb94c05a782c46a187",
+      "presentation_updates": false
+    },
+    {
+      "path": "MANIFEST.json",
+      "source_sha256": "dbb6410a2b2e02428d8b49d7de1644651a37dfab743ecb8180a6c4fe064c1c15",
+      "published_sha256": "962e873b002255d82ec4affb7ebf4b69085f255be44ea3dc24ddec1a7973c5fd",
+      "presentation_updates": true
+    },
+    {
+      "path": "SHA256SUMS",
+      "source_sha256": "1b002f6816754b2cc2e8925c398bcf49afd72b0ab897c968a4baa62d2a668c0b",
+      "published_sha256": "fc4e26bf793f93474ab2d7f1abc3e98c212b9acb1b665b9e45c7108c0644288d",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/REVIEW_STATUS.json",
+      "source_sha256": "a283b65303fcc49c98520e4191baa76f0a507964e6aed90421ec90e469753d1c",
+      "published_sha256": "12cf6f26466dba13abd970b293d5b7e429348e5f810aa31b80b782de1e4b4ad0",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/SHA256SUMS",
+      "source_sha256": "2120e95eb4977c0376ee9749e65465205f0b6160302035aaf6655dbe5e4d90f0",
+      "published_sha256": "b42c4d916a2b8c90234f6e928780505c6c06279ff3176be72bd8dbb226356b30",
+      "presentation_updates": true
+    }
+  ]
+}

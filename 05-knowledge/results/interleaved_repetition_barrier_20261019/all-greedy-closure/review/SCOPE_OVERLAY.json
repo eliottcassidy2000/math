@@ -1,0 +1,12 @@
+{
+  "changes": [
+    "Different-types-only finite occurrence hypothesis remains separate from the proved anchored-or-different-types endpoint criterion.",
+    "The two-copy match starts at y_1, after iteration 1 and before iteration 2."
+  ],
+  "formulas_or_theorem_scope_changed": false,
+  "patch": "SCOPE_ONLY_OVERLAY.patch",
+  "reviewed_file": "ALL_GREEDY_ENDPOINT_DESCENT.scope-reviewed.md",
+  "reviewed_sha256": "a65677f28afb8a736f99985375d7e8e44740c7949386906dc5b82ebaba4f1b28",
+  "source_file": "ALL_GREEDY_ENDPOINT_DESCENT.md",
+  "source_sha256": "d4fed9827b5de52240486490389cbdd299d90fb830eb64a3ad707418a1b20558"
+}

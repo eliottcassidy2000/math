@@ -1,0 +1,37 @@
+--- ALL_GREEDY_ENDPOINT_DESCENT.md
++++ ALL_GREEDY_ENDPOINT_DESCENT.md
+@@ -208,11 +208,13 @@
+ even after K^4F<->V rewrites. The present theorem closes their actual endpoint
+ realizability, rather than raising a finite episode cap.
+ 
+-It also resolves the typed-left-special open target recorded in the frozen
+-image-guard packet, with one necessary refinement: the guaranteed useful
+-pair may start at the original source instead of having different incoming
+-types. Finite pigeonhole plus minimality supplies exactly this disjunction.
+-No irrational-rotation recurrence bound is required.
++This closes the endpoint-descent goal behind the typed-left-special question
++recorded in the frozen image-guard packet. The guaranteed useful pair is
++either source-anchored or has different incoming types; finite pigeonhole
++plus minimality proves exactly this disjunction. The original occurrence
++hypothesis requiring different incoming types in every sufficiently large
++prefix is not established here. No irrational-rotation recurrence bound is
++required.
+ 
+ Other first-crossing bank families may have high factor complexity,
+ nonseparated terminal images, or no anchored coded representation of this
+@@ -251,10 +253,11 @@
+ meets the same height threshold. This proves descent.
+ 
+ For m=2 no factor-complexity estimate is needed. Compare the two literal
+-U futures beginning at the original source and at the second-iteration
+-checkpoint. They have the same length ell=L/2, and that later checkpoint
+-is strictly greater than the source because its multiplier is at least
+-one and its carry is positive. The matched-block theorem proves descent.
++U futures beginning at the original source y_0 and at y_1, the start of the
++second iteration immediately after the first complete iteration. They have
++the same length ell=L/2, and y_1 is strictly greater than the source because
++its multiplier is at least one and its carry is positive. The matched-block
++theorem proves descent.
+ 
+ **No universal m=1 assertion for arbitrary U is made.** Such a word can be
+ arbitrarily long, so the short-range theorem cannot automatically supply

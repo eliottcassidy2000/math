@@ -1,0 +1,32 @@
+{
+  "status": "PROVED scoped; independent audit PASS",
+  "primary": "ALL_GREEDY_ENDPOINT_DESCENT.md",
+  "files": [
+    {
+      "path": "ALL_GREEDY_ENDPOINT_DESCENT.md",
+      "bytes": 12590,
+      "sha256": "c7ae20aa091b0d8e56bc50bbaa7ae21f87b25146509678256bc23e4e7cd7cd83"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3446,
+      "sha256": "18fd0cf1a2ca30db8a284529dcee62e380a2fd0d74ab8d83633202880c25e002"
+    },
+    {
+      "path": "verification-optimized.json",
+      "bytes": 6588,
+      "sha256": "b2ef2c6bed9f051e3e8968cf1c1f8471eda2e10d67173abb94c05a782c46a187"
+    },
+    {
+      "path": "verification-receipt.json",
+      "bytes": 6588,
+      "sha256": "b2ef2c6bed9f051e3e8968cf1c1f8471eda2e10d67173abb94c05a782c46a187"
+    },
+    {
+      "path": "verify_all_greedy.py",
+      "bytes": 7596,
+      "sha256": "054389e778111ceb97577d0b3cb5c0d4902603ddaa6d8a4440e38b6bf241208d"
+    }
+  ],
+  "reviewed_manifest_sha256": "dbb6410a2b2e02428d8b49d7de1644651a37dfab743ecb8180a6c4fe064c1c15"
+}

@@ -1,0 +1,52 @@
+{
+  "formulas_or_theorem_scope_changed": false,
+  "independent_checks": 156750,
+  "independent_control_file": "independent_all_greedy_controls.py",
+  "independent_finite_words": 3138,
+  "independent_fixed_templates": 34,
+  "independent_normal_optimized_match": true,
+  "independent_receipt": "independent-receipt.json",
+  "independent_repeated_pairs": 67284,
+  "independent_whole_word_controls": 107,
+  "outstanding_mathematical_objections": [],
+  "preserved_open_scope": [
+    "Original different-types-only finite occurrence hypothesis.",
+    "Arbitrary bank entry.",
+    "General Collatz convergence.",
+    "Full realized S_d boundary."
+  ],
+  "publication_clarifications": [
+    "Different-types-only finite occurrence hypothesis remains separate from the proved anchored-or-different-types endpoint criterion.",
+    "The two-copy match starts at y_1, after iteration 1 and before iteration 2."
+  ],
+  "published_source_hashes": {
+    "ALL_GREEDY_ENDPOINT_DESCENT.md": "c7ae20aa091b0d8e56bc50bbaa7ae21f87b25146509678256bc23e4e7cd7cd83",
+    "MANIFEST.json": "962e873b002255d82ec4affb7ebf4b69085f255be44ea3dc24ddec1a7973c5fd",
+    "README.md": "18fd0cf1a2ca30db8a284529dcee62e380a2fd0d74ab8d83633202880c25e002",
+    "SHA256SUMS": "fc4e26bf793f93474ab2d7f1abc3e98c212b9acb1b665b9e45c7108c0644288d",
+    "verification-optimized.json": "b2ef2c6bed9f051e3e8968cf1c1f8471eda2e10d67173abb94c05a782c46a187",
+    "verification-receipt.json": "b2ef2c6bed9f051e3e8968cf1c1f8471eda2e10d67173abb94c05a782c46a187",
+    "verify_all_greedy.py": "054389e778111ceb97577d0b3cb5c0d4902603ddaa6d8a4440e38b6bf241208d"
+  },
+  "review_file": "ALL_GREEDY_ENDPOINT_DESCENT_REVIEW.md",
+  "reviewed_source_hashes": {
+    "ALL_GREEDY_ENDPOINT_DESCENT.md": "d4fed9827b5de52240486490389cbdd299d90fb830eb64a3ad707418a1b20558",
+    "MANIFEST.json": "dbb6410a2b2e02428d8b49d7de1644651a37dfab743ecb8180a6c4fe064c1c15",
+    "README.md": "e466701be00857d4967626ae45c2caf47cf93b66c54b8eb90bd84494d0f7aff0",
+    "SHA256SUMS": "1b002f6816754b2cc2e8925c398bcf49afd72b0ab897c968a4baa62d2a668c0b",
+    "verification-optimized.json": "b2ef2c6bed9f051e3e8968cf1c1f8471eda2e10d67173abb94c05a782c46a187",
+    "verification-receipt.json": "b2ef2c6bed9f051e3e8968cf1c1f8471eda2e10d67173abb94c05a782c46a187",
+    "verify_all_greedy.py": "054389e778111ceb97577d0b3cb5c0d4902603ddaa6d8a4440e38b6bf241208d"
+  },
+  "scope_overlay_metadata": "SCOPE_OVERLAY.json",
+  "scope_reviewed_primary": "ALL_GREEDY_ENDPOINT_DESCENT.scope-reviewed.md",
+  "scope_reviewed_primary_sha256": "a65677f28afb8a736f99985375d7e8e44740c7949386906dc5b82ebaba4f1b28",
+  "submitted_checks": 40345,
+  "submitted_normal_optimized_match_receipts": true,
+  "theorem_scopes": [
+    "All greedy V/F words, every m>=1.",
+    "Every fixed nonempty U over K,V, every m>=2.",
+    "No arbitrary-U m=1 claim."
+  ],
+  "verdict": "PASS for both descent theorems, with supplied scope-only publication clarifications"
+}
