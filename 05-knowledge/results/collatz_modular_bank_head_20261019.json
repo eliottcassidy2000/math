@@ -1,0 +1,22 @@
+{
+  "C": "83829391903560839836419813590128166431/157489106280555890461927692448373459",
+  "P": "1",
+  "bank_schedules": 396,
+  "checks": 167190,
+  "class_bounds": {
+    "13": 42,
+    "23": 24,
+    "5": 107,
+    "7": 77
+  },
+  "class_controls": {
+    "13": 91,
+    "23": 87,
+    "5": 131,
+    "7": 87
+  },
+  "exponent_pairs": 82602,
+  "max_observed_t_min": 0,
+  "status": "PROVED modular refinement; no source-entry assertion",
+  "uniform_head": 107
+}
