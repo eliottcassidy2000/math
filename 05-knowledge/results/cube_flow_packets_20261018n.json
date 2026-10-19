@@ -1,0 +1,419 @@
+{
+  "Fourier3_Zagier_B_norm_checks": [
+    {
+      "B_n": 1,
+      "n": 0,
+      "squared_bound": 1,
+      "weighted_norm": 1
+    },
+    {
+      "B_n": 3,
+      "n": 1,
+      "squared_bound": 27,
+      "weighted_norm": 27
+    },
+    {
+      "B_n": 9,
+      "n": 2,
+      "squared_bound": 729,
+      "weighted_norm": 5832
+    },
+    {
+      "B_n": 21,
+      "n": 3,
+      "squared_bound": 19683,
+      "weighted_norm": 4251528
+    },
+    {
+      "B_n": 9,
+      "n": 4,
+      "squared_bound": 531441,
+      "weighted_norm": 7346640384
+    },
+    {
+      "B_n": -297,
+      "n": 5,
+      "squared_bound": 14348907,
+      "weighted_norm": 24794911296000
+    },
+    {
+      "B_n": -2421,
+      "n": 6,
+      "squared_bound": 387420489,
+      "weighted_norm": 144603922678272000
+    },
+    {
+      "B_n": -12933,
+      "n": 7,
+      "squared_bound": 10460353203,
+      "weighted_norm": 1339176927923476992000
+    },
+    {
+      "B_n": -52407,
+      "n": 8,
+      "squared_bound": 282429536481,
+      "weighted_norm": 18512781851614145937408000
+    }
+  ],
+  "Hamming_code_from_cube": [
+    0,
+    15,
+    51,
+    60,
+    85,
+    90,
+    102,
+    105,
+    150,
+    153,
+    165,
+    170,
+    195,
+    204,
+    240,
+    255
+  ],
+  "checks": 110701,
+  "clock_hostile_gram_01": {
+    "0": -1,
+    "2": 1
+  },
+  "cube_cycle_rank": 5,
+  "curl": [
+    1,
+    -1,
+    0,
+    0,
+    -1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "edges_in_paper_order": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      3
+    ]
+  ],
+  "flow_receipts": [
+    {
+      "feasible_positive_curls": 0,
+      "flows": 1,
+      "n": 0,
+      "ordered_matching_lifts": 1,
+      "primitive_row_ledger": {},
+      "signed_ordered_matching_sum": 1,
+      "signed_weight": 1,
+      "unsigned_weight": 1
+    },
+    {
+      "feasible_positive_curls": 2,
+      "flows": 9,
+      "n": 1,
+      "ordered_matching_lifts": 9,
+      "primitive_row_ledger": {},
+      "signed_ordered_matching_sum": 3,
+      "signed_weight": 3,
+      "unsigned_weight": 9
+    },
+    {
+      "feasible_positive_curls": 16,
+      "flows": 42,
+      "n": 2,
+      "ordered_matching_lifts": 81,
+      "primitive_row_ledger": {},
+      "signed_ordered_matching_sum": 9,
+      "signed_weight": 9,
+      "unsigned_weight": 297
+    },
+    {
+      "feasible_positive_curls": 68,
+      "flows": 138,
+      "n": 3,
+      "ordered_matching_lifts": 729,
+      "primitive_row_ledger": {},
+      "signed_ordered_matching_sum": 27,
+      "signed_weight": 3,
+      "unsigned_weight": 13833
+    },
+    {
+      "feasible_positive_curls": 208,
+      "flows": 363,
+      "n": 4,
+      "ordered_matching_lifts": 6561,
+      "primitive_row_ledger": {},
+      "signed_ordered_matching_sum": 81,
+      "signed_weight": -279,
+      "unsigned_weight": 748521
+    },
+    {
+      "feasible_positive_curls": 518,
+      "flows": 819,
+      "n": 5,
+      "ordered_matching_lifts": 59049,
+      "primitive_row_ledger": {
+        "5": {
+          "0": 3,
+          "2": 0,
+          "3": -3000,
+          "4": 0
+        }
+      },
+      "signed_ordered_matching_sum": 243,
+      "signed_weight": -2997,
+      "unsigned_weight": 44127009
+    },
+    {
+      "feasible_positive_curls": 1120,
+      "flows": 1652,
+      "n": 6,
+      "ordered_matching_lifts": 531441,
+      "primitive_row_ledger": {},
+      "signed_ordered_matching_sum": 729,
+      "signed_weight": -19431,
+      "unsigned_weight": 2750141241
+    },
+    {
+      "feasible_positive_curls": 2184,
+      "flows": 3060,
+      "n": 7,
+      "ordered_matching_lifts": 4782969,
+      "primitive_row_ledger": {
+        "7": {
+          "0": 3,
+          "2": 0,
+          "3": -65856,
+          "4": 0
+        }
+      },
+      "signed_ordered_matching_sum": 2187,
+      "signed_weight": -65853,
+      "unsigned_weight": 178218782793
+    },
+    {
+      "feasible_positive_curls": 3936,
+      "flows": 5301,
+      "n": 8,
+      "ordered_matching_lifts": 43046721,
+      "primitive_row_ledger": {},
+      "signed_ordered_matching_sum": 6561,
+      "signed_weight": 292329,
+      "unsigned_weight": 11887871843817
+    }
+  ],
+  "full_Fischer_norm_checks": [
+    {
+      "bound": 1,
+      "monomials": 1,
+      "n": 0,
+      "weighted_norm": 1
+    },
+    {
+      "bound": 9,
+      "monomials": 13,
+      "n": 1,
+      "weighted_norm": 81
+    },
+    {
+      "bound": 81,
+      "monomials": 79,
+      "n": 2,
+      "weighted_norm": 104976
+    },
+    {
+      "bound": 729,
+      "monomials": 287,
+      "n": 3,
+      "weighted_norm": 688747536
+    },
+    {
+      "bound": 6561,
+      "monomials": 665,
+      "n": 4,
+      "weighted_norm": 14281868906496
+    },
+    {
+      "bound": 59049,
+      "monomials": 1133,
+      "n": 5,
+      "weighted_norm": 723019613391360000
+    },
+    {
+      "bound": 531441,
+      "monomials": 2227,
+      "n": 6,
+      "weighted_norm": 75899706935371407360000
+    },
+    {
+      "bound": 4782969,
+      "monomials": 3093,
+      "n": 7,
+      "weighted_norm": 14761050904497966674780160000
+    },
+    {
+      "bound": 43046721,
+      "monomials": 5119,
+      "n": 8,
+      "weighted_norm": 4897362424890717391491862364160000
+    }
+  ],
+  "matching_count": 9,
+  "minimal_weight_loss": {
+    "flow": [
+      0,
+      0,
+      2,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    "microstate_weight": 8,
+    "n": 2,
+    "ordered_matching_lifts": 2
+  },
+  "signed_matrix": [
+    [
+      0,
+      1,
+      -1,
+      1
+    ],
+    [
+      -1,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      -1
+    ]
+  ],
+  "skew_conference_gauge": [
+    [
+      0,
+      1,
+      1,
+      -1
+    ],
+    [
+      -1,
+      0,
+      1,
+      1
+    ],
+    [
+      -1,
+      -1,
+      0,
+      -1
+    ],
+    [
+      1,
+      -1,
+      1,
+      0
+    ]
+  ],
+  "status": "FINITE-EXACT; Hall decomposition and curl identities are proved in companion note",
+  "supercongruence_checks": [
+    {
+      "modulus": 125,
+      "p": 5,
+      "r": 1,
+      "remainder": 0
+    },
+    {
+      "modulus": 15625,
+      "p": 5,
+      "r": 2,
+      "remainder": 0
+    },
+    {
+      "modulus": 343,
+      "p": 7,
+      "r": 1,
+      "remainder": 0
+    },
+    {
+      "modulus": 117649,
+      "p": 7,
+      "r": 2,
+      "remainder": 0
+    },
+    {
+      "modulus": 1331,
+      "p": 11,
+      "r": 1,
+      "remainder": 0
+    },
+    {
+      "modulus": 1771561,
+      "p": 11,
+      "r": 2,
+      "remainder": 0
+    }
+  ]
+}

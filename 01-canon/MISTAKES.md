@@ -19144,3 +19144,14 @@ the ambient space.
   - Classical finite-geometry constructions of named graphs (Petersen, Coxeter, Heawood) are usually in Coxeter's
     and Biggs's papers. Check them first.
 
+## MISTAKE-642 (2026-10-18, frontier_petersen_oct18 / 20261018n) — an unnormalized Hadamard gauge was treated as a linear Hamming code
+
+- **Scope:** a local proof candidate and its first computational test; no false theorem was published.
+- **False implication:** `H H^T = 8I` alone was used to call the binary images of the rows and their negatives the linear code H8 in the current coordinate gauge.
+- **Witness:** the completion `H4=I+C` from the signed sporadic cube matrix has first row `(1,1,1,-1)`. Its direct Sylvester doubling gives an affine translate of the intended Hamming code; the zero word is absent. The explicit linear-closure/weight test failed before any result file was written.
+- **Mechanism:** multiplying Hadamard columns by signs translates the binary words. Distance and orthogonality survive, but the designated additive zero need not survive.
+- **Repair:** normalize first row and column to +1, retain the row/column gauge, then double. The repaired sixteen-word set is checked for XOR closure and weights `1+14z^4+z^8`; adjoining the marked pair gives a self-dual ten-coordinate code.
+- **Strongest survivor:** the unnormalized object still has the correct pairwise distance structure. It does not have the asserted linear origin.
+- **Missing coordinate / lesson:** retain the affine origin when moving from signed frames to linear binary carriers. Norm preservation is not preservation of a marked zero or source.
+- **Evidence:** [cube script](../04-computation/experiments/cube_flow_packets_20261018n.py), [repaired note](../05-knowledge/results/cube_unitary_clock_packets_20261018n.md), [exact receipt](../05-knowledge/results/cube_flow_packets_20261018n.json).
+

@@ -1,0 +1,325 @@
+{
+  "census": {
+    "g": 4,
+    "isotropic_subspaces_by_dimension": [
+      1,
+      255,
+      5355,
+      11475,
+      2295
+    ],
+    "labels": 10,
+    "lagrangians": 2295,
+    "matching_images": 945,
+    "missing": 1350,
+    "nonzero_vectors": 255,
+    "pair_class_histogram": {
+      "1": 1350,
+      "5": 945
+    }
+  },
+  "checks": 322612,
+  "joint_rows": [
+    {
+      "all_code_extensions": 135,
+      "matching_extensions": 45,
+      "rows": [
+        170
+      ]
+    },
+    {
+      "all_code_extensions": 15,
+      "matching_extensions": 3,
+      "rows": [
+        170,
+        204
+      ]
+    },
+    {
+      "all_code_extensions": 3,
+      "matching_extensions": 0,
+      "rows": [
+        170,
+        204,
+        240
+      ]
+    },
+    {
+      "all_code_extensions": 1,
+      "matching_extensions": 0,
+      "rows": [
+        170,
+        204,
+        240,
+        255
+      ]
+    }
+  ],
+  "mathieu": {
+    "M10_code_orbits": {
+      "matching": [
+        36,
+        45,
+        144,
+        180,
+        180,
+        360
+      ],
+      "missing": [
+        90,
+        180,
+        180,
+        180,
+        720
+      ]
+    },
+    "M10_generators": [
+      [
+        0,
+        1,
+        3,
+        8,
+        7,
+        9,
+        2,
+        5,
+        6,
+        4
+      ],
+      [
+        0,
+        1,
+        4,
+        9,
+        8,
+        2,
+        7,
+        3,
+        5,
+        6
+      ],
+      [
+        0,
+        2,
+        1,
+        5,
+        7,
+        3,
+        9,
+        4,
+        8,
+        6
+      ],
+      [
+        1,
+        0,
+        2,
+        9,
+        5,
+        4,
+        7,
+        6,
+        8,
+        3
+      ]
+    ],
+    "M10_order": 720,
+    "M12_order": 95040,
+    "W10_binary_span_dimension": 9,
+    "W10_blocks": 30,
+    "W10_derived_matching_count": 45,
+    "W10_derived_matching_fibres": {
+      "1": 45
+    },
+    "W10_ordered_distinct_block_intersections": {
+      "0": 90,
+      "1": 240,
+      "2": 540
+    },
+    "W10_selected_Hamming_orbit": 90
+  },
+  "next_boundary": {
+    "pair_transversal_representatives": [
+      {
+        "pairs": 4,
+        "self_dual": true,
+        "weights": {
+          "0": 1,
+          "4": 14,
+          "8": 1
+        }
+      },
+      {
+        "pairs": 5,
+        "self_dual": false,
+        "weights": {
+          "0": 1,
+          "4": 10,
+          "5": 16,
+          "8": 5
+        }
+      },
+      {
+        "pairs": 6,
+        "self_dual": true,
+        "weights": {
+          "0": 1,
+          "4": 15,
+          "6": 32,
+          "8": 15,
+          "12": 1
+        }
+      },
+      {
+        "pairs": 8,
+        "self_dual": true,
+        "weights": {
+          "0": 1,
+          "4": 28,
+          "8": 198,
+          "12": 28,
+          "16": 1
+        }
+      }
+    ],
+    "twelve_label_counts_from_proved_injections": {
+      "all": 75735,
+      "matching": 10395,
+      "primitive_transversal": 20790,
+      "two_pairs_plus_H8": 44550
+    }
+  },
+  "optimal_partition_chart_cover": {
+    "charts": 4,
+    "coset_representatives": [
+      0,
+      170,
+      204,
+      102
+    ],
+    "words_per_chart": 8
+  },
+  "pair_tests": 262144,
+  "port_projection_sizes": {
+    "matching": {
+      "16": 105,
+      "32": 840
+    },
+    "missing": {
+      "16": 30,
+      "32": 1320
+    }
+  },
+  "port_support_multiplicities": [
+    {
+      "all": 2295,
+      "matching": 945,
+      "missing": 1350,
+      "port_weight": 0
+    },
+    {
+      "all": 270,
+      "matching": 210,
+      "missing": 60,
+      "port_weight": 1
+    },
+    {
+      "all": 255,
+      "matching": 135,
+      "missing": 120,
+      "port_weight": 2
+    },
+    {
+      "all": 270,
+      "matching": 90,
+      "missing": 180,
+      "port_weight": 3
+    },
+    {
+      "all": 255,
+      "matching": 81,
+      "missing": 174,
+      "port_weight": 4
+    },
+    {
+      "all": 270,
+      "matching": 90,
+      "missing": 180,
+      "port_weight": 5
+    },
+    {
+      "all": 255,
+      "matching": 135,
+      "missing": 120,
+      "port_weight": 6
+    },
+    {
+      "all": 270,
+      "matching": 210,
+      "missing": 60,
+      "port_weight": 7
+    },
+    {
+      "all": 2295,
+      "matching": 945,
+      "missing": 1350,
+      "port_weight": 8
+    }
+  ],
+  "projective_incidence_coordinates": {
+    "left_points": [
+      1,
+      2,
+      3,
+      4,
+      8,
+      12,
+      5,
+      14,
+      11,
+      10,
+      13,
+      7,
+      15,
+      9,
+      6
+    ],
+    "right_planes": [
+      8,
+      4,
+      12,
+      2,
+      1,
+      3,
+      10,
+      7,
+      13,
+      5,
+      11,
+      14,
+      15,
+      9,
+      6
+    ]
+  },
+  "status": "FINITE-EXACT with independent constructions; no universal Collatz or geometric claim",
+  "surgeries": {
+    "fixed_pair_Hamming_edges": 105,
+    "fixed_pair_Hamming_vertices": 30,
+    "fixed_pair_bipartition": [
+      15,
+      15
+    ],
+    "incidences": 9450,
+    "marked_matching_inputs": 4725,
+    "matching_degree": 10,
+    "missing_degree": 7,
+    "same_part_common_neighbours": 3
+  },
+  "triple_tests": 32768,
+  "universe": "all labelled binary self-dual length-ten codes, equivalently V4 Lagrangians",
+  "weight_two_histogram": {
+    "1": 1350,
+    "5": 945
+  }
+}
