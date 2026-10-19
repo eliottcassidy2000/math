@@ -1,0 +1,115 @@
+{
+  "status": "ALL_SMALL_FAMILY_CONTROLS_PASSED",
+  "records": [
+    {
+      "a": 2,
+      "b": 1,
+      "separated_families": 0
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "separated_families": 1
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "separated_families": 0
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "separated_families": 0
+    },
+    {
+      "a": 3,
+      "b": 3,
+      "separated_families": 0
+    },
+    {
+      "a": 4,
+      "b": 1,
+      "separated_families": 0
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "separated_families": 0
+    },
+    {
+      "a": 4,
+      "b": 3,
+      "separated_families": 0
+    },
+    {
+      "a": 4,
+      "b": 4,
+      "separated_families": 3
+    },
+    {
+      "a": 5,
+      "b": 1,
+      "separated_families": 0
+    },
+    {
+      "a": 5,
+      "b": 2,
+      "separated_families": 0
+    },
+    {
+      "a": 5,
+      "b": 3,
+      "separated_families": 0
+    },
+    {
+      "a": 5,
+      "b": 4,
+      "separated_families": 0
+    },
+    {
+      "a": 5,
+      "b": 5,
+      "separated_families": 60
+    },
+    {
+      "a": 6,
+      "b": 1,
+      "separated_families": 0
+    },
+    {
+      "a": 6,
+      "b": 2,
+      "separated_families": 0
+    },
+    {
+      "a": 6,
+      "b": 3,
+      "separated_families": 0
+    },
+    {
+      "a": 6,
+      "b": 4,
+      "separated_families": 0
+    },
+    {
+      "a": 6,
+      "b": 5,
+      "separated_families": 0
+    },
+    {
+      "a": 6,
+      "b": 6,
+      "separated_families": 0
+    }
+  ],
+  "orbit_sizes": {
+    "four": [
+      3
+    ],
+    "five": [
+      30,
+      30
+    ]
+  },
+  "surviving_families": 64
+}
