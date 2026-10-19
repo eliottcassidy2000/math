@@ -170,3 +170,7 @@ computation needs universe, controls, command, and output. Route `CLAIMED` and
 ## Digest entry moved from INDEX.md on 2026-10-19 (line budget; mac-mini-2026-10-19-duality)
 
 - **HYP-9169 (OPEN, collatz-procgen-20260922 edim lane, 2026-10-01; with THM-4525):** [ln edim_m(Q_d) = Theta(d^(1/3))](HYP-9169-edge-multiset-dimension-of-hypercubes-grows-like-exp-cube-root.md): the edge multiset dimension of the hypercube grows like exp(Theta(d^(1/3))) (Allikvere's Open Problem 2). Lower half PROVED (entropy, constant 0.6215); upper half supported by sparse union bounds ln M_d / d^(1/3) in [2.76, 2.80] for d = 11..32 (double precision, not interval-certified). edim_m(Q_6) = 15 is THM-4525.
+
+## Digest entry moved from INDEX.md on 2026-10-19 (line budget; mac-mini-2026-10-19-apollonius)
+
+- **HYP-9170 / HYP-9171 (OPEN, collatz-procgen-20260922, 2026-10-01; with THM-4529 / THM-4530):** [all-odd anti-circulant tournaments for every N = 2 mod 4](HYP-9170-all-odd-anti-circulant-tournaments-exist-for-every-n-2-mod-4.md) (P1; existence half of HYP-9167(b), which is now settled at N = 14 by QR127[mu_14]; P2 proved for m = 3, 5); [drop multiplicity maximal order ~ sqrt(2 log2 X) and pair-injectivity for every odd q](HYP-9171-drop-multiplicity-maximal-order-and-pair-injectivity.md) (bounds proved; q = 3 injectivity proved).
