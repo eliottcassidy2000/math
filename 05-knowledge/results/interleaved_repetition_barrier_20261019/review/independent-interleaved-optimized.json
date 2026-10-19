@@ -1,0 +1,103 @@
+{
+  "checks": 1225098,
+  "finite_forest": {
+    "earlier_context_repeated_factors": 88,
+    "episode_histogram": {
+      "1": 952,
+      "2": 388
+    },
+    "first_crossing_leaves": 1340,
+    "leaf_digest_sha256": "9a0ea62e5f655a27ae74bcac0f8bbf7a0f2760f8f446173cd856ed8fbed00398",
+    "maximum_macro_depth": 9,
+    "open_depth_9": 1311,
+    "repeated_factors": 7492
+  },
+  "fuel_equivalence": {
+    "exhaustive_residues": 1156984,
+    "powers": [
+      2,
+      3,
+      4
+    ],
+    "word_length_max": 4,
+    "words_and_powers": 90
+  },
+  "interior_repetition_controls": [
+    {
+      "L": 3246,
+      "N": 3300,
+      "duplicated_bits": 364,
+      "episodes": 11,
+      "factor": "KVK",
+      "power": 3,
+      "prior_explicit_resets": 10,
+      "source_bits": 3297
+    },
+    {
+      "L": 21608,
+      "N": 21998,
+      "duplicated_bits": 456,
+      "episodes": 101,
+      "factor": "VK",
+      "power": 4,
+      "prior_explicit_resets": 100,
+      "source_bits": 21997
+    }
+  ],
+  "large_family": {
+    "N": 172674,
+    "episodes": 1557,
+    "full_parity_replay": true,
+    "initial_K_power": 4096,
+    "source_bits": 172673,
+    "source_sha256_bytes": "4a6a0177e5dd4fffbd2d15767dda8d404c837ab384caeed0d1ec5ade2ce83e56"
+  },
+  "long_certificate": {
+    "B": 10000000000,
+    "L0": 281474976710656,
+    "base_margin": "21487488343628/225",
+    "derivative_margin": 276974976710206,
+    "safe_Matveev_coefficient": 3110400000
+  },
+  "method": "Independent closed-sum affine coefficients, parity-lift source construction, literal replay, and log(3)=log(2)+log(3/2) rational certificate; no submitted code imports.",
+  "scope_probe": "W=F, x=1 gives S=3/4 and endpoint 1: outside the main theorem; exclude it explicitly from standalone short-range wording.",
+  "short_certificate": {
+    "log_arguments": [
+      "2",
+      "3/2"
+    ],
+    "p": 5750934602875680,
+    "q": 9115015689657667,
+    "q_minus_2H0": 107816434916675,
+    "short_margin": 1766747385272819982190647600454107121,
+    "terms_per_log": 64
+  },
+  "short_initial_controls": [
+    {
+      "descent_gap_at_r1": 659044398503297024,
+      "word": "KF"
+    },
+    {
+      "descent_gap_at_r1": 371535903167453593600,
+      "word": "KH"
+    },
+    {
+      "descent_gap_at_r1": 455951305621122869098446848,
+      "word": "KKF"
+    },
+    {
+      "descent_gap_at_r1": 392137948167539665045861433344,
+      "word": "KKH"
+    },
+    {
+      "descent_gap_at_r1": 197041807330179492933963614441701376,
+      "word": "KKKF"
+    },
+    {
+      "descent_gap_at_r1": 413156546886020583943274568718225506304,
+      "word": "KKKH"
+    }
+  ],
+  "source_floor": 588943162011782273059357097228697595,
+  "verdict": "All independent controls pass; primary theorem proof audit passes subject to the explicitly cited Matveev bound. Qualify the standalone short-range lemma as expansion-first."
+}

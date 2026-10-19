@@ -1,0 +1,61 @@
+{
+  "files": [
+    {
+      "bytes": 12700,
+      "path": "INTERLEAVED_REPETITION_REVIEW.md",
+      "sha256": "a5cc4a11dbf4c13753de7fb2bc4fa6d4a787dfcf1c812339877d0e4e8083490b"
+    },
+    {
+      "bytes": 12332,
+      "path": "independent_interleaved_controls.py",
+      "sha256": "6c8e494f192849a885cb15863c5f38b34342292202c4c08e385a20065ceac644"
+    },
+    {
+      "bytes": 2841,
+      "path": "independent-interleaved-receipt.json",
+      "sha256": "6affa440ec426b9a93014f6c9d70e400ae907b6d1044a57a680e9edcdd2bdac1"
+    },
+    {
+      "bytes": 2841,
+      "path": "independent-interleaved-rerun.json",
+      "sha256": "6affa440ec426b9a93014f6c9d70e400ae907b6d1044a57a680e9edcdd2bdac1"
+    },
+    {
+      "bytes": 2841,
+      "path": "independent-interleaved-optimized.json",
+      "sha256": "6affa440ec426b9a93014f6c9d70e400ae907b6d1044a57a680e9edcdd2bdac1"
+    },
+    {
+      "bytes": 4067,
+      "path": "interleaved-rerun.json",
+      "sha256": "d3712e8f372eb7ccda95f2319dc0273026a95134a593d031937a129b569d6f6b"
+    },
+    {
+      "bytes": 4067,
+      "path": "interleaved-rerun-optimized.json",
+      "sha256": "d3712e8f372eb7ccda95f2319dc0273026a95134a593d031937a129b569d6f6b"
+    },
+    {
+      "bytes": 2684,
+      "path": "power-rerun.json",
+      "sha256": "2336ba7d319e65d0b99a67e030d74db54208fc74b433066cfdc728f7c212f769"
+    },
+    {
+      "bytes": 2684,
+      "path": "power-rerun-optimized.json",
+      "sha256": "2336ba7d319e65d0b99a67e030d74db54208fc74b433066cfdc728f7c212f769"
+    }
+  ],
+  "independent_checks": 1225098,
+  "normal_optimized_match": true,
+  "primary_sha256": "b3ea155d92d0071be52de543651a812e76515b0bda2961a84258866c63ce496d",
+  "readme_sha256": "dda0adce014077c6c8236450fd15e476c0231a876d2acc62d5e33a1e0d074f4c",
+  "review_date": "2026-10-19",
+  "scope_finding": "Resolved by verified expansion-first wording in the final frozen primary and README. The independent control preserves the original counterexample probe.",
+  "source_packet_checksums_verified": true,
+  "source_readme_sha256": "f2aed4dacbd6172d0f195c44b3b22a253733fe0d05df0a7d47cd7c011dd312f5",
+  "source_review_status_sha256": "265b49d973b5ce3ca720f1519183691536d2239d36ae08c64f62bae77e9fce51",
+  "source_url": "https://link.springer.com/article/10.1007/s12188-025-00293-9#Sec2",
+  "submitted_normal_optimized_receipts_match": true,
+  "verdict": "PASS with cited Matveev input"
+}

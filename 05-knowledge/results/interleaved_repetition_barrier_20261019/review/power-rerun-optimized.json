@@ -1,0 +1,98 @@
+{
+  "checks": 137079,
+  "external_input": {
+    "checked_display": "Languasco--Luca--Moree--Togbe, Theorem 2.1",
+    "name": "Matveev bound, positive-rational specialization",
+    "safe_coefficient": 10000000000,
+    "url": "https://link.springer.com/article/10.1007/s12188-025-00293-9#Sec2"
+  },
+  "finite_universe": {
+    "endpoint_filter_checks": 1845,
+    "endpoint_offsets_checked_in_each_leaf": "0 through 8",
+    "expansion_roots": 68,
+    "first_crossing_leaves": 205,
+    "leaf_data_sha256": "f5d675d5703fd46a2192df10bc866a1fc4e1376f7458d866d56b06c0e462c061",
+    "literal_T_steps": 132425,
+    "max_reset_letters": 5,
+    "max_total_T_steps": 1841,
+    "reset_letter_histogram": {
+      "1": 90,
+      "2": 75,
+      "3": 29,
+      "4": 9,
+      "5": 2
+    },
+    "reset_tree_nonterminal_nodes": 137,
+    "sample_rows": [
+      [
+        "K",
+        1,
+        "F",
+        32,
+        "2962948091",
+        "2405410912"
+      ],
+      [
+        "K",
+        1,
+        "H",
+        39,
+        "520506507259",
+        "89134368307"
+      ],
+      [
+        "K",
+        2,
+        "F",
+        62,
+        "3760499732550189051",
+        "3304568547853905115"
+      ],
+      [
+        "K",
+        2,
+        "H",
+        69,
+        "301214247921116708859",
+        "55833969920114082868"
+      ],
+      [
+        "K",
+        3,
+        "F",
+        92,
+        "4419618912579892342238674939",
+        "4203954394077864322415754901"
+      ],
+      [
+        "K",
+        3,
+        "H",
+        99,
+        "318856388891066482166616227835",
+        "63976737656787414892018085212"
+      ]
+    ]
+  },
+  "hostiles": [
+    "165 -> 167 contracting general word, earlier descent to 31",
+    "formal K F at 1 overshoots but violates the source guard",
+    "contracting square (10)^2 returns 1 and is not an expanding-bank power"
+  ],
+  "proof_constants": {
+    "C": "83829391903560839836419813590128166431/157489106280555890461927692448373459",
+    "E": "83986881009841395726881741282576539890/157489106280555890461927692448373459",
+    "L0": 8796093022208,
+    "N_star": 918644030413102796640970006656455,
+    "long_base_lhs": 1099511627775,
+    "long_base_rhs_majorant": 480000000010,
+    "small_long_overlap_max": 131941395333120
+  },
+  "scope_limits": [
+    "Full Lambda_infinity(S_d) membership remains open.",
+    "No arbitrary-source bank entry or global Collatz theorem.",
+    "No numerical tests are presented as a proof of Matveev."
+  ],
+  "status": "PROVED with cited Matveev input; finite exact controls only in declared universe",
+  "theorem": "Every lawful U^k R with U in {K,V}+, k>=2, R in {F,H}+, and contracting total multiplier has endpoint below source."
+}

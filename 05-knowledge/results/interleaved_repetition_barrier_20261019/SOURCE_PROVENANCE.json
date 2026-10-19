@@ -1,0 +1,127 @@
+{
+  "source_manifest_sha256": "e3544f13f37868c3fc4602923391be46cdff33d5e1de5098d20be1ff6b2e5c05",
+  "source_hashlist_sha256": "a5f02bb1425c5d9a143ca9937698ec2c8e6652276952ae1042dbe170fbc595e2",
+  "description": "Only the frozen reviewed manifest subset is included. Both mathematical notes and all executable controls are unchanged; the README and review presentation record the completed audit.",
+  "files": [
+    {
+      "path": "README.md",
+      "source_sha256": "f2aed4dacbd6172d0f195c44b3b22a253733fe0d05df0a7d47cd7c011dd312f5",
+      "published_sha256": "dda0adce014077c6c8236450fd15e476c0231a876d2acc62d5e33a1e0d074f4c",
+      "changes": [
+        "Add completed independent-review status and reproduction instructions."
+      ]
+    },
+    {
+      "path": "INTERLEAVED_REPETITION_BARRIER.md",
+      "source_sha256": "b3ea155d92d0071be52de543651a812e76515b0bda2961a84258866c63ce496d",
+      "published_sha256": "b3ea155d92d0071be52de543651a812e76515b0bda2961a84258866c63ce496d",
+      "changes": []
+    },
+    {
+      "path": "POWER_EXPANSION_ZERO_HEAD.md",
+      "source_sha256": "6dbf9ddd4f8dab742cd022a50ca00f33991ad8d4a31915edda1592fc7b272d53",
+      "published_sha256": "6dbf9ddd4f8dab742cd022a50ca00f33991ad8d4a31915edda1592fc7b272d53",
+      "changes": []
+    },
+    {
+      "path": "verify_interleaved_repetition.py",
+      "source_sha256": "037e0981c9cb70cef4cef3727d6ee99e2e980101d38d2393e1497eff8e1ce829",
+      "published_sha256": "037e0981c9cb70cef4cef3727d6ee99e2e980101d38d2393e1497eff8e1ce829",
+      "changes": []
+    },
+    {
+      "path": "verify_power_expansion.py",
+      "source_sha256": "51725e3f5d98bcf28ac0e8907087a4a93874e6c2f88a3cea8db77783558084dd",
+      "published_sha256": "51725e3f5d98bcf28ac0e8907087a4a93874e6c2f88a3cea8db77783558084dd",
+      "changes": []
+    },
+    {
+      "path": "interleaved-verification-receipt.json",
+      "source_sha256": "d3712e8f372eb7ccda95f2319dc0273026a95134a593d031937a129b569d6f6b",
+      "published_sha256": "d3712e8f372eb7ccda95f2319dc0273026a95134a593d031937a129b569d6f6b",
+      "changes": []
+    },
+    {
+      "path": "interleaved-verification-optimized.json",
+      "source_sha256": "d3712e8f372eb7ccda95f2319dc0273026a95134a593d031937a129b569d6f6b",
+      "published_sha256": "d3712e8f372eb7ccda95f2319dc0273026a95134a593d031937a129b569d6f6b",
+      "changes": []
+    },
+    {
+      "path": "verification-receipt.json",
+      "source_sha256": "2336ba7d319e65d0b99a67e030d74db54208fc74b433066cfdc728f7c212f769",
+      "published_sha256": "2336ba7d319e65d0b99a67e030d74db54208fc74b433066cfdc728f7c212f769",
+      "changes": []
+    },
+    {
+      "path": "verification-optimized.json",
+      "source_sha256": "2336ba7d319e65d0b99a67e030d74db54208fc74b433066cfdc728f7c212f769",
+      "published_sha256": "2336ba7d319e65d0b99a67e030d74db54208fc74b433066cfdc728f7c212f769",
+      "changes": []
+    },
+    {
+      "path": "review/INTERLEAVED_REPETITION_REVIEW.md",
+      "source_sha256": "55c7939d34eba63e2e7b123899a8e125ab787089bb1fa58146c132bd78724a66",
+      "published_sha256": "a5cc4a11dbf4c13753de7fb2bc4fa6d4a787dfcf1c812339877d0e4e8083490b",
+      "changes": [
+        "Remove a purely internal statement about source and Git activity."
+      ]
+    },
+    {
+      "path": "review/independent_interleaved_controls.py",
+      "source_sha256": "6c8e494f192849a885cb15863c5f38b34342292202c4c08e385a20065ceac644",
+      "published_sha256": "6c8e494f192849a885cb15863c5f38b34342292202c4c08e385a20065ceac644",
+      "changes": []
+    },
+    {
+      "path": "review/independent-interleaved-receipt.json",
+      "source_sha256": "6affa440ec426b9a93014f6c9d70e400ae907b6d1044a57a680e9edcdd2bdac1",
+      "published_sha256": "6affa440ec426b9a93014f6c9d70e400ae907b6d1044a57a680e9edcdd2bdac1",
+      "changes": []
+    },
+    {
+      "path": "review/independent-interleaved-rerun.json",
+      "source_sha256": "6affa440ec426b9a93014f6c9d70e400ae907b6d1044a57a680e9edcdd2bdac1",
+      "published_sha256": "6affa440ec426b9a93014f6c9d70e400ae907b6d1044a57a680e9edcdd2bdac1",
+      "changes": []
+    },
+    {
+      "path": "review/independent-interleaved-optimized.json",
+      "source_sha256": "6affa440ec426b9a93014f6c9d70e400ae907b6d1044a57a680e9edcdd2bdac1",
+      "published_sha256": "6affa440ec426b9a93014f6c9d70e400ae907b6d1044a57a680e9edcdd2bdac1",
+      "changes": []
+    },
+    {
+      "path": "review/interleaved-rerun.json",
+      "source_sha256": "d3712e8f372eb7ccda95f2319dc0273026a95134a593d031937a129b569d6f6b",
+      "published_sha256": "d3712e8f372eb7ccda95f2319dc0273026a95134a593d031937a129b569d6f6b",
+      "changes": []
+    },
+    {
+      "path": "review/interleaved-rerun-optimized.json",
+      "source_sha256": "d3712e8f372eb7ccda95f2319dc0273026a95134a593d031937a129b569d6f6b",
+      "published_sha256": "d3712e8f372eb7ccda95f2319dc0273026a95134a593d031937a129b569d6f6b",
+      "changes": []
+    },
+    {
+      "path": "review/power-rerun.json",
+      "source_sha256": "2336ba7d319e65d0b99a67e030d74db54208fc74b433066cfdc728f7c212f769",
+      "published_sha256": "2336ba7d319e65d0b99a67e030d74db54208fc74b433066cfdc728f7c212f769",
+      "changes": []
+    },
+    {
+      "path": "review/power-rerun-optimized.json",
+      "source_sha256": "2336ba7d319e65d0b99a67e030d74db54208fc74b433066cfdc728f7c212f769",
+      "published_sha256": "2336ba7d319e65d0b99a67e030d74db54208fc74b433066cfdc728f7c212f769",
+      "changes": []
+    },
+    {
+      "path": "review/REVIEW_STATUS.json",
+      "source_sha256": "265b49d973b5ce3ca720f1519183691536d2239d36ae08c64f62bae77e9fce51",
+      "published_sha256": "aebc0bc471f5f64bf139ade409231af81d1c58fdea9774ddc61ac1c8aac0a502",
+      "changes": [
+        "Reconcile published presentation hashes while retaining original status-manifest and README hashes."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "checks": 255312,
+  "external_source": {
+    "display": "Languasco--Luca--Moree--Togbe, Theorem 2.1 (Matveev)",
+    "url": "https://link.springer.com/article/10.1007/s12188-025-00293-9#Sec2"
+  },
+  "finite_forest": {
+    "episode_histogram": {
+      "1": 447,
+      "2": 76
+    },
+    "first_crossing_leaves": 523,
+    "leaf_digest_sha256": "dcba2fa7ac786e571b9dee740ed19bf2f1e264c17e3653bdf021517ecab9b695",
+    "max_episodes": 2,
+    "max_macro_depth": 8,
+    "open_nodes": 883,
+    "qualifying_factors": 2467,
+    "repeated_factors_tested": 2467,
+    "uncrossed_depth_8_frontier": 532
+  },
+  "literal_replay_T_steps": 228395,
+  "long_range": {
+    "B": 10000000000,
+    "L0": 281474976710656,
+    "N_upper_at_join": 4222124650659840,
+    "base_lhs": "140737488355328/225",
+    "base_rhs_upper": 530000000052,
+    "derivative_margin": 276974976710206
+  },
+  "new_carry_bound": "e/S<N/6 and e<N/6 at every first crossing",
+  "scope_limits": [
+    "Only exact first-crossing bank witnesses are covered.",
+    "Uncrossed finite frontier is retained, not claimed empty.",
+    "Full realized 2-adic boundary and arbitrary bank entry remain open.",
+    "The large family control uses independent literal coefficients, not full parity replay."
+  ],
+  "short_range": {
+    "H0": 4503599627370496,
+    "coarse_envelope_margin": 501259547633120370490854861468008443,
+    "denominator_margin": 107816434916675,
+    "gcd": 1,
+    "p": 5750934602875680,
+    "q": 9115015689657667,
+    "r4": 588943162011782273059357097228697595,
+    "series_terms_each_log": 160,
+    "spacing_margin": 1766747385272819982190647600454107121
+  },
+  "status": "PROVED scoped theorem with cited logarithmic-form input; finite controls reported separately",
+  "theorem": "Every lawful first-crossing bank word with an expansion-bank factor U^k and 100(k-1)|U|>=L_exp descends at its endpoint; episode count unrestricted.",
+  "unbounded_episode_family_controls": [
+    {
+      "L_exp": 60,
+      "N": 62,
+      "direct_parity_replay": true,
+      "duplicated_bits": 30,
+      "endpoint_sha256": "030e1a74923f746cb91011e4b586b6a766805467b124f5526677a7480551850f",
+      "episodes": 1,
+      "independent_literal_coefficients": true,
+      "initial_K_power": 2,
+      "source_bits": 62,
+      "source_sha256": "34e1f89b48c0a2ab39e416e99050e33eaf7953cb07261e12c3e0685e102cbfd9"
+    },
+    {
+      "L_exp": 150,
+      "N": 154,
+      "direct_parity_replay": true,
+      "duplicated_bits": 90,
+      "endpoint_sha256": "b1361116be2b46f410242a7920cc1f3a01ed87f8e32138274906089a21baed73",
+      "episodes": 2,
+      "independent_literal_coefficients": true,
+      "initial_K_power": 4,
+      "source_bits": 153,
+      "source_sha256": "f486c8199ed1b8e7589dfff7ff6bd3ecc9350445a87745be2627c7883201892d"
+    },
+    {
+      "L_exp": 390,
+      "N": 398,
+      "direct_parity_replay": true,
+      "duplicated_bits": 270,
+      "endpoint_sha256": "0408a849ccb01343f84c0edbf07d99b1c6040b4f9a7f5eaedb72d4b3e3456be0",
+      "episodes": 4,
+      "independent_literal_coefficients": true,
+      "initial_K_power": 10,
+      "source_bits": 397,
+      "source_sha256": "88dc54dddc5e19ffb71620ad57216995feee71c9e19d6e1f7f8c8f07b4db85d2"
+    },
+    {
+      "L_exp": 4110,
+      "N": 4186,
+      "direct_parity_replay": true,
+      "duplicated_bits": 2970,
+      "endpoint_sha256": "db44de42948669b3f59b78b3ab0595be689c688205cc960dff81dc1ff4ef8904",
+      "episodes": 38,
+      "independent_literal_coefficients": true,
+      "initial_K_power": 100,
+      "source_bits": 4185,
+      "source_sha256": "a24833cd1d7dfbf79bad3f5c695b844c01c5afad10696c11d1037ba7b45605ed"
+    },
+    {
+      "L_exp": 169560,
+      "N": 172674,
+      "direct_parity_replay": false,
+      "duplicated_bits": 122850,
+      "endpoint_sha256": "7a5d45afae53d745f565d9557b0ab30322e32a5b070343d4805e9fcde6aed807",
+      "episodes": 1557,
+      "independent_literal_coefficients": true,
+      "initial_K_power": 4096,
+      "source_bits": 172673,
+      "source_sha256": "4a6a0177e5dd4fffbd2d15767dda8d404c837ab384caeed0d1ec5ade2ce83e56"
+    }
+  ]
+}
