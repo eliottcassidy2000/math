@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "method": "closed-form odd-position carry; binary-lift cylinder reconstruction; exact 533 offset affine certificates",
+  "forced_source": 588943162011782273059357097228697595,
+  "forced_modulus": 1329227995784915872903807060280344576,
+  "carry_bound": "83986881009841395726881741282576539890/157489106280555890461927692448373459",
+  "max_steps": 92,
+  "longest_offsets": [
+    4
+  ],
+  "maximum_threshold": "116927/13",
+  "maximum_threshold_offset": 480,
+  "depth_histogram": {
+    "1": 267,
+    "2": 133,
+    "4": 33,
+    "5": 33,
+    "7": 14,
+    "8": 14,
+    "10": 5,
+    "12": 3,
+    "13": 4,
+    "15": 3,
+    "16": 2,
+    "18": 3,
+    "20": 1,
+    "21": 5,
+    "26": 1,
+    "27": 2,
+    "29": 3,
+    "31": 1,
+    "32": 1,
+    "35": 1,
+    "40": 1,
+    "59": 1,
+    "67": 1,
+    "92": 1
+  }
+}

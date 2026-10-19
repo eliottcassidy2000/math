@@ -1,0 +1,639 @@
+{
+  "bank_center": "83829391903560839836419813590128166431/157489106280555890461927692448373459",
+  "carry_upper_bound": "83986881009841395726881741282576539890/157489106280555890461927692448373459",
+  "compressed_classes": 54,
+  "explicit_checks": 5539,
+  "forced_modulus": 1329227995784915872903807060280344576,
+  "forced_source": 588943162011782273059357097228697595,
+  "long_repairs": [
+    {
+      "offset": 4,
+      "steps": 92
+    },
+    {
+      "offset": 76,
+      "steps": 31
+    },
+    {
+      "offset": 172,
+      "steps": 67
+    },
+    {
+      "offset": 256,
+      "steps": 32
+    },
+    {
+      "offset": 288,
+      "steps": 40
+    },
+    {
+      "offset": 324,
+      "steps": 35
+    },
+    {
+      "offset": 500,
+      "steps": 59
+    }
+  ],
+  "max_affine_threshold": "116927/13",
+  "max_positive_displacement": 533,
+  "offset_certificate": [
+    {
+      "carry": 0,
+      "max_offset": 533,
+      "min_offset": 1,
+      "multiplier_numerator": 1,
+      "offset_count": 267,
+      "offset_modulus": 2,
+      "offset_residue": 1,
+      "parity_word": "0",
+      "time": 1
+    },
+    {
+      "carry": 1,
+      "max_offset": 530,
+      "min_offset": 2,
+      "multiplier_numerator": 3,
+      "offset_count": 133,
+      "offset_modulus": 4,
+      "offset_residue": 2,
+      "parity_word": "10",
+      "time": 2
+    },
+    {
+      "carry": 5,
+      "max_offset": 520,
+      "min_offset": 8,
+      "multiplier_numerator": 9,
+      "offset_count": 33,
+      "offset_modulus": 16,
+      "offset_residue": 8,
+      "parity_word": "1100",
+      "time": 4
+    },
+    {
+      "carry": 23,
+      "max_offset": 528,
+      "min_offset": 16,
+      "multiplier_numerator": 27,
+      "offset_count": 17,
+      "offset_modulus": 32,
+      "offset_residue": 16,
+      "parity_word": "11010",
+      "time": 5
+    },
+    {
+      "carry": 19,
+      "max_offset": 508,
+      "min_offset": 28,
+      "multiplier_numerator": 27,
+      "offset_count": 16,
+      "offset_modulus": 32,
+      "offset_residue": 28,
+      "parity_word": "11100",
+      "time": 5
+    },
+    {
+      "carry": 73,
+      "max_offset": 524,
+      "min_offset": 12,
+      "multiplier_numerator": 81,
+      "offset_count": 5,
+      "offset_modulus": 128,
+      "offset_residue": 12,
+      "parity_word": "1110100",
+      "time": 7
+    },
+    {
+      "carry": 65,
+      "max_offset": 532,
+      "min_offset": 20,
+      "multiplier_numerator": 81,
+      "offset_count": 5,
+      "offset_modulus": 128,
+      "offset_residue": 20,
+      "parity_word": "1111000",
+      "time": 7
+    },
+    {
+      "carry": 85,
+      "max_offset": 448,
+      "min_offset": 64,
+      "multiplier_numerator": 81,
+      "offset_count": 4,
+      "offset_modulus": 128,
+      "offset_residue": 64,
+      "parity_word": "1101100",
+      "time": 7
+    },
+    {
+      "carry": 251,
+      "max_offset": 300,
+      "min_offset": 44,
+      "multiplier_numerator": 243,
+      "offset_count": 2,
+      "offset_modulus": 256,
+      "offset_residue": 44,
+      "parity_word": "11101100",
+      "time": 8
+    },
+    {
+      "carry": 259,
+      "max_offset": 340,
+      "min_offset": 84,
+      "multiplier_numerator": 243,
+      "offset_count": 2,
+      "offset_modulus": 256,
+      "offset_residue": 84,
+      "parity_word": "11110010",
+      "time": 8
+    },
+    {
+      "carry": 211,
+      "max_offset": 356,
+      "min_offset": 100,
+      "multiplier_numerator": 243,
+      "offset_count": 2,
+      "offset_modulus": 256,
+      "offset_residue": 100,
+      "parity_word": "11111000",
+      "time": 8
+    },
+    {
+      "carry": 319,
+      "max_offset": 384,
+      "min_offset": 128,
+      "multiplier_numerator": 243,
+      "offset_count": 2,
+      "offset_modulus": 256,
+      "offset_residue": 128,
+      "parity_word": "11011010",
+      "time": 8
+    },
+    {
+      "carry": 227,
+      "max_offset": 436,
+      "min_offset": 180,
+      "multiplier_numerator": 243,
+      "offset_count": 2,
+      "offset_modulus": 256,
+      "offset_residue": 180,
+      "parity_word": "11110100",
+      "time": 8
+    },
+    {
+      "carry": 283,
+      "max_offset": 460,
+      "min_offset": 204,
+      "multiplier_numerator": 243,
+      "offset_count": 2,
+      "offset_modulus": 256,
+      "offset_residue": 204,
+      "parity_word": "11101010",
+      "time": 8
+    },
+    {
+      "carry": 287,
+      "max_offset": 480,
+      "min_offset": 224,
+      "multiplier_numerator": 243,
+      "offset_count": 2,
+      "offset_modulus": 256,
+      "offset_residue": 224,
+      "parity_word": "11011100",
+      "time": 8
+    },
+    {
+      "carry": 697,
+      "max_offset": 292,
+      "min_offset": 292,
+      "multiplier_numerator": 729,
+      "offset_count": 1,
+      "offset_modulus": 1024,
+      "offset_residue": 292,
+      "parity_word": "1111101000",
+      "time": 10
+    },
+    {
+      "carry": 989,
+      "max_offset": 352,
+      "min_offset": 352,
+      "multiplier_numerator": 729,
+      "offset_count": 1,
+      "offset_modulus": 1024,
+      "offset_residue": 352,
+      "parity_word": "1101110100",
+      "time": 10
+    },
+    {
+      "carry": 745,
+      "max_offset": 372,
+      "min_offset": 372,
+      "multiplier_numerator": 729,
+      "offset_count": 1,
+      "offset_modulus": 1024,
+      "offset_residue": 372,
+      "parity_word": "1111011000",
+      "time": 10
+    },
+    {
+      "carry": 881,
+      "max_offset": 428,
+      "min_offset": 428,
+      "multiplier_numerator": 729,
+      "offset_count": 1,
+      "offset_modulus": 1024,
+      "offset_residue": 428,
+      "parity_word": "1110110100",
+      "time": 10
+    },
+    {
+      "carry": 1085,
+      "max_offset": 512,
+      "min_offset": 512,
+      "multiplier_numerator": 729,
+      "offset_count": 1,
+      "offset_modulus": 1024,
+      "offset_residue": 512,
+      "parity_word": "1101101100",
+      "time": 10
+    },
+    {
+      "carry": 2707,
+      "max_offset": 236,
+      "min_offset": 236,
+      "multiplier_numerator": 2187,
+      "offset_count": 1,
+      "offset_modulus": 4096,
+      "offset_residue": 236,
+      "parity_word": "111011101000",
+      "time": 12
+    },
+    {
+      "carry": 2059,
+      "max_offset": 388,
+      "min_offset": 388,
+      "multiplier_numerator": 2187,
+      "offset_count": 1,
+      "offset_modulus": 4096,
+      "offset_residue": 388,
+      "parity_word": "111111100000",
+      "time": 12
+    },
+    {
+      "carry": 3227,
+      "max_offset": 468,
+      "min_offset": 468,
+      "multiplier_numerator": 2187,
+      "offset_count": 1,
+      "offset_modulus": 4096,
+      "offset_residue": 468,
+      "parity_word": "111100110100",
+      "time": 12
+    },
+    {
+      "carry": 8417,
+      "max_offset": 196,
+      "min_offset": 196,
+      "multiplier_numerator": 6561,
+      "offset_count": 1,
+      "offset_modulus": 8192,
+      "offset_residue": 196,
+      "parity_word": "1111110100010",
+      "time": 13
+    },
+    {
+      "carry": 9937,
+      "max_offset": 212,
+      "min_offset": 212,
+      "multiplier_numerator": 6561,
+      "offset_count": 1,
+      "offset_modulus": 8192,
+      "offset_residue": 212,
+      "parity_word": "1111001110100",
+      "time": 13
+    },
+    {
+      "carry": 6305,
+      "max_offset": 260,
+      "min_offset": 260,
+      "multiplier_numerator": 6561,
+      "offset_count": 1,
+      "offset_modulus": 8192,
+      "offset_residue": 260,
+      "parity_word": "1111111100000",
+      "time": 13
+    },
+    {
+      "carry": 10865,
+      "max_offset": 308,
+      "min_offset": 308,
+      "multiplier_numerator": 6561,
+      "offset_count": 1,
+      "offset_modulus": 8192,
+      "offset_residue": 308,
+      "parity_word": "1111010101010",
+      "time": 13
+    },
+    {
+      "carry": 23395,
+      "max_offset": 132,
+      "min_offset": 132,
+      "multiplier_numerator": 19683,
+      "offset_count": 1,
+      "offset_modulus": 32768,
+      "offset_residue": 132,
+      "parity_word": "111111101000100",
+      "time": 15
+    },
+    {
+      "carry": 36751,
+      "max_offset": 416,
+      "min_offset": 416,
+      "multiplier_numerator": 19683,
+      "offset_count": 1,
+      "offset_modulus": 32768,
+      "offset_residue": 416,
+      "parity_word": "110111100110100",
+      "time": 15
+    },
+    {
+      "carry": 23555,
+      "max_offset": 420,
+      "min_offset": 420,
+      "multiplier_numerator": 19683,
+      "offset_count": 1,
+      "offset_modulus": 32768,
+      "offset_residue": 420,
+      "parity_word": "111110110101000",
+      "time": 15
+    },
+    {
+      "carry": 100609,
+      "max_offset": 364,
+      "min_offset": 364,
+      "multiplier_numerator": 59049,
+      "offset_count": 1,
+      "offset_modulus": 65536,
+      "offset_residue": 364,
+      "parity_word": "1110111110001010",
+      "time": 16
+    },
+    {
+      "carry": 92617,
+      "max_offset": 484,
+      "min_offset": 484,
+      "multiplier_numerator": 59049,
+      "offset_count": 1,
+      "offset_modulus": 65536,
+      "offset_residue": 484,
+      "parity_word": "1111100111100010",
+      "time": 16
+    },
+    {
+      "carry": 308539,
+      "max_offset": 68,
+      "min_offset": 68,
+      "multiplier_numerator": 177147,
+      "offset_count": 1,
+      "offset_modulus": 262144,
+      "offset_residue": 68,
+      "parity_word": "111111000110111000",
+      "time": 18
+    },
+    {
+      "carry": 329159,
+      "max_offset": 96,
+      "min_offset": 96,
+      "multiplier_numerator": 177147,
+      "offset_count": 1,
+      "offset_modulus": 262144,
+      "offset_residue": 96,
+      "parity_word": "110111011110100100",
+      "time": 18
+    },
+    {
+      "carry": 300547,
+      "max_offset": 108,
+      "min_offset": 108,
+      "multiplier_numerator": 177147,
+      "offset_count": 1,
+      "offset_modulus": 262144,
+      "offset_residue": 108,
+      "parity_word": "111011110100111000",
+      "time": 18
+    },
+    {
+      "carry": 763217,
+      "max_offset": 164,
+      "min_offset": 164,
+      "multiplier_numerator": 531441,
+      "offset_count": 1,
+      "offset_modulus": 1048576,
+      "offset_residue": 164,
+      "parity_word": "11111011111000100100",
+      "time": 20
+    },
+    {
+      "carry": 3025087,
+      "max_offset": 32,
+      "min_offset": 32,
+      "multiplier_numerator": 1594323,
+      "offset_count": 1,
+      "offset_modulus": 2097152,
+      "offset_residue": 32,
+      "parity_word": "110111110101101100100",
+      "time": 21
+    },
+    {
+      "carry": 4472639,
+      "max_offset": 160,
+      "min_offset": 160,
+      "multiplier_numerator": 1594323,
+      "offset_count": 1,
+      "offset_modulus": 2097152,
+      "offset_residue": 160,
+      "parity_word": "110111101001110101010",
+      "time": 21
+    },
+    {
+      "carry": 2670083,
+      "max_offset": 244,
+      "min_offset": 244,
+      "multiplier_numerator": 1594323,
+      "offset_count": 1,
+      "offset_modulus": 2097152,
+      "offset_residue": 244,
+      "parity_word": "111101111100010111000",
+      "time": 21
+    },
+    {
+      "carry": 2878843,
+      "max_offset": 332,
+      "min_offset": 332,
+      "multiplier_numerator": 1594323,
+      "offset_count": 1,
+      "offset_modulus": 2097152,
+      "offset_residue": 332,
+      "parity_word": "111010111110110110000",
+      "time": 21
+    },
+    {
+      "carry": 3639707,
+      "max_offset": 492,
+      "min_offset": 492,
+      "multiplier_numerator": 1594323,
+      "offset_count": 1,
+      "offset_modulus": 2097152,
+      "offset_residue": 492,
+      "parity_word": "111011100111001111000",
+      "time": 21
+    },
+    {
+      "carry": 75978049,
+      "max_offset": 516,
+      "min_offset": 516,
+      "multiplier_numerator": 43046721,
+      "offset_count": 1,
+      "offset_modulus": 67108864,
+      "offset_residue": 516,
+      "parity_word": "11111111101010001010111000",
+      "time": 26
+    },
+    {
+      "carry": 287863091,
+      "max_offset": 52,
+      "min_offset": 52,
+      "multiplier_numerator": 129140163,
+      "offset_count": 1,
+      "offset_modulus": 134217728,
+      "offset_residue": 52,
+      "parity_word": "111101011011101101101100010",
+      "time": 27
+    },
+    {
+      "carry": 241990435,
+      "max_offset": 228,
+      "min_offset": 228,
+      "multiplier_numerator": 129140163,
+      "offset_count": 1,
+      "offset_modulus": 134217728,
+      "offset_residue": 228,
+      "parity_word": "111110010111111010111010000",
+      "time": 27
+    },
+    {
+      "carry": 754083881,
+      "max_offset": 36,
+      "min_offset": 36,
+      "multiplier_numerator": 387420489,
+      "offset_count": 1,
+      "offset_modulus": 536870912,
+      "offset_residue": 36,
+      "parity_word": "11111010110111010101101101000",
+      "time": 29
+    },
+    {
+      "carry": 898957657,
+      "max_offset": 116,
+      "min_offset": 116,
+      "multiplier_numerator": 387420489,
+      "offset_count": 1,
+      "offset_modulus": 536870912,
+      "offset_residue": 116,
+      "parity_word": "11110110111111000100111001100",
+      "time": 29
+    },
+    {
+      "carry": 648434057,
+      "max_offset": 452,
+      "min_offset": 452,
+      "multiplier_numerator": 387420489,
+      "offset_count": 1,
+      "offset_modulus": 536870912,
+      "offset_residue": 452,
+      "parity_word": "11111101110010110111100011000",
+      "time": 29
+    },
+    {
+      "carry": 3553304131,
+      "max_offset": 76,
+      "min_offset": 76,
+      "multiplier_numerator": 1162261467,
+      "offset_count": 1,
+      "offset_modulus": 2147483648,
+      "offset_residue": 76,
+      "parity_word": "1110101101110111001111001010100",
+      "time": 31
+    },
+    {
+      "carry": 10103945429,
+      "max_offset": 256,
+      "min_offset": 256,
+      "multiplier_numerator": 3486784401,
+      "offset_count": 1,
+      "offset_modulus": 4294967296,
+      "offset_residue": 256,
+      "parity_word": "11011011111100110111001001110100",
+      "time": 32
+    },
+    {
+      "carry": 74442332377,
+      "max_offset": 324,
+      "min_offset": 324,
+      "multiplier_numerator": 31381059609,
+      "offset_count": 1,
+      "offset_modulus": 34359738368,
+      "offset_residue": 324,
+      "parity_word": "11111100111100011101110111001001100",
+      "time": 35
+    },
+    {
+      "carry": 2069604720079,
+      "max_offset": 288,
+      "min_offset": 288,
+      "multiplier_numerator": 847288609443,
+      "offset_count": 1,
+      "offset_modulus": 1099511627776,
+      "offset_residue": 288,
+      "parity_word": "1101111110011110111101110010101010001010",
+      "time": 40
+    },
+    {
+      "carry": 1801660001069086115,
+      "max_offset": 500,
+      "min_offset": 500,
+      "multiplier_numerator": 450283905890997363,
+      "offset_count": 1,
+      "offset_modulus": 576460752303423488,
+      "offset_residue": 500,
+      "parity_word": "11110111011101010010111111111110000111000111100001101101010",
+      "time": 59
+    },
+    {
+      "carry": 540548312399311611457,
+      "max_offset": 172,
+      "min_offset": 172,
+      "multiplier_numerator": 109418989131512359209,
+      "offset_count": 1,
+      "offset_modulus": 147573952589676412928,
+      "offset_residue": 172,
+      "parity_word": "1110110111111001010101100110111101111100010101101011111010101010100",
+      "time": 67
+    },
+    {
+      "carry": 15401163308448444462818386537,
+      "max_offset": 4,
+      "min_offset": 4,
+      "multiplier_numerator": 4710128697246244834921603689,
+      "offset_count": 1,
+      "offset_modulus": 4951760157141521099596496896,
+      "offset_residue": 4,
+      "parity_word": "11111111111111110100101001101101011000100110011111011111011101011100001111000111000101011010",
+      "time": 92
+    }
+  ],
+  "repair_max_steps": 92,
+  "scope": "533 offset certificates, each valid on all inherited positive source lifts; no global source coverage",
+  "status": "PASS"
+}

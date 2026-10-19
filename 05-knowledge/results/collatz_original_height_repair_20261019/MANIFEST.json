@@ -1,0 +1,15 @@
+{
+  "status": "PROVED; independent mathematical review PASS; root approved",
+  "publication_scope": "readable proof, small exact checker, matching receipt, independent review and replay",
+  "files": [
+    "ORIGINAL_HEIGHT_REPAIR.md",
+    "README.md",
+    "independent-review/INDEPENDENT_REVIEW.md",
+    "independent-review/check_escape.py",
+    "independent-review/receipt.json",
+    "verification-receipt.json",
+    "verify_original_height_repair.py"
+  ],
+  "theorem_scope": "specified guarded contracting banks only; unrestricted word length; actual descent by N+92 or distinct smaller periodic obstruction; no arbitrary entry",
+  "validation": "normal and optimized writer replay agree; independent closed-sum/binary-lift replay agrees; empty-prefix wording corrected"
+}
