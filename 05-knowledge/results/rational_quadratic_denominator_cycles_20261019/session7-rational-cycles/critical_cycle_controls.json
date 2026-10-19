@@ -1,0 +1,23 @@
+[
+  {
+    "prime": 3,
+    "parameter_residue": 2,
+    "unique_cycle": [
+      0,
+      2
+    ],
+    "multiplier_mod_p": 0,
+    "consequence": "All affine Q_p-periodic points lie on the unique lifted cycle; rational periodic points, if any, have its exact period."
+  },
+  {
+    "prime": 5,
+    "parameter_residue": 1,
+    "unique_cycle": [
+      0,
+      1,
+      2
+    ],
+    "multiplier_mod_p": 0,
+    "consequence": "All affine Q_p-periodic points lie on the unique lifted cycle; rational periodic points, if any, have its exact period."
+  }
+]

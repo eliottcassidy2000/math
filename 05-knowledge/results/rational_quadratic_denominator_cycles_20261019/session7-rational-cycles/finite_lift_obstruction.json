@@ -1,0 +1,11 @@
+{
+  "map": "T(a)=(a^2-29)/4",
+  "p": 43,
+  "period6_mod_p2_points": 126,
+  "period6_mod_p2_cycles": 21,
+  "lifts_mod_p3": 5418,
+  "period6_lifts_mod_p3": 0,
+  "all_lifts_exact_period": 258,
+  "cycles_mod_p3_over_old_period6": 21,
+  "status": "PASS"
+}

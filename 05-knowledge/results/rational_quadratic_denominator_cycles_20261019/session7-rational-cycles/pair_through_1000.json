@@ -1,0 +1,3197 @@
+{
+  "method": "Universal two-edge enumeration with certified factorization and real escape guard",
+  "results": [
+    {
+      "b": 60,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 308,
+      "escape_rejections": 114,
+      "cycles": [
+        {
+          "C": -34861,
+          "c": "-34861/3600",
+          "numerators": [
+            -211,
+            161,
+            -149
+          ],
+          "period": 3
+        },
+        {
+          "C": -25621,
+          "c": "-25621/3600",
+          "numerators": [
+            -191,
+            181,
+            119
+          ],
+          "period": 3
+        },
+        {
+          "C": -8149,
+          "c": "-8149/3600",
+          "numerators": [
+            -113,
+            77,
+            -37
+          ],
+          "period": 3
+        },
+        {
+          "C": -6469,
+          "c": "-6469/3600",
+          "numerators": [
+            -107,
+            83,
+            7
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 84,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 233,
+      "escape_rejections": 85,
+      "cycles": [
+        {
+          "C": -91309,
+          "c": "-91309/7056",
+          "numerators": [
+            -337,
+            265,
+            -251
+          ],
+          "period": 3
+        },
+        {
+          "C": -69469,
+          "c": "-69469/7056",
+          "numerators": [
+            -307,
+            295,
+            209
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 120,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 92,
+      "escape_rejections": 37,
+      "cycles": []
+    },
+    {
+      "b": 132,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 157,
+      "escape_rejections": 55,
+      "cycles": []
+    },
+    {
+      "b": 140,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 128,
+      "escape_rejections": 41,
+      "cycles": [
+        {
+          "C": -73109,
+          "c": "-73109/19600",
+          "numerators": [
+            -323,
+            223,
+            -167
+          ],
+          "period": 3
+        },
+        {
+          "C": -50429,
+          "c": "-50429/19600",
+          "numerators": [
+            -293,
+            253,
+            97
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 156,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 125,
+      "escape_rejections": 40,
+      "cycles": []
+    },
+    {
+      "b": 168,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 95,
+      "escape_rejections": 31,
+      "cycles": [
+        {
+          "C": -58801,
+          "c": "-58801/28224",
+          "numerators": [
+            -307,
+            211,
+            -85
+          ],
+          "period": 3
+        },
+        {
+          "C": -49561,
+          "c": "-49561/28224",
+          "numerators": [
+            -295,
+            223,
+            1
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 180,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 98,
+      "escape_rejections": 33,
+      "cycles": [
+        {
+          "C": -832861,
+          "c": "-832861/32400",
+          "numerators": [
+            -991,
+            829,
+            -809
+          ],
+          "period": 3
+        },
+        {
+          "C": -682381,
+          "c": "-682381/32400",
+          "numerators": [
+            -919,
+            901,
+            719
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 204,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 96,
+      "escape_rejections": 25,
+      "cycles": []
+    },
+    {
+      "b": 220,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 93,
+      "escape_rejections": 23,
+      "cycles": [
+        {
+          "C": -1498421,
+          "c": "-1498421/48400",
+          "numerators": [
+            -1321,
+            1121,
+            -1099
+          ],
+          "period": 3
+        },
+        {
+          "C": -1248941,
+          "c": "-1248941/48400",
+          "numerators": [
+            -1231,
+            1211,
+            989
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 228,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          19,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 100,
+      "escape_rejections": 31,
+      "cycles": []
+    },
+    {
+      "b": 240,
+      "prime_factorization": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 64,
+      "escape_rejections": 20,
+      "cycles": [
+        {
+          "C": -142009,
+          "c": "-142009/57600",
+          "numerators": [
+            -467,
+            317,
+            -173
+          ],
+          "period": 3
+        },
+        {
+          "C": -107689,
+          "c": "-107689/57600",
+          "numerators": [
+            -437,
+            347,
+            53
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 252,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 78,
+      "escape_rejections": 26,
+      "cycles": [
+        {
+          "C": -364141,
+          "c": "-364141/63504",
+          "numerators": [
+            -701,
+            505,
+            -433
+          ],
+          "period": 3
+        },
+        {
+          "C": -253261,
+          "c": "-253261/63504",
+          "numerators": [
+            -631,
+            575,
+            307
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 260,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 87,
+      "escape_rejections": 25,
+      "cycles": []
+    },
+    {
+      "b": 264,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 66,
+      "escape_rejections": 21,
+      "cycles": [
+        {
+          "C": -2558689,
+          "c": "-2558689/69696",
+          "numerators": [
+            -1717,
+            1475,
+            -1451
+          ],
+          "period": 3
+        },
+        {
+          "C": -2164009,
+          "c": "-2164009/69696",
+          "numerators": [
+            -1607,
+            1585,
+            1319
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 276,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          23,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 82,
+      "escape_rejections": 26,
+      "cycles": []
+    },
+    {
+      "b": 280,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 47,
+      "escape_rejections": 21,
+      "cycles": []
+    },
+    {
+      "b": 300,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 74,
+      "escape_rejections": 20,
+      "cycles": []
+    },
+    {
+      "b": 308,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 67,
+      "escape_rejections": 17,
+      "cycles": []
+    },
+    {
+      "b": 312,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 98,
+      "escape_rejections": 31,
+      "cycles": [
+        {
+          "C": -4182361,
+          "c": "-4182361/97344",
+          "numerators": [
+            -2185,
+            1897,
+            -1871
+          ],
+          "period": 3
+        },
+        {
+          "C": -3581761,
+          "c": "-3581761/97344",
+          "numerators": [
+            -2053,
+            2029,
+            1715
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 336,
+      "prime_factorization": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 32,
+      "escape_rejections": 14,
+      "cycles": []
+    },
+    {
+      "b": 340,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 57,
+      "escape_rejections": 20,
+      "cycles": []
+    },
+    {
+      "b": 348,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          29,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 93,
+      "escape_rejections": 32,
+      "cycles": []
+    },
+    {
+      "b": 360,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 66,
+      "escape_rejections": 21,
+      "cycles": [
+        {
+          "C": -259561,
+          "c": "-259561/129600",
+          "numerators": [
+            -649,
+            449,
+            -161
+          ],
+          "period": 3
+        },
+        {
+          "C": -226801,
+          "c": "-226801/129600",
+          "numerators": [
+            -629,
+            469,
+            -19
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 364,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 68,
+      "escape_rejections": 16,
+      "cycles": [
+        {
+          "C": -6587309,
+          "c": "-6587309/132496",
+          "numerators": [
+            -2731,
+            2393,
+            -2365
+          ],
+          "period": 3
+        },
+        {
+          "C": -5702789,
+          "c": "-5702789/132496",
+          "numerators": [
+            -2575,
+            2549,
+            2183
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 372,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          31,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 69,
+      "escape_rejections": 20,
+      "cycles": []
+    },
+    {
+      "b": 380,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          19,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 60,
+      "escape_rejections": 20,
+      "cycles": []
+    },
+    {
+      "b": 396,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 45,
+      "escape_rejections": 11,
+      "cycles": [
+        {
+          "C": -1292509,
+          "c": "-1292509/156816",
+          "numerators": [
+            -1295,
+            971,
+            -883
+          ],
+          "period": 3
+        },
+        {
+          "C": -932149,
+          "c": "-932149/156816",
+          "numerators": [
+            -1169,
+            1097,
+            685
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 408,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 55,
+      "escape_rejections": 20,
+      "cycles": []
+    },
+    {
+      "b": 420,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "omega": 4,
+      "period_bound": 18,
+      "local_pair_count": 35,
+      "unsigned_pair_count": 1500625,
+      "signed_seed_count": 6002500,
+      "primitive_triangle_candidates": 1040,
+      "escape_rejections": 388,
+      "cycles": [
+        {
+          "C": -10049341,
+          "c": "-10049341/176400",
+          "numerators": [
+            -3361,
+            2969,
+            -2939
+          ],
+          "period": 3
+        },
+        {
+          "C": -8782621,
+          "c": "-8782621/176400",
+          "numerators": [
+            -3179,
+            3151,
+            2729
+          ],
+          "period": 3
+        },
+        {
+          "C": -607909,
+          "c": "-607909/176400",
+          "numerators": [
+            -937,
+            643,
+            -463
+          ],
+          "period": 3
+        },
+        {
+          "C": -422269,
+          "c": "-422269/176400",
+          "numerators": [
+            -853,
+            727,
+            253
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 440,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 51,
+      "escape_rejections": 19,
+      "cycles": []
+    },
+    {
+      "b": 444,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          37,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 54,
+      "escape_rejections": 15,
+      "cycles": []
+    },
+    {
+      "b": 456,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          19,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 51,
+      "escape_rejections": 13,
+      "cycles": []
+    },
+    {
+      "b": 460,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          23,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 56,
+      "escape_rejections": 18,
+      "cycles": []
+    },
+    {
+      "b": 468,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 51,
+      "escape_rejections": 13,
+      "cycles": []
+    },
+    {
+      "b": 476,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 53,
+      "escape_rejections": 15,
+      "cycles": []
+    },
+    {
+      "b": 480,
+      "prime_factorization": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 43,
+      "escape_rejections": 12,
+      "cycles": [
+        {
+          "C": -14911681,
+          "c": "-14911681/230400",
+          "numerators": [
+            -4081,
+            3631,
+            -3599
+          ],
+          "period": 3
+        },
+        {
+          "C": -13140961,
+          "c": "-13140961/230400",
+          "numerators": [
+            -3871,
+            3841,
+            3359
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 492,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          41,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 76,
+      "escape_rejections": 30,
+      "cycles": []
+    },
+    {
+      "b": 504,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 32,
+      "escape_rejections": 10,
+      "cycles": []
+    },
+    {
+      "b": 516,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          43,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 70,
+      "escape_rejections": 24,
+      "cycles": []
+    },
+    {
+      "b": 520,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 31,
+      "escape_rejections": 15,
+      "cycles": []
+    },
+    {
+      "b": 528,
+      "prime_factorization": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 43,
+      "escape_rejections": 10,
+      "cycles": [
+        {
+          "C": -1123081,
+          "c": "-1123081/278784",
+          "numerators": [
+            -1259,
+            875,
+            -677
+          ],
+          "period": 3
+        },
+        {
+          "C": -771961,
+          "c": "-771961/278784",
+          "numerators": [
+            -1139,
+            995,
+            413
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 532,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          19,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 55,
+      "escape_rejections": 22,
+      "cycles": []
+    },
+    {
+      "b": 540,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 41,
+      "escape_rejections": 17,
+      "cycles": []
+    },
+    {
+      "b": 552,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          23,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 49,
+      "escape_rejections": 15,
+      "cycles": []
+    },
+    {
+      "b": 560,
+      "prime_factorization": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 24,
+      "escape_rejections": 12,
+      "cycles": []
+    },
+    {
+      "b": 564,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          47,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 49,
+      "escape_rejections": 12,
+      "cycles": []
+    },
+    {
+      "b": 572,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 52,
+      "escape_rejections": 11,
+      "cycles": [
+        {
+          "C": -3680741,
+          "c": "-3680741/327184",
+          "numerators": [
+            -2153,
+            1669,
+            -1565
+          ],
+          "period": 3
+        },
+        {
+          "C": -2754101,
+          "c": "-2754101/327184",
+          "numerators": [
+            -1955,
+            1867,
+            1279
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 580,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          29,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 36,
+      "escape_rejections": 12,
+      "cycles": []
+    },
+    {
+      "b": 588,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 53,
+      "escape_rejections": 18,
+      "cycles": []
+    },
+    {
+      "b": 600,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 49,
+      "escape_rejections": 15,
+      "cycles": []
+    },
+    {
+      "b": 612,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 74,
+      "escape_rejections": 19,
+      "cycles": [
+        {
+          "C": -30609181,
+          "c": "-30609181/374544",
+          "numerators": [
+            -5815,
+            5237,
+            -5201
+          ],
+          "period": 3
+        },
+        {
+          "C": -27353341,
+          "c": "-27353341/374544",
+          "numerators": [
+            -5543,
+            5509,
+            4895
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 616,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 33,
+      "escape_rejections": 10,
+      "cycles": [
+        {
+          "C": -976529,
+          "c": "-976529/379456",
+          "numerators": [
+            -1219,
+            827,
+            -475
+          ],
+          "period": 3
+        },
+        {
+          "C": -727049,
+          "c": "-727049/379456",
+          "numerators": [
+            -1135,
+            911,
+            167
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 620,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          31,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 39,
+      "escape_rejections": 14,
+      "cycles": []
+    },
+    {
+      "b": 624,
+      "prime_factorization": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 30,
+      "escape_rejections": 11,
+      "cycles": []
+    },
+    {
+      "b": 636,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          53,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 50,
+      "escape_rejections": 14,
+      "cycles": []
+    },
+    {
+      "b": 644,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          23,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 48,
+      "escape_rejections": 15,
+      "cycles": []
+    },
+    {
+      "b": 660,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "omega": 4,
+      "period_bound": 18,
+      "local_pair_count": 35,
+      "unsigned_pair_count": 1500625,
+      "signed_seed_count": 6002500,
+      "primitive_triangle_candidates": 748,
+      "escape_rejections": 265,
+      "cycles": [
+        {
+          "C": -852901,
+          "c": "-852901/435600",
+          "numerators": [
+            -1181,
+            821,
+            -271
+          ],
+          "period": 3
+        },
+        {
+          "C": -763141,
+          "c": "-763141/435600",
+          "numerators": [
+            -1151,
+            851,
+            -59
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 672,
+      "prime_factorization": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 28,
+      "escape_rejections": 10,
+      "cycles": []
+    },
+    {
+      "b": 680,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 40,
+      "escape_rejections": 10,
+      "cycles": []
+    },
+    {
+      "b": 684,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          19,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 50,
+      "escape_rejections": 10,
+      "cycles": [
+        {
+          "C": -42563269,
+          "c": "-42563269/467856",
+          "numerators": [
+            -6841,
+            6193,
+            -6155
+          ],
+          "period": 3
+        },
+        {
+          "C": -38260909,
+          "c": "-38260909/467856",
+          "numerators": [
+            -6535,
+            6499,
+            5813
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 696,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          29,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 26,
+      "escape_rejections": 10,
+      "cycles": []
+    },
+    {
+      "b": 700,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 46,
+      "escape_rejections": 20,
+      "cycles": []
+    },
+    {
+      "b": 708,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          59,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 37,
+      "escape_rejections": 12,
+      "cycles": []
+    },
+    {
+      "b": 720,
+      "prime_factorization": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 20,
+      "escape_rejections": 11,
+      "cycles": []
+    },
+    {
+      "b": 728,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 34,
+      "escape_rejections": 15,
+      "cycles": []
+    },
+    {
+      "b": 732,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          61,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 51,
+      "escape_rejections": 16,
+      "cycles": []
+    },
+    {
+      "b": 740,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          37,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 38,
+      "escape_rejections": 13,
+      "cycles": []
+    },
+    {
+      "b": 744,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          31,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 33,
+      "escape_rejections": 12,
+      "cycles": []
+    },
+    {
+      "b": 748,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 39,
+      "escape_rejections": 9,
+      "cycles": []
+    },
+    {
+      "b": 756,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 26,
+      "escape_rejections": 13,
+      "cycles": []
+    },
+    {
+      "b": 760,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          19,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 56,
+      "escape_rejections": 14,
+      "cycles": [
+        {
+          "C": -58179521,
+          "c": "-58179521/577600",
+          "numerators": [
+            -7981,
+            7259,
+            -7219
+          ],
+          "period": 3
+        },
+        {
+          "C": -52577561,
+          "c": "-52577561/577600",
+          "numerators": [
+            -7639,
+            7601,
+            6839
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 780,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "omega": 4,
+      "period_bound": 18,
+      "local_pair_count": 35,
+      "unsigned_pair_count": 1500625,
+      "signed_seed_count": 6002500,
+      "primitive_triangle_candidates": 662,
+      "escape_rejections": 200,
+      "cycles": [
+        {
+          "C": -8977669,
+          "c": "-8977669/608400",
+          "numerators": [
+            -3323,
+            2647,
+            -2527
+          ],
+          "period": 3
+        },
+        {
+          "C": -6935629,
+          "c": "-6935629/608400",
+          "numerators": [
+            -3037,
+            2933,
+            2137
+          ],
+          "period": 3
+        },
+        {
+          "C": -3263989,
+          "c": "-3263989/608400",
+          "numerators": [
+            -2107,
+            1507,
+            -1273
+          ],
+          "period": 3
+        },
+        {
+          "C": -2259349,
+          "c": "-2259349/608400",
+          "numerators": [
+            -1897,
+            1717,
+            883
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 792,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 42,
+      "escape_rejections": 16,
+      "cycles": []
+    },
+    {
+      "b": 804,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          67,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 47,
+      "escape_rejections": 16,
+      "cycles": []
+    },
+    {
+      "b": 812,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          29,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 41,
+      "escape_rejections": 13,
+      "cycles": []
+    },
+    {
+      "b": 816,
+      "prime_factorization": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 18,
+      "escape_rejections": 5,
+      "cycles": []
+    },
+    {
+      "b": 820,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          41,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 39,
+      "escape_rejections": 15,
+      "cycles": []
+    },
+    {
+      "b": 828,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          23,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 37,
+      "escape_rejections": 7,
+      "cycles": []
+    },
+    {
+      "b": 836,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          19,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 32,
+      "escape_rejections": 7,
+      "cycles": []
+    },
+    {
+      "b": 840,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "omega": 4,
+      "period_bound": 18,
+      "local_pair_count": 35,
+      "unsigned_pair_count": 1500625,
+      "signed_seed_count": 6002500,
+      "primitive_triangle_candidates": 446,
+      "escape_rejections": 166,
+      "cycles": [
+        {
+          "C": -78305641,
+          "c": "-78305641/705600",
+          "numerators": [
+            -9241,
+            8441,
+            -8399
+          ],
+          "period": 3
+        },
+        {
+          "C": -71107681,
+          "c": "-71107681/705600",
+          "numerators": [
+            -8861,
+            8821,
+            7979
+          ],
+          "period": 3
+        },
+        {
+          "C": -1518889,
+          "c": "-1518889/705600",
+          "numerators": [
+            -1553,
+            1063,
+            -463
+          ],
+          "period": 3
+        },
+        {
+          "C": -1247569,
+          "c": "-1247569/705600",
+          "numerators": [
+            -1483,
+            1133,
+            43
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 852,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          71,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 37,
+      "escape_rejections": 12,
+      "cycles": []
+    },
+    {
+      "b": 860,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          43,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 38,
+      "escape_rejections": 9,
+      "cycles": []
+    },
+    {
+      "b": 868,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          31,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 37,
+      "escape_rejections": 13,
+      "cycles": []
+    },
+    {
+      "b": 876,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          73,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 46,
+      "escape_rejections": 19,
+      "cycles": []
+    },
+    {
+      "b": 880,
+      "prime_factorization": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 25,
+      "escape_rejections": 9,
+      "cycles": []
+    },
+    {
+      "b": 884,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 38,
+      "escape_rejections": 9,
+      "cycles": []
+    },
+    {
+      "b": 888,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          37,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 47,
+      "escape_rejections": 13,
+      "cycles": []
+    },
+    {
+      "b": 900,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 33,
+      "escape_rejections": 7,
+      "cycles": []
+    },
+    {
+      "b": 912,
+      "prime_factorization": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          19,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 29,
+      "escape_rejections": 8,
+      "cycles": []
+    },
+    {
+      "b": 920,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          23,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 23,
+      "escape_rejections": 7,
+      "cycles": []
+    },
+    {
+      "b": 924,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "omega": 4,
+      "period_bound": 18,
+      "local_pair_count": 35,
+      "unsigned_pair_count": 1500625,
+      "signed_seed_count": 6002500,
+      "primitive_triangle_candidates": 551,
+      "escape_rejections": 162,
+      "cycles": [
+        {
+          "C": -103928749,
+          "c": "-103928749/853776",
+          "numerators": [
+            -10627,
+            9745,
+            -9701
+          ],
+          "period": 3
+        },
+        {
+          "C": -94790389,
+          "c": "-94790389/853776",
+          "numerators": [
+            -10207,
+            10165,
+            9239
+          ],
+          "period": 3
+        },
+        {
+          "C": -5222869,
+          "c": "-5222869/853776",
+          "numerators": [
+            -2645,
+            1919,
+            -1667
+          ],
+          "period": 3
+        },
+        {
+          "C": -3652069,
+          "c": "-3652069/853776",
+          "numerators": [
+            -2381,
+            2183,
+            1205
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 936,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 29,
+      "escape_rejections": 9,
+      "cycles": [
+        {
+          "C": -2899729,
+          "c": "-2899729/876096",
+          "numerators": [
+            -2053,
+            1405,
+            -989
+          ],
+          "period": 3
+        },
+        {
+          "C": -2024569,
+          "c": "-2024569/876096",
+          "numerators": [
+            -1873,
+            1585,
+            521
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 940,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          47,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 34,
+      "escape_rejections": 12,
+      "cycles": []
+    },
+    {
+      "b": 948,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          79,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 52,
+      "escape_rejections": 20,
+      "cycles": []
+    },
+    {
+      "b": 952,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 20,
+      "escape_rejections": 8,
+      "cycles": []
+    },
+    {
+      "b": 960,
+      "prime_factorization": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 21,
+      "escape_rejections": 7,
+      "cycles": []
+    },
+    {
+      "b": 980,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 35,
+      "escape_rejections": 15,
+      "cycles": []
+    },
+    {
+      "b": 984,
+      "prime_factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          41,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 20,
+      "escape_rejections": 7,
+      "cycles": []
+    },
+    {
+      "b": 988,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          19,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 42,
+      "escape_rejections": 9,
+      "cycles": []
+    },
+    {
+      "b": 996,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          83,
+          1
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 48,
+      "escape_rejections": 17,
+      "cycles": []
+    }
+  ],
+  "comparison": "PASS: all denominators and exact oriented cycles match"
+}

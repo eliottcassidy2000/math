@@ -1,0 +1,30 @@
+{
+  "method": "Universal two-edge enumeration with certified factorization and real escape guard",
+  "results": [
+    {
+      "b": 1330102692031860351562500,
+      "prime_factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          20
+        ],
+        [
+          5,
+          20
+        ]
+      ],
+      "omega": 3,
+      "period_bound": 10,
+      "local_pair_count": 19,
+      "unsigned_pair_count": 6859,
+      "signed_seed_count": 27436,
+      "primitive_triangle_candidates": 16,
+      "escape_rejections": 6,
+      "cycles": []
+    }
+  ]
+}

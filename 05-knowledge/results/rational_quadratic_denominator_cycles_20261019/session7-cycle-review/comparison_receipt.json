@@ -1,0 +1,70 @@
+{
+  "b400_unrestricted_smooth_pairs": {
+    "denominator_count": 28,
+    "cycle_count": 28,
+    "periods": [
+      3
+    ],
+    "independent_triangle_count": 2678
+  },
+  "b400_normal_vs_optimized": {
+    "denominator_count": 28,
+    "cycle_count": 28,
+    "periods": [
+      3
+    ],
+    "independent_triangle_count": 2678
+  },
+  "b1000_primitive_word_projected_pairs": {
+    "denominator_count": 101,
+    "cycle_count": 62,
+    "periods": [
+      3
+    ],
+    "independent_triangle_count": 8906
+  },
+  "b1000_normal_vs_optimized": {
+    "denominator_count": 101,
+    "cycle_count": 62,
+    "periods": [
+      3
+    ],
+    "independent_triangle_count": 8906
+  },
+  "b1000_universal_pairs": {
+    "denominator_count": 101,
+    "cycle_count": 62,
+    "periods": [
+      3
+    ],
+    "independent_triangle_count": 8907
+  },
+  "b1000_author_new_pair_implementation_replay": {
+    "denominator_count": 101,
+    "cycle_count": 62,
+    "periods": [
+      3
+    ],
+    "independent_triangle_count": 8907
+  },
+  "large_exponent_control": {
+    "b": 1330102692031860351562500,
+    "signed_seed_count": 27436,
+    "primitive_triangle_candidates": 16,
+    "escape_rejections": 6,
+    "cycles": [],
+    "normal_optimized_byte_equal": true,
+    "independent_without_escape_guard_match": true
+  },
+  "critical_cycle_control_status": "PASS",
+  "status": "PASS",
+  "reviewed_sources_sha256": {
+    "rational_cycle_signature_probe.py": "6d92462b2ff7ce7a5d24750785131dc93f5dc529f532e60ddbc2320f3bb911f5",
+    "denominator_signature_theorem.md": "a9ba51d9487c2c31bdc0fabe58b6eb9175938fefcbd22884ce5f14b59265aadf",
+    "denominators_through_400.json": "f99ba13f74eaa47f4102482effa9200e76ff7eb45a6951f7938067111edd1660",
+    "denominators_through_1000.json": "e525afd6da5a18d126c4d4daad290cc534d6d768f7b7ed7d378539832fdc0cac",
+    "finite_lift_obstruction.py": "0998ba37837d42376b9eecfa76c843d33c6d840926ef8ec7cfaefb958b2d23a0",
+    "rational_cycle_pair_probe.py": "84b0d20b1f18e83e3521c5b28bcb6c421f9f46fe05e8d867d963489ae2022f28",
+    "critical_cycle_controls.py": "28b097fe4c25afc616d92aa66f6ce1d01dfff6aa425cf2739bd49317873a29c1"
+  }
+}

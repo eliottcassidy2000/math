@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "p": 3,
+      "lambda_value": 2,
+      "resonance_order": 2,
+      "checks": 1575
+    },
+    {
+      "p": 5,
+      "lambda_value": 2,
+      "resonance_order": 4,
+      "checks": 1575
+    },
+    {
+      "p": 7,
+      "lambda_value": 2,
+      "resonance_order": 3,
+      "checks": 1575
+    },
+    {
+      "p": 11,
+      "lambda_value": 2,
+      "resonance_order": 10,
+      "checks": 1575
+    },
+    {
+      "p": 13,
+      "lambda_value": 2,
+      "resonance_order": 12,
+      "checks": 1575
+    }
+  ],
+  "total_checks": 7875,
+  "boundary_hostile": "p=3, g(t)=4t-t^2, alpha=0, lambda=4; t=3 is another fixed point, so the lambda-1-unit hypothesis cannot simply be removed."
+}

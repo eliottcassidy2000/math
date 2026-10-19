@@ -1,0 +1,175 @@
+{
+  "method": "exact signature reconstruction with no parameter-numerator cutoff",
+  "results": [
+    {
+      "b": 4,
+      "omega": 1,
+      "period_bound": 4,
+      "signature_count": 10,
+      "unsigned_triangle_count": 10,
+      "primitive_triangle_candidates": 8,
+      "cycles": [
+        {
+          "C": -29,
+          "c": "-29/16",
+          "numerators": [
+            -7,
+            5,
+            -1
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 12,
+      "omega": 2,
+      "period_bound": 6,
+      "signature_count": 18,
+      "unsigned_triangle_count": 324,
+      "primitive_triangle_candidates": 55,
+      "cycles": [
+        {
+          "C": -421,
+          "c": "-421/144",
+          "numerators": [
+            -25,
+            17,
+            -11
+          ],
+          "period": 3
+        },
+        {
+          "C": -301,
+          "c": "-301/144",
+          "numerators": [
+            -23,
+            19,
+            5
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 24,
+      "omega": 2,
+      "period_bound": 6,
+      "signature_count": 18,
+      "unsigned_triangle_count": 324,
+      "primitive_triangle_candidates": 24,
+      "cycles": [
+        {
+          "C": -2689,
+          "c": "-2689/576",
+          "numerators": [
+            -61,
+            43,
+            -35
+          ],
+          "period": 3
+        },
+        {
+          "C": -1849,
+          "c": "-1849/576",
+          "numerators": [
+            -55,
+            49,
+            23
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 60,
+      "omega": 3,
+      "period_bound": 10,
+      "signature_count": 34,
+      "unsigned_triangle_count": 39304,
+      "primitive_triangle_candidates": 214,
+      "cycles": [
+        {
+          "C": -34861,
+          "c": "-34861/3600",
+          "numerators": [
+            -211,
+            161,
+            -149
+          ],
+          "period": 3
+        },
+        {
+          "C": -25621,
+          "c": "-25621/3600",
+          "numerators": [
+            -191,
+            181,
+            119
+          ],
+          "period": 3
+        },
+        {
+          "C": -8149,
+          "c": "-8149/3600",
+          "numerators": [
+            -113,
+            77,
+            -37
+          ],
+          "period": 3
+        },
+        {
+          "C": -6469,
+          "c": "-6469/3600",
+          "numerators": [
+            -107,
+            83,
+            7
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 84,
+      "omega": 3,
+      "period_bound": 10,
+      "signature_count": 34,
+      "unsigned_triangle_count": 39304,
+      "primitive_triangle_candidates": 148,
+      "cycles": [
+        {
+          "C": -91309,
+          "c": "-91309/7056",
+          "numerators": [
+            -337,
+            265,
+            -251
+          ],
+          "period": 3
+        },
+        {
+          "C": -69469,
+          "c": "-69469/7056",
+          "numerators": [
+            -307,
+            295,
+            209
+          ],
+          "period": 3
+        }
+      ]
+    },
+    {
+      "b": 120,
+      "omega": 3,
+      "period_bound": 10,
+      "signature_count": 34,
+      "unsigned_triangle_count": 39304,
+      "primitive_triangle_candidates": 60,
+      "cycles": []
+    }
+  ],
+  "max_period_found": 3
+}

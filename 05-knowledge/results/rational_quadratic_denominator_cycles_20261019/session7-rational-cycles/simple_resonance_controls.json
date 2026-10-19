@@ -1,0 +1,35 @@
+[
+  {
+    "p": 3,
+    "r": 2,
+    "map": "t^2+2t",
+    "fixed_point": 0,
+    "multiplier": 2,
+    "noncentral_mod_p2_points": 2,
+    "lifts_mod_p3_without_period_dividing_r": 6,
+    "lambda_minus_one_hypothesis_hostile": "(1+p)t+t^2 has the second fixed point -p",
+    "status": "PASS"
+  },
+  {
+    "p": 7,
+    "r": 3,
+    "map": "t^2+2t",
+    "fixed_point": 0,
+    "multiplier": 2,
+    "noncentral_mod_p2_points": 6,
+    "lifts_mod_p3_without_period_dividing_r": 42,
+    "lambda_minus_one_hypothesis_hostile": "(1+p)t+t^2 has the second fixed point -p",
+    "status": "PASS"
+  },
+  {
+    "p": 31,
+    "r": 5,
+    "map": "t^2+2t",
+    "fixed_point": 0,
+    "multiplier": 2,
+    "noncentral_mod_p2_points": 30,
+    "lifts_mod_p3_without_period_dividing_r": 930,
+    "lambda_minus_one_hypothesis_hostile": "(1+p)t+t^2 has the second fixed point -p",
+    "status": "PASS"
+  }
+]

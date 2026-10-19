@@ -1,0 +1,578 @@
+{
+  "method": "Independent full bounded-exponent smooth-pair enumeration without triple signature table",
+  "results": [
+    {
+      "b": 60,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 308,
+      "cycles": [
+        {
+          "C": -34861,
+          "c": "-34861/3600",
+          "numerators": [
+            -211,
+            161,
+            -149
+          ],
+          "period": 3
+        },
+        {
+          "C": -25621,
+          "c": "-25621/3600",
+          "numerators": [
+            -191,
+            181,
+            119
+          ],
+          "period": 3
+        },
+        {
+          "C": -8149,
+          "c": "-8149/3600",
+          "numerators": [
+            -113,
+            77,
+            -37
+          ],
+          "period": 3
+        },
+        {
+          "C": -6469,
+          "c": "-6469/3600",
+          "numerators": [
+            -107,
+            83,
+            7
+          ],
+          "period": 3
+        }
+      ],
+      "elapsed_seconds": 0.2495
+    },
+    {
+      "b": 84,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 233,
+      "cycles": [
+        {
+          "C": -91309,
+          "c": "-91309/7056",
+          "numerators": [
+            -337,
+            265,
+            -251
+          ],
+          "period": 3
+        },
+        {
+          "C": -69469,
+          "c": "-69469/7056",
+          "numerators": [
+            -307,
+            295,
+            209
+          ],
+          "period": 3
+        }
+      ],
+      "elapsed_seconds": 0.2515
+    },
+    {
+      "b": 120,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 92,
+      "cycles": [],
+      "elapsed_seconds": 0.2483
+    },
+    {
+      "b": 132,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 157,
+      "cycles": [],
+      "elapsed_seconds": 0.2494
+    },
+    {
+      "b": 140,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 128,
+      "cycles": [
+        {
+          "C": -73109,
+          "c": "-73109/19600",
+          "numerators": [
+            -323,
+            223,
+            -167
+          ],
+          "period": 3
+        },
+        {
+          "C": -50429,
+          "c": "-50429/19600",
+          "numerators": [
+            -293,
+            253,
+            97
+          ],
+          "period": 3
+        }
+      ],
+      "elapsed_seconds": 0.2393
+    },
+    {
+      "b": 156,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 125,
+      "cycles": [],
+      "elapsed_seconds": 0.3361
+    },
+    {
+      "b": 168,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 95,
+      "cycles": [
+        {
+          "C": -58801,
+          "c": "-58801/28224",
+          "numerators": [
+            -307,
+            211,
+            -85
+          ],
+          "period": 3
+        },
+        {
+          "C": -49561,
+          "c": "-49561/28224",
+          "numerators": [
+            -295,
+            223,
+            1
+          ],
+          "period": 3
+        }
+      ],
+      "elapsed_seconds": 0.2628
+    },
+    {
+      "b": 180,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 98,
+      "cycles": [
+        {
+          "C": -832861,
+          "c": "-832861/32400",
+          "numerators": [
+            -991,
+            829,
+            -809
+          ],
+          "period": 3
+        },
+        {
+          "C": -682381,
+          "c": "-682381/32400",
+          "numerators": [
+            -919,
+            901,
+            719
+          ],
+          "period": 3
+        }
+      ],
+      "elapsed_seconds": 0.2852
+    },
+    {
+      "b": 204,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 96,
+      "cycles": [],
+      "elapsed_seconds": 0.2949
+    },
+    {
+      "b": 220,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 93,
+      "cycles": [
+        {
+          "C": -1498421,
+          "c": "-1498421/48400",
+          "numerators": [
+            -1321,
+            1121,
+            -1099
+          ],
+          "period": 3
+        },
+        {
+          "C": -1248941,
+          "c": "-1248941/48400",
+          "numerators": [
+            -1231,
+            1211,
+            989
+          ],
+          "period": 3
+        }
+      ],
+      "elapsed_seconds": 0.2492
+    },
+    {
+      "b": 228,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 100,
+      "cycles": [],
+      "elapsed_seconds": 0.2556
+    },
+    {
+      "b": 240,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 64,
+      "cycles": [
+        {
+          "C": -142009,
+          "c": "-142009/57600",
+          "numerators": [
+            -467,
+            317,
+            -173
+          ],
+          "period": 3
+        },
+        {
+          "C": -107689,
+          "c": "-107689/57600",
+          "numerators": [
+            -437,
+            347,
+            53
+          ],
+          "period": 3
+        }
+      ],
+      "elapsed_seconds": 0.253
+    },
+    {
+      "b": 252,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 78,
+      "cycles": [
+        {
+          "C": -364141,
+          "c": "-364141/63504",
+          "numerators": [
+            -701,
+            505,
+            -433
+          ],
+          "period": 3
+        },
+        {
+          "C": -253261,
+          "c": "-253261/63504",
+          "numerators": [
+            -631,
+            575,
+            307
+          ],
+          "period": 3
+        }
+      ],
+      "elapsed_seconds": 0.28
+    },
+    {
+      "b": 260,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 87,
+      "cycles": [],
+      "elapsed_seconds": 0.2609
+    },
+    {
+      "b": 264,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 66,
+      "cycles": [
+        {
+          "C": -2558689,
+          "c": "-2558689/69696",
+          "numerators": [
+            -1717,
+            1475,
+            -1451
+          ],
+          "period": 3
+        },
+        {
+          "C": -2164009,
+          "c": "-2164009/69696",
+          "numerators": [
+            -1607,
+            1585,
+            1319
+          ],
+          "period": 3
+        }
+      ],
+      "elapsed_seconds": 0.2536
+    },
+    {
+      "b": 276,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 82,
+      "cycles": [],
+      "elapsed_seconds": 0.2766
+    },
+    {
+      "b": 280,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 47,
+      "cycles": [],
+      "elapsed_seconds": 0.261
+    },
+    {
+      "b": 300,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 74,
+      "cycles": [],
+      "elapsed_seconds": 0.2993
+    },
+    {
+      "b": 308,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 67,
+      "cycles": [],
+      "elapsed_seconds": 0.3398
+    },
+    {
+      "b": 312,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 98,
+      "cycles": [
+        {
+          "C": -4182361,
+          "c": "-4182361/97344",
+          "numerators": [
+            -2185,
+            1897,
+            -1871
+          ],
+          "period": 3
+        },
+        {
+          "C": -3581761,
+          "c": "-3581761/97344",
+          "numerators": [
+            -2053,
+            2029,
+            1715
+          ],
+          "period": 3
+        }
+      ],
+      "elapsed_seconds": 0.2536
+    },
+    {
+      "b": 336,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 32,
+      "cycles": [],
+      "elapsed_seconds": 0.2547
+    },
+    {
+      "b": 340,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 57,
+      "cycles": [],
+      "elapsed_seconds": 0.2617
+    },
+    {
+      "b": 348,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 93,
+      "cycles": [],
+      "elapsed_seconds": 0.3141
+    },
+    {
+      "b": 360,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 66,
+      "cycles": [
+        {
+          "C": -259561,
+          "c": "-259561/129600",
+          "numerators": [
+            -649,
+            449,
+            -161
+          ],
+          "period": 3
+        },
+        {
+          "C": -226801,
+          "c": "-226801/129600",
+          "numerators": [
+            -629,
+            469,
+            -19
+          ],
+          "period": 3
+        }
+      ],
+      "elapsed_seconds": 0.2756
+    },
+    {
+      "b": 364,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 68,
+      "cycles": [
+        {
+          "C": -6587309,
+          "c": "-6587309/132496",
+          "numerators": [
+            -2731,
+            2393,
+            -2365
+          ],
+          "period": 3
+        },
+        {
+          "C": -5702789,
+          "c": "-5702789/132496",
+          "numerators": [
+            -2575,
+            2549,
+            2183
+          ],
+          "period": 3
+        }
+      ],
+      "elapsed_seconds": 0.2773
+    },
+    {
+      "b": 372,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 69,
+      "cycles": [],
+      "elapsed_seconds": 0.3098
+    },
+    {
+      "b": 380,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 60,
+      "cycles": [],
+      "elapsed_seconds": 0.283
+    },
+    {
+      "b": 396,
+      "N": 10,
+      "magnitude_count": 1000,
+      "pair_count": 1000000,
+      "divisible_pairs": 262144,
+      "primitive_triangle_candidates": 45,
+      "cycles": [
+        {
+          "C": -1292509,
+          "c": "-1292509/156816",
+          "numerators": [
+            -1295,
+            971,
+            -883
+          ],
+          "period": 3
+        },
+        {
+          "C": -932149,
+          "c": "-932149/156816",
+          "numerators": [
+            -1169,
+            1097,
+            685
+          ],
+          "period": 3
+        }
+      ],
+      "elapsed_seconds": 0.2633
+    }
+  ]
+}

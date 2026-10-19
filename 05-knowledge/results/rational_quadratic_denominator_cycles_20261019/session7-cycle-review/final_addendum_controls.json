@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "large_exponent_independent_search_without_escape_guard": {
+    "b": 1330102692031860351562500,
+    "N": 10,
+    "local_pair_count": 19,
+    "unsigned_pair_count": 6859,
+    "primitive_triangle_candidates": 16,
+    "cycles": [],
+    "elapsed_seconds": 0.0129
+  },
+  "critical_cycle_complete_finite_graph_controls": [
+    {
+      "p": 3,
+      "c_mod_p": 2,
+      "only_exact_period": 2,
+      "levels": [
+        {
+          "depth": 1,
+          "modulus": 3,
+          "parameter_residue_classes": 1
+        },
+        {
+          "depth": 2,
+          "modulus": 9,
+          "parameter_residue_classes": 3
+        },
+        {
+          "depth": 3,
+          "modulus": 27,
+          "parameter_residue_classes": 9
+        },
+        {
+          "depth": 4,
+          "modulus": 81,
+          "parameter_residue_classes": 27
+        }
+      ]
+    },
+    {
+      "p": 5,
+      "c_mod_p": 1,
+      "only_exact_period": 3,
+      "levels": [
+        {
+          "depth": 1,
+          "modulus": 5,
+          "parameter_residue_classes": 1
+        },
+        {
+          "depth": 2,
+          "modulus": 25,
+          "parameter_residue_classes": 5
+        },
+        {
+          "depth": 3,
+          "modulus": 125,
+          "parameter_residue_classes": 25
+        },
+        {
+          "depth": 4,
+          "modulus": 625,
+          "parameter_residue_classes": 125
+        }
+      ]
+    }
+  ]
+}

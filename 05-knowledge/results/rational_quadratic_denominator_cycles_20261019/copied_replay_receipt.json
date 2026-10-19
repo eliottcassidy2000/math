@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "date": "2026-10-19",
+  "scope": "Copied artifacts outside checkout; exact output comparison for all listed controls and complete 101-denominator two-edge search",
+  "tests": {
+    "comparison_receipt": {
+      "status": "PASS",
+      "command": [
+        "python3",
+        "session7-cycle-review/compare_receipts.py"
+      ]
+    },
+    "critical_cycle_controls": {
+      "status": "PASS",
+      "command": [
+        "python3",
+        "session7-rational-cycles/critical_cycle_controls.py"
+      ]
+    },
+    "simple_resonance_controls": {
+      "status": "PASS",
+      "command": [
+        "python3",
+        "session7-rational-cycles/simple_resonance_controls.py"
+      ]
+    },
+    "general_resonance_controls": {
+      "status": "PASS",
+      "command": [
+        "python3",
+        "session7-cycle-review/check_general_resonance.py"
+      ]
+    },
+    "full_mod43_graph_controls": {
+      "status": "PASS",
+      "command": [
+        "python3",
+        "session7-cycle-review/check_43_lift.py"
+      ]
+    },
+    "all_101_pair_solver": {
+      "status": "PASS",
+      "command": [
+        "python3",
+        "session7-rational-cycles/rational_cycle_pair_probe.py",
+        "--max-b",
+        "1000",
+        "--compare",
+        "session7-rational-cycles/denominators_through_1000.json",
+        "--output",
+        "/tmp/rational-copied-replay-70m9hej8/pairs.json"
+      ]
+    },
+    "large_exponent_control": {
+      "status": "PASS",
+      "command": [
+        "python3",
+        "session7-rational-cycles/rational_cycle_pair_probe.py",
+        "--factorization",
+        "2:2",
+        "3:20",
+        "5:20",
+        "--output",
+        "/tmp/rational-copied-replay-70m9hej8/large.json"
+      ]
+    }
+  },
+  "reviewed_note_sha256": "a9ba51d9487c2c31bdc0fabe58b6eb9175938fefcbd22884ce5f14b59265aadf",
+  "final_frozen_review_receipt_exact_match": true,
+  "independent_manifest_hashes_verified": true
+}

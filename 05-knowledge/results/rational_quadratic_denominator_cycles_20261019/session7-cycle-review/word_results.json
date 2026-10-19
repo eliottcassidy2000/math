@@ -1,0 +1,391 @@
+[
+  {
+    "n": 3,
+    "primitive_words_up_to_complement": 3,
+    "actual_signature_count": 3,
+    "superset_size": 6,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "n": 4,
+    "primitive_words_up_to_complement": 6,
+    "actual_signature_count": 6,
+    "superset_size": 10,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        3,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ]
+    ]
+  },
+  {
+    "n": 5,
+    "primitive_words_up_to_complement": 15,
+    "actual_signature_count": 11,
+    "superset_size": 14,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        3,
+        1
+      ],
+      [
+        1,
+        0,
+        3
+      ]
+    ]
+  },
+  {
+    "n": 6,
+    "primitive_words_up_to_complement": 27,
+    "actual_signature_count": 15,
+    "superset_size": 18,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        1,
+        5
+      ],
+      [
+        0,
+        5,
+        1
+      ],
+      [
+        1,
+        0,
+        4
+      ]
+    ]
+  },
+  {
+    "n": 7,
+    "primitive_words_up_to_complement": 63,
+    "actual_signature_count": 19,
+    "superset_size": 22,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        1,
+        6
+      ],
+      [
+        0,
+        5,
+        1
+      ],
+      [
+        1,
+        0,
+        5
+      ]
+    ]
+  },
+  {
+    "n": 8,
+    "primitive_words_up_to_complement": 120,
+    "actual_signature_count": 23,
+    "superset_size": 26,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        1,
+        7
+      ],
+      [
+        0,
+        7,
+        1
+      ],
+      [
+        1,
+        0,
+        6
+      ]
+    ]
+  },
+  {
+    "n": 9,
+    "primitive_words_up_to_complement": 252,
+    "actual_signature_count": 27,
+    "superset_size": 30,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        1,
+        8
+      ],
+      [
+        0,
+        7,
+        1
+      ],
+      [
+        1,
+        0,
+        7
+      ]
+    ]
+  },
+  {
+    "n": 10,
+    "primitive_words_up_to_complement": 495,
+    "actual_signature_count": 31,
+    "superset_size": 34,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        1,
+        9
+      ],
+      [
+        0,
+        9,
+        1
+      ],
+      [
+        1,
+        0,
+        8
+      ]
+    ]
+  },
+  {
+    "n": 11,
+    "primitive_words_up_to_complement": 1023,
+    "actual_signature_count": 35,
+    "superset_size": 38,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        1,
+        10
+      ],
+      [
+        0,
+        9,
+        1
+      ],
+      [
+        1,
+        0,
+        9
+      ]
+    ]
+  },
+  {
+    "n": 12,
+    "primitive_words_up_to_complement": 2010,
+    "actual_signature_count": 39,
+    "superset_size": 42,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        1,
+        11
+      ],
+      [
+        0,
+        11,
+        1
+      ],
+      [
+        1,
+        0,
+        10
+      ]
+    ]
+  },
+  {
+    "n": 13,
+    "primitive_words_up_to_complement": 4095,
+    "actual_signature_count": 43,
+    "superset_size": 46,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        1,
+        12
+      ],
+      [
+        0,
+        11,
+        1
+      ],
+      [
+        1,
+        0,
+        11
+      ]
+    ]
+  },
+  {
+    "n": 14,
+    "primitive_words_up_to_complement": 8127,
+    "actual_signature_count": 47,
+    "superset_size": 50,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        1,
+        13
+      ],
+      [
+        0,
+        13,
+        1
+      ],
+      [
+        1,
+        0,
+        12
+      ]
+    ]
+  },
+  {
+    "n": 15,
+    "primitive_words_up_to_complement": 16365,
+    "actual_signature_count": 51,
+    "superset_size": 54,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        1,
+        14
+      ],
+      [
+        0,
+        13,
+        1
+      ],
+      [
+        1,
+        0,
+        13
+      ]
+    ]
+  },
+  {
+    "n": 16,
+    "primitive_words_up_to_complement": 32640,
+    "actual_signature_count": 55,
+    "superset_size": 58,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        1,
+        15
+      ],
+      [
+        0,
+        15,
+        1
+      ],
+      [
+        1,
+        0,
+        14
+      ]
+    ]
+  },
+  {
+    "n": 17,
+    "primitive_words_up_to_complement": 65535,
+    "actual_signature_count": 59,
+    "superset_size": 62,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        1,
+        16
+      ],
+      [
+        0,
+        15,
+        1
+      ],
+      [
+        1,
+        0,
+        15
+      ]
+    ]
+  },
+  {
+    "n": 18,
+    "primitive_words_up_to_complement": 130788,
+    "actual_signature_count": 63,
+    "superset_size": 66,
+    "missed": [],
+    "extra": [
+      [
+        0,
+        1,
+        17
+      ],
+      [
+        0,
+        17,
+        1
+      ],
+      [
+        1,
+        0,
+        16
+      ]
+    ]
+  }
+]

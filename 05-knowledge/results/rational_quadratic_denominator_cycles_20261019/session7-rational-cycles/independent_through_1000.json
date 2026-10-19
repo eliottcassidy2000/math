@@ -1,0 +1,805 @@
+{
+  "status": "PASS",
+  "word_tables": {
+    "10": {
+      "3": {
+        "words_up_to_complement": 3,
+        "triangle_signatures": 3
+      },
+      "4": {
+        "words_up_to_complement": 6,
+        "triangle_signatures": 6
+      },
+      "5": {
+        "words_up_to_complement": 15,
+        "triangle_signatures": 11
+      },
+      "6": {
+        "words_up_to_complement": 27,
+        "triangle_signatures": 15
+      },
+      "7": {
+        "words_up_to_complement": 63,
+        "triangle_signatures": 19
+      },
+      "8": {
+        "words_up_to_complement": 120,
+        "triangle_signatures": 23
+      },
+      "9": {
+        "words_up_to_complement": 252,
+        "triangle_signatures": 27
+      },
+      "10": {
+        "words_up_to_complement": 495,
+        "triangle_signatures": 31
+      }
+    },
+    "18": {
+      "3": {
+        "words_up_to_complement": 3,
+        "triangle_signatures": 3
+      },
+      "4": {
+        "words_up_to_complement": 6,
+        "triangle_signatures": 6
+      },
+      "5": {
+        "words_up_to_complement": 15,
+        "triangle_signatures": 11
+      },
+      "6": {
+        "words_up_to_complement": 27,
+        "triangle_signatures": 15
+      },
+      "7": {
+        "words_up_to_complement": 63,
+        "triangle_signatures": 19
+      },
+      "8": {
+        "words_up_to_complement": 120,
+        "triangle_signatures": 23
+      },
+      "9": {
+        "words_up_to_complement": 252,
+        "triangle_signatures": 27
+      },
+      "10": {
+        "words_up_to_complement": 495,
+        "triangle_signatures": 31
+      },
+      "11": {
+        "words_up_to_complement": 1023,
+        "triangle_signatures": 35
+      },
+      "12": {
+        "words_up_to_complement": 2010,
+        "triangle_signatures": 39
+      },
+      "13": {
+        "words_up_to_complement": 4095,
+        "triangle_signatures": 43
+      },
+      "14": {
+        "words_up_to_complement": 8127,
+        "triangle_signatures": 47
+      },
+      "15": {
+        "words_up_to_complement": 16365,
+        "triangle_signatures": 51
+      },
+      "16": {
+        "words_up_to_complement": 32640,
+        "triangle_signatures": 55
+      },
+      "17": {
+        "words_up_to_complement": 65535,
+        "triangle_signatures": 59
+      },
+      "18": {
+        "words_up_to_complement": 130788,
+        "triangle_signatures": 63
+      }
+    }
+  },
+  "cyclic_valuation_identity_checks": 48156,
+  "audits": [
+    {
+      "b": 60,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 213,
+      "cycles": 4
+    },
+    {
+      "b": 84,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 148,
+      "cycles": 2
+    },
+    {
+      "b": 120,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 60,
+      "cycles": 0
+    },
+    {
+      "b": 132,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 85,
+      "cycles": 0
+    },
+    {
+      "b": 140,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 71,
+      "cycles": 2
+    },
+    {
+      "b": 156,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 58,
+      "cycles": 0
+    },
+    {
+      "b": 168,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 71,
+      "cycles": 2
+    },
+    {
+      "b": 180,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 71,
+      "cycles": 2
+    },
+    {
+      "b": 204,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 44,
+      "cycles": 0
+    },
+    {
+      "b": 220,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 47,
+      "cycles": 2
+    },
+    {
+      "b": 228,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 44,
+      "cycles": 0
+    },
+    {
+      "b": 240,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 52,
+      "cycles": 2
+    },
+    {
+      "b": 252,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 55,
+      "cycles": 2
+    },
+    {
+      "b": 260,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 47,
+      "cycles": 0
+    },
+    {
+      "b": 264,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 54,
+      "cycles": 2
+    },
+    {
+      "b": 276,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 44,
+      "cycles": 0
+    },
+    {
+      "b": 280,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 28,
+      "cycles": 0
+    },
+    {
+      "b": 300,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 46,
+      "cycles": 0
+    },
+    {
+      "b": 308,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 25,
+      "cycles": 0
+    },
+    {
+      "b": 312,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 80,
+      "cycles": 2
+    },
+    {
+      "b": 336,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 25,
+      "cycles": 0
+    },
+    {
+      "b": 340,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 32,
+      "cycles": 0
+    },
+    {
+      "b": 348,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 51,
+      "cycles": 0
+    },
+    {
+      "b": 360,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 58,
+      "cycles": 2
+    },
+    {
+      "b": 364,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 46,
+      "cycles": 2
+    },
+    {
+      "b": 372,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 32,
+      "cycles": 0
+    },
+    {
+      "b": 380,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 29,
+      "cycles": 0
+    },
+    {
+      "b": 396,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 32,
+      "cycles": 2
+    },
+    {
+      "b": 408,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 29,
+      "cycles": 0
+    },
+    {
+      "b": 420,
+      "parameterization_match": true,
+      "independent_search": "NOT RUN"
+    },
+    {
+      "b": 440,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 37,
+      "cycles": 0
+    },
+    {
+      "b": 444,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 29,
+      "cycles": 0
+    },
+    {
+      "b": 456,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 35,
+      "cycles": 0
+    },
+    {
+      "b": 460,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 31,
+      "cycles": 0
+    },
+    {
+      "b": 468,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 26,
+      "cycles": 0
+    },
+    {
+      "b": 476,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 26,
+      "cycles": 0
+    },
+    {
+      "b": 480,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 41,
+      "cycles": 2
+    },
+    {
+      "b": 492,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 38,
+      "cycles": 0
+    },
+    {
+      "b": 504,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 25,
+      "cycles": 0
+    },
+    {
+      "b": 516,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 33,
+      "cycles": 0
+    },
+    {
+      "b": 520,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 22,
+      "cycles": 0
+    },
+    {
+      "b": 528,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 33,
+      "cycles": 2
+    },
+    {
+      "b": 532,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 31,
+      "cycles": 0
+    },
+    {
+      "b": 540,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 29,
+      "cycles": 0
+    },
+    {
+      "b": 552,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 29,
+      "cycles": 0
+    },
+    {
+      "b": 560,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 19,
+      "cycles": 0
+    },
+    {
+      "b": 564,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 27,
+      "cycles": 0
+    },
+    {
+      "b": 572,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 34,
+      "cycles": 2
+    },
+    {
+      "b": 580,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 25,
+      "cycles": 0
+    },
+    {
+      "b": 588,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 32,
+      "cycles": 0
+    },
+    {
+      "b": 600,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 30,
+      "cycles": 0
+    },
+    {
+      "b": 612,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 56,
+      "cycles": 2
+    },
+    {
+      "b": 616,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 28,
+      "cycles": 2
+    },
+    {
+      "b": 620,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 19,
+      "cycles": 0
+    },
+    {
+      "b": 624,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 17,
+      "cycles": 0
+    },
+    {
+      "b": 636,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 29,
+      "cycles": 0
+    },
+    {
+      "b": 644,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 28,
+      "cycles": 0
+    },
+    {
+      "b": 660,
+      "parameterization_match": true,
+      "independent_search": "NOT RUN"
+    },
+    {
+      "b": 672,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 27,
+      "cycles": 0
+    },
+    {
+      "b": 680,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 25,
+      "cycles": 0
+    },
+    {
+      "b": 684,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 38,
+      "cycles": 2
+    },
+    {
+      "b": 696,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 17,
+      "cycles": 0
+    },
+    {
+      "b": 700,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 28,
+      "cycles": 0
+    },
+    {
+      "b": 708,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 18,
+      "cycles": 0
+    },
+    {
+      "b": 720,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 20,
+      "cycles": 0
+    },
+    {
+      "b": 728,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 20,
+      "cycles": 0
+    },
+    {
+      "b": 732,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 28,
+      "cycles": 0
+    },
+    {
+      "b": 740,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 18,
+      "cycles": 0
+    },
+    {
+      "b": 744,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 23,
+      "cycles": 0
+    },
+    {
+      "b": 748,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 23,
+      "cycles": 0
+    },
+    {
+      "b": 756,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 20,
+      "cycles": 0
+    },
+    {
+      "b": 760,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 46,
+      "cycles": 2
+    },
+    {
+      "b": 780,
+      "parameterization_match": true,
+      "independent_search": "NOT RUN"
+    },
+    {
+      "b": 792,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 28,
+      "cycles": 0
+    },
+    {
+      "b": 804,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 21,
+      "cycles": 0
+    },
+    {
+      "b": 812,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 18,
+      "cycles": 0
+    },
+    {
+      "b": 816,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 16,
+      "cycles": 0
+    },
+    {
+      "b": 820,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 29,
+      "cycles": 0
+    },
+    {
+      "b": 828,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 20,
+      "cycles": 0
+    },
+    {
+      "b": 836,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 17,
+      "cycles": 0
+    },
+    {
+      "b": 840,
+      "parameterization_match": true,
+      "independent_search": "NOT RUN"
+    },
+    {
+      "b": 852,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 20,
+      "cycles": 0
+    },
+    {
+      "b": 860,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 21,
+      "cycles": 0
+    },
+    {
+      "b": 868,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 20,
+      "cycles": 0
+    },
+    {
+      "b": 876,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 34,
+      "cycles": 0
+    },
+    {
+      "b": 880,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 22,
+      "cycles": 0
+    },
+    {
+      "b": 884,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 22,
+      "cycles": 0
+    },
+    {
+      "b": 888,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 31,
+      "cycles": 0
+    },
+    {
+      "b": 900,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 20,
+      "cycles": 0
+    },
+    {
+      "b": 912,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 23,
+      "cycles": 0
+    },
+    {
+      "b": 920,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 19,
+      "cycles": 0
+    },
+    {
+      "b": 924,
+      "parameterization_match": true,
+      "independent_search": "NOT RUN"
+    },
+    {
+      "b": 936,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 27,
+      "cycles": 2
+    },
+    {
+      "b": 940,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 21,
+      "cycles": 0
+    },
+    {
+      "b": 948,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 27,
+      "cycles": 0
+    },
+    {
+      "b": 952,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 16,
+      "cycles": 0
+    },
+    {
+      "b": 960,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 19,
+      "cycles": 0
+    },
+    {
+      "b": 980,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 18,
+      "cycles": 0
+    },
+    {
+      "b": 984,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 17,
+      "cycles": 0
+    },
+    {
+      "b": 988,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 21,
+      "cycles": 0
+    },
+    {
+      "b": 996,
+      "parameterization_match": true,
+      "independent_search": "PASS",
+      "admissible_triangles": 27,
+      "cycles": 0
+    }
+  ]
+}

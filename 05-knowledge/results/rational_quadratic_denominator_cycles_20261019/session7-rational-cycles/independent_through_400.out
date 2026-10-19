@@ -1,0 +1,30 @@
+word bound 10 actual union 32
+independent PASS b 60 triangles 213 cycles 4
+independent PASS b 84 triangles 148 cycles 2
+independent PASS b 120 triangles 60 cycles 0
+independent PASS b 132 triangles 85 cycles 0
+independent PASS b 140 triangles 71 cycles 2
+independent PASS b 156 triangles 58 cycles 0
+independent PASS b 168 triangles 71 cycles 2
+independent PASS b 180 triangles 71 cycles 2
+independent PASS b 204 triangles 44 cycles 0
+independent PASS b 220 triangles 47 cycles 2
+independent PASS b 228 triangles 44 cycles 0
+independent PASS b 240 triangles 52 cycles 2
+independent PASS b 252 triangles 55 cycles 2
+independent PASS b 260 triangles 47 cycles 0
+independent PASS b 264 triangles 54 cycles 2
+independent PASS b 276 triangles 44 cycles 0
+independent PASS b 280 triangles 28 cycles 0
+independent PASS b 300 triangles 46 cycles 0
+independent PASS b 308 triangles 25 cycles 0
+independent PASS b 312 triangles 80 cycles 2
+independent PASS b 336 triangles 25 cycles 0
+independent PASS b 340 triangles 32 cycles 0
+independent PASS b 348 triangles 51 cycles 0
+independent PASS b 360 triangles 58 cycles 2
+independent PASS b 364 triangles 46 cycles 2
+independent PASS b 372 triangles 32 cycles 0
+independent PASS b 380 triangles 29 cycles 0
+independent PASS b 396 triangles 32 cycles 2
+PASS 28 denominators 7908 cyclic valuation checks

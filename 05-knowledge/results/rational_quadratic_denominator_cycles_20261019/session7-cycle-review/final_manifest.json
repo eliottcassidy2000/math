@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "denominator_count": 101,
+  "cycle_count": 62,
+  "all_found_periods": [
+    3
+  ],
+  "reviewed_author_note_sha256": "a9ba51d9487c2c31bdc0fabe58b6eb9175938fefcbd22884ce5f14b59265aadf",
+  "files": {
+    "INDEPENDENT_REVIEW.md": "31d4e11095499061095f78605577b78fb3a5c550935b13e5c23185557f7d88dc",
+    "author_large_exponent_replay.json": "a0bdae1e0bc75d7522b8ff8cf07505240eff9f627761379162afa5b34cd4409f",
+    "author_large_exponent_replay_optimized.json": "a0bdae1e0bc75d7522b8ff8cf07505240eff9f627761379162afa5b34cd4409f",
+    "author_pair_full_replay.json": "0e80ad0923094fffa6472213ef97ac73fcc1edcd1768abbb0b585f6e67c2b9f1",
+    "check_43_lift.py": "ccdf2b572d69228c436e34ea6e38884e4158867917bd2eaeed9c7bec11774809",
+    "check_final_addenda.py": "a2dacd0d87b6a62cdb65c09b623ad1f6f61a4215bc1b8b66a2f68d9d879eca11",
+    "check_general_resonance.py": "27bfea358ffec018db508d7a7ab932794ef09e3dfff6a20a6b850ee8fa131295",
+    "check_words.py": "f571f06233cb234f3fe2ad6190bedc8c9fcfd1fd6b89c39a596d0bbb48a9cfa6",
+    "compare_receipts.py": "0843555de5b1ec8f04dc1549455179a381042d2044e38463b12576ac93acbad1",
+    "comparison_receipt.json": "a116f4bfb4f6c4773ec436abc9672746d738af9338bd8ef3c11a57c95a0f1c49",
+    "final_addendum_controls.json": "51ec5af268fea90394a644580707fadc9b1023efa3f71fe2db3af1b8d6a8dacf",
+    "general_resonance_controls.json": "9643318b0af9ebc4c35a41b0903fe601b3d47b5eea2f998ac2f864551e53e5b4",
+    "independent_43_lift.json": "ed182d1475d7f80ba9e481257d37486e51c11b4cbd6cd6339e0d8f4e09b55155",
+    "independent_controls.json": "7d7250ab7d883d67d917f2577b93043cd5b8ee5f0d97bba79936f92361ed6488",
+    "independent_results.json": "78af3994764db6e7a1dd1e317a6ab5e29ac1251e489190c7572615275ae39a32",
+    "independent_results_optimized.json": "ce55a9cb5f8fe64561eea13f51622fdcd3690cd40edd21a08c0bb008a195134a",
+    "independent_search.py": "feeda0f862c9abff4cd51d8267a2641af20914d81dcc07c43a7a6c0cc340e89a",
+    "projected_results.json": "4abb28ff5b3d018fb1ece6df45f7086e411a142c92c038ea83d711d73858dd6b",
+    "projected_results_optimized.json": "0e78efe6cf8e99ee285df7df1122e400b1b19bb49215793040edc59c826e976b",
+    "universal_pair_results.json": "316ac0a3251973072844b81df9712af4f463800d4cb51f5d8875c4798da6e4b1",
+    "universal_pair_search.py": "bf8a13fcdbc4fb7a1b56f0b0d80298991a6410efdbf69c7f4804568a675c4358",
+    "word_projected_search.py": "ba859afd67ae0df872e1b631c9a1ae4ecf20d9f31eb81f79f6630147023e6f2e",
+    "word_results.json": "7a57580aee55077a659b6cd28923e81bd28a2054fcfe13c7d8c5d2cee31eb600"
+  }
+}
