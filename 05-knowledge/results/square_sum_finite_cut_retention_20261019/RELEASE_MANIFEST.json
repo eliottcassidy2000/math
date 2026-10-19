@@ -1,0 +1,16 @@
+{
+  "dependency_manifest_sha256": {
+    "seeded_eventual_cycle_theorem_20261019": "bd1169676ec21f6a4d9178c2ccf5fefb1dcd5149efd9e109afd7fbab202cc11d",
+    "square_sum_all_size_connected_paths_20261019": "8557ef998170f99799e5306f9227de4984bbbcd2b961a0ed41b851532be31717",
+    "square_sum_connected_path_bands_20261019": "7554b7c8227cd3e8f2a2d578537d74cd247ad779d5499d2780ed0a177e052b9a",
+    "square_sum_simultaneous_matching_20261019": "e9f7a831e64b245e4c95e664c52743a3cb2d2569fe4278b8dec64f150e5116b9"
+  },
+  "files": {
+    "FINITE_CUT_RETENTION.md": "a0120efa19e64440c879f87233eee599520752ceec1329d01a3e1cdb741f4675",
+    "LITERATURE_CHECK.md": "ee69927a922a7a4672cace1fb28ae7877df8a63cc9cc9bc68d9ab3db45576ae5",
+    "PORT_TOOLS_AND_LIMITATIONS.md": "f52129f0d79f6c2796dde0cb4a60c2c4f997fa52bdafabb2554490e257f48196"
+  },
+  "repository_destination": "05-knowledge/results/square_sum_finite_cut_retention_20261019",
+  "scope": "Exact retained-parameter recurrence and conservative4Mb finite-cut loss bound; no claim of arbitrary prescribed-path existence.",
+  "status": "frozen proof abstraction; no new census"
+}
