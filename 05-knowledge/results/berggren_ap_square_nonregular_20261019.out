@@ -1,0 +1,12 @@
+STATUS: PASS (FINITE-EXACT controls; infinite nonregularity is proved in note)
+Opposite-parity slopes with numerator <=240: 11702; max descent length: 238
+Root/outer reversal and cone checks through depth 8: 9841
+Accepted cone counts at depths 0..8: [0, 0, 0, 2, 5, 15, 44, 132, 396]
+Quadratic positive-control DFA checks: 9841
+Wrong-orientation hostile minimal witness: M
+Distinct exact inverse-wall matrices: 129
+Quartic inverse itinerary, first 128 symbols: LLLRMMLLLLRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRMLLLMLLLLLLMLLMRRLMLLLRRRRRLRLRRRMMLLMRMLRMRRLRRLMRRRRLMLMRRMLRLLLLLLLL
+Residual checks (17 prefixes x 121 suffixes): 2057
+Two-wall isolation quotient checks through suffix depth 6: 1093
+Exact alpha bisections used: 133
+No floating arithmetic, assertions, external modules, or empirical periodicity inference.
