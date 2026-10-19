@@ -1,0 +1,32 @@
+{
+  "status": "EXACT_CONTROLS_PASSED",
+  "scope": "Finite controls through six vertices; arbitrary finite r follows from skeleton-preserving injections and induction.",
+  "stats": {
+    "posets": 5228,
+    "individual_skeletons": 302896,
+    "gadgets": 11518,
+    "ordered_disjoint_gadget_pairs": 2816,
+    "four_answer_paths": 25136
+  },
+  "digest": "6bd769c9c59116b4deaceaaf9890b0e3cc2fdee6066e94b033b36f460118f58a",
+  "naive_crossed_first_comparisons": {
+    "extensions": 180,
+    "first_survivors": 120,
+    "second_survivors": 80,
+    "sum": 200
+  },
+  "correlated_example": {
+    "pred": [
+      0,
+      0,
+      25,
+      0,
+      0,
+      11
+    ],
+    "extensions": 60,
+    "B1": 6,
+    "B2": 6,
+    "joint_B1_B2": 0
+  }
+}
