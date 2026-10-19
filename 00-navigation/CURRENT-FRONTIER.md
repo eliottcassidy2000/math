@@ -4,6 +4,10 @@
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
+## 2026-10-19 research supplement
+
+The current Liouville session covers Collatz, planar Jacobian, Hadwiger–Nelson, poset balance/Gold, square-sum/graceful reconfiguration, and twin-prime/Goldbach-adjacent questions. Start with [the live research map](../05-knowledge/results/liouville_session2_20261019_progress.md) for scoped theorem statements and explicit remaining gaps. No general major-conjecture resolution is claimed.
+
 ## LRC(14)
 
 ### Headline

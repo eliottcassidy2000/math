@@ -3,6 +3,8 @@
 **Rolling brief — 2026-09-06.**
 [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status.
 
+[2026-10-19 Liouville research map](../05-knowledge/results/liouville_session2_20261019_progress.md): scoped theorem statements and remaining gaps.
+
 ## The five-minute orientation
 
 1. **Main prize:** LRC(14), with 13 nonzero relative speeds, is **OPEN**; LRC is known through 13 total runners.
