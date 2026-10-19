@@ -287,7 +287,7 @@ for entry in manifest['files']:
     check(len(data) == entry['bytes'] and digest == entry['sha256'], 'frozen manifest verification')
     hashes[entry['path']] = digest
 check(hashes['IMAGE_GUARD_DESCENT.md'] ==
-      '8e32d46d23eceefee6a45b2bc7c00548d5409cc14dda99171298d0d56dce3c84',
+      '99788c32b19172e7dc749730e0eb6503c3c1a1a889392319ed1e2c6b7a4c2b2f',
       'assigned primary frozen hash')
 
 print(json.dumps({'status':'PASS independent image-guard controls',

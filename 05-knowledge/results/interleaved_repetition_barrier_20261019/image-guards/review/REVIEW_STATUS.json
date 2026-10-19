@@ -1,4 +1,5 @@
 {
+  "dated_followon": "The original independent review remains a review of the original theorem. A dated Section 8 pointer records closure of the endpoint goal only, leaving the different-types-only occurrence hypothesis unproved.",
   "independent_checks": 238861,
   "independent_control_file": "independent_image_guard_controls.py",
   "independent_logarithm_basis": [
@@ -12,11 +13,11 @@
   "outstanding_mathematical_objections": [],
   "periodic_extension_examples": 930,
   "published_source_hashes": {
-    "IMAGE_GUARD_DESCENT.md": "8e32d46d23eceefee6a45b2bc7c00548d5409cc14dda99171298d0d56dce3c84",
-    "MANIFEST.json": "3e68e9310bdae98f96769201ab26130bebfc570cc96f9fe5cb6c78198e811dda",
+    "IMAGE_GUARD_DESCENT.md": "99788c32b19172e7dc749730e0eb6503c3c1a1a889392319ed1e2c6b7a4c2b2f",
+    "MANIFEST.json": "bf712438013823c3430c295646d2c8f08f9fc1b0cf2f0b6329e7d93e5c000373",
     "PERIODIC_TAIL_MISMATCH_HOSTILE.md": "4608853b0348341174dd1e98b8ba1e5fbf665c8add2601d2d165c4f0aadacd48",
     "README.md": "6002accce5f1779149114b2e4c54fea14c5b0f6410dc5810b3c03c92a732d903",
-    "SHA256SUMS": "1775ce3ea2ee90b5bd1724743cb2d1136bdb99f0f07ad1e8a72b117d715f06b6",
+    "SHA256SUMS": "6535a409f653acde28ea687e7e613093ab182aaea9b7d6f5a1d073ac151b127f",
     "verification-optimized.json": "43669d847680e92f9e13441dba69b3b1ff1eb8e16c11397425c9c39201d68d39",
     "verification-receipt.json": "43669d847680e92f9e13441dba69b3b1ff1eb8e16c11397425c9c39201d68d39",
     "verify_periodic_tail_hostile.py": "e925e986ffff87962ba393822d521fde88614f8ef1af634dbcaa2ad2bf489330"

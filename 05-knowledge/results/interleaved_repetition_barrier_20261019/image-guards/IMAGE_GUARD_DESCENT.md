@@ -196,6 +196,8 @@ excludes every possible positive cycle, or proves the Collatz conjecture.
 
 ## 8. Precise next target: typed left-special factors in every greedy prefix
 
+**Dated continuation (19 October 2026).** The [all-greedy endpoint theorem](../all-greedy-closure/ALL_GREEDY_ENDPOINT_DESCENT.md) now closes the endpoint-descent goal below by proving an anchored-or-different-image disjunction. It does not prove the literal different-types-only occurrence hypothesis. The original question and discussion below are retained as history.
+
 The proved unbounded subsequence does not settle all greedy W_m. A sharper
 open target is:
 

@@ -111,5 +111,57 @@
       "path": "05-knowledge/results/interleaved_repetition_barrier_20261019/extensions/REPETITION_POOR_GREEDY_BOUNDARY.md",
       "sha256": "1a363f9b3541535b90259034949cfd5021e33c3aabaf9c73da3fda5c382a9f18"
     }
+  ],
+  "publication_overlays": [
+    {
+      "date": "2026-10-19",
+      "kind": "Dated historical-status pointer; no original proof body or mathematical verifier logic changed.",
+      "original_provenance_sha256": "fcfd1057c97e3cc858d18e676818c7b541637e096fc33618a2ded9af2b89da55",
+      "primary_before_sha256": "8e32d46d23eceefee6a45b2bc7c00548d5409cc14dda99171298d0d56dce3c84",
+      "primary_after_sha256": "99788c32b19172e7dc749730e0eb6503c3c1a1a889392319ed1e2c6b7a4c2b2f",
+      "exact_inserted_text": "\n**Dated continuation (19 October 2026).** The [all-greedy endpoint theorem](../all-greedy-closure/ALL_GREEDY_ENDPOINT_DESCENT.md) now closes the endpoint-descent goal below by proving an anchored-or-different-image disjunction. It does not prove the literal different-types-only occurrence hypothesis. The original question and discussion below are retained as history.\n",
+      "files": [
+        {
+          "path": "IMAGE_GUARD_DESCENT.md",
+          "before_sha256": "8e32d46d23eceefee6a45b2bc7c00548d5409cc14dda99171298d0d56dce3c84",
+          "after_sha256": "99788c32b19172e7dc749730e0eb6503c3c1a1a889392319ed1e2c6b7a4c2b2f"
+        },
+        {
+          "path": "MANIFEST.json",
+          "before_sha256": "3e68e9310bdae98f96769201ab26130bebfc570cc96f9fe5cb6c78198e811dda",
+          "after_sha256": "bf712438013823c3430c295646d2c8f08f9fc1b0cf2f0b6329e7d93e5c000373"
+        },
+        {
+          "path": "SHA256SUMS",
+          "before_sha256": "1775ce3ea2ee90b5bd1724743cb2d1136bdb99f0f07ad1e8a72b117d715f06b6",
+          "after_sha256": "6535a409f653acde28ea687e7e613093ab182aaea9b7d6f5a1d073ac151b127f"
+        },
+        {
+          "path": "review/REVIEW_STATUS.json",
+          "before_sha256": "60242dc6ec0b977440de1de3539897121df2da785ffbf08b75b8c2c1faa95c7f",
+          "after_sha256": "1294524f1cf1740c4d4e6075fac58c0ab51b4f0f7da35dd1a2031b5b9381a157"
+        },
+        {
+          "path": "review/SHA256SUMS",
+          "before_sha256": "4f6291ad292723bd1443f3d30cfb29b1430b00211332454c4c33c68427044a4f",
+          "after_sha256": "f26275eb39b0c014da33e1e5832939604df7041a4aa12be3958d13ba8893a09e"
+        },
+        {
+          "path": "review/independent-optimized.json",
+          "before_sha256": "d7e3f3a46555ac12a42ba83406a45fca6550d0abcf5187be80383dcf9ef5b0e5",
+          "after_sha256": "c09b7add627815563367b3702aa68b8d93026eb57feb525dc503568e66db59bd"
+        },
+        {
+          "path": "review/independent-receipt.json",
+          "before_sha256": "d7e3f3a46555ac12a42ba83406a45fca6550d0abcf5187be80383dcf9ef5b0e5",
+          "after_sha256": "c09b7add627815563367b3702aa68b8d93026eb57feb525dc503568e66db59bd"
+        },
+        {
+          "path": "review/independent_image_guard_controls.py",
+          "before_sha256": "9664f5a8b7a83799aed04328114c3d2a064bc2a8b53a89d4e10a965d39a709cc",
+          "after_sha256": "2e5eb8adead62c1086309ba79fca2390cfcb24bef31989a3b6124496e98e0842"
+        }
+      ]
+    }
   ]
 }
