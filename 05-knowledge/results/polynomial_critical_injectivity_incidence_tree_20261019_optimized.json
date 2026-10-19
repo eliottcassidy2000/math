@@ -1,0 +1,21 @@
+{
+  "checks": 13,
+  "packet": 138,
+  "scope": "Tiny exact permutation and graph witnesses only; the universal incidence-tree and group arguments are proved in the note.",
+  "status": "PASS",
+  "verified": [
+    "single_overlap_commutator_2_2",
+    "single_overlap_commutator_2_5",
+    "single_overlap_commutator_3_4",
+    "single_overlap_commutator_4_4",
+    "single_overlap_commutator_6_7",
+    "three_cycle_attachment_product",
+    "two_point_overlap_generates_A4",
+    "one_point_overlap_generates_A5",
+    "attachment_to_A4_generates_A6",
+    "support_incidence_connected",
+    "support_incidence_tree_count",
+    "tree_supports_intersect_at_most_once",
+    "finite_branch_defect_sum"
+  ]
+}
