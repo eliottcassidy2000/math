@@ -1,0 +1,1651 @@
+{
+  "certificates": [
+    {
+      "file": "rational_kernel_d3_k3_eps-1.json",
+      "terms": 42,
+      "bidegree": [
+        3,
+        3
+      ],
+      "symmetry": -1,
+      "certificate_zero": true,
+      "gauge_invariant": true,
+      "stored_vs_displayed_sign": -1
+    },
+    {
+      "file": "rational_kernel_d12_k2_eps1.json",
+      "terms": 363,
+      "bidegree": [
+        12,
+        2
+      ],
+      "symmetry": 1,
+      "certificate_zero": true,
+      "gauge_invariant": true
+    }
+  ],
+  "specializations": [
+    {
+      "p": 3,
+      "family": "alternating",
+      "terms": 36,
+      "nonzero": true
+    },
+    {
+      "p": 3,
+      "family": "symmetric",
+      "terms": 0,
+      "nonzero": false
+    },
+    {
+      "p": 5,
+      "family": "alternating",
+      "terms": 42,
+      "nonzero": true
+    },
+    {
+      "p": 5,
+      "family": "symmetric",
+      "terms": 0,
+      "nonzero": false
+    },
+    {
+      "p": 7,
+      "family": "alternating",
+      "terms": 42,
+      "nonzero": true
+    },
+    {
+      "p": 7,
+      "family": "symmetric",
+      "terms": 0,
+      "nonzero": false
+    },
+    {
+      "p": 11,
+      "family": "alternating",
+      "terms": 42,
+      "nonzero": true
+    },
+    {
+      "p": 11,
+      "family": "symmetric",
+      "terms": 336,
+      "nonzero": true
+    },
+    {
+      "p": 13,
+      "family": "alternating",
+      "terms": 42,
+      "nonzero": true
+    },
+    {
+      "p": 13,
+      "family": "symmetric",
+      "terms": 315,
+      "nonzero": true
+    },
+    {
+      "p": 17,
+      "family": "alternating",
+      "terms": 42,
+      "nonzero": true
+    },
+    {
+      "p": 17,
+      "family": "symmetric",
+      "terms": 315,
+      "nonzero": true
+    },
+    {
+      "p": 19,
+      "family": "alternating",
+      "terms": 42,
+      "nonzero": true
+    },
+    {
+      "p": 19,
+      "family": "symmetric",
+      "terms": 345,
+      "nonzero": true
+    },
+    {
+      "p": 23,
+      "family": "alternating",
+      "terms": 42,
+      "nonzero": true
+    },
+    {
+      "p": 23,
+      "family": "symmetric",
+      "terms": 357,
+      "nonzero": true
+    },
+    {
+      "p": 29,
+      "family": "alternating",
+      "terms": 42,
+      "nonzero": true
+    },
+    {
+      "p": 29,
+      "family": "symmetric",
+      "terms": 351,
+      "nonzero": true
+    },
+    {
+      "p": 31,
+      "family": "alternating",
+      "terms": 42,
+      "nonzero": true
+    },
+    {
+      "p": 31,
+      "family": "symmetric",
+      "terms": 363,
+      "nonzero": true
+    },
+    {
+      "p": 37,
+      "family": "alternating",
+      "terms": 42,
+      "nonzero": true
+    },
+    {
+      "p": 37,
+      "family": "symmetric",
+      "terms": 357,
+      "nonzero": true
+    }
+  ],
+  "thresholds": [
+    {
+      "p": 2,
+      "minimum": 11,
+      "all_degrees": [
+        {
+          "n": 0,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 1,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 2,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 3,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 4,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 5,
+          "columns": 2,
+          "rank": 2,
+          "nullity": 0
+        },
+        {
+          "n": 6,
+          "columns": 4,
+          "rank": 4,
+          "nullity": 0
+        },
+        {
+          "n": 7,
+          "columns": 5,
+          "rank": 5,
+          "nullity": 0
+        },
+        {
+          "n": 8,
+          "columns": 7,
+          "rank": 7,
+          "nullity": 0
+        },
+        {
+          "n": 9,
+          "columns": 10,
+          "rank": 10,
+          "nullity": 0
+        },
+        {
+          "n": 10,
+          "columns": 12,
+          "rank": 12,
+          "nullity": 0
+        },
+        {
+          "n": 11,
+          "columns": 15,
+          "rank": 14,
+          "nullity": 1
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "minimum": 11,
+      "all_degrees": [
+        {
+          "n": 0,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 1,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 2,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 3,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 4,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 5,
+          "columns": 2,
+          "rank": 2,
+          "nullity": 0
+        },
+        {
+          "n": 6,
+          "columns": 4,
+          "rank": 4,
+          "nullity": 0
+        },
+        {
+          "n": 7,
+          "columns": 5,
+          "rank": 5,
+          "nullity": 0
+        },
+        {
+          "n": 8,
+          "columns": 7,
+          "rank": 7,
+          "nullity": 0
+        },
+        {
+          "n": 9,
+          "columns": 10,
+          "rank": 10,
+          "nullity": 0
+        },
+        {
+          "n": 10,
+          "columns": 12,
+          "rank": 12,
+          "nullity": 0
+        },
+        {
+          "n": 11,
+          "columns": 15,
+          "rank": 14,
+          "nullity": 1
+        }
+      ]
+    },
+    {
+      "p": 5,
+      "minimum": 18,
+      "all_degrees": [
+        {
+          "n": 0,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 1,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 2,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 3,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 4,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 5,
+          "columns": 2,
+          "rank": 2,
+          "nullity": 0
+        },
+        {
+          "n": 6,
+          "columns": 4,
+          "rank": 4,
+          "nullity": 0
+        },
+        {
+          "n": 7,
+          "columns": 5,
+          "rank": 5,
+          "nullity": 0
+        },
+        {
+          "n": 8,
+          "columns": 7,
+          "rank": 7,
+          "nullity": 0
+        },
+        {
+          "n": 9,
+          "columns": 10,
+          "rank": 10,
+          "nullity": 0
+        },
+        {
+          "n": 10,
+          "columns": 12,
+          "rank": 12,
+          "nullity": 0
+        },
+        {
+          "n": 11,
+          "columns": 15,
+          "rank": 15,
+          "nullity": 0
+        },
+        {
+          "n": 12,
+          "columns": 19,
+          "rank": 19,
+          "nullity": 0
+        },
+        {
+          "n": 13,
+          "columns": 22,
+          "rank": 22,
+          "nullity": 0
+        },
+        {
+          "n": 14,
+          "columns": 26,
+          "rank": 26,
+          "nullity": 0
+        },
+        {
+          "n": 15,
+          "columns": 31,
+          "rank": 31,
+          "nullity": 0
+        },
+        {
+          "n": 16,
+          "columns": 35,
+          "rank": 35,
+          "nullity": 0
+        },
+        {
+          "n": 17,
+          "columns": 40,
+          "rank": 40,
+          "nullity": 0
+        },
+        {
+          "n": 18,
+          "columns": 46,
+          "rank": 45,
+          "nullity": 1
+        }
+      ]
+    },
+    {
+      "p": 7,
+      "minimum": 24,
+      "all_degrees": [
+        {
+          "n": 0,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 1,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 2,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 3,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 4,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 5,
+          "columns": 2,
+          "rank": 2,
+          "nullity": 0
+        },
+        {
+          "n": 6,
+          "columns": 4,
+          "rank": 4,
+          "nullity": 0
+        },
+        {
+          "n": 7,
+          "columns": 5,
+          "rank": 5,
+          "nullity": 0
+        },
+        {
+          "n": 8,
+          "columns": 7,
+          "rank": 7,
+          "nullity": 0
+        },
+        {
+          "n": 9,
+          "columns": 10,
+          "rank": 10,
+          "nullity": 0
+        },
+        {
+          "n": 10,
+          "columns": 12,
+          "rank": 12,
+          "nullity": 0
+        },
+        {
+          "n": 11,
+          "columns": 15,
+          "rank": 15,
+          "nullity": 0
+        },
+        {
+          "n": 12,
+          "columns": 19,
+          "rank": 19,
+          "nullity": 0
+        },
+        {
+          "n": 13,
+          "columns": 22,
+          "rank": 22,
+          "nullity": 0
+        },
+        {
+          "n": 14,
+          "columns": 26,
+          "rank": 26,
+          "nullity": 0
+        },
+        {
+          "n": 15,
+          "columns": 31,
+          "rank": 31,
+          "nullity": 0
+        },
+        {
+          "n": 16,
+          "columns": 35,
+          "rank": 35,
+          "nullity": 0
+        },
+        {
+          "n": 17,
+          "columns": 40,
+          "rank": 40,
+          "nullity": 0
+        },
+        {
+          "n": 18,
+          "columns": 46,
+          "rank": 46,
+          "nullity": 0
+        },
+        {
+          "n": 19,
+          "columns": 51,
+          "rank": 51,
+          "nullity": 0
+        },
+        {
+          "n": 20,
+          "columns": 57,
+          "rank": 57,
+          "nullity": 0
+        },
+        {
+          "n": 21,
+          "columns": 64,
+          "rank": 64,
+          "nullity": 0
+        },
+        {
+          "n": 22,
+          "columns": 70,
+          "rank": 70,
+          "nullity": 0
+        },
+        {
+          "n": 23,
+          "columns": 77,
+          "rank": 77,
+          "nullity": 0
+        },
+        {
+          "n": 24,
+          "columns": 85,
+          "rank": 84,
+          "nullity": 1
+        }
+      ]
+    },
+    {
+      "p": 11,
+      "minimum": 34,
+      "all_degrees": [
+        {
+          "n": 0,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 1,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 2,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 3,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 4,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 5,
+          "columns": 2,
+          "rank": 2,
+          "nullity": 0
+        },
+        {
+          "n": 6,
+          "columns": 4,
+          "rank": 4,
+          "nullity": 0
+        },
+        {
+          "n": 7,
+          "columns": 5,
+          "rank": 5,
+          "nullity": 0
+        },
+        {
+          "n": 8,
+          "columns": 7,
+          "rank": 7,
+          "nullity": 0
+        },
+        {
+          "n": 9,
+          "columns": 10,
+          "rank": 10,
+          "nullity": 0
+        },
+        {
+          "n": 10,
+          "columns": 12,
+          "rank": 12,
+          "nullity": 0
+        },
+        {
+          "n": 11,
+          "columns": 15,
+          "rank": 15,
+          "nullity": 0
+        },
+        {
+          "n": 12,
+          "columns": 19,
+          "rank": 19,
+          "nullity": 0
+        },
+        {
+          "n": 13,
+          "columns": 22,
+          "rank": 22,
+          "nullity": 0
+        },
+        {
+          "n": 14,
+          "columns": 26,
+          "rank": 26,
+          "nullity": 0
+        },
+        {
+          "n": 15,
+          "columns": 31,
+          "rank": 31,
+          "nullity": 0
+        },
+        {
+          "n": 16,
+          "columns": 35,
+          "rank": 35,
+          "nullity": 0
+        },
+        {
+          "n": 17,
+          "columns": 40,
+          "rank": 40,
+          "nullity": 0
+        },
+        {
+          "n": 18,
+          "columns": 46,
+          "rank": 46,
+          "nullity": 0
+        },
+        {
+          "n": 19,
+          "columns": 51,
+          "rank": 51,
+          "nullity": 0
+        },
+        {
+          "n": 20,
+          "columns": 57,
+          "rank": 57,
+          "nullity": 0
+        },
+        {
+          "n": 21,
+          "columns": 64,
+          "rank": 64,
+          "nullity": 0
+        },
+        {
+          "n": 22,
+          "columns": 70,
+          "rank": 70,
+          "nullity": 0
+        },
+        {
+          "n": 23,
+          "columns": 77,
+          "rank": 77,
+          "nullity": 0
+        },
+        {
+          "n": 24,
+          "columns": 85,
+          "rank": 85,
+          "nullity": 0
+        },
+        {
+          "n": 25,
+          "columns": 92,
+          "rank": 92,
+          "nullity": 0
+        },
+        {
+          "n": 26,
+          "columns": 100,
+          "rank": 100,
+          "nullity": 0
+        },
+        {
+          "n": 27,
+          "columns": 109,
+          "rank": 109,
+          "nullity": 0
+        },
+        {
+          "n": 28,
+          "columns": 117,
+          "rank": 117,
+          "nullity": 0
+        },
+        {
+          "n": 29,
+          "columns": 126,
+          "rank": 126,
+          "nullity": 0
+        },
+        {
+          "n": 30,
+          "columns": 136,
+          "rank": 136,
+          "nullity": 0
+        },
+        {
+          "n": 31,
+          "columns": 145,
+          "rank": 145,
+          "nullity": 0
+        },
+        {
+          "n": 32,
+          "columns": 155,
+          "rank": 155,
+          "nullity": 0
+        },
+        {
+          "n": 33,
+          "columns": 166,
+          "rank": 166,
+          "nullity": 0
+        },
+        {
+          "n": 34,
+          "columns": 176,
+          "rank": 175,
+          "nullity": 1
+        }
+      ]
+    },
+    {
+      "p": 13,
+      "minimum": 38,
+      "all_degrees": [
+        {
+          "n": 0,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 1,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 2,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 3,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 4,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 5,
+          "columns": 2,
+          "rank": 2,
+          "nullity": 0
+        },
+        {
+          "n": 6,
+          "columns": 4,
+          "rank": 4,
+          "nullity": 0
+        },
+        {
+          "n": 7,
+          "columns": 5,
+          "rank": 5,
+          "nullity": 0
+        },
+        {
+          "n": 8,
+          "columns": 7,
+          "rank": 7,
+          "nullity": 0
+        },
+        {
+          "n": 9,
+          "columns": 10,
+          "rank": 10,
+          "nullity": 0
+        },
+        {
+          "n": 10,
+          "columns": 12,
+          "rank": 12,
+          "nullity": 0
+        },
+        {
+          "n": 11,
+          "columns": 15,
+          "rank": 15,
+          "nullity": 0
+        },
+        {
+          "n": 12,
+          "columns": 19,
+          "rank": 19,
+          "nullity": 0
+        },
+        {
+          "n": 13,
+          "columns": 22,
+          "rank": 22,
+          "nullity": 0
+        },
+        {
+          "n": 14,
+          "columns": 26,
+          "rank": 26,
+          "nullity": 0
+        },
+        {
+          "n": 15,
+          "columns": 31,
+          "rank": 31,
+          "nullity": 0
+        },
+        {
+          "n": 16,
+          "columns": 35,
+          "rank": 35,
+          "nullity": 0
+        },
+        {
+          "n": 17,
+          "columns": 40,
+          "rank": 40,
+          "nullity": 0
+        },
+        {
+          "n": 18,
+          "columns": 46,
+          "rank": 46,
+          "nullity": 0
+        },
+        {
+          "n": 19,
+          "columns": 51,
+          "rank": 51,
+          "nullity": 0
+        },
+        {
+          "n": 20,
+          "columns": 57,
+          "rank": 57,
+          "nullity": 0
+        },
+        {
+          "n": 21,
+          "columns": 64,
+          "rank": 64,
+          "nullity": 0
+        },
+        {
+          "n": 22,
+          "columns": 70,
+          "rank": 70,
+          "nullity": 0
+        },
+        {
+          "n": 23,
+          "columns": 77,
+          "rank": 77,
+          "nullity": 0
+        },
+        {
+          "n": 24,
+          "columns": 85,
+          "rank": 85,
+          "nullity": 0
+        },
+        {
+          "n": 25,
+          "columns": 92,
+          "rank": 92,
+          "nullity": 0
+        },
+        {
+          "n": 26,
+          "columns": 100,
+          "rank": 100,
+          "nullity": 0
+        },
+        {
+          "n": 27,
+          "columns": 109,
+          "rank": 109,
+          "nullity": 0
+        },
+        {
+          "n": 28,
+          "columns": 117,
+          "rank": 117,
+          "nullity": 0
+        },
+        {
+          "n": 29,
+          "columns": 126,
+          "rank": 126,
+          "nullity": 0
+        },
+        {
+          "n": 30,
+          "columns": 136,
+          "rank": 136,
+          "nullity": 0
+        },
+        {
+          "n": 31,
+          "columns": 145,
+          "rank": 145,
+          "nullity": 0
+        },
+        {
+          "n": 32,
+          "columns": 155,
+          "rank": 155,
+          "nullity": 0
+        },
+        {
+          "n": 33,
+          "columns": 166,
+          "rank": 166,
+          "nullity": 0
+        },
+        {
+          "n": 34,
+          "columns": 176,
+          "rank": 176,
+          "nullity": 0
+        },
+        {
+          "n": 35,
+          "columns": 187,
+          "rank": 187,
+          "nullity": 0
+        },
+        {
+          "n": 36,
+          "columns": 199,
+          "rank": 199,
+          "nullity": 0
+        },
+        {
+          "n": 37,
+          "columns": 210,
+          "rank": 210,
+          "nullity": 0
+        },
+        {
+          "n": 38,
+          "columns": 222,
+          "rank": 221,
+          "nullity": 1
+        }
+      ]
+    },
+    {
+      "p": 17,
+      "minimum": 46,
+      "all_degrees": [
+        {
+          "n": 0,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 1,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 2,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 3,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 4,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 5,
+          "columns": 2,
+          "rank": 2,
+          "nullity": 0
+        },
+        {
+          "n": 6,
+          "columns": 4,
+          "rank": 4,
+          "nullity": 0
+        },
+        {
+          "n": 7,
+          "columns": 5,
+          "rank": 5,
+          "nullity": 0
+        },
+        {
+          "n": 8,
+          "columns": 7,
+          "rank": 7,
+          "nullity": 0
+        },
+        {
+          "n": 9,
+          "columns": 10,
+          "rank": 10,
+          "nullity": 0
+        },
+        {
+          "n": 10,
+          "columns": 12,
+          "rank": 12,
+          "nullity": 0
+        },
+        {
+          "n": 11,
+          "columns": 15,
+          "rank": 15,
+          "nullity": 0
+        },
+        {
+          "n": 12,
+          "columns": 19,
+          "rank": 19,
+          "nullity": 0
+        },
+        {
+          "n": 13,
+          "columns": 22,
+          "rank": 22,
+          "nullity": 0
+        },
+        {
+          "n": 14,
+          "columns": 26,
+          "rank": 26,
+          "nullity": 0
+        },
+        {
+          "n": 15,
+          "columns": 31,
+          "rank": 31,
+          "nullity": 0
+        },
+        {
+          "n": 16,
+          "columns": 35,
+          "rank": 35,
+          "nullity": 0
+        },
+        {
+          "n": 17,
+          "columns": 40,
+          "rank": 40,
+          "nullity": 0
+        },
+        {
+          "n": 18,
+          "columns": 46,
+          "rank": 46,
+          "nullity": 0
+        },
+        {
+          "n": 19,
+          "columns": 51,
+          "rank": 51,
+          "nullity": 0
+        },
+        {
+          "n": 20,
+          "columns": 57,
+          "rank": 57,
+          "nullity": 0
+        },
+        {
+          "n": 21,
+          "columns": 64,
+          "rank": 64,
+          "nullity": 0
+        },
+        {
+          "n": 22,
+          "columns": 70,
+          "rank": 70,
+          "nullity": 0
+        },
+        {
+          "n": 23,
+          "columns": 77,
+          "rank": 77,
+          "nullity": 0
+        },
+        {
+          "n": 24,
+          "columns": 85,
+          "rank": 85,
+          "nullity": 0
+        },
+        {
+          "n": 25,
+          "columns": 92,
+          "rank": 92,
+          "nullity": 0
+        },
+        {
+          "n": 26,
+          "columns": 100,
+          "rank": 100,
+          "nullity": 0
+        },
+        {
+          "n": 27,
+          "columns": 109,
+          "rank": 109,
+          "nullity": 0
+        },
+        {
+          "n": 28,
+          "columns": 117,
+          "rank": 117,
+          "nullity": 0
+        },
+        {
+          "n": 29,
+          "columns": 126,
+          "rank": 126,
+          "nullity": 0
+        },
+        {
+          "n": 30,
+          "columns": 136,
+          "rank": 136,
+          "nullity": 0
+        },
+        {
+          "n": 31,
+          "columns": 145,
+          "rank": 145,
+          "nullity": 0
+        },
+        {
+          "n": 32,
+          "columns": 155,
+          "rank": 155,
+          "nullity": 0
+        },
+        {
+          "n": 33,
+          "columns": 166,
+          "rank": 166,
+          "nullity": 0
+        },
+        {
+          "n": 34,
+          "columns": 176,
+          "rank": 176,
+          "nullity": 0
+        },
+        {
+          "n": 35,
+          "columns": 187,
+          "rank": 187,
+          "nullity": 0
+        },
+        {
+          "n": 36,
+          "columns": 199,
+          "rank": 199,
+          "nullity": 0
+        },
+        {
+          "n": 37,
+          "columns": 210,
+          "rank": 210,
+          "nullity": 0
+        },
+        {
+          "n": 38,
+          "columns": 222,
+          "rank": 222,
+          "nullity": 0
+        },
+        {
+          "n": 39,
+          "columns": 235,
+          "rank": 235,
+          "nullity": 0
+        },
+        {
+          "n": 40,
+          "columns": 247,
+          "rank": 247,
+          "nullity": 0
+        },
+        {
+          "n": 41,
+          "columns": 260,
+          "rank": 260,
+          "nullity": 0
+        },
+        {
+          "n": 42,
+          "columns": 274,
+          "rank": 274,
+          "nullity": 0
+        },
+        {
+          "n": 43,
+          "columns": 287,
+          "rank": 287,
+          "nullity": 0
+        },
+        {
+          "n": 44,
+          "columns": 301,
+          "rank": 301,
+          "nullity": 0
+        },
+        {
+          "n": 45,
+          "columns": 316,
+          "rank": 316,
+          "nullity": 0
+        },
+        {
+          "n": 46,
+          "columns": 330,
+          "rank": 329,
+          "nullity": 1
+        }
+      ]
+    },
+    {
+      "p": 19,
+      "minimum": 50,
+      "all_degrees": [
+        {
+          "n": 0,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 1,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 2,
+          "columns": 0,
+          "rank": 0,
+          "nullity": 0
+        },
+        {
+          "n": 3,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 4,
+          "columns": 1,
+          "rank": 1,
+          "nullity": 0
+        },
+        {
+          "n": 5,
+          "columns": 2,
+          "rank": 2,
+          "nullity": 0
+        },
+        {
+          "n": 6,
+          "columns": 4,
+          "rank": 4,
+          "nullity": 0
+        },
+        {
+          "n": 7,
+          "columns": 5,
+          "rank": 5,
+          "nullity": 0
+        },
+        {
+          "n": 8,
+          "columns": 7,
+          "rank": 7,
+          "nullity": 0
+        },
+        {
+          "n": 9,
+          "columns": 10,
+          "rank": 10,
+          "nullity": 0
+        },
+        {
+          "n": 10,
+          "columns": 12,
+          "rank": 12,
+          "nullity": 0
+        },
+        {
+          "n": 11,
+          "columns": 15,
+          "rank": 15,
+          "nullity": 0
+        },
+        {
+          "n": 12,
+          "columns": 19,
+          "rank": 19,
+          "nullity": 0
+        },
+        {
+          "n": 13,
+          "columns": 22,
+          "rank": 22,
+          "nullity": 0
+        },
+        {
+          "n": 14,
+          "columns": 26,
+          "rank": 26,
+          "nullity": 0
+        },
+        {
+          "n": 15,
+          "columns": 31,
+          "rank": 31,
+          "nullity": 0
+        },
+        {
+          "n": 16,
+          "columns": 35,
+          "rank": 35,
+          "nullity": 0
+        },
+        {
+          "n": 17,
+          "columns": 40,
+          "rank": 40,
+          "nullity": 0
+        },
+        {
+          "n": 18,
+          "columns": 46,
+          "rank": 46,
+          "nullity": 0
+        },
+        {
+          "n": 19,
+          "columns": 51,
+          "rank": 51,
+          "nullity": 0
+        },
+        {
+          "n": 20,
+          "columns": 57,
+          "rank": 57,
+          "nullity": 0
+        },
+        {
+          "n": 21,
+          "columns": 64,
+          "rank": 64,
+          "nullity": 0
+        },
+        {
+          "n": 22,
+          "columns": 70,
+          "rank": 70,
+          "nullity": 0
+        },
+        {
+          "n": 23,
+          "columns": 77,
+          "rank": 77,
+          "nullity": 0
+        },
+        {
+          "n": 24,
+          "columns": 85,
+          "rank": 85,
+          "nullity": 0
+        },
+        {
+          "n": 25,
+          "columns": 92,
+          "rank": 92,
+          "nullity": 0
+        },
+        {
+          "n": 26,
+          "columns": 100,
+          "rank": 100,
+          "nullity": 0
+        },
+        {
+          "n": 27,
+          "columns": 109,
+          "rank": 109,
+          "nullity": 0
+        },
+        {
+          "n": 28,
+          "columns": 117,
+          "rank": 117,
+          "nullity": 0
+        },
+        {
+          "n": 29,
+          "columns": 126,
+          "rank": 126,
+          "nullity": 0
+        },
+        {
+          "n": 30,
+          "columns": 136,
+          "rank": 136,
+          "nullity": 0
+        },
+        {
+          "n": 31,
+          "columns": 145,
+          "rank": 145,
+          "nullity": 0
+        },
+        {
+          "n": 32,
+          "columns": 155,
+          "rank": 155,
+          "nullity": 0
+        },
+        {
+          "n": 33,
+          "columns": 166,
+          "rank": 166,
+          "nullity": 0
+        },
+        {
+          "n": 34,
+          "columns": 176,
+          "rank": 176,
+          "nullity": 0
+        },
+        {
+          "n": 35,
+          "columns": 187,
+          "rank": 187,
+          "nullity": 0
+        },
+        {
+          "n": 36,
+          "columns": 199,
+          "rank": 199,
+          "nullity": 0
+        },
+        {
+          "n": 37,
+          "columns": 210,
+          "rank": 210,
+          "nullity": 0
+        },
+        {
+          "n": 38,
+          "columns": 222,
+          "rank": 222,
+          "nullity": 0
+        },
+        {
+          "n": 39,
+          "columns": 235,
+          "rank": 235,
+          "nullity": 0
+        },
+        {
+          "n": 40,
+          "columns": 247,
+          "rank": 247,
+          "nullity": 0
+        },
+        {
+          "n": 41,
+          "columns": 260,
+          "rank": 260,
+          "nullity": 0
+        },
+        {
+          "n": 42,
+          "columns": 274,
+          "rank": 274,
+          "nullity": 0
+        },
+        {
+          "n": 43,
+          "columns": 287,
+          "rank": 287,
+          "nullity": 0
+        },
+        {
+          "n": 44,
+          "columns": 301,
+          "rank": 301,
+          "nullity": 0
+        },
+        {
+          "n": 45,
+          "columns": 316,
+          "rank": 316,
+          "nullity": 0
+        },
+        {
+          "n": 46,
+          "columns": 330,
+          "rank": 330,
+          "nullity": 0
+        },
+        {
+          "n": 47,
+          "columns": 345,
+          "rank": 345,
+          "nullity": 0
+        },
+        {
+          "n": 48,
+          "columns": 361,
+          "rank": 361,
+          "nullity": 0
+        },
+        {
+          "n": 49,
+          "columns": 376,
+          "rank": 376,
+          "nullity": 0
+        },
+        {
+          "n": 50,
+          "columns": 392,
+          "rank": 391,
+          "nullity": 1
+        }
+      ]
+    }
+  ]
+}

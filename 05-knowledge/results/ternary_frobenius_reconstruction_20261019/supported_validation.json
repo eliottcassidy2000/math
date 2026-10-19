@@ -1,0 +1,56 @@
+[
+  {
+    "p": 5,
+    "candidate_degree": 18,
+    "candidate_terms": 42,
+    "norm_terms": 0
+  },
+  {
+    "p": 7,
+    "candidate_degree": 24,
+    "candidate_terms": 42,
+    "norm_terms": 0
+  },
+  {
+    "p": 11,
+    "candidate_degree": 36,
+    "candidate_terms": 42,
+    "norm_terms": 0
+  },
+  {
+    "p": 13,
+    "candidate_degree": 42,
+    "candidate_terms": 42,
+    "norm_terms": 0
+  },
+  {
+    "p": 17,
+    "candidate_degree": 54,
+    "candidate_terms": 42,
+    "norm_terms": 0
+  },
+  {
+    "p": 19,
+    "candidate_degree": 60,
+    "candidate_terms": 42,
+    "norm_terms": 0
+  },
+  {
+    "p": 23,
+    "candidate_degree": 72,
+    "candidate_terms": 42,
+    "norm_terms": 0
+  },
+  {
+    "p": 29,
+    "candidate_degree": 90,
+    "candidate_terms": 42,
+    "norm_terms": 0
+  },
+  {
+    "p": 31,
+    "candidate_degree": 96,
+    "candidate_terms": 42,
+    "norm_terms": 0
+  }
+]

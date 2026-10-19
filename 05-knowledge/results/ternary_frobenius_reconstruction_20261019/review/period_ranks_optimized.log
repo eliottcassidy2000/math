@@ -1,0 +1,13 @@
+PASS complete minimum 2 11
+PASS complete minimum 3 11
+PASS complete minimum 5 18
+PASS complete minimum 7 24
+PASS complete minimum 11 34
+PASS complete minimum 13 38
+PASS complete minimum 17 46
+PASS complete minimum 19 50
+PASS supported classification 5
+PASS supported classification 7
+PASS supported classification 11
+PASS supported classification 13
+ALL RANK CHECKS PASSED

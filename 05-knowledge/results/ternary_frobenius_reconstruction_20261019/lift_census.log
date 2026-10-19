@@ -1,0 +1,16 @@
+{'p': 5, 'columns': 7, 'rank': 6, 'augmented_rank': 7, 'lifts_mod_p2': False}
+{'p': 7, 'columns': 12, 'rank': 11, 'augmented_rank': 12, 'lifts_mod_p2': False}
+{'p': 11, 'columns': 26, 'rank': 25, 'augmented_rank': 26, 'lifts_mod_p2': False}
+{'p': 13, 'columns': 35, 'rank': 34, 'augmented_rank': 35, 'lifts_mod_p2': False}
+{'p': 17, 'columns': 57, 'rank': 56, 'augmented_rank': 57, 'lifts_mod_p2': False}
+{'p': 19, 'columns': 70, 'rank': 69, 'augmented_rank': 70, 'lifts_mod_p2': False}
+{'p': 23, 'columns': 100, 'rank': 99, 'augmented_rank': 100, 'lifts_mod_p2': False}
+{'p': 29, 'columns': 155, 'rank': 154, 'augmented_rank': 155, 'lifts_mod_p2': False}
+{'p': 31, 'columns': 176, 'rank': 175, 'augmented_rank': 176, 'lifts_mod_p2': False}
+{'p': 37, 'columns': 247, 'rank': 246, 'augmented_rank': 247, 'lifts_mod_p2': False}
+{'p': 41, 'columns': 301, 'rank': 300, 'augmented_rank': 301, 'lifts_mod_p2': False}
+{'p': 43, 'columns': 330, 'rank': 329, 'augmented_rank': 330, 'lifts_mod_p2': False}
+{'p': 47, 'columns': 392, 'rank': 391, 'augmented_rank': 392, 'lifts_mod_p2': False}
+{'p': 53, 'columns': 495, 'rank': 494, 'augmented_rank': 495, 'lifts_mod_p2': False}
+{'p': 59, 'columns': 610, 'rank': 608, 'augmented_rank': 609, 'lifts_mod_p2': False}
+{'p': 61, 'columns': 651, 'rank': 650, 'augmented_rank': 651, 'lifts_mod_p2': False}

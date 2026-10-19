@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "alternants": 23,
+  "E_terms": 138,
+  "norm_terms": 334,
+  "norm_coefficient_gcd": 29,
+  "quotient_terms": 127,
+  "quotient_degree": 30,
+  "interior_norm_shape": [
+    946,
+    274
+  ],
+  "rank_mod29": 273,
+  "augmented_rank_mod29": 274
+}

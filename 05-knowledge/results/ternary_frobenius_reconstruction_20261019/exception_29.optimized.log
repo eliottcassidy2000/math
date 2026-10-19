@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "prime": 29,
+  "degree": 42,
+  "alternants": 23,
+  "monomials": 138,
+  "cyclic": true,
+  "alternating": true,
+  "all_interior": true,
+  "all_exponents_even": true,
+  "literal_norm_zero_mod_29": true,
+  "integer_norm_coefficient_gcd": 29
+}

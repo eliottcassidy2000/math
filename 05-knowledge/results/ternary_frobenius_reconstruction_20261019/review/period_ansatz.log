@@ -1,0 +1,4 @@
+PASS ansatz auxiliary degree 1 through original degree 30
+PASS ansatz auxiliary degree 2 through original degree 12
+PASS ansatz auxiliary degree 3 through original degree 3
+ALL ANSATZ CHECKS PASSED

@@ -1,0 +1,869 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "d": 0,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 0,
+      "rows": 0,
+      "rank_mod_100003": 0,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 0,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 0,
+      "rows": 0,
+      "rank_mod_100003": 0,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 1,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 1,
+      "rows": 10,
+      "rank_mod_100003": 1,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 1,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 0,
+      "rows": 0,
+      "rank_mod_100003": 0,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 2,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 2,
+      "rows": 22,
+      "rank_mod_100003": 2,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 2,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 1,
+      "rows": 7,
+      "rank_mod_100003": 1,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 3,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 4,
+      "rows": 38,
+      "rank_mod_100003": 4,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 3,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 2,
+      "rows": 13,
+      "rank_mod_100003": 2,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 4,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 6,
+      "rows": 56,
+      "rank_mod_100003": 6,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 4,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 4,
+      "rows": 26,
+      "rank_mod_100003": 4,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 5,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 9,
+      "rows": 78,
+      "rank_mod_100003": 9,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 5,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 6,
+      "rows": 42,
+      "rank_mod_100003": 6,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 6,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 12,
+      "rows": 102,
+      "rank_mod_100003": 12,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 6,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 9,
+      "rows": 61,
+      "rank_mod_100003": 9,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 7,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 16,
+      "rows": 130,
+      "rank_mod_100003": 16,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 7,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 12,
+      "rows": 83,
+      "rank_mod_100003": 12,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 8,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 20,
+      "rows": 160,
+      "rank_mod_100003": 20,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 8,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 16,
+      "rows": 108,
+      "rank_mod_100003": 16,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 9,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 25,
+      "rows": 194,
+      "rank_mod_100003": 25,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 9,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 20,
+      "rows": 136,
+      "rank_mod_100003": 20,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 10,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 30,
+      "rows": 230,
+      "rank_mod_100003": 30,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 10,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 25,
+      "rows": 167,
+      "rank_mod_100003": 25,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 11,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 36,
+      "rows": 270,
+      "rank_mod_100003": 36,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 11,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 30,
+      "rows": 201,
+      "rank_mod_100003": 30,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 12,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 42,
+      "rows": 312,
+      "rank_mod_100003": 42,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 12,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 36,
+      "rows": 238,
+      "rank_mod_100003": 36,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 13,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 49,
+      "rows": 358,
+      "rank_mod_100003": 49,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 13,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 42,
+      "rows": 278,
+      "rank_mod_100003": 42,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 14,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 56,
+      "rows": 406,
+      "rank_mod_100003": 56,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 14,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 49,
+      "rows": 321,
+      "rank_mod_100003": 49,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 15,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 64,
+      "rows": 458,
+      "rank_mod_100003": 64,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 15,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 56,
+      "rows": 367,
+      "rank_mod_100003": 56,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 16,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 72,
+      "rows": 512,
+      "rank_mod_100003": 72,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 16,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 64,
+      "rows": 416,
+      "rank_mod_100003": 64,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 17,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 81,
+      "rows": 570,
+      "rank_mod_100003": 81,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 17,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 72,
+      "rows": 468,
+      "rank_mod_100003": 72,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 18,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 90,
+      "rows": 630,
+      "rank_mod_100003": 90,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 18,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 81,
+      "rows": 523,
+      "rank_mod_100003": 81,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 19,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 100,
+      "rows": 694,
+      "rank_mod_100003": 100,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 19,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 90,
+      "rows": 581,
+      "rank_mod_100003": 90,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 20,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 110,
+      "rows": 760,
+      "rank_mod_100003": 110,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 20,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 100,
+      "rows": 642,
+      "rank_mod_100003": 100,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 21,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 121,
+      "rows": 830,
+      "rank_mod_100003": 121,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 21,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 110,
+      "rows": 706,
+      "rank_mod_100003": 110,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 22,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 132,
+      "rows": 902,
+      "rank_mod_100003": 132,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 22,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 121,
+      "rows": 773,
+      "rank_mod_100003": 121,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 23,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 144,
+      "rows": 978,
+      "rank_mod_100003": 144,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 23,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 132,
+      "rows": 843,
+      "rank_mod_100003": 132,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 24,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 156,
+      "rows": 1056,
+      "rank_mod_100003": 156,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 24,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 144,
+      "rows": 916,
+      "rank_mod_100003": 144,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 25,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 169,
+      "rows": 1138,
+      "rank_mod_100003": 169,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 25,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 156,
+      "rows": 992,
+      "rank_mod_100003": 156,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 26,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 182,
+      "rows": 1222,
+      "rank_mod_100003": 182,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 26,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 169,
+      "rows": 1071,
+      "rank_mod_100003": 169,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 27,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 196,
+      "rows": 1310,
+      "rank_mod_100003": 196,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 27,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 182,
+      "rows": 1153,
+      "rank_mod_100003": 182,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 28,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 210,
+      "rows": 1400,
+      "rank_mod_100003": 210,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 28,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 196,
+      "rows": 1238,
+      "rank_mod_100003": 196,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 29,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 225,
+      "rows": 1494,
+      "rank_mod_100003": 225,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 29,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 210,
+      "rows": 1326,
+      "rank_mod_100003": 210,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 30,
+      "auxiliary_degree": 1,
+      "symmetry": 1,
+      "columns": 240,
+      "rows": 1590,
+      "rank_mod_100003": 240,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 30,
+      "auxiliary_degree": 1,
+      "symmetry": -1,
+      "columns": 225,
+      "rows": 1417,
+      "rank_mod_100003": 225,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 0,
+      "auxiliary_degree": 2,
+      "symmetry": 1,
+      "columns": 2,
+      "rows": 24,
+      "rank_mod_100003": 2,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 0,
+      "auxiliary_degree": 2,
+      "symmetry": -1,
+      "columns": 1,
+      "rows": 7,
+      "rank_mod_100003": 1,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 1,
+      "auxiliary_degree": 2,
+      "symmetry": 1,
+      "columns": 5,
+      "rows": 48,
+      "rank_mod_100003": 5,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 1,
+      "auxiliary_degree": 2,
+      "symmetry": -1,
+      "columns": 2,
+      "rows": 19,
+      "rank_mod_100003": 2,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 2,
+      "auxiliary_degree": 2,
+      "symmetry": 1,
+      "columns": 8,
+      "rows": 76,
+      "rank_mod_100003": 8,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 2,
+      "auxiliary_degree": 2,
+      "symmetry": -1,
+      "columns": 5,
+      "rows": 39,
+      "rank_mod_100003": 5,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 3,
+      "auxiliary_degree": 2,
+      "symmetry": 1,
+      "columns": 13,
+      "rows": 112,
+      "rank_mod_100003": 13,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 3,
+      "auxiliary_degree": 2,
+      "symmetry": -1,
+      "columns": 8,
+      "rows": 61,
+      "rank_mod_100003": 8,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 4,
+      "auxiliary_degree": 2,
+      "symmetry": 1,
+      "columns": 18,
+      "rows": 152,
+      "rank_mod_100003": 18,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 4,
+      "auxiliary_degree": 2,
+      "symmetry": -1,
+      "columns": 13,
+      "rows": 93,
+      "rank_mod_100003": 13,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 5,
+      "auxiliary_degree": 2,
+      "symmetry": 1,
+      "columns": 25,
+      "rows": 200,
+      "rank_mod_100003": 25,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 5,
+      "auxiliary_degree": 2,
+      "symmetry": -1,
+      "columns": 18,
+      "rows": 131,
+      "rank_mod_100003": 18,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 6,
+      "auxiliary_degree": 2,
+      "symmetry": 1,
+      "columns": 32,
+      "rows": 252,
+      "rank_mod_100003": 32,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 6,
+      "auxiliary_degree": 2,
+      "symmetry": -1,
+      "columns": 25,
+      "rows": 175,
+      "rank_mod_100003": 25,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 7,
+      "auxiliary_degree": 2,
+      "symmetry": 1,
+      "columns": 41,
+      "rows": 312,
+      "rank_mod_100003": 41,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 7,
+      "auxiliary_degree": 2,
+      "symmetry": -1,
+      "columns": 32,
+      "rows": 225,
+      "rank_mod_100003": 32,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 8,
+      "auxiliary_degree": 2,
+      "symmetry": 1,
+      "columns": 50,
+      "rows": 376,
+      "rank_mod_100003": 50,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 8,
+      "auxiliary_degree": 2,
+      "symmetry": -1,
+      "columns": 41,
+      "rows": 281,
+      "rank_mod_100003": 41,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 9,
+      "auxiliary_degree": 2,
+      "symmetry": 1,
+      "columns": 61,
+      "rows": 448,
+      "rank_mod_100003": 61,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 9,
+      "auxiliary_degree": 2,
+      "symmetry": -1,
+      "columns": 50,
+      "rows": 343,
+      "rank_mod_100003": 50,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 10,
+      "auxiliary_degree": 2,
+      "symmetry": 1,
+      "columns": 72,
+      "rows": 524,
+      "rank_mod_100003": 72,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 10,
+      "auxiliary_degree": 2,
+      "symmetry": -1,
+      "columns": 61,
+      "rows": 411,
+      "rank_mod_100003": 61,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 11,
+      "auxiliary_degree": 2,
+      "symmetry": 1,
+      "columns": 85,
+      "rows": 608,
+      "rank_mod_100003": 85,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 11,
+      "auxiliary_degree": 2,
+      "symmetry": -1,
+      "columns": 72,
+      "rows": 485,
+      "rank_mod_100003": 72,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 12,
+      "auxiliary_degree": 2,
+      "symmetry": 1,
+      "columns": 98,
+      "rows": 696,
+      "rank_mod_100003": 97,
+      "nullity_mod_100003": 1
+    },
+    {
+      "d": 12,
+      "auxiliary_degree": 2,
+      "symmetry": -1,
+      "columns": 85,
+      "rows": 565,
+      "rank_mod_100003": 85,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 0,
+      "auxiliary_degree": 3,
+      "symmetry": 1,
+      "columns": 6,
+      "rows": 62,
+      "rank_mod_100003": 6,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 0,
+      "auxiliary_degree": 3,
+      "symmetry": -1,
+      "columns": 4,
+      "rows": 28,
+      "rank_mod_100003": 4,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 1,
+      "auxiliary_degree": 3,
+      "symmetry": 1,
+      "columns": 11,
+      "rows": 106,
+      "rank_mod_100003": 11,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 1,
+      "auxiliary_degree": 3,
+      "symmetry": -1,
+      "columns": 7,
+      "rows": 56,
+      "rank_mod_100003": 7,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 2,
+      "auxiliary_degree": 3,
+      "symmetry": 1,
+      "columns": 17,
+      "rows": 158,
+      "rank_mod_100003": 17,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 2,
+      "auxiliary_degree": 3,
+      "symmetry": -1,
+      "columns": 13,
+      "rows": 96,
+      "rank_mod_100003": 13,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 3,
+      "auxiliary_degree": 3,
+      "symmetry": 1,
+      "columns": 26,
+      "rows": 222,
+      "rank_mod_100003": 26,
+      "nullity_mod_100003": 0
+    },
+    {
+      "d": 3,
+      "auxiliary_degree": 3,
+      "symmetry": -1,
+      "columns": 20,
+      "rows": 142,
+      "rank_mod_100003": 19,
+      "nullity_mod_100003": 1
+    }
+  ]
+}

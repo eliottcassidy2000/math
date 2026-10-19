@@ -1,0 +1,17 @@
+PASS unrestricted cyclic nonlift 5 dimension 1
+PASS unrestricted cyclic nonlift 7 dimension 1
+PASS unrestricted cyclic nonlift 11 dimension 1
+PASS unrestricted cyclic nonlift 13 dimension 1
+PASS unrestricted cyclic nonlift 17 dimension 1
+PASS unrestricted cyclic nonlift 19 dimension 1
+PASS unrestricted cyclic nonlift 23 dimension 1
+PASS unrestricted cyclic nonlift 29 dimension 1
+PASS unrestricted cyclic nonlift 31 dimension 1
+PASS unrestricted cyclic nonlift 37 dimension 1
+PASS unrestricted cyclic nonlift 41 dimension 1
+PASS unrestricted cyclic nonlift 43 dimension 1
+PASS unrestricted cyclic nonlift 47 dimension 1
+PASS unrestricted cyclic nonlift 53 dimension 1
+PASS unrestricted cyclic nonlift 59 dimension 2
+PASS unrestricted cyclic nonlift 61 dimension 1
+PASS supported Smith controls

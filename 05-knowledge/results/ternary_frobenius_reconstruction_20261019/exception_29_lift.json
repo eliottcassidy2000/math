@@ -1,0 +1,11 @@
+{
+  "prime": 29,
+  "degree": 42,
+  "input": "cyclic all-interior homogeneous polynomials",
+  "columns": 274,
+  "rows": 946,
+  "rank": 273,
+  "augmented_rank": 274,
+  "kernel_dimension": 1,
+  "lift_mod_prime_squared_exists": false
+}

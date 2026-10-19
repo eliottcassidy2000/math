@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "families": [
+    {
+      "name": "alternating",
+      "P_terms": 42,
+      "certificate_file_sign": -1,
+      "rational_original_exponent_min": -1,
+      "rational_original_exponent_max": 3,
+      "specializations": [
+        {
+          "p": 3,
+          "terms": 36,
+          "nonzero": true
+        },
+        {
+          "p": 5,
+          "terms": 42,
+          "nonzero": true
+        },
+        {
+          "p": 7,
+          "terms": 42,
+          "nonzero": true
+        },
+        {
+          "p": 11,
+          "terms": 42,
+          "nonzero": true
+        },
+        {
+          "p": 13,
+          "terms": 42,
+          "nonzero": true
+        },
+        {
+          "p": 17,
+          "terms": 42,
+          "nonzero": true
+        },
+        {
+          "p": 19,
+          "terms": 42,
+          "nonzero": true
+        },
+        {
+          "p": 23,
+          "terms": 42,
+          "nonzero": true
+        },
+        {
+          "p": 29,
+          "terms": 42,
+          "nonzero": true
+        },
+        {
+          "p": 31,
+          "terms": 42,
+          "nonzero": true
+        }
+      ]
+    },
+    {
+      "name": "symmetric",
+      "P_terms": 363,
+      "certificate_file_sign": 1,
+      "rational_original_exponent_min": -1,
+      "rational_original_exponent_max": 12,
+      "specializations": [
+        {
+          "p": 3,
+          "terms": 0,
+          "nonzero": false
+        },
+        {
+          "p": 5,
+          "terms": 0,
+          "nonzero": false
+        },
+        {
+          "p": 7,
+          "terms": 0,
+          "nonzero": false
+        },
+        {
+          "p": 11,
+          "terms": 336,
+          "nonzero": true
+        },
+        {
+          "p": 13,
+          "terms": 315,
+          "nonzero": true
+        },
+        {
+          "p": 17,
+          "terms": 315,
+          "nonzero": true
+        },
+        {
+          "p": 19,
+          "terms": 345,
+          "nonzero": true
+        },
+        {
+          "p": 23,
+          "terms": 357,
+          "nonzero": true
+        },
+        {
+          "p": 29,
+          "terms": 351,
+          "nonzero": true
+        },
+        {
+          "p": 31,
+          "terms": 363,
+          "nonzero": true
+        }
+      ]
+    }
+  ],
+  "check_count": 4083
+}

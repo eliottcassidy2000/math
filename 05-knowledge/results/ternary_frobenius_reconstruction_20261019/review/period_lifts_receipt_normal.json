@@ -1,0 +1,509 @@
+{
+  "status": "PASS",
+  "full_cyclic_lifts": [
+    {
+      "p": 5,
+      "columns": 7,
+      "norm_rank": 6,
+      "augmented_rank": 7,
+      "W_dimension": 1
+    },
+    {
+      "p": 7,
+      "columns": 12,
+      "norm_rank": 11,
+      "augmented_rank": 12,
+      "W_dimension": 1
+    },
+    {
+      "p": 11,
+      "columns": 26,
+      "norm_rank": 25,
+      "augmented_rank": 26,
+      "W_dimension": 1
+    },
+    {
+      "p": 13,
+      "columns": 35,
+      "norm_rank": 34,
+      "augmented_rank": 35,
+      "W_dimension": 1
+    },
+    {
+      "p": 17,
+      "columns": 57,
+      "norm_rank": 56,
+      "augmented_rank": 57,
+      "W_dimension": 1
+    },
+    {
+      "p": 19,
+      "columns": 70,
+      "norm_rank": 69,
+      "augmented_rank": 70,
+      "W_dimension": 1
+    },
+    {
+      "p": 23,
+      "columns": 100,
+      "norm_rank": 99,
+      "augmented_rank": 100,
+      "W_dimension": 1
+    },
+    {
+      "p": 29,
+      "columns": 155,
+      "norm_rank": 154,
+      "augmented_rank": 155,
+      "W_dimension": 1
+    },
+    {
+      "p": 31,
+      "columns": 176,
+      "norm_rank": 175,
+      "augmented_rank": 176,
+      "W_dimension": 1
+    },
+    {
+      "p": 37,
+      "columns": 247,
+      "norm_rank": 246,
+      "augmented_rank": 247,
+      "W_dimension": 1
+    },
+    {
+      "p": 41,
+      "columns": 301,
+      "norm_rank": 300,
+      "augmented_rank": 301,
+      "W_dimension": 1
+    },
+    {
+      "p": 43,
+      "columns": 330,
+      "norm_rank": 329,
+      "augmented_rank": 330,
+      "W_dimension": 1
+    },
+    {
+      "p": 47,
+      "columns": 392,
+      "norm_rank": 391,
+      "augmented_rank": 392,
+      "W_dimension": 1
+    },
+    {
+      "p": 53,
+      "columns": 495,
+      "norm_rank": 494,
+      "augmented_rank": 495,
+      "W_dimension": 1
+    },
+    {
+      "p": 59,
+      "columns": 610,
+      "norm_rank": 608,
+      "augmented_rank": 609,
+      "W_dimension": 2
+    },
+    {
+      "p": 61,
+      "columns": 651,
+      "norm_rank": 650,
+      "augmented_rank": 651,
+      "W_dimension": 1
+    }
+  ],
+  "supported_smith": [
+    {
+      "degree": 1,
+      "invariant_factors": [
+        3
+      ]
+    },
+    {
+      "degree": 3,
+      "invariant_factors": [
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "degree": 5,
+      "invariant_factors": [
+        1,
+        1,
+        1,
+        3,
+        60
+      ]
+    },
+    {
+      "degree": 7,
+      "invariant_factors": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        6,
+        420
+      ]
+    },
+    {
+      "degree": 9,
+      "invariant_factors": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        12,
+        420
+      ]
+    },
+    {
+      "degree": 11,
+      "invariant_factors": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        6,
+        12,
+        4620
+      ]
+    },
+    {
+      "degree": 13,
+      "invariant_factors": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        6,
+        12,
+        60060
+      ]
+    },
+    {
+      "degree": 15,
+      "invariant_factors": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        6,
+        12,
+        60060
+      ]
+    },
+    {
+      "degree": 17,
+      "invariant_factors": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        12,
+        12,
+        1021020
+      ]
+    },
+    {
+      "degree": 19,
+      "invariant_factors": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        12,
+        12,
+        19399380
+      ]
+    },
+    {
+      "degree": 21,
+      "invariant_factors": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        12,
+        12,
+        19399380
+      ]
+    },
+    {
+      "degree": 23,
+      "invariant_factors": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        12,
+        12,
+        446185740
+      ]
+    },
+    {
+      "degree": 25,
+      "invariant_factors": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        12,
+        60,
+        446185740
+      ]
+    },
+    {
+      "degree": 27,
+      "invariant_factors": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        6,
+        12,
+        60,
+        446185740
+      ]
+    },
+    {
+      "degree": 29,
+      "invariant_factors": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        6,
+        12,
+        60,
+        12939386460
+      ]
+    },
+    {
+      "degree": 31,
+      "invariant_factors": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        6,
+        12,
+        60,
+        401120980260
+      ]
+    },
+    {
+      "degree": 49,
+      "invariant_factors": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        12,
+        12,
+        420,
+        1229779565176982820
+      ]
+    }
+  ]
+}
