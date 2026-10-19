@@ -1,0 +1,26 @@
+{
+  "status": "EXACT_CONTROLS_PASSED",
+  "scope": "Symbolic arbitrary-size theorem; finite naturally labelled controls through six vertices, both dual orientations; nonnegative integer laws of length two through seven with entries zero through four.",
+  "stats": {
+    "integer_monotone_laws": 701,
+    "posets": 5230,
+    "swap_checks": 2560320,
+    "skeleton_laws": 3821982,
+    "structural_orientations": 104314,
+    "good_orientations": 36992,
+    "weighted_good_orientations": 35455,
+    "very_good_pairs": 25632
+  },
+  "digest": "2d0cd8ddcff4409d7c412f72e9b0e80bf2f442579a76d763c5b6b565f02a00e9",
+  "full_upset_distinction": {
+    "pred": [
+      0,
+      0,
+      1,
+      5,
+      3
+    ],
+    "extensions": 9,
+    "v_before_u_count": 3
+  }
+}
