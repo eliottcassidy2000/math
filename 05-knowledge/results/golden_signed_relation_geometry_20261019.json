@@ -1,0 +1,420 @@
+{
+  "checks": 16176,
+  "code_weight_distribution": {
+    "0": 1,
+    "5": 132,
+    "6": 132,
+    "8": 330,
+    "9": 110,
+    "11": 24
+  },
+  "common_golden_quotients": [
+    {
+      "k": 4,
+      "modulus": 5,
+      "r": 1
+    },
+    {
+      "k": 8,
+      "modulus": 5,
+      "r": 1
+    },
+    {
+      "k": 12,
+      "modulus": 5,
+      "r": 1
+    },
+    {
+      "k": 16,
+      "modulus": 5,
+      "r": 1
+    },
+    {
+      "k": 20,
+      "modulus": 5,
+      "r": 1
+    },
+    {
+      "k": 24,
+      "modulus": 5,
+      "r": 1
+    },
+    {
+      "k": 28,
+      "modulus": 5,
+      "r": 1
+    },
+    {
+      "k": 32,
+      "modulus": 5,
+      "r": 1
+    },
+    {
+      "k": 36,
+      "modulus": 5,
+      "r": 1
+    },
+    {
+      "k": 40,
+      "modulus": 5,
+      "r": 1
+    },
+    {
+      "k": 35,
+      "modulus": 71,
+      "r": 2
+    },
+    {
+      "k": 5,
+      "modulus": 11,
+      "r": 4
+    },
+    {
+      "k": 9,
+      "modulus": 19,
+      "r": 4
+    },
+    {
+      "k": 10,
+      "modulus": 11,
+      "r": 4
+    },
+    {
+      "k": 15,
+      "modulus": 341,
+      "r": 4
+    },
+    {
+      "k": 18,
+      "modulus": 19,
+      "r": 4
+    },
+    {
+      "k": 20,
+      "modulus": 11,
+      "r": 4
+    },
+    {
+      "k": 25,
+      "modulus": 11,
+      "r": 4
+    },
+    {
+      "k": 27,
+      "modulus": 19,
+      "r": 4
+    },
+    {
+      "k": 30,
+      "modulus": 341,
+      "r": 4
+    },
+    {
+      "k": 35,
+      "modulus": 11,
+      "r": 4
+    },
+    {
+      "k": 36,
+      "modulus": 19,
+      "r": 4
+    },
+    {
+      "k": 40,
+      "modulus": 11,
+      "r": 4
+    },
+    {
+      "k": 4,
+      "modulus": 5,
+      "r": 5
+    },
+    {
+      "k": 8,
+      "modulus": 5,
+      "r": 5
+    },
+    {
+      "k": 12,
+      "modulus": 5,
+      "r": 5
+    },
+    {
+      "k": 16,
+      "modulus": 5,
+      "r": 5
+    },
+    {
+      "k": 18,
+      "modulus": 19,
+      "r": 5
+    },
+    {
+      "k": 20,
+      "modulus": 5,
+      "r": 5
+    },
+    {
+      "k": 24,
+      "modulus": 5,
+      "r": 5
+    },
+    {
+      "k": 28,
+      "modulus": 5,
+      "r": 5
+    },
+    {
+      "k": 32,
+      "modulus": 5,
+      "r": 5
+    },
+    {
+      "k": 36,
+      "modulus": 95,
+      "r": 5
+    },
+    {
+      "k": 40,
+      "modulus": 5,
+      "r": 5
+    }
+  ],
+  "decoder_nonlinearity_witness": {
+    "J_sum": [
+      2,
+      0,
+      0,
+      2,
+      2
+    ],
+    "sum_J": [
+      1,
+      0,
+      1,
+      0,
+      2
+    ],
+    "w": [
+      0,
+      0,
+      0,
+      2,
+      0
+    ],
+    "z": [
+      2,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "error_group_orbits": {
+    "1": 1,
+    "11": 2,
+    "55": 4
+  },
+  "field_group_orbits": {
+    "1": 1,
+    "11": 2,
+    "55": 4
+  },
+  "golay_generator_low_to_high": [
+    2,
+    0,
+    1,
+    2,
+    1,
+    1
+  ],
+  "golden_R10_orbits": {
+    "1": 1,
+    "5": 2,
+    "10": 11
+  },
+  "prime_power_lifts": [
+    {
+      "a": 1,
+      "golden_orbits": {
+        "1": 1,
+        "5": 2
+      },
+      "golden_root": 4,
+      "modulus": 11,
+      "tripling_orbits": {
+        "1": 1,
+        "5": 2
+      }
+    },
+    {
+      "a": 2,
+      "golden_orbits": {
+        "1": 1,
+        "5": 2,
+        "55": 2
+      },
+      "golden_root": 37,
+      "modulus": 121,
+      "tripling_orbits": {
+        "1": 1,
+        "5": 24
+      }
+    },
+    {
+      "a": 3,
+      "golden_orbits": {
+        "1": 1,
+        "5": 2,
+        "55": 2,
+        "605": 2
+      },
+      "golden_root": 37,
+      "modulus": 1331,
+      "tripling_orbits": {
+        "1": 1,
+        "5": 24,
+        "55": 22
+      }
+    },
+    {
+      "a": 4,
+      "golden_orbits": {
+        "1": 1,
+        "5": 2,
+        "55": 2,
+        "605": 2,
+        "6655": 2
+      },
+      "golden_root": 4030,
+      "modulus": 14641,
+      "tripling_orbits": {
+        "1": 1,
+        "5": 24,
+        "55": 22,
+        "605": 22
+      }
+    }
+  ],
+  "reciprocal_generator_low_to_high": [
+    2,
+    2,
+    1,
+    2,
+    0,
+    1
+  ],
+  "reflection_hostile_codeword": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    2,
+    1,
+    2,
+    2
+  ],
+  "signed_period_quotients": [
+    {
+      "dilation_order": 1,
+      "k": 1,
+      "sign": 1,
+      "translation_modulus": 2
+    },
+    {
+      "dilation_order": 2,
+      "k": 1,
+      "sign": -1,
+      "translation_modulus": 4
+    },
+    {
+      "dilation_order": 2,
+      "k": 2,
+      "sign": 1,
+      "translation_modulus": 8
+    },
+    {
+      "dilation_order": 4,
+      "k": 2,
+      "sign": -1,
+      "translation_modulus": 10
+    },
+    {
+      "dilation_order": 3,
+      "k": 3,
+      "sign": 1,
+      "translation_modulus": 26
+    },
+    {
+      "dilation_order": 6,
+      "k": 3,
+      "sign": -1,
+      "translation_modulus": 28
+    },
+    {
+      "dilation_order": 4,
+      "k": 4,
+      "sign": 1,
+      "translation_modulus": 80
+    },
+    {
+      "dilation_order": 8,
+      "k": 4,
+      "sign": -1,
+      "translation_modulus": 82
+    },
+    {
+      "dilation_order": 5,
+      "k": 5,
+      "sign": 1,
+      "translation_modulus": 242
+    },
+    {
+      "dilation_order": 10,
+      "k": 5,
+      "sign": -1,
+      "translation_modulus": 244
+    },
+    {
+      "dilation_order": 6,
+      "k": 6,
+      "sign": 1,
+      "translation_modulus": 728
+    },
+    {
+      "dilation_order": 12,
+      "k": 6,
+      "sign": -1,
+      "translation_modulus": 730
+    },
+    {
+      "dilation_order": 7,
+      "k": 7,
+      "sign": 1,
+      "translation_modulus": 2186
+    },
+    {
+      "dilation_order": 14,
+      "k": 7,
+      "sign": -1,
+      "translation_modulus": 2188
+    },
+    {
+      "dilation_order": 8,
+      "k": 8,
+      "sign": 1,
+      "translation_modulus": 6560
+    },
+    {
+      "dilation_order": 16,
+      "k": 8,
+      "sign": -1,
+      "translation_modulus": 6562
+    }
+  ],
+  "status": "FINITE-EXACT controls; proofs and non-consequences in companion note",
+  "syndrome_count": 243
+}
