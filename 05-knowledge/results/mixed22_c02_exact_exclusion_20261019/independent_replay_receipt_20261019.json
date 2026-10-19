@@ -1,0 +1,43 @@
+{
+  "certificate_sha256": "0011a440a4619111d4bab9160237f4743e478b2a755039eaefe0fe2efbf4663c",
+  "distinct_certificates": 3465,
+  "families": [
+    {
+      "analytic_balanced_cores": 0,
+      "analytic_cycle_cores": 0,
+      "c": 0,
+      "cores": 40,
+      "directed_screen_orders": 806,
+      "distinct_generator_certificates": 20,
+      "generator_orders": 42,
+      "short_span_orders_via_Peczarski_2008": 67
+    },
+    {
+      "analytic_balanced_cores": 0,
+      "analytic_cycle_cores": 0,
+      "c": 1,
+      "cores": 357,
+      "directed_screen_orders": 18464,
+      "distinct_generator_certificates": 206,
+      "generator_orders": 862,
+      "short_span_orders_via_Peczarski_2008": 734
+    },
+    {
+      "analytic_balanced_cores": 115,
+      "analytic_cycle_cores": 0,
+      "c": 2,
+      "cores": 4824,
+      "directed_screen_orders": 703635,
+      "distinct_generator_certificates": 3239,
+      "generator_orders": 18500,
+      "short_span_orders_via_Peczarski_2008": 1257
+    }
+  ],
+  "maximum_certificate_support": 7,
+  "maximum_integer_weight": 4460564226458160,
+  "scope": "Seven-thin mixed(2,2) maximum-span root morphologies with c=0,1,2 only. Uses the published six-thin theorem for span at most 3.",
+  "seconds": 32.39611029624939,
+  "six_thin_source": "https://link.springer.com/article/10.1007/s11083-008-9081-9",
+  "status": "ALL_5221_CORES_INDEPENDENTLY_EXACT_REPLAYED",
+  "verifier_sha256": "660b1d17cd86f80f48d35c6de072349da662f001ae5d632f5101c9c36a0a5b2e"
+}

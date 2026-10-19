@@ -1,0 +1,72 @@
+{
+  "LP_calls": 122,
+  "certificate_sha256": "6b5852a6399af7cb17e05ee271fb2e79ab16eee9e1e0edc3173b22e361c003df",
+  "committed_bytes": 1310331,
+  "completed_cores": 5221,
+  "continuation_started_unix": 1792400254.4308615,
+  "dependencies": {
+    "cone_engine_mixed22_span4_20261019.py": "3f2e099ee2d756398113ef4e292f42441217924885bcb1c447904a6d5b14df02",
+    "exact_replay_mixed22_span4_20261019.py": "93c595ac7a3729ac07fdc90bb1f86eecb44401d0c29daaca556986b539cebd55",
+    "scan_mixed22_span4_20261019.py": "4c337f6c2b719f45ea4617192f32212ba6c9a5bc9598fd4e62929bd0dc5f6b60"
+  },
+  "elapsed_seconds": 669.841744184494,
+  "families": {
+    "0": {
+      "analytic_balanced_cores": 0,
+      "analytic_cycle_cores": 0,
+      "analytic_directed_orders": 806,
+      "certificate_kind_counts": {
+        "one": 42
+      },
+      "completed_cores": 40,
+      "distinct_certificates": 20,
+      "generator_orders": 42,
+      "short_span_orders": 67,
+      "target_cores": 40
+    },
+    "1": {
+      "analytic_balanced_cores": 0,
+      "analytic_cycle_cores": 0,
+      "analytic_directed_orders": 18464,
+      "certificate_kind_counts": {
+        "dual": 16,
+        "one": 784,
+        "two": 62
+      },
+      "completed_cores": 357,
+      "distinct_certificates": 206,
+      "generator_orders": 862,
+      "short_span_orders": 734,
+      "target_cores": 357
+    },
+    "2": {
+      "analytic_balanced_cores": 115,
+      "analytic_cycle_cores": 0,
+      "analytic_directed_orders": 703635,
+      "certificate_kind_counts": {
+        "dual": 171,
+        "one": 16327,
+        "two": 2002
+      },
+      "completed_cores": 4824,
+      "distinct_certificates": 3239,
+      "generator_orders": 18500,
+      "short_span_orders": 1257,
+      "target_cores": 4824
+    }
+  },
+  "last_global_index": 5220,
+  "prior_certificate_sha256": "b4dfe7768575ce7a26131084dbe0e0667f17aaeb49d9b9c41ef2194dc5bef626",
+  "prior_scan_source": "mixed22-c02-review-stage",
+  "scope": "Bounded seven-thin mixed(2,2), c=0,1,2 only. No larger-c claim.",
+  "six_thin_dependency": {
+    "author": "Marcin Peczarski",
+    "doi": "10.1007/s11083-008-9081-9",
+    "title": "The Gold Partition Conjecture for 6-Thin Posets",
+    "use": "Maximum root span at most three implies global incomparability degree at most six.",
+    "year": 2008
+  },
+  "started_unix": 1792399657.8497796,
+  "status": "ALL_BOUNDED_CORES_CERTIFIED_AND_REPLAYED",
+  "target_cores": 5221
+}

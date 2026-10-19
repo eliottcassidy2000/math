@@ -1,0 +1,15 @@
+{
+  "compact_bytes": 151930,
+  "compact_sha256": "0011a440a4619111d4bab9160237f4743e478b2a755039eaefe0fe2efbf4663c",
+  "legacy_records_reused_without_new_search": 29,
+  "legacy_replay_semantics": "Records without six_thin_theorem cover every admissible projected order; newer flagged records separately count published-theorem short-span exclusions.",
+  "legacy_stream_sha256": "b4dfe7768575ce7a26131084dbe0e0667f17aaeb49d9b9c41ef2194dc5bef626",
+  "record_count": 5221,
+  "search_dependencies": {
+    "cone_engine_mixed22_span4_20261019.py": "3f2e099ee2d756398113ef4e292f42441217924885bcb1c447904a6d5b14df02",
+    "exact_replay_mixed22_span4_20261019.py": "93c595ac7a3729ac07fdc90bb1f86eecb44401d0c29daaca556986b539cebd55",
+    "scan_mixed22_span4_20261019.py": "4c337f6c2b719f45ea4617192f32212ba6c9a5bc9598fd4e62929bd0dc5f6b60"
+  },
+  "source_bytes": 1310331,
+  "source_stream_sha256": "6b5852a6399af7cb17e05ee271fb2e79ab16eee9e1e0edc3173b22e361c003df"
+}

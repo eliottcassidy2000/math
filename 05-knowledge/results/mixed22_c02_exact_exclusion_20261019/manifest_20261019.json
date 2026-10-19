@@ -1,0 +1,75 @@
+{
+  "files": [
+    {
+      "bytes": 747,
+      "name": "README.md",
+      "sha256": "29015553dfe1d3b680ab730ceb414739e6a3da19fc3798b8981262d390075db3"
+    },
+    {
+      "bytes": 151930,
+      "name": "certificates_20261019.json.gz",
+      "sha256": "0011a440a4619111d4bab9160237f4743e478b2a755039eaefe0fe2efbf4663c"
+    },
+    {
+      "bytes": 2418,
+      "name": "construction_receipt_20261019.json",
+      "sha256": "1b056d6f7648451823acbf652ff18e04dd5e37b1d3847fa5b13cfdf0bd32fc04"
+    },
+    {
+      "bytes": 1484,
+      "name": "independent_replay_receipt_20261019.json",
+      "sha256": "b2e7dc257a668e40ca59eb77bf9bea8d4d337378962871352f060fe7f9744a2f"
+    },
+    {
+      "bytes": 2125,
+      "name": "max_span_directed_defect_reduction_20261019.md",
+      "sha256": "d4a36a5a4a7ada2b7a83a747248171b3e99998e079a2d5fd4aa035c1b47d3ac4"
+    },
+    {
+      "bytes": 10180,
+      "name": "mixed22_c02_exact_exclusion_20261019.md",
+      "sha256": "10fba622b6de3c231967fe8a8d80ce80c4aa7f94e8304b0e1ccde234c8a41c2f"
+    },
+    {
+      "bytes": 6790,
+      "name": "mixed22_core_realization_and_span_dependency_20261019.md",
+      "sha256": "48d84cfc9202fdab46356713b4f2b230fcbba42c9f32e70f29354e8d0ef221b8"
+    },
+    {
+      "bytes": 6477,
+      "name": "mixed22_core_realization_receipt_20261019.json",
+      "sha256": "174eff02165737f8dff456f153f2641f8664ccd72169a65c525eed7faacd94bc"
+    },
+    {
+      "bytes": 7802,
+      "name": "one_defect_exchange_reductions_20261019.md",
+      "sha256": "2a062aea8903849474640db25dcfc5a3485c6a965d251a90c367d0ccace33be9"
+    },
+    {
+      "bytes": 956,
+      "name": "repack_provenance_20261019.json",
+      "sha256": "a6a4bb4eff29d099caf1a9d6837ff193cdb6a303c0c378bffaaec30f73308a4b"
+    },
+    {
+      "bytes": 6227,
+      "name": "seven_thin_saturation_increment_lemma_20261019.md",
+      "sha256": "2369610b84d27c367b2abf10dbb080dff2f6ec1500495ea0650409c98b2da243"
+    },
+    {
+      "bytes": 4603,
+      "name": "side_specific_defect_propagation_20261019.md",
+      "sha256": "a89ba5b2f82f0eb906185dd86dca42785c6279476d884e158912e9fdab090230"
+    },
+    {
+      "bytes": 6330,
+      "name": "verify_mixed22_c02_exact_exclusion_20261019.py",
+      "sha256": "660b1d17cd86f80f48d35c6de072349da662f001ae5d632f5101c9c36a0a5b2e"
+    },
+    {
+      "bytes": 5776,
+      "name": "verify_mixed22_core_realization_20261019.py",
+      "sha256": "8eeb06e92c5dbf0c898b3335a9b9b3472e8db3c1ebbcfd4d4198d9110528b433"
+    }
+  ],
+  "scope": "Seven-thin mixed(2,2), c=0,1,2; published six-thin dependency explicit."
+}
