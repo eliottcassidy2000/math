@@ -1,0 +1,32 @@
+{
+  "checks": 28710,
+  "date": "2026-10-19",
+  "dependencies": [
+    "../graceful_three_color_release_20261019/THREE_COLOR_RELEASE_DICHOTOMY.md"
+  ],
+  "files": [
+    {
+      "bytes": 1652,
+      "path": "README.md",
+      "sha256": "2246f3eac95bba87572f8cc0b079925e65bd83fbbcba55b38c8a75e5edf48527"
+    },
+    {
+      "bytes": 13507,
+      "path": "CLASSIFICATION_AND_TWO_RELEASES.md",
+      "sha256": "77610ef075fcba6409f4d89c48957a52fb63ff32548331c4e025e625ea6a7c21"
+    },
+    {
+      "bytes": 7842,
+      "path": "verify_classification_and_releases.py",
+      "sha256": "f307a9bab268cc10eac63770d3b456df8fa2fa2c3cf19aa820b668312304e2fa"
+    },
+    {
+      "bytes": 3065,
+      "path": "classification-release-receipt.json",
+      "sha256": "ba2bd48d3b76eeca95fed7b64620d90d79833e7305f299d8c787cca45c7e48be"
+    }
+  ],
+  "package": "three_color_obstruction_classification_20261019",
+  "status": "PROVED_AND_EXACTLY_VERIFIED",
+  "verification": "Normal and python -O receipts are byte-identical. The general-field theorem has an analytic proof."
+}
