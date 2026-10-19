@@ -1,0 +1,16 @@
+{
+  "status": "PROVED; independent mathematical review PASS; root approved",
+  "publication_scope": "readable proof, exact controls, receipts, and independent audit",
+  "files": [
+    "HEIGHT_CONTROLLED_ENTRY.md",
+    "README.md",
+    "independent-review/INDEPENDENT_REVIEW.md",
+    "independent-review/check-receipt-optimized.json",
+    "independent-review/check-receipt.json",
+    "independent-review/independent_checks.py",
+    "verification-receipt.json",
+    "verify_height_controlled_entry.py"
+  ],
+  "theorem_scope": "density-one height-controlled prescribed-word entry with explicit power-saving exceptional exponent; no pointwise entry or recurrence",
+  "validation": "writer and independent normal/-O outputs agree with receipts; final Korec exponent and logarithmic-clock attribution included"
+}

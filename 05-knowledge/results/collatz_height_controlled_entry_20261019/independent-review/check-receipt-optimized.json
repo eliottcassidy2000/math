@@ -1,0 +1,14 @@
+{
+  "checked_proof_sha256": "287c7996bdaf7ccf18400ce7308faee8e81fecd01a9189c9b96af59841c36e90",
+  "checks": 460126,
+  "chernoff_exponent": "0.0054191595091437797607714718221231069793341847677185861830964238167",
+  "delta": "1.3121234961153415632627054847103503360139633761920713954964436147E-12",
+  "finite_source_controls": 32766,
+  "finite_source_range": "complete dyadic intervals of exponents 1 through 14",
+  "minimum_candidate_count_in_base_period": 1,
+  "q": "0.99500415411097316058797173887450468804275735154329626265196303633",
+  "rounding_control": "complete period 512<=m<768, with exact 256-translation",
+  "scope": "Independent finite controls. All-size proof is the written audit.",
+  "status": "PASS",
+  "word_residue": 2962948091
+}

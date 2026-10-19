@@ -1,0 +1,16 @@
+{
+  "chernoff_q20": "100000000000000000000/110535586945520548779",
+  "chernoff_q_display": 0.9950041541109732,
+  "delta_display": 1.3121234961153416e-12,
+  "dyadic_parameter_control": "all integers m in [512,20000]",
+  "explicit_checks": 94642,
+  "height_exponent": "15/16",
+  "independent_moment_and_parity_control": "all parity words through length 12",
+  "length": 32,
+  "modulus": 4294967296,
+  "residue": 2962948091,
+  "scope": "symbolic all-size proof plus finite exact controls, not orbit or source census",
+  "status": "PASS",
+  "time_factor": "7/8",
+  "word": "11011011011011010101101110101010"
+}
