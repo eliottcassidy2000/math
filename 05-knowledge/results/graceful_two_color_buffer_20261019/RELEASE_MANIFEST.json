@@ -1,0 +1,28 @@
+{
+  "claim": "Every completion fiber in the hostile family k>=2,m>=2k+2 is connected under at-most-two-color moves, diameter<=2k-1; abstract sufficient buffer/contact theorem.",
+  "files": {
+    "GRACEFUL_TWO_COLOR_BUFFER.md": "11dda00a8728b1c61c6e091fba916ef39c08869b6c50ad7f84bdaf7d4152c6f8",
+    "LITERATURE_SCOPE.md": "e5912ea3c78bb78ca4437664bafe751efbd85b7125bd46028e172d7d199e04e4",
+    "two_color_buffer_controls.json": "1cb5b91da2fa0cbb69e16882cedff0c07472d8070e6ef6fa46b599567b97a703",
+    "two_color_buffer_controls.optimized.json": "1cb5b91da2fa0cbb69e16882cedff0c07472d8070e6ef6fa46b599567b97a703",
+    "verify_two_color_buffer.py": "768306a0bdf7bd87a5e93df979ca7e082f860ed8b6152faadb71b1907c7488ad"
+  },
+  "limits": [
+    "No global GT1 claim",
+    "No arbitrary-fiber claim",
+    "Tree shape may change; no Graceful Tree Conjecture claim",
+    "No optimal diameter or historical novelty claim"
+  ],
+  "replay": {
+    "checks": 891915,
+    "moves_replayed": 84026,
+    "normal_optimized_identical": true,
+    "ordered_pairs": 23212
+  },
+  "repository_destination": "05-knowledge/results/graceful_two_color_buffer_20261019",
+  "source_note_sha256": {
+    "graceful_fiber_obstructions_20261019.md": "49d121f89d86ac64b8030c5eee62569ff74333782c90e20838a21989a0a72585",
+    "graceful_square_exchange_20261019.md": "f508c08c6bd4b38133c95451bf05ad93b6bee83ab7bc5c8d843250e18660ceb8"
+  },
+  "status": "frozen proof and exact controls"
+}

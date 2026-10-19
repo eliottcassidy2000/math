@@ -1,0 +1,32 @@
+{
+  "checks": 891915,
+  "full_fiber_controls": [
+    {
+      "completions": 6,
+      "k": 2,
+      "m": 6,
+      "max_constructed_moves": 3,
+      "ordered_pairs": 36,
+      "proved_bound": 3
+    },
+    {
+      "completions": 26,
+      "k": 3,
+      "m": 8,
+      "max_constructed_moves": 5,
+      "ordered_pairs": 676,
+      "proved_bound": 5
+    },
+    {
+      "completions": 150,
+      "k": 4,
+      "m": 10,
+      "max_constructed_moves": 7,
+      "ordered_pairs": 22500,
+      "proved_bound": 7
+    }
+  ],
+  "moves_replayed": 84026,
+  "scope": "Exact exhaustive controls for k2,3,4; universal theorem follows from the cut/buffer proof. Abstract tree type may change.",
+  "status": "passed"
+}
