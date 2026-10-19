@@ -1,0 +1,180 @@
+{
+  "status": "Presentation-only overlays; mathematical statements unchanged",
+  "repository_directory": "05-knowledge/results/parabolic_cotangent_integrability_20261019",
+  "files": [
+    {
+      "path": "parabolic_cotangent_invariant_barrier.md",
+      "audited_source_sha256": "1ac226dafd787f9d1e74a864d05ad6d185aa125b2d526052efe08566ba5aa772",
+      "published_sha256": "91f2b46e8f4c5027495f97c5378cfe15da89353749056fa2cb587ccb93d003ca",
+      "presentation_changes": [
+        {
+          "kind": "relative_link_only",
+          "occurrences": 3
+        },
+        {
+          "kind": "relative_link_only",
+          "occurrences": 1
+        },
+        {
+          "kind": "relative_link_only",
+          "occurrences": 1
+        },
+        {
+          "kind": "relative_link_only",
+          "occurrences": 1
+        },
+        {
+          "kind": "relative_link_only",
+          "occurrences": 1
+        },
+        {
+          "kind": "relative_link_only",
+          "occurrences": 1
+        },
+        {
+          "kind": "relative_link_only",
+          "occurrences": 1
+        },
+        {
+          "kind": "relative_link_only",
+          "occurrences": 1
+        }
+      ],
+      "mathematical_statements_changed": false
+    },
+    {
+      "path": "formal_quadratic_unfolding_period.md",
+      "audited_source_sha256": "9b4c780bdbba32f157246bdb5ebb1a1bfe9ca7a969c6c674fe1457d58e8dc2c9",
+      "published_sha256": "c06777e739bb2732a8c8e8b31b17dbf3974f27d670f53db09afdd60c80f02fb7",
+      "presentation_changes": [
+        {
+          "kind": "relative_link_only",
+          "occurrences": 1
+        },
+        {
+          "kind": "publication_context_and_companion_link",
+          "occurrences": 1
+        }
+      ],
+      "mathematical_statements_changed": false
+    },
+    {
+      "path": "README.md",
+      "audited_source_sha256": "4c911c6a98be29e98f4e913850509a9ce14f1e8850a4d7e6b1587f91663b57ad",
+      "published_sha256": "fa00f6d8421ea25ec472d98fa725c724f072bee25ad77ac60fb1177a046f233d",
+      "presentation_changes": [
+        {
+          "kind": "relative_link_only",
+          "occurrences": 1
+        },
+        {
+          "kind": "relative_link_only",
+          "occurrences": 1
+        },
+        {
+          "kind": "publication_context_reproduction_and_review_links",
+          "occurrences": 1
+        }
+      ],
+      "mathematical_statements_changed": false
+    },
+    {
+      "path": "verify_parabolic_geometry.py",
+      "audited_source_sha256": "abc2f0a65df5caba6159bd3d62e5c8bd44fb286e2fda4d33610518833f69ea40",
+      "published_sha256": "abc2f0a65df5caba6159bd3d62e5c8bd44fb286e2fda4d33610518833f69ea40",
+      "presentation_changes": [],
+      "mathematical_statements_changed": false
+    },
+    {
+      "path": "verify_formal_unfolding.py",
+      "audited_source_sha256": "a45926267f219504f31de859af210f6731dbf3178002405893e3eb488922adb2",
+      "published_sha256": "a45926267f219504f31de859af210f6731dbf3178002405893e3eb488922adb2",
+      "presentation_changes": [],
+      "mathematical_statements_changed": false
+    },
+    {
+      "path": "exact-results.json",
+      "audited_source_sha256": "e68112c43972f4f3cacf6ef4072edc7a8a2899c7f144b71a0149e082346ded81",
+      "published_sha256": "e68112c43972f4f3cacf6ef4072edc7a8a2899c7f144b71a0149e082346ded81",
+      "presentation_changes": [],
+      "mathematical_statements_changed": false
+    },
+    {
+      "path": "formal-unfolding-exact-results.json",
+      "audited_source_sha256": "529dce07a4e557d06bb54d6bbec021983bd49a7fca37332266716466f866d895",
+      "published_sha256": "529dce07a4e557d06bb54d6bbec021983bd49a7fca37332266716466f866d895",
+      "presentation_changes": [],
+      "mathematical_statements_changed": false
+    },
+    {
+      "path": "verify.out",
+      "audited_source_sha256": "19ce6dd39643fd9fa92067bf9279cb0c3fac763aea353b931a0b9c9c5658dc7d",
+      "published_sha256": "19ce6dd39643fd9fa92067bf9279cb0c3fac763aea353b931a0b9c9c5658dc7d",
+      "presentation_changes": [],
+      "mathematical_statements_changed": false
+    },
+    {
+      "path": "verify.optimized.out",
+      "audited_source_sha256": "19ce6dd39643fd9fa92067bf9279cb0c3fac763aea353b931a0b9c9c5658dc7d",
+      "published_sha256": "19ce6dd39643fd9fa92067bf9279cb0c3fac763aea353b931a0b9c9c5658dc7d",
+      "presentation_changes": [],
+      "mathematical_statements_changed": false
+    },
+    {
+      "path": "unfolding.out",
+      "audited_source_sha256": "0a8e1008d055c454c6d4f0f7525ba4daf3bc6a146dd881d6f69dbeebc9d49a75",
+      "published_sha256": "0a8e1008d055c454c6d4f0f7525ba4daf3bc6a146dd881d6f69dbeebc9d49a75",
+      "presentation_changes": [],
+      "mathematical_statements_changed": false
+    },
+    {
+      "path": "unfolding.optimized.out",
+      "audited_source_sha256": "0a8e1008d055c454c6d4f0f7525ba4daf3bc6a146dd881d6f69dbeebc9d49a75",
+      "published_sha256": "0a8e1008d055c454c6d4f0f7525ba4daf3bc6a146dd881d6f69dbeebc9d49a75",
+      "presentation_changes": [],
+      "mathematical_statements_changed": false
+    },
+    {
+      "path": "review/REVIEW.md",
+      "audited_source_sha256": "52f99007066aa38e526ff2a81b3a7c504fe91505bb059d58101d620e56bff139",
+      "published_sha256": "61ab5e2e61e04d0293f69fdb88ea9310a2205e727a8c8fba2d15cbe87183a1d2",
+      "presentation_changes": [
+        {
+          "kind": "relative_link_only",
+          "occurrences": 1
+        },
+        {
+          "kind": "publication_context_and_hash_links",
+          "occurrences": 1
+        }
+      ],
+      "mathematical_statements_changed": false
+    },
+    {
+      "path": "review/independent_controls.py",
+      "audited_source_sha256": "89a97d1db03a148fad1d2109711a6ec2afdfe235741364ceffe39b5dc784c695",
+      "published_sha256": "73996d3728bb1909c6b6aa26ccc597cf0cb580af114b2d5cb1446a722e4281a8",
+      "presentation_changes": [
+        {
+          "kind": "reproduction_path_only",
+          "occurrences": 1
+        }
+      ],
+      "mathematical_statements_changed": false
+    },
+    {
+      "path": "review/independent-results.json",
+      "audited_source_sha256": "eac4791062adfdf8b514d25cf33949cb6fbe9d58241a2c7d3a89c18823b5494e",
+      "published_sha256": "eac4791062adfdf8b514d25cf33949cb6fbe9d58241a2c7d3a89c18823b5494e",
+      "presentation_changes": [],
+      "mathematical_statements_changed": false
+    },
+    {
+      "path": "review/reviewed-source-sha256.json",
+      "audited_source_sha256": "e4eb3025b0f37530ff2bb85e6d8a3b565d240fdbfbb449d87e82e9d7f8218a36",
+      "published_sha256": "e4eb3025b0f37530ff2bb85e6d8a3b565d240fdbfbb449d87e82e9d7f8218a36",
+      "presentation_changes": [],
+      "mathematical_statements_changed": false
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS; FINITE-EXACT, not a universal or analytic proof",
+  "checks": 129,
+  "independent_method": "fractions only; Julia recurrence, factor-derived cubic quotient, geometric identities, reciprocal logarithm",
+  "iterative_log_constructed_through": 20,
+  "iterative_log_compared_through": 14,
+  "time_form_checked_through": 6,
+  "jet_family_checked_N": [
+    2,
+    40
+  ],
+  "period_three_residue": "51/49",
+  "unfolding_A_checked_through": 8,
+  "unfolding_B_checked_through": 6,
+  "no_computational_claim": [
+    "divergence",
+    "all-degree rational invariant exclusion",
+    "meromorphic first-integral nonexistence"
+  ]
+}

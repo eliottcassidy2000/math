@@ -1,0 +1,11 @@
+{
+  "status": "FINITE-EXACT controls for a formal theorem, not an analytic transit bound",
+  "checks": 15,
+  "joint_log_degree": 10,
+  "v": "-17*delta**10/630 - 1727*delta**8*q**2/630 + 31*delta**8*q/70 - 3*delta**8/70 - 439*delta**6*q**4/105 - 62*delta**6*q**3/105 + 62*delta**6*q**2/105 - delta**6*q/5 + delta**6/30 + 319*delta**4*q**6/5 - 157*delta**4*q**5/5 + 69*delta**4*q**4/5 - 83*delta**4*q**3/15 + 61*delta**4*q**2/30 - 2*delta**4*q/3 + delta**4/6 + 11043*delta**2*q**8/70 - 2634*delta**2*q**7/35 + 174*delta**2*q**6/5 - 79*delta**2*q**5/5 + 43*delta**2*q**4/6 - 10*delta**2*q**3/3 + 5*delta**2*q**2/3 - delta**2*q + delta**2 + 19423*q**10/210 - 9427*q**9/210 + 649*q**8/30 - 157*q**7/15 + 31*q**6/6 - 8*q**5/3 + 3*q**4/2 - q**3 + q**2",
+  "W": "-17*delta**8/630 - 3*delta**6/70 + delta**4/30 + delta**2/6 + 19423*q**8/210 - 9427*q**7/210 + q**6*(979*delta**2/15 + 649/30) + q**5*(-911*delta**2/30 - 157/15) + q**4*(-22*delta**4/15 + 79*delta**2/6 + 31/6) + q**3*(-31*delta**4/30 - 16*delta**2/3 - 8/3) + q**2*(-19*delta**6/7 + 19*delta**4/30 + 2*delta**2 + 3/2) + q*(31*delta**6/70 - delta**4/5 - 2*delta**2/3 - 1) + 1",
+  "A_through_delta_8": "-33953*delta**8/14175 + 863*delta**6/945 - 19*delta**4/45 + delta**2/3 + 1",
+  "B_through_delta_6": "-275*delta**6/189 + 3*delta**4/5 - delta**2/3 + 1",
+  "U_truncated": "7279*delta**6/3024 - 311*delta**4/360 + 5*delta**2/12 - 14569*q**6/1680 + 1754*q**5/315 + q**4*(13309*delta**2/1680 - 1187/360) + q**3*(113/60 - 173*delta**2/63) + q**2*(-473*delta**4/1008 + 67*delta**2/60 - 13/12) + q*(37*delta**4/35 - 109*delta**2/180 + 2/3) - 1/2",
+  "convergence_claim": "A and B converge by explicit formulas; no convergence claim for U"
+}

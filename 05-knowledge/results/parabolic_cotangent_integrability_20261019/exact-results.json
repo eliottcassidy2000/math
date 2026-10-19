@@ -1,0 +1,155 @@
+{
+  "status": "FINITE-EXACT; general and analytic claims require the proofs/citations",
+  "checks": 186,
+  "iterative_log_order": 14,
+  "iterative_log_coefficients": {
+    "2": "1",
+    "3": "-1",
+    "4": "3/2",
+    "5": "-8/3",
+    "6": "31/6",
+    "7": "-157/15",
+    "8": "649/30",
+    "9": "-9427/210",
+    "10": "19423/210",
+    "11": "-6576/35",
+    "12": "2627/7",
+    "13": "-853627/1155",
+    "14": "2007055/1386"
+  },
+  "time_form_through_order_6": "-14569*q**6/1680 + 1754*q**5/315 - 1187*q**4/360 + 113*q**3/60 - 13*q**2/12 + 2*q/3 - 1/2 + 1/q + q**(-2)",
+  "period_three": {
+    "P": "r**3 + r**2/2 - 9*r/4 - 1/8",
+    "a": "14*r**2 - 28*r - 21/2",
+    "b": "-56*r**2 + 56*r",
+    "residue": "51/49"
+  },
+  "jet_hostiles": [
+    {
+      "N": 2,
+      "first_difference_q": "-q^3",
+      "first_difference_p": "3*p*q^2"
+    },
+    {
+      "N": 3,
+      "first_difference_q": "-q^4",
+      "first_difference_p": "4*p*q^3"
+    },
+    {
+      "N": 4,
+      "first_difference_q": "-q^5",
+      "first_difference_p": "5*p*q^4"
+    },
+    {
+      "N": 5,
+      "first_difference_q": "-q^6",
+      "first_difference_p": "6*p*q^5"
+    },
+    {
+      "N": 6,
+      "first_difference_q": "-q^7",
+      "first_difference_p": "7*p*q^6"
+    },
+    {
+      "N": 7,
+      "first_difference_q": "-q^8",
+      "first_difference_p": "8*p*q^7"
+    },
+    {
+      "N": 8,
+      "first_difference_q": "-q^9",
+      "first_difference_p": "9*p*q^8"
+    },
+    {
+      "N": 9,
+      "first_difference_q": "-q^10",
+      "first_difference_p": "10*p*q^9"
+    },
+    {
+      "N": 10,
+      "first_difference_q": "-q^11",
+      "first_difference_p": "11*p*q^10"
+    },
+    {
+      "N": 11,
+      "first_difference_q": "-q^12",
+      "first_difference_p": "12*p*q^11"
+    },
+    {
+      "N": 12,
+      "first_difference_q": "-q^13",
+      "first_difference_p": "13*p*q^12"
+    },
+    {
+      "N": 13,
+      "first_difference_q": "-q^14",
+      "first_difference_p": "14*p*q^13"
+    },
+    {
+      "N": 14,
+      "first_difference_q": "-q^15",
+      "first_difference_p": "15*p*q^14"
+    },
+    {
+      "N": 15,
+      "first_difference_q": "-q^16",
+      "first_difference_p": "16*p*q^15"
+    },
+    {
+      "N": 16,
+      "first_difference_q": "-q^17",
+      "first_difference_p": "17*p*q^16"
+    },
+    {
+      "N": 17,
+      "first_difference_q": "-q^18",
+      "first_difference_p": "18*p*q^17"
+    },
+    {
+      "N": 18,
+      "first_difference_q": "-q^19",
+      "first_difference_p": "19*p*q^18"
+    },
+    {
+      "N": 19,
+      "first_difference_q": "-q^20",
+      "first_difference_p": "20*p*q^19"
+    },
+    {
+      "N": 20,
+      "first_difference_q": "-q^21",
+      "first_difference_p": "21*p*q^20"
+    },
+    {
+      "N": 21,
+      "first_difference_q": "-q^22",
+      "first_difference_p": "22*p*q^21"
+    },
+    {
+      "N": 22,
+      "first_difference_q": "-q^23",
+      "first_difference_p": "23*p*q^22"
+    },
+    {
+      "N": 23,
+      "first_difference_q": "-q^24",
+      "first_difference_p": "24*p*q^23"
+    },
+    {
+      "N": 24,
+      "first_difference_q": "-q^25",
+      "first_difference_p": "25*p*q^24"
+    }
+  ],
+  "model_periods": [
+    "pi/delta+pi*i",
+    "-pi/delta+pi*i"
+  ],
+  "exact_local_discrete_period_through_order_4": "3*I*pi*delta**4/5 - 19*pi*delta**3/45 - I*pi*delta**2/3 + pi*delta/3 + I*pi + pi/delta",
+  "catalan_inverse_order": 20,
+  "no_computational_claim": [
+    "divergence",
+    "all-degree rational invariant exclusion",
+    "analytic first-integral nonexistence"
+  ]
+}
