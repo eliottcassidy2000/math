@@ -1,0 +1,29 @@
+{
+  "claim": "Conditional common-base-path transfer plus an explicit 12-vertex path family on exact geometric bands; not an all-sufficiently-large-N claim for these prescribed paths.",
+  "dependency_sha256": {
+    "seeded_eventual_cycle_theorem_20261019/RELEASE_MANIFEST.json": "bd1169676ec21f6a4d9178c2ccf5fefb1dcd5149efd9e109afd7fbab202cc11d",
+    "seeded_eventual_cycle_theorem_20261019/construct_seeded_cycles.py": "28a92a66dc8cecc758837b8a04829d696d83e6727ef1491ed7ee9904b3dfdcc1",
+    "seeded_final_split_table_20261019/SHA256SUMS": "02148e4f07a3cb5bfa747b5cd1025de23a99c491e754fb3a358b06519714e2bd",
+    "square_sum_B_base_interval_20261019/SHA256SUMS": "dc655e2780986ce11df21d59accf9c605e6736fc0d8e378bb3c86bf8c3bb2b03"
+  },
+  "files": {
+    "CONNECTED_PATH_TRANSFER.md": "266be53d9b4ba1e3ab657cddf9ca581e8ca2fc963dfaf1f2e00dcbd9f4f443a6",
+    "LITERATURE_CHECK.md": "ee69927a922a7a4672cace1fb28ae7877df8a63cc9cc9bc68d9ab3db45576ae5",
+    "connected_path_controls.json": "1ee2e3b8c5cb7c17d781756a7ce7d5d42965873442fa7711820abbf22764ff6a",
+    "connected_path_controls.optimized.json": "1ee2e3b8c5cb7c17d781756a7ce7d5d42965873442fa7711820abbf22764ff6a",
+    "verify_connected_path_transfer.py": "a10347f5c336026a114bdacc8ce50c8dedb9c4410e03a43d49034f15bd906845"
+  },
+  "replay": {
+    "N": 130854,
+    "checks": 261711,
+    "cycle_stored": false,
+    "normal_optimized_identical": true,
+    "prescribed_disjoint_paths": 2401,
+    "prescribed_edges": 26411,
+    "prescribed_vertices": 28812,
+    "relocated_normal_optimized_match": true,
+    "seed_edges": 2
+  },
+  "repository_destination": "05-knowledge/results/square_sum_connected_path_bands_20261019",
+  "status": "frozen and replayed"
+}
