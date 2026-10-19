@@ -1,0 +1,7 @@
+{
+  "aggregate_cases": 3100,
+  "complete_inverse_targets": 2500,
+  "fixed_point_exponents": 300,
+  "power_exponents": 300,
+  "status": "PASS"
+}

@@ -1,0 +1,22 @@
+{
+  "source_sha256": "ebf9ad8c37445e2c4716de1ab4a3afcb6eb5891360a45d65b993d47ee6637572",
+  "local_excursion_exhaustive_limit": 4000000,
+  "local_excursion_cases": {
+    "exception": 5,
+    "fixed": 10,
+    "immediate": 1996001,
+    "nonpower_q": 3875,
+    "middle": 30,
+    "power_start": 17,
+    "second_resonance": 6,
+    "first_resonance": 8,
+    "high": 48
+  },
+  "large_structured_excursion_cases": 162000,
+  "full_orbit_exhaustive_limit": 1000000,
+  "cached_distinct_nodes": 500011,
+  "exact_resonant_maximum_cases": 254,
+  "largest_resonant_start_bits": 768,
+  "random_large_full_orbit_cases": 300,
+  "status": "PASS"
+}

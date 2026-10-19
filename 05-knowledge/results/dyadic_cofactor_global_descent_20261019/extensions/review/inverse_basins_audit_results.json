@@ -1,0 +1,11 @@
+{
+  "source_sha256": "c154e39b4f7cc3bf80983dc3d406173d810166b3f5df91d57739cc9787d7a10a",
+  "complete_general_inverse_even_targets": 50000,
+  "largest_general_target": 100000,
+  "fixed_exponents_checked": 512,
+  "largest_fixed_target_bits": 1025,
+  "power_target_exponents_checked": 1024,
+  "modular_residue_cases": 141072,
+  "resonance_link_exponents_checked": 512,
+  "status": "PASS"
+}

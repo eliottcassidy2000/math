@@ -1,0 +1,102 @@
+{
+  "source_review_manifest_sha256": "2a284b9bc870506dac1594a7ac746285c4e97c95fa692fe38063c05b887df1e1",
+  "description": "Both proofs receive audited PROVED status; internal review commentary is removed and checker source paths are package-relative. Mathematical proof content and checker logic are unchanged.",
+  "files": [
+    {
+      "path": "TRANSIENT_HEIGHT_SCALING.md",
+      "source_sha256": "a1d3cfb1c9093da6a2c2519201ef72e0856ca16996f303c705e4df119acb77da",
+      "published_sha256": "ebf9ad8c37445e2c4716de1ab4a3afcb6eb5891360a45d65b993d47ee6637572",
+      "presentation_or_portability_updates": true
+    },
+    {
+      "path": "INVERSE_BASIN_DIVISOR_LATTICES.md",
+      "source_sha256": "75692a6c84baf430c7a5c39ac571585e2b33dc91feedbabcef8ac42101021c8a",
+      "published_sha256": "c154e39b4f7cc3bf80983dc3d406173d810166b3f5df91d57739cc9787d7a10a",
+      "presentation_or_portability_updates": true
+    },
+    {
+      "path": "verify_inverse_basins.py",
+      "source_sha256": "604b2660135cb8045b6406edf7b8294dfd54a2a2c4a434d7a12179c748832c20",
+      "published_sha256": "604b2660135cb8045b6406edf7b8294dfd54a2a2c4a434d7a12179c748832c20",
+      "presentation_or_portability_updates": false
+    },
+    {
+      "path": "verify_inverse_basins.out",
+      "source_sha256": "69b0353fef1cff870c9de22f8a0f14e272b46a60e59b236d4c8af744856d2c98",
+      "published_sha256": "69b0353fef1cff870c9de22f8a0f14e272b46a60e59b236d4c8af744856d2c98",
+      "presentation_or_portability_updates": false
+    },
+    {
+      "path": "verify_inverse_basins.optimized.out",
+      "source_sha256": "69b0353fef1cff870c9de22f8a0f14e272b46a60e59b236d4c8af744856d2c98",
+      "published_sha256": "69b0353fef1cff870c9de22f8a0f14e272b46a60e59b236d4c8af744856d2c98",
+      "presentation_or_portability_updates": false
+    },
+    {
+      "path": "review/TRANSIENT_HEIGHT_INDEPENDENT_AUDIT.md",
+      "source_sha256": "cf43b5af08c010435b35f643be951a45f93a70126bbdac25aae8fca1956bb682",
+      "published_sha256": "dd1668039993afaad8aee3972db945fa7ddc43788220056aaa056d67ab4a6131",
+      "presentation_or_portability_updates": true
+    },
+    {
+      "path": "review/INVERSE_BASINS_INDEPENDENT_AUDIT.md",
+      "source_sha256": "a3ba15a94654c4753fd52036ea4160e34e8383ae9a4ac546c770375184836a59",
+      "published_sha256": "17fe3f607d66513e1b7e7e95e2bc0dd613494a0d1c1a068a741fcb05f6b8f74e",
+      "presentation_or_portability_updates": true
+    },
+    {
+      "path": "review/audit_transient_height.py",
+      "source_sha256": "6d9ebf8867b5d538b75d97701be8445f553f0b0cca95531f9f262d35da02728b",
+      "published_sha256": "0ac104eb1dcab1360d41e1d97737316244462671536f4bcde1eb5c59ef1a043a",
+      "presentation_or_portability_updates": true
+    },
+    {
+      "path": "review/audit_inverse_basins.py",
+      "source_sha256": "035dc6d19a177ef0517dff50c1c531bdee2bd9d9b65396d0f92922aa17bdf40c",
+      "published_sha256": "0d3209e830878fa02830cebc127571b5748358b7ad45c98373b0b1174916facb",
+      "presentation_or_portability_updates": true
+    },
+    {
+      "path": "review/transient_height_audit_results.json",
+      "source_sha256": "5ba31e20c32b6f0dc81cc152fa911d5fbe3c3cf763ed78ed45e53c5970e93ada",
+      "published_sha256": "26e9ab3d2e56541e4d93fdfb7511f814ee7f33f3d7f5c5956abbf1c369c3c6ff",
+      "presentation_or_portability_updates": false,
+      "receipt_update": "Mathematical results are identical; source_sha256 identifies the status-updated published proof."
+    },
+    {
+      "path": "review/transient_height_audit.out",
+      "source_sha256": "5ba31e20c32b6f0dc81cc152fa911d5fbe3c3cf763ed78ed45e53c5970e93ada",
+      "published_sha256": "26e9ab3d2e56541e4d93fdfb7511f814ee7f33f3d7f5c5956abbf1c369c3c6ff",
+      "presentation_or_portability_updates": false,
+      "receipt_update": "Mathematical results are identical; source_sha256 identifies the status-updated published proof."
+    },
+    {
+      "path": "review/transient_height_audit.optimized.out",
+      "source_sha256": "5ba31e20c32b6f0dc81cc152fa911d5fbe3c3cf763ed78ed45e53c5970e93ada",
+      "published_sha256": "26e9ab3d2e56541e4d93fdfb7511f814ee7f33f3d7f5c5956abbf1c369c3c6ff",
+      "presentation_or_portability_updates": false,
+      "receipt_update": "Mathematical results are identical; source_sha256 identifies the status-updated published proof."
+    },
+    {
+      "path": "review/inverse_basins_audit_results.json",
+      "source_sha256": "5421f046ccd1ac6005cc74ce44de113be8f0e67cf9479036abf8f0571335847a",
+      "published_sha256": "c7d7e9251f66161c639fda761aa5a8d540a69a5a5fe907d9bb3f296af88d47ad",
+      "presentation_or_portability_updates": false,
+      "receipt_update": "Mathematical results are identical; source_sha256 identifies the status-updated published proof."
+    },
+    {
+      "path": "review/inverse_basins_audit.out",
+      "source_sha256": "5421f046ccd1ac6005cc74ce44de113be8f0e67cf9479036abf8f0571335847a",
+      "published_sha256": "c7d7e9251f66161c639fda761aa5a8d540a69a5a5fe907d9bb3f296af88d47ad",
+      "presentation_or_portability_updates": false,
+      "receipt_update": "Mathematical results are identical; source_sha256 identifies the status-updated published proof."
+    },
+    {
+      "path": "review/inverse_basins_audit.optimized.out",
+      "source_sha256": "5421f046ccd1ac6005cc74ce44de113be8f0e67cf9479036abf8f0571335847a",
+      "published_sha256": "c7d7e9251f66161c639fda761aa5a8d540a69a5a5fe907d9bb3f296af88d47ad",
+      "presentation_or_portability_updates": false,
+      "receipt_update": "Mathematical results are identical; source_sha256 identifies the status-updated published proof."
+    }
+  ]
+}
