@@ -1,0 +1,92 @@
+{
+  "status": "EXACT_RELAXED_OBSTACLE_REPLAY_PASSED",
+  "extensions": 408,
+  "minimum_margin": "123696019/22496002386",
+  "rank_one_rectangle_determinant": "-9971385062500/3939992309825483769",
+  "rectangle": [
+    {
+      "prefix": [],
+      "suffix": [
+        8
+      ],
+      "word": [
+        0,
+        3,
+        2,
+        6,
+        5,
+        4,
+        7,
+        1,
+        8
+      ],
+      "extension_weight": "645149129/269952028632"
+    },
+    {
+      "prefix": [],
+      "suffix": [],
+      "word": [
+        0,
+        3,
+        2,
+        6,
+        5,
+        4,
+        8,
+        7,
+        1
+      ],
+      "extension_weight": "16591933/20765540664"
+    },
+    {
+      "prefix": [
+        2
+      ],
+      "suffix": [
+        8
+      ],
+      "word": [
+        2,
+        0,
+        3,
+        6,
+        5,
+        4,
+        7,
+        1,
+        8
+      ],
+      "extension_weight": "358201043/89984009544"
+    },
+    {
+      "prefix": [
+        2
+      ],
+      "suffix": [],
+      "word": [
+        2,
+        0,
+        3,
+        6,
+        5,
+        4,
+        8,
+        7,
+        1
+      ],
+      "extension_weight": "645149129/269952028632"
+    }
+  ],
+  "core_degrees": [
+    5,
+    5,
+    2,
+    2,
+    3,
+    4,
+    3,
+    2,
+    2
+  ],
+  "theorem141_core_patterns": []
+}

@@ -1,0 +1,72 @@
+{
+  "status": "COMPLETE_THREE_PHASE_COVERAGE_AUDIT_PASSED",
+  "scope": "canonical(maximum span,maximum common count), mixed(3,3,1)",
+  "natural_cores": 96428,
+  "degree_valid": 91604,
+  "analytic_balanced": 10690,
+  "residual_cores": 80914,
+  "hist": {
+    "residual_orders": 515442,
+    "analytic_directed_orders": 47300375,
+    "short_span_orders": 28176,
+    "canonical_excluded_orders": 332621,
+    "canonical_fully_removed": 15209,
+    "one": 440021,
+    "two": 69528,
+    "dual": 5879,
+    "slack_one_tree": 10,
+    "ancestor_caps": 4
+  },
+  "phases": [
+    {
+      "phase": 1,
+      "cores": 54355,
+      "hist": {
+        "residual_orders": 299975,
+        "analytic_directed_orders": 35693127,
+        "short_span_orders": 16318,
+        "canonical_excluded_orders": 231089,
+        "canonical_fully_removed": 11544,
+        "one": 276733,
+        "two": 21753,
+        "dual": 1489
+      },
+      "record_sha256": "3c65b259d662e4d3490cd745c11239bdaad9513d50872be1199dd97ad32fdafb"
+    },
+    {
+      "phase": 2,
+      "cores": 2876,
+      "hist": {
+        "residual_orders": 30191,
+        "analytic_directed_orders": 1286173,
+        "short_span_orders": 1330,
+        "canonical_excluded_orders": 10201,
+        "canonical_fully_removed": 528,
+        "slack_one_tree": 10,
+        "two": 3528,
+        "one": 25675,
+        "dual": 978
+      },
+      "record_sha256": "690620ded2c0c319735325551ba1eafdf20f93ebecf92ceed8329c4062da64c4"
+    },
+    {
+      "phase": 3,
+      "cores": 23683,
+      "hist": {
+        "residual_orders": 185276,
+        "analytic_directed_orders": 10321075,
+        "short_span_orders": 10528,
+        "canonical_excluded_orders": 91331,
+        "canonical_fully_removed": 3137,
+        "ancestor_caps": 4,
+        "two": 44247,
+        "dual": 3412,
+        "one": 137613
+      },
+      "record_sha256": "c4435ead89b6c923f78ade1aa2cb6801bcbc7d36ac90e937c67d0c4ce35f1f33"
+    }
+  ],
+  "distinct_certificates": 71579,
+  "maximum_comparison_weight": 1557424053058484945081224106473120020880952715900,
+  "maximum_cap_multiplier": 9652977063119703517380654513576449006310494482200
+}

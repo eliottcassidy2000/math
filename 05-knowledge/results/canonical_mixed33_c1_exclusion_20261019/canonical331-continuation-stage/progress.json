@@ -1,0 +1,40 @@
+{
+  "schema": "139-slack-one-v2",
+  "status": "EXACT_CONE_OBSTACLE",
+  "scope": "canonical(maximum span,maximum common count), mixed(3,3,1)",
+  "dependencies": {
+    "run.py": "33a6797e0757021c024967ed507589950ae9876f35d91bdf27604569503558b5",
+    "cone_engine.py": "4e07462ef18872b742dcca008e85e8f69f228f92152ec30bd95305477effaf1b",
+    "exact_replay_engine.py": "9066413666fe773dc9ed48c7dd7b813f5903a8eb511f2cdbea0a0a402bffd3a5",
+    "catalogue.py": "34f9dcd52746ae99e9c7b48b97cdee0a296f886e053cbcce1c7609415b8ea5bf",
+    "source_lock.json": "fae2b5c09bc9b058f0045ffbc117b46a1ca76cc42550e6ca35b202e8362eace9",
+    "replay_complete.py": "64040f4de51364e96732c0204eaf7b814e432afdbbd5b0ef5e73d8e751581d0e"
+  },
+  "phase_one_sources": {
+    "progress.json": "610f35d4194be9d15f0609aae96ee53f37175b6bad7b344f1f7fc02aaf7d84fa",
+    "certificates.jsonl.gz": "3c65b259d662e4d3490cd745c11239bdaad9513d50872be1199dd97ad32fdafb",
+    "cone_engine.py": "e48dddd3b8effb369a03dfde6f9853edcea11c7531db0a5ef32c79cd13fcb10a",
+    "exact_replay_engine.py": "8bc16653dd6317dfdb8d35a0e56ee168b72ad113c7964a2eb0fe01caf4eebb24",
+    "analytic_cover.json.gz": "f5a230145d81f2ee1b61d0c2fc7b50a15cd41b6828a900899f5dfa8371ce87b7",
+    "first_obstacle.json": "18f6c91183d5be1cd73ddf24a4bc7e06830825a65e5cb32e8265bee22432093d"
+  },
+  "phase_one_completed": 54355,
+  "target": 26559,
+  "completed": 2876,
+  "last_core_index": 65626,
+  "committed_bytes": 948596,
+  "hist": {
+    "residual_orders": 30191,
+    "analytic_directed_orders": 1286173,
+    "short_span_orders": 1330,
+    "canonical_excluded_orders": 10201,
+    "canonical_fully_removed": 528,
+    "slack_one_tree": 10,
+    "two": 3528,
+    "one": 25675,
+    "dual": 978
+  },
+  "start_unix": 1792411625.683953,
+  "seconds": 81.53664255142212,
+  "obstacle_core": 65627
+}

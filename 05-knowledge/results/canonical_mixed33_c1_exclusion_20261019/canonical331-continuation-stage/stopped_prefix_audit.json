@@ -1,0 +1,28 @@
+{
+  "status": "EXACT_TWO_PHASE_PREFIX_COVERAGE_AUDIT_PASSED",
+  "scope": "Partial scan only; no full morphology theorem",
+  "completed": 57231,
+  "residual_target": 80914,
+  "next_obstacle_core": 65627,
+  "phases": [
+    {
+      "count": 54355,
+      "record_sha256": "3c65b259d662e4d3490cd745c11239bdaad9513d50872be1199dd97ad32fdafb"
+    },
+    {
+      "count": 2876,
+      "record_sha256": "690620ded2c0c319735325551ba1eafdf20f93ebecf92ceed8329c4062da64c4"
+    }
+  ],
+  "hist": {
+    "residual_orders": 330166,
+    "analytic_directed_orders": 36979300,
+    "short_span_orders": 17648,
+    "canonical_excluded_orders": 241290,
+    "canonical_fully_removed": 12072,
+    "one": 302408,
+    "two": 25281,
+    "dual": 2467,
+    "slack_one_tree": 10
+  }
+}

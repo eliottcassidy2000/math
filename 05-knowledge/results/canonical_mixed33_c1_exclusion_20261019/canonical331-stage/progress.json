@@ -1,0 +1,28 @@
+{
+  "status": "EXACT_CONE_OBSTACLE",
+  "scope": "canonical(maximum span,maximum common count), mixed(3,3,1)",
+  "dependencies": {
+    "run.py": "4c40115c75c14e5dd9735011d84c9392f967b1973dcf766f1a612a0afa4465cd",
+    "cone_engine.py": "e48dddd3b8effb369a03dfde6f9853edcea11c7531db0a5ef32c79cd13fcb10a",
+    "exact_replay_engine.py": "8bc16653dd6317dfdb8d35a0e56ee168b72ad113c7964a2eb0fe01caf4eebb24",
+    "catalogue.py": "34f9dcd52746ae99e9c7b48b97cdee0a296f886e053cbcce1c7609415b8ea5bf",
+    "analytic_cover.json.gz": "f5a230145d81f2ee1b61d0c2fc7b50a15cd41b6828a900899f5dfa8371ce87b7"
+  },
+  "target": 80914,
+  "completed": 54355,
+  "last_core_index": 62483,
+  "committed_bytes": 14372221,
+  "hist": {
+    "residual_orders": 299975,
+    "analytic_directed_orders": 35693127,
+    "short_span_orders": 16318,
+    "canonical_excluded_orders": 231089,
+    "canonical_fully_removed": 11544,
+    "one": 276733,
+    "two": 21753,
+    "dual": 1489
+  },
+  "start_unix": 1792408682.9899817,
+  "seconds": 2293.931207895279,
+  "obstacle_core": 62484
+}

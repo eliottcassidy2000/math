@@ -1,0 +1,10 @@
+{
+  "status": "COMPLETE_INDEPENDENT_CATALOGUE_AND_ANALYTIC_REPLAY_PASSED",
+  "natural": 96428,
+  "valid": 91604,
+  "hist": {
+    "balanced": 10690,
+    "residual": 80914
+  },
+  "cover_sha256": "f5a230145d81f2ee1b61d0c2fc7b50a15cd41b6828a900899f5dfa8371ce87b7"
+}

@@ -1,0 +1,1 @@
+{"status": "PASS", "rejected": ["wrong_convention", "wrong_slack", "wrong_parent", "negative_multiplier", "duplicate_cap", "false_margin"], "positive_control": "passed"}

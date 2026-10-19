@@ -1,0 +1,170 @@
+--- phase2/cone_engine.py
++++ phase3/cone_engine.py
+@@ -65,6 +65,35 @@
+   vals=[sum(v*int(rows[i,j]) for i,v in w.items()) for j in range(rows.shape[1])]
+   if max(vals)<=0:return w
+  return None
++
++def cap_certificate(p,keys,cols,signed,ids):
++ """Raw coefficient caps: lambda_child <= slack * lambda_parent."""
++ lookup={key:j for j,key in enumerate(keys)};deg=degrees(p);edges=[]
++ for j,(pre,suf) in enumerate(keys):
++  if pre:edges.append(('A',lookup[(pre[:-1],suf)],j,7-deg[pre[-1]]))
++  if suf:edges.append(('B',lookup[(pre,suf[1:])],j,7-deg[suf[0]]))
++ if not edges:return None
++ C=np.zeros((len(edges),len(keys)),dtype=np.int64)
++ for i,(side,parent,child,slack) in enumerate(edges):C[i,child]=1;C[i,parent]-=slack
++ rows=signed[ids];E=np.array([col[0] for col in cols],dtype=np.int64)
++ sol=linprog(np.r_[np.zeros(len(keys)),-1.],A_ub=np.vstack((np.c_[-rows,np.ones(len(ids))],np.c_[C,np.zeros(len(edges))])),b_ub=np.zeros(len(ids)+len(edges)),A_eq=np.r_[E,0][None,:],b_eq=[1.],bounds=[(0,None)]*len(keys)+[(None,None)],method='highs')
++ require(sol.success,sol.message)
++ if sol.x[-1]>1e-9:
++  support=np.flatnonzero(sol.x[:-1]>1e-9)
++  for cap in (1000,1000000,1000000000):
++   mix={int(j):Fraction(float(sol.x[j])).limit_denominator(cap) for j in support};mass=sum(weight*int(E[j]) for j,weight in mix.items());mix={j:weight/mass for j,weight in mix.items()}
++   margins=[sum(weight*int(row[j]) for j,weight in mix.items()) for row in rows]
++   caps=[sum(weight*int(row[j]) for j,weight in mix.items()) for row in C]
++   if min(margins)>0 and max(caps)<=0:
++    return {},{'kind':'cap_obstacle','coefficient_convention':'unnormalized_lambda','generator_coefficients':[[j,str(weight)] for j,weight in mix.items()],'forward_margins':list(map(str,margins)),'maximum_cap_violation':str(max(caps))}
++  raise RuntimeError('uncertified cap-constrained positive LP')
++ joined=np.vstack((rows,-C));w=exact_dual(joined,-sol.ineqlin.marginals)
++ require(w is not None and any(i<len(ids) for i in w),'uncertified cap dual')
++ comparisons={ids[i]:weight for i,weight in w.items() if i<len(ids)}
++ caps=[[*edges[i-len(ids)],weight] for i,weight in w.items() if i>=len(ids)]
++ vals=[sum(weight*int(joined[i,j]) for i,weight in w.items()) for j in range(len(keys))]
++ require(max(vals)<=0,'exact cap margin')
++ return comparisons,{'kind':'ancestor_caps','caps':caps,'max_margin':max(vals),'coefficient_convention':'unnormalized_lambda'}
+ 
+ def split_certificate(p,keys,signed,ids):
+  """A complete binary slack-one split tree; failure preserves an obstacle."""
+@@ -156,6 +185,12 @@
+     require(sol.success,sol.message)
+     if sol.x[-1]<=1e-9:w=exact_dual(rows,-sol.ineqlin.marginals);kind='dual'
+     if w is None:
++     capped=cap_certificate(p,keys,cols,signed,ids)
++     cap_obstacle=capped[1] if capped is not None and capped[1]['kind']=='cap_obstacle' else None
++     if capped is not None and cap_obstacle is None:
++      full,cert=capped;cert['terms']=[[*(inc[i//2] if i%2==0 else inc[i//2][::-1]),weight] for i,weight in full.items()]
++      hit=len(cache);cache.append((set(full),full));rec['certificates'].append(cert)
++      hist['ancestor_caps']+=1;stream.update(json.dumps([o,hit]).encode());continue
+      tree,failed_branch=split_certificate(p,keys,signed,ids)
+      if tree is not None:
+       leaves=tree_leaves(tree);full=set()
+@@ -169,7 +204,7 @@
+       mix={int(j):Fraction(float(sol.x[j])).limit_denominator(cap) for j in support};mass=sum(mix.values());mix={j:w/mass for j,w in mix.items()}
+       vals=[sum(w*Fraction(int(row[j]),int(E[j])) for j,w in mix.items()) for row in rows]
+       if min(vals)>0:
+-       return {'obstruction':{'failed_slack_branch':failed_branch,'order':o,'mixture':[{'prefix':keys[j][0],'suffix':keys[j][1],'E':int(E[j]),'weight':str(w)} for j,w in mix.items()],'forward_pairs':[inc[i] if r[inc[i][0]]<r[inc[i][1]] else inc[i][::-1] for i in range(len(inc))],'margins':list(map(str,vals))},**rec}
++       return {'obstruction':{'failed_slack_branch':failed_branch,'cap_constrained_obstacle':cap_obstacle,'order':o,'mixture':[{'prefix':keys[j][0],'suffix':keys[j][1],'E':int(E[j]),'weight':str(w)} for j,w in mix.items()],'forward_pairs':[inc[i] if r[inc[i][0]]<r[inc[i][1]] else inc[i][::-1] for i in range(len(inc))],'margins':list(map(str,vals))},**rec}
+      raise RuntimeError('uncertified LP')
+    full={ids[i]:v for i,v in w.items()};vals=[sum(v*int(signed[i,j]) for i,v in full.items()) for j in range(len(cols))];require(max(vals)<=0,'exact replay')
+    hit=len(cache);cache.append((set(full),full));rec['certificates'].append({'terms':[[*(inc[i//2] if i%2==0 else inc[i//2][::-1]),w] for i,w in full.items()],'kind':kind,'max_margin':max(vals)})
+--- phase2/exact_replay_engine.py
++++ phase3/exact_replay_engine.py
+@@ -62,6 +62,17 @@
+  def leafcheck(cert,keep):
+   terms=cert['terms'];check(terms and all(isinstance(weight,int) and weight>0 and (min(a,b),max(a,b)) in inc for a,b,weight in terms),'terms')
+   vals=[sum(sum(weight*(3*int(rank[a]<rank[b])-2) for a,b,weight in terms) for rank in gens[keys[j]]) for j in keep]
++  if cert.get('kind')=='ancestor_caps':
++   check(cert.get('coefficient_convention')=='unnormalized_lambda','raw coefficient convention');check(keep==list(range(len(keys))),'cap full cone');seen_caps=set()
++   for side,parent,child,slack,weight in cert['caps']:
++    check(side in ('A','B') and type(parent) is int and type(child) is int and 0<=parent<len(keys) and 0<=child<len(keys),'cap indices')
++    check(type(weight) is int and weight>0 and (side,child) not in seen_caps,'cap multiplier');seen_caps.add((side,child));pre,suf=keys[child]
++    if side=='A':
++     check(bool(pre),'nonempty prefix');q=pre[-1];expected=(pre[:-1],suf)
++    else:
++     check(bool(suf),'nonempty suffix');q=suf[0];expected=(pre,suf[1:])
++    check(keys[parent]==expected and type(slack) is int and slack==7-deg[q],'exact ancestor slack cap')
++    vals[parent]+=weight*slack;vals[child]-=weight
+   check(vals and max(vals)<=0 and max(vals)==cert['max_margin'],'exact leaf margin')
+   return {(a,b) for a,b,weight in terms}
+  def treecheck(t,keep,fa,fb,used):
+--- phase2/run.py
++++ phase3/run.py
+@@ -19,22 +19,20 @@
+ F.defect_bound=lambda p,u,v:bounds(p)[u,v]
+ def main():
+  data=json.loads(gzip.decompress((OLD/'analytic_cover.json.gz').read_bytes()))
+- old=json.loads((OLD/'progress.json').read_text())
+- F.require(old['status']=='EXACT_CONE_OBSTACLE' and old['completed']==54355,'immutable phase-one stop')
++ prior=ROOT.parent/'canonical331-continuation-stage';old=json.loads((prior/'progress.json').read_text())
++ F.require(old['status']=='EXACT_CONE_OBSTACLE' and old['completed']==2876,'phase-two stop')
+  dep={name:sha(ROOT/name) for name in ['run.py','cone_engine.py','exact_replay_engine.py','catalogue.py','source_lock.json','replay_complete.py']}
+- source={name:sha(OLD/name) for name in ['progress.json','certificates.jsonl.gz','cone_engine.py','exact_replay_engine.py','analytic_cover.json.gz','first_obstacle.json']}
+  locked=json.loads((ROOT/'source_lock.json').read_text())
+- for name,digest in locked.items():F.require(sha(ROOT.parent/name)==digest,'immutable phase-one source changed')
++ for name,digest in locked.items():F.require(sha(ROOT.parent/name)==digest,'immutable prior source changed')
+  progress=ROOT/'progress.json';records=ROOT/'certificates.jsonl.gz'
+  if progress.exists():
+-  state=json.loads(progress.read_text());F.require(state['dependencies']==dep and state['phase_one_sources']==source,'sources changed');F.require(state['status']=='RUNNING','terminal')
++  state=json.loads(progress.read_text());F.require(state['dependencies']==dep,'source changed');F.require(state['status']=='RUNNING','terminal')
+   with records.open('r+b') as f:f.truncate(state['committed_bytes'])
+  else:
+-  state={'schema':'139-slack-one-v2','status':'RUNNING','scope':'canonical(maximum span,maximum common count), mixed(3,3,1)','dependencies':dep,'phase_one_sources':source,'phase_one_completed':old['completed'],'target':80914-old['completed'],'completed':0,'last_core_index':old['last_core_index'],'committed_bytes':0,'hist':{},'start_unix':time.time()}
+-  records.write_bytes(b'');write(progress,state)
++  state={'schema':'139-ancestor-caps-v3','status':'RUNNING','scope':'canonical(maximum span,maximum common count), mixed(3,3,1)','dependencies':dep,'prior_completed':57231,'target':23683,'completed':0,'last_core_index':old['last_core_index'],'committed_bytes':0,'hist':{},'start_unix':time.time()};records.write_bytes(b'');write(progress,state)
+  for i,item in enumerate(data['cores']):
+   if i<=state['last_core_index'] or len(item)>1:continue
+-  p=tuple(item['pred']);r=F.scan(p);r.update(pred=p,core_index=i,schema='139-slack-one-v2')
++  p=tuple(item['pred']);r=F.scan(p);r.update(pred=p,core_index=i,schema='139-ancestor-caps-v3')
+   if 'obstruction' in r:
+    write(ROOT/'first_obstacle.json',r);state['status']='EXACT_CONE_OBSTACLE';state['obstacle_core']=i;write(progress,state);print(json.dumps(state),flush=True);return
+   R.replay(p,r);payload=gzip.compress((json.dumps(r,separators=(',',':'))+'\n').encode(),mtime=0)
+--- phase2/replay_complete.py
++++ phase3/replay_complete.py
+@@ -1,34 +1,34 @@
+ #!/usr/bin/env python3
+-"""Independent two-phase exact union replay; no numerical dependencies."""
++"""Complete independent three-phase replay with immutable source locks."""
+ from pathlib import Path
+ from collections import Counter
+ import gzip,json,hashlib,time,importlib.util
+ from catalogue import catalogue
+-import exact_replay_engine as V2
+-ROOT=Path(__file__).resolve().parent;OLD=ROOT.parent/'canonical331-stage'
+-spec=importlib.util.spec_from_file_location('phase_one_replay',OLD/'exact_replay_engine.py');V1=importlib.util.module_from_spec(spec);spec.loader.exec_module(V1)
++import exact_replay_engine as R
++ROOT=Path(__file__).resolve().parent;BASE=ROOT.parent
++PHASES=[BASE/'canonical331-stage',BASE/'canonical331-continuation-stage',ROOT]
+ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+ def main():
+- t=time.time();state=json.loads((ROOT/'progress.json').read_text());old=json.loads((OLD/'progress.json').read_text())
+- V2.check(state['status']=='ALL_CANONICAL_CORES_EXACT_CERTIFIED_AND_REPLAYED','continuation incomplete')
+- for name,h in state['dependencies'].items():V2.check(sha(ROOT/name)==h,'new source changed')
+- for name,h in state['phase_one_sources'].items():V2.check(sha(OLD/name)==h,'old source changed')
+- V2.check(sha(ROOT/'certificates.jsonl.gz')==state['record_sha256'],'new record hash')
+- cover=json.loads(gzip.decompress((OLD/'analytic_cover.json.gz').read_bytes()));cat=catalogue();valid={p for p in cat if all(8-p[v].bit_count()-sum(bool(q>>v&1) for q in p)<=7 for v in range(9))}
+- V2.check(len(cat)==96428 and len(valid)==91604 and valid=={tuple(x['pred']) for x in cover['cores']},'independent catalogue')
++ start=time.time();state=json.loads((ROOT/'progress.json').read_text());R.check(state['status']=='ALL_CANONICAL_CORES_EXACT_CERTIFIED_AND_REPLAYED','not complete')
++ for name,h in state['dependencies'].items():R.check(sha(ROOT/name)==h,'phase-three sources')
++ for name,h in json.loads((ROOT/'source_lock.json').read_text()).items():R.check(sha(BASE/name)==h,'prior source lock')
++ cover=json.loads(gzip.decompress((PHASES[0]/'analytic_cover.json.gz').read_bytes()));cat=catalogue();valid={p for p in cat if all(8-p[v].bit_count()-sum(bool(q>>v&1) for q in p)<=7 for v in range(9))}
++ R.check(len(cat)==96428 and len(valid)==91604 and valid=={tuple(x['pred']) for x in cover['cores']},'independent catalogue')
+  for item in cover['cores']:
+-  if 'balanced_pair' in item:V1.replay(tuple(item['pred']),{'analytic_balanced':item['balanced_pair']})
+-  elif 'cycle_arcs' in item:V1.replay(tuple(item['pred']),{'analytic_cycle':item['cycle_arcs']})
++  if 'balanced_pair' in item:R.replay(tuple(item['pred']),{'analytic_balanced':item['balanced_pair']})
++  elif 'cycle_arcs' in item:R.replay(tuple(item['pred']),{'analytic_cycle':item['cycle_arcs']})
+  seen=[];total=Counter();phases=[]
+- for folder,replayer,expected in [(OLD,V1,old),(ROOT,V2,state)]:
+-  h=Counter();count=0
++ for k,folder in enumerate(PHASES):
++  spec=importlib.util.spec_from_file_location('replay_phase_'+str(k),folder/'exact_replay_engine.py');verifier=importlib.util.module_from_spec(spec);spec.loader.exec_module(verifier)
++  expected=json.loads((folder/'progress.json').read_text());h=Counter();count=0
++  R.check((folder/'certificates.jsonl.gz').stat().st_size==expected['committed_bytes'],'committed bytes')
+   with gzip.open(folder/'certificates.jsonl.gz','rt') as f:
+    for line in f:
+-    r=json.loads(line);i=r['core_index'];V2.check(not seen or i>seen[-1],'phase order/disjointness');V2.check(cover['cores'][i]=={'pred':r['pred']},'core identity');replayer.replay(tuple(r['pred']),r);seen.append(i);count+=1
+-    for k in ['residual_orders','analytic_directed_orders','short_span_orders','canonical_excluded_orders','canonical_fully_removed']:h[k]+=r.get(k,0)
+-    h.update(r.get('hist',{}))
+-    if len(seen)%5000==0:print(json.dumps({'replayed':len(seen),'seconds':time.time()-t}),flush=True)
+-  V2.check(count==expected['completed'] and dict(h)==expected['hist'],'phase accounting');total.update(h);phases.append({'records':count,'sha256':sha(folder/'certificates.jsonl.gz')})
+- V2.check(seen==[i for i,x in enumerate(cover['cores']) if len(x)==1] and len(seen)==80914,'complete exact union')
+- out={'status':'FULL_TWO_PHASE_INDEPENDENT_EXACT_REPLAY_PASSED','natural':len(cat),'valid':len(valid),'residual':len(seen),'phases':phases,'hist':dict(total),'seconds':time.time()-t};(ROOT/'complete_replay.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out),flush=True)
++    rec=json.loads(line);i=rec['core_index'];R.check(not seen or i>seen[-1],'ordered disjoint phases');R.check(cover['cores'][i]=={'pred':rec['pred']},'core identity');verifier.replay(tuple(rec['pred']),rec);seen.append(i);count+=1
++    for key in ['residual_orders','analytic_directed_orders','short_span_orders','canonical_excluded_orders','canonical_fully_removed']:h[key]+=rec.get(key,0)
++    h.update(rec.get('hist',{}))
++    if len(seen)%5000==0:print(json.dumps({'replayed':len(seen),'seconds':time.time()-start}),flush=True)
++  R.check(count==expected['completed'] and dict(h)==expected['hist'],'phase totals');total.update(h);phases.append({'records':count,'sha256':sha(folder/'certificates.jsonl.gz')})
++ R.check(seen==[i for i,x in enumerate(cover['cores']) if len(x)==1] and len(seen)==80914,'complete union coverage');R.check(phases[-1]['sha256']==state['record_sha256'],'terminal hash')
++ out={'status':'FULL_THREE_PHASE_INDEPENDENT_EXACT_REPLAY_PASSED','natural':len(cat),'valid':len(valid),'residual':len(seen),'phases':phases,'hist':dict(total),'seconds':time.time()-start};(ROOT/'complete_replay.json').write_text(json.dumps(out,indent=2)+'\n');print(json.dumps(out),flush=True)
+ if __name__=='__main__':main()

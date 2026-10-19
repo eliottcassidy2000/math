@@ -1,0 +1,33 @@
+{
+  "status": "FULL_THREE_PHASE_INDEPENDENT_EXACT_REPLAY_PASSED",
+  "natural": 96428,
+  "valid": 91604,
+  "residual": 80914,
+  "phases": [
+    {
+      "records": 54355,
+      "sha256": "3c65b259d662e4d3490cd745c11239bdaad9513d50872be1199dd97ad32fdafb"
+    },
+    {
+      "records": 2876,
+      "sha256": "690620ded2c0c319735325551ba1eafdf20f93ebecf92ceed8329c4062da64c4"
+    },
+    {
+      "records": 23683,
+      "sha256": "c4435ead89b6c923f78ade1aa2cb6801bcbc7d36ac90e937c67d0c4ce35f1f33"
+    }
+  ],
+  "hist": {
+    "residual_orders": 515442,
+    "analytic_directed_orders": 47300375,
+    "short_span_orders": 28176,
+    "canonical_excluded_orders": 332621,
+    "canonical_fully_removed": 15209,
+    "one": 440021,
+    "two": 69528,
+    "dual": 5879,
+    "slack_one_tree": 10,
+    "ancestor_caps": 4
+  },
+  "seconds": 1440.6672859191895
+}

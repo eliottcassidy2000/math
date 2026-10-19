@@ -1,0 +1,1 @@
+{"status": "ALL_NEGATIVE_REPLAY_CHECKS_PASSED", "rejected": ["omitted_child", "wrong_slack_vertex", "dropped_generator", "wrong_forced_closure", "false_margin", "negative_weight"], "positive_control": "passed"}

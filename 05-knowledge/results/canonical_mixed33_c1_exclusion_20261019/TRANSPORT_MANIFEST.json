@@ -1,0 +1,30 @@
+{
+  "format_version": 1,
+  "packet": 139,
+  "method": "ordered raw-byte concatenation; no recompression",
+  "reason": "The connector MCP request body is limited to 16 MiB; base64 of this original artifact exceeds that limit.",
+  "original_frozen_manifest_sha256": "fcb0e18fb7f07b6c5f80437f4aa29f9153fd6afb31c6f78f2795c4b915a2ba29",
+  "artifacts": [
+    {
+      "original_path": "canonical331-stage/certificates.jsonl.gz",
+      "repository_path": "05-knowledge/results/canonical_mixed33_c1_exclusion_20261019/canonical331-stage/certificates.jsonl.gz",
+      "bytes": 14372221,
+      "sha256": "3c65b259d662e4d3490cd745c11239bdaad9513d50872be1199dd97ad32fdafb",
+      "original_git_blob_sha1": "25cef02347a1a061584f740028ca04067fa49f66",
+      "parts": [
+        {
+          "order": 1,
+          "path": "transport-parts/certificates.jsonl.gz.part-0001",
+          "bytes": 8388608,
+          "sha256": "e2c00c4d47222773fc0135a98bf719eaef77dec998fd35c0085c278131b83416"
+        },
+        {
+          "order": 2,
+          "path": "transport-parts/certificates.jsonl.gz.part-0002",
+          "bytes": 5983613,
+          "sha256": "fa06358a4bd40b88c1d6c07382d597dbb8ea56e53a937575713379492863d490"
+        }
+      ]
+    }
+  ]
+}
