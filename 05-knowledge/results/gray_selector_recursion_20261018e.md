@@ -10,6 +10,11 @@ no historical-priority claim or new theorem ID.
 the owner's request to recover the old “path of least resistance” mechanisms
 behind the ten-coordinate relation's four charts.
 
+The [completed equality-case classification](hamming_matching_atlases_20261018e.md)
+continues this result: 28 maximum charts yield exactly 105 optimal
+four-chart partitions, with an explicit dual-matching dictionary and a
+retained central phase.
+
 ## 1. Inheritance and the objects that must stay separate
 
 The anchor is the exact relation in
