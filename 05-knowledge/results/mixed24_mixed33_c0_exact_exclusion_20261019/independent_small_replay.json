@@ -1,0 +1,26 @@
+{
+  "status": "FULL_INDEPENDENT_REPLAY_PASSED",
+  "scopes": [
+    {
+      "scope": [
+        2,
+        4,
+        0
+      ],
+      "cores": 4824,
+      "residual_orders": 25408,
+      "record_sha256": "b85134b54476f80fc35a1be91986e038634cff61fe779696311e85ef05eb8c6d"
+    },
+    {
+      "scope": [
+        3,
+        3,
+        0
+      ],
+      "cores": 4824,
+      "residual_orders": 30857,
+      "record_sha256": "a56aee3ed23ac1bafd4a448081481a17ef0cfa44c8f9e672e19bfed00bfa4b95"
+    }
+  ],
+  "seconds": 38.3825261592865
+}

@@ -1,0 +1,21 @@
+{
+  "scope": [
+    2,
+    4,
+    0
+  ],
+  "status": "COMPLETE_EXACT_REPLAY_PASSED",
+  "hist": {
+    "cores": 4824,
+    "balanced": 223,
+    "cycle": 0,
+    "residual_orders": 25408,
+    "directed_orders": 845820,
+    "short_span_orders": 5958,
+    "two": 5540,
+    "one": 19520,
+    "dual": 348
+  },
+  "seconds": 36.964892864227295,
+  "record_sha256": "b85134b54476f80fc35a1be91986e038634cff61fe779696311e85ef05eb8c6d"
+}
