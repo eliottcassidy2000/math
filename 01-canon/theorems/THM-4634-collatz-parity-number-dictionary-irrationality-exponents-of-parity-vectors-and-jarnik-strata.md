@@ -1,6 +1,6 @@
 ---
 id: THM-4634
-title: "The Collatz parity-number dictionary: reading the parity vector Q(x) of a 2-adic integer x as the binary expansion of a real number rho(x) in [0,1] conjugates the Terras map T(x) = x/2, (3x+1)/2 to the doubling map; rho(x) is rational (irrationality exponent 1) iff the T-orbit of x is eventually periodic, in which case x is rational with the explicit value x_0 = sum_i 3^(k-1-i) 2^(d_i)/(2^P - 3^k) (Lagarias; the converse is the periodicity conjecture); the trivial cycle {1, 2} is the doubling 2-cycle {2/3, 1/3}, the unique doubling cycle of denominator 3, and the Collatz conjecture says exactly that every rho(n), n a positive integer, has lowest-terms denominator 3 times a power of 2, while a nontrivial cycle of period P would be a rho-value with odd denominator part dividing 2^P - 1 and not 3, and a divergent trajectory an irrational rho-value; the irrationality exponent mu(rho(x)) stratifies Z_2: the stratum mu = 1 is the countable set of eventually periodic points, Haar-almost every x has mu = 2, and for every tau >= 2 the set {mu(rho(x)) >= tau} has Hausdorff dimension 2/tau (Jarnik-Besicovitch transported by the 2-adic isometry Q), so the integers m >= 2 label the strata of 'constructed continued fractions' with partial quotients a_(n+1) of size q_n^(m-2), and the Collatz conjecture places all of N in the stratum mu = 1"
+title: "The Collatz parity-number dictionary: reading the parity vector Q(x) of a 2-adic integer x as the binary expansion of a real number rho(x) in [0,1] semi-conjugates the Terras map T(x) = x/2, (3x+1)/2 to circle doubling; interval doubling retains the dyadic endpoint convention; rho(x) is rational (irrationality exponent 1) iff the T-orbit of x is eventually periodic, in which case x is rational with the explicit value x_0 = sum_i 3^(k-1-i) 2^(d_i)/(2^P - 3^k) (Lagarias; the converse is the periodicity conjecture); the trivial cycle {1, 2} is the doubling 2-cycle {2/3, 1/3}, the unique doubling cycle of denominator 3, and the Collatz conjecture says exactly that every rho(n), n a positive integer, has lowest-terms denominator 3 times a power of 2, while a nontrivial cycle of period P would be a rho-value with odd denominator part dividing 2^P - 1 and not 3, and a divergent trajectory an irrational rho-value; the irrationality exponent mu(rho(x)) stratifies Z_2: the stratum mu = 1 is the countable set of eventually periodic points, Haar-almost every x has mu = 2, and for every tau >= 2 the set {mu(rho(x)) >= tau} has Hausdorff dimension 2/tau (Jarnik-Besicovitch transported by the 2-adic isometry Q), so the integers m >= 2 label the strata of 'constructed continued fractions' with partial quotients a_(n+1) of size q_n^(m-2), and the Collatz conjecture places all of N in the stratum mu = 1"
 status: >
   PROVED, mostly by assembling KNOWN results: Terras (1976) and Lagarias (1985) for the parity-vector
   bijection modulo 2^k, the homeomorphism/isometry Q and the rationality of eventually periodic points;
@@ -54,8 +54,12 @@ reals in `(0, 1)` whose binary expansion ends in `(10)^∞` or `(01)^∞`.
    (Terras). Hence `Q : Z_2 → Z_2` is a 2-adic isometry (Lagarias: a homeomorphism), and `ρ = r ∘ Q` with
    `r` the binary reading is 1-Lipschitz from the 2-adic metric to `R`, onto `[0, 1]`, injective off the
    countable set of `x` whose orbit reaches the fixed point `0` or `-1` (eventually constant parity).
-2. **Conjugacy.** `ρ(T x) = {2 ρ(x)}` (fractional part): `ρ` semi-conjugates `T` to the doubling map;
-   the parity vector is the itinerary.
+2. **Marked shift and circle semiconjugacy (endpoint repair 2026-10-18).** Exactly
+   `ρ(Tx) = 2ρ(x) - (x mod 2)`. Consequently `ρ mod 1` semi-conjugates `T` to doubling on `R/Z`.
+   On the literal interval `[0,1]`, `ρ(Tx) = {2ρ(x)}` holds except at `x=-1,-2`, where
+   `ρ(Tx)=1` but the fractional part is 0. Retaining the marked binary expansion also gives
+   an exact interval shift. The parity vector is the itinerary; its binary reading has the
+   endpoint identifications in statement 1 and is not a conjugacy on the whole interval.
 3. **Rationality (KNOWN: Lagarias).** For `x ∈ Z_2` the following are equivalent: `ρ(x) ∈ Q`; the parity
    vector is eventually periodic; the `T`-orbit of `x` is eventually periodic. They imply `x ∈ Q ∩ Z_2`
    (a rational with odd denominator): if the orbit of `x` enters, at `x_0 = T^L x`, a cycle of period `P`
@@ -107,7 +111,14 @@ parity vectors eventually constant `1` (orbit reaching `-1`, since `T(-1) = -1` 
 constant-1 parity vector means the tail orbit is a fixed point with parity 1, which is `-1`) or
 eventually constant `0` (tail orbit the fixed point `0`); those `x` form a countable set.
 
-**(2)** is the definition: the parity vector of `Tx` is the shifted parity vector of `x`.
+**(2)** The parity vector of `Tx` is the shifted parity vector of `x`, so deleting its first
+bit gives `ρ(Tx)=2ρ(x)-(x mod2)` exactly. Reducing modulo one proves circle semiconjugacy.
+The fractional-part interval formula fails exactly when `ρ(Tx)=1`, that is, when the next
+parity tail is all ones. By injectivity of Q this means `Tx=-1`, whose two preimages are
+`-1` and `-2`. Here `ρ(-1)=1`, `ρ(-2)=1/2`. This repairs the omitted dyadic endpoint
+convention without changing the positive-integer dictionary. See
+[radix families, section 7](../../05-knowledge/results/collatz_radix_families_20261018p.md)
+and the 2026-10-18 MISTAKES entry for the exact controls and correction lineage.
 
 **(3).** `ρ(x) ∈ Q` iff the binary expansion is eventually periodic iff `Q(x)` is eventually periodic.
 If the orbit is eventually periodic so is the parity vector; conversely an eventually periodic parity
