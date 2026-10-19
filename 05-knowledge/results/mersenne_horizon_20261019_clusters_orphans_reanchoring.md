@@ -90,8 +90,10 @@ a predecessor of 1. For `k = 1` the numerator of `h` is a Mersenne number `2^(A�
     (4,1,1) ↦ 31,   (5,1,2,3,1) ↦ 2047,   (4,3,2,2,1,1,3) ↦ 2^15 − 1,   (6,1,3,1,1,1,2,2,3) ↦ 2^19 − 1,
     (4,1,3,6,2,3,3,2,2,3,1) ↦ 2^29 − 1,
 
-and `a = 28` is the one `k = 2` case, `(5,2,3,1,1,1,4,1,1,2,1,1,2)` landing below 5. The list is complete to `a ≤ 44`
-(`anchor_reanchoring.py`; the `a ≤ 64` run was still in progress at close-out). Each row is the uniform switch
+and `a = 28` is the one `k = 2` case, `(5,2,3,1,1,1,4,1,1,2,1,1,2)` landing below 5. The list is complete to `a ≤ 50`
+(`anchor_reanchoring.py`, about four minutes): the only further exception is `a = 49`, with the 23-letter head
+`(4,4,2,1,4,2,1,3,2,2,1,1,1,1,2,1,2,2,1,4,1,5,1)` of numerator `2^47 − 1` (`k = 1`, distance 22); an `a ≤ 64` run did not
+finish under machine load. Each row is the uniform switch
 `(a+1, c) ~ (h, c + 2k)` of distance `|h| − 1` (THM-4555 (iv)); the first row is the Catalan carry `9 = 8 + 1`
 (THM-4640 (5)) and the block of THM-4601 (iii). Among `2^a − 3`, `3 ≤ a ≤ 400`, only `125 = 5^3` is a perfect power.
 

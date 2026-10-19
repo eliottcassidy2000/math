@@ -1,16 +1,16 @@
 ---
 id: THM-4713
-title: "Anchor collisions at -1 are trunk re-anchorings: a canonical head h of total A shares the numerator 2^a - 3 of the single-letter head (a+1) iff f_h(-1) = (4^k - 1)/3 - 2^(1-A) with a = A - 1 + 2k, i.e. h lands one unit of its own denominator below the k-th predecessor (4^k-1)/3 of 1; the k = 1 heads are exactly those whose numerator is a Mersenne number 2^(A-1) - 1; THM-4640's rigidity list {7, 13, 17, 21, 28, 31} is explained (five k = 1 heads, one k = 2 head below 5) and is complete to a <= 44; each gives the uniform switch (a+1, c) ~ (h, c+2k) of distance |h| - 1, and 125 = 2^7 - 3 is the only perfect power among 2^a - 3, 3 <= a <= 400"
+title: "Anchor collisions at -1 are trunk re-anchorings: a canonical head h of total A shares the numerator 2^a - 3 of the single-letter head (a+1) iff f_h(-1) = (4^k - 1)/3 - 2^(1-A) with a = A - 1 + 2k, i.e. h lands one unit of its own denominator below the k-th predecessor (4^k-1)/3 of 1; the k = 1 heads are exactly those whose numerator is a Mersenne number 2^(A-1) - 1; THM-4640's rigidity list {7, 13, 17, 21, 28, 31} is explained (five k = 1 heads, one k = 2 head below 5), and the complete list to a <= 50 adds exactly one more anchor, a = 49 (k = 1, a head of 23 letters, distance 22); each gives the uniform switch (a+1, c) ~ (h, c+2k) of distance |h| - 1, and 125 = 2^7 - 3 is the only perfect power among 2^a - 3, 3 <= a <= 400"
 status: >
   PROVED: statements 1-3 (a direct corollary of THM-4640 (1) and (3), the ladder relation specialised to a single-letter
-  head; the proof is two lines of arithmetic). FINITE-EXACT: statement 4 (complete backward search for every a <= 44 and
+  head; the proof is two lines of arithmetic). FINITE-EXACT: statement 4 (complete backward search for every a <= 50 and
   every k; the perfect-power check to a = 400). Not claimed: that these are new to the literature (THM-4640 cites
   Bohm-Sontacchi, Lagarias, Blecksmith-McCallum-Selfridge for the numerators), or anything about the Mersenne exponent
   classes beyond the displayed switch. Pre-audit.
 session: mac-mini-2026-10-19-mersenne
 source: 05-knowledge/results/mersenne_horizon_20261019_clusters_orphans_reanchoring.md
 scripts:
-  - 04-computation/experiments/mersenne_horizon_20261019/anchor_reanchoring.py (+ anchor_reanchoring_64.out if finished; the a <= 44 run is reproduced in the note)
+  - 04-computation/experiments/mersenne_horizon_20261019/anchor_reanchoring.py (+ anchor_reanchoring_50.out; about four minutes for a <= 50)
 related:
   - THM-4640 (the repair algebra at -1: numerators K(s), positivity, anchor rigidity list, ladders, Gersonides carries)
   - THM-4555 (uniform switches are collisions at -1; (vi): (8, c) ~ (4, 1, 1, c+2))
@@ -38,7 +38,7 @@ related:
 
 3. **Ladder form (PROVED).** Statement 1 is THM-4640 (3) with the short head `(a+1)`: `f_h(−1) = 4^k f_(a+1)(−1) + (4^k − 1)/3`.
 
-4. **The complete list to `a ≤ 44` (FINITE-EXACT).** The canonical heads with numerator `2^a − 3` other than `(a+1)` are
+4. **The complete list to `a ≤ 50` (FINITE-EXACT).** The canonical heads with numerator `2^a − 3` other than `(a+1)` are
 
    | `a` | `k` | head `h` | total `A` | `N` | distance `D` |
    |---|---|---|---|---|---|
@@ -48,8 +48,9 @@ related:
    | 21 | 1 | (6, 1, 3, 1, 1, 1, 2, 2, 3) | 20 | 2^19 − 1 | 8 |
    | 28 | 2 | (5, 2, 3, 1, 1, 1, 4, 1, 1, 2, 1, 1, 2) | 25 | 5·2^24 − 1 | 12 |
    | 31 | 1 | (4, 1, 3, 6, 2, 3, 3, 2, 2, 3, 1) | 30 | 2^29 − 1 | 10 |
+   | 49 | 1 | (4, 4, 2, 1, 4, 2, 1, 3, 2, 2, 1, 1, 1, 1, 2, 1, 2, 2, 1, 4, 1, 5, 1) | 48 | 2^47 − 1 | 22 |
 
-   and there are no others for `a ≤ 44`. This reproduces THM-4640 (1)'s rigidity list `{7, 13, 17, 21, 28, 31}` (`a ≤ 31`, one extra representation each) and explains it: five re-anchorings to `+1` and one, at `a = 28`, to `5`. The first row is THM-4555 (vi)'s `(8, c) ~ (4, 1, 1, c+2)`, the Catalan carry `9 = 8 + 1` of THM-4640 (5); `(4, 1, 1)` is also the block of THM-4601 (iii)'s clearing identity. Among `2^a − 3`, `3 ≤ a ≤ 400`, the only perfect power is `125 = 5^3` at `a = 7`.
+   and there are no others for `a ≤ 50`. This reproduces THM-4640 (1)'s rigidity list `{7, 13, 17, 21, 28, 31}` (`a ≤ 31`, one extra representation each) and explains it: five re-anchorings to `+1` and one, at `a = 28`, to `5`; the next exception is `a = 49`, again a re-anchoring to `+1` (`a ∈ {32, …, 48}` are rigid). The first row is THM-4555 (vi)'s `(8, c) ~ (4, 1, 1, c+2)`, the Catalan carry `9 = 8 + 1` of THM-4640 (5); `(4, 1, 1)` is also the block of THM-4601 (iii)'s clearing identity. Among `2^a − 3`, `3 ≤ a ≤ 400`, the only perfect power is `125 = 5^3` at `a = 7`.
 
 ## Proofs
 
@@ -59,8 +60,8 @@ related:
 
 **3.** `4^k·(−2^(−a)) + a_k = −2^(2k−a) + a_k = a_k − 2^(1−A)` since `a − 2k = A − 1`. ∎
 
-**4.** For each `a ≤ 44` and each `k` with `A = a + 1 − 2k ≥ 2`, the heads with anchor image `(2^(A−1) a_k − 1)/2^(A−1)` are enumerated backward: the last letter `c` of a head with numerator `N` and total `A` leads to the numerator `(N − 2^(A−c−1))/3`, which must be an odd integer, or to the single-letter head when `N = 2^(A−2) − 3`; the recursion is memoised. Every listed head is checked against its exact anchor image, and `3N + 2^(A−1) = 2^a − 3` is verified. The perfect-power check uses `sympy.perfect_power`. ∎
+**4.** For each `a ≤ 50` and each `k` with `A = a + 1 − 2k ≥ 2`, the heads with anchor image `(2^(A−1) a_k − 1)/2^(A−1)` are enumerated backward: the last letter `c` of a head with numerator `N` and total `A` leads to the numerator `(N − 2^(A−c−1))/3`, which must be an odd integer, or to the single-letter head when `N = 2^(A−2) − 3`; the recursion is memoised. Every listed head is checked against its exact anchor image, and `3N + 2^(A−1) = 2^a − 3` is verified. The perfect-power check uses `sympy.perfect_power`. ∎
 
 ## Remark
 
-The six exceptional anchors `2^a − 3 ∈ {125, 8189, 131069, 2097149, 268435453, 2147483645}` are the only reciprocal anchors `1/c_a` of THM-4600 (`a ≤ 44`) reached by a second canonical path from `−1`. On the Mersenne line the single letter `a + 1` is the first post-run letter of `M_E` iff `E` is even with `v_2(E) = a − 2`, so these are the even-exponent classes `E ≡ 2^(a−2) (mod 2^(a−1))` that admit, beyond the reset switch, a direct switch of distance `|h| − 1` to `M_(E−|h|+1)` whenever the child's post-run word begins with `h`.
+The seven exceptional anchors `2^a − 3`, `a ∈ {7, 13, 17, 21, 28, 31, 49}`, are the only reciprocal anchors `1/c_a` of THM-4600 (`a ≤ 50`) reached by a second canonical path from `−1`. On the Mersenne line the single letter `a + 1` is the first post-run letter of `M_E` iff `E` is even with `v_2(E) = a − 2`, so these are the even-exponent classes `E ≡ 2^(a−2) (mod 2^(a−1))` that admit, beyond the reset switch, a direct switch of distance `|h| − 1` to `M_(E−|h|+1)` whenever the child's post-run word begins with `h`.

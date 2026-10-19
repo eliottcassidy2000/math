@@ -1,0 +1,10 @@
+a : k : head h (reduced, first letter >= 3) with f_h(-1) = a_k - 2^(1-A_h)
+7 1 (4, 1, 1) total 6 D = 2
+13 1 (5, 1, 2, 3, 1) total 12 D = 4
+17 1 (4, 3, 2, 2, 1, 1, 3) total 16 D = 6
+21 1 (6, 1, 3, 1, 1, 1, 2, 2, 3) total 20 D = 8
+28 2 (5, 2, 3, 1, 1, 1, 4, 1, 1, 2, 1, 1, 2) total 25 D = 12
+31 1 (4, 1, 3, 6, 2, 3, 3, 2, 2, 3, 1) total 30 D = 10
+49 1 (4, 4, 2, 1, 4, 2, 1, 3, 2, 2, 1, 1, 1, 1, 2, 1, 2, 2, 1, 4, 1, 5, 1) total 48 D = 22
+a with a second canonical representation of 2^a-3, a <= 50 : [7, 13, 17, 21, 28, 31, 49]
+(THM-4640 (1) rigidity list for a <= 31: {7, 13, 17, 21, 28, 31})
