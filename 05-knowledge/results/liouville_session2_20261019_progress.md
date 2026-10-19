@@ -1,37 +1,57 @@
-# Second extended research session: current mechanisms and next obstacles
+# Extended research session: mechanisms, completed cases, and remaining barriers
 
-19 October 2026, 16:07 UTC. Status: ongoing research snapshot. General Collatz, planar Jacobian, Hadwiger–Nelson, twin-prime, binary Goldbach, and unrestricted poset-balance/Gold conjectures remain open. No historical priority is asserted for the derived results.
+19 October 2026. Second progress-map revision. The linked results are scoped statements; no general Collatz, planar Jacobian, twin-prime, binary Goldbach, graceful-tree, or unrestricted poset-balance/Gold conjecture is claimed solved. No historical priority is asserted. This map replaces the earlier 16:07 snapshot once publication of its linked dependencies is verified.
 
-## Portfolio
+## 1. A complete exterior problem for one Gold core
 
-The new prime directions include four-form twin-center sums, local-to-global correlation estimates, and unconditional almost-prime/rough-number analogues. These supplement the continuing dynamics, graph-labeling, poset, and planar-flow work. The emphasis is readable statements, proofs, exact gaps, and small reproducible controls. Computation supports the arguments rather than replacing their explanation.
+[Three-tree adaptive Gold cover](three_tree_gold_cover_20261019/THREE_TREE_GOLD_COVER.md) closes the arbitrary-size, two-sided seven-thin exterior problem for the specified ten-vertex core. Three fixed two-question trees cover the entire convex hull of 1,764 attachment atoms. Every selected tree has all four Gold margins greater than E/200. Its first comparison is strictly (101/300,199/300)-balanced.
 
-## Published results from this session
+The proof is small: seven individually safe margins and four positive-combination inequalities. The underlying [bounded-chain compression](boundary_chain_compression_20261019/README.md) preserves the full core-word law with extension-count weights. This is stronger than checking each atom separately: a mixture can require a different tree. An [independent reconstruction](two_sided_gold_review_20261019/README.md) checks the counts and cover without importing the author's enumeration code.
 
-1. [Prime-pair symmetry and target surplus](prime_pairs_local_symmetry_20261019/prime-pairs-structural-note.md). Symmetric forbidden residue sets identify sum and difference correlations. Target conditioning depends on a cubic graph statistic, while variance is quartic. Explicit arithmetic moments and rough-number theorems separate local admissibility from actual prime correlations.
-2. [Small forbidden patterns and reconstruction](prime_pairs_local_symmetry_20261019/forbidden-pattern-classification.md). Equal-energy patterns can have opposite conditional bias. Full labelled correlation recovers symmetric subsets on odd-order groups by cancellation of off-diagonal pairs modulo two. Moment compression and the sieve parity obstruction are different issues.
-3. [Planar autonomous flows, Lie structure, and finite jets](planar_autonomous_lie_jets_20261019/README.md). Polynomiality at one nonzero time for a polynomial Hamiltonian of order at least three is equivalent to a coordinate Hamiltonian/local nilpotence, using cited classical inputs. Finite-dimensional normalized planar Hamiltonian Lie algebras are abelian. Fixed-direction shear constructions realize every finite symplectic jet; a common global inverse bound is an additional obligation.
-4. [Dynamics and labeling entry mechanisms](dynamics_labeling_entry_20261019/README.md). Pythagorean positivity is nonregular despite a bounded chosen reset. Graceful fibers admit explicit rank-release and matching-support criteria. Classical finite parity coding gives density-one entry into a specified Collatz word, without pointwise coverage or descent below the original source.
-5. [Irrational ternary-depth density](pythagorean_ternary_depth_limit_20261019/TERNARY_DEPTH_LIMIT_AND_FINITE_MEMORY.md). The positive AP square-sum shapes have limiting ternary-level proportion approximately 0.0603905231. It is irrational, and level-n error is at most 2/3^n. This is a different sampling measure from a hypotenuse cutoff. Sound finite-suffix approximations abstain on exactly two boundary cylinders.
-6. [Support-three Hall barrier and support-four repair](gold_support_three_hall_20261019/GOLD_SUPPORT_THREE_HALL_BARRIER.md). A specified strict-Gold first comparison in a rigid seven-thin seed has no sufficient support-three certificate for any second comparison, but support four repairs it. A short structural Hall upper bound is the main obstruction proof.
-7. [Chain thresholds and rank windows](gold_chain_support_windows_20261019/CHAIN_SUPPORT_THRESHOLDS_AND_RANK_WINDOWS.md). An infinite seven-thin family of specified strict-Gold trees requires support nine. The result concerns those chosen trees, not all available strategies. Disjoint rank windows yield an exact matching-capacity formula and isolate cancellation of fiber biases.
+This resolves this core and its arbitrary exteriors, not all seven-thin cores or the full Gold conjecture. The next transfer question is which other cores admit similarly small adaptive covers after the exact compression.
 
-## Approved continuations awaiting their publication dependencies
+## 2. Collatz: original height, lawful entry, and the coverage gap
 
-The bounded-chain exterior theorem preserves every core-word count as an extension-weighted mixture of actual bounded chain attachments. For seven-thin cores the atoms have at most 26 vertices. Its suffix-state refinement retains interface-dependent weights, tied suffix counts, rank-one multiplicities, and positive branch capacities; at most 1716 shared suffix coefficients per side suffice. These are reductions, not a proof that arbitrary convex mixtures are actual posets.
+[Original-height bank repair](collatz_original_height_repair_20261019/ORIGINAL_HEIGHT_REPAIR.md) turns a specified contracting expansion/reset bank word into actual descent below its own source within N+92 steps, except for an exact-cycle alternative that produces a distinct nontrivial cycle containing a smaller integer. Consequently a least nonconverging positive integer cannot begin that word. The proof uses a uniform carry bound and exact all-lift offset certificates, not a census of starting integers.
 
-The two-flow metabelian model distinguishes exact finite words, Lie generation, and point-adic closure. Approximating a missing cubic shear through degree N has sharp factor cost 2N−3 for N≥4. Higher monomial targets have different exact costs over real and cyclotomic scalar fields. Intermediate-factor fields need not descend merely because final rational coordinates do.
+[Height-controlled entry](collatz_height_controlled_entry_20261019/HEIGHT_CONTROLLED_ENTRY.md) couples entry into a prescribed parity word with a height and time bound outside a power-saving exceptional set. Classical density-one descent and Korec's logarithmic clock are credited. The additional content is the joint prescribed-word event. The saving exponent is very small, and this is not a pointwise entry theorem.
 
-These items will receive live links once their dependencies and remote files are verified. They are not claimed published by this snapshot.
+The remaining obstacle is explicit: a hypothetical least nonconverging source must be shown to enter a suitable guarded bank language with usable carry control. Distributional entry alone does not establish that fact.
 
-## Next substantial obligations
+## 3. Prime pairs: local algebra and an unconditional rough substitute
 
-- Prime pairs: a uniform power-depth lower sieve preserving the target-dependent local factor; then identify exactly which estimates fail at the prime endpoint.
-- Posets: retain actual interface constraints before convexification, including correlations among suffix counts; find a genuinely new separating inequality for an unresolved morphology.
-- Gold: prove or refute a uniform support-(m+2) matching theorem for two equal chains, beyond finite certificates; control signed rank-window biases in non-modular classes.
-- Graceful fibers: characterize when one released edge repairs a three-color obstruction, beyond rank staircases; keep tree-shape preservation separate.
-- Planar flows: classify common rational/polynomial invariants in the noncommuting metabelian family and quantify the cost of scalar extensions. Neither finite jets nor special-source normal forms provide a general Keller-map reduction.
+[Local symmetry](prime_pairs_local_symmetry_20261019/prime-pairs-structural-note.md) identifies the symmetric sum/difference correlation, distinguishes cubic conditional bias from quartic energy, and computes target-dependent local factors for four twin-center forms. [Small-pattern classification](prime_pairs_local_symmetry_20261019/forbidden-pattern-classification.md) gives equal-energy patterns with opposite bias and a labelled-correlation reconstruction by parity cancellation on odd-order groups.
 
-## How to use the connections
+[Power-depth rough pairs](prime_pairs_local_symmetry_20261019/power-depth-rough-pairs.md) applies a classical lower sieve uniformly in the target. It supplies many representations for which each of the four forms has at most 37 prime factors, counted with multiplicity. This is an almost-prime theorem, not a prime-pair theorem or a claimed record.
 
-For each proposed transfer, retain the missing coordinate explicitly: positivity regions for prime sums, extension-count weights for poset mixtures, outside-position fibers for matchings, lawful source cylinders for Collatz, and global poles or invariants for formal flows. Similar finite statistics can be exact and still fail to preserve the desired global existence statement.
+[Short-interval resolution](prime_pairs_local_symmetry_20261019/short-interval-local-resolution.md) quantifies when the full target-dependent local factor can be replaced by its truncation. Primorial targets witness the sharp fixed power-logarithmic transition. Actual prime correlations at the endpoint remain the substantive analytic gap.
+
+## 4. Unit-distance graphs: lifting is constrained by stress
+
+[Semilocal lifting and carry obstructions](unit_distance_carry_20261019/README.md) shows that combining the selected fixed places gives a categorical-product quotient whose chromatic number is that of the deepest factor. More copies of the same residue obstruction do not automatically strengthen it.
+
+Mixed-characteristic straight cycles forbid a global section between successive norm-circle precision levels. First-order lifting becomes a linear carry equation, with stresses as compatibility checks and failed edges as a minimum-weight coset problem. Crucially, a framework with independent rigidity rows is at most four-colorable. A six-critical framework must carry at least ceil(n/2)+3 stresses. Thus nonsingular lifting alone cannot deliver the required high-chromatic configuration.
+
+Exact small-field witnesses and a Moser spindle control accompany the statements. The separate reported 2026 six-color lower bound in the OpenAI primary repository was source-checked during this session, not independently rebuilt here; the local results do not claim a new global chromatic bound.
+
+## 5. Planar flows: finite precision does not control global invariants
+
+[Autonomous flows and Lie jets](planar_autonomous_lie_jets_20261019/README.md) links polynomial autonomous flow to local nilpotence under its stated hypotheses and classical inputs. Finite-dimensional Hamiltonian Lie algebras normalized to order at least three are abelian. Finite symplectic jets can nevertheless be completed by polynomial shears.
+
+[Sharp word length](metabelian_sharp_jet_length_20261019/README.md) and [field-sensitive costs](metabelian_field_sensitive_jets_20261019/field_sensitive_monomial_jet_lengths.md) quantify approximation in a concrete noncommuting two-flow model. Real and cyclotomic coefficient fields have different exact costs, even when final coordinates are rational.
+
+[Global invariants and logarithms](metabelian_global_invariants_20261019/metabelian_global_invariants_and_logarithms.md) gives an exact orbit-sum criterion for rational first integrals in that model. Arbitrarily high jet agreement can coexist with failure of a rational invariant. A general Keller-map reduction remains missing.
+
+## 6. Labeling and exchange: exact obstructions rather than shared numerology
+
+[Three-color classification](three_color_obstruction_classification_20261019/CLASSIFICATION_AND_TWO_RELEASES.md) classifies the disconnected rank-three representable-matroid exchange configuration. The graphic obstruction is a six-cycle contact pattern. Bridge-only releases preserve a product obstruction; a specified nonbridge release can repair it. This does not prove an existential repair for every arithmetic graceful fiber.
+
+[Gold chain-window capacity](gold_chain_window_capacity_20261019/EXACT_WINDOW_CAPACITY_AND_MATCHING_GAP.md) supplies an exact deficit formula and separates individual nearby matches from Hall capacity. [Support thresholds](gold_chain_support_windows_20261019/CHAIN_SUPPORT_THRESHOLDS_AND_RANK_WINDOWS.md) give an infinite seven-thin family of specified trees requiring support nine. A uniform two-chain support-(m+2) matching theorem remains open beyond the finite certified cases.
+
+[Irrational ternary-depth density](pythagorean_ternary_depth_limit_20261019/TERNARY_DEPTH_LIMIT_AND_FINITE_MEMORY.md) connects Pythagorean tree dynamics to a nonregular positivity language with an irrational limiting density and exact finite-memory uncertainty bounds. A chosen bounded reset does not imply a regular global language.
+
+## The shared lesson and next proof targets
+
+The useful connections preserve the information on which existence depends: extension weights, lawful source guards, target-specific sieve factors, edge stresses, or global pole sums. A finite projection can be exact while omitting that information.
+
+The Gold cover succeeds because a finite family of witnesses covers the whole relevant convex region with a positive margin. The next meaningful questions are whether an analogous complete witness cover exists for other poset cores, whether Collatz guard refinement can be made terminating for every relevant source, and whether a high-chromatic unit-distance framework has compatible carry stresses through all required precision levels. These are explicit proof obligations, not inferred isomorphisms between the major conjectures.
