@@ -1,0 +1,38 @@
+{
+  "A_index": 132030,
+  "B_index": 2694,
+  "N": 6469494,
+  "checks": 12938991,
+  "excluded_central_interval": [
+    116449,
+    118849
+  ],
+  "k": 3,
+  "large_cycle_stored": false,
+  "matching_edges_checked": 115248,
+  "matching_lower_vertex_range": [
+    58825,
+    176473
+  ],
+  "seed_edges_preserved": 2,
+  "square_root": 686,
+  "square_sum": 470596,
+  "status": "passed",
+  "threshold": 6294221,
+  "used_transitions": [
+    [
+      "B",
+      0,
+      48,
+      [
+        0
+      ]
+    ],
+    [
+      "Aplus",
+      0,
+      24,
+      []
+    ]
+  ]
+}
