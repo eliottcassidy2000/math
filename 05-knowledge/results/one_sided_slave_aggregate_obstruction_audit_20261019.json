@@ -1,0 +1,165 @@
+{
+  "status": "PASS",
+  "actual_posets": [
+    {
+      "upper_slave_count": 1,
+      "extensions": 8,
+      "x_before_z": 4,
+      "z_before_y": 5,
+      "aggregate": "9/8",
+      "deficit": 5
+    },
+    {
+      "upper_slave_count": 2,
+      "extensions": 15,
+      "x_before_z": 10,
+      "z_before_y": 9,
+      "aggregate": "19/15",
+      "deficit": 3
+    },
+    {
+      "upper_slave_count": 3,
+      "extensions": 24,
+      "x_before_z": 18,
+      "z_before_y": 14,
+      "aggregate": "4/3",
+      "deficit": 0
+    },
+    {
+      "upper_slave_count": 4,
+      "extensions": 35,
+      "x_before_z": 28,
+      "z_before_y": 20,
+      "aggregate": "48/35",
+      "deficit": -4
+    },
+    {
+      "upper_slave_count": 5,
+      "extensions": 48,
+      "x_before_z": 40,
+      "z_before_y": 27,
+      "aggregate": "67/48",
+      "deficit": -9
+    },
+    {
+      "upper_slave_count": 6,
+      "extensions": 63,
+      "x_before_z": 54,
+      "z_before_y": 35,
+      "aggregate": "89/63",
+      "deficit": -15
+    },
+    {
+      "upper_slave_count": 7,
+      "extensions": 80,
+      "x_before_z": 70,
+      "z_before_y": 44,
+      "aggregate": "57/40",
+      "deficit": -22
+    },
+    {
+      "upper_slave_count": 8,
+      "extensions": 99,
+      "x_before_z": 88,
+      "z_before_y": 54,
+      "aggregate": "142/99",
+      "deficit": -30
+    },
+    {
+      "upper_slave_count": 9,
+      "extensions": 120,
+      "x_before_z": 108,
+      "z_before_y": 65,
+      "aggregate": "173/120",
+      "deficit": -39
+    },
+    {
+      "upper_slave_count": 10,
+      "extensions": 143,
+      "x_before_z": 130,
+      "z_before_y": 77,
+      "aggregate": "207/143",
+      "deficit": -49
+    },
+    {
+      "upper_slave_count": 11,
+      "extensions": 168,
+      "x_before_z": 154,
+      "z_before_y": 90,
+      "aggregate": "61/42",
+      "deficit": -60
+    },
+    {
+      "upper_slave_count": 12,
+      "extensions": 195,
+      "x_before_z": 180,
+      "z_before_y": 104,
+      "aggregate": "284/195",
+      "deficit": -72
+    },
+    {
+      "upper_slave_count": 13,
+      "extensions": 224,
+      "x_before_z": 208,
+      "z_before_y": 119,
+      "aggregate": "327/224",
+      "deficit": -85
+    },
+    {
+      "upper_slave_count": 14,
+      "extensions": 255,
+      "x_before_z": 238,
+      "z_before_y": 135,
+      "aggregate": "373/255",
+      "deficit": -99
+    },
+    {
+      "upper_slave_count": 15,
+      "extensions": 288,
+      "x_before_z": 270,
+      "z_before_y": 152,
+      "aggregate": "211/144",
+      "deficit": -114
+    },
+    {
+      "upper_slave_count": 16,
+      "extensions": 323,
+      "x_before_z": 304,
+      "z_before_y": 170,
+      "aggregate": "474/323",
+      "deficit": -130
+    },
+    {
+      "upper_slave_count": 17,
+      "extensions": 360,
+      "x_before_z": 340,
+      "z_before_y": 189,
+      "aggregate": "529/360",
+      "deficit": -147
+    },
+    {
+      "upper_slave_count": 18,
+      "extensions": 399,
+      "x_before_z": 378,
+      "z_before_y": 209,
+      "aggregate": "587/399",
+      "deficit": -165
+    },
+    {
+      "upper_slave_count": 19,
+      "extensions": 440,
+      "x_before_z": 418,
+      "z_before_y": 230,
+      "aggregate": "81/55",
+      "deficit": -184
+    },
+    {
+      "upper_slave_count": 20,
+      "extensions": 483,
+      "x_before_z": 460,
+      "z_before_y": 252,
+      "aggregate": "712/483",
+      "deficit": -204
+    }
+  ]
+}
