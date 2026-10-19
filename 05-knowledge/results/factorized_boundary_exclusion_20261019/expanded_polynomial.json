@@ -1,0 +1,3716 @@
+[
+  {
+    "monomial": [],
+    "coefficient": 0
+  },
+  {
+    "monomial": [
+      0
+    ],
+    "coefficient": 0
+  },
+  {
+    "monomial": [
+      0,
+      0
+    ],
+    "coefficient": -36
+  },
+  {
+    "monomial": [
+      0,
+      0,
+      15
+    ],
+    "coefficient": -591
+  },
+  {
+    "monomial": [
+      0,
+      0,
+      16
+    ],
+    "coefficient": -42
+  },
+  {
+    "monomial": [
+      0,
+      0,
+      17
+    ],
+    "coefficient": -18
+  },
+  {
+    "monomial": [
+      0,
+      0,
+      18
+    ],
+    "coefficient": -444
+  },
+  {
+    "monomial": [
+      0,
+      0,
+      19
+    ],
+    "coefficient": -768
+  },
+  {
+    "monomial": [
+      0,
+      0,
+      20
+    ],
+    "coefficient": -111
+  },
+  {
+    "monomial": [
+      0,
+      0,
+      21
+    ],
+    "coefficient": -165
+  },
+  {
+    "monomial": [
+      0,
+      0,
+      22
+    ],
+    "coefficient": -660
+  },
+  {
+    "monomial": [
+      0,
+      0,
+      23
+    ],
+    "coefficient": -780
+  },
+  {
+    "monomial": [
+      0,
+      0,
+      24
+    ],
+    "coefficient": -111
+  },
+  {
+    "monomial": [
+      0,
+      0,
+      25
+    ],
+    "coefficient": 0
+  },
+  {
+    "monomial": [
+      0,
+      0,
+      26
+    ],
+    "coefficient": -24
+  },
+  {
+    "monomial": [
+      0,
+      0,
+      27
+    ],
+    "coefficient": -204
+  },
+  {
+    "monomial": [
+      0,
+      0,
+      28
+    ],
+    "coefficient": -228
+  },
+  {
+    "monomial": [
+      0,
+      0,
+      29
+    ],
+    "coefficient": -204
+  },
+  {
+    "monomial": [
+      0,
+      1
+    ],
+    "coefficient": -1236
+  },
+  {
+    "monomial": [
+      0,
+      1,
+      15
+    ],
+    "coefficient": -831
+  },
+  {
+    "monomial": [
+      0,
+      1,
+      16
+    ],
+    "coefficient": -567
+  },
+  {
+    "monomial": [
+      0,
+      1,
+      17
+    ],
+    "coefficient": -144
+  },
+  {
+    "monomial": [
+      0,
+      1,
+      18
+    ],
+    "coefficient": -582
+  },
+  {
+    "monomial": [
+      0,
+      1,
+      19
+    ],
+    "coefficient": -834
+  },
+  {
+    "monomial": [
+      0,
+      1,
+      20
+    ],
+    "coefficient": -192
+  },
+  {
+    "monomial": [
+      0,
+      1,
+      21
+    ],
+    "coefficient": -246
+  },
+  {
+    "monomial": [
+      0,
+      1,
+      22
+    ],
+    "coefficient": -501
+  },
+  {
+    "monomial": [
+      0,
+      1,
+      23
+    ],
+    "coefficient": -591
+  },
+  {
+    "monomial": [
+      0,
+      1,
+      24
+    ],
+    "coefficient": -192
+  },
+  {
+    "monomial": [
+      0,
+      1,
+      25
+    ],
+    "coefficient": -36
+  },
+  {
+    "monomial": [
+      0,
+      1,
+      26
+    ],
+    "coefficient": -60
+  },
+  {
+    "monomial": [
+      0,
+      1,
+      27
+    ],
+    "coefficient": -240
+  },
+  {
+    "monomial": [
+      0,
+      1,
+      28
+    ],
+    "coefficient": -264
+  },
+  {
+    "monomial": [
+      0,
+      1,
+      29
+    ],
+    "coefficient": -240
+  },
+  {
+    "monomial": [
+      0,
+      2
+    ],
+    "coefficient": -825
+  },
+  {
+    "monomial": [
+      0,
+      2,
+      15
+    ],
+    "coefficient": -582
+  },
+  {
+    "monomial": [
+      0,
+      2,
+      16
+    ],
+    "coefficient": -438
+  },
+  {
+    "monomial": [
+      0,
+      2,
+      17
+    ],
+    "coefficient": -135
+  },
+  {
+    "monomial": [
+      0,
+      2,
+      18
+    ],
+    "coefficient": -450
+  },
+  {
+    "monomial": [
+      0,
+      2,
+      19
+    ],
+    "coefficient": -630
+  },
+  {
+    "monomial": [
+      0,
+      2,
+      20
+    ],
+    "coefficient": -162
+  },
+  {
+    "monomial": [
+      0,
+      2,
+      21
+    ],
+    "coefficient": -198
+  },
+  {
+    "monomial": [
+      0,
+      2,
+      22
+    ],
+    "coefficient": -408
+  },
+  {
+    "monomial": [
+      0,
+      2,
+      23
+    ],
+    "coefficient": -480
+  },
+  {
+    "monomial": [
+      0,
+      2,
+      24
+    ],
+    "coefficient": -162
+  },
+  {
+    "monomial": [
+      0,
+      2,
+      25
+    ],
+    "coefficient": -36
+  },
+  {
+    "monomial": [
+      0,
+      2,
+      26
+    ],
+    "coefficient": -54
+  },
+  {
+    "monomial": [
+      0,
+      2,
+      27
+    ],
+    "coefficient": -189
+  },
+  {
+    "monomial": [
+      0,
+      2,
+      28
+    ],
+    "coefficient": -207
+  },
+  {
+    "monomial": [
+      0,
+      2,
+      29
+    ],
+    "coefficient": -189
+  },
+  {
+    "monomial": [
+      0,
+      3
+    ],
+    "coefficient": -534
+  },
+  {
+    "monomial": [
+      0,
+      3,
+      15
+    ],
+    "coefficient": -312
+  },
+  {
+    "monomial": [
+      0,
+      3,
+      16
+    ],
+    "coefficient": -228
+  },
+  {
+    "monomial": [
+      0,
+      3,
+      18
+    ],
+    "coefficient": -246
+  },
+  {
+    "monomial": [
+      0,
+      3,
+      19
+    ],
+    "coefficient": -300
+  },
+  {
+    "monomial": [
+      0,
+      3,
+      22
+    ],
+    "coefficient": -264
+  },
+  {
+    "monomial": [
+      0,
+      3,
+      23
+    ],
+    "coefficient": -288
+  },
+  {
+    "monomial": [
+      0,
+      4
+    ],
+    "coefficient": -1932
+  },
+  {
+    "monomial": [
+      0,
+      4,
+      15
+    ],
+    "coefficient": -960
+  },
+  {
+    "monomial": [
+      0,
+      4,
+      16
+    ],
+    "coefficient": -924
+  },
+  {
+    "monomial": [
+      0,
+      4,
+      17
+    ],
+    "coefficient": -216
+  },
+  {
+    "monomial": [
+      0,
+      4,
+      18
+    ],
+    "coefficient": -720
+  },
+  {
+    "monomial": [
+      0,
+      4,
+      19
+    ],
+    "coefficient": -900
+  },
+  {
+    "monomial": [
+      0,
+      4,
+      20
+    ],
+    "coefficient": -216
+  },
+  {
+    "monomial": [
+      0,
+      4,
+      21
+    ],
+    "coefficient": -252
+  },
+  {
+    "monomial": [
+      0,
+      4,
+      22
+    ],
+    "coefficient": -516
+  },
+  {
+    "monomial": [
+      0,
+      4,
+      23
+    ],
+    "coefficient": -588
+  },
+  {
+    "monomial": [
+      0,
+      4,
+      24
+    ],
+    "coefficient": -216
+  },
+  {
+    "monomial": [
+      0,
+      4,
+      25
+    ],
+    "coefficient": -63
+  },
+  {
+    "monomial": [
+      0,
+      4,
+      26
+    ],
+    "coefficient": -81
+  },
+  {
+    "monomial": [
+      0,
+      4,
+      27
+    ],
+    "coefficient": -216
+  },
+  {
+    "monomial": [
+      0,
+      4,
+      28
+    ],
+    "coefficient": -234
+  },
+  {
+    "monomial": [
+      0,
+      4,
+      29
+    ],
+    "coefficient": -216
+  },
+  {
+    "monomial": [
+      0,
+      5
+    ],
+    "coefficient": -1386
+  },
+  {
+    "monomial": [
+      0,
+      5,
+      15
+    ],
+    "coefficient": -549
+  },
+  {
+    "monomial": [
+      0,
+      5,
+      16
+    ],
+    "coefficient": -750
+  },
+  {
+    "monomial": [
+      0,
+      5,
+      17
+    ],
+    "coefficient": -252
+  },
+  {
+    "monomial": [
+      0,
+      5,
+      18
+    ],
+    "coefficient": -444
+  },
+  {
+    "monomial": [
+      0,
+      5,
+      19
+    ],
+    "coefficient": -516
+  },
+  {
+    "monomial": [
+      0,
+      5,
+      20
+    ],
+    "coefficient": -213
+  },
+  {
+    "monomial": [
+      0,
+      5,
+      21
+    ],
+    "coefficient": -231
+  },
+  {
+    "monomial": [
+      0,
+      5,
+      22
+    ],
+    "coefficient": -216
+  },
+  {
+    "monomial": [
+      0,
+      5,
+      23
+    ],
+    "coefficient": -252
+  },
+  {
+    "monomial": [
+      0,
+      5,
+      24
+    ],
+    "coefficient": -213
+  },
+  {
+    "monomial": [
+      0,
+      5,
+      25
+    ],
+    "coefficient": -72
+  },
+  {
+    "monomial": [
+      0,
+      5,
+      26
+    ],
+    "coefficient": -84
+  },
+  {
+    "monomial": [
+      0,
+      5,
+      27
+    ],
+    "coefficient": -174
+  },
+  {
+    "monomial": [
+      0,
+      5,
+      28
+    ],
+    "coefficient": -186
+  },
+  {
+    "monomial": [
+      0,
+      5,
+      29
+    ],
+    "coefficient": -174
+  },
+  {
+    "monomial": [
+      0,
+      6
+    ],
+    "coefficient": -648
+  },
+  {
+    "monomial": [
+      0,
+      6,
+      15
+    ],
+    "coefficient": -324
+  },
+  {
+    "monomial": [
+      0,
+      6,
+      16
+    ],
+    "coefficient": -270
+  },
+  {
+    "monomial": [
+      0,
+      6,
+      18
+    ],
+    "coefficient": -252
+  },
+  {
+    "monomial": [
+      0,
+      6,
+      19
+    ],
+    "coefficient": -288
+  },
+  {
+    "monomial": [
+      0,
+      6,
+      22
+    ],
+    "coefficient": -234
+  },
+  {
+    "monomial": [
+      0,
+      6,
+      23
+    ],
+    "coefficient": -252
+  },
+  {
+    "monomial": [
+      0,
+      7
+    ],
+    "coefficient": -648
+  },
+  {
+    "monomial": [
+      0,
+      7,
+      15
+    ],
+    "coefficient": -324
+  },
+  {
+    "monomial": [
+      0,
+      7,
+      16
+    ],
+    "coefficient": -270
+  },
+  {
+    "monomial": [
+      0,
+      7,
+      18
+    ],
+    "coefficient": -252
+  },
+  {
+    "monomial": [
+      0,
+      7,
+      19
+    ],
+    "coefficient": -288
+  },
+  {
+    "monomial": [
+      0,
+      7,
+      22
+    ],
+    "coefficient": -234
+  },
+  {
+    "monomial": [
+      0,
+      7,
+      23
+    ],
+    "coefficient": -252
+  },
+  {
+    "monomial": [
+      0,
+      8
+    ],
+    "coefficient": -1764
+  },
+  {
+    "monomial": [
+      0,
+      8,
+      15
+    ],
+    "coefficient": -684
+  },
+  {
+    "monomial": [
+      0,
+      8,
+      16
+    ],
+    "coefficient": -930
+  },
+  {
+    "monomial": [
+      0,
+      8,
+      17
+    ],
+    "coefficient": -288
+  },
+  {
+    "monomial": [
+      0,
+      8,
+      18
+    ],
+    "coefficient": -552
+  },
+  {
+    "monomial": [
+      0,
+      8,
+      19
+    ],
+    "coefficient": -624
+  },
+  {
+    "monomial": [
+      0,
+      8,
+      20
+    ],
+    "coefficient": -240
+  },
+  {
+    "monomial": [
+      0,
+      8,
+      21
+    ],
+    "coefficient": -258
+  },
+  {
+    "monomial": [
+      0,
+      8,
+      22
+    ],
+    "coefficient": -270
+  },
+  {
+    "monomial": [
+      0,
+      8,
+      23
+    ],
+    "coefficient": -306
+  },
+  {
+    "monomial": [
+      0,
+      8,
+      24
+    ],
+    "coefficient": -240
+  },
+  {
+    "monomial": [
+      0,
+      8,
+      25
+    ],
+    "coefficient": -90
+  },
+  {
+    "monomial": [
+      0,
+      8,
+      26
+    ],
+    "coefficient": -102
+  },
+  {
+    "monomial": [
+      0,
+      8,
+      27
+    ],
+    "coefficient": -192
+  },
+  {
+    "monomial": [
+      0,
+      8,
+      28
+    ],
+    "coefficient": -204
+  },
+  {
+    "monomial": [
+      0,
+      8,
+      29
+    ],
+    "coefficient": -192
+  },
+  {
+    "monomial": [
+      0,
+      9
+    ],
+    "coefficient": -864
+  },
+  {
+    "monomial": [
+      0,
+      9,
+      15
+    ],
+    "coefficient": -405
+  },
+  {
+    "monomial": [
+      0,
+      9,
+      16
+    ],
+    "coefficient": -351
+  },
+  {
+    "monomial": [
+      0,
+      9,
+      18
+    ],
+    "coefficient": -306
+  },
+  {
+    "monomial": [
+      0,
+      9,
+      19
+    ],
+    "coefficient": -342
+  },
+  {
+    "monomial": [
+      0,
+      9,
+      22
+    ],
+    "coefficient": -261
+  },
+  {
+    "monomial": [
+      0,
+      9,
+      23
+    ],
+    "coefficient": -279
+  },
+  {
+    "monomial": [
+      0,
+      10
+    ],
+    "coefficient": 0
+  },
+  {
+    "monomial": [
+      0,
+      10,
+      15
+    ],
+    "coefficient": -915
+  },
+  {
+    "monomial": [
+      0,
+      10,
+      16
+    ],
+    "coefficient": -48
+  },
+  {
+    "monomial": [
+      0,
+      10,
+      17
+    ],
+    "coefficient": -180
+  },
+  {
+    "monomial": [
+      0,
+      10,
+      18
+    ],
+    "coefficient": -540
+  },
+  {
+    "monomial": [
+      0,
+      10,
+      19
+    ],
+    "coefficient": -1206
+  },
+  {
+    "monomial": [
+      0,
+      10,
+      20
+    ],
+    "coefficient": -255
+  },
+  {
+    "monomial": [
+      0,
+      10,
+      21
+    ],
+    "coefficient": -363
+  },
+  {
+    "monomial": [
+      0,
+      10,
+      22
+    ],
+    "coefficient": -882
+  },
+  {
+    "monomial": [
+      0,
+      10,
+      23
+    ],
+    "coefficient": -1134
+  },
+  {
+    "monomial": [
+      0,
+      10,
+      24
+    ],
+    "coefficient": -255
+  },
+  {
+    "monomial": [
+      0,
+      10,
+      25
+    ],
+    "coefficient": -6
+  },
+  {
+    "monomial": [
+      0,
+      10,
+      26
+    ],
+    "coefficient": -54
+  },
+  {
+    "monomial": [
+      0,
+      10,
+      27
+    ],
+    "coefficient": -330
+  },
+  {
+    "monomial": [
+      0,
+      10,
+      28
+    ],
+    "coefficient": -378
+  },
+  {
+    "monomial": [
+      0,
+      10,
+      29
+    ],
+    "coefficient": -330
+  },
+  {
+    "monomial": [
+      0,
+      11
+    ],
+    "coefficient": -762
+  },
+  {
+    "monomial": [
+      0,
+      11,
+      15
+    ],
+    "coefficient": -336
+  },
+  {
+    "monomial": [
+      0,
+      11,
+      16
+    ],
+    "coefficient": -312
+  },
+  {
+    "monomial": [
+      0,
+      11,
+      18
+    ],
+    "coefficient": -258
+  },
+  {
+    "monomial": [
+      0,
+      11,
+      19
+    ],
+    "coefficient": -276
+  },
+  {
+    "monomial": [
+      0,
+      11,
+      22
+    ],
+    "coefficient": -204
+  },
+  {
+    "monomial": [
+      0,
+      11,
+      23
+    ],
+    "coefficient": -216
+  },
+  {
+    "monomial": [
+      0,
+      12
+    ],
+    "coefficient": -762
+  },
+  {
+    "monomial": [
+      0,
+      12,
+      15
+    ],
+    "coefficient": -336
+  },
+  {
+    "monomial": [
+      0,
+      12,
+      16
+    ],
+    "coefficient": -312
+  },
+  {
+    "monomial": [
+      0,
+      12,
+      18
+    ],
+    "coefficient": -258
+  },
+  {
+    "monomial": [
+      0,
+      12,
+      19
+    ],
+    "coefficient": -276
+  },
+  {
+    "monomial": [
+      0,
+      12,
+      22
+    ],
+    "coefficient": -204
+  },
+  {
+    "monomial": [
+      0,
+      12,
+      23
+    ],
+    "coefficient": -216
+  },
+  {
+    "monomial": [
+      0,
+      13
+    ],
+    "coefficient": -192
+  },
+  {
+    "monomial": [
+      0,
+      13,
+      15
+    ],
+    "coefficient": -108
+  },
+  {
+    "monomial": [
+      0,
+      13,
+      16
+    ],
+    "coefficient": -84
+  },
+  {
+    "monomial": [
+      0,
+      13,
+      18
+    ],
+    "coefficient": -87
+  },
+  {
+    "monomial": [
+      0,
+      13,
+      19
+    ],
+    "coefficient": -105
+  },
+  {
+    "monomial": [
+      0,
+      13,
+      22
+    ],
+    "coefficient": -90
+  },
+  {
+    "monomial": [
+      0,
+      13,
+      23
+    ],
+    "coefficient": -102
+  },
+  {
+    "monomial": [
+      0,
+      14
+    ],
+    "coefficient": -852
+  },
+  {
+    "monomial": [
+      0,
+      14,
+      15
+    ],
+    "coefficient": -372
+  },
+  {
+    "monomial": [
+      0,
+      14,
+      16
+    ],
+    "coefficient": -348
+  },
+  {
+    "monomial": [
+      0,
+      14,
+      18
+    ],
+    "coefficient": -285
+  },
+  {
+    "monomial": [
+      0,
+      14,
+      19
+    ],
+    "coefficient": -303
+  },
+  {
+    "monomial": [
+      0,
+      14,
+      22
+    ],
+    "coefficient": -222
+  },
+  {
+    "monomial": [
+      0,
+      14,
+      23
+    ],
+    "coefficient": -234
+  },
+  {
+    "monomial": [
+      0,
+      15
+    ],
+    "coefficient": -3063
+  },
+  {
+    "monomial": [
+      0,
+      16
+    ],
+    "coefficient": -111
+  },
+  {
+    "monomial": [
+      0,
+      17
+    ],
+    "coefficient": -324
+  },
+  {
+    "monomial": [
+      0,
+      18
+    ],
+    "coefficient": -2070
+  },
+  {
+    "monomial": [
+      0,
+      19
+    ],
+    "coefficient": -4104
+  },
+  {
+    "monomial": [
+      0,
+      20
+    ],
+    "coefficient": -774
+  },
+  {
+    "monomial": [
+      0,
+      21
+    ],
+    "coefficient": -1134
+  },
+  {
+    "monomial": [
+      0,
+      22
+    ],
+    "coefficient": -3279
+  },
+  {
+    "monomial": [
+      0,
+      23
+    ],
+    "coefficient": -4011
+  },
+  {
+    "monomial": [
+      0,
+      24
+    ],
+    "coefficient": -774
+  },
+  {
+    "monomial": [
+      0,
+      25
+    ],
+    "coefficient": 0
+  },
+  {
+    "monomial": [
+      0,
+      26
+    ],
+    "coefficient": -156
+  },
+  {
+    "monomial": [
+      0,
+      27
+    ],
+    "coefficient": -1254
+  },
+  {
+    "monomial": [
+      0,
+      28
+    ],
+    "coefficient": -1410
+  },
+  {
+    "monomial": [
+      0,
+      29
+    ],
+    "coefficient": -1254
+  },
+  {
+    "monomial": [
+      1
+    ],
+    "coefficient": -3354
+  },
+  {
+    "monomial": [
+      1,
+      10
+    ],
+    "coefficient": -1962
+  },
+  {
+    "monomial": [
+      1,
+      10,
+      15
+    ],
+    "coefficient": -1287
+  },
+  {
+    "monomial": [
+      1,
+      10,
+      16
+    ],
+    "coefficient": -900
+  },
+  {
+    "monomial": [
+      1,
+      10,
+      17
+    ],
+    "coefficient": -348
+  },
+  {
+    "monomial": [
+      1,
+      10,
+      18
+    ],
+    "coefficient": -780
+  },
+  {
+    "monomial": [
+      1,
+      10,
+      19
+    ],
+    "coefficient": -1284
+  },
+  {
+    "monomial": [
+      1,
+      10,
+      20
+    ],
+    "coefficient": -363
+  },
+  {
+    "monomial": [
+      1,
+      10,
+      21
+    ],
+    "coefficient": -471
+  },
+  {
+    "monomial": [
+      1,
+      10,
+      22
+    ],
+    "coefficient": -630
+  },
+  {
+    "monomial": [
+      1,
+      10,
+      23
+    ],
+    "coefficient": -810
+  },
+  {
+    "monomial": [
+      1,
+      10,
+      24
+    ],
+    "coefficient": -363
+  },
+  {
+    "monomial": [
+      1,
+      10,
+      25
+    ],
+    "coefficient": -54
+  },
+  {
+    "monomial": [
+      1,
+      10,
+      26
+    ],
+    "coefficient": -102
+  },
+  {
+    "monomial": [
+      1,
+      10,
+      27
+    ],
+    "coefficient": -378
+  },
+  {
+    "monomial": [
+      1,
+      10,
+      28
+    ],
+    "coefficient": -426
+  },
+  {
+    "monomial": [
+      1,
+      10,
+      29
+    ],
+    "coefficient": -378
+  },
+  {
+    "monomial": [
+      1,
+      15
+    ],
+    "coefficient": -2421
+  },
+  {
+    "monomial": [
+      1,
+      16
+    ],
+    "coefficient": -1623
+  },
+  {
+    "monomial": [
+      1,
+      17
+    ],
+    "coefficient": -630
+  },
+  {
+    "monomial": [
+      1,
+      18
+    ],
+    "coefficient": -1602
+  },
+  {
+    "monomial": [
+      1,
+      19
+    ],
+    "coefficient": -2610
+  },
+  {
+    "monomial": [
+      1,
+      20
+    ],
+    "coefficient": -726
+  },
+  {
+    "monomial": [
+      1,
+      21
+    ],
+    "coefficient": -942
+  },
+  {
+    "monomial": [
+      1,
+      22
+    ],
+    "coefficient": -1497
+  },
+  {
+    "monomial": [
+      1,
+      23
+    ],
+    "coefficient": -1857
+  },
+  {
+    "monomial": [
+      1,
+      24
+    ],
+    "coefficient": -726
+  },
+  {
+    "monomial": [
+      1,
+      25
+    ],
+    "coefficient": -108
+  },
+  {
+    "monomial": [
+      1,
+      26
+    ],
+    "coefficient": -204
+  },
+  {
+    "monomial": [
+      1,
+      27
+    ],
+    "coefficient": -852
+  },
+  {
+    "monomial": [
+      1,
+      28
+    ],
+    "coefficient": -948
+  },
+  {
+    "monomial": [
+      1,
+      29
+    ],
+    "coefficient": -852
+  },
+  {
+    "monomial": [
+      2
+    ],
+    "coefficient": -2241
+  },
+  {
+    "monomial": [
+      2,
+      10
+    ],
+    "coefficient": -933
+  },
+  {
+    "monomial": [
+      2,
+      10,
+      15
+    ],
+    "coefficient": -774
+  },
+  {
+    "monomial": [
+      2,
+      10,
+      16
+    ],
+    "coefficient": -510
+  },
+  {
+    "monomial": [
+      2,
+      10,
+      17
+    ],
+    "coefficient": -255
+  },
+  {
+    "monomial": [
+      2,
+      10,
+      18
+    ],
+    "coefficient": -510
+  },
+  {
+    "monomial": [
+      2,
+      10,
+      19
+    ],
+    "coefficient": -870
+  },
+  {
+    "monomial": [
+      2,
+      10,
+      20
+    ],
+    "coefficient": -270
+  },
+  {
+    "monomial": [
+      2,
+      10,
+      21
+    ],
+    "coefficient": -342
+  },
+  {
+    "monomial": [
+      2,
+      10,
+      22
+    ],
+    "coefficient": -480
+  },
+  {
+    "monomial": [
+      2,
+      10,
+      23
+    ],
+    "coefficient": -624
+  },
+  {
+    "monomial": [
+      2,
+      10,
+      24
+    ],
+    "coefficient": -270
+  },
+  {
+    "monomial": [
+      2,
+      10,
+      25
+    ],
+    "coefficient": -42
+  },
+  {
+    "monomial": [
+      2,
+      10,
+      26
+    ],
+    "coefficient": -78
+  },
+  {
+    "monomial": [
+      2,
+      10,
+      27
+    ],
+    "coefficient": -285
+  },
+  {
+    "monomial": [
+      2,
+      10,
+      28
+    ],
+    "coefficient": -321
+  },
+  {
+    "monomial": [
+      2,
+      10,
+      29
+    ],
+    "coefficient": -285
+  },
+  {
+    "monomial": [
+      2,
+      15
+    ],
+    "coefficient": -1710
+  },
+  {
+    "monomial": [
+      2,
+      16
+    ],
+    "coefficient": -1266
+  },
+  {
+    "monomial": [
+      2,
+      17
+    ],
+    "coefficient": -543
+  },
+  {
+    "monomial": [
+      2,
+      18
+    ],
+    "coefficient": -1260
+  },
+  {
+    "monomial": [
+      2,
+      19
+    ],
+    "coefficient": -1980
+  },
+  {
+    "monomial": [
+      2,
+      20
+    ],
+    "coefficient": -594
+  },
+  {
+    "monomial": [
+      2,
+      21
+    ],
+    "coefficient": -738
+  },
+  {
+    "monomial": [
+      2,
+      22
+    ],
+    "coefficient": -1224
+  },
+  {
+    "monomial": [
+      2,
+      23
+    ],
+    "coefficient": -1512
+  },
+  {
+    "monomial": [
+      2,
+      24
+    ],
+    "coefficient": -594
+  },
+  {
+    "monomial": [
+      2,
+      25
+    ],
+    "coefficient": -105
+  },
+  {
+    "monomial": [
+      2,
+      26
+    ],
+    "coefficient": -177
+  },
+  {
+    "monomial": [
+      2,
+      27
+    ],
+    "coefficient": -663
+  },
+  {
+    "monomial": [
+      2,
+      28
+    ],
+    "coefficient": -735
+  },
+  {
+    "monomial": [
+      2,
+      29
+    ],
+    "coefficient": -663
+  },
+  {
+    "monomial": [
+      3
+    ],
+    "coefficient": -1308
+  },
+  {
+    "monomial": [
+      3,
+      10
+    ],
+    "coefficient": -324
+  },
+  {
+    "monomial": [
+      3,
+      10,
+      15
+    ],
+    "coefficient": -306
+  },
+  {
+    "monomial": [
+      3,
+      10,
+      16
+    ],
+    "coefficient": -138
+  },
+  {
+    "monomial": [
+      3,
+      10,
+      18
+    ],
+    "coefficient": -228
+  },
+  {
+    "monomial": [
+      3,
+      10,
+      19
+    ],
+    "coefficient": -336
+  },
+  {
+    "monomial": [
+      3,
+      10,
+      22
+    ],
+    "coefficient": -318
+  },
+  {
+    "monomial": [
+      3,
+      10,
+      23
+    ],
+    "coefficient": -366
+  },
+  {
+    "monomial": [
+      3,
+      15
+    ],
+    "coefficient": -867
+  },
+  {
+    "monomial": [
+      3,
+      16
+    ],
+    "coefficient": -561
+  },
+  {
+    "monomial": [
+      3,
+      18
+    ],
+    "coefficient": -681
+  },
+  {
+    "monomial": [
+      3,
+      19
+    ],
+    "coefficient": -897
+  },
+  {
+    "monomial": [
+      3,
+      22
+    ],
+    "coefficient": -831
+  },
+  {
+    "monomial": [
+      3,
+      23
+    ],
+    "coefficient": -927
+  },
+  {
+    "monomial": [
+      4
+    ],
+    "coefficient": -4824
+  },
+  {
+    "monomial": [
+      4,
+      10
+    ],
+    "coefficient": -2409
+  },
+  {
+    "monomial": [
+      4,
+      10,
+      15
+    ],
+    "coefficient": -1278
+  },
+  {
+    "monomial": [
+      4,
+      10,
+      16
+    ],
+    "coefficient": -1158
+  },
+  {
+    "monomial": [
+      4,
+      10,
+      17
+    ],
+    "coefficient": -363
+  },
+  {
+    "monomial": [
+      4,
+      10,
+      18
+    ],
+    "coefficient": -870
+  },
+  {
+    "monomial": [
+      4,
+      10,
+      19
+    ],
+    "coefficient": -1230
+  },
+  {
+    "monomial": [
+      4,
+      10,
+      20
+    ],
+    "coefficient": -342
+  },
+  {
+    "monomial": [
+      4,
+      10,
+      21
+    ],
+    "coefficient": -414
+  },
+  {
+    "monomial": [
+      4,
+      10,
+      22
+    ],
+    "coefficient": -624
+  },
+  {
+    "monomial": [
+      4,
+      10,
+      23
+    ],
+    "coefficient": -768
+  },
+  {
+    "monomial": [
+      4,
+      10,
+      24
+    ],
+    "coefficient": -342
+  },
+  {
+    "monomial": [
+      4,
+      10,
+      25
+    ],
+    "coefficient": -78
+  },
+  {
+    "monomial": [
+      4,
+      10,
+      26
+    ],
+    "coefficient": -114
+  },
+  {
+    "monomial": [
+      4,
+      10,
+      27
+    ],
+    "coefficient": -321
+  },
+  {
+    "monomial": [
+      4,
+      10,
+      28
+    ],
+    "coefficient": -357
+  },
+  {
+    "monomial": [
+      4,
+      10,
+      29
+    ],
+    "coefficient": -321
+  },
+  {
+    "monomial": [
+      4,
+      15
+    ],
+    "coefficient": -2592
+  },
+  {
+    "monomial": [
+      4,
+      16
+    ],
+    "coefficient": -2400
+  },
+  {
+    "monomial": [
+      4,
+      17
+    ],
+    "coefficient": -732
+  },
+  {
+    "monomial": [
+      4,
+      18
+    ],
+    "coefficient": -1890
+  },
+  {
+    "monomial": [
+      4,
+      19
+    ],
+    "coefficient": -2610
+  },
+  {
+    "monomial": [
+      4,
+      20
+    ],
+    "coefficient": -720
+  },
+  {
+    "monomial": [
+      4,
+      21
+    ],
+    "coefficient": -864
+  },
+  {
+    "monomial": [
+      4,
+      22
+    ],
+    "coefficient": -1476
+  },
+  {
+    "monomial": [
+      4,
+      23
+    ],
+    "coefficient": -1764
+  },
+  {
+    "monomial": [
+      4,
+      24
+    ],
+    "coefficient": -720
+  },
+  {
+    "monomial": [
+      4,
+      25
+    ],
+    "coefficient": -168
+  },
+  {
+    "monomial": [
+      4,
+      26
+    ],
+    "coefficient": -240
+  },
+  {
+    "monomial": [
+      4,
+      27
+    ],
+    "coefficient": -726
+  },
+  {
+    "monomial": [
+      4,
+      28
+    ],
+    "coefficient": -798
+  },
+  {
+    "monomial": [
+      4,
+      29
+    ],
+    "coefficient": -726
+  },
+  {
+    "monomial": [
+      5
+    ],
+    "coefficient": -3294
+  },
+  {
+    "monomial": [
+      5,
+      10
+    ],
+    "coefficient": -1512
+  },
+  {
+    "monomial": [
+      5,
+      10,
+      15
+    ],
+    "coefficient": -645
+  },
+  {
+    "monomial": [
+      5,
+      10,
+      16
+    ],
+    "coefficient": -840
+  },
+  {
+    "monomial": [
+      5,
+      10,
+      17
+    ],
+    "coefficient": -330
+  },
+  {
+    "monomial": [
+      5,
+      10,
+      18
+    ],
+    "coefficient": -492
+  },
+  {
+    "monomial": [
+      5,
+      10,
+      19
+    ],
+    "coefficient": -636
+  },
+  {
+    "monomial": [
+      5,
+      10,
+      20
+    ],
+    "coefficient": -285
+  },
+  {
+    "monomial": [
+      5,
+      10,
+      21
+    ],
+    "coefficient": -321
+  },
+  {
+    "monomial": [
+      5,
+      10,
+      22
+    ],
+    "coefficient": -234
+  },
+  {
+    "monomial": [
+      5,
+      10,
+      23
+    ],
+    "coefficient": -306
+  },
+  {
+    "monomial": [
+      5,
+      10,
+      24
+    ],
+    "coefficient": -285
+  },
+  {
+    "monomial": [
+      5,
+      10,
+      25
+    ],
+    "coefficient": -78
+  },
+  {
+    "monomial": [
+      5,
+      10,
+      26
+    ],
+    "coefficient": -102
+  },
+  {
+    "monomial": [
+      5,
+      10,
+      27
+    ],
+    "coefficient": -240
+  },
+  {
+    "monomial": [
+      5,
+      10,
+      28
+    ],
+    "coefficient": -264
+  },
+  {
+    "monomial": [
+      5,
+      10,
+      29
+    ],
+    "coefficient": -240
+  },
+  {
+    "monomial": [
+      5,
+      15
+    ],
+    "coefficient": -1383
+  },
+  {
+    "monomial": [
+      5,
+      16
+    ],
+    "coefficient": -1890
+  },
+  {
+    "monomial": [
+      5,
+      17
+    ],
+    "coefficient": -750
+  },
+  {
+    "monomial": [
+      5,
+      18
+    ],
+    "coefficient": -1116
+  },
+  {
+    "monomial": [
+      5,
+      19
+    ],
+    "coefficient": -1404
+  },
+  {
+    "monomial": [
+      5,
+      20
+    ],
+    "coefficient": -651
+  },
+  {
+    "monomial": [
+      5,
+      21
+    ],
+    "coefficient": -723
+  },
+  {
+    "monomial": [
+      5,
+      22
+    ],
+    "coefficient": -558
+  },
+  {
+    "monomial": [
+      5,
+      23
+    ],
+    "coefficient": -702
+  },
+  {
+    "monomial": [
+      5,
+      24
+    ],
+    "coefficient": -651
+  },
+  {
+    "monomial": [
+      5,
+      25
+    ],
+    "coefficient": -186
+  },
+  {
+    "monomial": [
+      5,
+      26
+    ],
+    "coefficient": -234
+  },
+  {
+    "monomial": [
+      5,
+      27
+    ],
+    "coefficient": -558
+  },
+  {
+    "monomial": [
+      5,
+      28
+    ],
+    "coefficient": -606
+  },
+  {
+    "monomial": [
+      5,
+      29
+    ],
+    "coefficient": -558
+  },
+  {
+    "monomial": [
+      6
+    ],
+    "coefficient": -1614
+  },
+  {
+    "monomial": [
+      6,
+      10
+    ],
+    "coefficient": -552
+  },
+  {
+    "monomial": [
+      6,
+      10,
+      15
+    ],
+    "coefficient": -336
+  },
+  {
+    "monomial": [
+      6,
+      10,
+      16
+    ],
+    "coefficient": -228
+  },
+  {
+    "monomial": [
+      6,
+      10,
+      18
+    ],
+    "coefficient": -252
+  },
+  {
+    "monomial": [
+      6,
+      10,
+      19
+    ],
+    "coefficient": -324
+  },
+  {
+    "monomial": [
+      6,
+      10,
+      22
+    ],
+    "coefficient": -276
+  },
+  {
+    "monomial": [
+      6,
+      10,
+      23
+    ],
+    "coefficient": -312
+  },
+  {
+    "monomial": [
+      6,
+      15
+    ],
+    "coefficient": -876
+  },
+  {
+    "monomial": [
+      6,
+      16
+    ],
+    "coefficient": -678
+  },
+  {
+    "monomial": [
+      6,
+      18
+    ],
+    "coefficient": -684
+  },
+  {
+    "monomial": [
+      6,
+      19
+    ],
+    "coefficient": -828
+  },
+  {
+    "monomial": [
+      6,
+      22
+    ],
+    "coefficient": -708
+  },
+  {
+    "monomial": [
+      6,
+      23
+    ],
+    "coefficient": -780
+  },
+  {
+    "monomial": [
+      7
+    ],
+    "coefficient": -1614
+  },
+  {
+    "monomial": [
+      7,
+      10
+    ],
+    "coefficient": -552
+  },
+  {
+    "monomial": [
+      7,
+      10,
+      15
+    ],
+    "coefficient": -336
+  },
+  {
+    "monomial": [
+      7,
+      10,
+      16
+    ],
+    "coefficient": -228
+  },
+  {
+    "monomial": [
+      7,
+      10,
+      18
+    ],
+    "coefficient": -252
+  },
+  {
+    "monomial": [
+      7,
+      10,
+      19
+    ],
+    "coefficient": -324
+  },
+  {
+    "monomial": [
+      7,
+      10,
+      22
+    ],
+    "coefficient": -276
+  },
+  {
+    "monomial": [
+      7,
+      10,
+      23
+    ],
+    "coefficient": -312
+  },
+  {
+    "monomial": [
+      7,
+      15
+    ],
+    "coefficient": -876
+  },
+  {
+    "monomial": [
+      7,
+      16
+    ],
+    "coefficient": -678
+  },
+  {
+    "monomial": [
+      7,
+      18
+    ],
+    "coefficient": -684
+  },
+  {
+    "monomial": [
+      7,
+      19
+    ],
+    "coefficient": -828
+  },
+  {
+    "monomial": [
+      7,
+      22
+    ],
+    "coefficient": -708
+  },
+  {
+    "monomial": [
+      7,
+      23
+    ],
+    "coefficient": -780
+  },
+  {
+    "monomial": [
+      8
+    ],
+    "coefficient": -4176
+  },
+  {
+    "monomial": [
+      8,
+      10
+    ],
+    "coefficient": -2016
+  },
+  {
+    "monomial": [
+      8,
+      10,
+      15
+    ],
+    "coefficient": -825
+  },
+  {
+    "monomial": [
+      8,
+      10,
+      16
+    ],
+    "coefficient": -1080
+  },
+  {
+    "monomial": [
+      8,
+      10,
+      17
+    ],
+    "coefficient": -378
+  },
+  {
+    "monomial": [
+      8,
+      10,
+      18
+    ],
+    "coefficient": -636
+  },
+  {
+    "monomial": [
+      8,
+      10,
+      19
+    ],
+    "coefficient": -780
+  },
+  {
+    "monomial": [
+      8,
+      10,
+      20
+    ],
+    "coefficient": -321
+  },
+  {
+    "monomial": [
+      8,
+      10,
+      21
+    ],
+    "coefficient": -357
+  },
+  {
+    "monomial": [
+      8,
+      10,
+      22
+    ],
+    "coefficient": -306
+  },
+  {
+    "monomial": [
+      8,
+      10,
+      23
+    ],
+    "coefficient": -378
+  },
+  {
+    "monomial": [
+      8,
+      10,
+      24
+    ],
+    "coefficient": -321
+  },
+  {
+    "monomial": [
+      8,
+      10,
+      25
+    ],
+    "coefficient": -102
+  },
+  {
+    "monomial": [
+      8,
+      10,
+      26
+    ],
+    "coefficient": -126
+  },
+  {
+    "monomial": [
+      8,
+      10,
+      27
+    ],
+    "coefficient": -264
+  },
+  {
+    "monomial": [
+      8,
+      10,
+      28
+    ],
+    "coefficient": -288
+  },
+  {
+    "monomial": [
+      8,
+      10,
+      29
+    ],
+    "coefficient": -264
+  },
+  {
+    "monomial": [
+      8,
+      15
+    ],
+    "coefficient": -1698
+  },
+  {
+    "monomial": [
+      8,
+      16
+    ],
+    "coefficient": -2310
+  },
+  {
+    "monomial": [
+      8,
+      17
+    ],
+    "coefficient": -834
+  },
+  {
+    "monomial": [
+      8,
+      18
+    ],
+    "coefficient": -1368
+  },
+  {
+    "monomial": [
+      8,
+      19
+    ],
+    "coefficient": -1656
+  },
+  {
+    "monomial": [
+      8,
+      20
+    ],
+    "coefficient": -714
+  },
+  {
+    "monomial": [
+      8,
+      21
+    ],
+    "coefficient": -786
+  },
+  {
+    "monomial": [
+      8,
+      22
+    ],
+    "coefficient": -684
+  },
+  {
+    "monomial": [
+      8,
+      23
+    ],
+    "coefficient": -828
+  },
+  {
+    "monomial": [
+      8,
+      24
+    ],
+    "coefficient": -714
+  },
+  {
+    "monomial": [
+      8,
+      25
+    ],
+    "coefficient": -228
+  },
+  {
+    "monomial": [
+      8,
+      26
+    ],
+    "coefficient": -276
+  },
+  {
+    "monomial": [
+      8,
+      27
+    ],
+    "coefficient": -600
+  },
+  {
+    "monomial": [
+      8,
+      28
+    ],
+    "coefficient": -648
+  },
+  {
+    "monomial": [
+      8,
+      29
+    ],
+    "coefficient": -600
+  },
+  {
+    "monomial": [
+      9
+    ],
+    "coefficient": -2118
+  },
+  {
+    "monomial": [
+      9,
+      10
+    ],
+    "coefficient": -840
+  },
+  {
+    "monomial": [
+      9,
+      10,
+      15
+    ],
+    "coefficient": -444
+  },
+  {
+    "monomial": [
+      9,
+      10,
+      16
+    ],
+    "coefficient": -336
+  },
+  {
+    "monomial": [
+      9,
+      10,
+      18
+    ],
+    "coefficient": -324
+  },
+  {
+    "monomial": [
+      9,
+      10,
+      19
+    ],
+    "coefficient": -396
+  },
+  {
+    "monomial": [
+      9,
+      10,
+      22
+    ],
+    "coefficient": -312
+  },
+  {
+    "monomial": [
+      9,
+      10,
+      23
+    ],
+    "coefficient": -348
+  },
+  {
+    "monomial": [
+      9,
+      15
+    ],
+    "coefficient": -1065
+  },
+  {
+    "monomial": [
+      9,
+      16
+    ],
+    "coefficient": -867
+  },
+  {
+    "monomial": [
+      9,
+      18
+    ],
+    "coefficient": -810
+  },
+  {
+    "monomial": [
+      9,
+      19
+    ],
+    "coefficient": -954
+  },
+  {
+    "monomial": [
+      9,
+      22
+    ],
+    "coefficient": -771
+  },
+  {
+    "monomial": [
+      9,
+      23
+    ],
+    "coefficient": -843
+  },
+  {
+    "monomial": [
+      10
+    ],
+    "coefficient": -6
+  },
+  {
+    "monomial": [
+      10,
+      10
+    ],
+    "coefficient": 0
+  },
+  {
+    "monomial": [
+      10,
+      10,
+      15
+    ],
+    "coefficient": -54
+  },
+  {
+    "monomial": [
+      10,
+      10,
+      16
+    ],
+    "coefficient": -6
+  },
+  {
+    "monomial": [
+      10,
+      10,
+      18
+    ],
+    "coefficient": -42
+  },
+  {
+    "monomial": [
+      10,
+      10,
+      19
+    ],
+    "coefficient": -78
+  },
+  {
+    "monomial": [
+      10,
+      10,
+      22
+    ],
+    "coefficient": -78
+  },
+  {
+    "monomial": [
+      10,
+      10,
+      23
+    ],
+    "coefficient": -102
+  },
+  {
+    "monomial": [
+      10,
+      11
+    ],
+    "coefficient": -780
+  },
+  {
+    "monomial": [
+      10,
+      11,
+      15
+    ],
+    "coefficient": -366
+  },
+  {
+    "monomial": [
+      10,
+      11,
+      16
+    ],
+    "coefficient": -318
+  },
+  {
+    "monomial": [
+      10,
+      11,
+      18
+    ],
+    "coefficient": -276
+  },
+  {
+    "monomial": [
+      10,
+      11,
+      19
+    ],
+    "coefficient": -312
+  },
+  {
+    "monomial": [
+      10,
+      11,
+      22
+    ],
+    "coefficient": -234
+  },
+  {
+    "monomial": [
+      10,
+      11,
+      23
+    ],
+    "coefficient": -258
+  },
+  {
+    "monomial": [
+      10,
+      12
+    ],
+    "coefficient": -780
+  },
+  {
+    "monomial": [
+      10,
+      12,
+      15
+    ],
+    "coefficient": -366
+  },
+  {
+    "monomial": [
+      10,
+      12,
+      16
+    ],
+    "coefficient": -318
+  },
+  {
+    "monomial": [
+      10,
+      12,
+      18
+    ],
+    "coefficient": -276
+  },
+  {
+    "monomial": [
+      10,
+      12,
+      19
+    ],
+    "coefficient": -312
+  },
+  {
+    "monomial": [
+      10,
+      12,
+      22
+    ],
+    "coefficient": -234
+  },
+  {
+    "monomial": [
+      10,
+      12,
+      23
+    ],
+    "coefficient": -258
+  },
+  {
+    "monomial": [
+      10,
+      13
+    ],
+    "coefficient": -120
+  },
+  {
+    "monomial": [
+      10,
+      13,
+      15
+    ],
+    "coefficient": -102
+  },
+  {
+    "monomial": [
+      10,
+      13,
+      16
+    ],
+    "coefficient": -54
+  },
+  {
+    "monomial": [
+      10,
+      13,
+      18
+    ],
+    "coefficient": -78
+  },
+  {
+    "monomial": [
+      10,
+      13,
+      19
+    ],
+    "coefficient": -114
+  },
+  {
+    "monomial": [
+      10,
+      13,
+      22
+    ],
+    "coefficient": -102
+  },
+  {
+    "monomial": [
+      10,
+      13,
+      23
+    ],
+    "coefficient": -126
+  },
+  {
+    "monomial": [
+      10,
+      14
+    ],
+    "coefficient": -900
+  },
+  {
+    "monomial": [
+      10,
+      14,
+      15
+    ],
+    "coefficient": -414
+  },
+  {
+    "monomial": [
+      10,
+      14,
+      16
+    ],
+    "coefficient": -366
+  },
+  {
+    "monomial": [
+      10,
+      14,
+      18
+    ],
+    "coefficient": -312
+  },
+  {
+    "monomial": [
+      10,
+      14,
+      19
+    ],
+    "coefficient": -348
+  },
+  {
+    "monomial": [
+      10,
+      14,
+      22
+    ],
+    "coefficient": -258
+  },
+  {
+    "monomial": [
+      10,
+      14,
+      23
+    ],
+    "coefficient": -282
+  },
+  {
+    "monomial": [
+      10,
+      15
+    ],
+    "coefficient": -1998
+  },
+  {
+    "monomial": [
+      10,
+      16
+    ],
+    "coefficient": 0
+  },
+  {
+    "monomial": [
+      10,
+      17
+    ],
+    "coefficient": -438
+  },
+  {
+    "monomial": [
+      10,
+      18
+    ],
+    "coefficient": -1005
+  },
+  {
+    "monomial": [
+      10,
+      19
+    ],
+    "coefficient": -2553
+  },
+  {
+    "monomial": [
+      10,
+      20
+    ],
+    "coefficient": -624
+  },
+  {
+    "monomial": [
+      10,
+      21
+    ],
+    "coefficient": -912
+  },
+  {
+    "monomial": [
+      10,
+      22
+    ],
+    "coefficient": -1644
+  },
+  {
+    "monomial": [
+      10,
+      23
+    ],
+    "coefficient": -2196
+  },
+  {
+    "monomial": [
+      10,
+      24
+    ],
+    "coefficient": -624
+  },
+  {
+    "monomial": [
+      10,
+      25
+    ],
+    "coefficient": 0
+  },
+  {
+    "monomial": [
+      10,
+      26
+    ],
+    "coefficient": -120
+  },
+  {
+    "monomial": [
+      10,
+      27
+    ],
+    "coefficient": -810
+  },
+  {
+    "monomial": [
+      10,
+      28
+    ],
+    "coefficient": -930
+  },
+  {
+    "monomial": [
+      10,
+      29
+    ],
+    "coefficient": -810
+  },
+  {
+    "monomial": [
+      11
+    ],
+    "coefficient": -1962
+  },
+  {
+    "monomial": [
+      11,
+      15
+    ],
+    "coefficient": -900
+  },
+  {
+    "monomial": [
+      11,
+      16
+    ],
+    "coefficient": -810
+  },
+  {
+    "monomial": [
+      11,
+      18
+    ],
+    "coefficient": -696
+  },
+  {
+    "monomial": [
+      11,
+      19
+    ],
+    "coefficient": -768
+  },
+  {
+    "monomial": [
+      11,
+      22
+    ],
+    "coefficient": -588
+  },
+  {
+    "monomial": [
+      11,
+      23
+    ],
+    "coefficient": -636
+  },
+  {
+    "monomial": [
+      12
+    ],
+    "coefficient": -1962
+  },
+  {
+    "monomial": [
+      12,
+      15
+    ],
+    "coefficient": -900
+  },
+  {
+    "monomial": [
+      12,
+      16
+    ],
+    "coefficient": -810
+  },
+  {
+    "monomial": [
+      12,
+      18
+    ],
+    "coefficient": -696
+  },
+  {
+    "monomial": [
+      12,
+      19
+    ],
+    "coefficient": -768
+  },
+  {
+    "monomial": [
+      12,
+      22
+    ],
+    "coefficient": -588
+  },
+  {
+    "monomial": [
+      12,
+      23
+    ],
+    "coefficient": -636
+  },
+  {
+    "monomial": [
+      13
+    ],
+    "coefficient": -162
+  },
+  {
+    "monomial": [
+      13,
+      15
+    ],
+    "coefficient": -180
+  },
+  {
+    "monomial": [
+      13,
+      16
+    ],
+    "coefficient": -90
+  },
+  {
+    "monomial": [
+      13,
+      18
+    ],
+    "coefficient": -156
+  },
+  {
+    "monomial": [
+      13,
+      19
+    ],
+    "coefficient": -228
+  },
+  {
+    "monomial": [
+      13,
+      22
+    ],
+    "coefficient": -228
+  },
+  {
+    "monomial": [
+      13,
+      23
+    ],
+    "coefficient": -276
+  },
+  {
+    "monomial": [
+      14
+    ],
+    "coefficient": -2172
+  },
+  {
+    "monomial": [
+      14,
+      15
+    ],
+    "coefficient": -984
+  },
+  {
+    "monomial": [
+      14,
+      16
+    ],
+    "coefficient": -894
+  },
+  {
+    "monomial": [
+      14,
+      18
+    ],
+    "coefficient": -759
+  },
+  {
+    "monomial": [
+      14,
+      19
+    ],
+    "coefficient": -831
+  },
+  {
+    "monomial": [
+      14,
+      22
+    ],
+    "coefficient": -630
+  },
+  {
+    "monomial": [
+      14,
+      23
+    ],
+    "coefficient": -678
+  },
+  {
+    "monomial": [
+      15
+    ],
+    "coefficient": -3873
+  },
+  {
+    "monomial": [
+      16
+    ],
+    "coefficient": -60
+  },
+  {
+    "monomial": [
+      17
+    ],
+    "coefficient": -702
+  },
+  {
+    "monomial": [
+      18
+    ],
+    "coefficient": -2277
+  },
+  {
+    "monomial": [
+      19
+    ],
+    "coefficient": -5229
+  },
+  {
+    "monomial": [
+      20
+    ],
+    "coefficient": -1239
+  },
+  {
+    "monomial": [
+      21
+    ],
+    "coefficient": -1815
+  },
+  {
+    "monomial": [
+      22
+    ],
+    "coefficient": -3762
+  },
+  {
+    "monomial": [
+      23
+    ],
+    "coefficient": -4770
+  },
+  {
+    "monomial": [
+      24
+    ],
+    "coefficient": -1239
+  },
+  {
+    "monomial": [
+      25
+    ],
+    "coefficient": 0
+  },
+  {
+    "monomial": [
+      26
+    ],
+    "coefficient": -240
+  },
+  {
+    "monomial": [
+      27
+    ],
+    "coefficient": -1860
+  },
+  {
+    "monomial": [
+      28
+    ],
+    "coefficient": -2100
+  },
+  {
+    "monomial": [
+      29
+    ],
+    "coefficient": -1860
+  }
+]

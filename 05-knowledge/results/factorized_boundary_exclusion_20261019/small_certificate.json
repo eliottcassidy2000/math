@@ -1,0 +1,126 @@
+[
+  {
+    "row": 2,
+    "multiplier": [],
+    "coefficient": 1
+  },
+  {
+    "row": 3,
+    "multiplier": [],
+    "coefficient": 58
+  },
+  {
+    "row": 3,
+    "multiplier": [
+      0
+    ],
+    "coefficient": 24
+  },
+  {
+    "row": 3,
+    "multiplier": [
+      10
+    ],
+    "coefficient": 25
+  },
+  {
+    "row": 6,
+    "multiplier": [],
+    "coefficient": 62
+  },
+  {
+    "row": 6,
+    "multiplier": [
+      0
+    ],
+    "coefficient": 16
+  },
+  {
+    "row": 6,
+    "multiplier": [
+      10
+    ],
+    "coefficient": 25
+  },
+  {
+    "row": 7,
+    "multiplier": [],
+    "coefficient": 2
+  },
+  {
+    "row": 9,
+    "multiplier": [],
+    "coefficient": 7
+  },
+  {
+    "row": 9,
+    "multiplier": [
+      0
+    ],
+    "coefficient": 3
+  },
+  {
+    "row": 9,
+    "multiplier": [
+      10
+    ],
+    "coefficient": 4
+  },
+  {
+    "row": 11,
+    "multiplier": [],
+    "coefficient": 67
+  },
+  {
+    "row": 11,
+    "multiplier": [
+      0
+    ],
+    "coefficient": 22
+  },
+  {
+    "row": 11,
+    "multiplier": [
+      10
+    ],
+    "coefficient": 26
+  },
+  {
+    "row": 13,
+    "multiplier": [],
+    "coefficient": 62
+  },
+  {
+    "row": 13,
+    "multiplier": [
+      0
+    ],
+    "coefficient": 17
+  },
+  {
+    "row": 13,
+    "multiplier": [
+      10
+    ],
+    "coefficient": 27
+  },
+  {
+    "row": 15,
+    "multiplier": [],
+    "coefficient": 8
+  },
+  {
+    "row": 15,
+    "multiplier": [
+      0
+    ],
+    "coefficient": 2
+  },
+  {
+    "row": 15,
+    "multiplier": [
+      10
+    ],
+    "coefficient": 4
+  }
+]
