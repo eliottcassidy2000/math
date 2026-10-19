@@ -158,3 +158,7 @@ computation needs universe, controls, command, and output. Route `CLAIMED` and
 ## Digest entry moved from INDEX.md on 2026-10-14 (line budget; mac-mini-2026-10-14-irrmeasure)
 
 - **GMC(2) FORMALIZATION CLOSED:** root-imported `GMC2Main.gmc2` is unconditional; `GMC2DvdKOmegaWiring.singlePolyCrux_holds` discharges the former `DvdK1` proof boundary, and a dependency-aware build and axiom audit report only `[propext, Classical.choice, Quot.sound]`.
+
+## Digest entry moved from INDEX.md on 2026-10-19 (line budget; mac-mini-2026-10-19-mersenne)
+
+- **HYP-9137 PROVED (2026-09-26):** [THM-4478, critical growth bands and affine integer capacity](../../01-canon/theorems/THM-4478-critical-tube-affine-capacity-sharp-provability-price.md) gives the sharp finite-horizon edit-density exponent `1-H_2(log_3 2)`, for arbitrary edits and the pairing family. The proof retains near-critical source words and bounds actual integer ancestors. Collatz remains OPEN; polynomial-factor comparability is not proved. [Crossroads synthesis](../results/crossroads_20260926_board.md).
