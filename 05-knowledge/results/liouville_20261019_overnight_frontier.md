@@ -71,7 +71,7 @@ One polynomial-in-seed-bit-length initialization avoids the seed forever. Every 
 
 The [balanced contact-tree theorem](square_sum_balanced_contact_trees_20261019.md) uses two free block maps distinguished by cubic jets. Trees of logarithmic depth admit polynomial-bit embeddings after one subdivision per tree edge and a seed stem. Arbitrarily long chains remain exponentially costly in these constructions.
 
-The [capacity theorem](square_sum_common_center_capacity_20261019.md) independently proves that polynomial numerical labels in the number of common-center petals are impossible. Polynomial bit length remains a meaningful open target.
+The [capacity theorem](square_sum_common_center_capacity_20261019.md) independently proves that polynomial numerical labels in the number of common-center petals are impossible. Polynomial bit length remains an unresolved target for this common-center construction program.
 
 ## 6. The square-sum/graceful/Collatz analogy made exact
 
@@ -139,12 +139,34 @@ Finally, the [prescribed-edge absorber packet](square_sum_prescribed_edge_absorb
 
 A singleton version and Hall's matching condition give a precise simultaneous-absorption theorem, conditional on eligible hosts already occurring in the backbone. A two-interval construction supplies disjoint hosts and explicit cycles. Gerbicz's established interval construction is credited. Its bounded-endpoint affine lift does not automatically preserve the requested seed edges, so protected-edge states require a separate proof.
 
-## 12. Current proof targets
+## 12. The latest checkpoints: all-size witness migration and the exact seed interval
 
-1. Replace arbitrary boundary mixtures by realizable exterior laws in seven-thin posets. The aperiodic core-word family is established; all-presentation coverage remains open.
+The [all-size mixed-two-slave theorem](two_slave_all_common_balance_20261019.md) goes beyond the five-point class. For a critical pair with at most one exclusive neighbor on each side and c common incomparable neighbors, it proves
+
+    sum_z [p(x<z)+p(z<y)] ≤ 4c/3
+
+with arbitrary common-neighbor order and arbitrary exterior. Exact nonnegative prefix/suffix increments reduce the statement to three symbolic chain-threshold shuffle identities. Selecting a maximum-span pair in the transitive greater-than-two-thirds majority tournament then contradicts this inequality. The c=0 case reduces to a path incomparability graph, whose endpoint balance is a Fibonacci ratio. Thus a hypothetical counterexample's maximum-span roots must have at least two exclusive neighbors on one side; in the seven-thin case they have at most four common neighbors. Remaining asymmetric cases are not disposed of.
+
+The [all-factorial-moment lemma](ideal_run_all_moments_20261019.md) extends the earlier ideal-run bound to E binom(R,k)≤(ER)^k, with sharp limiting examples from two-chain shuffles. The [core-only Gold obstruction](rooted_five_core_gold_obstruction_20261019.md) shows why a balance theorem cannot automatically be promoted to a Gold strategy on the same five endpoints: an actual eight-point poset defeats every such strategy, while exterior comparisons give a strict Gold certificate.
+
+The [seed-preserving interval certificate](seeded_interval_cycle_6242_20261019/square_sum_seeded_interval_cycle_6242_20261019.md) now gives an explicit square-sum cycle on every integer1…6242 beginning482,3362,6242. A controlled split of49-lifted blocks first produces6247 vertices; a fixed24-move repair trace removes the excess without cutting the seed edges. The endpoint6242 is minimal simply because the seed contains6242. This is one exact finite witness, not a uniform theorem for all larger intervals. The [common-pair parity obstruction](square_sum_affine_lift_protected_edge_obstruction_20261019.md) explains why an unchanged intact-block recursion cannot simply preserve the first seed edge at every residue.
+
+The [Berggren absorber forest](square_sum_berggren_absorber_bijection_20261019.md) supplies another exact link to the ternary-tree theme. The classical three matrices generate all positive norm-one triples a²+b²−c²=1 in three parity-sector trees, rooted at(1,1,1),(2,1,2),(1,2,2). Unique addresses give branch-preserving bijections with three copies of the primitive-Pythagorean tree. Non-boundary nodes are precisely the nondegenerate coefficient gadgets of the stated linear absorber form. The central branch gives the Pell coefficients(5,5,7),(29,29,41), while the seed's AAA address gives(8,31,32) in the even-first sector. No historical priority claim is attached to the norm-one tree.
+
+The [odd adjacent-return theorem](collatz_odd_adjacent_return_20261019.md) disproves a proposed simplification: expanding adjacent returns can have an odd lower source with every prefix above its starting value. A fully guarded30-step example supplies arbitrarily long finite repetitions on varying source cylinders. A general expanding/reset lemma bounds the number of excluded initial lifts in a minimally contracting composite cylinder by ceil(c+p), independently of repetition count. The F/H reset families preserve adjacency and give actual smaller-source receipts; arbitrary source entry and insufficient-reset exits remain unresolved.
+
+## 13. Complete conditional transformation and further poset exclusions
+
+The [one-sided three-slave theorem](one_sided_three_slave_aggregate_20261019.md) proves the same aggregate4c/3 bound with no exclusive neighbors on one side and at most three on the other, including arbitrary orders and arbitrary exteriors. Its integer-boundary polynomial certificate is distinct from ordinary coefficientwise positivity. Tiny exact suffix certificates close the c=0 case. Four one-sided slaves already admit an actual-poset violation of this aggregate, although that poset still has a balanced pair; the method's boundary is explicit.
+
+The [complete final split-lift](seeded_final_split_table_20261019/square_sum_complete_final_split_lift_20261019.md) now has verified certificates for all392 combinations of input parity, output residue, and cut-edge orientations. Given the precisely stated protected input nice pair, it produces an interval-spanning cycle with the seed for every residue24…72. The final transformation has no missing state. A uniform all-large-N theorem still requires the upstream protected input-state transformations and a complete consecutive base interval. The single6242 certificate does not replace those hypotheses.
+
+## 14. Current proof targets
+
+1. Extend maximum-span witness migration to the asymmetric multi-slave configurations left by the all-size mixed-two-slave theorem. Retain realizable boundary laws and actual comparison witnesses.
 2. Extend the Gold prefix injection schema to more general attachment geometry while preserving exact count deficits.
 3. Find port-compatible algebraic contact correspondences beyond the finite rational-map and normalized elliptic-coordinate barriers.
 4. Prove source entry or a common descent potential for Collatz return banks despite center-relative rank recharge.
-5. Develop square-sum interval absorbers and graceful palette-preserving moves. Sparse existence and a recurrence alone do not retain consecutive coverage or a prescribed tree shape.
+5. Complete the upstream protected input-state transformations and consecutive base interval for the uniform prescribed-seed construction. All392 final split states and the exact6242 witness are established; the remaining input-existence argument is separate.
 
 Each target has a specified obstacle and carrier. None is inferred merely from numerical resonance or a common finite quotient.
