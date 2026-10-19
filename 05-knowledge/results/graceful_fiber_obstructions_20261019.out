@@ -1,0 +1,14 @@
+two-free-color fibers n=4 connected=1 disconnected=0
+two-free-color fibers n=5 connected=2 disconnected=0
+two-free-color fibers n=6 connected=6 disconnected=0
+two-free-color fibers n=7 connected=18 disconnected=4
+two-free-color fibers n=8 connected=66 disconnected=22
+two-free-color fibers n=9 connected=300 disconnected=128
+two-free-color fibers n=10 connected=1536 disconnected=796
+n=7 exact components: (((1, 3), (2, 3)), ((4, 0), (4, 2), (5, 0), (5, 2)))
+classification checked on 2879 acyclic tails; 950 disconnected fibers
+infinite-family positive certificates checked: 627 (the all-k proof is in the note)
+fixed-band family k=2 n=7 states=6 components=2
+fixed-band family k=3 n=9 states=26 components=4
+fixed-band family k=4 n=11 states=150 components=8
+ALL CHECKS PASSED
