@@ -1,0 +1,3 @@
+checked 686732 rotations of Christoffel words with q <= 150; max gcd(|2^q-3^p|, B_r) = 1 at None
+rotations with gcd > 1 (first 20): [] count 0
+control (random necklaces of the same shapes): gcd > 1 in 73/1194

@@ -1,0 +1,113 @@
+A. Minkowski ?: ?(1/2)=1/2, ?(2/3)=3/4, ?(1/3)=1/4; conjugacy ?(Ft(x)) = 2?(x) mod 1 verified on all Farey fractions with denominator <= 60
+   mediant law ?((a+c)/(b+d)) = (?(a/b)+?(c/d))/2 verified for all p/q, q < 40
+   ?(F_n/F_(n+1)) -> 2/3 and ?(F_n/F_(n+2)) -> 1/3: the Farey addresses of the trivial cycle are 1/phi and 1/phi^2
+
+B. parity numbers rho (THM-4634) = external angles:
+   {0}: rho(0) = 0 ; period word 0 (length 1, ones 0)
+   {-1}: rho(-1) = 1 ; period word 1 (length 1, ones 1)
+   {1,2}: rho(1) = 2/3 ; period word 10 (length 2, ones 1)
+   {-5,-7,-10}: rho(-5) = 6/7 ; period word 110 (length 3, ones 2)
+   -17 cycle: rho(-17) = 1976/2047 ; period word 11110111000 (length 11, ones 7)
+   anchor c_2 = 1: rho = 2/3 = 10 repeated; orbit angles [Fraction(2, 3)] -> ['2/3', '1/3']
+   anchor c_3 = 1/5: rho = 4/7 = 100 repeated; orbit angles [Fraction(4, 7)] -> ['4/7', '1/7', '2/7']
+   anchor c_4 = 1/13: rho = 8/15 = 1000 repeated; orbit angles [Fraction(8, 15)] -> ['8/15', '1/15', '2/15', '4/15']
+   anchor c_5 = 1/29: rho = 16/31 = 10000 repeated; orbit angles [Fraction(16, 31)] -> ['16/31', '1/31', '2/31', '4/31', '8/31']
+   anchor c_6 = 1/61: rho = 32/63 = 100000 repeated; orbit angles [Fraction(32, 63)] -> ['32/63', '1/63', '2/63', '4/63', '8/63', '16/63']
+   anchor c_7 = 1/125: rho = 64/127 = 1000000 repeated; orbit angles [Fraction(64, 127)] -> ['64/127', '1/127', '2/127', '4/127', '8/127', '16/127', '32/127']
+   -1/3: rho = 1/2 (pre [1], per [0]) -> angle 1/2, the tip c = -2
+
+C. bulb root angles from the Christoffel necklace (unique numerically adjacent pair):
+   1/2: word 01, orbit ['1/3', '2/3'], root angles 1/3, 2/3  [matches the classical table]
+   1/3: word 001, orbit ['1/7', '2/7', '4/7'], root angles 1/7, 2/7  [matches the classical table]
+   2/3: word 011, orbit ['3/7', '5/7', '6/7'], root angles 5/7, 6/7  [matches the classical table]
+   1/4: word 0001, orbit ['1/15', '2/15', '4/15', '8/15'], root angles 1/15, 2/15  [matches the classical table]
+   3/4: word 0111, orbit ['7/15', '11/15', '13/15', '14/15'], root angles 13/15, 14/15  [matches the classical table]
+   1/5: word 00001, orbit ['1/31', '2/31', '4/31', '8/31', '16/31'], root angles 1/31, 2/31  [matches the classical table]
+   2/5: word 00101, orbit ['5/31', '9/31', '10/31', '18/31', '20/31'], root angles 9/31, 10/31  [matches the classical table]
+   3/5: word 01011, orbit ['11/31', '13/31', '21/31', '22/31', '26/31'], root angles 21/31, 22/31  [matches the classical table]
+   4/5: word 01111, orbit ['15/31', '23/31', '27/31', '29/31', '30/31'], root angles 29/31, 30/31  [matches the classical table]
+   uniqueness of the adjacent pair verified for all p/q with q <= 15
+
+D. balanced: 10 yes, 110 yes, the -17 word 11110111000 no
+
+E. cycle census of T_d(n) = n/2, (3n+d)/2 for odd d <= 49, |n| <= 20000: shape (K,X), balanced -> cardioid bulb X/K, else primitive/other
+   d=  1: cycle min    -136, shape (11,7), word 11011100011, balanced=False, D=2^K-3^X=-139, angle den 2^K-1=2047
+   d=  1: cycle min     -10, shape (3,2), word 101, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=7
+   d=  1: cycle min      -1, shape (1,1), word 1, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=1
+   d=  1: cycle min       0, shape (1,0), word 0, balanced=True, D=2^K-3^X=1, angle den 2^K-1=1
+   d=  1: cycle min       1, shape (2,1), word 10, balanced=True, D=2^K-3^X=1, angle den 2^K-1=3
+   d=  3: cycle min    -408, shape (11,7), word 11011100011, balanced=False, D=2^K-3^X=-139, angle den 2^K-1=2047
+   d=  3: cycle min     -30, shape (3,2), word 101, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=7
+   d=  3: cycle min      -3, shape (1,1), word 1, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=1
+   d=  3: cycle min       0, shape (1,0), word 0, balanced=True, D=2^K-3^X=1, angle den 2^K-1=1
+   d=  3: cycle min       3, shape (2,1), word 10, balanced=True, D=2^K-3^X=1, angle den 2^K-1=3
+   d=  5: cycle min    -680, shape (11,7), word 11101110001, balanced=False, D=2^K-3^X=-139, angle den 2^K-1=2047
+   d=  5: cycle min     -50, shape (3,2), word 101, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=7
+   d=  5: cycle min      -5, shape (1,1), word 1, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=1
+   d=  5: cycle min       0, shape (1,0), word 0, balanced=True, D=2^K-3^X=1, angle den 2^K-1=1
+   d=  5: cycle min       1, shape (3,1), word 100, balanced=True, D=2^K-3^X=5, angle den 2^K-1=7
+   d=  5: cycle min       5, shape (2,1), word 10, balanced=True, D=2^K-3^X=1, angle den 2^K-1=3
+   d=  5: cycle min      19, shape (5,3), word 11100, balanced=False, D=2^K-3^X=5, angle den 2^K-1=31
+   d=  5: cycle min      23, shape (5,3), word 11010, balanced=True, D=2^K-3^X=5, angle den 2^K-1=31
+   d=  5: cycle min     187, shape (27,17), word ..., balanced=False, D=2^K-3^X=5077565, angle den 2^K-1=134217727
+   d=  5: cycle min     347, shape (27,17), word ..., balanced=False, D=2^K-3^X=5077565, angle den 2^K-1=134217727
+   d=  7: cycle min    -952, shape (11,7), word 11000111101, balanced=False, D=2^K-3^X=-139, angle den 2^K-1=2047
+   d=  7: cycle min     -70, shape (3,2), word 011, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=7
+   d=  7: cycle min      -7, shape (1,1), word 1, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=1
+   d=  7: cycle min       0, shape (1,0), word 0, balanced=True, D=2^K-3^X=1, angle den 2^K-1=1
+   d=  7: cycle min       5, shape (4,2), word 1100, balanced=False, D=2^K-3^X=7, angle den 2^K-1=15
+   d=  7: cycle min       7, shape (2,1), word 10, balanced=True, D=2^K-3^X=1, angle den 2^K-1=3
+   d=  9: cycle min   -1224, shape (11,7), word 11011100011, balanced=False, D=2^K-3^X=-139, angle den 2^K-1=2047
+   d=  9: cycle min     -90, shape (3,2), word 101, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=7
+   d=  9: cycle min      -9, shape (1,1), word 1, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=1
+   d=  9: cycle min       0, shape (1,0), word 0, balanced=True, D=2^K-3^X=1, angle den 2^K-1=1
+   d=  9: cycle min       9, shape (2,1), word 10, balanced=True, D=2^K-3^X=1, angle den 2^K-1=3
+   d= 11: cycle min   -1496, shape (11,7), word 11000111101, balanced=False, D=2^K-3^X=-139, angle den 2^K-1=2047
+   d= 11: cycle min    -110, shape (3,2), word 101, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=7
+   d= 11: cycle min     -38, shape (4,3), word 1101, balanced=True, D=2^K-3^X=-11, angle den 2^K-1=15
+   d= 11: cycle min     -11, shape (1,1), word 1, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=1
+   d= 11: cycle min       0, shape (1,0), word 0, balanced=True, D=2^K-3^X=1, angle den 2^K-1=1
+   d= 11: cycle min       1, shape (6,2), word 001100, balanced=False, D=2^K-3^X=55, angle den 2^K-1=63
+   d= 11: cycle min      11, shape (2,1), word 10, balanced=True, D=2^K-3^X=1, angle den 2^K-1=3
+   d= 11: cycle min      13, shape (14,8), word 11101011100100, balanced=False, D=2^K-3^X=9823, angle den 2^K-1=16383
+   d= 13: cycle min   -1768, shape (11,7), word 11000111101, balanced=False, D=2^K-3^X=-139, angle den 2^K-1=2047
+   d= 13: cycle min    -130, shape (3,2), word 101, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=7
+   d= 13: cycle min     -13, shape (1,1), word 1, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=1
+   d= 13: cycle min       0, shape (1,0), word 0, balanced=True, D=2^K-3^X=1, angle den 2^K-1=1
+   d= 13: cycle min       1, shape (4,1), word 0001, balanced=True, D=2^K-3^X=13, angle den 2^K-1=15
+   d= 13: cycle min      13, shape (2,1), word 10, balanced=True, D=2^K-3^X=1, angle den 2^K-1=3
+   d= 13: cycle min     131, shape (24,15), word 111111011011010000111100, balanced=False, D=2^K-3^X=2428309, angle den 2^K-1=16777215
+   d= 13: cycle min     211, shape (8,5), word 01111100, balanced=False, D=2^K-3^X=13, angle den 2^K-1=255
+   d= 13: cycle min     227, shape (8,5), word 11110100, balanced=False, D=2^K-3^X=13, angle den 2^K-1=255
+   d= 13: cycle min     251, shape (8,5), word 11101100, balanced=False, D=2^K-3^X=13, angle den 2^K-1=255
+   d= 13: cycle min     259, shape (8,5), word 10111100, balanced=False, D=2^K-3^X=13, angle den 2^K-1=255
+   d= 13: cycle min     283, shape (8,5), word 11101010, balanced=False, D=2^K-3^X=13, angle den 2^K-1=255
+   d= 13: cycle min     287, shape (8,5), word 11011100, balanced=False, D=2^K-3^X=13, angle den 2^K-1=255
+   d= 13: cycle min     319, shape (8,5), word 11011010, balanced=True, D=2^K-3^X=13, angle den 2^K-1=255
+   d= 15: cycle min   -2040, shape (11,7), word 01111011100, balanced=False, D=2^K-3^X=-139, angle den 2^K-1=2047
+   d= 15: cycle min    -150, shape (3,2), word 101, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=7
+   d= 15: cycle min     -15, shape (1,1), word 1, balanced=True, D=2^K-3^X=-1, angle den 2^K-1=1
+   d= 15: cycle min       0, shape (1,0), word 0, balanced=True, D=2^K-3^X=1, angle den 2^K-1=1
+   d= 15: cycle min       3, shape (3,1), word 100, balanced=True, D=2^K-3^X=5, angle den 2^K-1=7
+   d= 15: cycle min      15, shape (2,1), word 10, balanced=True, D=2^K-3^X=1, angle den 2^K-1=3
+   d= 15: cycle min      57, shape (5,3), word 11100, balanced=False, D=2^K-3^X=5, angle den 2^K-1=31
+   d= 15: cycle min      69, shape (5,3), word 11010, balanced=True, D=2^K-3^X=5, angle den 2^K-1=31
+   d= 15: cycle min     561, shape (27,17), word ..., balanced=False, D=2^K-3^X=5077565, angle den 2^K-1=134217727
+   d= 15: cycle min    1041, shape (27,17), word ..., balanced=False, D=2^K-3^X=5077565, angle den 2^K-1=134217727
+   total cycles 219, balanced (bulb) 120; balanced ones: [(1, -10, 3, 2), (1, -1, 1, 1), (1, 0, 1, 0), (1, 1, 2, 1), (3, -30, 3, 2), (3, -3, 1, 1), (3, 0, 1, 0), (3, 3, 2, 1), (5, -50, 3, 2), (5, -5, 1, 1), (5, 0, 1, 0), (5, 1, 3, 1), (5, 5, 2, 1), (5, 23, 5, 3), (7, -70, 3, 2), (7, -7, 1, 1), (7, 0, 1, 0), (7, 7, 2, 1), (9, -90, 3, 2), (9, -9, 1, 1), (9, 0, 1, 0), (9, 9, 2, 1), (11, -110, 3, 2), (11, -38, 4, 3), (11, -11, 1, 1), (11, 0, 1, 0), (11, 11, 2, 1), (13, -130, 3, 2), (13, -13, 1, 1), (13, 0, 1, 0), (13, 1, 4, 1), (13, 13, 2, 1), (13, 319, 8, 5), (15, -150, 3, 2), (15, -15, 1, 1), (15, 0, 1, 0), (15, 3, 3, 1), (15, 15, 2, 1), (15, 69, 5, 3), (17, -170, 3, 2), (17, -17, 1, 1), (17, 0, 1, 0), (17, 17, 2, 1), (19, -190, 3, 2), (19, -19, 1, 1), (19, 0, 1, 0), (19, 19, 2, 1), (21, -210, 3, 2), (21, -21, 1, 1), (21, 0, 1, 0), (21, 21, 2, 1), (23, -230, 3, 2), (23, -23, 1, 1), (23, 0, 1, 0), (23, 7, 5, 2), (23, 23, 2, 1), (25, -250, 3, 2), (25, -25, 1, 1), (25, 0, 1, 0), (25, 5, 3, 1), (25, 25, 2, 1), (25, 115, 5, 3), (27, -270, 3, 2), (27, -27, 1, 1), (27, 0, 1, 0), (27, 27, 2, 1), (29, -290, 3, 2), (29, -29, 1, 1), (29, 0, 1, 0), (29, 1, 5, 1), (29, 29, 2, 1), (31, -310, 3, 2), (31, -31, 1, 1), (31, 0, 1, 0), (31, 31, 2, 1), (33, -330, 3, 2), (33, -114, 4, 3), (33, -33, 1, 1), (33, 0, 1, 0), (33, 33, 2, 1), (35, -350, 3, 2), (35, -35, 1, 1), (35, 0, 1, 0), (35, 7, 3, 1), (35, 35, 2, 1), (35, 161, 5, 3), (37, -370, 3, 2), (37, -37, 1, 1), (37, 0, 1, 0), (37, 37, 2, 1), (39, -390, 3, 2), (39, -39, 1, 1), (39, 0, 1, 0), (39, 3, 4, 1), (39, 39, 2, 1), (39, 957, 8, 5), (41, -410, 3, 2), (41, -41, 1, 1), (41, 0, 1, 0), (41, 41, 2, 1), (43, -430, 3, 2), (43, -43, 1, 1), (43, 0, 1, 0), (43, 43, 2, 1), (45, -450, 3, 2), (45, -45, 1, 1), (45, 0, 1, 0), (45, 9, 3, 1), (45, 45, 2, 1), (45, 207, 5, 3), (47, -470, 3, 2), (47, -47, 1, 1), (47, 0, 1, 0), (47, 47, 2, 1), (47, 101, 7, 4), (49, -490, 3, 2), (49, -130, 5, 4), (49, -49, 1, 1), (49, 0, 1, 0), (49, 49, 2, 1)]
+
+F. Stern-Brocot path to theta = log_3 2 = 0.6309297536: convergents and the bulb cycles
+   partial quotients: [0, 1, 1, 1, 2, 2, 3, 1, 5, 2, 23, 2]
+   X/K = 1/2: clock D = 2^2 - 3^1 = 1; Christoffel word 01; free cycle of 3x+(1) has min element 1; D | B_w for 3x+1? True
+   X/K = 2/3: clock D = 2^3 - 3^2 = -1; Christoffel word 011; free cycle of 3x+(-1) has min element 5; D | B_w for 3x+1? True
+   X/K = 5/8: clock D = 2^8 - 3^5 = 13; Christoffel word 01011011; free cycle of 3x+(13) has min element 319; D | B_w for 3x+1? False
+   X/K = 12/19: clock D = 2^19 - 3^12 = -7153; Christoffel word 0101101101011011011; free cycle of 3x+(-7153) has min element 1568693; D | B_w for 3x+1? False
+   X/K = 41/65: clock D = 2^65 - 3^41 = 420491770248316829; Christoffel word 01011011010110110101101101101011011010110110110101101101011011011; free cycle of 3x+(420491770248316829) has min element 364625035073295549935; D | B_w for 3x+1? False
+   X/K = 53/84: clock D = 2^84 - 3^53 = -40432553845953101497907; Christoffel word 010110110101101101011011011010110110101101101101011011010110110110101101101011011011; free cycle of 3x+(-40432553845953101497907) has min element 248383464494401149719202559; D | B_w for 3x+1? False
+   X/K = 306/485: clock D = 2^485 - 3^306 = 102065376400825306534437391838939444403106454408085639783964140880896699835673006969445010534504805079858638689074275443284439551032910142670903; Christoffel word 01011011010110110101101101101011011010110110110101101101011011011010110110101101101011011011010110110101101101101011011010110110110101101101011011011010110110101101101011011011010110110101101101101011011010110110110101101101011011011010110110101101101011011011010110110101101101101011011010110110110101101101011011011010110110101101101011011011010110110101101101101011011010110110110101101101011011011010110110101101101011011011010110110101101101101011011010110110110101101101011011011; free cycle of 3x+(102065376400825306534437391838939444403106454408085639783964140880896699835673006969445010534504805079858638689074275443284439551032910142670903) has min element 7354633538021290453874882945256172703046156698372336425942296210701760404381837071347564343508839058241347238835805360680085682985812972554209794797; D | B_w for 3x+1? False
+   X/K = 665/1054: clock D = 2^1054 - 3^665 = -8426554879358187467321365469295684725691743009932413297303662014570113188669615034834148586581259763505516577884907331991335330822737444940972251074914079428972758325698949459347347336137715887865163586364384528929183721216674294155918078679167336367555277990877513145621213299264598695603746333996002928683421859; Christoffel word 0101101101011011010110110110101101101011011011010110110101101101101011011010110110101101101101011011010110110110101101101011011011010110110101101101101011011010110110101101101101011011010110110110101101101011011011010110110101101101101011011010110110101101101101011011010110110110101101101011011011010110110101101101101011011010110110101101101101011011010110110110101101101011011011010110110101101101101011011010110110101101101101011011010110110110101101101011011011010110110101101101101011011010110110101101101101011011010110110110101101101011011011010110110101101101011011011010110110101101101101011011010110110110101101101011011011010110110101101101011011011010110110101101101101011011010110110110101101101011011011010110110101101101011011011010110110101101101101011011010110110110101101101011011011010110110101101101011011011010110110101101101101011011010110110110101101101011011011010110110101101101011011011010110110101101101101011011010110110110101101101011011011010110110101101101011011011010110110101101101101011011010110110110101101101011011011; free cycle of 3x+(-8426554879358187467321365469295684725691743009932413297303662014570113188669615034834148586581259763505516577884907331991335330822737444940972251074914079428972758325698949459347347336137715887865163586364384528929183721216674294155918078679167336367555277990877513145621213299264598695603746333996002928683421859) has min element 30881343772383055060312850148716433039037280413167810833373069669785407580499210074324424698502161952132261161271147635311379812082224451578129826281279902127582235899493635783536322466018983388849955619189928099874832071727848768793854423010896477879380635288258277081406398527467786110843748543555426182389863298252591; D | B_w for 3x+1? False
+   semiconvergents: 3/5 (D=5) 7/11 (D=-139) 17/27 (D=5077565) 29/46 (D=1738366812781) 
+
+G. Farey addresses alpha(n) = ?^-1(rho(n)), n <= 20000: Kolmogorov distance to the Minkowski distribution ?(alpha) = 0.0001 (uniform CDF would give 0.1400)
+
+ALL CHECKS PASSED: 1671

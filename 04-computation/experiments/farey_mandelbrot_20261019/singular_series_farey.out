@@ -1,0 +1,12 @@
+N=2: exact S(N) = 1.320324; by denominator Q: Q=10: 1.34722, Q=30: 1.31342, Q=100: 1.31758, Q=300: 1.32013, Q=1000: 1.32030, Q=2000: 1.32033
+        by Stern-Brocot depth d (max denominator F_(d+2)): d=4: 1.67208, d=8: 1.09916, d=12: 0.97140, d=16: 0.88535
+N=4: exact S(N) = 1.320324; by denominator Q: Q=10: 1.34722, Q=30: 1.31342, Q=100: 1.31758, Q=300: 1.32013, Q=1000: 1.32030, Q=2000: 1.32033
+        by Stern-Brocot depth d (max denominator F_(d+2)): d=4: 1.70978, d=8: 1.44164, d=12: 1.20855, d=16: 1.07631
+N=30: exact S(N) = 3.520864; by denominator Q: Q=10: 3.47222, Q=30: 3.63633, Q=100: 3.56082, Q=300: 3.53031, Q=1000: 3.52215, Q=2000: 3.52121
+        by Stern-Brocot depth d (max denominator F_(d+2)): d=4: 2.73458, d=8: 3.45884, d=12: 3.49430, d=16: 3.51382
+N=210: exact S(N) = 4.225037; by denominator Q: Q=10: 3.66667, Q=30: 4.12244, Q=100: 4.23808, Q=300: 4.24739, Q=1000: 4.23091, Q=2000: 4.22766
+        by Stern-Brocot depth d (max denominator F_(d+2)): d=4: 2.86111, d=8: 3.82524, d=12: 4.11925, d=16: 4.20525
+N=1000: exact S(N) = 1.760432; by denominator Q: Q=10: 1.97222, Q=30: 1.78217, Q=100: 1.76149, Q=300: 1.75936, Q=1000: 1.76020, Q=2000: 1.76033
+        by Stern-Brocot depth d (max denominator F_(d+2)): d=4: 1.93758, d=8: 1.78134, d=12: 1.89036, d=16: 1.82324
+N=2310: exact S(N) = 4.694486; by denominator Q: Q=10: 3.66667, Q=30: 4.34244, Q=100: 4.61392, Q=300: 4.68945, Q=1000: 4.70119, Q=2000: 4.69824
+        by Stern-Brocot depth d (max denominator F_(d+2)): d=4: 2.86111, d=8: 4.01701, d=12: 4.38908, d=16: 4.54015
