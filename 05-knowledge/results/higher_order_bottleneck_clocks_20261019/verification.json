@@ -1,0 +1,89 @@
+{
+  "algebra_checks": 215,
+  "clock_constant": "5057/660",
+  "count_method": "65-digit directed Decimal products/divisions; powers use nonnegative repeated products; ambiguous threshold comparisons are rejected",
+  "real_constant_comparisons": "60-digit numerical controls, not substitutes for the written analytic proof",
+  "rows": [
+    {
+      "certified_escape_count": 85,
+      "epsilon": "2^(-10)",
+      "explicit_bound": "18.473143551314",
+      "lambda": "0",
+      "r": 2,
+      "two_term_remainder": "-15.530964914873"
+    },
+    {
+      "certified_escape_count": 387,
+      "epsilon": "2^(-14)",
+      "explicit_bound": "18.473143551314",
+      "lambda": "0",
+      "r": 2,
+      "two_term_remainder": "-15.123859659494"
+    },
+    {
+      "certified_escape_count": 888,
+      "epsilon": "2^(-12)",
+      "explicit_bound": "344.029620435962",
+      "lambda": "0",
+      "r": 4,
+      "two_term_remainder": "-249.378032168542"
+    },
+    {
+      "certified_escape_count": 8767,
+      "epsilon": "2^(-16)",
+      "explicit_bound": "344.029620435962",
+      "lambda": "0",
+      "r": 4,
+      "two_term_remainder": "-332.024257348334"
+    },
+    {
+      "certified_escape_count": 72452,
+      "epsilon": "2^(-20)",
+      "explicit_bound": "344.029620435962",
+      "lambda": "0",
+      "r": 4,
+      "two_term_remainder": "-340.194058786673"
+    },
+    {
+      "certified_escape_count": 8761,
+      "epsilon": "2^(-16)",
+      "explicit_bound": "361.502763987276",
+      "lambda": "0.5",
+      "r": 4,
+      "two_term_remainder": "-324.695608533859"
+    },
+    {
+      "certified_escape_count": 72433,
+      "epsilon": "2^(-20)",
+      "explicit_bound": "361.502763987276",
+      "lambda": "0.5",
+      "r": 4,
+      "two_term_remainder": "-332.536761157722"
+    },
+    {
+      "certified_escape_count": 8756,
+      "epsilon": "2^(-16)",
+      "explicit_bound": "361.502763987276",
+      "lambda": "1",
+      "r": 4,
+      "two_term_remainder": "-316.366959719384"
+    },
+    {
+      "certified_escape_count": 72415,
+      "epsilon": "2^(-20)",
+      "explicit_bound": "361.502763987276",
+      "lambda": "1",
+      "r": 4,
+      "two_term_remainder": "-323.879463528772"
+    },
+    {
+      "certified_escape_count": 59230,
+      "epsilon": "2^(-18)",
+      "explicit_bound": "13110.119430653943",
+      "lambda": "0",
+      "r": 6,
+      "two_term_remainder": "-9399.138715220230"
+    }
+  ],
+  "status": "PASS"
+}

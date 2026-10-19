@@ -1,0 +1,143 @@
+{
+  "additional_parameter_checks": [
+    {
+      "certified_escape_count": 13,
+      "epsilon": "2^(-6)",
+      "final_interval_width_grid_units": "12",
+      "final_lower_threshold_gap_grid_units": "91496176507791977977540398229465332959790759666887602220",
+      "lambda": "0",
+      "previous_upper_threshold_gap_grid_units": "84643705998272109607910809854041800385422567743563935054",
+      "r": 2
+    },
+    {
+      "certified_escape_count": 887,
+      "epsilon": "2^(-12)",
+      "final_interval_width_grid_units": "1592",
+      "final_lower_threshold_gap_grid_units": "439194170030811729266228445751272581902143561714362014",
+      "lambda": "1",
+      "previous_upper_threshold_gap_grid_units": "2628830063618015701081547352230193723033196594867050293",
+      "r": 4
+    },
+    {
+      "certified_escape_count": 8763,
+      "epsilon": "2^(-16)",
+      "final_interval_width_grid_units": "116035",
+      "final_lower_threshold_gap_grid_units": "306829117403871324766598610300158077462309162392361618",
+      "lambda": "1/3",
+      "previous_upper_threshold_gap_grid_units": "1319069695736416742015707843934644759950586954183515536",
+      "r": 4
+    },
+    {
+      "certified_escape_count": 25376,
+      "epsilon": "2^(-18)",
+      "final_interval_width_grid_units": "1270981",
+      "final_lower_threshold_gap_grid_units": "1309224921284114982828057455335998717907664676367918795",
+      "lambda": "1",
+      "previous_upper_threshold_gap_grid_units": "269011319628279593034945992654524133027517236337551190",
+      "r": 4
+    }
+  ],
+  "author_counts_matched": 10,
+  "clock_constant": "5057/660",
+  "grid_denominator": "6277101735386680763835789423207666416102355444464034512896",
+  "matched_rows": [
+    {
+      "certified_escape_count": 85,
+      "epsilon": "2^(-10)",
+      "final_interval_width_grid_units": "829",
+      "final_lower_threshold_gap_grid_units": "23581909829358564033546697095680159973040882221844628072",
+      "lambda": "0",
+      "previous_upper_threshold_gap_grid_units": "65041380441417199187593922061569979715489382546406855519",
+      "r": 2
+    },
+    {
+      "certified_escape_count": 387,
+      "epsilon": "2^(-14)",
+      "final_interval_width_grid_units": "57598",
+      "final_lower_threshold_gap_grid_units": "95603995461921359689146404519977873910683569952715208873",
+      "lambda": "0",
+      "previous_upper_threshold_gap_grid_units": "2287741459953129792212646383732841469225675644000690484",
+      "r": 2
+    },
+    {
+      "certified_escape_count": 888,
+      "epsilon": "2^(-12)",
+      "final_interval_width_grid_units": "1572",
+      "final_lower_threshold_gap_grid_units": "676627622039403861520410372153107778126063573184060362",
+      "lambda": "0",
+      "previous_upper_threshold_gap_grid_units": "2369932081444816662170586733479589675948933982493418475",
+      "r": 4
+    },
+    {
+      "certified_escape_count": 8767,
+      "epsilon": "2^(-16)",
+      "final_interval_width_grid_units": "116111",
+      "final_lower_threshold_gap_grid_units": "839597200692496531963358337430989697396798718004522349",
+      "lambda": "0",
+      "previous_upper_threshold_gap_grid_units": "782574588109899092820559380282654976626576961006016822",
+      "r": 4
+    },
+    {
+      "certified_escape_count": 72452,
+      "epsilon": "2^(-20)",
+      "final_interval_width_grid_units": "13992842",
+      "final_lower_threshold_gap_grid_units": "878900474550981588336698579376531370547892147360720089",
+      "lambda": "0",
+      "previous_upper_threshold_gap_grid_units": "654474687286555591568755601786741968676519599054322580",
+      "r": 4
+    },
+    {
+      "certified_escape_count": 8761,
+      "epsilon": "2^(-16)",
+      "final_interval_width_grid_units": "115775",
+      "final_lower_threshold_gap_grid_units": "29597823106091903204276338403519797165223830434461684",
+      "lambda": "1/2",
+      "previous_upper_threshold_gap_grid_units": "1598059000529987872775341151234815012445124950490108914",
+      "r": 4
+    },
+    {
+      "certified_escape_count": 72433,
+      "epsilon": "2^(-20)",
+      "final_interval_width_grid_units": "14128617",
+      "final_lower_threshold_gap_grid_units": "315032870300422362590252009919984179550420471835324637",
+      "lambda": "1/2",
+      "previous_upper_threshold_gap_grid_units": "1225756016359481078914942737006784192157144820269908536",
+      "r": 4
+    },
+    {
+      "certified_escape_count": 8756,
+      "epsilon": "2^(-16)",
+      "final_interval_width_grid_units": "117211",
+      "final_lower_threshold_gap_grid_units": "800151047102823938697847583056573843414891772628981115",
+      "lambda": "1",
+      "previous_upper_threshold_gap_grid_units": "845322920238591641849153757864016521653707257575448833",
+      "r": 4
+    },
+    {
+      "certified_escape_count": 72415,
+      "epsilon": "2^(-20)",
+      "final_interval_width_grid_units": "14277586",
+      "final_lower_threshold_gap_grid_units": "1185688382287811996854065298888520727238870307759236830",
+      "lambda": "1",
+      "previous_upper_threshold_gap_grid_units": "373752501664059662120998336850816580251345695408077657",
+      "r": 4
+    },
+    {
+      "certified_escape_count": 59230,
+      "epsilon": "2^(-18)",
+      "final_interval_width_grid_units": "109708",
+      "final_lower_threshold_gap_grid_units": "19781370214028944575051807926962525002208037614479246",
+      "lambda": "0",
+      "previous_upper_threshold_gap_grid_units": "28103969908219008948403267881359901213492582659223091",
+      "r": 6
+    }
+  ],
+  "method": "Exact integer polynomial arithmetic and outward integer division",
+  "scope": "Finite numerical controls; the written proof supplies uniform parameter claims.",
+  "source_sha256_at_review": {
+    "HIGHER_ORDER_BOTTLENECKS.md": "ab963386fb9373fa1d911cbed36a07f59a590d44e19938041eea6aed9b5f791d",
+    "verification.json": "6e779e310f81b619e4f90059d7bded2d1e6ab671673eb6b1d8d251a98d6a5d41",
+    "verify_higher_bottlenecks.py": "4241460474fca4e1853b260889e4d141bcab56e54b1a3c0da58522af49f9097b"
+  },
+  "status": "PASS"
+}
