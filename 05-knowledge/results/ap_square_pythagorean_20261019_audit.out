@@ -1,0 +1,16 @@
+PASS independent exhaustive triangle census, z <= 1000000: 79 total, 31 primitive (g=1).
+PASS smallest largest vertex: (482, 3362, 6242); pair-sum roots (62,82,98).
+PASS R^3 example: (386,8450,16514); smallest largest vertex does not mean smallest first vertex.
+PASS Euclid tree depth 8: 9841 distinct nodes, 594 admissible; exact child rules and suffix tests.
+PASS first entry in maximal terminal runs: {'L3': 4743, 'L4': 1818, 'R3': 4743, 'R4': 1818}; uniform L^4/R^4 tests.
+PASS direct primitive-Pythagorean census, cone quartic, exact children, no equality boundary:
+  C <= 100: all=16, admissible=4, X/(6*pi)=5.305164770
+  C <= 1000: all=158, admissible=52, X/(6*pi)=53.051647697
+  C <= 10000: all=1593, admissible=528, X/(6*pi)=530.516476973
+  C <= 100000: all=15919, admissible=5305, X/(6*pi)=5305.164769730
+PASS common-center 8-triangle windmill: 17 distinct vertices, 0 extra edges in this sample; theorem claims a subgraph only.
+PASS numerical counting constant: kappa=0.030956744398825214; kappa/2=0.015478372199412607.
+ANALYTIC: P(N)=kappa*sqrt(N)+O(N^(1/4)*log N); all scales T(N)=(kappa/2)*sqrt(N)*log N+O(sqrt N).
+ANALYTIC: coprime opposite-parity lattice density is 4/pi^2; admissible Euclid angular width is pi/12.
+NOTE: finite endpoint checks agree with the four-squares-in-AP theorem; this script does not reprove that theorem.
+ALL AUDIT CHECKS PASSED (no Python assert statements used).
