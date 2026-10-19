@@ -42,6 +42,8 @@ The bounded search succeeds for all 528 admitted primitive triples of hypotenuse
 
 6. The complementary quantitative result bounds a successful signed contact index by `O(1+log(1/f))`, hence `O(log C)` in the primitive input hypotenuse. It follows from a real-circle pigeonhole argument and a uniformly long one-sided admissible arc. A fully rational stopping budget avoids uncertified numerical integration. Directional/window-constrained bounds are also explicit. See [logarithmic recurrence bound](square_sum_contact_recurrence_bound_20261019.md). This controls the number of elliptic additions, not their bit cost or the output hypotenuse.
 
+7. For the prescribed plus-port search, the preceding upper order is sharp near either zero-spread cusp: the first successful signed index is `Theta(log(1/f))`, including odd indices and both accepted charts. The proof uses two bounded admissibility arcs separated by half a diverging real period. Along either outer Berggren spine of depth `j`, this becomes `Theta(log j)`, while the input hypotenuse is `Theta(j²)`. See [matching cusp lower bound](square_sum_contact_cusp_lower_bound_20261019.md).
+
 ## 4. Odd zeta and graph geometry: exact maps
 
 The signed primitive-triangle Dirichlet series is
@@ -69,7 +71,7 @@ See [graceful exchange packet](graceful_square_exchange_20261019.md). Neither co
 
 ### A. Quantitative Pythagorean contact construction
 
-The existence problem and an adaptive index bound are settled for these ports: some signed index of order at most `log C` succeeds. The next useful theorem bounds the output hypotenuse or bit complexity, including a prescribed spread window. Another sharp question is whether the first successful index has a matching logarithmic lower bound near the cusps; the existing fixed-index degeneration argument proves divergence but gives no rate. Neither conclusion follows merely from the index upper bound.
+The existence problem and adaptive index bounds are settled for these ports; for the prescribed plus-port search the first index has matching logarithmic order at the cusps. The next useful theorem bounds the output hypotenuse or bit complexity, including a prescribed spread window. Another refinement would determine whether the normalized first index has a limit or several accumulation values; matching order alone does not give an asymptotic equivalent. These questions require more than the number of elliptic additions.
 
 ### B. Denominator-controlled common-neighbor gluing
 

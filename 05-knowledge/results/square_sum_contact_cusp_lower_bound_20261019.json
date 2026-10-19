@@ -1,0 +1,77 @@
+{
+  "exact_algebra_checks": 21,
+  "total_explicit_checks": 428,
+  "leading_lower_coefficient": "0.567296328553255492028622702577",
+  "diagnostic_integrals": [
+    {
+      "delta": "0.001",
+      "period": "7.334426039971054902490228",
+      "alpha": "1.24604488172926741957308",
+      "cluster_actual": "0.930807617619838082049555",
+      "all_index_lower_bound": "3.031274713405142534552427"
+    },
+    {
+      "delta": "0.000001",
+      "period": "12.2196852090784959666945",
+      "alpha": "1.246450074474358874630844",
+      "cluster_actual": "0.9312294368631103904867967",
+      "all_index_lower_bound": "6.949302258872276526235562"
+    },
+    {
+      "delta": "0.000000000001",
+      "period": "21.98872776085055830036873",
+      "alpha": "1.246450480280055220478005",
+      "cluster_actual": "0.9312298594522895873120592",
+      "all_index_lower_bound": "14.78678917107194496649699"
+    },
+    {
+      "delta": "0.000000000000000000000001",
+      "period": "41.52681016303489225000232",
+      "alpha": "1.24645048028046102678804",
+      "cluster_actual": "0.931229859452712177262338",
+      "all_index_lower_bound": "30.46176600431261047086855"
+    },
+    {
+      "delta": "1.0e-40",
+      "period": "67.57758669927724176381405",
+      "alpha": "1.24645048028046102678804",
+      "cluster_actual": "0.9312298594527121772623384",
+      "all_index_lower_bound": "51.36173511530426632638611"
+    }
+  ],
+  "exact_first_success_probes": [
+    {
+      "anchor": "10000",
+      "exact_first_abs_q": 13,
+      "signs": [
+        13
+      ],
+      "numerical_lower_bound": "3.550693962373125931331063"
+    },
+    {
+      "anchor": "1000000",
+      "exact_first_abs_q": 8,
+      "signs": [
+        8
+      ],
+      "numerical_lower_bound": "6.162866439843402444156714"
+    },
+    {
+      "anchor": "1000000000",
+      "exact_first_abs_q": 13,
+      "signs": [
+        13
+      ],
+      "numerical_lower_bound": "10.08160526993122098025033"
+    },
+    {
+      "anchor": "1000001/1000000",
+      "exact_first_abs_q": 19,
+      "signs": [
+        -19
+      ],
+      "numerical_lower_bound": "6.5560840385292441462354"
+    }
+  ],
+  "scope": "Quadrature values are diagnostics, not proof certificates."
+}
