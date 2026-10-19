@@ -1,0 +1,472 @@
+{
+  "status": "PASS",
+  "check_count": 3011,
+  "field": "exact rational arithmetic; cyclotomic traces computed algebraically",
+  "scope": "Real constructions k=2..7, D=k..k+6; cyclotomic constructions k=2..9, D=k..3k+3; symbolic index controls",
+  "proof_warning": "The all-order real lower bound uses strict interlacing in the companion proof; finite checks are not a substitute.",
+  "check_categories": {
+    "real": 645,
+    "cyclotomic": 2028,
+    "lower": 336,
+    "descent": 2
+  },
+  "ordered_check_labels_sha256": "c3bee33f852aeb9ade308cd9344fc1f92b4a3d7dbf111938a9ac43f65cfad0a0",
+  "real_examples": [
+    {
+      "k": 2,
+      "r": 4,
+      "D": 2,
+      "N": 4,
+      "nonzero_sites": 2,
+      "word_length": 6,
+      "nodes": [
+        "1",
+        "-1"
+      ],
+      "coefficients": [
+        "1/20",
+        "1/20"
+      ],
+      "zero_site_coefficient": "-1/10"
+    },
+    {
+      "k": 2,
+      "r": 4,
+      "D": 3,
+      "N": 5,
+      "nonzero_sites": 2,
+      "word_length": 6,
+      "nodes": [
+        "1",
+        "-1"
+      ],
+      "coefficients": [
+        "1/20",
+        "1/20"
+      ],
+      "zero_site_coefficient": "-1/10"
+    },
+    {
+      "k": 2,
+      "r": 4,
+      "D": 4,
+      "N": 6,
+      "nonzero_sites": 3,
+      "word_length": 8,
+      "nodes": [
+        "1",
+        "2",
+        "-2/3"
+      ],
+      "coefficients": [
+        "2/25",
+        "-1/160",
+        "81/800"
+      ],
+      "zero_site_coefficient": "-7/40"
+    },
+    {
+      "k": 2,
+      "r": 4,
+      "D": 5,
+      "N": 7,
+      "nonzero_sites": 4,
+      "word_length": 10,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "-6/11"
+      ],
+      "coefficients": [
+        "9/85",
+        "-9/560",
+        "1/585",
+        "161051/1113840"
+      ],
+      "zero_site_coefficient": "-17/72"
+    },
+    {
+      "k": 3,
+      "r": 5,
+      "D": 3,
+      "N": 5,
+      "nonzero_sites": 3,
+      "word_length": 8,
+      "nodes": [
+        "1",
+        "2",
+        "-3"
+      ],
+      "coefficients": [
+        "-1/80",
+        "1/200",
+        "-1/1200"
+      ],
+      "zero_site_coefficient": "1/120"
+    },
+    {
+      "k": 3,
+      "r": 5,
+      "D": 4,
+      "N": 6,
+      "nonzero_sites": 3,
+      "word_length": 8,
+      "nodes": [
+        "1",
+        "2",
+        "-3"
+      ],
+      "coefficients": [
+        "-1/80",
+        "1/200",
+        "-1/1200"
+      ],
+      "zero_site_coefficient": "1/120"
+    },
+    {
+      "k": 3,
+      "r": 5,
+      "D": 5,
+      "N": 7,
+      "nonzero_sites": 4,
+      "word_length": 10,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "-11/6"
+      ],
+      "coefficients": [
+        "-19/680",
+        "13/920",
+        "-7/3480",
+        "-1944/623645"
+      ],
+      "zero_site_coefficient": "5/264"
+    },
+    {
+      "k": 3,
+      "r": 5,
+      "D": 6,
+      "N": 8,
+      "nonzero_sites": 5,
+      "word_length": 12,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "-10/7"
+      ],
+      "coefficients": [
+        "-23/510",
+        "53/1920",
+        "-7/930",
+        "17/18240",
+        "-117649/19224960"
+      ],
+      "zero_site_coefficient": "29/960"
+    },
+    {
+      "k": 4,
+      "r": 6,
+      "D": 4,
+      "N": 6,
+      "nonzero_sites": 4,
+      "word_length": 10,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "-6"
+      ],
+      "coefficients": [
+        "1/490",
+        "-1/560",
+        "1/1890",
+        "1/105840"
+      ],
+      "zero_site_coefficient": "-1/1260"
+    },
+    {
+      "k": 4,
+      "r": 6,
+      "D": 5,
+      "N": 7,
+      "nonzero_sites": 4,
+      "word_length": 10,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "-6"
+      ],
+      "coefficients": [
+        "1/490",
+        "-1/560",
+        "1/1890",
+        "1/105840"
+      ],
+      "zero_site_coefficient": "-1/1260"
+    },
+    {
+      "k": 4,
+      "r": 6,
+      "D": 6,
+      "N": 8,
+      "nonzero_sites": 5,
+      "word_length": 12,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "-7/2"
+      ],
+      "coefficients": [
+        "11/1890",
+        "-9/1540",
+        "1/390",
+        "-1/2520",
+        "64/945945"
+      ],
+      "zero_site_coefficient": "-13/5880"
+    },
+    {
+      "k": 4,
+      "r": 6,
+      "D": 7,
+      "N": 9,
+      "nonzero_sites": 6,
+      "word_length": 14,
+      "nodes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "-45/17"
+      ],
+      "coefficients": [
+        "577/52080",
+        "-209/16590",
+        "293/40320",
+        "-101/47460",
+        "29/109200",
+        "410338673/2175816988800"
+      ],
+      "zero_site_coefficient": "-11/2700"
+    }
+  ],
+  "cyclotomic_examples": [
+    {
+      "k": 2,
+      "r": 4,
+      "D": 2,
+      "N": 4,
+      "nonzero_sites": 2,
+      "word_length": 6,
+      "node_polynomial": "z^2-1",
+      "weight_at_root_a": "a^(-2)/(2*10)",
+      "zero_site_coefficient": "-1/10",
+      "first_error_degree": 6,
+      "first_error_coefficient": "7/2"
+    },
+    {
+      "k": 2,
+      "r": 4,
+      "D": 3,
+      "N": 5,
+      "nonzero_sites": 2,
+      "word_length": 6,
+      "node_polynomial": "z^2-1",
+      "weight_at_root_a": "a^(-2)/(2*10)",
+      "zero_site_coefficient": "-1/10",
+      "first_error_degree": 6,
+      "first_error_coefficient": "7/2"
+    },
+    {
+      "k": 2,
+      "r": 4,
+      "D": 4,
+      "N": 6,
+      "nonzero_sites": 3,
+      "word_length": 7,
+      "node_polynomial": "z^3-1",
+      "weight_at_root_a": "a^(-2)/(3*10)",
+      "zero_site_coefficient": "0",
+      "first_error_degree": 7,
+      "first_error_coefficient": "28/5"
+    },
+    {
+      "k": 2,
+      "r": 4,
+      "D": 5,
+      "N": 7,
+      "nonzero_sites": 4,
+      "word_length": 9,
+      "node_polynomial": "z^4-1",
+      "weight_at_root_a": "a^(-2)/(4*10)",
+      "zero_site_coefficient": "0",
+      "first_error_degree": 8,
+      "first_error_coefficient": "42/5"
+    },
+    {
+      "k": 3,
+      "r": 5,
+      "D": 3,
+      "N": 5,
+      "nonzero_sites": 3,
+      "word_length": 8,
+      "node_polynomial": "z^3-1",
+      "weight_at_root_a": "a^(-3)/(3*20)",
+      "zero_site_coefficient": "-1/20",
+      "first_error_degree": 8,
+      "first_error_coefficient": "21/5"
+    },
+    {
+      "k": 3,
+      "r": 5,
+      "D": 5,
+      "N": 7,
+      "nonzero_sites": 3,
+      "word_length": 8,
+      "node_polynomial": "z^3-1",
+      "weight_at_root_a": "a^(-3)/(3*20)",
+      "zero_site_coefficient": "-1/20",
+      "first_error_degree": 8,
+      "first_error_coefficient": "21/5"
+    },
+    {
+      "k": 3,
+      "r": 5,
+      "D": 6,
+      "N": 8,
+      "nonzero_sites": 4,
+      "word_length": 9,
+      "node_polynomial": "z^4-1",
+      "weight_at_root_a": "a^(-3)/(4*20)",
+      "zero_site_coefficient": "0",
+      "first_error_degree": 9,
+      "first_error_coefficient": "6"
+    },
+    {
+      "k": 3,
+      "r": 5,
+      "D": 7,
+      "N": 9,
+      "nonzero_sites": 5,
+      "word_length": 11,
+      "node_polynomial": "z^5-1",
+      "weight_at_root_a": "a^(-3)/(5*20)",
+      "zero_site_coefficient": "0",
+      "first_error_degree": 10,
+      "first_error_coefficient": "33/4"
+    },
+    {
+      "k": 4,
+      "r": 6,
+      "D": 4,
+      "N": 6,
+      "nonzero_sites": 4,
+      "word_length": 10,
+      "node_polynomial": "z^4-1",
+      "weight_at_root_a": "a^(-4)/(4*35)",
+      "zero_site_coefficient": "-1/35",
+      "first_error_degree": 10,
+      "first_error_coefficient": "33/7"
+    },
+    {
+      "k": 4,
+      "r": 6,
+      "D": 7,
+      "N": 9,
+      "nonzero_sites": 4,
+      "word_length": 10,
+      "node_polynomial": "z^4-1",
+      "weight_at_root_a": "a^(-4)/(4*35)",
+      "zero_site_coefficient": "-1/35",
+      "first_error_degree": 10,
+      "first_error_coefficient": "33/7"
+    },
+    {
+      "k": 4,
+      "r": 6,
+      "D": 8,
+      "N": 10,
+      "nonzero_sites": 5,
+      "word_length": 11,
+      "node_polynomial": "z^5-1",
+      "weight_at_root_a": "a^(-4)/(5*35)",
+      "zero_site_coefficient": "0",
+      "first_error_degree": 11,
+      "first_error_coefficient": "44/7"
+    },
+    {
+      "k": 4,
+      "r": 6,
+      "D": 9,
+      "N": 11,
+      "nonzero_sites": 6,
+      "word_length": 13,
+      "node_polynomial": "z^6-1",
+      "weight_at_root_a": "a^(-4)/(6*35)",
+      "zero_site_coefficient": "0",
+      "first_error_degree": 12,
+      "first_error_coefficient": "286/35"
+    },
+    {
+      "k": 5,
+      "r": 7,
+      "D": 5,
+      "N": 7,
+      "nonzero_sites": 5,
+      "word_length": 12,
+      "node_polynomial": "z^5-1",
+      "weight_at_root_a": "a^(-5)/(5*56)",
+      "zero_site_coefficient": "-1/56",
+      "first_error_degree": 12,
+      "first_error_coefficient": "143/28"
+    },
+    {
+      "k": 5,
+      "r": 7,
+      "D": 9,
+      "N": 11,
+      "nonzero_sites": 5,
+      "word_length": 12,
+      "node_polynomial": "z^5-1",
+      "weight_at_root_a": "a^(-5)/(5*56)",
+      "zero_site_coefficient": "-1/56",
+      "first_error_degree": 12,
+      "first_error_coefficient": "143/28"
+    },
+    {
+      "k": 5,
+      "r": 7,
+      "D": 10,
+      "N": 12,
+      "nonzero_sites": 6,
+      "word_length": 13,
+      "node_polynomial": "z^6-1",
+      "weight_at_root_a": "a^(-5)/(6*56)",
+      "zero_site_coefficient": "0",
+      "first_error_degree": 13,
+      "first_error_coefficient": "13/2"
+    },
+    {
+      "k": 5,
+      "r": 7,
+      "D": 11,
+      "N": 13,
+      "nonzero_sites": 7,
+      "word_length": 15,
+      "node_polynomial": "z^7-1",
+      "weight_at_root_a": "a^(-5)/(7*56)",
+      "zero_site_coefficient": "0",
+      "first_error_degree": 14,
+      "first_error_coefficient": "65/8"
+    }
+  ]
+}
