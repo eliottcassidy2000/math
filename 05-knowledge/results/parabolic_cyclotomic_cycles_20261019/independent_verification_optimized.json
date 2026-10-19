@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "method": "Independent generic dynatomic division, resultant identities, modular polynomial iteration, and reconstructed parameter inverse",
+  "source_cycle_multiplier": 8,
+  "target_cycle_multiplier": 1,
+  "affine_map_preserves_multiplier": false,
+  "control": [
+    "-226801/129600",
+    "469/360",
+    "-19/360",
+    "-629/360",
+    "5605019/5832000"
+  ],
+  "scope": "Symbolic claims verified independently; arbitrary-period neutral exclusion follows from the separately verified cited denominator theorem."
+}

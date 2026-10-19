@@ -1,0 +1,12 @@
+{
+  "verdict": "ACCEPT",
+  "normal_optimized_byte_equal": true,
+  "files": {
+    "PARABOLIC_CYCLOTOMIC_THREE_CYCLE.md": "87a77261a3e651913c56bf6b818f1a82d295d0b213a367910570f2278327088a",
+    "verify_parabolic_bridge.py": "3c93d70077fd18c202570261eb3b2eafedccb7916dcd4a352b46020e0b5ae1d1",
+    "INDEPENDENT_AUDIT.md": "196475229a402faec38cd9bcac9f05281076e008db3f79803d6b736ffad5b5c7",
+    "verify_bridge_independent.py": "5066305213a955796f8a3bb45566cb1342880377e27d091d759b1addfc519f66",
+    "independent_verification.json": "26df00fced4f4a75a62a34641ab5b8f9b8be758b97df93c813e5d22e7348d0cb",
+    "independent_verification_optimized.json": "26df00fced4f4a75a62a34641ab5b8f9b8be758b97df93c813e5d22e7348d0cb"
+  }
+}

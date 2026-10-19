@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "control": {
+    "t": "5/4",
+    "c": "-226801/129600",
+    "points": [
+      "469/360",
+      "-19/360",
+      "-629/360"
+    ],
+    "multiplier": "5605019/5832000"
+  },
+  "scope": "Exact symbolic identities; denominator theorem separately cited"
+}
