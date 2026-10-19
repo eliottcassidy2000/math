@@ -1,0 +1,23 @@
+{
+  "status": "PAUSED_FOR_SHARDS",
+  "scope": "Partial coverage only until terminal success; exact cone obstacles are relaxation limitations, not actual posets.",
+  "dependencies": {
+    "scan_c3.py": "bea88aac42c81f54b749a730d089b7979c534d99baf08fa31157255e84de14fa",
+    "cone_engine.py": "e7a9d275af56df68458947fb497a747e15ed1292c2af967831d2ae637086e3c4",
+    "analytic_cover.json.gz": "47f329a555ada0db4514db404a86fbef0512e5a617bf83e60691533782b7e7dd"
+  },
+  "analytic_covered": 39575,
+  "residual_target": 43412,
+  "completed_residual_cores": 2031,
+  "last_core_index": 4187,
+  "committed_bytes": 468793,
+  "residual_orders": 28028,
+  "directed_screen_orders": 1179880,
+  "hist": {
+    "one": 25410,
+    "two": 1740,
+    "dual": 878
+  },
+  "start_unix": 1792398726.6638396,
+  "elapsed": 160.5650806427002
+}
