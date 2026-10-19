@@ -1,0 +1,37 @@
+{
+  "LP_calls": 0,
+  "admissible_orders_in_completed_residual_cores": 4253947,
+  "analytic_covered_cores": 56630,
+  "certificate_kind_counts": {
+    "one_row": 4153842,
+    "two_rows": 97647
+  },
+  "certificate_records_sha256": "aec18cdaccc391385540e92c9af6e93c20bf0c080ee8353249e62d120c895415",
+  "combined_covered_cores": 79121,
+  "committed_bytes": 9490568,
+  "elapsed_seconds": 1095.443839788437,
+  "last_catalogue_core_index": 79120,
+  "last_residual_position": 22490,
+  "newly_checked_orders": 4176963,
+  "newly_scanned_cores": 22206,
+  "residual_completed_cores": 22491,
+  "residual_core_target": 22491,
+  "reused_paused_cores": 285,
+  "reused_paused_scan_orders": 74568,
+  "reused_prior_sample_orders": 2416,
+  "scope": "All 79,121 degree-valid c=4 cores covered by frozen analytic exclusions or exact residual cone certificates.",
+  "source_hashes": {
+    "mixed12-c4-analytic-freeze-stage/frozen_c4_analytic_20261019/c4_combined_analytic_coverage_20261019.json.gz": "67909040567c881587eb38fa5a0bfa13e825a05c6af71963092196115eedb826",
+    "mixed12-c4-analytic-freeze-stage/frozen_c4_analytic_20261019/manifest.json": "059bc90adfa0b58062b45f88f9facf73c73a69ca38709b55fb0c4f600e8c0314",
+    "mixed12-c4-frontier-stage/explore_c4_budgeted_cone_20261019.py": "f404bb46301db7c0268ef92b97e9356fbdb72be10920f8833f277d5e055efbc2",
+    "mixed12-c4-frontier-stage/explore_c4_exception_extensions_20261019.py": "763d05326b4a230696f1e75cf78db8ab6e1d194c737fbcb51af0ce2d7958ab10",
+    "mixed12-c4-frontier-stage/paused_full_scan_20261019/complete_c4_core_certificates_20261019.jsonl.gz": "229eb8be4c0c078e1e9cb7039522f1d226afd4081930dbefd41e1f51db50901a",
+    "mixed12-c4-frontier-stage/paused_full_scan_20261019/pause_receipt_20261019.json": "4004ca26e65768f8dfc0a4a7bdde9f35c0d6c2d303d07ea853dfbdd34d704359",
+    "mixed12-c4-frontier-stage/prior_c4_case_coverage_20261019.json.gz": "901cf427e909c86d8967e4c050f794631976e5bb00f7b5b7b03b251bf7c05d72",
+    "mixed12-c4-frontier-stage/scan_complete_c4_saturation_20261019.py": "20d1c95b7de65ed5fbcd2b6f8302ef62ef09e6518c47442f13647105bb79ad82",
+    "mixed12-c4-frontier-stage/scan_residual_c4_analytic_union_20261019.py": "9a063b0eca51471e972e79cfb6b0ce3b8079201d69e3e7549405c6371422501f",
+    "mixed12-freeze-stage/frozen_mixed12_20261019/verify_mixed12_witness_migration_20261019.py": "c1a807a75dae52bb2f3e34a6d5a9599663cca5af3cc1663cc6e3ec99ee562361"
+  },
+  "started_unix": 1792397684.9931948,
+  "status": "ALL_CORES_COVERED"
+}

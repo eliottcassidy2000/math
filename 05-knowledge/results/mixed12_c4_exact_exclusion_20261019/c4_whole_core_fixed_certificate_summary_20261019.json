@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE_VIEW",
+  "scope": "Fixed per-core inequalities on all saturation-retained generators, with every used orientation forced by maximum span. No untested uniform inequality is inferred. Absence from this view does not prove that a fixed certificate is impossible.",
+  "replayed_residual_cores": 22491,
+  "whole_core_certificates": 14554,
+  "certificate_kind_counts": {
+    "same_common_bridge": 11580,
+    "cross_common_bridge": 1231,
+    "one_row": 1743
+  },
+  "source_normalized_prefix_sha256": "74a9af35dbca737fabb351f32dbcbe1aaef21fbe95f79571372df645b65e46d8",
+  "cores_without_fixed_certificate_in_stored_list": 7937,
+  "output_sha256": "0d6fe9026c073956a4cb3c7ad28f3903518a6b8d018aa9379542180983817914"
+}

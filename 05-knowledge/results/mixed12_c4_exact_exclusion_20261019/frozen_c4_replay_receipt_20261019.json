@@ -1,0 +1,15 @@
+{
+  "status": "PASS_FULL_SCOPED_C4_REPLAY",
+  "scope": "Seven-thin mixed-(1,2), c=4 maximum-span majority-root exclusion only.",
+  "analytic_cores": 56630,
+  "residual_cores": 22491,
+  "admissible_orders": 4253947,
+  "weighted_certificates": 69126,
+  "core_extensions": 47436576,
+  "retained_generators": 14929836,
+  "combined_covered_cores": 79121,
+  "normalized_certificates_sha256": "7e84af0dd6dc6e283cd5fa2c4f4fbe9222e41b9ac503ed134734bb653c0a57d1",
+  "analytic_coverage_sha256": "67909040567c881587eb38fa5a0bfa13e825a05c6af71963092196115eedb826",
+  "aggregate_case_stream_sha256": "947cd4dd3b182df4fc5b6de7c3f5531095020592851882e415ab5c626ac76865",
+  "verifier_sha256": "bea9c28af5b71dd88666835596b644ff219ff523c5d451ed42ec3a13034383d5"
+}

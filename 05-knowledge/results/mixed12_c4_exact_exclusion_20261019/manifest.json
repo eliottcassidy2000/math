@@ -1,0 +1,75 @@
+{
+  "coverage": {
+    "admissible_orders": 4253947,
+    "analytic_cores": 56630,
+    "combined_covered_cores": 79121,
+    "residual_cores": 22491,
+    "weighted_certificates": 69126
+  },
+  "files": {
+    "README.md": {
+      "bytes": 4120,
+      "sha256": "83e967368b1c6cc9879104fef9899f559b65040590e680f319b0efe961743dc1"
+    },
+    "c4_combined_analytic_coverage_20261019.json.gz": {
+      "bytes": 608516,
+      "sha256": "67909040567c881587eb38fa5a0bfa13e825a05c6af71963092196115eedb826"
+    },
+    "c4_whole_core_fixed_certificate_summary_20261019.json": {
+      "bytes": 731,
+      "sha256": "97c7aee169336e826f6dca73bb08aec7b067a18c0489e574ea3aa63ba26f3765"
+    },
+    "c4_whole_core_fixed_certificates_20261019.json.gz": {
+      "bytes": 224451,
+      "sha256": "0d6fe9026c073956a4cb3c7ad28f3903518a6b8d018aa9379542180983817914"
+    },
+    "construction_completion_receipt_20261019.json": {
+      "bytes": 2475,
+      "sha256": "2c407529a7ef9f4e8e6d0d67a5a1982374c7a1a0040f4de9cf00ea407d63d17a"
+    },
+    "frozen_c4_replay_receipt_20261019.json": {
+      "bytes": 744,
+      "sha256": "894def526c732f5687d7cf010fbe3fe3a3623f69384d62e955664f51f5ecabf8"
+    },
+    "independent_replay_completion_receipt_20261019.json": {
+      "bytes": 680,
+      "sha256": "9db87b2df83f9ff221aa16d4ef642d39ff1eee515d0e17601da56dd7e2652b92"
+    },
+    "max_span_directed_defect_reduction_20261019.md": {
+      "bytes": 2125,
+      "sha256": "d4a36a5a4a7ada2b7a83a747248171b3e99998e079a2d5fd4aa035c1b47d3ac4"
+    },
+    "mixed12_c4_exact_exclusion_20261019.md": {
+      "bytes": 9488,
+      "sha256": "d45e33c1c39b2e33135c54bf755234c6f3190aec394273bbec4bf34e89862434"
+    },
+    "normalized_certificate_repack_receipt_20261019.json": {
+      "bytes": 426,
+      "sha256": "d3ea388fccc415b6fb75ee61bdc5dc253c49f84914bdf9697be70dc42b1856b2"
+    },
+    "normalized_residual_certificates_20261019.jsonl.gz": {
+      "bytes": 1533074,
+      "sha256": "7e84af0dd6dc6e283cd5fa2c4f4fbe9222e41b9ac503ed134734bb653c0a57d1"
+    },
+    "one_defect_exchange_reductions_20261019.md": {
+      "bytes": 7802,
+      "sha256": "2a062aea8903849474640db25dcfc5a3485c6a965d251a90c367d0ccace33be9"
+    },
+    "seven_thin_saturation_increment_lemma_20261019.md": {
+      "bytes": 6227,
+      "sha256": "2369610b84d27c367b2abf10dbb080dff2f6ec1500495ea0650409c98b2da243"
+    },
+    "verify_frozen_c4_packet_20261019.py": {
+      "bytes": 8698,
+      "sha256": "bea9c28af5b71dd88666835596b644ff219ff523c5d451ed42ec3a13034383d5"
+    },
+    "verify_saturated_near_twin_lemma_20261019.py": {
+      "bytes": 8860,
+      "sha256": "13337e5ef32725c1cb3ab482a1166fb12bcb1586f6cc2ba8cabd67e97aa90c75"
+    }
+  },
+  "python_tested": "3.12.14",
+  "reproduce": "python -O verify_frozen_c4_packet_20261019.py",
+  "schema": 1,
+  "scope": "Seven-thin mixed-(1,2), c=4 maximum-span majority-root exclusion; dual included. No claim for other morphologies or the general conjecture."
+}

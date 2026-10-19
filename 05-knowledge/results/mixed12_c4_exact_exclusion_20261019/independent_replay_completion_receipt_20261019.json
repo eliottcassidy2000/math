@@ -1,0 +1,15 @@
+{
+  "admissible_orders_checked": 4253947,
+  "analytic_cores_checked": 56630,
+  "committed_bytes": 7369534,
+  "elapsed_seconds": 941.2347803115845,
+  "normalized_certificates_sha256": "74a9af35dbca737fabb351f32dbcbe1aaef21fbe95f79571372df645b65e46d8",
+  "prior_supplementary_certificates": 85,
+  "producer_terminal_status": "ALL_CORES_COVERED",
+  "residual_cores_checked": 22491,
+  "scope": "Independent integer-only replay of all committed residual certificates.",
+  "script_sha256": "e53e0ee931c303dce4dd5dd4442fab3a118ecc7d5c2c9a6d139e72c9bee5b0d3",
+  "started_unix": 1792397899.542237,
+  "status": "ALL_CORES_INDEPENDENTLY_REPLAYED",
+  "weighted_certificates_checked": 69126
+}

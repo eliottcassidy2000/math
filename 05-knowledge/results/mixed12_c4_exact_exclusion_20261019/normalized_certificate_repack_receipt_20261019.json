@@ -1,0 +1,10 @@
+{
+  "source_gzip_sha256": "74a9af35dbca737fabb351f32dbcbe1aaef21fbe95f79571372df645b65e46d8",
+  "compact_gzip_sha256": "7e84af0dd6dc6e283cd5fa2c4f4fbe9222e41b9ac503ed134734bb653c0a57d1",
+  "uncompressed_sha256": "69f3a5ea1c426bd1345da0430ff18226f9b1d224273dc65b9ab664ea2cf7a371",
+  "source_bytes": 7369534,
+  "compact_bytes": 1533074,
+  "uncompressed_bytes": 14601657,
+  "residual_cores": 22491,
+  "content_identical": true
+}
