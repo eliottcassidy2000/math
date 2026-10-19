@@ -1,0 +1,26 @@
+{
+  "change_scope": "Link-only proof edits; all mathematical prose and formulas unchanged after stripping Markdown links.",
+  "predecessor_proof_sha256": "7a48b6458f3bd0954eb4c9309093ff3c32f8fbfae61eba8618319cd66e062797",
+  "published_proof_sha256": "121e3782d6ae968983c837e3ae1ea6a896e09d33e87e80c40a560f253a991ce1",
+  "link_edits": 6,
+  "relative_link_targets_verified": [
+    "../boundary_attachment_correlation_20261019/PASSIVE_ATTACHMENT_HULL_AND_FKG.md",
+    "../parabolic_escape_precision_20261019/parabolic_escape_precision_20261019.md",
+    "../prime_pairs_local_symmetry_20261019/forbidden-pattern-classification.md",
+    "../prime_pairs_local_symmetry_20261019/power-depth-rough-pairs.md",
+    "../prime_pairs_local_symmetry_20261019/prime-pairs-structural-note.md",
+    "../prime_pairs_local_symmetry_20261019/short-interval-local-resolution.md"
+  ],
+  "independent_review_sha256": "80dc6febe1fc35b8d35f25eecac7e464ac3e33349ad47b9a50f1ab81eb48bce5",
+  "independent_verifier_sha256": "c3062d954e8441f2c81755782b442d1b8f0acf5c9d41f9e3d2060454334441fa",
+  "review_presentation_overlay": {
+    "reviewed_sha256": "80dc6febe1fc35b8d35f25eecac7e464ac3e33349ad47b9a50f1ab81eb48bce5",
+    "published_sha256": "456432446e8f4c119db927ed7fb8a68b1e6e25a302e77924e181efafc1fa0b68",
+    "change_scope": "Two presentation sentences updated to match this package; mathematical review statements unchanged."
+  },
+  "readme_presentation_overlay": {
+    "predecessor_sha256": "2d936db6398d38799f62732bf15645fd7127acb7be04352527fab77ef4a80528",
+    "published_sha256": "e3ba49ad52fd1374d4bd745a39278ebcb52a3b89dce6dee5bad6c479e3f55bc6",
+    "change_scope": "One provenance sentence made consistent with the review presentation overlay."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "status": "PASS: packaged normal and optimized reproduction, original receipt equality, and relative links",
+  "author_guards_per_run": 148202,
+  "independent_guards_per_run": 178019,
+  "python_version": "3.12.14",
+  "sympy_version": "1.14.0",
+  "proof_changes": "Six link-only edits; mathematical text unchanged",
+  "relative_links_verified": [
+    {
+      "file": "README.md",
+      "target": "SCALING_RESIDUES_AND_CORRELATIONS.md"
+    },
+    {
+      "file": "README.md",
+      "target": "REVIEW.md"
+    },
+    {
+      "file": "README.md",
+      "target": "../parabolic_escape_precision_20261019/parabolic_escape_precision_20261019.md"
+    },
+    {
+      "file": "README.md",
+      "target": "publication_provenance.json"
+    },
+    {
+      "file": "SCALING_RESIDUES_AND_CORRELATIONS.md",
+      "target": "../parabolic_escape_precision_20261019/parabolic_escape_precision_20261019.md"
+    },
+    {
+      "file": "SCALING_RESIDUES_AND_CORRELATIONS.md",
+      "target": "../prime_pairs_local_symmetry_20261019/prime-pairs-structural-note.md"
+    },
+    {
+      "file": "SCALING_RESIDUES_AND_CORRELATIONS.md",
+      "target": "../prime_pairs_local_symmetry_20261019/forbidden-pattern-classification.md"
+    },
+    {
+      "file": "SCALING_RESIDUES_AND_CORRELATIONS.md",
+      "target": "../prime_pairs_local_symmetry_20261019/power-depth-rough-pairs.md"
+    },
+    {
+      "file": "SCALING_RESIDUES_AND_CORRELATIONS.md",
+      "target": "../prime_pairs_local_symmetry_20261019/short-interval-local-resolution.md"
+    },
+    {
+      "file": "SCALING_RESIDUES_AND_CORRELATIONS.md",
+      "target": "../boundary_attachment_correlation_20261019/PASSIVE_ATTACHMENT_HULL_AND_FKG.md"
+    }
+  ],
+  "author_receipt_sha256": "e23f90393a2a2b8852c07d2b55162643cca562586fcee7118ada79ba8cb01ebe",
+  "independent_receipt_sha256": "dacb3394d0eeae5a2b9b3e3f4ceb34577e36ef28a72190e47623cdd0576797fe"
+}

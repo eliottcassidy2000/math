@@ -1,0 +1,55 @@
+{
+  "status": "FINITE-EXACT; all active guards passed; no floating-point claims",
+  "counts": {
+    "adjacent_residues_differ": 13224,
+    "affine_crt_factor": 4275,
+    "affine_prime_factor": 29994,
+    "antichain_mantissa_hostile": 1,
+    "difference_intertwiner": 34293,
+    "exact_transition_tv": 6279,
+    "factorized_gauge": 1023,
+    "four_distinct_affine_collisions": 32482,
+    "gauge_reconstruction": 7,
+    "inherited_sum_difference_factor": 1268,
+    "inverse_square_window_telescope": 36,
+    "joint_correlation_bound": 5040,
+    "microscopic_hostile": 100,
+    "prefix_digit_block": 136,
+    "quantization_midpoint": 1653,
+    "relative_transfer_rare_event": 1584,
+    "relative_weight_transfer": 4088,
+    "sharp_tv_envelope": 6279,
+    "stationary_columns": 161,
+    "uniform_iff_divides": 6279
+  },
+  "total_guards": 148202,
+  "antichain_hostile": {
+    "integer_counts": [
+      24,
+      6,
+      6,
+      2
+    ],
+    "decimal_exponents": [
+      2,
+      1,
+      1,
+      1
+    ],
+    "integer_ratio": "4/3",
+    "mantissa_ratio": "2/15"
+  },
+  "scope": {
+    "transition_bases": "2..8",
+    "transition_moduli": "2..24",
+    "transition_digit_block_lengths": "1..3",
+    "affine_prime_moduli": "all primes 5..71; every multiplier and shift",
+    "crt_wheels": [
+      35,
+      55,
+      385
+    ],
+    "cusp_controls": "inverse-square model weights only; phase theorem not numerically certified here"
+  },
+  "script_sha256": "13417621e82171fb424da8d60db21ffa85440303f6300ef9170d55eb161cd7f2"
+}

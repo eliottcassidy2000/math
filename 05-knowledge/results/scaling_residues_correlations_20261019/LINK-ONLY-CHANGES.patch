@@ -1,0 +1,33 @@
+--- reviewed/SCALING_RESIDUES_AND_CORRELATIONS.md
++++ published/SCALING_RESIDUES_AND_CORRELATIONS.md
+@@ -261,7 +261,7 @@
+ 
+     N_R(epsilon)=n iff epsilon_n<epsilon<=epsilon_(n-1).
+ 
+-The [sibling cusp analysis, Section 4](../session3-parabolic/parabolic_escape_precision_20261019.md)
++The [sibling cusp analysis, Section 4](../parabolic_escape_precision_20261019/parabolic_escape_precision_20261019.md)
+ proves the stronger threshold statement
+ 
+     n-pi/sqrt(epsilon_n) -> C_R,
+@@ -424,16 +424,16 @@
+ 
+ Inherited repository inputs (read in full at their mathematical sections):
+ 
+-- prime_pairs_local_symmetry_20261019/prime-pairs-structural-note.md:
++- [prime_pairs_local_symmetry_20261019/prime-pairs-structural-note.md](../prime_pairs_local_symmetry_20261019/prime-pairs-structural-note.md):
+   symmetric sum/difference correlation, wheel root counts, rough-number
+   theorem, and the separate actual-prime correlation gate.
+-- prime_pairs_local_symmetry_20261019/forbidden-pattern-classification.md:
++- [prime_pairs_local_symmetry_20261019/forbidden-pattern-classification.md](../prime_pairs_local_symmetry_20261019/forbidden-pattern-classification.md):
+   odd-order parity reconstruction and its even-order failure.
+-- prime_pairs_local_symmetry_20261019/power-depth-rough-pairs.md:
++- [prime_pairs_local_symmetry_20261019/power-depth-rough-pairs.md](../prime_pairs_local_symmetry_20261019/power-depth-rough-pairs.md):
+   classical sieve at u>37 and explicit relative-error envelope.
+-- prime_pairs_local_symmetry_20261019/short-interval-local-resolution.md:
++- [prime_pairs_local_symmetry_20261019/short-interval-local-resolution.md](../prime_pairs_local_symmetry_20261019/short-interval-local-resolution.md):
+   location-uniform short-interval theorem and sharp full-series tail warning.
+-- boundary_attachment_correlation_20261019/PASSIVE_ATTACHMENT_HULL_AND_FKG.md:
++- [boundary_attachment_correlation_20261019/PASSIVE_ATTACHMENT_HULL_AND_FKG.md](../boundary_attachment_correlation_20261019/PASSIVE_ATTACHMENT_HULL_AND_FKG.md):
+   fixed-interface deletion arrays, nonlinear realizability, and their
+   normalization conventions.
+ 

@@ -1,0 +1,30 @@
+{
+  "status": "PASS: finite exact review controls; all guards active under -O",
+  "counts": {
+    "arbitrary_gcd_power_rank": 834,
+    "boolean_diamond_exact_nullity": 7,
+    "boolean_modular_basis": 7,
+    "boolean_nonmodular_hostile": 5,
+    "cusp_envelope_weight_ratio": 24,
+    "distinct_affine_collision_shifts": 72516,
+    "exact_nilpotence_criterion": 834,
+    "forbidden_root_affine_count": 75984,
+    "full_characteristic_polynomial": 279,
+    "interval_total_variation": 11544,
+    "relative_sieve_error_composition": 72,
+    "signed_statistic_hostile": 1,
+    "total_variation_attaining_event": 11544,
+    "uniform_nonnegative_weight_transfer": 4368
+  },
+  "total_guards": 178019,
+  "scope": {
+    "spectrum": "b=2..10, W=2..32, full integer characteristic polynomials",
+    "nilpotent_parts": "b=2..10, W=2..16 plus four larger cases; powers h=1..6",
+    "total_variation": "W=2..40, L=1..74, four interval offsets",
+    "affine_factors": "all primes 5..101; all multipliers and shifts",
+    "boolean_iff": "all diamond equations on complete Boolean lattices of ranks 0..6",
+    "transfer": "four M, L=1..6, all statistics valued in {0,1,5}; perturbed rational n^-3 weights",
+    "exclusions": "No numerical certification of analytic cusp phase, sieve onset, pi normality, or actual-prime result"
+  },
+  "script_sha256": "c3062d954e8441f2c81755782b442d1b8f0acf5c9d41f9e3d2060454334441fa"
+}
