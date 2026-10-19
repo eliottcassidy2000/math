@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "checks": 68642,
+  "scope": "All U,V lengths1..3, j1..4; sources1..40 and four prefixes; independent carry sum and actual first mismatch; finite safe-tail controls"
+}

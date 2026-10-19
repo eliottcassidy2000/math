@@ -1,0 +1,98 @@
+{
+  "review": "Parent approved both independently reviewed proofs and cited hypotheses. Source proof contents preserved; presentation edits add review and inheritance links. Stale root_rerun.json is excluded.",
+  "files": [
+    {
+      "path": "THUE_MORSE_FINITE_SOURCE_EXCLUSION.md",
+      "source_sha256": "4ee5fde84fd93bb26789e2d165d10ad405718a579ef7423c82984d1a94b19c7d",
+      "published_sha256": "71c223abb492929980caa539249788db72b0378b9c7a7dfd4a4704a00094f32b",
+      "presentation_changes": [
+        {
+          "before": "**PROVED by the elementary argument below; finite exact controls supplied.**",
+          "after": "**PROVED by the elementary argument below; finite exact controls supplied.** Independently [reviewed](review/INDEPENDENT_REVIEW.md)."
+        },
+        {
+          "before": "`01-canon/theorems/THM-4654-safe-mahler-codes-contract-collatz-logarithmic-memory-and-complexity-approximation.md`",
+          "after": "[THM-4654](../../../01-canon/theorems/THM-4654-safe-mahler-codes-contract-collatz-logarithmic-memory-and-complexity-approximation.md)"
+        },
+        {
+          "before": "`mahler_carry_interface_20261014i.md`",
+          "after": "[the carry interface](../mahler_carry_interface_20261014i.md)"
+        },
+        {
+          "before": "`01-canon/theorems/THM-4072-mahler-safe-terminal-fibre-product-and-finite-state-obstruction.md`",
+          "after": "[THM-4072](../../../01-canon/theorems/THM-4072-mahler-safe-terminal-fibre-product-and-finite-state-obstruction.md)"
+        },
+        {
+          "before": "The separately staged `THUE_MORSE_SCALAR_MAHLER_EXTENSION.md`",
+          "after": "The [scalar extension](THUE_MORSE_SCALAR_MAHLER_EXTENSION.md)"
+        }
+      ]
+    },
+    {
+      "path": "THUE_MORSE_SCALAR_MAHLER_EXTENSION.md",
+      "source_sha256": "f88520acd3d808e3fe7168124ee4b7a23b57bbe47c365fdbe6ad43bed150420e",
+      "published_sha256": "ec157f554ba159f38de0cb67df9c48fec09544edbf52e55d97bd4dcc95a34cb8",
+      "presentation_changes": [
+        {
+          "before": "**PROVED from the explicitly cited scalar p-adic Mahler input below.**",
+          "after": "**PROVED from the explicitly cited scalar p-adic Mahler input below.** Independently [reviewed](review/INDEPENDENT_REVIEW.md), including the cited-source hypotheses."
+        },
+        {
+          "before": "`THUE_MORSE_FINITE_SOURCE_EXCLUSION.md`",
+          "after": "[the elementary companion](THUE_MORSE_FINITE_SOURCE_EXCLUSION.md)"
+        }
+      ]
+    },
+    {
+      "path": "mahler_thue_morse_reset_exclusion.py",
+      "source_sha256": "f1c0f2f6c9116d31dd4d8b51b65cf634ad30ba4b6887899be9d9a8b709b9f702",
+      "published_sha256": "f1c0f2f6c9116d31dd4d8b51b65cf634ad30ba4b6887899be9d9a8b709b9f702",
+      "presentation_changes": []
+    },
+    {
+      "path": "mahler_thue_morse_reset_exclusion.json",
+      "source_sha256": "ae3117dfbbd67dca0414681d21a46a23965217b1302220d2db8b39c0e2f128c8",
+      "published_sha256": "ae3117dfbbd67dca0414681d21a46a23965217b1302220d2db8b39c0e2f128c8",
+      "presentation_changes": []
+    },
+    {
+      "path": "mahler_thue_morse_reset_exclusion_optimized.json",
+      "source_sha256": "ae3117dfbbd67dca0414681d21a46a23965217b1302220d2db8b39c0e2f128c8",
+      "published_sha256": "ae3117dfbbd67dca0414681d21a46a23965217b1302220d2db8b39c0e2f128c8",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/INDEPENDENT_REVIEW.md",
+      "source_sha256": "2ab9190b7fa9c0a1bcf710f24373649c23c7d87c05211e8d9415f83f940553a5",
+      "published_sha256": "b25728f99b309591b834b7eab07411d0baa3636b00c84d2f1500a56a63428c43",
+      "presentation_changes": [
+        {
+          "before": "`session5-mahler/THUE_MORSE_FINITE_SOURCE_EXCLUSION.md`",
+          "after": "[the elementary proof](../THUE_MORSE_FINITE_SOURCE_EXCLUSION.md)"
+        },
+        {
+          "before": "`THUE_MORSE_SCALAR_MAHLER_EXTENSION.md`",
+          "after": "[the scalar extension](../THUE_MORSE_SCALAR_MAHLER_EXTENSION.md)"
+        }
+      ]
+    },
+    {
+      "path": "review/verify_independent.py",
+      "source_sha256": "40e536bc5a4767a80ffe16bfebe658caabfa479efb65b9eda476770f7329e084",
+      "published_sha256": "40e536bc5a4767a80ffe16bfebe658caabfa479efb65b9eda476770f7329e084",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/receipt.json",
+      "source_sha256": "779303291ac8c6fe1e7219b33e7f187a2f1396a2258e2352c9c66757cef263f5",
+      "published_sha256": "779303291ac8c6fe1e7219b33e7f187a2f1396a2258e2352c9c66757cef263f5",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/receipt-optimized.json",
+      "source_sha256": "779303291ac8c6fe1e7219b33e7f187a2f1396a2258e2352c9c66757cef263f5",
+      "published_sha256": "779303291ac8c6fe1e7219b33e7f187a2f1396a2258e2352c9c66757cef263f5",
+      "presentation_changes": []
+    }
+  ]
+}

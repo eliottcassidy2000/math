@@ -1,0 +1,110 @@
+{
+  "check_groups": {
+    "actual fixed-point overlap": 10,
+    "equal-block recoding": 900,
+    "independent Thue-Morse definition": 1,
+    "invalid morphism rejected": 4,
+    "invalid source rejected": 6,
+    "moving positive-source cylinder": 6,
+    "moving-source boundary preserved": 6,
+    "noncommuting specialization guard": 900,
+    "safe reset-bank control": 36,
+    "source-bound exact first mismatch": 13323,
+    "substituted overlap": 10,
+    "unequal-length clock": 3600
+  },
+  "checks": 18802,
+  "examples": [
+    {
+      "A": "1",
+      "first_mismatch": 0,
+      "horizon": 30,
+      "k": 6,
+      "period_length": 18
+    },
+    {
+      "A": "13",
+      "first_mismatch": 0,
+      "horizon": 120,
+      "k": 24,
+      "period_length": 72
+    },
+    {
+      "A": "124173",
+      "first_mismatch": 0,
+      "horizon": 480,
+      "k": 96,
+      "period_length": 288
+    },
+    {
+      "A": "3532045",
+      "first_mismatch": 0,
+      "horizon": 480,
+      "k": 96,
+      "period_length": 288
+    },
+    {
+      "A": "1000000000000000000000000000001",
+      "first_mismatch": 0,
+      "horizon": 3840,
+      "k": 768,
+      "period_length": 2304
+    }
+  ],
+  "morphism_universe": "all 900 ordered nonempty binary image pairs with each length <=4",
+  "moving_source_controls": [
+    {
+      "A": "184",
+      "N": 8,
+      "bit_length": 8,
+      "first_mismatch": 8,
+      "horizon": 240
+    },
+    {
+      "A": "16824",
+      "N": 16,
+      "bit_length": 15,
+      "first_mismatch": 19,
+      "horizon": 480
+    },
+    {
+      "A": "1053311416",
+      "N": 32,
+      "bit_length": 30,
+      "first_mismatch": 32,
+      "horizon": 960
+    },
+    {
+      "A": "17512186365411344824",
+      "N": 64,
+      "bit_length": 64,
+      "first_mismatch": 64,
+      "horizon": 1920
+    },
+    {
+      "A": "142903980770319502346173921522457526712",
+      "N": 128,
+      "bit_length": 127,
+      "first_mismatch": 130,
+      "horizon": 3840
+    },
+    {
+      "A": "38013919015702376267256845735537766595651466786145820390772707198447374582200",
+      "N": 256,
+      "bit_length": 255,
+      "first_mismatch": 256,
+      "horizon": 7680
+    }
+  ],
+  "safe_reset_loop_lengths": [
+    1,
+    3,
+    9,
+    12,
+    15,
+    17
+  ],
+  "scope": "Finite exact audits only. All-parameter source exclusion is proved in THUE_MORSE_FINITE_SOURCE_EXCLUSION.md. These computations do not certify transcendence.",
+  "source_universe": "A=1..1024, eight morphisms; A=1..256, five prefixes, four morphisms",
+  "status": "PASS"
+}
