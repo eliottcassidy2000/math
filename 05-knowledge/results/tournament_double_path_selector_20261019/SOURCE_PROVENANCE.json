@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-19",
+  "sources": [
+    {
+      "path": "05-knowledge/results/twin_signature_parity_20261019/NINE_VERTEX_GOOD_TREES.md",
+      "sha256": "c8fbb7f933e4f885f1e92a40147de3543ead4acfccae94f3e00397d43cee72cb"
+    },
+    {
+      "path": "05-knowledge/results/twin_signature_parity_20261019/TWIN_SIGNATURE_PARITY.md",
+      "sha256": "8c3babadebc8233edf2764ea4c071c15290b36ed9ba2a88fe841ff0930ffdec0"
+    },
+    {
+      "path": "05-knowledge/results/twin_signature_parity_20261019/minimality_witnesses.json",
+      "sha256": "b6c88f197419f9bdc3fe9e70aed1382d15b238d2543890c7c7d9320006aace83"
+    },
+    {
+      "path": "01-canon/theorems/THM-4533-redei-graphs-parity-of-shaved-tournaments-and-u9.md",
+      "sha256": "cee7395295c9d1a84da6ee19bcf669219bb6e940b2e3749c339affc6c0d9350c"
+    },
+    {
+      "path": "01-canon/theorems/THM-002-ocf.md",
+      "sha256": "3691f3d673e84a8c79ce01bb2cc778cdf7ddf8c483b0148e771feeb28fbea83e"
+    },
+    {
+      "path": "05-knowledge/results/tournament_hasse_frobenius_20261019/PADDING_FROBENIUS_PROOF.md",
+      "sha256": "7efc364d5bcf48ee1d3cb4cb10943119db4c0fccf5c99b36a0e850d46720bedd",
+      "role": "New reviewed source-free integral basis; separately frozen publication packet"
+    }
+  ],
+  "inherited_witnesses": {
+    "seven_core": "minimality_witnesses.json rows entry n=7, first witness, orientation_mask52",
+    "double_path": "minimality_witnesses.json rows entry n=8, exact edge list01,02,03,14,15,26,47, orientation_mask5"
+  },
+  "new_scope": "Exact two-function D8 orientation selector, degree-seven primitive localization, and all-order forest primitive floor with source-stack host scope.",
+  "attribution_boundary": "All inherited rigidity, deletion-reversal, shuffle, and OCF inputs retain source attribution. No external priority claim."
+}
