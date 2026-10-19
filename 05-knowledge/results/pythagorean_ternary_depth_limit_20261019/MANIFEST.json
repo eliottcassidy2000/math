@@ -1,0 +1,28 @@
+{
+  "status": "proved_with_exact_controls",
+  "date": "2026-10-19",
+  "repository_directory": "05-knowledge/results/pythagorean_ternary_depth_limit_20261019",
+  "verification_checks": 200465,
+  "files": [
+    {
+      "name": "README.md",
+      "bytes": 2025,
+      "sha256": "6d82aa62c63c4cc4dd76fd4a1cbb8d67e5f439da73f4bc7fd09b0223bfd6ce44"
+    },
+    {
+      "name": "TERNARY_DEPTH_LIMIT_AND_FINITE_MEMORY.md",
+      "bytes": 9424,
+      "sha256": "c82b77e55575ec669dc396a01c6cc153da2e07ab93961478b5a59cf56bfc566c"
+    },
+    {
+      "name": "ternary-depth-receipt.json",
+      "bytes": 2843,
+      "sha256": "b1f2099a805f54d915f296912c2e9291e88e9a4666af4544393bf6e23e7549dd"
+    },
+    {
+      "name": "verify_ternary_depth_limit.py",
+      "bytes": 4178,
+      "sha256": "5d2be6f80ff1aed9d60310ac549cdb868f6c58fa8e7d2f0173b78731f31c5fe6"
+    }
+  ]
+}

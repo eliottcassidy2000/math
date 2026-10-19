@@ -1,0 +1,97 @@
+{
+  "checks": 200465,
+  "levels": [
+    {
+      "actual_positive_nodes": 0,
+      "depth": 1,
+      "negative_cylinders": 1,
+      "total": 3,
+      "unknown_cylinders": 2,
+      "wholly_positive_cylinders": 0
+    },
+    {
+      "actual_positive_nodes": 0,
+      "depth": 2,
+      "negative_cylinders": 7,
+      "total": 9,
+      "unknown_cylinders": 2,
+      "wholly_positive_cylinders": 0
+    },
+    {
+      "actual_positive_nodes": 2,
+      "depth": 3,
+      "negative_cylinders": 25,
+      "total": 27,
+      "unknown_cylinders": 2,
+      "wholly_positive_cylinders": 0
+    },
+    {
+      "actual_positive_nodes": 5,
+      "depth": 4,
+      "negative_cylinders": 75,
+      "total": 81,
+      "unknown_cylinders": 2,
+      "wholly_positive_cylinders": 4
+    },
+    {
+      "actual_positive_nodes": 15,
+      "depth": 5,
+      "negative_cylinders": 227,
+      "total": 243,
+      "unknown_cylinders": 2,
+      "wholly_positive_cylinders": 14
+    },
+    {
+      "actual_positive_nodes": 44,
+      "depth": 6,
+      "negative_cylinders": 683,
+      "total": 729,
+      "unknown_cylinders": 2,
+      "wholly_positive_cylinders": 44
+    },
+    {
+      "actual_positive_nodes": 132,
+      "depth": 7,
+      "negative_cylinders": 2053,
+      "total": 2187,
+      "unknown_cylinders": 2,
+      "wholly_positive_cylinders": 132
+    },
+    {
+      "actual_positive_nodes": 396,
+      "depth": 8,
+      "negative_cylinders": 6163,
+      "total": 6561,
+      "unknown_cylinders": 2,
+      "wholly_positive_cylinders": 396
+    },
+    {
+      "actual_positive_nodes": 1188,
+      "depth": 9,
+      "negative_cylinders": 18493,
+      "total": 19683,
+      "unknown_cylinders": 2,
+      "wholly_positive_cylinders": 1188
+    },
+    {
+      "actual_positive_nodes": 3566,
+      "depth": 10,
+      "negative_cylinders": 55483,
+      "total": 59049,
+      "unknown_cylinders": 2,
+      "wholly_positive_cylinders": 3564
+    }
+  ],
+  "limit_certificate": {
+    "common_denominator": 11790184577738583171520872861412518665678211592275841109096961,
+    "decimal_truncation_50_places": "0.06039052312486240241155650348537631073311780098403",
+    "depth": 128,
+    "interval_width": "2/11790184577738583171520872861412518665678211592275841109096961",
+    "lower_numerator": 712015414388317966259266580651381931031185002827594763623248,
+    "mu_boundary_word": "LLLRMMLLLLRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRMLLLMLLLLLLMLLMRRLMLLLRRRRRLRLRRRMMLLMRMLRMRRLRRLMRRRRLMLMRRMLRLLLLLLLL",
+    "mu_orientation_ternary_digits": "00021100002222222222222222222222222222222222222222222222212221000000122122012220000020200011221212012202201000021010010200000000",
+    "upper_numerator": 712015414388317966259266580651381931031185002827594763623250
+  },
+  "scope": "Exact interval and finite controls; the proof of irrationality is in the text.",
+  "status": "PASS"
+}
