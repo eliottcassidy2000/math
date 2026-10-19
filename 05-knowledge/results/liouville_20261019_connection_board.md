@@ -48,6 +48,8 @@ The bounded search succeeds for all 528 admitted primitive triples of hypotenuse
 
 9. The cubic output-bit order is sharp within the prescribed plus-port orbit along either outer spine: every successful index has `log C' >= c q² log j`, and the smallest possible successful output has `Theta((log j)^3)` bits. Function-field canonical-height positivity and specialization supply the lower growth; a direct duplication estimate makes the comparison uniform at real cusps. See [sharp output-height theorem](square_sum_contact_sharp_output_height_20261019.md). This is not a lower bound for other contact constructions or the minus-port orbit.
 
+10. A second independent section escapes that orbit barrier. After swapping to the low parameter cone, `3Q+2P` supplies a valid increasing-spread contact throughout `1<t<=17/16`; its parameter is a degree-11 rational function. Outside that cusp chart a fixed list of even translates with `|q|<=256` suffices. Thus every plus-port anchor has a distinct contact with `C' <= B C^A`, linear output bit length, and a five-vertex square-sum construction with polynomial numerical labels. The sections `P,Q` are independent over `Q(t)`: their nodal reductions differ by a 2-torsion point, while `2(P+Q)` is a nonzero section approaching the identity. See [bounded-section atlas](square_sum_bounded_section_contacts_20261019.md). The old cubic lower bound remains a theorem about its specified coset.
+
 ## 4. Odd zeta and graph geometry: exact maps
 
 The signed primitive-triangle Dirichlet series is
@@ -75,7 +77,7 @@ See [graceful exchange packet](graceful_square_exchange_20261019.md). Neither co
 
 ### A. Quantitative Pythagorean contact construction
 
-Existence, adaptive index bounds, and polynomial bit complexity are settled for one unrestricted-direction neighbor at either port. Along the outer spines, both the logarithmic index order and cubic output-bit order are sharp for the prescribed plus-port orbit. A fixed-power numerical-height bound `C' <= C^A` for some contact remains a meaningful target, but it would require a different construction on these spines. Other open refinements concern narrow spread windows and whether the normalized first index has a limit or several accumulation values; matching order does not give an asymptotic equivalent.
+Existence and polynomial bit complexity are settled for one unrestricted-direction neighbor at either port. For the plus port, the independent-section atlas now strengthens this to fixed-power numerical height and linear output bits, escaping the sharp logarithmic-index/cubic-output barrier of the original coset. The next precise targets are an analogous bounded atlas for the minus port, prescribed narrow spread windows, and enough choices to avoid an arbitrary finite set while controlling height. These extra quantifiers are needed for economical long-chain gluing and do not follow from a one-neighbor theorem.
 
 ### B. Denominator-controlled common-neighbor gluing
 

@@ -1,0 +1,36 @@
+P on curve
+Q on curve
+k square
+swap f
+swap k
+derivative
+Vx
+Vy
+Sx
+Sy
+R inverse u
+R inverse z
+polynomial square
+shift A
+shift B
+shift C
+shift D
+C tail
+full displacement coefficients
+full endpoint coefficients
+exact endpoint negative-tail bound
+f cutoff
+f cap
+N degree and norm
+E degree and norm
+coprime N E
+height coefficient
+budget
+S double pole
+S triple pole
+formal parameter leading
+P Q V reductions
+zeta P
+zeta Q
+zeta T
+PASS: 35 independent exact controls
