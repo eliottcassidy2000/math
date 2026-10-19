@@ -1,0 +1,15 @@
+composite (3/2)-pseudoprimes below 2000000 : 339
+first 40: [65, 133, 529, 793, 1105, 1649, 1729, 2059, 2321, 2465, 2701, 2821, 4187, 5185, 6305, 6541, 6601, 6697, 6817, 7471, 7613, 8113, 8911, 10585, 10963, 11521, 13213, 13333, 13427, 14701, 14981, 15841, 18721, 19171, 19201, 19909, 21349, 21667, 22177, 26065]
+Carmichael below N: 55 ; coprime to 6: 52 all in the list: True
+Carmichael divisible by 3 (excluded): [561, 62745, 656601] none in the list: True
+non-squarefree members: [529, 35443, 47081, 70357, 105271, 175099, 326393, 419497, 466049] (all multiples of 23^2 = 529?  True )
+squarefree members satisfy  ord_p(3/2) | n-1 for every p | n: True
+T^(n-1) = id mod 65: True  (in list)
+T^(n-1) = id mod 133: True  (in list)
+T^(n-1) = id mod 529: True  (in list)
+T^(n-1) = id mod 1105: True  (in list)
+T^(n-1) = id mod 1729: True  (in list)
+T^(n-1) = id mod 91: False  (not in list)
+T^(n-1) = id mod 561: False  (not in list)
+ord_5(3/2) = 2
+ord_13(3/2) = 4
