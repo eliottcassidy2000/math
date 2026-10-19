@@ -1,0 +1,55 @@
+Universe: paths modulo reversal; complements are distinct; trees have fixed numeric labels.
+G n paths rotation_components E1_components E2_components E3_components
+G 2 1 1 1 1 1
+G 3 2 1 1 1 1
+G 4 2 2 1 1 1
+G 5 4 4 2 1 1
+G 6 12 4 2 1 1
+G 7 16 12 6 1 1
+G 8 20 20 10 2 1
+G 9 60 40 14 1 1
+G 10 148 102 42 1 1
+G 11 324 214 92 6 1
+G 12 664 520 220 2 1
+G 13 1600 1132 448 2 1
+Walecki midpoint rotation iff 3 divides n: checked 2..500; exact proof in note.
+Minimum five-vertex fixed-endpoint graceful 3-edge trade: (1, 4, 0, 2, 3) (1, 2, 4, 0, 3)
+T n gracefully_labeled_trees E1_components decreasing_coordinate_local_minima
+T 2 1 1 1
+T 3 2 1 1
+T 4 4 1 1
+T 5 12 1 2
+T 6 40 1 4
+T 7 164 1 10
+T 8 752 1 27
+T 9 4020 1 87
+T 10 23576 1 312
+T 11 155632 1 1207
+S n paths rotation_components extendable_rotation_components component_sizes
+S 15 1 1 1 [(1, 1)]
+S 16 1 1 1 [(1, 1)]
+S 17 1 1 0 [(1, 1)]
+S 18 0 0 0 []
+S 19 0 0 0 []
+S 20 0 0 0 []
+S 21 0 0 0 []
+S 22 0 0 0 []
+S 23 3 1 0 [(3, 1)]
+S 24 0 0 0 []
+S 25 10 2 1 [(4, 1), (6, 1)]
+S 26 12 3 2 [(3, 2), (6, 1)]
+S 27 35 4 2 [(2, 2), (3, 1), (28, 1)]
+S 28 52 7 0 [(2, 3), (3, 1), (7, 1), (9, 1), (27, 1)]
+S 29 19 3 1 [(2, 1), (7, 1), (10, 1)]
+S 30 20 3 3 [(2, 1), (7, 1), (11, 1)]
+S 31 349 1 1 [(349, 1)]
+S 32 392 1 1 [(392, 1)]
+S 33 669 4 3 [(6, 1), (14, 2), (635, 1)]
+S 34 4041 5 5 [(6, 1), (12, 2), (90, 1), (3921, 1)]
+S 35 17175 1 1 [(17175, 1)]
+S 36 12960 2 1 [(21, 1), (12939, 1)]
+28->29 removed: [(2, 7), (5, 20), (11, 14)]
+28->29 added: [(2, 14), (5, 11), (7, 29), (20, 29)]
+28->29 minimum removed-edge histogram over all52 source paths: [(3, 21), (4, 11), (5, 15), (6, 5)]
+SHA256 compact JSON [Q28 paths,Q29 paths]: c12b459400b28844b69f4f17e895174fb6e5f8d16bf0883bb92330b577869331
+ALL CHECKS PASSED. No universal conjecture is proved by these finite censuses.

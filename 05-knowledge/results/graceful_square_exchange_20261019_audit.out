@@ -1,0 +1,11 @@
+Independent cut-and-rejoin rejection: 19708 source/cut sets; all 52 Q28 paths; 0,1,2 cuts.
+Every orientation and ordering of the remaining path segments and singleton29 is searched.
+Length-one fibers: 3 trees 2 fibers 1 all positive even cliques
+Length-one fibers: 4 trees 4 fibers 2 all positive even cliques
+Length-one fibers: 5 trees 12 fibers 6 all positive even cliques
+Length-one fibers: 6 trees 40 fibers 18 all positive even cliques
+Length-one fibers: 7 trees 164 fibers 72 all positive even cliques
+Length-one fibers: 8 trees 752 fibers 316 all positive even cliques
+Length-one fibers: 9 trees 4020 fibers 1656 all positive even cliques
+General-rainbow hostile: proper1factorized K4 has exactly4 isolated rainbow spanning trees.
+ALL AUDIT CHECKS PASSED.

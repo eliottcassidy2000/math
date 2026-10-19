@@ -1,0 +1,23 @@
+Universe: paths modulo reversal; complements are distinct; trees have fixed numeric labels.
+G n paths rotation_components E1_components E2_components E3_components
+G 2 1 1 1 1 1
+G 3 2 1 1 1 1
+G 4 2 2 1 1 1
+G 5 4 4 2 1 1
+G 6 12 4 2 1 1
+G 7 16 12 6 1 1
+G 8 20 20 10 2 1
+G 9 60 40 14 1 1
+G 10 148 102 42 1 1
+G 11 324 214 92 6 1
+G 12 664 520 220 2 1
+G 13 1600 1132 448 2 1
+G 14 4956 3364 1286 2 1
+Walecki midpoint rotation iff 3 divides n: checked 2..500; exact proof in note.
+Minimum five-vertex fixed-endpoint graceful 3-edge trade: (1, 4, 0, 2, 3) (1, 2, 4, 0, 3)
+T n gracefully_labeled_trees E1_components decreasing_coordinate_local_minima
+T 2 1 1 1
+S n paths rotation_components extendable_rotation_components component_sizes
+28->29 removed: [(2, 7), (5, 20), (11, 14)]
+28->29 added: [(2, 14), (5, 11), (7, 29), (20, 29)]
+ALL CHECKS PASSED. No universal conjecture is proved by these finite censuses.
