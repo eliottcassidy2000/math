@@ -1,6 +1,6 @@
 # Extended research session: mechanisms, completed cases, and remaining barriers
 
-19 October 2026. Second progress-map revision. The linked results are scoped statements; no general Collatz, planar Jacobian, twin-prime, binary Goldbach, graceful-tree, or unrestricted poset-balance/Gold conjecture is claimed solved. No historical priority is asserted. This map replaces the earlier 16:07 snapshot once publication of its linked dependencies is verified.
+19 October 2026. Third progress-map revision. The linked results are scoped statements; no general Collatz, planar Jacobian, twin-prime, binary Goldbach, graceful-tree, or unrestricted poset-balance/Gold conjecture is claimed solved. No historical priority is asserted. This map incorporates the final reviewed research checkpoints of the session; linked dependencies were verified at publication.
 
 ## 1. A complete exterior problem for one Gold core
 
@@ -49,6 +49,16 @@ Exact small-field witnesses and a Moser spindle control accompany the statements
 [Gold chain-window capacity](gold_chain_window_capacity_20261019/EXACT_WINDOW_CAPACITY_AND_MATCHING_GAP.md) supplies an exact deficit formula and separates individual nearby matches from Hall capacity. [Support thresholds](gold_chain_support_windows_20261019/CHAIN_SUPPORT_THRESHOLDS_AND_RANK_WINDOWS.md) give an infinite seven-thin family of specified trees requiring support nine. A uniform two-chain support-(m+2) matching theorem remains open beyond the finite certified cases.
 
 [Irrational ternary-depth density](pythagorean_ternary_depth_limit_20261019/TERNARY_DEPTH_LIMIT_AND_FINITE_MEMORY.md) connects Pythagorean tree dynamics to a nonregular positivity language with an irrational limiting density and exact finite-memory uncertainty bounds. A chosen bounded reset does not imply a regular global language.
+
+## 7. Final advances: refined guards and global stress periods
+
+[Interleaved Collatz repair](collatz_interleaved_height_repair_20261019/INTERLEAVED_HEIGHT_REPAIR.md) extends the original bank argument to 24 expansion episodes before the first multiplier crossing. [Source-aware guard refinement](collatz_guard_refined_repair_20261019/GUARD_REFINED_REPAIR.md) then proves a clean 25-episode result with N+183 repair time and a separate 1,000-episode computer-assisted corollary with N+273. The latter has complete small refinement forests, not inferred parity beyond known guards.
+
+The conceptual frontier is sharper than the numerical cap: universal finite guard-tree termination would require coefficient stopping for a specified infinite family of positive odd-denominator rationals arising on the pure-K 2-adic branch. This is a necessary condition for that certificate method, not an equivalence with the original integer conjecture. Arbitrary-orbit bank entry is still separate.
+
+[Prime-field rigidity and global periods](unit_distance_stress_periods_20261019/README.md) determines the full norm-circle rigidity rank as 2p²−3 for primes p≥5. Within the triangular families under the stated prime restriction, straight-cycle and local-wheel stresses miss exactly one global period condition. A concrete p=29 support satisfies every one of its 435 straight-cycle checks and 4,205 wheel checks but fails that period. Five individually compatible triangular families would still leave 6,716 cross-family stress dimensions to handle.
+
+This closes the local-wheel completeness question for the stated triangular framework and gives an exact reduced compatibility test. The minimum section defect at 29 remains open; failure of the explicit support is not failure of every optimal support.
 
 ## The shared lesson and next proof targets
 
