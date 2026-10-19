@@ -149,7 +149,7 @@ These are all-F statements certified by finite integer algebra, rather than fits
 
     C_r z^h_r / [(1−z)(1−z^(2h_r))].                                (8)
 
-After subtraction, the numerator has degree at most m+2h_r. Checking its first m+2h_r+1 coefficients therefore proves equality identically. The program performs exactly these checks. The coaccessible state counts are respectively 7,18,15,52,34,50,31. It also proves no accepting states exist at odd ages 1,3,5,7,9,11,13; that is not yet an all-odd-age theorem.
+After subtraction, the numerator has degree at most m+2h_r. Checking its first m+2h_r+1 coefficients therefore proves equality identically. The program performs exactly these checks. The coaccessible state counts are respectively 7,18,15,52,34,50,31. It also proves no accepting states exist at odd ages 1,3,5,7,9,11,13. **Update, 2026-10-19:** absence at every odd age is now PROVED by the [paired-language invariant](gilbreath_even_delay_20261019/GILBREATH_EVEN_DELAY_THEOREM.md); the fixed-age certificates above remain unchanged.
 
 Adding the nonnegative contributions in (7) yields
 
@@ -182,7 +182,7 @@ The historical floating value `c6(13)≈2.372697` is replaced by the exact `2.37
 
 ## 9. Precise remaining hypotheses
 
-1. **OPEN sharp horizon.** Every finite positive tau at distance F is even and at most `2^ceil(log_2 F)−2`. The maximum equals this bound for F≥3 in the exact tested range. This is not needed for Theorems 1–3 or (9).
+1. **PROVED parity; OPEN sharp horizon.** Every finite positive tau is even, by the [paired-language theorem](gilbreath_even_delay_20261019/GILBREATH_EVEN_DELAY_THEOREM.md). The remaining conjecture is that tau at distance F is at most `2^ceil(log_2 F)−2`; the maximum equals this bound for F≥3 in the exact tested range. Neither parity nor this bound is needed for Theorems 1–3 or (9).
 2. **OPEN all-age counting recurrence.** The block form (7) appears to continue: for `2^k≤r≤2^(k+1)−2`, even r, set h_r=2^k. The coefficients have the recursive pattern visible in the exact histograms. Only the seven ages in Section 7 are certified here.
 3. **OPEN repaired asymptotic.** The evidence suggests `c6(F)=C F+O(1)` and a non-unit limiting ratio near 1.08978. Equation (9) is a lower bound, not a determination of C or a proof of convergence. Establishing the all-age recurrence and a summable tail bound would be a concrete next step.
 4. **OPEN paired halving.** The excess halves from odd F to F+1 in the tested data. The all-age version has not been proved here; fixed-age formulas (7) have this property individually.
