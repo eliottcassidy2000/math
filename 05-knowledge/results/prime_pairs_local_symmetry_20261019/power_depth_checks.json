@@ -1,0 +1,14 @@
+{
+  "status": "all finite exact controls passed",
+  "local_root_cases": 1055,
+  "mixed_crt_cases": 192,
+  "half_open_interval_discrepancy_cases": 1752,
+  "maximum_observed_error_divided_by_r0_rho": "59/105",
+  "stronger_dimension_factor_cases": 492,
+  "finite_euler_identity": "exact rational equality passed",
+  "not_verified_by_this_script": [
+    "the cited analytic fundamental lemma",
+    "an explicit asymptotic cutoff w0 or m0",
+    "prime representations or a four-prime conjecture"
+  ]
+}

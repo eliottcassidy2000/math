@@ -1,0 +1,12 @@
+Checkpoint 3: every-target rough twin-center sums at power sieve depth
+Status: root-reviewed mathematical note; finite exact supporting controls passed.
+Destination: 05-knowledge/results/prime_pairs_local_symmetry_20261019/
+Copy these four files without changing earlier checkpoint files:
+  power-depth-rough-pairs.md
+  power_depth_checks.py
+  power_depth_checks.json
+  power_depth_checks.txt
+Include this manifest and CHECKPOINT-3-SHA256.txt as publication provenance.
+The theorem is an application of a cited classical sieve, not a novelty or best-bound claim.
+The script does not certify a numerical asymptotic onset.
+Repository-relative and same-directory links are already normalized for the destination.
