@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "euclidean_parameter_bound": 100,
+  "ordered_seed_points_tested": 4080,
+  "distinct_squarefree_congruent_classes": 1908,
+  "first_eligible_multiplier_counts_1_2_3": [
+    1486,
+    1690,
+    904
+  ],
+  "first_strong_margin_multiplier_counts_1_2_3": [
+    1228,
+    1530,
+    1322
+  ],
+  "N5_eligible_multiples_through_24": [
+    1,
+    3,
+    4,
+    5,
+    7,
+    8,
+    11,
+    12,
+    15,
+    16,
+    19,
+    20,
+    23,
+    24
+  ],
+  "N30_first_two_hostile": true,
+  "N5_third_multiple_PPT": [
+    124286848883560,
+    642780541615689,
+    654686219104361
+  ],
+  "N5_third_multiple_AP_triple": [
+    218114746641670847960177053922,
+    857228090970326756026018436642,
+    1496341435298982664091859819362
+  ]
+}
