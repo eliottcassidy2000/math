@@ -1,0 +1,83 @@
+{
+  "checks": 11581,
+  "controls": [
+    {
+      "L": 1,
+      "center_floor": 55,
+      "gap_denominator": 1000000000000,
+      "gap_lower_numerator": 82440341822,
+      "gap_upper_numerator": 82440341823,
+      "j": 0,
+      "source_bit_length": 30,
+      "source_sha256": "93450a21d34c46168ad3d5ee11838dc0070d7a2447df13d994720ebd8d754aa7",
+      "steps": 30
+    },
+    {
+      "L": 4,
+      "center_floor": 532,
+      "gap_denominator": 1000000000000,
+      "gap_lower_numerator": 29620408759,
+      "gap_upper_numerator": 29620408760,
+      "j": 1,
+      "source_bit_length": 121,
+      "source_sha256": "5d570e43136968b5ab91cb852e15b61baa14f313bff59880fc069de44f60b652",
+      "steps": 122
+    },
+    {
+      "L": 11,
+      "center_floor": 3949,
+      "gap_denominator": 1000000000000,
+      "gap_lower_numerator": 8387509193,
+      "gap_upper_numerator": 8387509194,
+      "j": 3,
+      "source_bit_length": 336,
+      "source_sha256": "1e96ca396c455f7819c12f27a5e9c97c12b70d4791c586c0db333c886c35b87a",
+      "steps": 336
+    },
+    {
+      "L": 40,
+      "center_floor": 12849,
+      "gap_denominator": 1000000000000,
+      "gap_lower_numerator": 4228835254,
+      "gap_upper_numerator": 4228835255,
+      "j": 11,
+      "source_bit_length": 1220,
+      "source_sha256": "2f83efbe941bb87b2404e27ba2e84188d1d469b3593a2d16ae0df36f85e89f6f",
+      "steps": 1222
+    },
+    {
+      "L": 69,
+      "center_floor": 644326,
+      "gap_denominator": 1000000000000,
+      "gap_lower_numerator": 87312032,
+      "gap_upper_numerator": 87312033,
+      "j": 19,
+      "source_bit_length": 2108,
+      "source_sha256": "06c067f6bd775f2966eb2637796a02a6308d715363709b159c14e845f775620a",
+      "steps": 2108
+    },
+    {
+      "L": 3341,
+      "center_floor": 970938,
+      "gap_denominator": 1000000000000,
+      "gap_lower_numerator": 58185671,
+      "gap_upper_numerator": 58185672,
+      "j": 920,
+      "source_bit_length": 102070,
+      "source_sha256": "4c3b535dda24dda07310269e9d8d7c5661139230e2f4ce553e6fd5116ebc49ac",
+      "steps": 102070
+    },
+    {
+      "L": 6613,
+      "center_floor": 1944005,
+      "gap_denominator": 1000000000000,
+      "gap_lower_numerator": 29060157,
+      "gap_upper_numerator": 29060158,
+      "j": 1821,
+      "source_bit_length": 202029,
+      "source_sha256": "d626007f7368d251a7ad99c32fa48a77d183bd3a5a077dfe5a72fd492f8baff7",
+      "steps": 202032
+    }
+  ],
+  "status": "PROVED unbounded compressed-return centers; no source-entry claim"
+}
