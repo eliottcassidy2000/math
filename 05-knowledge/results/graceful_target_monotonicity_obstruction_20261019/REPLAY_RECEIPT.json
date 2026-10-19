@@ -1,0 +1,8 @@
+{
+  "arithmetic_obstruction_found": false,
+  "maximum_tested_m": 8,
+  "multistar_distance": 4,
+  "relocated_multistar_and_one_fixed_controls": "exact receipt match",
+  "relocated_three_free_controls": "exact receipt match",
+  "status": "passed"
+}

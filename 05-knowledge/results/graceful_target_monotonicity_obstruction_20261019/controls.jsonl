@@ -1,0 +1,7 @@
+{"multistar_states": [["a", "e", "b", "c"], ["b", "e", "c", "a"], ["c", "e", "b", "a"], ["e", "a", "b", "c"], ["e", "b", "c", "a"]], "distance": 4, "path": [["e", "a", "b", "c"], ["a", "e", "b", "c"], ["c", "e", "b", "a"], ["b", "e", "c", "a"], ["e", "b", "c", "a"]], "fixed_A1_reachable": [["e", "a", "b", "c"]]}
+{"m": 3, "states": 4, "obstruction": null}
+{"m": 4, "states": 12, "obstruction": null}
+{"m": 5, "states": 40, "obstruction": null}
+{"m": 6, "states": 164, "obstruction": null}
+{"m": 7, "states": 752, "obstruction": null}
+{"m": 8, "states": 4020, "obstruction": null}

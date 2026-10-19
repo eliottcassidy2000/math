@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-19",
+  "dependencies": "co-located standard-library Python controls only",
+  "destination": "05-knowledge/results/graceful_target_monotonicity_obstruction_20261019",
+  "files_sha256": {
+    "PRIMARY_SOURCE_ATTRIBUTION.md": "7a1797edf810e07602f9ff915ce829426ebe3a1ee5eee7bb6388090bf56c00c6",
+    "README.md": "e54f9e553f27fc57c8af95aa9211a54147a6c17ef78ec12ecc82d3e58c436923",
+    "REPLAY_RECEIPT.json": "559777cb48183c2d6a40b813bdce235352daa6dcc42a8bfe477ba33e5584f053",
+    "TARGET_MONOTONICITY_OBSTRUCTION.md": "39cdc5dbba7b52788be0cdf8f3a13eb4f1da42a80ebd21054d87ec61d949a2c7",
+    "check_target_monotonicity.py": "6de6cbda6a722e3bb10fdaf9311c749e8bad04d7c2161b4386fb5ff5a15dc501",
+    "check_three_free.py": "96286caba974843ed1f838ace4bc8320f2e8d1bdf07965f8cf698d2002b5d874",
+    "controls.jsonl": "880da33ccf35b92ed1c9b2e0a52104bed5f4f4df0219c75afe302d9077a9dddb",
+    "exact_utils.py": "2a980a2e9dae4ccc1df9112ca801a554b8fbed99d720a1e35f37f119ef75fa59",
+    "three_free_controls.jsonl": "a17a3cde7ee606a8f841be8dc8fce4a66cc6085789547f43a27c50e76b161ff5"
+  },
+  "packet": 97,
+  "scope": "Target-monotonicity fails for general rank staircase. Arbitrary fixed-color integer-difference fiber connectivity remains open here; empty fibers explicitly excluded.",
+  "sources": {
+    "abstract_obstruction": "five-state exact star quotient",
+    "arithmetic_controls": "bounded enumeration of existing graceful trees m<=8",
+    "attribution": "independent primary-source review supplied after packet93 freeze"
+  }
+}
