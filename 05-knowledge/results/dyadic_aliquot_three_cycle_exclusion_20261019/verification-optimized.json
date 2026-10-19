@@ -1,0 +1,8 @@
+{
+  "checks": 23742,
+  "distinct_oriented_core_words": 7904,
+  "exponent_control_ranges": "1<=a<=16, a<b<=24, b<g<=32; both orientations",
+  "method": "symbolic identities/positive-coefficient proofs plus independent rational source-map composition",
+  "scope": "finite controls supplement the all-exponent written proof; no prime search",
+  "status": "PASS"
+}

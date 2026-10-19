@@ -1,0 +1,5 @@
+{
+  "proof_before_status_update_sha256": "3af6d6b9cd0e501f102d1cf009731f9f791b5a2854191d8d9915d2c7a333f129",
+  "proof_after_status_update_sha256": "cd2fc76630fdb36b7d7cb207d32782809f39e92dd883bb59b35a8997a0beba03",
+  "change": "Replace draft review status with completed independent-review status; mathematics unchanged."
+}

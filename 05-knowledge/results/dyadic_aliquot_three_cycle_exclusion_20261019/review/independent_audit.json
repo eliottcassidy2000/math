@@ -1,0 +1,304 @@
+{
+  "counts": {
+    "gaussian_all_ordered_exponent_triples_1_to_20": 8000,
+    "native_and_nondyadic_hostile_controls": 2,
+    "sorted_distinct_exponents_1_to_64_both_orientations": 83328,
+    "sparse_extreme_gaussian_triples_through_exponent_4096": 729,
+    "symbolic_identities": 25,
+    "valuation_pair_controls_1_to_128": 8128
+  },
+  "hostile_control": {
+    "cores": [
+      2,
+      44,
+      158
+    ],
+    "lesson": "All-even cores and the size/congruence trap alone do not imply exclusion; exact powers of two are essential.",
+    "variables": [
+      393,
+      9,
+      3
+    ]
+  },
+  "integer_controls": [
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "variables": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        4
+      ],
+      "variables": [
+        23,
+        13,
+        1
+      ]
+    },
+    {
+      "exponents": [
+        1,
+        4,
+        1
+      ],
+      "variables": [
+        13,
+        1,
+        23
+      ]
+    },
+    {
+      "exponents": [
+        2,
+        2,
+        2
+      ],
+      "variables": [
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "exponents": [
+        3,
+        3,
+        3
+      ],
+      "variables": [
+        15,
+        15,
+        15
+      ]
+    },
+    {
+      "exponents": [
+        4,
+        1,
+        1
+      ],
+      "variables": [
+        1,
+        23,
+        13
+      ]
+    },
+    {
+      "exponents": [
+        4,
+        4,
+        4
+      ],
+      "variables": [
+        31,
+        31,
+        31
+      ]
+    },
+    {
+      "exponents": [
+        5,
+        5,
+        5
+      ],
+      "variables": [
+        63,
+        63,
+        63
+      ]
+    },
+    {
+      "exponents": [
+        6,
+        6,
+        6
+      ],
+      "variables": [
+        127,
+        127,
+        127
+      ]
+    },
+    {
+      "exponents": [
+        7,
+        7,
+        7
+      ],
+      "variables": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "exponents": [
+        8,
+        8,
+        8
+      ],
+      "variables": [
+        511,
+        511,
+        511
+      ]
+    },
+    {
+      "exponents": [
+        9,
+        9,
+        9
+      ],
+      "variables": [
+        1023,
+        1023,
+        1023
+      ]
+    },
+    {
+      "exponents": [
+        10,
+        10,
+        10
+      ],
+      "variables": [
+        2047,
+        2047,
+        2047
+      ]
+    },
+    {
+      "exponents": [
+        11,
+        11,
+        11
+      ],
+      "variables": [
+        4095,
+        4095,
+        4095
+      ]
+    },
+    {
+      "exponents": [
+        12,
+        12,
+        12
+      ],
+      "variables": [
+        8191,
+        8191,
+        8191
+      ]
+    },
+    {
+      "exponents": [
+        13,
+        13,
+        13
+      ],
+      "variables": [
+        16383,
+        16383,
+        16383
+      ]
+    },
+    {
+      "exponents": [
+        14,
+        14,
+        14
+      ],
+      "variables": [
+        32767,
+        32767,
+        32767
+      ]
+    },
+    {
+      "exponents": [
+        15,
+        15,
+        15
+      ],
+      "variables": [
+        65535,
+        65535,
+        65535
+      ]
+    },
+    {
+      "exponents": [
+        16,
+        16,
+        16
+      ],
+      "variables": [
+        131071,
+        131071,
+        131071
+      ]
+    },
+    {
+      "exponents": [
+        17,
+        17,
+        17
+      ],
+      "variables": [
+        262143,
+        262143,
+        262143
+      ]
+    },
+    {
+      "exponents": [
+        18,
+        18,
+        18
+      ],
+      "variables": [
+        524287,
+        524287,
+        524287
+      ]
+    },
+    {
+      "exponents": [
+        19,
+        19,
+        19
+      ],
+      "variables": [
+        1048575,
+        1048575,
+        1048575
+      ]
+    },
+    {
+      "exponents": [
+        20,
+        20,
+        20
+      ],
+      "variables": [
+        2097151,
+        2097151,
+        2097151
+      ]
+    }
+  ],
+  "scope": "Independent audit of the exact proof; finite controls do not supply its universal quantifiers.",
+  "source_sha256": "5bef0a1465e3fac392704980aa9468fefaddedd0f08591213906061059e1f74a",
+  "status": "PASS"
+}
