@@ -1,0 +1,17 @@
+{
+  "packet": 113,
+  "status": "PASS",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "checks": 354,
+  "commands": [
+    "python -B 04-computation/experiments/planar_boundary_preserving_hamiltonian_cone_20261019.py",
+    "python -B -O 04-computation/experiments/planar_boundary_preserving_hamiltonian_cone_20261019.py"
+  ],
+  "normal_output": "05-knowledge/results/planar_boundary_preserving_hamiltonian_cone_20261019.json",
+  "optimized_output": "05-knowledge/results/planar_boundary_preserving_hamiltonian_cone_20261019_optimized.json",
+  "normal_sha256": "5e7282701599c501a9aabf95ab0364ddb43f1d7b0f01b7d8488d7bb8ec6ca494",
+  "optimized_sha256": "5e7282701599c501a9aabf95ab0364ddb43f1d7b0f01b7d8488d7bb8ec6ca494",
+  "byte_identical": true,
+  "scope": "Finite exact controls; universal statement uses the proof and cited classical fixed-line theorem."
+}

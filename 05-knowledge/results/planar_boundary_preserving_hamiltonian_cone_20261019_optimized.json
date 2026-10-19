@@ -1,0 +1,55 @@
+{
+  "A_controls": [
+    {
+      "A": "0",
+      "boundary_velocity": "0",
+      "pointwise_fixed": true
+    },
+    {
+      "A": "1",
+      "boundary_velocity": "s**4",
+      "pointwise_fixed": false
+    },
+    {
+      "A": "s",
+      "boundary_velocity": "s**5",
+      "pointwise_fixed": false
+    },
+    {
+      "A": "z",
+      "boundary_velocity": "-s**6",
+      "pointwise_fixed": false
+    },
+    {
+      "A": "s**2 + z",
+      "boundary_velocity": "0",
+      "pointwise_fixed": true
+    },
+    {
+      "A": "(s**2 + z)**2",
+      "boundary_velocity": "0",
+      "pointwise_fixed": true
+    },
+    {
+      "A": "s + z",
+      "boundary_velocity": "s**4*(-s**2 + s)",
+      "pointwise_fixed": false
+    },
+    {
+      "A": "s*z + s + 1",
+      "boundary_velocity": "s**4*(-s**3 + s + 1)",
+      "pointwise_fixed": false
+    },
+    {
+      "A": "(s**2 + z)*(s + z + 1)",
+      "boundary_velocity": "0",
+      "pointwise_fixed": true
+    }
+  ],
+  "boundary_input_monomials_per_A": 24,
+  "checks": 354,
+  "claims": "Finite controls; universal theorem uses the written proof and cited fixed-line theorem.",
+  "finite_words": 3,
+  "partial_exponential_order": 2,
+  "status": "PASS"
+}
