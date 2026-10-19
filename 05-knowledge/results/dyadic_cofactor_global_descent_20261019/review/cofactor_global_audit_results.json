@@ -1,0 +1,89 @@
+{
+  "source_sha256": "029056fccbc226d7a2915a4df71b2654c77c62aa3b0902a955839f93e6b25aee",
+  "symbolic_identities": [
+    "h2_fourth_difference",
+    "h2_third",
+    "large_second",
+    "large_third_difference",
+    "mersenne_first",
+    "mersenne_second",
+    "middle_difference",
+    "middle_third",
+    "nonpower_second_difference",
+    "power_start_first",
+    "power_start_second",
+    "power_start_third",
+    "resonance_c_d2_fifth_difference",
+    "resonance_c_d2_second",
+    "resonance_c_d_first",
+    "resonance_c_d_fourth_difference"
+  ],
+  "parametric_and_large_integer_checks": 150558,
+  "exhaustive_limit": 4000000,
+  "exhaustive_cases": {
+    "exception": 5,
+    "fixed": 10,
+    "immediate": 1996001,
+    "nonpower_q": 3875,
+    "middle": 30,
+    "power_start": 17,
+    "resonance_c_d2": 6,
+    "resonance_c_d": 8,
+    "large": 48
+  },
+  "least_descent_step_counts": {
+    "1": 1996001,
+    "2": 3875,
+    "3": 90,
+    "6": 1,
+    "4": 13,
+    "5": 5
+  },
+  "six_step_starts": [
+    48
+  ],
+  "independent_cycle_scan": {
+    "largest_start": 500000,
+    "distinct_nodes_visited": 250011,
+    "largest_node_visited": 786430,
+    "longest_uncached_path": 6,
+    "cycles": [
+      [
+        6
+      ],
+      [
+        8,
+        22,
+        14,
+        10
+      ],
+      [
+        16,
+        46,
+        26
+      ],
+      [
+        28
+      ],
+      [
+        120
+      ],
+      [
+        496
+      ],
+      [
+        2016
+      ],
+      [
+        8128
+      ],
+      [
+        32640
+      ],
+      [
+        130816
+      ]
+    ]
+  },
+  "native_guard_cases": 3869
+}

@@ -1,0 +1,55 @@
+{
+  "description": "The proof status and presentation were updated after an independent PASS. The independent checker uses a package-relative proof path. No mathematical formula, test, or scope was changed.",
+  "files": [
+    {
+      "path": "COFACTOR_MAP_GLOBAL_CLASSIFICATION.md",
+      "source_sha256": "1572502c1ca5151562d91a19b36b662eabf27336477472c1f245f14d6659bab8",
+      "published_sha256": "029056fccbc226d7a2915a4df71b2654c77c62aa3b0902a955839f93e6b25aee",
+      "changes": [
+        "Changed proof candidate status to PROVED with independent audit PASS."
+      ]
+    },
+    {
+      "path": "verify_cofactor_descent.py",
+      "source_sha256": "daf544977031006036eb5e4aaa0f3755ebbfc16974dadfeb6ba903d5189e00fd",
+      "published_sha256": "daf544977031006036eb5e4aaa0f3755ebbfc16974dadfeb6ba903d5189e00fd",
+      "changes": []
+    },
+    {
+      "path": "verification.json",
+      "source_sha256": "1804e63f4182b9c68aaf48074b42d321a69b09010b46d7ee3770094f632a8d21",
+      "published_sha256": "1804e63f4182b9c68aaf48074b42d321a69b09010b46d7ee3770094f632a8d21",
+      "changes": []
+    },
+    {
+      "path": "verification-optimized.json",
+      "source_sha256": "1804e63f4182b9c68aaf48074b42d321a69b09010b46d7ee3770094f632a8d21",
+      "published_sha256": "1804e63f4182b9c68aaf48074b42d321a69b09010b46d7ee3770094f632a8d21",
+      "changes": []
+    },
+    {
+      "path": "review/COFACTOR_GLOBAL_INDEPENDENT_AUDIT.md",
+      "source_sha256": "5ddd2a453f63476ce95a6121e36eb48bff8980a0c2e9c04720f7d2679d6b1632",
+      "published_sha256": "102687b6b375db94b8de8a2807f5c677853ac3d058fd84c28b70ee8bfc01367b",
+      "changes": [
+        "Use the packaged proof basename, explain its status-only update, and remove a sentence about review-file placement and Git activity."
+      ]
+    },
+    {
+      "path": "review/audit_cofactor_global.py",
+      "source_sha256": "487fa3418abe318902ebd7222961b91855ea563f8abf08c9f85f62a412f03cc5",
+      "published_sha256": "80c1bbc1229c02bafaaa1187e64a2cb1c81a6746e4896dc4e74b697686548976",
+      "changes": [
+        "Use a package-relative proof path and remove an irrelevant file-location sentence from the docstring. Test logic is unchanged."
+      ]
+    },
+    {
+      "path": "review/cofactor_global_audit_results.json",
+      "source_sha256": "bc8b8dc6edd8fe7f491fc71796bd79a12d3cab1b45a40b975ec07447ecb0f83f",
+      "changes": [
+        "Recomputed against the published proof. All result fields must match the reviewed receipt except source_sha256."
+      ],
+      "published_sha256": "a3d2faf00e583274eac132f82e79e39761d5cec040882f7181ea1b7fa949b3ba"
+    }
+  ]
+}

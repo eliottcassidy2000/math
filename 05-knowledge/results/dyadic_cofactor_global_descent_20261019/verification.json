@@ -1,0 +1,15 @@
+{
+  "branches": {
+    "first_resonance": 188,
+    "fixed": 369,
+    "high": 8046,
+    "immediate": 579989,
+    "middle": 8035,
+    "nonpower_q": 65978,
+    "power_start": 380,
+    "second_resonance": 95
+  },
+  "cases": 663080,
+  "scope": "Exact finite controls; universal proof is in the accompanying manuscript.",
+  "status": "PASS"
+}
