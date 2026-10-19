@@ -1,0 +1,13 @@
+{
+  "candidate_tuples": 56,
+  "completions": 5,
+  "independent_hardcoded_dsu": "exact match",
+  "no_minimality_claim": true,
+  "normal_direct": "exact match",
+  "optimized_direct": "exact match",
+  "status": "passed",
+  "width_two_components": [
+    3,
+    2
+  ]
+}

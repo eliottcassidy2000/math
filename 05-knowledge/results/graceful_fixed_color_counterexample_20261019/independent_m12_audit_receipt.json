@@ -1,0 +1,258 @@
+{
+  "candidate_count": 56,
+  "color_hamming_distance_matrix": [
+    [
+      0,
+      1,
+      1,
+      3,
+      3
+    ],
+    [
+      1,
+      0,
+      1,
+      3,
+      3
+    ],
+    [
+      1,
+      1,
+      0,
+      3,
+      3
+    ],
+    [
+      3,
+      3,
+      3,
+      0,
+      1
+    ],
+    [
+      3,
+      3,
+      3,
+      1,
+      0
+    ]
+  ],
+  "contracted_loops_by_color": {
+    "6": [
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        6,
+        12
+      ]
+    ],
+    "9": [],
+    "11": []
+  },
+  "fixed_components": {
+    "A": [
+      0,
+      5,
+      6,
+      10,
+      12
+    ],
+    "B": [
+      1,
+      3,
+      7,
+      9
+    ],
+    "C": [
+      2
+    ],
+    "D": [
+      4,
+      8,
+      11
+    ]
+  },
+  "free_colors": [
+    6,
+    9,
+    11
+  ],
+  "graceful_tree_count": 5,
+  "m": 12,
+  "method": "Hard-coded witness; exhaustive choices; disjoint-set cycle/connectivity test",
+  "nonloop_realizations_by_color_and_type": {
+    "6": {
+      "AD": [
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          11
+        ]
+      ],
+      "CD": [
+        [
+          2,
+          8
+        ]
+      ]
+    },
+    "9": {
+      "AB": [
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          3,
+          12
+        ]
+      ],
+      "CD": [
+        [
+          2,
+          11
+        ]
+      ]
+    },
+    "11": {
+      "AB": [
+        [
+          1,
+          12
+        ]
+      ],
+      "AD": [
+        [
+          0,
+          11
+        ]
+      ]
+    }
+  },
+  "rejected_candidate_count": 51,
+  "states_in_free_color_order": [
+    [
+      [
+        2,
+        8
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        11
+      ]
+    ],
+    [
+      [
+        2,
+        8
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        0,
+        11
+      ]
+    ],
+    [
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        12
+      ],
+      [
+        0,
+        11
+      ]
+    ],
+    [
+      [
+        4,
+        10
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        1,
+        12
+      ]
+    ],
+    [
+      [
+        5,
+        11
+      ],
+      [
+        2,
+        11
+      ],
+      [
+        1,
+        12
+      ]
+    ]
+  ],
+  "status": "PASS",
+  "stored_witness_matches_transcription": true,
+  "width_two_component_sizes": [
+    3,
+    2
+  ],
+  "width_two_components": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "width_two_graph": "K3 disjoint union K2",
+  "width_two_simple_graph_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ]
+  ]
+}

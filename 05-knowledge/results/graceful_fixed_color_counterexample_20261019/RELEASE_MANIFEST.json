@@ -1,0 +1,19 @@
+{
+  "claim": "Explicit m=12 integer-difference fixed-color forest has five completions and disconnected width-two graph K3 union K2. Global reconfiguration between components must disturb an initially correct target edge.",
+  "date": "2026-10-19",
+  "dependencies": "co-located explicit witness and standard-library Python only; global existence corollary cites packet93",
+  "destination": "05-knowledge/results/graceful_fixed_color_counterexample_20261019",
+  "files_sha256": {
+    "ARITHMETIC_FIXED_COLOR_COUNTEREXAMPLE.md": "11cdbfbe17644ab6c231f013ae2dcc3ad7a68f6bab9b8539545be71932a31828",
+    "INDEPENDENT_M12_AUDIT.md": "b3dacd4b2b034675d1a9e13124701c1a83547eb3bd381721875c85711520cf0a",
+    "README.md": "d67cd5b9aba31695a280e483af00ca016e7142ae8332233c130e28399b7eb624",
+    "REPLAY_RECEIPT.json": "2a44d18e1a7f2fc1aafff613c4f30a057f5891650ec9db6dd4660673050e042c",
+    "independent_m12_audit.py": "449e4441a5b0e7385c5d19a674876650f2fc2f2cf0d6cd85ddcc65cd2cdc71a9",
+    "independent_m12_audit_receipt.json": "0083be4f930100f885be7fea6127e4d830a8bfc125ee0fdc34505a3f57e87129",
+    "m12_exact_receipt.json": "b36f27fb517c203ed4412b52cef4bc9c9b4c2ac8e7c4cda604acd39c944e1d0a",
+    "verify_m12_witness.py": "f3fa2522ce10f7ede463daf3d5d72d7258348baa500531afb1b14fe764fe6039",
+    "witness.json": "6ba81eb4297388125834f3d669f1b4a48d0a70e79e211254dc0ac388ae6edcd7"
+  },
+  "packet": 102,
+  "scope": "No minimality claim; no contradiction with upper-tail connectivity; no one-color or graceful-tree-conjecture conclusion."
+}
