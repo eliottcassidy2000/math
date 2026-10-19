@@ -1,0 +1,38 @@
+{
+  "status": "PROVED: exact certificate replay, standard library only",
+  "checks": {
+    "variable_order": 3,
+    "original_coefficient_system": 3,
+    "input_reference": 19,
+    "acyclic_reference": 6005,
+    "intended_target": 3,
+    "exact_polynomial_combination": 3,
+    "quadratic_has_no_rational_roots": 1,
+    "m_two_coincident_poles": 1,
+    "specialized_coefficient": 2,
+    "specialized_norm": 2,
+    "elementary_case_split": 2,
+    "nonzero_a_value": 2,
+    "exceptional_branch_contradiction": 2
+  },
+  "certificates": [
+    {
+      "pattern": "adjacent_plus",
+      "input_equations": 8,
+      "certificate_nodes": 349,
+      "certificate_sha256": "7cb8a95ce08f498ff90177f42480e395eefa34341ec62c042eedfda4ab62fd96"
+    },
+    {
+      "pattern": "adjacent_minus",
+      "input_equations": 8,
+      "certificate_nodes": 204,
+      "certificate_sha256": "29f0854d2c68dd0b168841b0e4833efa11bf4b16e5d0ecbd2e20b94e81d8b6c2"
+    },
+    {
+      "pattern": "opposite",
+      "input_equations": 6,
+      "certificate_nodes": 402,
+      "certificate_sha256": "7bb1602f82218135ceeb4655fed3fcb10c02a61548c6d1104887379af0ed0e4a"
+    }
+  ]
+}

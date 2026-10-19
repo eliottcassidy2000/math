@@ -1,0 +1,16 @@
+{
+  "status": "FINITE-EXACT elementary identity checks; standard library only",
+  "checks": {
+    "contact_square_chart": 2,
+    "branch_discriminant": 2,
+    "branch_permutation_remainder": 1,
+    "circle_identity": 1,
+    "spread_harmonic": 1,
+    "spread_critical_values": 1,
+    "spread_derivative": 1,
+    "harmonic_norm_identity": 1,
+    "trivial_degree_one_symmetry": 8,
+    "rational_orthogonal_harmonic_identity": 12,
+    "unit_harmonic_coefficients": 12
+  }
+}
