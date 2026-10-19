@@ -1,0 +1,131 @@
+{
+  "C": "83829391903560839836419813590128166431/157489106280555890461927692448373459",
+  "P": "1",
+  "bank": {
+    "F": {
+      "a": 3,
+      "b": 1,
+      "m": 4,
+      "rho": 1
+    },
+    "H": {
+      "a": 81,
+      "b": 101,
+      "m": 512,
+      "rho": 43
+    },
+    "K": {
+      "a": 1162261467,
+      "b": 4912087879,
+      "m": 1073741824,
+      "rho": 815464443
+    },
+    "V": {
+      "a": 5474401089420219382077155933569751763,
+      "b": 83829391903560839836419813590128166431,
+      "m": 5316911983139663491615228241121378304,
+      "rho": 1918171157796698145963164157509042171
+    }
+  },
+  "checks": 1234513,
+  "cylinders": 396,
+  "max_observed_t_min": 0,
+  "sample_rows": [
+    {
+      "expanding": "K",
+      "resets": "F",
+      "steps": 32,
+      "t_min": 0
+    },
+    {
+      "expanding": "K",
+      "resets": "H",
+      "steps": 39,
+      "t_min": 0
+    },
+    {
+      "expanding": "K",
+      "resets": "F",
+      "steps": 32,
+      "t_min": 0
+    },
+    {
+      "expanding": "K",
+      "resets": "H",
+      "steps": 39,
+      "t_min": 0
+    },
+    {
+      "expanding": "K",
+      "resets": "F",
+      "steps": 32,
+      "t_min": 0
+    },
+    {
+      "expanding": "K",
+      "resets": "H",
+      "steps": 39,
+      "t_min": 0
+    },
+    {
+      "expanding": "VVVVVVVVVVVVVVVV",
+      "resets": "FF",
+      "steps": 1956,
+      "t_min": 0
+    },
+    {
+      "expanding": "VVVVVVVVVVVVVVVV",
+      "resets": "H",
+      "steps": 1961,
+      "t_min": 0
+    },
+    {
+      "expanding": "VVVVVVVVVVVVVVVV",
+      "resets": "FH",
+      "steps": 1963,
+      "t_min": 0
+    },
+    {
+      "expanding": "VVVVVVVVVVVVVVVV",
+      "resets": "H",
+      "steps": 1961,
+      "t_min": 0
+    },
+    {
+      "expanding": "VVVVVVVVVVVVVVVV",
+      "resets": "FF",
+      "steps": 1956,
+      "t_min": 0
+    },
+    {
+      "expanding": "VVVVVVVVVVVVVVVV",
+      "resets": "H",
+      "steps": 1961,
+      "t_min": 0
+    }
+  ],
+  "status": "PROVED conditional cylinder theorem; no universal source entry",
+  "uniform_head": 534,
+  "wrong_order_controls": [
+    {
+      "h": 4,
+      "intercept": "65/16",
+      "slope": "81/256"
+    },
+    {
+      "h": 8,
+      "intercept": "6305/256",
+      "slope": "6561/65536"
+    },
+    {
+      "h": 16,
+      "intercept": "42981185/65536",
+      "slope": "43046721/4294967296"
+    },
+    {
+      "h": 32,
+      "intercept": "1853015893884545/4294967296",
+      "slope": "1853020188851841/18446744073709551616"
+    }
+  ]
+}
