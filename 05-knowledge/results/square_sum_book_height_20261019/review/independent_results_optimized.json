@@ -1,0 +1,90 @@
+{
+  "bounded_common_neighbors": 1055,
+  "checks": 105750,
+  "construction_records": [
+    {
+      "guaranteed_leaves": 2,
+      "height_bits": 26,
+      "k": 4,
+      "low_divisors": 6,
+      "retained": 6
+    },
+    {
+      "guaranteed_leaves": 4,
+      "height_bits": 34,
+      "k": 5,
+      "low_divisors": 14,
+      "retained": 14
+    },
+    {
+      "guaranteed_leaves": 8,
+      "height_bits": 43,
+      "k": 6,
+      "low_divisors": 25,
+      "retained": 25
+    },
+    {
+      "guaranteed_leaves": 16,
+      "height_bits": 52,
+      "k": 7,
+      "low_divisors": 55,
+      "retained": 55
+    },
+    {
+      "guaranteed_leaves": 32,
+      "height_bits": 62,
+      "k": 8,
+      "low_divisors": 107,
+      "retained": 107
+    },
+    {
+      "guaranteed_leaves": 64,
+      "height_bits": 72,
+      "k": 9,
+      "low_divisors": 225,
+      "retained": 225
+    },
+    {
+      "guaranteed_leaves": 128,
+      "height_bits": 82,
+      "k": 10,
+      "low_divisors": 450,
+      "retained": 450
+    },
+    {
+      "guaranteed_leaves": 256,
+      "height_bits": 93,
+      "k": 11,
+      "low_divisors": 914,
+      "retained": 914
+    },
+    {
+      "guaranteed_leaves": 512,
+      "height_bits": 104,
+      "k": 12,
+      "low_divisors": 1837,
+      "retained": 1837
+    },
+    {
+      "guaranteed_leaves": 1024,
+      "height_bits": 115,
+      "k": 13,
+      "low_divisors": 3699,
+      "retained": 3699
+    },
+    {
+      "guaranteed_leaves": 2048,
+      "height_bits": 126,
+      "k": 14,
+      "low_divisors": 7444,
+      "retained": 7444
+    }
+  ],
+  "exact_full_leaf_pair_checks": 7562,
+  "prime_products_k_range": [
+    4,
+    14
+  ],
+  "scope": "Finite independent arithmetic controls only; no producer imports. The asymptotic is supplied by the reviewed proof.",
+  "status": "PASS"
+}

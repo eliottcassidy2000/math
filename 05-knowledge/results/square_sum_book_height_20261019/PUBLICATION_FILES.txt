@@ -1,0 +1,10 @@
+BOOK_HEIGHT_ASYMPTOTIC.md
+README.md
+exact_results.json
+exact_results_optimized.json
+review/ARITHMETIC_REVIEW.md
+review/ROOT_PROOF_REVIEW.md
+review/independent_controls.py
+review/independent_results.json
+review/independent_results_optimized.json
+verify_book_height.py
