@@ -1,0 +1,31 @@
+{
+  "status": "EXACT_FINITE_CONTROLS_PASSED",
+  "scope": "All naturally labeled posets through six vertices; controls only. Arbitrary finite size is proved by the injections in the companion theorem.",
+  "stats": [
+    {
+      "vertices": 3,
+      "naturally_labeled_posets": 7,
+      "extra_successor_markings": 3,
+      "dual_extra_predecessor_markings": 3
+    },
+    {
+      "vertices": 4,
+      "naturally_labeled_posets": 40,
+      "extra_successor_markings": 31,
+      "dual_extra_predecessor_markings": 31
+    },
+    {
+      "vertices": 5,
+      "naturally_labeled_posets": 357,
+      "extra_successor_markings": 356,
+      "dual_extra_predecessor_markings": 356
+    },
+    {
+      "vertices": 6,
+      "naturally_labeled_posets": 4824,
+      "extra_successor_markings": 5369,
+      "dual_extra_predecessor_markings": 5369
+    }
+  ],
+  "certificate_digest": "fd581445df91cf38d5ccee9ad6c9c7a835504869fca6b05344dbf36692b5fd5c"
+}
