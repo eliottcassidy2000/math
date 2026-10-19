@@ -1,0 +1,136 @@
+{
+  "additional_family_controls": [
+    {
+      "F_blocks_per_episode": 19,
+      "K_blocks_per_episode": 69,
+      "episodes": 24,
+      "strict_carry_lower_bound": "353758846931/354078572"
+    },
+    {
+      "F_blocks_per_episode": 19,
+      "K_blocks_per_episode": 69,
+      "episodes": 100,
+      "strict_carry_lower_bound": "1473714883343/354078572"
+    },
+    {
+      "F_blocks_per_episode": 19,
+      "K_blocks_per_episode": 69,
+      "episodes": 1000,
+      "strict_carry_lower_bound": "14736352156643/354078572"
+    }
+  ],
+  "audited_note_sha256": "744401a10e3ce93bf3a62c5f5efdd6212f349670cc41675ee2ccf74a64a74d5c",
+  "bank_center": "83829391903560839836419813590128166431/157489106280555890461927692448373459",
+  "banks": {
+    "F": {
+      "companion_residue": 2,
+      "length": 2,
+      "odd_bits": 1,
+      "source_residue": 1
+    },
+    "H": {
+      "companion_residue": 44,
+      "length": 9,
+      "odd_bits": 4,
+      "source_residue": 43
+    },
+    "K": {
+      "companion_residue": 815464444,
+      "length": 30,
+      "odd_bits": 19,
+      "source_residue": 815464443
+    },
+    "V": {
+      "companion_residue": 1918171157796698145963164157509042172,
+      "length": 122,
+      "odd_bits": 77,
+      "source_residue": 1918171157796698145963164157509042171
+    }
+  },
+  "explicit_checks": 267283,
+  "first_contracting_classes": 718,
+  "forced_source_modulus": 1329227995784915872903807060280344576,
+  "forced_source_residue": 588943162011782273059357097228697595,
+  "hostile_25_episode_offset": 12852,
+  "long_carry_control": {
+    "all_72_prior_reset_endpoints_checked": true,
+    "full_guard_replayed": true,
+    "normalized_carry_strictly_above": 534,
+    "odd_bits": 5089,
+    "steps": 8066
+  },
+  "maximum_repair_offsets": [
+    4
+  ],
+  "maximum_repair_steps": 92,
+  "maximum_threshold": "810692053755261919/1738366812781",
+  "maximum_threshold_offsets": [
+    11808
+  ],
+  "method": "reverse odd-position closed sums; literal replay; dyadic-lift short guards; prefix-free offset cover",
+  "normalization_controls": {
+    "changed_cases": 106,
+    "crossing_cases": 42807,
+    "episode_merging_cases": 36,
+    "maximum_original_macroblocks": 8
+  },
+  "offset_rows_sha256": "10a84fa213b73ab9b182d1a22ecbb99dc74036613c0a17ef80d896eec8fde77b",
+  "per_episode_bound": "83986881009841395726881741282576539890/157489106280555890461927692448373459",
+  "positive_offsets": 12798,
+  "repair_time_counts": {
+    "1": 6399,
+    "2": 3200,
+    "4": 800,
+    "5": 800,
+    "7": 300,
+    "8": 350,
+    "10": 148,
+    "12": 93,
+    "13": 132,
+    "15": 72,
+    "16": 86,
+    "18": 45,
+    "20": 28,
+    "21": 59,
+    "23": 33,
+    "24": 29,
+    "26": 27,
+    "27": 34,
+    "29": 16,
+    "31": 12,
+    "32": 17,
+    "34": 11,
+    "35": 14,
+    "37": 5,
+    "39": 4,
+    "40": 10,
+    "42": 4,
+    "43": 9,
+    "45": 5,
+    "46": 3,
+    "48": 6,
+    "50": 3,
+    "51": 5,
+    "53": 3,
+    "54": 6,
+    "56": 1,
+    "58": 2,
+    "59": 6,
+    "61": 1,
+    "62": 3,
+    "64": 1,
+    "67": 1,
+    "69": 3,
+    "72": 1,
+    "73": 1,
+    "75": 1,
+    "77": 2,
+    "78": 2,
+    "80": 1,
+    "81": 1,
+    "88": 2,
+    "92": 1
+  },
+  "scope": "bounded first-crossing bank language; no arbitrary-source coverage or general Collatz claim",
+  "status": "PASS"
+}

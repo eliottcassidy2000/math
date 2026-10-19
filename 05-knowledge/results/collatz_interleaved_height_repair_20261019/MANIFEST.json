@@ -1,0 +1,17 @@
+{
+  "status": "PROVED; independent mathematical review PASS; root approved",
+  "publication_scope": "readable proof, exact checker and receipt, complete independent audit package",
+  "files": [
+    "INTERLEAVED_HEIGHT_REPAIR.md",
+    "README.md",
+    "independent-review/INDEPENDENT_REVIEW.md",
+    "independent-review/MANIFEST.json",
+    "independent-review/SHA256SUMS",
+    "independent-review/check_interleaved.py",
+    "independent-review/receipt.json",
+    "verification-receipt.json",
+    "verify_interleaved_height_repair.py"
+  ],
+  "theorem_scope": "at most 24 expansion episodes before the first explicit reset multiplier crossing; unrestricted Terras word length; actual descent by N+92 or distinct smaller periodic obstruction",
+  "validation": "normal and optimized writer replay match 102714-check receipt; independent replay matches 267283-check receipt"
+}

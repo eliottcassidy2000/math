@@ -1,0 +1,24 @@
+{
+  "audited_source": "INTERLEAVED_HEIGHT_REPAIR.md",
+  "audited_source_sha256": "744401a10e3ce93bf3a62c5f5efdd6212f349670cc41675ee2ccf74a64a74d5c",
+  "date": "2026-10-19",
+  "files": [
+    {
+      "bytes": 6707,
+      "path": "INDEPENDENT_REVIEW.md",
+      "sha256": "3c9f19ff603a315e84903531a47d29df2b1bf80209a65670e6c239da2311c824"
+    },
+    {
+      "bytes": 13463,
+      "path": "check_interleaved.py",
+      "sha256": "e15a37433807a59fd1f0dacf272075e0703dab3b7a9df262c244e1eaf002df27"
+    },
+    {
+      "bytes": 3260,
+      "path": "receipt.json",
+      "sha256": "dc2fac89913640f4d44bc5eeab6e189b7622d435fef7c9fbf2d2ff37e3d1fe88"
+    }
+  ],
+  "title": "Independent review of the 24-episode interleaved height repair",
+  "verdict": "PASS for the stated restricted first-crossing theorem"
+}
