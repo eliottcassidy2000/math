@@ -1,0 +1,687 @@
+{
+  "arithmetic": "integer and exact Fraction only",
+  "explicit_families": {
+    "double_checked_full_matrices": 224,
+    "double_checked_row_deletions": 336,
+    "families": 32,
+    "r_values": [
+      3,
+      18
+    ],
+    "results": [
+      {
+        "all_branch_conductors": 1,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          3
+        ],
+        "normalization_defect": 2,
+        "r": 3,
+        "seminormal_defect": 0
+      },
+      {
+        "all_branch_conductors": 1,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          3
+        ],
+        "normalization_defect": 2,
+        "r": 3,
+        "seminormal_defect": 0
+      },
+      {
+        "all_branch_conductors": 2,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          4,
+          4
+        ],
+        "normalization_defect": 4,
+        "r": 4,
+        "seminormal_defect": 1
+      },
+      {
+        "all_branch_conductors": 2,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          4,
+          4
+        ],
+        "normalization_defect": 4,
+        "r": 4,
+        "seminormal_defect": 1
+      },
+      {
+        "all_branch_conductors": 2,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          5
+        ],
+        "normalization_defect": 6,
+        "r": 5,
+        "seminormal_defect": 2
+      },
+      {
+        "all_branch_conductors": 2,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          5
+        ],
+        "normalization_defect": 6,
+        "r": 5,
+        "seminormal_defect": 2
+      },
+      {
+        "all_branch_conductors": 3,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          6,
+          6
+        ],
+        "normalization_defect": 9,
+        "r": 6,
+        "seminormal_defect": 4
+      },
+      {
+        "all_branch_conductors": 2,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          6,
+          6
+        ],
+        "normalization_defect": 8,
+        "r": 6,
+        "seminormal_defect": 3
+      },
+      {
+        "all_branch_conductors": 3,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          7
+        ],
+        "normalization_defect": 12,
+        "r": 7,
+        "seminormal_defect": 6
+      },
+      {
+        "all_branch_conductors": 3,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          7,
+          7
+        ],
+        "normalization_defect": 11,
+        "r": 7,
+        "seminormal_defect": 5
+      },
+      {
+        "all_branch_conductors": 4,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          8,
+          8
+        ],
+        "normalization_defect": 16,
+        "r": 8,
+        "seminormal_defect": 9
+      },
+      {
+        "all_branch_conductors": 3,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          8,
+          8,
+          8
+        ],
+        "normalization_defect": 14,
+        "r": 8,
+        "seminormal_defect": 7
+      },
+      {
+        "all_branch_conductors": 4,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          9
+        ],
+        "normalization_defect": 20,
+        "r": 9,
+        "seminormal_defect": 12
+      },
+      {
+        "all_branch_conductors": 3,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          9,
+          9,
+          9
+        ],
+        "normalization_defect": 17,
+        "r": 9,
+        "seminormal_defect": 9
+      },
+      {
+        "all_branch_conductors": 5,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          10,
+          10
+        ],
+        "normalization_defect": 25,
+        "r": 10,
+        "seminormal_defect": 16
+      },
+      {
+        "all_branch_conductors": 3,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          10,
+          10,
+          10,
+          10
+        ],
+        "normalization_defect": 20,
+        "r": 10,
+        "seminormal_defect": 11
+      },
+      {
+        "all_branch_conductors": 5,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          11
+        ],
+        "normalization_defect": 30,
+        "r": 11,
+        "seminormal_defect": 20
+      },
+      {
+        "all_branch_conductors": 4,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          10,
+          11,
+          11,
+          11
+        ],
+        "normalization_defect": 24,
+        "r": 11,
+        "seminormal_defect": 14
+      },
+      {
+        "all_branch_conductors": 6,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          12,
+          12
+        ],
+        "normalization_defect": 36,
+        "r": 12,
+        "seminormal_defect": 25
+      },
+      {
+        "all_branch_conductors": 4,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          10,
+          12,
+          12,
+          12,
+          12
+        ],
+        "normalization_defect": 28,
+        "r": 12,
+        "seminormal_defect": 17
+      },
+      {
+        "all_branch_conductors": 6,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          13
+        ],
+        "normalization_defect": 42,
+        "r": 13,
+        "seminormal_defect": 30
+      },
+      {
+        "all_branch_conductors": 4,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          10,
+          13,
+          13,
+          13,
+          13
+        ],
+        "normalization_defect": 32,
+        "r": 13,
+        "seminormal_defect": 20
+      },
+      {
+        "all_branch_conductors": 7,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          14,
+          14
+        ],
+        "normalization_defect": 49,
+        "r": 14,
+        "seminormal_defect": 36
+      },
+      {
+        "all_branch_conductors": 4,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          10,
+          14,
+          14,
+          14,
+          14,
+          14
+        ],
+        "normalization_defect": 36,
+        "r": 14,
+        "seminormal_defect": 23
+      },
+      {
+        "all_branch_conductors": 7,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          15,
+          15
+        ],
+        "normalization_defect": 56,
+        "r": 15,
+        "seminormal_defect": 42
+      },
+      {
+        "all_branch_conductors": 4,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          10,
+          15,
+          15,
+          15,
+          15,
+          15
+        ],
+        "normalization_defect": 40,
+        "r": 15,
+        "seminormal_defect": 26
+      },
+      {
+        "all_branch_conductors": 8,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          15,
+          16,
+          16
+        ],
+        "normalization_defect": 64,
+        "r": 16,
+        "seminormal_defect": 49
+      },
+      {
+        "all_branch_conductors": 5,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          10,
+          15,
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "normalization_defect": 45,
+        "r": 16,
+        "seminormal_defect": 30
+      },
+      {
+        "all_branch_conductors": 8,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          15,
+          17,
+          17
+        ],
+        "normalization_defect": 72,
+        "r": 17,
+        "seminormal_defect": 56
+      },
+      {
+        "all_branch_conductors": 5,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          10,
+          15,
+          17,
+          17,
+          17,
+          17,
+          17
+        ],
+        "normalization_defect": 50,
+        "r": 17,
+        "seminormal_defect": 34
+      },
+      {
+        "all_branch_conductors": 9,
+        "family": "conic",
+        "hilbert_ranks": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          15,
+          17,
+          18,
+          18
+        ],
+        "normalization_defect": 81,
+        "r": 18,
+        "seminormal_defect": 64
+      },
+      {
+        "all_branch_conductors": 5,
+        "family": "power_curve",
+        "hilbert_ranks": [
+          1,
+          3,
+          6,
+          10,
+          15,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18
+        ],
+        "normalization_defect": 55,
+        "r": 18,
+        "seminormal_defect": 38
+      }
+    ]
+  },
+  "finite_universe": {
+    "maximum_attainers_by_size": {
+      "3": 220,
+      "4": 495,
+      "5": 792,
+      "6": 211,
+      "7": 120,
+      "8": 45,
+      "9": 10,
+      "10": 1
+    },
+    "minimum_attainers_by_size": {
+      "3": 220,
+      "4": 495,
+      "5": 792,
+      "6": 713,
+      "7": 672,
+      "8": 450,
+      "9": 120
+    },
+    "pool": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        4
+      ],
+      [
+        1,
+        3,
+        9
+      ],
+      [
+        1,
+        4,
+        16
+      ],
+      [
+        1,
+        5,
+        25
+      ],
+      [
+        1,
+        6,
+        36
+      ],
+      [
+        1,
+        7,
+        49
+      ],
+      [
+        1,
+        8,
+        64
+      ],
+      [
+        1,
+        9,
+        81
+      ],
+      [
+        1,
+        10,
+        100
+      ],
+      [
+        1,
+        11,
+        122
+      ],
+      [
+        1,
+        12,
+        146
+      ]
+    ],
+    "quadratic_maximum_classification_cases": 2510,
+    "uniform_subsets": 4017,
+    "uniform_subsets_by_size": {
+      "3": 220,
+      "4": 495,
+      "5": 792,
+      "6": 924,
+      "7": 792,
+      "8": 495,
+      "9": 220,
+      "10": 66,
+      "11": 12,
+      "12": 1
+    }
+  },
+  "formula_controls": {
+    "cases": 998,
+    "r_values": [
+      3,
+      1000
+    ]
+  },
+  "minimum_does_not_force_equal_branch_conductors": {
+    "conductors": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2
+    ],
+    "hilbert_ranks": [
+      1,
+      3,
+      6,
+      7,
+      7
+    ],
+    "points": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        4
+      ],
+      [
+        1,
+        3,
+        9
+      ],
+      [
+        1,
+        4,
+        16
+      ],
+      [
+        1,
+        5,
+        25
+      ],
+      [
+        1,
+        6,
+        37
+      ]
+    ],
+    "seminormal_defect": 5
+  },
+  "status": "PASS"
+}

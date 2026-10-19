@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-19",
+  "verdict": "PASS in stated scope",
+  "source_files": [
+    {
+      "name": "conductor_extremal_classification_session7.md",
+      "bytes": 18225,
+      "sha256": "9b8c9aee577709ba39c20fe0e24745c631ef3a7aac8c58827eb6baa30de8b8f0"
+    },
+    {
+      "name": "verify_conductor_extrema.py",
+      "bytes": 9363,
+      "sha256": "baaa06ae2335f63476735d9130018dedbbf0e09b9c711ea3fd34d83d5bb8e397"
+    }
+  ],
+  "producer_replay": {
+    "command": "python3 -B verify_conductor_extrema.py",
+    "byte_identical_to_supplied_output": true,
+    "name": "independent_producer_replay.json",
+    "bytes": 11750,
+    "sha256": "fa66f993ddd3b8806fb7c0861daf3b9af618992641fc70607b8b7918ead7f082"
+  },
+  "independent_replay": {
+    "commands": [
+      "python3 -B independent_audit_verifier.py",
+      "python3 -O -B independent_audit_verifier.py"
+    ],
+    "normal_optimized_byte_identical": true,
+    "name": "independent_audit_verifier.json",
+    "bytes": 1533,
+    "sha256": "a6f6c7cf2f0bd6313c6bece291534589271a1b327216d82c593ac8117ba47954"
+  },
+  "audit_file": {
+    "name": "independent_audit.md",
+    "bytes": 5240,
+    "sha256": "e4bdec7a2b98e681b89e8cd7d4960bc9cf08b905ab55f14922b64c8ef82f13dc"
+  },
+  "mutations": "Only new audit files in staging; no checkout/Git writes."
+}
