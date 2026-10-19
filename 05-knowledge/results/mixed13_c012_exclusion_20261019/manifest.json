@@ -1,0 +1,9 @@
+{
+  "mixed13_c012_exclusion_20261019.md": "cf0ba0ea76f24fead63a7bc55e7763792be6d9abfb41c0d24967f4d24be5ecbb",
+  "scan_mixed13.py": "e7a9d275af56df68458947fb497a747e15ed1292c2af967831d2ae637086e3c4",
+  "verify_mixed13.py": "5099c6fffacad465a75e8c9bc719a4f2945f85edbe04052262176ab33e578575",
+  "certificates.json.gz": "c7e83bbb3143abb6d722ddd3d96e4b756f81029e9543f47257050161daa95364",
+  "summary.json": "be979b8ddfde89100d188ff83aa7c452ab902a87c89cffcd2b78b30934fe0527",
+  "replay.json": "fc2bb12ce3574266c16f63675306ba3edd4ce1f6d42a598aa8f782548726e5b3",
+  "README.md": "11f4797a49e8caa5aa7ca49989f3ddfa0588b5044edf32f840a1c7b8cf8d99a7"
+}

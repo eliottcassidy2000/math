@@ -1,0 +1,34 @@
+{
+  "status": "EXACT_REPLAY_PASSED",
+  "certificate_sha256": "c7e83bbb3143abb6d722ddd3d96e4b756f81029e9543f47257050161daa95364",
+  "catalogue_and_replay": [
+    {
+      "c": 0,
+      "cores": 40,
+      "analytic_balanced_cores": 0,
+      "analytic_cycle_cores": 0,
+      "directed_screen_orders": 784,
+      "exact_generator_orders": 35,
+      "distinct_generator_certificates": 26
+    },
+    {
+      "c": 1,
+      "cores": 357,
+      "analytic_balanced_cores": 0,
+      "analytic_cycle_cores": 0,
+      "directed_screen_orders": 18078,
+      "exact_generator_orders": 643,
+      "distinct_generator_certificates": 220
+    },
+    {
+      "c": 2,
+      "cores": 4824,
+      "analytic_balanced_cores": 1322,
+      "analytic_cycle_cores": 0,
+      "directed_screen_orders": 427413,
+      "exact_generator_orders": 15237,
+      "distinct_generator_certificates": 2882
+    }
+  ],
+  "seconds": 24.793401956558228
+}

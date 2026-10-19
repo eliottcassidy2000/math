@@ -1,0 +1,48 @@
+{
+  "status": "ALL_CERTIFIED",
+  "stats": [
+    {
+      "c": 0,
+      "cores": 40,
+      "complete": 40,
+      "analytic_balanced": 0,
+      "analytic_cycles": 0,
+      "analytic_orders": 784,
+      "residual_orders": 35,
+      "kinds": {
+        "one": 30,
+        "dual": 3,
+        "two": 2
+      }
+    },
+    {
+      "c": 1,
+      "cores": 357,
+      "complete": 357,
+      "analytic_balanced": 0,
+      "analytic_cycles": 0,
+      "analytic_orders": 18078,
+      "residual_orders": 643,
+      "kinds": {
+        "one": 586,
+        "two": 46,
+        "dual": 11
+      }
+    },
+    {
+      "c": 2,
+      "cores": 4824,
+      "complete": 4824,
+      "analytic_balanced": 1322,
+      "analytic_cycles": 0,
+      "analytic_orders": 427413,
+      "residual_orders": 15237,
+      "kinds": {
+        "one": 12791,
+        "two": 1618,
+        "dual": 828
+      }
+    }
+  ],
+  "seconds": 32.28786897659302
+}
