@@ -1,0 +1,202 @@
+{
+  "construction_checkpoints": [
+    {
+      "LP_calls": 0,
+      "committed_bytes": 257651,
+      "completed": 1000,
+      "dependencies": {
+        "cone_engine_mixed22_c4_20261019.py": "3f2e099ee2d756398113ef4e292f42441217924885bcb1c447904a6d5b14df02",
+        "exact_probes_20261019.json.gz": "aa11834bdba584e3a39c27aec1cedc542738af4cfbf5e9bc1c45aa1c590f9aa5",
+        "exact_replay_mixed22_c4_20261019.py": "93c595ac7a3729ac07fdc90bb1f86eecb44401d0c29daaca556986b539cebd55",
+        "residual_inventory_20261019.json.gz": "63697acce82106e50e52b56834821dd64799302fe4cb7966b4c83e334a7b71c9",
+        "scan_c4_residuals_20261019.py": "0e8dfb02e43f208695cf9cb1c8ff66aca2861f14659c82afef0755d95053d37c",
+        "stream_mixed22_c4_prepass_20261019.py": "af77ca7072d8c9812e3b659436bc474ef9f13737be23e5fddb6344a8de6903e0"
+      },
+      "directed_orders": 1004566,
+      "distinct_certificates": 560,
+      "elapsed_seconds": 258.90360403060913,
+      "generator_orders": 3188,
+      "label": "pilot",
+      "last_residual_index": 999,
+      "max_certificate_support": 2,
+      "max_integer_weight": 1,
+      "record_sha256": "6d74c9a2906cf72b47b85879fd524b8e01bc0375e29ca13a8e56d57fb85c159c",
+      "reused_probes": 16,
+      "scope": "Partial exact residual coverage until every assigned core passes. Cone obstructions are method limitations.",
+      "start_unix": 1792403520.7917898,
+      "status": "PILOT_COMPLETE",
+      "target": 1000
+    },
+    {
+      "LP_calls": 48,
+      "committed_bytes": 15752252,
+      "completed": 53567,
+      "dependencies": {
+        "cone_engine_mixed22_c4_20261019.py": "3f2e099ee2d756398113ef4e292f42441217924885bcb1c447904a6d5b14df02",
+        "exact_probes_20261019.json.gz": "aa11834bdba584e3a39c27aec1cedc542738af4cfbf5e9bc1c45aa1c590f9aa5",
+        "exact_replay_mixed22_c4_20261019.py": "93c595ac7a3729ac07fdc90bb1f86eecb44401d0c29daaca556986b539cebd55",
+        "residual_inventory_20261019.json.gz": "63697acce82106e50e52b56834821dd64799302fe4cb7966b4c83e334a7b71c9",
+        "scan_c4_residuals_20261019.py": "0e8dfb02e43f208695cf9cb1c8ff66aca2861f14659c82afef0755d95053d37c",
+        "stream_mixed22_c4_prepass_20261019.py": "af77ca7072d8c9812e3b659436bc474ef9f13737be23e5fddb6344a8de6903e0"
+      },
+      "directed_orders": 28160335,
+      "distinct_certificates": 46021,
+      "elapsed_seconds": 8906.053964853287,
+      "generator_orders": 727420,
+      "label": "shard0",
+      "last_residual_index": 215264,
+      "max_certificate_support": 12,
+      "max_integer_weight": 2145017869336093048856832,
+      "record_sha256": "9f9a4eecb2138da2612e89fa762de5c42d6557b180b33019dc1dc70fa2cd8dfc",
+      "reused_probes": 0,
+      "scope": "Partial exact residual coverage until every assigned core passes. Cone obstructions are method limitations.",
+      "start_unix": 1792403815.4066079,
+      "status": "SHARD_COMPLETE",
+      "target": 53567
+    },
+    {
+      "LP_calls": 44,
+      "committed_bytes": 15767890,
+      "completed": 53567,
+      "dependencies": {
+        "cone_engine_mixed22_c4_20261019.py": "3f2e099ee2d756398113ef4e292f42441217924885bcb1c447904a6d5b14df02",
+        "exact_probes_20261019.json.gz": "aa11834bdba584e3a39c27aec1cedc542738af4cfbf5e9bc1c45aa1c590f9aa5",
+        "exact_replay_mixed22_c4_20261019.py": "93c595ac7a3729ac07fdc90bb1f86eecb44401d0c29daaca556986b539cebd55",
+        "residual_inventory_20261019.json.gz": "63697acce82106e50e52b56834821dd64799302fe4cb7966b4c83e334a7b71c9",
+        "scan_c4_residuals_20261019.py": "0e8dfb02e43f208695cf9cb1c8ff66aca2861f14659c82afef0755d95053d37c",
+        "stream_mixed22_c4_prepass_20261019.py": "af77ca7072d8c9812e3b659436bc474ef9f13737be23e5fddb6344a8de6903e0"
+      },
+      "directed_orders": 28084984,
+      "distinct_certificates": 46086,
+      "elapsed_seconds": 8923.550877571106,
+      "generator_orders": 722439,
+      "label": "shard1",
+      "last_residual_index": 215265,
+      "max_certificate_support": 12,
+      "max_integer_weight": 164426573285821101279024000,
+      "record_sha256": "648c91e201c5065e0029bda02666de655f5539f0b2a62a56391c01785fd5b2d5",
+      "reused_probes": 0,
+      "scope": "Partial exact residual coverage until every assigned core passes. Cone obstructions are method limitations.",
+      "start_unix": 1792403815.2376058,
+      "status": "SHARD_COMPLETE",
+      "target": 53567
+    },
+    {
+      "LP_calls": 21,
+      "committed_bytes": 15760503,
+      "completed": 53567,
+      "dependencies": {
+        "cone_engine_mixed22_c4_20261019.py": "3f2e099ee2d756398113ef4e292f42441217924885bcb1c447904a6d5b14df02",
+        "exact_probes_20261019.json.gz": "aa11834bdba584e3a39c27aec1cedc542738af4cfbf5e9bc1c45aa1c590f9aa5",
+        "exact_replay_mixed22_c4_20261019.py": "93c595ac7a3729ac07fdc90bb1f86eecb44401d0c29daaca556986b539cebd55",
+        "residual_inventory_20261019.json.gz": "63697acce82106e50e52b56834821dd64799302fe4cb7966b4c83e334a7b71c9",
+        "scan_c4_residuals_20261019.py": "0e8dfb02e43f208695cf9cb1c8ff66aca2861f14659c82afef0755d95053d37c",
+        "stream_mixed22_c4_prepass_20261019.py": "af77ca7072d8c9812e3b659436bc474ef9f13737be23e5fddb6344a8de6903e0"
+      },
+      "directed_orders": 28094771,
+      "distinct_certificates": 45990,
+      "elapsed_seconds": 8888.356479406357,
+      "generator_orders": 725106,
+      "label": "shard2",
+      "last_residual_index": 215266,
+      "max_certificate_support": 11,
+      "max_integer_weight": 214608119557120602720,
+      "record_sha256": "a624039323ad51965b54b153514b26e0e7422a9efacab4999c200e4da3b17bf6",
+      "reused_probes": 0,
+      "scope": "Partial exact residual coverage until every assigned core passes. Cone obstructions are method limitations.",
+      "start_unix": 1792403815.2268841,
+      "status": "SHARD_COMPLETE",
+      "target": 53567
+    },
+    {
+      "LP_calls": 37,
+      "committed_bytes": 15790884,
+      "completed": 53566,
+      "dependencies": {
+        "cone_engine_mixed22_c4_20261019.py": "3f2e099ee2d756398113ef4e292f42441217924885bcb1c447904a6d5b14df02",
+        "exact_probes_20261019.json.gz": "aa11834bdba584e3a39c27aec1cedc542738af4cfbf5e9bc1c45aa1c590f9aa5",
+        "exact_replay_mixed22_c4_20261019.py": "93c595ac7a3729ac07fdc90bb1f86eecb44401d0c29daaca556986b539cebd55",
+        "residual_inventory_20261019.json.gz": "63697acce82106e50e52b56834821dd64799302fe4cb7966b4c83e334a7b71c9",
+        "scan_c4_residuals_20261019.py": "0e8dfb02e43f208695cf9cb1c8ff66aca2861f14659c82afef0755d95053d37c",
+        "stream_mixed22_c4_prepass_20261019.py": "af77ca7072d8c9812e3b659436bc474ef9f13737be23e5fddb6344a8de6903e0"
+      },
+      "directed_orders": 28078533,
+      "distinct_certificates": 46240,
+      "elapsed_seconds": 8960.775253534317,
+      "generator_orders": 724823,
+      "label": "shard3",
+      "last_residual_index": 215263,
+      "max_certificate_support": 12,
+      "max_integer_weight": 287341326278184134608080,
+      "record_sha256": "1bdd6d64774aa1c831533bce115c9faee39694068289d84373212933db1b9e2d",
+      "reused_probes": 21,
+      "scope": "Partial exact residual coverage until every assigned core passes. Cone obstructions are method limitations.",
+      "start_unix": 1792403815.3827126,
+      "status": "SHARD_COMPLETE",
+      "target": 53566
+    }
+  ],
+  "final_replay_receipt_sha256": "385d19e77df652ce2e2d1aabbbf56fcbeef1cb6ba58242bb1d1300c71d507412",
+  "partition": "Four ordered streams by residual_index modulo four; pilot records are included in the same partition.",
+  "residual_streams": [
+    {
+      "bytes": 1894605,
+      "name": "residual_certificates_part0_20261019.jsonl.gz",
+      "sha256": "838f5d80504adad2ceabab9764947c0be8b27cd7881c829851ee9105265f96fa"
+    },
+    {
+      "bytes": 1893329,
+      "name": "residual_certificates_part1_20261019.jsonl.gz",
+      "sha256": "f1b63ea57b8f859a444f20b7639bd7a32beb41c6ad11b4c7efdaa643eaba1a83"
+    },
+    {
+      "bytes": 1893284,
+      "name": "residual_certificates_part2_20261019.jsonl.gz",
+      "sha256": "5f988a6bd9387c6bfefcb6b61538a4fbd3ff2d99fd68880ace07a63a8d4c325b"
+    },
+    {
+      "bytes": 1898253,
+      "name": "residual_certificates_part3_20261019.jsonl.gz",
+      "sha256": "28bf42336c857a034963c52dd7da81512bc54fafd63daba27b43020193b1a5c5"
+    }
+  ],
+  "source_records": [
+    {
+      "bytes": 257651,
+      "name": "pilot_records_20261019.jsonl.gz",
+      "sha256": "6d74c9a2906cf72b47b85879fd524b8e01bc0375e29ca13a8e56d57fb85c159c"
+    },
+    {
+      "bytes": 15752252,
+      "name": "shard0_records_20261019.jsonl.gz",
+      "sha256": "9f9a4eecb2138da2612e89fa762de5c42d6557b180b33019dc1dc70fa2cd8dfc"
+    },
+    {
+      "bytes": 15767890,
+      "name": "shard1_records_20261019.jsonl.gz",
+      "sha256": "648c91e201c5065e0029bda02666de655f5539f0b2a62a56391c01785fd5b2d5"
+    },
+    {
+      "bytes": 15760503,
+      "name": "shard2_records_20261019.jsonl.gz",
+      "sha256": "a624039323ad51965b54b153514b26e0e7422a9efacab4999c200e4da3b17bf6"
+    },
+    {
+      "bytes": 15790884,
+      "name": "shard3_records_20261019.jsonl.gz",
+      "sha256": "1bdd6d64774aa1c831533bce115c9faee39694068289d84373212933db1b9e2d"
+    }
+  ],
+  "statistics": {
+    "directed_screen_orders": 113423189,
+    "distinct_certificates": 184897,
+    "generator_orders": 2902976,
+    "larger_certificates": 150,
+    "maximum_certificate_support": 12,
+    "maximum_integer_weight": 164426573285821101279024000,
+    "one_row_certificates": 72131,
+    "residual_cores": 215267,
+    "two_row_certificates": 112616
+  },
+  "status": "COMPACT_REPACK_FULLY_INDEPENDENTLY_REPLAYED"
+}

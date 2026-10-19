@@ -1,0 +1,18 @@
+{
+  "analytic_balanced": 733492,
+  "analytic_cycles": 216636,
+  "classification_sha256": "0ee6b7a5b6ae756310ec800474908e5e8e59ec0a2fb266910312dc2279cc7d52",
+  "degree_invalid": 1635077,
+  "degree_valid_cores": 1165395,
+  "exact_probes": 37,
+  "inventory_sha256": "63697acce82106e50e52b56834821dd64799302fe4cb7966b4c83e334a7b71c9",
+  "natural_posets": 2800472,
+  "probe_LP_calls": 0,
+  "probe_generator_orders": 366,
+  "probe_sha256": "aa11834bdba584e3a39c27aec1cedc542738af4cfbf5e9bc1c45aa1c590f9aa5",
+  "residual_cores": 215267,
+  "scope": "Complete degree/analytic catalogue and 37 exact residual probes only. The remaining residual cores are not certified by this packet.",
+  "seconds": 83.5709056854248,
+  "status": "COMPLETE_ANALYTIC_CENSUS_AND_SPARSE_PROBES_INDEPENDENTLY_REPLAYED",
+  "verifier_sha256": "2e3e1b3640449af276bf7fc1ba5a14369195b4edf77dcbe148018fa8d8fb9fc1"
+}

@@ -1,0 +1,11 @@
+{
+  "certificates": 184897,
+  "status": "ALL_CERTIFICATE_TERMS_EXPLICITLY_CHECKED_AS_INTEGERS",
+  "stream_hashes": {
+    "residual_certificates_part0_20261019.jsonl.gz": "838f5d80504adad2ceabab9764947c0be8b27cd7881c829851ee9105265f96fa",
+    "residual_certificates_part1_20261019.jsonl.gz": "f1b63ea57b8f859a444f20b7639bd7a32beb41c6ad11b4c7efdaa643eaba1a83",
+    "residual_certificates_part2_20261019.jsonl.gz": "5f988a6bd9387c6bfefcb6b61538a4fbd3ff2d99fd68880ace07a63a8d4c325b",
+    "residual_certificates_part3_20261019.jsonl.gz": "28bf42336c857a034963c52dd7da81512bc54fafd63daba27b43020193b1a5c5"
+  },
+  "terms": 298585
+}

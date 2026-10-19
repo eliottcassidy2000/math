@@ -1,0 +1,14 @@
+{
+  "classes": [
+    733492,
+    216636,
+    215267
+  ],
+  "classification_bytes": 5738231,
+  "classification_sha256": "0ee6b7a5b6ae756310ec800474908e5e8e59ec0a2fb266910312dc2279cc7d52",
+  "probe_sha256": "aa11834bdba584e3a39c27aec1cedc542738af4cfbf5e9bc1c45aa1c590f9aa5",
+  "probes": 37,
+  "scope": "Complete analytic classification and 37 sparse exact residual probes; no exhaustive residual theorem.",
+  "source_audit_sha256": "897204d191e830faef7cf8edf0256fe192221ef7ec8b99b6b634d06371295077",
+  "source_probe_sha256": "45fee0dcb0982eb69b34fea63b36424dac8151e5d2b570eb8489a31c0dc008d7"
+}

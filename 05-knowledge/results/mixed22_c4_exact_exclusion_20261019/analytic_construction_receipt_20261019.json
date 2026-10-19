@@ -1,0 +1,31 @@
+{
+  "analytic_balanced": 733492,
+  "analytic_cycles": 216636,
+  "audit_bytes": 13152413,
+  "audit_sha256": "897204d191e830faef7cf8edf0256fe192221ef7ec8b99b6b634d06371295077",
+  "cursor": {
+    "nextmask": [
+      1
+    ],
+    "pred": []
+  },
+  "degree_invalid": 1635077,
+  "degree_valid": 1165395,
+  "dependencies": {
+    "cone_engine_mixed22_c4_20261019.py": "3f2e099ee2d756398113ef4e292f42441217924885bcb1c447904a6d5b14df02",
+    "exact_replay_mixed22_c4_20261019.py": "93c595ac7a3729ac07fdc90bb1f86eecb44401d0c29daaca556986b539cebd55",
+    "stream_mixed22_c4_prepass_20261019.py": "af77ca7072d8c9812e3b659436bc474ef9f13737be23e5fddb6344a8de6903e0"
+  },
+  "elapsed_seconds": 156.23670625686646,
+  "exact_probes_passed": 37,
+  "natural_posets": 2800472,
+  "probe_LP_calls": 0,
+  "probe_bytes": 7325,
+  "probe_generator_orders": 366,
+  "probe_schedule": "First 16 residual cores, then every 10000th residual core; stop first exact cone obstacle.",
+  "probe_sha256": "45fee0dcb0982eb69b34fea63b36424dac8151e5d2b570eb8489a31c0dc008d7",
+  "residual": 215267,
+  "scope": "Streaming degree/analytic prepass and sparse exact probes only; no exhaustive c4 cone theorem.",
+  "start_unix": 1792403103.5741036,
+  "status": "ANALYTIC_PREPASS_COMPLETE_SPARSE_PROBES_PASSED"
+}

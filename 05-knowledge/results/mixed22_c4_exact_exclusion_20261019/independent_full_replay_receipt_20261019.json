@@ -1,0 +1,40 @@
+{
+  "analytic_balanced_cores": 733492,
+  "analytic_cycle_cores": 216636,
+  "analytic_verifier_sha256": "2e3e1b3640449af276bf7fc1ba5a14369195b4edf77dcbe148018fa8d8fb9fc1",
+  "classification_sha256": "0ee6b7a5b6ae756310ec800474908e5e8e59ec0a2fb266910312dc2279cc7d52",
+  "degree_invalid": 1635077,
+  "degree_valid_cores": 1165395,
+  "inventory_sha256": "63697acce82106e50e52b56834821dd64799302fe4cb7966b4c83e334a7b71c9",
+  "natural_nonroot_posets": 2800472,
+  "parallel_part_seconds": [
+    3934.485230922699,
+    3872.903519630432,
+    3881.1273634433746,
+    3871.6161160469055
+  ],
+  "replay_helper_sha256": "2dafdbfdaeaacc2ca28a65ffd61d915b9077cb127f68eb15e4e7be4c8e287226",
+  "replay_mode": "four exact parts plus complete set-equality assembly",
+  "residual_streams_sha256": {
+    "residual_certificates_part0_20261019.jsonl.gz": "838f5d80504adad2ceabab9764947c0be8b27cd7881c829851ee9105265f96fa",
+    "residual_certificates_part1_20261019.jsonl.gz": "f1b63ea57b8f859a444f20b7639bd7a32beb41c6ad11b4c7efdaa643eaba1a83",
+    "residual_certificates_part2_20261019.jsonl.gz": "5f988a6bd9387c6bfefcb6b61538a4fbd3ff2d99fd68880ace07a63a8d4c325b",
+    "residual_certificates_part3_20261019.jsonl.gz": "28bf42336c857a034963c52dd7da81512bc54fafd63daba27b43020193b1a5c5"
+  },
+  "scope": "Seven-thin mixed-(2,2), c=4 maximum-span root morphology only.",
+  "seconds": 3.2634172439575195,
+  "short_span_orders": 0,
+  "statistics": {
+    "directed_screen_orders": 113423189,
+    "distinct_certificates": 184897,
+    "generator_orders": 2902976,
+    "larger_certificates": 150,
+    "maximum_certificate_support": 12,
+    "maximum_integer_weight": 164426573285821101279024000,
+    "one_row_certificates": 72131,
+    "residual_cores": 215267,
+    "two_row_certificates": 112616
+  },
+  "status": "ALL_1165395_DEGREE_VALID_CORES_INDEPENDENTLY_EXACT_REPLAYED",
+  "verifier_sha256": "c5cd2f7aa460a17719c93df6c50f362ef55d510abcae40f17398cc652c55e51e"
+}

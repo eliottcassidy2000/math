@@ -1,0 +1,147 @@
+{
+  "files": [
+    {
+      "bytes": 1601,
+      "name": "README.md",
+      "sha256": "dd75c12049613261ba83c736b442bd85c1f747cb28440e43f9267ba3c1da77fe"
+    },
+    {
+      "bytes": 5738231,
+      "name": "analytic_classification_20261019.jsonl.gz",
+      "sha256": "0ee6b7a5b6ae756310ec800474908e5e8e59ec0a2fb266910312dc2279cc7d52"
+    },
+    {
+      "bytes": 1264,
+      "name": "analytic_construction_receipt_20261019.json",
+      "sha256": "8765131405a034783a94034900d3bcb5faf9485b7e274f6389a492d6efae740e"
+    },
+    {
+      "bytes": 592,
+      "name": "analytic_repack_provenance_20261019.json",
+      "sha256": "f133adbee1e29fd4b9eb0629ed939b5ebcd3e493203bae18df8c3a334c6176fe"
+    },
+    {
+      "bytes": 3592,
+      "name": "exact_cone_replay_20261019.py",
+      "sha256": "2dafdbfdaeaacc2ca28a65ffd61d915b9077cb127f68eb15e4e7be4c8e287226"
+    },
+    {
+      "bytes": 2484,
+      "name": "exact_probes_20261019.json.gz",
+      "sha256": "aa11834bdba584e3a39c27aec1cedc542738af4cfbf5e9bc1c45aa1c590f9aa5"
+    },
+    {
+      "bytes": 879,
+      "name": "independent_census_replay_receipt_20261019.json",
+      "sha256": "6d02aac592b5fd434f16c3baf7eb9800c06b622f02092821eeeccd27f5ba5dc6"
+    },
+    {
+      "bytes": 1933,
+      "name": "independent_full_replay_receipt_20261019.json",
+      "sha256": "385d19e77df652ce2e2d1aabbbf56fcbeef1cb6ba58242bb1d1300c71d507412"
+    },
+    {
+      "bytes": 1441,
+      "name": "independent_replay_part0_20261019.json",
+      "sha256": "0f20334f29a3bf69f67a50e5f4a566c17aaed65810773fb67b255309539f515a"
+    },
+    {
+      "bytes": 1443,
+      "name": "independent_replay_part1_20261019.json",
+      "sha256": "cc39aa3795b84b621c43ba5afa50ce718626f55d5270d0022f806b0f41c0533c"
+    },
+    {
+      "bytes": 1438,
+      "name": "independent_replay_part2_20261019.json",
+      "sha256": "aceabfc521179aca1896f540405e579d9c326ddf78358dddcc09ab30274d5107"
+    },
+    {
+      "bytes": 1441,
+      "name": "independent_replay_part3_20261019.json",
+      "sha256": "5952abdea309beb40d615e90d7a34e4e6cfe5951326c5dc8a2588e0aa7e9d997"
+    },
+    {
+      "bytes": 625,
+      "name": "integer_data_audit_20261019.json",
+      "sha256": "1f6e2957929c34b12538c915cf86fd237b1c2d5002043a7be9b9d792df6190ac"
+    },
+    {
+      "bytes": 2125,
+      "name": "max_span_directed_defect_reduction_20261019.md",
+      "sha256": "d4a36a5a4a7ada2b7a83a747248171b3e99998e079a2d5fd4aa035c1b47d3ac4"
+    },
+    {
+      "bytes": 5766,
+      "name": "mixed22_c4_analytic_census_and_sparse_probes_20261019.md",
+      "sha256": "9ef30790d534d7a6d85446d5ae4c05a8255e6810e30fd764d70e7e192ed93da1"
+    },
+    {
+      "bytes": 10854,
+      "name": "mixed22_c4_exact_exclusion_20261019.md",
+      "sha256": "fe242160657b0bb55a844a1f7aa61e9ecec7755dd614d83864b793fe7e9618fd"
+    },
+    {
+      "bytes": 7802,
+      "name": "one_defect_exchange_reductions_20261019.md",
+      "sha256": "2a062aea8903849474640db25dcfc5a3485c6a965d251a90c367d0ccace33be9"
+    },
+    {
+      "bytes": 1894605,
+      "name": "residual_certificates_part0_20261019.jsonl.gz",
+      "sha256": "838f5d80504adad2ceabab9764947c0be8b27cd7881c829851ee9105265f96fa"
+    },
+    {
+      "bytes": 1893329,
+      "name": "residual_certificates_part1_20261019.jsonl.gz",
+      "sha256": "f1b63ea57b8f859a444f20b7639bd7a32beb41c6ad11b4c7efdaa643eaba1a83"
+    },
+    {
+      "bytes": 1893284,
+      "name": "residual_certificates_part2_20261019.jsonl.gz",
+      "sha256": "5f988a6bd9387c6bfefcb6b61538a4fbd3ff2d99fd68880ace07a63a8d4c325b"
+    },
+    {
+      "bytes": 1898253,
+      "name": "residual_certificates_part3_20261019.jsonl.gz",
+      "sha256": "28bf42336c857a034963c52dd7da81512bc54fafd63daba27b43020193b1a5c5"
+    },
+    {
+      "bytes": 1495,
+      "name": "residual_construction_receipt_20261019.json",
+      "sha256": "24dd67b868676209dc3d1d4c2abb999639b32f8af1ffae379b223f9f42824513"
+    },
+    {
+      "bytes": 1413790,
+      "name": "residual_inventory_20261019.json.gz",
+      "sha256": "63697acce82106e50e52b56834821dd64799302fe4cb7966b4c83e334a7b71c9"
+    },
+    {
+      "bytes": 9537,
+      "name": "residual_repack_provenance_20261019.json",
+      "sha256": "3c9b3d2e14d4816a8157d0bcf0036013bb84898067d8c7efcfd874054d122747"
+    },
+    {
+      "bytes": 6227,
+      "name": "seven_thin_saturation_increment_lemma_20261019.md",
+      "sha256": "2369610b84d27c367b2abf10dbb080dff2f6ec1500495ea0650409c98b2da243"
+    },
+    {
+      "bytes": 4603,
+      "name": "side_specific_defect_propagation_20261019.md",
+      "sha256": "a89ba5b2f82f0eb906185dd86dca42785c6279476d884e158912e9fdab090230"
+    },
+    {
+      "bytes": 5660,
+      "name": "verify_c4_analytic_and_probes_20261019.py",
+      "sha256": "2e3e1b3640449af276bf7fc1ba5a14369195b4edf77dcbe148018fa8d8fb9fc1"
+    },
+    {
+      "bytes": 6771,
+      "name": "verify_mixed22_c4_exact_exclusion_20261019.py",
+      "sha256": "c5cd2f7aa460a17719c93df6c50f362ef55d510abcae40f17398cc652c55e51e"
+    }
+  ],
+  "reproduction_command": "python -O verify_mixed22_c4_exact_exclusion_20261019.py",
+  "scope": "Seven-thin mixed-(2,2), c=4 maximum-span roots; no general seven-thin theorem.",
+  "status": "FROZEN_AFTER_COMPLETE_INDEPENDENT_REPLAY"
+}

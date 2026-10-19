@@ -1,0 +1,48 @@
+{
+  "LP_derived_certificates": 150,
+  "residual_cores": 215267,
+  "shards": [
+    {
+      "cores": 1000,
+      "elapsed_seconds": 258.90360403060913,
+      "label": "pilot",
+      "record_sha256": "6d74c9a2906cf72b47b85879fd524b8e01bc0375e29ca13a8e56d57fb85c159c"
+    },
+    {
+      "cores": 53567,
+      "elapsed_seconds": 8906.053964853287,
+      "label": "shard0",
+      "record_sha256": "9f9a4eecb2138da2612e89fa762de5c42d6557b180b33019dc1dc70fa2cd8dfc"
+    },
+    {
+      "cores": 53567,
+      "elapsed_seconds": 8923.550877571106,
+      "label": "shard1",
+      "record_sha256": "648c91e201c5065e0029bda02666de655f5539f0b2a62a56391c01785fd5b2d5"
+    },
+    {
+      "cores": 53567,
+      "elapsed_seconds": 8888.356479406357,
+      "label": "shard2",
+      "record_sha256": "a624039323ad51965b54b153514b26e0e7422a9efacab4999c200e4da3b17bf6"
+    },
+    {
+      "cores": 53566,
+      "elapsed_seconds": 8960.775253534317,
+      "label": "shard3",
+      "record_sha256": "1bdd6d64774aa1c831533bce115c9faee39694068289d84373212933db1b9e2d"
+    }
+  ],
+  "statistics": {
+    "directed_screen_orders": 113423189,
+    "distinct_certificates": 184897,
+    "generator_orders": 2902976,
+    "larger_certificates": 150,
+    "maximum_certificate_support": 12,
+    "maximum_integer_weight": 164426573285821101279024000,
+    "one_row_certificates": 72131,
+    "residual_cores": 215267,
+    "two_row_certificates": 112616
+  },
+  "status": "ALL_RESIDUAL_SEARCH_SHARDS_COMPLETE_AND_PER_CORE_EXACT_REPLAYED"
+}
