@@ -3,7 +3,7 @@
 **Rolling brief — 2026-09-06.**
 [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status.
 
-**Current 2026-10-19 assignment:** [Descent and global obstructions](../05-knowledge/results/descent_and_global_obstructions_session_20261019.md); [preceding parabolic session](../05-knowledge/results/parabolic_scaling_session_20261019.md). Scoped proofs and open boundaries are mapped there; the September LRC orientation below is historical.
+**2026-10-19 assignment:** [Neglected connections](../05-knowledge/results/neglected_connections_session_20261019.md). Earlier: [descent](../05-knowledge/results/descent_and_global_obstructions_session_20261019.md), [parabolic](../05-knowledge/results/parabolic_scaling_session_20261019.md). Major conjectures remain open; the LRC orientation below is inherited.
 
 ## The five-minute orientation
 

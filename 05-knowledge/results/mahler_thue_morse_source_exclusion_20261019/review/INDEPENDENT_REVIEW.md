@@ -31,4 +31,4 @@ The equal-length recoding h(t)=ν(t), ν(0)=UV and ν(1)=VU, is valid because t=
 
 The all-parameter conclusions rest on the proofs, not extrapolation from these controls. Reproduce with `python3 -B verify_independent.py` and `python3 -B -O verify_independent.py`.
 
-The earlier receipt-scope wording issue was resolved by the author: regenerated receipts explicitly distinguish the finite computations from the cited analytic theorem. The general reset-loop statement should retain a direct link to its inherited safe-follower construction; the concrete 000/100 safety claim is fully self-contained.
+The earlier receipt-scope wording issue was resolved by the author: regenerated receipts explicitly distinguish the finite computations from the cited analytic theorem. The author subsequently added the exact THM-4072 path and Section 1 dependency to both notes and specified loops from initial state 0 back to 0. Those final clarifications have been checked and resolve the inherited-dependency wording concern. The concrete 000/100 safety claim remains fully self-contained.

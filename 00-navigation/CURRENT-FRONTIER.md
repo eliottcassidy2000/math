@@ -4,7 +4,7 @@
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
-**2026-10-19 current assignment:** [Descent and global obstructions](../05-knowledge/results/descent_and_global_obstructions_session_20261019.md) covers cofactor dynamics, scoped Collatz descent, section defects, Gold strategies, prime phases and inverse geometry. [Previous session](../05-knowledge/results/parabolic_scaling_session_20261019.md). Major conjectures remain open.
+**2026-10-19 assignment:** [Neglected connections](../05-knowledge/results/neglected_connections_session_20261019.md). Earlier: [descent](../05-knowledge/results/descent_and_global_obstructions_session_20261019.md), [parabolic](../05-knowledge/results/parabolic_scaling_session_20261019.md). Major conjectures remain open; the LRC orientation below is inherited.
 ## LRC(14)
 
 ### Headline
