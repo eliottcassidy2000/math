@@ -1,0 +1,27 @@
+{
+  "status": "ALL_SHARD_CERTIFICATES_REPLAYED",
+  "shard": 0,
+  "target": 16101,
+  "completed": 16101,
+  "last_position": 16100,
+  "last_core_index": 96426,
+  "orders": 175146,
+  "screen_orders": 6716399,
+  "hist": {
+    "one": 144530,
+    "two": 26893,
+    "dual": 3723
+  },
+  "committed_bytes": 3514093,
+  "dependencies": {
+    "run_shard.py": "528fa2419f5e727e251340dc202522f94f30ff79d252784c975f493d44d09bfc",
+    "scan_c0.py": "c011971e8fde6e3c83acd67401706a5e50469074ee2e8db00be46cdf8fcddee9",
+    "cone_engine.py": "d187f8532b35e18b7c10b78efaa87513cb8f69bf54aaa7ca09369e9a05524edf",
+    "exact_replay_engine.py": "2384c0a6b9df16f0ca49c71106f1273fe9ba809c91dccb82c2aa8c658b64780f",
+    "shard_plan.json": "4df19f2be7b9cd188b925bda376ee401987bc34f9397e6beb0770ca21b991adf",
+    "analytic_cover.json.gz": "d330b680458315d3bc89f0ffba391771a4e279e48d067c04c6b0e67b9daa16ce"
+  },
+  "start_unix": 1792401289.1611693,
+  "elapsed": 373.5965669155121,
+  "record_sha256": "cc0b0d596608ee9e87b85aaff56c876379c0c73ddf30752ae6587d9244e57333"
+}
