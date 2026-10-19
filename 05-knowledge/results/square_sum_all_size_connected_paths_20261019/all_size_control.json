@@ -1,0 +1,26 @@
+{
+  "N": 6294221,
+  "base_index": 2621,
+  "checks": 12588445,
+  "cycle_stored": false,
+  "k": 2,
+  "prescribed_edges": 4606,
+  "prescribed_paths": 2303,
+  "prescribed_vertices": 6909,
+  "retained_path": [
+    1,
+    3,
+    6
+  ],
+  "seed_edges": 2,
+  "status": "passed",
+  "threshold": 6294221,
+  "used_transitions": [
+    [
+      "Aminus",
+      1,
+      24,
+      []
+    ]
+  ]
+}
