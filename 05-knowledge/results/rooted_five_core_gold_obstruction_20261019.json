@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "vertices": 8,
+  "maximum_incomparability_degree": 5,
+  "extensions": 53,
+  "core_order_counts": [
+    4,
+    4,
+    4,
+    10,
+    10,
+    10,
+    4,
+    4,
+    1,
+    1,
+    1
+  ],
+  "core_first_comparison_certificates": [
+    {
+      "first": [
+        "b",
+        "x"
+      ],
+      "heavy_true": true,
+      "heavy_mass": 50,
+      "best_second_largest_cell": 32,
+      "all_second_largest_cells": [
+        50,
+        34,
+        32,
+        38,
+        36
+      ],
+      "best_heavy_branch_deficit": -29
+    },
+    {
+      "first": [
+        "x",
+        "z"
+      ],
+      "heavy_true": false,
+      "heavy_mass": 34,
+      "best_second_largest_cell": 20,
+      "all_second_largest_cells": [
+        34,
+        34,
+        20,
+        30,
+        24
+      ],
+      "best_heavy_branch_deficit": -1
+    },
+    {
+      "first": [
+        "x",
+        "y"
+      ],
+      "heavy_true": true,
+      "heavy_mass": 35,
+      "best_second_largest_cell": 20,
+      "all_second_largest_cells": [
+        32,
+        20,
+        35,
+        30,
+        20
+      ],
+      "best_heavy_branch_deficit": -2
+    },
+    {
+      "first": [
+        "z",
+        "y"
+      ],
+      "heavy_true": true,
+      "heavy_mass": 40,
+      "best_second_largest_cell": 25,
+      "all_second_largest_cells": [
+        38,
+        30,
+        30,
+        40,
+        25
+      ],
+      "best_heavy_branch_deficit": -12
+    },
+    {
+      "first": [
+        "y",
+        "a"
+      ],
+      "heavy_true": true,
+      "heavy_mass": 38,
+      "best_second_largest_cell": 20,
+      "all_second_largest_cells": [
+        36,
+        24,
+        20,
+        25,
+        38
+      ],
+      "best_heavy_branch_deficit": -5
+    }
+  ],
+  "best_core_adaptive_worst_path_deficit": -1,
+  "unrestricted_fixed_strategy": {
+    "first": [
+      "b",
+      "t2"
+    ],
+    "second": [
+      "z",
+      "t3"
+    ],
+    "quadrants": [
+      [
+        19,
+        3
+      ],
+      [
+        16,
+        15
+      ]
+    ],
+    "minimum_deficit": 6
+  }
+}
