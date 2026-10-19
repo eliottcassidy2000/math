@@ -1,0 +1,304 @@
+{
+  "unsupported_product": {
+    "prefix": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "suffix": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "coefficient": 36,
+    "extensions": 0
+  },
+  "status": "PASS",
+  "scope": "Exact nonnegative factorized boundary array; actual exterior realizability is not asserted",
+  "core": [
+    0,
+    28,
+    0,
+    0,
+    12,
+    12,
+    13,
+    125,
+    125
+  ],
+  "order": [
+    2,
+    3,
+    0,
+    4,
+    5,
+    6,
+    1,
+    7,
+    8
+  ],
+  "extensions": 408,
+  "supported_generators": 133,
+  "empty_normalizations": [
+    1,
+    1
+  ],
+  "prefix_increments": [
+    {
+      "word": [],
+      "value": 1
+    },
+    {
+      "word": [
+        2
+      ],
+      "value": 1
+    },
+    {
+      "word": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "value": 6
+    }
+  ],
+  "suffix_increments": [
+    {
+      "word": [],
+      "value": 1
+    },
+    {
+      "word": [
+        8
+      ],
+      "value": 1
+    },
+    {
+      "word": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "value": 6
+    }
+  ],
+  "all_unlisted_increments": 0,
+  "total_mass": 948,
+  "minimum_scaled_margin": 3,
+  "minimum_forward_probability": "211/316",
+  "pairs": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "before_mass": 867,
+      "scaled_margin": 705,
+      "probability": "289/316"
+    },
+    {
+      "pair": [
+        2,
+        0
+      ],
+      "before_mass": 732,
+      "scaled_margin": 300,
+      "probability": "61/79"
+    },
+    {
+      "pair": [
+        3,
+        0
+      ],
+      "before_mass": 660,
+      "scaled_margin": 84,
+      "probability": "55/79"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "before_mass": 633,
+      "scaled_margin": 3,
+      "probability": "211/316"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "before_mass": 714,
+      "scaled_margin": 246,
+      "probability": "119/158"
+    },
+    {
+      "pair": [
+        5,
+        1
+      ],
+      "before_mass": 714,
+      "scaled_margin": 246,
+      "probability": "119/158"
+    },
+    {
+      "pair": [
+        6,
+        1
+      ],
+      "before_mass": 633,
+      "scaled_margin": 3,
+      "probability": "211/316"
+    },
+    {
+      "pair": [
+        1,
+        7
+      ],
+      "before_mass": 660,
+      "scaled_margin": 84,
+      "probability": "55/79"
+    },
+    {
+      "pair": [
+        1,
+        8
+      ],
+      "before_mass": 732,
+      "scaled_margin": 300,
+      "probability": "61/79"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "before_mass": 636,
+      "scaled_margin": 12,
+      "probability": "53/79"
+    },
+    {
+      "pair": [
+        4,
+        5
+      ],
+      "before_mass": 633,
+      "scaled_margin": 3,
+      "probability": "211/316"
+    },
+    {
+      "pair": [
+        4,
+        6
+      ],
+      "before_mass": 708,
+      "scaled_margin": 228,
+      "probability": "59/79"
+    },
+    {
+      "pair": [
+        5,
+        6
+      ],
+      "before_mass": 633,
+      "scaled_margin": 3,
+      "probability": "211/316"
+    },
+    {
+      "pair": [
+        7,
+        8
+      ],
+      "before_mass": 636,
+      "scaled_margin": 12,
+      "probability": "53/79"
+    }
+  ],
+  "active_supported_products": [
+    {
+      "prefix": [],
+      "suffix": [],
+      "coefficient": 1,
+      "extensions": 408
+    },
+    {
+      "prefix": [],
+      "suffix": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "coefficient": 6,
+      "extensions": 10
+    },
+    {
+      "prefix": [],
+      "suffix": [
+        8
+      ],
+      "coefficient": 1,
+      "extensions": 156
+    },
+    {
+      "prefix": [
+        2
+      ],
+      "suffix": [],
+      "coefficient": 1,
+      "extensions": 156
+    },
+    {
+      "prefix": [
+        2
+      ],
+      "suffix": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "coefficient": 6,
+      "extensions": 4
+    },
+    {
+      "prefix": [
+        2
+      ],
+      "suffix": [
+        8
+      ],
+      "coefficient": 1,
+      "extensions": 60
+    },
+    {
+      "prefix": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "suffix": [],
+      "coefficient": 6,
+      "extensions": 10
+    },
+    {
+      "prefix": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "suffix": [
+        8
+      ],
+      "coefficient": 6,
+      "extensions": 4
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "core": [
+    0,
+    28,
+    0,
+    0,
+    12,
+    12,
+    13,
+    125,
+    125
+  ],
+  "order": [
+    2,
+    3,
+    0,
+    4,
+    5,
+    6,
+    1,
+    7,
+    8
+  ],
+  "U": [
+    {
+      "word": [],
+      "increment": 1
+    },
+    {
+      "word": [
+        2
+      ],
+      "increment": 1
+    },
+    {
+      "word": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "increment": 6
+    }
+  ],
+  "V": [
+    {
+      "word": [],
+      "increment": 1
+    },
+    {
+      "word": [
+        8
+      ],
+      "increment": 1
+    },
+    {
+      "word": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "increment": 6
+    }
+  ],
+  "all_unlisted_increments": 0,
+  "scope": "Free nonnegative factorized boundary array, not an actual exterior"
+}
