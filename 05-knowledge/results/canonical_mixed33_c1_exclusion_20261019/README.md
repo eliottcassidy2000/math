@@ -1,5 +1,7 @@
 # Canonical mixed (3,3,1) exclusion
 
+**Transport setup:** The oversized gzip certificate is stored losslessly as raw-byte parts. Before running the audit or replay commands below, run `python3 reconstruct_transport.py` from this directory. See [the transport instructions](TRANSPORT_README.md) for original hashes, part verification, and safe reconstruction.
+
 The theorem concerns roots selected by maximum strict-majority span and then maximum common-incomparable count. It does not claim an any-root exclusion or the full seven-thin conjecture.
 
 Read `canonical_mixed33_c1_exclusion_20261019.md` for the complete argument, external six-thin dependency, and the two relaxation obstacles that motivated the refinements.
