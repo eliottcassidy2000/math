@@ -1,0 +1,32 @@
+{
+  "checks": 8832,
+  "class_counts": [
+    1,
+    1,
+    1,
+    2,
+    4
+  ],
+  "direct_ranks": [
+    1,
+    0,
+    1,
+    1
+  ],
+  "embedding_d_through_source_order": 3,
+  "embedding_h_through_order": 4,
+  "oriented_graph_counts": [
+    1,
+    1,
+    3,
+    27,
+    729
+  ],
+  "padded_path_all_labelled_host_orders": [
+    1,
+    3,
+    5
+  ],
+  "scope": "Independent edge-set and bijection enumeration; no producer imports. Universal conclusions are supplied by the elementary proof.",
+  "status": "PASS"
+}

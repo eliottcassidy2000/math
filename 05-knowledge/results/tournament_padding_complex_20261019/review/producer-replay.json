@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "checks": 35,
+  "class_counts": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12
+  ],
+  "direct_ranks": [
+    1,
+    0,
+    1,
+    1,
+    3
+  ],
+  "predicted_rank_d5": 9,
+  "scope": "Exact class-space matrices through five-vertex hosts"
+}

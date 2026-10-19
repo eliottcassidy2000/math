@@ -1,0 +1,85 @@
+{
+  "scope": "Parent approved the proof and both independent audits. Publication changes only review status and precise source links. The review hash identifies the pre-publication proof bytes.",
+  "files": [
+    {
+      "path": "PADDING_COMPLEX.md",
+      "source_sha256": "5d864fcad7b47b836065adec1d4b97e8daae11951a310e4727c5323daddd8424",
+      "published_sha256": "cd61a0fb35a36e982f5115e4d54243ce27d6fdd3d5130a64ec5b37f0ea3be9b5",
+      "presentation_changes": [
+        {
+          "before": "**PROVED elementary identities**, with finite exact controls.",
+          "after": "**PROVED elementary identities**, with finite exact controls and [independent review](review/INDEPENDENT_REVIEW.md), plus a separate [algebra review](REVIEW_ALGEBRA.md)."
+        },
+        {
+          "before": "by Rédei's theorem.",
+          "after": "by Rédei's theorem; see the [primary modern treatment](https://arxiv.org/html/2510.10659v2), Sections 1 and 3, and [THM-4533](../../../01-canon/theorems/THM-4533-redei-graphs-parity-of-shaved-tournaments-and-u9.md)."
+        }
+      ]
+    },
+    {
+      "path": "verify_padding_complex.py",
+      "source_sha256": "7109b3bd94eaf1bfdc0dbe4f5a58e63ef757d99709cd6443e9738daee2bcef32",
+      "published_sha256": "7109b3bd94eaf1bfdc0dbe4f5a58e63ef757d99709cd6443e9738daee2bcef32",
+      "presentation_changes": []
+    },
+    {
+      "path": "receipt.json",
+      "source_sha256": "cde46c16f69230fe989b7e0b584ba047ac6e734eaf2bb5d0825c1374559f65ad",
+      "published_sha256": "cde46c16f69230fe989b7e0b584ba047ac6e734eaf2bb5d0825c1374559f65ad",
+      "presentation_changes": []
+    },
+    {
+      "path": "receipt_optimized.json",
+      "source_sha256": "cde46c16f69230fe989b7e0b584ba047ac6e734eaf2bb5d0825c1374559f65ad",
+      "published_sha256": "cde46c16f69230fe989b7e0b584ba047ac6e734eaf2bb5d0825c1374559f65ad",
+      "presentation_changes": []
+    },
+    {
+      "path": "REVIEW_ALGEBRA.md",
+      "source_sha256": "3e1b5b219c9d4261575036171724a8bc6d88e8b64098951c8500c68ce6c9f97f",
+      "published_sha256": "3e1b5b219c9d4261575036171724a8bc6d88e8b64098951c8500c68ce6c9f97f",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/INDEPENDENT_REVIEW.md",
+      "source_sha256": "0148d90690abe0b7321c1e376fb2c1898fc91086398a1e8c31fbcdd0c04fcb1e",
+      "published_sha256": "228ca48b204b76d62e50bd0c8423c179703bbffca3cce73514dba3f723ba96b3",
+      "presentation_changes": [
+        {
+          "before": "`session5-parity-operators/PADDING_COMPLEX.md`",
+          "after": "[the proof](../PADDING_COMPLEX.md)"
+        }
+      ]
+    },
+    {
+      "path": "review/independent_controls.py",
+      "source_sha256": "54ef9705efe11d51f1e0d0267588171f83bf92543993ce4f5d2415116b7e5175",
+      "published_sha256": "54ef9705efe11d51f1e0d0267588171f83bf92543993ce4f5d2415116b7e5175",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/receipt.json",
+      "source_sha256": "36edec1b7da2ee33e98dc7c2b6be74cf23fe5c02e7f60bb6daf357ada57e4cf5",
+      "published_sha256": "36edec1b7da2ee33e98dc7c2b6be74cf23fe5c02e7f60bb6daf357ada57e4cf5",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/receipt-optimized.json",
+      "source_sha256": "36edec1b7da2ee33e98dc7c2b6be74cf23fe5c02e7f60bb6daf357ada57e4cf5",
+      "published_sha256": "36edec1b7da2ee33e98dc7c2b6be74cf23fe5c02e7f60bb6daf357ada57e4cf5",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/producer-replay.json",
+      "source_sha256": "cde46c16f69230fe989b7e0b584ba047ac6e734eaf2bb5d0825c1374559f65ad",
+      "published_sha256": "cde46c16f69230fe989b7e0b584ba047ac6e734eaf2bb5d0825c1374559f65ad",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/producer-replay-optimized.json",
+      "source_sha256": "cde46c16f69230fe989b7e0b584ba047ac6e734eaf2bb5d0825c1374559f65ad",
+      "published_sha256": "cde46c16f69230fe989b7e0b584ba047ac6e734eaf2bb5d0825c1374559f65ad",
+      "presentation_changes": []
+    }
+  ]
+}
