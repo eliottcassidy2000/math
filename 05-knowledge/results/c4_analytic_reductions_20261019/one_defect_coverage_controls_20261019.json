@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "scope": "Exact finite controls and analytic coverage, not a complete c=4 exclusion.",
+  "injection_controls": {
+    "posets": 5231,
+    "zero_defect_ordered_pairs": 37169,
+    "extension_pair_controls": 3863727,
+    "rotation_images": 302064,
+    "one_extra_successor_ordered_pairs": 12873,
+    "one_extra_predecessor_ordered_pairs": 12873
+  },
+  "coverage_census": {
+    "degree_valid_cores": 79121,
+    "root_criterion_cores": 49317,
+    "any_pair_criterion_cores": 49592,
+    "residual_cores": 29529
+  },
+  "coverage_file": "c4_one_defect_analytic_coverage_20261019.json.gz",
+  "coverage_sha256": "4a00fdf0711057c92a2ddbd9a2737dab956a095ab58a542ac2b98acdb18bf585",
+  "degree_valid_catalogue_sha256": "4bd17845e2d931c28633c6b7733bc9846fd92817756e0721da198fb9e3cf7148",
+  "verifier_sha256": "3a8739977ca5f5684d3234a762fadbd6203cf23f8c03c009fce7d1ec8896cd11",
+  "dependency_sha256": "13337e5ef32725c1cb3ab482a1166fb12bcb1586f6cc2ba8cabd67e97aa90c75"
+}

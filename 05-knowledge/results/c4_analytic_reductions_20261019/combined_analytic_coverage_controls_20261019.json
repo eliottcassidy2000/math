@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "counts": {
+    "degree_valid_cores": 79121,
+    "ambient_balanced_pair_cores": 49592,
+    "max_span_directed_cores": 54235,
+    "union_analytic_cores": 56630,
+    "residual_cores": 22491
+  },
+  "coverage_file": "c4_combined_analytic_coverage_20261019.json.gz",
+  "coverage_sha256": "67909040567c881587eb38fa5a0bfa13e825a05c6af71963092196115eedb826",
+  "degree_valid_catalogue_sha256": "4bd17845e2d931c28633c6b7733bc9846fd92817756e0721da198fb9e3cf7148",
+  "previous_coverage_sha256": "4a00fdf0711057c92a2ddbd9a2737dab956a095ab58a542ac2b98acdb18bf585",
+  "builder_sha256": "e7edc3fcbc7aeab855601c82e7a1ca2a1754d056ae14c5653064960eaca17f9e"
+}

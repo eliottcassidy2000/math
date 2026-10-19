@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "scope": "Finite controls for separately proved structural lemmas; no complete c=4 theorem.",
+  "extension_map_controls": {
+    "natural_poset_counts_n_1_to_6": [
+      1,
+      2,
+      7,
+      40,
+      357,
+      4824
+    ],
+    "twin_pairs": 3679,
+    "twin_extensions_checked": 298102,
+    "near_twin_pairs": 5759,
+    "near_twin_extensions_checked": 402055,
+    "rotation_images_checked": 99159,
+    "maximum_observed_probability": "2/3",
+    "sharp_example": {
+      "pred": [
+        0,
+        1,
+        0
+      ],
+      "x": 0,
+      "z": 2,
+      "a": 1,
+      "p": "2/3"
+    }
+  },
+  "c4_structural_census": {
+    "all_canonical_cores": 96428,
+    "degree_valid_cores": 79121,
+    "twin_y_certificate": 13885,
+    "one_extra_upper_certificate": 21893,
+    "both_structural_certificates": 4210,
+    "either_structural_certificate": 31568,
+    "remaining_after_both": 47553
+  },
+  "coverage_file": "c4_saturated_near_twin_coverage_20261019.json.gz",
+  "coverage_sha256": "95cdda505c8eee5813d6d3789432b1bc0fa5916264d5e869330f8a1e698e2253",
+  "degree_valid_catalogue_sha256": "4bd17845e2d931c28633c6b7733bc9846fd92817756e0721da198fb9e3cf7148",
+  "verifier_sha256": "13337e5ef32725c1cb3ab482a1166fb12bcb1586f6cc2ba8cabd67e97aa90c75"
+}

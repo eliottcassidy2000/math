@@ -1,0 +1,58 @@
+{
+  "README.md": {
+    "bytes": 2453,
+    "sha256": "827107577d05101455b4dc9d0bf93a31280749756a81b2c8bc166e62122a0431"
+  },
+  "build_combined_c4_analytic_cover_20261019.py": {
+    "bytes": 3948,
+    "sha256": "e7edc3fcbc7aeab855601c82e7a1ca2a1754d056ae14c5653064960eaca17f9e"
+  },
+  "c4_combined_analytic_coverage_20261019.json.gz": {
+    "bytes": 608516,
+    "sha256": "67909040567c881587eb38fa5a0bfa13e825a05c6af71963092196115eedb826"
+  },
+  "c4_one_defect_analytic_coverage_20261019.json.gz": {
+    "bytes": 460295,
+    "sha256": "4a00fdf0711057c92a2ddbd9a2737dab956a095ab58a542ac2b98acdb18bf585"
+  },
+  "c4_saturated_near_twin_coverage_20261019.json.gz": {
+    "bytes": 177242,
+    "sha256": "95cdda505c8eee5813d6d3789432b1bc0fa5916264d5e869330f8a1e698e2253"
+  },
+  "combined_analytic_coverage_controls_20261019.json": {
+    "bytes": 665,
+    "sha256": "b7dc2f9e603a4d28742e8d6f38da2469f6ee170f0210de6136ee5499d006c0a2"
+  },
+  "max_span_directed_defect_reduction_20261019.md": {
+    "bytes": 2125,
+    "sha256": "d4a36a5a4a7ada2b7a83a747248171b3e99998e079a2d5fd4aa035c1b47d3ac4"
+  },
+  "one_defect_coverage_controls_20261019.json": {
+    "bytes": 977,
+    "sha256": "8eede76dc7d4af898a293b0296075f9069cf532b3bb64e55e8aa965dc347ca33"
+  },
+  "one_defect_exchange_reductions_20261019.md": {
+    "bytes": 7802,
+    "sha256": "2a062aea8903849474640db25dcfc5a3485c6a965d251a90c367d0ccace33be9"
+  },
+  "saturated_near_twin_balanced_pair_lemma_20261019.md": {
+    "bytes": 5222,
+    "sha256": "c001f173bab10c57970f2bdffe41eff854bb203775c73057b937c4e658642b6a"
+  },
+  "saturated_near_twin_lemma_controls_20261019.json": {
+    "bytes": 1268,
+    "sha256": "b673373904c219176ffa71806828bf88e61bde233003b9cb61385df4382e47e1"
+  },
+  "seven_thin_saturation_increment_lemma_20261019.md": {
+    "bytes": 6227,
+    "sha256": "2369610b84d27c367b2abf10dbb080dff2f6ec1500495ea0650409c98b2da243"
+  },
+  "verify_one_defect_coverage_20261019.py": {
+    "bytes": 6326,
+    "sha256": "3a8739977ca5f5684d3234a762fadbd6203cf23f8c03c009fce7d1ec8896cd11"
+  },
+  "verify_saturated_near_twin_lemma_20261019.py": {
+    "bytes": 8860,
+    "sha256": "13337e5ef32725c1cb3ab482a1166fb12bcb1586f6cc2ba8cabd67e97aa90c75"
+  }
+}
