@@ -1,0 +1,47 @@
+Petersen/K5 intersection identity: Q=A-I=J-B^T B=B^T((J5/4)-I)B
+spectrum Q: [(-3, 4), (0, 5), (2, 1)]
+integral basis: [(1, 2), (1, 3), (2, 3), (1, 4), (1, 5)] incidence determinant: -2 Gram determinant: 1
+Keel relations rank: 5 all annihilate B^T and Q
+integral Gram matrix: [[-1, 0, 0, 0, 0], [0, -1, 0, 0, 0], [0, 0, -1, 1, 1], [0, 0, 1, -1, 0], [0, 0, 1, 0, -1]]
+Geometric K5 vertices: five forgetful fibre classes F_i=1-e_i; intersections F^T H B=B.
+Petersen edge colors/reducible fibres: {1: 3, 2: 3, 3: 3, 4: 3, 5: 3}
+E4=A4: anticanonical square5; perpendicular sum-zero lattice;20 roots; negative A4 Cartan verified.
+K5 minor: contract five disjoint spokes a_i-b_i.
+K3,3 minor: delete a0; branch sets [[1, 2], [5, 8], [4, 9], [3], [6], [7]]
+Petersen contains no K5 or K3,3 subgraph: degree3 and triangle-free; a K3,3 subgraph would use all degrees and be a proper connected component.
+r=1: corners=10; Cartesian edges=15; all nonempty pair intersections=15; dimension histogram={0: 15}
+  actual boundary dual complex: 10 vertices, top dimension=1, reduced Euler=-6, top Betti=6
+  corner Gram: rank=5, nullity=5, signature=(1,4); full middle rank=5
+  K5 Cartesian-power minor: vertices=5, edges=10
+  explicit exact tensor spectrum: [(-3, 4), (0, 5), (2, 1)]
+r=2: corners=100; Cartesian edges=300; all nonempty pair intersections=750; dimension histogram={0: 450, 1: 300}
+  actual boundary dual complex: 20 vertices, top dimension=3, reduced Euler=-36, top Betti=36
+  corner Gram: rank=25, nullity=75, signature=(17,8); full middle rank=27
+  K5 Cartesian-power minor: vertices=25, edges=100
+  explicit exact tensor spectrum: [(-6, 8), (0, 75), (4, 1), (9, 16)]
+r=3: corners=1000; Cartesian edges=4500; all nonempty pair intersections=31500; dimension histogram={0: 13500, 1: 13500, 2: 4500}
+  actual boundary dual complex: 30 vertices, top dimension=5, reduced Euler=-216, top Betti=216
+  corner Gram: rank=125, nullity=875, signature=(49,76); full middle rank=155
+  K5 Cartesian-power minor: vertices=125, edges=750
+stable profile [5, 5]: N=8, codim=1, dimension=4, labelled strata=35
+stable profile [4, 5, 5]: N=10, codim=2, dimension=5, labelled strata=5775
+stable profile [3, 3, 5, 5]: N=10, codim=3, dimension=4, labelled strata=51975
+stable profile [3, 5, 5, 5]: N=12, codim=3, dimension=6, labelled strata=525525
+explicit N8: [5, 5]
+explicit N10: [5, 3, 3, 5]
+explicit N12: [3, 5, 5, 5]
+N12 central-trivalent star subfamily: 5775 strata (of 525525 total profile strata)
+N=8, weight cap=5: maximum number of Mbar0,5 stable-tree factors=2
+N=10, weight cap=7: maximum number of Mbar0,5 stable-tree factors=2
+N=12, weight cap=9: maximum number of Mbar0,5 stable-tree factors=3
+Brown N=8, odd order=[8, 2, 7, 3, 6, 4, 1, 5]: checked 119 stable splits; 20 cell facets all convergent
+  chosen Petersen-product stratum node orders (slope,constant): [(2, 1)]
+  therefore every ordinary logarithmic residue along these nodes is zero for integral exponent k>=0
+  N8 all 35 4|4 Petersen-square divisors, order histogram: {(-2, -1): 1, (-2, 0): 1, (-1, -1): 3, (-1, 0): 10, (0, 0): 6, (0, 1): 1, (1, 0): 1, (1, 1): 9, (2, 1): 2, (3, 2): 1}
+Brown N=10, odd order=[10, 2, 9, 3, 8, 4, 7, 5, 1, 6]: checked 501 stable splits; 35 cell facets all convergent
+  chosen Petersen-product stratum node orders (slope,constant): [(3, 2), (3, 2), (3, 2)]
+  therefore every ordinary logarithmic residue along these nodes is zero for integral exponent k>=0
+Brown N=12, odd order=[12, 2, 11, 3, 10, 4, 9, 5, 8, 6, 1, 7]: checked 2035 stable splits; 54 cell facets all convergent
+  chosen Petersen-product stratum node orders (slope,constant): [(3, 2), (1, 0), (3, 2)]
+  therefore every ordinary logarithmic residue along these nodes is zero for integral exponent k>=0
+ALL CHECKS PASSED
