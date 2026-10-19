@@ -1,0 +1,29 @@
+{
+  "status": "COMPLETE_EXACT_CERTIFIED_AND_INDEPENDENTLY_REPLAYED_UNION",
+  "core_total": 96428,
+  "degree_valid": 87137,
+  "analytic_hist": {
+    "balanced_pair": 27833,
+    "residual": 57686,
+    "cycle": 1618
+  },
+  "residual_cores": 57686,
+  "residual_orders": 476837,
+  "directed_screen_orders": 25542178,
+  "known_six_thin_short_span_orders": 8450,
+  "certificate_order_kinds": {
+    "one": 397286,
+    "two": 76315,
+    "dual": 3236
+  },
+  "distinct_certificates": 54408,
+  "maximum_integer_weight": 1941651185962341358890,
+  "cover_sha256": "288eb728e1603d41cf9b84d534aa75ae2e6c98a713a07dcdb7b85dc1aa5df420",
+  "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "shard_record_sha256": [
+    "76078bf8bb77377f36cc18525da4265f682a736c09ce2b375583b6070580fd83",
+    "53174ec16f8a2575d0589c68a23ab2f7b552e41bdc4f6ee8546ba1e040f6ddba",
+    "8d0a9fb0293edc68a053cbe1852ab9d413ae1103fa2a45cf86d70fdd42678ada",
+    "ad2c6014f18d047e73c571d2e73ed37202cb7c447c012a98b51a0f408519bcae"
+  ]
+}
