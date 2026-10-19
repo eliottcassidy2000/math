@@ -1,0 +1,960 @@
+{
+  "check_count": 4703,
+  "checks": {
+    "adjacent_square_sum": 31,
+    "auxiliary_non_ppt_three_adic_branch": 3,
+    "base_point_not_two_torsion": 1,
+    "base_point_on_curve": 1,
+    "chord_line_incidence": 31,
+    "distinct_path_labels": 1,
+    "exact_curve_discriminant": 1,
+    "exact_derivative_discriminant": 1,
+    "family_all_coefficients_strictly_positive": 3,
+    "family_arithmetic_progression_identity": 1,
+    "family_bezout_identity": 1,
+    "family_exact_positive_coefficient_array": 3,
+    "family_first_square_edge_identity": 1,
+    "family_fourth_parabolic_matrix": 1,
+    "family_interpolation_y_identity": 1,
+    "family_outer_parameter_bridge": 1,
+    "family_ppt_first_leg_identity": 1,
+    "family_ppt_hypotenuse_identity": 1,
+    "family_ppt_second_leg_identity": 1,
+    "family_pythagorean_identity": 1,
+    "family_sample_binary_agreement": 64,
+    "family_sample_distinct_orbit": 8,
+    "family_sample_first_triple": 8,
+    "family_sample_integer_edge": 56,
+    "family_sample_interpolation": 8,
+    "family_sample_nonsingular_point": 8,
+    "family_sample_positive_orbit": 64,
+    "family_sample_primitive_parameters": 8,
+    "family_sample_primitive_triangle": 8,
+    "family_sample_rational_edge": 56,
+    "family_sample_scaled_integer_labels": 8,
+    "family_sample_square_denominator": 64,
+    "family_second_square_edge_identity": 1,
+    "family_symbolic_modular_inheritance": 10,
+    "family_triangle_closing_edge_identity": 1,
+    "first_five_slopes": 1,
+    "first_six_abscissas": 1,
+    "full_chord_polynomial_identity": 31,
+    "good_reduction": 2,
+    "interpolated_point_on_cubic": 22,
+    "interpolated_second_abscissa": 22,
+    "interpolated_second_chord_slope": 22,
+    "interpolated_tangent_slope": 22,
+    "interpolated_third_abscissa": 22,
+    "interpolation_distinct_first_two": 22,
+    "interpolation_input_edges": 22,
+    "interpolation_nonzero_y": 22,
+    "length_at_least_six": 1,
+    "multiple_on_curve": 32,
+    "offset_cancellation": 1,
+    "order_mod_eleven": 1,
+    "order_mod_seven": 1,
+    "positive_abscissa": 32,
+    "ppt_cubic_factor_has_no_rational_root_candidates": 1,
+    "ppt_exact_bivariate_cubic_discriminant": 1,
+    "ppt_fifth_symbolic_chord_incidence": 1,
+    "ppt_first_five_symbolic_curve_points": 5,
+    "ppt_first_four_symbolic_edges": 4,
+    "ppt_first_four_symbolic_y_updates": 4,
+    "ppt_mod_three_denominator_exclusion": 8,
+    "ppt_numerator_remainder_mod_a_plus_two_b": 1,
+    "ppt_sample_coprimality": 372,
+    "ppt_sample_denominator_prime_conditions": 372,
+    "ppt_sample_exact_sixth_denominator": 372,
+    "ppt_sample_first_six_points": 2232,
+    "ppt_sample_lutz_nontorsion_certificate": 372,
+    "ppt_sixth_integral_short_model_identity": 1,
+    "ppt_sixth_symbolic_abscissa": 1,
+    "ppt_sixth_symbolic_curve_point": 1,
+    "ppt_sixth_symbolic_ordinate": 1,
+    "ppt_symbolic_chord_incidence": 3,
+    "ppt_symbolic_tangent": 1,
+    "recovers_seeded_curve_and_point": 1,
+    "retained_first_third_chord": 1,
+    "scaled_edge_root_integral": 62,
+    "scaled_edge_square_sum": 62,
+    "scaled_labels_integral": 5,
+    "scaled_labels_positive_distinct": 5,
+    "scaled_triangle_extra_edge": 5,
+    "scaling_changes_initial_labels": 1,
+    "sequential_vs_binary_multiplication": 32,
+    "singular_control_coefficients": 1,
+    "singular_control_factorization": 1,
+    "singularity_is_not_automatic": 1,
+    "six_prefix_requires_scaling": 1,
+    "square_reduced_x_denominator": 32,
+    "strict_monotonicity_positive_root": 1,
+    "torsion_order_divides_two": 1,
+    "unscaled_integer_five_path": 1
+  },
+  "common_square_scalings": [
+    {
+      "H": 1,
+      "H_bits": 1,
+      "edge_roots": [
+        62,
+        98,
+        80,
+        240
+      ],
+      "labels": [
+        482,
+        3362,
+        6242,
+        158,
+        57442
+      ],
+      "labels_sha256": "6da02bb020a5cbb7364de2399cce467e2d43cdb7eef63d741deefd87ff5f6ba2",
+      "maximum_label_bits": 16,
+      "vertices": 5
+    },
+    {
+      "H": 89,
+      "H_bits": 7,
+      "edge_roots": [
+        5518,
+        8722,
+        7120,
+        21360,
+        21522
+      ],
+      "labels": [
+        3817922,
+        26630402,
+        49442882,
+        1251518,
+        454998082,
+        8198402
+      ],
+      "labels_sha256": "d5063d06ba65d4d8b4700ef4802eeb96a131107002ad2f8987bd0ec90eea3bb1",
+      "maximum_label_bits": 29,
+      "vertices": 6
+    },
+    {
+      "H_bits": 20,
+      "labels_sha256": "e062ebdcf2135a1c3ce4eb9570ee2689ec5ee4206b762b21fca0b14bad73a9cb",
+      "maximum_label_bits": 55,
+      "vertices": 8
+    },
+    {
+      "H_bits": 206,
+      "labels_sha256": "8ac657641ac888d5783d3a8fa8143688e67e4d67d14f67ad81cea2912e38c718",
+      "maximum_label_bits": 428,
+      "vertices": 16
+    },
+    {
+      "H_bits": 1616,
+      "labels_sha256": "6ffc51ac6838ba60a0558b96680a466ea236f42fa300c3eb89ec2e556de1af16",
+      "maximum_label_bits": 3259,
+      "vertices": 32
+    }
+  ],
+  "curve": {
+    "P": [
+      482,
+      51840
+    ],
+    "a2": -482,
+    "a4": 6195836,
+    "a6": -299007352,
+    "derivative_discriminant": -73420736,
+    "discriminant": -14863179074355855360000
+  },
+  "first_five_slopes": [
+    "62",
+    "-98",
+    "80",
+    "240",
+    "-21522/89"
+  ],
+  "first_six_points": [
+    {
+      "n": 1,
+      "x": "482",
+      "y": "51840"
+    },
+    {
+      "n": 2,
+      "x": "3362",
+      "y": "-230400"
+    },
+    {
+      "n": 3,
+      "x": "6242",
+      "y": "512640"
+    },
+    {
+      "n": 4,
+      "x": "158",
+      "y": "-25920"
+    },
+    {
+      "n": 5,
+      "x": "57442",
+      "y": "-13722240"
+    },
+    {
+      "n": 6,
+      "x": "8198402/7921",
+      "y": "57731097600/704969"
+    }
+  ],
+  "general_primitive_ppt_certificate": {
+    "auxiliary_non_ppt_three_adic_samples": [
+      {
+        "a": 7,
+        "b": 1,
+        "d": 9,
+        "e": 2,
+        "v3_short_X6": -2
+      },
+      {
+        "a": 4,
+        "b": 7,
+        "d": 18,
+        "e": 2,
+        "v3_short_X6": -2
+      },
+      {
+        "a": 25,
+        "b": 1,
+        "d": 27,
+        "e": 3,
+        "v3_short_X6": -4
+      }
+    ],
+    "cubic_discriminant_factorization": "-65536*a^5*b^4*(a^3+6*a^2*b+14*a*b^2-2*b^3)",
+    "elliptic_discriminant_note": "The Weierstrass curve discriminant is 16 times the cubic discriminant.",
+    "exact_reduced_denominator_for_primitive_ppt": "((a+2*b)/gcd(a+2*b,2))^2",
+    "ordered_ppt_samples": 372,
+    "rational_root_candidate_values": {
+      "-1": -11,
+      "-2": -14,
+      "1": 19,
+      "2": 58
+    },
+    "sample_examples": [
+      {
+        "a": 3,
+        "b": 4,
+        "d": 11,
+        "exact_denominator": 121,
+        "short_X6": "15852/121",
+        "x6": "-94/121"
+      },
+      {
+        "a": 4,
+        "b": 3,
+        "d": 10,
+        "exact_denominator": 25,
+        "short_X6": "6924/25",
+        "x6": "386/25"
+      },
+      {
+        "a": 5,
+        "b": 12,
+        "d": 29,
+        "exact_denominator": 841,
+        "short_X6": "428268/841",
+        "x6": "7778/841"
+      },
+      {
+        "a": 12,
+        "b": 5,
+        "d": 22,
+        "exact_denominator": 121,
+        "short_X6": "311628/121",
+        "x6": "28898/121"
+      },
+      {
+        "a": 15,
+        "b": 8,
+        "d": 31,
+        "exact_denominator": 961,
+        "short_X6": "3888588/961",
+        "x6": "309698/961"
+      },
+      {
+        "a": 8,
+        "b": 15,
+        "d": 38,
+        "exact_denominator": 361,
+        "short_X6": "347628/361",
+        "x6": "-7342/361"
+      },
+      {
+        "a": 7,
+        "b": 24,
+        "d": 55,
+        "exact_denominator": 3025,
+        "short_X6": "7015116/3025",
+        "x6": "684674/3025"
+      },
+      {
+        "a": 24,
+        "b": 7,
+        "d": 38,
+        "exact_denominator": 361,
+        "short_X6": "3570348/361",
+        "x6": "385394/361"
+      }
+    ],
+    "short_model": {
+      "X": "9*x-3*A",
+      "Z": "27*y",
+      "a4": "81*U-27*A^2",
+      "a6": "729*V+243*A*U-54*A^3"
+    },
+    "status": "Exact identities in Z[a,b], finite modular implication, and finite PPT samples",
+    "x6_denominator": "(a+2*b)^2",
+    "x6_numerator_terms": [
+      {
+        "a_power": 0,
+        "b_power": 4,
+        "coefficient": 8
+      },
+      {
+        "a_power": 1,
+        "b_power": 3,
+        "coefficient": -24
+      },
+      {
+        "a_power": 2,
+        "b_power": 2,
+        "coefficient": 10
+      },
+      {
+        "a_power": 3,
+        "b_power": 1,
+        "coefficient": 8
+      },
+      {
+        "a_power": 4,
+        "b_power": 0,
+        "coefficient": 2
+      }
+    ]
+  },
+  "good_reduction_controls": {
+    "11": {
+      "affine_points": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          9,
+          8
+        ]
+      ],
+      "discriminant_residue": 7,
+      "order": 12
+    },
+    "7": {
+      "affine_points": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          5
+        ]
+      ],
+      "discriminant_residue": 5,
+      "order": 10
+    }
+  },
+  "height_observations_not_asymptotic_proof": [
+    {
+      "denominator_root_bits": 1,
+      "n": 1,
+      "x_bits": 9,
+      "y_bits": 16
+    },
+    {
+      "denominator_root_bits": 1,
+      "n": 2,
+      "x_bits": 12,
+      "y_bits": 18
+    },
+    {
+      "denominator_root_bits": 1,
+      "n": 3,
+      "x_bits": 13,
+      "y_bits": 19
+    },
+    {
+      "denominator_root_bits": 1,
+      "n": 4,
+      "x_bits": 8,
+      "y_bits": 15
+    },
+    {
+      "denominator_root_bits": 1,
+      "n": 5,
+      "x_bits": 16,
+      "y_bits": 24
+    },
+    {
+      "denominator_root_bits": 7,
+      "n": 6,
+      "x_bits": 23,
+      "y_bits": 36
+    },
+    {
+      "denominator_root_bits": 8,
+      "n": 7,
+      "x_bits": 26,
+      "y_bits": 40
+    },
+    {
+      "denominator_root_bits": 6,
+      "n": 8,
+      "x_bits": 25,
+      "y_bits": 37
+    },
+    {
+      "denominator_root_bits": 14,
+      "n": 9,
+      "x_bits": 34,
+      "y_bits": 50
+    },
+    {
+      "denominator_root_bits": 15,
+      "n": 10,
+      "x_bits": 43,
+      "y_bits": 64
+    },
+    {
+      "denominator_root_bits": 21,
+      "n": 11,
+      "x_bits": 52,
+      "y_bits": 79
+    },
+    {
+      "denominator_root_bits": 22,
+      "n": 12,
+      "x_bits": 53,
+      "y_bits": 81
+    },
+    {
+      "denominator_root_bits": 27,
+      "n": 13,
+      "x_bits": 68,
+      "y_bits": 102
+    },
+    {
+      "denominator_root_bits": 35,
+      "n": 14,
+      "x_bits": 76,
+      "y_bits": 117
+    },
+    {
+      "denominator_root_bits": 36,
+      "n": 15,
+      "x_bits": 85,
+      "y_bits": 127
+    },
+    {
+      "denominator_root_bits": 40,
+      "n": 16,
+      "x_bits": 92,
+      "y_bits": 138
+    },
+    {
+      "denominator_root_bits": 49,
+      "n": 17,
+      "x_bits": 107,
+      "y_bits": 163
+    },
+    {
+      "denominator_root_bits": 48,
+      "n": 18,
+      "x_bits": 123,
+      "y_bits": 184
+    },
+    {
+      "denominator_root_bits": 62,
+      "n": 19,
+      "x_bits": 133,
+      "y_bits": 202
+    },
+    {
+      "denominator_root_bits": 64,
+      "n": 20,
+      "x_bits": 139,
+      "y_bits": 209
+    },
+    {
+      "denominator_root_bits": 75,
+      "n": 21,
+      "x_bits": 163,
+      "y_bits": 244
+    },
+    {
+      "denominator_root_bits": 83,
+      "n": 22,
+      "x_bits": 174,
+      "y_bits": 264
+    },
+    {
+      "denominator_root_bits": 88,
+      "n": 23,
+      "x_bits": 192,
+      "y_bits": 288
+    },
+    {
+      "denominator_root_bits": 96,
+      "n": 24,
+      "x_bits": 201,
+      "y_bits": 302
+    },
+    {
+      "denominator_root_bits": 106,
+      "n": 25,
+      "x_bits": 222,
+      "y_bits": 333
+    },
+    {
+      "denominator_root_bits": 116,
+      "n": 26,
+      "x_bits": 245,
+      "y_bits": 367
+    },
+    {
+      "denominator_root_bits": 125,
+      "n": 27,
+      "x_bits": 255,
+      "y_bits": 384
+    },
+    {
+      "denominator_root_bits": 131,
+      "n": 28,
+      "x_bits": 274,
+      "y_bits": 411
+    },
+    {
+      "denominator_root_bits": 145,
+      "n": 29,
+      "x_bits": 300,
+      "y_bits": 450
+    },
+    {
+      "denominator_root_bits": 154,
+      "n": 30,
+      "x_bits": 317,
+      "y_bits": 476
+    },
+    {
+      "denominator_root_bits": 163,
+      "n": 31,
+      "x_bits": 342,
+      "y_bits": 513
+    },
+    {
+      "denominator_root_bits": 172,
+      "n": 32,
+      "x_bits": 351,
+      "y_bits": 530
+    }
+  ],
+  "infinite_ppt_family_certificate": {
+    "L_fourth_power": [
+      [
+        5,
+        -4
+      ],
+      [
+        4,
+        -3
+      ]
+    ],
+    "all_polynomials": {
+      "A": [
+        482,
+        2944,
+        6484,
+        6176,
+        2162
+      ],
+      "B": [
+        3362,
+        16400,
+        30004,
+        24400,
+        7442
+      ],
+      "C_label": [
+        6242,
+        29856,
+        53524,
+        42624,
+        12722
+      ],
+      "U": [
+        6195836,
+        57654656,
+        233849264,
+        539751168,
+        774977576,
+        708326272,
+        402130224,
+        129513984,
+        18093116
+      ],
+      "V": [
+        -299007352,
+        -8974023936,
+        -88616121872,
+        -465807661952,
+        -1540102485064,
+        -3461402023936,
+        -5494932857312,
+        -6256099417344,
+        -5094172876424,
+        -2902177296128,
+        -1100255644432,
+        -249542740864,
+        -25624171192
+      ],
+      "Y": [
+        51840,
+        357408,
+        1024960,
+        1564864,
+        1341440,
+        612128,
+        116160
+      ],
+      "a": [
+        9,
+        20,
+        11
+      ],
+      "b": [
+        40,
+        98,
+        60
+      ],
+      "hypotenuse": [
+        41,
+        100,
+        61
+      ],
+      "s1": [
+        62,
+        156,
+        98
+      ],
+      "s2": [
+        -98,
+        -236,
+        -142
+      ]
+    },
+    "coefficient_order": "ascending degree in T",
+    "finite_sample_paths": [
+      {
+        "T": 0,
+        "T_step": 2,
+        "family_index": 0,
+        "m": 5,
+        "maximum_scaled_label_bits": 55,
+        "n": 4,
+        "ppt": [
+          9,
+          40,
+          41
+        ],
+        "scale_root_bits": 20,
+        "seed_labels": [
+          482,
+          3362,
+          6242
+        ],
+        "tested_vertices": 8
+      },
+      {
+        "T": 2,
+        "T_step": 2,
+        "family_index": 1,
+        "m": 17,
+        "maximum_scaled_label_bits": 83,
+        "n": 14,
+        "ppt": [
+          93,
+          476,
+          485
+        ],
+        "scale_root_bits": 30,
+        "seed_labels": [
+          116306,
+          470450,
+          824594
+        ],
+        "tested_vertices": 8
+      },
+      {
+        "T": 4,
+        "T_step": 2,
+        "family_index": 2,
+        "m": 29,
+        "maximum_scaled_label_bits": 96,
+        "n": 24,
+        "ppt": [
+          265,
+          1392,
+          1417
+        ],
+        "scale_root_bits": 35,
+        "seed_labels": [
+          1064738,
+          4015778,
+          6966818
+        ],
+        "tested_vertices": 8
+      },
+      {
+        "T": 10,
+        "T_step": 2,
+        "family_index": 5,
+        "m": 65,
+        "maximum_scaled_label_bits": 114,
+        "n": 54,
+        "ppt": [
+          1309,
+          7020,
+          7141
+        ],
+        "scale_root_bits": 42,
+        "seed_labels": [
+          28474322,
+          101987762,
+          175501202
+        ],
+        "tested_vertices": 8
+      },
+      {
+        "T": 0,
+        "T_step": 154,
+        "family_index": 0,
+        "m": 5,
+        "maximum_scaled_label_bits": 55,
+        "n": 4,
+        "ppt": [
+          9,
+          40,
+          41
+        ],
+        "scale_root_bits": 20,
+        "seed_labels": [
+          482,
+          3362,
+          6242
+        ],
+        "tested_vertices": 8
+      },
+      {
+        "T": 154,
+        "T_step": 154,
+        "family_index": 1,
+        "m": 929,
+        "maximum_scaled_label_bits": 176,
+        "n": 774,
+        "ppt": [
+          263965,
+          1438092,
+          1462117
+        ],
+        "scale_root_bits": 65,
+        "seed_labels": [
+          1238724605138,
+          4275572243378,
+          7312419881618
+        ],
+        "tested_vertices": 8
+      },
+      {
+        "T": 308,
+        "T_step": 154,
+        "family_index": 2,
+        "m": 1853,
+        "maximum_scaled_label_bits": 192,
+        "n": 1544,
+        "ppt": [
+          1049673,
+          5722064,
+          5817545
+        ],
+        "scale_root_bits": 71,
+        "seed_labels": [
+          19637290973474,
+          67687659654050,
+          115738028334626
+        ],
+        "tested_vertices": 8
+      },
+      {
+        "T": 770,
+        "T_step": 154,
+        "family_index": 5,
+        "m": 4625,
+        "maximum_scaled_label_bits": 213,
+        "n": 3854,
+        "ppt": [
+          6537309,
+          35649500,
+          36243941
+        ],
+        "scale_root_bits": 79,
+        "seed_labels": [
+          762832140858962,
+          2627246518422962,
+          4491660895986962
+        ],
+        "tested_vertices": 8
+      }
+    ],
+    "positive_coefficient_certificates": {
+      "3U_minus_A_squared": [
+        18355184,
+        170125952,
+        686630080,
+        1575122048,
+        2244442016,
+        2032158592,
+        1140210880,
+        361836928,
+        49605104
+      ],
+      "A": [
+        482,
+        2944,
+        6484,
+        6176,
+        2162
+      ],
+      "minus_V": [
+        299007352,
+        8974023936,
+        88616121872,
+        465807661952,
+        1540102485064,
+        3461402023936,
+        5494932857312,
+        6256099417344,
+        5094172876424,
+        2902177296128,
+        1100255644432,
+        249542740864,
+        25624171192
+      ]
+    },
+    "symbolic_reductions_after_T_equals_154k": {
+      "11": {
+        "Px": 9,
+        "Py": 8,
+        "a2": 2,
+        "a4": 9,
+        "a6": 5
+      },
+      "7": {
+        "Px": 6,
+        "Py": 5,
+        "a2": 1,
+        "a4": 3,
+        "a6": 0
+      }
+    }
+  },
+  "length": 32,
+  "scope": "The rational path preserves the exact triple. Integer scaling preserves a square-scaled copy; it changes the initial labels for prefixes of length at least six.",
+  "singular_interpolation_counterexample": {
+    "A_B_C": [
+      14,
+      11,
+      110
+    ],
+    "Y": 24,
+    "a2_a4_a6": [
+      -14,
+      44,
+      -40
+    ],
+    "factorization": "(x-2)^2(x-10)",
+    "slopes": [
+      5,
+      11
+    ]
+  },
+  "status": "FINITE-EXACT; standard library; checks active under python -O"
+}
