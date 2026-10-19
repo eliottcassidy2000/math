@@ -1,0 +1,118 @@
+{
+  "status": "FINITE-EXACT",
+  "universe": "M=2..5,F=1..4; complete breadth-first subset automaton without pruning",
+  "rows": [
+    {
+      "M": 2,
+      "F": 1,
+      "shortest_length": 1,
+      "lexicographic_first_word": "1",
+      "visited_subset_states": 2
+    },
+    {
+      "M": 2,
+      "F": 2,
+      "shortest_length": 2,
+      "lexicographic_first_word": "10",
+      "visited_subset_states": 4
+    },
+    {
+      "M": 2,
+      "F": 3,
+      "shortest_length": 3,
+      "lexicographic_first_word": "100",
+      "visited_subset_states": 8
+    },
+    {
+      "M": 2,
+      "F": 4,
+      "shortest_length": 4,
+      "lexicographic_first_word": "1000",
+      "visited_subset_states": 16
+    },
+    {
+      "M": 3,
+      "F": 1,
+      "shortest_length": 2,
+      "lexicographic_first_word": "11",
+      "visited_subset_states": 3
+    },
+    {
+      "M": 3,
+      "F": 2,
+      "shortest_length": 4,
+      "lexicographic_first_word": "1010",
+      "visited_subset_states": 13
+    },
+    {
+      "M": 3,
+      "F": 3,
+      "shortest_length": 6,
+      "lexicographic_first_word": "100100",
+      "visited_subset_states": 45
+    },
+    {
+      "M": 3,
+      "F": 4,
+      "shortest_length": 8,
+      "lexicographic_first_word": "10001000",
+      "visited_subset_states": 148
+    },
+    {
+      "M": 4,
+      "F": 1,
+      "shortest_length": 3,
+      "lexicographic_first_word": "111",
+      "visited_subset_states": 4
+    },
+    {
+      "M": 4,
+      "F": 2,
+      "shortest_length": 6,
+      "lexicographic_first_word": "010110",
+      "visited_subset_states": 34
+    },
+    {
+      "M": 4,
+      "F": 3,
+      "shortest_length": 7,
+      "lexicographic_first_word": "1110100",
+      "visited_subset_states": 155
+    },
+    {
+      "M": 4,
+      "F": 4,
+      "shortest_length": 9,
+      "lexicographic_first_word": "010111000",
+      "visited_subset_states": 647
+    },
+    {
+      "M": 5,
+      "F": 1,
+      "shortest_length": 4,
+      "lexicographic_first_word": "1111",
+      "visited_subset_states": 5
+    },
+    {
+      "M": 5,
+      "F": 2,
+      "shortest_length": 8,
+      "lexicographic_first_word": "01001110",
+      "visited_subset_states": 76
+    },
+    {
+      "M": 5,
+      "F": 3,
+      "shortest_length": 9,
+      "lexicographic_first_word": "011101100",
+      "visited_subset_states": 498
+    },
+    {
+      "M": 5,
+      "F": 4,
+      "shortest_length": 12,
+      "lexicographic_first_word": "001001101000",
+      "visited_subset_states": 3226
+    }
+  ]
+}

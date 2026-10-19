@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checks": {
+    "rigidity_universe": 97655,
+    "rigidity_endpoint": 127,
+    "embedding": 82068,
+    "maximum_drop": 82068,
+    "lucas": 237228,
+    "sparse_defect_formula": 237228,
+    "sparse_bound": 237228,
+    "dyadic_sharpness": 168,
+    "neighbor_trace": 236928,
+    "inverse_pascal_trace": 258,
+    "arbitrary_word_embedding": 46778,
+    "first_bit_necessary": 62,
+    "first_bit_drop": 23389,
+    "negative_binomial_tail": 2952,
+    "fair_exact_mixing": 254,
+    "fixed_word_bijection": 254,
+    "zero_input_nonabsorption": 1,
+    "noninteger_nonabsorption": 1
+  }
+}
