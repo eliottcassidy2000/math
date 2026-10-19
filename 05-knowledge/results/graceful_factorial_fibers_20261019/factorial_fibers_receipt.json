@@ -1,0 +1,52 @@
+{
+  "checks": 222652,
+  "exact_arithmetic_and_graph_checks": [
+    {
+      "arithmetic_states": 2,
+      "distance_pairs_checked": 4,
+      "k": 1,
+      "m": 3,
+      "one_color_components": 1,
+      "two_color_diameter": 1
+    },
+    {
+      "arithmetic_states": 8,
+      "distance_pairs_checked": 64,
+      "k": 2,
+      "m": 8,
+      "one_color_components": 2,
+      "two_color_diameter": 1
+    },
+    {
+      "arithmetic_states": 48,
+      "distance_pairs_checked": 2304,
+      "k": 3,
+      "m": 15,
+      "one_color_components": 6,
+      "two_color_diameter": 2
+    },
+    {
+      "arithmetic_states": 384,
+      "distance_pairs_checked": 147456,
+      "k": 4,
+      "m": 24,
+      "one_color_components": 24,
+      "two_color_diameter": 3
+    },
+    {
+      "arithmetic_states": 3840,
+      "distance_pairs_checked": 0,
+      "k": 5,
+      "m": 35,
+      "one_color_components": "not enumerated",
+      "two_color_diameter": null
+    }
+  ],
+  "large_construction_k_max": 30,
+  "limitations": "All-pairs graph distances independently enumerated only for k<=4; all-k theorem is proved in the note. No Graceful Tree Conjecture or global one-color closure is claimed.",
+  "sha256": {
+    "GRACEFUL_FACTORIAL_FIBERS.md": "2169b1b85982fbe26a93b906c27a61aabfc7c544ecce9d901e8828bf1a18266d",
+    "verify_factorial_fibers.py": "c01ffd8a0d8f0b5f7ff9be24c27a888008ed71dba712a8adf9a0e9b1a411fc85"
+  },
+  "status": "PASS"
+}

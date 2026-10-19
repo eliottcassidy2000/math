@@ -1,0 +1,91 @@
+{
+  "source_directory": "session5-graphs",
+  "review": "Independently reviewed and approved by coordinating parent before publication. Mathematical proof content is preserved; listed edits update reviewed status, links, and package-relative reproduction paths.",
+  "files": [
+    {
+      "path": "GRACEFUL_FACTORIAL_FIBERS.md",
+      "source_sha256": "dfa1256b7ec5c6f77912013b8c01716f97ec09ec37977784054b3e444973b107",
+      "published_sha256": "2169b1b85982fbe26a93b906c27a61aabfc7c544ecce9d901e8828bf1a18266d",
+      "presentation_changes": [
+        {
+          "before": "Status: **PROVED**, with independent finite controls below.",
+          "after": "Status: **PROVED**, with [independent review](review-algebra/REVIEW.md) and exact finite controls below."
+        },
+        {
+          "before": "`05-knowledge/results/graceful_fiber_obstructions_20261019.md`",
+          "after": "[the frozen-fiber obstruction note](../graceful_fiber_obstructions_20261019.md)"
+        },
+        {
+          "before": "`graceful_two_color_buffer_20261019/GRACEFUL_TWO_COLOR_BUFFER.md`",
+          "after": "[two-color buffer](../graceful_two_color_buffer_20261019/GRACEFUL_TWO_COLOR_BUFFER.md)"
+        },
+        {
+          "before": "`graceful_upper_tail_two_color_connectivity_20261019/UPPER_TAIL_TWO_COLOR_CONNECTIVITY.md`",
+          "after": "[upper-tail connectivity](../graceful_upper_tail_two_color_connectivity_20261019/UPPER_TAIL_TWO_COLOR_CONNECTIVITY.md)"
+        },
+        {
+          "before": "`graceful_three_color_release_20261019/THREE_COLOR_RELEASE_DICHOTOMY.md`",
+          "after": "[three-color release](../graceful_three_color_release_20261019/THREE_COLOR_RELEASE_DICHOTOMY.md)"
+        }
+      ]
+    },
+    {
+      "path": "verify_factorial_fibers.py",
+      "source_sha256": "c01ffd8a0d8f0b5f7ff9be24c27a888008ed71dba712a8adf9a0e9b1a411fc85",
+      "published_sha256": "c01ffd8a0d8f0b5f7ff9be24c27a888008ed71dba712a8adf9a0e9b1a411fc85",
+      "presentation_changes": []
+    },
+    {
+      "path": "factorial_fibers_receipt.json",
+      "source_sha256": "a0c064dabb1d2a069b374dfb7d415fb861290629bc95dff970c3fa13275ae33e",
+      "published_sha256": "19eea4456c427d35a2c90e40cb55d18a92dabb7102d44e0798108f4d92dcf4a6",
+      "presentation_changes": [
+        {
+          "field": "sha256.GRACEFUL_FACTORIAL_FIBERS.md",
+          "reason": "Fresh replay updates only the self-reported paper hash after presentation-only links/status edits; every mathematical receipt value is identical."
+        }
+      ]
+    },
+    {
+      "path": "factorial_fibers_receipt.optimized.json",
+      "source_sha256": "a0c064dabb1d2a069b374dfb7d415fb861290629bc95dff970c3fa13275ae33e",
+      "published_sha256": "19eea4456c427d35a2c90e40cb55d18a92dabb7102d44e0798108f4d92dcf4a6",
+      "presentation_changes": [
+        {
+          "field": "sha256.GRACEFUL_FACTORIAL_FIBERS.md",
+          "reason": "Fresh replay updates only the self-reported paper hash after presentation-only links/status edits; every mathematical receipt value is identical."
+        }
+      ]
+    },
+    {
+      "path": "review-algebra/REVIEW.md",
+      "source_sha256": "3bffc8895c447ebdc97a04637fe085193af22e28147d9d387023ebdfc90bd711",
+      "published_sha256": "3bffc8895c447ebdc97a04637fe085193af22e28147d9d387023ebdfc90bd711",
+      "presentation_changes": []
+    },
+    {
+      "path": "review-algebra/independent_metric_check.py",
+      "source_sha256": "50a12c4032fe7536ff267f94337ad512494bcc27b3a707b48d55f28bbdeb357d",
+      "published_sha256": "50a12c4032fe7536ff267f94337ad512494bcc27b3a707b48d55f28bbdeb357d",
+      "presentation_changes": []
+    },
+    {
+      "path": "review-algebra/independent_metric_receipt.json",
+      "source_sha256": "7fa07eff9143a2909a8639aeec6cc15ccfe0536e2e02445db86950e62c79f04b",
+      "published_sha256": "7fa07eff9143a2909a8639aeec6cc15ccfe0536e2e02445db86950e62c79f04b",
+      "presentation_changes": []
+    },
+    {
+      "path": "reviewed-original-receipts/factorial_fibers_receipt.json",
+      "source_sha256": "a0c064dabb1d2a069b374dfb7d415fb861290629bc95dff970c3fa13275ae33e",
+      "published_sha256": "a0c064dabb1d2a069b374dfb7d415fb861290629bc95dff970c3fa13275ae33e",
+      "presentation_changes": []
+    },
+    {
+      "path": "reviewed-original-receipts/factorial_fibers_receipt.optimized.json",
+      "source_sha256": "a0c064dabb1d2a069b374dfb7d415fb861290629bc95dff970c3fa13275ae33e",
+      "published_sha256": "a0c064dabb1d2a069b374dfb7d415fb861290629bc95dff970c3fa13275ae33e",
+      "presentation_changes": []
+    }
+  ]
+}
