@@ -1,0 +1,349 @@
+{
+  "status": "PASS",
+  "check_count": 100,
+  "checks": [
+    "parabola invariant",
+    "parabola Jacobian",
+    "parabola x vector field",
+    "parabola y vector field",
+    "parabola exponential jet 3",
+    "parabola exponential jet 4",
+    "parabola exponential jet 5",
+    "parabola exponential jet 6",
+    "parabola exponential jet 7",
+    "perturbation exact first discrepancy M=3",
+    "isolated critical ideal M=3",
+    "perturbation exact first discrepancy M=4",
+    "isolated critical ideal M=4",
+    "perturbation exact first discrepancy M=5",
+    "isolated critical ideal M=5",
+    "perturbation exact first discrepancy M=6",
+    "isolated critical ideal M=6",
+    "perturbation exact first discrepancy M=7",
+    "isolated critical ideal M=7",
+    "perturbation exact first discrepancy M=8",
+    "isolated critical ideal M=8",
+    "perturbation exact first discrepancy M=9",
+    "isolated critical ideal M=9",
+    "Henon tangent identity",
+    "Henon Jacobian",
+    "Henon square",
+    "quadratic sl2 bracket",
+    "common invariant bracket",
+    "jet residual divergence N=2,r=2",
+    "jet potential N=2,r=2",
+    "fixed-factor completion N=2,r=2",
+    "final fixed-factor jet N=2",
+    "jet residual divergence N=3,r=2",
+    "jet potential N=3,r=2",
+    "fixed-factor completion N=3,r=2",
+    "jet residual divergence N=3,r=3",
+    "jet potential N=3,r=3",
+    "fixed-factor completion N=3,r=3",
+    "final fixed-factor jet N=3",
+    "jet residual divergence N=4,r=2",
+    "jet potential N=4,r=2",
+    "fixed-factor completion N=4,r=2",
+    "jet residual divergence N=4,r=3",
+    "jet potential N=4,r=3",
+    "fixed-factor completion N=4,r=3",
+    "jet residual divergence N=4,r=4",
+    "jet potential N=4,r=4",
+    "fixed-factor completion N=4,r=4",
+    "final fixed-factor jet N=4",
+    "jet residual divergence N=5,r=2",
+    "jet potential N=5,r=2",
+    "fixed-factor completion N=5,r=2",
+    "jet residual divergence N=5,r=3",
+    "jet potential N=5,r=3",
+    "fixed-factor completion N=5,r=3",
+    "jet residual divergence N=5,r=4",
+    "jet potential N=5,r=4",
+    "fixed-factor completion N=5,r=4",
+    "jet residual divergence N=5,r=5",
+    "jet potential N=5,r=5",
+    "fixed-factor completion N=5,r=5",
+    "final fixed-factor jet N=5",
+    "jet residual divergence N=6,r=2",
+    "jet potential N=6,r=2",
+    "fixed-factor completion N=6,r=2",
+    "jet residual divergence N=6,r=3",
+    "jet potential N=6,r=3",
+    "fixed-factor completion N=6,r=3",
+    "jet residual divergence N=6,r=4",
+    "jet potential N=6,r=4",
+    "fixed-factor completion N=6,r=4",
+    "jet residual divergence N=6,r=5",
+    "jet potential N=6,r=5",
+    "fixed-factor completion N=6,r=5",
+    "jet residual divergence N=6,r=6",
+    "jet potential N=6,r=6",
+    "fixed-factor completion N=6,r=6",
+    "final fixed-factor jet N=6",
+    "jet residual divergence N=7,r=2",
+    "jet potential N=7,r=2",
+    "fixed-factor completion N=7,r=2",
+    "jet residual divergence N=7,r=3",
+    "jet potential N=7,r=3",
+    "fixed-factor completion N=7,r=3",
+    "jet residual divergence N=7,r=4",
+    "jet potential N=7,r=4",
+    "fixed-factor completion N=7,r=4",
+    "jet residual divergence N=7,r=5",
+    "jet potential N=7,r=5",
+    "fixed-factor completion N=7,r=5",
+    "jet residual divergence N=7,r=6",
+    "jet potential N=7,r=6",
+    "fixed-factor completion N=7,r=6",
+    "jet residual divergence N=7,r=7",
+    "jet potential N=7,r=7",
+    "fixed-factor completion N=7,r=7",
+    "final fixed-factor jet N=7",
+    "Henon log divergence to available order",
+    "Henon log cubic",
+    "Henon log quartic"
+  ],
+  "fixed_direction_examples": [
+    {
+      "N": 2,
+      "max_factors": 4,
+      "degree_bound": 16,
+      "profiles": [
+        {
+          "2": "5/2"
+        },
+        {
+          "2": "3/2"
+        },
+        {
+          "2": "-3/2"
+        },
+        {
+          "2": "1/2"
+        }
+      ]
+    },
+    {
+      "N": 3,
+      "max_factors": 5,
+      "degree_bound": 243,
+      "profiles": [
+        {
+          "2": "5/2",
+          "3": "713/144"
+        },
+        {
+          "2": "3/2",
+          "3": "-149/9"
+        },
+        {
+          "2": "-3/2",
+          "3": "367/24"
+        },
+        {
+          "2": "1/2",
+          "3": "-74/9"
+        },
+        {
+          "3": "221/144"
+        }
+      ]
+    },
+    {
+      "N": 4,
+      "max_factors": 6,
+      "degree_bound": 4096,
+      "profiles": [
+        {
+          "2": "5/2",
+          "3": "713/144",
+          "4": "-341267/17280"
+        },
+        {
+          "2": "3/2",
+          "3": "-149/9",
+          "4": "291829/3456"
+        },
+        {
+          "2": "-3/2",
+          "3": "367/24",
+          "4": "-18505/1728"
+        },
+        {
+          "2": "1/2",
+          "3": "-74/9",
+          "4": "57863/1728"
+        },
+        {
+          "3": "221/144",
+          "4": "-31903/3456"
+        },
+        {
+          "4": "23857/17280"
+        }
+      ]
+    },
+    {
+      "N": 5,
+      "max_factors": 7,
+      "degree_bound": 78125,
+      "profiles": [
+        {
+          "2": "5/2",
+          "3": "713/144",
+          "4": "-341267/17280",
+          "5": "-365230969/31104000"
+        },
+        {
+          "2": "3/2",
+          "3": "-149/9",
+          "4": "291829/3456",
+          "5": "-3164990147/10368000"
+        },
+        {
+          "2": "-3/2",
+          "3": "367/24",
+          "4": "-18505/1728",
+          "5": "-884577607/2073600"
+        },
+        {
+          "2": "1/2",
+          "3": "-74/9",
+          "4": "57863/1728",
+          "5": "203799971/3110400"
+        },
+        {
+          "3": "221/144",
+          "4": "-31903/3456",
+          "5": "-196414181/2073600"
+        },
+        {
+          "4": "23857/17280",
+          "5": "326068913/10368000"
+        },
+        {
+          "5": "-142291219/31104000"
+        }
+      ]
+    },
+    {
+      "N": 6,
+      "max_factors": 8,
+      "degree_bound": 1679616,
+      "profiles": [
+        {
+          "2": "5/2",
+          "3": "713/144",
+          "4": "-341267/17280",
+          "5": "-365230969/31104000",
+          "6": "17383139789129/52254720000"
+        },
+        {
+          "2": "3/2",
+          "3": "-149/9",
+          "4": "291829/3456",
+          "5": "-3164990147/10368000",
+          "6": "84624703446757/44789760000"
+        },
+        {
+          "2": "-3/2",
+          "3": "367/24",
+          "4": "-18505/1728",
+          "5": "-884577607/2073600",
+          "6": "247985498281/311040000"
+        },
+        {
+          "2": "1/2",
+          "3": "-74/9",
+          "4": "57863/1728",
+          "5": "203799971/3110400",
+          "6": "-1444679114309/2985984000"
+        },
+        {
+          "3": "221/144",
+          "4": "-31903/3456",
+          "5": "-196414181/2073600",
+          "6": "3384342084877/4478976000"
+        },
+        {
+          "4": "23857/17280",
+          "5": "326068913/10368000",
+          "6": "-590038832851/1658880000"
+        },
+        {
+          "5": "-142291219/31104000",
+          "6": "126241081073/1244160000"
+        },
+        {
+          "6": "-3992592285743/313528320000"
+        }
+      ]
+    },
+    {
+      "N": 7,
+      "max_factors": 9,
+      "degree_bound": 40353607,
+      "profiles": [
+        {
+          "2": "5/2",
+          "3": "713/144",
+          "4": "-341267/17280",
+          "5": "-365230969/31104000",
+          "6": "17383139789129/52254720000",
+          "7": "-2649904404808491613/7374186086400000"
+        },
+        {
+          "2": "3/2",
+          "3": "-149/9",
+          "4": "291829/3456",
+          "5": "-3164990147/10368000",
+          "6": "84624703446757/44789760000",
+          "7": "-47300846868160330843/5530639564800000"
+        },
+        {
+          "2": "-3/2",
+          "3": "367/24",
+          "4": "-18505/1728",
+          "5": "-884577607/2073600",
+          "6": "247985498281/311040000",
+          "7": "8346792733854671927/790091366400000"
+        },
+        {
+          "2": "1/2",
+          "3": "-74/9",
+          "4": "57863/1728",
+          "5": "203799971/3110400",
+          "6": "-1444679114309/2985984000",
+          "7": "163977670965628451/65840947200000"
+        },
+        {
+          "3": "221/144",
+          "4": "-31903/3456",
+          "5": "-196414181/2073600",
+          "6": "3384342084877/4478976000",
+          "7": "-395272945468239931/316036546560000"
+        },
+        {
+          "4": "23857/17280",
+          "5": "326068913/10368000",
+          "6": "-590038832851/1658880000",
+          "7": "656330767936635683/790091366400000"
+        },
+        {
+          "5": "-142291219/31104000",
+          "6": "126241081073/1244160000",
+          "7": "-91764485283018367/263363788800000"
+        },
+        {
+          "6": "-3992592285743/313528320000",
+          "7": "237140381909115493/2765319782400000"
+        },
+        {
+          "7": "-209649898595727391/22122558259200000"
+        }
+      ]
+    }
+  ],
+  "Henon_formal_Hamiltonian_log_through_degree_7": "-x**5*y**2/6 + x**4*y/6 + x**3*y**3/3 - x**3/3 + x**2*y**5/6 - x**2*y**2/2 - x*y**4/6 + y**3/3",
+  "scope": "Exact supplementary controls, not proofs of the general theorems."
+}
