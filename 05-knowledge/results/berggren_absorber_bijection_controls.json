@@ -1,0 +1,118 @@
+{
+  "AAA_even_odd_even_seed": [
+    8,
+    31,
+    32
+  ],
+  "absorber_checks": 2584820,
+  "addresses_checked_per_tree": 9841,
+  "all_degenerate_boundary_nodes": 4001,
+  "all_nondegenerate_absorber_coefficients": 6986,
+  "arithmetic": "exact Python integers; standard library only",
+  "complete_address_depth": 8,
+  "degenerate_boundary_nodes": 2001,
+  "diagonal_nodes": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      5,
+      5,
+      7
+    ],
+    [
+      29,
+      29,
+      41
+    ],
+    [
+      169,
+      169,
+      239
+    ],
+    [
+      985,
+      985,
+      1393
+    ]
+  ],
+  "height_cap": 2001,
+  "nondegenerate_absorber_coefficients": 3394,
+  "norm_one_forest_nodes": 10987,
+  "norm_one_forest_tree_counts": {
+    "(1, 1, 1)": 5395,
+    "(1, 2, 2)": 2796,
+    "(2, 1, 2)": 2796
+  },
+  "odd_norm_one_nodes": 5395,
+  "odd_sector_absorber_checks": 1255780,
+  "ordered_input_edges_per_coefficient": 370,
+  "parity_oriented_primitive_pythagorean_nodes": 319,
+  "scope": "Finite algebra/enumeration audit only; infinite classification follows from the descent proof.",
+  "seed_addresses": {
+    "": [
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "AAA": [
+      [
+        9,
+        40,
+        41
+      ],
+      [
+        1,
+        7,
+        7
+      ]
+    ],
+    "AAAB": [
+      [
+        171,
+        140,
+        221
+      ],
+      [
+        29,
+        23,
+        37
+      ]
+    ],
+    "B": [
+      [
+        21,
+        20,
+        29
+      ],
+      [
+        5,
+        5,
+        7
+      ]
+    ],
+    "BB": [
+      [
+        119,
+        120,
+        169
+      ],
+      [
+        29,
+        29,
+        41
+      ]
+    ]
+  },
+  "status": "PASS",
+  "verifier_sha256": "cef4752c66c103f75469a4ca1ec71989764f9d4d52a2875d9cb81c13e06f9ae0"
+}
