@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "exact_checks": 107,
+  "coordinate_hostile_c2": "-3*c**2/8",
+  "domain_constants": {
+    "delta": "1/8",
+    "M": "1/4",
+    "q_lower": "89/128",
+    "q_upper": "167/128",
+    "eta": "357/4096",
+    "B": "1193/1024",
+    "C": "127449/45568",
+    "D": "9930404573/4089090048",
+    "summed_defect_bound": "49652022865/65425440768",
+    "overshoot_integral_bound": "4096/3739"
+  }
+}

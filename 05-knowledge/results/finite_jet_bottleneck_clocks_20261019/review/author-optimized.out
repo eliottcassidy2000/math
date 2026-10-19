@@ -1,0 +1,32 @@
+PASS: 157 explicit checks (exact algebra and labelled numerical controls).
+Independent rational-series inverse checks: r=2,4,6,8,10.
+Quartic c2: (-3*b6/(4*a) + 21*b5**2/(32*a**2))/a**(3/4)
+Sextic normalized c4: 21505*q1**4/31104 - 935*q1**2*q2/432 + 55*q1*q3/36 + 55*q2**2/72 - 5*q4/6
+Numerical orbit diagnostics:
+  quadratic_asymmetric     n=7 N=     367 full residual=-35.123859659 leading residual=-35.123859659
+  quadratic_asymmetric     n=9 N=    1573 full residual=-35.495438638 leading residual=-35.495438638
+  quadratic_asymmetric     n=11 N=    6398 full residual=-35.981754552 leading residual=-35.981754552
+  quartic_pure             n=3 N=     826 full residual=-311.378032169 leading residual=-311.378032169
+  quartic_pure             n=4 N=    8619 full residual=-480.024257348 leading residual=-480.024257348
+  quartic_pure             n=5 N=   72290 full residual=-502.194058787 leading residual=-502.194058787
+  quartic_pure             n=6 N=  581834 full residual=-503.552470293 leading residual=-503.552470293
+  quartic_equal_clock      n=3 N=     829 full residual=-308.378032169 leading residual=-308.378032169
+  quartic_equal_clock      n=4 N=    8632 full residual=-467.024257348 leading residual=-467.024257348
+  quartic_equal_clock      n=5 N=   72305 full residual=-487.194058787 leading residual=-487.194058787
+  quartic_equal_clock      n=6 N=  581849 full residual=-488.552470293 leading residual=-488.552470293
+  quartic_asymmetric       n=3 N=     829 full residual=-313.376275474 leading residual=-308.378032169
+  quartic_asymmetric       n=4 N=    8636 full residual=-473.020743959 leading residual=-463.024257348
+  quartic_asymmetric       n=5 N=   72319 full residual=-493.187032008 leading residual=-473.194058787
+  quartic_asymmetric       n=6 N=  581883 full residual=-494.538416737 leading residual=-454.552470293
+  quartic_lambda           n=3 N=     826 full residual=-298.049383354 leading residual=-311.378032169
+  quartic_lambda           n=4 N=    8610 full residual=-462.366959719 leading residual=-489.024257348
+  quartic_lambda           n=5 N=   72255 full residual=-483.879463529 leading residual=-537.194058787
+  quartic_lambda           n=6 N=  581745 full residual=-485.923279778 leading residual=-592.552470293
+  sextic_asymmetric        n=3 N=   55041 full residual=-13567.295800714 leading residual=-13588.138715220
+  sextic_asymmetric        n=4 N= 2170695 full residual=-25295.222093120 leading residual=-25437.438887047
+One-sided controls (log retained / log omitted):
+  n=6: -17.689847998 / -13.530964915
+  n=8: -18.669037104 / -13.123859659
+  n=10: -18.426910444 / -11.495438638
+  n=12: -18.299520719 / -9.981754552
+Detailed output: verification-results.json

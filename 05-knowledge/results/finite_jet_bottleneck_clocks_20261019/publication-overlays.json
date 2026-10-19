@@ -1,0 +1,15 @@
+{
+  "mathematical_source_changes": false,
+  "verifier_changes": false,
+  "review_artifact_changes": false,
+  "presentation_only_changes": [
+    {
+      "path": "README.md",
+      "change": "Added independent-review navigation, reproduction commands, and checksum information."
+    }
+  ],
+  "reviewed_source_pins": {
+    "FINITE_JET_BOTTLENECK_CLOCKS.md": "383adcb99f6bf2c516afee94600502d972df3c075d96f39d8b36ef976d9fe318",
+    "verify_finite_jet_clocks.py": "528bfb29876f3fbdbb7c29e5a2f400838bdf023ad6572cf53bc2abb28ec98527"
+  }
+}

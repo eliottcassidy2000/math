@@ -1,0 +1,241 @@
+{
+  "status": "PASS",
+  "classification": "FINITE-EXACT algebra and rational inequality certificates; no numerical orbit assertions",
+  "checks": 107,
+  "methods": [
+    "Triangular differential recurrence for fractional powers",
+    "Independent scaled-geometric-denominator beta-moment expansion by partitions"
+  ],
+  "generic_even_order_controls": [
+    {
+      "r": 2,
+      "even_coefficients": [
+        "1"
+      ]
+    },
+    {
+      "r": 4,
+      "even_coefficients": [
+        "1",
+        "21*q1**2/32 - 3*q2/4"
+      ]
+    },
+    {
+      "r": 6,
+      "even_coefficients": [
+        "1",
+        "3*q1**2/8 - q2/2",
+        "21505*q1**4/31104 - 935*q1**2*q2/432 + 55*q1*q3/36 + 55*q2**2/72 - 5*q4/6"
+      ]
+    },
+    {
+      "r": 8,
+      "even_coefficients": [
+        "1",
+        "33*q1**2/128 - 3*q2/8",
+        "13195*q1**4/32768 - 1365*q1**2*q2/1024 + 65*q1*q3/64 + 65*q2**2/128 - 5*q4/8",
+        "3049501*q1**6/4194304 - 973245*q1**4*q2/262144 + 24955*q1**3*q3/8192 + 74865*q1**2*q2**2/16384 - 2415*q1**2*q4/1024 - 2415*q1*q2*q3/512 + 105*q1*q5/64 - 805*q2**3/1024 + 105*q2*q4/64 + 105*q3**2/128 - 7*q6/8"
+      ]
+    },
+    {
+      "r": 10,
+      "even_coefficients": [
+        "1",
+        "39*q1**2/200 - 3*q2/10",
+        "35*q1**4/128 - 15*q1**2*q2/16 + 3*q1*q3/4 + 3*q2**2/8 - q4/2",
+        "35386911*q1**6/80000000 - 1862469*q1**4*q2/800000 + 39627*q1**3*q3/20000 + 118881*q1**2*q2**2/40000 - 3213*q1**2*q4/2000 - 3213*q1*q2*q3/1000 + 119*q1*q5/100 - 1071*q2**3/2000 + 119*q2*q4/100 + 119*q3**2/200 - 7*q6/10",
+        "48377390607*q1**8/64000000000 - 4286604231*q1**6*q2/800000000 + 186374097*q1**5*q3/40000000 + 186374097*q1**4*q2**2/16000000 - 3158883*q1**4*q4/800000 - 3158883*q1**3*q2*q3/200000 + 64467*q1**3*q5/20000 - 3158883*q1**2*q2**3/400000 + 193401*q1**2*q2*q4/20000 + 193401*q1**2*q3**2/40000 - 4959*q1**2*q6/2000 + 193401*q1*q2**2*q3/20000 - 4959*q1*q2*q5/1000 - 4959*q1*q3*q4/1000 + 171*q1*q7/100 + 64467*q2**4/80000 - 4959*q2**2*q4/2000 - 4959*q2*q3**2/2000 + 171*q2*q6/100 + 171*q3*q5/100 + 171*q4**2/200 - 9*q8/10"
+      ]
+    },
+    {
+      "r": 12,
+      "even_coefficients": [
+        "1",
+        "5*q1**2/32 - q2/4",
+        "101065*q1**4/497664 - 2465*q1**2*q2/3456 + 85*q1*q3/144 + 85*q2**2/288 - 5*q4/12",
+        "130661993*q1**6/429981696 - 9750895*q1**4*q2/5971968 + 177289*q1**3*q3/124416 + 177289*q1**2*q2**2/82944 - 4123*q1**2*q4/3456 - 4123*q1*q2*q3/1728 + 133*q1*q5/144 - 4123*q2**3/10368 + 133*q2*q4/144 + 133*q3**2/288 - 7*q6/12",
+        "4023459*q1**8/8388608 - 908523*q1**6*q2/262144 + 100947*q1**5*q3/32768 + 504735*q1**4*q2**2/65536 - 21945*q1**4*q4/8192 - 21945*q1**3*q2*q3/2048 + 1155*q1**3*q5/512 - 21945*q1**2*q2**3/4096 + 3465*q1**2*q2*q4/512 + 3465*q1**2*q3**2/1024 - 231*q1**2*q6/128 + 3465*q1*q2**2*q3/512 - 231*q1*q2*q5/64 - 231*q1*q3*q4/64 + 21*q1*q7/16 + 1155*q2**4/2048 - 231*q2**2*q4/128 - 231*q2*q3**2/128 + 21*q2*q6/16 + 21*q3*q5/16 + 21*q4**2/32 - 3*q8/4",
+        "1000209953047459*q1**10/1283918464548864 - 42025628279305*q1**8*q2/5944066965504 + 392762881115*q1**7*q3/61917364224 + 2749340167805*q1**6*q2**2/123834728448 - 28940422819*q1**6*q4/5159780352 - 28940422819*q1**5*q2*q3/859963392 + 348679793*q1**5*q5/71663616 - 144702114095*q1**4*q2**3/5159780352 + 1743398965*q1**4*q2*q4/71663616 + 1743398965*q1**4*q3**2/143327232 - 24554915*q1**4*q6/5971968 + 1743398965*q1**3*q2**2*q3/35831808 - 24554915*q1**3*q2*q5/1492992 - 24554915*q1**3*q3*q4/1492992 + 416185*q1**3*q7/124416 + 1743398965*q1**2*q2**4/143327232 - 24554915*q1**2*q2**2*q4/995328 - 24554915*q1**2*q2*q3**2/995328 + 416185*q1**2*q2*q6/41472 + 416185*q1**2*q3*q5/41472 + 416185*q1**2*q4**2/82944 - 8855*q1**2*q8/3456 - 24554915*q1*q2**3*q3/1492992 + 416185*q1*q2**2*q5/41472 + 416185*q1*q2*q3*q4/20736 - 8855*q1*q2*q7/1728 + 416185*q1*q3**3/124416 - 8855*q1*q3*q6/1728 - 8855*q1*q4*q5/1728 + 253*q1*q9/144 - 11*q10/12 - 4910983*q2**5/5971968 + 416185*q2**3*q4/124416 + 416185*q2**2*q3**2/82944 - 8855*q2**2*q6/3456 - 8855*q2*q3*q5/1728 - 8855*q2*q4**2/3456 + 253*q2*q8/144 - 8855*q3**2*q4/3456 + 253*q3*q7/144 + 253*q4*q6/144 + 253*q5**2/288"
+      ]
+    }
+  ],
+  "coordinate_family_hostile": {
+    "phi": "y+c*y^2",
+    "conjugate_increment_through_degree_6": "4*c**2*x**6 - 2*c*x**5 + x**4",
+    "flattened_jacobian_c2": "-3*c**2/8",
+    "A1": "-3*pi*c^2/(8*sqrt(2))"
+  },
+  "sharp_jet_controls": [
+    {
+      "r": 4,
+      "normalized_clock_coefficients": [
+        "1",
+        "-3*lambda/4"
+      ]
+    },
+    {
+      "r": 6,
+      "normalized_clock_coefficients": [
+        "1",
+        "0",
+        "-5*lambda/6"
+      ]
+    },
+    {
+      "r": 8,
+      "normalized_clock_coefficients": [
+        "1",
+        "0",
+        "0",
+        "-7*lambda/8"
+      ]
+    },
+    {
+      "r": 10,
+      "normalized_clock_coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "-9*lambda/10"
+      ]
+    },
+    {
+      "r": 12,
+      "normalized_clock_coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-11*lambda/12"
+      ]
+    }
+  ],
+  "quartic_exact_domain_constants": {
+    "delta": "1/8",
+    "M": "1/4",
+    "q_lower": "89/128",
+    "q_upper": "167/128",
+    "eta": "357/4096",
+    "B": "1193/1024",
+    "C": "127449/45568",
+    "D": "9930404573/4089090048",
+    "summed_defect_bound": "49652022865/65425440768",
+    "overshoot_integral_bound": "4096/3739"
+  },
+  "check_labels": [
+    "generic coefficient by ODE vs beta partitions: r=2, k=0",
+    "generic coefficient by ODE vs beta partitions: r=4, k=0",
+    "generic coefficient by ODE vs beta partitions: r=4, k=2",
+    "generic coefficient by ODE vs beta partitions: r=6, k=0",
+    "generic coefficient by ODE vs beta partitions: r=6, k=2",
+    "generic coefficient by ODE vs beta partitions: r=6, k=4",
+    "generic coefficient by ODE vs beta partitions: r=8, k=0",
+    "generic coefficient by ODE vs beta partitions: r=8, k=2",
+    "generic coefficient by ODE vs beta partitions: r=8, k=4",
+    "generic coefficient by ODE vs beta partitions: r=8, k=6",
+    "generic coefficient by ODE vs beta partitions: r=10, k=0",
+    "generic coefficient by ODE vs beta partitions: r=10, k=2",
+    "generic coefficient by ODE vs beta partitions: r=10, k=4",
+    "generic coefficient by ODE vs beta partitions: r=10, k=6",
+    "generic coefficient by ODE vs beta partitions: r=10, k=8",
+    "generic coefficient by ODE vs beta partitions: r=12, k=0",
+    "generic coefficient by ODE vs beta partitions: r=12, k=2",
+    "generic coefficient by ODE vs beta partitions: r=12, k=4",
+    "generic coefficient by ODE vs beta partitions: r=12, k=6",
+    "generic coefficient by ODE vs beta partitions: r=12, k=8",
+    "generic coefficient by ODE vs beta partitions: r=12, k=10",
+    "generic asymmetric quartic formula",
+    "quartic different-jet equal-clock positive control",
+    "generic sextic c2",
+    "generic sextic c4",
+    "inverse coordinate phi(y)=y+c y^2 through degree 7",
+    "nonlinear conjugate quartic through degree 6",
+    "coordinate-family hostile has nonzero second clock coefficient",
+    "last-jet sharpness r=4, k=0",
+    "last-jet sharpness r=4, k=2",
+    "last-jet sharpness r=6, k=0",
+    "last-jet sharpness r=6, k=2",
+    "last-jet sharpness r=6, k=4",
+    "last-jet sharpness r=8, k=0",
+    "last-jet sharpness r=8, k=2",
+    "last-jet sharpness r=8, k=4",
+    "last-jet sharpness r=8, k=6",
+    "last-jet sharpness r=10, k=0",
+    "last-jet sharpness r=10, k=2",
+    "last-jet sharpness r=10, k=4",
+    "last-jet sharpness r=10, k=6",
+    "last-jet sharpness r=10, k=8",
+    "last-jet sharpness r=12, k=0",
+    "last-jet sharpness r=12, k=2",
+    "last-jet sharpness r=12, k=4",
+    "last-jet sharpness r=12, k=6",
+    "last-jet sharpness r=12, k=8",
+    "last-jet sharpness r=12, k=10",
+    "above-cutoff perturbation ignored r=2, k=0",
+    "embedded flow jet r=2",
+    "above-cutoff perturbation ignored r=4, k=0",
+    "above-cutoff perturbation ignored r=4, k=2",
+    "embedded flow jet r=4",
+    "above-cutoff perturbation ignored r=6, k=0",
+    "above-cutoff perturbation ignored r=6, k=2",
+    "above-cutoff perturbation ignored r=6, k=4",
+    "embedded flow jet r=6",
+    "above-cutoff perturbation ignored r=8, k=0",
+    "above-cutoff perturbation ignored r=8, k=2",
+    "above-cutoff perturbation ignored r=8, k=4",
+    "above-cutoff perturbation ignored r=8, k=6",
+    "embedded flow jet r=8",
+    "above-cutoff perturbation ignored r=10, k=0",
+    "above-cutoff perturbation ignored r=10, k=2",
+    "above-cutoff perturbation ignored r=10, k=4",
+    "above-cutoff perturbation ignored r=10, k=6",
+    "above-cutoff perturbation ignored r=10, k=8",
+    "embedded flow jet r=10",
+    "above-cutoff perturbation ignored r=12, k=0",
+    "above-cutoff perturbation ignored r=12, k=2",
+    "above-cutoff perturbation ignored r=12, k=4",
+    "above-cutoff perturbation ignored r=12, k=6",
+    "above-cutoff perturbation ignored r=12, k=8",
+    "above-cutoff perturbation ignored r=12, k=10",
+    "embedded flow jet r=12",
+    "borderline odd primitive r=2",
+    "full-line tail integrable r=2, k=0",
+    "borderline odd primitive r=4",
+    "full-line tail integrable r=4, k=0",
+    "full-line tail integrable r=4, k=2",
+    "borderline odd primitive r=6",
+    "full-line tail integrable r=6, k=0",
+    "full-line tail integrable r=6, k=2",
+    "full-line tail integrable r=6, k=4",
+    "borderline odd primitive r=8",
+    "full-line tail integrable r=8, k=0",
+    "full-line tail integrable r=8, k=2",
+    "full-line tail integrable r=8, k=4",
+    "full-line tail integrable r=8, k=6",
+    "borderline odd primitive r=10",
+    "full-line tail integrable r=10, k=0",
+    "full-line tail integrable r=10, k=2",
+    "full-line tail integrable r=10, k=4",
+    "full-line tail integrable r=10, k=6",
+    "full-line tail integrable r=10, k=8",
+    "borderline odd primitive r=12",
+    "full-line tail integrable r=12, k=0",
+    "full-line tail integrable r=12, k=2",
+    "full-line tail integrable r=12, k=4",
+    "full-line tail integrable r=12, k=6",
+    "full-line tail integrable r=12, k=8",
+    "full-line tail integrable r=12, k=10",
+    "exact Q positivity majorant",
+    "exact derivative majorant <= 1/4",
+    "exact one-step overshoot domain majorant",
+    "correct B contribution to defect constant",
+    "correct C contribution to defect constant"
+  ],
+  "limitations": [
+    "These finite controls support rather than prove the all-germ analytic theorem.",
+    "Analytic nonembedding of polynomial germs is a cited theorem, not a finite computation.",
+    "No claim of coordinate-conjugacy invariance is made."
+  ]
+}

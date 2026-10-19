@@ -1,0 +1,24 @@
+{
+  "review_status": "PASS",
+  "reviewed_files": {
+    "FINITE_JET_BOTTLENECK_CLOCKS.md": "383adcb99f6bf2c516afee94600502d972df3c075d96f39d8b36ef976d9fe318",
+    "verify_finite_jet_clocks.py": "528bfb29876f3fbdbb7c29e5a2f400838bdf023ad6572cf53bc2abb28ec98527"
+  },
+  "author_replay": {
+    "normal_checks": 157,
+    "optimized_checks": 157,
+    "stdout_byte_identical": true,
+    "json_byte_identical": true,
+    "matches_author_receipt": true
+  },
+  "independent_replay": {
+    "normal_exact_checks": 107,
+    "optimized_exact_checks": 107,
+    "stdout_byte_identical": true
+  },
+  "versions": {
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  }
+}

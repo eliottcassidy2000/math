@@ -1,0 +1,41 @@
+{
+  "intended_repository_directory": "05-knowledge/results/finite_jet_bottleneck_clocks_20261019/",
+  "repository_dependencies": [
+    {
+      "repository_path": "05-knowledge/results/higher_order_bottleneck_clocks_20261019/HIGHER_ORDER_BOTTLENECKS.md",
+      "sha256": "ab963386fb9373fa1d911cbed36a07f59a590d44e19938041eea6aed9b5f791d",
+      "role": "inherited corrected-clock method"
+    },
+    {
+      "repository_path": "05-knowledge/results/parabolic_cotangent_integrability_20261019/parabolic_cotangent_invariant_barrier.md",
+      "sha256": "91f2b46e8f4c5027495f97c5378cfe15da89353749056fa2cb587ccb93d003ca",
+      "role": "cotangent integrability equivalence"
+    }
+  ],
+  "external_sources": [
+    {
+      "url": "https://arxiv.org/html/0807.1546",
+      "locator": "Proposition 2.1",
+      "role": "established continuous bottleneck exponent; attribution"
+    },
+    {
+      "url": "https://arxiv.org/html/2505.07138v1",
+      "role": "near-parabolic clock literature; attribution"
+    },
+    {
+      "url": "https://dlmf.nist.gov/1.10#vii",
+      "role": "Lagrange inversion"
+    },
+    {
+      "url": "https://dlmf.nist.gov/5.12",
+      "role": "Euler beta integral"
+    },
+    {
+      "url": "https://www.mat.univie.ac.at/~maschenbrenner/pdf/itlog-final.pdf",
+      "locator": "printed page 3, paragraph before Theorem 1",
+      "role": "classical convergence/divergence classification recorded there"
+    }
+  ],
+  "external_sources_checked": "2026-10-19",
+  "scope": "Constant-additive families in a specified coordinate, fixed two-sided endpoints; no coordinate-conjugacy invariant assertion."
+}

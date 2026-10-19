@@ -1,0 +1,308 @@
+{
+  "status": "PASS; exact algebra plus explicitly numerical diagnostics",
+  "checks": 157,
+  "scope": "Fixed-endpoint constant-additive families; coefficients are not asserted to be conjugacy invariants.",
+  "quartic_c2": "(-3*b6/(4*a) + 21*b5**2/(32*a**2))/a**(3/4)",
+  "sextic_c4_normalized": "21505*q1**4/31104 - 935*q1**2*q2/432 + 55*q1*q3/36 + 55*q2**2/72 - 5*q4/6",
+  "independent_rational_series_inverse_checks": [
+    {
+      "r": 2,
+      "h_prime_even": [
+        "1/2"
+      ]
+    },
+    {
+      "r": 4,
+      "h_prime_even": [
+        "1/2",
+        "25/768"
+      ]
+    },
+    {
+      "r": 6,
+      "h_prime_even": [
+        "1/2",
+        "1/48",
+        "224947/20155392"
+      ]
+    },
+    {
+      "r": 8,
+      "h_prime_even": [
+        "1/2",
+        "47/3072",
+        "651907/84934656",
+        "7491167237/1956894474240"
+      ]
+    },
+    {
+      "r": 10,
+      "h_prime_even": [
+        "1/2",
+        "29/2400",
+        "2413/414720",
+        "285383363/103680000000",
+        "13700250745901/10450944000000000"
+      ]
+    }
+  ],
+  "beta_numerical_controls": [
+    {
+      "r": 2,
+      "j": 0,
+      "absolute_error": "0.0"
+    },
+    {
+      "r": 4,
+      "j": 0,
+      "absolute_error": "0.0"
+    },
+    {
+      "r": 4,
+      "j": 1,
+      "absolute_error": "3.1115076e-61"
+    },
+    {
+      "r": 6,
+      "j": 0,
+      "absolute_error": "0.0"
+    },
+    {
+      "r": 6,
+      "j": 1,
+      "absolute_error": "1.5557538e-61"
+    },
+    {
+      "r": 6,
+      "j": 2,
+      "absolute_error": "3.1115076e-61"
+    },
+    {
+      "r": 8,
+      "j": 0,
+      "absolute_error": "0.0"
+    },
+    {
+      "r": 8,
+      "j": 1,
+      "absolute_error": "0.0"
+    },
+    {
+      "r": 8,
+      "j": 2,
+      "absolute_error": "7.7787691e-62"
+    },
+    {
+      "r": 8,
+      "j": 3,
+      "absolute_error": "6.2230153e-61"
+    }
+  ],
+  "orbit_controls": [
+    {
+      "case": "quadratic_asymmetric",
+      "r": 2,
+      "n": 7,
+      "count_float": 367,
+      "full_clock_residual": -35.12385965949353,
+      "leading_only_residual": -35.12385965949353,
+      "count_decimal70": 367
+    },
+    {
+      "case": "quadratic_asymmetric",
+      "r": 2,
+      "n": 9,
+      "count_float": 1573,
+      "full_clock_residual": -35.49543863797414,
+      "leading_only_residual": -35.49543863797414
+    },
+    {
+      "case": "quadratic_asymmetric",
+      "r": 2,
+      "n": 11,
+      "count_float": 6398,
+      "full_clock_residual": -35.98175455189655,
+      "leading_only_residual": -35.98175455189655
+    },
+    {
+      "case": "quartic_pure",
+      "r": 4,
+      "n": 3,
+      "count_float": 826,
+      "full_clock_residual": -311.3780321685418,
+      "leading_only_residual": -311.3780321685418,
+      "count_decimal70": 826
+    },
+    {
+      "case": "quartic_pure",
+      "r": 4,
+      "n": 4,
+      "count_float": 8619,
+      "full_clock_residual": -480.02425734833406,
+      "leading_only_residual": -480.02425734833406
+    },
+    {
+      "case": "quartic_pure",
+      "r": 4,
+      "n": 5,
+      "count_float": 72290,
+      "full_clock_residual": -502.1940587866726,
+      "leading_only_residual": -502.1940587866726
+    },
+    {
+      "case": "quartic_pure",
+      "r": 4,
+      "n": 6,
+      "count_float": 581834,
+      "full_clock_residual": -503.55247029338074,
+      "leading_only_residual": -503.55247029338074
+    },
+    {
+      "case": "quartic_equal_clock",
+      "r": 4,
+      "n": 3,
+      "count_float": 829,
+      "full_clock_residual": -308.3780321685418,
+      "leading_only_residual": -308.3780321685418,
+      "count_decimal70": 829
+    },
+    {
+      "case": "quartic_equal_clock",
+      "r": 4,
+      "n": 4,
+      "count_float": 8632,
+      "full_clock_residual": -467.02425734833406,
+      "leading_only_residual": -467.02425734833406
+    },
+    {
+      "case": "quartic_equal_clock",
+      "r": 4,
+      "n": 5,
+      "count_float": 72305,
+      "full_clock_residual": -487.1940587866726,
+      "leading_only_residual": -487.1940587866726
+    },
+    {
+      "case": "quartic_equal_clock",
+      "r": 4,
+      "n": 6,
+      "count_float": 581849,
+      "full_clock_residual": -488.55247029338074,
+      "leading_only_residual": -488.55247029338074
+    },
+    {
+      "case": "quartic_asymmetric",
+      "r": 4,
+      "n": 3,
+      "count_float": 829,
+      "full_clock_residual": -313.37627547396994,
+      "leading_only_residual": -308.3780321685418,
+      "count_decimal70": 829
+    },
+    {
+      "case": "quartic_asymmetric",
+      "r": 4,
+      "n": 4,
+      "count_float": 8636,
+      "full_clock_residual": -473.0207439591904,
+      "leading_only_residual": -463.02425734833406
+    },
+    {
+      "case": "quartic_asymmetric",
+      "r": 4,
+      "n": 5,
+      "count_float": 72319,
+      "full_clock_residual": -493.18703200838524,
+      "leading_only_residual": -473.1940587866726
+    },
+    {
+      "case": "quartic_asymmetric",
+      "r": 4,
+      "n": 6,
+      "count_float": 581883,
+      "full_clock_residual": -494.538416736806,
+      "leading_only_residual": -454.55247029338074
+    },
+    {
+      "case": "quartic_lambda",
+      "r": 4,
+      "n": 3,
+      "count_float": 826,
+      "full_clock_residual": -298.04938335406666,
+      "leading_only_residual": -311.3780321685418,
+      "count_decimal70": 826
+    },
+    {
+      "case": "quartic_lambda",
+      "r": 4,
+      "n": 4,
+      "count_float": 8610,
+      "full_clock_residual": -462.3669597193839,
+      "leading_only_residual": -489.02425734833406
+    },
+    {
+      "case": "quartic_lambda",
+      "r": 4,
+      "n": 5,
+      "count_float": 72255,
+      "full_clock_residual": -483.8794635287722,
+      "leading_only_residual": -537.1940587866726
+    },
+    {
+      "case": "quartic_lambda",
+      "r": 4,
+      "n": 6,
+      "count_float": 581745,
+      "full_clock_residual": -485.9232797775799,
+      "leading_only_residual": -592.5524702933807
+    },
+    {
+      "case": "sextic_asymmetric",
+      "r": 6,
+      "n": 3,
+      "count_float": 55041,
+      "full_clock_residual": -13567.295800714146,
+      "leading_only_residual": -13588.13871522023,
+      "count_decimal70": 55041
+    },
+    {
+      "case": "sextic_asymmetric",
+      "r": 6,
+      "n": 4,
+      "count_float": 2170695,
+      "full_clock_residual": -25295.222093120316,
+      "leading_only_residual": -25437.438887047356
+    }
+  ],
+  "one_sided_log_controls": [
+    {
+      "n": 6,
+      "count_float": 87,
+      "with_log_residual": -17.689847998233056,
+      "without_log_residual": -13.530964914873383
+    },
+    {
+      "n": 8,
+      "count_float": 389,
+      "with_log_residual": -18.669037103973096,
+      "without_log_residual": -13.123859659493535
+    },
+    {
+      "n": 10,
+      "count_float": 1597,
+      "with_log_residual": -18.42691044357359,
+      "without_log_residual": -11.495438637974138
+    },
+    {
+      "n": 12,
+      "count_float": 6424,
+      "with_log_residual": -18.299520718615895,
+      "without_log_residual": -9.981754551896552
+    }
+  ],
+  "limitations": [
+    "Finite calculations do not prove the uniform analytic theorem.",
+    "Floating-point and Decimal counts are supporting numerical controls, not certified exact integer counts.",
+    "No empirical residual bound is promoted to an all-parameter bound."
+  ]
+}
