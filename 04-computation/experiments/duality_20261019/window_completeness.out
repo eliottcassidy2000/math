@@ -1,0 +1,17 @@
+1100 coprime shapes q <= 60: criterion matches brute force in all but 0; complete cases: 14
+  (q,p) = (3, 1)  q*log_3(2) - p = 0.8928  M/m = 2.0
+  (q,p) = (3, 2)  q*log_3(2) - p = -0.1072  M/m = 1.5
+  (q,p) = (5, 2)  q*log_3(2) - p = 1.1546  M/m = 2.6667
+  (q,p) = (5, 3)  q*log_3(2) - p = 0.1546  M/m = 2.0
+  (q,p) = (7, 4)  q*log_3(2) - p = 0.4165  M/m = 2.6667
+  (q,p) = (8, 5)  q*log_3(2) - p = 0.0474  M/m = 2.25
+  (q,p) = (11, 7)  q*log_3(2) - p = -0.0598  M/m = 2.5312
+  (q,p) = (13, 8)  q*log_3(2) - p = 0.2021  M/m = 2.6667
+  (q,p) = (19, 12)  q*log_3(2) - p = -0.0123  M/m = 2.6667
+  (q,p) = (21, 13)  q*log_3(2) - p = 0.2495  M/m = 2.8093
+  (q,p) = (27, 17)  q*log_3(2) - p = 0.0351  M/m = 2.8093
+  (q,p) = (29, 18)  q*log_3(2) - p = 0.297  M/m = 2.9596
+  (q,p) = (35, 22)  q*log_3(2) - p = 0.0825  M/m = 2.9596
+  (q,p) = (46, 29)  q*log_3(2) - p = 0.0228  M/m = 2.8477
+max |q theta - p| among complete: 1.1546
+incomplete shapes with |q theta - p| < 0.1: [(30, 19, -0.0721), (49, 31, -0.0844)]

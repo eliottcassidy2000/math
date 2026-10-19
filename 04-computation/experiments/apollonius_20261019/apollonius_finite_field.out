@@ -1,0 +1,7 @@
+q = 11: counts of rational tangent circles over 3000 generic triples: {0: 177, 1: 42, 2: 345, 3: 760, 4: 1319, 5: 133, 6: 118, 7: 41, 8: 65}; mean 3.489; degenerate skipped 605
+q = 13: counts of rational tangent circles over 3000 generic triples: {0: 171, 1: 12, 2: 316, 3: 538, 4: 1506, 5: 139, 6: 122, 7: 96, 8: 100}; mean 3.727; degenerate skipped 442
+q = 17: counts of rational tangent circles over 3000 generic triples: {0: 223, 1: 2, 2: 226, 3: 390, 4: 1746, 5: 77, 6: 140, 7: 69, 8: 127}; mean 3.777; degenerate skipped 285
+q = 19: counts of rational tangent circles over 3000 generic triples: {0: 234, 1: 12, 2: 198, 3: 420, 4: 1752, 5: 53, 6: 139, 7: 60, 8: 132}; mean 3.750; degenerate skipped 305
+q = 23: counts of rational tangent circles over 3000 generic triples: {0: 247, 1: 3, 2: 176, 3: 378, 4: 1810, 5: 47, 6: 114, 7: 63, 8: 162}; mean 3.795; degenerate skipped 196
+q = 29: counts of rational tangent circles over 3000 generic triples: {0: 259, 1: 1, 2: 139, 3: 269, 4: 1907, 5: 29, 6: 119, 7: 67, 8: 210}; mean 3.907; degenerate skipped 155
+q = 31: counts of rational tangent circles over 3000 generic triples: {0: 283, 2: 138, 3: 281, 4: 1908, 5: 24, 6: 106, 7: 58, 8: 202}; mean 3.843; degenerate skipped 135
