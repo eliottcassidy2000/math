@@ -1,0 +1,35 @@
+{
+  "release_directory": "05-knowledge/results/seeded_optimal_threshold_6242_20261019",
+  "theorem": "For every integer N>=6242 a square-sum Hamiltonian cycle on[1,N] contains consecutive482,3362,6242; N<6242 is impossible.",
+  "entrypoint": "OPTIMAL_THRESHOLD_THEOREM.md",
+  "finite_range": [
+    6242,
+    128452
+  ],
+  "cycles": 122211,
+  "extension_records": 122210,
+  "eventual_theorem_dependency": "../seeded_eventual_cycle_theorem_20261019/",
+  "finite_checker": "verify_full_incremental_trace.py",
+  "proof_inputs": [
+    "initial_cycle.txt",
+    "full_incremental_trace.bin.gz",
+    "final_cycle.txt.gz"
+  ],
+  "replay_receipts": [
+    "full_incremental_controls.json",
+    "full_incremental_controls.optimized.json"
+  ],
+  "optional_discovery_files": [
+    "extend_seed_cycle.cpp",
+    "full_search_report.json"
+  ],
+  "checksum_manifest": "SHA256SUMS",
+  "additional_independent_checker": {
+    "source": "verify_trace_vector.cpp",
+    "receipt": "vector_replay_controls.json",
+    "representation": "explicit vector; no implicit tree"
+  },
+  "checks_per_python_replay": 7147854,
+  "trace_compressed_sha256": "6891c7d66506acd4fedefee71b2c1e5b018de35c0737152feb58f5de53fb3ad1",
+  "trace_decompressed_sha256": "3ce83e0b4a0027feb995ba0603b6e34c3dae767abbfe60f1dcdec08e13eed22b"
+}
