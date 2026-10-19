@@ -1,0 +1,108 @@
+{
+  "checks": 178380,
+  "contracting_endpoint_words": 787,
+  "dyadic_cylinder_pairs": 1022,
+  "greedy_controls": [
+    {
+      "L": 122,
+      "N": 124,
+      "P": 3,
+      "conditional_resets": 0,
+      "literal_sha256": "055bd465886b88b5d78b24dee709d5b1c5800c5b48549866de7c470154bba35f",
+      "m": 1,
+      "max_run": 1,
+      "r": 2
+    },
+    {
+      "L": 610,
+      "N": 612,
+      "P": 16,
+      "conditional_resets": 0,
+      "literal_sha256": "97daacc410c26e216412cb17c0b06d4baa7fa124eb5143333a1232d311260377",
+      "m": 5,
+      "max_run": 5,
+      "r": 7
+    },
+    {
+      "L": 1220,
+      "N": 1224,
+      "P": 37,
+      "conditional_resets": 1,
+      "literal_sha256": "c5420a63a63bb09994d5f144da5c1acc74c66b7889bed410798eaaf8e6803d70",
+      "m": 10,
+      "max_run": 10,
+      "r": 13
+    },
+    {
+      "L": 1342,
+      "N": 1346,
+      "P": 42,
+      "conditional_resets": 1,
+      "literal_sha256": "abb93e9e42f1a318babb90edb163360bdf63366b24d7f5f40e0a3953d1979104",
+      "m": 11,
+      "max_run": 10,
+      "r": 14
+    },
+    {
+      "L": 12200,
+      "N": 12222,
+      "P": 236,
+      "conditional_resets": 10,
+      "literal_sha256": "a64e5ee55d3a004d87b8a95af7bd273ec046b99914ac96e3f056f5f2fe80d5ca",
+      "m": 100,
+      "max_run": 10,
+      "r": 122
+    },
+    {
+      "L": 109922,
+      "N": 110106,
+      "P": 1215,
+      "conditional_resets": 91,
+      "literal_sha256": "b70e191b12bc424c499b2366e11c2314e2afba9f1a47c8dfff428669b1154538",
+      "m": 901,
+      "max_run": 10,
+      "r": 1100
+    },
+    {
+      "L": 111752,
+      "N": 111938,
+      "P": 1232,
+      "conditional_resets": 92,
+      "literal_sha256": "19c7af8a43fe38b9f565b88c0299ea15c11f67e459520c3646086e8af857336a",
+      "m": 916,
+      "max_run": 10,
+      "r": 1118
+    },
+    {
+      "L": 124928,
+      "N": 125136,
+      "P": 1365,
+      "conditional_resets": 103,
+      "literal_sha256": "de7246c27324cb0f55756446a6cbc45cdff42abeb1725e3b3555ea93428b8d56",
+      "m": 1024,
+      "max_run": 10,
+      "r": 1250
+    },
+    {
+      "L": 249856,
+      "N": 250272,
+      "P": 2614,
+      "conditional_resets": 207,
+      "literal_sha256": "da02a632eb31c075af32a049d84860d0f6a221349a18cd4c2519900d84e38e7a",
+      "m": 2048,
+      "max_run": 10,
+      "r": 2499
+    }
+  ],
+  "mechanical_terms": 2048,
+  "parse_threshold_hostile": {
+    "L": 108140,
+    "m": 901,
+    "r": 1098
+  },
+  "partial_bank_prefixes": 167,
+  "rotation_partition_intervals": 860,
+  "status": "PASS: exact independent finite controls; universal claims audited separately",
+  "strict_pigeonhole_cases": 3368,
+  "trajectory_matched_pairs": 29388
+}

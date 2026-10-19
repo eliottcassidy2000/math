@@ -1,0 +1,72 @@
+{
+  "checks": 49321,
+  "diagonal_tests": 640,
+  "greedy_controls": [
+    {
+      "N": 124,
+      "complexity_bound": 498,
+      "delta_bits": 122,
+      "delta_sha256": "34eccdfd4d6b19f9720ea5cef8852c81bcc10acbb9964d70f214b878e4a3ffc0",
+      "expansion_bits": 122,
+      "explicit_resets": 1,
+      "literal_factor_count": 3,
+      "literal_replay": true,
+      "literal_sha256": "055bd465886b88b5d78b24dee709d5b1c5800c5b48549866de7c470154bba35f",
+      "m": 1,
+      "max_expansion_run": 1,
+      "r": 2,
+      "source_bits": 123,
+      "source_sha256": "595107ccd473cf42e8eb528933b03c98b21f7fa4ad43a2203de2000fe1e33eb3"
+    },
+    {
+      "N": 1224,
+      "complexity_bound": 498,
+      "delta_bits": 1222,
+      "delta_sha256": "82c26b786f891944bd147291404ea71038d3d26acb1c0892d3ef23724e3c43ec",
+      "expansion_bits": 1220,
+      "explicit_resets": 2,
+      "literal_factor_count": 37,
+      "literal_replay": true,
+      "literal_sha256": "c5420a63a63bb09994d5f144da5c1acc74c66b7889bed410798eaaf8e6803d70",
+      "m": 10,
+      "max_expansion_run": 10,
+      "r": 13,
+      "source_bits": 1223,
+      "source_sha256": "fc719dd01dd5d3a78435c011aa66a2f04a40bcb198c44a232b7abeee29a83a85"
+    },
+    {
+      "N": 110106,
+      "complexity_bound": 1614,
+      "delta_bits": 110102,
+      "delta_sha256": "d2bf9be47a4d792243ee316b7661d471ddb8404b64e45a2b542c85dcfb641e49",
+      "expansion_bits": 109922,
+      "explicit_resets": 92,
+      "literal_factor_count": 1215,
+      "literal_replay": false,
+      "literal_sha256": "b70e191b12bc424c499b2366e11c2314e2afba9f1a47c8dfff428669b1154538",
+      "m": 901,
+      "max_expansion_run": 10,
+      "r": 1100,
+      "source_bits": 110106,
+      "source_sha256": "6c0199bb90b24b7472b2110bacfbb259a9ec33f593462fe3a8932fefdbde033f"
+    },
+    {
+      "N": 125136,
+      "complexity_bound": 1738,
+      "delta_bits": 125130,
+      "delta_sha256": "38bcad8257af457ffdc9a00b44443dc896b08a375002fdc3d809237a2505c30e",
+      "expansion_bits": 124928,
+      "explicit_resets": 104,
+      "literal_factor_count": 1365,
+      "literal_replay": false,
+      "literal_sha256": "de7246c27324cb0f55756446a6cbc45cdff42abeb1725e3b3555ea93428b8d56",
+      "m": 1024,
+      "max_expansion_run": 10,
+      "r": 1250,
+      "source_bits": 125136,
+      "source_sha256": "dbf337c04f0751cbbe313fd9c77e4d23bb2af9eaab990eec3b64cf8f5ca0b63e"
+    }
+  ],
+  "matched_pairs": 21142,
+  "status": "PASS exact controls; universal statements proved in notes"
+}

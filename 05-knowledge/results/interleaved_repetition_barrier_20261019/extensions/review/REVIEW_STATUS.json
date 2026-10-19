@@ -1,0 +1,30 @@
+{
+  "independent_checks": 178380,
+  "independent_control_file": "independent_extension_controls.py",
+  "independent_normal_optimized_and_original_match": true,
+  "independent_receipt": "independent-receipt.json",
+  "outstanding_mathematical_objections": [],
+  "preserved_open_alternatives": [
+    "An exact internal periodic orbit may have a preperiod.",
+    "The cycle alternative is not eliminated.",
+    "No unbounded fixed-offset S_d realization is established."
+  ],
+  "resolved_scope_issue": "m>900 applies to displayed V,F parse; arbitrary exact K^4F/V reparsing uses sufficient threshold m>915.",
+  "review_file": "MATCHED_BLOCK_EXTENSION_REVIEW.md",
+  "submitted_checks": 49321,
+  "submitted_normal_optimized_match_receipt": true,
+  "verdict": "PASS, conditional on the independently audited primary lemmas",
+  "reviewed_source_hashes": {
+    "MATCHED_BLOCK_EXTENSION.md": "ca2838cdff301d3df75c3ce1054e74ad6e71173e5bcc448a57cb624c8774f799",
+    "REPETITION_POOR_GREEDY_BOUNDARY.md": "1a363f9b3541535b90259034949cfd5021e33c3aabaf9c73da3fda5c382a9f18",
+    "verification-receipt.json": "d505b838a3fe1234ede8ca53027e1856a93d849fb13eecbec3713dce6e15f7fa",
+    "verify_boundary_extensions.py": "fbe51b6cf77eb0afd5adf60d8efa16cd3588ba66d6317e2cd23ab1b27d6e7516"
+  },
+  "published_source_hashes": {
+    "MATCHED_BLOCK_EXTENSION.md": "32a39043d7fb353c832aa2d7f5ee20bd22d933e103d05131518631781e6ede55",
+    "REPETITION_POOR_GREEDY_BOUNDARY.md": "1a363f9b3541535b90259034949cfd5021e33c3aabaf9c73da3fda5c382a9f18",
+    "verification-receipt.json": "d505b838a3fe1234ede8ca53027e1856a93d849fb13eecbec3713dce6e15f7fa",
+    "verify_boundary_extensions.py": "fbe51b6cf77eb0afd5adf60d8efa16cd3588ba66d6317e2cd23ab1b27d6e7516"
+  },
+  "source_status_sha256": "a70cb89e51558bc8e88ede14d5c8a78ad9e659107053153995f75f2ea51e3387"
+}

@@ -1,0 +1,85 @@
+{
+  "description": "Only the review-listed frozen source subset is included. Mathematical formulas and executable controls are unchanged; internal placement prose is removed and the completed review is described.",
+  "source_manifest_sha256": "1d658ff786648b11f5a4bdac22ce44ff88ff3d975f9462a2faf894309a540ae0",
+  "source_review_hashlist_sha256": "a4d628c1f79a5f77186307c794d4c70c33a3c0819b91f0882351a12c8522c58b",
+  "files": [
+    {
+      "path": "MATCHED_BLOCK_EXTENSION.md",
+      "source_sha256": "ca2838cdff301d3df75c3ce1054e74ad6e71173e5bcc448a57cb624c8774f799",
+      "published_sha256": "32a39043d7fb353c832aa2d7f5ee20bd22d933e103d05131518631781e6ede55",
+      "presentation_updates": true
+    },
+    {
+      "path": "REPETITION_POOR_GREEDY_BOUNDARY.md",
+      "source_sha256": "1a363f9b3541535b90259034949cfd5021e33c3aabaf9c73da3fda5c382a9f18",
+      "published_sha256": "1a363f9b3541535b90259034949cfd5021e33c3aabaf9c73da3fda5c382a9f18",
+      "presentation_updates": false
+    },
+    {
+      "path": "verification-optimized.json",
+      "source_sha256": "d505b838a3fe1234ede8ca53027e1856a93d849fb13eecbec3713dce6e15f7fa",
+      "published_sha256": "d505b838a3fe1234ede8ca53027e1856a93d849fb13eecbec3713dce6e15f7fa",
+      "presentation_updates": false
+    },
+    {
+      "path": "verification-receipt.json",
+      "source_sha256": "d505b838a3fe1234ede8ca53027e1856a93d849fb13eecbec3713dce6e15f7fa",
+      "published_sha256": "d505b838a3fe1234ede8ca53027e1856a93d849fb13eecbec3713dce6e15f7fa",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify_boundary_extensions.py",
+      "source_sha256": "fbe51b6cf77eb0afd5adf60d8efa16cd3588ba66d6317e2cd23ab1b27d6e7516",
+      "published_sha256": "fbe51b6cf77eb0afd5adf60d8efa16cd3588ba66d6317e2cd23ab1b27d6e7516",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/MATCHED_BLOCK_EXTENSION_REVIEW.md",
+      "source_sha256": "ca755c40f4a1d2f9b51955f8a189db3ecc7464d39324a3320f6e9c9615dfe267",
+      "published_sha256": "544a89c7599791d360858e9748b789535da88b0d9527fcb9bef6612cb8998197",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent_extension_controls.py",
+      "source_sha256": "4979bb7f10ca636dc4356c3c5ecfed621c77552b2808da165f1a46150ac79a8a",
+      "published_sha256": "4979bb7f10ca636dc4356c3c5ecfed621c77552b2808da165f1a46150ac79a8a",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/independent-receipt.json",
+      "source_sha256": "586b0e393be680a11ec1d38e022a66bf97fb49883255385ee8549dcfd316c30e",
+      "published_sha256": "586b0e393be680a11ec1d38e022a66bf97fb49883255385ee8549dcfd316c30e",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/independent-rerun.json",
+      "source_sha256": "586b0e393be680a11ec1d38e022a66bf97fb49883255385ee8549dcfd316c30e",
+      "published_sha256": "586b0e393be680a11ec1d38e022a66bf97fb49883255385ee8549dcfd316c30e",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/independent-optimized.json",
+      "source_sha256": "586b0e393be680a11ec1d38e022a66bf97fb49883255385ee8549dcfd316c30e",
+      "published_sha256": "586b0e393be680a11ec1d38e022a66bf97fb49883255385ee8549dcfd316c30e",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/submitted-rerun.json",
+      "source_sha256": "d505b838a3fe1234ede8ca53027e1856a93d849fb13eecbec3713dce6e15f7fa",
+      "published_sha256": "d505b838a3fe1234ede8ca53027e1856a93d849fb13eecbec3713dce6e15f7fa",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/submitted-optimized.json",
+      "source_sha256": "d505b838a3fe1234ede8ca53027e1856a93d849fb13eecbec3713dce6e15f7fa",
+      "published_sha256": "d505b838a3fe1234ede8ca53027e1856a93d849fb13eecbec3713dce6e15f7fa",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/REVIEW_STATUS.json",
+      "source_sha256": "a70cb89e51558bc8e88ede14d5c8a78ad9e659107053153995f75f2ea51e3387",
+      "published_sha256": "86c042000f9aee0351020f57ac57f4c6773e3fe7d322e235bf15302a8ba2906a",
+      "presentation_updates": true
+    }
+  ]
+}
