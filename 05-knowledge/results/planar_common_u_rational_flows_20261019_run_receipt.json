@@ -1,0 +1,17 @@
+{
+  "packet": 124,
+  "status": "PASS",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "checks": 169,
+  "commands": [
+    "python 04-computation/experiments/planar_common_u_rational_flows_20261019.py",
+    "python -O 04-computation/experiments/planar_common_u_rational_flows_20261019.py"
+  ],
+  "normal_output": "05-knowledge/results/planar_common_u_rational_flows_20261019.json",
+  "optimized_output": "05-knowledge/results/planar_common_u_rational_flows_20261019_optimized.json",
+  "normal_sha256": "8f23e31d79d570d1738b9cda74a849db7f753fb3ee5bd5d4b7ff65652738ef66",
+  "optimized_sha256": "8f23e31d79d570d1738b9cda74a849db7f753fb3ee5bd5d4b7ff65652738ef66",
+  "byte_identical": true,
+  "scope": "Finite exact controls; universal result follows from the elementary written proof."
+}

@@ -1,0 +1,12 @@
+{
+  "checks": 169,
+  "polynomials": [
+    "z**2",
+    "z**2*(z + 1)",
+    "z**2*(z + 1)**2",
+    "z**3 - z**2",
+    "2*z**4 + 3*z**2 + 5"
+  ],
+  "scope": "Exact finite algebraic controls; universal classification follows from the written proof.",
+  "status": "PASS"
+}
