@@ -10,7 +10,7 @@ source: 05-knowledge/results/farey_mandelbrot_20261019_collatz_angles_and_cross_
 scripts:
   - 04-computation/experiments/farey_mandelbrot_20261019/collatz_angles.py (+ .out), balanced_free.py (+ .out, balanced_free_150.out)
 related:
-  - THM-4484 (free iff (2^p - q^a) | d), THM-4714, THM-4633, THM-4591, HYP-9334
+  - THM-4484 (free iff (2^p - q^a) | d), THM-4714, THM-4716 (balanced cycles are free), THM-4633, THM-4591, HYP-9334 (PROVED by THM-4716)
 ---
 
 # THM-4715 — free cycles realise every external-angle orbit
@@ -21,7 +21,7 @@ related:
 
 2. **The bulb cycle (PROVED).** Exactly one of these cycles has a balanced word, the Christoffel necklace of slope `p/q`; by THM-4714 (1d) its angle orbit is the root-angle orbit of the cardioid `p/q`-bulb. The others land at period-`q` roots off the cardioid. Examples: `3x + 13` (`(q,p) = (8,5)`) has seven cycles, one per necklace, with minima `211, 227, 251, 259, 283, 287, 319`; the bulb cycle is `319 → 485 → 734 → 367 → 557 → 842 → 421 → 638` (word `11011010`), the `5/8`-bulb's root angles being `181/255, 182/255`. `3x + 5` (`(5,3)`) has the two cycles `23` (balanced, the `3/5`-bulb, root angles `21/31, 22/31`) and `19`.
 
-3. **Census and Stern–Brocot placement (FINITE-EXACT).** For odd `d ≤ 49` and `|n| ≤ 20000` the map `T_d` has 219 cycles, 120 of them balanced; every balanced cycle is free (`D | d`), in line with HYP-9334. The sporadic cycles with large minima sit at Stern–Brocot nodes of `log_3 2 = [0; 1, 1, 1, 2, 2, 3, 1, 5, 2, 23, …]`: the `−17` cycle of `3x+1` has shape `(11, 7)`, the semiconvergent `7/11` (`D = −139`); the cycles of `3x+5` with minima `187, 347` and of `3x+15` with minima `561, 1041` have shape `(27, 17)`, the semiconvergent `17/27` (`D = 5077565`); the free cycles of `3x+13` sit at the convergent `5/8`. The bulb cycles along the convergents `1/2, 2/3, 5/8, 12/19, 41/65, 53/84, …` are the free cycles of `3x + 1, 3x − 1, 3x + 13, 3x − 7153, 3x + 420491770248316829, …`; for none of them beyond `|D| = 1` does `D` divide the carry (so none is a `3x+1` cycle).
+3. **Census and Stern–Brocot placement (FINITE-EXACT).** For odd `d ≤ 49` and `|n| ≤ 20000` the map `T_d` has 219 cycles, 120 of them balanced; every balanced cycle is free (`D | d`), as THM-4716 proves in general. The sporadic cycles with large minima sit at Stern–Brocot nodes of `log_3 2 = [0; 1, 1, 1, 2, 2, 3, 1, 5, 2, 23, …]`: the `−17` cycle of `3x+1` has shape `(11, 7)`, the semiconvergent `7/11` (`D = −139`); the cycles of `3x+5` with minima `187, 347` and of `3x+15` with minima `561, 1041` have shape `(27, 17)`, the semiconvergent `17/27` (`D = 5077565`); the free cycles of `3x+13` sit at the convergent `5/8`. The bulb cycles along the convergents `1/2, 2/3, 5/8, 12/19, 41/65, 53/84, …` are the free cycles of `3x + 1, 3x − 1, 3x + 13, 3x − 7153, 3x + 420491770248316829, …`; for none of them beyond `|D| = 1` does `D` divide the carry (so none is a `3x+1` cycle).
 
 ## Proofs
 

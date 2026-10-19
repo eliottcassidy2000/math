@@ -3,7 +3,8 @@
 Session mac-mini-2026-10-19-farey (2026-10-19). Owner prompt: continue Collatz, Hadwiger–Nelson, the planar Jacobian
 conjecture, Goldbach and twin primes; merge the repository's Farey-fraction, mediant and Mandelbrot themes and any others.
 **Status: THM-4714 PROVED (elementary on top of THM-4634 and cited classical theorems; pre-audit); THM-4715 PROVED +
-FINITE-EXACT; HYP-9334 OPEN (686,732 exact checks); HYP-9335 OPEN dictionary with one row REFUTED. None of the five
+FINITE-EXACT; THM-4716 PROVED (balanced cycles are 3-smooth ladders and are free; HYP-9334 promoted); HYP-9335 OPEN dictionary
+with one row REFUTED. None of the five
 conjectures is advanced beyond reformulation; every row is typed.**
 
 ## 0. What the repository already had, and what codex did today
@@ -58,10 +59,16 @@ three ones. Census (`d ≤ 49` odd, `|n| ≤ 20000`): 219 cycles, 120 balanced, 
 large minima sit at Stern–Brocot nodes of `log_3 2`: the `−17` cycle at the semiconvergent `7/11` (`D = −139`), the
 27-cycles of `3x + 5` and `3x + 15` at `17/27` (`D = 5077565`).
 
-**HYP-9334.** `gcd(2^q − 3^p, B_r) = 1` for every rotation `r` of every Christoffel necklace: true for all 686,732
-rotations with `q ≤ 150`, while random necklaces of the same shapes fail in 6% of trials. If true, no sporadic cycle of
-any `3x + d` is balanced, and the only balanced `3x+1` cycles are Gersonides' four: in Mandelbrot terms, a positive
-nontrivial `3x+1` cycle would have to land off the main cardioid.
+**THM-4716 (HYP-9334 proved).** The `q` rotations of the Christoffel necklace are the lower mechanical words with
+intercepts `t/q`; consecutive intercepts differ by exactly one adjacent transposition `01 → 10`, so consecutive carries
+differ by exactly `2^i 3^j` (`i` = new position of the moved one, `j` = ones to its right). Hence the sorted elements of
+the balanced free cycle of `3x + (2^q − 3^p)` form a **3-smooth ladder** (`3x + 13`: `319, 367, 421, 485, 557, 638, 734,
+842`, differences `48, 54, 64, 72, 81, 96, 108`, the consecutive 3-smooth numbers of that window; in general the
+differences are the 3-smooth numbers of the moved ones), and since a prime of the clock dividing one element divides
+all (the dynamics is linear modulo it), it would divide a 3-smooth difference: impossible. So `gcd(2^q − 3^p, B_r) = 1`
+for every rotation (checked to `q = 150`, 686,732 rotations, while random necklaces fail in 6% of trials), no sporadic
+cycle of any `3x + d` is balanced, the balanced `3x+1` cycles are Gersonides' four, and a positive nontrivial `3x+1`
+cycle would land off the main cardioid.
 
 ## 3. The other four conjectures (HYP-9335)
 

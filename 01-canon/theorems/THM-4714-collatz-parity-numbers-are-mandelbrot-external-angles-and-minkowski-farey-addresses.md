@@ -21,7 +21,7 @@ related:
   - THM-4634 (the parity-number dictionary rho: Terras map semi-conjugate to doubling), THM-4633 (cycles as rational approximations of log2 3)
   - THM-4484 (free and sporadic cycles; Gersonides), THM-4591 (the five integer cycles to period 301,993), THM-4600 (the anchors c_a)
   - THM-4515 (fair splits: concatenation of blocks is the mediant of their slopes), THM-4556 (the Mersenne run as the odd anchor)
-  - THM-4715 (free cycles of 3x+(2^q-3^p) as the period-q angle orbits), HYP-9334 (balanced cycles are free), HYP-9335
+  - THM-4715 (free cycles of 3x+(2^q-3^p) as the period-q angle orbits), THM-4716 (balanced cycles are 3-smooth ladders and are free; HYP-9334 PROVED), HYP-9335
   - 05-knowledge/results/collatz_parity_cf_boundary_20261014a.md (codex: the parity-bit continued fraction beta_n and the Gauss map; the Farey address differs: its partial quotients are the run lengths)
   - 05-knowledge/results/parabolic_scaling_session_20261019.md (codex: pi-clocks at the cusp c = 1/4; the airplane c = -7/4 residue 51/49)
 ---
@@ -41,7 +41,7 @@ related:
    * (a) `x` has an eventually periodic Terras orbit iff `θ(x)` is rational with odd denominator; a purely periodic orbit of period `K` gives a periodic angle of period dividing `K`, hence (Douady–Hubbard) the landing point of `R_θ` is the root of a hyperbolic component of that period.
    * (b) The five integer cycles of `3x+1` (THM-4591): `{0}` and `{−1}` have angles `0` and `1 ≡ 0` — the cusp `c = 1/4`; `{1, 2}` has angles `2/3, 1/3` — the root `c = −3/4` of the `1/2`-bulb; `{−5, −7, −10}` has angles `6/7, 5/7, 3/7` — `6/7, 5/7` are the root angles of the `2/3`-bulb and `3/7` lands at the airplane root `c = −7/4`; the `−17` cycle has eleven angles with denominator `2047 = 2^11 − 1` (`ρ(−17) = 1976/2047`), landing at period-11 roots off the main cardioid, because its word `11110111000` is not balanced.
    * (c) **Anchors.** The anchor `c_a = 1/(2^a − 3)` (THM-4600) has the periodic word `1 0^(a−1)`; its orbit carries the angles `{2^(a−1), 1, 2, …, 2^(a−2)}/(2^a − 1)`, among which `1/(2^a−1), 2/(2^a−1)` are the root angles of the `1/a`-bulb. As `a → ∞` the bulbs accumulate at the cusp, `c_a → −1/3` 2-adically, and `θ(−1/3) = 1/2`: the limit anchor is the tip `c = −2`. The whole real spine `[−2, 1/4]` of `M` is thus spanned by the two degenerate Collatz points `−1/3` (tip) and `0 ≡ −1` (cusp).
-   * (d) **Balanced words are bulbs.** A periodic word `w` of shape `(K, X)` with `gcd(K, X) = 1` is balanced iff its angle orbit is the root-angle orbit of the cardioid `X/K`-bulb. Hence an integer cycle of any `3x + d` is a cardioid-bulb cycle iff its parity word is a Christoffel necklace; THM-4715 and HYP-9334 classify these.
+   * (d) **Balanced words are bulbs.** A periodic word `w` of shape `(K, X)` with `gcd(K, X) = 1` is balanced iff its angle orbit is the root-angle orbit of the cardioid `X/K`-bulb. Hence an integer cycle of any `3x + d` is a cardioid-bulb cycle iff its parity word is a Christoffel necklace; THM-4715 and THM-4716 classify these: they are exactly the free ones, so the cardioid bulbs other than the cusp, the `1/2`-bulb and the `2/3`-bulb carry no `3x+1` cycle.
 
 2. **The Farey address (PROVED).** Put `α(x) = ?^(−1)(ρ(x)) ∈ [0, 1]`. Then
 

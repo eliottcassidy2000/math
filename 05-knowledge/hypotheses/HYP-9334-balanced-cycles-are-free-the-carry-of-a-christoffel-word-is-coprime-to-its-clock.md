@@ -2,7 +2,8 @@
 id: HYP-9334
 title: "Balanced cycles are free: for every Christoffel (balanced) necklace w of shape (q, p), gcd(2^q - 3^p, B_r) = 1 for every rotation r of w (B = the carry of the affine map); hence a balanced parity word is an integer cycle of 3x + d only when (2^q - 3^p) | d, there are no sporadic balanced cycles, the only balanced cycles of 3x+1 are the Gersonides ones (shapes (1,0), (1,1), (2,1), (3,2)), and the cardioid bulbs of the Mandelbrot set beyond the cusp, the 1/2-bulb and the 2/3-bulb carry no integer 3x+1 cycle"
 status: >
-  OPEN. FINITE-EXACT: gcd = 1 for all 686,732 rotations of all Christoffel necklaces with q <= 150 (balanced_free_150.out);
+  PROVED by THM-4716 (same session, 2026-10-19): consecutive intercepts of the Christoffel word differ by one adjacent
+  transposition, so two cycle elements differ by a 3-smooth number, which no prime of the clock divides. Earlier evidence: FINITE-EXACT: gcd = 1 for all 686,732 rotations of all Christoffel necklaces with q <= 150 (balanced_free_150.out);
   by contrast random necklaces of the same shapes have gcd > 1 in 73 of 1194 trials (6%). The consequence for 3x+d is
   FINITE-EXACT in the census of THM-4715 (3) (every balanced cycle there is free). No proof: the carry
   B_w = sum_k 3^(p-k) 2^(ceil(kq/p) - 1) of the lower Christoffel word has no obvious structure modulo the primes of
@@ -11,12 +12,13 @@ status: >
 session: mac-mini-2026-10-19-farey
 source: 05-knowledge/results/farey_mandelbrot_20261019_collatz_angles_and_cross_conjecture_dictionary.md
 related:
+  - THM-4716 (the proof: balanced cycles are 3-smooth ladders and are free)
   - THM-4484 (free and sporadic cycles), THM-4714 (balanced = cardioid bulb), THM-4715 (free cycles realise every angle orbit)
   - THM-4633 (budget: large-minimum cycles have convergent shapes), THM-4591 (the five integer cycles)
   - 04-computation/experiments/farey_mandelbrot_20261019/balanced_free.py
 ---
 
-# HYP-9334 — balanced cycles are free
+# HYP-9334 — balanced cycles are free (PROVED: THM-4716)
 
 ## Statement
 
