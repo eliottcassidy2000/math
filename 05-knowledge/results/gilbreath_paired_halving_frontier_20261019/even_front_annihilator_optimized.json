@@ -1,0 +1,155 @@
+{
+  "legal_finite_hostile": "002120 followed by zeros",
+  "legal_periodic_hostile": "(00102120)^infinity",
+  "periodic_hostile_parity_complexity": 7,
+  "periodic_phase_controls": 9840,
+  "reachable_front_checks": [
+    {
+      "even_phase_checks": 0,
+      "front_length": 0,
+      "maximum_exact_period": 1,
+      "maximum_exact_transient": 0,
+      "positive_finite_words": 0,
+      "words": 1
+    },
+    {
+      "even_phase_checks": 0,
+      "front_length": 1,
+      "maximum_exact_period": 2,
+      "maximum_exact_transient": 0,
+      "positive_finite_words": 0,
+      "words": 2
+    },
+    {
+      "even_phase_checks": 3,
+      "front_length": 2,
+      "maximum_exact_period": 4,
+      "maximum_exact_transient": 0,
+      "positive_finite_words": 1,
+      "words": 4
+    },
+    {
+      "even_phase_checks": 0,
+      "front_length": 3,
+      "maximum_exact_period": 4,
+      "maximum_exact_transient": 0,
+      "positive_finite_words": 1,
+      "words": 8
+    },
+    {
+      "even_phase_checks": 15,
+      "front_length": 4,
+      "maximum_exact_period": 8,
+      "maximum_exact_transient": 0,
+      "positive_finite_words": 5,
+      "words": 16
+    },
+    {
+      "even_phase_checks": 0,
+      "front_length": 5,
+      "maximum_exact_period": 8,
+      "maximum_exact_transient": 0,
+      "positive_finite_words": 5,
+      "words": 32
+    },
+    {
+      "even_phase_checks": 63,
+      "front_length": 6,
+      "maximum_exact_period": 8,
+      "maximum_exact_transient": 0,
+      "positive_finite_words": 6,
+      "words": 64
+    },
+    {
+      "even_phase_checks": 0,
+      "front_length": 7,
+      "maximum_exact_period": 8,
+      "maximum_exact_transient": 0,
+      "positive_finite_words": 6,
+      "words": 128
+    },
+    {
+      "even_phase_checks": 255,
+      "front_length": 8,
+      "maximum_exact_period": 16,
+      "maximum_exact_transient": 0,
+      "positive_finite_words": 19,
+      "words": 256
+    },
+    {
+      "even_phase_checks": 0,
+      "front_length": 9,
+      "maximum_exact_period": 16,
+      "maximum_exact_transient": 0,
+      "positive_finite_words": 19,
+      "words": 512
+    },
+    {
+      "even_phase_checks": 1023,
+      "front_length": 10,
+      "maximum_exact_period": 16,
+      "maximum_exact_transient": 0,
+      "positive_finite_words": 20,
+      "words": 1024
+    },
+    {
+      "even_phase_checks": 0,
+      "front_length": 11,
+      "maximum_exact_period": 16,
+      "maximum_exact_transient": 0,
+      "positive_finite_words": 20,
+      "words": 2048
+    },
+    {
+      "even_phase_checks": 4095,
+      "front_length": 12,
+      "maximum_exact_period": 16,
+      "maximum_exact_transient": 0,
+      "positive_finite_words": 24,
+      "words": 4096
+    },
+    {
+      "even_phase_checks": 0,
+      "front_length": 13,
+      "maximum_exact_period": 16,
+      "maximum_exact_transient": 0,
+      "positive_finite_words": 24,
+      "words": 8192
+    },
+    {
+      "even_phase_checks": 16383,
+      "front_length": 14,
+      "maximum_exact_period": 16,
+      "maximum_exact_transient": 0,
+      "positive_finite_words": 25,
+      "words": 16384
+    }
+  ],
+  "restricted_minimality": [
+    {
+      "first_hostile": null,
+      "period": 2
+    },
+    {
+      "first_hostile": null,
+      "period": 4
+    },
+    {
+      "first_hostile": [
+        0,
+        0,
+        1,
+        0,
+        2,
+        1,
+        2,
+        0
+      ],
+      "period": 8
+    }
+  ],
+  "same_parity_actual_age_cycle": "00100100",
+  "same_parity_actual_front_word": "101100",
+  "same_parity_late_spike_first_defect": 8,
+  "status": "FINITE-EXACT evidence for an OPEN all-length conjecture"
+}

@@ -1,0 +1,249 @@
+{
+  "checks": 785592,
+  "finite_phase_words": 9841,
+  "noninvariance_tails": {
+    "first_T0": "21102 then 2 forever",
+    "input": "21012 then 0 forever",
+    "second_T0": "21002 then (02) forever"
+  },
+  "reachable_rows": [
+    {
+      "L": 0,
+      "even_annihilator_parent_types": {},
+      "exact_period": 1,
+      "histogram": {
+        "0": 1
+      },
+      "words": 1
+    },
+    {
+      "L": 1,
+      "even_annihilator_parent_types": {},
+      "exact_period": 2,
+      "histogram": {
+        "0": 2
+      },
+      "words": 2
+    },
+    {
+      "L": 2,
+      "even_annihilator_parent_types": {
+        "age_zero": 2,
+        "positive": 1
+      },
+      "exact_period": 4,
+      "histogram": {
+        "0": 3,
+        "2": 1
+      },
+      "words": 4
+    },
+    {
+      "L": 3,
+      "even_annihilator_parent_types": {},
+      "exact_period": 4,
+      "histogram": {
+        "0": 4,
+        "2": 1,
+        "None": 3
+      },
+      "words": 8
+    },
+    {
+      "L": 4,
+      "even_annihilator_parent_types": {
+        "age_zero": 4,
+        "binary": 6,
+        "positive": 5
+      },
+      "exact_period": 8,
+      "histogram": {
+        "0": 5,
+        "2": 1,
+        "4": 3,
+        "6": 1,
+        "None": 6
+      },
+      "words": 16
+    },
+    {
+      "L": 5,
+      "even_annihilator_parent_types": {},
+      "exact_period": 8,
+      "histogram": {
+        "0": 6,
+        "2": 1,
+        "4": 3,
+        "6": 1,
+        "None": 21
+      },
+      "words": 32
+    },
+    {
+      "L": 6,
+      "even_annihilator_parent_types": {
+        "age_zero": 6,
+        "binary": 51,
+        "positive": 6
+      },
+      "exact_period": 8,
+      "histogram": {
+        "0": 7,
+        "2": 2,
+        "4": 3,
+        "6": 1,
+        "None": 51
+      },
+      "words": 64
+    },
+    {
+      "L": 7,
+      "even_annihilator_parent_types": {},
+      "exact_period": 8,
+      "histogram": {
+        "0": 8,
+        "2": 2,
+        "4": 3,
+        "6": 1,
+        "None": 114
+      },
+      "words": 128
+    },
+    {
+      "L": 8,
+      "even_annihilator_parent_types": {
+        "age_zero": 8,
+        "binary": 228,
+        "positive": 19
+      },
+      "exact_period": 16,
+      "histogram": {
+        "0": 9,
+        "10": 2,
+        "12": 3,
+        "14": 1,
+        "2": 2,
+        "4": 3,
+        "6": 1,
+        "8": 7,
+        "None": 228
+      },
+      "words": 256
+    },
+    {
+      "L": 9,
+      "even_annihilator_parent_types": {},
+      "exact_period": 16,
+      "histogram": {
+        "0": 10,
+        "10": 2,
+        "12": 3,
+        "14": 1,
+        "2": 2,
+        "4": 3,
+        "6": 1,
+        "8": 7,
+        "None": 483
+      },
+      "words": 512
+    },
+    {
+      "L": 10,
+      "even_annihilator_parent_types": {
+        "age_zero": 10,
+        "binary": 993,
+        "positive": 20
+      },
+      "exact_period": 16,
+      "histogram": {
+        "0": 11,
+        "10": 2,
+        "12": 3,
+        "14": 1,
+        "2": 3,
+        "4": 3,
+        "6": 1,
+        "8": 7,
+        "None": 993
+      },
+      "words": 1024
+    },
+    {
+      "L": 11,
+      "even_annihilator_parent_types": {},
+      "exact_period": 16,
+      "histogram": {
+        "0": 12,
+        "10": 2,
+        "12": 3,
+        "14": 1,
+        "2": 3,
+        "4": 3,
+        "6": 1,
+        "8": 7,
+        "None": 2016
+      },
+      "words": 2048
+    },
+    {
+      "L": 12,
+      "even_annihilator_parent_types": {
+        "age_zero": 12,
+        "binary": 4059,
+        "positive": 24
+      },
+      "exact_period": 16,
+      "histogram": {
+        "0": 13,
+        "10": 2,
+        "12": 3,
+        "14": 1,
+        "2": 3,
+        "4": 6,
+        "6": 2,
+        "8": 7,
+        "None": 4059
+      },
+      "words": 4096
+    },
+    {
+      "L": 13,
+      "even_annihilator_parent_types": {},
+      "exact_period": 16,
+      "histogram": {
+        "0": 14,
+        "10": 2,
+        "12": 3,
+        "14": 1,
+        "2": 3,
+        "4": 6,
+        "6": 2,
+        "8": 7,
+        "None": 8154
+      },
+      "words": 8192
+    },
+    {
+      "L": 14,
+      "even_annihilator_parent_types": {
+        "age_zero": 14,
+        "binary": 16344,
+        "positive": 25
+      },
+      "exact_period": 16,
+      "histogram": {
+        "0": 15,
+        "10": 2,
+        "12": 3,
+        "14": 1,
+        "2": 4,
+        "4": 6,
+        "6": 2,
+        "8": 7,
+        "None": 16344
+      },
+      "words": 16384
+    }
+  ],
+  "status": "PASS finite controls; no all-length hypothesis proved"
+}
