@@ -1,0 +1,8 @@
+{
+  "admissible_norms": 64,
+  "checks": 2400,
+  "direct_leg_primitive_triples": 80,
+  "direct_root_base_signed_ap_triangles": 80,
+  "hypotenuse_limit": 500,
+  "status": "PASS"
+}
