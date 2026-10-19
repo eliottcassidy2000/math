@@ -162,3 +162,7 @@ computation needs universe, controls, command, and output. Route `CLAIMED` and
 ## Digest entry moved from INDEX.md on 2026-10-19 (line budget; mac-mini-2026-10-19-mersenne)
 
 - **HYP-9137 PROVED (2026-09-26):** [THM-4478, critical growth bands and affine integer capacity](../../01-canon/theorems/THM-4478-critical-tube-affine-capacity-sharp-provability-price.md) gives the sharp finite-horizon edit-density exponent `1-H_2(log_3 2)`, for arbitrary edits and the pairing family. The proof retains near-critical source words and bounds actual integer ancestors. Collatz remains OPEN; polynomial-factor comparability is not proved. [Crossroads synthesis](../results/crossroads_20260926_board.md).
+
+## Digest entry moved from INDEX.md on 2026-10-19 (line budget; mac-mini-2026-10-19-farey)
+
+- **HYP-9167 / HYP-9168 (OPEN, collatz-procgen-20260922 selfie lane, 2026-10-01; with THM-4524):** [Paley minus a vertex is Redei-rigid](HYP-9167-paley-minus-a-vertex-is-redei-rigid.md): every arc of QR_q - v lies on an odd number of HPs (q = 3 mod 4; FINITE-EXACT q = 7..27, antipodal orbit PROVED), and all-odd tournaments exist iff N = 2 mod 4 (none at N = 5, 9; first open N = 13, 14). [HP-blocking number = Hall bound](HYP-9168-hp-blocking-number-equals-hall-bound.md): the fewest arc deletions killing every HP equal a predecessor/successor Hall deficiency (beta <= hall PROVED; equality FINITE-EXACT N <= 9).
