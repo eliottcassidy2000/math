@@ -1,0 +1,7 @@
+conjugacy x(theta+1 mod phi) = T_s(x(theta)), s = [theta >= 1/phi]: failures 0/300 at 1e-40
+c_min = 10.3701271417470491618232345771410338827702286
+c_max = 31.6103814252411474854697037314231016483106859
+c_max/c_min = 3.04821541656776305414692644342
+x(phi^-) - c_min = 0.0
+x is non-increasing on 5000 samples; distinct values: 2920 of 5000
+total variation c_max - c_min = 21.240254283494098324  = sum over r of term drops: 21.240254283494098324

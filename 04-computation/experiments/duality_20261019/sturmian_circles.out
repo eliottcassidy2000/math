@@ -1,0 +1,31 @@
+slope a = sqrt2-1 = 0.4142 (subcritical); predicted min/max: 0.308450524249 / 1.42535157275
+   2/5: x_min = 0.3043478261, x_max = 1.217391304
+   5/12: x_min = 0.3189722294, x_max = 1.425382819
+   12/29: x_min = 0.3084505242, x_max = 1.424856139
+   29/70: x_min = 0.3084505339, x_max = 1.425351573
+   70/169: x_min = 0.3084505242, x_max = 1.425351573
+   rotation conjugacy on the limit circle: failures 0/40
+slope a = 1/phi = 0.6180 (subcritical); predicted min/max: 10.3701271417 / 31.6103814252
+   3/5: x_min = 4.6, x_max = 11.6
+   5/8: x_min = 24.53846154, x_max = 64.76923077
+   8/13: x_min = 8.8908645, x_max = 25.16125077
+   13/21: x_min = 11.54510778, x_max = 33.54997027
+   21/34: x_min = 10.19401054, x_max = 30.30367548
+   34/55: x_min = 10.56123877, x_max = 31.75281734
+   55/89: x_min = 10.36123798, x_max = 31.38749229
+   89/144: x_min = 10.39605633, x_max = 31.61315333
+   144/233: x_min = 10.37009662, x_max = 31.59120404
+   rotation conjugacy on the limit circle: failures 0/40
+slope a = pi-3+0.5 = 0.6416 (supercritical); predicted min/max: -39.2199371192 / -13.4066457064
+   7/11: x_min = -27.10071942, x_max = -72.9352518
+   9/14: x_min = -12.44953016, x_max = -33.86541376
+   34/53: x_min = -13.6172889, x_max = -39.26469461
+   145/226: x_min = -13.40664571, x_max = -39.18182436
+   rotation conjugacy on the limit circle: failures 0/40
+slope a = 1/sqrt2 = 0.7071 (supercritical); predicted min/max: -5.72460478524 / -2.24153492841
+   5/7: x_min = -2.182608696, x_max = -4.991304348
+   12/17: x_min = -2.297902685, x_max = -5.730019057
+   29/41: x_min = -2.241533531, x_max = -5.708049499
+   70/99: x_min = -2.241577141, x_max = -5.724604785
+   169/239: x_min = -2.241534928, x_max = -5.724604784
+   rotation conjugacy on the limit circle: failures 0/40
