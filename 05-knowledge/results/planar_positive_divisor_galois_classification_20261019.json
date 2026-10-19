@@ -1,0 +1,57 @@
+{
+  "checks": 31,
+  "packet": 135,
+  "scope": "Exact identity witnesses only; no computation of or census over Galois groups.",
+  "status": "PASS",
+  "verified": [
+    "a1_r2_primitive_derivative",
+    "a1_r2_degree_and_leading",
+    "a1_r2_critical_constant",
+    "a1_r2_all_critical_values",
+    "a1_r2_birational_u",
+    "a1_r2_birational_energy",
+    "a1_r2_coordinate_degrees",
+    "a2_r1_primitive_derivative",
+    "a2_r1_degree_and_leading",
+    "a2_r1_critical_constant",
+    "a2_r1_all_critical_values",
+    "a2_r1_birational_u",
+    "a2_r1_birational_energy",
+    "a2_r1_coordinate_degrees",
+    "a2_r2_primitive_derivative",
+    "a2_r2_degree_and_leading",
+    "a2_r2_critical_constant",
+    "a2_r2_all_critical_values",
+    "a2_r2_birational_u",
+    "a2_r2_birational_energy",
+    "a2_r2_coordinate_degrees",
+    "a2_r2_discriminant_resultant",
+    "a2_r2_square_class_minus7",
+    "a3_r3_primitive_derivative",
+    "a3_r3_degree_and_leading",
+    "a3_r3_critical_constant",
+    "a3_r3_all_critical_values",
+    "a3_r3_birational_u",
+    "a3_r3_birational_energy",
+    "a3_r3_coordinate_degrees",
+    "a8_r2_arithmetic_A25_constant"
+  ],
+  "witnesses": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      3
+    ]
+  ]
+}
