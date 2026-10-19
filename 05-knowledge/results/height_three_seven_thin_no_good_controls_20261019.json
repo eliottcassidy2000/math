@@ -1,0 +1,749 @@
+{
+  "status": "BOTH_HEIGHT_THREE_NO_GOOD_WITNESSES_AND_GOLD_VERIFIED",
+  "examples": [
+    {
+      "status": "EXACT_HEIGHT_THREE_NO_VERY_GOOD_WITNESS_VERIFIED",
+      "pred": [
+        0,
+        0,
+        0,
+        6,
+        0,
+        19,
+        2,
+        18,
+        86,
+        151
+      ],
+      "height": 3,
+      "incomparability_degrees": [
+        7,
+        3,
+        6,
+        7,
+        5,
+        6,
+        7,
+        6,
+        5,
+        4
+      ],
+      "extensions": 11971,
+      "very_good_pairs": 0,
+      "good_pairs": [],
+      "eligible": [
+        {
+          "dual": 0,
+          "a": 0,
+          "b": 3,
+          "numerator": 10308,
+          "probability": "10308/11971"
+        },
+        {
+          "dual": 0,
+          "a": 0,
+          "b": 6,
+          "numerator": 8268,
+          "probability": "8268/11971"
+        },
+        {
+          "dual": 0,
+          "a": 0,
+          "b": 7,
+          "numerator": 9435,
+          "probability": "9435/11971"
+        },
+        {
+          "dual": 0,
+          "a": 0,
+          "b": 8,
+          "numerator": 11214,
+          "probability": "11214/11971"
+        },
+        {
+          "dual": 0,
+          "a": 1,
+          "b": 0,
+          "numerator": 8443,
+          "probability": "8443/11971"
+        },
+        {
+          "dual": 0,
+          "a": 1,
+          "b": 2,
+          "numerator": 8021,
+          "probability": "8021/11971"
+        },
+        {
+          "dual": 0,
+          "a": 1,
+          "b": 4,
+          "numerator": 7304,
+          "probability": "7304/11971"
+        },
+        {
+          "dual": 0,
+          "a": 2,
+          "b": 0,
+          "numerator": 6547,
+          "probability": "6547/11971"
+        },
+        {
+          "dual": 0,
+          "a": 2,
+          "b": 5,
+          "numerator": 11065,
+          "probability": "11065/11971"
+        },
+        {
+          "dual": 0,
+          "a": 2,
+          "b": 6,
+          "numerator": 8968,
+          "probability": "8968/11971"
+        },
+        {
+          "dual": 0,
+          "a": 2,
+          "b": 7,
+          "numerator": 9941,
+          "probability": "9941/11971"
+        },
+        {
+          "dual": 0,
+          "a": 3,
+          "b": 8,
+          "numerator": 7636,
+          "probability": "7636/11971"
+        },
+        {
+          "dual": 0,
+          "a": 3,
+          "b": 9,
+          "numerator": 8185,
+          "probability": "8185/11971"
+        },
+        {
+          "dual": 0,
+          "a": 4,
+          "b": 0,
+          "numerator": 7381,
+          "probability": "7381/11971"
+        },
+        {
+          "dual": 0,
+          "a": 4,
+          "b": 2,
+          "numerator": 6791,
+          "probability": "6791/11971"
+        },
+        {
+          "dual": 0,
+          "a": 4,
+          "b": 3,
+          "numerator": 11156,
+          "probability": "11156/11971"
+        },
+        {
+          "dual": 0,
+          "a": 4,
+          "b": 6,
+          "numerator": 9724,
+          "probability": "9724/11971"
+        },
+        {
+          "dual": 0,
+          "a": 5,
+          "b": 9,
+          "numerator": 7741,
+          "probability": "7741/11971"
+        },
+        {
+          "dual": 0,
+          "a": 6,
+          "b": 3,
+          "numerator": 8925,
+          "probability": "8925/11971"
+        },
+        {
+          "dual": 0,
+          "a": 6,
+          "b": 5,
+          "numerator": 9447,
+          "probability": "9447/11971"
+        },
+        {
+          "dual": 0,
+          "a": 6,
+          "b": 7,
+          "numerator": 7249,
+          "probability": "7249/11971"
+        },
+        {
+          "dual": 0,
+          "a": 6,
+          "b": 9,
+          "numerator": 10701,
+          "probability": "10701/11971"
+        },
+        {
+          "dual": 0,
+          "a": 7,
+          "b": 5,
+          "numerator": 8754,
+          "probability": "8754/11971"
+        },
+        {
+          "dual": 0,
+          "a": 7,
+          "b": 8,
+          "numerator": 9724,
+          "probability": "9724/11971"
+        },
+        {
+          "dual": 1,
+          "a": 0,
+          "b": 1,
+          "numerator": 8443,
+          "probability": "8443/11971"
+        },
+        {
+          "dual": 1,
+          "a": 0,
+          "b": 4,
+          "numerator": 7381,
+          "probability": "7381/11971"
+        },
+        {
+          "dual": 1,
+          "a": 2,
+          "b": 1,
+          "numerator": 8021,
+          "probability": "8021/11971"
+        },
+        {
+          "dual": 1,
+          "a": 3,
+          "b": 0,
+          "numerator": 10308,
+          "probability": "10308/11971"
+        },
+        {
+          "dual": 1,
+          "a": 3,
+          "b": 4,
+          "numerator": 11156,
+          "probability": "11156/11971"
+        },
+        {
+          "dual": 1,
+          "a": 3,
+          "b": 6,
+          "numerator": 8925,
+          "probability": "8925/11971"
+        },
+        {
+          "dual": 1,
+          "a": 3,
+          "b": 7,
+          "numerator": 8006,
+          "probability": "8006/11971"
+        },
+        {
+          "dual": 1,
+          "a": 4,
+          "b": 1,
+          "numerator": 7304,
+          "probability": "7304/11971"
+        },
+        {
+          "dual": 1,
+          "a": 5,
+          "b": 2,
+          "numerator": 11065,
+          "probability": "11065/11971"
+        },
+        {
+          "dual": 1,
+          "a": 5,
+          "b": 3,
+          "numerator": 6562,
+          "probability": "6562/11971"
+        },
+        {
+          "dual": 1,
+          "a": 5,
+          "b": 6,
+          "numerator": 9447,
+          "probability": "9447/11971"
+        },
+        {
+          "dual": 1,
+          "a": 5,
+          "b": 7,
+          "numerator": 8754,
+          "probability": "8754/11971"
+        },
+        {
+          "dual": 1,
+          "a": 6,
+          "b": 2,
+          "numerator": 8968,
+          "probability": "8968/11971"
+        },
+        {
+          "dual": 1,
+          "a": 6,
+          "b": 4,
+          "numerator": 9724,
+          "probability": "9724/11971"
+        },
+        {
+          "dual": 1,
+          "a": 7,
+          "b": 0,
+          "numerator": 9435,
+          "probability": "9435/11971"
+        },
+        {
+          "dual": 1,
+          "a": 7,
+          "b": 2,
+          "numerator": 9941,
+          "probability": "9941/11971"
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 0,
+          "numerator": 11214,
+          "probability": "11214/11971"
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 3,
+          "numerator": 7636,
+          "probability": "7636/11971"
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 5,
+          "numerator": 7052,
+          "probability": "7052/11971"
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 7,
+          "numerator": 9724,
+          "probability": "9724/11971"
+        },
+        {
+          "dual": 1,
+          "a": 9,
+          "b": 3,
+          "numerator": 8185,
+          "probability": "8185/11971"
+        },
+        {
+          "dual": 1,
+          "a": 9,
+          "b": 5,
+          "numerator": 7741,
+          "probability": "7741/11971"
+        },
+        {
+          "dual": 1,
+          "a": 9,
+          "b": 6,
+          "numerator": 10701,
+          "probability": "10701/11971"
+        },
+        {
+          "dual": 1,
+          "a": 9,
+          "b": 8,
+          "numerator": 6640,
+          "probability": "6640/11971"
+        }
+      ],
+      "half_pairs": [],
+      "gold": {
+        "extensions": 11971,
+        "first_comparison": [
+          3,
+          5
+        ],
+        "second_comparison": [
+          2,
+          4
+        ],
+        "four_cells_11_10_01_00": [
+          3281,
+          3281,
+          1899,
+          3510
+        ],
+        "gold_margins": [
+          2128,
+          2128,
+          4663,
+          3052
+        ]
+      }
+    },
+    {
+      "status": "EXACT_HEIGHT_THREE_NO_VERY_GOOD_WITNESS_VERIFIED",
+      "pred": [
+        0,
+        0,
+        0,
+        0,
+        7,
+        13,
+        14,
+        12,
+        206,
+        5,
+        685,
+        535
+      ],
+      "height": 3,
+      "incomparability_degrees": [
+        6,
+        7,
+        3,
+        6,
+        7,
+        7,
+        7,
+        7,
+        6,
+        7,
+        5,
+        6
+      ],
+      "extensions": 61180,
+      "very_good_pairs": 0,
+      "good_pairs": [],
+      "eligible": [
+        {
+          "dual": 0,
+          "a": 0,
+          "b": 1,
+          "numerator": 34082,
+          "probability": "17041/30590"
+        },
+        {
+          "dual": 0,
+          "a": 0,
+          "b": 6,
+          "numerator": 57824,
+          "probability": "14456/15295"
+        },
+        {
+          "dual": 0,
+          "a": 0,
+          "b": 7,
+          "numerator": 55778,
+          "probability": "27889/30590"
+        },
+        {
+          "dual": 0,
+          "a": 0,
+          "b": 8,
+          "numerator": 60956,
+          "probability": "2177/2185"
+        },
+        {
+          "dual": 0,
+          "a": 1,
+          "b": 5,
+          "numerator": 55864,
+          "probability": "13966/15295"
+        },
+        {
+          "dual": 0,
+          "a": 1,
+          "b": 7,
+          "numerator": 53522,
+          "probability": "3823/4370"
+        },
+        {
+          "dual": 0,
+          "a": 1,
+          "b": 9,
+          "numerator": 53522,
+          "probability": "3823/4370"
+        },
+        {
+          "dual": 0,
+          "a": 1,
+          "b": 10,
+          "numerator": 60916,
+          "probability": "15229/15295"
+        },
+        {
+          "dual": 0,
+          "a": 2,
+          "b": 0,
+          "numerator": 34185,
+          "probability": "6837/12236"
+        },
+        {
+          "dual": 0,
+          "a": 2,
+          "b": 1,
+          "numerator": 37552,
+          "probability": "9388/15295"
+        },
+        {
+          "dual": 0,
+          "a": 2,
+          "b": 3,
+          "numerator": 34185,
+          "probability": "6837/12236"
+        },
+        {
+          "dual": 0,
+          "a": 3,
+          "b": 1,
+          "numerator": 34082,
+          "probability": "17041/30590"
+        },
+        {
+          "dual": 0,
+          "a": 3,
+          "b": 4,
+          "numerator": 57824,
+          "probability": "14456/15295"
+        },
+        {
+          "dual": 0,
+          "a": 3,
+          "b": 9,
+          "numerator": 55778,
+          "probability": "27889/30590"
+        },
+        {
+          "dual": 0,
+          "a": 3,
+          "b": 11,
+          "numerator": 60956,
+          "probability": "2177/2185"
+        },
+        {
+          "dual": 0,
+          "a": 7,
+          "b": 5,
+          "numerator": 36854,
+          "probability": "18427/30590"
+        },
+        {
+          "dual": 0,
+          "a": 7,
+          "b": 6,
+          "numerator": 37052,
+          "probability": "9263/15295"
+        },
+        {
+          "dual": 0,
+          "a": 9,
+          "b": 4,
+          "numerator": 37052,
+          "probability": "9263/15295"
+        },
+        {
+          "dual": 0,
+          "a": 9,
+          "b": 5,
+          "numerator": 36854,
+          "probability": "18427/30590"
+        },
+        {
+          "dual": 1,
+          "a": 0,
+          "b": 2,
+          "numerator": 34185,
+          "probability": "6837/12236"
+        },
+        {
+          "dual": 1,
+          "a": 1,
+          "b": 2,
+          "numerator": 37552,
+          "probability": "9388/15295"
+        },
+        {
+          "dual": 1,
+          "a": 3,
+          "b": 2,
+          "numerator": 34185,
+          "probability": "6837/12236"
+        },
+        {
+          "dual": 1,
+          "a": 4,
+          "b": 9,
+          "numerator": 37052,
+          "probability": "9263/15295"
+        },
+        {
+          "dual": 1,
+          "a": 5,
+          "b": 7,
+          "numerator": 36854,
+          "probability": "18427/30590"
+        },
+        {
+          "dual": 1,
+          "a": 5,
+          "b": 9,
+          "numerator": 36854,
+          "probability": "18427/30590"
+        },
+        {
+          "dual": 1,
+          "a": 6,
+          "b": 7,
+          "numerator": 37052,
+          "probability": "9263/15295"
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 0,
+          "numerator": 60956,
+          "probability": "2177/2185"
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 4,
+          "numerator": 52620,
+          "probability": "2631/3059"
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 5,
+          "numerator": 52670,
+          "probability": "229/266"
+        },
+        {
+          "dual": 1,
+          "a": 8,
+          "b": 9,
+          "numerator": 55730,
+          "probability": "5573/6118"
+        },
+        {
+          "dual": 1,
+          "a": 10,
+          "b": 1,
+          "numerator": 60916,
+          "probability": "15229/15295"
+        },
+        {
+          "dual": 1,
+          "a": 10,
+          "b": 4,
+          "numerator": 54394,
+          "probability": "27197/30590"
+        },
+        {
+          "dual": 1,
+          "a": 10,
+          "b": 6,
+          "numerator": 54394,
+          "probability": "27197/30590"
+        },
+        {
+          "dual": 1,
+          "a": 10,
+          "b": 8,
+          "numerator": 32858,
+          "probability": "2347/4370"
+        },
+        {
+          "dual": 1,
+          "a": 10,
+          "b": 11,
+          "numerator": 32858,
+          "probability": "2347/4370"
+        },
+        {
+          "dual": 1,
+          "a": 11,
+          "b": 3,
+          "numerator": 60956,
+          "probability": "2177/2185"
+        },
+        {
+          "dual": 1,
+          "a": 11,
+          "b": 5,
+          "numerator": 52670,
+          "probability": "229/266"
+        },
+        {
+          "dual": 1,
+          "a": 11,
+          "b": 6,
+          "numerator": 52620,
+          "probability": "2631/3059"
+        },
+        {
+          "dual": 1,
+          "a": 11,
+          "b": 7,
+          "numerator": 55730,
+          "probability": "5573/6118"
+        }
+      ],
+      "half_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          11
+        ]
+      ],
+      "gold": {
+        "extensions": 61180,
+        "first_comparison": [
+          0,
+          3
+        ],
+        "second_comparison": [
+          0,
+          3
+        ],
+        "four_cells_11_10_01_00": [
+          30590,
+          0,
+          0,
+          30590
+        ],
+        "gold_margins": [
+          0,
+          30590,
+          30590,
+          0
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "n": 10,
+  "status": 0,
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "seconds": 5.205690145492554,
+  "variables": 3025,
+  "constraints": 10136,
+  "pred": [
+    0,
+    0,
+    0,
+    6,
+    0,
+    19,
+    2,
+    18,
+    86,
+    151
+  ],
+  "rank": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1,
+    2,
+    2
+  ]
+}
