@@ -9,6 +9,9 @@ complement, uniform ROOT energy and universal Collatz.
 
 The [weighted CRT companion](weighted_crt_20261018g.md) pays a precise
 marginal cross term while exposing the joint interaction space. The
+[native zero-packet companion](native_cancellation_105_20261018g.md) then
+pays signed cross terms for actual shared-terminal sources, with fixed-source
+transport under N->64N. The
 [fivefold boundary companion](fivefold_boundary_20261018g.md) connects the
 golden pairs, fivefold carriers and guarded graph contractions. Those
 statements have different consumers and are not substituted for descent.
@@ -208,6 +211,24 @@ can still alter its energy, just as the Petersen-to-K5 lift in the
 edge currents. Golden paired-weight equality similarly pays a specified
 character cancellation only when the actual paired defects vanish.
 
+The [native packet experiment](native_cancellation_105_20261018g.md) now
+passes the stronger actual-source test. At N=4096, sources4257 and4791
+have charge(1,2), common primitive terminal3, and integer clocks23 and20.
+Their opposite Nyquist signs give zero total charge, paying their full
+cross debt -6. All selected packets retain distinct sources and complete
+first-arrival paths. At the same scale,1857 pairs and130 triples remove
+6404 units of source norm while leaving every terminal vector unchanged.
+The residual source norm is3545, but terminal energy is9629: the surviving
+coherence is still an obligation. There is no claimed transport contraction.
+
+There is also an exact recursive transfer: B^3(m)=64m+21 and a full period
+of the three source weights imply A_(64N)(s)=A_N(s) for each old s<4N.
+Thus every retained packet persists at64^k N with the same sources, route,
+clock and debt. These are scale changes of the source-weight definition,
+not forward Collatz iterations or new certificates for new integers. Newly
+admitted outer sources, and partial packets before all members arrive,
+remain in the payment ledger.
+
 Next precise targets:
 
 1. Attach more supplied ROOT suffixes to the new child ports, or find a
@@ -215,9 +236,11 @@ Next precise targets:
 2. Bound the native image of the60 joint cycle coordinates and within-cell
    residual on the actual ROOT source. A marginal independence bound alone
    has now been shown insufficient.
-3. Test whether retained cycle-flow energies admit a block that contracts
-   after several native steps, including the changing endpoint and clock.
-   The arbitrary-packet growth hostile requires actual-source hypotheses.
+3. Bound the surviving terminal coherence after the authenticated zero
+   packets are removed, and the outer-source interaction under N->64N.
+   Keep finite-horizon arrival guards: a completed packet may vanish while
+   an earlier partial packet does not. The arbitrary-packet growth hostile
+   still requires actual-source hypotheses for any uniform contraction.
 
 ## 7. Reproduction and audit
 
