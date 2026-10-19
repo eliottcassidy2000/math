@@ -1,0 +1,28 @@
+{
+  "status": "ALL_CANONICAL_CORES_EXACT_CERTIFIED_AND_REPLAYED",
+  "scope": "canonical(maximum span,maximum common count), mixed(2,4,1)",
+  "dependencies": {
+    "run.py": "9305c2d5052c9c4de9ba805fd45f5706f19561098dfef77267526dddf9a18516",
+    "cone_engine.py": "717d391d1e1da0819f09bdac8dd8b64fa859eb427ee579495ceb7e547b2f507d",
+    "exact_replay_engine.py": "0aad33697e05e4d37b648026f1a075d3831e0032bee76b63857c71316430170b",
+    "catalogue.py": "75f6ca881b9cc7b8c2b58a54a45b69b4b9ce11e60408b2ffefaea67f60cc1900",
+    "analytic_cover.json.gz": "6f0ca9a7510d09a506b258491804cc4bae138cc133039946f69bb9f6aef24661"
+  },
+  "target": 70103,
+  "completed": 70103,
+  "last_core_index": 91603,
+  "committed_bytes": 18660613,
+  "hist": {
+    "residual_orders": 415884,
+    "analytic_directed_orders": 37396742,
+    "short_span_orders": 12716,
+    "canonical_excluded_orders": 274819,
+    "canonical_fully_removed": 15711,
+    "one": 333056,
+    "two": 77386,
+    "dual": 5442
+  },
+  "start_unix": 1792405182.9242477,
+  "seconds": 2282.621317625046,
+  "record_sha256": "84b5d2172b7e2f3e1282db98d41452046b34e9be17578041e2b452a20c6265ba"
+}

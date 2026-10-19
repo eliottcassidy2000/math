@@ -1,0 +1,19 @@
+{
+  "status": "COMPLETE_CANONICAL_COVERAGE_AND_REPLAY_PROVENANCE_PASSED",
+  "degree_valid": 91604,
+  "analytic_balanced": 21501,
+  "residual_cores": 70103,
+  "hist": {
+    "residual_orders": 415884,
+    "analytic_directed_orders": 37396742,
+    "short_span_orders": 12716,
+    "canonical_excluded_orders": 274819,
+    "canonical_fully_removed": 15711,
+    "one": 333056,
+    "two": 77386,
+    "dual": 5442
+  },
+  "maximum_weight": 299659835262193117992,
+  "distinct_certificates": 55622,
+  "record_sha256": "84b5d2172b7e2f3e1282db98d41452046b34e9be17578041e2b452a20c6265ba"
+}
