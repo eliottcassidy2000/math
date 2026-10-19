@@ -1,0 +1,50 @@
+{
+  "status": "FINITE-EXACT elliptic contact pencil; standard library only",
+  "checks": {
+    "spread_sum_factorization": 1,
+    "pencil_contact_identity": 1,
+    "lambda_two_member": 1,
+    "coordinate_swap_symmetry": 1,
+    "quartic_discriminant": 1,
+    "vieta_preserves_curve_cleared": 1,
+    "rational_orbit_on_curve": 5,
+    "rational_orbit_contact": 5,
+    "five_distinct_orbit_points": 1,
+    "good_reduction_squarefree": 2,
+    "finite_field_point_count": 2,
+    "explicit_inadmissible_orbit_value": 1,
+    "biquadratic_circle_relation": 1,
+    "first_branch_discriminant": 1,
+    "second_branch_discriminant": 1,
+    "second_contact_numerator": 1,
+    "second_contact_branch_exclusion": 2,
+    "first_biquadratic_model": 1,
+    "second_biquadratic_model": 1
+  },
+  "point_counts": {
+    "7": 12,
+    "13": 20
+  },
+  "orbit": [
+    [
+      "1",
+      "1"
+    ],
+    [
+      "1",
+      "1/3"
+    ],
+    [
+      "1/3",
+      "-1/21"
+    ],
+    [
+      "-1/21",
+      "23/287"
+    ],
+    [
+      "23/287",
+      "5543/8159"
+    ]
+  ]
+}
