@@ -1,0 +1,95 @@
+{
+  "scope": "Parent and independent review approve the theorem; publication changes only review/source status, relative links and runnable command presentation. The original proof hash in the review identifies its reviewed source, not the presentation-edited publication.",
+  "files": [
+    {
+      "path": "POLYNOMIAL_STAIRCASE_DIAMETER.md",
+      "source_sha256": "57322dd240c0107cfc93db519259a2591296eb873484c8f55de6b9cffe2f5414",
+      "published_sha256": "b73a3aaac2f10cf743107834425fde3aa9236cef073cb98ce9bbb7bcf9bf3021",
+      "presentation_changes": [
+        {
+          "before": "Independent review requested.",
+          "after": "Independently [reviewed](review/INDEPENDENT_REVIEW.md)."
+        },
+        {
+          "before": "`graceful_upper_tail_two_color_connectivity_20261019/UPPER_TAIL_TWO_COLOR_CONNECTIVITY.md`",
+          "after": "[earlier upper-tail proof](../graceful_upper_tail_two_color_connectivity_20261019/UPPER_TAIL_TWO_COLOR_CONNECTIVITY.md)"
+        },
+        {
+          "before": "`graceful_three_color_release_20261019/THREE_COLOR_RELEASE_DICHOTOMY.md`",
+          "after": "[three-color release proof](../graceful_three_color_release_20261019/THREE_COLOR_RELEASE_DICHOTOMY.md)"
+        },
+        {
+          "before": "Direct PDF retrieval timed out in this session.",
+          "after": "The [independent reviewer](review/INDEPENDENT_REVIEW.md) successfully retrieved and checked the [primary PDF indexed text](https://www.combinatorics.org/ojs/index.php/eljc/article/download/v3i1r24/pdf/), including the exact hypotheses and bound. No saved PDF image is asserted."
+        },
+        {
+          "before": "python3 verify_polynomial_staircase.py",
+          "after": "python3 -B verify_polynomial_staircase.py"
+        },
+        {
+          "before": "python3 -O verify_polynomial_staircase.py",
+          "after": "python3 -B -O verify_polynomial_staircase.py"
+        }
+      ]
+    },
+    {
+      "path": "verify_polynomial_staircase.py",
+      "source_sha256": "2e72f32679e9ea0b01bbc573c52a02bab68412d74138dd155ee5fefb567c03d8",
+      "published_sha256": "2e72f32679e9ea0b01bbc573c52a02bab68412d74138dd155ee5fefb567c03d8",
+      "presentation_changes": []
+    },
+    {
+      "path": "controls.json",
+      "source_sha256": "2b09dd7969a7d0b3037cb97d05cbe5aa8fe2ec645d5c5b05f404d21a852ce8f5",
+      "published_sha256": "2b09dd7969a7d0b3037cb97d05cbe5aa8fe2ec645d5c5b05f404d21a852ce8f5",
+      "presentation_changes": []
+    },
+    {
+      "path": "controls.optimized.json",
+      "source_sha256": "2b09dd7969a7d0b3037cb97d05cbe5aa8fe2ec645d5c5b05f404d21a852ce8f5",
+      "published_sha256": "2b09dd7969a7d0b3037cb97d05cbe5aa8fe2ec645d5c5b05f404d21a852ce8f5",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/INDEPENDENT_REVIEW.md",
+      "source_sha256": "467f9c7c7efe44bbe2cc221382d02bb290534ff92350f774c12142039e1fa796",
+      "published_sha256": "224dc6ce920a3f4fd027d9c44380a11936069340e825b856f3316b3057409a4e",
+      "presentation_changes": [
+        {
+          "before": "`session5-graphs-polynomial/POLYNOMIAL_STAIRCASE_DIAMETER.md`",
+          "after": "[the proof](../POLYNOMIAL_STAIRCASE_DIAMETER.md) (reviewed input hash; publication-only changes are recorded in SOURCE_PROVENANCE.json)"
+        }
+      ]
+    },
+    {
+      "path": "review/independent_controls.py",
+      "source_sha256": "46c26ab692014b29fcf8dd84f41e28bd654d2f8d05eb13e560d2e56c7ebfdd77",
+      "published_sha256": "46c26ab692014b29fcf8dd84f41e28bd654d2f8d05eb13e560d2e56c7ebfdd77",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/receipt.json",
+      "source_sha256": "09482ca8ac57be91e4afbbca3d8ad3c82422cc3f21d8d1011dd77962896ffb1d",
+      "published_sha256": "09482ca8ac57be91e4afbbca3d8ad3c82422cc3f21d8d1011dd77962896ffb1d",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/receipt-optimized.json",
+      "source_sha256": "09482ca8ac57be91e4afbbca3d8ad3c82422cc3f21d8d1011dd77962896ffb1d",
+      "published_sha256": "09482ca8ac57be91e4afbbca3d8ad3c82422cc3f21d8d1011dd77962896ffb1d",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/producer-replay.json",
+      "source_sha256": "2b09dd7969a7d0b3037cb97d05cbe5aa8fe2ec645d5c5b05f404d21a852ce8f5",
+      "published_sha256": "2b09dd7969a7d0b3037cb97d05cbe5aa8fe2ec645d5c5b05f404d21a852ce8f5",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/producer-replay-optimized.json",
+      "source_sha256": "2b09dd7969a7d0b3037cb97d05cbe5aa8fe2ec645d5c5b05f404d21a852ce8f5",
+      "published_sha256": "2b09dd7969a7d0b3037cb97d05cbe5aa8fe2ec645d5c5b05f404d21a852ce8f5",
+      "presentation_changes": []
+    }
+  ]
+}

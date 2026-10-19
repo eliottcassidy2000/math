@@ -1,0 +1,13 @@
+{
+  "all_graceful_intervals_m_max": 7,
+  "binary_routes": 1000,
+  "binary_systems": 200,
+  "checks": 29727,
+  "graceful_routes": 821,
+  "graceful_upper_tail_fibers": 585,
+  "maximum_produced_length": 7,
+  "scope": "Bounded exact verification; BFS implements the cited strict-rank path interface only for these finite controls and is not a polynomial-time general solver.",
+  "status": "PASS",
+  "target_preservation_hostile_route": 4,
+  "validated_moves": 2158
+}

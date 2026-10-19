@@ -1,0 +1,15 @@
+{
+  "all_pairs_tested": 81490,
+  "allowed_undirected_edges": 41394,
+  "checks": 202884,
+  "composition_bounds_through": 500,
+  "profiles": {
+    "all_graceful_through_6": 149,
+    "chain_blocks": 7,
+    "exhaustive_F2_3": 1568,
+    "loops_parallel_prefix": 120
+  },
+  "scope": "Finite independent controls only; no producer imports. Universal conclusions rest on the reviewed proof and cited strict-rank theorem.",
+  "status": "PASS",
+  "systems": 1844
+}

@@ -1,5 +1,7 @@
 # Rank-staircase reconfiguration and arbitrary graceful upper-tail fibers
 
+**Diameter update (2026-10-19):** The exponential sufficient bound below is superseded by the [reviewed polynomial tight-suffix bound](../graceful_polynomial_diameter_20261019/POLYNOMIAL_STAIRCASE_DIAMETER.md): at most s²−s+1 in every rank-staircase system, and at most r²−3r+3 in graceful upper-tail fibers for r≥3 (at most one for r=1,2). The original proof remains valid and is retained below as history.
+
 ## 1. General matroid rank-staircase theorem
 
 Let M be a finite matroid with rank function rho and closure cl. Let A_1,...,A_s be pairwise disjoint subsets of its ground set satisfying
