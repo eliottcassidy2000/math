@@ -46,6 +46,8 @@ The bounded search succeeds for all 528 admitted primitive triples of hypotenuse
 
 8. The index bound upgrades to a deterministic polynomial-bit algorithm for one neighbor at either prescribed port: output bit length is `O((log C)^3)`, with a conservative `O((log C)^10)` running-time bound. An explicit integral model and division-polynomial coefficient bounds control every intermediate rational value, uniformly at the cusps. See [output-height and bit-complexity theorem](square_sum_contact_output_height_20261019.md). This does not give a fixed-power numerical bound `C' <= C^A` or polynomial complexity for an arbitrarily narrow prescribed spread window.
 
+9. The cubic output-bit order is sharp within the prescribed plus-port orbit along either outer spine: every successful index has `log C' >= c q² log j`, and the smallest possible successful output has `Theta((log j)^3)` bits. Function-field canonical-height positivity and specialization supply the lower growth; a direct duplication estimate makes the comparison uniform at real cusps. See [sharp output-height theorem](square_sum_contact_sharp_output_height_20261019.md). This is not a lower bound for other contact constructions or the minus-port orbit.
+
 ## 4. Odd zeta and graph geometry: exact maps
 
 The signed primitive-triangle Dirichlet series is
@@ -73,7 +75,7 @@ See [graceful exchange packet](graceful_square_exchange_20261019.md). Neither co
 
 ### A. Quantitative Pythagorean contact construction
 
-Existence, adaptive index bounds, and polynomial bit complexity are settled for one unrestricted-direction neighbor at either port. The prescribed plus-port index has matching logarithmic order at the cusps. Further quantitative targets are a fixed-power numerical-height bound for some contact, sharper output-bit growth for this orbit, and explicit dependence on a prescribed spread window. Another refinement would determine whether the normalized first index has a limit or several accumulation values; matching order alone does not give an asymptotic equivalent.
+Existence, adaptive index bounds, and polynomial bit complexity are settled for one unrestricted-direction neighbor at either port. Along the outer spines, both the logarithmic index order and cubic output-bit order are sharp for the prescribed plus-port orbit. A fixed-power numerical-height bound `C' <= C^A` for some contact remains a meaningful target, but it would require a different construction on these spines. Other open refinements concern narrow spread windows and whether the normalized first index has a limit or several accumulation values; matching order does not give an asymptotic equivalent.
 
 ### B. Denominator-controlled common-neighbor gluing
 
