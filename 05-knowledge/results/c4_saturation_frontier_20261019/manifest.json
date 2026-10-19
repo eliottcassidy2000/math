@@ -1,0 +1,105 @@
+{
+  "files": [
+    {
+      "bytes": 1169,
+      "path": "README.md",
+      "sha256": "c14645ef7da3809efb7c68de5535e2d5ceb47efa72dfa484d941c2525f076b2f"
+    },
+    {
+      "bytes": 5215,
+      "path": "mixed12-c4-frontier-stage/apply_c4_saturation_screen_20261019.py",
+      "sha256": "e3573be2d44a9dd1978c358e2a7d1fd3b89adb0f400164937127e54f4b5130b0"
+    },
+    {
+      "bytes": 1458,
+      "path": "mixed12-c4-frontier-stage/c4_budgeted_cone_exploration_20261019.json",
+      "sha256": "2a8e0db41be749d0753c5c610f6e3cd35902bc816d464851067ac4ce35899983"
+    },
+    {
+      "bytes": 1148,
+      "path": "mixed12-c4-frontier-stage/c4_budgeted_core_census_20261019.json",
+      "sha256": "0eaa78192ced470910ab04188c126ce77a755a38272ab6433109368f2dd075fe"
+    },
+    {
+      "bytes": 679,
+      "path": "mixed12-c4-frontier-stage/c4_exception_extension_exploration_20261019.json",
+      "sha256": "c16699ee301490dff15e292a92bc20e1e1ae3d2f004350632159f5463b444180"
+    },
+    {
+      "bytes": 2256,
+      "path": "mixed12-c4-frontier-stage/c4_restricted_screen_obstruction_controls_20261019.json",
+      "sha256": "f6b8091b435fa146cf24573de2ff394fe16b5b0bd666727e6eff12b6c17ffdc5"
+    },
+    {
+      "bytes": 5709,
+      "path": "mixed12-c4-frontier-stage/c4_saturation_and_migrating_screen_frontier_20261019.md",
+      "sha256": "abd15a9f08d232c38b0052a4cf1693dd59008f14864e61f931406fbd3723d90e"
+    },
+    {
+      "bytes": 4207,
+      "path": "mixed12-c4-frontier-stage/c4_saturation_screen_exploration_20261019.json",
+      "sha256": "6b5adc0e7d9b8a5ce1bf486f3abad26c8af8cfaac80902d58eba3dec2bba8dd6"
+    },
+    {
+      "bytes": 679,
+      "path": "mixed12-c4-frontier-stage/exception_exploration_stdout.json",
+      "sha256": "c16699ee301490dff15e292a92bc20e1e1ae3d2f004350632159f5463b444180"
+    },
+    {
+      "bytes": 13017,
+      "path": "mixed12-c4-frontier-stage/exploration_stdout.jsonl",
+      "sha256": "cf3ab9f5cef1391c55abf97dbdd9cc723dd2b68c6a9b56e3c66c43bf59d293ad"
+    },
+    {
+      "bytes": 8502,
+      "path": "mixed12-c4-frontier-stage/explore_c4_budgeted_cone_20261019.py",
+      "sha256": "f404bb46301db7c0268ef92b97e9356fbdb72be10920f8833f277d5e055efbc2"
+    },
+    {
+      "bytes": 5024,
+      "path": "mixed12-c4-frontier-stage/explore_c4_exception_extensions_20261019.py",
+      "sha256": "763d05326b4a230696f1e75cf78db8ab6e1d194c737fbcb51af0ce2d7958ab10"
+    },
+    {
+      "bytes": 2256,
+      "path": "mixed12-c4-frontier-stage/restricted_obstruction_stdout.json",
+      "sha256": "f6b8091b435fa146cf24573de2ff394fe16b5b0bd666727e6eff12b6c17ffdc5"
+    },
+    {
+      "bytes": 1762,
+      "path": "mixed12-c4-frontier-stage/saturation_increment_lemma_controls_20261019.json",
+      "sha256": "1d9687a7a6ea9a51697621d9762b911864528b280da8f810730a74a043b011b6"
+    },
+    {
+      "bytes": 1762,
+      "path": "mixed12-c4-frontier-stage/saturation_lemma_stdout.json",
+      "sha256": "1d9687a7a6ea9a51697621d9762b911864528b280da8f810730a74a043b011b6"
+    },
+    {
+      "bytes": 4207,
+      "path": "mixed12-c4-frontier-stage/saturation_screen_stdout.json",
+      "sha256": "6b5adc0e7d9b8a5ce1bf486f3abad26c8af8cfaac80902d58eba3dec2bba8dd6"
+    },
+    {
+      "bytes": 6227,
+      "path": "mixed12-c4-frontier-stage/seven_thin_saturation_increment_lemma_20261019.md",
+      "sha256": "2369610b84d27c367b2abf10dbb080dff2f6ec1500495ea0650409c98b2da243"
+    },
+    {
+      "bytes": 4154,
+      "path": "mixed12-c4-frontier-stage/verify_c4_restricted_screen_obstruction_20261019.py",
+      "sha256": "3ac78aae816e06c8673e6909135b7e21342f0316a1e14de072759097e006789b"
+    },
+    {
+      "bytes": 5542,
+      "path": "mixed12-c4-frontier-stage/verify_saturation_increment_lemma_20261019.py",
+      "sha256": "3d51955e599915744a70d3cfc041a791c6b99a1fc6ad8c1cd6394c1b25c8fe09"
+    },
+    {
+      "bytes": 9224,
+      "path": "mixed12-freeze-stage/frozen_mixed12_20261019/verify_mixed12_witness_migration_20261019.py",
+      "sha256": "c1a807a75dae52bb2f3e34a6d5a9599663cca5af3cc1663cc6e3ec99ee562361"
+    }
+  ],
+  "scope": "Proved saturation lemma; exact restricted-screen obstruction and repair; bounded exploration only for c=4."
+}

@@ -1,0 +1,146 @@
+{
+  "status": "PASS",
+  "scope": "Only the old four-comparison screen fails in a generator-cone relaxation. The full screen is repaired by a different common neighbor. No actual exterior or conjecture counterexample is claimed.",
+  "predecessor_masks": [
+    0,
+    4,
+    0,
+    0,
+    4,
+    0,
+    60,
+    29,
+    45
+  ],
+  "candidate_order": [
+    2,
+    0,
+    3,
+    4,
+    5,
+    6,
+    1,
+    8,
+    7
+  ],
+  "core_degrees": [
+    6,
+    7,
+    3,
+    5,
+    5,
+    6,
+    4,
+    4,
+    4
+  ],
+  "core_extensions": 3184,
+  "generator_columns": 1204,
+  "four_comparisons": [
+    [
+      0,
+      4
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      8,
+      7
+    ]
+  ],
+  "positive_mixture": [
+    {
+      "prefix": [],
+      "suffix": [
+        8,
+        7
+      ],
+      "E": 364,
+      "N": [
+        190,
+        224,
+        364,
+        364
+      ],
+      "convex_weight": "374647/2181763",
+      "generator_weight": "4117/8727052"
+    },
+    {
+      "prefix": [
+        3
+      ],
+      "suffix": [
+        8
+      ],
+      "E": 162,
+      "N": [
+        93,
+        114,
+        162,
+        0
+      ],
+      "convex_weight": "21897/2181763",
+      "generator_weight": "811/13090578"
+    },
+    {
+      "prefix": [
+        3,
+        5
+      ],
+      "suffix": [],
+      "E": 136,
+      "N": [
+        88,
+        100,
+        81,
+        79
+      ],
+      "convex_weight": "37144/128339",
+      "generator_weight": "4643/2181763"
+    },
+    {
+      "prefix": [
+        3,
+        5
+      ],
+      "suffix": [
+        6
+      ],
+      "E": 37,
+      "N": [
+        27,
+        24,
+        22,
+        23
+      ],
+      "convex_weight": "1153771/2181763",
+      "generator_weight": "31183/2181763"
+    }
+  ],
+  "four_probabilities": [
+    "1458653/2181763",
+    "1458653/2181763",
+    "1458653/2181763",
+    "1458653/2181763"
+  ],
+  "strict_majority_margin_3p_minus_2": "12433/2181763",
+  "repair_comparisons": [
+    [
+      0,
+      3
+    ],
+    [
+      3,
+      1
+    ]
+  ],
+  "universal_repair_upper_bound": "203/158",
+  "repair_column_audit_sha256": "85d3b2127ea32987079fa6101e4d9d37468b5c4db9db1d5af78c6f1415def384",
+  "verifier_sha256": "3ac78aae816e06c8673e6909135b7e21342f0316a1e14de072759097e006789b"
+}

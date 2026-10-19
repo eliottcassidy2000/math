@@ -1,0 +1,19 @@
+{
+  "scope": "Bounded exploration of c=4 core-degree<=7 extensions of the known exception. No c=4 theorem, and any positive cone witness is only a screen limitation.",
+  "verifier_sha256": "763d05326b4a230696f1e75cf78db8ab6e1d194c737fbcb51af0ce2d7958ab10",
+  "stats": {
+    "eligible_exception_extension_cores": 18060,
+    "core_budget": 400,
+    "order_budget": 60000,
+    "per_core_order_budget": 300,
+    "cores_examined": 400,
+    "orders_examined": 3290,
+    "single_row_certificates": 0,
+    "two_row_certificates": 3290,
+    "exact_LP_dual_certificates": 0,
+    "LP_calls": 0,
+    "unresolved_LP_cases": 0
+  },
+  "exact_weighted_certificates": [],
+  "obstruction": null
+}

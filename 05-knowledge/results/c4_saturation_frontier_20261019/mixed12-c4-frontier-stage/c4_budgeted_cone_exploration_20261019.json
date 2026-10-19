@@ -1,0 +1,63 @@
+{
+  "scope": "Exploration only, no extension of the c<=3 theorem.",
+  "core_census": [
+    {
+      "common_count": 0,
+      "canonical_cores": 7,
+      "core_degree_at_most_7": 7,
+      "vertices_over_budget_histogram": {
+        "0": 7
+      }
+    },
+    {
+      "common_count": 1,
+      "canonical_cores": 40,
+      "core_degree_at_most_7": 40,
+      "vertices_over_budget_histogram": {
+        "0": 40
+      }
+    },
+    {
+      "common_count": 2,
+      "canonical_cores": 357,
+      "core_degree_at_most_7": 357,
+      "vertices_over_budget_histogram": {
+        "0": 357
+      }
+    },
+    {
+      "common_count": 3,
+      "canonical_cores": 4824,
+      "core_degree_at_most_7": 4824,
+      "vertices_over_budget_histogram": {
+        "0": 4824
+      }
+    },
+    {
+      "common_count": 4,
+      "canonical_cores": 96428,
+      "core_degree_at_most_7": 79121,
+      "vertices_over_budget_histogram": {
+        "0": 79121,
+        "1": 15464,
+        "2": 1704,
+        "3": 132,
+        "4": 7
+      }
+    }
+  ],
+  "c4_degree_budget_survivors": 79121,
+  "verifier_sha256": "f404bb46301db7c0268ef92b97e9356fbdb72be10920f8833f277d5e055efbc2",
+  "bounded_search": {
+    "core_budget": 80,
+    "order_budget": 20000,
+    "cores_examined": 46,
+    "orders_examined": 20000,
+    "single_row_certificates": 19868,
+    "two_row_certificates": 132,
+    "LP_calls": 0,
+    "nonpositive_LP_optima": 0,
+    "positive_LP_candidates": 0
+  },
+  "obstruction": null
+}

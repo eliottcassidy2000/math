@@ -1,0 +1,221 @@
+{
+  "scope": "Exploration only; the zero-increment lemma is proved separately. No c=4 theorem.",
+  "verifier_sha256": "e3573be2d44a9dd1978c358e2a7d1fd3b89adb0f400164937127e54f4b5130b0",
+  "stats": {
+    "core_budget": 400,
+    "cores_examined": 400,
+    "original_generator_columns": 457344,
+    "retained_generator_columns": 200099,
+    "cores_with_generator_reduction": 188,
+    "orders_examined": 3290,
+    "single_row_certificates": 1775,
+    "two_row_certificates": 1515,
+    "orders_not_screened_by_two_rows": 0,
+    "four_comparison_instances": 581,
+    "original_weight9_instances_passing": 434
+  },
+  "retention_examples": [
+    {
+      "predecessor_masks": [
+        0,
+        4,
+        0,
+        0,
+        12,
+        4,
+        0,
+        93,
+        45
+      ],
+      "saturated_vertices": [
+        1,
+        6
+      ],
+      "original_columns": 1196,
+      "retained_columns": 201
+    },
+    {
+      "predecessor_masks": [
+        0,
+        4,
+        0,
+        0,
+        0,
+        4,
+        8,
+        5,
+        61
+      ],
+      "saturated_vertices": [
+        1,
+        4,
+        6
+      ],
+      "original_columns": 2338,
+      "retained_columns": 65
+    },
+    {
+      "predecessor_masks": [
+        0,
+        4,
+        0,
+        0,
+        8,
+        12,
+        4,
+        13,
+        45
+      ],
+      "saturated_vertices": [
+        1,
+        4,
+        6
+      ],
+      "original_columns": 1739,
+      "retained_columns": 55
+    }
+  ],
+  "first_original_weight9_failure": {
+    "predecessor_masks": [
+      0,
+      4,
+      0,
+      4,
+      4,
+      4,
+      60,
+      53,
+      5
+    ],
+    "pattern": [
+      4,
+      7,
+      8
+    ],
+    "prefix": [],
+    "suffix": [
+      7
+    ],
+    "weighted_generator_margin": 108,
+    "E": 810
+  },
+  "four_comparison_obstruction": {
+    "status": "EXACT_FOUR_COMPARISON_SCREEN_OBSTRUCTION",
+    "scope": "Only the four fixed exceptional migration comparisons fail in the saturation-pruned generator cone. This is not a full-comparison cone obstruction, an actual exterior, or a conjecture counterexample.",
+    "predecessor_masks": [
+      0,
+      4,
+      0,
+      0,
+      4,
+      0,
+      60,
+      29,
+      45
+    ],
+    "core_incomparability_degrees": [
+      6,
+      7,
+      3,
+      5,
+      5,
+      6,
+      4,
+      4,
+      4
+    ],
+    "candidate_majority_order": [
+      2,
+      0,
+      3,
+      4,
+      5,
+      6,
+      1,
+      8,
+      7
+    ],
+    "core_extensions": 3184,
+    "generators": 1204,
+    "positive_mixture": [
+      {
+        "prefix": [],
+        "suffix": [
+          8,
+          7
+        ],
+        "conditional_word_count": 364,
+        "convex_weight": "185540006/1080498551",
+        "generator_weight": "92770003/196650736282"
+      },
+      {
+        "prefix": [
+          3
+        ],
+        "suffix": [
+          8
+        ],
+        "conditional_word_count": 162,
+        "convex_weight": "985968/98227141",
+        "generator_weight": "54776/884044269"
+      },
+      {
+        "prefix": [
+          3,
+          5
+        ],
+        "suffix": [],
+        "conditional_word_count": 136,
+        "convex_weight": "28428990/98227141",
+        "generator_weight": "14214495/6679445588"
+      },
+      {
+        "prefix": [
+          3,
+          5
+        ],
+        "suffix": [
+          6
+        ],
+        "conditional_word_count": 37,
+        "convex_weight": "571394007/1080498551",
+        "generator_weight": "571394007/39978446387"
+      }
+    ],
+    "forward_comparison_probabilities": [
+      {
+        "pair": [
+          0,
+          4
+        ],
+        "probability": "124045737310958/185539969682067"
+      },
+      {
+        "pair": [
+          4,
+          1
+        ],
+        "probability": "17720823949471/26505709954581"
+      },
+      {
+        "pair": [
+          1,
+          8
+        ],
+        "probability": "1817520996601/2718534354316"
+      },
+      {
+        "pair": [
+          8,
+          7
+        ],
+        "probability": "1817517539779/2718534354316"
+      }
+    ],
+    "minimum_probability": "1817517539779/2718534354316",
+    "minimum_3p_minus_2": "15483910705/2718534354316",
+    "saturated_vertices": [
+      1
+    ]
+  }
+}

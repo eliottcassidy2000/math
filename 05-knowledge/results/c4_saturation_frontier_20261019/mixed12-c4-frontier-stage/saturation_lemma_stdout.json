@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "scope": "Exact finite audit of a separately proved zero-increment lemma; no c=4 majority exclusion theorem.",
+  "actual_seven_thin_posets_checked": 80,
+  "maximum_order": 15,
+  "distinct_core_shapes": 4,
+  "saturated_prefix_increments_checked": 2760,
+  "saturated_suffix_increments_checked": 22000,
+  "full_and_pruned_fibre_formulas_match_whole_poset_DP": true,
+  "audit_stream_sha256": "fe2c7cd4190001127914878ad8c7092876e796b4e3e602634fde012d15e24fad",
+  "core_shapes": [
+    {
+      "predecessor_masks": [
+        0,
+        4,
+        0,
+        0,
+        8,
+        0,
+        32,
+        1,
+        1
+      ],
+      "incomparability_degrees": [
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "predecessor_masks": [
+        0,
+        4,
+        0,
+        0,
+        8,
+        24,
+        56,
+        1,
+        1
+      ],
+      "incomparability_degrees": [
+        6,
+        7,
+        7,
+        5,
+        5,
+        5,
+        5,
+        7,
+        7
+      ]
+    },
+    {
+      "predecessor_masks": [
+        0,
+        4,
+        0,
+        4,
+        4,
+        4,
+        28,
+        1,
+        21
+      ],
+      "incomparability_degrees": [
+        6,
+        7,
+        2,
+        6,
+        5,
+        7,
+        5,
+        7,
+        5
+      ]
+    },
+    {
+      "predecessor_masks": [
+        0,
+        4,
+        0,
+        4,
+        12,
+        28,
+        0,
+        125,
+        5
+      ],
+      "incomparability_degrees": [
+        6,
+        7,
+        2,
+        4,
+        4,
+        4,
+        7,
+        2,
+        6
+      ]
+    }
+  ],
+  "verifier_sha256": "3d51955e599915744a70d3cfc041a791c6b99a1fc6ad8c1cd6394c1b25c8fe09"
+}
