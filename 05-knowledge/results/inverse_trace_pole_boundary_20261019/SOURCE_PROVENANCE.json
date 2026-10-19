@@ -1,0 +1,119 @@
+{
+  "description": "Source hashes identify reviewed artifacts. Approved status/scope and reader-facing overlays were applied. Independent-checker input paths and reported hash inventory were made package-relative; mathematical test logic is unchanged.",
+  "files": [
+    {
+      "path": "README.md",
+      "source_sha256": "f722a3bfde425adc44e934d75c81e46825549a09935b69e641402633c6a7a62c",
+      "published_sha256": "7aa5006d0b234826409d86702fe44edcee6b0571a7311d11bf77c297c1a07cb6",
+      "presentation_updates": true
+    },
+    {
+      "path": "TRACE_POLE_BOUNDARY.md",
+      "source_sha256": "e8f95b7c28e7ba84c1e0e9cf64aa5aa994ca8f70491799e8d4cf1f9f820dc9bd",
+      "published_sha256": "3b49905aec6b3a2975108c9bdb1d8be84ae83383debe755d7bf83e3ef7198236",
+      "presentation_updates": true
+    },
+    {
+      "path": "SOURCE-DEPENDENCIES.json",
+      "source_sha256": "ffef3e5f641528f71997df639704e5c1dd0ed7a4584b2fe42935b1af9a414477",
+      "published_sha256": "ffef3e5f641528f71997df639704e5c1dd0ed7a4584b2fe42935b1af9a414477",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify_trace_pole_boundary.py",
+      "source_sha256": "35fa4406ba3b2a368f2f1bbfbc317d17d4751a2eb62973e6cc03d97cd58af1e9",
+      "published_sha256": "35fa4406ba3b2a368f2f1bbfbc317d17d4751a2eb62973e6cc03d97cd58af1e9",
+      "presentation_updates": false
+    },
+    {
+      "path": "verification-results.json",
+      "source_sha256": "890b7e87c072218b08d8e9b6d09b92d5bd02a97433ac692e294b8a0f984ed102",
+      "published_sha256": "890b7e87c072218b08d8e9b6d09b92d5bd02a97433ac692e294b8a0f984ed102",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify.out",
+      "source_sha256": "c3ac8cca7b409afd8c7a1352a86cfade1f2a6844b697950885908fa92fbf1af8",
+      "published_sha256": "c3ac8cca7b409afd8c7a1352a86cfade1f2a6844b697950885908fa92fbf1af8",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify.optimized.out",
+      "source_sha256": "c3ac8cca7b409afd8c7a1352a86cfade1f2a6844b697950885908fa92fbf1af8",
+      "published_sha256": "c3ac8cca7b409afd8c7a1352a86cfade1f2a6844b697950885908fa92fbf1af8",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/REVIEW.md",
+      "source_sha256": "03d87f9f425b3d90692157f1a2ea0531cc8ceae9f5604a77709a9aad62499d48",
+      "published_sha256": "2ce787e64e79b9a3a2f36a9cb720d6cf2480f85faf6e08f47fb21c85c13a352f",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/dependency-hash-check.json",
+      "source_sha256": "722fc85fc0641f510659161dab5a7fb16bbae9e9159fe9426d95d1ec4339015c",
+      "published_sha256": "722fc85fc0641f510659161dab5a7fb16bbae9e9159fe9426d95d1ec4339015c",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/independent_checks.py",
+      "source_sha256": "dc62fb16607603c8b24c4bac69288561b3173b2fee99300be6dd179c4aadeebe",
+      "published_sha256": "a0a14d4d6e1efcc2628b3953923111303769293f178bee504473b21d54f8f96b",
+      "presentation_updates": false,
+      "portability_update": "Locate the published sources relative to this checker; retain all mathematical tests. The trace checker hashes the seven explicitly listed research files instead of unrelated neighboring files."
+    },
+    {
+      "path": "review/independent-results.json",
+      "source_sha256": "35230b9a681037be9390f0ccf1af23a548738bf579783d8b0bfd01387c625588",
+      "published_sha256": "542dac39b6cf05b4fdf55f45573e86b910051c1cb29b3eaca9bf146de8d7dacc",
+      "presentation_updates": false,
+      "receipt_update": "Same mathematical results, with provenance hashes identifying the published package."
+    },
+    {
+      "path": "review/independent.normal.out",
+      "source_sha256": "b05e00f55acd0de1a95acad099af7831e53c6b85ef670e76644575033c9f0bca",
+      "published_sha256": "b05e00f55acd0de1a95acad099af7831e53c6b85ef670e76644575033c9f0bca",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/independent.optimized.out",
+      "source_sha256": "b05e00f55acd0de1a95acad099af7831e53c6b85ef670e76644575033c9f0bca",
+      "published_sha256": "b05e00f55acd0de1a95acad099af7831e53c6b85ef670e76644575033c9f0bca",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/submitted_controls_copy.py",
+      "source_sha256": "35fa4406ba3b2a368f2f1bbfbc317d17d4751a2eb62973e6cc03d97cd58af1e9",
+      "published_sha256": "35fa4406ba3b2a368f2f1bbfbc317d17d4751a2eb62973e6cc03d97cd58af1e9",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/submitted.normal.out",
+      "source_sha256": "c3ac8cca7b409afd8c7a1352a86cfade1f2a6844b697950885908fa92fbf1af8",
+      "published_sha256": "c3ac8cca7b409afd8c7a1352a86cfade1f2a6844b697950885908fa92fbf1af8",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/submitted.optimized.out",
+      "source_sha256": "c3ac8cca7b409afd8c7a1352a86cfade1f2a6844b697950885908fa92fbf1af8",
+      "published_sha256": "c3ac8cca7b409afd8c7a1352a86cfade1f2a6844b697950885908fa92fbf1af8",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/verification-results.json",
+      "source_sha256": "890b7e87c072218b08d8e9b6d09b92d5bd02a97433ac692e294b8a0f984ed102",
+      "published_sha256": "890b7e87c072218b08d8e9b6d09b92d5bd02a97433ac692e294b8a0f984ed102",
+      "presentation_updates": false
+    }
+  ],
+  "original_independent_receipt_source_hashes": {
+    "verify_trace_pole_boundary.py": "35fa4406ba3b2a368f2f1bbfbc317d17d4751a2eb62973e6cc03d97cd58af1e9",
+    "verify.optimized.out": "c3ac8cca7b409afd8c7a1352a86cfade1f2a6844b697950885908fa92fbf1af8",
+    "SHA256SUMS": "5e682b8fa20eb26b17201a385bf104c3cf483bac3bda83d2968ae0baaf13c341",
+    "SOURCE-DEPENDENCIES.json": "ffef3e5f641528f71997df639704e5c1dd0ed7a4584b2fe42935b1af9a414477",
+    "TRACE_POLE_BOUNDARY.md": "e8f95b7c28e7ba84c1e0e9cf64aa5aa994ca8f70491799e8d4cf1f9f820dc9bd",
+    "verify.out": "c3ac8cca7b409afd8c7a1352a86cfade1f2a6844b697950885908fa92fbf1af8",
+    "README.md": "f722a3bfde425adc44e934d75c81e46825549a09935b69e641402633c6a7a62c",
+    "verification-results.json": "890b7e87c072218b08d8e9b6d09b92d5bd02a97433ac692e294b8a0f984ed102"
+  }
+}

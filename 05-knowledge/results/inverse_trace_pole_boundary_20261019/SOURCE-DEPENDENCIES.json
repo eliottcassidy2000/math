@@ -1,0 +1,59 @@
+{
+  "as_of": "2026-10-19",
+  "repository_inputs": [
+    {
+      "path": "math/05-knowledge/results/planar_autonomous_lie_jets_20261019/finite_symplectic_jets_and_boundary_control.md",
+      "sha256": "fc5ee1d620e305ef1d600da925e470b3a948af59023be131980e0f583869ae64"
+    },
+    {
+      "path": "math/05-knowledge/results/planar_autonomous_lie_jets_20261019/planar_autonomous_polynomiality_beyond_fixed_line.md",
+      "sha256": "d32e4b56616209137b3ce0e5d93fd4e464e765f3c97c843c2181b5c4e95a715b"
+    },
+    {
+      "path": "math/05-knowledge/results/metabelian_global_invariants_20261019/metabelian_global_invariants_and_logarithms.md",
+      "sha256": "9d04aac29544603c3596f5e4622a20a4ad67841ae42f82be5f3c22ea4a560fca"
+    },
+    {
+      "path": "math/05-knowledge/results/parabolic_cotangent_integrability_20261019/parabolic_cotangent_invariant_barrier.md",
+      "sha256": "91f2b46e8f4c5027495f97c5378cfe15da89353749056fa2cb587ccb93d003ca"
+    },
+    {
+      "path": "math/05-knowledge/results/finite_jet_bottleneck_clocks_20261019/FINITE_JET_BOTTLENECK_CLOCKS.md",
+      "sha256": "383adcb99f6bf2c516afee94600502d972df3c075d96f39d8b36ef976d9fe318"
+    },
+    {
+      "path": "math/05-knowledge/results/period_three_global_index_20261019/period_three_global_index.md",
+      "sha256": "00f8d1d53752c47617d090321f1fae0962043eb2c21783c0f30ddee0d1131207"
+    },
+    {
+      "path": "math/01-canon/theorems/THM-2621-planar-degree-four-inverse-spectral-keller-congruence-and-sheet-defect-pole-ledger.md",
+      "sha256": "347d30848d2dc5777437483f3e6fe798a7d454d7e7c96d590fc9e4602ec1857d"
+    },
+    {
+      "path": "math/01-canon/theorems/THM-2633-derangement-character-obstruction-and-d4-keller-exclusion.md",
+      "sha256": "9fcbe24d057d756b39675a31db072df85e9a93852e4e6ecdbb37e6d678fe1ab3"
+    },
+    {
+      "path": "math/01-canon/theorems/THM-1365-galois-reduction-jc-fixed-point-bridge.md",
+      "sha256": "8db09a08f4fa8199e2c7b0168e150ca86e383fd61a2513efe32c806301634e2f"
+    },
+    {
+      "path": "math/01-canon/theorems/THM-3951-affine-plane-boundary-incidence-forest-and-equianharmonic-survivor-nonentry.md",
+      "sha256": "f90e98143dc673fe66036f09b80e7c6cbaf262236bfc129146d7f9dfb64d3c4a"
+    },
+    {
+      "path": "math/01-canon/theorems/THM-500-the-second-spectral-boundary-odd-cycle-count-non-spectral-from-n7.md",
+      "sha256": "0e206de92a0f70bca6e7d5b2291a0690e0325208385f70f22183e712d794ea6e"
+    },
+    {
+      "path": "math/01-canon/theorems/THM-4529-petersen-and-heawood-families-in-paley-coordinates-anti-circulant-all-odd-tournaments.md",
+      "sha256": "01dc8d42a03617d76c956864817a177e8482ecb4ffe73769409f1223c757a7b6"
+    }
+  ],
+  "external_sources": [
+    "https://stacks.math.columbia.edu/tag/05K0",
+    "https://stacks.math.columbia.edu/tag/03GT",
+    "https://stacks.math.columbia.edu/tag/0AVB",
+    "https://stacks.math.columbia.edu/tag/02GL"
+  ]
+}

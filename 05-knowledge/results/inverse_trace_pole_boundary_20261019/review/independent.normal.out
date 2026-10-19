@@ -1,0 +1,3 @@
+PASS: 575 independent exact checks; 209 leading-residue multisets; 34 valued packet cases.
+Includes repeated observables, mixed slopes, rational pole orders, even projection collisions, inertia, and four blowup charts.
+No global Keller realization, unconditional trace regularity, or Jacobian-conjecture closure is inferred.

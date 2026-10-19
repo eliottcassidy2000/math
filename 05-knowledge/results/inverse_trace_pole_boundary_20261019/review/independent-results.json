@@ -1,0 +1,290 @@
+{
+  "status": "PASS",
+  "checks": 575,
+  "leading_residue_multisets": 209,
+  "packet_cases": [
+    {
+      "name": "one escaping root",
+      "degree": 3,
+      "escaping_values": 1,
+      "most_singular_values": 1,
+      "largest_pole": "3",
+      "first_polar_moment": 1
+    },
+    {
+      "name": "fractional cubic",
+      "degree": 4,
+      "escaping_values": 3,
+      "most_singular_values": 3,
+      "largest_pole": "2/3",
+      "first_polar_moment": 3
+    },
+    {
+      "name": "mixed slopes",
+      "degree": 6,
+      "escaping_values": 5,
+      "most_singular_values": 2,
+      "largest_pole": "3/2",
+      "first_polar_moment": 2
+    },
+    {
+      "name": "merged quartic packet",
+      "degree": 5,
+      "escaping_values": 4,
+      "most_singular_values": 4,
+      "largest_pole": "1/2",
+      "first_polar_moment": 4
+    },
+    {
+      "name": "repeated nonprimitive observable",
+      "degree": 6,
+      "escaping_values": 4,
+      "most_singular_values": 4,
+      "largest_pole": "3/2",
+      "first_polar_moment": 2
+    },
+    {
+      "name": "regular translated roots",
+      "degree": 4,
+      "escaping_values": 0,
+      "most_singular_values": 0,
+      "largest_pole": "0",
+      "first_polar_moment": null
+    },
+    {
+      "name": "extremal m=1, a=1",
+      "degree": 2,
+      "escaping_values": 1,
+      "most_singular_values": 1,
+      "largest_pole": "1",
+      "first_polar_moment": 1
+    },
+    {
+      "name": "extremal m=1, a=2",
+      "degree": 2,
+      "escaping_values": 1,
+      "most_singular_values": 1,
+      "largest_pole": "2",
+      "first_polar_moment": 1
+    },
+    {
+      "name": "extremal m=1, a=3",
+      "degree": 2,
+      "escaping_values": 1,
+      "most_singular_values": 1,
+      "largest_pole": "3",
+      "first_polar_moment": 1
+    },
+    {
+      "name": "extremal m=1, a=4",
+      "degree": 2,
+      "escaping_values": 1,
+      "most_singular_values": 1,
+      "largest_pole": "4",
+      "first_polar_moment": 1
+    },
+    {
+      "name": "extremal m=2, a=1",
+      "degree": 3,
+      "escaping_values": 2,
+      "most_singular_values": 2,
+      "largest_pole": "1/2",
+      "first_polar_moment": 2
+    },
+    {
+      "name": "extremal m=2, a=2",
+      "degree": 3,
+      "escaping_values": 2,
+      "most_singular_values": 2,
+      "largest_pole": "1",
+      "first_polar_moment": 2
+    },
+    {
+      "name": "extremal m=2, a=3",
+      "degree": 3,
+      "escaping_values": 2,
+      "most_singular_values": 2,
+      "largest_pole": "3/2",
+      "first_polar_moment": 2
+    },
+    {
+      "name": "extremal m=2, a=4",
+      "degree": 3,
+      "escaping_values": 2,
+      "most_singular_values": 2,
+      "largest_pole": "2",
+      "first_polar_moment": 2
+    },
+    {
+      "name": "extremal m=3, a=1",
+      "degree": 4,
+      "escaping_values": 3,
+      "most_singular_values": 3,
+      "largest_pole": "1/3",
+      "first_polar_moment": 3
+    },
+    {
+      "name": "extremal m=3, a=2",
+      "degree": 4,
+      "escaping_values": 3,
+      "most_singular_values": 3,
+      "largest_pole": "2/3",
+      "first_polar_moment": 3
+    },
+    {
+      "name": "extremal m=3, a=3",
+      "degree": 4,
+      "escaping_values": 3,
+      "most_singular_values": 3,
+      "largest_pole": "1",
+      "first_polar_moment": 3
+    },
+    {
+      "name": "extremal m=3, a=4",
+      "degree": 4,
+      "escaping_values": 3,
+      "most_singular_values": 3,
+      "largest_pole": "4/3",
+      "first_polar_moment": 3
+    },
+    {
+      "name": "extremal m=4, a=1",
+      "degree": 5,
+      "escaping_values": 4,
+      "most_singular_values": 4,
+      "largest_pole": "1/4",
+      "first_polar_moment": 4
+    },
+    {
+      "name": "extremal m=4, a=2",
+      "degree": 5,
+      "escaping_values": 4,
+      "most_singular_values": 4,
+      "largest_pole": "1/2",
+      "first_polar_moment": 4
+    },
+    {
+      "name": "extremal m=4, a=3",
+      "degree": 5,
+      "escaping_values": 4,
+      "most_singular_values": 4,
+      "largest_pole": "3/4",
+      "first_polar_moment": 4
+    },
+    {
+      "name": "extremal m=4, a=4",
+      "degree": 5,
+      "escaping_values": 4,
+      "most_singular_values": 4,
+      "largest_pole": "1",
+      "first_polar_moment": 4
+    },
+    {
+      "name": "extremal m=5, a=1",
+      "degree": 6,
+      "escaping_values": 5,
+      "most_singular_values": 5,
+      "largest_pole": "1/5",
+      "first_polar_moment": 5
+    },
+    {
+      "name": "extremal m=5, a=2",
+      "degree": 6,
+      "escaping_values": 5,
+      "most_singular_values": 5,
+      "largest_pole": "2/5",
+      "first_polar_moment": 5
+    },
+    {
+      "name": "extremal m=5, a=3",
+      "degree": 6,
+      "escaping_values": 5,
+      "most_singular_values": 5,
+      "largest_pole": "3/5",
+      "first_polar_moment": 5
+    },
+    {
+      "name": "extremal m=5, a=4",
+      "degree": 6,
+      "escaping_values": 5,
+      "most_singular_values": 5,
+      "largest_pole": "4/5",
+      "first_polar_moment": 5
+    },
+    {
+      "name": "extremal m=6, a=1",
+      "degree": 7,
+      "escaping_values": 6,
+      "most_singular_values": 6,
+      "largest_pole": "1/6",
+      "first_polar_moment": 6
+    },
+    {
+      "name": "extremal m=6, a=2",
+      "degree": 7,
+      "escaping_values": 6,
+      "most_singular_values": 6,
+      "largest_pole": "1/3",
+      "first_polar_moment": 6
+    },
+    {
+      "name": "extremal m=6, a=3",
+      "degree": 7,
+      "escaping_values": 6,
+      "most_singular_values": 6,
+      "largest_pole": "1/2",
+      "first_polar_moment": 6
+    },
+    {
+      "name": "extremal m=6, a=4",
+      "degree": 7,
+      "escaping_values": 6,
+      "most_singular_values": 6,
+      "largest_pole": "2/3",
+      "first_polar_moment": 6
+    },
+    {
+      "name": "extremal m=7, a=1",
+      "degree": 8,
+      "escaping_values": 7,
+      "most_singular_values": 7,
+      "largest_pole": "1/7",
+      "first_polar_moment": 7
+    },
+    {
+      "name": "extremal m=7, a=2",
+      "degree": 8,
+      "escaping_values": 7,
+      "most_singular_values": 7,
+      "largest_pole": "2/7",
+      "first_polar_moment": 7
+    },
+    {
+      "name": "extremal m=7, a=3",
+      "degree": 8,
+      "escaping_values": 7,
+      "most_singular_values": 7,
+      "largest_pole": "3/7",
+      "first_polar_moment": 7
+    },
+    {
+      "name": "extremal m=7, a=4",
+      "degree": 8,
+      "escaping_values": 7,
+      "most_singular_values": 7,
+      "largest_pole": "4/7",
+      "first_polar_moment": 7
+    }
+  ],
+  "scope": "Exact finite audit controls, not a realization or a general Jacobian-conjecture proof.",
+  "draft_sha256": {
+    "README.md": "7aa5006d0b234826409d86702fe44edcee6b0571a7311d11bf77c297c1a07cb6",
+    "TRACE_POLE_BOUNDARY.md": "3b49905aec6b3a2975108c9bdb1d8be84ae83383debe755d7bf83e3ef7198236",
+    "SOURCE-DEPENDENCIES.json": "ffef3e5f641528f71997df639704e5c1dd0ed7a4584b2fe42935b1af9a414477",
+    "verify_trace_pole_boundary.py": "35fa4406ba3b2a368f2f1bbfbc317d17d4751a2eb62973e6cc03d97cd58af1e9",
+    "verification-results.json": "890b7e87c072218b08d8e9b6d09b92d5bd02a97433ac692e294b8a0f984ed102",
+    "verify.out": "c3ac8cca7b409afd8c7a1352a86cfade1f2a6844b697950885908fa92fbf1af8",
+    "verify.optimized.out": "c3ac8cca7b409afd8c7a1352a86cfade1f2a6844b697950885908fa92fbf1af8"
+  },
+  "sympy": "1.14.0"
+}

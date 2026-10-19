@@ -1,0 +1,960 @@
+{
+  "status": "PASS",
+  "checks": 808,
+  "scope": "Finite exact algebra controls, no Keller realization census or general Jacobian closure",
+  "families": [
+    {
+      "d": 2,
+      "first_polar_moment_with_survivor": 1,
+      "value": "1/u",
+      "without_survivor": 2
+    },
+    {
+      "d": 3,
+      "first_polar_moment_with_survivor": 2,
+      "value": "2/u",
+      "without_survivor": 3
+    },
+    {
+      "d": 4,
+      "first_polar_moment_with_survivor": 3,
+      "value": "3/u",
+      "without_survivor": 4
+    },
+    {
+      "d": 5,
+      "first_polar_moment_with_survivor": 4,
+      "value": "4/u",
+      "without_survivor": 5
+    },
+    {
+      "d": 6,
+      "first_polar_moment_with_survivor": 5,
+      "value": "5/u",
+      "without_survivor": 6
+    },
+    {
+      "d": 7,
+      "first_polar_moment_with_survivor": 6,
+      "value": "6/u",
+      "without_survivor": 7
+    },
+    {
+      "d": 8,
+      "first_polar_moment_with_survivor": 7,
+      "value": "7/u",
+      "without_survivor": 8
+    },
+    {
+      "d": 9,
+      "first_polar_moment_with_survivor": 8,
+      "value": "8/u",
+      "without_survivor": 9
+    },
+    {
+      "d": 10,
+      "first_polar_moment_with_survivor": 9,
+      "value": "9/u",
+      "without_survivor": 10
+    }
+  ],
+  "discriminant_cases": [
+    {
+      "d": 2,
+      "moment_pole": 1,
+      "constant_pole": 0,
+      "discriminant_order": -2,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 2,
+      "moment_pole": 1,
+      "constant_pole": 1,
+      "discriminant_order": -2,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 2,
+      "moment_pole": 2,
+      "constant_pole": 0,
+      "discriminant_order": -4,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 2,
+      "moment_pole": 2,
+      "constant_pole": 1,
+      "discriminant_order": -4,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 2,
+      "moment_pole": 2,
+      "constant_pole": 2,
+      "discriminant_order": -4,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 2,
+      "moment_pole": 3,
+      "constant_pole": 0,
+      "discriminant_order": -6,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 2,
+      "moment_pole": 3,
+      "constant_pole": 1,
+      "discriminant_order": -6,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 2,
+      "moment_pole": 3,
+      "constant_pole": 2,
+      "discriminant_order": -6,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 2,
+      "moment_pole": 3,
+      "constant_pole": 3,
+      "discriminant_order": -6,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 2,
+      "moment_pole": 4,
+      "constant_pole": 0,
+      "discriminant_order": -8,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 2,
+      "moment_pole": 4,
+      "constant_pole": 1,
+      "discriminant_order": -8,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 2,
+      "moment_pole": 4,
+      "constant_pole": 2,
+      "discriminant_order": -8,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 2,
+      "moment_pole": 4,
+      "constant_pole": 3,
+      "discriminant_order": -8,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 2,
+      "moment_pole": 4,
+      "constant_pole": 4,
+      "discriminant_order": -8,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 3,
+      "moment_pole": 1,
+      "constant_pole": 0,
+      "discriminant_order": -3,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 3,
+      "moment_pole": 1,
+      "constant_pole": 1,
+      "discriminant_order": -3,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 3,
+      "moment_pole": 2,
+      "constant_pole": 0,
+      "discriminant_order": -6,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 3,
+      "moment_pole": 2,
+      "constant_pole": 1,
+      "discriminant_order": -6,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 3,
+      "moment_pole": 2,
+      "constant_pole": 2,
+      "discriminant_order": -6,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 3,
+      "moment_pole": 3,
+      "constant_pole": 0,
+      "discriminant_order": -9,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 3,
+      "moment_pole": 3,
+      "constant_pole": 1,
+      "discriminant_order": -9,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 3,
+      "moment_pole": 3,
+      "constant_pole": 2,
+      "discriminant_order": -9,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 3,
+      "moment_pole": 3,
+      "constant_pole": 3,
+      "discriminant_order": -9,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 3,
+      "moment_pole": 4,
+      "constant_pole": 0,
+      "discriminant_order": -12,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 3,
+      "moment_pole": 4,
+      "constant_pole": 1,
+      "discriminant_order": -12,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 3,
+      "moment_pole": 4,
+      "constant_pole": 2,
+      "discriminant_order": -12,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 3,
+      "moment_pole": 4,
+      "constant_pole": 3,
+      "discriminant_order": -12,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 3,
+      "moment_pole": 4,
+      "constant_pole": 4,
+      "discriminant_order": -12,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 4,
+      "moment_pole": 1,
+      "constant_pole": 0,
+      "discriminant_order": -4,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 4,
+      "moment_pole": 1,
+      "constant_pole": 1,
+      "discriminant_order": -4,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 4,
+      "moment_pole": 2,
+      "constant_pole": 0,
+      "discriminant_order": -8,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 4,
+      "moment_pole": 2,
+      "constant_pole": 1,
+      "discriminant_order": -8,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 4,
+      "moment_pole": 2,
+      "constant_pole": 2,
+      "discriminant_order": -8,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 4,
+      "moment_pole": 3,
+      "constant_pole": 0,
+      "discriminant_order": -12,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 3
+    },
+    {
+      "d": 4,
+      "moment_pole": 3,
+      "constant_pole": 1,
+      "discriminant_order": -12,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 3
+    },
+    {
+      "d": 4,
+      "moment_pole": 3,
+      "constant_pole": 2,
+      "discriminant_order": -12,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 3
+    },
+    {
+      "d": 4,
+      "moment_pole": 3,
+      "constant_pole": 3,
+      "discriminant_order": -12,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 3
+    },
+    {
+      "d": 4,
+      "moment_pole": 4,
+      "constant_pole": 0,
+      "discriminant_order": -16,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 4,
+      "moment_pole": 4,
+      "constant_pole": 1,
+      "discriminant_order": -16,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 4,
+      "moment_pole": 4,
+      "constant_pole": 2,
+      "discriminant_order": -16,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 4,
+      "moment_pole": 4,
+      "constant_pole": 3,
+      "discriminant_order": -16,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 4,
+      "moment_pole": 4,
+      "constant_pole": 4,
+      "discriminant_order": -16,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 5,
+      "moment_pole": 1,
+      "constant_pole": 0,
+      "discriminant_order": -5,
+      "inertia_cycle_length": 4,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 5,
+      "moment_pole": 1,
+      "constant_pole": 1,
+      "discriminant_order": -5,
+      "inertia_cycle_length": 4,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 5,
+      "moment_pole": 2,
+      "constant_pole": 0,
+      "discriminant_order": -10,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 5,
+      "moment_pole": 2,
+      "constant_pole": 1,
+      "discriminant_order": -10,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 5,
+      "moment_pole": 2,
+      "constant_pole": 2,
+      "discriminant_order": -10,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 5,
+      "moment_pole": 3,
+      "constant_pole": 0,
+      "discriminant_order": -15,
+      "inertia_cycle_length": 4,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 5,
+      "moment_pole": 3,
+      "constant_pole": 1,
+      "discriminant_order": -15,
+      "inertia_cycle_length": 4,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 5,
+      "moment_pole": 3,
+      "constant_pole": 2,
+      "discriminant_order": -15,
+      "inertia_cycle_length": 4,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 5,
+      "moment_pole": 3,
+      "constant_pole": 3,
+      "discriminant_order": -15,
+      "inertia_cycle_length": 4,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 5,
+      "moment_pole": 4,
+      "constant_pole": 0,
+      "discriminant_order": -20,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 4
+    },
+    {
+      "d": 5,
+      "moment_pole": 4,
+      "constant_pole": 1,
+      "discriminant_order": -20,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 4
+    },
+    {
+      "d": 5,
+      "moment_pole": 4,
+      "constant_pole": 2,
+      "discriminant_order": -20,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 4
+    },
+    {
+      "d": 5,
+      "moment_pole": 4,
+      "constant_pole": 3,
+      "discriminant_order": -20,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 4
+    },
+    {
+      "d": 5,
+      "moment_pole": 4,
+      "constant_pole": 4,
+      "discriminant_order": -20,
+      "inertia_cycle_length": 1,
+      "inertia_cycle_count": 4
+    },
+    {
+      "d": 6,
+      "moment_pole": 1,
+      "constant_pole": 0,
+      "discriminant_order": -6,
+      "inertia_cycle_length": 5,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 6,
+      "moment_pole": 1,
+      "constant_pole": 1,
+      "discriminant_order": -6,
+      "inertia_cycle_length": 5,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 6,
+      "moment_pole": 2,
+      "constant_pole": 0,
+      "discriminant_order": -12,
+      "inertia_cycle_length": 5,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 6,
+      "moment_pole": 2,
+      "constant_pole": 1,
+      "discriminant_order": -12,
+      "inertia_cycle_length": 5,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 6,
+      "moment_pole": 2,
+      "constant_pole": 2,
+      "discriminant_order": -12,
+      "inertia_cycle_length": 5,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 6,
+      "moment_pole": 3,
+      "constant_pole": 0,
+      "discriminant_order": -18,
+      "inertia_cycle_length": 5,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 6,
+      "moment_pole": 3,
+      "constant_pole": 1,
+      "discriminant_order": -18,
+      "inertia_cycle_length": 5,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 6,
+      "moment_pole": 3,
+      "constant_pole": 2,
+      "discriminant_order": -18,
+      "inertia_cycle_length": 5,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 6,
+      "moment_pole": 3,
+      "constant_pole": 3,
+      "discriminant_order": -18,
+      "inertia_cycle_length": 5,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 6,
+      "moment_pole": 4,
+      "constant_pole": 0,
+      "discriminant_order": -24,
+      "inertia_cycle_length": 5,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 6,
+      "moment_pole": 4,
+      "constant_pole": 1,
+      "discriminant_order": -24,
+      "inertia_cycle_length": 5,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 6,
+      "moment_pole": 4,
+      "constant_pole": 2,
+      "discriminant_order": -24,
+      "inertia_cycle_length": 5,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 6,
+      "moment_pole": 4,
+      "constant_pole": 3,
+      "discriminant_order": -24,
+      "inertia_cycle_length": 5,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 6,
+      "moment_pole": 4,
+      "constant_pole": 4,
+      "discriminant_order": -24,
+      "inertia_cycle_length": 5,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 7,
+      "moment_pole": 1,
+      "constant_pole": 0,
+      "discriminant_order": -7,
+      "inertia_cycle_length": 6,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 7,
+      "moment_pole": 1,
+      "constant_pole": 1,
+      "discriminant_order": -7,
+      "inertia_cycle_length": 6,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 7,
+      "moment_pole": 2,
+      "constant_pole": 0,
+      "discriminant_order": -14,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 7,
+      "moment_pole": 2,
+      "constant_pole": 1,
+      "discriminant_order": -14,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 7,
+      "moment_pole": 2,
+      "constant_pole": 2,
+      "discriminant_order": -14,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 7,
+      "moment_pole": 3,
+      "constant_pole": 0,
+      "discriminant_order": -21,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 3
+    },
+    {
+      "d": 7,
+      "moment_pole": 3,
+      "constant_pole": 1,
+      "discriminant_order": -21,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 3
+    },
+    {
+      "d": 7,
+      "moment_pole": 3,
+      "constant_pole": 2,
+      "discriminant_order": -21,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 3
+    },
+    {
+      "d": 7,
+      "moment_pole": 3,
+      "constant_pole": 3,
+      "discriminant_order": -21,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 3
+    },
+    {
+      "d": 7,
+      "moment_pole": 4,
+      "constant_pole": 0,
+      "discriminant_order": -28,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 7,
+      "moment_pole": 4,
+      "constant_pole": 1,
+      "discriminant_order": -28,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 7,
+      "moment_pole": 4,
+      "constant_pole": 2,
+      "discriminant_order": -28,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 7,
+      "moment_pole": 4,
+      "constant_pole": 3,
+      "discriminant_order": -28,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 7,
+      "moment_pole": 4,
+      "constant_pole": 4,
+      "discriminant_order": -28,
+      "inertia_cycle_length": 3,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 8,
+      "moment_pole": 1,
+      "constant_pole": 0,
+      "discriminant_order": -8,
+      "inertia_cycle_length": 7,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 8,
+      "moment_pole": 1,
+      "constant_pole": 1,
+      "discriminant_order": -8,
+      "inertia_cycle_length": 7,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 8,
+      "moment_pole": 2,
+      "constant_pole": 0,
+      "discriminant_order": -16,
+      "inertia_cycle_length": 7,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 8,
+      "moment_pole": 2,
+      "constant_pole": 1,
+      "discriminant_order": -16,
+      "inertia_cycle_length": 7,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 8,
+      "moment_pole": 2,
+      "constant_pole": 2,
+      "discriminant_order": -16,
+      "inertia_cycle_length": 7,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 8,
+      "moment_pole": 3,
+      "constant_pole": 0,
+      "discriminant_order": -24,
+      "inertia_cycle_length": 7,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 8,
+      "moment_pole": 3,
+      "constant_pole": 1,
+      "discriminant_order": -24,
+      "inertia_cycle_length": 7,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 8,
+      "moment_pole": 3,
+      "constant_pole": 2,
+      "discriminant_order": -24,
+      "inertia_cycle_length": 7,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 8,
+      "moment_pole": 3,
+      "constant_pole": 3,
+      "discriminant_order": -24,
+      "inertia_cycle_length": 7,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 8,
+      "moment_pole": 4,
+      "constant_pole": 0,
+      "discriminant_order": -32,
+      "inertia_cycle_length": 7,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 8,
+      "moment_pole": 4,
+      "constant_pole": 1,
+      "discriminant_order": -32,
+      "inertia_cycle_length": 7,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 8,
+      "moment_pole": 4,
+      "constant_pole": 2,
+      "discriminant_order": -32,
+      "inertia_cycle_length": 7,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 8,
+      "moment_pole": 4,
+      "constant_pole": 3,
+      "discriminant_order": -32,
+      "inertia_cycle_length": 7,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 8,
+      "moment_pole": 4,
+      "constant_pole": 4,
+      "discriminant_order": -32,
+      "inertia_cycle_length": 7,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 9,
+      "moment_pole": 1,
+      "constant_pole": 0,
+      "discriminant_order": -9,
+      "inertia_cycle_length": 8,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 9,
+      "moment_pole": 1,
+      "constant_pole": 1,
+      "discriminant_order": -9,
+      "inertia_cycle_length": 8,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 9,
+      "moment_pole": 2,
+      "constant_pole": 0,
+      "discriminant_order": -18,
+      "inertia_cycle_length": 4,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 9,
+      "moment_pole": 2,
+      "constant_pole": 1,
+      "discriminant_order": -18,
+      "inertia_cycle_length": 4,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 9,
+      "moment_pole": 2,
+      "constant_pole": 2,
+      "discriminant_order": -18,
+      "inertia_cycle_length": 4,
+      "inertia_cycle_count": 2
+    },
+    {
+      "d": 9,
+      "moment_pole": 3,
+      "constant_pole": 0,
+      "discriminant_order": -27,
+      "inertia_cycle_length": 8,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 9,
+      "moment_pole": 3,
+      "constant_pole": 1,
+      "discriminant_order": -27,
+      "inertia_cycle_length": 8,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 9,
+      "moment_pole": 3,
+      "constant_pole": 2,
+      "discriminant_order": -27,
+      "inertia_cycle_length": 8,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 9,
+      "moment_pole": 3,
+      "constant_pole": 3,
+      "discriminant_order": -27,
+      "inertia_cycle_length": 8,
+      "inertia_cycle_count": 1
+    },
+    {
+      "d": 9,
+      "moment_pole": 4,
+      "constant_pole": 0,
+      "discriminant_order": -36,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 4
+    },
+    {
+      "d": 9,
+      "moment_pole": 4,
+      "constant_pole": 1,
+      "discriminant_order": -36,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 4
+    },
+    {
+      "d": 9,
+      "moment_pole": 4,
+      "constant_pole": 2,
+      "discriminant_order": -36,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 4
+    },
+    {
+      "d": 9,
+      "moment_pole": 4,
+      "constant_pole": 3,
+      "discriminant_order": -36,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 4
+    },
+    {
+      "d": 9,
+      "moment_pole": 4,
+      "constant_pole": 4,
+      "discriminant_order": -36,
+      "inertia_cycle_length": 2,
+      "inertia_cycle_count": 4
+    }
+  ],
+  "sympy_version": "1.14.0"
+}
