@@ -1,0 +1,17 @@
+{
+  "packet": 127,
+  "status": "PASS",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "checks": 118,
+  "commands": [
+    "python 04-computation/experiments/planar_monomial_carrier_flow_trichotomy_20261019.py",
+    "python -O 04-computation/experiments/planar_monomial_carrier_flow_trichotomy_20261019.py"
+  ],
+  "normal_output": "05-knowledge/results/planar_monomial_carrier_flow_trichotomy_20261019.json",
+  "optimized_output": "05-knowledge/results/planar_monomial_carrier_flow_trichotomy_20261019_optimized.json",
+  "normal_sha256": "856900fb0bbb8996f693f8d3072308f4282baff95d3546b0ea5328c93fdb49a0",
+  "optimized_sha256": "856900fb0bbb8996f693f8d3072308f4282baff95d3546b0ea5328c93fdb49a0",
+  "byte_identical": true,
+  "scope": "Finite interface controls; all-k classification follows from the scaling, trace, pole and exceptional-case proofs."
+}

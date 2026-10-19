@@ -1,0 +1,20 @@
+{
+  "checks": 118,
+  "scope": "Finite exact interface controls; the all-k classification follows from the scaling, trace, exactness and exceptional-case proofs.",
+  "status": "PASS",
+  "tested_k_interfaces": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ]
+}
