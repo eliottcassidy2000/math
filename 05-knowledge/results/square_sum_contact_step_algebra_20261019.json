@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "exact_checks": 233,
+  "pell_limits": [
+    {
+      "q": 1,
+      "u_plus": "2",
+      "u_minus": "0",
+      "spread_plus": "24/25"
+    },
+    {
+      "q": 2,
+      "u_plus": "5/2",
+      "u_minus": "-1/2",
+      "spread_plus": "840/841"
+    },
+    {
+      "q": 3,
+      "u_plus": "12/5",
+      "u_minus": "-2/5",
+      "spread_plus": "28560/28561"
+    },
+    {
+      "q": 4,
+      "u_plus": "29/12",
+      "u_minus": "-5/12",
+      "spread_plus": "970224/970225"
+    },
+    {
+      "q": 5,
+      "u_plus": "70/29",
+      "u_minus": "-12/29",
+      "spread_plus": "32959080/32959081"
+    },
+    {
+      "q": 6,
+      "u_plus": "169/70",
+      "u_minus": "-29/70",
+      "spread_plus": "1119638520/1119638521"
+    }
+  ],
+  "q2_patch": [
+    "24",
+    "32"
+  ],
+  "q2_patch_spread_upper": "720/1681"
+}
