@@ -1,0 +1,503 @@
+{
+  "status": "EXACT_SINGLE_POSET_CONTROLS_PASSED",
+  "pred": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    163,
+    71,
+    141,
+    27,
+    53,
+    105,
+    209,
+    254
+  ],
+  "extensions": 3557240064,
+  "root_pair": [
+    0,
+    15
+  ],
+  "root_probability": "3476/3501",
+  "common_incomparable_neighbors": [],
+  "incomparability_degrees": [
+    8,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    8
+  ],
+  "good_pairs": 0,
+  "very_good_pairs": 0,
+  "structurally_eligible_orientations": [
+    {
+      "dual": false,
+      "a": 0,
+      "b": 1,
+      "probability": "216/389"
+    },
+    {
+      "dual": false,
+      "a": 0,
+      "b": 2,
+      "probability": "216/389"
+    },
+    {
+      "dual": false,
+      "a": 0,
+      "b": 3,
+      "probability": "216/389"
+    },
+    {
+      "dual": false,
+      "a": 0,
+      "b": 4,
+      "probability": "216/389"
+    },
+    {
+      "dual": false,
+      "a": 0,
+      "b": 5,
+      "probability": "216/389"
+    },
+    {
+      "dual": false,
+      "a": 0,
+      "b": 6,
+      "probability": "216/389"
+    },
+    {
+      "dual": false,
+      "a": 0,
+      "b": 7,
+      "probability": "216/389"
+    },
+    {
+      "dual": false,
+      "a": 0,
+      "b": 15,
+      "probability": "3476/3501"
+    },
+    {
+      "dual": false,
+      "a": 1,
+      "b": 10,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 1,
+      "b": 12,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 1,
+      "b": 13,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 1,
+      "b": 14,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 2,
+      "b": 8,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 2,
+      "b": 11,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 2,
+      "b": 13,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 2,
+      "b": 14,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 3,
+      "b": 8,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 3,
+      "b": 9,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 3,
+      "b": 12,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 3,
+      "b": 14,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 4,
+      "b": 8,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 4,
+      "b": 9,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 4,
+      "b": 10,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 4,
+      "b": 13,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 5,
+      "b": 9,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 5,
+      "b": 10,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 5,
+      "b": 11,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 5,
+      "b": 14,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 6,
+      "b": 8,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 6,
+      "b": 10,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 6,
+      "b": 11,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 6,
+      "b": 12,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 7,
+      "b": 9,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 7,
+      "b": 11,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 7,
+      "b": 12,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": false,
+      "a": 7,
+      "b": 13,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 8,
+      "b": 2,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 8,
+      "b": 3,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 8,
+      "b": 4,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 8,
+      "b": 6,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 9,
+      "b": 3,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 9,
+      "b": 4,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 9,
+      "b": 5,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 9,
+      "b": 7,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 10,
+      "b": 1,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 10,
+      "b": 4,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 10,
+      "b": 5,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 10,
+      "b": 6,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 11,
+      "b": 2,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 11,
+      "b": 5,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 11,
+      "b": 6,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 11,
+      "b": 7,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 12,
+      "b": 1,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 12,
+      "b": 3,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 12,
+      "b": 6,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 12,
+      "b": 7,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 13,
+      "b": 1,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 13,
+      "b": 2,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 13,
+      "b": 4,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 13,
+      "b": 7,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 14,
+      "b": 1,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 14,
+      "b": 2,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 14,
+      "b": 3,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 14,
+      "b": 5,
+      "probability": "3359/3501"
+    },
+    {
+      "dual": true,
+      "a": 15,
+      "b": 0,
+      "probability": "3476/3501"
+    },
+    {
+      "dual": true,
+      "a": 15,
+      "b": 8,
+      "probability": "216/389"
+    },
+    {
+      "dual": true,
+      "a": 15,
+      "b": 9,
+      "probability": "216/389"
+    },
+    {
+      "dual": true,
+      "a": 15,
+      "b": 10,
+      "probability": "216/389"
+    },
+    {
+      "dual": true,
+      "a": 15,
+      "b": 11,
+      "probability": "216/389"
+    },
+    {
+      "dual": true,
+      "a": 15,
+      "b": 12,
+      "probability": "216/389"
+    },
+    {
+      "dual": true,
+      "a": 15,
+      "b": 13,
+      "probability": "216/389"
+    },
+    {
+      "dual": true,
+      "a": 15,
+      "b": 14,
+      "probability": "216/389"
+    }
+  ],
+  "contact_probability": "216/389",
+  "contact_numerator": 1975228416,
+  "nontrivial_automorphism": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    1,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    8,
+    15
+  ],
+  "scope": "Refutes only unrestricted c=0 implies existence of a good pair. Eleven-thin, with Gold already guaranteed by nontrivial automorphism; no conjecture counterexample."
+}

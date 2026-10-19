@@ -1,0 +1,120 @@
+{
+  "status": "EXACT_TWO_CONSTRUCTION_CHECK",
+  "incident": {
+    "deleted_original_labels": [
+      1,
+      8
+    ],
+    "pred": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      35,
+      71,
+      13,
+      27,
+      53,
+      105,
+      126
+    ],
+    "labels": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "extensions": 51528960,
+    "degrees": [
+      7,
+      9,
+      9,
+      9,
+      10,
+      9,
+      10,
+      10,
+      9,
+      10,
+      9,
+      9,
+      9,
+      7
+    ],
+    "eligible_orientations": 70,
+    "good_pairs": [],
+    "very_good_pairs": []
+  },
+  "nonincident": {
+    "deleted_original_labels": [
+      1,
+      10
+    ],
+    "pred": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      81,
+      35,
+      13,
+      27,
+      53,
+      105,
+      126
+    ],
+    "labels": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "extensions": 55064448,
+    "degrees": [
+      7,
+      10,
+      10,
+      9,
+      9,
+      9,
+      10,
+      10,
+      10,
+      10,
+      9,
+      9,
+      9,
+      7
+    ],
+    "eligible_orientations": 74,
+    "good_pairs": [],
+    "very_good_pairs": []
+  },
+  "scope": "These truncations have root degrees seven but ambient maximum degree ten, not seven-thin."
+}

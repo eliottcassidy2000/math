@@ -1,0 +1,14 @@
+{
+  "status": "EXACT_SET_SYSTEM_CONTROLS_PASSED",
+  "scope": "Only the elementary finite set-system lemmas used in the symbolic height-two seven-thin theorem. No poset census.",
+  "families_checked": {
+    "2 elements, 2 rows": 1,
+    "3 elements, 2 rows": 10,
+    "3 elements, 3 rows": 20,
+    "4 elements, 4 rows": 1001,
+    "2 elements, five 2-sets": 1,
+    "3 elements, five 2-sets": 21,
+    "4 elements, five 2-sets": 252,
+    "5 elements, five 2-sets": 2002
+  }
+}
