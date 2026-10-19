@@ -1,0 +1,139 @@
+{
+  "checks": 58682,
+  "hostiles": {
+    "even_cover": "C3 double cover is C6",
+    "modular_Gram": {
+      "graph": "K4",
+      "p": 3,
+      "rank_B": 4,
+      "rank_Q": 3
+    },
+    "nonunit_triangle_mod6": [
+      3,
+      3,
+      3
+    ],
+    "one_pin_per_fibre": [
+      0,
+      3,
+      0,
+      3,
+      0,
+      3
+    ],
+    "support_not_counts": [
+      2,
+      8
+    ],
+    "type_or_guard_rejections": 15,
+    "unrestricted_odd_cover": {
+      "base": "K7",
+      "colour": "sheet index",
+      "every_edge_matching": [
+        1,
+        2,
+        0
+      ],
+      "sheets": 3
+    }
+  },
+  "norm_descent_control": "all343 integer coefficient vectors in[-3,3]^3 in the marked basis of Q(cuberoot2)",
+  "positive": {
+    "base_colouring": [
+      0,
+      3,
+      0,
+      3
+    ],
+    "base_square": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "every_three_sheet_edge_matching": true,
+    "mod9_symbol": [
+      0,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "uniform_pin": [
+      0,
+      0
+    ]
+  },
+  "quadratic_covariant_odd_symbol_counts": [
+    [
+      3,
+      1,
+      2
+    ],
+    [
+      3,
+      2,
+      4
+    ],
+    [
+      3,
+      3,
+      8
+    ],
+    [
+      5,
+      1,
+      0
+    ],
+    [
+      5,
+      2,
+      0
+    ],
+    [
+      7,
+      1,
+      2
+    ],
+    [
+      7,
+      2,
+      4
+    ]
+  ],
+  "scope": "Fixed ternary labels and uniformly replicated pins; odd covers and authenticated matching thickenings; no metric realization or new HN colouring bound.",
+  "status": "FINITE-EXACT controls for stated all-parameter elementary theorems",
+  "universe": {
+    "all_simple_graphs_through_5": 1099,
+    "fixed_label_bruteforce": "all graphs n<=4, every ternary label, no pins or vertex 0 pinned 0/1",
+    "lifted_odd_cycle_length_histogram": {
+      "3": 144,
+      "9": 72
+    },
+    "literal_permutation_kernels": "domain 1..6, codomain Z/2,Z/3,Z/4",
+    "odd_characteristics": [
+      3,
+      5,
+      7
+    ],
+    "three_sheet_square_covers": 1296,
+    "three_sheet_triangle_covers": 216,
+    "triangle_cover_contexts": "every ternary label and three prescribed pin contexts per cover"
+  }
+}
