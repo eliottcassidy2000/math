@@ -1,0 +1,14 @@
+Primitive PPT universe: C <= 100000; count=15919; positive=5305
+Independent signed-AP universe: root height <= 300; count=209; positive=33
+Independent Euler-product coefficient universe: n <= 10000
+Independent Gaussian lattice coefficient universe: norm <= 1000; full and primitive
+Exact angular coefficient universe: C <= 1000; modes k=0,1,2,3
+First signed base: (-46, 50, 146); first positive base: (482, 3362, 6242)
+Primitive coefficient controls: C=1:0, 5:1, 10:0, 15:0, 25:1, 65:2, 1105:4
+s=5: K=4725/32; P partial=3.235787031705734952091500E-4; P+ partial=1.109829884594076208066295E-8; tail bound=6.250E-21
+  outward-rounded cone/full interval: [3.429860722351164301E-5, 3.429860722353095892E-5]
+s=7: K=8243235/5504; P partial=1.281861291452300672138295E-5; P+ partial=5.703449837400863683562430E-12; tail bound=5.833E-31
+  outward-rounded cone/full interval: [4.449350234251218669E-7, 4.449350234251218670E-7]
+s=9: K=334084125375/22459904; P partial=5.121030745021984272365233E-7; P+ partial=3.193974347189376247193798E-15; tail bound=5.625E-41
+  outward-rounded cone/full interval: [6.236975535236050824E-9, 6.236975535236050825E-9]
+ALL CHECKS PASS: 117669
