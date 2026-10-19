@@ -37,12 +37,22 @@ cut value `ρ(x+y)`. Define the **value-multigraph** `G_x` on the value set with
 **Proof.** Flipping `x` replaces, for each `y`, the contribution of edge `{x,y}` by the *other*
 member of the value-pair `{|x−y|, ρ(x+y)}`. The multiset is preserved iff we can choose, for each
 incident edge, which member is "before" vs "after" so that the before-multiset equals the
-after-multiset. That is exactly a 2-coloring of the edges of `G_x` in which every value-vertex has
-equal degree in both color classes. Such a balanced edge 2-coloring exists iff every vertex of `G_x`
-has even degree: necessity is immediate; sufficiency follows by decomposing the (all-even) `G_x`
-into closed Eulerian walks and 2-coloring each walk alternately, which balances every vertex. The
-non-incident edges are untouched, and the colors of `x`'s neighbours are free, so the required
-coloring `χ` is realizable. ∎
+after-multiset. Orient each value-edge from its chosen before-value to its
+after-value. Equality is exactly indegree=outdegree at every value-vertex.
+Such a balanced orientation exists iff every degree is even: necessity is
+immediate, and sufficiency follows by orienting the Euler circuits of each
+edge-containing component consistently. The non-incident runner edges are
+untouched. Fix the colour of x; each neighbour's colour can independently
+select the desired orientation of its value-edge, so the required colouring
+`χ` is realizable. ∎
+
+**Proof repair (2026-10-18).** The former proof asserted an equivalent
+balanced edge 2-colouring and alternated colours around Euler circuits.
+An odd triangle is Eulerian but has no such balanced edge 2-colouring;
+this occurs in the native model at C=9,x=3, on value-vertices {1,2,4}.
+Balanced orientations are the correct object; the statement of Lemma A
+and the order-three silent-flip conclusion survive. See the
+[exact hostile and construction](../../05-knowledge/results/digit_125_nested_105_20261018q.md).
 
 ## Lemma B (degree parity of `G_x`) — PROVED
 

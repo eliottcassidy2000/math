@@ -133,10 +133,17 @@ Via THM-055: tr(c_{n-1-2k}) = sum_P e_{2k}(s_P) where e_{2k} is a polynomial in 
 By Newton's identities, e_{2k} is degree 2k in f, so tr(c_{n-1-2k}) depends on m_0,...,m_{2k}.
 
 This gives the complete coefficient hierarchy:
-- tr(c_6) = 720 (universal)
+- tr(c_6) = 5040 (universal)
 - tr(c_4) = 240*t3 - 2100
 - tr(c_2) = 24*bc - 60*t3 + 12*t5 + 231
-- tr(c_0) = H - 6*bc - 3*t5 + 249/4
+- tr(c_0) = H - 6*bc - 3*t5 - 21/4
+
+**Inheritance repair (2026-10-18).** These two entries now propagate
+THM-055/MISTAKE-015's corrected normalization. The previous display retained
+720 and +249/4. The transitive tournament has H=1 and c0=-17/4;
+[the exact replay](../../05-knowledge/results/digit_125_nested_105_20261018q.md)
+enumerates all5040 permutations and checks both constants. The moment and
+sigma tables above are not changed by this local repair.
 
 ---
 

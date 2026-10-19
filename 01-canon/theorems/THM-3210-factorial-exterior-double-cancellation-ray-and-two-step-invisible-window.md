@@ -186,7 +186,17 @@ gcd( Res_v(E_3,E_4), Res_v(E_3,E_5) ) = const * d^2,                  (11)
 
 whose only root `d=0` is excluded, so **no triple cancellation
 `E_3=E_4=E_5=0` occurs** for `n=1,2,3`.  Whether a three-step invisible window
-exists for some larger `n`, or over an extension field, is **OPEN**.
+exists for some larger `n`, or over an extension field, was left **OPEN**
+in this packet. **Resolved 2026-10-18 for this triple:**
+[P6, three-observation recovery](../../05-knowledge/results/digit_125_nested_105_20261018q.md#6-three-observations-suffice-in-the-old-4105-transfer)
+proves no common zero of `E_3,E_4,E_5` for every positive integer n,
+every characteristic-zero field, all d!=0 and all v. It uses the continuant
+recurrence and handles Delta=0 and d=n+4,n+5 separately. This extension is
+self-audited with two exact computational paths; it is not covered by this
+file's original independent-audit metadata. Companion P6a also proves the
+displayed double ray is the unique real solution for every n>=1 and d!=0;
+P6b gives a denominator-dependent rational amplitude floor. Other shifted
+triples are not classified.
 
 The independent audit proves the three quartics irreducible after reduction
 modulo `17,19,13`, respectively, using the degree-four Frobenius criterion;
@@ -219,4 +229,6 @@ and compare LF-normalized bytes with the two declared outputs.  Exact symbolic,
 sparse-polynomial, rational, and finite-field arithmetic only; no floating
 point, random sampling, imported executable, or assertion-sensitive test.
 
-**QED** for sections 1--3; section 4 is finite-exact in its stated universe.
+**QED** for the original sections 1--3; section4's original resultant
+computations remain finite-exact in their stated universe. The linked
+2026-10-18 follow-up supplies the all-n proofs and their separate scope.
