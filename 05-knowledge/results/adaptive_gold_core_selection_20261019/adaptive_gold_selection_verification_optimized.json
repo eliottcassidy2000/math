@@ -1,0 +1,622 @@
+{
+  "status": "PASS",
+  "guards": 424,
+  "core_predecessors": [
+    0,
+    0,
+    0,
+    6,
+    0,
+    19,
+    2,
+    18,
+    86,
+    151
+  ],
+  "critical_roots": [
+    0,
+    3
+  ],
+  "models": [
+    {
+      "lower_profile": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "upper_profile": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "ambient_predecessors": [
+        1024,
+        0,
+        1024,
+        1030,
+        0,
+        1043,
+        1026,
+        1042,
+        1110,
+        1175,
+        0,
+        1791
+      ],
+      "extensions": 29193,
+      "comparison_counts": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "numerator": 5740
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "numerator": 13424
+        },
+        {
+          "pair": [
+            0,
+            3
+          ],
+          "numerator": 25049
+        },
+        {
+          "pair": [
+            0,
+            4
+          ],
+          "numerator": 8066
+        },
+        {
+          "pair": [
+            0,
+            6
+          ],
+          "numerator": 19671
+        },
+        {
+          "pair": [
+            0,
+            7
+          ],
+          "numerator": 21775
+        },
+        {
+          "pair": [
+            0,
+            8
+          ],
+          "numerator": 27596
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "numerator": 22912
+        },
+        {
+          "pair": [
+            1,
+            4
+          ],
+          "numerator": 17187
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "numerator": 9068
+        },
+        {
+          "pair": [
+            2,
+            5
+          ],
+          "numerator": 26602
+        },
+        {
+          "pair": [
+            2,
+            6
+          ],
+          "numerator": 21015
+        },
+        {
+          "pair": [
+            2,
+            7
+          ],
+          "numerator": 22807
+        },
+        {
+          "pair": [
+            3,
+            4
+          ],
+          "numerator": 1557
+        },
+        {
+          "pair": [
+            3,
+            5
+          ],
+          "numerator": 15736
+        },
+        {
+          "pair": [
+            3,
+            6
+          ],
+          "numerator": 7920
+        },
+        {
+          "pair": [
+            3,
+            7
+          ],
+          "numerator": 8917
+        },
+        {
+          "pair": [
+            3,
+            8
+          ],
+          "numerator": 20750
+        },
+        {
+          "pair": [
+            3,
+            9
+          ],
+          "numerator": 19674
+        },
+        {
+          "pair": [
+            4,
+            6
+          ],
+          "numerator": 24774
+        },
+        {
+          "pair": [
+            5,
+            6
+          ],
+          "numerator": 6959
+        },
+        {
+          "pair": [
+            5,
+            7
+          ],
+          "numerator": 7461
+        },
+        {
+          "pair": [
+            5,
+            8
+          ],
+          "numerator": 19752
+        },
+        {
+          "pair": [
+            5,
+            9
+          ],
+          "numerator": 18789
+        },
+        {
+          "pair": [
+            6,
+            7
+          ],
+          "numerator": 16327
+        },
+        {
+          "pair": [
+            6,
+            9
+          ],
+          "numerator": 25258
+        },
+        {
+          "pair": [
+            7,
+            8
+          ],
+          "numerator": 25090
+        },
+        {
+          "pair": [
+            8,
+            9
+          ],
+          "numerator": 12589
+        }
+      ],
+      "balanced_core_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "joint_cells_A02_B58": [
+        10042,
+        3382,
+        9710,
+        6059
+      ]
+    },
+    {
+      "lower_profile": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "upper_profile": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        2
+      ],
+      "ambient_predecessors": [
+        1024,
+        0,
+        0,
+        1030,
+        1024,
+        1043,
+        1026,
+        1042,
+        1110,
+        1175,
+        0,
+        1119,
+        3583
+      ],
+      "extensions": 84707,
+      "comparison_counts": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "numerator": 15784
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "numerator": 26618
+        },
+        {
+          "pair": [
+            0,
+            3
+          ],
+          "numerator": 64855
+        },
+        {
+          "pair": [
+            0,
+            4
+          ],
+          "numerator": 32660
+        },
+        {
+          "pair": [
+            0,
+            6
+          ],
+          "numerator": 52558
+        },
+        {
+          "pair": [
+            0,
+            7
+          ],
+          "numerator": 67846
+        },
+        {
+          "pair": [
+            0,
+            8
+          ],
+          "numerator": 78742
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "numerator": 53285
+        },
+        {
+          "pair": [
+            1,
+            4
+          ],
+          "numerator": 64166
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "numerator": 51075
+        },
+        {
+          "pair": [
+            2,
+            5
+          ],
+          "numerator": 81015
+        },
+        {
+          "pair": [
+            2,
+            6
+          ],
+          "numerator": 67321
+        },
+        {
+          "pair": [
+            2,
+            7
+          ],
+          "numerator": 76072
+        },
+        {
+          "pair": [
+            3,
+            4
+          ],
+          "numerator": 12104
+        },
+        {
+          "pair": [
+            3,
+            5
+          ],
+          "numerator": 61462
+        },
+        {
+          "pair": [
+            3,
+            6
+          ],
+          "numerator": 27334
+        },
+        {
+          "pair": [
+            3,
+            7
+          ],
+          "numerator": 45243
+        },
+        {
+          "pair": [
+            3,
+            8
+          ],
+          "numerator": 66490
+        },
+        {
+          "pair": [
+            3,
+            9
+          ],
+          "numerator": 74485
+        },
+        {
+          "pair": [
+            4,
+            6
+          ],
+          "numerator": 62599
+        },
+        {
+          "pair": [
+            5,
+            6
+          ],
+          "numerator": 12781
+        },
+        {
+          "pair": [
+            5,
+            7
+          ],
+          "numerator": 25544
+        },
+        {
+          "pair": [
+            5,
+            8
+          ],
+          "numerator": 46552
+        },
+        {
+          "pair": [
+            5,
+            9
+          ],
+          "numerator": 61196
+        },
+        {
+          "pair": [
+            6,
+            7
+          ],
+          "numerator": 59524
+        },
+        {
+          "pair": [
+            6,
+            9
+          ],
+          "numerator": 80128
+        },
+        {
+          "pair": [
+            7,
+            8
+          ],
+          "numerator": 63098
+        },
+        {
+          "pair": [
+            8,
+            9
+          ],
+          "numerator": 57740
+        }
+      ],
+      "balanced_core_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "joint_cells_A02_B58": [
+        16922,
+        9696,
+        29630,
+        28459
+      ]
+    }
+  ],
+  "adaptive_repair": {
+    "A": [
+      0,
+      2
+    ],
+    "B": [
+      5,
+      8
+    ],
+    "rule": "Ask B first for t<=1/2; ask A first for t>=1/2. Both questions are asked, with the same second question on both branches.",
+    "uniform_normalized_Gold_margin_lower_bound": "1/25",
+    "half_interval_endpoint_controls": [
+      {
+        "first": "B",
+        "t": "0",
+        "normalized_margins": [
+          "21233/84707",
+          "8525/84707",
+          "36856/84707",
+          "18093/84707"
+        ]
+      },
+      {
+        "first": "B",
+        "t": "1/2",
+        "normalized_margins": [
+          "284473031/2472851451",
+          "113042071/2472851451",
+          "1231295399/2472851451",
+          "844040950/2472851451"
+        ]
+      },
+      {
+        "first": "A",
+        "t": "1/2",
+        "normalized_margins": [
+          "40164410/117754831",
+          "410333743/824283817",
+          "37778747/824283817",
+          "13574351/117754831"
+        ]
+      },
+      {
+        "first": "A",
+        "t": "1",
+        "normalized_margins": [
+          "1909/9731",
+          "4129/9731",
+          "1238/9731",
+          "2455/9731"
+        ]
+      }
+    ],
+    "more_balanced_rule_switch": "336799641/674187622",
+    "simplex_ordering_controls": 84
+  },
+  "scope": "Two actual models exclude any common first comparison restricted to their common core. The entire convex segment of their projected laws has strict adaptive Gold. This does not cover all attachments, prove general seven-thin Gold, or assert every mixed law is realizable."
+}
