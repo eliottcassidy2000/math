@@ -1,0 +1,50 @@
+{
+  "bank_image_types": {
+    "F": "finite type plus one; infinity fixed",
+    "H": 1,
+    "K": 3,
+    "V": 4
+  },
+  "checks": 30113,
+  "crt_distance_factor": 81,
+  "full_orbit_replay": false,
+  "full_word_materialized": false,
+  "image_residues_mod_243": {
+    "V": 82,
+    "VF": 1
+  },
+  "large_control": {
+    "L": 1830193499034094852622267166107801009347270,
+    "N": 1833237826965784108483587883633758044204176,
+    "full_tail_periods": 187,
+    "last_greedy_floor": 1522163965844627930660358762978517428452,
+    "m": 15001586057656515185428419394326237781535,
+    "mismatch_margin": 8526229131032130915851906034826375417833,
+    "p": 8116910408926339217391896275524023351,
+    "period_bits": 9775705859308817610370765626251634675518,
+    "period_materialized": false,
+    "period_odd_bits": 6167783688800764861832724692955402469407,
+    "preperiod_bits": 122,
+    "q": 79995672446647253540458867489349070728,
+    "r": 18301934990340948526222671661078010093473,
+    "remaining_iteration_images": 42395310133478773362611173817961555398
+  },
+  "log_series_terms": 512,
+  "small_control": {
+    "L": 136174814,
+    "N": 136401326,
+    "full_tail_periods": 112,
+    "m": 1116187,
+    "mismatch_margin": 153651,
+    "p": 1003,
+    "period_bits": 1207976,
+    "period_odd_bits": 762148,
+    "period_sha256": "97b457ef3daea047cda273a7ab4c2c65fb63beed6792273bf5f371e3485f4848",
+    "preperiod_bits": 122,
+    "q": 9885,
+    "r": 1361749,
+    "remaining_iteration_images": 9066
+  },
+  "status": "PASS image-guard descent controls and compressed structural hostiles",
+  "upper_convergent_controls": 39
+}

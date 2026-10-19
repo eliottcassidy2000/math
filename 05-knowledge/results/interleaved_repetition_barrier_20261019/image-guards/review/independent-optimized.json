@@ -1,0 +1,92 @@
+{
+  "bank": {
+    "H": {
+      "M": 512,
+      "a": 81,
+      "b": 101,
+      "odd_bits": 4,
+      "type": 1
+    },
+    "K": {
+      "M": 1073741824,
+      "a": 1162261467,
+      "b": 4912087879,
+      "odd_bits": 19,
+      "type": 3
+    },
+    "V": {
+      "M": 5316911983139663491615228241121378304,
+      "a": 5474401089420219382077155933569751763,
+      "b": 83829391903560839836419813590128166431,
+      "odd_bits": 77,
+      "type": 4
+    }
+  },
+  "checks": 238861,
+  "crt_factor": 81,
+  "exact_compressed_controls": [
+    {
+      "L": 136174814,
+      "N": 136401326,
+      "P": 1207976,
+      "all_long_factors_hostile": true,
+      "full_tail_periods": 112,
+      "last_floor": 113255,
+      "m": 1116187,
+      "p": 1003,
+      "q": 9885,
+      "r": 1361749,
+      "remainder_images": 9066
+    },
+    {
+      "L": 1830193499034094852622267166107801009347270,
+      "N": 1833237826965784108483587883633758044204176,
+      "P": 9775705859308817610370765626251634675518,
+      "all_long_factors_hostile": true,
+      "full_tail_periods": 187,
+      "last_floor": 1522163965844627930660358762978517428452,
+      "m": 15001586057656515185428419394326237781535,
+      "p": 8116910408926339217391896275524023351,
+      "q": 79995672446647253540458867489349070728,
+      "r": 18301934990340948526222671661078010093473,
+      "remainder_images": 42395310133478773362611173817961555398
+    }
+  ],
+  "frozen_source_hashes": {
+    "IMAGE_GUARD_DESCENT.md": "8e32d46d23eceefee6a45b2bc7c00548d5409cc14dda99171298d0d56dce3c84",
+    "PERIODIC_TAIL_MISMATCH_HOSTILE.md": "4608853b0348341174dd1e98b8ba1e5fbf665c8add2601d2d165c4f0aadacd48",
+    "README.md": "6002accce5f1779149114b2e4c54fea14c5b0f6410dc5810b3c03c92a732d903",
+    "verification-optimized.json": "43669d847680e92f9e13441dba69b3b1ff1eb8e16c11397425c9c39201d68d39",
+    "verification-receipt.json": "43669d847680e92f9e13441dba69b3b1ff1eb8e16c11397425c9c39201d68d39",
+    "verify_periodic_tail_hostile.py": "e925e986ffff87962ba393822d521fde88614f8ef1af634dbcaa2ad2bf489330"
+  },
+  "giant_word_materialized": false,
+  "image_residues_mod_243": {
+    "V": 82,
+    "VF": 1
+  },
+  "log_basis": [
+    "log(2)",
+    "log(3/2)"
+  ],
+  "log_terms": 192,
+  "matched_periodic_extension_pairs": 11060,
+  "periodic_extension_examples": 930,
+  "rational_floor_instances": 1385,
+  "status": "PASS independent image-guard controls",
+  "universal_proofs_supplied_in_review": true,
+  "upper_controls_meeting_stronger_hostile_ratio": 2,
+  "upper_convergent_controls": 39,
+  "whole_word_controls": [
+    {
+      "N": 2322,
+      "m": 19,
+      "three_lifts_descend": true
+    },
+    {
+      "N": 15642,
+      "m": 128,
+      "three_lifts_descend": true
+    }
+  ]
+}
