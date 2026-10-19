@@ -1,0 +1,643 @@
+{
+  "status": "proved nonnegative flag-cone Gold certificate; exact independent controls passed",
+  "first": [
+    5,
+    7
+  ],
+  "second": [
+    4,
+    7
+  ],
+  "flag_tables": [
+    [
+      [
+        325,
+        0
+      ],
+      [
+        201,
+        138
+      ]
+    ],
+    [
+      [
+        112,
+        0
+      ],
+      [
+        84,
+        84
+      ]
+    ],
+    [
+      [
+        80,
+        0
+      ],
+      [
+        48,
+        32
+      ]
+    ],
+    [
+      [
+        28,
+        0
+      ],
+      [
+        21,
+        21
+      ]
+    ]
+  ],
+  "basis_deficits": [
+    [
+      [
+        14,
+        339
+      ],
+      [
+        124,
+        187
+      ]
+    ],
+    [
+      [
+        56,
+        168
+      ],
+      [
+        28,
+        28
+      ]
+    ],
+    [
+      [
+        0,
+        80
+      ],
+      [
+        32,
+        48
+      ]
+    ],
+    [
+      [
+        14,
+        42
+      ],
+      [
+        7,
+        7
+      ]
+    ]
+  ],
+  "general_context_count": 400,
+  "maximum_observed_parameters": [
+    "3",
+    "3"
+  ],
+  "minimum_observed_normalized_slack": "7/572",
+  "chain_contexts": [
+    {
+      "left": 0,
+      "right": 0,
+      "table": [
+        [
+          325,
+          0
+        ],
+        [
+          201,
+          138
+        ]
+      ],
+      "minimum_deficit": 14
+    },
+    {
+      "left": 0,
+      "right": 1,
+      "table": [
+        [
+          405,
+          0
+        ],
+        [
+          249,
+          170
+        ]
+      ],
+      "minimum_deficit": 14
+    },
+    {
+      "left": 0,
+      "right": 2,
+      "table": [
+        [
+          485,
+          0
+        ],
+        [
+          297,
+          202
+        ]
+      ],
+      "minimum_deficit": 14
+    },
+    {
+      "left": 0,
+      "right": 5,
+      "table": [
+        [
+          725,
+          0
+        ],
+        [
+          441,
+          298
+        ]
+      ],
+      "minimum_deficit": 14
+    },
+    {
+      "left": 0,
+      "right": 10,
+      "table": [
+        [
+          1125,
+          0
+        ],
+        [
+          681,
+          458
+        ]
+      ],
+      "minimum_deficit": 14
+    },
+    {
+      "left": 0,
+      "right": 30,
+      "table": [
+        [
+          2725,
+          0
+        ],
+        [
+          1641,
+          1098
+        ]
+      ],
+      "minimum_deficit": 14
+    },
+    {
+      "left": 1,
+      "right": 0,
+      "table": [
+        [
+          437,
+          0
+        ],
+        [
+          285,
+          222
+        ]
+      ],
+      "minimum_deficit": 70
+    },
+    {
+      "left": 1,
+      "right": 1,
+      "table": [
+        [
+          545,
+          0
+        ],
+        [
+          354,
+          275
+        ]
+      ],
+      "minimum_deficit": 84
+    },
+    {
+      "left": 1,
+      "right": 2,
+      "table": [
+        [
+          653,
+          0
+        ],
+        [
+          423,
+          328
+        ]
+      ],
+      "minimum_deficit": 98
+    },
+    {
+      "left": 1,
+      "right": 5,
+      "table": [
+        [
+          977,
+          0
+        ],
+        [
+          630,
+          487
+        ]
+      ],
+      "minimum_deficit": 140
+    },
+    {
+      "left": 1,
+      "right": 10,
+      "table": [
+        [
+          1517,
+          0
+        ],
+        [
+          975,
+          752
+        ]
+      ],
+      "minimum_deficit": 210
+    },
+    {
+      "left": 1,
+      "right": 30,
+      "table": [
+        [
+          3677,
+          0
+        ],
+        [
+          2355,
+          1812
+        ]
+      ],
+      "minimum_deficit": 490
+    },
+    {
+      "left": 2,
+      "right": 0,
+      "table": [
+        [
+          549,
+          0
+        ],
+        [
+          369,
+          306
+        ]
+      ],
+      "minimum_deficit": 126
+    },
+    {
+      "left": 2,
+      "right": 1,
+      "table": [
+        [
+          685,
+          0
+        ],
+        [
+          459,
+          380
+        ]
+      ],
+      "minimum_deficit": 154
+    },
+    {
+      "left": 2,
+      "right": 2,
+      "table": [
+        [
+          821,
+          0
+        ],
+        [
+          549,
+          454
+        ]
+      ],
+      "minimum_deficit": 182
+    },
+    {
+      "left": 2,
+      "right": 5,
+      "table": [
+        [
+          1229,
+          0
+        ],
+        [
+          819,
+          676
+        ]
+      ],
+      "minimum_deficit": 266
+    },
+    {
+      "left": 2,
+      "right": 10,
+      "table": [
+        [
+          1909,
+          0
+        ],
+        [
+          1269,
+          1046
+        ]
+      ],
+      "minimum_deficit": 406
+    },
+    {
+      "left": 2,
+      "right": 30,
+      "table": [
+        [
+          4629,
+          0
+        ],
+        [
+          3069,
+          2526
+        ]
+      ],
+      "minimum_deficit": 966
+    },
+    {
+      "left": 5,
+      "right": 0,
+      "table": [
+        [
+          885,
+          0
+        ],
+        [
+          621,
+          558
+        ]
+      ],
+      "minimum_deficit": 264
+    },
+    {
+      "left": 5,
+      "right": 1,
+      "table": [
+        [
+          1105,
+          0
+        ],
+        [
+          774,
+          695
+        ]
+      ],
+      "minimum_deficit": 331
+    },
+    {
+      "left": 5,
+      "right": 2,
+      "table": [
+        [
+          1325,
+          0
+        ],
+        [
+          927,
+          832
+        ]
+      ],
+      "minimum_deficit": 398
+    },
+    {
+      "left": 5,
+      "right": 5,
+      "table": [
+        [
+          1985,
+          0
+        ],
+        [
+          1386,
+          1243
+        ]
+      ],
+      "minimum_deficit": 599
+    },
+    {
+      "left": 5,
+      "right": 10,
+      "table": [
+        [
+          3085,
+          0
+        ],
+        [
+          2151,
+          1928
+        ]
+      ],
+      "minimum_deficit": 934
+    },
+    {
+      "left": 5,
+      "right": 30,
+      "table": [
+        [
+          7485,
+          0
+        ],
+        [
+          5211,
+          4668
+        ]
+      ],
+      "minimum_deficit": 2274
+    },
+    {
+      "left": 10,
+      "right": 0,
+      "table": [
+        [
+          1445,
+          0
+        ],
+        [
+          1041,
+          978
+        ]
+      ],
+      "minimum_deficit": 404
+    },
+    {
+      "left": 10,
+      "right": 1,
+      "table": [
+        [
+          1805,
+          0
+        ],
+        [
+          1299,
+          1220
+        ]
+      ],
+      "minimum_deficit": 506
+    },
+    {
+      "left": 10,
+      "right": 2,
+      "table": [
+        [
+          2165,
+          0
+        ],
+        [
+          1557,
+          1462
+        ]
+      ],
+      "minimum_deficit": 608
+    },
+    {
+      "left": 10,
+      "right": 5,
+      "table": [
+        [
+          3245,
+          0
+        ],
+        [
+          2331,
+          2188
+        ]
+      ],
+      "minimum_deficit": 914
+    },
+    {
+      "left": 10,
+      "right": 10,
+      "table": [
+        [
+          5045,
+          0
+        ],
+        [
+          3621,
+          3398
+        ]
+      ],
+      "minimum_deficit": 1424
+    },
+    {
+      "left": 10,
+      "right": 30,
+      "table": [
+        [
+          12245,
+          0
+        ],
+        [
+          8781,
+          8238
+        ]
+      ],
+      "minimum_deficit": 3464
+    },
+    {
+      "left": 30,
+      "right": 0,
+      "table": [
+        [
+          3685,
+          0
+        ],
+        [
+          2721,
+          2658
+        ]
+      ],
+      "minimum_deficit": 964
+    },
+    {
+      "left": 30,
+      "right": 1,
+      "table": [
+        [
+          4605,
+          0
+        ],
+        [
+          3399,
+          3320
+        ]
+      ],
+      "minimum_deficit": 1206
+    },
+    {
+      "left": 30,
+      "right": 2,
+      "table": [
+        [
+          5525,
+          0
+        ],
+        [
+          4077,
+          3982
+        ]
+      ],
+      "minimum_deficit": 1448
+    },
+    {
+      "left": 30,
+      "right": 5,
+      "table": [
+        [
+          8285,
+          0
+        ],
+        [
+          6111,
+          5968
+        ]
+      ],
+      "minimum_deficit": 2174
+    },
+    {
+      "left": 30,
+      "right": 10,
+      "table": [
+        [
+          12885,
+          0
+        ],
+        [
+          9501,
+          9278
+        ]
+      ],
+      "minimum_deficit": 3384
+    },
+    {
+      "left": 30,
+      "right": 30,
+      "table": [
+        [
+          31285,
+          0
+        ],
+        [
+          23061,
+          22518
+        ]
+      ],
+      "minimum_deficit": 8224
+    }
+  ]
+}

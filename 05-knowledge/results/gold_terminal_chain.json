@@ -1,0 +1,479 @@
+{
+  "status": "exact finite controls for proved parameterized statements",
+  "family_parameter_box": {
+    "N": [
+      3,
+      10
+    ],
+    "r": [
+      1,
+      7
+    ],
+    "m": [
+      0,
+      5
+    ]
+  },
+  "family_and_bridge_checks": 2703,
+  "core_fibre_cases": 287178,
+  "examples": [
+    {
+      "N": 3,
+      "r": 1,
+      "m": 0,
+      "left_negative": [
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "left_positive": [
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "right_negative": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "N": 6,
+      "r": 4,
+      "m": 0,
+      "left_negative": [
+        [
+          1045,
+          627
+        ],
+        [
+          1025,
+          0
+        ]
+      ],
+      "left_positive": [
+        [
+          1025,
+          585
+        ],
+        [
+          1045,
+          0
+        ]
+      ],
+      "right_negative": [
+        [
+          1037,
+          623
+        ],
+        [
+          1037,
+          0
+        ]
+      ]
+    }
+  ],
+  "bridge": [
+    {
+      "length": 0,
+      "table": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "endpoint_certificates": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "length": 1,
+      "table": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "endpoint_certificates": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "length": 2,
+      "table": [
+        [
+          3,
+          6
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "endpoint_certificates": []
+    },
+    {
+      "length": 3,
+      "table": [
+        [
+          4,
+          10
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "endpoint_certificates": []
+    },
+    {
+      "length": 4,
+      "table": [
+        [
+          5,
+          15
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "endpoint_certificates": []
+    },
+    {
+      "length": 5,
+      "table": [
+        [
+          6,
+          21
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "endpoint_certificates": []
+    },
+    {
+      "length": 6,
+      "table": [
+        [
+          7,
+          28
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "endpoint_certificates": []
+    },
+    {
+      "length": 7,
+      "table": [
+        [
+          8,
+          36
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "endpoint_certificates": []
+    },
+    {
+      "length": 8,
+      "table": [
+        [
+          9,
+          45
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "endpoint_certificates": []
+    },
+    {
+      "length": 9,
+      "table": [
+        [
+          10,
+          55
+        ],
+        [
+          1,
+          10
+        ]
+      ],
+      "endpoint_certificates": []
+    },
+    {
+      "length": 10,
+      "table": [
+        [
+          11,
+          66
+        ],
+        [
+          1,
+          11
+        ]
+      ],
+      "endpoint_certificates": []
+    },
+    {
+      "length": 11,
+      "table": [
+        [
+          12,
+          78
+        ],
+        [
+          1,
+          12
+        ]
+      ],
+      "endpoint_certificates": []
+    },
+    {
+      "length": 12,
+      "table": [
+        [
+          13,
+          91
+        ],
+        [
+          1,
+          13
+        ]
+      ],
+      "endpoint_certificates": []
+    },
+    {
+      "length": 13,
+      "table": [
+        [
+          14,
+          105
+        ],
+        [
+          1,
+          14
+        ]
+      ],
+      "endpoint_certificates": []
+    },
+    {
+      "length": 14,
+      "table": [
+        [
+          15,
+          120
+        ],
+        [
+          1,
+          15
+        ]
+      ],
+      "endpoint_certificates": []
+    }
+  ],
+  "flatness_examples": [
+    {
+      "r": 1,
+      "m": 100,
+      "T": 107,
+      "unnormalized_defect": 5,
+      "distortion_excess_numerator": 1,
+      "distortion_excess_denominator": 105
+    },
+    {
+      "r": 2,
+      "m": 100,
+      "T": 5778,
+      "unnormalized_defect": 10,
+      "distortion_excess_numerator": 2,
+      "distortion_excess_denominator": 5775
+    },
+    {
+      "r": 5,
+      "m": 100,
+      "T": 128164707,
+      "unnormalized_defect": 25,
+      "distortion_excess_numerator": 5,
+      "distortion_excess_denominator": 128164701
+    },
+    {
+      "r": 10,
+      "m": 100,
+      "T": 81572506886508,
+      "unnormalized_defect": 50,
+      "distortion_excess_numerator": 10,
+      "distortion_excess_denominator": 81572506886497
+    }
+  ]
+}
