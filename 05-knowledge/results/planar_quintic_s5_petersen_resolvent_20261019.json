@@ -1,0 +1,32 @@
+{
+  "checks": 22,
+  "discriminant": "q*(108*p**5+3125*q**3)",
+  "packet": 133,
+  "resolvent": "-p**3*y - p**2*y**4 + 7*p*q*y**2 + p*y**7 - q**2 - 11*q*y**5 + y**10",
+  "scope": "Explicit symbolic identities and finite graph only; universal Galois proof is in the note.",
+  "status": "PASS",
+  "verified": [
+    "pair_sum_resultant",
+    "diagonal_factor",
+    "monic_degree_ten",
+    "quintic_discriminant",
+    "zero_parameter_factorization",
+    "ramified_local_equation",
+    "simple_lift_initial_quadratic",
+    "ten_vertices_fifteen_edges",
+    "three_regular",
+    "five_maximum_stars",
+    "no_independent_five",
+    "standard_petersen_labels",
+    "standard_petersen_edges",
+    "normalized_limit_coefficients",
+    "pair_resolvent_at_infinity",
+    "fifth_lucas_value",
+    "golden_factorization",
+    "side_fifth_power",
+    "diagonal_fifth_power",
+    "cyclic_pair_orbits",
+    "two_induced_five_cycles",
+    "five_cross_matching_edges"
+  ]
+}
