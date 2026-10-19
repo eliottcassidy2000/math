@@ -1,0 +1,349 @@
+{
+  "status": "EXACT_K4_HEIGHT_TWO_CONTROLS_PASSED",
+  "pred": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    44,
+    35,
+    26,
+    21,
+    54,
+    57
+  ],
+  "extensions": 984960,
+  "incomparability_degrees": [
+    8,
+    8,
+    8,
+    8,
+    7,
+    7,
+    8,
+    8,
+    8,
+    8,
+    7,
+    7
+  ],
+  "good_pairs": 0,
+  "very_good_pairs": 0,
+  "structurally_eligible_orientations": [
+    {
+      "dual": false,
+      "a": 0,
+      "b": 6,
+      "probability": "717/760"
+    },
+    {
+      "dual": false,
+      "a": 0,
+      "b": 8,
+      "probability": "717/760"
+    },
+    {
+      "dual": false,
+      "a": 0,
+      "b": 10,
+      "probability": "109/114"
+    },
+    {
+      "dual": false,
+      "a": 1,
+      "b": 6,
+      "probability": "717/760"
+    },
+    {
+      "dual": false,
+      "a": 1,
+      "b": 9,
+      "probability": "717/760"
+    },
+    {
+      "dual": false,
+      "a": 1,
+      "b": 11,
+      "probability": "109/114"
+    },
+    {
+      "dual": false,
+      "a": 2,
+      "b": 7,
+      "probability": "717/760"
+    },
+    {
+      "dual": false,
+      "a": 2,
+      "b": 8,
+      "probability": "717/760"
+    },
+    {
+      "dual": false,
+      "a": 2,
+      "b": 11,
+      "probability": "109/114"
+    },
+    {
+      "dual": false,
+      "a": 3,
+      "b": 7,
+      "probability": "717/760"
+    },
+    {
+      "dual": false,
+      "a": 3,
+      "b": 9,
+      "probability": "717/760"
+    },
+    {
+      "dual": false,
+      "a": 3,
+      "b": 10,
+      "probability": "109/114"
+    },
+    {
+      "dual": false,
+      "a": 4,
+      "b": 0,
+      "probability": "2377/4560"
+    },
+    {
+      "dual": false,
+      "a": 4,
+      "b": 1,
+      "probability": "2377/4560"
+    },
+    {
+      "dual": false,
+      "a": 4,
+      "b": 2,
+      "probability": "2377/4560"
+    },
+    {
+      "dual": false,
+      "a": 4,
+      "b": 3,
+      "probability": "2377/4560"
+    },
+    {
+      "dual": false,
+      "a": 4,
+      "b": 6,
+      "probability": "109/114"
+    },
+    {
+      "dual": false,
+      "a": 4,
+      "b": 7,
+      "probability": "109/114"
+    },
+    {
+      "dual": false,
+      "a": 5,
+      "b": 0,
+      "probability": "2377/4560"
+    },
+    {
+      "dual": false,
+      "a": 5,
+      "b": 1,
+      "probability": "2377/4560"
+    },
+    {
+      "dual": false,
+      "a": 5,
+      "b": 2,
+      "probability": "2377/4560"
+    },
+    {
+      "dual": false,
+      "a": 5,
+      "b": 3,
+      "probability": "2377/4560"
+    },
+    {
+      "dual": false,
+      "a": 5,
+      "b": 8,
+      "probability": "109/114"
+    },
+    {
+      "dual": false,
+      "a": 5,
+      "b": 9,
+      "probability": "109/114"
+    },
+    {
+      "dual": true,
+      "a": 6,
+      "b": 0,
+      "probability": "717/760"
+    },
+    {
+      "dual": true,
+      "a": 6,
+      "b": 1,
+      "probability": "717/760"
+    },
+    {
+      "dual": true,
+      "a": 6,
+      "b": 4,
+      "probability": "109/114"
+    },
+    {
+      "dual": true,
+      "a": 7,
+      "b": 2,
+      "probability": "717/760"
+    },
+    {
+      "dual": true,
+      "a": 7,
+      "b": 3,
+      "probability": "717/760"
+    },
+    {
+      "dual": true,
+      "a": 7,
+      "b": 4,
+      "probability": "109/114"
+    },
+    {
+      "dual": true,
+      "a": 8,
+      "b": 0,
+      "probability": "717/760"
+    },
+    {
+      "dual": true,
+      "a": 8,
+      "b": 2,
+      "probability": "717/760"
+    },
+    {
+      "dual": true,
+      "a": 8,
+      "b": 5,
+      "probability": "109/114"
+    },
+    {
+      "dual": true,
+      "a": 9,
+      "b": 1,
+      "probability": "717/760"
+    },
+    {
+      "dual": true,
+      "a": 9,
+      "b": 3,
+      "probability": "717/760"
+    },
+    {
+      "dual": true,
+      "a": 9,
+      "b": 5,
+      "probability": "109/114"
+    },
+    {
+      "dual": true,
+      "a": 10,
+      "b": 0,
+      "probability": "109/114"
+    },
+    {
+      "dual": true,
+      "a": 10,
+      "b": 3,
+      "probability": "109/114"
+    },
+    {
+      "dual": true,
+      "a": 10,
+      "b": 6,
+      "probability": "2377/4560"
+    },
+    {
+      "dual": true,
+      "a": 10,
+      "b": 7,
+      "probability": "2377/4560"
+    },
+    {
+      "dual": true,
+      "a": 10,
+      "b": 8,
+      "probability": "2377/4560"
+    },
+    {
+      "dual": true,
+      "a": 10,
+      "b": 9,
+      "probability": "2377/4560"
+    },
+    {
+      "dual": true,
+      "a": 11,
+      "b": 1,
+      "probability": "109/114"
+    },
+    {
+      "dual": true,
+      "a": 11,
+      "b": 2,
+      "probability": "109/114"
+    },
+    {
+      "dual": true,
+      "a": 11,
+      "b": 6,
+      "probability": "2377/4560"
+    },
+    {
+      "dual": true,
+      "a": 11,
+      "b": 7,
+      "probability": "2377/4560"
+    },
+    {
+      "dual": true,
+      "a": 11,
+      "b": 8,
+      "probability": "2377/4560"
+    },
+    {
+      "dual": true,
+      "a": 11,
+      "b": 9,
+      "probability": "2377/4560"
+    }
+  ],
+  "eligible_probability_histogram": {
+    "717/760": 16,
+    "109/114": 16,
+    "2377/4560": 16
+  },
+  "automorphism": [
+    1,
+    0,
+    3,
+    2,
+    4,
+    5,
+    6,
+    7,
+    9,
+    8,
+    11,
+    10
+  ],
+  "half_pair": [
+    0,
+    1
+  ],
+  "half_numerator": 492480,
+  "weak_gold_strategy": "Compare 0 and 1, then repeat the determined comparison; each branch has E/2 extensions."
+}
