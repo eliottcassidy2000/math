@@ -3,7 +3,7 @@
 **Rolling brief — 2026-09-06.**
 [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status.
 
-**2026-10-19 assignment:** [Neglected connections](../05-knowledge/results/neglected_connections_session_20261019.md). Earlier: [descent](../05-knowledge/results/descent_and_global_obstructions_session_20261019.md), [parabolic](../05-knowledge/results/parabolic_scaling_session_20261019.md). Major conjectures remain open; the LRC orientation below is inherited.
+**Oct 19:** [Map](../05-knowledge/results/automata_arithmetic_geometry_session_20261019/SESSION_MAP.md). Earlier: [connections](../05-knowledge/results/neglected_connections_session_20261019.md), [descent](../05-knowledge/results/descent_and_global_obstructions_session_20261019.md), [parabolic](../05-knowledge/results/parabolic_scaling_session_20261019.md). Conjectures OPEN; LRC inherited.
 
 ## The five-minute orientation
 

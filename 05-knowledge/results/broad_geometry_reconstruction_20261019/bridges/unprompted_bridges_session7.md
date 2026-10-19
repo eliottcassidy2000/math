@@ -355,6 +355,8 @@ The infinite claims are proved in the text. Finite windows corroborate rather th
 ## 8. Stopping conditions and useful next gates
 
 - Conductor lane reached an all-r theorem, exact hostile, and branchwise repair coordinate. A next question worth pursuing is the sharp range of seminormal defects among all rational realizations of U(3,r); the present construction only supplies one unbounded difference family. No claim of extremality is made.
+
+  **Current status, 2026-10-19:** The [sharp minimum and maximum, their rational realizations, and the maximum-equality classification](../../conductor_extrema_20261019/conductor_extremal_classification_session7.md) are now proved. The intermediate attainable defect spectrum remains open. The earlier stopping point above is retained as provenance.
 - Critical lane reached a structural minimum and exact symmetry premium. It stops before asking whether edge multiplicities correspond to lawful response dynamics, which requires information the abstract core does not carry.
 - Moment lane reached a constructive all-k sufficiency theorem, sharp continuous boundary, and exact discrete hostiles. It stops before an all-k discrete sharpness claim or a noise-stability claim. No uniform conditioning is implied when endpoints approach collision.
 
