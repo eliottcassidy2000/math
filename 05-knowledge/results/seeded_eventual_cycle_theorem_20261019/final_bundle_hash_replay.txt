@@ -1,0 +1,5 @@
+square_sum_complete_final_split_lift_20261019.md: OK
+verify_final_split_table_20261019.py: OK
+final_split_glue_certificates_20261019.json: OK
+final_split_table_controls.json: OK
+final_split_table_controls.optimized.json: OK

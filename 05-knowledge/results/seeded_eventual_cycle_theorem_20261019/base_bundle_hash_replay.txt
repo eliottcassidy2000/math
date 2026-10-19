@@ -1,0 +1,16 @@
+B_base_chunks.json: OK
+B_base_interval_controls.json: OK
+B_base_interval_controls.optimized.json: OK
+B_base_roots_0053_0308.bin.gz: OK
+B_base_roots_0309_0564.bin.gz: OK
+B_base_roots_0565_0820.bin.gz: OK
+B_base_roots_0821_1076.bin.gz: OK
+B_base_roots_1077_1332.bin.gz: OK
+B_base_roots_1333_1588.bin.gz: OK
+B_base_roots_1589_1844.bin.gz: OK
+B_base_roots_1845_2100.bin.gz: OK
+B_base_roots_2101_2356.bin.gz: OK
+B_base_roots_2357_2612.bin.gz: OK
+B_base_roots_2613_2620.bin.gz: OK
+square_sum_B_base_interval_20261019.md: OK
+verify_B_base_interval_20261019.py: OK

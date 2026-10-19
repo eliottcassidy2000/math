@@ -1,0 +1,180 @@
+{
+  "status": "passed",
+  "layout": "05-knowledge/results/{seeded_eventual_cycle_theorem_20261019,square_sum_B_base_interval_20261019,seeded_final_split_table_20261019}",
+  "receipts": {
+    "base_bundle_replay": {
+      "normal_file": "base_bundle_replay.json",
+      "optimized_file": "base_bundle_replay.optimized.json",
+      "identical": true,
+      "normal_sha256": "f47a1d144ae42c2e6a732f19f5588b8445d9bbe87127b59dfdf12b0b987eeb65",
+      "result": {
+        "checked_roots": 6861696,
+        "checked_vertices": 6866832,
+        "checks": 17173589,
+        "chunks": 11,
+        "first": 53,
+        "last": 2620,
+        "pairs": 2568,
+        "state": "Both paths start 1,3; even length ends 8; odd length ends 10; shared vertices have equal positional parity.",
+        "status": "passed"
+      }
+    },
+    "final_bundle_replay": {
+      "normal_file": "final_bundle_replay.json",
+      "optimized_file": "final_bundle_replay.optimized.json",
+      "identical": true,
+      "normal_sha256": "30f15ebd31e52d663adffa72aa8e4bc736c2f9fafd92bc8c7e73544618d99354",
+      "result": {
+        "certificate_bytes": 986763,
+        "certificate_sha256": "3a035b14c8caa9f1293f66bbb0c9e77e9f1e933b7e5a07e523e2a5e7f59dbffe",
+        "checks": 234025,
+        "conclusion": "Every admissible input pair produces a square-sum Hamiltonian cycle containing 482-3362-6242.",
+        "scope": "All 392 conditional final-lift states, independent of input length and internal order.",
+        "states": 392,
+        "status": "passed"
+      }
+    },
+    "complete_transition_table_controls": {
+      "normal_file": "complete_transition_table_controls.json",
+      "optimized_file": "complete_transition_table_controls.optimized.json",
+      "identical": true,
+      "normal_sha256": "37d2cff1c1c08438d3d3de2b8a0733b1ca0f184e5dcd7a30663b24c18a9664ad",
+      "result": {
+        "individual_checks": 206473,
+        "input_parity0_states": 147,
+        "manifest_sha256": "11ddda9e9d0358cc4450f3fa3123282f2d6a3306396a18211bb671fc7c05ae3d",
+        "single_prefix_split_states": 6,
+        "states": 294,
+        "status": "passed",
+        "table_checks": 1914,
+        "whole_block_states": 288
+      }
+    },
+    "seeded_cycle_expansion_controls": {
+      "normal_file": "seeded_cycle_expansion_controls.json",
+      "optimized_file": "seeded_cycle_expansion_controls.optimized.json",
+      "identical": true,
+      "normal_sha256": "291848586cb5837140a3e9ac07b93cb6f1f390da3a6a5ab5394c6bf9bbb0d802",
+      "result": {
+        "B_repaired_control_lengths": [
+          2694,
+          2695
+        ],
+        "checks": 414343,
+        "cycles": [
+          {
+            "A_family": "Aminus",
+            "A_index": 2621,
+            "N": 128453,
+            "canonical_prefix": [
+              482,
+              3362,
+              6242,
+              111407,
+              83074,
+              70590,
+              123891,
+              116209,
+              78272,
+              39377,
+              47059,
+              106605
+            ],
+            "cut_orders": [
+              -1,
+              1
+            ],
+            "cycle_file": "seeded_cycle_128453.txt.gz",
+            "final_residue": 24,
+            "plaintext_sha256": "d8d2c36cef22b5e869f457e92b2dcec0895380f5dd0883f18bca3b5d01468177"
+          },
+          {
+            "A_family": "Aminus",
+            "A_index": 2694,
+            "N": 132063,
+            "canonical_prefix": [
+              482,
+              3362,
+              6242,
+              111407,
+              83074,
+              70590,
+              123891,
+              116209,
+              78272,
+              39377,
+              47059,
+              106605
+            ],
+            "cut_orders": [
+              1,
+              -1
+            ],
+            "cycle_file": "seeded_cycle_132063.txt.gz",
+            "final_residue": 57,
+            "plaintext_sha256": "a130d15aad1c9debd7d549d5efe67895f6a580ab28cfb2e50c316881c24414c2"
+          },
+          {
+            "A_family": "Aplus",
+            "A_index": 2696,
+            "N": 132128,
+            "canonical_prefix": [
+              482,
+              3362,
+              6242,
+              111407,
+              83074,
+              70590,
+              123891,
+              116209,
+              78272,
+              39377,
+              47059,
+              106605
+            ],
+            "cut_orders": [
+              -1,
+              -1
+            ],
+            "cycle_file": "seeded_cycle_132128.txt.gz",
+            "final_residue": 24,
+            "plaintext_sha256": "88538ce4803e4ef99bc48918cc818e24933cc4de3b7540e8277fd27352d64eda"
+          }
+        ],
+        "status": "passed",
+        "used_pair_transitions": [
+          [
+            "B",
+            0,
+            48,
+            [
+              0
+            ]
+          ],
+          [
+            "Aminus",
+            1,
+            24,
+            []
+          ],
+          [
+            "Aminus",
+            0,
+            48,
+            [
+              0
+            ]
+          ],
+          [
+            "Aplus",
+            0,
+            50,
+            [
+              -2
+            ]
+          ]
+        ]
+      }
+    }
+  }
+}

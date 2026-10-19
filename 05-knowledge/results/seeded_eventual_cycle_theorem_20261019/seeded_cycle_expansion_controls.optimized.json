@@ -1,0 +1,120 @@
+{
+  "B_repaired_control_lengths": [
+    2694,
+    2695
+  ],
+  "checks": 414343,
+  "cycles": [
+    {
+      "A_family": "Aminus",
+      "A_index": 2621,
+      "N": 128453,
+      "canonical_prefix": [
+        482,
+        3362,
+        6242,
+        111407,
+        83074,
+        70590,
+        123891,
+        116209,
+        78272,
+        39377,
+        47059,
+        106605
+      ],
+      "cut_orders": [
+        -1,
+        1
+      ],
+      "cycle_file": "seeded_cycle_128453.txt.gz",
+      "final_residue": 24,
+      "plaintext_sha256": "d8d2c36cef22b5e869f457e92b2dcec0895380f5dd0883f18bca3b5d01468177"
+    },
+    {
+      "A_family": "Aminus",
+      "A_index": 2694,
+      "N": 132063,
+      "canonical_prefix": [
+        482,
+        3362,
+        6242,
+        111407,
+        83074,
+        70590,
+        123891,
+        116209,
+        78272,
+        39377,
+        47059,
+        106605
+      ],
+      "cut_orders": [
+        1,
+        -1
+      ],
+      "cycle_file": "seeded_cycle_132063.txt.gz",
+      "final_residue": 57,
+      "plaintext_sha256": "a130d15aad1c9debd7d549d5efe67895f6a580ab28cfb2e50c316881c24414c2"
+    },
+    {
+      "A_family": "Aplus",
+      "A_index": 2696,
+      "N": 132128,
+      "canonical_prefix": [
+        482,
+        3362,
+        6242,
+        111407,
+        83074,
+        70590,
+        123891,
+        116209,
+        78272,
+        39377,
+        47059,
+        106605
+      ],
+      "cut_orders": [
+        -1,
+        -1
+      ],
+      "cycle_file": "seeded_cycle_132128.txt.gz",
+      "final_residue": 24,
+      "plaintext_sha256": "88538ce4803e4ef99bc48918cc818e24933cc4de3b7540e8277fd27352d64eda"
+    }
+  ],
+  "status": "passed",
+  "used_pair_transitions": [
+    [
+      "B",
+      0,
+      48,
+      [
+        0
+      ]
+    ],
+    [
+      "Aminus",
+      1,
+      24,
+      []
+    ],
+    [
+      "Aminus",
+      0,
+      48,
+      [
+        0
+      ]
+    ],
+    [
+      "Aplus",
+      0,
+      50,
+      [
+        -2
+      ]
+    ]
+  ]
+}

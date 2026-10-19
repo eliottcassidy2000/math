@@ -1,0 +1,44 @@
+{
+  "release_directory": "05-knowledge/results/seeded_eventual_cycle_theorem_20261019",
+  "theorem": "Every integer N>=128453 has a square-sum Hamiltonian cycle on[1,N] containing consecutive482,3362,6242.",
+  "entrypoint": "SEEDED_INTERVAL_THEOREM.md",
+  "local_proof_dependencies": [
+    "SEEDED_INTERVAL_THEOREM.md",
+    "certified_pair_transition_manifest.json",
+    "certified-pair-transitions/",
+    "verify_pair_transition.py",
+    "verify_complete_transition_table.py",
+    "low_prefix_pair_test.json",
+    "complete_transition_table_controls.json",
+    "complete_transition_table_controls.optimized.json"
+  ],
+  "local_constructive_controls": [
+    "construct_seeded_cycles.py",
+    "seeded_cycle_expansion_controls.json",
+    "seeded_cycle_expansion_controls.optimized.json",
+    "seeded_cycle_128453.txt.gz",
+    "seeded_cycle_132063.txt.gz",
+    "seeded_cycle_132128.txt.gz"
+  ],
+  "sibling_dependencies": [
+    "../square_sum_B_base_interval_20261019/",
+    "../seeded_final_split_table_20261019/"
+  ],
+  "replay_commands": [
+    "python verify_complete_transition_table.py",
+    "python -O verify_complete_transition_table.py",
+    "python construct_seeded_cycles.py",
+    "python -O construct_seeded_cycles.py"
+  ],
+  "source_note": "Frozen from residual-glue-stage. Discovery scripts and solver outputs are excluded.",
+  "frozen_layout_replay_receipt": "FROZEN_RELEASE_REPLAY.json",
+  "checksum_manifest": "SHA256SUMS",
+  "sibling_replay_files": [
+    "base_bundle_replay.json",
+    "base_bundle_replay.optimized.json",
+    "final_bundle_replay.json",
+    "final_bundle_replay.optimized.json",
+    "base_bundle_hash_replay.txt",
+    "final_bundle_hash_replay.txt"
+  ]
+}
