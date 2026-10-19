@@ -1,7 +1,8 @@
 # Elliptic contact search has a logarithmic anchor-dependent index bound
 
 **Status: PROVED**, with exact algebraic controls and separately labelled
-high-precision numerical checks. The predecessor proves that no constant
+high-precision numerical checks. An independent adversarial audit passed
+the proof and companion checker, including 49,622 additional controls. The predecessor proves that no constant
 translate budget works for every anchor. This note supplies the complementary
 upper bound: the prescribed signed search has a successful index
 

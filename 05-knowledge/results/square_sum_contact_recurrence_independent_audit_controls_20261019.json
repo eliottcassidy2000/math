@@ -1,0 +1,67 @@
+{
+  "circle_cases": 7624,
+  "cusp_constants": [
+    {
+      "C": "0.11740357026709195070581580989334068",
+      "epsilon": -1,
+      "leading_coefficient": "12.045745790828790877678225895731167"
+    },
+    {
+      "C": "0.15400230965624083193415914881489055",
+      "epsilon": 1,
+      "leading_coefficient": "9.1830672249647333104825196384704469"
+    }
+  ],
+  "explicit_checks": 49622,
+  "numerical_cases": [
+    {
+      "J": 3,
+      "epsilon": -1,
+      "f": "0.49",
+      "global_even_budget": 200
+    },
+    {
+      "J": 3,
+      "epsilon": -1,
+      "f": "0.25",
+      "global_even_budget": 200
+    },
+    {
+      "J": 8,
+      "epsilon": -1,
+      "f": "0.01",
+      "global_even_budget": 342
+    },
+    {
+      "J": 28,
+      "epsilon": -1,
+      "f": "1e-8",
+      "global_even_budget": 914
+    },
+    {
+      "J": 3,
+      "epsilon": 1,
+      "f": "0.49",
+      "global_even_budget": 200
+    },
+    {
+      "J": 4,
+      "epsilon": 1,
+      "f": "0.25",
+      "global_even_budget": 228
+    },
+    {
+      "J": 8,
+      "epsilon": 1,
+      "f": "0.01",
+      "global_even_budget": 342
+    },
+    {
+      "J": 28,
+      "epsilon": 1,
+      "f": "1e-8",
+      "global_even_budget": 914
+    }
+  ],
+  "wrap_cases": 251
+}

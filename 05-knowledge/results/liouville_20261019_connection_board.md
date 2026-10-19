@@ -40,6 +40,8 @@ See [congruent gaps](congruent_square_gap_classes_20261019.md), [PPT port bridge
 
 The bounded search succeeds for all 528 admitted primitive triples of hypotenuse at most 10000 by absolute translate index 11 when both positive-spread charts are accepted. That finite fact is not a universal bound.
 
+6. The complementary quantitative result bounds a successful signed contact index by `O(1+log(1/f))`, hence `O(log C)` in the primitive input hypotenuse. It follows from a real-circle pigeonhole argument and a uniformly long one-sided admissible arc. A fully rational stopping budget avoids uncertified numerical integration. Directional/window-constrained bounds are also explicit. See [logarithmic recurrence bound](square_sum_contact_recurrence_bound_20261019.md). This controls the number of elliptic additions, not their bit cost or the output hypotenuse.
+
 ## 4. Odd zeta and graph geometry: exact maps
 
 The signed primitive-triangle Dirichlet series is
@@ -67,7 +69,7 @@ See [graceful exchange packet](graceful_square_exchange_20261019.md). Neither co
 
 ### A. Quantitative Pythagorean contact construction
 
-The existence problem is settled for these ports. The next useful theorem is an explicit bound on the height of a compatible neighbor in terms of the anchor height and desired spread interval. A finite fixed translate list cannot provide it. A successful route must retain distance to the degenerate cusp, use an adaptive orbit bound, or introduce a different rational construction.
+The existence problem and an adaptive index bound are settled for these ports: some signed index of order at most `log C` succeeds. The next useful theorem bounds the output hypotenuse or bit complexity, including a prescribed spread window. Another sharp question is whether the first successful index has a matching logarithmic lower bound near the cusps; the existing fixed-index degeneration argument proves divergence but gives no rate. Neither conclusion follows merely from the index upper bound.
 
 ### B. Denominator-controlled common-neighbor gluing
 
