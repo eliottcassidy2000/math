@@ -1,0 +1,16 @@
+{
+  "checks": 266,
+  "direct_berggren_depth": 8,
+  "direct_counts": [
+    0,
+    0,
+    0,
+    2,
+    5,
+    15,
+    44,
+    132,
+    396
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,64 @@
+{
+  "source_directory": "session5-arithmetic",
+  "review": "Independently reviewed and approved by coordinating parent before publication. Mathematical proof content is preserved; listed edits update reviewed status, links, and package-relative reproduction paths.",
+  "files": [
+    {
+      "path": "TERNARY_COUNTS_NATURAL_BOUNDARY.md",
+      "source_sha256": "2f9fbb85e503ef59a4c396323a4c42cfcd66a76b5c74b5f2737e652919e2c031",
+      "published_sha256": "7df91547ef4c479c118119c6b16f9c51a6af76cddbdd5e6ace8a126057aea4c7",
+      "presentation_changes": [
+        {
+          "before": "Independent review is required before promotion.",
+          "after": "Independently [reviewed](review-root/REVIEW.md) for the stated scopes, including the count-tower inversion checked by the coordinating reviewer."
+        }
+      ]
+    },
+    {
+      "path": "verify_ternary_natural_boundary.py",
+      "source_sha256": "2591079d3e0f3055cad5551212fb17d5134871f40135a26b2501beb6d7c96af6",
+      "published_sha256": "2591079d3e0f3055cad5551212fb17d5134871f40135a26b2501beb6d7c96af6",
+      "presentation_changes": []
+    },
+    {
+      "path": "ternary-natural-boundary-receipt.json",
+      "source_sha256": "f5125ce8803870f188c25ab702577f038429d398fceac19e0912b041df1a6fc4",
+      "published_sha256": "f5125ce8803870f188c25ab702577f038429d398fceac19e0912b041df1a6fc4",
+      "presentation_changes": []
+    },
+    {
+      "path": "ternary-natural-boundary-receipt-optimized.json",
+      "source_sha256": "f5125ce8803870f188c25ab702577f038429d398fceac19e0912b041df1a6fc4",
+      "published_sha256": "f5125ce8803870f188c25ab702577f038429d398fceac19e0912b041df1a6fc4",
+      "presentation_changes": []
+    },
+    {
+      "path": "review-root/REVIEW.md",
+      "source_sha256": "ed6365fb8220e9a8c0804d6b980a323390546af9ac8e0245955f21b8cd17924f",
+      "published_sha256": "098447dd1a6818014d842c2cd2a81c63ffe22910d934768bfaa5eef4f7802fd3",
+      "presentation_changes": [
+        {
+          "before": "No inference of transcendence of rho,",
+          "after": "The coordinating reviewer also checked the later count-tower inversion (4a): the identity b_(n+1)=b_n+c_n gives b_n=sum_(j<n)c_j, and c_n=2b_n+a_(n+1). This is an algebraic verification, not an additional independent matrix enumeration.\n\nNo inference of transcendence of rho,"
+        }
+      ]
+    },
+    {
+      "path": "review-root/check.py",
+      "source_sha256": "dcb4503975acf62308f4ef25c093b5fb3f60a1b6dfb0ca7474ebbe9467878134",
+      "published_sha256": "dcb4503975acf62308f4ef25c093b5fb3f60a1b6dfb0ca7474ebbe9467878134",
+      "presentation_changes": []
+    },
+    {
+      "path": "review-root/receipt.json",
+      "source_sha256": "91914c30bf556db3a497e6b054ca77f73164582e4566c19b58493d7c07ed0df9",
+      "published_sha256": "91914c30bf556db3a497e6b054ca77f73164582e4566c19b58493d7c07ed0df9",
+      "presentation_changes": []
+    },
+    {
+      "path": "review-root/receipt_optimized.json",
+      "source_sha256": "91914c30bf556db3a497e6b054ca77f73164582e4566c19b58493d7c07ed0df9",
+      "published_sha256": "91914c30bf556db3a497e6b054ca77f73164582e4566c19b58493d7c07ed0df9",
+      "presentation_changes": []
+    }
+  ]
+}
