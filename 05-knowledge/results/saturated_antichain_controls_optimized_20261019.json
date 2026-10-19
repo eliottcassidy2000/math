@@ -1,0 +1,45 @@
+{
+  "status": "ALL_CONTROLS_PASSED",
+  "guards": 86186,
+  "defect_orbits": [
+    {
+      "antichain_size": 3,
+      "orbit_representatives": 84,
+      "labeled_defect_assignments": 343
+    },
+    {
+      "antichain_size": 4,
+      "orbit_representatives": 210,
+      "labeled_defect_assignments": 2401
+    },
+    {
+      "antichain_size": 5,
+      "orbit_representatives": 462,
+      "labeled_defect_assignments": 16807
+    },
+    {
+      "antichain_size": 6,
+      "orbit_representatives": 924,
+      "labeled_defect_assignments": 117649
+    },
+    {
+      "antichain_size": 7,
+      "orbit_representatives": 1716,
+      "labeled_defect_assignments": 823543
+    },
+    {
+      "antichain_size": 8,
+      "orbit_representatives": 3003,
+      "labeled_defect_assignments": 5764801
+    }
+  ],
+  "nonuniform_exterior_example": {
+    "core_extensions": 25920000,
+    "core_pair_count": 12960000,
+    "core_probability": "1/2",
+    "ambient_extensions": 29635200,
+    "ambient_pair_count": 16675200,
+    "ambient_probability": "193/343"
+  },
+  "higher_height_vertices": 24
+}
