@@ -1,0 +1,17 @@
+{
+  "packet": 125,
+  "status": "PASS",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "checks": 49,
+  "commands": [
+    "python 04-computation/experiments/planar_quartic_algebraic_source_flow_20261019.py",
+    "python -O 04-computation/experiments/planar_quartic_algebraic_source_flow_20261019.py"
+  ],
+  "normal_output": "05-knowledge/results/planar_quartic_algebraic_source_flow_20261019.json",
+  "optimized_output": "05-knowledge/results/planar_quartic_algebraic_source_flow_20261019_optimized.json",
+  "normal_sha256": "7102b901df11db22b29f3e396d26f60a8b426da92fd2f958d38e1e21bd4f25c2",
+  "optimized_sha256": "7102b901df11db22b29f3e396d26f60a8b426da92fd2f958d38e1e21bd4f25c2",
+  "byte_identical": true,
+  "scope": "Finite exact controls; universal irreducibility follows from the prime valuation and two Gauss arguments."
+}

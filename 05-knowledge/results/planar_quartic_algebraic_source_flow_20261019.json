@@ -1,0 +1,7 @@
+{
+  "checks": 49,
+  "joint_extension_degree_proved": 4,
+  "scope": "Finite exact controls; universal degree and nonrationality follow from the written prime-valuation and degree proof.",
+  "source_t_cutoff": 8,
+  "status": "PASS"
+}
