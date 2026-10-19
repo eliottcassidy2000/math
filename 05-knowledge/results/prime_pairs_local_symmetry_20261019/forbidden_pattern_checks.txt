@@ -1,0 +1,259 @@
+{
+  "prime_ratio_classification_cases": 21246,
+  "prime_ratio_range": "every prime 11 <= p <= 499, every a not 0,+1,-1",
+  "connected_small_census": [
+    {
+      "q": 2,
+      "connected_patterns_all_sizes": 1,
+      "size4_energy_triples_surplus": []
+    },
+    {
+      "q": 3,
+      "connected_patterns_all_sizes": 1,
+      "size4_energy_triples_surplus": []
+    },
+    {
+      "q": 4,
+      "connected_patterns_all_sizes": 2,
+      "size4_energy_triples_surplus": []
+    },
+    {
+      "q": 5,
+      "connected_patterns_all_sizes": 3,
+      "size4_energy_triples_surplus": [
+        [
+          52,
+          12,
+          4
+        ]
+      ]
+    },
+    {
+      "q": 6,
+      "connected_patterns_all_sizes": 5,
+      "size4_energy_triples_surplus": [
+        [
+          48,
+          8,
+          16
+        ]
+      ]
+    },
+    {
+      "q": 7,
+      "connected_patterns_all_sizes": 7,
+      "size4_energy_triples_surplus": [
+        [
+          44,
+          6,
+          22
+        ]
+      ]
+    },
+    {
+      "q": 8,
+      "connected_patterns_all_sizes": 12,
+      "size4_energy_triples_surplus": [
+        [
+          38,
+          6,
+          16
+        ],
+        [
+          64,
+          0,
+          64
+        ]
+      ]
+    },
+    {
+      "q": 9,
+      "connected_patterns_all_sizes": 14,
+      "size4_energy_triples_surplus": [
+        [
+          36,
+          6,
+          10
+        ],
+        [
+          44,
+          2,
+          46
+        ]
+      ]
+    },
+    {
+      "q": 10,
+      "connected_patterns_all_sizes": 27,
+      "size4_energy_triples_surplus": [
+        [
+          36,
+          6,
+          4
+        ],
+        [
+          48,
+          0,
+          64
+        ],
+        [
+          52,
+          0,
+          64
+        ]
+      ]
+    },
+    {
+      "q": 11,
+      "connected_patterns_all_sizes": 31,
+      "size4_energy_triples_surplus": [
+        [
+          36,
+          6,
+          -2
+        ],
+        [
+          44,
+          0,
+          64
+        ]
+      ]
+    },
+    {
+      "q": 12,
+      "connected_patterns_all_sizes": 54,
+      "size4_energy_triples_surplus": [
+        [
+          36,
+          2,
+          40
+        ],
+        [
+          36,
+          6,
+          -8
+        ],
+        [
+          38,
+          0,
+          64
+        ],
+        [
+          38,
+          2,
+          40
+        ],
+        [
+          46,
+          0,
+          64
+        ],
+        [
+          48,
+          0,
+          64
+        ]
+      ]
+    }
+  ],
+  "first_connected_cyclic_example": {
+    "q": 12,
+    "B1": [
+      1,
+      2,
+      10,
+      11
+    ],
+    "B2": [
+      1,
+      4,
+      8,
+      11
+    ],
+    "I1": {
+      "size": 4,
+      "energy": 36,
+      "triples": 6,
+      "surplus_numerator": -8,
+      "conditional_mean": "63/64",
+      "J": [
+        4,
+        2,
+        1,
+        2,
+        1,
+        0,
+        0,
+        0,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    "I2": {
+      "size": 4,
+      "energy": 36,
+      "triples": 2,
+      "surplus_numerator": 40,
+      "conditional_mean": "69/64",
+      "J": [
+        4,
+        0,
+        1,
+        2,
+        1,
+        2,
+        0,
+        2,
+        1,
+        2,
+        1,
+        0
+      ]
+    }
+  },
+  "general_cyclic_order6": [
+    {
+      "B": [
+        1,
+        5
+      ],
+      "size": 2,
+      "energy": 6,
+      "triples": 0,
+      "surplus_numerator": 8,
+      "conditional_mean": "9/8",
+      "J": [
+        2,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "B": [
+        2,
+        4
+      ],
+      "size": 2,
+      "energy": 6,
+      "triples": 2,
+      "surplus_numerator": -4,
+      "conditional_mean": "15/16",
+      "J": [
+        2,
+        0,
+        1,
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "odd_order_parity_reconstruction_cases": 32764,
+  "all_checks_passed": true
+}
+ALL CHECKS PASSED
