@@ -1,0 +1,14 @@
+{
+  "certificate_counts": {
+    "dual": 2978,
+    "one": 14926,
+    "two": 9422
+  },
+  "compact_bytes": 1020624,
+  "compact_sha256": "8a8cf27be186e9d14bd2b8f4f52faacad706208f10b6cd00abda3251fe647570",
+  "maximum_support": 10,
+  "maximum_weight": 19986611404658120028280320,
+  "residual_records": 31889,
+  "source_bytes": 8803494,
+  "source_sha256": "be810b46006580aaed3fa71162e1f1529e56025dd2fd0f71ddc392d65516763b"
+}

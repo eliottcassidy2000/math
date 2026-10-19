@@ -1,0 +1,27 @@
+{
+  "LP_calls": 2978,
+  "analytic_covered": 51098,
+  "committed_bytes": 8803494,
+  "completed_residual_cores": 31889,
+  "dependencies": {
+    "analytic_cover.json.gz": "ace74505712cc4960ac1565570e351b657ec245fcffcbb7523c825f31c9e70b4",
+    "cone_engine_mixed22_c3_20261019.py": "3f2e099ee2d756398113ef4e292f42441217924885bcb1c447904a6d5b14df02",
+    "exact_replay_mixed22_c3_20261019.py": "93c595ac7a3729ac07fdc90bb1f86eecb44401d0c29daaca556986b539cebd55",
+    "scan_mixed22_c3_20261019.py": "f50e15390ee39f08f53ef68556c4308f57c74690fa06221b71f05803e7fe3037"
+  },
+  "directed_screen_orders": 9037424,
+  "elapsed": 1638.600350856781,
+  "hist": {
+    "dual": 4918,
+    "one": 189488,
+    "two": 53793
+  },
+  "last_core_index": 82986,
+  "record_sha256": "be810b46006580aaed3fa71162e1f1529e56025dd2fd0f71ddc392d65516763b",
+  "residual_orders": 248199,
+  "residual_target": 31889,
+  "scope": "Partial coverage only until terminal success; exact cone obstacles are relaxation limitations, not actual posets.",
+  "short_span_orders": 0,
+  "start_unix": 1792400600.012014,
+  "status": "ALL_CORES_CERTIFIED"
+}

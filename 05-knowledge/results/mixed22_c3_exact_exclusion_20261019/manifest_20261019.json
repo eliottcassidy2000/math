@@ -1,0 +1,70 @@
+{
+  "files": [
+    {
+      "bytes": 620,
+      "name": "README.md",
+      "sha256": "03c1c9c6f0e3649b00cb717c85cc6dc0a9f5d0d6453329589b9531b51060498e"
+    },
+    {
+      "bytes": 283278,
+      "name": "analytic_cover_20261019.json.gz",
+      "sha256": "ace74505712cc4960ac1565570e351b657ec245fcffcbb7523c825f31c9e70b4"
+    },
+    {
+      "bytes": 239,
+      "name": "catalogue_control_20261019.json",
+      "sha256": "50bfd240602edffff531d102c411257cb3260a7ac66df07b4b279e23c91840d2"
+    },
+    {
+      "bytes": 1101,
+      "name": "construction_receipt_20261019.json",
+      "sha256": "728430b4daf162e12a5da7eafc08b0b45fc012dc640555927fb426bc22ffb80c"
+    },
+    {
+      "bytes": 873,
+      "name": "independent_replay_receipt_20261019.json",
+      "sha256": "c2d85fee82fc8f22b762bb419a5facabad4b3b43c01cf4861ebf04f26f06ee9d"
+    },
+    {
+      "bytes": 2125,
+      "name": "max_span_directed_defect_reduction_20261019.md",
+      "sha256": "d4a36a5a4a7ada2b7a83a747248171b3e99998e079a2d5fd4aa035c1b47d3ac4"
+    },
+    {
+      "bytes": 9844,
+      "name": "mixed22_c3_exact_exclusion_20261019.md",
+      "sha256": "05ba99afbe4ba9f9c768a1c454eb2b4b6f1a397f9b0a0a65348e901bb851d3c9"
+    },
+    {
+      "bytes": 7802,
+      "name": "one_defect_exchange_reductions_20261019.md",
+      "sha256": "2a062aea8903849474640db25dcfc5a3485c6a965d251a90c367d0ccace33be9"
+    },
+    {
+      "bytes": 418,
+      "name": "repack_provenance_20261019.json",
+      "sha256": "a3488b8289abd13ee580c089b5961618943882167b6946bddc25935b2ce8cd90"
+    },
+    {
+      "bytes": 1020624,
+      "name": "residual_certificates_20261019.json.gz",
+      "sha256": "8a8cf27be186e9d14bd2b8f4f52faacad706208f10b6cd00abda3251fe647570"
+    },
+    {
+      "bytes": 6227,
+      "name": "seven_thin_saturation_increment_lemma_20261019.md",
+      "sha256": "2369610b84d27c367b2abf10dbb080dff2f6ec1500495ea0650409c98b2da243"
+    },
+    {
+      "bytes": 4603,
+      "name": "side_specific_defect_propagation_20261019.md",
+      "sha256": "a89ba5b2f82f0eb906185dd86dca42785c6279476d884e158912e9fdab090230"
+    },
+    {
+      "bytes": 7594,
+      "name": "verify_mixed22_c3_exact_exclusion_20261019.py",
+      "sha256": "5804e19237ef354df64adcc8712315f23854e5f9230db431ed41104dc42d4659"
+    }
+  ],
+  "scope": "Seven-thin mixed(2,2), c=3 only; all 82987 degree-valid cores; no c=4 claim."
+}

@@ -1,0 +1,20 @@
+{
+  "analytic_balanced_cores": 47298,
+  "analytic_cycle_cores": 3800,
+  "analytic_sha256": "ace74505712cc4960ac1565570e351b657ec245fcffcbb7523c825f31c9e70b4",
+  "degree_invalid": 13441,
+  "degree_valid_cores": 82987,
+  "directed_screen_orders": 9037424,
+  "distinct_certificates": 27326,
+  "generator_orders": 248199,
+  "maximum_certificate_support": 10,
+  "maximum_integer_weight": 19986611404658120028280320,
+  "natural_nonroot_posets": 96428,
+  "residual_cores": 31889,
+  "residual_sha256": "8a8cf27be186e9d14bd2b8f4f52faacad706208f10b6cd00abda3251fe647570",
+  "scope": "Seven-thin mixed(2,2), c=3 maximum-span root morphology only. No c=4 claim.",
+  "seconds": 671.5727827548981,
+  "short_span_orders": 0,
+  "status": "ALL_82987_DEGREE_VALID_CORES_INDEPENDENTLY_EXACT_REPLAYED",
+  "verifier_sha256": "5804e19237ef354df64adcc8712315f23854e5f9230db431ed41104dc42d4659"
+}
