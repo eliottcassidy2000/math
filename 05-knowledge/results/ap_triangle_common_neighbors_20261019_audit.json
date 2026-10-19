@@ -1,0 +1,262 @@
+{
+  "independent_area_2880_enumeration": {
+    "all_integer_neighbor_equation_solutions": [
+      [
+        3362,
+        62,
+        82,
+        98
+      ]
+    ],
+    "all_unordered_factor_pairs_AB_5760": [
+      {
+        "A": 1,
+        "B": 5760,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 2,
+        "B": 2880,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 3,
+        "B": 1920,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 4,
+        "B": 1440,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 5,
+        "B": 1152,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 6,
+        "B": 960,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 8,
+        "B": 720,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 9,
+        "B": 640,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 10,
+        "B": 576,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 12,
+        "B": 480,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 15,
+        "B": 384,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 16,
+        "B": 360,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 18,
+        "B": 320,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 20,
+        "B": 288,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 24,
+        "B": 240,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 30,
+        "B": 192,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 32,
+        "B": 180,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 36,
+        "B": 160,
+        "integer_hypotenuse": true
+      },
+      {
+        "A": 40,
+        "B": 144,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 45,
+        "B": 128,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 48,
+        "B": 120,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 60,
+        "B": 96,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 64,
+        "B": 90,
+        "integer_hypotenuse": false
+      },
+      {
+        "A": 72,
+        "B": 80,
+        "integer_hypotenuse": false
+      }
+    ],
+    "external_integer_common_neighbors": [],
+    "integer_right_triangles": [
+      [
+        36,
+        160,
+        164
+      ]
+    ]
+  },
+  "independent_exact_checks": 81,
+  "original_checker": {
+    "checks": 6615,
+    "normal_optimized_and_stored_outputs_identical": true,
+    "output_sha256": "43f186fad5262442e92e9dda86d042183169ca6676e49b65cd58ef2ef23db774"
+  },
+  "six_vertex_certificate": {
+    "all_pair_tests": [
+      {
+        "is_square": true,
+        "pair": [
+          0,
+          1
+        ]
+      },
+      {
+        "is_square": true,
+        "pair": [
+          0,
+          2
+        ]
+      },
+      {
+        "is_square": true,
+        "pair": [
+          0,
+          3
+        ]
+      },
+      {
+        "is_square": true,
+        "pair": [
+          0,
+          4
+        ]
+      },
+      {
+        "is_square": true,
+        "pair": [
+          0,
+          5
+        ]
+      },
+      {
+        "is_square": true,
+        "pair": [
+          1,
+          2
+        ]
+      },
+      {
+        "is_square": true,
+        "pair": [
+          1,
+          3
+        ]
+      },
+      {
+        "is_square": true,
+        "pair": [
+          1,
+          4
+        ]
+      },
+      {
+        "is_square": true,
+        "pair": [
+          1,
+          5
+        ]
+      },
+      {
+        "is_square": true,
+        "pair": [
+          2,
+          3
+        ]
+      },
+      {
+        "is_square": true,
+        "pair": [
+          2,
+          4
+        ]
+      },
+      {
+        "is_square": true,
+        "pair": [
+          2,
+          5
+        ]
+      },
+      {
+        "is_square": false,
+        "pair": [
+          3,
+          4
+        ]
+      },
+      {
+        "is_square": false,
+        "pair": [
+          3,
+          5
+        ]
+      },
+      {
+        "is_square": false,
+        "pair": [
+          4,
+          5
+        ]
+      }
+    ],
+    "induced_graph": "K3 join I3",
+    "leaf_nonedges": 3,
+    "positive_distinct_labels": 6,
+    "required_edges": 12
+  },
+  "status": "PASS: no mathematical or certificate blocker found"
+}
