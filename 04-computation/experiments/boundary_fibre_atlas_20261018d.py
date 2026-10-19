@@ -187,6 +187,51 @@ def equality_criterion(n, edges, s, t):
     return exists
 
 
+def hamming_chart_control():
+    """Incoming ten-label relation, realized only as four fixed-label fibres.
+
+    Each graph is abstract. No unrestricted-label or geometric selector is
+    asserted by taking the union of these four response sets.
+    """
+    def span(generators):
+        words = {0}
+        for g in generators: words |= {x^g for x in tuple(words)}
+        return words
+    code = span((170,204,240,255,768)); directions = span((15,240,768))
+    need(len(code) == 32 and len(directions) == 8, 'marked code dimensions')
+    need({x for x in code if x.bit_count() == 2} == {768}, 'unique repetition pair')
+    need(all(x == 768 or x.bit_count() >= 4 for x in code if x), 'other nonzero weights')
+    records = []; union = set()
+    for origin in (0,170,204,102):
+        edges = []; n = 10
+        for block in ((0,1,2,3),(4,5,6,7),(8,9)):
+            root = block[0]
+            for v in block[1:]:
+                if ((origin>>root)^(origin>>v))&1:
+                    edges.append((root,v))
+                else:
+                    edges.extend(((root,n),(v,n))); n += 1
+        edges = tuple(sorted(edges)); ports = tuple(range(10)); labels = (0,)*n
+        audit_graph(n, edges, ports); data = fibres(n, edges, labels)
+        need(data is not None, 'abstract chart is bipartite')
+        support = {sum((c%2)<<i for i,c in enumerate(word))
+                   for word,_ in named_boundary_words(labels,data,ports)}
+        expected = {origin^x for x in directions}
+        need(support == expected and support <= code and len(support) == 8, 'exact named shade chart')
+        need(not union&support, 'disjoint chart selectors')
+        need(boundary_cell(labels,data,ports)[2] == 0, 'every abstract component meets boundary')
+        union |= support
+        records.append({'origin':origin, 'vertices':n, 'edges':edges, 'shade_support':sorted(support)})
+    need(union == code, 'four-chart union equals marked Hamming relation')
+    triangle = ((0,1),(0,10),(1,10))
+    need(set(triangle) <= set(records[0]['edges'])|set(records[1]['edges']), 'shared-port triangle witness')
+    need(fibres(11,triangle,(0,)*11) is None, 'gluing imposes intersection rather than union')
+    return {'status':'FINITE-EXACT abstract fixed-label control; geometric selector OPEN',
+            'code_generators':(170,204,240,255,768), 'direction_generators':(15,240,768),
+            'charts':records, 'minimum_disjoint_component_charts':4,
+            'naive_gluing_hostile':triangle}
+
+
 def controls():
     # Independent all-bit enumeration; includes disconnected and empty-boundary cases.
     graphs = 0; label_cases = 0
@@ -229,7 +274,8 @@ def controls():
     need(not equality_criterion(7,tuple(combinations(range(7),2)),0,1), 'exclude vacuous K7')
     need(not equality_criterion(3,((0,1),(1,2)),0,2), 'even path alone does not force six-colour equality')
     return {'simple_graphs': graphs, 'ternary_label_cases': label_cases,
-            'terminal_controls': ['K7-e', 'K7 vacuity', 'unrestricted even path']}
+            'terminal_controls': ['K7-e', 'K7 vacuity', 'unrestricted even path'],
+            'incoming_hamming_control':hamming_chart_control()}
 
 
 def mask_indices(mask):
@@ -249,6 +295,7 @@ def main():
     if args.verify_only:
         result = json.loads(args.out.read_text(encoding='utf-8'))
         need(result['input_lf_sha256'] == hashlib.sha256(raw).hexdigest(), 'bound input file')
+        need(json.dumps(small,sort_keys=True) == json.dumps(result['controls'],sort_keys=True), 'saved controls replay')
         count = consume_receipts(result, source)
         print(json.dumps({'receipt_count':count, 'checks':CHECKS, 'status':'VERIFIED saved receipts'}))
         return

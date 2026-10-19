@@ -23396,7 +23396,279 @@
       "K7-e",
       "K7 vacuity",
       "unrestricted even path"
-    ]
+    ],
+    "incoming_hamming_control": {
+      "status": "FINITE-EXACT abstract fixed-label control; geometric selector OPEN",
+      "code_generators": [
+        170,
+        204,
+        240,
+        255,
+        768
+      ],
+      "direction_generators": [
+        15,
+        240,
+        768
+      ],
+      "charts": [
+        {
+          "origin": 0,
+          "vertices": 17,
+          "edges": [
+            [
+              0,
+              10
+            ],
+            [
+              0,
+              11
+            ],
+            [
+              0,
+              12
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              11
+            ],
+            [
+              3,
+              12
+            ],
+            [
+              4,
+              13
+            ],
+            [
+              4,
+              14
+            ],
+            [
+              4,
+              15
+            ],
+            [
+              5,
+              13
+            ],
+            [
+              6,
+              14
+            ],
+            [
+              7,
+              15
+            ],
+            [
+              8,
+              16
+            ],
+            [
+              9,
+              16
+            ]
+          ],
+          "shade_support": [
+            0,
+            15,
+            240,
+            255,
+            768,
+            783,
+            1008,
+            1023
+          ]
+        },
+        {
+          "origin": 170,
+          "vertices": 13,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              4,
+              11
+            ],
+            [
+              6,
+              11
+            ],
+            [
+              8,
+              12
+            ],
+            [
+              9,
+              12
+            ]
+          ],
+          "shade_support": [
+            85,
+            90,
+            165,
+            170,
+            853,
+            858,
+            933,
+            938
+          ]
+        },
+        {
+          "origin": 204,
+          "vertices": 13,
+          "edges": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              4,
+              11
+            ],
+            [
+              5,
+              11
+            ],
+            [
+              8,
+              12
+            ],
+            [
+              9,
+              12
+            ]
+          ],
+          "shade_support": [
+            51,
+            60,
+            195,
+            204,
+            819,
+            828,
+            963,
+            972
+          ]
+        },
+        {
+          "origin": 102,
+          "vertices": 13,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              3,
+              10
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              4,
+              11
+            ],
+            [
+              7,
+              11
+            ],
+            [
+              8,
+              12
+            ],
+            [
+              9,
+              12
+            ]
+          ],
+          "shade_support": [
+            102,
+            105,
+            150,
+            153,
+            870,
+            873,
+            918,
+            921
+          ]
+        }
+      ],
+      "minimum_disjoint_component_charts": 4,
+      "naive_gluing_hostile": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          10
+        ]
+      ]
+    }
   },
   "limitations": [
     "Not a minimum over all possible ternary labelings.",
@@ -23406,5 +23678,5 @@
     "No new unit-distance edge or equality fragment is supplied."
   ],
   "consumed_receipts": 570,
-  "checks": 6944569
+  "checks": 6944895
 }

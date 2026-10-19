@@ -216,3 +216,67 @@ variable-label criterion: keep at least one equal-terminal lift and exclude
 every separating one with actual odd-cycle/pinned-path or complete search
 certificates. More edges, a failed fixed chart, a nontrivial quotient cycle,
 and a field extension by themselves do not imply this conclusion.
+
+## 8. Incoming Hamming relation: a sharper joint target
+
+Incoming commit 785a59499e supplies
+[the ten-label Hamming packet, section 7](ten_label_matching_hamming_20261018n.md).
+Its four-chart result has an exact consumer in the present boundary-cell
+language. On ten ordered binary coordinates let
+
+\[
+ C=\operatorname{span}_{\mathbb F_2}(170,204,240,255,768),\qquad
+ D=\operatorname{span}_{\mathbb F_2}(15,240,768),
+\]
+
+where integers are bit masks, with coordinate zero the least significant bit.
+The 32-word code \(C=H_8\oplus I_2\) is the disjoint union of
+\(r+D\) for \(r=0,170,204,102\).
+
+Each chart can be constructed as an abstract fixed-label fibre of (1).
+Use the boundary blocks \(\{0,1,2,3\}\), \(\{4,5,6,7\}\), \(\{8,9\}\).
+Join each block's first vertex to each other vertex by one edge if their
+required parity difference in \(r\) is one; otherwise use a two-edge path
+with a fresh hidden vertex. All ternary labels are zero. The resulting named
+boundary colours are \(c_i=3b_i\), with shade masks exactly \(r+D\).
+The first graph has 17 vertices and 14 edges; the other three each have
+13 vertices and 10 edges. Each boundary mask has one hidden extension.
+
+The lower bound of four charts is structural. Any free visible-component
+indicator of an affine component chart contained in \(C\) belongs to \(C\).
+There is only one weight-two nonzero word, 768; all other nonzero words have
+weight at least four. Disjoint nonempty supports therefore permit at most
+three free components on ten coordinates. Each chart has at most eight
+words, so at least four are needed to cover \(C\). The four constructions
+achieve the bound.
+
+The script reproduces these four **named** responses with the same fibre
+engine as the 714-vertex atlas. An independent exhaustive shade enumeration
+confirms the graphs, all 32 boundary masks, and unique hidden extensions.
+Canonicalizing under arbitrary palette permutations would lose this marked
+binary relation and is not performed in this control.
+
+This supplies a joint-support test object, not a geometric selector. The
+four graphs are separate fixed-label contexts; their union of response sets
+does not specify a single graph with unrestricted ternary labels, much less
+a unit-distance realization. The next transfer must realize the selection
+between charts while preserving the ordered ports and excluding unwanted
+boundary words. Covering every individual source word, as the 49-cell atlas
+does, is a different predicate.
+
+There is a small decisive hostile: simply gluing all four chart graphs on
+their ten ports imposes intersection of their responses, not union. The
+zero chart contains an even path from port 0 to port 1; the 170 chart adds
+the edge between them. Together they give a same-label triangle and empty
+fixed-label support. The script authenticates this triangle. A selector
+must implement the disjunction without imposing all contexts simultaneously.
+
+The companion [cube clock packet](cube_unitary_clock_packets_20261018n.md)
+also explains a useful difference between two cycle tests. Integer clock curl
+is linear and must vanish in \(\mathbb Z\), so a suitable full cycle basis
+can certify it. A clock change by two can pass its parity test and still fail
+the integer test. Monochromatic-cycle membership in the present label search
+is not linear in the original cycle space: the four-vertex hostile requires
+recomputing the same-label graph before reading its circuits. Both methods
+retain the value group and the actual source, but their guards are not
+interchangeable. No Collatz energy bound follows from this comparison.
