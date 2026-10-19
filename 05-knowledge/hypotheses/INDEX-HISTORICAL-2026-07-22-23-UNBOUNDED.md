@@ -166,3 +166,7 @@ computation needs universe, controls, command, and output. Route `CLAIMED` and
 ## Digest entry moved from INDEX.md on 2026-10-19 (line budget; mac-mini-2026-10-19-farey)
 
 - **HYP-9167 / HYP-9168 (OPEN, collatz-procgen-20260922 selfie lane, 2026-10-01; with THM-4524):** [Paley minus a vertex is Redei-rigid](HYP-9167-paley-minus-a-vertex-is-redei-rigid.md): every arc of QR_q - v lies on an odd number of HPs (q = 3 mod 4; FINITE-EXACT q = 7..27, antipodal orbit PROVED), and all-odd tournaments exist iff N = 2 mod 4 (none at N = 5, 9; first open N = 13, 14). [HP-blocking number = Hall bound](HYP-9168-hp-blocking-number-equals-hall-bound.md): the fewest arc deletions killing every HP equal a predecessor/successor Hall deficiency (beta <= hall PROVED; equality FINITE-EXACT N <= 9).
+
+## Digest entry moved from INDEX.md on 2026-10-19 (line budget; mac-mini-2026-10-19-duality)
+
+- **HYP-9169 (OPEN, collatz-procgen-20260922 edim lane, 2026-10-01; with THM-4525):** [ln edim_m(Q_d) = Theta(d^(1/3))](HYP-9169-edge-multiset-dimension-of-hypercubes-grows-like-exp-cube-root.md): the edge multiset dimension of the hypercube grows like exp(Theta(d^(1/3))) (Allikvere's Open Problem 2). Lower half PROVED (entropy, constant 0.6215); upper half supported by sparse union bounds ln M_d / d^(1/3) in [2.76, 2.80] for d = 11..32 (double precision, not interval-certified). edim_m(Q_6) = 15 is THM-4525.
