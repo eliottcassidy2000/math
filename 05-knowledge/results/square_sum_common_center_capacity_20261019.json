@@ -1,0 +1,243 @@
+{
+  "status": "FINITE-EXACT; universal theorem has separate elementary proof",
+  "controls": {
+    "gaussian_product_vs_euclid": 156,
+    "direct_square_vs_ppt": 156,
+    "positive_AP_labels": 37,
+    "all_three_square_edges": 37,
+    "optimization_positive_control": 11,
+    "optimization_vs_exhaustive": 4,
+    "capacity_sieve_complete_100000": 1
+  },
+  "sample_centers": [
+    {
+      "H": 41,
+      "unfiltered_capacity": 1,
+      "positive_petals": 1
+    },
+    {
+      "H": 65,
+      "unfiltered_capacity": 4,
+      "positive_petals": 1
+    },
+    {
+      "H": 82,
+      "unfiltered_capacity": 1,
+      "positive_petals": 1
+    },
+    {
+      "H": 123,
+      "unfiltered_capacity": 1,
+      "positive_petals": 1
+    },
+    {
+      "H": 145,
+      "unfiltered_capacity": 4,
+      "positive_petals": 2
+    },
+    {
+      "H": 205,
+      "unfiltered_capacity": 4,
+      "positive_petals": 1
+    },
+    {
+      "H": 325,
+      "unfiltered_capacity": 7,
+      "positive_petals": 2
+    },
+    {
+      "H": 533,
+      "unfiltered_capacity": 4,
+      "positive_petals": 2
+    },
+    {
+      "H": 1105,
+      "unfiltered_capacity": 13,
+      "positive_petals": 5
+    },
+    {
+      "H": 1681,
+      "unfiltered_capacity": 2,
+      "positive_petals": 1
+    },
+    {
+      "H": 32045,
+      "unfiltered_capacity": 40,
+      "positive_petals": 14
+    }
+  ],
+  "minimum_capacity_scales": [
+    {
+      "k": 1,
+      "minimum_unfiltered_H": 5,
+      "exponents": [
+        1
+      ],
+      "center_lower_bound": 50,
+      "capacity_at_bound": 1
+    },
+    {
+      "k": 2,
+      "minimum_unfiltered_H": 25,
+      "exponents": [
+        2
+      ],
+      "center_lower_bound": 1250,
+      "capacity_at_bound": 2
+    },
+    {
+      "k": 4,
+      "minimum_unfiltered_H": 65,
+      "exponents": [
+        1,
+        1
+      ],
+      "center_lower_bound": 8450,
+      "capacity_at_bound": 4
+    },
+    {
+      "k": 8,
+      "minimum_unfiltered_H": 1105,
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "center_lower_bound": 2442050,
+      "capacity_at_bound": 13
+    },
+    {
+      "k": 16,
+      "minimum_unfiltered_H": 5525,
+      "exponents": [
+        2,
+        1,
+        1
+      ],
+      "center_lower_bound": 61051250,
+      "capacity_at_bound": 22
+    },
+    {
+      "k": 32,
+      "minimum_unfiltered_H": 32045,
+      "exponents": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "center_lower_bound": 2053764050,
+      "capacity_at_bound": 40
+    },
+    {
+      "k": 64,
+      "minimum_unfiltered_H": 160225,
+      "exponents": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "center_lower_bound": 51344101250,
+      "capacity_at_bound": 67
+    },
+    {
+      "k": 128,
+      "minimum_unfiltered_H": 5928325,
+      "exponents": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "center_lower_bound": 70290074611250,
+      "capacity_at_bound": 202
+    },
+    {
+      "k": 256,
+      "minimum_unfiltered_H": 29641625,
+      "exponents": [
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "center_lower_bound": 1757251865281250,
+      "capacity_at_bound": 283
+    },
+    {
+      "k": 512,
+      "minimum_unfiltered_H": 243061325,
+      "exponents": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "center_lower_bound": 118157615421511250,
+      "capacity_at_bound": 607
+    },
+    {
+      "k": 1024,
+      "minimum_unfiltered_H": 2576450045,
+      "exponents": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "center_lower_bound": 13276189668761004050,
+      "capacity_at_bound": 1093
+    }
+  ],
+  "positive_capacity_records_through_100000": [
+    {
+      "H": 41,
+      "positive_petals": 1,
+      "unfiltered_capacity": 1
+    },
+    {
+      "H": 145,
+      "positive_petals": 2,
+      "unfiltered_capacity": 4
+    },
+    {
+      "H": 845,
+      "positive_petals": 3,
+      "unfiltered_capacity": 7
+    },
+    {
+      "H": 1105,
+      "positive_petals": 5,
+      "unfiltered_capacity": 13
+    },
+    {
+      "H": 5525,
+      "positive_petals": 8,
+      "unfiltered_capacity": 22
+    },
+    {
+      "H": 27625,
+      "positive_petals": 10,
+      "unfiltered_capacity": 31
+    },
+    {
+      "H": 32045,
+      "positive_petals": 14,
+      "unfiltered_capacity": 40
+    },
+    {
+      "H": 69745,
+      "positive_petals": 15,
+      "unfiltered_capacity": 40
+    }
+  ],
+  "scope": "Counts AP square-sum triangles with one common center. No inter-petal contacts tested."
+}
