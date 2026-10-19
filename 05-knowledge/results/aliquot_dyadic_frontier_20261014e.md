@@ -1,5 +1,7 @@
 # A precise aliquot three-cycle frontier, with Fermat and tournament connections
 
+**2026-10-19 update:** Hypotheses A3 and D3 below are now proved for all exponents in [the dyadic three-cycle exclusion](dyadic_aliquot_three_cycle_exclusion_20261019/DYADIC_THREE_CYCLE_EXCLUSION.md). The earlier status and finite census below are retained as the historical frontier. This does not exclude general aliquot three-cycles.
+
 **PROVED scoped:** repeated dyadic cofactors cannot support a primitive aliquot three-cycle, and a resultant bounds the third exponent once the other two are fixed. **FINITE-EXACT:** no remaining candidate with second-smallest exponent at most 128, with the third exponent unrestricted. **OPEN:** the conjectured exclusion for all dyadic-times-prime triples, and the general existence of an aliquot three-cycle. No global Collatz or aliquot termination claim follows.
 
 Artifacts: [checker](../../04-computation/experiments/aliquot_dyadic_frontier_20261014e.py), [output](aliquot_dyadic_frontier_20261014e.json), [general core compiler](aliquot_guarded_cycles_20261014e.md), [tournament path encodings](tournament_path_defects_20261014e.md), and [Fermat/Wieferich order lifts](fermat_wieferich_order_20261014e.md).
