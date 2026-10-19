@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "witnesses": [
+    {
+      "mask": 73,
+      "charpoly6": [
+        1,
+        0,
+        0,
+        -4,
+        -3,
+        -2,
+        0
+      ],
+      "charpoly7": [
+        1,
+        0,
+        0,
+        -4,
+        -3,
+        -2,
+        0,
+        0
+      ],
+      "cycles6": 0,
+      "subcycles6in7": 0,
+      "cycles7": 0
+    },
+    {
+      "mask": 83,
+      "charpoly6": [
+        1,
+        0,
+        0,
+        -4,
+        -3,
+        -2,
+        0
+      ],
+      "charpoly7": [
+        1,
+        0,
+        0,
+        -4,
+        -3,
+        -2,
+        0,
+        0
+      ],
+      "cycles6": 1,
+      "subcycles6in7": 1,
+      "cycles7": 0
+    }
+  ]
+}

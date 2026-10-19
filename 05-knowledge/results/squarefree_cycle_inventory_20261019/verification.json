@@ -1,0 +1,217 @@
+{
+  "status": "PASS",
+  "group_universe": "All sequences over C_m, 1<=m<=5, 0<=n<=4; repetitions and identity labels allowed",
+  "group_cases": 1279,
+  "zero_return_subsets_checked": 3810,
+  "graph_universe": "All labelled tournaments with 1<=n<=4, plus masks73/83 at n6 and their source extensions",
+  "graph_cases": 79,
+  "binary_universe": "All column sequences in F2^d, 1<=d<=3, 0<=n<=4",
+  "binary_cases": 5053,
+  "negative_log_family": [
+    {
+      "element_order": 2,
+      "labels": 4,
+      "log_return_top_coefficient": -2
+    },
+    {
+      "element_order": 3,
+      "labels": 6,
+      "log_return_top_coefficient": -9
+    },
+    {
+      "element_order": 4,
+      "labels": 8,
+      "log_return_top_coefficient": -34
+    },
+    {
+      "element_order": 5,
+      "labels": 10,
+      "log_return_top_coefficient": -125
+    }
+  ],
+  "tournament_witnesses": [
+    {
+      "mask": 73,
+      "adjacency": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "characteristic_coefficients_descending": [
+        1,
+        0,
+        0,
+        -4,
+        -3,
+        -2,
+        0
+      ],
+      "traces": [
+        0,
+        0,
+        12,
+        12,
+        10,
+        48
+      ],
+      "c6": 0,
+      "extension_traces": [
+        0,
+        0,
+        12,
+        12,
+        10,
+        48,
+        84
+      ],
+      "extension_c6": 0,
+      "extension_c7": 0
+    },
+    {
+      "mask": 83,
+      "adjacency": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "characteristic_coefficients_descending": [
+        1,
+        0,
+        0,
+        -4,
+        -3,
+        -2,
+        0
+      ],
+      "traces": [
+        0,
+        0,
+        12,
+        12,
+        10,
+        48
+      ],
+      "c6": 1,
+      "extension_traces": [
+        0,
+        0,
+        12,
+        12,
+        10,
+        48,
+        84
+      ],
+      "extension_c6": 1,
+      "extension_c7": 0
+    }
+  ],
+  "minimality_hostile": {
+    "group": "C5",
+    "labels": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "simple_order": [
+      1,
+      2,
+      4,
+      3
+    ],
+    "proper_zero_subset": [
+      1,
+      4
+    ]
+  }
+}
