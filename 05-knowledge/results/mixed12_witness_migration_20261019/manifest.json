@@ -1,0 +1,130 @@
+{
+  "files": [
+    {
+      "bytes": 3351,
+      "path": "README.md",
+      "sha256": "45dd2f1ac0a8ca7e5dee8fe91761f4356a2af0d622fdd82da92896ced44df0aa"
+    },
+    {
+      "bytes": 2813,
+      "path": "freeze_replay_receipt_20261019.json",
+      "sha256": "dfca9a324801873f454a4dd2d6241858c56592a84f6e7084d6ab36c960ac5327"
+    },
+    {
+      "bytes": 7283,
+      "path": "freeze_review_20261019.md",
+      "sha256": "86fa8a5ad0d47de2f2d3a307d702ed6ad89f8c9e9c60ed76cfab0772c74aff17"
+    },
+    {
+      "bytes": 6227,
+      "path": "mixed12_core_and_exception_independent_audit_20261019.md",
+      "sha256": "bda1bc0aefa86a9d9c1b0b0023c967337792feb473cd2aa8bba9ec961c4eb6c2"
+    },
+    {
+      "bytes": 1776,
+      "path": "mixed12_exception_independent_audit_20261019.json",
+      "sha256": "040955baa02d0bf0a380623ea21c7580efd6b7c57b33ba76eeca457e734d5037"
+    },
+    {
+      "bytes": 12183,
+      "path": "mixed12_witness_migration_20261019.md",
+      "sha256": "30ced233d925897f9cdfd79566b6dee692b3729b7b77212178a6348a6c4f3781"
+    },
+    {
+      "bytes": 371398,
+      "path": "mixed12_witness_migration_audit_20261019.json.gz",
+      "sha256": "d59ffc9faa743568fccf02cdb315d0ddda5a1f2bfe4751b7ca639ebe288c90df"
+    },
+    {
+      "bytes": 6227,
+      "path": "originals/mixed12_core_and_exception_independent_audit_20261019.md",
+      "sha256": "bda1bc0aefa86a9d9c1b0b0023c967337792feb473cd2aa8bba9ec961c4eb6c2"
+    },
+    {
+      "bytes": 10626,
+      "path": "originals/mixed12_witness_migration_20261019.md",
+      "sha256": "52c78293d3830ea60104688a9655251df5ffd01a9b1d4b49153702169bfd621b"
+    },
+    {
+      "bytes": 6433,
+      "path": "originals/verify_mixed12_exception_independent_20261019.py",
+      "sha256": "fbba622574431f31bc4a874beea09ae2b6073f7ba607f4ffea4a2a46bb6b8b8d"
+    },
+    {
+      "bytes": 7133,
+      "path": "originals/verify_mixed12_witness_migration_20261019.py",
+      "sha256": "4c3540759b4928968b7ab249babf917565327d0ed36852a697feeb24e11b9bfe"
+    },
+    {
+      "bytes": 4963,
+      "path": "replay_frozen_mixed12_20261019.py",
+      "sha256": "12da850362ae8b95c2ac31ea8d700895beb805738d14e5477e4d2e17e89ac2a9"
+    },
+    {
+      "bytes": 8783,
+      "path": "verify_mixed12_exception_independent_20261019.py",
+      "sha256": "c90d4d926ebfb81284abb8ae648c0f92783e5c3db0245e0c17f17ff09d94a47d"
+    },
+    {
+      "bytes": 9224,
+      "path": "verify_mixed12_witness_migration_20261019.py",
+      "sha256": "c1a807a75dae52bb2f3e34a6d5a9599663cca5af3cc1663cc6e3ec99ee562361"
+    }
+  ],
+  "format": "mixed12-frozen-proof-packet-v1",
+  "full_replay_completed": true,
+  "normalization": [
+    {
+      "assertions_replaced": 11,
+      "filename": "verify_mixed12_witness_migration_20261019.py",
+      "normalized_sha256": "c1a807a75dae52bb2f3e34a6d5a9599663cca5af3cc1663cc6e3ec99ee562361",
+      "original_sha256": "4c3540759b4928968b7ab249babf917565327d0ed36852a697feeb24e11b9bfe"
+    },
+    {
+      "assertions_replaced": 13,
+      "filename": "verify_mixed12_exception_independent_20261019.py",
+      "normalized_sha256": "c90d4d926ebfb81284abb8ae648c0f92783e5c3db0245e0c17f17ff09d94a47d",
+      "original_sha256": "fbba622574431f31bc4a874beea09ae2b6073f7ba607f4ffea4a2a46bb6b8b8d"
+    }
+  ],
+  "preserved_main_receipt": {
+    "gzip_bytes": 371398,
+    "gzip_sha256": "d59ffc9faa743568fccf02cdb315d0ddda5a1f2bfe4751b7ca639ebe288c90df",
+    "uncompressed_bytes": 10496542,
+    "uncompressed_sha256": "4eff42937c42234774ff20a7187b7d206e16c0f9098e4c9e7977b3a3775e8e36"
+  },
+  "scope": "One-lower/two-upper and order-dual maximum-span majority critical roots, c<=3; no c=4 or general conjecture claim.",
+  "source_inputs": [
+    {
+      "bytes": 10626,
+      "name": "mixed12_witness_migration_20261019.md",
+      "sha256": "52c78293d3830ea60104688a9655251df5ffd01a9b1d4b49153702169bfd621b"
+    },
+    {
+      "bytes": 7133,
+      "name": "verify_mixed12_witness_migration_20261019.py",
+      "sha256": "4c3540759b4928968b7ab249babf917565327d0ed36852a697feeb24e11b9bfe"
+    },
+    {
+      "bytes": 10496542,
+      "name": "mixed12_witness_migration_audit_20261019.json",
+      "sha256": "4eff42937c42234774ff20a7187b7d206e16c0f9098e4c9e7977b3a3775e8e36"
+    },
+    {
+      "bytes": 6227,
+      "name": "mixed12_core_and_exception_independent_audit_20261019.md",
+      "sha256": "bda1bc0aefa86a9d9c1b0b0023c967337792feb473cd2aa8bba9ec961c4eb6c2"
+    },
+    {
+      "bytes": 6433,
+      "name": "verify_mixed12_exception_independent_20261019.py",
+      "sha256": "fbba622574431f31bc4a874beea09ae2b6073f7ba607f4ffea4a2a46bb6b8b8d"
+    },
+    {
+      "bytes": 1776,
+      "name": "mixed12_exception_independent_audit_20261019.json",
+      "sha256": "040955baa02d0bf0a380623ea21c7580efd6b7c57b33ba76eeca457e734d5037"
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,93 @@
+{
+  "aggregate_admissible_orders": 626105,
+  "aggregate_bare_extensions": 4835417,
+  "aggregate_core_count": 5228,
+  "cyclic_input_guards_active_under_O": true,
+  "date_utc": "2026-10-19",
+  "families": [
+    {
+      "admissible_orders": 60,
+      "common_count": 0,
+      "core_count": 7,
+      "total_bare_extensions": 92,
+      "weight_sum_counts": {
+        "1": 60
+      }
+    },
+    {
+      "admissible_orders": 722,
+      "common_count": 1,
+      "core_count": 40,
+      "total_bare_extensions": 2123,
+      "weight_sum_counts": {
+        "1": 710,
+        "2": 3,
+        "3": 7,
+        "9": 2
+      }
+    },
+    {
+      "admissible_orders": 15899,
+      "common_count": 2,
+      "core_count": 357,
+      "total_bare_extensions": 79681,
+      "weight_sum_counts": {
+        "1": 15672,
+        "2": 209,
+        "3": 18
+      }
+    },
+    {
+      "admissible_orders": 609424,
+      "common_count": 3,
+      "core_count": 4824,
+      "total_bare_extensions": 4753521,
+      "weight_sum_counts": {
+        "1": 601284,
+        "2": 8008,
+        "3": 132
+      }
+    }
+  ],
+  "full_reproduction_command": "python replay_frozen_mixed12_20261019.py",
+  "independent_exterior_audit": {
+    "actual_posets_checked": 200,
+    "exact_tree_evaluation_matches": true,
+    "maximum_order": 12,
+    "minimum_normalized_deficit": "0"
+  },
+  "integrity_only_command": "python replay_frozen_mixed12_20261019.py --check-only",
+  "normalization": [
+    {
+      "assertions_replaced": 11,
+      "filename": "verify_mixed12_witness_migration_20261019.py",
+      "normalized_sha256": "c1a807a75dae52bb2f3e34a6d5a9599663cca5af3cc1663cc6e3ec99ee562361",
+      "original_sha256": "4c3540759b4928968b7ab249babf917565327d0ed36852a697feeb24e11b9bfe"
+    },
+    {
+      "assertions_replaced": 13,
+      "filename": "verify_mixed12_exception_independent_20261019.py",
+      "normalized_sha256": "c90d4d926ebfb81284abb8ae648c0f92783e5c3db0245e0c17f17ff09d94a47d",
+      "original_sha256": "fbba622574431f31bc4a874beea09ae2b6073f7ba607f4ffea4a2a46bb6b8b8d"
+    }
+  ],
+  "optimized_replay_flag": "-O",
+  "original_inputs_unchanged": true,
+  "python_version": "3.12.14",
+  "receipt_replays": [
+    {
+      "byte_for_byte_identical": true,
+      "bytes": 10496542,
+      "filename": "mixed12_witness_migration_audit_20261019.json",
+      "sha256": "4eff42937c42234774ff20a7187b7d206e16c0f9098e4c9e7977b3a3775e8e36"
+    },
+    {
+      "byte_for_byte_identical": true,
+      "bytes": 1776,
+      "filename": "mixed12_exception_independent_audit_20261019.json",
+      "sha256": "040955baa02d0bf0a380623ea21c7580efd6b7c57b33ba76eeca457e734d5037"
+    }
+  ],
+  "scope": "Maximum-span majority critical roots with slave multiplicities (1,2) or dual (2,1) and c<=3 only; no c=4, seven-thin, or general 1/3-2/3 resolution.",
+  "status": "PASS"
+}
