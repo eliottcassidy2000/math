@@ -1,3 +1,19 @@
+> **HISTORICAL REFLECTION / CURRENT SCOPE CORRECTION (2026-10-18):** the
+> five-way identity asserted below is not established. Four-vertex tournament
+> presentations form a **six-dimensional cube with 64 vertices**; its polar
+> has 12 vertices, whereas the three-dimensional octahedron has 6. The valid
+> six-object octahedral map is **L(K4)**: vertices are tetrahedron edges and
+> adjacency means sharing an endpoint. It is a different construction.
+> Reversing tournament arcs is not polyhedral or planar duality, and there
+> is no proved classification into “exactly five natural levels.” Equal
+> f-vectors or group orders do not identify graphs or actions: icosahedral
+> rotations form A5 (order 60), while the full symmetry group is A5×C2
+> (order 120), not S5 (also order 120). Their centres already distinguish
+> the latter groups. The original body is preserved as idea provenance.
+> Use the [corrected fivefold boundary interfaces](../05-knowledge/results/fivefold_boundary_20261018g.md)
+> and [cardinality atlas](../05-knowledge/results/cardinality_bridges_20261018m.md)
+> for explicit maps, retained markings, and the limits of each transfer.
+
 # The Five Platonic Tournaments
 
 **Session**: kind-pasteur-2026-03-22-S20bh
