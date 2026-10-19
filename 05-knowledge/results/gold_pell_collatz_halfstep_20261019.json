@@ -1,0 +1,161 @@
+{
+  "checks": 262,
+  "modular_conic": [
+    {
+      "m": 1,
+      "n": 0,
+      "label": 6,
+      "budget": 1,
+      "Collatz": "-20"
+    },
+    {
+      "m": 1,
+      "n": 1,
+      "label": 3,
+      "budget": 0,
+      "Collatz": "1/13"
+    },
+    {
+      "m": 2,
+      "n": 0,
+      "label": 7,
+      "budget": 6,
+      "Collatz": "-7"
+    },
+    {
+      "m": 2,
+      "n": 2,
+      "label": 1,
+      "budget": null,
+      "Collatz": "16/13"
+    },
+    {
+      "m": 7,
+      "n": 8,
+      "label": 10,
+      "budget": 7,
+      "Collatz": "-14"
+    },
+    {
+      "m": 7,
+      "n": 10,
+      "label": 4,
+      "budget": 3,
+      "Collatz": "8/13"
+    },
+    {
+      "m": 8,
+      "n": 9,
+      "label": 8,
+      "budget": 8,
+      "Collatz": "-5"
+    },
+    {
+      "m": 8,
+      "n": 10,
+      "label": 5,
+      "budget": 10,
+      "Collatz": "4/13"
+    },
+    {
+      "m": 10,
+      "n": 2,
+      "label": 9,
+      "budget": 4,
+      "Collatz": "2/13"
+    },
+    {
+      "m": 10,
+      "n": 8,
+      "label": 2,
+      "budget": 2,
+      "Collatz": "-10"
+    }
+  ],
+  "integer_halfstep_orbit": [
+    {
+      "step": 0,
+      "m": 2,
+      "n": 2,
+      "label": 1,
+      "Collatz": "16/13"
+    },
+    {
+      "step": 1,
+      "m": -1,
+      "n": -3,
+      "label": 2,
+      "Collatz": "-10"
+    },
+    {
+      "step": 2,
+      "m": 7,
+      "n": 10,
+      "label": 4,
+      "Collatz": "8/13"
+    },
+    {
+      "step": 3,
+      "m": -14,
+      "n": -24,
+      "label": 8,
+      "Collatz": "-5"
+    },
+    {
+      "step": 4,
+      "m": 41,
+      "n": 65,
+      "label": 5,
+      "Collatz": "4/13"
+    },
+    {
+      "step": 5,
+      "m": -103,
+      "n": -168,
+      "label": 10,
+      "Collatz": "-14"
+    },
+    {
+      "step": 6,
+      "m": 274,
+      "n": 442,
+      "label": 9,
+      "Collatz": "2/13"
+    },
+    {
+      "step": 7,
+      "m": -713,
+      "n": -1155,
+      "label": 7,
+      "Collatz": "-7"
+    },
+    {
+      "step": 8,
+      "m": 1871,
+      "n": 3026,
+      "label": 3,
+      "Collatz": "1/13"
+    },
+    {
+      "step": 9,
+      "m": -4894,
+      "n": -7920,
+      "label": 6,
+      "Collatz": "-20"
+    },
+    {
+      "step": 10,
+      "m": 12817,
+      "n": 20737,
+      "label": 1,
+      "Collatz": "16/13"
+    },
+    {
+      "step": 11,
+      "m": -33551,
+      "n": -54288,
+      "label": 2,
+      "Collatz": "-10"
+    }
+  ]
+}
