@@ -1,0 +1,17 @@
+{
+  "packet": 122,
+  "status": "PASS",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "checks": 160,
+  "commands": [
+    "python 04-computation/experiments/planar_riccati_invariant_transcendence_20261019.py",
+    "python -O 04-computation/experiments/planar_riccati_invariant_transcendence_20261019.py"
+  ],
+  "normal_output": "05-knowledge/results/planar_riccati_invariant_transcendence_20261019.json",
+  "optimized_output": "05-knowledge/results/planar_riccati_invariant_transcendence_20261019_optimized.json",
+  "normal_sha256": "f14074896fe5adf55c67856da63bbc5d9d22be587d709e9e35c03fe30a2f057c",
+  "optimized_sha256": "f14074896fe5adf55c67856da63bbc5d9d22be587d709e9e35c03fe30a2f057c",
+  "byte_identical": true,
+  "scope": "Finite exact controls; universal transcendence follows from the written specialization and norm proofs."
+}

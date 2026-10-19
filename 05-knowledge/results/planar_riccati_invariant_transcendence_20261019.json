@@ -1,0 +1,97 @@
+{
+  "checks": 160,
+  "commuting_family_polynomials": [
+    "e",
+    "e**2",
+    "e**2 + e",
+    "2*e**3 - e"
+  ],
+  "formal_Riccati_controls": [
+    {
+      "P": "1",
+      "U": "z",
+      "f": "e",
+      "time": 1,
+      "weight_cutoff": 10
+    },
+    {
+      "P": "-1",
+      "U": "-z",
+      "f": "e",
+      "time": -1,
+      "weight_cutoff": 10
+    },
+    {
+      "P": "2",
+      "U": "2*z",
+      "f": "e",
+      "time": 2,
+      "weight_cutoff": 10
+    },
+    {
+      "P": "6*z**2",
+      "U": "2*z**3",
+      "f": "e**2",
+      "time": 1,
+      "weight_cutoff": 10
+    },
+    {
+      "P": "-6*z**2",
+      "U": "-2*z**3",
+      "f": "e**2",
+      "time": -1,
+      "weight_cutoff": 10
+    },
+    {
+      "P": "12*z**2",
+      "U": "4*z**3",
+      "f": "e**2",
+      "time": 2,
+      "weight_cutoff": 10
+    },
+    {
+      "P": "6*z**2 + 1",
+      "U": "z*(2*z**2 + 1)",
+      "f": "e**2 + e",
+      "time": 1,
+      "weight_cutoff": 10
+    },
+    {
+      "P": "-6*z**2 - 1",
+      "U": "-z*(2*z**2 + 1)",
+      "f": "e**2 + e",
+      "time": -1,
+      "weight_cutoff": 10
+    },
+    {
+      "P": "12*z**2 + 2",
+      "U": "2*z*(2*z**2 + 1)",
+      "f": "e**2 + e",
+      "time": 2,
+      "weight_cutoff": 10
+    },
+    {
+      "P": "30*z**4 - 1",
+      "U": "z*(6*z**4 - 1)",
+      "f": "2*e**3 - e",
+      "time": 1,
+      "weight_cutoff": 10
+    },
+    {
+      "P": "1 - 30*z**4",
+      "U": "-z*(6*z**4 - 1)",
+      "f": "2*e**3 - e",
+      "time": -1,
+      "weight_cutoff": 10
+    },
+    {
+      "P": "60*z**4 - 2",
+      "U": "2*z*(6*z**4 - 1)",
+      "f": "2*e**3 - e",
+      "time": 2,
+      "weight_cutoff": 10
+    }
+  ],
+  "scope": "Finite exact controls; transcendence follows from the written specialization and norm proofs, not finite truncations.",
+  "status": "PASS"
+}
