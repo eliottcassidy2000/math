@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "actual_exterior_results": [
+    {
+      "common_count": 4,
+      "actual_posets": 100,
+      "maximum_observed_sum": "517/98",
+      "minimum_normalized_deficit": "17/98"
+    },
+    {
+      "common_count": 5,
+      "actual_posets": 100,
+      "maximum_observed_sum": "200/31",
+      "minimum_normalized_deficit": "20/31"
+    },
+    {
+      "common_count": 6,
+      "actual_posets": 100,
+      "maximum_observed_sum": "50047/6525",
+      "minimum_normalized_deficit": "2153/2175"
+    },
+    {
+      "common_count": 7,
+      "actual_posets": 100,
+      "maximum_observed_sum": "53657/6109",
+      "minimum_normalized_deficit": "10081/6109"
+    }
+  ],
+  "actual_posets_total": 400,
+  "maximum_order": 17,
+  "largest_subset_dp_state_count": 762,
+  "missing_slave_formula_checks": 45
+}
