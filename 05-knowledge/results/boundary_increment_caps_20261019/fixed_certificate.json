@@ -1,0 +1,305 @@
+{
+  "core": [
+    0,
+    28,
+    0,
+    0,
+    12,
+    12,
+    13,
+    125,
+    125
+  ],
+  "order": [
+    2,
+    3,
+    0,
+    4,
+    5,
+    6,
+    1,
+    7,
+    8
+  ],
+  "comparisons": [
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "weight": 4
+    },
+    {
+      "pair": [
+        6,
+        1
+      ],
+      "weight": 6
+    },
+    {
+      "pair": [
+        4,
+        5
+      ],
+      "weight": 5
+    },
+    {
+      "pair": [
+        5,
+        6
+      ],
+      "weight": 9
+    },
+    {
+      "pair": [
+        7,
+        8
+      ],
+      "weight": 1
+    }
+  ],
+  "caps": [
+    {
+      "side": "B",
+      "prefix": [],
+      "suffix": [
+        6,
+        7,
+        8
+      ],
+      "bound": 4,
+      "weight": 46
+    },
+    {
+      "side": "B",
+      "prefix": [],
+      "suffix": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "bound": 3,
+      "weight": 38
+    },
+    {
+      "side": "B",
+      "prefix": [],
+      "suffix": [
+        5,
+        6,
+        8,
+        7
+      ],
+      "bound": 3,
+      "weight": 20
+    },
+    {
+      "side": "B",
+      "prefix": [
+        2
+      ],
+      "suffix": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "bound": 3,
+      "weight": 12
+    },
+    {
+      "side": "B",
+      "prefix": [
+        2
+      ],
+      "suffix": [
+        5,
+        6,
+        8,
+        7
+      ],
+      "bound": 3,
+      "weight": 5
+    },
+    {
+      "side": "B",
+      "prefix": [
+        3
+      ],
+      "suffix": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "bound": 3,
+      "weight": 9
+    },
+    {
+      "side": "B",
+      "prefix": [
+        3
+      ],
+      "suffix": [
+        5,
+        6,
+        8,
+        7
+      ],
+      "bound": 3,
+      "weight": 2
+    },
+    {
+      "side": "B",
+      "prefix": [
+        2,
+        3
+      ],
+      "suffix": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "bound": 3,
+      "weight": 3
+    },
+    {
+      "side": "A",
+      "prefix": [
+        2,
+        3,
+        4
+      ],
+      "suffix": [],
+      "bound": 4,
+      "weight": 19
+    },
+    {
+      "side": "A",
+      "prefix": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "suffix": [],
+      "bound": 3,
+      "weight": 58
+    },
+    {
+      "side": "A",
+      "prefix": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "suffix": [
+        7
+      ],
+      "bound": 3,
+      "weight": 13
+    },
+    {
+      "side": "A",
+      "prefix": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "suffix": [
+        8
+      ],
+      "bound": 3,
+      "weight": 20
+    },
+    {
+      "side": "A",
+      "prefix": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "suffix": [
+        7,
+        8
+      ],
+      "bound": 3,
+      "weight": 7
+    },
+    {
+      "side": "A",
+      "prefix": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "suffix": [
+        8,
+        7
+      ],
+      "bound": 3,
+      "weight": 1
+    },
+    {
+      "side": "A",
+      "prefix": [
+        3,
+        2,
+        4,
+        5
+      ],
+      "suffix": [],
+      "bound": 3,
+      "weight": 50
+    },
+    {
+      "side": "A",
+      "prefix": [
+        3,
+        2,
+        4,
+        5
+      ],
+      "suffix": [
+        7
+      ],
+      "bound": 3,
+      "weight": 10
+    },
+    {
+      "side": "A",
+      "prefix": [
+        3,
+        2,
+        4,
+        5
+      ],
+      "suffix": [
+        8
+      ],
+      "bound": 3,
+      "weight": 17
+    },
+    {
+      "side": "A",
+      "prefix": [
+        3,
+        2,
+        4,
+        5
+      ],
+      "suffix": [
+        7,
+        8
+      ],
+      "bound": 3,
+      "weight": 5
+    }
+  ]
+}
