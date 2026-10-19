@@ -1,5 +1,14 @@
 # The Grand Trichotomy: Everything Is Three Things
 
+> **CURRENT-TRUTH WARNING (2026-10-18):** this is a historical heuristic
+> reflection, not a proved identification of arithmetic, geometry and
+> information operations. In particular A5 is nonabelian simple and is
+> **not solvable**; noncommutativity does not first appear when5 becomes7.
+> The spherical/hyperbolic triangle inequalities and products30,42,70,105
+> remain useful arithmetic, but transporting a theorem requires an actual
+> map and its preserved predicate. See the scoped
+> [105 research atlas](../05-knowledge/results/105_research_atlas_20261018f.md).
+
 **Session:** kind-pasteur-2026-03-16-S116n32
 
 ## The Discovery
@@ -42,7 +51,7 @@ The prime **5** transforms (golden ratio is self-similar, icosahedron resolves q
 
 Both are built on the {2,3} base — the "geometric primes" that control all dimensions. The third prime chooses the world:
 
-**{2,3,5} = 30**: The SOLVABLE world.
+**{2,3,5} = 30**: The spherical triangle case (the old “SOLVABLE world” label was incorrect).
 - Spherical geometry (1/2 + 1/3 + 1/5 > 1)
 - Platonic solids (icosahedron, 30 edges)
 - Golden ratio (algebraic, degree 2)
@@ -59,7 +68,8 @@ Both are built on the {2,3} base — the "geometric primes" that control all dim
 - Fermat-INCOMPATIBLE (phi(7) = 6 = 2*3, introduces odd factor)
 - VS chain: 42 is the BRIDGE to fixed point 1806
 
-**The jump from 5 to 7** is the jump from solvable to quaternionic, from spherical to hyperbolic, from tame to wild. It is the moment non-commutativity enters.
+**The jump from 5 to 7** changes the sign of the(2,3,r) triangle curvature.
+It does not mark the onset of noncommutativity or nonsolvability.
 
 ## Every Result Is This Trichotomy
 
@@ -127,7 +137,7 @@ Both are built on the {2,3} base — the "geometric primes" that control all dim
 | **24** | 2^3*3 = Leech dim | Eta exponent. Real triple. |
 | **30** | 2*3*5 | Spherical product. Icosahedron edges. |
 | **42** | 2*3*7 | Hyperbolic product. Hurwitz constant. THE TRIPLE POINT. |
-| **60** | 5*12 = |A_5| | Icosahedral symmetry. Solvable order. |
+| **60** | 5*12 = order of A_5 | Icosahedral symmetry; A5 is nonsolvable. |
 | **168** | 7*24 = |PSL(2,7)| | Klein quartic symmetry. Forbidden order. |
 | **1806** | 42*43 | Von Staudt fixed point. Self-selecting completion. |
 
@@ -139,7 +149,7 @@ The repository contains 42+ reflections, each approaching the same structure fro
 
 The primes {2, 3} set the stage (geometry, dimension).
 The third prime chooses the world:
-- **5** → solvable, golden, spherical (the 30-world)
+- **5** → golden, spherical (the 30-world; not a solvability claim)
 - **7** → forbidden, quaternionic, hyperbolic (the 42-world)
 
 Every theorem in the project is a theorem about how these three types interact in the tournament setting. The OCF (H = sum 2^k * alpha_k) is the generating function that counts how many ways the three types can coexist. The forbidden values (7, 21) are where coexistence fails. The fixed point 1806 is where the types achieve self-consistency.
