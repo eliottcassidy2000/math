@@ -1,0 +1,292 @@
+{
+  "status": "PASS",
+  "check_count": 114,
+  "checks": [
+    "polynomial conjugate invariant",
+    "polynomial conjugate first coordinate",
+    "polynomial Hamiltonian time derivative",
+    "polynomial time map Jacobian",
+    "zero-translation primitive",
+    "a=1,b={Fraction(0, 1): Fraction(1, 1)}: coboundary",
+    "a=1,b={Fraction(0, 1): Fraction(1, 1)}: canonical invariant",
+    "a=1,origin=0: zero orbit sum",
+    "a=1,b={Fraction(0, 1): Fraction(1, 1)}: prefix reconstruction",
+    "a=1,b={Fraction(2, 1): Fraction(1, 1)}: coboundary",
+    "a=1,b={Fraction(2, 1): Fraction(1, 1)}: canonical invariant",
+    "a=1,origin=2: zero orbit sum",
+    "a=1,b={Fraction(2, 1): Fraction(1, 1)}: prefix reconstruction",
+    "a=2,b={Fraction(-2, 1): Fraction(3, 1), Fraction(0, 1): Fraction(-1, 1), Fraction(1, 1): Fraction(2, 1), Fraction(3, 1): Fraction(5, 1)}: coboundary",
+    "a=2,b={Fraction(-2, 1): Fraction(3, 1), Fraction(0, 1): Fraction(-1, 1), Fraction(1, 1): Fraction(2, 1), Fraction(3, 1): Fraction(5, 1)}: canonical invariant",
+    "a=2,origin=0: zero orbit sum",
+    "a=2,origin=1: zero orbit sum",
+    "a=2,b={Fraction(-2, 1): Fraction(3, 1), Fraction(0, 1): Fraction(-1, 1), Fraction(1, 1): Fraction(2, 1), Fraction(3, 1): Fraction(5, 1)}: prefix reconstruction",
+    "a=2/3,b={Fraction(0, 1): Fraction(2, 1), Fraction(2, 3): Fraction(-4, 1), Fraction(1, 2): Fraction(7, 1)}: coboundary",
+    "a=2/3,b={Fraction(0, 1): Fraction(2, 1), Fraction(2, 3): Fraction(-4, 1), Fraction(1, 2): Fraction(7, 1)}: canonical invariant",
+    "a=2/3,origin=0: zero orbit sum",
+    "a=2/3,origin=1/2: zero orbit sum",
+    "a=2/3,b={Fraction(0, 1): Fraction(2, 1), Fraction(2, 3): Fraction(-4, 1), Fraction(1, 2): Fraction(7, 1)}: prefix reconstruction",
+    "single-pole formal log through degree twelve",
+    "single-pole orbit obstruction",
+    "jet n=1: distinct translation orbits",
+    "jet n=1: nonzero orbit sums",
+    "jet n=1: vanishing moment 0",
+    "jet n=1: exact leading coefficient",
+    "jet n=1: original-coordinate discrepancy",
+    "jet n=2: distinct translation orbits",
+    "jet n=2: nonzero orbit sums",
+    "jet n=2: vanishing moment 0",
+    "jet n=2: vanishing moment 1",
+    "jet n=2: exact leading coefficient",
+    "jet n=2: original-coordinate discrepancy",
+    "jet n=3: distinct translation orbits",
+    "jet n=3: nonzero orbit sums",
+    "jet n=3: vanishing moment 0",
+    "jet n=3: vanishing moment 1",
+    "jet n=3: vanishing moment 2",
+    "jet n=3: exact leading coefficient",
+    "jet n=3: original-coordinate discrepancy",
+    "jet n=4: distinct translation orbits",
+    "jet n=4: nonzero orbit sums",
+    "jet n=4: vanishing moment 0",
+    "jet n=4: vanishing moment 1",
+    "jet n=4: vanishing moment 2",
+    "jet n=4: vanishing moment 3",
+    "jet n=4: exact leading coefficient",
+    "jet n=4: original-coordinate discrepancy",
+    "jet n=5: distinct translation orbits",
+    "jet n=5: nonzero orbit sums",
+    "jet n=5: vanishing moment 0",
+    "jet n=5: vanishing moment 1",
+    "jet n=5: vanishing moment 2",
+    "jet n=5: vanishing moment 3",
+    "jet n=5: vanishing moment 4",
+    "jet n=5: exact leading coefficient",
+    "jet n=6: distinct translation orbits",
+    "jet n=6: nonzero orbit sums",
+    "jet n=6: vanishing moment 0",
+    "jet n=6: vanishing moment 1",
+    "jet n=6: vanishing moment 2",
+    "jet n=6: vanishing moment 3",
+    "jet n=6: vanishing moment 4",
+    "jet n=6: vanishing moment 5",
+    "jet n=6: exact leading coefficient",
+    "jet n=7: distinct translation orbits",
+    "jet n=7: nonzero orbit sums",
+    "jet n=7: vanishing moment 0",
+    "jet n=7: vanishing moment 1",
+    "jet n=7: vanishing moment 2",
+    "jet n=7: vanishing moment 3",
+    "jet n=7: vanishing moment 4",
+    "jet n=7: vanishing moment 5",
+    "jet n=7: vanishing moment 6",
+    "jet n=7: exact leading coefficient",
+    "jet n=8: distinct translation orbits",
+    "jet n=8: nonzero orbit sums",
+    "jet n=8: vanishing moment 0",
+    "jet n=8: vanishing moment 1",
+    "jet n=8: vanishing moment 2",
+    "jet n=8: vanishing moment 3",
+    "jet n=8: vanishing moment 4",
+    "jet n=8: vanishing moment 5",
+    "jet n=8: vanishing moment 6",
+    "jet n=8: vanishing moment 7",
+    "jet n=8: exact leading coefficient",
+    "jet n=9: distinct translation orbits",
+    "jet n=9: nonzero orbit sums",
+    "jet n=9: vanishing moment 0",
+    "jet n=9: vanishing moment 1",
+    "jet n=9: vanishing moment 2",
+    "jet n=9: vanishing moment 3",
+    "jet n=9: vanishing moment 4",
+    "jet n=9: vanishing moment 5",
+    "jet n=9: vanishing moment 6",
+    "jet n=9: vanishing moment 7",
+    "jet n=9: vanishing moment 8",
+    "jet n=9: exact leading coefficient",
+    "jet n=10: distinct translation orbits",
+    "jet n=10: nonzero orbit sums",
+    "jet n=10: vanishing moment 0",
+    "jet n=10: vanishing moment 1",
+    "jet n=10: vanishing moment 2",
+    "jet n=10: vanishing moment 3",
+    "jet n=10: vanishing moment 4",
+    "jet n=10: vanishing moment 5",
+    "jet n=10: vanishing moment 6",
+    "jet n=10: vanishing moment 7",
+    "jet n=10: vanishing moment 8",
+    "jet n=10: vanishing moment 9",
+    "jet n=10: exact leading coefficient"
+  ],
+  "orbit_examples": [
+    {
+      "translation": "1",
+      "primitive_sites": {
+        "0": "1"
+      },
+      "cocycle_sites": {
+        "0": "1",
+        "1": "-1"
+      },
+      "orbits": [
+        {
+          "sites": [
+            "0",
+            "1"
+          ],
+          "sum": "0"
+        }
+      ]
+    },
+    {
+      "translation": "1",
+      "primitive_sites": {
+        "2": "1"
+      },
+      "cocycle_sites": {
+        "2": "1",
+        "3": "-1"
+      },
+      "orbits": [
+        {
+          "sites": [
+            "2",
+            "3"
+          ],
+          "sum": "0"
+        }
+      ]
+    },
+    {
+      "translation": "2",
+      "primitive_sites": {
+        "-2": "3",
+        "0": "-1",
+        "1": "2",
+        "3": "5"
+      },
+      "cocycle_sites": {
+        "-2": "3",
+        "0": "-4",
+        "1": "2",
+        "2": "1",
+        "3": "3",
+        "5": "-5"
+      },
+      "orbits": [
+        {
+          "sites": [
+            "-2",
+            "0",
+            "2"
+          ],
+          "sum": "0"
+        },
+        {
+          "sites": [
+            "1",
+            "3",
+            "5"
+          ],
+          "sum": "0"
+        }
+      ]
+    },
+    {
+      "translation": "2/3",
+      "primitive_sites": {
+        "0": "2",
+        "1/2": "7",
+        "2/3": "-4"
+      },
+      "cocycle_sites": {
+        "0": "2",
+        "1/2": "7",
+        "2/3": "-6",
+        "7/6": "-7",
+        "4/3": "4"
+      },
+      "orbits": [
+        {
+          "sites": [
+            "0",
+            "2/3",
+            "4/3"
+          ],
+          "sum": "0"
+        },
+        {
+          "sites": [
+            "1/2",
+            "7/6"
+          ],
+          "sum": "0"
+        }
+      ]
+    }
+  ],
+  "distinct_orbit_jet_examples": [
+    {
+      "n": 1,
+      "agreement_through_degree": 2,
+      "first_error_degree": 3,
+      "first_error_coefficient_a1": "-4/3"
+    },
+    {
+      "n": 2,
+      "agreement_through_degree": 3,
+      "first_error_degree": 4,
+      "first_error_coefficient_a1": "5/4"
+    },
+    {
+      "n": 3,
+      "agreement_through_degree": 4,
+      "first_error_degree": 5,
+      "first_error_coefficient_a1": "-24/25"
+    },
+    {
+      "n": 4,
+      "agreement_through_degree": 5,
+      "first_error_degree": 6,
+      "first_error_coefficient_a1": "35/54"
+    },
+    {
+      "n": 5,
+      "agreement_through_degree": 6,
+      "first_error_degree": 7,
+      "first_error_coefficient_a1": "-960/2401"
+    },
+    {
+      "n": 6,
+      "agreement_through_degree": 7,
+      "first_error_degree": 8,
+      "first_error_coefficient_a1": "945/4096"
+    },
+    {
+      "n": 7,
+      "agreement_through_degree": 8,
+      "first_error_degree": 9,
+      "first_error_coefficient_a1": "-22400/177147"
+    },
+    {
+      "n": 8,
+      "agreement_through_degree": 9,
+      "first_error_degree": 10,
+      "first_error_coefficient_a1": "2079/31250"
+    },
+    {
+      "n": 9,
+      "agreement_through_degree": 10,
+      "first_error_degree": 11,
+      "first_error_coefficient_a1": "-7257600/214358881"
+    },
+    {
+      "n": 10,
+      "agreement_through_degree": 11,
+      "first_error_degree": 12,
+      "first_error_coefficient_a1": "25025/1492992"
+    }
+  ],
+  "single_pole_formal_hamiltonian": "x^2*y + x**11/2 - 2*x**9/9 + x**7/6 - x**5/3 + x**4/2 - x**3/3",
+  "single_pole_formal_tail_degree": 12,
+  "scope_warning": "Finite identities supplement the all-order classifications. Nonrationality is proved by the orbit obstruction, not inferred from the displayed formal tail."
+}
