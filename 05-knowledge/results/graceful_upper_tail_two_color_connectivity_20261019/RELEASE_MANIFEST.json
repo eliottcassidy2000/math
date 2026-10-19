@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-19",
+  "destination": "05-knowledge/results/graceful_upper_tail_two_color_connectivity_20261019",
+  "files_sha256": {
+    "INDEPENDENT_REVIEW.md": "6a1cee5fed2f3e6d8a7b337275bb5ec1e67d41fbd805851deb39ee2bac1e62d8",
+    "LITERATURE_SCOPE.md": "119cdaee18f37d54ca334d2e1fa86450b6e5ac216da95e7f3dc49967cfb292d3",
+    "README.md": "b51a9bf1679d0efa3b730b952828df403d0b0bc5d5f789fbdc0f48c4791d1bb9",
+    "REPLAY_RECEIPT.json": "ba75938ebad03d78ffe55888f52bedca9a45f4cddd516c931e825038b2ebf7e4",
+    "UPPER_TAIL_TWO_COLOR_CONNECTIVITY.md": "77413017a7eef590b022e1cb4995291eed3c2372828731f114550148e1d92278",
+    "binary_matroid_controls.json": "4ec89d5bf109b209af90223bb83f38df333d97b3026e6e89a2493cb13cb032a5",
+    "check_binary_matroids.py": "0da0aca3e6028a85c2dc7dee69588a50fae578d9e3195683bf495b82aa5480e6",
+    "controls.json": "504766eff0c8154397987337b8031276ea41efcb4c53cb1d579d88b9d3e77d02",
+    "verify_staircase.py": "fbee228ec211f1a43b264e2e10d6b69782a74e7ab9551634d37d87c3d9c2bac3"
+  },
+  "packet": 93,
+  "runtime_dependencies": "Python standard library only; all input data co-located",
+  "scope": "Tree shape may change. No global one-color or graceful-tree existence claim; no historical novelty assertion.",
+  "sources": {
+    "binary_controls": "independent reviewer enumeration of 80 binary matroids",
+    "graphic_controls": "deterministic constructive algorithm with explicit per-move checks",
+    "proof": "rank-staircase-stage mathematical derivation, independently reviewed"
+  },
+  "theorem": "All integer-difference upper-tail completion fibers are connected by at-most-two-color moves; diameter at most 2^(r-1) for r>=1, and zero for r=0."
+}

@@ -1,0 +1,12 @@
+{
+  "binary_instances": 80,
+  "binary_states": 1882,
+  "graphic_checks": 524970,
+  "graphic_full_moves": 34216,
+  "graphic_parallel_swap_branches": 2550,
+  "graphic_paths": 8904,
+  "relocated_binary_normal_exact_match": true,
+  "relocated_graphic_normal_exact_match": true,
+  "relocated_graphic_optimized_exact_match": true,
+  "status": "passed"
+}
