@@ -1,0 +1,85 @@
+{
+  "status": "BOUNDED_CANONICAL_IMPACT_VERIFIED",
+  "summary": [
+    {
+      "scope": [
+        2,
+        4,
+        1
+      ],
+      "sample_cores": 100,
+      "counts": {
+        "baseline": 1514,
+        "secondary_any_root_excluded": 0,
+        "union_excluded": 804,
+        "secondary_only": 0,
+        "canonical_excluded": 804,
+        "witness_common_2": 323,
+        "combined_retained": 710,
+        "witness_common_3": 459,
+        "witness_common_4": 22
+      },
+      "nonempty_cores_fully_removed": 10
+    },
+    {
+      "scope": [
+        3,
+        3,
+        1
+      ],
+      "sample_cores": 100,
+      "counts": {
+        "baseline": 1150,
+        "secondary_any_root_excluded": 0,
+        "union_excluded": 598,
+        "secondary_only": 0,
+        "canonical_excluded": 598,
+        "witness_common_3": 198,
+        "witness_common_2": 400,
+        "combined_retained": 552
+      },
+      "nonempty_cores_fully_removed": 34
+    },
+    {
+      "scope": [
+        2,
+        5,
+        0
+      ],
+      "sample_cores": 100,
+      "counts": {
+        "baseline": 3020,
+        "secondary_any_root_excluded": 0,
+        "union_excluded": 2000,
+        "secondary_only": 0,
+        "canonical_excluded": 2000,
+        "witness_common_2": 822,
+        "combined_retained": 1020,
+        "witness_common_1": 554,
+        "witness_common_3": 624
+      },
+      "nonempty_cores_fully_removed": 13
+    },
+    {
+      "scope": [
+        3,
+        4,
+        0
+      ],
+      "sample_cores": 100,
+      "counts": {
+        "baseline": 2476,
+        "secondary_any_root_excluded": 0,
+        "union_excluded": 1400,
+        "secondary_only": 0,
+        "canonical_excluded": 1400,
+        "witness_common_2": 654,
+        "combined_retained": 1076,
+        "witness_common_3": 470,
+        "witness_common_1": 276
+      },
+      "nonempty_cores_fully_removed": 0
+    }
+  ],
+  "scope": "Four fixed 100-core samples; not population coverage"
+}

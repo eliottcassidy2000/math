@@ -1,0 +1,6042 @@
+[
+  {
+    "scope": [
+      2,
+      4,
+      1
+    ],
+    "source_sha256": "b4e8602f29072b5d411500422eeebb5b149ead76172b1ed98fce0edcb300c888",
+    "cores": [
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          57
+        ],
+        "core_index": 294,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          61
+        ],
+        "core_index": 295,
+        "expected_residual_orders": 7
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          89
+        ],
+        "core_index": 298,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          93
+        ],
+        "core_index": 299,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          121
+        ],
+        "core_index": 302,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          125
+        ],
+        "core_index": 303,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          189
+        ],
+        "core_index": 305,
+        "expected_residual_orders": 11
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          253
+        ],
+        "core_index": 307,
+        "expected_residual_orders": 12
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          53
+        ],
+        "core_index": 313,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          61
+        ],
+        "core_index": 315,
+        "expected_residual_orders": 7
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          85
+        ],
+        "core_index": 317,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          93
+        ],
+        "core_index": 319,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          117
+        ],
+        "core_index": 321,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          125
+        ],
+        "core_index": 323,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          189
+        ],
+        "core_index": 325,
+        "expected_residual_orders": 11
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          253
+        ],
+        "core_index": 327,
+        "expected_residual_orders": 12
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          53
+        ],
+        "core_index": 333,
+        "expected_residual_orders": 7
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          57
+        ],
+        "core_index": 334,
+        "expected_residual_orders": 7
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          61
+        ],
+        "core_index": 335,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          85
+        ],
+        "core_index": 337,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          89
+        ],
+        "core_index": 338,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          93
+        ],
+        "core_index": 339,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          117
+        ],
+        "core_index": 341,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          121
+        ],
+        "core_index": 342,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          125
+        ],
+        "core_index": 343,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          189
+        ],
+        "core_index": 344,
+        "expected_residual_orders": 10
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          253
+        ],
+        "core_index": 345,
+        "expected_residual_orders": 12
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          53
+        ],
+        "core_index": 359,
+        "expected_residual_orders": 25
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          57
+        ],
+        "core_index": 360,
+        "expected_residual_orders": 25
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          85
+        ],
+        "core_index": 367,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          89
+        ],
+        "core_index": 368,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          117
+        ],
+        "core_index": 375,
+        "expected_residual_orders": 27
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          121
+        ],
+        "core_index": 376,
+        "expected_residual_orders": 27
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          181
+        ],
+        "core_index": 379,
+        "expected_residual_orders": 22
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          185
+        ],
+        "core_index": 380,
+        "expected_residual_orders": 22
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          245
+        ],
+        "core_index": 383,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          249
+        ],
+        "core_index": 384,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          41
+        ],
+        "core_index": 396,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          45
+        ],
+        "core_index": 397,
+        "expected_residual_orders": 7
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          49
+        ],
+        "core_index": 398,
+        "expected_residual_orders": 25
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          53
+        ],
+        "core_index": 399,
+        "expected_residual_orders": 18
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          57
+        ],
+        "core_index": 400,
+        "expected_residual_orders": 18
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          61
+        ],
+        "core_index": 401,
+        "expected_residual_orders": 17
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          73
+        ],
+        "core_index": 404,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          77
+        ],
+        "core_index": 405,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          81
+        ],
+        "core_index": 406,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          85
+        ],
+        "core_index": 407,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          89
+        ],
+        "core_index": 408,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          93
+        ],
+        "core_index": 409,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          105
+        ],
+        "core_index": 412,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          109
+        ],
+        "core_index": 413,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          113
+        ],
+        "core_index": 414,
+        "expected_residual_orders": 27
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          117
+        ],
+        "core_index": 415,
+        "expected_residual_orders": 22
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          121
+        ],
+        "core_index": 416,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          125
+        ],
+        "core_index": 417,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          181
+        ],
+        "core_index": 418,
+        "expected_residual_orders": 19
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          189
+        ],
+        "core_index": 419,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          245
+        ],
+        "core_index": 420,
+        "expected_residual_orders": 21
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          253
+        ],
+        "core_index": 421,
+        "expected_residual_orders": 22
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          37
+        ],
+        "core_index": 431,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          45
+        ],
+        "core_index": 433,
+        "expected_residual_orders": 7
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          49
+        ],
+        "core_index": 434,
+        "expected_residual_orders": 25
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          53
+        ],
+        "core_index": 435,
+        "expected_residual_orders": 18
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          57
+        ],
+        "core_index": 436,
+        "expected_residual_orders": 18
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          61
+        ],
+        "core_index": 437,
+        "expected_residual_orders": 17
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          69
+        ],
+        "core_index": 439,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          77
+        ],
+        "core_index": 441,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          81
+        ],
+        "core_index": 442,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          85
+        ],
+        "core_index": 443,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          89
+        ],
+        "core_index": 444,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          93
+        ],
+        "core_index": 445,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          101
+        ],
+        "core_index": 447,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          109
+        ],
+        "core_index": 449,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          113
+        ],
+        "core_index": 450,
+        "expected_residual_orders": 27
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          117
+        ],
+        "core_index": 451,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          121
+        ],
+        "core_index": 452,
+        "expected_residual_orders": 22
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          125
+        ],
+        "core_index": 453,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          185
+        ],
+        "core_index": 454,
+        "expected_residual_orders": 19
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          189
+        ],
+        "core_index": 455,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          249
+        ],
+        "core_index": 456,
+        "expected_residual_orders": 21
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          253
+        ],
+        "core_index": 457,
+        "expected_residual_orders": 22
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          37
+        ],
+        "core_index": 467,
+        "expected_residual_orders": 7
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          41
+        ],
+        "core_index": 468,
+        "expected_residual_orders": 7
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          45
+        ],
+        "core_index": 469,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          53
+        ],
+        "core_index": 471,
+        "expected_residual_orders": 17
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          57
+        ],
+        "core_index": 472,
+        "expected_residual_orders": 17
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          61
+        ],
+        "core_index": 473,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          69
+        ],
+        "core_index": 475,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          73
+        ],
+        "core_index": 476,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          77
+        ],
+        "core_index": 477,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          85
+        ],
+        "core_index": 479,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          89
+        ],
+        "core_index": 480,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          93
+        ],
+        "core_index": 481,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          101
+        ],
+        "core_index": 483,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          105
+        ],
+        "core_index": 484,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          109
+        ],
+        "core_index": 485,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          117
+        ],
+        "core_index": 487,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          121
+        ],
+        "core_index": 488,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          125
+        ],
+        "core_index": 489,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          0,
+          1,
+          1,
+          61,
+          189
+        ],
+        "core_index": 490,
+        "expected_residual_orders": 10
+      }
+    ]
+  },
+  {
+    "scope": [
+      3,
+      3,
+      1
+    ],
+    "source_sha256": "f0f1dec2c64cd1f4d7ef63cc34f0d05340885aec39c7ee783dc5383f5c6d12a6",
+    "cores": [
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          13,
+          53
+        ],
+        "core_index": 85,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          13,
+          57
+        ],
+        "core_index": 86,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          13,
+          61
+        ],
+        "core_index": 87,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          13,
+          117
+        ],
+        "core_index": 93,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          13,
+          121
+        ],
+        "core_index": 94,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          13,
+          125
+        ],
+        "core_index": 95,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          13,
+          189
+        ],
+        "core_index": 97,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          13,
+          253
+        ],
+        "core_index": 99,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          21,
+          45
+        ],
+        "core_index": 127,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          21,
+          57
+        ],
+        "core_index": 130,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          21,
+          61
+        ],
+        "core_index": 131,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          21,
+          109
+        ],
+        "core_index": 135,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          21,
+          121
+        ],
+        "core_index": 138,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          21,
+          125
+        ],
+        "core_index": 139,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          21,
+          189
+        ],
+        "core_index": 141,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          21,
+          253
+        ],
+        "core_index": 143,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          25,
+          45
+        ],
+        "core_index": 147,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          25,
+          53
+        ],
+        "core_index": 149,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          25,
+          61
+        ],
+        "core_index": 151,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          25,
+          109
+        ],
+        "core_index": 155,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          25,
+          117
+        ],
+        "core_index": 157,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          25,
+          125
+        ],
+        "core_index": 159,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          25,
+          189
+        ],
+        "core_index": 161,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          25,
+          253
+        ],
+        "core_index": 163,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          29,
+          45
+        ],
+        "core_index": 167,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          29,
+          53
+        ],
+        "core_index": 169,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          29,
+          57
+        ],
+        "core_index": 170,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          29,
+          61
+        ],
+        "core_index": 171,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          29,
+          109
+        ],
+        "core_index": 175,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          29,
+          117
+        ],
+        "core_index": 177,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          29,
+          121
+        ],
+        "core_index": 178,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          29,
+          125
+        ],
+        "core_index": 179,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          29,
+          189
+        ],
+        "core_index": 180,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          29,
+          253
+        ],
+        "core_index": 181,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          37,
+          41
+        ],
+        "core_index": 240,
+        "expected_residual_orders": 64
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          37,
+          45
+        ],
+        "core_index": 241,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          37,
+          49
+        ],
+        "core_index": 242,
+        "expected_residual_orders": 64
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          37,
+          53
+        ],
+        "core_index": 243,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          37,
+          105
+        ],
+        "core_index": 256,
+        "expected_residual_orders": 66
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          37,
+          109
+        ],
+        "core_index": 257,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          37,
+          113
+        ],
+        "core_index": 258,
+        "expected_residual_orders": 66
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          37,
+          117
+        ],
+        "core_index": 259,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          37,
+          173
+        ],
+        "core_index": 263,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          37,
+          181
+        ],
+        "core_index": 264,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          37,
+          237
+        ],
+        "core_index": 267,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          37,
+          245
+        ],
+        "core_index": 268,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          41,
+          37
+        ],
+        "core_index": 279,
+        "expected_residual_orders": 64
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          41,
+          45
+        ],
+        "core_index": 281,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          41,
+          49
+        ],
+        "core_index": 282,
+        "expected_residual_orders": 64
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          41,
+          57
+        ],
+        "core_index": 284,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          41,
+          101
+        ],
+        "core_index": 295,
+        "expected_residual_orders": 66
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          41,
+          109
+        ],
+        "core_index": 297,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          41,
+          113
+        ],
+        "core_index": 298,
+        "expected_residual_orders": 66
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          41,
+          121
+        ],
+        "core_index": 300,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          41,
+          173
+        ],
+        "core_index": 303,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          41,
+          185
+        ],
+        "core_index": 304,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          41,
+          237
+        ],
+        "core_index": 307,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          41,
+          249
+        ],
+        "core_index": 308,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          21
+        ],
+        "core_index": 315,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          25
+        ],
+        "core_index": 316,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          29
+        ],
+        "core_index": 317,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          37
+        ],
+        "core_index": 319,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          41
+        ],
+        "core_index": 320,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          45
+        ],
+        "core_index": 321,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          53
+        ],
+        "core_index": 323,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          57
+        ],
+        "core_index": 324,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          61
+        ],
+        "core_index": 325,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          85
+        ],
+        "core_index": 331,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          89
+        ],
+        "core_index": 332,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          93
+        ],
+        "core_index": 333,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          101
+        ],
+        "core_index": 335,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          105
+        ],
+        "core_index": 336,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          109
+        ],
+        "core_index": 337,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          117
+        ],
+        "core_index": 339,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          121
+        ],
+        "core_index": 340,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          125
+        ],
+        "core_index": 341,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          173
+        ],
+        "core_index": 342,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          189
+        ],
+        "core_index": 343,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          237
+        ],
+        "core_index": 344,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          45,
+          253
+        ],
+        "core_index": 345,
+        "expected_residual_orders": 4
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          49,
+          37
+        ],
+        "core_index": 355,
+        "expected_residual_orders": 64
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          49,
+          41
+        ],
+        "core_index": 356,
+        "expected_residual_orders": 64
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          49,
+          53
+        ],
+        "core_index": 359,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          49,
+          57
+        ],
+        "core_index": 360,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          49,
+          101
+        ],
+        "core_index": 371,
+        "expected_residual_orders": 66
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          49,
+          105
+        ],
+        "core_index": 372,
+        "expected_residual_orders": 66
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          49,
+          117
+        ],
+        "core_index": 375,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          49,
+          121
+        ],
+        "core_index": 376,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          49,
+          181
+        ],
+        "core_index": 379,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          49,
+          185
+        ],
+        "core_index": 380,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          49,
+          245
+        ],
+        "core_index": 383,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          49,
+          249
+        ],
+        "core_index": 384,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          53,
+          13
+        ],
+        "core_index": 389,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          53,
+          25
+        ],
+        "core_index": 392,
+        "expected_residual_orders": 2
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          53,
+          29
+        ],
+        "core_index": 393,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          53,
+          37
+        ],
+        "core_index": 395,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          53,
+          45
+        ],
+        "core_index": 397,
+        "expected_residual_orders": 8
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          53,
+          49
+        ],
+        "core_index": 398,
+        "expected_residual_orders": 9
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          53,
+          53
+        ],
+        "core_index": 399,
+        "expected_residual_orders": 0
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          0,
+          1,
+          53,
+          57
+        ],
+        "core_index": 400,
+        "expected_residual_orders": 8
+      }
+    ]
+  },
+  {
+    "scope": [
+      2,
+      5,
+      0
+    ],
+    "source_sha256": "7464edfff9181b3c71abecfcfe2a4c2e1b0f580c294f7fad007710006d67e2af",
+    "cores": [
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          49,
+          53
+        ],
+        "core_index": 541,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          49,
+          57
+        ],
+        "core_index": 542,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          49,
+          85
+        ],
+        "core_index": 549,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          49,
+          89
+        ],
+        "core_index": 550,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          49,
+          101
+        ],
+        "core_index": 553,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          49,
+          105
+        ],
+        "core_index": 554,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          49,
+          117
+        ],
+        "core_index": 557,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          49,
+          121
+        ],
+        "core_index": 558,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          49,
+          181
+        ],
+        "core_index": 561,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          49,
+          185
+        ],
+        "core_index": 562,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          49,
+          245
+        ],
+        "core_index": 565,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          49,
+          249
+        ],
+        "core_index": 566,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          49
+        ],
+        "core_index": 580,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          53
+        ],
+        "core_index": 581,
+        "expected_residual_orders": 40
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          57
+        ],
+        "core_index": 582,
+        "expected_residual_orders": 12
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          61
+        ],
+        "core_index": 583,
+        "expected_residual_orders": 22
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          81
+        ],
+        "core_index": 588,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          85
+        ],
+        "core_index": 589,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          89
+        ],
+        "core_index": 590,
+        "expected_residual_orders": 12
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          93
+        ],
+        "core_index": 591,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          97
+        ],
+        "core_index": 592,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          101
+        ],
+        "core_index": 593,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          105
+        ],
+        "core_index": 594,
+        "expected_residual_orders": 12
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          109
+        ],
+        "core_index": 595,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          113
+        ],
+        "core_index": 596,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          117
+        ],
+        "core_index": 597,
+        "expected_residual_orders": 48
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          121
+        ],
+        "core_index": 598,
+        "expected_residual_orders": 12
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          125
+        ],
+        "core_index": 599,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          181
+        ],
+        "core_index": 600,
+        "expected_residual_orders": 44
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          189
+        ],
+        "core_index": 601,
+        "expected_residual_orders": 34
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          245
+        ],
+        "core_index": 602,
+        "expected_residual_orders": 48
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          53,
+          253
+        ],
+        "core_index": 603,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          49
+        ],
+        "core_index": 616,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          53
+        ],
+        "core_index": 617,
+        "expected_residual_orders": 12
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          57
+        ],
+        "core_index": 618,
+        "expected_residual_orders": 40
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          61
+        ],
+        "core_index": 619,
+        "expected_residual_orders": 22
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          81
+        ],
+        "core_index": 624,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          85
+        ],
+        "core_index": 625,
+        "expected_residual_orders": 12
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          89
+        ],
+        "core_index": 626,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          93
+        ],
+        "core_index": 627,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          97
+        ],
+        "core_index": 628,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          101
+        ],
+        "core_index": 629,
+        "expected_residual_orders": 12
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          105
+        ],
+        "core_index": 630,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          109
+        ],
+        "core_index": 631,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          113
+        ],
+        "core_index": 632,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          117
+        ],
+        "core_index": 633,
+        "expected_residual_orders": 12
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          121
+        ],
+        "core_index": 634,
+        "expected_residual_orders": 48
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          125
+        ],
+        "core_index": 635,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          185
+        ],
+        "core_index": 636,
+        "expected_residual_orders": 44
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          189
+        ],
+        "core_index": 637,
+        "expected_residual_orders": 34
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          249
+        ],
+        "core_index": 638,
+        "expected_residual_orders": 48
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          57,
+          253
+        ],
+        "core_index": 639,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          61,
+          53
+        ],
+        "core_index": 653,
+        "expected_residual_orders": 22
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          61,
+          57
+        ],
+        "core_index": 654,
+        "expected_residual_orders": 22
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          61,
+          61
+        ],
+        "core_index": 655,
+        "expected_residual_orders": 64
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          61,
+          85
+        ],
+        "core_index": 661,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          61,
+          89
+        ],
+        "core_index": 662,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          61,
+          93
+        ],
+        "core_index": 663,
+        "expected_residual_orders": 72
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          61,
+          101
+        ],
+        "core_index": 665,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          61,
+          105
+        ],
+        "core_index": 666,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          61,
+          109
+        ],
+        "core_index": 667,
+        "expected_residual_orders": 72
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          61,
+          117
+        ],
+        "core_index": 669,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          61,
+          121
+        ],
+        "core_index": 670,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          61,
+          125
+        ],
+        "core_index": 671,
+        "expected_residual_orders": 72
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          61,
+          189
+        ],
+        "core_index": 672,
+        "expected_residual_orders": 32
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          61,
+          253
+        ],
+        "core_index": 673,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          81,
+          53
+        ],
+        "core_index": 851,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          81,
+          57
+        ],
+        "core_index": 852,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          81,
+          85
+        ],
+        "core_index": 859,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          81,
+          89
+        ],
+        "core_index": 860,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          81,
+          101
+        ],
+        "core_index": 863,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          81,
+          105
+        ],
+        "core_index": 864,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          81,
+          117
+        ],
+        "core_index": 867,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          81,
+          121
+        ],
+        "core_index": 868,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          81,
+          213
+        ],
+        "core_index": 871,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          81,
+          217
+        ],
+        "core_index": 872,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          81,
+          245
+        ],
+        "core_index": 875,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          81,
+          249
+        ],
+        "core_index": 876,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          49
+        ],
+        "core_index": 890,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          53
+        ],
+        "core_index": 891,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          57
+        ],
+        "core_index": 892,
+        "expected_residual_orders": 12
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          61
+        ],
+        "core_index": 893,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          81
+        ],
+        "core_index": 898,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          85
+        ],
+        "core_index": 899,
+        "expected_residual_orders": 40
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          89
+        ],
+        "core_index": 900,
+        "expected_residual_orders": 12
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          93
+        ],
+        "core_index": 901,
+        "expected_residual_orders": 22
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          97
+        ],
+        "core_index": 902,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          101
+        ],
+        "core_index": 903,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          105
+        ],
+        "core_index": 904,
+        "expected_residual_orders": 12
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          109
+        ],
+        "core_index": 905,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          113
+        ],
+        "core_index": 906,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          117
+        ],
+        "core_index": 907,
+        "expected_residual_orders": 48
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          121
+        ],
+        "core_index": 908,
+        "expected_residual_orders": 12
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          125
+        ],
+        "core_index": 909,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          213
+        ],
+        "core_index": 910,
+        "expected_residual_orders": 44
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          221
+        ],
+        "core_index": 911,
+        "expected_residual_orders": 34
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          245
+        ],
+        "core_index": 912,
+        "expected_residual_orders": 48
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          85,
+          253
+        ],
+        "core_index": 913,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          89,
+          49
+        ],
+        "core_index": 926,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          12,
+          0,
+          0,
+          1,
+          1,
+          1,
+          89,
+          53
+        ],
+        "core_index": 927,
+        "expected_residual_orders": 12
+      }
+    ]
+  },
+  {
+    "scope": [
+      3,
+      4,
+      0
+    ],
+    "source_sha256": "4b46d289a2a6807be6a8ad95d26d049cf9524e2ed73fd9c1055d79751ec1dcd1",
+    "cores": [
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          41
+        ],
+        "core_index": 422,
+        "expected_residual_orders": 54
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          45
+        ],
+        "core_index": 423,
+        "expected_residual_orders": 19
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          49
+        ],
+        "core_index": 424,
+        "expected_residual_orders": 54
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          53
+        ],
+        "core_index": 425,
+        "expected_residual_orders": 19
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          73
+        ],
+        "core_index": 430,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          77
+        ],
+        "core_index": 431,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          81
+        ],
+        "core_index": 432,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          85
+        ],
+        "core_index": 433,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          105
+        ],
+        "core_index": 438,
+        "expected_residual_orders": 54
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          109
+        ],
+        "core_index": 439,
+        "expected_residual_orders": 21
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          113
+        ],
+        "core_index": 440,
+        "expected_residual_orders": 54
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          117
+        ],
+        "core_index": 441,
+        "expected_residual_orders": 21
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          173
+        ],
+        "core_index": 445,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          181
+        ],
+        "core_index": 446,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          237
+        ],
+        "core_index": 449,
+        "expected_residual_orders": 18
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          37,
+          245
+        ],
+        "core_index": 450,
+        "expected_residual_orders": 18
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          37
+        ],
+        "core_index": 461,
+        "expected_residual_orders": 54
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          45
+        ],
+        "core_index": 463,
+        "expected_residual_orders": 19
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          49
+        ],
+        "core_index": 464,
+        "expected_residual_orders": 54
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          57
+        ],
+        "core_index": 466,
+        "expected_residual_orders": 19
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          69
+        ],
+        "core_index": 469,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          77
+        ],
+        "core_index": 471,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          81
+        ],
+        "core_index": 472,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          89
+        ],
+        "core_index": 474,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          101
+        ],
+        "core_index": 477,
+        "expected_residual_orders": 54
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          109
+        ],
+        "core_index": 479,
+        "expected_residual_orders": 21
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          113
+        ],
+        "core_index": 480,
+        "expected_residual_orders": 54
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          121
+        ],
+        "core_index": 482,
+        "expected_residual_orders": 21
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          173
+        ],
+        "core_index": 485,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          185
+        ],
+        "core_index": 486,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          237
+        ],
+        "core_index": 489,
+        "expected_residual_orders": 18
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          41,
+          249
+        ],
+        "core_index": 490,
+        "expected_residual_orders": 18
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          37
+        ],
+        "core_index": 501,
+        "expected_residual_orders": 19
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          41
+        ],
+        "core_index": 502,
+        "expected_residual_orders": 19
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          45
+        ],
+        "core_index": 503,
+        "expected_residual_orders": 28
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          53
+        ],
+        "core_index": 505,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          57
+        ],
+        "core_index": 506,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          61
+        ],
+        "core_index": 507,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          69
+        ],
+        "core_index": 509,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          73
+        ],
+        "core_index": 510,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          77
+        ],
+        "core_index": 511,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          85
+        ],
+        "core_index": 513,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          89
+        ],
+        "core_index": 514,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          93
+        ],
+        "core_index": 515,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          101
+        ],
+        "core_index": 517,
+        "expected_residual_orders": 21
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          105
+        ],
+        "core_index": 518,
+        "expected_residual_orders": 21
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          109
+        ],
+        "core_index": 519,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          117
+        ],
+        "core_index": 521,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          121
+        ],
+        "core_index": 522,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          125
+        ],
+        "core_index": 523,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          173
+        ],
+        "core_index": 524,
+        "expected_residual_orders": 32
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          189
+        ],
+        "core_index": 525,
+        "expected_residual_orders": 22
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          237
+        ],
+        "core_index": 526,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          45,
+          253
+        ],
+        "core_index": 527,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          37
+        ],
+        "core_index": 537,
+        "expected_residual_orders": 54
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          41
+        ],
+        "core_index": 538,
+        "expected_residual_orders": 54
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          53
+        ],
+        "core_index": 541,
+        "expected_residual_orders": 19
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          57
+        ],
+        "core_index": 542,
+        "expected_residual_orders": 19
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          69
+        ],
+        "core_index": 545,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          73
+        ],
+        "core_index": 546,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          85
+        ],
+        "core_index": 549,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          89
+        ],
+        "core_index": 550,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          101
+        ],
+        "core_index": 553,
+        "expected_residual_orders": 54
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          105
+        ],
+        "core_index": 554,
+        "expected_residual_orders": 54
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          117
+        ],
+        "core_index": 557,
+        "expected_residual_orders": 21
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          121
+        ],
+        "core_index": 558,
+        "expected_residual_orders": 21
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          181
+        ],
+        "core_index": 561,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          185
+        ],
+        "core_index": 562,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          245
+        ],
+        "core_index": 565,
+        "expected_residual_orders": 18
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          49,
+          249
+        ],
+        "core_index": 566,
+        "expected_residual_orders": 18
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          37
+        ],
+        "core_index": 577,
+        "expected_residual_orders": 19
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          45
+        ],
+        "core_index": 579,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          49
+        ],
+        "core_index": 580,
+        "expected_residual_orders": 19
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          53
+        ],
+        "core_index": 581,
+        "expected_residual_orders": 28
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          57
+        ],
+        "core_index": 582,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          61
+        ],
+        "core_index": 583,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          69
+        ],
+        "core_index": 585,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          77
+        ],
+        "core_index": 587,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          81
+        ],
+        "core_index": 588,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          85
+        ],
+        "core_index": 589,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          89
+        ],
+        "core_index": 590,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          93
+        ],
+        "core_index": 591,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          101
+        ],
+        "core_index": 593,
+        "expected_residual_orders": 21
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          109
+        ],
+        "core_index": 595,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          113
+        ],
+        "core_index": 596,
+        "expected_residual_orders": 21
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          117
+        ],
+        "core_index": 597,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          121
+        ],
+        "core_index": 598,
+        "expected_residual_orders": 16
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          125
+        ],
+        "core_index": 599,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          181
+        ],
+        "core_index": 600,
+        "expected_residual_orders": 32
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          189
+        ],
+        "core_index": 601,
+        "expected_residual_orders": 22
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          245
+        ],
+        "core_index": 602,
+        "expected_residual_orders": 36
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          53,
+          253
+        ],
+        "core_index": 603,
+        "expected_residual_orders": 24
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          41
+        ],
+        "core_index": 614,
+        "expected_residual_orders": 19
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          45
+        ],
+        "core_index": 615,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          49
+        ],
+        "core_index": 616,
+        "expected_residual_orders": 19
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          53
+        ],
+        "core_index": 617,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          57
+        ],
+        "core_index": 618,
+        "expected_residual_orders": 28
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          61
+        ],
+        "core_index": 619,
+        "expected_residual_orders": 20
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          73
+        ],
+        "core_index": 622,
+        "expected_residual_orders": 14
+      },
+      {
+        "pred": [
+          0,
+          28,
+          0,
+          0,
+          0,
+          1,
+          1,
+          57,
+          77
+        ],
+        "core_index": 623,
+        "expected_residual_orders": 16
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "README.md": "b166df89e2c29f5e08d638f35012dffb4c8c1d7c712538b8027e7157c244a437",
+  "assess.py": "1e7715752ffceb45fed87435185561fab04dc11fe32b089bc969fc9619baea97",
+  "canonical_maxspan_transfer_20261019.md": "d8f829187ebde9a18a0ff3bf3aa7ca59b1d17f2d580bb37ab01dc14a087c7d2a",
+  "fixtures.json": "d1f8f393b8eb968ece84dcbbb976f5fb0806e9ced5f376069ebbaa1b74a18aec",
+  "impact.json": "d76a8f83bb510ea72e2fcb4834195c2467f76abf3df1743fb9697cd38abb5f13",
+  "impact_details.json.gz": "8518886ddb3775c7cbe7de6dba11866b4e40f6b9cc94a46ad1f2d5325a0d5f31",
+  "impact_normal.json": "d76a8f83bb510ea72e2fcb4834195c2467f76abf3df1743fb9697cd38abb5f13"
+}
