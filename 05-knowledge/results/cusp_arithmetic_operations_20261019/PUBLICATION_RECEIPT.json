@@ -1,0 +1,98 @@
+{
+  "date_utc": "2026-10-19",
+  "destination": "05-knowledge/results/cusp_arithmetic_operations_20261019/",
+  "status": "Prepared publication package; proof and independent audit PASS; no remote publication claimed by this receipt",
+  "predecessor_manifests_sha256": {
+    "author_source": "c6e57c2506d810b77900125cdcaa8a49eefec01849319507bc042e313bf012ea",
+    "independent_review": "46fdf57a6501dff914069362040fa03c206031c9d0d11d519a5590a7349ec5a1"
+  },
+  "source_transformations": [
+    {
+      "path": "cusp_arithmetic_operations_20261019.md",
+      "predecessor_sha256": "3616c00629820b85c80f2458c3c5abcccc047c3c07f1ddc066b577350b456095",
+      "published_sha256": "caa08b2b8e6650e0a7a9508aea9cf7e796fed92bc039a993edec95755b27405e",
+      "changes": "Reader-facing review-completion wording and relative review link only; README additionally lists packaged audit and receipt. No mathematical change."
+    },
+    {
+      "path": "README.md",
+      "predecessor_sha256": "358a69a595127f691de242e4b08dc13f1062454916e83a0f93432c799f969c4a",
+      "published_sha256": "b1ac4dd0de1b611b7fb706a643c7c55bf32c367da21c7e2987a31351e722e325",
+      "changes": "Reader-facing review-completion wording and relative review link only; README additionally lists packaged audit and receipt. No mathematical change. Omit nonmathematical production-status text."
+    }
+  ],
+  "unchanged_source_files": [
+    {
+      "path": "SOURCE-DEPENDENCIES.json",
+      "sha256": "ace277948e48e3ef1f899f89f4874af6ea63e16dec668f930248661d61af5285"
+    },
+    {
+      "path": "cusp_arithmetic_operations_20261019.optimized.out",
+      "sha256": "335e8610a121a301f273c293e4e9e0e4171dd79a8f89aa787be7b28aa1f04ad9"
+    },
+    {
+      "path": "cusp_arithmetic_operations_20261019.out",
+      "sha256": "335e8610a121a301f273c293e4e9e0e4171dd79a8f89aa787be7b28aa1f04ad9"
+    },
+    {
+      "path": "verify_cusp_arithmetic_operations_20261019.py",
+      "sha256": "40ddad3aeb205c7a99375fb9c18c86aa96abc9ee25841150c3892893bd7a1417"
+    }
+  ],
+  "review_copies": "Review mathematical content, verifier, and control receipts are unchanged; one nonmathematical sentence was removed from the review and its integrity manifest was updated, as recorded in presentation_cleanup.",
+  "scope": "Only reader-facing review-completion wording, the relative review link, packaged file listing, and nonmathematical presentation text changed. All theorem statements, proofs, formulas, checker code, and control receipts remain unchanged.",
+  "reproduction": {
+    "python": "3.12.14",
+    "mpmath": "1.3.0",
+    "sympy": "1.14.0",
+    "commands": [
+      {
+        "cwd": ".",
+        "command": "python verify_cusp_arithmetic_operations_20261019.py",
+        "captured_output": "cusp_arithmetic_operations_20261019.out",
+        "result": "PASS; fresh packaged replay byte-matches captured output",
+        "output_sha256": "335e8610a121a301f273c293e4e9e0e4171dd79a8f89aa787be7b28aa1f04ad9"
+      },
+      {
+        "cwd": ".",
+        "command": "python -O verify_cusp_arithmetic_operations_20261019.py",
+        "captured_output": "cusp_arithmetic_operations_20261019.optimized.out",
+        "result": "PASS; fresh packaged replay byte-matches captured output",
+        "output_sha256": "335e8610a121a301f273c293e4e9e0e4171dd79a8f89aa787be7b28aa1f04ad9"
+      },
+      {
+        "cwd": "review",
+        "command": "python independent_cusp_operations_controls.py",
+        "captured_output": "independent_cusp_operations_controls.out",
+        "result": "PASS; fresh packaged replay byte-matches captured output",
+        "output_sha256": "92c7c138248283178688b9128ddf221acd2990b7efaddda7c214e2e87f36301c"
+      },
+      {
+        "cwd": "review",
+        "command": "python -O independent_cusp_operations_controls.py",
+        "captured_output": "independent_cusp_operations_controls_optimized.out",
+        "result": "PASS; fresh packaged replay byte-matches captured output",
+        "output_sha256": "92c7c138248283178688b9128ddf221acd2990b7efaddda7c214e2e87f36301c"
+      },
+      {
+        "cwd": "review",
+        "command": "sha256sum -c MANIFEST.sha256",
+        "result": "PASS; all review files copied byte-identically"
+      }
+    ]
+  },
+  "portable_paths": "Run each command from the listed cwd relative to this publication packet root. Neither verifier reads input files, accesses the network, or writes files.",
+  "presentation_cleanup": [
+    {
+      "path": "README.md",
+      "predecessor_sha256": "e6ec7001de44ec22f2bcf64e8c421149ae618c8a359d7270fee5787255eb90be",
+      "published_sha256": "b1ac4dd0de1b611b7fb706a643c7c55bf32c367da21c7e2987a31351e722e325",
+      "changes": "Omit nonmathematical production-status text; mathematical, review, and reproduction content unchanged."
+    },
+    {
+      "path": "review/independent_cusp_operations_review.md",
+      "predecessor_sha256": "1b279e7d6bd6017ad908ccc6ddd53301970b4766ddc07003130b909f01efff49",
+      "published_sha256": "91bb0fee3f931b07ab6524cf3d83ffd47dbf9c77fa1648db57527de001708b5e",
+      "changes": "Omit nonmathematical production-status text; mathematical, review, and reproduction content unchanged."
+    }
+  ]
+}

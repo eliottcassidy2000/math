@@ -1,0 +1,30 @@
+{
+  "date_utc": "2026-10-19",
+  "scope": "Exact input file snapshots used by this transfer proof and its finite controls. These hashes do not replace the proofs or their own review records.",
+  "inputs": [
+    {
+      "role": "phase_and_strict_thresholds",
+      "repository_path": "05-knowledge/results/parabolic_escape_precision_20261019/parabolic_escape_precision_20261019.md",
+      "sha256": "b95f7e6f7f307b17bc6937bf6d11e4246cd2fbcbe7082167132f523294c8b21a",
+      "bytes": 15489
+    },
+    {
+      "role": "next_order_phase",
+      "repository_path": "05-knowledge/results/parabolic_escape_next_order_20261019/parabolic_escape_next_order_20261019.md",
+      "sha256": "f4554b389f9297f69566d1a65c58c9ff421eae2eac7ae9b61c75549ef42933cd",
+      "bytes": 8273
+    },
+    {
+      "role": "certified_phase_enclosure",
+      "repository_path": "05-knowledge/results/parabolic_escape_precision_20261019/parabolic_escape_precision_20261019.out",
+      "sha256": "abc9449c1555c7e7d81aea5fb6430ca99bde2f6a723d097e22f1d93021e9909c",
+      "bytes": 1878
+    },
+    {
+      "role": "every_target_rough_four_form_sieve",
+      "repository_path": "05-knowledge/results/prime_pairs_local_symmetry_20261019/power-depth-rough-pairs.md",
+      "sha256": "97ad046cf212f9364a82f4757f7e32c0262629ffe0862d0b47f46bb33f6cc151",
+      "bytes": 12550
+    }
+  ]
+}

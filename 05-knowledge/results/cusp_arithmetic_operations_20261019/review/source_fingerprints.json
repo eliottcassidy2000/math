@@ -1,0 +1,89 @@
+{
+  "date_utc": "2026-10-19",
+  "verdict": "PASS",
+  "scope": "Frozen author source, matched inherited inputs, and status-only publication amendments when supplied. Hashes establish file identity, not a mathematical theorem.",
+  "audited_source_packet": {
+    "directory": "session3-cusp-arithmetic-operations",
+    "files": [
+      {
+        "name": "MANIFEST.sha256",
+        "sha256": "c6e57c2506d810b77900125cdcaa8a49eefec01849319507bc042e313bf012ea",
+        "bytes": 606
+      },
+      {
+        "name": "README.md",
+        "sha256": "358a69a595127f691de242e4b08dc13f1062454916e83a0f93432c799f969c4a",
+        "bytes": 4046
+      },
+      {
+        "name": "SOURCE-DEPENDENCIES.json",
+        "sha256": "ace277948e48e3ef1f899f89f4874af6ea63e16dec668f930248661d61af5285",
+        "bytes": 1342
+      },
+      {
+        "name": "cusp_arithmetic_operations_20261019.md",
+        "sha256": "3616c00629820b85c80f2458c3c5abcccc047c3c07f1ddc066b577350b456095",
+        "bytes": 19135
+      },
+      {
+        "name": "cusp_arithmetic_operations_20261019.optimized.out",
+        "sha256": "335e8610a121a301f273c293e4e9e0e4171dd79a8f89aa787be7b28aa1f04ad9",
+        "bytes": 768
+      },
+      {
+        "name": "cusp_arithmetic_operations_20261019.out",
+        "sha256": "335e8610a121a301f273c293e4e9e0e4171dd79a8f89aa787be7b28aa1f04ad9",
+        "bytes": 768
+      },
+      {
+        "name": "verify_cusp_arithmetic_operations_20261019.py",
+        "sha256": "40ddad3aeb205c7a99375fb9c18c86aa96abc9ee25841150c3892893bd7a1417",
+        "bytes": 9487
+      }
+    ]
+  },
+  "dependency_verification": [
+    {
+      "role": "phase_and_strict_thresholds",
+      "repository_path": "05-knowledge/results/parabolic_escape_precision_20261019/parabolic_escape_precision_20261019.md",
+      "sha256": "b95f7e6f7f307b17bc6937bf6d11e4246cd2fbcbe7082167132f523294c8b21a",
+      "bytes": 15489,
+      "matched": true
+    },
+    {
+      "role": "next_order_phase",
+      "repository_path": "05-knowledge/results/parabolic_escape_next_order_20261019/parabolic_escape_next_order_20261019.md",
+      "sha256": "f4554b389f9297f69566d1a65c58c9ff421eae2eac7ae9b61c75549ef42933cd",
+      "bytes": 8273,
+      "matched": true
+    },
+    {
+      "role": "certified_phase_enclosure",
+      "repository_path": "05-knowledge/results/parabolic_escape_precision_20261019/parabolic_escape_precision_20261019.out",
+      "sha256": "abc9449c1555c7e7d81aea5fb6430ca99bde2f6a723d097e22f1d93021e9909c",
+      "bytes": 1878,
+      "matched": true
+    },
+    {
+      "role": "every_target_rough_four_form_sieve",
+      "repository_path": "05-knowledge/results/prime_pairs_local_symmetry_20261019/power-depth-rough-pairs.md",
+      "sha256": "97ad046cf212f9364a82f4757f7e32c0262629ffe0862d0b47f46bb33f6cc151",
+      "bytes": 12550,
+      "matched": true
+    }
+  ],
+  "publication_status_amendments": [
+    {
+      "name": "cusp_arithmetic_operations_20261019.md",
+      "sha256": "caa08b2b8e6650e0a7a9508aea9cf7e796fed92bc039a993edec95755b27405e",
+      "bytes": 19175,
+      "verified_difference": "Review status/link; README additionally lists packaged review and publication receipt. No mathematical change."
+    },
+    {
+      "name": "README.md",
+      "sha256": "e6ec7001de44ec22f2bcf64e8c421149ae618c8a359d7270fee5787255eb90be",
+      "bytes": 4253,
+      "verified_difference": "Review status/link; README additionally lists packaged review and publication receipt. No mathematical change."
+    }
+  ]
+}

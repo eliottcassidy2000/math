@@ -1,0 +1,10 @@
+EXACT: 2556 rational rounding/guard controls, plus integer endpoint hostiles
+EXACT: 26 piecewise-rational guarded sum identities and unguarded bounds
+EXACT HOSTILE: wrong-difference unguarded integral = 1/50; arithmetic sum and guarded integral = 0
+NUMERICAL: 84 analytic map/density controls at 80 digits, tolerance 1e-65
+NUMERICAL scope: algebra is checked at a phase midpoint; this does not certify C_2
+DIRECTED-INTERVAL: 120 actual translation pairs and 45 actual complementary pairs certified
+DIRECTED-INTERVAL: 150 distinct actual escape evaluations; R=2
+Inherited phase certificate: -2.463836664 < C_2 < -2.463836643
+Scope: finite samples only; no numerical K_R, asymptotic onset, or prime lower bound
+PASS: all exact, numerical, and directed-interval controls

@@ -1,0 +1,13 @@
+Python 3.12.14, SymPy 1.14.0
+SYMBOLIC: 5 exact phase, density, flow, and constant-cancellation identities
+EXACT: 12554 affine domain/group controls; 180 rejected translation exits
+EXACT: every middle-third endpoint class and four-form bound for 2 <= m < 500
+EXACT HOSTILE: the small inverse root leaves t>T; negative translations can leave D
+EXACT: 24 direct-cell-intersection integral identities and error controls
+EXACT HOSTILE: unguarded false positive = 1/50; guarded value and discrete sum = 0
+EXACT HOSTILE: O(n^-2) threshold perturbations also give a false positive (0.000242830293954)
+DECIMAL INTERVAL: 75 actual translation pairs and 54 actual reflection pairs
+DECIMAL INTERVAL: 141 distinct x-variable escape evaluations; 75-digit outward arithmetic
+PI: independent alternating-series Machin certificate; inherited C_2 enclosure used unchanged
+EXACT: 6 recurrence endpoint/interior tests at R=3/4; equality is not escape
+PASS: all independent controls; no effective guard/onset or prime lower bound is claimed
