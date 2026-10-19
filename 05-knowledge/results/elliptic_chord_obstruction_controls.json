@@ -1,0 +1,20 @@
+{
+  "status": "FINITE-EXACT elementary identities; standard library only",
+  "checks": {
+    "chord_intersection_quadratic": 1,
+    "chord_discriminant": 1,
+    "opposite_branch_value_obstruction": 1,
+    "quartic_cubic_coefficient": 1,
+    "zero_cubic_forces_zero_linear": 1,
+    "duplication_numerator": 1,
+    "spread_reciprocal_duplication": 1,
+    "zero_two_torsion_translation": 1,
+    "normalized_norm_quartic": 4,
+    "square_forced_by_top_coefficients": 4,
+    "same_sign_torsion_residual": 2,
+    "mixed_sign_torsion_residual": 2,
+    "general_norm_leading_BC": 1,
+    "general_norm_zero_cubic": 1,
+    "general_norm_nonzero_linear": 1
+  }
+}
