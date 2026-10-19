@@ -86,7 +86,7 @@ This is stronger than the unsigned statement that the free contact union is conn
 
 ### Corollary 3.1: chordal-bipartite support is a second sufficient condition
 
-If every cycle of H of length at least six has a chord, the completion fiber is two-color connected.
+If the completion fiber is nonempty and every cycle of H of length at least six has a chord, the completion fiber is two-color connected.
 
 More generally, if every induced cycle of H has length at most 2k, it is connected by at-most-k-color moves, with single-realization changes allowed as well.
 
