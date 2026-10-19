@@ -52,6 +52,8 @@ The bounded search succeeds for all 528 admitted primitive triples of hypotenuse
 
 11. The minus port has its own bounded cusp section: triple the negative-sheet anchor, then use the positive-sheet finite fallback elsewhere. Together the two atlases give polynomial numerical height and linear output bits for either prescribed port. Their degree-11 maps are related exactly by `v_minus(t)=1/u_plus(1/t)`; the underlying quartic involution acts on the cubic as `R -> -R-P`, taking the plus section `3Q+2P` to the minus section `3Q_minus`. See [minus atlas and reciprocal duality](square_sum_minus_bounded_section_contacts_20261019.md).
 
+12. For every fixed count `r`, odd cusp sections and an amplified circle argument give `r` pairwise distinct contacts at either port, all with polynomial numerical height in the seed. This permits avoidance of fewer than `r` forbidden petals without their heights entering the output bound. Consequently every fixed odd cycle length can be realized through the three integer-square-scaled seed labels, with polynomial numerical labels; the exponent may depend on the length. Fixed rooted trees of petals can likewise be glued as non-induced contact subgraphs. See [fixed-count contacts and finite gluing](square_sum_fixed_count_contacts_20261019.md). These are sparse selected-label constructions, with no consecutive-interval or graceful-rank conclusion.
+
 ## 4. Odd zeta and graph geometry: exact maps
 
 The signed primitive-triangle Dirichlet series is
@@ -79,7 +81,7 @@ See [graceful exchange packet](graceful_square_exchange_20261019.md). Neither co
 
 ### A. Quantitative Pythagorean contact construction
 
-For either prescribed port, finite rational-section atlases now give one neighbor with fixed-power numerical height and linear output bits, escaping the original plus-coset barrier. The next precise targets are multiple distinct choices with controlled height, avoidance of a supplied finite set, and prescribed narrow spread windows. Odd-multiplier cusp sections suggest a fixed-count extension, but those additional quantifiers need their own proof before transferring the one-neighbor bounds to long-chain gluing.
+For either prescribed port and every fixed count, finite rational-section atlases now give distinct neighbors and finite forbidden-set avoidance with polynomial numerical height. This yields polynomial label bounds for each fixed-size fan, odd cycle, or rooted tree of petals through a square-scaled seed. The remaining quantitative questions concern dependence on a growing requested count or chain length, and prescribed narrow spread windows. None of these sparse constructions supplies consecutive-interval coverage or a graceful labeling of a prescribed tree shape.
 
 ### B. Denominator-controlled common-neighbor gluing
 

@@ -1,0 +1,301 @@
+{
+  "checks": {
+    "exact_rational": 242,
+    "exact_symbolic": 38
+  },
+  "cusp_probes": [
+    {
+      "d": 3,
+      "hypotenuse_bits": 232,
+      "port": 1,
+      "t": "1025/1024"
+    },
+    {
+      "d": 5,
+      "hypotenuse_bits": 694,
+      "port": 1,
+      "t": "1025/1024"
+    },
+    {
+      "d": 7,
+      "hypotenuse_bits": 1408,
+      "port": 1,
+      "t": "1025/1024"
+    },
+    {
+      "d": 3,
+      "hypotenuse_bits": 232,
+      "port": -1,
+      "t": "1025/1024"
+    },
+    {
+      "d": 5,
+      "hypotenuse_bits": 694,
+      "port": -1,
+      "t": "1025/1024"
+    },
+    {
+      "d": 7,
+      "hypotenuse_bits": 1408,
+      "port": -1,
+      "t": "1025/1024"
+    },
+    {
+      "d": 3,
+      "hypotenuse_bits": 276,
+      "port": 1,
+      "t": "4097/4096"
+    },
+    {
+      "d": 5,
+      "hypotenuse_bits": 826,
+      "port": 1,
+      "t": "4097/4096"
+    },
+    {
+      "d": 7,
+      "hypotenuse_bits": 1676,
+      "port": 1,
+      "t": "4097/4096"
+    },
+    {
+      "d": 3,
+      "hypotenuse_bits": 276,
+      "port": -1,
+      "t": "4097/4096"
+    },
+    {
+      "d": 5,
+      "hypotenuse_bits": 826,
+      "port": -1,
+      "t": "4097/4096"
+    },
+    {
+      "d": 7,
+      "hypotenuse_bits": 1676,
+      "port": -1,
+      "t": "4097/4096"
+    },
+    {
+      "d": 3,
+      "hypotenuse_bits": 450,
+      "port": 1,
+      "t": "1000001/1000000"
+    },
+    {
+      "d": 5,
+      "hypotenuse_bits": 1349,
+      "port": 1,
+      "t": "1000001/1000000"
+    },
+    {
+      "d": 7,
+      "hypotenuse_bits": 2738,
+      "port": 1,
+      "t": "1000001/1000000"
+    },
+    {
+      "d": 3,
+      "hypotenuse_bits": 450,
+      "port": -1,
+      "t": "1000001/1000000"
+    },
+    {
+      "d": 5,
+      "hypotenuse_bits": 1349,
+      "port": -1,
+      "t": "1000001/1000000"
+    },
+    {
+      "d": 7,
+      "hypotenuse_bits": 2738,
+      "port": -1,
+      "t": "1000001/1000000"
+    }
+  ],
+  "fallback_probes": [
+    {
+      "J": 4,
+      "budget": 2052,
+      "port": 1,
+      "r": 3,
+      "successful_q": [
+        -6,
+        10,
+        16
+      ],
+      "t": "9/8"
+    },
+    {
+      "J": 4,
+      "budget": 2052,
+      "port": -1,
+      "r": 3,
+      "successful_q": [
+        6,
+        48,
+        -62
+      ],
+      "t": "9/8"
+    },
+    {
+      "J": 3,
+      "budget": 1800,
+      "port": 1,
+      "r": 3,
+      "successful_q": [
+        4,
+        -18,
+        -22
+      ],
+      "t": "6/5"
+    },
+    {
+      "J": 3,
+      "budget": 1800,
+      "port": -1,
+      "r": 3,
+      "successful_q": [
+        10,
+        -36,
+        42
+      ],
+      "t": "6/5"
+    },
+    {
+      "J": 3,
+      "budget": 1800,
+      "port": 1,
+      "r": 3,
+      "successful_q": [
+        4,
+        -16,
+        54
+      ],
+      "t": "5/4"
+    },
+    {
+      "J": 3,
+      "budget": 1800,
+      "port": -1,
+      "r": 3,
+      "successful_q": [
+        -30,
+        -42,
+        52
+      ],
+      "t": "5/4"
+    },
+    {
+      "J": 3,
+      "budget": 1800,
+      "port": 1,
+      "r": 3,
+      "successful_q": [
+        4,
+        16,
+        -42
+      ],
+      "t": "13/10"
+    },
+    {
+      "J": 3,
+      "budget": 1800,
+      "port": -1,
+      "r": 3,
+      "successful_q": [
+        4,
+        8,
+        12
+      ],
+      "t": "13/10"
+    }
+  ],
+  "status": "FINITE-EXACT",
+  "symbolic": [
+    {
+      "d": 3,
+      "parameter_degrees": [
+        11,
+        11
+      ],
+      "port": 1,
+      "taylor_through_h3": [
+        "1",
+        "3",
+        "0",
+        "2"
+      ]
+    },
+    {
+      "d": 5,
+      "parameter_degrees": [
+        33,
+        33
+      ],
+      "port": 1,
+      "taylor_through_h3": [
+        "1",
+        "5",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "d": 7,
+      "parameter_degrees": [
+        67,
+        67
+      ],
+      "port": 1,
+      "taylor_through_h3": [
+        "1",
+        "7",
+        "0",
+        "-14"
+      ]
+    },
+    {
+      "d": 3,
+      "parameter_degrees": [
+        11,
+        10
+      ],
+      "port": -1,
+      "taylor_through_h3": [
+        "1",
+        "3",
+        "6",
+        "14"
+      ]
+    },
+    {
+      "d": 5,
+      "parameter_degrees": [
+        33,
+        32
+      ],
+      "port": -1,
+      "taylor_through_h3": [
+        "1",
+        "5",
+        "20",
+        "80"
+      ]
+    },
+    {
+      "d": 7,
+      "parameter_degrees": [
+        67,
+        66
+      ],
+      "port": -1,
+      "taylor_through_h3": [
+        "1",
+        "7",
+        "42",
+        "238"
+      ]
+    }
+  ]
+}
