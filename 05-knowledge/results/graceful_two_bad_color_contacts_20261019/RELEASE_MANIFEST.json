@@ -1,0 +1,27 @@
+{
+  "claim": "At most two disconnected free-color contact graphs imply width-two completion-fiber diameter<=r+1; every four-free-color upper-tail graceful fiber has diameter<=5.",
+  "dependency_manifest_sha256": {
+    "../graceful_connected_color_contacts_20261019/RELEASE_MANIFEST.json": "a5ab9a54bd55180aa8455c41f56919410a1f55b43af0f606792f3591808e55f1"
+  },
+  "files": {
+    "LITERATURE_SCOPE.md": "92e965b462c92327000f304759a0d36b933d9e23c323b5797d905430d115e19c",
+    "TWO_BAD_COLOR_CONTACTS.md": "529d420f5b9e8223815945f427b9026b80d1674047e87804f6200033ed15ed3c",
+    "two_bad_controls.json": "e78d2162ca5c84be875f5264014a1d63bc82fa9d11d85b2cd2d76d14bdd2aa0f",
+    "two_bad_controls.optimized.json": "e78d2162ca5c84be875f5264014a1d63bc82fa9d11d85b2cd2d76d14bdd2aa0f",
+    "verify_two_bad_contacts.py": "c6010c20818a5e4e204f7c7111c5808c9dafe0769ff62301f64ad6d2d23a5d9e"
+  },
+  "limits": [
+    "No arbitrary-fiber conclusion",
+    "No one-color GT1 claim",
+    "Abstract tree shape can change",
+    "No historical novelty claim"
+  ],
+  "replay": {
+    "checks": 1498891,
+    "moves_replayed": 155470,
+    "normal_optimized_identical": true,
+    "ordered_pairs": 57680
+  },
+  "repository_destination": "05-knowledge/results/graceful_two_bad_color_contacts_20261019",
+  "status": "frozen and exact-replayed"
+}

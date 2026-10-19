@@ -1,0 +1,32 @@
+{
+  "checks": 1498891,
+  "moves_replayed": 155470,
+  "residual_four_color_controls": [
+    {
+      "m": 5,
+      "max_moves": 4,
+      "ordered_pairs": 1600,
+      "proved_bound": 5,
+      "states": 40,
+      "two_bad_tails": 1
+    },
+    {
+      "m": 6,
+      "max_moves": 4,
+      "ordered_pairs": 13448,
+      "proved_bound": 5,
+      "states": 164,
+      "two_bad_tails": 2
+    },
+    {
+      "m": 9,
+      "max_moves": 4,
+      "ordered_pairs": 42632,
+      "proved_bound": 5,
+      "states": 292,
+      "two_bad_tails": 2
+    }
+  ],
+  "scope": "Exhaustive all-pairs checks of two-bad tails through m9; the universal theorem follows from the partial-forest proof.",
+  "status": "passed"
+}
