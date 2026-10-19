@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "unlabelled_nine_trees": 47,
+  "good_nine_trees": 36,
+  "nonhereditary_good_nine_trees": 12,
+  "new_good_decomposition": {
+    "automorphism_forced_even": 3,
+    "additional_two_cherry": 3,
+    "additional_all_even": 4,
+    "has_odd_orientations": 2
+  },
+  "bad_class_witnesses": 11,
+  "eight_tree_edge_cuts": 161,
+  "nine_tree_two_edge_cuts": 1316,
+  "critical_leaf_selector_masks": 9216,
+  "D8_padding_orientation_masks": 128,
+  "D8_padding_transitive_count_range": [
+    81,
+    14517
+  ],
+  "extensions": [
+    {
+      "new_edge": [
+        0,
+        8
+      ],
+      "odd_labelled_masks": 128,
+      "zero_labelled_masks": 128,
+      "odd_isomorphism_classes": 64,
+      "all_isomorphism_classes": 192
+    },
+    {
+      "new_edge": [
+        2,
+        8
+      ],
+      "odd_labelled_masks": 128,
+      "zero_labelled_masks": 128,
+      "odd_isomorphism_classes": 64,
+      "all_isomorphism_classes": 192
+    }
+  ]
+}

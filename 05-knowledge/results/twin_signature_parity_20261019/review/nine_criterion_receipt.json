@@ -1,0 +1,462 @@
+{
+  "status": "PASS",
+  "unlabelled_trees": 47,
+  "good_by_proved_criterion": 36,
+  "excluded": 11,
+  "hereditarily_symmetric": 24,
+  "nonhereditary_good": 12,
+  "symmetric_eight_padding_types": 22,
+  "odd_symmetric_eight_padding_types": 2,
+  "P4_orientation_host_pairs": 512,
+  "good_canonical_digest": "76414a018f262adfe1d5625776b82938d5c05c763b3a9aeeb88b0c5b15ecdeed",
+  "excluded_classes": [
+    {
+      "canonical": "(((((((())()))))))",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "failed_conditions": [
+        "asymmetric tree",
+        "asymmetric leaf deletion",
+        "asymmetric seven-side cut"
+      ]
+    },
+    {
+      "canonical": "(((((((()))())))))",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "failed_conditions": [
+        "asymmetric tree",
+        "asymmetric leaf deletion",
+        "asymmetric seven-side cut"
+      ]
+    },
+    {
+      "canonical": "((((((()())())))))",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "failed_conditions": [
+        "asymmetric leaf deletion"
+      ]
+    },
+    {
+      "canonical": "((((((()())))())))",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "failed_conditions": [
+        "asymmetric leaf deletion"
+      ]
+    },
+    {
+      "canonical": "((((((())(()))))))",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "failed_conditions": [
+        "asymmetric leaf deletion"
+      ]
+    },
+    {
+      "canonical": "((((((())()())))))",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "failed_conditions": [
+        "asymmetric leaf deletion"
+      ]
+    },
+    {
+      "canonical": "((((((())())()))))",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "failed_conditions": [
+        "asymmetric tree",
+        "asymmetric leaf deletion",
+        "asymmetric seven-side cut"
+      ]
+    },
+    {
+      "canonical": "((((((())()))())))",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "failed_conditions": [
+        "asymmetric leaf deletion",
+        "asymmetric seven-side cut"
+      ]
+    },
+    {
+      "canonical": "((((((()))(())))))",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "failed_conditions": [
+        "asymmetric seven-side cut"
+      ]
+    },
+    {
+      "canonical": "(((((())(()))())))",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "failed_conditions": [
+        "asymmetric seven-side cut"
+      ]
+    },
+    {
+      "canonical": "(((((())(())()))))",
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "failed_conditions": [
+        "asymmetric seven-side cut"
+      ]
+    }
+  ],
+  "scope": "Exhaustive source-side criterion census. The theorem establishes universal host conclusions; no nine-tournament sampling is substituted."
+}

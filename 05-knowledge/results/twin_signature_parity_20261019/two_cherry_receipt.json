@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "direct_automorphism_routes": 192,
+  "two_deletion_routes": 64,
+  "asymmetric_labelled_orientations": 64,
+  "asymmetric_orientation_classes": 16,
+  "census": [
+    {
+      "n": 7,
+      "two_cherry_trees": 2,
+      "outside_hereditary_and_auto_zero": 0
+    },
+    {
+      "n": 8,
+      "two_cherry_trees": 6,
+      "outside_hereditary_and_auto_zero": 0
+    },
+    {
+      "n": 9,
+      "two_cherry_trees": 14,
+      "outside_hereditary_and_auto_zero": 3
+    },
+    {
+      "n": 10,
+      "two_cherry_trees": 38,
+      "outside_hereditary_and_auto_zero": 12
+    },
+    {
+      "n": 11,
+      "two_cherry_trees": 94,
+      "outside_hereditary_and_auto_zero": 33
+    }
+  ]
+}

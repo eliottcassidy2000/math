@@ -1,0 +1,149 @@
+{
+  "scope": "Parent approved the final frozen proof hashes after independent mathematical and complete-universe review. Publication changes only review status, relative links and python -B commands. Existing core utilities are imported unchanged and not republished.",
+  "files": [
+    {
+      "path": "TWO_CHERRY_PARITY.md",
+      "source_sha256": "7f2d4e0e84aae259bf814d9eaf6ee6c50f2415d3f3190e4f7798d4b81363ce44",
+      "published_sha256": "fbdb625b126b6e137bde85f8e8ecd4d78cb3fed66cf27c13c65607900fcd7164",
+      "presentation_changes_only": true
+    },
+    {
+      "path": "verify_two_cherry.py",
+      "source_sha256": "cfcbc546386fca10d6dd669c7d694d28f3ec0ca0e7f8dc0d2287cc2f39e35c12",
+      "published_sha256": "cfcbc546386fca10d6dd669c7d694d28f3ec0ca0e7f8dc0d2287cc2f39e35c12",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "two_cherry_receipt.json",
+      "source_sha256": "26e20457cd50681349303ea4dd98169e01b6337e747f10c22528a6ccaa0890fc",
+      "published_sha256": "26e20457cd50681349303ea4dd98169e01b6337e747f10c22528a6ccaa0890fc",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "two_cherry_receipt_optimized.json",
+      "source_sha256": "26e20457cd50681349303ea4dd98169e01b6337e747f10c22528a6ccaa0890fc",
+      "published_sha256": "26e20457cd50681349303ea4dd98169e01b6337e747f10c22528a6ccaa0890fc",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "NINE_VERTEX_GOOD_TREES.md",
+      "source_sha256": "dc21a674f2998b6c5dc797ef9cc2e4ceec2fcc68f33f2b1ce1ff7773d31a26fb",
+      "published_sha256": "c8fbb7f933e4f885f1e92a40147de3543ead4acfccae94f3e00397d43cee72cb",
+      "presentation_changes_only": true
+    },
+    {
+      "path": "verify_nine_vertex.py",
+      "source_sha256": "45db38198102730427ec42f65f1f5e901c38b3428249688f8b1e7682f0400113",
+      "published_sha256": "45db38198102730427ec42f65f1f5e901c38b3428249688f8b1e7682f0400113",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "nine_vertex_bad_witnesses.json",
+      "source_sha256": "1b37233edfe8d882e696d101273b8a1eb24a98405bb874ffbe5bde6b367796e0",
+      "published_sha256": "1b37233edfe8d882e696d101273b8a1eb24a98405bb874ffbe5bde6b367796e0",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "nine_vertex_receipt.json",
+      "source_sha256": "79fb9f7755cf57beacef3b044776c458443a562e8f6f846bc2012a1c3fa201d1",
+      "published_sha256": "79fb9f7755cf57beacef3b044776c458443a562e8f6f846bc2012a1c3fa201d1",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "nine_vertex_receipt_optimized.json",
+      "source_sha256": "79fb9f7755cf57beacef3b044776c458443a562e8f6f846bc2012a1c3fa201d1",
+      "published_sha256": "79fb9f7755cf57beacef3b044776c458443a562e8f6f846bc2012a1c3fa201d1",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "review/CHERRY_EXTENSION_REVIEW.md",
+      "source_sha256": "b635e613b900a15f58b39f20845d00249be09500dac8e340b3c4bbec8af40dea",
+      "published_sha256": "58ff23e3e6cd4c877d5846d21dffe990061bbfdcb204082bdbe603b4bf94e68b",
+      "presentation_changes_only": true
+    },
+    {
+      "path": "review/independent_cherry_extensions.py",
+      "source_sha256": "9b10f04aab4385e5cc348144b014db18b903adeee0cc58f1312c95eb8aa994b3",
+      "published_sha256": "9b10f04aab4385e5cc348144b014db18b903adeee0cc58f1312c95eb8aa994b3",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "review/cherry_extension_receipt.json",
+      "source_sha256": "0a91367008b28e92b35a76ad148ef3ceda959f64c4925e2ef584b4995168730b",
+      "published_sha256": "0a91367008b28e92b35a76ad148ef3ceda959f64c4925e2ef584b4995168730b",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "review/cherry_extension_receipt.optimized.json",
+      "source_sha256": "0a91367008b28e92b35a76ad148ef3ceda959f64c4925e2ef584b4995168730b",
+      "published_sha256": "0a91367008b28e92b35a76ad148ef3ceda959f64c4925e2ef584b4995168730b",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "review/independent_nine_criterion.py",
+      "source_sha256": "292c92c8bd32d9da95a24b26ae5a6eca788b4d67c5c8b1442f041b82e40c563c",
+      "published_sha256": "292c92c8bd32d9da95a24b26ae5a6eca788b4d67c5c8b1442f041b82e40c563c",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "review/nine_criterion_receipt.json",
+      "source_sha256": "91125fd2c8f56ec5ccd6fe69a252cf11e5ace595c5e0d6608ac1f091d8694a23",
+      "published_sha256": "91125fd2c8f56ec5ccd6fe69a252cf11e5ace595c5e0d6608ac1f091d8694a23",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "review/nine_criterion_receipt.optimized.json",
+      "source_sha256": "91125fd2c8f56ec5ccd6fe69a252cf11e5ace595c5e0d6608ac1f091d8694a23",
+      "published_sha256": "91125fd2c8f56ec5ccd6fe69a252cf11e5ace595c5e0d6608ac1f091d8694a23",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "review/independent_nine_witnesses.py",
+      "source_sha256": "035a6557353ad0aeb3528a9a6d9671cae0cc9e378e3d3c4685078c6cc6efa186",
+      "published_sha256": "035a6557353ad0aeb3528a9a6d9671cae0cc9e378e3d3c4685078c6cc6efa186",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "review/nine_vertex_bad_witnesses.json",
+      "source_sha256": "1b37233edfe8d882e696d101273b8a1eb24a98405bb874ffbe5bde6b367796e0",
+      "published_sha256": "1b37233edfe8d882e696d101273b8a1eb24a98405bb874ffbe5bde6b367796e0",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "review/nine_witness_receipt.json",
+      "source_sha256": "8a2dd19fa0a2b4252edaf4ab8e3975bf4a11a5949e469c6aec086d8c89a9e110",
+      "published_sha256": "8a2dd19fa0a2b4252edaf4ab8e3975bf4a11a5949e469c6aec086d8c89a9e110",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "review/nine_witness_receipt.optimized.json",
+      "source_sha256": "8a2dd19fa0a2b4252edaf4ab8e3975bf4a11a5949e469c6aec086d8c89a9e110",
+      "published_sha256": "8a2dd19fa0a2b4252edaf4ab8e3975bf4a11a5949e469c6aec086d8c89a9e110",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "review/nine_author_rerun.json",
+      "source_sha256": "79fb9f7755cf57beacef3b044776c458443a562e8f6f846bc2012a1c3fa201d1",
+      "published_sha256": "79fb9f7755cf57beacef3b044776c458443a562e8f6f846bc2012a1c3fa201d1",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "review/nine_author_rerun.optimized.json",
+      "source_sha256": "79fb9f7755cf57beacef3b044776c458443a562e8f6f846bc2012a1c3fa201d1",
+      "published_sha256": "79fb9f7755cf57beacef3b044776c458443a562e8f6f846bc2012a1c3fa201d1",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "review/two_cherry_author_rerun.json",
+      "source_sha256": "26e20457cd50681349303ea4dd98169e01b6337e747f10c22528a6ccaa0890fc",
+      "published_sha256": "26e20457cd50681349303ea4dd98169e01b6337e747f10c22528a6ccaa0890fc",
+      "presentation_changes_only": false
+    },
+    {
+      "path": "review/two_cherry_author_rerun.optimized.json",
+      "source_sha256": "26e20457cd50681349303ea4dd98169e01b6337e747f10c22528a6ccaa0890fc",
+      "published_sha256": "26e20457cd50681349303ea4dd98169e01b6337e747f10c22528a6ccaa0890fc",
+      "presentation_changes_only": false
+    }
+  ]
+}

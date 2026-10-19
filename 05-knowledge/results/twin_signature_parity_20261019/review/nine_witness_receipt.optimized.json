@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "all_11_witness_counts": [
+    [
+      120,
+      1353
+    ],
+    [
+      273,
+      1828
+    ],
+    [
+      234,
+      1465
+    ],
+    [
+      15,
+      916
+    ],
+    [
+      637,
+      1524
+    ],
+    [
+      1052,
+      1413
+    ],
+    [
+      2415,
+      1458
+    ],
+    [
+      4554,
+      1605
+    ],
+    [
+      3068,
+      1269
+    ],
+    [
+      219,
+      1390
+    ],
+    [
+      249,
+      1604
+    ]
+  ],
+  "source_sha256": "1b37233edfe8d882e696d101273b8a1eb24a98405bb874ffbe5bde6b367796e0",
+  "scope": "Every supplied arbitrary tournament count independently recomputed by all 9! permutations; transitive count independently recomputed by subset linear-extension DP. Complete source-class coverage checked against independent criterion census."
+}

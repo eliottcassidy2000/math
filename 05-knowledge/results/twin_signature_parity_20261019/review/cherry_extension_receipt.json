@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "checks": 1169,
+  "two_cherry": {
+    "direct": 192,
+    "two_deletion": 64,
+    "asymmetric_labelled": 64,
+    "asymmetric_classes": 16,
+    "named_transitive_count": 260,
+    "named_selfhost_count": 1
+  },
+  "D8_derivative_profiles": {
+    "(0, 1)": [
+      1,
+      4,
+      4
+    ],
+    "(0, 2)": [
+      1,
+      2,
+      6
+    ],
+    "(0, 3)": [
+      1,
+      1,
+      7
+    ],
+    "(1, 4)": [
+      1,
+      2,
+      6
+    ],
+    "(1, 5)": [
+      1,
+      1,
+      7
+    ],
+    "(2, 6)": [
+      1,
+      1,
+      7
+    ],
+    "(4, 7)": [
+      1,
+      1,
+      7
+    ]
+  },
+  "D8_plus_isolate_odd_orientations": 128,
+  "D8_extensions": [
+    {
+      "attachment": 0,
+      "automorphisms": 2,
+      "odd_labelled_orientations": 128,
+      "odd_orientation_classes": 64,
+      "asymmetric_labelled_orientations": 128
+    },
+    {
+      "attachment": 2,
+      "automorphisms": 2,
+      "odd_labelled_orientations": 128,
+      "odd_orientation_classes": 64,
+      "asymmetric_labelled_orientations": 128
+    }
+  ],
+  "scope": "Independent source-side deletion certificates, direct permutation automorphism counts, and exact transitive-host linear extensions. Universal tournament claims rest on the accompanying mathematical review, not on sampling."
+}
