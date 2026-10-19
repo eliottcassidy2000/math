@@ -1,0 +1,11 @@
+{
+  "checked_roots": 6861696,
+  "checked_vertices": 6866832,
+  "checks": 17173589,
+  "chunks": 11,
+  "first": 53,
+  "last": 2620,
+  "pairs": 2568,
+  "state": "Both paths start 1,3; even length ends 8; odd length ends 10; shared vertices have equal positional parity.",
+  "status": "passed"
+}
