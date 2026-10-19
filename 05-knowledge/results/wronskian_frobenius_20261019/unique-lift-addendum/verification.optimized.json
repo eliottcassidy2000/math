@@ -1,0 +1,53 @@
+{
+  "exact_gates": 120651,
+  "fresh_complete_lifts": 120490,
+  "fresh_multiplicity_universes": [
+    {
+      "D": 4,
+      "admissible_reductions": 7,
+      "compatible_lifts": 7,
+      "complete_coefficient_lifts": 32768,
+      "m": 3,
+      "maximum_fibre_size": 1,
+      "p": 2
+    },
+    {
+      "D": 3,
+      "admissible_reductions": 13,
+      "compatible_lifts": 13,
+      "complete_coefficient_lifts": 6561,
+      "m": 2,
+      "maximum_fibre_size": 1,
+      "p": 3
+    },
+    {
+      "D": 2,
+      "admissible_reductions": 13,
+      "compatible_lifts": 13,
+      "complete_coefficient_lifts": 15625,
+      "m": 2,
+      "maximum_fibre_size": 1,
+      "p": 5
+    },
+    {
+      "D": 3,
+      "admissible_reductions": 5,
+      "compatible_lifts": 5,
+      "complete_coefficient_lifts": 65536,
+      "m": 4,
+      "maximum_fibre_size": 1,
+      "p": 2
+    }
+  ],
+  "sector_universe": {
+    "D": "0..6",
+    "m": "1..5",
+    "p": [
+      2,
+      3,
+      5
+    ]
+  },
+  "status": "PASS",
+  "stored_complete_lift_boxes_checked": 8
+}
