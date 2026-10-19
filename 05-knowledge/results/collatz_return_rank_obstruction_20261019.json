@@ -1,0 +1,491 @@
+{
+  "backward_rank_recharge": [
+    {
+      "F_inverse_source": 817,
+      "F_rank_after": 1,
+      "F_rank_before": 2,
+      "H_rank_after_switch": 4,
+      "M": 4,
+      "final_positive_integer_source": 5163,
+      "lawful_H_inverse_blocks": 1,
+      "starting_seed": 613
+    },
+    {
+      "F_inverse_source": 2437,
+      "F_rank_after": 1,
+      "F_rank_before": 2,
+      "H_rank_after_switch": 5,
+      "M": 5,
+      "final_positive_integer_source": 15403,
+      "lawful_H_inverse_blocks": 1,
+      "starting_seed": 1828
+    },
+    {
+      "F_inverse_source": 68533,
+      "F_rank_after": 1,
+      "F_rank_before": 2,
+      "H_rank_after_switch": 8,
+      "M": 8,
+      "final_positive_integer_source": 2738219,
+      "lawful_H_inverse_blocks": 2,
+      "starting_seed": 51400
+    },
+    {
+      "F_inverse_source": 2325517,
+      "F_rank_after": 1,
+      "F_rank_before": 2,
+      "H_rank_after_switch": 12,
+      "M": 12,
+      "final_positive_integer_source": 587319339,
+      "lawful_H_inverse_blocks": 3,
+      "starting_seed": 1744138
+    },
+    {
+      "F_inverse_source": 199753,
+      "F_rank_after": 1,
+      "F_rank_before": 2,
+      "H_rank_after_switch": 16,
+      "M": 16,
+      "final_positive_integer_source": 318883883,
+      "lawful_H_inverse_blocks": 4,
+      "starting_seed": 149815
+    },
+    {
+      "F_inverse_source": 1982904355897,
+      "F_rank_after": 1,
+      "F_rank_before": 2,
+      "H_rank_after_switch": 24,
+      "M": 24,
+      "final_positive_integer_source": 126476960300910635,
+      "lawful_H_inverse_blocks": 6,
+      "starting_seed": 1487178266923
+    },
+    {
+      "F_inverse_source": 4806674178970669,
+      "F_rank_after": 1,
+      "F_rank_before": 2,
+      "H_rank_after_switch": 32,
+      "M": 32,
+      "final_positive_integer_source": 12249665261828917282859,
+      "lawful_H_inverse_blocks": 8,
+      "starting_seed": 3605005634228002
+    },
+    {
+      "F_inverse_source": 8180331747393293161,
+      "F_rank_after": 1,
+      "F_rank_before": 2,
+      "H_rank_after_switch": 40,
+      "M": 40,
+      "final_positive_integer_source": 832952694646775590999410731,
+      "lawful_H_inverse_blocks": 10,
+      "starting_seed": 6135248810544969871
+    }
+  ],
+  "checks": 3278,
+  "fixed_seed_budget_controls": [
+    {
+      "maximum_integer_inverse_blocks": 1,
+      "seed": 7,
+      "three_adic_rank": 1,
+      "word": "F"
+    },
+    {
+      "maximum_integer_inverse_blocks": 0,
+      "seed": 9,
+      "three_adic_rank": 0,
+      "word": "F"
+    },
+    {
+      "maximum_integer_inverse_blocks": 2,
+      "seed": 19,
+      "three_adic_rank": 2,
+      "word": "F"
+    },
+    {
+      "maximum_integer_inverse_blocks": 1,
+      "seed": 43,
+      "three_adic_rank": 1,
+      "word": "F"
+    },
+    {
+      "maximum_integer_inverse_blocks": 0,
+      "seed": 57,
+      "three_adic_rank": 0,
+      "word": "F"
+    },
+    {
+      "maximum_integer_inverse_blocks": 1,
+      "seed": 115,
+      "three_adic_rank": 1,
+      "word": "F"
+    },
+    {
+      "maximum_integer_inverse_blocks": 2,
+      "seed": 127,
+      "three_adic_rank": 2,
+      "word": "F"
+    },
+    {
+      "maximum_integer_inverse_blocks": 1,
+      "seed": 169,
+      "three_adic_rank": 1,
+      "word": "F"
+    },
+    {
+      "maximum_integer_inverse_blocks": 0,
+      "seed": 1,
+      "three_adic_rank": 1,
+      "word": "H"
+    },
+    {
+      "maximum_integer_inverse_blocks": 1,
+      "seed": 7,
+      "three_adic_rank": 6,
+      "word": "H"
+    },
+    {
+      "maximum_integer_inverse_blocks": 0,
+      "seed": 9,
+      "three_adic_rank": 0,
+      "word": "H"
+    },
+    {
+      "maximum_integer_inverse_blocks": 0,
+      "seed": 19,
+      "three_adic_rank": 1,
+      "word": "H"
+    },
+    {
+      "maximum_integer_inverse_blocks": 0,
+      "seed": 43,
+      "three_adic_rank": 2,
+      "word": "H"
+    },
+    {
+      "maximum_integer_inverse_blocks": 0,
+      "seed": 57,
+      "three_adic_rank": 0,
+      "word": "H"
+    },
+    {
+      "maximum_integer_inverse_blocks": 0,
+      "seed": 115,
+      "three_adic_rank": 3,
+      "word": "H"
+    },
+    {
+      "maximum_integer_inverse_blocks": 0,
+      "seed": 127,
+      "three_adic_rank": 1,
+      "word": "H"
+    },
+    {
+      "maximum_integer_inverse_blocks": 1,
+      "seed": 169,
+      "three_adic_rank": 4,
+      "word": "H"
+    }
+  ],
+  "forward_rank_recharge": [
+    {
+      "F_rank_after": 1,
+      "F_rank_before": 3,
+      "H_rank_after_switch": 9,
+      "M": 9,
+      "after_F": 1579,
+      "initial_source": 2105,
+      "lawful_H_forward_blocks": 1
+    },
+    {
+      "F_rank_after": 1,
+      "F_rank_before": 3,
+      "H_rank_after_switch": 10,
+      "M": 10,
+      "after_F": 3115,
+      "initial_source": 4153,
+      "lawful_H_forward_blocks": 1
+    },
+    {
+      "F_rank_after": 1,
+      "F_rank_before": 3,
+      "H_rank_after_switch": 18,
+      "M": 18,
+      "after_F": 903211,
+      "initial_source": 1204281,
+      "lawful_H_forward_blocks": 2
+    },
+    {
+      "F_rank_after": 1,
+      "F_rank_before": 3,
+      "H_rank_after_switch": 27,
+      "M": 27,
+      "after_F": 453101611,
+      "initial_source": 604135481,
+      "lawful_H_forward_blocks": 3
+    },
+    {
+      "F_rank_after": 1,
+      "F_rank_before": 3,
+      "H_rank_after_switch": 36,
+      "M": 36,
+      "after_F": 343916267563,
+      "initial_source": 458555023417,
+      "lawful_H_forward_blocks": 4
+    },
+    {
+      "F_rank_after": 1,
+      "F_rank_before": 3,
+      "H_rank_after_switch": 45,
+      "M": 45,
+      "after_F": 59511385737259,
+      "initial_source": 79348514316345,
+      "lawful_H_forward_blocks": 5
+    },
+    {
+      "F_rank_after": 1,
+      "F_rank_before": 3,
+      "H_rank_after_switch": 54,
+      "M": 54,
+      "after_F": 376170734536747,
+      "initial_source": 501560979382329,
+      "lawful_H_forward_blocks": 6
+    }
+  ],
+  "negative_center_positive_prefixes": [
+    {
+      "L": 1,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 2
+    },
+    {
+      "L": 2,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 6
+    },
+    {
+      "L": 3,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 14
+    },
+    {
+      "L": 4,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 30
+    },
+    {
+      "L": 5,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 62
+    },
+    {
+      "L": 6,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 126
+    },
+    {
+      "L": 7,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 254
+    },
+    {
+      "L": 8,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 510
+    },
+    {
+      "L": 9,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 1022
+    },
+    {
+      "L": 10,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 2046
+    },
+    {
+      "L": 11,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 4094
+    },
+    {
+      "L": 12,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 8190
+    },
+    {
+      "L": 13,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 16382
+    },
+    {
+      "L": 14,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 32766
+    },
+    {
+      "L": 15,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 65534
+    },
+    {
+      "L": 16,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 131070
+    },
+    {
+      "L": 17,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 262142
+    },
+    {
+      "L": 18,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 524286
+    },
+    {
+      "L": 19,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 1048574
+    },
+    {
+      "L": 20,
+      "loop_state": [
+        1,
+        2
+      ],
+      "positive_lower_source": 2097150
+    }
+  ],
+  "positive_phase_cycle": [
+    [
+      0,
+      1
+    ],
+    [
+      -1,
+      1
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      -1,
+      1
+    ]
+  ],
+  "return_words": [
+    {
+      "C": 1,
+      "a": 1,
+      "bits": [
+        1,
+        0
+      ],
+      "center": "1",
+      "n": 2,
+      "name": "F",
+      "residue": 1
+    },
+    {
+      "C": 101,
+      "a": 4,
+      "bits": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "center": "101/431",
+      "n": 9,
+      "name": "H",
+      "residue": 43
+    }
+  ],
+  "status": "FINITE-EXACT controls for proved local-rank obstruction; no universal coverage",
+  "transported_isolated_atoms": [
+    {
+      "first_isolated_merge": 12,
+      "lifted_lower_source": 9,
+      "odd_difference": -1,
+      "seed": 7,
+      "word": "F"
+    },
+    {
+      "first_isolated_merge": 19,
+      "lifted_lower_source": 43,
+      "odd_difference": -1,
+      "seed": 7,
+      "word": "H"
+    },
+    {
+      "first_isolated_merge": 21,
+      "lifted_lower_source": 57,
+      "odd_difference": -1,
+      "seed": 43,
+      "word": "F"
+    }
+  ]
+}
