@@ -1,0 +1,71 @@
+{
+  "checks": 41,
+  "packet": 137,
+  "scope": "Small exact primitive, coordinate, Kummer, and discriminant identities only.",
+  "status": "PASS",
+  "verified": [
+    "b2_r2_primitive_derivative",
+    "b2_r2_degree_and_leading",
+    "b2_r2_critical_constant",
+    "b2_r2_critical_scaling_remainder",
+    "b2_r2_birational_u",
+    "b2_r2_birational_energy",
+    "b2_r2_parameter_recovery",
+    "b2_r2_kummer_equation",
+    "b5_r2_primitive_derivative",
+    "b5_r2_degree_and_leading",
+    "b5_r2_critical_constant",
+    "b5_r2_critical_scaling_remainder",
+    "b5_r2_birational_u",
+    "b5_r2_birational_energy",
+    "b5_r2_parameter_recovery",
+    "b5_r2_kummer_equation",
+    "b2_r3_primitive_derivative",
+    "b2_r3_degree_and_leading",
+    "b2_r3_critical_constant",
+    "b2_r3_critical_scaling_remainder",
+    "b2_r3_birational_u",
+    "b2_r3_birational_energy",
+    "b2_r3_parameter_recovery",
+    "b2_r4_primitive_derivative",
+    "b2_r4_degree_and_leading",
+    "b2_r4_critical_constant",
+    "b2_r4_critical_scaling_remainder",
+    "b2_r4_birational_u",
+    "b2_r4_birational_energy",
+    "b2_r4_parameter_recovery",
+    "b2_r4_discriminant_class5",
+    "b3_r3_primitive_derivative",
+    "b3_r3_degree_and_leading",
+    "b3_r3_critical_constant",
+    "b3_r3_critical_scaling_remainder",
+    "b3_r3_birational_u",
+    "b3_r3_birational_energy",
+    "b3_r3_parameter_recovery",
+    "kummer_X_trivial_stabilizer_coefficient",
+    "kummer_T_trivial_stabilizer_coefficient",
+    "b2_r6_arithmetic_A9_constant"
+  ],
+  "witnesses": [
+    [
+      2,
+      2
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      3
+    ]
+  ]
+}
