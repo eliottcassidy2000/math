@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "core": [
+    0,
+    28,
+    0,
+    0,
+    12,
+    4,
+    13,
+    93,
+    125
+  ],
+  "order": [
+    2,
+    3,
+    0,
+    4,
+    5,
+    6,
+    1,
+    7,
+    8
+  ],
+  "extensions": 540,
+  "common_vertex": 5,
+  "core_incomparability_degree": 6,
+  "cases": [
+    {
+      "case": "all A below5",
+      "certificate": [
+        [
+          6,
+          1,
+          2
+        ],
+        [
+          4,
+          5,
+          1
+        ],
+        [
+          5,
+          6,
+          2
+        ]
+      ],
+      "generators": 112,
+      "minimum_integer_margin": -160,
+      "maximum_integer_margin": -2
+    },
+    {
+      "case": "all B above5",
+      "certificate": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          4,
+          5,
+          2
+        ],
+        [
+          5,
+          6,
+          1
+        ]
+      ],
+      "generators": 112,
+      "minimum_integer_margin": -160,
+      "maximum_integer_margin": -2
+    }
+  ]
+}
