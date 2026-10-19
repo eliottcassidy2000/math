@@ -1,0 +1,5 @@
+{
+  "original_sha256": "79603eb3bc14893c45b9080d3828bdeb6af544403b0b4c374cc8154e9cc83111",
+  "reviewed_sha256": "b9113fc4dd144ca2bb7fc37123d4126f9a1aa05e90dbb37c28f07aacf3fd7351",
+  "change": "Explicit anisotropic/unramified quadratic hypotheses and norm-one coordinate lifts in Section 6 only; no change to main p=29 theorem, numeric bounds, or verifier."
+}

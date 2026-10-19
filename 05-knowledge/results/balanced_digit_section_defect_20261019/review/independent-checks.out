@@ -1,0 +1,291 @@
+{
+  "verdict": "All independent checks passed",
+  "p": 29,
+  "base_edges": 12615,
+  "baseline_cycle_lower_bound": 435,
+  "full_section_defect_lower_bound": 440,
+  "binary_second_difference_tuples": 125,
+  "binary_separability_small_grid_controls": {
+    "2": {
+      "grids": 16,
+      "mixed_zero": 6
+    },
+    "3": {
+      "grids": 512,
+      "mixed_zero": 14
+    },
+    "4": {
+      "grids": 65536,
+      "mixed_zero": 30
+    }
+  },
+  "all_direction_straight_cycles": 435,
+  "direct_norm_affine_edge_comparisons": 37845,
+  "test_motion_defects": [
+    10207,
+    12187,
+    12180
+  ],
+  "seams_integrated_for_each_of_u_and_v": 58,
+  "seam_cycle_checks": 5046,
+  "all_offset_orientation_systems_checked": 195112,
+  "all_offset_row_periods_checked": 5658248,
+  "periods_in_lexicographic_orientation_order": [
+    16,
+    14,
+    4,
+    2,
+    27,
+    25,
+    15,
+    13
+  ],
+  "norm_one_lifts_checked": 30,
+  "rotation_pair_multiplicity": 3,
+  "general_criterion_arithmetic_checks": {
+    "5": {
+      "unit_coefficient_pairs": 4,
+      "anisotropic_qualifying": 0,
+      "split_qualifying": 0
+    },
+    "7": {
+      "unit_coefficient_pairs": 16,
+      "anisotropic_qualifying": 0,
+      "split_qualifying": 0
+    },
+    "11": {
+      "unit_coefficient_pairs": 64,
+      "anisotropic_qualifying": 0,
+      "split_qualifying": 0
+    },
+    "13": {
+      "unit_coefficient_pairs": 100,
+      "anisotropic_qualifying": 0,
+      "split_qualifying": 0
+    },
+    "17": {
+      "unit_coefficient_pairs": 196,
+      "anisotropic_qualifying": 0,
+      "split_qualifying": 0
+    },
+    "19": {
+      "unit_coefficient_pairs": 256,
+      "anisotropic_qualifying": 0,
+      "split_qualifying": 0
+    },
+    "23": {
+      "unit_coefficient_pairs": 400,
+      "anisotropic_qualifying": 0,
+      "split_qualifying": 0
+    },
+    "29": {
+      "unit_coefficient_pairs": 676,
+      "anisotropic_qualifying": 24,
+      "split_qualifying": 0
+    },
+    "31": {
+      "unit_coefficient_pairs": 784,
+      "anisotropic_qualifying": 0,
+      "split_qualifying": 48
+    },
+    "37": {
+      "unit_coefficient_pairs": 1156,
+      "anisotropic_qualifying": 72,
+      "split_qualifying": 72
+    },
+    "41": {
+      "unit_coefficient_pairs": 1444,
+      "anisotropic_qualifying": 192,
+      "split_qualifying": 72
+    },
+    "43": {
+      "unit_coefficient_pairs": 1600,
+      "anisotropic_qualifying": 192,
+      "split_qualifying": 120
+    },
+    "47": {
+      "unit_coefficient_pairs": 1936,
+      "anisotropic_qualifying": 192,
+      "split_qualifying": 264
+    },
+    "53": {
+      "unit_coefficient_pairs": 2500,
+      "anisotropic_qualifying": 408,
+      "split_qualifying": 312
+    },
+    "59": {
+      "unit_coefficient_pairs": 3136,
+      "anisotropic_qualifying": 576,
+      "split_qualifying": 576
+    },
+    "61": {
+      "unit_coefficient_pairs": 3364,
+      "anisotropic_qualifying": 672,
+      "split_qualifying": 624
+    },
+    "67": {
+      "unit_coefficient_pairs": 4096,
+      "anisotropic_qualifying": 888,
+      "split_qualifying": 816
+    },
+    "71": {
+      "unit_coefficient_pairs": 4624,
+      "anisotropic_qualifying": 1032,
+      "split_qualifying": 984
+    },
+    "73": {
+      "unit_coefficient_pairs": 4900,
+      "anisotropic_qualifying": 1176,
+      "split_qualifying": 1128
+    },
+    "79": {
+      "unit_coefficient_pairs": 5776,
+      "anisotropic_qualifying": 1344,
+      "split_qualifying": 1488
+    },
+    "83": {
+      "unit_coefficient_pairs": 6400,
+      "anisotropic_qualifying": 1656,
+      "split_qualifying": 1656
+    },
+    "89": {
+      "unit_coefficient_pairs": 7396,
+      "anisotropic_qualifying": 2184,
+      "split_qualifying": 1848
+    },
+    "97": {
+      "unit_coefficient_pairs": 8836,
+      "anisotropic_qualifying": 2712,
+      "split_qualifying": 2424
+    },
+    "101": {
+      "unit_coefficient_pairs": 9604,
+      "anisotropic_qualifying": 3144,
+      "split_qualifying": 2520
+    }
+  },
+  "generalized_period_direct_integrations": [
+    {
+      "p": 29,
+      "m": 1,
+      "a": 3,
+      "b": 9,
+      "orientations": 8
+    },
+    {
+      "p": 37,
+      "m": 26,
+      "a": 3,
+      "b": 10,
+      "orientations": 8
+    },
+    {
+      "p": 41,
+      "m": 21,
+      "a": 3,
+      "b": 9,
+      "orientations": 8
+    },
+    {
+      "p": 43,
+      "m": 34,
+      "a": 3,
+      "b": 12,
+      "orientations": 8
+    },
+    {
+      "p": 47,
+      "m": 35,
+      "a": 3,
+      "b": 9,
+      "orientations": 8
+    },
+    {
+      "p": 53,
+      "m": 34,
+      "a": 3,
+      "b": 9,
+      "orientations": 8
+    },
+    {
+      "p": 59,
+      "m": 20,
+      "a": 3,
+      "b": 10,
+      "orientations": 8
+    },
+    {
+      "p": 61,
+      "m": 46,
+      "a": 3,
+      "b": 11,
+      "orientations": 8
+    },
+    {
+      "p": 67,
+      "m": 47,
+      "a": 3,
+      "b": 13,
+      "orientations": 8
+    },
+    {
+      "p": 71,
+      "m": 39,
+      "a": 3,
+      "b": 10,
+      "orientations": 8
+    },
+    {
+      "p": 73,
+      "m": 11,
+      "a": 3,
+      "b": 10,
+      "orientations": 8
+    },
+    {
+      "p": 79,
+      "m": 64,
+      "a": 3,
+      "b": 9,
+      "orientations": 8
+    },
+    {
+      "p": 83,
+      "m": 13,
+      "a": 3,
+      "b": 10,
+      "orientations": 8
+    },
+    {
+      "p": 89,
+      "m": 32,
+      "a": 3,
+      "b": 10,
+      "orientations": 8
+    },
+    {
+      "p": 97,
+      "m": 47,
+      "a": 3,
+      "b": 9,
+      "orientations": 8
+    },
+    {
+      "p": 101,
+      "m": 24,
+      "a": 3,
+      "b": 14,
+      "orientations": 8
+    }
+  ],
+  "split_form_qualifying_example": {
+    "p": 31,
+    "m": 30,
+    "a": 3,
+    "b": 9
+  },
+  "source_sha256": {
+    "README.md": "bbb2ded584c0d19973b545ea2d9c56c0568c71f8770fb45ea2ad8359878a6334",
+    "verify_balanced_stress.py": "63a73900f8d10783c830bfbdf74d33c8b44cea9fbaae0a2d345b6aa59e729240"
+  }
+}

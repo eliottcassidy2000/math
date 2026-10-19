@@ -1,0 +1,68 @@
+{
+  "description": "Source hashes identify reviewed artifacts. Approved status/scope and reader-facing overlays were applied. Independent-checker input paths and reported hash inventory were made package-relative; mathematical test logic is unchanged.",
+  "files": [
+    {
+      "path": "README.md",
+      "source_sha256": "b9113fc4dd144ca2bb7fc37123d4126f9a1aa05e90dbb37c28f07aacf3fd7351",
+      "published_sha256": "bbb2ded584c0d19973b545ea2d9c56c0568c71f8770fb45ea2ad8359878a6334",
+      "presentation_updates": true
+    },
+    {
+      "path": "verify_balanced_stress.py",
+      "source_sha256": "63a73900f8d10783c830bfbdf74d33c8b44cea9fbaae0a2d345b6aa59e729240",
+      "published_sha256": "63a73900f8d10783c830bfbdf74d33c8b44cea9fbaae0a2d345b6aa59e729240",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify_balanced_stress.out",
+      "source_sha256": "1091a42f57472815772e1e58062a2db0ebacf10cf92c4e39be5ff019be6f18cb",
+      "published_sha256": "1091a42f57472815772e1e58062a2db0ebacf10cf92c4e39be5ff019be6f18cb",
+      "presentation_updates": false
+    },
+    {
+      "path": "balanced-stress-exact-results.json",
+      "source_sha256": "1091a42f57472815772e1e58062a2db0ebacf10cf92c4e39be5ff019be6f18cb",
+      "published_sha256": "1091a42f57472815772e1e58062a2db0ebacf10cf92c4e39be5ff019be6f18cb",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/REVIEW.md",
+      "source_sha256": "8cb036f9f8f081abd20c78bd0931d51343c51cfa8e97215d26e960147c1160c2",
+      "published_sha256": "d71990db3239c3dbd092335cb33d7e51453a43be068f8b0e9406256913e494c8",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent_checks.py",
+      "source_sha256": "e9174c239858de351486cd7d3bdcc0fe40be411dd46bcdef7da10d9c26cadec5",
+      "published_sha256": "10ee3fe212c5f0978f899f9ea1226bbe42bc786b0505eba05416181ef1aadc92",
+      "presentation_updates": false,
+      "portability_update": "Locate the published sources relative to this checker; retain all mathematical tests. The trace checker hashes the seven explicitly listed research files instead of unrelated neighboring files."
+    },
+    {
+      "path": "review/independent-results.json",
+      "source_sha256": "ba1eb2877f6cff921b912eeb662864a71e56f05134a6fcb0ebb78bd7492ae004",
+      "published_sha256": "a77ca0f920e98d50f56a2fc43926d582f8e56bc23221a28ae5b37f4a62f1bc4b",
+      "presentation_updates": false,
+      "receipt_update": "Same mathematical results, with provenance hashes identifying the published package."
+    },
+    {
+      "path": "review/independent-checks.out",
+      "source_sha256": "ba1eb2877f6cff921b912eeb662864a71e56f05134a6fcb0ebb78bd7492ae004",
+      "published_sha256": "a77ca0f920e98d50f56a2fc43926d582f8e56bc23221a28ae5b37f4a62f1bc4b",
+      "presentation_updates": false,
+      "receipt_update": "Same mathematical results, with provenance hashes identifying the published package."
+    },
+    {
+      "path": "review/overlay-manifest.json",
+      "source_sha256": "37ec2e614e63db34c2fadf550e38fe8388922cef5af7abffb74272af2d8652c8",
+      "published_sha256": "37ec2e614e63db34c2fadf550e38fe8388922cef5af7abffb74272af2d8652c8",
+      "presentation_updates": false
+    }
+  ],
+  "original_readme_sha256": "79603eb3bc14893c45b9080d3828bdeb6af544403b0b4c374cc8154e9cc83111",
+  "approved_scope_readme_sha256": "b9113fc4dd144ca2bb7fc37123d4126f9a1aa05e90dbb37c28f07aacf3fd7351",
+  "original_independent_receipt_source_hashes": {
+    "README.md": "79603eb3bc14893c45b9080d3828bdeb6af544403b0b4c374cc8154e9cc83111",
+    "verify_balanced_stress.py": "63a73900f8d10783c830bfbdf74d33c8b44cea9fbaae0a2d345b6aa59e729240"
+  }
+}
