@@ -1,0 +1,239 @@
+{
+  "status": "PASS",
+  "guards": 69053,
+  "core": [
+    0,
+    0,
+    0,
+    0,
+    7,
+    13,
+    14,
+    12,
+    206,
+    5,
+    685,
+    535
+  ],
+  "core_extensions": 61180,
+  "degrees": [
+    6,
+    7,
+    3,
+    6,
+    7,
+    7,
+    7,
+    7,
+    6,
+    7,
+    5,
+    6
+  ],
+  "saturated_barrier": [
+    1,
+    4,
+    5,
+    6,
+    7,
+    9
+  ],
+  "tree": [
+    [
+      7,
+      9
+    ],
+    [
+      4,
+      5
+    ]
+  ],
+  "bounded_certificate": {
+    "lower_profiles": 20,
+    "upper_profiles": 12,
+    "atoms": 240,
+    "orders": [
+      12,
+      18
+    ],
+    "margin": "1/9, strict",
+    "exact_cell_minima": [
+      "78113/453252",
+      "25363/180473",
+      "50695/453252",
+      "4768/24065"
+    ],
+    "minimizers": [
+      [
+        9,
+        5,
+        453252,
+        [
+          121282,
+          132575,
+          104726,
+          94669
+        ]
+      ],
+      [
+        9,
+        3,
+        360946,
+        [
+          93082,
+          108569,
+          80877,
+          78418
+        ]
+      ],
+      [
+        18,
+        10,
+        453252,
+        [
+          102269,
+          97126,
+          148700,
+          105157
+        ]
+      ],
+      [
+        18,
+        6,
+        240650,
+        [
+          50390,
+          59015,
+          69520,
+          61725
+        ]
+      ]
+    ],
+    "first_probability_interval": [
+      "66465/151084",
+      "84619/151084"
+    ],
+    "count_table_sha256": "b1c8c67270896d932f81472a78092beab6d6f6e39c1cd09ecdeeb342d8e6423a"
+  },
+  "unbounded_certificate": {
+    "lower_free_port": 2,
+    "upper_free_port": 10,
+    "other_port_cap": 1,
+    "generators": 144,
+    "orders": [
+      10,
+      14
+    ],
+    "margin": "3/50, strict",
+    "exact_cell_minima": [
+      "771/6245",
+      "3231/24464",
+      "386/6245",
+      "3116/16323"
+    ],
+    "minimizers": [
+      [
+        0,
+        1,
+        0,
+        1,
+        2,
+        2,
+        12490,
+        [
+          3830,
+          3288,
+          3189,
+          2183
+        ]
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        2,
+        1,
+        48928,
+        [
+          12628,
+          14919,
+          10812,
+          10569
+        ]
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        2,
+        2,
+        12490,
+        [
+          3091,
+          2281,
+          4600,
+          2518
+        ]
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        2,
+        0,
+        32646,
+        [
+          6718,
+          7979,
+          9484,
+          8465
+        ]
+      ]
+    ],
+    "count_table_sha256": "181cc53fb0202d38f5926c5b77217ba16e5ae7be145c384b96c1bb613f4b8e64"
+  },
+  "independent_controls": {
+    "boundary_word_fibers": 896,
+    "bounded_atoms_recounted_by_gap_words": 240,
+    "deletion_generators_checked_by_full_core_differences": 144,
+    "general_affine_gap_controls": 3840,
+    "structural_hostiles": 2
+  },
+  "sharpness_family": {
+    "extension_polynomial_coefficients_descending": [
+      12490,
+      78784,
+      122888
+    ],
+    "FT_margin_polynomial_coefficients_descending": [
+      772,
+      8213,
+      18243
+    ],
+    "checked_values": [
+      [
+        1,
+        214162,
+        27228
+      ],
+      [
+        2,
+        330416,
+        37757
+      ],
+      [
+        4,
+        637864,
+        63447
+      ],
+      [
+        7,
+        1286386,
+        113562
+      ]
+    ]
+  }
+}

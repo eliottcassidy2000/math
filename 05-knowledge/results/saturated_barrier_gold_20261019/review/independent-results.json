@@ -1,0 +1,903 @@
+{
+  "status": "PASS",
+  "checks": 3488,
+  "independent_method": "set-relation construction and one vector-valued ideal DP, no packet imports",
+  "bounded_atoms": 240,
+  "bounded_minima": [
+    "78113/453252",
+    "25363/180473",
+    "50695/453252",
+    "4768/24065"
+  ],
+  "first_probability_interval": [
+    "66465/151084",
+    "84619/151084"
+  ],
+  "bounded_table_sha256": "b1c8c67270896d932f81472a78092beab6d6f6e39c1cd09ecdeeb342d8e6423a",
+  "deletion_generators": 144,
+  "free_minima": [
+    "771/6245",
+    "3231/24464",
+    "386/6245",
+    "3116/16323"
+  ],
+  "free_table_sha256": "181cc53fb0202d38f5926c5b77217ba16e5ae7be145c384b96c1bb613f4b8e64",
+  "large_free_cap_models": 112,
+  "sharpness_cell_polynomials_descending": [
+    [
+      3091,
+      18254,
+      26113
+    ],
+    [
+      2281,
+      16367,
+      29046
+    ],
+    [
+      4600,
+      26408,
+      36916
+    ],
+    [
+      2518,
+      17755,
+      30813
+    ]
+  ],
+  "extension_polynomial_descending": [
+    12490,
+    78784,
+    122888
+  ],
+  "FT_margin_polynomial_descending": [
+    772,
+    8213,
+    18243
+  ],
+  "6245_times_margin_minus_386_times_E_descending": [
+    0,
+    20879561,
+    66492767
+  ],
+  "exhaustive_valid_one_point_types_comparable_to_S": 16,
+  "seven_thin_one_point_types": 16,
+  "actual_exterior_cases": 48,
+  "actual_non_chain_cases": 48,
+  "exterior_cases": [
+    {
+      "vertices": 16,
+      "exterior_order_pairs": 4,
+      "cells": [
+        231130,
+        267548,
+        287050,
+        262044
+      ]
+    },
+    {
+      "vertices": 17,
+      "exterior_order_pairs": 3,
+      "cells": [
+        292577,
+        279761,
+        461144,
+        326386
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 24,
+      "cells": [
+        773838,
+        882429,
+        809690,
+        748189
+      ]
+    },
+    {
+      "vertices": 17,
+      "exterior_order_pairs": 12,
+      "cells": [
+        507710,
+        557238,
+        613336,
+        525900
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 18,
+      "cells": [
+        1932656,
+        2203232,
+        2424336,
+        2226128
+      ]
+    },
+    {
+      "vertices": 19,
+      "exterior_order_pairs": 6,
+      "cells": [
+        218430,
+        262181,
+        255601,
+        243153
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 16,
+      "cells": [
+        1501254,
+        1677338,
+        2016874,
+        1740446
+      ]
+    },
+    {
+      "vertices": 19,
+      "exterior_order_pairs": 3,
+      "cells": [
+        105821,
+        99698,
+        122623,
+        90506
+      ]
+    },
+    {
+      "vertices": 20,
+      "exterior_order_pairs": 288,
+      "cells": [
+        15890120,
+        18322160,
+        16597392,
+        15275728
+      ]
+    },
+    {
+      "vertices": 16,
+      "exterior_order_pairs": 4,
+      "cells": [
+        166898,
+        214700,
+        188455,
+        193143
+      ]
+    },
+    {
+      "vertices": 17,
+      "exterior_order_pairs": 6,
+      "cells": [
+        365862,
+        442089,
+        381449,
+        382745
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 24,
+      "cells": [
+        1296558,
+        1314612,
+        1331928,
+        1081332
+      ]
+    },
+    {
+      "vertices": 17,
+      "exterior_order_pairs": 6,
+      "cells": [
+        167356,
+        202794,
+        193614,
+        186672
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 9,
+      "cells": [
+        906079,
+        1181858,
+        1002890,
+        1104596
+      ]
+    },
+    {
+      "vertices": 19,
+      "exterior_order_pairs": 24,
+      "cells": [
+        1668569,
+        2489346,
+        1779004,
+        2231701
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 12,
+      "cells": [
+        762748,
+        779154,
+        988636,
+        770955
+      ]
+    },
+    {
+      "vertices": 19,
+      "exterior_order_pairs": 24,
+      "cells": [
+        1787473,
+        2009615,
+        1771062,
+        1625458
+      ]
+    },
+    {
+      "vertices": 20,
+      "exterior_order_pairs": 10,
+      "cells": [
+        197884,
+        225592,
+        244998,
+        217952
+      ]
+    },
+    {
+      "vertices": 16,
+      "exterior_order_pairs": 2,
+      "cells": [
+        60572,
+        77948,
+        61256,
+        64758
+      ]
+    },
+    {
+      "vertices": 17,
+      "exterior_order_pairs": 3,
+      "cells": [
+        709358,
+        940600,
+        735812,
+        827844
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 24,
+      "cells": [
+        1024144,
+        1446936,
+        1029936,
+        1205908
+      ]
+    },
+    {
+      "vertices": 17,
+      "exterior_order_pairs": 6,
+      "cells": [
+        575248,
+        581904,
+        641348,
+        515804
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 3,
+      "cells": [
+        438432,
+        630480,
+        422838,
+        499602
+      ]
+    },
+    {
+      "vertices": 19,
+      "exterior_order_pairs": 36,
+      "cells": [
+        1523265,
+        1667047,
+        1904335,
+        1618773
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 3,
+      "cells": [
+        68722,
+        66744,
+        76902,
+        58564
+      ]
+    },
+    {
+      "vertices": 19,
+      "exterior_order_pairs": 8,
+      "cells": [
+        374830,
+        353640,
+        444578,
+        327254
+      ]
+    },
+    {
+      "vertices": 20,
+      "exterior_order_pairs": 32,
+      "cells": [
+        1668653,
+        2361797,
+        1544514,
+        1901438
+      ]
+    },
+    {
+      "vertices": 16,
+      "exterior_order_pairs": 2,
+      "cells": [
+        102310,
+        112202,
+        121588,
+        102916
+      ]
+    },
+    {
+      "vertices": 17,
+      "exterior_order_pairs": 12,
+      "cells": [
+        724000,
+        750651,
+        876423,
+        719949
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 4,
+      "cells": [
+        235907,
+        336729,
+        275187,
+        318163
+      ]
+    },
+    {
+      "vertices": 17,
+      "exterior_order_pairs": 12,
+      "cells": [
+        279452,
+        310044,
+        321864,
+        282514
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 3,
+      "cells": [
+        306870,
+        337984,
+        410009,
+        348651
+      ]
+    },
+    {
+      "vertices": 19,
+      "exterior_order_pairs": 24,
+      "cells": [
+        1415886,
+        1756128,
+        1933634,
+        1844340
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 3,
+      "cells": [
+        416338,
+        405408,
+        572128,
+        427735
+      ]
+    },
+    {
+      "vertices": 19,
+      "exterior_order_pairs": 9,
+      "cells": [
+        310959,
+        398268,
+        326133,
+        334665
+      ]
+    },
+    {
+      "vertices": 20,
+      "exterior_order_pairs": 12,
+      "cells": [
+        541440,
+        635332,
+        720996,
+        641016
+      ]
+    },
+    {
+      "vertices": 16,
+      "exterior_order_pairs": 2,
+      "cells": [
+        105144,
+        98504,
+        149588,
+        105412
+      ]
+    },
+    {
+      "vertices": 17,
+      "exterior_order_pairs": 3,
+      "cells": [
+        198102,
+        198586,
+        197244,
+        163478
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 3,
+      "cells": [
+        141126,
+        200676,
+        118878,
+        146580
+      ]
+    },
+    {
+      "vertices": 17,
+      "exterior_order_pairs": 6,
+      "cells": [
+        222548,
+        270148,
+        224496,
+        224632
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 6,
+      "cells": [
+        953202,
+        1230966,
+        1057800,
+        1126368
+      ]
+    },
+    {
+      "vertices": 19,
+      "exterior_order_pairs": 72,
+      "cells": [
+        3080904,
+        3858672,
+        3799680,
+        3696744
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 24,
+      "cells": [
+        1394352,
+        1737168,
+        1351592,
+        1372308
+      ]
+    },
+    {
+      "vertices": 19,
+      "exterior_order_pairs": 72,
+      "cells": [
+        1999688,
+        2111100,
+        2428216,
+        1972238
+      ]
+    },
+    {
+      "vertices": 20,
+      "exterior_order_pairs": 32,
+      "cells": [
+        1699378,
+        1925127,
+        2316855,
+        1969220
+      ]
+    },
+    {
+      "vertices": 16,
+      "exterior_order_pairs": 2,
+      "cells": [
+        111907,
+        116980,
+        116830,
+        99446
+      ]
+    },
+    {
+      "vertices": 17,
+      "exterior_order_pairs": 3,
+      "cells": [
+        404420,
+        506960,
+        360532,
+        388712
+      ]
+    },
+    {
+      "vertices": 18,
+      "exterior_order_pairs": 8,
+      "cells": [
+        534502,
+        515342,
+        721822,
+        534381
+      ]
+    }
+  ],
+  "end_to_end_theorem_cases": [
+    {
+      "family": "A seven-thin",
+      "order": 16,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        257566,
+        268854,
+        297052,
+        247790
+      ]
+    },
+    {
+      "family": "A seven-thin",
+      "order": 17,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        241954,
+        226604,
+        270882,
+        197676
+      ]
+    },
+    {
+      "family": "A seven-thin",
+      "order": 18,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        571478,
+        574086,
+        577676,
+        464952
+      ]
+    },
+    {
+      "family": "A seven-thin",
+      "order": 17,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        429936,
+        436594,
+        495888,
+        392042
+      ]
+    },
+    {
+      "family": "A seven-thin",
+      "order": 18,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        272702,
+        258232,
+        332724,
+        242727
+      ]
+    },
+    {
+      "family": "A seven-thin",
+      "order": 19,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        11945682,
+        13351662,
+        13350618,
+        11946726
+      ]
+    },
+    {
+      "family": "A seven-thin",
+      "order": 18,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        1267922,
+        1374950,
+        1348004,
+        1170498
+      ]
+    },
+    {
+      "family": "A seven-thin",
+      "order": 19,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        236906,
+        258956,
+        277662,
+        237356
+      ]
+    },
+    {
+      "family": "A seven-thin",
+      "order": 20,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        735586,
+        771030,
+        819682,
+        686934
+      ]
+    },
+    {
+      "family": "A seven-thin",
+      "order": 16,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        97823,
+        92385,
+        116837,
+        85465
+      ]
+    },
+    {
+      "family": "A seven-thin",
+      "order": 17,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        287070,
+        280889,
+        319605,
+        248354
+      ]
+    },
+    {
+      "family": "A seven-thin",
+      "order": 18,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        770578,
+        727746,
+        994802,
+        712468
+      ]
+    },
+    {
+      "family": "A seven-thin",
+      "order": 17,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        372056,
+        384588,
+        398240,
+        326370
+      ]
+    },
+    {
+      "family": "A seven-thin",
+      "order": 18,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        696374,
+        745803,
+        649457,
+        564594
+      ]
+    },
+    {
+      "family": "A seven-thin",
+      "order": 19,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        3190836,
+        3605316,
+        3572652,
+        3223500
+      ]
+    },
+    {
+      "family": "A seven-thin",
+      "order": 18,
+      "maximum_incomparability_degree": 7,
+      "cells": [
+        2170300,
+        2397354,
+        2315688,
+        2038358
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 22,
+      "maximum_incomparability_degree": 10,
+      "cells": [
+        58943040,
+        51611520,
+        70356160,
+        46909920
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 23,
+      "maximum_incomparability_degree": 10,
+      "cells": [
+        1673769600,
+        1464144000,
+        1862683200,
+        1275230400
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 23,
+      "maximum_incomparability_degree": 11,
+      "cells": [
+        1111377600,
+        935591040,
+        1272589920,
+        828348480
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 24,
+      "maximum_incomparability_degree": 11,
+      "cells": [
+        781825800,
+        670393800,
+        792069000,
+        538967400
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 22,
+      "maximum_incomparability_degree": 10,
+      "cells": [
+        5996870,
+        5098260,
+        6902300,
+        4524880
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 23,
+      "maximum_incomparability_degree": 10,
+      "cells": [
+        68707440,
+        58263840,
+        76707000,
+        50264280
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 23,
+      "maximum_incomparability_degree": 11,
+      "cells": [
+        516669840,
+        432133920,
+        610441200,
+        392332320
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 24,
+      "maximum_incomparability_degree": 11,
+      "cells": [
+        500461200,
+        425336400,
+        508141800,
+        341058600
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 22,
+      "maximum_incomparability_degree": 10,
+      "cells": [
+        74410200,
+        65388240,
+        80110680,
+        54654120
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 23,
+      "maximum_incomparability_degree": 10,
+      "cells": [
+        534246000,
+        473002200,
+        560028360,
+        386916480
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 23,
+      "maximum_incomparability_degree": 11,
+      "cells": [
+        40655520,
+        38892560,
+        38089400,
+        29105640
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 24,
+      "maximum_incomparability_degree": 11,
+      "cells": [
+        1740079800,
+        1505974320,
+        2035032660,
+        1354325220
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 22,
+      "maximum_incomparability_degree": 10,
+      "cells": [
+        148820400,
+        130776480,
+        160221360,
+        109308240
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 23,
+      "maximum_incomparability_degree": 10,
+      "cells": [
+        234155360,
+        201444280,
+        307142920,
+        199619360
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 23,
+      "maximum_incomparability_degree": 11,
+      "cells": [
+        30283980,
+        27826080,
+        30422580,
+        21956160
+      ]
+    },
+    {
+      "family": "B beyond seven-thin",
+      "order": 24,
+      "maximum_incomparability_degree": 11,
+      "cells": [
+        5560158600,
+        4690704600,
+        6047476200,
+        3973595400
+      ]
+    }
+  ]
+}

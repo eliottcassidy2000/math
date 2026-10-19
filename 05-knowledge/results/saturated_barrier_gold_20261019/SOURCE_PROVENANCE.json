@@ -1,0 +1,91 @@
+{
+  "source_manifest_sha256": "329348e79e9f730da4ac30a08b75cf5ff5b57b753f1a45fd33f2a741b9da9c5f",
+  "independent_review_manifest_sha256": "68659f700d18cba7d7cf7c9767b15c9d695ca9a6dba9a43ad55ecadb30aad720",
+  "description": "Reviewed mathematical content and verifier logic are unchanged; only proof status and reader-facing presentation were updated.",
+  "files": [
+    {
+      "path": "README.md",
+      "source_sha256": "dea1f68e60e83e4067fd282bcde0fc9f1aafb35ad13e0c65a4aafee627d4e452",
+      "published_sha256": "10d4b95182222fefe33480d9554346deb203443efecb09003983ce41484f5747",
+      "changes": [
+        "Add independent reproduction instructions, provenance, and fixed-tree scope clarification."
+      ]
+    },
+    {
+      "path": "SATURATED_BARRIER_GOLD.md",
+      "source_sha256": "2e896a5afa600c490ede2e5428faa5732480f7278c8c472a67794b32f0583b31",
+      "published_sha256": "71265149e8a356955c866e3a78fee27da301b79158f3c9b144de37a1bf631a12",
+      "changes": [
+        "Status-only update after independent PASS."
+      ]
+    },
+    {
+      "path": "verification.json",
+      "source_sha256": "0782e7cf816fac4ed8ea5f1eab5a190da806d8ac375b735e9d42d212c561ce28",
+      "published_sha256": "0782e7cf816fac4ed8ea5f1eab5a190da806d8ac375b735e9d42d212c561ce28",
+      "changes": []
+    },
+    {
+      "path": "verification_optimized.json",
+      "source_sha256": "0782e7cf816fac4ed8ea5f1eab5a190da806d8ac375b735e9d42d212c561ce28",
+      "published_sha256": "0782e7cf816fac4ed8ea5f1eab5a190da806d8ac375b735e9d42d212c561ce28",
+      "changes": []
+    },
+    {
+      "path": "verify_saturated_barrier_gold.py",
+      "source_sha256": "9e1b80d49caad2e066d952c67b4c2b2e63851a950505d4b0c4d29313ddd0dcf2",
+      "published_sha256": "9e1b80d49caad2e066d952c67b4c2b2e63851a950505d4b0c4d29313ddd0dcf2",
+      "changes": []
+    },
+    {
+      "path": "review/REVIEW.md",
+      "source_sha256": "ae9bd6c09a48a6a6c99395cc84eb6ccdaa4773bcfa78ca3a29637c336324ad9a",
+      "published_sha256": "fa06c7e30bcc8fbb740a406b698cae3761ebdfa67bd3ae00c60b6b0a20107dc2",
+      "changes": [
+        "Replace internal file-placement and Git commentary with reader-facing hash provenance."
+      ]
+    },
+    {
+      "path": "review/independent-count-tables.json",
+      "source_sha256": "13ab40825845d1bdb3faccb56e1f3be4a2eb0fc0e407d6ee1f2efeedf17cb34f",
+      "published_sha256": "13ab40825845d1bdb3faccb56e1f3be4a2eb0fc0e407d6ee1f2efeedf17cb34f",
+      "changes": []
+    },
+    {
+      "path": "review/independent-optimized-stdout.json",
+      "source_sha256": "305b2d13c84199107691c23e926ac3de9b0181187f43f7c54dc40c63046fb30a",
+      "published_sha256": "305b2d13c84199107691c23e926ac3de9b0181187f43f7c54dc40c63046fb30a",
+      "changes": []
+    },
+    {
+      "path": "review/independent-results.json",
+      "source_sha256": "86c57f8eac998bc769c52db5690ebc0ab1769c52152fe7b3aa6949e6d94c7914",
+      "published_sha256": "86c57f8eac998bc769c52db5690ebc0ab1769c52152fe7b3aa6949e6d94c7914",
+      "changes": []
+    },
+    {
+      "path": "review/independent-stdout.json",
+      "source_sha256": "305b2d13c84199107691c23e926ac3de9b0181187f43f7c54dc40c63046fb30a",
+      "published_sha256": "305b2d13c84199107691c23e926ac3de9b0181187f43f7c54dc40c63046fb30a",
+      "changes": []
+    },
+    {
+      "path": "review/independent_controls.py",
+      "source_sha256": "531a153dca03998b50c55f5e0f9ef75b45b090c7a67b3e197a8e71b11233c772",
+      "published_sha256": "531a153dca03998b50c55f5e0f9ef75b45b090c7a67b3e197a8e71b11233c772",
+      "changes": []
+    },
+    {
+      "path": "review/original-normal.json",
+      "source_sha256": "0782e7cf816fac4ed8ea5f1eab5a190da806d8ac375b735e9d42d212c561ce28",
+      "published_sha256": "0782e7cf816fac4ed8ea5f1eab5a190da806d8ac375b735e9d42d212c561ce28",
+      "changes": []
+    },
+    {
+      "path": "review/original-optimized.json",
+      "source_sha256": "0782e7cf816fac4ed8ea5f1eab5a190da806d8ac375b735e9d42d212c561ce28",
+      "published_sha256": "0782e7cf816fac4ed8ea5f1eab5a190da806d8ac375b735e9d42d212c561ce28",
+      "changes": []
+    }
+  ]
+}

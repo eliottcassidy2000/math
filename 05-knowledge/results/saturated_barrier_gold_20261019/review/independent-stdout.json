@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "checks": 3488,
+  "independent_method": "set-relation construction and one vector-valued ideal DP, no packet imports",
+  "bounded_atoms": 240,
+  "bounded_minima": [
+    "78113/453252",
+    "25363/180473",
+    "50695/453252",
+    "4768/24065"
+  ],
+  "first_probability_interval": [
+    "66465/151084",
+    "84619/151084"
+  ],
+  "bounded_table_sha256": "b1c8c67270896d932f81472a78092beab6d6f6e39c1cd09ecdeeb342d8e6423a",
+  "deletion_generators": 144,
+  "free_minima": [
+    "771/6245",
+    "3231/24464",
+    "386/6245",
+    "3116/16323"
+  ],
+  "free_table_sha256": "181cc53fb0202d38f5926c5b77217ba16e5ae7be145c384b96c1bb613f4b8e64",
+  "large_free_cap_models": 112,
+  "sharpness_cell_polynomials_descending": [
+    [
+      3091,
+      18254,
+      26113
+    ],
+    [
+      2281,
+      16367,
+      29046
+    ],
+    [
+      4600,
+      26408,
+      36916
+    ],
+    [
+      2518,
+      17755,
+      30813
+    ]
+  ],
+  "extension_polynomial_descending": [
+    12490,
+    78784,
+    122888
+  ],
+  "FT_margin_polynomial_descending": [
+    772,
+    8213,
+    18243
+  ],
+  "6245_times_margin_minus_386_times_E_descending": [
+    0,
+    20879561,
+    66492767
+  ],
+  "exhaustive_valid_one_point_types_comparable_to_S": 16,
+  "seven_thin_one_point_types": 16,
+  "actual_exterior_cases": 48,
+  "actual_non_chain_cases": 48
+}
