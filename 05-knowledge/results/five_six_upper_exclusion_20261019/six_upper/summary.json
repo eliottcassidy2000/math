@@ -1,0 +1,17 @@
+{
+  "status": "ALL_CERTIFIED",
+  "stats": [
+    {
+      "c": 0,
+      "cores": 4824,
+      "complete": 4824,
+      "analytic_balanced": 391,
+      "analytic_orders": 527387,
+      "residual_orders": 7974,
+      "kinds": {
+        "one": 7974
+      }
+    }
+  ],
+  "seconds": 10.46292519569397
+}

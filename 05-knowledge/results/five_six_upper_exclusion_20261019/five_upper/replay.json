@@ -1,0 +1,23 @@
+{
+  "status": "EXACT_REPLAY_PASSED",
+  "certificate_sha256": "a474aa8734508c1030ea69df8e3addf021168c2317c6f7f934f02d73ddb6850d",
+  "catalogue_and_replay": [
+    {
+      "c": 0,
+      "cores": 357,
+      "analytic_balanced_cores": 0,
+      "directed_screen_orders": 15533,
+      "exact_generator_orders": 473,
+      "distinct_generator_certificates": 135
+    },
+    {
+      "c": 1,
+      "cores": 4824,
+      "analytic_balanced_cores": 602,
+      "directed_screen_orders": 485760,
+      "exact_generator_orders": 9468,
+      "distinct_generator_certificates": 1255
+    }
+  ],
+  "seconds": 10.126216888427734
+}

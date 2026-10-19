@@ -1,0 +1,15 @@
+{
+  "status": "EXACT_REPLAY_PASSED",
+  "certificate_sha256": "959cff674f848ade279190fd5c00bae987c138e8d31567c0a85fc96aff037bb8",
+  "catalogue_and_replay": [
+    {
+      "c": 0,
+      "cores": 4824,
+      "analytic_balanced_cores": 391,
+      "directed_screen_orders": 527387,
+      "exact_generator_orders": 7974,
+      "distinct_generator_certificates": 1012
+    }
+  ],
+  "seconds": 7.6337738037109375
+}
