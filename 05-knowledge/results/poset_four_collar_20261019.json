@@ -1,0 +1,258 @@
+{
+  "status": "exact checks passed; general conjecture remains open",
+  "core": {
+    "predecessor_masks": [
+      0,
+      0,
+      1,
+      0,
+      8,
+      24,
+      3,
+      5,
+      189
+    ],
+    "ports": [
+      0,
+      6
+    ],
+    "pair": [
+      2,
+      4
+    ],
+    "flag_totals": [
+      664,
+      280,
+      160,
+      70
+    ],
+    "flag_event_counts": [
+      344,
+      196,
+      80,
+      49
+    ],
+    "corners": [
+      {
+        "left": 0,
+        "right": 0,
+        "extensions": 664,
+        "event": 344,
+        "p": "43/83"
+      },
+      {
+        "left": 0,
+        "right": 1,
+        "extensions": 824,
+        "event": 424,
+        "p": "53/103"
+      },
+      {
+        "left": 1,
+        "right": 0,
+        "extensions": 944,
+        "event": 540,
+        "p": "135/236"
+      },
+      {
+        "left": 1,
+        "right": 1,
+        "extensions": 1174,
+        "event": 669,
+        "p": "669/1174"
+      }
+    ],
+    "width": 3,
+    "incomparability_degrees": [
+      4,
+      7,
+      5,
+      5,
+      5,
+      5,
+      6,
+      5,
+      2
+    ],
+    "automorphisms": 1,
+    "cover_edges": [
+      [
+        0,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        7,
+        8
+      ]
+    ]
+  },
+  "arbitrary_context_checks": 81,
+  "bridge_chains": [
+    {
+      "blocks": 1,
+      "n": 9,
+      "extensions": 664,
+      "frontier_states_max": 9,
+      "first_pair_p": "43/83"
+    },
+    {
+      "blocks": 2,
+      "n": 18,
+      "extensions": 485696,
+      "frontier_states_max": 9,
+      "first_pair_p": "3919/7589"
+    },
+    {
+      "blocks": 3,
+      "n": 27,
+      "extensions": 355385344,
+      "frontier_states_max": 9,
+      "first_pair_p": "716879/1388224"
+    },
+    {
+      "blocks": 4,
+      "n": 36,
+      "extensions": 260036873216,
+      "frontier_states_max": 9,
+      "first_pair_p": "262271603/507884518"
+    },
+    {
+      "blocks": 5,
+      "n": 45,
+      "extensions": 190270017562624,
+      "frontier_states_max": 9,
+      "first_pair_p": "95952589121/185810564026"
+    },
+    {
+      "blocks": 6,
+      "n": 54,
+      "extensions": 139221330943963136,
+      "frontier_states_max": 9,
+      "first_pair_p": "35104446134147/67979165499982"
+    },
+    {
+      "blocks": 7,
+      "n": 63,
+      "extensions": 101868803283363733504,
+      "frontier_states_max": 9,
+      "first_pair_p": "12843031643801129/24870313301602474"
+    },
+    {
+      "blocks": 8,
+      "n": 72,
+      "extensions": 74537809774003122323456,
+      "frontier_states_max": 9,
+      "first_pair_p": "4698648745898672603/9098853732178115518"
+    },
+    {
+      "blocks": 9,
+      "n": 81,
+      "extensions": 54539612784602240713129984,
+      "frontier_states_max": 9,
+      "first_pair_p": "1719010016454416371121/3328833788122695356026"
+    },
+    {
+      "blocks": 10,
+      "n": 90,
+      "extensions": 39906852263477719437934002176,
+      "frontier_states_max": 9,
+      "first_pair_p": "628903243565493365708147/1217860481673514387143982"
+    },
+    {
+      "blocks": 11,
+      "n": 99,
+      "extensions": 29200003011914514303045499224064,
+      "frontier_states_max": 9,
+      "first_pair_p": "230085506181625210339019129/445556686583168248032310474"
+    },
+    {
+      "blocks": 12,
+      "n": 108,
+      "extensions": 21365758698942610929779667306807296,
+      "frontier_states_max": 9,
+      "first_pair_p": "84177241406358944980822598603/163007802573719870985257471518"
+    }
+  ],
+  "boundary_migration": {
+    "core_predecessors": [
+      0,
+      0,
+      1
+    ],
+    "collared_predecessors": [
+      0,
+      0,
+      1,
+      3,
+      7
+    ],
+    "extensions": 8,
+    "core_minorities": [
+      "1/4",
+      "1/4"
+    ],
+    "bridge_minorities": [
+      "3/8",
+      "3/8"
+    ]
+  },
+  "displacement_selector_hostile": {
+    "pred": [
+      0,
+      0,
+      0,
+      3,
+      1,
+      21,
+      55
+    ],
+    "extensions": 55,
+    "mean_order": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      3,
+      6
+    ],
+    "displacement_numerators": [
+      35,
+      34,
+      -18,
+      -28,
+      19,
+      -27,
+      -15
+    ],
+    "all_selected_incomparable_minorities": [
+      "18/55",
+      "17/55"
+    ],
+    "balanced_pair_1_2": "28/55"
+  }
+}
