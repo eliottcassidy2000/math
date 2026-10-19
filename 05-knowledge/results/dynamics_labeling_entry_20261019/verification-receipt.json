@@ -1,0 +1,521 @@
+{
+  "berggren": {
+    "boundary_itinerary_64": "LLLRMMLLLLRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRMLLLMLL",
+    "boundary_prefixes": 64,
+    "distinguished_pairs": 2016,
+    "finite_suffixes": 65,
+    "max_matrix_entry_bits": 19,
+    "max_suffix_word_length": 49,
+    "signature_sha256": "890c0f9a7afa32a20886e27acb82b846f1c93d469c9bc63bdf5f89a79cf8d49b",
+    "suffix_samples": [
+      {
+        "slope": "9/8",
+        "word": "LLLLLLL"
+      },
+      {
+        "slope": "37/32",
+        "word": "LLLLLLRL"
+      },
+      {
+        "slope": "19/16",
+        "word": "LLLLLR"
+      },
+      {
+        "slope": "39/32",
+        "word": "LLLLMLL"
+      },
+      {
+        "slope": "5/4",
+        "word": "LLL"
+      },
+      {
+        "slope": "21/16",
+        "word": "LLLRR"
+      },
+      {
+        "slope": "11/8",
+        "word": "LLM"
+      },
+      {
+        "slope": "45/32",
+        "word": "LLRLLLLL"
+      },
+      {
+        "slope": "23/16",
+        "word": "LLRM"
+      },
+      {
+        "slope": "3/2",
+        "word": "L"
+      },
+      {
+        "slope": "7/4",
+        "word": "LR"
+      },
+      {
+        "slope": "15/8",
+        "word": "LRRR"
+      },
+      {
+        "slope": "9/4",
+        "word": "MR"
+      },
+      {
+        "slope": "5/2",
+        "word": "M"
+      },
+      {
+        "slope": "89/32",
+        "word": "MLLLMLL"
+      },
+      {
+        "slope": "45/16",
+        "word": "MLLLLR"
+      },
+      {
+        "slope": "7/2",
+        "word": "RL"
+      },
+      {
+        "slope": "9/2",
+        "word": "RM"
+      },
+      {
+        "slope": "11/2",
+        "word": "RRL"
+      },
+      {
+        "slope": "15/2",
+        "word": "RRRL"
+      },
+      {
+        "slope": "19/2",
+        "word": "RRRRL"
+      },
+      {
+        "slope": "23/2",
+        "word": "RRRRRL"
+      },
+      {
+        "slope": "27/2",
+        "word": "RRRRRRL"
+      },
+      {
+        "slope": "31/2",
+        "word": "RRRRRRRL"
+      },
+      {
+        "slope": "35/2",
+        "word": "RRRRRRRRL"
+      },
+      {
+        "slope": "39/2",
+        "word": "RRRRRRRRRL"
+      },
+      {
+        "slope": "43/2",
+        "word": "RRRRRRRRRRL"
+      },
+      {
+        "slope": "47/2",
+        "word": "RRRRRRRRRRRL"
+      },
+      {
+        "slope": "51/2",
+        "word": "RRRRRRRRRRRRL"
+      },
+      {
+        "slope": "55/2",
+        "word": "RRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "59/2",
+        "word": "RRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "63/2",
+        "word": "RRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "67/2",
+        "word": "RRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "71/2",
+        "word": "RRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "75/2",
+        "word": "RRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "79/2",
+        "word": "RRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "83/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "87/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "91/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "95/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "99/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "103/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "107/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "111/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "115/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "119/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "123/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "127/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "131/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "135/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "139/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "143/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "147/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "151/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "155/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "159/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "163/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "167/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "171/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "175/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "179/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "183/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "187/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "191/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRL"
+      },
+      {
+        "slope": "197/2",
+        "word": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRM"
+      }
+    ],
+    "ternary_nodes_checked": 29524
+  },
+  "checks": 191138,
+  "collatz": {
+    "Mersenne_runs_checked_through": 256,
+    "affine": [
+      3486784401,
+      15810005461,
+      4294967296
+    ],
+    "all_lifts_checked": 256,
+    "avoidance_counts": {
+      "128": 340282359235806739147999870854432292865,
+      "256": 115792083171328312828297583819602555780436770895010556588808578944475399716865,
+      "32": 4294967295,
+      "33": 8589934588,
+      "512": 13407806428381617826461823733381799027087911499076706382133632167660501826243735885709532475725292174823770984485489878834646454427819170676436690909790209,
+      "63": 9223371968135299072,
+      "64": 18446743931975630849,
+      "96": 79228161315225975211899748351
+    },
+    "avoidance_lengths_checked": 513,
+    "borders": [
+      32
+    ],
+    "least_endpoint": 2405410912,
+    "parity_bijection_checked_through": 14,
+    "residue": 2962948091,
+    "word": "11011011011011010101101110101010"
+  },
+  "graceful": [
+    {
+      "components": [
+        2,
+        3
+      ],
+      "ranks": {
+        "6": 2,
+        "9": 2,
+        "11": 2
+      },
+      "release": null,
+      "staircase": false,
+      "states": 5
+    },
+    {
+      "components": [
+        54
+      ],
+      "explicit_path": [
+        [
+          [
+            5,
+            6
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            11
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            11
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            1,
+            12
+          ]
+        ],
+        [
+          [
+            5,
+            6
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            1,
+            12
+          ]
+        ]
+      ],
+      "ranks": {
+        "1": 4,
+        "6": 3,
+        "9": 2,
+        "11": 2
+      },
+      "release": 1,
+      "shortest_repair_length": 3,
+      "staircase": true,
+      "states": 54
+    },
+    {
+      "components": [
+        56
+      ],
+      "ranks": {
+        "2": 4,
+        "6": 3,
+        "9": 3,
+        "11": 2
+      },
+      "release": 2,
+      "staircase": true,
+      "states": 56
+    },
+    {
+      "components": [
+        24
+      ],
+      "ranks": {
+        "3": 4,
+        "6": 2,
+        "9": 2,
+        "11": 2
+      },
+      "release": 3,
+      "staircase": false,
+      "states": 24
+    },
+    {
+      "components": [
+        20
+      ],
+      "ranks": {
+        "4": 4,
+        "6": 3,
+        "9": 2,
+        "11": 2
+      },
+      "release": 4,
+      "staircase": true,
+      "states": 20
+    },
+    {
+      "components": [
+        54
+      ],
+      "ranks": {
+        "5": 4,
+        "6": 3,
+        "9": 2,
+        "11": 2
+      },
+      "release": 5,
+      "staircase": true,
+      "states": 54
+    },
+    {
+      "components": [
+        14
+      ],
+      "ranks": {
+        "6": 3,
+        "7": 4,
+        "9": 2,
+        "11": 2
+      },
+      "release": 7,
+      "staircase": true,
+      "states": 14
+    },
+    {
+      "components": [
+        20
+      ],
+      "ranks": {
+        "6": 3,
+        "8": 4,
+        "9": 3,
+        "11": 2
+      },
+      "release": 8,
+      "staircase": true,
+      "states": 20
+    },
+    {
+      "components": [
+        16
+      ],
+      "ranks": {
+        "6": 3,
+        "9": 3,
+        "10": 3,
+        "11": 2
+      },
+      "release": 10,
+      "staircase": false,
+      "states": 16
+    },
+    {
+      "components": [
+        2,
+        3
+      ],
+      "ranks": {
+        "6": 3,
+        "9": 3,
+        "11": 2,
+        "12": 1
+      },
+      "release": 12,
+      "staircase": false,
+      "states": 5
+    }
+  ],
+  "status": "PASS"
+}

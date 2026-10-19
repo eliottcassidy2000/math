@@ -1,0 +1,38 @@
+{
+  "status": "proved_with_exact_controls",
+  "date": "2026-10-19",
+  "repository_directory": "05-knowledge/results/dynamics_labeling_entry_20261019",
+  "verification_checks": 191138,
+  "files": [
+    {
+      "name": "BERGGREN_POSITIVITY_NONREGULAR.md",
+      "bytes": 13149,
+      "sha256": "3bb08edbf8ea5b143c5f4ffa7fe7890938b4414bf5f5a8fddfa6caa349115e8c"
+    },
+    {
+      "name": "COLLATZ_DENSITY_ENTRY_AND_POINTWISE_GAP.md",
+      "bytes": 7853,
+      "sha256": "55365ec06ffc0b6619b8ddd80f67a48b30f8fd26acecc73b09e1a18cbc072267"
+    },
+    {
+      "name": "GRACEFUL_RELEASE_AND_MATCHING_SUPPORT.md",
+      "bytes": 12819,
+      "sha256": "839a514460a89c0e5e29f2c619c0ac7dee00ba2eb0d98d04e7d7cd32e2ec812b"
+    },
+    {
+      "name": "README.md",
+      "bytes": 2584,
+      "sha256": "82961077fddcf31bed0454ccfdb7fde9ada41857c78dd591cc2858906d5c060f"
+    },
+    {
+      "name": "verification-receipt.json",
+      "bytes": 9804,
+      "sha256": "9e58967af4c3557145f33dd15c5e4c2b1768ae4d90213e87c44e2a8d53ed05d4"
+    },
+    {
+      "name": "verify_dynamics_session2.py",
+      "bytes": 9803,
+      "sha256": "1d2ff9f62d6e3279afc17c1de16857ca56c409f4973424094afd5fb2b1a0f208"
+    }
+  ]
+}
