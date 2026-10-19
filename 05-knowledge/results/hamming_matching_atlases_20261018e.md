@@ -236,8 +236,9 @@ Changing the partition can change the component graphs and which physical
 attachments are convenient, while preserving exactly the same 32 boundary
 words. Every candidate still faces the majority obstruction: no fixed
 two-list graph can realize C, regardless of which of the 105 atlases is used.
-The three-colour-list gate and unrestricted geometric selector obligations
-therefore remain open.
+The conditional three-colour-list gate is already constructed. Forcing its
+required lists and gluing the listed gates at fixed physical ports remain
+open, as does the unrestricted geometric selector.
 
 The principle suggested by this recovery is now testable: **change the
 decoder or partition while preserving the exact target relation; retain the
