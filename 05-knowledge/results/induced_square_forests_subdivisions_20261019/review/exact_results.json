@@ -1,0 +1,627 @@
+{
+  "always_active_checks": 6316664,
+  "forest_parent_arrays": {
+    "1": 1,
+    "2": 2,
+    "3": 6,
+    "4": 24,
+    "5": 120,
+    "6": 720,
+    "7": 5040,
+    "8": 40320
+  },
+  "interval_rows": [
+    {
+      "M": 1,
+      "maximum_codegree": 0,
+      "minimum_degree": 0
+    },
+    {
+      "M": 2,
+      "maximum_codegree": 0,
+      "minimum_degree": 0
+    },
+    {
+      "M": 3,
+      "maximum_codegree": 0,
+      "minimum_degree": 1
+    },
+    {
+      "M": 4,
+      "maximum_codegree": 0,
+      "minimum_degree": 0
+    },
+    {
+      "M": 5,
+      "maximum_codegree": 0,
+      "minimum_degree": 0
+    },
+    {
+      "M": 6,
+      "maximum_codegree": 0,
+      "minimum_degree": 0
+    },
+    {
+      "M": 7,
+      "maximum_codegree": 0,
+      "minimum_degree": 0
+    },
+    {
+      "M": 8,
+      "maximum_codegree": 0,
+      "minimum_degree": 0
+    },
+    {
+      "M": 9,
+      "maximum_codegree": 0,
+      "minimum_degree": 0
+    },
+    {
+      "M": 10,
+      "maximum_codegree": 0,
+      "minimum_degree": 0
+    },
+    {
+      "M": 11,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 12,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 13,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 14,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 15,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 16,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 17,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 18,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 19,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 20,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 21,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 22,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 23,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 24,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 25,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 26,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 27,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 28,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 29,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 30,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 31,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 32,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 33,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 34,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 35,
+      "maximum_codegree": 1,
+      "minimum_degree": 0
+    },
+    {
+      "M": 36,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 37,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 38,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 39,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 40,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 41,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 42,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 43,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 44,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 45,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 46,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 47,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 48,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 49,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 50,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 51,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 52,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 53,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 54,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 55,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 56,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 57,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 58,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 59,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 60,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 61,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 62,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 63,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 64,
+      "maximum_codegree": 1,
+      "minimum_degree": 2
+    },
+    {
+      "M": 65,
+      "maximum_codegree": 1,
+      "minimum_degree": 2
+    },
+    {
+      "M": 66,
+      "maximum_codegree": 1,
+      "minimum_degree": 2
+    },
+    {
+      "M": 67,
+      "maximum_codegree": 1,
+      "minimum_degree": 2
+    },
+    {
+      "M": 68,
+      "maximum_codegree": 1,
+      "minimum_degree": 2
+    },
+    {
+      "M": 69,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 70,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 71,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 72,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 73,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 74,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 75,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 76,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 77,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 78,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 79,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 80,
+      "maximum_codegree": 1,
+      "minimum_degree": 1
+    },
+    {
+      "M": 100,
+      "maximum_codegree": 1,
+      "minimum_degree": 2
+    },
+    {
+      "M": 127,
+      "maximum_codegree": 1,
+      "minimum_degree": 2
+    },
+    {
+      "M": 128,
+      "maximum_codegree": 1,
+      "minimum_degree": 2
+    },
+    {
+      "M": 255,
+      "maximum_codegree": 1,
+      "minimum_degree": 3
+    },
+    {
+      "M": 256,
+      "maximum_codegree": 1,
+      "minimum_degree": 4
+    },
+    {
+      "M": 511,
+      "maximum_codegree": 1,
+      "minimum_degree": 5
+    },
+    {
+      "M": 512,
+      "maximum_codegree": 1,
+      "minimum_degree": 5
+    },
+    {
+      "M": 1000,
+      "maximum_codegree": 1,
+      "minimum_degree": 7
+    }
+  ],
+  "long_controls": [
+    {
+      "family": "star",
+      "maximum": 1401300079771,
+      "minimum": 1401250462953,
+      "n": 16
+    },
+    {
+      "family": "path",
+      "maximum": 1401256553810,
+      "minimum": 1401249857538,
+      "n": 16
+    },
+    {
+      "family": "binary",
+      "maximum": 1401263855519,
+      "minimum": 1401250462953,
+      "n": 16
+    },
+    {
+      "family": "isolated",
+      "maximum": 1401300685188,
+      "minimum": 1401250462953,
+      "n": 16
+    },
+    {
+      "family": "comb",
+      "maximum": 1401263250094,
+      "minimum": 1401250462947,
+      "n": 16
+    },
+    {
+      "family": "star",
+      "maximum": 19896843882941,
+      "minimum": 19896455042308,
+      "n": 32
+    },
+    {
+      "family": "path",
+      "maximum": 19896478008590,
+      "minimum": 19896452775938,
+      "n": 32
+    },
+    {
+      "family": "binary",
+      "maximum": 19896518123985,
+      "minimum": 19896455042302,
+      "n": 32
+    },
+    {
+      "family": "isolated",
+      "maximum": 19896846149313,
+      "minimum": 19896455042308,
+      "n": 32
+    },
+    {
+      "family": "comb",
+      "maximum": 19896515857599,
+      "minimum": 19896452775944,
+      "n": 32
+    },
+    {
+      "family": "star",
+      "maximum": 299486875064659,
+      "minimum": 299483829294225,
+      "n": 64
+    },
+    {
+      "family": "path",
+      "maximum": 299483889255266,
+      "minimum": 299483791360002,
+      "n": 64
+    },
+    {
+      "family": "binary",
+      "maximum": 299484182941134,
+      "minimum": 299483791360002,
+      "n": 64
+    },
+    {
+      "family": "isolated",
+      "maximum": 299486912998884,
+      "minimum": 299483829294225,
+      "n": 64
+    },
+    {
+      "family": "comb",
+      "maximum": 299484280836438,
+      "minimum": 299483791360008,
+      "n": 64
+    },
+    {
+      "family": "star",
+      "maximum": 4646019474217551,
+      "minimum": 4645995058631665,
+      "n": 128
+    },
+    {
+      "family": "path",
+      "maximum": 4645995375459178,
+      "minimum": 4645994989879298,
+      "n": 128
+    },
+    {
+      "family": "binary",
+      "maximum": 4645997372111137,
+      "minimum": 4645994989879298,
+      "n": 128
+    },
+    {
+      "family": "isolated",
+      "maximum": 4646019542969920,
+      "minimum": 4645995058631665,
+      "n": 128
+    },
+    {
+      "family": "comb",
+      "maximum": 4645997372111077,
+      "minimum": 4645994989879304,
+      "n": 128
+    },
+    {
+      "family": "star",
+      "maximum": 73190303335553401,
+      "minimum": 73190108275065360,
+      "n": 256
+    },
+    {
+      "family": "path",
+      "maximum": 73190109741570326,
+      "minimum": 73190108211183618,
+      "n": 256
+    },
+    {
+      "family": "binary",
+      "maximum": 73190121219470971,
+      "minimum": 73190108211183618,
+      "n": 256
+    },
+    {
+      "family": "isolated",
+      "maximum": 73190303399435145,
+      "minimum": 73190108275065360,
+      "n": 256
+    },
+    {
+      "family": "comb",
+      "maximum": 73190118987772508,
+      "minimum": 73190108211183624,
+      "n": 256
+    }
+  ],
+  "ordinary_greedy_extra_edge": [
+    4,
+    0,
+    15,
+    1
+  ],
+  "preserved_seed": [
+    482,
+    3362,
+    6242
+  ],
+  "prime_power_product_fourth_power": "127401984/25025",
+  "seed_extension_vertices": 60,
+  "status": "PASS",
+  "tau_bound_checked_through": 1000000,
+  "universe_notes": [
+    "Finite arithmetic controls are not an all-n proof.",
+    "All ordered parent arrays through n=8 are exhausted; these include every unlabeled forest shape through n=8.",
+    "Prime-power maxima are checked through exponent 100; the ratio monotonicity proof covers the remaining tail."
+  ]
+}

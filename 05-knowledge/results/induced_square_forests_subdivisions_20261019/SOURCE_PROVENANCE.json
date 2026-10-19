@@ -1,0 +1,117 @@
+{
+  "source_directory": "session5-induced",
+  "review": "Independently reviewed and approved by coordinating parent before publication. Mathematical proof content is preserved; listed edits update reviewed status, links, and package-relative reproduction paths.",
+  "files": [
+    {
+      "path": "INDUCED_SQUARE_FORESTS.md",
+      "source_sha256": "c69094633e318cd80f05414c913c026eba38238f9862477fe86364151e9f7f63",
+      "published_sha256": "258b0a5ba31887cd648c53f0f55490cc64e9706e021ece4b446e0cfbd2301228",
+      "presentation_changes": [
+        {
+          "before": "Status: proof candidate, 2026-10-19. No priority claim.",
+          "after": "Status: **PROVED**, independently [reviewed](review/INDEPENDENT_REVIEW.md), 2026-10-19. No priority claim."
+        },
+        {
+          "before": "`square_sum_elementary_sparse_path_cycle_bounds_20261019.md`",
+          "after": "[elementary square-sum embeddings](../square_sum_elementary_sparse_path_cycle_bounds_20261019.md)"
+        },
+        {
+          "before": "## Universal induced two-subdivisions (additional proof candidate)",
+          "after": "## Universal induced two-subdivisions"
+        },
+        {
+          "before": "For countable G, choose independent original labels first (e.g. all 4i+1), but do NOT then insert against an already infinite seed by the finite-avoidance lemma. Instead enumerate vertices and edges fairly,",
+          "after": "For countable G, enumerate vertices and edges fairly; do not apply finite avoidance to an already infinite seed. Proceed by"
+        }
+      ]
+    },
+    {
+      "path": "SUBDIVISION_MOD7_CONSTRUCTION.md",
+      "source_sha256": "ddaf391666cecd059f43a3a3e5f28d8d134cb30f2e38b1ed7e498e60976d2f13",
+      "published_sha256": "6c2a6628cefef3ff8fb9508b240b0c8100190f6035e96b0aa24854870b76efc1",
+      "presentation_changes": [
+        {
+          "before": "Status: **PROVED**, subject to coordinating review; independent exact controls accompany this note.",
+          "after": "Status: **PROVED**, independently [reviewed](review/INDEPENDENT_REVIEW.md); independent exact controls accompany this note."
+        },
+        {
+          "before": "python session5-induced/review/verify_mod7_subdivision.py",
+          "after": "python3 -B review/verify_mod7_subdivision.py"
+        },
+        {
+          "before": "python -O session5-induced/review/verify_mod7_subdivision.py",
+          "after": "python3 -B -O review/verify_mod7_subdivision.py"
+        }
+      ]
+    },
+    {
+      "path": "review/exact_results.json",
+      "source_sha256": "ae16d4cdeccf0dff7e549388a025a6a530789710ce130289160c65ea208bb896",
+      "published_sha256": "ae16d4cdeccf0dff7e549388a025a6a530789710ce130289160c65ea208bb896",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/mod7_results_optimized.json",
+      "source_sha256": "06cf71096a47eb3887b08c490dfdefc93aaec0bc3eaf32337d4f5ff9331656c8",
+      "published_sha256": "06cf71096a47eb3887b08c490dfdefc93aaec0bc3eaf32337d4f5ff9331656c8",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/mod7_results.json",
+      "source_sha256": "06cf71096a47eb3887b08c490dfdefc93aaec0bc3eaf32337d4f5ff9331656c8",
+      "published_sha256": "06cf71096a47eb3887b08c490dfdefc93aaec0bc3eaf32337d4f5ff9331656c8",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/FROZEN_SHA256.txt",
+      "source_sha256": "3279d53aeb791d27a0c3aa982a157dc75423c00ddd5c7ad0d20073ad4a066758",
+      "published_sha256": "3279d53aeb791d27a0c3aa982a157dc75423c00ddd5c7ad0d20073ad4a066758",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/independent_exact_review.py",
+      "source_sha256": "ba2c0ebe408b8370d3a8c2ee078890d92cd9e2e074fdda11be94842fd93d234c",
+      "published_sha256": "ba2c0ebe408b8370d3a8c2ee078890d92cd9e2e074fdda11be94842fd93d234c",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/verify_mod7_subdivision.py",
+      "source_sha256": "b7e611367d2768879ae05da94c0010e03b453135abbf4fbbca94e419122eb790",
+      "published_sha256": "b7e611367d2768879ae05da94c0010e03b453135abbf4fbbca94e419122eb790",
+      "presentation_changes": []
+    },
+    {
+      "path": "review/INDEPENDENT_REVIEW.md",
+      "source_sha256": "3b7f62a617dcdf2520c5c65f6ee51dbbd78eae04cbe47d2465b4a147d74ec588",
+      "published_sha256": "3dd11e7b003b82b855c5988c900bb7273f0482a36e32cc9c3b9bb33f9f49fef7",
+      "presentation_changes": [
+        {
+          "before": "Review files are staged outside the mathematical checkout; this reviewer made no Git or checkout writes.",
+          "after": "This review records the pre-publication source audit. Publication updated status labels, dependency links, and package-relative commands only; SOURCE_PROVENANCE.json records every change."
+        },
+        {
+          "before": "    python session5-induced/review/independent_exact_review.py",
+          "after": "    python3 -B review/independent_exact_review.py"
+        },
+        {
+          "before": "    python -O session5-induced/review/independent_exact_review.py",
+          "after": "    python3 -B -O review/independent_exact_review.py"
+        },
+        {
+          "before": "    python session5-induced/review/verify_mod7_subdivision.py",
+          "after": "    python3 -B review/verify_mod7_subdivision.py"
+        },
+        {
+          "before": "    python -O session5-induced/review/verify_mod7_subdivision.py",
+          "after": "    python3 -B -O review/verify_mod7_subdivision.py"
+        }
+      ]
+    },
+    {
+      "path": "review/exact_results_optimized.json",
+      "source_sha256": "ae16d4cdeccf0dff7e549388a025a6a530789710ce130289160c65ea208bb896",
+      "published_sha256": "ae16d4cdeccf0dff7e549388a025a6a530789710ce130289160c65ea208bb896",
+      "presentation_changes": []
+    }
+  ]
+}
