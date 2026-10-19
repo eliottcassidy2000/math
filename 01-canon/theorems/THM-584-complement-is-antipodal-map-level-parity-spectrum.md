@@ -1,7 +1,7 @@
 ---
 id: THM-584
 title: The complement involution R is the ANTIPODAL MAP of the tournament arc-hypercube Q_{C(n,2)}; the iso-class metagraph adjacency is the S_n-quotient of Q_{C(n,2)}, so its R-even/R-odd (eps=+-1) eigenspace split equals the EVEN/ODD hypercube-level split, with eigenvalues =C(n,2) (mod 4) on the R-even block and =C(n,2)-2 (mod 4) on the R-odd block; the Perron mode is always R-even
-status: PROVED (elementary representation theory of Q_d under coordinate-permutation S_n and the antipodal involution); VERIFIED exactly n=3..6 (block spectra, mod-4 residue law, commutation A o R = R o A all hold; A000568 class counts and SC counts 2,2,8,12 reproduced)
+status: PROVED (elementary representation theory of Q_d under the affine signed-coordinate S_n action and the antipodal involution); VERIFIED exactly n=3..6 (block spectra, mod-4 residue law, commutation A o R = R o A all hold; A000568 class counts and SC counts 2,2,8,12 reproduced)
 source: klein-2026-06-29-S1
 depends_on:
   - HYP-3538   # the R +-1 eigenspace organizing principle (this gives its spectral skeleton on the metagraph)
@@ -21,6 +21,12 @@ results:
 
 # THM-584 — Complement is the antipodal map; the metagraph spectrum splits by hypercube level parity
 
+**Relabelling correction (2026-10-18):** in a fixed arc-orientation gauge,
+vertex relabelling can flip coordinate bits as well as permute them. It
+preserves Fourier degree, not Hamming weight. The signed action below repairs
+the proof mechanism; the spectral split, mod-4 law and recorded counts are
+unchanged. See the dated correction in `01-canon/MISTAKES.md`.
+
 ## Setup
 
 Let `d = C(n,2)`. Identify a labeled tournament on `n` vertices with a vertex of the hypercube
@@ -28,15 +34,21 @@ Let `d = C(n,2)`. Identify a labeled tournament on `n` vertices with a vertex of
 
 - **One single-arc reversal = one hypercube edge.** The *arc-flip graph* on the `2^d` labeled
   tournaments is exactly `Q_d`, a `d`-regular graph.
-- **`S_n` acts by permuting the `d` coordinates** (relabeling vertices permutes the pairs). This
-  action **preserves Hamming weight** (it permutes coordinates), i.e. it preserves hypercube *levels*.
+- **`S_n` acts by affine signed-coordinate permutations.** Fix bit zero to
+  mean `i -> j` for `i<j`. Relabelling by `g` acts as
+  `x -> P_g x xor epsilon_g`: `P_g` permutes unordered pairs, while
+  `epsilon_g` records which reference orientations are reversed. This is a
+  cube automorphism but need not preserve Hamming weight. For example, swapping
+  vertices 0 and 1 sends the all-forward word `0` to the word with only the
+  `01` bit set, of weight one. The preserved levels below are **Fourier-degree
+  eigenspaces**, not shells of fixed vertex Hamming weight.
 - **The complement / reversal involution `R` (`T -> T^op`) reverses every arc = flips every bit =
   the ANTIPODAL MAP `x -> x ⊕ 1` of `Q_d`.**
 
 The iso-class metagraph adjacency `A` is the `S_n`-quotient of `Q_d`: in the basis of iso-class
 indicator functions (= the `S_n`-invariant functions on `Q_d`),
 `A[i][j] = #{ arcs e : flip_e(rep_i) ∈ class j }` (well-defined: `S_n` is transitive on each class
-and commutes with arc-flips). Row sums are `d`. `A` is the standard tournament dominance-reversal
+and permutes the named arc-flips, hence commutes with their adjacency sum). Row sums are `d`. `A` is the standard tournament dominance-reversal
 metagraph at the iso-class level.
 
 ## Statement
@@ -58,8 +70,10 @@ metagraph at the iso-class level.
 ## Proof
 
 `Q_d` has the orthonormal Fourier basis `{χ_S : S ⊆ [d]}`, `χ_S` an eigenvector of the adjacency at
-eigenvalue `d - 2|S|`. `S_n` permutes coordinates, hence permutes the `χ_S` within each level
-`|S| = k`; the level-`k` eigenspace is `S_n`-invariant. The metagraph `A` is the restriction of the
+eigenvalue `d - 2|S|`. Under pullback by the affine relabelling,
+`χ_S(P_g x xor epsilon_g) = (-1)^{<S,epsilon_g>} χ_{P_g^{-1}S}(x)`.
+Thus `S_n` acts by a **signed** permutation of the characters within each
+Fourier degree `|S| = k`; the level-`k` eigenspace is `S_n`-invariant. The metagraph `A` is the restriction of the
 `Q_d` adjacency to the `S_n`-invariant subspace (class-indicator functions are exactly the
 `S_n`-invariant functions), so its eigenvalues are a sub-multiset of `{d-2k}` with multiplicity =
 `dim(invariants at level k)`. The antipodal map sends `χ_S -> (-1)^{|S|} χ_S` (since `χ_S(x⊕1) =
