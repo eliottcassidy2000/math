@@ -1,0 +1,29 @@
+{
+  "claim": "At most one disconnected free-color contact graph implies two-color completion-fiber diameter<=r; every upper-tail integer-difference fiber with three free colors has diameter<=3.",
+  "files": {
+    "CONNECTED_COLOR_CONTACTS.md": "9263ee4b85cedc74200d232ac18b1b8a48a1a9b449eabd35d4d7d62ed1668c4f",
+    "LITERATURE_SCOPE.md": "92e965b462c92327000f304759a0d36b933d9e23c323b5797d905430d115e19c",
+    "contact_controls.json": "ddcbaed5f2bad5e4d0a818d21a18d38ec508357b9668f989535aec133f457568",
+    "contact_controls.optimized.json": "ddcbaed5f2bad5e4d0a818d21a18d38ec508357b9668f989535aec133f457568",
+    "verify_connected_contacts.py": "7fb50d36dd40ff80d4da51200d45f373a622a60321354d9646f0ec4535cd093c"
+  },
+  "limits": [
+    "No global one-color GT1 claim",
+    "Arbitrary free-color count remains open",
+    "Abstract tree shape may change",
+    "No historical novelty claim"
+  ],
+  "replay": {
+    "boundary_m3_diameter": 1,
+    "boundary_m4_diameter": 2,
+    "checks": 1099799,
+    "moves_replayed": 122732,
+    "normal_optimized_identical": true
+  },
+  "repository_destination": "05-knowledge/results/graceful_connected_color_contacts_20261019",
+  "source_sha256": {
+    "../graceful_fiber_obstructions_20261019.md": "49d121f89d86ac64b8030c5eee62569ff74333782c90e20838a21989a0a72585",
+    "../graceful_two_color_buffer_20261019/RELEASE_MANIFEST.json": "6f921f0a2a99ac3f15932fcc889a97018277b1feedd5dfac0d52e96a07ceaef9"
+  },
+  "status": "frozen and exact-replayed"
+}

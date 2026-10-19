@@ -1,0 +1,63 @@
+{
+  "boundaries": [
+    {
+      "diameter": 1,
+      "m": 3,
+      "states": 4
+    },
+    {
+      "diameter": 2,
+      "m": 4,
+      "states": 12
+    }
+  ],
+  "checks": 1099799,
+  "improved_hostile_controls": [
+    {
+      "bound": 2,
+      "k": 2,
+      "max_moves": 2,
+      "ordered_pairs": 36,
+      "states": 6
+    },
+    {
+      "bound": 3,
+      "k": 3,
+      "max_moves": 3,
+      "ordered_pairs": 676,
+      "states": 26
+    },
+    {
+      "bound": 4,
+      "k": 4,
+      "max_moves": 4,
+      "ordered_pairs": 22500,
+      "states": 150
+    }
+  ],
+  "moves_replayed": 122732,
+  "status": "passed",
+  "three_color_fibers": [
+    {
+      "acyclic_tails": 2,
+      "m": 5,
+      "max_moves": 3,
+      "ordered_pairs": 800,
+      "states": 40
+    },
+    {
+      "acyclic_tails": 6,
+      "m": 6,
+      "max_moves": 3,
+      "ordered_pairs": 4552,
+      "states": 164
+    },
+    {
+      "acyclic_tails": 22,
+      "m": 7,
+      "max_moves": 3,
+      "ordered_pairs": 28400,
+      "states": 752
+    }
+  ]
+}
