@@ -1,0 +1,1809 @@
+{
+  "changing_d_sharpness_controls": [
+    {
+      "carry_height_upper_bound": 558,
+      "certificate": {
+        "common_endpoint": 5,
+        "first_descent_source": 24,
+        "forced_odd_strict_bound": "35/9",
+        "forced_odd_time": 5,
+        "forced_odd_witness": 3,
+        "initial_clocks": [
+          6,
+          6
+        ],
+        "path": "upper",
+        "smaller_source": 24,
+        "smaller_source_clock": 4,
+        "source_time": 2
+      },
+      "common_endpoint": 5,
+      "common_even_runs": [
+        0,
+        0,
+        3,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 6,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 35,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 136,
+      "odd_correction_ratio": "32/35",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 61
+    },
+    {
+      "carry_height_upper_bound": 34830,
+      "certificate": {
+        "common_endpoint": 5,
+        "first_descent_source": 1536,
+        "forced_odd_strict_bound": "2275/681",
+        "forced_odd_time": 11,
+        "forced_odd_witness": 3,
+        "initial_clocks": [
+          12,
+          12
+        ],
+        "path": "upper",
+        "smaller_source": 1536,
+        "smaller_source_clock": 10,
+        "source_time": 2
+      },
+      "common_endpoint": 5,
+      "common_even_runs": [
+        0,
+        0,
+        9,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 12,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 2275,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 8704,
+      "odd_correction_ratio": "2048/2275",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 3869
+    },
+    {
+      "carry_height_upper_bound": 2228238,
+      "certificate": {
+        "common_endpoint": 5,
+        "first_descent_source": 98304,
+        "forced_odd_strict_bound": "48545/14563",
+        "forced_odd_time": 17,
+        "forced_odd_witness": 3,
+        "initial_clocks": [
+          18,
+          18
+        ],
+        "path": "upper",
+        "smaller_source": 98304,
+        "smaller_source_clock": 16,
+        "source_time": 2
+      },
+      "common_endpoint": 5,
+      "common_even_runs": [
+        0,
+        0,
+        15,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 18,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 145635,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 557056,
+      "odd_correction_ratio": "131072/145635",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 247581
+    },
+    {
+      "carry_height_upper_bound": 142606350,
+      "certificate": {
+        "common_endpoint": 5,
+        "first_descent_source": 6291456,
+        "forced_odd_strict_bound": "9320675/2796201",
+        "forced_odd_time": 23,
+        "forced_odd_witness": 3,
+        "initial_clocks": [
+          24,
+          24
+        ],
+        "path": "upper",
+        "smaller_source": 6291456,
+        "smaller_source_clock": 22,
+        "source_time": 2
+      },
+      "common_endpoint": 5,
+      "common_even_runs": [
+        0,
+        0,
+        21,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 24,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 9320675,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 35651584,
+      "odd_correction_ratio": "8388608/9320675",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 15845149
+    },
+    {
+      "carry_height_upper_bound": 9126805518,
+      "certificate": {
+        "common_endpoint": 5,
+        "first_descent_source": 402653184,
+        "forced_odd_strict_bound": "596523235/178956969",
+        "forced_odd_time": 29,
+        "forced_odd_witness": 3,
+        "initial_clocks": [
+          30,
+          30
+        ],
+        "path": "upper",
+        "smaller_source": 402653184,
+        "smaller_source_clock": 28,
+        "source_time": 2
+      },
+      "common_endpoint": 5,
+      "common_even_runs": [
+        0,
+        0,
+        27,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 30,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 596523235,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 2281701376,
+      "odd_correction_ratio": "536870912/596523235",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 1014089501
+    },
+    {
+      "carry_height_upper_bound": 584115552270,
+      "certificate": {
+        "common_endpoint": 5,
+        "first_descent_source": 25769803776,
+        "forced_odd_strict_bound": "12725829025/3817748707",
+        "forced_odd_time": 35,
+        "forced_odd_witness": 3,
+        "initial_clocks": [
+          36,
+          36
+        ],
+        "path": "upper",
+        "smaller_source": 25769803776,
+        "smaller_source_clock": 34,
+        "source_time": 2
+      },
+      "common_endpoint": 5,
+      "common_even_runs": [
+        0,
+        0,
+        33,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 36,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 38177487075,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 146028888064,
+      "odd_correction_ratio": "34359738368/38177487075",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 64901728029
+    },
+    {
+      "carry_height_upper_bound": 37383395344398,
+      "certificate": {
+        "common_endpoint": 5,
+        "first_descent_source": 1649267441664,
+        "forced_odd_strict_bound": "2443359172835/733007751849",
+        "forced_odd_time": 41,
+        "forced_odd_witness": 3,
+        "initial_clocks": [
+          42,
+          42
+        ],
+        "path": "upper",
+        "smaller_source": 1649267441664,
+        "smaller_source_clock": 40,
+        "source_time": 2
+      },
+      "common_endpoint": 5,
+      "common_even_runs": [
+        0,
+        0,
+        39,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 42,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 2443359172835,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 9345848836096,
+      "odd_correction_ratio": "2199023255552/2443359172835",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 4153710593821
+    },
+    {
+      "carry_height_upper_bound": 2392537302040590,
+      "certificate": {
+        "common_endpoint": 5,
+        "first_descent_source": 105553116266496,
+        "forced_odd_strict_bound": "156374987061475/46912496118441",
+        "forced_odd_time": 47,
+        "forced_odd_witness": 3,
+        "initial_clocks": [
+          48,
+          48
+        ],
+        "path": "upper",
+        "smaller_source": 105553116266496,
+        "smaller_source_clock": 46,
+        "source_time": 2
+      },
+      "common_endpoint": 5,
+      "common_even_runs": [
+        0,
+        0,
+        45,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 48,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 156374987061475,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 598134325510144,
+      "odd_correction_ratio": "140737488355328/156374987061475",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 265837478004509
+    },
+    {
+      "carry_height_upper_bound": 153122387330596878,
+      "certificate": {
+        "common_endpoint": 5,
+        "first_descent_source": 6755399441055744,
+        "forced_odd_strict_bound": "3335999723978145/1000799917193443",
+        "forced_odd_time": 53,
+        "forced_odd_witness": 3,
+        "initial_clocks": [
+          54,
+          54
+        ],
+        "path": "upper",
+        "smaller_source": 6755399441055744,
+        "smaller_source_clock": 52,
+        "source_time": 2
+      },
+      "common_endpoint": 5,
+      "common_even_runs": [
+        0,
+        0,
+        51,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 54,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 10007999171934435,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 38280596832649216,
+      "odd_correction_ratio": "9007199254740992/10007999171934435",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 17013598592288541
+    },
+    {
+      "carry_height_upper_bound": 9799832789158199310,
+      "certificate": {
+        "common_endpoint": 5,
+        "first_descent_source": 432345564227567616,
+        "forced_odd_strict_bound": "640511947003803875/192153584101141161",
+        "forced_odd_time": 59,
+        "forced_odd_witness": 3,
+        "initial_clocks": [
+          60,
+          60
+        ],
+        "path": "upper",
+        "smaller_source": 432345564227567616,
+        "smaller_source_clock": 58,
+        "source_time": 2
+      },
+      "common_endpoint": 5,
+      "common_even_runs": [
+        0,
+        0,
+        57,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 60,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 640511947003803875,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 2449958197289549824,
+      "odd_correction_ratio": "576460752303423488/640511947003803875",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 1088870309906466589
+    }
+  ],
+  "checks": 12865,
+  "distinct_first_births": 34,
+  "exact_depth_thresholds": [
+    {
+      "N": 12,
+      "d": 1,
+      "isolated_head_exponent_N_minus_K": 10,
+      "minimum_maximum_odd_count": 2
+    },
+    {
+      "N": 32,
+      "d": 1,
+      "isolated_head_exponent_N_minus_K": 29,
+      "minimum_maximum_odd_count": 3
+    },
+    {
+      "N": 64,
+      "d": 1,
+      "isolated_head_exponent_N_minus_K": 59,
+      "minimum_maximum_odd_count": 5
+    },
+    {
+      "N": 128,
+      "d": 1,
+      "isolated_head_exponent_N_minus_K": 122,
+      "minimum_maximum_odd_count": 6
+    },
+    {
+      "N": 256,
+      "d": 1,
+      "isolated_head_exponent_N_minus_K": 247,
+      "minimum_maximum_odd_count": 9
+    },
+    {
+      "N": 1024,
+      "d": 1,
+      "isolated_head_exponent_N_minus_K": 1006,
+      "minimum_maximum_odd_count": 18
+    },
+    {
+      "N": 4096,
+      "d": 1,
+      "isolated_head_exponent_N_minus_K": 4060,
+      "minimum_maximum_odd_count": 36
+    },
+    {
+      "N": 16384,
+      "d": 1,
+      "isolated_head_exponent_N_minus_K": 16312,
+      "minimum_maximum_odd_count": 72
+    },
+    {
+      "N": 12,
+      "d": 3,
+      "isolated_head_exponent_N_minus_K": 10,
+      "minimum_maximum_odd_count": 2
+    },
+    {
+      "N": 32,
+      "d": 3,
+      "isolated_head_exponent_N_minus_K": 29,
+      "minimum_maximum_odd_count": 3
+    },
+    {
+      "N": 64,
+      "d": 3,
+      "isolated_head_exponent_N_minus_K": 60,
+      "minimum_maximum_odd_count": 4
+    },
+    {
+      "N": 128,
+      "d": 3,
+      "isolated_head_exponent_N_minus_K": 122,
+      "minimum_maximum_odd_count": 6
+    },
+    {
+      "N": 256,
+      "d": 3,
+      "isolated_head_exponent_N_minus_K": 247,
+      "minimum_maximum_odd_count": 9
+    },
+    {
+      "N": 1024,
+      "d": 3,
+      "isolated_head_exponent_N_minus_K": 1006,
+      "minimum_maximum_odd_count": 18
+    },
+    {
+      "N": 4096,
+      "d": 3,
+      "isolated_head_exponent_N_minus_K": 4060,
+      "minimum_maximum_odd_count": 36
+    },
+    {
+      "N": 16384,
+      "d": 3,
+      "isolated_head_exponent_N_minus_K": 16312,
+      "minimum_maximum_odd_count": 72
+    },
+    {
+      "N": 12,
+      "d": 30,
+      "isolated_head_exponent_N_minus_K": 11,
+      "minimum_maximum_odd_count": 1
+    },
+    {
+      "N": 32,
+      "d": 30,
+      "isolated_head_exponent_N_minus_K": 30,
+      "minimum_maximum_odd_count": 2
+    },
+    {
+      "N": 64,
+      "d": 30,
+      "isolated_head_exponent_N_minus_K": 60,
+      "minimum_maximum_odd_count": 4
+    },
+    {
+      "N": 128,
+      "d": 30,
+      "isolated_head_exponent_N_minus_K": 123,
+      "minimum_maximum_odd_count": 5
+    },
+    {
+      "N": 256,
+      "d": 30,
+      "isolated_head_exponent_N_minus_K": 248,
+      "minimum_maximum_odd_count": 8
+    },
+    {
+      "N": 1024,
+      "d": 30,
+      "isolated_head_exponent_N_minus_K": 1007,
+      "minimum_maximum_odd_count": 17
+    },
+    {
+      "N": 4096,
+      "d": 30,
+      "isolated_head_exponent_N_minus_K": 4061,
+      "minimum_maximum_odd_count": 35
+    },
+    {
+      "N": 16384,
+      "d": 30,
+      "isolated_head_exponent_N_minus_K": 16313,
+      "minimum_maximum_odd_count": 71
+    },
+    {
+      "N": 12,
+      "d": 61,
+      "isolated_head_exponent_N_minus_K": 11,
+      "minimum_maximum_odd_count": 1
+    },
+    {
+      "N": 32,
+      "d": 61,
+      "isolated_head_exponent_N_minus_K": 30,
+      "minimum_maximum_odd_count": 2
+    },
+    {
+      "N": 64,
+      "d": 61,
+      "isolated_head_exponent_N_minus_K": 61,
+      "minimum_maximum_odd_count": 3
+    },
+    {
+      "N": 128,
+      "d": 61,
+      "isolated_head_exponent_N_minus_K": 123,
+      "minimum_maximum_odd_count": 5
+    },
+    {
+      "N": 256,
+      "d": 61,
+      "isolated_head_exponent_N_minus_K": 248,
+      "minimum_maximum_odd_count": 8
+    },
+    {
+      "N": 1024,
+      "d": 61,
+      "isolated_head_exponent_N_minus_K": 1007,
+      "minimum_maximum_odd_count": 17
+    },
+    {
+      "N": 4096,
+      "d": 61,
+      "isolated_head_exponent_N_minus_K": 4061,
+      "minimum_maximum_odd_count": 35
+    },
+    {
+      "N": 16384,
+      "d": 61,
+      "isolated_head_exponent_N_minus_K": 16313,
+      "minimum_maximum_odd_count": 71
+    }
+  ],
+  "first_births": [
+    {
+      "carry_height_upper_bound": 12,
+      "certificate": null,
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 1,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 1,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 4,
+      "odd_correction_ratio": "4/3",
+      "odd_counts": [
+        0,
+        1
+      ],
+      "translation": 3
+    },
+    {
+      "carry_height_upper_bound": 144,
+      "certificate": null,
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 3,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 1,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 22,
+      "odd_correction_ratio": "16/9",
+      "odd_counts": [
+        0,
+        2
+      ],
+      "translation": 15
+    },
+    {
+      "carry_height_upper_bound": 1296,
+      "certificate": null,
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 8,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 2,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 23,
+      "odd_correction_ratio": "17/6",
+      "odd_counts": [
+        3,
+        4
+      ],
+      "translation": 15
+    },
+    {
+      "carry_height_upper_bound": 279,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 1,
+        "forced_odd_strict_bound": "32/21",
+        "forced_odd_time": 1,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          4,
+          4
+        ],
+        "path": "lower",
+        "smaller_source": 1,
+        "smaller_source_clock": 3,
+        "source_time": 1
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 4,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 2,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 30,
+      "odd_correction_ratio": "16/9",
+      "odd_counts": [
+        0,
+        2
+      ],
+      "translation": 30
+    },
+    {
+      "carry_height_upper_bound": 2511,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 2,
+        "forced_odd_strict_bound": "68/33",
+        "forced_odd_time": 2,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          9,
+          9
+        ],
+        "path": "lower",
+        "smaller_source": 2,
+        "smaller_source_clock": 8,
+        "source_time": 1
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 9,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 4,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 30,
+      "odd_correction_ratio": "17/6",
+      "odd_counts": [
+        3,
+        4
+      ],
+      "translation": 30
+    },
+    {
+      "carry_height_upper_bound": 144,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 4,
+        "forced_odd_strict_bound": "8/3",
+        "forced_odd_time": 4,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          5,
+          5
+        ],
+        "path": "lower",
+        "smaller_source": 4,
+        "smaller_source_clock": 3,
+        "source_time": 2
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 5,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 5,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 22,
+      "odd_correction_ratio": "4/3",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 15
+    },
+    {
+      "carry_height_upper_bound": 2511,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 4,
+        "forced_odd_strict_bound": "7/3",
+        "forced_odd_time": 4,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          9,
+          9
+        ],
+        "path": "lower",
+        "smaller_source": 4,
+        "smaller_source_clock": 7,
+        "source_time": 2
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        0,
+        2,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 9,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 5,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 68,
+      "odd_correction_ratio": "7/3",
+      "odd_counts": [
+        3,
+        4
+      ],
+      "translation": 30
+    },
+    {
+      "carry_height_upper_bound": 144,
+      "certificate": {
+        "common_endpoint": 8,
+        "first_descent_source": 3,
+        "forced_odd_strict_bound": "14/3",
+        "forced_odd_time": 1,
+        "forced_odd_witness": 3,
+        "initial_clocks": [
+          3,
+          3
+        ],
+        "path": "lower",
+        "smaller_source": 3,
+        "smaller_source_clock": 2,
+        "source_time": 1
+      },
+      "common_endpoint": 8,
+      "common_even_runs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 3,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 6,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 23,
+      "odd_correction_ratio": "7/6",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 15
+    },
+    {
+      "carry_height_upper_bound": 486,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 4,
+        "forced_odd_strict_bound": "28/13",
+        "forced_odd_time": 3,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          10,
+          10
+        ],
+        "path": "upper",
+        "smaller_source": 4,
+        "smaller_source_clock": 9,
+        "source_time": 1
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 10,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 7,
+      "minimum_K_from_depth": 2,
+      "normalized_carry_maximum": 10,
+      "odd_correction_ratio": "8/21",
+      "odd_counts": [
+        4,
+        5
+      ],
+      "translation": 1
+    },
+    {
+      "carry_height_upper_bound": 972,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 5,
+        "forced_odd_strict_bound": "28/11",
+        "forced_odd_time": 5,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          10,
+          10
+        ],
+        "path": "upper",
+        "smaller_source": 5,
+        "smaller_source_clock": 9,
+        "source_time": 1
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 10,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 7,
+      "minimum_K_from_depth": 2,
+      "normalized_carry_maximum": 10,
+      "odd_correction_ratio": "10/21",
+      "odd_counts": [
+        4,
+        5
+      ],
+      "translation": 3
+    },
+    {
+      "carry_height_upper_bound": 48,
+      "certificate": null,
+      "common_endpoint": 11,
+      "common_even_runs": [
+        0,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 1,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 7,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 22,
+      "odd_correction_ratio": "22/21",
+      "odd_counts": [
+        0,
+        1
+      ],
+      "translation": 15
+    },
+    {
+      "carry_height_upper_bound": 558,
+      "certificate": null,
+      "common_endpoint": 17,
+      "common_even_runs": [
+        0,
+        0,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 2,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 7,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 136,
+      "odd_correction_ratio": "68/63",
+      "odd_counts": [
+        0,
+        2
+      ],
+      "translation": 61
+    },
+    {
+      "carry_height_upper_bound": 1458,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 4,
+        "forced_odd_strict_bound": "45/19",
+        "forced_odd_time": 3,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          12,
+          12
+        ],
+        "path": "lower",
+        "smaller_source": 4,
+        "smaller_source_clock": 11,
+        "source_time": 1
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 12,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 8,
+      "minimum_K_from_depth": 2,
+      "normalized_carry_maximum": 10,
+      "odd_correction_ratio": "27/8",
+      "odd_counts": [
+        6,
+        5
+      ],
+      "translation": 1
+    },
+    {
+      "carry_height_upper_bound": 5022,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 4,
+        "forced_odd_strict_bound": "92/45",
+        "forced_odd_time": 3,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          10,
+          10
+        ],
+        "path": "lower",
+        "smaller_source": 4,
+        "smaller_source_clock": 9,
+        "source_time": 1
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        2,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 10,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 8,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 92,
+      "odd_correction_ratio": "23/8",
+      "odd_counts": [
+        3,
+        4
+      ],
+      "translation": 61
+    },
+    {
+      "carry_height_upper_bound": 1458,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 5,
+        "forced_odd_strict_bound": "45/17",
+        "forced_odd_time": 5,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          12,
+          12
+        ],
+        "path": "upper",
+        "smaller_source": 5,
+        "smaller_source_clock": 11,
+        "source_time": 1
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 12,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 9,
+      "minimum_K_from_depth": 2,
+      "normalized_carry_maximum": 10,
+      "odd_correction_ratio": "10/27",
+      "odd_counts": [
+        5,
+        6
+      ],
+      "translation": 1
+    },
+    {
+      "carry_height_upper_bound": 2916,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 6,
+        "forced_odd_strict_bound": "3",
+        "forced_odd_time": 7,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          12,
+          12
+        ],
+        "path": "upper",
+        "smaller_source": 6,
+        "smaller_source_clock": 11,
+        "source_time": 1
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 12,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 9,
+      "minimum_K_from_depth": 2,
+      "normalized_carry_maximum": 10,
+      "odd_correction_ratio": "4/9",
+      "odd_counts": [
+        5,
+        6
+      ],
+      "translation": 3
+    },
+    {
+      "carry_height_upper_bound": 45198,
+      "certificate": null,
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 12,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 9,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 154,
+      "odd_correction_ratio": "70/81",
+      "odd_counts": [
+        4,
+        6
+      ],
+      "translation": 61
+    },
+    {
+      "carry_height_upper_bound": 279,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 5,
+        "forced_odd_strict_bound": "8/3",
+        "forced_odd_time": 5,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          6,
+          6
+        ],
+        "path": "lower",
+        "smaller_source": 5,
+        "smaller_source_clock": 5,
+        "source_time": 1
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 6,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 10,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 30,
+      "odd_correction_ratio": "4/3",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 30
+    },
+    {
+      "carry_height_upper_bound": 1296,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 10,
+        "forced_odd_strict_bound": "33/7",
+        "forced_odd_time": 8,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          9,
+          9
+        ],
+        "path": "upper",
+        "smaller_source": 10,
+        "smaller_source_clock": 6,
+        "source_time": 3
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 9,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 11,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 34,
+      "odd_correction_ratio": "26/33",
+      "odd_counts": [
+        3,
+        4
+      ],
+      "translation": 15
+    },
+    {
+      "carry_height_upper_bound": 279,
+      "certificate": {
+        "common_endpoint": 8,
+        "first_descent_source": 6,
+        "forced_odd_strict_bound": "14/3",
+        "forced_odd_time": 2,
+        "forced_odd_witness": 3,
+        "initial_clocks": [
+          4,
+          4
+        ],
+        "path": "lower",
+        "smaller_source": 6,
+        "smaller_source_clock": 3,
+        "source_time": 1
+      },
+      "common_endpoint": 8,
+      "common_even_runs": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 4,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 12,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 30,
+      "odd_correction_ratio": "7/6",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 30
+    },
+    {
+      "carry_height_upper_bound": 729,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 8,
+        "forced_odd_strict_bound": "28/13",
+        "forced_odd_time": 4,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          11,
+          11
+        ],
+        "path": "upper",
+        "smaller_source": 8,
+        "smaller_source_clock": 10,
+        "source_time": 1
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 11,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 14,
+      "minimum_K_from_depth": 2,
+      "normalized_carry_maximum": 10,
+      "odd_correction_ratio": "8/21",
+      "odd_counts": [
+        4,
+        5
+      ],
+      "translation": 2
+    },
+    {
+      "carry_height_upper_bound": 93,
+      "certificate": {
+        "common_endpoint": 11,
+        "first_descent_source": 7,
+        "forced_odd_strict_bound": "22/3",
+        "forced_odd_time": 1,
+        "forced_odd_witness": 7,
+        "initial_clocks": [
+          2,
+          2
+        ],
+        "path": "lower",
+        "smaller_source": 7,
+        "smaller_source_clock": 1,
+        "source_time": 1
+      },
+      "common_endpoint": 11,
+      "common_even_runs": [
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 2,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 14,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 30,
+      "odd_correction_ratio": "22/21",
+      "odd_counts": [
+        0,
+        1
+      ],
+      "translation": 30
+    },
+    {
+      "carry_height_upper_bound": 486,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 8,
+        "forced_odd_strict_bound": "60/29",
+        "forced_odd_time": 4,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          11,
+          11
+        ],
+        "path": "upper",
+        "smaller_source": 8,
+        "smaller_source_clock": 10,
+        "source_time": 1
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 11,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 15,
+      "minimum_K_from_depth": 2,
+      "normalized_carry_maximum": 14,
+      "odd_correction_ratio": "16/45",
+      "odd_counts": [
+        4,
+        5
+      ],
+      "translation": 1
+    },
+    {
+      "carry_height_upper_bound": 2511,
+      "certificate": null,
+      "common_endpoint": 20,
+      "common_even_runs": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 6,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 15,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 154,
+      "odd_correction_ratio": "1",
+      "odd_counts": [
+        3,
+        4
+      ],
+      "translation": 30
+    },
+    {
+      "carry_height_upper_bound": 432,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 16,
+        "forced_odd_strict_bound": "34/19",
+        "forced_odd_time": 5,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          8,
+          8
+        ],
+        "path": "upper",
+        "smaller_source": 16,
+        "smaller_source_clock": 7,
+        "source_time": 1
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 8,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 17,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 22,
+      "odd_correction_ratio": "32/51",
+      "odd_counts": [
+        2,
+        3
+      ],
+      "translation": 15
+    },
+    {
+      "carry_height_upper_bound": 2511,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 13,
+        "forced_odd_strict_bound": "33/7",
+        "forced_odd_time": 9,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          10,
+          10
+        ],
+        "path": "upper",
+        "smaller_source": 13,
+        "smaller_source_clock": 8,
+        "source_time": 2
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 10,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 22,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 34,
+      "odd_correction_ratio": "26/33",
+      "odd_counts": [
+        3,
+        4
+      ],
+      "translation": 30
+    },
+    {
+      "carry_height_upper_bound": 2511,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 20,
+        "forced_odd_strict_bound": "69/16",
+        "forced_odd_time": 9,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          10,
+          10
+        ],
+        "path": "upper",
+        "smaller_source": 20,
+        "smaller_source_clock": 7,
+        "source_time": 3
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 10,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 23,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 100,
+      "odd_correction_ratio": "53/69",
+      "odd_counts": [
+        3,
+        4
+      ],
+      "translation": 30
+    },
+    {
+      "carry_height_upper_bound": 558,
+      "certificate": {
+        "common_endpoint": 8,
+        "first_descent_source": 12,
+        "forced_odd_strict_bound": "170/39",
+        "forced_odd_time": 3,
+        "forced_odd_witness": 3,
+        "initial_clocks": [
+          5,
+          5
+        ],
+        "path": "lower",
+        "smaller_source": 12,
+        "smaller_source_clock": 4,
+        "source_time": 1
+      },
+      "common_endpoint": 8,
+      "common_even_runs": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 5,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 24,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 92,
+      "odd_correction_ratio": "85/72",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 61
+    },
+    {
+      "carry_height_upper_bound": 972,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 16,
+        "forced_odd_strict_bound": "116/55",
+        "forced_odd_time": 5,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          12,
+          12
+        ],
+        "path": "upper",
+        "smaller_source": 16,
+        "smaller_source_clock": 11,
+        "source_time": 1
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 12,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 29,
+      "minimum_K_from_depth": 2,
+      "normalized_carry_maximum": 10,
+      "odd_correction_ratio": "32/87",
+      "odd_counts": [
+        4,
+        5
+      ],
+      "translation": 3
+    },
+    {
+      "carry_height_upper_bound": 558,
+      "certificate": {
+        "common_endpoint": 17,
+        "first_descent_source": 22,
+        "forced_odd_strict_bound": "20",
+        "forced_odd_time": 3,
+        "forced_odd_witness": 11,
+        "initial_clocks": [
+          4,
+          4
+        ],
+        "path": "lower",
+        "smaller_source": 22,
+        "smaller_source_clock": 2,
+        "source_time": 2
+      },
+      "common_endpoint": 17,
+      "common_even_runs": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": false,
+      "depth": 4,
+      "linear_core_certificate_guaranteed": false,
+      "lower_source": 29,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 91,
+      "odd_correction_ratio": "30/29",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 61
+    },
+    {
+      "carry_height_upper_bound": 729,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 16,
+        "forced_odd_strict_bound": "60/29",
+        "forced_odd_time": 5,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          12,
+          12
+        ],
+        "path": "upper",
+        "smaller_source": 16,
+        "smaller_source_clock": 11,
+        "source_time": 1
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 12,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 30,
+      "minimum_K_from_depth": 2,
+      "normalized_carry_maximum": 14,
+      "odd_correction_ratio": "16/45",
+      "odd_counts": [
+        4,
+        5
+      ],
+      "translation": 2
+    },
+    {
+      "carry_height_upper_bound": 837,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 32,
+        "forced_odd_strict_bound": "34/19",
+        "forced_odd_time": 6,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          9,
+          9
+        ],
+        "path": "upper",
+        "smaller_source": 32,
+        "smaller_source_clock": 8,
+        "source_time": 1
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        1,
+        1,
+        2,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 9,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 34,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 30,
+      "odd_correction_ratio": "32/51",
+      "odd_counts": [
+        2,
+        3
+      ],
+      "translation": 30
+    },
+    {
+      "carry_height_upper_bound": 558,
+      "certificate": {
+        "common_endpoint": 5,
+        "first_descent_source": 24,
+        "forced_odd_strict_bound": "35/9",
+        "forced_odd_time": 5,
+        "forced_odd_witness": 3,
+        "initial_clocks": [
+          6,
+          6
+        ],
+        "path": "upper",
+        "smaller_source": 24,
+        "smaller_source_clock": 4,
+        "source_time": 2
+      },
+      "common_endpoint": 5,
+      "common_even_runs": [
+        0,
+        0,
+        3,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 6,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 35,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 136,
+      "odd_correction_ratio": "32/35",
+      "odd_counts": [
+        1,
+        2
+      ],
+      "translation": 61
+    },
+    {
+      "carry_height_upper_bound": 5022,
+      "certificate": {
+        "common_endpoint": 2,
+        "first_descent_source": 40,
+        "forced_odd_strict_bound": "135/29",
+        "forced_odd_time": 10,
+        "forced_odd_witness": 1,
+        "initial_clocks": [
+          11,
+          11
+        ],
+        "path": "upper",
+        "smaller_source": 40,
+        "smaller_source_clock": 8,
+        "source_time": 3
+      },
+      "common_endpoint": 2,
+      "common_even_runs": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "count_certificate_guaranteed": true,
+      "depth": 11,
+      "linear_core_certificate_guaranteed": true,
+      "lower_source": 45,
+      "minimum_K_from_depth": 1,
+      "normalized_carry_maximum": 91,
+      "odd_correction_ratio": "106/135",
+      "odd_counts": [
+        3,
+        4
+      ],
+      "translation": 61
+    }
+  ],
+  "first_births_with_count_guarantee": 16,
+  "first_births_with_linear_guarantee": 15,
+  "first_births_with_rational_product_certificate": 27,
+  "reused_atlas_rows": 183,
+  "status": "FINITE-EXACT source controls; fixed-d theorems proved in companion note"
+}
