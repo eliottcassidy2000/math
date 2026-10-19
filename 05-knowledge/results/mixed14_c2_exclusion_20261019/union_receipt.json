@@ -1,0 +1,28 @@
+{
+  "status": "COMPLETE_EXACT_CERTIFIED_AND_INDEPENDENTLY_REPLAYED_UNION",
+  "core_total": 96428,
+  "degree_valid": 87137,
+  "analytic_hist": {
+    "balanced_pair": 28972,
+    "residual": 54910,
+    "cycle": 3255
+  },
+  "residual_cores": 54910,
+  "residual_orders": 519617,
+  "directed_screen_orders": 20923177,
+  "certificate_order_kinds": {
+    "two": 122562,
+    "one": 392383,
+    "dual": 4672
+  },
+  "distinct_certificates": 52059,
+  "maximum_integer_weight": 19367567609030429021940,
+  "cover_sha256": "765ea54f8966dd18e87484c42a24e790197f6c614923142985936b628d82c7e6",
+  "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "shard_record_sha256": [
+    "d1627698c22e9c62a3e48ffcecee0bc0bff48c749f761e0bd5a29d6252f23004",
+    "d9cbee0567de3e0b9f6ec467eb0124297fb6f7e3f23c5e8d3e321e753bda47c3",
+    "a583c2d19bc225a94435a3bbd0c8ecfe178aba3cdac17137d69cb4d4df80585f",
+    "3ccfad0902953adb11bd4f4ca161faece8ad987872640d7dcc25e0ba10f8f9af"
+  ]
+}
