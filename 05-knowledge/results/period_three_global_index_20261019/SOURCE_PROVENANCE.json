@@ -1,0 +1,54 @@
+{
+  "status": "Inherited source pins; no source edits",
+  "sources": [
+    {
+      "repository_path": "05-knowledge/results/quadratic_clock_return_20261012a.md",
+      "sha256": "023b9171d2436b0dcf562dac160bc39b5bfed042a19253df695595e933d3b971"
+    },
+    {
+      "repository_path": "05-knowledge/results/arithmetic_braids_20260917_geometry.md",
+      "sha256": "a9e3a8fda096cd97f1d14f4924fc76eedd81b094ef122ff7b567b7131b52c708"
+    },
+    {
+      "repository_path": "05-knowledge/results/difference_visibility_norms_20261004.md",
+      "sha256": "8f90b28d1ce03af1d9b960e92935d49ce822a13cf7756a0d38cb47004fd90fc7"
+    },
+    {
+      "repository_path": "05-knowledge/results/quadratic_cycle_phase_20261015b.md",
+      "sha256": "338bdecbcaf07889d7536c79fbd1d40900b0912808735854a42f9c39cfba5180"
+    },
+    {
+      "repository_path": "05-knowledge/results/parabolic_cotangent_integrability_20261019/parabolic_cotangent_invariant_barrier.md",
+      "sha256": "91f2b46e8f4c5027495f97c5378cfe15da89353749056fa2cb587ccb93d003ca"
+    }
+  ],
+  "classical_source": {
+    "title": "John Milnor, Dynamics in One Complex Variable, 1991 revised preprint, Section 9",
+    "url": "https://abel.math.harvard.edu/archive/118r_spring_05/docs/milnor.pdf",
+    "used_for": "Classical holomorphic fixed-point index formula; polynomial proof supplied in note"
+  },
+  "contribution": "Global index/resultant/discriminant synthesis, cycle-coalescence check, and exact local unfolding scale with proved local delay",
+  "not_claimed": [
+    "new cyclotomic realization",
+    "new discriminant49 calculation",
+    "new residue51/49 value",
+    "universal index-discriminant identity",
+    "global critical-orbit escape",
+    "analytic embedding",
+    "major-conjecture consequence"
+  ],
+  "presentation_overlays": [
+    {
+      "path": "README.md",
+      "predecessor_sha256": "c7847dddfe524145688dce735e6a08d971b222244f1df4c90ef884620a49f3e1",
+      "published_sha256": "4546c59e7ca7fd30564d4d79ffaff1e19b70033caa86af5f86143da57baade56",
+      "changes": "Omit nonmathematical production-status text; all mathematical, review, and reproduction content unchanged."
+    },
+    {
+      "path": "review/REVIEW.md",
+      "predecessor_sha256": "b81327dadfe28130b3440413f68b032715db16408857bdaf341a3d72c6432b1d",
+      "published_sha256": "1107ecc73a9715ca28699ac372bd84660e9909f1b8d3329bd369e868d0ef4b4d",
+      "changes": "Omit nonmathematical production-status text; all mathematical, review, and reproduction content unchanged."
+    }
+  ]
+}

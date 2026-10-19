@@ -1,0 +1,36 @@
+PASS: 32 exact controls (SymPy 1.14.0).
+  PASS exact dynatomic quotient
+  PASS fixed-dynatomic resultant
+  PASS dynatomic discriminant
+  PASS full fixed-locus discriminant
+  PASS simple fixed-point index sum
+  PASS removable index value at c=1/4
+  PASS actual merged fixed-point residue at c=1/4
+  PASS two trace-cubic factorization
+  PASS trace-cubic root multiplier
+  PASS oriented-gap resultant
+  PASS trace-cubic discriminant
+  PASS multiplier-gap factorization
+  PASS resultant pair factorization
+  PASS two-cycle index sum
+  PASS generic finite index budget
+  PASS two-cycle coalescence limit
+  PASS multiplier resultant
+  PASS parabolic dynatomic square
+  PASS parabolic resultant sign
+  PASS parabolic cycle discriminant
+  PASS parabolic cycle multiplier
+  PASS no fixed roots in parabolic cubic
+  PASS cubic invariance under f
+  PASS global parabolic cycle index
+  PASS nonzero local quadratic coefficients
+  PASS direct local index -2/49
+  PASS iterative residue convention
+  PASS parameter unfolding derivative
+  PASS normalized positive unfolding constant
+  PASS seventh-root affine identification
+  PASS conjugated quadratic
+  PASS tripling equals conjugated quadratic on trace cubic
+Scope: rational identities extend meromorphically; separate simple-cycle formulas
+exclude c=1/4, c=-7/4, and D(c)=0 as appropriate. The global distinct-point
+residue budget itself is valid for every complex c.
