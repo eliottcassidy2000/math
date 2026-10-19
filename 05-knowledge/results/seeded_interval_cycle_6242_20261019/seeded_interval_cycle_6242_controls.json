@@ -1,0 +1,48 @@
+{
+  "canonical_plaintext_bytes": 30103,
+  "canonical_plaintext_sha256": "a892ae08c5304c35fae319dfcd9429faa5ea37b2f21e89d3a715e17912ceca6d",
+  "canonical_prefix": [
+    482,
+    3362,
+    6242,
+    4783,
+    3498,
+    6106,
+    4919,
+    4685,
+    3596,
+    6008,
+    5017,
+    3264,
+    2665,
+    4391,
+    5213,
+    5812,
+    2469,
+    4587,
+    1342,
+    5714
+  ],
+  "checks": 12998,
+  "cut_positions_1_based": [
+    102,
+    103
+  ],
+  "cycle_length": 6242,
+  "deleted_vertices": [
+    6243,
+    6244,
+    6245,
+    6246,
+    6247
+  ],
+  "input_length": 127,
+  "lifted_cycle_length": 6247,
+  "repair_moves": 24,
+  "scope": "one exact interval cycle with prescribed consecutive seed; interval endpoint is minimal because the seed contains6242",
+  "status": "passed",
+  "vertex_set": [
+    1,
+    6242
+  ]
+}
