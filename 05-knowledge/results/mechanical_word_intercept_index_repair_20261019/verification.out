@@ -1,0 +1,6 @@
+Universe: 2 <= q <= 64, 1 <= p < q, gcd(p,q)=1, 0 <= t <= q-2.
+Exact intercept transitions checked: 52807.
+Incorrect original indices: 48994. First witness (q,p,t,actual,original): (3, 2, 0, 1, 2).
+Specified hostile (q,p,t)=(5,2,0): actual k1=2; original formula gives 4.
+PASS: modular-inverse index, direct floor increments, nonwrapping support, and 01 -> 10 swap agree.
+Scope: proof 1 index and adjacent-swap lemma only; no whole-theorem audit.
