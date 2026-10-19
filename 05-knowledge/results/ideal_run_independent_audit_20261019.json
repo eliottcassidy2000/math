@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "method": "exact integers and fractions",
+  "scope": "all naturally labeled B of size at most five; all nested ideals H subset K",
+  "posets_by_size": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "3": 7,
+    "4": 40,
+    "5": 357
+  },
+  "posets": 408,
+  "ideal_rank_tests": 5231,
+  "nested_ideal_core_tests": 27871,
+  "degree_seven_core_tests": 27871,
+  "both_sided_tests": {
+    "collar_descriptors_per_side": 138,
+    "actual_two_sided_posets": 19044,
+    "actual_tests_with_z_degree_above_seven": 49,
+    "old_mixture_moment_violation": "52/49"
+  }
+}
