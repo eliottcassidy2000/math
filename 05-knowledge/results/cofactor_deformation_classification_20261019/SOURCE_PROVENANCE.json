@@ -1,0 +1,159 @@
+{
+  "description": "Candidate-to-PROVED status-only overlays, publication links and reproduction instructions, internal process sentence removal, and package-relative provenance hashing. Mathematical proof and test logic remain unchanged. Four independent receipts change only their source_sha256 values to match the published status overlays.",
+  "reviewed_input_sha256": {
+    "FINITE_ODD_PART_REDUCTION.md": "9dd29cb9f496e621271c76f381a383790c2e35567d63f247cfc2cc7a332056ff",
+    "T2_GLOBAL_CLASSIFICATION.md": "86eb521ee88df863a0bb200d1436e7b3b712a2b56abcf4804417966cf9ae2bb7",
+    "TWO_CYCLE_CLASSIFICATION.md": "5e276fd0045174de157230090384e373a3f2d1063d16e54694b5f4c6bdf52c2f",
+    "verify_t2_global.py": "eb4cae97720c4e07a3d2c8d9a3a5fc63aa0d6cf4758ebcc3b8b67ae73077a1b2",
+    "t2-verification.json": "f52370c1d2814534850ef019ba2d06ed84922e3f6b6a94c4db2d6c05980284f8",
+    "verify_two_cycles.py": "810cb7783362ae9ad5b955a4ff18518ea27bd864aa2f4ae8da5b1aff1d695035",
+    "verify_two_cycles.out": "b5fcc2eb88d2edd4c471860370f3e1e88e74e4ecbf80c75b4c8ffdcbbd9f122a",
+    "verify_two_cycles.optimized.out": "b5fcc2eb88d2edd4c471860370f3e1e88e74e4ecbf80c75b4c8ffdcbbd9f122a"
+  },
+  "files": [
+    {
+      "path": "FINITE_ODD_PART_REDUCTION.md",
+      "source_sha256": "9dd29cb9f496e621271c76f381a383790c2e35567d63f247cfc2cc7a332056ff",
+      "published_sha256": "9dd29cb9f496e621271c76f381a383790c2e35567d63f247cfc2cc7a332056ff",
+      "presentation_updates": false
+    },
+    {
+      "path": "T2_GLOBAL_CLASSIFICATION.md",
+      "source_sha256": "86eb521ee88df863a0bb200d1436e7b3b712a2b56abcf4804417966cf9ae2bb7",
+      "published_sha256": "6a17dd6089a1e0078f1b7a19caea15bd3051efec3be3604ab4e67c38671a4f79",
+      "presentation_updates": true
+    },
+    {
+      "path": "TWO_CYCLE_CLASSIFICATION.md",
+      "source_sha256": "5e276fd0045174de157230090384e373a3f2d1063d16e54694b5f4c6bdf52c2f",
+      "published_sha256": "e9e25b76d9989989664c3d1042b20605b2e010a56f656e532f9026af5428f7af",
+      "presentation_updates": true
+    },
+    {
+      "path": "README.md",
+      "source_sha256": "bf67ac6d9cccee8c4c3937bac1ead942384318d53cfe12355c9c05395eb4c485",
+      "published_sha256": "5b68b4d69c39ef3af9993aa414fc04968903e5eac438e58a144274ee75a6d580",
+      "presentation_updates": true
+    },
+    {
+      "path": "verify_t2_global.py",
+      "source_sha256": "eb4cae97720c4e07a3d2c8d9a3a5fc63aa0d6cf4758ebcc3b8b67ae73077a1b2",
+      "published_sha256": "eb4cae97720c4e07a3d2c8d9a3a5fc63aa0d6cf4758ebcc3b8b67ae73077a1b2",
+      "presentation_updates": false
+    },
+    {
+      "path": "t2-verification.json",
+      "source_sha256": "f52370c1d2814534850ef019ba2d06ed84922e3f6b6a94c4db2d6c05980284f8",
+      "published_sha256": "f52370c1d2814534850ef019ba2d06ed84922e3f6b6a94c4db2d6c05980284f8",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify_two_cycles.py",
+      "source_sha256": "810cb7783362ae9ad5b955a4ff18518ea27bd864aa2f4ae8da5b1aff1d695035",
+      "published_sha256": "810cb7783362ae9ad5b955a4ff18518ea27bd864aa2f4ae8da5b1aff1d695035",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify_two_cycles.out",
+      "source_sha256": "b5fcc2eb88d2edd4c471860370f3e1e88e74e4ecbf80c75b4c8ffdcbbd9f122a",
+      "published_sha256": "b5fcc2eb88d2edd4c471860370f3e1e88e74e4ecbf80c75b4c8ffdcbbd9f122a",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify_two_cycles.optimized.out",
+      "source_sha256": "b5fcc2eb88d2edd4c471860370f3e1e88e74e4ecbf80c75b4c8ffdcbbd9f122a",
+      "published_sha256": "b5fcc2eb88d2edd4c471860370f3e1e88e74e4ecbf80c75b4c8ffdcbbd9f122a",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/INDEPENDENT_REVIEW.md",
+      "source_sha256": "2d932574bea560da8a2bfcf1c62dab55ff3f1e305dbf03df982de0b73fdc3296",
+      "published_sha256": "3e049bc930ed906c6d61baab63194c0f17b1df288e429e33d5a0d65cda652fe9",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-controls.normal.json",
+      "source_sha256": "b16477b52f3881a1a6d04a93b5b1dad247eadf929f6d35a06c6035de4086b6df",
+      "published_sha256": "d2c3eb492c353ad879c5827f6e3add1bd66be5f2a27e0a8bf03984191c7db13e",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-controls.normal.out",
+      "source_sha256": "b16477b52f3881a1a6d04a93b5b1dad247eadf929f6d35a06c6035de4086b6df",
+      "published_sha256": "d2c3eb492c353ad879c5827f6e3add1bd66be5f2a27e0a8bf03984191c7db13e",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-controls.optimized.json",
+      "source_sha256": "b16477b52f3881a1a6d04a93b5b1dad247eadf929f6d35a06c6035de4086b6df",
+      "published_sha256": "d2c3eb492c353ad879c5827f6e3add1bd66be5f2a27e0a8bf03984191c7db13e",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-controls.optimized.out",
+      "source_sha256": "b16477b52f3881a1a6d04a93b5b1dad247eadf929f6d35a06c6035de4086b6df",
+      "published_sha256": "d2c3eb492c353ad879c5827f6e3add1bd66be5f2a27e0a8bf03984191c7db13e",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent-cycle-mutation-controls.json",
+      "source_sha256": "4f6957bcbe897e6b90b93a8f1fbf0eabed194effbaf30f11dd640b66cf4c670a",
+      "published_sha256": "4f6957bcbe897e6b90b93a8f1fbf0eabed194effbaf30f11dd640b66cf4c670a",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/independent-negative-controls.json",
+      "source_sha256": "3eac2fa7192ea7049b521f9b48b3e0aa1428732a53b844c8ec2af4295da86bf7",
+      "published_sha256": "3eac2fa7192ea7049b521f9b48b3e0aa1428732a53b844c8ec2af4295da86bf7",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/independent_controls.py",
+      "source_sha256": "253b0222d684de1c03707e958c35ef70967582b3e86029ddbe3766c339121b03",
+      "published_sha256": "9865a6710623912a268cd4f351876250e82362a85ab4dc22f1ab9fff863289e5",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/original-assert-mutation-control.json",
+      "source_sha256": "846df8f65a801f9dac71ce44c5ad31badd3ea5e4ba322ab9ce020687e34eec00",
+      "published_sha256": "846df8f65a801f9dac71ce44c5ad31badd3ea5e4ba322ab9ce020687e34eec00",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/original-receipt-comparisons.json",
+      "source_sha256": "204645cd44168a1d72f72aafebdab61a7201ac0327a5c516af88592d656b8d5c",
+      "published_sha256": "204645cd44168a1d72f72aafebdab61a7201ac0327a5c516af88592d656b8d5c",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/t2-original-rerun.json",
+      "source_sha256": "f52370c1d2814534850ef019ba2d06ed84922e3f6b6a94c4db2d6c05980284f8",
+      "published_sha256": "f52370c1d2814534850ef019ba2d06ed84922e3f6b6a94c4db2d6c05980284f8",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/t2-original-rerun.out",
+      "source_sha256": "1a9c2d93900398395f05fff75665dded0ffceaec8e584effcedd93fb3eecc185",
+      "published_sha256": "1a9c2d93900398395f05fff75665dded0ffceaec8e584effcedd93fb3eecc185",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/two-cycles-original-rerun-optimized.json",
+      "source_sha256": "b5fcc2eb88d2edd4c471860370f3e1e88e74e4ecbf80c75b4c8ffdcbbd9f122a",
+      "published_sha256": "b5fcc2eb88d2edd4c471860370f3e1e88e74e4ecbf80c75b4c8ffdcbbd9f122a",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/two-cycles-original-rerun.json",
+      "source_sha256": "b5fcc2eb88d2edd4c471860370f3e1e88e74e4ecbf80c75b4c8ffdcbbd9f122a",
+      "published_sha256": "b5fcc2eb88d2edd4c471860370f3e1e88e74e4ecbf80c75b4c8ffdcbbd9f122a",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/REVIEW_MANIFEST.json",
+      "source_sha256": "00d24acdce6e635ddaba6865a0dcec2ee8813b6f1b2cb8118744b71f7f9d0f50",
+      "published_sha256": "681b0d6987fb2147aa4591ccabb5f0a67dc9cdd0e52f0735397fa04026409f56",
+      "presentation_updates": true
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "review_status": "PASS",
+  "no_assert_nodes_in_independent_checker": true,
+  "files": {
+    "INDEPENDENT_REVIEW.md": {
+      "bytes": 13195,
+      "sha256": "3e049bc930ed906c6d61baab63194c0f17b1df288e429e33d5a0d65cda652fe9"
+    },
+    "independent-controls.normal.json": {
+      "bytes": 9029,
+      "sha256": "d2c3eb492c353ad879c5827f6e3add1bd66be5f2a27e0a8bf03984191c7db13e"
+    },
+    "independent-controls.normal.out": {
+      "bytes": 9029,
+      "sha256": "d2c3eb492c353ad879c5827f6e3add1bd66be5f2a27e0a8bf03984191c7db13e"
+    },
+    "independent-controls.optimized.json": {
+      "bytes": 9029,
+      "sha256": "d2c3eb492c353ad879c5827f6e3add1bd66be5f2a27e0a8bf03984191c7db13e"
+    },
+    "independent-controls.optimized.out": {
+      "bytes": 9029,
+      "sha256": "d2c3eb492c353ad879c5827f6e3add1bd66be5f2a27e0a8bf03984191c7db13e"
+    },
+    "independent-cycle-mutation-controls.json": {
+      "bytes": 246,
+      "sha256": "4f6957bcbe897e6b90b93a8f1fbf0eabed194effbaf30f11dd640b66cf4c670a"
+    },
+    "independent-negative-controls.json": {
+      "bytes": 284,
+      "sha256": "3eac2fa7192ea7049b521f9b48b3e0aa1428732a53b844c8ec2af4295da86bf7"
+    },
+    "independent_controls.py": {
+      "bytes": 15808,
+      "sha256": "9865a6710623912a268cd4f351876250e82362a85ab4dc22f1ab9fff863289e5"
+    },
+    "original-assert-mutation-control.json": {
+      "bytes": 296,
+      "sha256": "846df8f65a801f9dac71ce44c5ad31badd3ea5e4ba322ab9ce020687e34eec00"
+    },
+    "original-receipt-comparisons.json": {
+      "bytes": 380,
+      "sha256": "204645cd44168a1d72f72aafebdab61a7201ac0327a5c516af88592d656b8d5c"
+    },
+    "t2-original-rerun.json": {
+      "bytes": 2825,
+      "sha256": "f52370c1d2814534850ef019ba2d06ed84922e3f6b6a94c4db2d6c05980284f8"
+    },
+    "t2-original-rerun.out": {
+      "bytes": 2826,
+      "sha256": "1a9c2d93900398395f05fff75665dded0ffceaec8e584effcedd93fb3eecc185"
+    },
+    "two-cycles-original-rerun-optimized.json": {
+      "bytes": 182,
+      "sha256": "b5fcc2eb88d2edd4c471860370f3e1e88e74e4ecbf80c75b4c8ffdcbbd9f122a"
+    },
+    "two-cycles-original-rerun.json": {
+      "bytes": 182,
+      "sha256": "b5fcc2eb88d2edd4c471860370f3e1e88e74e4ecbf80c75b4c8ffdcbbd9f122a"
+    }
+  },
+  "source_review_manifest_sha256": "00d24acdce6e635ddaba6865a0dcec2ee8813b6f1b2cb8118744b71f7f9d0f50"
+}

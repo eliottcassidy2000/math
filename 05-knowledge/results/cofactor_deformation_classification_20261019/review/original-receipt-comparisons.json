@@ -1,0 +1,14 @@
+{
+  "t2-verification.json": {
+    "review_receipt": "t2-original-rerun.json",
+    "byte_for_byte_match": true
+  },
+  "verify_two_cycles.out": {
+    "review_receipt": "two-cycles-original-rerun.json",
+    "byte_for_byte_match": true
+  },
+  "verify_two_cycles.optimized.out": {
+    "review_receipt": "two-cycles-original-rerun-optimized.json",
+    "byte_for_byte_match": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "normal": {
+    "exit_code": 1,
+    "last_error_line": "RuntimeError: Intentional negative control: checks remain active under -O."
+  },
+  "optimized": {
+    "exit_code": 1,
+    "last_error_line": "RuntimeError: Intentional negative control: checks remain active under -O."
+  }
+}

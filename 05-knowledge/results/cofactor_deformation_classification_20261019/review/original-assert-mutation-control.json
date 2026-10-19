@@ -1,0 +1,15 @@
+{
+  "normal": {
+    "exit_code": 1,
+    "stdout_status": null,
+    "stderr_tail": [
+      "  File \"<string>\", line 59, in check_chain",
+      "AssertionError: [16, 80, 46, 30, 22, 18, 16]"
+    ]
+  },
+  "optimized": {
+    "exit_code": 0,
+    "stdout_status": "PASS",
+    "stderr_tail": []
+  }
+}

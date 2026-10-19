@@ -1,0 +1,10 @@
+{
+  "normal": {
+    "exit_code": 1,
+    "last_error_line": "RuntimeError: ('cycle edges', (16, 80, 46, 30, 22, 18))"
+  },
+  "optimized": {
+    "exit_code": 1,
+    "last_error_line": "RuntimeError: ('cycle edges', (16, 80, 46, 30, 22, 18))"
+  }
+}

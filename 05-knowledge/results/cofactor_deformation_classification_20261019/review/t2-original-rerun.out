@@ -1,0 +1,165 @@
+{
+  "status": "PASS",
+  "scope": "Finite controls supporting the written all-exponent proof, not a census proof.",
+  "symbolic_identities_checked": 36,
+  "explicit_descent_chains_checked": 12,
+  "nontrivial_cycles_checked": [
+    [
+      16,
+      78,
+      46,
+      30,
+      22,
+      18
+    ],
+    [
+      24,
+      52,
+      54,
+      34
+    ],
+    [
+      28,
+      36,
+      42
+    ],
+    [
+      32,
+      158,
+      86,
+      50
+    ],
+    [
+      40,
+      66
+    ],
+    [
+      48,
+      108,
+      96,
+      220,
+      180,
+      150,
+      82
+    ]
+  ],
+  "exceptional_starts_checked": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    16,
+    24,
+    28,
+    32,
+    40,
+    44,
+    48
+  ],
+  "exponent_grid": {
+    "a_max": 128,
+    "b_max": 128,
+    "odd_coefficients": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      11
+    ],
+    "inputs_checked": 98304,
+    "branch_counts": {
+      "exception": 13,
+      "finite_chain": 12,
+      "fixed": 126,
+      "general_oddpart": 32258,
+      "immediate": 49281,
+      "k1_d2": 123,
+      "k1_d2c": 125,
+      "k1_d4": 119,
+      "k1_dc": 125,
+      "k1_e_diagonal": 61,
+      "k1_e_half": 61,
+      "k1_e_small": 3969,
+      "k1_h2": 62,
+      "k1_h4": 60,
+      "k1_h_large": 3660,
+      "k3_d2": 125,
+      "k3_diagonal": 124,
+      "k3_e2": 125,
+      "k3_e_large": 7875
+    }
+  },
+  "initial_interval": {
+    "max_n": 1000000,
+    "even_inputs_checked": 500000,
+    "branch_counts": {
+      "exception": 13,
+      "finite_chain": 12,
+      "fixed": 8,
+      "general_oddpart": 2781,
+      "immediate": 497027,
+      "k1_d2": 14,
+      "k1_d2c": 7,
+      "k1_d4": 9,
+      "k1_dc": 6,
+      "k1_e_diagonal": 3,
+      "k1_e_half": 3,
+      "k1_e_small": 19,
+      "k1_h2": 5,
+      "k1_h4": 2,
+      "k1_h_large": 17,
+      "k3_d2": 14,
+      "k3_diagonal": 5,
+      "k3_e2": 6,
+      "k3_e_large": 49
+    }
+  },
+  "guard_boundary_controls": [
+    {
+      "control": "k1_e_half requires d>=16",
+      "start": 224,
+      "step": 3,
+      "invalid_claimed_core": 4,
+      "actual_core": 8
+    },
+    {
+      "control": "k1_e_diagonal small d=4",
+      "start": 48,
+      "step": 3,
+      "invalid_claimed_core": 2,
+      "actual_core": 4
+    },
+    {
+      "control": "k1_h4 requires d>=16",
+      "start": 1792,
+      "step": 3,
+      "invalid_claimed_core": 8,
+      "actual_core": 32
+    },
+    {
+      "control": "k3_diagonal n5 requires c>=32",
+      "start": 752,
+      "step": 5,
+      "invalid_claimed_core": 4,
+      "actual_core": 2
+    },
+    {
+      "control": "k3_diagonal n3 requires c>=8",
+      "start": 44,
+      "step": 3,
+      "invalid_claimed_core": 4,
+      "actual_core": 32
+    },
+    {
+      "control": "k1_dc n2 requires c>=8",
+      "start": 12,
+      "step": 2,
+      "invalid_claimed_core": 2,
+      "actual_core": 4
+    }
+  ]
+}
+

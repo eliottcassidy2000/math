@@ -1,0 +1,324 @@
+{
+  "status": "PASS",
+  "check_implementation": "Explicit require checks; no Python assert statements.",
+  "scope": "Independent exact algebra, universal polynomial guard/inequality certificates, and finite controls.",
+  "source_sha256": {
+    "FINITE_ODD_PART_REDUCTION.md": "9dd29cb9f496e621271c76f381a383790c2e35567d63f247cfc2cc7a332056ff",
+    "T2_GLOBAL_CLASSIFICATION.md": "6a17dd6089a1e0078f1b7a19caea15bd3051efec3be3604ab4e67c38671a4f79",
+    "TWO_CYCLE_CLASSIFICATION.md": "e9e25b76d9989989664c3d1042b20605b2e010a56f656e532f9026af5428f7af",
+    "verify_t2_global.py": "eb4cae97720c4e07a3d2c8d9a3a5fc63aa0d6cf4758ebcc3b8b67ae73077a1b2",
+    "t2-verification.json": "f52370c1d2814534850ef019ba2d06ed84922e3f6b6a94c4db2d6c05980284f8",
+    "verify_two_cycles.py": "810cb7783362ae9ad5b955a4ff18518ea27bd864aa2f4ae8da5b1aff1d695035",
+    "verify_two_cycles.out": "b5fcc2eb88d2edd4c471860370f3e1e88e74e4ecbf80c75b4c8ffdcbbd9f122a",
+    "verify_two_cycles.optimized.out": "b5fcc2eb88d2edd4c471860370f3e1e88e74e4ecbf80c75b4c8ffdcbbd9f122a"
+  },
+  "symbolic": {
+    "identities_checked": 36,
+    "identities": [
+      "all-t two-step identity",
+      "fixed point",
+      "common first iterate",
+      "common second iterate",
+      "k3 common second iterate",
+      "k3 large-e descent",
+      "k3 e=2 descent",
+      "k3 d=2 two-step descent",
+      "k3 d=c, step 1",
+      "k3 d=c, step 2",
+      "k3 d=c, step 3",
+      "k3 d=c, step 4",
+      "k3 d=c, step 5",
+      "k3 d=c, step 6",
+      "k3 diagonal descent",
+      "k1 d=2c, step 1",
+      "k1 d=2c, step 2",
+      "k1 d=2c, step 3",
+      "k1 d=c, step 1",
+      "k1 d=c, step 2",
+      "k1 d=c, step 3",
+      "k1 common second iterate",
+      "k1 e<d third iterate",
+      "k1 e<d descent",
+      "k1 e=d/2 third iterate",
+      "k1 e=d second iterate",
+      "k1 e=d third iterate",
+      "k1 e>d third iterate",
+      "k1 d=4 fourth iterate",
+      "two-cycle first equation",
+      "two-cycle second equation",
+      "two-cycle fractions sum",
+      "Mersenne gcd linear combination",
+      "larger core bound simplification",
+      "sharp first odd part",
+      "sharp second odd part"
+    ],
+    "unbounded_exact_core_certificates": [
+      {
+        "name": "first image core d when d<c",
+        "odd_quotient": "4*t*u + 8*u*v*w + 4*u*v - 2*u - 2*w - 1"
+      },
+      {
+        "name": "k3 large-e n2 core 2",
+        "odd_quotient": "96*u**2*v + 2*u - 6*v + 1"
+      },
+      {
+        "name": "k3 e=2 n2 core 4",
+        "odd_quotient": "96*u**2 + 2*u - 1"
+      },
+      {
+        "name": "k3 diagonal n1 core c**2",
+        "odd_quotient": "3"
+      },
+      {
+        "name": "k3 diagonal n2 core 4",
+        "odd_quotient": "28*u**2 - 1"
+      },
+      {
+        "name": "k3 diagonal n3 core 4",
+        "odd_quotient": "84*u**2 + 3"
+      },
+      {
+        "name": "k3 diagonal n4 core 8",
+        "odd_quotient": "126*u**2 + 3"
+      },
+      {
+        "name": "k3 diagonal n5 core 4",
+        "odd_quotient": "882*u**2 + 13"
+      },
+      {
+        "name": "k1 d=2c n1 core c",
+        "odd_quotient": "4*u + 1"
+      },
+      {
+        "name": "k1 d=2c n2 core 2",
+        "odd_quotient": "16*u**2 + 6*u - 1"
+      },
+      {
+        "name": "k1 d=c n1 core 2c",
+        "odd_quotient": "2*u + 1"
+      },
+      {
+        "name": "k1 d=c n2 core 2",
+        "odd_quotient": "32*u**2 + 38*u - 1"
+      },
+      {
+        "name": "k1 e<d n2 core e",
+        "odd_quotient": "16*u**2*v**2 + 8*u*v + 6*v - 3"
+      },
+      {
+        "name": "k1 e=d/2 n3 core 4",
+        "odd_quotient": "512*u**3 + 6*u - 1"
+      },
+      {
+        "name": "k1 e=d n2 core 2d^2",
+        "odd_quotient": "2*u + 1"
+      },
+      {
+        "name": "k1 e=d n3 core 2",
+        "odd_quotient": "256*u**3 + 320*u**2 - 2*u - 1"
+      },
+      {
+        "name": "k1 e>d n2 core d",
+        "odd_quotient": "8*u**2*v + 8*u*v - 6*v + 3"
+      },
+      {
+        "name": "k1 h=2 n3 core 2",
+        "odd_quotient": "64*u**3 + 16*u**2 - 6*u + 1"
+      },
+      {
+        "name": "k1 h>=8,d>=8 n3 core 4",
+        "odd_quotient": "1024*u**3*v + 128*u**2*v - 80*u*v + 14*u + 6*v - 1"
+      },
+      {
+        "name": "k1 h=4 n3 core 8",
+        "odd_quotient": "2048*u**3 + 128*u**2 - 26*u + 1"
+      },
+      {
+        "name": "k1 d=4,h>=64 n3 core 8",
+        "odd_quotient": "504*u + 3"
+      },
+      {
+        "name": "k1 d=4,h>=64 n4 core 4",
+        "odd_quotient": "882*u + 13"
+      },
+      {
+        "name": "k1 d=2,h>=16 n3 core 2",
+        "odd_quotient": "40*u + 5"
+      }
+    ],
+    "unbounded_strict_inequality_certificates": [
+      {
+        "name": "all-t residual upper bound",
+        "shifted_polynomial": "-x*y - x - y**2 - 7*y - 8",
+        "domain": "All displayed variables are nonnegative."
+      },
+      {
+        "name": "k3 d>=4,e>=4",
+        "shifted_polynomial": "-3*x**2*y/2 - 6*x**2 - 11*x*y - 87*x/2 - 43*y/2 - 76",
+        "domain": "All displayed variables are nonnegative."
+      },
+      {
+        "name": "k3 e=2,d>=8",
+        "shifted_polynomial": "-3*x**2/2 - 85*x/4 - 62",
+        "domain": "All displayed variables are nonnegative."
+      },
+      {
+        "name": "k3 d=2,e>=8",
+        "shifted_polynomial": "-x - 4",
+        "domain": "All displayed variables are nonnegative."
+      },
+      {
+        "name": "k3 diagonal c>=32",
+        "shifted_polynomial": "-213*x**2/512 - 205*x/8 - 340",
+        "domain": "All displayed variables are nonnegative."
+      },
+      {
+        "name": "k1 d=2c,c>=8",
+        "shifted_polynomial": "-x**2 - 27*x/2 - 38",
+        "domain": "All displayed variables are nonnegative."
+      },
+      {
+        "name": "k1 d=c,c>=16",
+        "shifted_polynomial": "-x**2/2 - 41*x/4 - 30",
+        "domain": "All displayed variables are nonnegative."
+      },
+      {
+        "name": "k1 e<=d/4 upper bound,d>=8",
+        "shifted_polynomial": "-x**2/4 - 11*x/4 - 4",
+        "domain": "All displayed variables are nonnegative."
+      },
+      {
+        "name": "k1 e=d/2,d>=16",
+        "shifted_polynomial": "-x**3/8 - 11*x**2/2 - 631*x/8 - 354",
+        "domain": "All displayed variables are nonnegative."
+      },
+      {
+        "name": "k1 e=d,d>=16",
+        "shifted_polynomial": "-x**3/2 - 18*x**2 - 769*x/4 - 510",
+        "domain": "All displayed variables are nonnegative."
+      },
+      {
+        "name": "k1 h=2,d>=4",
+        "shifted_polynomial": "-x**3 - 9*x**2 - 51*x/2 - 14",
+        "domain": "All displayed variables are nonnegative."
+      },
+      {
+        "name": "k1 h>=8,d>=8",
+        "shifted_polynomial": "-x**3*y/4 - 2*x**3 - 17*x**2*y/4 - 34*x**2 - 95*x*y/4 - 739*x/4 - 175*y/4 - 296",
+        "domain": "All displayed variables are nonnegative."
+      },
+      {
+        "name": "k1 h=4,d>=16",
+        "shifted_polynomial": "-x**3/2 - 33*x**2/2 - 1243*x/8 - 272",
+        "domain": "All displayed variables are nonnegative."
+      },
+      {
+        "name": "k1 d=4,h>=64",
+        "shifted_polynomial": "-213*x/32 - 372",
+        "domain": "All displayed variables are nonnegative."
+      },
+      {
+        "name": "k1 d=2,h>=16",
+        "shifted_polynomial": "-3*x/2 - 12",
+        "domain": "All displayed variables are nonnegative."
+      }
+    ]
+  },
+  "t2": {
+    "exponent_grid": {
+      "a_max": 256,
+      "b_max": 256,
+      "k": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        17,
+        257
+      ],
+      "inputs": 524288,
+      "branch_counts": {
+        "exception": 13,
+        "finite chain": 12,
+        "fixed": 254,
+        "general odd part": 193306,
+        "immediate": 264681,
+        "k1 d2": 251,
+        "k1 d2c": 253,
+        "k1 d4": 247,
+        "k1 dc": 253,
+        "k1 diagonal e": 125,
+        "k1 h2": 126,
+        "k1 h4": 124,
+        "k1 half e": 125,
+        "k1 large h": 15500,
+        "k1 small e": 16129,
+        "k3 d2": 253,
+        "k3 diagonal": 252,
+        "k3 e2": 253,
+        "k3 large e": 32131
+      }
+    },
+    "literal_short_block_interval": {
+      "max_n": 2000000,
+      "even_inputs": 1000000,
+      "first_descent_counts": {
+        "1": 996003,
+        "2": 3800,
+        "3": 99,
+        "4": 50,
+        "5": 15,
+        "6": 11
+      },
+      "fixed_starts": 9,
+      "nonfixed_no_descent_starts": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        16,
+        24,
+        28,
+        32,
+        40,
+        44,
+        48
+      ]
+    },
+    "finite_chains": 12,
+    "listed_cycles": 6,
+    "sharp_six_step_witness": [
+      56,
+      80,
+      138,
+      76,
+      72,
+      94,
+      54
+    ]
+  },
+  "all_t_reduction": {
+    "parameters": 64,
+    "a_max": 40,
+    "b_max": 40,
+    "qualifying_growth_inputs": 193929
+  },
+  "all_t_two_cycles": {
+    "classified_parameters": 1024,
+    "cycles_total": 1699,
+    "gcd_and_bound_tests": 479232,
+    "literal_parameters": 32,
+    "literal_even_starts_per_parameter": 100000,
+    "sharp_family_exponents": 256,
+    "t2_two_cycles": [
+      [
+        40,
+        66
+      ]
+    ]
+  }
+}
