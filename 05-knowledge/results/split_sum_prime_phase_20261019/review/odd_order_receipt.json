@@ -1,0 +1,113 @@
+{
+  "always_active_checks": 28196,
+  "group_controls": [
+    {
+      "cyclic_factor_orders": [
+        1
+      ],
+      "group_order": 1,
+      "multisets_length_at_most_3": 4
+    },
+    {
+      "cyclic_factor_orders": [
+        3
+      ],
+      "group_order": 3,
+      "multisets_length_at_most_3": 20
+    },
+    {
+      "cyclic_factor_orders": [
+        5
+      ],
+      "group_order": 5,
+      "multisets_length_at_most_3": 56
+    },
+    {
+      "cyclic_factor_orders": [
+        7
+      ],
+      "group_order": 7,
+      "multisets_length_at_most_3": 120
+    },
+    {
+      "cyclic_factor_orders": [
+        9
+      ],
+      "group_order": 9,
+      "multisets_length_at_most_3": 220
+    },
+    {
+      "cyclic_factor_orders": [
+        15
+      ],
+      "group_order": 15,
+      "multisets_length_at_most_3": 816
+    },
+    {
+      "cyclic_factor_orders": [
+        21
+      ],
+      "group_order": 21,
+      "multisets_length_at_most_3": 2024
+    },
+    {
+      "cyclic_factor_orders": [
+        25
+      ],
+      "group_order": 25,
+      "multisets_length_at_most_3": 3276
+    },
+    {
+      "cyclic_factor_orders": [
+        3,
+        3
+      ],
+      "group_order": 9,
+      "multisets_length_at_most_3": 220
+    },
+    {
+      "cyclic_factor_orders": [
+        5,
+        5
+      ],
+      "group_order": 25,
+      "multisets_length_at_most_3": 3276
+    },
+    {
+      "cyclic_factor_orders": [
+        3,
+        3,
+        3
+      ],
+      "group_order": 27,
+      "multisets_length_at_most_3": 4060
+    }
+  ],
+  "q7_actual_sources": [
+    {
+      "kernel": [
+        6,
+        5,
+        5
+      ],
+      "negative_product_legendre": -1,
+      "signed_product": 1,
+      "source": 330,
+      "unit_product": 1
+    },
+    {
+      "kernel": [
+        6,
+        5,
+        5
+      ],
+      "negative_product_legendre": 1,
+      "signed_product": 1,
+      "source": 510,
+      "unit_product": 6
+    }
+  ],
+  "scope": "Odd-order finite abelian groups and q=7 sign-loss hostile",
+  "status": "PASS",
+  "total_multisets": 14092
+}

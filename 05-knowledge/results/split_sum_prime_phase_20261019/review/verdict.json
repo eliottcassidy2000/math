@@ -1,0 +1,24 @@
+{
+  "appended_odd_order_section": "PASS",
+  "independent_checks": 553351,
+  "independent_cyclic_multisets": 118754,
+  "independent_receipt_sha256": "ea311646bdac83621b54b732c42dc9d563964274b2671dd7b66a9c2d60c2b59d",
+  "no_greedy_completeness_claim": true,
+  "normal_optimized_outputs_identical": true,
+  "prime_receipt_sha256": "596864b2b827961bd4cc37a531b81928d240f90ee8cfa674114d659874cadda6",
+  "required_corrections": [],
+  "review": "REVIEW.md",
+  "reviewed_kernel_sha256": "83f2f7a3c0fbaa904c69d4e7527a8cb656de25665d4042d59e1e1bc62668061f",
+  "source_urls": [
+    "https://arxiv.org/html/1607.01557v4",
+    "https://arxiv.org/html/1605.08929",
+    "https://arxiv.org/html/2601.21901v1",
+    "https://arxiv.org/pdf/1806.11241"
+  ],
+  "source_version_note": "Both the original kernel note and appended odd-order section were reviewed; original and published hashes are recorded in SOURCE_PROVENANCE.json.",
+  "status": "PASS",
+  "supplemental_normal_optimized_outputs_identical": true,
+  "supplemental_odd_order_checks": 28196,
+  "supplemental_odd_order_multisets": 14092,
+  "supplemental_receipt_sha256": "c34a3ce7c8dfea1e8a5db39495f1d3f82e3e32fe86dce4d41a627b44cdc06c5b"
+}

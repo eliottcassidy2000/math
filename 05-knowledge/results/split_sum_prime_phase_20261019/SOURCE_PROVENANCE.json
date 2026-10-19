@@ -1,0 +1,195 @@
+{
+  "description": "The kernel note receives its audited PROVED status; the original phase-marker discussion links to the recovery companion. Internal process prose was removed. Mathematical arguments and executable checks are otherwise unchanged.",
+  "primary_manifest_sha256": "d818e2c1735b54f15dcda15c638af7c4afee275524b9d81f1f75dd9397740a6c",
+  "review_manifest_sha256": "3db5fe692528ad18c0c5806666d78bfa9f13c0b4e151f9caf54945e6cd67cab9",
+  "initial_review_source_hashes": [
+    {
+      "source_group": "prime-tournament-angles",
+      "filename": "MANIFEST.sha256",
+      "sha256": "d818e2c1735b54f15dcda15c638af7c4afee275524b9d81f1f75dd9397740a6c"
+    },
+    {
+      "source_group": "prime-tournament-angles",
+      "filename": "PRIME_BRANCHING_PHASE_AND_FERMAT_BALANCE.md",
+      "sha256": "d2cc948ea3da3679a99e3cc9c2cb4bc6d7472f69a6b484fcfb1f451c76a8a880"
+    },
+    {
+      "source_group": "prime-tournament-angles",
+      "filename": "README.md",
+      "sha256": "b350af82f43eb9cee7ca20f6fedbc0b2612646194b6ea764f11bc4193871d216"
+    },
+    {
+      "source_group": "prime-tournament-angles",
+      "filename": "normal_receipt.json",
+      "sha256": "596864b2b827961bd4cc37a531b81928d240f90ee8cfa674114d659874cadda6"
+    },
+    {
+      "source_group": "prime-tournament-angles",
+      "filename": "normal_run.txt",
+      "sha256": "fb979dd37c8aa0fe3a65c19d8198fbab66004e6b27c3f25aec104719cf38c040"
+    },
+    {
+      "source_group": "prime-tournament-angles",
+      "filename": "optimized_run.txt",
+      "sha256": "fb979dd37c8aa0fe3a65c19d8198fbab66004e6b27c3f25aec104719cf38c040"
+    },
+    {
+      "source_group": "prime-tournament-angles",
+      "filename": "prime_branching_receipt.json",
+      "sha256": "596864b2b827961bd4cc37a531b81928d240f90ee8cfa674114d659874cadda6"
+    },
+    {
+      "source_group": "prime-tournament-angles",
+      "filename": "verify_prime_branching.py",
+      "sha256": "04b7c86c8da1edb21df439f7c6c17e873252b9e778d35719ce443a3a3d4d2093"
+    },
+    {
+      "source_group": "kernel-phase",
+      "filename": "KERNEL_PHASE_RECOVERY.md",
+      "sha256": "df2fd06341fe508be6111453d556d42c279e25adf15f8c7520ed2ed0ef7850c2"
+    },
+    {
+      "source_group": "kernel-phase",
+      "filename": "verify_kernel_phase.optimized.out",
+      "sha256": "84d6ac040b3976b449766959f4a700de28260a8e310e433186ba067c9a646694"
+    },
+    {
+      "source_group": "kernel-phase",
+      "filename": "verify_kernel_phase.out",
+      "sha256": "84d6ac040b3976b449766959f4a700de28260a8e310e433186ba067c9a646694"
+    },
+    {
+      "source_group": "kernel-phase",
+      "filename": "verify_kernel_phase.py",
+      "sha256": "f849653ed200a822f7a8b4547f6ed475778e13283e7aa78dece2008ba061e64f"
+    }
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "source_sha256": "b350af82f43eb9cee7ca20f6fedbc0b2612646194b6ea764f11bc4193871d216",
+      "published_sha256": "7a85bcc4eabcf2d794a11f48f9c55abf6c2e8c62303570acefdaa75dca755f75",
+      "presentation_updates": true
+    },
+    {
+      "path": "PRIME_BRANCHING_PHASE_AND_FERMAT_BALANCE.md",
+      "source_sha256": "d2cc948ea3da3679a99e3cc9c2cb4bc6d7472f69a6b484fcfb1f451c76a8a880",
+      "published_sha256": "c0a7e4a5e47c807189ab82e5d460465d0d69b6b67c0e1e7e957d7fc204568280",
+      "presentation_updates": true
+    },
+    {
+      "path": "verify_prime_branching.py",
+      "source_sha256": "04b7c86c8da1edb21df439f7c6c17e873252b9e778d35719ce443a3a3d4d2093",
+      "published_sha256": "04b7c86c8da1edb21df439f7c6c17e873252b9e778d35719ce443a3a3d4d2093",
+      "presentation_updates": false
+    },
+    {
+      "path": "prime_branching_receipt.json",
+      "source_sha256": "596864b2b827961bd4cc37a531b81928d240f90ee8cfa674114d659874cadda6",
+      "published_sha256": "596864b2b827961bd4cc37a531b81928d240f90ee8cfa674114d659874cadda6",
+      "presentation_updates": false
+    },
+    {
+      "path": "normal_receipt.json",
+      "source_sha256": "596864b2b827961bd4cc37a531b81928d240f90ee8cfa674114d659874cadda6",
+      "published_sha256": "596864b2b827961bd4cc37a531b81928d240f90ee8cfa674114d659874cadda6",
+      "presentation_updates": false
+    },
+    {
+      "path": "normal_run.txt",
+      "source_sha256": "fb979dd37c8aa0fe3a65c19d8198fbab66004e6b27c3f25aec104719cf38c040",
+      "published_sha256": "fb979dd37c8aa0fe3a65c19d8198fbab66004e6b27c3f25aec104719cf38c040",
+      "presentation_updates": false
+    },
+    {
+      "path": "optimized_run.txt",
+      "source_sha256": "fb979dd37c8aa0fe3a65c19d8198fbab66004e6b27c3f25aec104719cf38c040",
+      "published_sha256": "fb979dd37c8aa0fe3a65c19d8198fbab66004e6b27c3f25aec104719cf38c040",
+      "presentation_updates": false
+    },
+    {
+      "path": "KERNEL_PHASE_RECOVERY.md",
+      "source_sha256": "83f2f7a3c0fbaa904c69d4e7527a8cb656de25665d4042d59e1e1bc62668061f",
+      "published_sha256": "0311af061f6ce7524039ac1b529a6785d3825c4e2bb2d08b4b5bf8a153fe9665",
+      "presentation_updates": true
+    },
+    {
+      "path": "verify_kernel_phase.py",
+      "source_sha256": "9c6655930cb00a3b5da4e1924462413ea691d2a8d4a4f7c71e9b3f89cdc441f9",
+      "published_sha256": "9c6655930cb00a3b5da4e1924462413ea691d2a8d4a4f7c71e9b3f89cdc441f9",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify_kernel_phase.out",
+      "source_sha256": "84d6ac040b3976b449766959f4a700de28260a8e310e433186ba067c9a646694",
+      "published_sha256": "84d6ac040b3976b449766959f4a700de28260a8e310e433186ba067c9a646694",
+      "presentation_updates": false
+    },
+    {
+      "path": "verify_kernel_phase.optimized.out",
+      "source_sha256": "84d6ac040b3976b449766959f4a700de28260a8e310e433186ba067c9a646694",
+      "published_sha256": "84d6ac040b3976b449766959f4a700de28260a8e310e433186ba067c9a646694",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/REVIEW.md",
+      "source_sha256": "d39217e87fb80591065e10c326f8e03847571a9939bbba4fd4f78093a1c0ce60",
+      "published_sha256": "578291f8f8ca22bfe5b4f77aca64edf7a10c580b87afe3e56ce3753e0f6b1f10",
+      "presentation_updates": true
+    },
+    {
+      "path": "review/independent_controls.py",
+      "source_sha256": "8e4d168ee4f90d30e90655f00c695a4df15aeeb8a1080ffcbe8871f77798da6b",
+      "published_sha256": "8e4d168ee4f90d30e90655f00c695a4df15aeeb8a1080ffcbe8871f77798da6b",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/independent_receipt.json",
+      "source_sha256": "ea311646bdac83621b54b732c42dc9d563964274b2671dd7b66a9c2d60c2b59d",
+      "published_sha256": "ea311646bdac83621b54b732c42dc9d563964274b2671dd7b66a9c2d60c2b59d",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/independent.normal.out",
+      "source_sha256": "45918afc32bef2623426ce86e474c0e2c68ca76d58a33312e919e27b5926b3fc",
+      "published_sha256": "45918afc32bef2623426ce86e474c0e2c68ca76d58a33312e919e27b5926b3fc",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/independent.optimized.out",
+      "source_sha256": "45918afc32bef2623426ce86e474c0e2c68ca76d58a33312e919e27b5926b3fc",
+      "published_sha256": "45918afc32bef2623426ce86e474c0e2c68ca76d58a33312e919e27b5926b3fc",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/odd_order_controls.py",
+      "source_sha256": "5afba8c3b257a95a8986bfa22c5d06a1df98816e2c46e9c8a52fa9ea70360767",
+      "published_sha256": "5afba8c3b257a95a8986bfa22c5d06a1df98816e2c46e9c8a52fa9ea70360767",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/odd_order_receipt.json",
+      "source_sha256": "c34a3ce7c8dfea1e8a5db39495f1d3f82e3e32fe86dce4d41a627b44cdc06c5b",
+      "published_sha256": "c34a3ce7c8dfea1e8a5db39495f1d3f82e3e32fe86dce4d41a627b44cdc06c5b",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/odd_order.normal.out",
+      "source_sha256": "322fc8ec1e8810d9f71025970118e260d0e8ffae4739dd37c0e8ce4d6ab2fe26",
+      "published_sha256": "322fc8ec1e8810d9f71025970118e260d0e8ffae4739dd37c0e8ce4d6ab2fe26",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/odd_order.optimized.out",
+      "source_sha256": "322fc8ec1e8810d9f71025970118e260d0e8ffae4739dd37c0e8ce4d6ab2fe26",
+      "published_sha256": "322fc8ec1e8810d9f71025970118e260d0e8ffae4739dd37c0e8ce4d6ab2fe26",
+      "presentation_updates": false
+    },
+    {
+      "path": "review/verdict.json",
+      "source_sha256": "d969c9080f314e1d13a9f33b90257099c0239a0179c628edd0821a4bb52e958e",
+      "published_sha256": "ab98b882efeec9f2483428c5cb1e89a9f74a1ee0f21f91e2964f31d682528b9b",
+      "presentation_updates": true
+    }
+  ]
+}

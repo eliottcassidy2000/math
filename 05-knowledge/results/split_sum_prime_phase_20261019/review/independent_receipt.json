@@ -1,0 +1,476 @@
+{
+  "always_active_checks": 553351,
+  "arithmetic": {
+    "full_primorial_plus_repair_uniform_multiplicity": "2^6528",
+    "generating_source": "36054720350329695914767176044436363972270",
+    "layer_counts": [
+      3260,
+      1631,
+      817,
+      444,
+      203,
+      93,
+      49,
+      26,
+      9,
+      4,
+      2,
+      1,
+      1,
+      2,
+      0
+    ],
+    "method": "Trial division and signed multiplicative orders; no sieve or logarithm table",
+    "minimal_basis": [
+      3,
+      19,
+      17,
+      13,
+      233,
+      839,
+      431,
+      157,
+      6373,
+      10163,
+      257,
+      2,
+      64513,
+      61441,
+      327941
+    ],
+    "minimum_repair_exhaustive_candidates": [
+      {
+        "factorization": [
+          [
+            2,
+            8
+          ]
+        ],
+        "n": 256
+      },
+      {
+        "factorization": [
+          [
+            97,
+            1
+          ],
+          [
+            673,
+            1
+          ]
+        ],
+        "n": 65281
+      },
+      {
+        "factorization": [
+          [
+            3,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            13,
+            1
+          ],
+          [
+            241,
+            1
+          ]
+        ],
+        "n": 65793
+      },
+      {
+        "factorization": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            21803,
+            1
+          ]
+        ],
+        "n": 130818
+      },
+      {
+        "factorization": [
+          [
+            2,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            23,
+            1
+          ],
+          [
+            571,
+            1
+          ]
+        ],
+        "n": 131330
+      },
+      {
+        "factorization": [
+          [
+            5,
+            1
+          ],
+          [
+            173,
+            1
+          ],
+          [
+            227,
+            1
+          ]
+        ],
+        "n": 196355
+      },
+      {
+        "factorization": [
+          [
+            11,
+            2
+          ],
+          [
+            1627,
+            1
+          ]
+        ],
+        "n": 196867
+      },
+      {
+        "factorization": [
+          [
+            2,
+            2
+          ],
+          [
+            233,
+            1
+          ],
+          [
+            281,
+            1
+          ]
+        ],
+        "n": 261892
+      },
+      {
+        "factorization": [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            37,
+            1
+          ],
+          [
+            197,
+            1
+          ]
+        ],
+        "n": 262404
+      },
+      {
+        "factorization": [
+          [
+            3,
+            3
+          ],
+          [
+            67,
+            1
+          ],
+          [
+            181,
+            1
+          ]
+        ],
+        "n": 327429
+      },
+      {
+        "factorization": [
+          [
+            327941,
+            1
+          ]
+        ],
+        "n": 327941
+      }
+    ],
+    "prime_count_below_65537": 6542,
+    "split_divisors": [
+      "135625235",
+      "265840795411928288380603919649882"
+    ],
+    "split_quotient": "4056346726458768152045471341"
+  },
+  "cyclic": {
+    "all_multisets_h_1_to_24_k_0_to_4": 118754,
+    "counts": {
+      "nonuniform": 118594,
+      "uniform": 160
+    },
+    "opposite_phase_kernel_classes": 789,
+    "sample_mixed_order_ambiguities": [
+      [
+        6,
+        2,
+        [
+          2,
+          0,
+          0,
+          2,
+          0,
+          0
+        ]
+      ],
+      [
+        6,
+        2,
+        [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      [
+        6,
+        2,
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1
+        ]
+      ],
+      [
+        6,
+        3,
+        [
+          4,
+          0,
+          0,
+          4,
+          0,
+          0
+        ]
+      ],
+      [
+        6,
+        3,
+        [
+          2,
+          2,
+          0,
+          2,
+          2,
+          0
+        ]
+      ],
+      [
+        6,
+        3,
+        [
+          2,
+          0,
+          2,
+          2,
+          0,
+          2
+        ]
+      ],
+      [
+        6,
+        3,
+        [
+          1,
+          2,
+          1,
+          1,
+          2,
+          1
+        ]
+      ],
+      [
+        6,
+        3,
+        [
+          2,
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      ]
+    ]
+  },
+  "hostiles_and_sources": {
+    "arithmetic_hostiles": [
+      {
+        "kernel": [
+          4,
+          4
+        ],
+        "ordered_hit_counts": [
+          0,
+          4
+        ],
+        "phases": [
+          -1,
+          1
+        ],
+        "q": 5,
+        "sources": [
+          42,
+          66
+        ]
+      },
+      {
+        "kernel": [
+          6,
+          5,
+          5
+        ],
+        "ordered_hit_counts": [
+          0,
+          6
+        ],
+        "phases": [
+          -1,
+          1
+        ],
+        "q": 7,
+        "sources": [
+          330,
+          510
+        ]
+      },
+      {
+        "kernel": [
+          2,
+          0
+        ],
+        "ordered_hit_counts": [
+          0,
+          2
+        ],
+        "phases": [
+          1,
+          1
+        ],
+        "q": 5,
+        "sources": [
+          11,
+          19
+        ]
+      },
+      {
+        "kernel": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "ordered_hit_counts": [
+          0,
+          2
+        ],
+        "phases": [
+          1,
+          1
+        ],
+        "q": 17,
+        "sources": [
+          86,
+          118
+        ]
+      }
+    ],
+    "literal_greedy_factorization_steps": [
+      {
+        "distinct_unordered_split_sums": 1,
+        "selected": 2,
+        "source": 1
+      },
+      {
+        "distinct_unordered_split_sums": 1,
+        "selected": 3,
+        "source": 2
+      },
+      {
+        "distinct_unordered_split_sums": 2,
+        "selected": 5,
+        "source": 6
+      },
+      {
+        "distinct_unordered_split_sums": 4,
+        "selected": 11,
+        "source": 30
+      },
+      {
+        "distinct_unordered_split_sums": 8,
+        "selected": 37,
+        "source": 330
+      },
+      {
+        "distinct_unordered_split_sums": 16,
+        "selected": 13,
+        "source": 12210
+      },
+      {
+        "distinct_unordered_split_sums": 32,
+        "selected": 7,
+        "source": 158730
+      },
+      {
+        "distinct_unordered_split_sums": 64,
+        "selected": 29,
+        "source": 1111110
+      },
+      {
+        "distinct_unordered_split_sums": 128,
+        "selected": 17,
+        "source": 32222190
+      },
+      {
+        "distinct_unordered_split_sums": 256,
+        "selected": 19,
+        "source": 547777230
+      }
+    ],
+    "original_Mullin_residue_countermodel_products": [
+      1,
+      3
+    ]
+  },
+  "scope": "Independent bounded controls, not a prime completeness proof",
+  "status": "PASS"
+}
