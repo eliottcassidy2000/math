@@ -1,0 +1,15 @@
+{
+  "status": "PROVED; independent mathematical review PASS; root approved",
+  "publication_scope": "readable symbolic proof, exact guard-refinement certificate and complete finite forests, independent review and replay",
+  "files": [
+    "GUARD_REFINED_REPAIR.md",
+    "README.md",
+    "independent-review/REVIEW.md",
+    "independent-review/independent-receipt.json",
+    "independent-review/independent_check.py",
+    "verification-receipt.json",
+    "verify_guard_refined_repair.py"
+  ],
+  "theorem_scope": "25-episode first-crossing repair by N+183; separate 1000-episode computational corollary by N+273; rational coefficient-stopping prerequisite for universal finite-forest method; no arbitrary pointwise entry",
+  "validation": "normal and optimized writer replay match 1342946-check receipt; independent replay matches 1398025-check receipt; three wording corrections applied"
+}

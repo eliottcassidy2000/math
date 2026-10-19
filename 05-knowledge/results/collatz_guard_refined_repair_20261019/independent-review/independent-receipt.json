@@ -1,0 +1,38 @@
+{
+  "base_row_digest": "5708046e711978079dc77c04756291a4b460ee7b5c962a0a540755b79bfa37e0",
+  "class_count": 33990,
+  "exceptional_offsets": [
+    14196,
+    15364,
+    18436,
+    49324,
+    128308,
+    215276,
+    266092,
+    288932,
+    295660,
+    310916,
+    390388,
+    394148,
+    480032,
+    522404,
+    529652
+  ],
+  "forest_kind_counts": {
+    "branch": 202,
+    "offset_repair": 275,
+    "source_descent": 361
+  },
+  "forest_node_count": 838,
+  "independent_checks": 1398025,
+  "max_base_depth": 183,
+  "max_refined_guard": 394,
+  "max_refined_repair": 273,
+  "maximum_base_threshold": "19411997879661734889626095/420491770248316829",
+  "maximum_main_threshold": "810692053755261919/1738366812781",
+  "per_source_main_depth": {
+    "A": 135,
+    "B": 183
+  },
+  "status": "PASS"
+}
