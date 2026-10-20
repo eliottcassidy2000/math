@@ -1,0 +1,186 @@
+{
+  "checks": {
+    "coupling_composition_identity": 90,
+    "coupling_defect_column_zero": 5,
+    "coupling_defect_row_zero": 5,
+    "equicorrelation_attainment": 286,
+    "equicorrelation_parity": 11,
+    "equicorrelation_psd_gap": 11,
+    "fisher_parity_speed": 25,
+    "four_root_pair_control": 1,
+    "four_root_quartic_control": 1,
+    "missing_row_bad_mass": 4,
+    "missing_row_full_negative": 4,
+    "missing_row_other_masses": 4,
+    "missing_row_submatrix_psd": 4,
+    "moment_eigen": 310,
+    "moment_gram": 25,
+    "parity_disjoint": 57,
+    "parity_moments": 1302,
+    "parity_normalization": 57,
+    "q17_gap": 1,
+    "q17_l2_denominator": 1,
+    "star_parity_gap": 5,
+    "star_top_coefficient": 5,
+    "triangle_boolean_implies_psd": 729,
+    "triangle_hostile": 1,
+    "triangle_spectrum": 729,
+    "walsh_composition_tv": 5,
+    "walsh_inverse": 25,
+    "walsh_involution": 5
+  },
+  "equicorrelation_boundary": [
+    {
+      "boolean_minimum": "-1",
+      "psd_minimum": "-1",
+      "roots": 2
+    },
+    {
+      "boolean_minimum": "-1/3",
+      "psd_minimum": "-1/2",
+      "roots": 3
+    },
+    {
+      "boolean_minimum": "-1/3",
+      "psd_minimum": "-1/3",
+      "roots": 4
+    },
+    {
+      "boolean_minimum": "-1/5",
+      "psd_minimum": "-1/4",
+      "roots": 5
+    },
+    {
+      "boolean_minimum": "-1/5",
+      "psd_minimum": "-1/5",
+      "roots": 6
+    },
+    {
+      "boolean_minimum": "-1/7",
+      "psd_minimum": "-1/6",
+      "roots": 7
+    },
+    {
+      "boolean_minimum": "-1/7",
+      "psd_minimum": "-1/7",
+      "roots": 8
+    },
+    {
+      "boolean_minimum": "-1/9",
+      "psd_minimum": "-1/8",
+      "roots": 9
+    },
+    {
+      "boolean_minimum": "-1/9",
+      "psd_minimum": "-1/9",
+      "roots": 10
+    },
+    {
+      "boolean_minimum": "-1/11",
+      "psd_minimum": "-1/10",
+      "roots": 11
+    },
+    {
+      "boolean_minimum": "-1/11",
+      "psd_minimum": "-1/11",
+      "roots": 12
+    }
+  ],
+  "exact_check_total": 3708,
+  "missing_row_hostiles": [
+    {
+      "matrix_size": 4,
+      "negative_orbit_mass": "-1/8",
+      "nonconstant_moment": "-1/2",
+      "other_orbit_mass": "3/8",
+      "roots": 3
+    },
+    {
+      "matrix_size": 8,
+      "negative_orbit_mass": "-1/48",
+      "nonconstant_moment": "-1/6",
+      "other_orbit_mass": "7/48",
+      "roots": 4
+    },
+    {
+      "matrix_size": 16,
+      "negative_orbit_mass": "-1/224",
+      "nonconstant_moment": "-1/14",
+      "other_orbit_mass": "15/224",
+      "roots": 5
+    },
+    {
+      "matrix_size": 32,
+      "negative_orbit_mass": "-1/960",
+      "nonconstant_moment": "-1/30",
+      "other_orbit_mass": "31/960",
+      "roots": 6
+    }
+  ],
+  "q17_correlation_distance_lower_bounds": {
+    "l1": "8",
+    "l2": "8/51",
+    "linf": "8/2601"
+  },
+  "scope": "Finite exact controls supplement the elementary proofs. The q17 cut bound is inherited, not re-proved by this script. No major conjecture is claimed solved.",
+  "star_controls": [
+    {
+      "coefficient": "-1/2",
+      "minus_cost": "1",
+      "plus_cost": "0",
+      "roots": 2
+    },
+    {
+      "coefficient": "1/4",
+      "minus_cost": "1",
+      "plus_cost": "3/2",
+      "roots": 4
+    },
+    {
+      "coefficient": "-3/16",
+      "minus_cost": "9/4",
+      "plus_cost": "15/8",
+      "roots": 6
+    },
+    {
+      "coefficient": "5/32",
+      "minus_cost": "11/4",
+      "plus_cost": "49/16",
+      "roots": 8
+    },
+    {
+      "coefficient": "-35/256",
+      "minus_cost": "125/32",
+      "plus_cost": "465/128",
+      "roots": 10
+    }
+  ],
+  "status": "PASS",
+  "triangle_grid": {
+    "boolean_feasible": 249,
+    "ordinary_psd_nonboolean": 64,
+    "triples": 729
+  },
+  "walsh_composition_controls": [
+    {
+      "size": 2,
+      "total_variation_gap": "1/2"
+    },
+    {
+      "size": 4,
+      "total_variation_gap": "3/4"
+    },
+    {
+      "size": 8,
+      "total_variation_gap": "7/8"
+    },
+    {
+      "size": 16,
+      "total_variation_gap": "15/16"
+    },
+    {
+      "size": 32,
+      "total_variation_gap": "31/32"
+    }
+  ]
+}

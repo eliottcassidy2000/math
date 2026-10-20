@@ -1,0 +1,36 @@
+{
+  "checks": {
+    "cube_order_duality": 2,
+    "cube_polar_vertex_count": 1,
+    "equicorrelation_boundary": 18,
+    "fisher_normalization": 2,
+    "fisher_parity_speed": 3,
+    "maximal_invisible_fiber": 3,
+    "missing_row_masses": 4,
+    "missing_row_sharp_threshold": 4,
+    "missing_row_spectrum": 8,
+    "observer_rank": 4,
+    "pair_vs_full_packet": 2,
+    "proper_row_all_scalars": 1,
+    "q17_dependency_identity_only": 1,
+    "q17_distance_arithmetic": 1,
+    "q17_graph_rebuild": 2,
+    "supplied_hash_matches": 4,
+    "supplied_receipt_integrity": 3,
+    "triangle_character_transform": 6,
+    "triangle_hostile": 1,
+    "triangle_q17_local": 1,
+    "walsh_composition": 4,
+    "walsh_involution_gap": 2
+  },
+  "exact_control_total": 77,
+  "reviewed_hashes": {
+    "SIMPLEX_SPHERE_CUBE_COMPLETION.md": "d3e800332a5bad27ba3918bf17d626e989f9356ccef0e9400101773c328b0b15",
+    "math/05-knowledge/results/plane_binary_transfer_20261020/addendum-four-defects/results/q17_no_two_defects_certificate.json.gz": "251cf994140ed97daf9fc963dab8544c3c6018c51cad8f39f095edd3087e23fe",
+    "verification.json": "ed849ab3ff9f6c27b1ccfaa832b2455e2a4db6792f262ec3d788605860daeae9",
+    "verification_optimized.json": "ed849ab3ff9f6c27b1ccfaa832b2455e2a4db6792f262ec3d788605860daeae9",
+    "verify_geometric_completion.py": "75fc4e2c0c6d12ce215d4a6833becfb94670668958d3fa017dfa5ba337f1672e"
+  },
+  "scope": "Independent bounded exact controls. Supplied 3708-check verifier and inherited q17 proof trees were not rerun. Q17 graph rebuilt; certificate hash identified only. Proofs and type distinctions separately reviewed.",
+  "status": "PASS"
+}
