@@ -1,0 +1,159 @@
+{
+  "checks": {
+    "crt_cycle_counts": 4,
+    "direct_ring_affine_branch": 7,
+    "direct_ring_burnside": 7,
+    "direct_ring_regular_branch": 7,
+    "first_lift_fixed_criterion": 7625,
+    "pascal_cyclic_ideal_equality": 79,
+    "prime_power_branch_integrality": 270,
+    "regular_affine_linear_fixed_equality": 50,
+    "regular_fixed_rank": 363
+  },
+  "crt_direct_orbit_cases": [
+    {
+      "F": 3,
+      "cycle_counts": {
+        "1": 12,
+        "2": 18,
+        "3": 32,
+        "4": 12,
+        "6": 48,
+        "8": 12,
+        "12": 32,
+        "24": 32
+      },
+      "moduli": [
+        4,
+        3
+      ]
+    },
+    {
+      "F": 3,
+      "cycle_counts": {
+        "1": 18,
+        "2": 9,
+        "3": 48,
+        "4": 9,
+        "6": 24,
+        "9": 144,
+        "12": 24,
+        "18": 72,
+        "36": 72
+      },
+      "moduli": [
+        2,
+        9
+      ]
+    },
+    {
+      "F": 2,
+      "cycle_counts": {
+        "1": 20,
+        "2": 10,
+        "4": 10,
+        "5": 16,
+        "10": 8,
+        "20": 8
+      },
+      "moduli": [
+        4,
+        5
+      ]
+    },
+    {
+      "F": 3,
+      "cycle_counts": {
+        "1": 15,
+        "3": 40,
+        "5": 72,
+        "15": 192
+      },
+      "moduli": [
+        3,
+        5
+      ]
+    }
+  ],
+  "direct_ring_gain_cases": [
+    {
+      "affine_all_orbits": 2,
+      "linear_all_orbits": 3,
+      "n": 3,
+      "p": 2,
+      "regular_branch": "2",
+      "s": 2,
+      "states": 4
+    },
+    {
+      "affine_all_orbits": 4,
+      "linear_all_orbits": 5,
+      "n": 3,
+      "p": 2,
+      "regular_branch": "4",
+      "s": 3,
+      "states": 8
+    },
+    {
+      "affine_all_orbits": 6,
+      "linear_all_orbits": 8,
+      "n": 4,
+      "p": 2,
+      "regular_branch": "4",
+      "s": 2,
+      "states": 64
+    },
+    {
+      "affine_all_orbits": 28,
+      "linear_all_orbits": 32,
+      "n": 4,
+      "p": 2,
+      "regular_branch": "24",
+      "s": 3,
+      "states": 512
+    },
+    {
+      "affine_all_orbits": 5,
+      "linear_all_orbits": 5,
+      "n": 3,
+      "p": 3,
+      "regular_branch": "2",
+      "s": 2,
+      "states": 9
+    },
+    {
+      "affine_all_orbits": 39,
+      "linear_all_orbits": 39,
+      "n": 4,
+      "p": 3,
+      "regular_branch": "36",
+      "s": 2,
+      "states": 729
+    },
+    {
+      "affine_all_orbits": 13,
+      "linear_all_orbits": 13,
+      "n": 3,
+      "p": 5,
+      "regular_branch": "13",
+      "s": 2,
+      "states": 25
+    }
+  ],
+  "field_ring_hostile": {
+    "F4_all_orbits": 4,
+    "Z4_all_orbits": 3,
+    "n": 3,
+    "reason": "The 1-dimensional quotient action is sign. Sign is trivial over F4 but has three orbits over Z4.",
+    "regular_branch_both": 2,
+    "size": 4
+  },
+  "status": "PASS",
+  "total_checks": 8412,
+  "universes": {
+    "branch_integrality": "p=2,3,5,7,11; 1<=s<=3; 1<=n<=18",
+    "first_lift": "all states for p=2,3; 500 deterministic states each for p=5,7",
+    "fixed_rank": "all p-regular partition types n<=9, p=2,3,5,7,11",
+    "pascal_ideal": "all F from 0 through P for (p,P)=(2,16),(3,27),(5,25),(7,7)"
+  }
+}

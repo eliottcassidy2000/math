@@ -1,0 +1,50 @@
+{
+  "destination": "05-knowledge/results/prime_local_branch_code_lifts_20261020",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1326,
+      "sha256": "7996973da6c696119e03eb1a7e3d5b489efd29600fe3e6d2886932a86bacdef0"
+    },
+    {
+      "path": "PRIME_LOCAL_BRANCHES_CODES_AND_LIFTS.md",
+      "bytes": 20276,
+      "sha256": "ecebf2743b498d203568e711be9b38d8fa4ebe706c871bc0a5ef105c2af92a73"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 2068,
+      "sha256": "d8295570a6e27126e30792c7fd3a4a370b16ea13b963d282f6404c94995d9881"
+    },
+    {
+      "path": "check_bridges.py",
+      "bytes": 6512,
+      "sha256": "c9c8570a01535f19913b8e18c13535e0fa5d04870fafd565085b79d77ffc2992"
+    },
+    {
+      "path": "controls.json",
+      "bytes": 6185,
+      "sha256": "3df557c61332c0b9bd2c61c946d416a18c7eafd669f0331db4f9d5172753b1c1"
+    },
+    {
+      "path": "controls.optimized.json",
+      "bytes": 6185,
+      "sha256": "3df557c61332c0b9bd2c61c946d416a18c7eafd669f0331db4f9d5172753b1c1"
+    },
+    {
+      "path": "independent_bridge_controls.py",
+      "bytes": 6498,
+      "sha256": "3faa0e1c2b6a2f11b3e161307bc338d9ba86c22b13371e25b51d2b256395f9cc"
+    },
+    {
+      "path": "independent-controls.json",
+      "bytes": 3071,
+      "sha256": "76c8289943d48fd2f84a3842af0cc20e5626fa0dd2864111f7372c727980efb5"
+    },
+    {
+      "path": "independent-controls.optimized.json",
+      "bytes": 3071,
+      "sha256": "76c8289943d48fd2f84a3842af0cc20e5626fa0dd2864111f7372c727980efb5"
+    }
+  ]
+}
