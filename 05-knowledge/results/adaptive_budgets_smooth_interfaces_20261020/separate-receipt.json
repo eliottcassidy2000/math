@@ -1,0 +1,167 @@
+{
+  "checks": 1306782,
+  "collatz": {
+    "all_hard_sources": 438,
+    "exhaustive_partitions": 80909,
+    "histogram": {
+      "1": 99562,
+      "2": 432,
+      "3": 4,
+      "4": 1,
+      "5": 1
+    },
+    "sources": 100000
+  },
+  "farey": {
+    "examples": [
+      {
+        "difference": 1,
+        "residues": [
+          0
+        ]
+      },
+      {
+        "difference": 6,
+        "residues": [
+          0,
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "difference": 9,
+        "residues": [
+          0,
+          8
+        ]
+      },
+      {
+        "difference": 15,
+        "residues": [
+          0,
+          5,
+          9,
+          14
+        ]
+      },
+      {
+        "difference": 21,
+        "residues": [
+          0,
+          6,
+          14,
+          20
+        ]
+      },
+      {
+        "difference": 27,
+        "residues": [
+          0,
+          26
+        ]
+      },
+      {
+        "difference": 105,
+        "residues": [
+          0,
+          14,
+          20,
+          35,
+          69,
+          84,
+          90,
+          104
+        ]
+      }
+    ],
+    "rectangle": {
+      "a": [
+        1,
+        500
+      ],
+      "difference": [
+        1,
+        200
+      ]
+    }
+  },
+  "geometry": {
+    "histogram": {
+      "0": 384,
+      "1": 3456,
+      "2": 3840,
+      "3": 640,
+      "4": 16
+    },
+    "two_wing_projection": 100
+  },
+  "merged_counts": [
+    {
+      "merged": 1,
+      "n": 0,
+      "ordinary": 1,
+      "self_converse": 1
+    },
+    {
+      "merged": 1,
+      "n": 1,
+      "ordinary": 1,
+      "self_converse": 1
+    },
+    {
+      "merged": 1,
+      "n": 2,
+      "ordinary": 1,
+      "self_converse": 1
+    },
+    {
+      "merged": 2,
+      "n": 3,
+      "ordinary": 2,
+      "self_converse": 2
+    },
+    {
+      "merged": 3,
+      "n": 4,
+      "ordinary": 4,
+      "self_converse": 2
+    },
+    {
+      "merged": 10,
+      "n": 5,
+      "ordinary": 12,
+      "self_converse": 8
+    },
+    {
+      "merged": 34,
+      "n": 6,
+      "ordinary": 56,
+      "self_converse": 12
+    },
+    {
+      "merged": 272,
+      "n": 7,
+      "ordinary": 456,
+      "self_converse": 88
+    },
+    {
+      "merged": 3528,
+      "n": 8,
+      "ordinary": 6880,
+      "self_converse": 176
+    },
+    {
+      "merged": 97144,
+      "n": 9,
+      "ordinary": 191536,
+      "self_converse": 2752
+    }
+  ],
+  "positive_charge": {
+    "sources": 500000,
+    "worst_fraction": "215402584767891/281474976710656",
+    "worst_source": 63
+  },
+  "status": "FINITE-EXACT; separate implementation, same agent"
+}
