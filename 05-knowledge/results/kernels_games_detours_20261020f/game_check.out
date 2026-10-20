@@ -1,0 +1,10 @@
+n= 1 graphs= 1 wins HH/HW/WH/WW= [0, 0, 0, 0] minimum_red= [None, None, None, None]
+n= 2 graphs= 2 wins HH/HW/WH/WW= [0, 0, 0, 0] minimum_red= [None, None, None, None]
+n= 3 graphs= 8 wins HH/HW/WH/WW= [0, 0, 0, 0] minimum_red= [None, None, None, None]
+n= 4 graphs= 64 wins HH/HW/WH/WW= [8, 4, 4, 0] minimum_red= [3, 3, 3, None]
+n= 5 graphs= 1024 wins HH/HW/WH/WW= [70, 35, 35, 0] minimum_red= [4, 4, 5, None]
+n= 6 graphs= 32768 wins HH/HW/WH/WW= [1092, 546, 546, 0] minimum_red= [5, 5, 6, None]
+all extremal families n=4..100: counts/connectivity; n<=12: HP DP PASS
+WH minimum n=4..20: [3, 5, 6, 9, 10, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35]
+port hostile K1,3 -> K3 PASS; modular/carry pairs= 2900 PASS
+PASS
