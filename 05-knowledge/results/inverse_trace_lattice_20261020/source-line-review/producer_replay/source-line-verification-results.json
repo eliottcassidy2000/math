@@ -1,0 +1,366 @@
+{
+  "checks": 192,
+  "status": "PASS",
+  "source_control": "finite birational graph with nonreduced specialization is non-Keller",
+  "forbidden_constant_atlases": [
+    {
+      "d": 3,
+      "R": "u*Z^d+v*Z+1",
+      "forbidden_specialization": "Z=0",
+      "surface": "A1 x G_m",
+      "status": "cannot be actual finite source graph"
+    },
+    {
+      "d": 4,
+      "R": "u*Z^d+v*Z+1",
+      "forbidden_specialization": "Z=0",
+      "surface": "A1 x G_m",
+      "status": "cannot be actual finite source graph"
+    },
+    {
+      "d": 5,
+      "R": "u*Z^d+v*Z+1",
+      "forbidden_specialization": "Z=0",
+      "surface": "A1 x G_m",
+      "status": "cannot be actual finite source graph"
+    },
+    {
+      "d": 6,
+      "R": "u*Z^d+v*Z+1",
+      "forbidden_specialization": "Z=0",
+      "surface": "A1 x G_m",
+      "status": "cannot be actual finite source graph"
+    },
+    {
+      "d": 7,
+      "R": "u*Z^d+v*Z+1",
+      "forbidden_specialization": "Z=0",
+      "surface": "A1 x G_m",
+      "status": "cannot be actual finite source graph"
+    },
+    {
+      "d": 8,
+      "R": "u*Z^d+v*Z+1",
+      "forbidden_specialization": "Z=0",
+      "surface": "A1 x G_m",
+      "status": "cannot be actual finite source graph"
+    },
+    {
+      "d": 9,
+      "R": "u*Z^d+v*Z+1",
+      "forbidden_specialization": "Z=0",
+      "surface": "A1 x G_m",
+      "status": "cannot be actual finite source graph"
+    },
+    {
+      "d": 10,
+      "R": "u*Z^d+v*Z+1",
+      "forbidden_specialization": "Z=0",
+      "surface": "A1 x G_m",
+      "status": "cannot be actual finite source graph"
+    }
+  ],
+  "irreducible_boundary_budgets": [
+    {
+      "d": 3,
+      "branch_excess": 1,
+      "chi": 0,
+      "omitted": 2
+    },
+    {
+      "d": 3,
+      "branch_excess": 2,
+      "chi": -1,
+      "omitted": 4
+    },
+    {
+      "d": 3,
+      "branch_excess": 3,
+      "chi": -2,
+      "omitted": 6
+    },
+    {
+      "d": 3,
+      "branch_excess": 4,
+      "chi": -3,
+      "omitted": 8
+    },
+    {
+      "d": 3,
+      "branch_excess": 5,
+      "chi": -4,
+      "omitted": 10
+    },
+    {
+      "d": 4,
+      "branch_excess": 1,
+      "chi": 0,
+      "omitted": 3
+    },
+    {
+      "d": 4,
+      "branch_excess": 2,
+      "chi": -1,
+      "omitted": 6
+    },
+    {
+      "d": 4,
+      "branch_excess": 3,
+      "chi": -2,
+      "omitted": 9
+    },
+    {
+      "d": 4,
+      "branch_excess": 4,
+      "chi": -3,
+      "omitted": 12
+    },
+    {
+      "d": 4,
+      "branch_excess": 5,
+      "chi": -4,
+      "omitted": 15
+    },
+    {
+      "d": 5,
+      "branch_excess": 1,
+      "chi": 0,
+      "omitted": 4
+    },
+    {
+      "d": 5,
+      "branch_excess": 2,
+      "chi": -1,
+      "omitted": 8
+    },
+    {
+      "d": 5,
+      "branch_excess": 3,
+      "chi": -2,
+      "omitted": 12
+    },
+    {
+      "d": 5,
+      "branch_excess": 4,
+      "chi": -3,
+      "omitted": 16
+    },
+    {
+      "d": 5,
+      "branch_excess": 5,
+      "chi": -4,
+      "omitted": 20
+    },
+    {
+      "d": 6,
+      "branch_excess": 1,
+      "chi": 0,
+      "omitted": 5
+    },
+    {
+      "d": 6,
+      "branch_excess": 2,
+      "chi": -1,
+      "omitted": 10
+    },
+    {
+      "d": 6,
+      "branch_excess": 3,
+      "chi": -2,
+      "omitted": 15
+    },
+    {
+      "d": 6,
+      "branch_excess": 4,
+      "chi": -3,
+      "omitted": 20
+    },
+    {
+      "d": 6,
+      "branch_excess": 5,
+      "chi": -4,
+      "omitted": 25
+    },
+    {
+      "d": 7,
+      "branch_excess": 1,
+      "chi": 0,
+      "omitted": 6
+    },
+    {
+      "d": 7,
+      "branch_excess": 2,
+      "chi": -1,
+      "omitted": 12
+    },
+    {
+      "d": 7,
+      "branch_excess": 3,
+      "chi": -2,
+      "omitted": 18
+    },
+    {
+      "d": 7,
+      "branch_excess": 4,
+      "chi": -3,
+      "omitted": 24
+    },
+    {
+      "d": 7,
+      "branch_excess": 5,
+      "chi": -4,
+      "omitted": 30
+    },
+    {
+      "d": 8,
+      "branch_excess": 1,
+      "chi": 0,
+      "omitted": 7
+    },
+    {
+      "d": 8,
+      "branch_excess": 2,
+      "chi": -1,
+      "omitted": 14
+    },
+    {
+      "d": 8,
+      "branch_excess": 3,
+      "chi": -2,
+      "omitted": 21
+    },
+    {
+      "d": 8,
+      "branch_excess": 4,
+      "chi": -3,
+      "omitted": 28
+    },
+    {
+      "d": 8,
+      "branch_excess": 5,
+      "chi": -4,
+      "omitted": 35
+    },
+    {
+      "d": 9,
+      "branch_excess": 1,
+      "chi": 0,
+      "omitted": 8
+    },
+    {
+      "d": 9,
+      "branch_excess": 2,
+      "chi": -1,
+      "omitted": 16
+    },
+    {
+      "d": 9,
+      "branch_excess": 3,
+      "chi": -2,
+      "omitted": 24
+    },
+    {
+      "d": 9,
+      "branch_excess": 4,
+      "chi": -3,
+      "omitted": 32
+    },
+    {
+      "d": 9,
+      "branch_excess": 5,
+      "chi": -4,
+      "omitted": 40
+    },
+    {
+      "d": 10,
+      "branch_excess": 1,
+      "chi": 0,
+      "omitted": 9
+    },
+    {
+      "d": 10,
+      "branch_excess": 2,
+      "chi": -1,
+      "omitted": 18
+    },
+    {
+      "d": 10,
+      "branch_excess": 3,
+      "chi": -2,
+      "omitted": 27
+    },
+    {
+      "d": 10,
+      "branch_excess": 4,
+      "chi": -3,
+      "omitted": 36
+    },
+    {
+      "d": 10,
+      "branch_excess": 5,
+      "chi": -4,
+      "omitted": 45
+    },
+    {
+      "d": 11,
+      "branch_excess": 1,
+      "chi": 0,
+      "omitted": 10
+    },
+    {
+      "d": 11,
+      "branch_excess": 2,
+      "chi": -1,
+      "omitted": 20
+    },
+    {
+      "d": 11,
+      "branch_excess": 3,
+      "chi": -2,
+      "omitted": 30
+    },
+    {
+      "d": 11,
+      "branch_excess": 4,
+      "chi": -3,
+      "omitted": 40
+    },
+    {
+      "d": 11,
+      "branch_excess": 5,
+      "chi": -4,
+      "omitted": 50
+    },
+    {
+      "d": 12,
+      "branch_excess": 1,
+      "chi": 0,
+      "omitted": 11
+    },
+    {
+      "d": 12,
+      "branch_excess": 2,
+      "chi": -1,
+      "omitted": 22
+    },
+    {
+      "d": 12,
+      "branch_excess": 3,
+      "chi": -2,
+      "omitted": 33
+    },
+    {
+      "d": 12,
+      "branch_excess": 4,
+      "chi": -3,
+      "omitted": 44
+    },
+    {
+      "d": 12,
+      "branch_excess": 5,
+      "chi": -4,
+      "omitted": 55
+    }
+  ],
+  "scope": "Finite exact controls only; general proofs and versioned external inputs are in the accompanying note."
+}
