@@ -1,0 +1,143 @@
+{
+  "actual_triangle_vs_inversion_controls": 765,
+  "dyadic_controls": [
+    {
+      "L": 5,
+      "bound": 21,
+      "intercyclic_values": 13,
+      "oneapex_values": 12
+    },
+    {
+      "L": 6,
+      "bound": 37,
+      "intercyclic_values": 23,
+      "oneapex_values": 21
+    },
+    {
+      "L": 7,
+      "bound": 71,
+      "intercyclic_values": 41,
+      "oneapex_values": 39
+    },
+    {
+      "L": 8,
+      "bound": 129,
+      "intercyclic_values": 77,
+      "oneapex_values": 74
+    },
+    {
+      "L": 9,
+      "bound": 251,
+      "intercyclic_values": 149,
+      "oneapex_values": 145
+    },
+    {
+      "L": 10,
+      "bound": 477,
+      "intercyclic_values": 288,
+      "oneapex_values": 284
+    },
+    {
+      "L": 11,
+      "bound": 943,
+      "intercyclic_values": 565,
+      "oneapex_values": 560
+    },
+    {
+      "L": 12,
+      "bound": 1841,
+      "intercyclic_values": 1095,
+      "oneapex_values": 1089
+    },
+    {
+      "L": 13,
+      "bound": 3667,
+      "intercyclic_values": 2146,
+      "oneapex_values": 2139
+    },
+    {
+      "L": 14,
+      "bound": 7253,
+      "intercyclic_values": 4207,
+      "oneapex_values": 4200
+    }
+  ],
+  "independent_DFS_cycle_and_subset_recursion_controls": 28,
+  "reduced_grammar_counts": [
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      14
+    ],
+    [
+      4,
+      18
+    ],
+    [
+      5,
+      24
+    ],
+    [
+      6,
+      30
+    ],
+    [
+      7,
+      36
+    ],
+    [
+      8,
+      42
+    ]
+  ],
+  "status": "PASS",
+  "strong_oneapex_order_seven_values": [
+    25,
+    27,
+    31,
+    33,
+    37,
+    39,
+    45,
+    47,
+    51
+  ],
+  "witnesses": [
+    {
+      "H": 29,
+      "disjoint_triangle_pairs": [
+        [
+          [
+            0,
+            2,
+            5
+          ],
+          [
+            1,
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            2,
+            4
+          ]
+        ]
+      ]
+    },
+    {
+      "H": 87,
+      "disjoint_triangle_pairs": []
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+exact reduced grammar controls by chain length: [(2, 1), (3, 14), (4, 18), (5, 24), (6, 30), (7, 36), (8, 42)]
+direct cycle-table/path checks: 28
+short exception: (3, 1, 0) cycles (2, 2, 2) H 13
+short exception: (3, 2, 0) cycles (2, 2, 3) H 15
+H29 witness: (50, 16, 3, 7, 12, 30) disjoint triangles: ([0, 2, 5], [1, 3, 4]) all720 permutations: PASS
+H87 one-apex hostile: (126, 124, 248, 240, 96, 192, 128, 19) all40320 permutations: PASS
+dyadic reflection-filter controls L=5..12: PASS
+ALL CHECKS PASSED

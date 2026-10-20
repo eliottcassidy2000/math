@@ -1,0 +1,5 @@
+four letters: 12 idempotents, 36 commutators, four degree-four annihilators: PASS
+positive Stirling matrix expansion: all four letters at run lengths0..9: PASS
+nonnegative scalar coefficient controls: 1764 ; long silent-run checks: 933
+homogeneous letter2 coefficient vector: [1, 3, 1, 0] ; H(r)=2^r+1 for r>=1
+ALL CHECKS PASSED

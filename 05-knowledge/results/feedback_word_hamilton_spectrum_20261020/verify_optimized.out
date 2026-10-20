@@ -1,0 +1,8 @@
+one-apex formula/DP/automaton controls: 511
+sharp extrema: [{"distinct_values": 1, "max": 3, "min": 3, "n": 3}, {"distinct_values": 1, "max": 5, "min": 5, "n": 4}, {"distinct_values": 2, "max": 11, "min": 9, "n": 5}, {"distinct_values": 4, "max": 23, "min": 15, "n": 6}, {"distinct_values": 9, "max": 51, "min": 25, "n": 7}, {"distinct_values": 14, "max": 107, "min": 45, "n": 8}, {"distinct_values": 31, "max": 227, "min": 81, "n": 9}, {"distinct_values": 57, "max": 467, "min": 153, "n": 10}, {"distinct_values": 116, "max": 963, "min": 289, "n": 11}, {"distinct_values": 211, "max": 1955, "min": 561, "n": 12}, {"distinct_values": 435, "max": 3971, "min": 1089, "n": 13}]
+strict adjacent-swap checks: 4097
+strong product-family checks: 256
+explicit strong H13 witness: {'rows': (22, 12, 24, 17, 2), 'DP': 13, 'permutations': 13}
+k=0,2,3 automaton/DP controls: 1272
+historical poisoning-DAG hostile: {'rows': (502, 508, 504, 497, 160, 192, 144, 256, 112), 'R': [2, 7, 8], 'arcs': [(7, 8), (8, 7)], 'H': 75}
+ALL CHECKS PASSED
