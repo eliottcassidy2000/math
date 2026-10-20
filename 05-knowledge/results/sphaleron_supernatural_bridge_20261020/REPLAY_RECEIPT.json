@@ -1,0 +1,13 @@
+{
+  "date_utc": "2026-10-20",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "normal_command": "python3 session9-sphaleron/verify_bridge.py",
+  "optimized_command": "python3 -O session9-sphaleron/verify_bridge.py",
+  "normal_exit_code": 0,
+  "optimized_exit_code": 0,
+  "normal_optimized_byte_identical": true,
+  "normal_output_sha256": "4c1cbb48d363a11cebee1f5dfda6a42a75496c16da7b7daf5f47396cac74bad0",
+  "optimized_output_sha256": "4c1cbb48d363a11cebee1f5dfda6a42a75496c16da7b7daf5f47396cac74bad0",
+  "scope": "Symbolic degree and finite fields of degrees 1 through 8; infinite completion theorem proved in note, no physical isomorphism claimed."
+}

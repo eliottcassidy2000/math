@@ -1,0 +1,311 @@
+{
+  "all_constant_one_registers_degrees_1_to_9": [
+    {
+      "degree": 1,
+      "maximum_order": 1,
+      "polynomials": 1,
+      "repeated_factor_polynomials": 0
+    },
+    {
+      "degree": 2,
+      "maximum_order": 3,
+      "polynomials": 2,
+      "repeated_factor_polynomials": 1
+    },
+    {
+      "degree": 3,
+      "maximum_order": 7,
+      "polynomials": 4,
+      "repeated_factor_polynomials": 1
+    },
+    {
+      "degree": 4,
+      "maximum_order": 15,
+      "polynomials": 8,
+      "repeated_factor_polynomials": 3
+    },
+    {
+      "degree": 5,
+      "maximum_order": 31,
+      "polynomials": 16,
+      "repeated_factor_polynomials": 5
+    },
+    {
+      "degree": 6,
+      "maximum_order": 63,
+      "polynomials": 32,
+      "repeated_factor_polynomials": 11
+    },
+    {
+      "degree": 7,
+      "maximum_order": 127,
+      "polynomials": 64,
+      "repeated_factor_polynomials": 21
+    },
+    {
+      "degree": 8,
+      "maximum_order": 255,
+      "polynomials": 128,
+      "repeated_factor_polynomials": 43
+    },
+    {
+      "degree": 9,
+      "maximum_order": 511,
+      "polynomials": 256,
+      "repeated_factor_polynomials": 85
+    }
+  ],
+  "checks": 2256,
+  "cover_and_field_morphism_pairs": [
+    {
+      "morphisms": 1,
+      "source_degree": 1,
+      "target_degree": 1
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 1,
+      "target_degree": 2
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 1,
+      "target_degree": 3
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 1,
+      "target_degree": 4
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 1,
+      "target_degree": 5
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 1,
+      "target_degree": 6
+    },
+    {
+      "morphisms": 1,
+      "source_degree": 2,
+      "target_degree": 1
+    },
+    {
+      "morphisms": 2,
+      "source_degree": 2,
+      "target_degree": 2
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 2,
+      "target_degree": 3
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 2,
+      "target_degree": 4
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 2,
+      "target_degree": 5
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 2,
+      "target_degree": 6
+    },
+    {
+      "morphisms": 1,
+      "source_degree": 3,
+      "target_degree": 1
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 3,
+      "target_degree": 2
+    },
+    {
+      "morphisms": 3,
+      "source_degree": 3,
+      "target_degree": 3
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 3,
+      "target_degree": 4
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 3,
+      "target_degree": 5
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 3,
+      "target_degree": 6
+    },
+    {
+      "morphisms": 1,
+      "source_degree": 4,
+      "target_degree": 1
+    },
+    {
+      "morphisms": 2,
+      "source_degree": 4,
+      "target_degree": 2
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 4,
+      "target_degree": 3
+    },
+    {
+      "morphisms": 4,
+      "source_degree": 4,
+      "target_degree": 4
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 4,
+      "target_degree": 5
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 4,
+      "target_degree": 6
+    },
+    {
+      "morphisms": 1,
+      "source_degree": 5,
+      "target_degree": 1
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 5,
+      "target_degree": 2
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 5,
+      "target_degree": 3
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 5,
+      "target_degree": 4
+    },
+    {
+      "morphisms": 5,
+      "source_degree": 5,
+      "target_degree": 5
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 5,
+      "target_degree": 6
+    },
+    {
+      "morphisms": 1,
+      "source_degree": 6,
+      "target_degree": 1
+    },
+    {
+      "morphisms": 2,
+      "source_degree": 6,
+      "target_degree": 2
+    },
+    {
+      "morphisms": 3,
+      "source_degree": 6,
+      "target_degree": 3
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 6,
+      "target_degree": 4
+    },
+    {
+      "morphisms": 0,
+      "source_degree": 6,
+      "target_degree": 5
+    },
+    {
+      "morphisms": 6,
+      "source_degree": 6,
+      "target_degree": 6
+    }
+  ],
+  "cyclic_shifts": [
+    {
+      "fixed_states": 2,
+      "n": 1,
+      "operator_order": 1
+    },
+    {
+      "fixed_states": 2,
+      "n": 2,
+      "operator_order": 2
+    },
+    {
+      "fixed_states": 2,
+      "n": 3,
+      "operator_order": 3
+    },
+    {
+      "fixed_states": 2,
+      "n": 4,
+      "operator_order": 4
+    },
+    {
+      "fixed_states": 2,
+      "n": 5,
+      "operator_order": 5
+    },
+    {
+      "fixed_states": 2,
+      "n": 6,
+      "operator_order": 6
+    },
+    {
+      "fixed_states": 2,
+      "n": 7,
+      "operator_order": 7
+    },
+    {
+      "fixed_states": 2,
+      "n": 8,
+      "operator_order": 8
+    },
+    {
+      "fixed_states": 2,
+      "n": 9,
+      "operator_order": 9
+    },
+    {
+      "fixed_states": 2,
+      "n": 10,
+      "operator_order": 10
+    },
+    {
+      "fixed_states": 2,
+      "n": 11,
+      "operator_order": 11
+    },
+    {
+      "fixed_states": 2,
+      "n": 12,
+      "operator_order": 12
+    }
+  ],
+  "degree_check": {
+    "degree": 1,
+    "local_determinant": 1,
+    "method": "unique regular preimage and positive local determinant"
+  },
+  "midpoint_moduli_tested": 64,
+  "scope": "No physical dynamics, continuous path identification, or infinite theorem inferred from finite data.",
+  "status": "INDEPENDENT FINITE-EXACT PASS"
+}

@@ -1,0 +1,301 @@
+{
+  "finite_fields": [
+    {
+      "field_modulus_bits": "0b11",
+      "frobenius_cycle_counts": {
+        "1": 2
+      },
+      "frobenius_order": 1,
+      "multiplication_cycle_counts": {
+        "1": 2
+      },
+      "multiplication_order": 1,
+      "n": 1,
+      "necklace_and_fixed_point_crosschecks": true,
+      "normal_basis": [
+        1
+      ],
+      "primitive_multiplier": 1
+    },
+    {
+      "field_modulus_bits": "0b111",
+      "frobenius_cycle_counts": {
+        "1": 2,
+        "2": 1
+      },
+      "frobenius_order": 2,
+      "multiplication_cycle_counts": {
+        "1": 1,
+        "3": 1
+      },
+      "multiplication_order": 3,
+      "n": 2,
+      "necklace_and_fixed_point_crosschecks": true,
+      "normal_basis": [
+        2,
+        3
+      ],
+      "primitive_multiplier": 2
+    },
+    {
+      "field_modulus_bits": "0b1011",
+      "frobenius_cycle_counts": {
+        "1": 2,
+        "3": 2
+      },
+      "frobenius_order": 3,
+      "multiplication_cycle_counts": {
+        "1": 1,
+        "7": 1
+      },
+      "multiplication_order": 7,
+      "n": 3,
+      "necklace_and_fixed_point_crosschecks": true,
+      "normal_basis": [
+        3,
+        5,
+        7
+      ],
+      "primitive_multiplier": 2
+    },
+    {
+      "field_modulus_bits": "0b10011",
+      "frobenius_cycle_counts": {
+        "1": 2,
+        "2": 1,
+        "4": 3
+      },
+      "frobenius_order": 4,
+      "multiplication_cycle_counts": {
+        "1": 1,
+        "15": 1
+      },
+      "multiplication_order": 15,
+      "n": 4,
+      "necklace_and_fixed_point_crosschecks": true,
+      "normal_basis": [
+        8,
+        12,
+        15,
+        10
+      ],
+      "primitive_multiplier": 2
+    },
+    {
+      "field_modulus_bits": "0b100101",
+      "frobenius_cycle_counts": {
+        "1": 2,
+        "5": 6
+      },
+      "frobenius_order": 5,
+      "multiplication_cycle_counts": {
+        "1": 1,
+        "31": 1
+      },
+      "multiplication_order": 31,
+      "n": 5,
+      "necklace_and_fixed_point_crosschecks": true,
+      "normal_basis": [
+        3,
+        5,
+        17,
+        12,
+        26
+      ],
+      "primitive_multiplier": 2
+    },
+    {
+      "field_modulus_bits": "0b1000011",
+      "frobenius_cycle_counts": {
+        "1": 2,
+        "2": 1,
+        "3": 2,
+        "6": 9
+      },
+      "frobenius_order": 6,
+      "multiplication_cycle_counts": {
+        "1": 1,
+        "63": 1
+      },
+      "multiplication_order": 63,
+      "n": 6,
+      "necklace_and_fixed_point_crosschecks": true,
+      "normal_basis": [
+        32,
+        48,
+        60,
+        47,
+        38,
+        36
+      ],
+      "primitive_multiplier": 2
+    },
+    {
+      "field_modulus_bits": "0b10000011",
+      "frobenius_cycle_counts": {
+        "1": 2,
+        "7": 18
+      },
+      "frobenius_order": 7,
+      "multiplication_cycle_counts": {
+        "1": 1,
+        "127": 1
+      },
+      "multiplication_order": 127,
+      "n": 7,
+      "necklace_and_fixed_point_crosschecks": true,
+      "normal_basis": [
+        9,
+        65,
+        97,
+        121,
+        63,
+        75,
+        37
+      ],
+      "primitive_multiplier": 2
+    },
+    {
+      "field_modulus_bits": "0b100011011",
+      "frobenius_cycle_counts": {
+        "1": 2,
+        "2": 1,
+        "4": 3,
+        "8": 30
+      },
+      "frobenius_order": 8,
+      "multiplication_cycle_counts": {
+        "1": 1,
+        "255": 1
+      },
+      "multiplication_order": 255,
+      "n": 8,
+      "necklace_and_fixed_point_crosschecks": true,
+      "normal_basis": [
+        32,
+        108,
+        151,
+        148,
+        145,
+        128,
+        154,
+        197
+      ],
+      "primitive_multiplier": 3
+    }
+  ],
+  "modular_controls": {
+    "coherent_winding_residues_checked_through_modulus": 40,
+    "half_of_one_mod_2_exists": false,
+    "odd_prime_power_witnesses": [
+      {
+        "degree": 2,
+        "exponent": 1,
+        "prime": 3
+      },
+      {
+        "degree": 6,
+        "exponent": 2,
+        "prime": 3
+      },
+      {
+        "degree": 18,
+        "exponent": 3,
+        "prime": 3
+      },
+      {
+        "degree": 54,
+        "exponent": 4,
+        "prime": 3
+      },
+      {
+        "degree": 4,
+        "exponent": 1,
+        "prime": 5
+      },
+      {
+        "degree": 20,
+        "exponent": 2,
+        "prime": 5
+      },
+      {
+        "degree": 100,
+        "exponent": 3,
+        "prime": 5
+      },
+      {
+        "degree": 500,
+        "exponent": 4,
+        "prime": 5
+      },
+      {
+        "degree": 3,
+        "exponent": 1,
+        "prime": 7
+      },
+      {
+        "degree": 21,
+        "exponent": 2,
+        "prime": 7
+      },
+      {
+        "degree": 147,
+        "exponent": 3,
+        "prime": 7
+      },
+      {
+        "degree": 1029,
+        "exponent": 4,
+        "prime": 7
+      },
+      {
+        "degree": 10,
+        "exponent": 1,
+        "prime": 11
+      },
+      {
+        "degree": 110,
+        "exponent": 2,
+        "prime": 11
+      },
+      {
+        "degree": 1210,
+        "exponent": 3,
+        "prime": 11
+      },
+      {
+        "degree": 13310,
+        "exponent": 4,
+        "prime": 11
+      },
+      {
+        "degree": 12,
+        "exponent": 1,
+        "prime": 13
+      },
+      {
+        "degree": 156,
+        "exponent": 2,
+        "prime": 13
+      },
+      {
+        "degree": 2028,
+        "exponent": 3,
+        "prime": 13
+      },
+      {
+        "degree": 26364,
+        "exponent": 4,
+        "prime": 13
+      }
+    ]
+  },
+  "status": "FINITE-EXACT PASS; not a physical isomorphism",
+  "symbolic_degree": {
+    "degree": 1,
+    "pullback_volume_density": "(1 - cos(theta))*sin(mu)**2*sin(theta)",
+    "reversed_orientation_degree": -1,
+    "smash_basepoints": true,
+    "unit_norm": true
+  }
+}
