@@ -1,0 +1,58 @@
+[
+  {
+    "k": 1,
+    "mean_h_squared": "1",
+    "variance_h": "0",
+    "overlap_pair_check": true,
+    "external_census_check": true,
+    "external_census_sha256": "9468df708363575480007625b5242acb55bc5505ed04da336adc0dbe4bf0a10c"
+  },
+  {
+    "k": 2,
+    "mean_h_squared": "5",
+    "variance_h": "1",
+    "overlap_pair_check": true,
+    "external_census_check": true,
+    "external_census_sha256": "b29f89cfadcc4671e86fd178dc195cb25848a00a8d92fdfd93611bbdf9d5aa0c"
+  },
+  {
+    "k": 3,
+    "mean_h_squared": "42",
+    "variance_h": "6",
+    "overlap_pair_check": true,
+    "external_census_check": true,
+    "external_census_sha256": "2f9177441f29a3145dda6c13ccc9d33ead1ad4f153b218a58fbaee1d5898398e"
+  },
+  {
+    "k": 4,
+    "mean_h_squared": "651",
+    "variance_h": "75",
+    "overlap_pair_check": true,
+    "external_census_check": true,
+    "external_census_sha256": "1bc582e57d835f806268ab839fb462cf3be8ef984cfaa60fd5e936bef59027f4"
+  },
+  {
+    "k": 5,
+    "mean_h_squared": "15900",
+    "variance_h": "1500",
+    "overlap_pair_check": true,
+    "external_census_check": true,
+    "external_census_sha256": "75de6082c0bb65a8eb47dfc91f5e5bd6f9b2988a0b6796702c227af598fefa64"
+  },
+  {
+    "k": 6,
+    "mean_h_squared": "1126485/2",
+    "variance_h": "89685/2",
+    "overlap_pair_check": true,
+    "external_census_check": false,
+    "external_census_sha256": null
+  },
+  {
+    "k": 7,
+    "mean_h_squared": "27277425",
+    "variance_h": "1875825",
+    "overlap_pair_check": true,
+    "external_census_check": false,
+    "external_census_sha256": null
+  }
+]
