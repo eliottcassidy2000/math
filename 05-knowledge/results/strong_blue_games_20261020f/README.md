@@ -21,6 +21,7 @@ and geometric forcing lanes. No mixed-to-mixed blue bridge is found here.
 |---|---|---|
 |Blue path P=(L,a,R)|If (L,R,a) is directed, both reversed blocks have HPs with the original endpoints, and d(first L)+d(a) is neither n-1 nor n, three black moves reach the exact labelled partner|[Two-block repair](detours.md), detours_family.py/json|
 |Arc-disjoint P,Q|Transported P remains blue iff the two positional reversals coincide; gives black-square and partner-joining criteria|[Square law](detours.md), detours_square.py/json|
+|Closed blue endpoint scores(n-2,1)|Incoming cyclic-module proof gives three-black detours for every n>=6|[Integrated companion proof](detours.md)|
 |T_k, two return arcs in TT_(2k+1)|Every marked standard blue edge has a black detour of length <=3; its unique arc-disjoint HP is blue, so squares alone fail for every k|[Detours](detours.md), [hostile proof](double_return_counts.md)|
 |T_(a,b), two transitive blocks|H=(2^(a-1)+1)(2^(b-1)+1); for a=b=k, H=q^2, blue count q, deficit q(q-1)|[Bijection and primitive triples](double_return_counts.md), double_return_counts.py/json|
 |Open path partners|Unordered boundary/cut pairs give common black hubs, allowing the roles of the two edges to exchange|[Boundary transport](transport.md), boundary_transport_probe.py/json|
@@ -30,6 +31,7 @@ and geometric forcing lanes. No mixed-to-mixed blue bridge is found here.
 |Complete joins|Traceability iff each block's path-cover number is at most the number of vertices outside it plus one|[Game, section 3](game.md)|
 |Colour-response polynomial|F_G(t)=sum_c c!q_G(c)(t-1)^(n-c); complementation is an explicit involution of the full oriented path-cover profile|[Game, section 6](game.md), cover_response.py/json|
 |Pinned geometric exterior|Independent pinned rigidity rows imply every proper four-colour boundary extends; a minimal six-colour failure requires at least h+ceil(a/2) pinned stresses|[Six-colour extension](six_colour.md), six_colour_check.py/json|
+|Incoming19-point spindle gate|Its7-vertex minimal failed exterior has21 port edges and exactly18 pinned stresses, attaining the bound; the whole graph remains four-chromatic|[Sharp stress synthesis](six_colour.md), incoming_gate_stress.py/json|
 |Minimum palette blocker banks|For k>=3 only concentrated and common-star banks attain the union-bound threshold; distinct unit-distance ports exclude the common-star case|[Palette classification](six_colour.md)|
 |Marked directed p-by-q torus grid|Euler length 2pq, winding(q,p); the straight parametrization with this winding is embedded iff gcd(p,q)=1|[Typed torus map](torus.md), torus.py/json|
 |Directed line graph|Its HP words are exactly Eulerian arc words of the original directed graph; marked arc increments preserve winding|[Incoming bridge integrated](torus.md)|
@@ -60,6 +62,11 @@ matching constructions retain their prior scope. The exact raw HP forbidden
 set {7,21} remains **OPEN**; these new explicit path-count families do not
 prove that spectrum conjecture. The torus-grid correspondence does not
 establish a game-winning predicate or a tournament black-detour criterion.
+
+The latest [fixed-deficiency kernel packet](../kernels_games_detours_20261020f/README.md)
+also gives all-fixed-deficiency counting formulas and an exact off-lattice
+spindle palette gate. Its heavy-coordinate deficiency is not Delta, so its
+polynomials must not be substituted into the deficit-two series D_2(z).
 
 ## Audit and reproduction
 

@@ -249,3 +249,28 @@ python -O 05-knowledge/results/strong_blue_games_20261020f/detours_family.py
 **OPEN:** guaranteeing an appropriate two-block repair, square, or hub for
 every strong-to-strong mixed blue line. The T_k corollary closes an explicit
 infinite residual family; it does not settle that universal existence claim.
+
+## 6. A second uniform family from the latest incoming work
+
+Commit411c1fd35a added [endpoint-changing cyclic-module detours](../kernels_games_detours_20261020f/detours.md).
+Its three guarded K words handle `a -> V -> z -> a` with aligned blue
+path `(a,M,z)`, for arbitrary blue middle M of size at least four; open
+middles of size three also work. The intrinsic corollary covers every
+closed blue word starting at a vertex of score n-2, n>=6. Blue symmetry
+forces the last score to be1, and closure makes the endpoints each other's
+only exceptional neighbour; that recovers the whole middle-module interface.
+The equivalent pattern at the open partner is `(2,n-3)`.
+
+The root read the full three-branch proof, checking its XOR cancellations,
+endpoint charges, middle guards, and the final positional-reversal argument.
+Its closed three-vertex middle has a pure-blue regular-pentagon partner,
+so the small exception is necessary. The companion also corrects a cyclic
+symmetry shortcut: neighbouring whole-cycle reflections compose to a
+two-step rotation, which has two parity orbits at even order. This agrees
+with the anti-involution discipline in section4, rather than justifying a
+nonautomorphic-reordering shortcut.
+
+These endpoint-module and two-block results are complementary sufficient
+families. No assertion that their union covers all strong mixed lines is
+made. The companion's fixed-deficiency counting kernels concern a different
+deficiency from the black path-orbit deficit Delta used here.

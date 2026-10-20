@@ -37,6 +37,16 @@ them to game.md and torus.md. No new census was run to duplicate theirs.
 Combining the two counting coordinates then produced the invertible
 response/path-cover transform and its complement involution; root and the
 game agent independently derived the coefficient signs and binomial factor.
+The next fetch brought411c1fd35a,5e93d8adf6,9b4ae20adc. Shared frontier and
+mistakes entries were reconciled preserving both sessions' results. The
+new cyclic-module detour proof and geometric palette-gate proof were read
+before integration; their remaining global and realization obligations are
+retained, and their distinct deficiency convention is explicitly flagged.
+The pinned stress theorem then applies sharply to the incoming19-point gate:
+root and the geometry agent independently derived rank14 and stress18 from
+its three actual unit ports at every interior vertex. Seven deletion checks
+certify the minimality needed by the theorem, using the existing exact
+coordinate/contact receipt rather than repeating its geometric census.
 
 ## Load-bearing controls
 
@@ -54,6 +64,7 @@ normally and is only a discovery/mechanism test.
 |game.py|All1252 nonempty atlas graphs <=7; literal permutation audit of208 <=6;256 complete-join cases;25 trees/142 roots; family through30|
 |cover_response.py|All1099 labelled graphs n=1..5; permutation response versus independently enumerated oriented forests; full complement transform|
 |six_colour_check.py|Exact rational star and algebraic spindle;128 pin subsets,737 boundary assignments;32768 pair families and9 extremal banks|
+|incoming_gate_stress.py|One incoming19-point exact gate; seven nonparallel port minors and seven vertex-deletion colourings; rank14 and stress18|
 |torus.py|All81 grid pairs p,q=1..9 plus6 named arithmetic controls; edge exhaustion, actual lifted displacement, gcd and primitive triples|
 
 Scripts use explicit checks surviving optimization. JSON files record exact

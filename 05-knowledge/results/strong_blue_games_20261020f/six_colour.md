@@ -294,9 +294,55 @@ which survives the palette screens, together with its full pinned stress
 space and compatible carry data. Stress-free families are now excluded
 even as boundary-forcing devices at four colours. Stressful candidates
 still require an exact full boundary relation and faithful geometric
-realization; nothing in this packet asserts their existence at six.
+realization. None of these criteria supplies a six-chromatic unit graph.
 
-## 7. Reproduction and finite scope
+## 7. The incoming nineteen-point gate attains the stress bound
+
+The latest [geometric palette gate](../kernels_games_detours_20261020f/forcing.md),
+commit411c1fd35a, has the seven-vertex Moser spindle as its interior H and
+twelve ports. Nine ports form three matching covers of the six noncentral
+vertices; three more ports are private unit neighbours of the central
+vertex. Its exact contact certificate gives
+
+```
+h=7,  e=11,  a=t=21,  every exterior vertex sees three distinct ports.
+```
+
+For the displayed proper six-colour boundary assignment, the three forbidden
+colours at each interior vertex are3,4,5. Every list is{0,1,2}; the spindle
+has no such colouring. Deleting any interior vertex permits a three-colouring,
+so this is a vertex-minimal failed exterior, as required in section3.
+The full nineteen-point unit graph nevertheless has chromatic number four.
+
+The stress count is exact, not merely bounded. At any interior vertex,
+three distinct ports lie on its unit circle. Their difference vectors
+cannot all be collinear, because a line through the centre meets that
+circle in at most two points. Select two nonparallel port rows per vertex.
+Those fourteen rows form a block-diagonal nonsingular minor of the pinned
+matrix, so its rank is14. Port-port edges do not contribute rows. Hence
+
+```
+sigma_B = (11+21)-14 = 18
+        = h+ceil(a/2).
+```
+
+This attains the six-colour stress lower bound with a four-chromatic
+interior, strengthening the one-vertex rational-star sharpness example.
+The incoming proof separately shows that removing any one of the three
+central ports leaves an eighteen-point graph whose entire proper
+six-colour boundary relation is full. Both claims retain the actual
+boundary graph, which contains two edges, rather than treating the ports
+as an independent set.
+
+[incoming_gate_stress.py](incoming_gate_stress.py) imports the pinned exact
+coordinate/contact receipt, checks seven nonzero port determinants,
+certifies all seven vertex-deletion colourings, and replays the numerical
+stress equality. It does not duplicate the incoming global geometry census.
+The remaining construction problem is still a geometric palette synchronizer
+that supplies the prescribed input relation; identifying equally coloured
+ports would change the geometry.
+
+## 8. Reproduction and finite scope
 
 [six_colour_check.py](six_colour_check.py) uses no repository modules.
 It checks exact rational star distances and rank; every distance of the
