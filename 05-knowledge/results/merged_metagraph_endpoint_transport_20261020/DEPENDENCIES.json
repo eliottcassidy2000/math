@@ -1,0 +1,122 @@
+{
+  "runtime": {
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "primary_scripts": "Python standard library only",
+    "independent_referee": "SymPy required; version used shown above"
+  },
+  "source_fingerprints": [
+    {
+      "role": "independent_classifier_reference_data",
+      "sha256": "3e18318a5ad836155c3d603443f4ac2cc2863aba9921961ba7b95b9151011d09",
+      "packaged_projection": "crosscheck_census_n3.json",
+      "projection_fields": [
+        "n",
+        "m",
+        "tiles",
+        "pi"
+      ],
+      "source_name": "census_n3.json"
+    },
+    {
+      "role": "independent_classifier_reference_data",
+      "sha256": "7bb57d67035db9edb0bce5ee35897035f4c04219832505ecf54872e311863faa",
+      "packaged_projection": "crosscheck_census_n4.json",
+      "projection_fields": [
+        "n",
+        "m",
+        "tiles",
+        "pi"
+      ],
+      "source_name": "census_n4.json"
+    },
+    {
+      "role": "independent_classifier_reference_data",
+      "sha256": "c5e68df205d8b9ce5de786e46352db83aebe93d954c9a0d5057bf862afdd143c",
+      "packaged_projection": "crosscheck_census_n5.json",
+      "projection_fields": [
+        "n",
+        "m",
+        "tiles",
+        "pi"
+      ],
+      "source_name": "census_n5.json"
+    },
+    {
+      "role": "independent_classifier_reference_data",
+      "sha256": "54499269e5f00fa1fdeafca1cf122f955a1d79606f6afc87bf1fedc8906086a7",
+      "packaged_projection": "crosscheck_census_n6.json",
+      "projection_fields": [
+        "n",
+        "m",
+        "tiles",
+        "pi"
+      ],
+      "source_name": "census_n6.json"
+    },
+    {
+      "role": "independent_classifier_reference_data",
+      "sha256": "68f4e92612034d79984c706850515954ca0f9e08e7eebd27b4a567ba88115c83",
+      "packaged_projection": "crosscheck_census_n7.json",
+      "projection_fields": [
+        "n",
+        "m",
+        "tiles",
+        "pi"
+      ],
+      "source_name": "census_n7.json"
+    },
+    {
+      "role": "independent_audit_source",
+      "sha256": "d45d7c85b0540fd2b7c5fe146a963df4eb2bea199439341238780f5ea7cc1694",
+      "source_name": "census.py"
+    },
+    {
+      "role": "independent_audit_source",
+      "sha256": "228e53e26a82a3bfbf5e035cadfa7ffb65f99bea686d949257354877a5101f15",
+      "source_name": "independent_check.py"
+    },
+    {
+      "role": "independent_audit_source",
+      "sha256": "cdc86a240b182e5c4de9459b4ab8a454139fa5de2cd9825dde2a88253240307f",
+      "source_name": "independent_transport.py"
+    },
+    {
+      "role": "mathematical_dependency_or_boundary",
+      "repository_path": "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+      "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95"
+    },
+    {
+      "role": "mathematical_dependency_or_boundary",
+      "repository_path": "01-canon/theorems/THM-646-line-metagraph-score-complement-skeleton.md",
+      "sha256": "203525a858e167724249038f5e6f5610ac82ce0c10a44f43c7ca9d4a7d4a7664"
+    },
+    {
+      "role": "mathematical_dependency_or_boundary",
+      "repository_path": "01-canon/theorems/THM-649-flip-parity-trilogy-affine-D-binomial-law.md",
+      "sha256": "ce6727964ced183b72dc9c8a574f7ddf338059cd1cca5d67e994985e9760e5e5"
+    },
+    {
+      "role": "mathematical_dependency_or_boundary",
+      "repository_path": "01-canon/theorems/THM-790-blue-parity-law-proved.md",
+      "sha256": "2563f884ed9a9e149887d387c0c4f5ac23100850aa2052c6e08d7a2e03295ef2"
+    },
+    {
+      "role": "mathematical_dependency_or_boundary",
+      "repository_path": "01-canon/theorems/THM-643-blue-black-line-parity-structure.md",
+      "sha256": "071e360579711c3a12756769d088b87462a03148980271f17e6050089f062569"
+    },
+    {
+      "role": "mathematical_dependency_or_boundary",
+      "repository_path": "01-canon/theorems/THM-588-metagraph-laplacian-algebraic-connectivity-four.md",
+      "sha256": "49b8e19e6a3dc988e700537fc5b0868760222a9b4a26968735f269dddf851293"
+    },
+    {
+      "role": "independent_audit_report",
+      "source_name": "transport_audit_receipt.md",
+      "sha256": "a0e599d9111033d4f450a537e821d4a0b37dd962623e0e5fab2fb307a3cd3e78",
+      "packaged_file": "AUDIT.md",
+      "packaging_changes": "Classifier module name and runtime prerequisites updated; terminology made triangle-current-rigid; packaging note added."
+    }
+  ]
+}

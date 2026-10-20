@@ -1,0 +1,79 @@
+{
+  "controls": [
+    {
+      "n": 3,
+      "colour_matrix_identity": true,
+      "cross_classifier": {
+        "independent_classifiers_agree": true,
+        "node_count": 2
+      }
+    },
+    {
+      "n": 4,
+      "colour_matrix_identity": true,
+      "cross_classifier": {
+        "independent_classifiers_agree": true,
+        "node_count": 3
+      }
+    },
+    {
+      "n": 5,
+      "colour_matrix_identity": true,
+      "cross_classifier": {
+        "independent_classifiers_agree": true,
+        "node_count": 10
+      }
+    },
+    {
+      "n": 6,
+      "colour_matrix_identity": true,
+      "cross_classifier": {
+        "independent_classifiers_agree": true,
+        "node_count": 34
+      }
+    },
+    {
+      "n": 7,
+      "colour_matrix_identity": false,
+      "cross_classifier": {
+        "independent_classifiers_agree": true,
+        "node_count": 272
+      }
+    }
+  ],
+  "hostile": {
+    "involution": true,
+    "commutes_with_reflection": true,
+    "colour_masses_preserved": true,
+    "diagonals_preserved": true,
+    "global_joint_triangle_counts_preserved": true,
+    "global_joint_score_counts_preserved": true,
+    "only_previously_supported_pairs_used": true,
+    "support_itself_preserved": false,
+    "violating_rows": [
+      {
+        "node": 2,
+        "before": {
+          "-1": 1,
+          "1": 1,
+          "-3": 1
+        },
+        "after": {
+          "1": 2,
+          "-3": 1
+        }
+      },
+      {
+        "node": 3,
+        "before": {
+          "-1": 2,
+          "1": 1
+        },
+        "after": {
+          "-1": 3
+        }
+      }
+    ]
+  },
+  "failures": 0
+}

@@ -1,0 +1,123 @@
+{
+  "n": 4,
+  "q": 3,
+  "rigid_triangle_rows": 2,
+  "rigid_half_edge_mass": 3,
+  "rigid_blue_half_edge_mass": 1,
+  "rigid_black_half_edge_mass": 2,
+  "nonrigid_triangle_rows": 1,
+  "component_count": 1,
+  "bipartite_components": 0,
+  "leakage_rank": 2,
+  "triangle_leakage": "14/5",
+  "triangle_energy": "6",
+  "endpoint_inventories": [
+    {
+      "u": 0,
+      "rep": 0,
+      "aut": 1,
+      "kappa": 1,
+      "HP": 5,
+      "endpoint_score_counts": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "current_counts": [
+        [
+          -2,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          -2,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "variance": "14/5",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 1,
+      "rep": 3,
+      "aut": 3,
+      "kappa": 2,
+      "HP": 3,
+      "endpoint_score_counts": [
+        [
+          2,
+          0,
+          3
+        ]
+      ],
+      "current_counts": [
+        [
+          1,
+          2
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "0",
+      "regular_end_sccs": true
+    },
+    {
+      "u": 2,
+      "rep": 7,
+      "aut": 1,
+      "kappa": 1,
+      "HP": 1,
+      "endpoint_score_counts": [
+        [
+          3,
+          0,
+          1
+        ]
+      ],
+      "current_counts": [
+        [
+          2,
+          1
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          2,
+          1
+        ]
+      ],
+      "variance": "0",
+      "regular_end_sccs": true
+    }
+  ],
+  "failures": 0
+}

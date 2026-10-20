@@ -1,0 +1,2213 @@
+{
+  "n": 6,
+  "q": 34,
+  "rigid_triangle_rows": 6,
+  "rigid_half_edge_mass": 17,
+  "rigid_blue_half_edge_mass": 5,
+  "rigid_black_half_edge_mass": 12,
+  "nonrigid_triangle_rows": 28,
+  "component_count": 1,
+  "bipartite_components": 0,
+  "leakage_rank": 33,
+  "triangle_leakage": "4411601212005792352/2803448856786435",
+  "triangle_energy": "1280",
+  "endpoint_inventories": [
+    {
+      "u": 0,
+      "rep": 0,
+      "aut": 1,
+      "kappa": 1,
+      "HP": 17,
+      "endpoint_score_counts": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          4,
+          1,
+          7
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          4,
+          4,
+          1
+        ]
+      ],
+      "current_counts": [
+        [
+          -4,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          -4,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variance": "706/17",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 1,
+      "rep": 1,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 15,
+      "endpoint_score_counts": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          4,
+          1,
+          6
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          4,
+          4,
+          1
+        ]
+      ],
+      "current_counts": [
+        [
+          -3,
+          2
+        ],
+        [
+          -2,
+          2
+        ],
+        [
+          -1,
+          4
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          12
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "1132/15",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 2,
+      "rep": 2,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 23,
+      "endpoint_score_counts": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          3,
+          1,
+          8
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          4,
+          1,
+          4
+        ],
+        [
+          4,
+          3,
+          3
+        ]
+      ],
+      "current_counts": [
+        [
+          -4,
+          2
+        ],
+        [
+          -3,
+          2
+        ],
+        [
+          -2,
+          2
+        ],
+        [
+          -1,
+          10
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "2660/23",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 3,
+      "rep": 5,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 19,
+      "endpoint_score_counts": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          3,
+          1,
+          6
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          4,
+          1,
+          5
+        ],
+        [
+          4,
+          3,
+          3
+        ]
+      ],
+      "current_counts": [
+        [
+          -3,
+          2
+        ],
+        [
+          -2,
+          2
+        ],
+        [
+          -1,
+          6
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          2,
+          10
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "1468/19",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 4,
+      "rep": 6,
+      "aut": 3,
+      "kappa": 2,
+      "HP": 27,
+      "endpoint_score_counts": [
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          3,
+          1,
+          9
+        ],
+        [
+          3,
+          3,
+          6
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          4,
+          1,
+          3
+        ]
+      ],
+      "current_counts": [
+        [
+          -3,
+          2
+        ],
+        [
+          -2,
+          2
+        ],
+        [
+          -1,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "44",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 5,
+      "rep": 7,
+      "aut": 1,
+      "kappa": 1,
+      "HP": 17,
+      "endpoint_score_counts": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          4,
+          1,
+          5
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          4,
+          4,
+          1
+        ]
+      ],
+      "current_counts": [
+        [
+          -2,
+          3
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          -2,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variance": "610/17",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 6,
+      "rep": 8,
+      "aut": 1,
+      "kappa": 1,
+      "HP": 29,
+      "endpoint_score_counts": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          2,
+          1,
+          4
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          4,
+          3,
+          4
+        ]
+      ],
+      "current_counts": [
+        [
+          -4,
+          1
+        ],
+        [
+          -3,
+          2
+        ],
+        [
+          -2,
+          3
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          -4,
+          1
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variance": "1792/29",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 7,
+      "rep": 12,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 33,
+      "endpoint_score_counts": [
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          3,
+          1,
+          9
+        ],
+        [
+          3,
+          2,
+          5
+        ],
+        [
+          3,
+          3,
+          13
+        ]
+      ],
+      "current_counts": [
+        [
+          -3,
+          6
+        ],
+        [
+          -1,
+          26
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          1,
+          18
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "2896/33",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 8,
+      "rep": 13,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 25,
+      "endpoint_score_counts": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          3,
+          2,
+          4
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          4,
+          2,
+          3
+        ],
+        [
+          4,
+          3,
+          4
+        ]
+      ],
+      "current_counts": [
+        [
+          -3,
+          2
+        ],
+        [
+          -2,
+          8
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "88",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 9,
+      "rep": 14,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 29,
+      "endpoint_score_counts": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          1,
+          5
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          3,
+          1,
+          4
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          4,
+          2,
+          4
+        ],
+        [
+          4,
+          3,
+          2
+        ]
+      ],
+      "current_counts": [
+        [
+          -3,
+          6
+        ],
+        [
+          -2,
+          10
+        ],
+        [
+          -1,
+          4
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "3608/29",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 10,
+      "rep": 16,
+      "aut": 1,
+      "kappa": 1,
+      "HP": 29,
+      "endpoint_score_counts": [
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          3,
+          1,
+          4
+        ],
+        [
+          3,
+          2,
+          5
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          4,
+          1,
+          4
+        ],
+        [
+          4,
+          2,
+          4
+        ],
+        [
+          4,
+          3,
+          3
+        ]
+      ],
+      "current_counts": [
+        [
+          -4,
+          1
+        ],
+        [
+          -3,
+          2
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          -4,
+          1
+        ],
+        [
+          -2,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "variance": "1852/29",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 11,
+      "rep": 17,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 31,
+      "endpoint_score_counts": [
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          2,
+          1,
+          5
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          3,
+          1,
+          4
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          4,
+          2,
+          4
+        ],
+        [
+          4,
+          3,
+          1
+        ]
+      ],
+      "current_counts": [
+        [
+          -4,
+          2
+        ],
+        [
+          -3,
+          4
+        ],
+        [
+          -2,
+          8
+        ],
+        [
+          -1,
+          8
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "4460/31",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 12,
+      "rep": 24,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 37,
+      "endpoint_score_counts": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          3,
+          1,
+          9
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          3,
+          3,
+          12
+        ]
+      ],
+      "current_counts": [
+        [
+          -3,
+          6
+        ],
+        [
+          -2,
+          12
+        ],
+        [
+          -1,
+          24
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          1,
+          18
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "4176/37",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 13,
+      "rep": 25,
+      "aut": 1,
+      "kappa": 1,
+      "HP": 33,
+      "endpoint_score_counts": [
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          3,
+          1,
+          5
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          5
+        ],
+        [
+          4,
+          3,
+          2
+        ]
+      ],
+      "current_counts": [
+        [
+          -4,
+          1
+        ],
+        [
+          -3,
+          2
+        ],
+        [
+          -2,
+          9
+        ],
+        [
+          -1,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          -4,
+          1
+        ],
+        [
+          -2,
+          3
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "variance": "2504/33",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 14,
+      "rep": 28,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 37,
+      "endpoint_score_counts": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          3,
+          1,
+          10
+        ],
+        [
+          3,
+          2,
+          5
+        ],
+        [
+          3,
+          3,
+          13
+        ]
+      ],
+      "current_counts": [
+        [
+          -3,
+          6
+        ],
+        [
+          -2,
+          10
+        ],
+        [
+          -1,
+          26
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          1,
+          20
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "4212/37",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 15,
+      "rep": 39,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 23,
+      "endpoint_score_counts": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          1,
+          5
+        ],
+        [
+          3,
+          2,
+          3
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          4,
+          2,
+          3
+        ],
+        [
+          4,
+          3,
+          2
+        ]
+      ],
+      "current_counts": [
+        [
+          -2,
+          6
+        ],
+        [
+          -1,
+          4
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "1492/23",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 16,
+      "rep": 51,
+      "aut": 3,
+      "kappa": 2,
+      "HP": 33,
+      "endpoint_score_counts": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          3,
+          1,
+          9
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          3,
+          3,
+          9
+        ]
+      ],
+      "current_counts": [
+        [
+          -2,
+          4
+        ],
+        [
+          -1,
+          6
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "276/11",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 17,
+      "rep": 56,
+      "aut": 1,
+      "kappa": 1,
+      "HP": 37,
+      "endpoint_score_counts": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          2,
+          4,
+          2
+        ],
+        [
+          3,
+          2,
+          9
+        ],
+        [
+          3,
+          3,
+          4
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          4,
+          1,
+          5
+        ]
+      ],
+      "current_counts": [
+        [
+          -3,
+          4
+        ],
+        [
+          -2,
+          11
+        ],
+        [
+          -1,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          -2,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "variance": "2972/37",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 18,
+      "rep": 75,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 9,
+      "endpoint_score_counts": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          6
+        ]
+      ],
+      "current_counts": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          12
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "112/9",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 19,
+      "rep": 76,
+      "aut": 1,
+      "kappa": 1,
+      "HP": 41,
+      "endpoint_score_counts": [
+        [
+          2,
+          2,
+          8
+        ],
+        [
+          2,
+          3,
+          8
+        ],
+        [
+          3,
+          2,
+          17
+        ],
+        [
+          3,
+          3,
+          8
+        ]
+      ],
+      "current_counts": [
+        [
+          -2,
+          8
+        ],
+        [
+          -1,
+          16
+        ],
+        [
+          0,
+          17
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          -2,
+          4
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "variance": "944/41",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 20,
+      "rep": 79,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 9,
+      "endpoint_score_counts": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          4,
+          0,
+          5
+        ]
+      ],
+      "current_counts": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          10
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "12",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 21,
+      "rep": 80,
+      "aut": 3,
+      "kappa": 1,
+      "HP": 45,
+      "endpoint_score_counts": [
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          15
+        ],
+        [
+          3,
+          2,
+          24
+        ],
+        [
+          3,
+          3,
+          3
+        ]
+      ],
+      "current_counts": [
+        [
+          -2,
+          5
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          -2,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "variance": "62/5",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 22,
+      "rep": 82,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 43,
+      "endpoint_score_counts": [
+        [
+          2,
+          2,
+          9
+        ],
+        [
+          2,
+          3,
+          9
+        ],
+        [
+          3,
+          2,
+          15
+        ],
+        [
+          3,
+          3,
+          10
+        ]
+      ],
+      "current_counts": [
+        [
+          -2,
+          18
+        ],
+        [
+          -1,
+          38
+        ],
+        [
+          0,
+          30
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "1992/43",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 23,
+      "rep": 91,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 13,
+      "endpoint_score_counts": [
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          7
+        ],
+        [
+          4,
+          0,
+          4
+        ]
+      ],
+      "current_counts": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "148/13",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 24,
+      "rep": 100,
+      "aut": 3,
+      "kappa": 1,
+      "HP": 45,
+      "endpoint_score_counts": [
+        [
+          2,
+          2,
+          9
+        ],
+        [
+          2,
+          3,
+          12
+        ],
+        [
+          3,
+          2,
+          15
+        ],
+        [
+          3,
+          3,
+          9
+        ]
+      ],
+      "current_counts": [
+        [
+          -2,
+          4
+        ],
+        [
+          -1,
+          6
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          -2,
+          4
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "variance": "134/15",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 25,
+      "rep": 111,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 11,
+      "endpoint_score_counts": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          6
+        ],
+        [
+          4,
+          0,
+          4
+        ]
+      ],
+      "current_counts": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          3,
+          8
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "92/11",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 26,
+      "rep": 123,
+      "aut": 3,
+      "kappa": 2,
+      "HP": 15,
+      "endpoint_score_counts": [
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          9
+        ],
+        [
+          4,
+          0,
+          3
+        ]
+      ],
+      "current_counts": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "4",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 27,
+      "rep": 223,
+      "aut": 1,
+      "kappa": 2,
+      "HP": 5,
+      "endpoint_score_counts": [
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          4,
+          0,
+          3
+        ]
+      ],
+      "current_counts": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "12/5",
+      "regular_end_sccs": false
+    },
+    {
+      "u": 28,
+      "rep": 235,
+      "aut": 5,
+      "kappa": 2,
+      "HP": 15,
+      "endpoint_score_counts": [
+        [
+          3,
+          0,
+          15
+        ]
+      ],
+      "current_counts": [
+        [
+          2,
+          6
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "0",
+      "regular_end_sccs": true
+    },
+    {
+      "u": 29,
+      "rep": 510,
+      "aut": 9,
+      "kappa": 1,
+      "HP": 9,
+      "endpoint_score_counts": [
+        [
+          4,
+          1,
+          9
+        ]
+      ],
+      "current_counts": [
+        [
+          2,
+          1
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          2,
+          1
+        ]
+      ],
+      "variance": "0",
+      "regular_end_sccs": true
+    },
+    {
+      "u": 30,
+      "rep": 511,
+      "aut": 3,
+      "kappa": 2,
+      "HP": 3,
+      "endpoint_score_counts": [
+        [
+          4,
+          0,
+          3
+        ]
+      ],
+      "current_counts": [
+        [
+          3,
+          2
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "0",
+      "regular_end_sccs": true
+    },
+    {
+      "u": 31,
+      "rep": 971,
+      "aut": 1,
+      "kappa": 1,
+      "HP": 5,
+      "endpoint_score_counts": [
+        [
+          5,
+          0,
+          5
+        ]
+      ],
+      "current_counts": [
+        [
+          4,
+          5
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          4,
+          3
+        ]
+      ],
+      "variance": "0",
+      "regular_end_sccs": true
+    },
+    {
+      "u": 32,
+      "rep": 991,
+      "aut": 3,
+      "kappa": 2,
+      "HP": 3,
+      "endpoint_score_counts": [
+        [
+          5,
+          0,
+          3
+        ]
+      ],
+      "current_counts": [
+        [
+          4,
+          2
+        ]
+      ],
+      "blue_current_counts": [],
+      "variance": "0",
+      "regular_end_sccs": true
+    },
+    {
+      "u": 33,
+      "rep": 1023,
+      "aut": 1,
+      "kappa": 1,
+      "HP": 1,
+      "endpoint_score_counts": [
+        [
+          5,
+          0,
+          1
+        ]
+      ],
+      "current_counts": [
+        [
+          4,
+          1
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          4,
+          1
+        ]
+      ],
+      "variance": "0",
+      "regular_end_sccs": true
+    }
+  ],
+  "failures": 0
+}

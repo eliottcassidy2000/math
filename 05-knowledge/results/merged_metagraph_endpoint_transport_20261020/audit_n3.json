@@ -1,0 +1,73 @@
+{
+  "n": 3,
+  "q": 2,
+  "rigid_triangle_rows": 2,
+  "rigid_half_edge_mass": 2,
+  "rigid_blue_half_edge_mass": 2,
+  "rigid_black_half_edge_mass": 0,
+  "nonrigid_triangle_rows": 0,
+  "component_count": 1,
+  "bipartite_components": 1,
+  "leakage_rank": 0,
+  "triangle_leakage": "0",
+  "triangle_energy": "1",
+  "endpoint_inventories": [
+    {
+      "u": 0,
+      "rep": 0,
+      "aut": 3,
+      "kappa": 1,
+      "HP": 3,
+      "endpoint_score_counts": [
+        [
+          1,
+          1,
+          3
+        ]
+      ],
+      "current_counts": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "variance": "0",
+      "regular_end_sccs": true
+    },
+    {
+      "u": 1,
+      "rep": 1,
+      "aut": 1,
+      "kappa": 1,
+      "HP": 1,
+      "endpoint_score_counts": [
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      "current_counts": [
+        [
+          1,
+          1
+        ]
+      ],
+      "blue_current_counts": [
+        [
+          1,
+          1
+        ]
+      ],
+      "variance": "0",
+      "regular_end_sccs": true
+    }
+  ],
+  "failures": 0
+}
