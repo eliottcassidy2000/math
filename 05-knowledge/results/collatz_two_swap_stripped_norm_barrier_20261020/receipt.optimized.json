@@ -1,0 +1,182 @@
+{
+  "status": "PASS_EXACT_CONTROLS",
+  "checks": 112,
+  "finitefield_rows": [
+    {
+      "zeta": [
+        0,
+        1
+      ],
+      "zeta_minus_one": [
+        2,
+        1
+      ],
+      "order_zeta": 4,
+      "order_difference": 8
+    },
+    {
+      "zeta": [
+        0,
+        2
+      ],
+      "zeta_minus_one": [
+        2,
+        2
+      ],
+      "order_zeta": 4,
+      "order_difference": 8
+    }
+  ],
+  "excluded_small_indices": [
+    {
+      "a": 0,
+      "p": 2,
+      "q": 7,
+      "reason": "outside k=1 band"
+    },
+    {
+      "a": 1,
+      "p": 6,
+      "q": 13,
+      "reason": "outside k=1 band"
+    }
+  ],
+  "sequence_rows": [
+    {
+      "a": 2,
+      "p": 18,
+      "critical_length": 29,
+      "q": 31,
+      "integer_offset": 2,
+      "r": 13,
+      "n": 5,
+      "follower_label": 7,
+      "leader_label": 8,
+      "ordered_edges": [
+        13,
+        12
+      ],
+      "actual_content": 17,
+      "norm_mod2": 1,
+      "norm_mod3": 1,
+      "raw_resultant": 261006559,
+      "stripped_norm": 261006559,
+      "three_to_p": 387420489
+    },
+    {
+      "a": 3,
+      "p": 54,
+      "critical_length": 86,
+      "q": 91,
+      "integer_offset": 5,
+      "r": 37,
+      "n": 17,
+      "follower_label": 19,
+      "leader_label": 20,
+      "ordered_edges": [
+        33,
+        32
+      ],
+      "actual_content": 1,
+      "norm_mod2": 1,
+      "norm_mod3": 1,
+      "raw_resultant": 57871986057582534182735809,
+      "stripped_norm": 57871986057582534182735809,
+      "three_to_p": 58149737003040059690390169
+    },
+    {
+      "a": 4,
+      "p": 162,
+      "critical_length": 257,
+      "q": 259,
+      "integer_offset": 2,
+      "r": 97,
+      "n": 65,
+      "follower_label": 157,
+      "leader_label": 158,
+      "ordered_edges": [
+        252,
+        251
+      ],
+      "actual_content": 1,
+      "norm_mod2": 1,
+      "norm_mod3": 1,
+      "raw_resultant": 79822855858369572242004884889147943552874279970694998545424737296828349812177,
+      "stripped_norm": 79822855858369572242004884889147943552874279970694998545424737296828349812177,
+      "three_to_p": 196627050475552913618075908526912116283103450944214766927315415537966391196809
+    },
+    {
+      "a": 5,
+      "p": 486,
+      "critical_length": 771,
+      "q": 775,
+      "integer_offset": 4,
+      "r": 289,
+      "n": 197,
+      "follower_label": 37,
+      "leader_label": 38,
+      "ordered_edges": [
+        60,
+        59
+      ],
+      "actual_content": 1,
+      "norm_mod2": 1,
+      "norm_mod3": 1
+    },
+    {
+      "a": 6,
+      "p": 1458,
+      "critical_length": 2311,
+      "q": 2311,
+      "integer_offset": 0,
+      "r": 853,
+      "n": 605,
+      "follower_label": 535,
+      "leader_label": 536,
+      "ordered_edges": [
+        849,
+        848
+      ],
+      "actual_content": 1,
+      "norm_mod2": 1,
+      "norm_mod3": 1
+    },
+    {
+      "a": 7,
+      "p": 4374,
+      "critical_length": 6933,
+      "q": 6937,
+      "integer_offset": 4,
+      "r": 2563,
+      "n": 1811,
+      "follower_label": 2821,
+      "leader_label": 2822,
+      "ordered_edges": [
+        4475,
+        4474
+      ],
+      "actual_content": 1,
+      "norm_mod2": 1,
+      "norm_mod3": 2
+    },
+    {
+      "a": 8,
+      "p": 13122,
+      "critical_length": 20798,
+      "q": 20803,
+      "integer_offset": 5,
+      "r": 7681,
+      "n": 5441,
+      "follower_label": 9367,
+      "leader_label": 9368,
+      "ordered_edges": [
+        14851,
+        14850
+      ],
+      "actual_content": 1,
+      "norm_mod2": 1,
+      "norm_mod3": 1
+    }
+  ],
+  "theorem_scope": "All a>=2 by the proof; finite concrete controls a2..8; exact resultants a2..4. Not exactcritical-only and not an actual-content lower bound."
+}
