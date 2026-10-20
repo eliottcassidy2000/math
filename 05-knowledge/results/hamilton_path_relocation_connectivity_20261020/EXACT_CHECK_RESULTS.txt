@@ -1,0 +1,8 @@
+n,tournaments,labelled_words,directed_relocation_edges,front_orbits,max_front_cycle,base_edge_lifts,shared_gap_lifts
+1,1,1,0,0,0,0,0
+2,2,2,0,0,0,0,0
+3,8,12,12,6,3,0,0
+4,64,192,384,144,4,240,192
+5,1024,7680,24960,6720,5,23040,13440
+6,32768,737280,3502080,691200,6,4193280,1935360
+PASS: all labelled relocation graphs connected; all front recurrences and all edge lifts valid.

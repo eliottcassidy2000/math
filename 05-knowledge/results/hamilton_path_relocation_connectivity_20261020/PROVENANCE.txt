@@ -1,0 +1,34 @@
+SOURCE PROVENANCE AND CLAIM BOUNDARIES
+2026-10-20
+
+The all-order connectivity proof in THEOREM.txt is self-contained. Its ingredients are the elementary tournament insertion argument, the linear order of tournament strong components, the front-promotion recurrence argument, and the common-deletion / shared-gap edge-lifting argument. No external reconfiguration theorem is invoked.
+
+Repository context:
+
+1. 01-canon/theorems/THM-781-hamiltonian-path-inverse-metagraph-fibre.md
+   SHA-256: 0020cbaac8d1321b40d5f0d904ff7a288ffd14a02f3fa94b3d658381600f3ca0
+   Establishes the inherited HP(T)/Aut(T) interpretation of normalized fixed-path fibres. The needed quotient identification is proved again in THEOREM.txt.
+
+2. 01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md
+   SHA-256: 7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95
+   Supplies the inherited three-sorted metagraph, complement, reflection, line-colour and loop conventions. Auxiliary reconfiguration edges are not substituted for literal complement lines.
+
+3. 05-knowledge/results/merged_metagraph_realizability_20261020/REALIZABILITY.txt
+   SHA-256: d187d2e51d7763203038b5f09749fe9fa24eca32338060f6685275cf8a5be9ed
+   Section 6 proves the local forest criterion sufficient at every order and records its finite necessity through n=8 on normalized tilings. LOCAL_FOREST_ADDENDUM.txt supplies the missing all-order necessity using the new labelled connectivity theorem, without changing that historical version.
+
+Computational provenance:
+
+check_labelled_connectivity.cpp is a separate direct-arc implementation created for this result's proof audit. It uses no previous classifier, precomputed tournament catalogue, isomorphism checker, or automorphism quotient. EXACT_CHECK_RESULTS.txt is its complete successful output for exhaustive orders 1 through 6. The count identity for total Hamilton words is checked independently of the connectivity calculation. Source and artifact hashes are recorded in SHA256SUMS.
+
+Focused literature check, accessed 2026-10-20:
+
+- Albi Kazazi, Connectivity of the reconfiguration graph of Hamiltonian paths, arXiv:2610.05068.
+  https://arxiv.org/abs/2610.05068
+  This studies undirected Hamiltonian paths under backbite moves. It is adjacent background, not a theorem about directed tournament words under one-vertex relocation, and is not used in the proof.
+
+- Marthe Bonamy, Michael Hoffmann, Clement Legrand-Duchesne, Gunter Rote, A Gray code for arborescences of tournaments, arXiv:2603.28614.
+  https://arxiv.org/abs/2603.28614
+  This studies tournament arborescences under arc flips, a different state space and move. It is not used in the proof.
+
+The targeted search found no directly matching theorem, but it was not an exhaustive historical survey and does not establish novelty. The packet makes no novelty claim for its theorem or elementary ingredients. It also claims no Gray code, polynomial running time, diameter bound, or efficient forest-certificate discovery.
