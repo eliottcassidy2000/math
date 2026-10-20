@@ -1,0 +1,333 @@
+{
+  "checks": 491,
+  "families": [
+    {
+      "area": "8/15",
+      "conormal_determinant": "1",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "base_1_1"
+    },
+    {
+      "area": "-8/15",
+      "conormal_determinant": "-1",
+      "degrees_y": [
+        12,
+        6
+      ],
+      "name": "reverse_1_1"
+    },
+    {
+      "area": "-8/45",
+      "conormal_determinant": "-1/3",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "scale_1_1"
+    },
+    {
+      "area": "8/15",
+      "conormal_determinant": "1",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "base_1_2"
+    },
+    {
+      "area": "-8/15",
+      "conormal_determinant": "-1",
+      "degrees_y": [
+        12,
+        6
+      ],
+      "name": "reverse_1_2"
+    },
+    {
+      "area": "-16/45",
+      "conormal_determinant": "-2/3",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "scale_1_2"
+    },
+    {
+      "area": "8/15",
+      "conormal_determinant": "1",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "base_1_3"
+    },
+    {
+      "area": "-8/15",
+      "conormal_determinant": "-1",
+      "degrees_y": [
+        12,
+        6
+      ],
+      "name": "reverse_1_3"
+    },
+    {
+      "area": "-8/15",
+      "conormal_determinant": "-1",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "scale_1_3"
+    },
+    {
+      "area": "8/15",
+      "conormal_determinant": "1",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "base_1_4"
+    },
+    {
+      "area": "-8/15",
+      "conormal_determinant": "-1",
+      "degrees_y": [
+        12,
+        6
+      ],
+      "name": "reverse_1_4"
+    },
+    {
+      "area": "-32/45",
+      "conormal_determinant": "-4/3",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "scale_1_4"
+    },
+    {
+      "area": "8/15",
+      "conormal_determinant": "1",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "base_2_1"
+    },
+    {
+      "area": "-8/15",
+      "conormal_determinant": "-1",
+      "degrees_y": [
+        12,
+        6
+      ],
+      "name": "reverse_2_1"
+    },
+    {
+      "area": "-16/45",
+      "conormal_determinant": "-2/3",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "scale_2_1"
+    },
+    {
+      "area": "8/15",
+      "conormal_determinant": "1",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "base_2_2"
+    },
+    {
+      "area": "-8/15",
+      "conormal_determinant": "-1",
+      "degrees_y": [
+        12,
+        6
+      ],
+      "name": "reverse_2_2"
+    },
+    {
+      "area": "-32/45",
+      "conormal_determinant": "-4/3",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "scale_2_2"
+    },
+    {
+      "area": "8/15",
+      "conormal_determinant": "1",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "base_2_3"
+    },
+    {
+      "area": "-8/15",
+      "conormal_determinant": "-1",
+      "degrees_y": [
+        12,
+        6
+      ],
+      "name": "reverse_2_3"
+    },
+    {
+      "area": "-16/15",
+      "conormal_determinant": "-2",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "scale_2_3"
+    },
+    {
+      "area": "8/15",
+      "conormal_determinant": "1",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "base_2_4"
+    },
+    {
+      "area": "-8/15",
+      "conormal_determinant": "-1",
+      "degrees_y": [
+        12,
+        6
+      ],
+      "name": "reverse_2_4"
+    },
+    {
+      "area": "-64/45",
+      "conormal_determinant": "-8/3",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "scale_2_4"
+    },
+    {
+      "area": "8/15",
+      "conormal_determinant": "1",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "base_3_1"
+    },
+    {
+      "area": "-8/15",
+      "conormal_determinant": "-1",
+      "degrees_y": [
+        12,
+        6
+      ],
+      "name": "reverse_3_1"
+    },
+    {
+      "area": "-8/15",
+      "conormal_determinant": "-1",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "scale_3_1"
+    },
+    {
+      "area": "8/15",
+      "conormal_determinant": "1",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "base_3_2"
+    },
+    {
+      "area": "-8/15",
+      "conormal_determinant": "-1",
+      "degrees_y": [
+        12,
+        6
+      ],
+      "name": "reverse_3_2"
+    },
+    {
+      "area": "-16/15",
+      "conormal_determinant": "-2",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "scale_3_2"
+    },
+    {
+      "area": "8/15",
+      "conormal_determinant": "1",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "base_3_3"
+    },
+    {
+      "area": "-8/15",
+      "conormal_determinant": "-1",
+      "degrees_y": [
+        12,
+        6
+      ],
+      "name": "reverse_3_3"
+    },
+    {
+      "area": "-8/5",
+      "conormal_determinant": "-3",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "scale_3_3"
+    },
+    {
+      "area": "8/15",
+      "conormal_determinant": "1",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "base_3_4"
+    },
+    {
+      "area": "-8/15",
+      "conormal_determinant": "-1",
+      "degrees_y": [
+        12,
+        6
+      ],
+      "name": "reverse_3_4"
+    },
+    {
+      "area": "-32/15",
+      "conormal_determinant": "-4",
+      "degrees_y": [
+        6,
+        12
+      ],
+      "name": "scale_3_4"
+    }
+  ],
+  "generating_families": 36,
+  "method": "independent coefficient moments and endpoint derivative conormals; no imported producer code",
+  "scope": "FINITE-EXACT controls, not proof of all-embedding uniqueness",
+  "status": "PASS"
+}

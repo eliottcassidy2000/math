@@ -1,0 +1,16 @@
+[
+  {
+    "name": "scispace",
+    "url": "https://scispace.com/pdf/uniqueness-of-plane-embeddings-of-special-curves-omujaliiec.pdf",
+    "status": 202,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "is_pdf": false
+  },
+  {
+    "name": "ams",
+    "url": "https://www.ams.org/journals/proc/1996-124-04/S0002-9939-96-03254-6/S0002-9939-96-03254-6.pdf",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "hash_basis": "raw file bytes",
+  "files": [
+    {
+      "path": "session13-nodal-exclusion/NODAL_CYLINDER_PERIOD_OBSTRUCTION.md",
+      "bytes": 12159,
+      "sha256": "dd0d343128a77f51fced21eee047558e0992d6fa94566e50b598771fd3d3a46a",
+      "reviewed_pre_promotion_sha256": "3b5f9da355f961f5b2f705eed5bc7b37e161189e94edd0fa26685cbd6102c84a",
+      "change": "Only the reviewed status line was promoted; reverting it recovers the reviewed pre-promotion hash."
+    },
+    {
+      "path": "session13-nodal-exclusion/verify_nodal_period.py",
+      "bytes": 7528,
+      "sha256": "1653dad8f084245e1119f758a9f977c83587c81bd96aa886e4970980363a0d43"
+    },
+    {
+      "path": "session13-nodal-exclusion/results.json",
+      "bytes": 7590,
+      "sha256": "954115a71974325384d7ef51368b2a177edf5a2050d92ef67e2d27f769166804"
+    },
+    {
+      "path": "session13-trace-lattice/ACTUAL_SOURCE_CONDUCTOR_AND_COLLISION_MULTIPLICITY.md",
+      "bytes": 19666,
+      "sha256": "45494620a95261528932376918d078be3d0e8bf7c3ab9a31f9a5643f8f43bd84"
+    },
+    {
+      "path": "math/01-canon/theorems/THM-3586-nodal-cylinder-cap38-width-period-and-second-conductor-keller-gates.md",
+      "bytes": 21444,
+      "sha256": "f847d7f02e59fcb1cc682a415200c031fc1f7385bdd7aa5e0e1b314b671374bd"
+    }
+  ]
+}

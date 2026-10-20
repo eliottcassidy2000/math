@@ -1,0 +1,356 @@
+{
+  "checks": 285,
+  "families": [
+    {
+      "P_y_degree": "2",
+      "Q_y_degree": "3",
+      "area": "8/15",
+      "conormal_det": "1",
+      "jacobian": "0",
+      "name": "standard",
+      "operations": []
+    },
+    {
+      "P_y_degree": "6",
+      "Q_y_degree": "3",
+      "area": "8/15",
+      "conormal_det": "1",
+      "jacobian": "3*y**8 - 7*y**6 + 5*y**4 - y**2",
+      "name": "first_shear_1",
+      "operations": [
+        [
+          "shear_first",
+          "x",
+          2
+        ]
+      ]
+    },
+    {
+      "P_y_degree": "2",
+      "Q_y_degree": "6",
+      "area": "8/15",
+      "conormal_det": "1",
+      "jacobian": "-2*y**7 + 6*y**5 - 6*y**3 + 2*y",
+      "name": "second_shear_1",
+      "operations": [
+        [
+          "shear_second",
+          "x + 1",
+          3
+        ]
+      ]
+    },
+    {
+      "P_y_degree": "2",
+      "Q_y_degree": "3",
+      "area": "8/15",
+      "conormal_det": "1",
+      "jacobian": "-4*x*y + 3*y**2 - 1",
+      "name": "translated_1",
+      "operations": [
+        [
+          "translate_first",
+          "x",
+          0
+        ],
+        [
+          "translate_second",
+          "x**2",
+          0
+        ]
+      ]
+    },
+    {
+      "P_y_degree": "3",
+      "Q_y_degree": "2",
+      "area": "16/15",
+      "conormal_det": "2",
+      "jacobian": "3*y**2 - 1",
+      "name": "reversed_scaled_1",
+      "operations": [
+        [
+          "swap",
+          "0",
+          0
+        ],
+        [
+          "scale_first",
+          "-1",
+          0
+        ],
+        [
+          "scale_second",
+          "2",
+          0
+        ],
+        [
+          "translate_second",
+          "x",
+          0
+        ]
+      ]
+    },
+    {
+      "P_y_degree": "6",
+      "Q_y_degree": "3",
+      "area": "8/15",
+      "conormal_det": "1",
+      "jacobian": "6*x*y**8 - 14*x*y**6 + 10*x*y**4 - 2*x*y**2",
+      "name": "first_shear_2",
+      "operations": [
+        [
+          "shear_first",
+          "x**2",
+          2
+        ]
+      ]
+    },
+    {
+      "P_y_degree": "2",
+      "Q_y_degree": "6",
+      "area": "8/15",
+      "conormal_det": "1",
+      "jacobian": "-4*x*y**7 + 12*x*y**5 - 12*x*y**3 + 4*x*y",
+      "name": "second_shear_2",
+      "operations": [
+        [
+          "shear_second",
+          "x**2 + 1",
+          3
+        ]
+      ]
+    },
+    {
+      "P_y_degree": "2",
+      "Q_y_degree": "3",
+      "area": "8/15",
+      "conormal_det": "1",
+      "jacobian": "-6*x**2*y + 6*x*y**2 - 2*x",
+      "name": "translated_2",
+      "operations": [
+        [
+          "translate_first",
+          "x**2",
+          0
+        ],
+        [
+          "translate_second",
+          "x**3",
+          0
+        ]
+      ]
+    },
+    {
+      "P_y_degree": "3",
+      "Q_y_degree": "2",
+      "area": "16/5",
+      "conormal_det": "6",
+      "jacobian": "12*x*y**2 - 4*x",
+      "name": "reversed_scaled_2",
+      "operations": [
+        [
+          "swap",
+          "0",
+          0
+        ],
+        [
+          "scale_first",
+          "-2",
+          0
+        ],
+        [
+          "scale_second",
+          "3",
+          0
+        ],
+        [
+          "translate_second",
+          "x**2",
+          0
+        ]
+      ]
+    },
+    {
+      "P_y_degree": "6",
+      "Q_y_degree": "3",
+      "area": "8/15",
+      "conormal_det": "1",
+      "jacobian": "9*x**2*y**8 - 21*x**2*y**6 + 15*x**2*y**4 - 3*x**2*y**2",
+      "name": "first_shear_3",
+      "operations": [
+        [
+          "shear_first",
+          "x**3",
+          2
+        ]
+      ]
+    },
+    {
+      "P_y_degree": "2",
+      "Q_y_degree": "6",
+      "area": "8/15",
+      "conormal_det": "1",
+      "jacobian": "-6*x**2*y**7 + 18*x**2*y**5 - 18*x**2*y**3 + 6*x**2*y",
+      "name": "second_shear_3",
+      "operations": [
+        [
+          "shear_second",
+          "x**3 + 1",
+          3
+        ]
+      ]
+    },
+    {
+      "P_y_degree": "2",
+      "Q_y_degree": "3",
+      "area": "8/15",
+      "conormal_det": "1",
+      "jacobian": "-8*x**3*y + 9*x**2*y**2 - 3*x**2",
+      "name": "translated_3",
+      "operations": [
+        [
+          "translate_first",
+          "x**3",
+          0
+        ],
+        [
+          "translate_second",
+          "x**4",
+          0
+        ]
+      ]
+    },
+    {
+      "P_y_degree": "3",
+      "Q_y_degree": "2",
+      "area": "32/5",
+      "conormal_det": "12",
+      "jacobian": "27*x**2*y**2 - 9*x**2",
+      "name": "reversed_scaled_3",
+      "operations": [
+        [
+          "swap",
+          "0",
+          0
+        ],
+        [
+          "scale_first",
+          "-3",
+          0
+        ],
+        [
+          "scale_second",
+          "4",
+          0
+        ],
+        [
+          "translate_second",
+          "x**3",
+          0
+        ]
+      ]
+    },
+    {
+      "P_y_degree": "6",
+      "Q_y_degree": "12",
+      "area": "8/15",
+      "conormal_det": "1",
+      "jacobian": "-6*x**3*y**17 + 32*x**3*y**15 - 70*x**3*y**13 + 80*x**3*y**11 - 50*x**3*y**9 + 16*x**3*y**7 - 2*x**3*y**5 - 14*x**2*y**13 + 60*x**2*y**11 - 100*x**2*y**9 + 80*x**2*y**7 - 30*x**2*y**5 + 4*x**2*y**3 - 10*x*y**9 + 32*x*y**7 - 36*x*y**5 + 16*x*y**3 - 2*x*y + 3*y**8 - 7*y**6 - 2*y**5 + 5*y**4 + 4*y**3 - y**2 - 2*y",
+      "name": "two_quadratic_shears",
+      "operations": [
+        [
+          "shear_first",
+          "x",
+          2
+        ],
+        [
+          "shear_second",
+          "x + 1",
+          2
+        ]
+      ]
+    },
+    {
+      "P_y_degree": "2",
+      "Q_y_degree": "4",
+      "area": "8/15",
+      "conormal_det": "1",
+      "jacobian": "-2*x**2*y - 4*x*y**3 - 2*y**5 + 4*y**3 + 3*y**2 - 2*y - 1",
+      "name": "shift_then_shear",
+      "operations": [
+        [
+          "translate_first",
+          "x",
+          0
+        ],
+        [
+          "shear_second",
+          "x - 1",
+          2
+        ],
+        [
+          "translate_second",
+          "x**2",
+          0
+        ]
+      ]
+    },
+    {
+      "P_y_degree": "12",
+      "Q_y_degree": "6",
+      "area": "-8/15",
+      "conormal_det": "-1",
+      "jacobian": "12*x**4*y**17 - 64*x**4*y**15 + 140*x**4*y**13 - 160*x**4*y**11 + 100*x**4*y**9 - 32*x**4*y**7 + 4*x**4*y**5 + 28*x**3*y**13 - 120*x**3*y**11 + 200*x**3*y**9 - 160*x**3*y**7 + 60*x**3*y**5 - 8*x**3*y**3 + 20*x**2*y**9 - 64*x**2*y**7 + 72*x**2*y**5 - 32*x**2*y**3 + 4*x**2*y + 4*x*y**5 - 8*x*y**3 + 4*x*y - 3*y**8 + 7*y**6 - 5*y**4 + y**2",
+      "name": "shear_swap_shear",
+      "operations": [
+        [
+          "shear_first",
+          "x",
+          2
+        ],
+        [
+          "swap",
+          "0",
+          0
+        ],
+        [
+          "shear_first",
+          "x**2 + 1",
+          2
+        ]
+      ]
+    },
+    {
+      "P_y_degree": "2",
+      "Q_y_degree": "3",
+      "area": "8/15",
+      "conormal_det": "1",
+      "jacobian": "-2*y",
+      "name": "hostile_known_non_keller",
+      "operations": [
+        [
+          "translate_second",
+          "x",
+          0
+        ]
+      ]
+    }
+  ],
+  "generating_families": 17,
+  "hostile_controls": {
+    "generic_only": {
+      "P": "y**2 - 1",
+      "Q": "x*y*(y**2 - 1)",
+      "area": "8*x/15"
+    },
+    "unit_conormal_nongenerator": {
+      "P": "y**2 - 1",
+      "Q": "x*y*(y**2 - 1)**3 + y*(y**2 - 1)",
+      "area": "8/15 + 64*x/315",
+      "collision": "x=-1, y=+sqrt(2) and y=-sqrt(2)"
+    }
+  },
+  "not_claimed": "Finite checks do not prove all-embedding uniqueness or the all-generating-pairs theorem.",
+  "status": "PASS",
+  "universe": "17 declared compositions of elementary C[x]-plane automorphisms; two nongenerator controls and the standard relation"
+}
