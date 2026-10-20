@@ -1,0 +1,36 @@
+{
+  "destination_root": "05-knowledge/results/constant_leading_conductor_six_exclusion_20261020",
+  "relative_links": [
+    {
+      "exists": true,
+      "file": "CONSTANT_LEADING_GLOBALIZATION.md",
+      "link": "review/AUDIT.md",
+      "publication_target": "05-knowledge/results/constant_leading_conductor_six_exclusion_20261020/review/AUDIT.md"
+    },
+    {
+      "exists": true,
+      "file": "README.md",
+      "link": "../low_delta_source_conductor_exclusion_20261020/LOW_DELTA_QUADRATIC_AND_RELATIVE_GLOBALIZATION.md",
+      "publication_target": "05-knowledge/results/low_delta_source_conductor_exclusion_20261020/LOW_DELTA_QUADRATIC_AND_RELATIVE_GLOBALIZATION.md"
+    },
+    {
+      "exists": true,
+      "file": "README.md",
+      "link": "CONSTANT_LEADING_GLOBALIZATION.md",
+      "publication_target": "05-knowledge/results/constant_leading_conductor_six_exclusion_20261020/CONSTANT_LEADING_GLOBALIZATION.md"
+    },
+    {
+      "exists": true,
+      "file": "README.md",
+      "link": "review/AUDIT.md",
+      "publication_target": "05-knowledge/results/constant_leading_conductor_six_exclusion_20261020/review/AUDIT.md"
+    },
+    {
+      "exists": true,
+      "file": "README.md",
+      "link": "DEPENDENCIES.md",
+      "publication_target": "05-knowledge/results/constant_leading_conductor_six_exclusion_20261020/DEPENDENCIES.md"
+    }
+  ],
+  "status": "PASS"
+}

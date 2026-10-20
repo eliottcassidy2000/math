@@ -1,0 +1,588 @@
+{
+  "check_count": 130,
+  "checks": [
+    {
+      "name": "top coefficient n=1,m=1",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=1,m=2",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=1,m=3",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=1,m=4",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=1,m=5",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=1,m=6",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=1,m=7",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=1,m=8",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=2,m=1",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=2,m=2",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=2,m=3",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=2,m=4",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=2,m=5",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=2,m=6",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=2,m=7",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=2,m=8",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=3,m=1",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=3,m=2",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=3,m=3",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=3,m=4",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=3,m=5",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=3,m=6",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=3,m=7",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=3,m=8",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=4,m=1",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=4,m=2",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=4,m=3",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=4,m=4",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=4,m=5",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=4,m=6",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=4,m=7",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=4,m=8",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=5,m=1",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=5,m=2",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=5,m=3",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=5,m=4",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=5,m=5",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=5,m=6",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=5,m=7",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=5,m=8",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=6,m=1",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=6,m=2",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=6,m=3",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=6,m=4",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=6,m=5",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=6,m=6",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=6,m=7",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=6,m=8",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=7,m=1",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=7,m=2",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=7,m=3",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=7,m=4",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=7,m=5",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=7,m=6",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=7,m=7",
+      "passed": true
+    },
+    {
+      "name": "top coefficient n=7,m=8",
+      "passed": true
+    },
+    {
+      "name": "positive Keller control",
+      "passed": true
+    },
+    {
+      "name": "first constant target degree reduction",
+      "passed": true
+    },
+    {
+      "name": "second reduction reaches base coordinate",
+      "passed": true
+    },
+    {
+      "name": "target reduction preserves Jacobian",
+      "passed": true
+    },
+    {
+      "name": "terminal constant coordinate gives full source",
+      "passed": true
+    },
+    {
+      "name": "residue basis delta [0, 6, 11, 17]",
+      "passed": true
+    },
+    {
+      "name": "residue basis delta [0, 6, 9, 15]",
+      "passed": true
+    },
+    {
+      "name": "residue basis delta [0, 6, 7, 13]",
+      "passed": true
+    },
+    {
+      "name": "residue basis delta [0, 6, 3, 9]",
+      "passed": true
+    },
+    {
+      "name": "nonzero beta gives degree eleven",
+      "passed": true
+    },
+    {
+      "name": "wrong gamma gives degree nine",
+      "passed": true
+    },
+    {
+      "name": "wrong exceptional constraint gives degree seven",
+      "passed": true
+    },
+    {
+      "name": "universal polynomial cubic recovery",
+      "passed": true
+    },
+    {
+      "name": "quartic derivative at origin",
+      "passed": true
+    },
+    {
+      "name": "sextic derivative at origin",
+      "passed": true
+    },
+    {
+      "name": "quartic ramification at c=0",
+      "passed": true
+    },
+    {
+      "name": "sextic ramification at c=0",
+      "passed": true
+    },
+    {
+      "name": "quartic cubic coefficient pins source translation",
+      "passed": true
+    },
+    {
+      "name": "quartic quadratic coefficient determines a",
+      "passed": true
+    },
+    {
+      "name": "quartic linear coefficient determines c",
+      "passed": true
+    },
+    {
+      "name": "quartic constant coefficient determines d",
+      "passed": true
+    },
+    {
+      "name": "sextic quartic coefficient determines eta",
+      "passed": true
+    },
+    {
+      "name": "sextic constant coefficient determines e",
+      "passed": true
+    },
+    {
+      "name": "hostile Jacobian is minus four y-six",
+      "passed": true
+    },
+    {
+      "name": "hostile cubic leading coefficient is not constant",
+      "passed": true
+    },
+    {
+      "name": "Bezout for immersed nodal fiber",
+      "passed": true
+    },
+    {
+      "name": "first jet exact Jacobian residual",
+      "passed": true
+    },
+    {
+      "name": "first jet is Keller on the selected fiber",
+      "passed": true
+    },
+    {
+      "name": "first jet is not an entire Keller pair",
+      "passed": true
+    },
+    {
+      "name": "formal lift order 1",
+      "passed": true
+    },
+    {
+      "name": "formal lift order 2",
+      "passed": true
+    },
+    {
+      "name": "formal lift order 3",
+      "passed": true
+    },
+    {
+      "name": "formal lift order 4",
+      "passed": true
+    },
+    {
+      "name": "formal lift order 5",
+      "passed": true
+    },
+    {
+      "name": "formal lift order 6",
+      "passed": true
+    },
+    {
+      "name": "formal lift order 7",
+      "passed": true
+    },
+    {
+      "name": "formal lift order 8",
+      "passed": true
+    },
+    {
+      "name": "independent full formal lift coefficient 0",
+      "passed": true
+    },
+    {
+      "name": "independent full formal lift coefficient 1",
+      "passed": true
+    },
+    {
+      "name": "independent full formal lift coefficient 2",
+      "passed": true
+    },
+    {
+      "name": "independent full formal lift coefficient 3",
+      "passed": true
+    },
+    {
+      "name": "independent full formal lift coefficient 4",
+      "passed": true
+    },
+    {
+      "name": "independent full formal lift coefficient 5",
+      "passed": true
+    },
+    {
+      "name": "independent full formal lift coefficient 6",
+      "passed": true
+    },
+    {
+      "name": "independent full formal lift coefficient 7",
+      "passed": true
+    },
+    {
+      "name": "formal control actually increases y degree",
+      "passed": true
+    },
+    {
+      "name": "nodal formal deformation coefficient",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence P 1",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence Q 1",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence P 2",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence Q 2",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence P 3",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence Q 3",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence P 4",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence Q 4",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence P 5",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence Q 5",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence P 6",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence Q 6",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence P 7",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence Q 7",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence P 8",
+      "passed": true
+    },
+    {
+      "name": "closed-form agrees with recurrence Q 8",
+      "passed": true
+    },
+    {
+      "name": "closed-form implicit equation order 0",
+      "passed": true
+    },
+    {
+      "name": "closed-form implicit equation order 1",
+      "passed": true
+    },
+    {
+      "name": "closed-form implicit equation order 2",
+      "passed": true
+    },
+    {
+      "name": "closed-form implicit equation order 3",
+      "passed": true
+    },
+    {
+      "name": "closed-form implicit equation order 4",
+      "passed": true
+    },
+    {
+      "name": "closed-form implicit equation order 5",
+      "passed": true
+    },
+    {
+      "name": "closed-form implicit equation order 6",
+      "passed": true
+    },
+    {
+      "name": "closed-form implicit equation order 7",
+      "passed": true
+    },
+    {
+      "name": "closed-form implicit equation order 8",
+      "passed": true
+    },
+    {
+      "name": "universal formal Jacobian factorization",
+      "passed": true
+    },
+    {
+      "name": "polynomial source shear preserves Jacobian",
+      "passed": true
+    }
+  ],
+  "formal_lift_degrees": [
+    {
+      "P_y_degree": 4,
+      "Q_y_degree": 2,
+      "order": 0
+    },
+    {
+      "P_y_degree": 2,
+      "Q_y_degree": 0,
+      "order": 1
+    },
+    {
+      "P_y_degree": 3,
+      "Q_y_degree": 1,
+      "order": 2
+    },
+    {
+      "P_y_degree": 4,
+      "Q_y_degree": 2,
+      "order": 3
+    },
+    {
+      "P_y_degree": 5,
+      "Q_y_degree": 3,
+      "order": 4
+    },
+    {
+      "P_y_degree": 6,
+      "Q_y_degree": 4,
+      "order": 5
+    },
+    {
+      "P_y_degree": 7,
+      "Q_y_degree": 5,
+      "order": 6
+    },
+    {
+      "P_y_degree": 8,
+      "Q_y_degree": 6,
+      "order": 7
+    },
+    {
+      "P_y_degree": 9,
+      "Q_y_degree": 7,
+      "order": 8
+    }
+  ],
+  "scope": "Finite symbolic controls support, but do not replace, the universal proofs and the pinned characteristic-sequence input.",
+  "source_sha256": "3af3755a04dd398fdebeee6d13f15abed0f0005cd98ee5c6ebb0c8c8f43ac432",
+  "status": "ALL EXACT CONTROLS PASS",
+  "universes": {
+    "formal_lift_orders": 8,
+    "top_coefficient_degree_box": {
+      "m": [
+        1,
+        8
+      ],
+      "n": [
+        1,
+        7
+      ]
+    }
+  }
+}

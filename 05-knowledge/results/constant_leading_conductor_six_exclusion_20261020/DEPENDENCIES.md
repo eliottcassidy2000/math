@@ -1,0 +1,10 @@
+# Frozen dependency and source record
+
+Repository source HEAD inspected: 129154b04024f1246570592ac8df4db249712bc4, clean shared checkout at initial inspection. The shared repository was not modified while preparing this staged packet.
+
+1. `math/05-knowledge/results/moving_monic_cubic_quartic_obstruction_20261020/MOVING_CUBIC_QUARTIC_OBSTRUCTION.md`, Sections 3 and 8. Generic field descent and the precise nonprincipal degree possibilities; entire global-monic obstruction. The latter is used only for the alternative corollary after the new globalization theorem.
+2. `math/05-knowledge/results/fixed_cubic_quartic_embedding_classes_20261020/FINITE_EMBEDDING_CLASSES_AND_FIXED_CYLINDERS.md`, Sections 1–4. CITED characteristic-semigroup bound, direct degree-separated free-basis calculations, exceptional generation criterion, recovery identity.
+3. `math/05-knowledge/results/cubic_quartic_globalization_embedding_boundaries_20261020/CUBIC_QUARTIC_GLOBALIZATION_AND_EMBEDDING_BOUNDARIES.md`, Sections 2–3. Hostile, primitive cubic lattice, previous honest degree-drop boundary. Not contradicted: its hypothesis lacks the actual constant-Jacobian leading gate.
+4. `math/05-knowledge/results/low_delta_source_conductor_exclusion_20261020/LOW_DELTA_QUADRATIC_AND_RELATIVE_GLOBALIZATION.md`, Section 6.1. Actual-source prior lower bound and exact semigroup alternative at conductor six.
+
+Fresh primary-source check: Sathaye–Stenerson, *On Plane Polynomial Curves*, author text dated September 10, 2014, https://www.ms.uky.edu/~sohum/ma561/affgeom/papnew.pdf opened successfully on October 20, 2026, 24-page PDF. Relevant Section 3.1(4)–(5), printed p.9 (PDF page index 8), explicitly gives the nonprincipal upper bound conductor+1 and primitive-generator property; Section 3.1 axioms require strict gcd drops beyond the initial pair. These exact statements were read in the retrieved text. This is an existing classical input, not a novelty claim. The frozen predecessor additionally pins Abhyankar–Sathaye (1996), printed p.1062, for identification of initial coordinate pole orders and elementary reductions; its direct retrieval was not repeated here.
