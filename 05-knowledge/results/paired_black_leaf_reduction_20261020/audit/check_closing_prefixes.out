@@ -1,0 +1,17 @@
+{
+  "order7": 4,
+  "9": 8,
+  "11": 16,
+  "13": 32,
+  "15": 64,
+  "17": 128,
+  "19": 256,
+  "21": 512,
+  "23": 1024,
+  "25": 2048,
+  "27": 4096,
+  "29": 8192,
+  "31": 16384,
+  "residual_patterns_m4_to100": 291
+}
+ALL CLOSING PREFIX AND NONAUTOMORPHIC SUCCESSOR CHECKS PASSED
