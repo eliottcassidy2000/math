@@ -1,0 +1,141 @@
+{
+  "comparison_results": "Both producer scripts replayed normally and under -O, all four outputs byte-identical to frozen outputs; independent residual audit normal/-O outputs byte-identical.",
+  "dependency_hashes": [
+    {
+      "path": "session13-census-extension/extension_census.py",
+      "sha256": "73a502ec5fc0bc299ac07e99706da9ea41a6882ae692431ee267fb627de36bc0"
+    },
+    {
+      "path": "session13-census-extension/fixed_cube_engine.py",
+      "sha256": "46cdad3ae5c4008dc912e83122383bfd6abd7f3a761688bc934e4705412d1684"
+    },
+    {
+      "path": "math/05-knowledge/results/pronormal_quotient_bijections_20261020/PRONORMAL_QUOTIENT_THEOREM.md",
+      "sha256": "c33157c00a065b2e470d59e67fcbe21e91084fb799343943186cd398fe136684"
+    },
+    {
+      "path": "math/05-knowledge/results/mixed_prime_census_extension_20261020/README.md",
+      "sha256": "6e38334ae8078e4006f8c842b580159ce61980f390274840689160ff8a91ea70"
+    },
+    {
+      "path": "math/05-knowledge/results/odd_mixed_prime_census_20261020/README.md",
+      "sha256": "1949a3d7a437d22681d378a2c542b016c71d12be5f9473e561c83165b921fc36"
+    }
+  ],
+  "frozen_inventory_sha256": "d49efa234ef37af5b7eed7df6ba1e5a4ebfe7679050d025384fad105a872a67c",
+  "producer_files_verified": [
+    {
+      "bytes": 4258,
+      "path": "README.md",
+      "sha256": "ad298c46dceb75ae5b677bf8c7f662272fca3532f282598b5e8925d86068a2ee"
+    },
+    {
+      "bytes": 8367,
+      "path": "DOUBLE_TRIPLE_DESCENT.md",
+      "sha256": "018fe2d3fec520e6e7cf71e1a9b57aa6e25b3064e78c2bac69c44bcf1175b674"
+    },
+    {
+      "bytes": 11300,
+      "path": "SHARP_N13_BOUNDARY.md",
+      "sha256": "a6b78702b976254e90aae0ef68572cb37c3a3747932ce7b6852e7af4b51c1353"
+    },
+    {
+      "bytes": 3795,
+      "path": "THREE_CYCLE_SUPPORT_LEMMA.md",
+      "sha256": "cf8354eb674efe169c80cbd6888a6e4f840a596c7d75401b8327a8451b18cb48"
+    },
+    {
+      "bytes": 4195,
+      "path": "VERIFICATION.md",
+      "sha256": "04c78dd0933cbadbe0671e5e910130bdbb1553501a3c4d662743498648289489"
+    },
+    {
+      "bytes": 3874,
+      "path": "weighted_copy_audit.py",
+      "sha256": "cfa6739f1ec576ec2875b91218d94962aa3e3dc13d23be51724ffdbcbdc5b1c4"
+    },
+    {
+      "bytes": 2972,
+      "path": "weighted_copy_audit.json",
+      "sha256": "3186e3caf4594390b583df7dadb1dd2754ab1952abded45a21830b7271fc0f2c"
+    },
+    {
+      "bytes": 2972,
+      "path": "weighted_copy_audit.optimized.json",
+      "sha256": "3186e3caf4594390b583df7dadb1dd2754ab1952abded45a21830b7271fc0f2c"
+    },
+    {
+      "bytes": 1051,
+      "path": "double_triple_n13_probe.py",
+      "sha256": "5994bf9b5de3ae03a49e79e6a4c92e000894cdf21a2cf1387d49196d15de665b"
+    },
+    {
+      "bytes": 775946,
+      "path": "double_triple_n13_probe.json",
+      "sha256": "4a607e1a25648ae78451fbcefa871766b00b411721f28ee4a019c47c484dd222"
+    },
+    {
+      "bytes": 775946,
+      "path": "double_triple_n13_probe.optimized.json",
+      "sha256": "4a607e1a25648ae78451fbcefa871766b00b411721f28ee4a019c47c484dd222"
+    },
+    {
+      "bytes": 1006,
+      "path": "SHA256SUMS.txt",
+      "sha256": "4c33c997863a6cb5789d920594e9af2d8b76a6c97fd3c9bee448b877639ea909"
+    }
+  ],
+  "review_artifacts": [
+    {
+      "bytes": 13014,
+      "path": "ADVERSARIAL_REVIEW.md",
+      "sha256": "51076d6a93d746925b852047380bb665baba23a8c1ccf35fae65a9f1c46e9f5a"
+    },
+    {
+      "bytes": 16160,
+      "path": "independent_residual_audit.json",
+      "sha256": "f2f38e791fd3360c85fe4ca9ec442c1d7490acb4791380a42da4e6fdc31dc1dd"
+    },
+    {
+      "bytes": 16160,
+      "path": "independent_residual_audit.optimized.json",
+      "sha256": "f2f38e791fd3360c85fe4ca9ec442c1d7490acb4791380a42da4e6fdc31dc1dd"
+    },
+    {
+      "bytes": 11075,
+      "path": "independent_residual_audit.py",
+      "sha256": "8f736c7aae027807de054ec10271d7c3364bb138a1e6552480d26145f21409a1"
+    },
+    {
+      "bytes": 775946,
+      "path": "producer_cube.optimized.replay.json",
+      "sha256": "4a607e1a25648ae78451fbcefa871766b00b411721f28ee4a019c47c484dd222"
+    },
+    {
+      "bytes": 105,
+      "path": "producer_cube.optimized.replay.log",
+      "sha256": "182c9d5ed5a4903a78af4f9f6f37bd2ee32b96445f8dd2cde802a5aa5c7162f6"
+    },
+    {
+      "bytes": 775946,
+      "path": "producer_cube.replay.json",
+      "sha256": "4a607e1a25648ae78451fbcefa871766b00b411721f28ee4a019c47c484dd222"
+    },
+    {
+      "bytes": 105,
+      "path": "producer_cube.replay.log",
+      "sha256": "182c9d5ed5a4903a78af4f9f6f37bd2ee32b96445f8dd2cde802a5aa5c7162f6"
+    },
+    {
+      "bytes": 2972,
+      "path": "producer_weighted.optimized.replay.json",
+      "sha256": "3186e3caf4594390b583df7dadb1dd2754ab1952abded45a21830b7271fc0f2c"
+    },
+    {
+      "bytes": 2972,
+      "path": "producer_weighted.replay.json",
+      "sha256": "3186e3caf4594390b583df7dadb1dd2754ab1952abded45a21830b7271fc0f2c"
+    }
+  ],
+  "status": "PASS"
+}

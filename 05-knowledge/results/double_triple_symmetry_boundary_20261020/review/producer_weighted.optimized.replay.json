@@ -1,0 +1,187 @@
+{
+  "anomalies": [
+    {
+      "eligible_classes": [
+        0,
+        1
+      ],
+      "escape_orbits": 1,
+      "fusion_defect": 0,
+      "globally_even": false,
+      "quotient_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "relative_copy_multiplicity": 1,
+      "relative_copy_orbits": [
+        [
+          0,
+          1
+        ]
+      ],
+      "weights": [
+        5,
+        5,
+        3
+      ]
+    },
+    {
+      "eligible_classes": [
+        0,
+        1
+      ],
+      "escape_orbits": 1,
+      "fusion_defect": 0,
+      "globally_even": false,
+      "quotient_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "relative_copy_multiplicity": 1,
+      "relative_copy_orbits": [
+        [
+          0,
+          1
+        ]
+      ],
+      "weights": [
+        5,
+        5,
+        3
+      ]
+    },
+    {
+      "eligible_classes": [
+        0,
+        1
+      ],
+      "escape_orbits": 0,
+      "fusion_defect": 1,
+      "globally_even": true,
+      "quotient_edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "relative_copy_multiplicity": 2,
+      "relative_copy_orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "weights": [
+        5,
+        5,
+        3
+      ]
+    },
+    {
+      "eligible_classes": [
+        0,
+        1
+      ],
+      "escape_orbits": 0,
+      "fusion_defect": 1,
+      "globally_even": true,
+      "quotient_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "relative_copy_multiplicity": 2,
+      "relative_copy_orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "weights": [
+        5,
+        8
+      ]
+    },
+    {
+      "eligible_classes": [
+        0,
+        1
+      ],
+      "escape_orbits": 0,
+      "fusion_defect": 1,
+      "globally_even": true,
+      "quotient_edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "relative_copy_multiplicity": 2,
+      "relative_copy_orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "weights": [
+        6,
+        6,
+        1
+      ]
+    },
+    {
+      "eligible_classes": [
+        0,
+        1
+      ],
+      "escape_orbits": 0,
+      "fusion_defect": 1,
+      "globally_even": true,
+      "quotient_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "relative_copy_multiplicity": 2,
+      "relative_copy_orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "weights": [
+        6,
+        7
+      ]
+    }
+  ],
+  "checks": 6,
+  "distinct_candidate_global_types": 11,
+  "escaping_relative_copy_orbits": 2,
+  "exact_predicate_deficit": 6,
+  "scope": "weighted twin-quotient anomalies proved exhaustive in SHARP_N13_BOUNDARY.md, not an all-graph enumeration",
+  "status": "PASS",
+  "target_copy_fusion_defect": 4
+}
