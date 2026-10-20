@@ -7,7 +7,7 @@ line, and its relation to the owner's `F = S + U` triplet `{p, p^3, p^2qr}`.
 
 **Status.**
 - **PROVED** (elementary; complete proofs below): Theorem 1 (the three marked bijections and their
-  counts for every `n >= 3`), Theorem 2 (`n = 4` is the unique self-complementary size of the
+  counts for every `n >= 4`; the line and star cases separately remain valid at `n = 3`), Theorem 2 (`n = 4` is the unique self-complementary size of the
   one-less-edge-than-node family), Theorem 3 (the `n = 4` dictionary: `H = 1 + 2c_3`, `c_3 + s = 2`,
   tetrahedral duality is an exact involution with `c_3 <-> s` and `H -> 6 - H`).
 - **FINITE-EXACT**: all 38 checks of
@@ -57,7 +57,7 @@ line, and its relation to the owner's `F = S + U` triplet `{p, p^3, p^2qr}`.
 
 ## 1. Theorem 1 — the three marked bijections
 
-Fix `n >= 3`. A **coherent `(n-1)`-edge structure** in a tournament `T` on `n` vertices is one of
+Fix `n >= 4`. A **coherent `(n-1)`-edge structure** in a tournament `T` on `n` vertices is one of
 
 | kind | undirected carrier (`n-1` edges) | coherent orientation | automorphism group `A_X` of the oriented carrier |
 |---|---|---|---|
