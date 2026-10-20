@@ -1,0 +1,21 @@
+{
+  "source_commit": "127698803818637f07ae89c32ac5d04c59161292",
+  "source_files": [
+    {
+      "path": "01-canon/theorems/THM-4725-no-uniform-dilation-rule-for-prime-circulants-signed-set-burnside-and-the-p-mod-4-dichotomy-with-the-paley-rule.md",
+      "commit": "127698803818637f07ae89c32ac5d04c59161292",
+      "sha256": "66ddb88217447cbbc507f98ed9c89e17f38fede8f3be25391b4185a46bbacd32",
+      "bytes": 14150
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9342-what-a-uniform-rule-can-be-after-thm-4725.md",
+      "commit": "127698803818637f07ae89c32ac5d04c59161292",
+      "sha256": "a7bec377248e22234f2cdc1f8a5bb33591fffffa29361dbed30877b3f9684676",
+      "bytes": 4452
+    }
+  ],
+  "review_date": "2026-10-20",
+  "scope": "Repaired finite-stencil theorem; signed-set and power-equivariance audit; small-prime, first-order and local-scope corrections.",
+  "original_audit_sha256": "df822ec584cb9c1c95b48a50ac2510c25d4fe170d899cc072a359ca06e202ef4",
+  "source_snapshot_included": false
+}

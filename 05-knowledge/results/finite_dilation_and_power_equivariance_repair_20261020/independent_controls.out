@@ -1,0 +1,14 @@
+p,T_Gamma,E_Gamma,E_Gamma_even,Gamma_even_sets,even_sets,odd_witness_mask
+3,1,1,1,1,1,None
+5,1,1,1,1,1,None
+7,2,2,2,4,4,None
+11,3,3,3,16,16,None
+13,4,6,4,16,28,3
+17,3,10,3,25,117,3
+19,11,11,11,256,256,None
+23,15,15,15,1024,1024,None
+29,65,125,65,4096,8128,3
+31,184,184,184,16384,16384,None
+37,673,1335,673,65536,130816,3
+Signed c=(2,-2), p=73: 16 Boolean rules; 8 graph-valued rules collapse, 8 non-graph-valued; two tournament types.
+Identity hostile: c=1, phi(b)=b retains both tournament types and is not graph-valued.

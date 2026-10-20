@@ -1,0 +1,7 @@
+# Primary sources and use boundaries
+
+- J. S. Milne, *Fields and Galois Theory*, Theorem 5.30 and Remark 5.32, printed pp.75-76: https://jmilne.org/math/CourseNotes/FT.pdf . Kummer correspondence identifies precisely the base-field classes modulo nth powers that become nth powers in a finite Kummer extension. This repairs the original incorrect rational-squareclass claim.
+- J. S. Milne, *Algebraic Number Theory*, Theorem 8.31: https://www.jmilne.org/math/CourseNotes/ANT.pdf . Chebotarev supplies a positive-density set for the explicitly constructed central involution. No unproved compatibility assertion is delegated to this theorem.
+- M. Furst, J. B. Saxe and M. Sipser, *Parity, Circuits, and the Polynomial-Time Hierarchy*, Mathematical Systems Theory 17 (1984), 13-27: https://doi.org/10.1007/BF01744431 . Primary paper copy: https://wiki.epfl.ch/edicpublic/documents/Candidacy%20exam/Furst%20Saxe%20Sipser%20-%201984%20-%20Parity%20circuits%20and%20the%20polynomial-time%20hierarchy.pdf . Its nonuniform constant-depth polynomial-size parity lower bound is used only to refute ordinary uniform first-order definability of the particular Paley beta construction, not every possible type bijection.
+
+Source identification and mathematical use were checked on 20 October 2026. Repository-specific starting points and inherited predicates are identified by theorem ID plus full slug in REPAIR_AND_AUDIT.md.
