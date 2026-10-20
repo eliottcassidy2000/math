@@ -7,7 +7,7 @@ Run from any directory; standard library only. Checks survive python -O.
 """
 from collections import Counter
 from fractions import Fraction
-from itertools import product
+from itertools import permutations, product
 from math import factorial
 
 
@@ -73,3 +73,59 @@ print("Leading coefficient:", Fraction(len(bank), factorial(8)))
 print("Seven-port equality hostile: support=27 parity-compatible=0")
 print("Seven-port cubic junction: support=54 parity-compatible=54")
 print("PASS: all identities checked by exhaustive labelled words")
+
+# A separate order-five control for the later pure-blue atom integration.
+# All paths and all automorphisms are checked, not just chosen orbit reps.
+vertices = tuple(range(5))
+orders = tuple(permutations(vertices))
+
+
+def paths(arcs):
+    return [p for p in orders
+            if all((a, b) in arcs for a, b in zip(p, p[1:]))]
+
+
+def profile(arcs):
+    aut = sum(all((p[a], p[b]) in arcs for a, b in arcs) for p in orders)
+    return len(paths(arcs)), aut
+
+
+def complement_along(arcs, path):
+    kept = set(zip(path, path[1:]))
+    return frozenset((a, b) if (a, b) in kept else (b, a)
+                     for a, b in arcs)
+
+
+def strong(arcs):
+    for start in vertices:
+        seen = {start}
+        frontier = [start]
+        while frontier:
+            a = frontier.pop()
+            for b in vertices:
+                if (a, b) in arcs and b not in seen:
+                    seen.add(b)
+                    frontier.append(b)
+        if len(seen) != 5:
+            return False
+    return True
+
+
+c5 = frozenset((a, b) for a in vertices for b in vertices
+               if (b - a) % 5 in (1, 2))
+tt5 = frozenset((a, b) for a in vertices for b in vertices if a < b)
+stack = set(tt5)
+stack.remove((1, 3))
+stack.add((3, 1))
+controls = (("C5", c5), ("TT5", tt5), ("1->C3->1", frozenset(stack)))
+for label, arcs in controls:
+    partners = [complement_along(arcs, p) for p in paths(arcs)]
+    histogram = Counter(profile(partner) for partner in partners)
+    require(all(strong(partner) for partner in partners),
+            ("order-five partner not strong", label))
+    require((15, 5) not in histogram, ("pure-blue partner", label))
+    if label == "C5":
+        require(histogram == {(11, 1): 5, (15, 3): 5, (13, 1): 5},
+                ("C5 partner profile", histogram))
+    print(label, "all-path partner (H,Aut) histogram:", dict(sorted(histogram.items())))
+print("PASS: order-five pure-blue partners are strong and not C5")

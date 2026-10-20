@@ -192,6 +192,18 @@ metagraph. The audited proof and its cited Lu-theorem dependency are
 recorded in the [incoming integration](boundary_support_20261020_incoming.md).
 No connectivity of the remaining black-active quotient is assumed.
 
+The final incoming prefix-rerouting proof closes the strong pure-blue
+alphabet gap, and our short rigid-strong lemma completes its counting
+dependencies. Pure-blue nodes have degree one or three at every order;
+their counting series is
+`P(z)=(1+z+z^3+z^5)/(1-z^2-z^6)`.
+At n>=4 all their neighbors are mixed, and the degree-three nodes have
+three distinct neighbors. Writing `a_0=1`, `a_j=a_(j-1)+a_(j-3)` with
+negative indices zero, the exact number of leaf bridges is
+`L_(2m)=a_m`, `L_(2m+1)=a_m+a_(m-1)`.
+After removing those leaves, the black-component quotient classifies
+every remaining non-leaf bridge. Its possible bridges remain unresolved.
+
 There is a constructive abstract realization theorem. A blue multigraph
 supported on self-converse nodes together with an even-multiplicity black
 multigraph can be realized by commuting involutions: two flags per blue
@@ -246,7 +258,9 @@ Write h(T)=H(T)/|Aut(T)| for an ordinary tournament class. Then
 Odd coefficients count self-converse fibres; exponents 2 mod 4 count
 paired nodes; positive multiples of four never occur. Exact formulas
 for every coefficient, an all-order finite enumeration algorithm, and
-the full coefficient dictionaries through n=8 are saved.
+the full coefficient dictionaries through n=8 are saved. The final
+pure-blue classification additionally determines the linear coefficient
+at every order: `[z]D_n=L_n` with L_n as above.
 
 For example,
 
@@ -286,6 +300,7 @@ leading constant remain open in this work.
 | Minor certificates | Explicit chains through J101, 404 vertices; authenticated rooted Blanusa models |
 | Eight-port closures | All 105 matchings, all 6,561 ternary words, Petersen and prism controls; independent binary-flow counts |
 | Tournament wiring | Full inherited line tables through n=7; independent small tiling construction; degree coefficients through n=8 |
+| Incoming atom proof | Symbolic prefix audit; read-only independent replay of 32,760 odd-circulant presentations and 591 residual-pattern controls |
 | Proof review | Root and agents independently checked support, asymptotics, quotient types, and scope |
 
 The five scripts and receipts are linked in the component notes. Normal

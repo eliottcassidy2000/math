@@ -81,3 +81,13 @@ between pure-blue leaf bridges and bridges in the remaining contracted
 blue graph. Its triangle-current law rejects our degree-preserving false
 wiring, while its strong/periphery cut alone does not. Neither addition
 removes the full presentation sidecar or proves the general snark reduction.
+
+The final incoming prefix-rerouting theorem was audited symbolically and
+by an independent read-only replay. It repairs the older affine-only gap
+and classifies strong pure-blue atoms. Our rigid-strong lemma follows by
+transporting successive cuts of one Hamiltonian cycle through the single
+path orbit; it avoids the branch packet's additional bypass dependency.
+The center law now gives all-order pure-blue counts and `[z]D_n=L_n`.
+Known leaves can be removed at every order, retaining trivalent pure-blue
+nodes in the quotient. The missing bridge theorem is an alternate-route
+or connectivity statement on that remaining graph.

@@ -167,13 +167,134 @@ This is an additional necessary screen for complete wiring.
 The full presentation certificate in our metagraph note remains
 sufficient; the listed scalar screens are not promoted to sufficiency.
 
+## 6. A final incoming proof closes the pure-blue alphabet gap
+
+Commit `fcf72e76dd` supplied the
+[uniform prefix-rerouting proof](pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md).
+The root and metagraph agent checked its symbolic cases: F1/F2/F3 path
+increments and violated arcs, the residual sign patterns, the m=4
+boundary, and the unit reindexings by plus or minus two at composite
+orders. Unlike the earlier affine-only argument, it tests the actual
+positional reversal on an explicit arc. The proof passes this audit.
+
+Together with the audited odd-circulant reduction, the nontrivial
+strong pure-blue tournaments are exactly the directed triangle and the
+regular five-vertex tournament. Call the latter R5 here, to distinguish
+it from an undirected pentagon.
+
+The incoming
+[branch-count note](pure_blue_atom_classification_20261020/PURE_BLUE_COUNTS_AND_BRANCH_GEOMETRY.md)
+also refers to companion rigidity and endpoint-transport documents.
+The following deductions give self-contained replacements for those
+dependencies using the proved alphabet and the already-read center law.
+
+### A short rigid-strong lemma
+
+If a strong tournament T has `H(T)/|Aut(T)|=1`, its automorphism group
+acts transitively on ordered Hamiltonian paths: the action is free,
+and its orbit count is that ratio.
+
+Choose a Hamiltonian cycle `v0,...,v(n-1)`. Its two successive cuts
+`(v0,...,v(n-1))` and `(v1,...,v(n-1),v0)` must be related by an
+automorphism. That automorphism is precisely `vi -> v(i+1)`, so T
+is circulant in these coordinates. The reflection
+`r(vi)=v(n-1-i)` is therefore an anti-automorphism.
+
+Every other Hamiltonian path is `alpha(P0)` for an automorphism alpha.
+Its positional reversal is `alpha r alpha^(-1)`, also an
+anti-automorphism. Hence **every rigid strong tournament is pure-blue**.
+The new alphabet theorem now leaves only C3 or R5; the latter has
+`H/Aut=15/5=3`. Including the singleton, the rigid strong alphabet
+is exactly `{1,C3}`. This argument does not use a Hamiltonian-bypass
+theorem.
+
+### Normal forms and an all-order coefficient of D_n
+
+By [THM-2454, the proved center law in section 2](../../01-canon/theorems/THM-2454-pure-blue-alphabet-and-center-law.md),
+every pure-blue class has the unique form
+
+    A -> Z -> A^op,
+
+where A is an ordered word in singleton and directed-triangle
+components, and Z is empty, singleton, C3 or R5.
+Let `a_0=1`, `a_j=0` for j<0, and `a_j=a_(j-1)+a_(j-3)`.
+The pure-blue node counting series, including the empty object, is
+
+    P(z)=(1+z+z^3+z^5)/(1-z^2-z^6).
+
+This P is not our degree polynomial D_n. Pure-blue fibre sizes are
+exactly one or three. Their respective counts are
+
+    L_(2m)=a_m,             J_(2m)=0,
+    L_(2m+1)=a_m+a_(m-1),  J_(2m+1)=a_(m-2).
+
+Conversely any degree-one node is pure-blue: black line multiplicities
+are even, and each loop consumes two incidences. Therefore, for n>=3,
+
+    [z]D_n(z)=L_n,
+
+and the entire pure-blue contribution to D_n is
+`L_n*z+J_n*z^3`. The other nodes are not asserted to have distinct
+degrees; in particular `[z^3]D_n >= J_n` is all that follows here.
+
+### Mixed landing and exact branch geometry
+
+At n>5 every pure-blue tournament is nonstrong, because its possible
+strong atoms have orders at most five. Its complement partners are
+strong by section 3, and cannot be pure-blue at that order. The same
+reason works at n=4. At n=5 the three pure-blue types are TT5,
+`1 -> C3 -> 1`, and R5.
+
+The root independently enumerated every Hamiltonian path and every
+vertex permutation for these three controls. Their complement
+partners are all strong, with `(H,|Aut|)` profiles respectively
+
+    TT5:             (9,1),
+    1 -> C3 -> 1:    (13,1),
+    R5:              (11,1), (13,1), (15,3).
+
+None is R5, whose profile is `(15,5)`. Thus **every pure-blue neighbor
+is mixed for every n>=4**. This avoids an additional endpoint-transport
+dependency. At n=3 the two pure-blue leaves are adjacent, as before.
+
+The incoming score-shell argument further proves the three neighbors
+of any degree-three pure-blue node are distinct, even after converse
+merging. For `A -> R5 -> A^op` with `|A|=r>=1`, its complement partner's
+central five vertices are exactly those of score r+2; the other scores
+are at most r or at least r+4. The induced central tournament is one
+of the three order-five partners with H=11,13,15. Hence no isomorphism,
+or converse isomorphism, can identify these three full partners.
+
+Consequently, at every n>=4, there are **exactly L_n leaf bridges**.
+All remaining bridges are classified by the black-component quotient
+after deleting these leaves. Its remaining pure-blue vertices are
+degree-three vertices with three distinct mixed neighbors in the
+original metagraph; contraction may identify those neighbors.
+Every other quotient vertex is black-active. This sharpens the
+all-even statement of section 4 to a structural description at all
+orders, but it does not prove that the remaining quotient has no bridges.
+
+The six-node abstract hostile has a bridge joining its two pure-blue
+nodes. The mixed-landing theorem now excludes it from the actual
+tournament metagraph at every n>=4; it also is not the two-node graph
+at n=3. Its abstract involution realization remains valid. Thus degree
+parity alone still cannot prove this exclusion, while the retained
+normal forms and partner constraints can.
+
+The metagraph agent additionally replayed the incoming independent
+prefix checker read-only: all 32,760 normalized odd-circulant
+presentations from order 9 through 31, all 591 residual-pattern cases
+through m=200, the four order-seven words, and the small positive
+controls passed. The symbolic proof supplies the all-order quantifier.
+
 ## Reproduction and scope
 
 The [independent script](../../04-computation/boundary_support_20261020_incoming.py)
 enumerates all 105 matchings, all 6,561 eight-port words and all 2,187
 seven-port words. The [receipt](../../04-computation/boundary_support_20261020_incoming.out)
 records the matching-sum identity, the budget-four normalization,
-and the hostile/repair parity counts.
+the hostile/repair parity counts, and the all-path order-five
+pure-blue partner audit.
 
     python3 04-computation/boundary_support_20261020_incoming.py
     python3 -O 04-computation/boundary_support_20261020_incoming.py

@@ -243,6 +243,11 @@ non-leaf bridges. The
 proof, its cited crossing-theorem dependency, and the new strong/periphery
 and triangle-current constraints. No black-core connectivity assumption
 is needed.
+Section 6 of that integration then audits the later uniform prefix
+classification and supplies a short rigid-strong lemma. It gives exact
+all-order leaf counts, `[z]D_n=L_n`, and the stronger leaf/trivalent
+description of all pure-blue nodes. The remaining non-leaf bridge
+criterion still uses Q with the known leaves removed.
 
 ## 4. Sufficient criteria for abstract complete wiring data
 

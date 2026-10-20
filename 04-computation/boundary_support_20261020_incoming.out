@@ -6,3 +6,7 @@ Leading coefficient: 1/384
 Seven-port equality hostile: support=27 parity-compatible=0
 Seven-port cubic junction: support=54 parity-compatible=54
 PASS: all identities checked by exhaustive labelled words
+C5 all-path partner (H,Aut) histogram: {(11, 1): 5, (13, 1): 5, (15, 3): 5}
+TT5 all-path partner (H,Aut) histogram: {(9, 1): 1}
+1->C3->1 all-path partner (H,Aut) histogram: {(13, 1): 3}
+PASS: order-five pure-blue partners are strong and not C5
