@@ -1,0 +1,1411 @@
+{
+  "status": "PASS",
+  "method": "Trial-division primality and factorization; Lagrange order reduction, checked independently by repeated multiplication",
+  "table": [
+    {
+      "c": 2,
+      "ell": 5,
+      "quotient": 11,
+      "prime": 11,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        110,
+        1210,
+        13310
+      ]
+    },
+    {
+      "c": 3,
+      "ell": 3,
+      "quotient": 7,
+      "prime": 7,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        42,
+        294,
+        2058
+      ]
+    },
+    {
+      "c": 4,
+      "ell": 3,
+      "quotient": 13,
+      "prime": 13,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        78,
+        1014,
+        13182
+      ]
+    },
+    {
+      "c": 16,
+      "ell": 3,
+      "quotient": 241,
+      "prime": 241,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        1446,
+        348486,
+        83985126
+      ]
+    },
+    {
+      "c": 256,
+      "ell": 3,
+      "quotient": 65281,
+      "prime": 97,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        582,
+        56454,
+        5476038
+      ]
+    },
+    {
+      "c": 65536,
+      "ell": 3,
+      "quotient": 4294901761,
+      "prime": 193,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        1158,
+        223494,
+        43134342
+      ]
+    },
+    {
+      "c": -2,
+      "ell": 3,
+      "quotient": 7,
+      "prime": 7,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        42,
+        294,
+        2058
+      ]
+    },
+    {
+      "c": -3,
+      "ell": 3,
+      "quotient": 13,
+      "prime": 13,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        78,
+        1014,
+        13182
+      ]
+    },
+    {
+      "c": -4,
+      "ell": 5,
+      "quotient": 341,
+      "prime": 11,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        110,
+        1210,
+        13310
+      ]
+    },
+    {
+      "c": -16,
+      "ell": 7,
+      "quotient": 17895697,
+      "prime": 29,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        406,
+        11774,
+        341446
+      ]
+    },
+    {
+      "c": -256,
+      "ell": 7,
+      "quotient": 282578800148737,
+      "prime": 29,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        406,
+        11774,
+        341446
+      ]
+    },
+    {
+      "c": -65536,
+      "ell": 7,
+      "quotient": 79229371458530977775699951617,
+      "prime": 29,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        406,
+        11774,
+        341446
+      ]
+    }
+  ],
+  "complete_factorization_controls": [
+    {
+      "c": 256,
+      "ell": 3,
+      "quotient": 65281,
+      "prime": 97,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        582,
+        56454,
+        5476038
+      ]
+    },
+    {
+      "c": 256,
+      "ell": 3,
+      "quotient": 65281,
+      "prime": 673,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        4038,
+        2717574,
+        1828927302
+      ]
+    },
+    {
+      "c": 65536,
+      "ell": 3,
+      "quotient": 4294901761,
+      "prime": 193,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        1158,
+        223494,
+        43134342
+      ]
+    },
+    {
+      "c": 65536,
+      "ell": 3,
+      "quotient": 4294901761,
+      "prime": 22253377,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        133520262,
+        2971276727424774,
+        66120941186709734961798
+      ]
+    }
+  ],
+  "bounded_universe": {
+    "integers": "[-12,12] excluding -1,0,1",
+    "exponents": [
+      3,
+      5,
+      7
+    ],
+    "filter": "ell does not divide c+1",
+    "scope": "Every distinct prime divisor of every admissible quotient",
+    "prime_divisor_controls": 77
+  },
+  "all_factor_rows": [
+    {
+      "c": -12,
+      "ell": 3,
+      "quotient": 157,
+      "prime": 157,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        942,
+        147894,
+        23219358
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -12,
+      "ell": 5,
+      "quotient": 22621,
+      "prime": 22621,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        226210,
+        5117096410,
+        115753837890610
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -12,
+      "ell": 7,
+      "quotient": 3257437,
+      "prime": 659,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        9226,
+        6079934,
+        4006676506
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -12,
+      "ell": 7,
+      "quotient": 3257437,
+      "prime": 4943,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        69202,
+        342065486,
+        1690829697298
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -11,
+      "ell": 3,
+      "quotient": 133,
+      "prime": 7,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        42,
+        294,
+        2058
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -11,
+      "ell": 3,
+      "quotient": 133,
+      "prime": 19,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        114,
+        2166,
+        41154
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -11,
+      "ell": 7,
+      "quotient": 1948717,
+      "prime": 43,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        602,
+        25886,
+        1113098
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -11,
+      "ell": 7,
+      "quotient": 1948717,
+      "prime": 45319,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        634466,
+        28753364654,
+        1303073732754626
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -10,
+      "ell": 5,
+      "quotient": 11111,
+      "prime": 41,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        410,
+        16810,
+        689210
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -10,
+      "ell": 5,
+      "quotient": 11111,
+      "prime": 271,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        2710,
+        734410,
+        199025110
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -10,
+      "ell": 7,
+      "quotient": 1111111,
+      "prime": 239,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        3346,
+        799694,
+        191126866
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -10,
+      "ell": 7,
+      "quotient": 1111111,
+      "prime": 4649,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        65086,
+        302584814,
+        1406716800286
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -9,
+      "ell": 3,
+      "quotient": 91,
+      "prime": 7,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        42,
+        294,
+        2058
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -9,
+      "ell": 3,
+      "quotient": 91,
+      "prime": 13,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        78,
+        1014,
+        13182
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -9,
+      "ell": 5,
+      "quotient": 7381,
+      "prime": 11,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        10,
+        110,
+        1210
+      ],
+      "factor_multiplicity": 2
+    },
+    {
+      "c": -9,
+      "ell": 5,
+      "quotient": 7381,
+      "prime": 61,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        610,
+        37210,
+        2269810
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -9,
+      "ell": 7,
+      "quotient": 597871,
+      "prime": 547,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        7658,
+        4188926,
+        2291342522
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -9,
+      "ell": 7,
+      "quotient": 597871,
+      "prime": 1093,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        15302,
+        16725086,
+        18280518998
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -8,
+      "ell": 3,
+      "quotient": 73,
+      "prime": 73,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        438,
+        31974,
+        2334102
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -8,
+      "ell": 5,
+      "quotient": 4681,
+      "prime": 31,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        310,
+        9610,
+        297910
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -8,
+      "ell": 5,
+      "quotient": 4681,
+      "prime": 151,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        1510,
+        228010,
+        34429510
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -7,
+      "ell": 5,
+      "quotient": 2801,
+      "prime": 2801,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        28010,
+        78456010,
+        219755284010
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -7,
+      "ell": 7,
+      "quotient": 137257,
+      "prime": 29,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        406,
+        11774,
+        341446
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -7,
+      "ell": 7,
+      "quotient": 137257,
+      "prime": 4733,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        66262,
+        313618046,
+        1484354211718
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -6,
+      "ell": 3,
+      "quotient": 43,
+      "prime": 43,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        258,
+        11094,
+        477042
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -6,
+      "ell": 7,
+      "quotient": 55987,
+      "prime": 55987,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        783818,
+        43883618366,
+        2456912141457242
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -5,
+      "ell": 3,
+      "quotient": 31,
+      "prime": 31,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        186,
+        5766,
+        178746
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -5,
+      "ell": 5,
+      "quotient": 781,
+      "prime": 11,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        110,
+        1210,
+        13310
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -5,
+      "ell": 5,
+      "quotient": 781,
+      "prime": 71,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        710,
+        50410,
+        3579110
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -5,
+      "ell": 7,
+      "quotient": 19531,
+      "prime": 19531,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        273434,
+        5340439454,
+        104304122976074
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -4,
+      "ell": 5,
+      "quotient": 341,
+      "prime": 11,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        110,
+        1210,
+        13310
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -4,
+      "ell": 5,
+      "quotient": 341,
+      "prime": 31,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        310,
+        9610,
+        297910
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -4,
+      "ell": 7,
+      "quotient": 5461,
+      "prime": 43,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        602,
+        25886,
+        1113098
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -4,
+      "ell": 7,
+      "quotient": 5461,
+      "prime": 127,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        1778,
+        225806,
+        28677362
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -3,
+      "ell": 3,
+      "quotient": 13,
+      "prime": 13,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        78,
+        1014,
+        13182
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -3,
+      "ell": 5,
+      "quotient": 121,
+      "prime": 11,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        10,
+        110,
+        1210
+      ],
+      "factor_multiplicity": 2
+    },
+    {
+      "c": -3,
+      "ell": 7,
+      "quotient": 1093,
+      "prime": 1093,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        15302,
+        16725086,
+        18280518998
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -2,
+      "ell": 3,
+      "quotient": 7,
+      "prime": 7,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        42,
+        294,
+        2058
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -2,
+      "ell": 5,
+      "quotient": 31,
+      "prime": 31,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        310,
+        9610,
+        297910
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": -2,
+      "ell": 7,
+      "quotient": 127,
+      "prime": 127,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        1778,
+        225806,
+        28677362
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 2,
+      "ell": 5,
+      "quotient": 11,
+      "prime": 11,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        110,
+        1210,
+        13310
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 2,
+      "ell": 7,
+      "quotient": 43,
+      "prime": 43,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        602,
+        25886,
+        1113098
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 3,
+      "ell": 3,
+      "quotient": 7,
+      "prime": 7,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        42,
+        294,
+        2058
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 3,
+      "ell": 5,
+      "quotient": 61,
+      "prime": 61,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        610,
+        37210,
+        2269810
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 3,
+      "ell": 7,
+      "quotient": 547,
+      "prime": 547,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        7658,
+        4188926,
+        2291342522
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 4,
+      "ell": 3,
+      "quotient": 13,
+      "prime": 13,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        78,
+        1014,
+        13182
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 4,
+      "ell": 7,
+      "quotient": 3277,
+      "prime": 29,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        406,
+        11774,
+        341446
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 4,
+      "ell": 7,
+      "quotient": 3277,
+      "prime": 113,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        1582,
+        178766,
+        20200558
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 5,
+      "ell": 5,
+      "quotient": 521,
+      "prime": 521,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        5210,
+        2714410,
+        1414207610
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 5,
+      "ell": 7,
+      "quotient": 13021,
+      "prime": 29,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        406,
+        11774,
+        341446
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 5,
+      "ell": 7,
+      "quotient": 13021,
+      "prime": 449,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        6286,
+        2822414,
+        1267263886
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 6,
+      "ell": 3,
+      "quotient": 31,
+      "prime": 31,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        186,
+        5766,
+        178746
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 6,
+      "ell": 5,
+      "quotient": 1111,
+      "prime": 11,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        110,
+        1210,
+        13310
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 6,
+      "ell": 5,
+      "quotient": 1111,
+      "prime": 101,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        1010,
+        102010,
+        10303010
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 7,
+      "ell": 3,
+      "quotient": 43,
+      "prime": 43,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        258,
+        11094,
+        477042
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 7,
+      "ell": 5,
+      "quotient": 2101,
+      "prime": 11,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        110,
+        1210,
+        13310
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 7,
+      "ell": 5,
+      "quotient": 2101,
+      "prime": 191,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        1910,
+        364810,
+        69678710
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 7,
+      "ell": 7,
+      "quotient": 102943,
+      "prime": 113,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        1582,
+        178766,
+        20200558
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 7,
+      "ell": 7,
+      "quotient": 102943,
+      "prime": 911,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        12754,
+        11618894,
+        10584812434
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 8,
+      "ell": 5,
+      "quotient": 3641,
+      "prime": 11,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        110,
+        1210,
+        13310
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 8,
+      "ell": 5,
+      "quotient": 3641,
+      "prime": 331,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        3310,
+        1095610,
+        362646910
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 8,
+      "ell": 7,
+      "quotient": 233017,
+      "prime": 43,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        602,
+        25886,
+        1113098
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 8,
+      "ell": 7,
+      "quotient": 233017,
+      "prime": 5419,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        75866,
+        411117854,
+        2227847650826
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 9,
+      "ell": 3,
+      "quotient": 73,
+      "prime": 73,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        438,
+        31974,
+        2334102
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 9,
+      "ell": 7,
+      "quotient": 478297,
+      "prime": 29,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        406,
+        11774,
+        341446
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 9,
+      "ell": 7,
+      "quotient": 478297,
+      "prime": 16493,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        230902,
+        3808266686,
+        62809742452198
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 10,
+      "ell": 3,
+      "quotient": 91,
+      "prime": 7,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        42,
+        294,
+        2058
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 10,
+      "ell": 3,
+      "quotient": 91,
+      "prime": 13,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        78,
+        1014,
+        13182
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 10,
+      "ell": 5,
+      "quotient": 9091,
+      "prime": 9091,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        90910,
+        826462810,
+        7513373405710
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 10,
+      "ell": 7,
+      "quotient": 909091,
+      "prime": 909091,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        12727274,
+        11570250247934,
+        10518410368144567994
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 11,
+      "ell": 5,
+      "quotient": 13421,
+      "prime": 13421,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        134210,
+        1801232410,
+        24174340174610
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 11,
+      "ell": 7,
+      "quotient": 1623931,
+      "prime": 1623931,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        22735034,
+        36920126498654,
+        59955737945085688874
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 12,
+      "ell": 3,
+      "quotient": 133,
+      "prime": 7,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        42,
+        294,
+        2058
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 12,
+      "ell": 3,
+      "quotient": 133,
+      "prime": 19,
+      "order": 6,
+      "prime_power_orders_r_1_to_4": [
+        6,
+        114,
+        2166,
+        41154
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 12,
+      "ell": 5,
+      "quotient": 19141,
+      "prime": 19141,
+      "order": 10,
+      "prime_power_orders_r_1_to_4": [
+        10,
+        191410,
+        3663778810,
+        70128390202210
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 12,
+      "ell": 7,
+      "quotient": 2756293,
+      "prime": 211,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        2954,
+        623294,
+        131515034
+      ],
+      "factor_multiplicity": 1
+    },
+    {
+      "c": 12,
+      "ell": 7,
+      "quotient": 2756293,
+      "prime": 13063,
+      "order": 14,
+      "prime_power_orders_r_1_to_4": [
+        14,
+        182882,
+        2388987566,
+        31207344574658
+      ],
+      "factor_multiplicity": 1
+    }
+  ],
+  "boundary_primes_count": 94,
+  "hostiles": [
+    {
+      "c": 2,
+      "exponent": 3,
+      "quotient": 3,
+      "prime": 3,
+      "order": 2
+    },
+    {
+      "c": -4,
+      "exponent": 3,
+      "quotient": 21,
+      "prime": 3,
+      "order": 2
+    },
+    {
+      "c": 3,
+      "exponent": 9,
+      "quotient": 4921,
+      "prime": 7,
+      "order": 6
+    }
+  ],
+  "prime_power_scope": "Every positive control checked for r=1,2,3,4",
+  "ring_circulant_controls_including_nonunits": [
+    {
+      "c": 2,
+      "prime": 11,
+      "exponent": 2,
+      "modulus": 121,
+      "odd_subgroup_size": 55,
+      "orbit_pairs": 2,
+      "tournament_size": 60,
+      "nonunits_in_tournament": 5,
+      "derivative_size": 120
+    },
+    {
+      "c": 2,
+      "prime": 11,
+      "exponent": 3,
+      "modulus": 1331,
+      "odd_subgroup_size": 605,
+      "orbit_pairs": 3,
+      "tournament_size": 665,
+      "nonunits_in_tournament": 60,
+      "derivative_size": 1330
+    },
+    {
+      "c": -2,
+      "prime": 7,
+      "exponent": 2,
+      "modulus": 49,
+      "odd_subgroup_size": 21,
+      "orbit_pairs": 2,
+      "tournament_size": 24,
+      "nonunits_in_tournament": 3,
+      "derivative_size": 48
+    },
+    {
+      "c": -2,
+      "prime": 7,
+      "exponent": 3,
+      "modulus": 343,
+      "odd_subgroup_size": 147,
+      "orbit_pairs": 3,
+      "tournament_size": 171,
+      "nonunits_in_tournament": 24,
+      "derivative_size": 342
+    },
+    {
+      "c": 4,
+      "prime": 13,
+      "exponent": 2,
+      "modulus": 169,
+      "odd_subgroup_size": 39,
+      "orbit_pairs": 4,
+      "tournament_size": 84,
+      "nonunits_in_tournament": 6,
+      "derivative_size": 168
+    },
+    {
+      "c": 4,
+      "prime": 13,
+      "exponent": 3,
+      "modulus": 2197,
+      "odd_subgroup_size": 507,
+      "orbit_pairs": 6,
+      "tournament_size": 1098,
+      "nonunits_in_tournament": 84,
+      "derivative_size": 2196
+    },
+    {
+      "c": -16,
+      "prime": 29,
+      "exponent": 2,
+      "modulus": 841,
+      "odd_subgroup_size": 203,
+      "orbit_pairs": 4,
+      "tournament_size": 420,
+      "nonunits_in_tournament": 14,
+      "derivative_size": 840
+    }
+  ]
+}
