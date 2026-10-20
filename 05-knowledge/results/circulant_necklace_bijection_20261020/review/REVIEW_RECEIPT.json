@@ -1,0 +1,20 @@
+{
+  "external_source": {
+    "accessed_date": "2026-10-20",
+    "locator": "Theorem A, items M1, N1, N2",
+    "status": "CITED, not independently reproved",
+    "url": "https://arxiv.org/html/2508.12924v2"
+  },
+  "large_verifier_rerun": false,
+  "main_source_sha256": "04934063ff00f007cff66dd1e65dea4536c900a28906bccd70fa9ad0ae5f4903",
+  "normal_optimized_receipts_identical": true,
+  "proof_scope": "Full elementary all-prime construction; cited Baker composition checked against Theorem A only",
+  "source_hashes": {
+    "CIRCULANT_NECKLACE_BIJECTION.md": "04934063ff00f007cff66dd1e65dea4536c900a28906bccd70fa9ad0ae5f4903",
+    "SHA256SUMS.txt": "1242cc68c5d58126b45440d69bfb18325a06d25fc5e43f2bce7a33146eda7c00",
+    "VALIDATION_RECEIPT.md": "7fb3a26adf4d45a0cd67ade8c2b27bf44be10951b9ba0f4ca99e12a0c77c9851",
+    "verification.optimized.out": "4c21d9a10621ddcb96d718856df464be9bc3f8ffe80d42cf0de65cfc542659b9",
+    "verification.out": "4c21d9a10621ddcb96d718856df464be9bc3f8ffe80d42cf0de65cfc542659b9"
+  },
+  "status": "PASS"
+}

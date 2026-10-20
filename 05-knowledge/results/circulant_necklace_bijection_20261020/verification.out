@@ -1,0 +1,352 @@
+{
+  "checks": 1757041,
+  "hostiles": {
+    "p5_fixed_square": {
+      "D": [
+        0,
+        1
+      ],
+      "D2": [
+        1,
+        1
+      ],
+      "D3": [
+        0,
+        0
+      ],
+      "tournament": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "primitive_parity": "0101 has even total weight and odd primitive-root weight."
+  },
+  "necklaces": [
+    {
+      "generic_lex_max_steps": 1,
+      "m": 1,
+      "max_steps": 1,
+      "necklaces": 2,
+      "sources": 1,
+      "step_histogram": {
+        "1": 1
+      },
+      "targets": 1
+    },
+    {
+      "generic_lex_max_steps": 2,
+      "m": 2,
+      "max_steps": 2,
+      "necklaces": 3,
+      "sources": 1,
+      "step_histogram": {
+        "2": 1
+      },
+      "targets": 1
+    },
+    {
+      "generic_lex_max_steps": 2,
+      "m": 3,
+      "max_steps": 1,
+      "necklaces": 4,
+      "sources": 2,
+      "step_histogram": {
+        "1": 2
+      },
+      "targets": 2
+    },
+    {
+      "generic_lex_max_steps": 4,
+      "m": 4,
+      "max_steps": 4,
+      "necklaces": 6,
+      "sources": 2,
+      "step_histogram": {
+        "1": 1,
+        "4": 1
+      },
+      "targets": 2
+    },
+    {
+      "generic_lex_max_steps": 4,
+      "m": 5,
+      "max_steps": 1,
+      "necklaces": 8,
+      "sources": 4,
+      "step_histogram": {
+        "1": 4
+      },
+      "targets": 4
+    },
+    {
+      "generic_lex_max_steps": 4,
+      "m": 6,
+      "max_steps": 2,
+      "necklaces": 14,
+      "sources": 6,
+      "step_histogram": {
+        "1": 2,
+        "2": 4
+      },
+      "targets": 6
+    },
+    {
+      "generic_lex_max_steps": 4,
+      "m": 7,
+      "max_steps": 1,
+      "necklaces": 20,
+      "sources": 10,
+      "step_histogram": {
+        "1": 10
+      },
+      "targets": 10
+    },
+    {
+      "generic_lex_max_steps": 8,
+      "m": 8,
+      "max_steps": 8,
+      "necklaces": 36,
+      "sources": 16,
+      "step_histogram": {
+        "1": 8,
+        "2": 4,
+        "3": 2,
+        "5": 1,
+        "8": 1
+      },
+      "targets": 16
+    },
+    {
+      "generic_lex_max_steps": 8,
+      "m": 9,
+      "max_steps": 1,
+      "necklaces": 60,
+      "sources": 30,
+      "step_histogram": {
+        "1": 30
+      },
+      "targets": 30
+    },
+    {
+      "generic_lex_max_steps": 8,
+      "m": 10,
+      "max_steps": 2,
+      "necklaces": 108,
+      "sources": 52,
+      "step_histogram": {
+        "1": 24,
+        "2": 28
+      },
+      "targets": 52
+    },
+    {
+      "generic_lex_max_steps": 8,
+      "m": 11,
+      "max_steps": 1,
+      "necklaces": 188,
+      "sources": 94,
+      "step_histogram": {
+        "1": 94
+      },
+      "targets": 94
+    },
+    {
+      "generic_lex_max_steps": 8,
+      "m": 12,
+      "max_steps": 4,
+      "necklaces": 352,
+      "sources": 172,
+      "step_histogram": {
+        "1": 86,
+        "2": 40,
+        "3": 22,
+        "4": 24
+      },
+      "targets": 172
+    },
+    {
+      "generic_lex_max_steps": 8,
+      "m": 13,
+      "max_steps": 1,
+      "necklaces": 632,
+      "sources": 316,
+      "step_histogram": {
+        "1": 316
+      },
+      "targets": 316
+    },
+    {
+      "generic_lex_max_steps": 8,
+      "m": 14,
+      "max_steps": 2,
+      "necklaces": 1182,
+      "sources": 586,
+      "step_histogram": {
+        "1": 288,
+        "2": 298
+      },
+      "targets": 586
+    },
+    {
+      "generic_lex_max_steps": 8,
+      "m": 15,
+      "max_steps": 1,
+      "necklaces": 2192,
+      "sources": 1096,
+      "step_histogram": {
+        "1": 1096
+      },
+      "targets": 1096
+    },
+    {
+      "generic_lex_max_steps": 16,
+      "m": 16,
+      "max_steps": 16,
+      "necklaces": 4116,
+      "sources": 2048,
+      "step_histogram": {
+        "1": 1024,
+        "2": 512,
+        "3": 256,
+        "4": 128,
+        "5": 64,
+        "6": 32,
+        "7": 16,
+        "9": 8,
+        "10": 4,
+        "11": 2,
+        "13": 1,
+        "16": 1
+      },
+      "targets": 2048
+    }
+  ],
+  "prime_circulants": [
+    {
+      "automorphisms_examined": 2,
+      "even_graph_labelled": 1,
+      "fibers": {
+        "2": 1
+      },
+      "graph_words_independently_checked": 2,
+      "p": 3,
+      "primitive_root": 2,
+      "tournament_labelled": 2,
+      "types": 1
+    },
+    {
+      "automorphisms_examined": 6,
+      "even_graph_labelled": 1,
+      "fibers": {
+        "4": 1
+      },
+      "graph_words_independently_checked": 4,
+      "p": 5,
+      "primitive_root": 2,
+      "tournament_labelled": 4,
+      "types": 1
+    },
+    {
+      "automorphisms_examined": 50,
+      "even_graph_labelled": 4,
+      "fibers": {
+        "2": 4
+      },
+      "graph_words_independently_checked": 8,
+      "p": 7,
+      "primitive_root": 3,
+      "tournament_labelled": 8,
+      "types": 2
+    },
+    {
+      "automorphisms_examined": 362,
+      "even_graph_labelled": 16,
+      "fibers": {
+        "2": 16
+      },
+      "graph_words_independently_checked": 32,
+      "p": 11,
+      "primitive_root": 2,
+      "tournament_labelled": 32,
+      "types": 4
+    },
+    {
+      "automorphisms_examined": 854,
+      "even_graph_labelled": 28,
+      "fibers": {
+        "2": 24,
+        "4": 4
+      },
+      "graph_words_independently_checked": 64,
+      "p": 13,
+      "primitive_root": 2,
+      "tournament_labelled": 64,
+      "types": 6
+    },
+    {
+      "automorphisms_examined": 0,
+      "even_graph_labelled": 117,
+      "fibers": {
+        "2": 112,
+        "4": 4,
+        "16": 1
+      },
+      "graph_words_independently_checked": 0,
+      "p": 17,
+      "primitive_root": 3,
+      "tournament_labelled": 256,
+      "types": 16
+    },
+    {
+      "automorphisms_examined": 0,
+      "even_graph_labelled": 256,
+      "fibers": {
+        "2": 256
+      },
+      "graph_words_independently_checked": 0,
+      "p": 19,
+      "primitive_root": 2,
+      "tournament_labelled": 512,
+      "types": 30
+    },
+    {
+      "automorphisms_examined": 0,
+      "even_graph_labelled": 1024,
+      "fibers": {
+        "2": 1024
+      },
+      "graph_words_independently_checked": 0,
+      "p": 23,
+      "primitive_root": 5,
+      "tournament_labelled": 2048,
+      "types": 94
+    },
+    {
+      "automorphisms_examined": 0,
+      "even_graph_labelled": 8128,
+      "fibers": {
+        "2": 8064,
+        "4": 64
+      },
+      "graph_words_independently_checked": 0,
+      "p": 29,
+      "primitive_root": 2,
+      "tournament_labelled": 16384,
+      "types": 586
+    },
+    {
+      "automorphisms_examined": 0,
+      "even_graph_labelled": 16384,
+      "fibers": {
+        "2": 16384
+      },
+      "graph_words_independently_checked": 0,
+      "p": 31,
+      "primitive_root": 3,
+      "tournament_labelled": 32768,
+      "types": 1096
+    }
+  ]
+}
