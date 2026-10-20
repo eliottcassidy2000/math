@@ -1,0 +1,31 @@
+{
+  "rows": [
+    {
+      "affine_parameter_pairs_covered": 4,
+      "equivariant_affine_maps": 2,
+      "m": 1,
+      "matrices_considered": 2
+    },
+    {
+      "affine_parameter_pairs_covered": 64,
+      "equivariant_affine_maps": 4,
+      "m": 2,
+      "matrices_considered": 16
+    },
+    {
+      "affine_parameter_pairs_covered": 4096,
+      "equivariant_affine_maps": 8,
+      "m": 3,
+      "matrices_considered": 512
+    },
+    {
+      "affine_parameter_pairs_covered": 1048576,
+      "equivariant_affine_maps": 16,
+      "m": 4,
+      "matrices_considered": 65536
+    }
+  ],
+  "script_sha256": "e6c9114daad08496053d2153afca25507dcc8ac0759eb9eac8cff71340ff0634",
+  "status": "PASS",
+  "universe": "Every matrix A and every translation b for dimensions 1 through 4, using independently derived coefficient identities"
+}

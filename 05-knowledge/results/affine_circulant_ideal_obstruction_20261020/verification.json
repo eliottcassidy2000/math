@@ -1,0 +1,232 @@
+{
+  "checks": 45248,
+  "odd_word_map_evaluations": 11184810,
+  "rows": [
+    {
+      "admissible_affine_maps": 1,
+      "admissible_by_nilpotent_height": {
+        "0": 1
+      },
+      "admissible_maps_hitting_zero": 1,
+      "affine_labelled_surjections": 1,
+      "affine_maps": 2,
+      "affine_type_bijections": 1,
+      "dyadic_depth": 1,
+      "m": 1,
+      "maximum_affine_rank": 0,
+      "maximum_target_types_covered": 1,
+      "maximum_target_types_covered_hitting_zero": 1,
+      "source_types": 1,
+      "target_labelled": 1,
+      "target_types": 1
+    },
+    {
+      "admissible_affine_maps": 1,
+      "admissible_by_nilpotent_height": {
+        "0": 1
+      },
+      "admissible_maps_hitting_zero": 1,
+      "affine_labelled_surjections": 1,
+      "affine_maps": 4,
+      "affine_type_bijections": 1,
+      "dyadic_depth": 2,
+      "m": 2,
+      "maximum_affine_rank": 0,
+      "maximum_target_types_covered": 1,
+      "maximum_target_types_covered_hitting_zero": 1,
+      "source_types": 1,
+      "target_labelled": 1,
+      "target_types": 1
+    },
+    {
+      "admissible_affine_maps": 4,
+      "admissible_by_nilpotent_height": {
+        "0": 4
+      },
+      "admissible_maps_hitting_zero": 4,
+      "affine_labelled_surjections": 3,
+      "affine_maps": 8,
+      "affine_type_bijections": 3,
+      "dyadic_depth": 1,
+      "m": 3,
+      "maximum_affine_rank": 2,
+      "maximum_target_types_covered": 2,
+      "maximum_target_types_covered_hitting_zero": 2,
+      "source_types": 2,
+      "target_labelled": 4,
+      "target_types": 2
+    },
+    {
+      "admissible_affine_maps": 5,
+      "admissible_by_nilpotent_height": {
+        "0": 1,
+        "3": 4
+      },
+      "admissible_maps_hitting_zero": 1,
+      "affine_labelled_surjections": 0,
+      "affine_maps": 16,
+      "affine_type_bijections": 0,
+      "dyadic_depth": 4,
+      "m": 4,
+      "maximum_affine_rank": 2,
+      "maximum_target_types_covered": 1,
+      "maximum_target_types_covered_hitting_zero": 1,
+      "source_types": 2,
+      "target_labelled": 5,
+      "target_types": 2
+    },
+    {
+      "admissible_affine_maps": 16,
+      "admissible_by_nilpotent_height": {
+        "0": 16
+      },
+      "admissible_maps_hitting_zero": 16,
+      "affine_labelled_surjections": 15,
+      "affine_maps": 32,
+      "affine_type_bijections": 15,
+      "dyadic_depth": 1,
+      "m": 5,
+      "maximum_affine_rank": 4,
+      "maximum_target_types_covered": 4,
+      "maximum_target_types_covered_hitting_zero": 4,
+      "source_types": 4,
+      "target_labelled": 16,
+      "target_types": 4
+    },
+    {
+      "admissible_affine_maps": 16,
+      "admissible_by_nilpotent_height": {
+        "0": 16
+      },
+      "admissible_maps_hitting_zero": 16,
+      "affine_labelled_surjections": 0,
+      "affine_maps": 64,
+      "affine_type_bijections": 0,
+      "dyadic_depth": 2,
+      "m": 6,
+      "maximum_affine_rank": 4,
+      "maximum_target_types_covered": 4,
+      "maximum_target_types_covered_hitting_zero": 4,
+      "source_types": 6,
+      "target_labelled": 28,
+      "target_types": 6
+    },
+    {
+      "admissible_affine_maps": 64,
+      "admissible_by_nilpotent_height": {
+        "0": 64
+      },
+      "admissible_maps_hitting_zero": 64,
+      "affine_labelled_surjections": 49,
+      "affine_maps": 128,
+      "affine_type_bijections": 49,
+      "dyadic_depth": 1,
+      "m": 7,
+      "maximum_affine_rank": 6,
+      "maximum_target_types_covered": 10,
+      "maximum_target_types_covered_hitting_zero": 10,
+      "source_types": 10,
+      "target_labelled": 64,
+      "target_types": 10
+    },
+    {
+      "admissible_affine_maps": 117,
+      "admissible_by_nilpotent_height": {
+        "0": 1,
+        "3": 4,
+        "5": 16,
+        "6": 32,
+        "7": 64
+      },
+      "admissible_maps_hitting_zero": 1,
+      "affine_labelled_surjections": 0,
+      "affine_maps": 256,
+      "affine_type_bijections": 0,
+      "dyadic_depth": 8,
+      "m": 8,
+      "maximum_affine_rank": 6,
+      "maximum_target_types_covered": 8,
+      "maximum_target_types_covered_hitting_zero": 1,
+      "source_types": 16,
+      "target_labelled": 117,
+      "target_types": 16
+    },
+    {
+      "admissible_affine_maps": 256,
+      "admissible_by_nilpotent_height": {
+        "0": 256
+      },
+      "admissible_maps_hitting_zero": 256,
+      "affine_labelled_surjections": 189,
+      "affine_maps": 512,
+      "affine_type_bijections": 189,
+      "dyadic_depth": 1,
+      "m": 9,
+      "maximum_affine_rank": 8,
+      "maximum_target_types_covered": 30,
+      "maximum_target_types_covered_hitting_zero": 30,
+      "source_types": 30,
+      "target_labelled": 256,
+      "target_types": 30
+    },
+    {
+      "admissible_affine_maps": 256,
+      "admissible_by_nilpotent_height": {
+        "0": 256
+      },
+      "admissible_maps_hitting_zero": 256,
+      "affine_labelled_surjections": 0,
+      "affine_maps": 1024,
+      "affine_type_bijections": 0,
+      "dyadic_depth": 2,
+      "m": 10,
+      "maximum_affine_rank": 8,
+      "maximum_target_types_covered": 28,
+      "maximum_target_types_covered_hitting_zero": 28,
+      "source_types": 52,
+      "target_labelled": 496,
+      "target_types": 52
+    },
+    {
+      "admissible_affine_maps": 1024,
+      "admissible_by_nilpotent_height": {
+        "0": 1024
+      },
+      "admissible_maps_hitting_zero": 1024,
+      "affine_labelled_surjections": 1023,
+      "affine_maps": 2048,
+      "affine_type_bijections": 1023,
+      "dyadic_depth": 1,
+      "m": 11,
+      "maximum_affine_rank": 10,
+      "maximum_target_types_covered": 94,
+      "maximum_target_types_covered_hitting_zero": 94,
+      "source_types": 94,
+      "target_labelled": 1024,
+      "target_types": 94
+    },
+    {
+      "admissible_affine_maps": 1280,
+      "admissible_by_nilpotent_height": {
+        "0": 256,
+        "3": 1024
+      },
+      "admissible_maps_hitting_zero": 256,
+      "affine_labelled_surjections": 0,
+      "affine_maps": 4096,
+      "affine_type_bijections": 0,
+      "dyadic_depth": 4,
+      "m": 12,
+      "maximum_affine_rank": 10,
+      "maximum_target_types_covered": 86,
+      "maximum_target_types_covered_hitting_zero": 24,
+      "source_types": 172,
+      "target_labelled": 2012,
+      "target_types": 172
+    }
+  ],
+  "script_sha256": "2133b46abb7c4cd4c4f3919f5d0decd8cad6d097fe4032c21c907361ca6276c0",
+  "source_map_evaluations": 22369620,
+  "status": "PASS",
+  "universe": "all m=1,...,12; every polynomial h and every input word; all arbitrary affine maps for m<=3"
+}
