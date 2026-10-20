@@ -178,3 +178,8 @@ computation needs universe, controls, command, and output. Route `CLAIMED` and
 ## Digest entry moved from INDEX.md on 2026-10-19 (line budget; mac-mini-2026-10-19-twothree)
 
 - **HYP-9172 (OPEN, collatz-procgen-20260922 tbij lane, 2026-10-01; with THM-4531):** [no natural bijection for the twisted Mallows-Sloane identities at any n >= 5](HYP-9172-no-natural-bijection-for-twisted-mallows-sloane-at-any-n-ge-5.md) (proved 5 <= n <= 100 for switching classes, 5..15 plus sporadic n for tournaments vs even graphs; reduces to Goldbach/Lemoine-type additive questions); plus THM-479 branch integrality for n = 0 mod 4.
+
+## Digest entry moved from INDEX.md on 2026-10-19 (line budget; mac-mini-2026-10-19-evengraphs)
+
+- **HYP-8950 (OPEN JC SYNTHESIS):** Hamiltonian cokernel/fiber cohomology
+  realizes weight and face obstructions; local-to-global termination remains.
