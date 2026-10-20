@@ -1,0 +1,285 @@
+{
+  "all_counts": {
+    "1": {
+      "path_marked_classes": 1,
+      "unmarked_classes": 1
+    },
+    "2": {
+      "path_marked_classes": 1,
+      "unmarked_classes": 1
+    },
+    "3": {
+      "path_marked_classes": 2,
+      "unmarked_classes": 2
+    },
+    "4": {
+      "path_marked_classes": 8,
+      "unmarked_classes": 4
+    }
+  },
+  "checks": {
+    "mirror_cases": 12,
+    "path_orbit_fibres": 8,
+    "strong_interval_cover_cases": 12,
+    "transitivity_cases": 12,
+    "triangle_predicate_cases": 34
+  },
+  "filters": "None beyond the stated universes",
+  "minimal_order_loss_hostile": [
+    {
+      "Aut": 3,
+      "H": 3,
+      "U_type": "transitive",
+      "bits_x13_x14_x24": "100",
+      "directed_triangles": 1,
+      "graph_edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "mask": 1,
+      "outdegrees_sorted": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "tournament_type": "C3 -> sink"
+    },
+    {
+      "Aut": 1,
+      "H": 5,
+      "U_type": "C3",
+      "bits_x13_x14_x24": "010",
+      "directed_triangles": 2,
+      "graph_edges": [
+        [
+          1,
+          3
+        ]
+      ],
+      "mask": 2,
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "tournament_type": "strong"
+    },
+    {
+      "Aut": 3,
+      "H": 3,
+      "U_type": "transitive",
+      "bits_x13_x14_x24": "001",
+      "directed_triangles": 1,
+      "graph_edges": [
+        [
+          2,
+          3
+        ]
+      ],
+      "mask": 4,
+      "outdegrees_sorted": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "tournament_type": "source -> C3"
+    }
+  ],
+  "n4_table": [
+    {
+      "Aut": 1,
+      "H": 1,
+      "U_type": "transitive",
+      "bits_x13_x14_x24": "000",
+      "directed_triangles": 0,
+      "graph_edges": [],
+      "mask": 0,
+      "outdegrees_sorted": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "tournament_type": "transitive"
+    },
+    {
+      "Aut": 3,
+      "H": 3,
+      "U_type": "transitive",
+      "bits_x13_x14_x24": "100",
+      "directed_triangles": 1,
+      "graph_edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "mask": 1,
+      "outdegrees_sorted": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "tournament_type": "C3 -> sink"
+    },
+    {
+      "Aut": 1,
+      "H": 5,
+      "U_type": "C3",
+      "bits_x13_x14_x24": "010",
+      "directed_triangles": 2,
+      "graph_edges": [
+        [
+          1,
+          3
+        ]
+      ],
+      "mask": 2,
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "tournament_type": "strong"
+    },
+    {
+      "Aut": 1,
+      "H": 5,
+      "U_type": "transitive",
+      "bits_x13_x14_x24": "110",
+      "directed_triangles": 2,
+      "graph_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "mask": 3,
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "tournament_type": "strong"
+    },
+    {
+      "Aut": 3,
+      "H": 3,
+      "U_type": "transitive",
+      "bits_x13_x14_x24": "001",
+      "directed_triangles": 1,
+      "graph_edges": [
+        [
+          2,
+          3
+        ]
+      ],
+      "mask": 4,
+      "outdegrees_sorted": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "tournament_type": "source -> C3"
+    },
+    {
+      "Aut": 1,
+      "H": 5,
+      "U_type": "C3",
+      "bits_x13_x14_x24": "101",
+      "directed_triangles": 2,
+      "graph_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "mask": 5,
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "tournament_type": "strong"
+    },
+    {
+      "Aut": 1,
+      "H": 5,
+      "U_type": "transitive",
+      "bits_x13_x14_x24": "011",
+      "directed_triangles": 2,
+      "graph_edges": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "mask": 6,
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "tournament_type": "strong"
+    },
+    {
+      "Aut": 1,
+      "H": 5,
+      "U_type": "transitive",
+      "bits_x13_x14_x24": "111",
+      "directed_triangles": 2,
+      "graph_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "mask": 7,
+      "outdegrees_sorted": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "tournament_type": "strong"
+    }
+  ],
+  "status": "FINITE-EXACT; all explicit checks passed (also active under python -O)",
+  "three_edge_graph_counts": {
+    "K1,3": 4,
+    "K3 + K1": 4,
+    "P4": 12
+  },
+  "universe": "All path-normalized tournaments n=1..4; all 20 labelled 3-edge graphs on [4]"
+}

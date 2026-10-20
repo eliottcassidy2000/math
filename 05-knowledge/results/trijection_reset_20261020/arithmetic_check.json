@@ -1,0 +1,105 @@
+{
+  "exponent_universe": [
+    2,
+    40
+  ],
+  "first_rows": [
+    {
+      "fixed_C_Q_CQ": [
+        0,
+        4,
+        2
+      ],
+      "k": 2,
+      "sign_f": [
+        4,
+        2,
+        4
+      ],
+      "sign_g": [
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "fixed_C_Q_CQ": [
+        0,
+        6,
+        0
+      ],
+      "k": 3,
+      "sign_f": [
+        7,
+        0,
+        7
+      ],
+      "sign_g": [
+        4,
+        6,
+        4
+      ]
+    },
+    {
+      "fixed_C_Q_CQ": [
+        0,
+        8,
+        2
+      ],
+      "k": 4,
+      "sign_f": [
+        8,
+        2,
+        8
+      ],
+      "sign_g": [
+        5,
+        8,
+        5
+      ]
+    },
+    {
+      "fixed_C_Q_CQ": [
+        0,
+        10,
+        0
+      ],
+      "k": 5,
+      "sign_f": [
+        11,
+        0,
+        11
+      ],
+      "sign_g": [
+        6,
+        10,
+        6
+      ]
+    },
+    {
+      "fixed_C_Q_CQ": [
+        0,
+        12,
+        2
+      ],
+      "k": 6,
+      "sign_f": [
+        12,
+        2,
+        12
+      ],
+      "sign_g": [
+        7,
+        12,
+        7
+      ]
+    }
+  ],
+  "numeric_prime_assignments": 21,
+  "status": "FINITE-EXACT",
+  "tetrahedral_involutions_by_fixed_pairs": {
+    "10": 1,
+    "2": 3,
+    "4": 6
+  }
+}

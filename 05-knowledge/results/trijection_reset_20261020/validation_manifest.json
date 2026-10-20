@@ -1,0 +1,26 @@
+{
+  "arithmetic_check.py": {
+    "normal_optimized_stdout_identical": true,
+    "receipt": "arithmetic_check.json",
+    "receipt_sha256": "bddc11bec0b4ae5ccad60f618fc7ffad1e9a43eccd8f9ec0bb8f0f8e286c8fcf",
+    "source_sha256": "1d23ec26223d76d7dad590ae2e8190e181df8dc951c001d03794e0b18d41541e"
+  },
+  "independent_check.py": {
+    "normal_optimized_stdout_identical": true,
+    "receipt": "independent_check.json",
+    "receipt_sha256": "0f64f62b689f2b799c112d3fa283a39afa9f32a1348181f5f15db8c8e8136b76",
+    "source_sha256": "ac3b24a7100975aea3fd59ed4f5ac5d9bf1f0c9236ce3834e12d7c887207c594"
+  },
+  "reset_composition_check.py": {
+    "normal_optimized_stdout_identical": true,
+    "receipt": "reset_composition_receipt.json",
+    "receipt_sha256": "b3f0bf64c1b9344f1ff7fcb0b102a6788a8f12e7dd864ff46ec0253c09f8dd80",
+    "source_sha256": "73b2ea2dc51c508b6b86cba5df83978ed8282902e4b40e2a4ffbc2d5d229db24"
+  },
+  "square_counts.py": {
+    "normal_optimized_stdout_identical": true,
+    "receipt": "square_counts.json",
+    "receipt_sha256": "0cc8747096240e3a93d0bf76298a7d426c0126026753bc2ce19ff96ed3c3bca7",
+    "source_sha256": "6e96f96b698f65bdae5beed353fc2470929869c06a34189b5b9f96c3e1bbece7"
+  }
+}
