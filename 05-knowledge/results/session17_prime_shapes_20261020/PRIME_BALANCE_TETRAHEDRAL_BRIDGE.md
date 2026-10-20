@@ -1,0 +1,264 @@
+# Prime balance and an oriented tetrahedral complement-pair bridge
+
+20 October 2026. **PROVED:** the elementary marked bijections, involution
+transport, and full-relabelling obstruction below. **INHERITED PROVED:**
+the divisor classification and the older ten-letter simplex construction.
+**FINITE-EXACT:** the complete four-vertex controls in `verify.py`.
+No historical novelty, all-order tournament/graph trijection, or Collatz
+convergence is claimed.
+
+## 1. Recover the arithmetic before changing the notation
+
+The exact definitions, from
+`05-knowledge/results/arithmetic_braids_20260917_divisors.md`, DB1--DB3, are
+
+\[
+F(N)=\#\{d\mid N:1<d<N\},\quad
+S(N)=\#\{d\mid N:1<d<N,\ d\text{ squarefree}\},\quad
+U(N)=\#\{d\mid N:1<d<N,\ d\text{ prime}\}.
+\]
+
+For `N>=2`, the complete classification is
+
+\[
+F=S+U\quad\Longleftrightarrow\quad N=p,\ p^3,\ p^2qr,
+\]
+
+where the three prime labels in the last shape are distinct. Thus the
+user's ambiguous `p^qr` is read here as the previously proved `p^2qr`,
+not as a newly invented exponent convention. The endpoint `1` is excluded;
+if admitted separately it is a trivial empty-set solution. `U` is neither
+multiplicity nor always the usual number of distinct prime factors.
+
+For the exponent profile `(a_1,...,a_r)`,
+
+\[
+F=\prod_i(a_i+1)-2,\quad S=2^r-1-[N\text{ squarefree}],
+\quad U=r-[N\text{ prime}].
+\]
+
+For nonsquarefree `N`, balance says
+`prod(a_i+1)=2^r+r+1`. At `r=1,2,3` this gives respectively `(3)`,
+no solution, and `(2,1,1)`; for `r>=4`, the minimum
+`3*2^(r-1)>2^r+r+1` excludes every profile. Squarefree composites have
+`F=S` and `U>0`; primes satisfy the empty identity.
+
+The arithmetic and geometric sets must not be conflated: `U` is a subset
+of `S`, not its disjoint partner. Nevertheless an actual two-fibre map
+realizes the equality, as follows.
+
+## 2. The inherited prime-to-extra map gives an involution
+
+Fix `N=p^2qr`. Its ten proper nontrivial divisors admit the involution
+
+\[
+\tau=(p\ p^2)(q\ p^2q)(r\ p^2r),
+\]
+
+fixing `pq,pr,qr,pqr`. Equivalently, send every squarefree divisor to
+itself and send `p^2,p^2q,p^2r` to `p,q,r`. The quotient has seven fibres,
+labelled by the squarefree divisors; precisely the three prime-labelled
+fibres have size two. Hence
+
+\[
+10=7+3
+\]
+
+is a literal fibre-size identity, not a disjointness assertion about the
+original prime and squarefree sets. The map on primes is the already
+proved `ell -> p*lcm(p,ell)` from
+`collatz_mod6_20260917_divisor_balance_family.md`, section 3.1.
+This note packages that inherited map as an involution for comparison.
+
+At `p^3` the analogous involution swaps `p,p^2`, giving `2=1+1`.
+At a prime all sets are empty. **This involution is not divisor
+complement** `d -> N/d`, and generally does not preserve divisibility.
+For `p^2qr`, divisor complement has five transpositions and no fixed point,
+whereas tau has four fixed points and three transpositions.
+
+## 3. The same fibre law is intrinsic to the three-edge tetrahedron
+
+Let `V` be a four-element set, `E=E(K4)`, and let `G` be the twenty
+three-element subsets of `E`. There are exactly twelve labelled paths
+`P4`, four stars, and four triangles plus an isolated vertex. This
+classification and its sign limitations were already proved in
+`defect_boundary_20261020/web.md`, sections 4--6.
+
+Two distinct involutions act on `G`:
+
+* `C(D)=E\D`, ordinary graph complement;
+* `J(D)={V\e:e in D}`, tetrahedral opposite-edge replacement.
+
+They commute. Let `X=G/<C>` be the ten unordered complementary graph
+pairs. The involution induced by `J` on `X` has four fixed points and
+three two-cycles. Indeed each star/opposite-triangle pair is fixed. For
+a path order `(a,b,c,d)`, its middle edge `{b,c}` and endpoint pair
+`{a,d}` form a perfect matching. The complementary path has these two
+roles exchanged, so the matching belongs to the complement pair itself.
+Each of the three perfect matchings has two path-pairs above it, and `J`
+exchanges those two. The explicit map in the next section also proves
+this without a case-by-case list.
+
+Thus the intrinsic quotient projection `X -> X/<J>` has exactly seven
+fibres, of which three are double. This is the **same fibre law** as
+Section 2, with graph complement taken first and tetrahedral opposition
+second. Its source is the ten complement-pairs, not the three unlabelled
+graph shapes.
+
+## 4. A tetrahedron orientation supplies an explicit bijection
+
+Let `Y=Sym^2_set(V)`: the four repeated pairs `{v,v}` and six ordinary
+edges. Extend `J` to `Y` by fixing repeated pairs and sending every edge
+to its opposite edge. Choose an orientation of the tetrahedron, meaning
+one of the two parity classes of its vertex orders.
+
+Define `Phi:X -> Y` as follows:
+
+1. A star/triangle complement-pair maps to the repeated pair of its star
+   centre, equivalently the isolated vertex of its triangle member.
+2. A path complement-pair has a representative path order `(a,b,c,d)`.
+   If that order is positive, map to `{a,d}`; if it is negative, map to
+   `{b,c}`.
+
+**Well-definedness.** Path reversal is a product of two transpositions,
+so it does not change parity or the two candidate edges. A complementary
+path order is `(c,a,d,b)`. Its parity is opposite, and its endpoint and
+middle pairs exchange roles. Therefore either representative gives the
+same answer.
+
+**Bijection and inverse.** Corners have the evident star/triangle inverse.
+For an edge `e`, exactly two positive vertex orders have endpoint set `e`;
+they are reversals of one another, giving one unoriented path and hence
+one complement pair. This is the inverse on edges. Moreover
+
+\[
+\Phi(Jx)=J\Phi(x).
+\]
+
+For example, if the positive path order is `(a,b,c,d)`, an order for its
+opposite-edge path is `(b,a,d,c)`, also positive. Its endpoint pair is
+`{b,c}`, opposite to `{a,d}`.
+
+This yields a genuinely reversible graph-side construction rather than
+merely equating two numbers ten.
+
+### Exact naturality and its sharp obstruction
+
+For every vertex permutation `g`,
+
+\[
+\Phi(gx)=J^{\operatorname{parity}(g)}g\Phi(x). \tag{1}
+\]
+
+Thus the map is equivariant for `A4`, while odd relabellings introduce the
+opposite-edge involution. Reversing the chosen tetrahedron orientation
+replaces Phi by `J Phi`. Keeping that orientation as part of the data
+restores ordinary equivariance of the **marked** construction.
+
+There is no bijection from `X` to `Y` equivariant for their ordinary `S4`
+relabel actions. A transposition fixes exactly two elements of `X`, the
+two star/triangle pairs centred at its fixed vertices. It fixes four
+letters of `Y`: those two corner letters, the edge joining the fixed
+vertices, and the edge joining the transposed vertices. Equivariant
+bijections preserve fixed-point counts, giving a contradiction.
+
+Equivalently a path-pair stabilizer is cyclic of order four, while an
+edge stabilizer is `C2 x C2`. Their common orbit size six does not make
+them the same permutation action. This obstruction is to these specified
+unmarked actions, not to every possible labelled encoding.
+
+## 5. Conjugating the arithmetic fibre map to opposition
+
+Label the vertices `0,P,Q,R`, with `P,Q,R` naming `p,q,r`. Use the
+following **explicit changed table**, rather than silently reusing the
+older simplex table:
+
+| Divisor | Letter in Y |
+|---|---|
+| p, q, r | {0,P}, {0,Q}, {0,R} |
+| p^2, p^2q, p^2r | {Q,R}, {P,R}, {P,Q} |
+| pqr, qr, pr, pq | {0,0}, {P,P}, {Q,Q}, {R,R} |
+
+Call this map `B`. It is a bijection and `B tau=J B`. Therefore
+`Phi^(-1) B` conjugates the arithmetic prime-to-extra involution to
+opposition on graph complement-pairs. Quotienting yields a commutative
+bijection of the seven arithmetic fibres with the seven graph fibres,
+including their three double-fibre subfamilies.
+
+The older table in `divisor_layers_pair_geometry_20261004.md`, section 2,
+placed the six non-top squarefree divisors at edge midpoints and three extra
+divisors at corners. That table serves a different predicate. Here the
+squarefree set becomes the four corners plus the three edges incident to
+zero, and its prime subset becomes those three incident edges. Changing
+tables is essential to the newly specified involution transport.
+
+**Connection contract.** Source: proper divisors with prime labels,
+squarefree subset, and the inherited prime-to-extra map. Target:
+complement-pairs of three-edge tetrahedral graphs with opposition. Map:
+`Phi^(-1) B`. Preserved: the quotient and its single/double fibre types.
+Not preserved: multiplication, divisibility, arithmetic size, divisor
+complement, graph connectivity of an individually chosen member, or a
+tournament Hamiltonian-path set. Required sidecars: the marked zero,
+prime-to-vertex labels, and tetrahedron orientation. Cheapest hostile:
+a transposition, with fixed counts two versus four.
+
+In particular, the divisor poset itself has only the order automorphisms
+interchanging `q,r` (the inherited layer note, section 3); a transported
+three-cycle of abstract letters is not a divisor-poset automorphism.
+
+## 6. The given numbers do not themselves satisfy divisor balance
+
+Direct exact counts are:
+
+| N | Factorization | F | S | U | F-S-U |
+|---|---|---:|---:|---:|---:|
+| 25 | 5^2 | 1 | 1 | 1 | -1 |
+| 125 | 5^3 | 2 | 1 | 1 | 0 |
+| 625 | 5^4 | 3 | 1 | 1 | 1 |
+| 776 | 2^3*97 | 6 | 3 | 2 | 1 |
+| 576 | 2^6*3^2 | 19 | 3 | 2 | 14 |
+
+No square greater than one is balanced, immediately from the complete
+exponent-profile classification. Also
+
+\[
+p^4+p^3+p^2+1-(p^2-1)^2=p^2(p+3).
+\]
+
+At `p=5` the difference is 200. The sum 776 equals `sigma(5^4)-5`;
+it is neither the complete geometric sum nor a divisor-count equality.
+The separate matrix/icosahedron note gives the authentic set operation
+behind 625 and 576, without identifying it with divisor balance.
+
+## 7. Where tournaments and Collatz enter, and where they do not
+
+At order four there are eleven unlabelled simple graphs and four
+unlabelled tournaments. The three three-edge graph shapes are not all
+simple-graph types, and selecting a Hamiltonian path in a tournament is
+extra data. Nothing above is an all-order tournament/graph bijection.
+The primary paper Royle--Praeger--Glasby--Freedman--Devillers,
+[*Tournaments and Even Graphs are Equinumerous*](https://arxiv.org/abs/2204.01947),
+counts **sign-even** graph types, not all graphs or merely Eulerian graphs.
+Its abstract and journal metadata were checked on 20 October 2026.
+
+A genuine inherited arithmetic/tournament map is `T -> |Aut(T)| -> (F,S,U)`,
+scoped in `prime_batch_triangle_20261020`, section 5. It loses the action:
+`C3^3` and `C27` both have balanced order 27 but different symmetry clocks.
+The inherited Collatz block-envelope construction retains the actual
+source and valuation word. Balanced 27 needs four blocks at its first
+descent, whereas unbalanced 63 needs five and unbalanced 75 needs one.
+Thus divisor balance alone does not certify a reset budget.
+
+The graph involutions above and the arithmetic involution tau can be
+transported exactly. A further Collatz connection would still need an
+actual-source, legal-block, reset-debt-preserving map. No such map is
+claimed here.
+
+## Reproduction
+
+Run `python3 -B verify.py` and `python3 -B -O verify.py`. Both produce
+`receipt.json` byte-for-byte. The universe is all twenty labelled
+three-edge K4 graphs, all twenty-four vertex permutations, all ten
+complement-pairs, direct divisors at the ten named inputs, all integers
+2..1500 for the inherited classification, and p=2..100 for the polynomial
+control. The displayed algebra supplies the unbounded assertions.

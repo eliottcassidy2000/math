@@ -1,0 +1,25 @@
+--- independent_check.original.py
++++ ../independent_check.py
+@@ -187,9 +187,9 @@
+ check(decoded[(0,0)]==tuple(range(7)),'standard_path_is_zero')
+ automorphisms=[g for g in permutations(range(7)) if all(sb(a,b)==sb(g[a],g[b]) for a,b in combinations(range(7),2))]
+ check(automorphisms==[tuple(range(7))],'source_tournament_is_rigid')
+-balanced=json.loads((ROOT/'session17-balanced-fibres/marked_f5_paths.json').read_text())
++balanced=json.loads((HERE/'marked_f5_paths.json').read_text())
+ check({tuple(r['vector']):tuple(r['path']) for r in balanced}==decoded,'separate_balanced_path_file_exact_match')
+-field_receipt=json.loads((HERE/'frozen/field_receipt.json').read_text())
++field_receipt=json.loads((ROOT/'field_receipt.json').read_text())
+ check({tuple(r['field_vector']):tuple(r['path']) for r in field_receipt['literal_source_paths']}==decoded,'producer_path_file_exact_match')
+ markings=[]
+ for q in permutations(range(1,5)):
+@@ -219,8 +219,8 @@
+     check(all(best[b,len(word)]>=n for b in range(1,expected)) and best[expected,len(word)]<n,'named_minimum_block_claim')
+     block_rows.append({'source':n,'first_descent_depth':len(word),'endpoint':x,'minimum_blocks':expected,'best_envelopes':record})
+ 
+-manifest=json.loads((HERE/'frozen/publication_manifest.json').read_text())
++manifest=json.loads((HERE/'publication_inputs.json').read_text())
+ for item in manifest['files']:
+-    data=(HERE/'frozen'/Path(item['source']).name).read_bytes()
++    data=(ROOT/Path(item['source']).name).read_bytes()
+     check(len(data)==item['bytes'] and hashlib.sha256(data).hexdigest()==item['sha256'],'exact_frozen_manifest')
+ print(json.dumps({'status':'PASS','checks':dict(CHECKS),'total_checks':sum(CHECKS.values()),'arithmetic_graph_rows':arithmetic_graph_rows,'distance_rows':distance_rows,'physical_return_rows':legal_return_rows,'collatz_controls':block_rows,'eight_markings':markings},sort_keys=True,indent=2))

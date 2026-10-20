@@ -1,0 +1,725 @@
+{
+  "check_counts": {
+    "144_pair_decomposition": 1,
+    "625_to_576": 1,
+    "a5_faithful": 1,
+    "antipodal_involution": 12,
+    "antipode_is_converse": 12,
+    "four_reflection_fixed_orbits": 1,
+    "icosahedron_adjacency": 144,
+    "literal_source_full_path_census": 1,
+    "literal_source_path_legality": 25,
+    "literal_source_reflection": 25,
+    "literal_source_vertex_coverage": 25,
+    "marking_dependence_hostile": 1,
+    "matrix_determinant_counts": 1,
+    "per_vertex_determinant_counts": 12,
+    "prior_return_graph_isomorphism": 144,
+    "regular_tournament_codes": 12,
+    "sign_quotient_well_defined": 576,
+    "sl2_kernel_size_two": 1,
+    "sl2_mod_center_equals_a5_action": 1,
+    "source_five_state_label_bijection": 1,
+    "source_reflection_transport": 12,
+    "twelve_distinct_vertices": 1,
+    "two_black_paired_fixed_orbits": 1,
+    "two_blue_fixed_orbits": 1,
+    "zero_det_antipodal": 24
+  },
+  "determinants_of_576_matrices": {
+    "0": 96,
+    "1": 120,
+    "2": 120,
+    "3": 120,
+    "4": 120
+  },
+  "field_to_prior_tournament_code": [
+    {
+      "code": 613,
+      "vector_mod_sign": [
+        0,
+        1
+      ]
+    },
+    {
+      "code": 410,
+      "vector_mod_sign": [
+        0,
+        2
+      ]
+    },
+    {
+      "code": 947,
+      "vector_mod_sign": [
+        1,
+        0
+      ]
+    },
+    {
+      "code": 217,
+      "vector_mod_sign": [
+        1,
+        1
+      ]
+    },
+    {
+      "code": 682,
+      "vector_mod_sign": [
+        1,
+        2
+      ]
+    },
+    {
+      "code": 313,
+      "vector_mod_sign": [
+        1,
+        3
+      ]
+    },
+    {
+      "code": 668,
+      "vector_mod_sign": [
+        1,
+        4
+      ]
+    },
+    {
+      "code": 76,
+      "vector_mod_sign": [
+        2,
+        0
+      ]
+    },
+    {
+      "code": 710,
+      "vector_mod_sign": [
+        2,
+        1
+      ]
+    },
+    {
+      "code": 806,
+      "vector_mod_sign": [
+        2,
+        2
+      ]
+    },
+    {
+      "code": 355,
+      "vector_mod_sign": [
+        2,
+        3
+      ]
+    },
+    {
+      "code": 341,
+      "vector_mod_sign": [
+        2,
+        4
+      ]
+    }
+  ],
+  "field_vertices": {
+    "L": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "N": [
+      1,
+      0
+    ],
+    "S": [
+      2,
+      0
+    ],
+    "U": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        1,
+        4
+      ]
+    ]
+  },
+  "literal_source_paths": [
+    {
+      "field_vector": [
+        1,
+        1
+      ],
+      "path": [
+        4,
+        5,
+        6,
+        3,
+        0,
+        1,
+        2
+      ],
+      "states": [
+        0,
+        0
+      ]
+    },
+    {
+      "field_vector": [
+        1,
+        2
+      ],
+      "path": [
+        4,
+        6,
+        3,
+        0,
+        1,
+        2,
+        5
+      ],
+      "states": [
+        0,
+        1
+      ]
+    },
+    {
+      "field_vector": [
+        1,
+        3
+      ],
+      "path": [
+        5,
+        6,
+        3,
+        0,
+        1,
+        2,
+        4
+      ],
+      "states": [
+        0,
+        2
+      ]
+    },
+    {
+      "field_vector": [
+        1,
+        4
+      ],
+      "path": [
+        6,
+        3,
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "states": [
+        0,
+        3
+      ]
+    },
+    {
+      "field_vector": [
+        1,
+        0
+      ],
+      "path": [
+        3,
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "states": [
+        0,
+        4
+      ]
+    },
+    {
+      "field_vector": [
+        2,
+        1
+      ],
+      "path": [
+        1,
+        4,
+        5,
+        6,
+        3,
+        0,
+        2
+      ],
+      "states": [
+        1,
+        0
+      ]
+    },
+    {
+      "field_vector": [
+        2,
+        2
+      ],
+      "path": [
+        1,
+        4,
+        6,
+        3,
+        0,
+        2,
+        5
+      ],
+      "states": [
+        1,
+        1
+      ]
+    },
+    {
+      "field_vector": [
+        2,
+        3
+      ],
+      "path": [
+        1,
+        5,
+        6,
+        3,
+        0,
+        2,
+        4
+      ],
+      "states": [
+        1,
+        2
+      ]
+    },
+    {
+      "field_vector": [
+        2,
+        4
+      ],
+      "path": [
+        1,
+        6,
+        3,
+        0,
+        2,
+        4,
+        5
+      ],
+      "states": [
+        1,
+        3
+      ]
+    },
+    {
+      "field_vector": [
+        2,
+        0
+      ],
+      "path": [
+        1,
+        3,
+        0,
+        2,
+        4,
+        5,
+        6
+      ],
+      "states": [
+        1,
+        4
+      ]
+    },
+    {
+      "field_vector": [
+        3,
+        1
+      ],
+      "path": [
+        2,
+        4,
+        5,
+        6,
+        3,
+        0,
+        1
+      ],
+      "states": [
+        2,
+        0
+      ]
+    },
+    {
+      "field_vector": [
+        3,
+        2
+      ],
+      "path": [
+        2,
+        4,
+        6,
+        3,
+        0,
+        1,
+        5
+      ],
+      "states": [
+        2,
+        1
+      ]
+    },
+    {
+      "field_vector": [
+        3,
+        3
+      ],
+      "path": [
+        2,
+        5,
+        6,
+        3,
+        0,
+        1,
+        4
+      ],
+      "states": [
+        2,
+        2
+      ]
+    },
+    {
+      "field_vector": [
+        3,
+        4
+      ],
+      "path": [
+        2,
+        6,
+        3,
+        0,
+        1,
+        4,
+        5
+      ],
+      "states": [
+        2,
+        3
+      ]
+    },
+    {
+      "field_vector": [
+        3,
+        0
+      ],
+      "path": [
+        2,
+        3,
+        0,
+        1,
+        4,
+        5,
+        6
+      ],
+      "states": [
+        2,
+        4
+      ]
+    },
+    {
+      "field_vector": [
+        4,
+        1
+      ],
+      "path": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        3,
+        0
+      ],
+      "states": [
+        3,
+        0
+      ]
+    },
+    {
+      "field_vector": [
+        4,
+        2
+      ],
+      "path": [
+        1,
+        2,
+        4,
+        6,
+        3,
+        0,
+        5
+      ],
+      "states": [
+        3,
+        1
+      ]
+    },
+    {
+      "field_vector": [
+        4,
+        3
+      ],
+      "path": [
+        1,
+        2,
+        5,
+        6,
+        3,
+        0,
+        4
+      ],
+      "states": [
+        3,
+        2
+      ]
+    },
+    {
+      "field_vector": [
+        4,
+        4
+      ],
+      "path": [
+        1,
+        2,
+        6,
+        3,
+        0,
+        4,
+        5
+      ],
+      "states": [
+        3,
+        3
+      ]
+    },
+    {
+      "field_vector": [
+        4,
+        0
+      ],
+      "path": [
+        1,
+        2,
+        3,
+        0,
+        4,
+        5,
+        6
+      ],
+      "states": [
+        3,
+        4
+      ]
+    },
+    {
+      "field_vector": [
+        0,
+        1
+      ],
+      "path": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        3
+      ],
+      "states": [
+        4,
+        0
+      ]
+    },
+    {
+      "field_vector": [
+        0,
+        2
+      ],
+      "path": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        3,
+        5
+      ],
+      "states": [
+        4,
+        1
+      ]
+    },
+    {
+      "field_vector": [
+        0,
+        3
+      ],
+      "path": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        3,
+        4
+      ],
+      "states": [
+        4,
+        2
+      ]
+    },
+    {
+      "field_vector": [
+        0,
+        4
+      ],
+      "path": [
+        0,
+        1,
+        2,
+        6,
+        3,
+        4,
+        5
+      ],
+      "states": [
+        4,
+        3
+      ]
+    },
+    {
+      "field_vector": [
+        0,
+        0
+      ],
+      "path": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "states": [
+        4,
+        4
+      ]
+    }
+  ],
+  "quotient_144_pairs": {
+    "antipodal": 12,
+    "distance_two": 60,
+    "edge": 60,
+    "same": 12
+  },
+  "sl2_generators_to_a5": [
+    {
+      "matrix_columns": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "tournament_label_permutation": [
+        2,
+        3,
+        4,
+        0,
+        1
+      ]
+    },
+    {
+      "matrix_columns": [
+        0,
+        1,
+        4,
+        0
+      ],
+      "tournament_label_permutation": [
+        3,
+        4,
+        2,
+        0,
+        1
+      ]
+    }
+  ],
+  "source_labels": {
+    "empty": 1,
+    "infinity": 0,
+    "one": 2,
+    "one_two": 4,
+    "two": 3
+  },
+  "source_reflection_fixed_vectors": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "source_reflection_tournament_permutation": [
+    1,
+    0,
+    2,
+    4,
+    3
+  ],
+  "status": "PASS",
+  "total_checks": 1036
+}

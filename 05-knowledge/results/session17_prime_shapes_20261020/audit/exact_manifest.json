@@ -1,0 +1,55 @@
+{
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "repo_base": "f3e658d7cc10",
+  "target_root": "05-knowledge/results/session17_prime_shapes_20261020",
+  "files": [
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session17-prime-shapes/README.md",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/README.md",
+      "sha256": "28c359e288831a2d0a70f9ba3326b0658e4f29a3f73db84161e048ed6f97f395",
+      "bytes": 3669
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session17-prime-shapes/PRIME_BALANCE_TETRAHEDRAL_BRIDGE.md",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/PRIME_BALANCE_TETRAHEDRAL_BRIDGE.md",
+      "sha256": "b187d08ed5bcead9ab104c26f3b376d91bb13204409848d89e8726d619d73eb2",
+      "bytes": 11490
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session17-prime-shapes/F5_PATH_PAIR_ICOSAHEDRON.md",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/F5_PATH_PAIR_ICOSAHEDRON.md",
+      "sha256": "7a3a17b47b1259f93c1371800915fd09f2d71f07358d1c7a3a63115607c1cbb1",
+      "bytes": 10163
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session17-prime-shapes/verify.py",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/verify.py",
+      "sha256": "d384a15a4da887e8755d68f9094ffaa05764828cc112f6965770018168b328c1",
+      "bytes": 6412
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session17-prime-shapes/verify_field.py",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/verify_field.py",
+      "sha256": "6da101f2a89f3ac6a99b347d1601c708894d11edbff55f0f9d6496efb02be642",
+      "bytes": 6350
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session17-prime-shapes/receipt.json",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/receipt.json",
+      "sha256": "d1f202b355d762fc5ee4fe9acef6f04f8bb9e7f00aaa06d11892eac6b732c284",
+      "bytes": 12093
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session17-prime-shapes/field_receipt.json",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/field_receipt.json",
+      "sha256": "518cc8f7de71d3d43c9ea0815aebd46641a630976737038809d09f3af34dc22d",
+      "bytes": 8973
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session17-prime-shapes/SHA256SUMS",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/SHA256SUMS",
+      "sha256": "87115b36286751041ab076d5a89aa7288348a682b38480687ec6e17df95a64c0",
+      "bytes": 594
+    }
+  ]
+}

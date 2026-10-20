@@ -1,0 +1,56 @@
+{
+  "status": "PUBLICATION_INPUTS_WITH_TWO_APPROVED_EDITORIAL_CLARIFICATIONS",
+  "repo_base": "f3e658d7cc10",
+  "target_root": "05-knowledge/results/session17_prime_shapes_20261020",
+  "files": [
+    {
+      "source": "README.md",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/README.md",
+      "sha256": "1d481cec3396287378c9d1805cdcdb640f62e459602be689b9be2fafa08a6f07",
+      "bytes": 3705
+    },
+    {
+      "source": "PRIME_BALANCE_TETRAHEDRAL_BRIDGE.md",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/PRIME_BALANCE_TETRAHEDRAL_BRIDGE.md",
+      "sha256": "94afd18887bb56a526b7ec8e2cca52c55ec4ef20dffd5a6992b21cceb8a6958e",
+      "bytes": 11493
+    },
+    {
+      "source": "F5_PATH_PAIR_ICOSAHEDRON.md",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/F5_PATH_PAIR_ICOSAHEDRON.md",
+      "sha256": "7a3a17b47b1259f93c1371800915fd09f2d71f07358d1c7a3a63115607c1cbb1",
+      "bytes": 10163
+    },
+    {
+      "source": "verify.py",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/verify.py",
+      "sha256": "d384a15a4da887e8755d68f9094ffaa05764828cc112f6965770018168b328c1",
+      "bytes": 6412
+    },
+    {
+      "source": "verify_field.py",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/verify_field.py",
+      "sha256": "6da101f2a89f3ac6a99b347d1601c708894d11edbff55f0f9d6496efb02be642",
+      "bytes": 6350
+    },
+    {
+      "source": "receipt.json",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/receipt.json",
+      "sha256": "d1f202b355d762fc5ee4fe9acef6f04f8bb9e7f00aaa06d11892eac6b732c284",
+      "bytes": 12093
+    },
+    {
+      "source": "field_receipt.json",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/field_receipt.json",
+      "sha256": "518cc8f7de71d3d43c9ea0815aebd46641a630976737038809d09f3af34dc22d",
+      "bytes": 8973
+    },
+    {
+      "source": "SHA256SUMS",
+      "destination": "05-knowledge/results/session17_prime_shapes_20261020/SHA256SUMS",
+      "sha256": "190799fc0889bab0295057f96877d5f0c1c54917157437d5d17106bde938bda7",
+      "bytes": 594
+    }
+  ],
+  "original_manifest_sha256": "9b6f6bd24c45d6a75b3a3db052b4a19703872efc5116903036bd33a3bc05239c"
+}

@@ -1,0 +1,23 @@
+--- original/README.md
++++ README.md
+@@ -8,7 +8,8 @@
+    oriented bijection; and proves that full unmarked S4-equivariance is
+    impossible.
+ 2. [F5 path pairs and the icosahedral return graph](F5_PATH_PAIR_ICOSAHEDRON.md)
+-   makes 625→576 an actual zero-row/zero-column deletion, then transports
++   makes 625→576 the deletion of the standard-path row and column of the
++   25×25 pair grid, then transports
+    twelve signed vector classes to the previously proved regular-five
+    two-complement return component. It retains the determinant relation
+    and gives the precise SL2(5)/±I action, while exposing dependence on the
+--- original/PRIME_BALANCE_TETRAHEDRAL_BRIDGE.md
++++ PRIME_BALANCE_TETRAHEDRAL_BRIDGE.md
+@@ -186,7 +186,7 @@
+ including their three double-fibre subfamilies.
+ 
+ The older table in `divisor_layers_pair_geometry_20261004.md`, section 2,
+-placed all six squarefree pair-products at edge midpoints and three extra
++placed the six non-top squarefree divisors at edge midpoints and three extra
+ divisors at corners. That table serves a different predicate. Here the
+ squarefree set becomes the four corners plus the three edges incident to
+ zero, and its prime subset becomes those three incident edges. Changing

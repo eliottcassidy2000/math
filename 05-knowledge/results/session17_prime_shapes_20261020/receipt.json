@@ -1,0 +1,826 @@
+{
+  "arithmetic": [
+    {
+      "F": 0,
+      "S": 0,
+      "U": 0,
+      "defect": 0,
+      "factorization": {
+        "5": 1
+      },
+      "n": 5
+    },
+    {
+      "F": 1,
+      "S": 1,
+      "U": 1,
+      "defect": -1,
+      "factorization": {
+        "5": 2
+      },
+      "n": 25
+    },
+    {
+      "F": 2,
+      "S": 1,
+      "U": 1,
+      "defect": 0,
+      "factorization": {
+        "5": 3
+      },
+      "n": 125
+    },
+    {
+      "F": 3,
+      "S": 1,
+      "U": 1,
+      "defect": 1,
+      "factorization": {
+        "5": 4
+      },
+      "n": 625
+    },
+    {
+      "F": 6,
+      "S": 3,
+      "U": 2,
+      "defect": 1,
+      "factorization": {
+        "2": 3,
+        "97": 1
+      },
+      "n": 776
+    },
+    {
+      "F": 19,
+      "S": 3,
+      "U": 2,
+      "defect": 14,
+      "factorization": {
+        "2": 6,
+        "3": 2
+      },
+      "n": 576
+    },
+    {
+      "F": 10,
+      "S": 7,
+      "U": 3,
+      "defect": 0,
+      "factorization": {
+        "2": 2,
+        "3": 1,
+        "5": 1
+      },
+      "n": 60
+    },
+    {
+      "F": 4,
+      "S": 3,
+      "U": 2,
+      "defect": -1,
+      "factorization": {
+        "3": 2,
+        "7": 1
+      },
+      "n": 63
+    },
+    {
+      "F": 2,
+      "S": 1,
+      "U": 1,
+      "defect": 0,
+      "factorization": {
+        "3": 3
+      },
+      "n": 27
+    },
+    {
+      "F": 4,
+      "S": 3,
+      "U": 2,
+      "defect": -1,
+      "factorization": {
+        "3": 1,
+        "5": 2
+      },
+      "n": 75
+    }
+  ],
+  "check_counts": {
+    "arithmetic_involution_conjugacy": 10,
+    "balanced_table_domain": 1,
+    "balanced_table_range": 1,
+    "bijection": 1,
+    "classification_window": 1499,
+    "complement_pair_count": 1,
+    "cyclic_path_pair_stabilizer": 1,
+    "diagonal_deletion_600": 1,
+    "direct_divisor_check": 10,
+    "divisor_table_domain": 1,
+    "divisor_table_range": 1,
+    "full_twisted_equivariance": 240,
+    "graph_7_plus_3_fibres": 1,
+    "graph_fixed_types": 4,
+    "klein_edge_stabilizer": 1,
+    "opposition_conjugacy": 10,
+    "path_reversal": 12,
+    "polynomial_difference": 99,
+    "punctured_square_576": 1,
+    "representative_independence": 20,
+    "reversal_parity": 12,
+    "shape_census": 1,
+    "square_exclusion": 37,
+    "sum_776": 1,
+    "transposition_obstruction_source": 1,
+    "transposition_obstruction_target": 1
+  },
+  "fixed_point_rows": [
+    {
+      "complement_pairs_fixed": 10,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "sign": 1,
+      "simplex_pairs_fixed": 10
+    },
+    {
+      "complement_pairs_fixed": 2,
+      "permutation": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "sign": -1,
+      "simplex_pairs_fixed": 4
+    },
+    {
+      "complement_pairs_fixed": 2,
+      "permutation": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "sign": -1,
+      "simplex_pairs_fixed": 4
+    },
+    {
+      "complement_pairs_fixed": 1,
+      "permutation": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "sign": 1,
+      "simplex_pairs_fixed": 1
+    },
+    {
+      "complement_pairs_fixed": 1,
+      "permutation": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "sign": 1,
+      "simplex_pairs_fixed": 1
+    },
+    {
+      "complement_pairs_fixed": 2,
+      "permutation": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "sign": -1,
+      "simplex_pairs_fixed": 4
+    },
+    {
+      "complement_pairs_fixed": 2,
+      "permutation": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "sign": -1,
+      "simplex_pairs_fixed": 4
+    },
+    {
+      "complement_pairs_fixed": 2,
+      "permutation": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "sign": 1,
+      "simplex_pairs_fixed": 2
+    },
+    {
+      "complement_pairs_fixed": 1,
+      "permutation": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "sign": 1,
+      "simplex_pairs_fixed": 1
+    },
+    {
+      "complement_pairs_fixed": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "sign": -1,
+      "simplex_pairs_fixed": 0
+    },
+    {
+      "complement_pairs_fixed": 2,
+      "permutation": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "sign": -1,
+      "simplex_pairs_fixed": 0
+    },
+    {
+      "complement_pairs_fixed": 1,
+      "permutation": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "sign": 1,
+      "simplex_pairs_fixed": 1
+    },
+    {
+      "complement_pairs_fixed": 1,
+      "permutation": [
+        2,
+        0,
+        1,
+        3
+      ],
+      "sign": 1,
+      "simplex_pairs_fixed": 1
+    },
+    {
+      "complement_pairs_fixed": 2,
+      "permutation": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "sign": -1,
+      "simplex_pairs_fixed": 0
+    },
+    {
+      "complement_pairs_fixed": 2,
+      "permutation": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "sign": -1,
+      "simplex_pairs_fixed": 4
+    },
+    {
+      "complement_pairs_fixed": 1,
+      "permutation": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "sign": 1,
+      "simplex_pairs_fixed": 1
+    },
+    {
+      "complement_pairs_fixed": 2,
+      "permutation": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "sign": 1,
+      "simplex_pairs_fixed": 2
+    },
+    {
+      "complement_pairs_fixed": 2,
+      "permutation": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "sign": -1,
+      "simplex_pairs_fixed": 0
+    },
+    {
+      "complement_pairs_fixed": 2,
+      "permutation": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "sign": -1,
+      "simplex_pairs_fixed": 0
+    },
+    {
+      "complement_pairs_fixed": 1,
+      "permutation": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "sign": 1,
+      "simplex_pairs_fixed": 1
+    },
+    {
+      "complement_pairs_fixed": 1,
+      "permutation": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "sign": 1,
+      "simplex_pairs_fixed": 1
+    },
+    {
+      "complement_pairs_fixed": 2,
+      "permutation": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "sign": -1,
+      "simplex_pairs_fixed": 4
+    },
+    {
+      "complement_pairs_fixed": 2,
+      "permutation": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "sign": -1,
+      "simplex_pairs_fixed": 0
+    },
+    {
+      "complement_pairs_fixed": 2,
+      "permutation": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "sign": 1,
+      "simplex_pairs_fixed": 2
+    }
+  ],
+  "map_rows": [
+    {
+      "divisor_of_60": 30,
+      "graph_pair": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "simplex_pair": [
+        0,
+        0
+      ]
+    },
+    {
+      "divisor_of_60": 20,
+      "graph_pair": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "simplex_pair": [
+        3,
+        3
+      ]
+    },
+    {
+      "divisor_of_60": 15,
+      "graph_pair": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "simplex_pair": [
+        2,
+        3
+      ]
+    },
+    {
+      "divisor_of_60": 3,
+      "graph_pair": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      ],
+      "simplex_pair": [
+        0,
+        2
+      ]
+    },
+    {
+      "divisor_of_60": 2,
+      "graph_pair": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "simplex_pair": [
+        0,
+        1
+      ]
+    },
+    {
+      "divisor_of_60": 12,
+      "graph_pair": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "simplex_pair": [
+        2,
+        2
+      ]
+    },
+    {
+      "divisor_of_60": 6,
+      "graph_pair": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      ],
+      "simplex_pair": [
+        1,
+        2
+      ]
+    },
+    {
+      "divisor_of_60": 4,
+      "graph_pair": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "simplex_pair": [
+        1,
+        1
+      ]
+    },
+    {
+      "divisor_of_60": 5,
+      "graph_pair": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      ],
+      "simplex_pair": [
+        0,
+        3
+      ]
+    },
+    {
+      "divisor_of_60": 10,
+      "graph_pair": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "simplex_pair": [
+        1,
+        3
+      ]
+    }
+  ],
+  "prime_fibre_preserving_table": {
+    "2": [
+      0,
+      1
+    ],
+    "3": [
+      0,
+      2
+    ],
+    "4": [
+      2,
+      3
+    ],
+    "5": [
+      0,
+      3
+    ],
+    "6": [
+      3,
+      3
+    ],
+    "10": [
+      2,
+      2
+    ],
+    "12": [
+      1,
+      3
+    ],
+    "15": [
+      1,
+      1
+    ],
+    "20": [
+      1,
+      2
+    ],
+    "30": [
+      0,
+      0
+    ]
+  },
+  "scope": {
+    "divisor_window": "2..1500; direct checks for 10 named inputs",
+    "graphs": "all 20 labelled three-edge graphs on four vertices",
+    "polynomial_window": "integers p=2..100",
+    "relabellings": "all 24 permutations and all 10 complement pairs"
+  },
+  "status": "PASS",
+  "total_checks": 1968
+}
