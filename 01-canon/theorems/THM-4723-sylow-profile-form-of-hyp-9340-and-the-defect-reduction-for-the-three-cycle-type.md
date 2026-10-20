@@ -2,12 +2,19 @@
 id: THM-4723
 title: "Two reductions of HYP-9340 (a). (i) Sylow-profile form: for an odd prime p, tau_T(P) = tau_E(P) holds for every p-subgroup P of S_n iff the tournaments and the even graphs on n vertices have the same distribution of Sylow p-subgroups up to S_n-conjugacy (Moebius inversion on the poset of p-subgroup classes). (ii) Defect form for the first open case H = Z_3 of type (3,1^{n-3}): tau_T(H) = sum over graph types X of b(X), where b(X) is the alternating count of pair-even markings of X by disjoint independent twin triples with the contracted sign (marked identity + blow-up + odd-order inclusion-exclusion); so HYP-9340(H) says sum_X (b(X) - e(X)) = 0, e(X) = [X even with a twin triple]. The defect b - e is supported on even graphs with a twin class of size c, floor(c/3) even, or with two swappable twin classes (b = 0, e = 1), and on odd graphs with two adjacent swappable twin triples (b = 1, e = 0); it is balanced for n <= 8 (0, 2, 4, 12 defective types)"
 status: >
+  CONTEXT (2026-10-19/20): HYP-9340 (a) for general odd-order H is REFUTED by the session-10 packet's C15
+  counterexample (H = <(012)(34567)> <= S_10: 32 tournament types versus 31 even-graph types; the missing graph is
+  K_{5,5}, globally odd but N(H)-even), re-verified here independently (c15_n10_check.out: 32 and 31 from the 512
+  invariant objects); and HYP-9340 (a) for p-groups H is PROVED there (SYLOW_ACTION_ADDENDUM.md: a Walsh matching
+  preserving the S_n-class of a Sylow p-subgroup, via a signed p-group orbit-localisation lemma), which by Theorem P
+  below is exactly the equality of Sylow-p profiles. So the 3-cycle case the owner asked for is settled by that
+  packet; Theorem B gives a second, self-contained route whose last step (the defect cancellation) is not carried out.
   PROVED (pre-audit): Theorem P (Sylow-profile equivalence); Theorem B (sum_X b(X) = tau_T(Z_3), with the contracted
   sign s'); Corollary (HYP-9340 for the 3-cycle type iff the defects cancel); the single-class evaluation
   b(X) = [floor(c/3) odd] for an even graph whose only big twin class has size c >= 3 and full symmetric action.
   FINITE-EXACT: sum_X b(X) = tau_T = 4, 11, 44, 280 and the defect lists for n = 5..8 (defect_z3.out; the first
   implementation with a formula for the sign difference was wrong - the contracted sign is the correct one).
-  NOT PROVED: the cancellation itself (HYP-9341 (b)); the pairing suggested by the data (split a twin class as
+  NOT PROVED here: the cancellation itself (now a corollary of the session-10 p-group theorem; HYP-9341 (b)); the pairing suggested by the data (split a twin class as
   3 + 3 + rest and join the two triples completely) is a conjecture.
   CITED: THM-4721 (Theorems G', R, S, Proposition Q), THM-4531 (Lemma N1), Sylow.
 source: mac-mini-2026-10-19-hyp9172

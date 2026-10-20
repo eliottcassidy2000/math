@@ -15,7 +15,12 @@ status: >
   (a primitive permutation group containing a 3-cycle contains the alternating group); Sylow; Frattini;
   Royle-Praeger-Glasby-Freedman-Devillers 2023 (the open question answered here in the equivariant sense);
   Mallows-Sloane 1975.
-  OPEN: the switching-class half for even n (certificates 5 <= n <= 100 in THM-4531; the refined identity holds at
+  CONCURRENT: the session-10 packet 05-knowledge/results/uniform_equivariance_obstruction_20261020/ (commit
+  25752f463a, dated 2026-10-20 by its clock, pushed while this session was running) proves HYP-9172 (a) for every
+  n >= 5 for BOTH halves at every n by a different mechanism (a signed Walsh determinant forcing matched stabilisers to
+  preserve odd-prime valuations, then primes 3 and 5); THM-4722 is an independent proof of the tournament half and of
+  the odd-n switching half via the Sylow refinement, and claims no priority. Its even-n switching gap is closed there.
+  OPEN here: the switching-class half for even n by THIS route (certificates 5 <= n <= 100 in THM-4531; the refined identity holds at
   n = 6 for every odd class although the Euler parity lemma fails there, so the even case needs a different proof;
   HYP-9341).
   Notation as in THM-4721: tau_T(H), tau_E(H) = numbers of isomorphism types of tournaments / even graphs whose

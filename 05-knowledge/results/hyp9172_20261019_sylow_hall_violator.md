@@ -22,6 +22,10 @@ THM-4531 reduces "natural bijection" (= S_n-equivariant, bijective on types) to 
 
 For odd n, THM-4531 P1 identifies switching classes with the tournaments whose scores are all ≡ (n−1)/2 (mod 2), equivariantly, so class stabilisers have odd order. The restricted principle transfers because (i) for odd n, V = Z ⊕ B (Euler graphs ⊕ cuts) as S_n-modules, (ii) an invariant cut has no self-paired h-orbit, so the h-odd invariant graph of THM-4721's Lemma P has an h-odd Euler component (Lemma E'), and (iii) invariant cuts realise every invariant even-weight parity vector (Lemma Q). Then Sylow + Frattini give tau_C(P) = tau_EE(P) and the same Hall violator works: the switching half of HYP-9172 holds for every odd n >= 5. Numerically the refined identity also holds at n = 6 for every odd-order class (`switching_even_n.out`), but Lemma E' fails at n = 6 and n = 8 (36 pairs each; `euler_parity_lemma.out`), so even n needs another proof (THM-4531's certificates reach n = 100).
 
-## 3. What this does not do
+## 3. Concurrent work (found at close-out)
+
+While this session ran, the session-10 packet (`05-knowledge/results/uniform_equivariance_obstruction_20261020/`, `prime_local_walsh_bijection_20261020/`, `c15_symmetry_counterexample_20261020/`) landed: HYP-9172 (a) proved for both halves at every n >= 5 by a Walsh-determinant argument using primes 3 and 5; HYP-9340 (a) proved for all p-groups (Sylow-action-preserving Walsh matching) and refuted for mixed primes (C15 on ten vertices, 32 versus 31, verified here: `c15_n10_check.out`). THM-4722 is therefore an independent concurrent proof (Sylow refinement + Jordan + the empty graph) with a narrower switching scope (odd n), and THM-4723's defect reduction is a second route to a case that packet settles. The 11 October note `tournament_even_bijection_20261011c.md` already contained the component-even lemma (THM-4721 Lemma E duplicates it; recorded there by the packet).
+
+## 4. What this does not do
 
 It does not produce a bijection (none equivariant exists), and it does not touch HYP-9340 beyond Sylow: the argument uses only Sylow subgroups precisely because those are the cases where multiplicity one and Frattini are available.

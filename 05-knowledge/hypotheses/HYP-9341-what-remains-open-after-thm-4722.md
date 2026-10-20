@@ -2,7 +2,11 @@
 id: HYP-9341
 title: "What remains open after THM-4722/THM-4723: (a) the switching-class half of HYP-9172 for even n (refined identity true at n = 6 for every odd class, Euler parity lemma false there); (b) HYP-9340 beyond Sylow, reduced for the 3-cycle type to the cancellation of an explicit defect, conjecturally by the involution 'split a twin class as 3+3+rest and join the two triples'; (c) a uniform rule for the prime-circulant bijection: no quantifier-free rule with <= 3 affine atoms passes more than 4 of the primes 5..23, and any rule S -> D_c(S) sends the K_max-invariant tournaments to the empty graph iff c lies in K_max, which varies with p"
 status: >
-  (a) OPEN; FINITE-EXACT at n = 6 (switching_even_n.out: tau_C = tau_EE for Z5, Z3 (3,3), Z3 (3,1,1,1), Z3xZ3);
+  CONTEXT: the concurrent session-10 packet (uniform_equivariance_obstruction_20261020, prime_local_walsh_bijection_20261020,
+  c15_symmetry_counterexample_20261020) proves HYP-9172 (a) for both halves at every n >= 5, proves HYP-9340 (a) for
+  all p-groups, refutes it for mixed-prime H (C15 at n = 10, verified here: c15_n10_check.out), and gives an explicit
+  per-prime circulant construction ("derivative path"); the items below are what remains after that packet.
+  (a) OPEN by the Sylow route (closed by the packet's Walsh-determinant route, pending audit); FINITE-EXACT at n = 6 (switching_even_n.out: tau_C = tau_EE for Z5, Z3 (3,3), Z3 (3,1,1,1), Z3xZ3);
   THM-4531 certificates to n = 100. (b) OPEN; PROVED reduction (THM-4723 Theorem B); the defect lists for n <= 8 are
   balanced and the proposed pairing matches every listed case (defect_z3.out). (c) OPEN; FINITE-EXACT negative search
   (circulant_rule_search.out: 10 atoms a x + b, all boolean combinations of <= 3 atoms containing x in S, primes
@@ -22,7 +26,9 @@ note: 05-knowledge/results/hyp9172_20261019_sylow_hall_violator.md
 
 THM-4722 proves the switching half of HYP-9172 for odd n through THM-4531 P1 (class ≅ its mod-4-balanced member) and the odd-n Euler parity lemma (`V = Z ⊕ B`, invariant cuts carry no self-paired orbit). For even n both fail: classes can have even-order stabilisers and the lemma has 36 counterexamples at n = 6 and n = 8. Yet `tau_C(P) = tau_EE(P)` holds at n = 6 for every odd-order class. Conjecture: the refined identity holds for switching classes at every n and every odd-order P, and the Hall violator {Sylow-3, Sylow-5} (with the empty graph) still works once one shows that no switching class on an even number of vertices has a stabiliser containing both Sylow subgroups.
 
-## (b) HYP-9340 beyond Sylow
+## (b) HYP-9340 beyond Sylow (p-groups proved and mixed primes refuted by the packet; what is left)
+
+The refutation shows the exact failure mechanism predicted by THM-4721 Proposition Q: for mixed-prime H the N(H)-even odd graphs (K_{5,5} for C15) and the multiplicity defects need not balance. Open: a formula for tau_T(H) - tau_E(H) for general odd H in terms of these two defects, and the smallest mixed-prime H with a nonzero difference (C15 at n = 10 is the first found; Z_15 at n = 8, 9 balances).
 
 By THM-4723, for `H = Z_3` of type `(3,1^{n-3})` the conjecture is `Σ_X (b(X) - e(X)) = 0`. Conjectured involution on defective graph types: an even defective graph has a twin class `C` with `floor(|C|/3)` even or two swappable twin classes; split `C` as `3 + 3 + rest` (resp. take the two classes), join the two triples completely, keeping everything else — the result is odd (the swap of the two triples reverses an odd number of edges) with `b = 1`; and conversely. All 18 defective types for n <= 8 pair up this way. A proof must handle twin classes of size >= 9 (where `floor(c/3)` is odd and no defect occurs) and nested configurations. For general odd H the analogous reduction needs "H-blow-ups" (Theorem S' of THM-4722 handles Sylow H; THM-4723 Theorem P reformulates the p-subgroup case as equality of Sylow profiles).
 
