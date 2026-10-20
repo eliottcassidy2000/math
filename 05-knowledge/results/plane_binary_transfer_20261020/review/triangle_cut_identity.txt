@@ -1,0 +1,5 @@
+PASS: every norm edge lies in exactly two triangles and every graph degree is 18.
+Exact algebraic identity: monochromatic_triangle_count = 1734 - cut_edge_count.
+Every cut is even by the degree sum formula. Refutation therefore implies at least two monochromatic triangles and maxcut <= 1732.
+The radial PSD hostile has relaxed cut value 2601*(2/3)=1734, violating the global cut inequality by 2.
+100 seeded signings also checked as sanity tests; the general identity and parity follow algebraically.

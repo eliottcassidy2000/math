@@ -1,0 +1,1 @@
+{"coefficient_ring": "Z[zeta]/(zeta^2-zeta+1)", "colorings": 256, "exact_motion_identities": 6, "monochromatic_ABC_colorings": 64, "result": "PASS", "verified_inequality": "1_mono(ABC) <= sum of six template-copy mono indicators"}

@@ -1,0 +1,1 @@
+{"certificate_sha256": "3980c13e87296452da52c9d0f8a6da1a5bfbbf1130e9d8a19f1b00ec0052d9e6", "field": "F_17[sqrt(3)]", "forced_assignments": 125099, "leaves": 1726, "nodes": 3451, "result": "PASS", "triangle_edges": 1734, "undirected_unit_edges": 2601, "vertices": 289}

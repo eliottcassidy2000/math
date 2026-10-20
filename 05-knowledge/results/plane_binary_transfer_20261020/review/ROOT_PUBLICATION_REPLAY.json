@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "transformation": "Mechanical Assert-to-explicit-RuntimeError guard conversion; no theorem or certificate bytes changed",
+  "changes": [
+    {
+      "file": "circle/check_finite_cases.py",
+      "gates": 5,
+      "original_sha256": "88449c1e6f44a3a7d50f4fee99c69b08f6f0cd59bc4ddbf0cb5fb875ac0e258b",
+      "publication_sha256": "4dd784bc45dc3183702acafa92f610619f5063aed31ec7a2b9f1e97a42fa7bde"
+    },
+    {
+      "file": "scripts/certify_kloosterman_bounds.py",
+      "gates": 5,
+      "original_sha256": "cc0def29e7ad34c66dcd34fde3a92ab05136d7ef0f51bdcf7f103a2027fcb208",
+      "publication_sha256": "970e7ee0395e88cda5f44b970416077dbedaf9c6ec683f64d3b5b367d2b95b8e"
+    },
+    {
+      "file": "scripts/check_binary_and_controls.py",
+      "gates": 9,
+      "original_sha256": "3a56147194b0144e3dfd81d6cf16b1482e16d3e8f15b8190d488b8df1416ce83",
+      "publication_sha256": "ea2fea2be8a70a6875363408c6d34618cdc2804a33fa9811d44313dd451ff8af"
+    },
+    {
+      "file": "scripts/check_eight_point_forcing.py",
+      "gates": 3,
+      "original_sha256": "61007b601437d8c04fe0c316617ddf49736ea0b8956d945c6cf67d651617aa36",
+      "publication_sha256": "edd3bb80ad8c8d65cfc2446e725d85be853bebbb6b91d9f44171141df4f27a90"
+    },
+    {
+      "file": "scripts/probe_finite_triangles.py",
+      "gates": 1,
+      "original_sha256": "d830441dd1d830a37766fb4b80ff656306699243cf704a9fd7ea57e56851939c",
+      "publication_sha256": "f8d9770e2779ecdf1123719171efea4fa58c07e24e33e6dad356815c188e84c7"
+    },
+    {
+      "file": "scripts/verify_q17.py",
+      "gates": 12,
+      "original_sha256": "569e0d46c1fb33587db417fd40c28acec94136f642f5f9cd745c43e18af8b5fe",
+      "publication_sha256": "7b9f6e777222631166d7bfd7cf82c79e8a13dea9270f7ce23fab6e400bc56c2d",
+      "additional_change": "Strict index/type and proof-tree structure guards; optional --certificate for hostile tests."
+    }
+  ],
+  "replays": [
+    {
+      "script": "scripts/check_binary_and_controls.py",
+      "normal_optimized_equal": true,
+      "output": "review/root_replay_check_binary_and_controls.txt",
+      "output_sha256": "74584fc7e37215d28a093124fc71db508864c3b43711db35823212f2e86a512e"
+    },
+    {
+      "script": "scripts/check_eight_point_forcing.py",
+      "normal_optimized_equal": true,
+      "output": "review/root_replay_check_eight_point_forcing.txt",
+      "output_sha256": "12e5e04abbfd8d134b996b6050c180bcd2ab1f3119306dda121a74813d583e38"
+    },
+    {
+      "script": "circle/check_finite_cases.py",
+      "normal_optimized_equal": true,
+      "output": "review/root_replay_check_finite_cases.txt",
+      "output_sha256": "de20782c05da02192ae9752acbe788afa1ca557786f405ee3658c75fda17abf8"
+    },
+    {
+      "script": "scripts/verify_q17.py",
+      "normal_optimized_equal": true,
+      "output": "review/root_replay_verify_q17.txt",
+      "output_sha256": "c3b383510e1a58806876d966dd198c2505d090be0a6d1887d2cfc4db8d9e5949"
+    },
+    {
+      "script": "scripts/certify_kloosterman_bounds.py",
+      "normal_optimized_equal": true,
+      "output": "review/root_replay_certify_kloosterman_bounds.txt",
+      "output_sha256": "8cab1b032ceebda8d5336a857f8eea6e0c4db01fb156e1b3f8b76193fab60580"
+    }
+  ],
+  "certificate_hostile_tests": [
+    {
+      "corruption": "negative_conflict",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "corruption": "negative_conflict",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "corruption": "negative_branch",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "corruption": "negative_branch",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "corruption": "boolean_branch",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "corruption": "boolean_branch",
+      "optimized": true,
+      "rejected": true
+    }
+  ]
+}

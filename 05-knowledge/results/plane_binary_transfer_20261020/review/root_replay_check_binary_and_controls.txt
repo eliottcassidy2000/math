@@ -1,0 +1,50 @@
+{
+  "result": "PASS",
+  "rational_Q_grid_points": 729,
+  "Boolean_degrees": [
+    {
+      "k": 2,
+      "degree": 2
+    },
+    {
+      "k": 3,
+      "degree": 2
+    },
+    {
+      "k": 4,
+      "degree": 4
+    },
+    {
+      "k": 5,
+      "degree": 4
+    },
+    {
+      "k": 6,
+      "degree": 6
+    },
+    {
+      "k": 7,
+      "degree": 6
+    },
+    {
+      "k": 8,
+      "degree": 8
+    }
+  ],
+  "four_bit_parity_mono_counts": [
+    2,
+    0
+  ],
+  "positive_controls": [
+    {
+      "p": 5,
+      "triangles": 50,
+      "result": "PASS"
+    },
+    {
+      "p": 11,
+      "triangles": 484,
+      "result": "PASS"
+    }
+  ]
+}

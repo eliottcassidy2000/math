@@ -1,0 +1,2 @@
+PASS q=5: 25 vertices and 50 independently reconstructed norm-graph triangles, no monochromatic triple.
+PASS q=11: 121 vertices and 484 independently reconstructed norm-graph triangles, no monochromatic triple.
