@@ -1,6 +1,7 @@
 # Three-black detours for the complete endpoint-two layer
 
-Research continuation, October 20, 2026. Inherited base `b9cc57066630`.
+Research continuation, October 20, 2026. Inherited base `b9cc57066630`;
+incoming work through `ed0719d0ca` was read and integrated at close-out.
 This packet combines the two-block and cyclic-middle repairs, preserving
 the actual exceptional endpoint arcs. No claim of literature novelty is made.
 
@@ -132,6 +133,20 @@ macro K ledger; its target is a block expansion. It preserves directed
 legality and the labelled endpoint iff the stated parity conditions hold.
 It does not certify blackness; that needs the separate anti-involution
 sidecar. This explains why a macro-edge cancellation alone was inadequate.
+
+The incoming [endpoint checker](../zero_heavy_ports_20261020g/endpoint_check.py)
+independently isolates the full-tiling middle whose reversed suffix has
+only an immediate exit to its prescribed last vertex. It is the same
+last-port obstruction covered here by whole-block transport, not a new
+bridge. The incoming [quadratic attachment theorem](../zero_heavy_ports_20261020g/profile_growth.md)
+retains endpoints of distinct path-cover components for a different
+operation, adding one vertex. Its equal-profile cores with different
+growth responses reinforce the need to specify the operation before
+compressing its boundary data. Those attachment tensors do not by
+themselves supply K detours; conversely, our prefix parity criterion
+does not count unlabelled children. The two sidecars have different
+preserved predicates and cannot be identified merely because each uses
+two ports.
 
 For a general closed blue word with scores (n-1-k,k), define its
 **marked endpoint port defect** to be k-1. Its first endpoint loses to z
