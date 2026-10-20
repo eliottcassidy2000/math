@@ -1,0 +1,5055 @@
+{
+  "complete_small_prime_census": [
+    {
+      "p": 3,
+      "universe": 2,
+      "traceless": 0,
+      "rigid_traceless": 0,
+      "traceless_stabilizer_order_distribution": {}
+    },
+    {
+      "p": 5,
+      "universe": 4,
+      "traceless": 0,
+      "rigid_traceless": 0,
+      "traceless_stabilizer_order_distribution": {}
+    },
+    {
+      "p": 7,
+      "universe": 8,
+      "traceless": 2,
+      "rigid_traceless": 0,
+      "traceless_stabilizer_order_distribution": {
+        "3": 2
+      }
+    },
+    {
+      "p": 11,
+      "universe": 32,
+      "traceless": 2,
+      "rigid_traceless": 0,
+      "traceless_stabilizer_order_distribution": {
+        "5": 2
+      }
+    },
+    {
+      "p": 13,
+      "universe": 64,
+      "traceless": 4,
+      "rigid_traceless": 0,
+      "traceless_stabilizer_order_distribution": {
+        "3": 4
+      }
+    },
+    {
+      "p": 17,
+      "universe": 256,
+      "traceless": 0,
+      "rigid_traceless": 0,
+      "traceless_stabilizer_order_distribution": {}
+    },
+    {
+      "p": 19,
+      "universe": 512,
+      "traceless": 8,
+      "rigid_traceless": 0,
+      "traceless_stabilizer_order_distribution": {
+        "3": 6,
+        "9": 2
+      }
+    },
+    {
+      "p": 23,
+      "universe": 2048,
+      "traceless": 2,
+      "rigid_traceless": 0,
+      "traceless_stabilizer_order_distribution": {
+        "11": 2
+      }
+    },
+    {
+      "p": 29,
+      "universe": 16384,
+      "traceless": 4,
+      "rigid_traceless": 0,
+      "traceless_stabilizer_order_distribution": {
+        "7": 4
+      }
+    },
+    {
+      "p": 31,
+      "universe": 32768,
+      "traceless": 38,
+      "rigid_traceless": 0,
+      "traceless_stabilizer_order_distribution": {
+        "3": 30,
+        "5": 6,
+        "15": 2
+      }
+    }
+  ],
+  "complete_p61_meet_in_middle_census": {
+    "p": 61,
+    "universe": 1073741824,
+    "method": "exact 15+15 meet-in-middle",
+    "traceless": 1444,
+    "rigid_traceless": 360,
+    "traceless_stabilizer_order_distribution": {
+      "3": 1020,
+      "1": 360,
+      "5": 60,
+      "15": 4
+    }
+  },
+  "construction_universe": "Every bad-regime prime p <= 1000",
+  "construction_count": 62,
+  "construction_checks": [
+    {
+      "p": 61,
+      "p_minus_1": {
+        "2": 2,
+        "3": 1,
+        "5": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 16,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 127,
+      "p_minus_1": {
+        "2": 1,
+        "3": 2,
+        "7": 1
+      },
+      "primitive_root": 3,
+      "mechanism": "low-digit selector with full top-digit branch",
+      "unit_indices_checked": 36,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 151,
+      "p_minus_1": {
+        "2": 1,
+        "3": 1,
+        "5": 2
+      },
+      "primitive_root": 6,
+      "mechanism": "low-digit selector with full top-digit branch",
+      "unit_indices_checked": 40,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 157,
+      "p_minus_1": {
+        "2": 2,
+        "3": 1,
+        "13": 1
+      },
+      "primitive_root": 5,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 48,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 181,
+      "p_minus_1": {
+        "2": 2,
+        "3": 2,
+        "5": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 48,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 199,
+      "p_minus_1": {
+        "2": 1,
+        "3": 2,
+        "11": 1
+      },
+      "primitive_root": 3,
+      "mechanism": "low-digit selector with full top-digit branch",
+      "unit_indices_checked": 60,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 211,
+      "p_minus_1": {
+        "2": 1,
+        "3": 1,
+        "5": 1,
+        "7": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "third full primary-coordinate selector",
+      "unit_indices_checked": 48,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 229,
+      "p_minus_1": {
+        "2": 2,
+        "3": 1,
+        "19": 1
+      },
+      "primitive_root": 6,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 72,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 241,
+      "p_minus_1": {
+        "2": 4,
+        "3": 1,
+        "5": 1
+      },
+      "primitive_root": 7,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 64,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 271,
+      "p_minus_1": {
+        "2": 1,
+        "3": 3,
+        "5": 1
+      },
+      "primitive_root": 6,
+      "mechanism": "low-digit selector with full top-digit branch",
+      "unit_indices_checked": 72,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 277,
+      "p_minus_1": {
+        "2": 2,
+        "3": 1,
+        "23": 1
+      },
+      "primitive_root": 5,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 88,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 281,
+      "p_minus_1": {
+        "2": 3,
+        "5": 1,
+        "7": 1
+      },
+      "primitive_root": 3,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 96,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 307,
+      "p_minus_1": {
+        "2": 1,
+        "3": 2,
+        "17": 1
+      },
+      "primitive_root": 5,
+      "mechanism": "low-digit selector with full top-digit branch",
+      "unit_indices_checked": 96,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 313,
+      "p_minus_1": {
+        "2": 3,
+        "3": 1,
+        "13": 1
+      },
+      "primitive_root": 10,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 96,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 331,
+      "p_minus_1": {
+        "2": 1,
+        "3": 1,
+        "5": 1,
+        "11": 1
+      },
+      "primitive_root": 3,
+      "mechanism": "third full primary-coordinate selector",
+      "unit_indices_checked": 80,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 337,
+      "p_minus_1": {
+        "2": 4,
+        "3": 1,
+        "7": 1
+      },
+      "primitive_root": 10,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 96,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 349,
+      "p_minus_1": {
+        "2": 2,
+        "3": 1,
+        "29": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 112,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 373,
+      "p_minus_1": {
+        "2": 2,
+        "3": 1,
+        "31": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 120,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 379,
+      "p_minus_1": {
+        "2": 1,
+        "3": 3,
+        "7": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "low-digit selector with full top-digit branch",
+      "unit_indices_checked": 108,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 397,
+      "p_minus_1": {
+        "2": 2,
+        "3": 2,
+        "11": 1
+      },
+      "primitive_root": 5,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 120,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 409,
+      "p_minus_1": {
+        "2": 3,
+        "3": 1,
+        "17": 1
+      },
+      "primitive_root": 21,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 128,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 421,
+      "p_minus_1": {
+        "2": 2,
+        "3": 1,
+        "5": 1,
+        "7": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 96,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 457,
+      "p_minus_1": {
+        "2": 3,
+        "3": 1,
+        "19": 1
+      },
+      "primitive_root": 13,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 144,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 461,
+      "p_minus_1": {
+        "2": 2,
+        "5": 1,
+        "23": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 176,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 463,
+      "p_minus_1": {
+        "2": 1,
+        "3": 1,
+        "7": 1,
+        "11": 1
+      },
+      "primitive_root": 3,
+      "mechanism": "third full primary-coordinate selector",
+      "unit_indices_checked": 120,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 491,
+      "p_minus_1": {
+        "2": 1,
+        "5": 1,
+        "7": 2
+      },
+      "primitive_root": 2,
+      "mechanism": "low-digit selector with full top-digit branch",
+      "unit_indices_checked": 168,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 521,
+      "p_minus_1": {
+        "2": 3,
+        "5": 1,
+        "13": 1
+      },
+      "primitive_root": 3,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 192,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 523,
+      "p_minus_1": {
+        "2": 1,
+        "3": 2,
+        "29": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "low-digit selector with full top-digit branch",
+      "unit_indices_checked": 168,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 541,
+      "p_minus_1": {
+        "2": 2,
+        "3": 3,
+        "5": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 144,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 547,
+      "p_minus_1": {
+        "2": 1,
+        "3": 1,
+        "7": 1,
+        "13": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "third full primary-coordinate selector",
+      "unit_indices_checked": 144,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 571,
+      "p_minus_1": {
+        "2": 1,
+        "3": 1,
+        "5": 1,
+        "19": 1
+      },
+      "primitive_root": 3,
+      "mechanism": "third full primary-coordinate selector",
+      "unit_indices_checked": 144,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 601,
+      "p_minus_1": {
+        "2": 3,
+        "3": 1,
+        "5": 2
+      },
+      "primitive_root": 7,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 160,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 613,
+      "p_minus_1": {
+        "2": 2,
+        "3": 2,
+        "17": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 192,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 617,
+      "p_minus_1": {
+        "2": 3,
+        "7": 1,
+        "11": 1
+      },
+      "primitive_root": 3,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 240,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 631,
+      "p_minus_1": {
+        "2": 1,
+        "3": 2,
+        "5": 1,
+        "7": 1
+      },
+      "primitive_root": 3,
+      "mechanism": "third full primary-coordinate selector",
+      "unit_indices_checked": 144,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 661,
+      "p_minus_1": {
+        "2": 2,
+        "3": 1,
+        "5": 1,
+        "11": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 160,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 673,
+      "p_minus_1": {
+        "2": 5,
+        "3": 1,
+        "7": 1
+      },
+      "primitive_root": 5,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 192,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 691,
+      "p_minus_1": {
+        "2": 1,
+        "3": 1,
+        "5": 1,
+        "23": 1
+      },
+      "primitive_root": 3,
+      "mechanism": "third full primary-coordinate selector",
+      "unit_indices_checked": 176,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 701,
+      "p_minus_1": {
+        "2": 2,
+        "5": 2,
+        "7": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 240,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 709,
+      "p_minus_1": {
+        "2": 2,
+        "3": 1,
+        "59": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 232,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 727,
+      "p_minus_1": {
+        "2": 1,
+        "3": 1,
+        "11": 2
+      },
+      "primitive_root": 5,
+      "mechanism": "low-digit selector with full top-digit branch",
+      "unit_indices_checked": 220,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 733,
+      "p_minus_1": {
+        "2": 2,
+        "3": 1,
+        "61": 1
+      },
+      "primitive_root": 6,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 240,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 739,
+      "p_minus_1": {
+        "2": 1,
+        "3": 2,
+        "41": 1
+      },
+      "primitive_root": 3,
+      "mechanism": "low-digit selector with full top-digit branch",
+      "unit_indices_checked": 240,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 751,
+      "p_minus_1": {
+        "2": 1,
+        "3": 1,
+        "5": 3
+      },
+      "primitive_root": 3,
+      "mechanism": "low-digit selector with full top-digit branch",
+      "unit_indices_checked": 200,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 757,
+      "p_minus_1": {
+        "2": 2,
+        "3": 3,
+        "7": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 216,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 761,
+      "p_minus_1": {
+        "2": 3,
+        "5": 1,
+        "19": 1
+      },
+      "primitive_root": 6,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 288,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 811,
+      "p_minus_1": {
+        "2": 1,
+        "3": 4,
+        "5": 1
+      },
+      "primitive_root": 3,
+      "mechanism": "low-digit selector with full top-digit branch",
+      "unit_indices_checked": 216,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 821,
+      "p_minus_1": {
+        "2": 2,
+        "5": 1,
+        "41": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 320,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 829,
+      "p_minus_1": {
+        "2": 2,
+        "3": 2,
+        "23": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 264,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 853,
+      "p_minus_1": {
+        "2": 2,
+        "3": 1,
+        "71": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 280,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 859,
+      "p_minus_1": {
+        "2": 1,
+        "3": 1,
+        "11": 1,
+        "13": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "third full primary-coordinate selector",
+      "unit_indices_checked": 240,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 877,
+      "p_minus_1": {
+        "2": 2,
+        "3": 1,
+        "73": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 288,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 881,
+      "p_minus_1": {
+        "2": 4,
+        "5": 1,
+        "11": 1
+      },
+      "primitive_root": 3,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 320,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 883,
+      "p_minus_1": {
+        "2": 1,
+        "3": 2,
+        "7": 2
+      },
+      "primitive_root": 2,
+      "mechanism": "low-digit selector with full top-digit branch",
+      "unit_indices_checked": 252,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 911,
+      "p_minus_1": {
+        "2": 1,
+        "5": 1,
+        "7": 1,
+        "13": 1
+      },
+      "primitive_root": 17,
+      "mechanism": "third full primary-coordinate selector",
+      "unit_indices_checked": 288,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 919,
+      "p_minus_1": {
+        "2": 1,
+        "3": 3,
+        "17": 1
+      },
+      "primitive_root": 7,
+      "mechanism": "low-digit selector with full top-digit branch",
+      "unit_indices_checked": 288,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 937,
+      "p_minus_1": {
+        "2": 3,
+        "3": 2,
+        "13": 1
+      },
+      "primitive_root": 5,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 288,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 941,
+      "p_minus_1": {
+        "2": 2,
+        "5": 1,
+        "47": 1
+      },
+      "primitive_root": 2,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 368,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 953,
+      "p_minus_1": {
+        "2": 3,
+        "7": 1,
+        "17": 1
+      },
+      "primitive_root": 3,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 384,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 967,
+      "p_minus_1": {
+        "2": 1,
+        "3": 1,
+        "7": 1,
+        "23": 1
+      },
+      "primitive_root": 5,
+      "mechanism": "third full primary-coordinate selector",
+      "unit_indices_checked": 264,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 991,
+      "p_minus_1": {
+        "2": 1,
+        "3": 2,
+        "5": 1,
+        "11": 1
+      },
+      "primitive_root": 6,
+      "mechanism": "third full primary-coordinate selector",
+      "unit_indices_checked": 240,
+      "stabilizer": [
+        1
+      ]
+    },
+    {
+      "p": 997,
+      "p_minus_1": {
+        "2": 2,
+        "3": 1,
+        "83": 1
+      },
+      "primitive_root": 7,
+      "mechanism": "independent antipodal two-adic slices",
+      "unit_indices_checked": 328,
+      "stabilizer": [
+        1
+      ]
+    }
+  ],
+  "named_examples": {
+    "61": {
+      "p": 61,
+      "factorization_p_minus_1": {
+        "2": 2,
+        "3": 1,
+        "5": 1
+      },
+      "primitive_root": 2,
+      "size": 30,
+      "tournament": true,
+      "unit_power_sums": [
+        [
+          1,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          17,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          29,
+          0
+        ],
+        [
+          31,
+          0
+        ],
+        [
+          37,
+          0
+        ],
+        [
+          41,
+          0
+        ],
+        [
+          43,
+          0
+        ],
+        [
+          47,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          53,
+          0
+        ],
+        [
+          59,
+          0
+        ]
+      ],
+      "stabilizer": [
+        1
+      ],
+      "exponent_periods": [
+        0
+      ],
+      "set": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        10,
+        13,
+        17,
+        19,
+        21,
+        23,
+        24,
+        27,
+        29,
+        31,
+        33,
+        35,
+        36,
+        39,
+        41,
+        43,
+        45,
+        46,
+        47,
+        49,
+        50,
+        52,
+        53,
+        54,
+        59
+      ],
+      "mechanism": "independent antipodal two-adic slices"
+    },
+    "127": {
+      "p": 127,
+      "factorization_p_minus_1": {
+        "2": 1,
+        "3": 2,
+        "7": 1
+      },
+      "primitive_root": 3,
+      "size": 63,
+      "tournament": true,
+      "unit_power_sums": [
+        [
+          1,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          17,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          29,
+          0
+        ],
+        [
+          31,
+          0
+        ],
+        [
+          37,
+          0
+        ],
+        [
+          41,
+          0
+        ],
+        [
+          43,
+          0
+        ],
+        [
+          47,
+          0
+        ],
+        [
+          53,
+          0
+        ],
+        [
+          55,
+          0
+        ],
+        [
+          59,
+          0
+        ],
+        [
+          61,
+          0
+        ],
+        [
+          65,
+          0
+        ],
+        [
+          67,
+          0
+        ],
+        [
+          71,
+          0
+        ],
+        [
+          73,
+          0
+        ],
+        [
+          79,
+          0
+        ],
+        [
+          83,
+          0
+        ],
+        [
+          85,
+          0
+        ],
+        [
+          89,
+          0
+        ],
+        [
+          95,
+          0
+        ],
+        [
+          97,
+          0
+        ],
+        [
+          101,
+          0
+        ],
+        [
+          103,
+          0
+        ],
+        [
+          107,
+          0
+        ],
+        [
+          109,
+          0
+        ],
+        [
+          113,
+          0
+        ],
+        [
+          115,
+          0
+        ],
+        [
+          121,
+          0
+        ],
+        [
+          125,
+          0
+        ]
+      ],
+      "stabilizer": [
+        1
+      ],
+      "exponent_periods": [
+        0
+      ],
+      "set": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        12,
+        14,
+        16,
+        20,
+        22,
+        23,
+        27,
+        29,
+        32,
+        33,
+        37,
+        39,
+        40,
+        43,
+        45,
+        46,
+        48,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        64,
+        65,
+        66,
+        67,
+        68,
+        77,
+        78,
+        80,
+        83,
+        85,
+        86,
+        89,
+        91,
+        92,
+        93,
+        96,
+        97,
+        99,
+        101,
+        102,
+        103,
+        106,
+        108,
+        109,
+        110,
+        112,
+        114,
+        116,
+        118
+      ],
+      "mechanism": "low-digit selector with full top-digit branch"
+    },
+    "151": {
+      "p": 151,
+      "factorization_p_minus_1": {
+        "2": 1,
+        "3": 1,
+        "5": 2
+      },
+      "primitive_root": 6,
+      "size": 75,
+      "tournament": true,
+      "unit_power_sums": [
+        [
+          1,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          17,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          29,
+          0
+        ],
+        [
+          31,
+          0
+        ],
+        [
+          37,
+          0
+        ],
+        [
+          41,
+          0
+        ],
+        [
+          43,
+          0
+        ],
+        [
+          47,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          53,
+          0
+        ],
+        [
+          59,
+          0
+        ],
+        [
+          61,
+          0
+        ],
+        [
+          67,
+          0
+        ],
+        [
+          71,
+          0
+        ],
+        [
+          73,
+          0
+        ],
+        [
+          77,
+          0
+        ],
+        [
+          79,
+          0
+        ],
+        [
+          83,
+          0
+        ],
+        [
+          89,
+          0
+        ],
+        [
+          91,
+          0
+        ],
+        [
+          97,
+          0
+        ],
+        [
+          101,
+          0
+        ],
+        [
+          103,
+          0
+        ],
+        [
+          107,
+          0
+        ],
+        [
+          109,
+          0
+        ],
+        [
+          113,
+          0
+        ],
+        [
+          119,
+          0
+        ],
+        [
+          121,
+          0
+        ],
+        [
+          127,
+          0
+        ],
+        [
+          131,
+          0
+        ],
+        [
+          133,
+          0
+        ],
+        [
+          137,
+          0
+        ],
+        [
+          139,
+          0
+        ],
+        [
+          143,
+          0
+        ],
+        [
+          149,
+          0
+        ]
+      ],
+      "stabilizer": [
+        1
+      ],
+      "exponent_periods": [
+        0
+      ],
+      "set": [
+        1,
+        6,
+        7,
+        9,
+        12,
+        13,
+        14,
+        15,
+        20,
+        23,
+        29,
+        30,
+        32,
+        35,
+        44,
+        46,
+        48,
+        50,
+        51,
+        52,
+        54,
+        56,
+        61,
+        63,
+        66,
+        68,
+        71,
+        72,
+        75,
+        77,
+        78,
+        81,
+        82,
+        84,
+        86,
+        87,
+        89,
+        91,
+        92,
+        93,
+        94,
+        96,
+        98,
+        102,
+        104,
+        106,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        117,
+        118,
+        120,
+        123,
+        124,
+        125,
+        126,
+        127,
+        129,
+        130,
+        132,
+        133,
+        134,
+        135,
+        140,
+        141,
+        143,
+        146,
+        147,
+        148,
+        149
+      ],
+      "mechanism": "low-digit selector with full top-digit branch"
+    },
+    "181": {
+      "p": 181,
+      "factorization_p_minus_1": {
+        "2": 2,
+        "3": 2,
+        "5": 1
+      },
+      "primitive_root": 2,
+      "size": 90,
+      "tournament": true,
+      "unit_power_sums": [
+        [
+          1,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          17,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          29,
+          0
+        ],
+        [
+          31,
+          0
+        ],
+        [
+          37,
+          0
+        ],
+        [
+          41,
+          0
+        ],
+        [
+          43,
+          0
+        ],
+        [
+          47,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          53,
+          0
+        ],
+        [
+          59,
+          0
+        ],
+        [
+          61,
+          0
+        ],
+        [
+          67,
+          0
+        ],
+        [
+          71,
+          0
+        ],
+        [
+          73,
+          0
+        ],
+        [
+          77,
+          0
+        ],
+        [
+          79,
+          0
+        ],
+        [
+          83,
+          0
+        ],
+        [
+          89,
+          0
+        ],
+        [
+          91,
+          0
+        ],
+        [
+          97,
+          0
+        ],
+        [
+          101,
+          0
+        ],
+        [
+          103,
+          0
+        ],
+        [
+          107,
+          0
+        ],
+        [
+          109,
+          0
+        ],
+        [
+          113,
+          0
+        ],
+        [
+          119,
+          0
+        ],
+        [
+          121,
+          0
+        ],
+        [
+          127,
+          0
+        ],
+        [
+          131,
+          0
+        ],
+        [
+          133,
+          0
+        ],
+        [
+          137,
+          0
+        ],
+        [
+          139,
+          0
+        ],
+        [
+          143,
+          0
+        ],
+        [
+          149,
+          0
+        ],
+        [
+          151,
+          0
+        ],
+        [
+          157,
+          0
+        ],
+        [
+          161,
+          0
+        ],
+        [
+          163,
+          0
+        ],
+        [
+          167,
+          0
+        ],
+        [
+          169,
+          0
+        ],
+        [
+          173,
+          0
+        ],
+        [
+          179,
+          0
+        ]
+      ],
+      "stabilizer": [
+        1
+      ],
+      "exponent_periods": [
+        0
+      ],
+      "set": [
+        1,
+        4,
+        7,
+        8,
+        11,
+        12,
+        17,
+        20,
+        21,
+        24,
+        33,
+        36,
+        37,
+        39,
+        40,
+        41,
+        43,
+        46,
+        48,
+        51,
+        52,
+        55,
+        56,
+        57,
+        60,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        72,
+        73,
+        79,
+        80,
+        85,
+        91,
+        92,
+        93,
+        94,
+        95,
+        97,
+        98,
+        99,
+        100,
+        103,
+        104,
+        105,
+        106,
+        107,
+        110,
+        111,
+        112,
+        113,
+        120,
+        122,
+        123,
+        127,
+        128,
+        131,
+        132,
+        134,
+        136,
+        137,
+        139,
+        143,
+        146,
+        147,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        158,
+        159,
+        162,
+        163,
+        165,
+        166,
+        167,
+        168,
+        171,
+        172,
+        175,
+        176,
+        178,
+        179
+      ],
+      "mechanism": "independent antipodal two-adic slices"
+    },
+    "211": {
+      "p": 211,
+      "factorization_p_minus_1": {
+        "2": 1,
+        "3": 1,
+        "5": 1,
+        "7": 1
+      },
+      "primitive_root": 2,
+      "size": 105,
+      "tournament": true,
+      "unit_power_sums": [
+        [
+          1,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          17,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          29,
+          0
+        ],
+        [
+          31,
+          0
+        ],
+        [
+          37,
+          0
+        ],
+        [
+          41,
+          0
+        ],
+        [
+          43,
+          0
+        ],
+        [
+          47,
+          0
+        ],
+        [
+          53,
+          0
+        ],
+        [
+          59,
+          0
+        ],
+        [
+          61,
+          0
+        ],
+        [
+          67,
+          0
+        ],
+        [
+          71,
+          0
+        ],
+        [
+          73,
+          0
+        ],
+        [
+          79,
+          0
+        ],
+        [
+          83,
+          0
+        ],
+        [
+          89,
+          0
+        ],
+        [
+          97,
+          0
+        ],
+        [
+          101,
+          0
+        ],
+        [
+          103,
+          0
+        ],
+        [
+          107,
+          0
+        ],
+        [
+          109,
+          0
+        ],
+        [
+          113,
+          0
+        ],
+        [
+          121,
+          0
+        ],
+        [
+          127,
+          0
+        ],
+        [
+          131,
+          0
+        ],
+        [
+          137,
+          0
+        ],
+        [
+          139,
+          0
+        ],
+        [
+          143,
+          0
+        ],
+        [
+          149,
+          0
+        ],
+        [
+          151,
+          0
+        ],
+        [
+          157,
+          0
+        ],
+        [
+          163,
+          0
+        ],
+        [
+          167,
+          0
+        ],
+        [
+          169,
+          0
+        ],
+        [
+          173,
+          0
+        ],
+        [
+          179,
+          0
+        ],
+        [
+          181,
+          0
+        ],
+        [
+          187,
+          0
+        ],
+        [
+          191,
+          0
+        ],
+        [
+          193,
+          0
+        ],
+        [
+          197,
+          0
+        ],
+        [
+          199,
+          0
+        ],
+        [
+          209,
+          0
+        ]
+      ],
+      "stabilizer": [
+        1
+      ],
+      "exponent_periods": [
+        0
+      ],
+      "set": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        10,
+        11,
+        13,
+        14,
+        17,
+        22,
+        23,
+        25,
+        26,
+        29,
+        31,
+        32,
+        33,
+        35,
+        38,
+        39,
+        41,
+        48,
+        50,
+        57,
+        58,
+        61,
+        64,
+        65,
+        72,
+        74,
+        75,
+        76,
+        77,
+        79,
+        82,
+        85,
+        87,
+        91,
+        92,
+        94,
+        96,
+        104,
+        106,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        116,
+        118,
+        121,
+        122,
+        123,
+        125,
+        127,
+        128,
+        130,
+        131,
+        133,
+        138,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        148,
+        149,
+        151,
+        152,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        162,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        171,
+        174,
+        175,
+        177,
+        181,
+        183,
+        184,
+        187,
+        190,
+        191,
+        192,
+        193,
+        195,
+        196,
+        199,
+        202,
+        203,
+        205,
+        207
+      ],
+      "mechanism": "third full primary-coordinate selector"
+    },
+    "241": {
+      "p": 241,
+      "factorization_p_minus_1": {
+        "2": 4,
+        "3": 1,
+        "5": 1
+      },
+      "primitive_root": 7,
+      "size": 120,
+      "tournament": true,
+      "unit_power_sums": [
+        [
+          1,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          17,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          29,
+          0
+        ],
+        [
+          31,
+          0
+        ],
+        [
+          37,
+          0
+        ],
+        [
+          41,
+          0
+        ],
+        [
+          43,
+          0
+        ],
+        [
+          47,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          53,
+          0
+        ],
+        [
+          59,
+          0
+        ],
+        [
+          61,
+          0
+        ],
+        [
+          67,
+          0
+        ],
+        [
+          71,
+          0
+        ],
+        [
+          73,
+          0
+        ],
+        [
+          77,
+          0
+        ],
+        [
+          79,
+          0
+        ],
+        [
+          83,
+          0
+        ],
+        [
+          89,
+          0
+        ],
+        [
+          91,
+          0
+        ],
+        [
+          97,
+          0
+        ],
+        [
+          101,
+          0
+        ],
+        [
+          103,
+          0
+        ],
+        [
+          107,
+          0
+        ],
+        [
+          109,
+          0
+        ],
+        [
+          113,
+          0
+        ],
+        [
+          119,
+          0
+        ],
+        [
+          121,
+          0
+        ],
+        [
+          127,
+          0
+        ],
+        [
+          131,
+          0
+        ],
+        [
+          133,
+          0
+        ],
+        [
+          137,
+          0
+        ],
+        [
+          139,
+          0
+        ],
+        [
+          143,
+          0
+        ],
+        [
+          149,
+          0
+        ],
+        [
+          151,
+          0
+        ],
+        [
+          157,
+          0
+        ],
+        [
+          161,
+          0
+        ],
+        [
+          163,
+          0
+        ],
+        [
+          167,
+          0
+        ],
+        [
+          169,
+          0
+        ],
+        [
+          173,
+          0
+        ],
+        [
+          179,
+          0
+        ],
+        [
+          181,
+          0
+        ],
+        [
+          187,
+          0
+        ],
+        [
+          191,
+          0
+        ],
+        [
+          193,
+          0
+        ],
+        [
+          197,
+          0
+        ],
+        [
+          199,
+          0
+        ],
+        [
+          203,
+          0
+        ],
+        [
+          209,
+          0
+        ],
+        [
+          211,
+          0
+        ],
+        [
+          217,
+          0
+        ],
+        [
+          221,
+          0
+        ],
+        [
+          223,
+          0
+        ],
+        [
+          227,
+          0
+        ],
+        [
+          229,
+          0
+        ],
+        [
+          233,
+          0
+        ],
+        [
+          239,
+          0
+        ]
+      ],
+      "stabilizer": [
+        1
+      ],
+      "exponent_periods": [
+        0
+      ],
+      "set": [
+        1,
+        2,
+        4,
+        6,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        18,
+        21,
+        25,
+        27,
+        29,
+        34,
+        35,
+        36,
+        37,
+        40,
+        41,
+        44,
+        47,
+        52,
+        56,
+        58,
+        60,
+        63,
+        64,
+        65,
+        66,
+        68,
+        69,
+        70,
+        71,
+        75,
+        76,
+        77,
+        81,
+        86,
+        95,
+        96,
+        97,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        112,
+        113,
+        114,
+        115,
+        116,
+        120,
+        122,
+        123,
+        124,
+        130,
+        131,
+        132,
+        140,
+        141,
+        142,
+        143,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        156,
+        157,
+        158,
+        159,
+        161,
+        162,
+        163,
+        167,
+        168,
+        169,
+        174,
+        179,
+        180,
+        182,
+        184,
+        186,
+        187,
+        188,
+        190,
+        191,
+        192,
+        193,
+        195,
+        196,
+        198,
+        199,
+        202,
+        203,
+        208,
+        209,
+        210,
+        211,
+        213,
+        215,
+        217,
+        218,
+        219,
+        221,
+        222,
+        224,
+        225,
+        229,
+        233,
+        234,
+        236,
+        238
+      ],
+      "mechanism": "independent antipodal two-adic slices"
+    },
+    "271": {
+      "p": 271,
+      "factorization_p_minus_1": {
+        "2": 1,
+        "3": 3,
+        "5": 1
+      },
+      "primitive_root": 6,
+      "size": 135,
+      "tournament": true,
+      "unit_power_sums": [
+        [
+          1,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          17,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          29,
+          0
+        ],
+        [
+          31,
+          0
+        ],
+        [
+          37,
+          0
+        ],
+        [
+          41,
+          0
+        ],
+        [
+          43,
+          0
+        ],
+        [
+          47,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          53,
+          0
+        ],
+        [
+          59,
+          0
+        ],
+        [
+          61,
+          0
+        ],
+        [
+          67,
+          0
+        ],
+        [
+          71,
+          0
+        ],
+        [
+          73,
+          0
+        ],
+        [
+          77,
+          0
+        ],
+        [
+          79,
+          0
+        ],
+        [
+          83,
+          0
+        ],
+        [
+          89,
+          0
+        ],
+        [
+          91,
+          0
+        ],
+        [
+          97,
+          0
+        ],
+        [
+          101,
+          0
+        ],
+        [
+          103,
+          0
+        ],
+        [
+          107,
+          0
+        ],
+        [
+          109,
+          0
+        ],
+        [
+          113,
+          0
+        ],
+        [
+          119,
+          0
+        ],
+        [
+          121,
+          0
+        ],
+        [
+          127,
+          0
+        ],
+        [
+          131,
+          0
+        ],
+        [
+          133,
+          0
+        ],
+        [
+          137,
+          0
+        ],
+        [
+          139,
+          0
+        ],
+        [
+          143,
+          0
+        ],
+        [
+          149,
+          0
+        ],
+        [
+          151,
+          0
+        ],
+        [
+          157,
+          0
+        ],
+        [
+          161,
+          0
+        ],
+        [
+          163,
+          0
+        ],
+        [
+          167,
+          0
+        ],
+        [
+          169,
+          0
+        ],
+        [
+          173,
+          0
+        ],
+        [
+          179,
+          0
+        ],
+        [
+          181,
+          0
+        ],
+        [
+          187,
+          0
+        ],
+        [
+          191,
+          0
+        ],
+        [
+          193,
+          0
+        ],
+        [
+          197,
+          0
+        ],
+        [
+          199,
+          0
+        ],
+        [
+          203,
+          0
+        ],
+        [
+          209,
+          0
+        ],
+        [
+          211,
+          0
+        ],
+        [
+          217,
+          0
+        ],
+        [
+          221,
+          0
+        ],
+        [
+          223,
+          0
+        ],
+        [
+          227,
+          0
+        ],
+        [
+          229,
+          0
+        ],
+        [
+          233,
+          0
+        ],
+        [
+          239,
+          0
+        ],
+        [
+          241,
+          0
+        ],
+        [
+          247,
+          0
+        ],
+        [
+          251,
+          0
+        ],
+        [
+          253,
+          0
+        ],
+        [
+          257,
+          0
+        ],
+        [
+          259,
+          0
+        ],
+        [
+          263,
+          0
+        ],
+        [
+          269,
+          0
+        ]
+      ],
+      "stabilizer": [
+        1
+      ],
+      "exponent_periods": [
+        0
+      ],
+      "set": [
+        1,
+        3,
+        5,
+        6,
+        10,
+        15,
+        19,
+        21,
+        24,
+        25,
+        26,
+        29,
+        30,
+        32,
+        38,
+        42,
+        43,
+        46,
+        47,
+        48,
+        51,
+        52,
+        58,
+        59,
+        66,
+        71,
+        73,
+        75,
+        76,
+        77,
+        83,
+        86,
+        88,
+        91,
+        92,
+        94,
+        95,
+        96,
+        97,
+        100,
+        101,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        114,
+        116,
+        117,
+        118,
+        120,
+        123,
+        125,
+        126,
+        130,
+        132,
+        133,
+        135,
+        137,
+        140,
+        142,
+        143,
+        144,
+        147,
+        149,
+        150,
+        152,
+        156,
+        158,
+        159,
+        160,
+        161,
+        168,
+        169,
+        172,
+        173,
+        178,
+        181,
+        182,
+        184,
+        186,
+        187,
+        189,
+        190,
+        191,
+        192,
+        193,
+        197,
+        199,
+        201,
+        202,
+        203,
+        204,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        214,
+        215,
+        216,
+        217,
+        218,
+        221,
+        222,
+        226,
+        227,
+        230,
+        231,
+        232,
+        234,
+        235,
+        236,
+        237,
+        238,
+        240,
+        243,
+        244,
+        248,
+        249,
+        251,
+        253,
+        254,
+        255,
+        257,
+        258,
+        259,
+        260,
+        262,
+        263,
+        264,
+        267,
+        269
+      ],
+      "mechanism": "low-digit selector with full top-digit branch"
+    },
+    "331": {
+      "p": 331,
+      "factorization_p_minus_1": {
+        "2": 1,
+        "3": 1,
+        "5": 1,
+        "11": 1
+      },
+      "primitive_root": 3,
+      "size": 165,
+      "tournament": true,
+      "unit_power_sums": [
+        [
+          1,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          17,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          29,
+          0
+        ],
+        [
+          31,
+          0
+        ],
+        [
+          37,
+          0
+        ],
+        [
+          41,
+          0
+        ],
+        [
+          43,
+          0
+        ],
+        [
+          47,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          53,
+          0
+        ],
+        [
+          59,
+          0
+        ],
+        [
+          61,
+          0
+        ],
+        [
+          67,
+          0
+        ],
+        [
+          71,
+          0
+        ],
+        [
+          73,
+          0
+        ],
+        [
+          79,
+          0
+        ],
+        [
+          83,
+          0
+        ],
+        [
+          89,
+          0
+        ],
+        [
+          91,
+          0
+        ],
+        [
+          97,
+          0
+        ],
+        [
+          101,
+          0
+        ],
+        [
+          103,
+          0
+        ],
+        [
+          107,
+          0
+        ],
+        [
+          109,
+          0
+        ],
+        [
+          113,
+          0
+        ],
+        [
+          119,
+          0
+        ],
+        [
+          127,
+          0
+        ],
+        [
+          131,
+          0
+        ],
+        [
+          133,
+          0
+        ],
+        [
+          137,
+          0
+        ],
+        [
+          139,
+          0
+        ],
+        [
+          149,
+          0
+        ],
+        [
+          151,
+          0
+        ],
+        [
+          157,
+          0
+        ],
+        [
+          161,
+          0
+        ],
+        [
+          163,
+          0
+        ],
+        [
+          167,
+          0
+        ],
+        [
+          169,
+          0
+        ],
+        [
+          173,
+          0
+        ],
+        [
+          179,
+          0
+        ],
+        [
+          181,
+          0
+        ],
+        [
+          191,
+          0
+        ],
+        [
+          193,
+          0
+        ],
+        [
+          197,
+          0
+        ],
+        [
+          199,
+          0
+        ],
+        [
+          203,
+          0
+        ],
+        [
+          211,
+          0
+        ],
+        [
+          217,
+          0
+        ],
+        [
+          221,
+          0
+        ],
+        [
+          223,
+          0
+        ],
+        [
+          227,
+          0
+        ],
+        [
+          229,
+          0
+        ],
+        [
+          233,
+          0
+        ],
+        [
+          239,
+          0
+        ],
+        [
+          241,
+          0
+        ],
+        [
+          247,
+          0
+        ],
+        [
+          251,
+          0
+        ],
+        [
+          257,
+          0
+        ],
+        [
+          259,
+          0
+        ],
+        [
+          263,
+          0
+        ],
+        [
+          269,
+          0
+        ],
+        [
+          271,
+          0
+        ],
+        [
+          277,
+          0
+        ],
+        [
+          281,
+          0
+        ],
+        [
+          283,
+          0
+        ],
+        [
+          287,
+          0
+        ],
+        [
+          289,
+          0
+        ],
+        [
+          293,
+          0
+        ],
+        [
+          299,
+          0
+        ],
+        [
+          301,
+          0
+        ],
+        [
+          307,
+          0
+        ],
+        [
+          311,
+          0
+        ],
+        [
+          313,
+          0
+        ],
+        [
+          317,
+          0
+        ],
+        [
+          323,
+          0
+        ],
+        [
+          329,
+          0
+        ]
+      ],
+      "stabilizer": [
+        1
+      ],
+      "exponent_periods": [
+        0
+      ],
+      "set": [
+        1,
+        2,
+        3,
+        8,
+        11,
+        13,
+        22,
+        23,
+        28,
+        29,
+        31,
+        33,
+        34,
+        35,
+        37,
+        40,
+        41,
+        42,
+        44,
+        47,
+        48,
+        49,
+        50,
+        51,
+        55,
+        56,
+        59,
+        60,
+        62,
+        63,
+        66,
+        67,
+        68,
+        70,
+        72,
+        74,
+        75,
+        80,
+        84,
+        85,
+        86,
+        90,
+        93,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        105,
+        107,
+        108,
+        111,
+        112,
+        118,
+        119,
+        120,
+        125,
+        126,
+        128,
+        129,
+        133,
+        134,
+        135,
+        136,
+        137,
+        140,
+        143,
+        144,
+        147,
+        148,
+        152,
+        153,
+        155,
+        157,
+        158,
+        160,
+        162,
+        166,
+        167,
+        168,
+        170,
+        172,
+        175,
+        177,
+        180,
+        181,
+        182,
+        185,
+        186,
+        189,
+        190,
+        192,
+        193,
+        199,
+        200,
+        201,
+        204,
+        207,
+        208,
+        209,
+        210,
+        214,
+        215,
+        216,
+        217,
+        218,
+        221,
+        222,
+        225,
+        227,
+        228,
+        236,
+        237,
+        239,
+        240,
+        242,
+        243,
+        244,
+        248,
+        249,
+        250,
+        252,
+        253,
+        254,
+        255,
+        258,
+        260,
+        262,
+        266,
+        267,
+        270,
+        273,
+        274,
+        277,
+        278,
+        279,
+        285,
+        286,
+        288,
+        292,
+        293,
+        295,
+        299,
+        301,
+        304,
+        305,
+        306,
+        307,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        319,
+        321,
+        322,
+        324,
+        325,
+        326,
+        327
+      ],
+      "mechanism": "third full primary-coordinate selector"
+    },
+    "421": {
+      "p": 421,
+      "factorization_p_minus_1": {
+        "2": 2,
+        "3": 1,
+        "5": 1,
+        "7": 1
+      },
+      "primitive_root": 2,
+      "size": 210,
+      "tournament": true,
+      "unit_power_sums": [
+        [
+          1,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          17,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          29,
+          0
+        ],
+        [
+          31,
+          0
+        ],
+        [
+          37,
+          0
+        ],
+        [
+          41,
+          0
+        ],
+        [
+          43,
+          0
+        ],
+        [
+          47,
+          0
+        ],
+        [
+          53,
+          0
+        ],
+        [
+          59,
+          0
+        ],
+        [
+          61,
+          0
+        ],
+        [
+          67,
+          0
+        ],
+        [
+          71,
+          0
+        ],
+        [
+          73,
+          0
+        ],
+        [
+          79,
+          0
+        ],
+        [
+          83,
+          0
+        ],
+        [
+          89,
+          0
+        ],
+        [
+          97,
+          0
+        ],
+        [
+          101,
+          0
+        ],
+        [
+          103,
+          0
+        ],
+        [
+          107,
+          0
+        ],
+        [
+          109,
+          0
+        ],
+        [
+          113,
+          0
+        ],
+        [
+          121,
+          0
+        ],
+        [
+          127,
+          0
+        ],
+        [
+          131,
+          0
+        ],
+        [
+          137,
+          0
+        ],
+        [
+          139,
+          0
+        ],
+        [
+          143,
+          0
+        ],
+        [
+          149,
+          0
+        ],
+        [
+          151,
+          0
+        ],
+        [
+          157,
+          0
+        ],
+        [
+          163,
+          0
+        ],
+        [
+          167,
+          0
+        ],
+        [
+          169,
+          0
+        ],
+        [
+          173,
+          0
+        ],
+        [
+          179,
+          0
+        ],
+        [
+          181,
+          0
+        ],
+        [
+          187,
+          0
+        ],
+        [
+          191,
+          0
+        ],
+        [
+          193,
+          0
+        ],
+        [
+          197,
+          0
+        ],
+        [
+          199,
+          0
+        ],
+        [
+          209,
+          0
+        ],
+        [
+          211,
+          0
+        ],
+        [
+          221,
+          0
+        ],
+        [
+          223,
+          0
+        ],
+        [
+          227,
+          0
+        ],
+        [
+          229,
+          0
+        ],
+        [
+          233,
+          0
+        ],
+        [
+          239,
+          0
+        ],
+        [
+          241,
+          0
+        ],
+        [
+          247,
+          0
+        ],
+        [
+          251,
+          0
+        ],
+        [
+          253,
+          0
+        ],
+        [
+          257,
+          0
+        ],
+        [
+          263,
+          0
+        ],
+        [
+          269,
+          0
+        ],
+        [
+          271,
+          0
+        ],
+        [
+          277,
+          0
+        ],
+        [
+          281,
+          0
+        ],
+        [
+          283,
+          0
+        ],
+        [
+          289,
+          0
+        ],
+        [
+          293,
+          0
+        ],
+        [
+          299,
+          0
+        ],
+        [
+          307,
+          0
+        ],
+        [
+          311,
+          0
+        ],
+        [
+          313,
+          0
+        ],
+        [
+          317,
+          0
+        ],
+        [
+          319,
+          0
+        ],
+        [
+          323,
+          0
+        ],
+        [
+          331,
+          0
+        ],
+        [
+          337,
+          0
+        ],
+        [
+          341,
+          0
+        ],
+        [
+          347,
+          0
+        ],
+        [
+          349,
+          0
+        ],
+        [
+          353,
+          0
+        ],
+        [
+          359,
+          0
+        ],
+        [
+          361,
+          0
+        ],
+        [
+          367,
+          0
+        ],
+        [
+          373,
+          0
+        ],
+        [
+          377,
+          0
+        ],
+        [
+          379,
+          0
+        ],
+        [
+          383,
+          0
+        ],
+        [
+          389,
+          0
+        ],
+        [
+          391,
+          0
+        ],
+        [
+          397,
+          0
+        ],
+        [
+          401,
+          0
+        ],
+        [
+          403,
+          0
+        ],
+        [
+          407,
+          0
+        ],
+        [
+          409,
+          0
+        ],
+        [
+          419,
+          0
+        ]
+      ],
+      "stabilizer": [
+        1
+      ],
+      "exponent_periods": [
+        0
+      ],
+      "set": [
+        1,
+        4,
+        5,
+        7,
+        8,
+        10,
+        12,
+        14,
+        15,
+        17,
+        20,
+        23,
+        24,
+        29,
+        30,
+        34,
+        36,
+        38,
+        39,
+        41,
+        42,
+        44,
+        45,
+        51,
+        55,
+        58,
+        59,
+        61,
+        63,
+        64,
+        67,
+        69,
+        72,
+        74,
+        76,
+        77,
+        80,
+        86,
+        88,
+        90,
+        92,
+        94,
+        95,
+        100,
+        101,
+        102,
+        104,
+        106,
+        108,
+        110,
+        112,
+        113,
+        114,
+        116,
+        117,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        140,
+        142,
+        143,
+        145,
+        146,
+        148,
+        151,
+        153,
+        154,
+        155,
+        160,
+        162,
+        165,
+        166,
+        167,
+        169,
+        172,
+        174,
+        175,
+        177,
+        178,
+        179,
+        182,
+        183,
+        184,
+        185,
+        187,
+        188,
+        189,
+        192,
+        196,
+        200,
+        201,
+        202,
+        203,
+        207,
+        208,
+        211,
+        212,
+        215,
+        216,
+        217,
+        222,
+        223,
+        224,
+        226,
+        227,
+        228,
+        230,
+        231,
+        235,
+        240,
+        241,
+        245,
+        248,
+        250,
+        251,
+        253,
+        257,
+        258,
+        260,
+        262,
+        263,
+        264,
+        265,
+        269,
+        271,
+        272,
+        274,
+        277,
+        280,
+        282,
+        283,
+        284,
+        285,
+        292,
+        299,
+        300,
+        301,
+        302,
+        303,
+        306,
+        310,
+        312,
+        314,
+        316,
+        318,
+        322,
+        323,
+        324,
+        325,
+        328,
+        330,
+        332,
+        334,
+        336,
+        337,
+        338,
+        339,
+        340,
+        342,
+        343,
+        346,
+        348,
+        350,
+        351,
+        353,
+        355,
+        356,
+        359,
+        361,
+        364,
+        365,
+        367,
+        368,
+        369,
+        371,
+        372,
+        373,
+        374,
+        375,
+        378,
+        381,
+        384,
+        386,
+        388,
+        389,
+        390,
+        393,
+        394,
+        395,
+        396,
+        399,
+        400,
+        402,
+        403,
+        405,
+        408,
+        410,
+        412,
+        415,
+        418,
+        419
+      ],
+      "mechanism": "independent antipodal two-adic slices"
+    },
+    "541": {
+      "p": 541,
+      "factorization_p_minus_1": {
+        "2": 2,
+        "3": 3,
+        "5": 1
+      },
+      "primitive_root": 2,
+      "size": 270,
+      "tournament": true,
+      "unit_power_sums": [
+        [
+          1,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          17,
+          0
+        ],
+        [
+          19,
+          0
+        ],
+        [
+          23,
+          0
+        ],
+        [
+          29,
+          0
+        ],
+        [
+          31,
+          0
+        ],
+        [
+          37,
+          0
+        ],
+        [
+          41,
+          0
+        ],
+        [
+          43,
+          0
+        ],
+        [
+          47,
+          0
+        ],
+        [
+          49,
+          0
+        ],
+        [
+          53,
+          0
+        ],
+        [
+          59,
+          0
+        ],
+        [
+          61,
+          0
+        ],
+        [
+          67,
+          0
+        ],
+        [
+          71,
+          0
+        ],
+        [
+          73,
+          0
+        ],
+        [
+          77,
+          0
+        ],
+        [
+          79,
+          0
+        ],
+        [
+          83,
+          0
+        ],
+        [
+          89,
+          0
+        ],
+        [
+          91,
+          0
+        ],
+        [
+          97,
+          0
+        ],
+        [
+          101,
+          0
+        ],
+        [
+          103,
+          0
+        ],
+        [
+          107,
+          0
+        ],
+        [
+          109,
+          0
+        ],
+        [
+          113,
+          0
+        ],
+        [
+          119,
+          0
+        ],
+        [
+          121,
+          0
+        ],
+        [
+          127,
+          0
+        ],
+        [
+          131,
+          0
+        ],
+        [
+          133,
+          0
+        ],
+        [
+          137,
+          0
+        ],
+        [
+          139,
+          0
+        ],
+        [
+          143,
+          0
+        ],
+        [
+          149,
+          0
+        ],
+        [
+          151,
+          0
+        ],
+        [
+          157,
+          0
+        ],
+        [
+          161,
+          0
+        ],
+        [
+          163,
+          0
+        ],
+        [
+          167,
+          0
+        ],
+        [
+          169,
+          0
+        ],
+        [
+          173,
+          0
+        ],
+        [
+          179,
+          0
+        ],
+        [
+          181,
+          0
+        ],
+        [
+          187,
+          0
+        ],
+        [
+          191,
+          0
+        ],
+        [
+          193,
+          0
+        ],
+        [
+          197,
+          0
+        ],
+        [
+          199,
+          0
+        ],
+        [
+          203,
+          0
+        ],
+        [
+          209,
+          0
+        ],
+        [
+          211,
+          0
+        ],
+        [
+          217,
+          0
+        ],
+        [
+          221,
+          0
+        ],
+        [
+          223,
+          0
+        ],
+        [
+          227,
+          0
+        ],
+        [
+          229,
+          0
+        ],
+        [
+          233,
+          0
+        ],
+        [
+          239,
+          0
+        ],
+        [
+          241,
+          0
+        ],
+        [
+          247,
+          0
+        ],
+        [
+          251,
+          0
+        ],
+        [
+          253,
+          0
+        ],
+        [
+          257,
+          0
+        ],
+        [
+          259,
+          0
+        ],
+        [
+          263,
+          0
+        ],
+        [
+          269,
+          0
+        ],
+        [
+          271,
+          0
+        ],
+        [
+          277,
+          0
+        ],
+        [
+          281,
+          0
+        ],
+        [
+          283,
+          0
+        ],
+        [
+          287,
+          0
+        ],
+        [
+          289,
+          0
+        ],
+        [
+          293,
+          0
+        ],
+        [
+          299,
+          0
+        ],
+        [
+          301,
+          0
+        ],
+        [
+          307,
+          0
+        ],
+        [
+          311,
+          0
+        ],
+        [
+          313,
+          0
+        ],
+        [
+          317,
+          0
+        ],
+        [
+          319,
+          0
+        ],
+        [
+          323,
+          0
+        ],
+        [
+          329,
+          0
+        ],
+        [
+          331,
+          0
+        ],
+        [
+          337,
+          0
+        ],
+        [
+          341,
+          0
+        ],
+        [
+          343,
+          0
+        ],
+        [
+          347,
+          0
+        ],
+        [
+          349,
+          0
+        ],
+        [
+          353,
+          0
+        ],
+        [
+          359,
+          0
+        ],
+        [
+          361,
+          0
+        ],
+        [
+          367,
+          0
+        ],
+        [
+          371,
+          0
+        ],
+        [
+          373,
+          0
+        ],
+        [
+          377,
+          0
+        ],
+        [
+          379,
+          0
+        ],
+        [
+          383,
+          0
+        ],
+        [
+          389,
+          0
+        ],
+        [
+          391,
+          0
+        ],
+        [
+          397,
+          0
+        ],
+        [
+          401,
+          0
+        ],
+        [
+          403,
+          0
+        ],
+        [
+          407,
+          0
+        ],
+        [
+          409,
+          0
+        ],
+        [
+          413,
+          0
+        ],
+        [
+          419,
+          0
+        ],
+        [
+          421,
+          0
+        ],
+        [
+          427,
+          0
+        ],
+        [
+          431,
+          0
+        ],
+        [
+          433,
+          0
+        ],
+        [
+          437,
+          0
+        ],
+        [
+          439,
+          0
+        ],
+        [
+          443,
+          0
+        ],
+        [
+          449,
+          0
+        ],
+        [
+          451,
+          0
+        ],
+        [
+          457,
+          0
+        ],
+        [
+          461,
+          0
+        ],
+        [
+          463,
+          0
+        ],
+        [
+          467,
+          0
+        ],
+        [
+          469,
+          0
+        ],
+        [
+          473,
+          0
+        ],
+        [
+          479,
+          0
+        ],
+        [
+          481,
+          0
+        ],
+        [
+          487,
+          0
+        ],
+        [
+          491,
+          0
+        ],
+        [
+          493,
+          0
+        ],
+        [
+          497,
+          0
+        ],
+        [
+          499,
+          0
+        ],
+        [
+          503,
+          0
+        ],
+        [
+          509,
+          0
+        ],
+        [
+          511,
+          0
+        ],
+        [
+          517,
+          0
+        ],
+        [
+          521,
+          0
+        ],
+        [
+          523,
+          0
+        ],
+        [
+          527,
+          0
+        ],
+        [
+          529,
+          0
+        ],
+        [
+          533,
+          0
+        ],
+        [
+          539,
+          0
+        ]
+      ],
+      "stabilizer": [
+        1
+      ],
+      "exponent_periods": [
+        0
+      ],
+      "set": [
+        1,
+        4,
+        7,
+        8,
+        11,
+        12,
+        14,
+        15,
+        17,
+        19,
+        20,
+        21,
+        24,
+        26,
+        28,
+        29,
+        33,
+        34,
+        35,
+        37,
+        38,
+        40,
+        41,
+        42,
+        44,
+        46,
+        47,
+        51,
+        55,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        66,
+        67,
+        70,
+        72,
+        74,
+        76,
+        78,
+        80,
+        85,
+        87,
+        88,
+        89,
+        91,
+        93,
+        94,
+        95,
+        97,
+        99,
+        100,
+        105,
+        107,
+        108,
+        109,
+        111,
+        112,
+        113,
+        114,
+        118,
+        120,
+        126,
+        127,
+        128,
+        129,
+        131,
+        136,
+        139,
+        141,
+        145,
+        146,
+        147,
+        153,
+        154,
+        155,
+        156,
+        161,
+        164,
+        165,
+        166,
+        169,
+        171,
+        172,
+        173,
+        176,
+        177,
+        180,
+        183,
+        184,
+        185,
+        186,
+        187,
+        190,
+        193,
+        196,
+        200,
+        201,
+        209,
+        210,
+        211,
+        214,
+        216,
+        218,
+        223,
+        224,
+        225,
+        232,
+        234,
+        235,
+        238,
+        239,
+        242,
+        243,
+        251,
+        253,
+        255,
+        260,
+        261,
+        264,
+        267,
+        271,
+        272,
+        273,
+        275,
+        276,
+        278,
+        279,
+        282,
+        283,
+        284,
+        285,
+        287,
+        289,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        300,
+        301,
+        304,
+        305,
+        308,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        319,
+        320,
+        321,
+        322,
+        324,
+        326,
+        328,
+        329,
+        333,
+        334,
+        335,
+        336,
+        337,
+        338,
+        339,
+        342,
+        343,
+        344,
+        346,
+        347,
+        349,
+        350,
+        352,
+        353,
+        359,
+        360,
+        362,
+        363,
+        366,
+        367,
+        371,
+        373,
+        374,
+        378,
+        379,
+        381,
+        382,
+        383,
+        384,
+        389,
+        390,
+        391,
+        392,
+        393,
+        397,
+        398,
+        399,
+        401,
+        403,
+        404,
+        406,
+        407,
+        408,
+        409,
+        411,
+        416,
+        417,
+        418,
+        419,
+        420,
+        422,
+        424,
+        425,
+        426,
+        431,
+        435,
+        437,
+        438,
+        439,
+        440,
+        443,
+        445,
+        449,
+        451,
+        455,
+        457,
+        458,
+        459,
+        460,
+        462,
+        464,
+        466,
+        468,
+        470,
+        472,
+        473,
+        476,
+        485,
+        487,
+        488,
+        489,
+        491,
+        492,
+        493,
+        496,
+        498,
+        502,
+        505,
+        509,
+        510,
+        511,
+        514,
+        516,
+        518,
+        519,
+        523,
+        525,
+        528,
+        531,
+        532,
+        535,
+        536,
+        538,
+        539
+      ],
+      "mechanism": "independent antipodal two-adic slices"
+    }
+  },
+  "first_bad_prime": 61,
+  "first_bad_prime_3_mod_4": 127
+}
