@@ -1,0 +1,753 @@
+{
+  "centers": [
+    {
+      "H": 45,
+      "blue_paths": 27,
+      "complement": false,
+      "feedback": 4,
+      "matching": [
+        0,
+        1,
+        2
+      ],
+      "sign": 1
+    },
+    {
+      "H": 45,
+      "blue_paths": 27,
+      "complement": true,
+      "feedback": 4,
+      "matching": [
+        0,
+        1,
+        2
+      ],
+      "sign": 1
+    },
+    {
+      "H": 45,
+      "blue_paths": 9,
+      "complement": false,
+      "feedback": 4,
+      "matching": [
+        0,
+        2,
+        1
+      ],
+      "sign": 1
+    },
+    {
+      "H": 45,
+      "blue_paths": 9,
+      "complement": true,
+      "feedback": 4,
+      "matching": [
+        0,
+        2,
+        1
+      ],
+      "sign": 1
+    },
+    {
+      "H": 45,
+      "blue_paths": 9,
+      "complement": false,
+      "feedback": 4,
+      "matching": [
+        1,
+        0,
+        2
+      ],
+      "sign": 1
+    },
+    {
+      "H": 45,
+      "blue_paths": 9,
+      "complement": true,
+      "feedback": 4,
+      "matching": [
+        1,
+        0,
+        2
+      ],
+      "sign": 1
+    },
+    {
+      "H": 45,
+      "blue_paths": 27,
+      "complement": false,
+      "feedback": 4,
+      "matching": [
+        1,
+        2,
+        0
+      ],
+      "sign": 1
+    },
+    {
+      "H": 45,
+      "blue_paths": 27,
+      "complement": true,
+      "feedback": 4,
+      "matching": [
+        1,
+        2,
+        0
+      ],
+      "sign": 1
+    },
+    {
+      "H": 45,
+      "blue_paths": 27,
+      "complement": false,
+      "feedback": 4,
+      "matching": [
+        2,
+        0,
+        1
+      ],
+      "sign": 1
+    },
+    {
+      "H": 45,
+      "blue_paths": 27,
+      "complement": true,
+      "feedback": 4,
+      "matching": [
+        2,
+        0,
+        1
+      ],
+      "sign": 1
+    },
+    {
+      "H": 45,
+      "blue_paths": 9,
+      "complement": false,
+      "feedback": 4,
+      "matching": [
+        2,
+        1,
+        0
+      ],
+      "sign": 1
+    },
+    {
+      "H": 45,
+      "blue_paths": 9,
+      "complement": true,
+      "feedback": 4,
+      "matching": [
+        2,
+        1,
+        0
+      ],
+      "sign": 1
+    },
+    {
+      "H": 45,
+      "blue_paths": 9,
+      "complement": false,
+      "feedback": 4,
+      "matching": [
+        0,
+        1,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "H": 45,
+      "blue_paths": 9,
+      "complement": true,
+      "feedback": 4,
+      "matching": [
+        0,
+        1,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "H": 45,
+      "blue_paths": 27,
+      "complement": false,
+      "feedback": 4,
+      "matching": [
+        0,
+        2,
+        1
+      ],
+      "sign": -1
+    },
+    {
+      "H": 45,
+      "blue_paths": 27,
+      "complement": true,
+      "feedback": 4,
+      "matching": [
+        0,
+        2,
+        1
+      ],
+      "sign": -1
+    },
+    {
+      "H": 45,
+      "blue_paths": 27,
+      "complement": false,
+      "feedback": 4,
+      "matching": [
+        1,
+        0,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "H": 45,
+      "blue_paths": 27,
+      "complement": true,
+      "feedback": 4,
+      "matching": [
+        1,
+        0,
+        2
+      ],
+      "sign": -1
+    },
+    {
+      "H": 45,
+      "blue_paths": 9,
+      "complement": false,
+      "feedback": 4,
+      "matching": [
+        1,
+        2,
+        0
+      ],
+      "sign": -1
+    },
+    {
+      "H": 45,
+      "blue_paths": 9,
+      "complement": true,
+      "feedback": 4,
+      "matching": [
+        1,
+        2,
+        0
+      ],
+      "sign": -1
+    },
+    {
+      "H": 45,
+      "blue_paths": 9,
+      "complement": false,
+      "feedback": 4,
+      "matching": [
+        2,
+        0,
+        1
+      ],
+      "sign": -1
+    },
+    {
+      "H": 45,
+      "blue_paths": 9,
+      "complement": true,
+      "feedback": 4,
+      "matching": [
+        2,
+        0,
+        1
+      ],
+      "sign": -1
+    },
+    {
+      "H": 45,
+      "blue_paths": 27,
+      "complement": false,
+      "feedback": 4,
+      "matching": [
+        2,
+        1,
+        0
+      ],
+      "sign": -1
+    },
+    {
+      "H": 45,
+      "blue_paths": 27,
+      "complement": true,
+      "feedback": 4,
+      "matching": [
+        2,
+        1,
+        0
+      ],
+      "sign": -1
+    }
+  ],
+  "checks": {
+    "all 24 matching-oriented centers exact feedback and symmetry": 24,
+    "all matching-oriented centers have 45 Hamilton paths": 24,
+    "all-future one-block hostile exact contraction to unpaid limit": 20,
+    "any central pair of ports pins the shared phase": 360,
+    "block envelope dominates literal formal endpoint": 27993,
+    "block optimum DP equals exhaustive partition search": 1740,
+    "boundary transfer rook count equals literal extensions": 1260,
+    "central cycle index has one shared rotation": 24,
+    "complete residue universe gives exactly the predicted cylinder": 120,
+    "declared source route cap": 380,
+    "every splitting refinement lowers source envelope": 134370,
+    "independent composition has integral carry": 120,
+    "listed actual first-exit source has a paid block refinement": 10,
+    "long-source fewer-block optimum by exhaustive cut enumeration": 2,
+    "matching orientation changes blue response by factor three": 24,
+    "one spare colour destroys ternary orientation obstruction": 1260,
+    "source 27 exact paid four-block endpoint": 1,
+    "source 27 never paid by one block before reaching one": 1,
+    "source 27 one-block all-future hostile limit": 1,
+    "source 27 requires exactly four blocks on its first descent": 1,
+    "source 63 exact paid five-block endpoint": 1,
+    "source 63 refutes a four-block first-exit rule": 1
+  },
+  "cylinders": {
+    "odd_residues_tested": 41370,
+    "words": 120
+  },
+  "refinements": {
+    "all_short_partitions": 27993,
+    "source_examples": [
+      {
+        "cuts": [
+          4
+        ],
+        "first_descent_endpoint": 5,
+        "first_descent_steps": 4,
+        "minimum_blocks": 1,
+        "source": 7,
+        "upper": "413/64",
+        "word": [
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "best_one_fewer_upper": "8194133293001559511/288230376151711744",
+        "cuts": [
+          6,
+          16,
+          32,
+          37
+        ],
+        "first_descent_endpoint": 23,
+        "first_descent_steps": 37,
+        "independent_exhausted_partitions": 630,
+        "minimum_blocks": 4,
+        "source": 27,
+        "upper": "7067832544468979611/288230376151711744",
+        "word": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4,
+          3
+        ]
+      },
+      {
+        "cuts": [
+          14,
+          30,
+          35
+        ],
+        "first_descent_endpoint": 23,
+        "first_descent_steps": 35,
+        "minimum_blocks": 3,
+        "source": 31,
+        "upper": "963966296312974613/36028797018963968",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4,
+          3
+        ]
+      },
+      {
+        "best_one_fewer_upper": "1126094044200493/17592186044416",
+        "cuts": [
+          5,
+          14,
+          26,
+          30,
+          34
+        ],
+        "first_descent_endpoint": 61,
+        "first_descent_steps": 34,
+        "independent_exhausted_partitions": 5456,
+        "minimum_blocks": 5,
+        "source": 63,
+        "upper": "1095707345239597/17592186044416",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "cuts": [
+          3
+        ],
+        "first_descent_endpoint": 1,
+        "first_descent_steps": 3,
+        "minimum_blocks": 1,
+        "source": 75,
+        "upper": "1913/1024",
+        "word": [
+          1,
+          2,
+          8
+        ]
+      },
+      {
+        "cuts": [
+          9
+        ],
+        "first_descent_endpoint": 77,
+        "first_descent_steps": 9,
+        "minimum_blocks": 1,
+        "source": 127,
+        "upper": "1487543/16384",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4,
+          3
+        ]
+      },
+      {
+        "cuts": [
+          8
+        ],
+        "first_descent_endpoint": 205,
+        "first_descent_steps": 8,
+        "minimum_blocks": 1,
+        "source": 255,
+        "upper": "903509/4096",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "cuts": [
+          34,
+          51
+        ],
+        "first_descent_endpoint": 157,
+        "first_descent_steps": 51,
+        "minimum_blocks": 2,
+        "source": 703,
+        "upper": "1352705566067193715020690095/4835703278458516698824704",
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          3,
+          4,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          5,
+          1,
+          1,
+          1,
+          1,
+          4,
+          2,
+          6
+        ]
+      },
+      {
+        "cuts": [
+          14,
+          22
+        ],
+        "first_descent_endpoint": 797,
+        "first_descent_steps": 22,
+        "minimum_blocks": 2,
+        "source": 871,
+        "upper": "13752648878987/17179869184",
+        "word": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4,
+          2,
+          1,
+          2,
+          1,
+          4,
+          3
+        ]
+      },
+      {
+        "cuts": [
+          26,
+          36
+        ],
+        "first_descent_endpoint": 3215,
+        "first_descent_steps": 36,
+        "minimum_blocks": 2,
+        "source": 6171,
+        "upper": "469434666721526396263/144115188075855872",
+        "word": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          4,
+          3,
+          3
+        ]
+      }
+    ]
+  },
+  "status": "FINITE-EXACT, separate algorithms by same agent",
+  "total_checks": 167737,
+  "transfer_rooks": [
+    {
+      "colours": 3,
+      "fixed_left_states": 6,
+      "maximum": 2,
+      "minimum": 0,
+      "supported": 3
+    },
+    {
+      "colours": 4,
+      "fixed_left_states": 24,
+      "maximum": 11,
+      "minimum": 4,
+      "supported": 24
+    },
+    {
+      "colours": 5,
+      "fixed_left_states": 60,
+      "maximum": 32,
+      "minimum": 13,
+      "supported": 60
+    },
+    {
+      "colours": 6,
+      "fixed_left_states": 120,
+      "maximum": 71,
+      "minimum": 34,
+      "supported": 120
+    },
+    {
+      "colours": 7,
+      "fixed_left_states": 210,
+      "maximum": 134,
+      "minimum": 73,
+      "supported": 210
+    },
+    {
+      "colours": 8,
+      "fixed_left_states": 336,
+      "maximum": 227,
+      "minimum": 136,
+      "supported": 336
+    },
+    {
+      "colours": 9,
+      "fixed_left_states": 504,
+      "maximum": 356,
+      "minimum": 229,
+      "supported": 504
+    }
+  ]
+}

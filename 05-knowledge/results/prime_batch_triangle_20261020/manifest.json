@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "05-knowledge/results/arithmetic_braids_20260917_divisors.md": "2c9224962e8395082bdafaf490f664be1943511a82e28ef4a86569b637aca958",
+    "05-knowledge/results/continuation_width_symmetry_20261020/README.md": "348ac050570a47b7c044cae507cff1e355d5d7ddf931a427d9c54b7d7508226d",
+    "05-knowledge/results/continuation_width_symmetry_20261020/independent_controls.py": "82d540f520268ddd11992c2b3bc8114e9ed8f6cfd37b36d28d50addf09860af7",
+    "05-knowledge/results/continuation_width_symmetry_20261020/verify.py": "b1eaccb3c0607362c9f3e81a8cb41f897faeac6a834b766408eb9c8fb1bc6f78",
+    "05-knowledge/results/deficit_two_centers_20261020/README.md": "467e5d1606328add64950196f0ffd263c4844b1c8360b6f83bf958662d56a034",
+    "05-knowledge/results/deficit_two_centers_20261020/session15-deficit-centers/AUDIT_COMPLETION.md": "d76e67ed7dfbf9f79db11b8ca4652c22414d3edb1a837ec78ba3dbbaf6d95cc7",
+    "05-knowledge/results/paired_black_leaf_reduction_20261020/BLACK_QUOTIENT_LEAF_CLASSIFICATION.md": "6f0b7299c2661f1a12b3f8985cc5c2b0f6229ddee6064b7f24d229a6a4c605c0"
+  },
+  "files": {
+    "AUDIT.md": "c38124ea3791990bb5381570b2130b1b93a52d3aec7d1f7dbdfa3965cb88a53b",
+    "CONNECTIONS.md": "7ba0a68b27460999c6e4a9689a3e88cab57634fa42c085df21921e21e2eb85dd",
+    "README.md": "6dbc7d185966fe64a6db2700d19dc7d526cee38d54640fe0cb4ab9d18a32ed05",
+    "block-receipt.json": "592b8091b2831e47f8cd38d0c021fa69e2f51d48a825ffd2780269bac5e357aa",
+    "block_probe.py": "76169412b78fd924afb09e962eaa0c3afd0241879f3dd3ea50cf45d8bdf10900",
+    "receipt.json": "a153212e486660157c84658f201d707c87906d467d68a6b50f00822f00e627c8",
+    "separate-receipt.json": "29f7b64bf16740ffa90ea4cb02ea8c6c53d05d1a2acdd3d0f323ca21412a2715",
+    "separate_controls.py": "6343f5ef9992dff7bdd4063496638fec1c6a2fa046f74c1459609ebd24ee8c0d",
+    "verify.py": "30136cd1e32373a1c1085db7be1c1033bea05248649fb04efb652af2924763a6"
+  },
+  "incoming_read_through": "b3d59a8495e2fecbe7523e513f32d2cc217c70eb",
+  "normal_optimized_equal": [
+    "verify.py",
+    "separate_controls.py",
+    "block_probe.py"
+  ],
+  "status": "same-agent reviewed scoped proofs; FINITE-EXACT receipts"
+}

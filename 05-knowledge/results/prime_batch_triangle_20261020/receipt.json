@@ -1,0 +1,518 @@
+{
+  "census": [
+    {
+      "classes": 1,
+      "n": 0,
+      "slack_counts": {
+        "0": 1
+      },
+      "synchronized": 0
+    },
+    {
+      "classes": 1,
+      "n": 1,
+      "slack_counts": {
+        "0": 1
+      },
+      "synchronized": 0
+    },
+    {
+      "classes": 1,
+      "n": 2,
+      "slack_counts": {
+        "0": 1
+      },
+      "synchronized": 0
+    },
+    {
+      "classes": 2,
+      "n": 3,
+      "slack_counts": {
+        "0": 2
+      },
+      "synchronized": 0
+    },
+    {
+      "classes": 4,
+      "n": 4,
+      "slack_counts": {
+        "0": 3,
+        "3": 1
+      },
+      "synchronized": 0
+    },
+    {
+      "classes": 12,
+      "n": 5,
+      "slack_counts": {
+        "0": 4,
+        "3": 4,
+        "4": 1,
+        "6": 3
+      },
+      "synchronized": 0
+    },
+    {
+      "classes": 56,
+      "n": 6,
+      "slack_counts": {
+        "0": 6,
+        "3": 10,
+        "4": 2,
+        "6": 21,
+        "9": 15,
+        "12": 2
+      },
+      "synchronized": 2
+    },
+    {
+      "classes": 456,
+      "n": 7,
+      "slack_counts": {
+        "0": 9,
+        "3": 22,
+        "4": 3,
+        "6": 69,
+        "7": 1,
+        "9": 135,
+        "11": 1,
+        "12": 143,
+        "14": 1,
+        "15": 64,
+        "18": 8
+      },
+      "synchronized": 4
+    }
+  ],
+  "checks": {
+    "Collatz word cylinder odd": 5460,
+    "actual nonsynchronized quotient passes local grammar": 87,
+    "actual sources recover exact cylinders": 12012,
+    "all other orbit modules quiet": 6,
+    "central module one of two synchronized types": 6,
+    "circular optimum subset-DP control": 4,
+    "circular tournament attains feedback lower bound": 5,
+    "common-degree continuation matrix positive definite": 21,
+    "cylinder realizes every exact valuation": 92844,
+    "decreasing word maximizes carry": 209,
+    "descent iff exact source threshold": 16380,
+    "every accepted endpoint grammar has exact slack and group": 1113,
+    "exactly two nonmodule triangle orbits": 6,
+    "factorial valuation paid by orbit slack": 755,
+    "finite partition Euler majorant exact": 20,
+    "four through six-colour two-link extension": 18576,
+    "generated synchronized feedback": 82,
+    "generated synchronized group order": 82,
+    "increasing word minimizes carry": 209,
+    "induced unit-distance strip exact quadratic coordinates": 741,
+    "inherited proper divisor balance direct definitions": 999,
+    "local grammar equals weighted feedback and coloured rigidity": 1113,
+    "lower bank all future words affordable": 1202,
+    "mixed balanced group-order witness exact invariants": 1,
+    "nonsynchronized full group product": 87,
+    "nonsynchronized quotient weighted feedback two": 87,
+    "past lies in one completed prime batch": 1202,
+    "prime-batch lower bank exact responses": 1202,
+    "prime-batch lower profiles distinct": 6,
+    "prime-power symmetry slack lower bound": 1066,
+    "shared central phase and every port pair": 4578,
+    "six-colour greedy count lower bound": 14400,
+    "slack six only singleton and triangle orbits": 93,
+    "source endpoint and integer clock": 16380,
+    "synchronized feedback by two algorithms": 2,
+    "synchronized fixed-free mass": 82,
+    "synchronized sector exact generating series": 8,
+    "synchronized union is a module": 6,
+    "three-colour orientation coset exact": 36,
+    "triangle strip vertices distinct": 1,
+    "two synchronized types nonisomorphic": 1,
+    "two-colour smooth product equals convolution": 20,
+    "unlabelled extension census matches A000568 through seven": 8
+  },
+  "collatz": {
+    "actual_source_prefixes": 12012,
+    "constructed_physical_prefixes": 16380,
+    "formal_words": 5460,
+    "multisets": 209
+  },
+  "dependencies": {
+    "independent_controls.py": "82d540f520268ddd11992c2b3bc8114e9ed8f6cfd37b36d28d50addf09860af7",
+    "verify.py": "b1eaccb3c0607362c9f3e81a8cb41f897faeac6a834b766408eb9c8fb1bc6f78"
+  },
+  "geometry": {
+    "colour_transfers": [
+      {
+        "colours": 3,
+        "maximum_extensions": 2,
+        "minimum_extensions": 0,
+        "one_link_support": 12,
+        "states": 6,
+        "two_link_support": 18
+      },
+      {
+        "colours": 4,
+        "maximum_extensions": 11,
+        "minimum_extensions": 4,
+        "one_link_support": 264,
+        "states": 24,
+        "two_link_support": 576
+      },
+      {
+        "colours": 5,
+        "maximum_extensions": 32,
+        "minimum_extensions": 13,
+        "one_link_support": 1920,
+        "states": 60,
+        "two_link_support": 3600
+      },
+      {
+        "colours": 6,
+        "maximum_extensions": 71,
+        "minimum_extensions": 34,
+        "one_link_support": 8520,
+        "states": 120,
+        "two_link_support": 14400
+      }
+    ],
+    "geometry_edges": 75,
+    "geometry_vertices": 39
+  },
+  "grammar": {
+    "accepted": 388,
+    "presentations": 1113,
+    "rejected": 725
+  },
+  "prime_costs": [
+    {
+      "feedback": 3,
+      "p": 5,
+      "slack_cost": 4
+    },
+    {
+      "feedback": 6,
+      "p": 7,
+      "slack_cost": 11
+    },
+    {
+      "feedback": 15,
+      "p": 11,
+      "slack_cost": 34
+    },
+    {
+      "feedback": 21,
+      "p": 13,
+      "slack_cost": 50
+    },
+    {
+      "feedback": 36,
+      "p": 17,
+      "slack_cost": 91
+    }
+  ],
+  "prime_mass": {
+    "prime_banks": [
+      {
+        "L": 5,
+        "common_cell_rank": 1,
+        "horizon": 84,
+        "primes": [
+          7
+        ],
+        "profiles": 2,
+        "q": 11
+      },
+      {
+        "L": 10,
+        "common_cell_rank": 2,
+        "horizon": 1440,
+        "primes": [
+          11,
+          13,
+          17,
+          19
+        ],
+        "profiles": 16,
+        "q": 23
+      },
+      {
+        "L": 12,
+        "common_cell_rank": 2,
+        "horizon": 2160,
+        "primes": [
+          13,
+          17,
+          19,
+          23
+        ],
+        "profiles": 16,
+        "q": 29
+      },
+      {
+        "L": 20,
+        "common_cell_rank": 2,
+        "horizon": 5040,
+        "primes": [
+          23,
+          29,
+          31,
+          37
+        ],
+        "profiles": 16,
+        "q": 41
+      },
+      {
+        "L": 30,
+        "common_cell_rank": 4,
+        "horizon": 19282,
+        "primes": [
+          31,
+          37,
+          41,
+          43,
+          47,
+          53,
+          59
+        ],
+        "profiles": 128,
+        "q": 61
+      },
+      {
+        "L": 50,
+        "common_cell_rank": 10,
+        "horizon": 74664,
+        "primes": [
+          53,
+          59,
+          61,
+          67,
+          71,
+          73,
+          79,
+          83,
+          89,
+          97
+        ],
+        "profiles": 1024,
+        "q": 101
+      }
+    ],
+    "smooth_partitions": [
+      {
+        "M": 12,
+        "count": 2476,
+        "p": 3,
+        "parts": 8
+      },
+      {
+        "M": 24,
+        "count": 158641,
+        "p": 3,
+        "parts": 11
+      },
+      {
+        "M": 48,
+        "count": 48118900,
+        "p": 3,
+        "parts": 15
+      },
+      {
+        "M": 96,
+        "count": 99623700052,
+        "p": 3,
+        "parts": 20
+      },
+      {
+        "M": 12,
+        "count": 2978,
+        "p": 5,
+        "parts": 10
+      },
+      {
+        "M": 24,
+        "count": 260283,
+        "p": 5,
+        "parts": 15
+      },
+      {
+        "M": 48,
+        "count": 145214833,
+        "p": 5,
+        "parts": 23
+      },
+      {
+        "M": 96,
+        "count": 906913146194,
+        "p": 5,
+        "parts": 33
+      },
+      {
+        "M": 12,
+        "count": 3126,
+        "p": 7,
+        "parts": 11
+      },
+      {
+        "M": 24,
+        "count": 312380,
+        "p": 7,
+        "parts": 18
+      },
+      {
+        "M": 48,
+        "count": 234349521,
+        "p": 7,
+        "parts": 29
+      },
+      {
+        "M": 96,
+        "count": 2593442806304,
+        "p": 7,
+        "parts": 44
+      },
+      {
+        "M": 12,
+        "count": 3132,
+        "p": 11,
+        "parts": 12
+      },
+      {
+        "M": 24,
+        "count": 322188,
+        "p": 11,
+        "parts": 20
+      },
+      {
+        "M": 48,
+        "count": 267078503,
+        "p": 11,
+        "parts": 33
+      },
+      {
+        "M": 96,
+        "count": 3745567027892,
+        "p": 11,
+        "parts": 52
+      },
+      {
+        "M": 12,
+        "count": 3132,
+        "p": 17,
+        "parts": 12
+      },
+      {
+        "M": 24,
+        "count": 326620,
+        "p": 17,
+        "parts": 22
+      },
+      {
+        "M": 48,
+        "count": 292407861,
+        "p": 17,
+        "parts": 38
+      },
+      {
+        "M": 96,
+        "count": 5161391903829,
+        "p": 17,
+        "parts": 64
+      }
+    ]
+  },
+  "status": "FINITE-EXACT; same-agent checks, no independent-agent audit",
+  "synchronized": [
+    {
+      "adjacency": [
+        10,
+        20,
+        33,
+        22,
+        37,
+        11
+      ],
+      "feedback": 4,
+      "group": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          0,
+          4,
+          5,
+          3
+        ],
+        [
+          2,
+          0,
+          1,
+          5,
+          3,
+          4
+        ]
+      ],
+      "optimal_order": [
+        5,
+        3,
+        1,
+        4,
+        2,
+        0
+      ],
+      "sign": 1
+    },
+    {
+      "adjacency": [
+        10,
+        20,
+        33,
+        38,
+        13,
+        19
+      ],
+      "feedback": 4,
+      "group": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          0,
+          4,
+          5,
+          3
+        ],
+        [
+          2,
+          0,
+          1,
+          5,
+          3,
+          4
+        ]
+      ],
+      "optimal_order": [
+        3,
+        5,
+        1,
+        4,
+        2,
+        0
+      ],
+      "sign": -1
+    }
+  ],
+  "total_checks": 191198
+}
