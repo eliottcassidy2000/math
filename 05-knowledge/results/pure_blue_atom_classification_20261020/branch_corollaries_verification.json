@@ -1,0 +1,5145 @@
+{
+  "all_checks_passed": true,
+  "counts_through_order": 100,
+  "pure_blue_counts": [
+    1,
+    1,
+    1,
+    2,
+    1,
+    3,
+    2,
+    4,
+    3,
+    6,
+    4,
+    9,
+    6,
+    13,
+    9,
+    19,
+    13,
+    28,
+    19,
+    41,
+    28,
+    60,
+    41,
+    88,
+    60,
+    129,
+    88,
+    189,
+    129,
+    277,
+    189,
+    406,
+    277,
+    595,
+    406,
+    872,
+    595,
+    1278,
+    872,
+    1873,
+    1278,
+    2745,
+    1873,
+    4023,
+    2745,
+    5896,
+    4023,
+    8641,
+    5896,
+    12664,
+    8641,
+    18560,
+    12664,
+    27201,
+    18560,
+    39865,
+    27201,
+    58425,
+    39865,
+    85626,
+    58425,
+    125491,
+    85626,
+    183916,
+    125491,
+    269542,
+    183916,
+    395033,
+    269542,
+    578949,
+    395033,
+    848491,
+    578949,
+    1243524,
+    848491,
+    1822473,
+    1243524,
+    2670964,
+    1822473,
+    3914488,
+    2670964,
+    5736961,
+    3914488,
+    8407925,
+    5736961,
+    12322413,
+    8407925,
+    18059374,
+    12322413,
+    26467299,
+    18059374,
+    38789712,
+    26467299,
+    56849086,
+    38789712,
+    83316385,
+    56849086,
+    122106097,
+    83316385,
+    178955183,
+    122106097
+  ],
+  "center_to_tail_bijections": [
+    {
+      "source_order": 1,
+      "target_order": 4,
+      "classes": 1
+    },
+    {
+      "source_order": 3,
+      "target_order": 6,
+      "classes": 2
+    },
+    {
+      "source_order": 5,
+      "target_order": 8,
+      "classes": 3
+    },
+    {
+      "source_order": 7,
+      "target_order": 10,
+      "classes": 4
+    },
+    {
+      "source_order": 9,
+      "target_order": 12,
+      "classes": 6
+    },
+    {
+      "source_order": 11,
+      "target_order": 14,
+      "classes": 9
+    },
+    {
+      "source_order": 13,
+      "target_order": 16,
+      "classes": 13
+    },
+    {
+      "source_order": 15,
+      "target_order": 18,
+      "classes": 19
+    },
+    {
+      "source_order": 17,
+      "target_order": 20,
+      "classes": 28
+    },
+    {
+      "source_order": 19,
+      "target_order": 22,
+      "classes": 41
+    },
+    {
+      "source_order": 21,
+      "target_order": 24,
+      "classes": 60
+    },
+    {
+      "source_order": 23,
+      "target_order": 26,
+      "classes": 88
+    },
+    {
+      "source_order": 25,
+      "target_order": 28,
+      "classes": 129
+    }
+  ],
+  "score_shell_checks": [
+    {
+      "half_word": [],
+      "order": 5,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1
+      ],
+      "order": 7,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1
+      ],
+      "order": 9,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1
+      ],
+      "order": 11,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3
+      ],
+      "order": 11,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 13,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3
+      ],
+      "order": 13,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1
+      ],
+      "order": 13,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 15,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3
+      ],
+      "order": 15,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1
+      ],
+      "order": 15,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1
+      ],
+      "order": 15,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 17,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 17,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 17,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 17,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 17,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3
+      ],
+      "order": 17,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 19,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 19,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 19,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 19,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 19,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        3
+      ],
+      "order": 19,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 19,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        3
+      ],
+      "order": 19,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        1
+      ],
+      "order": 19,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 21,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 21,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 21,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 21,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 21,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "order": 21,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 21,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        3
+      ],
+      "order": 21,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "order": 21,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 21,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "order": 21,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "order": 21,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        1,
+        1
+      ],
+      "order": 21,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        3
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        3,
+        1
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        3
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        3,
+        1
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        3,
+        1,
+        1
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        3
+      ],
+      "order": 23,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        3
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        3,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        3
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        3,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        3,
+        1,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        3,
+        3
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        3,
+        3
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        1,
+        3
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        3,
+        1
+      ],
+      "order": 25,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        3
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        3
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        3,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        3,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        3,
+        3
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        3,
+        3
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        3,
+        1,
+        3
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        3,
+        3,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        3,
+        3
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        3,
+        1,
+        3
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        3,
+        3,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        1,
+        1,
+        3
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        1,
+        3,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        3,
+        1,
+        1
+      ],
+      "order": 27,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        3,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        1,
+        3,
+        3,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        1,
+        3,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        3,
+        1,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        1,
+        3,
+        3,
+        3,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        1,
+        3,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        3,
+        1,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        1,
+        3,
+        3,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        3,
+        1,
+        1,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        3,
+        1,
+        3,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        1,
+        3,
+        3,
+        3,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        3,
+        1,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        1,
+        3,
+        3,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        3,
+        1,
+        1,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        3,
+        1,
+        3,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        1,
+        3,
+        3,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        1,
+        1,
+        1,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        1,
+        1,
+        3,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        1,
+        3,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        3,
+        1,
+        1,
+        1
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    },
+    {
+      "half_word": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "order": 29,
+      "partner_center_invariants": [
+        [
+          11,
+          1
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    }
+  ],
+  "score_shell_pure_blue_classes": 188,
+  "score_shell_complement_partners": 564,
+  "reflection_orbit_checks": [
+    {
+      "n": 3,
+      "blue_dimension": 1
+    },
+    {
+      "n": 4,
+      "blue_dimension": 2
+    },
+    {
+      "n": 5,
+      "blue_dimension": 4
+    },
+    {
+      "n": 6,
+      "blue_dimension": 6
+    },
+    {
+      "n": 7,
+      "blue_dimension": 9
+    },
+    {
+      "n": 8,
+      "blue_dimension": 12
+    },
+    {
+      "n": 9,
+      "blue_dimension": 16
+    },
+    {
+      "n": 10,
+      "blue_dimension": 20
+    },
+    {
+      "n": 11,
+      "blue_dimension": 25
+    },
+    {
+      "n": 12,
+      "blue_dimension": 30
+    },
+    {
+      "n": 13,
+      "blue_dimension": 36
+    },
+    {
+      "n": 14,
+      "blue_dimension": 42
+    },
+    {
+      "n": 15,
+      "blue_dimension": 49
+    },
+    {
+      "n": 16,
+      "blue_dimension": 56
+    },
+    {
+      "n": 17,
+      "blue_dimension": 64
+    },
+    {
+      "n": 18,
+      "blue_dimension": 72
+    },
+    {
+      "n": 19,
+      "blue_dimension": 81
+    },
+    {
+      "n": 20,
+      "blue_dimension": 90
+    },
+    {
+      "n": 21,
+      "blue_dimension": 100
+    },
+    {
+      "n": 22,
+      "blue_dimension": 110
+    },
+    {
+      "n": 23,
+      "blue_dimension": 121
+    },
+    {
+      "n": 24,
+      "blue_dimension": 132
+    },
+    {
+      "n": 25,
+      "blue_dimension": 144
+    },
+    {
+      "n": 26,
+      "blue_dimension": 156
+    },
+    {
+      "n": 27,
+      "blue_dimension": 169
+    },
+    {
+      "n": 28,
+      "blue_dimension": 182
+    },
+    {
+      "n": 29,
+      "blue_dimension": 196
+    },
+    {
+      "n": 30,
+      "blue_dimension": 210
+    },
+    {
+      "n": 31,
+      "blue_dimension": 225
+    },
+    {
+      "n": 32,
+      "blue_dimension": 240
+    },
+    {
+      "n": 33,
+      "blue_dimension": 256
+    },
+    {
+      "n": 34,
+      "blue_dimension": 272
+    },
+    {
+      "n": 35,
+      "blue_dimension": 289
+    },
+    {
+      "n": 36,
+      "blue_dimension": 306
+    },
+    {
+      "n": 37,
+      "blue_dimension": 324
+    },
+    {
+      "n": 38,
+      "blue_dimension": 342
+    },
+    {
+      "n": 39,
+      "blue_dimension": 361
+    },
+    {
+      "n": 40,
+      "blue_dimension": 380
+    },
+    {
+      "n": 41,
+      "blue_dimension": 400
+    },
+    {
+      "n": 42,
+      "blue_dimension": 420
+    },
+    {
+      "n": 43,
+      "blue_dimension": 441
+    },
+    {
+      "n": 44,
+      "blue_dimension": 462
+    },
+    {
+      "n": 45,
+      "blue_dimension": 484
+    },
+    {
+      "n": 46,
+      "blue_dimension": 506
+    },
+    {
+      "n": 47,
+      "blue_dimension": 529
+    },
+    {
+      "n": 48,
+      "blue_dimension": 552
+    },
+    {
+      "n": 49,
+      "blue_dimension": 576
+    },
+    {
+      "n": 50,
+      "blue_dimension": 600
+    }
+  ]
+}

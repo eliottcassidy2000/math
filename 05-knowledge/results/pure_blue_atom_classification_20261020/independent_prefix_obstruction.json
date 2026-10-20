@@ -1,0 +1,243 @@
+{
+  "small": {
+    "n7_literal_certificates": 4,
+    "positive_controls": [
+      {
+        "n": 3,
+        "S": [
+          1
+        ],
+        "HP": 3
+      },
+      {
+        "n": 5,
+        "S": [
+          1,
+          3
+        ],
+        "HP": 15
+      },
+      {
+        "n": 5,
+        "S": [
+          1,
+          2
+        ],
+        "HP": 15
+      }
+    ]
+  },
+  "center_five": [
+    {
+      "path": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "HP": 11,
+      "Aut": 1
+    },
+    {
+      "path": [
+        0,
+        2,
+        3,
+        4,
+        1
+      ],
+      "HP": 15,
+      "Aut": 3
+    },
+    {
+      "path": [
+        0,
+        2,
+        4,
+        1,
+        3
+      ],
+      "HP": 13,
+      "Aut": 1
+    }
+  ],
+  "exhaustive": [
+    {
+      "n": 9,
+      "normalized_presentations": 8,
+      "families": {
+        "F3odd": 5,
+        "F1": 2,
+        "F2": 1
+      },
+      "normalization_counts": {
+        "1": 2,
+        "0": 5,
+        "2": 1
+      }
+    },
+    {
+      "n": 11,
+      "normalized_presentations": 16,
+      "families": {
+        "F2": 6,
+        "F3odd": 3,
+        "F1": 4,
+        "F3even": 3
+      },
+      "normalization_counts": {
+        "1": 3,
+        "0": 13
+      }
+    },
+    {
+      "n": 13,
+      "normalized_presentations": 32,
+      "families": {
+        "F2": 15,
+        "F3odd": 6,
+        "F1": 8,
+        "F3even": 3
+      },
+      "normalization_counts": {
+        "1": 3,
+        "0": 29
+      }
+    },
+    {
+      "n": 15,
+      "normalized_presentations": 64,
+      "families": {
+        "F2": 36,
+        "F3odd": 6,
+        "F1": 16,
+        "F3even": 6
+      },
+      "normalization_counts": {
+        "1": 3,
+        "0": 61
+      }
+    },
+    {
+      "n": 17,
+      "normalized_presentations": 128,
+      "families": {
+        "F2": 80,
+        "F3odd": 10,
+        "F1": 32,
+        "F3even": 6
+      },
+      "normalization_counts": {
+        "1": 3,
+        "0": 125
+      }
+    },
+    {
+      "n": 19,
+      "normalized_presentations": 256,
+      "families": {
+        "F2": 172,
+        "F3odd": 10,
+        "F1": 64,
+        "F3even": 10
+      },
+      "normalization_counts": {
+        "1": 3,
+        "0": 253
+      }
+    },
+    {
+      "n": 21,
+      "normalized_presentations": 512,
+      "families": {
+        "F2": 359,
+        "F3odd": 15,
+        "F1": 128,
+        "F3even": 10
+      },
+      "normalization_counts": {
+        "1": 3,
+        "0": 509
+      }
+    },
+    {
+      "n": 23,
+      "normalized_presentations": 1024,
+      "families": {
+        "F2": 738,
+        "F3odd": 15,
+        "F1": 256,
+        "F3even": 15
+      },
+      "normalization_counts": {
+        "1": 3,
+        "0": 1021
+      }
+    },
+    {
+      "n": 25,
+      "normalized_presentations": 2048,
+      "families": {
+        "F2": 1500,
+        "F3odd": 21,
+        "F1": 512,
+        "F3even": 15
+      },
+      "normalization_counts": {
+        "1": 3,
+        "0": 2045
+      }
+    },
+    {
+      "n": 27,
+      "normalized_presentations": 4096,
+      "families": {
+        "F2": 3030,
+        "F3odd": 21,
+        "F1": 1024,
+        "F3even": 21
+      },
+      "normalization_counts": {
+        "1": 3,
+        "0": 4093
+      }
+    },
+    {
+      "n": 29,
+      "normalized_presentations": 8192,
+      "families": {
+        "F2": 6095,
+        "F3odd": 28,
+        "F1": 2048,
+        "F3even": 21
+      },
+      "normalization_counts": {
+        "1": 3,
+        "0": 8189
+      }
+    },
+    {
+      "n": 31,
+      "normalized_presentations": 16384,
+      "families": {
+        "F2": 12232,
+        "F3odd": 28,
+        "F1": 4096,
+        "F3even": 28
+      },
+      "normalization_counts": {
+        "1": 3,
+        "0": 16381
+      }
+    }
+  ],
+  "large_structured_residuals": {
+    "m_min": 4,
+    "m_max": 200,
+    "cases_per_m": 3,
+    "passed": 591
+  },
+  "total_normalized_presentations": 32760,
+  "failures": 0
+}

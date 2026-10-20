@@ -1,0 +1,1408 @@
+{
+  "scope": "normalized odd circulants: 1 in S; proof-backed constructive certificate",
+  "positive_controls": [
+    {
+      "n": 3,
+      "S": [
+        1
+      ],
+      "HP": 3,
+      "pure": true
+    },
+    {
+      "n": 5,
+      "S": [
+        1,
+        3
+      ],
+      "HP": 15,
+      "pure": true
+    },
+    {
+      "n": 5,
+      "S": [
+        1,
+        2
+      ],
+      "HP": 15,
+      "pure": true
+    }
+  ],
+  "order_seven": [
+    {
+      "n": 7,
+      "S": [
+        1,
+        4,
+        5
+      ],
+      "path": [
+        0,
+        1,
+        2,
+        6,
+        4,
+        5,
+        3
+      ],
+      "failed_arc": [
+        0,
+        5
+      ],
+      "absent_reversed_image_arc": [
+        1,
+        3
+      ],
+      "text_table_failed_arc": [
+        0,
+        5
+      ]
+    },
+    {
+      "n": 7,
+      "S": [
+        1,
+        2,
+        4
+      ],
+      "path": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        3
+      ],
+      "failed_arc": [
+        0,
+        2
+      ],
+      "absent_reversed_image_arc": [
+        5,
+        3
+      ],
+      "text_table_failed_arc": [
+        0,
+        2
+      ]
+    },
+    {
+      "n": 7,
+      "S": [
+        1,
+        3,
+        5
+      ],
+      "path": [
+        0,
+        1,
+        2,
+        5,
+        3,
+        6,
+        4
+      ],
+      "failed_arc": [
+        0,
+        3
+      ],
+      "absent_reversed_image_arc": [
+        2,
+        4
+      ],
+      "text_table_failed_arc": [
+        2,
+        0
+      ]
+    },
+    {
+      "n": 7,
+      "S": [
+        1,
+        2,
+        3
+      ],
+      "path": [
+        0,
+        1,
+        3,
+        4,
+        6,
+        2,
+        5
+      ],
+      "failed_arc": [
+        0,
+        2
+      ],
+      "absent_reversed_image_arc": [
+        1,
+        5
+      ],
+      "text_table_failed_arc": [
+        0,
+        2
+      ]
+    }
+  ],
+  "exhaustive": [
+    {
+      "n": 9,
+      "normalized_presentations": 8,
+      "excluded": 8,
+      "max_unit_reindexings": 2,
+      "certificate_families": {
+        "F3(k=3,odd)": 5,
+        "F1": 2,
+        "F2(k=4)": 1
+      }
+    },
+    {
+      "n": 11,
+      "normalized_presentations": 16,
+      "excluded": 16,
+      "max_unit_reindexings": 1,
+      "certificate_families": {
+        "F3(k=3,odd)": 6,
+        "F1": 4,
+        "F3(k=4,even)": 3,
+        "F2(k=4)": 2,
+        "F2(k=5)": 1
+      }
+    },
+    {
+      "n": 13,
+      "normalized_presentations": 32,
+      "excluded": 32,
+      "max_unit_reindexings": 1,
+      "certificate_families": {
+        "F3(k=4,even)": 6,
+        "F3(k=3,odd)": 9,
+        "F1": 8,
+        "F2(k=4)": 4,
+        "F3(k=5,odd)": 2,
+        "F2(k=5)": 2,
+        "F2(k=6)": 1
+      }
+    },
+    {
+      "n": 15,
+      "normalized_presentations": 64,
+      "excluded": 64,
+      "max_unit_reindexings": 1,
+      "certificate_families": {
+        "F3(k=4,even)": 10,
+        "F3(k=3,odd)": 16,
+        "F1": 16,
+        "F2(k=4)": 8,
+        "F3(k=5,odd)": 5,
+        "F2(k=5)": 4,
+        "F3(k=6,even)": 2,
+        "F2(k=6)": 2,
+        "F2(k=7)": 1
+      }
+    },
+    {
+      "n": 17,
+      "normalized_presentations": 128,
+      "excluded": 128,
+      "max_unit_reindexings": 1,
+      "certificate_families": {
+        "F3(k=5,odd)": 10,
+        "F3(k=3,odd)": 32,
+        "F1": 32,
+        "F3(k=4,even)": 17,
+        "F2(k=4)": 16,
+        "F2(k=5)": 8,
+        "F3(k=6,even)": 4,
+        "F2(k=6)": 4,
+        "F3(k=7,odd)": 2,
+        "F2(k=7)": 2,
+        "F2(k=8)": 1
+      }
+    },
+    {
+      "n": 19,
+      "normalized_presentations": 256,
+      "excluded": 256,
+      "max_unit_reindexings": 1,
+      "certificate_families": {
+        "F3(k=5,odd)": 18,
+        "F3(k=3,odd)": 64,
+        "F1": 64,
+        "F3(k=4,even)": 32,
+        "F2(k=4)": 32,
+        "F2(k=5)": 16,
+        "F3(k=6,even)": 9,
+        "F2(k=6)": 8,
+        "F3(k=7,odd)": 4,
+        "F2(k=7)": 4,
+        "F3(k=8,even)": 2,
+        "F2(k=8)": 2,
+        "F2(k=9)": 1
+      }
+    },
+    {
+      "n": 21,
+      "normalized_presentations": 512,
+      "excluded": 512,
+      "max_unit_reindexings": 1,
+      "certificate_families": {
+        "F3(k=6,even)": 18,
+        "F3(k=3,odd)": 128,
+        "F1": 128,
+        "F3(k=4,even)": 64,
+        "F2(k=4)": 64,
+        "F3(k=5,odd)": 33,
+        "F2(k=5)": 32,
+        "F2(k=6)": 16,
+        "F3(k=7,odd)": 8,
+        "F2(k=7)": 8,
+        "F3(k=8,even)": 4,
+        "F2(k=8)": 4,
+        "F3(k=9,odd)": 2,
+        "F2(k=9)": 2,
+        "F2(k=10)": 1
+      }
+    },
+    {
+      "n": 23,
+      "normalized_presentations": 1024,
+      "excluded": 1024,
+      "max_unit_reindexings": 1,
+      "certificate_families": {
+        "F3(k=6,even)": 34,
+        "F3(k=3,odd)": 256,
+        "F1": 256,
+        "F3(k=4,even)": 128,
+        "F2(k=4)": 128,
+        "F3(k=5,odd)": 64,
+        "F2(k=5)": 64,
+        "F2(k=6)": 32,
+        "F3(k=7,odd)": 17,
+        "F2(k=7)": 16,
+        "F3(k=8,even)": 8,
+        "F2(k=8)": 8,
+        "F3(k=9,odd)": 4,
+        "F2(k=9)": 4,
+        "F3(k=10,even)": 2,
+        "F2(k=10)": 2,
+        "F2(k=11)": 1
+      }
+    },
+    {
+      "n": 25,
+      "normalized_presentations": 2048,
+      "excluded": 2048,
+      "max_unit_reindexings": 1,
+      "certificate_families": {
+        "F3(k=7,odd)": 34,
+        "F3(k=3,odd)": 512,
+        "F1": 512,
+        "F3(k=4,even)": 256,
+        "F2(k=4)": 256,
+        "F3(k=5,odd)": 128,
+        "F2(k=5)": 128,
+        "F3(k=6,even)": 65,
+        "F2(k=6)": 64,
+        "F2(k=7)": 32,
+        "F3(k=8,even)": 16,
+        "F2(k=8)": 16,
+        "F3(k=9,odd)": 8,
+        "F2(k=9)": 8,
+        "F3(k=10,even)": 4,
+        "F2(k=10)": 4,
+        "F3(k=11,odd)": 2,
+        "F2(k=11)": 2,
+        "F2(k=12)": 1
+      }
+    },
+    {
+      "n": 27,
+      "normalized_presentations": 4096,
+      "excluded": 4096,
+      "max_unit_reindexings": 1,
+      "certificate_families": {
+        "F3(k=7,odd)": 66,
+        "F3(k=3,odd)": 1024,
+        "F1": 1024,
+        "F3(k=4,even)": 512,
+        "F2(k=4)": 512,
+        "F3(k=5,odd)": 256,
+        "F2(k=5)": 256,
+        "F3(k=6,even)": 128,
+        "F2(k=6)": 128,
+        "F2(k=7)": 64,
+        "F3(k=8,even)": 33,
+        "F2(k=8)": 32,
+        "F3(k=9,odd)": 16,
+        "F2(k=9)": 16,
+        "F3(k=10,even)": 8,
+        "F2(k=10)": 8,
+        "F3(k=11,odd)": 4,
+        "F2(k=11)": 4,
+        "F3(k=12,even)": 2,
+        "F2(k=12)": 2,
+        "F2(k=13)": 1
+      }
+    },
+    {
+      "n": 29,
+      "normalized_presentations": 8192,
+      "excluded": 8192,
+      "max_unit_reindexings": 1,
+      "certificate_families": {
+        "F3(k=8,even)": 66,
+        "F3(k=3,odd)": 2048,
+        "F1": 2048,
+        "F3(k=4,even)": 1024,
+        "F2(k=4)": 1024,
+        "F3(k=5,odd)": 512,
+        "F2(k=5)": 512,
+        "F3(k=6,even)": 256,
+        "F2(k=6)": 256,
+        "F3(k=7,odd)": 129,
+        "F2(k=7)": 128,
+        "F2(k=8)": 64,
+        "F3(k=9,odd)": 32,
+        "F2(k=9)": 32,
+        "F3(k=10,even)": 16,
+        "F2(k=10)": 16,
+        "F3(k=11,odd)": 8,
+        "F2(k=11)": 8,
+        "F3(k=12,even)": 4,
+        "F2(k=12)": 4,
+        "F3(k=13,odd)": 2,
+        "F2(k=13)": 2,
+        "F2(k=14)": 1
+      }
+    },
+    {
+      "n": 31,
+      "normalized_presentations": 16384,
+      "excluded": 16384,
+      "max_unit_reindexings": 1,
+      "certificate_families": {
+        "F3(k=8,even)": 130,
+        "F3(k=3,odd)": 4096,
+        "F1": 4096,
+        "F3(k=4,even)": 2048,
+        "F2(k=4)": 2048,
+        "F3(k=5,odd)": 1024,
+        "F2(k=5)": 1024,
+        "F3(k=6,even)": 512,
+        "F2(k=6)": 512,
+        "F3(k=7,odd)": 256,
+        "F2(k=7)": 256,
+        "F2(k=8)": 128,
+        "F3(k=9,odd)": 65,
+        "F2(k=9)": 64,
+        "F3(k=10,even)": 32,
+        "F2(k=10)": 32,
+        "F3(k=11,odd)": 16,
+        "F2(k=11)": 16,
+        "F3(k=12,even)": 8,
+        "F2(k=12)": 8,
+        "F3(k=13,odd)": 4,
+        "F2(k=13)": 4,
+        "F3(k=14,even)": 2,
+        "F2(k=14)": 2,
+        "F2(k=15)": 1
+      }
+    }
+  ],
+  "larger_checks": [
+    {
+      "n": 9,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 11,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 13,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 15,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 17,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 19,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 21,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 23,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 25,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 27,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 29,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 31,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 33,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 35,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 37,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 39,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 41,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 43,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 45,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 47,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 49,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 51,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 53,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 55,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 57,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 59,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 61,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 63,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 65,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 67,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 69,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 71,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 73,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 75,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 77,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 79,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 81,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 83,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 85,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 87,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 89,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 91,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 93,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 95,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 97,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 99,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 101,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 103,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 105,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 107,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 109,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 111,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 113,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 115,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 117,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 119,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 121,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 123,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 125,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 127,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 129,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 131,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 133,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 135,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 137,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 139,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 141,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 143,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 145,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 147,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 149,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 151,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 153,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 155,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 157,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 159,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 161,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 163,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 165,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 167,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 169,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 171,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 173,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 175,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 177,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 179,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 181,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 183,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 185,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 187,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 189,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 191,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 193,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 195,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 197,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 199,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 201,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 203,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 205,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 207,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 209,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 211,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 213,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 215,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 217,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 219,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 221,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 223,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 225,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 227,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 229,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 231,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 233,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 235,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 237,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 239,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 241,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 243,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 245,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 247,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 249,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 251,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 253,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 255,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 257,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 259,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 261,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 263,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 265,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 267,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 269,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 271,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 273,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 275,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 277,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 279,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 281,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 283,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 285,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 287,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 289,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 291,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 293,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 295,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 297,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 299,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 301,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 303,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 305,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 307,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 309,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 311,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 313,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 315,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 317,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 319,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 321,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 323,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 325,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 327,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 329,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 331,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 333,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 335,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 337,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 339,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 341,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 343,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 345,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 347,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 349,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 351,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 353,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 355,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 357,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 359,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 361,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 363,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 365,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 367,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 369,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 371,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 373,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 375,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 377,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 379,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 381,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 383,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 385,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 387,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 389,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 391,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 393,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 395,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 397,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 399,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 401,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 403,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 405,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 407,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 409,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 411,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 413,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 415,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 417,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 419,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 421,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 423,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 425,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 427,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 429,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 431,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 433,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 435,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 437,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 439,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 441,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 443,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 445,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 447,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 449,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 451,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 453,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 455,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 457,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 459,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 461,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 463,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 465,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 467,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 469,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 471,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 473,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 475,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 477,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 479,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 481,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 483,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 485,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 487,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 489,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 491,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 493,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 495,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 497,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 499,
+      "structured_and_random_presentations": 5
+    },
+    {
+      "n": 501,
+      "structured_and_random_presentations": 5
+    }
+  ],
+  "large_check_total": 1235,
+  "total_exhaustive_n_ge_9": 32760,
+  "all_checks_passed": true
+}
