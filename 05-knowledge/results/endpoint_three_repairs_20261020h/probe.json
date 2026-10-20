@@ -1,0 +1,1910 @@
+{
+  "status": "FINITE-EXACT diagnostic, not an all-order detour or bridge theorem",
+  "universe": "Every closed standard-blue endpoint-score (n-4,3) presentation at n6..9; arbitrary blue middle plus every two-element U subset of positions2..n-2; V is the reflected set; overlaps retained",
+  "filters": "For ledger diagnostics, both literal endpoints are required strong and mixed; exclusions counted explicitly",
+  "source_hashes": {
+    "current_probe": "3821c2681aa14f3737efc39d7e6c988d91bb2652af7ef086b3bef06382bcd66a",
+    "inherited_endpoint_two_kernel": "7dc74795c028018145e60b51552ef9c5cd34845004ac20ccae6dc24892555bf7"
+  },
+  "universe_sha256": "7937554fbe150a2dc7f1cfa65bcbb8f6a90a2154f12c04a0cfe49c74fa62f5cc",
+  "summaries": [
+    {
+      "n": 6,
+      "universe": 12,
+      "strong_mixed": 11,
+      "bank_residual": 6,
+      "nonstrong_partner": 1,
+      "bank_covered": 5,
+      "selected": {
+        "B_cut_4": 1,
+        "L2": 1,
+        "closed_no_chord": 1,
+        "release": 2
+      },
+      "profiles": {
+        "closed overlap=0 Unear=0111": {
+          "total": 1,
+          "covered": 1
+        },
+        "closed overlap=0 Unear=1001": {
+          "total": 2,
+          "residual": 2
+        },
+        "closed overlap=2 Unear=1110": {
+          "total": 2,
+          "residual": 2
+        },
+        "open overlap=0 Unear=0111": {
+          "total": 2,
+          "residual": 2
+        },
+        "open overlap=0 Unear=1001": {
+          "total": 2,
+          "covered": 2
+        },
+        "open overlap=2 Unear=1110": {
+          "total": 2,
+          "covered": 2
+        }
+      }
+    },
+    {
+      "n": 7,
+      "universe": 96,
+      "strong_mixed": 96,
+      "bank_covered": 77,
+      "bank_residual": 19,
+      "selected": {
+        "A_cut_4": 4,
+        "A_cut_5": 4,
+        "B_cut_4": 12,
+        "C": 5,
+        "L2": 7,
+        "closed_chord": 3,
+        "closed_no_chord": 20,
+        "release": 22
+      },
+      "profiles": {
+        "closed overlap=0 Unear=0011": {
+          "total": 8,
+          "covered": 5,
+          "residual": 3
+        },
+        "closed overlap=0 Unear=1001": {
+          "total": 8,
+          "residual": 4,
+          "covered": 4
+        },
+        "closed overlap=1 Unear=0101": {
+          "total": 8,
+          "covered": 4,
+          "residual": 4
+        },
+        "closed overlap=1 Unear=0110": {
+          "total": 8,
+          "covered": 8
+        },
+        "closed overlap=1 Unear=1100": {
+          "total": 8,
+          "covered": 3,
+          "residual": 5
+        },
+        "closed overlap=2 Unear=1010": {
+          "total": 8,
+          "covered": 8
+        },
+        "open overlap=0 Unear=0011": {
+          "total": 8,
+          "covered": 6,
+          "residual": 2
+        },
+        "open overlap=0 Unear=1001": {
+          "total": 8,
+          "covered": 8
+        },
+        "open overlap=1 Unear=0101": {
+          "total": 8,
+          "covered": 7,
+          "residual": 1
+        },
+        "open overlap=1 Unear=0110": {
+          "total": 8,
+          "covered": 8
+        },
+        "open overlap=1 Unear=1100": {
+          "total": 8,
+          "covered": 8
+        },
+        "open overlap=2 Unear=1010": {
+          "total": 8,
+          "covered": 8
+        }
+      }
+    },
+    {
+      "n": 8,
+      "universe": 640,
+      "strong_mixed": 640,
+      "bank_covered": 589,
+      "bank_residual": 51,
+      "selected": {
+        "A_cut_4": 32,
+        "A_cut_5": 16,
+        "A_cut_6": 15,
+        "B_cut_4": 32,
+        "B_cut_5": 32,
+        "C": 30,
+        "L2": 48,
+        "closed_chord": 48,
+        "closed_no_chord": 144,
+        "release": 192
+      },
+      "profiles": {
+        "closed overlap=0 Unear=0001": {
+          "total": 32,
+          "covered": 23,
+          "residual": 9
+        },
+        "closed overlap=0 Unear=0010": {
+          "total": 32,
+          "covered": 32
+        },
+        "closed overlap=0 Unear=0011": {
+          "total": 32,
+          "covered": 28,
+          "residual": 4
+        },
+        "closed overlap=0 Unear=0101": {
+          "total": 32,
+          "covered": 32
+        },
+        "closed overlap=0 Unear=0110": {
+          "total": 32,
+          "covered": 32
+        },
+        "closed overlap=0 Unear=1000": {
+          "total": 32,
+          "covered": 30,
+          "residual": 2
+        },
+        "closed overlap=0 Unear=1001": {
+          "total": 32,
+          "residual": 16,
+          "covered": 16
+        },
+        "closed overlap=0 Unear=1100": {
+          "total": 32,
+          "covered": 16,
+          "residual": 16
+        },
+        "closed overlap=2 Unear=0100": {
+          "total": 32,
+          "covered": 32
+        },
+        "closed overlap=2 Unear=1010": {
+          "total": 32,
+          "covered": 32
+        },
+        "open overlap=0 Unear=0001": {
+          "total": 32,
+          "covered": 32
+        },
+        "open overlap=0 Unear=0010": {
+          "total": 32,
+          "covered": 32
+        },
+        "open overlap=0 Unear=0011": {
+          "total": 32,
+          "covered": 28,
+          "residual": 4
+        },
+        "open overlap=0 Unear=0101": {
+          "total": 32,
+          "covered": 32
+        },
+        "open overlap=0 Unear=0110": {
+          "total": 32,
+          "covered": 32
+        },
+        "open overlap=0 Unear=1000": {
+          "total": 32,
+          "covered": 32
+        },
+        "open overlap=0 Unear=1001": {
+          "total": 32,
+          "covered": 32
+        },
+        "open overlap=0 Unear=1100": {
+          "total": 32,
+          "covered": 32
+        },
+        "open overlap=2 Unear=0100": {
+          "total": 32,
+          "covered": 32
+        },
+        "open overlap=2 Unear=1010": {
+          "total": 32,
+          "covered": 32
+        }
+      }
+    },
+    {
+      "n": 9,
+      "universe": 7680,
+      "strong_mixed": 7680,
+      "bank_covered": 7357,
+      "bank_residual": 323,
+      "selected": {
+        "A_cut_4": 320,
+        "A_cut_5": 192,
+        "A_cut_6": 96,
+        "A_cut_7": 96,
+        "B_cut_4": 321,
+        "B_cut_5": 160,
+        "B_cut_6": 160,
+        "C": 384,
+        "L2": 512,
+        "closed_chord": 765,
+        "closed_no_chord": 1791,
+        "release": 2560
+      },
+      "profiles": {
+        "closed overlap=0 Unear=0001": {
+          "total": 256,
+          "covered": 224,
+          "residual": 32
+        },
+        "closed overlap=0 Unear=0010": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed overlap=0 Unear=0011": {
+          "total": 256,
+          "covered": 240,
+          "residual": 16
+        },
+        "closed overlap=0 Unear=0101": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed overlap=0 Unear=0110": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed overlap=0 Unear=1000": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed overlap=0 Unear=1001": {
+          "total": 256,
+          "residual": 128,
+          "covered": 128
+        },
+        "closed overlap=0 Unear=1100": {
+          "total": 256,
+          "covered": 128,
+          "residual": 128
+        },
+        "closed overlap=1 Unear=0000": {
+          "total": 256,
+          "covered": 254,
+          "residual": 2
+        },
+        "closed overlap=1 Unear=0001": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed overlap=1 Unear=0010": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed overlap=1 Unear=0100": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed overlap=1 Unear=1000": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed overlap=2 Unear=0100": {
+          "total": 256,
+          "covered": 255,
+          "residual": 1
+        },
+        "closed overlap=2 Unear=1010": {
+          "total": 256,
+          "covered": 256
+        },
+        "open overlap=0 Unear=0001": {
+          "total": 256,
+          "covered": 256
+        },
+        "open overlap=0 Unear=0010": {
+          "total": 256,
+          "covered": 256
+        },
+        "open overlap=0 Unear=0011": {
+          "total": 256,
+          "covered": 240,
+          "residual": 16
+        },
+        "open overlap=0 Unear=0101": {
+          "total": 256,
+          "covered": 256
+        },
+        "open overlap=0 Unear=0110": {
+          "total": 256,
+          "covered": 256
+        },
+        "open overlap=0 Unear=1000": {
+          "total": 256,
+          "covered": 256
+        },
+        "open overlap=0 Unear=1001": {
+          "total": 256,
+          "covered": 256
+        },
+        "open overlap=0 Unear=1100": {
+          "total": 256,
+          "covered": 256
+        },
+        "open overlap=1 Unear=0000": {
+          "total": 256,
+          "covered": 256
+        },
+        "open overlap=1 Unear=0001": {
+          "total": 256,
+          "covered": 256
+        },
+        "open overlap=1 Unear=0010": {
+          "total": 256,
+          "covered": 256
+        },
+        "open overlap=1 Unear=0100": {
+          "total": 256,
+          "covered": 256
+        },
+        "open overlap=1 Unear=1000": {
+          "total": 256,
+          "covered": 256
+        },
+        "open overlap=2 Unear=0100": {
+          "total": 256,
+          "covered": 256
+        },
+        "open overlap=2 Unear=1010": {
+          "total": 256,
+          "covered": 256
+        }
+      }
+    }
+  ],
+  "ledger_failure_types": {
+    "6": {
+      "A_cut_4": {
+        "illegal_1_first-endpoint+last-endpoint": 4,
+        "illegal_1_first-endpoint": 4,
+        "illegal_2_first-endpoint+middle-chord": 2,
+        "illegal_2_first-endpoint": 1
+      },
+      "A_cut_4_reflected": {
+        "illegal_1_first-endpoint+last-endpoint": 4,
+        "illegal_1_last-endpoint": 4,
+        "illegal_2_last-endpoint+middle-chord": 2,
+        "illegal_2_last-endpoint": 1
+      },
+      "B_cut_4": {
+        "illegal_1_middle-chord": 3,
+        "illegal_1_last-endpoint+middle-chord": 2,
+        "legal_blue_1": 1,
+        "illegal_1_last-endpoint": 2,
+        "illegal_2_first-endpoint": 2,
+        "all_black": 1
+      },
+      "B_cut_4_reflected": {
+        "illegal_1_middle-chord": 3,
+        "illegal_1_first-endpoint+middle-chord": 2,
+        "legal_blue_1": 1,
+        "illegal_1_first-endpoint": 2,
+        "illegal_2_last-endpoint": 2,
+        "all_black": 1
+      },
+      "L2": {
+        "illegal_1_first-endpoint+last-endpoint": 4,
+        "illegal_1_first-endpoint": 4,
+        "all_black": 1,
+        "illegal_2_middle-chord": 1,
+        "legal_blue_1": 1
+      },
+      "L2_reflected": {
+        "illegal_1_first-endpoint+last-endpoint": 4,
+        "illegal_1_last-endpoint": 4,
+        "all_black": 1,
+        "illegal_2_middle-chord": 1,
+        "legal_blue_1": 1
+      },
+      "closed_chord": {
+        "illegal_1_first-endpoint": 2,
+        "illegal_1_first-endpoint+last-endpoint": 2,
+        "illegal_1_last-endpoint": 1,
+        "illegal_1_first-endpoint+middle-chord": 2,
+        "illegal_1_first-endpoint+last-endpoint+middle-chord": 2,
+        "illegal_1_last-endpoint+middle-chord": 2
+      },
+      "closed_chord_reflected": {
+        "illegal_1_last-endpoint": 2,
+        "illegal_1_first-endpoint+last-endpoint": 2,
+        "illegal_1_first-endpoint": 1,
+        "illegal_1_last-endpoint+middle-chord": 2,
+        "illegal_1_first-endpoint+last-endpoint+middle-chord": 2,
+        "illegal_1_first-endpoint+middle-chord": 2
+      },
+      "closed_no_chord": {
+        "legal_blue_1": 1,
+        "illegal_1_last-endpoint": 3,
+        "illegal_1_middle-chord": 2,
+        "illegal_1_last-endpoint+middle-chord": 4,
+        "all_black": 1
+      },
+      "closed_no_chord_reflected": {
+        "legal_blue_1": 1,
+        "illegal_1_first-endpoint": 3,
+        "illegal_1_middle-chord": 2,
+        "illegal_1_first-endpoint+middle-chord": 4,
+        "all_black": 1
+      },
+      "release": {
+        "illegal_2_last-endpoint+middle-chord": 3,
+        "illegal_2_middle-chord": 2,
+        "illegal_2_last-endpoint": 4,
+        "all_black": 2
+      },
+      "release_reflected": {
+        "illegal_2_first-endpoint+middle-chord": 3,
+        "illegal_2_middle-chord": 2,
+        "illegal_2_first-endpoint": 4,
+        "all_black": 2
+      }
+    },
+    "7": {
+      "A_cut_4": {
+        "illegal_1_first-endpoint+last-endpoint": 32,
+        "illegal_1_first-endpoint": 16,
+        "illegal_1_last-endpoint": 16,
+        "illegal_2_first-endpoint": 8,
+        "all_black": 8,
+        "illegal_2_first-endpoint+middle-chord": 8,
+        "illegal_2_middle-chord": 8
+      },
+      "A_cut_4_reflected": {
+        "illegal_1_first-endpoint+last-endpoint": 32,
+        "illegal_1_last-endpoint": 16,
+        "illegal_1_first-endpoint": 16,
+        "illegal_2_last-endpoint": 8,
+        "all_black": 8,
+        "illegal_2_last-endpoint+middle-chord": 8,
+        "illegal_2_middle-chord": 8
+      },
+      "A_cut_5": {
+        "illegal_1_first-endpoint+last-endpoint": 32,
+        "illegal_1_first-endpoint": 16,
+        "illegal_1_last-endpoint": 16,
+        "all_black": 7,
+        "illegal_2_first-endpoint": 8,
+        "illegal_2_middle-chord": 8,
+        "illegal_2_first-endpoint+middle-chord": 8,
+        "legal_blue_1": 1
+      },
+      "A_cut_5_reflected": {
+        "illegal_1_first-endpoint+last-endpoint": 32,
+        "illegal_1_last-endpoint": 16,
+        "illegal_1_first-endpoint": 16,
+        "all_black": 7,
+        "illegal_2_last-endpoint": 8,
+        "illegal_2_middle-chord": 8,
+        "illegal_2_last-endpoint+middle-chord": 8,
+        "legal_blue_1": 1
+      },
+      "B_cut_4": {
+        "illegal_1_last-endpoint+middle-chord": 24,
+        "illegal_1_middle-chord": 24,
+        "illegal_1_last-endpoint": 24,
+        "legal_blue_1": 1,
+        "all_black": 15,
+        "illegal_2_first-endpoint": 8
+      },
+      "B_cut_4_reflected": {
+        "illegal_1_first-endpoint+middle-chord": 24,
+        "illegal_1_middle-chord": 24,
+        "illegal_1_first-endpoint": 24,
+        "legal_blue_1": 1,
+        "all_black": 15,
+        "illegal_2_last-endpoint": 8
+      },
+      "B_cut_5": {
+        "illegal_1_last-endpoint+middle-chord": 24,
+        "illegal_1_middle-chord": 24,
+        "illegal_1_last-endpoint": 24,
+        "all_black": 16,
+        "illegal_2_first-endpoint": 8
+      },
+      "B_cut_5_reflected": {
+        "illegal_1_first-endpoint+middle-chord": 24,
+        "illegal_1_middle-chord": 24,
+        "illegal_1_first-endpoint": 24,
+        "all_black": 16,
+        "illegal_2_last-endpoint": 8
+      },
+      "C": {
+        "illegal_1_last-endpoint": 64,
+        "illegal_2_middle-chord": 24,
+        "all_black": 8
+      },
+      "C_reflected": {
+        "illegal_1_first-endpoint": 64,
+        "illegal_2_middle-chord": 24,
+        "all_black": 8
+      },
+      "L2": {
+        "illegal_1_first-endpoint+last-endpoint": 32,
+        "illegal_1_first-endpoint": 16,
+        "illegal_1_last-endpoint": 16,
+        "illegal_2_last-endpoint+middle-chord": 8,
+        "illegal_2_middle-chord": 8,
+        "illegal_2_last-endpoint": 8,
+        "all_black": 7,
+        "legal_blue_1": 1
+      },
+      "L2_reflected": {
+        "illegal_1_first-endpoint+last-endpoint": 32,
+        "illegal_1_last-endpoint": 16,
+        "illegal_1_first-endpoint": 16,
+        "illegal_2_first-endpoint+middle-chord": 8,
+        "illegal_2_middle-chord": 8,
+        "illegal_2_first-endpoint": 8,
+        "all_black": 7,
+        "legal_blue_1": 1
+      },
+      "closed_chord": {
+        "illegal_1_first-endpoint": 16,
+        "illegal_1_first-endpoint+last-endpoint": 8,
+        "all_black": 7,
+        "illegal_1_last-endpoint": 16,
+        "illegal_1_first-endpoint+middle-chord": 16,
+        "illegal_1_first-endpoint+last-endpoint+middle-chord": 8,
+        "illegal_1_middle-chord": 8,
+        "illegal_1_last-endpoint+middle-chord": 16,
+        "legal_blue_1": 1
+      },
+      "closed_chord_reflected": {
+        "illegal_1_last-endpoint": 16,
+        "illegal_1_first-endpoint+last-endpoint": 8,
+        "all_black": 7,
+        "illegal_1_first-endpoint": 16,
+        "illegal_1_last-endpoint+middle-chord": 16,
+        "illegal_1_first-endpoint+last-endpoint+middle-chord": 8,
+        "illegal_1_middle-chord": 8,
+        "illegal_1_first-endpoint+middle-chord": 16,
+        "legal_blue_1": 1
+      },
+      "closed_no_chord": {
+        "all_black": 23,
+        "illegal_1_last-endpoint": 24,
+        "legal_blue_1": 1,
+        "illegal_1_middle-chord": 24,
+        "illegal_1_last-endpoint+middle-chord": 24
+      },
+      "closed_no_chord_reflected": {
+        "all_black": 23,
+        "illegal_1_first-endpoint": 24,
+        "legal_blue_1": 1,
+        "illegal_1_middle-chord": 24,
+        "illegal_1_first-endpoint+middle-chord": 24
+      },
+      "release": {
+        "illegal_2_middle-chord": 24,
+        "illegal_2_last-endpoint+middle-chord": 24,
+        "legal_blue_1": 2,
+        "illegal_2_last-endpoint": 24,
+        "all_black": 22
+      },
+      "release_reflected": {
+        "illegal_2_middle-chord": 24,
+        "illegal_2_first-endpoint+middle-chord": 24,
+        "legal_blue_1": 2,
+        "illegal_2_first-endpoint": 24,
+        "all_black": 22
+      }
+    },
+    "8": {
+      "A_cut_4": {
+        "illegal_1_first-endpoint+last-endpoint": 192,
+        "illegal_1_first-endpoint": 64,
+        "illegal_1_last-endpoint": 192,
+        "illegal_2_first-endpoint": 32,
+        "all_black": 64,
+        "illegal_2_first-endpoint+middle-chord": 32,
+        "illegal_2_middle-chord": 64
+      },
+      "A_cut_4_reflected": {
+        "illegal_1_first-endpoint+last-endpoint": 192,
+        "illegal_1_last-endpoint": 64,
+        "illegal_1_first-endpoint": 192,
+        "illegal_2_last-endpoint": 32,
+        "all_black": 64,
+        "illegal_2_last-endpoint+middle-chord": 32,
+        "illegal_2_middle-chord": 64
+      },
+      "A_cut_5": {
+        "illegal_1_first-endpoint+last-endpoint": 192,
+        "illegal_1_first-endpoint": 64,
+        "illegal_1_last-endpoint": 192,
+        "all_black": 64,
+        "illegal_2_first-endpoint": 32,
+        "illegal_2_middle-chord": 64,
+        "illegal_2_first-endpoint+middle-chord": 32
+      },
+      "A_cut_5_reflected": {
+        "illegal_1_first-endpoint+last-endpoint": 192,
+        "illegal_1_last-endpoint": 64,
+        "illegal_1_first-endpoint": 192,
+        "all_black": 64,
+        "illegal_2_last-endpoint": 32,
+        "illegal_2_middle-chord": 64,
+        "illegal_2_last-endpoint+middle-chord": 32
+      },
+      "A_cut_6": {
+        "illegal_1_first-endpoint+last-endpoint": 192,
+        "illegal_1_first-endpoint": 64,
+        "illegal_1_last-endpoint": 192,
+        "all_black": 61,
+        "illegal_2_first-endpoint": 32,
+        "illegal_2_middle-chord": 64,
+        "illegal_2_first-endpoint+middle-chord": 32,
+        "legal_blue_3": 2,
+        "legal_blue_2": 1
+      },
+      "A_cut_6_reflected": {
+        "illegal_1_first-endpoint+last-endpoint": 192,
+        "illegal_1_last-endpoint": 64,
+        "illegal_1_first-endpoint": 192,
+        "all_black": 61,
+        "illegal_2_last-endpoint": 32,
+        "illegal_2_middle-chord": 64,
+        "illegal_2_last-endpoint+middle-chord": 32,
+        "legal_blue_3": 2,
+        "legal_blue_2": 1
+      },
+      "B_cut_4": {
+        "illegal_1_last-endpoint+middle-chord": 192,
+        "illegal_1_middle-chord": 128,
+        "illegal_1_last-endpoint": 192,
+        "all_black": 96,
+        "illegal_2_first-endpoint": 32
+      },
+      "B_cut_4_reflected": {
+        "illegal_1_first-endpoint+middle-chord": 192,
+        "illegal_1_middle-chord": 128,
+        "illegal_1_first-endpoint": 192,
+        "all_black": 96,
+        "illegal_2_last-endpoint": 32
+      },
+      "B_cut_5": {
+        "illegal_1_last-endpoint+middle-chord": 192,
+        "illegal_1_middle-chord": 128,
+        "illegal_1_last-endpoint": 192,
+        "all_black": 96,
+        "illegal_2_first-endpoint": 32
+      },
+      "B_cut_5_reflected": {
+        "illegal_1_first-endpoint+middle-chord": 192,
+        "illegal_1_middle-chord": 128,
+        "illegal_1_first-endpoint": 192,
+        "all_black": 96,
+        "illegal_2_last-endpoint": 32
+      },
+      "B_cut_6": {
+        "illegal_1_last-endpoint+middle-chord": 192,
+        "illegal_1_middle-chord": 128,
+        "illegal_1_last-endpoint": 192,
+        "all_black": 96,
+        "illegal_2_first-endpoint": 32
+      },
+      "B_cut_6_reflected": {
+        "illegal_1_first-endpoint+middle-chord": 192,
+        "illegal_1_middle-chord": 128,
+        "illegal_1_first-endpoint": 192,
+        "all_black": 96,
+        "illegal_2_last-endpoint": 32
+      },
+      "C": {
+        "illegal_1_last-endpoint": 448,
+        "illegal_2_middle-chord": 144,
+        "all_black": 46,
+        "legal_blue_3": 2
+      },
+      "C_reflected": {
+        "illegal_1_first-endpoint": 448,
+        "illegal_2_middle-chord": 144,
+        "all_black": 46,
+        "legal_blue_3": 2
+      },
+      "L2": {
+        "illegal_1_first-endpoint+last-endpoint": 192,
+        "illegal_1_first-endpoint": 64,
+        "illegal_1_last-endpoint": 192,
+        "illegal_2_middle-chord": 64,
+        "illegal_2_last-endpoint+middle-chord": 32,
+        "all_black": 64,
+        "illegal_2_last-endpoint": 32
+      },
+      "L2_reflected": {
+        "illegal_1_first-endpoint+last-endpoint": 192,
+        "illegal_1_last-endpoint": 64,
+        "illegal_1_first-endpoint": 192,
+        "illegal_2_middle-chord": 64,
+        "illegal_2_first-endpoint+middle-chord": 32,
+        "all_black": 64,
+        "illegal_2_first-endpoint": 32
+      },
+      "closed_chord": {
+        "illegal_1_first-endpoint": 96,
+        "illegal_1_first-endpoint+last-endpoint": 32,
+        "all_black": 96,
+        "illegal_1_last-endpoint": 96,
+        "illegal_1_first-endpoint+middle-chord": 96,
+        "illegal_1_first-endpoint+last-endpoint+middle-chord": 32,
+        "illegal_1_middle-chord": 96,
+        "illegal_1_last-endpoint+middle-chord": 96
+      },
+      "closed_chord_reflected": {
+        "illegal_1_last-endpoint": 96,
+        "illegal_1_first-endpoint+last-endpoint": 32,
+        "all_black": 96,
+        "illegal_1_first-endpoint": 96,
+        "illegal_1_last-endpoint+middle-chord": 96,
+        "illegal_1_first-endpoint+last-endpoint+middle-chord": 32,
+        "illegal_1_middle-chord": 96,
+        "illegal_1_first-endpoint+middle-chord": 96
+      },
+      "closed_no_chord": {
+        "all_black": 192,
+        "illegal_1_last-endpoint": 128,
+        "illegal_1_middle-chord": 192,
+        "illegal_1_last-endpoint+middle-chord": 128
+      },
+      "closed_no_chord_reflected": {
+        "all_black": 192,
+        "illegal_1_first-endpoint": 128,
+        "illegal_1_middle-chord": 192,
+        "illegal_1_first-endpoint+middle-chord": 128
+      },
+      "release": {
+        "illegal_2_middle-chord": 192,
+        "illegal_2_last-endpoint+middle-chord": 128,
+        "all_black": 192,
+        "illegal_2_last-endpoint": 128
+      },
+      "release_reflected": {
+        "illegal_2_middle-chord": 192,
+        "illegal_2_first-endpoint+middle-chord": 128,
+        "all_black": 192,
+        "illegal_2_first-endpoint": 128
+      }
+    },
+    "9": {
+      "A_cut_4": {
+        "illegal_1_first-endpoint+last-endpoint": 2048,
+        "illegal_1_first-endpoint": 512,
+        "illegal_1_last-endpoint": 3072,
+        "illegal_2_first-endpoint": 256,
+        "all_black": 768,
+        "illegal_2_first-endpoint+middle-chord": 256,
+        "illegal_2_middle-chord": 768
+      },
+      "A_cut_4_reflected": {
+        "illegal_1_first-endpoint+last-endpoint": 2048,
+        "illegal_1_last-endpoint": 512,
+        "illegal_1_first-endpoint": 3072,
+        "illegal_2_last-endpoint": 256,
+        "all_black": 768,
+        "illegal_2_last-endpoint+middle-chord": 256,
+        "illegal_2_middle-chord": 768
+      },
+      "A_cut_5": {
+        "illegal_1_first-endpoint+last-endpoint": 2048,
+        "illegal_1_first-endpoint": 512,
+        "illegal_1_last-endpoint": 3072,
+        "all_black": 767,
+        "illegal_2_first-endpoint": 256,
+        "illegal_2_middle-chord": 768,
+        "illegal_2_first-endpoint+middle-chord": 256,
+        "legal_blue_3": 1
+      },
+      "A_cut_5_reflected": {
+        "illegal_1_first-endpoint+last-endpoint": 2048,
+        "illegal_1_last-endpoint": 512,
+        "illegal_1_first-endpoint": 3072,
+        "all_black": 767,
+        "illegal_2_last-endpoint": 256,
+        "illegal_2_middle-chord": 768,
+        "illegal_2_last-endpoint+middle-chord": 256,
+        "legal_blue_3": 1
+      },
+      "A_cut_6": {
+        "illegal_1_first-endpoint+last-endpoint": 2048,
+        "illegal_1_first-endpoint": 512,
+        "illegal_1_last-endpoint": 3072,
+        "all_black": 768,
+        "illegal_2_first-endpoint": 256,
+        "illegal_2_middle-chord": 768,
+        "illegal_2_first-endpoint+middle-chord": 256
+      },
+      "A_cut_6_reflected": {
+        "illegal_1_first-endpoint+last-endpoint": 2048,
+        "illegal_1_last-endpoint": 512,
+        "illegal_1_first-endpoint": 3072,
+        "all_black": 768,
+        "illegal_2_last-endpoint": 256,
+        "illegal_2_middle-chord": 768,
+        "illegal_2_last-endpoint+middle-chord": 256
+      },
+      "A_cut_7": {
+        "illegal_1_first-endpoint+last-endpoint": 2048,
+        "illegal_1_first-endpoint": 512,
+        "illegal_1_last-endpoint": 3072,
+        "all_black": 767,
+        "illegal_2_first-endpoint": 256,
+        "illegal_2_middle-chord": 768,
+        "illegal_2_first-endpoint+middle-chord": 256,
+        "legal_blue_3": 1
+      },
+      "A_cut_7_reflected": {
+        "illegal_1_first-endpoint+last-endpoint": 2048,
+        "illegal_1_last-endpoint": 512,
+        "illegal_1_first-endpoint": 3072,
+        "all_black": 767,
+        "illegal_2_last-endpoint": 256,
+        "illegal_2_middle-chord": 768,
+        "illegal_2_last-endpoint+middle-chord": 256,
+        "legal_blue_3": 1
+      },
+      "B_cut_4": {
+        "illegal_1_last-endpoint+middle-chord": 2560,
+        "illegal_1_middle-chord": 1280,
+        "illegal_1_last-endpoint": 2560,
+        "all_black": 1024,
+        "illegal_2_first-endpoint": 256
+      },
+      "B_cut_4_reflected": {
+        "illegal_1_first-endpoint+middle-chord": 2560,
+        "illegal_1_middle-chord": 1280,
+        "illegal_1_first-endpoint": 2560,
+        "all_black": 1024,
+        "illegal_2_last-endpoint": 256
+      },
+      "B_cut_5": {
+        "illegal_1_last-endpoint+middle-chord": 2560,
+        "illegal_1_middle-chord": 1280,
+        "illegal_1_last-endpoint": 2560,
+        "all_black": 1016,
+        "legal_blue_2": 8,
+        "illegal_2_first-endpoint": 256
+      },
+      "B_cut_5_reflected": {
+        "illegal_1_first-endpoint+middle-chord": 2560,
+        "illegal_1_middle-chord": 1280,
+        "illegal_1_first-endpoint": 2560,
+        "all_black": 1016,
+        "legal_blue_2": 8,
+        "illegal_2_last-endpoint": 256
+      },
+      "B_cut_6": {
+        "illegal_1_last-endpoint+middle-chord": 2560,
+        "illegal_1_middle-chord": 1280,
+        "illegal_1_last-endpoint": 2560,
+        "all_black": 1024,
+        "illegal_2_first-endpoint": 256
+      },
+      "B_cut_6_reflected": {
+        "illegal_1_first-endpoint+middle-chord": 2560,
+        "illegal_1_middle-chord": 1280,
+        "illegal_1_first-endpoint": 2560,
+        "all_black": 1024,
+        "illegal_2_last-endpoint": 256
+      },
+      "B_cut_7": {
+        "illegal_1_last-endpoint+middle-chord": 2560,
+        "illegal_1_middle-chord": 1280,
+        "illegal_1_last-endpoint": 2560,
+        "all_black": 1023,
+        "illegal_2_first-endpoint": 256,
+        "legal_blue_2": 1
+      },
+      "B_cut_7_reflected": {
+        "illegal_1_first-endpoint+middle-chord": 2560,
+        "illegal_1_middle-chord": 1280,
+        "illegal_1_first-endpoint": 2560,
+        "all_black": 1023,
+        "illegal_2_last-endpoint": 256,
+        "legal_blue_2": 1
+      },
+      "C": {
+        "illegal_1_last-endpoint": 5632,
+        "illegal_2_middle-chord": 1536,
+        "all_black": 512
+      },
+      "C_reflected": {
+        "illegal_1_first-endpoint": 5632,
+        "illegal_2_middle-chord": 1536,
+        "all_black": 512
+      },
+      "L2": {
+        "illegal_1_first-endpoint+last-endpoint": 2048,
+        "illegal_1_first-endpoint": 512,
+        "illegal_1_last-endpoint": 3072,
+        "illegal_2_middle-chord": 768,
+        "illegal_2_last-endpoint+middle-chord": 256,
+        "all_black": 768,
+        "illegal_2_last-endpoint": 256
+      },
+      "L2_reflected": {
+        "illegal_1_first-endpoint+last-endpoint": 2048,
+        "illegal_1_last-endpoint": 512,
+        "illegal_1_first-endpoint": 3072,
+        "illegal_2_middle-chord": 768,
+        "illegal_2_first-endpoint+middle-chord": 256,
+        "all_black": 768,
+        "illegal_2_first-endpoint": 256
+      },
+      "closed_chord": {
+        "illegal_1_first-endpoint": 1024,
+        "illegal_1_first-endpoint+last-endpoint": 256,
+        "all_black": 1532,
+        "illegal_1_last-endpoint": 1024,
+        "illegal_1_first-endpoint+middle-chord": 1024,
+        "illegal_1_first-endpoint+last-endpoint+middle-chord": 256,
+        "illegal_1_middle-chord": 1536,
+        "illegal_1_last-endpoint+middle-chord": 1024,
+        "legal_blue_2": 2,
+        "legal_blue_3": 2
+      },
+      "closed_chord_reflected": {
+        "illegal_1_last-endpoint": 1024,
+        "illegal_1_first-endpoint+last-endpoint": 256,
+        "all_black": 1532,
+        "illegal_1_first-endpoint": 1024,
+        "illegal_1_last-endpoint+middle-chord": 1024,
+        "illegal_1_first-endpoint+last-endpoint+middle-chord": 256,
+        "illegal_1_middle-chord": 1536,
+        "illegal_1_first-endpoint+middle-chord": 1024,
+        "legal_blue_2": 2,
+        "legal_blue_3": 2
+      },
+      "closed_no_chord": {
+        "all_black": 2558,
+        "illegal_1_last-endpoint": 1280,
+        "illegal_1_middle-chord": 2560,
+        "illegal_1_last-endpoint+middle-chord": 1280,
+        "legal_blue_3": 2
+      },
+      "closed_no_chord_reflected": {
+        "all_black": 2558,
+        "illegal_1_first-endpoint": 1280,
+        "illegal_1_middle-chord": 2560,
+        "illegal_1_first-endpoint+middle-chord": 1280,
+        "legal_blue_3": 2
+      },
+      "release": {
+        "illegal_2_middle-chord": 2560,
+        "illegal_2_last-endpoint+middle-chord": 1280,
+        "all_black": 2560,
+        "illegal_2_last-endpoint": 1280
+      },
+      "release_reflected": {
+        "illegal_2_middle-chord": 2560,
+        "illegal_2_first-endpoint+middle-chord": 1280,
+        "all_black": 2560,
+        "illegal_2_first-endpoint": 1280
+      }
+    }
+  },
+  "one_residual_per_profile": [
+    {
+      "n": 6,
+      "rows": [
+        18,
+        36,
+        9,
+        19,
+        38,
+        13
+      ],
+      "partner_rows": [
+        46,
+        28,
+        56,
+        48,
+        33,
+        2
+      ],
+      "incoming": [
+        2,
+        3
+      ],
+      "outgoing": [
+        2,
+        3
+      ],
+      "profile": "closed overlap=2 Unear=1110"
+    },
+    {
+      "n": 6,
+      "rows": [
+        10,
+        4,
+        41,
+        18,
+        39,
+        11
+      ],
+      "partner_rows": [
+        54,
+        60,
+        24,
+        49,
+        32,
+        4
+      ],
+      "incoming": [
+        2,
+        4
+      ],
+      "outgoing": [
+        1,
+        3
+      ],
+      "profile": "closed overlap=0 Unear=1001"
+    },
+    {
+      "n": 6,
+      "rows": [
+        6,
+        20,
+        8,
+        51,
+        37,
+        7
+      ],
+      "partner_rows": [
+        58,
+        44,
+        57,
+        16,
+        34,
+        8
+      ],
+      "incoming": [
+        3,
+        4
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "profile": "open overlap=0 Unear=0111"
+    },
+    {
+      "n": 7,
+      "rows": [
+        26,
+        4,
+        73,
+        82,
+        38,
+        79,
+        19
+      ],
+      "partner_rows": [
+        102,
+        124,
+        56,
+        49,
+        97,
+        64,
+        12
+      ],
+      "incoming": [
+        2,
+        5
+      ],
+      "outgoing": [
+        1,
+        4
+      ],
+      "profile": "closed overlap=0 Unear=1001"
+    },
+    {
+      "n": 7,
+      "rows": [
+        50,
+        76,
+        73,
+        49,
+        38,
+        70,
+        25
+      ],
+      "partner_rows": [
+        78,
+        52,
+        56,
+        82,
+        97,
+        73,
+        6
+      ],
+      "incoming": [
+        2,
+        3
+      ],
+      "outgoing": [
+        3,
+        4
+      ],
+      "profile": "closed overlap=1 Unear=1100"
+    },
+    {
+      "n": 7,
+      "rows": [
+        22,
+        20,
+        104,
+        19,
+        100,
+        75,
+        11
+      ],
+      "partner_rows": [
+        106,
+        108,
+        25,
+        112,
+        35,
+        68,
+        20
+      ],
+      "incoming": [
+        3,
+        5
+      ],
+      "outgoing": [
+        1,
+        3
+      ],
+      "profile": "closed overlap=1 Unear=0101"
+    },
+    {
+      "n": 7,
+      "rows": [
+        14,
+        4,
+        24,
+        82,
+        99,
+        79,
+        7
+      ],
+      "partner_rows": [
+        114,
+        124,
+        105,
+        49,
+        36,
+        64,
+        24
+      ],
+      "incoming": [
+        4,
+        5
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "profile": "closed overlap=0 Unear=0011"
+    },
+    {
+      "n": 7,
+      "rows": [
+        14,
+        36,
+        24,
+        82,
+        99,
+        77,
+        7
+      ],
+      "partner_rows": [
+        114,
+        92,
+        105,
+        49,
+        36,
+        66,
+        24
+      ],
+      "incoming": [
+        4,
+        5
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "profile": "open overlap=0 Unear=0011"
+    },
+    {
+      "n": 7,
+      "rows": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ],
+      "partner_rows": [
+        106,
+        84,
+        41,
+        82,
+        37,
+        74,
+        20
+      ],
+      "incoming": [
+        3,
+        5
+      ],
+      "outgoing": [
+        1,
+        3
+      ],
+      "profile": "open overlap=1 Unear=0101"
+    },
+    {
+      "n": 8,
+      "rows": [
+        58,
+        4,
+        137,
+        146,
+        166,
+        78,
+        159,
+        35
+      ],
+      "partner_rows": [
+        198,
+        252,
+        120,
+        113,
+        97,
+        193,
+        128,
+        28
+      ],
+      "incoming": [
+        2,
+        6
+      ],
+      "outgoing": [
+        1,
+        5
+      ],
+      "profile": "closed overlap=0 Unear=1001"
+    },
+    {
+      "n": 8,
+      "rows": [
+        114,
+        164,
+        201,
+        147,
+        38,
+        76,
+        154,
+        49
+      ],
+      "partner_rows": [
+        142,
+        92,
+        56,
+        112,
+        225,
+        195,
+        133,
+        14
+      ],
+      "incoming": [
+        2,
+        3
+      ],
+      "outgoing": [
+        4,
+        5
+      ],
+      "profile": "closed overlap=0 Unear=1100"
+    },
+    {
+      "n": 8,
+      "rows": [
+        106,
+        180,
+        201,
+        82,
+        165,
+        76,
+        146,
+        41
+      ],
+      "partner_rows": [
+        150,
+        76,
+        56,
+        177,
+        98,
+        195,
+        141,
+        22
+      ],
+      "incoming": [
+        2,
+        4
+      ],
+      "outgoing": [
+        3,
+        5
+      ],
+      "profile": "closed overlap=0 Unear=1000"
+    },
+    {
+      "n": 8,
+      "rows": [
+        46,
+        36,
+        216,
+        50,
+        163,
+        196,
+        155,
+        11
+      ],
+      "partner_rows": [
+        210,
+        220,
+        41,
+        209,
+        100,
+        75,
+        132,
+        52
+      ],
+      "incoming": [
+        4,
+        6
+      ],
+      "outgoing": [
+        1,
+        3
+      ],
+      "profile": "closed overlap=0 Unear=0001"
+    },
+    {
+      "n": 8,
+      "rows": [
+        30,
+        4,
+        56,
+        178,
+        162,
+        195,
+        159,
+        7
+      ],
+      "partner_rows": [
+        226,
+        252,
+        201,
+        81,
+        101,
+        76,
+        128,
+        56
+      ],
+      "incoming": [
+        5,
+        6
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "profile": "closed overlap=0 Unear=0011"
+    },
+    {
+      "n": 8,
+      "rows": [
+        30,
+        68,
+        56,
+        178,
+        162,
+        195,
+        157,
+        7
+      ],
+      "partner_rows": [
+        226,
+        188,
+        201,
+        81,
+        101,
+        76,
+        130,
+        56
+      ],
+      "incoming": [
+        5,
+        6
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "profile": "open overlap=0 Unear=0011"
+    },
+    {
+      "n": 9,
+      "rows": [
+        122,
+        4,
+        265,
+        274,
+        294,
+        334,
+        158,
+        319,
+        67
+      ],
+      "partner_rows": [
+        390,
+        508,
+        248,
+        241,
+        225,
+        193,
+        385,
+        256,
+        60
+      ],
+      "incoming": [
+        2,
+        7
+      ],
+      "outgoing": [
+        1,
+        6
+      ],
+      "profile": "closed overlap=0 Unear=1001"
+    },
+    {
+      "n": 9,
+      "rows": [
+        242,
+        324,
+        393,
+        275,
+        294,
+        78,
+        156,
+        314,
+        97
+      ],
+      "partner_rows": [
+        270,
+        188,
+        120,
+        240,
+        225,
+        449,
+        387,
+        261,
+        30
+      ],
+      "incoming": [
+        2,
+        3
+      ],
+      "outgoing": [
+        5,
+        6
+      ],
+      "profile": "closed overlap=0 Unear=1100"
+    },
+    {
+      "n": 9,
+      "rows": [
+        206,
+        356,
+        408,
+        146,
+        99,
+        333,
+        396,
+        306,
+        25
+      ],
+      "partner_rows": [
+        306,
+        156,
+        105,
+        369,
+        420,
+        194,
+        147,
+        269,
+        102
+      ],
+      "incoming": [
+        4,
+        5
+      ],
+      "outgoing": [
+        3,
+        4
+      ],
+      "profile": "closed overlap=1 Unear=0000"
+    },
+    {
+      "n": 9,
+      "rows": [
+        214,
+        340,
+        424,
+        83,
+        420,
+        75,
+        404,
+        298,
+        41
+      ],
+      "partner_rows": [
+        298,
+        172,
+        89,
+        432,
+        99,
+        452,
+        139,
+        277,
+        86
+      ],
+      "incoming": [
+        3,
+        5
+      ],
+      "outgoing": [
+        3,
+        5
+      ],
+      "profile": "closed overlap=2 Unear=0100"
+    },
+    {
+      "n": 9,
+      "rows": [
+        94,
+        68,
+        440,
+        82,
+        354,
+        331,
+        388,
+        315,
+        11
+      ],
+      "partner_rows": [
+        418,
+        444,
+        73,
+        433,
+        165,
+        196,
+        155,
+        260,
+        116
+      ],
+      "incoming": [
+        5,
+        7
+      ],
+      "outgoing": [
+        1,
+        3
+      ],
+      "profile": "closed overlap=0 Unear=0001"
+    },
+    {
+      "n": 9,
+      "rows": [
+        62,
+        4,
+        120,
+        338,
+        354,
+        330,
+        387,
+        319,
+        7
+      ],
+      "partner_rows": [
+        450,
+        508,
+        393,
+        177,
+        165,
+        197,
+        156,
+        256,
+        120
+      ],
+      "incoming": [
+        6,
+        7
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "profile": "closed overlap=0 Unear=0011"
+    },
+    {
+      "n": 9,
+      "rows": [
+        62,
+        132,
+        120,
+        338,
+        354,
+        330,
+        387,
+        317,
+        7
+      ],
+      "partner_rows": [
+        450,
+        380,
+        393,
+        177,
+        165,
+        197,
+        156,
+        258,
+        120
+      ],
+      "incoming": [
+        6,
+        7
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "profile": "open overlap=0 Unear=0011"
+    }
+  ],
+  "minimal_residuals": [
+    {
+      "n": 6,
+      "rows": [
+        18,
+        36,
+        9,
+        19,
+        38,
+        13
+      ],
+      "partner_rows": [
+        46,
+        28,
+        56,
+        48,
+        33,
+        2
+      ],
+      "incoming": [
+        2,
+        3
+      ],
+      "outgoing": [
+        2,
+        3
+      ],
+      "profile": "closed overlap=2 Unear=1110"
+    },
+    {
+      "n": 6,
+      "rows": [
+        10,
+        4,
+        41,
+        18,
+        39,
+        11
+      ],
+      "partner_rows": [
+        54,
+        60,
+        24,
+        49,
+        32,
+        4
+      ],
+      "incoming": [
+        2,
+        4
+      ],
+      "outgoing": [
+        1,
+        3
+      ],
+      "profile": "closed overlap=0 Unear=1001"
+    },
+    {
+      "n": 6,
+      "rows": [
+        18,
+        44,
+        25,
+        17,
+        34,
+        13
+      ],
+      "partner_rows": [
+        46,
+        20,
+        40,
+        50,
+        37,
+        2
+      ],
+      "incoming": [
+        2,
+        3
+      ],
+      "outgoing": [
+        2,
+        3
+      ],
+      "profile": "closed overlap=2 Unear=1110"
+    },
+    {
+      "n": 6,
+      "rows": [
+        10,
+        12,
+        57,
+        16,
+        35,
+        11
+      ],
+      "partner_rows": [
+        54,
+        52,
+        8,
+        51,
+        36,
+        4
+      ],
+      "incoming": [
+        2,
+        4
+      ],
+      "outgoing": [
+        1,
+        3
+      ],
+      "profile": "closed overlap=0 Unear=1001"
+    },
+    {
+      "n": 6,
+      "rows": [
+        6,
+        20,
+        8,
+        51,
+        37,
+        7
+      ],
+      "partner_rows": [
+        58,
+        44,
+        57,
+        16,
+        34,
+        8
+      ],
+      "incoming": [
+        3,
+        4
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "profile": "open overlap=0 Unear=0111"
+    },
+    {
+      "n": 6,
+      "rows": [
+        6,
+        28,
+        24,
+        49,
+        33,
+        7
+      ],
+      "partner_rows": [
+        58,
+        36,
+        41,
+        18,
+        38,
+        8
+      ],
+      "incoming": [
+        3,
+        4
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "profile": "open overlap=0 Unear=0111"
+    }
+  ],
+  "excluded_presentations": [
+    {
+      "n": 6,
+      "rows": [
+        6,
+        4,
+        8,
+        51,
+        39,
+        7
+      ],
+      "partner_rows": [
+        58,
+        60,
+        57,
+        16,
+        32,
+        8
+      ],
+      "incoming": [
+        3,
+        4
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "reason": "nonstrong partner",
+      "partner_HP": 9,
+      "partner_black_HP": 0
+    }
+  ]
+}

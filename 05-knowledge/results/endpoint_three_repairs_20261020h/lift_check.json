@@ -1,0 +1,493 @@
+{
+  "status": "PASS",
+  "scope": "Paired-port sufficient repairs, not full endpoint-three coverage",
+  "family": {
+    "exhaustive_blue_middle_counts": {
+      "2": 1,
+      "3": 2,
+      "4": 4,
+      "5": 16,
+      "6": 64
+    },
+    "large_controls": [
+      {
+        "middle_order": 7,
+        "presentations": 3
+      },
+      {
+        "middle_order": 8,
+        "presentations": 3
+      },
+      {
+        "middle_order": 9,
+        "presentations": 3
+      },
+      {
+        "middle_order": 12,
+        "presentations": 3
+      },
+      {
+        "middle_order": 17,
+        "presentations": 3
+      },
+      {
+        "middle_order": 24,
+        "presentations": 3
+      },
+      {
+        "middle_order": 31,
+        "presentations": 3
+      }
+    ],
+    "ten_vertex_343": {
+      "rows": [
+        126,
+        124,
+        120,
+        1008,
+        992,
+        960,
+        896,
+        775,
+        519,
+        7
+      ],
+      "R_words": [
+        [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          6,
+          5,
+          4,
+          3,
+          8,
+          7,
+          9
+        ],
+        [
+          1,
+          9,
+          7,
+          8,
+          3,
+          4,
+          5,
+          6,
+          2,
+          0
+        ]
+      ],
+      "endpoint_sums": [
+        11,
+        8,
+        10
+      ]
+    },
+    "r1": {
+      "rows": [
+        14,
+        12,
+        8,
+        112,
+        103,
+        71,
+        7
+      ],
+      "K_words": [
+        [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          1
+        ],
+        [
+          3,
+          0,
+          2,
+          4,
+          5,
+          6,
+          1
+        ],
+        [
+          3,
+          0,
+          1,
+          2,
+          4,
+          5,
+          6
+        ]
+      ],
+      "excesses": [
+        -1,
+        0,
+        1
+      ]
+    }
+  },
+  "nonmodule_and_A": {
+    "guarded_presentations_checked": {
+      "end_pair": 40,
+      "A1_full": 368,
+      "A2_singleton": 472,
+      "A2_odd_prefix": 976
+    },
+    "row_bank_sha256": {
+      "end_pair": "085f56cf9007e75efdff880f54980d6b082e5a5925e03eb3d7bf1baf5667e60f",
+      "A1_full": "54fecc4a6d6595878abae97a9ccd4bfaf6f4e8027ec6a88d3bce6eac873f222e",
+      "A2_singleton": "15dcc829e9d82f307bc3cb32b6eef33635cd8b1be6e4093775fbe6579ee71d7d",
+      "A2_odd_prefix": "09d3e16336f12f1192c82ad5493953a36b2eb1c347ab70dafd9ea8d6dd0fae91"
+    },
+    "note": "Eight deterministic reflected-chord assignments per listed parameter; not a tournament census."
+  },
+  "reflection_order": {
+    "disjoint_reflection_commutators": 60
+  },
+  "naive_lift": {
+    "expanded_K_words": [
+      [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        0,
+        1,
+        2
+      ],
+      [
+        6,
+        7,
+        8,
+        4,
+        5,
+        3,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        2,
+        6,
+        7,
+        8,
+        4,
+        5,
+        3
+      ]
+    ],
+    "directed": [
+      true,
+      true,
+      false
+    ],
+    "wrong_arcs": [
+      [],
+      [],
+      [
+        [
+          2,
+          6
+        ]
+      ]
+    ],
+    "literal_target_matches": false,
+    "repaired_by_theorem_M": true
+  },
+  "final_endpair": [
+    {
+      "n": 11,
+      "x_to_y": false,
+      "checked": 64,
+      "universe": "64 deterministic mirrored chord assignments",
+      "middle_directions": {
+        "closed": 35,
+        "open": 29
+      }
+    },
+    {
+      "n": 12,
+      "x_to_y": false,
+      "checked": 64,
+      "universe": "64 deterministic mirrored chord assignments",
+      "middle_directions": {
+        "closed": 37,
+        "open": 27
+      }
+    },
+    {
+      "n": 13,
+      "x_to_y": false,
+      "checked": 64,
+      "universe": "64 deterministic mirrored chord assignments",
+      "middle_directions": {
+        "closed": 33,
+        "open": 31
+      }
+    },
+    {
+      "n": 17,
+      "x_to_y": false,
+      "checked": 64,
+      "universe": "64 deterministic mirrored chord assignments",
+      "middle_directions": {
+        "closed": 36,
+        "open": 28
+      }
+    },
+    {
+      "n": 24,
+      "x_to_y": false,
+      "checked": 64,
+      "universe": "64 deterministic mirrored chord assignments",
+      "middle_directions": {
+        "open": 33,
+        "closed": 31
+      }
+    },
+    {
+      "n": 31,
+      "x_to_y": false,
+      "checked": 64,
+      "universe": "64 deterministic mirrored chord assignments",
+      "middle_directions": {
+        "closed": 28,
+        "open": 36
+      }
+    },
+    {
+      "n": 9,
+      "x_to_y": true,
+      "checked": 128,
+      "universe": "complete fixed-blue presentations",
+      "middle_directions": {
+        "closed": 64,
+        "open": 64
+      }
+    },
+    {
+      "n": 10,
+      "x_to_y": true,
+      "checked": 1024,
+      "universe": "complete fixed-blue presentations",
+      "middle_directions": {
+        "closed": 512,
+        "open": 512
+      }
+    },
+    {
+      "n": 11,
+      "x_to_y": true,
+      "checked": 64,
+      "universe": "64 deterministic mirrored chord assignments",
+      "middle_directions": {
+        "closed": 22,
+        "open": 42
+      }
+    },
+    {
+      "n": 12,
+      "x_to_y": true,
+      "checked": 64,
+      "universe": "64 deterministic mirrored chord assignments",
+      "middle_directions": {
+        "closed": 31,
+        "open": 33
+      }
+    },
+    {
+      "n": 13,
+      "x_to_y": true,
+      "checked": 64,
+      "universe": "64 deterministic mirrored chord assignments",
+      "middle_directions": {
+        "closed": 31,
+        "open": 33
+      }
+    },
+    {
+      "n": 17,
+      "x_to_y": true,
+      "checked": 64,
+      "universe": "64 deterministic mirrored chord assignments",
+      "middle_directions": {
+        "open": 41,
+        "closed": 23
+      }
+    },
+    {
+      "n": 24,
+      "x_to_y": true,
+      "checked": 64,
+      "universe": "64 deterministic mirrored chord assignments",
+      "middle_directions": {
+        "open": 34,
+        "closed": 30
+      }
+    },
+    {
+      "n": 31,
+      "x_to_y": true,
+      "checked": 64,
+      "universe": "64 deterministic mirrored chord assignments",
+      "middle_directions": {
+        "closed": 31,
+        "open": 33
+      }
+    }
+  ],
+  "missing_sidecar": {
+    "rows": [
+      30,
+      4,
+      8,
+      146,
+      166,
+      207,
+      159,
+      7
+    ],
+    "reversed_right_block": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "start": 2,
+    "start_outdegree_inside_reversed_block": 0,
+    "conclusion": "This particular endpoint-preserving right-block path does not exist."
+  },
+  "A3": {
+    "permutation_orders_checked": [
+      11,
+      200
+    ],
+    "order_count": 190,
+    "source_of_order17_witness": "root lane",
+    "witness_rows": [
+      32758,
+      9348,
+      93336,
+      130355,
+      73762,
+      91334,
+      126366,
+      65816,
+      75318,
+      118014,
+      67728,
+      78258,
+      92150,
+      18048,
+      101778,
+      81335,
+      8195
+    ],
+    "blue_final_K_word": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      0,
+      1,
+      2,
+      15,
+      16
+    ],
+    "movable_cut_K_words": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        16,
+        13,
+        14,
+        15
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        16,
+        13,
+        14,
+        0,
+        15
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        0,
+        15,
+        16
+      ]
+    ],
+    "movable_cut_excesses": [
+      9,
+      -1,
+      -8
+    ],
+    "conclusion": "Fixed-word hostile with independently replayed three-black alternative."
+  }
+}

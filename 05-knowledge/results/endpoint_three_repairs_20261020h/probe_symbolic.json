@@ -1,0 +1,1767 @@
+{
+  "status": "FINITE-EXACT affine feasibility with explicit port and open-middle guards",
+  "source_hashes": {
+    "current_symbolic": "6120295ebb4951d7805dc7aefcfbf5e11cccc50b624c3d494452e020e9bc7233",
+    "current_probe": "3821c2681aa14f3737efc39d7e6c988d91bb2652af7ef086b3bef06382bcd66a",
+    "inherited_endpoint_two_symbolic": "05796d52495945ad59b181dc5064e98ca59bcc3a7020de7b17576fb5f63c0382"
+  },
+  "records": [
+    {
+      "n": 8,
+      "h": 2,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,4"
+      ]
+    },
+    {
+      "n": 8,
+      "h": 2,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:2,4",
+        "blueQ:0,2",
+        "blueQ:1,3",
+        "path:0",
+        "path:6"
+      ]
+    },
+    {
+      "n": 8,
+      "h": 2,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,5",
+        "blueQ:0,6",
+        "first:5",
+        "path:0"
+      ]
+    },
+    {
+      "n": 8,
+      "h": 4,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,4"
+      ]
+    },
+    {
+      "n": 8,
+      "h": 4,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,4",
+        "first:2",
+        "path:1"
+      ]
+    },
+    {
+      "n": 8,
+      "h": 4,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,4",
+        "blueQ:0,5",
+        "extra:0:1,6",
+        "first:4"
+      ]
+    },
+    {
+      "n": 9,
+      "h": 2,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,6",
+        "first:4",
+        "path:6"
+      ]
+    },
+    {
+      "n": 9,
+      "h": 2,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,3",
+        "blueP:1,5",
+        "blueQ:0,7",
+        "blueQ:1,5",
+        "first:3",
+        "path:6"
+      ]
+    },
+    {
+      "n": 9,
+      "h": 2,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,6",
+        "blueQ:0,7",
+        "first:6",
+        "path:0"
+      ]
+    },
+    {
+      "n": 9,
+      "h": 3,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,6",
+        "first:4",
+        "path:6"
+      ]
+    },
+    {
+      "n": 9,
+      "h": 3,
+      "step": 2,
+      "compatible": true,
+      "rows": [
+        182,
+        388,
+        120,
+        339,
+        354,
+        74,
+        387,
+        316,
+        37
+      ],
+      "scores": [
+        5,
+        3,
+        4,
+        5,
+        4,
+        3,
+        4,
+        5,
+        3
+      ]
+    },
+    {
+      "n": 9,
+      "h": 3,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,6",
+        "blueQ:0,7",
+        "first:6",
+        "path:0"
+      ]
+    },
+    {
+      "n": 9,
+      "h": 4,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,5",
+        "first:2",
+        "first:3"
+      ]
+    },
+    {
+      "n": 9,
+      "h": 4,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,3",
+        "blueP:1,5",
+        "blueQ:0,7",
+        "blueQ:1,5",
+        "first:3",
+        "path:6"
+      ]
+    },
+    {
+      "n": 9,
+      "h": 4,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,6",
+        "blueQ:0,7",
+        "first:6",
+        "path:0"
+      ]
+    },
+    {
+      "n": 10,
+      "h": 2,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,7",
+        "first:5",
+        "path:7"
+      ]
+    },
+    {
+      "n": 10,
+      "h": 2,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,3",
+        "blueP:1,5",
+        "blueQ:0,7",
+        "blueQ:1,6",
+        "first:3",
+        "first:7"
+      ]
+    },
+    {
+      "n": 10,
+      "h": 2,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,7",
+        "blueQ:0,8",
+        "first:7",
+        "path:0"
+      ]
+    },
+    {
+      "n": 10,
+      "h": 4,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,7",
+        "first:5",
+        "path:7"
+      ]
+    },
+    {
+      "n": 10,
+      "h": 4,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,3",
+        "blueP:1,5",
+        "blueQ:0,7",
+        "blueQ:1,6",
+        "first:3",
+        "first:7"
+      ]
+    },
+    {
+      "n": 10,
+      "h": 4,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,7",
+        "blueQ:0,8",
+        "first:7",
+        "path:0"
+      ]
+    },
+    {
+      "n": 10,
+      "h": 6,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,6",
+        "first:2",
+        "first:4"
+      ]
+    },
+    {
+      "n": 10,
+      "h": 6,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,3",
+        "blueP:1,5",
+        "blueQ:0,7",
+        "blueQ:1,6",
+        "first:3",
+        "first:7"
+      ]
+    },
+    {
+      "n": 10,
+      "h": 6,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,6",
+        "blueQ:0,7",
+        "extra:0:1,8",
+        "first:6"
+      ]
+    },
+    {
+      "n": 11,
+      "h": 2,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,8",
+        "first:6",
+        "path:8"
+      ]
+    },
+    {
+      "n": 11,
+      "h": 2,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,4",
+        "blueQ:2,7",
+        "first:4",
+        "first:5"
+      ]
+    },
+    {
+      "n": 11,
+      "h": 2,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,8",
+        "blueQ:0,9",
+        "first:8",
+        "path:0"
+      ]
+    },
+    {
+      "n": 11,
+      "h": 4,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,7",
+        "first:2",
+        "first:5"
+      ]
+    },
+    {
+      "n": 11,
+      "h": 4,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueP:0,3",
+        "blueP:1,5",
+        "blueQ:0,7",
+        "blueQ:1,7",
+        "first:2",
+        "first:3"
+      ]
+    },
+    {
+      "n": 11,
+      "h": 4,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,8",
+        "blueQ:0,9",
+        "first:8",
+        "path:0"
+      ]
+    },
+    {
+      "n": 11,
+      "h": 5,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,8",
+        "first:6",
+        "path:8"
+      ]
+    },
+    {
+      "n": 11,
+      "h": 5,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueP:0,3",
+        "blueP:1,5",
+        "blueQ:0,7",
+        "blueQ:1,7",
+        "first:2",
+        "first:3"
+      ]
+    },
+    {
+      "n": 11,
+      "h": 5,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,8",
+        "blueQ:0,9",
+        "first:8",
+        "path:0"
+      ]
+    },
+    {
+      "n": 11,
+      "h": 6,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,7",
+        "first:2",
+        "first:5"
+      ]
+    },
+    {
+      "n": 11,
+      "h": 6,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueP:0,3",
+        "blueP:1,5",
+        "blueQ:0,7",
+        "blueQ:1,7",
+        "first:2",
+        "first:3"
+      ]
+    },
+    {
+      "n": 11,
+      "h": 6,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,8",
+        "blueQ:0,9",
+        "first:8",
+        "path:0"
+      ]
+    },
+    {
+      "n": 12,
+      "h": 2,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,9",
+        "first:7",
+        "path:9"
+      ]
+    },
+    {
+      "n": 12,
+      "h": 2,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,4",
+        "blueQ:2,8",
+        "first:4",
+        "first:6"
+      ]
+    },
+    {
+      "n": 12,
+      "h": 2,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,9",
+        "blueQ:0,10",
+        "first:9",
+        "path:0"
+      ]
+    },
+    {
+      "n": 12,
+      "h": 4,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,8",
+        "first:2",
+        "first:6"
+      ]
+    },
+    {
+      "n": 12,
+      "h": 4,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueP:1,4",
+        "blueP:1,6",
+        "blueP:2,8",
+        "blueQ:0,6",
+        "blueQ:0,8",
+        "blueQ:1,7",
+        "blueQ:1,9",
+        "first:2",
+        "first:8"
+      ]
+    },
+    {
+      "n": 12,
+      "h": 4,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,9",
+        "blueQ:0,10",
+        "first:9",
+        "path:0"
+      ]
+    },
+    {
+      "n": 12,
+      "h": 6,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,9",
+        "first:7",
+        "path:9"
+      ]
+    },
+    {
+      "n": 12,
+      "h": 6,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueP:1,4",
+        "blueP:1,6",
+        "blueP:2,8",
+        "blueQ:0,6",
+        "blueQ:0,8",
+        "blueQ:1,7",
+        "blueQ:1,9",
+        "first:2",
+        "first:8"
+      ]
+    },
+    {
+      "n": 12,
+      "h": 6,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,9",
+        "blueQ:0,10",
+        "first:9",
+        "path:0"
+      ]
+    },
+    {
+      "n": 13,
+      "h": 2,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,10",
+        "first:8",
+        "path:10"
+      ]
+    },
+    {
+      "n": 13,
+      "h": 2,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:1,4",
+        "blueP:2,8",
+        "blueQ:0,6",
+        "blueQ:1,10",
+        "blueQ:2,8",
+        "first:6",
+        "first:9"
+      ]
+    },
+    {
+      "n": 13,
+      "h": 2,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,10",
+        "blueQ:0,11",
+        "first:10",
+        "path:0"
+      ]
+    },
+    {
+      "n": 13,
+      "h": 4,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,9",
+        "first:2",
+        "first:7"
+      ]
+    },
+    {
+      "n": 13,
+      "h": 4,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:1,4",
+        "blueP:2,8",
+        "blueQ:0,6",
+        "blueQ:1,10",
+        "blueQ:2,8",
+        "first:6",
+        "first:9"
+      ]
+    },
+    {
+      "n": 13,
+      "h": 4,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,10",
+        "blueQ:0,11",
+        "first:10",
+        "path:0"
+      ]
+    },
+    {
+      "n": 13,
+      "h": 6,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,9",
+        "first:2",
+        "first:7"
+      ]
+    },
+    {
+      "n": 13,
+      "h": 6,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,4",
+        "blueQ:2,9",
+        "first:4",
+        "first:7"
+      ]
+    },
+    {
+      "n": 13,
+      "h": 6,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,10",
+        "blueQ:0,11",
+        "first:10",
+        "path:0"
+      ]
+    },
+    {
+      "n": 13,
+      "h": 7,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,10",
+        "first:8",
+        "path:10"
+      ]
+    },
+    {
+      "n": 13,
+      "h": 7,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:1,4",
+        "blueP:2,8",
+        "blueQ:0,6",
+        "blueQ:1,10",
+        "blueQ:2,8",
+        "first:6",
+        "first:9"
+      ]
+    },
+    {
+      "n": 13,
+      "h": 7,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,10",
+        "blueQ:0,11",
+        "first:10",
+        "path:0"
+      ]
+    },
+    {
+      "n": 14,
+      "h": 2,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,11",
+        "first:9",
+        "path:11"
+      ]
+    },
+    {
+      "n": 14,
+      "h": 2,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:1,6",
+        "blueP:2,10",
+        "blueQ:0,8",
+        "blueQ:1,9"
+      ]
+    },
+    {
+      "n": 14,
+      "h": 2,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,11",
+        "blueQ:0,12",
+        "first:11",
+        "path:0"
+      ]
+    },
+    {
+      "n": 14,
+      "h": 4,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,10",
+        "first:2",
+        "first:8"
+      ]
+    },
+    {
+      "n": 14,
+      "h": 4,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:1,6",
+        "blueP:2,10",
+        "blueQ:0,8",
+        "blueQ:1,9"
+      ]
+    },
+    {
+      "n": 14,
+      "h": 4,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,11",
+        "blueQ:0,12",
+        "first:11",
+        "path:0"
+      ]
+    },
+    {
+      "n": 14,
+      "h": 6,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,10",
+        "first:2",
+        "first:8"
+      ]
+    },
+    {
+      "n": 14,
+      "h": 6,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:1,6",
+        "blueP:2,10",
+        "blueQ:0,8",
+        "blueQ:1,9"
+      ]
+    },
+    {
+      "n": 14,
+      "h": 6,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,11",
+        "blueQ:0,12",
+        "first:11",
+        "path:0"
+      ]
+    },
+    {
+      "n": 14,
+      "h": 8,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,11",
+        "first:9",
+        "path:11"
+      ]
+    },
+    {
+      "n": 14,
+      "h": 8,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:1,6",
+        "blueP:2,10",
+        "blueQ:0,8",
+        "blueQ:1,9"
+      ]
+    },
+    {
+      "n": 14,
+      "h": 8,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,11",
+        "blueQ:0,12",
+        "first:11",
+        "path:0"
+      ]
+    },
+    {
+      "n": 15,
+      "h": 2,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,12",
+        "first:10",
+        "path:12"
+      ]
+    },
+    {
+      "n": 15,
+      "h": 2,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,4",
+        "blueQ:2,11",
+        "first:4",
+        "first:9"
+      ]
+    },
+    {
+      "n": 15,
+      "h": 2,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,12",
+        "blueQ:0,13",
+        "first:12",
+        "path:0"
+      ]
+    },
+    {
+      "n": 15,
+      "h": 4,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,11",
+        "first:2",
+        "first:9"
+      ]
+    },
+    {
+      "n": 15,
+      "h": 4,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,8",
+        "blueP:4,9",
+        "blueQ:2,7",
+        "blueQ:3,8",
+        "first:5",
+        "first:8"
+      ]
+    },
+    {
+      "n": 15,
+      "h": 4,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,12",
+        "blueQ:0,13",
+        "first:12",
+        "path:0"
+      ]
+    },
+    {
+      "n": 15,
+      "h": 6,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,11",
+        "first:2",
+        "first:9"
+      ]
+    },
+    {
+      "n": 15,
+      "h": 6,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,4",
+        "blueQ:2,11",
+        "first:4",
+        "first:9"
+      ]
+    },
+    {
+      "n": 15,
+      "h": 6,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,12",
+        "blueQ:0,13",
+        "first:12",
+        "path:0"
+      ]
+    },
+    {
+      "n": 15,
+      "h": 9,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,12",
+        "first:10",
+        "path:12"
+      ]
+    },
+    {
+      "n": 15,
+      "h": 9,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,8",
+        "blueP:4,9",
+        "blueQ:2,7",
+        "blueQ:3,8",
+        "first:5",
+        "first:8"
+      ]
+    },
+    {
+      "n": 15,
+      "h": 9,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,12",
+        "blueQ:0,13",
+        "first:12",
+        "path:0"
+      ]
+    },
+    {
+      "n": 16,
+      "h": 2,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,13",
+        "first:11",
+        "path:13"
+      ]
+    },
+    {
+      "n": 16,
+      "h": 2,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,4",
+        "blueQ:2,12",
+        "first:10",
+        "first:4"
+      ]
+    },
+    {
+      "n": 16,
+      "h": 2,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,13",
+        "blueQ:0,14",
+        "first:13",
+        "path:0"
+      ]
+    },
+    {
+      "n": 16,
+      "h": 4,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,12",
+        "first:10",
+        "first:2"
+      ]
+    },
+    {
+      "n": 16,
+      "h": 4,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,8",
+        "blueP:4,10",
+        "blueQ:2,8",
+        "blueQ:3,9",
+        "first:6",
+        "first:8"
+      ]
+    },
+    {
+      "n": 16,
+      "h": 4,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,13",
+        "blueQ:0,14",
+        "first:13",
+        "path:0"
+      ]
+    },
+    {
+      "n": 16,
+      "h": 6,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,12",
+        "first:10",
+        "first:2"
+      ]
+    },
+    {
+      "n": 16,
+      "h": 6,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,4",
+        "blueQ:2,12",
+        "first:10",
+        "first:4"
+      ]
+    },
+    {
+      "n": 16,
+      "h": 6,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,13",
+        "blueQ:0,14",
+        "first:13",
+        "path:0"
+      ]
+    },
+    {
+      "n": 16,
+      "h": 10,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,13",
+        "first:11",
+        "path:13"
+      ]
+    },
+    {
+      "n": 16,
+      "h": 10,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,8",
+        "blueP:4,10",
+        "blueQ:2,8",
+        "blueQ:3,9",
+        "first:6",
+        "first:8"
+      ]
+    },
+    {
+      "n": 16,
+      "h": 10,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,13",
+        "blueQ:0,14",
+        "first:13",
+        "path:0"
+      ]
+    },
+    {
+      "n": 17,
+      "h": 2,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,14",
+        "first:12",
+        "path:14"
+      ]
+    },
+    {
+      "n": 17,
+      "h": 2,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:1,8",
+        "blueP:2,12",
+        "blueP:3,12",
+        "blueQ:0,10",
+        "blueQ:1,10",
+        "blueQ:2,11",
+        "blueQ:2,12",
+        "first:10",
+        "first:9"
+      ]
+    },
+    {
+      "n": 17,
+      "h": 2,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,14",
+        "blueQ:0,15",
+        "first:14",
+        "path:0"
+      ]
+    },
+    {
+      "n": 17,
+      "h": 4,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,13",
+        "first:11",
+        "first:2"
+      ]
+    },
+    {
+      "n": 17,
+      "h": 4,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:1,8",
+        "blueP:2,12",
+        "blueP:3,12",
+        "blueQ:0,10",
+        "blueQ:1,10",
+        "blueQ:2,11",
+        "blueQ:2,12",
+        "first:10",
+        "first:9"
+      ]
+    },
+    {
+      "n": 17,
+      "h": 4,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,14",
+        "blueQ:0,15",
+        "first:14",
+        "path:0"
+      ]
+    },
+    {
+      "n": 17,
+      "h": 6,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,13",
+        "first:11",
+        "first:2"
+      ]
+    },
+    {
+      "n": 17,
+      "h": 6,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:1,8",
+        "blueP:2,12",
+        "blueP:3,12",
+        "blueQ:0,10",
+        "blueQ:1,10",
+        "blueQ:2,11",
+        "blueQ:2,12",
+        "first:10",
+        "first:9"
+      ]
+    },
+    {
+      "n": 17,
+      "h": 6,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,14",
+        "blueQ:0,15",
+        "first:14",
+        "path:0"
+      ]
+    },
+    {
+      "n": 17,
+      "h": 11,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,14",
+        "first:12",
+        "path:14"
+      ]
+    },
+    {
+      "n": 17,
+      "h": 11,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:1,8",
+        "blueP:2,12",
+        "blueP:3,12",
+        "blueQ:0,10",
+        "blueQ:1,10",
+        "blueQ:2,11",
+        "blueQ:2,12",
+        "first:10",
+        "first:9"
+      ]
+    },
+    {
+      "n": 17,
+      "h": 11,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,14",
+        "blueQ:0,15",
+        "first:14",
+        "path:0"
+      ]
+    },
+    {
+      "n": 18,
+      "h": 2,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,15",
+        "first:13",
+        "path:15"
+      ]
+    },
+    {
+      "n": 18,
+      "h": 2,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,4",
+        "blueQ:2,14",
+        "first:12",
+        "first:4"
+      ]
+    },
+    {
+      "n": 18,
+      "h": 2,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,15",
+        "blueQ:0,16",
+        "first:15",
+        "path:0"
+      ]
+    },
+    {
+      "n": 18,
+      "h": 4,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,14",
+        "first:12",
+        "first:2"
+      ]
+    },
+    {
+      "n": 18,
+      "h": 4,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,8",
+        "blueP:4,12",
+        "blueQ:2,10",
+        "blueQ:3,11"
+      ]
+    },
+    {
+      "n": 18,
+      "h": 4,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,15",
+        "blueQ:0,16",
+        "first:15",
+        "path:0"
+      ]
+    },
+    {
+      "n": 18,
+      "h": 6,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,14",
+        "first:12",
+        "first:2"
+      ]
+    },
+    {
+      "n": 18,
+      "h": 6,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,4",
+        "blueQ:2,14",
+        "first:12",
+        "first:4"
+      ]
+    },
+    {
+      "n": 18,
+      "h": 6,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,15",
+        "blueQ:0,16",
+        "first:15",
+        "path:0"
+      ]
+    },
+    {
+      "n": 18,
+      "h": 12,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,15",
+        "first:13",
+        "path:15"
+      ]
+    },
+    {
+      "n": 18,
+      "h": 12,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,8",
+        "blueP:4,12",
+        "blueQ:2,10",
+        "blueQ:3,11"
+      ]
+    },
+    {
+      "n": 18,
+      "h": 12,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,15",
+        "blueQ:0,16",
+        "first:15",
+        "path:0"
+      ]
+    },
+    {
+      "n": 19,
+      "h": 2,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,16",
+        "first:14",
+        "path:16"
+      ]
+    },
+    {
+      "n": 19,
+      "h": 2,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,4",
+        "blueQ:2,15",
+        "first:13",
+        "first:4"
+      ]
+    },
+    {
+      "n": 19,
+      "h": 2,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,16",
+        "blueQ:0,17",
+        "first:16",
+        "path:0"
+      ]
+    },
+    {
+      "n": 19,
+      "h": 4,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,15",
+        "first:13",
+        "first:2"
+      ]
+    },
+    {
+      "n": 19,
+      "h": 4,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,8",
+        "blueP:4,13",
+        "blueQ:2,11",
+        "blueQ:3,12",
+        "first:8",
+        "first:9"
+      ]
+    },
+    {
+      "n": 19,
+      "h": 4,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,16",
+        "blueQ:0,17",
+        "first:16",
+        "path:0"
+      ]
+    },
+    {
+      "n": 19,
+      "h": 6,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,15",
+        "first:13",
+        "first:2"
+      ]
+    },
+    {
+      "n": 19,
+      "h": 6,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,4",
+        "blueQ:2,15",
+        "first:13",
+        "first:4"
+      ]
+    },
+    {
+      "n": 19,
+      "h": 6,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,16",
+        "blueQ:0,17",
+        "first:16",
+        "path:0"
+      ]
+    },
+    {
+      "n": 19,
+      "h": 13,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,16",
+        "first:14",
+        "path:16"
+      ]
+    },
+    {
+      "n": 19,
+      "h": 13,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,8",
+        "blueP:4,13",
+        "blueQ:2,11",
+        "blueQ:3,12",
+        "first:8",
+        "first:9"
+      ]
+    },
+    {
+      "n": 19,
+      "h": 13,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,16",
+        "blueQ:0,17",
+        "first:16",
+        "path:0"
+      ]
+    },
+    {
+      "n": 20,
+      "h": 2,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,17",
+        "first:15",
+        "path:17"
+      ]
+    },
+    {
+      "n": 20,
+      "h": 2,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,4",
+        "blueQ:2,16",
+        "first:14",
+        "first:4"
+      ]
+    },
+    {
+      "n": 20,
+      "h": 2,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,17",
+        "blueQ:0,18",
+        "first:17",
+        "path:0"
+      ]
+    },
+    {
+      "n": 20,
+      "h": 4,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,16",
+        "first:14",
+        "first:2"
+      ]
+    },
+    {
+      "n": 20,
+      "h": 4,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,8",
+        "blueP:4,14",
+        "blueQ:2,12",
+        "blueQ:3,13",
+        "first:10",
+        "first:8"
+      ]
+    },
+    {
+      "n": 20,
+      "h": 4,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,17",
+        "blueQ:0,18",
+        "first:17",
+        "path:0"
+      ]
+    },
+    {
+      "n": 20,
+      "h": 6,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,2",
+        "blueQ:0,16",
+        "first:14",
+        "first:2"
+      ]
+    },
+    {
+      "n": 20,
+      "h": 6,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,4",
+        "blueQ:2,16",
+        "first:14",
+        "first:4"
+      ]
+    },
+    {
+      "n": 20,
+      "h": 6,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,17",
+        "blueQ:0,18",
+        "first:17",
+        "path:0"
+      ]
+    },
+    {
+      "n": 20,
+      "h": 14,
+      "step": 1,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueQ:0,17",
+        "first:15",
+        "path:17"
+      ]
+    },
+    {
+      "n": 20,
+      "h": 14,
+      "step": 2,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,8",
+        "blueP:4,14",
+        "blueQ:2,12",
+        "blueQ:3,13",
+        "first:10",
+        "first:8"
+      ]
+    },
+    {
+      "n": 20,
+      "h": 14,
+      "step": 3,
+      "compatible": false,
+      "contradiction_equations": [
+        "blueP:0,17",
+        "blueQ:0,18",
+        "first:17",
+        "path:0"
+      ]
+    }
+  ]
+}

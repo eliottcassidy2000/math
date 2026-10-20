@@ -1,0 +1,575 @@
+{
+  "status": "FINITE-EXACT coverage by the explicitly tested refined local bank",
+  "universe": "All closed standard-blue (n-4,3) sources n6..9; strong mixed endpoint filter explicit",
+  "source_hashes": {
+    "refined": "1e7d073ef610b3ccdd200920961323624f0ce24f7f7582978fc9333890038edd",
+    "probe": "3821c2681aa14f3737efc39d7e6c988d91bb2652af7ef086b3bef06382bcd66a"
+  },
+  "certificate_stream_sha256": "559aa4549e6ee933f6ea7ffa0f232f2147d90ca6d2cca0e837e165306ebb7844",
+  "summaries": [
+    {
+      "n": 6,
+      "universe": 12,
+      "strong_mixed": 11,
+      "residual": 3,
+      "covered": 8,
+      "excluded_nonstrong_partner": 1,
+      "port_patterns": {
+        "closed U=2,3": {
+          "total": 2,
+          "residual": 2
+        },
+        "closed U=2,4": {
+          "total": 2,
+          "covered": 2
+        },
+        "closed U=3,4": {
+          "total": 1,
+          "covered": 1
+        },
+        "open U=2,3": {
+          "total": 2,
+          "covered": 2
+        },
+        "open U=2,4": {
+          "total": 2,
+          "covered": 2
+        },
+        "open U=3,4": {
+          "total": 2,
+          "covered": 1,
+          "residual": 1
+        }
+      }
+    },
+    {
+      "n": 7,
+      "universe": 96,
+      "strong_mixed": 96,
+      "covered": 93,
+      "residual": 3,
+      "port_patterns": {
+        "closed U=2,3": {
+          "total": 8,
+          "covered": 7,
+          "residual": 1
+        },
+        "closed U=2,4": {
+          "total": 8,
+          "covered": 8
+        },
+        "closed U=2,5": {
+          "total": 8,
+          "covered": 8
+        },
+        "closed U=3,4": {
+          "total": 8,
+          "covered": 8
+        },
+        "closed U=3,5": {
+          "total": 8,
+          "covered": 8
+        },
+        "closed U=4,5": {
+          "total": 8,
+          "covered": 7,
+          "residual": 1
+        },
+        "open U=2,3": {
+          "total": 8,
+          "covered": 8
+        },
+        "open U=2,4": {
+          "total": 8,
+          "covered": 8
+        },
+        "open U=2,5": {
+          "total": 8,
+          "covered": 8
+        },
+        "open U=3,4": {
+          "total": 8,
+          "covered": 8
+        },
+        "open U=3,5": {
+          "total": 8,
+          "covered": 7,
+          "residual": 1
+        },
+        "open U=4,5": {
+          "total": 8,
+          "covered": 8
+        }
+      }
+    },
+    {
+      "n": 8,
+      "universe": 640,
+      "strong_mixed": 640,
+      "covered": 638,
+      "residual": 2,
+      "port_patterns": {
+        "closed U=2,3": {
+          "total": 32,
+          "covered": 32
+        },
+        "closed U=2,4": {
+          "total": 32,
+          "covered": 30,
+          "residual": 2
+        },
+        "closed U=2,5": {
+          "total": 32,
+          "covered": 32
+        },
+        "closed U=2,6": {
+          "total": 32,
+          "covered": 32
+        },
+        "closed U=3,4": {
+          "total": 32,
+          "covered": 32
+        },
+        "closed U=3,5": {
+          "total": 32,
+          "covered": 32
+        },
+        "closed U=3,6": {
+          "total": 32,
+          "covered": 32
+        },
+        "closed U=4,5": {
+          "total": 32,
+          "covered": 32
+        },
+        "closed U=4,6": {
+          "total": 32,
+          "covered": 32
+        },
+        "closed U=5,6": {
+          "total": 32,
+          "covered": 32
+        },
+        "open U=2,3": {
+          "total": 32,
+          "covered": 32
+        },
+        "open U=2,4": {
+          "total": 32,
+          "covered": 32
+        },
+        "open U=2,5": {
+          "total": 32,
+          "covered": 32
+        },
+        "open U=2,6": {
+          "total": 32,
+          "covered": 32
+        },
+        "open U=3,4": {
+          "total": 32,
+          "covered": 32
+        },
+        "open U=3,5": {
+          "total": 32,
+          "covered": 32
+        },
+        "open U=3,6": {
+          "total": 32,
+          "covered": 32
+        },
+        "open U=4,5": {
+          "total": 32,
+          "covered": 32
+        },
+        "open U=4,6": {
+          "total": 32,
+          "covered": 32
+        },
+        "open U=5,6": {
+          "total": 32,
+          "covered": 32
+        }
+      }
+    },
+    {
+      "n": 9,
+      "universe": 7680,
+      "strong_mixed": 7680,
+      "covered": 7677,
+      "residual": 3,
+      "port_patterns": {
+        "closed U=2,3": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed U=2,4": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed U=2,5": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed U=2,6": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed U=2,7": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed U=3,4": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed U=3,5": {
+          "total": 256,
+          "covered": 255,
+          "residual": 1
+        },
+        "closed U=3,6": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed U=3,7": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed U=4,5": {
+          "total": 256,
+          "covered": 254,
+          "residual": 2
+        },
+        "closed U=4,6": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed U=4,7": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed U=5,6": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed U=5,7": {
+          "total": 256,
+          "covered": 256
+        },
+        "closed U=6,7": {
+          "total": 256,
+          "covered": 256
+        },
+        "open U=2,3": {
+          "total": 256,
+          "covered": 256
+        },
+        "open U=2,4": {
+          "total": 256,
+          "covered": 256
+        },
+        "open U=2,5": {
+          "total": 256,
+          "covered": 256
+        },
+        "open U=2,6": {
+          "total": 256,
+          "covered": 256
+        },
+        "open U=2,7": {
+          "total": 256,
+          "covered": 256
+        },
+        "open U=3,4": {
+          "total": 256,
+          "covered": 256
+        },
+        "open U=3,5": {
+          "total": 256,
+          "covered": 256
+        },
+        "open U=3,6": {
+          "total": 256,
+          "covered": 256
+        },
+        "open U=3,7": {
+          "total": 256,
+          "covered": 256
+        },
+        "open U=4,5": {
+          "total": 256,
+          "covered": 256
+        },
+        "open U=4,6": {
+          "total": 256,
+          "covered": 256
+        },
+        "open U=4,7": {
+          "total": 256,
+          "covered": 256
+        },
+        "open U=5,6": {
+          "total": 256,
+          "covered": 256
+        },
+        "open U=5,7": {
+          "total": 256,
+          "covered": 256
+        },
+        "open U=6,7": {
+          "total": 256,
+          "covered": 256
+        }
+      }
+    }
+  ],
+  "one_residual_per_port_pattern": [
+    {
+      "n": 6,
+      "rows": [
+        18,
+        36,
+        9,
+        19,
+        38,
+        13
+      ],
+      "partner_rows": [
+        46,
+        28,
+        56,
+        48,
+        33,
+        2
+      ],
+      "incoming": [
+        2,
+        3
+      ],
+      "outgoing": [
+        2,
+        3
+      ],
+      "kind": "closed"
+    },
+    {
+      "n": 6,
+      "rows": [
+        6,
+        28,
+        24,
+        49,
+        33,
+        7
+      ],
+      "partner_rows": [
+        58,
+        36,
+        41,
+        18,
+        38,
+        8
+      ],
+      "incoming": [
+        3,
+        4
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "kind": "open"
+    },
+    {
+      "n": 7,
+      "rows": [
+        50,
+        76,
+        73,
+        49,
+        38,
+        70,
+        25
+      ],
+      "partner_rows": [
+        78,
+        52,
+        56,
+        82,
+        97,
+        73,
+        6
+      ],
+      "incoming": [
+        2,
+        3
+      ],
+      "outgoing": [
+        3,
+        4
+      ],
+      "kind": "closed"
+    },
+    {
+      "n": 7,
+      "rows": [
+        14,
+        28,
+        56,
+        112,
+        97,
+        67,
+        7
+      ],
+      "partner_rows": [
+        114,
+        100,
+        73,
+        19,
+        38,
+        76,
+        24
+      ],
+      "incoming": [
+        4,
+        5
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "kind": "closed"
+    },
+    {
+      "n": 7,
+      "rows": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ],
+      "partner_rows": [
+        106,
+        84,
+        41,
+        82,
+        37,
+        74,
+        20
+      ],
+      "incoming": [
+        3,
+        5
+      ],
+      "outgoing": [
+        1,
+        3
+      ],
+      "kind": "open"
+    },
+    {
+      "n": 8,
+      "rows": [
+        106,
+        180,
+        201,
+        82,
+        165,
+        76,
+        146,
+        41
+      ],
+      "partner_rows": [
+        150,
+        76,
+        56,
+        177,
+        98,
+        195,
+        141,
+        22
+      ],
+      "incoming": [
+        2,
+        4
+      ],
+      "outgoing": [
+        3,
+        5
+      ],
+      "kind": "closed"
+    },
+    {
+      "n": 9,
+      "rows": [
+        206,
+        356,
+        408,
+        146,
+        99,
+        333,
+        396,
+        306,
+        25
+      ],
+      "partner_rows": [
+        306,
+        156,
+        105,
+        369,
+        420,
+        194,
+        147,
+        269,
+        102
+      ],
+      "incoming": [
+        4,
+        5
+      ],
+      "outgoing": [
+        3,
+        4
+      ],
+      "kind": "closed"
+    },
+    {
+      "n": 9,
+      "rows": [
+        214,
+        340,
+        424,
+        83,
+        420,
+        75,
+        404,
+        298,
+        41
+      ],
+      "partner_rows": [
+        298,
+        172,
+        89,
+        432,
+        99,
+        452,
+        139,
+        277,
+        86
+      ],
+      "incoming": [
+        3,
+        5
+      ],
+      "outgoing": [
+        3,
+        5
+      ],
+      "kind": "closed"
+    }
+  ]
+}

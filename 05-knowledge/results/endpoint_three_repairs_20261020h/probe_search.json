@@ -1,0 +1,2356 @@
+{
+  "status": "FINITE-EXACT bounded residual search and explicit cyclic-cut hostile",
+  "source_hashes": {
+    "current_search": "125bd73eb7dcb103af133ef8e0a9fb78d9ffd88c318edd4eae922e1d357cd4c9",
+    "current_probe": "3821c2681aa14f3737efc39d7e6c988d91bb2652af7ef086b3bef06382bcd66a",
+    "inherited_endpoint_two_search": "77b852efe30e9582988c0f96882002f6abfb031b27e5d406ab22cc24ae2ebb0c"
+  },
+  "records": [
+    {
+      "n": 6,
+      "rows": [
+        18,
+        36,
+        9,
+        19,
+        38,
+        13
+      ],
+      "incoming": [
+        2,
+        3
+      ],
+      "outgoing": [
+        2,
+        3
+      ],
+      "scope": "complete labelled three-K search",
+      "counts": {
+        "first_black_paths": 18,
+        "last_black_paths": 26,
+        "pairs_examined": 468,
+        "three_K_certificates": 8
+      },
+      "best": {
+        "words": [
+          [
+            1,
+            5,
+            3,
+            4,
+            2,
+            0
+          ],
+          [
+            5,
+            3,
+            4,
+            2,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            3,
+            4,
+            5,
+            1
+          ]
+        ],
+        "runs": [
+          [
+            [
+              1
+            ],
+            [
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              0
+            ]
+          ],
+          [
+            [
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              2,
+              1,
+              0
+            ]
+          ],
+          [
+            [
+              0
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              1
+            ]
+          ]
+        ],
+        "evaluation": {
+          "success": true,
+          "steps": [
+            {
+              "black": true,
+              "anti_failure": [
+                1,
+                4,
+                3,
+                0
+              ],
+              "endpoint_excess": -1,
+              "positional_reversal": [
+                1,
+                0,
+                5,
+                4,
+                3,
+                2
+              ]
+            },
+            {
+              "black": true,
+              "anti_failure": [
+                5,
+                2,
+                4,
+                0
+              ],
+              "endpoint_excess": -1,
+              "positional_reversal": [
+                5,
+                3,
+                4,
+                1,
+                2,
+                0
+              ]
+            },
+            {
+              "black": true,
+              "anti_failure": [
+                0,
+                3,
+                4,
+                1
+              ],
+              "endpoint_excess": -2,
+              "positional_reversal": [
+                1,
+                0,
+                5,
+                4,
+                3,
+                2
+              ]
+            }
+          ],
+          "blue_steps": []
+        },
+        "compiler": {
+          "guards": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              5,
+              1
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              2,
+              4,
+              0
+            ],
+            [
+              3,
+              4,
+              1
+            ],
+            [
+              3,
+              5,
+              0
+            ],
+            [
+              4,
+              5,
+              1
+            ]
+          ],
+          "guard_conflicts": [],
+          "odd_K_parity": true,
+          "path_XOR_is_standard": true,
+          "endpoint_charges": [
+            {
+              "score_sign": 1,
+              "score_vertices": [
+                1,
+                0
+              ],
+              "constant": -5
+            },
+            {
+              "score_sign": -1,
+              "score_vertices": [
+                5,
+                0
+              ],
+              "constant": 4
+            },
+            {
+              "score_sign": 1,
+              "score_vertices": [
+                0,
+                1
+              ],
+              "constant": -6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 6,
+      "rows": [
+        10,
+        4,
+        41,
+        18,
+        39,
+        11
+      ],
+      "incoming": [
+        2,
+        4
+      ],
+      "outgoing": [
+        1,
+        3
+      ],
+      "scope": "complete labelled three-K search",
+      "counts": {
+        "first_black_paths": 26,
+        "last_black_paths": 12,
+        "pairs_examined": 312,
+        "three_K_certificates": 4
+      },
+      "best": {
+        "words": [
+          [
+            0,
+            1,
+            2,
+            5,
+            3,
+            4
+          ],
+          [
+            2,
+            5,
+            3,
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            3,
+            0,
+            1,
+            4,
+            5
+          ]
+        ],
+        "runs": [
+          [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          [
+            [
+              2
+            ],
+            [
+              5
+            ],
+            [
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              4
+            ]
+          ],
+          [
+            [
+              2,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        ],
+        "evaluation": {
+          "success": true,
+          "steps": [
+            {
+              "black": true,
+              "anti_failure": [
+                0,
+                3,
+                1,
+                4
+              ],
+              "endpoint_excess": 1,
+              "positional_reversal": [
+                4,
+                3,
+                5,
+                1,
+                0,
+                2
+              ]
+            },
+            {
+              "black": true,
+              "anti_failure": [
+                2,
+                3,
+                0,
+                4
+              ],
+              "endpoint_excess": -3,
+              "positional_reversal": [
+                3,
+                5,
+                4,
+                0,
+                2,
+                1
+              ]
+            },
+            {
+              "black": true,
+              "anti_failure": [
+                2,
+                0,
+                1,
+                5
+              ],
+              "endpoint_excess": 2,
+              "positional_reversal": [
+                1,
+                0,
+                5,
+                4,
+                3,
+                2
+              ]
+            }
+          ],
+          "blue_steps": []
+        },
+        "compiler": {
+          "guards": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              4,
+              0
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              2,
+              5,
+              1
+            ],
+            [
+              3,
+              4,
+              1
+            ],
+            [
+              3,
+              5,
+              0
+            ],
+            [
+              4,
+              5,
+              1
+            ]
+          ],
+          "guard_conflicts": [],
+          "odd_K_parity": true,
+          "path_XOR_is_standard": true,
+          "endpoint_charges": [
+            {
+              "score_sign": 1,
+              "score_vertices": [
+                0,
+                4
+              ],
+              "constant": -5
+            },
+            {
+              "score_sign": -1,
+              "score_vertices": [
+                2,
+                4
+              ],
+              "constant": 4
+            },
+            {
+              "score_sign": 1,
+              "score_vertices": [
+                2,
+                5
+              ],
+              "constant": -4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 6,
+      "rows": [
+        18,
+        44,
+        25,
+        17,
+        34,
+        13
+      ],
+      "incoming": [
+        2,
+        3
+      ],
+      "outgoing": [
+        2,
+        3
+      ],
+      "scope": "complete labelled three-K search",
+      "counts": {
+        "first_black_paths": 32,
+        "last_black_paths": 22,
+        "pairs_examined": 704,
+        "three_K_certificates": 16
+      },
+      "best": {
+        "words": [
+          [
+            0,
+            1,
+            2,
+            4,
+            5,
+            3
+          ],
+          [
+            1,
+            2,
+            4,
+            0,
+            5,
+            3
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            0,
+            5
+          ]
+        ],
+        "runs": [
+          [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              3
+            ]
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            [
+              4
+            ],
+            [
+              0
+            ],
+            [
+              5
+            ],
+            [
+              3
+            ]
+          ],
+          [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              0
+            ],
+            [
+              5
+            ]
+          ]
+        ],
+        "evaluation": {
+          "success": true,
+          "steps": [
+            {
+              "black": true,
+              "anti_failure": [
+                0,
+                5,
+                1,
+                3
+              ],
+              "endpoint_excess": -1,
+              "positional_reversal": [
+                3,
+                5,
+                4,
+                0,
+                2,
+                1
+              ]
+            },
+            {
+              "black": true,
+              "anti_failure": [
+                1,
+                0,
+                4,
+                3
+              ],
+              "endpoint_excess": -1,
+              "positional_reversal": [
+                4,
+                3,
+                5,
+                1,
+                0,
+                2
+              ]
+            },
+            {
+              "black": true,
+              "anti_failure": [
+                1,
+                3,
+                4,
+                5
+              ],
+              "endpoint_excess": 2,
+              "positional_reversal": [
+                2,
+                5,
+                0,
+                4,
+                3,
+                1
+              ]
+            }
+          ],
+          "blue_steps": []
+        },
+        "compiler": {
+          "guards": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              4,
+              1
+            ],
+            [
+              0,
+              5,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              2,
+              4,
+              1
+            ],
+            [
+              3,
+              4,
+              1
+            ],
+            [
+              3,
+              5,
+              0
+            ],
+            [
+              4,
+              5,
+              1
+            ]
+          ],
+          "guard_conflicts": [],
+          "odd_K_parity": true,
+          "path_XOR_is_standard": true,
+          "endpoint_charges": [
+            {
+              "score_sign": 1,
+              "score_vertices": [
+                0,
+                3
+              ],
+              "constant": -5
+            },
+            {
+              "score_sign": -1,
+              "score_vertices": [
+                1,
+                3
+              ],
+              "constant": 4
+            },
+            {
+              "score_sign": 1,
+              "score_vertices": [
+                1,
+                5
+              ],
+              "constant": -4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 6,
+      "rows": [
+        10,
+        12,
+        57,
+        16,
+        35,
+        11
+      ],
+      "incoming": [
+        2,
+        4
+      ],
+      "outgoing": [
+        1,
+        3
+      ],
+      "scope": "complete labelled three-K search",
+      "counts": {
+        "first_black_paths": 26,
+        "last_black_paths": 12,
+        "pairs_examined": 312,
+        "three_K_certificates": 12
+      },
+      "best": {
+        "words": [
+          [
+            0,
+            1,
+            2,
+            5,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            5,
+            3,
+            0,
+            4
+          ],
+          [
+            1,
+            2,
+            3,
+            0,
+            4,
+            5
+          ]
+        ],
+        "runs": [
+          [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            [
+              5
+            ],
+            [
+              3
+            ],
+            [
+              0
+            ],
+            [
+              4
+            ]
+          ],
+          [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              0
+            ],
+            [
+              4,
+              5
+            ]
+          ]
+        ],
+        "evaluation": {
+          "success": true,
+          "steps": [
+            {
+              "black": true,
+              "anti_failure": [
+                0,
+                5,
+                2,
+                4
+              ],
+              "endpoint_excess": 0,
+              "positional_reversal": [
+                4,
+                3,
+                5,
+                1,
+                0,
+                2
+              ]
+            },
+            {
+              "black": true,
+              "anti_failure": [
+                1,
+                3,
+                5,
+                4
+              ],
+              "endpoint_excess": -1,
+              "positional_reversal": [
+                2,
+                4,
+                0,
+                5,
+                1,
+                3
+              ]
+            },
+            {
+              "black": true,
+              "anti_failure": [
+                1,
+                3,
+                0,
+                5
+              ],
+              "endpoint_excess": 1,
+              "positional_reversal": [
+                3,
+                5,
+                4,
+                0,
+                2,
+                1
+              ]
+            }
+          ],
+          "blue_steps": []
+        },
+        "compiler": {
+          "guards": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              2,
+              5,
+              1
+            ],
+            [
+              3,
+              4,
+              1
+            ],
+            [
+              3,
+              5,
+              0
+            ],
+            [
+              4,
+              5,
+              1
+            ]
+          ],
+          "guard_conflicts": [],
+          "odd_K_parity": true,
+          "path_XOR_is_standard": true,
+          "endpoint_charges": [
+            {
+              "score_sign": 1,
+              "score_vertices": [
+                0,
+                4
+              ],
+              "constant": -5
+            },
+            {
+              "score_sign": -1,
+              "score_vertices": [
+                1,
+                4
+              ],
+              "constant": 4
+            },
+            {
+              "score_sign": 1,
+              "score_vertices": [
+                1,
+                5
+              ],
+              "constant": -4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 6,
+      "rows": [
+        6,
+        20,
+        8,
+        51,
+        37,
+        7
+      ],
+      "incoming": [
+        3,
+        4
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "scope": "complete labelled three-K search",
+      "counts": {
+        "first_black_paths": 30,
+        "last_black_paths": 12,
+        "pairs_examined": 360,
+        "three_K_certificates": 6
+      },
+      "best": {
+        "words": [
+          [
+            0,
+            1,
+            4,
+            5,
+            2,
+            3
+          ],
+          [
+            1,
+            4,
+            5,
+            2,
+            0,
+            3
+          ],
+          [
+            1,
+            2,
+            0,
+            3,
+            4,
+            5
+          ]
+        ],
+        "runs": [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          [
+            [
+              1
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              0
+            ],
+            [
+              3
+            ]
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            [
+              0
+            ],
+            [
+              3,
+              4,
+              5
+            ]
+          ]
+        ],
+        "evaluation": {
+          "success": true,
+          "steps": [
+            {
+              "black": true,
+              "anti_failure": [
+                0,
+                2,
+                1,
+                3
+              ],
+              "endpoint_excess": 1,
+              "positional_reversal": [
+                3,
+                2,
+                1,
+                0,
+                5,
+                4
+              ]
+            },
+            {
+              "black": true,
+              "anti_failure": [
+                1,
+                2,
+                5,
+                3
+              ],
+              "endpoint_excess": -2,
+              "positional_reversal": [
+                4,
+                3,
+                5,
+                1,
+                0,
+                2
+              ]
+            },
+            {
+              "black": true,
+              "anti_failure": [
+                1,
+                4,
+                2,
+                5
+              ],
+              "endpoint_excess": 1,
+              "positional_reversal": [
+                3,
+                5,
+                4,
+                0,
+                2,
+                1
+              ]
+            }
+          ],
+          "blue_steps": []
+        },
+        "compiler": {
+          "guards": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              4,
+              1
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              2,
+              5,
+              0
+            ],
+            [
+              3,
+              4,
+              1
+            ],
+            [
+              4,
+              5,
+              1
+            ]
+          ],
+          "guard_conflicts": [],
+          "odd_K_parity": true,
+          "path_XOR_is_standard": true,
+          "endpoint_charges": [
+            {
+              "score_sign": 1,
+              "score_vertices": [
+                0,
+                3
+              ],
+              "constant": -5
+            },
+            {
+              "score_sign": -1,
+              "score_vertices": [
+                1,
+                3
+              ],
+              "constant": 4
+            },
+            {
+              "score_sign": 1,
+              "score_vertices": [
+                1,
+                5
+              ],
+              "constant": -4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 6,
+      "rows": [
+        6,
+        28,
+        24,
+        49,
+        33,
+        7
+      ],
+      "incoming": [
+        3,
+        4
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "scope": "complete labelled three-K search",
+      "counts": {
+        "first_black_paths": 18,
+        "last_black_paths": 22,
+        "pairs_examined": 396,
+        "three_K_certificates": 4
+      },
+      "best": {
+        "words": [
+          [
+            3,
+            0,
+            2,
+            4,
+            5,
+            1
+          ],
+          [
+            3,
+            2,
+            4,
+            5,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            3,
+            4,
+            5
+          ]
+        ],
+        "runs": [
+          [
+            [
+              3
+            ],
+            [
+              0
+            ],
+            [
+              2
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              1
+            ]
+          ],
+          [
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          [
+            [
+              1,
+              2
+            ],
+            [
+              0
+            ],
+            [
+              3,
+              4,
+              5
+            ]
+          ]
+        ],
+        "evaluation": {
+          "success": true,
+          "steps": [
+            {
+              "black": true,
+              "anti_failure": [
+                3,
+                4,
+                2,
+                1
+              ],
+              "endpoint_excess": 1,
+              "positional_reversal": [
+                5,
+                3,
+                4,
+                1,
+                2,
+                0
+              ]
+            },
+            {
+              "black": true,
+              "anti_failure": [
+                3,
+                1,
+                2,
+                0
+              ],
+              "endpoint_excess": 1,
+              "positional_reversal": [
+                3,
+                2,
+                1,
+                0,
+                5,
+                4
+              ]
+            },
+            {
+              "black": true,
+              "anti_failure": [
+                1,
+                3,
+                0,
+                5
+              ],
+              "endpoint_excess": 2,
+              "positional_reversal": [
+                3,
+                5,
+                4,
+                0,
+                2,
+                1
+              ]
+            }
+          ],
+          "blue_steps": []
+        },
+        "compiler": {
+          "guards": [
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              3,
+              0
+            ],
+            [
+              1,
+              2,
+              1
+            ],
+            [
+              1,
+              5,
+              0
+            ],
+            [
+              2,
+              3,
+              1
+            ],
+            [
+              2,
+              4,
+              1
+            ],
+            [
+              3,
+              4,
+              1
+            ],
+            [
+              4,
+              5,
+              1
+            ]
+          ],
+          "guard_conflicts": [],
+          "odd_K_parity": true,
+          "path_XOR_is_standard": true,
+          "endpoint_charges": [
+            {
+              "score_sign": 1,
+              "score_vertices": [
+                3,
+                1
+              ],
+              "constant": -5
+            },
+            {
+              "score_sign": -1,
+              "score_vertices": [
+                3,
+                0
+              ],
+              "constant": 6
+            },
+            {
+              "score_sign": 1,
+              "score_vertices": [
+                1,
+                5
+              ],
+              "constant": -4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 7,
+      "rows": [
+        26,
+        4,
+        73,
+        82,
+        38,
+        79,
+        19
+      ],
+      "partner_rows": [
+        102,
+        124,
+        56,
+        49,
+        97,
+        64,
+        12
+      ],
+      "incoming": [
+        2,
+        5
+      ],
+      "outgoing": [
+        1,
+        4
+      ],
+      "profile": "closed overlap=0 Unear=1001",
+      "scope": "prefix search stopped at first certificate",
+      "first_black_paths": 78,
+      "last_black_paths": 68,
+      "pairs_examined": 11,
+      "words": [
+        [
+          0,
+          1,
+          2,
+          3,
+          6,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          6,
+          4,
+          0,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          0,
+          5,
+          6
+        ]
+      ],
+      "evaluation": {
+        "success": true,
+        "steps": [
+          {
+            "black": true,
+            "anti_failure": [
+              0,
+              3,
+              3,
+              5
+            ],
+            "endpoint_excess": 2,
+            "positional_reversal": [
+              5,
+              4,
+              6,
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "black": true,
+            "anti_failure": [
+              1,
+              0,
+              2,
+              5
+            ],
+            "endpoint_excess": -1,
+            "positional_reversal": [
+              2,
+              5,
+              0,
+              4,
+              3,
+              1,
+              6
+            ]
+          },
+          {
+            "black": true,
+            "anti_failure": [
+              1,
+              5,
+              2,
+              6
+            ],
+            "endpoint_excess": -1,
+            "positional_reversal": [
+              3,
+              6,
+              5,
+              0,
+              4,
+              2,
+              1
+            ]
+          }
+        ],
+        "blue_steps": []
+      }
+    },
+    {
+      "n": 7,
+      "rows": [
+        50,
+        76,
+        73,
+        49,
+        38,
+        70,
+        25
+      ],
+      "partner_rows": [
+        78,
+        52,
+        56,
+        82,
+        97,
+        73,
+        6
+      ],
+      "incoming": [
+        2,
+        3
+      ],
+      "outgoing": [
+        3,
+        4
+      ],
+      "profile": "closed overlap=1 Unear=1100",
+      "scope": "prefix search stopped at first certificate",
+      "first_black_paths": 112,
+      "last_black_paths": 144,
+      "pairs_examined": 30,
+      "words": [
+        [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          0,
+          6,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          0,
+          6
+        ]
+      ],
+      "evaluation": {
+        "success": true,
+        "steps": [
+          {
+            "black": true,
+            "anti_failure": [
+              0,
+              3,
+              3,
+              4
+            ],
+            "endpoint_excess": 0,
+            "positional_reversal": [
+              4,
+              6,
+              5,
+              3,
+              0,
+              2,
+              1
+            ]
+          },
+          {
+            "black": true,
+            "anti_failure": [
+              1,
+              6,
+              2,
+              4
+            ],
+            "endpoint_excess": -1,
+            "positional_reversal": [
+              3,
+              4,
+              6,
+              0,
+              1,
+              5,
+              2
+            ]
+          },
+          {
+            "black": true,
+            "anti_failure": [
+              1,
+              3,
+              5,
+              6
+            ],
+            "endpoint_excess": 1,
+            "positional_reversal": [
+              2,
+              6,
+              0,
+              5,
+              4,
+              3,
+              1
+            ]
+          }
+        ],
+        "blue_steps": []
+      }
+    },
+    {
+      "n": 7,
+      "rows": [
+        22,
+        20,
+        104,
+        19,
+        100,
+        75,
+        11
+      ],
+      "partner_rows": [
+        106,
+        108,
+        25,
+        112,
+        35,
+        68,
+        20
+      ],
+      "incoming": [
+        3,
+        5
+      ],
+      "outgoing": [
+        1,
+        3
+      ],
+      "profile": "closed overlap=1 Unear=0101",
+      "scope": "prefix search stopped at first certificate",
+      "first_black_paths": 142,
+      "last_black_paths": 116,
+      "pairs_examined": 25,
+      "words": [
+        [
+          0,
+          1,
+          2,
+          5,
+          3,
+          4,
+          6
+        ],
+        [
+          0,
+          6,
+          5,
+          4,
+          1,
+          3,
+          2
+        ],
+        [
+          0,
+          6,
+          4,
+          1,
+          3,
+          5,
+          2
+        ]
+      ],
+      "evaluation": {
+        "success": true,
+        "steps": [
+          {
+            "black": true,
+            "anti_failure": [
+              0,
+              2,
+              3,
+              6
+            ],
+            "endpoint_excess": 0,
+            "positional_reversal": [
+              6,
+              4,
+              3,
+              2,
+              1,
+              5,
+              0
+            ]
+          },
+          {
+            "black": true,
+            "anti_failure": [
+              0,
+              1,
+              5,
+              2
+            ],
+            "endpoint_excess": 1,
+            "positional_reversal": [
+              2,
+              5,
+              0,
+              6,
+              4,
+              1,
+              3
+            ]
+          },
+          {
+            "black": true,
+            "anti_failure": [
+              0,
+              3,
+              4,
+              2
+            ],
+            "endpoint_excess": -1,
+            "positional_reversal": [
+              2,
+              1,
+              0,
+              4,
+              3,
+              6,
+              5
+            ]
+          }
+        ],
+        "blue_steps": []
+      }
+    },
+    {
+      "n": 7,
+      "rows": [
+        14,
+        4,
+        24,
+        82,
+        99,
+        79,
+        7
+      ],
+      "partner_rows": [
+        114,
+        124,
+        105,
+        49,
+        36,
+        64,
+        24
+      ],
+      "incoming": [
+        4,
+        5
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "profile": "closed overlap=0 Unear=0011",
+      "scope": "prefix search stopped at first certificate",
+      "first_black_paths": 62,
+      "last_black_paths": 64,
+      "pairs_examined": 8,
+      "words": [
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          3,
+          6
+        ],
+        [
+          0,
+          1,
+          4,
+          3,
+          2,
+          6,
+          5
+        ],
+        [
+          0,
+          1,
+          4,
+          2,
+          6,
+          3,
+          5
+        ]
+      ],
+      "evaluation": {
+        "success": true,
+        "steps": [
+          {
+            "black": true,
+            "anti_failure": [
+              0,
+              4,
+              4,
+              6
+            ],
+            "endpoint_excess": 0,
+            "positional_reversal": [
+              6,
+              3,
+              5,
+              1,
+              4,
+              2,
+              0
+            ]
+          },
+          {
+            "black": true,
+            "anti_failure": [
+              0,
+              2,
+              4,
+              5
+            ],
+            "endpoint_excess": -1,
+            "positional_reversal": [
+              5,
+              6,
+              4,
+              3,
+              2,
+              0,
+              1
+            ]
+          },
+          {
+            "black": true,
+            "anti_failure": [
+              0,
+              4,
+              6,
+              5
+            ],
+            "endpoint_excess": 1,
+            "positional_reversal": [
+              5,
+              3,
+              2,
+              1,
+              6,
+              0,
+              4
+            ]
+          }
+        ],
+        "blue_steps": []
+      }
+    },
+    {
+      "n": 7,
+      "rows": [
+        14,
+        36,
+        24,
+        82,
+        99,
+        77,
+        7
+      ],
+      "partner_rows": [
+        114,
+        92,
+        105,
+        49,
+        36,
+        66,
+        24
+      ],
+      "incoming": [
+        4,
+        5
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "profile": "open overlap=0 Unear=0011",
+      "scope": "prefix search stopped at first certificate",
+      "first_black_paths": 138,
+      "last_black_paths": 122,
+      "pairs_examined": 8,
+      "words": [
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          3,
+          6
+        ],
+        [
+          0,
+          1,
+          4,
+          3,
+          2,
+          6,
+          5
+        ],
+        [
+          0,
+          1,
+          4,
+          2,
+          6,
+          3,
+          5
+        ]
+      ],
+      "evaluation": {
+        "success": true,
+        "steps": [
+          {
+            "black": true,
+            "anti_failure": [
+              0,
+              4,
+              4,
+              6
+            ],
+            "endpoint_excess": 0,
+            "positional_reversal": [
+              6,
+              3,
+              5,
+              1,
+              4,
+              2,
+              0
+            ]
+          },
+          {
+            "black": true,
+            "anti_failure": [
+              0,
+              2,
+              4,
+              5
+            ],
+            "endpoint_excess": 0,
+            "positional_reversal": [
+              5,
+              6,
+              4,
+              3,
+              2,
+              0,
+              1
+            ]
+          },
+          {
+            "black": true,
+            "anti_failure": [
+              0,
+              4,
+              6,
+              5
+            ],
+            "endpoint_excess": 0,
+            "positional_reversal": [
+              5,
+              3,
+              2,
+              1,
+              6,
+              0,
+              4
+            ]
+          }
+        ],
+        "blue_steps": []
+      }
+    },
+    {
+      "n": 7,
+      "rows": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ],
+      "partner_rows": [
+        106,
+        84,
+        41,
+        82,
+        37,
+        74,
+        20
+      ],
+      "incoming": [
+        3,
+        5
+      ],
+      "outgoing": [
+        1,
+        3
+      ],
+      "profile": "open overlap=1 Unear=0101",
+      "scope": "prefix search stopped at first certificate",
+      "first_black_paths": 126,
+      "last_black_paths": 142,
+      "pairs_examined": 34,
+      "words": [
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          3
+        ],
+        [
+          1,
+          2,
+          4,
+          0,
+          5,
+          6,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          0,
+          5,
+          6
+        ]
+      ],
+      "evaluation": {
+        "success": true,
+        "steps": [
+          {
+            "black": true,
+            "anti_failure": [
+              0,
+              2,
+              5,
+              3
+            ],
+            "endpoint_excess": 0,
+            "positional_reversal": [
+              3,
+              6,
+              5,
+              0,
+              4,
+              2,
+              1
+            ]
+          },
+          {
+            "black": true,
+            "anti_failure": [
+              1,
+              0,
+              0,
+              3
+            ],
+            "endpoint_excess": -1,
+            "positional_reversal": [
+              0,
+              3,
+              6,
+              1,
+              5,
+              4,
+              2
+            ]
+          },
+          {
+            "black": true,
+            "anti_failure": [
+              1,
+              3,
+              0,
+              6
+            ],
+            "endpoint_excess": 1,
+            "positional_reversal": [
+              3,
+              6,
+              5,
+              0,
+              4,
+              2,
+              1
+            ]
+          }
+        ],
+        "blue_steps": []
+      }
+    }
+  ],
+  "cyclic_cut_hostile": {
+    "n": 10,
+    "rows": [
+      190,
+      44,
+      760,
+      176,
+      994,
+      704,
+      907,
+      770,
+      559,
+      11
+    ],
+    "incoming": [
+      6,
+      8
+    ],
+    "outgoing": [
+      1,
+      3
+    ],
+    "cyclic_cut": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      0
+    ],
+    "cyclic_cut_is_blue": true,
+    "scope": "prefix search stopped at first certificate",
+    "first_black_paths": 7640,
+    "last_black_paths": 9018,
+    "pairs_examined": 6,
+    "words": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        5,
+        9
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        8,
+        5,
+        9,
+        4,
+        6,
+        7
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "evaluation": {
+      "success": true,
+      "steps": [
+        {
+          "black": true,
+          "anti_failure": [
+            0,
+            6,
+            4,
+            9
+          ],
+          "endpoint_excess": 0,
+          "positional_reversal": [
+            9,
+            5,
+            8,
+            7,
+            6,
+            1,
+            4,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "black": true,
+          "anti_failure": [
+            0,
+            3,
+            9,
+            7
+          ],
+          "endpoint_excess": 1,
+          "positional_reversal": [
+            7,
+            6,
+            4,
+            9,
+            2,
+            8,
+            1,
+            0,
+            5,
+            3
+          ]
+        },
+        {
+          "black": true,
+          "anti_failure": [
+            0,
+            9,
+            8,
+            7
+          ],
+          "endpoint_excess": -1,
+          "positional_reversal": [
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0,
+            9,
+            8
+          ]
+        }
+      ],
+      "blue_steps": []
+    }
+  }
+}

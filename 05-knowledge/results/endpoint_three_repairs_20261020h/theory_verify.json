@@ -1,0 +1,558 @@
+{
+  "status": "FINITE-EXACT independent literal controls, separate from the symbolic proof",
+  "universe": "All standard-blue endpoint-(n-4,3) presentations n6..9; no strong-partner or mixedness filters; proof guards applied only before ledger replay",
+  "complete_small_counts": {
+    "6": 12,
+    "7": 96,
+    "8": 640,
+    "9": 7680
+  },
+  "larger_deterministic_generated_sources": {
+    "11": 360,
+    "12": 372,
+    "13": 384,
+    "14": 396,
+    "15": 408,
+    "16": 420,
+    "19": 456,
+    "20": 468,
+    "25": 528,
+    "32": 612,
+    "41": 720,
+    "60": 948
+  },
+  "ledger_counts": [
+    {
+      "n": 6,
+      "branch": "epsilon0",
+      "outcome": "blue",
+      "count": 1
+    },
+    {
+      "n": 6,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 2
+    },
+    {
+      "n": 7,
+      "branch": "epsilon0",
+      "outcome": "all_black",
+      "count": 11
+    },
+    {
+      "n": 7,
+      "branch": "epsilon0",
+      "outcome": "blue",
+      "count": 1
+    },
+    {
+      "n": 7,
+      "branch": "epsilon1",
+      "outcome": "all_black",
+      "count": 3
+    },
+    {
+      "n": 7,
+      "branch": "epsilon1",
+      "outcome": "blue",
+      "count": 1
+    },
+    {
+      "n": 7,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 16
+    },
+    {
+      "n": 7,
+      "branch": "second_port",
+      "outcome": "all_black",
+      "count": 4
+    },
+    {
+      "n": 8,
+      "branch": "epsilon0",
+      "outcome": "all_black",
+      "count": 96
+    },
+    {
+      "n": 8,
+      "branch": "epsilon1",
+      "outcome": "all_black",
+      "count": 48
+    },
+    {
+      "n": 8,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 96
+    },
+    {
+      "n": 8,
+      "branch": "second_port",
+      "outcome": "all_black",
+      "count": 30
+    },
+    {
+      "n": 8,
+      "branch": "second_port",
+      "outcome": "blue",
+      "count": 2
+    },
+    {
+      "n": 8,
+      "branch": "two_second_ports",
+      "outcome": "all_black",
+      "count": 16
+    },
+    {
+      "n": 9,
+      "branch": "epsilon0",
+      "outcome": "all_black",
+      "count": 1279
+    },
+    {
+      "n": 9,
+      "branch": "epsilon0",
+      "outcome": "blue",
+      "count": 1
+    },
+    {
+      "n": 9,
+      "branch": "epsilon1",
+      "outcome": "all_black",
+      "count": 765
+    },
+    {
+      "n": 9,
+      "branch": "epsilon1",
+      "outcome": "blue",
+      "count": 3
+    },
+    {
+      "n": 9,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 1024
+    },
+    {
+      "n": 9,
+      "branch": "second_port",
+      "outcome": "all_black",
+      "count": 384
+    },
+    {
+      "n": 9,
+      "branch": "two_second_ports",
+      "outcome": "all_black",
+      "count": 128
+    },
+    {
+      "n": 11,
+      "branch": "epsilon0",
+      "outcome": "all_black",
+      "count": 65
+    },
+    {
+      "n": 11,
+      "branch": "epsilon1",
+      "outcome": "all_black",
+      "count": 49
+    },
+    {
+      "n": 11,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 33
+    },
+    {
+      "n": 11,
+      "branch": "second_port",
+      "outcome": "all_black",
+      "count": 22
+    },
+    {
+      "n": 11,
+      "branch": "two_second_ports",
+      "outcome": "all_black",
+      "count": 8
+    },
+    {
+      "n": 12,
+      "branch": "epsilon0",
+      "outcome": "all_black",
+      "count": 59
+    },
+    {
+      "n": 12,
+      "branch": "epsilon1",
+      "outcome": "all_black",
+      "count": 50
+    },
+    {
+      "n": 12,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 47
+    },
+    {
+      "n": 12,
+      "branch": "second_port",
+      "outcome": "all_black",
+      "count": 23
+    },
+    {
+      "n": 12,
+      "branch": "two_second_ports",
+      "outcome": "all_black",
+      "count": 6
+    },
+    {
+      "n": 13,
+      "branch": "epsilon0",
+      "outcome": "all_black",
+      "count": 76
+    },
+    {
+      "n": 13,
+      "branch": "epsilon1",
+      "outcome": "all_black",
+      "count": 52
+    },
+    {
+      "n": 13,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 50
+    },
+    {
+      "n": 13,
+      "branch": "second_port",
+      "outcome": "all_black",
+      "count": 25
+    },
+    {
+      "n": 13,
+      "branch": "two_second_ports",
+      "outcome": "all_black",
+      "count": 2
+    },
+    {
+      "n": 14,
+      "branch": "epsilon0",
+      "outcome": "all_black",
+      "count": 70
+    },
+    {
+      "n": 14,
+      "branch": "epsilon1",
+      "outcome": "all_black",
+      "count": 35
+    },
+    {
+      "n": 14,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 54
+    },
+    {
+      "n": 14,
+      "branch": "second_port",
+      "outcome": "all_black",
+      "count": 31
+    },
+    {
+      "n": 14,
+      "branch": "two_second_ports",
+      "outcome": "all_black",
+      "count": 3
+    },
+    {
+      "n": 15,
+      "branch": "epsilon0",
+      "outcome": "all_black",
+      "count": 72
+    },
+    {
+      "n": 15,
+      "branch": "epsilon1",
+      "outcome": "all_black",
+      "count": 37
+    },
+    {
+      "n": 15,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 59
+    },
+    {
+      "n": 15,
+      "branch": "second_port",
+      "outcome": "all_black",
+      "count": 32
+    },
+    {
+      "n": 15,
+      "branch": "two_second_ports",
+      "outcome": "all_black",
+      "count": 12
+    },
+    {
+      "n": 16,
+      "branch": "epsilon0",
+      "outcome": "all_black",
+      "count": 80
+    },
+    {
+      "n": 16,
+      "branch": "epsilon1",
+      "outcome": "all_black",
+      "count": 36
+    },
+    {
+      "n": 16,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 65
+    },
+    {
+      "n": 16,
+      "branch": "second_port",
+      "outcome": "all_black",
+      "count": 25
+    },
+    {
+      "n": 16,
+      "branch": "two_second_ports",
+      "outcome": "all_black",
+      "count": 4
+    },
+    {
+      "n": 19,
+      "branch": "epsilon0",
+      "outcome": "all_black",
+      "count": 71
+    },
+    {
+      "n": 19,
+      "branch": "epsilon1",
+      "outcome": "all_black",
+      "count": 22
+    },
+    {
+      "n": 19,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 86
+    },
+    {
+      "n": 19,
+      "branch": "second_port",
+      "outcome": "all_black",
+      "count": 47
+    },
+    {
+      "n": 19,
+      "branch": "two_second_ports",
+      "outcome": "all_black",
+      "count": 12
+    },
+    {
+      "n": 20,
+      "branch": "epsilon0",
+      "outcome": "all_black",
+      "count": 77
+    },
+    {
+      "n": 20,
+      "branch": "epsilon1",
+      "outcome": "all_black",
+      "count": 24
+    },
+    {
+      "n": 20,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 89
+    },
+    {
+      "n": 20,
+      "branch": "second_port",
+      "outcome": "all_black",
+      "count": 41
+    },
+    {
+      "n": 20,
+      "branch": "two_second_ports",
+      "outcome": "all_black",
+      "count": 5
+    },
+    {
+      "n": 25,
+      "branch": "epsilon0",
+      "outcome": "all_black",
+      "count": 81
+    },
+    {
+      "n": 25,
+      "branch": "epsilon1",
+      "outcome": "all_black",
+      "count": 6
+    },
+    {
+      "n": 25,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 123
+    },
+    {
+      "n": 25,
+      "branch": "second_port",
+      "outcome": "all_black",
+      "count": 59
+    },
+    {
+      "n": 25,
+      "branch": "two_second_ports",
+      "outcome": "all_black",
+      "count": 6
+    },
+    {
+      "n": 32,
+      "branch": "epsilon0",
+      "outcome": "all_black",
+      "count": 69
+    },
+    {
+      "n": 32,
+      "branch": "epsilon1",
+      "outcome": "all_black",
+      "count": 8
+    },
+    {
+      "n": 32,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 161
+    },
+    {
+      "n": 32,
+      "branch": "second_port",
+      "outcome": "all_black",
+      "count": 65
+    },
+    {
+      "n": 32,
+      "branch": "two_second_ports",
+      "outcome": "all_black",
+      "count": 4
+    },
+    {
+      "n": 41,
+      "branch": "epsilon0",
+      "outcome": "all_black",
+      "count": 97
+    },
+    {
+      "n": 41,
+      "branch": "epsilon1",
+      "outcome": "all_black",
+      "count": 2
+    },
+    {
+      "n": 41,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 231
+    },
+    {
+      "n": 41,
+      "branch": "second_port",
+      "outcome": "all_black",
+      "count": 50
+    },
+    {
+      "n": 41,
+      "branch": "two_second_ports",
+      "outcome": "all_black",
+      "count": 7
+    },
+    {
+      "n": 60,
+      "branch": "epsilon0",
+      "outcome": "all_black",
+      "count": 86
+    },
+    {
+      "n": 60,
+      "branch": "epsilon1",
+      "outcome": "all_black",
+      "count": 4
+    },
+    {
+      "n": 60,
+      "branch": "movable_last_cut",
+      "outcome": "all_black",
+      "count": 349
+    },
+    {
+      "n": 60,
+      "branch": "second_port",
+      "outcome": "all_black",
+      "count": 53
+    },
+    {
+      "n": 60,
+      "branch": "two_second_ports",
+      "outcome": "all_black",
+      "count": 3
+    }
+  ],
+  "permutation_orders_checked": [
+    8,
+    200
+  ],
+  "degree_free_corollary_complete_controls": [
+    {
+      "n": 6,
+      "all_standard_blue_presentations": 64,
+      "qualifying_sources": 2,
+      "last_degree_counts": {
+        "3": 2
+      }
+    },
+    {
+      "n": 7,
+      "all_standard_blue_presentations": 512,
+      "qualifying_sources": 24,
+      "last_degree_counts": {
+        "4": 8,
+        "3": 16
+      }
+    },
+    {
+      "n": 8,
+      "all_standard_blue_presentations": 4096,
+      "qualifying_sources": 224,
+      "last_degree_counts": {
+        "5": 32,
+        "4": 96,
+        "3": 96
+      }
+    },
+    {
+      "n": 9,
+      "all_standard_blue_presentations": 65536,
+      "qualifying_sources": 3840,
+      "last_degree_counts": {
+        "6": 256,
+        "5": 1024,
+        "4": 1536,
+        "3": 1024
+      }
+    }
+  ],
+  "source_sha256": "65050ac636ce227205372cb96a051a1f6f832186d83068cd0e195c86c6191c20",
+  "reproduce": "python 05-knowledge/results/endpoint_three_repairs_20261020h/theory_verify.py; repeat with python -O"
+}

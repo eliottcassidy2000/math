@@ -1,0 +1,1124 @@
+{
+  "status": "FINITE-EXACT: every retained marked source at n6..9 has a literal three-black K detour",
+  "scope": "Strong mixed endpoint filter; one n6 pure nonstrong partner excluded. No order-ten census.",
+  "source_hashes": {
+    "probe_complete.py": "53c124c25203bf9e5a6938672ed7f8db9d6c4812f4e0eb3a72ab1fb41587d7f4",
+    "probe.py": "3821c2681aa14f3737efc39d7e6c988d91bb2652af7ef086b3bef06382bcd66a",
+    "probe_refined.py": "1e7d073ef610b3ccdd200920961323624f0ce24f7f7582978fc9333890038edd",
+    "probe_search.py": "125bd73eb7dcb103af133ef8e0a9fb78d9ffd88c318edd4eae922e1d357cd4c9",
+    "inherited_endpoint_two_kernel": "7dc74795c028018145e60b51552ef9c5cd34845004ac20ccae6dc24892555bf7",
+    "inherited_endpoint_two_search": "77b852efe30e9582988c0f96882002f6abfb031b27e5d406ab22cc24ae2ebb0c"
+  },
+  "certificate_stream_sha256": "407d801eae9f57401696096bb93a5d555ff599db9845365df1fce808ca4ac00c",
+  "summaries": [
+    {
+      "n": 6,
+      "universe": 12,
+      "retained": 11,
+      "finite_certified": 3,
+      "bank_covered": 8,
+      "excluded_nonstrong_partner": 1
+    },
+    {
+      "n": 7,
+      "universe": 96,
+      "retained": 96,
+      "bank_covered": 93,
+      "finite_certified": 3
+    },
+    {
+      "n": 8,
+      "universe": 640,
+      "retained": 640,
+      "bank_covered": 638,
+      "finite_certified": 2
+    },
+    {
+      "n": 9,
+      "universe": 7680,
+      "retained": 7680,
+      "bank_covered": 7677,
+      "finite_certified": 3
+    }
+  ],
+  "finite_residual_certificates": [
+    {
+      "n": 6,
+      "rows": [
+        18,
+        36,
+        9,
+        19,
+        38,
+        13
+      ],
+      "partner_rows": [
+        46,
+        28,
+        56,
+        48,
+        33,
+        2
+      ],
+      "incoming": [
+        2,
+        3
+      ],
+      "outgoing": [
+        2,
+        3
+      ],
+      "words": [
+        [
+          0,
+          1,
+          5,
+          3,
+          4,
+          2
+        ],
+        [
+          1,
+          5,
+          4,
+          0,
+          3,
+          2
+        ],
+        [
+          1,
+          2,
+          4,
+          0,
+          3,
+          5
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          3,
+          0,
+          2,
+          5
+        ],
+        [
+          0,
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          0,
+          4,
+          5
+        ]
+      ],
+      "endpoint_excesses": [
+        -1,
+        0,
+        1
+      ],
+      "search_scope": "prefix search stopped at first certificate",
+      "pairs_examined": 9
+    },
+    {
+      "n": 6,
+      "rows": [
+        18,
+        44,
+        25,
+        17,
+        34,
+        13
+      ],
+      "partner_rows": [
+        46,
+        20,
+        40,
+        50,
+        37,
+        2
+      ],
+      "incoming": [
+        2,
+        3
+      ],
+      "outgoing": [
+        2,
+        3
+      ],
+      "words": [
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          3
+        ],
+        [
+          1,
+          2,
+          4,
+          0,
+          5,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          0,
+          5
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          1,
+          3,
+          0,
+          5
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          0,
+          2,
+          5
+        ]
+      ],
+      "endpoint_excesses": [
+        -1,
+        -1,
+        2
+      ],
+      "search_scope": "prefix search stopped at first certificate",
+      "pairs_examined": 10
+    },
+    {
+      "n": 6,
+      "rows": [
+        6,
+        28,
+        24,
+        49,
+        33,
+        7
+      ],
+      "partner_rows": [
+        58,
+        36,
+        41,
+        18,
+        38,
+        8
+      ],
+      "incoming": [
+        3,
+        4
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "words": [
+        [
+          0,
+          2,
+          3,
+          5,
+          1,
+          4
+        ],
+        [
+          2,
+          1,
+          0,
+          3,
+          5,
+          4
+        ],
+        [
+          2,
+          0,
+          3,
+          4,
+          1,
+          5
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          3,
+          4,
+          0,
+          5
+        ],
+        [
+          0,
+          5,
+          1,
+          3
+        ],
+        [
+          2,
+          1,
+          0,
+          5
+        ]
+      ],
+      "endpoint_excesses": [
+        -1,
+        0,
+        1
+      ],
+      "search_scope": "prefix search stopped at first certificate",
+      "pairs_examined": 55
+    },
+    {
+      "n": 7,
+      "rows": [
+        50,
+        76,
+        73,
+        49,
+        38,
+        70,
+        25
+      ],
+      "partner_rows": [
+        78,
+        52,
+        56,
+        82,
+        97,
+        73,
+        6
+      ],
+      "incoming": [
+        2,
+        3
+      ],
+      "outgoing": [
+        3,
+        4
+      ],
+      "words": [
+        [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          0,
+          6,
+          4
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          0,
+          6
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          0,
+          5,
+          2,
+          4
+        ],
+        [
+          0,
+          2,
+          6,
+          3
+        ],
+        [
+          1,
+          3,
+          5,
+          6
+        ]
+      ],
+      "endpoint_excesses": [
+        0,
+        -1,
+        1
+      ],
+      "search_scope": "prefix search stopped at first certificate",
+      "pairs_examined": 30
+    },
+    {
+      "n": 7,
+      "rows": [
+        14,
+        28,
+        56,
+        112,
+        97,
+        67,
+        7
+      ],
+      "partner_rows": [
+        114,
+        100,
+        73,
+        19,
+        38,
+        76,
+        24
+      ],
+      "incoming": [
+        4,
+        5
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "words": [
+        [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          2
+        ],
+        [
+          1,
+          3,
+          0,
+          4,
+          5,
+          6,
+          2
+        ],
+        [
+          1,
+          2,
+          3,
+          0,
+          4,
+          5,
+          6
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          0,
+          3,
+          5,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          0,
+          0,
+          6
+        ]
+      ],
+      "endpoint_excesses": [
+        0,
+        -1,
+        1
+      ],
+      "search_scope": "prefix search stopped at first certificate",
+      "pairs_examined": 32
+    },
+    {
+      "n": 7,
+      "rows": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ],
+      "partner_rows": [
+        106,
+        84,
+        41,
+        82,
+        37,
+        74,
+        20
+      ],
+      "incoming": [
+        3,
+        5
+      ],
+      "outgoing": [
+        1,
+        3
+      ],
+      "words": [
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          3
+        ],
+        [
+          1,
+          2,
+          4,
+          0,
+          5,
+          6,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          0,
+          5,
+          6
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          0,
+          2,
+          5,
+          3
+        ],
+        [
+          0,
+          1,
+          3,
+          0
+        ],
+        [
+          0,
+          2,
+          5,
+          3
+        ]
+      ],
+      "endpoint_excesses": [
+        0,
+        -1,
+        1
+      ],
+      "search_scope": "prefix search stopped at first certificate",
+      "pairs_examined": 34
+    },
+    {
+      "n": 8,
+      "rows": [
+        106,
+        180,
+        201,
+        82,
+        165,
+        76,
+        146,
+        41
+      ],
+      "partner_rows": [
+        150,
+        76,
+        56,
+        177,
+        98,
+        195,
+        141,
+        22
+      ],
+      "incoming": [
+        2,
+        4
+      ],
+      "outgoing": [
+        3,
+        5
+      ],
+      "words": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          3,
+          0,
+          4,
+          7,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          3,
+          0,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          0,
+          3,
+          4,
+          6
+        ],
+        [
+          0,
+          1,
+          6,
+          4
+        ],
+        [
+          0,
+          5,
+          3,
+          4
+        ]
+      ],
+      "endpoint_excesses": [
+        0,
+        -1,
+        1
+      ],
+      "search_scope": "prefix search stopped at first certificate",
+      "pairs_examined": 82
+    },
+    {
+      "n": 8,
+      "rows": [
+        106,
+        188,
+        233,
+        80,
+        229,
+        72,
+        130,
+        41
+      ],
+      "partner_rows": [
+        150,
+        68,
+        24,
+        179,
+        34,
+        199,
+        157,
+        22
+      ],
+      "incoming": [
+        2,
+        4
+      ],
+      "outgoing": [
+        3,
+        5
+      ],
+      "words": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          0,
+          4,
+          6,
+          7,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          0,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          1,
+          4,
+          3,
+          7
+        ],
+        [
+          3,
+          1,
+          5,
+          6
+        ],
+        [
+          0,
+          5,
+          3,
+          4
+        ]
+      ],
+      "endpoint_excesses": [
+        -1,
+        -1,
+        2
+      ],
+      "search_scope": "prefix search stopped at first certificate",
+      "pairs_examined": 55
+    },
+    {
+      "n": 9,
+      "rows": [
+        206,
+        356,
+        408,
+        146,
+        99,
+        333,
+        396,
+        306,
+        25
+      ],
+      "partner_rows": [
+        306,
+        156,
+        105,
+        369,
+        420,
+        194,
+        147,
+        269,
+        102
+      ],
+      "incoming": [
+        4,
+        5
+      ],
+      "outgoing": [
+        3,
+        4
+      ],
+      "words": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          5,
+          8
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          6,
+          5,
+          4,
+          8,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          6,
+          4,
+          8,
+          5,
+          7
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          0,
+          6,
+          3,
+          8
+        ],
+        [
+          0,
+          4,
+          2,
+          7
+        ],
+        [
+          0,
+          3,
+          4,
+          7
+        ]
+      ],
+      "endpoint_excesses": [
+        0,
+        0,
+        0
+      ],
+      "search_scope": "prefix search stopped at first certificate",
+      "pairs_examined": 8
+    },
+    {
+      "n": 9,
+      "rows": [
+        214,
+        340,
+        424,
+        83,
+        420,
+        75,
+        404,
+        298,
+        41
+      ],
+      "partner_rows": [
+        298,
+        172,
+        89,
+        432,
+        99,
+        452,
+        139,
+        277,
+        86
+      ],
+      "incoming": [
+        3,
+        5
+      ],
+      "outgoing": [
+        3,
+        5
+      ],
+      "words": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7,
+          5,
+          6,
+          8
+        ],
+        [
+          0,
+          1,
+          3,
+          4,
+          7,
+          5,
+          2,
+          6,
+          8
+        ],
+        [
+          0,
+          1,
+          3,
+          4,
+          5,
+          2,
+          6,
+          7,
+          8
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          0,
+          2,
+          5,
+          8
+        ],
+        [
+          0,
+          3,
+          2,
+          8
+        ],
+        [
+          0,
+          6,
+          3,
+          8
+        ]
+      ],
+      "endpoint_excesses": [
+        0,
+        0,
+        0
+      ],
+      "search_scope": "prefix search stopped at first certificate",
+      "pairs_examined": 19
+    },
+    {
+      "n": 9,
+      "rows": [
+        206,
+        308,
+        360,
+        210,
+        165,
+        329,
+        402,
+        294,
+        25
+      ],
+      "partner_rows": [
+        306,
+        204,
+        153,
+        305,
+        354,
+        198,
+        141,
+        281,
+        102
+      ],
+      "incoming": [
+        4,
+        5
+      ],
+      "outgoing": [
+        3,
+        4
+      ],
+      "words": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7,
+          5,
+          6,
+          8
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          5,
+          4,
+          8,
+          7,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          5,
+          7,
+          4,
+          8,
+          6
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          0,
+          7,
+          3,
+          8
+        ],
+        [
+          0,
+          4,
+          3,
+          6
+        ],
+        [
+          0,
+          2,
+          4,
+          6
+        ]
+      ],
+      "endpoint_excesses": [
+        0,
+        0,
+        0
+      ],
+      "search_scope": "prefix search stopped at first certificate",
+      "pairs_examined": 5
+    }
+  ],
+  "excluded": [
+    {
+      "n": 6,
+      "rows": [
+        6,
+        4,
+        8,
+        51,
+        39,
+        7
+      ],
+      "partner_rows": [
+        58,
+        60,
+        57,
+        16,
+        32,
+        8
+      ],
+      "incoming": [
+        3,
+        4
+      ],
+      "outgoing": [
+        1,
+        2
+      ],
+      "reason": "pure-blue nonstrong partner C3->C3"
+    }
+  ],
+  "unresolved": [],
+  "one_order_ten_hostile_control": {
+    "rows": [
+      190,
+      44,
+      760,
+      176,
+      994,
+      704,
+      907,
+      770,
+      559,
+      11
+    ],
+    "cyclic_cut": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      0
+    ],
+    "cyclic_cut_blue": true,
+    "words": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        5,
+        9
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        8,
+        5,
+        9,
+        4,
+        6,
+        7
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "independent_anti_failures": [
+      [
+        0,
+        5,
+        1,
+        9
+      ],
+      [
+        0,
+        8,
+        5,
+        7
+      ],
+      [
+        8,
+        7,
+        0,
+        9
+      ]
+    ],
+    "search_scope": "prefix search stopped at first certificate",
+    "pairs_examined": 6
+  }
+}
