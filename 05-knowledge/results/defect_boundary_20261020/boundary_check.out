@@ -1,0 +1,28 @@
+EXACT: dynamic future-divisor profiles; no individual tournament cores.
+selected transfer rows (processed length, retained states, unmerged states):
+(99, 2, 2)
+(51, 26, 26)
+(31, 143, 153)
+(21, 547, 608)
+(15, 1568, 2104)
+(11, 2568, 6580)
+(9, 3663, 13568)
+(7, 3486, 32648)
+(5, 2049, 98937)
+(3, 834, 444793)
+peak retained states= 3663 peak unmerged states= 444793 actual transfer transitions= 66404
+final kernel states= 834
+A(0..20)= [1, 1, 1, 2, 4, 12, 56, 456, 6880, 191536, 9733056, 903753248, 154108311168, 48542114686912, 28401423719122304, 31021002160355166848, 63530415842308265100288, 244912778438520759443245824, 1783398846284777975419600287232, 24605641171260376770598003978281472, 645022068557873570931850526424042500096]
+A100 digits= 1333 decimal_sha256= 1d290d31b74fb08a9e73a6de3e842fc4a1d5bca8c1657107e7f14c0a0471e9c4
+Independent explicit partition controls through mass40= 8697
+Known A1..20 and frozen A100 matched.
+Missing-coordinate hostile: (7, 15) (9, 13) common summary (22, 2, 1, 11) adding5 exponent increments (8, 4)
+Signed ordered-list transform inverse controls= 364
+pure cycle length 1 pair-free fixed counts m=0..6: [1, 1, 0, 2, 16, 344, 14528]
+pure cycle length 3 pair-free fixed counts m=0..6: [1, 2, 20, 3628, 4055920, 34112315888, 2248718633458208]
+pure cycle length 5 pair-free fixed counts m=0..6: [1, 4, 472, 2082392, 274752526624, 1152894023092548576, 154742331974508113631624128]
+pure cycle length 9 pair-free fixed counts m=0..6: [1, 16, 130784, 549748743776, 1180591561344165329536, 1298074214421200420747093638920064, 730750818665100979063920003869118209581681756928]
+Finite-alphabet operator states= 322 all-direction checks= 604
+Mobius scaling semigroup controls passed.
+Actual small core cycle-type controls through7= 18
+ALL CHECKS PASSED (explicit exceptions active under normal and -O Python).

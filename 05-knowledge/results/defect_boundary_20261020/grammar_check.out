@@ -1,0 +1,34 @@
+PROVED formulas / FINITE-EXACT independent controls: one-chord grammar.
+Universe: S_mr = R_(m+r+3) with (m,m+2) flipped; 0-based script labels.
+Inherited R_n tribonacci is March 5 S11, recovered in THM-4731.
+h_0..9 = [1, 1, 1, 3, 5, 9, 17, 31, 57, 105]
+a_0..9 = [1, 0, 1, 2, 3, 6, 11, 20, 37, 68] (a_0=1 is the empty-boundary convention)
+F_0..9 = [0, 1, 2, 3, 6, 11, 20, 37, 68, 125]
+n=3 H(S_mr)=[1]
+n=4 H(S_mr)=[5, 5]
+n=5 H(S_mr)=[9, 13, 9]
+n=6 H(S_mr)=[15, 23, 23, 15]
+n=7 H(S_mr)=[29, 41, 41, 41, 29]
+n=8 H(S_mr)=[53, 77, 73, 73, 77, 53]
+n=9 H(S_mr)=[97, 141, 137, 129, 137, 141, 97]
+n=10 H(S_mr)=[179, 259, 251, 243, 243, 251, 259, 179]
+n=11 H(S_mr)=[329, 477, 461, 445, 457, 445, 461, 477, 329]
+n=12 H(S_mr)=[605, 877, 849, 817, 837, 837, 817, 849, 877, 605]
+Independent subset-DP cases: 55 ; actual path-set cases: 21
+B = [[1, 5, 9], [5, 13, 23], [9, 23, 41]] ; det(B) = -4
+Rational bivariate GF and both tribonacci directions: 31 x 31 coefficient controls.
+Symmetry / literal tau / class controls: 171 (all n=3..20).
+Independent H=3 leaf subset-DP controls: 36
+Small n=3 blue multiplicities=[1]
+Small n=4 blue multiplicities=[3, 3]
+Small n=5 blue multiplicities=[1, 3, 1]
+Central n=3: H=1; blue=1
+Central n=5: H=13; blue=3
+Central n=7: H=41; blue=5
+Central n=9: H=129; blue=9
+Central n=11: H=457; blue=17
+Central n=13: H=1533; blue=31
+Central n=15: H=5169; blue=57
+Range-two hostile: two defects and scores [1,2,2,3,3,4], but H=25 versus 29.
+Boundary hostile: identical per-vertex in/out degrees; same next arc gives HP versus 3-cycle.
+All controls passed. No general bounded-range automaton or A000568 recurrence is claimed.

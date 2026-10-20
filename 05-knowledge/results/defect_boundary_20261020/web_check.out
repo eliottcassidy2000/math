@@ -1,0 +1,18 @@
+Three-edge labelled census: {'claw': 4, 'triangle+isolate': 4, 'P4': 12}; both claw and triangle have line graph K3.
+Binary cut/cycle spaces: sizes 8,8; intersection size 4. Odd-support law: 32/32.
+Complement character identity: all 264 graph/automorphism pairs.
+P4: (vertex sign, edge-reversal sign) multiplicities=[((1, -1), 1), ((1, 1), 1)].
+claw: (vertex sign, edge-reversal sign) multiplicities=[((-1, 1), 3), ((1, 1), 3)].
+triangle+isolate: (vertex sign, edge-reversal sign) multiplicities=[((-1, -1), 3), ((1, 1), 3)].
+K4 bases: 16 trees; 12 have tree complements; opposition(complement(tree)) always a tree.
+Signed Hodge star: square=1, cut-to-cycle, and sign-twisted equivariance for all S4.
+Hamiltonian-path mixed Hessian: 64/64 verified; 32 fibers, each exactly a converse pair.
+Eight Hessian triangles: four negative stars, four positive faces for every tournament.
+Unsigned octahedron automorphisms: 48; star-preserving automorphisms: exactly induced S4 (24).
+n=3: all 8 tournaments; 24 adjacent sign checks; 4 Hessian fibers, each exactly converse.
+n=5: all 1024 tournaments; 30720 adjacent sign checks; 512 Hessian fibers, each exactly converse.
+n=5 formal block counts independently match every adjacent mixed difference.
+n=6: all 32768 tournaments; 1966080 adjacent sign checks; 16384 Hessian fibers, each exactly converse.
+Independent triple blowups: delta(P4)=2, delta(claw)=delta(triangle+isolate)=0.
+Quotient-complement P4 blowup still has delta=2; true graph complement has no twin triple.
+PASS

@@ -1,0 +1,42 @@
+{
+  "normalization": "CRLF to LF before SHA-256",
+  "scripts": [
+    "sparse_count",
+    "defect_check",
+    "boundary_check",
+    "grammar_check",
+    "web_check",
+    "next_coefficient_check",
+    "incoming_check"
+  ],
+  "files": {
+    "05-knowledge/results/defect_boundary_20261020/audit.py": "1cc9077f52ae39fb5a30d731efa81620a065c05e4318574a53d263d75854db22",
+    "05-knowledge/results/defect_boundary_20261020/boundary.md": "c359a51a188d2746e6abf19a547962ebe7c59aa32840e4cce93e221a5eccc7f3",
+    "05-knowledge/results/defect_boundary_20261020/boundary_check.out": "bbeb326ab302a9c385dc094dc53bfdfe7c2bdc842eeb2c0a9622bf95a8f066d0",
+    "05-knowledge/results/defect_boundary_20261020/boundary_check.py": "bc3a34a8407b10cfc4bd89498dcd0e8051067ba705bbed6842caa990b7ff1323",
+    "05-knowledge/results/defect_boundary_20261020/defect_check.out": "8c92bad87b98a9c323d9e992eff373d6db98a950564a1c1ebd7988de49c9acaf",
+    "05-knowledge/results/defect_boundary_20261020/defect_check.py": "af46f12c80bbec65a7a46ea80a0530fe2b92ff59992b808f4be07c577e585ac3",
+    "05-knowledge/results/defect_boundary_20261020/defect_polynomial.md": "cdd42ae36d38e2775c8c3938b85808d5d0c609ecb9ca9646f9f1b2396ec018a3",
+    "05-knowledge/results/defect_boundary_20261020/grammar.md": "de191371719f988657d2d7503cc289353d0e14f4d04c7836aac524c583e82fb0",
+    "05-knowledge/results/defect_boundary_20261020/grammar_check.out": "dd779afda0122d671cf8da765db9f8c928aecb1ce9fce0440b0cae6a936f684d",
+    "05-knowledge/results/defect_boundary_20261020/grammar_check.py": "ea6cf971a556905f7559ca63e15718de7aa2defd472f52d16e666a3b4f58ab3d",
+    "05-knowledge/results/defect_boundary_20261020/incoming.md": "85d9630ec3252c3cb909e1e25d69f883daaf5f7383621d2dce5f35b72ed8f170",
+    "05-knowledge/results/defect_boundary_20261020/incoming_check.out": "217453df2760083cdeaf144d20b7a3eaaa0bfbfb542f030d505cab6a8308546f",
+    "05-knowledge/results/defect_boundary_20261020/incoming_check.py": "801c3076247f82d9aa27ae371a257c6039afc05ef94aa60b90acbfeac1b45d1f",
+    "05-knowledge/results/defect_boundary_20261020/next_coefficient.md": "a9c9eccbbcb4dba9979940ab59f8f3d7f1642703b1f7d5b9a40c4859956f9fb0",
+    "05-knowledge/results/defect_boundary_20261020/next_coefficient_check.out": "f21956119d29bf484eaea5dbbf97713bc83f4adbfab93dc2623b43f6b6d842fe",
+    "05-knowledge/results/defect_boundary_20261020/next_coefficient_check.py": "2920fd13f9e4aab5a2ebafe5f2b1c14b7916d181cce6d7b62e7be08388692af2",
+    "05-knowledge/results/defect_boundary_20261020/README.md": "887ba58d624eb597a9118d86d2f861764e18359fd046e4644a02fc2c79fdf1ec",
+    "05-knowledge/results/defect_boundary_20261020/sparse_count.out": "7eda6eb185d7c173e8dd0ab0de760ae7c90e13698aa404135104877509bbe2ee",
+    "05-knowledge/results/defect_boundary_20261020/sparse_count.py": "c7d09bd86dfe077f367c4c56df488c5d2c0efb23cb017da4016632e50ec539dd",
+    "05-knowledge/results/defect_boundary_20261020/sparse_theory.md": "131f05f3e65032466a430a2eeebd6b456519916dc5250884d11962be788f309a",
+    "05-knowledge/results/defect_boundary_20261020/VALIDATION.md": "6f5b6f77c87ade3506116ebf62eb7840cf97d0ae2e4c18c97e63c36609c88049",
+    "05-knowledge/results/defect_boundary_20261020/web.md": "48b9b1ea886de15e4fcc9ab84747c7a0dc101abb69e6f38ef7d3923a4d0fd06d",
+    "05-knowledge/results/defect_boundary_20261020/web_check.out": "c28210243149270c211057e993f12da02928ae46b74e8e3b3c92e76ebb9cd607",
+    "05-knowledge/results/defect_boundary_20261020/web_check.py": "981052a49bd119593694c70073d644c092293c4bd05b211af6cb9f571c3e3c18",
+    "05-knowledge/results/metagraph_growth_20261020/enumeration.py": "3cbb610596bb4430af69924ba991ed11efc67d7ccee4a93b318cd7b638bc3d26",
+    "05-knowledge/results/metagraph_growth_20261020/growth_check.py": "583ae12878d6a7420ccdf695c80c003199bffff172a8a107085ed3b499274d96",
+    "05-knowledge/results/weighted_core_transport_20261020/core_count.py": "72607c53489666b2c16dd84403f8528e02e97a73b29963d120fa9c5f7fd81880",
+    "04-computation/a000568_core_tail_ladder_codex.py": "2f646ca127e6eddc235b26054effcbbd5726f691c4e5381e26c01fdf7cfeb657"
+  }
+}
