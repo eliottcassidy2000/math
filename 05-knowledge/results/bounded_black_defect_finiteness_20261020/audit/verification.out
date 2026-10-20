@@ -1,0 +1,71 @@
+{
+  "all_strong_through5": [
+    {
+      "n": 3,
+      "strong": 2,
+      "cycles": 2
+    },
+    {
+      "n": 4,
+      "strong": 24,
+      "cycles": 24
+    },
+    {
+      "n": 5,
+      "strong": 544,
+      "cycles": 768
+    }
+  ],
+  "ns6_profiles": 12,
+  "full_cycle_square_roots": [
+    {
+      "n": 2,
+      "full_cycles": 1,
+      "square_images": 1,
+      "fiber_size": 1
+    },
+    {
+      "n": 3,
+      "full_cycles": 2,
+      "square_images": 2,
+      "fiber_size": 1
+    },
+    {
+      "n": 4,
+      "full_cycles": 6,
+      "square_images": 3,
+      "fiber_size": 2
+    },
+    {
+      "n": 5,
+      "full_cycles": 24,
+      "square_images": 24,
+      "fiber_size": 1
+    },
+    {
+      "n": 6,
+      "full_cycles": 120,
+      "square_images": 40,
+      "fiber_size": 3
+    },
+    {
+      "n": 7,
+      "full_cycles": 720,
+      "square_images": 720,
+      "fiber_size": 1
+    },
+    {
+      "n": 8,
+      "full_cycles": 5040,
+      "square_images": 1260,
+      "fiber_size": 4
+    },
+    {
+      "n": 9,
+      "full_cycles": 40320,
+      "square_images": 40320,
+      "fiber_size": 1
+    }
+  ]
+}
+ALL FRESH BOUNDED-DEFECT CHECKS PASSED

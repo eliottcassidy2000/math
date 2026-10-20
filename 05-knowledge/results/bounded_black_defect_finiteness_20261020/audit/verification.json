@@ -1,0 +1,251 @@
+{
+  "all_strong_through5": [
+    {
+      "n": 3,
+      "strong": 2,
+      "cycles": 2
+    },
+    {
+      "n": 4,
+      "strong": 24,
+      "cycles": 24
+    },
+    {
+      "n": 5,
+      "strong": 544,
+      "cycles": 768
+    }
+  ],
+  "ns6_profile_controls": [
+    {
+      "n": 6,
+      "mask": 18,
+      "H": 15,
+      "aut": 1,
+      "b": 0,
+      "Delta": 15,
+      "HC": 1,
+      "all_blue_cycles": 0,
+      "black_cycles": 1,
+      "minout": 1,
+      "cycle_profiles": {
+        "(6, 0)": 1
+      }
+    },
+    {
+      "n": 6,
+      "mask": 20,
+      "H": 19,
+      "aut": 1,
+      "b": 0,
+      "Delta": 19,
+      "HC": 1,
+      "all_blue_cycles": 0,
+      "black_cycles": 1,
+      "minout": 1,
+      "cycle_profiles": {
+        "(6, 0)": 1
+      }
+    },
+    {
+      "n": 6,
+      "mask": 24,
+      "H": 23,
+      "aut": 1,
+      "b": 0,
+      "Delta": 23,
+      "HC": 1,
+      "all_blue_cycles": 0,
+      "black_cycles": 1,
+      "minout": 1,
+      "cycle_profiles": {
+        "(6, 0)": 1
+      }
+    },
+    {
+      "n": 6,
+      "mask": 80,
+      "H": 27,
+      "aut": 3,
+      "b": 0,
+      "Delta": 9,
+      "HC": 3,
+      "all_blue_cycles": 0,
+      "black_cycles": 3,
+      "minout": 1,
+      "cycle_profiles": {
+        "(6, 0)": 3
+      }
+    },
+    {
+      "n": 6,
+      "mask": 81,
+      "H": 23,
+      "aut": 1,
+      "b": 0,
+      "Delta": 23,
+      "HC": 2,
+      "all_blue_cycles": 0,
+      "black_cycles": 2,
+      "minout": 1,
+      "cycle_profiles": {
+        "(6, 0)": 2
+      }
+    },
+    {
+      "n": 6,
+      "mask": 88,
+      "H": 33,
+      "aut": 3,
+      "b": 0,
+      "Delta": 11,
+      "HC": 3,
+      "all_blue_cycles": 0,
+      "black_cycles": 3,
+      "minout": 2,
+      "cycle_profiles": {
+        "(6, 0)": 3
+      }
+    },
+    {
+      "n": 6,
+      "mask": 89,
+      "H": 25,
+      "aut": 1,
+      "b": 0,
+      "Delta": 25,
+      "HC": 2,
+      "all_blue_cycles": 0,
+      "black_cycles": 2,
+      "minout": 1,
+      "cycle_profiles": {
+        "(6, 0)": 2
+      }
+    },
+    {
+      "n": 6,
+      "mask": 146,
+      "H": 31,
+      "aut": 1,
+      "b": 0,
+      "Delta": 31,
+      "HC": 3,
+      "all_blue_cycles": 0,
+      "black_cycles": 3,
+      "minout": 1,
+      "cycle_profiles": {
+        "(6, 0)": 3
+      }
+    },
+    {
+      "n": 6,
+      "mask": 148,
+      "H": 37,
+      "aut": 1,
+      "b": 0,
+      "Delta": 37,
+      "HC": 4,
+      "all_blue_cycles": 0,
+      "black_cycles": 4,
+      "minout": 2,
+      "cycle_profiles": {
+        "(6, 0)": 4
+      }
+    },
+    {
+      "n": 6,
+      "mask": 156,
+      "H": 33,
+      "aut": 1,
+      "b": 0,
+      "Delta": 33,
+      "HC": 3,
+      "all_blue_cycles": 0,
+      "black_cycles": 3,
+      "minout": 2,
+      "cycle_profiles": {
+        "(6, 0)": 3
+      }
+    },
+    {
+      "n": 6,
+      "mask": 177,
+      "H": 29,
+      "aut": 1,
+      "b": 0,
+      "Delta": 29,
+      "HC": 3,
+      "all_blue_cycles": 0,
+      "black_cycles": 3,
+      "minout": 1,
+      "cycle_profiles": {
+        "(6, 0)": 3
+      }
+    },
+    {
+      "n": 6,
+      "mask": 344,
+      "H": 43,
+      "aut": 1,
+      "b": 0,
+      "Delta": 43,
+      "HC": 5,
+      "all_blue_cycles": 0,
+      "black_cycles": 5,
+      "minout": 2,
+      "cycle_profiles": {
+        "(6, 0)": 5
+      }
+    }
+  ],
+  "full_cycle_square_roots": [
+    {
+      "n": 2,
+      "full_cycles": 1,
+      "square_images": 1,
+      "fiber_size": 1
+    },
+    {
+      "n": 3,
+      "full_cycles": 2,
+      "square_images": 2,
+      "fiber_size": 1
+    },
+    {
+      "n": 4,
+      "full_cycles": 6,
+      "square_images": 3,
+      "fiber_size": 2
+    },
+    {
+      "n": 5,
+      "full_cycles": 24,
+      "square_images": 24,
+      "fiber_size": 1
+    },
+    {
+      "n": 6,
+      "full_cycles": 120,
+      "square_images": 40,
+      "fiber_size": 3
+    },
+    {
+      "n": 7,
+      "full_cycles": 720,
+      "square_images": 720,
+      "fiber_size": 1
+    },
+    {
+      "n": 8,
+      "full_cycles": 5040,
+      "square_images": 1260,
+      "fiber_size": 4
+    },
+    {
+      "n": 9,
+      "full_cycles": 40320,
+      "square_images": 40320,
+      "fiber_size": 1
+    }
+  ]
+}
