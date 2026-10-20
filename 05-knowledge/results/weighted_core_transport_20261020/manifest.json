@@ -4,15 +4,22 @@
     "allocation.md": "7bf7b75906d18df4885807617b5b68f2d693823b8628bc25f9b0277e2d022868",
     "allocation_check.out": "2b13b45945bd034b1beefdf44c6845f804ad2710dc857c615dcc65c594c1a95a",
     "allocation_check.py": "30962bc20c1e0865f2ebafbe627000464f86b5d368a029e67563e06d07902fa8",
-    "audit.out": "5c6f77f7172e08891343bd990365a540514a346f224b4440f74d23ab538723e0",
-    "audit.py": "b551aad5a6a2bd3d9b17411022fd2aeafec396d630dd719a7456001d8304867a",
+    "audit.out": "27bd35cec827d14ba2e61ae93fe8be23e69f2f771449e1b2ea71ed57be086d13",
+    "audit.py": "55fbd58e086efcc21a379c0e367c45ab4570117d7222bb0fa167c7ddce3a7e82",
     "core_count.md": "94c06341010fc4e762c7cd912a071c6f433155d9bd20259ce5de23ea9b3287a9",
     "core_count.out": "d87811a22dc5f2a16b6fd45af001da108659a081f766e48bafb2bcebddc4d70c",
     "core_count.py": "72607c53489666b2c16dd84403f8528e02e97a73b29963d120fa9c5f7fd81880",
     "growth_check.out": "7188e823e9ed32daad9c3eead1fdf18f57fd5ac7055fd3d48140fc5016395608",
     "growth_check.py": "b0bd03fa09eba0fa0680d84d50468aa7a54e28cfc75525377d9f8a96b7a5ae2f",
-    "inheritance.md": "19a81365cf793353d9b677c82b7b23af036f0010eadd81f4520a540e9402d7b8",
-    "README.md": "65d309cdb5ef7740f7e0d5f54d3fb74e634ee6a83380857b9624e14be636ee49",
-    "VALIDATION.md": "d0e433239e64810eaa552acbaab65f0db0bb50ce2475a2f205fe5660bdb228b6"
+    "incoming_audit.out": "ca2f7cef3e30700ab1acc5fc6cc22a70ec8e4c22132f3538c451524af9397783",
+    "incoming_audit.py": "f0417637d1f33be8b604552168dcc3e3d414ab9e3deb1dfa93b360988d227a6f",
+    "inheritance.md": "a8e619362b9e9e055a62dfe0bd1a9b1c4a26566d3d57da1fbed6d6b0adc50bb2",
+    "README.md": "07ce8fbdf4c7bbb69329fe4eefd925e789c3ed7405f06953b71ccd8261d67fe2",
+    "VALIDATION.md": "2916333a1a47cfcda566a36ea9a0b0718c6f68dc8b0eccb1f41e1abdfdf4d213"
+  },
+  "dependencies": {
+    "05-knowledge/results/metagraph_growth_20261020/enumeration.py": "3cbb610596bb4430af69924ba991ed11efc67d7ccee4a93b318cd7b638bc3d26",
+    "05-knowledge/results/metagraph_growth_20261020/growth_check.py": "583ae12878d6a7420ccdf695c80c003199bffff172a8a107085ed3b499274d96",
+    "04-computation/experiments/metagraph_20261020/atom_alphabet_proofcheck.py": "0f2aaf43479bdd725c198f834dca4a700c52d0f56d5a15f7544cf06779afe19d"
   }
 }

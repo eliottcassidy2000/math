@@ -2,6 +2,9 @@
 id: THM-4729
 title: "Closed and open tilings: the Hamiltonian-cycle bipartition of the metagraph lines and the forced arrangement of the merged metagraph. (1) A tiling is CLOSED when the tile (n,1) carries the arc 1 -> n, i.e. the base path closes to a Hamiltonian cycle, OPEN otherwise; the complement line flips that tile, so every line, blue or black, joins a closed tiling to an open one; there are 2^(m-1) closed tilings and 2^((m+f)/2-1) closed grid-symmetric ones. (2) Closure number: a class C has exactly n HC(C)/|Aut C| closed tilings (HC = number of Hamiltonian cycles; Aut acts freely on rooted Hamiltonian cycles), a merged node twice that; a class is strong iff its closure number is positive (Camion). (3) Forced arrangement: non-strong nodes are fully open, hence pairwise non-adjacent and loopless -- every line at a non-strong node ends at a strong node; fully closed nodes (every Hamiltonian path closes, H = n HC) are pairwise non-adjacent and loopless; every self-line lives at a strong node having both closed and open tilings; for n >= 6 every pure-blue node is non-strong, so all its blue lines end at strong mixed nodes. (4) The number of lines between the strong and the non-strong world equals the number of non-strong tilings NS(n) = sum_{k=1}^{n-1} a(k) 2^C(n-k-1,2) (first-cut decomposition), a(n) = 2^C(n-1,2) - NS(n) the number of strong tilings = sum over strong classes of H/|Aut|: a = 1,0,1,5,50,903,30773,2032504 and NS = 0,1,1,3,14,121,1995,64648 for n = 1..8 (neither in OEIS); strong-strong lines = 2^(m-1) - NS(n). (5) Convention independence: complementing the non-path arcs, reversing the path arcs, and complementing then mirroring induce the same line system on the MERGED metagraph (they differ on the unmerged class graph): the converse merge is exactly the quotient on which the line system is convention-free. (6) FINITE-EXACT n = 4..8: all laws, connectivity of the metagraph and of the blue graph on SC nodes, fully closed classes only C3 (n = 3) and the (H,|Aut|) = (15,3) class a -> C3 -> b -> a (n = 5), and the blue self-line classes n = 4..10 (one self-line per class, near-regular scores, 24 classes at n = 10 reproducing klein-S173)"
 status: >
+  AUDIT SCOPE UPDATE (2026-10-20): L4's all-order pure-blue conclusion is
+  CONDITIONAL on repairing THM-4730's odd-order anti-automorphism proof gap.
+  L1-L3, L5, F and K do not use that gap. Original pre-audit claims follow:
   PROVED (pre-audit): Laws L1-L5 and Proposition F (first-cut count), Proposition K (convention independence);
   the n = 4 metagraph is forced by the laws (worked example).
   FINITE-EXACT (closed_open_laws_n7.out, closed_open_laws_n8.out): every law checked on all 2^m tilings for
@@ -99,7 +102,10 @@ pairing between the closed half and the open half of the tiling space. Dually, a
 never adjacent, and a fully closed node has no self-line. Every self-line (blue or black)
 lives at a strong node with `c_u >= 1` and `o_u >= 1`.
 
-**L4 (points of symmetry are leaves of the closed world for n >= 6).** By THM-2454 and
+**L4 (CONDITIONAL on the repaired odd-order part of THM-4730; points of symmetry
+are leaves of the closed world for n >= 6).** The 2026-10-20 weighted-core audit
+found an affine/nonaffine anti-automorphism gap in that dependency. The following
+argument is retained conditionally. By THM-2454 and
 THM-4730 a pure-blue class is a palindromic stack of `{K1, C3}` halves with centre in
 `{none, K1, C3, T5}`; it is strong only for `C3` (`n = 3`) and `T5` (`n = 5`). So for
 `n >= 6` every pure-blue node is non-strong, all its tilings are open, and all its blue

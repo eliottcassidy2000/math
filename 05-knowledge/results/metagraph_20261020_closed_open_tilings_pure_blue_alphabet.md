@@ -20,7 +20,15 @@ unrelated things. The genuinely open items were: completeness of the strong pure
 alphabet `{1, C3, T5}` beyond `n = 13` (first odd case `n = 15`, all even sizes via
 centres), the mechanism of the blue self-loops, black self-lines `= SC/2` at odd `n`.
 
-## 2. THM-4730: the strong pure-blue alphabet is complete (PROVED, machine-checked)
+## 2. THM-4730: proposed strong pure-blue alphabet (odd-order proof gap)
+
+**Audit update, 2026-10-20.** The original nonconstant-partner-sum test
+excludes only affine reflection, and can misclassify palindromic paths with
+nonaffine anti-automorphisms. See the
+[exact order-nine witness and scope correction](weighted_core_transport_20261020/inheritance.md).
+The specialized path claims remain unrefuted; the all-order odd-order proof
+and dependent alphabet/count conclusions below remain provisional until
+repaired. Rotation and even-order arguments, and valid finite censuses, survive.
 
 A strong tournament all of whose Hamiltonian paths are palindromic (positional reversal
 an anti-automorphism) is `K1`, `C3` or `T5`.
@@ -33,12 +41,12 @@ an anti-automorphism) is `K1`, `C3` or `T5`.
   Hamiltonian path: the three-interval path `(0..a-2, a+b-2..n-1, a-1..a+b-3)` whenever two
   distinct `a, b in S\{1}` have `a + b <= n+1` (always, except for
   `S = {1} u [(n+1)/2, n-2]`), and the descending-pairs path `(0,1,n-2,n-1,n-4,n-3,...,3,4,2)`
-  for that one set. Checked for all 2,047 sets at `n = 7..23`.
+  for that one set. Checked for all 2,044 sets at `n = 7..23`.
 - Even order: `n = 0 (mod 4)` gives an involutory automorphism; `n = 2 (mod 4)` makes the
   tournament a `Z_{n/2}`-bicirculant `(S', D)` with a mixing Hamiltonian cycle
   `(0, 2s, ..., -2s, d-2s, d, ..., d-4s)` whose two-step rotation moves an even vertex to
   an odd one, so `Aut` is vertex-transitive -- impossible at even order. Checked on all
-  1,198,180 bicirculants at `n = 6, 10, ..., 30`; brute force at `n = 6, 10`.
+  1,198,372 bicirculants at `n = 6, 10, ..., 30`; brute force at `n = 6, 10`.
 - Consequences: THM-2454's law `pure-blue(n) = c(n/2)` (even), `c((n-1)/2) + c((n-3)/2)
   + c((n-5)/2)` (odd), `c = A000930`, is PROVED for all `n <= 125` (THM-2477 supplies the
   rigid halves) and equivalent to THM-2477's lemma ML beyond; THM-643 C3 (pure-blue fibres

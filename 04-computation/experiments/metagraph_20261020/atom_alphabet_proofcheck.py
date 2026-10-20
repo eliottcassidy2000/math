@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Proof-check for THM-4730 (strong pure-blue atoms are K1, C3, T5).
+r"""Proof-check for THM-4730 (strong pure-blue atoms are K1, C3, T5).
 (A) odd n >= 7: for EVERY circulant tournament on Z_n with 1 in S, the proof's explicit Hamiltonian path
     (three-interval path (X,Z,Y) with x = a-1, y = b-1 for a != b in S\{1}, a+b <= n+1; or the descending-pairs path
     for S = {1} u [(n+1)/2, n-2]) is verified to be a Hamiltonian path that is NOT palindromic
-    (v_x + v_{n+1-x} not constant mod n) -- so no circulant of odd order >= 7 is pure-blue.
+    by testing positional reversal on every arc. This is finite evidence only;
+    the original all-order inference from nonconstant partner sums has a proof gap.
 (B) n = 2 mod 4, n >= 6: for EVERY (S', D) bicirculant (S' a circulant set on Z_k, k = n/2 odd; D a set of odd residues
     with 1 in D, -1 not in D) the proof's cycle C' = (0, 2s, ..., -2s, d-2s, d, ..., d-4s) with d in D, d-4s not in D,
     s = +-1 in S', is verified to be a Hamiltonian cycle containing the even-even arc 0 -> 2s.
@@ -12,9 +13,10 @@ import itertools, sys
 def check_path(n, path, arc):
     assert len(path) == n and len(set(path)) == n, path
     for u, v in zip(path, path[1:]): assert arc(u, v), (path, u, v)
-def palindromic(n, path):
-    c = (path[0] + path[-1]) % n
-    return all((path[x] + path[n - 1 - x]) % n == c for x in range(n))
+def palindromic(n, path, arc):
+    # Positional reversal can be nonaffine in a composite-order circulant.
+    return all(arc(path[i], path[j]) == arc(path[n - 1 - j], path[n - 1 - i])
+               for i in range(n) for j in range(i + 1, n))
 print("(A) circulants of odd order with 1 in S")
 for n in range(7, 24, 2):
     total = 0; caseA = 0; caseB = 0
@@ -37,7 +39,7 @@ for n in range(7, 24, 2):
             path = [0, 1]
             for j in range(1, (n - 3) // 2 + 1): path += [n - 2 * j, n - 2 * j + 1]
             path += [2]; caseB += 1
-        check_path(n, path, arc); assert not palindromic(n, path), (n, S, path)
+        check_path(n, path, arc); assert not palindromic(n, path, arc), (n, S, path)
         total += 1
     print(f"  n = {n}: {total} connection sets, three-interval {caseA}, descending-pairs {caseB}: all have a non-palindromic Hamiltonian path", flush=True)
 print("(B) bicirculants of order n = 2 mod 4")

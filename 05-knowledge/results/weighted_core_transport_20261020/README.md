@@ -287,8 +287,23 @@ During the session, origin/main acquired the pre-audit
 and
 [THM-4730 pure-blue alphabet claim](../../../01-canon/theorems/THM-4730-strong-pure-blue-alphabet-complete-points-of-symmetry-are-k1-c3-t5.md).
 The elementary closed/open endpoint bit is compatible with this carrier.
-The new alphabet claim is not a dependency of any result here; pre-audit
-claims and their all-order counting consequences require their own audit.
+The new alphabet claim is not a dependency of any result here. Its odd-order
+argument used an invalid affine-only palindromicity test; the exact nonaffine
+witness and surviving finite tests are retained in
+[incoming_audit.py](incoming_audit.py). The original checker and theorem
+status have been repaired: the classification remains unrefuted, but the
+all-order odd-order proof and dependent consequences remain provisional.
+
+The second incoming packet,
+[THM-4731, the tribonacci partner](../../../01-canon/theorems/THM-4731-tiling-line-metagraph-self-lines-by-twisted-burnside-sigma-twins-depth-and-the-tribonacci-partner.md),
+also connects directly to our strongest hostile. Its transitive-node
+partner is exactly tau(TT_N), whose canonical core we prove has size N
+for N>=5. Nevertheless, its Hamiltonian-path count has the inherited
+three-term recurrence h(N)=h(N-1)+h(N-2)+h(N-3), with h(1)=h(2)=1,
+h(3)=3. The March run-decomposition proof is recovered there. Thus
+unbounded canonical-core order can coexist with a small symbolic counting
+grammar. This gives a concrete positive control for the sparse-defect
+direction, rather than a reason to abandon compression altogether.
 
 The strongest remaining targets are now specific:
 
@@ -311,7 +326,7 @@ No new cross-domain meta-pattern is promoted from this packet.
 
 ## 7. Verification
 
-The three scripts use explicit exceptions, so checks survive python -O.
+The packet scripts use explicit exceptions, so checks survive python -O.
 The growth script independently generates all classes through eight,
 compares complete path cubes through seven, checks labelled orbit masses,
 and tests every attachment to every labelled parent through five.

@@ -1,0 +1,20 @@
+PROVED FINITE WITNESS: the constant-partner-sum proxy is not necessary.
+n=9; S=[1, 3, 4, 7]; P=[0, 1, 2, 3, 7, 5, 6, 4, 8]
+reversal=[8, 4, 6, 5, 1, 3, 2, 7, 0]; partner_sums=[5, 8]
+Repaired legacy predicate accepts the nonaffine palindromic witness.
+FINITE-EXACT n=7: sets=4; actual-anti B1 checks=3
+FINITE-EXACT n=9: sets=8; actual-anti B1 checks=16
+FINITE-EXACT n=11: sets=16; actual-anti B1 checks=60
+FINITE-EXACT n=13: sets=32; actual-anti B1 checks=192
+FINITE-EXACT n=15: sets=64; actual-anti B1 checks=560
+FINITE-EXACT n=17: sets=128; actual-anti B1 checks=1536
+FINITE-EXACT n=19: sets=256; actual-anti B1 checks=4032
+FINITE-EXACT n=21: sets=512; actual-anti B1 checks=10240
+FINITE-EXACT n=23: sets=1024; actual-anti B1 checks=25344
+FINITE-EXACT n=25: sets=2048; actual-anti B1 checks=61440
+FINITE-EXACT total: 4092 sets; 103423 B1 paths; 10 descending paths; no actual-anti counterexample.
+ONE-PAIR REPAIR MISS after 16 parameter cases: n=11, a=2, b=7.
+P=[0, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6]; no contradiction from only {1,a,b} or its negative.
+All 4 full connection-set completions still fail actual palindromicity.
+SCOPE: proof gap established; specialized B1 and alphabet classification not refuted.
+PASS

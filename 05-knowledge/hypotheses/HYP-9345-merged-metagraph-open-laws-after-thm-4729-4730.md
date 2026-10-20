@@ -14,6 +14,9 @@ related:
 
 # HYP-9345 -- what the merged metagraph still hides
 
+**Audit scope update, 2026-10-20:** THM-4730's odd-order proof has an affine/nonaffine anti-automorphism gap. References below to its all-order alphabet and dependent count laws remain provisional; see its current status and the [exact witness](../results/weighted_core_transport_20261020/inheritance.md). The independent open problems and THM-4729's elementary closure laws are unchanged.
+
+
 Setting and names: THM-4729 (closed/open tilings, closure number `cl(C) = n HC/|Aut|`,
 fully closed / fully open nodes, first-cut count `a(n)`, `NS(n)`), THM-4730 (points of
 symmetry = pure-blue nodes; strong ones are `K1, C3, T5`).

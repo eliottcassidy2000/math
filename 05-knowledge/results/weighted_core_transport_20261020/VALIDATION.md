@@ -12,7 +12,7 @@ From any working directory:
 python <repo>/05-knowledge/results/weighted_core_transport_20261020/audit.py
 ```
 
-The audit runs all three scripts normally and with `-O`, rejects assertions
+The audit runs all four scripts normally and with `-O`, rejects assertions
 in their source, checks successful exits and empty stderr, and compares
 literal stdout with the retained `.out` files. `--refresh` updates outputs
 only after the two runs agree. The scripts use Python's standard library.
@@ -76,7 +76,18 @@ testing core order or automorphism group order.
 
 An incoming pre-audit theorem's affine-palindrome test gap is recorded in
 `inheritance.md`, section 10. Its all-order alphabet claim is not used as a
-dependency of this packet.
+dependency of this packet. `incoming_audit.py` checks the actual
+anti-automorphism predicate on 103,423 three-interval paths and ten
+descending paths across 4,092 connection sets at odd orders 7 through 25.
+It also retains the nonaffine order-nine hostile and the first failure of
+the proposed one-pair repair using only the three guaranteed offsets.
+The original theorem's checker now uses the actual arc predicate.
+Its full normal run also passes: 2,044 selected odd-circulant paths,
+1,198,372 bicirculant mixing cycles, and the separate order-six/ten
+anti-automorphism census. The earlier prose totals were corrected to
+match the actual output. This legacy script retains assertions, so its
+normal run is the validation claimed here; the four packet scripts
+continue to validate under optimization.
 
 ## Artifact integrity
 

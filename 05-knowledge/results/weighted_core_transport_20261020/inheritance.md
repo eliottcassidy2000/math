@@ -579,3 +579,13 @@ THM-4730, so this proof gap does not affect them. The safe inheritance is
 the previously proved stack center law, together with explicitly bounded
 pure-blue census results, until the new odd-order argument is repaired
 and independently audited.
+
+**Reproducibility and repair update.** The witness and full finite probe are
+now retained in [incoming_audit.py](incoming_audit.py) and its matching
+[output](incoming_audit.out). The incoming checker was repaired to test
+actual arc reversal; the all-order theorem and dependent routers carry an
+explicit proof-gap override. Its selected-path normal run still passes.
+The corrected universe totals are 2,044 odd-circulant connection sets
+(2,035 three-interval paths and nine descending paths) and 1,198,372
+bicirculant mixing cycles. Neither finite success repairs the general
+argument automatically.

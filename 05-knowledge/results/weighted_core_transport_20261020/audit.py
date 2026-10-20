@@ -16,7 +16,7 @@ def need(value, message):
 
 
 def main():
-    for name in ("growth_check", "core_count", "allocation_check"):
+    for name in ("growth_check", "core_count", "allocation_check", "incoming_audit"):
         path = ROOT / (name + ".py")
         tree = ast.parse(path.read_text(encoding="utf-8"))
         need(not any(isinstance(node, ast.Assert) for node in ast.walk(tree)),
