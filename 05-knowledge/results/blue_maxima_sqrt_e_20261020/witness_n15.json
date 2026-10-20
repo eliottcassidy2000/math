@@ -1,0 +1,100 @@
+{
+  "k": 7,
+  "order": 15,
+  "A": 268,
+  "b": 39375,
+  "h": 8295,
+  "matching": 1,
+  "adjacency_row_masks": [
+    17386,
+    15400,
+    17315,
+    15524,
+    17039,
+    16016,
+    16958,
+    15938,
+    16634,
+    15626,
+    16725,
+    13653,
+    17749,
+    5461,
+    10922
+  ],
+  "frame_automorphisms": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      1,
+      2,
+      3,
+      4,
+      0,
+      5,
+      6
+    ],
+    [
+      2,
+      3,
+      4,
+      0,
+      1,
+      5,
+      6
+    ],
+    [
+      3,
+      4,
+      0,
+      1,
+      2,
+      5,
+      6
+    ],
+    [
+      4,
+      0,
+      1,
+      2,
+      3,
+      5,
+      6
+    ]
+  ],
+  "group_generator": [
+    1,
+    2,
+    3,
+    4,
+    0,
+    5,
+    6
+  ],
+  "moved_indices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "fixed_indices": [
+    5,
+    6
+  ],
+  "matching_stabilizer_order": 1,
+  "tournament_regular_completion_matching": 32,
+  "maximum_blue_classes": 24,
+  "other_classes_in_same_hollow_type": 8,
+  "other_blue_mass": 1659,
+  "maximum_classes_per_triangle_parity_shore": 12,
+  "enumerated_symmetric_words": 8295,
+  "word_stream_sha256": "092d276acba6b1595ac96202cf723841a40f1b29f6c9aadc8b464704b4796bfe"
+}

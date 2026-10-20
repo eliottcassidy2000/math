@@ -1,0 +1,48 @@
+BLUE MAXIMA AND SQRT(E) LOWER BOUND: PLAINTEXT RUNBOOK
+
+Exact finite results: M_6=1185 and M_7=8295.
+The maximizing hollow type is unique in each case, yielding 12 and 24
+maximum-blue tournament classes at orders 13 and 15, respectively.
+
+Proved all-order lower result: liminf M_k/k! >= sqrt(e).
+Explicit lower bounds are sqrt(e)(1-101/(8k)) for k>=4 and
+sqrt(e)(1-13/(8k)) for k=4 mod 12. Neither is an asymptotic equality.
+The general exact M_k and a matching asymptotic upper bound remain open.
+
+Read BLUE_MAXIMA_K6_K7.md and SQRT_E_LOWER_BOUND.md for the proofs.
+Read INDEPENDENT_REVIEW.md for the independent audit receipt.
+
+Run from an isolated copy of this packet, using Python 3 and GCC/Clang:
+
+  g++ -O3 -std=c++17 enumerate_reduced.cpp -o /tmp/blue_reduced
+  g++ -O3 -std=c++17 replay_subcubes.cpp -o /tmp/blue_subcubes
+  g++ -O3 -std=c++17 enumerate_walsh.cpp -o /tmp/blue_walsh
+  g++ -O3 -std=c++17 replay_zeta.cpp -o /tmp/blue_zeta
+  /tmp/blue_reduced 6 > exact_k6.json
+  /tmp/blue_subcubes 6 A_reps_k6.txt reduced_k6.bin > replay_k6.json
+  /tmp/blue_walsh 6 reduced_k6.bin > walsh_k6.json
+  /tmp/blue_walsh 7 > exact_k7.json
+  mkfifo blue_replay.fifo
+  /tmp/blue_zeta 7 A_reps_k7.txt blue_replay.fifo > replay_k7.json &
+  replay_pid=$!
+  /tmp/blue_walsh 7 - blue_replay.fifo > replay_walsh_k7.json
+  wait "$replay_pid"
+  rm blue_replay.fifo
+  python3 -O verify_maxima.py
+  python3 -O verify_local_design.py
+  python3 independent_audit.py
+
+The final independent audit uses assertions: do not run it with -O.
+The order-15 test compares all 956,301,312 reduced frame values and streams
+about 3.8 GB without storing it. Memory is under 1 GB; original C++ timings
+were approximately 12 seconds for the main census and 19 seconds for replay.
+The Python orbit check is exhaustive, not a catalogue lookup.
+
+Retained k=8,9,10 search records are independently verified lower bounds
+only: 66123, 597249, 5975877. No global optimality is claimed for them.
+They are inputs to witness verification, so no long local search is needed
+to replay the scientific certificates.
+
+The manifest and SHA256SUMS identify immutable publication payloads.
+Generated binaries, the temporary FIFO, and the k=6 binary result array
+are intentionally excluded from the publication payload.

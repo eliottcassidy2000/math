@@ -1,0 +1,91 @@
+{
+  "local_distribution": {
+    "edge": "1/2",
+    "wedge": "5/16",
+    "disjoint_pair": "1/4",
+    "three_edge_path": "3/16",
+    "excluded_wedges_per_pair_of_parts": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "valid_signed_permutations": 384
+  },
+  "completion_checks": [
+    {
+      "k": 6,
+      "h_by_independent_backward_recursion": 1185,
+      "frame_automorphism_order": 5,
+      "completion_orbits": 16,
+      "pairwise_full_tournament_nonisomorphism_checks": 120,
+      "mass_and_triangle_parity": [
+        {
+          "mass": 237,
+          "parity": 0,
+          "classes": 2
+        },
+        {
+          "mass": 237,
+          "parity": 1,
+          "classes": 2
+        },
+        {
+          "mass": 1185,
+          "parity": 0,
+          "classes": 6
+        },
+        {
+          "mass": 1185,
+          "parity": 1,
+          "classes": 6
+        }
+      ]
+    },
+    {
+      "k": 7,
+      "h_by_independent_backward_recursion": 8295,
+      "frame_automorphism_order": 5,
+      "completion_orbits": 32,
+      "pairwise_full_tournament_nonisomorphism_checks": 496,
+      "mass_and_triangle_parity": [
+        {
+          "mass": 1659,
+          "parity": 0,
+          "classes": 4
+        },
+        {
+          "mass": 1659,
+          "parity": 1,
+          "classes": 4
+        },
+        {
+          "mass": 8295,
+          "parity": 0,
+          "classes": 12
+        },
+        {
+          "mass": 8295,
+          "parity": 1,
+          "classes": 12
+        }
+      ]
+    }
+  ],
+  "search_witnesses": [
+    {
+      "k": 8,
+      "independent_h": 66123
+    },
+    {
+      "k": 9,
+      "independent_h": 597249
+    },
+    {
+      "k": 10,
+      "independent_h": 5975877
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "finite_exact": [
+    {
+      "k": 6,
+      "M": 1185,
+      "labelled_maximizers": 144,
+      "A_types": 56,
+      "A_orientations_independently_covered": 32768,
+      "reduced_frames_pointwise_replayed": 1835008,
+      "mean": 720,
+      "variance": "89685/2",
+      "max_blue_classes": 12
+    },
+    {
+      "k": 7,
+      "M": 8295,
+      "labelled_maximizers": 1008,
+      "A_types": 456,
+      "A_orientations_independently_covered": 2097152,
+      "reduced_frames_pointwise_replayed": 956301312,
+      "mean": 5040,
+      "variance": "1875825",
+      "max_blue_classes": 24
+    }
+  ],
+  "heuristic_records": [
+    {
+      "k": 8,
+      "certified_lower_bound": 66123,
+      "A": 27827700,
+      "b": 242982930,
+      "global_optimality_claimed": false
+    },
+    {
+      "k": 9,
+      "certified_lower_bound": 597249,
+      "A": 23122628159,
+      "b": 22262400520,
+      "global_optimality_claimed": false
+    },
+    {
+      "k": 10,
+      "certified_lower_bound": 5975877,
+      "A": 2996670331387,
+      "b": 17299192215552,
+      "global_optimality_claimed": false
+    }
+  ]
+}
