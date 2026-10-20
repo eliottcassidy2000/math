@@ -4,7 +4,7 @@
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
-**Oct 20:** [Tournament/even-graph map](../05-knowledge/results/tournament_even_bijections_session_20261020/README.md). Scoped constructions and symmetry refutations. [Prior maps](../05-knowledge/results/tournament_even_bijections_session_20261020/PUBLICATION_LEDGER.md#prior-session-maps).
+**Oct 20:** [Geometry/arithmetic map](../05-knowledge/results/geometric_arithmetic_session_20261020/README.md). Completion, Collatz defects and inverse traces. [Prior maps](../05-knowledge/results/geometric_arithmetic_session_20261020/PUBLICATION_LEDGER.md#prior-session-maps).
 ## LRC(14)
 
 ### Headline
