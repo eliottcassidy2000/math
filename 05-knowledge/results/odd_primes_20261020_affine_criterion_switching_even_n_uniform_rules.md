@@ -2,7 +2,7 @@
 
 Owner's prompt: prove HYP-9340 beyond Sylow (first open case Z_3 at n = 6), find a uniform rule or definability obstruction for the prime-circulant bijection, then prove or disprove HYP-9172; think in odd primes and their powers.
 
-Sibling notes (same machine): [even_graphs_20261019](even_graphs_20261019_sylow_refinement_components_walsh_duality.md) (which lists the earlier 2026-10-19 notes).
+Sibling notes (same machine): [even_graphs_20261019](even_graphs_20261019_sylow_refinement_components_walsh_duality.md) (which lists the earlier 2026-10-19 notes) and [hyp9172_20261019_sylow_hall_violator](hyp9172_20261019_sylow_hall_violator.md) (THM-4722).
 
 Canon: [THM-4724](../../01-canon/theorems/THM-4724-affine-fixed-point-criterion-restricted-twisted-burnside-for-every-submodule-even-n-switching-half-and-the-dc-obstruction-to-uniform-circulant-rules.md); [HYP-9341](../hypotheses/HYP-9341-what-remains-open-after-thm-4722.md) updated. Scripts: `04-computation/experiments/even_graphs_20261020/`.
 
