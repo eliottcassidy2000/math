@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "universe": "Every nonconstant binary base length2..8, repetition count2..5, every unequal cyclic adjacent swap occurrence",
+  "swap_checks": 25088,
+  "crossing_checks": 1016,
+  "retained_base_clock_examples": [
+    {
+      "base": "001",
+      "d": 3,
+      "swap_start": 1,
+      "edited": "010001001",
+      "D0": 5,
+      "H": 97,
+      "g": 5
+    },
+    {
+      "base": "001",
+      "d": 3,
+      "swap_start": 4,
+      "edited": "001010001",
+      "D0": 5,
+      "H": 97,
+      "g": 5
+    },
+    {
+      "base": "001",
+      "d": 3,
+      "swap_start": 7,
+      "edited": "001001010",
+      "D0": 5,
+      "H": 97,
+      "g": 5
+    },
+    {
+      "base": "001",
+      "d": 4,
+      "swap_start": 2,
+      "edited": "000101001001",
+      "D0": 5,
+      "H": 803,
+      "g": 5
+    },
+    {
+      "base": "001",
+      "d": 4,
+      "swap_start": 5,
+      "edited": "001000101001",
+      "D0": 5,
+      "H": 803,
+      "g": 5
+    }
+  ]
+}
