@@ -1,0 +1,24 @@
+CENSUS n=1 tournaments=1 strong=1 connected_even=1 even_edges=1 odd_edges=0
+DETERMINANT 1 1
+MATCH 1 word ((1, 0),) graph 0 edges 0 coefficient 1
+CENSUS n=2 tournaments=1 strong=0 connected_even=0 even_edges=0 odd_edges=0
+DETERMINANT 2 1
+CENSUS n=3 tournaments=2 strong=1 connected_even=1 even_edges=1 odd_edges=0
+DETERMINANT 3 -1/4
+MATCH 3 word ((3, 2),) graph 3 edges 2 coefficient -1/4
+CENSUS n=4 tournaments=4 strong=1 connected_even=2 even_edges=1 odd_edges=1
+DETERMINANT 4 1/64
+MATCH 4 word ((1, 0), (3, 2)) graph 7 edges 3 coefficient 1/8
+MATCH 4 word ((4, 4),) graph 30 edges 4 coefficient 1/8
+CENSUS n=5 tournaments=12 strong=6 connected_even=8 even_edges=7 odd_edges=1
+DETERMINANT 5 1/2199023255552
+MATCH 5 word ((1, 0), (1, 0), (3, 2)) graph 15 edges 4 coefficient -11/384
+MATCH 5 word ((1, 0), (4, 4)) graph 62 edges 5 coefficient -1/64
+MATCH 5 word ((5, 8),) graph 29 edges 4 coefficient 3/128
+MATCH 5 word ((5, 10),) graph 63 edges 6 coefficient 3/128
+MATCH 5 word ((5, 12),) graph 58 edges 4 coefficient -1/64
+MATCH 5 word ((5, 40),) graph 126 edges 6 coefficient 1/128
+MATCH 5 word ((5, 41),) graph 221 edges 6 coefficient -1/128
+MATCH 5 word ((5, 76),) graph 495 edges 8 coefficient 1/128
+CENSUS n=6 tournaments=56 strong=35 connected_even=43 even_edges=23 odd_edges=20
+ALL CHECKS PASSED: 244

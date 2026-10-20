@@ -1,0 +1,7 @@
+independent Laplace determinant 1 1
+independent Laplace determinant 2 1
+independent Laplace determinant 3 -1/4
+independent Laplace determinant 4 1/64
+independent Laplace determinant 5 1/2199023255552
+Independent ordinary/signed product coefficients through n=10 PASS
+CHECKS 40 PASS
