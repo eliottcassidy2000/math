@@ -4,7 +4,7 @@
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
-**Oct 20:** [Geometry/arithmetic map](../05-knowledge/results/geometric_arithmetic_session_20261020/README.md). Completion, Collatz defects and inverse traces. [Prior maps](../05-knowledge/results/geometric_arithmetic_session_20261020/PUBLICATION_LEDGER.md#prior-session-maps).
+**Oct 20:** [Prime/symmetry map](../05-knowledge/results/prime_power_bijections_session_20261020/README.md). Equivariance, circulants and branch integrality. [Prior maps](../05-knowledge/results/prime_power_bijections_session_20261020/PUBLICATION_LEDGER.md#prior-session-maps).
 ## LRC(14)
 
 ### Headline

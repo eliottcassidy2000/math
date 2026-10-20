@@ -3,7 +3,7 @@
 **Rolling brief — 2026-09-06.**
 [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status.
 
-**Oct 20:** [Geometry/arithmetic map](../05-knowledge/results/geometric_arithmetic_session_20261020/README.md). Completion, Collatz defects and inverse traces. [Prior maps](../05-knowledge/results/geometric_arithmetic_session_20261020/PUBLICATION_LEDGER.md#prior-session-maps).
+**Oct 20:** [Prime/symmetry map](../05-knowledge/results/prime_power_bijections_session_20261020/README.md). Equivariance, circulants and branch integrality. [Prior maps](../05-knowledge/results/prime_power_bijections_session_20261020/PUBLICATION_LEDGER.md#prior-session-maps).
 
 ## The five-minute orientation
 
