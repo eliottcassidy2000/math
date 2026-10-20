@@ -1,0 +1,508 @@
+{
+  "fixed_path_audit": [
+    {
+      "prefix_order": 1,
+      "fixed_path_tilings": 1,
+      "blue_counts_by_step": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "prefix_order": 2,
+      "fixed_path_tilings": 1,
+      "blue_counts_by_step": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "prefix_order": 3,
+      "fixed_path_tilings": 2,
+      "blue_counts_by_step": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "prefix_order": 4,
+      "fixed_path_tilings": 8,
+      "blue_counts_by_step": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "prefix_order": 5,
+      "fixed_path_tilings": 64,
+      "blue_counts_by_step": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "prefix_order": 6,
+      "fixed_path_tilings": 1024,
+      "blue_counts_by_step": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "prefix_order": 7,
+      "fixed_path_tilings": 32768,
+      "blue_counts_by_step": [
+        2,
+        0,
+        2,
+        2
+      ]
+    }
+  ],
+  "all_class_existence": [
+    {
+      "prefix_order": 3,
+      "ordinary_classes": 2,
+      "successful_classes": 1,
+      "excluded_pure_endpoint": [
+        {
+          "prefix_code": 2,
+          "pure_source": true,
+          "pure_target": false,
+          "all_prefix_paths": 3
+        }
+      ],
+      "maximum_paths_tried": 1,
+      "hardest_witness": {
+        "prefix_code": 0,
+        "paths": [
+          [
+            2,
+            1,
+            0,
+            3,
+            6,
+            4,
+            5
+          ],
+          [
+            0,
+            1,
+            2,
+            6,
+            3,
+            5,
+            4
+          ],
+          [
+            3,
+            4,
+            5,
+            6,
+            2,
+            1,
+            0
+          ],
+          [
+            6,
+            5,
+            4,
+            3,
+            0,
+            1,
+            2
+          ]
+        ]
+      }
+    },
+    {
+      "prefix_order": 4,
+      "ordinary_classes": 4,
+      "successful_classes": 2,
+      "excluded_pure_endpoint": [
+        {
+          "prefix_code": 16,
+          "pure_source": false,
+          "pure_target": true,
+          "all_prefix_paths": 3
+        },
+        {
+          "prefix_code": 2,
+          "pure_source": true,
+          "pure_target": false,
+          "all_prefix_paths": 3
+        }
+      ],
+      "maximum_paths_tried": 1,
+      "hardest_witness": {
+        "prefix_code": 8,
+        "paths": [
+          [
+            0,
+            3,
+            2,
+            1,
+            4,
+            7,
+            5,
+            6
+          ],
+          [
+            1,
+            2,
+            3,
+            0,
+            7,
+            4,
+            6,
+            5
+          ],
+          [
+            4,
+            5,
+            6,
+            7,
+            0,
+            3,
+            2,
+            1
+          ],
+          [
+            7,
+            6,
+            5,
+            4,
+            1,
+            2,
+            3,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "prefix_order": 5,
+      "ordinary_classes": 12,
+      "successful_classes": 10,
+      "excluded_pure_endpoint": [
+        {
+          "prefix_code": 16,
+          "pure_source": false,
+          "pure_target": true,
+          "all_prefix_paths": 3
+        },
+        {
+          "prefix_code": 2,
+          "pure_source": true,
+          "pure_target": false,
+          "all_prefix_paths": 3
+        }
+      ],
+      "maximum_paths_tried": 4,
+      "hardest_witness": {
+        "prefix_code": 80,
+        "paths": [
+          [
+            1,
+            0,
+            4,
+            3,
+            2,
+            5,
+            8,
+            6,
+            7
+          ],
+          [
+            2,
+            3,
+            4,
+            0,
+            1,
+            8,
+            5,
+            7,
+            6
+          ],
+          [
+            5,
+            6,
+            7,
+            8,
+            1,
+            0,
+            4,
+            3,
+            2
+          ],
+          [
+            8,
+            7,
+            6,
+            5,
+            2,
+            3,
+            4,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "prefix_order": 6,
+      "ordinary_classes": 56,
+      "successful_classes": 54,
+      "excluded_pure_endpoint": [
+        {
+          "prefix_code": 16,
+          "pure_source": false,
+          "pure_target": true,
+          "all_prefix_paths": 3
+        },
+        {
+          "prefix_code": 2,
+          "pure_source": true,
+          "pure_target": false,
+          "all_prefix_paths": 3
+        }
+      ],
+      "maximum_paths_tried": 1,
+      "hardest_witness": {
+        "prefix_code": 8226,
+        "paths": [
+          [
+            0,
+            2,
+            3,
+            5,
+            4,
+            1,
+            6,
+            9,
+            7,
+            8
+          ],
+          [
+            1,
+            4,
+            5,
+            3,
+            2,
+            0,
+            9,
+            6,
+            8,
+            7
+          ],
+          [
+            6,
+            7,
+            8,
+            9,
+            0,
+            2,
+            3,
+            5,
+            4,
+            1
+          ],
+          [
+            9,
+            8,
+            7,
+            6,
+            1,
+            4,
+            5,
+            3,
+            2,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "prefix_order": 7,
+      "ordinary_classes": 456,
+      "successful_classes": 452,
+      "excluded_pure_endpoint": [
+        {
+          "prefix_code": 524304,
+          "pure_source": false,
+          "pure_target": true,
+          "all_prefix_paths": 9
+        },
+        {
+          "prefix_code": 524290,
+          "pure_source": true,
+          "pure_target": false,
+          "all_prefix_paths": 9
+        },
+        {
+          "prefix_code": 16,
+          "pure_source": false,
+          "pure_target": true,
+          "all_prefix_paths": 3
+        },
+        {
+          "prefix_code": 2,
+          "pure_source": true,
+          "pure_target": false,
+          "all_prefix_paths": 3
+        }
+      ],
+      "maximum_paths_tried": 1,
+      "hardest_witness": {
+        "prefix_code": 524834,
+        "paths": [
+          [
+            0,
+            2,
+            3,
+            4,
+            6,
+            5,
+            1,
+            7,
+            10,
+            8,
+            9
+          ],
+          [
+            1,
+            5,
+            6,
+            4,
+            3,
+            2,
+            0,
+            10,
+            7,
+            9,
+            8
+          ],
+          [
+            7,
+            8,
+            9,
+            10,
+            0,
+            2,
+            3,
+            4,
+            6,
+            5,
+            1
+          ],
+          [
+            10,
+            9,
+            8,
+            7,
+            1,
+            5,
+            6,
+            4,
+            3,
+            2,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "prefix_order": 8,
+      "ordinary_classes": 6880,
+      "successful_classes": 6878,
+      "excluded_pure_endpoint": [
+        {
+          "prefix_code": 16,
+          "pure_source": false,
+          "pure_target": true,
+          "all_prefix_paths": 3
+        },
+        {
+          "prefix_code": 2,
+          "pure_source": true,
+          "pure_target": false,
+          "all_prefix_paths": 3
+        }
+      ],
+      "maximum_paths_tried": 1,
+      "hardest_witness": {
+        "prefix_code": 67125794,
+        "paths": [
+          [
+            0,
+            2,
+            3,
+            4,
+            5,
+            7,
+            6,
+            1,
+            8,
+            11,
+            9,
+            10
+          ],
+          [
+            1,
+            6,
+            7,
+            5,
+            4,
+            3,
+            2,
+            0,
+            11,
+            8,
+            10,
+            9
+          ],
+          [
+            8,
+            9,
+            10,
+            11,
+            0,
+            2,
+            3,
+            4,
+            5,
+            7,
+            6,
+            1
+          ],
+          [
+            11,
+            10,
+            9,
+            8,
+            1,
+            6,
+            7,
+            5,
+            4,
+            3,
+            2,
+            0
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,514 @@
+{
+  "formal_R4_boundary_identities": [
+    {
+      "B": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "words": [
+        [
+          "A",
+          1,
+          2,
+          3,
+          0
+        ],
+        [
+          2,
+          "A",
+          1,
+          3,
+          0
+        ],
+        [
+          2,
+          "A",
+          0,
+          1,
+          3
+        ]
+      ],
+      "endpoint_differences": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -5
+        ],
+        [
+          -1,
+          6
+        ]
+      ]
+    },
+    {
+      "B": [
+        2,
+        12,
+        9,
+        1
+      ],
+      "words": [
+        [
+          "A",
+          2,
+          0,
+          1,
+          3
+        ],
+        [
+          1,
+          3,
+          "A",
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          3,
+          "A",
+          0
+        ]
+      ],
+      "endpoint_differences": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -4
+        ],
+        [
+          -1,
+          4
+        ]
+      ]
+    },
+    {
+      "B": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "words": [
+        [
+          "A",
+          1,
+          2,
+          3,
+          0
+        ],
+        [
+          3,
+          "A",
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          "A",
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3,
+          "A",
+          1
+        ],
+        [
+          2,
+          3,
+          "A",
+          0,
+          1
+        ]
+      ],
+      "endpoint_differences": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -5
+        ],
+        [
+          -1,
+          4
+        ],
+        [
+          1,
+          -4
+        ],
+        [
+          -1,
+          4
+        ]
+      ]
+    },
+    {
+      "B": [
+        6,
+        4,
+        8,
+        3
+      ],
+      "words": [
+        [
+          "A",
+          1,
+          2,
+          3,
+          0
+        ],
+        [
+          2,
+          "A",
+          1,
+          3,
+          0
+        ],
+        [
+          2,
+          "A",
+          0,
+          1,
+          3
+        ]
+      ],
+      "endpoint_differences": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -5
+        ],
+        [
+          -1,
+          5
+        ]
+      ]
+    },
+    {
+      "B": [
+        10,
+        4,
+        9,
+        2
+      ],
+      "words": [
+        [
+          "A",
+          1,
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          3,
+          "A",
+          1
+        ],
+        [
+          2,
+          3,
+          "A",
+          0,
+          1
+        ]
+      ],
+      "endpoint_differences": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -4
+        ],
+        [
+          -1,
+          4
+        ]
+      ]
+    }
+  ],
+  "formal_R5_boundary_identities": [
+    {
+      "B": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ],
+      "words": [
+        [
+          "A",
+          3,
+          0,
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          4,
+          "A",
+          3,
+          0
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          "A",
+          0
+        ]
+      ],
+      "endpoint_differences": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -5
+        ],
+        [
+          -1,
+          5
+        ]
+      ]
+    },
+    {
+      "B": [
+        18,
+        12,
+        9,
+        17,
+        6
+      ],
+      "words": [
+        [
+          "A",
+          0,
+          1,
+          3,
+          4,
+          2
+        ],
+        [
+          4,
+          "A",
+          0,
+          3,
+          2,
+          1
+        ],
+        [
+          2,
+          4,
+          "A",
+          0,
+          3,
+          1
+        ]
+      ],
+      "endpoint_differences": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -5
+        ],
+        [
+          -1,
+          5
+        ]
+      ]
+    },
+    {
+      "B": [
+        10,
+        20,
+        9,
+        18,
+        5
+      ],
+      "words": [
+        [
+          "A",
+          0,
+          1,
+          4,
+          2,
+          3
+        ],
+        [
+          4,
+          3,
+          "A",
+          0,
+          2,
+          1
+        ],
+        [
+          3,
+          "A",
+          0,
+          2,
+          4,
+          1
+        ]
+      ],
+      "endpoint_differences": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -5
+        ],
+        [
+          -1,
+          5
+        ]
+      ]
+    }
+  ],
+  "complete_blue_middle_controls": [
+    {
+      "family": "R4",
+      "middle_order": 0,
+      "blue_middle_presentations": 1,
+      "all_outer_presentation_certificates": 5,
+      "black_steps": 17
+    },
+    {
+      "family": "R4",
+      "middle_order": 1,
+      "blue_middle_presentations": 1,
+      "all_outer_presentation_certificates": 5,
+      "black_steps": 17
+    },
+    {
+      "family": "R4",
+      "middle_order": 2,
+      "blue_middle_presentations": 1,
+      "all_outer_presentation_certificates": 5,
+      "black_steps": 17
+    },
+    {
+      "family": "R4",
+      "middle_order": 3,
+      "blue_middle_presentations": 2,
+      "all_outer_presentation_certificates": 10,
+      "black_steps": 34
+    },
+    {
+      "family": "R4",
+      "middle_order": 4,
+      "blue_middle_presentations": 4,
+      "all_outer_presentation_certificates": 20,
+      "black_steps": 68
+    },
+    {
+      "family": "R4",
+      "middle_order": 5,
+      "blue_middle_presentations": 16,
+      "all_outer_presentation_certificates": 80,
+      "black_steps": 272
+    },
+    {
+      "family": "R4",
+      "middle_order": 6,
+      "blue_middle_presentations": 64,
+      "all_outer_presentation_certificates": 320,
+      "black_steps": 1088
+    },
+    {
+      "family": "R4",
+      "middle_order": 7,
+      "blue_middle_presentations": 512,
+      "all_outer_presentation_certificates": 2560,
+      "black_steps": 8704
+    },
+    {
+      "family": "R5",
+      "middle_order": 0,
+      "blue_middle_presentations": 1,
+      "all_outer_presentation_certificates": 3,
+      "black_steps": 9
+    },
+    {
+      "family": "R5",
+      "middle_order": 1,
+      "blue_middle_presentations": 1,
+      "all_outer_presentation_certificates": 3,
+      "black_steps": 9
+    },
+    {
+      "family": "R5",
+      "middle_order": 2,
+      "blue_middle_presentations": 1,
+      "all_outer_presentation_certificates": 3,
+      "black_steps": 9
+    },
+    {
+      "family": "R5",
+      "middle_order": 3,
+      "blue_middle_presentations": 2,
+      "all_outer_presentation_certificates": 6,
+      "black_steps": 18
+    },
+    {
+      "family": "R5",
+      "middle_order": 4,
+      "blue_middle_presentations": 4,
+      "all_outer_presentation_certificates": 12,
+      "black_steps": 36
+    },
+    {
+      "family": "R5",
+      "middle_order": 5,
+      "blue_middle_presentations": 16,
+      "all_outer_presentation_certificates": 48,
+      "black_steps": 144
+    },
+    {
+      "family": "R5",
+      "middle_order": 6,
+      "blue_middle_presentations": 64,
+      "all_outer_presentation_certificates": 192,
+      "black_steps": 576
+    },
+    {
+      "family": "R5",
+      "middle_order": 7,
+      "blue_middle_presentations": 512,
+      "all_outer_presentation_certificates": 1536,
+      "black_steps": 4608
+    }
+  ]
+}

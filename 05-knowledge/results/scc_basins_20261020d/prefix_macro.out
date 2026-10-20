@@ -1,0 +1,118 @@
+{
+  "fixed_path_audit": [
+    {
+      "prefix_order": 1,
+      "fixed_path_tilings": 1,
+      "blue_counts_by_step": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "prefix_order": 2,
+      "fixed_path_tilings": 1,
+      "blue_counts_by_step": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "prefix_order": 3,
+      "fixed_path_tilings": 2,
+      "blue_counts_by_step": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "prefix_order": 4,
+      "fixed_path_tilings": 8,
+      "blue_counts_by_step": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "prefix_order": 5,
+      "fixed_path_tilings": 64,
+      "blue_counts_by_step": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "prefix_order": 6,
+      "fixed_path_tilings": 1024,
+      "blue_counts_by_step": [
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "prefix_order": 7,
+      "fixed_path_tilings": 32768,
+      "blue_counts_by_step": [
+        2,
+        0,
+        2,
+        2
+      ]
+    }
+  ],
+  "all_class_existence": [
+    {
+      "prefix_order": 3,
+      "ordinary_classes": 2,
+      "successful_classes": 1,
+      "maximum_paths_tried": 1,
+      "excluded_classes": 1
+    },
+    {
+      "prefix_order": 4,
+      "ordinary_classes": 4,
+      "successful_classes": 2,
+      "maximum_paths_tried": 1,
+      "excluded_classes": 2
+    },
+    {
+      "prefix_order": 5,
+      "ordinary_classes": 12,
+      "successful_classes": 10,
+      "maximum_paths_tried": 4,
+      "excluded_classes": 2
+    },
+    {
+      "prefix_order": 6,
+      "ordinary_classes": 56,
+      "successful_classes": 54,
+      "maximum_paths_tried": 1,
+      "excluded_classes": 2
+    },
+    {
+      "prefix_order": 7,
+      "ordinary_classes": 456,
+      "successful_classes": 452,
+      "maximum_paths_tried": 1,
+      "excluded_classes": 4
+    },
+    {
+      "prefix_order": 8,
+      "ordinary_classes": 6880,
+      "successful_classes": 6878,
+      "maximum_paths_tried": 1,
+      "excluded_classes": 2
+    }
+  ]
+}
