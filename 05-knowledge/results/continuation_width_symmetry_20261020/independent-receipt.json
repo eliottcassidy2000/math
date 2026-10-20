@@ -1,0 +1,329 @@
+{
+  "checks": {
+    "all generated first-slack words have exact invariants": 75,
+    "class census integral": 7,
+    "factorization uses bounded skeleton": 33869,
+    "first nonzero slack exact class series": 7,
+    "first synchronized orbit transitive": 1,
+    "five-orbit slack exact class series": 7,
+    "fixed slack generating upper and lower bounds": 35,
+    "full permutation cycle index factors": 33869,
+    "full symmetry product order": 33869,
+    "group bound equality exact": 33868,
+    "group order paid by feedback": 33868,
+    "inductive multiplier inequality": 99,
+    "low absent slack values": 7,
+    "odd factorial entropy bound": 100,
+    "odd factorial strict boundary": 100,
+    "one and two marked port stabilizers factor": 738073,
+    "one marked triangle port fixes phase": 1,
+    "permutation cycles remain in marked domain": 349789,
+    "smooth-multiset DP equals response DP": 4,
+    "subset-zeta factorization exact": 256,
+    "synchronized triangle exact feedback and group": 1,
+    "triangle phases are locked": 1,
+    "triangle rotations": 1,
+    "unmarked triangle erases selected port": 1
+  },
+  "class_census": {
+    "0": {
+      "bounds": {
+        "0": {
+          "actual_classes": 1,
+          "upper": 1
+        },
+        "1": {
+          "actual_classes": 1,
+          "upper": 1
+        },
+        "2": {
+          "actual_classes": 1,
+          "upper": 1
+        },
+        "3": {
+          "actual_classes": 1,
+          "upper": 1
+        },
+        "4": {
+          "actual_classes": 1,
+          "upper": 1
+        }
+      },
+      "by_delta": {
+        "0": 1
+      },
+      "group_sizes": {
+        "1": 1
+      }
+    },
+    "1": {
+      "bounds": {
+        "0": {
+          "actual_classes": 1,
+          "upper": 1
+        },
+        "1": {
+          "actual_classes": 1,
+          "upper": 2
+        },
+        "2": {
+          "actual_classes": 1,
+          "upper": 2
+        },
+        "3": {
+          "actual_classes": 1,
+          "upper": 2
+        },
+        "4": {
+          "actual_classes": 1,
+          "upper": 2
+        }
+      },
+      "by_delta": {
+        "0": 1
+      },
+      "group_sizes": {
+        "1": 1
+      }
+    },
+    "2": {
+      "bounds": {
+        "0": {
+          "actual_classes": 1,
+          "upper": 1
+        },
+        "1": {
+          "actual_classes": 1,
+          "upper": 5
+        },
+        "2": {
+          "actual_classes": 1,
+          "upper": 5
+        },
+        "3": {
+          "actual_classes": 1,
+          "upper": 5
+        },
+        "4": {
+          "actual_classes": 1,
+          "upper": 5
+        }
+      },
+      "by_delta": {
+        "0": 1
+      },
+      "group_sizes": {
+        "1": 2
+      }
+    },
+    "3": {
+      "bounds": {
+        "0": {
+          "actual_classes": 2,
+          "upper": 2
+        },
+        "1": {
+          "actual_classes": 2,
+          "upper": 11
+        },
+        "2": {
+          "actual_classes": 2,
+          "upper": 19
+        },
+        "3": {
+          "actual_classes": 2,
+          "upper": 19
+        },
+        "4": {
+          "actual_classes": 2,
+          "upper": 19
+        }
+      },
+      "by_delta": {
+        "0": 2
+      },
+      "group_sizes": {
+        "1": 6,
+        "3": 2
+      }
+    },
+    "4": {
+      "bounds": {
+        "0": {
+          "actual_classes": 3,
+          "upper": 3
+        },
+        "1": {
+          "actual_classes": 3,
+          "upper": 21
+        },
+        "2": {
+          "actual_classes": 3,
+          "upper": 117
+        },
+        "3": {
+          "actual_classes": 4,
+          "upper": 117
+        },
+        "4": {
+          "actual_classes": 4,
+          "upper": 117
+        }
+      },
+      "by_delta": {
+        "0": 3,
+        "3": 1
+      },
+      "group_sizes": {
+        "1": 48,
+        "3": 16
+      }
+    },
+    "5": {
+      "bounds": {
+        "0": {
+          "actual_classes": 4,
+          "upper": 4
+        },
+        "1": {
+          "actual_classes": 4,
+          "upper": 41
+        },
+        "2": {
+          "actual_classes": 4,
+          "upper": 441
+        },
+        "3": {
+          "actual_classes": 8,
+          "upper": 1465
+        },
+        "4": {
+          "actual_classes": 9,
+          "upper": 1465
+        }
+      },
+      "by_delta": {
+        "0": 4,
+        "3": 4,
+        "4": 1,
+        "6": 3
+      },
+      "group_sizes": {
+        "1": 840,
+        "3": 160,
+        "5": 24
+      }
+    },
+    "6": {
+      "bounds": {
+        "0": {
+          "actual_classes": 6,
+          "upper": 6
+        },
+        "1": {
+          "actual_classes": 6,
+          "upper": 78
+        },
+        "2": {
+          "actual_classes": 6,
+          "upper": 1230
+        },
+        "3": {
+          "actual_classes": 16,
+          "upper": 40142
+        },
+        "4": {
+          "actual_classes": 18,
+          "upper": 40142
+        }
+      },
+      "by_delta": {
+        "0": 6,
+        "3": 10,
+        "4": 2,
+        "6": 21,
+        "9": 15,
+        "12": 2
+      },
+      "group_sizes": {
+        "1": 29520,
+        "3": 2880,
+        "5": 288,
+        "9": 80
+      }
+    }
+  },
+  "kernel_dp": [
+    {
+      "N": 12,
+      "response_peak": 13,
+      "smooth_multiset_peak": 43
+    },
+    {
+      "N": 24,
+      "response_peak": 46,
+      "smooth_multiset_peak": 157
+    },
+    {
+      "N": 40,
+      "response_peak": 130,
+      "smooth_multiset_peak": 421
+    },
+    {
+      "N": 60,
+      "response_peak": 420,
+      "smooth_multiset_peak": 931
+    }
+  ],
+  "low_slack": {
+    "first_slack_samples": 75,
+    "synchronized_hostile": {
+      "adjacency": [
+        10,
+        20,
+        33,
+        22,
+        37,
+        11
+      ],
+      "automorphisms": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          0,
+          4,
+          5,
+          3
+        ],
+        [
+          2,
+          0,
+          1,
+          5,
+          3,
+          4
+        ]
+      ],
+      "feedback": 4,
+      "order": [
+        5,
+        3,
+        1,
+        4,
+        2,
+        0
+      ]
+    }
+  },
+  "main_checker_sha256": "b1eaccb3c0607362c9f3e81a8cb41f897faeac6a834b766408eb9c8fb1bc6f78",
+  "status": "FINITE-EXACT, separate representations by same agent",
+  "total_checks": 1257908
+}

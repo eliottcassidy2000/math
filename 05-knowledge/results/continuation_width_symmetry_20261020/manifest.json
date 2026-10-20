@@ -1,0 +1,30 @@
+{
+  "base_commit": "d9674b6a00cff95d50bc4fc33a5c35661a2dad95",
+  "dependencies": {
+    "05-knowledge/results/defect_boundary_20261020/sparse_theory.md": "131f05f3e65032466a430a2eeebd6b456519916dc5250884d11962be788f309a",
+    "05-knowledge/results/tournament_future_boundary_20261020/README.md": "a01aa678ff7741d3153de9a893084bbd4373396b0dbc932226ed804d3554b685",
+    "05-knowledge/results/tournament_future_boundary_20261020/receipt.json": "28a3133a6f4d1a27e7819258731850e8722b6063146fc63598ca3907da920fbc",
+    "05-knowledge/results/tournament_future_boundary_20261020/verify.py": "3bd5b74354809c8ed365163d3c08281a25c796ee2a06e9ef177ca301f65612e4"
+  },
+  "files": {
+    "AUDIT.md": "ae07221dfc6647320912964d7f18ff7acf4ea2bc0901fa81dce625e73aafd64b",
+    "README.md": "348ac050570a47b7c044cae507cff1e355d5d7ddf931a427d9c54b7d7508226d",
+    "incoming.md": "016b6e7e2889a5e2441429f9121ffeae571f22ab02282f73ccdd5141d433e7e7",
+    "independent-receipt.json": "a046485aca49b7b530cc52d7605c1dec8b3e38c220847e16b681e11a8d399dec",
+    "independent_controls.py": "82d540f520268ddd11992c2b3bc8114e9ed8f6cfd37b36d28d50addf09860af7",
+    "receipt.json": "a3cf2ab3d8fd9a40f72d1887adc5e2249c6a30c123ea663e98c934318e736b81",
+    "verify.py": "b1eaccb3c0607362c9f3e81a8cb41f897faeac6a834b766408eb9c8fb1bc6f78"
+  },
+  "incoming_read_through": "cb2874b2e7",
+  "literature": {
+    "checked": "2026-10-20",
+    "prime_count": "https://dlmf.nist.gov/27.2.E3"
+  },
+  "validation": {
+    "independent_agent_audit": false,
+    "main_checks": 360949,
+    "normal_optimized": "byte-identical for both scripts",
+    "separate_checks": 1257908,
+    "total_checks": 1618857
+  }
+}
