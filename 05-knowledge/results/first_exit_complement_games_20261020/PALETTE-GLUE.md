@@ -3,7 +3,7 @@
 **PROVED elementary composition lemma; FINITE-EXACT placement.** This
 integrates incoming commit411c1fd35a's
 [six-colour palette gate](../kernels_games_detours_20261020f/forcing.md).
-The16-point gate and its nine port triples are that packet's result;
+The16-point gate and its nine ports in three triples are that packet's result;
 they are not independently invented here. The new object is an exact
 two-copy composition preserving all first-copy ports.
 
@@ -97,6 +97,39 @@ The entire construction also remains in the known four-colour carrier.
 Further work must change both the available context and the relevant
 carrier while retaining the actual input relation. Replacing triples
 by abstract shared colour names would discard that obligation.
+
+## Incoming pinned-stress criterion: the hinged gate is sharp
+
+Incoming commit b9cc570666's
+[pinned-stress theorem, section3](../strong_blue_games_20261020f/six_colour.md)
+gives, for a vertex-minimal exterior failing a prescribed six-colouring,
+
+    sigma_B >= ceil((2h+2a-t)/2),
+
+where h is the number of exterior vertices, a the number of incident
+port edges, and t the sum of the numbers of distinct forbidden colours
+at exterior vertices. This uses the pinned matrix, with all actual port
+positions fixed, rather than the unpinned stress space.
+
+Apply it to our19-point hinged wheels with the two hubs as exterior and
+all17 other vertices as ports. Choose a proper boundary assignment with
+both available masks the same singleton. Such assignments are explicitly
+certified in `geometry-games.json`. Each hub then sees five distinct
+colours on its six rim neighbours. Thus h=2, e=1, a=12, t=10. The exterior
+is vertex-minimal: deleting either hub leaves the other its allowed
+colour, while the hub edge prevents the two equal choices together.
+
+There are e+a=13 pinned rows and four free coordinate columns. Two
+nonparallel rim edges at each hub give four independent rows, supported
+in disjoint pairs of columns, so the rank is exactly4. Hence
+
+    sigma_B=13-4=9=ceil((4+24-10)/2).
+
+The repeated forbidden colour at each six-cycle is essential to the
+sharp count: the coarser bound h+ceil(a/2) gives only8. This is a new
+application of the incoming theorem to our earlier gadget, not a new
+stress inequality. It does not turn externally prescribed colours into
+an unconditional forcing context: the full graph is still four-chromatic.
 
 Reproduce `python3 palette_glue.py`; `python3 -O` gives identical output.
 The receipt is `palette-glue.json`, with exact points, all edges, the

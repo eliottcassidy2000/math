@@ -17,13 +17,14 @@
     "05-knowledge/results/kernels_games_detours_20261020f/forcing_check.py": "7ba05ba6c6b17bd001059b34ecb49a005e1d4367420e2ab2dbf2504dff9fb986",
     "05-knowledge/results/kernels_games_detours_20261020f/game.md": "dc7acfe83974cb4dbc8b760e07385c6a14440e8e80e2ba537a7211e708d07bf0",
     "05-knowledge/results/kernels_games_detours_20261020f/walks_knots.md": "ef0670192a754af7477ead0a6b92ef5572795bc5049a220b7ce15a88f7d733b5",
-    "05-knowledge/results/spectrum_basins_20261020e/README.md": "a8b722dd97f364514512abddaa6a1bbb26f62ae1c27a2178e0e1e217e6dd1403",
-    "05-knowledge/results/spectrum_basins_20261020e/arithmetic_interaction.md": "cfbb8ef8306c9c359dd4ce0f53604dc28babb5742c4adc56adacb565ca4609db"
+    "05-knowledge/results/spectrum_basins_20261020e/README.md": "a4461ec98cd54c98279777631db39a44c25c6d5db4b0e1999ebde5a640c1b310",
+    "05-knowledge/results/spectrum_basins_20261020e/arithmetic_interaction.md": "cfbb8ef8306c9c359dd4ce0f53604dc28babb5742c4adc56adacb565ca4609db",
+    "05-knowledge/results/strong_blue_games_20261020f/six_colour.md": "30d7894841d91c4f912a9c6e500a3517b3ff7fd1d0f2d787cf00d104384f0e65"
   },
   "files": {
-    "AUDIT.md": "8fce9ec5d15cef66aac7dfdcf0d0690a4c02c846ba2375463956e427cff985aa",
-    "INHERITANCE.md": "6c4c4dec432885fe1f286ce7e988c7c535903349386eac2f35254aacdc905bf6",
-    "PALETTE-GLUE.md": "8634a01fe30afaa406708bf55acfff5714039d99aabcad6f47ce3293b191e54c",
+    "AUDIT.md": "6a8d54dbeb2733e1be15ca312c9c3a40b5256db0906b80a053e99d9d143e018a",
+    "INHERITANCE.md": "c70dbe5b2fec5fb487d33818ca6020e42a91eae5176c86b35808ee321f520049",
+    "PALETTE-GLUE.md": "3e996d47377ba3da6c9c39e94dfa396c8b4a4f06c49766a4fa8bf6e6a3d67149",
     "README.md": "d6a5900183b50c247888b162cf2fab8ac7e12ba7eff24389281d8b2f009f0c56",
     "charge_scout.cpp": "eabe860818a497f569a2b00b53ec3fa66dcf05cbab74a96ef2abc0cd90ef4a76",
     "coarse-charge.json": "b785a96693606b81366d2989e37c8903a7cec8e7050389fee22fa101c4a44972",
@@ -38,6 +39,6 @@
     "symbolic-charge.json": "c2da12eb0c7cd81c267d67438d4ba913f4945b5ab04eb844615ccf8a868b02df",
     "symbolic_charge.py": "358b73fbee5feb8a55f303a141d8bf3a3d559712866d7ed708953cc34dcc9309"
   },
-  "integration_commit": "9b4ae20adc7167dcbae10cf3f84775fbd0cb0e49",
+  "integration_commit": "b9cc57066630803437f8dbb150c599ef41bbdd02",
   "status": "same-agent review; exact receipts plus separately marked numerical scout"
 }

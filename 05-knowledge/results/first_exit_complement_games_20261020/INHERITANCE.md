@@ -146,6 +146,16 @@ Hamilton-path counts or Euler lengths with topological winding numbers.
 
 ## Remaining questions ranked by consequence
 
+Final incoming pass through b9cc570666 read the strong-blue successor's
+README, pinned-stress proof and boundary-transport identities. Its
+two-block repairs and role-exchanging boundary hubs strengthen the
+tournament lane without establishing a Collatz map. The source spectrum
+packet now routes to this successor; its earlier statements are unchanged.
+The sharper pinned-stress bound applies exactly to our two-hub gate:
+h=2, a=12, t=10 and sigma_B=9. The derivation in PALETTE-GLUE.md retains
+all17 port positions and counts repeated forbidden colours. This adds
+a quantitative geometric screen, not global six-colour forcing.
+
 1. At first coefficient crossing, can the least source r satisfy
    `r<=R(w)`? The symbolic certificate rules it out through18; the
    analytic cone rules it out for `m<=4 log r`, r>=65536. The unrestricted

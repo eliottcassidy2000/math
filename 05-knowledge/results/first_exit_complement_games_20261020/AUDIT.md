@@ -115,3 +115,12 @@ finite range: arbitrary first-exit depth and universal entry remain
 uncontrolled. Geometry still needs a further carrier escape and a
 forcing context. The graph game, in the stated interpretation, is closed
 for existence in all four variants.
+
+The final incoming stress application is analytic: the existing exact
+edge receipt gives the two-hub exterior h=2,e=1,a=12, and each displayed
+singleton-mask rim has five distinct colours. The four-column pinned
+rank proof uses two nonparallel original rim edges at each hub; it
+requires no generic-position assumption. Minimality is checked by
+deleting either hub. The resulting nine stresses attain the sharper
+incoming bound, whereas the coarser bound is eight. This review is by
+the same agent and does not claim a fresh independent audit.
