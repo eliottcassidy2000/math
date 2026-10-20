@@ -196,6 +196,8 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
+- [Metagraph growth](../05-knowledge/results/metagraph_growth_20261020/README.md): exact uniform roots and complement correction; inherited additive phase; finite n7 census. Compact all-size class recurrence OPEN.
+
 ### Reliable structural toolkit
 
 - [Cubic bound](../05-knowledge/results/continuing15_20260909_universal_cubic_bound.md): all weights.

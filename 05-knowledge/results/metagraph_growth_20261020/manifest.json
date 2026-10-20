@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-20",
+  "hash_basis": "CRLF normalized to LF; excludes manifest and caches",
+  "sha256": {
+    "audit.out": "23f61e638c898fee0414494ceebd58808654578b22359cbf13c36b5dd38d4f63",
+    "audit.py": "b9fc4b3ca9f644d3b730ca9176eca16c2333726c3f605c1f68fca5db1f562307",
+    "enumeration.md": "3b2234f6e36a18bafa516d362e733987c9f8a8671df7492344189dfbc9bb4cfe",
+    "enumeration.out": "a8df122d2295e8a009775c21a79dc9022614147a3236fb465f6400c6068aeb82",
+    "enumeration.py": "3cbb610596bb4430af69924ba991ed11efc67d7ccee4a93b318cd7b638bc3d26",
+    "growth.md": "c9ebc66dbef5268602c2d1fd5ce01503363b4c41baeb1458b8bfd76180cacc1c",
+    "growth_check.out": "a07ff82f53ae84ef804895b2f18018241550afb3e44480dcb22d66add3238860",
+    "growth_check.py": "583ae12878d6a7420ccdf695c80c003199bffff172a8a107085ed3b499274d96",
+    "README.md": "937484faf60216ee1f7710e655e5415d268cd74f6ccb7adafcf88976b2b01c2c",
+    "VALIDATION.md": "68bbe93504b02ae3ad4e5b4ea08399d89d35c2fffb9eb2c70b5fe9908bed7e98"
+  }
+}

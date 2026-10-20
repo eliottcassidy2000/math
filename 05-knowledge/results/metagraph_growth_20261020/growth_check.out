@@ -1,0 +1,17 @@
+FINITE-EXACT: canonical transitive inflation and path growth.
+All labelled tournaments through n=5: module controls = 1099
+n = 1 classes = 1 chain-gcd histogram = {1: 1}
+n = 2 classes = 1 chain-gcd histogram = {2: 1}
+n = 3 classes = 2 chain-gcd histogram = {1: 1, 3: 1}
+n = 4 classes = 4 chain-gcd histogram = {1: 3, 4: 1}
+n = 5 classes = 12 chain-gcd histogram = {1: 11, 5: 1}
+n = 6 classes = 56 chain-gcd histogram = {1: 54, 2: 1, 6: 1}
+Path presentations with k=2,3: exact inflation checks = 152
+Independent full-permutation class representatives checked = 76
+Hostile tau(D2(T2)): chain lengths (4) -> (1,1,2); tau exits doubling image.
+C3 and D2(C3) (Hamilton paths, automorphisms, fibre): [(3, 3, 1), (45, 3, 15)]
+Same block word ABBCCA, tau-partner scores: [[2, 2, 2, 3, 3, 3], [1, 2, 2, 3, 3, 4]]
+Block-run multinomial versus independent HP subset-DP controls = 16
+Hostile endpoint deletion: one order-four class -> transitive and cyclic triples.
+Inherited Mode-B per-parent colour controls (target n=5..7) = 33856
+PASS: all checks active under normal and optimized Python.

@@ -1,0 +1,7 @@
+Exact packet audit; no lane output is rewritten.
+enumeration normal = optimized = retained stdout; LF SHA256 a8df122d2295e8a009775c21a79dc9022614147a3236fb465f6400c6068aeb82
+growth_check normal = optimized = retained stdout; LF SHA256 a07ff82f53ae84ef804895b2f18018241550afb3e44480dcb22d66add3238860
+Independent full-labelled/full-permutation counts n1..4: [1, 1, 2, 4]
+Minimal n4 two-rib triangle self-converse flags: [True, False, True]
+Gap-graph hostile: two isomorphic transitive gap triples suspend to different merged n4 nodes.
+PASS: scoped algebra/finite controls; no all-size compressed class recurrence asserted.

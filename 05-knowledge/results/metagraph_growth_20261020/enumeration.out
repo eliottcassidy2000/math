@@ -1,0 +1,79 @@
+EXACT UNIVERSE: all tournament classes and all fixed-path tilings, n=1..7.
+BFS uses single-arc flips; no Burnside sum. Canonicalization retains all arcs.
+
+n=1: classes=1, SC=1, merged=1, merged_pairs=0, tilings=1, BFS_arc_calls=0
+unmerged fibre histogram: [(1, 1)]
+merged (fibre,blue) histogram: [((1, 1), 1)]
+tau-not-functional merged-target witness: none
+same eight local coordinates/different neighbour-profile pairs: 0
+same eight coordinates plus H,Aut/different neighbour-profile pairs: 0
+
+n=2: classes=1, SC=1, merged=1, merged_pairs=0, tilings=1, BFS_arc_calls=1
+unmerged fibre histogram: [(1, 1)]
+merged (fibre,blue) histogram: [((1, 1), 1)]
+tau-not-functional merged-target witness: none
+same eight local coordinates/different neighbour-profile pairs: 0
+same eight coordinates plus H,Aut/different neighbour-profile pairs: 0
+
+n=3: classes=2, SC=2, merged=2, merged_pairs=0, tilings=2, BFS_arc_calls=6
+unmerged fibre histogram: [(1, 2)]
+merged (fibre,blue) histogram: [((1, 1), 2)]
+blue/black lines: 1 0
+tau-not-functional merged-target witness: none
+same eight local coordinates/different neighbour-profile pairs: 0
+same eight coordinates plus H,Aut/different neighbour-profile pairs: 0
+
+n=4: classes=4, SC=2, merged=3, merged_pairs=1, tilings=8, BFS_arc_calls=24
+unmerged fibre histogram: [(1, 3), (5, 1)]
+merged (fibre,blue) histogram: [((1, 1), 1), ((2, 0), 1), ((5, 3), 1)]
+blue/black lines: 2 2
+tau-not-functional merged-target witness: {'source_class': 16803, 'rows': (4, 1, 10, 3), 'tiling_target_pairs': [(0, 311), (1, 1427)]}
+same eight local coordinates/different neighbour-profile pairs: 0
+same eight coordinates plus H,Aut/different neighbour-profile pairs: 0
+
+n=5: classes=12, SC=8, merged=10, merged_pairs=2, tilings=64, BFS_arc_calls=120
+unmerged fibre histogram: [(1, 4), (3, 1), (5, 3), (9, 2), (11, 1), (13, 1)]
+merged (fibre,blue) histogram: [((1, 1), 2), ((2, 0), 1), ((3, 3), 1), ((5, 1), 1), ((9, 1), 1), ((9, 3), 1), ((10, 0), 1), ((11, 3), 1), ((13, 3), 1)]
+blue/black lines: 8 24
+tau-not-functional merged-target witness: {'source_class': 4237927, 'rows': (4, 1, 10, 19, 7), 'tiling_target_pairs': [(0, 36079), (3, 298663)]}
+same eight local coordinates/different neighbour-profile pairs: 0
+same eight coordinates plus H,Aut/different neighbour-profile pairs: 0
+
+n=6: classes=56, SC=12, merged=34, merged_pairs=22, tilings=1024, BFS_arc_calls=840
+unmerged fibre histogram: [(1, 6), (3, 2), (5, 5), (9, 6), (11, 4), (13, 2), (15, 4), (17, 2), (19, 2), (23, 4), (25, 2), (29, 4), (31, 2), (33, 3), (37, 5), (41, 1), (43, 2)]
+merged (fibre,blue) histogram: [((1, 1), 2), ((2, 0), 2), ((5, 3), 1), ((6, 0), 1), ((10, 0), 2), ((15, 3), 1), ((15, 9), 1), ((17, 5), 2), ((18, 0), 3), ((22, 0), 2), ((26, 0), 1), ((29, 7), 2), ((30, 0), 1), ((33, 7), 1), ((37, 7), 1), ((38, 0), 1), ((41, 9), 1), ((46, 0), 2), ((50, 0), 1), ((58, 0), 1), ((62, 0), 1), ((66, 0), 1), ((74, 0), 2), ((86, 0), 1)]
+blue/black lines: 32 480
+tau-not-functional merged-target witness: {'source_class': 2485531479, 'rows': (2, 20, 9, 35, 13, 23), 'tiling_target_pairs': [(4, 286030671), (6, 94712283)]}
+same eight local coordinates/different neighbour-profile pairs: 0
+same eight coordinates plus H,Aut/different neighbour-profile pairs: 0
+
+n=7: classes=456, SC=88, merged=272, merged_pairs=184, tilings=32768, BFS_arc_calls=9576
+unmerged fibre histogram: [(1, 9), (3, 3), (5, 9), (9, 11), (11, 8), (13, 3), (15, 10), (17, 7), (19, 6), (23, 14), (25, 8), (27, 4), (29, 10), (31, 6), (33, 10), (35, 2), (37, 13), (39, 2), (41, 10), (43, 7), (45, 5), (47, 2), (49, 7), (51, 5), (53, 5), (55, 4), (57, 3), (59, 8), (61, 1), (65, 11), (67, 6), (69, 6), (71, 7), (73, 8), (75, 5), (77, 10), (79, 5), (81, 11), (83, 7), (85, 1), (87, 1), (89, 14), (91, 15), (93, 7), (95, 5), (97, 6), (99, 2), (101, 10), (103, 10), (105, 4), (109, 14), (111, 9), (113, 4), (115, 7), (117, 7), (121, 4), (123, 7), (125, 1), (127, 1), (129, 6), (131, 8), (133, 6), (135, 5), (137, 6), (139, 6), (141, 3), (143, 3), (145, 2), (147, 1), (151, 5), (153, 3), (155, 1), (157, 1), (159, 3)]
+merged (fibre,blue) histogram: [((1, 1), 3), ((2, 0), 3), ((3, 3), 1), ((5, 1), 1), ((6, 0), 1), ((9, 1), 1), ((9, 3), 2), ((10, 0), 4), ((11, 3), 2), ((13, 3), 1), ((17, 1), 1), ((18, 0), 4), ((22, 0), 3), ((25, 5), 1), ((25, 9), 1), ((26, 0), 1), ((27, 3), 2), ((30, 0), 5), ((31, 5), 2), ((33, 1), 1), ((33, 7), 1), ((34, 0), 3), ((37, 7), 1), ((38, 0), 3), ((41, 1), 1), ((41, 5), 1), ((43, 7), 1), ((45, 1), 1), ((45, 7), 2), ((46, 0), 7), ((49, 5), 1), ((50, 0), 3), ((51, 7), 1), ((53, 7), 1), ((54, 0), 1), ((57, 9), 1), ((58, 0), 5), ((61, 7), 1), ((62, 0), 2), ((65, 3), 1), ((65, 5), 1), ((65, 7), 1), ((66, 0), 4), ((67, 5), 2), ((69, 5), 2), ((70, 0), 1), ((71, 7), 1), ((74, 0), 6), ((75, 7), 1), ((77, 7), 2), ((78, 0), 1), ((79, 5), 1), ((81, 7), 1), ((82, 0), 4), ((83, 7), 1), ((85, 7), 1), ((86, 0), 3), ((87, 7), 1), ((90, 0), 1), ((91, 5), 1), ((93, 1), 1), ((93, 3), 1), ((93, 7), 1), ((94, 0), 1), ((95, 7), 1), ((98, 0), 3), ((102, 0), 2), ((105, 7), 2), ((106, 0), 2), ((110, 0), 2), ((111, 3), 1), ((114, 0), 1), ((115, 7), 1), ((117, 3), 1), ((117, 5), 1), ((117, 9), 1), ((118, 0), 4), ((123, 7), 1), ((125, 9), 1), ((127, 5), 1), ((129, 9), 2), ((130, 0), 4), ((133, 7), 1), ((133, 9), 1), ((134, 0), 2), ((135, 9), 1), ((137, 7), 1), ((137, 9), 1), ((138, 0), 2), ((139, 7), 1), ((139, 9), 1), ((141, 5), 1), ((141, 7), 2), ((142, 0), 3), ((143, 5), 1), ((145, 7), 1), ((145, 9), 1), ((146, 0), 4), ((147, 9), 1), ((150, 0), 2), ((151, 9), 3), ((153, 9), 1), ((154, 0), 4), ((155, 7), 1), ((157, 9), 1), ((158, 0), 2), ((159, 7), 2), ((159, 9), 1), ((162, 0), 5), ((166, 0), 3), ((178, 0), 7), ((182, 0), 7), ((186, 0), 2), ((190, 0), 2), ((194, 0), 3), ((198, 0), 1), ((202, 0), 5), ((206, 0), 5), ((210, 0), 1), ((218, 0), 7), ((222, 0), 4), ((226, 0), 2), ((230, 0), 3), ((234, 0), 2), ((242, 0), 2), ((246, 0), 3), ((258, 0), 2), ((262, 0), 4), ((266, 0), 2), ((270, 0), 2), ((274, 0), 2), ((278, 0), 2), ((286, 0), 1), ((302, 0), 1), ((306, 0), 1)]
+blue/black lines: 256 16128
+tau-not-functional merged-target witness: {'source_class': 9485777333151, 'rows': (2, 20, 9, 35, 13, 87, 31), 'tiling_target_pairs': [(4, 43769916831), (6, 37487232951)]}
+same eight local coordinates/different neighbour-profile pairs: 9
+same eight coordinates plus H,Aut/different neighbour-profile pairs: 9
+line-profile witness: {'signature': (38, 0, 0, 38, 0, 0, 16, 20), 'u': 182844517791, 'v': 310221850551, 'rows_u': (0, 5, 41, 19, 7, 91, 31), 'rows_v': (0, 9, 3, 85, 39, 15, 55), 'HA_u': (19, 1), 'HA_v': (19, 1)}
+profile u: [((1, (41, 5, 5, 36, 0, 0, 20, 12)), 2), ((1, (74, 0, 0, 74, 0, 0, 30, 19)), 2), ((1, (78, 0, 0, 78, 0, 0, 34, 19)), 2), ((1, (90, 0, 0, 86, 0, 2, 39, 20)), 2), ((1, (91, 5, 5, 86, 0, 0, 41, 11)), 2), ((1, (98, 0, 0, 98, 0, 0, 46, 20)), 2), ((1, (102, 0, 0, 102, 0, 0, 42, 20)), 2), ((1, (117, 3, 3, 114, 0, 0, 53, 11)), 2), ((1, (134, 0, 0, 130, 0, 2, 51, 19)), 2), ((1, (138, 0, 0, 138, 0, 0, 56, 18)), 2), ((1, (150, 0, 0, 150, 0, 0, 59, 20)), 4), ((1, (154, 0, 0, 154, 0, 0, 64, 21)), 2), ((1, (158, 0, 0, 158, 0, 0, 62, 20)), 2), ((1, (162, 0, 0, 162, 0, 0, 61, 21)), 4), ((1, (162, 0, 0, 162, 0, 0, 70, 20)), 4), ((1, (198, 0, 0, 198, 0, 0, 76, 18)), 2)]
+profile v: [((1, (50, 0, 0, 50, 0, 0, 24, 10)), 2), ((1, (65, 5, 5, 60, 0, 0, 30, 12)), 2), ((1, (65, 7, 7, 58, 0, 0, 28, 12)), 2), ((1, (69, 5, 5, 64, 0, 0, 32, 12)), 2), ((1, (82, 0, 0, 82, 0, 0, 27, 19)), 2), ((1, (82, 0, 0, 82, 0, 0, 30, 19)), 2), ((1, (93, 1, 1, 92, 0, 0, 40, 11)), 2), ((1, (110, 0, 0, 110, 0, 0, 48, 19)), 2), ((1, (118, 0, 0, 118, 0, 0, 51, 19)), 2), ((1, (142, 0, 0, 142, 0, 0, 54, 20)), 4), ((1, (146, 0, 0, 146, 0, 0, 51, 20)), 2), ((1, (162, 0, 0, 158, 0, 2, 49, 21)), 6), ((1, (166, 0, 0, 162, 0, 2, 49, 21)), 2), ((1, (178, 0, 0, 178, 0, 0, 59, 21)), 2), ((1, (182, 0, 0, 182, 0, 0, 62, 21)), 4)]
+
+ONE-VERTEX EXTENSION PROBE: every 2^n incidence pattern, n=1..6.
+n=1: coarse extension-profile collision pairs=0, exact child-orbit profile collision pairs=0, plus H,Aut collisions=0, fibre,blue,H,Aut collisions=0
+n=2: coarse extension-profile collision pairs=0, exact child-orbit profile collision pairs=0, plus H,Aut collisions=0, fibre,blue,H,Aut collisions=0
+n=3: coarse extension-profile collision pairs=1, exact child-orbit profile collision pairs=1, plus H,Aut collisions=0, fibre,blue,H,Aut collisions=0
+extension-profile witness: {'signature': (1, 1, 1, 0, 0, 0, 1, 1), 'u': 11, 'v': 161, 'rows_u': (0, 1, 3), 'rows_v': (2, 4, 1)}
+child signatures u: [((1, 1, 1, 0, 0, 0, 1, 2), 4), ((2, 0, 0, 2, 0, 0, 1, 2), 2), ((5, 3, 1, 2, 1, 0, 2, 2), 2)]
+child signatures v: [((2, 0, 0, 2, 0, 0, 1, 2), 2), ((5, 3, 1, 2, 1, 0, 2, 2), 6)]
+n=4: coarse extension-profile collision pairs=0, exact child-orbit profile collision pairs=0, plus H,Aut collisions=0, fibre,blue,H,Aut collisions=0
+n=5: coarse extension-profile collision pairs=0, exact child-orbit profile collision pairs=0, plus H,Aut collisions=0, fibre,blue,H,Aut collisions=0
+n=6: coarse extension-profile collision pairs=0, exact child-orbit profile collision pairs=0, plus H,Aut collisions=0, fibre,blue,H,Aut collisions=6
+basic H/Aut extension witness: {'signature': (2, 0, 3, 3), 'rows_u': (0, 1, 3, 23, 39, 15), 'rows_v': (0, 1, 11, 19, 7, 31), 'child_distinct_u': 27, 'child_distinct_v': 27, 'local_u': (2, 0, 0, 2, 0, 0, 1, 5), 'local_v': (2, 0, 0, 2, 0, 0, 1, 6)}
+
+MINIMAL EXPLICIT HOSTILES:
+n4 tile order: ((0, 2), (0, 3), (1, 3))
+tau hostile t=0,1: rows (2, 4, 9, 3) (6, 4, 8, 3) isomorphism (1, 2, 3, 0) complement scores [0, 1, 2, 3] [0, 2, 2, 2]
+fixed-path append source tiling 0 scores [1, 1, 1] four children merged incidence profiles [((2, 0, 0, 2, 0, 0), 1), ((5, 3, 1, 2, 1, 0), 3)]
+fixed-path append source tiling 1 scores [0, 1, 2] four children merged incidence profiles [((1, 1, 1, 0, 0, 0), 1), ((2, 0, 0, 2, 0, 0), 1), ((5, 3, 1, 2, 1, 0), 2)]
+
+ALL CHECKS PASSED (explicit exceptions; active under python -O).
