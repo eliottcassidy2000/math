@@ -72,5 +72,17 @@ bound increases. The ordered joins of triangles show why simply declaring
 the anchor alphabet uniformly bounded cannot work. No efficient uniform
 transition or closed unrestricted scalar recurrence has been established.
 
+The final incoming [zero-heavy mass layers](../charge_palettes_boundary_20261020g/zero_heavy.md)
+give a complementary boundary at fixed weighted feedback-arc budget k:
+the maximum total weights are 2k^2+3k, or 2k^2+k for nontrivial strong cores.
+Near these maxima, complete weight words distinguish gap vertices from unit
+endpoints and make a perfect-matching quotient exact. When a gap becomes
+unit weight, that ownership proof stops. This is the same operational issue
+as our capped-chain hostile and exceptional product state: a small encoding
+works only while its decoder can still distinguish the boundary roles.
+The parameters differ, so neither slice contains the other. A useful joint
+next target is canonical ownership through the first unit-gap transition,
+tested against the full port-word representation rather than a mass alone.
+
 See [AUDIT.md](AUDIT.md) for the proof reviews, computational universes,
 correction lineage, source pins, and reproduction command.

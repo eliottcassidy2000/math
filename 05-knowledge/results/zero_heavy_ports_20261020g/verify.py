@@ -48,6 +48,7 @@ def inputs():
         "endpoint_two_repairs_20261020g/unified_check.json",
         "endpoint_two_repairs_20261020g/theory_unified_audit.py",
         "endpoint_two_repairs_20261020g/theory_unified_audit.json",
+        "charge_palettes_boundary_20261020g/zero_heavy.md",
     )]
     return sorted(set(own + deps))
 

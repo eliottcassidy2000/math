@@ -127,3 +127,12 @@ owner languages between growing anchor bounds; update endpoint tensors
 without losing quotient or clone ownership; and treat the next endpoint
 defect. Unrestricted A000568 compression and all-order black-core
 connectivity remain OPEN.
+
+The final clean rebase also integrated 70cb917742. Its
+[zero-heavy mass-layer proof](../charge_palettes_boundary_20261020g/zero_heavy.md)
+was read for the distinction between weighted arc budget, total mass and
+feedback-vertex number, and for the role of nonunit gap weights in its
+exact quotient. It is inherited work, not a newly independently certified
+computation in this packet. Its endpoint note's remaining-port statements
+predate the complete endpoint-two theorem and are superseded by the
+completion above; arbitrary black-core connectivity remains open.
