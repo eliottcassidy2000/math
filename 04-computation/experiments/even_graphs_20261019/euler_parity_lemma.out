@@ -1,0 +1,82 @@
+
+
+
+
+
+
+n = 5: Euler parity lemma: 24/24 pairs (P,h) OK; realisability: 0/0 OK
+  n=6 FAIL: P=Z3 type (3, 3), h=(3, 4, 5, 0, 1, 2), |G|=6: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(3, 4, 5, 1, 2, 0), |G|=6: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(3, 4, 5, 2, 0, 1), |G|=6: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(3, 5, 4, 0, 2, 1), |G|=6: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(3, 5, 4, 1, 0, 2), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(3, 5, 4, 2, 1, 0), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(4, 3, 5, 0, 2, 1), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(4, 3, 5, 1, 0, 2), |G|=6: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(4, 3, 5, 2, 1, 0), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(4, 5, 3, 0, 1, 2), |G|=6: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(4, 5, 3, 1, 2, 0), |G|=6: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(4, 5, 3, 2, 0, 1), |G|=6: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(5, 3, 4, 0, 1, 2), |G|=6: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(5, 3, 4, 1, 2, 0), |G|=6: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(5, 3, 4, 2, 0, 1), |G|=6: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(5, 4, 3, 0, 2, 1), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(5, 4, 3, 1, 0, 2), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3 type (3, 3), h=(5, 4, 3, 2, 1, 0), |G|=6: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(3, 4, 5, 0, 1, 2), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(3, 4, 5, 1, 2, 0), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(3, 4, 5, 2, 0, 1), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(3, 5, 4, 0, 2, 1), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(3, 5, 4, 1, 0, 2), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(3, 5, 4, 2, 1, 0), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(4, 3, 5, 0, 2, 1), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(4, 3, 5, 1, 0, 2), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(4, 3, 5, 2, 1, 0), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(4, 5, 3, 0, 1, 2), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(4, 5, 3, 1, 2, 0), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(4, 5, 3, 2, 0, 1), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(5, 3, 4, 0, 1, 2), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(5, 3, 4, 1, 2, 0), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(5, 3, 4, 2, 0, 1), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(5, 4, 3, 0, 2, 1), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(5, 4, 3, 1, 0, 2), |G|=18: no h-odd G-invariant Euler graph
+  n=6 FAIL: P=Z3xZ3 = <(012),(345)>, h=(5, 4, 3, 2, 1, 0), |G|=18: no h-odd G-invariant Euler graph
+n = 6: Euler parity lemma: 96/132 pairs (P,h) OK; realisability: 24/24 OK
+n = 7: Euler parity lemma: 284/284 pairs (P,h) OK; realisability: 134/134 OK
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(3, 4, 5, 0, 1, 2, 7, 6), |G|=6: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(3, 4, 5, 1, 2, 0, 7, 6), |G|=6: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(3, 4, 5, 2, 0, 1, 7, 6), |G|=6: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(3, 5, 4, 0, 2, 1, 7, 6), |G|=6: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(3, 5, 4, 1, 0, 2, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(3, 5, 4, 2, 1, 0, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(4, 3, 5, 0, 2, 1, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(4, 3, 5, 1, 0, 2, 7, 6), |G|=6: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(4, 3, 5, 2, 1, 0, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(4, 5, 3, 0, 1, 2, 7, 6), |G|=6: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(4, 5, 3, 1, 2, 0, 7, 6), |G|=6: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(4, 5, 3, 2, 0, 1, 7, 6), |G|=6: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(5, 3, 4, 0, 1, 2, 7, 6), |G|=6: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(5, 3, 4, 1, 2, 0, 7, 6), |G|=6: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(5, 3, 4, 2, 0, 1, 7, 6), |G|=6: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(5, 4, 3, 0, 2, 1, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(5, 4, 3, 1, 0, 2, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3 type (3, 3, 1, 1), h=(5, 4, 3, 2, 1, 0, 7, 6), |G|=6: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(3, 4, 5, 0, 1, 2, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(3, 4, 5, 1, 2, 0, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(3, 4, 5, 2, 0, 1, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(3, 5, 4, 0, 2, 1, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(3, 5, 4, 1, 0, 2, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(3, 5, 4, 2, 1, 0, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(4, 3, 5, 0, 2, 1, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(4, 3, 5, 1, 0, 2, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(4, 3, 5, 2, 1, 0, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(4, 5, 3, 0, 1, 2, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(4, 5, 3, 1, 2, 0, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(4, 5, 3, 2, 0, 1, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(5, 3, 4, 0, 1, 2, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(5, 3, 4, 1, 2, 0, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(5, 3, 4, 2, 0, 1, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(5, 4, 3, 0, 2, 1, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(5, 4, 3, 1, 0, 2, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+  n=8 FAIL: P=Z3xZ3 = <(012),(345)>, h=(5, 4, 3, 2, 1, 0, 7, 6), |G|=18: no h-odd G-invariant Euler graph
+n = 8: Euler parity lemma: 999/1035 pairs (P,h) OK; realisability: 720/720 OK

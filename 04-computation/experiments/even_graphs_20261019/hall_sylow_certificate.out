@@ -1,0 +1,9 @@
+overlap 1: |<c,d>| in [2520] -> all even: True
+overlap 2: |<c,d>| in [360] -> all even: True
+overlap 3: |<c,d>| in [60] -> all even: True
+n | tau_T(P3) tau_T(P5) | tau_E(P3) tau_E(P5) | |S| | |N(S)| <= | deficit >=
+5 | 4 1 | 4 1 | 5 | 4 | 1
+6 | 1 2 | 1 2 | 3 | 2 | 1
+7 | 4 4 | 4 4 | 8 | 7 | 1
+8 | 16 12 | 16 12 | 28 | 27 | 1
+9 | 1 48 | 1 48 | 49 | 48 | 1

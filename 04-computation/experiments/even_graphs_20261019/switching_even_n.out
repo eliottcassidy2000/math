@@ -1,0 +1,11 @@
+
+
+
+
+
+
+classes: 1024
+  P = Z5 type (5, 1): P-invariant classes (labelled) 4, tau_C = 1, tau_EE = 1 
+  P = Z3 type (3, 3): P-invariant classes (labelled) 16, tau_C = 3, tau_EE = 3 
+  P = Z3 type (3, 1, 1, 1): P-invariant classes (labelled) 16, tau_C = 2, tau_EE = 2 
+  P = Z3xZ3 = <(012),(345)>: P-invariant classes (labelled) 4, tau_C = 1, tau_EE = 1 

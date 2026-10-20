@@ -1,0 +1,22 @@
+
+=== n = 3: graphs 4, even 2 ===
+
+=== n = 4: graphs 11, even 4 ===
+
+=== n = 5: graphs 34, even 12 ===
+
+=== n = 6: graphs 156, even 56 ===
+
+=== n = 7: graphs 1044, even 456 ===
+
+=== n = 5 (scores must be = 0 mod 2) ===
+  P = Z5 type (5,) (|P|=5): tau_C = 1, tau_EE = 1, Euler types 3
+  P = Z3 type (3, 1, 1) (|P|=3): tau_C = 1, tau_EE = 1, Euler types 4
+
+=== n = 7 (scores must be = 1 mod 2) ===
+  P = Z7 type (7,) (|P|=7): tau_C = 2, tau_EE = 2, Euler types 4
+  P = Z5 type (5, 1, 1) (|P|=5): tau_C = 1, tau_EE = 1, Euler types 6
+  P = Z3 type (3, 3, 1) (|P|=3): tau_C = 3, tau_EE = 3, Euler types 12
+  P = Z3 type (3, 1, 1, 1, 1) (|P|=3): tau_C = 3, tau_EE = 3, Euler types 20
+  P = Z3xZ3 = <(012),(345)> (|P|=9): tau_C = 1, tau_EE = 1, Euler types 6
+  P = Z7:Z3 (AGL(1,7) odd part) (|P|=21): tau_C = 1, tau_EE = 1, Euler types 2

@@ -2,7 +2,10 @@
 id: HYP-9172
 title: "(a) For every n >= 5 there is no S_n-equivariant map from switching classes of tournaments to even (untwisted) Euler graphs that is bijective on isomorphism types, and none from tournaments to even graphs. (b) The THM-479 branch counts N_odd(n), N_lev(n) are integers for n = 0 (mod 4) by a combinatorial pairing, as Theorem B does for n = 2 (mod 4)"
 status: >
-  OPEN.
+  (a) PROVED for the tournament half at every n >= 5 and for the switching half at every odd n >= 5 by THM-4722
+  (2026-10-19, mac-mini: Sylow refinement THM-4721 + Jordan + the empty graph as a Hall violator); the switching half
+  at even n and (b) remain OPEN.
+  Original status: OPEN.
   (a) PROVED for 5 <= n <= 100 (switching classes) and for 5 <= n <= 15 plus 16 sporadic n <= 86 (tournaments) by
   block-lemma certificates (THM-4531). FINITE-EXACT exhaustive matchings for n <= 10 (deficits 1, 1, 2, 3, 4, 10) and
   n <= 9 (deficits 1, 2, 5, 12, 44). The certificate method needs additive representations n = b_1 + b_2 (n even) or
