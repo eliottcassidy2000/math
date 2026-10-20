@@ -1,0 +1,9 @@
+exact reduced-word identities, cutoff, duality and prefix cells: 2047
+independent subset-DP path checks: 127
+prefix independence and fixed-word counts: all lengths 2..12 PASS
+exact reduced-word mean: all lengths 3..12 PASS
+finite CDF distances by length: [(2, 0.863046217), (3, 0.675009073), (4, 0.544569326), (5, 0.303641236), (6, 0.178649514), (7, 0.136044239), (8, 0.068681878), (9, 0.042943495), (10, 0.027126863), (11, 0.014761912), (12, 0.007203985)]
+non-dyadic phase cancellation controls: 65
+exact two-length/all-cutoff error and spectrum-bound controls: 2080
+word-count ratios W(X)/X at X=16,32,...,1024: [(16, 0.5625), (32, 0.59375), (64, 0.671875), (128, 0.6796875), (256, 0.68359375), (512, 0.685546875), (1024, 0.692382812)]
+ALL CHECKS PASSED
