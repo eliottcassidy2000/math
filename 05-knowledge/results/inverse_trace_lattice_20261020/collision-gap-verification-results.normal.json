@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "checks": 192,
+  "automorphism_cases": [
+    {
+      "n": 2,
+      "m": 2,
+      "J": 1,
+      "omega_total_degree": 2
+    },
+    {
+      "n": 2,
+      "m": 2,
+      "J": -2,
+      "omega_total_degree": 2
+    },
+    {
+      "n": 2,
+      "m": 3,
+      "J": 1,
+      "omega_total_degree": 4
+    },
+    {
+      "n": 2,
+      "m": 3,
+      "J": -2,
+      "omega_total_degree": 4
+    },
+    {
+      "n": 3,
+      "m": 2,
+      "J": 1,
+      "omega_total_degree": 4
+    },
+    {
+      "n": 3,
+      "m": 2,
+      "J": -2,
+      "omega_total_degree": 4
+    },
+    {
+      "n": 3,
+      "m": 3,
+      "J": 1,
+      "omega_total_degree": 7
+    },
+    {
+      "n": 3,
+      "m": 3,
+      "J": -2,
+      "omega_total_degree": 7
+    },
+    {
+      "n": 4,
+      "m": 2,
+      "J": 1,
+      "omega_total_degree": 6
+    },
+    {
+      "n": 4,
+      "m": 2,
+      "J": -2,
+      "omega_total_degree": 6
+    },
+    {
+      "n": 4,
+      "m": 3,
+      "J": 1,
+      "omega_total_degree": 10
+    },
+    {
+      "n": 4,
+      "m": 3,
+      "J": -2,
+      "omega_total_degree": 10
+    }
+  ],
+  "controls": [
+    "non-Keller diagonal and extra RZ zeros",
+    "dominant nonsurjective unit-gap curve",
+    "surjective nonproper unit-gap curve",
+    "linear boundary roots"
+  ],
+  "scope": "Finite exact controls; no abstract hostile is claimed to be a Keller realization."
+}
