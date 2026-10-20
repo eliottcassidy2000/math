@@ -1,0 +1,1 @@
+{"k":3,"external_frames":64,"potential_prefixes":24,"subcube_updates":384,"sum_h":384,"sum_h_squared":2688,"max_h":9,"max_masks":[2,5,8,9,10,13,18,20,21,22,34,35,37,39],"histogram":{"1":6,"3":8,"5":12,"7":24,"9":14},"cross_sums_by_A":[44,44,60,44,44,60,44,44],"elapsed_seconds":2.5448e-05}
