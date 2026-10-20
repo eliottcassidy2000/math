@@ -1,0 +1,30 @@
+{
+  "files": {
+    "05-knowledge/results/blue_quotient_20261020b/n9_classes.tsv.gz": "959c2276c57108d55b56d4906edfbd761fb9737e708b14114d66dd4ad618db0c",
+    "05-knowledge/results/defect_boundary_20261020/sparse_count.py": "c7d09bd86dfe077f367c4c56df488c5d2c0efb23cb017da4016632e50ec539dd",
+    "05-knowledge/results/deficiency_three_20261020/ownership_check.py": "13ce47a0472d65cb6883a52584d557f25b01b11a09a850ae05c7c330f4734e0a",
+    "05-knowledge/results/metagraph_growth_20261020/enumeration.py": "3cbb610596bb4430af69924ba991ed11efc67d7ccee4a93b318cd7b638bc3d26",
+    "05-knowledge/results/metagraph_growth_20261020/growth_check.py": "583ae12878d6a7420ccdf695c80c003199bffff172a8a107085ed3b499274d96",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/README.md": "4546c041831503fbd1ecd827f83d7fed25cbd5cb9f65a777cb92b75271873d8c",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/VALIDATION.md": "2c8afe48639c64b2356cae010db2073de83edb458b8c76849d142083d6da669f",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/arithmetic.md": "e93362cec237337b207cda0775c3e7d90770c2cab7f59259e0bfbfeaf340b1fc",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/arithmetic_check.out": "7c8532f05d5028a3ab24db07029ef17459c893f099030458727561eace4c5b3b",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/arithmetic_check.py": "cc85e2d8d938f723e92504df26beca65f2d6c0f3036aea36fa7779b622d562c6",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/black.md": "639d4f1831dc62cc118ef7734808238f891bd74ce99592b4f3b6257f6980af2b",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/black_check.out": "0ed7e2f7f74adb77a87a47b78b9bcbf3765f3687869f393c350c4dcdea1c9ff0",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/black_check.py": "8e79fab4e01ff1911405c656d16733ff2aef04739f46376df018507f8139c3db",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/owners.md": "aeba0f2e4894e9b1d143425a492af7a493a98295b3ced1af7d10e1c978c4b58c",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/owners_check.out": "4381206b5cae5bef2b79e7efee5c8be8e54d3ae89fa7c71c683c993b22a78d5a",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/owners_check.py": "ae4636d3430b2a9ddee88dfc1a9b4d8bff6cb0bb35d8ea6a592b8cf1a830c1ae",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/owners_independent.out": "dbcd6b563e5615b3bfab473f843f6231be9ec670c29cee7032fe42330951e3d2",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/owners_independent.py": "ebab48ffe774bc82be9f58ecb1e4f1c1f78564d51fea5e7471a360482a06da88",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/regular.md": "0a7b21d247eeb5958e5c2d61493ee319938341cbc1e5179a6db5f27979dd2f29",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/regular_check.out": "cf92d5b83df0edc1749b879777eb0acbe215404b2da50ef9247bcb1ee571a7e9",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/regular_check.py": "9d03d229cd21d191eae1f176a9b6bfa72d3584efbd72715eb1b3ccb5141633fb",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum_check.out": "c2809a00594bbd35bbeca17fbcc1d9564c805c6c472dcc1da8196d72e4c04395",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum_check.py": "d5d870176eb48d40e45d6cc51c7cfc0c6bea8aa0d0388661134325b0d0b97a51",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/verify.py": "df1fbe2497a4f7b18080d935dbd778aea0e00ce357ad511abe2f5a4b83fdb927"
+  },
+  "normalization": "CRLF to LF for text; binary gzip unchanged"
+}

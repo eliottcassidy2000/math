@@ -1,0 +1,6 @@
+j= 2 primitive_records= 2244 owner_polynomial_coefficients= {0: 756, 1: 792, 2: 270, 3: 30}
+j= 3 primitive_records= 34698 owner_polynomial_coefficients= {0: 13380, 1: 12974, 2: 4140, 3: 435}
+N3(2)= 756 N3(3)= 36473
+Exact one/two-edge bulk completion controls: 7480 large-light substitution controls: 469
+Leading-kernel port controls: 168 ; c63=60480, normalized leading coefficient=8/3; 100 recurrence-basis identities.
+PASS: primitive kernel counts and port-preserving bulk ownership controls.

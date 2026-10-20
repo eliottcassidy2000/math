@@ -1,0 +1,6 @@
+Parity-path bijection: words/matchings through order18 = 7920 ; literal Hamiltonian controls through order8 = 64
+Odd-order counts through13: [1, 2, 6, 15, 40, 104, 273]
+Order13: marked {4,6} gives63+210; marked {2,4} gives105+168.
+Swap-fixed fibres through200 and exact half-plane inverses for3600 pairs pass.
+Braid matrix kernel: exponent12, matrixI, linking numbers(2,2,2), not unlink.
+PASS: full retained maps, gradings and hostile quotient controls.

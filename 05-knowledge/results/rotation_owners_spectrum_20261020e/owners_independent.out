@@ -1,0 +1,5 @@
+Universe: all primitive symbolic D3 records at residual budget j=2.
+Independent adjacency-pair tests and exhaustive intrinsic-gap permutations.
+Primitive records: 2244
+C2 coefficient list: [756, 792, 270, 30]
+PASS: C2(y)=756+792y+270y^2+30y^3; no repository imports or assertions.

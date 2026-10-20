@@ -20,7 +20,7 @@ condensation (paths concatenate in the transitive order; S146, 300/300 checks
 components, h(T) = 7 requires a STRONG subtournament (a component) with h = 7;
 h(T) = 21 requires a strong component with h ∈ {7, 21} (21 = 3·7 or 21·1).
 
-**(2) Insertion lemma (one line, new).** For any tournament T and vertex v:
+**(2) Insertion lemma (one line).** For any tournament T and vertex v:
 h(T) ≥ h(T − v). *Proof:* every Hamiltonian path of T − v extends to one of T
 by inserting v at a feasible position (the classical Rédei insertion argument
 guarantees at least one), and removing v recovers the original path, so the
@@ -62,10 +62,13 @@ agreeing on exactly five terms). Literature (pinned S152 via web check): the
 floor law IS the Moon–Busch theorem — Moon 1972 gave the chain construction
 and bounds; A. Busch, "A note on the number of Hamiltonian paths in strong
 tournaments," Electron. J. Combin. (2006), proved Moon's construction optimal.
-Our exhaustive n ≤ 8 floors independently re-derive it. The spectrum-gap
-statement ({7, 21} never attained, any n) we have NOT found stated anywhere —
-it appears to be new as a stated theorem, though its proof is Moon–Busch plus
-elementary gluing.
+Our exhaustive n ≤ 8 floors independently verify these finite instances.
+**Priority correction, 2026-10-20:** the former assertion that the
+all-order exclusion of7 and21 appeared new is retracted. The
+[original2016 discussion](https://mathoverflow.net/questions/232751/the-number-of-hamiltonian-paths-in-a-tournament)
+already states these omissions and the strong-order argument. This theorem
+is an in-repository proof, not a novelty claim. Completeness of the range
+remains OPEN; see the [source audit and proof-first frontier](../../05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md).
 
 ## Corollaries and data
 

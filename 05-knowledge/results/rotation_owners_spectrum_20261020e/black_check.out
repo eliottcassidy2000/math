@@ -1,0 +1,19 @@
+Exact replay of PROVED all-order circulant-endcap macros; no global connectivity claim.
+All marked circulants (order, step sets containing1, extraction, threshold/base):
+5 2 1 1
+7 4 3 1
+9 8 7 1
+11 16 15 1
+13 32 31 1
+15 64 63 1
+17 128 127 1
+19 256 255 1
+21 512 511 1
+23 1024 1023 1
+Total marked empty-middle circulant presentations: 2046
+All small skew step sets / proper-interval rotations checked: 2034
+Arbitrary middle presentations through order6: 1101 replays: 3303
+Paley11: no unit d has d,2d in S; retained block cut (3, 6)
+Long threshold controls: all48 odd orders7..101 with a three-vertex middle.
+Lower-bound hostile C3->C3: all9 Hamiltonian paths are blue.
+PASS exact directions, blackness, XOR ledgers, labels, symmetry guards and hostile controls.

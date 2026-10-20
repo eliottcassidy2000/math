@@ -1,0 +1,23 @@
+n=1labelled=1strong_labelled=1ordinary_spectrum=[1]strong_spectrum=[1]
+n=2labelled=2strong_labelled=0ordinary_spectrum=[1]strong_spectrum=[]
+n=3labelled=8strong_labelled=2ordinary_spectrum=[1, 3]strong_spectrum=[3]
+n=4labelled=64strong_labelled=24ordinary_spectrum=[1, 3, 5]strong_spectrum=[5]
+n=5labelled=1024strong_labelled=544ordinary_spectrum=[1, 3, 5, 9, 11, 13, 15]strong_spectrum=[9, 11, 13, 15]
+n=6labelled=32768strong_labelled=22320ordinary_spectrum=[1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]strong_spectrum=[15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+Busch minima n=3..14: [3, 5, 9, 15, 25, 45, 75, 125, 225, 375, 625, 1125]
+False 3*f(n-2) at n10: 125 != 135
+Exclusion proof cutoff: strong H7 requires n<=4; strong H21 requires n<=6.
+h= 3 SCC-reduced cutoff= 3 strong-lane cutoff= 3
+h= 7 SCC-reduced cutoff= 5 strong-lane cutoff= 4
+h= 21 SCC-reduced cutoff= 8 strong-lane cutoff= 6
+h= 49 SCC-reduced cutoff= 10 strong-lane cutoff= 8
+h= 63 SCC-reduced cutoff= 11 strong-lane cutoff= 8
+h= 343 SCC-reduced cutoff= 15 strong-lane cutoff= 11
+h= 80557 SCC-reduced cutoff= 30 strong-lane cutoff= 22
+Conditional two-lane arithmetic recipe checked on all allowed odd h<=10001.
+This checks arithmetic only; it does not construct the unproved lane witnesses.
+Directed-cycle score-fibre transport: all 576 ordered regular5 pairs; step histogram= [(0, 24), (1, 288), (2, 240), (3, 24)]
+Regular carousel7 H= 175 ; directed-triangle-reversal deltas= [(-4, 7), (0, 7)]
+Explicit regular nonunit jump: source rows= (14, 28, 56, 112, 97, 67, 7) triangle= ((0, 2), (2, 4), (4, 0)) target rows= (26, 28, 41, 112, 100, 67, 7) H changes 175 to 171
+Type controls: regular5 H=15, Aut=5, H/Aut=3; Paley7 H=189, Aut=21, H/Aut=9.
+PASS small all-labelled exclusions, independent counts, exact cutoff arithmetic, and regular-move hostiles.
