@@ -1,0 +1,24 @@
+{
+  "counts": {
+    "crossings": 312,
+    "legal_type_checks": 159954,
+    "shapes": 312,
+    "swaps": 93878
+  },
+  "maximum_observed_content": {
+    "g": 13751,
+    "p": 408,
+    "q": 647,
+    "swap_start": 610
+  },
+  "small_weight_certificate": {
+    "crossings": 59,
+    "integer_cycle_hits": 0,
+    "p_max_exclusive": 100,
+    "p_min": 2,
+    "shapes": 59,
+    "swaps": 3548
+  },
+  "status": "PASS",
+  "universe": "2<=p<=512; q=bit_length(3^p); gcd(p,q)=1; all unequal cyclic adjacent swaps"
+}

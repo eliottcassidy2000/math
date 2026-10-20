@@ -1,0 +1,62 @@
+{
+  "constants": {
+    "2_to_5_minus_3_cubed": 5,
+    "2_to_8_minus_3_to_5": 13,
+    "c_lower_bound": "7497/2500",
+    "endpoint_absorption_integer_margin": 138540961348201,
+    "small_critical_r": {
+      "3": 2,
+      "4": 3,
+      "5": 3,
+      "6": 4
+    },
+    "small_p_times_3_to_p": {
+      "2": 18,
+      "3": 81,
+      "4": 324,
+      "5": 1215
+    }
+  },
+  "critical_words": {
+    "counts": {
+      "actual_cyclic_swap_occurrences": 14602,
+      "coprime_critical_shapes": 122,
+      "cut_crossing_occurrences": 122,
+      "direction_legality_iff_checks": 24758,
+      "free_endpoint_occurrences": 244,
+      "minus_large_endpoint_occurrences": 0,
+      "noncoprime_critical_shapes_omitted": 77,
+      "plus_large_endpoint_occurrences": 0
+    },
+    "largest_content": {
+      "a": 78,
+      "direction": -1,
+      "g": 4931,
+      "p": 175,
+      "q": 278
+    }
+  },
+  "exact_norms": {
+    "critical_admissible_norms_below_sqrt7": 150,
+    "endpoint_norms": 76,
+    "interior_norms": 342
+  },
+  "fourier_alias_classes": {
+    "a1": 397,
+    "a_pminus2": 396,
+    "generic": 78606,
+    "p3_a1": 1,
+    "p4_a2_self_conjugate": 1
+  },
+  "k1_endpoint_admissibility": {
+    "coprime_k1_shapes": 48677,
+    "large_endpoint_forbidden_checks": 97354
+  },
+  "parameters": {
+    "max_alias_p": 400,
+    "max_norm_p": 20,
+    "max_word_p": 200
+  },
+  "scope": "Finite exact corroboration, not a proof of uniform quantifiers.",
+  "status": "PASS"
+}
