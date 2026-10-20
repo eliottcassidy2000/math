@@ -53,6 +53,9 @@ No duplicate method card is added.
 Startup fast-forwarded seven commits from `ffc5216306` to `7f8df95a96`.
 A later fetch during the session found no further incoming commits at
 that checkpoint.
+The checkpoint push subsequently integrated `c402d288ac`, `9852737522`,
+`411c1fd35a` and `5e93d8adf6`. Their game and geometry proofs were then
+read, and the stronger results below supersede the former open game target.
 
 1. [Neighboring disjoint two-swap exclusion](../collatz_two_swap_neighbor_disjoint_exclusion_20261020/NEIGHBOR_DISJOINT_EXCLUSION.md)
    closes a precisely specified all-length cycle-word family, using a
@@ -70,6 +73,21 @@ that checkpoint.
    separate extension counts `|M|,|N|` lose `|M intersection N|`, while
    the named incidence vectors recover (8). The two C's are unrelated
    quantities; their shared feature is an explicitly recovered interaction.
+4. [The reviewed complement-game packet](../complement_path_games_20261020/AUDIT_AND_PROVENANCE.md)
+   independently agrees on the four existence thresholds and connected-both
+   family, proves the remaining sharp W/H costs, and supplies prescribed-
+   start and exact join/path-cover criteria. Our open general W/H budget
+   question is therefore closed by this incoming work.
+5. [Fixed-deficiency kernels and forcing](../kernels_games_detours_20261020f/README.md)
+   now give a polynomial-times-double-factorial formula at every fixed
+   deficiency D, with degree floor(5D/2), while leaving the zero-heavy
+   boundary unrestricted. That quantifier is analogous to our bounded-
+   depth certificate: every fixed regime is different from a uniform
+   entry theorem. Its sixteen-point palette gate is a concrete new input;
+   [PALETTE-GLUE.md](PALETTE-GLUE.md) composes two actual copies at one
+   root, preserving all first-copy ports and producing the exact
+   intersection kernel. The all-order rotation-avoidance proof and the
+  31-point certificate were developed after reading that incoming result.
 
 ## Connection contracts
 
@@ -140,7 +158,7 @@ Hamilton-path counts or Euler lengths with topological winding numbers.
    carrier force the same missing singleton at the adjacent hubs? A
    boundary relation can be restrictive while the full graph remains
    four-colourable; the current gadget demonstrates both facts.
-4. What is the minimum edge cost for the disconnected/hamiltonian game
-   at general n, or for the both-connected Hamilton/Hamilton game?
-   The exact n<=6 census and n>=7 family are established; no unproved
-   extremal formula is promoted from their small values.
+4. The disconnected/hamiltonian minimum cost is now closed by incoming
+   work: `2n-5` except n6,8. The minimum under the additional restriction
+   that **both** graphs remain connected is still a separate target;
+   our family gives the upper bound2n-4. No sharpness claim is made.

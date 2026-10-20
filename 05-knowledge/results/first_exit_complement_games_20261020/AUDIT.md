@@ -78,7 +78,7 @@ the cycles for312 pairs `(p,q)`. No proof used the draft statistic.
   It is only NUMERICAL screening. Every reported mathematical hostile
   or record used in the prose has a separate exact rational replay.
 
-All four exact Python scripts were run normally and with `python3 -O`;
+All five exact Python scripts were run normally and with `python3 -O`;
 their outputs are byte-identical. Runtime validations use explicit
 exceptions. The source/receipt manifest also pins inherited dependencies.
 
@@ -91,11 +91,17 @@ python3 symbolic_charge.py --depth 18
 python3 coarse_charge_audit.py --depth 18
 python3 geometry_games.py
 python3 separate_controls.py
+python3 palette_glue.py
 ```
 
 Repeat each with `python3 -O` to reproduce the optimization controls.
 The checked outputs are `symbolic-charge.json`, `coarse-charge.json`,
 `geometry-games.json`, and `separate-controls.json`.
+The incoming-gate composition adds `palette-glue.json`: all465 distances
+on31 points, no unwanted cross contacts at rotation(-11+4sqrt(-3))/13,
+a literal four-colouring, and full-graph colouring counts for every one
+of20 second-input palettes. This is a composition audit of the attributed
+incoming gate; it does not claim to independently audit that entire packet.
 
 Optional screening, explicitly not a proof:
 

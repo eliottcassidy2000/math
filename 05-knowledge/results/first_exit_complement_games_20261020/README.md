@@ -175,6 +175,8 @@ odd. If its first coefficient crossing occurs at odd-step depth
 Consequently actual first descent occurs at that crossing. The
 integer-only sufficient condition `m<=2 floor(log_2 n)` also works.
 This allows unbounded source magnitude **and** unbounded depth.
+It also covers every actual first exit within that depth bound, since
+the first coefficient crossing cannot occur later than actual descent.
 
 For m<=18 use Proposition3. Otherwise every proper coefficient prefix
 has `2^K_i<3^i`, so (1) gives `C<=2B<=2m*3^(m-1)`. Let
@@ -276,6 +278,23 @@ has an Euler trail of length `2k+4=2n-4`, but still zero Hamilton paths.
 For odd k it has four odd-degree vertices and no Euler trail. This gives
 an infinite, concrete separation of the user's two measurements.
 
+**Incoming stronger classification, integrated after the first checkpoint.**
+The independently reviewed [complement-path packet](../complement_path_games_20261020/README.md)
+and [sharp-budget packet](../kernels_games_detours_20261020f/game.md)
+close the edge-cost question for the third row too: its minimum is
+`2n-5`, except6 at n6 and10 at n8. Their proofs retain a Pósa-type degree
+obstruction or the classical Erdős extremal bound, not only our small census.
+The incoming connected-both family is isomorphic to Proposition5.
+
+The former packet also resolves a prescribed-start reading: if Player2
+must succeed from **every** start, defeating that guarantee in the
+Hamilton column is possible from n3 and costs n-2 red edges. This does
+not change the free-start table above. Its exact join criterion is useful
+for future composition: for `G=join G_i`, a Hamilton path exists iff
+`pc(G_i)<=n-|G_i|+1` for every i, with a rooted path-cover refinement for
+prescribed starts. These questions are now closed in the cited scopes,
+and are removed from this packet's open list.
+
 ## 4. A non-lattice nineteen-point gadget with an exact six-colour relation
 
 Put `s=sqrt(-3)`, `t=sqrt(-11)`, `zeta=(1+s)/2`,
@@ -293,6 +312,8 @@ checks all171 pairs. The induced graph has19 vertices and37 edges.
 Its **only additional edge** beyond the two copies is the hub--hub edge;
 the other four cross-copy unit pairs are already tip--rim edges incident
 with the shared point. No assumed drawing or tolerance is used.
+Adding t_0 back puts the first copy at its original coordinates: the
+second is rotated about its named tip, with every original port fixed.
 
 Keep the17 non-hub vertices as named ports. Let M,N be the subsets of
 the six colours absent from the two six-vertex rims.
@@ -344,6 +365,16 @@ The next target needs both a further carrier escape and a context forcing
 the same missing singleton at adjacent hubs. Keeping only palette sizes
 will not formulate that target correctly.
 
+The new incoming sixteen-point gate yields a further exact composition:
+[two copies sharing their output](PALETTE-GLUE.md) have31 vertices and62
+edges, with no unintended cross contacts. Two prescribed three-colour
+input palettes A,B give exactly `576*|A intersection B|` extensions;
+`A={0,1,2},B={0,3,4}` forces output0. This remains a conditional boundary
+gate. The incoming18-point construction is smaller when only a single
+externally prescribed output is required. The31-point result supplies
+an exact two-input composition and a general finite rotation-avoidance
+lemma, with all first-copy ports fixed.
+
 ## 5. What relates Hamilton paths, Euler trails and torus parameters
 
 There is an exact graph map: a directed edge-word traversing every edge
@@ -371,3 +402,10 @@ two graph statistics follows. A cyclic strand order and **integer twist
 height** restore a meaningful map. This is the same representational
 discipline as retaining the Collatz integer clock and the actual missing
 colour names; it does not identify their dynamics.
+
+The incoming [integer-winding construction](../kernels_games_detours_20261020f/walks_knots.md)
+makes the sidecar local: attach `c_i=floor((i+q)/p)` to the arc from i to
+`(i+q) mod p`. Telescoping gives total carry q and carry q/gcd(p,q)
+on each component. A finite graph can therefore preserve an unbounded
+integer exactly. This restores representation, without supplying a
+decreasing Collatz potential.
