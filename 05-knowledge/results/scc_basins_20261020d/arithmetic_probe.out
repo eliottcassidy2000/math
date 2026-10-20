@@ -1,0 +1,7 @@
+codec tests: 4180 literal SCC tests: 440
+word coefficients n0..16: [1, 1, 1, 2, 4, 6, 9, 15, 25, 40, 64, 104, 169, 273, 441, 714, 1156]
+R4 deficits: [{'word': (4,), 'h': 5, 'b': 3, 'beta': 2}, {'word': (4, 4), 'h': 25, 'b': 5, 'beta': 20}, {'word': (4, 4, 4), 'h': 125, 'b': 15, 'beta': 110}, {'word': (4, 4, 4, 4), 'h': 625, 'b': 25, 'beta': 600}]
+golden character flags: [{'triple': [3, 5, 15], 'wires': [[7, 35], [21, 105]]}, {'triple': [5, 7, 35], 'wires': [[3, 15], [21, 105]]}, {'triple': [5, 21, 105], 'wires': [[3, 15], [7, 35]]}]
+ranks: {'fano_junctions': 21, 'parallel_sums': 7} Kempe blind: 7
+golden periods: scalar105 ->80; cyclotomic ideal ->105; conjugate ->210
+PASS exact codecs, recurrences, boundary ranks, and distinct arithmetic clocks.

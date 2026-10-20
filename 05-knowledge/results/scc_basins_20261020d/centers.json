@@ -1,0 +1,2108 @@
+{
+  "cap_family": [
+    {
+      "Aut": 1,
+      "H": 5,
+      "Hblue": 3,
+      "b": 3,
+      "beta": 2,
+      "f": 1,
+      "h": 5,
+      "moved": 0,
+      "n": 4,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 1,
+      "H": 9,
+      "Hblue": 1,
+      "b": 1,
+      "beta": 8,
+      "f": 1,
+      "h": 9,
+      "moved": 0,
+      "n": 5,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 1,
+      "H": 17,
+      "Hblue": 5,
+      "b": 5,
+      "beta": 12,
+      "f": 1,
+      "h": 17,
+      "moved": 0,
+      "n": 6,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 1,
+      "H": 33,
+      "Hblue": 1,
+      "b": 1,
+      "beta": 32,
+      "f": 1,
+      "h": 33,
+      "moved": 0,
+      "n": 7,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 1,
+      "H": 65,
+      "Hblue": 9,
+      "b": 9,
+      "beta": 56,
+      "f": 1,
+      "h": 65,
+      "moved": 0,
+      "n": 8,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 1,
+      "H": 129,
+      "Hblue": 1,
+      "b": 1,
+      "beta": 128,
+      "f": 1,
+      "h": 129,
+      "moved": 0,
+      "n": 9,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 1,
+      "H": 257,
+      "Hblue": 17,
+      "b": 17,
+      "beta": 240,
+      "f": 1,
+      "h": 257,
+      "moved": 0,
+      "n": 10,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 1,
+      "H": 513,
+      "Hblue": 1,
+      "b": 1,
+      "beta": 512,
+      "f": 1,
+      "h": 513,
+      "moved": 0,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 771,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 257,
+      "f": 2,
+      "h": 257,
+      "moved": 3,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 387,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 129,
+      "f": 2,
+      "h": 129,
+      "moved": 3,
+      "n": 10,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 771,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 257,
+      "f": 2,
+      "h": 257,
+      "moved": 3,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 195,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 65,
+      "f": 2,
+      "h": 65,
+      "moved": 3,
+      "n": 9,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 387,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 129,
+      "f": 2,
+      "h": 129,
+      "moved": 3,
+      "n": 10,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 771,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 257,
+      "f": 2,
+      "h": 257,
+      "moved": 3,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 99,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 33,
+      "f": 2,
+      "h": 33,
+      "moved": 3,
+      "n": 8,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 195,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 65,
+      "f": 2,
+      "h": 65,
+      "moved": 3,
+      "n": 9,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 387,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 129,
+      "f": 2,
+      "h": 129,
+      "moved": 3,
+      "n": 10,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 771,
+      "Hblue": 3,
+      "b": 1,
+      "beta": 256,
+      "f": 2,
+      "h": 257,
+      "moved": 3,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 1161,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 129,
+      "f": 3,
+      "h": 129,
+      "moved": 6,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 51,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 17,
+      "f": 2,
+      "h": 17,
+      "moved": 3,
+      "n": 7,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 99,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 33,
+      "f": 2,
+      "h": 33,
+      "moved": 3,
+      "n": 8,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 195,
+      "Hblue": 3,
+      "b": 1,
+      "beta": 64,
+      "f": 2,
+      "h": 65,
+      "moved": 3,
+      "n": 9,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 387,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 129,
+      "f": 2,
+      "h": 129,
+      "moved": 3,
+      "n": 10,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 771,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 257,
+      "f": 2,
+      "h": 257,
+      "moved": 3,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 1161,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 129,
+      "f": 3,
+      "h": 129,
+      "moved": 6,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 585,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 65,
+      "f": 3,
+      "h": 65,
+      "moved": 6,
+      "n": 10,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 1161,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 129,
+      "f": 3,
+      "h": 129,
+      "moved": 6,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 27,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 9,
+      "f": 2,
+      "h": 9,
+      "moved": 3,
+      "n": 6,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        3
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 51,
+      "Hblue": 3,
+      "b": 1,
+      "beta": 16,
+      "f": 2,
+      "h": 17,
+      "moved": 3,
+      "n": 7,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 99,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 33,
+      "f": 2,
+      "h": 33,
+      "moved": 3,
+      "n": 8,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 195,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 65,
+      "f": 2,
+      "h": 65,
+      "moved": 3,
+      "n": 9,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        3,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 387,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 129,
+      "f": 2,
+      "h": 129,
+      "moved": 3,
+      "n": 10,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 771,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 257,
+      "f": 2,
+      "h": 257,
+      "moved": 3,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 1161,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 129,
+      "f": 3,
+      "h": 129,
+      "moved": 6,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 585,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 65,
+      "f": 3,
+      "h": 65,
+      "moved": 6,
+      "n": 10,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 1161,
+      "Hblue": 9,
+      "b": 1,
+      "beta": 128,
+      "f": 3,
+      "h": 129,
+      "moved": 6,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        3,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 297,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 33,
+      "f": 3,
+      "h": 33,
+      "moved": 6,
+      "n": 9,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 585,
+      "Hblue": 81,
+      "b": 9,
+      "beta": 56,
+      "f": 3,
+      "h": 65,
+      "moved": 6,
+      "n": 10,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 1161,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 129,
+      "f": 3,
+      "h": 129,
+      "moved": 6,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        1,
+        3,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 15,
+      "Hblue": 3,
+      "b": 1,
+      "beta": 4,
+      "f": 2,
+      "h": 5,
+      "moved": 3,
+      "n": 5,
+      "symmetry_slack": 3,
+      "word": [
+        3
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 27,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 9,
+      "f": 2,
+      "h": 9,
+      "moved": 3,
+      "n": 6,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 51,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 17,
+      "f": 2,
+      "h": 17,
+      "moved": 3,
+      "n": 7,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 99,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 33,
+      "f": 2,
+      "h": 33,
+      "moved": 3,
+      "n": 8,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 195,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 65,
+      "f": 2,
+      "h": 65,
+      "moved": 3,
+      "n": 9,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 387,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 129,
+      "f": 2,
+      "h": 129,
+      "moved": 3,
+      "n": 10,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 771,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 257,
+      "f": 2,
+      "h": 257,
+      "moved": 3,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 1161,
+      "Hblue": 9,
+      "b": 1,
+      "beta": 128,
+      "f": 3,
+      "h": 129,
+      "moved": 6,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 585,
+      "Hblue": 81,
+      "b": 9,
+      "beta": 56,
+      "f": 3,
+      "h": 65,
+      "moved": 6,
+      "n": 10,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 1161,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 129,
+      "f": 3,
+      "h": 129,
+      "moved": 6,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        1,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 297,
+      "Hblue": 9,
+      "b": 1,
+      "beta": 32,
+      "f": 3,
+      "h": 33,
+      "moved": 6,
+      "n": 9,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 585,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 65,
+      "f": 3,
+      "h": 65,
+      "moved": 6,
+      "n": 10,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 1161,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 129,
+      "f": 3,
+      "h": 129,
+      "moved": 6,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        1,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 153,
+      "Hblue": 45,
+      "b": 5,
+      "beta": 12,
+      "f": 3,
+      "h": 17,
+      "moved": 6,
+      "n": 8,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        3
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 297,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 33,
+      "f": 3,
+      "h": 33,
+      "moved": 6,
+      "n": 9,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 585,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 65,
+      "f": 3,
+      "h": 65,
+      "moved": 6,
+      "n": 10,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 9,
+      "H": 1161,
+      "Hblue": 0,
+      "b": 0,
+      "beta": 129,
+      "f": 3,
+      "h": 129,
+      "moved": 6,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        3,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "Aut": 27,
+      "H": 1755,
+      "Hblue": 27,
+      "b": 1,
+      "beta": 64,
+      "f": 4,
+      "h": 65,
+      "moved": 9,
+      "n": 11,
+      "symmetry_slack": 3,
+      "word": [
+        3,
+        3,
+        3
+      ]
+    }
+  ],
+  "census": {
+    "3": {
+      "all_beta_le20": {
+        "0": 2
+      },
+      "ordinary_classes": 2,
+      "self_converse": 2,
+      "strong_beta_le20": {
+        "0": 1
+      },
+      "witnesses_beta_le20": [
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 2,
+          "f": 1,
+          "h": 1,
+          "moved": 3,
+          "strong": true,
+          "symmetry_slack": 0
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 0,
+          "f": 0,
+          "h": 1,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 0
+        }
+      ]
+    },
+    "4": {
+      "all_beta_le20": {
+        "0": 1,
+        "2": 1
+      },
+      "ordinary_classes": 4,
+      "self_converse": 2,
+      "strong_beta_le20": {
+        "2": 1
+      },
+      "witnesses_beta_le20": [
+        {
+          "b": 3,
+          "beta": 2,
+          "code": 8,
+          "f": 1,
+          "h": 5,
+          "moved": 0,
+          "strong": true,
+          "symmetry_slack": 3
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 0,
+          "f": 0,
+          "h": 1,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 0
+        }
+      ]
+    },
+    "5": {
+      "all_beta_le20": {
+        "0": 3,
+        "4": 1,
+        "6": 1,
+        "8": 2,
+        "10": 1
+      },
+      "ordinary_classes": 12,
+      "self_converse": 8,
+      "strong_beta_le20": {
+        "0": 1,
+        "4": 1,
+        "6": 1,
+        "8": 2,
+        "10": 1
+      },
+      "witnesses_beta_le20": [
+        {
+          "b": 3,
+          "beta": 6,
+          "code": 258,
+          "f": 2,
+          "h": 9,
+          "moved": 0,
+          "strong": true,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 1,
+          "beta": 8,
+          "code": 64,
+          "f": 1,
+          "h": 9,
+          "moved": 0,
+          "strong": true,
+          "symmetry_slack": 3
+        },
+        {
+          "b": 3,
+          "beta": 10,
+          "code": 136,
+          "f": 2,
+          "h": 13,
+          "moved": 0,
+          "strong": true,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 3,
+          "beta": 8,
+          "code": 145,
+          "f": 2,
+          "h": 11,
+          "moved": 0,
+          "strong": true,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 1,
+          "beta": 4,
+          "code": 80,
+          "f": 2,
+          "h": 5,
+          "moved": 3,
+          "strong": true,
+          "symmetry_slack": 3
+        },
+        {
+          "b": 3,
+          "beta": 0,
+          "code": 200,
+          "f": 3,
+          "h": 3,
+          "moved": 5,
+          "strong": true,
+          "symmetry_slack": 4
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 16,
+          "f": 1,
+          "h": 1,
+          "moved": 3,
+          "strong": false,
+          "symmetry_slack": 0
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 0,
+          "f": 0,
+          "h": 1,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 0
+        }
+      ]
+    },
+    "6": {
+      "all_beta_le20": {
+        "0": 2,
+        "2": 1,
+        "6": 1,
+        "12": 3
+      },
+      "ordinary_classes": 56,
+      "self_converse": 12,
+      "strong_beta_le20": {
+        "6": 1,
+        "12": 3
+      },
+      "witnesses_beta_le20": [
+        {
+          "b": 5,
+          "beta": 12,
+          "code": 8226,
+          "f": 2,
+          "h": 17,
+          "moved": 0,
+          "strong": true,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 5,
+          "beta": 12,
+          "code": 1024,
+          "f": 1,
+          "h": 17,
+          "moved": 0,
+          "strong": true,
+          "symmetry_slack": 3
+        },
+        {
+          "b": 3,
+          "beta": 12,
+          "code": 9378,
+          "f": 4,
+          "h": 15,
+          "moved": 6,
+          "strong": true,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 9,
+          "beta": 6,
+          "code": 9381,
+          "f": 4,
+          "h": 15,
+          "moved": 6,
+          "strong": true,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 8194,
+          "f": 2,
+          "h": 1,
+          "moved": 6,
+          "strong": false,
+          "symmetry_slack": 0
+        },
+        {
+          "b": 3,
+          "beta": 2,
+          "code": 128,
+          "f": 1,
+          "h": 5,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 3
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 0,
+          "f": 0,
+          "h": 1,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 0
+        }
+      ]
+    },
+    "7": {
+      "all_beta_le20": {
+        "0": 4,
+        "4": 1,
+        "6": 2,
+        "8": 3,
+        "10": 1,
+        "16": 2,
+        "20": 1
+      },
+      "ordinary_classes": 456,
+      "self_converse": 88,
+      "strong_beta_le20": {
+        "6": 1,
+        "8": 1,
+        "16": 2,
+        "20": 1
+      },
+      "witnesses_beta_le20": [
+        {
+          "b": 5,
+          "beta": 20,
+          "code": 262152,
+          "f": 2,
+          "h": 25,
+          "moved": 0,
+          "strong": true,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 1,
+          "beta": 16,
+          "code": 33024,
+          "f": 2,
+          "h": 17,
+          "moved": 3,
+          "strong": true,
+          "symmetry_slack": 3
+        },
+        {
+          "b": 9,
+          "beta": 16,
+          "code": 232512,
+          "f": 6,
+          "h": 25,
+          "moved": 7,
+          "strong": true,
+          "symmetry_slack": 11
+        },
+        {
+          "b": 3,
+          "beta": 8,
+          "code": 795194,
+          "f": 5,
+          "h": 11,
+          "moved": 6,
+          "strong": true,
+          "symmetry_slack": 9
+        },
+        {
+          "b": 3,
+          "beta": 6,
+          "code": 238754,
+          "f": 7,
+          "h": 9,
+          "moved": 7,
+          "strong": true,
+          "symmetry_slack": 14
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 524290,
+          "f": 2,
+          "h": 1,
+          "moved": 6,
+          "strong": false,
+          "symmetry_slack": 0
+        },
+        {
+          "b": 3,
+          "beta": 6,
+          "code": 8208,
+          "f": 2,
+          "h": 9,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 1,
+          "beta": 8,
+          "code": 2048,
+          "f": 1,
+          "h": 9,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 3
+        },
+        {
+          "b": 3,
+          "beta": 10,
+          "code": 4224,
+          "f": 2,
+          "h": 13,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 3,
+          "beta": 8,
+          "code": 4356,
+          "f": 2,
+          "h": 11,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 1,
+          "beta": 4,
+          "code": 2304,
+          "f": 2,
+          "h": 5,
+          "moved": 3,
+          "strong": false,
+          "symmetry_slack": 3
+        },
+        {
+          "b": 3,
+          "beta": 0,
+          "code": 6272,
+          "f": 3,
+          "h": 3,
+          "moved": 5,
+          "strong": false,
+          "symmetry_slack": 4
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 256,
+          "f": 1,
+          "h": 1,
+          "moved": 3,
+          "strong": false,
+          "symmetry_slack": 0
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 0,
+          "f": 0,
+          "h": 1,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 0
+        }
+      ]
+    },
+    "8": {
+      "all_beta_le20": {
+        "0": 3,
+        "2": 1,
+        "6": 1,
+        "12": 4,
+        "20": 1
+      },
+      "ordinary_classes": 6880,
+      "self_converse": 176,
+      "strong_beta_le20": {
+        "12": 1
+      },
+      "witnesses_beta_le20": [
+        {
+          "b": 5,
+          "beta": 12,
+          "code": 2621456,
+          "f": 3,
+          "h": 17,
+          "moved": 6,
+          "strong": true,
+          "symmetry_slack": 3
+        },
+        {
+          "b": 5,
+          "beta": 20,
+          "code": 33554440,
+          "f": 2,
+          "h": 25,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 67108866,
+          "f": 2,
+          "h": 1,
+          "moved": 6,
+          "strong": false,
+          "symmetry_slack": 0
+        },
+        {
+          "b": 5,
+          "beta": 12,
+          "code": 524816,
+          "f": 2,
+          "h": 17,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 5,
+          "beta": 12,
+          "code": 65536,
+          "f": 1,
+          "h": 17,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 3
+        },
+        {
+          "b": 3,
+          "beta": 12,
+          "code": 594448,
+          "f": 4,
+          "h": 15,
+          "moved": 6,
+          "strong": false,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 9,
+          "beta": 6,
+          "code": 594468,
+          "f": 4,
+          "h": 15,
+          "moved": 6,
+          "strong": false,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 524304,
+          "f": 2,
+          "h": 1,
+          "moved": 6,
+          "strong": false,
+          "symmetry_slack": 0
+        },
+        {
+          "b": 3,
+          "beta": 2,
+          "code": 4096,
+          "f": 1,
+          "h": 5,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 3
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 0,
+          "f": 0,
+          "h": 1,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 0
+        }
+      ]
+    },
+    "9": {
+      "all_beta_le20": {
+        "0": 6,
+        "4": 1,
+        "6": 2,
+        "8": 3,
+        "10": 1,
+        "16": 2,
+        "20": 3
+      },
+      "ordinary_classes": 191536,
+      "self_converse": 2752,
+      "strong_beta_le20": {
+        "20": 1
+      },
+      "witnesses_beta_le20": [
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 0,
+          "f": 0,
+          "h": 1,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 0
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 16896,
+          "f": 1,
+          "h": 1,
+          "moved": 3,
+          "strong": false,
+          "symmetry_slack": 0
+        },
+        {
+          "b": 1,
+          "beta": 4,
+          "code": 147968,
+          "f": 2,
+          "h": 5,
+          "moved": 3,
+          "strong": false,
+          "symmetry_slack": 3
+        },
+        {
+          "b": 1,
+          "beta": 8,
+          "code": 262176,
+          "f": 1,
+          "h": 9,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 3
+        },
+        {
+          "b": 3,
+          "beta": 6,
+          "code": 524832,
+          "f": 2,
+          "h": 9,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 3,
+          "beta": 8,
+          "code": 1069568,
+          "f": 2,
+          "h": 11,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 3,
+          "beta": 10,
+          "code": 1073408,
+          "f": 2,
+          "h": 13,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 3,
+          "beta": 0,
+          "code": 1585696,
+          "f": 3,
+          "h": 3,
+          "moved": 5,
+          "strong": false,
+          "symmetry_slack": 4
+        },
+        {
+          "b": 1,
+          "beta": 16,
+          "code": 8405508,
+          "f": 2,
+          "h": 17,
+          "moved": 3,
+          "strong": false,
+          "symmetry_slack": 3
+        },
+        {
+          "b": 5,
+          "beta": 20,
+          "code": 33554692,
+          "f": 2,
+          "h": 25,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 135266340,
+          "f": 2,
+          "h": 1,
+          "moved": 6,
+          "strong": false,
+          "symmetry_slack": 0
+        },
+        {
+          "b": 3,
+          "beta": 8,
+          "code": 169362340,
+          "f": 5,
+          "h": 11,
+          "moved": 6,
+          "strong": false,
+          "symmetry_slack": 9
+        },
+        {
+          "b": 9,
+          "beta": 16,
+          "code": 235352628,
+          "f": 6,
+          "h": 25,
+          "moved": 7,
+          "strong": false,
+          "symmetry_slack": 11
+        },
+        {
+          "b": 3,
+          "beta": 6,
+          "code": 236349860,
+          "f": 7,
+          "h": 9,
+          "moved": 7,
+          "strong": false,
+          "symmetry_slack": 14
+        },
+        {
+          "b": 5,
+          "beta": 20,
+          "code": 4430233700,
+          "f": 4,
+          "h": 25,
+          "moved": 6,
+          "strong": true,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 5,
+          "beta": 20,
+          "code": 17180917777,
+          "f": 2,
+          "h": 25,
+          "moved": 0,
+          "strong": false,
+          "symmetry_slack": 6
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 34493956101,
+          "f": 2,
+          "h": 1,
+          "moved": 6,
+          "strong": false,
+          "symmetry_slack": 0
+        },
+        {
+          "b": 1,
+          "beta": 0,
+          "code": 34493972997,
+          "f": 3,
+          "h": 1,
+          "moved": 9,
+          "strong": false,
+          "symmetry_slack": 0
+        }
+      ]
+    }
+  },
+  "fibonacci_polynomials": [
+    {
+      "coefficients": {
+        "0": 1
+      },
+      "ell": 0,
+      "even_center_beta": 0,
+      "singleton_center_beta": 2,
+      "triangle_center_beta": 4
+    },
+    {
+      "coefficients": {
+        "1": 1
+      },
+      "ell": 1,
+      "even_center_beta": 2,
+      "singleton_center_beta": 8,
+      "triangle_center_beta": 16
+    },
+    {
+      "coefficients": {
+        "2": 1,
+        "3": 1
+      },
+      "ell": 2,
+      "even_center_beta": 12,
+      "singleton_center_beta": 32,
+      "triangle_center_beta": 64
+    },
+    {
+      "coefficients": {
+        "3": 1,
+        "4": 2
+      },
+      "ell": 3,
+      "even_center_beta": 56,
+      "singleton_center_beta": 128,
+      "triangle_center_beta": 256
+    },
+    {
+      "coefficients": {
+        "4": 1,
+        "5": 3,
+        "6": 1
+      },
+      "ell": 4,
+      "even_center_beta": 240,
+      "singleton_center_beta": 512,
+      "triangle_center_beta": 1024
+    },
+    {
+      "coefficients": {
+        "5": 1,
+        "6": 4,
+        "7": 3
+      },
+      "ell": 5,
+      "even_center_beta": 992,
+      "singleton_center_beta": 2048,
+      "triangle_center_beta": 4096
+    },
+    {
+      "coefficients": {
+        "6": 1,
+        "7": 5,
+        "8": 6,
+        "9": 1
+      },
+      "ell": 6,
+      "even_center_beta": 4032,
+      "singleton_center_beta": 8192,
+      "triangle_center_beta": 16384
+    },
+    {
+      "coefficients": {
+        "7": 1,
+        "8": 6,
+        "9": 10,
+        "10": 4
+      },
+      "ell": 7,
+      "even_center_beta": 16256,
+      "singleton_center_beta": 32768,
+      "triangle_center_beta": 65536
+    },
+    {
+      "coefficients": {
+        "8": 1,
+        "9": 7,
+        "10": 15,
+        "11": 10,
+        "12": 1
+      },
+      "ell": 8,
+      "even_center_beta": 65280,
+      "singleton_center_beta": 131072,
+      "triangle_center_beta": 262144
+    },
+    {
+      "coefficients": {
+        "9": 1,
+        "10": 8,
+        "11": 21,
+        "12": 20,
+        "13": 5
+      },
+      "ell": 9,
+      "even_center_beta": 261632,
+      "singleton_center_beta": 524288,
+      "triangle_center_beta": 1048576
+    },
+    {
+      "coefficients": {
+        "10": 1,
+        "11": 9,
+        "12": 28,
+        "13": 35,
+        "14": 15,
+        "15": 1
+      },
+      "ell": 10,
+      "even_center_beta": 1047552,
+      "singleton_center_beta": 2097152,
+      "triangle_center_beta": 4194304
+    },
+    {
+      "coefficients": {
+        "11": 1,
+        "12": 10,
+        "13": 36,
+        "14": 56,
+        "15": 35,
+        "16": 6
+      },
+      "ell": 11,
+      "even_center_beta": 4192256,
+      "singleton_center_beta": 8388608,
+      "triangle_center_beta": 16777216
+    },
+    {
+      "coefficients": {
+        "12": 1,
+        "13": 11,
+        "14": 45,
+        "15": 84,
+        "16": 70,
+        "17": 21,
+        "18": 1
+      },
+      "ell": 12,
+      "even_center_beta": 16773120,
+      "singleton_center_beta": 33554432,
+      "triangle_center_beta": 67108864
+    }
+  ],
+  "possible_nonrigid_outer_corrections": {
+    "2": [],
+    "4": [],
+    "6": [
+      [
+        3,
+        1,
+        1
+      ]
+    ],
+    "8": [],
+    "10": [],
+    "12": [],
+    "14": [],
+    "16": [],
+    "18": [
+      [
+        3,
+        3,
+        3
+      ]
+    ],
+    "20": [
+      [
+        5,
+        1,
+        1
+      ]
+    ],
+    "22": [],
+    "24": [
+      [
+        3,
+        3,
+        1
+      ]
+    ],
+    "26": [],
+    "28": [],
+    "30": [
+      [
+        3,
+        5,
+        5
+      ]
+    ],
+    "32": [],
+    "34": [],
+    "36": [
+      [
+        3,
+        5,
+        3
+      ]
+    ],
+    "38": [],
+    "40": [],
+    "42": [
+      [
+        3,
+        5,
+        1
+      ],
+      [
+        3,
+        7,
+        7
+      ],
+      [
+        7,
+        1,
+        1
+      ]
+    ]
+  },
+  "sources_sha256": {
+    "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n3.tsv": "faf846a34d3dbfa76a5a247607b7bb266e8affc4fa6bf73c534556f39eeb341c",
+    "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n4.tsv": "2fc455bfe2aba6aed15b56a1c7644990eb68aca228f266663f2cf22580b15357",
+    "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n5.tsv": "737d01a7eba26940b38f353c785dd6ca701bec9a84c21f75d2ac2cc01c1ba8e2",
+    "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n6.tsv": "5f6abef9eb0dac477ae208f7d9d72d73354598d26b4d87881d3534b43b5c326a",
+    "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n7.tsv": "0f00ae59a6dd95262926840f5609e5c8f8f5a28306bec16ecfeab1c9323aaa4c",
+    "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n8.tsv": "7d13cd79f9273d903bb8f7e5b34f413cd36a2a98cd4b05e9994fe2baa79c29ab",
+    "05-knowledge/results/blue_quotient_20261020b/n9_classes.tsv.gz": "959c2276c57108d55b56d4906edfbd761fb9737e708b14114d66dd4ad618db0c"
+  },
+  "stack_controls": [
+    {
+      "H": 225,
+      "Hblue": 75,
+      "b": 3,
+      "beta": 6,
+      "h": 9,
+      "n": 10,
+      "name": "C5,C5"
+    },
+    {
+      "H": 225,
+      "Hblue": 75,
+      "b": 3,
+      "beta": 6,
+      "h": 9,
+      "n": 11,
+      "name": "C5,1,C5"
+    },
+    {
+      "H": 675,
+      "Hblue": 225,
+      "b": 3,
+      "beta": 6,
+      "h": 9,
+      "n": 13,
+      "name": "C5,C3,C5"
+    },
+    {
+      "H": 1125,
+      "Hblue": 225,
+      "b": 9,
+      "beta": 36,
+      "h": 45,
+      "n": 14,
+      "name": "C5,R4,C5"
+    },
+    {
+      "H": 25,
+      "Hblue": 5,
+      "b": 5,
+      "beta": 20,
+      "h": 25,
+      "n": 8,
+      "name": "R4,R4"
+    },
+    {
+      "H": 125,
+      "Hblue": 15,
+      "b": 15,
+      "beta": 110,
+      "h": 125,
+      "n": 12,
+      "name": "R4,R4,R4"
+    },
+    {
+      "H": 625,
+      "Hblue": 25,
+      "b": 25,
+      "beta": 600,
+      "h": 625,
+      "n": 16,
+      "name": "R4,R4,R4,R4"
+    }
+  ],
+  "status": "PASS",
+  "universe": "complete inherited classes n3..9; independent low-deficit checks; all quiet words of size at most9"
+}
