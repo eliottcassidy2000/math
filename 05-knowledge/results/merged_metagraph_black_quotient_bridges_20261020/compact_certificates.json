@@ -1,0 +1,3146 @@
+[
+  {
+    "n": 3,
+    "m": 1,
+    "tilings": 2,
+    "classes": 2,
+    "merged": 2,
+    "SC": 2,
+    "node_types": {
+      "PB": 2
+    },
+    "graphs": {
+      "blue": {
+        "vertices": 2,
+        "edges": 1,
+        "loops": 0,
+        "support_pairs": 1,
+        "component_count": 1,
+        "cycle_rank": 0,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "2": 1
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 0,
+                "classes": [
+                  0
+                ],
+                "representative": 0,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 0,
+                "type": "PB",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 1,
+                "classes": [
+                  1
+                ],
+                "representative": 1,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 1,
+                "type": "PB",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          }
+        ]
+      },
+      "black": {
+        "vertices": 2,
+        "edges": 0,
+        "loops": 0,
+        "support_pairs": 0,
+        "component_count": 2,
+        "cycle_rank": 0,
+        "active_components": 0,
+        "component_vertex_sizes": {
+          "1": 2
+        },
+        "bridges": []
+      },
+      "paired_black": {
+        "vertices": 2,
+        "edges": 0,
+        "loops": 0,
+        "support_pairs": 0,
+        "component_count": 2,
+        "cycle_rank": 0,
+        "active_components": 0,
+        "component_vertex_sizes": {
+          "1": 2
+        },
+        "bridges": []
+      },
+      "combined": {
+        "vertices": 2,
+        "edges": 1,
+        "loops": 0,
+        "support_pairs": 1,
+        "component_count": 1,
+        "cycle_rank": 0,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "2": 1
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 0,
+                "classes": [
+                  0
+                ],
+                "representative": 0,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 0,
+                "type": "PB",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 1,
+                "classes": [
+                  1
+                ],
+                "representative": 1,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 1,
+                "type": "PB",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          }
+        ]
+      }
+    },
+    "SC_blue_spectrum": {
+      "1": 2
+    },
+    "SC_blue_spectrum_by_triangle_parity": {
+      "0": {
+        "1": 1
+      },
+      "1": {
+        "1": 1
+      }
+    },
+    "maximum_blue_witnesses": [
+      {
+        "node": {
+          "node": 0,
+          "classes": [
+            0
+          ],
+          "representative": 0,
+          "mass": 1,
+          "blue": 1,
+          "reflection_pairs": 0,
+          "SC": true,
+          "c3": 0,
+          "type": "PB",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 0,
+            "representative": 0,
+            "mass": 1,
+            "H": 1,
+            "aut": 1,
+            "c3": 0,
+            "scores": [
+              0,
+              1,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 1,
+          "classes": [
+            1
+          ],
+          "representative": 1,
+          "mass": 1,
+          "blue": 1,
+          "reflection_pairs": 0,
+          "SC": true,
+          "c3": 1,
+          "type": "PB",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 1,
+            "representative": 1,
+            "mass": 1,
+            "H": 3,
+            "aut": 3,
+            "c3": 1,
+            "scores": [
+              1,
+              1,
+              1
+            ]
+          }
+        ]
+      }
+    ],
+    "all_Q_bridges_have_a_leaf": true
+  },
+  {
+    "n": 4,
+    "m": 3,
+    "tilings": 8,
+    "classes": 4,
+    "merged": 3,
+    "SC": 2,
+    "node_types": {
+      "PB": 1,
+      "MX": 1,
+      "NS": 1
+    },
+    "graphs": {
+      "blue": {
+        "vertices": 3,
+        "edges": 2,
+        "loops": 1,
+        "support_pairs": 2,
+        "component_count": 2,
+        "cycle_rank": 1,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "2": 1,
+          "1": 1
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 0,
+                "classes": [
+                  0
+                ],
+                "representative": 0,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 0,
+                "type": "PB",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 1,
+                "classes": [
+                  1
+                ],
+                "representative": 1,
+                "mass": 5,
+                "blue": 3,
+                "reflection_pairs": 1,
+                "SC": true,
+                "c3": 2,
+                "type": "MX",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          }
+        ]
+      },
+      "black": {
+        "vertices": 3,
+        "edges": 2,
+        "loops": 0,
+        "support_pairs": 1,
+        "component_count": 2,
+        "cycle_rank": 1,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "1": 1,
+          "2": 1
+        },
+        "bridges": []
+      },
+      "paired_black": {
+        "vertices": 3,
+        "edges": 1,
+        "loops": 0,
+        "support_pairs": 1,
+        "component_count": 2,
+        "cycle_rank": 0,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "1": 1,
+          "2": 1
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 1,
+                "classes": [
+                  1
+                ],
+                "representative": 1,
+                "mass": 5,
+                "blue": 3,
+                "reflection_pairs": 1,
+                "SC": true,
+                "c3": 2,
+                "type": "MX",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 2,
+                "classes": [
+                  2,
+                  3
+                ],
+                "representative": 2,
+                "mass": 2,
+                "blue": 0,
+                "reflection_pairs": 1,
+                "SC": false,
+                "c3": 1,
+                "type": "NS",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          }
+        ]
+      },
+      "combined": {
+        "vertices": 3,
+        "edges": 4,
+        "loops": 1,
+        "support_pairs": 3,
+        "component_count": 1,
+        "cycle_rank": 2,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "3": 1
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 0,
+                "classes": [
+                  0
+                ],
+                "representative": 0,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 0,
+                "type": "PB",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 1,
+                "classes": [
+                  1
+                ],
+                "representative": 1,
+                "mass": 5,
+                "blue": 3,
+                "reflection_pairs": 1,
+                "SC": true,
+                "c3": 2,
+                "type": "MX",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          }
+        ]
+      }
+    },
+    "SC_blue_spectrum": {
+      "1": 1,
+      "3": 1
+    },
+    "SC_blue_spectrum_by_triangle_parity": {
+      "0": {
+        "1": 1,
+        "3": 1
+      },
+      "1": {}
+    },
+    "maximum_blue_witnesses": [
+      {
+        "node": {
+          "node": 1,
+          "classes": [
+            1
+          ],
+          "representative": 1,
+          "mass": 5,
+          "blue": 3,
+          "reflection_pairs": 1,
+          "SC": true,
+          "c3": 2,
+          "type": "MX",
+          "quotient_black_charge": 1
+        },
+        "classes": [
+          {
+            "class": 1,
+            "representative": 1,
+            "mass": 5,
+            "H": 5,
+            "aut": 1,
+            "c3": 2,
+            "scores": [
+              1,
+              1,
+              2,
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "all_Q_bridges_have_a_leaf": true
+  },
+  {
+    "n": 5,
+    "m": 6,
+    "tilings": 64,
+    "classes": 12,
+    "merged": 10,
+    "SC": 8,
+    "node_types": {
+      "PB": 3,
+      "MX": 5,
+      "NS": 2
+    },
+    "graphs": {
+      "blue": {
+        "vertices": 10,
+        "edges": 8,
+        "loops": 0,
+        "support_pairs": 8,
+        "component_count": 3,
+        "cycle_rank": 1,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "8": 1,
+          "1": 2
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 0,
+                "classes": [
+                  0
+                ],
+                "representative": 0,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 0,
+                "type": "PB",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 5,
+                "classes": [
+                  5
+                ],
+                "representative": 5,
+                "mass": 9,
+                "blue": 3,
+                "reflection_pairs": 3,
+                "SC": true,
+                "c3": 3,
+                "type": "MX",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 1,
+                "classes": [
+                  1
+                ],
+                "representative": 1,
+                "mass": 9,
+                "blue": 1,
+                "reflection_pairs": 4,
+                "SC": true,
+                "c3": 3,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 3,
+                "classes": [
+                  3
+                ],
+                "representative": 3,
+                "mass": 11,
+                "blue": 3,
+                "reflection_pairs": 4,
+                "SC": true,
+                "c3": 4,
+                "type": "MX",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 6,
+                "classes": [
+                  7
+                ],
+                "representative": 10,
+                "mass": 13,
+                "blue": 3,
+                "reflection_pairs": 5,
+                "SC": true,
+                "c3": 4,
+                "type": "MX",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 8,
+                "classes": [
+                  9
+                ],
+                "representative": 16,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 1,
+                "type": "PB",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 7,
+                "classes": [
+                  8
+                ],
+                "representative": 11,
+                "mass": 3,
+                "blue": 3,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 5,
+                "type": "PB",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 9,
+                "classes": [
+                  10
+                ],
+                "representative": 17,
+                "mass": 5,
+                "blue": 1,
+                "reflection_pairs": 2,
+                "SC": true,
+                "c3": 4,
+                "type": "MX",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          }
+        ]
+      },
+      "black": {
+        "vertices": 10,
+        "edges": 24,
+        "loops": 4,
+        "support_pairs": 12,
+        "component_count": 4,
+        "cycle_rank": 18,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "1": 3,
+          "7": 1
+        },
+        "bridges": []
+      },
+      "paired_black": {
+        "vertices": 10,
+        "edges": 12,
+        "loops": 2,
+        "support_pairs": 12,
+        "component_count": 4,
+        "cycle_rank": 6,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "1": 3,
+          "7": 1
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 1,
+                "classes": [
+                  1
+                ],
+                "representative": 1,
+                "mass": 9,
+                "blue": 1,
+                "reflection_pairs": 4,
+                "SC": true,
+                "c3": 3,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 4,
+                "classes": [
+                  4,
+                  11
+                ],
+                "representative": 4,
+                "mass": 2,
+                "blue": 0,
+                "reflection_pairs": 1,
+                "SC": false,
+                "c3": 1,
+                "type": "NS",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          }
+        ]
+      },
+      "combined": {
+        "vertices": 10,
+        "edges": 32,
+        "loops": 4,
+        "support_pairs": 20,
+        "component_count": 1,
+        "cycle_rank": 23,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "10": 1
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 0,
+                "classes": [
+                  0
+                ],
+                "representative": 0,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 0,
+                "type": "PB",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 5,
+                "classes": [
+                  5
+                ],
+                "representative": 5,
+                "mass": 9,
+                "blue": 3,
+                "reflection_pairs": 3,
+                "SC": true,
+                "c3": 3,
+                "type": "MX",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 6,
+                "classes": [
+                  7
+                ],
+                "representative": 10,
+                "mass": 13,
+                "blue": 3,
+                "reflection_pairs": 5,
+                "SC": true,
+                "c3": 4,
+                "type": "MX",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 8,
+                "classes": [
+                  9
+                ],
+                "representative": 16,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 1,
+                "type": "PB",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          }
+        ]
+      }
+    },
+    "SC_blue_spectrum": {
+      "1": 4,
+      "3": 4
+    },
+    "SC_blue_spectrum_by_triangle_parity": {
+      "0": {
+        "1": 2,
+        "3": 2
+      },
+      "1": {
+        "1": 2,
+        "3": 2
+      }
+    },
+    "maximum_blue_witnesses": [
+      {
+        "node": {
+          "node": 3,
+          "classes": [
+            3
+          ],
+          "representative": 3,
+          "mass": 11,
+          "blue": 3,
+          "reflection_pairs": 4,
+          "SC": true,
+          "c3": 4,
+          "type": "MX",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 3,
+            "representative": 3,
+            "mass": 11,
+            "H": 11,
+            "aut": 1,
+            "c3": 4,
+            "scores": [
+              1,
+              2,
+              2,
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 5,
+          "classes": [
+            5
+          ],
+          "representative": 5,
+          "mass": 9,
+          "blue": 3,
+          "reflection_pairs": 3,
+          "SC": true,
+          "c3": 3,
+          "type": "MX",
+          "quotient_black_charge": 1
+        },
+        "classes": [
+          {
+            "class": 5,
+            "representative": 5,
+            "mass": 9,
+            "H": 9,
+            "aut": 1,
+            "c3": 3,
+            "scores": [
+              1,
+              1,
+              2,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 6,
+          "classes": [
+            7
+          ],
+          "representative": 10,
+          "mass": 13,
+          "blue": 3,
+          "reflection_pairs": 5,
+          "SC": true,
+          "c3": 4,
+          "type": "MX",
+          "quotient_black_charge": 1
+        },
+        "classes": [
+          {
+            "class": 7,
+            "representative": 10,
+            "mass": 13,
+            "H": 13,
+            "aut": 1,
+            "c3": 4,
+            "scores": [
+              1,
+              2,
+              2,
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 7,
+          "classes": [
+            8
+          ],
+          "representative": 11,
+          "mass": 3,
+          "blue": 3,
+          "reflection_pairs": 0,
+          "SC": true,
+          "c3": 5,
+          "type": "PB",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 8,
+            "representative": 11,
+            "mass": 3,
+            "H": 15,
+            "aut": 5,
+            "c3": 5,
+            "scores": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "all_Q_bridges_have_a_leaf": true
+  },
+  {
+    "n": 6,
+    "m": 10,
+    "tilings": 1024,
+    "classes": 56,
+    "merged": 34,
+    "SC": 12,
+    "node_types": {
+      "PB": 2,
+      "MX": 10,
+      "NS": 22
+    },
+    "graphs": {
+      "blue": {
+        "vertices": 34,
+        "edges": 32,
+        "loops": 2,
+        "support_pairs": 28,
+        "component_count": 23,
+        "cycle_rank": 21,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "12": 1,
+          "1": 22
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 0,
+                "classes": [
+                  0
+                ],
+                "representative": 0,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 0,
+                "type": "PB",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 31,
+                "classes": [
+                  42
+                ],
+                "representative": 77,
+                "mass": 17,
+                "blue": 5,
+                "reflection_pairs": 6,
+                "SC": true,
+                "c3": 4,
+                "type": "MX",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 1,
+                "classes": [
+                  1
+                ],
+                "representative": 1,
+                "mass": 17,
+                "blue": 5,
+                "reflection_pairs": 6,
+                "SC": true,
+                "c3": 4,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 33,
+                "classes": [
+                  55
+                ],
+                "representative": 520,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 2,
+                "type": "PB",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          }
+        ]
+      },
+      "black": {
+        "vertices": 34,
+        "edges": 480,
+        "loops": 24,
+        "support_pairs": 159,
+        "component_count": 3,
+        "cycle_rank": 449,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "1": 2,
+          "32": 1
+        },
+        "bridges": []
+      },
+      "paired_black": {
+        "vertices": 34,
+        "edges": 240,
+        "loops": 12,
+        "support_pairs": 159,
+        "component_count": 3,
+        "cycle_rank": 209,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "1": 2,
+          "32": 1
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 7,
+                "classes": [
+                  8,
+                  54
+                ],
+                "representative": 8,
+                "mass": 2,
+                "blue": 0,
+                "reflection_pairs": 1,
+                "SC": false,
+                "c3": 1,
+                "type": "NS",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 8,
+                "classes": [
+                  9,
+                  12
+                ],
+                "representative": 9,
+                "mass": 30,
+                "blue": 0,
+                "reflection_pairs": 15,
+                "SC": false,
+                "c3": 4,
+                "type": "NS",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          },
+          {
+            "endpoints": [
+              {
+                "node": 12,
+                "classes": [
+                  16,
+                  46
+                ],
+                "representative": 20,
+                "mass": 46,
+                "blue": 0,
+                "reflection_pairs": 23,
+                "SC": false,
+                "c3": 5,
+                "type": "NS",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 28,
+                "classes": [
+                  38,
+                  52
+                ],
+                "representative": 64,
+                "mass": 2,
+                "blue": 0,
+                "reflection_pairs": 1,
+                "SC": false,
+                "c3": 1,
+                "type": "NS",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          },
+          {
+            "endpoints": [
+              {
+                "node": 17,
+                "classes": [
+                  23
+                ],
+                "representative": 32,
+                "mass": 5,
+                "blue": 3,
+                "reflection_pairs": 1,
+                "SC": true,
+                "c3": 2,
+                "type": "MX",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 22,
+                "classes": [
+                  28,
+                  44
+                ],
+                "representative": 41,
+                "mass": 62,
+                "blue": 0,
+                "reflection_pairs": 31,
+                "SC": false,
+                "c3": 6,
+                "type": "NS",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          }
+        ]
+      },
+      "combined": {
+        "vertices": 34,
+        "edges": 512,
+        "loops": 26,
+        "support_pairs": 183,
+        "component_count": 1,
+        "cycle_rank": 479,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "34": 1
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 0,
+                "classes": [
+                  0
+                ],
+                "representative": 0,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 0,
+                "type": "PB",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 31,
+                "classes": [
+                  42
+                ],
+                "representative": 77,
+                "mass": 17,
+                "blue": 5,
+                "reflection_pairs": 6,
+                "SC": true,
+                "c3": 4,
+                "type": "MX",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 1,
+                "classes": [
+                  1
+                ],
+                "representative": 1,
+                "mass": 17,
+                "blue": 5,
+                "reflection_pairs": 6,
+                "SC": true,
+                "c3": 4,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 33,
+                "classes": [
+                  55
+                ],
+                "representative": 520,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 2,
+                "type": "PB",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          }
+        ]
+      }
+    },
+    "SC_blue_spectrum": {
+      "1": 2,
+      "3": 2,
+      "5": 2,
+      "7": 4,
+      "9": 2
+    },
+    "SC_blue_spectrum_by_triangle_parity": {
+      "0": {
+        "1": 2,
+        "3": 2,
+        "5": 2,
+        "7": 4,
+        "9": 2
+      },
+      "1": {}
+    },
+    "maximum_blue_witnesses": [
+      {
+        "node": {
+          "node": 11,
+          "classes": [
+            15
+          ],
+          "representative": 19,
+          "mass": 41,
+          "blue": 9,
+          "reflection_pairs": 16,
+          "SC": true,
+          "c3": 8,
+          "type": "MX",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 15,
+            "representative": 19,
+            "mass": 41,
+            "H": 41,
+            "aut": 1,
+            "c3": 8,
+            "scores": [
+              2,
+              2,
+              2,
+              3,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 25,
+          "classes": [
+            33
+          ],
+          "representative": 51,
+          "mass": 15,
+          "blue": 9,
+          "reflection_pairs": 3,
+          "SC": true,
+          "c3": 8,
+          "type": "MX",
+          "quotient_black_charge": 1
+        },
+        "classes": [
+          {
+            "class": 33,
+            "representative": 51,
+            "mass": 15,
+            "H": 45,
+            "aut": 3,
+            "c3": 8,
+            "scores": [
+              2,
+              2,
+              2,
+              3,
+              3,
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "all_Q_bridges_have_a_leaf": true
+  },
+  {
+    "n": 7,
+    "m": 15,
+    "tilings": 32768,
+    "classes": 456,
+    "merged": 272,
+    "SC": 88,
+    "node_types": {
+      "PB": 4,
+      "MX": 84,
+      "NS": 184
+    },
+    "graphs": {
+      "blue": {
+        "vertices": 272,
+        "edges": 256,
+        "loops": 0,
+        "support_pairs": 246,
+        "component_count": 185,
+        "cycle_rank": 169,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "88": 1,
+          "1": 184
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 0,
+                "classes": [
+                  0
+                ],
+                "representative": 0,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 0,
+                "type": "PB",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 266,
+                "classes": [
+                  433
+                ],
+                "representative": 2461,
+                "mass": 31,
+                "blue": 5,
+                "reflection_pairs": 13,
+                "SC": true,
+                "c3": 5,
+                "type": "MX",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 1,
+                "classes": [
+                  1
+                ],
+                "representative": 1,
+                "mass": 33,
+                "blue": 1,
+                "reflection_pairs": 16,
+                "SC": true,
+                "c3": 5,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 254,
+                "classes": [
+                  400
+                ],
+                "representative": 1371,
+                "mass": 69,
+                "blue": 5,
+                "reflection_pairs": 32,
+                "SC": true,
+                "c3": 8,
+                "type": "MX",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 21,
+                "classes": [
+                  24
+                ],
+                "representative": 25,
+                "mass": 25,
+                "blue": 5,
+                "reflection_pairs": 10,
+                "SC": true,
+                "c3": 5,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 271,
+                "classes": [
+                  454
+                ],
+                "representative": 16400,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 2,
+                "type": "PB",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 43,
+                "classes": [
+                  53
+                ],
+                "representative": 64,
+                "mass": 9,
+                "blue": 1,
+                "reflection_pairs": 4,
+                "SC": true,
+                "c3": 3,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 170,
+                "classes": [
+                  232
+                ],
+                "representative": 362,
+                "mass": 65,
+                "blue": 5,
+                "reflection_pairs": 30,
+                "SC": true,
+                "c3": 8,
+                "type": "MX",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 44,
+                "classes": [
+                  54
+                ],
+                "representative": 65,
+                "mass": 93,
+                "blue": 1,
+                "reflection_pairs": 46,
+                "SC": true,
+                "c3": 8,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 256,
+                "classes": [
+                  408
+                ],
+                "representative": 1395,
+                "mass": 127,
+                "blue": 5,
+                "reflection_pairs": 61,
+                "SC": true,
+                "c3": 11,
+                "type": "MX",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 61,
+                "classes": [
+                  71
+                ],
+                "representative": 87,
+                "mass": 67,
+                "blue": 5,
+                "reflection_pairs": 31,
+                "SC": true,
+                "c3": 9,
+                "type": "MX",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 263,
+                "classes": [
+                  429
+                ],
+                "representative": 2112,
+                "mass": 5,
+                "blue": 1,
+                "reflection_pairs": 2,
+                "SC": true,
+                "c3": 4,
+                "type": "MX",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 172,
+                "classes": [
+                  243
+                ],
+                "representative": 409,
+                "mass": 41,
+                "blue": 5,
+                "reflection_pairs": 18,
+                "SC": true,
+                "c3": 6,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 261,
+                "classes": [
+                  426
+                ],
+                "representative": 2048,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 1,
+                "type": "PB",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 179,
+                "classes": [
+                  265
+                ],
+                "representative": 506,
+                "mass": 17,
+                "blue": 1,
+                "reflection_pairs": 8,
+                "SC": true,
+                "c3": 6,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 180,
+                "classes": [
+                  271
+                ],
+                "representative": 580,
+                "mass": 91,
+                "blue": 5,
+                "reflection_pairs": 43,
+                "SC": true,
+                "c3": 9,
+                "type": "MX",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 181,
+                "classes": [
+                  272
+                ],
+                "representative": 581,
+                "mass": 141,
+                "blue": 5,
+                "reflection_pairs": 68,
+                "SC": true,
+                "c3": 12,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 264,
+                "classes": [
+                  430
+                ],
+                "representative": 2113,
+                "mass": 41,
+                "blue": 1,
+                "reflection_pairs": 20,
+                "SC": true,
+                "c3": 9,
+                "type": "MX",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 217,
+                "classes": [
+                  319
+                ],
+                "representative": 690,
+                "mass": 143,
+                "blue": 5,
+                "reflection_pairs": 69,
+                "SC": true,
+                "c3": 12,
+                "type": "MX",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 267,
+                "classes": [
+                  439
+                ],
+                "representative": 2633,
+                "mass": 45,
+                "blue": 1,
+                "reflection_pairs": 22,
+                "SC": true,
+                "c3": 11,
+                "type": "MX",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          }
+        ]
+      },
+      "black": {
+        "vertices": 272,
+        "edges": 16128,
+        "loops": 114,
+        "support_pairs": 5880,
+        "component_count": 5,
+        "cycle_rank": 15861,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "1": 4,
+          "268": 1
+        },
+        "bridges": []
+      },
+      "paired_black": {
+        "vertices": 272,
+        "edges": 8064,
+        "loops": 57,
+        "support_pairs": 5880,
+        "component_count": 5,
+        "cycle_rank": 7797,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "1": 4,
+          "268": 1
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 15,
+                "classes": [
+                  16,
+                  452
+                ],
+                "representative": 16,
+                "mass": 2,
+                "blue": 0,
+                "reflection_pairs": 1,
+                "SC": false,
+                "c3": 1,
+                "type": "NS",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 147,
+                "classes": [
+                  186,
+                  244
+                ],
+                "representative": 281,
+                "mass": 58,
+                "blue": 0,
+                "reflection_pairs": 29,
+                "SC": false,
+                "c3": 5,
+                "type": "NS",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          },
+          {
+            "endpoints": [
+              {
+                "node": 29,
+                "classes": [
+                  35,
+                  261
+                ],
+                "representative": 40,
+                "mass": 82,
+                "blue": 0,
+                "reflection_pairs": 41,
+                "SC": false,
+                "c3": 6,
+                "type": "NS",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 270,
+                "classes": [
+                  450,
+                  455
+                ],
+                "representative": 8208,
+                "mass": 2,
+                "blue": 0,
+                "reflection_pairs": 1,
+                "SC": false,
+                "c3": 2,
+                "type": "NS",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          },
+          {
+            "endpoints": [
+              {
+                "node": 141,
+                "classes": [
+                  178,
+                  449
+                ],
+                "representative": 256,
+                "mass": 2,
+                "blue": 0,
+                "reflection_pairs": 1,
+                "SC": false,
+                "c3": 1,
+                "type": "NS",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 173,
+                "classes": [
+                  249,
+                  435
+                ],
+                "representative": 420,
+                "mass": 82,
+                "blue": 0,
+                "reflection_pairs": 41,
+                "SC": false,
+                "c3": 6,
+                "type": "NS",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          }
+        ]
+      },
+      "combined": {
+        "vertices": 272,
+        "edges": 16384,
+        "loops": 114,
+        "support_pairs": 6076,
+        "component_count": 1,
+        "cycle_rank": 16113,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "272": 1
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 0,
+                "classes": [
+                  0
+                ],
+                "representative": 0,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 0,
+                "type": "PB",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 266,
+                "classes": [
+                  433
+                ],
+                "representative": 2461,
+                "mass": 31,
+                "blue": 5,
+                "reflection_pairs": 13,
+                "SC": true,
+                "c3": 5,
+                "type": "MX",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 21,
+                "classes": [
+                  24
+                ],
+                "representative": 25,
+                "mass": 25,
+                "blue": 5,
+                "reflection_pairs": 10,
+                "SC": true,
+                "c3": 5,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 271,
+                "classes": [
+                  454
+                ],
+                "representative": 16400,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 2,
+                "type": "PB",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 172,
+                "classes": [
+                  243
+                ],
+                "representative": 409,
+                "mass": 41,
+                "blue": 5,
+                "reflection_pairs": 18,
+                "SC": true,
+                "c3": 6,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 261,
+                "classes": [
+                  426
+                ],
+                "representative": 2048,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 1,
+                "type": "PB",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          }
+        ]
+      }
+    },
+    "SC_blue_spectrum": {
+      "1": 10,
+      "3": 12,
+      "5": 16,
+      "7": 32,
+      "9": 18
+    },
+    "SC_blue_spectrum_by_triangle_parity": {
+      "0": {
+        "1": 5,
+        "3": 6,
+        "5": 8,
+        "7": 16,
+        "9": 9
+      },
+      "1": {
+        "1": 5,
+        "3": 6,
+        "5": 8,
+        "7": 16,
+        "9": 9
+      }
+    },
+    "maximum_blue_witnesses": [
+      {
+        "node": {
+          "node": 70,
+          "classes": [
+            82
+          ],
+          "representative": 103,
+          "mass": 151,
+          "blue": 9,
+          "reflection_pairs": 71,
+          "SC": true,
+          "c3": 13,
+          "type": "MX",
+          "quotient_black_charge": 1
+        },
+        "classes": [
+          {
+            "class": 82,
+            "representative": 103,
+            "mass": 151,
+            "H": 151,
+            "aut": 1,
+            "c3": 13,
+            "scores": [
+              2,
+              3,
+              3,
+              3,
+              3,
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 108,
+          "classes": [
+            129
+          ],
+          "representative": 171,
+          "mass": 125,
+          "blue": 9,
+          "reflection_pairs": 58,
+          "SC": true,
+          "c3": 12,
+          "type": "MX",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 129,
+            "representative": 171,
+            "mass": 125,
+            "H": 125,
+            "aut": 1,
+            "c3": 12,
+            "scores": [
+              2,
+              2,
+              3,
+              3,
+              3,
+              4,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 131,
+          "classes": [
+            163
+          ],
+          "representative": 227,
+          "mass": 145,
+          "blue": 9,
+          "reflection_pairs": 68,
+          "SC": true,
+          "c3": 12,
+          "type": "MX",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 163,
+            "representative": 227,
+            "mass": 145,
+            "H": 145,
+            "aut": 1,
+            "c3": 12,
+            "scores": [
+              2,
+              2,
+              3,
+              3,
+              3,
+              4,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 167,
+          "classes": [
+            228
+          ],
+          "representative": 357,
+          "mass": 117,
+          "blue": 9,
+          "reflection_pairs": 54,
+          "SC": true,
+          "c3": 11,
+          "type": "MX",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 228,
+            "representative": 357,
+            "mass": 117,
+            "H": 117,
+            "aut": 1,
+            "c3": 11,
+            "scores": [
+              2,
+              2,
+              2,
+              3,
+              4,
+              4,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 183,
+          "classes": [
+            274
+          ],
+          "representative": 583,
+          "mass": 151,
+          "blue": 9,
+          "reflection_pairs": 71,
+          "SC": true,
+          "c3": 13,
+          "type": "MX",
+          "quotient_black_charge": 1
+        },
+        "classes": [
+          {
+            "class": 274,
+            "representative": 583,
+            "mass": 151,
+            "H": 151,
+            "aut": 1,
+            "c3": 13,
+            "scores": [
+              2,
+              3,
+              3,
+              3,
+              3,
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 186,
+          "classes": [
+            277
+          ],
+          "representative": 587,
+          "mass": 137,
+          "blue": 9,
+          "reflection_pairs": 64,
+          "SC": true,
+          "c3": 12,
+          "type": "MX",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 277,
+            "representative": 587,
+            "mass": 137,
+            "H": 137,
+            "aut": 1,
+            "c3": 12,
+            "scores": [
+              2,
+              2,
+              3,
+              3,
+              3,
+              4,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 189,
+          "classes": [
+            281
+          ],
+          "representative": 597,
+          "mass": 139,
+          "blue": 9,
+          "reflection_pairs": 65,
+          "SC": true,
+          "c3": 12,
+          "type": "MX",
+          "quotient_black_charge": 1
+        },
+        "classes": [
+          {
+            "class": 281,
+            "representative": 597,
+            "mass": 139,
+            "H": 139,
+            "aut": 1,
+            "c3": 12,
+            "scores": [
+              2,
+              2,
+              3,
+              3,
+              3,
+              4,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 192,
+          "classes": [
+            288
+          ],
+          "representative": 614,
+          "mass": 157,
+          "blue": 9,
+          "reflection_pairs": 74,
+          "SC": true,
+          "c3": 13,
+          "type": "MX",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 288,
+            "representative": 614,
+            "mass": 157,
+            "H": 157,
+            "aut": 1,
+            "c3": 13,
+            "scores": [
+              2,
+              3,
+              3,
+              3,
+              3,
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 193,
+          "classes": [
+            289
+          ],
+          "representative": 615,
+          "mass": 25,
+          "blue": 9,
+          "reflection_pairs": 8,
+          "SC": true,
+          "c3": 14,
+          "type": "MX",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 289,
+            "representative": 615,
+            "mass": 25,
+            "H": 175,
+            "aut": 7,
+            "c3": 14,
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 195,
+          "classes": [
+            291
+          ],
+          "representative": 618,
+          "mass": 135,
+          "blue": 9,
+          "reflection_pairs": 63,
+          "SC": true,
+          "c3": 12,
+          "type": "MX",
+          "quotient_black_charge": 1
+        },
+        "classes": [
+          {
+            "class": 291,
+            "representative": 618,
+            "mass": 135,
+            "H": 135,
+            "aut": 1,
+            "c3": 12,
+            "scores": [
+              2,
+              2,
+              3,
+              3,
+              3,
+              4,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 199,
+          "classes": [
+            296
+          ],
+          "representative": 629,
+          "mass": 147,
+          "blue": 9,
+          "reflection_pairs": 69,
+          "SC": true,
+          "c3": 13,
+          "type": "MX",
+          "quotient_black_charge": 1
+        },
+        "classes": [
+          {
+            "class": 296,
+            "representative": 629,
+            "mass": 147,
+            "H": 147,
+            "aut": 1,
+            "c3": 13,
+            "scores": [
+              2,
+              3,
+              3,
+              3,
+              3,
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 216,
+          "classes": [
+            318
+          ],
+          "representative": 683,
+          "mass": 153,
+          "blue": 9,
+          "reflection_pairs": 72,
+          "SC": true,
+          "c3": 13,
+          "type": "MX",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 318,
+            "representative": 683,
+            "mass": 153,
+            "H": 153,
+            "aut": 1,
+            "c3": 13,
+            "scores": [
+              2,
+              3,
+              3,
+              3,
+              3,
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 236,
+          "classes": [
+            360
+          ],
+          "representative": 869,
+          "mass": 133,
+          "blue": 9,
+          "reflection_pairs": 62,
+          "SC": true,
+          "c3": 12,
+          "type": "MX",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 360,
+            "representative": 869,
+            "mass": 133,
+            "H": 133,
+            "aut": 1,
+            "c3": 12,
+            "scores": [
+              2,
+              2,
+              3,
+              3,
+              3,
+              4,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 246,
+          "classes": [
+            388
+          ],
+          "representative": 1195,
+          "mass": 159,
+          "blue": 9,
+          "reflection_pairs": 75,
+          "SC": true,
+          "c3": 13,
+          "type": "MX",
+          "quotient_black_charge": 1
+        },
+        "classes": [
+          {
+            "class": 388,
+            "representative": 1195,
+            "mass": 159,
+            "H": 159,
+            "aut": 1,
+            "c3": 13,
+            "scores": [
+              2,
+              3,
+              3,
+              3,
+              3,
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 247,
+          "classes": [
+            389
+          ],
+          "representative": 1203,
+          "mass": 151,
+          "blue": 9,
+          "reflection_pairs": 71,
+          "SC": true,
+          "c3": 13,
+          "type": "MX",
+          "quotient_black_charge": 1
+        },
+        "classes": [
+          {
+            "class": 389,
+            "representative": 1203,
+            "mass": 151,
+            "H": 151,
+            "aut": 1,
+            "c3": 13,
+            "scores": [
+              2,
+              3,
+              3,
+              3,
+              3,
+              3,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 248,
+          "classes": [
+            390
+          ],
+          "representative": 1211,
+          "mass": 129,
+          "blue": 9,
+          "reflection_pairs": 60,
+          "SC": true,
+          "c3": 12,
+          "type": "MX",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 390,
+            "representative": 1211,
+            "mass": 129,
+            "H": 129,
+            "aut": 1,
+            "c3": 12,
+            "scores": [
+              2,
+              2,
+              3,
+              3,
+              3,
+              4,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 255,
+          "classes": [
+            404
+          ],
+          "representative": 1379,
+          "mass": 129,
+          "blue": 9,
+          "reflection_pairs": 60,
+          "SC": true,
+          "c3": 11,
+          "type": "MX",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 404,
+            "representative": 1379,
+            "mass": 129,
+            "H": 129,
+            "aut": 1,
+            "c3": 11,
+            "scores": [
+              2,
+              2,
+              2,
+              3,
+              4,
+              4,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 258,
+          "classes": [
+            415
+          ],
+          "representative": 1653,
+          "mass": 57,
+          "blue": 9,
+          "reflection_pairs": 24,
+          "SC": true,
+          "c3": 14,
+          "type": "MX",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 415,
+            "representative": 1653,
+            "mass": 57,
+            "H": 171,
+            "aut": 3,
+            "c3": 14,
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          }
+        ]
+      }
+    ],
+    "all_Q_bridges_have_a_leaf": true
+  },
+  {
+    "n": 8,
+    "m": 21,
+    "tilings": 2097152,
+    "classes": 6880,
+    "merged": 3528,
+    "SC": 176,
+    "node_types": {
+      "PB": 3,
+      "MX": 173,
+      "NS": 3352
+    },
+    "graphs": {
+      "blue": {
+        "vertices": 3528,
+        "edges": 2048,
+        "loops": 4,
+        "support_pairs": 1794,
+        "component_count": 3353,
+        "cycle_rank": 1873,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "176": 1,
+          "1": 3352
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 0,
+                "classes": [
+                  0
+                ],
+                "representative": 0,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 0,
+                "type": "PB",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 3517,
+                "classes": [
+                  6838
+                ],
+                "representative": 157501,
+                "mass": 57,
+                "blue": 9,
+                "reflection_pairs": 24,
+                "SC": true,
+                "c3": 6,
+                "type": "MX",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 846,
+                "classes": [
+                  1172
+                ],
+                "representative": 1593,
+                "mass": 49,
+                "blue": 9,
+                "reflection_pairs": 20,
+                "SC": true,
+                "c3": 6,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 3527,
+                "classes": [
+                  6872
+                ],
+                "representative": 1048608,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 2,
+                "type": "PB",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 3301,
+                "classes": [
+                  6207
+                ],
+                "representative": 28484,
+                "mass": 105,
+                "blue": 13,
+                "reflection_pairs": 46,
+                "SC": true,
+                "c3": 8,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 3525,
+                "classes": [
+                  6865
+                ],
+                "representative": 525312,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 2,
+                "type": "PB",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          }
+        ]
+      },
+      "black": {
+        "vertices": 3528,
+        "edges": 1046528,
+        "loops": 618,
+        "support_pairs": 436580,
+        "component_count": 4,
+        "cycle_rank": 1043004,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "1": 3,
+          "3525": 1
+        },
+        "bridges": []
+      },
+      "paired_black": {
+        "vertices": 3528,
+        "edges": 523264,
+        "loops": 309,
+        "support_pairs": 436580,
+        "component_count": 4,
+        "cycle_rank": 519740,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "1": 3,
+          "3525": 1
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 28,
+                "classes": [
+                  32,
+                  6868
+                ],
+                "representative": 32,
+                "mass": 2,
+                "blue": 0,
+                "reflection_pairs": 1,
+                "SC": false,
+                "c3": 1,
+                "type": "NS",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 3172,
+                "classes": [
+                  5382,
+                  6094
+                ],
+                "representative": 17977,
+                "mass": 106,
+                "blue": 0,
+                "reflection_pairs": 53,
+                "SC": false,
+                "c3": 6,
+                "type": "NS",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          },
+          {
+            "endpoints": [
+              {
+                "node": 651,
+                "classes": [
+                  815,
+                  6862
+                ],
+                "representative": 1024,
+                "mass": 2,
+                "blue": 0,
+                "reflection_pairs": 1,
+                "SC": false,
+                "c3": 1,
+                "type": "NS",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 3289,
+                "classes": [
+                  6096,
+                  6840
+                ],
+                "representative": 26436,
+                "mass": 154,
+                "blue": 0,
+                "reflection_pairs": 77,
+                "SC": false,
+                "c3": 7,
+                "type": "NS",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          },
+          {
+            "endpoints": [
+              {
+                "node": 774,
+                "classes": [
+                  1019,
+                  1316
+                ],
+                "representative": 1329,
+                "mass": 190,
+                "blue": 0,
+                "reflection_pairs": 95,
+                "SC": false,
+                "c3": 8,
+                "type": "NS",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 2528,
+                "classes": [
+                  3862
+                ],
+                "representative": 8192,
+                "mass": 5,
+                "blue": 3,
+                "reflection_pairs": 1,
+                "SC": true,
+                "c3": 2,
+                "type": "MX",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          },
+          {
+            "endpoints": [
+              {
+                "node": 844,
+                "classes": [
+                  1168,
+                  1317
+                ],
+                "representative": 1585,
+                "mass": 146,
+                "blue": 0,
+                "reflection_pairs": 73,
+                "SC": false,
+                "c3": 7,
+                "type": "NS",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 3516,
+                "classes": [
+                  6831,
+                  6879
+                ],
+                "representative": 131104,
+                "mass": 2,
+                "blue": 0,
+                "reflection_pairs": 1,
+                "SC": false,
+                "c3": 2,
+                "type": "NS",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          },
+          {
+            "endpoints": [
+              {
+                "node": 849,
+                "classes": [
+                  1184,
+                  6100
+                ],
+                "representative": 1608,
+                "mass": 138,
+                "blue": 0,
+                "reflection_pairs": 69,
+                "SC": false,
+                "c3": 7,
+                "type": "NS",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 3524,
+                "classes": [
+                  6864,
+                  6877
+                ],
+                "representative": 524320,
+                "mass": 2,
+                "blue": 0,
+                "reflection_pairs": 1,
+                "SC": false,
+                "c3": 2,
+                "type": "NS",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          },
+          {
+            "endpoints": [
+              {
+                "node": 3155,
+                "classes": [
+                  5345,
+                  6830
+                ],
+                "representative": 16384,
+                "mass": 2,
+                "blue": 0,
+                "reflection_pairs": 1,
+                "SC": false,
+                "c3": 1,
+                "type": "NS",
+                "quotient_black_charge": 1
+              },
+              {
+                "node": 3193,
+                "classes": [
+                  5443,
+                  6083
+                ],
+                "representative": 18233,
+                "mass": 146,
+                "blue": 0,
+                "reflection_pairs": 73,
+                "SC": false,
+                "c3": 7,
+                "type": "NS",
+                "quotient_black_charge": 1
+              }
+            ],
+            "has_quotient_leaf": true
+          }
+        ]
+      },
+      "combined": {
+        "vertices": 3528,
+        "edges": 1048576,
+        "loops": 622,
+        "support_pairs": 438216,
+        "component_count": 1,
+        "cycle_rank": 1045049,
+        "active_components": 1,
+        "component_vertex_sizes": {
+          "3528": 1
+        },
+        "bridges": [
+          {
+            "endpoints": [
+              {
+                "node": 0,
+                "classes": [
+                  0
+                ],
+                "representative": 0,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 0,
+                "type": "PB",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 3517,
+                "classes": [
+                  6838
+                ],
+                "representative": 157501,
+                "mass": 57,
+                "blue": 9,
+                "reflection_pairs": 24,
+                "SC": true,
+                "c3": 6,
+                "type": "MX",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 846,
+                "classes": [
+                  1172
+                ],
+                "representative": 1593,
+                "mass": 49,
+                "blue": 9,
+                "reflection_pairs": 20,
+                "SC": true,
+                "c3": 6,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 3527,
+                "classes": [
+                  6872
+                ],
+                "representative": 1048608,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 2,
+                "type": "PB",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          },
+          {
+            "endpoints": [
+              {
+                "node": 3301,
+                "classes": [
+                  6207
+                ],
+                "representative": 28484,
+                "mass": 105,
+                "blue": 13,
+                "reflection_pairs": 46,
+                "SC": true,
+                "c3": 8,
+                "type": "MX",
+                "quotient_black_charge": 0
+              },
+              {
+                "node": 3525,
+                "classes": [
+                  6865
+                ],
+                "representative": 525312,
+                "mass": 1,
+                "blue": 1,
+                "reflection_pairs": 0,
+                "SC": true,
+                "c3": 2,
+                "type": "PB",
+                "quotient_black_charge": 0
+              }
+            ],
+            "has_quotient_leaf": false
+          }
+        ]
+      }
+    },
+    "SC_blue_spectrum": {
+      "1": 3,
+      "3": 2,
+      "5": 4,
+      "7": 6,
+      "9": 6,
+      "11": 4,
+      "13": 6,
+      "15": 8,
+      "17": 7,
+      "19": 15,
+      "21": 7,
+      "23": 15,
+      "25": 15,
+      "27": 11,
+      "29": 17,
+      "31": 17,
+      "33": 17,
+      "35": 8,
+      "37": 6,
+      "39": 2
+    },
+    "SC_blue_spectrum_by_triangle_parity": {
+      "0": {
+        "1": 3,
+        "3": 2,
+        "5": 4,
+        "7": 6,
+        "9": 6,
+        "11": 4,
+        "13": 6,
+        "15": 8,
+        "17": 7,
+        "19": 15,
+        "21": 7,
+        "23": 15,
+        "25": 15,
+        "27": 11,
+        "29": 17,
+        "31": 17,
+        "33": 17,
+        "35": 8,
+        "37": 6,
+        "39": 2
+      },
+      "1": {}
+    },
+    "maximum_blue_witnesses": [
+      {
+        "node": {
+          "node": 3437,
+          "classes": [
+            6486
+          ],
+          "representative": 40077,
+          "mass": 637,
+          "blue": 39,
+          "reflection_pairs": 299,
+          "SC": true,
+          "c3": 20,
+          "type": "MX",
+          "quotient_black_charge": 1
+        },
+        "classes": [
+          {
+            "class": 6486,
+            "representative": 40077,
+            "mass": 637,
+            "H": 637,
+            "aut": 1,
+            "c3": 20,
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        ]
+      },
+      {
+        "node": {
+          "node": 3441,
+          "classes": [
+            6490
+          ],
+          "representative": 40109,
+          "mass": 207,
+          "blue": 39,
+          "reflection_pairs": 84,
+          "SC": true,
+          "c3": 20,
+          "type": "MX",
+          "quotient_black_charge": 0
+        },
+        "classes": [
+          {
+            "class": 6490,
+            "representative": 40109,
+            "mass": 207,
+            "H": 621,
+            "aut": 3,
+            "c3": 20,
+            "scores": [
+              3,
+              3,
+              3,
+              3,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        ]
+      }
+    ],
+    "all_Q_bridges_have_a_leaf": true
+  }
+]

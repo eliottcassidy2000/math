@@ -1,0 +1,4 @@
+{"n": 3, "pure_blue": [{"code": 0, "mass": 1, "strong": false, "HC": 0, "Aut": 1}, {"code": 2, "mass": 1, "strong": true, "HC": 1, "Aut": 3}], "Q_bridges": [], "Q_bridge_lower_bound_formula": 0, "signed_bridge_nodes_verified": 2}
+{"n": 4, "pure_blue": [{"code": 0, "mass": 1, "strong": false, "HC": 0, "Aut": 1}], "Q_bridges": [[1, 2]], "Q_bridge_lower_bound_formula": 2, "signed_bridge_nodes_verified": 3}
+{"n": 5, "pure_blue": [{"code": 0, "mass": 1, "strong": false, "HC": 0, "Aut": 1}, {"code": 5, "mass": 1, "strong": false, "HC": 0, "Aut": 3}, {"code": 76, "mass": 3, "strong": true, "HC": 2, "Aut": 5}], "Q_bridges": [[1, 4]], "Q_bridge_lower_bound_formula": 1, "signed_bridge_nodes_verified": 10}
+{"n": 6, "pure_blue": [{"code": 0, "mass": 1, "strong": false, "HC": 0, "Aut": 1}, {"code": 87, "mass": 1, "strong": false, "HC": 0, "Aut": 9}], "Q_bridges": [[1, 9], [3, 15], [5, 23]], "Q_bridge_lower_bound_formula": 3, "signed_bridge_nodes_verified": 34}
