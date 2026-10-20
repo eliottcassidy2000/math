@@ -192,7 +192,114 @@ span vertices, not exhaust edges. The explicit torus-grid construction in
 [torus.md](torus.md) uses Euler circuits only after declaring the added
 orientation and embedding.
 
-## 6. Reproduction and scope
+## 6. Incoming sharp budgets and the full counting profile
+
+Two companion packets arrived during final integration and were read before
+use: [sharp budgets](../kernels_games_detours_20261020f/game.md) and
+[rooted budgets / counting](../complement_path_games_20261020/README.md).
+Their free-start feasibility agrees with section 2. They strengthen it to
+the following minimum numbers of red edges, for every n>=4:
+
+| Variant | Minimum red edges |
+|---|---:|
+|H/H|n-1|
+|H/W|n-1|
+|W/H|2n-5, except n=6 gives6 and n=8 gives10|
+|W/W|impossible|
+
+The second packet supplies a self-contained degree-obstruction proof,
+independently checked here. A nontraceable graph has, for some
+`1<=k<=floor(n/2)`, k vertices of degree at most k-1. For a connected
+nontraceable graph k>=2. Complementation therefore costs at least
+
+```
+g_n(k)=k(n-k)-binom(k,2).
+```
+
+This concave quadratic is minimized at an endpoint of the allowed k
+interval. The values are n-1 for the unrestricted case, and
+`min(2n-5,g_n(floor(n/2)))` for the connected-blue case. The latter simplifies
+to the W/H row above. The extremal constructions in the companion proof
+have disconnected red, so they satisfy the game's extra legality condition.
+This is a proved specialization of classical extremal graph mechanisms,
+not a numerical extrapolation or a uniqueness classification.
+
+The same companion extends section 3 from support to counts. Let q_i(c)
+count unordered covers of block i by c **oriented** paths; nonsingletons
+have two orientations and singletons one. Let w(c_1,...,c_r) count label
+words with c_i copies of label i and no equal adjacent labels. Then
+
+```
+H_ordered(join_i X_i)
+ = sum_c w(c_1,...,c_r) product_i [c_i! q_i(c_i)].          (5)
+```
+
+Cut a Hamiltonian path into maximal block runs to obtain the bijection.
+The factorial assigns the distinct oriented cover paths to occurrences
+of their block label. This is the missing full profile behind the
+minimum-path-cover criterion, and it keeps counts separate from existence.
+
+Finally define the edge-colouring polynomial
+
+```
+F_G(t)=sum_(vertex permutations pi) t^(red consecutive pairs of pi).
+```
+
+Its constant coefficient is the ordered blue HP count; its coefficient of
+t^(n-1) is the ordered red HP count. H/H winning means that both vanish.
+Complementation gives `F_Gbar(t)=t^(n-1)F_G(1/t)`. Turning a blue edge e red
+changes F by `(t-1)D_e(t)`, where D_e counts only permutations using e,
+weighted by their other red consecutive pairs. These identities partition
+the actual permutation words and need no tournament orientation gauge.
+The companion's tests, rather than this packet's game.json, check its rooted
+join refinements and minimum budgets on all labelled graphs through six.
+
+### The response polynomial is an invertible path-cover transform
+
+The two incoming constructions combine to give an exact identity. For one
+graph G, use the same oriented path-cover counts q_G(c) as above. Then
+
+```
+F_G(t) = sum_(c=1)^n c! q_G(c) (t-1)^(n-c),
+q_G(c) = [x^(n-c)] F_G(1+x) / c!.                         (6)
+```
+
+Proof: expand the product of `1+(t-1)` over the red consecutive pairs in
+each permutation. A selected subset of consecutive edges forms a spanning
+linear forest, with isolated vertices included. Its c components give
+exactly an oriented path cover; contracting them leaves c! possible block
+orders. Conversely every such cover and block order produces exactly that
+selection in a permutation. A c-component forest has n-c selected edges.
+This proves (6) without assuming the selected runs are maximal.
+
+Combining (6) with colour reciprocity gives the explicit complement transform
+
+```
+c! q_Gbar(c)
+ = sum_(d=c)^n (-1)^(n-d) binom(d-1,c-1) d! q_G(d).       (7)
+```
+
+It is an involution, since complementation twice is the identity. In
+particular the ordered blue HP count is the alternating evaluation
+
+```
+H_ordered(Gbar) = sum_(d=1)^n (-1)^(n-d) d! q_G(d).        (8)
+```
+
+Thus the response polynomial and full path-cover profile contain exactly
+the same information. The minimum path-cover number is only their support
+boundary. The source/target are two coordinates on the same undirected
+graph invariant; this does not identify that graph with a tournament.
+[cover_response.py](cover_response.py) independently compares forest
+enumeration with permutation weights and checks the complement transform.
+Its complete universe is all1,099 labelled graphs on1..5 vertices, with
+59,809 forest-subset examinations and matching normal/optimized receipts.
+The claw and triangle-plus-isolate are a sharp information-loss control:
+both have `q=(0,6,6,1)` and `F=12t+12t^2`, yet they are nonisomorphic
+complements. A profile fixed by the complement involution does not imply
+that the graph is self-complementary.
+
+## 7. Reproduction and scope
 
 Run from the repository root:
 

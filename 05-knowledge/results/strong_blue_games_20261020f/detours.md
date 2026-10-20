@@ -66,7 +66,8 @@ makes both reversed H blocks directed. The other two V joins are
 were not used by U. Thus V is directed.
 
 Each internal block edge used by H occurs in both U and V and cancels.
-Internal L and R edges occur only in Q and remain reversed. The two joins
+After that cancellation, the remaining internal block edges are exactly
+those of Q, namely the displayed L and R paths. The two joins
 of Q are canceled by V, leaving precisely the two joins of P from U.
 Consequently `E(Q) xor E(U) xor E(V)=E(P)`, proving the exact endpoint.
 

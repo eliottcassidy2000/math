@@ -1,0 +1,121 @@
+{
+  "status": "FINITE-EXACT independent verification of elementary identities",
+  "source_sha256": "f7e5fc5771c01736054ec4b957460e770b226b4684a38aa7cd71e1ca733db5ca",
+  "universe": "All labelled simple undirected graphs on [n], n=1,...,5; no filters",
+  "graphs_by_order": {
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 1024
+  },
+  "total_graphs": 1099,
+  "edge_subsets_examined_for_linear_forests": 59809,
+  "accepted_linear_forests_including_repetitions_across_graphs": 33646,
+  "checks": [
+    "F_R(t)=sum_c c! q_R(c) (t-1)^(n-c)",
+    "c! q_R(c)=[x^(n-c)] F_R(1+x)",
+    "F_Rbar(t)=t^(n-1) F_R(1/t)",
+    "H_ordered(Rbar)=sum_c (-1)^(n-c) c! q_R(c)",
+    "d! q_Rbar(d)=sum_(c>=d) (-1)^(n-c) binom(c-1,d-1) c! q_R(c)",
+    "F_R(1)=n!; F_R'(1)=2|E(R)|(n-1)!"
+  ],
+  "independent_paths": "Direct edge-subset/union-find forest enumeration versus literal vertex permutations",
+  "examples": {
+    "claw": {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "q_c_for_c_1_to_n": [
+        0,
+        6,
+        6,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        12,
+        12,
+        0
+      ],
+      "blue_H_ordered": 0,
+      "red_H_ordered": 0
+    },
+    "path4": {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "q_c_for_c_1_to_n": [
+        2,
+        8,
+        6,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        2,
+        10,
+        10,
+        2
+      ],
+      "blue_H_ordered": 2,
+      "red_H_ordered": 2
+    },
+    "cycle4": {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "q_c_for_c_1_to_n": [
+        8,
+        16,
+        8,
+        1
+      ],
+      "F_coefficients_low_to_high": [
+        0,
+        8,
+        8,
+        8
+      ],
+      "blue_H_ordered": 0,
+      "red_H_ordered": 8
+    }
+  },
+  "scope": "Ordered Hamilton paths and unordered oriented path covers; not tournament counts or knot invariants"
+}

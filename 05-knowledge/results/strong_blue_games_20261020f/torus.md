@@ -138,6 +138,33 @@ the winning predicate is still absent. No transfer to Petersen minors,
 Kuratowski obstructions, or tournament black connectivity follows from this
 dictionary alone.
 
+### An exact Hamiltonian/Eulerian count bridge from incoming work
+
+The [incoming port-and-winding note](../kernels_games_detours_20261020f/walks_knots.md)
+provides the missing incidence-preserving comparison. For a directed graph
+D with labelled arcs, form its directed line graph L(D), whose vertices
+are the arcs, with e->f exactly when head(e)=tail(f). Linear Eulerian arc
+words in D are in bijection with Hamiltonian vertex words in L(D): both
+are permutations of the same arc set, with the same consecutive-incidence
+test. This also identifies their counts, with no quotient by rotation.
+The closed variant adds the last-to-first incidence test.
+
+For our torus grid D_(p,q), L(D) has 2pq vertices. Its Hamiltonian words
+are the grid's linear Euler words; the underlying walks carry winding
+(q,p) and length2pq. The Hamiltonian paths themselves have 2pq-1 edges.
+The vertex labels retain each original directed arc and its marked lift
+increment, which is how the winding survives. Dropping those labels loses
+the knot parameters. L(D) is generally not a tournament, and no equality
+with the HP count of T_k is asserted.
+
+This is sensitive to direction: the ordinary undirected line graph of
+K_(1,3) is K3 and has a Hamiltonian path, while the claw has no Euler trail.
+A pairwise common endpoint need not be the endpoint at which the current
+traversal arrives. The incoming note also retains integer carries on the
+residue map i->i+q mod p; the residue graph alone identifies q only modulo p.
+Thus the new exact line-graph bridge and our marked-grid bridge preserve
+compatible data, while an unmarked edge count does not.
+
 ## 5. Explicit checks
 
 ```powershell

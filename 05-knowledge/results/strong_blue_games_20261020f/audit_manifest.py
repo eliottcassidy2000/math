@@ -26,9 +26,10 @@ def main():
             digest=hashlib.sha256(script.read_bytes()).hexdigest()
             if digest!=expected:raise RuntimeError(f'source hash mismatch {path}')
             receipts.append(path.name)
-    files={p.name:hashlib.sha256(p.read_bytes()).hexdigest()
+    files={p.name:hashlib.sha256(p.read_bytes().replace(b'\r\n',b'\n')).hexdigest()
            for p in sorted(HERE.iterdir()) if p.is_file() and p.name!='manifest.json'}
     out=dict(status='VERIFIED local references and supplied source hashes',
+             manifest_hash_mode='SHA256 of UTF-8 text bytes with CRLF normalized to LF',
              local_links=links,source_receipts=receipts,files=files)
     (HERE/'manifest.json').write_text(json.dumps(out,indent=2)+'\n')
     print(json.dumps(dict(local_links=links,source_receipts=receipts,hashed_files=len(files)),indent=2))

@@ -26,10 +26,13 @@ and geometric forcing lanes. No mixed-to-mixed blue bridge is found here.
 |Open path partners|Unordered boundary/cut pairs give common black hubs, allowing the roles of the two edges to exchange|[Boundary transport](transport.md), boundary_transport_probe.py/json|
 |Interior HP relocation|Two directed triangle reversals sharing one vertex; preserves the entire score vector|[Cycle identity](transport.md), transport_identity.py/json|
 |Undirected complement game|Three variants involving H admit a winning selection iff n>=4; W/W never does|[Game proof](game.md), game.py/json|
+|Minimum red budget|Incoming proofs give n-1 for H/H,H/W; W/H gives2n-5 except6->6 and8->10|[Game, section 6](game.md)|
 |Complete joins|Traceability iff each block's path-cover number is at most the number of vertices outside it plus one|[Game, section 3](game.md)|
+|Colour-response polynomial|F_G(t)=sum_c c!q_G(c)(t-1)^(n-c); complementation is an explicit involution of the full oriented path-cover profile|[Game, section 6](game.md), cover_response.py/json|
 |Pinned geometric exterior|Independent pinned rigidity rows imply every proper four-colour boundary extends; a minimal six-colour failure requires at least h+ceil(a/2) pinned stresses|[Six-colour extension](six_colour.md), six_colour_check.py/json|
 |Minimum palette blocker banks|For k>=3 only concentrated and common-star banks attain the union-bound threshold; distinct unit-distance ports exclude the common-star case|[Palette classification](six_colour.md)|
 |Marked directed p-by-q torus grid|Euler length 2pq, winding(q,p); the straight parametrization with this winding is embedded iff gcd(p,q)=1|[Typed torus map](torus.md), torus.py/json|
+|Directed line graph|Its HP words are exactly Eulerian arc words of the original directed graph; marked arc increments preserve winding|[Incoming bridge integrated](torus.md)|
 
 H means a Hamiltonian path; W means a vertex-spanning walk allowing repeated
 vertices and edges. A spanning walk is not an Euler trail. The torus grid

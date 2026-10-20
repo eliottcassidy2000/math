@@ -40,3 +40,11 @@ game therefore uses existence of a traversal, not success at every root.
   H=q^2 and a primitive difference-one triple. Marked torus grids instead
   retain (q,p) winding and 2pq Euler length. These are different typed maps,
   neither a Petersen reduction nor a new LRC(14) implication.
+
+Incoming game proofs sharpened feasibility to exact red budgets. Combining
+their block-cover and colouring-polynomial coordinates gives an invertible
+transform, with complementation acting by an explicit upper-triangular
+involution. The claw/complement pair is fixed at the profile level despite
+nonisomorphic graphs: even the full counting profile loses adjacency.
+The directed line graph supplies an exact Euler-word/HP-word bijection;
+marked arc increments carry the winding needed by the torus construction.

@@ -8,6 +8,10 @@ verification or priority claim is made.
 
 - The two-block repair and square law were derived by the metagraph agent;
   the root checked directedness, XOR support, score changes, and K/R signs.
+  A separate no-import review checked598 blue presentations and8486 squares,
+  the two-block singleton-L boundary, every family certificate k=4..100,
+  and both small quotient maps. It corrected one occurrence-count sentence:
+  internal H edges cancel modulo two, even when also present in Q.
 - The root derived the product/square count, blue diagonal, primitive-triple
   map, boundary incidence graph and paired-triangle identity. Two other
   agents independently checked the square factorization; the metagraph
@@ -23,6 +27,17 @@ verification or priority claim is made.
   checked induced-row independence, rigid-motion rank losses, minimal list
   obstructions, cross-intersection cases, and use of distinct geometric ports.
 
+After the first checkpoint, fetch brought commits c402d288ac and9852737522.
+Their [budget/winding packet](../kernels_games_detours_20261020f/game.md) and
+[complement game synthesis](../complement_path_games_20261020/README.md)
+were read in full. Root independently checked the maximal-non-Hamiltonian
+degree argument, concave minimum, endpoint constructions, block-run count,
+edge-polynomial reciprocity, and directed line-graph bijection before adding
+them to game.md and torus.md. No new census was run to duplicate theirs.
+Combining the two counting coordinates then produced the invertible
+response/path-cover transform and its complement involution; root and the
+game agent independently derived the coefficient signs and binomial factor.
+
 ## Load-bearing controls
 
 All commands below are relative to this directory. Each checker completed
@@ -37,11 +52,15 @@ normally and is only a discovery/mechanism test.
 |double_return_counts.py|a,b=2..5 product formula via DFS versus subsets; balanced k=2..7 blue/arc-disjoint counts; automorphisms k<=4; arithmetic k<=100|
 |transport_identity.py|All64+1024 standard-HP tournaments n=5,6;392 legal interior relocations; literal edge sets, scores, direct cycle counts|
 |game.py|All1252 nonempty atlas graphs <=7; literal permutation audit of208 <=6;256 complete-join cases;25 trees/142 roots; family through30|
+|cover_response.py|All1099 labelled graphs n=1..5; permutation response versus independently enumerated oriented forests; full complement transform|
 |six_colour_check.py|Exact rational star and algebraic spindle;128 pin subsets,737 boundary assignments;32768 pair families and9 extremal banks|
 |torus.py|All81 grid pairs p,q=1..9 plus6 named arithmetic controls; edge exhaustion, actual lifted displacement, gcd and primitive triples|
 
 Scripts use explicit checks surviving optimization. JSON files record exact
 outputs; [manifest.json](manifest.json) hashes all script/output pairs. The
+manifest normalizes CRLF to LF so these text hashes survive checkout on
+different platforms. Script-specific source receipts retain their declared
+raw-byte convention; source files have LF endings in Git. The
 universe in a table entry is not enlarged by linking it next to an all-order
 theorem. Small unresolved hub cases are failures of a restricted method, not
 certificates that no black path exists.
