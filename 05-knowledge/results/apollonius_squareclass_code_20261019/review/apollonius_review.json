@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "general_center_discriminant": "product defects / determinant(center differences)^2",
+  "normalization": "No rotation or square-root base extension used",
+  "sign_rows": [
+    21,
+    41,
+    38,
+    26
+  ],
+  "relations": [
+    0,
+    15
+  ],
+  "group_order": 8,
+  "fixed_point_counts": {
+    "0": 1,
+    "4": 6,
+    "8": 1
+  },
+  "review_boundary": "Generic over labelled circles with radii in the base field; no numerical Frobenius distribution conclusion"
+}

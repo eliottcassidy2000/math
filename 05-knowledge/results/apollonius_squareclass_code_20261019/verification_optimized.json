@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "checks": 323033,
+  "graph_count": 1099,
+  "binary_relations": [
+    0,
+    15
+  ],
+  "fixed_point_histogram": {
+    "0": 1,
+    "4": 6,
+    "8": 1
+  },
+  "finite_fields": {
+    "5": {
+      "generic_counts": {
+        "0": 0,
+        "4": 32,
+        "8": 0
+      },
+      "excluded_degenerate": 1248
+    },
+    "7": {
+      "generic_counts": {
+        "0": 288,
+        "4": 448,
+        "8": 16
+      },
+      "excluded_degenerate": 8320
+    },
+    "11": {
+      "generic_counts": {
+        "0": 4864,
+        "4": 22096,
+        "8": 1328
+      },
+      "excluded_degenerate": 81712
+    }
+  }
+}
