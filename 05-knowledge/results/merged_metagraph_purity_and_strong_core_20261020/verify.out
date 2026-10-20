@@ -1,0 +1,4 @@
+PASS probe_n5_rewiring: exact stdout replay
+PASS verify_transitive_mixed_landing: exact stdout replay
+PASS verify_strong_core_counts: exact stdout replay
+PASS: all three verification programs; no repository imports or external packages.

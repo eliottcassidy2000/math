@@ -1,0 +1,9 @@
+{'n': 3, 'path': [0, 2, 1], 'c3': 1, 'nonblue_normalized_support': [], 'endpoint_score_sum': 2, 'required_if_blue': 2}
+{'n': 4, 'path': [0, 3, 2, 1], 'c3': 2, 'nonblue_normalized_support': [(3, 1)], 'endpoint_score_sum': 4, 'required_if_blue': 3}
+{'n': 5, 'path': [0, 4, 3, 2, 1], 'c3': 3, 'nonblue_normalized_support': [(4, 1), (4, 2)], 'endpoint_score_sum': 6, 'required_if_blue': 4}
+{'n': 6, 'path': [0, 5, 4, 3, 2, 1], 'c3': 4, 'nonblue_normalized_support': [(5, 1), (5, 2), (5, 3)], 'endpoint_score_sum': 8, 'required_if_blue': 5}
+{'n': 7, 'path': [0, 6, 5, 4, 3, 2, 1], 'c3': 5, 'nonblue_normalized_support': [(6, 1), (6, 2), (6, 3), (6, 4)], 'endpoint_score_sum': 10, 'required_if_blue': 6}
+{'n': 8, 'path': [0, 7, 6, 5, 4, 3, 2, 1], 'c3': 6, 'nonblue_normalized_support': [(7, 1), (7, 2), (7, 3), (7, 4), (7, 5)], 'endpoint_score_sum': 12, 'required_if_blue': 7}
+{'n': 9, 'path': [0, 8, 7, 6, 5, 4, 3, 2, 1], 'c3': 7, 'nonblue_normalized_support': [(8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6)], 'endpoint_score_sum': 14, 'required_if_blue': 8}
+{'n': 10, 'path': [0, 9, 8, 7, 6, 5, 4, 3, 2, 1], 'c3': 8, 'nonblue_normalized_support': [(9, 1), (9, 2), (9, 3), (9, 4), (9, 5), (9, 6), (9, 7)], 'endpoint_score_sum': 16, 'required_if_blue': 9}
+ALL CHECKS PASSED for n=3..100; direct matrix/path/normalization/reflection/score and C3 identities, no graph-isomorphism heuristic.
