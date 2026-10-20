@@ -1,0 +1,25 @@
+NetworkX 3.5 exact labelled supports; independent cubic closures
+Definitions: labelled ports -1..-7; proper edge colours 0,1,2; orbit factor6
+Loupekine0 n 22 girth 5 C 0 PM 36 all_deletions_sizes0to4 [1, 33, 528, 5456, 40920]
+Loupekine1 n 22 girth 5 C 0 PM 36 all_deletions_sizes0to4 [1, 33, 528, 5456, 40920]
+DoubleStar n 30 girth 6 C 0 PM 124 all_deletions_sizes0to4 [1, 45, 990, 14190, 148995]
+Petersen negator: 36 boundary words, unique extensions
+NN rooted minor: f_NN=3 f_P3; deleted ((0, 7), (4, 5), (6, 9), (8, 106), (104, 105), (107, 109))
+NN universal cyclic-five gate {'port_owners': [0, 5, 6, 104, 108], 'subsets_checked': 32647, 'minimum_by_size': [None, None, None, 5, 6, 5, 6, 5, 6, 7, 8, 7, 8, 7, 6, 5]}
+Flower host J5 all_deletions_sizes0to4 [1, 30, 435, 4060, 27405]
+Flower host J7 all_deletions_sizes0to4 [1, 42, 861, 11480, 111930]
+NN seven lift 0 cases 18 first {'triple': (204, 205, 206), 'cut': [(5, 204), (104, 205), (108, 206), (204, 209), (205, 210), (206, 208), (206, 209)], 'old': {'support': 120, 'mass': 360, 'weights': [3], 'defects': [-12, 0, 0, 0, -12, 0, 0]}, 'new': {'support': 120, 'mass': 120, 'weights': [1], 'defects': [-4, 0, 0, 0, -4, 0, 0]}}
+NN seven lift 1 cases 18 first {'triple': (204, 205, 206), 'cut': [(6, 204), (104, 205), (108, 206), (204, 209), (205, 210), (206, 208), (206, 209)], 'old': {'support': 120, 'mass': 360, 'weights': [3], 'defects': [-12, 0, 0, 0, -12, 0, 0]}, 'new': {'support': 120, 'mass': 120, 'weights': [1], 'defects': [-4, 0, 0, 0, -4, 0, 0]}}
+SEVEN Loupekine0 orbits 46 triples 528 support_range (120, 384) support120_triples 54
+SEVEN Loupekine1 orbits 47 triples 528 support_range (120, 378) support120_triples 54
+SEVEN DoubleStar orbits 25 triples 1080 support_range (192, 468) support120_triples 0
+DS certified minor: old {'support': 192, 'mass': 1008, 'weights': [4, 6], 'defects': [-16, -8, 0, -24, 0, 0, 0]} new {'support': 120, 'mass': 120, 'weights': [1], 'defects': [0, -4, 0, -4, 0, 0, 0]}
+DS physical N: [96, 48, 0, 144, 0, 0, 0] -> [0, 24, 0, 24, 0, 0, 0]
+DS independent closure counts: 112/112; extra seven [['K0', 204, 30], ['K1', 204, 30], ['K2', 0, 0], ['K3', 144, 24], ['K4', 72, 12], ['K5', 132, 18], ['K6', 132, 18]]
+DS f_old-4f_new nonrealizable: {'support': 120, 'mass': 528, 'weights': [2, 6], 'defects': [-16, 8, 0, -8, 0, 0, 0]}
+Petersen support candidates 630 double-star triples with no dominated candidate [((0, 1, 5), 40), ((0, 5, 10), 20), ((1, 2, 5), 40)]
+NN-flower 5 n 32 PM 178 all_deletions_sizes0to4 [1, 48, 1128, 17296, 194580] exact minor restores J5
+NN-flower 7 n 40 PM 658 all_deletions_sizes0to4 [1, 60, 1770, 34220, 487635] exact minor restores J7
+NN-flower 9 n 48 PM 2482 all_deletions_sizes0to4 [1, 72, 2556, 59640, 1028790] exact minor restores J9
+NN-flower 11 n 56 PM 9490 all_deletions_sizes0to4 [1, 84, 3486, 95284, 1929501] exact minor restores J11
+PASS: graph constructors, cyclic cuts, ordered supports, rooted paths, physical Kempe defects, independent 112 closure counts

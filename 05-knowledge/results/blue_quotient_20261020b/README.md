@@ -2,6 +2,12 @@
 
 20 October 2026, continuation b. Baseline: d9674b6a00.
 
+**Current continuation:** [all-order descent and cyclic-five reductions](../black_descent_20261020c/README.md)
+proves the global black-descent obligation left open here, supplies an
+SCC interchange and gives double-star, Loupekine and infinite
+cyclic-five nonflower Petersen reductions. Universal connectivity and
+unavoidable snark reductions remain open.
+
 **FINITE-EXACT:** the black-active core is connected at tournament order
 nine; the full metagraph has five bridges, all leaf edges.
 **PROVED:** every strong black-active tournament has a black closed
@@ -58,8 +64,9 @@ For a path from a to b, the cyclic-triangle change is
 
 Strict descent is proved for strong non-self-converse tournaments, regular
 black-active tournaments, and tournaments with an all-blue-cut cycle.
-The general black closed-path descent claim passes all classes through
-order seven, but remains open.
+The general black closed-path descent claim passed all classes through
+order seven in this packet; it is now proved at every order in
+[continuation c](../black_descent_20261020c/cycles.md).
 
 The surviving difficulty is precise. A fixed cycle can have no descending
 black cut: an explicit order-nine example has six black cuts, all with
@@ -209,8 +216,9 @@ our counts or proofs depends on its corrected fixed-point formulas.
 - [Audit ledger](AUDIT.md): independent checks, inherited corrections and
   exact limits of the conclusions.
 
-The next tournament target is a cycle-changing black descent or a
-boundary-compatible normalization of ordered rigid SCC words.
-The next snark target is a graph-class-preserving rooted replacement
-inside cyclically five-connected cores, or cuts with an already
-uncolourable side. Neither obligation has been proved by this session.
+At this checkpoint the next targets were cycle-changing descent,
+boundary-compatible SCC normalization, and rooted replacements inside
+cyclically five-connected cores. See
+[continuation c](../black_descent_20261020c/README.md) for the proved
+descent, a uniform SCC move, and cyclic-five reductions; general
+normalization and unavoidable snark reductions remain open.

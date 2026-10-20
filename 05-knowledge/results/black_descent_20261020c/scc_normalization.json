@@ -1,0 +1,178 @@
+{
+  "uniform_macro": [
+    {
+      "residual_order": 0,
+      "labelled_tournaments": 1,
+      "prefix_path_certificates": 1
+    },
+    {
+      "residual_order": 1,
+      "labelled_tournaments": 1,
+      "prefix_path_certificates": 1
+    },
+    {
+      "residual_order": 2,
+      "labelled_tournaments": 2,
+      "prefix_path_certificates": 2
+    },
+    {
+      "residual_order": 3,
+      "labelled_tournaments": 8,
+      "prefix_path_certificates": 12
+    },
+    {
+      "residual_order": 4,
+      "labelled_tournaments": 64,
+      "prefix_path_certificates": 192
+    },
+    {
+      "residual_order": 5,
+      "labelled_tournaments": 1024,
+      "prefix_path_certificates": 7680
+    }
+  ],
+  "complete_census": [
+    {
+      "n": 3,
+      "ordinary_types": 2,
+      "self_converse_types": 2,
+      "strong_types": 1,
+      "strong_self_converse_types": 1,
+      "pure_blue_types": 2,
+      "full_local_minima": 1,
+      "active_black_nodes": 0,
+      "terminal_nodes": 0,
+      "terminal_quotient_component_sizes": [],
+      "basin_sizes": []
+    },
+    {
+      "n": 4,
+      "ordinary_types": 4,
+      "self_converse_types": 2,
+      "strong_types": 1,
+      "strong_self_converse_types": 1,
+      "pure_blue_types": 1,
+      "full_local_minima": 2,
+      "active_black_nodes": 2,
+      "terminal_nodes": 1,
+      "terminal_quotient_component_sizes": [
+        1
+      ],
+      "basin_sizes": [
+        2
+      ]
+    },
+    {
+      "n": 5,
+      "ordinary_types": 12,
+      "self_converse_types": 8,
+      "strong_types": 6,
+      "strong_self_converse_types": 6,
+      "pure_blue_types": 3,
+      "full_local_minima": 4,
+      "active_black_nodes": 7,
+      "terminal_nodes": 2,
+      "terminal_quotient_component_sizes": [
+        2
+      ],
+      "basin_sizes": [
+        2,
+        5
+      ]
+    },
+    {
+      "n": 6,
+      "ordinary_types": 56,
+      "self_converse_types": 12,
+      "strong_types": 35,
+      "strong_self_converse_types": 9,
+      "pure_blue_types": 2,
+      "full_local_minima": 12,
+      "active_black_nodes": 32,
+      "terminal_nodes": 10,
+      "terminal_quotient_component_sizes": [
+        10
+      ],
+      "basin_sizes": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        4,
+        5,
+        5,
+        5,
+        6
+      ]
+    },
+    {
+      "n": 7,
+      "ordinary_types": 456,
+      "self_converse_types": 88,
+      "strong_types": 353,
+      "strong_self_converse_types": 79,
+      "pure_blue_types": 4,
+      "full_local_minima": 56,
+      "active_black_nodes": 268,
+      "terminal_nodes": 52,
+      "terminal_quotient_component_sizes": [
+        52
+      ],
+      "basin_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        8,
+        8,
+        8,
+        9,
+        9,
+        9,
+        11,
+        12,
+        13,
+        14,
+        14,
+        17,
+        23
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+visits: 10000
+cycle types: {'(4, 6)': 3108, '(10,)': 6892}
+first witnesses: {'(4, 6)': (2026102001, 2), '(10,)': (2026102001, 1)}
+PASS bounded random walk, complete witnesses; no orbit exhaustiveness claim.

@@ -1,0 +1,557 @@
+{
+  "cross_set_controls": [
+    {
+      "p": 3,
+      "orbits": 3,
+      "boundary_systems": 343,
+      "signed_certificates": 2744,
+      "literal_tournaments": 28
+    },
+    {
+      "p": 3,
+      "orbits": 4,
+      "boundary_systems": 2401,
+      "signed_certificates": 38416,
+      "literal_tournaments": 381
+    },
+    {
+      "p": 5,
+      "orbits": 3,
+      "boundary_systems": 29791,
+      "signed_certificates": 238328,
+      "literal_tournaments": 2360
+    }
+  ],
+  "fixed_cycle_hostiles": [
+    {
+      "n": 6,
+      "adjacency": [
+        2,
+        12,
+        25,
+        17,
+        35,
+        15
+      ],
+      "scores": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        4
+      ],
+      "blue_cuts": [
+        0,
+        3
+      ],
+      "changed_cycle_rank": 2,
+      "descent_path": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        3
+      ]
+    },
+    {
+      "n": 8,
+      "adjacency": [
+        2,
+        20,
+        25,
+        115,
+        33,
+        71,
+        151,
+        63
+      ],
+      "scores": [
+        1,
+        2,
+        3,
+        5,
+        2,
+        4,
+        5,
+        6
+      ],
+      "blue_cuts": [
+        0,
+        4
+      ],
+      "changed_cycle_rank": 2,
+      "descent_path": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        4
+      ]
+    },
+    {
+      "n": 9,
+      "adjacency": [
+        98,
+        92,
+        409,
+        273,
+        225,
+        206,
+        140,
+        267,
+        115
+      ],
+      "scores": [
+        3,
+        4,
+        5,
+        3,
+        4,
+        5,
+        3,
+        4,
+        5
+      ],
+      "blue_cuts": [
+        0,
+        3,
+        6
+      ],
+      "changed_cycle_rank": 2,
+      "descent_path": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "complete_small_terminal_splice_controls": [
+    {
+      "n": 6,
+      "all_rooted_cycles_tested": 30,
+      "two_blue_bad_cycles_repaired": 1,
+      "other_bad_cycles_by_blue_cut_count": {
+        "6": 2
+      },
+      "witnesses": [
+        {
+          "original_minimum_rooted_cycle": [
+            0,
+            2,
+            3,
+            1,
+            4,
+            5
+          ],
+          "terminal_block": [
+            4,
+            5
+          ],
+          "insertion_after": 3,
+          "repaired_cycle": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            1
+          ],
+          "triangle_change": -2,
+          "code": 8357
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "all_rooted_cycles_tested": 4284,
+      "two_blue_bad_cycles_repaired": 9,
+      "other_bad_cycles_by_blue_cut_count": {},
+      "witnesses": [
+        {
+          "original_minimum_rooted_cycle": [
+            0,
+            2,
+            3,
+            6,
+            1,
+            4,
+            5,
+            7
+          ],
+          "terminal_block": [
+            5,
+            7
+          ],
+          "insertion_after": 6,
+          "repaired_cycle": [
+            0,
+            2,
+            3,
+            6,
+            5,
+            7,
+            1,
+            4
+          ],
+          "triangle_change": -4,
+          "code": 67387554
+        },
+        {
+          "original_minimum_rooted_cycle": [
+            0,
+            2,
+            4,
+            5,
+            1,
+            3,
+            6,
+            7
+          ],
+          "terminal_block": [
+            6,
+            7
+          ],
+          "insertion_after": 5,
+          "repaired_cycle": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            7,
+            1,
+            3
+          ],
+          "triangle_change": -3,
+          "code": 67641509
+        },
+        {
+          "original_minimum_rooted_cycle": [
+            0,
+            3,
+            5,
+            6,
+            1,
+            2,
+            4,
+            7
+          ],
+          "terminal_block": [
+            4,
+            7
+          ],
+          "insertion_after": 5,
+          "repaired_cycle": [
+            0,
+            3,
+            5,
+            4,
+            7,
+            6,
+            1,
+            2
+          ],
+          "triangle_change": -3,
+          "code": 34615564
+        },
+        {
+          "original_minimum_rooted_cycle": [
+            0,
+            1,
+            2,
+            4,
+            3,
+            5,
+            6,
+            7
+          ],
+          "terminal_block": [
+            6,
+            7
+          ],
+          "insertion_after": 4,
+          "repaired_cycle": [
+            0,
+            1,
+            2,
+            4,
+            6,
+            7,
+            3,
+            5
+          ],
+          "triangle_change": -4,
+          "code": 135803157
+        },
+        {
+          "original_minimum_rooted_cycle": [
+            0,
+            2,
+            4,
+            6,
+            1,
+            3,
+            5,
+            7
+          ],
+          "terminal_block": [
+            3,
+            5,
+            7
+          ],
+          "insertion_after": 0,
+          "repaired_cycle": [
+            0,
+            3,
+            5,
+            7,
+            2,
+            4,
+            6,
+            1
+          ],
+          "triangle_change": -1,
+          "code": 101200666
+        },
+        {
+          "original_minimum_rooted_cycle": [
+            0,
+            3,
+            4,
+            6,
+            1,
+            2,
+            5,
+            7
+          ],
+          "terminal_block": [
+            5,
+            7
+          ],
+          "insertion_after": 3,
+          "repaired_cycle": [
+            0,
+            3,
+            5,
+            7,
+            4,
+            6,
+            1,
+            2
+          ],
+          "triangle_change": -3,
+          "code": 34624274
+        },
+        {
+          "original_minimum_rooted_cycle": [
+            0,
+            3,
+            5,
+            6,
+            1,
+            2,
+            4,
+            7
+          ],
+          "terminal_block": [
+            4,
+            7
+          ],
+          "insertion_after": 5,
+          "repaired_cycle": [
+            0,
+            3,
+            5,
+            4,
+            7,
+            6,
+            1,
+            2
+          ],
+          "triangle_change": -2,
+          "code": 43001100
+        },
+        {
+          "original_minimum_rooted_cycle": [
+            0,
+            1,
+            3,
+            4,
+            2,
+            5,
+            6,
+            7
+          ],
+          "terminal_block": [
+            6,
+            7
+          ],
+          "insertion_after": 1,
+          "repaired_cycle": [
+            0,
+            1,
+            6,
+            7,
+            3,
+            4,
+            2,
+            5
+          ],
+          "triangle_change": -4,
+          "code": 134812197
+        },
+        {
+          "original_minimum_rooted_cycle": [
+            0,
+            3,
+            4,
+            6,
+            1,
+            2,
+            5,
+            7
+          ],
+          "terminal_block": [
+            5,
+            7
+          ],
+          "insertion_after": 6,
+          "repaired_cycle": [
+            0,
+            3,
+            4,
+            6,
+            5,
+            7,
+            1,
+            2
+          ],
+          "triangle_change": -2,
+          "code": 43012690
+        }
+      ]
+    }
+  ],
+  "smaller_extremal_predecessor_controls": [
+    {
+      "n": 4,
+      "strong_self_converse_classes": 1,
+      "extremal_predecessor_failures": []
+    },
+    {
+      "n": 6,
+      "strong_self_converse_classes": 9,
+      "extremal_predecessor_failures": []
+    }
+  ],
+  "complete_self_converse_class_controls": [
+    {
+      "n": 8,
+      "self_converse_classes": 176,
+      "strong_self_converse_classes": 162,
+      "descent_cycle_rank_histogram": {
+        "1": 161,
+        "2": 1
+      },
+      "strongest_rank_example": {
+        "code": 135803157,
+        "cycle_rank": 2,
+        "path": [
+          0,
+          1,
+          2,
+          4,
+          6,
+          7,
+          3,
+          5
+        ],
+        "scores": [
+          1,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          6
+        ]
+      },
+      "extremal_predecessor_tested_classes": 162,
+      "extremal_predecessor_failures": [],
+      "no_equal_endpoint_closed_path_classes": [
+        68182161,
+        68176401,
+        8921188,
+        34624274,
+        33702274
+      ]
+    },
+    {
+      "n": 9,
+      "self_converse_classes": 2752,
+      "strong_self_converse_classes": 2661,
+      "descent_cycle_rank_histogram": {
+        "1": 2661
+      },
+      "strongest_rank_example": {
+        "code": 272777728,
+        "cycle_rank": 1,
+        "path": [
+          0,
+          8,
+          1,
+          7,
+          2,
+          6,
+          3,
+          4,
+          5
+        ],
+        "scores": [
+          1,
+          2,
+          3,
+          4,
+          4,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "extremal_predecessor_tested_classes": 2646,
+      "extremal_predecessor_failures": [],
+      "no_equal_endpoint_closed_path_classes": [
+        2282786832,
+        2282799376,
+        8624020032,
+        17184850472,
+        17196974120,
+        17197236776,
+        17214210728,
+        17247379500,
+        17247642156,
+        17247769132,
+        17247781676,
+        34401681670,
+        34435244070,
+        34435252774,
+        34443628582,
+        34460410150,
+        34460418854
+      ]
+    }
+  ]
+}

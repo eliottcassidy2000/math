@@ -1,0 +1,28 @@
+{
+  "port_owners": [
+    0,
+    5,
+    6,
+    104,
+    108
+  ],
+  "subsets_checked": 32647,
+  "minimum_by_size": [
+    null,
+    null,
+    null,
+    5,
+    6,
+    5,
+    6,
+    5,
+    6,
+    7,
+    8,
+    7,
+    8,
+    7,
+    6,
+    5
+  ]
+}

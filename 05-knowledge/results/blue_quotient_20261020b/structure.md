@@ -1,5 +1,12 @@
 # Black closed paths and cycle-cut mobility
 
+**Continuation c:** the open global descent obligation in Section 5 is
+now proved at every order in
+[cycle-changing black descent](../black_descent_20261020c/cycles.md).
+The fixed-cycle counterexamples below remain valid. The resulting
+[SCC terminal-basin reduction](../black_descent_20261020c/scc.md)
+does not yet prove all-order black connectivity.
+
 Status: PROVED for Sections 2–4; FINITE-EXACT and OPEN as marked below.
 Scope: the converse-merged **complement-line** metagraph, n>=3.
 The operation below reverses all arcs of a directed Hamiltonian path.
@@ -210,7 +217,7 @@ Hence
     sum_v s'(v)^2 - sum_v s(v)^2 = 2(s(b)-s(a)+1),
     c3(T')-c3(T) = s(a)-s(b)-1.                              (4)
 
-**OPEN descent lemma.** Every strong black-active tournament has a
+**Former open descent lemma, now PROVED in continuation c.** Every strong black-active tournament has a
 black closed Hamiltonian path with s(b)>=s(a).
 
 This holds on every merged strong black-active class through n=7:
@@ -276,7 +283,7 @@ Nevertheless the literal closed path
 
 is black and has endpoint scores 3 and 4. Its reversal lowers c3 by
 two. Therefore this is a hostile to fixing the cycle, **not** a
-counterexample to the still-open global descent lemma.
+counterexample to the global descent lemma, now proved by changing cycles.
 
 ## 6. The SCC normalization obligation
 

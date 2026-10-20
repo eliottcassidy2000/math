@@ -1,0 +1,764 @@
+{
+  "candidate_supports": 630,
+  "rows": [
+    {
+      "triple": [
+        0,
+        1,
+        3
+      ],
+      "multiplicity": 40,
+      "eligible": 2,
+      "signature": {
+        "support": 192,
+        "mass": 1008,
+        "weights": [
+          4,
+          6
+        ],
+        "defects": [
+          -16,
+          -8,
+          0,
+          -24,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        1,
+        4
+      ],
+      "multiplicity": 40,
+      "eligible": 1,
+      "signature": {
+        "support": 204,
+        "mass": 1104,
+        "weights": [
+          4,
+          6,
+          10
+        ],
+        "defects": [
+          0,
+          -24,
+          -32,
+          -8,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        1,
+        5
+      ],
+      "multiplicity": 40,
+      "eligible": 0,
+      "signature": {
+        "support": 318,
+        "mass": 1008,
+        "weights": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "defects": [
+          -8,
+          -16,
+          -8,
+          -16,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        1,
+        6
+      ],
+      "multiplicity": 40,
+      "eligible": 2,
+      "signature": {
+        "support": 306,
+        "mass": 1008,
+        "weights": [
+          2,
+          4,
+          6
+        ],
+        "defects": [
+          -16,
+          -8,
+          -24,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        1,
+        7
+      ],
+      "multiplicity": 40,
+      "eligible": 2,
+      "signature": {
+        "support": 234,
+        "mass": 936,
+        "weights": [
+          2,
+          4,
+          6,
+          10
+        ],
+        "defects": [
+          -8,
+          -16,
+          0,
+          -24,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        1,
+        16
+      ],
+      "multiplicity": 40,
+      "eligible": 4,
+      "signature": {
+        "support": 270,
+        "mass": 2040,
+        "weights": [
+          4,
+          5,
+          8,
+          10,
+          12
+        ],
+        "defects": [
+          -40,
+          0,
+          -48,
+          -48,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        1,
+        17
+      ],
+      "multiplicity": 80,
+      "eligible": 16,
+      "signature": {
+        "support": 468,
+        "mass": 1998,
+        "weights": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "defects": [
+          -20,
+          -4,
+          -20,
+          -28,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        1,
+        18
+      ],
+      "multiplicity": 40,
+      "eligible": 2,
+      "signature": {
+        "support": 414,
+        "mass": 1788,
+        "weights": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          10,
+          12
+        ],
+        "defects": [
+          -8,
+          0,
+          -8,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        1,
+        20
+      ],
+      "multiplicity": 80,
+      "eligible": 4,
+      "signature": {
+        "support": 444,
+        "mass": 2052,
+        "weights": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          13
+        ],
+        "defects": [
+          -12,
+          0,
+          -24,
+          -12,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        1,
+        21
+      ],
+      "multiplicity": 40,
+      "eligible": 8,
+      "signature": {
+        "support": 426,
+        "mass": 1692,
+        "weights": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          10,
+          12
+        ],
+        "defects": [
+          -16,
+          -8,
+          -16,
+          -8,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        2,
+        7
+      ],
+      "multiplicity": 40,
+      "eligible": 2,
+      "signature": {
+        "support": 234,
+        "mass": 936,
+        "weights": [
+          2,
+          4,
+          6,
+          10
+        ],
+        "defects": [
+          0,
+          0,
+          0,
+          0,
+          -24,
+          -24,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        2,
+        15
+      ],
+      "multiplicity": 40,
+      "eligible": 4,
+      "signature": {
+        "support": 270,
+        "mass": 1896,
+        "weights": [
+          3,
+          4,
+          5,
+          8,
+          10,
+          12,
+          14,
+          16
+        ],
+        "defects": [
+          0,
+          -24,
+          0,
+          0,
+          0,
+          -20,
+          -20
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        3,
+        15
+      ],
+      "multiplicity": 20,
+      "eligible": 8,
+      "signature": {
+        "support": 396,
+        "mass": 1680,
+        "weights": [
+          2,
+          3,
+          4,
+          6,
+          8,
+          10,
+          12
+        ],
+        "defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -8,
+          -8
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        5,
+        10
+      ],
+      "multiplicity": 20,
+      "eligible": 0,
+      "signature": {
+        "support": 348,
+        "mass": 900,
+        "weights": [
+          2,
+          4,
+          6
+        ],
+        "defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        5,
+        15
+      ],
+      "multiplicity": 40,
+      "eligible": 8,
+      "signature": {
+        "support": 450,
+        "mass": 1764,
+        "weights": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          10,
+          14,
+          16
+        ],
+        "defects": [
+          -8,
+          -8,
+          0,
+          0,
+          0,
+          -16,
+          -16
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        6,
+        15
+      ],
+      "multiplicity": 20,
+      "eligible": 8,
+      "signature": {
+        "support": 360,
+        "mass": 1680,
+        "weights": [
+          2,
+          3,
+          6,
+          8,
+          10,
+          12
+        ],
+        "defects": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -8,
+          -8
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        16,
+        20
+      ],
+      "multiplicity": 40,
+      "eligible": 4,
+      "signature": {
+        "support": 270,
+        "mass": 1896,
+        "weights": [
+          3,
+          4,
+          5,
+          8,
+          10,
+          12,
+          14,
+          16
+        ],
+        "defects": [
+          0,
+          0,
+          0,
+          0,
+          -24,
+          -16,
+          -24
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        17,
+        25
+      ],
+      "multiplicity": 40,
+      "eligible": 8,
+      "signature": {
+        "support": 444,
+        "mass": 1704,
+        "weights": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          10,
+          14
+        ],
+        "defects": [
+          0,
+          0,
+          0,
+          -8,
+          -8,
+          0,
+          -16
+        ]
+      }
+    },
+    {
+      "triple": [
+        0,
+        17,
+        28
+      ],
+      "multiplicity": 20,
+      "eligible": 10,
+      "signature": {
+        "support": 450,
+        "mass": 1716,
+        "weights": [
+          2,
+          4,
+          6,
+          8,
+          10,
+          12,
+          16
+        ],
+        "defects": [
+          0,
+          0,
+          0,
+          -8,
+          0,
+          0,
+          -8
+        ]
+      }
+    },
+    {
+      "triple": [
+        1,
+        2,
+        4
+      ],
+      "multiplicity": 40,
+      "eligible": 1,
+      "signature": {
+        "support": 204,
+        "mass": 1104,
+        "weights": [
+          4,
+          6,
+          10
+        ],
+        "defects": [
+          -32,
+          -8,
+          0,
+          -24,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        1,
+        2,
+        5
+      ],
+      "multiplicity": 40,
+      "eligible": 0,
+      "signature": {
+        "support": 324,
+        "mass": 996,
+        "weights": [
+          2,
+          4,
+          6
+        ],
+        "defects": [
+          0,
+          0,
+          -8,
+          -8,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        1,
+        2,
+        8
+      ],
+      "multiplicity": 40,
+      "eligible": 1,
+      "signature": {
+        "support": 234,
+        "mass": 864,
+        "weights": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "defects": [
+          -16,
+          -8,
+          -24,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        1,
+        2,
+        16
+      ],
+      "multiplicity": 80,
+      "eligible": 6,
+      "signature": {
+        "support": 456,
+        "mass": 2076,
+        "weights": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11
+        ],
+        "defects": [
+          -28,
+          -12,
+          -8,
+          -16,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        1,
+        2,
+        20
+      ],
+      "multiplicity": 80,
+      "eligible": 14,
+      "signature": {
+        "support": 462,
+        "mass": 2070,
+        "weights": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "defects": [
+          -28,
+          -20,
+          -24,
+          -24,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "triple": [
+        1,
+        2,
+        23
+      ],
+      "multiplicity": 40,
+      "eligible": 12,
+      "signature": {
+        "support": 462,
+        "mass": 2100,
+        "weights": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "defects": [
+          -8,
+          -20,
+          -8,
+          -20,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  ]
+}

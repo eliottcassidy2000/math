@@ -1,0 +1,7 @@
+spectra: {"A_At": "lambda**21*(lambda - 99)*(lambda - 36)**6*(lambda - 4)**49*(lambda**2 - 31*lambda + 180)**14", "RA_RAt": "lambda**35*(lambda - 891)*(lambda - 82)**14*(lambda - 72)**6*(lambda - 16)**14*(lambda - 4)**35", "R_Rt": "lambda**14*(lambda - 9)*(lambda - 7)**14*(lambda - 5)**21*(lambda - 4)**14*(lambda - 2)**6*(lambda - 1)**35", "eight_colour_Gram": "lambda**14*(lambda - 945)*(lambda - 210)**20*(lambda - 120)**14*(lambda - 30)**56"}
+ranks: {"A": 84, "Kempe_blindspace": 7, "R": 91, "RA": 70, "determinant_relations": 14, "eight_colour_Gram": 91, "extra_edge_blindspace": 14}
+raw_transposition_fixed_points: {"junctions": 25, "matchings": 15}
+S7_modules: {"composed_image70": {"(4, 2, 1)": 1, "(4, 3)": 1, "(5, 2)": 1, "(6, 1)": 1, "(7,)": 1}, "junction105": {"(3, 2, 2)": 1, "(4, 2, 1)": 1, "(4, 3)": 1, "(5, 2)": 2, "(6, 1)": 1, "(7,)": 1}, "junction_image84": {"(4, 2, 1)": 1, "(4, 3)": 1, "(5, 2)": 2, "(6, 1)": 1, "(7,)": 1}, "junction_relations21": {"(3, 2, 2)": 1}, "matching105_restricted_S7": {"(2, 2, 2, 1)": 1, "(3, 2, 2)": 1, "(4, 2, 1)": 1, "(4, 3)": 1, "(5, 2)": 1, "(6, 1)": 1, "(7,)": 1}, "odd_boundary91": {"(4, 2, 1)": 1, "(4, 3)": 1, "(5, 2)": 2, "(6, 1)": 2, "(7,)": 2}}
+S8_modules: {"determinant_kernel14": {"(2, 2, 2, 2)": 1}, "matching105": {"(2, 2, 2, 2)": 1, "(4, 2, 2)": 1, "(4, 4)": 1, "(6, 2)": 1, "(8,)": 1}, "ternary_pairing_image91": {"(4, 2, 2)": 1, "(4, 4)": 1, "(6, 2)": 1, "(8,)": 1}}
+single_transvection_cycle_types: {"(10,)": 180, "(4, 6)": 75}
+PASS: exact incidence, Gram, kernel, character, Fano, and spread controls.
