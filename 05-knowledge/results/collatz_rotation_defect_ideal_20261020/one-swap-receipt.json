@@ -1,0 +1,31 @@
+{
+  "boundary": "This finite absence is not a proof of the all-q proper-divisor target.",
+  "exact_trinomial_gate_universe": "all swap occurrences of coprime lower mechanical words, 4<=q<=40",
+  "explicit_checks": 939505,
+  "first_nonunit": {
+    "B": 112,
+    "D": 119,
+    "g": 7,
+    "p": 2,
+    "q": 7,
+    "swap_start": 3,
+    "word": "0000101"
+  },
+  "gate_cases": 6540,
+  "gate_digest_sha256": "8b8a0ab1b4b13f33cf45ce9ee1290fa5059fe2395b0e865c1ea23ae07bbdb55c",
+  "gate_edges": 178020,
+  "hostile_probe_universe": "all swap occurrences of coprime lower mechanical words, 3<=q<=80; repetitions of output necklaces retained",
+  "maximum_content": {
+    "B": 284283664637849135306,
+    "D": 73736944749739206757,
+    "g": 11243,
+    "p": 35,
+    "q": 66,
+    "swap_start": 11,
+    "word": "010101010100110110101010101010101101010101010101011010101010101011"
+  },
+  "nonunit_occurrences": 3821,
+  "positive_integer_candidates_D_gt_1": [],
+  "probe_cases": 52792,
+  "status": "PASS"
+}

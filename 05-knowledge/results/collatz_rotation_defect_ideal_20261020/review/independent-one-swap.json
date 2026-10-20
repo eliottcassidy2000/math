@@ -1,0 +1,32 @@
+{
+  "boundary": "Finite probe does not establish the all-q proper-divisor target.",
+  "canonical_word": "zero-intercept lower mechanical word",
+  "certificate_digest_sha256": "d74a4c08d64d3c9cb0ce6f06415950152a1f15acfdecc4380a1dc19e5efc20b5",
+  "checks": 18200,
+  "first_nonunit": {
+    "B": 112,
+    "D": 119,
+    "g": 7,
+    "p": 2,
+    "q": 7,
+    "swap_start": 3,
+    "word": "0000101"
+  },
+  "gate_cases": 308,
+  "gate_lengths": "4 through 14",
+  "maximum_content": {
+    "B": 284283664637849135306,
+    "D": 73736944749739206757,
+    "g": 11243,
+    "p": 35,
+    "q": 66,
+    "swap_start": 11,
+    "word": "010101010100110110101010101010101101010101010101011010101010101011"
+  },
+  "nonunit_occurrences": 3821,
+  "positive_integer_candidates_D_gt_1": [],
+  "probe_cases": 52792,
+  "probe_lengths": "3 through 80",
+  "retained_edges": 2548,
+  "status": "PASS"
+}

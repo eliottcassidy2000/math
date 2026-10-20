@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-20",
+  "pins": {
+    "session11-collatz-review/ONE_SWAP_AUDIT.md": "4a3c8395471e10d5b0ec086b410fd5bc644dc24120ddb6f9dfc8e3dee307833a",
+    "session11-collatz-review/independent-one-swap.json": "102f68eba36f60b13e9071abfd0b9c3834e073a8c07c2b0a3d5aabac238b522e",
+    "session11-collatz-review/independent-one-swap.optimized.json": "102f68eba36f60b13e9071abfd0b9c3834e073a8c07c2b0a3d5aabac238b522e",
+    "session11-collatz-review/independent_one_swap.py": "f99e5531ecad986aa57df93c995771733a84e92d2b5e298c05299a241fc6245b",
+    "session11-collatz/ONE_SWAP_TRINOMIAL_GATE.md": "ce8d6e277c9cbca7f3d1c46a892c986f888532cd031c811697bc45e50fefb65e",
+    "session11-collatz/one-swap-receipt.json": "89f875c397ffef4afd2c573f39b5848408638b75400ed41a1f607232bdfd3ff4",
+    "session11-collatz/one-swap-receipt.optimized.json": "89f875c397ffef4afd2c573f39b5848408638b75400ed41a1f607232bdfd3ff4",
+    "session11-collatz/verify_one_swap_gate.py": "5f39be0fd6ded37dc75c304778d0050b7821afc34d7b08fae6f4fbc20aa16c60"
+  },
+  "publication_clarification": "Define c_k=floor((k+1)p/q)-floor(kp/q) explicitly.",
+  "status": "PASS_UNDER_ZERO_INTERCEPT_CONVENTION"
+}

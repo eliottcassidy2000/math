@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-20",
+  "pins": {
+    "math/01-canon/theorems/THM-4633-collatz-cycles-as-rational-approximations-of-log2-3-with-the-admissible-minimum-budget.md": "0641eaf9cb41d9bf19311080596a4e70cd1257158768298edeab115b1d499719",
+    "math/01-canon/theorems/THM-4716-balanced-collatz-cycles-are-three-smooth-ladders-and-are-free.md": "4522c9c79830d0eca4c33864259e922596b449f2e5d49580a24083fcb154c5ac",
+    "math/01-canon/theorems/THM-4717-sturmian-circles-of-the-collatz-map-explicit-three-smooth-ladder-golden-circle-and-the-critical-slope.md": "7ab3488f054cfb5bf71a1248e00998ae644db44250366c0ec9d60a9c6cd539b1",
+    "math/05-knowledge/results/collatz_unbounded_return_centers_20261019.md": "e4d97b515709b8994e3342b16bd984f2d7a170ccd3dade654c840ce5dc672719",
+    "session11-collatz-review/SCOPED_AUDIT.md": "cf993c120cb3950ecef9b053e95c6aa394008612b7d7b9e0f45f7a76afd85a48",
+    "session11-collatz-review/independent-receipt.json": "9d64b90bd7d6f8e45a1ea31867343f5a03fa3bd08470d1811287cf5ebf279ca2",
+    "session11-collatz-review/independent-receipt.optimized.json": "9d64b90bd7d6f8e45a1ea31867343f5a03fa3bd08470d1811287cf5ebf279ca2",
+    "session11-collatz-review/independent_controls.py": "28bbb205b97f33c85947a560254e4d9c3d27968da441d019e7e4bfc093eb85be",
+    "session11-collatz/LOCAL_ROTATION_DEFECT_IDEAL.md": "4e9ac5a9e8a892a4cd6afe458dca550801879745db60ab65b0f250cad558681b",
+    "session11-collatz/SCOPED_CRITICAL_SLOPE_CORRECTION.md": "e81f3015660c78610b54e8e44815e864ea466dd721f218fc3f3f4724a95ab76d",
+    "session11-collatz/verification-receipt.json": "447dc9459c521d91efbbb305334b4894b594399f0323eef8bbf736c79c0b643f",
+    "session11-collatz/verification-receipt.optimized.json": "447dc9459c521d91efbbb305334b4894b594399f0323eef8bbf736c79c0b643f",
+    "session11-collatz/verify_local_rotation_defect.py": "671de299c9484080ab138d4d54dcbd73f0732c165f53866aa4df767db1f61a35"
+  },
+  "source_policy": "Read-only repository; no Git operations.",
+  "status": "PASS_SCOPED",
+  "terminology_clarification": "Applied: numerator-carry list b B_a versus actual rational cycle vertices b B_a/D."
+}

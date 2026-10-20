@@ -1,0 +1,44 @@
+{
+  "certificate_digest_sha256": "849a4b957d9ec0e1ecc94c0ab12e0b5802950b0141b049b010e39148fdff03e9",
+  "counts": {
+    "carry_decoder": 3013,
+    "clock_units": 3013,
+    "equal_core_shape": 71707,
+    "every_allowed_context": 71707,
+    "exact_rational_closure": 18078,
+    "integer_cycle_gate": 18078,
+    "least_orbit_period": 18078,
+    "mixed_tree_content": 3013,
+    "negative_seventeen_control": 1,
+    "odd_denominator_parity": 145938,
+    "positive_power_factor": 36,
+    "positive_sign_gate": 18078,
+    "power_carry": 36,
+    "power_content": 36,
+    "power_reduced_denominator": 36,
+    "rotation_injectivity": 3013,
+    "scaled_affine_carry_content": 18078,
+    "shape_injectivity": 108,
+    "short_core_bound": 71707,
+    "unique_maximum": 108,
+    "unique_minimum": 108,
+    "word_base_cases": 3013
+  },
+  "scope": "Independent finite controls, not the all-length proof and not a convergence proof.",
+  "status": "PASS",
+  "universe": {
+    "additive_parameters": [
+      -5,
+      -3,
+      -1,
+      1,
+      3,
+      5
+    ],
+    "all_nonconstant_binary_words": "lengths 2 through 9, bases 3, 5, 9",
+    "connected_graph": "binary-parent tree with independently varied allowed context stripping",
+    "extra_signed_word": "11110111000",
+    "extremal_shape_base_cases": 108,
+    "word_power_cases": 36
+  }
+}
