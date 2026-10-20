@@ -1,0 +1,15 @@
+
+=================== n = 8: m = 21, f = 3, tilings 2097152 ===================
+lines with two closed or two open ends: 0 (must be 0)
+nodes 3528 (SC 176, merged 3352); strong nodes 3085, non-strong 443
+closed-tiling law c_u = n*HC/|Aut| (x2 merged): violations 0 []
+lines between two non-strong nodes or loops at non-strong nodes: 0 (must be 0)
+SC nodes with an even number of non-loop blue lines: 0 (must be 0)
+closed tilings 1048576 = 2^(m-1) = 1048576: True; closed symmetric 2048 = 2^((m+f)/2-1) = 2048: True
+fully closed nodes (every tiling closed; all Hamiltonian paths close): 0 -> (H,|Aut|,t,s): []
+fully open nodes (= non-strong): 443
+lines strong-strong 983928, strong/non-strong 64648, non-strong/non-strong 0
+metagraph connected: True (components 1); blue graph on SC nodes connected: True (components 1)
+blue loops total 4, black loops total 618; nodes with self-lines: 235, all strong: True
+pure-blue nodes 3: [(1, 1, 1), (9, 9, 1), (9, 9, 1)]
+node census by (strong, SC): Counter({(True, False): 2923, (False, False): 429, (True, True): 162, (False, True): 14})

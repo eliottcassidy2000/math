@@ -1,0 +1,79 @@
+
+=================== n = 4: m = 3, f = 1, tilings 8 ===================
+lines with two closed or two open ends: 0 (must be 0)
+nodes 3 (SC 2, merged 1); strong nodes 1, non-strong 2
+closed-tiling law c_u = n*HC/|Aut| (x2 merged): violations 0 []
+lines between two non-strong nodes or loops at non-strong nodes: 0 (must be 0)
+SC nodes with an even number of non-loop blue lines: 0 (must be 0)
+closed tilings 4 = 2^(m-1) = 4: True; closed symmetric 2 = 2^((m+f)/2-1) = 2: True
+fully closed nodes (every tiling closed; all Hamiltonian paths close): 0 -> (H,|Aut|,t,s): []
+fully open nodes (= non-strong): 2
+lines strong-strong 1, strong/non-strong 3, non-strong/non-strong 0
+metagraph connected: True (components 1); blue graph on SC nodes connected: True (components 1)
+blue loops total 1, black loops total 0; nodes with self-lines: 1, all strong: True
+pure-blue nodes 1: [(1, 1, 1)]
+node census by (strong, SC): Counter({(False, True): 1, (False, False): 1, (True, True): 1})
+node | type | strong | H | |Aut| | t | s | closed | closed-sym | blue loops | black loops
+   0 | SC | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0
+   1 | merged | 0 | 3 | 3 | 2 | 0 | 0 | 0 | 0 | 0
+   2 | SC | 1 | 5 | 1 | 5 | 3 | 4 | 2 | 1 | 0
+blue lines (node pairs, multiplicity): {(0, 2): 1, (2, 2): 1}
+black lines: {(1, 2): 2}
+
+=================== n = 5: m = 6, f = 2, tilings 64 ===================
+lines with two closed or two open ends: 0 (must be 0)
+nodes 10 (SC 8, merged 2); strong nodes 6, non-strong 4
+closed-tiling law c_u = n*HC/|Aut| (x2 merged): violations 0 []
+lines between two non-strong nodes or loops at non-strong nodes: 0 (must be 0)
+SC nodes with an even number of non-loop blue lines: 0 (must be 0)
+closed tilings 32 = 2^(m-1) = 32: True; closed symmetric 8 = 2^((m+f)/2-1) = 8: True
+fully closed nodes (every tiling closed; all Hamiltonian paths close): 1 -> (H,|Aut|,t,s): [(15, 3, 5, 1)]
+fully open nodes (= non-strong): 4
+lines strong-strong 18, strong/non-strong 14, non-strong/non-strong 0
+metagraph connected: True (components 1); blue graph on SC nodes connected: True (components 1)
+blue loops total 0, black loops total 4; nodes with self-lines: 2, all strong: True
+pure-blue nodes 3: [(1, 1, 1), (3, 3, 1), (15, 5, 3)]
+node census by (strong, SC): Counter({(True, True): 6, (False, True): 2, (False, False): 2})
+node | type | strong | H | |Aut| | t | s | closed | closed-sym | blue loops | black loops
+   0 | SC | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0
+   1 | merged | 0 | 3 | 3 | 2 | 0 | 0 | 0 | 0 | 0
+   2 | merged | 0 | 5 | 1 | 10 | 0 | 0 | 0 | 0 | 0
+   3 | SC | 0 | 3 | 3 | 1 | 1 | 0 | 0 | 0 | 0
+   4 | SC | 1 | 15 | 3 | 5 | 1 | 5 | 1 | 0 | 0
+   5 | SC | 1 | 11 | 1 | 11 | 3 | 5 | 1 | 0 | 2
+   6 | SC | 1 | 9 | 1 | 9 | 1 | 5 | 1 | 0 | 0
+   7 | SC | 1 | 9 | 1 | 9 | 3 | 5 | 1 | 0 | 0
+   8 | SC | 1 | 13 | 1 | 13 | 3 | 10 | 2 | 0 | 2
+   9 | SC | 1 | 15 | 5 | 3 | 3 | 2 | 2 | 0 | 0
+blue lines (node pairs, multiplicity): {(0, 7): 1, (5, 6): 1, (3, 8): 1, (4, 9): 1, (8, 9): 1, (5, 9): 1, (7, 8): 1, (5, 7): 1}
+black lines: {(1, 6): 2, (2, 8): 2, (2, 7): 2, (6, 7): 2, (5, 5): 2, (2, 6): 2, (2, 5): 2, (2, 4): 2, (5, 8): 2, (8, 8): 2, (4, 7): 2, (6, 8): 2}
+
+=================== n = 6: m = 10, f = 2, tilings 1024 ===================
+lines with two closed or two open ends: 0 (must be 0)
+nodes 34 (SC 12, merged 22); strong nodes 22, non-strong 12
+closed-tiling law c_u = n*HC/|Aut| (x2 merged): violations 0 []
+lines between two non-strong nodes or loops at non-strong nodes: 0 (must be 0)
+SC nodes with an even number of non-loop blue lines: 0 (must be 0)
+closed tilings 512 = 2^(m-1) = 512: True; closed symmetric 32 = 2^((m+f)/2-1) = 32: True
+fully closed nodes (every tiling closed; all Hamiltonian paths close): 0 -> (H,|Aut|,t,s): []
+fully open nodes (= non-strong): 12
+lines strong-strong 391, strong/non-strong 121, non-strong/non-strong 0
+metagraph connected: True (components 1); blue graph on SC nodes connected: True (components 1)
+blue loops total 2, black loops total 24; nodes with self-lines: 10, all strong: True
+pure-blue nodes 2: [(1, 1, 1), (9, 9, 1)]
+node census by (strong, SC): Counter({(True, False): 13, (False, False): 9, (True, True): 9, (False, True): 3})
+
+=================== n = 7: m = 15, f = 3, tilings 32768 ===================
+lines with two closed or two open ends: 0 (must be 0)
+nodes 272 (SC 88, merged 184); strong nodes 216, non-strong 56
+closed-tiling law c_u = n*HC/|Aut| (x2 merged): violations 0 []
+lines between two non-strong nodes or loops at non-strong nodes: 0 (must be 0)
+SC nodes with an even number of non-loop blue lines: 0 (must be 0)
+closed tilings 16384 = 2^(m-1) = 16384: True; closed symmetric 256 = 2^((m+f)/2-1) = 256: True
+fully closed nodes (every tiling closed; all Hamiltonian paths close): 0 -> (H,|Aut|,t,s): []
+fully open nodes (= non-strong): 56
+lines strong-strong 14389, strong/non-strong 1995, non-strong/non-strong 0
+metagraph connected: True (components 1); blue graph on SC nodes connected: True (components 1)
+blue loops total 0, black loops total 114; nodes with self-lines: 44, all strong: True
+pure-blue nodes 4: [(1, 1, 1), (3, 3, 1), (15, 5, 3), (9, 9, 1)]
+node census by (strong, SC): Counter({(True, False): 137, (True, True): 79, (False, False): 47, (False, True): 9})

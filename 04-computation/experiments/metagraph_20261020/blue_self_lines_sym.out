@@ -1,0 +1,4 @@
+n = 9: symmetric tilings 65536
+n = 9: blue self-lines = 0 (prediction 0); distinct classes among symmetric tilings 2752
+n = 10: symmetric tilings 1048576
+n = 10: blue self-lines = 24 (prediction 8); distinct classes among symmetric tilings 8784

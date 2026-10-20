@@ -193,3 +193,8 @@ computation needs universe, controls, command, and output. Route `CLAIMED` and
 ## Digest entry moved from INDEX.md on 2026-10-20 (line budget; mac-mini-2026-10-20-metagraph)
 
 - **HYP-8946:** `X^M-tR` irreducibility over `F(t)` is kernel-checked and used by THM-2101; degree-dropping Hensel factorization is now optional. **HYP-8960:** reciprocal monicization constructs the simple-root lifts; simultaneous branch products and the Wiener--Hopf identity remain open.
+
+## Digest entry moved from INDEX.md on 2026-10-20 (line budget; mac-mini-2026-10-20-metagraph)
+
+- **HYP-8871/HYP-8846/HYP-8841 (OPEN):** retain deck, owner, phase, endpoints,
+  clocks, and tails through any discharge.

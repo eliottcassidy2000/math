@@ -1,0 +1,39 @@
+
+n = 4: symmetric tilings 4, self-line tilings 2 = 1 blue self-lines in 1 classes
+  class: H = 5, |Aut| = 1, HC = 1, t = 5, s = 3, closed tilings = 4, self-line tilings 2 (closed 1), scores [1, 1, 2, 2]
+
+n = 6: symmetric tilings 64, self-line tilings 4 = 2 blue self-lines in 2 classes
+  class: H = 41, |Aut| = 1, HC = 4, t = 41, s = 9, closed tilings = 24, self-line tilings 2 (closed 1), scores [2, 2, 2, 3, 3, 3]
+  class: H = 45, |Aut| = 3, HC = 5, t = 15, s = 9, closed tilings = 10, self-line tilings 2 (closed 1), scores [2, 2, 2, 3, 3, 3]
+
+n = 8: symmetric tilings 4096, self-line tilings 8 = 4 blue self-lines in 4 classes
+  class: H = 637, |Aut| = 1, HC = 47, t = 637, s = 39, closed tilings = 376, self-line tilings 2 (closed 1), scores [3, 3, 3, 3, 4, 4, 4, 4]
+  class: H = 657, |Aut| = 1, HC = 52, t = 657, s = 37, closed tilings = 416, self-line tilings 2 (closed 1), scores [3, 3, 3, 3, 4, 4, 4, 4]
+  class: H = 653, |Aut| = 1, HC = 52, t = 653, s = 37, closed tilings = 416, self-line tilings 2 (closed 1), scores [3, 3, 3, 3, 4, 4, 4, 4]
+  class: H = 621, |Aut| = 3, HC = 45, t = 207, s = 39, closed tilings = 120, self-line tilings 2 (closed 1), scores [3, 3, 3, 3, 4, 4, 4, 4]
+
+n = 10: symmetric tilings 1048576, self-line tilings 48 = 24 blue self-lines in 24 classes
+  class: H = 15313, |Aut| = 1, HC = 909, t = 15313, s = 185, closed tilings = 9090, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15365, |Aut| = 1, HC = 918, t = 15365, s = 183, closed tilings = 9180, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15345, |Aut| = 1, HC = 916, t = 15345, s = 185, closed tilings = 9160, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15417, |Aut| = 1, HC = 927, t = 15417, s = 185, closed tilings = 9270, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15333, |Aut| = 1, HC = 920, t = 15333, s = 185, closed tilings = 9200, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15445, |Aut| = 1, HC = 929, t = 15445, s = 179, closed tilings = 9290, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15293, |Aut| = 1, HC = 917, t = 15293, s = 185, closed tilings = 9170, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15269, |Aut| = 1, HC = 913, t = 15269, s = 187, closed tilings = 9130, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15273, |Aut| = 1, HC = 909, t = 15273, s = 185, closed tilings = 9090, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15393, |Aut| = 1, HC = 930, t = 15393, s = 189, closed tilings = 9300, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15381, |Aut| = 1, HC = 927, t = 15381, s = 183, closed tilings = 9270, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15349, |Aut| = 1, HC = 917, t = 15349, s = 185, closed tilings = 9170, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15257, |Aut| = 1, HC = 917, t = 15257, s = 183, closed tilings = 9170, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15393, |Aut| = 1, HC = 924, t = 15393, s = 185, closed tilings = 9240, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15473, |Aut| = 1, HC = 936, t = 15473, s = 185, closed tilings = 9360, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15405, |Aut| = 1, HC = 922, t = 15405, s = 187, closed tilings = 9220, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15453, |Aut| = 1, HC = 927, t = 15453, s = 187, closed tilings = 9270, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15565, |Aut| = 5, HC = 936, t = 3113, s = 187, closed tilings = 1872, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15225, |Aut| = 1, HC = 911, t = 15225, s = 187, closed tilings = 9110, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15369, |Aut| = 1, HC = 919, t = 15369, s = 187, closed tilings = 9190, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15201, |Aut| = 1, HC = 897, t = 15201, s = 189, closed tilings = 8970, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15257, |Aut| = 1, HC = 912, t = 15257, s = 183, closed tilings = 9120, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15449, |Aut| = 1, HC = 929, t = 15449, s = 185, closed tilings = 9290, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+  class: H = 15497, |Aut| = 1, HC = 929, t = 15497, s = 183, closed tilings = 9290, self-line tilings 2 (closed 1), scores [4, 4, 4, 4, 4, 5, 5, 5, 5, 5]

@@ -1,0 +1,37 @@
+=== circulant tournaments Z_n, n odd, 5 <= n <= 13 ===
+n = 5, S = [1, 2]: H = 15, palindromic = 15, all palindromic: True
+n = 7, S = [1, 2, 3]: H = 175, palindromic = 63, all palindromic: False
+n = 7, S = [1, 2, 4]: H = 189, palindromic = 63, all palindromic: False
+n = 9, S = [1, 2, 3, 4]: H = 3267, palindromic = 315, all palindromic: False
+n = 9, S = [1, 2, 3, 5]: H = 3357, palindromic = 333, all palindromic: False
+n = 9, S = [1, 3, 4, 7]: H = 3159, palindromic = 891, all palindromic: False
+n = 9, S = [1, 4, 6, 7]: H = 3159, palindromic = 891, all palindromic: False
+n = 11, S = [1, 2, 3, 4, 5]: H = 93027, palindromic = 1991, all palindromic: False
+n = 11, S = [1, 2, 3, 4, 6]: H = 93467, palindromic = 2035, all palindromic: False
+n = 11, S = [1, 2, 3, 5, 7]: H = 92411, palindromic = 2035, all palindromic: False
+n = 11, S = [1, 3, 4, 5, 9]: H = 95095, palindromic = 2035, all palindromic: False
+n = 13, S = [1, 2, 3, 4, 5, 6]: H = 3711175, palindromic = 14495, all palindromic: False
+n = 13, S = [1, 2, 3, 4, 5, 7]: H = 3707483, palindromic = 14547, all palindromic: False
+n = 13, S = [1, 2, 3, 4, 6, 8]: H = 3704857, palindromic = 14651, all palindromic: False
+n = 13, S = [1, 2, 3, 5, 6, 9]: H = 3703011, palindromic = 14625, all palindromic: False
+n = 13, S = [1, 2, 3, 5, 7, 9]: H = 3669497, palindromic = 14547, all palindromic: False
+n = 13, S = [1, 2, 6, 8, 9, 10]: H = 3683797, palindromic = 14521, all palindromic: False
+=== Cayley tournaments of Z_3 x Z_3 (connection sets with S u -S = G - 0) ===
+S = [(0, 1), (1, 0), (1, 1), (1, 2)]: H = 3159, palindromic = 891, all: False
+S = [(0, 1), (1, 0), (1, 1), (2, 1)]: H = 3159, palindromic = 891, all: False
+S = [(0, 1), (1, 0), (1, 2), (2, 2)]: H = 3159, palindromic = 891, all: False
+S = [(0, 1), (1, 0), (2, 1), (2, 2)]: H = 3159, palindromic = 891, all: False
+S = [(0, 1), (1, 1), (1, 2), (2, 0)]: H = 3159, palindromic = 891, all: False
+S = [(0, 1), (1, 1), (2, 0), (2, 1)]: H = 3159, palindromic = 891, all: False
+S = [(0, 1), (1, 2), (2, 0), (2, 2)]: H = 3159, palindromic = 891, all: False
+S = [(0, 1), (2, 0), (2, 1), (2, 2)]: H = 3159, palindromic = 891, all: False
+S = [(0, 2), (1, 0), (1, 1), (1, 2)]: H = 3159, palindromic = 891, all: False
+S = [(0, 2), (1, 0), (1, 1), (2, 1)]: H = 3159, palindromic = 891, all: False
+S = [(0, 2), (1, 0), (1, 2), (2, 2)]: H = 3159, palindromic = 891, all: False
+S = [(0, 2), (1, 0), (2, 1), (2, 2)]: H = 3159, palindromic = 891, all: False
+S = [(0, 2), (1, 1), (1, 2), (2, 0)]: H = 3159, palindromic = 891, all: False
+S = [(0, 2), (1, 1), (2, 0), (2, 1)]: H = 3159, palindromic = 891, all: False
+S = [(0, 2), (1, 2), (2, 0), (2, 2)]: H = 3159, palindromic = 891, all: False
+S = [(0, 2), (2, 0), (2, 1), (2, 2)]: H = 3159, palindromic = 891, all: False
+=== all strong tournaments on 7 vertices (gentourng -c): points of symmetry among them ===
+strong 7-vertex tournaments: 353; points of symmetry among them: 0

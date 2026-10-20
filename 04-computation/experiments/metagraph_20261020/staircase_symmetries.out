@@ -1,0 +1,4 @@
+n = 4 (8 tilings): {'m2 preserves class': 6, 'm2 maps to converse class': 5, 'm2 preserves H': 6, 'm2 preserves scores': 6, 'm2 preserves #3-cycles': 6, 'rho preserves H': 6, 'm1 preserves class (control)': 8}
+n = 5 (64 tilings): {'m2 preserves class': 30, 'm2 maps to converse class': 24, 'm2 preserves H': 34, 'm2 preserves scores': 32, 'm2 preserves #3-cycles': 32, 'rho preserves H': 34, 'm1 preserves class (control)': 64}
+n = 6 (1024 tilings): {'m2 preserves class': 124, 'm2 maps to converse class': 66, 'm2 preserves H': 206, 'm2 preserves scores': 318, 'm2 preserves #3-cycles': 326, 'rho preserves H': 206, 'm1 preserves class (control)': 1024}
+n = 7 (32768 tilings): {'m2 preserves class': 746, 'm2 maps to converse class': 339, 'm2 preserves H': 1690, 'm2 preserves scores': 6040, 'm2 preserves #3-cycles': 6948, 'rho preserves H': 1690, 'm1 preserves class (control)': 32768}

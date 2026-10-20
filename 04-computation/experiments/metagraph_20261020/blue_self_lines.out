@@ -1,0 +1,19 @@
+n = 4: symmetric tilings 4, blue self-lines (symmetric t with [T_t] = [T_t^c]): 1 (tilings 2)
+   tiling 010: H = 5, |Aut| = 1, scores [1, 1, 2, 2], grid rows r=1..: ['00', '1']
+   tiling 101: H = 5, |Aut| = 1, scores [1, 1, 2, 2], grid rows r=1..: ['11', '0']
+n = 5: symmetric tilings 16, blue self-lines (symmetric t with [T_t] = [T_t^c]): 0 (tilings 0)
+n = 6: symmetric tilings 64, blue self-lines (symmetric t with [T_t] = [T_t^c]): 2 (tilings 4)
+   tiling 0001001100: H = 41, |Aut| = 1, scores [2, 2, 2, 3, 3, 3], grid rows r=1..: ['0000', '000', '11', '1']
+   tiling 0101000110: H = 45, |Aut| = 3, scores [2, 2, 2, 3, 3, 3], grid rows r=1..: ['0000', '101', '11', '0']
+   tiling 1010111001: H = 45, |Aut| = 3, scores [2, 2, 2, 3, 3, 3], grid rows r=1..: ['1111', '010', '00', '1']
+   tiling 1110110011: H = 41, |Aut| = 1, scores [2, 2, 2, 3, 3, 3], grid rows r=1..: ['1111', '111', '00', '0']
+n = 7: symmetric tilings 512, blue self-lines (symmetric t with [T_t] = [T_t^c]): 0 (tilings 0)
+n = 8: symmetric tilings 4096, blue self-lines (symmetric t with [T_t] = [T_t^c]): 4 (tilings 8)
+   tiling 010010110001110101010: H = 637, |Aut| = 1, scores [3, 3, 3, 3, 4, 4, 4, 4], grid rows r=1..: ['000000', '11011', '0110', '111', '00', '1']
+   tiling 010011100111010011010: H = 657, |Aut| = 1, scores [3, 3, 3, 3, 4, 4, 4, 4], grid rows r=1..: ['001100', '11011', '0000', '111', '11', '0']
+   tiling 010100011001100100110: H = 653, |Aut| = 1, scores [3, 3, 3, 3, 4, 4, 4, 4], grid rows r=1..: ['000000', '10101', '1111', '010', '00', '1']
+   tiling 010101001111000010110: H = 621, |Aut| = 3, scores [3, 3, 3, 3, 4, 4, 4, 4], grid rows r=1..: ['001100', '10101', '1001', '010', '11', '0']
+   tiling 101010110000111101001: H = 621, |Aut| = 3, scores [3, 3, 3, 3, 4, 4, 4, 4], grid rows r=1..: ['110011', '01010', '0110', '101', '00', '1']
+   tiling 101011100110011011001: H = 653, |Aut| = 1, scores [3, 3, 3, 3, 4, 4, 4, 4], grid rows r=1..: ['111111', '01010', '0000', '101', '11', '0']
+   tiling 101100011000101100101: H = 657, |Aut| = 1, scores [3, 3, 3, 3, 4, 4, 4, 4], grid rows r=1..: ['110011', '00100', '1111', '000', '00', '1']
+   tiling 101101001110001010101: H = 637, |Aut| = 1, scores [3, 3, 3, 3, 4, 4, 4, 4], grid rows r=1..: ['111111', '00100', '1001', '000', '11', '0']

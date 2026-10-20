@@ -1,0 +1,4 @@
+n = 4: tiles 3 (left 1, right 1, axis 1); of 8 tilings: {'L preserves node': 4, 'R preserves node': 4, 'LR preserves node': 6, 'X preserves node': 2} | L-adjacency pairs 5, X-adjacency pairs 5, nodes 3
+n = 5: tiles 6 (left 2, right 2, axis 2); of 64 tilings: {'L preserves node': 16, 'R preserves node': 16, 'LR preserves node': 20, 'X preserves node': 4} | L-adjacency pairs 39, X-adjacency pairs 27, nodes 10
+n = 6: tiles 10 (left 4, right 4, axis 2); of 1024 tilings: {'L preserves node': 24, 'R preserves node': 24, 'LR preserves node': 108, 'X preserves node': 64} | L-adjacency pairs 504, X-adjacency pairs 288, nodes 34
+n = 7: tiles 15 (left 6, right 6, axis 3); of 32768 tilings: {'L preserves node': 202, 'R preserves node': 202, 'LR preserves node': 684, 'X preserves node': 24} | L-adjacency pairs 20584, X-adjacency pairs 7627, nodes 272

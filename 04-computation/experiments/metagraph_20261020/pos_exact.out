@@ -1,0 +1,25 @@
+(A) circulants of composite odd order, exact anti-automorphism enumeration
+  n = 9 S = [1, 2, 3, 4]: H = 3267, palindromic = 315, involutory anti-automorphisms 9
+  n = 9 S = [1, 2, 3, 5]: H = 3357, palindromic = 333, involutory anti-automorphisms 9
+  n = 9 S = [1, 3, 4, 7]: H = 3159, palindromic = 891, involutory anti-automorphisms 27
+  n = 9 S = [1, 4, 6, 7]: H = 3159, palindromic = 891, involutory anti-automorphisms 27
+  n = 15 S = [1, 2, 3, 4, 5, 6, 7]: H = 198464295, palindromic = 117855, involutory anti-automorphisms 15
+  n = 15 S = [1, 2, 3, 4, 5, 6, 8]: H = 197728485, palindromic = 118635, involutory anti-automorphisms 15
+  n = 15 S = [1, 2, 3, 4, 5, 7, 9]: H = 196963035, palindromic = 118215, involutory anti-automorphisms 15
+  n = 15 S = [1, 2, 3, 4, 5, 8, 9]: H = 197094945, palindromic = 118875, involutory anti-automorphisms 15
+  n = 15 S = [1, 2, 3, 4, 6, 7, 10]: H = 197347005, palindromic = 118035, involutory anti-automorphisms 15
+  n = 15 S = [1, 2, 3, 4, 7, 9, 10]: H = 196264905, palindromic = 117735, involutory anti-automorphisms 15
+  n = 15 S = [1, 2, 3, 5, 6, 7, 11]: H = 196277235, palindromic = 118395, involutory anti-automorphisms 15
+  n = 15 S = [1, 2, 3, 5, 6, 8, 11]: H = 196922055, palindromic = 118125, involutory anti-automorphisms 15
+  n = 15 S = [1, 2, 3, 5, 7, 9, 11]: H = 195695145, palindromic = 118515, involutory anti-automorphisms 15
+  n = 15 S = [1, 2, 3, 6, 8, 10, 11]: H = 197127315, palindromic = 118545, involutory anti-automorphisms 15
+  n = 15 S = [1, 2, 4, 5, 7, 9, 12]: H = 196361595, palindromic = 118755, involutory anti-automorphisms 15
+  n = 15 S = [1, 2, 4, 7, 9, 10, 12]: H = 196261035, palindromic = 118395, involutory anti-automorphisms 15
+  n = 15 S = [1, 2, 5, 6, 7, 11, 12]: H = 197030475, palindromic = 1060695, involutory anti-automorphisms 135
+  n = 15 S = [1, 2, 5, 7, 9, 11, 12]: H = 197068455, palindromic = 118635, involutory anti-automorphisms 15
+  n = 15 S = [1, 3, 4, 5, 6, 7, 13]: H = 196216545, palindromic = 117585, involutory anti-automorphisms 15
+  n = 15 S = [1, 3, 4, 6, 7, 10, 13]: H = 193215375, palindromic = 563625, involutory anti-automorphisms 75
+(B)/(C) strong tournaments on 6, 7, 8 vertices: points of symmetry
+  n = 6: strong classes 35, strong points of symmetry: 0 []
+  n = 7: strong classes 353, strong points of symmetry: 0 []
+  n = 8: strong classes 6008, strong points of symmetry: 0 []

@@ -1,0 +1,21 @@
+(A) circulants of odd order with 1 in S
+  n = 7: 4 connection sets, three-interval 3, descending-pairs 1: all have a non-palindromic Hamiltonian path
+  n = 9: 8 connection sets, three-interval 7, descending-pairs 1: all have a non-palindromic Hamiltonian path
+  n = 11: 16 connection sets, three-interval 15, descending-pairs 1: all have a non-palindromic Hamiltonian path
+  n = 13: 32 connection sets, three-interval 31, descending-pairs 1: all have a non-palindromic Hamiltonian path
+  n = 15: 64 connection sets, three-interval 63, descending-pairs 1: all have a non-palindromic Hamiltonian path
+  n = 17: 128 connection sets, three-interval 127, descending-pairs 1: all have a non-palindromic Hamiltonian path
+  n = 19: 256 connection sets, three-interval 255, descending-pairs 1: all have a non-palindromic Hamiltonian path
+  n = 21: 512 connection sets, three-interval 511, descending-pairs 1: all have a non-palindromic Hamiltonian path
+  n = 23: 1024 connection sets, three-interval 1023, descending-pairs 1: all have a non-palindromic Hamiltonian path
+(B) bicirculants of order n = 2 mod 4
+  n = 6: 4 bicirculants (S', D): the mixing Hamiltonian cycle C' exists in every one
+  n = 10: 32 bicirculants (S', D): the mixing Hamiltonian cycle C' exists in every one
+  n = 14: 256 bicirculants (S', D): the mixing Hamiltonian cycle C' exists in every one
+  n = 18: 2048 bicirculants (S', D): the mixing Hamiltonian cycle C' exists in every one
+  n = 22: 16384 bicirculants (S', D): the mixing Hamiltonian cycle C' exists in every one
+  n = 26: 131072 bicirculants (S', D): the mixing Hamiltonian cycle C' exists in every one
+  n = 30: 1048576 bicirculants (S', D): the mixing Hamiltonian cycle C' exists in every one
+(C) brute force: all Hamiltonian paths palindromic? in the n = 6, 10 bicirculant families
+  n = 6: 4 tournaments, pure-blue among them: 0
+  n = 10: 32 tournaments, pure-blue among them: 0
