@@ -2,7 +2,9 @@
 
 Owner's prompt: prove HYP-9340 beyond Sylow (first open case Z_3 at n = 6), find a uniform rule or a definability obstruction for the prime-circulant bijection, and prove or disprove HYP-9172, thinking in odd primes and their powers.
 
-Canon: [THM-4722](../../01-canon/theorems/THM-4722-no-equivariant-bijection-tournaments-even-graphs-for-every-n-sylow-hall-violator.md) (HYP-9172 (a): tournament half for every n >= 5, switching half for every odd n >= 5), [THM-4723](../../01-canon/theorems/) (see below), [HYP-9341](../hypotheses/). Scripts in `04-computation/experiments/even_graphs_20261019/`.
+Sibling note (same day): [even_graphs_20261019](even_graphs_20261019_sylow_refinement_components_walsh_duality.md), which lists the earlier 2026-10-19 notes.
+
+Canon: [THM-4722](../../01-canon/theorems/THM-4722-no-equivariant-bijection-tournaments-even-graphs-for-every-n-sylow-hall-violator.md) (HYP-9172 (a): tournament half for every n >= 5, switching half for every odd n >= 5), [THM-4723](../../01-canon/theorems/THM-4723-sylow-profile-form-of-hyp-9340-and-the-defect-reduction-for-the-three-cycle-type.md), [HYP-9341](../hypotheses/HYP-9341-what-remains-open-after-thm-4722.md). Scripts in `04-computation/experiments/even_graphs_20261019/`.
 
 ## 1. The idea in one paragraph
 

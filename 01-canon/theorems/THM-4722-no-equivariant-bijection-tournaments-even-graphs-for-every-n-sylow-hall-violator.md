@@ -6,8 +6,9 @@ status: >
   Lemma Q (odd-n realisability of parity vectors), Theorem R' (restricted principle for switching classes, odd n),
   Theorem S' (Sylow refinement for switching classes, odd n), Theorem H' (switching half, all odd n >= 5).
   FINITE-EXACT: deficit >= 1 certificates n = 5..9 from the census (hall_sylow_certificate.out); |<c,d>| = 60, 360, 2520
-  for the three overlap patterns; tau_C(P) = tau_EE(P) for every odd-order class at n = 5, 7 (switching_sylow.out) and
-  at n = 6 (switching_even_n.out; even n, outside Theorem H'); the Euler parity lemma holds for all 24 + 284 pairs at
+  for the three overlap patterns; tau_C(P) = tau_EE(P) for every odd-order class at n = 5, 7 and for fifteen classes at n = 9
+  (switching_sylow.out, switching_sylow_n9.out: e.g. 51 = 51 for Z3 of type (3,1^6), 1 = 1 for Z3 wr Z3) and at n = 6
+  (switching_even_n.out; even n, outside Theorem H'); the Euler parity lemma holds for all 24 + 284 pairs at
   n = 5, 7 and fails for 36 + 36 pairs at n = 6, 8 (euler_parity_lemma.out), as the proof predicts.
   CITED: THM-4721 (Theorems R, S); THM-4531 (Lemma N1, Theorem G, Theorem O3, P1: for odd n every switching class
   contains exactly one tournament with d+ = d- (mod 4) at every vertex, an isomorphism of S_n-sets); Jordan's theorem
