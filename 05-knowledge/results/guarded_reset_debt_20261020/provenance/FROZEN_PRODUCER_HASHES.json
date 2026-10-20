@@ -1,0 +1,40 @@
+{
+  "scope": "Hashes of unmodified producer packet before two publication-only clarifications. The main document is preserved verbatim as RESET_DEBT_COMPOSITION.original.md. All other producer files except the superseded checksum index are copied unchanged to the published package root.",
+  "files": [
+    {
+      "producer_basename": "RESET_DEBT_COMPOSITION.md",
+      "bytes": 16503,
+      "sha256": "358192727194b491d59b8a67203f7d3fabcc0032894aae17dcd4ee045aeba816"
+    },
+    {
+      "producer_basename": "SHA256SUMS",
+      "bytes": 515,
+      "sha256": "6ee3ff4393c27e1d960531809c3c1d3e0e9b8ec7017373e3bb498eae1ad907a7"
+    },
+    {
+      "producer_basename": "SOURCE_INVENTORY.json",
+      "bytes": 942,
+      "sha256": "8e5e1c7a67ccc245f612d1cbd908a21a1df1fcc087278400000354e404aad01a"
+    },
+    {
+      "producer_basename": "VALIDATION.md",
+      "bytes": 2543,
+      "sha256": "b8c92c304b5c4d299a2ab6e2a8463f92b2f53c0dc54ffaeab3a1f844b47ca1a2"
+    },
+    {
+      "producer_basename": "receipt.json",
+      "bytes": 1417,
+      "sha256": "a7ebdd2b1b58a155974535de95eafc9861a45b0fa965186ce7770bb7bdd231c1"
+    },
+    {
+      "producer_basename": "receipt.optimized.json",
+      "bytes": 1417,
+      "sha256": "a7ebdd2b1b58a155974535de95eafc9861a45b0fa965186ce7770bb7bdd231c1"
+    },
+    {
+      "producer_basename": "verify_reset_debt.py",
+      "bytes": 7698,
+      "sha256": "6ee90d7f80a756e6a9521c70aa56b46379fd90b075b8acfc79b919f0fee6a039"
+    }
+  ]
+}

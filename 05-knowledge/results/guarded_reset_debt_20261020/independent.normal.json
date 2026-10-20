@@ -1,0 +1,104 @@
+{
+  "ROOT_trimmed_words": 13,
+  "checks": 148619,
+  "first_reset_words": 151,
+  "global_Collatz_coverage_or_convergence_claim": false,
+  "independent_affine_words": 27931,
+  "inverse_candidates": 56414,
+  "macro_schedules": 9840,
+  "macros": {
+    "A": {
+      "coefficients": [
+        27,
+        64,
+        23
+      ],
+      "first_exit": 5,
+      "fixed_point": "23/37",
+      "image_modulus": 54,
+      "image_residue": 5,
+      "literal_values_at_first_lift": [
+        11,
+        17,
+        26,
+        13,
+        20,
+        10,
+        5
+      ],
+      "source_modulus": 128,
+      "source_residue": 11,
+      "word": [
+        1,
+        2,
+        3
+      ]
+    },
+    "B": {
+      "coefficients": [
+        9,
+        16,
+        5
+      ],
+      "first_exit": 4,
+      "fixed_point": "5/7",
+      "image_modulus": 18,
+      "image_residue": 11,
+      "literal_values_at_first_lift": [
+        19,
+        29,
+        44,
+        22,
+        11
+      ],
+      "source_modulus": 32,
+      "source_residue": 19,
+      "word": [
+        1,
+        3
+      ]
+    },
+    "E": {
+      "coefficients": [
+        27,
+        32,
+        19
+      ],
+      "first_exit": 5,
+      "fixed_point": "19/5",
+      "image_modulus": 54,
+      "image_residue": 47,
+      "literal_values_at_first_lift": [
+        55,
+        83,
+        125,
+        188,
+        94,
+        47
+      ],
+      "source_modulus": 64,
+      "source_residue": 55,
+      "word": [
+        1,
+        1,
+        3
+      ]
+    }
+  },
+  "native_recurrence_words": 1728,
+  "positive_odd_residue_representatives": 837930,
+  "repeated_word_depth": 200,
+  "status": "PASS",
+  "valuation_words": 340,
+  "wording_controls": {
+    "nonnegative_debt_only_sign_hostile": "-1/2",
+    "positive_source_bank_exit": [
+      11,
+      17,
+      13,
+      5
+    ],
+    "repeated_A_Z2_intersection": "23/37",
+    "repeated_A_integer_intersection": "empty"
+  }
+}

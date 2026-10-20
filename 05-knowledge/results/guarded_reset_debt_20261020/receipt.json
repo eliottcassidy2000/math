@@ -1,0 +1,82 @@
+{
+  "checks": 321690,
+  "first_reset_examples": [
+    {
+      "a": 2,
+      "first_exit": 2,
+      "h": 0,
+      "modulus": 8,
+      "residue": 1
+    },
+    {
+      "a": 3,
+      "first_exit": 4,
+      "h": 1,
+      "modulus": 32,
+      "residue": 19
+    },
+    {
+      "a": 4,
+      "first_exit": 5,
+      "h": 2,
+      "modulus": 128,
+      "residue": 87
+    },
+    {
+      "a": 5,
+      "first_exit": 7,
+      "h": 3,
+      "modulus": 512,
+      "residue": 15
+    },
+    {
+      "a": 5,
+      "first_exit": 8,
+      "h": 4,
+      "modulus": 1024,
+      "residue": 351
+    },
+    {
+      "a": 6,
+      "first_exit": 10,
+      "h": 5,
+      "modulus": 4096,
+      "residue": 575
+    },
+    {
+      "a": 7,
+      "first_exit": 12,
+      "h": 6,
+      "modulus": 16384,
+      "residue": 12671
+    },
+    {
+      "a": 7,
+      "first_exit": 13,
+      "h": 7,
+      "modulus": 32768,
+      "residue": 8447
+    }
+  ],
+  "global_collatz_conclusion": false,
+  "hostiles": {
+    "growing_first_reset": [
+      11,
+      17,
+      13
+    ],
+    "nested_A_limit": "23/37, not a positive integer",
+    "unit_budget_not_necessary": [
+      55,
+      83,
+      125,
+      47
+    ]
+  },
+  "independent_valuation_words": 120,
+  "macro_schedules_checked": 1096,
+  "maximum_literal_clock": 1200,
+  "odd_residues_enumerated": 41370,
+  "scope": "Finite exact controls; all-length claims proved in companion note",
+  "status": "PASS"
+}

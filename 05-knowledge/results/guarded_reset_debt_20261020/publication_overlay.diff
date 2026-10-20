@@ -1,0 +1,20 @@
+--- provenance/RESET_DEBT_COMPOSITION.original.md
++++ RESET_DEBT_COMPOSITION.md
+@@ -57,7 +57,7 @@
+     r_12 - r_1 r_2
+       = delta_2 eta_1/(lambda_1 lambda_2).               (2.6)
+ 
+-In the nonnegative debt cone the difference is nonnegative, not nonpositive. The correct quantity is the weighted additive slack (2.4).
++If `delta_2>=0` and `eta_1>=0`, in particular when both blocks lie in the nonnegative unit-budget cone, the difference is nonnegative, not nonpositive. Nonnegative debts alone do not determine its sign. The correct quantity is the weighted additive slack (2.4).
+ 
+ ### Signs and boundary cases
+ 
+@@ -232,7 +232,7 @@
+        F_A^r(x)=(27^r x+C_r)/64^r,
+        C_r=23(64^r-27^r)/37.
+ 
+-   Every finite word has positive integer sources. Modulo `64^r`, its source address is `23/37`. The rational `23/37` is a fixed point of F_A and is `11 mod128` in the 2-adic integers, so it belongs to every full repeated cylinder, including the odd-terminal guard. Its nested cylinder intersection is exactly `23/37`, not an ordinary positive integer. An infinite formal/2-adic branch can thus coexist with arbitrarily deep finite integer cylinders while no positive integer follows it forever.
++   Every finite word has positive integer sources. Modulo `64^r`, its source address is `23/37`. The rational `23/37` is a fixed point of F_A and is `11 mod128` in the 2-adic integers, so it belongs to every full repeated cylinder, including the odd-terminal guard. Its nested cylinder intersection in the 2-adic integers is exactly `{23/37}`; the intersection among positive integer sources is empty. An infinite formal/2-adic branch can thus coexist with arbitrarily deep finite integer cylinders while no positive integer follows it forever.
+ 
+ If a **fixed** source had an infinite lawful sequence satisfying `lambda_j>=4/3`, the budget would give
+ 

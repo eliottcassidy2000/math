@@ -1,0 +1,27 @@
+{
+  "repository_head_read": "f3e658d7cc105d5e367e4dd565812a81e127a6fc",
+  "remote_mutations": false,
+  "repository_mutations": false,
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "path": "05-knowledge/results/collatz_reset_debt_20261015f.md",
+      "sha256": "4e31142338bd38cef330caa4ffa2340599b698ab78a1d367fa349c966b67efd5"
+    },
+    {
+      "path": "05-knowledge/results/collatz_refinement_debt_20261016a.md",
+      "sha256": "abbed88ce90cf0dd61f7ba077cf5dc7e4e59a22790bf91e952b2a7477ef1c020"
+    },
+    {
+      "path": "05-knowledge/results/reset_20260926_inequality.md",
+      "sha256": "8b01faa9e8adb6a856baf57fe1a06c08697f93793bbbc886996dff9bb003a5ce"
+    },
+    {
+      "path": "05-knowledge/results/collatz_bank_reset_20261019.md",
+      "sha256": "b8cc38262dec15d9dc92a7eae8ba51a9a93e7f60a110f5d31da7669b1bd69524"
+    }
+  ]
+}
