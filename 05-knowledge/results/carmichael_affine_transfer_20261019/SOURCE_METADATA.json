@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "paper_title": "The exponent of growth of the Carmichael counting function",
+  "authors": [
+    "Will Howe",
+    "Grant Huffman",
+    "Jensen Kohlmeyer",
+    "Liam Kruer"
+  ],
+  "paper_date": "2026-10-08",
+  "review_date": "2026-10-20",
+  "external_sources": [
+    {
+      "filename": "erdos-1057-carmichael-counting.pdf",
+      "kind": "supplied PDF",
+      "sha256": "b1f34a345f63c952a0f1731682817be16ee86a70c8396ada27fa3c9884014f28",
+      "redistributed": false,
+      "required_at_runtime": false
+    },
+    {
+      "filename": "paper.txt",
+      "kind": "extracted text of supplied PDF",
+      "sha256": "b61ffb263ce2a309bedb248dad0055fc440b60394039e1330f2b5abc9edbee03",
+      "redistributed": false,
+      "required_at_runtime": false
+    }
+  ],
+  "included_source_sha256": {
+    "FIXED_CARDINALITY_TRANSFER.md": "f69934f36baa73bc418216428721cc331e9a0315b63f588eb99266e320eb067e",
+    "APPLICATIONS_AND_EXACT_CODES.md": "ae872c9b0db7f5320be1d985243550e3c7c51dc9513532834cadfcc0d9f349ce",
+    "EQUATION_CORRESPONDENCE.md": "a90b1ba5edc289092ca39c2f28224038cb866b0612c502b3fd67469df650edb6",
+    "supporting/PRIME_POWER_BUDGET.md": "aa2289cecf013e71a8bd339583972b022956be40af156b3086cae78cfd7ecf46"
+  },
+  "scope": "Elementary transfer and finite controls; arithmetic conclusions conditional on (S),(A). No independent analytic proof or Lean build."
+}

@@ -1,0 +1,165 @@
+{
+  "automata_weight_enumerators": {
+    "3": {
+      "0": 1,
+      "2": 6,
+      "4": 1
+    },
+    "5": {
+      "0": 1,
+      "2": 4,
+      "4": 22,
+      "6": 4,
+      "8": 1
+    },
+    "7": {
+      "0": 1,
+      "2": 28,
+      "4": 70,
+      "6": 28,
+      "8": 1
+    }
+  },
+  "exact_checks": {
+    "exact_affine_pruning_cases": 480,
+    "exact_binary_lifting_cases": 300,
+    "exact_complete_tournament_universes": 5,
+    "exact_connected_graph_affine_ranks": 771,
+    "exact_control_krawtchouk_checks": 5100,
+    "exact_control_laws": 30,
+    "exact_cyclic_list_comparisons": 600,
+    "exact_finite_korselt_banks": 3,
+    "exact_identity_positive_binary_cases": 100,
+    "exact_inverse_paired_cases": 128,
+    "exact_pascal_codes": 12,
+    "exact_pascal_duality_codes": 36,
+    "exact_pruned_entropy_hostile": 1,
+    "exact_tournament_krawtchouk_checks": 764
+  },
+  "hostiles": {
+    "constant_labels_C7": {
+      "count": 56,
+      "k": 3,
+      "n": 8,
+      "only_target": 3
+    },
+    "odd_prime_binary_digit": {
+      "binary_corrections": [],
+      "lift": 3,
+      "matrix": [
+        [
+          1
+        ]
+      ],
+      "p": 3,
+      "unrestricted_correction": 2
+    }
+  },
+  "literal_carmichael_banks": {
+    "1440": {
+      "counts_by_exact_size": {
+        "3": 1,
+        "4": 2,
+        "5": 3,
+        "6": 3,
+        "7": 7,
+        "8": 4,
+        "9": 6
+      },
+      "prime_bank": [
+        7,
+        11,
+        13,
+        17,
+        19,
+        31,
+        37,
+        41,
+        61,
+        73,
+        97,
+        181,
+        241
+      ],
+      "smallest_constructed": 15841
+    },
+    "720": {
+      "counts_by_exact_size": {
+        "3": 3,
+        "4": 4,
+        "5": 6,
+        "6": 3,
+        "7": 4,
+        "8": 5,
+        "9": 1
+      },
+      "prime_bank": [
+        7,
+        11,
+        13,
+        17,
+        19,
+        31,
+        37,
+        41,
+        61,
+        73,
+        181,
+        241
+      ],
+      "smallest_constructed": 15841
+    },
+    "80": {
+      "counts_by_exact_size": {
+        "3": 1
+      },
+      "prime_bank": [
+        3,
+        11,
+        17,
+        41
+      ],
+      "smallest_constructed": 561
+    }
+  },
+  "numerical_checks": {
+    "counts": {
+      "numerical_affine_energy_checks": 9481,
+      "numerical_fixed_size_character_checks": 34336,
+      "numerical_translated_fejer_cases": 408
+    },
+    "minimum_observed_F1_slack": 0.31406260720487905,
+    "status": "VERIFIED floating checks, not exact proofs",
+    "tolerance": 2e-09
+  },
+  "seed": 105720261019,
+  "source_sha256": "71c2910732bc47725d3bd5fff9559015f880a76ebe09291c3e9413118cb5b267",
+  "status": "PASS",
+  "tournament_counts": {
+    "2": {
+      "edges": 1,
+      "parity_fiber": 1,
+      "parity_vectors": 2
+    },
+    "3": {
+      "edges": 3,
+      "parity_fiber": 2,
+      "parity_vectors": 4
+    },
+    "4": {
+      "edges": 6,
+      "parity_fiber": 8,
+      "parity_vectors": 8
+    },
+    "5": {
+      "edges": 10,
+      "parity_fiber": 64,
+      "parity_vectors": 16
+    },
+    "6": {
+      "edges": 15,
+      "parity_fiber": 1024,
+      "parity_vectors": 32
+    }
+  }
+}

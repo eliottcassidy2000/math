@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "independence": "Standalone implementation; no execution/import of reviewed verification code.",
+  "exact_integer_or_fraction_checks": {
+    "binomial_mode_and_total": 6482,
+    "exhaustive_labelled_lists": 1780,
+    "effective_F3_multiplicity": 41,
+    "nonuniform_ambient_index": 462,
+    "product_group_affine_pruning": 500,
+    "Pascal_weight_enumerators": 36,
+    "automaton_Krawtchouk": 2874,
+    "rational_biased_automaton_return_and_TV": 24,
+    "tournament_cut_Krawtchouk": 252,
+    "connected_graph_affine_rank": 771,
+    "binary_correction_instances": 29,
+    "exact_prime_power_envelopes": 4950,
+    "Pascal_duality_and_MacWilliams": 36,
+    "exact_exponent_two_positivity": 120,
+    "exact_inverse_paired_positivity": 120
+  },
+  "numerical_checks": {
+    "exhaustive_product_group_F1_and_F5": 17776,
+    "high_precision_binary_F1": 45,
+    "genuine_high_order_translated_Fejer": 24
+  },
+  "complex_absolute_tolerance": 1e-09,
+  "decimal_precision": 80,
+  "nonvacuous_F1_cases": 45,
+  "strongest_F1_control": {
+    "n": 240,
+    "ones": 120,
+    "k": 120,
+    "actual": "1.0628283669342123972308946666034884247631810236088157090819050420605135756488523E-36",
+    "bound": "1.7019587655810004303047547302373112707844866033550262686026297220531826709818359E-25"
+  },
+  "Pascal_examples": {
+    "3": {
+      "0": 1,
+      "2": 6,
+      "4": 1
+    },
+    "5": {
+      "0": 1,
+      "2": 4,
+      "4": 22,
+      "6": 4,
+      "8": 1
+    },
+    "7": {
+      "0": 1,
+      "2": 28,
+      "4": 70,
+      "6": 28,
+      "8": 1
+    }
+  },
+  "pruning_wording_hostile": {
+    "p": 2,
+    "columns": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "defect": 0,
+    "k": 8,
+    "actual": 9,
+    "incorrect_unpruned_lower_bound": "45/4"
+  },
+  "log_budget_example": {
+    "beta": "95/96",
+    "delta": "1/1024",
+    "sigma": "1/1024",
+    "eta": "1/128",
+    "power_gap": "1/256",
+    "exponent": "1015/1024",
+    "scales": [
+      {
+        "log_y": 100,
+        "log_of_ratio": -8.819715371976184
+      },
+      {
+        "log_y": 1000,
+        "log_of_ratio": -9.909260557964274
+      },
+      {
+        "log_y": 10000,
+        "log_of_ratio": 20.641819256047633
+      },
+      {
+        "log_y": 100000,
+        "log_of_ratio": 367.5991490700595
+      }
+    ]
+  },
+  "input_sha256": {
+    "FIXED_CARDINALITY_TRANSFER.md": "f69934f36baa73bc418216428721cc331e9a0315b63f588eb99266e320eb067e",
+    "APPLICATIONS_AND_EXACT_CODES.md": "ae872c9b0db7f5320be1d985243550e3c7c51dc9513532834cadfcc0d9f349ce",
+    "EQUATION_CORRESPONDENCE.md": "a90b1ba5edc289092ca39c2f28224038cb866b0612c502b3fd67469df650edb6",
+    "supporting/PRIME_POWER_BUDGET.md": "aa2289cecf013e71a8bd339583972b022956be40af156b3086cae78cfd7ecf46"
+  },
+  "pinned_external_sources": [
+    {
+      "filename": "erdos-1057-carmichael-counting.pdf",
+      "kind": "supplied PDF",
+      "sha256": "b1f34a345f63c952a0f1731682817be16ee86a70c8396ada27fa3c9884014f28",
+      "redistributed": false,
+      "required_at_runtime": false
+    },
+    {
+      "filename": "paper.txt",
+      "kind": "extracted text of supplied PDF",
+      "sha256": "b61ffb263ce2a309bedb248dad0055fc440b60394039e1330f2b5abc9edbee03",
+      "redistributed": false,
+      "required_at_runtime": false
+    }
+  ],
+  "source_metadata_sha256": "d8c308ec9a95994c8e411b96c82ff8112fa67a9eca27b49cfeeb944836066643",
+  "script_sha256": "bac80ced0e89813786f26ee4fbbecd1b4706e7c3bf96e8d1929cf482dadc8c31",
+  "scope": "Finite controls do not prove analytic (S),(A), asymptotic prime supply, Lean correctness, or novelty."
+}
