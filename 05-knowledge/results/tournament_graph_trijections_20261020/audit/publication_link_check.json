@@ -1,0 +1,50 @@
+[
+  {
+    "text": "THM-1430, tiling/class/metagraph dictionary",
+    "url": "../../../01-canon/theorems/THM-1430-the-tiling-class-metagraph-dictionary-and-which-tricks-pay.md",
+    "target": "01-canon/theorems/THM-1430-the-tiling-class-metagraph-dictionary-and-which-tricks-pay.md",
+    "exists": true
+  },
+  {
+    "text": "THM-1415, canonical star quotient",
+    "url": "../../../01-canon/theorems/THM-1415-switching-is-the-canonical-star-quotient.md",
+    "target": "01-canon/theorems/THM-1415-switching-is-the-canonical-star-quotient.md",
+    "exists": true
+  },
+  {
+    "text": "THM-1467, oriented-spanning-tree switching sum",
+    "url": "../../../01-canon/theorems/THM-1467-oriented-spanning-tree-switching-sum.md",
+    "target": "01-canon/theorems/THM-1467-oriented-spanning-tree-switching-sum.md",
+    "exists": true
+  },
+  {
+    "text": "Defect-boundary web",
+    "url": "../defect_boundary_20261020/web.md",
+    "target": "05-knowledge/results/defect_boundary_20261020/web.md",
+    "exists": true
+  },
+  {
+    "text": "Tournament future boundary",
+    "url": "../tournament_future_boundary_20261020/README.md",
+    "target": "05-knowledge/results/tournament_future_boundary_20261020/README.md",
+    "exists": true
+  },
+  {
+    "text": "Weighted SCC/Lyndon codec",
+    "url": "../tournament_even_bijection_20261011c.md",
+    "target": "05-knowledge/results/tournament_even_bijection_20261011c.md",
+    "exists": true
+  },
+  {
+    "text": "converse-context packet",
+    "url": "../tournament_converse_context_20261011d.md",
+    "target": "05-knowledge/results/tournament_converse_context_20261011d.md",
+    "exists": true
+  },
+  {
+    "text": "Regular-return Gram addendum",
+    "url": "../regular_return_gram_icosahedra_20261020/gram_return_addendum.md",
+    "target": "05-knowledge/results/regular_return_gram_icosahedra_20261020/gram_return_addendum.md",
+    "exists": true
+  }
+]

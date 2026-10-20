@@ -1,0 +1,233 @@
+{
+  "audit_source_sha256": "c8bd3f8de17c2dd8472051bcf9644783010aa752c711311557343e8ed85c9412",
+  "checks": 12612,
+  "constraints": [
+    {
+      "constraint_pattern_cases": 3,
+      "n": 2
+    },
+    {
+      "constraint_pattern_cases": 27,
+      "n": 3
+    },
+    {
+      "constraint_pattern_cases": 729,
+      "n": 4
+    }
+  ],
+  "generator_census": [
+    {
+      "bipartite": false,
+      "component_sizes": [
+        1
+      ],
+      "degree": 1,
+      "difference_rank": 0,
+      "dimension": 0,
+      "n": 2,
+      "rank": 0,
+      "weights": {
+        "2": 1
+      }
+    },
+    {
+      "bipartite": true,
+      "component_sizes": [
+        2
+      ],
+      "degree": 1,
+      "difference_rank": 0,
+      "dimension": 1,
+      "n": 3,
+      "rank": 1,
+      "weights": {
+        "6": 1
+      }
+    },
+    {
+      "bipartite": false,
+      "component_sizes": [
+        8
+      ],
+      "degree": 6,
+      "difference_rank": 3,
+      "dimension": 3,
+      "n": 4,
+      "rank": 3,
+      "weights": {
+        "4": 6
+      }
+    },
+    {
+      "bipartite": false,
+      "component_sizes": [
+        32,
+        32
+      ],
+      "degree": 15,
+      "difference_rank": 5,
+      "dimension": 6,
+      "n": 5,
+      "rank": 5,
+      "weights": {
+        "8": 15
+      }
+    },
+    {
+      "bipartite": false,
+      "component_sizes": [
+        1024
+      ],
+      "degree": 180,
+      "difference_rank": 10,
+      "dimension": 10,
+      "n": 6,
+      "rank": 10,
+      "weights": {
+        "4": 180
+      }
+    },
+    {
+      "degree": 1260,
+      "difference_rank": 14,
+      "dimension": 15,
+      "n": 7,
+      "rank": 15,
+      "sharp_threshold_witness": {
+        "paths": [
+          [
+            1,
+            6,
+            2,
+            4,
+            7,
+            3,
+            5
+          ],
+          [
+            2,
+            3,
+            1,
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "symmetric_difference_edges": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      },
+      "weights": {
+        "4": 1260
+      }
+    },
+    {
+      "degree": 20160,
+      "difference_rank": 21,
+      "dimension": 21,
+      "n": 8,
+      "rank": 21,
+      "weights": {
+        "2": 20160
+      }
+    }
+  ],
+  "literal_controls": {
+    "order3_aggregate": "K2 with weight 6",
+    "order3_original_component_degrees": [
+      [
+        1,
+        1,
+        1,
+        3
+      ],
+      [
+        1,
+        1,
+        1,
+        3
+      ]
+    ],
+    "order3_original_components": [
+      [
+        0,
+        2,
+        3,
+        6
+      ],
+      [
+        1,
+        4,
+        5,
+        7
+      ]
+    ],
+    "order3_switching_class_degree_multisets": {
+      "0": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "1": [
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    "order4_H_change": [
+      5,
+      1
+    ]
+  },
+  "status": "PASS"
+}

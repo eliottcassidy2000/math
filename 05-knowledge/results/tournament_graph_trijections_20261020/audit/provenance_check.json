@@ -1,0 +1,62 @@
+[
+  {
+    "path": "01-canon/theorems/THM-1430-the-tiling-class-metagraph-dictionary-and-which-tricks-pay.md",
+    "expected": "3a39720c36fc9e98a6717cf176739664827e1ac47633b2f22f7c1c4eb3a135ab",
+    "actual": "3a39720c36fc9e98a6717cf176739664827e1ac47633b2f22f7c1c4eb3a135ab",
+    "match": true
+  },
+  {
+    "path": "01-canon/theorems/THM-1415-switching-is-the-canonical-star-quotient.md",
+    "expected": "17523b0b32bcc6871541b5c112ab58b27fc61a73d31755acf90cb30fd72cc03c",
+    "actual": "17523b0b32bcc6871541b5c112ab58b27fc61a73d31755acf90cb30fd72cc03c",
+    "match": true
+  },
+  {
+    "path": "01-canon/theorems/THM-1467-oriented-spanning-tree-switching-sum.md",
+    "expected": "046198ba77fe06a697f8260575c455ba1d06fe5d19cabeebdbe4d42405ae214f",
+    "actual": "046198ba77fe06a697f8260575c455ba1d06fe5d19cabeebdbe4d42405ae214f",
+    "match": true
+  },
+  {
+    "path": "05-knowledge/results/defect_boundary_20261020/web.md",
+    "expected": "48b9b1ea886de15e4fcc9ab84747c7a0dc101abb69e6f38ef7d3923a4d0fd06d",
+    "actual": "48b9b1ea886de15e4fcc9ab84747c7a0dc101abb69e6f38ef7d3923a4d0fd06d",
+    "match": true
+  },
+  {
+    "path": "05-knowledge/results/tournament_future_boundary_20261020/README.md",
+    "expected": "a01aa678ff7741d3153de9a893084bbd4373396b0dbc932226ed804d3554b685",
+    "actual": "a01aa678ff7741d3153de9a893084bbd4373396b0dbc932226ed804d3554b685",
+    "match": true
+  },
+  {
+    "path": "05-knowledge/results/tournament_even_bijection_20261011c.md",
+    "expected": "7626d4e7e44752109ae8db7fc289c4b31e0db7104b3705cda4ea51837e41de95",
+    "actual": "7626d4e7e44752109ae8db7fc289c4b31e0db7104b3705cda4ea51837e41de95",
+    "match": true
+  },
+  {
+    "path": "05-knowledge/results/tournament_converse_context_20261011d.md",
+    "expected": "f8adbd21c148f8644f527a07cf3f6cb649cdfe103253c207ade2e6012c6c828d",
+    "actual": "f8adbd21c148f8644f527a07cf3f6cb649cdfe103253c207ade2e6012c6c828d",
+    "match": true
+  },
+  {
+    "path": "05-knowledge/results/context_leaves_prime_weights_and_union_20261011d.md",
+    "expected": "e8f7633cd417472244b1864d29cf36ff48a2fa48c80de80e23708c20f8c4f421",
+    "actual": "e8f7633cd417472244b1864d29cf36ff48a2fa48c80de80e23708c20f8c4f421",
+    "match": true
+  },
+  {
+    "path": "05-knowledge/results/regular_return_gram_icosahedra_20261020/gram_return_addendum.md",
+    "expected": "52532f05483cd2b6cf437ea28e6179a2449e3cfa929a2689fbef98be73209046",
+    "actual": "52532f05483cd2b6cf437ea28e6179a2449e3cfa929a2689fbef98be73209046",
+    "match": true
+  },
+  {
+    "path": "05-knowledge/results/regular_return_gram_icosahedra_20261020/regular_return_theorems.md",
+    "expected": "db2bd384ca2ad4251870723f2e8cea7a872c65ec487ac10fb0a35e84bbef001b",
+    "actual": "db2bd384ca2ad4251870723f2e8cea7a872c65ec487ac10fb0a35e84bbef001b",
+    "match": true
+  }
+]

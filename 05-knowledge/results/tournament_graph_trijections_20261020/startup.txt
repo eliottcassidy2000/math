@@ -1,0 +1,101 @@
+MATH RESEARCH STARTUP PACKET (read-only, bounded)
+
+== Git state ==
+branch: main
+HEAD:   f3e658d7cc10
+target (cached refs): origin/main
+relative to target: behind 0, ahead 0
+working tree: clean
+
+== Recent commits (8) ==
+f3e658d7cc1 (HEAD -> main, origin/main, origin/HEAD, codex/session-session17-publication-startup) graph-pythagorean-20261018: integrate incoming port-obstruction work
+8a97a7e82eb graph-pythagorean-20261018: prove endpoint-two three-black detours
+ed0719d0ca3 [zero-heavy-ports]: checkpoint exact growth tensors and boundary encodings
+fea2b0e346c research: synthesize path spectra regular geometry and torus obstructions
+63fa5b5c0f4 research: identify regular return Gram geometry and quotient stationary mass
+cb3e06b22e3 research: prove uniform binary-product Hamilton word density bounds
+422c69c14bf research: derive feedback-word Hamilton spectra and restricted density bounds
+8f8e159d4ba research: connect torus voltages and finite-boundary geometric obstructions
+Freshness is cached-only: run `git fetch origin` before strict reliance.
+
+== Canonical startup route ==
+always read:
+  [OK] 00-navigation/START-HERE.md
+  [OK] 00-navigation/CURRENT-FRONTIER.md
+  [OK] 01-canon/ACTIVE-GUARDRAILS.md
+mathematical workflow:
+  [OK] 00-navigation/RESEARCH-PROTOCOL.md
+  [OK] 00-navigation/META-PATTERNS.md
+on demand:
+  [OK] 05-knowledge/reference/CORE-PAPERS.md
+  [OK] 00-navigation/PROBLEM-LEDGER.md
+Historical logs/reflections are searched for provenance, not read as truth.
+
+== Session posture ==
+Anchor: tournament graph observer switching Hamilton Gram icosahedron
+Inheritance: name the closest proved mechanism, hostile example,
+corrected near miss, and least-used relevant sidecar before deriving.
+Choose one underexplored Niche and one freely generated Wildcard.
+Keep a 3–7 concept board; compare each new result against every item.
+Explain the mechanism or failure anatomy, not only the verdict.
+Type connections as map / preserved predicate / loss / sidecar / test.
+Select a relevant META-PATTERNS card; at closeout record cards used
+and evidence for any candidate card or counterindication.
+Treat RESERVED and CLAIMED files as unproved; never use them as proved dependencies.
+
+== Front-of-ledger correction headings ==
+- MISTAKE-597 (2026-10-13, opus-2026-10-13-S25 five-manuscripts note, THM-4627, THM-4628, HYP-9258; found by the session's independent adversarial audit after checkpoint 6dde94b60c was pushed) -- an inverted substitution misidentifying an elliptic curve, nonexistent fixed primes of order twenty, a run index reported as a location, and four overclaims
+- MISTAKE-593 (2026-10-12, opus-2026-10-12-S24 six-colour core and band-budget notes, THM-4614, HYP-9247, HYP-9248; found by the session's independent adversarial audit after checkpoint d75e3ac2a was pushed) -- a source charge read from a truncated trace, a ledger count recorded before the last rule, "PROVED under the random model" for a large-deviation heuristic, a residue-colouring no-go scoped to all primes from one, and a port quantifier
+- MISTAKE-592 (2026-10-12, opus-2026-10-12-S23 chess proof-system note, THM-4612 and THM-4613; found by the session's independent adversarial audit A after checkpoints fc6ead521, 95493b988 and cec488f34 were pushed) -- a retrograde solver that could not lose by boundary moves alone, an unsupported numeric range, a stale output file, and five wording overclaims
+- MISTAKE-591 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit H after checkpoints cd2dead5a5 and 6c272b0bc1 were pushed) -- float evidence typed as exact, "need" where only "were" was shown, a verification claimed for all maps that covered half, a lost log quoted as evidence, a one-form experiment stated as a theorem, an overgeneralized existence claim, "semi-decidable" misused, and a false reason in a proof (fixed before the audit finished)
+- MISTAKE-590 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit G after checkpoint 97b640656d was pushed) -- a per-offset "iff" claimed where only a limit was proved, a missing positivity hypothesis, a missed second kind of congruence obstruction, a wrong parameter restriction on a sketch route, an over-general impossibility claim, an uncredited criterion, a census miscount, an "equality" that was a strict failure, and a constant attached to the wrong form
+- MISTAKE-589 (2026-10-08, mac-mini-2026-10-08-reframes; found by independent audits E (THM-4606) and F (HYP-9244 and the results note) after checkpoint 8de8989efb was pushed) -- a conjecture stated without an accessibility clause, a false "sheet-blind" reading, a diagnostic that could not show what was claimed, a single-event estimate, an "exact" label on a pruned search, a density bound stated for all offsets, a proof sentence wrong for non-integer starts, heuristics stated as identities, and a per-depth tail read from correlated samples
+- MISTAKE-588 (2026-10-07, opus-2026-10-07-S21 Mersenne-line barriers note, THM-4605 and HYP-9243; found by the session's independent adversarial audit after checkpoint 023a49bcf was pushed) -- an absorbed block assumed to be an interval, a "collapse together" claim no committed code checked, a band "agreement" with the orphan law that was a bookkeeping artifact, a provable consequence typed as heuristic, an uncited published algorithm, and a Mahler analogy at the wrong place; then (second audit) a misstated trivial-cycle case and a missed canon theorem (THM-4593)
+- MISTAKE-587 (2026-10-07, mac-mini-2026-10-07-twoanchor continuation; found by independent audits C (Collatz) and D (reducible locus) after checkpoint a0a33b38cd was pushed) -- an orphan-law exponent claimed from data that cannot fix it, a selection artifact read as a signal, a classification typed PROVED that rests on an open periodicity question, non-realisable transitions listed, a lemma stated without its scope, and a frieze "reading" that was wrong about where friezes live and what minors see
+Topic-matched older corrections:
+- MISTAKE-053: Systemic HYP-number collisions — five `HYP-N` reused in one 30-hour LRC burst
+- MISTAKE-209 (2026-07-21, codex audit of THM-1985/THM-1990) -- a harmonic SUBSET was computed as a term MULTISET, and the claimed linear-growth iff misses the whole Bertrand boundary
+- MISTAKE-023: α₁ Counts DIRECTED Odd Cycles, Not Vertex-Sets
+- MISTAKE-070: Circular Proof Inventoried as PROVED (|Aut| | H "by tiling-count integrality")
+Read ACTIVE-GUARDRAILS first; open the full entry only when relevant.
+
+== Topic packet: tournament graph observer switching Hamilton Gram icosahedron ==
+rank terms: tournament graph observer switching Hamilton Gram icosahedron, tournament, graph, observer, switching, Hamilton, Gram, icosahedron
+Current-route matches (ranked):
+  01-canon/ACTIVE-GUARDRAILS.md:127: 40. **`H>=disc` remains open; rooted response needs its root.** THM-1950 reduces to strong tournaments; THM-3729 is covariant under `(K,u)->(DKD,Du)`, but switching means do not control fixed `u=1`, and unsigned square energy fails at order five. Johnson support-floor centrality holds through order ten (THM-4137) but is ...
+  05-knowledge/reference/CORE-PAPERS.md:421: power-sum positivity for tournaments, recovers Rédei/Berge Hamiltonian-path
+  05-knowledge/reference/CORE-PAPERS.md:429: Hamiltonian-path count classifies tournaments, or any LRC/Paley equivalence.
+  00-navigation/LRC14-PROOF-MAP.md:52: Independently audited THM-2449 says any rational lawful anchored continuation either fires all `72` mixed source-target colours after one rectangle defect or is exactly delta plus six replicas. THM-2456 identifies that failure as a uniform owner-minus-replica root-density offset: it is trivial on one Boolean chart, but...
+  00-navigation/META-PATTERNS.md:89: **Action:** ledger analogy types/directions: nodes/exponents, support/multiplicity, labels/classes, scalar/polynomial, graph/tournament, rank/dimension. Rank needs ambient modules/maps; spectra need normalization/prime scope. State the missing map before conjecturing an iff.
+  00-navigation/PROBLEM-LEDGER.md:22: | Tournaments | [THM-4463--4466](../05-knowledge/results/tournament_continuation_20260908.md): homogeneous-pair forced-contact floors, checksum output sheets, weighted shear/contact laws. [Universal bound](../05-knowledge/results/continuing15_20260909_universal_cubic_bound.md): all supports, exact equality. Join and str...
+  00-navigation/CURRENT-FRONTIER.md:228: THM-2501 identifies signed-`C4`/Gram energy as symmetric switching's first nonconstant even moment; skew quadratic forms vanish.
+Detailed files (truth precedence first; specificity within group):
+  Established canon:
+    [PROVED] 01-canon/theorems/THM-3315-tournament-cut-switching-centered-coronal-walk-compiler.md
+    [PROVED] 01-canon/theorems/THM-3322-tournament-switching-second-moment-deletion-gram-and-order-join-law.md
+    [PROVED] 01-canon/theorems/THM-848-hamiltonian-path-walsh-needle-stalk.md
+    ... 1436 more; refine the query
+  Unproved candidates (not results):
+    [CLAIMED] 01-canon/theorems/THM-454-blowup-product-and-lift-laws.md
+  Hypotheses:
+    [PROVED] 05-knowledge/hypotheses/HYP-6825-tournament-metagraph-address-tiling-fibers.md
+    [UNLABELLED] 05-knowledge/hypotheses/HYP-3100-tournament-contradiction-grammar.md
+    [OPEN] 05-knowledge/hypotheses/HYP-2021-lrc-restricted-tournament-functor-stack.md
+    ... 850 more; refine the query
+  Historical reflections:
+    [HISTORY] 07-reflections/tournament-switching-coronal-second-moment-deletion-gram-and-join-law-codex-20260803.md
+    [HISTORY] 07-reflections/tournament-switching-centered-coronal-walk-compiler-codex-20260803.md
+    [HISTORY] 07-reflections/the-observer-on-the-tournament-side-the-marked-vertex-inserts-itself-redei-equals-lrc-plus-one-baseline-opus-20260630.md
+    ... 1474 more; refine the query
+Niche/artifact hits (evidence or inspiration; not truth authority):
+  05-knowledge/results/INDEX.md
+  05-knowledge/results/collatz_procgen_20260922_synthesis.md
+  05-knowledge/results/tournament_subset_deck_hierarchy_scout_codex_20260821.out
+  05-knowledge/results/tournament_switching_centered_coronal_walk_compiler_20260803.out
+  05-knowledge/results/tournament_switching_coronal_second_moment_join_compiler_20260803.out
+  05-knowledge/results/lrc14_glaisher_witt_even_graph_bridge_codex_s37.out
+  ... 3861 more; refine the query
+
+== Coordination ==
+No .machine-id: use a temporary session name; do not invent registration.
+Legacy IDs collide: cite every theorem as ID + slug/path.
