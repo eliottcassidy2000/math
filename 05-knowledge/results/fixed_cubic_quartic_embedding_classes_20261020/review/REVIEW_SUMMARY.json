@@ -1,0 +1,45 @@
+{
+  "all_mathematical_dependencies_present_and_hash_matched": true,
+  "date": "2026-10-20",
+  "dependency_hashes_and_canonical_layout": "dependency_verification.json",
+  "external_writes_by_reviewer": false,
+  "independent_checks": 70,
+  "normal_optimized_parity": true,
+  "producer_appendix_checks": 15,
+  "producer_main_checks": 79,
+  "producer_manifest_verified": true,
+  "producer_replays_match_frozen_receipts": true,
+  "producer_status_at_review": "PROVED; independently reviewed PASS",
+  "promotion_reconciliation": {
+    "README_changes_reviewed": true,
+    "all_checkers_receipts_and_source_files_unchanged": true,
+    "both_proof_files_hash_match_after_removing_status_and_pointer_edits": {
+      "EXACT_EMBEDDING_COUNT_APPENDIX.md": true,
+      "FINITE_EMBEDDING_CLASSES_AND_FIXED_CYLINDERS.md": true
+    },
+    "changed_files": [
+      "EXACT_EMBEDDING_COUNT_APPENDIX.md",
+      "FINITE_EMBEDDING_CLASSES_AND_FIXED_CYLINDERS.md",
+      "README.md"
+    ],
+    "producer_manifest_verified_after_promotion": true,
+    "status": "PASS"
+  },
+  "reviewed_producer_hashes": {
+    "EXACT_EMBEDDING_COUNT_APPENDIX.md": "3906b8d7be9d22539c75a3e02010a70d91c0bf0097608da23c584005813ba4aa",
+    "FINITE_EMBEDDING_CLASSES_AND_FIXED_CYLINDERS.md": "470224608077d90b3d843936d028e1d29480b572a7a25e8a9bc7f1054ec2fd25",
+    "PRIMARY_SOURCES.md": "5570e7ee522c4e111e5397fa69fd3445eee45b62f5d1a37efd43b399976354e0",
+    "README.md": "61057cb2a96f313df7a99f89bf821acc83ccfa3a86bda23f4f560361d674c5ec",
+    "SOURCE_HASHES.json": "5e2c205491cf0de83698fd8160c02a7a5e3429465eb2b79d05d1144f4e4bb100",
+    "exact-count-results-optimized.json": "95b087e5a777ffec4c6cf1a1849fcaf028c12704378f834e7b188f1db5b983bb",
+    "exact-count-results.json": "95b087e5a777ffec4c6cf1a1849fcaf028c12704378f834e7b188f1db5b983bb",
+    "results-optimized.json": "6d16639e7b0ec312918df1da87786677e9eeede17d54c5d8f0a9a8eb40b59b81",
+    "results.json": "6d16639e7b0ec312918df1da87786677e9eeede17d54c5d8f0a9a8eb40b59b81",
+    "verify_exact_embedding_count.py": "7505197560e08bd2504c028cacf8e61445b2ce7eb788b82e26c5960858100f45",
+    "verify_finite_embedding_classes.py": "a3bfb035c0fb02a5d779daa9edb4e14a7fa4551cd7972e034c619e96169c4e0e"
+  },
+  "reviewed_scope": "Main fixed <3,4> classification and all-fixed-cylinder obstruction, plus separate exact one-versus-two embedding count appendix. No moving-family or full conductor-six sector closure.",
+  "shared_math_worktree_clean_at_review": true,
+  "source_pdf_excluded_from_publication": true,
+  "status": "PASS"
+}

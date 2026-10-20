@@ -1,0 +1,22 @@
+{
+  "check_count": 15,
+  "checks": {
+    "collision:common_h_value": true,
+    "collision:h_remainder_constant": true,
+    "collision:k_linear_coefficient": true,
+    "collision:resultant_minus27c2": true,
+    "collision:separation_squared": true,
+    "cubic:quadratic_coefficient": true,
+    "cubic:triple_root_zero_constant": true,
+    "intrinsic:affine_lift_determinant": true,
+    "scaling:h": true,
+    "scaling:k": true,
+    "scaling:q": true,
+    "scaling:second_witness": true,
+    "singular:determinant_at_collision": true,
+    "singular:distinct_determinants": true,
+    "singular:forced_determinant": true
+  },
+  "status": "PASS: exact controls for the exact-count appendix",
+  "sympy_version": "1.14.0"
+}

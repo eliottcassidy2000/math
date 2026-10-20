@@ -1,0 +1,260 @@
+{
+  "candidate_box": [
+    {
+      "a": "-2",
+      "b": "-1",
+      "c": "0",
+      "index_degree": "-oo"
+    },
+    {
+      "a": "-2",
+      "b": "-1",
+      "c": "-2",
+      "index_degree": "5"
+    },
+    {
+      "a": "-2",
+      "b": "-1",
+      "c": "5",
+      "index_degree": "5"
+    },
+    {
+      "a": "-2",
+      "b": "-4/3",
+      "c": "0",
+      "index_degree": "-oo"
+    },
+    {
+      "a": "-2",
+      "b": "-4/3",
+      "c": "-2",
+      "index_degree": "3"
+    },
+    {
+      "a": "-2",
+      "b": "-4/3",
+      "c": "5",
+      "index_degree": "3"
+    },
+    {
+      "a": "-2",
+      "b": "4",
+      "c": "0",
+      "index_degree": "-oo"
+    },
+    {
+      "a": "-2",
+      "b": "4",
+      "c": "-2",
+      "index_degree": "5"
+    },
+    {
+      "a": "-2",
+      "b": "4",
+      "c": "5",
+      "index_degree": "5"
+    },
+    {
+      "a": "0",
+      "b": "-1",
+      "c": "0",
+      "index_degree": "-oo"
+    },
+    {
+      "a": "0",
+      "b": "-1",
+      "c": "-2",
+      "index_degree": "5"
+    },
+    {
+      "a": "0",
+      "b": "-1",
+      "c": "5",
+      "index_degree": "5"
+    },
+    {
+      "a": "0",
+      "b": "0",
+      "c": "0",
+      "index_degree": "-oo"
+    },
+    {
+      "a": "0",
+      "b": "0",
+      "c": "-2",
+      "index_degree": "3"
+    },
+    {
+      "a": "0",
+      "b": "0",
+      "c": "5",
+      "index_degree": "3"
+    },
+    {
+      "a": "0",
+      "b": "4",
+      "c": "0",
+      "index_degree": "-oo"
+    },
+    {
+      "a": "0",
+      "b": "4",
+      "c": "-2",
+      "index_degree": "5"
+    },
+    {
+      "a": "0",
+      "b": "4",
+      "c": "5",
+      "index_degree": "5"
+    },
+    {
+      "a": "3",
+      "b": "-1",
+      "c": "0",
+      "index_degree": "-oo"
+    },
+    {
+      "a": "3",
+      "b": "-1",
+      "c": "-2",
+      "index_degree": "5"
+    },
+    {
+      "a": "3",
+      "b": "-1",
+      "c": "5",
+      "index_degree": "5"
+    },
+    {
+      "a": "3",
+      "b": "2",
+      "c": "0",
+      "index_degree": "-oo"
+    },
+    {
+      "a": "3",
+      "b": "2",
+      "c": "-2",
+      "index_degree": "3"
+    },
+    {
+      "a": "3",
+      "b": "2",
+      "c": "5",
+      "index_degree": "3"
+    },
+    {
+      "a": "3",
+      "b": "4",
+      "c": "0",
+      "index_degree": "-oo"
+    },
+    {
+      "a": "3",
+      "b": "4",
+      "c": "-2",
+      "index_degree": "5"
+    },
+    {
+      "a": "3",
+      "b": "4",
+      "c": "5",
+      "index_degree": "5"
+    }
+  ],
+  "candidate_module_index_ratio": "-c**2*(8*a**3 - 28*a**2*b + 32*a*b**2 + 8*a*u - 12*b**3 - 12*b*u - c**2)**2/64",
+  "characteristic_patterns": [
+    [
+      4,
+      3
+    ],
+    [
+      6,
+      4,
+      3
+    ]
+  ],
+  "check_count": 70,
+  "checks": {
+    "beta_zero_index:degree_at_most_six": true,
+    "beta_zero_index:top_coefficient": true,
+    "candidate_box:0": true,
+    "candidate_box:1": true,
+    "candidate_box:10": true,
+    "candidate_box:11": true,
+    "candidate_box:12": true,
+    "candidate_box:13": true,
+    "candidate_box:14": true,
+    "candidate_box:15": true,
+    "candidate_box:16": true,
+    "candidate_box:17": true,
+    "candidate_box:18": true,
+    "candidate_box:19": true,
+    "candidate_box:2": true,
+    "candidate_box:20": true,
+    "candidate_box:21": true,
+    "candidate_box:22": true,
+    "candidate_box:23": true,
+    "candidate_box:24": true,
+    "candidate_box:25": true,
+    "candidate_box:26": true,
+    "candidate_box:3": true,
+    "candidate_box:4": true,
+    "candidate_box:5": true,
+    "candidate_box:6": true,
+    "candidate_box:7": true,
+    "candidate_box:8": true,
+    "candidate_box:9": true,
+    "candidate_generation:c_zero_even": true,
+    "candidate_generation:universal_identity": true,
+    "candidate_index:b_two_a_thirds": true,
+    "candidate_index:c_zero_nonprimitive": true,
+    "candidate_index:degree_five_lead": true,
+    "candidate_index:exact_factorization": true,
+    "candidate_residue_basis:degree_at_most_seven": true,
+    "candidate_residue_basis:degree_seven_coefficient": true,
+    "characteristic_sequences:exact_two": true,
+    "cylinder:composite_automorphism_period": true,
+    "cylinder:derivative_period_zero": true,
+    "cylinder:entire_inverse_h": true,
+    "cylinder:entire_inverse_k": true,
+    "cylinder:generic_only_bad_fiber": true,
+    "cylinder:generic_only_period": true,
+    "exact_count:forced_determinant_difference": true,
+    "exact_count:h_common_mod_cubic": true,
+    "exact_count:h_common_value": true,
+    "exact_count:k_collision_cubic": true,
+    "exact_count:second_rescaling_q": true,
+    "exact_count:separation_resultant": true,
+    "exact_count:standard_rescaling_h": true,
+    "exact_count:standard_rescaling_k": true,
+    "exact_count:triple_root_a_zero": true,
+    "exact_count:triple_root_c_zero": true,
+    "exact_count:triple_root_coefficients": true,
+    "ramification:both_y_derivatives_zero": true,
+    "ramification:cusp_rational_inverse": true,
+    "ramification:jacobian_zero": true,
+    "semigroup:gaps": true,
+    "sharp:conormal_determinant_four": true,
+    "sharp:implicit_equation": true,
+    "sharp:period_one": true,
+    "sharp:period_two": true,
+    "sharp:ratio_mismatch": true,
+    "sharp:reconstruction": true,
+    "sharp:singular_gradient": true,
+    "standard_index:degree_three": true,
+    "standard_index:unit_leading_coefficient": true,
+    "universal_index:degree_at_most_seven": true,
+    "universal_index:top_coefficient": true
+  },
+  "generic_module_determinant_sha256": "4bd72ac7002dc470dc773bf9c16ce04c73a7ef575ba28adbc51fae8909d1d9a8",
+  "generic_module_determinant_terms": 2959,
+  "period_remainders": {
+    "composite_entire": "-2*x**2/3 + 9*y/28 - 2/3",
+    "generic_only": "9*x*y/28",
+    "second": "-9*y/5",
+    "standard": "9*y/28"
+  },
+  "status": "PASS: independent exact controls; not a substitute for the all-embedding source theorem"
+}

@@ -1,0 +1,177 @@
+{
+  "basis_gap_sets": {
+    "delta5": [
+      1,
+      2,
+      3,
+      5,
+      9
+    ],
+    "delta6": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      11
+    ],
+    "delta7": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      9,
+      13
+    ]
+  },
+  "check_count": 79,
+  "checks": {
+    "basis:[0, 6, 11, 17]:distinct_residues": true,
+    "basis:[0, 6, 7, 13]:distinct_residues": true,
+    "basis:[0, 6, 9, 15]:distinct_residues": true,
+    "basis:delta6": true,
+    "basis:delta6_formula": true,
+    "basis:delta7": true,
+    "basis:delta7_formula": true,
+    "basis:fourth_column": true,
+    "basis:gaps6": true,
+    "basis:gaps7": true,
+    "basis:third_column": true,
+    "basis:unimodular_change": true,
+    "candidate:degree10_zero": true,
+    "candidate:degree11_zero": true,
+    "candidate:degree12_zero": true,
+    "candidate:degree7": true,
+    "candidate:degree8_zero": true,
+    "candidate:degree9_zero": true,
+    "candidate:delta5": true,
+    "candidate:gaps5": true,
+    "candidate:need_not_generate": true,
+    "candidate:universal_recovery_identity": true,
+    "example:0:delta_from_conductor": true,
+    "example:0:divided_difference_conductor": true,
+    "example:0:polynomial_conductor": true,
+    "example:0:primitive_characteristic": true,
+    "example:1:delta_from_conductor": true,
+    "example:1:divided_difference_conductor": true,
+    "example:1:polynomial_conductor": true,
+    "example:1:primitive_characteristic": true,
+    "example:2:delta_from_conductor": true,
+    "example:2:divided_difference_conductor": true,
+    "example:2:polynomial_conductor": true,
+    "example:2:primitive_characteristic": true,
+    "example:3:delta_from_conductor": true,
+    "example:3:divided_difference_conductor": true,
+    "example:3:polynomial_conductor": true,
+    "example:3:primitive_characteristic": true,
+    "example:4:delta_from_conductor": true,
+    "example:4:divided_difference_conductor": true,
+    "example:4:polynomial_conductor": true,
+    "example:4:primitive_characteristic": true,
+    "example:5:delta_from_conductor": true,
+    "example:5:divided_difference_conductor": true,
+    "example:5:polynomial_conductor": true,
+    "example:5:primitive_characteristic": true,
+    "example:6:delta_from_conductor": true,
+    "example:6:divided_difference_conductor": true,
+    "example:6:polynomial_conductor": true,
+    "example:6:primitive_characteristic": true,
+    "general:corrected_degree10_zero": true,
+    "general:corrected_degree11_zero": true,
+    "general:corrected_degree12_zero": true,
+    "general:corrected_degree9": true,
+    "general:degree11_is_minus3beta": true,
+    "general:degree12_cancels": true,
+    "general:pq_no_degree9": true,
+    "period:0:linear_endpoint": true,
+    "period:0:x_independent_difference": true,
+    "period:1:linear_endpoint": true,
+    "period:1:x_independent_difference": true,
+    "period:2:linear_endpoint": true,
+    "period:2:x_independent_difference": true,
+    "period:3:linear_endpoint": true,
+    "period:3:x_independent_difference": true,
+    "period:4:linear_endpoint": true,
+    "period:4:x_independent_difference": true,
+    "period:5:linear_endpoint": true,
+    "period:5:x_independent_difference": true,
+    "period:6:linear_endpoint": true,
+    "period:6:x_independent_difference": true,
+    "period:7:linear_endpoint": true,
+    "period:7:x_independent_difference": true,
+    "ramification:cusp_jacobian_zero": true,
+    "ramification:cusp_py_zero": true,
+    "ramification:cusp_qy_zero": true,
+    "semigroup:reduced_patterns": true,
+    "sharp:generates": true,
+    "sharp:previous_second_embedding": true
+  },
+  "examples": [
+    {
+      "conductor": "-(y + 1)**2*(y**2 + 1)*(y**2 - y + 1)**2*(3*y**6 + 6*y**5 + 4*y**4 + 2*y**2 + 1)",
+      "delta": 7,
+      "p": "y**4 + y**3 + y",
+      "q": "y**6"
+    },
+    {
+      "conductor": "-(y**6 + 3*y**4 + 6*y**3 + 3*y**2 + 9*y + 10)*(6*y**8 + 24*y**7 + 59*y**6 + 108*y**5 + 187*y**4 + 173*y**3 + 203*y**2 + 116*y + 47)",
+      "delta": 7,
+      "p": "y**4 + 2*y**3 + 2*y**2 + 5*y",
+      "q": "y**3 + y + (y**3 + y)**2"
+    },
+    {
+      "conductor": "-(y + 1)**2*(3*y**6 + 1)*(y**2 - y + 1)**2",
+      "delta": 6,
+      "p": "y**4 + y",
+      "q": "y**6"
+    },
+    {
+      "conductor": "-y*(y + 1)*(5*y**4 - 5*y**3 + 14*y**2 - 4*y + 7)*(y**6 + 3*y**4 + 6*y**3 + 3*y**2 + 9*y + 10)",
+      "delta": 6,
+      "p": "y**4 + 2*y**2 + 3*y",
+      "q": "2*y**3 + 2*y + (y**3 + y)**2"
+    },
+    {
+      "conductor": "(y + 1)**2*(y**2 - y + 1)**2/8",
+      "delta": 3,
+      "p": "y**4 + y",
+      "q": "y**6 + 3*y**3/2"
+    },
+    {
+      "conductor": "(y**3 + 2)**2",
+      "delta": 3,
+      "p": "y**4 + 2*y",
+      "q": "y**6 + 3*y**3"
+    },
+    {
+      "conductor": "3*(16*y**4 + 32*y**2 + 48*y + 25)*(y**6 + 3*y**4 + 6*y**3 + 3*y**2 + 9*y + 10)/8",
+      "delta": 5,
+      "p": "y**4 + 2*y**2 + 3*y",
+      "q": "9*y**3/2 + 9*y/2 + (y**3 + y)**2"
+    }
+  ],
+  "fixed_triple_period_remainders": [
+    "9*y/28",
+    "9*y/28",
+    "9*y/28",
+    "-2*x/3 + 9*y/28",
+    "-9*y/5",
+    "-4*x - 9*y/5",
+    "-28*x/3 - 9*y/5",
+    "-9*y/5"
+  ],
+  "reduced_patterns": [
+    [
+      4,
+      3
+    ],
+    [
+      6,
+      4,
+      3
+    ]
+  ],
+  "status": "PASS: exact controls, not proof of the cited semigroup theorem",
+  "sympy_version": "1.14.0"
+}

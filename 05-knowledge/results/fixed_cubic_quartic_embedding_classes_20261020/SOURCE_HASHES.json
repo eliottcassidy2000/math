@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-20",
+  "scope": "Fixed <3,4> plane embedding classes and fixed-cylinder consequences only. Source PDF is a reading aid excluded from publication.",
+  "dependencies": [
+    {
+      "staging_source": "session13-cubic-quartic/CUBIC_QUARTIC_GLOBALIZATION_AND_EMBEDDING_BOUNDARIES.md",
+      "repository_path": "05-knowledge/results/cubic_quartic_globalization_embedding_boundaries_20261020/CUBIC_QUARTIC_GLOBALIZATION_AND_EMBEDDING_BOUNDARIES.md",
+      "sha256": "9dd1e5111c3ac911d5decd463159b725f12dbd68a61020391ca31ff9eea2d1f4"
+    },
+    {
+      "staging_source": "session13-cubic-quartic/review/AUDIT.md",
+      "repository_path": "05-knowledge/results/cubic_quartic_globalization_embedding_boundaries_20261020/review/AUDIT.md",
+      "sha256": "d2a2dc095a3c75f24fc1e730be38a4de52240690994a4e407f4fbaa14e0fecdb"
+    },
+    {
+      "staging_source": "session13-cylinder-continuation/FIXED_CYLINDER_FINITE_PERIOD_LEMMA.md",
+      "repository_path": "05-knowledge/results/cylinder_generator_period_obstructions_20261020/FIXED_CYLINDER_FINITE_PERIOD_LEMMA.md",
+      "sha256": "e916e9a0bff921e605af346b82e7d2948beb846221b0df4553052175b901c7c5"
+    },
+    {
+      "staging_source": "session13-cubic-quartic/sources/sathaye_stenerson.pdf",
+      "repository_path": null,
+      "sha256": "29082e519b7379b7c70a1f424b7f47e8a57c396b4301263595c45fb3d10d664c"
+    }
+  ]
+}
