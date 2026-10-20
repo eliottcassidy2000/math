@@ -1,0 +1,87 @@
+{
+  "C15_boundary": {
+    "C5_generated_group_order": 25,
+    "C5_is_nonpronormal": true,
+    "even_graph_counts_n8_n9_n10": [
+      2,
+      8,
+      31
+    ],
+    "graph_quotient_presentations_checked": 74,
+    "part_swap_edge_reversals": 25,
+    "tournament_counts_from_prime_module_proof": [
+      2,
+      8,
+      32
+    ]
+  },
+  "C7_quotient": {
+    "all_q_unit_entries_localized": 300,
+    "determinant_abs_exponent": 88,
+    "diagonal_F21_nonpronormal": true,
+    "dimension": 9,
+    "extension_counts_each": [
+      24,
+      12,
+      4,
+      2,
+      2
+    ],
+    "joint_histogram": {
+      "(False, False, False)": 10,
+      "(False, True, False)": 2,
+      "(True, False, False)": 10,
+      "(True, True, True)": 2
+    },
+    "relative_types_each": 24
+  },
+  "n6": [
+    {
+      "action": "single C3",
+      "fixed_objects": 128,
+      "global_types": 11,
+      "globally_odd_relative_graph_edge_counts": [
+        9
+      ],
+      "relative_types": 12,
+      "tournament_fusion_multiplicities": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "action": "diagonal C3",
+      "fixed_objects": 32,
+      "global_types": 3,
+      "globally_odd_relative_graph_edge_counts": [
+        6
+      ],
+      "relative_types": 4,
+      "tournament_fusion_multiplicities": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "action": "C3 x C3",
+      "fixed_objects": 8,
+      "global_types": 1,
+      "globally_odd_relative_graph_edge_counts": [],
+      "relative_types": 1,
+      "tournament_fusion_multiplicities": [
+        1
+      ]
+    }
+  ],
+  "status": "PASS"
+}

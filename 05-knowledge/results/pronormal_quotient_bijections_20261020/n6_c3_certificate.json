@@ -1,0 +1,249 @@
+{
+  "status": "PASS",
+  "universe": "all invariant labelled objects; full S6 equivalence and automorphism signs",
+  "cases": [
+    {
+      "action": "single_3_cycle",
+      "order": 3,
+      "normalizer_order": 36,
+      "invariant_tournaments": 128,
+      "invariant_graphs": 128,
+      "tournament_types": 11,
+      "even_graph_types": 11,
+      "normalizer_tournament_orbits": 12,
+      "normalizer_even_graph_orbits": 12,
+      "globally_odd_relative_even_masks": [
+        4060
+      ],
+      "tournaments": [
+        {
+          "mask": 2,
+          "aut_order": 3,
+          "aut_vertex_orbits": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "normalizer_multiplicity": 1
+        },
+        {
+          "mask": 5,
+          "aut_order": 3,
+          "aut_vertex_orbits": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "normalizer_multiplicity": 1
+        },
+        {
+          "mask": 11,
+          "aut_order": 3,
+          "aut_vertex_orbits": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "normalizer_multiplicity": 1
+        },
+        {
+          "mask": 23,
+          "aut_order": 3,
+          "aut_vertex_orbits": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "normalizer_multiplicity": 1
+        },
+        {
+          "mask": 72,
+          "aut_order": 3,
+          "aut_vertex_orbits": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "normalizer_multiplicity": 1
+        },
+        {
+          "mask": 80,
+          "aut_order": 3,
+          "aut_vertex_orbits": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "normalizer_multiplicity": 1
+        },
+        {
+          "mask": 87,
+          "aut_order": 9,
+          "aut_vertex_orbits": [
+            3,
+            3
+          ],
+          "normalizer_multiplicity": 2
+        },
+        {
+          "mask": 88,
+          "aut_order": 3,
+          "aut_vertex_orbits": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "normalizer_multiplicity": 1
+        },
+        {
+          "mask": 176,
+          "aut_order": 3,
+          "aut_vertex_orbits": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "normalizer_multiplicity": 1
+        },
+        {
+          "mask": 178,
+          "aut_order": 3,
+          "aut_vertex_orbits": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "normalizer_multiplicity": 1
+        },
+        {
+          "mask": 377,
+          "aut_order": 3,
+          "aut_vertex_orbits": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "normalizer_multiplicity": 1
+        }
+      ],
+      "even_graph_masks": [
+        0,
+        3,
+        7,
+        15,
+        31,
+        61,
+        238,
+        254,
+        255,
+        510,
+        4063
+      ],
+      "even_graph_normalizer_multiplicity": {
+        "0": 1,
+        "3": 1,
+        "7": 1,
+        "15": 1,
+        "31": 1,
+        "61": 1,
+        "238": 1,
+        "254": 1,
+        "255": 1,
+        "510": 1,
+        "4063": 1
+      }
+    },
+    {
+      "action": "double_3_cycle",
+      "order": 3,
+      "normalizer_order": 36,
+      "invariant_tournaments": 32,
+      "invariant_graphs": 32,
+      "tournament_types": 3,
+      "even_graph_types": 3,
+      "normalizer_tournament_orbits": 4,
+      "normalizer_even_graph_orbits": 4,
+      "globally_odd_relative_even_masks": [
+        28707
+      ],
+      "tournaments": [
+        {
+          "mask": 87,
+          "aut_order": 9,
+          "aut_vertex_orbits": [
+            3,
+            3
+          ],
+          "normalizer_multiplicity": 2
+        },
+        {
+          "mask": 408,
+          "aut_order": 3,
+          "aut_vertex_orbits": [
+            3,
+            3
+          ],
+          "normalizer_multiplicity": 1
+        },
+        {
+          "mask": 1332,
+          "aut_order": 3,
+          "aut_vertex_orbits": [
+            3,
+            3
+          ],
+          "normalizer_multiplicity": 1
+        }
+      ],
+      "even_graph_masks": [
+        0,
+        1880,
+        15870
+      ],
+      "even_graph_normalizer_multiplicity": {
+        "0": 1,
+        "1880": 1,
+        "15870": 1
+      }
+    },
+    {
+      "action": "independent_3_cycles",
+      "order": 9,
+      "normalizer_order": 72,
+      "invariant_tournaments": 8,
+      "invariant_graphs": 8,
+      "tournament_types": 1,
+      "even_graph_types": 1,
+      "normalizer_tournament_orbits": 1,
+      "normalizer_even_graph_orbits": 1,
+      "globally_odd_relative_even_masks": [],
+      "tournaments": [
+        {
+          "mask": 87,
+          "aut_order": 9,
+          "aut_vertex_orbits": [
+            3,
+            3
+          ],
+          "normalizer_multiplicity": 1
+        }
+      ],
+      "even_graph_masks": [
+        0
+      ],
+      "even_graph_normalizer_multiplicity": {
+        "0": 1
+      }
+    }
+  ]
+}
