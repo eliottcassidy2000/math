@@ -1,0 +1,2880 @@
+{
+  "status": "PASS",
+  "checks": 232544,
+  "rings": 176,
+  "cases": [
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        1
+      ],
+      "predicted": 0,
+      "observed": 0,
+      "witness": null,
+      "ring_size": 3
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        2
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        2
+      ],
+      "ring_size": 9
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        3
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2
+      ],
+      "ring_size": 27
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 9
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        2,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 27
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        2,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 81
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        3,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2,
+        0
+      ],
+      "ring_size": 81
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        3,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 243
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        3,
+        3
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 729
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 27
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        2,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 81
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        2,
+        2,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 243
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        2,
+        2,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        0,
+        1
+      ],
+      "ring_size": 729
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        3,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2,
+        0,
+        0
+      ],
+      "ring_size": 243
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        3,
+        2,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 729
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        3,
+        2,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        0,
+        1
+      ],
+      "ring_size": 2187
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        3,
+        3,
+        1
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 2187
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 81
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 243
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 729
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 2187
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 729
+    },
+    {
+      "p": 3,
+      "e": 3,
+      "torsion_exponents": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 2187
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        1
+      ],
+      "predicted": 0,
+      "observed": 0,
+      "witness": null,
+      "ring_size": 3
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        2
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        2
+      ],
+      "ring_size": 9
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        3
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        2
+      ],
+      "ring_size": 27
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 9
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        2,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 27
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        2,
+        2
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 81
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        3,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 81
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        3,
+        2
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 243
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        3,
+        3
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 729
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 27
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        2,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 81
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        2,
+        2,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 243
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        2,
+        2,
+        2
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 729
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        3,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 243
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        3,
+        2,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 729
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        3,
+        2,
+        2
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 2187
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        3,
+        3,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 2187
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ring_size": 81
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ring_size": 243
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ring_size": 729
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ring_size": 2187
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ring_size": 729
+    },
+    {
+      "p": 3,
+      "e": 9,
+      "torsion_exponents": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ring_size": 2187
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        1
+      ],
+      "predicted": 0,
+      "observed": 0,
+      "witness": null,
+      "ring_size": 3
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        2
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        2
+      ],
+      "ring_size": 9
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        3
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2
+      ],
+      "ring_size": 27
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 9
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        2,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 27
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        2,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 81
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        3,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2,
+        0
+      ],
+      "ring_size": 81
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        3,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 243
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        3,
+        3
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 729
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 27
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        2,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 81
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        2,
+        2,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 243
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        2,
+        2,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        0,
+        1
+      ],
+      "ring_size": 729
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        3,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2,
+        0,
+        0
+      ],
+      "ring_size": 243
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        3,
+        2,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 729
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        3,
+        2,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        0,
+        1
+      ],
+      "ring_size": 2187
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        3,
+        3,
+        1
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 2187
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 81
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 243
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 729
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "ring_size": 2187
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 729
+    },
+    {
+      "p": 3,
+      "e": 21,
+      "torsion_exponents": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 2187
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        1
+      ],
+      "predicted": 0,
+      "observed": 0,
+      "witness": null,
+      "ring_size": 5
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        2
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        2
+      ],
+      "ring_size": 25
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        3
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2
+      ],
+      "ring_size": 125
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 25
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        2,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 125
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        2,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 625
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        3,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2,
+        0
+      ],
+      "ring_size": 625
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        3,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 3125
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        3,
+        3
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 15625
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 125
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        2,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 625
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        2,
+        2,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 3125
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        2,
+        2,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        0,
+        1
+      ],
+      "ring_size": 15625
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        3,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2,
+        0,
+        0
+      ],
+      "ring_size": 3125
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        3,
+        2,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 15625
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ring_size": 625
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ring_size": 3125
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 15625
+    },
+    {
+      "p": 5,
+      "e": 5,
+      "torsion_exponents": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "ring_size": 15625
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        1
+      ],
+      "predicted": 0,
+      "observed": 0,
+      "witness": null,
+      "ring_size": 5
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        2
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        2
+      ],
+      "ring_size": 25
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        3
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2
+      ],
+      "ring_size": 125
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 25
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        2,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 125
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        2,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 625
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        3,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2,
+        0
+      ],
+      "ring_size": 625
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        3,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 3125
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        3,
+        3
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 15625
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 125
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        2,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 625
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        2,
+        2,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 3125
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        2,
+        2,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        0,
+        1
+      ],
+      "ring_size": 15625
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        3,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2,
+        0,
+        0
+      ],
+      "ring_size": 3125
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        3,
+        2,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 15625
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ring_size": 625
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ring_size": 3125
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 15625
+    },
+    {
+      "p": 5,
+      "e": 45,
+      "torsion_exponents": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "ring_size": 15625
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        1
+      ],
+      "predicted": 0,
+      "observed": 0,
+      "witness": null,
+      "ring_size": 2
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        2
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        2
+      ],
+      "ring_size": 4
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        3
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2
+      ],
+      "ring_size": 8
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 4
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        2,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 8
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        2,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 16
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        3,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        2,
+        0
+      ],
+      "ring_size": 16
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        3,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 32
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        3,
+        3
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 64
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0
+      ],
+      "ring_size": 8
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        2,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0
+      ],
+      "ring_size": 16
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        2,
+        2,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0
+      ],
+      "ring_size": 32
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        2,
+        2,
+        2
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 64
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        3,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0
+      ],
+      "ring_size": 32
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        3,
+        2,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0
+      ],
+      "ring_size": 64
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        3,
+        2,
+        2
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 128
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        3,
+        3,
+        1
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 128
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 16
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 32
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 64
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 128
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 64
+    },
+    {
+      "p": 2,
+      "e": 2,
+      "torsion_exponents": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 128
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        1
+      ],
+      "predicted": 0,
+      "observed": 0,
+      "witness": null,
+      "ring_size": 2
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        2
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        2
+      ],
+      "ring_size": 4
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        3
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        2
+      ],
+      "ring_size": 8
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 4
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        2,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 8
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        2,
+        2
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 16
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        3,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 16
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        3,
+        2
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 32
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        3,
+        3
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 64
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 8
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        2,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 16
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        2,
+        2,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 32
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        2,
+        2,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 64
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        3,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 32
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        3,
+        2,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        1
+      ],
+      "ring_size": 64
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        3,
+        2,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 128
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        3,
+        3,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 128
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ring_size": 16
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ring_size": 32
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ring_size": 64
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 128
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ring_size": 64
+    },
+    {
+      "p": 2,
+      "e": 4,
+      "torsion_exponents": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "ring_size": 128
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        1
+      ],
+      "predicted": 0,
+      "observed": 0,
+      "witness": null,
+      "ring_size": 2
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        2
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        2
+      ],
+      "ring_size": 4
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        3
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        2
+      ],
+      "ring_size": 8
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        1,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 4
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        2,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 8
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        2,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 16
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        3,
+        1
+      ],
+      "predicted": 1,
+      "observed": 1,
+      "witness": [
+        0,
+        1
+      ],
+      "ring_size": 16
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        3,
+        2
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 32
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        3,
+        3
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1
+      ],
+      "ring_size": 64
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 8
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        2,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 16
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        2,
+        2,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 32
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        2,
+        2,
+        2
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 64
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        3,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 32
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        3,
+        2,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 64
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        3,
+        2,
+        2
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 128
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        3,
+        3,
+        1
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1,
+        0
+      ],
+      "ring_size": 128
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 16
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 32
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 64
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "predicted": 3,
+      "observed": 3,
+      "witness": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 128
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 64
+    },
+    {
+      "p": 2,
+      "e": 6,
+      "torsion_exponents": [
+        3,
+        2,
+        1,
+        1
+      ],
+      "predicted": 2,
+      "observed": 2,
+      "witness": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "ring_size": 128
+    }
+  ],
+  "warning": "p=2 arithmetic-only clock needs separate units and nonunits formula; odd-prime formula is not universally sharp."
+}

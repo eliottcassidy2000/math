@@ -1,0 +1,304 @@
+{
+  "checks": {
+    "all_jet_coefficients_vanish": 1204,
+    "arithmetic_sharpness": 48,
+    "binomial_valuation": 1379,
+    "carmichael_residues": 15282,
+    "carry_cocycle": 3125,
+    "carry_crt_normalization": 944163,
+    "carry_nonadditivity": 1,
+    "classical_teichmuller_identification": 229230,
+    "complete_mixed_jet_ring": 13765,
+    "exact_local_hitting_time": 9309,
+    "extension_field_control": 154,
+    "extension_fixed_count": 3,
+    "extension_identity": 3,
+    "extension_permutation": 3,
+    "first_hasse_jet": 18,
+    "fixed_section": 76410,
+    "formal_freshmans_dream_hostile": 1,
+    "global_complete_idempotence": 314721,
+    "global_complete_retraction": 314721,
+    "global_root_count": 1,
+    "jet_hypotheses": 10,
+    "lower_hasse_jets_zero": 18,
+    "mixed_jet_sharpness": 10,
+    "nilpotent_nonadditivity": 18,
+    "one_plus_t_witness": 10,
+    "pointwise_korselt": 1199,
+    "precision_compatibility": 61128,
+    "prior_jet_coefficient_survives": 1204,
+    "section_vs_hensel_crt": 76410
+  },
+  "finite_field_cases": [
+    {
+      "f": 2,
+      "field_size": 9,
+      "fixed_points": 9,
+      "image_size": 9,
+      "p": 3
+    },
+    {
+      "f": 3,
+      "field_size": 27,
+      "fixed_points": 3,
+      "image_size": 27,
+      "p": 3
+    },
+    {
+      "f": 2,
+      "field_size": 121,
+      "fixed_points": 41,
+      "image_size": 41,
+      "p": 11
+    }
+  ],
+  "first_hasse_jet_examples": [
+    {
+      "coefficient": 1,
+      "first_hasse_order": 3,
+      "n": 561,
+      "p": 3
+    },
+    {
+      "coefficient": 7,
+      "first_hasse_order": 11,
+      "n": 561,
+      "p": 11
+    },
+    {
+      "coefficient": 16,
+      "first_hasse_order": 17,
+      "n": 561,
+      "p": 17
+    },
+    {
+      "coefficient": 1,
+      "first_hasse_order": 5,
+      "n": 1105,
+      "p": 5
+    },
+    {
+      "coefficient": 7,
+      "first_hasse_order": 13,
+      "n": 1105,
+      "p": 13
+    },
+    {
+      "coefficient": 14,
+      "first_hasse_order": 17,
+      "n": 1105,
+      "p": 17
+    },
+    {
+      "coefficient": 2,
+      "first_hasse_order": 7,
+      "n": 1729,
+      "p": 7
+    },
+    {
+      "coefficient": 3,
+      "first_hasse_order": 13,
+      "n": 1729,
+      "p": 13
+    },
+    {
+      "coefficient": 15,
+      "first_hasse_order": 19,
+      "n": 1729,
+      "p": 19
+    },
+    {
+      "coefficient": 3,
+      "first_hasse_order": 5,
+      "n": 2465,
+      "p": 5
+    },
+    {
+      "coefficient": 9,
+      "first_hasse_order": 17,
+      "n": 2465,
+      "p": 17
+    },
+    {
+      "coefficient": 27,
+      "first_hasse_order": 29,
+      "n": 2465,
+      "p": 29
+    },
+    {
+      "coefficient": 4,
+      "first_hasse_order": 7,
+      "n": 2821,
+      "p": 7
+    },
+    {
+      "coefficient": 9,
+      "first_hasse_order": 13,
+      "n": 2821,
+      "p": 13
+    },
+    {
+      "coefficient": 29,
+      "first_hasse_order": 31,
+      "n": 2821,
+      "p": 31
+    },
+    {
+      "coefficient": 5,
+      "first_hasse_order": 7,
+      "n": 6601,
+      "p": 7
+    },
+    {
+      "coefficient": 11,
+      "first_hasse_order": 23,
+      "n": 6601,
+      "p": 23
+    },
+    {
+      "coefficient": 38,
+      "first_hasse_order": 41,
+      "n": 6601,
+      "p": 41
+    }
+  ],
+  "first_noninjective_extension_degree_for_561": {
+    "11": 2,
+    "17": 2,
+    "3": 5
+  },
+  "mixed_jet_cases": [
+    {
+      "arithmetic_precision": 1,
+      "exponent": 561,
+      "jet_length": 5,
+      "p": 3,
+      "ring_size": 243,
+      "worst_iterations": 2
+    },
+    {
+      "arithmetic_precision": 2,
+      "exponent": 561,
+      "jet_length": 4,
+      "p": 3,
+      "ring_size": 6561,
+      "worst_iterations": 3
+    },
+    {
+      "arithmetic_precision": 3,
+      "exponent": 561,
+      "jet_length": 2,
+      "p": 3,
+      "ring_size": 729,
+      "worst_iterations": 3
+    },
+    {
+      "arithmetic_precision": 2,
+      "exponent": 21,
+      "jet_length": 3,
+      "p": 3,
+      "ring_size": 729,
+      "worst_iterations": 2
+    },
+    {
+      "arithmetic_precision": 1,
+      "exponent": 1105,
+      "jet_length": 5,
+      "p": 5,
+      "ring_size": 3125,
+      "worst_iterations": 1
+    },
+    {
+      "arithmetic_precision": 2,
+      "exponent": 45,
+      "jet_length": 2,
+      "p": 5,
+      "ring_size": 625,
+      "worst_iterations": 2
+    },
+    {
+      "arithmetic_precision": 2,
+      "exponent": 6,
+      "jet_length": 4,
+      "p": 2,
+      "ring_size": 256,
+      "worst_iterations": 3
+    },
+    {
+      "arithmetic_precision": 3,
+      "exponent": 6,
+      "jet_length": 3,
+      "p": 2,
+      "ring_size": 512,
+      "worst_iterations": 4
+    },
+    {
+      "arithmetic_precision": 2,
+      "exponent": 9,
+      "jet_length": 3,
+      "p": 3,
+      "ring_size": 729,
+      "worst_iterations": 1
+    },
+    {
+      "arithmetic_precision": 2,
+      "exponent": 4,
+      "jet_length": 4,
+      "p": 2,
+      "ring_size": 256,
+      "worst_iterations": 2
+    }
+  ],
+  "nonzero_composite_carry_pairs": 304088,
+  "status": "PASS",
+  "total_checks": 2063548,
+  "universes": {
+    "carmichaels": [
+      561,
+      1105,
+      1729,
+      2465,
+      2821,
+      6601
+    ],
+    "composite_carry_pairs": 314721,
+    "global_complete_ring": "Z/561^2",
+    "global_inputs": 314721,
+    "local_cases": [
+      [
+        3,
+        561,
+        5
+      ],
+      [
+        11,
+        561,
+        3
+      ],
+      [
+        17,
+        561,
+        3
+      ],
+      [
+        5,
+        1105,
+        4
+      ],
+      [
+        13,
+        1105,
+        3
+      ]
+    ],
+    "pointwise_korselt_exponents": [
+      2,
+      1200
+    ],
+    "section_precisions": [
+      1,
+      5
+    ]
+  }
+}

@@ -1,0 +1,2196 @@
+{
+  "case_count": 142,
+  "cases": [
+    {
+      "H": 0,
+      "a": 1,
+      "basis_size": 1,
+      "clock": 0,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 3,
+      "weights": {
+        "0": 1
+      }
+    },
+    {
+      "H": 0,
+      "a": 1,
+      "basis_size": 1,
+      "clock": 0,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 3,
+      "weights": {
+        "0": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 1,
+      "basis_size": 2,
+      "clock": 1,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 9,
+      "weights": {
+        "0": 1,
+        "1": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 1,
+      "basis_size": 2,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 9,
+      "weights": {
+        "0": 1,
+        "1": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 1,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 27,
+      "weights": {
+        "0": 1,
+        "1": 1,
+        "2": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 1,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 27,
+      "weights": {
+        "0": 1,
+        "1": 1,
+        "2": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 1,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 81,
+      "weights": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 1,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 81,
+      "weights": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 1,
+      "basis_size": 5,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 1,
+      "basis_size": 5,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      }
+    },
+    {
+      "H": 0,
+      "a": 2,
+      "basis_size": 1,
+      "clock": 1,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 9,
+      "weights": {
+        "0": 2
+      }
+    },
+    {
+      "H": 0,
+      "a": 2,
+      "basis_size": 1,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 9,
+      "weights": {
+        "0": 2
+      }
+    },
+    {
+      "H": 1,
+      "a": 2,
+      "basis_size": 2,
+      "clock": 1,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 27,
+      "weights": {
+        "0": 2,
+        "1": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 2,
+      "basis_size": 2,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 27,
+      "weights": {
+        "0": 2,
+        "1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 2,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 81,
+      "weights": {
+        "0": 2,
+        "1": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 2,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 81,
+      "weights": {
+        "0": 2,
+        "1": 2
+      }
+    },
+    {
+      "H": 1,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 81,
+      "weights": {
+        "0": 2,
+        "1": 1,
+        "2": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 81,
+      "weights": {
+        "0": 2,
+        "1": 1,
+        "2": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0": 2,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0": 2,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 1
+      }
+    },
+    {
+      "H": 3,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 3,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2
+      }
+    },
+    {
+      "H": 3,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 5,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0": 2,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 5,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0": 2,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 5,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 5,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 5,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 1,
+        "4": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 5,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 1,
+        "4": 1
+      }
+    },
+    {
+      "H": 0,
+      "a": 3,
+      "basis_size": 1,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 27,
+      "weights": {
+        "0": 3
+      }
+    },
+    {
+      "H": 0,
+      "a": 3,
+      "basis_size": 1,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 27,
+      "weights": {
+        "0": 3
+      }
+    },
+    {
+      "H": 1,
+      "a": 3,
+      "basis_size": 2,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 81,
+      "weights": {
+        "0": 3,
+        "1": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 3,
+      "basis_size": 2,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 81,
+      "weights": {
+        "0": 3,
+        "1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 2,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0": 3,
+        "1": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 2,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0": 3,
+        "1": 2
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 2,
+      "clock": 3,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0": 3,
+        "1": 3
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 2,
+      "clock": 2,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0": 3,
+        "1": 3
+      }
+    },
+    {
+      "H": 1,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0": 3,
+        "1": 1,
+        "2": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0": 3,
+        "1": 1,
+        "2": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0": 3,
+        "1": 2,
+        "2": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0": 3,
+        "1": 2,
+        "2": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0": 3,
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0": 3,
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 3,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0": 3,
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0": 3,
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 3,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0": 3,
+        "1": 3,
+        "2": 2
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0": 3,
+        "1": 3,
+        "2": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0": 3,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0": 3,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0": 3,
+        "1": 2,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0": 3,
+        "1": 2,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0": 3,
+        "1": 2,
+        "2": 2,
+        "3": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0": 3,
+        "1": 2,
+        "2": 2,
+        "3": 1
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 3,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0": 3,
+        "1": 3,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0": 3,
+        "1": 3,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 5,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0": 3,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 5,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0": 3,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 5,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0": 3,
+        "1": 2,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 5,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_univariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0": 3,
+        "1": 2,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      }
+    },
+    {
+      "H": 0,
+      "a": 1,
+      "basis_size": 1,
+      "clock": 0,
+      "exponent": 5,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 5,
+      "weights": {
+        "0": 1
+      }
+    },
+    {
+      "H": 0,
+      "a": 1,
+      "basis_size": 1,
+      "clock": 0,
+      "exponent": 45,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 5,
+      "weights": {
+        "0": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 1,
+      "basis_size": 2,
+      "clock": 1,
+      "exponent": 5,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 25,
+      "weights": {
+        "0": 1,
+        "1": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 1,
+      "basis_size": 2,
+      "clock": 1,
+      "exponent": 45,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 25,
+      "weights": {
+        "0": 1,
+        "1": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 1,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 5,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 125,
+      "weights": {
+        "0": 1,
+        "1": 1,
+        "2": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 1,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 45,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 125,
+      "weights": {
+        "0": 1,
+        "1": 1,
+        "2": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 1,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 5,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 625,
+      "weights": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 1,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 45,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 625,
+      "weights": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 0,
+      "a": 2,
+      "basis_size": 1,
+      "clock": 1,
+      "exponent": 5,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 25,
+      "weights": {
+        "0": 2
+      }
+    },
+    {
+      "H": 0,
+      "a": 2,
+      "basis_size": 1,
+      "clock": 1,
+      "exponent": 45,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 25,
+      "weights": {
+        "0": 2
+      }
+    },
+    {
+      "H": 1,
+      "a": 2,
+      "basis_size": 2,
+      "clock": 1,
+      "exponent": 5,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 125,
+      "weights": {
+        "0": 2,
+        "1": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 2,
+      "basis_size": 2,
+      "clock": 1,
+      "exponent": 45,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 125,
+      "weights": {
+        "0": 2,
+        "1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 2,
+      "clock": 2,
+      "exponent": 5,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 625,
+      "weights": {
+        "0": 2,
+        "1": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 2,
+      "clock": 2,
+      "exponent": 45,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 625,
+      "weights": {
+        "0": 2,
+        "1": 2
+      }
+    },
+    {
+      "H": 1,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 5,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 625,
+      "weights": {
+        "0": 2,
+        "1": 1,
+        "2": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 45,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 625,
+      "weights": {
+        "0": 2,
+        "1": 1,
+        "2": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 5,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 3125,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 45,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 3125,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 5,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 3125,
+      "weights": {
+        "0": 2,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 45,
+      "label": "p5_univariate_profiles",
+      "p": 5,
+      "size": 3125,
+      "weights": {
+        "0": 2,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 1,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 27,
+      "weights": {
+        "0,0": 1,
+        "0,1": 1,
+        "1,0": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 1,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 27,
+      "weights": {
+        "0,0": 1,
+        "0,1": 1,
+        "1,0": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 1,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 81,
+      "weights": {
+        "0,0": 1,
+        "0,1": 1,
+        "1,0": 1,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 1,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 81,
+      "weights": {
+        "0,0": 1,
+        "0,1": 1,
+        "1,0": 1,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 81,
+      "weights": {
+        "0,0": 2,
+        "0,1": 1,
+        "1,0": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 81,
+      "weights": {
+        "0,0": 2,
+        "0,1": 1,
+        "1,0": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0,0": 2,
+        "0,1": 1,
+        "1,0": 1,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0,0": 2,
+        "0,1": 1,
+        "1,0": 1,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0,0": 2,
+        "0,1": 2,
+        "1,0": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0,0": 2,
+        "0,1": 2,
+        "1,0": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0,0": 2,
+        "0,1": 2,
+        "1,0": 1,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0,0": 2,
+        "0,1": 2,
+        "1,0": 1,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0,0": 2,
+        "0,1": 1,
+        "1,0": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0,0": 2,
+        "0,1": 1,
+        "1,0": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0,0": 2,
+        "0,1": 1,
+        "1,0": 2,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0,0": 2,
+        "0,1": 1,
+        "1,0": 2,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0,0": 2,
+        "0,1": 2,
+        "1,0": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0,0": 2,
+        "0,1": 2,
+        "1,0": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0,0": 2,
+        "0,1": 2,
+        "1,0": 2,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0,0": 2,
+        "0,1": 2,
+        "1,0": 2,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0,0": 2,
+        "0,1": 2,
+        "1,0": 2,
+        "1,1": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0,0": 2,
+        "0,1": 2,
+        "1,0": 2,
+        "1,1": 2
+      }
+    },
+    {
+      "H": 1,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0,0": 3,
+        "0,1": 1,
+        "1,0": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 243,
+      "weights": {
+        "0,0": 3,
+        "0,1": 1,
+        "1,0": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0,0": 3,
+        "0,1": 1,
+        "1,0": 1,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 1,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0,0": 3,
+        "0,1": 1,
+        "1,0": 1,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0,0": 3,
+        "0,1": 2,
+        "1,0": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0,0": 3,
+        "0,1": 2,
+        "1,0": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0,0": 3,
+        "0,1": 2,
+        "1,0": 1,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0,0": 3,
+        "0,1": 2,
+        "1,0": 1,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 3,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0,0": 3,
+        "0,1": 3,
+        "1,0": 1
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0,0": 3,
+        "0,1": 3,
+        "1,0": 1
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 3,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0,0": 3,
+        "0,1": 3,
+        "1,0": 1,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0,0": 3,
+        "0,1": 3,
+        "1,0": 1,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0,0": 3,
+        "0,1": 1,
+        "1,0": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0,0": 3,
+        "0,1": 1,
+        "1,0": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0,0": 3,
+        "0,1": 1,
+        "1,0": 2,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0,0": 3,
+        "0,1": 1,
+        "1,0": 2,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0,0": 3,
+        "0,1": 2,
+        "1,0": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0,0": 3,
+        "0,1": 2,
+        "1,0": 2
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0,0": 3,
+        "0,1": 2,
+        "1,0": 2,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 1,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0,0": 3,
+        "0,1": 2,
+        "1,0": 2,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 3,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0,0": 3,
+        "0,1": 3,
+        "1,0": 2
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0,0": 3,
+        "0,1": 3,
+        "1,0": 2
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 3,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0,0": 3,
+        "0,1": 1,
+        "1,0": 3
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0,0": 3,
+        "0,1": 1,
+        "1,0": 3
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 3,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0,0": 3,
+        "0,1": 1,
+        "1,0": 3,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0,0": 3,
+        "0,1": 1,
+        "1,0": 3,
+        "1,1": 1
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 3,
+      "exponent": 3,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0,0": 3,
+        "0,1": 2,
+        "1,0": 3
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 3,
+      "clock": 2,
+      "exponent": 9,
+      "label": "all_small_bivariate_profiles",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0,0": 3,
+        "0,1": 2,
+        "1,0": 3
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 561,
+      "label": "carmichael_exponent_profile",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0": 3,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 3,
+      "basis_size": 4,
+      "clock": 2,
+      "exponent": 561,
+      "label": "carmichael_exponent_profile",
+      "p": 3,
+      "size": 2187,
+      "weights": {
+        "0": 3,
+        "1": 2,
+        "2": 1,
+        "3": 1
+      }
+    },
+    {
+      "H": 2,
+      "a": 2,
+      "basis_size": 5,
+      "clock": 2,
+      "exponent": 561,
+      "label": "carmichael_exponent_profile",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0": 2,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      }
+    },
+    {
+      "H": 3,
+      "a": 3,
+      "basis_size": 2,
+      "clock": 3,
+      "exponent": 561,
+      "label": "carmichael_exponent_profile",
+      "p": 3,
+      "size": 729,
+      "weights": {
+        "0": 3,
+        "1": 3
+      }
+    },
+    {
+      "H": 3,
+      "a": 2,
+      "basis_size": 4,
+      "clock": 3,
+      "exponent": 561,
+      "label": "carmichael_exponent_profile",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2
+      }
+    },
+    {
+      "H": 1,
+      "a": 1,
+      "basis_size": 8,
+      "clock": 1,
+      "exponent": 561,
+      "label": "trivariate_flat_box",
+      "p": 3,
+      "size": 6561,
+      "weights": {
+        "0,0,0": 1,
+        "0,0,1": 1,
+        "0,1,0": 1,
+        "0,1,1": 1,
+        "1,0,0": 1,
+        "1,0,1": 1,
+        "1,1,0": 1,
+        "1,1,1": 1
+      }
+    }
+  ],
+  "checks": {
+    "axis_reduction_vs_all_monomials": 143,
+    "constant_teichmuller_fixed_points": 142,
+    "dyadic_boundary_actual": 8,
+    "dyadic_sharpness_hostile": 1,
+    "exact_axis_clock": 142,
+    "exhaustive_normal_form_retraction": 267408,
+    "monomial_weight_validity": 1030
+  },
+  "dyadic_boundary": {
+    "a": 3,
+    "actual": 1,
+    "claimed_odd_formula": 2,
+    "exponent": 6,
+    "p": 2
+  },
+  "enumerated_elements": 267408,
+  "status": "PASS",
+  "total_checks": 268874,
+  "universe": "All profiles specified in script; cardinality cap 7000 per ring"
+}
