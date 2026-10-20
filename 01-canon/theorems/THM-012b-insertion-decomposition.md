@@ -66,10 +66,14 @@ Since Σ TypeII = Σ_{3-cycles C} N_TypeII(C) (by THM-005) and #{orphans} = Σ_{
 Σ_{3-cycles C through v} [N_TypeII(C) + N_Orphan(C)] = 2*Σ_{ALL odd C through v} mu(C)
 ```
 This shows: the LHS is determined entirely by 3-cycles (via TypeII positions and orphan paths),
-while the RHS includes ALL odd cycles. For n≤5 (only 3-cycles), this becomes:
+while the RHS includes ALL odd cycles. For n≤4 (only 3-cycles), this becomes:
 Σ_{3-cycles C} [N_TypeII(C) + N_Orphan(C)] = 2*Σ_{3-cycles} mu(C).
 
 ---
+
+The specialization above was corrected from n≤5 to n≤4 on 2026-10-20:
+directed five-cycles already occur at order five. The general identity is
+unaffected.
 
 ## Verification Record
 

@@ -1,0 +1,17 @@
+n 1 classes 1 pairfree 1 nonconverse candidate pairs 0
+n 2 classes 1 pairfree 0 nonconverse candidate pairs 0
+n 3 classes 2 pairfree 1 nonconverse candidate pairs 0
+n 4 classes 4 pairfree 2 nonconverse candidate pairs 0
+n 5 classes 12 pairfree 5 nonconverse candidate pairs 0
+n 6 classes 56 pairfree 26 nonconverse candidate pairs 2
+WITNESS rows (2, 12, 17, 37, 11, 23) (2, 36, 9, 19, 7, 29)
+WITNESS signature ((29, 131, 162, 77, 15, 1), (1, 2, 2, 3, 3, 4), 1, 3)
+WITNESS HP extension histogram [(29, 2), (49, 2), (55, 4), (65, 1), (67, 3), (71, 2), (73, 4), (75, 2), (77, 2), (81, 4), (89, 4), (91, 3), (93, 3), (103, 6), (111, 4), (113, 2), (115, 2), (123, 2), (127, 1), (129, 2), (137, 2), (141, 3), (143, 2), (145, 1), (159, 1)]
+WITNESS maximum masks [7]
+WITNESS quadratic H linear (84, 48, 46, 26, 38, 20) pair coefficients (20, 16, 16, 22, 30, 12, 14, 12, 16, 12, 22, 22, 12, 20, 16)
+WITNESS HP extension histogram [(29, 2), (49, 1), (51, 1), (59, 2), (65, 3), (67, 1), (69, 2), (71, 3), (73, 1), (75, 2), (77, 4), (79, 2), (81, 1), (83, 2), (89, 2), (91, 1), (93, 2), (95, 1), (97, 1), (101, 5), (103, 2), (109, 2), (111, 3), (113, 1), (115, 2), (117, 1), (123, 3), (129, 2), (131, 1), (133, 2), (135, 3), (139, 2), (147, 1)]
+WITNESS maximum masks [7]
+WITNESS quadratic H linear (86, 36, 44, 36, 38, 22) pair coefficients (20, 20, 22, 24, 20, 8, 6, 10, 22, 20, 18, 18, 20, 16, 18)
+WITNESS minimum differing response ((49, 357, 679, 490, 154, 21, 1), (1, 1, 1, 1, 1, 1, 1))
+RUN-WORD exact clone tests 4054
+PASS

@@ -1,0 +1,11 @@
+k=2: H=9, blue=3, J-orbits=5, fixed R/J=3, Klein-orbits=4, triple=[3, 4, 5]
+k=3: H=25, blue=5, J-orbits=13, fixed R/J=5, Klein-orbits=9, triple=[5, 12, 13]
+k=4: H=81, blue=9, J-orbits=41, fixed R/J=9, Klein-orbits=25, triple=[9, 40, 41]
+k=5: H=289, blue=17, J-orbits=145, fixed R/J=17, Klein-orbits=81, triple=[17, 144, 145]
+k=6: H=1089, blue=33, J-orbits=545, fixed R/J=33, Klein-orbits=289, triple=[33, 544, 545]
+k=7: H=4225, blue=65, J-orbits=2113, fixed R/J=65, Klein-orbits=1089, triple=[65, 2112, 2113]
+All five actual two-vertex deletions have exact 4/2/1 path fibres.
+All 64 weighted five-core controls have feedback minimum 2.
+T_(5,5) and T_(4,6): same order, capped core and scores; blue counts 17 and 0.
+Hostiles: H=9 but blue=1; endpoints (1,5) contain two blue and two black paths.
+PASS exact involutions, endpoint response, chain cores, growth and arithmetic.

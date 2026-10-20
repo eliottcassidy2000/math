@@ -1,0 +1,10 @@
+all-class universe n=1..7= (1, 1, 2, 4, 12, 56, 456)
+feedback<=1 class counts= (1, 1, 2, 4, 9, 21, 48)
+feedback<=2 class counts n=2..7= (1, 2, 4, 12, 55, 335)
+eligible-root histogram (n,vertices,rooted_classes)= {(3, 3, 1): 1, (4, 2, 2): 1, (4, 3, 1): 2, (5, 1, 1): 2, (5, 2, 2): 3, (5, 3, 1): 3, (6, 1, 1): 10, (6, 2, 2): 6, (6, 3, 1): 4, (7, 1, 1): 32, (7, 2, 2): 10, (7, 3, 1): 5}
+independent binary-word quotient n=1..10= (1, 1, 2, 4, 9, 21, 48, 106, 227, 475)
+pair-free feedback<=1 counts= (1, 0, 1, 2, 2, 2, 2, 2, 2, 2) words_checked= 1023
+two-anchor least-word owners= (1, 2, 4, 12, 55, 335)
+exact re-anchoring controls= 3431 maximum observed lag= 2
+ordered-C3-join separating-anchor minima m=1..4= (1, 3, 4, 6)
+PASS exact one-feedback quotient, full clone tests, bounded port transport, and anchor hostile

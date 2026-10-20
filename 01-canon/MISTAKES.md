@@ -4,7 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+- **2026-10-20, THM-1900 insertion inheritance audit — deleting a path vertex was assumed to preserve the path.** In the triangle `a->x->b->a`, `(a,x,b)` is a Hamiltonian path but `(a,b)` is not. The old mechanism omitted orphan paths, already identified in THM-012b. The neutrality theorem survives: every old HP admits `1 + #(beaten-to-beating transitions)` insertions; a nonterminal beaten set yields such a transition, using a Hamilton cycle when a strong component is split; orphans only add nonnegative counts. [Repaired THM-1900](theorems/THM-1900-the-insertion-response-calculus.md), [full proof and quadratic endpoint-cover response](../05-knowledge/results/zero_heavy_ports_20261020g/profile_growth.md). The same packet refutes a proposed compressed growth state: two pair-free six-cores share complete directed path-cover profile, scores, automorphism cycle index, and feedback minimum, yet their maximum one-vertex HP responses are159 and147. The missing coordinates are the actual component endpoints, not another scalar average.
+
 - **2026-10-20, whole-cycle blue rotation and owner-list insertion drafts.** Composing positional reversals before and after a one-step cyclic cut gives the **two-step** rotation. The even six-vertex tournament with outgoing rows `(26,36,41,18,38,9)` has both blue words and a shift-by-two automorphism, but shift by one changes its alternating scores. The repaired blackness guard uses shift by two or a literal score/anti-automorphism test; proper-endcap arguments are separate. Also, merging common entries into lexicographically ordered edge lists need not preserve order when lengths differ: `[1]<[1,3]`, but adding4 gives `[1,4]>[1,3,4]`. The repaired full-position owner first compares q, so tied records have equal defect-edge counts before common bulk insertion. Both draft errors were caught before theorem promotion. [Detour proof and even hostile](../05-knowledge/results/kernels_games_detours_20261020f/detours.md), [fixed-deficiency owner repair](../05-knowledge/results/kernels_games_detours_20261020f/general_fixed_deficiency.md).
+
+The same inheritance audit corrected THM-012b's phrase "n≤5 (only 3-cycles)"
+to n≤4; a directed Hamilton five-cycle is the first missing term. Its general
+all-odd-cycle identity and THM-4094's full-incidence proof are unaffected.
 
 Format per entry:
 - What was assumed / done
