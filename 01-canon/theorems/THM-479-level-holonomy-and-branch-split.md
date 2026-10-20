@@ -30,11 +30,11 @@ with t ≡ 0: tournaments are the odd affine torsor over the even/linear graph w
    A049313(n) = Σ_{μ all-odd} 2^{o₂−k+1}/z_μ + Σ_{μ all-even, equal v₂} 2^{o₂−k}/z_μ.
 3. **(Branch split — new.)** Write A049313(n) = N_odd(n) + N_lev(n) for the two sums in (2).
    N_lev vanishes for odd n (no all-even partitions); for even n ≥ 4 both branches are
-   separately INTEGERS (verified n ≤ 16; only n = 2 splits fractionally as 1/2 + 1/2):
+   separately INTEGERS (now proved for every n ≥ 3; historical verification n ≤ 16; only n = 2 splits fractionally as 1/2 + 1/2):
    N_odd = 1, 1/2*, 1, 1, 2, 4, 12, 64, 792, 19296, 886288, 75346496, … and
    N_lev(2t) = 1/2*, 1, 2, 15, 280, 23464, 6819360, 6981258440 (t = 1..8). Neither branch
    sequence, nor the count of level permutations itself, is in OEIS (checked 2026-06-11) —
-   flagged for contribution. Branch integrality for n ≥ 3 is observed, not yet explained.
+   flagged for contribution. Branch integrality for n ≥ 3 is now PROVED by the dated extension below; a structural decorated pairing for n = 0 mod 4 remains OPEN.
 4. **(Where the obstruction lives.)** The proof shows the cocycle's holonomy is supported
    EXACTLY on the diameter pair-orbits {i, π^{ℓ/2}(i)} of even cycles — the antipodal /
    half-turn pairs (THM-430's σ-self-partners; THM-447's twin pairs; the same pairs whose
@@ -68,6 +68,12 @@ unequal ⟹ exactly one even). This is the level law. ∎(1)
 Im(P+1) ⟺ s(W) satisfies the homogeneous system: sᵢ = 0 on even cycles, all odd-cycle sᵢ
 equal — giving dim(C∩Im) = n − k if some cycle is odd, n − k − 1 if all are even, whence
 the exponents o₂−k+1 and o₂−k. Burnside over S_n gives (2). ∎
+
+## All-order branch integrality (2026-10-20)
+
+The [independently reviewed proof](../../05-knowledge/results/switching_branch_integrality_20261020/BRANCH_INTEGRALITY.md) settles the numerical part of HYP-9172(b). For each switching-class stabilizer H, Frobenius's root-count theorem puts the proportion of odd-order elements in Z[1/2]. Orbit-stabilizer double counting therefore puts N_odd in Z[1/2]. Independently, every odd-partition summand `2^(o_2-k+1)/z_mu` is 2-integral except the partition `(1,1)` at n=2. Hence N_odd lies in `Z[1/2] intersect Z_(2) = Z`; subtracting from the integral total proves the same for N_lev. At n=1 the branches are integral, while n=2 gives exactly `1/2+1/2`.
+
+This is a numerical integrality proof, not a pairing on existing class types. At n=8 there are 27 even-Aut types but N_lev=15; the [pairing-boundary analysis](../../05-knowledge/results/switching_branch_integrality_20261020/PAIRING_BOUNDARY.md) rules out a fixed-point-free involution on that unadorned carrier. The n=2 mod4 pairing in THM-4531 remains valid for n>=6. An explicit decorated carrier explaining the n=0 mod4 branch remains OPEN.
 
 ## Verification (script switching_classes_level_burnside_cbx2.py)
 

@@ -34,6 +34,9 @@ status: >
   CURRENT REPAIR (2026-10-20): HYP-9340(a) is REFUTED for general odd H (C15 at n=10: 32 versus 31),
   but PROVED for all odd p-groups by the linked Sylow-action Walsh addendum. The linked derivative-path
   construction solves the all-odd-prime circulant type-bijection target; fixed multiplier rules still fail.
+  FURTHER EXTENSION (2026-10-20): odd-pronormal-base/one-prime normalizer-quotient matching proves the
+  stated mixed-prime survivor. Abstract cyclic-group naturality has the linked p=3 mod4 / p=5 /
+  p=1 mod4,p>5 dichotomy. HYP-9172(a) is now proved for every n>=5 in its precise equivariant scope.
   Notation: sgn_X(g) = (-1)^{# edges {u<v} of X with g(u) > g(v)} for g in Aut X (Royle et al.'s sign, THM-4524's
   eps); X is even iff sgn_X = 1 on Aut X; Fix_T(P), Fix_G(P) = P-invariant labelled tournaments / graphs on [n];
   tau_T(H) = number of isomorphism types of tournaments whose automorphism group contains a conjugate of H, tau_E(H)
@@ -57,6 +60,8 @@ outputs: 04-computation/experiments/even_graphs_20261019/*.out, connected_even_g
 
 **PROVED (pre-audit)**, with the finite checks listed in the status. Full note:
 [even_graphs_20261019_sylow_refinement_components_walsh_duality](../../05-knowledge/results/even_graphs_20261019_sylow_refinement_components_walsh_duality.md).
+
+**Current continuation, 2026-10-20.** [Pronormal descent and quotient refinement](../../05-knowledge/results/pronormal_quotient_bijections_20261020/PRONORMAL_QUOTIENT_THEOREM.md) extend the equality to odd pronormal bases and their one-prime normalizer-quotient extensions. The unrestricted odd-H assertion remains refuted. [Generator-free circulant naturality](../../05-knowledge/results/generator_free_circulants_20261020/GENERATOR_FREE_NATURALITY.md) gives an exact abstract-group naturality dichotomy, while [the uniform obstruction](../../05-knowledge/results/uniform_equivariance_obstruction_20261020/UNIFORM_EQUIVARIANCE_OBSTRUCTION.md) resolves HYP-9172(a) for all n>=5 without excluding arbitrary unlabelled type bijections. These links supplement, rather than alter, the proofs and old finite evidence below.
 
 ## 0. Setting
 

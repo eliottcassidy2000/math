@@ -1,6 +1,6 @@
 ---
 id: THM-4531
-title: "The twisted Mallows-Sloane principle, and why OPEN-Q-060 has no natural bijection. For every S_n-invariant subspace U of the edge space, tournaments modulo reversal along U, up to isomorphism, are equinumerous with the even (untwisted) graphs in U-perp: U = 0 is Royle-Praeger-Glasby-Freedman-Devillers (2023), U = cuts is THM-4524 E1. A natural map is bijective on iso types iff a stabiliser-containment bipartite graph has a perfect matching. No natural map sends even Euler graphs to switching classes (n >= 3), and none sends switching classes bijectively onto even Euler graphs for 5 <= n <= 100. The same failure holds for tournaments versus even graphs (answering Royle et al.'s question in the equivariant sense for 5 <= n <= 15 and 16 larger n) and for Mallows-Sloane at every even n >= 4. For odd n, A049313(n) counts the tournaments with out-degree = in-degree (mod 4) everywhere. Higashitani-Ueyama's expectation s_{4,n} = t_{4,n} holds, and s_{l,n} = t_{l,n} for every l"
+title: "The twisted Mallows-Sloane principle, and why OPEN-Q-060 has no natural bijection. For every S_n-invariant subspace U of the edge space, tournaments modulo reversal along U, up to isomorphism, are equinumerous with the even (untwisted) graphs in U-perp: U = 0 is Royle-Praeger-Glasby-Freedman-Devillers (2023), U = cuts is THM-4524 E1. A natural map is bijective on iso types iff a stabiliser-containment bipartite graph has a perfect matching. No natural map sends even Euler graphs to switching classes (n >= 3), and none sends switching classes type-bijectively onto even Euler graphs for every n >= 5. The same failure holds for tournaments versus even graphs (resolving the precise S_n-equivariant/type-bijective formulation for every n >= 5) and for Mallows-Sloane at every even n >= 4. For odd n, A049313(n) counts the tournaments with out-degree = in-degree (mod 4) everywhere. Higashitani-Ueyama's expectation s_{4,n} = t_{4,n} holds, and s_{l,n} = t_{l,n} for every l"
 status: >
   PROVED + INDEPENDENTLY AUDITED:
   - Theorem G (twisted Mallows-Sloane principle; monomial-representation proof);
@@ -23,8 +23,11 @@ status: >
   - Babai-Cameron 2000;
   - Higashitani-Ueyama arXiv:2409.10904v4 (Example 4.10 states s_{4,n} = t_{4,n} as an expectation without proof);
   - Seidel; THM-1470; THM-479.
-  OPEN (HYP-9172): no natural bijection for every n >= 5 (CLASS and TOUR), which reduces to additive questions over
-  twist-rigid block sizes; branch integrality for n = 0 (mod 4); a natural graph-type partner of A049313 for even n.
+  CURRENT EXTENSION (2026-10-20, independent audits PASS): HYP-9172(a) is PROVED for every n >= 5
+  in CLASS and TOUR by the linked uniform 3/5 obstruction. Numeric branch integrality is PROVED for
+  every n >= 3. The earlier finite certificates above are retained as historical evidence.
+  OPEN: a structural decorated pairing for n = 0 mod 4 and a natural graph-type partner of A049313
+  for even n beyond the precise equivariant formulation. Arbitrary unlabelled type bijections are not excluded.
   Notation: "natural" means S_n-equivariant on labelled objects (a species morphism); even means sgn_X = 1 on Aut X, where
   sgn_X(g) = (-1)^#{edges of X reversed by g relative to a fixed orientation}. This is THM-4524's eps and Royle et al.'s
   sign.
@@ -94,13 +97,15 @@ So E1 is the switching-class form of Royle et al.'s theorem and is proved by the
 
 Read "natural" as "given by a construction that respects relabelling". Then the answer is **no**:
 - **From even Euler graphs to classes, never (`n >= 3`).** The empty graph is fixed by every permutation, and no switching class is.
-- **From classes onto even Euler graphs, not for `5 <= n <= 100`.** At `n = 5` the two classes have symmetries of order 5 and 3. The only even Euler graph with such a symmetry is the empty graph, so both classes would have to map there.
-- **Royle et al.'s own open question.** The same failure holds for tournaments versus even graphs, which answers their question negatively (in this sense) for `5 <= n <= 15` and 16 larger `n`.
+- **From classes onto even Euler graphs, impossible for every `n >= 5`.** At `n = 5` the two classes have symmetries of order 5 and 3. The only even Euler graph with such a symmetry is the empty graph, so both classes would have to map there.
+- **Precise equivariant formulation.** The same failure holds for tournaments versus sign-even graphs for every `n >= 5`. This resolves HYP-9172(a), not every interpretation of Royle et al.'s broader request for a natural bijection between unlabelled types.
 - **Mallows and Sloane.** Their "unable to find such a correspondence" at even `n` is explained exactly: none exists, for every even `n >= 4`.
 
 **For odd `n` there is a canonical object on the tournament side.** Every switching class contains exactly one tournament with out-degree ≡ in-degree (mod 4) at every vertex. So A049313 counts tournaments whose scores are all even (`n ≡ 1 mod 4`) or all odd (`n ≡ 3 mod 4`).
 
+The [uniform proof and Hall family](../../05-knowledge/results/uniform_equivariance_obstruction_20261020/UNIFORM_EQUIVARIANCE_OBSTRUCTION.md) now replace the bounded obstruction frontier. The original block certificates and audits remain valid; no additive-prime conjecture is required.
+
 ## 3. Two byproducts
 
 - **Higashitani–Ueyama.** Their 2024–25 paper expects, without proof, that their switching classes and modular Eulerian matrices over `Z/4` are equinumerous. This holds, and it holds over every `Z/l`, by Brauer's lemma for finite abelian groups.
-- **THM-479's branch split.** It gets a combinatorial meaning for `n ≡ 2 (mod 4)`: the level branch counts the pairs `{C, C + M_g}`.
+- **THM-479's branch split.** The established pairing for `n ≡ 2 (mod 4)`, `n>=6`, remains: the level branch counts the pairs `{C, C + M_g}`. [Numerical integrality](../../05-knowledge/results/switching_branch_integrality_20261020/BRANCH_INTEGRALITY.md) now holds for every `n>=3`; the n=2 exception is `1/2+1/2`. A structural decorated pairing for `n ≡ 0 (mod 4)` remains OPEN; the [n=8 unadorned-carrier obstruction](../../05-knowledge/results/switching_branch_integrality_20261020/PAIRING_BOUNDARY.md) prevents extending the old pairing by simply pairing all even-Aut types.
