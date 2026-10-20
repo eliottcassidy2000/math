@@ -2,12 +2,17 @@
 id: HYP-9342
 title: "What a uniform rule for the prime-circulant bijection (circulant tournaments versus even circulant graphs of prime order) can still be after THM-4725: (a) at p = 3 (mod 4) the Paley rule beta is canonical (Gamma-equivariant, one quantifier in the multiplicative structure) and the question is whether it is the ONLY Gamma-equivariant type bijection; (b) at p = 1 (mod 4) no Gamma-equivariant rule exists and no dilation rule works at infinitely many primes, so a uniform rule must use the additive structure of F_p (convolutions, representation numbers, Gauss-sum data): is there one, and is there a p = 1 (mod 4) analogue of the Paley reference (a canonical tournament set invariant under the fourth powers, e.g. built from the biquadratic character)? (c) the residue of HYP-9341 (c): no multiplier-equivariant rule definable in (Z_p^*, ., S) with constants is uniform"
 status: >
-  (a) OPEN; FINITE-EXACT: Hall's condition for Gamma-equivariant injections holds at every p <= 31, and the Gamma-orbit
-  counts agree at p = 3 (mod 4) (power_equivariance*.out), so Gamma-equivariant bijections exist there; beta is one of them
-  (THM-4725 Theorem D); uniqueness not tested.
+  (a) PARTLY SETTLED (FINITE-EXACT, additive_rules.out): the Gamma stabiliser-containment graph has exactly ONE perfect
+  matching at p = 7 and p = 11, so the Paley rule is the unique Gamma-equivariant type bijection there; at p = 19 there are
+  96 perfect matchings (the Paley rule is one of them), so uniqueness fails as an abstract equivariant bijection and
+  'canonical' must mean definable. Hall's condition for Gamma-equivariant injections holds at every p <= 31 and the
+  Gamma-orbit counts agree at p = 3 (mod 4) (power_equivariance*.out).
   (b) OPEN. THM-4725 Theorem D excludes every Gamma-equivariant rule at p = 1 (mod 4), p >= 13 (Gamma-orbits 4 < 6, 3 < 10,
   65 < 125, 673 < 1335 at p = 13, 17, 29, 37); Theorem U excludes every dilation rule at infinitely many p = 9 (mod 16).
-  A rule using + is neither excluded nor known. For p = 5 (mod 8) the tournaments invariant under the fourth powers form
+  A rule using + is neither excluded nor known. First tests (additive_rules.out): R1(S) = {x : |S ∩ (x + S)| odd} is
+  symmetric and multiplier-equivariant; at p = 13 and p = 29 it is injective (hence bijective) from tournament types onto
+  symmetric-set types but some images are odd circulants; at p = 17 all images are even but two types collide; the
+  representation-number rule {x : #(a + b = x) odd} and the 3-term-progression rule are not even symmetric. For p = 5 (mod 8) the tournaments invariant under the fourth powers form
   one multiplier type and must go to the empty graph (THM-4724 Lemma F); a biquadratic reference tournament exists
   (the fourth-power classes {1, i, -1, -i} split as a tournament set only if i and -i are separated, which the biquadratic
   character does for p = 5 mod 8 but then the set is not multiplier-canonical).

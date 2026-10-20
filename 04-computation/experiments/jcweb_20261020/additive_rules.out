@@ -1,0 +1,15 @@
+p = 13 R1 |S∩(x+S)| odd: symmetric True, even-valued False, well defined on types True, injective on types True (types 6 vs even types 6)
+p = 13 R2 |S∩(S+x)| odd: symmetric True, even-valued False, well defined on types True, injective on types True (types 6 vs even types 6)
+p = 13 R3 reps of x as a+b odd: symmetric False, even-valued False, well defined on types True, injective on types False (types 6 vs even types 6)
+p = 13 R4 3-AP centred x odd: symmetric False, even-valued False, well defined on types True, injective on types False (types 6 vs even types 6)
+p = 17 R1 |S∩(x+S)| odd: symmetric True, even-valued True, well defined on types True, injective on types False (types 16 vs even types 16)
+p = 17 R2 |S∩(S+x)| odd: symmetric True, even-valued True, well defined on types True, injective on types False (types 16 vs even types 16)
+p = 17 R3 reps of x as a+b odd: symmetric False, even-valued False, well defined on types True, injective on types False (types 16 vs even types 16)
+p = 17 R4 3-AP centred x odd: symmetric False, even-valued False, well defined on types True, injective on types False (types 16 vs even types 16)
+p = 29 R1 |S∩(x+S)| odd: symmetric True, even-valued False, well defined on types True, injective on types True (types 586 vs even types 586)
+p = 29 R2 |S∩(S+x)| odd: symmetric True, even-valued False, well defined on types True, injective on types True (types 586 vs even types 586)
+p = 29 R3 reps of x as a+b odd: symmetric False, even-valued False, well defined on types True, injective on types False (types 586 vs even types 586)
+p = 29 R4 3-AP centred x odd: symmetric False, even-valued False, well defined on types True, injective on types False (types 586 vs even types 586)
+p = 7: Gamma-orbits T 2 E 2; perfect matchings of the Gamma stabiliser-containment graph: 1; Paley rule maps orbits into even orbits: True
+p = 11: Gamma-orbits T 3 E 3; perfect matchings of the Gamma stabiliser-containment graph: 1; Paley rule maps orbits into even orbits: True
+p = 19: Gamma-orbits T 11 E 11; perfect matchings of the Gamma stabiliser-containment graph: 96; Paley rule maps orbits into even orbits: True
