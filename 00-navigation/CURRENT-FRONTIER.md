@@ -4,7 +4,7 @@
 **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
 **REFUTED**, **SUPERSEDED**.
 
-**Oct 19:** [Map](../05-knowledge/results/automata_arithmetic_geometry_session_20261019/SESSION_MAP.md). Earlier: [connections](../05-knowledge/results/neglected_connections_session_20261019.md), [descent](../05-knowledge/results/descent_and_global_obstructions_session_20261019.md), [parabolic](../05-knowledge/results/parabolic_scaling_session_20261019.md). Conjectures OPEN; LRC inherited.
+**Oct 20:** [Carmichael map](../05-knowledge/results/carmichael_character_session_20261019/README.md). Scoped transfers; Collatz/LRC OPEN. [Prior maps](../05-knowledge/results/carmichael_character_session_20261019/PUBLICATION_LEDGER.md#prior-session-maps).
 ## LRC(14)
 
 ### Headline

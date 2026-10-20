@@ -1,0 +1,18 @@
+{
+  "attachment_library_id": "libfile_194b1d6b9d408191a02f05930b336f1f",
+  "title": "The exponent of growth of the Carmichael counting function",
+  "authors": [
+    "Will Howe",
+    "Grant Huffman",
+    "Jensen Kohlmeyer",
+    "Liam Kruer"
+  ],
+  "paper_date": "2026-10-08",
+  "pages": 9,
+  "pdf_sha256": "b1f34a345f63c952a0f1731682817be16ee86a70c8396ada27fa3c9884014f28",
+  "text_sha256": "b61ffb263ce2a309bedb248dad0055fc440b60394039e1330f2b5abc9edbee03",
+  "companion_url": "https://github.com/JENW1N/erdos1057-lean",
+  "companion_checked_utc": "2026-10-19T23:44:00Z",
+  "version_boundary": "Attached account records Oct8 author-side audit; public README reports later Oct10 checks and pending prize review. Neither is an independent build by this session.",
+  "scope": "Source PDF and full transcription intentionally not republished; mathematical notes paraphrase and derive new scoped transfers."
+}
