@@ -1,0 +1,4667 @@
+{
+  "status": "PASS",
+  "scope": "exact checks of frozen SC-class cube data at n3,5,7,9",
+  "reports": [
+    {
+      "n": 3,
+      "input_sha256": "fe716942d09091500c19b33d35e13797878ed50c8930cc6c921a64b22e392663",
+      "classes_checked": 2,
+      "packets_checked": 1,
+      "packet_dimensions": {
+        "1": 1
+      },
+      "all_packet_factorizations_exact": true,
+      "all_vanishing_moments_exact": true,
+      "all_packet_root_multiplicities_exact": true,
+      "by_blue_degree": [
+        {
+          "B": 1,
+          "minimum_packet_dimension": 1,
+          "shore_class_counts": [
+            1,
+            1
+          ],
+          "shore_c3_totals": [
+            0,
+            1
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            -1
+          ]
+        }
+      ],
+      "packets": [
+        {
+          "packet_id": 0,
+          "B": 1,
+          "dimension": 1,
+          "class_count": 2,
+          "c_min": 0,
+          "positive_odd_steps": [
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            -1
+          ],
+          "first_nonzero_signed_moment": -1
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "input_sha256": "f7afc4267f6c79a8ed020b44949daae7c8fc2f79991607b4113d1c7d0b8cf983",
+      "classes_checked": 8,
+      "packets_checked": 2,
+      "packet_dimensions": {
+        "2": 2
+      },
+      "all_packet_factorizations_exact": true,
+      "all_vanishing_moments_exact": true,
+      "all_packet_root_multiplicities_exact": true,
+      "by_blue_degree": [
+        {
+          "B": 1,
+          "minimum_packet_dimension": 2,
+          "shore_class_counts": [
+            2,
+            2
+          ],
+          "shore_c3_totals": [
+            4,
+            4
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            6
+          ]
+        },
+        {
+          "B": 3,
+          "minimum_packet_dimension": 2,
+          "shore_class_counts": [
+            2,
+            2
+          ],
+          "shore_c3_totals": [
+            8,
+            8
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            -2
+          ]
+        }
+      ],
+      "packets": [
+        {
+          "packet_id": 0,
+          "B": 3,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 3,
+          "positive_odd_steps": [
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            -2
+          ],
+          "first_nonzero_signed_moment": -2
+        },
+        {
+          "packet_id": 4,
+          "B": 1,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 0,
+          "positive_odd_steps": [
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            6
+          ],
+          "first_nonzero_signed_moment": 6
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "input_sha256": "5c24352c38c4cb2d347aa856d378afd345ef3875566a6b5e77fae92de7f26008",
+      "classes_checked": 88,
+      "packets_checked": 14,
+      "packet_dimensions": {
+        "1": 4,
+        "3": 10
+      },
+      "all_packet_factorizations_exact": true,
+      "all_vanishing_moments_exact": true,
+      "all_packet_root_multiplicities_exact": true,
+      "by_blue_degree": [
+        {
+          "B": 1,
+          "minimum_packet_dimension": 1,
+          "shore_class_counts": [
+            5,
+            5
+          ],
+          "shore_c3_totals": [
+            20,
+            29
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            -9
+          ]
+        },
+        {
+          "B": 3,
+          "minimum_packet_dimension": 1,
+          "shore_class_counts": [
+            6,
+            6
+          ],
+          "shore_c3_totals": [
+            48,
+            42
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            6
+          ]
+        },
+        {
+          "B": 5,
+          "minimum_packet_dimension": 3,
+          "shore_class_counts": [
+            8,
+            8
+          ],
+          "shore_c3_totals": [
+            68,
+            68
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            0,
+            108
+          ]
+        },
+        {
+          "B": 7,
+          "minimum_packet_dimension": 3,
+          "shore_class_counts": [
+            16,
+            16
+          ],
+          "shore_c3_totals": [
+            168,
+            168
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            0,
+            -72
+          ]
+        },
+        {
+          "B": 9,
+          "minimum_packet_dimension": 1,
+          "shore_class_counts": [
+            9,
+            9
+          ],
+          "shore_c3_totals": [
+            112,
+            113
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            -1
+          ]
+        }
+      ],
+      "packets": [
+        {
+          "packet_id": 0,
+          "B": 7,
+          "dimension": 3,
+          "class_count": 8,
+          "c_min": 8,
+          "positive_odd_steps": [
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            -18
+          ],
+          "first_nonzero_signed_moment": -18
+        },
+        {
+          "packet_id": 8,
+          "B": 3,
+          "dimension": 1,
+          "class_count": 2,
+          "c_min": 11,
+          "positive_odd_steps": [
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            3
+          ],
+          "first_nonzero_signed_moment": 3
+        },
+        {
+          "packet_id": 9,
+          "B": 9,
+          "dimension": 1,
+          "class_count": 2,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            -1
+          ],
+          "first_nonzero_signed_moment": -1
+        },
+        {
+          "packet_id": 12,
+          "B": 9,
+          "dimension": 3,
+          "class_count": 8,
+          "c_min": 11,
+          "positive_odd_steps": [
+            1,
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            6
+          ],
+          "first_nonzero_signed_moment": 6
+        },
+        {
+          "packet_id": 20,
+          "B": 9,
+          "dimension": 3,
+          "class_count": 8,
+          "c_min": 11,
+          "positive_odd_steps": [
+            1,
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            6
+          ],
+          "first_nonzero_signed_moment": 6
+        },
+        {
+          "packet_id": 28,
+          "B": 7,
+          "dimension": 3,
+          "class_count": 8,
+          "c_min": 8,
+          "positive_odd_steps": [
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            -18
+          ],
+          "first_nonzero_signed_moment": -18
+        },
+        {
+          "packet_id": 36,
+          "B": 5,
+          "dimension": 3,
+          "class_count": 8,
+          "c_min": 5,
+          "positive_odd_steps": [
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            54
+          ],
+          "first_nonzero_signed_moment": 54
+        },
+        {
+          "packet_id": 44,
+          "B": 7,
+          "dimension": 3,
+          "class_count": 8,
+          "c_min": 8,
+          "positive_odd_steps": [
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            -18
+          ],
+          "first_nonzero_signed_moment": -18
+        },
+        {
+          "packet_id": 52,
+          "B": 5,
+          "dimension": 3,
+          "class_count": 8,
+          "c_min": 5,
+          "positive_odd_steps": [
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            54
+          ],
+          "first_nonzero_signed_moment": 54
+        },
+        {
+          "packet_id": 60,
+          "B": 7,
+          "dimension": 3,
+          "class_count": 8,
+          "c_min": 8,
+          "positive_odd_steps": [
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            -18
+          ],
+          "first_nonzero_signed_moment": -18
+        },
+        {
+          "packet_id": 68,
+          "B": 3,
+          "dimension": 3,
+          "class_count": 8,
+          "c_min": 3,
+          "positive_odd_steps": [
+            1,
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            30
+          ],
+          "first_nonzero_signed_moment": 30
+        },
+        {
+          "packet_id": 76,
+          "B": 1,
+          "dimension": 3,
+          "class_count": 8,
+          "c_min": 0,
+          "positive_odd_steps": [
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            -90
+          ],
+          "first_nonzero_signed_moment": -90
+        },
+        {
+          "packet_id": 84,
+          "B": 1,
+          "dimension": 1,
+          "class_count": 2,
+          "c_min": 2,
+          "positive_odd_steps": [
+            9
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            -9
+          ],
+          "first_nonzero_signed_moment": -9
+        },
+        {
+          "packet_id": 85,
+          "B": 3,
+          "dimension": 1,
+          "class_count": 2,
+          "c_min": 5,
+          "positive_odd_steps": [
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            3
+          ],
+          "first_nonzero_signed_moment": 3
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "input_sha256": "53936c8d0626c7845eadc2913289dc575550e8d32e9bd060beb3bd9aac9085a8",
+      "classes_checked": 2752,
+      "packets_checked": 184,
+      "packet_dimensions": {
+        "2": 16,
+        "4": 168
+      },
+      "all_packet_factorizations_exact": true,
+      "all_vanishing_moments_exact": true,
+      "all_packet_root_multiplicities_exact": true,
+      "by_blue_degree": [
+        {
+          "B": 1,
+          "minimum_packet_dimension": 2,
+          "shore_class_counts": [
+            12,
+            12
+          ],
+          "shore_c3_totals": [
+            104,
+            104
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            156
+          ]
+        },
+        {
+          "B": 3,
+          "minimum_packet_dimension": 2,
+          "shore_class_counts": [
+            14,
+            14
+          ],
+          "shore_c3_totals": [
+            152,
+            152
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            -94
+          ]
+        },
+        {
+          "B": 5,
+          "minimum_packet_dimension": 2,
+          "shore_class_counts": [
+            26,
+            26
+          ],
+          "shore_c3_totals": [
+            320,
+            320
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            -90
+          ]
+        },
+        {
+          "B": 7,
+          "minimum_packet_dimension": 2,
+          "shore_class_counts": [
+            36,
+            36
+          ],
+          "shore_c3_totals": [
+            536,
+            536
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            12
+          ]
+        },
+        {
+          "B": 9,
+          "minimum_packet_dimension": 2,
+          "shore_class_counts": [
+            50,
+            50
+          ],
+          "shore_c3_totals": [
+            736,
+            736
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            14
+          ]
+        },
+        {
+          "B": 11,
+          "minimum_packet_dimension": 2,
+          "shore_class_counts": [
+            26,
+            26
+          ],
+          "shore_c3_totals": [
+            440,
+            440
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            6
+          ]
+        },
+        {
+          "B": 13,
+          "minimum_packet_dimension": 2,
+          "shore_class_counts": [
+            42,
+            42
+          ],
+          "shore_c3_totals": [
+            728,
+            728
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            6
+          ]
+        },
+        {
+          "B": 15,
+          "minimum_packet_dimension": 2,
+          "shore_class_counts": [
+            66,
+            66
+          ],
+          "shore_c3_totals": [
+            1200,
+            1200
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            30
+          ]
+        },
+        {
+          "B": 17,
+          "minimum_packet_dimension": 4,
+          "shore_class_counts": [
+            56,
+            56
+          ],
+          "shore_c3_totals": [
+            1056,
+            1056
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            0,
+            0,
+            3240
+          ]
+        },
+        {
+          "B": 19,
+          "minimum_packet_dimension": 4,
+          "shore_class_counts": [
+            120,
+            120
+          ],
+          "shore_c3_totals": [
+            2384,
+            2384
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            0,
+            0,
+            648
+          ]
+        },
+        {
+          "B": 21,
+          "minimum_packet_dimension": 2,
+          "shore_class_counts": [
+            60,
+            60
+          ],
+          "shore_c3_totals": [
+            1256,
+            1256
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            -4
+          ]
+        },
+        {
+          "B": 23,
+          "minimum_packet_dimension": 4,
+          "shore_class_counts": [
+            120,
+            120
+          ],
+          "shore_c3_totals": [
+            2608,
+            2608
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            0,
+            0,
+            -3384
+          ]
+        },
+        {
+          "B": 25,
+          "minimum_packet_dimension": 4,
+          "shore_class_counts": [
+            120,
+            120
+          ],
+          "shore_c3_totals": [
+            2672,
+            2672
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            0,
+            0,
+            -3000
+          ]
+        },
+        {
+          "B": 27,
+          "minimum_packet_dimension": 4,
+          "shore_class_counts": [
+            88,
+            88
+          ],
+          "shore_c3_totals": [
+            2096,
+            2096
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            0,
+            0,
+            1512
+          ]
+        },
+        {
+          "B": 29,
+          "minimum_packet_dimension": 4,
+          "shore_class_counts": [
+            136,
+            136
+          ],
+          "shore_c3_totals": [
+            3280,
+            3280
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            0,
+            0,
+            3384
+          ]
+        },
+        {
+          "B": 31,
+          "minimum_packet_dimension": 4,
+          "shore_class_counts": [
+            136,
+            136
+          ],
+          "shore_c3_totals": [
+            3488,
+            3488
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ]
+        },
+        {
+          "B": 33,
+          "minimum_packet_dimension": 2,
+          "shore_class_counts": [
+            138,
+            138
+          ],
+          "shore_c3_totals": [
+            3592,
+            3592
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            -2
+          ]
+        },
+        {
+          "B": 35,
+          "minimum_packet_dimension": 4,
+          "shore_class_counts": [
+            64,
+            64
+          ],
+          "shore_c3_totals": [
+            1744,
+            1744
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            0,
+            0,
+            -96
+          ]
+        },
+        {
+          "B": 37,
+          "minimum_packet_dimension": 4,
+          "shore_class_counts": [
+            48,
+            48
+          ],
+          "shore_c3_totals": [
+            1344,
+            1344
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            0,
+            0,
+            144
+          ]
+        },
+        {
+          "B": 39,
+          "minimum_packet_dimension": 2,
+          "shore_class_counts": [
+            18,
+            18
+          ],
+          "shore_c3_totals": [
+            504,
+            504
+          ],
+          "signed_moments_0_through_min_dimension": [
+            0,
+            0,
+            -2
+          ]
+        }
+      ],
+      "packets": [
+        {
+          "packet_id": 0,
+          "B": 15,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 16,
+          "B": 7,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 17,
+          "positive_odd_steps": [
+            1,
+            9
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            -18
+          ],
+          "first_nonzero_signed_moment": -18
+        },
+        {
+          "packet_id": 17,
+          "B": 21,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            6
+          ],
+          "first_nonzero_signed_moment": 6
+        },
+        {
+          "packet_id": 24,
+          "B": 27,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 40,
+          "B": 7,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 18,
+          "positive_odd_steps": [
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            30
+          ],
+          "first_nonzero_signed_moment": 30
+        },
+        {
+          "packet_id": 41,
+          "B": 21,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 19,
+          "positive_odd_steps": [
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            -10
+          ],
+          "first_nonzero_signed_moment": -10
+        },
+        {
+          "packet_id": 48,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 64,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 80,
+          "B": 27,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 96,
+          "B": 37,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 26,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            24
+          ],
+          "first_nonzero_signed_moment": 24
+        },
+        {
+          "packet_id": 112,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 128,
+          "B": 35,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 144,
+          "B": 23,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 17,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -648
+          ],
+          "first_nonzero_signed_moment": -648
+        },
+        {
+          "packet_id": 160,
+          "B": 25,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 18,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            120
+          ],
+          "first_nonzero_signed_moment": 120
+        },
+        {
+          "packet_id": 176,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 192,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 208,
+          "B": 25,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 18,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            120
+          ],
+          "first_nonzero_signed_moment": 120
+        },
+        {
+          "packet_id": 224,
+          "B": 19,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 240,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 256,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 272,
+          "B": 23,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 17,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -648
+          ],
+          "first_nonzero_signed_moment": -648
+        },
+        {
+          "packet_id": 288,
+          "B": 13,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1080
+          ],
+          "first_nonzero_signed_moment": 1080
+        },
+        {
+          "packet_id": 304,
+          "B": 35,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 26,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            24
+          ],
+          "first_nonzero_signed_moment": 24
+        },
+        {
+          "packet_id": 320,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 336,
+          "B": 39,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 26,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            24
+          ],
+          "first_nonzero_signed_moment": 24
+        },
+        {
+          "packet_id": 352,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 368,
+          "B": 37,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 26,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            24
+          ],
+          "first_nonzero_signed_moment": 24
+        },
+        {
+          "packet_id": 384,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 400,
+          "B": 35,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 416,
+          "B": 21,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 432,
+          "B": 35,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 26,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            24
+          ],
+          "first_nonzero_signed_moment": 24
+        },
+        {
+          "packet_id": 448,
+          "B": 37,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 26,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            24
+          ],
+          "first_nonzero_signed_moment": 24
+        },
+        {
+          "packet_id": 464,
+          "B": 37,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 26,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            24
+          ],
+          "first_nonzero_signed_moment": 24
+        },
+        {
+          "packet_id": 480,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 496,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 512,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 528,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 544,
+          "B": 19,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 560,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 576,
+          "B": 39,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 26,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            24
+          ],
+          "first_nonzero_signed_moment": 24
+        },
+        {
+          "packet_id": 592,
+          "B": 27,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 608,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 624,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 640,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 656,
+          "B": 19,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 14,
+          "positive_odd_steps": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1944
+          ],
+          "first_nonzero_signed_moment": 1944
+        },
+        {
+          "packet_id": 672,
+          "B": 15,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1080
+          ],
+          "first_nonzero_signed_moment": 1080
+        },
+        {
+          "packet_id": 688,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 704,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 720,
+          "B": 35,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 736,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 752,
+          "B": 23,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 768,
+          "B": 17,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1080
+          ],
+          "first_nonzero_signed_moment": 1080
+        },
+        {
+          "packet_id": 784,
+          "B": 23,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 800,
+          "B": 11,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 10,
+          "positive_odd_steps": [
+            1,
+            1,
+            5,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            600
+          ],
+          "first_nonzero_signed_moment": 600
+        },
+        {
+          "packet_id": 816,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 832,
+          "B": 25,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 17,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -648
+          ],
+          "first_nonzero_signed_moment": -648
+        },
+        {
+          "packet_id": 848,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 864,
+          "B": 17,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1080
+          ],
+          "first_nonzero_signed_moment": 1080
+        },
+        {
+          "packet_id": 880,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 896,
+          "B": 21,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 912,
+          "B": 25,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 18,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            120
+          ],
+          "first_nonzero_signed_moment": 120
+        },
+        {
+          "packet_id": 928,
+          "B": 7,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 8,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            7
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            504
+          ],
+          "first_nonzero_signed_moment": 504
+        },
+        {
+          "packet_id": 944,
+          "B": 11,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 26,
+          "positive_odd_steps": [
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            6
+          ],
+          "first_nonzero_signed_moment": 6
+        },
+        {
+          "packet_id": 946,
+          "B": 33,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 27,
+          "positive_odd_steps": [
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            -2
+          ],
+          "first_nonzero_signed_moment": -2
+        },
+        {
+          "packet_id": 952,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 968,
+          "B": 23,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 18,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            120
+          ],
+          "first_nonzero_signed_moment": 120
+        },
+        {
+          "packet_id": 984,
+          "B": 3,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 11,
+          "positive_odd_steps": [
+            3,
+            7
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            -42
+          ],
+          "first_nonzero_signed_moment": -42
+        },
+        {
+          "packet_id": 986,
+          "B": 9,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1,
+            7
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            14
+          ],
+          "first_nonzero_signed_moment": 14
+        },
+        {
+          "packet_id": 992,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1008,
+          "B": 13,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 26,
+          "positive_odd_steps": [
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            6
+          ],
+          "first_nonzero_signed_moment": 6
+        },
+        {
+          "packet_id": 1009,
+          "B": 39,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 27,
+          "positive_odd_steps": [
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            -2
+          ],
+          "first_nonzero_signed_moment": -2
+        },
+        {
+          "packet_id": 1016,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1032,
+          "B": 27,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 1048,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1064,
+          "B": 23,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 18,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            120
+          ],
+          "first_nonzero_signed_moment": 120
+        },
+        {
+          "packet_id": 1080,
+          "B": 23,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 17,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -648
+          ],
+          "first_nonzero_signed_moment": -648
+        },
+        {
+          "packet_id": 1096,
+          "B": 25,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 17,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -648
+          ],
+          "first_nonzero_signed_moment": -648
+        },
+        {
+          "packet_id": 1112,
+          "B": 19,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 1128,
+          "B": 15,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1080
+          ],
+          "first_nonzero_signed_moment": 1080
+        },
+        {
+          "packet_id": 1144,
+          "B": 9,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 7,
+          "positive_odd_steps": [
+            1,
+            3,
+            5,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -1800
+          ],
+          "first_nonzero_signed_moment": -1800
+        },
+        {
+          "packet_id": 1160,
+          "B": 5,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 9,
+          "positive_odd_steps": [
+            5,
+            9
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            -90
+          ],
+          "first_nonzero_signed_moment": -90
+        },
+        {
+          "packet_id": 1161,
+          "B": 15,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 12,
+          "positive_odd_steps": [
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            30
+          ],
+          "first_nonzero_signed_moment": 30
+        },
+        {
+          "packet_id": 1168,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 1184,
+          "B": 27,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 1200,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1216,
+          "B": 23,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 1232,
+          "B": 37,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 26,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            24
+          ],
+          "first_nonzero_signed_moment": 24
+        },
+        {
+          "packet_id": 1248,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1264,
+          "B": 35,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 26,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            24
+          ],
+          "first_nonzero_signed_moment": 24
+        },
+        {
+          "packet_id": 1280,
+          "B": 35,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 26,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            24
+          ],
+          "first_nonzero_signed_moment": 24
+        },
+        {
+          "packet_id": 1296,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1312,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1328,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1344,
+          "B": 25,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 1360,
+          "B": 37,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 26,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            24
+          ],
+          "first_nonzero_signed_moment": 24
+        },
+        {
+          "packet_id": 1376,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1392,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1408,
+          "B": 21,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 18,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            120
+          ],
+          "first_nonzero_signed_moment": 120
+        },
+        {
+          "packet_id": 1424,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 1440,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1456,
+          "B": 27,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 17,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -648
+          ],
+          "first_nonzero_signed_moment": -648
+        },
+        {
+          "packet_id": 1472,
+          "B": 23,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 17,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -648
+          ],
+          "first_nonzero_signed_moment": -648
+        },
+        {
+          "packet_id": 1488,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1504,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1520,
+          "B": 25,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 17,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -648
+          ],
+          "first_nonzero_signed_moment": -648
+        },
+        {
+          "packet_id": 1536,
+          "B": 17,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 1552,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1568,
+          "B": 35,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 26,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            24
+          ],
+          "first_nonzero_signed_moment": 24
+        },
+        {
+          "packet_id": 1584,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1600,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1616,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1632,
+          "B": 31,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1648,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 1664,
+          "B": 23,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 18,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            120
+          ],
+          "first_nonzero_signed_moment": 120
+        },
+        {
+          "packet_id": 1680,
+          "B": 25,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 18,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            120
+          ],
+          "first_nonzero_signed_moment": 120
+        },
+        {
+          "packet_id": 1696,
+          "B": 33,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 23,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -72
+          ],
+          "first_nonzero_signed_moment": -72
+        },
+        {
+          "packet_id": 1712,
+          "B": 23,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 1728,
+          "B": 25,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 17,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -648
+          ],
+          "first_nonzero_signed_moment": -648
+        },
+        {
+          "packet_id": 1744,
+          "B": 23,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 18,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            120
+          ],
+          "first_nonzero_signed_moment": 120
+        },
+        {
+          "packet_id": 1760,
+          "B": 27,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 1776,
+          "B": 17,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1080
+          ],
+          "first_nonzero_signed_moment": 1080
+        },
+        {
+          "packet_id": 1792,
+          "B": 15,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1080
+          ],
+          "first_nonzero_signed_moment": 1080
+        },
+        {
+          "packet_id": 1808,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 1824,
+          "B": 25,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 17,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -648
+          ],
+          "first_nonzero_signed_moment": -648
+        },
+        {
+          "packet_id": 1840,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 1856,
+          "B": 19,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 1872,
+          "B": 27,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 1888,
+          "B": 19,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 1904,
+          "B": 23,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 18,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            120
+          ],
+          "first_nonzero_signed_moment": 120
+        },
+        {
+          "packet_id": 1920,
+          "B": 9,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 11,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            7
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -168
+          ],
+          "first_nonzero_signed_moment": -168
+        },
+        {
+          "packet_id": 1936,
+          "B": 25,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 1952,
+          "B": 25,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 1968,
+          "B": 27,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 1984,
+          "B": 21,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 18,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            120
+          ],
+          "first_nonzero_signed_moment": 120
+        },
+        {
+          "packet_id": 2000,
+          "B": 21,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 17,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -648
+          ],
+          "first_nonzero_signed_moment": -648
+        },
+        {
+          "packet_id": 2016,
+          "B": 17,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 2032,
+          "B": 19,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 2048,
+          "B": 9,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 11,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            7
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -168
+          ],
+          "first_nonzero_signed_moment": -168
+        },
+        {
+          "packet_id": 2064,
+          "B": 23,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 18,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            120
+          ],
+          "first_nonzero_signed_moment": 120
+        },
+        {
+          "packet_id": 2080,
+          "B": 27,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 2096,
+          "B": 21,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 2112,
+          "B": 19,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 2128,
+          "B": 19,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 2144,
+          "B": 19,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 2160,
+          "B": 13,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 10,
+          "positive_odd_steps": [
+            1,
+            1,
+            5,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            600
+          ],
+          "first_nonzero_signed_moment": 600
+        },
+        {
+          "packet_id": 2176,
+          "B": 7,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 8,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            7
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            504
+          ],
+          "first_nonzero_signed_moment": 504
+        },
+        {
+          "packet_id": 2192,
+          "B": 17,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 2208,
+          "B": 19,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 2224,
+          "B": 23,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 17,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -648
+          ],
+          "first_nonzero_signed_moment": -648
+        },
+        {
+          "packet_id": 2240,
+          "B": 19,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 2256,
+          "B": 11,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 9,
+          "positive_odd_steps": [
+            3,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -3240
+          ],
+          "first_nonzero_signed_moment": -3240
+        },
+        {
+          "packet_id": 2272,
+          "B": 9,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 7,
+          "positive_odd_steps": [
+            1,
+            3,
+            5,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -1800
+          ],
+          "first_nonzero_signed_moment": -1800
+        },
+        {
+          "packet_id": 2288,
+          "B": 13,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 9,
+          "positive_odd_steps": [
+            3,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -3240
+          ],
+          "first_nonzero_signed_moment": -3240
+        },
+        {
+          "packet_id": 2304,
+          "B": 5,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 5,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            7
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -1512
+          ],
+          "first_nonzero_signed_moment": -1512
+        },
+        {
+          "packet_id": 2320,
+          "B": 25,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 2336,
+          "B": 25,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 18,
+          "positive_odd_steps": [
+            1,
+            1,
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            120
+          ],
+          "first_nonzero_signed_moment": 120
+        },
+        {
+          "packet_id": 2352,
+          "B": 21,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 2368,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 2384,
+          "B": 25,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 17,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -648
+          ],
+          "first_nonzero_signed_moment": -648
+        },
+        {
+          "packet_id": 2400,
+          "B": 27,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 2416,
+          "B": 19,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 15,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -360
+          ],
+          "first_nonzero_signed_moment": -360
+        },
+        {
+          "packet_id": 2432,
+          "B": 29,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 20,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            216
+          ],
+          "first_nonzero_signed_moment": 216
+        },
+        {
+          "packet_id": 2448,
+          "B": 19,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1080
+          ],
+          "first_nonzero_signed_moment": 1080
+        },
+        {
+          "packet_id": 2464,
+          "B": 17,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1080
+          ],
+          "first_nonzero_signed_moment": 1080
+        },
+        {
+          "packet_id": 2480,
+          "B": 13,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 10,
+          "positive_odd_steps": [
+            1,
+            1,
+            5,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            600
+          ],
+          "first_nonzero_signed_moment": 600
+        },
+        {
+          "packet_id": 2496,
+          "B": 19,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 14,
+          "positive_odd_steps": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1944
+          ],
+          "first_nonzero_signed_moment": 1944
+        },
+        {
+          "packet_id": 2512,
+          "B": 15,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1080
+          ],
+          "first_nonzero_signed_moment": 1080
+        },
+        {
+          "packet_id": 2528,
+          "B": 15,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1080
+          ],
+          "first_nonzero_signed_moment": 1080
+        },
+        {
+          "packet_id": 2544,
+          "B": 7,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 8,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            7
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            504
+          ],
+          "first_nonzero_signed_moment": 504
+        },
+        {
+          "packet_id": 2560,
+          "B": 9,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 7,
+          "positive_odd_steps": [
+            1,
+            3,
+            5,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -1800
+          ],
+          "first_nonzero_signed_moment": -1800
+        },
+        {
+          "packet_id": 2576,
+          "B": 15,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1080
+          ],
+          "first_nonzero_signed_moment": 1080
+        },
+        {
+          "packet_id": 2592,
+          "B": 15,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1080
+          ],
+          "first_nonzero_signed_moment": 1080
+        },
+        {
+          "packet_id": 2608,
+          "B": 9,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 7,
+          "positive_odd_steps": [
+            1,
+            3,
+            5,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -1800
+          ],
+          "first_nonzero_signed_moment": -1800
+        },
+        {
+          "packet_id": 2624,
+          "B": 5,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 5,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            7
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -1512
+          ],
+          "first_nonzero_signed_moment": -1512
+        },
+        {
+          "packet_id": 2640,
+          "B": 13,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 12,
+          "positive_odd_steps": [
+            1,
+            3,
+            3,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            1080
+          ],
+          "first_nonzero_signed_moment": 1080
+        },
+        {
+          "packet_id": 2656,
+          "B": 11,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 10,
+          "positive_odd_steps": [
+            1,
+            1,
+            5,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            600
+          ],
+          "first_nonzero_signed_moment": 600
+        },
+        {
+          "packet_id": 2672,
+          "B": 7,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 8,
+          "positive_odd_steps": [
+            1,
+            1,
+            3,
+            7
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            504
+          ],
+          "first_nonzero_signed_moment": 504
+        },
+        {
+          "packet_id": 2688,
+          "B": 3,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 3,
+          "positive_odd_steps": [
+            1,
+            1,
+            5,
+            7
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            -840
+          ],
+          "first_nonzero_signed_moment": -840
+        },
+        {
+          "packet_id": 2704,
+          "B": 1,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 0,
+          "positive_odd_steps": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            2520
+          ],
+          "first_nonzero_signed_moment": 2520
+        },
+        {
+          "packet_id": 2720,
+          "B": 1,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 2,
+          "positive_odd_steps": [
+            7,
+            9
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            126
+          ],
+          "first_nonzero_signed_moment": 126
+        },
+        {
+          "packet_id": 2721,
+          "B": 3,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 5,
+          "positive_odd_steps": [
+            3,
+            7
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            -42
+          ],
+          "first_nonzero_signed_moment": -42
+        },
+        {
+          "packet_id": 2728,
+          "B": 5,
+          "dimension": 4,
+          "class_count": 16,
+          "c_min": 4,
+          "positive_odd_steps": [
+            3,
+            3,
+            5,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            0,
+            0,
+            5400
+          ],
+          "first_nonzero_signed_moment": 5400
+        },
+        {
+          "packet_id": 2744,
+          "B": 1,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 2,
+          "positive_odd_steps": [
+            1,
+            15
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            30
+          ],
+          "first_nonzero_signed_moment": 30
+        },
+        {
+          "packet_id": 2745,
+          "B": 3,
+          "dimension": 2,
+          "class_count": 4,
+          "c_min": 7,
+          "positive_odd_steps": [
+            1,
+            5
+          ],
+          "signed_moments_0_through_r": [
+            0,
+            0,
+            -10
+          ],
+          "first_nonzero_signed_moment": -10
+        }
+      ]
+    }
+  ],
+  "boundaries": {
+    "n3_first_signed_moment": -1,
+    "n5_B1_second_signed_moment": 6
+  }
+}
