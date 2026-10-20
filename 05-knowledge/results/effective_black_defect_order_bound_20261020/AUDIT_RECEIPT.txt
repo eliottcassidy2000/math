@@ -1,0 +1,39 @@
+INDEPENDENT AUDIT RECEIPT
+2026-10-20
+
+Verdict: APPROVED, with the stated hypotheses n>=3 and integer d>=0.
+
+The cycle-cut calculation, both connectivity branches, averaging algebra,
+and half-supported permutation argument were rederived independently.
+Particular challenges included q=1, q=2, m=1, non-self-converse tournaments,
+the exact distinction between permutation order and permutation sign,
+conjugate support disjointness, the removable cycle's size, and all strict
+versus non-strict constants. No mathematical gap was found.
+
+Moon's Theorem 1 was independently read in the primary PDF, Theorem 1,
+p. 297; it supports the exact cycle-length and Hamiltonicity uses.
+No Dixon or Thomassen counting theorem is used. The previous sharper
+Delta=2 classification is neither needed nor changed.
+
+The independent supplementary programs checked every labelled tournament
+through order 6 (22,890 strong cases; 62,234 Hamilton cycles), and 264,967
+rotation frames with 4,546,185 small vertex-deletion checks. All passed.
+The full coverage and reproduction instructions are in VERIFICATION.txt.
+The general theorem is analytic; finite testing is not its logical basis.
+
+The mathematical text of the original proof candidate is retained in
+provenance/ORIGINAL_CANDIDATE.txt, with an internal author label omitted.
+Its historical "audit pending" statements are retained as provenance and
+are superseded by this receipt. The actual original source is unchanged.
+Original source SHA-256:
+daba2ed5efcb2bfe1533179620a0e5f4ac733ec2a79d0e4263da7167a6104865
+Public presentation copy SHA-256:
+28d4c249923c7061b9882177c46bc7dbc3f5fb085bd7e83ce97255050e76e620
+
+The clean PROOF.txt expands and reorganizes that argument, without changing
+the theorem or adding a new scientific claim. This receipt approves the
+explicit order bound and inverse inequality, not sharpness, a general
+extremal classification, or unrelated results.
+
+Executable binaries, unrelated working notes, and earlier classification
+packets are not part of this publication packet.

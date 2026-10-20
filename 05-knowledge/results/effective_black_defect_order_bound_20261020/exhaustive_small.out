@@ -1,0 +1,14 @@
+Independent labelled-tournament scan; direct permutations and reachability
+n=3 strong=2 cycles=2 q1=2 q_ge_2=0
+defect_histogram: 0:2
+cycle_q_histogram: 1:2
+n=4 strong=24 cycles=24 q1=0 q_ge_2=24
+defect_histogram: 2:24
+cycle_q_histogram: 4:24
+n=5 strong=544 cycles=768 q1=48 q_ge_2=720
+defect_histogram: 0:24 4:40 6:120 8:240 10:120
+cycle_q_histogram: 1:48 5:720
+n=6 strong=22320 cycles=61440 q1=0 q_ge_2=61440
+defect_histogram: 6:240 9:480 11:480 12:1680 15:1440 19:1440 22:1440 23:2880 25:1440 26:720 29:1440 30:720 31:1440 32:720 33:1440 37:2880 43:1440
+cycle_q_histogram: 2:960 6:60480
+PASS: all assertions, n=3,...,6

@@ -1,0 +1,13 @@
+q=1 m=3 n=3 frames=1 required_kappa=1 deletion_checks=1 PASS
+q=1 m=5 n=5 frames=2 required_kappa=2 deletion_checks=12 PASS
+q=1 m=7 n=7 frames=4 required_kappa=3 deletion_checks=116 PASS
+q=1 m=9 n=9 frames=8 required_kappa=3 deletion_checks=368 PASS
+q=1 m=11 n=11 frames=16 required_kappa=4 deletion_checks=3712 PASS
+q=1 m=13 n=13 frames=32 required_kappa=5 deletion_checks=34976 PASS
+q=1 m=15 n=15 frames=64 required_kappa=5 deletion_checks=124224 PASS
+q=2 m=3 n=6 frames=8 required_kappa=2 deletion_checks=56 PASS
+q=2 m=5 n=10 frames=128 required_kappa=3 deletion_checks=7168 PASS
+q=2 m=7 n=14 frames=2048 required_kappa=4 deletion_checks=962560 PASS
+q=3 m=3 n=9 frames=512 required_kappa=2 deletion_checks=5120 PASS
+q=4 m=3 n=12 frames=262144 required_kappa=2 deletion_checks=3407872 PASS
+TOTAL frames=264967 deletion_checks=4546185 PASS

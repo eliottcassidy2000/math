@@ -1,0 +1,58 @@
+INDEPENDENT FINITE VALIDATION
+2026-10-20
+
+The analytic proof establishes the theorem for every order. These programs
+are independent checks of its sensitive ingredients, not a finite proof
+of the general order bound. They were written independently for this audit
+and do not import earlier research verifiers or datasets.
+
+1. exhaustive_small.cpp
+
+Enumerates every labelled tournament at orders n=3,4,5,6. Strongness and
+vertex connectivity are computed by forward/backward reachability on
+vertex subsets. Every vertex permutation is tested directly to count
+automorphisms and Hamilton words. Blue words are determined by testing
+whether their positional reversals reverse every edge. Every directed
+Hamilton cycle modulo starting position is checked.
+
+Assertions verify odd automorphism order; integer word-orbit counts;
+exactly zero or gcd(2,q) blue cycle-cut orbits; q<=Delta+2; the stronger
+q-blue_cuts<=Delta; the orbit-degree lower bound; and the two connectivity
+bounds, including the separate q=1 case. The numerical order inequalities
+are checked at d=Delta, although at these small orders they are very coarse.
+
+TOTAL: 22,890 strong labelled tournaments and 62,234 Hamilton cycles.
+All assertions passed. Includes non-self-converse tournaments, q=1 cycles
+at orders 3 and 5, and q=2 cycles at order 6. Detailed histograms are in
+exhaustive_small.out.
+
+2. check_rotation_frames.cpp
+
+Constructs every tournament invariant under x->x+q and containing the
+fixed Hamilton cycle 0->1->...->qm-1->0 for the pairs (q,m):
+
+(1,3), (1,5), (1,7), (1,9), (1,11), (1,13), (1,15),
+(2,3), (2,5), (2,7), (3,3), (4,3).
+
+It chooses orientations on unordered-pair orbits, forces the Hamilton
+edges, verifies each size-m orbit is regular, and tests every vertex
+deletion set smaller than ceil(m/3) for q=1, or ceil(m/2) for q>=2.
+Strongness is checked by two-sided reachability. The specified rotation
+subgroup need not be maximal, which is sufficient for this lemma.
+
+TOTAL: 264,967 rotation frames and 4,546,185 deletion checks.
+All passed. The checks explicitly include the q=1 case through order 15,
+the q=2 boundary-matching case through order 14, and q=3,4 orbit systems.
+Full details are in check_rotation_frames.out.
+
+REPRODUCE FROM THIS DIRECTORY
+
+g++ -O2 -std=c++17 exhaustive_small.cpp -o exhaustive_small
+./exhaustive_small
+
+g++ -O2 -std=c++17 check_rotation_frames.cpp -o check_rotation_frames
+./check_rotation_frames
+
+No external libraries are required. Compile without -DNDEBUG, because
+assertions are part of the checks. The expected standard outputs are
+included as plaintext; executable binaries are intentionally not included.
