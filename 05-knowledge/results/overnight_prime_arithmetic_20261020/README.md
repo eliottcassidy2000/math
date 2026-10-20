@@ -2,6 +2,8 @@
 
 **ONGOING SESSION, 20 October 2026.** This is a research-navigation checkpoint, not a final session close-out. The [publication ledger](PUBLICATION_LEDGER.md) pins twenty-four approved published packets (twenty-three research packets and the earlier navigation checkpoint) at baseline `28bb8b0406cab734f3174b8ff45b70e128ff02f8`. Later approved continuations may supersede the frontier below; work still under review is not a proved dependency.
 
+**20 October 2026, later incoming update:** Commit `127698803818637f07ae89c32ac5d04c59161292` replaced the five THM-4725/4726/4727 and HYP-9342/9343 reservations with pre-audit work, outside this checkpoint’s proof graph. The RESERVED descriptions below record the checkpoint baseline, not their current status.
+
 **Main distinction:** several precise families are now closed, not general Collatz, complex JC, arbitrary odd-group symmetry refinement, or all prime-field definability. “Sign-even” means trivial edge-reversal character on every graph automorphism, not even vertex degree. Labelled maps, normalizer orbits and full isomorphism types are kept separate.
 
 ## 1. The Boolean-affine obstruction and its sharp degree successor

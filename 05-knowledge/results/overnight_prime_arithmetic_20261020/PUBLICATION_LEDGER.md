@@ -64,11 +64,11 @@ The five incoming files below remain **RESERVED empty stubs**, outside the proof
 
 | Reserved file | Preserved SHA-256 |
 |---|---|
-| [THM-4725-reserved-mac-mini-2026-10-20-jcweb](../../../01-canon/theorems/THM-4725-reserved-mac-mini-2026-10-20-jcweb.md) | `2d9db41694cf72fbde619f5bd8730c9c3e6bebcca75025043fda6311ed3581d4` |
-| [THM-4726-reserved-mac-mini-2026-10-20-jcweb](../../../01-canon/theorems/THM-4726-reserved-mac-mini-2026-10-20-jcweb.md) | `c0273b0236c42a158ebc566a2b289c2e4ee2e021c5d7989b05575eac27a55991` |
-| [THM-4727-reserved-mac-mini-2026-10-20-jcweb](../../../01-canon/theorems/THM-4727-reserved-mac-mini-2026-10-20-jcweb.md) | `d0bfc585e5b46a41baf24d2b6def4e01c6c2bf32c0c2b741b5fd0605d426dd72` |
-| [HYP-9342-reserved-mac-mini-2026-10-20-jcweb](../../hypotheses/HYP-9342-reserved-mac-mini-2026-10-20-jcweb.md) | `f86498bf95799248badda583d08005ffc9e76c66b46646fa7a4fb880f9098204` |
-| [HYP-9343-reserved-mac-mini-2026-10-20-jcweb](../../hypotheses/HYP-9343-reserved-mac-mini-2026-10-20-jcweb.md) | `d48690c48f1d9650a4fca867bf8cefdcad79431595b8459ff97de2f464b6cc4e` |
+| [THM-4725-reserved-mac-mini-2026-10-20-jcweb](https://github.com/eliottcassidy2000/math/blob/ed0c5efe6e8537aa358ace9cc4c81f2c18f0c088/01-canon/theorems/THM-4725-reserved-mac-mini-2026-10-20-jcweb.md) | `2d9db41694cf72fbde619f5bd8730c9c3e6bebcca75025043fda6311ed3581d4` |
+| [THM-4726-reserved-mac-mini-2026-10-20-jcweb](https://github.com/eliottcassidy2000/math/blob/ed0c5efe6e8537aa358ace9cc4c81f2c18f0c088/01-canon/theorems/THM-4726-reserved-mac-mini-2026-10-20-jcweb.md) | `c0273b0236c42a158ebc566a2b289c2e4ee2e021c5d7989b05575eac27a55991` |
+| [THM-4727-reserved-mac-mini-2026-10-20-jcweb](https://github.com/eliottcassidy2000/math/blob/ed0c5efe6e8537aa358ace9cc4c81f2c18f0c088/01-canon/theorems/THM-4727-reserved-mac-mini-2026-10-20-jcweb.md) | `d0bfc585e5b46a41baf24d2b6def4e01c6c2bf32c0c2b741b5fd0605d426dd72` |
+| [HYP-9342-reserved-mac-mini-2026-10-20-jcweb](https://github.com/eliottcassidy2000/math/blob/ed0c5efe6e8537aa358ace9cc4c81f2c18f0c088/05-knowledge/hypotheses/HYP-9342-reserved-mac-mini-2026-10-20-jcweb.md) | `f86498bf95799248badda583d08005ffc9e76c66b46646fa7a4fb880f9098204` |
+| [HYP-9343-reserved-mac-mini-2026-10-20-jcweb](https://github.com/eliottcassidy2000/math/blob/ed0c5efe6e8537aa358ace9cc4c81f2c18f0c088/05-knowledge/hypotheses/HYP-9343-reserved-mac-mini-2026-10-20-jcweb.md) | `d48690c48f1d9650a4fca867bf8cefdcad79431595b8459ff97de2f464b6cc4e` |
 
 ## Navigation-only change and prior routes
 
