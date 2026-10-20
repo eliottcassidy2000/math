@@ -1,0 +1,40 @@
+{
+  "status": "PASS: independent complete-universe reconstruction and certificate replay",
+  "producer_receipt_sha256": "ad8e2b15671eddec7b6a5c6d0c41236af96ee5f7ee22dfd6555d499c2720d108",
+  "audit_source_sha256_lf": "6526dfc73df935a2e3515fccbc106210eefc6f80aa077d1d470167eb7d77c22f",
+  "total_certificates": 561,
+  "census": [
+    {
+      "n": 4,
+      "all_blue_presentations": 4,
+      "complete_retained_matrices": 3,
+      "cycle_certificates_replayed": 3,
+      "imbalance_histogram": {
+        "-1": 2,
+        "1": 1
+      }
+    },
+    {
+      "n": 6,
+      "all_blue_presentations": 64,
+      "complete_retained_matrices": 21,
+      "cycle_certificates_replayed": 21,
+      "imbalance_histogram": {
+        "-1": 10,
+        "1": 11
+      }
+    },
+    {
+      "n": 8,
+      "all_blue_presentations": 4096,
+      "complete_retained_matrices": 537,
+      "cycle_certificates_replayed": 537,
+      "imbalance_histogram": {
+        "-3": 16,
+        "-1": 246,
+        "1": 253,
+        "3": 22
+      }
+    }
+  ]
+}

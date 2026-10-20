@@ -1,0 +1,5 @@
+Golden21 zero-support distributions: [{'in_bank': True, 'zero_rows': 10, 'surviving_orbits': 33, 'outside_target_orbits': 24, 'targets': 21}, {'in_bank': False, 'zero_rows': 8, 'surviving_orbits': 39, 'outside_target_orbits': 30, 'targets': 84}]
+Distinct complete21 target fingerprints: 105
+Incoming14-probe covers independently replayed: 105
+GL3 target orbits: [21, 84]
+PASS; this is not a physical counterexample or a full21 tensor-certification theorem.

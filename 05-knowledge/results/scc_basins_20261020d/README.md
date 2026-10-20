@@ -73,6 +73,9 @@ argument excluding the even alternating-score obstruction. It uses two
 explicitly CITED theorems of Thomassen; the original full text could not
 be retrieved, and no audit of that original proof is claimed. The exact
 imported statements and access limit are stated in moves.md, Sections9,11.
+The [independent residual audit](moves_residual_audit.md) checks the
+unbounded cut proof and reconstructs the complete small blue universe
+without importing the producer code.
 Complete fixed-blue-path checks and the uniform reductions cover
 **every nonstrong mixed source through total order eleven**.
 This is not a full order-eleven metagraph census.
@@ -200,7 +203,50 @@ limiting leg ratio is1:2. The isosceles limit instead requires Euclid
 parameter ratio `1+sqrt2`. These are explicit surviving connections and
 explicit boundaries of the original analogy.
 
-## 5. Exact controls, reproduction, and next proof obligations
+## 5. Incoming work integrated after the first proofs
+
+The checkpoint also incorporates commits 760a29ae33 and a852aca417.
+We read the
+[endpoint-ear proof](../deficiency_three_20261020/black.md),
+[larger-ear repair](../deficiency_three_20261020/ear_probe.md), and
+[physical junction certificate](../deficiency_three_20261020/boundary.md)
+before using them.
+
+The incoming R4 construction improves every paired-R4 blue bypass to
+**three** black path reversals. Consequently the six-move end-dissolution
+bound in our original proof improves to four. To transport its exact
+labelled certificate to our K convention, replace three reversal words
+`(Q1,Q2,Q3)` by `(Q1,reverse(Q2),Q3)` as K words. Converse after the odd
+steps gives exactly the original K target; path validity and blackness
+are preserved. The existing six-step receipts remain valid witnesses.
+The larger-ear theorem adds arbitrary-order outer SCCs with specified
+closing/chord arcs and a nonautomorphic cyclic rotation; these conditions
+retain the boundary data lost by a bare SCC-size invariant.
+
+The physical junction theorem uses fourteen zero closure measurements to
+force the target support, then Kempe switching forces a uniform tensor
+`mJ`; one normalization fixes m. It certifies this particular tensor
+without reconstructing the entire 91-coordinate space. A separate rooted
+minor certificate remains necessary. This provides a concrete positive
+direction beyond the seven-dimensional measurement blindspace.
+
+We then tested whether our golden 21-probe bank supplies that certificate.
+The [complete comparison](arithmetic_junction_certificate.md) separates
+two predicates. Its full measurement vectors distinguish all 105
+junction labels, but its zero rows leave 24 unwanted colour orbits for
+each of the 21 bank targets and 30 for each of the other 84 targets.
+Thus this particular zero-support proof fails. The incoming fourteen
+target-adapted probes pass independently for all 105 targets. We have
+not inferred a physical counterexample or failure of all twenty-one
+measurement equalities from the weaker support-cover failure.
+
+The incoming synchronized-triangle comparison also keeps an important
+hostile: the two centres have the same feedback count, moved support,
+automorphism order and Hamiltonian count, but different blue counts.
+The [retained relative-orientation coordinate](../prime_batch_triangle_20261020/CONNECTIONS.md)
+must survive any transfer to the fixed-deficit series.
+
+## 6. Exact controls, reproduction, and next proof obligations
 
 All new finite conclusions retain their source, universe, hostile
 controls, and JSON receipt. Checkers use raising conditions that remain
@@ -212,6 +258,7 @@ active under `python -O`.
 |`moves.py`, `moves_five.py`|Uniform boundary ledgers, complete small outer presentations, literal black detours|
 |`moves_endpoint_probe.py`|Every fixed-blue-path centre through order9; identifies fixed-start failures|
 |`moves_residual.py`|All 3,21,537 strong two-score blue presentations at orders4,6,8 have explicit unbalanced cycle edges|
+|`moves_residual_audit.py`|Independent universe reconstruction, exact certificate-set equality, and all 561 cycle replays|
 |`moves_leaf.py`, `moves_end.py`|All central R4 leaf cases; 1,101 sink contexts through order7|
 |`arithmetic_dissolution.py`|1,100 end-prefix presentations; 1,096 active targets|
 |`arithmetic_interior.py`|4,400 context pairs; 4,391 active targets, including blue-intermediate hostiles|
@@ -220,6 +267,7 @@ active under `python -O`.
 |`centers.py`|Complete inherited low-deficit census through order9; 57 slack-sector words; 1,872 leaf decodings through order40|
 |`strata.py`|Two independent word-series enumerations through size30 and mass81 on a declared restricted alphabet|
 |`arithmetic_probe.py`|Fibonacci codec, actual tournament controls, exact closure-bank ranks and arithmetic clocks|
+|`arithmetic_junction_certificate.py`|All 105 target labels and 2,187 colour words; golden-bank support failures and successful target-adapted covers|
 |`incoming_replay.py`|Independent reconstruction plus all 2,121,984 incoming residual certificates|
 
 Run a listed checker from the repository root, for example:
