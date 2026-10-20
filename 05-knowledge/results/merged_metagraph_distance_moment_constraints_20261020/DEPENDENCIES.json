@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "repository": "eliottcassidy2000/math",
+  "local_base_commit": "129154b04024f1246570592ac8df4db249712bc4",
+  "new_claim_status": "PROVED identities and necessary constraints for all n>=3; FINITE-EXACT implementation audits n=3..6 and n=5 hostile",
+  "dependencies": [
+    {
+      "path": "01-canon/theorems/THM-781-hamiltonian-path-inverse-metagraph-fibre.md",
+      "sha256": "0020cbaac8d1321b40d5f0d904ff7a288ffd14a02f3fa94b3d658381600f3ca0",
+      "role": "Mathematical dependency",
+      "statement_used": "Exact HP(T)/Aut(T) fibre and odd ordinary fibre mass."
+    },
+    {
+      "path": "01-canon/theorems/THM-346-tiling-quotient-bucket-balance.md",
+      "sha256": "e120589f2c9b70ed7870285771dffe766831da08d960bbf3f4eeb73df86944f7",
+      "role": "Inherited mechanism",
+      "statement_used": "All-Hamming-layer half-edge balance; non-equitability caution."
+    },
+    {
+      "path": "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+      "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
+      "role": "Mathematical dependency",
+      "statement_used": "Reflection preserves merged fibres; complement-line loop normalization and colour definitions."
+    },
+    {
+      "path": "01-canon/theorems/THM-1936-signed-redei-join-multiplicative.md",
+      "sha256": "c2a11b164fa6d4082d303c8f8a992e97f80f5e6d38e0b9569f8f53dc4b2f1357",
+      "role": "Mathematical dependency and prior object",
+      "statement_used": "Signed Hamiltonian-path count R(T), relabelling sign gauge, and oddness."
+    },
+    {
+      "path": "01-canon/theorems/THM-830-b3-deletion-deck-mirror-current-calculus.md",
+      "sha256": "abf03828bb5d1e56c5e464037ac406b0a56f05203835c796c5b95d4fd43825b3",
+      "role": "Prior-work scope boundary",
+      "statement_used": "Existing exact-defect groupoid and Hamming composition carrier."
+    },
+    {
+      "path": "01-canon/theorems/THM-851-node-coloured-defect-coherent-closure.md",
+      "sha256": "b646ac77c1ad48254336ebfc73626ff0fd0cf01f54dfeb1d63178baa4c8cc50c",
+      "role": "Prior-work scope boundary",
+      "statement_used": "Existing node-coloured factor-deck refinement; not reasserted as new."
+    },
+    {
+      "path": "01-canon/theorems/THM-848-hamiltonian-path-walsh-needle-stalk.md",
+      "sha256": "723daf35e713597dc6345e7c58837e17dfc94b4fed9677968ffba35805b00684",
+      "role": "Prior-work scope boundary",
+      "statement_used": "Full-arc-cube H observable differs from present fixed-path fibre-indicator carrier."
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-3809-merged-metagraph-bucket-conjecture-atlas.md",
+      "sha256": "29511b0794b95be220fa3cf5b870480b0e2b4ea2e791eda7601a4aa362aa6aac",
+      "role": "Historical hostile motivation, not proof dependency",
+      "statement_used": "Count/colour-preserving rewiring underdetermines arrangements."
+    }
+  ]
+}

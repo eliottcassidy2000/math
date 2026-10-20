@@ -1,0 +1,6 @@
+PASS 3 nodes 2 ranks [1, 1] leak_rank 0
+PASS 4 nodes 3 ranks [1, 2, 2, 1] leak_rank 2
+PASS 5 nodes 10 ranks [1, 4, 8, 7, 7, 4, 1] leak_rank 9
+PASS 6 nodes 34 ranks [1, 6, 16, 24, 27, 26, 26, 17, 14, 5, 1] leak_rank 33
+PASS signed Redei bridge: 49 merged nodes n=3..6
+PASS hostile controls and exact negative principal minor
