@@ -1,0 +1,390 @@
+{
+  "checks": 994,
+  "four_class_weight_three_boundary": [
+    {
+      "D": 0,
+      "degrees": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "mask": 11
+    },
+    {
+      "D": 1,
+      "degrees": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "mask": 12
+    },
+    {
+      "D": -2,
+      "degrees": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "mask": 13
+    },
+    {
+      "D": -2,
+      "degrees": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "mask": 14
+    },
+    {
+      "D": 0,
+      "degrees": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "mask": 15
+    },
+    {
+      "D": 1,
+      "degrees": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "mask": 18
+    },
+    {
+      "D": -2,
+      "degrees": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "mask": 19
+    },
+    {
+      "D": 0,
+      "degrees": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "mask": 21
+    },
+    {
+      "D": -2,
+      "degrees": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "mask": 22
+    },
+    {
+      "D": 0,
+      "degrees": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "mask": 23
+    },
+    {
+      "D": -2,
+      "degrees": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "mask": 26
+    },
+    {
+      "D": 0,
+      "degrees": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "mask": 27
+    },
+    {
+      "D": -2,
+      "degrees": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "mask": 28
+    },
+    {
+      "D": 0,
+      "degrees": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "mask": 29
+    },
+    {
+      "D": 1,
+      "degrees": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "mask": 33
+    },
+    {
+      "D": -2,
+      "degrees": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "mask": 35
+    },
+    {
+      "D": -2,
+      "degrees": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "mask": 37
+    },
+    {
+      "D": 0,
+      "degrees": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "mask": 38
+    },
+    {
+      "D": 0,
+      "degrees": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "mask": 39
+    },
+    {
+      "D": -2,
+      "degrees": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "mask": 41
+    },
+    {
+      "D": 0,
+      "degrees": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "mask": 43
+    },
+    {
+      "D": -2,
+      "degrees": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "mask": 44
+    },
+    {
+      "D": 0,
+      "degrees": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "mask": 46
+    },
+    {
+      "D": -2,
+      "degrees": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "mask": 49
+    },
+    {
+      "D": -2,
+      "degrees": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "mask": 50
+    },
+    {
+      "D": 0,
+      "degrees": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "mask": 53
+    },
+    {
+      "D": 0,
+      "degrees": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "mask": 54
+    },
+    {
+      "D": 0,
+      "degrees": [
+        0,
+        2,
+        2,
+        2
+      ],
+      "mask": 56
+    },
+    {
+      "D": 0,
+      "degrees": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "mask": 57
+    },
+    {
+      "D": 0,
+      "degrees": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "mask": 58
+    },
+    {
+      "D": 0,
+      "degrees": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "mask": 60
+    },
+    {
+      "D": 0,
+      "degrees": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "mask": 63
+    }
+  ],
+  "graph_rows": [
+    {
+      "all_graph_types": 1,
+      "defect_histogram": {
+        "0": 1
+      },
+      "explicit_packing_stabilizers_checked": 0,
+      "n": 1,
+      "sum_b": 0,
+      "sum_e": 0
+    },
+    {
+      "all_graph_types": 2,
+      "defect_histogram": {
+        "0": 2
+      },
+      "explicit_packing_stabilizers_checked": 0,
+      "n": 2,
+      "sum_b": 0,
+      "sum_e": 0
+    },
+    {
+      "all_graph_types": 4,
+      "defect_histogram": {
+        "0": 4
+      },
+      "explicit_packing_stabilizers_checked": 6,
+      "n": 3,
+      "sum_b": 1,
+      "sum_e": 1
+    },
+    {
+      "all_graph_types": 11,
+      "defect_histogram": {
+        "0": 11
+      },
+      "explicit_packing_stabilizers_checked": 12,
+      "n": 4,
+      "sum_b": 2,
+      "sum_e": 2
+    },
+    {
+      "all_graph_types": 34,
+      "defect_histogram": {
+        "0": 34
+      },
+      "explicit_packing_stabilizers_checked": 60,
+      "n": 5,
+      "sum_b": 4,
+      "sum_e": 4
+    },
+    {
+      "all_graph_types": 156,
+      "defect_histogram": {
+        "-1": 1,
+        "0": 154,
+        "1": 1
+      },
+      "explicit_packing_stabilizers_checked": 456,
+      "n": 6,
+      "sum_b": 11,
+      "sum_e": 11
+    }
+  ],
+  "status": "PASS"
+}
