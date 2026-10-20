@@ -1,0 +1,59 @@
+{
+  "runtime_dependencies": [
+    "Python3 with SymPy for the main Fourier/certificate verifier",
+    "C++17 compiler for the two independent complete local scans"
+  ],
+  "runtime_atlas_dependencies": [],
+  "claims_are_self_contained": true,
+  "inherited_context": [
+    {
+      "staged_source": "math/01-canon/theorems/THM-781-hamiltonian-path-inverse-metagraph-fibre.md",
+      "required_destination": "01-canon/theorems/THM-781-hamiltonian-path-inverse-metagraph-fibre.md",
+      "bytes": 9507,
+      "sha256": "0020cbaac8d1321b40d5f0d904ff7a288ffd14a02f3fa94b3d658381600f3ca0",
+      "use": "Inherited HP/Aut fibre interpretation; the new certificate proof is reproduced self-contained."
+    },
+    {
+      "staged_source": "math/01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+      "required_destination": "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+      "bytes": 34249,
+      "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
+      "use": "Definition of the coloured three-sorted metagraph, reflection, complement and loop conventions."
+    },
+    {
+      "staged_source": "math/01-canon/theorems/THM-801-mobius-cech-descent-and-pure-cubic-colour-law.md",
+      "required_destination": "01-canon/theorems/THM-801-mobius-cech-descent-and-pure-cubic-colour-law.md",
+      "bytes": 21685,
+      "sha256": "6c46f1ded366dada9173cb1a7a418ed87047a0dfb3f45afd99d12ad15f0afc0c",
+      "use": "Context only: finite recursive codecs are not used as all-order sufficiency results."
+    },
+    {
+      "staged_source": "math/01-canon/theorems/THM-809-n8-lower-first-metagraph-codec.md",
+      "required_destination": "01-canon/theorems/THM-809-n8-lower-first-metagraph-codec.md",
+      "bytes": 6797,
+      "sha256": "a4a09abc83e8083048bc385709e2a7e7c91bf362999cb988627a637734bd6ac3",
+      "use": "Context only: finite recursive injectivity is distinguished from realizability."
+    },
+    {
+      "staged_source": "session14-metagraph-lifts/public-packet/PROOF.md",
+      "required_destination": "05-knowledge/results/merged_metagraph_distance_moment_constraints_20261020/PROOF.md",
+      "bytes": 14345,
+      "sha256": "c70bb410b38be2cf7bd7ccc9d6b44f2f513733f9581285cff0a129404648dac5",
+      "use": "Prior necessary Walsh/Gram/covariance constraints; their preservation by the new hostile is tested here."
+    },
+    {
+      "staged_source": "session14-metagraph-transport/public/endpoint-transport-and-complement-leakage.md",
+      "required_destination": "05-knowledge/results/merged_metagraph_endpoint_transport_20261020/endpoint-transport-and-complement-leakage.md",
+      "bytes": 21387,
+      "sha256": "2df36d3726740274bd33792231b6f92d21f209adaac41ced38195ff8ea2ce736",
+      "use": "Prior endpoint and score-shell transport constraints; independently recomputed in the hostile verifier."
+    },
+    {
+      "staged_source": "session14-metagraph-foundations/public-packet/FOUNDATIONS_AND_MIXED_LANDING.md",
+      "required_destination": "05-knowledge/results/merged_metagraph_purity_and_strong_core_20261020/FOUNDATIONS_AND_MIXED_LANDING.md",
+      "bytes": 14039,
+      "sha256": "f8ffbbe396f04d07c8981f5a2f34aa36d8e52b1e80738cf7db7588031ea25f25",
+      "use": "Historical object/convention reconciliation; not an imported executable census."
+    }
+  ]
+}

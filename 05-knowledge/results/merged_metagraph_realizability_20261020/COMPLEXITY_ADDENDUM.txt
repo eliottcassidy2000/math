@@ -1,0 +1,156 @@
+BINARY-INPUT COMPLEXITY ADDENDUM AND GRAPH-ISOMORPHISM REDUCTION
+2026-10-20 UTC. PROVED for the explicit binary encodings below.
+
+This addendum supplements Theorem 1 of REALIZABILITY.txt. It establishes
+NP membership and a polynomial-time reduction to four-coloured simple graph
+isomorphism, not a polynomial-time recognition or witness-finding algorithm.
+Succinct encodings with unlisted nodes are outside its scope.
+
+A. Explicit encoding and bit lengths
+
+Take n in binary and either:
+(i) two explicit k by k symmetric nonnegative-integer matrices of blue and
+    black multiplicities, all entries in binary; or
+(ii) an explicit list of k nonempty vertices and the nonzero coloured
+     unordered-pair multiplicities in binary.
+Loops are permitted. A loop of weight w contributes 2w half-edges; an edge
+between distinct vertices of weight w contributes w at each endpoint.
+Equivalently, half-edge incidence matrices already have doubled diagonals.
+Reject malformed encodings, negative weights, asymmetry, and empty vertices.
+Let L be the complete binary input length and S the total half-edge count.
+These are explicit encodings, not circuits, formulas or histograms that
+implicitly specify unlisted nodes.
+
+For dense matrices L=Omega(k^2). For explicit sparse support, each nonempty
+vertex is incident to a support edge, so the number of support records is
+at least k/2, even with loops, and L=Omega(k). Summing the input weights to
+obtain S is polynomial in L. The bit length of S is O(L).
+
+B. Safe preliminary rejection, before expansion
+
+The following preprocessing avoids assuming that a claimed n or a binary
+edge multiplicity is small.
+
+1. Check n>=3. Compute m=(n-1)(n-2)/2 by binary arithmetic. Test that S is a
+   power of two and that bitlength(S)-1=m. Do not first allocate 2^m.
+   If the test fails, reject. If it succeeds, S=N and m=O(L), so n^2=O(L).
+   The calculation of m itself needs only O(log n) output bits, even on
+   inputs with a huge binary n; those inputs fail the exponent comparison.
+
+2. Set E=binom(n,2). Compute n! and test the necessary orbit-count bound
+
+       2^E <= 2 k n!.
+
+   If it fails, reject. All integers here have O(n^2)=O(L) bits after step 1,
+   so this test is polynomial in L. It does not presume that k=K_n.
+
+3. For n>=7, passing step 2 already implies N<=k^2. Indeed
+
+       k^2/N >= 2^((n-1)(n+2)/2)/(4(n!)^2) = R_n,
+       R_7=131072/99225>1,
+       R_(n+1)/R_n=2^(n+1)/(n+1)^2>=4 for n>=7.
+
+   For n=3..6, N<=1024, a fixed constant. Thus every input surviving these
+   necessary tests has polynomially many expanded half-edges, regardless
+   of the sizes originally claimed by its binary multiplicities.
+
+C. Exact Burnside verification is polynomial after these tests
+
+Enumerate integer partitions of n. Their count is at most the number of
+compositions, 2^(n-1), and for n>=4 this is at most N. (n=3 is constant.)
+Use the integer form of the two Burnside sums:
+
+       sum_lambda (n!/z_lambda) 2^c(lambda),
+
+with the appropriate compatibility restrictions, then divide by n!.
+This avoids growth from arbitrary common denominators. Every term and the
+whole sum have O(n^2) bits: at most n! 2^E fixed configurations occur in
+either Burnside sum. A partition and each c(lambda), z_lambda and quotient
+n!/z_lambda can be evaluated using polynomially many bit operations in n.
+Therefore exact calculation of A_n, S_n and K_n is polynomial in L after
+step B. Reject unless k=K_n.
+
+No circular assumption of the sought realizability is being made: steps B
+are merely necessary conditions; subsequent failure of any certificate or
+Burnside condition still rejects.
+
+D. Certificate size and checking time
+
+For k=K_n, the n=3..6 exact values also satisfy N<=k^2:
+  (N,k)=(2,2),(8,3),(64,10),(1024,34).
+Hence N<=K_n^2 at every permitted order. The orbit-count lower bound
+log_2 K_n >= E-1-log_2(n!) >= E-1-n log_2 n also gives
+n^2=O(log K_n). Consequently the stated certificate uses
+
+       O(N(m+n log n)+k n^2)
+       = O(N n^2)
+       = O(k^2 log k) bits.
+
+Permutation entries use O(log n) bits, coordinates use m bits, and a
+representative uses E bits. A deterministic expansion of the matrix/list
+fixes half-edge identifiers, pairings, colours and node assignments. Extra
+indices for expanded records use O(log N)=O(log k) bits and do not change
+the bound. Certificate validation checks bijectivity, pairings, node labels,
+permutations and the stated arc equalities using polynomially many bit
+operations in L. The displayed O(N n^2) number of arc/bit checks should not
+be read as a claim that unbounded-address lookup and integer arithmetic are
+all unit cost; accounting for those costs still gives polynomial bit time.
+
+Thus the complete realizability language, under either explicit binary
+encoding above, is in NP. This is a witness-size and witness-verification
+claim, not a polynomial-time witness-finding or decision algorithm. It is
+not a claim about succinct encodings with unlisted nodes.
+
+E. Separate refinement: the true target itself is polynomially constructible
+
+This is separate from recognizing a candidate's isomorphism to the target.
+At n=10,
+
+       (10!)^2 = 13,168,189,440,000 < 2^45,
+
+and the ratio 2^E/(n!)^2 grows by 2^n/(n+1)^2>1 thereafter. Thus
+(n!)^2<=2^E for n>=10. Combined with the necessary bound in B, this gives
+n!<=2k for every surviving input with n>=10. The finitely many lower orders
+are constants.
+
+One may therefore enumerate all N tilings and all n! vertex permutations
+for each, compute the minimum full-arc code over relabelling and converse,
+and aggregate complement lines with their reflection colour. This constructs
+the actual target weighted graph in polynomial time in L: for example,
+O(N n! poly(n)) elementary operations, polynomially bounded by the preceding
+N and n! estimates. It is not necessary to assert that exhaustive generation
+is efficient as a function of n; it plainly is not.
+
+For actual k=K_n, the asymptotic observation n!=k^{o(1)} is also rigorous:
+log(n!)=O(n log n), whereas log k=Theta(n^2). Rewriting the orbit bound gives
+N<=2k n!/2^(n-1), hence N=k^{1+o(1)} in upper-bound form, and the naive
+per-tiling canonicalization needs k^{1+o(1)} elementary operations up to
+polynomial factors in n. Producing a dense k by k matrix would of course
+require Omega(k^2) output work; the sharper bound is appropriate only to a
+sparse target representation. The simpler polynomial statement suffices.
+
+F. Reduction to constant-coloured graph isomorphism
+
+Following the rejection tests above, expand both the candidate and the
+polynomially constructed true target into simple incidence graphs with:
+- one vertex of colour NODE for each metagraph node;
+- one vertex of colour HALFEDGE for each half-edge;
+- one vertex of colour BLUE_LINE or BLACK_LINE for each literal line;
+- edges from each half-edge to its node and its line.
+
+A loop still has two distinct half-edge vertices adjacent to the same node
+and line vertices. Parallel lines have separate line vertices. These graphs
+have k+N+N/2 vertices and 2N edges, polynomial in L.
+
+An isomorphism of coloured spans gives a colour-preserving isomorphism of
+these simple graphs. Conversely any colour-preserving graph isomorphism
+restricts to bijections on nodes, half-edges and lines preserving both
+incidence maps and line colour. This is exactly the required span
+isomorphism. Inputs rejected by the preliminary tests can be mapped to any
+fixed pair of nonisomorphic coloured graphs.
+
+Therefore the explicitly encoded complete-realizability problem admits a
+polynomial-time many-one reduction to graph isomorphism with four vertex
+colours. No reverse reduction, GI-hardness, or polynomial-time isomorphism
+algorithm is claimed. Polynomial construction of the target is not by
+itself polynomial-time recognition of an arbitrary candidate wiring.

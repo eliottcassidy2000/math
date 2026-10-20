@@ -1,0 +1,706 @@
+{
+  "positive_controls": [
+    {
+      "n": 3,
+      "halfedges": 2,
+      "nodes": 2,
+      "lines": 1,
+      "arc_equalities_checked": 6,
+      "status": "PASS",
+      "burnside": {
+        "n": 3,
+        "compatible_permutations": [
+          3,
+          3
+        ],
+        "fixed_tournament_sums": [
+          12,
+          12
+        ],
+        "ordinary": 2,
+        "self_converse": 2,
+        "merged": 2
+      }
+    },
+    {
+      "n": 4,
+      "halfedges": 8,
+      "nodes": 3,
+      "lines": 4,
+      "arc_equalities_checked": 48,
+      "status": "PASS",
+      "burnside": {
+        "n": 4,
+        "compatible_permutations": [
+          9,
+          3
+        ],
+        "fixed_tournament_sums": [
+          96,
+          48
+        ],
+        "ordinary": 4,
+        "self_converse": 2,
+        "merged": 3
+      }
+    },
+    {
+      "n": 5,
+      "halfedges": 64,
+      "nodes": 10,
+      "lines": 32,
+      "arc_equalities_checked": 640,
+      "status": "PASS",
+      "burnside": {
+        "n": 5,
+        "compatible_permutations": [
+          45,
+          15
+        ],
+        "fixed_tournament_sums": [
+          1440,
+          960
+        ],
+        "ordinary": 12,
+        "self_converse": 8,
+        "merged": 10
+      }
+    },
+    {
+      "n": 6,
+      "halfedges": 1024,
+      "nodes": 34,
+      "lines": 512,
+      "arc_equalities_checked": 15360,
+      "status": "PASS",
+      "burnside": {
+        "n": 6,
+        "compatible_permutations": [
+          225,
+          135
+        ],
+        "fixed_tournament_sums": [
+          40320,
+          8640
+        ],
+        "ordinary": 56,
+        "self_converse": 12,
+        "merged": 34
+      }
+    }
+  ],
+  "burnside_counts_n1_to12": [
+    {
+      "n": 1,
+      "ordinary": 1,
+      "self_converse": 1,
+      "merged": 1
+    },
+    {
+      "n": 2,
+      "ordinary": 1,
+      "self_converse": 1,
+      "merged": 1
+    },
+    {
+      "n": 3,
+      "ordinary": 2,
+      "self_converse": 2,
+      "merged": 2
+    },
+    {
+      "n": 4,
+      "ordinary": 4,
+      "self_converse": 2,
+      "merged": 3
+    },
+    {
+      "n": 5,
+      "ordinary": 12,
+      "self_converse": 8,
+      "merged": 10
+    },
+    {
+      "n": 6,
+      "ordinary": 56,
+      "self_converse": 12,
+      "merged": 34
+    },
+    {
+      "n": 7,
+      "ordinary": 456,
+      "self_converse": 88,
+      "merged": 272
+    },
+    {
+      "n": 8,
+      "ordinary": 6880,
+      "self_converse": 176,
+      "merged": 3528
+    },
+    {
+      "n": 9,
+      "ordinary": 191536,
+      "self_converse": 2752,
+      "merged": 97144
+    },
+    {
+      "n": 10,
+      "ordinary": 9733056,
+      "self_converse": 8784,
+      "merged": 4870920
+    },
+    {
+      "n": 11,
+      "ordinary": 903753248,
+      "self_converse": 279968,
+      "merged": 452016608
+    },
+    {
+      "n": 12,
+      "ordinary": 154108311168,
+      "self_converse": 1492288,
+      "merged": 77054901728
+    }
+  ],
+  "hostile": {
+    "n": 5,
+    "swapped_tilings": [
+      4,
+      26
+    ],
+    "codes": [
+      0,
+      2,
+      4,
+      5,
+      8,
+      10,
+      12,
+      40,
+      41,
+      76
+    ],
+    "changes_blue_lines": [
+      {
+        "codes": [
+          8,
+          12
+        ],
+        "old": 1,
+        "new": 0
+      },
+      {
+        "codes": [
+          8,
+          41
+        ],
+        "old": 0,
+        "new": 1
+      },
+      {
+        "codes": [
+          10,
+          12
+        ],
+        "old": 1,
+        "new": 2
+      },
+      {
+        "codes": [
+          10,
+          41
+        ],
+        "old": 1,
+        "new": 0
+      }
+    ],
+    "good_cube": {
+      "mass": [
+        1,
+        2,
+        10,
+        1,
+        9,
+        9,
+        11,
+        5,
+        13,
+        3
+      ],
+      "top_charge": [
+        1,
+        -2,
+        2,
+        -1,
+        -5,
+        7,
+        3,
+        5,
+        -11,
+        1
+      ],
+      "ranks": [
+        1,
+        4,
+        8,
+        7,
+        7,
+        4,
+        1
+      ],
+      "reflection_caps": [
+        1,
+        4,
+        9,
+        12,
+        9,
+        4,
+        1
+      ],
+      "leak_rank": 9,
+      "boolean_convolution": "PASS",
+      "all_distance_gram": "PASS",
+      "reflection": "PASS",
+      "diagonal_congruences": "PASS",
+      "covariance_identity": "PASS"
+    },
+    "hostile_cube": {
+      "mass": [
+        1,
+        2,
+        10,
+        1,
+        9,
+        9,
+        11,
+        5,
+        13,
+        3
+      ],
+      "top_charge": [
+        1,
+        -2,
+        2,
+        -1,
+        -5,
+        7,
+        3,
+        5,
+        -11,
+        1
+      ],
+      "ranks": [
+        1,
+        4,
+        9,
+        8,
+        7,
+        4,
+        1
+      ],
+      "reflection_caps": [
+        1,
+        4,
+        9,
+        12,
+        9,
+        4,
+        1
+      ],
+      "leak_rank": 9,
+      "boolean_convolution": "PASS",
+      "all_distance_gram": "PASS",
+      "reflection": "PASS",
+      "diagonal_congruences": "PASS",
+      "covariance_identity": "PASS"
+    },
+    "endpoint_and_score_shell_rows": "PASS unchanged",
+    "black_matrix": "PASS unchanged",
+    "blue_degree_and_loop_rows": "PASS unchanged",
+    "abstract_graph_nonisomorphic": true,
+    "mass_preserving_node_permutations_tested": 4,
+    "broken_path_transport": {
+      "source": 4,
+      "path": [
+        0,
+        4,
+        1,
+        2,
+        3
+      ],
+      "normalized": 9,
+      "true_code": 12,
+      "hostile_source_code": 41,
+      "hostile_target_code": 12
+    },
+    "certificate_rejection": "arc mismatch at halfedge 4, pair (2, 3)",
+    "no_alternative_source_transporter": true,
+    "old_B": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "new_B": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "K": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        2,
+        0,
+        0,
+        2,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        4,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "status": "APPROVED after final wording and complexity recheck",
+  "primary": "FINAL_RECHECK.txt",
+  "files": [
+    {
+      "path": "AUDIT.txt",
+      "bytes": 9582,
+      "sha256": "cfa0cedc3d593387d0dc9f5e09cd9bea6fa209ec9407b030692c630addd26620"
+    },
+    {
+      "path": "manifest_check.json",
+      "bytes": 3393,
+      "sha256": "06872762502fcc72708def0973d1e785863fabcb9b691b2c416559de38a01865"
+    },
+    {
+      "path": "replay_comparison.json",
+      "bytes": 1534,
+      "sha256": "eac9d1f2c12446301ec133ea171734b78d24e7a8a590fed463aa0b5117f7b5a4"
+    },
+    {
+      "path": "independent_hostile_audit.py",
+      "bytes": 5960,
+      "sha256": "183e1003383e0feef095ee27160cede62edbc01cfe56801499b6630d08d30df5"
+    },
+    {
+      "path": "independent_hostile_audit.json",
+      "bytes": 603,
+      "sha256": "68bf7216fa8bbea6d899050cb9d662e960857dc821cb687b7819473c23187aae"
+    },
+    {
+      "path": "independent_hostile_audit.out",
+      "bytes": 603,
+      "sha256": "68bf7216fa8bbea6d899050cb9d662e960857dc821cb687b7819473c23187aae"
+    },
+    {
+      "path": "check_certificate_size.py",
+      "bytes": 1121,
+      "sha256": "070eda910e3d08699ed5624706e55c49f14b90e581aa5da8a921e3e4049e242f"
+    },
+    {
+      "path": "certificate_size_audit.json",
+      "bytes": 821,
+      "sha256": "03cab2604cad1689c19aaf8711908d9c3a2eb0ae50fb74aa5736bb56f81dc5f8"
+    },
+    {
+      "path": "check_certificate_size.out",
+      "bytes": 821,
+      "sha256": "03cab2604cad1689c19aaf8711908d9c3a2eb0ae50fb74aa5736bb56f81dc5f8"
+    },
+    {
+      "path": "verify_rerun.out",
+      "bytes": 1807,
+      "sha256": "2049c140174e4ea25bbe2cc9a9e86672b6e71ad56f612fe4f09e861c9a65e81e"
+    },
+    {
+      "path": "local_classifier_rerun.out",
+      "bytes": 6226,
+      "sha256": "ba9f3dca51699c23d1cea7c118725a6926fd889accd0550e69089fceea7744cd"
+    },
+    {
+      "path": "direct_local_rerun.out",
+      "bytes": 1322,
+      "sha256": "6dda5be3a94635c8c166cadbb7c5f4c48989f4b5e72796d000e9057f35690136"
+    },
+    {
+      "path": "n8_direct_rerun.out",
+      "bytes": 100,
+      "sha256": "e304434f03184e839e36afdc7cf9d3ce08d76b3c8076f2c5c026304c302eb6f1"
+    },
+    {
+      "path": "COMPLEXITY_ADDENDUM.txt",
+      "bytes": 7548,
+      "sha256": "4b28dd42a251b0e9b88101e1c63dd5422014b18e9af71daec7e6aa1b21197df8"
+    },
+    {
+      "path": "MINIMAL_PATCH_PROPOSAL.txt",
+      "bytes": 2348,
+      "sha256": "60fd9324620589ecc8b9531ac202bfe572c8495d88068ea0ca64228e1e1e4345"
+    },
+    {
+      "path": "FINAL_RECHECK.txt",
+      "bytes": 2101,
+      "sha256": "0f0ad9b5b8b183208418989606a8b988b6f25bee811354fa49b2d2a7cb63909a"
+    },
+    {
+      "path": "final_recheck.json",
+      "bytes": 501,
+      "sha256": "565cd4ee258b543ec2983e89d106baa9f4922c26f88cfb6116ad1c65b0c093e2"
+    }
+  ]
+}

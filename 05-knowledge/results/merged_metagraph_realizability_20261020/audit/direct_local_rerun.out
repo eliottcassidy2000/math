@@ -1,0 +1,50 @@
+{
+  "direct_controls": [
+    {
+      "n": 3,
+      "tilings": 2,
+      "ordinary_components": 2,
+      "merged_components": 2,
+      "valid_moves": 1,
+      "direct_arcs_vs_cpp_partition": "PASS",
+      "direct_arcs_vs_permutation_canonical_partition": "PASS"
+    },
+    {
+      "n": 4,
+      "tilings": 8,
+      "ordinary_components": 4,
+      "merged_components": 3,
+      "valid_moves": 8,
+      "direct_arcs_vs_cpp_partition": "PASS",
+      "direct_arcs_vs_permutation_canonical_partition": "PASS"
+    },
+    {
+      "n": 5,
+      "tilings": 64,
+      "ordinary_components": 12,
+      "merged_components": 10,
+      "valid_moves": 104,
+      "direct_arcs_vs_cpp_partition": "PASS",
+      "direct_arcs_vs_permutation_canonical_partition": "PASS"
+    },
+    {
+      "n": 6,
+      "tilings": 1024,
+      "ordinary_components": 56,
+      "merged_components": 34,
+      "valid_moves": 2432,
+      "direct_arcs_vs_cpp_partition": "PASS",
+      "direct_arcs_vs_permutation_canonical_partition": "PASS"
+    },
+    {
+      "n": 7,
+      "tilings": 32768,
+      "ordinary_components": 456,
+      "merged_components": 272,
+      "valid_moves": 106496,
+      "direct_arcs_vs_cpp_partition": "PASS",
+      "direct_arcs_vs_permutation_canonical_partition": "PASS"
+    }
+  ],
+  "burnside_and_inventory_controls_through_n8": "PASS"
+}

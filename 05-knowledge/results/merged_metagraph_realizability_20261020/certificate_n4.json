@@ -1,0 +1,114 @@
+{
+  "n": 4,
+  "representatives": [
+    0,
+    2,
+    4
+  ],
+  "halfedges": [
+    {
+      "node": 2,
+      "coordinate": 0,
+      "partner": 7,
+      "blue": true,
+      "permutation": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "converse": 1
+    },
+    {
+      "node": 2,
+      "coordinate": 1,
+      "partner": 6,
+      "blue": false,
+      "permutation": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "converse": 0
+    },
+    {
+      "node": 2,
+      "coordinate": 2,
+      "partner": 5,
+      "blue": true,
+      "permutation": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "converse": 0
+    },
+    {
+      "node": 1,
+      "coordinate": 3,
+      "partner": 4,
+      "blue": false,
+      "permutation": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "converse": 0
+    },
+    {
+      "node": 2,
+      "coordinate": 4,
+      "partner": 3,
+      "blue": false,
+      "permutation": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "converse": 1
+    },
+    {
+      "node": 2,
+      "coordinate": 5,
+      "partner": 2,
+      "blue": true,
+      "permutation": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "converse": 0
+    },
+    {
+      "node": 1,
+      "coordinate": 6,
+      "partner": 1,
+      "blue": false,
+      "permutation": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "converse": 1
+    },
+    {
+      "node": 0,
+      "coordinate": 7,
+      "partner": 0,
+      "blue": true,
+      "permutation": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "converse": 0
+    }
+  ]
+}

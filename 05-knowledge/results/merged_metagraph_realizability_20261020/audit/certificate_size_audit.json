@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "finite_base_cases": [
+    {
+      "n": 3,
+      "N": 2,
+      "K": 2,
+      "K_squared": 4,
+      "pass": true
+    },
+    {
+      "n": 4,
+      "N": 8,
+      "K": 3,
+      "K_squared": 9,
+      "pass": true
+    },
+    {
+      "n": 5,
+      "N": 64,
+      "K": 10,
+      "K_squared": 100,
+      "pass": true
+    },
+    {
+      "n": 6,
+      "N": 1024,
+      "K": 34,
+      "K_squared": 1156,
+      "pass": true
+    }
+  ],
+  "n7_lower_bound_ratio": "131072/99225",
+  "lower_bound": "K_n >= 2^(n(n-1)/2)/(2 n!)",
+  "ratio": "K_n^2/N >= R_n = 2^((n-1)(n+2)/2)/(4(n!)^2)",
+  "growth": "R_(n+1)/R_n = 2^(n+1)/(n+1)^2 >= 4 for n >= 7",
+  "all_order_conclusion": "N <= K_n^2 for every n >= 3",
+  "certificate_consequence": "O(N n^2) = O(K_n^2 log K_n) bits, polynomial in explicit matrix/support size"
+}

@@ -1,0 +1,467 @@
+COMPLETE MERGED METAGRAPH REALIZABILITY:
+A COORDINATE-TRANSPORT CERTIFICATE, A LOCAL FOREST TEST,
+AND A COHERENT-CUBE COUNTEREXAMPLE
+
+Status: PROVED for the all-order certificate, local sufficient criterion,
+Boolean/Fourier lift theorem, and move-count identity. FINITE-EXACT for the
+local classifier through order 8 and the order-5 hostile. An all-order
+connectivity theorem for the local moves is not claimed.
+
+1. Scope and inheritance
+
+A complete merged metagraph retains tournament classes modulo converse,
+all fixed-Hamiltonian-path tilings, and all literal complement lines. Loops
+consume two half-edges and parallel lines remain separate. This is the span
+of THM-796, with the Hamiltonian-path/automorphism fibres of THM-781. It is
+not the quotient of the full single-arc-flip graph.
+
+The preceding distance/Walsh and endpoint-transport work gave necessary
+arrangement laws, not sufficient criteria. The present contribution closes
+one precise gap: it gives a finite exact constructive certificate, verified
+without an atlas or enumeration of all labelled tournaments. A more local
+forest certificate is sufficient at every order and is finite-exact through
+order 8. Neither result makes the scalar count laws sufficient or efficient
+in the size of a compressed node-count description.
+
+Burnside counting, Fourier idempotence, and permutation isomorphism witnesses
+are standard tools. Their specialization and combination here, together with
+the new counterexample, are the results being recorded. THM-801/809 concern
+other finite recursive codecs; their finite injectivity is not treated as an
+all-order realizability theorem.
+
+2. The precise input
+
+Fix n >= 3 and put m = (n-1)(n-2)/2 and N = 2^m. Use the path
+
+    0 -> 1 -> ... -> n-1.
+
+Let X = {0,1}^m. Its coordinates are the pairs (i,j) with i+2 <= j, in
+lexicographic order. A coordinate bit 1 means i -> j. The adjacent arcs are
+fixed by the displayed path. Write T(x) for the resulting tournament.
+
+Complement is Cx = x XOR (N-1). Reflection r permutes coordinate (i,j) to
+(n-1-j,n-1-i), without complementing its bit. The true merged class map is
+q(x) = [T(x)] modulo vertex relabelling and all-arcs converse.
+
+A candidate expanded wiring consists of:
+
+  - a set H of N half-edges;
+  - a fixed-point-free involution c on H, whose two-orbits are literal lines;
+  - a surjection pi:H -> U, assigning half-edges to nonempty candidate nodes;
+  - one blue/black colour for each c-pair.
+
+Thus loops and parallel lines are intrinsic. A compressed coloured weighted
+multigraph can first be expanded this way, counting each loop twice. The
+candidate is realizable when there is an isomorphism of this coloured span
+to U_true <- X -> X/<C>. Node names need not already be canonical codes.
+Additional requested sidecars, such as all-distance matrices, can be checked
+against the same coordinate assignment.
+
+3. The exact number of merged nodes without a tournament atlas
+
+For a partition lambda = (lambda_1,...,lambda_t) of n, let a_d be the number
+of parts equal to d, and define
+
+    z_lambda = product_d d^(a_d) a_d!,
+    c(lambda) = sum_i floor(lambda_i/2)
+                + sum_(i<j) gcd(lambda_i,lambda_j).
+
+Define two partition sums:
+
+    A_n = sum_(all parts of lambda odd) 2^c(lambda) / z_lambda,
+
+    S_n = sum_(lambda has at most one part 1,
+               and every other part is 2 modulo 4)
+          2^c(lambda) / z_lambda.
+
+Then A_n is the number of ordinary tournament isomorphism classes, S_n is
+the number of self-converse ordinary classes, and
+
+    K_n = (A_n + S_n)/2                                      (3.1)
+
+is the exact number of converse-merged nodes.
+
+Proof. Apply Burnside to the action of S_n times the two-element converse
+group on all orientations of the complete graph. A permutation of cycle
+type lambda has c(lambda) orbits on unordered vertex pairs: floor(a/2)
+within a cycle of length a, and gcd(a,b) between cycles of lengths a,b.
+A compatible pair orbit contributes one free orientation bit.
+
+For the ordinary action, compatibility holds exactly when every vertex cycle
+is odd. An even cycle gives an antipodal pair whose endpoints are exchanged
+by a power of the permutation, contradicting an invariant orientation.
+If every cycle is odd, no such pair-orbit reversal occurs.
+
+For the converse-twisted action, the square of the permutation must be a
+tournament automorphism. Hence all vertex cycle lengths are odd or twice
+odd. An odd cycle of length at least 3 is impossible: its length-th power
+fixes its vertices while applying converse, contradicting every internal
+arc. Two fixed vertices are impossible for the same reason. The remaining
+possibilities are precisely zero or one fixed vertex and cycles twice odd.
+They are sufficient. Within a length-2a cycle with a odd, the antipodal pair
+orbit has odd length a and swaps endpoints, so its swap and converse signs
+cancel. Every other within-cycle orbit has even length and no final swap.
+Cross-cycle pair orbits have even length and no endpoint swap. Thus all
+orbits are compatible.
+
+There are n!/z_lambda permutations of a given cycle type. Burnside gives
+(3.1). The twisted sum is S_n because every self-converse ordinary orbit
+contributes exactly n! pairs (T,sigma) satisfying sigma(T^op)=T, and every
+non-self-converse orbit contributes zero. QED.
+
+Small values, obtained by the partition formula:
+
+    n       3      4      5       6        7         8          9
+    A_n     2      4     12      56      456      6880     191536
+    S_n     2      2      8      12       88       176       2752
+    K_n     2      3     10      34      272      3528      97144
+
+The formula enumerates integer partitions, not tournaments. A separate
+implementation checks its signed unordered-pair orbit interpretation for
+every vertex permutation through n=6.
+
+4. The exact coordinate-transport certificate
+
+THEOREM 1. The candidate wiring in Section 2 is realizable if and only if
+it has the following certificate.
+
+  (a) |U| = K_n.
+
+  (b) There is a bijection x:H -> X such that
+
+          x(c h) = C x(h),
+          colour(h) is blue iff r x(h) = x(h).
+
+  (c) For each u in U there is one labelled n-vertex tournament R_u.
+      For every h with pi(h)=u there are a permutation p_h of {0,...,n-1}
+      and a bit epsilon_h such that, for every i<j,
+
+          arc_T(x(h))(i,j)
+            = arc_R_u(p_h(i),p_h(j)) XOR epsilon_h.           (4.1)
+
+The value epsilon_h=1 means converse, not tile complement.
+
+Proof of sufficiency. Condition (4.1) puts every candidate fibre inside a
+single true converse-merged class. It therefore defines a map
+
+    alpha:U -> U_true,   alpha(u)=[R_u],
+
+with alpha(pi(h))=q(x(h)). Every tournament has a directed Hamiltonian path:
+insert a new vertex into a path immediately before its first out-neighbour,
+or append it if there is no out-neighbour. The predecessor, when present,
+beats the inserted vertex. Induction gives a path through all vertices.
+Normalizing that path shows that q:X -> U_true is surjective.
+
+Because x is a bijection, alpha is surjective. By (a), its domain and range
+have the same finite size K_n, so alpha is bijective. Consequently each
+candidate fibre equals one entire true merged fibre, rather than a proper
+subset, a merger of classes, or a split class. Condition (b) identifies the
+literal line pairing and its colour. This is the required isomorphism of
+spans. Necessity follows by taking actual coordinates, one representative
+per class, and isomorphisms/converse-isomorphisms for its tilings. QED.
+
+This is a genuine completeness argument. It replaces pairwise proofs that
+representatives are non-isomorphic with global cube coverage and the exact
+Burnside node count. Its verifier never searches for an isomorphism: it
+checks the supplied permutations and their individual arc equalities.
+
+If the node-count condition is removed, refinements of true fibres may pass.
+If the transporter condition is removed, even the much stronger coherent
+cube and endpoint constraints can pass on a false wiring; Section 8 gives
+an explicit example.
+
+Certificate size is
+
+    O(N(m+n log n) + |U| n^2) bits,
+
+hence O(N n^2). The transporter portion alone uses O(N n log n) bits.
+Verification uses O(N n^2) arc and bit checks, coordinate-bijection checking,
+and the partition sum. The certificate is exponential in n, but polynomial-
+size for an explicit weighted matrix or explicitly listed weighted multigraph:
+if k=K_n, then N<=k^2 and n^2=O(log k), giving O(k^2 log k) bits. Verification
+is also polynomial in the binary input length, with preliminary mass and
+node-count rejection tests before expansion. This does not provide a
+polynomial-time method to find a certificate or recognize a candidate.
+More succinct descriptions with unlisted nodes require a separate analysis.
+
+For the size bound, the orbit count gives k>=2^binom(n,2)/(2n!). Hence
+
+    k^2/N >= 2^((n-1)(n+2)/2)/(4(n!)^2).
+
+The right side exceeds one at n=7 and increases by the factor
+2^(n+1)/(n+1)^2 thereafter; n=3..6 are checked by the displayed table.
+The same lower bound gives n^2=O(log k). For a binary-encoded input, first
+sum its half-edge mass S and check that S is a power of two with
+bitlength(S)-1=m, before forming 2^m. Then reject if 2^binom(n,2)>2kn!.
+Passing these tests already bounds N polynomially in the explicit input
+size. Exact integer Burnside sums and all subsequent certificate checks
+consequently take polynomial bit time. COMPLEXITY_ADDENDUM.txt supplies the
+full bit-complexity argument and a separate reduction to four-coloured
+simple graph isomorphism. Neither result claims polynomial-time recognition.
+
+No uniqueness of coordinates, representatives, or transporters is asserted.
+Many choices differ by markings, automorphisms, and graph symmetries. The
+result does not say that graph counts determine wiring.
+
+5. A finite SAT / integer formulation
+
+Theorem 1 is an explicit finite satisfiability criterion. Use:
+
+  - m coordinate bits x_(h,e) for each half-edge;
+  - representative arc bits r_(u,a,b), with r_(u,b,a)=1-r_(u,a,b);
+  - permutation-matrix bits P_(h,i,a), exactly one 1 in each row and column;
+  - a converse bit epsilon_h.
+
+Impose coordinate distinctness, the complement equations on paired
+half-edges, and the reflection-fixed colour test. For each i<j and a!=b,
+
+    P_(h,i,a)=P_(h,j,b)=1
+      implies arc_T(x(h))(i,j)=r_(pi(h),a,b) XOR epsilon_h.
+
+The left side is a fixed 1 for adjacent path positions and the corresponding
+coordinate bit otherwise. These are elementary Boolean constraints; an
+integer formulation uses 0/1 variables and standard linearizations of the
+finite AND/XOR clauses. Together with |U|=K_n they are exactly Theorem 1.
+One need not include a separate non-isomorphism constraint between nodes.
+
+This formulation is stated exactly, not advertised as an efficient solver.
+The included code verifies constructive witnesses rather than calling a SAT
+package. The full positive certificates for n=3,4,5 are supplied.
+
+6. A more local sufficient certificate
+
+A legal rightward relocation (a,b), with 0<=a<b-1<=n-2, changes the marked
+word (0,...,n-1) to
+
+    (0,...,a-1,a+1,...,b,a,b+1,...,n-1).
+
+It remains a directed path precisely when the following existing arcs hold:
+
+    b -> a;
+    a-1 -> a+1, if a>0;
+    a -> b+1, if b<n-1.                                    (6.1)
+
+These are at most three distinct nonpath coordinates. Re-mark the tournament
+along this word to obtain a new tiling. Every such move preserves ordinary
+isomorphism class. Reflection preserves converse-merged class. Treat move
+edges as undirected; a leftward relocation is the inverse of a rightward one.
+
+THEOREM 2. Conditions (a) and (b) of Theorem 1, together with the following
+forest condition, are sufficient at every n:
+
+  In each candidate node fibre, supply a spanning tree whose edges are
+  legal one-vertex relocations or reflection in the coordinate cube.
+
+Indeed, every tree edge preserves the true merged class. Hence the entire
+fibre belongs to one class, and the same surjection/cardinality argument
+from Theorem 1 proves equality of fibres. A tree edge is certified by its
+relocation pair and direction, or by the reflection symbol. No unknown
+vertex permutation or representative tournament is needed.
+
+The criterion is all-order sufficient. Its necessity for every actual fibre
+at every n would require a further connectivity theorem, which is open here.
+The finite computations below prove necessity through n=8, on the tiling
+fibres HP(T)/Aut(T). They do not automatically prove connectivity of the
+larger labelled Hamiltonian-path reconfiguration graph.
+
+A useful independent count check is
+
+    total valid rightward relocations over X
+      = N (n^2+n-4)/16.                                    (6.2)
+
+Self-moves are included. There is one endpoint-to-endpoint relocation with
+one required bit, 2(n-3) one-endpoint relocations with two required bits,
+and binom(n-3,2) internal relocations with three required bits. Summing
+N/2 + 2(n-3)N/4 + binom(n-3,2)N/8 proves (6.2).
+
+The standalone classifier unions all legal relocation edges, then all
+reflection edges. Each component is contained in a true class by construction.
+If the resulting component count equals the independent Burnside count,
+then every component is an entire class. This certifies classification
+without importing a tournament atlas or running isomorphism searches.
+
+The exact scan is:
+
+    n    tilings     ordinary components    merged components    valid moves
+    3          2               2                    2                    1
+    4          8               4                    3                    8
+    5         64              12                   10                  104
+    6       1024              56                   34                 2432
+    7      32768             456                  272               106496
+    8    2097152            6880                 3528              8912896
+
+All ordinary component sizes are odd. Reflection-fixed ordinary component
+counts are 2,2,8,12,88,176. Both checks agree with the independent orbit
+formula and the inherited HP/Aut parity law. The order-8 statement scans all
+2,097,152 fixed-path tilings, not merely a sample or the complement lines.
+
+A separate direct-arc implementation checks the entire partition through
+n=7, agrees with the C++ bit-mask implementation, and independently agrees
+with ordinary permutation/converse canonicalization. A second complete n=8 C++ implementation reconstructs the tournament arcs
+literally, tests each path word directly, and forms its normalization from
+those arcs. It uses no precomputed affine coordinate transforms or move
+requirement masks. It independently returns the same 6,880 ordinary and
+3,528 merged components and 8,912,896 legal moves. The all-order validity
+of the moves, both complete scans, the Burnside count, and the exact
+inventory checks certify the finite result.
+
+7. Exact coherent Fourier lifting still does not enforce tournament fibres
+
+For clarity, the cube-only gap can also be closed exactly. Let W_d be proposed
+ordered half-edge distance matrices, d=0,...,m. Set
+
+    K_j(d)=sum_a (-1)^a binom(d,a) binom(m-d,j-a),
+    Q_j=sum_d K_j(d) W_d.
+
+A partition of X with these distance matrices exists if and only if there
+are integer numbers Z_u(S), one for every node and coordinate subset S,
+satisfying
+
+    sum_u Z_u(S)=N if S is empty, and 0 otherwise;            (7.1)
+    sum_S Z_u(S) Z_u(S XOR T)=N Z_u(T), for every u,T;         (7.2)
+    Q_j(u,v)=sum_(|S|=j) Z_u(S)Z_v(S).                       (7.3)
+
+Prescribed masses are imposed by Z_u(empty)=M_u>0. To require reflection-
+invariant fibres also impose Z_u(rS)=Z_u(S). To require coloured complement
+counts, reconstruct f below and check their blue and black sub-sums.
+
+Proof. Necessity is the Walsh transform of Boolean fibre indicators.
+Conversely define
+
+    f_u(x)=N^(-1) sum_S Z_u(S) (-1)^(|S intersect x|).
+
+Equation (7.2) gives f_u(x)^2=f_u(x); hence each f_u is 0 or 1. Equation (7.1)
+gives sum_u f_u=1, so these are exactly a partition's indicators. Equation
+(7.3) gives its distance matrices by the invertible Krawtchouk transform.
+Reflection follows by Fourier inversion. QED.
+
+Thus compatible Fourier columns plus their Boolean convolution equations
+are sufficient for cube realization, unlike PSD/rank tests on level Gram
+matrices alone. They are NOT sufficient for tournament-fibre realization.
+The following counterexample meets even this exact cube criterion.
+
+8. The stronger order-5 hostile
+
+Use the coordinate convention of Section 2. Actual merged canonical codes,
+meaning least full-arc code under permutations and converse, are
+
+    (0,2,4,5,8,10,12,40,41,76),
+
+with masses
+
+    (1,2,10,1,9,9,11,5,13,3).
+
+Start with the actual node assignment q:X -> U. Define q' by exchanging
+only the node labels at the two tilings 4 and 26. Every other assignment
+stays unchanged. Both tilings are reflection-fixed and have odd weight.
+Their relevant data are
+
+    tiling       node code     complement      complement node code
+       4             12            59                    8
+      26             41            37                   10.
+
+Nodes 12 and 41 both have sorted score profile (1,2,2,2,3). Nodes 8 and 10
+both have sorted score profile (1,1,2,3,3). The four nodes are distinct.
+The changed blue line multiplicities are
+
+    node pair        old     new
+       8,12           1       0
+       8,41           0       1
+      10,12           1       2
+      10,41           1       0.
+
+Every black line stays unchanged. This is a genuine new coloured weighted
+wiring, not merely a relabelling: masses allow only four possible global
+node permutations, and each fails the complete blue/black matrix comparison.
+The exact verifier checks all four.
+
+The hostile preserves:
+
+  - every node mass, blue degree, black degree, colour type, and loop count;
+  - reflection invariance and the complete black incidence matrix;
+  - the exact colour-resolved endpoint-current inventories;
+  - the stronger colour-resolved destination folded-score-profile rows;
+  - every node's signed top Walsh charge;
+  - all necessary integral-Gram, PSD, reflection-rank, diagonal-congruence,
+    and covariance identities of the distance/Walsh lift;
+  - the full Boolean convolution equations (7.1)-(7.3).
+
+For the last two items, compute all W_d and Z from q'. This is an actual
+Boolean partition of the actual cube, so every coherent cube identity holds.
+The endpoint statements follow because both ends of the switch remain
+inside the same respective score shells, hence have the same cyclic-triangle
+values too. The code independently recomputes those rows from Hamiltonian
+paths and automorphisms of the ORIGINAL tournament representatives, not only
+from the new wiring. The top charge is unchanged because the exchanged
+coordinates have equal parity.
+
+In the displayed node order, both charge vectors are
+
+    (1,-2,2,-1,-5,7,3,5,-11,1).
+
+The true Gram ranks are (1,4,8,7,7,4,1); the hostile ranks are
+(1,4,9,8,7,4,1), within the same reflection caps (1,4,9,12,9,4,1).
+Both local covariance matrices have rank 9. Actual class-specific distance
+profiles and actual ranks are not asserted to stay unchanged; the point is
+that all the general coherent lift laws still hold.
+
+Yet q' is not a tournament-fibre partition. In T(4), the marked word
+
+    (0,4,1,2,3)
+
+is a directed Hamiltonian path, and normalizing along it gives tiling 9.
+Thus T(4) and T(9) are isomorphic, both with true merged code 12. But q'(4)
+is code 41 and q'(9) is code 12. This directly breaks path transport. The
+word is itself the inverse of the legal rightward relocation (1,4) starting
+at tiling 9, so the local forest mechanism detects the missing relation too.
+An exhaustive 120-permutation check confirms that no isomorphism or converse-
+isomorphism sends T(4) to the code-41 representative.
+
+Because the hostile coloured weighted graph is not isomorphic to the actual
+one, changing the cube coordinate certificate cannot rescue it as an abstract
+complete wiring. This is stronger than merely rejecting one failed choice
+of transporters.
+
+9. Verification, boundaries, and next question
+
+Run from this packet's directory:
+
+    python3 verify_realizability.py
+    g++ -O3 -std=c++17 -Wall -Wextra -pedantic \
+        local_move_classifier.cpp \
+        -o local_move_classifier
+    ./local_move_classifier 8 . \
+        > local_move_classifier.out
+    python3 independent_local_check.py
+    g++ -O2 -std=c++17 -Wall -Wextra -pedantic \
+        independent_n8_scan.cpp \
+        -o independent_n8_scan
+    ./independent_n8_scan
+
+The witness verifier is self-contained and imports no existing atlas; it
+checks supplied permutations without searching. The demonstration harness
+generates its positive examples by exhaustive permutation/converse orbits.
+No efficient generation claim is being made. The harness checks
+full positive coordinate-transport certificates for n=3,4,5,6, including
+6,48,640,15360 individual arc equalities respectively, the signed Burnside
+pair-orbit computation through n=6, the hostile, the exact Fourier Boolean
+completion, and the independent endpoint inventories. Positive JSON witness
+files are included for n=3,4,5. The local classifier and direct-arc checker
+supply the further controls described in Section 6.
+
+The useful next theorem is now sharply stated: are the legal one-vertex
+relocations connected on every ordinary HP(T)/Aut(T) tiling fibre? The
+computational answer is yes through n=8. Proving it all-order would make
+the local forest mechanism an all-order necessary-and-sufficient local
+transport characterization, with no arbitrary permutation witnesses.
+It is not needed for the all-order sufficient theorem already proved.
+
+Preserved/lost boundary: the coordinate-transport certificate retains the
+literal tiling, complement partner, reflection colour, and tournament
+isomorphism orbit. Walsh Gram levels alone lose cross-level phases; exact
+Boolean Fourier completion restores the partition but still loses its
+compatibility with tournament re-marking. Endpoint score inventories restore
+some row information but not which same-score node receives a line. The
+hostile isolates exactly that surviving loss. No inference to unrelated
+research problems, graph-count uniqueness, or polynomial-time recognition
+of compressed wiring is made.

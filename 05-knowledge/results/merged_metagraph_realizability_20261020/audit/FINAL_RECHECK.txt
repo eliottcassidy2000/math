@@ -1,0 +1,40 @@
+FINAL WORDING AND COMPLEXITY RECHECK: APPROVED
+2026-10-20 UTC
+
+This resolves and supersedes the conditional publication recommendation in
+AUDIT.txt. The Section 4 representation-size error is corrected. The revised
+primary text, README and separate complexity addendum are approved without
+further mathematical changes.
+
+The final text correctly distinguishes exponential complexity in n from
+polynomial certificate size and verification in explicit binary-weighted
+input length. The mass/exponent and weak orbit-count checks control huge
+binary multiplicities before expansion. The NP argument and polynomial
+four-coloured graph-isomorphism reduction are sound, including loops and
+parallel lines. Polynomial construction of the true target is correctly
+separated from finding a candidate isomorphism or deciding recognition.
+No polynomial-time recognition or GI-hardness claim is made.
+
+The source also correctly distinguishes the search-free witness verifier
+from exhaustive finite example generation. The updated reproduction commands
+are portable from the packet directory. Local necessity remains finite-only
+through n=8; the n=5 hostile's preservation claims remain properly bounded.
+
+All 20 revised manifest file sizes and SHA-256 values were verified. All 17
+code/data/output/witness files are unchanged from the fully rerun audit
+snapshot. No recomputation is necessary for these prose-only changes.
+
+Approved source hashes:
+REALIZABILITY.txt
+  SHA-256 d187d2e51d7763203038b5f09749fe9fa24eca32338060f6685275cf8a5be9ed
+COMPLEXITY_ADDENDUM.txt
+  SHA-256 bef0e7f8d01410e781e6bcc329d7f56d018c82585539c1f90ed322d2ce799ee1
+README.txt
+  SHA-256 24a9d1e1f61b8906f79c5bdf0c8b635dc4e75df949f7bd53634cf76c23d72e96
+DELIVERABLES.json
+  SHA-256 3731c49151d4ef9f005d7ef5d649dc350651e40e9338e5604594d7b0c5fb2b82
+
+The source manifest status string may be changed from pending recheck to
+approved without changing the approved artifact payloads; such a metadata
+edit would produce a new manifest hash and must be recorded separately.
+No original packet, shared repository or remote was written by this audit.

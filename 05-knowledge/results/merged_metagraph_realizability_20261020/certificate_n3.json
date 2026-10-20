@@ -1,0 +1,33 @@
+{
+  "n": 3,
+  "representatives": [
+    0,
+    2
+  ],
+  "halfedges": [
+    {
+      "node": 1,
+      "coordinate": 0,
+      "partner": 1,
+      "blue": true,
+      "permutation": [
+        2,
+        1,
+        0
+      ],
+      "converse": 0
+    },
+    {
+      "node": 0,
+      "coordinate": 1,
+      "partner": 0,
+      "blue": true,
+      "permutation": [
+        2,
+        1,
+        0
+      ],
+      "converse": 0
+    }
+  ]
+}

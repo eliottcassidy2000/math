@@ -1,0 +1,45 @@
+Do not edit the original artifacts until the parent approves the text.
+
+REQUIRED REPLACEMENT IN SECTION 4
+
+Replace:
+  "It is not a polynomial-size criterion in n or in the number of compressed
+  matrix entries. Constructing the certificate can still be difficult."
+
+With:
+  "The certificate is exponential in n, but polynomial-size for an explicit
+  weighted matrix or explicitly listed weighted multigraph: if k=K_n, then
+  N<=k^2 and n^2=O(log k), giving O(k^2 log k) bits. Its verification is also
+  polynomial in the binary input length, with preliminary mass and node-count
+  rejection tests before expansion. This does not provide a polynomial-time
+  method to find a certificate or recognize a candidate. More succinct
+  descriptions with unlisted nodes require a separate analysis."
+
+SUGGESTED SHORT PROOF IMMEDIATELY AFTER THAT PARAGRAPH
+
+  "For the size bound, the orbit count gives k>=2^{binom(n,2)}/(2n!). Thus
+  k^2/N>=2^{(n-1)(n+2)/2}/(4(n!)^2). The right side exceeds one at n=7 and
+  increases by a factor 2^{n+1}/(n+1)^2 thereafter; n=3..6 are checked by
+  the displayed table. The same lower bound gives n^2=O(log k).
+  For a binary-encoded input, first sum its half-edge mass S and check that
+  S is a power of two with bitlength(S)-1=m, before forming 2^m. Then reject
+  if 2^{binom(n,2)}>2kn!. Passing these tests already bounds N polynomially
+  in the explicit input size. Exact integer Burnside sums and all subsequent
+  certificate checks consequently take polynomial bit time."
+
+OPTIONAL, NOT REQUIRED FOR THE CORRECTION
+
+A separate complexity subsection can state polynomial target construction
+and the reduction to four-coloured simple graph isomorphism. The complete
+proof is in COMPLEXITY_ADDENDUM.txt, Sections E-F. Do not insert only the
+conclusion without its distinction between target construction and candidate
+recognition. In particular, do not claim a polynomial-time recognition
+algorithm or GI-hardness.
+
+NONBLOCKING GENERATOR/VERIFIER CLARIFICATION
+
+If the opening or verification description is changed, preserve this
+separation: verify_certificate checks supplied permutations without a search;
+canonical_certificate generates the finite examples by exhaustive permutation
+orbits. The source currently need not be read as conflating these, but any
+new complexity prose should make the separation explicit.

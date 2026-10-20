@@ -1,0 +1,181 @@
+INDEPENDENT AUDIT: COMPLETE MERGED METAGRAPH REALIZABILITY
+Audit date: 2026-10-20 UTC
+Source: session15-realizability/REALIZABILITY.txt and its 19-file DELIVERABLES.json.
+Scope: no original packet, shared repository, or remote writes.
+
+VERDICT
+
+The all-order mathematical results and all finite data PASS. There is one
+substantive but localized representation-size wording error in Section 4.
+Publication should remove or repair that sentence. No theorem, witness, move
+count, hostile invariant, or finite connectivity claim needs correction.
+
+The incorrect sentence is:
+  "It is not a polynomial-size criterion in n or in the number of compressed
+  matrix entries."
+The first alternative (in n) is correct; the second is not correct for an
+explicit K_n-node weighted matrix or explicitly listed weighted multigraph.
+See SIZE CORRECTION below. This is not merely a missing performance caveat.
+
+1. ALL-ORDER COORDINATE/TRANSPORT CERTIFICATE: PASS
+
+Equation (4.1) puts each entire nonempty candidate fibre inside one genuine
+converse-merged class. The map U -> U_true is therefore well defined.
+Every tournament has a Hamiltonian path by the stated insertion argument;
+normalizing such a path proves X -> U_true surjective. The coordinate
+bijection consequently makes U -> U_true surjective, and the exact equal
+cardinality K_n makes it bijective. This forbids both splitting and merging.
+Complement pairing and the reflection-fixed colour rule identify precisely
+the stated coloured span, including loops counted twice and distinct parallel
+line instances. No additional representative-separation assumption is needed.
+Necessity is immediate from an actual span isomorphism and isomorphism or
+converse-isomorphism witnesses.
+
+The quantifier is existential over coordinates, representatives and individual
+transporters. It is not uniqueness of any of these, nor a claim that the
+counts reconstruct wiring. The explicit n >= 3 restriction is used to make
+complement fixed-point-free. The candidate node map is assumed surjective,
+as specified in the input definition.
+
+The Burnside calculation is sound. Unordered vertex-pair orbits have exactly
+sum_i floor(lambda_i/2) + sum_(i<j) gcd(lambda_i,lambda_j) orbits. Untwisted
+compatibility is equivalent to every vertex cycle being odd. Twisted
+compatibility is equivalent to at most one fixed vertex and all remaining
+cycles having length 2 mod 4. The necessity argument using the square as a
+tournament automorphism excludes lengths divisible by 4; the odd-cycle
+argument excludes odd lengths above 1. The displayed parity check proves
+sufficiency on each pair orbit. A self-converse ordinary class contributes
+exactly n! fixed (T,sigma) pairs to the twisted sum. Thus S_n and K_n have
+the precise meanings claimed, without importing a tournament census.
+
+2. LOCAL FOREST AND MOVE FORMULA: PASS
+
+A nonadjacent rightward relocation breaks only the displayed boundary arcs.
+Its legal-path conditions are exactly (6.1). These requirements occupy
+one, two, or three distinct nonpath coordinates, hence are independent under
+the uniform cube measure. There is one both-endpoint template, 2(n-3)
+one-endpoint templates, and binom(n-3,2) internal templates. Their sum is
+N/2 + 2(n-3)N/4 + binom(n-3,2)N/8 = N(n^2+n-4)/16.
+Self-moves are counted, consistently with both implementations.
+
+Each relocation preserves ordinary isomorphism class; reflection preserves
+merged class. A spanning tree therefore keeps each node fibre in one true
+class. The same coverage/cardinality argument proves all-order sufficiency.
+No all-order local connectivity or necessity is proved or implicitly used.
+The finite n <= 8 necessity result is on normalized tilings HP(T)/Aut(T),
+not the larger labelled path graph. Equality of component counts with the
+independent Burnside counts suffices because every component is already
+contained in a genuine class and every class is represented.
+
+3. COHERENT BOOLEAN FOURIER LIFT: PASS
+
+Integer Walsh columns are real. Equation (7.2), followed by inverse Walsh
+transform, gives f_u(x)^2=f_u(x) pointwise, so every f_u(x) is 0 or 1.
+Equation (7.1) makes their sum one. Krawtchouk invertibility then identifies
+all W_d from (7.3). Positive prescribed masses rule out empty nodes.
+Reflection invariance follows exactly by Fourier inversion. These statements
+only realize a Boolean cube partition and do not impose tournament transport.
+No preservation of the actual class-specific W_d or Gram ranks is asserted.
+
+4. HOSTILE n=5 WIRING: PASS, INCLUDING ABSTRACT NONREALIZABILITY
+
+I separately generated all 1,024 labelled 5-vertex tournaments and their
+ordinary/converse orbits by closure under adjacent vertex transpositions.
+This independent implementation imports none of the submitted functions.
+It recovers 12 ordinary and 10 merged classes, the stated canonical codes,
+all masses, and the exact exchange of assignments at tiles 4 and 26.
+
+The new implementation separately checks:
+- unchanged blue/black degrees and loops, and complete black matrix;
+- colour-resolved current/destination-score inventories, including a fresh
+  HP/Aut enumeration from the original representative tournaments;
+- reflection invariance, exact Walsh Boolean convolution and top charges;
+- all four mass-compatible global node permutations, none of which is a
+  coloured weighted graph isomorphism;
+- the explicit directed path (0,4,1,2,3) in T(4), normalizing to tile 9,
+  although the hostile separates their node assignments.
+
+Graph isomorphisms must preserve masses because these are total incident
+half-edge counts, including twice each loop. Thus restricting to the four
+mass-compatible permutations is exhaustive, not an assumption of fixed
+node names. Their failure proves nonrealizability of the abstract wiring,
+not only failure of the displayed coordinate assignment.
+
+5. ARTIFACT INTEGRITY AND RERUNS: PASS
+
+Every one of the 19 manifest paths matches both its claimed byte length and
+SHA-256 digest. All computations were rerun in an isolated replay directory.
+The main verifier passes complete coordinate/transport examples n=3..6 and
+signed Burnside checks through n=6. Arc equality counts are 6, 48, 640 and
+15,360. The direct-arc/Python check agrees with both C++ partitions and
+permutation/converse canonicalization for every tile through n=7.
+
+Both complete n=8 C++ scans were compiled anew and run to termination:
+  tilings:              2,097,152
+  ordinary components:      6,880
+  merged components:        3,528
+  legal rightward moves: 8,912,896
+The n=8 direct-arc code does not use the first code's masks or affine move
+transforms. Both compilation steps complete with the requested warning flags.
+All 13 regenerated output/data/witness files are byte-identical to the
+submitted versions. Evidence is in manifest_check.json and
+replay_comparison.json; the rerun outputs and new independent code are staged
+beside this report.
+
+6. SIZE CORRECTION: REQUIRED WORDING REPAIR
+
+Write k=K_n and E=binom(n,2). The number of labelled tournaments is 2^E and
+the acting group S_n x C_2 has size 2 n!, so
+
+  k >= 2^E/(2 n!).
+
+With N=2^(E-(n-1)), this yields
+
+  k^2/N >= R_n := 2^((n-1)(n+2)/2)/(4 (n!)^2).
+
+At n=7, R_7=131072/99225 > 1. Moreover,
+
+  R_(n+1)/R_n = 2^(n+1)/(n+1)^2 >= 4 for n >= 7.
+
+The base cases n=3,4,5,6 have (N,k)=(2,2),(8,3),(64,10),(1024,34),
+and all also satisfy N <= k^2. Therefore
+
+  N <= K_n^2 for every n >= 3.
+
+The same elementary lower bound gives n^2=O(log K_n), so the supplied
+O(N n^2)-bit certificate is O(K_n^2 log K_n) bits. This is polynomial in the
+number of entries of an explicit K_n by K_n matrix. It is also polynomial
+in explicitly listed sparse weighted-support size: every nonempty node has
+an incident line, so at least K_n/2 nonzero unordered support entries are
+needed, with loops allowed. This argument does not cover a circuit, formula,
+or histogram that implicitly describes all nodes; genuinely succinct input
+representations require their own analysis.
+
+Polynomial certificate size does NOT provide a polynomial-time method to
+find a certificate or decide realizability. The verifier/search distinction
+and exponential-in-n warning should remain. A minimal safe replacement is:
+
+  "This certificate is exponential in n. No polynomial-time method to find
+  it or recognize compressed wiring is claimed. When all K_n nodes are
+  explicitly listed, its size is nevertheless polynomial in that explicit
+  input size; more succinct descriptions need a separate size analysis."
+
+7. ADDITIONAL NONBLOCKING CLARIFICATION
+
+The supplied verify_certificate function checks only submitted witnesses and
+never searches over vertex permutations. The demonstration harness calls
+canonical_certificate to generate its positive examples using exhaustive
+permutation orbits, and in doing so covers the labelled tournament space at
+those small orders. Consequently one may correctly call the certificate
+verifier search-free, but should not call the entire demonstration harness
+search-free or claim its example generation avoids tournament enumeration.
+The primary result does not depend on an efficient generation algorithm.
+
+FINAL RECOMMENDATION
+
+Approve all mathematical results and all 19 artifacts, conditional only on
+repairing the Section 4 representation-size sentence and refreshing the
+manifest for that text edit. No recomputation of the mathematical data is
+needed. Do not strengthen local necessity beyond n=8, do not identify the
+normalized fibre graph with the labelled path graph, and do not describe the
+hostile as preserving the actual distance matrices or actual Gram ranks.

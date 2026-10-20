@@ -1,0 +1,913 @@
+{
+  "n": 5,
+  "representatives": [
+    0,
+    2,
+    4,
+    5,
+    8,
+    10,
+    12,
+    40,
+    41,
+    76
+  ],
+  "halfedges": [
+    {
+      "node": 5,
+      "coordinate": 0,
+      "partner": 63,
+      "blue": true,
+      "permutation": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ],
+      "converse": 1
+    },
+    {
+      "node": 4,
+      "coordinate": 1,
+      "partner": 62,
+      "blue": false,
+      "permutation": [
+        2,
+        3,
+        4,
+        0,
+        1
+      ],
+      "converse": 1
+    },
+    {
+      "node": 8,
+      "coordinate": 2,
+      "partner": 61,
+      "blue": false,
+      "permutation": [
+        2,
+        1,
+        3,
+        0,
+        4
+      ],
+      "converse": 0
+    },
+    {
+      "node": 5,
+      "coordinate": 3,
+      "partner": 60,
+      "blue": false,
+      "permutation": [
+        3,
+        2,
+        1,
+        0,
+        4
+      ],
+      "converse": 0
+    },
+    {
+      "node": 6,
+      "coordinate": 4,
+      "partner": 59,
+      "blue": true,
+      "permutation": [
+        2,
+        4,
+        0,
+        1,
+        3
+      ],
+      "converse": 1
+    },
+    {
+      "node": 4,
+      "coordinate": 5,
+      "partner": 58,
+      "blue": false,
+      "permutation": [
+        3,
+        1,
+        0,
+        4,
+        2
+      ],
+      "converse": 0
+    },
+    {
+      "node": 6,
+      "coordinate": 6,
+      "partner": 57,
+      "blue": false,
+      "permutation": [
+        4,
+        1,
+        0,
+        3,
+        2
+      ],
+      "converse": 0
+    },
+    {
+      "node": 2,
+      "coordinate": 7,
+      "partner": 56,
+      "blue": false,
+      "permutation": [
+        4,
+        1,
+        0,
+        3,
+        2
+      ],
+      "converse": 0
+    },
+    {
+      "node": 8,
+      "coordinate": 8,
+      "partner": 55,
+      "blue": true,
+      "permutation": [
+        1,
+        3,
+        2,
+        0,
+        4
+      ],
+      "converse": 0
+    },
+    {
+      "node": 6,
+      "coordinate": 9,
+      "partner": 54,
+      "blue": false,
+      "permutation": [
+        2,
+        3,
+        4,
+        0,
+        1
+      ],
+      "converse": 1
+    },
+    {
+      "node": 7,
+      "coordinate": 10,
+      "partner": 53,
+      "blue": false,
+      "permutation": [
+        2,
+        3,
+        1,
+        4,
+        0
+      ],
+      "converse": 1
+    },
+    {
+      "node": 4,
+      "coordinate": 11,
+      "partner": 52,
+      "blue": false,
+      "permutation": [
+        3,
+        2,
+        1,
+        0,
+        4
+      ],
+      "converse": 0
+    },
+    {
+      "node": 9,
+      "coordinate": 12,
+      "partner": 51,
+      "blue": true,
+      "permutation": [
+        4,
+        1,
+        2,
+        3,
+        0
+      ],
+      "converse": 1
+    },
+    {
+      "node": 6,
+      "coordinate": 13,
+      "partner": 50,
+      "blue": false,
+      "permutation": [
+        4,
+        2,
+        1,
+        0,
+        3
+      ],
+      "converse": 0
+    },
+    {
+      "node": 8,
+      "coordinate": 14,
+      "partner": 49,
+      "blue": false,
+      "permutation": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "converse": 1
+    },
+    {
+      "node": 2,
+      "coordinate": 15,
+      "partner": 48,
+      "blue": false,
+      "permutation": [
+        4,
+        2,
+        1,
+        0,
+        3
+      ],
+      "converse": 0
+    },
+    {
+      "node": 8,
+      "coordinate": 16,
+      "partner": 47,
+      "blue": false,
+      "permutation": [
+        1,
+        3,
+        0,
+        4,
+        2
+      ],
+      "converse": 0
+    },
+    {
+      "node": 7,
+      "coordinate": 17,
+      "partner": 46,
+      "blue": false,
+      "permutation": [
+        2,
+        3,
+        4,
+        0,
+        1
+      ],
+      "converse": 1
+    },
+    {
+      "node": 9,
+      "coordinate": 18,
+      "partner": 45,
+      "blue": true,
+      "permutation": [
+        4,
+        1,
+        3,
+        0,
+        2
+      ],
+      "converse": 1
+    },
+    {
+      "node": 8,
+      "coordinate": 19,
+      "partner": 44,
+      "blue": false,
+      "permutation": [
+        1,
+        2,
+        4,
+        0,
+        3
+      ],
+      "converse": 1
+    },
+    {
+      "node": 6,
+      "coordinate": 20,
+      "partner": 43,
+      "blue": false,
+      "permutation": [
+        2,
+        3,
+        0,
+        1,
+        4
+      ],
+      "converse": 1
+    },
+    {
+      "node": 4,
+      "coordinate": 21,
+      "partner": 42,
+      "blue": false,
+      "permutation": [
+        3,
+        2,
+        0,
+        4,
+        1
+      ],
+      "converse": 0
+    },
+    {
+      "node": 6,
+      "coordinate": 22,
+      "partner": 41,
+      "blue": true,
+      "permutation": [
+        4,
+        2,
+        0,
+        3,
+        1
+      ],
+      "converse": 0
+    },
+    {
+      "node": 2,
+      "coordinate": 23,
+      "partner": 40,
+      "blue": false,
+      "permutation": [
+        4,
+        2,
+        0,
+        3,
+        1
+      ],
+      "converse": 0
+    },
+    {
+      "node": 7,
+      "coordinate": 24,
+      "partner": 39,
+      "blue": false,
+      "permutation": [
+        4,
+        0,
+        2,
+        3,
+        1
+      ],
+      "converse": 1
+    },
+    {
+      "node": 8,
+      "coordinate": 25,
+      "partner": 38,
+      "blue": false,
+      "permutation": [
+        3,
+        1,
+        4,
+        0,
+        2
+      ],
+      "converse": 1
+    },
+    {
+      "node": 8,
+      "coordinate": 26,
+      "partner": 37,
+      "blue": true,
+      "permutation": [
+        3,
+        1,
+        2,
+        4,
+        0
+      ],
+      "converse": 1
+    },
+    {
+      "node": 5,
+      "coordinate": 27,
+      "partner": 36,
+      "blue": false,
+      "permutation": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "converse": 0
+    },
+    {
+      "node": 8,
+      "coordinate": 28,
+      "partner": 35,
+      "blue": false,
+      "permutation": [
+        3,
+        1,
+        0,
+        2,
+        4
+      ],
+      "converse": 1
+    },
+    {
+      "node": 5,
+      "coordinate": 29,
+      "partner": 34,
+      "blue": false,
+      "permutation": [
+        4,
+        3,
+        1,
+        0,
+        2
+      ],
+      "converse": 0
+    },
+    {
+      "node": 5,
+      "coordinate": 30,
+      "partner": 33,
+      "blue": true,
+      "permutation": [
+        4,
+        3,
+        0,
+        2,
+        1
+      ],
+      "converse": 0
+    },
+    {
+      "node": 1,
+      "coordinate": 31,
+      "partner": 32,
+      "blue": false,
+      "permutation": [
+        4,
+        3,
+        1,
+        0,
+        2
+      ],
+      "converse": 0
+    },
+    {
+      "node": 4,
+      "coordinate": 32,
+      "partner": 31,
+      "blue": false,
+      "permutation": [
+        3,
+        4,
+        0,
+        1,
+        2
+      ],
+      "converse": 1
+    },
+    {
+      "node": 6,
+      "coordinate": 33,
+      "partner": 30,
+      "blue": true,
+      "permutation": [
+        2,
+        1,
+        0,
+        4,
+        3
+      ],
+      "converse": 0
+    },
+    {
+      "node": 7,
+      "coordinate": 34,
+      "partner": 29,
+      "blue": false,
+      "permutation": [
+        2,
+        4,
+        0,
+        3,
+        1
+      ],
+      "converse": 1
+    },
+    {
+      "node": 8,
+      "coordinate": 35,
+      "partner": 28,
+      "blue": false,
+      "permutation": [
+        1,
+        4,
+        0,
+        2,
+        3
+      ],
+      "converse": 1
+    },
+    {
+      "node": 4,
+      "coordinate": 36,
+      "partner": 27,
+      "blue": false,
+      "permutation": [
+        2,
+        4,
+        0,
+        1,
+        3
+      ],
+      "converse": 1
+    },
+    {
+      "node": 5,
+      "coordinate": 37,
+      "partner": 26,
+      "blue": true,
+      "permutation": [
+        3,
+        1,
+        0,
+        4,
+        2
+      ],
+      "converse": 0
+    },
+    {
+      "node": 4,
+      "coordinate": 38,
+      "partner": 25,
+      "blue": false,
+      "permutation": [
+        3,
+        0,
+        4,
+        2,
+        1
+      ],
+      "converse": 0
+    },
+    {
+      "node": 2,
+      "coordinate": 39,
+      "partner": 24,
+      "blue": false,
+      "permutation": [
+        4,
+        0,
+        3,
+        2,
+        1
+      ],
+      "converse": 0
+    },
+    {
+      "node": 6,
+      "coordinate": 40,
+      "partner": 23,
+      "blue": false,
+      "permutation": [
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "converse": 1
+    },
+    {
+      "node": 9,
+      "coordinate": 41,
+      "partner": 22,
+      "blue": true,
+      "permutation": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "converse": 0
+    },
+    {
+      "node": 8,
+      "coordinate": 42,
+      "partner": 21,
+      "blue": false,
+      "permutation": [
+        2,
+        3,
+        1,
+        4,
+        0
+      ],
+      "converse": 1
+    },
+    {
+      "node": 6,
+      "coordinate": 43,
+      "partner": 20,
+      "blue": false,
+      "permutation": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "converse": 0
+    },
+    {
+      "node": 6,
+      "coordinate": 44,
+      "partner": 19,
+      "blue": false,
+      "permutation": [
+        2,
+        0,
+        4,
+        3,
+        1
+      ],
+      "converse": 0
+    },
+    {
+      "node": 8,
+      "coordinate": 45,
+      "partner": 18,
+      "blue": true,
+      "permutation": [
+        1,
+        0,
+        2,
+        3,
+        4
+      ],
+      "converse": 1
+    },
+    {
+      "node": 5,
+      "coordinate": 46,
+      "partner": 17,
+      "blue": false,
+      "permutation": [
+        3,
+        0,
+        4,
+        2,
+        1
+      ],
+      "converse": 0
+    },
+    {
+      "node": 2,
+      "coordinate": 47,
+      "partner": 16,
+      "blue": false,
+      "permutation": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "converse": 0
+    },
+    {
+      "node": 5,
+      "coordinate": 48,
+      "partner": 15,
+      "blue": false,
+      "permutation": [
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "converse": 1
+    },
+    {
+      "node": 8,
+      "coordinate": 49,
+      "partner": 14,
+      "blue": false,
+      "permutation": [
+        3,
+        2,
+        0,
+        4,
+        1
+      ],
+      "converse": 0
+    },
+    {
+      "node": 8,
+      "coordinate": 50,
+      "partner": 13,
+      "blue": false,
+      "permutation": [
+        3,
+        0,
+        4,
+        2,
+        1
+      ],
+      "converse": 0
+    },
+    {
+      "node": 7,
+      "coordinate": 51,
+      "partner": 12,
+      "blue": true,
+      "permutation": [
+        4,
+        2,
+        1,
+        3,
+        0
+      ],
+      "converse": 0
+    },
+    {
+      "node": 2,
+      "coordinate": 52,
+      "partner": 11,
+      "blue": false,
+      "permutation": [
+        2,
+        3,
+        0,
+        1,
+        4
+      ],
+      "converse": 1
+    },
+    {
+      "node": 2,
+      "coordinate": 53,
+      "partner": 10,
+      "blue": false,
+      "permutation": [
+        1,
+        2,
+        3,
+        0,
+        4
+      ],
+      "converse": 1
+    },
+    {
+      "node": 2,
+      "coordinate": 54,
+      "partner": 9,
+      "blue": false,
+      "permutation": [
+        1,
+        3,
+        0,
+        2,
+        4
+      ],
+      "converse": 1
+    },
+    {
+      "node": 3,
+      "coordinate": 55,
+      "partner": 8,
+      "blue": true,
+      "permutation": [
+        4,
+        3,
+        2,
+        0,
+        1
+      ],
+      "converse": 0
+    },
+    {
+      "node": 4,
+      "coordinate": 56,
+      "partner": 7,
+      "blue": false,
+      "permutation": [
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "converse": 1
+    },
+    {
+      "node": 6,
+      "coordinate": 57,
+      "partner": 6,
+      "blue": false,
+      "permutation": [
+        0,
+        4,
+        3,
+        2,
+        1
+      ],
+      "converse": 0
+    },
+    {
+      "node": 5,
+      "coordinate": 58,
+      "partner": 5,
+      "blue": false,
+      "permutation": [
+        0,
+        4,
+        3,
+        2,
+        1
+      ],
+      "converse": 0
+    },
+    {
+      "node": 4,
+      "coordinate": 59,
+      "partner": 4,
+      "blue": true,
+      "permutation": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "converse": 0
+    },
+    {
+      "node": 2,
+      "coordinate": 60,
+      "partner": 3,
+      "blue": false,
+      "permutation": [
+        3,
+        0,
+        1,
+        2,
+        4
+      ],
+      "converse": 1
+    },
+    {
+      "node": 2,
+      "coordinate": 61,
+      "partner": 2,
+      "blue": false,
+      "permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "converse": 1
+    },
+    {
+      "node": 1,
+      "coordinate": 62,
+      "partner": 1,
+      "blue": false,
+      "permutation": [
+        1,
+        2,
+        0,
+        3,
+        4
+      ],
+      "converse": 1
+    },
+    {
+      "node": 0,
+      "coordinate": 63,
+      "partner": 0,
+      "blue": true,
+      "permutation": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "converse": 0
+    }
+  ]
+}

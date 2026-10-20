@@ -1,0 +1,11 @@
+{
+  "status": "APPROVED",
+  "reviewed_manifest_files": 20,
+  "unchanged_code_data_witness_files": 17,
+  "approved_sha256": {
+    "REALIZABILITY.txt": "d187d2e51d7763203038b5f09749fe9fa24eca32338060f6685275cf8a5be9ed",
+    "COMPLEXITY_ADDENDUM.txt": "bef0e7f8d01410e781e6bcc329d7f56d018c82585539c1f90ed322d2ce799ee1",
+    "README.txt": "24a9d1e1f61b8906f79c5bdf0c8b635dc4e75df949f7bd53634cf76c23d72e96",
+    "DELIVERABLES.json": "3731c49151d4ef9f005d7ef5d649dc350651e40e9338e5604594d7b0c5fb2b82"
+  }
+}

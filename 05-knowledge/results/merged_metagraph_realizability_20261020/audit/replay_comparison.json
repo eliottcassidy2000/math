@@ -1,0 +1,67 @@
+[
+  {
+    "source": "verify.out",
+    "replay": "verify_rerun.out",
+    "byte_identical": true
+  },
+  {
+    "source": "local_move_classifier.out",
+    "replay": "local_classifier_rerun.out",
+    "byte_identical": true
+  },
+  {
+    "source": "independent_local_check.out",
+    "replay": "direct_local_rerun.out",
+    "byte_identical": true
+  },
+  {
+    "source": "independent_n8_scan.out",
+    "replay": "n8_direct_rerun.out",
+    "byte_identical": true
+  },
+  {
+    "source": "certificate_n3.json",
+    "replay": "replay/certificate_n3.json",
+    "byte_identical": true
+  },
+  {
+    "source": "certificate_n4.json",
+    "replay": "replay/certificate_n4.json",
+    "byte_identical": true
+  },
+  {
+    "source": "certificate_n5.json",
+    "replay": "replay/certificate_n5.json",
+    "byte_identical": true
+  },
+  {
+    "source": "audit.json",
+    "replay": "replay/audit.json",
+    "byte_identical": true
+  },
+  {
+    "source": "local_assignment_n3.txt",
+    "replay": "replay/local_assignment_n3.txt",
+    "byte_identical": true
+  },
+  {
+    "source": "local_assignment_n4.txt",
+    "replay": "replay/local_assignment_n4.txt",
+    "byte_identical": true
+  },
+  {
+    "source": "local_assignment_n5.txt",
+    "replay": "replay/local_assignment_n5.txt",
+    "byte_identical": true
+  },
+  {
+    "source": "local_assignment_n6.txt",
+    "replay": "replay/local_assignment_n6.txt",
+    "byte_identical": true
+  },
+  {
+    "source": "local_assignment_n7.txt",
+    "replay": "replay/local_assignment_n7.txt",
+    "byte_identical": true
+  }
+]
