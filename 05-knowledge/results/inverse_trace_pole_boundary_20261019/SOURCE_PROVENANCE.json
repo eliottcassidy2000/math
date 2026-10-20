@@ -115,5 +115,23 @@
     "verify.out": "c3ac8cca7b409afd8c7a1352a86cfade1f2a6844b697950885908fa92fbf1af8",
     "README.md": "f722a3bfde425adc44e934d75c81e46825549a09935b69e641402633c6a7a62c",
     "verification-results.json": "890b7e87c072218b08d8e9b6d09b92d5bd02a97433ac692e294b8a0f984ed102"
+  },
+  "current_scope_correction_2026_10_20": {
+    "basis": "Domrina 2000 excludes generic/function-field degree four; local method residual is not a globally open case.",
+    "primary_source": "https://www.mathnet.ru/eng/im273",
+    "original_publication_hashes_preserved": true,
+    "unchanged": "All verifier code, finite results, and independent audit artifacts are unchanged; their earlier scope prose is historical.",
+    "current_files": [
+      {
+        "path": "README.md",
+        "prior_published_sha256": "7aa5006d0b234826409d86702fe44edcee6b0571a7311d11bf77c297c1a07cb6",
+        "current_sha256": "df29afa79d65bc5901cee7d8279bfded6f69f26c01a0daef5ae8faa2860baa3e"
+      },
+      {
+        "path": "TRACE_POLE_BOUNDARY.md",
+        "prior_published_sha256": "3b49905aec6b3a2975108c9bdb1d8be84ae83383debe755d7bf83e3ef7198236",
+        "current_sha256": "1e8488e0d5051db586287e4b5a4b113e97da2d510972966452e3e580ff4f65ad"
+      }
+    ]
   }
 }

@@ -1,5 +1,7 @@
 # Inverse trace poles, surviving sheets, and an alternating-monodromy gate
 
+**Current global scope, 2026-10-20 (CITED).** [Domrina's 2000 theorem](https://www.mathnet.ru/eng/im273) excludes complex polynomial Keller maps of generic/function-field degree four. The repository's [primary-PDF source record](../../reference/CORE-PAPERS-PLANAR-JC.md) confirms that degree convention. Quartic A4 is therefore only a residual of this local method, not a globally open Keller case. The local pole models and conditional trace gates remain valid; the live global program must address higher-degree families, without claiming a particular first open degree.
+
 19 October 2026. **PROVED, scoped synthesis; independent review PASS.** The arguments below use elementary Newton identities, the standard finite-normalization factorization of an étale polynomial map, and the already identified finite-sheet survival mechanism. No historical-priority claim is made. The planar Jacobian conjecture remains open. In particular, no regularity of the trace moments below is asserted for an arbitrary Keller map.
 
 ## Main findings
@@ -23,7 +25,7 @@ Let F=(P,Q): A²_C → A²_C be polynomial with det DF=κ≠0. Put A=C[u,v], K=C
 
 4. **Even-degree alternating gate.** In the primitive monic coordinate above, suppose d≥2 is even and T_1,...,T_(d−2) are polynomial. Then the geometric monodromy lies in A_d. More precisely, every nonproper divisor has exactly one finite sheet, T_(d−1) has a pole of some integer order a>0, and the primitive inverse discriminant has pole order exactly da there. Its other affine divisorial orders are even. Thus the discriminant is a square in C(u,v).
 
-   For d=4 this says that S4 monodromy forces a pole in Tr(x) or Tr(x²). The earlier fixed-sheet/normal-generation gate excludes the regular V4 action; combined with it, the only transitive quartic possibility when both moments are polynomial is A4. A4 is not excluded here.
+   For d=4 this says that S4 monodromy forces a pole in Tr(x) or Tr(x²). The earlier fixed-sheet/normal-generation gate excludes the regular V4 action; combined with it, the only transitive quartic possibility when both moments are polynomial is A4. A4 is not excluded by this method alone; it is globally excluded by Domrina's generic-degree-four theorem cited above.
 
 These are global inverse-field statements, not assertions about a point Taylor jet or a formal Hamiltonian logarithm.
 
@@ -176,9 +178,9 @@ It fixes the finite sheet. Equation (6.2) is a local statement after removing co
 
 For d=4, a boundary invisible to T_1,T_2 has exactly three escaping sheets and one finite sheet. Its inertia is the identity if 3 divides a, and a 3-cycle otherwise. In particular it is never a transposition.
 
-Therefore an S4 Keller map of field degree four must have a polar T_1 or T_2. The equivalent discriminant proof above shows this directly. The earlier THM-2633 removes the other even transitive quartic group V4, because its nonidentity permutations have no fixed sheet and affine inertia normally generates monodromy. With that inherited result, polynomial T_1,T_2 leaves the A4 lane.
+Therefore an S4 Keller map of field degree four must have a polar T_1 or T_2. The equivalent discriminant proof above shows this directly. The earlier THM-2633 removes the other even transitive quartic group V4, because its nonidentity permutations have no fixed sheet and affine inertia normally generates monodromy. With that inherited result, polynomial T_1,T_2 leaves A4 as a residual of this method, while Domrina globally excludes generic degree four.
 
-A4 is an actual boundary of this method: a retained root plus a cubic root-of-unity pole packet has precisely the allowable 3-cycle inertia and its first two moments vanish. The theorem does not produce a global A4 Keller map, nor does it rule one out.
+A4 is an actual boundary of this method: a retained root plus a cubic root-of-unity pole packet has precisely the allowable 3-cycle inertia and its first two moments vanish. This local theorem alone neither produces nor excludes a global A4 Keller map; Domrina's theorem already excludes such a map. The model measures this method's missing geometric input, not a live global quartic possibility.
 
 ## 7. Polynomial and rational hostiles
 
@@ -268,11 +270,11 @@ This is a useful connection to the earlier common-boundary-bound obstruction. It
 
 ## 9. What would actually advance the planar proof program
 
-The concrete next target is a polynomial regularity statement for genuine inverse traces, not the existence of a formal logarithm:
+The concrete next target is a polynomial regularity statement for genuine inverse traces in selected higher-degree families, not the existence of a formal logarithm. Quartic models are controls because generic degree four is already excluded globally:
 
-- For a selected quartic S4 candidate, compute T_1,T_2 in a primitive monic transverse gauge. If both are polynomial, that entire candidate is excluded by Section 6.
+- In a selected higher-degree family, compute T_1,...,T_(d-1) in a primitive monic transverse gauge. Polynomiality of all these moments gives the automorphism criterion; for even d, polynomiality of the first d-2 moments gives the conditional alternating-monodromy gate. No exact first open generic degree is asserted.
 - If a pole is found, retain its order, the second inverse coordinate, and the finite normalization boundary. Its derivative tower (8.1) quantifies what a proposed bounded-pole approximation must fail to control.
-- In the A4 residual lane, a cubic root-of-unity pole packet is compatible with the present test. The rational-boundary/forest sidecar or a genuine polynomial realization obstruction is still needed. Repeating scalar residue sums cannot supply it.
+- Retain the quartic A4 cubic root-of-unity packet as a local hostile: it is compatible with this test but cannot globally realize a polynomial Keller map by Domrina. To strengthen the method for higher degrees, retain the rational-boundary/forest sidecar or another genuine polynomial realization obstruction. Repeating scalar residue sums cannot supply it.
 
 The new synthesis does not prove that these trace functions are polynomial for arbitrary Keller maps. The unconditional denominator compiler is an exact reformulation/measurement of nonproperness with fewer moments, and the even-degree gate is a conditional monodromy exclusion. This is the stopping boundary of the present result.
 
