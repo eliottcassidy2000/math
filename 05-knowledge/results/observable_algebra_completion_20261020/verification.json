@@ -1,0 +1,85 @@
+{
+  "cases": [
+    {
+      "algebra_dimension": 4,
+      "classes": 4,
+      "linear_dimension": 4,
+      "name": "nonlinear_five_state",
+      "refinement_depth": 2,
+      "states": 5
+    },
+    {
+      "algebra_dimension": 3,
+      "classes": 3,
+      "linear_dimension": 2,
+      "name": "distinct_scalar_identity",
+      "refinement_depth": 0,
+      "states": 3
+    },
+    {
+      "algebra_dimension": 3,
+      "classes": 3,
+      "linear_dimension": 2,
+      "name": "summed_character_hostile",
+      "refinement_depth": 0,
+      "states": 4
+    },
+    {
+      "algebra_dimension": 4,
+      "classes": 4,
+      "linear_dimension": 3,
+      "name": "identity_two_bits",
+      "refinement_depth": 0,
+      "states": 4
+    },
+    {
+      "algebra_dimension": 8,
+      "classes": 8,
+      "linear_dimension": 4,
+      "name": "cyclic_three_register",
+      "refinement_depth": 2,
+      "states": 8
+    },
+    {
+      "algebra_dimension": 4,
+      "classes": 4,
+      "linear_dimension": 4,
+      "name": "affine_two_map_quotient",
+      "refinement_depth": 1,
+      "states": 8
+    },
+    {
+      "algebra_dimension": 2,
+      "classes": 2,
+      "linear_dimension": 2,
+      "name": "zero_map_forgets_future",
+      "refinement_depth": 0,
+      "states": 8
+    },
+    {
+      "algebra_dimension": 1,
+      "classes": 1,
+      "linear_dimension": 1,
+      "name": "no_observed_character",
+      "refinement_depth": 0,
+      "states": 8
+    }
+  ],
+  "checks": {
+    "affine_pullback": 168,
+    "algebra_dimension": 8,
+    "annihilator_equivalence": 272,
+    "binary_dimension_formula": 5,
+    "cyclic_register_joint_repair": 1,
+    "cyclic_register_mean_hostile": 4,
+    "linear_dimension": 8,
+    "moment_transition": 23,
+    "quotient_fourier_inverse": 19,
+    "quotient_indicator": 29,
+    "stable_partition": 156,
+    "word_horizon": 8
+  },
+  "exact_checks": 701,
+  "scope": "Eight declared tiny systems; exact rational closure and independent partition refinement. No broad census or conjecture closure.",
+  "status": "PASS"
+}

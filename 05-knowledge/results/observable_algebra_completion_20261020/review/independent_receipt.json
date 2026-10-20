@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "affine_character_span": 2,
+    "affine_signed_pullback": 16,
+    "annihilator_cosets": 2,
+    "cyclic_register": 2,
+    "finite_algebra_quotient": 2,
+    "individual_character_scope_guard": 2,
+    "joint_observation_distinguishes": 2,
+    "quotient_indicators_in_algebra": 4,
+    "same_timewise_means": 2
+  },
+  "exact_control_total": 34,
+  "scope": "Tiny exact finite-state controls, independent rational linear algebra and independent partition refinement. No broad census or source verifier imports.",
+  "status": "PASS"
+}
