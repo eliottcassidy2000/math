@@ -1,0 +1,50 @@
+
+=== n = 3: graphs 4, even 2 ===
+  H = Z3 type (3,) (|H|=3, pair orbits 1): tau = 1, eps = 1, all graph types 2
+
+=== n = 4: graphs 11, even 4 ===
+  H = Z3 type (3, 1) (|H|=3, pair orbits 2): tau = 2, eps = 2, all graph types 4
+
+=== n = 5: graphs 34, even 12 ===
+  H = Z5 type (5,) (|H|=5, pair orbits 2): tau = 1, eps = 1, all graph types 3
+  H = Z3 type (3, 1, 1) (|H|=3, pair orbits 4): tau = 4, eps = 4, all graph types 12
+
+=== n = 6: graphs 156, even 56 ===
+  H = Z5 type (5, 1) (|H|=5, pair orbits 3): tau = 2, eps = 2, all graph types 6
+  H = Z3 type (3, 3) (|H|=3, pair orbits 5): tau = 3, eps = 3, all graph types 12
+  H = Z3 type (3, 1, 1, 1) (|H|=3, pair orbits 7): tau = 11, eps = 11, all graph types 38
+  H = Z3xZ3 = <(012),(345)> (|H|=9, pair orbits 3): tau = 1, eps = 1, all graph types 6
+
+=== n = 7: graphs 1044, even 456 ===
+  H = Z7 type (7,) (|H|=7, pair orbits 3): tau = 2, eps = 2, all graph types 4
+  H = Z5 type (5, 1, 1) (|H|=5, pair orbits 5): tau = 4, eps = 4, all graph types 18
+  H = Z3 type (3, 3, 1) (|H|=3, pair orbits 7): tau = 12, eps = 12, all graph types 40
+  H = Z3 type (3, 1, 1, 1, 1) (|H|=3, pair orbits 11): tau = 44, eps = 44, all graph types 168
+  H = Z3xZ3 = <(012),(345)> (|H|=9, pair orbits 5): tau = 4, eps = 4, all graph types 20
+  H = Z7:Z3 (AGL(1,7) odd part) (|H|=21, pair orbits 1): tau = 1, eps = 1, all graph types 2
+
+=== n = 8: graphs 12346, even 6880 ===
+  H = Z7 type (7, 1) (|H|=7, pair orbits 4): tau = 4, eps = 4, all graph types 8
+  H = Z15 type (5, 3) (|H|=15, pair orbits 4): tau = 2, eps = 2, all graph types 12
+  H = Z5 type (5, 1, 1, 1) (|H|=5, pair orbits 8): tau = 12, eps = 12, all graph types 60
+  H = Z3 type (3, 3, 1, 1) (|H|=3, pair orbits 10): tau = 48, eps = 48, all graph types 192
+  H = Z3 type (3, 1, 1, 1, 1, 1) (|H|=3, pair orbits 16): tau = 280, eps = 280, all graph types 1024
+  H = Z3xZ3 = <(012),(345)> (|H|=9, pair orbits 8): tau = 16, eps = 16, all graph types 96
+  H = Z7:Z3 (AGL(1,7) odd part) (|H|=21, pair orbits 2): tau = 2, eps = 2, all graph types 4
+
+=== n = 9: graphs 274668, even 191536 ===
+  H = Z9 type (9,) (|H|=9, pair orbits 4): tau = 3, eps = 3, all graph types 8
+  H = Z7 type (7, 1, 1) (|H|=7, pair orbits 6): tau = 8, eps = 8, all graph types 24
+  H = Z15 type (5, 3, 1) (|H|=15, pair orbits 6): tau = 8, eps = 8, all graph types 48
+  H = Z5 type (5, 1, 1, 1, 1) (|H|=5, pair orbits 12): tau = 48, eps = 48, all graph types 270
+  H = Z3 type (3, 3, 3) (|H|=3, pair orbits 12): tau = 43, eps = 43, all graph types 137
+  H = Z3 type (3, 3, 1, 1, 1) (|H|=3, pair orbits 14): tau = 262, eps = 262, all graph types 1052
+  H = Z3 type (3, 1, 1, 1, 1, 1, 1) (|H|=3, pair orbits 22): tau = 2954, eps = 2954, all graph types 9772
+  H = Z3xZ3 = <(012),(345)> (|H|=9, pair orbits 12): tau = 86, eps = 86, all graph types 516
+  H = Z7:Z3 (AGL(1,7) odd part) (|H|=21, pair orbits 4): tau = 4, eps = 4, all graph types 12
+  H = Z3xZ3 = <(012),(345)(678)> (|H|=9, pair orbits 8): tau = 10, eps = 10, all graph types 60
+  H = Z3xZ3 = <(012)(345),(012)(678)> (|H|=9, pair orbits 6): tau = 2, eps = 2, all graph types 20
+  H = Z3xZ3 regular (|H|=9, pair orbits 4): tau = 1, eps = 1, all graph types 5
+  H = Z3^3 = <(012),(345),(678)> (|H|=27, pair orbits 6): tau = 2, eps = 2, all graph types 20
+  H = Z3 wr Z3 (Sylow-3 of S_9, order 81) (|H|=81, pair orbits 2): tau = 1, eps = 1, all graph types 4
+  H = order-27 subgroup <(012)(345)(678), d, (012)(354)> (|H|=27, pair orbits 2): tau = 1, eps = 1, all graph types 4

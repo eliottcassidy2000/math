@@ -43,6 +43,14 @@ def subgroup_reps(n):
     if n >= 7:
         a = cyc([[0, 1, 2, 3, 4, 5, 6]], n); b = cyc([[1, 2, 4], [3, 6, 5]], n)  # x->x+1, x->2x on Z_7
         H = closure([a, b], n); assert len(H) == 21; reps["Z7:Z3 (AGL(1,7) odd part)"] = H
+    if n >= 9:
+        a = cyc([[0, 1, 2]], n); b = cyc([[3, 4, 5], [6, 7, 8]], n); reps["Z3xZ3 = <(012),(345)(678)>"] = closure([a, b], n)
+        a = cyc([[0, 1, 2], [3, 4, 5]], n); b = cyc([[0, 1, 2], [6, 7, 8]], n); reps["Z3xZ3 = <(012)(345),(012)(678)>"] = closure([a, b], n)
+        a = cyc([[0, 1, 2], [3, 4, 5], [6, 7, 8]], n); b = cyc([[0, 3, 6], [1, 4, 7], [2, 5, 8]], n); reps["Z3xZ3 regular"] = closure([a, b], n)
+        a = cyc([[0, 1, 2]], n); b = cyc([[3, 4, 5]], n); c = cyc([[6, 7, 8]], n); reps["Z3^3 = <(012),(345),(678)>"] = closure([a, b, c], n)
+        d = cyc([[0, 3, 6], [1, 4, 7], [2, 5, 8]], n); H = closure([a, b, c, d], n); assert len(H) == 81; reps["Z3 wr Z3 (Sylow-3 of S_9, order 81)"] = H
+        e = cyc([[0, 1, 2], [3, 5, 4]], n); H = closure([a, b, c, d], n)
+        H27 = closure([cyc([[0,1,2],[3,4,5],[6,7,8]], n), d, cyc([[0,1,2],[3,5,4]], n)], n); reps[f"order-{len(H27)} subgroup <(012)(345)(678), d, (012)(354)>"] = H27
     return reps
 def pair_orbits(H, n):
     pairs = [(i, j) for i in range(n) for j in range(i + 1, n)]
