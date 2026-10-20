@@ -1,0 +1,282 @@
+{
+  "checks": 53462,
+  "rows": [
+    {
+      "class": "F21_times_C3",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {
+        "1": 2
+      },
+      "even_graph_fusion_defect": 2,
+      "even_graph_multiplicity_histogram": {
+        "1": 170,
+        "2": 2
+      },
+      "fixed_objects_each": 4096,
+      "generators": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          0,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        [
+          0,
+          2,
+          4,
+          6,
+          1,
+          3,
+          5,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ]
+      ],
+      "n": 13,
+      "normalizer_order": 1512,
+      "order": 63,
+      "pair_orbits": 12,
+      "relative_even_graph_orbits": 176,
+      "relative_tournament_orbits": 176,
+      "sign_escape_global_types": 2,
+      "sign_escape_relative_orbits": 2,
+      "tau_E": 172,
+      "tau_T": 172,
+      "tournament_fusion_defect": 4,
+      "tournament_multiplicity_histogram": {
+        "1": 168,
+        "2": 4
+      }
+    },
+    {
+      "class": "F21_diagonal_7plus3",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {
+        "1": 178
+      },
+      "even_graph_fusion_defect": 2,
+      "even_graph_multiplicity_histogram": {
+        "1": 170,
+        "2": 2
+      },
+      "fixed_objects_each": 4096,
+      "generators": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          0,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        [
+          0,
+          2,
+          4,
+          6,
+          1,
+          3,
+          5,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ]
+      ],
+      "n": 13,
+      "normalizer_order": 756,
+      "order": 21,
+      "pair_orbits": 12,
+      "relative_even_graph_orbits": 352,
+      "relative_tournament_orbits": 352,
+      "sign_escape_global_types": 178,
+      "sign_escape_relative_orbits": 178,
+      "tau_E": 172,
+      "tau_T": 172,
+      "tournament_fusion_defect": 180,
+      "tournament_multiplicity_histogram": {
+        "2": 168,
+        "4": 4
+      }
+    },
+    {
+      "class": "F21_times_C3",
+      "difference": 1,
+      "escape_graph_multiplicity_histogram": {
+        "1": 9
+      },
+      "even_graph_fusion_defect": 24,
+      "even_graph_multiplicity_histogram": {
+        "1": 1351,
+        "2": 24
+      },
+      "fixed_objects_each": 131072,
+      "generators": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          0,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        [
+          0,
+          2,
+          4,
+          6,
+          1,
+          3,
+          5,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "n": 14,
+      "normalizer_order": 6048,
+      "order": 63,
+      "pair_orbits": 17,
+      "relative_even_graph_orbits": 1408,
+      "relative_tournament_orbits": 1408,
+      "sign_escape_global_types": 9,
+      "sign_escape_relative_orbits": 9,
+      "tau_E": 1375,
+      "tau_T": 1376,
+      "tournament_fusion_defect": 32,
+      "tournament_multiplicity_histogram": {
+        "1": 1344,
+        "2": 32
+      }
+    },
+    {
+      "class": "F21_diagonal_7plus3",
+      "difference": 1,
+      "escape_graph_multiplicity_histogram": {
+        "1": 1417
+      },
+      "even_graph_fusion_defect": 24,
+      "even_graph_multiplicity_histogram": {
+        "1": 1351,
+        "2": 24
+      },
+      "fixed_objects_each": 131072,
+      "generators": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          0,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        [
+          0,
+          2,
+          4,
+          6,
+          1,
+          3,
+          5,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "n": 14,
+      "normalizer_order": 3024,
+      "order": 21,
+      "pair_orbits": 17,
+      "relative_even_graph_orbits": 2816,
+      "relative_tournament_orbits": 2816,
+      "sign_escape_global_types": 1417,
+      "sign_escape_relative_orbits": 1417,
+      "tau_E": 1375,
+      "tau_T": 1376,
+      "tournament_fusion_defect": 1440,
+      "tournament_multiplicity_histogram": {
+        "2": 1344,
+        "4": 32
+      }
+    }
+  ],
+  "scope": "four selected p=7 product/diagonal embeddings at n=13,14; not a subgroup census",
+  "status": "PASS"
+}

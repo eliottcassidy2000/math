@@ -1,0 +1,83 @@
+{
+  "checks": 25,
+  "four_colored_tournament_counts": [
+    1,
+    4,
+    16,
+    88,
+    704
+  ],
+  "rows": [
+    {
+      "class": "F21_fixed",
+      "n": 11,
+      "relative_count": 48
+    },
+    {
+      "class": "C15_5plus3",
+      "n": 11,
+      "relative_count": 176
+    },
+    {
+      "class": "C21_7plus3",
+      "n": 11,
+      "relative_count": 16
+    },
+    {
+      "class": "F21_diagonal_7plus3",
+      "n": 11,
+      "relative_count": 16
+    },
+    {
+      "class": "F21_times_C3",
+      "n": 11,
+      "relative_count": 8
+    },
+    {
+      "class": "F55_fixed",
+      "n": 11,
+      "relative_count": 1
+    },
+    {
+      "class": "F21_fixed",
+      "n": 12,
+      "relative_count": 296
+    },
+    {
+      "class": "C15_5plus3",
+      "n": 12,
+      "relative_count": 1408
+    },
+    {
+      "class": "C21_7plus3",
+      "n": 12,
+      "relative_count": 64
+    },
+    {
+      "class": "F21_diagonal_7plus3",
+      "n": 12,
+      "relative_count": 64
+    },
+    {
+      "class": "F21_times_C3",
+      "n": 12,
+      "relative_count": 32
+    },
+    {
+      "class": "F55_fixed",
+      "n": 12,
+      "relative_count": 2
+    }
+  ],
+  "scope": "12 of the 18 census rows; relative orbit counts only, not full fusion/sign descent",
+  "status": "PASS",
+  "two_colored_tournament_counts": [
+    1,
+    2,
+    4,
+    12,
+    48,
+    296,
+    3040
+  ]
+}

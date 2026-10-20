@@ -1,0 +1,459 @@
+{
+  "checks": 4223,
+  "method": "uncompressed pair actions and original unbucketed isomorphism classification",
+  "rows": [
+    {
+      "class": "F21_fixed",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 48
+      },
+      "fixed_objects_each": 2048,
+      "n": 11,
+      "normalizer_order": 1008,
+      "order": 21,
+      "pair_orbits": 11,
+      "relative_even_graph_orbits": 48,
+      "relative_tournament_orbits": 48,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "tau_E": 48,
+      "tau_T": 48,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 48
+      }
+    },
+    {
+      "class": "C15_5plus3",
+      "difference": 4,
+      "escape_graph_multiplicity_histogram": {
+        "1": 4
+      },
+      "even_graph_fusion_defect": 4,
+      "even_graph_multiplicity_histogram": {
+        "1": 164,
+        "2": 4
+      },
+      "fixed_objects_each": 8192,
+      "n": 11,
+      "normalizer_order": 720,
+      "order": 15,
+      "pair_orbits": 13,
+      "relative_even_graph_orbits": 176,
+      "relative_tournament_orbits": 176,
+      "sign_escape_global_types": 4,
+      "sign_escape_relative_orbits": 4,
+      "tau_E": 168,
+      "tau_T": 172,
+      "tournament_fusion_defect": 4,
+      "tournament_multiplicity_histogram": {
+        "1": 168,
+        "2": 4
+      }
+    },
+    {
+      "class": "C21_7plus3",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 16
+      },
+      "fixed_objects_each": 128,
+      "n": 11,
+      "normalizer_order": 252,
+      "order": 21,
+      "pair_orbits": 7,
+      "relative_even_graph_orbits": 16,
+      "relative_tournament_orbits": 16,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "tau_E": 16,
+      "tau_T": 16,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 16
+      }
+    },
+    {
+      "class": "F21_diagonal_7plus3",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {
+        "1": 8
+      },
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 8
+      },
+      "fixed_objects_each": 32,
+      "n": 11,
+      "normalizer_order": 126,
+      "order": 21,
+      "pair_orbits": 5,
+      "relative_even_graph_orbits": 16,
+      "relative_tournament_orbits": 16,
+      "sign_escape_global_types": 8,
+      "sign_escape_relative_orbits": 8,
+      "tau_E": 8,
+      "tau_T": 8,
+      "tournament_fusion_defect": 8,
+      "tournament_multiplicity_histogram": {
+        "2": 8
+      }
+    },
+    {
+      "class": "F21_times_C3",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 8
+      },
+      "fixed_objects_each": 32,
+      "n": 11,
+      "normalizer_order": 252,
+      "order": 63,
+      "pair_orbits": 5,
+      "relative_even_graph_orbits": 8,
+      "relative_tournament_orbits": 8,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "tau_E": 8,
+      "tau_T": 8,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 8
+      }
+    },
+    {
+      "class": "F55_fixed",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 1
+      },
+      "fixed_objects_each": 2,
+      "n": 11,
+      "normalizer_order": 110,
+      "order": 55,
+      "pair_orbits": 1,
+      "relative_even_graph_orbits": 1,
+      "relative_tournament_orbits": 1,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "tau_E": 1,
+      "tau_T": 1,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 1
+      }
+    },
+    {
+      "class": "C15_5plus3plus3",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {
+        "1": 4
+      },
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 12
+      },
+      "fixed_objects_each": 512,
+      "n": 11,
+      "normalizer_order": 720,
+      "order": 15,
+      "pair_orbits": 9,
+      "relative_even_graph_orbits": 16,
+      "relative_tournament_orbits": 16,
+      "sign_escape_global_types": 4,
+      "sign_escape_relative_orbits": 4,
+      "tau_E": 12,
+      "tau_T": 12,
+      "tournament_fusion_defect": 4,
+      "tournament_multiplicity_histogram": {
+        "1": 8,
+        "2": 4
+      }
+    },
+    {
+      "class": "C5_times_C3_squared",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 4
+      },
+      "fixed_objects_each": 128,
+      "n": 11,
+      "normalizer_order": 1440,
+      "order": 45,
+      "pair_orbits": 7,
+      "relative_even_graph_orbits": 4,
+      "relative_tournament_orbits": 4,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "tau_E": 4,
+      "tau_T": 4,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 4
+      }
+    },
+    {
+      "class": "F21_fixed",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 296
+      },
+      "fixed_objects_each": 65536,
+      "n": 12,
+      "normalizer_order": 5040,
+      "order": 21,
+      "pair_orbits": 16,
+      "relative_even_graph_orbits": 296,
+      "relative_tournament_orbits": 296,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "tau_E": 296,
+      "tau_T": 296,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 296
+      }
+    },
+    {
+      "class": "C15_5plus3",
+      "difference": 16,
+      "escape_graph_multiplicity_histogram": {
+        "1": 14
+      },
+      "even_graph_fusion_defect": 34,
+      "even_graph_multiplicity_histogram": {
+        "1": 1326,
+        "2": 34
+      },
+      "fixed_objects_each": 262144,
+      "n": 12,
+      "normalizer_order": 2880,
+      "order": 15,
+      "pair_orbits": 18,
+      "relative_even_graph_orbits": 1408,
+      "relative_tournament_orbits": 1408,
+      "sign_escape_global_types": 14,
+      "sign_escape_relative_orbits": 14,
+      "tau_E": 1360,
+      "tau_T": 1376,
+      "tournament_fusion_defect": 32,
+      "tournament_multiplicity_histogram": {
+        "1": 1344,
+        "2": 32
+      }
+    },
+    {
+      "class": "C21_7plus3",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 64
+      },
+      "fixed_objects_each": 1024,
+      "n": 12,
+      "normalizer_order": 504,
+      "order": 21,
+      "pair_orbits": 10,
+      "relative_even_graph_orbits": 64,
+      "relative_tournament_orbits": 64,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "tau_E": 64,
+      "tau_T": 64,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 64
+      }
+    },
+    {
+      "class": "F21_diagonal_7plus3",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {
+        "1": 32
+      },
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 32
+      },
+      "fixed_objects_each": 256,
+      "n": 12,
+      "normalizer_order": 252,
+      "order": 21,
+      "pair_orbits": 8,
+      "relative_even_graph_orbits": 64,
+      "relative_tournament_orbits": 64,
+      "sign_escape_global_types": 32,
+      "sign_escape_relative_orbits": 32,
+      "tau_E": 32,
+      "tau_T": 32,
+      "tournament_fusion_defect": 32,
+      "tournament_multiplicity_histogram": {
+        "2": 32
+      }
+    },
+    {
+      "class": "F21_times_C3",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 32
+      },
+      "fixed_objects_each": 256,
+      "n": 12,
+      "normalizer_order": 504,
+      "order": 63,
+      "pair_orbits": 8,
+      "relative_even_graph_orbits": 32,
+      "relative_tournament_orbits": 32,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "tau_E": 32,
+      "tau_T": 32,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 32
+      }
+    },
+    {
+      "class": "F55_fixed",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 2
+      },
+      "fixed_objects_each": 4,
+      "n": 12,
+      "normalizer_order": 110,
+      "order": 55,
+      "pair_orbits": 2,
+      "relative_even_graph_orbits": 2,
+      "relative_tournament_orbits": 2,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "tau_E": 2,
+      "tau_T": 2,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 2
+      }
+    },
+    {
+      "class": "C15_5plus3plus3",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {
+        "1": 32
+      },
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 96
+      },
+      "fixed_objects_each": 4096,
+      "n": 12,
+      "normalizer_order": 720,
+      "order": 15,
+      "pair_orbits": 12,
+      "relative_even_graph_orbits": 128,
+      "relative_tournament_orbits": 128,
+      "sign_escape_global_types": 32,
+      "sign_escape_relative_orbits": 32,
+      "tau_E": 96,
+      "tau_T": 96,
+      "tournament_fusion_defect": 32,
+      "tournament_multiplicity_histogram": {
+        "1": 64,
+        "2": 32
+      }
+    },
+    {
+      "class": "C5_times_C3_squared",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 32
+      },
+      "fixed_objects_each": 1024,
+      "n": 12,
+      "normalizer_order": 1440,
+      "order": 45,
+      "pair_orbits": 10,
+      "relative_even_graph_orbits": 32,
+      "relative_tournament_orbits": 32,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "tau_E": 32,
+      "tau_T": 32,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 32
+      }
+    },
+    {
+      "class": "C35_7plus5",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 4
+      },
+      "fixed_objects_each": 64,
+      "n": 12,
+      "normalizer_order": 840,
+      "order": 35,
+      "pair_orbits": 6,
+      "relative_even_graph_orbits": 4,
+      "relative_tournament_orbits": 4,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "tau_E": 4,
+      "tau_T": 4,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 4
+      }
+    },
+    {
+      "class": "F21_times_C5",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 2
+      },
+      "fixed_objects_each": 16,
+      "n": 12,
+      "normalizer_order": 840,
+      "order": 105,
+      "pair_orbits": 4,
+      "relative_even_graph_orbits": 2,
+      "relative_tournament_orbits": 2,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "tau_E": 2,
+      "tau_T": 2,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 2
+      }
+    }
+  ],
+  "scope": "all 18 classified mixed-prime rows at n=11,12",
+  "shared_primitives": "normalizer candidates, pair-orbit construction, full isomorphism search, twin-quotient global sign",
+  "status": "PASS"
+}
