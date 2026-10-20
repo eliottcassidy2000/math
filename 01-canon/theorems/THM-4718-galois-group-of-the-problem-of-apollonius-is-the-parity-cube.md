@@ -1,18 +1,13 @@
 ---
 id: THM-4718
-title: "The Galois group of the problem of Apollonius is the parity cube (Z/2)^3: the eight circles tangent to three general circles split into four pairs indexed by the sign classes e = (e_1, e_2, e_3)/(global flip), the two circles of a class being conjugate over sqrt(Delta_e) with Delta_e equal, modulo squares, to the product of the three pairwise oriented tangency defects prod_(i<j) (d_ij^2 - (e_i r_i - e_j r_j)^2) (the Lie-sphere Gram determinant of the oriented data); since each pairwise factor depends only on e_i e_j, and each of the two values occurs twice among the four classes, Delta_1 Delta_2 Delta_3 Delta_4 is a square, so the monodromy group is contained in the even subgroup of (Z/2)^4; it equals it: over F_q a generic Apollonius problem has 0, 4 or 8 rational solution circles with Chebotarev frequencies 1/8, 3/4, 1/8 (observed 12.9%, 74.5%, 10.8% at q = 503), mean 4, never (generically) 2 or 6; over R the generic count is 2 x #{e : Delta_e > 0}"
+title: "The generic Apollonius Galois group for labelled input circles with radii in the base field is the parity cube (Z/2)^3"
 status: >
-  PROVED: the parity relation (the Gram determinant of three points of the Lie quadric has zero diagonal, so it is twice the
-  product of the three pairwise Lie products, each a function of e_i e_j only) and its consequence for the Galois group, given
-  the CITED Lie-sphere description of the problem (the two solutions of a sign class are the two points in which the Lie
-  quadric meets the line Lie-orthogonal to the three oriented data circles; Knight, J. Geom. 2005; Cecil, Lie Sphere Geometry;
-  Pedoe) and the elementary lemma disc(Q|W) disc(Q|W^perp) = disc(Q) mod squares. FINITE-EXACT: Delta_e Gram_e is a rational
-  square for every class at 300 random integer triples, and the product of the four discriminants is a square at 400 more
-  (apollonius_lie_gram.out, apollonius_rational_test.out); the finite-field census for q = 11..503 (apollonius_finite_field*.out).
-  The identification of the full group (Z/2)^3 rather than a proper subgroup is read off the census (all three fixed-point
-  types occur with the predicted weights) and is not separately proved. Literature: McKean, "Circles of Apollonius two ways"
-  (arXiv:2210.13288) treats the problem as three quadrics with quadratically enriched counts and records Pedoe's real-count
-  theorem; the Sottile-Yahl survey (arXiv:2108.07905) was not checked for this group; no priority claim. Pre-audit.
+  PROVED over K=Q(x1,y1,x2,y2,x3,y3,r1,r2,r3), with algebraically independent coordinates and labelled input radii in K:
+  the generic splitting field of the eight solution circles has Galois group (Z/2)^3 in its parity-cube action.
+  Direct elimination proves the discriminant formula; valuations at six distinct irreducible defect divisors give squareclass rank three.
+  The generic rank gap in the original 2026-10-19 account is closed by the 2026-10-20 addendum and independently audited result below.
+  Exact uniform-group fixed-point weights are 1/8,6/8,1/8 for 8,4,0 points. Finite-field census values remain finite evidence;
+  their specialization-frequency limits and error terms are not proved by that census. Original text is retained as historical provenance.
 session: mac-mini-2026-10-19-apollonius
 source: 05-knowledge/results/apollonius_enumerative_20261019_galois_parity_cube_ford_descartes_windows.md
 scripts:
@@ -21,6 +16,29 @@ related:
   - THM-4653 (Legendre bilinear forms over F_q), THM-4701 (finite unit-circle graphs), THM-4714 (Ford circles via Minkowski ?), HYP-9338
   - Erdos-1057 Carmichael paper (Howe-Huffman-Kohlmeyer-Kruer 2026): the same Chebotarev/character style of counting
 ---
+
+## Addendum, 2026-10-20: generic squareclass rank is proved
+
+For labelled input circles over `K=Q(x1,y1,x2,y2,x3,y3,r1,r2,r3)` with all nine variables algebraically independent, the generic splitting field has group exactly `(Z/2)^3`, acting by even swaps within four pairs. [The direct elimination, distinct-divisor squareclass proof, graph-code extension and independent audit](../../05-knowledge/results/apollonius_squareclass_code_20261019/APOLLONIUS_SQUARECLASS_CODE.md) close the original generic-rank gap without a census or an unproved Lie-coordinate normalization. The six defect polynomials are pairwise nonassociate absolutely irreducible quadrics; their valuation coordinates are independent, and the four discriminant incidence rows have rank three with their total sum as the only relation.
+
+The uniform finite-group weights for 0,4,8 fixed circles are exactly `1/8,6/8,1/8`, with mean four. Applying those weights to finite-field specializations still requires a separate distribution theorem and explicit degeneracy control. In particular, the historical census paragraph below does not prove convergence or an `O(1/q)` error. Giving only squared radii, forgetting input labels, or specializing the parameters can change the field and group. No historical priority is claimed.
+
+### Status at first publication, retained for provenance
+
+> PROVED: the parity relation (the Gram determinant of three points of the Lie quadric has zero diagonal, so it is twice the
+> product of the three pairwise Lie products, each a function of e_i e_j only) and its consequence for the Galois group, given
+> the CITED Lie-sphere description of the problem (the two solutions of a sign class are the two points in which the Lie
+> quadric meets the line Lie-orthogonal to the three oriented data circles; Knight, J. Geom. 2005; Cecil, Lie Sphere Geometry;
+> Pedoe) and the elementary lemma disc(Q|W) disc(Q|W^perp) = disc(Q) mod squares. FINITE-EXACT: Delta_e Gram_e is a rational
+> square for every class at 300 random integer triples, and the product of the four discriminants is a square at 400 more
+> (apollonius_lie_gram.out, apollonius_rational_test.out); the finite-field census for q = 11..503 (apollonius_finite_field*.out).
+> The identification of the full group (Z/2)^3 rather than a proper subgroup is read off the census (all three fixed-point
+> types occur with the predicted weights) and is not separately proved. Literature: McKean, "Circles of Apollonius two ways"
+> (arXiv:2210.13288) treats the problem as three quadrics with quadratically enriched counts and records Pedoe's real-count
+> theorem; the Sottile-Yahl survey (arXiv:2108.07905) was not checked for this group; no priority claim. Pre-audit.
+
+## Original 2026-10-19 text below: the addendum controls the generic proof and distribution scope
+
 
 # THM-4718 — the Galois group of the problem of Apollonius is the parity cube
 
