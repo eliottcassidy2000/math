@@ -1,0 +1,84 @@
+{
+  "checks": 75,
+  "composite_order9_hostile_nontrivial_modules": [
+    [
+      0,
+      3,
+      6
+    ],
+    [
+      1,
+      4,
+      7
+    ],
+    [
+      2,
+      5,
+      8
+    ]
+  ],
+  "family_structural_controls": [
+    {
+      "H_order": 1155,
+      "H_pair_orbits": 17,
+      "Kbb_N_generator_signs": "all +1",
+      "Kbb_full_part_swap_sign": -1,
+      "a": 7,
+      "b": 11,
+      "even_graph_types_proved_by_exact_gap": 1407,
+      "k": 4,
+      "n": 22,
+      "normalizer_order": 110880,
+      "tournament_types_proved_by_formula": 1408
+    },
+    {
+      "H_order": 9405,
+      "H_pair_orbits": 47,
+      "Kbb_N_generator_signs": "all +1",
+      "Kbb_full_part_swap_sign": -1,
+      "a": 11,
+      "b": 19,
+      "even_graph_types_proved_by_exact_gap": 874138623,
+      "k": 8,
+      "n": 38,
+      "normalizer_order": 1516838400,
+      "tournament_types_proved_by_formula": 874138624
+    }
+  ],
+  "prime_block_controls": [
+    {
+      "H_order": 3,
+      "negation_sign_complete_graph": -1,
+      "p": 3,
+      "pair_orbits": 1,
+      "proper_nontrivial_modules": 0,
+      "subsets_tested": 3
+    },
+    {
+      "H_order": 21,
+      "negation_sign_complete_graph": -1,
+      "p": 7,
+      "pair_orbits": 1,
+      "proper_nontrivial_modules": 0,
+      "subsets_tested": 119
+    },
+    {
+      "H_order": 55,
+      "negation_sign_complete_graph": -1,
+      "p": 11,
+      "pair_orbits": 1,
+      "proper_nontrivial_modules": 0,
+      "subsets_tested": 2035
+    },
+    {
+      "H_order": 171,
+      "negation_sign_complete_graph": -1,
+      "p": 19,
+      "pair_orbits": 1,
+      "proper_nontrivial_modules": 0,
+      "subsets_tested": 524267
+    }
+  ],
+  "scope": "structural checks only; no full census at n22 or n38",
+  "status": "PASS"
+}

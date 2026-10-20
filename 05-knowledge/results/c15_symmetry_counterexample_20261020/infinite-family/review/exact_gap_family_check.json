@@ -1,0 +1,35 @@
+{
+  "a": 7,
+  "b": 11,
+  "k": 4,
+  "n": 22,
+  "presentations": 32768,
+  "N_orbits": 1992,
+  "N_even": 1408,
+  "global_even": 1407,
+  "tournament_types": 1408,
+  "full_graph_types": 1992,
+  "extra_odd": [
+    {
+      "q": 481,
+      "false_twin_weights": [
+        11,
+        11
+      ],
+      "false_twin_adjacency": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "odd_cell_permutation": [
+        1,
+        0
+      ]
+    }
+  ]
+}
