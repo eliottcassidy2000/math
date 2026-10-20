@@ -1,0 +1,194 @@
+{
+  "status": "PASS",
+  "integrated_patching_random_seed": 20261020,
+  "integrated_patching_cases": 600,
+  "assumption_passes": 119,
+  "assumption_failures": 481,
+  "positive_optimum_excess_cases": 44,
+  "positive_excess_examples": [
+    {
+      "costs": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      ],
+      "sizes": [
+        1,
+        1,
+        2
+      ],
+      "C": "1",
+      "k": 1,
+      "optimum_excess": "1",
+      "tariff": "4",
+      "conditional_probabilities": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "costs": [
+        [
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      ],
+      "sizes": [
+        2,
+        0,
+        1
+      ],
+      "C": "2",
+      "k": 2,
+      "optimum_excess": "1/3",
+      "tariff": "4",
+      "conditional_probabilities": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "costs": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "sizes": [
+        1,
+        2,
+        0
+      ],
+      "C": "2",
+      "k": 1,
+      "optimum_excess": "1/3",
+      "tariff": "8",
+      "conditional_probabilities": [
+        "1",
+        "0"
+      ]
+    }
+  ],
+  "star_top_coefficients": [
+    [
+      2,
+      "-1/2"
+    ],
+    [
+      4,
+      "1/4"
+    ],
+    [
+      6,
+      "-3/16"
+    ],
+    [
+      8,
+      "5/32"
+    ],
+    [
+      10,
+      "-35/256"
+    ],
+    [
+      12,
+      "63/512"
+    ],
+    [
+      14,
+      "-231/2048"
+    ],
+    [
+      16,
+      "429/4096"
+    ],
+    [
+      18,
+      "-6435/65536"
+    ],
+    [
+      20,
+      "12155/131072"
+    ]
+  ],
+  "five_path_all_root_subsets_and_interior_patterns": 89
+}

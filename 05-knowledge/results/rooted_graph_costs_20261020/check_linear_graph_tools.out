@@ -1,0 +1,95 @@
+{
+  "all_patterns_vertices_0_to_5": 2903,
+  "checks": 672505,
+  "disjoint_interior_gluing_pairs": 64,
+  "five_vertex_path_rooted_J_patterns": 34,
+  "four_star_expected_costs": {
+    "-1": "1",
+    "1": "3/2"
+  },
+  "hostiles": [
+    "same proper marginals, different four-star cost",
+    "shared interior",
+    "shared boundary edge",
+    "one-sided star bounds do not control every gadget",
+    "one copy is insufficient for successor J"
+  ],
+  "minimax_2x2_cases": 2025,
+  "not_claimed": [
+    "a new finite chromatic bound",
+    "source Lean validation",
+    "the countable-colouring theorem proved here",
+    "geometric realizability of arbitrary copied gadgets"
+  ],
+  "rounding_tariff_cases": 641772,
+  "status": "FINITE-EXACT controls; mathematical proofs are in README.md",
+  "three_port_component_patterns": 2902,
+  "tomography_root_and_probe_counts": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      5,
+      15
+    ],
+    [
+      6,
+      31
+    ],
+    [
+      7,
+      63
+    ],
+    [
+      8,
+      127
+    ]
+  ],
+  "top_star_coefficients": [
+    [
+      2,
+      "-1/2"
+    ],
+    [
+      4,
+      "1/4"
+    ],
+    [
+      6,
+      "-3/16"
+    ],
+    [
+      8,
+      "5/32"
+    ],
+    [
+      10,
+      "-35/256"
+    ],
+    [
+      12,
+      "63/512"
+    ],
+    [
+      14,
+      "-231/2048"
+    ],
+    [
+      16,
+      "429/4096"
+    ]
+  ]
+}

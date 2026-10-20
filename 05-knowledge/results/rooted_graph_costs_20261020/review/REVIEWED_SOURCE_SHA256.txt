@@ -1,0 +1,2 @@
+74573790fa20c9d90b179fde2a14a3de7b4700c61f48fe60e3cdbea8ecc7cdc4  session9-linear-graphs/README.md
+103279d638d047175913a04e9c0cc06bba8535d417fd8a930dfe91f9985a49ff  session9-linear-graphs/check_linear_graph_tools.py
