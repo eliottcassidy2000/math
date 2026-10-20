@@ -1,0 +1,10 @@
+{
+  "math/05-knowledge/results/nodal_cylinder_period_obstruction_20261020/NODAL_CYLINDER_PERIOD_OBSTRUCTION.md": "dd0d343128a77f51fced21eee047558e0992d6fa94566e50b598771fd3d3a46a",
+  "math/05-knowledge/results/source_conductor_collision_multiplicity_20261020/ACTUAL_SOURCE_CONDUCTOR_AND_COLLISION_MULTIPLICITY.md": "45494620a95261528932376918d078be3d0e8bf7c3ab9a31f9a5643f8f43bd84",
+  "session13-cylinder-continuation/FIXED_CYLINDER_FINITE_PERIOD_LEMMA.md": "e916e9a0bff921e605af346b82e7d2948beb846221b0df4553052175b901c7c5",
+  "session13-cylinder-continuation/MOVING_HYPERELLIPTIC_GENERATOR_OBSTRUCTION.md": "17ae49f2e6af886e892d61094c5cf415a974c0f0d0f7f15685125221181ae215",
+  "session13-cylinder-continuation/README.md": "4ea664569eea40b594b1b768a29d762c1c7b15f392c39dd42fe50468073f8226",
+  "session13-cylinder-continuation/SOURCE_AND_SCOPE.md": "0eb749f64271b07513e1cc58ed763e85fc07c0f9f13f1a973122febcc007d246",
+  "session13-cylinder-continuation/results.json": "48db03a52f9a8e492a9abd492fbbbc38815bf0e4bf1fef84c3f2c3f9464d08a4",
+  "session13-cylinder-continuation/verify_cylinder_obstruction.py": "01f29b5f146c288f4c3c91952722d15f14f50630f0548614c012f46e1dabf275"
+}

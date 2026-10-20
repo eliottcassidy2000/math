@@ -1,0 +1,153 @@
+{
+  "checks": 205,
+  "families": [
+    {
+      "all_fiber_embedding_claimed_by_test": false,
+      "degree": 1,
+      "kind": "symbolic_degree",
+      "leading_exponent_prime": true
+    },
+    {
+      "all_fiber_embedding_claimed_by_test": false,
+      "degree": 2,
+      "kind": "symbolic_degree",
+      "leading_exponent_prime": true
+    },
+    {
+      "all_fiber_embedding_claimed_by_test": false,
+      "degree": 3,
+      "kind": "symbolic_degree",
+      "leading_exponent_prime": true
+    },
+    {
+      "all_fiber_embedding_claimed_by_test": false,
+      "degree": 4,
+      "kind": "symbolic_degree",
+      "leading_exponent_prime": false
+    },
+    {
+      "all_fiber_embedding_claimed_by_test": false,
+      "degree": 5,
+      "kind": "symbolic_degree",
+      "leading_exponent_prime": true
+    },
+    {
+      "all_fiber_embedding_claimed_by_test": false,
+      "degree": 6,
+      "kind": "symbolic_degree",
+      "leading_exponent_prime": true
+    },
+    {
+      "g": "W + 1",
+      "kind": "explicit_family",
+      "name": "node_fixed"
+    },
+    {
+      "g": "W*x + 1",
+      "kind": "explicit_family",
+      "name": "node_degree_drop"
+    },
+    {
+      "g": "W**2 - W*x + 1",
+      "kind": "explicit_family",
+      "name": "two_nodes_moving"
+    },
+    {
+      "g": "W**2*x + W + 1",
+      "kind": "explicit_family",
+      "name": "quadratic_leading_drop"
+    },
+    {
+      "g": "W**3 + W**2*x + W*(x**2 + 1) + 1",
+      "kind": "explicit_family",
+      "name": "cubic_moving"
+    },
+    {
+      "g": "W**3*x + W**2 + W*x + 1",
+      "kind": "explicit_family",
+      "name": "cubic_leading_drop"
+    },
+    {
+      "g": "(W - 1)**2*(W*x - 1)",
+      "kind": "explicit_family",
+      "name": "double_root_moving"
+    },
+    {
+      "g": "(W - 1)**2",
+      "kind": "explicit_family",
+      "name": "constant_tacnode"
+    },
+    {
+      "g": "W**5 + W*x + 1",
+      "kind": "explicit_family",
+      "name": "constant_prime11"
+    },
+    {
+      "g": "W**5*x + W**4 + 1",
+      "kind": "explicit_family",
+      "name": "prime11_to_composite9_drop"
+    },
+    {
+      "kind": "fixed_period",
+      "multiplicity": 1,
+      "period": "-16/15",
+      "scale": -2
+    },
+    {
+      "kind": "fixed_period",
+      "multiplicity": 1,
+      "period": "8/15",
+      "scale": 1
+    },
+    {
+      "kind": "fixed_period",
+      "multiplicity": 1,
+      "period": "8/5",
+      "scale": 3
+    },
+    {
+      "kind": "fixed_period",
+      "multiplicity": 2,
+      "period": "64/105",
+      "scale": -2
+    },
+    {
+      "kind": "fixed_period",
+      "multiplicity": 2,
+      "period": "-32/105",
+      "scale": 1
+    },
+    {
+      "kind": "fixed_period",
+      "multiplicity": 2,
+      "period": "-32/35",
+      "scale": 3
+    },
+    {
+      "kind": "fixed_period",
+      "multiplicity": 3,
+      "period": "-128/315",
+      "scale": -2
+    },
+    {
+      "kind": "fixed_period",
+      "multiplicity": 3,
+      "period": "64/315",
+      "scale": 1
+    },
+    {
+      "kind": "fixed_period",
+      "multiplicity": 3,
+      "period": "64/105",
+      "scale": 3
+    },
+    {
+      "kind": "recognition_controls",
+      "nonprincipal_boundary": "I=(x,W), conductor=(x,y^2)B"
+    }
+  ],
+  "family_count": 26,
+  "not_claimed": "No finite test proves uniqueness of all plane embeddings, the all-pair theorem, or recognition of arbitrary source algebras.",
+  "status": "PASS",
+  "universe": "symbolic degrees1..6; ten explicit moving/fixed source models; nine fixed-period transforms; distinct hostile boundary controls"
+}

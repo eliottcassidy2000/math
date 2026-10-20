@@ -1,0 +1,12 @@
+{
+  "claimed_general_jacobian_conjecture_resolution": false,
+  "conditional_source_requirement": "A monic quadratic normalization polynomial belongs to the entire principal-conductor source algebra.",
+  "independent_checks": 396,
+  "independent_code_imports_producer": false,
+  "independent_controls": 43,
+  "normal_optimized_byte_identical": true,
+  "producer_checks": 205,
+  "producer_families": 26,
+  "producer_stored_json_reproduced": true,
+  "verdict": "PASS under stated hypotheses and cited classical inputs"
+}

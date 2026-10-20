@@ -1,0 +1,20 @@
+{
+  "checked_at_utc_date": "2026-10-20",
+  "sources": [
+    {
+      "title": "Uniqueness of plane embeddings of special curves",
+      "authors": "S. S. Abhyankar and A. Sathaye",
+      "doi_url": "https://doi.org/10.1090/S0002-9939-96-03254-6",
+      "retrieved_primary_text_url": "https://scispace.com/pdf/uniqueness-of-plane-embeddings-of-special-curves-omujaliiec.pdf",
+      "access": "Fresh search-index retrieval of original article pages 1061, 1062, and 1063; no complete PDF download claimed.",
+      "verified_use": "Theorem (1.3), prime leading exponents and lower weighted terms; ambient equivalence of embedded curves."
+    },
+    {
+      "title": "Injectivity on one line",
+      "author": "J. Gwozdziewicz",
+      "url": "https://arxiv.org/pdf/alg-geom/9305008",
+      "access": "Direct web-tool opening of two-page primary arXiv PDF; Theorem 1.1 inspected on page 1.",
+      "verified_use": "Nonzero constant Jacobian plus injectivity on an affine source line implies polynomial automorphism."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "session13-cylinder-continuation/FIXED_CYLINDER_FINITE_PERIOD_LEMMA.md": {
+    "additional_review_metadata_changes": [],
+    "all_remaining_lines_identical": true,
+    "final_sha256": "e916e9a0bff921e605af346b82e7d2948beb846221b0df4553052175b901c7c5",
+    "final_status_lines": [
+      "Date: 2026-10-20. Status: **PROVED; independently reviewed.**"
+    ],
+    "old_sha256": "f3d46f54f4572d17c51bc719b610bfce211d5844c5ea8b366fc0eb34b342380b"
+  },
+  "session13-cylinder-continuation/MOVING_HYPERELLIPTIC_GENERATOR_OBSTRUCTION.md": {
+    "additional_review_metadata_changes": [],
+    "all_remaining_lines_identical": true,
+    "final_sha256": "17ae49f2e6af886e892d61094c5cf415a974c0f0d0f7f15685125221181ae215",
+    "final_status_lines": [
+      "Date: 2026-10-20. Status: **PROVED; independently reviewed.**"
+    ],
+    "old_sha256": "aabaa386e58f7c87ca448daba92ce58e04a3edd36ba2da40e4f71d54096346d2"
+  },
+  "session13-cylinder-continuation/README.md": {
+    "additional_review_metadata_changes": [
+      "Added link to completed audit.",
+      "Added independently verified 396-check / 43-control counts."
+    ],
+    "all_remaining_lines_identical": true,
+    "final_sha256": "4ea664569eea40b594b1b768a29d762c1c7b15f392c39dd42fe50468073f8226",
+    "final_status_lines": [
+      "**Status:** proved; independently reviewed."
+    ],
+    "old_sha256": "64eed4cc1c66022cca3e0f9003bcdf3ba64d3f46a4da89bc7d2c149b04e389fd"
+  },
+  "session13-cylinder-continuation/SOURCE_AND_SCOPE.md": {
+    "additional_review_metadata_changes": [],
+    "all_remaining_lines_identical": true,
+    "final_sha256": "0eb749f64271b07513e1cc58ed763e85fc07c0f9f13f1a973122febcc007d246",
+    "final_status_lines": [],
+    "old_sha256": "0eb749f64271b07513e1cc58ed763e85fc07c0f9f13f1a973122febcc007d246"
+  }
+}

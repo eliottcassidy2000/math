@@ -1,0 +1,195 @@
+{
+  "checks": 396,
+  "families": [
+    {
+      "g": "W - 1",
+      "kind": "normal_form_generation",
+      "name": "constant_node"
+    },
+    {
+      "g": "W**2 + W*(x**2 + 1) + 2",
+      "kind": "normal_form_generation",
+      "name": "moving_simple"
+    },
+    {
+      "g": "W**3*x + W + 2",
+      "kind": "normal_form_generation",
+      "name": "nonmonic_no_empty"
+    },
+    {
+      "g": "W**2*x**2 + W*x + 2",
+      "kind": "normal_form_generation",
+      "name": "common_zero"
+    },
+    {
+      "g": "W**5*x + W**4 + 2",
+      "kind": "normal_form_generation",
+      "name": "prime_to_composite_drop"
+    },
+    {
+      "g": "(W - 2)**2*(W*x + 1)",
+      "kind": "normal_form_generation",
+      "name": "repeated_generic"
+    },
+    {
+      "ideal": "(x,W)",
+      "kind": "nonprincipal_recognition_boundary"
+    },
+    {
+      "conductor": "(y - 2)*(y - 1)*(y + 1)*(y + 2)",
+      "kind": "same_conductor_different_pairing"
+    },
+    {
+      "kind": "gauss_scalar_descent_control",
+      "name": "constant_node"
+    },
+    {
+      "kind": "gauss_scalar_descent_control",
+      "name": "moving_simple"
+    },
+    {
+      "kind": "gauss_scalar_descent_control",
+      "name": "nonmonic_no_empty"
+    },
+    {
+      "kind": "gauss_scalar_descent_control",
+      "name": "common_zero"
+    },
+    {
+      "kind": "gauss_scalar_descent_control",
+      "name": "prime_to_composite_drop"
+    },
+    {
+      "kind": "gauss_scalar_descent_control",
+      "name": "repeated_generic"
+    },
+    {
+      "kind": "descent_failure_boundaries"
+    },
+    {
+      "kind": "ambient_representatives",
+      "name": "constant_node"
+    },
+    {
+      "kind": "ambient_representatives",
+      "name": "moving_simple"
+    },
+    {
+      "kind": "ambient_representatives",
+      "name": "nonmonic_no_empty"
+    },
+    {
+      "kind": "ambient_representatives",
+      "name": "common_zero"
+    },
+    {
+      "kind": "ambient_representatives",
+      "name": "prime_to_composite_drop"
+    },
+    {
+      "kind": "ambient_representatives",
+      "name": "repeated_generic"
+    },
+    {
+      "kind": "moving_endpoint_cancellation",
+      "u": "x",
+      "v": "x + 1"
+    },
+    {
+      "kind": "moving_endpoint_cancellation",
+      "u": "x**2",
+      "v": "2*x + 3"
+    },
+    {
+      "kind": "moving_endpoint_cancellation",
+      "u": "-x - 1",
+      "v": "x**2 + 2"
+    },
+    {
+      "degree": 1,
+      "kind": "coefficient_recurrence"
+    },
+    {
+      "degree": 2,
+      "kind": "coefficient_recurrence"
+    },
+    {
+      "degree": 3,
+      "kind": "coefficient_recurrence"
+    },
+    {
+      "degree": 4,
+      "kind": "coefficient_recurrence"
+    },
+    {
+      "degree": 5,
+      "kind": "coefficient_recurrence"
+    },
+    {
+      "degree": 6,
+      "kind": "coefficient_recurrence"
+    },
+    {
+      "degree": 7,
+      "kind": "coefficient_recurrence"
+    },
+    {
+      "degree": 8,
+      "kind": "coefficient_recurrence"
+    },
+    {
+      "kind": "fixed_conormal_orientation",
+      "multiplicity": 1,
+      "scale": -2
+    },
+    {
+      "kind": "fixed_conormal_orientation",
+      "multiplicity": 1,
+      "scale": 3
+    },
+    {
+      "kind": "fixed_conormal_orientation",
+      "multiplicity": 2,
+      "scale": -2
+    },
+    {
+      "kind": "fixed_conormal_orientation",
+      "multiplicity": 2,
+      "scale": 3
+    },
+    {
+      "kind": "fixed_conormal_orientation",
+      "multiplicity": 3,
+      "scale": -2
+    },
+    {
+      "kind": "fixed_conormal_orientation",
+      "multiplicity": 3,
+      "scale": 3
+    },
+    {
+      "kind": "fixed_conormal_orientation",
+      "multiplicity": 4,
+      "scale": -2
+    },
+    {
+      "kind": "fixed_conormal_orientation",
+      "multiplicity": 4,
+      "scale": 3
+    },
+    {
+      "g": "7*W**2 - 10*W + 3",
+      "kind": "zero_fixed_period"
+    },
+    {
+      "kind": "global_monic_quadratic_shear"
+    },
+    {
+      "kind": "repeated_moving_root",
+      "r": "(x+1)^2"
+    }
+  ],
+  "family_count": 43,
+  "scope": "Finite exact identities and explicit hostile boundaries, not all-embedding or all-pair proof.",
+  "status": "PASS"
+}

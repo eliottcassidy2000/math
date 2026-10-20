@@ -1,0 +1,28 @@
+{
+  "session13-cylinder-continuation/FIXED_CYLINDER_FINITE_PERIOD_LEMMA.md": {
+    "nonstatus_lines_sha256": "6835e8aac85420d223af92364d510865ac45b6681ce4a04b46a8ec3e1a08d7ba",
+    "sha256": "f3d46f54f4572d17c51bc719b610bfce211d5844c5ea8b366fc0eb34b342380b",
+    "status_lines": [
+      "Date: 2026-10-20. Status: **PROOF COMPLETE; independent review pending.**"
+    ]
+  },
+  "session13-cylinder-continuation/MOVING_HYPERELLIPTIC_GENERATOR_OBSTRUCTION.md": {
+    "nonstatus_lines_sha256": "93f82e8e40e68d1fe3f125b15c02f588d47fffb8a4d71f0637ad3c50b8572cff",
+    "sha256": "aabaa386e58f7c87ca448daba92ce58e04a3edd36ba2da40e4f71d54096346d2",
+    "status_lines": [
+      "Date: 2026-10-20. Status: **PROOF COMPLETE; independent review pending.**"
+    ]
+  },
+  "session13-cylinder-continuation/README.md": {
+    "nonstatus_lines_sha256": "33447e4fed5fd20848a4d2866343a1fb3794d974550cd8f25c24b4f1020381da",
+    "sha256": "64eed4cc1c66022cca3e0f9003bcdf3ba64d3f46a4da89bc7d2c149b04e389fd",
+    "status_lines": [
+      "**Status:** proofs complete; independent review pending."
+    ]
+  },
+  "session13-cylinder-continuation/SOURCE_AND_SCOPE.md": {
+    "nonstatus_lines_sha256": "0eb749f64271b07513e1cc58ed763e85fc07c0f9f13f1a973122febcc007d246",
+    "sha256": "0eb749f64271b07513e1cc58ed763e85fc07c0f9f13f1a973122febcc007d246",
+    "status_lines": []
+  }
+}
