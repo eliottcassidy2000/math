@@ -1,6 +1,6 @@
 # Inheritance, concept board and preserved predicates
 
-Base5ae8a4f8d0. Incoming work through f3e658d7cc read and integrated.
+Base5ae8a4f8d0. Incoming work through43e4f5c6a9 read and integrated.
 
 Anchor: first-exit positive charge. Closest mechanism: the old all-length
 threshold and depth18/logarithmic region. Hostiles: source55's later descent,
@@ -52,10 +52,22 @@ the same involution, endpoint tensor, or forcing relation.
 
 Read the new zero_heavy_ports_20261020g README, zero_heavy.md and microcosm.md.
 Its one-feedback-vertex count and two pair-free classes per n>=4 are proved
-slices on a different parameter. Its arbitrary fixed-anchor regular-language
-proposal remains CONDITIONAL / under audit and is not a dependency here.
+slices on a different parameter. The final incoming0658485b2b promotes the
+arbitrary fixed-anchor regular-language theorem to PROVED after independent
+audit. Its complete re-anchoring construction was read: guessed future
+letters determine the new header, at most a deletions/insertions bound the
+comparison delay, and determinization removes competing-witness multiplicity.
+This supplies a rational class-count series for every fixed anchor bound;
+the growing-anchor transition remains open. It is stronger than the former
+conditional frontier and is not rederived here.
 Its exact re-anchoring and port tensors should be retained for growing
 interfaces; no simple endpoint count replaces those tensors.
+
+Incoming11d981365e adds an independent full-source replay of the complete
+endpoint-two layer, including all five small fallback certificates. The
+43e4f5c6a9 synthesis recognizes our mass-layer/owner connection but predates
+the unit-gap refinement. That transition is now closed by the local interval
+argument in zero_heavy.md; the boundary starts at delta=k instead.
 
 The incoming torus_voltage_and_halfplane_forcing_20261020 bridge supplies
 the K7 quotient of a three-colour triangular lattice, where winding is the

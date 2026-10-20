@@ -136,3 +136,9 @@ exact quotient. It is inherited work, not a newly independently certified
 computation in this packet. Its endpoint note's remaining-port statements
 predate the complete endpoint-two theorem and are superseded by the
 completion above; arbitrary black-core connectivity remains open.
+
+Subsequent integration of the mass packet extends its exact quotient
+through the first unit gap (mass deficit k-1), with a local C3 argument
+and relabelling controls. The README and dependency pin now reflect that
+stronger inherited result. This synchronization does not claim a new
+independent proof audit or replay by this packet's original investigators.

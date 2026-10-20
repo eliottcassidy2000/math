@@ -1,6 +1,6 @@
 {
   "files": {
-    "05-knowledge/results/charge_palettes_boundary_20261020g/zero_heavy.md": "bcbe190d0a15233fcda0633f942510b0f36610922d3bb38539ed240681db633f",
+    "05-knowledge/results/charge_palettes_boundary_20261020g/zero_heavy.md": "34fc50fbc4c5d6c58d8f8a683a4b7d74b2c712347be80d063396a556ecc0eebf",
     "05-knowledge/results/endpoint_two_repairs_20261020g/README.md": "56d74da658e154bb94d5447ac80d98b6d74335421d39da0d827c240d7bbb578f",
     "05-knowledge/results/endpoint_two_repairs_20261020g/lift.md": "944a88b3399418e076572d35c9663eb430822426adb7dadaa3b10912cde7a348",
     "05-knowledge/results/endpoint_two_repairs_20261020g/probe.md": "1d54989779b7ab3ce2e0c33fe77341e5a5389ff7e3a48c1aa2e79b9ad98fd757",
@@ -23,8 +23,8 @@
     "05-knowledge/results/strong_blue_games_20261020f/double_return_counts.md": "b2a8aeea26d4375fa28f1b604a64c0465ccdbedc587f8f2d0b5bd5c8f3cbd6ae",
     "05-knowledge/results/strong_blue_games_20261020f/transport.md": "cac01d4517a4d08e5e28a8cfb5c982f95070f292b126eb2f164e42bb2051b765",
     "05-knowledge/results/weighted_core_transport_20261020/inheritance.md": "a8e619362b9e9e055a62dfe0bd1a9b1c4a26566d3d57da1fbed6d6b0adc50bb2",
-    "05-knowledge/results/zero_heavy_ports_20261020g/AUDIT.md": "15c5500a9af565d86b2d3af6a77c646319697bb7d6d74f5634db00a6be860eb6",
-    "05-knowledge/results/zero_heavy_ports_20261020g/README.md": "1bef5769b7b33e80eed26ccbab885f732eef9cf99f5ac46c08795553ba1bae36",
+    "05-knowledge/results/zero_heavy_ports_20261020g/AUDIT.md": "5e460050a78e2ff202a0a5cae45b00684762e8b95f691e17cb508056e2dfa3cd",
+    "05-knowledge/results/zero_heavy_ports_20261020g/README.md": "79003d6f9b7819cb575e37d2ced4a5e45a7a5a5e93b93f6ef6bb28d543b57b34",
     "05-knowledge/results/zero_heavy_ports_20261020g/endpoint.md": "e30bbbf0873a2b3ac35f1dbeff94cc8472ffd05989dd9b6259f665cd0d648ff8",
     "05-knowledge/results/zero_heavy_ports_20261020g/endpoint_check.out": "b0b6d5f83718d04fce6c5fb4b549c724ef3665d0c475ea76ab83635bee687c94",
     "05-knowledge/results/zero_heavy_ports_20261020g/endpoint_check.py": "bbc8b095137f76e81c04959c95a9b53b80184b6afbc27257eb2396313b5a147d",

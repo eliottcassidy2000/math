@@ -22,12 +22,12 @@
     "05-knowledge/results/regular_return_gram_icosahedra_20261020/QUOTIENT_STATIONARY_MASS.md": "6b6a63ac6c5e9ce4399d9bce9157d6163b33768e992c54484e56c161b529987d",
     "05-knowledge/results/torus_voltage_and_halfplane_forcing_20261020/geometric_forcing_bridges.md": "e915c72e6f55d91d434a32b8e642eb4466808a02d2fe0eb54ecc5c09f9ca145b",
     "05-knowledge/results/zero_heavy_ports_20261020g/microcosm.md": "3e898a5bbc37c5931c20aa578e06977ebe5639e439b35ff5c1517be5b1d8828a",
-    "05-knowledge/results/zero_heavy_ports_20261020g/profile_growth.md": "d95e48adceda1a77064541ad3d0938c0d962cf97ac6e126cb34763243a9b77c2",
-    "05-knowledge/results/zero_heavy_ports_20261020g/zero_heavy.md": "f993cfc3432e7672806dc662b96167bf8db920df3708d280055eba72d90abb6f"
+    "05-knowledge/results/zero_heavy_ports_20261020g/profile_growth.md": "e2a48f3917e6297cd21779058ed1221225a3ab08a1a926aa5f89234434677809",
+    "05-knowledge/results/zero_heavy_ports_20261020g/zero_heavy.md": "285ac062cd955eab06487ea0c16c97d2c511226ee942725acfceb6b45b803ac1"
   },
   "files": {
     "AUDIT.md": "6ac4052345fe2be010762274aa56607796e6b63da3742c6c80b861a47e63aad8",
-    "INHERITANCE.md": "19e63107ec5f49cbc324d0263f144eb938c1ea010cbbf2b8f19c3388ef64b13b",
+    "INHERITANCE.md": "7abe60b2b7d8b1d41f1a639c397b09c4a9322c2160127aed357d52af68250bae",
     "README.md": "005b138c57feb7f23690ed152f8dc85809df6dd6e68ed655e7c8dc3d60da5266",
     "charge-cone.json": "e089c3297242dfb5bd962536decfef6c3194cbc38fdd809bae08a2557025d63c",
     "charge.md": "b7c75f603b857995e8e3cee8bac7d1a48303481caf0b140d3fba4a2a6aecbf83",
@@ -44,6 +44,6 @@
     "zero_heavy.md": "34fc50fbc4c5d6c58d8f8a683a4b7d74b2c712347be80d063396a556ecc0eebf",
     "zero_heavy_mass.py": "618c01e84cc94516f14c3b540a6211c04f37c28d41ef0e48bcdd54b908274487"
   },
-  "incoming_read_commit": "f3e658d7cc105d5e367e4dd565812a81e127a6fc",
+  "incoming_read_commit": "43e4f5c6a9a9b754cd23ef803254f2d1dd187b2a",
   "status": "PROVED scoped; FINITE-EXACT; same-agent review"
 }
