@@ -183,3 +183,9 @@ computation needs universe, controls, command, and output. Route `CLAIMED` and
 
 - **HYP-8950 (OPEN JC SYNTHESIS):** Hamiltonian cokernel/fiber cohomology
   realizes weight and face obstructions; local-to-global termination remains.
+
+## Digest entry moved from INDEX.md on 2026-10-19 (line budget; mac-mini-2026-10-19-hyp9172)
+
+- **HYP-8955 (CORRECTED BY THM-2102/2113/2127):** power-free faces, exact
+  coprime two-face trains, and affine-root families close; general repeated
+  proper-power descent remains open.
