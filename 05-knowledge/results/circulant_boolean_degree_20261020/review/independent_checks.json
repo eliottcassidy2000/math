@@ -1,0 +1,389 @@
+{
+  "dyadic_orbits": [
+    {
+      "m": 1,
+      "source_orbit_length": 2,
+      "source_types": 1,
+      "target_types": 1,
+      "target_weight_mass": 0
+    },
+    {
+      "m": 2,
+      "source_orbit_length": 4,
+      "source_types": 1,
+      "target_types": 1,
+      "target_weight_mass": 0
+    },
+    {
+      "m": 4,
+      "source_orbit_length": 8,
+      "source_types": 2,
+      "target_types": 2,
+      "target_weight_mass": 2
+    },
+    {
+      "m": 8,
+      "source_orbit_length": 16,
+      "source_types": 16,
+      "target_types": 16,
+      "target_weight_mass": 60
+    },
+    {
+      "m": 16,
+      "source_orbit_length": 32,
+      "source_types": 2048,
+      "target_types": 2048,
+      "target_weight_mass": 16376
+    }
+  ],
+  "examples": {
+    "Fermat_divisor_controls": [
+      {
+        "n": 2,
+        "order_of_2": 8,
+        "prime_divisor": 17,
+        "v2_m": 3
+      },
+      {
+        "n": 3,
+        "order_of_2": 16,
+        "prime_divisor": 257,
+        "v2_m": 7
+      },
+      {
+        "n": 4,
+        "order_of_2": 32,
+        "prime_divisor": 65537,
+        "v2_m": 15
+      },
+      {
+        "n": 5,
+        "order_of_2": 64,
+        "prime_divisor": 641,
+        "v2_m": 6
+      },
+      {
+        "n": 6,
+        "order_of_2": 128,
+        "prime_divisor": 274177,
+        "v2_m": 7
+      }
+    ],
+    "table": [
+      {
+        "a": 3,
+        "e": 8,
+        "lower_bound": 3,
+        "m": 8,
+        "prime": 17
+      },
+      {
+        "a": 4,
+        "e": 16,
+        "lower_bound": 4,
+        "m": 48,
+        "prime": 97
+      },
+      {
+        "a": 5,
+        "e": 32,
+        "lower_bound": 7,
+        "m": 96,
+        "prime": 193
+      },
+      {
+        "a": 6,
+        "e": 64,
+        "lower_bound": 11,
+        "m": 320,
+        "prime": 641
+      },
+      {
+        "a": 7,
+        "e": 128,
+        "lower_bound": 19,
+        "m": 128,
+        "prime": 257
+      },
+      {
+        "a": 15,
+        "e": 32768,
+        "lower_bound": 2185,
+        "m": 32768,
+        "prime": 65537
+      }
+    ]
+  },
+  "explicit_checks": 249374,
+  "fixed_subsets": [
+    {
+      "e": 1,
+      "fixed_source_words": 2,
+      "m": 3,
+      "q": 3,
+      "types": 1
+    },
+    {
+      "e": 2,
+      "fixed_source_words": 4,
+      "m": 6,
+      "q": 3,
+      "types": 1
+    },
+    {
+      "e": 3,
+      "fixed_source_words": 8,
+      "m": 9,
+      "q": 3,
+      "types": 2
+    },
+    {
+      "e": 4,
+      "fixed_source_words": 16,
+      "m": 12,
+      "q": 3,
+      "types": 2
+    }
+  ],
+  "quadratic_basis": {
+    "all_coefficient_vectors": 536870912,
+    "dimension": 29,
+    "independent_input_sha256": "db4065f562ebc6f7cbeee298811521e65ec95b94cc5edb3b5344a4ddfa0acfa8",
+    "producer_input_byte_identical": true
+  },
+  "script_sha256": "e75e1669cadcc9fe7e83e9897029406162e918fff373a56269df10589e5a0c2d",
+  "small_census": [
+    {
+      "degree_bound": 1,
+      "m": 2,
+      "maps": 4,
+      "target_valued": 1,
+      "type_bijections": 1
+    },
+    {
+      "degree_bound": 2,
+      "m": 2,
+      "maps": 4,
+      "target_valued": 1,
+      "type_bijections": 1
+    },
+    {
+      "degree_bound": 1,
+      "m": 3,
+      "maps": 8,
+      "target_valued": 4,
+      "type_bijections": 3
+    },
+    {
+      "degree_bound": 2,
+      "m": 3,
+      "maps": 16,
+      "target_valued": 4,
+      "type_bijections": 3
+    },
+    {
+      "degree_bound": 1,
+      "m": 4,
+      "maps": 16,
+      "target_valued": 5,
+      "type_bijections": 0
+    },
+    {
+      "degree_bound": 2,
+      "m": 4,
+      "maps": 128,
+      "target_valued": 25,
+      "type_bijections": 8
+    },
+    {
+      "degree_bound": 1,
+      "m": 6,
+      "maps": 64,
+      "target_valued": 16,
+      "type_bijections": 0
+    },
+    {
+      "degree_bound": 2,
+      "m": 6,
+      "maps": 65536,
+      "target_valued": 2368,
+      "type_bijections": 432
+    }
+  ],
+  "status": "FINITE-EXACT independent controls, not the all-order proof",
+  "walsh_all_functions": [
+    {
+      "all_functions": 4,
+      "positive_degree_functions": 2,
+      "variables": 1
+    },
+    {
+      "all_functions": 16,
+      "positive_degree_functions": 14,
+      "variables": 2
+    },
+    {
+      "all_functions": 256,
+      "positive_degree_functions": 254,
+      "variables": 3
+    },
+    {
+      "all_functions": 65536,
+      "positive_degree_functions": 65534,
+      "variables": 4
+    }
+  ],
+  "witnesses": [
+    {
+      "degree": 0,
+      "fiber_size_histogram": {
+        "4": 1
+      },
+      "full_scalar_Walsh": 4,
+      "full_scalar_weight": 0,
+      "images": [
+        0
+      ],
+      "m": 2,
+      "quotient_scalar_Walsh": 2,
+      "quotient_scalar_weight": 0,
+      "source_representatives": [
+        0
+      ],
+      "target_labelled": 1,
+      "target_type_representatives": [
+        0
+      ]
+    },
+    {
+      "degree": 2,
+      "fiber_size_histogram": {
+        "2": 4,
+        "8": 1
+      },
+      "full_scalar_Walsh": 8,
+      "full_scalar_weight": 4,
+      "images": [
+        0,
+        3
+      ],
+      "m": 4,
+      "quotient_scalar_Walsh": 4,
+      "quotient_scalar_weight": 2,
+      "source_representatives": [
+        0,
+        2
+      ],
+      "target_labelled": 5,
+      "target_type_representatives": [
+        0,
+        3
+      ]
+    },
+    {
+      "degree": 2,
+      "fiber_size_histogram": {
+        "2": 24,
+        "4": 4
+      },
+      "full_scalar_Walsh": 0,
+      "full_scalar_weight": 32,
+      "images": [
+        40,
+        27,
+        6,
+        53,
+        15,
+        0
+      ],
+      "m": 6,
+      "quotient_scalar_Walsh": 0,
+      "quotient_scalar_weight": 16,
+      "source_representatives": [
+        0,
+        2,
+        4,
+        6,
+        10,
+        12
+      ],
+      "target_labelled": 28,
+      "target_type_representatives": [
+        0,
+        3,
+        5,
+        15,
+        23,
+        27
+      ]
+    },
+    {
+      "degree": 3,
+      "fiber_size_histogram": {
+        "2": 112,
+        "4": 4,
+        "16": 1
+      },
+      "full_scalar_Walsh": 16,
+      "full_scalar_weight": 120,
+      "images": [
+        226,
+        210,
+        130,
+        198,
+        48,
+        0,
+        154,
+        207,
+        232,
+        190,
+        222,
+        153,
+        201,
+        240,
+        9,
+        172
+      ],
+      "m": 8,
+      "quotient_scalar_Walsh": 8,
+      "quotient_scalar_weight": 60,
+      "source_representatives": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        18,
+        20,
+        22,
+        24,
+        26,
+        36,
+        42,
+        44
+      ],
+      "target_labelled": 117,
+      "target_type_representatives": [
+        0,
+        3,
+        5,
+        9,
+        15,
+        23,
+        27,
+        29,
+        39,
+        43,
+        45,
+        51,
+        53,
+        63,
+        95,
+        111
+      ]
+    }
+  ]
+}

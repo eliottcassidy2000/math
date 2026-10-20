@@ -1,0 +1,185 @@
+[
+  {
+    "m": 2,
+    "degree_bound": 1,
+    "scalar_dimension": 2,
+    "maps": 4,
+    "source_types": 1,
+    "target_types": 1,
+    "target_valued": 1,
+    "type_bijections": 1,
+    "first": {
+      "monomials": [],
+      "representatives": [
+        0
+      ],
+      "images": [
+        0
+      ]
+    }
+  },
+  {
+    "m": 2,
+    "degree_bound": 2,
+    "scalar_dimension": 2,
+    "maps": 4,
+    "source_types": 1,
+    "target_types": 1,
+    "target_valued": 1,
+    "type_bijections": 1,
+    "first": {
+      "monomials": [],
+      "representatives": [
+        0
+      ],
+      "images": [
+        0
+      ]
+    }
+  },
+  {
+    "m": 3,
+    "degree_bound": 1,
+    "scalar_dimension": 3,
+    "maps": 8,
+    "source_types": 2,
+    "target_types": 2,
+    "target_valued": 4,
+    "type_bijections": 3,
+    "first": {
+      "monomials": [
+        [
+          0
+        ]
+      ],
+      "representatives": [
+        0,
+        2
+      ],
+      "images": [
+        6,
+        0
+      ]
+    }
+  },
+  {
+    "m": 3,
+    "degree_bound": 2,
+    "scalar_dimension": 4,
+    "maps": 16,
+    "source_types": 2,
+    "target_types": 2,
+    "target_valued": 4,
+    "type_bijections": 3,
+    "first": {
+      "monomials": [
+        [
+          0
+        ]
+      ],
+      "representatives": [
+        0,
+        2
+      ],
+      "images": [
+        6,
+        0
+      ]
+    }
+  },
+  {
+    "m": 4,
+    "degree_bound": 1,
+    "scalar_dimension": 4,
+    "maps": 16,
+    "source_types": 2,
+    "target_types": 2,
+    "target_valued": 5,
+    "type_bijections": 0,
+    "first": null
+  },
+  {
+    "m": 4,
+    "degree_bound": 2,
+    "scalar_dimension": 7,
+    "maps": 128,
+    "source_types": 2,
+    "target_types": 2,
+    "target_valued": 25,
+    "type_bijections": 8,
+    "first": {
+      "monomials": [
+        [
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "representatives": [
+        0,
+        2
+      ],
+      "images": [
+        0,
+        3
+      ]
+    }
+  },
+  {
+    "m": 6,
+    "degree_bound": 1,
+    "scalar_dimension": 6,
+    "maps": 64,
+    "source_types": 6,
+    "target_types": 6,
+    "target_valued": 16,
+    "type_bijections": 0,
+    "first": null
+  },
+  {
+    "m": 6,
+    "degree_bound": 2,
+    "scalar_dimension": 16,
+    "maps": 65536,
+    "source_types": 6,
+    "target_types": 6,
+    "target_valued": 2368,
+    "type_bijections": 432,
+    "first": {
+      "monomials": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "representatives": [
+        0,
+        2,
+        4,
+        6,
+        10,
+        12
+      ],
+      "images": [
+        40,
+        27,
+        6,
+        53,
+        15,
+        0
+      ]
+    }
+  }
+]

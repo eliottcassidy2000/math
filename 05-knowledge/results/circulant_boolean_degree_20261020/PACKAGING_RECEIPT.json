@@ -1,0 +1,38 @@
+{
+  "status": "PACKAGING_REPLAY_PASS_AWAITING_ROOT_APPROVAL",
+  "prepared_utc": "2026-10-20T05:17:58.417594+00:00",
+  "original_root_manifest_sha256": "06ae7f447b50b71685628022e12a4fd0f19e559d0bee3c4e71068da88a92013e",
+  "proof_sha256_unchanged": "cbdf5e4566ddec0be6e337302df683d18bf7524db7eff8d5f518a8866b300b55",
+  "adaptation": {
+    "file": "review/independent_checks.py",
+    "old_line": "PRODUCER = HERE.parent / \"session13-nonlinear-degree\"",
+    "new_line": "PRODUCER = HERE.parent",
+    "old_sha256": "932c1b5771d7920309710b53649b3e63d597e3abc31ad243f346239cfe3176ac",
+    "new_sha256": "e75e1669cadcc9fe7e83e9897029406162e918fff373a56269df10589e5a0c2d"
+  },
+  "added_previously_omitted_receipts": [
+    "review/exhaust8.rerun.json",
+    "review/verification.rerun.json",
+    "review/verification.optimized.rerun.json"
+  ],
+  "original_evidence_preserved": [
+    "review/originals/independent_checks.py",
+    "review/originals/independent_checks.json",
+    "review/originals/independent_checks.optimized.json",
+    "review/originals/REVIEW_SHA256SUMS",
+    "review/SOURCE_SHA256SUMS"
+  ],
+  "replays": {
+    "producer_normal_and_optimized_byte_identical": true,
+    "producer_matches_original_receipt": true,
+    "producer_explicit_checks": 268536,
+    "independent_normal_and_optimized_byte_identical": true,
+    "independent_mathematical_receipt_matches_original": true,
+    "independent_receipt_only_changed_field": "script_sha256",
+    "independent_explicit_checks": 249374,
+    "full_cpp_enumerations_rerun_during_packaging": false,
+    "full_cpp_enumerations_previously_independently_reviewed": true
+  },
+  "remote_writes_authorized": false,
+  "original_source_artifacts_modified": false
+}

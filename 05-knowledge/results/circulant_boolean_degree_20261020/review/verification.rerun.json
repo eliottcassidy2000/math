@@ -1,0 +1,274 @@
+{
+  "checks": 268536,
+  "dyadic_weight_controls": [
+    {
+      "forced_quotient_Walsh": 4,
+      "lower_degree": 2,
+      "m": 4,
+      "source_target_types": 2,
+      "sum_target_type_weights": 2
+    },
+    {
+      "forced_quotient_Walsh": 8,
+      "lower_degree": 3,
+      "m": 8,
+      "source_target_types": 16,
+      "sum_target_type_weights": 60
+    },
+    {
+      "forced_quotient_Walsh": 16,
+      "lower_degree": 4,
+      "m": 16,
+      "source_target_types": 2048,
+      "sum_target_type_weights": 16376
+    }
+  ],
+  "prime_examples": [
+    {
+      "dyadic_part": 2,
+      "lower_degree": 2,
+      "m": 6,
+      "p": 13
+    },
+    {
+      "dyadic_part": 8,
+      "lower_degree": 3,
+      "m": 8,
+      "p": 17
+    },
+    {
+      "dyadic_part": 16,
+      "lower_degree": 4,
+      "m": 48,
+      "p": 97
+    },
+    {
+      "dyadic_part": 32,
+      "lower_degree": 7,
+      "m": 96,
+      "p": 193
+    },
+    {
+      "dyadic_part": 64,
+      "lower_degree": 11,
+      "m": 320,
+      "p": 641
+    },
+    {
+      "dyadic_part": 128,
+      "lower_degree": 19,
+      "m": 128,
+      "p": 257
+    },
+    {
+      "dyadic_part": 32768,
+      "lower_degree": 2185,
+      "m": 32768,
+      "p": 65537
+    }
+  ],
+  "restriction_controls": [
+    {
+      "e": 4,
+      "m": 12,
+      "q": 3,
+      "small_types": 2
+    },
+    {
+      "e": 4,
+      "m": 20,
+      "q": 5,
+      "small_types": 2
+    },
+    {
+      "e": 8,
+      "m": 24,
+      "q": 3,
+      "small_types": 16
+    },
+    {
+      "e": 8,
+      "m": 40,
+      "q": 5,
+      "small_types": 16
+    }
+  ],
+  "script_sha256": "83e9902f581f05efa8e76b46273c0b9ad39cdff35bb2ff79d79defc08e7e7ff0",
+  "status": "FINITE-EXACT controls; all-order lower bound proved separately",
+  "walsh_exhaustive_controls": [
+    {
+      "Boolean_functions": 4,
+      "variables": 1
+    },
+    {
+      "Boolean_functions": 16,
+      "variables": 2
+    },
+    {
+      "Boolean_functions": 256,
+      "variables": 3
+    },
+    {
+      "Boolean_functions": 65536,
+      "variables": 4
+    }
+  ],
+  "witnesses": [
+    {
+      "degree": 2,
+      "images": [
+        0,
+        3
+      ],
+      "labelled_fiber_histogram": {
+        "2": 4,
+        "8": 1
+      },
+      "m": 4,
+      "monomials": [
+        [
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "prime": null,
+      "quotient_Walsh": 4,
+      "scalar_truth_weight": 4,
+      "source_representatives": [
+        0,
+        2
+      ],
+      "source_types": 2,
+      "target_labelled": 5
+    },
+    {
+      "degree": 2,
+      "images": [
+        40,
+        27,
+        6,
+        53,
+        15,
+        0
+      ],
+      "labelled_fiber_histogram": {
+        "2": 24,
+        "4": 4
+      },
+      "m": 6,
+      "monomials": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "prime": 13,
+      "quotient_Walsh": 0,
+      "scalar_truth_weight": 32,
+      "source_representatives": [
+        0,
+        2,
+        4,
+        6,
+        10,
+        12
+      ],
+      "source_types": 6,
+      "target_labelled": 28
+    },
+    {
+      "degree": 3,
+      "images": [
+        226,
+        210,
+        130,
+        198,
+        48,
+        0,
+        154,
+        207,
+        232,
+        190,
+        222,
+        153,
+        201,
+        240,
+        9,
+        172
+      ],
+      "labelled_fiber_histogram": {
+        "2": 112,
+        "4": 4,
+        "16": 1
+      },
+      "m": 8,
+      "monomials": [
+        [
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "prime": 17,
+      "quotient_Walsh": 8,
+      "scalar_truth_weight": 120,
+      "source_representatives": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        18,
+        20,
+        22,
+        24,
+        26,
+        36,
+        42,
+        44
+      ],
+      "source_types": 16,
+      "target_labelled": 117
+    }
+  ]
+}
