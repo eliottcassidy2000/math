@@ -1,0 +1,9 @@
+{"a": 2, "b": 1, "exact_binomial_control": true, "n": 44, "square_root_case": true, "switching_lower_bound": 3, "tested_k_count": 5, "tournament_lower_bound": 5}
+{"a": 3, "b": 2, "exact_binomial_control": true, "n": 674, "square_root_case": true, "switching_lower_bound": 13, "tested_k_count": 25, "tournament_lower_bound": 25}
+{"a": 5, "b": 3, "exact_binomial_control": false, "n": 30374, "square_root_case": true, "switching_lower_bound": 63, "tested_k_count": 125, "tournament_lower_bound": 125}
+{"a": 6, "b": 4, "exact_binomial_control": false, "n": 455624, "square_root_case": true, "switching_lower_bound": 313, "tested_k_count": 625, "tournament_lower_bound": 625}
+{"a": 8, "b": 5, "exact_binomial_control": false, "n": 20503124, "square_root_case": true, "switching_lower_bound": 1563, "tested_k_count": 3125, "tournament_lower_bound": 3125}
+{"a": 9, "b": 6, "exact_binomial_control": false, "n": 307546874, "square_root_case": true, "switching_lower_bound": 7813, "tested_k_count": 15625, "tournament_lower_bound": 15625}
+{"a": 11, "b": 7, "exact_binomial_control": false, "n": 13839609374, "square_root_case": true, "switching_lower_bound": 39063, "tested_k_count": 78125, "tournament_lower_bound": 78125}
+{"a": 12, "b": 8, "exact_binomial_control": false, "n": 207594140624, "square_root_case": true, "switching_lower_bound": 195313, "tested_k_count": 390625, "tournament_lower_bound": 390625}
+ALL CHECKS PASSED

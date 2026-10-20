@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "graph_cases": 25,
+  "general_arithmetic_cases": 2592,
+  "digit_condition_cases": 5151,
+  "additional_arithmetic_examples": {
+    "224": {
+      "tournament_bound": 36,
+      "switching_bound": 18
+    },
+    "674": {
+      "tournament_bound": 27,
+      "switching_bound": 14
+    }
+  },
+  "prime_power_grid_cases": 16,
+  "balanced_sequence": [
+    {
+      "a": 2,
+      "b": 1,
+      "n": 44,
+      "M": 5,
+      "tournament_lower_bound": 5,
+      "switching_lower_bound": 3,
+      "checked_index_mode": "endpoint samples with exact factorial valuations"
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "n": 674,
+      "M": 25,
+      "tournament_lower_bound": 25,
+      "switching_lower_bound": 13,
+      "checked_index_mode": "endpoint samples with exact factorial valuations"
+    },
+    {
+      "a": 5,
+      "b": 3,
+      "n": 30374,
+      "M": 125,
+      "tournament_lower_bound": 125,
+      "switching_lower_bound": 63,
+      "checked_index_mode": "endpoint samples with exact factorial valuations"
+    },
+    {
+      "a": 6,
+      "b": 4,
+      "n": 455624,
+      "M": 625,
+      "tournament_lower_bound": 625,
+      "switching_lower_bound": 313,
+      "checked_index_mode": "endpoint samples with exact factorial valuations"
+    },
+    {
+      "a": 8,
+      "b": 5,
+      "n": 20503124,
+      "M": 3125,
+      "tournament_lower_bound": 3125,
+      "switching_lower_bound": 1563,
+      "checked_index_mode": "endpoint samples with exact factorial valuations"
+    },
+    {
+      "a": 9,
+      "b": 6,
+      "n": 307546874,
+      "M": 15625,
+      "tournament_lower_bound": 15625,
+      "switching_lower_bound": 7813,
+      "checked_index_mode": "endpoint samples with exact factorial valuations"
+    }
+  ]
+}
