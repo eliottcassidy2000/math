@@ -1,0 +1,43 @@
+{
+  "status": "VERIFIED local references and supplied source hashes",
+  "local_links": 44,
+  "source_receipts": [
+    "double_return_counts.json",
+    "game.json",
+    "six_colour_check.json",
+    "torus.json",
+    "transport_identity.json"
+  ],
+  "files": {
+    "AUDIT.md": "fd534ffd563df56164fdd183adcc307feb8d409fe5c5fd6b2cbfdc50db73c713",
+    "audit_manifest.py": "2ba760a13395561e711d411b9809da3f10ad10be6931f907cf3171111b592d72",
+    "BOARD.md": "1d3842e9e493534e4c6f007c1eba5e2a9bcc67c88d53685ee88c874a04f4f4b6",
+    "boundary_transport_probe.json": "c4a1a99f855d9938646e678cee7d2b568f1b462c8b7579b4d883226dad5c8919",
+    "boundary_transport_probe.py": "b959cea372646f41d7d12edd67ef6be45f15535a2a49b8e2a162b352697147d5",
+    "detours.md": "fdd0466bce6d3d5a632e635a2d170b42e4e2a85310174898d593dee8eda18bd2",
+    "detours_family.json": "51c842e42b0a574c958435ad0047175b1c6729c13339d573d128187acbebece2",
+    "detours_family.py": "57ec55745ef1046d913ce7576aa5c388ee399398cdd44057d13a549c12cee79c",
+    "detours_probe.json": "658e148f910c021ae1ee380bccd7ee1a80037a8556e96902ac4d10f2b3f6aa42",
+    "detours_probe.py": "6e399e42e209c3b4bc133660c71b06b893660ab66e9499263ea653331cd3c811",
+    "detours_square.json": "ccf247f876ff86df68cc05a2f25f4676a4384dfede3827d160aa4a4e77db7d57",
+    "detours_square.py": "bd59eac86df34ccfaf609c2aa5e22bdcb99587faddf012c19b258a370a161e4a",
+    "double_return_counts.json": "e9b2bfc6b6b3d1bdd203ccbcbffead25aa7cae84335ad66f206b020a7e6ed12e",
+    "double_return_counts.md": "b2a8aeea26d4375fa28f1b604a64c0465ccdbedc587f8f2d0b5bd5c8f3cbd6ae",
+    "double_return_counts.py": "491a2bb87c017506f1a52526631bc2c2aa8c68f5aea35c53c5b64dff89883c60",
+    "game.json": "0eb46ef2d367a31cdb695ca193ee9ee656335769bcc06a88f2c95182838dac38",
+    "game.md": "39edf15d6889bb525599575b3547a9ce0d0df621b4639f26d175f890420ea849",
+    "game.py": "48e167feeb611f963f48e38ce9d25b04f5ef6ba17c4133175638007470b61e0b",
+    "README.md": "033433d22a4417b0541d69f59499672dcb5cc1ff9c918255a59869dcec1da80b",
+    "six_colour.md": "3ec1066a01dc136b7924f355ece641b663c6cefe76e84cf3deb7c5b7807c7def",
+    "six_colour_check.json": "e8f8e8dae53eca9a25970e7217f7da0fc1e85542c06aa5e38c615f5c28abe87c",
+    "six_colour_check.optimized.out": "42ad1355582ad27eb19672f0cbadc5fe94e19b511200fc7bc4855ddaf91ec105",
+    "six_colour_check.out": "42ad1355582ad27eb19672f0cbadc5fe94e19b511200fc7bc4855ddaf91ec105",
+    "six_colour_check.py": "af39d94a856c25238150563c27f4bac136a79a2262f8ef54a8afed5ff00953c1",
+    "torus.json": "5fb80a6269639cf20bc6e0ae63b23eaf6661004e4e051dd3b13562467ed72db8",
+    "torus.md": "9f51a7ff923e1b13c9b75fe0867f92f72d2211d253dedd3972d1191de163f3dd",
+    "torus.py": "4797472bdaa222fe2a992afdd7b2f12d417ca15b0f1229def3a4923b900fc940",
+    "transport.md": "cac01d4517a4d08e5e28a8cfb5c982f95070f292b126eb2f164e42bb2051b765",
+    "transport_identity.json": "ab95b160bd396b6b73d76e9df8b849957444850b1cdf9932169d712466388090",
+    "transport_identity.py": "fd067f404577d318c8a430cbd3b77398704f731e701847907dc302aedccdb685"
+  }
+}

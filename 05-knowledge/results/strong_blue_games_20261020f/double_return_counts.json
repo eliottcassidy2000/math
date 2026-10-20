@@ -1,0 +1,247 @@
+{
+  "status": "FINITE-EXACT controls; infinite scope proved in double_return_counts.md",
+  "source_sha256": "491a2bb87c017506f1a52526631bc2c2aa8c68f5aea35c53c5b64dff89883c60",
+  "product_universe": "all a,b=2..5, direct DFS versus subset words",
+  "products": [
+    {
+      "a": 2,
+      "b": 2,
+      "H": 9
+    },
+    {
+      "a": 2,
+      "b": 3,
+      "H": 15
+    },
+    {
+      "a": 2,
+      "b": 4,
+      "H": 27
+    },
+    {
+      "a": 2,
+      "b": 5,
+      "H": 51
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "H": 15
+    },
+    {
+      "a": 3,
+      "b": 3,
+      "H": 25
+    },
+    {
+      "a": 3,
+      "b": 4,
+      "H": 45
+    },
+    {
+      "a": 3,
+      "b": 5,
+      "H": 85
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "H": 27
+    },
+    {
+      "a": 4,
+      "b": 3,
+      "H": 45
+    },
+    {
+      "a": 4,
+      "b": 4,
+      "H": 81
+    },
+    {
+      "a": 4,
+      "b": 5,
+      "H": 153
+    },
+    {
+      "a": 5,
+      "b": 2,
+      "H": 51
+    },
+    {
+      "a": 5,
+      "b": 3,
+      "H": 85
+    },
+    {
+      "a": 5,
+      "b": 4,
+      "H": 153
+    },
+    {
+      "a": 5,
+      "b": 5,
+      "H": 289
+    }
+  ],
+  "balanced_universe": "all k=2..7; all directed HPs and positional blue predicates",
+  "balanced": [
+    {
+      "k": 2,
+      "n": 5,
+      "H": 9,
+      "b": 3,
+      "deficit": 6,
+      "unique_arc_disjoint_path": [
+        1,
+        4,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "k": 3,
+      "n": 7,
+      "H": 25,
+      "b": 5,
+      "deficit": 20,
+      "unique_arc_disjoint_path": [
+        1,
+        4,
+        6,
+        3,
+        0,
+        2,
+        5
+      ]
+    },
+    {
+      "k": 4,
+      "n": 9,
+      "H": 81,
+      "b": 9,
+      "deficit": 72,
+      "unique_arc_disjoint_path": [
+        1,
+        3,
+        6,
+        8,
+        4,
+        0,
+        2,
+        5,
+        7
+      ]
+    },
+    {
+      "k": 5,
+      "n": 11,
+      "H": 289,
+      "b": 17,
+      "deficit": 272,
+      "unique_arc_disjoint_path": [
+        1,
+        3,
+        6,
+        8,
+        10,
+        5,
+        0,
+        2,
+        4,
+        7,
+        9
+      ]
+    },
+    {
+      "k": 6,
+      "n": 13,
+      "H": 1089,
+      "b": 33,
+      "deficit": 1056,
+      "unique_arc_disjoint_path": [
+        1,
+        3,
+        5,
+        8,
+        10,
+        12,
+        6,
+        0,
+        2,
+        4,
+        7,
+        9,
+        11
+      ]
+    },
+    {
+      "k": 7,
+      "n": 15,
+      "H": 4225,
+      "b": 65,
+      "deficit": 4160,
+      "unique_arc_disjoint_path": [
+        1,
+        3,
+        5,
+        8,
+        10,
+        12,
+        14,
+        7,
+        0,
+        2,
+        4,
+        6,
+        9,
+        11,
+        13
+      ]
+    }
+  ],
+  "arithmetic_control": "k=2..100",
+  "first_triples": [
+    {
+      "k": 2,
+      "triple": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "k": 3,
+      "triple": [
+        5,
+        12,
+        13
+      ]
+    },
+    {
+      "k": 4,
+      "triple": [
+        9,
+        40,
+        41
+      ]
+    },
+    {
+      "k": 5,
+      "triple": [
+        17,
+        144,
+        145
+      ]
+    },
+    {
+      "k": 6,
+      "triple": [
+        33,
+        544,
+        545
+      ]
+    }
+  ]
+}

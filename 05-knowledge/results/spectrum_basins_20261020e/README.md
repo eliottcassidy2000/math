@@ -5,6 +5,11 @@
 The statements below distinguish actual path-complement moves, regular
 score-preserving moves, and generating functions that count different objects.
 
+**Successor:** [strong blue repairs and traversal games](../strong_blue_games_20261020f/README.md)
+adds an all-order two-block detour, an infinite square-method hostile with
+exact square HP counts, and the clarified complement game. The global
+strong-to-strong mixed obligation remains open.
+
 ## 1. Feedback inventory no longer separates golden terminal basins
 
 [The four-black creation theorem](inventory.md) proves, for any nonempty

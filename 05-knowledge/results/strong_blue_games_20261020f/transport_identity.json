@@ -1,0 +1,17 @@
+{
+  "status": "FINITE-EXACT controls for an all-order identity",
+  "source_sha256": "fd067f404577d318c8a430cbd3b77398704f731e701847907dc302aedccdb685",
+  "universe": "all standard-path tournaments n=5,6; all legal interior relocations with |B|>=2",
+  "counts": [
+    {
+      "n": 5,
+      "orientations": 64,
+      "legal_relocations": 8
+    },
+    {
+      "n": 6,
+      "orientations": 1024,
+      "legal_relocations": 384
+    }
+  ]
+}

@@ -1,0 +1,2342 @@
+{
+  "status": "FINITE-EXACT mechanism test, not global bridge test",
+  "universe": "all blue fixed-path presentations orders4..7",
+  "summary": [
+    {
+      "n": 4,
+      "counts": {
+        "blue_presentations": 4,
+        "open_strong_mixed_pairs": 1,
+        "merged_loop": 1
+      }
+    },
+    {
+      "n": 5,
+      "counts": {
+        "blue_presentations": 16,
+        "open_strong_mixed_pairs": 3,
+        "hub_connected": 1,
+        "length_3": 1,
+        "residual": 2
+      }
+    },
+    {
+      "n": 6,
+      "counts": {
+        "blue_presentations": 64,
+        "open_strong_mixed_pairs": 27,
+        "hub_connected": 11,
+        "length_3": 11,
+        "residual": 14,
+        "merged_loop": 2
+      }
+    },
+    {
+      "n": 7,
+      "counts": {
+        "blue_presentations": 512,
+        "open_strong_mixed_pairs": 239,
+        "hub_connected": 221,
+        "length_3": 219,
+        "residual": 18,
+        "length_5": 2
+      }
+    }
+  ],
+  "residual": [
+    {
+      "n": 5,
+      "rows": [
+        22,
+        4,
+        24,
+        19,
+        2
+      ],
+      "partner": [
+        10,
+        28,
+        9,
+        16,
+        5
+      ],
+      "source_class": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ],
+      "partner_class": [
+        2,
+        12,
+        9,
+        17,
+        7
+      ],
+      "degrees": [
+        3,
+        1,
+        2,
+        3,
+        1
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 9,
+      "black_paths": 6,
+      "open_paths": 4,
+      "black_open": 2,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 5,
+      "rows": [
+        26,
+        28,
+        9,
+        16,
+        4
+      ],
+      "partner": [
+        6,
+        4,
+        24,
+        19,
+        3
+      ],
+      "source_class": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ],
+      "partner_class": [
+        2,
+        12,
+        25,
+        17,
+        3
+      ],
+      "degrees": [
+        3,
+        3,
+        2,
+        1,
+        1
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 9,
+      "black_paths": 6,
+      "open_paths": 4,
+      "black_open": 2,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 6,
+      "rows": [
+        42,
+        4,
+        41,
+        18,
+        39,
+        10
+      ],
+      "partner": [
+        22,
+        60,
+        24,
+        49,
+        32,
+        5
+      ],
+      "source_class": [
+        2,
+        28,
+        25,
+        17,
+        33,
+        15
+      ],
+      "partner_class": [
+        2,
+        20,
+        9,
+        19,
+        37,
+        15
+      ],
+      "degrees": [
+        3,
+        1,
+        3,
+        2,
+        4,
+        2
+      ],
+      "success": false,
+      "reached": 2,
+      "paths": 33,
+      "black_paths": 26,
+      "open_paths": 9,
+      "black_open": 6,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          4,
+          1,
+          2,
+          5
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 6,
+      "rows": [
+        46,
+        4,
+        40,
+        50,
+        39,
+        2
+      ],
+      "partner": [
+        18,
+        60,
+        25,
+        17,
+        32,
+        13
+      ],
+      "source_class": [
+        2,
+        4,
+        9,
+        19,
+        39,
+        15
+      ],
+      "partner_class": [
+        2,
+        28,
+        25,
+        17,
+        33,
+        15
+      ],
+      "degrees": [
+        4,
+        1,
+        2,
+        3,
+        4,
+        1
+      ],
+      "success": false,
+      "reached": 2,
+      "paths": 17,
+      "black_paths": 12,
+      "open_paths": 11,
+      "black_open": 8,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          4,
+          1,
+          2,
+          5
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 6,
+      "rows": [
+        58,
+        36,
+        41,
+        18,
+        38,
+        8
+      ],
+      "partner": [
+        6,
+        28,
+        24,
+        49,
+        33,
+        7
+      ],
+      "source_class": [
+        2,
+        12,
+        25,
+        17,
+        35,
+        15
+      ],
+      "partner_class": [
+        6,
+        28,
+        24,
+        49,
+        33,
+        7
+      ],
+      "degrees": [
+        4,
+        2,
+        3,
+        2,
+        3,
+        1
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 29,
+      "black_paths": 22,
+      "open_paths": 11,
+      "black_open": 6,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 6,
+      "rows": [
+        42,
+        12,
+        57,
+        16,
+        35,
+        10
+      ],
+      "partner": [
+        22,
+        52,
+        8,
+        51,
+        36,
+        5
+      ],
+      "source_class": [
+        2,
+        28,
+        25,
+        17,
+        33,
+        15
+      ],
+      "partner_class": [
+        2,
+        60,
+        9,
+        17,
+        37,
+        13
+      ],
+      "degrees": [
+        3,
+        2,
+        4,
+        1,
+        3,
+        2
+      ],
+      "success": false,
+      "reached": 2,
+      "paths": 33,
+      "black_paths": 26,
+      "open_paths": 9,
+      "black_open": 6,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          4,
+          1,
+          2,
+          5
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 6,
+      "rows": [
+        46,
+        12,
+        56,
+        48,
+        35,
+        2
+      ],
+      "partner": [
+        18,
+        52,
+        9,
+        19,
+        36,
+        13
+      ],
+      "source_class": [
+        2,
+        12,
+        25,
+        17,
+        35,
+        15
+      ],
+      "partner_class": [
+        6,
+        28,
+        24,
+        49,
+        33,
+        7
+      ],
+      "degrees": [
+        4,
+        2,
+        3,
+        2,
+        3,
+        1
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 29,
+      "black_paths": 22,
+      "open_paths": 11,
+      "black_open": 6,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 6,
+      "rows": [
+        58,
+        44,
+        57,
+        16,
+        34,
+        8
+      ],
+      "partner": [
+        6,
+        20,
+        8,
+        51,
+        37,
+        7
+      ],
+      "source_class": [
+        2,
+        4,
+        9,
+        19,
+        39,
+        15
+      ],
+      "partner_class": [
+        2,
+        60,
+        9,
+        17,
+        37,
+        13
+      ],
+      "degrees": [
+        4,
+        3,
+        4,
+        1,
+        2,
+        1
+      ],
+      "success": false,
+      "reached": 2,
+      "paths": 17,
+      "black_paths": 12,
+      "open_paths": 11,
+      "black_open": 8,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          4,
+          1,
+          2,
+          5
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 6,
+      "rows": [
+        34,
+        20,
+        9,
+        19,
+        37,
+        14
+      ],
+      "partner": [
+        30,
+        44,
+        56,
+        48,
+        34,
+        1
+      ],
+      "source_class": [
+        6,
+        28,
+        40,
+        17,
+        37,
+        11
+      ],
+      "partner_class": [
+        2,
+        60,
+        9,
+        17,
+        37,
+        13
+      ],
+      "degrees": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        3
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 45,
+      "black_paths": 36,
+      "open_paths": 15,
+      "black_open": 12,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 6,
+      "rows": [
+        42,
+        20,
+        41,
+        18,
+        37,
+        10
+      ],
+      "partner": [
+        22,
+        44,
+        24,
+        49,
+        34,
+        5
+      ],
+      "source_class": [
+        6,
+        12,
+        24,
+        49,
+        35,
+        7
+      ],
+      "partner_class": [
+        6,
+        28,
+        40,
+        17,
+        37,
+        11
+      ],
+      "degrees": [
+        3,
+        2,
+        3,
+        2,
+        3,
+        2
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 41,
+      "black_paths": 32,
+      "open_paths": 17,
+      "black_open": 12,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 6,
+      "rows": [
+        50,
+        52,
+        9,
+        19,
+        36,
+        12
+      ],
+      "partner": [
+        14,
+        12,
+        56,
+        48,
+        35,
+        3
+      ],
+      "source_class": [
+        6,
+        12,
+        24,
+        49,
+        35,
+        7
+      ],
+      "partner_class": [
+        6,
+        28,
+        24,
+        49,
+        33,
+        7
+      ],
+      "degrees": [
+        3,
+        3,
+        2,
+        3,
+        2,
+        2
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 41,
+      "black_paths": 32,
+      "open_paths": 17,
+      "black_open": 12,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 6,
+      "rows": [
+        58,
+        52,
+        41,
+        18,
+        36,
+        8
+      ],
+      "partner": [
+        6,
+        12,
+        24,
+        49,
+        35,
+        7
+      ],
+      "source_class": [
+        2,
+        12,
+        25,
+        17,
+        35,
+        15
+      ],
+      "partner_class": [
+        6,
+        12,
+        24,
+        49,
+        35,
+        7
+      ],
+      "degrees": [
+        4,
+        3,
+        3,
+        2,
+        2,
+        1
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 29,
+      "black_paths": 22,
+      "open_paths": 11,
+      "black_open": 6,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 6,
+      "rows": [
+        42,
+        28,
+        57,
+        16,
+        33,
+        10
+      ],
+      "partner": [
+        22,
+        36,
+        8,
+        51,
+        38,
+        5
+      ],
+      "source_class": [
+        2,
+        12,
+        25,
+        17,
+        35,
+        15
+      ],
+      "partner_class": [
+        2,
+        60,
+        9,
+        17,
+        37,
+        13
+      ],
+      "degrees": [
+        3,
+        3,
+        4,
+        1,
+        2,
+        2
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 29,
+      "black_paths": 22,
+      "open_paths": 11,
+      "black_open": 6,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 6,
+      "rows": [
+        46,
+        28,
+        56,
+        48,
+        33,
+        2
+      ],
+      "partner": [
+        18,
+        36,
+        9,
+        19,
+        38,
+        13
+      ],
+      "source_class": [
+        2,
+        28,
+        25,
+        17,
+        33,
+        15
+      ],
+      "partner_class": [
+        6,
+        28,
+        24,
+        49,
+        33,
+        7
+      ],
+      "degrees": [
+        4,
+        3,
+        3,
+        2,
+        2,
+        1
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 33,
+      "black_paths": 26,
+      "open_paths": 9,
+      "black_open": 6,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 6,
+      "rows": [
+        50,
+        60,
+        25,
+        17,
+        32,
+        12
+      ],
+      "partner": [
+        14,
+        4,
+        40,
+        50,
+        39,
+        3
+      ],
+      "source_class": [
+        2,
+        12,
+        25,
+        17,
+        35,
+        15
+      ],
+      "partner_class": [
+        2,
+        20,
+        9,
+        19,
+        37,
+        15
+      ],
+      "degrees": [
+        3,
+        4,
+        3,
+        2,
+        1,
+        2
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 29,
+      "black_paths": 22,
+      "open_paths": 11,
+      "black_open": 6,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 6,
+      "rows": [
+        54,
+        60,
+        24,
+        49,
+        32,
+        4
+      ],
+      "partner": [
+        10,
+        4,
+        41,
+        18,
+        39,
+        11
+      ],
+      "source_class": [
+        2,
+        4,
+        9,
+        19,
+        39,
+        15
+      ],
+      "partner_class": [
+        2,
+        28,
+        25,
+        17,
+        33,
+        15
+      ],
+      "degrees": [
+        4,
+        4,
+        2,
+        3,
+        1,
+        1
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 17,
+      "black_paths": 12,
+      "open_paths": 11,
+      "black_open": 8,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        86,
+        4,
+        72,
+        19,
+        102,
+        79,
+        10
+      ],
+      "partner": [
+        42,
+        124,
+        57,
+        112,
+        33,
+        64,
+        21
+      ],
+      "source_class": [
+        2,
+        12,
+        9,
+        49,
+        39,
+        71,
+        31
+      ],
+      "partner_class": [
+        2,
+        28,
+        89,
+        17,
+        97,
+        79,
+        11
+      ],
+      "degrees": [
+        4,
+        1,
+        2,
+        3,
+        4,
+        5,
+        2
+      ],
+      "success": false,
+      "reached": 2,
+      "paths": 61,
+      "black_paths": 54,
+      "open_paths": 33,
+      "black_open": 28,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          4,
+          5,
+          3,
+          1,
+          2,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        106,
+        84,
+        41,
+        82,
+        37,
+        74,
+        20
+      ],
+      "partner": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ],
+      "source_class": [
+        6,
+        28,
+        56,
+        113,
+        97,
+        67,
+        7
+      ],
+      "partner_class": [
+        14,
+        84,
+        104,
+        50,
+        37,
+        67,
+        25
+      ],
+      "degrees": [
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 151,
+      "black_paths": 142,
+      "open_paths": 53,
+      "black_open": 50,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        114,
+        100,
+        73,
+        19,
+        38,
+        76,
+        24
+      ],
+      "partner": [
+        14,
+        28,
+        56,
+        112,
+        97,
+        67,
+        7
+      ],
+      "source_class": [
+        6,
+        44,
+        88,
+        81,
+        35,
+        77,
+        19
+      ],
+      "partner_class": [
+        14,
+        28,
+        56,
+        112,
+        97,
+        67,
+        7
+      ],
+      "degrees": [
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 151,
+      "black_paths": 142,
+      "open_paths": 60,
+      "black_open": 54,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        94,
+        60,
+        104,
+        112,
+        100,
+        65,
+        2
+      ],
+      "partner": [
+        34,
+        68,
+        25,
+        19,
+        35,
+        78,
+        29
+      ],
+      "source_class": [
+        2,
+        60,
+        41,
+        49,
+        37,
+        65,
+        31
+      ],
+      "partner_class": [
+        6,
+        60,
+        24,
+        113,
+        97,
+        69,
+        7
+      ],
+      "degrees": [
+        5,
+        4,
+        3,
+        3,
+        3,
+        2,
+        1
+      ],
+      "success": false,
+      "reached": 3,
+      "paths": 111,
+      "black_paths": 90,
+      "open_paths": 27,
+      "black_open": 18,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          3,
+          4,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          4,
+          2,
+          3,
+          5,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        98,
+        124,
+        41,
+        49,
+        37,
+        64,
+        28
+      ],
+      "partner": [
+        30,
+        4,
+        88,
+        82,
+        98,
+        79,
+        3
+      ],
+      "source_class": [
+        2,
+        28,
+        41,
+        49,
+        37,
+        67,
+        31
+      ],
+      "partner_class": [
+        2,
+        44,
+        41,
+        17,
+        39,
+        73,
+        31
+      ],
+      "degrees": [
+        3,
+        5,
+        3,
+        3,
+        3,
+        1,
+        3
+      ],
+      "success": false,
+      "reached": 3,
+      "paths": 99,
+      "black_paths": 78,
+      "open_paths": 36,
+      "black_open": 24,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          3,
+          4,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          4,
+          2,
+          3,
+          5,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        86,
+        4,
+        88,
+        19,
+        98,
+        79,
+        10
+      ],
+      "partner": [
+        42,
+        124,
+        41,
+        112,
+        37,
+        64,
+        21
+      ],
+      "source_class": [
+        2,
+        28,
+        9,
+        81,
+        37,
+        79,
+        23
+      ],
+      "partner_class": [
+        2,
+        28,
+        25,
+        81,
+        97,
+        79,
+        7
+      ],
+      "degrees": [
+        4,
+        1,
+        3,
+        3,
+        3,
+        5,
+        2
+      ],
+      "success": false,
+      "reached": 2,
+      "paths": 87,
+      "black_paths": 80,
+      "open_paths": 38,
+      "black_open": 34,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          4,
+          5,
+          3,
+          1,
+          2,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        114,
+        84,
+        121,
+        19,
+        32,
+        74,
+        24
+      ],
+      "partner": [
+        14,
+        44,
+        8,
+        112,
+        103,
+        69,
+        7
+      ],
+      "source_class": [
+        2,
+        28,
+        9,
+        81,
+        37,
+        79,
+        23
+      ],
+      "partner_class": [
+        2,
+        28,
+        121,
+        49,
+        97,
+        67,
+        11
+      ],
+      "degrees": [
+        4,
+        3,
+        5,
+        3,
+        1,
+        3,
+        2
+      ],
+      "success": false,
+      "reached": 2,
+      "paths": 87,
+      "black_paths": 80,
+      "open_paths": 38,
+      "black_open": 34,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          4,
+          5,
+          3,
+          1,
+          2,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        78,
+        28,
+        56,
+        112,
+        97,
+        67,
+        6
+      ],
+      "partner": [
+        50,
+        100,
+        73,
+        19,
+        38,
+        76,
+        25
+      ],
+      "source_class": [
+        6,
+        28,
+        56,
+        49,
+        97,
+        67,
+        15
+      ],
+      "partner_class": [
+        14,
+        28,
+        56,
+        112,
+        97,
+        67,
+        7
+      ],
+      "degrees": [
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 157,
+      "black_paths": 148,
+      "open_paths": 52,
+      "black_open": 48,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        74,
+        44,
+        25,
+        112,
+        35,
+        69,
+        22
+      ],
+      "partner": [
+        54,
+        84,
+        104,
+        19,
+        100,
+        74,
+        9
+      ],
+      "source_class": [
+        14,
+        84,
+        104,
+        50,
+        37,
+        67,
+        25
+      ],
+      "partner_class": [
+        6,
+        28,
+        120,
+        49,
+        97,
+        67,
+        11
+      ],
+      "degrees": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "success": false,
+      "reached": 7,
+      "paths": 189,
+      "black_paths": 126,
+      "open_paths": 21,
+      "black_open": 0,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          0,
+          6,
+          2
+        ],
+        [
+          2,
+          4,
+          5,
+          0,
+          6,
+          1,
+          3
+        ],
+        [
+          3,
+          5,
+          0,
+          6,
+          1,
+          2,
+          4
+        ],
+        [
+          4,
+          0,
+          6,
+          1,
+          2,
+          3,
+          5
+        ],
+        [
+          5,
+          6,
+          1,
+          2,
+          3,
+          4,
+          0
+        ],
+        [
+          6,
+          2,
+          3,
+          4,
+          5,
+          0,
+          1
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        86,
+        44,
+        88,
+        49,
+        98,
+        69,
+        10
+      ],
+      "partner": [
+        42,
+        84,
+        41,
+        82,
+        37,
+        74,
+        21
+      ],
+      "source_class": [
+        6,
+        44,
+        88,
+        49,
+        99,
+        69,
+        11
+      ],
+      "partner_class": [
+        14,
+        28,
+        56,
+        112,
+        97,
+        67,
+        7
+      ],
+      "degrees": [
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 159,
+      "black_paths": 150,
+      "open_paths": 40,
+      "black_open": 36,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        114,
+        116,
+        121,
+        19,
+        32,
+        72,
+        24
+      ],
+      "partner": [
+        14,
+        12,
+        8,
+        112,
+        103,
+        71,
+        7
+      ],
+      "source_class": [
+        2,
+        12,
+        9,
+        49,
+        39,
+        71,
+        31
+      ],
+      "partner_class": [
+        2,
+        28,
+        121,
+        113,
+        97,
+        67,
+        3
+      ],
+      "degrees": [
+        4,
+        4,
+        5,
+        3,
+        1,
+        2,
+        2
+      ],
+      "success": false,
+      "reached": 2,
+      "paths": 61,
+      "black_paths": 54,
+      "open_paths": 33,
+      "black_open": 28,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          4,
+          5,
+          3,
+          1,
+          2,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        94,
+        60,
+        120,
+        112,
+        96,
+        65,
+        2
+      ],
+      "partner": [
+        34,
+        68,
+        9,
+        19,
+        39,
+        78,
+        29
+      ],
+      "source_class": [
+        2,
+        60,
+        57,
+        49,
+        33,
+        65,
+        31
+      ],
+      "partner_class": [
+        6,
+        44,
+        72,
+        17,
+        39,
+        77,
+        27
+      ],
+      "degrees": [
+        5,
+        4,
+        4,
+        3,
+        2,
+        2,
+        1
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 85,
+      "black_paths": 78,
+      "open_paths": 29,
+      "black_open": 26,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        98,
+        124,
+        57,
+        49,
+        33,
+        64,
+        28
+      ],
+      "partner": [
+        30,
+        4,
+        72,
+        82,
+        102,
+        79,
+        3
+      ],
+      "source_class": [
+        2,
+        28,
+        57,
+        49,
+        33,
+        67,
+        31
+      ],
+      "partner_class": [
+        2,
+        12,
+        41,
+        17,
+        39,
+        75,
+        31
+      ],
+      "degrees": [
+        3,
+        5,
+        4,
+        3,
+        2,
+        1,
+        3
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 81,
+      "black_paths": 74,
+      "open_paths": 32,
+      "black_open": 28,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        102,
+        124,
+        56,
+        49,
+        97,
+        64,
+        12
+      ],
+      "partner": [
+        26,
+        4,
+        73,
+        82,
+        38,
+        79,
+        19
+      ],
+      "source_class": [
+        2,
+        12,
+        25,
+        49,
+        35,
+        71,
+        31
+      ],
+      "partner_class": [
+        2,
+        28,
+        41,
+        49,
+        37,
+        67,
+        31
+      ],
+      "degrees": [
+        4,
+        5,
+        3,
+        3,
+        3,
+        1,
+        2
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 75,
+      "black_paths": 68,
+      "open_paths": 40,
+      "black_open": 36,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        106,
+        124,
+        57,
+        112,
+        33,
+        64,
+        20
+      ],
+      "partner": [
+        22,
+        4,
+        72,
+        19,
+        102,
+        79,
+        11
+      ],
+      "source_class": [
+        2,
+        12,
+        89,
+        17,
+        99,
+        79,
+        11
+      ],
+      "partner_class": [
+        2,
+        12,
+        25,
+        49,
+        35,
+        71,
+        31
+      ],
+      "degrees": [
+        4,
+        5,
+        4,
+        3,
+        2,
+        1,
+        2
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 65,
+      "black_paths": 58,
+      "open_paths": 37,
+      "black_open": 32,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        110,
+        124,
+        56,
+        112,
+        97,
+        64,
+        4
+      ],
+      "partner": [
+        18,
+        4,
+        73,
+        19,
+        38,
+        79,
+        27
+      ],
+      "source_class": [
+        2,
+        4,
+        25,
+        19,
+        35,
+        79,
+        31
+      ],
+      "partner_class": [
+        2,
+        28,
+        57,
+        49,
+        33,
+        67,
+        31
+      ],
+      "degrees": [
+        5,
+        5,
+        3,
+        3,
+        3,
+        1,
+        1
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 41,
+      "black_paths": 36,
+      "open_paths": 27,
+      "black_open": 24,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        114,
+        124,
+        121,
+        49,
+        32,
+        64,
+        24
+      ],
+      "partner": [
+        14,
+        4,
+        8,
+        82,
+        103,
+        79,
+        7
+      ],
+      "source_class": [
+        2,
+        4,
+        9,
+        19,
+        39,
+        79,
+        31
+      ],
+      "partner_class": [
+        2,
+        4,
+        41,
+        115,
+        103,
+        67,
+        7
+      ],
+      "degrees": [
+        4,
+        5,
+        5,
+        3,
+        1,
+        1,
+        2
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 31,
+      "black_paths": 26,
+      "open_paths": 24,
+      "black_open": 20,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "witness": []
+    },
+    {
+      "n": 7,
+      "rows": [
+        118,
+        124,
+        120,
+        49,
+        96,
+        64,
+        8
+      ],
+      "partner": [
+        10,
+        4,
+        9,
+        82,
+        39,
+        79,
+        23
+      ],
+      "source_class": [
+        2,
+        4,
+        73,
+        115,
+        103,
+        71,
+        3
+      ],
+      "partner_class": [
+        2,
+        12,
+        9,
+        49,
+        39,
+        71,
+        31
+      ],
+      "degrees": [
+        5,
+        5,
+        4,
+        3,
+        2,
+        1,
+        1
+      ],
+      "success": false,
+      "reached": 1,
+      "paths": 25,
+      "black_paths": 20,
+      "open_paths": 18,
+      "black_open": 14,
+      "blue_component": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "witness": []
+    }
+  ]
+}
