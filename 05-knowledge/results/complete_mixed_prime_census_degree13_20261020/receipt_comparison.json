@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "comparisons": [
+    {
+      "reference": "prior_audited",
+      "matching_rows": 30,
+      "all_reported_fields_match": true
+    },
+    {
+      "reference": "new_independent",
+      "matching_rows": 18,
+      "all_reported_fields_match": true
+    }
+  ],
+  "incoming_rows": 44,
+  "complete_rows": 48
+}

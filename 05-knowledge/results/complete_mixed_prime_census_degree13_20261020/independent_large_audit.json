@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "checks": 318707,
+  "rows": [
+    {
+      "class": "C15 (3,5,1^5)",
+      "tau_T": 17564,
+      "tau_E": 17480,
+      "difference": 84,
+      "even_multiplicities": {
+        "1": 17201,
+        "4": 1,
+        "2": 277,
+        "3": 1
+      },
+      "odd_multiplicities": {
+        "1": 58,
+        "2": 2
+      },
+      "full_vertex_automorphisms_tested": 249932,
+      "max_even_automorphism_order": 6227020800,
+      "seconds": 8.141513363996637
+    },
+    {
+      "class": "F21 (7,1^6)",
+      "tau_T": 3040,
+      "tau_E": 3040,
+      "difference": 0,
+      "even_multiplicities": {
+        "1": 3040
+      },
+      "odd_multiplicities": {},
+      "full_vertex_automorphisms_tested": 68675,
+      "max_even_automorphism_order": 6227020800,
+      "seconds": 2.290366813002038
+    }
+  ]
+}

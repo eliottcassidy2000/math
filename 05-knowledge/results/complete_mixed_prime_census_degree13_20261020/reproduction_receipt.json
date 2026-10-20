@@ -1,0 +1,68 @@
+{
+  "checks": [
+    {
+      "check": "control_normal",
+      "sha256": "b8717213b89956693518c46b15192fcf003ad94b83a260b2b4c672f63b889ebb",
+      "status": "PASS"
+    },
+    {
+      "check": "all_lower_normal",
+      "sha256": "73f152b247028475bfe806e0ba37921b1568c30ad0fbec0111202bbb179aa811",
+      "status": "PASS"
+    },
+    {
+      "check": "small13_normal",
+      "sha256": "7a08a9eb830a8cf1d58075b97bb1444e3766706c045b7fa16a5182fc53fa5215",
+      "status": "PASS"
+    },
+    {
+      "check": "small13_normal_vs_optimized",
+      "sha256": "7a08a9eb830a8cf1d58075b97bb1444e3766706c045b7fa16a5182fc53fa5215",
+      "status": "PASS"
+    },
+    {
+      "check": "large13_normal",
+      "sha256": "1a151e88a12574b1f1b2bbbe47ee173efc7ddf663eed5355956cfa28445b148a",
+      "status": "PASS"
+    },
+    {
+      "check": "large13_normal_vs_optimized",
+      "sha256": "1a151e88a12574b1f1b2bbbe47ee173efc7ddf663eed5355956cfa28445b148a",
+      "status": "PASS"
+    },
+    {
+      "check": "prime13_certificate_normal_vs_optimized",
+      "status": "PASS"
+    },
+    {
+      "check": "subdirect_certificate_normal_vs_optimized",
+      "status": "PASS"
+    },
+    {
+      "check": "burnside_control_normal_vs_optimized",
+      "status": "PASS"
+    },
+    {
+      "check": "generator_action_replay_normal_vs_optimized",
+      "status": "PASS"
+    },
+    {
+      "check": "independent_large_audit_normal_vs_optimized",
+      "status": "PASS"
+    },
+    {
+      "check": "compare_receipts_normal_vs_optimized",
+      "status": "PASS"
+    },
+    {
+      "check": "all_28_lower_rows_against_frozen_references",
+      "status": "PASS"
+    }
+  ],
+  "complete_rows": 48,
+  "degree13_rows": 20,
+  "degrees_through": 13,
+  "incoming_degree13_matched_rows": 18,
+  "prior_incoming_common_matched_rows": 30,
+  "status": "PASS"
+}

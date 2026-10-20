@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "source_commit": "1e4f40f2d5f9419ed97d1c516d0db0a83c100a38",
+  "files": [
+    {
+      "copied_file": "fixed_cube_engine.py",
+      "source_commit": "1e4f40f2d5f9419ed97d1c516d0db0a83c100a38",
+      "source_path": "05-knowledge/results/mixed_prime_census_extension_20261020/fixed_cube_engine.py",
+      "sha256": "46cdad3ae5c4008dc912e83122383bfd6abd7f3a761688bc934e4705412d1684",
+      "exact_copy": true
+    },
+    {
+      "copied_file": "extension_census.py",
+      "source_commit": "1e4f40f2d5f9419ed97d1c516d0db0a83c100a38",
+      "source_path": "05-knowledge/results/mixed_prime_census_extension_20261020/extension_census.py",
+      "sha256": "73a502ec5fc0bc299ac07e99706da9ea41a6882ae692431ee267fb627de36bc0",
+      "exact_copy": true
+    },
+    {
+      "copied_file": "independent_engine.py",
+      "source_commit": "1e4f40f2d5f9419ed97d1c516d0db0a83c100a38",
+      "source_path": "05-knowledge/results/odd_mixed_prime_census_20261020/independent_automorphism_audit.py",
+      "sha256": "0ab46daafc0b6a889e493980338184aa84e6d5086b5cc605f234ee549219cb29",
+      "exact_copy": true
+    },
+    {
+      "reference_receipt": "odd_mixed_prime_census_20261020/census.json",
+      "source_commit": "1e4f40f2d5f9419ed97d1c516d0db0a83c100a38",
+      "sha256": "095b4fcbe56f19c596280fadb3034cd9e81aebb7f7b4e5b3b33291daf519a7c5"
+    },
+    {
+      "reference_receipt": "mixed_prime_census_extension_20261020/extension_counts.json",
+      "source_commit": "1e4f40f2d5f9419ed97d1c516d0db0a83c100a38",
+      "sha256": "5755c35a7bbfed39d9fc62f7ba9b6336e6ed42346e8fa7a86c008c296f49d2d4"
+    },
+    {
+      "reference_receipt": "mixed_prime_census_extension_20261020/family_scope_probes.json",
+      "source_commit": "1e4f40f2d5f9419ed97d1c516d0db0a83c100a38",
+      "sha256": "173c8598c3ddfc91f9b308b541fc18d3582423b0549943eb1e3a345c2d7c0eb5"
+    },
+    {
+      "reference_receipt": "double_triple_symmetry_boundary_20261020/double_triple_n13_probe.json",
+      "source_commit": "1e4f40f2d5f9419ed97d1c516d0db0a83c100a38",
+      "sha256": "4a607e1a25648ae78451fbcefa871766b00b411721f28ee4a019c47c484dd222"
+    },
+    {
+      "copied_file": "incoming/odd_symmetry_mixed_prime_census_20261019.py",
+      "source_commit": "1e4f40f2d5f9419ed97d1c516d0db0a83c100a38",
+      "source_path": "04-computation/experiments/odd_symmetry_mixed_prime_census_20261019.py",
+      "sha256": "420055221cd510db4ab7b2e938752f55ddc64e09a5d8d3a72b679b7125b46f93",
+      "exact_copy": true
+    },
+    {
+      "copied_file": "incoming/odd_symmetry_mixed_prime_census_20261019.out",
+      "source_commit": "1e4f40f2d5f9419ed97d1c516d0db0a83c100a38",
+      "source_path": "04-computation/experiments/odd_symmetry_mixed_prime_census_20261019.out",
+      "sha256": "d49c38e5b94ff9d32fea829178b0be69916eb4b10ed02fd39b4c105e4c62288b",
+      "exact_copy": true
+    },
+    {
+      "copied_file": "incoming/odd_symmetry_mixed_prime_census_20261019_addendum.out",
+      "source_commit": "1e4f40f2d5f9419ed97d1c516d0db0a83c100a38",
+      "source_path": "04-computation/experiments/odd_symmetry_mixed_prime_census_20261019_addendum.out",
+      "sha256": "80d30b296f6e499c418c5a3025f8a10abc3f34f3da2f1b1c931754a27d16037e",
+      "exact_copy": true
+    },
+    {
+      "copied_file": "incoming/odd_symmetry_mixed_prime_census_20261019_addendum2.out",
+      "source_commit": "1e4f40f2d5f9419ed97d1c516d0db0a83c100a38",
+      "source_path": "04-computation/experiments/odd_symmetry_mixed_prime_census_20261019_addendum2.out",
+      "sha256": "f9081ec2f5081b12ac4b6e84c66acf18c105f6c2fdf2c1b1c4012ab79af621b2",
+      "exact_copy": true
+    }
+  ]
+}

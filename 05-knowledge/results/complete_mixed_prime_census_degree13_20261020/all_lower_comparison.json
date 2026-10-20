@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "matched_rows": 28,
+  "fields": [
+    "order",
+    "normalizer_order",
+    "pair_orbits",
+    "fixed_objects_each",
+    "relative_tournament_orbits",
+    "relative_even_graph_orbits",
+    "tau_T",
+    "tau_E",
+    "difference",
+    "sign_escape_global_types",
+    "tournament_fusion_defect",
+    "even_graph_fusion_defect",
+    "sign_escape_relative_orbits"
+  ]
+}
