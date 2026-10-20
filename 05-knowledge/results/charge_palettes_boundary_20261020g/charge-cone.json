@@ -1,8 +1,10 @@
 {
   "status": "FINITE-EXACT controls of the proved conditional cone",
   "word_controls": 21844,
+  "exact_debt_denominator_controls": 21844,
   "changing_generator_pairs": 1024,
   "base_kappa": "64/115",
+  "payment_margin_lower_bound": "51/115",
   "positive_cylinder_families": [
     {
       "k": 1,

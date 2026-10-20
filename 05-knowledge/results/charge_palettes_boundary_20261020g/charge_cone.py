@@ -43,6 +43,11 @@ def main():
         for w in product(range(1,5),repeat=m):
             A,d,B,C,D=coefficients(w); L,P,E=direct(w)
             need((L,P,E)==(F(A,d),F(C,d),F(D,d)),'independent suffix sums')
+            resets=[i for i,a in enumerate(w) if a>=3]
+            if resets:
+                need(E.denominator==1<<(sum(w[resets[0]:])-2),
+                     'exact reduced debt denominator retains first reset clock')
+            else:need(E==0,'no reset has zero debt')
             checks+=1
             if A>=d and D<=A-d and D and len(bank)<32:bank.append(w)
     for u in bank:
@@ -63,6 +68,7 @@ def main():
         vals=replay(n,w); h=vals[-1]
         need(min(vals[:-1])==n and h<n,'first descent in displayed family')
         need(F(D,d)<F(179,115)<2<=n-h,'uniform 179/115 debt bound')
+        need(n-h-F(D,d)>F(51,115),'depth-independent payment margin')
         need(A*(n-1)+C<d*(n-1),'consequence: positive charge paid')
         repetitions.append({'k':k,'odd_steps':len(w),'K':sum(w),'last_a':a,
                             'n':n,'h':h,'D':str(F(D,d))})
@@ -80,8 +86,10 @@ def main():
     bad=(1,1,1,3); A,d,_,_,D=coefficients(bad)
     need(F(D,A-d)==F(32,17)>1,'expansion alone is not enough')
     print(json.dumps({'status':'FINITE-EXACT controls of the proved conditional cone',
-        'word_controls':checks,'changing_generator_pairs':len(bank)**2,
-        'base_kappa':'64/115','positive_cylinder_families':repetitions,
+        'word_controls':checks,'exact_debt_denominator_controls':checks,
+        'changing_generator_pairs':len(bank)**2,
+        'base_kappa':'64/115','payment_margin_lower_bound':'51/115',
+        'positive_cylinder_families':repetitions,
         'source_control':dict(stats),'unresolved_cone_hostiles':hostile,
         'expanding_block_hostile':{'word':bad,'kappa':'32/17'}},indent=2))
 

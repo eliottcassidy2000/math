@@ -14,8 +14,10 @@ python3 charge_cone.py
 python3 endpoint_layer.py
 python3 zero_heavy_mass.py
 python3 palette_perturb.py
+python3 unit_gap_boundary.py
 ```
-Repeat with python3 -O and compare JSON output. All assertions that can fail
+All five have been run with python3 and python3 -O; their paired JSON outputs
+are byte-identical. All assertions that can fail
 use explicit exceptions. The manifest pins the prior scripts/receipts used
 by the zero-heavy and palette tests.
 
@@ -36,18 +38,41 @@ Universes:
 *All45 one-left-port changes at the displayed31-point bad boundary:
   four improper and41 proper, all41 repairing extension. Thirty-six
   two-fresh-colour controls on the gate's recorded four-colouring.
+*All24,132 matching records at delta=k-1 for k2,3,4, including their strong
+  subfamilies, receive an exact weight-preserving isomorphism quotient.
+  Every clone pair and relevant strong predicate is checked. The matching-
+  marked-gap bijection is independently inverted and exhausted through k4.
+  Reversed and cyclic relabellings supply242 explicit covariance controls.
+*The21,844 words additionally verify the exact reduced debt denominator
+  2^(L-2), where L is the suffix clock starting at the first reset.
 
 The first attempt at the cylinder example used8k instead of7k for the
 block's valuation sum. The exact contraction guard rejected it immediately;
 the generator now derives the correct7k clock. No successful receipt or
 proof relied on the rejected value. This repair is logged in MISTAKES.md.
 
-The zero-heavy count proof uses gap weights>=2. It does not silently extend
-to delta=k-1. The complete k2 coefficient42 at delta2 is a hostile against
+The original zero-heavy count proof uses gap weights>=2. A separate local
+unit-interval argument now extends it through delta=k-1. The complete k2
+coefficient42 at delta2 is a hostile against
 extending the matching formula45 without new boundary terms.
+
+A boundary audit also corrected a strict multiplication inequality at c=0
+in the debt-cone proof. The sufficient result survives: the one-step
+bound is nonstrict before its final <2, while the general terminal case
+uses the nonintegrality of positive reset debt. No strict inequality is
+obtained by multiplying by zero. This is recorded in MISTAKES.md.
 
 The endpoint proof audits the shift-by-two cycle structure and all small
 boundaries; a balanced endpoint sum is resolved by actual arc witnesses.
+The incoming complete endpoint-two theorem supersedes its partial frontier;
+all its branch proofs were read, but its full implementation is not claimed
+as a new independent replay in this packet.
 The geometric one-port count uses the complete boundary graph, retaining
 its two internal port edges and the actual output multiplicity.
+
+Before freezing the unit-gap checker, code review caught a sorting key
+closing over the very list being sorted. Python temporarily empties that
+list during sorting. The key now reads an immutable copy, and explicit
+relabelling controls test the canonicalizer away from producer labels.
+The mathematical quotient proof and all displayed class counts survive.
 

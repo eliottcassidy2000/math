@@ -29,9 +29,9 @@ multipliers. Blocks need not coincide or commute; there is no depth limit.
 odd step a produces h<n from an odd source n>1. Then positive charge pays.
 The unshifted affine word has positive intercept, so mu lambda_u<h/n<1,
 where mu=3/2^a. Consequently a>=2. If a=2,
-D_total<=c mu(lambda_u-1)<c(1-mu)<=1/4. If a>=3,
+D_total<=c mu(lambda_u-1)<=c(1-mu)<=1/4. If a>=3,
 ```
-D_total<c(1-mu)+1-4/2^a <=2-7/2^a<2.
+D_total<=c(1-mu)+1-4/2^a <=2-7/2^a<2.
 ```
 Since n-h is a positive even integer, D_total<n-h, equivalently the positive
 upper bound h-1+D_total<n-1. This proof needs an actual descent, but need not
@@ -40,7 +40,18 @@ required next valuation.
 
 More generally an actual terminal packet v with mu=lambda_v<1 and debt D_v
 can follow the cone: if c(1-mu)+D_v<=2, every actual descent at that endpoint
-pays, because D_total<c(1-mu)+D_v. Availability of a controller remains separate.
+pays. For c>0 the multiplier inequality makes the debt bound strict.
+For c=0 the prefix debt vanishes and D_total=D_v; the following dyadic
+fact excludes equality D_v=2. Availability of a controller remains separate.
+
+**Debt retains the first reset clock.** If there is a reset, let a_i>=3
+be its first valuation and let L=sum_(j=i)^m a_j. On denominator2^L,
+the first reset contribution has numerator
+(2^a_i-4)3^(m-i), of exact 2-adic valuation2. Every later reset numerator
+has valuation at least a_i+2>2. Thus the reduced debt denominator is
+exactly2^(L-2), so D is positive and nonintegral. If there is no reset,
+D=0. This also resolves the c=0 endpoint of the terminal-packet theorem;
+strict multiplication by c must not be used at c=0.
 
 ## An infinite first-exit family with unbounded reset count
 
@@ -50,6 +61,10 @@ D_b/(lambda_b-1)=64/115.
 ```
 For every k>=1, b^k is in the cone with this c. After any actual final
 descending step, D_total<1+64/115=179/115<2.
+Consequently the absolute payment margin is
+`(n-1)-(h-1+D_total)=n-h-D_total>51/115`, independently of k.
+This is a margin for the stated positive-charge envelope, not a ROOT
+lower bound for a different transport operator.
 
 There are infinitely many positive integer first-exit sources for each k.
 Choose a>=2 with 2^(7k+a)>3^(5k+1). For w=b^k a write

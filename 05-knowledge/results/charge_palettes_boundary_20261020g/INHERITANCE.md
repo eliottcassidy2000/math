@@ -1,6 +1,6 @@
 # Inheritance, concept board and preserved predicates
 
-Base5ae8a4f8d0. Incoming work read through ed0719d0ca before checkpoint.
+Base5ae8a4f8d0. Incoming work through f3e658d7cc read and integrated.
 
 Anchor: first-exit positive charge. Closest mechanism: the old all-length
 threshold and depth18/logarithmic region. Hostiles: source55's later descent,
@@ -31,8 +31,10 @@ the same involution, endpoint tensor, or forcing relation.
   cylinder unless retained separately. Source/valuation/terminal guards
   are the sidecar;63 fails cone coverage while still paying.
 * Weighted cores -> matching plus gap deficits: preserves the whole
-  weighted class only in the proved near-maximal mass region. Outside it,
-  unit gaps, endpoint collisions and clone mergers require new data.
+  weighted class only in the proved near-maximal mass region. The first
+  unit gap is now included by its exact local C3/externally marked quotient.
+  Outside it, multiple unit gaps, endpoint collisions and clone mergers
+  require new data.
   The complete k2 compiler refutes extrapolation at delta2.
 * Closed blue path -> middle plus j: retains every arc and the actual
   exceptional mirrored ports. The new ledgers reach the literal marked
@@ -61,6 +63,36 @@ missing predicate. Its five-colour circle-saturation target is preferable
 to assuming free six-colour equality. The packet's recent external lower-
 bound source is explicitly not build-verified; no such claim is imported.
 
+All six proof notes in endpoint_two_repairs_20261020g were read, including
+the actual last-port and penultimate-port guards. Its complete n>=6 theorem
+subsumes our two endpoint families. The oriented prefix-port criterion is
+an especially useful micro/macro contract: unorienting macro incidences
+can identify distinct physical entry/exit pairs and make a lifted step
+illegal. This is distinct from a count-preserving Pythagorean map.
+
+The incoming feedback_word_hamilton_spectrum_20261020 binary-product proof
+keeps two functions of the same word before taking a limit. Its O(2^(-m/2))
+CDF control comes from disjoint bit prefixes; the two finite variables are
+not independent. The exact cancellation between the two active word lengths
+gives an all-cutoff density bound, not sourcewise coverage. This is a useful
+design requirement for a Collatz analogue: an actual decoupling map and a
+uniform error bound would be required before importing an averaged result.
+No such map for actual Collatz first-exit sources is proved here.
+
+The regular_return_gram_icosahedra_20261020 stationary-mass proof identifies
+the literal kernel D_H^(-1) B D_c^(-1) B^t. Relabelling and converse commute
+with this randomized two-step operation, so the quotient weights really
+are H/Aut and kappa H/Aut. Scalar weights alone do not determine B, and
+the labelled parity components survive. This supplies a positive example
+of a valid micro/macro quotient while preventing the inference that a
+stationary measure or a Gram factorization proves black connectivity.
+
+For our extremal matching layers the missing isomorphism data can actually
+be eliminated: large-weight vertices fix an intrinsic order, and the one
+possible unit-gap C3 has only an internal rotation. This is why the count
+formula survives that boundary, whereas the incoming equal-profile cores
+with attachment maxima159 and147 still require their full port tensors.
+
 The earlier tournament_atoms_abc_and_plane_20261011c note already distinguishes
 a four-state codec from its allowed operations, and gives the unit-rhombus
 completion hostile. The newer product involutions refine that distinction:
@@ -71,6 +103,7 @@ and carrier; compose witness fibres before scalar projection; recompute
 essentiality for the consumer. No new universal method card is promoted.
 
 Remaining priorities: source-dependent terminal cones for63-like exits;
-the exact near-maximal unit-gap boundary; endpoint ports excluded from
-the two uniform ledgers; an actual five-colour palette-saturating geometry.
+the next mass boundary delta=k (the k2 hostile already prevents naive
+extrapolation); the two-exceptional-port layer(n-4,3); an actual five-colour
+palette-saturating geometry. These preserve different consumer predicates.
 

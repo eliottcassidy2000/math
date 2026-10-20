@@ -1,0 +1,72 @@
+{
+  "status": "FINITE-EXACT unit-gap quotient controls",
+  "layers": [
+    {
+      "k": 2,
+      "delta": 1,
+      "strong": false,
+      "classes": 15,
+      "max_unit_cell_histogram": {
+        "2": 6,
+        "3": 9
+      }
+    },
+    {
+      "k": 2,
+      "delta": 1,
+      "strong": true,
+      "classes": 6,
+      "max_unit_cell_histogram": {
+        "3": 6
+      }
+    },
+    {
+      "k": 3,
+      "delta": 2,
+      "strong": false,
+      "classes": 420,
+      "max_unit_cell_histogram": {
+        "2": 30,
+        "1": 315,
+        "3": 75
+      }
+    },
+    {
+      "k": 3,
+      "delta": 2,
+      "strong": true,
+      "classes": 150,
+      "max_unit_cell_histogram": {
+        "3": 50,
+        "1": 100
+      }
+    },
+    {
+      "k": 4,
+      "delta": 3,
+      "strong": false,
+      "classes": 17325,
+      "max_unit_cell_histogram": {
+        "2": 210,
+        "1": 16380,
+        "3": 735
+      }
+    },
+    {
+      "k": 4,
+      "delta": 3,
+      "strong": true,
+      "classes": 6216,
+      "max_unit_cell_histogram": {
+        "3": 518,
+        "1": 5698
+      }
+    }
+  ],
+  "relabel_controls": 242,
+  "marked_gap_bijection": {
+    "2": 15,
+    "3": 105,
+    "4": 945
+  }
+}

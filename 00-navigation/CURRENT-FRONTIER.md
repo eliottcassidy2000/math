@@ -198,7 +198,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ### Reliable structural toolkit
 
-- [Fixed-anchor rational owners/complete endpoint-two detours](../05-knowledge/results/zero_heavy_ports_20261020g/README.md); [fixed-D kernels](../05-knowledge/results/kernels_games_detours_20261020f/README.md). Growing-anchor A000568, endpoint layer(n-4,3), black connectivity, odd H-spectrum and Collatz entry OPEN.
+- [Fixed-anchor owners](../05-knowledge/results/zero_heavy_ports_20261020g/README.md); [zero-heavy layers](../05-knowledge/results/charge_palettes_boundary_20261020g/zero_heavy.md): counts through mass deficit k-1. Growing-anchor A000568 OPEN.
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md) makes `d_iso` exactly `l1` on fixed order-join patches by image-swap uncrossing; the ambient quotient still has triangles and is not a partial cube.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) gives the scalar iff-transitive boundary; THM-2242/2249/2256 give its response, envelope, and scale limit.
@@ -377,7 +377,7 @@ lift/phase clocks.
 - **AMM:** [THM-4086](../01-canon/theorems/THM-4086-rule-a-transition-clock-and-phase-cocycle.md) proves a fixed-policy `R=32768` clock/cocycle; no global monotonicity, all-`R`, or `C*` result.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
-- **Collatz/HN:** [Charge / ports](../05-knowledge/results/first_exit_complement_games_20261020/README.md): depth18/log paid. [Metagraph](../05-knowledge/results/endpoint_two_repairs_20261020g/README.md): closed `(n-3,2)` blue lines have three-black detours, n>=6. Entry, six-colour forcing, black connectivity OPEN.
+- **Collatz/HN:** [Debt / palettes](../05-knowledge/results/charge_palettes_boundary_20261020g/README.md): unbounded-reset paid families; fragile input palettes. [Endpoint-two](../05-knowledge/results/endpoint_two_repairs_20261020g/README.md): three-black detours, n>=6. Universal entry, six-colour forcing and black connectivity OPEN.
 - **Lucas:** [THM-4711](../01-canon/theorems/THM-4711-legendre-wronskian-and-binomial-cube-lucas-carry-divisibility.md): Legendre/Zagier (B), cube/Apéry (C) PROVED, `p>=7`; rest OPEN.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** [THM-4210](../01-canon/theorems/THM-4210-rule30-lossless-dyadic-block-current-cartier-tree.md) gives the forward current tree; THM-4204/4206 are inverse/Haar carriers. THM-4263 adds a fibre-cap density pullback, not a prize solution. All prizes remain **OPEN**.

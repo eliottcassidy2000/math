@@ -2,7 +2,12 @@
 
 **PROVED:** the two marked families below, for n>=7.
 **FINITE-EXACT:** all32,144 stated presentations through n10.
-The remaining ports and arbitrary black-core connectivity are **OPEN**.
+**Current stronger result:** incoming work proves the entire layer for
+n>=6, using structural ledgers at n>=9 and an exact finite head. See
+[the complete endpoint-two theorem](../endpoint_two_repairs_20261020g/README.md).
+The two proofs below are retained as independently derived scoped checks;
+their partial coverage is no longer the frontier. Arbitrary black-core
+connectivity remains **OPEN**.
 
 ## Object and exact exceptional ports
 
@@ -92,9 +97,13 @@ their actual positional blackness and the entire target matrix are checked.
 
 The same script tries the old third (closed-chord) ledger and retains
 failures, rather than interpreting a failed template as a disconnected edge.
-Its legal instances all succeed at n8..10 in this finite universe, but
-no universal conclusion is drawn. The open-middle port j=r-1, closed
-no-chord port j=r, and the general closed-chord branch remain next targets.
+Its legal instances all succeed at n8..10 in this finite universe. The
+incoming proof now handles the open-middle port j=r-1, closed no-chord
+port j=r, and general closed-chord branch, among all other layer cases.
+It transports whole blocks and checks positional anti-involutions; its
+prefix-oriented port-parity criterion explains exactly why a macro ledger
+may fail after block expansion. The next direct layer has endpoint scores
+(n-4,3), with two incoming exceptional ports and their reflected partners.
 No arbitrary replacement of an endpoint, converse identification, or clone
 contraction is licensed by these results.
 
