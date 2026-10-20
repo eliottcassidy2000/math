@@ -1,0 +1,73 @@
+{
+  "H": "C15, cycle type (5,3,1,1)",
+  "H_fixed_graphs": 512,
+  "H_fixed_tournaments": 512,
+  "actual_sign_even_graph_types": 31,
+  "actual_tournament_types": 32,
+  "checks": 6326,
+  "counterexample_difference": 1,
+  "direct_full_tournament_types": 32,
+  "explicit_internal_odd_exclusions": 448,
+  "n": 10,
+  "pair_orbits": 9,
+  "relative_even_but_globally_odd": [
+    {
+      "degrees": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "info": {
+        "classes": [
+          [
+            0,
+            1,
+            2,
+            8,
+            9
+          ],
+          [
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "odd_witness": [
+          3,
+          4,
+          5,
+          0,
+          1,
+          2,
+          8,
+          9,
+          6,
+          7
+        ],
+        "quotient_automorphisms": 2
+      },
+      "qedges": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    }
+  ],
+  "relative_even_quotient_types": 32,
+  "remaining_graph_types": 40,
+  "remaining_labelled_graphs": 64,
+  "status": "PASS",
+  "tournament_source_masks": 64
+}

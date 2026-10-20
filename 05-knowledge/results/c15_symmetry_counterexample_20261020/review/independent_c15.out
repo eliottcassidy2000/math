@@ -1,0 +1,7 @@
+C15 <= S10 of orbit shape (3,5,1,1):
+  labelled H-fixed tournaments =512; normalized presentations =64; actual types =32
+  labelled H-fixed graphs =512; internal odd exclusions =448; surviving presentations =64
+  surviving graph types =40; normalizer-even types =32; globally sign-even types =31
+  unique additional odd graph =K5,5; quotient-mask = 25
+  all 64 tournament presentations have unique C3 and prime R5 modules
+ALL INDEPENDENT CHECKS PASSED
