@@ -11,7 +11,10 @@ status: >
   Gamma-even circulants = the signed-set Burnside sum at every p; all even circulants are Gamma-even at p = 7, 11, 19, 23,
   31 and not at p = 13 (16 of 28 sets), 17 (25 of 117), 29 (4096 of 8128), 37 (65536 of 130816), where the Gamma-orbit
   counts are 4 < 6, 3 < 10, 65 < 125, 673 < 1335; the Hall test for Gamma-equivariant injections passes at every p (Lemma N1), so the obstruction at
-  p = 1 mod 4 is purely the orbit count; the collapse primes for c in {2, 3, 5, 6, 7, 10}, {2, 3}, {2, 3, 5}
+  p = 1 mod 4 is purely the orbit count; the Paley rule is well defined, equivariant, even-valued and injective on types
+  for p = 7, 11, 19, 23, 31 (2, 4, 30, 94, 1096 types) and 'even iff an even number of classes' holds there
+  (paley_rule_check.out); at p = 7 and 11 the Gamma stabiliser-containment graph has a unique perfect matching, so
+  the Paley rule is the only Gamma-equivariant type bijection, while p = 19 has 96 (additive_rules.out); the collapse primes for c in {2, 3, 5, 6, 7, 10}, {2, 3}, {2, 3, 5}
   (dilation_collapse.out: 73, 89, ... for c = 2; 601 for {2, 3}; 17881 for {2, 3, 5}); THM-4724's dc_family.out.
   CITED: THM-4721 (Corollary C, Theorem R, the evenness criterion), THM-4724 (Theorem W, forcing analysis, Proposition
   D), THM-4531 (Lemma N1), Royle et al. 2023 (Lemma 4.3), Chebotarev's density theorem, Kummer theory
@@ -30,7 +33,7 @@ related:
   - 05-knowledge/hypotheses/HYP-9342-what-a-uniform-rule-can-be-after-thm-4725.md
   - 05-knowledge/hypotheses/HYP-9341-what-remains-open-after-thm-4722.md
 note: 05-knowledge/results/jcweb_20261020_uniform_rules_branch_integrality_jacobian_web.md
-scripts: 04-computation/experiments/jcweb_20261020/{power_equivariance,power_equivariance_fast,dilation_collapse}.py
+scripts: 04-computation/experiments/jcweb_20261020/{power_equivariance,power_equivariance_fast,dilation_collapse,paley_rule_check,additive_rules}.py
 outputs: 04-computation/experiments/jcweb_20261020/*.out
 ---
 

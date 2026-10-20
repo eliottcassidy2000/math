@@ -1,0 +1,5 @@
+p = 7: well defined on types True, image even True, injective on types True (2 types), equivariant (multipliers 2,3; two power maps) True, 'even iff even number of classes' True
+p = 11: well defined on types True, image even True, injective on types True (4 types), equivariant (multipliers 2,3; two power maps) True, 'even iff even number of classes' True
+p = 19: well defined on types True, image even True, injective on types True (30 types), equivariant (multipliers 2,3; two power maps) True, 'even iff even number of classes' True
+p = 23: well defined on types True, image even True, injective on types True (94 types), equivariant (multipliers 2,3; two power maps) True, 'even iff even number of classes' True
+p = 31: well defined on types True, image even True, injective on types True (1096 types), equivariant (multipliers 2,3; two power maps) True, 'even iff even number of classes' True
