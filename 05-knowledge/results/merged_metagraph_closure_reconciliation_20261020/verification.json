@@ -1,0 +1,170 @@
+{
+  "source_snapshot": "70ca1d8210dfd7db3a32a2687f74a331dfccf910",
+  "false_constant_sum_criterion": {
+    "n": 9,
+    "S": [
+      1,
+      3,
+      4,
+      7
+    ],
+    "path": [
+      3,
+      1,
+      2,
+      6,
+      4,
+      5,
+      0,
+      7,
+      8
+    ],
+    "pair_sums": [
+      2,
+      8,
+      2,
+      2,
+      8,
+      2,
+      2,
+      8,
+      2
+    ],
+    "directed": true,
+    "positional_reversal_is_anti": true
+  },
+  "actual_arc_retest_of_incoming_paths": [
+    {
+      "n": 7,
+      "actual_arc_checks": 4,
+      "false_witnesses": []
+    },
+    {
+      "n": 9,
+      "actual_arc_checks": 17,
+      "false_witnesses": []
+    },
+    {
+      "n": 11,
+      "actual_arc_checks": 61,
+      "false_witnesses": []
+    },
+    {
+      "n": 13,
+      "actual_arc_checks": 193,
+      "false_witnesses": []
+    },
+    {
+      "n": 15,
+      "actual_arc_checks": 561,
+      "false_witnesses": []
+    },
+    {
+      "n": 17,
+      "actual_arc_checks": 1537,
+      "false_witnesses": []
+    },
+    {
+      "n": 19,
+      "actual_arc_checks": 4033,
+      "false_witnesses": []
+    },
+    {
+      "n": 21,
+      "actual_arc_checks": 10241,
+      "false_witnesses": []
+    },
+    {
+      "n": 23,
+      "actual_arc_checks": 25345,
+      "false_witnesses": []
+    }
+  ],
+  "fully_closed_small_order_audit": [
+    {
+      "n": 3,
+      "labelled_universe": 8,
+      "fully_closed_classes": [
+        {
+          "canonical_code": 2,
+          "H": 3,
+          "HC": 1,
+          "Aut": 3,
+          "scores": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "labelled_universe": 64,
+      "fully_closed_classes": []
+    },
+    {
+      "n": 5,
+      "labelled_universe": 1024,
+      "fully_closed_classes": [
+        {
+          "canonical_code": 40,
+          "H": 15,
+          "HC": 3,
+          "Aut": 3,
+          "scores": [
+            1,
+            2,
+            2,
+            2,
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "nonstrong_asymptotic_controls": [
+    {
+      "n": 8,
+      "NS_over_T_previous": 1.972900390625,
+      "NS": "64648",
+      "T_previous": "32768"
+    },
+    {
+      "n": 10,
+      "NS_over_T_previous": 1.9924688898026943,
+      "NS": "534849295",
+      "T_previous": "268435456"
+    },
+    {
+      "n": 16,
+      "NS_over_T_previous": 1.9998779894098946,
+      "NS": "4951458073552104202450472659",
+      "T_previous": "2475880078570760549798248448"
+    },
+    {
+      "n": 24,
+      "NS_over_T_previous": 1.9999995231637513,
+      "NS": "6901744701289145041042677640664028535303406810783067939160858290699157",
+      "T_previous": "3450873173395281893717377931138512726225554486085193277581262111899648"
+    },
+    {
+      "n": 40,
+      "NS_over_T_previous": 1.999999999992724,
+      "NS": "84162174424467795908948665240605148727647142469658119799915453064521867552680329078908328618102503263181500835957118618064043163661402546390355148939253520357799196043205039669978065059958698863593620042666039619",
+      "T_previous": "42081087212386988057927919063041029324402718422585390875986247224549857234376646576909332290220707609815863750849425741704155458001470430905022518165215046799641789369027556785533310063074581738170346013886251008"
+    }
+  ],
+  "exact_asymptotic_inequalities": {
+    "orders": [
+      4,
+      40
+    ],
+    "all_passed": true
+  },
+  "regular_C5_control": {
+    "H": 15,
+    "HC": 2,
+    "open_paths": 5
+  }
+}
