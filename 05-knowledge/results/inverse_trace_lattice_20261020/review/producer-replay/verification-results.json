@@ -1,0 +1,1435 @@
+{
+  "status": "FINITE-EXACT controls; uniform theorem proved in accompanying note",
+  "checks": 1265,
+  "packet_cases": [
+    {
+      "m": 2,
+      "a": 1,
+      "finite_root": 0,
+      "smith_exponents": [
+        -1
+      ],
+      "determinant_valuation": -1
+    },
+    {
+      "m": 2,
+      "a": 1,
+      "finite_root": 1,
+      "smith_exponents": [
+        -1
+      ],
+      "determinant_valuation": -1
+    },
+    {
+      "m": 2,
+      "a": 1,
+      "finite_root": -2,
+      "smith_exponents": [
+        -1
+      ],
+      "determinant_valuation": -1
+    },
+    {
+      "m": 2,
+      "a": 2,
+      "finite_root": 0,
+      "smith_exponents": [
+        -2
+      ],
+      "determinant_valuation": -2
+    },
+    {
+      "m": 2,
+      "a": 2,
+      "finite_root": 1,
+      "smith_exponents": [
+        -2
+      ],
+      "determinant_valuation": -2
+    },
+    {
+      "m": 2,
+      "a": 2,
+      "finite_root": -2,
+      "smith_exponents": [
+        -2
+      ],
+      "determinant_valuation": -2
+    },
+    {
+      "m": 2,
+      "a": 3,
+      "finite_root": 0,
+      "smith_exponents": [
+        -3
+      ],
+      "determinant_valuation": -3
+    },
+    {
+      "m": 2,
+      "a": 3,
+      "finite_root": 1,
+      "smith_exponents": [
+        -3
+      ],
+      "determinant_valuation": -3
+    },
+    {
+      "m": 2,
+      "a": 3,
+      "finite_root": -2,
+      "smith_exponents": [
+        -3
+      ],
+      "determinant_valuation": -3
+    },
+    {
+      "m": 3,
+      "a": 1,
+      "finite_root": 0,
+      "smith_exponents": [
+        -1,
+        -1
+      ],
+      "determinant_valuation": -2
+    },
+    {
+      "m": 3,
+      "a": 1,
+      "finite_root": 1,
+      "smith_exponents": [
+        -1,
+        -1
+      ],
+      "determinant_valuation": -2
+    },
+    {
+      "m": 3,
+      "a": 1,
+      "finite_root": -2,
+      "smith_exponents": [
+        -1,
+        -1
+      ],
+      "determinant_valuation": -2
+    },
+    {
+      "m": 3,
+      "a": 2,
+      "finite_root": 0,
+      "smith_exponents": [
+        -2,
+        -2
+      ],
+      "determinant_valuation": -4
+    },
+    {
+      "m": 3,
+      "a": 2,
+      "finite_root": 1,
+      "smith_exponents": [
+        -2,
+        -2
+      ],
+      "determinant_valuation": -4
+    },
+    {
+      "m": 3,
+      "a": 2,
+      "finite_root": -2,
+      "smith_exponents": [
+        -2,
+        -2
+      ],
+      "determinant_valuation": -4
+    },
+    {
+      "m": 3,
+      "a": 3,
+      "finite_root": 0,
+      "smith_exponents": [
+        -3,
+        -3
+      ],
+      "determinant_valuation": -6
+    },
+    {
+      "m": 3,
+      "a": 3,
+      "finite_root": 1,
+      "smith_exponents": [
+        -3,
+        -3
+      ],
+      "determinant_valuation": -6
+    },
+    {
+      "m": 3,
+      "a": 3,
+      "finite_root": -2,
+      "smith_exponents": [
+        -3,
+        -3
+      ],
+      "determinant_valuation": -6
+    },
+    {
+      "m": 4,
+      "a": 1,
+      "finite_root": 0,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -3
+    },
+    {
+      "m": 4,
+      "a": 1,
+      "finite_root": 1,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -3
+    },
+    {
+      "m": 4,
+      "a": 1,
+      "finite_root": -2,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -3
+    },
+    {
+      "m": 4,
+      "a": 2,
+      "finite_root": 0,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -6
+    },
+    {
+      "m": 4,
+      "a": 2,
+      "finite_root": 1,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -6
+    },
+    {
+      "m": 4,
+      "a": 2,
+      "finite_root": -2,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -6
+    },
+    {
+      "m": 4,
+      "a": 3,
+      "finite_root": 0,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -9
+    },
+    {
+      "m": 4,
+      "a": 3,
+      "finite_root": 1,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -9
+    },
+    {
+      "m": 4,
+      "a": 3,
+      "finite_root": -2,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -9
+    },
+    {
+      "m": 5,
+      "a": 1,
+      "finite_root": 0,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -4
+    },
+    {
+      "m": 5,
+      "a": 1,
+      "finite_root": 1,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -4
+    },
+    {
+      "m": 5,
+      "a": 1,
+      "finite_root": -2,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -4
+    },
+    {
+      "m": 5,
+      "a": 2,
+      "finite_root": 0,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -8
+    },
+    {
+      "m": 5,
+      "a": 2,
+      "finite_root": 1,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -8
+    },
+    {
+      "m": 5,
+      "a": 2,
+      "finite_root": -2,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -8
+    },
+    {
+      "m": 5,
+      "a": 3,
+      "finite_root": 0,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -12
+    },
+    {
+      "m": 5,
+      "a": 3,
+      "finite_root": 1,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -12
+    },
+    {
+      "m": 5,
+      "a": 3,
+      "finite_root": -2,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -12
+    },
+    {
+      "m": 6,
+      "a": 1,
+      "finite_root": 0,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -5
+    },
+    {
+      "m": 6,
+      "a": 1,
+      "finite_root": 1,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -5
+    },
+    {
+      "m": 6,
+      "a": 1,
+      "finite_root": -2,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -5
+    },
+    {
+      "m": 6,
+      "a": 2,
+      "finite_root": 0,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -10
+    },
+    {
+      "m": 6,
+      "a": 2,
+      "finite_root": 1,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -10
+    },
+    {
+      "m": 6,
+      "a": 2,
+      "finite_root": -2,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -10
+    },
+    {
+      "m": 6,
+      "a": 3,
+      "finite_root": 0,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -15
+    },
+    {
+      "m": 6,
+      "a": 3,
+      "finite_root": 1,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -15
+    },
+    {
+      "m": 6,
+      "a": 3,
+      "finite_root": -2,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -15
+    },
+    {
+      "m": 7,
+      "a": 1,
+      "finite_root": 0,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -6
+    },
+    {
+      "m": 7,
+      "a": 1,
+      "finite_root": 1,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -6
+    },
+    {
+      "m": 7,
+      "a": 1,
+      "finite_root": -2,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -6
+    },
+    {
+      "m": 7,
+      "a": 2,
+      "finite_root": 0,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -12
+    },
+    {
+      "m": 7,
+      "a": 2,
+      "finite_root": 1,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -12
+    },
+    {
+      "m": 7,
+      "a": 2,
+      "finite_root": -2,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -12
+    },
+    {
+      "m": 7,
+      "a": 3,
+      "finite_root": 0,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -18
+    },
+    {
+      "m": 7,
+      "a": 3,
+      "finite_root": 1,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -18
+    },
+    {
+      "m": 7,
+      "a": 3,
+      "finite_root": -2,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -18
+    },
+    {
+      "m": 8,
+      "a": 1,
+      "finite_root": 0,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -7
+    },
+    {
+      "m": 8,
+      "a": 1,
+      "finite_root": 1,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -7
+    },
+    {
+      "m": 8,
+      "a": 1,
+      "finite_root": -2,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -7
+    },
+    {
+      "m": 8,
+      "a": 2,
+      "finite_root": 0,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -14
+    },
+    {
+      "m": 8,
+      "a": 2,
+      "finite_root": 1,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -14
+    },
+    {
+      "m": 8,
+      "a": 2,
+      "finite_root": -2,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -14
+    },
+    {
+      "m": 8,
+      "a": 3,
+      "finite_root": 0,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -21
+    },
+    {
+      "m": 8,
+      "a": 3,
+      "finite_root": 1,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -21
+    },
+    {
+      "m": 8,
+      "a": 3,
+      "finite_root": -2,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -21
+    },
+    {
+      "m": 9,
+      "a": 1,
+      "finite_root": 0,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -8
+    },
+    {
+      "m": 9,
+      "a": 1,
+      "finite_root": 1,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -8
+    },
+    {
+      "m": 9,
+      "a": 1,
+      "finite_root": -2,
+      "smith_exponents": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "determinant_valuation": -8
+    },
+    {
+      "m": 9,
+      "a": 2,
+      "finite_root": 0,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -16
+    },
+    {
+      "m": 9,
+      "a": 2,
+      "finite_root": 1,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -16
+    },
+    {
+      "m": 9,
+      "a": 2,
+      "finite_root": -2,
+      "smith_exponents": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "determinant_valuation": -16
+    },
+    {
+      "m": 9,
+      "a": 3,
+      "finite_root": 0,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -24
+    },
+    {
+      "m": 9,
+      "a": 3,
+      "finite_root": 1,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -24
+    },
+    {
+      "m": 9,
+      "a": 3,
+      "finite_root": -2,
+      "smith_exponents": [
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "determinant_valuation": -24
+    }
+  ],
+  "nontrivial_quartics": [
+    {
+      "a": 1,
+      "b": 1,
+      "determinant": "-4 - 8/t - 9/t**2",
+      "smith_exponents": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "determinant": "-4 - 16/t - 9/t**2",
+      "smith_exponents": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "a": 1,
+      "b": -1,
+      "determinant": "-4 + 8/t - 9/t**2",
+      "smith_exponents": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "determinant": "-4 - 8/t**2 - 9/t**4",
+      "smith_exponents": [
+        -2,
+        -2
+      ]
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "determinant": "-4 - 16/t**2 - 9/t**4",
+      "smith_exponents": [
+        -2,
+        -2
+      ]
+    },
+    {
+      "a": 2,
+      "b": -1,
+      "determinant": "-4 + 8/t**2 - 9/t**4",
+      "smith_exponents": [
+        -2,
+        -2
+      ]
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "determinant": "-4 - 8/t**3 - 9/t**6",
+      "smith_exponents": [
+        -3,
+        -3
+      ]
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "determinant": "-4 - 16/t**3 - 9/t**6",
+      "smith_exponents": [
+        -3,
+        -3
+      ]
+    },
+    {
+      "a": 3,
+      "b": -1,
+      "determinant": "-4 + 8/t**3 - 9/t**6",
+      "smith_exponents": [
+        -3,
+        -3
+      ]
+    },
+    {
+      "a": 4,
+      "b": 1,
+      "determinant": "-4 - 8/t**4 - 9/t**8",
+      "smith_exponents": [
+        -4,
+        -4
+      ]
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "determinant": "-4 - 16/t**4 - 9/t**8",
+      "smith_exponents": [
+        -4,
+        -4
+      ]
+    },
+    {
+      "a": 4,
+      "b": -1,
+      "determinant": "-4 + 8/t**4 - 9/t**8",
+      "smith_exponents": [
+        -4,
+        -4
+      ]
+    }
+  ],
+  "newton_residuals": [
+    {
+      "a": 1,
+      "b": 1,
+      "iteration": 0,
+      "required_order": 1,
+      "observed_order_or_truncation": 1,
+      "truncation": 17
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "iteration": 1,
+      "required_order": 3,
+      "observed_order_or_truncation": 3,
+      "truncation": 17
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "iteration": 2,
+      "required_order": 7,
+      "observed_order_or_truncation": 7,
+      "truncation": 17
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "iteration": 3,
+      "required_order": 15,
+      "observed_order_or_truncation": 15,
+      "truncation": 17
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "iteration": 0,
+      "required_order": 1,
+      "observed_order_or_truncation": 1,
+      "truncation": 17
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "iteration": 1,
+      "required_order": 3,
+      "observed_order_or_truncation": 3,
+      "truncation": 17
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "iteration": 2,
+      "required_order": 7,
+      "observed_order_or_truncation": 7,
+      "truncation": 17
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "iteration": 3,
+      "required_order": 15,
+      "observed_order_or_truncation": 15,
+      "truncation": 17
+    },
+    {
+      "a": 1,
+      "b": -1,
+      "iteration": 0,
+      "required_order": 1,
+      "observed_order_or_truncation": 1,
+      "truncation": 17
+    },
+    {
+      "a": 1,
+      "b": -1,
+      "iteration": 1,
+      "required_order": 3,
+      "observed_order_or_truncation": 3,
+      "truncation": 17
+    },
+    {
+      "a": 1,
+      "b": -1,
+      "iteration": 2,
+      "required_order": 7,
+      "observed_order_or_truncation": 7,
+      "truncation": 17
+    },
+    {
+      "a": 1,
+      "b": -1,
+      "iteration": 3,
+      "required_order": 15,
+      "observed_order_or_truncation": 15,
+      "truncation": 17
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "iteration": 0,
+      "required_order": 2,
+      "observed_order_or_truncation": 2,
+      "truncation": 33
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "iteration": 1,
+      "required_order": 6,
+      "observed_order_or_truncation": 6,
+      "truncation": 33
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "iteration": 2,
+      "required_order": 14,
+      "observed_order_or_truncation": 14,
+      "truncation": 33
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "iteration": 3,
+      "required_order": 30,
+      "observed_order_or_truncation": 30,
+      "truncation": 33
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "iteration": 0,
+      "required_order": 2,
+      "observed_order_or_truncation": 2,
+      "truncation": 33
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "iteration": 1,
+      "required_order": 6,
+      "observed_order_or_truncation": 6,
+      "truncation": 33
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "iteration": 2,
+      "required_order": 14,
+      "observed_order_or_truncation": 14,
+      "truncation": 33
+    },
+    {
+      "a": 2,
+      "b": 2,
+      "iteration": 3,
+      "required_order": 30,
+      "observed_order_or_truncation": 30,
+      "truncation": 33
+    },
+    {
+      "a": 2,
+      "b": -1,
+      "iteration": 0,
+      "required_order": 2,
+      "observed_order_or_truncation": 2,
+      "truncation": 33
+    },
+    {
+      "a": 2,
+      "b": -1,
+      "iteration": 1,
+      "required_order": 6,
+      "observed_order_or_truncation": 6,
+      "truncation": 33
+    },
+    {
+      "a": 2,
+      "b": -1,
+      "iteration": 2,
+      "required_order": 14,
+      "observed_order_or_truncation": 14,
+      "truncation": 33
+    },
+    {
+      "a": 2,
+      "b": -1,
+      "iteration": 3,
+      "required_order": 30,
+      "observed_order_or_truncation": 30,
+      "truncation": 33
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "iteration": 0,
+      "required_order": 3,
+      "observed_order_or_truncation": 3,
+      "truncation": 49
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "iteration": 1,
+      "required_order": 9,
+      "observed_order_or_truncation": 9,
+      "truncation": 49
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "iteration": 2,
+      "required_order": 21,
+      "observed_order_or_truncation": 21,
+      "truncation": 49
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "iteration": 3,
+      "required_order": 45,
+      "observed_order_or_truncation": 45,
+      "truncation": 49
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "iteration": 0,
+      "required_order": 3,
+      "observed_order_or_truncation": 3,
+      "truncation": 49
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "iteration": 1,
+      "required_order": 9,
+      "observed_order_or_truncation": 9,
+      "truncation": 49
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "iteration": 2,
+      "required_order": 21,
+      "observed_order_or_truncation": 21,
+      "truncation": 49
+    },
+    {
+      "a": 3,
+      "b": 2,
+      "iteration": 3,
+      "required_order": 45,
+      "observed_order_or_truncation": 45,
+      "truncation": 49
+    },
+    {
+      "a": 3,
+      "b": -1,
+      "iteration": 0,
+      "required_order": 3,
+      "observed_order_or_truncation": 3,
+      "truncation": 49
+    },
+    {
+      "a": 3,
+      "b": -1,
+      "iteration": 1,
+      "required_order": 9,
+      "observed_order_or_truncation": 9,
+      "truncation": 49
+    },
+    {
+      "a": 3,
+      "b": -1,
+      "iteration": 2,
+      "required_order": 21,
+      "observed_order_or_truncation": 21,
+      "truncation": 49
+    },
+    {
+      "a": 3,
+      "b": -1,
+      "iteration": 3,
+      "required_order": 45,
+      "observed_order_or_truncation": 45,
+      "truncation": 49
+    },
+    {
+      "a": 4,
+      "b": 1,
+      "iteration": 0,
+      "required_order": 4,
+      "observed_order_or_truncation": 4,
+      "truncation": 65
+    },
+    {
+      "a": 4,
+      "b": 1,
+      "iteration": 1,
+      "required_order": 12,
+      "observed_order_or_truncation": 12,
+      "truncation": 65
+    },
+    {
+      "a": 4,
+      "b": 1,
+      "iteration": 2,
+      "required_order": 28,
+      "observed_order_or_truncation": 28,
+      "truncation": 65
+    },
+    {
+      "a": 4,
+      "b": 1,
+      "iteration": 3,
+      "required_order": 60,
+      "observed_order_or_truncation": 60,
+      "truncation": 65
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "iteration": 0,
+      "required_order": 4,
+      "observed_order_or_truncation": 4,
+      "truncation": 65
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "iteration": 1,
+      "required_order": 12,
+      "observed_order_or_truncation": 12,
+      "truncation": 65
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "iteration": 2,
+      "required_order": 28,
+      "observed_order_or_truncation": 28,
+      "truncation": 65
+    },
+    {
+      "a": 4,
+      "b": 2,
+      "iteration": 3,
+      "required_order": 60,
+      "observed_order_or_truncation": 60,
+      "truncation": 65
+    },
+    {
+      "a": 4,
+      "b": -1,
+      "iteration": 0,
+      "required_order": 4,
+      "observed_order_or_truncation": 4,
+      "truncation": 65
+    },
+    {
+      "a": 4,
+      "b": -1,
+      "iteration": 1,
+      "required_order": 12,
+      "observed_order_or_truncation": 12,
+      "truncation": 65
+    },
+    {
+      "a": 4,
+      "b": -1,
+      "iteration": 2,
+      "required_order": 28,
+      "observed_order_or_truncation": 28,
+      "truncation": 65
+    },
+    {
+      "a": 4,
+      "b": -1,
+      "iteration": 3,
+      "required_order": 60,
+      "observed_order_or_truncation": 60,
+      "truncation": 65
+    }
+  ],
+  "mixed_characteristic_hostiles": [
+    {
+      "p": 2,
+      "T_p": "1",
+      "T_2p": "1/2",
+      "root_pole_order": "1/2"
+    },
+    {
+      "p": 3,
+      "T_p": "1",
+      "T_2p": "1/3",
+      "root_pole_order": "1/3"
+    },
+    {
+      "p": 5,
+      "T_p": "1",
+      "T_2p": "1/5",
+      "root_pole_order": "1/5"
+    },
+    {
+      "p": 7,
+      "T_p": "1",
+      "T_2p": "1/7",
+      "root_pole_order": "1/7"
+    },
+    {
+      "p": 11,
+      "T_p": "1",
+      "T_2p": "1/11",
+      "root_pole_order": "1/11"
+    }
+  ],
+  "scope": "Not a Keller realization, proof of unconditional trace regularity, or JC(2) solution."
+}

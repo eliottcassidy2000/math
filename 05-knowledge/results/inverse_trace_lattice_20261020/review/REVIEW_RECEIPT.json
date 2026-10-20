@@ -1,0 +1,52 @@
+{
+  "independent_controls": {
+    "byte_identical_json": true,
+    "checks": 505,
+    "method": "Polynomial-remainder multiplication matrices, exact rational polynomial-pair Newton arithmetic, exhaustive small index allocations, full-rank trace-unimodular hostile.",
+    "normal": "PASS",
+    "optimized": "PASS"
+  },
+  "inherited_source_sha256": {
+    "math/01-canon/theorems/THM-2633-derangement-character-obstruction-and-d4-keller-exclusion.md": "9fcbe24d057d756b39675a31db072df85e9a93852e4e6ecdbb37e6d678fe1ab3",
+    "math/05-knowledge/reference/CORE-PAPERS-PLANAR-JC.md": "39fcb745f257535b87649245eb9f331304a0e41091f7e3bffc3b88376f6ee8d0",
+    "math/05-knowledge/results/inverse_trace_pole_boundary_20261019/TRACE_POLE_BOUNDARY.md": "3b49905aec6b3a2975108c9bdb1d8be84ae83383debe755d7bf83e3ef7198236",
+    "math/05-knowledge/results/planar_autonomous_lie_jets_20261019/finite_symplectic_jets_and_boundary_control.md": "fc5ee1d620e305ef1d600da925e470b3a948af59023be131980e0f583869ae64"
+  },
+  "literature_check": {
+    "direct_check": "Publisher abstract confirms exclusion of four-sheeted polynomial C^2 self-maps with nonzero constant Jacobian.",
+    "doi": "10.1070/im2000v064n01ABEH000273",
+    "full_text_scope": "Earlier full-PDF definition and theorem check inherited from the pinned CORE-PAPERS-PLANAR-JC.md; not an independent full-paper reread.",
+    "url": "https://www.mathnet.ru/eng/im273"
+  },
+  "producer_packet_sha256": {
+    "README.md": "782bbbf8687cb31ca0b9399d9e6e4510473e078539a234a9c5e83e9e03e8e844",
+    "SOURCE_DEPENDENCIES.json": "0ee55d321352573df49620157c00052b50a03598802057558a60eae94971b0da",
+    "TRACE_HYPERBOLIC_PACKET.md": "9f6fcbb2cf0e2a4828dddb834bc95c1edb7bd6b7059f9616687f91c2c6e95dda",
+    "verification-results.json": "02f351a777b4575fe0cc3f6fc58ffb85cb0e24d0cafaae5bfdcaaf285045aa5f",
+    "verify_trace_hyperbolic_packet.py": "51945e3ce0b14d6e16a93490212ff9de74d82f0fa93c608e5562e158ea93aa2e"
+  },
+  "producer_replay": {
+    "byte_identical_json": true,
+    "byte_identical_stdout": true,
+    "checks": 1265,
+    "matches_frozen_json": true,
+    "normal": "PASS",
+    "optimized": "PASS"
+  },
+  "repo_mutations": "None; no Git writes by reviewer.",
+  "review_artifact_sha256": {
+    "AUDIT.md": "82af725a428f811d0cc8fb20a550e2b2761b95524e5cd180a17eb2fb6e390654",
+    "README.md": "ba1d81f6b20505892cd9308c6f8d12ee692a19d249e0c0b2a1bd9fced38a4b12",
+    "independent-results.json": "377e209b3182bc8c8b3c800b2fb3e73a639c094f118aa2eaaae3f3d68a62fab5",
+    "independent-results.optimized.json": "377e209b3182bc8c8b3c800b2fb3e73a639c094f118aa2eaaae3f3d68a62fab5",
+    "independent_controls.py": "5f00334f6bcd05b6b74e0c3b70264bbf4763a13099281daf52779be011cd03c8",
+    "producer-normal.json": "02f351a777b4575fe0cc3f6fc58ffb85cb0e24d0cafaae5bfdcaaf285045aa5f",
+    "producer-normal.out": "5ad318cdac8da412c26ebbccf67d36617320824dfa5df8443b36e6c8f42fa122",
+    "producer-optimized.json": "02f351a777b4575fe0cc3f6fc58ffb85cb0e24d0cafaae5bfdcaaf285045aa5f",
+    "producer-optimized.out": "5ad318cdac8da412c26ebbccf67d36617320824dfa5df8443b36e6c8f42fa122",
+    "producer-replay/verify_trace_hyperbolic_packet.py": "51945e3ce0b14d6e16a93490212ff9de74d82f0fa93c608e5562e158ea93aa2e"
+  },
+  "review_date": "2026-10-20",
+  "scope": "Uniform local theorem and stated conditional application, with explicit Domrina literature correction; no new Keller degree exclusion or JC(2) closure.",
+  "status": "INDEPENDENT REVIEW PASS"
+}
