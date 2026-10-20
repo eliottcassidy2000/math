@@ -1,0 +1,175 @@
+{
+  "status": "FINITE-EXACT",
+  "binary_companion_census": {
+    "max_degree": 10,
+    "polynomials": 2046,
+    "states_enumerated": 1398100,
+    "gcd_fixed_point_checks": 11479,
+    "graph_classes": 621
+  },
+  "tournament_source_towers": {
+    "tournament_counts": [
+      1,
+      1,
+      1,
+      2,
+      4,
+      12
+    ],
+    "towers": [
+      {
+        "N": 0,
+        "dimension": 1,
+        "source_free_counts": [
+          1
+        ],
+        "order": 1,
+        "cycles": {
+          "1": 2
+        },
+        "direct_state_enumeration": true
+      },
+      {
+        "N": 1,
+        "dimension": 2,
+        "source_free_counts": [
+          1,
+          0
+        ],
+        "order": 2,
+        "cycles": {
+          "1": 2,
+          "2": 1
+        },
+        "direct_state_enumeration": true
+      },
+      {
+        "N": 2,
+        "dimension": 3,
+        "source_free_counts": [
+          1,
+          0,
+          0
+        ],
+        "order": 4,
+        "cycles": {
+          "1": 2,
+          "2": 1,
+          "4": 1
+        },
+        "direct_state_enumeration": true
+      },
+      {
+        "N": 3,
+        "dimension": 5,
+        "source_free_counts": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "order": 4,
+        "cycles": {
+          "1": 4,
+          "2": 2,
+          "4": 6
+        },
+        "direct_state_enumeration": true
+      },
+      {
+        "N": 4,
+        "dimension": 9,
+        "source_free_counts": [
+          1,
+          0,
+          0,
+          1,
+          2
+        ],
+        "order": 8,
+        "cycles": {
+          "1": 16,
+          "2": 24,
+          "4": 48,
+          "8": 32
+        },
+        "direct_state_enumeration": true
+      },
+      {
+        "N": 5,
+        "dimension": 21,
+        "source_free_counts": [
+          1,
+          0,
+          0,
+          1,
+          2,
+          8
+        ],
+        "order": 8,
+        "cycles": {
+          "1": 4096,
+          "2": 30720,
+          "4": 114688,
+          "8": 196608
+        },
+        "direct_state_enumeration": false
+      }
+    ]
+  },
+  "primary_partition_hostile": {
+    "p": 11,
+    "q": 13,
+    "f": 267589,
+    "g": 420531,
+    "degree": 18,
+    "direct_states_enumerated": 524288,
+    "cycles": {
+      "1": 1,
+      "7": 9,
+      "14": 288,
+      "28": 9216
+    },
+    "profile": [
+      0,
+      [
+        [
+          7,
+          [
+            6,
+            12,
+            18
+          ]
+        ]
+      ]
+    ],
+    "first_two_entry_collision": {
+      "total": 6,
+      "partitions": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          3
+        ]
+      ]
+    }
+  },
+  "noncyclic_same_characteristic_hostile": {
+    "identity_2": {
+      "1": 4
+    },
+    "jordan_2": {
+      "1": 2,
+      "2": 1
+    },
+    "jordan_2_4_vs_3_3": {
+      "1": 4,
+      "2": 6,
+      "4": 12
+    }
+  },
+  "checks": 42860
+}

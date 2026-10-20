@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "checks": 124,
+  "hostile_matrix_kernel_counts": [
+    {
+      "polynomial": "x**18 + x**12 + x**10 + x**8 + x**6 + x**2 + 1",
+      "fixed_counts": {
+        "1": 1,
+        "2": 1,
+        "4": 1,
+        "7": 64,
+        "14": 4096,
+        "28": 262144
+      },
+      "cycles": {
+        "1": 1,
+        "2": 0,
+        "4": 0,
+        "7": 9,
+        "14": 288,
+        "28": 9216
+      }
+    },
+    {
+      "polynomial": "x**18 + x**17 + x**14 + x**13 + x**11 + x**9 + x**7 + x**5 + x**4 + x + 1",
+      "fixed_counts": {
+        "1": 1,
+        "2": 1,
+        "4": 1,
+        "7": 64,
+        "14": 4096,
+        "28": 262144
+      },
+      "cycles": {
+        "1": 1,
+        "2": 0,
+        "4": 0,
+        "7": 9,
+        "14": 288,
+        "28": 9216
+      }
+    }
+  ],
+  "tournament_class_counts": [
+    1,
+    1,
+    1,
+    2,
+    4
+  ],
+  "tournament_cutoff4_cycles": {
+    "1": 16,
+    "8": 32,
+    "4": 48,
+    "2": 24
+  },
+  "independence": "Polynomial expansion and binary matrix kernels, independent tournament canonicalization and direct dual state traversal; no producer imports"
+}
