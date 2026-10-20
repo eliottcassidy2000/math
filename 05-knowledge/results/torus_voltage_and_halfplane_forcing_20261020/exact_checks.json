@@ -1,0 +1,773 @@
+{
+  "status": "FINITE-EXACT",
+  "checks": 160,
+  "unit_steps": [
+    [
+      1,
+      0
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      1,
+      -1
+    ],
+    [
+      -1,
+      1
+    ]
+  ],
+  "period_basis": [
+    [
+      -3,
+      1
+    ],
+    [
+      1,
+      2
+    ]
+  ],
+  "quotient": "K7",
+  "quotient_spectrum": {
+    "6": 1,
+    "-1": 6
+  },
+  "triangular_lattice_chromatic_number": 3,
+  "quotient_chromatic_number": 7,
+  "triangle_winding_census": {
+    "nonzero": 21,
+    "zero": 14
+  },
+  "third_trace": {
+    "quotient": 210,
+    "lifted_zero_winding": 84
+  },
+  "return_moments": [
+    {
+      "length": 0,
+      "lattice_returns_per_vertex": 1,
+      "quotient_returns_per_vertex": 1,
+      "winding_returns": 0
+    },
+    {
+      "length": 1,
+      "lattice_returns_per_vertex": 0,
+      "quotient_returns_per_vertex": 0,
+      "winding_returns": 0
+    },
+    {
+      "length": 2,
+      "lattice_returns_per_vertex": 6,
+      "quotient_returns_per_vertex": 6,
+      "winding_returns": 0
+    },
+    {
+      "length": 3,
+      "lattice_returns_per_vertex": 12,
+      "quotient_returns_per_vertex": 30,
+      "winding_returns": 18
+    },
+    {
+      "length": 4,
+      "lattice_returns_per_vertex": 90,
+      "quotient_returns_per_vertex": 186,
+      "winding_returns": 96
+    },
+    {
+      "length": 5,
+      "lattice_returns_per_vertex": 360,
+      "quotient_returns_per_vertex": 1110,
+      "winding_returns": 750
+    },
+    {
+      "length": 6,
+      "lattice_returns_per_vertex": 2040,
+      "quotient_returns_per_vertex": 6666,
+      "winding_returns": 4626
+    },
+    {
+      "length": 7,
+      "lattice_returns_per_vertex": 10080,
+      "quotient_returns_per_vertex": 39990,
+      "winding_returns": 29910
+    },
+    {
+      "length": 8,
+      "lattice_returns_per_vertex": 54810,
+      "quotient_returns_per_vertex": 239946,
+      "winding_returns": 185136
+    }
+  ],
+  "patches": [
+    {
+      "radius": 1,
+      "vertices": 9,
+      "edges": 16
+    },
+    {
+      "radius": 2,
+      "vertices": 25,
+      "edges": 56
+    },
+    {
+      "radius": 3,
+      "vertices": 49,
+      "edges": 120
+    },
+    {
+      "radius": 4,
+      "vertices": 81,
+      "edges": 208
+    },
+    {
+      "radius": 5,
+      "vertices": 121,
+      "edges": 320
+    },
+    {
+      "radius": 6,
+      "vertices": 169,
+      "edges": 456
+    },
+    {
+      "radius": 7,
+      "vertices": 225,
+      "edges": 616
+    },
+    {
+      "radius": 8,
+      "vertices": 289,
+      "edges": 800
+    },
+    {
+      "radius": 9,
+      "vertices": 361,
+      "edges": 1008
+    }
+  ],
+  "triangles": [
+    {
+      "vertices": [
+        0,
+        1,
+        2
+      ],
+      "winding": [
+        3,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        1,
+        3
+      ],
+      "winding": [
+        0,
+        0
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        1,
+        4
+      ],
+      "winding": [
+        1,
+        2
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        1,
+        5
+      ],
+      "winding": [
+        0,
+        0
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        1,
+        6
+      ],
+      "winding": [
+        3,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        2,
+        3
+      ],
+      "winding": [
+        0,
+        0
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        2,
+        4
+      ],
+      "winding": [
+        -2,
+        3
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        2,
+        5
+      ],
+      "winding": [
+        -2,
+        3
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        2,
+        6
+      ],
+      "winding": [
+        0,
+        0
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        3,
+        4
+      ],
+      "winding": [
+        1,
+        2
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        3,
+        5
+      ],
+      "winding": [
+        -2,
+        3
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        3,
+        6
+      ],
+      "winding": [
+        1,
+        2
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        4,
+        5
+      ],
+      "winding": [
+        0,
+        0
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        4,
+        6
+      ],
+      "winding": [
+        0,
+        0
+      ]
+    },
+    {
+      "vertices": [
+        0,
+        5,
+        6
+      ],
+      "winding": [
+        3,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        1,
+        2,
+        3
+      ],
+      "winding": [
+        3,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        1,
+        2,
+        4
+      ],
+      "winding": [
+        0,
+        0
+      ]
+    },
+    {
+      "vertices": [
+        1,
+        2,
+        5
+      ],
+      "winding": [
+        1,
+        2
+      ]
+    },
+    {
+      "vertices": [
+        1,
+        2,
+        6
+      ],
+      "winding": [
+        0,
+        0
+      ]
+    },
+    {
+      "vertices": [
+        1,
+        3,
+        4
+      ],
+      "winding": [
+        0,
+        0
+      ]
+    },
+    {
+      "vertices": [
+        1,
+        3,
+        5
+      ],
+      "winding": [
+        -2,
+        3
+      ]
+    },
+    {
+      "vertices": [
+        1,
+        3,
+        6
+      ],
+      "winding": [
+        -2,
+        3
+      ]
+    },
+    {
+      "vertices": [
+        1,
+        4,
+        5
+      ],
+      "winding": [
+        1,
+        2
+      ]
+    },
+    {
+      "vertices": [
+        1,
+        4,
+        6
+      ],
+      "winding": [
+        -2,
+        3
+      ]
+    },
+    {
+      "vertices": [
+        1,
+        5,
+        6
+      ],
+      "winding": [
+        0,
+        0
+      ]
+    },
+    {
+      "vertices": [
+        2,
+        3,
+        4
+      ],
+      "winding": [
+        3,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        2,
+        3,
+        5
+      ],
+      "winding": [
+        0,
+        0
+      ]
+    },
+    {
+      "vertices": [
+        2,
+        3,
+        6
+      ],
+      "winding": [
+        1,
+        2
+      ]
+    },
+    {
+      "vertices": [
+        2,
+        4,
+        5
+      ],
+      "winding": [
+        0,
+        0
+      ]
+    },
+    {
+      "vertices": [
+        2,
+        4,
+        6
+      ],
+      "winding": [
+        -2,
+        3
+      ]
+    },
+    {
+      "vertices": [
+        2,
+        5,
+        6
+      ],
+      "winding": [
+        1,
+        2
+      ]
+    },
+    {
+      "vertices": [
+        3,
+        4,
+        5
+      ],
+      "winding": [
+        3,
+        -1
+      ]
+    },
+    {
+      "vertices": [
+        3,
+        4,
+        6
+      ],
+      "winding": [
+        0,
+        0
+      ]
+    },
+    {
+      "vertices": [
+        3,
+        5,
+        6
+      ],
+      "winding": [
+        0,
+        0
+      ]
+    },
+    {
+      "vertices": [
+        4,
+        5,
+        6
+      ],
+      "winding": [
+        3,
+        -1
+      ]
+    }
+  ],
+  "scope": "Exact quotient and lift controls, not a six-chromatic Euclidean graph or Lean build.",
+  "orientations": {
+    "carousel": {
+      "steps": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "residues": [
+        1,
+        2,
+        3
+      ],
+      "paths": 175,
+      "cycles": 17,
+      "characteristic_polynomial_descending": [
+        1,
+        0,
+        0,
+        -14,
+        -28,
+        -28,
+        -14,
+        -3
+      ],
+      "moments": [
+        {
+          "length": 0,
+          "zero_winding_per_vertex": 1,
+          "quotient_per_vertex": 1
+        },
+        {
+          "length": 1,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 0
+        },
+        {
+          "length": 2,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 0
+        },
+        {
+          "length": 3,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 6
+        },
+        {
+          "length": 4,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 16
+        },
+        {
+          "length": 5,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 20
+        },
+        {
+          "length": 6,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 96
+        },
+        {
+          "length": 7,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 395
+        },
+        {
+          "length": 8,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 896
+        },
+        {
+          "length": 9,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 2436
+        },
+        {
+          "length": 10,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 9020
+        },
+        {
+          "length": 11,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 26620
+        },
+        {
+          "length": 12,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 71656
+        }
+      ],
+      "first_spurious_return_length": 3
+    },
+    "paley": {
+      "steps": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "residues": [
+        1,
+        2,
+        4
+      ],
+      "paths": 189,
+      "cycles": 24,
+      "characteristic_polynomial_descending": [
+        1,
+        0,
+        0,
+        -14,
+        -21,
+        -42,
+        -28,
+        -24
+      ],
+      "moments": [
+        {
+          "length": 0,
+          "zero_winding_per_vertex": 1,
+          "quotient_per_vertex": 1
+        },
+        {
+          "length": 1,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 0
+        },
+        {
+          "length": 2,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 0
+        },
+        {
+          "length": 3,
+          "zero_winding_per_vertex": 6,
+          "quotient_per_vertex": 6
+        },
+        {
+          "length": 4,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 12
+        },
+        {
+          "length": 5,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 30
+        },
+        {
+          "length": 6,
+          "zero_winding_per_vertex": 90,
+          "quotient_per_vertex": 108
+        },
+        {
+          "length": 7,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 318
+        },
+        {
+          "length": 8,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 924
+        },
+        {
+          "length": 9,
+          "zero_winding_per_vertex": 1680,
+          "quotient_per_vertex": 2814
+        },
+        {
+          "length": 10,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 8460
+        },
+        {
+          "length": 11,
+          "zero_winding_per_vertex": 0,
+          "quotient_per_vertex": 25278
+        },
+        {
+          "length": 12,
+          "zero_winding_per_vertex": 34650,
+          "quotient_per_vertex": 75900
+        }
+      ],
+      "first_spurious_return_length": 4
+    }
+  },
+  "paley_recurrence": {
+    "u_initial": [
+      2,
+      -1
+    ],
+    "rule": "u[n] = -u[n-1] - 2*u[n-2]",
+    "quotient_returns": "(3^n + 3*u[n])/7",
+    "u_through_12": [
+      2,
+      -1,
+      -3,
+      5,
+      1,
+      -11,
+      9,
+      13,
+      -31,
+      5,
+      57,
+      -67,
+      -47
+    ]
+  }
+}

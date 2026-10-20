@@ -1,0 +1,200 @@
+{
+  "status": "PASS_SOURCE_BYTES_ONLY",
+  "repository": "openai/math",
+  "ref": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "files": [
+    {
+      "path": "lean/docs/158.md",
+      "expected_blob_sha": "e0156ec60c494a10c66915ffcd3274b2902df433",
+      "recomputed_blob_sha": "e0156ec60c494a10c66915ffcd3274b2902df433",
+      "blob_matches": true,
+      "lines": 16,
+      "line_count_matches": true,
+      "targets": []
+    },
+    {
+      "path": "lean/ComparatorChallenges/EuclideanFiveColor.lean",
+      "expected_blob_sha": "ef3885b1086f42d9ba80c2771b238773e9291225",
+      "recomputed_blob_sha": "ef3885b1086f42d9ba80c2771b238773e9291225",
+      "blob_matches": true,
+      "lines": 15,
+      "line_count_matches": true,
+      "targets": [
+        {
+          "line": 7,
+          "matches": true
+        },
+        {
+          "line": 10,
+          "matches": true
+        },
+        {
+          "line": 11,
+          "matches": true
+        }
+      ]
+    },
+    {
+      "path": "lean/ComparatorChallenges/EuclideanFiveColor.json",
+      "expected_blob_sha": "deeb7e0e6185d8e44bc8803774270ed1eca83958",
+      "recomputed_blob_sha": "deeb7e0e6185d8e44bc8803774270ed1eca83958",
+      "blob_matches": true,
+      "lines": 16,
+      "line_count_matches": true,
+      "targets": [
+        {
+          "line": 7,
+          "matches": true
+        },
+        {
+          "line": 10,
+          "matches": true
+        }
+      ]
+    },
+    {
+      "path": "lean/OAI/Geometry/PlaneColoring/Coloring.lean",
+      "expected_blob_sha": "6e31f006f54ec11f6248949f8957dfd41aff2adc",
+      "recomputed_blob_sha": "6e31f006f54ec11f6248949f8957dfd41aff2adc",
+      "blob_matches": true,
+      "lines": 34,
+      "line_count_matches": true,
+      "targets": [
+        {
+          "line": 7,
+          "matches": true
+        }
+      ]
+    },
+    {
+      "path": "lean/OAI/Geometry/PlaneColoring/Five.lean",
+      "expected_blob_sha": "377372bb81c65d351df698936319b809ca2682be",
+      "recomputed_blob_sha": "377372bb81c65d351df698936319b809ca2682be",
+      "blob_matches": true,
+      "lines": 131,
+      "line_count_matches": true,
+      "targets": [
+        {
+          "line": 105,
+          "matches": true
+        },
+        {
+          "line": 124,
+          "matches": true
+        }
+      ]
+    },
+    {
+      "path": "lean/OAI/Geometry/PlaneColoring/BorelTransfer.lean",
+      "expected_blob_sha": "34897568b9e5bc28d41006e59435e0ec1c4cf938",
+      "recomputed_blob_sha": "34897568b9e5bc28d41006e59435e0ec1c4cf938",
+      "blob_matches": true,
+      "lines": 451,
+      "line_count_matches": true,
+      "targets": [
+        {
+          "line": 436,
+          "matches": true
+        }
+      ]
+    },
+    {
+      "path": "lean/OAI.lean",
+      "expected_blob_sha": "25043044e4c10e19f79e7db62e602ef3aee93c7f",
+      "recomputed_blob_sha": "25043044e4c10e19f79e7db62e602ef3aee93c7f",
+      "blob_matches": true,
+      "lines": 914,
+      "line_count_matches": true,
+      "targets": [
+        {
+          "line": 479,
+          "matches": true
+        }
+      ]
+    },
+    {
+      "path": "preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/introduction.tex",
+      "expected_blob_sha": "72b2b6b557713a79155b9d7306ab995dcadc0863",
+      "recomputed_blob_sha": "72b2b6b557713a79155b9d7306ab995dcadc0863",
+      "blob_matches": true,
+      "lines": 324,
+      "line_count_matches": true,
+      "targets": [
+        {
+          "line": 62,
+          "matches": true
+        },
+        {
+          "line": 104,
+          "matches": true
+        },
+        {
+          "line": 119,
+          "matches": true
+        },
+        {
+          "line": 121,
+          "matches": true
+        },
+        {
+          "line": 143,
+          "matches": true
+        },
+        {
+          "line": 174,
+          "matches": true
+        },
+        {
+          "line": 310,
+          "matches": true
+        }
+      ]
+    },
+    {
+      "path": "preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/transfer.tex",
+      "expected_blob_sha": "318a6d1fb1b5be85972af6be9bf6961fba7983e2",
+      "recomputed_blob_sha": "318a6d1fb1b5be85972af6be9bf6961fba7983e2",
+      "blob_matches": true,
+      "lines": 316,
+      "line_count_matches": true,
+      "targets": [
+        {
+          "line": 4,
+          "matches": true
+        },
+        {
+          "line": 145,
+          "matches": true
+        },
+        {
+          "line": 185,
+          "matches": true
+        },
+        {
+          "line": 297,
+          "matches": true
+        },
+        {
+          "line": 298,
+          "matches": true
+        }
+      ]
+    },
+    {
+      "path": "preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/rigidity.tex",
+      "expected_blob_sha": "8f9883c1ba22e13021861f04029bf687002d4ce5",
+      "recomputed_blob_sha": "8f9883c1ba22e13021861f04029bf687002d4ce5",
+      "blob_matches": true,
+      "lines": 617,
+      "line_count_matches": true,
+      "targets": []
+    }
+  ],
+  "lean_on_path": false,
+  "lake_on_path": false,
+  "build_performed": false,
+  "comparator_executed": false,
+  "transitive_axiom_audit_performed": false,
+  "trusted_code_review_performed": false,
+  "scope": "Blob hashes, physical line counts, and recorded declaration locations only; no proof verification."
+}

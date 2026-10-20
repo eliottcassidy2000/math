@@ -1,0 +1,38 @@
+{
+  "status": "PASS_CLASSIC_ELEMENTARY_PROOF",
+  "novelty_claim": false,
+  "scope": [
+    "Z^2 under translations, arbitrary pieces in a finite partition.",
+    "Triangular lattice under translations semidirect D6 (order twelve), arbitrary pieces in a finite partition."
+  ],
+  "excluded_claims": [
+    "Universal theorem for arbitrary subsets of the Euclidean plane.",
+    "Three-dimensional nonduplication theorem.",
+    "New chromatic bound.",
+    "Literal existence of counting-nonmeasurable subsets of a countable lattice."
+  ],
+  "proof_obligations_checked": [
+    "Two labelled target copies give the correct factor two.",
+    "Finite intersection cardinalities exist for arbitrary, possibly infinite pieces.",
+    "One-sided boundary inequality has the correct direction.",
+    "Square overlap formula handles shifts exceeding the box width.",
+    "D6 generators preserve the hexagonal norm and balls.",
+    "Affine inverse uses H_R minus r_inverse(t).",
+    "Hexagonal size and shell formulas are exact.",
+    "R=3D provides positive contradiction gaps, including D=0.",
+    "Fixed finite motions are chosen before R.",
+    "K7 quotient identification is not duplication."
+  ],
+  "exact_bounds": {
+    "square_one_sided": "L^2 - max(L-|p|,0)*max(L-|q|,0) <= L*(|p|+|q|), L=2R+1",
+    "hexagonal_one_sided": "6*R*d + 3*d*(d+1), d=max(|a|,|b|,|a+b|)",
+    "square_cutoff_gap_R_3D": "8*D^2+8*D+1",
+    "hexagonal_cutoff_gap_R_3D": "6*D^2+6*D+1"
+  },
+  "finite_checks": 13885,
+  "normal_optimized_outputs_identical": true,
+  "all_R_conclusion_comes_from_proof_not_census": true,
+  "proof_sha256": "d432a1ae2e2a09e0f8a513e2acef2e6064a5c358f0557276f86937bf87118fe4",
+  "checker_sha256": "aa0ddc03a319caaae58e923738c0398b3220faf86a36e245b7de1daafaf01aa3",
+  "result_sha256": "689cebf261060ab0300256b2525483e0549926d698954504ef97c71e1133e167"
+}

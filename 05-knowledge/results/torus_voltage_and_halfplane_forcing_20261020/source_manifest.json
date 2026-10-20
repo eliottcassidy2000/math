@@ -1,0 +1,175 @@
+{
+  "repository": "openai/math",
+  "ref": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "access_date": "2026-10-20",
+  "method": "GitHub read-only connector; current main ref verified against git/ref/heads/main",
+  "build_performed": false,
+  "lean_and_lake_on_path": false,
+  "files": [
+    {
+      "path": "lean/docs/158.md",
+      "sha": "e0156ec60c494a10c66915ffcd3274b2902df433",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/docs/158.md",
+      "lines": 16,
+      "targets": []
+    },
+    {
+      "path": "lean/ComparatorChallenges/EuclideanFiveColor.lean",
+      "sha": "ef3885b1086f42d9ba80c2771b238773e9291225",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/ComparatorChallenges/EuclideanFiveColor.lean",
+      "lines": 15,
+      "targets": [
+        {
+          "line": 7,
+          "text": "def ProperColoring (colorCount : ℕ) (coloring : ℂ → Fin colorCount) : Prop :="
+        },
+        {
+          "line": 10,
+          "text": "theorem no_proper_five_coloring : ¬ ∃ coloring : ℂ → Fin 5, ProperColoring 5 coloring := by"
+        },
+        {
+          "line": 11,
+          "text": "  sorry"
+        }
+      ]
+    },
+    {
+      "path": "lean/ComparatorChallenges/EuclideanFiveColor.json",
+      "sha": "deeb7e0e6185d8e44bc8803774270ed1eca83958",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/ComparatorChallenges/EuclideanFiveColor.json",
+      "lines": 16,
+      "targets": [
+        {
+          "line": 7,
+          "text": "  \"definition_names\": ["
+        },
+        {
+          "line": 10,
+          "text": "  \"permitted_axioms\": ["
+        }
+      ]
+    },
+    {
+      "path": "lean/OAI/Geometry/PlaneColoring/Coloring.lean",
+      "sha": "6e31f006f54ec11f6248949f8957dfd41aff2adc",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/PlaneColoring/Coloring.lean",
+      "lines": 34,
+      "targets": [
+        {
+          "line": 7,
+          "text": "def ProperColoring (k : ℕ) (c : ℂ → Fin k) : Prop :="
+        }
+      ]
+    },
+    {
+      "path": "lean/OAI/Geometry/PlaneColoring/Five.lean",
+      "sha": "377372bb81c65d351df698936319b809ca2682be",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/PlaneColoring/Five.lean",
+      "lines": 131,
+      "targets": [
+        {
+          "line": 105,
+          "text": "theorem no_measurable_weak_five_coloring {c : ℂ → Fin 5}"
+        },
+        {
+          "line": 124,
+          "text": "theorem no_proper_five_coloring : ¬ ∃ c : ℂ → Fin 5, ProperColoring 5 c := by"
+        }
+      ]
+    },
+    {
+      "path": "lean/OAI/Geometry/PlaneColoring/BorelTransfer.lean",
+      "sha": "34897568b9e5bc28d41006e59435e0ec1c4cf938",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/PlaneColoring/BorelTransfer.lean",
+      "lines": 451,
+      "targets": [
+        {
+          "line": 436,
+          "text": "lemma proper_to_borel_weak {k : ℕ} [NeZero k] {c : ℂ → Fin k} (hc : ProperColoring k c) :"
+        }
+      ]
+    },
+    {
+      "path": "lean/OAI.lean",
+      "sha": "25043044e4c10e19f79e7db62e602ef3aee93c7f",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI.lean",
+      "lines": 914,
+      "targets": [
+        {
+          "line": 479,
+          "text": "import OAI.Geometry.PlaneColoring.Five"
+        }
+      ]
+    },
+    {
+      "path": "preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/introduction.tex",
+      "sha": "72b2b6b557713a79155b9d7306ab995dcadc0863",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/introduction.tex",
+      "lines": 324,
+      "targets": [
+        {
+          "line": 62,
+          "text": "\\begin{theorem}\\label{thm:main}"
+        },
+        {
+          "line": 104,
+          "text": "\\begin{theorem}[Transfer of colorability]\\label{thm:transfer}"
+        },
+        {
+          "line": 119,
+          "text": "\\begin{proof}[Deduction of Theorem~\\ref{thm:main}]"
+        },
+        {
+          "line": 121,
+          "text": "Theorem~\\ref{thm:transfer}, contrary to Theorem~\\ref{thm:weak-five}."
+        },
+        {
+          "line": 143,
+          "text": "map. Theorem~\\ref{thm:transfer} supplies the measurable input. The proof"
+        },
+        {
+          "line": 174,
+          "text": "statement, Theorem~\\ref{thm:rigidity}, says that every $K$-invariant"
+        },
+        {
+          "line": 310,
+          "text": "Theorem~\\ref{thm:main} and graph compactness"
+        }
+      ]
+    },
+    {
+      "path": "preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/transfer.tex",
+      "sha": "318a6d1fb1b5be85972af6be9bf6961fba7983e2",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/transfer.tex",
+      "lines": 316,
+      "targets": [
+        {
+          "line": 4,
+          "text": "We prove Theorem~\\ref{thm:transfer} for every positive integer $k$."
+        },
+        {
+          "line": 145,
+          "text": "\\label{prop:palettes-forward}"
+        },
+        {
+          "line": 185,
+          "text": "If it is nonzero, normalize it and apply Theorem~\\ref{thm:rigidity}."
+        },
+        {
+          "line": 297,
+          "text": "\\begin{proof}[Proof of Theorem~\\ref{thm:transfer}]"
+        },
+        {
+          "line": 298,
+          "text": "The forward implication is Proposition~\\ref{prop:palettes-forward}."
+        }
+      ]
+    },
+    {
+      "path": "preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/rigidity.tex",
+      "sha": "8f9883c1ba22e13021861f04029bf687002d4ce5",
+      "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/rigidity.tex",
+      "lines": 617
+    }
+  ]
+}

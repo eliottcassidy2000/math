@@ -1,0 +1,312 @@
+{
+  "status": "PASS",
+  "checks": 272,
+  "scope": "Independent finite controls only; no new plane bound or Lean build.",
+  "triangle_count": 35,
+  "zero_winding_triangles": 14,
+  "zero_winding_trace_length_3": 84,
+  "quotient_trace_length_3": 210,
+  "undirected_moments": [
+    {
+      "length": 0,
+      "lattice": 1,
+      "quotient": 1
+    },
+    {
+      "length": 1,
+      "lattice": 0,
+      "quotient": 0
+    },
+    {
+      "length": 2,
+      "lattice": 6,
+      "quotient": 6
+    },
+    {
+      "length": 3,
+      "lattice": 12,
+      "quotient": 30
+    },
+    {
+      "length": 4,
+      "lattice": 90,
+      "quotient": 186
+    },
+    {
+      "length": 5,
+      "lattice": 360,
+      "quotient": 1110
+    },
+    {
+      "length": 6,
+      "lattice": 2040,
+      "quotient": 6666
+    },
+    {
+      "length": 7,
+      "lattice": 10080,
+      "quotient": 39990
+    },
+    {
+      "length": 8,
+      "lattice": 54810,
+      "quotient": 239946
+    }
+  ],
+  "orientations": {
+    "carousel": {
+      "paths": 175,
+      "cycles_mod_rotation": 17,
+      "paths_from_zero": 25,
+      "endpoint_counts_from_zero": {
+        "1": 3,
+        "2": 3,
+        "3": 2,
+        "4": 5,
+        "5": 7,
+        "6": 5
+      },
+      "cycle_winding_census": [
+        {
+          "displacement": [
+            -7,
+            7
+          ],
+          "count": 1
+        },
+        {
+          "displacement": [
+            -1,
+            5
+          ],
+          "count": 14
+        },
+        {
+          "displacement": [
+            0,
+            7
+          ],
+          "count": 1
+        },
+        {
+          "displacement": [
+            7,
+            0
+          ],
+          "count": 1
+        }
+      ],
+      "characteristic_polynomial_descending": [
+        1,
+        0,
+        0,
+        -14,
+        -28,
+        -28,
+        -14,
+        -3
+      ],
+      "moments": [
+        {
+          "length": 0,
+          "lattice": 1,
+          "quotient": 1
+        },
+        {
+          "length": 1,
+          "lattice": 0,
+          "quotient": 0
+        },
+        {
+          "length": 2,
+          "lattice": 0,
+          "quotient": 0
+        },
+        {
+          "length": 3,
+          "lattice": 0,
+          "quotient": 6
+        },
+        {
+          "length": 4,
+          "lattice": 0,
+          "quotient": 16
+        },
+        {
+          "length": 5,
+          "lattice": 0,
+          "quotient": 20
+        },
+        {
+          "length": 6,
+          "lattice": 0,
+          "quotient": 96
+        },
+        {
+          "length": 7,
+          "lattice": 0,
+          "quotient": 395
+        },
+        {
+          "length": 8,
+          "lattice": 0,
+          "quotient": 896
+        },
+        {
+          "length": 9,
+          "lattice": 0,
+          "quotient": 2436
+        },
+        {
+          "length": 10,
+          "lattice": 0,
+          "quotient": 9020
+        },
+        {
+          "length": 11,
+          "lattice": 0,
+          "quotient": 26620
+        },
+        {
+          "length": 12,
+          "lattice": 0,
+          "quotient": 71656
+        }
+      ]
+    },
+    "paley": {
+      "paths": 189,
+      "cycles_mod_rotation": 24,
+      "paths_from_zero": 27,
+      "endpoint_counts_from_zero": {
+        "1": 1,
+        "2": 1,
+        "3": 8,
+        "4": 1,
+        "5": 8,
+        "6": 8
+      },
+      "cycle_winding_census": [
+        {
+          "displacement": [
+            -7,
+            7
+          ],
+          "count": 1
+        },
+        {
+          "displacement": [
+            -2,
+            3
+          ],
+          "count": 7
+        },
+        {
+          "displacement": [
+            -1,
+            -2
+          ],
+          "count": 7
+        },
+        {
+          "displacement": [
+            0,
+            -7
+          ],
+          "count": 1
+        },
+        {
+          "displacement": [
+            3,
+            -1
+          ],
+          "count": 7
+        },
+        {
+          "displacement": [
+            7,
+            0
+          ],
+          "count": 1
+        }
+      ],
+      "characteristic_polynomial_descending": [
+        1,
+        0,
+        0,
+        -14,
+        -21,
+        -42,
+        -28,
+        -24
+      ],
+      "moments": [
+        {
+          "length": 0,
+          "lattice": 1,
+          "quotient": 1
+        },
+        {
+          "length": 1,
+          "lattice": 0,
+          "quotient": 0
+        },
+        {
+          "length": 2,
+          "lattice": 0,
+          "quotient": 0
+        },
+        {
+          "length": 3,
+          "lattice": 6,
+          "quotient": 6
+        },
+        {
+          "length": 4,
+          "lattice": 0,
+          "quotient": 12
+        },
+        {
+          "length": 5,
+          "lattice": 0,
+          "quotient": 30
+        },
+        {
+          "length": 6,
+          "lattice": 90,
+          "quotient": 108
+        },
+        {
+          "length": 7,
+          "lattice": 0,
+          "quotient": 318
+        },
+        {
+          "length": 8,
+          "lattice": 0,
+          "quotient": 924
+        },
+        {
+          "length": 9,
+          "lattice": 1680,
+          "quotient": 2814
+        },
+        {
+          "length": 10,
+          "lattice": 0,
+          "quotient": 8460
+        },
+        {
+          "length": 11,
+          "lattice": 0,
+          "quotient": 25278
+        },
+        {
+          "length": 12,
+          "lattice": 34650,
+          "quotient": 75900
+        }
+      ]
+    }
+  }
+}

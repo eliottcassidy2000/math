@@ -1,0 +1,91 @@
+--- source_manifest.json (before)
++++ source_manifest.json (corrected)
+@@ -10,14 +10,14 @@
+       "path": "lean/docs/158.md",
+       "sha": "e0156ec60c494a10c66915ffcd3274b2902df433",
+       "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/docs/158.md",
+-      "lines": 17,
++      "lines": 16,
+       "targets": []
+     },
+     {
+       "path": "lean/ComparatorChallenges/EuclideanFiveColor.lean",
+       "sha": "ef3885b1086f42d9ba80c2771b238773e9291225",
+       "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/ComparatorChallenges/EuclideanFiveColor.lean",
+-      "lines": 16,
++      "lines": 15,
+       "targets": [
+         {
+           "line": 7,
+@@ -37,7 +37,7 @@
+       "path": "lean/ComparatorChallenges/EuclideanFiveColor.json",
+       "sha": "deeb7e0e6185d8e44bc8803774270ed1eca83958",
+       "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/ComparatorChallenges/EuclideanFiveColor.json",
+-      "lines": 17,
++      "lines": 16,
+       "targets": [
+         {
+           "line": 7,
+@@ -53,7 +53,7 @@
+       "path": "lean/OAI/Geometry/PlaneColoring/Coloring.lean",
+       "sha": "6e31f006f54ec11f6248949f8957dfd41aff2adc",
+       "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/PlaneColoring/Coloring.lean",
+-      "lines": 35,
++      "lines": 34,
+       "targets": [
+         {
+           "line": 7,
+@@ -65,7 +65,7 @@
+       "path": "lean/OAI/Geometry/PlaneColoring/Five.lean",
+       "sha": "377372bb81c65d351df698936319b809ca2682be",
+       "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/PlaneColoring/Five.lean",
+-      "lines": 132,
++      "lines": 131,
+       "targets": [
+         {
+           "line": 105,
+@@ -81,7 +81,7 @@
+       "path": "lean/OAI/Geometry/PlaneColoring/BorelTransfer.lean",
+       "sha": "34897568b9e5bc28d41006e59435e0ec1c4cf938",
+       "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/PlaneColoring/BorelTransfer.lean",
+-      "lines": 452,
++      "lines": 451,
+       "targets": [
+         {
+           "line": 436,
+@@ -93,7 +93,7 @@
+       "path": "lean/OAI.lean",
+       "sha": "25043044e4c10e19f79e7db62e602ef3aee93c7f",
+       "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI.lean",
+-      "lines": 915,
++      "lines": 914,
+       "targets": [
+         {
+           "line": 479,
+@@ -105,7 +105,7 @@
+       "path": "preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/introduction.tex",
+       "sha": "72b2b6b557713a79155b9d7306ab995dcadc0863",
+       "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/introduction.tex",
+-      "lines": 325,
++      "lines": 324,
+       "targets": [
+         {
+           "line": 62,
+@@ -141,7 +141,7 @@
+       "path": "preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/transfer.tex",
+       "sha": "318a6d1fb1b5be85972af6be9bf6961fba7983e2",
+       "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/transfer.tex",
+-      "lines": 317,
++      "lines": 316,
+       "targets": [
+         {
+           "line": 4,
+@@ -169,7 +169,7 @@
+       "path": "preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/rigidity.tex",
+       "sha": "8f9883c1ba22e13021861f04029bf687002d4ce5",
+       "url": "https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/rigidity.tex",
+-      "lines": 618
++      "lines": 617
+     }
+   ]
+ }

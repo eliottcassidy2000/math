@@ -1,0 +1,24 @@
+{
+  "status": "FINITE_EXACT_PASS",
+  "checks": 13885,
+  "scope": "Finite controls for an elementary classic proof; no universal plane or three-dimensional theorem.",
+  "square_translation_cases": 441,
+  "hexagonal_translation_cases": 441,
+  "hexagonal_affine_isometry_cases": 5292,
+  "quadrant_partition_controls": 9,
+  "radii_tested": [
+    0,
+    8
+  ],
+  "translation_coordinate_range": [
+    -3,
+    3
+  ],
+  "D6_order": 12,
+  "explicit_cutoff_D_tested": [
+    0,
+    20
+  ],
+  "zero_displacement_case_included": true,
+  "universal_conclusion_source": "The finite-boundary proof, not this finite census."
+}

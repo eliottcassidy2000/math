@@ -1,0 +1,1123 @@
+{
+  "273_matching_hostile": {
+    "matching_degree_histogram": {
+      "4": 3,
+      "5": 37,
+      "6": 93,
+      "7": 76,
+      "8": 41,
+      "9": 18,
+      "10": 4,
+      "11": 1
+    },
+    "matching_edges": 914,
+    "matching_states": 273,
+    "torus_degree_histogram": {
+      "3": 14,
+      "4": 56,
+      "5": 56,
+      "6": 70,
+      "7": 42,
+      "8": 35
+    },
+    "torus_edges": 770,
+    "torus_flux": [
+      0,
+      2
+    ]
+  },
+  "all_regular_H_counts": {
+    "171": 1680,
+    "175": 720,
+    "189": 240
+  },
+  "faces": [
+    [
+      0,
+      1,
+      3
+    ],
+    [
+      0,
+      1,
+      5
+    ],
+    [
+      0,
+      2,
+      3
+    ],
+    [
+      0,
+      2,
+      6
+    ],
+    [
+      0,
+      4,
+      5
+    ],
+    [
+      0,
+      4,
+      6
+    ],
+    [
+      1,
+      2,
+      4
+    ],
+    [
+      1,
+      2,
+      6
+    ],
+    [
+      1,
+      3,
+      4
+    ],
+    [
+      1,
+      5,
+      6
+    ],
+    [
+      2,
+      3,
+      5
+    ],
+    [
+      2,
+      4,
+      5
+    ],
+    [
+      3,
+      4,
+      6
+    ],
+    [
+      3,
+      5,
+      6
+    ]
+  ],
+  "flux_sectors": [
+    {
+      "H_population": {
+        "175": 1
+      },
+      "component_sizes": [
+        1
+      ],
+      "degree_histogram": {
+        "0": 1
+      },
+      "edge_count": 0,
+      "flux": [
+        -6,
+        -14
+      ],
+      "size": 1
+    },
+    {
+      "H_population": {
+        "175": 1
+      },
+      "component_sizes": [
+        1
+      ],
+      "degree_histogram": {
+        "0": 1
+      },
+      "edge_count": 0,
+      "flux": [
+        -4,
+        -14
+      ],
+      "size": 1
+    },
+    {
+      "H_population": {
+        "171": 14
+      },
+      "component_sizes": [
+        14
+      ],
+      "degree_histogram": {
+        "2": 14
+      },
+      "edge_count": 14,
+      "flux": [
+        -4,
+        -12
+      ],
+      "size": 14
+    },
+    {
+      "H_population": {
+        "171": 21,
+        "175": 14,
+        "189": 7
+      },
+      "component_sizes": [
+        42
+      ],
+      "degree_histogram": {
+        "2": 7,
+        "3": 14,
+        "4": 21
+      },
+      "edge_count": 70,
+      "flux": [
+        -4,
+        -10
+      ],
+      "size": 42
+    },
+    {
+      "H_population": {
+        "171": 14
+      },
+      "component_sizes": [
+        14
+      ],
+      "degree_histogram": {
+        "2": 14
+      },
+      "edge_count": 14,
+      "flux": [
+        -4,
+        -8
+      ],
+      "size": 14
+    },
+    {
+      "H_population": {
+        "171": 21,
+        "175": 14,
+        "189": 7
+      },
+      "component_sizes": [
+        42
+      ],
+      "degree_histogram": {
+        "2": 7,
+        "3": 14,
+        "4": 21
+      },
+      "edge_count": 70,
+      "flux": [
+        -2,
+        -8
+      ],
+      "size": 42
+    },
+    {
+      "H_population": {
+        "171": 175,
+        "175": 77,
+        "189": 21
+      },
+      "component_sizes": [
+        273
+      ],
+      "degree_histogram": {
+        "3": 14,
+        "4": 56,
+        "5": 56,
+        "6": 70,
+        "7": 42,
+        "8": 35
+      },
+      "edge_count": 770,
+      "flux": [
+        -2,
+        -6
+      ],
+      "size": 273
+    },
+    {
+      "H_population": {
+        "171": 175,
+        "175": 77,
+        "189": 21
+      },
+      "component_sizes": [
+        273
+      ],
+      "degree_histogram": {
+        "3": 14,
+        "4": 56,
+        "5": 56,
+        "6": 70,
+        "7": 42,
+        "8": 35
+      },
+      "edge_count": 770,
+      "flux": [
+        -2,
+        -4
+      ],
+      "size": 273
+    },
+    {
+      "H_population": {
+        "171": 21,
+        "175": 14,
+        "189": 7
+      },
+      "component_sizes": [
+        42
+      ],
+      "degree_histogram": {
+        "2": 7,
+        "3": 14,
+        "4": 21
+      },
+      "edge_count": 70,
+      "flux": [
+        -2,
+        -2
+      ],
+      "size": 42
+    },
+    {
+      "H_population": {
+        "175": 1
+      },
+      "component_sizes": [
+        1
+      ],
+      "degree_histogram": {
+        "0": 1
+      },
+      "edge_count": 0,
+      "flux": [
+        -2,
+        0
+      ],
+      "size": 1
+    },
+    {
+      "H_population": {
+        "171": 14
+      },
+      "component_sizes": [
+        14
+      ],
+      "degree_histogram": {
+        "2": 14
+      },
+      "edge_count": 14,
+      "flux": [
+        0,
+        -4
+      ],
+      "size": 14
+    },
+    {
+      "H_population": {
+        "171": 175,
+        "175": 77,
+        "189": 21
+      },
+      "component_sizes": [
+        273
+      ],
+      "degree_histogram": {
+        "3": 14,
+        "4": 56,
+        "5": 56,
+        "6": 70,
+        "7": 42,
+        "8": 35
+      },
+      "edge_count": 770,
+      "flux": [
+        0,
+        -2
+      ],
+      "size": 273
+    },
+    {
+      "H_population": {
+        "171": 420,
+        "175": 168,
+        "189": 72
+      },
+      "component_sizes": [
+        660
+      ],
+      "degree_histogram": {
+        "4": 42,
+        "5": 140,
+        "6": 168,
+        "8": 196,
+        "9": 84,
+        "11": 28,
+        "14": 2
+      },
+      "edge_count": 2268,
+      "flux": [
+        0,
+        0
+      ],
+      "size": 660
+    },
+    {
+      "H_population": {
+        "171": 175,
+        "175": 77,
+        "189": 21
+      },
+      "component_sizes": [
+        273
+      ],
+      "degree_histogram": {
+        "3": 14,
+        "4": 56,
+        "5": 56,
+        "6": 70,
+        "7": 42,
+        "8": 35
+      },
+      "edge_count": 770,
+      "flux": [
+        0,
+        2
+      ],
+      "size": 273
+    },
+    {
+      "H_population": {
+        "171": 14
+      },
+      "component_sizes": [
+        14
+      ],
+      "degree_histogram": {
+        "2": 14
+      },
+      "edge_count": 14,
+      "flux": [
+        0,
+        4
+      ],
+      "size": 14
+    },
+    {
+      "H_population": {
+        "175": 1
+      },
+      "component_sizes": [
+        1
+      ],
+      "degree_histogram": {
+        "0": 1
+      },
+      "edge_count": 0,
+      "flux": [
+        2,
+        0
+      ],
+      "size": 1
+    },
+    {
+      "H_population": {
+        "171": 21,
+        "175": 14,
+        "189": 7
+      },
+      "component_sizes": [
+        42
+      ],
+      "degree_histogram": {
+        "2": 7,
+        "3": 14,
+        "4": 21
+      },
+      "edge_count": 70,
+      "flux": [
+        2,
+        2
+      ],
+      "size": 42
+    },
+    {
+      "H_population": {
+        "171": 175,
+        "175": 77,
+        "189": 21
+      },
+      "component_sizes": [
+        273
+      ],
+      "degree_histogram": {
+        "3": 14,
+        "4": 56,
+        "5": 56,
+        "6": 70,
+        "7": 42,
+        "8": 35
+      },
+      "edge_count": 770,
+      "flux": [
+        2,
+        4
+      ],
+      "size": 273
+    },
+    {
+      "H_population": {
+        "171": 175,
+        "175": 77,
+        "189": 21
+      },
+      "component_sizes": [
+        273
+      ],
+      "degree_histogram": {
+        "3": 14,
+        "4": 56,
+        "5": 56,
+        "6": 70,
+        "7": 42,
+        "8": 35
+      },
+      "edge_count": 770,
+      "flux": [
+        2,
+        6
+      ],
+      "size": 273
+    },
+    {
+      "H_population": {
+        "171": 21,
+        "175": 14,
+        "189": 7
+      },
+      "component_sizes": [
+        42
+      ],
+      "degree_histogram": {
+        "2": 7,
+        "3": 14,
+        "4": 21
+      },
+      "edge_count": 70,
+      "flux": [
+        2,
+        8
+      ],
+      "size": 42
+    },
+    {
+      "H_population": {
+        "171": 14
+      },
+      "component_sizes": [
+        14
+      ],
+      "degree_histogram": {
+        "2": 14
+      },
+      "edge_count": 14,
+      "flux": [
+        4,
+        8
+      ],
+      "size": 14
+    },
+    {
+      "H_population": {
+        "171": 21,
+        "175": 14,
+        "189": 7
+      },
+      "component_sizes": [
+        42
+      ],
+      "degree_histogram": {
+        "2": 7,
+        "3": 14,
+        "4": 21
+      },
+      "edge_count": 70,
+      "flux": [
+        4,
+        10
+      ],
+      "size": 42
+    },
+    {
+      "H_population": {
+        "171": 14
+      },
+      "component_sizes": [
+        14
+      ],
+      "degree_histogram": {
+        "2": 14
+      },
+      "edge_count": 14,
+      "flux": [
+        4,
+        12
+      ],
+      "size": 14
+    },
+    {
+      "H_population": {
+        "175": 1
+      },
+      "component_sizes": [
+        1
+      ],
+      "degree_histogram": {
+        "0": 1
+      },
+      "edge_count": 0,
+      "flux": [
+        4,
+        14
+      ],
+      "size": 1
+    },
+    {
+      "H_population": {
+        "175": 1
+      },
+      "component_sizes": [
+        1
+      ],
+      "degree_histogram": {
+        "0": 1
+      },
+      "edge_count": 0,
+      "flux": [
+        6,
+        14
+      ],
+      "size": 1
+    }
+  ],
+  "lattice_basis": [
+    [
+      7,
+      0
+    ],
+    [
+      -3,
+      1
+    ]
+  ],
+  "models": {
+    "carousel": {
+      "Euler_circuits_mod_rotation": 48512,
+      "Euler_flux": [
+        6,
+        14
+      ],
+      "Euler_length": 21,
+      "H": 175,
+      "Hamilton_paths_of_line_digraph": 1018752,
+      "arborescences": 379,
+      "cycle_examples": [
+        {
+          "slope": [
+            1,
+            0
+          ],
+          "vertices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "slope": [
+            2,
+            5
+          ],
+          "vertices": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            2,
+            5
+          ]
+        },
+        {
+          "slope": [
+            2,
+            7
+          ],
+          "vertices": [
+            0,
+            2,
+            4,
+            6,
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "slope": [
+            3,
+            7
+          ],
+          "vertices": [
+            0,
+            3,
+            6,
+            2,
+            5,
+            1,
+            4
+          ]
+        }
+      ],
+      "cycle_slope_counts": [
+        {
+          "count": 1,
+          "slope": [
+            1,
+            0
+          ]
+        },
+        {
+          "count": 14,
+          "slope": [
+            2,
+            5
+          ]
+        },
+        {
+          "count": 1,
+          "slope": [
+            2,
+            7
+          ]
+        },
+        {
+          "count": 1,
+          "slope": [
+            3,
+            7
+          ]
+        }
+      ],
+      "directed_Hamilton_cycles": 17,
+      "first_nonclosing_path": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        2
+      ],
+      "nonclosing_Hamilton_paths": 56,
+      "out_masks": [
+        14,
+        28,
+        56,
+        112,
+        97,
+        67,
+        7
+      ]
+    },
+    "middle": {
+      "Euler_circuits_mod_rotation": 49408,
+      "Euler_flux": [
+        4,
+        8
+      ],
+      "Euler_length": 21,
+      "H": 171,
+      "Hamilton_paths_of_line_digraph": 1037568,
+      "arborescences": 386,
+      "cycle_examples": [
+        {
+          "slope": [
+            1,
+            0
+          ],
+          "vertices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "slope": [
+            1,
+            1
+          ],
+          "vertices": [
+            0,
+            1,
+            3,
+            4,
+            2,
+            5,
+            6
+          ]
+        },
+        {
+          "slope": [
+            1,
+            2
+          ],
+          "vertices": [
+            0,
+            3,
+            5,
+            6,
+            1,
+            4,
+            2
+          ]
+        },
+        {
+          "slope": [
+            1,
+            3
+          ],
+          "vertices": [
+            0,
+            4,
+            6,
+            1,
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "slope": [
+            2,
+            5
+          ],
+          "vertices": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            2,
+            5
+          ]
+        }
+      ],
+      "cycle_slope_counts": [
+        {
+          "count": 1,
+          "slope": [
+            1,
+            0
+          ]
+        },
+        {
+          "count": 5,
+          "slope": [
+            1,
+            1
+          ]
+        },
+        {
+          "count": 3,
+          "slope": [
+            1,
+            2
+          ]
+        },
+        {
+          "count": 1,
+          "slope": [
+            1,
+            3
+          ]
+        },
+        {
+          "count": 5,
+          "slope": [
+            2,
+            5
+          ]
+        }
+      ],
+      "directed_Hamilton_cycles": 15,
+      "first_nonclosing_path": [
+        0,
+        1,
+        4,
+        5,
+        6,
+        2,
+        3
+      ],
+      "nonclosing_Hamilton_paths": 66,
+      "out_masks": [
+        26,
+        28,
+        41,
+        112,
+        100,
+        67,
+        7
+      ]
+    },
+    "paley": {
+      "Euler_circuits_mod_rotation": 50176,
+      "Euler_flux": [
+        0,
+        0
+      ],
+      "Euler_length": 21,
+      "H": 189,
+      "Hamilton_paths_of_line_digraph": 1053696,
+      "arborescences": 392,
+      "cycle_examples": [
+        {
+          "slope": [
+            -3,
+            -7
+          ],
+          "vertices": [
+            0,
+            4,
+            1,
+            5,
+            2,
+            6,
+            3
+          ]
+        },
+        {
+          "slope": [
+            -1,
+            -2
+          ],
+          "vertices": [
+            0,
+            1,
+            5,
+            2,
+            4,
+            6,
+            3
+          ]
+        },
+        {
+          "slope": [
+            0,
+            -1
+          ],
+          "vertices": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            3
+          ]
+        },
+        {
+          "slope": [
+            1,
+            0
+          ],
+          "vertices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "slope": [
+            1,
+            3
+          ],
+          "vertices": [
+            0,
+            1,
+            2,
+            4,
+            6,
+            3,
+            5
+          ]
+        },
+        {
+          "slope": [
+            2,
+            7
+          ],
+          "vertices": [
+            0,
+            2,
+            4,
+            6,
+            1,
+            3,
+            5
+          ]
+        }
+      ],
+      "cycle_slope_counts": [
+        {
+          "count": 1,
+          "slope": [
+            -3,
+            -7
+          ]
+        },
+        {
+          "count": 7,
+          "slope": [
+            -1,
+            -2
+          ]
+        },
+        {
+          "count": 7,
+          "slope": [
+            0,
+            -1
+          ]
+        },
+        {
+          "count": 1,
+          "slope": [
+            1,
+            0
+          ]
+        },
+        {
+          "count": 7,
+          "slope": [
+            1,
+            3
+          ]
+        },
+        {
+          "count": 1,
+          "slope": [
+            2,
+            7
+          ]
+        }
+      ],
+      "directed_Hamilton_cycles": 24,
+      "first_nonclosing_path": [
+        0,
+        1,
+        5,
+        2,
+        6,
+        3,
+        4
+      ],
+      "nonclosing_Hamilton_paths": 21,
+      "out_masks": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ]
+    }
+  },
+  "paley_automorphism_order": 21,
+  "scope": "All labelled regular orientations of the specified triangular-torus K7; no larger-order claim.",
+  "sector_size_multiplicities": {
+    "1": 6,
+    "14": 6,
+    "42": 6,
+    "273": 6,
+    "660": 1
+  },
+  "small_line_graph_checks": [
+    {
+      "Euler_circuits": 1,
+      "H_line": 3,
+      "n": 3
+    },
+    {
+      "Euler_circuits": 11,
+      "H_line": 110,
+      "n": 5
+    }
+  ],
+  "winding_triangle": {
+    "after": [
+      4,
+      8
+    ],
+    "before": [
+      6,
+      14
+    ],
+    "homology": [
+      1,
+      3
+    ],
+    "vertices": [
+      0,
+      2,
+      4
+    ]
+  },
+  "zero_flux_H_counterexamples": {
+    "171": [
+      14,
+      100,
+      88,
+      98,
+      11,
+      21,
+      49
+    ],
+    "175": [
+      14,
+      100,
+      112,
+      38,
+      11,
+      81,
+      25
+    ],
+    "189": [
+      14,
+      100,
+      88,
+      50,
+      67,
+      21,
+      41
+    ]
+  }
+}

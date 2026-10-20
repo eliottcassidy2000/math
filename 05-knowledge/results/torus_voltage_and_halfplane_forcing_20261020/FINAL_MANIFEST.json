@@ -1,0 +1,105 @@
+{
+  "status": "FROZEN_INDEPENDENTLY_REVIEWED",
+  "source_status": "SOURCE_CLAIM_NOT_BUILD_VERIFIED",
+  "producer_checks": 160,
+  "independent_checks": 272,
+  "files": [
+    {
+      "path": "CLASSIC_LATTICE_NONDUPLICATION.md",
+      "bytes": 7066,
+      "sha256": "d432a1ae2e2a09e0f8a513e2acef2e6064a5c358f0557276f86937bf87118fe4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1080,
+      "sha256": "f45a3d43a1e71577adf88ad171f0db53ebbacac5bff43c89ceb7778ae2eea3d4"
+    },
+    {
+      "path": "audit/AUDIT.md",
+      "bytes": 15975,
+      "sha256": "909cea6e08ab5c3c59d45545d708046c37719d911a152c7f3a4fae24fa0ba2fb"
+    },
+    {
+      "path": "audit/audit_receipt.json",
+      "bytes": 5288,
+      "sha256": "d67fb0b947248b060abb469a1f3f93cb0dd13882a6fca27c4902967ccf5a0101"
+    },
+    {
+      "path": "audit/check_classic_lattice_nonduplication.py",
+      "bytes": 5215,
+      "sha256": "aa0ddc03a319caaae58e923738c0398b3220faf86a36e245b7de1daafaf01aa3"
+    },
+    {
+      "path": "audit/classic_lattice_nonduplication_audit.json",
+      "bytes": 1846,
+      "sha256": "454854f8cc151b3a7b774d55cafc048c16fc0f9f5c73669bf48338a7c13df9ce"
+    },
+    {
+      "path": "audit/classic_lattice_nonduplication_checks.json",
+      "bytes": 611,
+      "sha256": "689cebf261060ab0300256b2525483e0549926d698954504ef97c71e1133e167"
+    },
+    {
+      "path": "audit/independent_checks.json",
+      "bytes": 5494,
+      "sha256": "49f4c9bdabc04e0271e862036a2f2effe06db05e6c5a0f68293f76db495ed220"
+    },
+    {
+      "path": "audit/independent_checks.py",
+      "bytes": 9763,
+      "sha256": "c8dbacb5216e35f3e58e6251304e2401378c8e53334a0ca73c991e87bbbb0275"
+    },
+    {
+      "path": "audit/source_manifest_linecount_correction.diff",
+      "bytes": 3969,
+      "sha256": "b1ccf272fc4dbfa305d8372cdf0d16f18c078611d016d76cf865e55aebcaa27f"
+    },
+    {
+      "path": "audit/source_verification.json",
+      "bytes": 5352,
+      "sha256": "5b5f0cc5905529b8a4b4c1736bd21ff9a7795720743426cab5dfd0acaeae4249"
+    },
+    {
+      "path": "audit/verify_source_manifest.py",
+      "bytes": 2081,
+      "sha256": "7ab022d6425a5ad88c733bdcc071d291d9de4c9be330b667f2553aa82dd0914c"
+    },
+    {
+      "path": "check_geometric_forcing.py",
+      "bytes": 8595,
+      "sha256": "5ed0d8dae129d3822385608c79d1cda7c91658a7956dd106e12ee1e2a5b9a602"
+    },
+    {
+      "path": "exact_checks.json",
+      "bytes": 11544,
+      "sha256": "9f35a1da1ace273889a0eee47000adb3256a8d54abbc684f1220c358cb3c6cf0"
+    },
+    {
+      "path": "geometric_forcing_bridges.md",
+      "bytes": 17188,
+      "sha256": "e915c72e6f55d91d434a32b8e642eb4466808a02d2fe0eb54ecc5c09f9ca145b"
+    },
+    {
+      "path": "normal_run.txt",
+      "bytes": 6560,
+      "sha256": "41156dd3198b773bdc954181772d4d0cc6db87474fb638db89f327d7189532de"
+    },
+    {
+      "path": "optimized_run.txt",
+      "bytes": 6560,
+      "sha256": "41156dd3198b773bdc954181772d4d0cc6db87474fb638db89f327d7189532de"
+    },
+    {
+      "path": "source_audit.md",
+      "bytes": 8461,
+      "sha256": "79b9baa7898d63ea09aa9f1e7baa193ac6f40805e0f11663a2adaf913f74c276"
+    },
+    {
+      "path": "source_manifest.json",
+      "bytes": 6335,
+      "sha256": "b4e4f8ac7ba354828fe01f763b75e6fec99616def22f6dfb01819249db7ae98c"
+    }
+  ],
+  "publication_revision": "V3",
+  "classic_lattice_checks": 13885
+}

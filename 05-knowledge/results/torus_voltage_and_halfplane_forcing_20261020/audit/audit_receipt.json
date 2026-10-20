@@ -1,0 +1,159 @@
+{
+  "status": "PASS_SCOPED_MATHEMATICS_AND_SOURCE_PROVENANCE",
+  "reviewed_at_utc": "2026-10-20T21:29:00Z",
+  "producer_version": "2026-10-20T21:22Z",
+  "claims": {
+    "G1": "PASS_CLASSICAL_DEDUCTION",
+    "G2": "PASS_ELEMENTARY",
+    "G3": "PASS_ELEMENTARY",
+    "G4": "PASS_ELEMENTARY_AND_FINITE_EXACT",
+    "amenability_boundaries": "PASS_SCOPED_DESCRIPTION",
+    "six_colour_source": "SOURCE_CLAIM_NOT_BUILD_VERIFIED",
+    "classic_lattice_nonduplication": "PASS_CLASSIC_ELEMENTARY_PROOF_NO_NOVELTY_CLAIM"
+  },
+  "producer_checks": 160,
+  "independent_checks": 272,
+  "normal_optimized_outputs_identical": true,
+  "producer_receipt_rerun_byte_identical": true,
+  "primary_source_files_hash_verified": 10,
+  "primary_source_target_lines_verified": 22,
+  "primary_source_main_ref": {
+    "endpoint": "https://api.github.com/repos/openai/math/git/ref/heads/main",
+    "sha": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "independently_read": true
+  },
+  "lean_or_lake_on_path": false,
+  "build_performed": false,
+  "comparator_executed": false,
+  "transitive_axiom_audit_performed": false,
+  "corrections": [
+    {
+      "issue": "ambiguous plane_chromatic_number and plane_returns_per_vertex machine fields",
+      "repair": "Producer replaced with triangular_lattice_chromatic_number and lattice_returns_per_vertex; numerical values unchanged.",
+      "status": "FIXED"
+    },
+    {
+      "issue": "Ten source file totals counted terminal newline as extra line",
+      "repair": "Auditor changed exactly ten numeric lines fields, retained original locally, saved exact diff, and regenerated producer FINAL_MANIFEST hashes.",
+      "status": "FIXED"
+    }
+  ],
+  "reviewed_producer_files": [
+    {
+      "path": "README.md",
+      "bytes": 762,
+      "sha256": "beff2c56f812d30a38d80b9c4ba788508c7857294dadb04df0e78cc6e4864fdb"
+    },
+    {
+      "path": "check_geometric_forcing.py",
+      "bytes": 8595,
+      "sha256": "5ed0d8dae129d3822385608c79d1cda7c91658a7956dd106e12ee1e2a5b9a602"
+    },
+    {
+      "path": "exact_checks.json",
+      "bytes": 11544,
+      "sha256": "9f35a1da1ace273889a0eee47000adb3256a8d54abbc684f1220c358cb3c6cf0"
+    },
+    {
+      "path": "geometric_forcing_bridges.md",
+      "bytes": 16804,
+      "sha256": "a79639da363cca89ddae8b7c0e6b4ec8e8f02ca5c786b163f29016ba36f575b8"
+    },
+    {
+      "path": "normal_run.txt",
+      "bytes": 6560,
+      "sha256": "41156dd3198b773bdc954181772d4d0cc6db87474fb638db89f327d7189532de"
+    },
+    {
+      "path": "optimized_run.txt",
+      "bytes": 6560,
+      "sha256": "41156dd3198b773bdc954181772d4d0cc6db87474fb638db89f327d7189532de"
+    },
+    {
+      "path": "source_audit.md",
+      "bytes": 8461,
+      "sha256": "79b9baa7898d63ea09aa9f1e7baa193ac6f40805e0f11663a2adaf913f74c276"
+    },
+    {
+      "path": "source_manifest.json",
+      "bytes": 6335,
+      "sha256": "b4e4f8ac7ba354828fe01f763b75e6fec99616def22f6dfb01819249db7ae98c"
+    }
+  ],
+  "publication_overlay_changes": [
+    {
+      "path": "geometric_forcing_bridges.md",
+      "change": "Resolve knot companion link to published sibling directory; no mathematical text changed.",
+      "old": "../session16-sequence-knots/EULER_TORUS_BRIDGES.md",
+      "new": "../euler_torus_hamilton_transport_20261020/EULER_TORUS_BRIDGES.md"
+    },
+    {
+      "path": "README.md",
+      "change": "Add independent audit navigation link."
+    }
+  ],
+  "external_publication_dependencies": [
+    {
+      "destination": "05-knowledge/results/euler_torus_hamilton_transport_20261020/EULER_TORUS_BRIDGES.md",
+      "staged_target_exists": true,
+      "publisher_must_verify": true
+    }
+  ],
+  "excluded_from_publication": [
+    "source_snapshots/",
+    "producer_rerun/",
+    "source_manifest_before_linecount_fix.json",
+    "producer_FINAL_MANIFEST_before_linecount_fix.json"
+  ],
+  "repository_or_remote_mutations": false,
+  "publication_revision": "V3",
+  "previous_publication_manifest_sha256": "3a667233b8b6bda117bc1e8194b83acc9737ada6f43d97228796e4f6842024f0",
+  "v2_provenance_amendments": [
+    "Clarify that the audit preserved mathematical payloads but made the authorized metadata-only corrections documented in section 7.",
+    "Record the exact change of period basis between geometry and knot packets."
+  ],
+  "period_basis_bridge": {
+    "geometry_basis": {
+      "u": [
+        -3,
+        1
+      ],
+      "v": [
+        1,
+        2
+      ]
+    },
+    "knot_basis_renamed_for_distinction": {
+      "U": [
+        7,
+        0
+      ],
+      "V": [
+        -3,
+        1
+      ]
+    },
+    "basis_identities": [
+      "u = V",
+      "v = U + 2*V"
+    ],
+    "geometry_to_knot_coefficients": "(a,b) -> (b,a+2*b)",
+    "map_matrix": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "census_coordinate_type": "Ambient triangular-lattice displacements, not coefficients in either period basis.",
+    "companion_destination": "05-knowledge/results/euler_torus_hamilton_transport_20261020/EULER_TORUS_BRIDGES.md"
+  },
+  "classic_lattice_controls": 13885,
+  "v3_additions": [
+    "Self-contained classic nonduplication lemma with exact square-box and triangular-hexagon boundary bounds.",
+    "Separate finite checker, receipt, and scope audit; no claim for arbitrary plane or three-dimensional actions."
+  ]
+}

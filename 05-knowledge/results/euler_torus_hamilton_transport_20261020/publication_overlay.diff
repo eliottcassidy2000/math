@@ -1,0 +1,45 @@
+--- frozen/EULER_TORUS_BRIDGES.md
++++ publication/EULER_TORUS_BRIDGES.md
+@@ -22,8 +22,17 @@
+ marked torus framing `F_j F_(j+1)`. Those are inherited, not new results here.
+ Its `regular.md` supplies the three regular order-seven classes and their
+ triangle-move comparison. The independent census below does not assume that
+-classification. The geometric companion
+-`session16-geometric-forcing/geometric_forcing_bridges.md`, G2–G4, constructs
++classification. The subsequently received
++`kernels_games_detours_20261020f/walks_knots.md` at shared commit
++`c402d288ac84f695e0fb355444ee67bfb7917d4f` already proves the directed
++Euler-word/Hamilton-word line-graph bijection and explains the information
++lost by forgetting incidence ports or integer carries. That word bijection
++is inherited overlap, not a novelty claim here. Section 1 makes its balanced,
++cyclic-count convention explicit; the checkerboard obstruction and the marked
++K7 flux census are separate additions.
++
++The geometric companion
++[geometric-forcing packet](../torus_voltage_and_halfplane_forcing_20261020/geometric_forcing_bridges.md), G2–G4, constructs
+ the triangular-lattice torus quotient used here. The paired-return companion
+ `session16-regular-flips/regular_return_theorems.md` supplies the path operation
+ whose edge-chain refinement appears in Section 5.
+@@ -192,6 +201,10 @@
+ translates of (0,a,b) and of (a,b,a+b); they are checkerboard-coloured by
+ these two kinds. This is the companion geometric packet's construction.
+ The basis (u,v) is the homology marking used in every number below.
++The geometric companion uses the different kernel basis
++`g1=(-3,1), g2=(1,2)`. The exact change is `g1=v, g2=u+2v`:
++coordinates `(alpha,beta)` in that basis become `(beta,alpha+2beta)` here.
++One must make this basis change before comparing slopes or marked knot types.
+ 
+ For an edge i→j, let (s,t) be its actual unit triangular-lattice step.
+ Choosing vertex lift (i,0), its edge cocycle is
+@@ -219,8 +232,9 @@
+ | carousel with triangle (0,2,4) reversed |171|15|66|386|49,408|(4,8)|
+ | Paley |189|24|21|392|50,176|(0,0)|
+ 
+-All have Euler length21. The first two already refute monotonicity of Euler
+-circuit count as a function of raw H, even at fixed order and degree.
++All have Euler length21. The first two already refute nondecreasing monotonicity of Euler
++circuit count as a function of raw H, even at fixed order and degree. The
++three together refute monotonicity in either direction.
+ 
+ The precise relation between H and the slope polynomial is
+ 

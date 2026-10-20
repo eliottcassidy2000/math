@@ -1,0 +1,62 @@
+{
+  "H_populations": {
+    "171": 1680,
+    "175": 720,
+    "189": 240
+  },
+  "ccw_directed_distance_pairs_checked": 894540,
+  "embedding": {
+    "closed_orientable_genus": 1,
+    "edges": 21,
+    "face_incidence": "every edge in two distinct faces with opposite signs",
+    "faces": 14,
+    "vertex_links": "seven six-cycles",
+    "vertices": 7
+  },
+  "finite_scope": "Specified triangular torus K7, three model path-return checks, and named small line-digraph boundary examples only.",
+  "flux_sectors": 25,
+  "line_graph_boundary_checks": [
+    {
+      "E_cyclic": 2,
+      "H_line": 6,
+      "m": 3,
+      "name": "three distinguishable loops"
+    },
+    {
+      "E_cyclic": 2,
+      "H_line": 8,
+      "m": 4,
+      "name": "two parallel arcs each direction"
+    },
+    {
+      "E_cyclic": 1,
+      "H_line": 4,
+      "m": 4,
+      "name": "balanced bouquet of two cycles"
+    },
+    {
+      "E_cyclic": 0,
+      "H_line": 1,
+      "m": 2,
+      "name": "unbalanced directed path hostile"
+    }
+  ],
+  "matching_hostile": {
+    "edges": 914,
+    "maximum_degree": 11,
+    "torus_273_vertices_edges": 770,
+    "vertices": 273
+  },
+  "maximum_ccw_directed_distance": 27,
+  "orientation_masks_exhaustively_examined": 2097152,
+  "producer_imports": false,
+  "regular_orientations": 2640,
+  "sector_size_multiplicities": {
+    "1": 6,
+    "14": 6,
+    "42": 6,
+    "273": 6,
+    "660": 1
+  },
+  "status": "PASS"
+}
