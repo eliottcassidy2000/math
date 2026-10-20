@@ -1,6 +1,8 @@
 # Walsh-support bijections: session 10 packet
 
-**Current result:** for each fixed odd prime p, an explicit modular Walsh matching bijects tournament types and Royle-sign-even graph types while preserving the entire S_n-conjugacy class of a Sylow p-subgroup of their automorphism groups. It therefore preserves every p-group symmetry predicate simultaneously. This proves the prime-power portion of HYP-9340(a). The mixed-prime odd-group case remains OPEN.
+**Status update, 2026-10-20:** the general mixed-prime equality is REFUTED: [C15 on ten vertices gives 32 tournament types versus 31 even-graph types](../c15_symmetry_counterexample_20261020/C15_ORDER_TEN_COUNTEREXAMPLE.md). Every p-group theorem here survives. The six independently audited proof notes are unchanged; statements that the mixed-prime case remained open record their earlier scope, superseded by this notice.
+
+**Current result:** for each fixed odd prime p, an explicit modular Walsh matching bijects tournament types and Royle-sign-even graph types while preserving the entire S_n-conjugacy class of a Sylow p-subgroup of their automorphism groups. It therefore preserves every p-group symmetry predicate simultaneously. This proves the prime-power portion of HYP-9340(a). The general mixed-prime case is refuted by the linked order-ten counterexample; this prime-local result is unchanged.
 
 ## Reading order and scope precedence
 
@@ -33,4 +35,4 @@ The Boolean Walsh basis and signed invariant-orbit construction are inherited fr
 
 The closest inherited mechanism is the integral signed Walsh basis. The canonical hostile is the empty graph: it has the full symmetric automorphism group and cannot receive an arbitrary labelled equivariant tournament map. The corrected near miss is mistaking linear basis equivalence for a class set map; the present cofactor recursion explicitly supplies that set map. The least-used sidecar is odd-primary integrality of the inverse matrix, which forces the valuation filtration.
 
-The live concepts were: signed-copy support; integral lattice pairing; p-group orbit localization; converse eigenspaces; naturality versus canonical class selection. Their connection is concrete: a p-unit signed coefficient forces a fixed graph copy for a tournament's p-Sylow action. The primary remaining question is mixed-prime subgroup symmetry; the first obstruction to a single all-primes map is already n=5. Improving the atlas-dependent construction to a local graph operation remains open.
+The live concepts were: signed-copy support; integral lattice pairing; p-group orbit localization; converse eigenspaces; naturality versus canonical class selection. Their connection is concrete: a p-unit signed coefficient forces a fixed graph copy for a tournament's p-Sylow action. The remaining symmetry question is to classify mixed-prime actions that survive the order-ten counterexample; the first obstruction to a single all-primes map is already n=5. Improving the atlas-dependent construction to a local graph operation remains open.

@@ -1,15 +1,16 @@
 ---
 id: HYP-9340
-title: "(a) For every odd-order subgroup H <= S_n, the tournaments with an H-symmetry and the even graphs with an H-symmetry are equinumerous up to isomorphism (proved for Sylow H by THM-4721; exhaustive for every odd-order class, n <= 8, and fifteen classes at n = 9). (b) What an exact bijection between tournaments and even graphs can be: the Walsh change of basis is the canonical linear one; equivariant set bijections exist and are canonical exactly for odd-order symmetry groups and exist (non-canonically) for AGL(1,p) on prime circulants; no S_n-equivariant one (THM-4531), conjecturally for every n >= 5 (HYP-9172); no uniform multiplier rule for prime circulants. (c) Sequence conjectures: odd graphs 0, 1, 2, 7, 22, 100, 588, 5466 (b-file to n = 60), labelled even graphs 1, 1, 4, 20, 396, 16432, 1312056, 200582824, connected odd graphs 0, 1, 1, 4, 13, 69, 455, 4704 are not in OEIS (2026-10-19); A334335 = connected even graphs extended to n = 128"
+title: "(a) REFUTED for general odd-order H: C15 on ten vertices gives 32 tournament types versus 31 even-graph types; PROVED for every odd p-group H. (b) Prime-local Walsh and all-prime circulant constructions; simultaneous preservation of all odd-H predicates is impossible already at n=5; labelled affine surjection versus type bijection. (c) Sequence conjectures: odd graphs 0, 1, 2, 7, 22, 100, 588, 5466 (b-file to n = 60), labelled even graphs 1, 1, 4, 20, 396, 16432, 1312056, 200582824, connected odd graphs 0, 1, 1, 4, 13, 69, 455, 4704 are not in OEIS (2026-10-19); A334335 = connected even graphs extended to n = 128"
 status: >
-  (a) OPEN (NUMERICAL): true for every odd-order subgroup class of S_n for n <= 8 and for fifteen classes at n = 9,
-  including Z3 wr Z3 of order 81, Z3^3, Z9 and four actions of Z3xZ3 (2954 = 2954 for the 3-cycle type) (THM-4721, subgroups_fix*.out:
-  cyclic of every odd cycle type, Z3xZ3, Z7:Z3, Z15), PROVED when H is a Sylow p-subgroup (THM-4721 Theorem S) and
-  at the level of Aut-classes of conjugates for every odd H (THM-4721 Proposition Q). The Sylow proof needs
-  multiplicity one and the Frattini step, both of which fail separately for non-Sylow H (the tournament with
-  Aut = Z3xZ3 on 6 vertices has two classes of 3-cycle modules; K_{3,3} is odd but N(Z3)-even) and cancel in total.
-  (b) PROVED facts assembled (THM-4721 Theorems W, G', Corollary C; THM-4531 O3); OPEN: a uniform natural rule for
-  the AGL(1,p)-equivariant circulant bijection; HYP-9172 for all n.
+  (a) REFUTED (PROVED + FINITE-EXACT): H=C15 with vertex-orbit sizes (3,5,1,1) at n=10 has
+  tau_T(H)=32 and tau_E(H)=31. The earlier n<=8 and selected n=9 counts remain valid finite evidence.
+  PROVED survivor: equality for every odd p-group H<=S_n, via a matching preserving its Sylow p action.
+  THM-4721's ambient Sylow theorem and multiplicity-weighted normalizer identity remain valid.
+  (b) PROVED: for each fixed odd prime p, a Walsh bijection preserves all p-group predicates simultaneously;
+  no single bijection preserves all odd-H predicates (already C3 and C5 at n=5). An explicit all-odd-prime
+  circulant construction is affine-equivariant and surjective on labelled objects, bijective on types.
+  An odd-order Gamma-equivariant labelled bijection requires a chosen Gamma-invariant tournament T0;
+  it is not a unique canonical choice. Generator-independent/first-order ring-definable formulas remain separate.
   (c) FINITE-EXACT (census n <= 8, Burnside formula for odd graphs to n = 60, inverse Euler transform of the repo's
   A000568 b-file to n = 128); OEIS lookups 2026-10-19 (JSON API, generic UA): odd graphs, labelled even graphs,
   connected odd graphs: no match; A334335 found with 19 terms and the comment "it appears ... connected even graphs
@@ -25,25 +26,25 @@ note: 05-knowledge/results/even_graphs_20261019_sylow_refinement_components_wals
 
 # HYP-9340 — refined equinumerosity for every odd-order symmetry, and what an exact bijection can be
 
-## (a) The refined conjecture
+## (a) The refined conjecture, now refuted in general
 
-For `H <= S_n` of odd order let `tau_T(H)` (resp. `tau_E(H)`) be the number of isomorphism types of tournaments (resp. even graphs) on `n` vertices whose automorphism group contains a conjugate of `H`.
+For `H <= S_n` of odd order let `tau_T(H)` (resp. `tau_E(H)`) be the number of isomorphism types of tournaments (resp. sign-even graphs) whose automorphism group contains a conjugate of `H`.
 
-**Conjecture.** `tau_T(H) = tau_E(H)` for every `n` and every odd-order `H`.
+**REFUTED, 2026-10-20.** The historical conjecture asserted `tau_T(H)=tau_E(H)` for every odd-order `H`. For `H=<(0 1 2)(3 4 5 6 7)> <= S_10`, fixing 8 and 9, the exact values are **32 and 31**. The [complete proof and 512-by-512 invariant census](../results/c15_symmetry_counterexample_20261020/C15_ORDER_TEN_COUNTEREXAMPLE.md), with independent review in that packet, identify the single obstruction as `K_{5,5}`. Two fixed vertices join the 3-orbit's independent twin class; the new equal-sized part swap is odd but does not normalize the chosen `H`. Thus normalizer-evenness does not imply full evenness.
 
-Evidence: every odd-order subgroup class of `S_n`, `n <= 8`, and fifteen classes at `n = 9` (THM-4721; at `n = 9`: `Z_3` of type `(3,1^6)`: 2954/2954, `Z_3 x Z_3` with two fixed points: 86/86, regular `Z_3 x Z_3`: 1/1, `Z_3^3`: 2/2, `Z_3 wr Z_3`: 1/1, `Z_9`: 3/3). E.g. at `n = 8`: `Z_7`: 4/4, `Z_15`: 2/2, `Z_5`: 12/12, `Z_3` of type `(3,3,1,1)`: 48/48, `Z_3` of type `(3,1^5)`: 280/280, `Z_3 x Z_3`: 16/16, `Z_7 x| Z_3`: 2/2. Proved for Sylow `p`-subgroups (THM-4721 Theorem S), hence for all odd `H` of prime order `p` with `n < 2p`, and for prime circulants (`n = p`).
+**PROVED survivor.** For every fixed odd prime `p` and every `p`-group `H<=S_n`, equality holds. The [Sylow-action Walsh matching](../results/prime_local_walsh_bijection_20261020/SYLOW_ACTION_ADDENDUM.md) preserves the `S_n`-conjugacy class of the full Sylow `p` action, hence all `p`-group symmetry predicates simultaneously. This extends THM-4721's ambient-Sylow result; it does not combine different primes into one matching.
 
-What is known for general odd `H` is the multiplicity-weighted form (THM-4721 Proposition Q): `sum_T m_T(H) = sum_{X even} m_X(H) + sum_{X odd, N(H)-even} m_X(H)`, `m_x(H)` = number of `Aut(x)`-classes of conjugates of `H` in `Aut(x)`. The conjecture says the two defects — tournaments with several classes of `H`-subgroups, and odd graphs all of whose odd automorphisms lie outside `N(H)` — always balance. At `n = 6`, `H = Z_3` of type `(3,1,1,1)` both defects are 1 (the two-module tournament; `K_{3,3}`). A proof would presumably pair these structures, or run Möbius inversion over the odd-order subgroup lattice; the reduction to a subgroup-lattice identity is recorded in the note (section 6).
+The earlier exact evidence is retained: every tested odd-order subgroup class through `n=8`, and fifteen classes at `n=9`, including `(3,1^6): 2954/2954`, four `C3 x C3` actions, `C3 wr C3`, `C9` and `C15`. In particular `5+3` at order eight gives `2/2`, and `5+3+1` at order nine gives `8/8`. These finite counts did not imply the universal claim; no independently proved least-order assertion is made here.
 
-Hostile control: the per-permutation version is false (THM-4721 section 6), so the conjecture is genuinely about orbits, not fixed points.
+THM-4721 Proposition Q remains the correct multiplicity-weighted statement:
+`sum_T m_T(H) = sum_{X even} m_X(H) + sum_{X odd, N(H)-even} m_X(H)`, where `m_x(H)` counts `Aut(x)`-classes of conjugates of `H` inside `Aut(x)`. Its extra normalizer-even term cannot simply be erased. The per-permutation identity also remains false, as recorded in THM-4721 section 6.
 
 ## (b) What an exact bijection can be
 
-Royle et al. ask for "a reasonably natural bijection between the sets of unlabelled even graphs and tournaments". The repo's answer, assembled:
-
-1. **The canonical object is linear.** The signed even-subgraph counts `Phi_X` (`X` even) and the type indicators are two `Z[1/2]`-bases of the same space (THM-4721 Theorem W), related by an invertible integer matrix with `det = +-2^k` and two orthogonality relations. Every isomorphism invariant of tournaments is a unique combination of signed even-subgraph counts.
-2. **Equivariant set bijections exist exactly as the counting predicts.** For a symmetry group `Gamma` of odd order there is a canonical `Gamma`-equivariant bijection (reverse a `Gamma`-invariant tournament along the graph). For `AGL(1,p)` acting on prime circulants one exists but is not canonical (Hall on the lattice of odd multiplier subgroups). For `S_n` none exists for `5 <= n <= 15` (THM-4531), conjecturally for all `n >= 5` (HYP-9172).
-3. **Open.** A uniform rule for the circulant case (the multiplier derivatives `D_c` fail for each fixed `c`; a rule would have to send the `K_max`-invariant tournaments to the empty graph for every `p`). A bijection respecting the refined counts of (a), i.e. mapping `H`-symmetric tournaments to `H`-symmetric even graphs for every odd `H` simultaneously, is the right target: by (a) the counts allow it, and any such map is automatically compatible with the Sylow structure.
+1. **The canonical linear object survives.** The signed even-subgraph counts `Phi_X` and type indicators are `Z[1/2]`-bases of the invariant space, with Walsh orthogonality and determinant a signed power of two (THM-4721 Theorem W). A linear change of basis is not itself a set bijection.
+2. **Keep labelled and orbit maps separate.** For odd-order `Gamma`, choose a `Gamma`-invariant tournament `T0`; reversing `T0` along each graph gives a `Gamma`-equivariant labelled bijection. Different choices of `T0` need not give the same map. For prime circulants the [explicit derivative-path construction](../results/circulant_necklace_bijection_20261020/CIRCULANT_NECKLACE_BIJECTION.md) gives an `AGL(1,p)`-equivariant surjection from labelled circulant tournaments onto labelled sign-even circulant graphs, inducing a bijection of types, for every odd prime. It is not a labelled bijection: at `p=3` the labelled counts are two versus one. The inherited `S_n`-equivariance obstruction and HYP-9172 remain as previously scoped.
+3. **Separate one-prime preservation from a joint coupling.** A single matching preserves every `p`-group predicate for one chosen odd `p`. Simultaneous preservation of all odd-`H` predicates is impossible already at `n=5`: the empty graph admits both `C3` and `C5`, while no five-vertex tournament admits both. Equal individual counts do not imply equal joint intersections. The [Sylow-action addendum, section 5](../results/prime_local_walsh_bijection_20261020/SYLOW_ACTION_ADDENDUM.md) records this obstruction; the order-ten counterexample also disproves an individual mixed-prime equality.
+4. **The constructive circulant target is solved in its stated algorithmic sense.** Fixed multiplier derivatives still fail at the documented examples, but a bounded all-prime derivative-path rule exists. Write `p-1=2^r q`, `q` odd. The `K_max`-fixed tournament sector has `2^(2^(r-1))/2^r` multiplier types. Only for `r<=2` is its unique type forced to the empty graph. At `p=17`, `K_max` is trivial and all sixteen types lie in that sector. Generator-independent or first-order ring-definable formulas are different questions.
 
 ## (c) Sequences (candidates for OEIS submission, with the THM-4720 and S48 lists)
 
