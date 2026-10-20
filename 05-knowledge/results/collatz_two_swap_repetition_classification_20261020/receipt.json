@@ -1,0 +1,65 @@
+{
+  "status": "PASS_EXACT",
+  "checks": 2282595,
+  "universe": "all nonconstant binary bases length2..8, d2..5, all ordered actual cyclic adjacent swaps",
+  "bases": 494,
+  "sources": 1976,
+  "paths": 400784,
+  "classes": {
+    "undo": 25088,
+    "disjoint_mirrored": 3584,
+    "disjoint_not_mirrored": 347080,
+    "overlap_smooth3": 12516,
+    "overlap_five": 12516
+  },
+  "H_divisible": {
+    "undo": 25088,
+    "disjoint_mirrored": 3584
+  },
+  "crossing_cut_classes": {
+    "disjoint_mirrored": 508,
+    "undo": 1016,
+    "disjoint_not_mirrored": 24084,
+    "overlap_smooth3": 1008,
+    "overlap_five": 1008
+  },
+  "independent_root_subset_paths": 81592,
+  "hostiles": [
+    {
+      "name": "overlap retains one5",
+      "base": "0011",
+      "repetitions": 2,
+      "edges": [
+        3,
+        2
+      ],
+      "source": "00110011",
+      "output": "00011011",
+      "H": 25,
+      "B": 680,
+      "D": 175,
+      "H_gcd": 5,
+      "full_content": 5,
+      "necklace_distance": 2,
+      "fixed_point": null
+    },
+    {
+      "name": "arbitrary base restores minus17",
+      "base": "11101111000",
+      "repetitions": 2,
+      "edges": [
+        3,
+        14
+      ],
+      "source": "1110111100011101111000",
+      "output": "1111011100011110111000",
+      "H": 4235,
+      "B": 10007305,
+      "D": -588665,
+      "H_gcd": 4235,
+      "full_content": 588665,
+      "necklace_distance": 2,
+      "fixed_point": -17
+    }
+  ]
+}

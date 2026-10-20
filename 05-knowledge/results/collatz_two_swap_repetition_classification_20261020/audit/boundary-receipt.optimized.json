@@ -1,0 +1,56 @@
+{
+  "checks": 3013615,
+  "counts": {
+    "additional_nine_bit_square_bases": 510,
+    "bases_in_full_repetition_range": 240,
+    "distinct_output_transport_checks": 220538,
+    "length_four_paths": 16,
+    "mirrored": 6144,
+    "nonminimal_base_paths": 27584,
+    "original_cut_paths": 28252,
+    "overlap_factor_3": 12618,
+    "overlap_factor_5": 12618,
+    "paths": 437288,
+    "primitive_mechanical_shapes": 12231,
+    "retained": 31488,
+    "sources": 1950
+  },
+  "hostiles": [
+    {
+      "B": 680,
+      "D": 175,
+      "H": 25,
+      "H_gcd": 5,
+      "base": "0011",
+      "distance": 2,
+      "edges": [
+        3,
+        2
+      ]
+    },
+    {
+      "B": 10007305,
+      "D": -588665,
+      "H": 4235,
+      "H_gcd": 4235,
+      "base": "11101111000",
+      "distance": 2,
+      "edges": [
+        3,
+        14
+      ]
+    }
+  ],
+  "status": "PASS_EXACT",
+  "unit_shapes_p_q": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "universe": "q0=2..7, d=2..7; q0=9, d=2; all actual ordered paths; primitive shapes q<=200"
+}
