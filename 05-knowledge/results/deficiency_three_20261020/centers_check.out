@@ -1,0 +1,9 @@
+n=3 classes=2 self_converse=2 strong_self_converse=1 deficit2=0 strong_deficit2=0 low_center_deficits={0: 1}
+n=4 classes=4 self_converse=2 strong_self_converse=1 deficit2=1 strong_deficit2=1 low_center_deficits={2: 1}
+n=5 classes=12 self_converse=8 strong_self_converse=6 deficit2=0 strong_deficit2=0 low_center_deficits={0: 1, 4: 1, 6: 1, 8: 2, 10: 1}
+n=6 classes=56 self_converse=12 strong_self_converse=9 deficit2=1 strong_deficit2=0 low_center_deficits={6: 1, 12: 3, 22: 2, 26: 1, 30: 1}
+n=7 classes=456 self_converse=88 strong_self_converse=79 deficit2=0 strong_deficit2=0 low_center_deficits={6: 1, 8: 1, 16: 2, 20: 1, 24: 2, 26: 3, 30: 1}
+n=8 classes=6880 self_converse=176 strong_self_converse=162 deficit2=1 strong_deficit2=0 low_center_deficits={12: 1}
+n=9 classes=191536 self_converse=2752 strong_self_converse=2661 deficit2=0 strong_deficit2=0 low_center_deficits={20: 1, 28: 1}
+rigid_padding_controls=89; R5->R5op has (h,b)=(9,3), deficit=6
+PASS; local controls reach center order nine; all-order D(z)=z^4 is inherited separately.

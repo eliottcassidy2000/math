@@ -1,0 +1,18 @@
+J certificate: 14 explicit zero probes cover all 492 forbidden parity words / 82 orbits.
+All 105 target relabellings pass; normalization is self-closure 54m.
+Fourteen labels: (((0, 3, 4), ((1, 2), (5, 6))), ((0, 3, 4), ((1, 5), (2, 6))), ((0, 3, 4), ((1, 6), (2, 5))), ((0, 5, 6), ((1, 2), (3, 4))), ((1, 3, 4), ((0, 2), (5, 6))), ((1, 3, 4), ((0, 5), (2, 6))), ((1, 3, 4), ((0, 6), (2, 5))), ((1, 5, 6), ((0, 2), (3, 4))), ((2, 3, 4), ((0, 1), (5, 6))), ((2, 5, 6), ((0, 1), (3, 4))), ((2, 5, 6), ((0, 3), (1, 4))), ((2, 5, 6), ((0, 4), (1, 3))), ((3, 4, 5), ((0, 1), (2, 6))), ((3, 4, 6), ((0, 1), (2, 5))))
+Physical hypothesis is essential: a weight-nine supported orbit passes the 15 probes but is not J.
+All seven generic signed blind vectors remain invisible to all 105 probes.
+Aggregate: 11*C_path630 - 112*C_junction105 = 180*sum_i N_i.
+Hostile physical ensembles 11*all630 path trees and 112*all105 junctions have identical 105 readouts.
+P5 middle-at-2 boundary mass= 96 N= (0, 0, 24, 0, 0, 0, 0)
+Petersen minus 0,1,3 boundary mass= 120 N= (24, 24, 0, 0, 0, 0, 0)
+Physical golden collision: 24*phi^2 = 24*(1+phi), distinct N vectors of two connected single poles.
+Connected 17-vertex Q boundary mass= 216 N= (0, 0, 0, 0, 0, 0, 0)
+Physical monomer-dimer and aggregate controls: all 19 connected simple 5/7-interior-vertex seven-poles from NetworkX atlas.
+Golden planar 14-diagram Gram rank=13; full 105-diagram golden rank=105; ternary planar rank=14.
+Golden null-vector coefficients (a,b) for a+b*phi: ((-1, -1), (0, 1), (0, 1), (0, -1), (1, 0), (0, 1), (-1, 0), (0, -1), (1, 0), (1, 1), (0, -1), (0, -1), (0, 1), (-1, 0))
+Crossing detector: ((0, 2), (1, 3), (4, 6), (5, 7)) value= (-3, 1)
+Ternary detector: ((0, 1), (2, 3), (4, 5), (6, 7)) value= (-42, -6)
+Noncrossing matching nesting height<=3, 2..14 ports: [1, 2, 5, 13, 34, 89, 233]
+PASS exact covers, physical controls, positive aggregates, and golden quotient hostiles.

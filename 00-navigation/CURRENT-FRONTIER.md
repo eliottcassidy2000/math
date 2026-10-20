@@ -198,7 +198,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ### Reliable structural toolkit
 
-- [Defect transitions](../05-knowledge/results/defect_transitions_20261020/README.md). [Prime batches and slack six](../05-knowledge/results/prime_batch_triangle_20261020/README.md): sharper width bounds; exact marked grammar. Collatz entry OPEN.
+- [Local owners and detours](../05-knowledge/results/deficiency_three_20261020/README.md). [Prime batches and slack six](../05-knowledge/results/prime_batch_triangle_20261020/README.md): sharper counting and marked grammar; black connectivity and universal Collatz entry OPEN.
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md) makes `d_iso` exactly `l1` on fixed order-join patches by image-swap uncrossing; the ambient quotient still has triangles and is not a partial cube.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) gives the scalar iff-transitive boundary; THM-2242/2249/2256 give its response, envelope, and scale limit.

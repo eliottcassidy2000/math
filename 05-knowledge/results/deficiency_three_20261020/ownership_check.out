@@ -1,0 +1,27 @@
+Independent interval-merger audit: 1099 labelled tournaments through order 5; nonadjacent witness= (3, ((0, 2), (1, 2)), ((2, 0, 1),))
+Changed-gap hostile, two good records of one state: (0, 1, 2, (1, 1, 1), (0, 0, 3, 3), ((0, 1), (0, 2))) (1, 0, 1, (1, 1), (1, 3, 3), ((0, 1),))
+Port hostile: k=2, gaps=(1,3,1,3,1), endpoint weights all 1; matchings {01,23} and {02,13} have identical local gap data but distinct owners.
+k= 1 unique_by_deficiency= {0: 1, 1: 5, 2: 9, 3: 5}
+raw_by_deficiency= {0: 1, 1: 6, 2: 13, 3: 9} normalization_transitions= {(0, 0): 1, (1, 1): 5, (1, 2): 1, (2, 2): 13, (3, 2): 4, (3, 3): 5}
+D3_owner_signatures= {(0, 0, 3): 4, (1, 0, 1): 1} D3_core_orders= {1: 1, 3: 1, 4: 2, 5: 1}
+D3_gap_excess= {0: 1, 2: 1, 3: 2, 4: 1} D3_local_permutations= {1: 1, 6: 1, 24: 2, 120: 1}
+D3_number_of_good_menu_signatures= {1: 5}
+D3_multiple_signature_patterns= {} D3_distinct_good_presentations= {1: 5}
+direct_owners_without_deduplication= {0: 1, 1: 5, 2: 9, 3: 5} D3_to_lower_D_witness= (2, (1, 1), ((0, 1),), (2,))
+k= 2 unique_by_deficiency= {0: 3, 1: 45, 2: 264, 3: 756}
+raw_by_deficiency= {0: 3, 1: 48, 2: 309, 3: 999} normalization_transitions= {(0, 0): 3, (1, 1): 45, (1, 2): 3, (2, 2): 292, (2, 3): 16, (2, 4): 1, (3, 2): 28, (3, 3): 936, (3, 4): 35}
+D3_owner_signatures= {(0, 0, 3): 655, (0, 1, 2): 83, (1, 0, 1): 18} D3_core_orders= {4: 6, 5: 18, 6: 42, 7: 162, 8: 288, 9: 240}
+D3_gap_excess= {0: 9, 1: 30, 2: 81, 3: 192, 4: 252, 5: 168, 6: 24} D3_local_permutations= {1: 9, 2: 30, 4: 32, 6: 49, 8: 8, 12: 108, 24: 100, 36: 40, 48: 96, 120: 92, 144: 48, 240: 48, 720: 72, 5040: 24}
+D3_number_of_good_menu_signatures= {1: 738, 2: 18}
+D3_multiple_signature_patterns= {((0, 0, 3), (0, 1, 2)): 15, ((0, 1, 2), (1, 0, 1)): 3} D3_distinct_good_presentations= {1: 736, 2: 4, 3: 15, 5: 1}
+direct_owners_without_deduplication= {0: 3, 1: 45, 2: 264, 3: 756} D3_to_lower_D_witness= (6, (2, 1, 1, 3, 1, 3), ((1, 2), (1, 4)), (3, 1, 3, 1, 3))
+D3_cross_menu_witness= ((0, 1, 2, (1, 1, 1), (0, 0, 3, 3), ((0, 1), (0, 2))), ((0, 1, 2), (1, 0, 1)), 2)
+k= 3 unique_by_deficiency= {0: 15, 1: 435, 2: 5365, 3: 36473}
+raw_by_deficiency= {0: 15, 1: 450, 2: 5791, 3: 41430} normalization_transitions= {(0, 0): 15, (1, 1): 435, (1, 2): 15, (2, 2): 5545, (2, 3): 240, (2, 4): 6, (3, 2): 219, (3, 3): 39629, (3, 4): 1548, (3, 5): 33, (3, 6): 1}
+D3_owner_signatures= {(0, 0, 3): 30113, (0, 1, 2): 5823, (0, 2, 1): 272, (0, 3, 0): 1, (1, 0, 1): 255, (1, 1, 0): 9} D3_core_orders= {7: 10, 8: 110, 9: 663, 10: 2210, 11: 7155, 12: 12150, 13: 14175}
+D3_gap_excess= {0: 102, 1: 618, 2: 2454, 3: 6596, 4: 11313, 5: 11340, 6: 4050} D3_local_permutations= {1: 102, 2: 618, 4: 1038, 6: 1416, 8: 512, 12: 4362, 24: 4323, 36: 3132, 48: 3114, 72: 2754, 120: 2466, 144: 3726, 216: 405, 240: 3078, 720: 4212, 5040: 1215}
+D3_number_of_good_menu_signatures= {1: 36212, 2: 261}
+D3_multiple_signature_patterns= {((0, 0, 3), (0, 1, 2)): 225, ((0, 1, 2), (0, 2, 1)): 15, ((0, 1, 2), (1, 0, 1)): 15, ((0, 2, 1), (1, 0, 1)): 6} D3_distinct_good_presentations= {1: 36206, 2: 18, 3: 246, 5: 3}
+direct_owners_without_deduplication= {0: 15, 1: 435, 2: 5365, 3: 36473} D3_to_lower_D_witness= (10, (3, 1, 1, 4, 1, 4, 1, 4, 1, 4), ((1, 2), (1, 4), (6, 8)), (4, 1, 4, 1, 4, 1, 4, 1, 4))
+D3_cross_menu_witness= ((0, 1, 2, (1, 1, 1, 1, 1), (0, 0, 4, 4, 4, 4), ((0, 1), (0, 2), (3, 4))), ((0, 1, 2), (1, 0, 1)), 2)
+PASS: D<=3 grammar k=1..3, complete independent k<=2 census, exact weighted-class key agreement.

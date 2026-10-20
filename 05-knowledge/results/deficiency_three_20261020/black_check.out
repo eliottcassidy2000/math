@@ -1,0 +1,19 @@
+PROVED-template exact controls; no connectivity conclusion
+Endcap controls (middle order, all fixed-path presentations, three-black certificates):
+(0, 1, 5)
+(1, 1, 5)
+(2, 1, 5)
+(3, 2, 10)
+(4, 8, 40)
+(5, 64, 320)
+(6, 1024, 5120)
+Terminal-ear controls (SCC order, strong presentations, tail R4, guarded, certificates, five kinds):
+(4, 5, 5, 5, 15, (1, 1, 1, 1, 1))
+(5, 50, 35, 15, 45, (3, 3, 3, 3, 3))
+(6, 903, 600, 300, 900, (60, 60, 60, 60, 60))
+Complete nonstrong blue source controls (n, sources, eligible):
+(8, 70, 5)
+(9, 519, 5)
+Guard hostile rows: (994, 996, 1001, 1011, 999, 64, 128, 288, 608, 224)
+Guard hostile invalid first move: (0, 1, 2, 3, 4, 5, 7, 8, 9, 6)
+PASS: all exact matrices, path directions, edge XORs and three black predicates

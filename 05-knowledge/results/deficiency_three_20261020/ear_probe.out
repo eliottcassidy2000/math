@@ -1,0 +1,9 @@
+F5 Hamiltonian paths= 9 source_black_paths= 72 target_black_paths= 240 pair_tests= 17280 three_black_detours= 18
+first_exact_detour= ((0, 1, 2, 3, 4, 6, 7, 8, 9, 5), (5, 9, 6, 4, 3, 2, 1, 0, 8, 7), (7, 8, 0, 1, 2, 3, 4, 5, 6, 9))
+opaque_middle_candidate= ((0, 1, 2, 3, 4, 6, 7, 8, 9, 5), (5, 9, 6, 4, 3, 2, 1, 0, 8, 7), (7, 8, 0, 1, 2, 3, 4, 5, 6, 9)) insertion_cuts= (4, 2, 6) candidate_tests= 1
+all_fixed_path_middle_controls= [(0, 1), (1, 1), (2, 1), (3, 2), (4, 8), (5, 64), (6, 1024)] endpoint_score_sums= [(7, 4, 6), (8, 4, 6), (9, 4, 6), (10, 4, 6), (11, 4, 6), (12, 4, 6), (13, 4, 6)]
+Tstar_r_family_controls (r, all middle presentations m<=6)= [(4, 1101), (5, 1101), (6, 1101), (7, 1101), (8, 1101), (9, 1101)]
+Proved endpoint sums=(m+r+2,4,r+1), n-1=m+2r-1; r=3 first-move hostile is blue.
+General guarded-endcap controls (r, eligible, rotation-auto, middle cases)= [(4, 2, 0, 6), (5, 16, 1, 48), (6, 256, 0, 768)]
+Regular cyclic C5 hostile: closing arc and chord hold, but first move is blue.
+PASS: full labelled matrices, exact edge parity, all three black predicates.

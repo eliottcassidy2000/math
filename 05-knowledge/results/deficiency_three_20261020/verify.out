@@ -1,0 +1,8 @@
+Normalized SHA256 inputs verified: 31
+All five sources parse; checks contain no removable assertions.
+Normal and optimized transcript equality: ownership_check.py
+Normal and optimized transcript equality: black_check.py
+Normal and optimized transcript equality: boundary_check.py
+Normal and optimized transcript equality: centers_check.py
+Normal and optimized transcript equality: ear_probe.py
+PASS
