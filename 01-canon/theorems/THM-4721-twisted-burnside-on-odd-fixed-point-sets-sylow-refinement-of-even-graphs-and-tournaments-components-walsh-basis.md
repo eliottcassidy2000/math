@@ -13,8 +13,11 @@ status: >
   - Theorem W (Walsh basis over Z[1/2], orthogonality relations, det M = +-2^k, odd parts of the Aut-products agree);
   - Proposition Q (class identity: sum over tournament types of the number of Aut-classes of elements of odd type
     lambda = the same over even graphs + the centraliser-even classes over odd graphs).
-  FINITE-EXACT: tau_T(H) = tau_E(H) for every odd-order subgroup class H of S_n, n <= 8 (subgroups_fix.out,
-  subgroups_fix_n8.out; cyclic, Z3xZ3, Z7:Z3, Z15); parity lemma and Theorem R for 440 pairs (P,h) and Gamma in
+  FINITE-EXACT: tau_T(H) = tau_E(H) for every odd-order subgroup class H of S_n, n <= 8, and for fifteen classes at
+  n = 9 including the Sylow 3-subgroup Z3 wr Z3 of order 81, Z3^3, Z9, Z15, Z7:Z3 and four actions of Z3xZ3
+  (subgroups_fix.out, subgroups_fix_n8.out, subgroups_fix_n9.out; e.g. 2954 = 2954 for Z3 of type (3,1^6) at n = 9);
+  the Theorem S closed form reproduces the census counts for the Sylow 3-, 5-, 7-subgroups of S_6, S_7, S_8
+  (sylow_formula_check.out); parity lemma and Theorem R for 440 pairs (P,h) and Gamma in
   {C(P), N(P)}, n <= 7 (parity_lemma_check.out); t_p = e_p for all 45 primes p <= 200 by the formulas, by brute force
   for p <= 31 with the refined K-counts, and the evenness criterion against networkx for p <= 13
   (circulant_prime.out); the coloured identity for 2, 4, 6 colours and n <= 4 (coloured_even.out); the census n <= 8
@@ -45,7 +48,7 @@ related:
   - 05-knowledge/hypotheses/HYP-9172-no-natural-bijection-for-twisted-mallows-sloane-at-any-n-ge-5.md
   - 01-canon/theorems/THM-4524-selfie-tournaments-loop-gauge-arc-parity-and-the-odd-mallows-sloane-partner.md
 note: 05-knowledge/results/even_graphs_20261019_sylow_refinement_components_walsh_duality.md
-scripts: 04-computation/experiments/even_graphs_20261019/{census,classes_identity,subgroups_fix,parity_lemma_check,circulant_prime,coloured_even,walsh_check,odd_graphs_bfile}.py
+scripts: 04-computation/experiments/even_graphs_20261019/{census,classes_identity,subgroups_fix,parity_lemma_check,circulant_prime,coloured_even,walsh_check,odd_graphs_bfile,sylow_formula_check}.py
 outputs: 04-computation/experiments/even_graphs_20261019/*.out, connected_even_graphs_bfile.txt (A334335 to n = 128), odd_graphs_bfile.txt (n <= 60)
 ---
 
@@ -104,7 +107,7 @@ the number of isomorphism types of tournaments admitting an automorphism group c
 
 (The `N(P)`-orbit description is Turner's theorem for prime order, re-derived by (a).) Refined: for every odd subgroup `K <= Z_p^*`, apply Theorem S' = Theorem R to `P_K = Z_p x| K` (odd order, normal in `AGL(1,p)`; (a) and (b) go through with the Sylow `Z_p`): the circulant tournament types with multiplier stabiliser containing `K` are equinumerous with the even circulant types with stabiliser containing `K`. The odd subgroups of `Z_p^*` form a divisor lattice, so inclusion-exclusion over joins gives equality on every upset, Hall's condition holds for THM-4531's stabiliser-containment graph, and by Lemma N1 an **`AGL(1,p)`-equivariant bijection between circulant tournaments and even circulant graphs exists for every prime `p`** (for `p = 7`: `QR_7 -> empty`, the rigid circulant `-> complement of C_7`). It is not given by a uniform multiplier rule: `S -> {x : [x in S] != [cx in S]}` is a bijection for some `p` and not others for every fixed `c in {+-2, +-3, +-4}` (`circulant_prime.out`).
 
-The identity `tau_T(H) = tau_E(H)` holds in the census for **every** odd-order subgroup class `H` of `S_n`, `n <= 8` (not only Sylow ones; `subgroups_fix*.out`): e.g. `Z_3` of type `(3,1^5)`: 280 = 280; `Z_3 x Z_3` in `S_8`: 16 = 16; `Z_15`: 2 = 2. For non-Sylow `H` the two ingredients (a), (b) fail separately (the tournament with `Aut = Z_3 x Z_3` on 6 vertices has two classes of 3-cycle modules; `K_{3,3}` is odd but `N(Z_3)`-even) and cancel in total; this is HYP-9340 (a). What is proved for every odd `P` is the class form, **Proposition Q**: `sum_T m_T(P) = sum_{X even} m_X(P) + sum_{X odd, N(P)-even} m_X(P)`, with `m_x(P)` the number of `Aut(x)`-classes of `S_n`-conjugates of `P` inside `Aut(x)` (Theorem R with `Gamma = N(P)`, orbits counted with multiplicity), and its element form for odd cycle types (`classes_identity.out`, n <= 7, all OK).
+The identity `tau_T(H) = tau_E(H)` holds in the census for **every** odd-order subgroup class `H` of `S_n`, `n <= 8`, and for the fifteen classes tested at `n = 9` (not only Sylow ones; `subgroups_fix*.out`): e.g. `Z_3` of type `(3,1^5)`: 280 = 280; `Z_3 x Z_3` in `S_8`: 16 = 16; `Z_15`: 2 = 2. For non-Sylow `H` the two ingredients (a), (b) fail separately (the tournament with `Aut = Z_3 x Z_3` on 6 vertices has two classes of 3-cycle modules; `K_{3,3}` is odd but `N(Z_3)`-even) and cancel in total; this is HYP-9340 (a). What is proved for every odd `P` is the class form, **Proposition Q**: `sum_T m_T(P) = sum_{X even} m_X(P) + sum_{X odd, N(P)-even} m_X(P)`, with `m_x(P)` the number of `Aut(x)`-classes of `S_n`-conjugates of `P` inside `Aut(x)` (Theorem R with `Gamma = N(P)`, orbits counted with multiplicity), and its element form for odd cycle types (`classes_identity.out`, n <= 7, all OK).
 
 ## 4. Components and A334335
 
