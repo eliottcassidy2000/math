@@ -1,0 +1,777 @@
+{
+  "status": "FINITE-EXACT small controls; the unbounded reductions are proved in spectrum.md",
+  "count_type": "raw directed Hamiltonian paths, not automorphism orbits or blue paths",
+  "small_spectrum": {
+    "census": [
+      {
+        "order": 1,
+        "standard_path_presentations": 1,
+        "ordinary_isomorphism_classes": 1,
+        "ordinary_raw_H_counts": {
+          "1": 1
+        },
+        "raw_H_values": [
+          1
+        ],
+        "strong_raw_H_values": []
+      },
+      {
+        "order": 2,
+        "standard_path_presentations": 1,
+        "ordinary_isomorphism_classes": 1,
+        "ordinary_raw_H_counts": {
+          "1": 1
+        },
+        "raw_H_values": [
+          1
+        ],
+        "strong_raw_H_values": []
+      },
+      {
+        "order": 3,
+        "standard_path_presentations": 2,
+        "ordinary_isomorphism_classes": 2,
+        "ordinary_raw_H_counts": {
+          "1": 1,
+          "3": 1
+        },
+        "raw_H_values": [
+          1,
+          3
+        ],
+        "strong_raw_H_values": [
+          3
+        ]
+      },
+      {
+        "order": 4,
+        "standard_path_presentations": 8,
+        "ordinary_isomorphism_classes": 4,
+        "ordinary_raw_H_counts": {
+          "1": 1,
+          "3": 2,
+          "5": 1
+        },
+        "raw_H_values": [
+          1,
+          3,
+          5
+        ],
+        "strong_raw_H_values": [
+          5
+        ]
+      },
+      {
+        "order": 5,
+        "standard_path_presentations": 64,
+        "ordinary_isomorphism_classes": 12,
+        "ordinary_raw_H_counts": {
+          "1": 1,
+          "3": 3,
+          "5": 2,
+          "9": 2,
+          "11": 1,
+          "13": 1,
+          "15": 2
+        },
+        "raw_H_values": [
+          1,
+          3,
+          5,
+          9,
+          11,
+          13,
+          15
+        ],
+        "strong_raw_H_values": [
+          9,
+          11,
+          13,
+          15
+        ]
+      },
+      {
+        "order": 6,
+        "standard_path_presentations": 1024,
+        "ordinary_isomorphism_classes": 56,
+        "ordinary_raw_H_counts": {
+          "1": 1,
+          "3": 4,
+          "5": 3,
+          "9": 5,
+          "11": 2,
+          "13": 2,
+          "15": 6,
+          "17": 2,
+          "19": 2,
+          "23": 4,
+          "25": 2,
+          "27": 2,
+          "29": 4,
+          "31": 2,
+          "33": 5,
+          "37": 5,
+          "41": 1,
+          "43": 2,
+          "45": 2
+        },
+        "raw_H_values": [
+          1,
+          3,
+          5,
+          9,
+          11,
+          13,
+          15,
+          17,
+          19,
+          23,
+          25,
+          27,
+          29,
+          31,
+          33,
+          37,
+          41,
+          43,
+          45
+        ],
+        "strong_raw_H_values": [
+          15,
+          17,
+          19,
+          23,
+          25,
+          27,
+          29,
+          31,
+          33,
+          37,
+          41,
+          43,
+          45
+        ]
+      }
+    ],
+    "complete_strong_count_polynomials_through_H23": {
+      "3": {
+        "3": 1
+      },
+      "5": {
+        "4": 1
+      },
+      "9": {
+        "5": 2
+      },
+      "11": {
+        "5": 1
+      },
+      "13": {
+        "5": 1
+      },
+      "15": {
+        "5": 2,
+        "6": 2
+      },
+      "17": {
+        "6": 2
+      },
+      "19": {
+        "6": 2
+      },
+      "23": {
+        "6": 4
+      }
+    },
+    "fixed_raw_count_series_coefficients_through_order12": {
+      "1": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "3": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "5": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "7": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "9": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        5,
+        9,
+        14,
+        20,
+        27,
+        35,
+        44
+      ],
+      "11": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "13": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "15": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        6,
+        12,
+        20,
+        30,
+        42,
+        56,
+        72
+      ],
+      "17": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14
+      ],
+      "19": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14
+      ],
+      "21": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "23": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24,
+        28
+      ]
+    },
+    "first_strong_witnesses": {
+      "3": {
+        "order": 3,
+        "adjacency": [
+          2,
+          4,
+          1
+        ]
+      },
+      "5": {
+        "order": 4,
+        "adjacency": [
+          2,
+          4,
+          9,
+          3
+        ]
+      },
+      "9": {
+        "order": 5,
+        "adjacency": [
+          2,
+          4,
+          9,
+          19,
+          7
+        ]
+      },
+      "13": {
+        "order": 5,
+        "adjacency": [
+          10,
+          4,
+          9,
+          18,
+          7
+        ],
+        "single_deletion_H": [
+          5,
+          5,
+          3,
+          3,
+          5
+        ],
+        "transitive_two_vertex_deletion": [
+          0,
+          2
+        ]
+      },
+      "11": {
+        "order": 5,
+        "adjacency": [
+          18,
+          4,
+          9,
+          19,
+          6
+        ]
+      },
+      "15": {
+        "order": 5,
+        "adjacency": [
+          10,
+          12,
+          9,
+          16,
+          7
+        ]
+      },
+      "17": {
+        "order": 6,
+        "adjacency": [
+          2,
+          4,
+          9,
+          19,
+          39,
+          15
+        ]
+      },
+      "23": {
+        "order": 6,
+        "adjacency": [
+          10,
+          4,
+          9,
+          18,
+          39,
+          15
+        ]
+      },
+      "29": {
+        "order": 6,
+        "adjacency": [
+          18,
+          4,
+          9,
+          19,
+          38,
+          15
+        ]
+      },
+      "19": {
+        "order": 6,
+        "adjacency": [
+          38,
+          4,
+          8,
+          19,
+          39,
+          14
+        ]
+      },
+      "31": {
+        "order": 6,
+        "adjacency": [
+          42,
+          4,
+          9,
+          18,
+          39,
+          14
+        ]
+      },
+      "33": {
+        "order": 6,
+        "adjacency": [
+          50,
+          4,
+          9,
+          19,
+          38,
+          14
+        ]
+      },
+      "27": {
+        "order": 6,
+        "adjacency": [
+          10,
+          12,
+          9,
+          16,
+          39,
+          15
+        ]
+      },
+      "25": {
+        "order": 6,
+        "adjacency": [
+          22,
+          12,
+          8,
+          17,
+          38,
+          15
+        ]
+      },
+      "37": {
+        "order": 6,
+        "adjacency": [
+          34,
+          12,
+          9,
+          17,
+          39,
+          14
+        ]
+      },
+      "41": {
+        "order": 6,
+        "adjacency": [
+          50,
+          12,
+          9,
+          17,
+          38,
+          14
+        ]
+      },
+      "45": {
+        "order": 6,
+        "adjacency": [
+          34,
+          20,
+          9,
+          19,
+          37,
+          14
+        ]
+      },
+      "43": {
+        "order": 6,
+        "adjacency": [
+          42,
+          20,
+          9,
+          18,
+          37,
+          14
+        ]
+      }
+    }
+  },
+  "one_apex": {
+    "census": [
+      {
+        "transitive_base_order": 0,
+        "cuts": 1,
+        "raw_H_values": [
+          1
+        ]
+      },
+      {
+        "transitive_base_order": 1,
+        "cuts": 2,
+        "raw_H_values": [
+          1
+        ]
+      },
+      {
+        "transitive_base_order": 2,
+        "cuts": 4,
+        "raw_H_values": [
+          1,
+          3
+        ]
+      },
+      {
+        "transitive_base_order": 3,
+        "cuts": 8,
+        "raw_H_values": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "transitive_base_order": 4,
+        "cuts": 16,
+        "raw_H_values": [
+          1,
+          3,
+          5,
+          9,
+          11
+        ]
+      },
+      {
+        "transitive_base_order": 5,
+        "cuts": 32,
+        "raw_H_values": [
+          1,
+          3,
+          5,
+          9,
+          11,
+          15,
+          17,
+          19,
+          23
+        ]
+      },
+      {
+        "transitive_base_order": 6,
+        "cuts": 64,
+        "raw_H_values": [
+          1,
+          3,
+          5,
+          9,
+          11,
+          15,
+          17,
+          19,
+          23,
+          25,
+          27,
+          31,
+          33,
+          37,
+          39,
+          45,
+          47,
+          51
+        ]
+      },
+      {
+        "transitive_base_order": 7,
+        "cuts": 128,
+        "raw_H_values": [
+          1,
+          3,
+          5,
+          9,
+          11,
+          15,
+          17,
+          19,
+          23,
+          25,
+          27,
+          31,
+          33,
+          37,
+          39,
+          45,
+          47,
+          51,
+          53,
+          61,
+          63,
+          65,
+          69,
+          73,
+          79,
+          81,
+          87,
+          95,
+          97,
+          107
+        ]
+      },
+      {
+        "transitive_base_order": 8,
+        "cuts": 256,
+        "raw_H_values": [
+          1,
+          3,
+          5,
+          9,
+          11,
+          15,
+          17,
+          19,
+          23,
+          25,
+          27,
+          31,
+          33,
+          37,
+          39,
+          45,
+          47,
+          51,
+          53,
+          61,
+          63,
+          65,
+          69,
+          73,
+          79,
+          81,
+          85,
+          87,
+          91,
+          95,
+          97,
+          99,
+          103,
+          107,
+          115,
+          117,
+          121,
+          123,
+          127,
+          129,
+          139,
+          141,
+          143,
+          145,
+          151,
+          157,
+          159,
+          165,
+          169,
+          171,
+          179,
+          187,
+          191,
+          195,
+          201,
+          213,
+          219,
+          227
+        ]
+      }
+    ],
+    "total_literal_cuts": 511,
+    "two_run_arithmetic_checks": 64,
+    "minimal_lost_state": {
+      "old_words": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "old_H": [
+        1,
+        1
+      ],
+      "append_zero_H": [
+        1,
+        3
+      ]
+    }
+  },
+  "source_sha256_lf": "4083d6254e5507163dd283f71926841577ad77c44b14e088b776a7e1359b9068"
+}

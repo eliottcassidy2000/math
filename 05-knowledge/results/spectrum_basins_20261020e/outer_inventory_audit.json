@@ -1,0 +1,80 @@
+{
+  "universe": "all fixed-path A presentations of orders 1..6",
+  "counts": {
+    "all_presentations": 1100,
+    "first_vertex_source": 77
+  },
+  "special_order_three_control": [
+    {
+      "A": [
+        6,
+        4,
+        0
+      ],
+      "paths": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          6
+        ],
+        [
+          6,
+          7,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0,
+          8
+        ],
+        [
+          3,
+          7,
+          6,
+          8,
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        [
+          8,
+          6,
+          7,
+          3,
+          5,
+          4,
+          2,
+          1,
+          0
+        ]
+      ],
+      "colours": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "endpoint_sums": [
+        9,
+        3,
+        8,
+        9
+      ],
+      "second_penultimate_sums": [
+        8,
+        8,
+        5,
+        8
+      ]
+    }
+  ]
+}

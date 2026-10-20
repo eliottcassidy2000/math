@@ -3,6 +3,14 @@
 **Status:** PROVED (claude-2026-06-06-S680, pending peer verification). H(T) != 21 for ALL tournaments. General-n step uses Moon's vertex-pancyclicity: a strong tournament on m>=9 has alpha_1 (#directed odd cycles) >= (m-2) + sum_{odd L,5<=L<=m} ceil(m/L) > 10, so H >= 1+2*alpha_1 >= 23 > 21; H=21 needs a single strong component (21=3*7, 7 not strong by THM-029); base m<=8 exhaustive (THM-079 Part G). See `04-computation/h21_proof_complete_s680.py`, HYP-2258. [Was CONJECTURED: exhaustive through n=8, sampling n=9; THM-079 left the general i_2-jump open -- S680 closes it via the pancyclic odd-cycle lower bound.]
 **Discovered by:** kind-pasteur-2026-03-07-S31
 
+**Historical-body boundary, 2026-10-20:** the remaining body records the
+earlier conjectural development and its former open targets. Its references
+to the H=21 exclusion as open are superseded by the proved status above and
+[THM-1370-h-spectrum-omits-7-21-all-n](THM-1370-h-spectrum-omits-7-21-all-n.md).
+Only the assertion that 7 and 21 are the *only* missing positive odd raw
+counts remains open; it is Chan--Pak's published Conjecture 6.2. See the
+[current source audit and small-base proof](../../05-knowledge/results/spectrum_basins_20261020e/spectrum.md).
+
 ## Statement
 
 **Conjecture:** For any tournament T on any number of vertices n, H(T) != 21.

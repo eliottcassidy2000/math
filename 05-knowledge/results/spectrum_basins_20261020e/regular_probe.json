@@ -1,0 +1,440 @@
+{
+  "claims_not_made": [
+    "triangle moves are Hamiltonian-path metagraph edges",
+    "H invariant under degree-preserving moves",
+    "unlabelled regular tournament classified by H at every order"
+  ],
+  "cycle_compiler_cases": 5338,
+  "independent_controls": [
+    "H counted by permutations at every ordinary class representative",
+    "every single arc flip destroys regularity",
+    "all directed cycles in all tournaments n=3,4,5 compiled to k-2 triangle reversals"
+  ],
+  "rows": [
+    {
+      "H_distribution_labelled": {
+        "1": 1
+      },
+      "all_class_representative_HP_R_and_K_controls": 0,
+      "classes": [
+        {
+          "H": 1,
+          "id": 0,
+          "labelled_orbit_size": 1,
+          "out_masks": [
+            0
+          ]
+        }
+      ],
+      "connected": true,
+      "directed_quotient_move_counts_including_loops": [],
+      "directed_triangle_move_H_deltas": {},
+      "labelled_count": 1,
+      "move_witnesses": [],
+      "n": 1,
+      "ordinary_isomorphism_classes": 1,
+      "triangle_count_per_tournament": 0
+    },
+    {
+      "H_distribution_labelled": {
+        "3": 2
+      },
+      "all_class_representative_HP_R_and_K_controls": 3,
+      "classes": [
+        {
+          "H": 3,
+          "id": 0,
+          "labelled_orbit_size": 2,
+          "out_masks": [
+            2,
+            4,
+            1
+          ]
+        }
+      ],
+      "connected": true,
+      "directed_quotient_move_counts_including_loops": [
+        {
+          "count": 2,
+          "from": 0,
+          "to": 0
+        }
+      ],
+      "directed_triangle_move_H_deltas": {
+        "0": 2
+      },
+      "labelled_count": 2,
+      "move_witnesses": [
+        {
+          "delta_H": 0,
+          "from": 0,
+          "source_H": 3,
+          "source_out_masks": [
+            2,
+            4,
+            1
+          ],
+          "target_H": 3,
+          "target_out_masks": [
+            4,
+            1,
+            2
+          ],
+          "to": 0,
+          "triangle": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "n": 3,
+      "ordinary_isomorphism_classes": 1,
+      "triangle_count_per_tournament": 1
+    },
+    {
+      "H_distribution_labelled": {
+        "15": 24
+      },
+      "all_class_representative_HP_R_and_K_controls": 15,
+      "classes": [
+        {
+          "H": 15,
+          "id": 0,
+          "labelled_orbit_size": 24,
+          "out_masks": [
+            6,
+            12,
+            24,
+            17,
+            3
+          ]
+        }
+      ],
+      "connected": true,
+      "directed_quotient_move_counts_including_loops": [
+        {
+          "count": 120,
+          "from": 0,
+          "to": 0
+        }
+      ],
+      "directed_triangle_move_H_deltas": {
+        "0": 120
+      },
+      "labelled_count": 24,
+      "move_witnesses": [
+        {
+          "delta_H": 0,
+          "from": 0,
+          "source_H": 15,
+          "source_out_masks": [
+            6,
+            12,
+            24,
+            17,
+            3
+          ],
+          "target_H": 15,
+          "target_out_masks": [
+            12,
+            5,
+            24,
+            18,
+            3
+          ],
+          "to": 0,
+          "triangle": [
+            0,
+            1,
+            3
+          ]
+        }
+      ],
+      "n": 5,
+      "ordinary_isomorphism_classes": 1,
+      "triangle_count_per_tournament": 5
+    },
+    {
+      "H_distribution_labelled": {
+        "171": 1680,
+        "175": 720,
+        "189": 240
+      },
+      "all_class_representative_HP_R_and_K_controls": 535,
+      "classes": [
+        {
+          "H": 175,
+          "id": 0,
+          "labelled_orbit_size": 720,
+          "out_masks": [
+            14,
+            28,
+            56,
+            112,
+            97,
+            67,
+            7
+          ]
+        },
+        {
+          "H": 171,
+          "id": 1,
+          "labelled_orbit_size": 1680,
+          "out_masks": [
+            14,
+            28,
+            104,
+            112,
+            37,
+            67,
+            19
+          ]
+        },
+        {
+          "H": 189,
+          "id": 2,
+          "labelled_orbit_size": 240,
+          "out_masks": [
+            14,
+            52,
+            88,
+            98,
+            41,
+            69,
+            19
+          ]
+        }
+      ],
+      "connected": true,
+      "directed_quotient_move_counts_including_loops": [
+        {
+          "count": 5040,
+          "from": 0,
+          "to": 0
+        },
+        {
+          "count": 5040,
+          "from": 0,
+          "to": 1
+        },
+        {
+          "count": 5040,
+          "from": 1,
+          "to": 0
+        },
+        {
+          "count": 15120,
+          "from": 1,
+          "to": 1
+        },
+        {
+          "count": 3360,
+          "from": 1,
+          "to": 2
+        },
+        {
+          "count": 3360,
+          "from": 2,
+          "to": 1
+        }
+      ],
+      "directed_triangle_move_H_deltas": {
+        "-18": 3360,
+        "-4": 5040,
+        "0": 20160,
+        "4": 5040,
+        "18": 3360
+      },
+      "labelled_count": 2640,
+      "move_witnesses": [
+        {
+          "delta_H": 0,
+          "from": 0,
+          "source_H": 175,
+          "source_out_masks": [
+            14,
+            28,
+            56,
+            112,
+            97,
+            67,
+            7
+          ],
+          "target_H": 175,
+          "target_out_masks": [
+            28,
+            13,
+            56,
+            112,
+            98,
+            67,
+            7
+          ],
+          "to": 0,
+          "triangle": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "delta_H": -4,
+          "from": 0,
+          "source_H": 175,
+          "source_out_masks": [
+            14,
+            28,
+            56,
+            112,
+            97,
+            67,
+            7
+          ],
+          "target_H": 171,
+          "target_out_masks": [
+            26,
+            28,
+            41,
+            112,
+            100,
+            67,
+            7
+          ],
+          "to": 1,
+          "triangle": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "delta_H": 4,
+          "from": 1,
+          "source_H": 171,
+          "source_out_masks": [
+            14,
+            28,
+            104,
+            112,
+            37,
+            67,
+            19
+          ],
+          "target_H": 175,
+          "target_out_masks": [
+            22,
+            28,
+            104,
+            97,
+            44,
+            67,
+            19
+          ],
+          "to": 0,
+          "triangle": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "delta_H": 0,
+          "from": 1,
+          "source_H": 171,
+          "source_out_masks": [
+            14,
+            28,
+            104,
+            112,
+            37,
+            67,
+            19
+          ],
+          "target_H": 171,
+          "target_out_masks": [
+            28,
+            13,
+            104,
+            112,
+            38,
+            67,
+            19
+          ],
+          "to": 1,
+          "triangle": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "delta_H": 18,
+          "from": 1,
+          "source_H": 171,
+          "source_out_masks": [
+            14,
+            28,
+            104,
+            112,
+            37,
+            67,
+            19
+          ],
+          "target_H": 189,
+          "target_out_masks": [
+            42,
+            28,
+            73,
+            112,
+            37,
+            70,
+            19
+          ],
+          "to": 2,
+          "triangle": [
+            0,
+            2,
+            5
+          ]
+        },
+        {
+          "delta_H": -18,
+          "from": 2,
+          "source_H": 189,
+          "source_out_masks": [
+            14,
+            52,
+            88,
+            98,
+            41,
+            69,
+            19
+          ],
+          "target_H": 171,
+          "target_out_masks": [
+            28,
+            37,
+            88,
+            98,
+            42,
+            69,
+            19
+          ],
+          "to": 1,
+          "triangle": [
+            0,
+            1,
+            4
+          ]
+        }
+      ],
+      "n": 7,
+      "ordinary_isomorphism_classes": 3,
+      "triangle_count_per_tournament": 14
+    }
+  ],
+  "source_sha256": "f1d984dfdbdc145b652fd447e65e3bca9a1e0be673cb664ff5451e634edae61e",
+  "status": "FINITE-EXACT",
+  "universe": "All labelled regular tournaments on vertex sets 0..n-1 for n=1,3,5,7; every directed triangle reversal"
+}

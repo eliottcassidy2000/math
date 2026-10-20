@@ -4,6 +4,12 @@
 **Added:** kind-pasteur-2026-03-06-S21
 **Corrected:** kind-pasteur-2026-03-06-S22 (alpha_1=3 achievable at n>=7)
 
+**Proof repair, 2026-10-20:** the former pairwise-overlap-to-common-vertex
+argument was invalid. The proof below now uses the later local strong-union
+argument of [THM-343-H7-impossible](THM-343-H7-impossible.md). The H=7
+conclusion survives; H=21 was subsequently excluded at all orders by
+[THM-1370-h-spectrum-omits-7-21-all-n](THM-1370-h-spectrum-omits-7-21-all-n.md).
+
 ## Statement
 
 For any tournament T on n vertices, H(T) = 7 is impossible. (Equivalently, 7 is a permanent gap in the set of achievable Hamiltonian path counts.)
@@ -26,7 +32,7 @@ The original claim that alpha_1(T) = 3 is impossible for ALL tournaments was **F
    For H=7: the ONLY solution is i_1=3, i_2=0 (i.e., alpha_1=3 and all 3 cycles pairwise conflict).
 
    **Case analysis:**
-   - If all 3 cycles pairwise share a vertex (i_2=0): The triples share a common vertex (proved for n<=6 exhaustively; at n>=7, pairwise vertex-sharing among 3 triples on 3 vertices each forces common vertex by pigeonhole on vertex overlap). The induced subtournament on the 5 spanned vertices has score (1,1,2,3,3) which always contains a 5-cycle. So alpha_1>=4, contradicting i_1=3.
+   - If all 3 cycles pairwise share a vertex (i_2=0), their union is strongly connected: each directed cycle is strong, and the shared vertices connect their reachability relations. Let S be their vertex union. The induced tournament on S is strong. If |S|<=4, it has at most two odd directed cycles. If |S|=5, Moon's cycle bound gives at least three triangles and one five-cycle. If |S|>=6, it gives at least |S|-2>=4 triangles. Every case contradicts exactly three odd cycles. This is the repaired proof of [THM-343-H7-impossible](THM-343-H7-impossible.md), not a common-intersection assertion.
    - If some pair of cycles doesn't share a vertex (i_2>=1): Then H >= 1 + 2*3 + 4*1 = 11 > 7.
 
    Either way, H != 7.
@@ -36,7 +42,7 @@ The original claim that alpha_1(T) = 3 is impossible for ALL tournaments was **F
    - n=7, 3000 c3=3 tournaments with all-conflicting triples: ALL have H=9 (alpha_1=4, i_2=0)
    - n=7, c3=3 tournaments with non-conflicting triples: alpha_1=3 occurs but H>=11
 
-4. **H=21 is also absent** through n=7 (exhaustive at n<=6, sampled at n=7). Whether H=21 is a permanent gap remains open.
+4. **H=21 is also absent at every order**, by the later [THM-1370-h-spectrum-omits-7-21-all-n](THM-1370-h-spectrum-omits-7-21-all-n.md). Whether 7 and 21 are the only missing positive odd counts remains open.
 
 ## Scripts
 
@@ -50,4 +56,4 @@ The original claim that alpha_1(T) = 3 is impossible for ALL tournaments was **F
 
 ## Connection
 
-This addresses the "converse of Redei's theorem" (which odd integers arise as H(T)?), connecting to INV-052 (Mitrovic-Stojadinovic). The gap at H=7 is the FIRST non-trivial unachievable odd integer. Whether H=21 is also a permanent gap remains open (OPEN-Q-019).
+This addresses the "converse of Redei's theorem" (which odd integers arise as H(T)?), connecting to INV-052 (Mitrovic-Stojadinovic). The gap at H=7 is the FIRST non-trivial unachievable odd integer. The former OPEN-Q-019 question about H=21 has been resolved by the later theorem cited above; global spectrum completeness remains open.

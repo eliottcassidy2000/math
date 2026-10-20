@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "finite_bases": [
+    {
+      "atom": 0,
+      "small_contexts": 77
+    },
+    {
+      "atom": 1,
+      "small_contexts": 77
+    },
+    {
+      "atom": 2,
+      "small_contexts": 77
+    },
+    {
+      "atom": 3,
+      "small_contexts": 77
+    },
+    {
+      "atom": 4,
+      "small_contexts": 77
+    },
+    {
+      "atom": 5,
+      "small_contexts": 77
+    }
+  ],
+  "sole_repaired_hostile": [
+    {
+      "atom": 0,
+      "A": [
+        30,
+        12,
+        24,
+        16,
+        2
+      ],
+      "original_flags": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "repair": [
+        0,
+        2,
+        3,
+        4,
+        1
+      ]
+    }
+  ],
+  "parametric_index_checks": 408,
+  "scope": "six atoms; 77 small context presentations each; proof table m>=7"
+}

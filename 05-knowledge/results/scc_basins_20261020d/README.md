@@ -13,6 +13,13 @@ The incoming, independently audited theorem gives exactly `D_2(z)=z^4`.
 **OPEN:** black-core connectivity for arbitrary tournaments, and the
 existence or exclusion of a genuine mixed-to-mixed blue bridge.
 
+**Subsequent continuation:** [spectrum_basins_20261020e](../spectrum_basins_20261020e/README.md)
+connects all feedback inventories in this golden language, normalizes every
+strong five-vertex end atom with a source context, and supplies black
+detours around every blue line at a nonstrong mixed source. The remaining
+blue-bridge question has two strong endpoints. The fixed-inventory results
+below remain valid components of the stronger proof.
+
 ## 1. Connecting terminal basins by actual black paths
 
 Write `A -> B` for an ordered SCC join and R4 for the unique strong
@@ -286,10 +293,10 @@ The optional `interior_blue_probe.py`
 is an affine discovery survey for nonempty context sizes `1<=m<=6`,
 `1<=k<=14`; its finite absences are not the universal proof.
 
-The next connectivity obligations are precise: connect different feedback
-inventories; normalize terminal SCCs beyond `{1,C3,R4}`; and repair blue
-boundary cases with larger outer SCCs of low connectivity. The entire
-singleton-padded mixed family is now covered. The higher-deficit
+The continuation linked above resolves different feedback inventories and
+arbitrary outer-SCC blue boundary cases. Remaining connectivity obligations
+are normalization of arbitrary terminal SCCs and blue lines with two strong
+endpoints. The higher-deficit
 counting problem now has finite unknown strong-atom polynomials, but
 counting alone still loses destinations of Hamiltonian-path complements.
 No genuine mixed-to-mixed blue bridge or global connectivity proof has

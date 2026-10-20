@@ -1,0 +1,298 @@
+{
+  "universe": "all fixed-path strong presentations of orders 4..7",
+  "middles": [
+    [],
+    [
+      0
+    ],
+    [
+      2,
+      4,
+      1
+    ]
+  ],
+  "total_literal_controls": 95193,
+  "records": [
+    {
+      "order": 4,
+      "classes": {
+        "triangle": 2,
+        "same_endpoint": 2,
+        "five": 1
+      },
+      "maximum_recursion_depth": 0
+    },
+    {
+      "order": 5,
+      "classes": {
+        "triangle": 8,
+        "same_endpoint": 40,
+        "ear": 1,
+        "five": 1
+      },
+      "maximum_recursion_depth": 0
+    },
+    {
+      "order": 6,
+      "classes": {
+        "triangle": 24,
+        "same_endpoint": 874,
+        "ear": 3,
+        "five": 2
+      },
+      "maximum_recursion_depth": 1
+    },
+    {
+      "order": 7,
+      "classes": {
+        "triangle": 73,
+        "same_endpoint": 30690,
+        "ear": 7,
+        "five": 3
+      },
+      "maximum_recursion_depth": 1
+    }
+  ],
+  "examples": {
+    "triangle": {
+      "B": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "middle": [],
+      "certificate": {
+        "kind": "triangle",
+        "triangle": 1
+      },
+      "paths": [
+        [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          4
+        ],
+        [
+          6,
+          0,
+          1,
+          2,
+          3,
+          5,
+          7,
+          4
+        ],
+        [
+          6,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7
+        ]
+      ]
+    },
+    "same_endpoint": {
+      "B": [
+        10,
+        4,
+        9,
+        2
+      ],
+      "middle": [],
+      "certificate": {
+        "kind": "same_endpoint",
+        "path": [
+          1,
+          2,
+          0,
+          3
+        ]
+      },
+      "paths": [
+        [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          4,
+          7
+        ],
+        [
+          1,
+          2,
+          3,
+          5,
+          6,
+          4,
+          7,
+          0
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0
+        ]
+      ]
+    },
+    "five": {
+      "B": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "middle": [],
+      "certificate": {
+        "kind": "five",
+        "start": 0,
+        "depth": 0,
+        "k": 1
+      },
+      "paths": [
+        [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          4
+        ],
+        [
+          7,
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          4
+        ],
+        [
+          4,
+          7,
+          0,
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        [
+          4,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          5
+        ],
+        [
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ]
+    },
+    "ear": {
+      "B": [
+        14,
+        12,
+        24,
+        16,
+        3
+      ],
+      "middle": [],
+      "certificate": {
+        "kind": "ear",
+        "start": 0,
+        "depth": 0
+      },
+      "paths": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          5
+        ],
+        [
+          7,
+          8,
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          9,
+          5
+        ],
+        [
+          7,
+          8,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          9
+        ]
+      ]
+    }
+  },
+  "family_controls": {
+    "arbitrary_V_controls": 6600,
+    "deep_recursion": [
+      {
+        "order": 4,
+        "depth": 0
+      },
+      {
+        "order": 6,
+        "depth": 1
+      },
+      {
+        "order": 8,
+        "depth": 2
+      },
+      {
+        "order": 10,
+        "depth": 3
+      },
+      {
+        "order": 12,
+        "depth": 4
+      }
+    ]
+  }
+}

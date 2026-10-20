@@ -37,7 +37,13 @@ Key sub-facts:
 
 **Step 4.** At n = 7, every tournament with exactly 3 directed odd cycles has Ω ≠ K₃.
 
-*Proof:* Exhaustive enumeration of all 2^21 = 2,097,152 tournaments on 7 vertices. Found 3360 tournaments with exactly 3 directed odd cycles (all 3-cycles, t₅ = t₇ = 0). In ALL 3360 cases, at least one pair of triangles is vertex-disjoint. The conflict graph is always P₃ (path on 3 vertices), giving I(P₃, 2) = 15 ≠ 7.
+*Proof:* Exhaustive enumeration of all 2^21 = 2,097,152 tournaments on 7 vertices. Found 3360 tournaments with exactly 3 directed odd cycles (all 3-cycles, t₅ = t₇ = 0). In ALL 3360 cases, at least one pair of triangles is vertex-disjoint. The conflict graph is K₂ disjoint-union K₁, giving I(x)=(1+2x)(1+x)=1+3x+2x² and I(2)=15 ≠ 7.
+
+**Correction 2026-10-20:** this paragraph formerly called the graph P₃ and
+gave I(P₃,2)=15. In fact I(P₃,2)=11. The correct K₂ disjoint-union K₁
+configuration is already recorded in the later
+[THM-343-H7-impossible](THM-343-H7-impossible.md); the H=7 exclusion is
+unchanged. The small census quoted here is inherited, not newly rerun.
 
 **Step 5.** For n ≥ 8, H(T) ≠ 7.
 
