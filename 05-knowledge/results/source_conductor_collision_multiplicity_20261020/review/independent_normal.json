@@ -1,0 +1,250 @@
+{
+  "checks": 125,
+  "labels": [
+    "rank-two h=u - 1: collision quotient is C[y]/(c)",
+    "rank-two h=u - 1: direct collision length",
+    "rank-two h=u - 1: matrix norm square",
+    "rank-two h=u - 1: diagonal contamination exactly when ramification is present",
+    "rank-two h=u - 1: conductor even component",
+    "rank-two h=u - 1: conductor odd component",
+    "rank-two h=u**2 - 2*u + 1: collision quotient is C[y]/(c)",
+    "rank-two h=u**2 - 2*u + 1: direct collision length",
+    "rank-two h=u**2 - 2*u + 1: matrix norm square",
+    "rank-two h=u**2 - 2*u + 1: diagonal contamination exactly when ramification is present",
+    "rank-two h=u**2 - 2*u + 1: conductor even component",
+    "rank-two h=u**2 - 2*u + 1: conductor odd component",
+    "rank-two h=u**4 - 4*u**3 + 6*u**2 - 4*u + 1: collision quotient is C[y]/(c)",
+    "rank-two h=u**4 - 4*u**3 + 6*u**2 - 4*u + 1: direct collision length",
+    "rank-two h=u**4 - 4*u**3 + 6*u**2 - 4*u + 1: matrix norm square",
+    "rank-two h=u**4 - 4*u**3 + 6*u**2 - 4*u + 1: diagonal contamination exactly when ramification is present",
+    "rank-two h=u**4 - 4*u**3 + 6*u**2 - 4*u + 1: conductor even component",
+    "rank-two h=u**4 - 4*u**3 + 6*u**2 - 4*u + 1: conductor odd component",
+    "rank-two h=u: collision quotient is C[y]/(c)",
+    "rank-two h=u: direct collision length",
+    "rank-two h=u: matrix norm square",
+    "rank-two h=u: diagonal contamination exactly when ramification is present",
+    "rank-two h=u: conductor even component",
+    "rank-two h=u: conductor odd component",
+    "rank-two h=u**2: collision quotient is C[y]/(c)",
+    "rank-two h=u**2: direct collision length",
+    "rank-two h=u**2: matrix norm square",
+    "rank-two h=u**2: diagonal contamination exactly when ramification is present",
+    "rank-two h=u**2: conductor even component",
+    "rank-two h=u**2: conductor odd component",
+    "rank-two h=u**2 - 5*u + 4: collision quotient is C[y]/(c)",
+    "rank-two h=u**2 - 5*u + 4: direct collision length",
+    "rank-two h=u**2 - 5*u + 4: matrix norm square",
+    "rank-two h=u**2 - 5*u + 4: diagonal contamination exactly when ramification is present",
+    "rank-two h=u**2 - 5*u + 4: conductor even component",
+    "rank-two h=u**2 - 5*u + 4: conductor odd component",
+    "rank-two h=u**3 - 6*u**2 + 9*u - 4: collision quotient is C[y]/(c)",
+    "rank-two h=u**3 - 6*u**2 + 9*u - 4: direct collision length",
+    "rank-two h=u**3 - 6*u**2 + 9*u - 4: matrix norm square",
+    "rank-two h=u**3 - 6*u**2 + 9*u - 4: diagonal contamination exactly when ramification is present",
+    "rank-two h=u**3 - 6*u**2 + 9*u - 4: conductor even component",
+    "rank-two h=u**3 - 6*u**2 + 9*u - 4: conductor odd component",
+    "coprime degrees 2,3",
+    "coprime degree curve 2,3: immersion",
+    "coprime degree curve 2,3: matrix graph equation",
+    "coprime degree curve 2,3: derivative quotient equals D-resultant",
+    "coprime degree curve 2,3: actual Fitting determinant",
+    "coprime degree curve 2,3: matrix norm square",
+    "coprime degree curve 2,3: Groebner length equals twice gap delta",
+    "coprime degree curve 2,3: D-resultant degree",
+    "coprime degree curve 2,3: no diagonal points",
+    "coprime degree curve 2,3: full coprime leading-degree gap count",
+    "coprime degrees 3,2",
+    "coprime degree curve 3,2: immersion",
+    "coprime degree curve 3,2: matrix graph equation",
+    "coprime degree curve 3,2: derivative quotient equals D-resultant",
+    "coprime degree curve 3,2: actual Fitting determinant",
+    "coprime degree curve 3,2: matrix norm square",
+    "coprime degree curve 3,2: Groebner length equals twice gap delta",
+    "coprime degree curve 3,2: D-resultant degree",
+    "coprime degree curve 3,2: no diagonal points",
+    "coprime degree curve 3,2: full coprime leading-degree gap count",
+    "coprime degrees 3,4",
+    "coprime degree curve 3,4: immersion",
+    "coprime degree curve 3,4: matrix graph equation",
+    "coprime degree curve 3,4: derivative quotient equals D-resultant",
+    "coprime degree curve 3,4: actual Fitting determinant",
+    "coprime degree curve 3,4: matrix norm square",
+    "coprime degree curve 3,4: Groebner length equals twice gap delta",
+    "coprime degree curve 3,4: D-resultant degree",
+    "coprime degree curve 3,4: no diagonal points",
+    "coprime degree curve 3,4: full coprime leading-degree gap count",
+    "coprime degrees 3,5",
+    "coprime degree curve 3,5: immersion",
+    "coprime degree curve 3,5: matrix graph equation",
+    "coprime degree curve 3,5: derivative quotient equals D-resultant",
+    "coprime degree curve 3,5: actual Fitting determinant",
+    "coprime degree curve 3,5: matrix norm square",
+    "coprime degree curve 3,5: Groebner length equals twice gap delta",
+    "coprime degree curve 3,5: D-resultant degree",
+    "coprime degree curve 3,5: no diagonal points",
+    "coprime degree curve 3,5: full coprime leading-degree gap count",
+    "coprime degrees 4,3",
+    "coprime degree curve 4,3: immersion",
+    "coprime degree curve 4,3: matrix graph equation",
+    "coprime degree curve 4,3: derivative quotient equals D-resultant",
+    "coprime degree curve 4,3: actual Fitting determinant",
+    "coprime degree curve 4,3: matrix norm square",
+    "coprime degree curve 4,3: Groebner length equals twice gap delta",
+    "coprime degree curve 4,3: D-resultant degree",
+    "coprime degree curve 4,3: no diagonal points",
+    "coprime degree curve 4,3: full coprime leading-degree gap count",
+    "coprime degrees 5,2",
+    "coprime degree curve 5,2: immersion",
+    "coprime degree curve 5,2: matrix graph equation",
+    "coprime degree curve 5,2: derivative quotient equals D-resultant",
+    "coprime degree curve 5,2: actual Fitting determinant",
+    "coprime degree curve 5,2: matrix norm square",
+    "coprime degree curve 5,2: Groebner length equals twice gap delta",
+    "coprime degree curve 5,2: D-resultant degree",
+    "coprime degree curve 5,2: no diagonal points",
+    "coprime degree curve 5,2: full coprime leading-degree gap count",
+    "coprime degrees 5,3",
+    "coprime degree curve 5,3: immersion",
+    "coprime degree curve 5,3: matrix graph equation",
+    "coprime degree curve 5,3: derivative quotient equals D-resultant",
+    "coprime degree curve 5,3: actual Fitting determinant",
+    "coprime degree curve 5,3: matrix norm square",
+    "coprime degree curve 5,3: Groebner length equals twice gap delta",
+    "coprime degree curve 5,3: D-resultant degree",
+    "coprime degree curve 5,3: no diagonal points",
+    "coprime degree curve 5,3: full coprime leading-degree gap count",
+    "requested node: explicitly not Keller",
+    "requested node: relation",
+    "requested node: raw graph derivative contains nonconstant Jacobian",
+    "requested node: all slices immersed",
+    "requested node: collision length two",
+    "requested node: transverse branch tangents",
+    "base-change hostile: graph equation",
+    "base-change hostile: global conductor generator x",
+    "base-change hostile: nonreduced abstract special fiber",
+    "base-change hostile: nonfinite collision length after loss of primitivity",
+    "graph rescaling -1: norm scales by scalar^n",
+    "graph rescaling 2: norm scales by scalar^n",
+    "graph rescaling 3: norm scales by scalar^n"
+  ],
+  "records": [
+    {
+      "collision_length": 2,
+      "conductor": "(y - 1)*(y + 1)",
+      "delta_direct": 1,
+      "family": "rank-two h=u - 1"
+    },
+    {
+      "collision_length": 4,
+      "conductor": "(y - 1)**2*(y + 1)**2",
+      "delta_direct": 2,
+      "family": "rank-two h=u**2 - 2*u + 1"
+    },
+    {
+      "collision_length": 8,
+      "conductor": "(y - 1)**4*(y + 1)**4",
+      "delta_direct": 4,
+      "family": "rank-two h=u**4 - 4*u**3 + 6*u**2 - 4*u + 1"
+    },
+    {
+      "collision_length": 2,
+      "conductor": "y**2",
+      "delta_direct": 1,
+      "family": "rank-two h=u"
+    },
+    {
+      "collision_length": 4,
+      "conductor": "y**4",
+      "delta_direct": 2,
+      "family": "rank-two h=u**2"
+    },
+    {
+      "collision_length": 4,
+      "conductor": "(y - 2)*(y - 1)*(y + 1)*(y + 2)",
+      "delta_direct": 2,
+      "family": "rank-two h=u**2 - 5*u + 4"
+    },
+    {
+      "collision_length": 6,
+      "conductor": "(y - 2)*(y - 1)**2*(y + 1)**2*(y + 2)",
+      "delta_direct": 3,
+      "family": "rank-two h=u**3 - 6*u**2 + 9*u - 4"
+    },
+    {
+      "collision_length": 2,
+      "conductor": "y**2 + 1",
+      "delta_direct": 1,
+      "family": "coprime degree curve 2,3",
+      "gaps": [
+        1
+      ]
+    },
+    {
+      "collision_length": 2,
+      "conductor": "y**2 + y + 1",
+      "delta_direct": 1,
+      "family": "coprime degree curve 3,2",
+      "gaps": [
+        1
+      ]
+    },
+    {
+      "collision_length": 6,
+      "conductor": "(y + 1)**2*(y**2 - y + 1)**2",
+      "delta_direct": 3,
+      "family": "coprime degree curve 3,4",
+      "gaps": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "collision_length": 8,
+      "conductor": "(y**2 - y + 1)*(y**2 + y + 1)*(y**4 - y**2 + 1)",
+      "delta_direct": 4,
+      "family": "coprime degree curve 3,5",
+      "gaps": [
+        1,
+        2,
+        4,
+        7
+      ]
+    },
+    {
+      "collision_length": 6,
+      "conductor": "(y**2 + 1)*(y**4 + 1)",
+      "delta_direct": 3,
+      "family": "coprime degree curve 4,3",
+      "gaps": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "collision_length": 4,
+      "conductor": "y**4 + 2*y**3 + 4*y**2 + 3*y + 1",
+      "delta_direct": 2,
+      "family": "coprime degree curve 5,2",
+      "gaps": [
+        1,
+        3
+      ]
+    },
+    {
+      "collision_length": 8,
+      "conductor": "y**8 + 3*y**6 + 4*y**4 + 2*y**2 + 1",
+      "delta_direct": 4,
+      "family": "coprime degree curve 5,3",
+      "gaps": [
+        1,
+        2,
+        4,
+        7
+      ]
+    }
+  ],
+  "scope": "Finite exact controls only. No noninvertible Keller map or conjecture closure.",
+  "status": "PASS"
+}
