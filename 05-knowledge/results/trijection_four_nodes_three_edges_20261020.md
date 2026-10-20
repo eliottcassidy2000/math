@@ -19,14 +19,31 @@ line, and its relation to the owner's `F = S + U` triplet `{p, p^3, p^2qr}`.
   which this note realises exactly on the graph side (§4). No map from divisors to tournaments is claimed.
 - **NOT CLAIMED**: any Collatz statement. The Camion–Busch note already proved that no uniform
   isomorphism between Collatz and a tournament `Pi_1` sentence exists.
+- **CONCURRENT WORK, first-pushed today and credited.** The same owner prompt ran in parallel.
+  [trijection_reset_20261020](trijection_reset_20261020/README.md) (commit 44ff7e2d37) proves the
+  line case of Theorem 1: marked pairs `(T, P)` `<->` simple graphs on the ordered set `[n-1]` `<->`
+  tournaments on ordered `[n-1]`, `|M_n| = 2^C(n-1,2)`, with the fibre `H/|Aut|` from
+  [LEM-003](../../01-canon/theorems/LEM-003-aut-acts-freely-on-ham-paths.md), the eight `n = 4` rows,
+  the free carrier `13,14,24`, and the verdict that the three graph types, the three prime shapes and the
+  three converse-merged tournament classes are distinct quotients. [tournament_graph_trijections_20261020](tournament_graph_trijections_20261020/README.md)
+  (commit ae23c720da) treats observer charts and cut quotients, a different object, and inherits with
+  [defect_boundary_20261020/web.md §4](defect_boundary_20261020/web.md) the `12/4/4` census and the
+  distinction between complementation `C` and tetrahedral opposition `J`. This note was written before
+  reading them and is kept for what they do not contain: the **cycle and star quotients** of Theorem 1
+  with the closed form and the OEIS check, Theorem 2's `C(n-1,2) = n-1` reading and the index-2 chain,
+  and Theorem 3's exact-involution law `H(T*) = 6 - H(T)`, `T** = T`, `c_3 + s = 2`. The line case and the
+  `12/4/4` facts below are restated as inherited controls, not claimed.
 
 ## 0. Inheritance and board
 
 - Closest proved mechanism: tetrahedral duality on 4-tournaments,
   [Camion–Busch note §6.3](camion_busch_gaps_polyhedra_collatz_20261002.md) (`c_3(T) = #sources + #sinks
-  of T*`, transitive 24 `<->` strong 24, middle 16 fixed as a class), and the Triangle foundation
-  ([everything-is-the-triangle](../../07-reflections/everything-is-the-triangle.md): a tournament with a
-  linear order is a binary filling of the staircase `delta_{n-2}` above the superdiagonal).
+  of T*`, transitive 24 `<->` strong 24, middle 16 fixed as a class); the fixed-path cube of
+  [THM-1430 §1–3](../../01-canon/theorems/THM-1430-the-tiling-class-metagraph-dictionary-and-which-tricks-pay.md)
+  with [LEM-003](../../01-canon/theorems/LEM-003-aut-acts-freely-on-ham-paths.md); the Triangle
+  foundation ([everything-is-the-triangle](../../07-reflections/everything-is-the-triangle.md): a tournament
+  with a linear order is a binary filling of the staircase `delta_{n-2}` above the superdiagonal); and the
+  concurrent line-case packet [trijection_reset_20261020](trijection_reset_20261020/graph_audit.md).
 - Canonical hostile: `P4` and `K3+K1` have the same independence polynomial `(1+x)(1+3x)`
   (Camion–Busch §1), so equal counts never certify equal structure; and MISTAKE-529 (a repeated numeral
   and a carrier switch were once read as a Lawvere bridge). Both are applied in §4.
@@ -71,10 +88,11 @@ on directed Hamiltonian paths of `K_n`, on directed `(n-1)`-cycles, and on out-s
 in-stars), so marked types are orbits of the stabiliser `A_X` on the `2^C(n-1,2)` orientations of the
 complement.
 
-*Line.* The stabiliser of a directed path is trivial (an automorphism fixing a directed Hamiltonian path
-fixes every vertex), so `lines(n) = 2^C(n-1,2)`. Writing the path as `v_1 -> ... -> v_n`, the complementary
-pairs `{v_i, v_j}` with `j >= i+2` correspond bijectively to the pairs `{i, j-1}` of `[n-1]`; this is the
-staircase `delta_{n-2}` read as the upper triangle of an `(n-1) x (n-1)` matrix, i.e. `Tour(n-1)`.
+*Line (inherited: LEM-003 and trijection_reset_20261020, restated).* The stabiliser of a directed path is
+trivial (an automorphism fixing a directed Hamiltonian path fixes every vertex), so `lines(n) = 2^C(n-1,2)`.
+Writing the path as `v_1 -> ... -> v_n`, the complementary pairs `{v_i, v_j}` with `j >= i+2` correspond
+bijectively to the pairs `{i, j-1}` of `[n-1]`; this is the staircase `delta_{n-2}` read as the upper
+triangle of an `(n-1) x (n-1)` matrix, i.e. `Tour(n-1)`.
 
 *Cycle + solo.* Put the directed cycle on `Z_{n-1}` as `i -> i+1` with solo `v`. Define `T'` on `Z_{n-1}`
 by keeping every non-cycle pair of `T` and orienting `{i, i+1}` as `i -> i+1` iff `v -> i` in `T`. This is a
@@ -149,9 +167,10 @@ Write `H` for the number of directed Hamiltonian paths, `c_3` for the number of 
    tetrahedron, and satisfies `c_3(T*) = s(T)`, `s(T*) = c_3(T)`, `H(T*) = 6 - H(T)`. On types it swaps
    `TT4 <-> strong` and preserves the class of the two cyclic-triangle types; the converse swaps those two
    and fixes `TT4` and `strong`. Duality and converse generate a Klein four-group on the four types.
-3. On the 20 labelled 3-edge graphs the edge map of duality is the opposite-edge map; it equals
-   complementation on each of the 8 triangles and stars and differs from it on each of the 12 paths,
-   where `P4^opp` shares exactly two edges with `P4`.
+3. On the 20 labelled 3-edge graphs the edge map of duality is the opposite-edge map `J` of
+   [defect_boundary_20261020/web.md §4](defect_boundary_20261020/web.md), which already separates `J` from
+   complementation `C`; the refinement here is quantitative: `J = C` on each of the 8 triangles and stars,
+   and `J != C` on every one of the 12 paths, where `P4^opp` shares exactly two edges with `P4`.
 
 *Proof.* (1) `c_3 = C(4,3) - sum_v C(s_v,2)` (Kendall–Babington Smith), and `C(x,2) - x + 1 = (x-1)(x-2)/2`
 equals `[x in {0,3}]` for `0 <= x <= 3`, so `c_3 + s = 4 - sum_v (s_v - 1) = 4 - (6 - 4) = 2`. The odd-cycle
@@ -202,7 +221,9 @@ Connection to `F = S + U` (ANALOGY):
   and a factor-2 cocycle between `p^3` and `p^2qr`. The divisor lattice offers none (Camion–Busch §7:
   no factor-2 cocycle between 3 and 5 at 60);
 - cheapest decisive test: exhibit such a statistic, or stop. This note stops; the status stays ANALOGY,
-  as in Camion–Busch §7.
+  as in Camion–Busch §7 and as first pushed today by trijection_reset_20261020 ("distinct quotients;
+  equality of their counts does not provide an incidence-preserving identification"). What this note adds
+  to that verdict is the exact group-theoretic form of the "halving/doubling" on the graph side.
 
 ## 5. Open and next
 
