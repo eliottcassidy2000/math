@@ -1,0 +1,301 @@
+{
+  "status": "PASS",
+  "checks": 3945,
+  "scope": "Permutation identities exact; eigenvalue comparisons numerical with tolerances1e-10 and1e-9; the general bounds are proved in the note",
+  "rows": [
+    {
+      "D": 5,
+      "lazy_gap": 0.1433307103811745,
+      "proved_lower_bound": 0.021593218925782892,
+      "forward_spectral_radius": 0.8090169943749487
+    },
+    {
+      "D": 7,
+      "lazy_gap": 0.10725156434611915,
+      "proved_lower_bound": 0.011765943691914577,
+      "forward_spectral_radius": 0.7138606336094573
+    },
+    {
+      "D": 11,
+      "lazy_gap": 0.13635371474540614,
+      "proved_lower_bound": 0.004960827099025587,
+      "forward_spectral_radius": 0.6692042709688425
+    },
+    {
+      "D": 13,
+      "lazy_gap": 0.10289719060604519,
+      "proved_lower_bound": 0.00357949919833719,
+      "forward_spectral_radius": 0.6692723474126278
+    },
+    {
+      "D": 17,
+      "lazy_gap": 0.09848387727793018,
+      "proved_lower_bound": 0.0021102428311138813,
+      "forward_spectral_radius": 0.7002451158720788
+    },
+    {
+      "D": 19,
+      "lazy_gap": 0.08768591207869092,
+      "proved_lower_bound": 0.0016932111968551663,
+      "forward_spectral_radius": 0.688098680656404
+    },
+    {
+      "D": 23,
+      "lazy_gap": 0.10720536809045222,
+      "proved_lower_bound": 0.001158834770381272,
+      "forward_spectral_radius": 0.7280276609368058
+    },
+    {
+      "D": 25,
+      "lazy_gap": 0.0934421810821694,
+      "proved_lower_bound": 0.0009817762147302778,
+      "forward_spectral_radius": 0.8090169943749445
+    },
+    {
+      "D": 29,
+      "lazy_gap": 0.10281250347729898,
+      "proved_lower_bound": 0.0007306076340597912,
+      "forward_spectral_radius": 0.6805223836951098
+    },
+    {
+      "D": 31,
+      "lazy_gap": 0.08343634623309581,
+      "proved_lower_bound": 0.0006396893358595469,
+      "forward_spectral_radius": 0.7244574639731917
+    },
+    {
+      "D": 35,
+      "lazy_gap": 0.09144844444119127,
+      "proved_lower_bound": 0.0005022003562928232,
+      "forward_spectral_radius": 0.8090169943749487
+    },
+    {
+      "D": 37,
+      "lazy_gap": 0.08839551224799647,
+      "proved_lower_bound": 0.00044950280163411055,
+      "forward_spectral_radius": 0.6735226623479709
+    },
+    {
+      "D": 41,
+      "lazy_gap": 0.09179036273826624,
+      "proved_lower_bound": 0.0003662367568641086,
+      "forward_spectral_radius": 0.6698466421729737
+    },
+    {
+      "D": 43,
+      "lazy_gap": 0.084138037080279,
+      "proved_lower_bound": 0.00033301974765280636,
+      "forward_spectral_radius": 0.7314373476653865
+    },
+    {
+      "D": 47,
+      "lazy_gap": 0.093064960417238,
+      "proved_lower_bound": 0.0002788284951631219,
+      "forward_spectral_radius": 0.7035661793946302
+    },
+    {
+      "D": 49,
+      "lazy_gap": 0.08815093667043239,
+      "proved_lower_bound": 0.000256562068023559,
+      "forward_spectral_radius": 0.7138606336094565
+    },
+    {
+      "D": 53,
+      "lazy_gap": 0.08546431043835145,
+      "proved_lower_bound": 0.00021934074957759495,
+      "forward_spectral_radius": 0.6853592005296325
+    },
+    {
+      "D": 55,
+      "lazy_gap": 0.09150903116697018,
+      "proved_lower_bound": 0.00020369577035780594,
+      "forward_spectral_radius": 0.8090169943749478
+    },
+    {
+      "D": 59,
+      "lazy_gap": 0.08395152635245073,
+      "proved_lower_bound": 0.00017703749343321462,
+      "forward_spectral_radius": 0.6831980579086833
+    },
+    {
+      "D": 61,
+      "lazy_gap": 0.08401520122197881,
+      "proved_lower_bound": 0.00016562888704409223,
+      "forward_spectral_radius": 0.6765345271195993
+    },
+    {
+      "D": 65,
+      "lazy_gap": 0.07513175237652114,
+      "proved_lower_bound": 0.00014588641507348033,
+      "forward_spectral_radius": 0.8090169943749501
+    },
+    {
+      "D": 67,
+      "lazy_gap": 0.08426866528605126,
+      "proved_lower_bound": 0.00013731306181568448,
+      "forward_spectral_radius": 0.6618871789033371
+    },
+    {
+      "D": 71,
+      "lazy_gap": 0.08675610959661428,
+      "proved_lower_bound": 0.000122286810157974,
+      "forward_spectral_radius": 0.7434132662381845
+    },
+    {
+      "D": 73,
+      "lazy_gap": 0.07373165729178754,
+      "proved_lower_bound": 0.00011568203329350694,
+      "forward_spectral_radius": 0.7561966631377054
+    },
+    {
+      "D": 77,
+      "lazy_gap": 0.08108777483074991,
+      "proved_lower_bound": 0.0001039817970564608,
+      "forward_spectral_radius": 0.7242327454634946
+    },
+    {
+      "D": 79,
+      "lazy_gap": 0.08219543574703747,
+      "proved_lower_bound": 9.878628079075474e-05,
+      "forward_spectral_radius": 0.6764580333506084
+    },
+    {
+      "D": 83,
+      "lazy_gap": 0.08287066379009667,
+      "proved_lower_bound": 8.949858501087392e-05,
+      "forward_spectral_radius": 0.69558945694755
+    },
+    {
+      "D": 85,
+      "lazy_gap": 0.07789702179905134,
+      "proved_lower_bound": 8.533833169412344e-05,
+      "forward_spectral_radius": 0.8090169943749503
+    },
+    {
+      "D": 89,
+      "lazy_gap": 0.07449977900890903,
+      "proved_lower_bound": 7.784296403863049e-05,
+      "forward_spectral_radius": 0.6821850757322959
+    },
+    {
+      "D": 91,
+      "lazy_gap": 0.0798018798980521,
+      "proved_lower_bound": 7.446024058601276e-05,
+      "forward_spectral_radius": 0.7138606336094541
+    },
+    {
+      "D": 95,
+      "lazy_gap": 0.07995177854185032,
+      "proved_lower_bound": 6.83241494132949e-05,
+      "forward_spectral_radius": 0.8090169943749491
+    },
+    {
+      "D": 97,
+      "lazy_gap": 0.07376622259420651,
+      "proved_lower_bound": 6.553668007151046e-05,
+      "forward_spectral_radius": 0.6998640910673155
+    },
+    {
+      "D": 101,
+      "lazy_gap": 0.08086018753613355,
+      "proved_lower_bound": 6.045008957517661e-05,
+      "forward_spectral_radius": 0.7286620276125838
+    },
+    {
+      "D": 103,
+      "lazy_gap": 0.07799550977548841,
+      "proved_lower_bound": 5.812602625331757e-05,
+      "forward_spectral_radius": 0.6732599315457051
+    },
+    {
+      "D": 107,
+      "lazy_gap": 0.08122141865887655,
+      "proved_lower_bound": 5.386261189817762e-05,
+      "forward_spectral_radius": 0.6972616115557972
+    },
+    {
+      "D": 109,
+      "lazy_gap": 0.07753841762447244,
+      "proved_lower_bound": 5.1904678658856736e-05,
+      "forward_spectral_radius": 0.7005804819294175
+    },
+    {
+      "D": 113,
+      "lazy_gap": 0.07195648674978039,
+      "proved_lower_bound": 4.829597956762357e-05,
+      "forward_spectral_radius": 0.6822908133682636
+    },
+    {
+      "D": 115,
+      "lazy_gap": 0.08132619154958254,
+      "proved_lower_bound": 4.663114116162563e-05,
+      "forward_spectral_radius": 0.809016994374951
+    },
+    {
+      "D": 119,
+      "lazy_gap": 0.07944728166072301,
+      "proved_lower_bound": 4.3549677452073916e-05,
+      "forward_spectral_radius": 0.7138606336094521
+    },
+    {
+      "D": 121,
+      "lazy_gap": 0.07718174853321502,
+      "proved_lower_bound": 4.212223753677986e-05,
+      "forward_spectral_radius": 0.6692042709688435
+    },
+    {
+      "D": 125,
+      "lazy_gap": 0.07563921666429307,
+      "proved_lower_bound": 3.94701060619532e-05,
+      "forward_spectral_radius": 0.809016994374948
+    },
+    {
+      "D": 127,
+      "lazy_gap": 0.07518076598876455,
+      "proved_lower_bound": 3.8236993304334914e-05,
+      "forward_spectral_radius": 0.6883047118725347
+    },
+    {
+      "D": 131,
+      "lazy_gap": 0.07529181236759075,
+      "proved_lower_bound": 3.593800070998922e-05,
+      "forward_spectral_radius": 0.6921586307153514
+    },
+    {
+      "D": 133,
+      "lazy_gap": 0.07226030737655831,
+      "proved_lower_bound": 3.48654847317565e-05,
+      "forward_spectral_radius": 0.7138606336094581
+    },
+    {
+      "D": 137,
+      "lazy_gap": 0.07478630593670055,
+      "proved_lower_bound": 3.285961744843171e-05,
+      "forward_spectral_radius": 0.7020149032971001
+    },
+    {
+      "D": 139,
+      "lazy_gap": 0.0747258568698922,
+      "proved_lower_bound": 3.1920979686582285e-05,
+      "forward_spectral_radius": 0.7085825869223675
+    },
+    {
+      "D": 143,
+      "lazy_gap": 0.0760876589033177,
+      "proved_lower_bound": 3.0160449977313886e-05,
+      "forward_spectral_radius": 0.6995250848037217
+    },
+    {
+      "D": 145,
+      "lazy_gap": 0.07175165627461544,
+      "proved_lower_bound": 2.9334304875727055e-05,
+      "forward_spectral_radius": 0.8090169943749519
+    },
+    {
+      "D": 149,
+      "lazy_gap": 0.07333400311134564,
+      "proved_lower_bound": 2.7780679796778654e-05,
+      "forward_spectral_radius": 0.7195338714069377
+    }
+  ]
+}

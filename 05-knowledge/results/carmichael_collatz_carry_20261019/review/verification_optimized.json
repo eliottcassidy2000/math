@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "explicit_checks": 36397,
+  "kernel_integers": 799,
+  "core_prime_pairs": 4260,
+  "commutator_moduli": [
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    25,
+    29,
+    31,
+    35,
+    37,
+    41,
+    43,
+    47,
+    49,
+    53,
+    55,
+    59
+  ],
+  "mixed_words": 8166,
+  "native_integral_words": 35,
+  "Fourier_recurrence_cases": 1008,
+  "occupancy_vectors": 1084,
+  "primitive_mixed_shapes": [
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      11,
+      7
+    ]
+  ],
+  "repeated_necklace_hostile": {
+    "q": 4,
+    "p": 2,
+    "zero_words": 2,
+    "orbits": 1,
+    "primitive_orbits": 0
+  },
+  "scope": "finite exact controls; fixed-m asymptotic reviewed as conditional proof, not inferred computationally"
+}

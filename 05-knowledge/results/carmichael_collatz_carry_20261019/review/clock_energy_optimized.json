@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "checks": 3120,
+  "moduli": [
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    25,
+    29,
+    31,
+    35,
+    37,
+    41,
+    43,
+    47,
+    49,
+    53,
+    55,
+    59,
+    61,
+    65,
+    67,
+    71,
+    73,
+    77,
+    79
+  ],
+  "vectors_per_modulus": 20,
+  "phases": [
+    "1",
+    "i",
+    "-1",
+    "-i"
+  ],
+  "arithmetic": "Gaussian integers, no floating point",
+  "scope": "exact controls of algebraic comparison; sine spectral lower bound is proved by cyclic Fourier diagonalization"
+}

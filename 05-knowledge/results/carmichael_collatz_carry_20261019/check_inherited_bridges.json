@@ -1,0 +1,465 @@
+{
+  "affine_groups": [
+    {
+      "group_order": 20,
+      "modulus": 5,
+      "multiplier_order": 4
+    },
+    {
+      "group_order": 42,
+      "modulus": 7,
+      "multiplier_order": 6
+    },
+    {
+      "group_order": 110,
+      "modulus": 11,
+      "multiplier_order": 10
+    },
+    {
+      "group_order": 156,
+      "modulus": 13,
+      "multiplier_order": 12
+    },
+    {
+      "group_order": 272,
+      "modulus": 17,
+      "multiplier_order": 16
+    },
+    {
+      "group_order": 342,
+      "modulus": 19,
+      "multiplier_order": 18
+    },
+    {
+      "group_order": 253,
+      "modulus": 23,
+      "multiplier_order": 11
+    },
+    {
+      "group_order": 500,
+      "modulus": 25,
+      "multiplier_order": 20
+    },
+    {
+      "group_order": 812,
+      "modulus": 29,
+      "multiplier_order": 28
+    },
+    {
+      "group_order": 930,
+      "modulus": 31,
+      "multiplier_order": 30
+    },
+    {
+      "group_order": 840,
+      "modulus": 35,
+      "multiplier_order": 24
+    },
+    {
+      "group_order": 1332,
+      "modulus": 37,
+      "multiplier_order": 36
+    },
+    {
+      "group_order": 1640,
+      "modulus": 41,
+      "multiplier_order": 40
+    },
+    {
+      "group_order": 1806,
+      "modulus": 43,
+      "multiplier_order": 42
+    },
+    {
+      "group_order": 1081,
+      "modulus": 47,
+      "multiplier_order": 23
+    },
+    {
+      "group_order": 2058,
+      "modulus": 49,
+      "multiplier_order": 42
+    },
+    {
+      "group_order": 2756,
+      "modulus": 53,
+      "multiplier_order": 52
+    },
+    {
+      "group_order": 2200,
+      "modulus": 55,
+      "multiplier_order": 40
+    },
+    {
+      "group_order": 3422,
+      "modulus": 59,
+      "multiplier_order": 58
+    },
+    {
+      "group_order": 3660,
+      "modulus": 61,
+      "multiplier_order": 60
+    },
+    {
+      "group_order": 3120,
+      "modulus": 65,
+      "multiplier_order": 48
+    },
+    {
+      "group_order": 4422,
+      "modulus": 67,
+      "multiplier_order": 66
+    },
+    {
+      "group_order": 2485,
+      "modulus": 71,
+      "multiplier_order": 35
+    },
+    {
+      "group_order": 2628,
+      "modulus": 73,
+      "multiplier_order": 36
+    },
+    {
+      "group_order": 4620,
+      "modulus": 77,
+      "multiplier_order": 60
+    },
+    {
+      "group_order": 6162,
+      "modulus": 79,
+      "multiplier_order": 78
+    }
+  ],
+  "arbitrary_core_successors": {
+    "comparisons": 15352,
+    "examples": [
+      {
+        "all_one_prime_children": [],
+        "core": 21,
+        "gcd_core_lambda": 3,
+        "lambda": 6
+      },
+      {
+        "all_one_prime_children": [
+          17
+        ],
+        "core": 33,
+        "gcd_core_lambda": 1,
+        "lambda": 10
+      },
+      {
+        "all_one_prime_children": [
+          19,
+          31
+        ],
+        "core": 91,
+        "gcd_core_lambda": 1,
+        "lambda": 12
+      }
+    ]
+  },
+  "arbitrary_occupancy_instances": 5451,
+  "carry_necklaces": {
+    "hostiles": {
+      "3,1": [
+        {
+          "carry": 4,
+          "modulus": 5,
+          "word": "001",
+          "zero": false
+        },
+        {
+          "carry": 2,
+          "modulus": 5,
+          "word": "010",
+          "zero": false
+        },
+        {
+          "carry": 1,
+          "modulus": 5,
+          "word": "100",
+          "zero": false
+        }
+      ],
+      "4,2": [
+        {
+          "carry": 20,
+          "modulus": 7,
+          "word": "0011",
+          "zero": false
+        },
+        {
+          "carry": 14,
+          "modulus": 7,
+          "word": "0101",
+          "zero": true
+        },
+        {
+          "carry": 10,
+          "modulus": 7,
+          "word": "0110",
+          "zero": false
+        },
+        {
+          "carry": 11,
+          "modulus": 7,
+          "word": "1001",
+          "zero": false
+        },
+        {
+          "carry": 7,
+          "modulus": 7,
+          "word": "1010",
+          "zero": true
+        },
+        {
+          "carry": 5,
+          "modulus": 7,
+          "word": "1100",
+          "zero": false
+        }
+      ],
+      "5,3": [
+        {
+          "carry": 76,
+          "modulus": 5,
+          "word": "00111",
+          "zero": false
+        },
+        {
+          "carry": 58,
+          "modulus": 5,
+          "word": "01011",
+          "zero": false
+        },
+        {
+          "carry": 46,
+          "modulus": 5,
+          "word": "01101",
+          "zero": false
+        },
+        {
+          "carry": 38,
+          "modulus": 5,
+          "word": "01110",
+          "zero": false
+        },
+        {
+          "carry": 49,
+          "modulus": 5,
+          "word": "10011",
+          "zero": false
+        },
+        {
+          "carry": 37,
+          "modulus": 5,
+          "word": "10101",
+          "zero": false
+        },
+        {
+          "carry": 29,
+          "modulus": 5,
+          "word": "10110",
+          "zero": false
+        },
+        {
+          "carry": 31,
+          "modulus": 5,
+          "word": "11001",
+          "zero": false
+        },
+        {
+          "carry": 23,
+          "modulus": 5,
+          "word": "11010",
+          "zero": false
+        },
+        {
+          "carry": 19,
+          "modulus": 5,
+          "word": "11100",
+          "zero": false
+        }
+      ]
+    },
+    "nonempty_shapes": [
+      {
+        "clock": 1,
+        "necklaces": 1,
+        "p": 1,
+        "primitive_necklaces": 1,
+        "q": 2,
+        "zero_words": 2
+      },
+      {
+        "clock": -1,
+        "necklaces": 1,
+        "p": 2,
+        "primitive_necklaces": 1,
+        "q": 3,
+        "zero_words": 3
+      },
+      {
+        "clock": 7,
+        "necklaces": 1,
+        "p": 2,
+        "primitive_necklaces": 0,
+        "q": 4,
+        "zero_words": 2
+      },
+      {
+        "clock": 37,
+        "necklaces": 1,
+        "p": 3,
+        "primitive_necklaces": 0,
+        "q": 6,
+        "zero_words": 2
+      },
+      {
+        "clock": -17,
+        "necklaces": 1,
+        "p": 4,
+        "primitive_necklaces": 0,
+        "q": 6,
+        "zero_words": 3
+      },
+      {
+        "clock": 175,
+        "necklaces": 1,
+        "p": 4,
+        "primitive_necklaces": 0,
+        "q": 8,
+        "zero_words": 2
+      },
+      {
+        "clock": -217,
+        "necklaces": 1,
+        "p": 6,
+        "primitive_necklaces": 0,
+        "q": 9,
+        "zero_words": 3
+      },
+      {
+        "clock": 781,
+        "necklaces": 1,
+        "p": 5,
+        "primitive_necklaces": 0,
+        "q": 10,
+        "zero_words": 2
+      },
+      {
+        "clock": -139,
+        "necklaces": 1,
+        "p": 7,
+        "primitive_necklaces": 1,
+        "q": 11,
+        "zero_words": 11
+      },
+      {
+        "clock": 3367,
+        "necklaces": 1,
+        "p": 6,
+        "primitive_necklaces": 0,
+        "q": 12,
+        "zero_words": 2
+      },
+      {
+        "clock": -2465,
+        "necklaces": 1,
+        "p": 8,
+        "primitive_necklaces": 0,
+        "q": 12,
+        "zero_words": 3
+      },
+      {
+        "clock": 14197,
+        "necklaces": 1,
+        "p": 7,
+        "primitive_necklaces": 0,
+        "q": 14,
+        "zero_words": 2
+      },
+      {
+        "clock": -26281,
+        "necklaces": 1,
+        "p": 10,
+        "primitive_necklaces": 0,
+        "q": 15,
+        "zero_words": 3
+      },
+      {
+        "clock": 58975,
+        "necklaces": 1,
+        "p": 8,
+        "primitive_necklaces": 0,
+        "q": 16,
+        "zero_words": 2
+      }
+    ],
+    "words_checked": 131038
+  },
+  "distribution_DP_instances": 144,
+  "exact_checks": 424073,
+  "kernel_examples": [
+    {
+      "Fermat_liars": 1,
+      "N": 30,
+      "base2_passes": false,
+      "factorization": {
+        "2": 1,
+        "3": 1,
+        "5": 1
+      },
+      "kernel_index": 8,
+      "unit_count": 8
+    },
+    {
+      "Fermat_liars": 36,
+      "N": 91,
+      "base2_passes": false,
+      "factorization": {
+        "7": 1,
+        "13": 1
+      },
+      "kernel_index": 2,
+      "unit_count": 72
+    },
+    {
+      "Fermat_liars": 100,
+      "N": 341,
+      "base2_passes": true,
+      "factorization": {
+        "11": 1,
+        "31": 1
+      },
+      "kernel_index": 3,
+      "unit_count": 300
+    },
+    {
+      "Fermat_liars": 320,
+      "N": 561,
+      "base2_passes": true,
+      "factorization": {
+        "3": 1,
+        "11": 1,
+        "17": 1
+      },
+      "kernel_index": 1,
+      "unit_count": 320
+    },
+    {
+      "Fermat_liars": 768,
+      "N": 1105,
+      "base2_passes": true,
+      "factorization": {
+        "5": 1,
+        "13": 1,
+        "17": 1
+      },
+      "kernel_index": 1,
+      "unit_count": 768
+    }
+  ],
+  "scope": "FINITE-EXACT controls; proofs are in INHERITANCE_AND_BRIDGES.md"
+}

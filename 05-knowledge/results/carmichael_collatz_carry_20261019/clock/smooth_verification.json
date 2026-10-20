@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "scope": "Integer frequency distinctness exact; trigonometric energy checks numerical at tolerance1e-12, general theorem proved separately",
+  "cases": [
+    {
+      "D": 37,
+      "L": 1,
+      "rayleigh_quotient": 0.5,
+      "exact_upper_formula": 0.6344966234580266,
+      "coarse_upper_formula": 1.5709631000912185
+    },
+    {
+      "D": 101,
+      "L": 1,
+      "rayleigh_quotient": 0.5,
+      "exact_upper_formula": 0.5459239668224855,
+      "coarse_upper_formula": 1.5459957413516512
+    },
+    {
+      "D": 1009,
+      "L": 1,
+      "rayleigh_quotient": 0.5,
+      "exact_upper_formula": 0.5044226422980136,
+      "coarse_upper_formula": 1.5421644649557174
+    },
+    {
+      "D": 10007,
+      "L": 2,
+      "rayleigh_quotient": 0.31250044351054074,
+      "exact_upper_formula": 0.3148140709889668,
+      "coarse_upper_formula": 0.685403386874182
+    },
+    {
+      "D": 1000003,
+      "L": 3,
+      "rayleigh_quotient": 0.19822330581368702,
+      "exact_upper_formula": 0.19833642728146247,
+      "coarse_upper_formula": 0.38553147308127533
+    },
+    {
+      "D": 1000000007,
+      "L": 5,
+      "rayleigh_quotient": 0.09599364905424397,
+      "exact_upper_formula": 0.09599652807516837,
+      "coarse_upper_formula": 0.17134729869633217
+    },
+    {
+      "D": 1000000000001,
+      "L": 7,
+      "rayleigh_quotient": 0.055641769223859994,
+      "exact_upper_formula": 0.0556418485492595,
+      "coarse_upper_formula": 0.0963828554794742
+    },
+    {
+      "D": 1000000000000000003,
+      "L": 11,
+      "rayleigh_quotient": 0.0252653679546781,
+      "exact_upper_formula": 0.02526536802420831,
+      "coarse_upper_formula": 0.0428368246575059
+    }
+  ]
+}
