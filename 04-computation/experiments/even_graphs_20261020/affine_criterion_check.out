@@ -1,0 +1,4 @@
+n = 5: 32 pairs (P,h) over 2 odd subgroup classes, 24 with h of even order; U=C identity zero on 24 pairs; mismatches: 0
+n = 6: 164 pairs (P,h) over 4 odd subgroup classes, 132 with h of even order; U=C identity zero on 96 pairs; mismatches: 0
+   n = 6 brute-force switching-class fixed-point counts agree with the linear-algebra counts for 36 elements h
+n = 7: 376 pairs (P,h) over 6 odd subgroup classes, 284 with h of even order; U=C identity zero on 284 pairs; mismatches: 0

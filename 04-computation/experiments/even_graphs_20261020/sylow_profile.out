@@ -1,0 +1,48 @@
+
+=== n = 3 ===
+ p = 3: Sylow-p profile tournaments = even graphs? True
+    |P| = 3 types (((1, 1, 1), 1), ((3,), 2)): T 1  E 1  (odd graphs 1)
+ p = 5: Sylow-p profile tournaments = even graphs? True
+ p = 7: Sylow-p profile tournaments = even graphs? True
+
+=== n = 4 ===
+ p = 3: Sylow-p profile tournaments = even graphs? True
+    |P| = 3 types (((1, 1, 1, 1), 1), ((3, 1), 2)): T 2  E 2  (odd graphs 2)
+ p = 5: Sylow-p profile tournaments = even graphs? True
+ p = 7: Sylow-p profile tournaments = even graphs? True
+
+=== n = 5 ===
+ p = 3: Sylow-p profile tournaments = even graphs? True
+    |P| = 3 types (((1, 1, 1, 1, 1), 1), ((3, 1, 1), 2)): T 4  E 4  (odd graphs 8)
+ p = 5: Sylow-p profile tournaments = even graphs? True
+    |P| = 5 types (((1, 1, 1, 1, 1), 1), ((5,), 4)): T 1  E 1  (odd graphs 2)
+ p = 7: Sylow-p profile tournaments = even graphs? True
+
+=== n = 6 ===
+ p = 3: Sylow-p profile tournaments = even graphs? True
+    |P| = 3 types (((1, 1, 1, 1, 1, 1), 1), ((3, 1, 1, 1), 2)): T 10  E 10  (odd graphs 22)
+    |P| = 3 types (((1, 1, 1, 1, 1, 1), 1), ((3, 3), 2)): T 2  E 2  (odd graphs 4)
+    |P| = 9 types (((1, 1, 1, 1, 1, 1), 1), ((3, 1, 1, 1), 4), ((3, 3), 4)): T 1  E 1  (odd graphs 5)
+ p = 5: Sylow-p profile tournaments = even graphs? True
+    |P| = 5 types (((1, 1, 1, 1, 1, 1), 1), ((5, 1), 4)): T 2  E 2  (odd graphs 4)
+ p = 7: Sylow-p profile tournaments = even graphs? True
+
+=== n = 7 ===
+ p = 3: Sylow-p profile tournaments = even graphs? True
+    |P| = 3 types (((1, 1, 1, 1, 1, 1, 1), 1), ((3, 1, 1, 1, 1), 2)): T 40  E 40  (odd graphs 108)
+    |P| = 3 types (((1, 1, 1, 1, 1, 1, 1), 1), ((3, 3, 1), 2)): T 8  E 8  (odd graphs 12)
+    |P| = 9 types (((1, 1, 1, 1, 1, 1, 1), 1), ((3, 1, 1, 1, 1), 4), ((3, 3, 1), 4)): T 4  E 4  (odd graphs 16)
+ p = 5: Sylow-p profile tournaments = even graphs? True
+    |P| = 5 types (((1, 1, 1, 1, 1, 1, 1), 1), ((5, 1, 1), 4)): T 4  E 4  (odd graphs 14)
+ p = 7: Sylow-p profile tournaments = even graphs? True
+    |P| = 7 types (((1, 1, 1, 1, 1, 1, 1), 1), ((7,), 6)): T 2  E 2  (odd graphs 2)
+
+=== n = 8 ===
+ p = 3: Sylow-p profile tournaments = even graphs? True
+    |P| = 3 types (((1, 1, 1, 1, 1, 1, 1, 1), 1), ((3, 1, 1, 1, 1, 1), 2)): T 264  E 264  (odd graphs 664)
+    |P| = 3 types (((1, 1, 1, 1, 1, 1, 1, 1), 1), ((3, 3, 1, 1), 2)): T 32  E 32  (odd graphs 64)
+    |P| = 9 types (((1, 1, 1, 1, 1, 1, 1, 1), 1), ((3, 1, 1, 1, 1, 1), 4), ((3, 3, 1, 1), 4)): T 16  E 16  (odd graphs 80)
+ p = 5: Sylow-p profile tournaments = even graphs? True
+    |P| = 5 types (((1, 1, 1, 1, 1, 1, 1, 1), 1), ((5, 1, 1, 1), 4)): T 12  E 12  (odd graphs 48)
+ p = 7: Sylow-p profile tournaments = even graphs? True
+    |P| = 7 types (((1, 1, 1, 1, 1, 1, 1, 1), 1), ((7, 1), 6)): T 4  E 4  (odd graphs 4)

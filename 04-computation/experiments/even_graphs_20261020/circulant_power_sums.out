@@ -1,0 +1,9 @@
+p = 5: |K_max| = 1, types 1, traceless types 0, K_max-invariant types 1, nontrivial-stabiliser types 0; traceless == nontrivial-stabiliser? True; traceless == K_max-invariant? False
+p = 7: |K_max| = 3, types 2, traceless types 1, K_max-invariant types 1, nontrivial-stabiliser types 1; traceless == nontrivial-stabiliser? True; traceless == K_max-invariant? True
+p = 11: |K_max| = 5, types 4, traceless types 1, K_max-invariant types 1, nontrivial-stabiliser types 1; traceless == nontrivial-stabiliser? True; traceless == K_max-invariant? True
+p = 13: |K_max| = 3, types 6, traceless types 1, K_max-invariant types 1, nontrivial-stabiliser types 1; traceless == nontrivial-stabiliser? True; traceless == K_max-invariant? True
+p = 17: |K_max| = 1, types 16, traceless types 0, K_max-invariant types 16, nontrivial-stabiliser types 0; traceless == nontrivial-stabiliser? True; traceless == K_max-invariant? False
+p = 19: |K_max| = 9, types 30, traceless types 2, K_max-invariant types 1, nontrivial-stabiliser types 2; traceless == nontrivial-stabiliser? True; traceless == K_max-invariant? False
+p = 23: |K_max| = 11, types 94, traceless types 1, K_max-invariant types 1, nontrivial-stabiliser types 1; traceless == nontrivial-stabiliser? True; traceless == K_max-invariant? True
+p = 29: |K_max| = 7, types 586, traceless types 1, K_max-invariant types 1, nontrivial-stabiliser types 1; traceless == nontrivial-stabiliser? True; traceless == K_max-invariant? True
+p = 31: |K_max| = 15, types 1096, traceless types 5, K_max-invariant types 1, nontrivial-stabiliser types 5; traceless == nontrivial-stabiliser? True; traceless == K_max-invariant? False

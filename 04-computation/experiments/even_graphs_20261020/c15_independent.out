@@ -1,0 +1,9 @@
+n = 8, H = C15 with orbits 3+5+: pair orbits 4, objects 16; tau_T = 2, tau_E = 2 (graph types 12, odd 10)
+n = 9, H = C15 with orbits 3+5+1+: pair orbits 6, objects 64; tau_T = 8, tau_E = 8 (graph types 48, odd 40)
+n = 10, H = C15 with orbits 3+5+1+1+: pair orbits 9, objects 512; tau_T = 32, tau_E = 31 (graph types 238, odd 207)
+   odd type with 25 edges (K_{5,5} candidate), generators of Aut: 8 | degrees: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+   odd type with 25 edges (K_{5,5} candidate), generators of Aut: 5 | degrees: [0, 5, 5, 5, 5, 6, 6, 6, 6, 6]
+   odd type with 25 edges (K_{5,5} candidate), generators of Aut: 7 | degrees: [0, 0, 5, 5, 5, 7, 7, 7, 7, 7]
+   odd type with 25 edges (K_{5,5} candidate), generators of Aut: 5 | degrees: [4, 4, 4, 4, 4, 4, 4, 4, 9, 9]
+   odd type with 25 edges (K_{5,5} candidate), generators of Aut: 7 | degrees: [4, 4, 4, 4, 5, 5, 5, 5, 5, 9]
+   odd type with 25 edges (K_{5,5} candidate), generators of Aut: 7 | degrees: [3, 3, 3, 3, 3, 4, 4, 9, 9, 9]
