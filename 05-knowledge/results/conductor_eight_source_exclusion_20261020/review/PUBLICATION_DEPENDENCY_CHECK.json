@@ -1,0 +1,199 @@
+{
+  "dependency_count": 5,
+  "exact_dependency_hashes": {
+    "05-knowledge/results/conductor_eight_source_exclusion_20261020/CONDUCTOR_EIGHT_CLASSIFICATION.md": "493163f9017a20ff467b043773c5b52369793e4696108c0d089d1411ae14f764",
+    "05-knowledge/results/conductor_eight_source_exclusion_20261020/CUBIC_QUINTIC_ADDENDUM.md": "45882e7f43358ad7d3d9083c84a7b2f0712181ccb3a66b4e2e6a6b51e40cbeff",
+    "05-knowledge/results/constant_leading_conductor_six_exclusion_20261020/CONSTANT_LEADING_GLOBALIZATION.md": "4d96dda1adddbdd45033ecdbbed4769b1ea61d5a7b3dedb8784eeef5bfe27583",
+    "05-knowledge/results/low_delta_source_conductor_exclusion_20261020/LOW_DELTA_QUADRATIC_AND_RELATIVE_GLOBALIZATION.md": "82fcb171ad10bfd75058d722726d4ea0d709f9c802aff5695605b523287939f8",
+    "05-knowledge/results/quadratic_semigroup_keller_obstruction_20261020/QUADRATIC_SEMIGROUP_KELLER_OBSTRUCTION.md": "1c879295410b193ef62f50c2ad4ae6909c0524af2b8f5feb7bcee4dd6d3a217c"
+  },
+  "final_admin_cleanup_reviewed": true,
+  "only_nonidentical_copies": [
+    "CONDUCTOR_EIGHT_CLASSIFICATION.md",
+    "CUBIC_QUINTIC_ADDENDUM.md",
+    "review/AUDIT.md",
+    "review/CUBIC_QUINTIC_AUDIT.md",
+    "review/REVIEW_SUMMARY.json",
+    "review/CUBIC_QUINTIC_REVIEW_SUMMARY.json"
+  ],
+  "publication_lineage": [
+    {
+      "file": "CONDUCTOR_EIGHT_CLASSIFICATION.md",
+      "identical": false,
+      "publication_sha256": "493163f9017a20ff467b043773c5b52369793e4696108c0d089d1411ae14f764",
+      "source_sha256": "1470a8d6d5faa2cdcde92e4cb7cdfe6baa95a629d4c28842492af1a58fd77113"
+    },
+    {
+      "file": "CUBIC_QUINTIC_ADDENDUM.md",
+      "identical": false,
+      "publication_sha256": "45882e7f43358ad7d3d9083c84a7b2f0712181ccb3a66b4e2e6a6b51e40cbeff",
+      "source_sha256": "af7b6299733673fb558de377a6f14e61a14a57b2b170034a0a2b5c6f69b96075"
+    },
+    {
+      "file": "CONDUCTOR_TEN_SYNTHESIS.md",
+      "identical": true,
+      "publication_sha256": "4366ee86a86d4d8d435b18b4aa6ac886d89576b757fb76104fd07edea8270ee4",
+      "source_sha256": "4366ee86a86d4d8d435b18b4aa6ac886d89576b757fb76104fd07edea8270ee4"
+    },
+    {
+      "file": "verify_frontier.py",
+      "identical": true,
+      "publication_sha256": "61b3ea3091cecdf7f76bf786ac98ae5ae1dcc1d10d2f49587f55acdddf5e077f",
+      "source_sha256": "61b3ea3091cecdf7f76bf786ac98ae5ae1dcc1d10d2f49587f55acdddf5e077f"
+    },
+    {
+      "file": "verify_cubic_quintic.py",
+      "identical": true,
+      "publication_sha256": "892ae3b17084ef3c3898e31aee8fef11d9769034ff388613735d43000a3745f0",
+      "source_sha256": "892ae3b17084ef3c3898e31aee8fef11d9769034ff388613735d43000a3745f0"
+    },
+    {
+      "file": "results.json",
+      "identical": true,
+      "publication_sha256": "110df0cc16c180026a90564f82593844cf0ba4a28a704f4a1dcc6d15b96e421b",
+      "source_sha256": "110df0cc16c180026a90564f82593844cf0ba4a28a704f4a1dcc6d15b96e421b"
+    },
+    {
+      "file": "results-optimized.json",
+      "identical": true,
+      "publication_sha256": "110df0cc16c180026a90564f82593844cf0ba4a28a704f4a1dcc6d15b96e421b",
+      "source_sha256": "110df0cc16c180026a90564f82593844cf0ba4a28a704f4a1dcc6d15b96e421b"
+    },
+    {
+      "file": "cubic-quintic-results.json",
+      "identical": true,
+      "publication_sha256": "3220e1bca65968fdc43288220108ac74e185e671c2cf513e4314b3dd95acfee4",
+      "source_sha256": "3220e1bca65968fdc43288220108ac74e185e671c2cf513e4314b3dd95acfee4"
+    },
+    {
+      "file": "cubic-quintic-results-optimized.json",
+      "identical": true,
+      "publication_sha256": "3220e1bca65968fdc43288220108ac74e185e671c2cf513e4314b3dd95acfee4",
+      "source_sha256": "3220e1bca65968fdc43288220108ac74e185e671c2cf513e4314b3dd95acfee4"
+    },
+    {
+      "file": "review/AUDIT.md",
+      "identical": false,
+      "publication_sha256": "95b9d16ac060a065d7d4c60733696e02d247a1f21dd4e81b9ca0687e4edf7ee7",
+      "source_sha256": "8ae231b5e60af111b3b1509f44119429debc038e232d716905373b0614397890"
+    },
+    {
+      "file": "review/CUBIC_QUINTIC_AUDIT.md",
+      "identical": false,
+      "publication_sha256": "270c9b2bcdba995f88ab65ac7991d0cb8b817c20da881de1665fd17bb9543e45",
+      "source_sha256": "5e0d63e971d8cb6a4cfc4b2b0300473f935a3284f524f6087adc780cf06882df"
+    },
+    {
+      "file": "review/REVIEW_SUMMARY.json",
+      "identical": false,
+      "publication_sha256": "ce06770a61d4b6a082b12b5d135d6f3fc0e921dabb590d176240e00d1179868b",
+      "source_sha256": "3bfefb67dc303fcaebabdb69665b2a9b31d2b09c6115bee750e42c85aa9663cb"
+    },
+    {
+      "file": "review/CUBIC_QUINTIC_REVIEW_SUMMARY.json",
+      "identical": false,
+      "publication_sha256": "2cbad6a194894e75826838a87cf3e3238e1b37d421474c8d61875e7ff7675a0d",
+      "source_sha256": "debbc7af2c41260aa01bb7b42ea7a6d6b57107f2792e781de049520da75ef745"
+    },
+    {
+      "file": "review/PROMOTION_RECONCILIATION.json",
+      "identical": true,
+      "publication_sha256": "a809fd5f0b700c94bafb4633abad1be1eb7c5e877a5b1ef782bee4e48bd7d33a",
+      "source_sha256": "a809fd5f0b700c94bafb4633abad1be1eb7c5e877a5b1ef782bee4e48bd7d33a"
+    },
+    {
+      "file": "review/CUBIC_QUINTIC_PROMOTION_RECONCILIATION.json",
+      "identical": true,
+      "publication_sha256": "2fb85b6448aea0c987793d08767532d0c7245b958e53f907f4dcf98ebeec70e1",
+      "source_sha256": "2fb85b6448aea0c987793d08767532d0c7245b958e53f907f4dcf98ebeec70e1"
+    },
+    {
+      "file": "review/independent_checks.py",
+      "identical": true,
+      "publication_sha256": "a95f0dc7dc6d292f65d1a15d2b5abd735c46a3fecf6b8c5ffd7a5e9258fe4fa3",
+      "source_sha256": "a95f0dc7dc6d292f65d1a15d2b5abd735c46a3fecf6b8c5ffd7a5e9258fe4fa3"
+    },
+    {
+      "file": "review/independent_cubic_quintic.py",
+      "identical": true,
+      "publication_sha256": "c6f5ff66bf94ef4c647606e3f8bb5d0097a2de1ae1e480a9403db549c0bbddff",
+      "source_sha256": "c6f5ff66bf94ef4c647606e3f8bb5d0097a2de1ae1e480a9403db549c0bbddff"
+    },
+    {
+      "file": "review/independent_results.json",
+      "identical": true,
+      "publication_sha256": "88fa0b95cc9b7881433c50700dad6fb290201be9bf1f2ec7b11e7ec283fa8fbc",
+      "source_sha256": "88fa0b95cc9b7881433c50700dad6fb290201be9bf1f2ec7b11e7ec283fa8fbc"
+    },
+    {
+      "file": "review/independent_results_optimized.json",
+      "identical": true,
+      "publication_sha256": "88fa0b95cc9b7881433c50700dad6fb290201be9bf1f2ec7b11e7ec283fa8fbc",
+      "source_sha256": "88fa0b95cc9b7881433c50700dad6fb290201be9bf1f2ec7b11e7ec283fa8fbc"
+    },
+    {
+      "file": "review/cubic_quintic_independent_results.json",
+      "identical": true,
+      "publication_sha256": "3d91606a47997d0ea68595ff95e2f72fcbdc08e4d28ec72ab6607bc754896eec",
+      "source_sha256": "3d91606a47997d0ea68595ff95e2f72fcbdc08e4d28ec72ab6607bc754896eec"
+    },
+    {
+      "file": "review/cubic_quintic_independent_results_optimized.json",
+      "identical": true,
+      "publication_sha256": "3d91606a47997d0ea68595ff95e2f72fcbdc08e4d28ec72ab6607bc754896eec",
+      "source_sha256": "3d91606a47997d0ea68595ff95e2f72fcbdc08e4d28ec72ab6607bc754896eec"
+    },
+    {
+      "file": "review/producer_replay.json",
+      "identical": true,
+      "publication_sha256": "110df0cc16c180026a90564f82593844cf0ba4a28a704f4a1dcc6d15b96e421b",
+      "source_sha256": "110df0cc16c180026a90564f82593844cf0ba4a28a704f4a1dcc6d15b96e421b"
+    },
+    {
+      "file": "review/producer_replay_optimized.json",
+      "identical": true,
+      "publication_sha256": "110df0cc16c180026a90564f82593844cf0ba4a28a704f4a1dcc6d15b96e421b",
+      "source_sha256": "110df0cc16c180026a90564f82593844cf0ba4a28a704f4a1dcc6d15b96e421b"
+    },
+    {
+      "file": "review/cubic_quintic_producer_replay.json",
+      "identical": true,
+      "publication_sha256": "3220e1bca65968fdc43288220108ac74e185e671c2cf513e4314b3dd95acfee4",
+      "source_sha256": "3220e1bca65968fdc43288220108ac74e185e671c2cf513e4314b3dd95acfee4"
+    },
+    {
+      "file": "review/cubic_quintic_producer_replay_optimized.json",
+      "identical": true,
+      "publication_sha256": "3220e1bca65968fdc43288220108ac74e185e671c2cf513e4314b3dd95acfee4",
+      "source_sha256": "3220e1bca65968fdc43288220108ac74e185e671c2cf513e4314b3dd95acfee4"
+    },
+    {
+      "file": "sextic_nonic/SEXTIC_NONIC_REALIZATION.md",
+      "identical": true,
+      "publication_sha256": "73e7b0e31ec482f9904b529ec7d003c8c0b3fcf0b73d1e1323c42adbe64b26e8",
+      "source_sha256": "73e7b0e31ec482f9904b529ec7d003c8c0b3fcf0b73d1e1323c42adbe64b26e8"
+    },
+    {
+      "file": "sextic_nonic/verify_realization.py",
+      "identical": true,
+      "publication_sha256": "42daa6d9055f33336ac53636a776b4acb38fe6675fbb385437865b78b332b903",
+      "source_sha256": "42daa6d9055f33336ac53636a776b4acb38fe6675fbb385437865b78b332b903"
+    },
+    {
+      "file": "sextic_nonic/verification.json",
+      "identical": true,
+      "publication_sha256": "ec6d83357407ff846944356023d636f9acdbef4d035cd86514d38c2252d5ac20",
+      "source_sha256": "ec6d83357407ff846944356023d636f9acdbef4d035cd86514d38c2252d5ac20"
+    }
+  ],
+  "publication_lineage_files": 28,
+  "status": "PASS",
+  "synthesis_promotion": {
+    "only_change": "20 October 2026. **PROVED; exact-dependency synthesis independently audited PASS.**",
+    "original_hash_after_reversing_status_line": "5ef901e577c30ee4c4baab7b7e0cc83c2fc557e27de761b8380ad0129eaaddc2",
+    "promoted_hash": "4366ee86a86d4d8d435b18b4aa6ac886d89576b757fb76104fd07edea8270ee4",
+    "reviewed_candidate_hash": "5ef901e577c30ee4c4baab7b7e0cc83c2fc557e27de761b8380ad0129eaaddc2",
+    "source_and_publication_identical": true,
+    "status": "PASS"
+  }
+}

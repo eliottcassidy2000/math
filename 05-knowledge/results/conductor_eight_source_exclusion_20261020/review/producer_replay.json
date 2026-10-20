@@ -1,0 +1,138 @@
+{
+  "characteristic_patterns": {
+    "(2, 9)": [
+      [
+        2,
+        9
+      ],
+      [
+        6,
+        9,
+        2
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        9,
+        6,
+        2
+      ]
+    ],
+    "(3, 5)": [
+      [
+        3,
+        5
+      ],
+      [
+        5,
+        3
+      ]
+    ],
+    "(4, 5, 6)": [
+      [
+        4,
+        6,
+        5
+      ],
+      [
+        6,
+        4,
+        5
+      ]
+    ]
+  },
+  "checks": [
+    "all symmetric genus-four gap sets",
+    "all conductor-eight characteristic patterns",
+    "target conductor and genus (2, 9)",
+    "target final conductor (2, 9)",
+    "target genus four (2, 9)",
+    "target conductor and genus (3, 5)",
+    "target final conductor (3, 5)",
+    "target genus four (3, 5)",
+    "target conductor and genus (4, 5, 6)",
+    "target final conductor (4, 5, 6)",
+    "target genus four (4, 5, 6)",
+    "wrong t5 remainder degree11",
+    "wrong t3 remainder degree9",
+    "wrong t coefficient remainder degree7",
+    "degree6 remainder coefficient",
+    "degree5 remainder coefficient",
+    "delta-three boundary recovery",
+    "b-zero boundary is even",
+    "basis residues for odd remainder 11",
+    "exact codimension for odd remainder 11",
+    "basis residues for odd remainder 9",
+    "exact codimension for odd remainder 9",
+    "basis residues for odd remainder 7",
+    "exact codimension for odd remainder 7",
+    "basis residues for odd remainder 5",
+    "exact codimension for odd remainder 5",
+    "basis residues for odd remainder 3",
+    "exact codimension for odd remainder 3",
+    "unimodular module change",
+    "full constant Jacobian coefficient",
+    "solved full Jacobian coefficient 7",
+    "solved full Jacobian coefficient 5",
+    "solved full Jacobian coefficient 3",
+    "solved full Jacobian coefficient 2",
+    "full final Jacobian identity",
+    "remaining t coefficient",
+    "quadratic-nonic immersion",
+    "cubic-quintic immersion",
+    "quartic-sextic immersion",
+    "sextic-nonic immersion",
+    "quartic sextic explicit remainder",
+    "quartic sextic remainder degree",
+    "sextic nonic quadratic recovery",
+    "sextic nonic four distinct nonzero node squares",
+    "delta7 wrong t5 exact odd remainder",
+    "delta7 wrong t5 primitive fraction field witness",
+    "delta6 wrong t3 exact odd remainder",
+    "delta6 wrong t3 primitive fraction field witness",
+    "delta5 wrong t1 exact odd remainder",
+    "delta5 wrong t1 primitive fraction field witness",
+    "delta3 adjacent hostile",
+    "genuine quadratic Keller positive control 1",
+    "quadratic target reduction 1",
+    "genuine quadratic Keller positive control 6",
+    "quadratic target reduction 6",
+    "genuine quadratic Keller positive control 10",
+    "quadratic target reduction 10"
+  ],
+  "count": 57,
+  "not_claimed": [
+    "full conductor-eight Keller exclusion",
+    "generic quadratic generator is itself a Keller coordinate",
+    "polynomial realizability from abstract characteristic admissibility"
+  ],
+  "status": "PASS",
+  "symmetric_gap_sets": [
+    [
+      1,
+      2,
+      3,
+      7
+    ],
+    [
+      1,
+      2,
+      4,
+      7
+    ],
+    [
+      1,
+      3,
+      5,
+      7
+    ]
+  ],
+  "universal_claims": [
+    "genus-four semigroup and nonprincipal-pattern classification",
+    "all listed patterns have explicit immersed polynomial realizations",
+    "generic <4,5,6> monic Keller exclusion",
+    "actual monic quadratic Keller coordinate is an automorphism"
+  ]
+}

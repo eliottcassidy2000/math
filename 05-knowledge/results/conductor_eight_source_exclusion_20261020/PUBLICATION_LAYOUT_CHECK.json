@@ -1,0 +1,119 @@
+{
+  "dependency_resolution": "Existing repository files plus exact approved predecessor manifests; no remote publication inferred.",
+  "links": [
+    {
+      "href": "../low_delta_source_conductor_exclusion_20261020/LOW_DELTA_QUADRATIC_AND_RELATIVE_GLOBALIZATION.md",
+      "source": "CONDUCTOR_TEN_SYNTHESIS.md",
+      "target": "05-knowledge/results/low_delta_source_conductor_exclusion_20261020/LOW_DELTA_QUADRATIC_AND_RELATIVE_GLOBALIZATION.md"
+    },
+    {
+      "href": "../constant_leading_conductor_six_exclusion_20261020/CONSTANT_LEADING_GLOBALIZATION.md",
+      "source": "CONDUCTOR_TEN_SYNTHESIS.md",
+      "target": "05-knowledge/results/constant_leading_conductor_six_exclusion_20261020/CONSTANT_LEADING_GLOBALIZATION.md"
+    },
+    {
+      "href": "../quadratic_semigroup_keller_obstruction_20261020/QUADRATIC_SEMIGROUP_KELLER_OBSTRUCTION.md",
+      "source": "CONDUCTOR_TEN_SYNTHESIS.md",
+      "target": "05-knowledge/results/quadratic_semigroup_keller_obstruction_20261020/QUADRATIC_SEMIGROUP_KELLER_OBSTRUCTION.md"
+    },
+    {
+      "href": "CONDUCTOR_EIGHT_CLASSIFICATION.md",
+      "source": "CONDUCTOR_TEN_SYNTHESIS.md",
+      "target": "05-knowledge/results/conductor_eight_source_exclusion_20261020/CONDUCTOR_EIGHT_CLASSIFICATION.md"
+    },
+    {
+      "href": "review/AUDIT.md",
+      "source": "CONDUCTOR_TEN_SYNTHESIS.md",
+      "target": "05-knowledge/results/conductor_eight_source_exclusion_20261020/review/AUDIT.md"
+    },
+    {
+      "href": "CUBIC_QUINTIC_ADDENDUM.md",
+      "source": "CONDUCTOR_TEN_SYNTHESIS.md",
+      "target": "05-knowledge/results/conductor_eight_source_exclusion_20261020/CUBIC_QUINTIC_ADDENDUM.md"
+    },
+    {
+      "href": "review/CUBIC_QUINTIC_AUDIT.md",
+      "source": "CONDUCTOR_TEN_SYNTHESIS.md",
+      "target": "05-knowledge/results/conductor_eight_source_exclusion_20261020/review/CUBIC_QUINTIC_AUDIT.md"
+    },
+    {
+      "href": "../fixed_cubic_quartic_embedding_classes_20261020/PRIMARY_SOURCES.md",
+      "source": "PRIMARY_SOURCES.md",
+      "target": "05-knowledge/results/fixed_cubic_quartic_embedding_classes_20261020/PRIMARY_SOURCES.md"
+    },
+    {
+      "href": "../quadratic_semigroup_keller_obstruction_20261020/PRIMARY_SOURCES.md",
+      "source": "PRIMARY_SOURCES.md",
+      "target": "05-knowledge/results/quadratic_semigroup_keller_obstruction_20261020/PRIMARY_SOURCES.md"
+    },
+    {
+      "href": "review/CUBIC_QUINTIC_AUDIT.md",
+      "source": "CUBIC_QUINTIC_ADDENDUM.md",
+      "target": "05-knowledge/results/conductor_eight_source_exclusion_20261020/review/CUBIC_QUINTIC_AUDIT.md"
+    },
+    {
+      "href": "CONDUCTOR_TEN_SYNTHESIS.md",
+      "source": "README.md",
+      "target": "05-knowledge/results/conductor_eight_source_exclusion_20261020/CONDUCTOR_TEN_SYNTHESIS.md"
+    },
+    {
+      "href": "CONDUCTOR_EIGHT_CLASSIFICATION.md",
+      "source": "README.md",
+      "target": "05-knowledge/results/conductor_eight_source_exclusion_20261020/CONDUCTOR_EIGHT_CLASSIFICATION.md"
+    },
+    {
+      "href": "CUBIC_QUINTIC_ADDENDUM.md",
+      "source": "README.md",
+      "target": "05-knowledge/results/conductor_eight_source_exclusion_20261020/CUBIC_QUINTIC_ADDENDUM.md"
+    },
+    {
+      "href": "sextic_nonic/SEXTIC_NONIC_REALIZATION.md",
+      "source": "README.md",
+      "target": "05-knowledge/results/conductor_eight_source_exclusion_20261020/sextic_nonic/SEXTIC_NONIC_REALIZATION.md"
+    },
+    {
+      "href": "review/AUDIT.md",
+      "source": "README.md",
+      "target": "05-knowledge/results/conductor_eight_source_exclusion_20261020/review/AUDIT.md"
+    },
+    {
+      "href": "review/CUBIC_QUINTIC_AUDIT.md",
+      "source": "README.md",
+      "target": "05-knowledge/results/conductor_eight_source_exclusion_20261020/review/CUBIC_QUINTIC_AUDIT.md"
+    },
+    {
+      "href": "SYNTHESIS_DEPENDENCY_HASHES.json",
+      "source": "README.md",
+      "target": "05-knowledge/results/conductor_eight_source_exclusion_20261020/SYNTHESIS_DEPENDENCY_HASHES.json"
+    },
+    {
+      "href": "PUBLICATION_COPY_LINEAGE.json",
+      "source": "README.md",
+      "target": "05-knowledge/results/conductor_eight_source_exclusion_20261020/PUBLICATION_COPY_LINEAGE.json"
+    }
+  ],
+  "relative_links_validated": 18,
+  "relocated_reproduction": [
+    {
+      "matches_frozen_result": true,
+      "normal_optimized_identical": true,
+      "script": "verify_frontier.py"
+    },
+    {
+      "matches_frozen_result": true,
+      "normal_optimized_identical": true,
+      "script": "verify_cubic_quintic.py"
+    },
+    {
+      "matches_frozen_result": true,
+      "normal_optimized_identical": true,
+      "script": "review/independent_checks.py"
+    },
+    {
+      "matches_frozen_result": true,
+      "normal_optimized_identical": true,
+      "script": "review/independent_cubic_quintic.py"
+    }
+  ],
+  "status": "PASS"
+}

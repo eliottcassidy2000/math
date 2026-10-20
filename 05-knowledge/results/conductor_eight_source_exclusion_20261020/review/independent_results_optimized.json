@@ -1,0 +1,115 @@
+{
+  "characteristic_patterns": {
+    "(1, 2, 3, 7)": [
+      [
+        4,
+        6,
+        5
+      ],
+      [
+        6,
+        4,
+        5
+      ]
+    ],
+    "(1, 2, 4, 7)": [
+      [
+        3,
+        5
+      ],
+      [
+        5,
+        3
+      ]
+    ],
+    "(1, 3, 5, 7)": [
+      [
+        2,
+        9
+      ],
+      [
+        6,
+        9,
+        2
+      ],
+      [
+        9,
+        2
+      ],
+      [
+        9,
+        6,
+        2
+      ]
+    ]
+  },
+  "checks": [
+    "all binary semigroup candidates",
+    "all bounded characteristic sequences, independent universe",
+    "degree eleven coefficient derived",
+    "degree ten cancellation derived",
+    "degree nine coefficient derived",
+    "degree eight cancellation derived",
+    "degree seven coefficient derived",
+    "degree six cancellation derived",
+    "degree five coefficient derived",
+    "exact degree three boundary",
+    "b=0 is nonprimitive even locus",
+    "actual power-basis change determinant",
+    "four residues for remainder 3",
+    "exact residue codimension 3",
+    "four residues for remainder 5",
+    "exact residue codimension 5",
+    "four residues for remainder 7",
+    "exact residue codimension 7",
+    "four residues for remainder 9",
+    "exact residue codimension 9",
+    "four residues for remainder 11",
+    "exact residue codimension 11",
+    "entire Jacobian constant coefficient",
+    "forced derivative system determinant",
+    "forced derivative system has unique displayed solution",
+    "entire Jacobian after forced solution",
+    "surviving linear Jacobian coefficient",
+    "moving source-centering chain rule",
+    "realization immersion 0",
+    "realization immersion 1",
+    "realization immersion 2",
+    "realization immersion 3",
+    "quartic sextic remainder independently expanded",
+    "sextic nonic exact algebra recovery",
+    "four distinct nonzero quadratic-model node squares",
+    "actual nonprincipal realizing degrees (2, 9)",
+    "actual nonprincipal realizing degrees (3, 5)",
+    "actual nonprincipal realizing degrees (4, 6)",
+    "actual nonprincipal realizing degrees (6, 9)",
+    "general quadratic Keller control",
+    "quadratic explicit inverse first coordinate",
+    "quadratic explicit inverse second coordinate"
+  ],
+  "count": 42,
+  "full_jacobian_after_solution": "-(6*t*b(x) + 3*a(x)**2 - 4*a(x)*c(x) + 4*e(x))*b(x)*Derivative(a(x), x)/8",
+  "gap_sets": [
+    [
+      1,
+      2,
+      3,
+      7
+    ],
+    [
+      1,
+      2,
+      4,
+      7
+    ],
+    [
+      1,
+      3,
+      5,
+      7
+    ]
+  ],
+  "jacobian_derivative_matrix": "Matrix([[-4, 0, 0, 0], [-2*a(x), 6, -4, 0], [0, 4*c(x), -2*a(x), -4], [-2*a(x)*b(x), 9*b(x)/2, -b(x), 0]])",
+  "jacobian_derivative_matrix_determinant": "-192*b(x)",
+  "status": "PASS"
+}

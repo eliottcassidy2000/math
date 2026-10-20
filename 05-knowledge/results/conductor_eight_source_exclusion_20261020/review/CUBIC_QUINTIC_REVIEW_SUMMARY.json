@@ -1,0 +1,21 @@
+{
+  "independent_checks": 32,
+  "normal_optimized_parity": true,
+  "producer_checks": 31,
+  "promotion_reconciliation": {
+    "current_promoted_hash": "af7b6299733673fb558de377a6f14e61a14a57b2b170034a0a2b5c6f69b96075",
+    "only_change": "First status line changed to 20 October 2026. **PROVED; independently audited PASS in the stated scope.**",
+    "original_hash_after_reversing_status_line": "037ed17075b13f84664eedee1586312be25b507b6c081346ff4f9edd4fa432ce",
+    "reviewed_candidate_hash": "037ed17075b13f84664eedee1586312be25b507b6c081346ff4f9edd4fa432ce",
+    "status": "PASS"
+  },
+  "scope": "Direct constant-leading degree-(3,5) Keller exclusion and application to generic <3,5> via separately audited terminal classification.",
+  "source_hashes": {
+    "CUBIC_QUINTIC_ADDENDUM.md": "037ed17075b13f84664eedee1586312be25b507b6c081346ff4f9edd4fa432ce",
+    "cubic-quintic-results-optimized.json": "3220e1bca65968fdc43288220108ac74e185e671c2cf513e4314b3dd95acfee4",
+    "cubic-quintic-results.json": "3220e1bca65968fdc43288220108ac74e185e671c2cf513e4314b3dd95acfee4",
+    "verify_cubic_quintic.py": "892ae3b17084ef3c3898e31aee8fef11d9769034ff388613735d43000a3745f0"
+  },
+  "staged_receipts_match": true,
+  "status": "PASS"
+}

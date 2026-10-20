@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "only_change": "First status line changed to 20 October 2026. **PROVED; independently audited PASS in the stated scope.**",
+  "reviewed_candidate_hash": "037ed17075b13f84664eedee1586312be25b507b6c081346ff4f9edd4fa432ce",
+  "current_promoted_hash": "af7b6299733673fb558de377a6f14e61a14a57b2b170034a0a2b5c6f69b96075",
+  "original_hash_after_reversing_status_line": "037ed17075b13f84664eedee1586312be25b507b6c081346ff4f9edd4fa432ce"
+}

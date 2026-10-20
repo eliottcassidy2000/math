@@ -1,0 +1,19 @@
+{
+  "all_passed": true,
+  "checks": {
+    "degrees_6_9": true,
+    "characteristic_identity": true,
+    "nonzero_p_at_zero": true,
+    "squarefree_p": true,
+    "immersion_original_pair": true,
+    "conductor_degree_8": true,
+    "defining_equation": true,
+    "family_identity": true,
+    "family_critical_value": true,
+    "family_nonzero_zero_value": true,
+    "gaps_through_40": true
+  },
+  "gap_count": 4,
+  "conductor_degree": 8,
+  "coefficient_field": "Q, hence every characteristic-zero field"
+}

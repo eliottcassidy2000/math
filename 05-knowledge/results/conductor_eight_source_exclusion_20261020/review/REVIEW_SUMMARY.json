@@ -1,0 +1,21 @@
+{
+  "independent_checks": 42,
+  "normal_optimized_parity": true,
+  "producer_checks": 57,
+  "promotion_reconciliation": {
+    "current_promoted_hash": "1470a8d6d5faa2cdcde92e4cb7cdfe6baa95a629d4c28842492af1a58fd77113",
+    "only_change": "First status line changed to PROVED; independently audited PASS in the stated scope.",
+    "original_hash_after_reversing_status_line": "e632f2e8bb25c43ce491bd09caf2503070175cf908e00b67e390627ec9dcfa70",
+    "reviewed_candidate_hash": "e632f2e8bb25c43ce491bd09caf2503070175cf908e00b67e390627ec9dcfa70",
+    "status": "PASS"
+  },
+  "reviewed_scope": "Conductor-eight classification, realizability, quartic/sextic generic normal form and monic Keller exclusion, actual quadratic-coordinate lemma. Excludes later cubic/quintic and all-m hyperelliptic work.",
+  "source_hashes": {
+    "CONDUCTOR_EIGHT_CLASSIFICATION.md": "9f0393346d98e4ecd60f4ec862ea319eef377f8c81ced73c061aee62da2f6118",
+    "results-optimized.json": "110df0cc16c180026a90564f82593844cf0ba4a28a704f4a1dcc6d15b96e421b",
+    "results.json": "110df0cc16c180026a90564f82593844cf0ba4a28a704f4a1dcc6d15b96e421b",
+    "verify_frontier.py": "61b3ea3091cecdf7f76bf786ac98ae5ae1dcc1d10d2f49587f55acdddf5e077f"
+  },
+  "staged_receipts_match": true,
+  "status": "PASS"
+}

@@ -1,0 +1,22 @@
+{
+  "dependencies_exactly_matched": 5,
+  "final_publication_classification_hash": "493163f9017a20ff467b043773c5b52369793e4696108c0d089d1411ae14f764",
+  "independent_checks": [
+    42,
+    32
+  ],
+  "nonidentical_admin_only_publication_copies": 6,
+  "normal_optimized_parity": true,
+  "producer_checks": [
+    57,
+    31,
+    11
+  ],
+  "publication_lineage_entries_checked": 28,
+  "publication_only_changes_mathematics_preserved": true,
+  "scope": "Primitive monic generic source-conductor lower bound ten; exact dependency and publication-copy audit.",
+  "status": "PASS",
+  "synthesis_candidate_hash": "5ef901e577c30ee4c4baab7b7e0cc83c2fc557e27de761b8380ad0129eaaddc2",
+  "synthesis_promoted_hash": "4366ee86a86d4d8d435b18b4aa6ac886d89576b757fb76104fd07edea8270ee4",
+  "zero_delta_one_line_primary_source_freshly_checked": true
+}

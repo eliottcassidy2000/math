@@ -1,0 +1,8 @@
+{
+  "only_change": "20 October 2026. **PROVED; exact-dependency synthesis independently audited PASS.**",
+  "original_hash_after_reversing_status_line": "5ef901e577c30ee4c4baab7b7e0cc83c2fc557e27de761b8380ad0129eaaddc2",
+  "promoted_hash": "4366ee86a86d4d8d435b18b4aa6ac886d89576b757fb76104fd07edea8270ee4",
+  "reviewed_candidate_hash": "5ef901e577c30ee4c4baab7b7e0cc83c2fc557e27de761b8380ad0129eaaddc2",
+  "source_and_publication_identical": true,
+  "status": "PASS"
+}

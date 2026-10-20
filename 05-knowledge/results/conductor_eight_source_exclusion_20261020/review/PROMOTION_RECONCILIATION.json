@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "only_change": "First status line changed to PROVED; independently audited PASS in the stated scope.",
+  "reviewed_candidate_hash": "e632f2e8bb25c43ce491bd09caf2503070175cf908e00b67e390627ec9dcfa70",
+  "current_promoted_hash": "1470a8d6d5faa2cdcde92e4cb7cdfe6baa95a629d4c28842492af1a58fd77113",
+  "original_hash_after_reversing_status_line": "e632f2e8bb25c43ce491bd09caf2503070175cf908e00b67e390627ec9dcfa70"
+}
