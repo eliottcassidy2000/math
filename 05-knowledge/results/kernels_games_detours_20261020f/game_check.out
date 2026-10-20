@@ -6,5 +6,6 @@ n= 5 graphs= 1024 wins HH/HW/WH/WW= [70, 35, 35, 0] minimum_red= [4, 4, 5, None]
 n= 6 graphs= 32768 wins HH/HW/WH/WW= [1092, 546, 546, 0] minimum_red= [5, 5, 6, None]
 all extremal families n=4..100: counts/connectivity; n<=12: HP DP PASS
 WH minimum n=4..20: [3, 5, 6, 9, 10, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35]
+incoming connected-both family n=7..100; direct HP checks n=7..12 PASS
 port hostile K1,3 -> K3 PASS; modular/carry pairs= 2900 PASS
 PASS

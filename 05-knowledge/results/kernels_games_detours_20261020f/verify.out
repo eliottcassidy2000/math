@@ -1,4 +1,4 @@
-SHA256 source/input/receipt coverage: 32 PASS
+SHA256 source/input/receipt coverage: 34 PASS
 Scripts parse without removable assertions: 6
-Local Markdown link targets: 34 PASS
+Local Markdown link targets: 36 PASS
 PASS

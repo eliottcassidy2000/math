@@ -1,7 +1,8 @@
 # Fixed-deficiency kernels, endpoint-changing detours, and exact boundary games
 
 Research continuation, October 20, 2026. Initial integrated base:
-`7f8df95a96ea`. The isolated worktree preserves the unrelated shared checkout.
+`7f8df95a96ea`; incoming work through `9852737522` was integrated at close-out.
+The isolated worktree preserves the unrelated shared checkout.
 This packet distinguishes proofs, cited inputs, finite computations, and
 remaining conjectures. No claim of literature novelty is made.
 
@@ -84,6 +85,13 @@ Here `b(2m)=min(4m-5,binom(m+1,2))` and
 [Game proofs](game.md) use elementary complement/closure arguments and one
 **CITED** sharp Erdős bound. All labelled graphs through order six are
 checked; literal path permutations independently agree through five.
+
+The incoming [independent game analysis](../complement_path_games_20261020/AUDIT_AND_PROVENANCE.md)
+agrees on these budgets and adds exact rooted path-cover join criteria.
+Its stronger hostile has **both colours connected and nontraceable** at
+every n>=7; our independent replay confirms the construction, and the
+two censuses exclude it through six. This is a concrete further connection
+to the repository's full path-cover substitution interface.
 
 The undirected star and triangle-plus-isolate also expose a port loss:
 the line graph of K1,3 is Hamiltonian, but the star has no Eulerian trail.

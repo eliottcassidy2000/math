@@ -36,6 +36,8 @@ def inputs():
         "metagraph_growth_20261020/growth_check.py",
         "spectrum_basins_20261020e/outer.md",
         "spectrum_basins_20261020e/pure_hubs.md",
+        "complement_path_games_20261020/README.md",
+        "complement_path_games_20261020/AUDIT_AND_PROVENANCE.md",
     )]
     return sorted(set(own + deps))
 

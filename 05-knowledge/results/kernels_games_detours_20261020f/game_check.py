@@ -108,6 +108,18 @@ def constructions():
         require(min(candidates) == minimum_sw_hp(n), (n, "endpoint minimum"))
     print("all extremal families n=4..100: counts/connectivity; n<=12: HP DP PASS")
     print("WH minimum n=4..20:", [minimum_sw_hp(n) for n in range(4, 21)])
+    for n in range(7, 101):
+        # Incoming mainline family: blue clique minus01, plus two leaves at0.
+        edge_set = [(u, v) for u, v in combinations(range(n - 2), 2) if (u, v) != (0, 1)]
+        edge_set += [(0, n - 2), (0, n - 1)]
+        blue = adjacency(n, edge_set)
+        red = tuple(((1 << n) - 1) ^ (1 << u) ^ blue[u] for u in range(n))
+        require(connected(red) and connected(blue), "connected-both construction")
+        require(sum(row.bit_count() for row in red) // 2 == 2*n - 4,
+                "connected-both red edge count")
+        if n <= 12:
+            require(not traceable(red) and not traceable(blue), "connected-both direct HP control")
+    print("incoming connected-both family n=7..100; direct HP checks n=7..12 PASS")
 
 
 def directed_hp_count(a):

@@ -33,6 +33,9 @@ For n<=3 no variant has a win. If n=2m or 2m+1 respectively,
     b(2m+1) = min(4m-3, binom(m+2,2)-1).                 (1)
 
 For n=4,...,12 these are `3,5,6,9,10,13,15,17,19`.
+Equivalently b(n)=2n-5 except b(6)=6 and b(8)=10. For even n=2m,
+the difference between the two candidates is `(m-2)(m-5)/2`; for odd
+n=2m+1 it is `(m-2)(m-3)/2`, proving this simplification.
 In particular the asymmetry between H/W and W/H matters: complementing
 exchanges their winning positions, but not their number of red edges.
 
@@ -140,3 +143,32 @@ Constructions (3) are checked through n=100, with direct path tests through
 n=12. Positive controls include complete graphs and the winning stars;
 the hostile W/W control is tested on the entire census. Assertions do not
 disappear under optimized Python.
+
+## Incoming independent work: connected colours and exact path-cover joins
+
+Commit `9852737522`, integrated during close-out, independently obtained
+the same game budgets. Its [reviewed packet](../complement_path_games_20261020/AUDIT_AND_PROVENANCE.md)
+adds prescribed-start quantifiers, a self-contained Pósa-type degree
+obstruction, and an exact join theorem using minimum path-cover numbers.
+The present packet retains its independently derived free-start proof.
+
+It also answers the next hostile question: **both colours can be connected
+and nontraceable at every n>=7**. Take a blue clique C on n-2 vertices,
+delete one edge hv, and attach two blue leaves a,b to h. Deleting h leaves
+three blue components. In red, h is adjacent only to v; a,b are adjacent
+and connect to every other clique vertex. Red is connected, but deleting
+{a,b} leaves the edge hv and n-4 isolates, hence n-3>3 components. In each
+colour this exceeds the number of pieces a Hamiltonian path could leave
+after those deletions. The construction uses 2n-4 red edges, without any
+claim here that this is the minimum under the connected-both restriction.
+Our census excludes connected-both wins through six: its H/H win count
+is exactly the sum of the disjoint H/W and W/H win counts. Thus seven is
+the first order, with the exclusion explicitly finite-exact.
+
+The new family is independently constructed in `game_check.py` through
+n=100; direct path tests cover n=7,...,12. The more general incoming join
+criterion retains the path-cover number of each block, and its counting
+version retains the entire oriented path-cover profile. This supplies an
+actual map to the maximal-run substitution mechanism in THM-3121, cited
+by its full slug in that packet. A scalar path count loses this interface,
+just as a gap-only defect kernel loses external matching partners.
