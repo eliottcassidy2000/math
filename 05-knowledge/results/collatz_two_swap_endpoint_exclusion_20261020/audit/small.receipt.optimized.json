@@ -1,0 +1,27 @@
+{
+  "all_case_trace_sha256": "c76be7354efe56ce1706f26ccbefdc58f152700680f75e32f1eb9a2364468be4",
+  "boundary_hits": [
+    [
+      "plus",
+      2,
+      1,
+      "101",
+      -7
+    ],
+    [
+      "minus",
+      2,
+      1,
+      "110",
+      -5
+    ]
+  ],
+  "independence": "No producer implementation imported; occupancy-set moves and reverse carry scan.",
+  "minimum_reduced_denominator_for_p_ge_3": 5,
+  "nonintegral_paths": 3002,
+  "paths": 3004,
+  "producer_script_sha256": "b386e0f9f03699732d6c22096bb1292dfbb4df441eba7dc33bcf616b8b1ebc05",
+  "script_sha256": "3243f87fc134249b5b23889d48c167e8d77b8282b7769058586994c6d820b1ae",
+  "shapes": 1502,
+  "status": "FINITE-EXACT independent complete small residual"
+}
