@@ -1,0 +1,536 @@
+{
+  "characteristic_polynomial_coefficients_constant_first": [
+    1,
+    -1,
+    0,
+    -7,
+    7,
+    0,
+    21,
+    -21,
+    0,
+    -35,
+    35,
+    0,
+    35,
+    -35,
+    0,
+    -21,
+    21,
+    0,
+    7,
+    -7,
+    0,
+    -1,
+    1
+  ],
+  "finite_period_checks": [
+    {
+      "least_period": 6,
+      "precision": 1
+    },
+    {
+      "least_period": 12,
+      "precision": 2
+    },
+    {
+      "least_period": 24,
+      "precision": 3
+    },
+    {
+      "least_period": 48,
+      "precision": 4
+    },
+    {
+      "least_period": 96,
+      "precision": 5
+    },
+    {
+      "least_period": 192,
+      "precision": 6
+    },
+    {
+      "least_period": 384,
+      "precision": 7
+    },
+    {
+      "least_period": 768,
+      "precision": 8
+    },
+    {
+      "least_period": 1536,
+      "precision": 9
+    },
+    {
+      "least_period": 3072,
+      "precision": 10
+    },
+    {
+      "least_period": 6144,
+      "precision": 11
+    },
+    {
+      "least_period": 12288,
+      "precision": 12
+    }
+  ],
+  "global_recurrence_symbolic_lanes": 3,
+  "hankel_companion_intertwining": true,
+  "hankel_determinant": -59947630091307750333525343859607236942918285462515760575971005733274025192366286034785389231674770624204413001278023560308054467285712671831643444714344463879551057920000000000000000000000,
+  "independent_modular_ranks": {
+    "2": 6,
+    "3": 3,
+    "5": 14,
+    "7": 21,
+    "61": 21
+  },
+  "integer_shift_determinant": 1,
+  "minimal_monic_recurrence_order_staircase_checks": [
+    {
+      "log2_observable_size": 6,
+      "minimal_monic_recurrence_order": 6,
+      "precision": 1
+    },
+    {
+      "log2_observable_size": 12,
+      "minimal_monic_recurrence_order": 6,
+      "precision": 2
+    },
+    {
+      "log2_observable_size": 18,
+      "minimal_monic_recurrence_order": 6,
+      "precision": 3
+    },
+    {
+      "log2_observable_size": 24,
+      "minimal_monic_recurrence_order": 6,
+      "precision": 4
+    },
+    {
+      "log2_observable_size": 30,
+      "minimal_monic_recurrence_order": 6,
+      "precision": 5
+    },
+    {
+      "log2_observable_size": 36,
+      "minimal_monic_recurrence_order": 6,
+      "precision": 6
+    },
+    {
+      "log2_observable_size": 48,
+      "minimal_monic_recurrence_order": 12,
+      "precision": 7
+    },
+    {
+      "log2_observable_size": 60,
+      "minimal_monic_recurrence_order": 12,
+      "precision": 8
+    },
+    {
+      "log2_observable_size": 72,
+      "minimal_monic_recurrence_order": 12,
+      "precision": 9
+    },
+    {
+      "log2_observable_size": 84,
+      "minimal_monic_recurrence_order": 12,
+      "precision": 10
+    },
+    {
+      "log2_observable_size": 96,
+      "minimal_monic_recurrence_order": 12,
+      "precision": 11
+    },
+    {
+      "log2_observable_size": 108,
+      "minimal_monic_recurrence_order": 12,
+      "precision": 12
+    },
+    {
+      "log2_observable_size": 120,
+      "minimal_monic_recurrence_order": 12,
+      "precision": 13
+    },
+    {
+      "log2_observable_size": 132,
+      "minimal_monic_recurrence_order": 12,
+      "precision": 14
+    },
+    {
+      "log2_observable_size": 146,
+      "minimal_monic_recurrence_order": 14,
+      "precision": 15
+    },
+    {
+      "log2_observable_size": 164,
+      "minimal_monic_recurrence_order": 18,
+      "precision": 16
+    },
+    {
+      "log2_observable_size": 182,
+      "minimal_monic_recurrence_order": 18,
+      "precision": 17
+    },
+    {
+      "log2_observable_size": 200,
+      "minimal_monic_recurrence_order": 18,
+      "precision": 18
+    },
+    {
+      "log2_observable_size": 218,
+      "minimal_monic_recurrence_order": 18,
+      "precision": 19
+    },
+    {
+      "log2_observable_size": 236,
+      "minimal_monic_recurrence_order": 18,
+      "precision": 20
+    },
+    {
+      "log2_observable_size": 256,
+      "minimal_monic_recurrence_order": 20,
+      "precision": 21
+    },
+    {
+      "log2_observable_size": 278,
+      "minimal_monic_recurrence_order": 22,
+      "precision": 22
+    },
+    {
+      "log2_observable_size": 300,
+      "minimal_monic_recurrence_order": 22,
+      "precision": 23
+    },
+    {
+      "log2_observable_size": 322,
+      "minimal_monic_recurrence_order": 22,
+      "precision": 24
+    }
+  ],
+  "prefix_smith_2valuations": {
+    "6": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "12": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "14": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      14,
+      14
+    ],
+    "18": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      14,
+      14,
+      15,
+      15,
+      15,
+      15
+    ],
+    "20": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      14,
+      14,
+      15,
+      15,
+      15,
+      15,
+      20,
+      20
+    ],
+    "22": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      14,
+      14,
+      15,
+      15,
+      15,
+      15,
+      20,
+      20,
+      21,
+      21
+    ]
+  },
+  "prime_valuations": {
+    "2": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      14,
+      14,
+      15,
+      15,
+      15,
+      15,
+      20,
+      20,
+      21,
+      21
+    ],
+    "3": [
+      0,
+      0,
+      0,
+      2,
+      2,
+      2,
+      4,
+      4,
+      4,
+      8,
+      8,
+      8,
+      10,
+      10,
+      10,
+      12,
+      12,
+      12,
+      19,
+      20,
+      22,
+      22
+    ],
+    "5": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      4,
+      4
+    ],
+    "7": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      8
+    ],
+    "61": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      7
+    ]
+  },
+  "rational_minimal_order_by_nonzero_hankel_determinant": 22,
+  "six_register_candidates": [
+    {
+      "coefficients": [
+        7,
+        48,
+        16,
+        2,
+        16,
+        48
+      ],
+      "first_22_residuals": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "modulus": 64
+    },
+    {
+      "coefficients": [
+        7,
+        112,
+        16,
+        66,
+        80,
+        48
+      ],
+      "first_22_residuals": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        64,
+        64,
+        0,
+        64,
+        64,
+        64,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        64,
+        64,
+        0,
+        64
+      ],
+      "modulus": 128
+    }
+  ],
+  "smith_diagonal_absolute": [
+    1,
+    1,
+    1,
+    9,
+    9,
+    9,
+    5184,
+    5184,
+    5184,
+    419904,
+    419904,
+    419904,
+    967458816,
+    967458816,
+    48372940800,
+    435356467200,
+    435356467200,
+    435356467200,
+    152339935002624000,
+    457019805007872000,
+    41131782450708480000,
+    745196309284130362492796014413742080000
+  ],
+  "status": "PASS: independently constructed exact Hankel data and typed completion audit"
+}

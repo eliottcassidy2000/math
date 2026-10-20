@@ -1,0 +1,25 @@
+{
+  "date_utc": "2026-10-20",
+  "status": "PASS",
+  "target_path": "session9-hankel/OBSERVABLE_HANKEL_CLOCKS.md",
+  "target_sha256": "268e5ec48f7174b39579f514f533af06d6c25cb2e8fa9f271acdd010d615b358",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "normal_command": "python3 session9-hankel-review/independent_hankel_check.py",
+  "optimized_command": "python3 -O session9-hankel-review/independent_hankel_check.py",
+  "normal_exit_code": 0,
+  "optimized_exit_code": 0,
+  "byte_identical": true,
+  "output_sha256": "be03dc75a78427fcd937154c18591df7193fcb2bdb897edcf0a6c51c1daca0f4",
+  "additional_consequence": "Exact all-precision minimal monic recurrence order follows from six independently checked prefix Smith lists and finite-module generator bounds.",
+  "final_target_reviewed": true,
+  "root_checker_replayed": true,
+  "root_replay_matches_frozen_output": true,
+  "root_full_and_prefix_smith_match_independent": true,
+  "source_file_sha256": {
+    "session9-hankel/OBSERVABLE_HANKEL_CLOCKS.md": "268e5ec48f7174b39579f514f533af06d6c25cb2e8fa9f271acdd010d615b358",
+    "session9-hankel/verify_hankel_clock.py": "ffdba9d200c5a7eb0a75cc75549809c1ea29bdfa0edc568a98eddd9d91ac14b6",
+    "session9-hankel/verification.json": "54943c3d8608b506109b591f21bb471795c71a7256e4d7048147f66252be829c",
+    "session9-hankel/verification_optimized.json": "54943c3d8608b506109b591f21bb471795c71a7256e4d7048147f66252be829c"
+  }
+}
