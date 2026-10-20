@@ -1,0 +1,7 @@
+{
+  "proof_after_removing_documented_status_links_and_hostile_matches_pre_audit": true,
+  "checker_after_removing_two_new_hostile_checks_matches_pre_audit": true,
+  "proof_pre_audit_sha256": "7c34d2d045e84f8daeafcc24fbd293ed53a0fa16451444788217e4bb4bd9cc4d",
+  "checker_pre_audit_sha256": "b5bc1b80f374ed83898646c5610fb769ba5ef2dea40856c1051fe20b6adfa42a",
+  "scope": "Only status/review/dependency link additions and the announced standard-only immersed moving hostile were removed in this comparison."
+}

@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "source": "README.md",
+      "link": "MOVING_CUBIC_QUARTIC_OBSTRUCTION.md",
+      "target": "05-knowledge/results/moving_monic_cubic_quartic_obstruction_20261020/MOVING_CUBIC_QUARTIC_OBSTRUCTION.md",
+      "exists_in_proposed_layout": true
+    },
+    {
+      "source": "README.md",
+      "link": "PRIMARY_SOURCES.md",
+      "target": "05-knowledge/results/moving_monic_cubic_quartic_obstruction_20261020/PRIMARY_SOURCES.md",
+      "exists_in_proposed_layout": true
+    },
+    {
+      "source": "README.md",
+      "link": "verify_moving_cubic.py",
+      "target": "05-knowledge/results/moving_monic_cubic_quartic_obstruction_20261020/verify_moving_cubic.py",
+      "exists_in_proposed_layout": true
+    },
+    {
+      "source": "README.md",
+      "link": "results.json",
+      "target": "05-knowledge/results/moving_monic_cubic_quartic_obstruction_20261020/results.json",
+      "exists_in_proposed_layout": true
+    },
+    {
+      "source": "README.md",
+      "link": "review/AUDIT.md",
+      "target": "05-knowledge/results/moving_monic_cubic_quartic_obstruction_20261020/review/AUDIT.md",
+      "exists_in_proposed_layout": true
+    },
+    {
+      "source": "MOVING_CUBIC_QUARTIC_OBSTRUCTION.md",
+      "link": "review/AUDIT.md",
+      "target": "05-knowledge/results/moving_monic_cubic_quartic_obstruction_20261020/review/AUDIT.md",
+      "exists_in_proposed_layout": true
+    },
+    {
+      "source": "MOVING_CUBIC_QUARTIC_OBSTRUCTION.md",
+      "link": "../low_delta_source_conductor_exclusion_20261020/LOW_DELTA_QUADRATIC_AND_RELATIVE_GLOBALIZATION.md",
+      "target": "05-knowledge/results/low_delta_source_conductor_exclusion_20261020/LOW_DELTA_QUADRATIC_AND_RELATIVE_GLOBALIZATION.md",
+      "exists_in_proposed_layout": true
+    },
+    {
+      "source": "MOVING_CUBIC_QUARTIC_OBSTRUCTION.md",
+      "link": "../fixed_cubic_quartic_embedding_classes_20261020/FINITE_EMBEDDING_CLASSES_AND_FIXED_CYLINDERS.md",
+      "target": "05-knowledge/results/fixed_cubic_quartic_embedding_classes_20261020/FINITE_EMBEDDING_CLASSES_AND_FIXED_CYLINDERS.md",
+      "exists_in_proposed_layout": true
+    },
+    {
+      "source": "MOVING_CUBIC_QUARTIC_OBSTRUCTION.md",
+      "link": "../fixed_cubic_quartic_embedding_classes_20261020/FINITE_EMBEDDING_CLASSES_AND_FIXED_CYLINDERS.md",
+      "target": "05-knowledge/results/fixed_cubic_quartic_embedding_classes_20261020/FINITE_EMBEDDING_CLASSES_AND_FIXED_CYLINDERS.md",
+      "exists_in_proposed_layout": true
+    },
+    {
+      "source": "MOVING_CUBIC_QUARTIC_OBSTRUCTION.md",
+      "link": "../cubic_quartic_globalization_embedding_boundaries_20261020/CUBIC_QUARTIC_GLOBALIZATION_AND_EMBEDDING_BOUNDARIES.md",
+      "target": "05-knowledge/results/cubic_quartic_globalization_embedding_boundaries_20261020/CUBIC_QUARTIC_GLOBALIZATION_AND_EMBEDDING_BOUNDARIES.md",
+      "exists_in_proposed_layout": true
+    }
+  ]
+}

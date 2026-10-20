@@ -1,0 +1,54 @@
+{
+  "repository_head": "10f2724f9bb1743d8aaaa3f244cd0872cd1b7a69",
+  "dependencies": [
+    {
+      "repository_path": "05-knowledge/results/low_delta_source_conductor_exclusion_20261020/LOW_DELTA_QUADRATIC_AND_RELATIVE_GLOBALIZATION.md",
+      "expected_sha256": "82fcb171ad10bfd75058d722726d4ea0d709f9c802aff5695605b523287939f8",
+      "head_sha256": "82fcb171ad10bfd75058d722726d4ea0d709f9c802aff5695605b523287939f8",
+      "disk_sha256": "82fcb171ad10bfd75058d722726d4ea0d709f9c802aff5695605b523287939f8",
+      "verified": true
+    },
+    {
+      "repository_path": "05-knowledge/results/low_delta_source_conductor_exclusion_20261020/review/AUDIT.md",
+      "expected_sha256": "758648d087c76420171a972d04d8fcdb02647c8cdb314725fa6a8ddb12c57368",
+      "head_sha256": "758648d087c76420171a972d04d8fcdb02647c8cdb314725fa6a8ddb12c57368",
+      "disk_sha256": "758648d087c76420171a972d04d8fcdb02647c8cdb314725fa6a8ddb12c57368",
+      "verified": true
+    },
+    {
+      "repository_path": "05-knowledge/results/cubic_quartic_globalization_embedding_boundaries_20261020/CUBIC_QUARTIC_GLOBALIZATION_AND_EMBEDDING_BOUNDARIES.md",
+      "expected_sha256": "9dd1e5111c3ac911d5decd463159b725f12dbd68a61020391ca31ff9eea2d1f4",
+      "head_sha256": "9dd1e5111c3ac911d5decd463159b725f12dbd68a61020391ca31ff9eea2d1f4",
+      "disk_sha256": "9dd1e5111c3ac911d5decd463159b725f12dbd68a61020391ca31ff9eea2d1f4",
+      "verified": true
+    },
+    {
+      "repository_path": "05-knowledge/results/cubic_quartic_globalization_embedding_boundaries_20261020/review/AUDIT.md",
+      "expected_sha256": "d2a2dc095a3c75f24fc1e730be38a4de52240690994a4e407f4fbaa14e0fecdb",
+      "head_sha256": "d2a2dc095a3c75f24fc1e730be38a4de52240690994a4e407f4fbaa14e0fecdb",
+      "disk_sha256": "d2a2dc095a3c75f24fc1e730be38a4de52240690994a4e407f4fbaa14e0fecdb",
+      "verified": true
+    },
+    {
+      "repository_path": "05-knowledge/results/fixed_cubic_quartic_embedding_classes_20261020/FINITE_EMBEDDING_CLASSES_AND_FIXED_CYLINDERS.md",
+      "expected_sha256": "470224608077d90b3d843936d028e1d29480b572a7a25e8a9bc7f1054ec2fd25",
+      "head_sha256": "470224608077d90b3d843936d028e1d29480b572a7a25e8a9bc7f1054ec2fd25",
+      "disk_sha256": "470224608077d90b3d843936d028e1d29480b572a7a25e8a9bc7f1054ec2fd25",
+      "verified": true
+    },
+    {
+      "repository_path": "05-knowledge/results/fixed_cubic_quartic_embedding_classes_20261020/EXACT_EMBEDDING_COUNT_APPENDIX.md",
+      "expected_sha256": "3906b8d7be9d22539c75a3e02010a70d91c0bf0097608da23c584005813ba4aa",
+      "head_sha256": "3906b8d7be9d22539c75a3e02010a70d91c0bf0097608da23c584005813ba4aa",
+      "disk_sha256": "3906b8d7be9d22539c75a3e02010a70d91c0bf0097608da23c584005813ba4aa",
+      "verified": true
+    },
+    {
+      "repository_path": "05-knowledge/results/fixed_cubic_quartic_embedding_classes_20261020/review/AUDIT.md",
+      "expected_sha256": "011f7753cc58b2a0586c57eb54a4057bdce1bba16de6a53f26b1441b7607927e",
+      "head_sha256": "011f7753cc58b2a0586c57eb54a4057bdce1bba16de6a53f26b1441b7607927e",
+      "disk_sha256": "011f7753cc58b2a0586c57eb54a4057bdce1bba16de6a53f26b1441b7607927e",
+      "verified": true
+    }
+  ]
+}

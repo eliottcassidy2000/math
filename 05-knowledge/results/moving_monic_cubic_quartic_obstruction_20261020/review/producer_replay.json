@@ -1,0 +1,99 @@
+{
+  "checks": [
+    "raw immersion resultant is 9I",
+    "plane relation evaluates to zero",
+    "plane relation is monic degree three in V",
+    "conductor quotient identity without division",
+    "global conductor membership C",
+    "global conductor membership Cy",
+    "global conductor membership Cy\u00b2",
+    "conductor remains monic degree six",
+    "collision-product conductor",
+    "separation resultant",
+    "H discriminant",
+    "cubic divided difference",
+    "quartic divided difference",
+    "cubic mod pair gives common h",
+    "common h after H reduction",
+    "quartic mod pair independent of y modulo H",
+    "pair root separation",
+    "direct node transversality",
+    "b=a unit identity",
+    "repeated H factors",
+    "repeated H immersion factor",
+    "standard relative Jacobian",
+    "gap five coefficient",
+    "gap two coefficient",
+    "standard y coefficient",
+    "affine b substitution product derivative",
+    "unit I on standard differential locus",
+    "second-reference inverse identity",
+    "second-locus I is 3c\u00b2",
+    "second reference Jacobian",
+    "second primitive full identity",
+    "second primitive gap remainder",
+    "second required primitive gap remainder",
+    "three_ordinary_nodes conductor quotient",
+    "three_ordinary_nodes degree six",
+    "three_ordinary_nodes relation monic",
+    "ordinary_triple_point conductor quotient",
+    "ordinary_triple_point degree six",
+    "ordinary_triple_point relation monic",
+    "repeated_H_immersed conductor quotient",
+    "repeated_H_immersed degree six",
+    "repeated_H_immersed relation monic",
+    "ramified_cusp conductor quotient",
+    "ramified_cusp degree six",
+    "ramified_cusp relation monic",
+    "three-node model squarefree conductor",
+    "triple-point conductor",
+    "triple-point H remains squarefree",
+    "repeated-H control discr zero",
+    "repeated-H control immersed",
+    "ramified model I zero",
+    "nonconstant moving unit-I hostile",
+    "standard-only moving unit-I hostile",
+    "standard-only hostile excludes second generator",
+    "moving second reference inverse identity",
+    "moving standard Jacobian nonconstant in y",
+    "moving second Jacobian nonconstant in y",
+    "entire ambient-generator determinant",
+    "generic-only determinant hostile",
+    "generic-only first generator vanishes at special fiber",
+    "standard residue-separated basis",
+    "exact gaps through conductor",
+    "low degree four span",
+    "low degree eight span"
+  ],
+  "conductor": "a*(a - b)**2 + c**2 + 2*c*y**3 + c*y*(a + b) + y**6 + y**4*(a + b) + y**2*(a**2 - a*b + b**2)",
+  "exact_checks": 64,
+  "hostile": "a=x,b=2x/3,c=1 has I=3 and both global reference generating pairs, but neither has constant nonzero Jacobian. Generic-only pair (xh,k) has ambient determinant x and fails whole generation at x=0.",
+  "scope": "Universal symbolic identities plus named exact controls; the all-generating-pair theorem also uses the written proof and pinned classical degree bound.",
+  "second_primitive_reduction": [
+    [
+      "(2*a*y**2/3 + c*y + y**4)**2",
+      "-1/2"
+    ],
+    [
+      "(a*y + y**3)*(2*a*y**2/3 + c*y + y**4)",
+      "0"
+    ],
+    [
+      "(a*y + y**3)**2",
+      "-2*a/9"
+    ],
+    [
+      "2*a*y**2/3 + c*y + y**4",
+      "a**2/3"
+    ],
+    [
+      "a*y + y**3",
+      "-a*c/3"
+    ],
+    [
+      "1",
+      "0"
+    ]
+  ],
+  "status": "PASS"
+}

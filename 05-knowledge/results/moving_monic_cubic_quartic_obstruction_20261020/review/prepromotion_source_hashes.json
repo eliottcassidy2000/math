@@ -1,0 +1,11 @@
+{
+  "session13-moving-cubic/MOVING_CUBIC_QUARTIC_OBSTRUCTION.md": "7c34d2d045e84f8daeafcc24fbd293ed53a0fa16451444788217e4bb4bd9cc4d",
+  "session13-moving-cubic/PRIMARY_SOURCES.md": "9792090429d1e533d29a2dcaa3bf57d3eec6c1a97200bb18ae9c0244fc1537d8",
+  "session13-moving-cubic/verify_moving_cubic.py": "b5bc1b80f374ed83898646c5610fb769ba5ef2dea40856c1051fe20b6adfa42a",
+  "session13-moving-cubic/results.json": "247236d5de79fb5d1e01e569c21c89e7c8a0d37e8182e8c685c9f8eab3a50ad0",
+  "session13-moving-cubic/results-optimized.json": "247236d5de79fb5d1e01e569c21c89e7c8a0d37e8182e8c685c9f8eab3a50ad0",
+  "session13-low-delta/LOW_DELTA_QUADRATIC_AND_RELATIVE_GLOBALIZATION.md": "82fcb171ad10bfd75058d722726d4ea0d709f9c802aff5695605b523287939f8",
+  "session13-cubic-quartic/CUBIC_QUARTIC_GLOBALIZATION_AND_EMBEDDING_BOUNDARIES.md": "9dd1e5111c3ac911d5decd463159b725f12dbd68a61020391ca31ff9eea2d1f4",
+  "session13-cubic-quartic/fixed-continuation/FINITE_EMBEDDING_CLASSES_AND_FIXED_CYLINDERS.md": "470224608077d90b3d843936d028e1d29480b572a7a25e8a9bc7f1054ec2fd25",
+  "session13-cubic-quartic/fixed-continuation/EXACT_EMBEDDING_COUNT_APPENDIX.md": "3906b8d7be9d22539c75a3e02010a70d91c0bf0097608da23c584005813ba4aa"
+}
