@@ -84,6 +84,10 @@ An internal shared-edge cut repairs it. The family
 obstruction to methods fixing both original endpoints.
 Neither this failure nor an abstract rewiring is a genuine non-leaf bridge
 of the tournament metagraph. General black-core connectivity remains open.
+The concurrently inherited order-nine certificate connects all 97,138
+black-active nodes and leaves exactly five leaf bridges;
+[incoming.md](incoming.md) records that finite result and its interaction
+with our all-order local theorem.
 
 ### Petersen reductions beyond flower strips
 
@@ -156,3 +160,7 @@ The next strongest targets are:
 3. An unavoidable rooted support-preserving pole in a sufficiently broad
    irreducible snark class. The present reductions certify their generated
    families; they do not establish that every snark admits such a move.
+
+The [concurrent integration note](incoming.md) also credits the overlapping
+Petersen linkage proof, the complementary heterochromatic reduction, and
+the connected seven-port realization that arrived during close-out.

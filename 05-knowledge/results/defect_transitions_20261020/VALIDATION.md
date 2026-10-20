@@ -85,3 +85,6 @@ equally. The manifest is provenance, not an independent mathematical proof.
 The shared-state compression and global graph claims are scoped separately
 in [README.md](README.md). No finite check here proves general black-core
 connectivity or a universal reduction of arbitrary snarks.
+The later order-nine spanning-tree computation is explicitly inherited in
+[incoming.md](incoming.md); this session read its audit and did not rerun
+that larger census.
