@@ -1,0 +1,25 @@
+--- BALANCED_DELETION_EXTENSIONS.md
++++ BALANCED_DELETION_EXTENSIONS.md
+@@ -81,6 +81,12 @@
+ start=0, and right infinity iff end=a+b. Consequently (1) is an endpoint-
+ marked fibre law, although endpoints do not recover the complete path.
+ 
++For balanced statements below, use the common-coordinate convention
++`K = sigma(B minus J)` when J is nonempty, with sigma(v)=2k-v;
++when J is empty, K=infinity. This reflects the raw right-shore subset
++from Theorem 1, so both I and K belong to
++X_k=P({1,...,k-1}) disjoint-union {infinity}.
++
+ ### 1.1 All-depth correction and its exact black contribution
+ 
+ Write q=2^(k-1)+1 and D=2^d for d simultaneous reflected interior additions.
+@@ -108,7 +114,8 @@
+ 
+ ## 2. General product fibres and the precise simple-graph boundary
+ 
+-For any surjection f:X'->X with nonempty fibres of sizes w_x, its product
++For any surjection f:X'->X between finite sets with nonempty fibres of sizes
++w_x, its product
+ f×f has w_x w_y lifts over (x,y). Coordinate swap is respected. A diagonal
+ parent (x,x) has w_x² lifts: w_x diagonal, w_x(w_x-1) off diagonal.
+ An off-diagonal parent has only off-diagonal lifts. Hence

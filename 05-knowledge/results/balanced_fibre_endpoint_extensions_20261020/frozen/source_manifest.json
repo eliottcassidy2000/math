@@ -1,0 +1,35 @@
+{
+  "status": "ORIGINAL_PRODUCER_BYTES",
+  "files": [
+    {
+      "path": "BALANCED_DELETION_EXTENSIONS.md",
+      "sha256": "baeafd394f839681a775fe0c1786d3e87e6fdecb1979ac4781298b3d460f11a0",
+      "bytes": 18859
+    },
+    {
+      "path": "check.optimized.out",
+      "sha256": "6ef50e96cd97e8ae7b10e8c90dbc466c1c9eec652aaa62357c1422a9ec431428",
+      "bytes": 2468
+    },
+    {
+      "path": "check.out",
+      "sha256": "6ef50e96cd97e8ae7b10e8c90dbc466c1c9eec652aaa62357c1422a9ec431428",
+      "bytes": 2468
+    },
+    {
+      "path": "check_fibres.py",
+      "sha256": "e73e5577e530c88b4950bd2d66f1b776987805dd34660b98b5bb71101ccd1d1c",
+      "bytes": 12982
+    },
+    {
+      "path": "checks.json",
+      "sha256": "6ef50e96cd97e8ae7b10e8c90dbc466c1c9eec652aaa62357c1422a9ec431428",
+      "bytes": 2468
+    },
+    {
+      "path": "marked_f5_paths.json",
+      "sha256": "77871cce0899388070246e0a054ff5a313eac30ee8dc41444bc630cde6150c1f",
+      "bytes": 4748
+    }
+  ]
+}

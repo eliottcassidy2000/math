@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "comparison": "All 25 actual paths, state masks and F5 vectors match exactly, not merely the cardinality.",
+  "balanced_table_sha256": "77871cce0899388070246e0a054ff5a313eac30ee8dc41444bc630cde6150c1f",
+  "prime_receipt_sha256": "518cc8f7de71d3d43c9ea0815aebd46641a630976737038809d09f3af34dc22d",
+  "prime_field_proof_sha256": "7a3a17b47b1259f93c1371800915fd09f2d71f07358d1c7a3a63115607c1cbb1",
+  "path_state_vector_projection_sha256": "0b2e696e49fdd0004b03846d782c57f46d8898bd8ea5632977ee2eb270b78644",
+  "matched_paths": 25,
+  "scope": "The shared marking is explicit data. Determinant adjacency is an added marked relation and is not a canonical source-path adjacency."
+}
