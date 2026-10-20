@@ -1,0 +1,6 @@
+{"n": 17, "presentations": 256, "excluded": 256, "max_nodes": 531, "max_cycles": 2, "seconds": 0.023}
+{"n": 19, "presentations": 512, "excluded": 512, "max_nodes": 1045, "max_cycles": 2, "seconds": 0.045}
+{"n": 21, "presentations": 1024, "excluded": 1024, "max_nodes": 2071, "max_cycles": 2, "seconds": 0.115}
+{"n": 23, "presentations": 2048, "excluded": 2048, "max_nodes": 7470, "max_cycles": 2, "seconds": 0.278}
+{"n": 25, "presentations": 4096, "excluded": 4096, "max_nodes": 8219, "max_cycles": 2, "seconds": 0.618}
+ALL REQUESTED ORDERS COMPLETE

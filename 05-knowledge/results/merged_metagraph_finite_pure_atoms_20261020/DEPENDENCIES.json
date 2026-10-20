@@ -1,0 +1,58 @@
+{
+  "status": "Exact mathematical dependencies; no claim that a not-yet-published companion is already available remotely",
+  "repository_dependencies": [
+    {
+      "path": "05-knowledge/results/merged_metagraph_purity_and_strong_core_20261020/PURE_BLUE_STRONG_CYCLE_REDUCTION.md",
+      "role": "All strong pure-blue atoms are odd regular circulants; every Hamiltonian-cycle successor is an automorphism",
+      "status": "PROVED; companion publication dependency"
+    },
+    {
+      "path": "01-canon/theorems/THM-2454-pure-blue-alphabet-and-center-law.md",
+      "role": "Proved canonical strong-component center law and pure C5 positive control",
+      "status": "PROVED center law; previously FINITE-EXACT atom data"
+    },
+    {
+      "path": "01-canon/theorems/THM-2477-rigid-strong-classification-through-sixty-two.md",
+      "role": "Earlier rigidity frontier, now superseded by Section3; not a proof dependency beyond free Hamiltonian-path action",
+      "status": "HISTORICAL FRONTIER"
+    }
+  ],
+  "published_inputs": [
+    {
+      "author": "Bill Cuckler",
+      "title": "Hamiltonian Cycles in Regular Tournaments",
+      "year": 2007,
+      "doi": "10.1017/S0963548306008170",
+      "url": "https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/hamiltonian-cycles-in-regular-tournaments/5CB605A35014A30F60F740D74199D3E7",
+      "role": "Uniform regular-tournament HC asymptotic, qualitative finiteness only",
+      "access": "Publisher abstract; indexed author-manuscript Theorem1. No numerical N(epsilon) imported."
+    },
+    {
+      "author": "John D. Dixon",
+      "title": "The Maximum Order of the Group of a Tournament",
+      "year": 1967,
+      "doi": "10.4153/CMB-1967-048-9",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/682531E83B0A3AA042CFC5852474E914/S0008439500067461a.pdf/div-class-title-the-maximum-order-of-the-group-of-a-tournament-div.pdf",
+      "role": "Theorem1 |Aut(T)|<=3^((n-1)/2)",
+      "access": "Primary three-page PDF"
+    },
+    {
+      "author": "Carsten Thomassen",
+      "title": "Hamilton Circuits in Regular Tournaments",
+      "year": 1985,
+      "doi": "10.1016/S0304-0208(08)73005-6",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0304020808730056/pdf?md5=2edc6467c1fcfb38ffb347da2a134065&pid=1-s2.0-S0304020808730056-main.pdf",
+      "role": "Strong minimum outdegree>=3k+3 implies HC>=4^k*k!, used at k>=1",
+      "access": "Indexed primary publisher abstract; full proof not retrieved"
+    },
+    {
+      "author": "Abdelhamid Benhocine and A. Pawel Wojda",
+      "title": "On the existence of specified cycles in a tournament",
+      "year": 1983,
+      "doi": "10.1002/jgt.3190070413",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/jgt.3190070413",
+      "role": "Every tournament of order>=7 contains a Hamiltonian bypass D(n,2)",
+      "access": "Primary publisher abstract; no low-order exception classification imported"
+    }
+  ]
+}

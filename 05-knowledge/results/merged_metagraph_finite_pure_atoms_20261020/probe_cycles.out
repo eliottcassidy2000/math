@@ -1,0 +1,13 @@
+{'n': 3, 'presentations': 2, 'excluded': 0, 'max_cycles_examined': 1}
+{'n': 5, 'presentations': 4, 'excluded': 0, 'max_cycles_examined': 2}
+{'n': 7, 'presentations': 8, 'excluded': 8, 'max_cycles_examined': 2}
+{'n': 9, 'presentations': 16, 'excluded': 16, 'max_cycles_examined': 2}
+{'n': 11, 'presentations': 32, 'excluded': 32, 'max_cycles_examined': 2}
+{'n': 13, 'presentations': 64, 'excluded': 64, 'max_cycles_examined': 2}
+{'n': 15, 'presentations': 128, 'excluded': 128, 'max_cycles_examined': 2}
+carousel_HC [{'n': 3, 'HC': 1}, {'n': 5, 'HC': 2}, {'n': 7, 'HC': 17}, {'n': 9, 'HC': 222}, {'n': 11, 'HC': 5109}, {'n': 13, 'HC': 166562}, {'n': 15, 'HC': 7604433}]
+lex_C3_C3 {'HC': 207, 'Aut': 81}
+order_five [{'label': 'regular_C5', 'scores': [2, 2, 2, 2, 2], 'HP': 15, 'Aut': 5, 'HC': 2, 'bypass_paths': [[0, 2, 3, 4, 1], [1, 3, 4, 0, 2], [2, 4, 0, 1, 3], [3, 0, 1, 2, 4], [4, 1, 2, 3, 0]]}, {'label': 'Darbinyan_T5_exception', 'scores': [3, 2, 2, 1, 2], 'HP': 15, 'Aut': 3, 'HC': 3, 'bypass_paths': []}]
+k22 exact bound 19773629917122657266558702714880000 > 7509466514979724803946715958257547
+extra counting exclusions [127, 133, 135]
+ALL CHECKS PASSED

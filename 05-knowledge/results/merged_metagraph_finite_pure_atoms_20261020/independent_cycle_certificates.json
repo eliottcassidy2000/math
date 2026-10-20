@@ -1,0 +1,136 @@
+{
+  "status": "PASS",
+  "complete_presentations_checked": [
+    {
+      "n": 3,
+      "presentations": 2,
+      "negative_certificates": 0
+    },
+    {
+      "n": 5,
+      "presentations": 4,
+      "negative_certificates": 0
+    },
+    {
+      "n": 7,
+      "presentations": 8,
+      "negative_certificates": 8
+    },
+    {
+      "n": 9,
+      "presentations": 16,
+      "negative_certificates": 16
+    },
+    {
+      "n": 11,
+      "presentations": 32,
+      "negative_certificates": 32
+    },
+    {
+      "n": 13,
+      "presentations": 64,
+      "negative_certificates": 64
+    },
+    {
+      "n": 15,
+      "presentations": 128,
+      "negative_certificates": 128
+    },
+    {
+      "n": 17,
+      "presentations": 256,
+      "negative_certificates": 256
+    },
+    {
+      "n": 19,
+      "presentations": 512,
+      "negative_certificates": 512
+    },
+    {
+      "n": 21,
+      "presentations": 1024,
+      "negative_certificates": 1024
+    },
+    {
+      "n": 23,
+      "presentations": 2048,
+      "negative_certificates": 2048
+    },
+    {
+      "n": 25,
+      "presentations": 4096,
+      "negative_certificates": 4096
+    },
+    {
+      "n": 27,
+      "presentations": 8192,
+      "negative_certificates": 8192
+    },
+    {
+      "n": 29,
+      "presentations": 16384,
+      "negative_certificates": 16384
+    },
+    {
+      "n": 31,
+      "presentations": 32768,
+      "negative_certificates": 32768
+    }
+  ],
+  "independent_carousel_HC": [
+    {
+      "n": 3,
+      "HC": 1
+    },
+    {
+      "n": 5,
+      "HC": 2
+    },
+    {
+      "n": 7,
+      "HC": 17
+    },
+    {
+      "n": 9,
+      "HC": 222
+    },
+    {
+      "n": 11,
+      "HC": 5109
+    },
+    {
+      "n": 13,
+      "HC": 166562
+    },
+    {
+      "n": 15,
+      "HC": 7604433
+    }
+  ],
+  "sharpened_cutoff_bases": [
+    {
+      "n": 133,
+      "k": 21,
+      "double_cycle_lower": 449400679934605846967243243520000,
+      "group_minus_one_upper": 30903154382632612361920641803528
+    },
+    {
+      "n": 135,
+      "k": 21,
+      "double_cycle_lower": 449400679934605846967243243520000,
+      "group_minus_one_upper": 92709463147897837085761925410586
+    },
+    {
+      "n": 137,
+      "k": 21,
+      "double_cycle_lower": 449400679934605846967243243520000,
+      "group_minus_one_upper": 278128389443693511257285776231760
+    }
+  ],
+  "additional_excluded_orders": [
+    121,
+    127,
+    129
+  ],
+  "maximum_remaining_order": 131
+}

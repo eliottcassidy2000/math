@@ -1,0 +1,3 @@
+{"n": 27, "presentations": 8192, "excluded": 8192, "max_nodes": 108815, "max_cycles": 2, "seconds": 1.497}
+{"n": 29, "presentations": 16384, "excluded": 16384, "max_nodes": 57080, "max_cycles": 2, "seconds": 3.625}
+{"n": 31, "status": "INCOMPLETE", "certified": 128, "universe": 32768, "reason": "node/time guard"}
