@@ -9,8 +9,11 @@ status: >
   quantity appears in dimension three': quotient dimension two, Dehn's tensor, free subgroups, rank two) is an analogy,
   typed as such; the Markus-Yamabe row is verified structurally (THM-4727 M), the others are not claimed to share a
   proof.
-  (c) OPEN. The reduction is PROVED (THM-4727 R, E). Numerical search of the twisted equation in bounded degree not yet
-  run (the natural next computation; it is bilinear in (A, B) for fixed l).
+  (c) OPEN. The reduction is PROVED (THM-4727 R, E). Bounded-degree searches: sympy's Groebner basis did not terminate in
+  35 minutes on the smallest boxes (weights (1,-1,-1) with deg l <= 1, deg A, B <= 2: 13 unknowns; the (1,-1,-2) control
+  box), so the classification needs Singular/Macaulay2 or a structured elimination; the sweep-type ansatz for the weight
+  type (1,-1,-1) (A = p(w)/l + alpha, B = q(w)/l + beta, w = l(1+v), deg p, q <= 3) has NO Keller solution for six linear
+  l (sweep_ansatz_111.out), a first indication that the exponent W - 1 = 1 types carry no counterexamples of sweep shape.
   (d) OPEN; the constraints are CITED (Moh 1983 degree >= 101 via the sub-125 classification, THM-3550, THM-3544,
   THM-4626, Meng-Yang HC(4)).
 source: mac-mini-2026-10-20-jcweb (owner's prompt)
