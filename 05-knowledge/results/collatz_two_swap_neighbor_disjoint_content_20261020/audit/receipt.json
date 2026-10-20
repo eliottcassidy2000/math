@@ -1,0 +1,210 @@
+{
+  "counts": {
+    "extra_resultant_controls": 6,
+    "joint_envelope_checks": 40,
+    "lattices": 3176,
+    "legality_comparisons": 4385,
+    "minus_paths": 175506,
+    "negative_clock_paths": 10188,
+    "ordered_paths": 351012,
+    "original_cut_crossing_paths": 4384,
+    "plus_paths": 175506,
+    "positive_clock_paths": 340824,
+    "resultants": 4756,
+    "source_shapes": 4385,
+    "whole_gcd_checks": 351012
+  },
+  "extra_resultant_controls": [
+    {
+      "direction": -1,
+      "g": 25,
+      "p": 19,
+      "r": 14,
+      "resultant": -772575,
+      "u": 6,
+      "vectors": [
+        [
+          -1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          -2
+        ]
+      ]
+    },
+    {
+      "direction": -1,
+      "g": 121,
+      "p": 37,
+      "r": 29,
+      "resultant": -1013091665553,
+      "u": 25,
+      "vectors": [
+        [
+          -3,
+          1,
+          1
+        ],
+        [
+          -2,
+          2,
+          -3
+        ]
+      ]
+    },
+    {
+      "direction": -1,
+      "g": 125,
+      "p": 39,
+      "r": 34,
+      "resultant": -187268547205519963875,
+      "u": 26,
+      "vectors": [
+        [
+          -3,
+          2,
+          -2
+        ],
+        [
+          -2,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "direction": 1,
+      "g": 104233,
+      "p": 119,
+      "r": 72,
+      "resultant": 752463968281,
+      "u": 20,
+      "vectors": [
+        [
+          -3,
+          1,
+          -2
+        ],
+        [
+          -5,
+          0,
+          3
+        ]
+      ]
+    }
+  ],
+  "integer_examples": [],
+  "largest_content": {
+    "direction": 1,
+    "g": 104233,
+    "p": 119,
+    "r": 72,
+    "u": 20
+  },
+  "parameters": {
+    "lattice_max_p": 36,
+    "max_p": 120
+  },
+  "prime_square_controls": [
+    {
+      "direction": -1,
+      "g": 25,
+      "p": 19,
+      "r": 14,
+      "square_prime": 5,
+      "u": 6
+    },
+    {
+      "direction": -1,
+      "g": 25,
+      "p": 23,
+      "r": 18,
+      "square_prime": 5,
+      "u": 6
+    },
+    {
+      "direction": -1,
+      "g": 25,
+      "p": 27,
+      "r": 22,
+      "square_prime": 5,
+      "u": 6
+    },
+    {
+      "direction": 1,
+      "g": 25,
+      "p": 27,
+      "r": 22,
+      "square_prime": 5,
+      "u": 9
+    },
+    {
+      "direction": 1,
+      "g": 25,
+      "p": 31,
+      "r": 26,
+      "square_prime": 5,
+      "u": 5
+    },
+    {
+      "direction": -1,
+      "g": 25,
+      "p": 31,
+      "r": 26,
+      "square_prime": 5,
+      "u": 6
+    },
+    {
+      "direction": -1,
+      "g": 121,
+      "p": 37,
+      "r": 29,
+      "square_prime": 11,
+      "u": 25
+    },
+    {
+      "direction": -1,
+      "g": 25,
+      "p": 39,
+      "r": 34,
+      "square_prime": 5,
+      "u": 6
+    },
+    {
+      "direction": -1,
+      "g": 125,
+      "p": 39,
+      "r": 34,
+      "square_prime": 5,
+      "u": 26
+    },
+    {
+      "direction": 1,
+      "g": 25,
+      "p": 39,
+      "r": 34,
+      "square_prime": 5,
+      "u": 17
+    },
+    {
+      "direction": -1,
+      "g": 25,
+      "p": 41,
+      "r": 26,
+      "square_prime": 5,
+      "u": 23
+    },
+    {
+      "direction": -1,
+      "g": 25,
+      "p": 43,
+      "r": 38,
+      "square_prime": 5,
+      "u": 6
+    }
+  ],
+  "status": "FINITE-EXACT"
+}

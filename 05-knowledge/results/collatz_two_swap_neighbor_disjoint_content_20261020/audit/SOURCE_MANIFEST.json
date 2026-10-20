@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-20",
+  "files": {
+    "NEIGHBOR_DISJOINT_AUDIT.md": {
+      "bytes": 11844,
+      "sha256": "3185b85accc9ee85601cdad81a21206ee99d96cffa7a53f3b69d9e63768ff221"
+    },
+    "audit_neighbor_disjoint.py": {
+      "bytes": 12242,
+      "sha256": "9665adc586d5fb1f54b489c288c2225aab4b37bbbd6505e1d3d13994de6425e7"
+    },
+    "receipt.json": {
+      "bytes": 3261,
+      "sha256": "daddfe8ceb7cb96fd9b03eb82f29232c35d18d286a9310b3191f9edbd4b376fb"
+    },
+    "receipt.optimized.json": {
+      "bytes": 3261,
+      "sha256": "daddfe8ceb7cb96fd9b03eb82f29232c35d18d286a9310b3191f9edbd4b376fb"
+    }
+  },
+  "status": "FROZEN independent audit; no all-length closure claimed"
+}

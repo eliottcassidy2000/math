@@ -1,0 +1,567 @@
+{
+  "status": "FINITE-EXACT neighbor-disjoint content controls, no all-length exclusion claimed",
+  "script_sha256": "1242495650ff4cb5f7355c136785fb156601330d9d2221942d10c4ce3e829f68",
+  "checks": 926590,
+  "shapes": 711,
+  "unordered_edit_pairs": 11440,
+  "ordered_actual_paths": 22880,
+  "cut_crossing_ordered_paths": 710,
+  "integer_hits": [],
+  "maximum_content": {
+    "p": 23,
+    "r": 22,
+    "n": 1,
+    "u": 17,
+    "family": "plus",
+    "q": 45,
+    "edges": [
+      33,
+      35
+    ],
+    "word": "010101010101010101010101010101010010110101011",
+    "D": 35090228910005,
+    "B": 137568494694250,
+    "content": 2615,
+    "vectors": [
+      {
+        "a": 0,
+        "b": 1,
+        "c": 0,
+        "m": 1,
+        "height": 1,
+        "degree": 1,
+        "coefficient_l1_norm": 7
+      },
+      {
+        "a": -2,
+        "b": -2,
+        "c": 3,
+        "m": 3,
+        "height": 3,
+        "degree": 6,
+        "coefficient_l1_norm": 175859
+      }
+    ],
+    "polynomials": [
+      [
+        -4,
+        3
+      ],
+      [
+        243,
+        0,
+        0,
+        -21952,
+        65856,
+        -65856,
+        21952
+      ]
+    ],
+    "resultant": 1582075,
+    "clock_resultant_gcd": 2615
+  },
+  "extra_resultant_clock_factors": [
+    {
+      "p": 7,
+      "r": 6,
+      "n": 1,
+      "u": 3,
+      "family": "plus",
+      "q": 13,
+      "edges": [
+        5,
+        7
+      ],
+      "word": "0101001011011",
+      "D": 6005,
+      "B": 30346,
+      "content": 1,
+      "vectors": [
+        {
+          "a": 0,
+          "b": 1,
+          "c": 0,
+          "m": 1,
+          "height": 1,
+          "degree": 1,
+          "coefficient_l1_norm": 7
+        },
+        {
+          "a": -1,
+          "b": 0,
+          "c": 2,
+          "m": -1,
+          "height": 2,
+          "degree": 2,
+          "coefficient_l1_norm": 401
+        }
+      ],
+      "polynomials": [
+        [
+          -4,
+          3
+        ],
+        [
+          98,
+          -205,
+          98
+        ]
+      ],
+      "resultant": -10,
+      "clock_resultant_gcd": 5
+    },
+    {
+      "p": 7,
+      "r": 6,
+      "n": 1,
+      "u": 4,
+      "family": "minus",
+      "q": 13,
+      "edges": [
+        6,
+        8
+      ],
+      "word": "0101011010011",
+      "D": 6005,
+      "B": 20266,
+      "content": 1,
+      "vectors": [
+        {
+          "a": 0,
+          "b": 1,
+          "c": 0,
+          "m": 1,
+          "height": 1,
+          "degree": 1,
+          "coefficient_l1_norm": 7
+        },
+        {
+          "a": -1,
+          "b": 0,
+          "c": 2,
+          "m": 1,
+          "height": 2,
+          "degree": 3,
+          "coefficient_l1_norm": 214
+        }
+      ],
+      "polynomials": [
+        [
+          -4,
+          3
+        ],
+        [
+          -18,
+          49,
+          -98,
+          49
+        ]
+      ],
+      "resultant": -290,
+      "clock_resultant_gcd": 5
+    },
+    {
+      "p": 8,
+      "r": 5,
+      "n": 3,
+      "u": 0,
+      "family": "plus",
+      "q": 13,
+      "edges": [
+        12,
+        1
+      ],
+      "word": "1011101011010",
+      "D": 1631,
+      "B": 15959,
+      "content": 1,
+      "vectors": [
+        {
+          "a": 0,
+          "b": 0,
+          "c": 1,
+          "m": 0,
+          "height": 1,
+          "degree": 1,
+          "coefficient_l1_norm": 11
+        },
+        {
+          "a": 1,
+          "b": -2,
+          "c": 2,
+          "m": 2,
+          "height": 2,
+          "degree": 4,
+          "coefficient_l1_norm": 1649
+        }
+      ],
+      "polynomials": [
+        [
+          -4,
+          7
+        ],
+        [
+          -81,
+          0,
+          392,
+          -784,
+          392
+        ]
+      ],
+      "resultant": -138033,
+      "clock_resultant_gcd": 7
+    },
+    {
+      "p": 8,
+      "r": 5,
+      "n": 3,
+      "u": 1,
+      "family": "plus",
+      "q": 13,
+      "edges": [
+        4,
+        6
+      ],
+      "word": "0101010111011",
+      "D": 1631,
+      "B": 50110,
+      "content": 1,
+      "vectors": [
+        {
+          "a": 0,
+          "b": 0,
+          "c": 1,
+          "m": 1,
+          "height": 1,
+          "degree": 2,
+          "coefficient_l1_norm": 17
+        },
+        {
+          "a": 0,
+          "b": -1,
+          "c": 2,
+          "m": -1,
+          "height": 2,
+          "degree": 2,
+          "coefficient_l1_norm": 811
+        }
+      ],
+      "polynomials": [
+        [
+          3,
+          -7,
+          7
+        ],
+        [
+          196,
+          -419,
+          196
+        ]
+      ],
+      "resultant": 435141,
+      "clock_resultant_gcd": 7
+    }
+  ],
+  "prime_power_controls": [
+    {
+      "p": 19,
+      "r": 14,
+      "n": 5,
+      "u": 6,
+      "family": "minus",
+      "q": 33,
+      "edges": [
+        7,
+        9
+      ],
+      "word": "010101110100110101011010101101011",
+      "D": 7427673125,
+      "B": 51171632650,
+      "content": 25,
+      "vectors": [
+        {
+          "a": 0,
+          "b": -1,
+          "c": 1,
+          "m": 1,
+          "height": 1,
+          "degree": 2,
+          "coefficient_l1_norm": 37
+        },
+        {
+          "a": -1,
+          "b": 1,
+          "c": 2,
+          "m": -2,
+          "height": 2,
+          "degree": 2,
+          "coefficient_l1_norm": 172
+        }
+      ],
+      "polynomials": [
+        [
+          -9,
+          -14,
+          14
+        ],
+        [
+          49,
+          -98,
+          25
+        ]
+      ],
+      "resultant": -772575,
+      "clock_resultant_gcd": 25
+    },
+    {
+      "p": 23,
+      "r": 18,
+      "n": 5,
+      "u": 6,
+      "family": "minus",
+      "q": 41,
+      "edges": [
+        25,
+        27
+      ],
+      "word": "01010101101010101101010111010010110101011",
+      "D": 2104880076725,
+      "B": 10997094419050,
+      "content": 25,
+      "vectors": [
+        {
+          "a": 0,
+          "b": -1,
+          "c": 1,
+          "m": 1,
+          "height": 1,
+          "degree": 2,
+          "coefficient_l1_norm": 37
+        },
+        {
+          "a": -1,
+          "b": 2,
+          "c": 2,
+          "m": -1,
+          "height": 2,
+          "degree": 2,
+          "coefficient_l1_norm": 228
+        }
+      ],
+      "polynomials": [
+        [
+          -9,
+          -14,
+          14
+        ],
+        [
+          49,
+          -130,
+          49
+        ]
+      ],
+      "resultant": -834575,
+      "clock_resultant_gcd": 25
+    },
+    {
+      "p": 27,
+      "r": 22,
+      "n": 5,
+      "u": 9,
+      "family": "plus",
+      "q": 49,
+      "edges": [
+        32,
+        34
+      ],
+      "word": "0101010101101010101101010101011001011011010101011",
+      "D": 555324355936325,
+      "B": 2843151579047050,
+      "content": 25,
+      "vectors": [
+        {
+          "a": 0,
+          "b": -2,
+          "c": 1,
+          "m": -1,
+          "height": 2,
+          "degree": 1,
+          "coefficient_l1_norm": 251
+        },
+        {
+          "a": -1,
+          "b": 2,
+          "c": 2,
+          "m": 1,
+          "height": 2,
+          "degree": 3,
+          "coefficient_l1_norm": 204
+        }
+      ],
+      "polynomials": [
+        [
+          -112,
+          139
+        ],
+        [
+          -8,
+          49,
+          -98,
+          49
+        ]
+      ],
+      "resultant": -17484200,
+      "clock_resultant_gcd": 25
+    },
+    {
+      "p": 27,
+      "r": 22,
+      "n": 5,
+      "u": 6,
+      "family": "minus",
+      "q": 49,
+      "edges": [
+        20,
+        22
+      ],
+      "word": "0101010101101010101110100101011010101011010101011",
+      "D": 555324355936325,
+      "B": 2610789470528650,
+      "content": 25,
+      "vectors": [
+        {
+          "a": 0,
+          "b": -1,
+          "c": 1,
+          "m": 1,
+          "height": 1,
+          "degree": 2,
+          "coefficient_l1_norm": 37
+        },
+        {
+          "a": -1,
+          "b": 2,
+          "c": 3,
+          "m": 1,
+          "height": 3,
+          "degree": 4,
+          "coefficient_l1_norm": 2936
+        }
+      ],
+      "polynomials": [
+        [
+          -9,
+          -14,
+          14
+        ],
+        [
+          -192,
+          -343,
+          1029,
+          -1029,
+          343
+        ]
+      ],
+      "resultant": -1529376975,
+      "clock_resultant_gcd": 25
+    }
+  ],
+  "degenerate_projection_controls": [
+    {
+      "p": 5,
+      "r": 3,
+      "n": 2,
+      "u": 0,
+      "family": "plus",
+      "q": 8,
+      "edges": [
+        7,
+        1
+      ],
+      "word": "10111010",
+      "D": 13,
+      "B": 373,
+      "content": 1,
+      "vectors": [
+        {
+          "a": 0,
+          "b": 0,
+          "c": 1,
+          "m": 0,
+          "height": 1,
+          "degree": 1,
+          "coefficient_l1_norm": 11
+        },
+        {
+          "a": -2,
+          "b": 5,
+          "c": 1,
+          "m": 0,
+          "height": 5,
+          "degree": 1,
+          "coefficient_l1_norm": 878
+        }
+      ],
+      "polynomials": [
+        [
+          -4,
+          7
+        ],
+        [
+          -311,
+          567
+        ]
+      ],
+      "resultant": 91,
+      "clock_resultant_gcd": 13
+    },
+    {
+      "p": 5,
+      "r": 3,
+      "n": 2,
+      "u": 0,
+      "family": "plus",
+      "q": 8,
+      "edges": [
+        7,
+        1
+      ],
+      "word": "10111010",
+      "D": 13,
+      "B": 373,
+      "content": 1,
+      "vectors": [
+        {
+          "a": -2,
+          "b": 5,
+          "c": 0,
+          "m": 0,
+          "height": 5,
+          "degree": 0,
+          "coefficient_l1_norm": 13
+        },
+        {
+          "a": 0,
+          "b": 0,
+          "c": 1,
+          "m": 0,
+          "height": 1,
+          "degree": 1,
+          "coefficient_l1_norm": 11
+        }
+      ],
+      "polynomials": [
+        [
+          -13
+        ],
+        [
+          -4,
+          7
+        ]
+      ],
+      "resultant": -13,
+      "clock_resultant_gcd": 13
+    }
+  ],
+  "trace_sha256": "df734eff339f9e8deaac1f7203eed4ab1b0c0af62c992b5d72d95742a1be76b2"
+}
