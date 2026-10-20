@@ -1,7 +1,21 @@
 ---
 id: HYP-9341
-title: "What remains open after THM-4722/THM-4723: (a) the switching-class half of HYP-9172 for even n (refined identity true at n = 6 for every odd class, Euler parity lemma false there); (b) HYP-9340 beyond Sylow, reduced for the 3-cycle type to the cancellation of an explicit defect, conjecturally by the involution 'split a twin class as 3+3+rest and join the two triples'; (c) a uniform rule for the prime-circulant bijection: no quantifier-free rule with <= 3 affine atoms passes more than 4 of the primes 5..23, and any rule S -> D_c(S) sends the K_max-invariant tournaments to the empty graph iff c lies in K_max, which varies with p"
+title: "Current boundary after THM-4722/THM-4723: uniform equivariance closure, complete mixed-prime census through twelve, weighted twin defects, and unbounded Boolean degree"
 status: >
+  (a) PROVED: the HYP-9172(a) no-equivariant-type-bijection assertion is closed for both halves at every n>=5
+  by the independently reviewed uniform-obstruction packet; this does not prove every stronger odd-subgroup
+  switching refinement proposed in the historical route below.
+  (b) PROVED: all p-group equalities, exact fusion/sign-escape defect identity, least failure degree ten,
+  weighted false-twin formula and sharp order-twelve defect boundary. FINITE-EXACT: the complete mixed-prime
+  census through n=12. The all-order unit-weight split/join proposal is REFUTED; a decorated structural
+  cancellation remains OPEN, while the global Z3 defect sum already vanishes by the p-group theorem.
+  (c) PROVED: all-prime nonlinear equivariant circulant type construction; Boolean-affine existence iff
+  p=3 mod4 or p=5; unbounded necessary Boolean degree; exact minima two at p=13 and three at p=17.
+  First-order ring definability of some other prime-field bijection remains OPEN. The older bounded search
+  and initial questions below are preserved as historical lineage, not as the current status.
+  Incoming THM-4724 has author status PROVED (pre-audit), not RESERVED; its new claims are
+  preserved below as attributed incoming work, not independently audited dependencies of this checkpoint.
+incoming_status_20261020_pre_audit: >
   CONTEXT: the concurrent session-10 packet (uniform_equivariance_obstruction_20261020, prime_local_walsh_bijection_20261020,
   c15_symmetry_counterexample_20261020) proves HYP-9172 (a) for both halves at every n >= 5, proves HYP-9340 (a) for
   all p-groups, refutes it for mixed-prime H (C15 at n = 10, verified here: c15_n10_check.out), and gives an explicit
@@ -26,6 +40,12 @@ note: 05-knowledge/results/hyp9172_20261019_sylow_hall_violator.md
 
 # HYP-9341 — what remains open after THM-4722 and THM-4723
 
+## Current reconciliation, 20 October 2026
+
+The [ongoing checkpoint map](../results/overnight_prime_arithmetic_20261020/README.md) owns the current continuation. The [uniform obstruction and completed audit](../results/uniform_equivariance_obstruction_20261020/UNIFORM_EQUIVARIANCE_OBSTRUCTION.md) settle the no-equivariant-type-bijection assertion in (a), not every stronger refinement contemplated below. The [complete census](../results/mixed_prime_census_extension_20261020/README.md) settles the least mixed-prime failure degree and gives tau_T-tau_E=F_E+Z-F_T, retaining the actual permutation embedding. The [weighted twin-quotient formulas](../results/twin_quotient_defect_weights_20261020/README.md) refute an all-order unit-weight split/join cancellation, with the first magnitude-two defects and the first negative odd defect at order twelve; decorated structural cancellation remains open. The [affine](../results/affine_circulant_ideal_obstruction_20261020/AFFINE_CIRCULANT_IDEAL_OBSTRUCTION.md) and [Boolean-degree](../results/circulant_boolean_degree_20261020/BOOLEAN_DEGREE_BOUNDARY.md) theorems separate affine impossibility from the already existing all-prime nonlinear algorithm.
+
+The original sections below are retained as **historical questions and finite-search provenance**. Their “open”, “first found”, “pending audit”, proposed pairing and forced-empty language must be read with the current status above and [HYP-9340](HYP-9340-refined-equinumerosity-for-every-odd-order-symmetry-and-what-a-tournaments-even-graphs-bijection-can-be.md), which also corrects the labelled/type and largest-odd-subgroup distinctions.
+
 ## (a) Switching classes at even n
 
 THM-4722 proves the switching half of HYP-9172 for odd n through THM-4531 P1 (class ≅ its mod-4-balanced member) and the odd-n Euler parity lemma (`V = Z ⊕ B`, invariant cuts carry no self-paired orbit). For even n both fail: classes can have even-order stabilisers and the lemma has 36 counterexamples at n = 6 and n = 8. Yet `tau_C(P) = tau_EE(P)` holds at n = 6 for every odd-order class. Conjecture: the refined identity holds for switching classes at every n and every odd-order P, and the Hall violator {Sylow-3, Sylow-5} (with the empty graph) still works once one shows that no switching class on an even number of vertices has a stabiliser containing both Sylow subgroups.
@@ -40,6 +60,8 @@ By THM-4723, for `H = Z_3` of type `(3,1^{n-3})` the conjecture is `Σ_X (b(X) -
 
 THM-4721 Corollary C gives an AGL(1,p)-equivariant bijection between circulant tournaments and even circulant graphs of order p for every prime p, by Hall on the lattice of odd multiplier subgroups. Obstruction to uniformity: the tournaments invariant under the largest odd multiplier subgroup `K_max` (QR_p for p ≡ 3 mod 4) must go to the empty graph, while a multiplier derivative `D_c(S) = {x : [x ∈ S] ≠ [cx ∈ S]}` sends them to the empty graph iff `c ∈ K_max`, a condition on p (for `c = 4`: iff 4 is in the odd part of `Z_p^*`, which fails at p = 5, 13, 17 and holds at 7, 11, 19, 23 — exactly the passing primes of the search). A uniform rule would have to be a formula whose behaviour on `K_max`-invariant sets is "empty" for every p; whether a first-order formula in the ring language (with `S` as a predicate) can do this and be bijective is open. The natural guess is that no such formula exists because the odd part of `p - 1` is not first-order definable uniformly in p.
 
+
+**Incoming-work scope:** The following update and the `incoming_status_20261020_pre_audit` metadata preserve the concurrent author's text. [THM-4724](../../01-canon/theorems/THM-4724-affine-fixed-point-criterion-restricted-twisted-burnside-for-every-submodule-even-n-switching-half-and-the-dc-obstruction-to-uniform-circulant-rules.md) is labelled **PROVED (pre-audit)** by its author. This checkpoint does not independently audit or endorse its new theorems, and does not use them as proved dependencies. The reviewed reconciliation above controls the older general defect and affine/Boolean-degree questions.
 
 ## Update 2026-10-20 (THM-4724, mac-mini-2026-10-20-oddprimes)
 

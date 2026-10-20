@@ -1,5 +1,7 @@
 # Odd primes, symmetry descent, and the boundary of natural bijections
 
+**Successor checkpoint (ongoing, 20 October):** [Overnight prime arithmetic](../overnight_prime_arithmetic_20261020/README.md) resolves the named q=25 test, completes the mixed-prime census through twelve, and proves the Boolean-affine boundary and unbounded Boolean-degree obstruction. The questions below preserve this earlier session's frontier, not the latest status.
+
 20 October 2026. A focused continuation on HYP-9340, prime-circulant constructions, and HYP-9172.
 
 ## Results at a glance

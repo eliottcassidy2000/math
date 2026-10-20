@@ -1,0 +1,5 @@
+# Sharp one-swap norms: current route and preserved evidence
+
+The [sharp content-bound proof](SHARP_ONE_SWAP_CONTENT_BOUND.md) proves g<=3^p-2, sharp at every p>=2, with full prime-power norm gates and endpoint periodicity. Its dated final critical-clock OPEN statement is superseded for positive mechanical one-swap words by the [later cycle-exclusion theorem](../collatz_one_swap_exclusion_20261020/README.md), using the [critical square-root-seven gap](../collatz_one_swap_critical_gap_20261020/CRITICAL_CLOCK_SQRT7_GAP.md), a cited Matveev bound and exact certificates. The separate repetition appendix removes coprimality. The only positive-cycle exception in that mechanical family is (q,p)=(2,1).
+
+The original proof, checker, audit and receipts remain unchanged as the evidence for the norm theorem. Their historical OPEN wording must not be read as the current frontier. None of these results proves general Collatz convergence or excludes every positive integer cycle. Several-edit families remain open. See the [ongoing checkpoint map](../overnight_prime_arithmetic_20261020/README.md).

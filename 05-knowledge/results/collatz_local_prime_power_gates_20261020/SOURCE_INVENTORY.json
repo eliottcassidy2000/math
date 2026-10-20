@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 982,
-      "sha256": "a780611896559d24c30185365f6a0b6a66b60792376972ffce49eff04d738a22"
+      "bytes": 1386,
+      "sha256": "c42be5ec314c1ba0377aac391e5331c431d6fdfd734a5f0495cb01034efcb501"
     },
     {
       "path": "LOCAL_CARRY_AND_PRIME_POWER_GATES.md",
@@ -46,5 +46,15 @@
       "bytes": 1171,
       "sha256": "3dc46b3ebc871c651b3597eec7468fa6264a861e472d6a6deae859c15a790a31"
     }
-  ]
+  ],
+  "navigation_revision": {
+    "scope": "Routing-only README successor status; mathematical proof, programs, receipts and validation unchanged.",
+    "prior_packet_commit": "4a7883035673b83149b68c3e833be043996d98b4",
+    "prior_inventory_sha256": "677659cb92d199f6d1ba01b4de9b3c458415565f8ec414a73931d65d2d49442f",
+    "prior_readme": {
+      "path": "README.md",
+      "bytes": 982,
+      "sha256": "a780611896559d24c30185365f6a0b6a66b60792376972ffce49eff04d738a22"
+    }
+  }
 }

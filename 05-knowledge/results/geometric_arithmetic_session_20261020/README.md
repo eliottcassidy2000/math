@@ -1,5 +1,7 @@
 # Geometry, arithmetic content, and actual-source constraints
 
+**Successor checkpoint (ongoing, 20 October):** [Positive mechanical one-swap exclusion](../collatz_one_swap_exclusion_20261020/README.md) proves the precise conjecture in section 2 below and removes coprimality via a separate repetition obstruction. Only the ordinary (q,p)=(2,1) positive-cycle exception remains in this family. [The current map](../overnight_prime_arithmetic_20261020/README.md) also routes the reviewed source-conductor continuation. General Collatz and complex JC remain open; the initial conjecture below is historical, not a current open claim.
+
 20 October 2026. Session map for the simplex/spheroid/cuboid investigation and the next Collatz and planar Jacobian targets.
 
 **Outcome:** exact scoped mechanisms and explicit remaining gates. Neither the Collatz conjecture nor the planar Jacobian conjecture is proved. Novelty here means new synthesis within this investigation; historical priority is not asserted.
