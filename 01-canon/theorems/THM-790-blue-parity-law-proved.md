@@ -1,7 +1,7 @@
 ---
 id: THM-790
 title: THE LEG LAW and the blue parity law PROVED — every d=m line's axis drop is Δx = 8(e₁ − e_n) (the difference of the two LEG out-degrees); the full flip acts on centered scores as reversal-plus-leg-defect; closed-form drop spectra for the whole layer AND the blue sublayer at every n; the parity law is a one-line corollary; the half-tiling model counts blue objects
-status: PROVED (every identity verified on ALL tilings n = 4..7 — the leg law, the score action, both generating functions, all six lemmas) + n=8 CERTIFIED (subH-augmented classifier: 6,880/6,880 classes; every prediction exact incl. the blue GF histogram {0:640, 16:960, 32:384, 48:64}; codex-S9's interim 6,874-bucket caveat is superseded by the completed run)
+status: PROVED (2026-10-20 addition; the transitive pipe lands mixed for every n>=4, not just the finite atlases; see the supersession below). PROVED (every identity verified on ALL tilings n = 4..7 — the leg law, the score action, both generating functions, all six lemmas) + n=8 CERTIFIED (subH-augmented classifier: 6,880/6,880 classes; every prediction exact incl. the blue GF histogram {0:640, 16:960, 32:384, 48:64}; codex-S9's interim 6,874-bucket caveat is superseded by the completed run)
 source: opus-2026-07-14-S305 (owner directive: prove the blue parity law, check n=8, find predictive formulas and recursive structure via the half/quarter tiling models)
 depends_on:
   - THM-787   # the flow study whose laws this proves
@@ -12,6 +12,23 @@ verification: 04-computation/blue_parity_law_proof_referee_opus_S305.py (six lem
 ---
 
 # THM-790 — the leg law, and the blue parity law as its corollary
+
+## Current supersession — 2026-10-20
+
+The general mixed-landing gap in §5 and the predictive-formula ledger is
+now **PROVED**: for every `n>=4`, the unique complement line at the
+transitive node is blue, has cyclic-triangle jump `n-2`, and lands at a
+mixed node. At `n=3` it lands at the pure-blue 3-cycle, so the lower
+boundary is necessary. The [all-order constructive proof](../../05-knowledge/results/merged_metagraph_purity_and_strong_core_20261020/FOUNDATIONS_AND_MIXED_LANDING.md#4-new-theorem-the-unique-transitive-pipe-always-lands-mixed)
+exhibits a non-reflection-fixed Hamiltonian-path normalization of the
+all-zero partner; the companion exact audit checks `n=3..100` but is not
+the proof.
+
+The old `n=4..8` statements below accurately record the earlier evidence;
+the sentences saying general mixed landing is open or not supplied are
+**SUPERSEDED** by this proof. The leg-law identities and their historical
+certification are unchanged.
+
 
 **Setup.** Base path n → … → 1; tiles (x,y), x−y ≥ 2, bit 1 = arc x→y; the
 d=m line joins t to its full flip t̄; axis x = Σ_v d_v², d_v = 2s_v − (n−1).

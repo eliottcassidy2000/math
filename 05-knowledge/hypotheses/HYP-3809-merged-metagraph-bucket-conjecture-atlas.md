@@ -1,7 +1,7 @@
 ---
 id: HYP-3809
-title: CONJECTURE ATLAS for the merged-metagraph bucket/parity structure (extends kps S12/S675 blue-black work). Core new results: (1) the PARITY THEOREM REDUCES to a sigma-orbit count -- sigma (=complement-fold=transpose, the half-tiling mirror) PRESERVES merged nodes, so a node is a union of sigma-orbits (fixed=grid-sym, else pairs), tiling_count = #gridsym + 2*#pairs, hence parity = #gridsym mod 2 (SC has ODD #gridsym, NS has 0). (2) IDENTITY #grid-sym tilings = 2^floor((n-1)^2/4) = 2^(half-tiling quarter-square size) => the BLUE structure lives on the half-tiling. (3) SC classes = A051337 (self-converse tournaments) = #pure_blue+#mixed; V_merged=(A000568+A051337)/2. (4) TWIN-PAIRING (new, confirmed): the #grid-sym-per-SC-node multiset has ALL-EVEN multiplicities (a fixed-point-free involution twins SC nodes by grid-sym count). (5) STRUCTURE=CONSTRAINT is UNDER-DETERMINED: valid color+eligibility+degree-preserving 2-swaps exist (n=5,6), so the owner's parity/eligibility constraints are NECESSARY but NOT SUFFICIENT -- the metagraph's 'parity skeleton', with the tournament-iso structure selecting the actual realization.
-status: MIXED -- several CONFIRMED (n<=6 exhaustive: grid-sym=2^floor((n-1)^2/4); SC=A051337; sigma preserves nodes; parity reduction; twin-pairing all-even multiplicities; 2-swap existence) + a CONJECTURE ATLAS (many small conjectures, some open). Extends kps S12/S675 (tripartite structure, tiling_count=degree, black-even, grid-sym<=>tau-fixed<=>SC, n=6 self-loop correction -- kps has PRIORITY on these; this session confirms + extends). Not a proof of the parity theorem for general n (reduced to 'SC node has odd #grid-sym').
+title: CONJECTURE ATLAS for the merged-metagraph bucket/parity structure (extends kps S12/S675 blue-black work). Core new results: (1) the PARITY THEOREM REDUCES to a sigma-orbit count -- sigma (=complement-fold=transpose, the half-tiling mirror) PRESERVES merged nodes, so a node is a union of sigma-orbits (fixed=grid-sym, else pairs), tiling_count = #gridsym + 2*#pairs, hence parity = #gridsym mod 2 (SC has ODD #gridsym, NS has 0). (2) IDENTITY #grid-sym tilings = 2^floor((n-1)^2/4) = 2^(half-tiling quarter-square size) => the BLUE structure lives on the half-tiling. (3) SC classes = A051337 (self-converse tournaments) = #pure_blue+#mixed; V_merged=(A000568+A051337)/2. (4) All-orders even blue-count multiplicities are REFUTED at n=8, but the repaired ODD-order theorem is PROVED (2026-10-20): auxiliary hollow-frame toggle cubes preserve blue count and reverse cyclic-triangle parity; these are not blue-metagraph automorphisms. (5) STRUCTURE=CONSTRAINT is UNDER-DETERMINED: valid color+eligibility+degree-preserving 2-swaps exist (n=5,6), so the owner's parity/eligibility constraints are NECESSARY but NOT SUFFICIENT -- the metagraph's 'parity skeleton', with the tournament-iso structure selecting the actual realization.
+status: MIXED -- several CONFIRMED (n<=6 exhaustive: grid-sym=2^floor((n-1)^2/4); SC=A051337; sigma preserves nodes; parity reduction; historical blue-count even-multiplicity checks in the stated finite range; 2-swap existence) + a CONJECTURE ATLAS (many small conjectures, some open). Extends kps S12/S675 (tripartite structure, tiling_count=degree, black-even, grid-sym<=>tau-fixed<=>SC, n=6 self-loop correction -- kps has PRIORITY on these; this session confirms + extends). The original note did not prove general parity; THM-643-blue-black-line-parity-structure supplies that theorem. The all-orders twin-pairing extrapolation is REFUTED, while the odd-order equal-shore theorem and free auxiliary toggle cubes are PROVED (2026-10-20 correction below).
 source: mac-mini-2026-07-01-S84
 related:
   - HYP-3808   # S83 the parity decomposition (black=even graph, blue=odd) -- this reduces/extends it
@@ -15,6 +15,52 @@ results:
 ---
 
 # HYP-3809 -- conjecture atlas for the merged-metagraph buckets
+
+## Current correction and repaired odd-order theorem — 2026-10-20
+
+The all-order extrapolation is **REFUTED**: at `n=8`, exactly **three**
+self-converse classes have blue tiling count `1`. Thus there cannot be a
+fixed-point-free class involution preserving blue count at **every** order.
+The [exact order-eight spectrum](../results/merged_metagraph_black_quotient_bridges_20261020/README.md#two-further-hostile-controls-at-n8)
+remains a counterexample; the theorem below does not erase the even-order
+failure.
+
+The repaired **odd-order** statement is now **PROVED for every odd `n>=3`**.
+There is a class-level involution preserving blue tiling count and reversing
+cyclic-triangle parity. More strongly, self-converse classes partition into
+free auxiliary toggle cubes `(C2)^r`, constant in blue count and checkerboard
+in triangle parity. For `n=2k+1`, the cube dimension satisfies `r>=1` and
+`r=k (mod 2)`. Consequently:
+
+- The blue-count spectra on the even- and odd-triangle sides are equal at
+  every odd order, not only in the historical `n=3,5,7` data.
+- Every blue-count multiplicity is even at odd order.
+- At `n=1 (mod 4)`, `n>=5`, each full multiplicity is divisible by four,
+  and each shore multiplicity is even.
+
+The [hollow-frame theorem and proof](../results/odd_blue_spectrum_hollow_cubes_20261020/ODD_BLUE_SPECTRUM_AND_HOLLOW_CUBES.md)
+delete only the matching edges of an anti-involution. An odd-order frame
+automorphism group acts on these pairs, whose orbits have odd size.
+Toggling one orbit preserves the centralizer and the fixed-reversal path
+set, hence the blue count, while reversing triangle parity. Conjugacy of
+anti-involutions makes the construction descend to unmarked classes.
+
+This is **not** the old unproved `flip.sigma` candidate and is not a blue-edge
+preserving map. It need not preserve purity, total fibre mass, `H`, or the
+full automorphism group. At `n=7`, `C3 -> 1 -> C3` has `(B,mass)=(1,1)`
+and is pure-blue, but its switched partner has `(B,mass)=(1,45)` and is
+mixed; the two are not adjacent by an actual blue complement line.
+The cubes are auxiliary class structures, not asserted subgraphs of the
+original metagraph.
+
+C4 and Atlas item 3 below retain the original conjecture and finite evidence.
+Their universal version is refuted, and their odd-order refinement is now
+closed by this different mechanism. General SC-odd-blue parity is supplied
+by [THM-643, blue/black line parity](../../01-canon/theorems/THM-643-blue-black-line-parity-structure.md).
+The count/colour-preserving rewiring obstruction survives; no complete
+metagraph realizability or unique-arrangement theorem follows.
+
+
 
 Extends kps's blue/black metagraph work (`metagraph-blue-black-even-odd-s675.md`,
 `the-blueblack-line-pairing-is-a-degree-tiling-count-realization-kps.md`) and my HYP-3808. Owner's asks:

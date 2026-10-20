@@ -1,7 +1,7 @@
 ---
 id: THM-643
 title: The BLUE/BLACK LINE PARITY STRUCTURE of the tiling fibration (strict explorer definitions) — pure-black = non-self-converse EXACTLY (all n); blue lines live on SC nodes; per-node allocation parities (SC: blue odd / black even; NS: black odd); every node emits an odd number of cross-class line-endpoints; global closed forms; the blue count per SC node is the SELF-CONVERSE HAMILTONIAN PATH COUNT H_sym — a new odd tournament invariant with mass formula Σ = 2^{(m+f)/2}
-status: PROVED (T1–T5 below, elementary parity/linear-algebra arguments over the (σ,τ) frame; verified exhaustively n=3..7, all checks TRUE). CONJECTURES C1–C4 (exact data n≤7) OPEN.
+status: PROVED (T1–T5 below, elementary parity/linear-algebra arguments over the (σ,τ) frame; verified exhaustively n=3..7, all checks TRUE). C1 REFUTED at n=8 and n=9 (blue fibre 39 > 27, so even the odd-order-only cap fails); the other conjecture labels below retain their historical scope and are not promoted by this update. The unrestricted pure-blue-leaf prose is REFUTED at n=5; every even-order pure-blue node is a leaf attached to a mixed node for even n>=4 (2026-10-20 correction below).
 source: mac-mini-2026-07-07-S46 (HYP-4977; owner directive: the even/odd duality of blue/black lines and node types, toward complete structural determination of the fibration)
 depends_on:
   - LEM-003    # the tiling fibration is free: fiber(C)·|Aut(C)| = H(C) (canon, 2026-06-10)
@@ -13,6 +13,40 @@ external: Rédei's theorem (H odd); odd order of tournament automorphism groups 
 ---
 
 # THM-643 — The blue/black line parity structure
+
+## Current correction — 2026-10-20
+
+The proved parity statements T1–T5 are unchanged. Two extrapolations in the
+historical census discussion below are **REFUTED**, not open conjectures:
+
+- Pure-blue does not imply leaf. The regular cyclic tournament on five
+  vertices has `H=15`, `|Aut|=5`, and three blue tilings. Their complements
+  reach three distinct merged nodes, so its literal and support degrees are
+  both three. The [exact witness and independent audit](../../05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/README.md#4-a-correction-pure-blue-does-not-mean-pendant)
+  identify the missing coordinate: purity fixes the colour of the fibre,
+  not its size.
+- C1's proposed cap `3^floor((n-2)/2)` fails at `n=8`: the explorer-gauge
+  masks `40077` and `40109` have blue fibre count `39>27`. Their
+  `(H,|Aut|,fibre,blue)` values are `(637,1,637,39)` and `(621,3,207,39)`.
+  [Direct independent permutation checks](../../05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/audit/audit_receipt.md#independent-order-eight-cap-refutation)
+  certify these witnesses without assuming the census's global maximum.
+  The odd-order-only restriction also fails at `n=9`: a direct `9!`
+  permutation witness has `(H,|Aut|,fibre,blue,c3)=(2659,1,2659,39,28)`,
+  again `39>27`. The [independent order-nine certificate](../../05-knowledge/results/odd_blue_spectrum_hollow_cubes_20261020/audit_independent/independent_n9_cap_witness.json)
+  records its explicit adjacency matrix; the new odd-order pairing theorem
+  does not imply the old cap.
+
+The strongest repaired all-order leaf statement is **PROVED**: for every
+**even `n>=4`**, a pure-blue node has singleton fibre and its unique blue
+line reaches a mixed node. This follows from the
+[even-purity/rigidity equivalence and strong-partner proof](../../05-knowledge/results/merged_metagraph_purity_and_strong_core_20261020/PURE_BLUE_STRONG_CYCLE_REDUCTION.md#3-every-even-pure-blue-node-is-rigid).
+At odd order a singleton fibre still suffices for a leaf, but purity alone
+does not. This result does not require the later rigid-atom classification.
+
+The old leaf sentence, C1 wording, and request for proofs of C1–C4 below are
+retained as dated provenance, not active assertions overriding this correction.
+The separate C2–C4 questions are not decided by the cap counterexample.
+
 
 ## The (σ, τ) frame
 
