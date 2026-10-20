@@ -1,0 +1,6905 @@
+{
+  "status": "PASS",
+  "checks": 7698,
+  "universe": "all shapes p<=10,q<=80",
+  "shape_count": 745,
+  "paths": 102684,
+  "distinct_outputs": 51793,
+  "integer_hits": [
+    {
+      "p": 1,
+      "q": 2,
+      "word": "01",
+      "necklace_distance": 0,
+      "fixed_point": 2
+    },
+    {
+      "p": 2,
+      "q": 3,
+      "word": "011",
+      "necklace_distance": 0,
+      "fixed_point": -10
+    },
+    {
+      "p": 2,
+      "q": 3,
+      "word": "110",
+      "necklace_distance": 0,
+      "fixed_point": -5
+    },
+    {
+      "p": 2,
+      "q": 3,
+      "word": "101",
+      "necklace_distance": 0,
+      "fixed_point": -7
+    },
+    {
+      "p": 2,
+      "q": 4,
+      "word": "0101",
+      "necklace_distance": 0,
+      "fixed_point": 2
+    },
+    {
+      "p": 2,
+      "q": 4,
+      "word": "1010",
+      "necklace_distance": 0,
+      "fixed_point": 1
+    },
+    {
+      "p": 3,
+      "q": 6,
+      "word": "010101",
+      "necklace_distance": 0,
+      "fixed_point": 2
+    },
+    {
+      "p": 4,
+      "q": 6,
+      "word": "011011",
+      "necklace_distance": 0,
+      "fixed_point": -10
+    },
+    {
+      "p": 4,
+      "q": 6,
+      "word": "101101",
+      "necklace_distance": 0,
+      "fixed_point": -7
+    },
+    {
+      "p": 4,
+      "q": 6,
+      "word": "110110",
+      "necklace_distance": 0,
+      "fixed_point": -5
+    },
+    {
+      "p": 4,
+      "q": 8,
+      "word": "01010101",
+      "necklace_distance": 0,
+      "fixed_point": 2
+    },
+    {
+      "p": 5,
+      "q": 10,
+      "word": "0101010101",
+      "necklace_distance": 0,
+      "fixed_point": 2
+    },
+    {
+      "p": 6,
+      "q": 9,
+      "word": "011011011",
+      "necklace_distance": 0,
+      "fixed_point": -10
+    },
+    {
+      "p": 6,
+      "q": 12,
+      "word": "010101010101",
+      "necklace_distance": 0,
+      "fixed_point": 2
+    },
+    {
+      "p": 7,
+      "q": 14,
+      "word": "01010101010101",
+      "necklace_distance": 0,
+      "fixed_point": 2
+    },
+    {
+      "p": 8,
+      "q": 12,
+      "word": "011011011011",
+      "necklace_distance": 0,
+      "fixed_point": -10
+    },
+    {
+      "p": 8,
+      "q": 16,
+      "word": "0101010101010101",
+      "necklace_distance": 0,
+      "fixed_point": 2
+    },
+    {
+      "p": 9,
+      "q": 18,
+      "word": "010101010101010101",
+      "necklace_distance": 0,
+      "fixed_point": 2
+    },
+    {
+      "p": 10,
+      "q": 15,
+      "word": "011011011011011",
+      "necklace_distance": 0,
+      "fixed_point": -10
+    },
+    {
+      "p": 10,
+      "q": 20,
+      "word": "01010101010101010101",
+      "necklace_distance": 0,
+      "fixed_point": 2
+    }
+  ],
+  "exact_norm_barriers": [
+    {
+      "p": 4,
+      "q": 7,
+      "coefficients": {
+        "3": 1,
+        "2": 2,
+        "1": -3,
+        "0": 1
+      },
+      "resultant": 343,
+      "stripped_norm": 343,
+      "three_to_p": 81,
+      "path": [
+        0,
+        3
+      ],
+      "words": [
+        "0101011",
+        "1001011",
+        "1000111"
+      ],
+      "content": 1
+    },
+    {
+      "p": 28,
+      "q": 45,
+      "coefficients": {
+        "27": -1,
+        "11": 1,
+        "10": -1,
+        "0": 3
+      },
+      "resultant": 23221006835657,
+      "stripped_norm": 23221006835657,
+      "three_to_p": 22876792454961,
+      "path": [
+        9,
+        8
+      ],
+      "words": [
+        "010110101101101011011010110110101101101011011",
+        "010110101011101011011010110110101101101011011",
+        "010110100111101011011010110110101101101011011"
+      ],
+      "content": 1
+    }
+  ],
+  "rows": [
+    {
+      "p": 1,
+      "q": 2,
+      "paths": 4,
+      "distinct_outputs": 1,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 1
+    },
+    {
+      "p": 1,
+      "q": 3,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 4,
+      "paths": 4,
+      "distinct_outputs": 2,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 5,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 6,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 7,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 8,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 9,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 10,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 11,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 12,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 13,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 14,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 15,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 16,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 17,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 18,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 19,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 20,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 21,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 22,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 23,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 24,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 25,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 26,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 27,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 28,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 29,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 30,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 31,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 32,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 33,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 34,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 35,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 36,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 37,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 38,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 39,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 40,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 41,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 42,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 43,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 44,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 45,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 46,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 47,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 48,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 49,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 50,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 51,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 52,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 53,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 54,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 55,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 56,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 57,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 58,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 59,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 60,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 61,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 62,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 63,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 64,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 65,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 66,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 67,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 68,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 69,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 70,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 71,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 72,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 73,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 74,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 75,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 76,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 77,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 78,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 79,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 1,
+      "q": 80,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 3,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 3
+    },
+    {
+      "p": 2,
+      "q": 4,
+      "paths": 8,
+      "distinct_outputs": 2,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 7,
+      "integer_hits": 2
+    },
+    {
+      "p": 2,
+      "q": 5,
+      "paths": 12,
+      "distinct_outputs": 6,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 6,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 11,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 7,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 8,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 19,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 9,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 10,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 35,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 11,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 12,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 67,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 13,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 14,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 131,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 15,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 16,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 259,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 17,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 18,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 515,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 19,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 20,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 1027,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 21,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 22,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 2051,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 23,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 24,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 4099,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 25,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 26,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 8195,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 27,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 28,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 16387,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 29,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 30,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 32771,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 31,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 32,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 65539,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 33,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 34,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 131075,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 35,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 36,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 262147,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 37,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 38,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 524291,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 39,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 40,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 1048579,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 41,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 42,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 2097155,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 43,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 44,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 4194307,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 45,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 46,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 8388611,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 47,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 48,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 16777219,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 49,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 50,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 33554435,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 51,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 52,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 67108867,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 53,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 54,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 134217731,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 55,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 56,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 268435459,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 57,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 58,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 536870915,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 59,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 60,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 1073741827,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 61,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 62,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 2147483651,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 63,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 64,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 4294967299,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 65,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 66,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 8589934595,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 67,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 68,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 17179869187,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 69,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 70,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 34359738371,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 71,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 72,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 68719476739,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 73,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 74,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 137438953475,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 75,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 76,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 274877906947,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 77,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 78,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 549755813891,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 79,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 2,
+      "q": 80,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 1099511627779,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 4,
+      "paths": 4,
+      "distinct_outputs": 2,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 5,
+      "paths": 12,
+      "distinct_outputs": 6,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 6,
+      "paths": 24,
+      "distinct_outputs": 10,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 37,
+      "integer_hits": 1
+    },
+    {
+      "p": 3,
+      "q": 7,
+      "paths": 28,
+      "distinct_outputs": 13,
+      "exact_necklace_distance_two_outputs": 1,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 8,
+      "paths": 32,
+      "distinct_outputs": 16,
+      "exact_necklace_distance_two_outputs": 4,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 9,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 97,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 10,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 11,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 47,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 12,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 313,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 13,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 14,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 15,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 1129,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 16,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 109,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 17,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 18,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 4297,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 19,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 20,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 21,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 16777,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 22,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 23,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 24,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 66313,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 25,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 26,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 27,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 263689,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 28,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 29,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 30,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 1051657,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 31,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 32,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 33,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 4200457,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 34,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 47,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 35,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 36,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 16789513,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 37,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 38,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 39,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 67133449,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 40,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 41,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 25,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 42,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 268484617,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 43,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 44,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 45,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 1073840137,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 46,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 47,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 48,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 4295163913,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 49,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 50,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 51,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 17180262409,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 52,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 53,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 54,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 68720263177,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 55,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 56,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 57,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 274879479817,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 58,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 59,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 60,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 1099514773513,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 61,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 25,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 62,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 63,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 4398052802569,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 64,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 65,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 66,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 17592198627337,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 67,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 68,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 69,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 70368769343497,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 70,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 71,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 72,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 281475027042313,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 73,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 74,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 75,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 1125900007505929,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 76,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 77,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 78,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 4503599828697097,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 79,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 80,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 47,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 5,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 6,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 17,
+      "integer_hits": 3
+    },
+    {
+      "p": 4,
+      "q": 7,
+      "paths": 28,
+      "distinct_outputs": 13,
+      "exact_necklace_distance_two_outputs": 1,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 8,
+      "paths": 48,
+      "distinct_outputs": 21,
+      "exact_necklace_distance_two_outputs": 20,
+      "max_content": 175,
+      "integer_hits": 1
+    },
+    {
+      "p": 4,
+      "q": 9,
+      "paths": 52,
+      "distinct_outputs": 24,
+      "exact_necklace_distance_two_outputs": 8,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 10,
+      "paths": 56,
+      "distinct_outputs": 27,
+      "exact_necklace_distance_two_outputs": 24,
+      "max_content": 41,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 11,
+      "paths": 60,
+      "distinct_outputs": 30,
+      "exact_necklace_distance_two_outputs": 14,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 12,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 803,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 13,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 14,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 959,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 15,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 16,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 5035,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 17,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 18,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 521,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 19,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 20,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 36155,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 21,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 22,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 2057,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 23,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 24,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 275035,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 25,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 26,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 57407,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 27,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 28,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 2147483,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 29,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 30,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 32777,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 31,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 32,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 16976155,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 33,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 34,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 131081,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 35,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 36,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 135008795,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 37,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 38,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 3670079,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 39,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 73,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 40,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 1076896795,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 41,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 42,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 2097161,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 43,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 44,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 8602535963,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 45,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 46,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 8388617,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 47,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 48,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 68769845275,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 49,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 50,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 234881087,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 51,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 52,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 549957214235,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 53,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 54,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 134217737,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 55,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 56,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 4398851964955,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 57,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 58,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 536870921,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 59,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 60,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 35187593609243,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 61,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 62,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 15032385599,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 63,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 64,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 281487862202395,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 65,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 66,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 8589934601,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 67,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 68,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 2251851354472475,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 69,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 70,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 34359738377,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 71,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 72,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 18014604670271515,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 73,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 74,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 962072674367,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 75,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 73,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 76,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 144116012714295323,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 77,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 78,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 549755813897,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 79,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 79,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 80,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 1152924803151167515,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 6,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 7,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 8,
+      "paths": 32,
+      "distinct_outputs": 16,
+      "exact_necklace_distance_two_outputs": 4,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 9,
+      "paths": 52,
+      "distinct_outputs": 24,
+      "exact_necklace_distance_two_outputs": 8,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 10,
+      "paths": 80,
+      "distinct_outputs": 36,
+      "exact_necklace_distance_two_outputs": 35,
+      "max_content": 781,
+      "integer_hits": 1
+    },
+    {
+      "p": 5,
+      "q": 11,
+      "paths": 84,
+      "distinct_outputs": 39,
+      "exact_necklace_distance_two_outputs": 19,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 12,
+      "paths": 88,
+      "distinct_outputs": 42,
+      "exact_necklace_distance_two_outputs": 22,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 13,
+      "paths": 92,
+      "distinct_outputs": 45,
+      "exact_necklace_distance_two_outputs": 25,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 14,
+      "paths": 96,
+      "distinct_outputs": 48,
+      "exact_necklace_distance_two_outputs": 28,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 15,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 6505,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 16,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 17,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 18,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 59,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 19,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 643,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 20,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 80641,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 21,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 22,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 37,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 23,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 24,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 25,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 1157041,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 26,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 47,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 27,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 28,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 29,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 30,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 17602321,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 31,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 32,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 13,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 33,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 53,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 34,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 35,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 274877905,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 36,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 37,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 38,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 39,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 40,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 4345895761,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 41,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 42,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 43,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 44,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 13,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 45,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 69124503121,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 46,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 47,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 19,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 48,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 49,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 241,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 50,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 1102742318161,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 51,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 52,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 53,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 29,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 54,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 55,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 17617993652305,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 56,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 13,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 57,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 58,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 37,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 59,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 60,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 281681286246481,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 61,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 62,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 63,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 64,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 65,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 4505249499013201,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 66,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 67,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 139,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 68,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 13,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 69,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 70,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 72070790593822801,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 71,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 72,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 47,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 73,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 74,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 75,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 1153027067387674705,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 76,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 59,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 77,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 78,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 79,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 31,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 80,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 18447588537296158801,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 7,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 8,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 43,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 9,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 217,
+      "integer_hits": 1
+    },
+    {
+      "p": 6,
+      "q": 10,
+      "paths": 56,
+      "distinct_outputs": 27,
+      "exact_necklace_distance_two_outputs": 24,
+      "max_content": 59,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 11,
+      "paths": 84,
+      "distinct_outputs": 39,
+      "exact_necklace_distance_two_outputs": 19,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 12,
+      "paths": 120,
+      "distinct_outputs": 55,
+      "exact_necklace_distance_two_outputs": 54,
+      "max_content": 3367,
+      "integer_hits": 1
+    },
+    {
+      "p": 6,
+      "q": 13,
+      "paths": 124,
+      "distinct_outputs": 58,
+      "exact_necklace_distance_two_outputs": 34,
+      "max_content": 17,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 14,
+      "paths": 128,
+      "distinct_outputs": 61,
+      "exact_necklace_distance_two_outputs": 58,
+      "max_content": 155,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 15,
+      "paths": 132,
+      "distinct_outputs": 64,
+      "exact_necklace_distance_two_outputs": 57,
+      "max_content": 1393,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 16,
+      "paths": 136,
+      "distinct_outputs": 67,
+      "exact_necklace_distance_two_outputs": 64,
+      "max_content": 283,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 17,
+      "paths": 140,
+      "distinct_outputs": 70,
+      "exact_necklace_distance_two_outputs": 46,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 18,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 72,
+      "max_content": 52283,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 19,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 31,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 20,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 1051,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 21,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 66,
+      "max_content": 17617,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 22,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 2075,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 23,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 24,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 72,
+      "max_content": 1290499,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 25,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 41,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 26,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 189037,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 27,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 66,
+      "max_content": 266833,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 28,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 16411,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 29,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 31,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 30,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 72,
+      "max_content": 37025555,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 31,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 32,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 65563,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 33,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 66,
+      "max_content": 4212817,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 34,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 655495,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 35,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 36,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 72,
+      "max_content": 1126548787,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 37,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 391,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 38,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 524315,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 39,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 66,
+      "max_content": 67182673,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 40,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 1048603,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 41,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 42,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 72,
+      "max_content": 35184372083,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 43,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 44,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 4194331,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 45,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 66,
+      "max_content": 1074036817,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 46,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 8388635,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 47,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 48,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 72,
+      "max_content": 1112549315059,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 49,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 31,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 50,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 167772295,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 51,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 66,
+      "max_content": 17181048913,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 52,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 67108891,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 53,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 17,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 54,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 72,
+      "max_content": 35391745598195,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 55,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 56,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 268435483,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 57,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 66,
+      "max_content": 274882625617,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 58,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 2684354695,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 59,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 191,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 60,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 72,
+      "max_content": 1129208133797107,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 61,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 17,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 62,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 2147483675,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 63,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 66,
+      "max_content": 4398065385553,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 64,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 4294967323,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 65,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 41,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 66,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 72,
+      "max_content": 36081650999920883,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 67,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 68,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 17179869211,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 69,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 66,
+      "max_content": 70368819675217,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 70,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 790273983085,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 71,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 72,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 72,
+      "max_content": 1153766548465586419,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 73,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 74,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 687194767495,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 75,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 66,
+      "max_content": 1125900208832593,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 76,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 274877906971,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 77,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 17,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 78,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 72,
+      "max_content": 36907003895916142835,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 79,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 49,
+      "max_content": 31,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 80,
+      "paths": 144,
+      "distinct_outputs": 73,
+      "exact_necklace_distance_two_outputs": 70,
+      "max_content": 1099511627803,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 8,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 9,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 10,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 11,
+      "paths": 60,
+      "distinct_outputs": 30,
+      "exact_necklace_distance_two_outputs": 14,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 12,
+      "paths": 88,
+      "distinct_outputs": 42,
+      "exact_necklace_distance_two_outputs": 22,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 13,
+      "paths": 124,
+      "distinct_outputs": 58,
+      "exact_necklace_distance_two_outputs": 34,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 14,
+      "paths": 168,
+      "distinct_outputs": 78,
+      "exact_necklace_distance_two_outputs": 77,
+      "max_content": 14197,
+      "integer_hits": 1
+    },
+    {
+      "p": 7,
+      "q": 15,
+      "paths": 172,
+      "distinct_outputs": 81,
+      "exact_necklace_distance_two_outputs": 53,
+      "max_content": 53,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 16,
+      "paths": 176,
+      "distinct_outputs": 84,
+      "exact_necklace_distance_two_outputs": 56,
+      "max_content": 443,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 17,
+      "paths": 180,
+      "distinct_outputs": 87,
+      "exact_necklace_distance_two_outputs": 59,
+      "max_content": 173,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 18,
+      "paths": 184,
+      "distinct_outputs": 90,
+      "exact_necklace_distance_two_outputs": 62,
+      "max_content": 47,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 19,
+      "paths": 188,
+      "distinct_outputs": 93,
+      "exact_necklace_distance_two_outputs": 65,
+      "max_content": 19,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 20,
+      "paths": 192,
+      "distinct_outputs": 96,
+      "exact_necklace_distance_two_outputs": 68,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 21,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 98,
+      "max_content": 418993,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 22,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 23,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 24,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 25,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 26,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 11,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 27,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 28,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 98,
+      "max_content": 20648713,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 29,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 25,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 30,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 31,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 32,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 33,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 34,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 35,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 98,
+      "max_content": 1184818489,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 36,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 11,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 37,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 97,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 38,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 37,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 39,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 40,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 13,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 41,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 47,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 42,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 98,
+      "max_content": 72099123097,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 43,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 44,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 179,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 45,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 115,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 46,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 11,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 47,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 48,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 431,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 49,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 98,
+      "max_content": 4503599627353,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 50,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 51,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 52,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 13,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 53,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 54,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 55,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 19,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 56,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 98,
+      "max_content": 284812624655833,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 57,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 58,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 59,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 163,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 60,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 59,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 61,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 62,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 63,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 98,
+      "max_content": 18120573746276569,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 64,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 47,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 65,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 66,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1177,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 67,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 53,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 68,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 69,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 25,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 70,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 98,
+      "max_content": 1156309129008238297,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 71,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 72,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 73,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 95,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 74,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 37,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 75,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 67,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 76,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 13,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 77,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 98,
+      "max_content": 73895221247837969113,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 78,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 79,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 80,
+      "paths": 196,
+      "distinct_outputs": 99,
+      "exact_necklace_distance_two_outputs": 71,
+      "max_content": 313,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 9,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 10,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 113,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 11,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 12,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 2465,
+      "integer_hits": 1
+    },
+    {
+      "p": 8,
+      "q": 13,
+      "paths": 92,
+      "distinct_outputs": 45,
+      "exact_necklace_distance_two_outputs": 25,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 14,
+      "paths": 128,
+      "distinct_outputs": 61,
+      "exact_necklace_distance_two_outputs": 58,
+      "max_content": 209,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 15,
+      "paths": 172,
+      "distinct_outputs": 81,
+      "exact_necklace_distance_two_outputs": 53,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 16,
+      "paths": 224,
+      "distinct_outputs": 105,
+      "exact_necklace_distance_two_outputs": 104,
+      "max_content": 58975,
+      "integer_hits": 1
+    },
+    {
+      "p": 8,
+      "q": 17,
+      "paths": 228,
+      "distinct_outputs": 108,
+      "exact_necklace_distance_two_outputs": 76,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 18,
+      "paths": 232,
+      "distinct_outputs": 111,
+      "exact_necklace_distance_two_outputs": 108,
+      "max_content": 593,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 19,
+      "paths": 236,
+      "distinct_outputs": 114,
+      "exact_necklace_distance_two_outputs": 82,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 20,
+      "paths": 240,
+      "distinct_outputs": 117,
+      "exact_necklace_distance_two_outputs": 116,
+      "max_content": 45305,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 21,
+      "paths": 244,
+      "distinct_outputs": 120,
+      "exact_necklace_distance_two_outputs": 88,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 22,
+      "paths": 248,
+      "distinct_outputs": 123,
+      "exact_necklace_distance_two_outputs": 120,
+      "max_content": 14903,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 23,
+      "paths": 252,
+      "distinct_outputs": 126,
+      "exact_necklace_distance_two_outputs": 94,
+      "max_content": 71,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 24,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 128,
+      "max_content": 3354131,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 25,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 26,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 126,
+      "max_content": 8273,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 27,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 28,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 128,
+      "max_content": 2255705,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 29,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 30,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 126,
+      "max_content": 32849,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 31,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 49,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 32,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 128,
+      "max_content": 330381595,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 33,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 73,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 34,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 126,
+      "max_content": 918071,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 35,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 36,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 128,
+      "max_content": 136619225,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 37,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 337,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 38,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 126,
+      "max_content": 524369,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 39,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 89,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 40,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 128,
+      "max_content": 37914193835,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 41,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 79,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 42,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 126,
+      "max_content": 2097233,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 43,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 44,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 128,
+      "max_content": 8627849945,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 45,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 46,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 126,
+      "max_content": 58720823,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 47,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 191,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 48,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 128,
+      "max_content": 4614343880395,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 49,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 50,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 126,
+      "max_content": 33554513,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 51,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 73,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 52,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 128,
+      "max_content": 550360457945,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 53,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 54,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 126,
+      "max_content": 134217809,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 55,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 56,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 128,
+      "max_content": 576460752303371,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 57,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 58,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 126,
+      "max_content": 3758096951,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 59,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 60,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 128,
+      "max_content": 35194038420185,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 61,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 89,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 62,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 126,
+      "max_content": 2147483729,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 63,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 64,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 128,
+      "max_content": 72912031911895435,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 65,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 66,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 126,
+      "max_content": 8589934673,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 67,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 68,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 128,
+      "max_content": 2251954443125465,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 69,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 73,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 70,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 126,
+      "max_content": 240518169143,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 71,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 233,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 72,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 128,
+      "max_content": 9277733758093605515,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 73,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 49,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 74,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 126,
+      "max_content": 137438953553,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 75,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 76,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 128,
+      "max_content": 144117662019486425,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 77,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 78,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 126,
+      "max_content": 40132174419737,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 79,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 97,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 80,
+      "paths": 256,
+      "distinct_outputs": 129,
+      "exact_necklace_distance_two_outputs": 128,
+      "max_content": 1184060548104436018315,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 10,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 11,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 12,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 1417,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 13,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 17,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 14,
+      "paths": 96,
+      "distinct_outputs": 48,
+      "exact_necklace_distance_two_outputs": 28,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 15,
+      "paths": 132,
+      "distinct_outputs": 64,
+      "exact_necklace_distance_two_outputs": 57,
+      "max_content": 2617,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 16,
+      "paths": 176,
+      "distinct_outputs": 84,
+      "exact_necklace_distance_two_outputs": 56,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 17,
+      "paths": 228,
+      "distinct_outputs": 108,
+      "exact_necklace_distance_two_outputs": 76,
+      "max_content": 167,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 18,
+      "paths": 288,
+      "distinct_outputs": 136,
+      "exact_necklace_distance_two_outputs": 135,
+      "max_content": 242461,
+      "integer_hits": 1
+    },
+    {
+      "p": 9,
+      "q": 19,
+      "paths": 292,
+      "distinct_outputs": 139,
+      "exact_necklace_distance_two_outputs": 103,
+      "max_content": 43,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 20,
+      "paths": 296,
+      "distinct_outputs": 142,
+      "exact_necklace_distance_two_outputs": 106,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 21,
+      "paths": 300,
+      "distinct_outputs": 145,
+      "exact_necklace_distance_two_outputs": 138,
+      "max_content": 20569,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 22,
+      "paths": 304,
+      "distinct_outputs": 148,
+      "exact_necklace_distance_two_outputs": 112,
+      "max_content": 121,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 23,
+      "paths": 308,
+      "distinct_outputs": 151,
+      "exact_necklace_distance_two_outputs": 115,
+      "max_content": 25,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 24,
+      "paths": 312,
+      "distinct_outputs": 154,
+      "exact_necklace_distance_two_outputs": 147,
+      "max_content": 73177,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 25,
+      "paths": 316,
+      "distinct_outputs": 157,
+      "exact_necklace_distance_two_outputs": 121,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 26,
+      "paths": 320,
+      "distinct_outputs": 160,
+      "exact_necklace_distance_two_outputs": 124,
+      "max_content": 6037,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 27,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 162,
+      "max_content": 26839609,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 28,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 29,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 30,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 156,
+      "max_content": 1076953,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 31,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 431,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 32,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 11,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 33,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 156,
+      "max_content": 4250329,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 34,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 157,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 35,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 36,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 162,
+      "max_content": 5286112081,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 37,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 38,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 39,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 156,
+      "max_content": 67330777,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 40,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 41,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 191,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 42,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 156,
+      "max_content": 268878553,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 43,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 25,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 44,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 59,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 45,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 162,
+      "max_content": 1213254209281,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 46,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 47,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 43,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 48,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 156,
+      "max_content": 4296737497,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 49,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 53,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 50,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 51,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 156,
+      "max_content": 17183408857,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 52,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 11,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 53,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 54,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 162,
+      "max_content": 295318008351841,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 55,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 56,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 47,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 57,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 156,
+      "max_content": 274892063449,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 58,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 59,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 60,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 156,
+      "max_content": 1099539940057,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 61,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 43,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 62,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 11,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 63,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 162,
+      "max_content": 73786976294838049,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 64,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 65,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 66,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 156,
+      "max_content": 17592299291353,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 67,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 68,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 69,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 156,
+      "max_content": 70368970670809,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 70,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 71,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 72,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 162,
+      "max_content": 18665480169445237921,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 73,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 29,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 74,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 431,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 75,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 156,
+      "max_content": 1125900812813017,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 76,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 77,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 78,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 156,
+      "max_content": 4503601439310553,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 79,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 47,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 80,
+      "paths": 324,
+      "distinct_outputs": 163,
+      "exact_necklace_distance_two_outputs": 127,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 11,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 12,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 307,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 13,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 7,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 14,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 30,
+      "max_content": 371,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 15,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 26281,
+      "integer_hits": 1
+    },
+    {
+      "p": 10,
+      "q": 16,
+      "paths": 136,
+      "distinct_outputs": 67,
+      "exact_necklace_distance_two_outputs": 64,
+      "max_content": 499,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 17,
+      "paths": 180,
+      "distinct_outputs": 87,
+      "exact_necklace_distance_two_outputs": 59,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 18,
+      "paths": 232,
+      "distinct_outputs": 111,
+      "exact_necklace_distance_two_outputs": 108,
+      "max_content": 755,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 19,
+      "paths": 292,
+      "distinct_outputs": 139,
+      "exact_necklace_distance_two_outputs": 103,
+      "max_content": 17,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 20,
+      "paths": 360,
+      "distinct_outputs": 171,
+      "exact_necklace_distance_two_outputs": 170,
+      "max_content": 989527,
+      "integer_hits": 1
+    },
+    {
+      "p": 10,
+      "q": 21,
+      "paths": 364,
+      "distinct_outputs": 174,
+      "exact_necklace_distance_two_outputs": 134,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 22,
+      "paths": 368,
+      "distinct_outputs": 177,
+      "exact_necklace_distance_two_outputs": 174,
+      "max_content": 11455,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 23,
+      "paths": 372,
+      "distinct_outputs": 180,
+      "exact_necklace_distance_two_outputs": 140,
+      "max_content": 49,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 24,
+      "paths": 376,
+      "distinct_outputs": 183,
+      "exact_necklace_distance_two_outputs": 180,
+      "max_content": 4339,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 25,
+      "paths": 380,
+      "distinct_outputs": 186,
+      "exact_necklace_distance_two_outputs": 185,
+      "max_content": 1456321,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 26,
+      "paths": 384,
+      "distinct_outputs": 189,
+      "exact_necklace_distance_two_outputs": 186,
+      "max_content": 8435,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 27,
+      "paths": 388,
+      "distinct_outputs": 192,
+      "exact_necklace_distance_two_outputs": 152,
+      "max_content": 17,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 28,
+      "paths": 392,
+      "distinct_outputs": 195,
+      "exact_necklace_distance_two_outputs": 192,
+      "max_content": 16627,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 29,
+      "paths": 396,
+      "distinct_outputs": 198,
+      "exact_necklace_distance_two_outputs": 158,
+      "max_content": 329,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 30,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 200,
+      "max_content": 214736555,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 31,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 32,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 65779,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 33,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 151,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 34,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 131315,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 35,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 200,
+      "max_content": 288736801,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 36,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 6034901,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 37,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 38,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 2622655,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 39,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 103,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 40,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 200,
+      "max_content": 84577812979,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 41,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 42,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 2097395,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 43,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 17,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 44,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 155198239,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 45,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 200,
+      "max_content": 69949049761,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 46,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 41944255,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 47,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 161,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 48,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 16777459,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 49,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 50,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 200,
+      "max_content": 38824134716675,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 51,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 17,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 52,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 67109107,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 53,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 54,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 671089855,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 55,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 200,
+      "max_content": 17669836693921,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 56,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 268435699,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 57,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 58,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 12348036565,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 59,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 17,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 60,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 200,
+      "max_content": 18900352534537507,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 61,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 79,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 62,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 10737419455,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 63,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 151,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 64,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 4294967539,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 65,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 200,
+      "max_content": 4508552871492001,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 66,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 8589934835,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 67,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 17,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 68,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 17179869427,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 69,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 367,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 70,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 200,
+      "max_content": 9444732965739289955,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 71,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 72,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 68719476979,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 73,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 74,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 137438953715,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 75,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 200,
+      "max_content": 1153238250952628641,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 76,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 274877907187,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 77,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 78,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 198,
+      "max_content": 2748779070655,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 79,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 161,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 80,
+      "paths": 400,
+      "distinct_outputs": 201,
+      "exact_necklace_distance_two_outputs": 200,
+      "max_content": 4778362923377980927459,
+      "integer_hits": 0
+    }
+  ]
+}

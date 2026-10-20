@@ -1,0 +1,183 @@
+{
+  "class_examples": {
+    "distinct_minus": {
+      "edges": [
+        0,
+        1
+      ],
+      "moves": [
+        -1,
+        -1
+      ],
+      "p": 2,
+      "q": 3
+    },
+    "distinct_mixed": {
+      "edges": [
+        1,
+        4
+      ],
+      "moves": [
+        1,
+        -1
+      ],
+      "p": 2,
+      "q": 5
+    },
+    "distinct_plus": {
+      "edges": [
+        2,
+        1
+      ],
+      "moves": [
+        1,
+        1
+      ],
+      "p": 2,
+      "q": 3
+    },
+    "same_minus2": {
+      "edges": [
+        1,
+        0
+      ],
+      "moves": [
+        0,
+        -2
+      ],
+      "p": 2,
+      "q": 5
+    },
+    "same_plus2": {
+      "edges": [
+        4,
+        0
+      ],
+      "moves": [
+        2,
+        0
+      ],
+      "p": 2,
+      "q": 5
+    },
+    "undo": {
+      "edges": [
+        0,
+        0
+      ],
+      "moves": [
+        0,
+        0
+      ],
+      "p": 2,
+      "q": 3
+    }
+  },
+  "critical_converse_counts": {
+    "candidates": 82940,
+    "legal": 29732
+  },
+  "critical_converse_universe": "3<=p<=60, q=bit_length(3^p), gcd(p,q)=1, all two-distinct-label signed vectors",
+  "mixed_small_barrier": {
+    "B": 331,
+    "D": 47,
+    "free_norm": 343,
+    "g": 1,
+    "minus_residue": 1,
+    "norm": 343,
+    "ordered_edges": [
+      0,
+      3
+    ],
+    "p": 4,
+    "plus_residue": 2,
+    "q": 7,
+    "r": 3,
+    "three_to_p": 81,
+    "words": [
+      "0101011",
+      "1001011",
+      "1000111"
+    ]
+  },
+  "norm_barriers": [
+    {
+      "D": 12307579633871,
+      "excess": 344214380696,
+      "follower_label": 5,
+      "follower_residue": 27,
+      "free_norm": 23221006835657,
+      "g": 1,
+      "leader_residue": 10,
+      "norm": 23221006835657,
+      "ordered_edges": [
+        9,
+        8
+      ],
+      "p": 28,
+      "q": 45,
+      "r": 17,
+      "three_to_p": 22876792454961
+    },
+    {
+      "D": 1738366812781,
+      "excess": 643924481792,
+      "follower_label": 12,
+      "follower_residue": 28,
+      "free_norm": 69274301846675,
+      "g": 1,
+      "leader_residue": 11,
+      "norm": 69274301846675,
+      "ordered_edges": [
+        20,
+        19
+      ],
+      "p": 29,
+      "q": 46,
+      "r": 17,
+      "three_to_p": 68630377364883
+    },
+    {
+      "D": 508226510558677,
+      "excess": 20415028339960,
+      "follower_label": 18,
+      "follower_residue": 30,
+      "free_norm": 638088424623907,
+      "g": 1,
+      "leader_residue": 11,
+      "norm": 638088424623907,
+      "ordered_edges": [
+        30,
+        29
+      ],
+      "p": 31,
+      "q": 50,
+      "r": 19,
+      "three_to_p": 617673396283947
+    }
+  ],
+  "original_cut_path_counts": {
+    "distinct_mixed": 3026,
+    "distinct_plus": 3057,
+    "same_plus2": 304,
+    "undo": 335
+  },
+  "path_counts": {
+    "distinct_minus": 10567,
+    "distinct_mixed": 20702,
+    "distinct_plus": 10567,
+    "same_minus2": 1632,
+    "same_plus2": 1632,
+    "undo": 3696
+  },
+  "path_universe": "2<=p<=10; p<q<=70; gcd(p,q)=1; every ordered actual cyclic two-swap path",
+  "status": "FINITE-EXACT",
+  "symbolic_type_count": 486,
+  "three_adic_control": {
+    "norm": 1052433,
+    "p": 13,
+    "r": 8,
+    "v3": 5
+  },
+  "total_paths": 48796
+}

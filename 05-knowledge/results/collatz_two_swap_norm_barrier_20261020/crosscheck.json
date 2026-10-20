@@ -1,0 +1,855 @@
+{
+  "status": "PASS",
+  "checks": 7032,
+  "universe": "critical shapes p<=40",
+  "shape_count": 79,
+  "paths": 59640,
+  "distinct_outputs": 29613,
+  "integer_hits": [
+    {
+      "p": 1,
+      "q": 2,
+      "word": "01",
+      "necklace_distance": 0,
+      "fixed_point": 2
+    },
+    {
+      "p": 2,
+      "q": 3,
+      "word": "011",
+      "necklace_distance": 0,
+      "fixed_point": -10
+    },
+    {
+      "p": 2,
+      "q": 3,
+      "word": "110",
+      "necklace_distance": 0,
+      "fixed_point": -5
+    },
+    {
+      "p": 2,
+      "q": 3,
+      "word": "101",
+      "necklace_distance": 0,
+      "fixed_point": -7
+    },
+    {
+      "p": 2,
+      "q": 4,
+      "word": "0101",
+      "necklace_distance": 0,
+      "fixed_point": 2
+    },
+    {
+      "p": 2,
+      "q": 4,
+      "word": "1010",
+      "necklace_distance": 0,
+      "fixed_point": 1
+    },
+    {
+      "p": 4,
+      "q": 6,
+      "word": "011011",
+      "necklace_distance": 0,
+      "fixed_point": -10
+    },
+    {
+      "p": 4,
+      "q": 6,
+      "word": "101101",
+      "necklace_distance": 0,
+      "fixed_point": -7
+    },
+    {
+      "p": 4,
+      "q": 6,
+      "word": "110110",
+      "necklace_distance": 0,
+      "fixed_point": -5
+    },
+    {
+      "p": 6,
+      "q": 9,
+      "word": "011011011",
+      "necklace_distance": 0,
+      "fixed_point": -10
+    },
+    {
+      "p": 8,
+      "q": 12,
+      "word": "011011011011",
+      "necklace_distance": 0,
+      "fixed_point": -10
+    },
+    {
+      "p": 10,
+      "q": 15,
+      "word": "011011011011011",
+      "necklace_distance": 0,
+      "fixed_point": -10
+    }
+  ],
+  "exact_norm_barriers": [
+    {
+      "p": 4,
+      "q": 7,
+      "coefficients": {
+        "3": 1,
+        "2": 2,
+        "1": -3,
+        "0": 1
+      },
+      "resultant": 343,
+      "stripped_norm": 343,
+      "three_to_p": 81,
+      "path": [
+        0,
+        3
+      ],
+      "words": [
+        "0101011",
+        "1001011",
+        "1000111"
+      ],
+      "content": 1
+    },
+    {
+      "p": 28,
+      "q": 45,
+      "coefficients": {
+        "27": -1,
+        "11": 1,
+        "10": -1,
+        "0": 3
+      },
+      "resultant": 23221006835657,
+      "stripped_norm": 23221006835657,
+      "three_to_p": 22876792454961,
+      "path": [
+        9,
+        8
+      ],
+      "words": [
+        "010110101101101011011010110110101101101011011",
+        "010110101011101011011010110110101101101011011",
+        "010110100111101011011010110110101101101011011"
+      ],
+      "content": 1
+    }
+  ],
+  "rows": [
+    {
+      "p": 1,
+      "q": 2,
+      "paths": 4,
+      "distinct_outputs": 1,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 1
+    },
+    {
+      "p": 2,
+      "q": 3,
+      "paths": 4,
+      "distinct_outputs": 3,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 3
+    },
+    {
+      "p": 2,
+      "q": 4,
+      "paths": 8,
+      "distinct_outputs": 2,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 7,
+      "integer_hits": 2
+    },
+    {
+      "p": 3,
+      "q": 4,
+      "paths": 4,
+      "distinct_outputs": 2,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 3,
+      "q": 5,
+      "paths": 12,
+      "distinct_outputs": 6,
+      "exact_necklace_distance_two_outputs": 0,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 4,
+      "q": 6,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 6,
+      "max_content": 17,
+      "integer_hits": 3
+    },
+    {
+      "p": 4,
+      "q": 7,
+      "paths": 28,
+      "distinct_outputs": 13,
+      "exact_necklace_distance_two_outputs": 1,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 7,
+      "paths": 16,
+      "distinct_outputs": 9,
+      "exact_necklace_distance_two_outputs": 3,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 5,
+      "q": 8,
+      "paths": 32,
+      "distinct_outputs": 16,
+      "exact_necklace_distance_two_outputs": 4,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 6,
+      "q": 9,
+      "paths": 36,
+      "distinct_outputs": 19,
+      "exact_necklace_distance_two_outputs": 12,
+      "max_content": 217,
+      "integer_hits": 1
+    },
+    {
+      "p": 6,
+      "q": 10,
+      "paths": 56,
+      "distinct_outputs": 27,
+      "exact_necklace_distance_two_outputs": 24,
+      "max_content": 59,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 11,
+      "paths": 60,
+      "distinct_outputs": 30,
+      "exact_necklace_distance_two_outputs": 14,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 7,
+      "q": 12,
+      "paths": 88,
+      "distinct_outputs": 42,
+      "exact_necklace_distance_two_outputs": 22,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 8,
+      "q": 12,
+      "paths": 64,
+      "distinct_outputs": 33,
+      "exact_necklace_distance_two_outputs": 32,
+      "max_content": 2465,
+      "integer_hits": 1
+    },
+    {
+      "p": 8,
+      "q": 13,
+      "paths": 92,
+      "distinct_outputs": 45,
+      "exact_necklace_distance_two_outputs": 25,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 14,
+      "paths": 96,
+      "distinct_outputs": 48,
+      "exact_necklace_distance_two_outputs": 28,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 9,
+      "q": 15,
+      "paths": 132,
+      "distinct_outputs": 64,
+      "exact_necklace_distance_two_outputs": 57,
+      "max_content": 2617,
+      "integer_hits": 0
+    },
+    {
+      "p": 10,
+      "q": 15,
+      "paths": 100,
+      "distinct_outputs": 51,
+      "exact_necklace_distance_two_outputs": 50,
+      "max_content": 26281,
+      "integer_hits": 1
+    },
+    {
+      "p": 10,
+      "q": 16,
+      "paths": 136,
+      "distinct_outputs": 67,
+      "exact_necklace_distance_two_outputs": 64,
+      "max_content": 499,
+      "integer_hits": 0
+    },
+    {
+      "p": 11,
+      "q": 17,
+      "paths": 140,
+      "distinct_outputs": 70,
+      "exact_necklace_distance_two_outputs": 46,
+      "max_content": 95,
+      "integer_hits": 0
+    },
+    {
+      "p": 11,
+      "q": 18,
+      "paths": 184,
+      "distinct_outputs": 90,
+      "exact_necklace_distance_two_outputs": 62,
+      "max_content": 11,
+      "integer_hits": 0
+    },
+    {
+      "p": 12,
+      "q": 19,
+      "paths": 188,
+      "distinct_outputs": 93,
+      "exact_necklace_distance_two_outputs": 65,
+      "max_content": 311,
+      "integer_hits": 0
+    },
+    {
+      "p": 12,
+      "q": 20,
+      "paths": 240,
+      "distinct_outputs": 117,
+      "exact_necklace_distance_two_outputs": 116,
+      "max_content": 103427,
+      "integer_hits": 0
+    },
+    {
+      "p": 13,
+      "q": 20,
+      "paths": 192,
+      "distinct_outputs": 96,
+      "exact_necklace_distance_two_outputs": 68,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 13,
+      "q": 21,
+      "paths": 244,
+      "distinct_outputs": 120,
+      "exact_necklace_distance_two_outputs": 88,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 14,
+      "q": 22,
+      "paths": 248,
+      "distinct_outputs": 123,
+      "exact_necklace_distance_two_outputs": 120,
+      "max_content": 4235,
+      "integer_hits": 0
+    },
+    {
+      "p": 14,
+      "q": 23,
+      "paths": 308,
+      "distinct_outputs": 151,
+      "exact_necklace_distance_two_outputs": 115,
+      "max_content": 79,
+      "integer_hits": 0
+    },
+    {
+      "p": 15,
+      "q": 23,
+      "paths": 252,
+      "distinct_outputs": 126,
+      "exact_necklace_distance_two_outputs": 94,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 15,
+      "q": 24,
+      "paths": 312,
+      "distinct_outputs": 154,
+      "exact_necklace_distance_two_outputs": 147,
+      "max_content": 186793,
+      "integer_hits": 0
+    },
+    {
+      "p": 16,
+      "q": 25,
+      "paths": 316,
+      "distinct_outputs": 157,
+      "exact_necklace_distance_two_outputs": 121,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 16,
+      "q": 26,
+      "paths": 384,
+      "distinct_outputs": 189,
+      "exact_necklace_distance_two_outputs": 186,
+      "max_content": 103271,
+      "integer_hits": 0
+    },
+    {
+      "p": 17,
+      "q": 26,
+      "paths": 320,
+      "distinct_outputs": 160,
+      "exact_necklace_distance_two_outputs": 124,
+      "max_content": 253,
+      "integer_hits": 0
+    },
+    {
+      "p": 17,
+      "q": 27,
+      "paths": 388,
+      "distinct_outputs": 192,
+      "exact_necklace_distance_two_outputs": 152,
+      "max_content": 71,
+      "integer_hits": 0
+    },
+    {
+      "p": 18,
+      "q": 28,
+      "paths": 392,
+      "distinct_outputs": 195,
+      "exact_necklace_distance_two_outputs": 192,
+      "max_content": 36067,
+      "integer_hits": 0
+    },
+    {
+      "p": 18,
+      "q": 29,
+      "paths": 468,
+      "distinct_outputs": 231,
+      "exact_necklace_distance_two_outputs": 187,
+      "max_content": 137,
+      "integer_hits": 0
+    },
+    {
+      "p": 19,
+      "q": 30,
+      "paths": 472,
+      "distinct_outputs": 234,
+      "exact_necklace_distance_two_outputs": 190,
+      "max_content": 193,
+      "integer_hits": 0
+    },
+    {
+      "p": 19,
+      "q": 31,
+      "paths": 556,
+      "distinct_outputs": 274,
+      "exact_necklace_distance_two_outputs": 226,
+      "max_content": 23,
+      "integer_hits": 0
+    },
+    {
+      "p": 20,
+      "q": 31,
+      "paths": 476,
+      "distinct_outputs": 237,
+      "exact_necklace_distance_two_outputs": 193,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 20,
+      "q": 32,
+      "paths": 560,
+      "distinct_outputs": 277,
+      "exact_necklace_distance_two_outputs": 276,
+      "max_content": 62167915,
+      "integer_hits": 0
+    },
+    {
+      "p": 21,
+      "q": 33,
+      "paths": 564,
+      "distinct_outputs": 280,
+      "exact_necklace_distance_two_outputs": 273,
+      "max_content": 13456249,
+      "integer_hits": 0
+    },
+    {
+      "p": 21,
+      "q": 34,
+      "paths": 656,
+      "distinct_outputs": 324,
+      "exact_necklace_distance_two_outputs": 272,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 22,
+      "q": 34,
+      "paths": 568,
+      "distinct_outputs": 283,
+      "exact_necklace_distance_two_outputs": 280,
+      "max_content": 29280805,
+      "integer_hits": 0
+    },
+    {
+      "p": 22,
+      "q": 35,
+      "paths": 660,
+      "distinct_outputs": 327,
+      "exact_necklace_distance_two_outputs": 275,
+      "max_content": 7,
+      "integer_hits": 0
+    },
+    {
+      "p": 23,
+      "q": 36,
+      "paths": 664,
+      "distinct_outputs": 330,
+      "exact_necklace_distance_two_outputs": 278,
+      "max_content": 347,
+      "integer_hits": 0
+    },
+    {
+      "p": 23,
+      "q": 37,
+      "paths": 764,
+      "distinct_outputs": 378,
+      "exact_necklace_distance_two_outputs": 322,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 24,
+      "q": 38,
+      "paths": 768,
+      "distinct_outputs": 381,
+      "exact_necklace_distance_two_outputs": 378,
+      "max_content": 328331719,
+      "integer_hits": 0
+    },
+    {
+      "p": 24,
+      "q": 39,
+      "paths": 876,
+      "distinct_outputs": 433,
+      "exact_necklace_distance_two_outputs": 426,
+      "max_content": 163903297,
+      "integer_hits": 0
+    },
+    {
+      "p": 25,
+      "q": 39,
+      "paths": 772,
+      "distinct_outputs": 384,
+      "exact_necklace_distance_two_outputs": 328,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 25,
+      "q": 40,
+      "paths": 880,
+      "distinct_outputs": 436,
+      "exact_necklace_distance_two_outputs": 435,
+      "max_content": 19401770641,
+      "integer_hits": 0
+    },
+    {
+      "p": 26,
+      "q": 41,
+      "paths": 884,
+      "distinct_outputs": 439,
+      "exact_necklace_distance_two_outputs": 379,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 26,
+      "q": 42,
+      "paths": 1000,
+      "distinct_outputs": 495,
+      "exact_necklace_distance_two_outputs": 492,
+      "max_content": 3691475,
+      "integer_hits": 0
+    },
+    {
+      "p": 27,
+      "q": 42,
+      "paths": 888,
+      "distinct_outputs": 442,
+      "exact_necklace_distance_two_outputs": 435,
+      "max_content": 978342217,
+      "integer_hits": 0
+    },
+    {
+      "p": 27,
+      "q": 43,
+      "paths": 1004,
+      "distinct_outputs": 498,
+      "exact_necklace_distance_two_outputs": 434,
+      "max_content": 53,
+      "integer_hits": 0
+    },
+    {
+      "p": 28,
+      "q": 44,
+      "paths": 1008,
+      "distinct_outputs": 501,
+      "exact_necklace_distance_two_outputs": 500,
+      "max_content": 38018751155,
+      "integer_hits": 0
+    },
+    {
+      "p": 28,
+      "q": 45,
+      "paths": 1132,
+      "distinct_outputs": 561,
+      "exact_necklace_distance_two_outputs": 493,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 29,
+      "q": 45,
+      "paths": 1012,
+      "distinct_outputs": 504,
+      "exact_necklace_distance_two_outputs": 440,
+      "max_content": 47,
+      "integer_hits": 0
+    },
+    {
+      "p": 29,
+      "q": 46,
+      "paths": 1136,
+      "distinct_outputs": 564,
+      "exact_necklace_distance_two_outputs": 496,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 30,
+      "q": 47,
+      "paths": 1140,
+      "distinct_outputs": 567,
+      "exact_necklace_distance_two_outputs": 499,
+      "max_content": 1,
+      "integer_hits": 0
+    },
+    {
+      "p": 30,
+      "q": 48,
+      "paths": 1272,
+      "distinct_outputs": 631,
+      "exact_necklace_distance_two_outputs": 630,
+      "max_content": 5814141893539,
+      "integer_hits": 0
+    },
+    {
+      "p": 31,
+      "q": 49,
+      "paths": 1276,
+      "distinct_outputs": 634,
+      "exact_necklace_distance_two_outputs": 562,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 31,
+      "q": 50,
+      "paths": 1416,
+      "distinct_outputs": 702,
+      "exact_necklace_distance_two_outputs": 626,
+      "max_content": 851,
+      "integer_hits": 0
+    },
+    {
+      "p": 32,
+      "q": 50,
+      "paths": 1280,
+      "distinct_outputs": 637,
+      "exact_necklace_distance_two_outputs": 634,
+      "max_content": 76601153,
+      "integer_hits": 0
+    },
+    {
+      "p": 32,
+      "q": 51,
+      "paths": 1420,
+      "distinct_outputs": 705,
+      "exact_necklace_distance_two_outputs": 629,
+      "max_content": 73,
+      "integer_hits": 0
+    },
+    {
+      "p": 33,
+      "q": 52,
+      "paths": 1424,
+      "distinct_outputs": 708,
+      "exact_necklace_distance_two_outputs": 632,
+      "max_content": 47,
+      "integer_hits": 0
+    },
+    {
+      "p": 33,
+      "q": 53,
+      "paths": 1572,
+      "distinct_outputs": 780,
+      "exact_necklace_distance_two_outputs": 700,
+      "max_content": 29,
+      "integer_hits": 0
+    },
+    {
+      "p": 34,
+      "q": 53,
+      "paths": 1428,
+      "distinct_outputs": 711,
+      "exact_necklace_distance_two_outputs": 635,
+      "max_content": 49,
+      "integer_hits": 0
+    },
+    {
+      "p": 34,
+      "q": 54,
+      "paths": 1576,
+      "distinct_outputs": 783,
+      "exact_necklace_distance_two_outputs": 780,
+      "max_content": 18698410261,
+      "integer_hits": 0
+    },
+    {
+      "p": 35,
+      "q": 55,
+      "paths": 1580,
+      "distinct_outputs": 786,
+      "exact_necklace_distance_two_outputs": 785,
+      "max_content": 100739194820401,
+      "integer_hits": 0
+    },
+    {
+      "p": 35,
+      "q": 56,
+      "paths": 1736,
+      "distinct_outputs": 862,
+      "exact_necklace_distance_two_outputs": 861,
+      "max_content": 1694311456840633,
+      "integer_hits": 0
+    },
+    {
+      "p": 36,
+      "q": 57,
+      "paths": 1740,
+      "distinct_outputs": 865,
+      "exact_necklace_distance_two_outputs": 858,
+      "max_content": 835935582433,
+      "integer_hits": 0
+    },
+    {
+      "p": 36,
+      "q": 58,
+      "paths": 1904,
+      "distinct_outputs": 945,
+      "exact_necklace_distance_two_outputs": 942,
+      "max_content": 924291401,
+      "integer_hits": 0
+    },
+    {
+      "p": 37,
+      "q": 58,
+      "paths": 1744,
+      "distinct_outputs": 868,
+      "exact_necklace_distance_two_outputs": 784,
+      "max_content": 263,
+      "integer_hits": 0
+    },
+    {
+      "p": 37,
+      "q": 59,
+      "paths": 1908,
+      "distinct_outputs": 948,
+      "exact_necklace_distance_two_outputs": 860,
+      "max_content": 235,
+      "integer_hits": 0
+    },
+    {
+      "p": 38,
+      "q": 60,
+      "paths": 1912,
+      "distinct_outputs": 951,
+      "exact_necklace_distance_two_outputs": 948,
+      "max_content": 431548635163,
+      "integer_hits": 0
+    },
+    {
+      "p": 38,
+      "q": 61,
+      "paths": 2084,
+      "distinct_outputs": 1035,
+      "exact_necklace_distance_two_outputs": 943,
+      "max_content": 119,
+      "integer_hits": 0
+    },
+    {
+      "p": 39,
+      "q": 61,
+      "paths": 1916,
+      "distinct_outputs": 954,
+      "exact_necklace_distance_two_outputs": 866,
+      "max_content": 5,
+      "integer_hits": 0
+    },
+    {
+      "p": 39,
+      "q": 62,
+      "paths": 2088,
+      "distinct_outputs": 1038,
+      "exact_necklace_distance_two_outputs": 946,
+      "max_content": 11,
+      "integer_hits": 0
+    },
+    {
+      "p": 40,
+      "q": 63,
+      "paths": 2092,
+      "distinct_outputs": 1041,
+      "exact_necklace_distance_two_outputs": 949,
+      "max_content": 89,
+      "integer_hits": 0
+    },
+    {
+      "p": 40,
+      "q": 64,
+      "paths": 2272,
+      "distinct_outputs": 1129,
+      "exact_necklace_distance_two_outputs": 1128,
+      "max_content": 483775278050201755,
+      "integer_hits": 0
+    }
+  ]
+}
