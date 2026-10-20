@@ -13,13 +13,15 @@ status: >
   for m >= 25, finite check below; corollary tc(T_p) > 1 for ALL
   primes p >= 5) + PROVED (LEM-003+: Aut acts freely on Hamiltonian
   paths for EVERY tournament, adversarially re-verified on all
-  2,396,745 labeled tournaments m <= 7) + GAP (the single missing
-  lemma ML: for m >= 63, an odd non-primitive group of order
+  2,396,745 labeled tournaments m <= 7) + OPEN historical auxiliary
+  statement (lemma ML: for m >= 63, an odd non-primitive group of order
   >= f(m) admits no prime strong invariant tournament; crossovers
-  are co-finite, so no counting escape exists -- ML IS the theorem
-  for m >= 243). Consequence: THM-2453's identification rigid-SC(n)
-  = pal13(n) is now PROVED for all n <= 62, and THM-2454's
-  rotational-purity question is settled for every prime p.
+  are co-finite). SUPERSEDED rigidity frontier (2026-10-20): the
+  only nontrivial strong path-rigid tournament is C3 at EVERY
+  order, by the Hamiltonian-bypass proof below; ML is not needed.
+  Consequently rigid-SC(n)=pal13(n) holds for every n. The
+  rotational non-rigidity corollary does NOT settle purity:
+  regular cyclic T5 is pure-blue with tc=3.
   Cited: Busch 2006 (via THM-1370/MISTAKE-055), Dixon 1967,
   Burnside prime-degree, Feit-Thompson (primitive branch only).
 source: kind-pasteur-2026-07-27-S135
@@ -41,6 +43,40 @@ hash_basis: working-tree bytes (LF); produced by a four-agent
 ---
 
 # THM-2477 -- rigidity forces the 3-cycle, sixty-two vertices deep
+
+## Current correction and supersession — 2026-10-20
+
+The historical through-62 result is superseded by an independent,
+**all-order** classification: the only nontrivial strongly connected
+path-rigid tournament (`H=|Aut|`) is `C3`; the singleton is the other
+rigid strong atom. See the [complete proof](../../05-knowledge/results/merged_metagraph_finite_pure_atoms_20261020/FINITE_ATOMS_AND_RIGID_CLOSURE.md#3-rigid-strong-tournaments-are-completely-classified).
+Its mechanism is the one-orbit closing property of Hamiltonian paths,
+contradicted by Benhocine–Wojda's (1983) Hamiltonian-bypass existence theorem
+at orders at least seven, with direct small-order arguments. It does not
+use the historical modular/group estimates below or lemma ML.
+
+Therefore the full rigid class is the ordered `{1,C3}` stack class, and
+rigid self-converse classes are its palindromes at **every order**.
+The old `n<=62` frontier, the assertion that ML is needed to finish this
+rigidity goal, and the bounded consequences below are **SUPERSEDED**.
+The separately formulated auxiliary ML statement is not proved or
+re-audited here; only its claimed necessity for this goal is removed.
+
+There is also a logical correction: `tc>1` means **nonrigid**, not
+**non-pure-blue**. Regular cyclic `T5` has `H=15`, `|Aut|=5`, `tc=3`,
+and all three fibre tilings are blue. Thus the old claim that a
+non-rigidity corollary settles THM-2454's rotational-purity question is
+withdrawn. The [cycle reduction](../../05-knowledge/results/merged_metagraph_purity_and_strong_core_20261020/PURE_BLUE_STRONG_CYCLE_REDUCTION.md)
+and the all-order rigid theorem are different statements; neither alone
+classifies every odd nonrigid pure-blue strong atom. The separate
+[uniform prefix-rerouting proof](../../05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md)
+now supplies that classification: the pure-blue strong atoms are exactly
+`1,C3,regular C5`. This independently resolves the old rotational-purity
+question while leaving the nonrigidity-to-impurity inference invalid.
+
+The original proof skeleton, computations, and historical consequences
+below are retained without being relabelled as newly audited arguments.
+
 
 **PROVED + GAP** as itemized. Proof skeleton (each step labeled in
 the workflow synthesis, adversarially audited):

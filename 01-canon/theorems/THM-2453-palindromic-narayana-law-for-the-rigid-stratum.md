@@ -13,11 +13,14 @@ status: >
   7 rigid classes at n = 11 with H-multiset [1,3,9,9,9,27,27]
   (THM-2454; the naive pure-blue(11) = 8 guess failed because the
   nonrigid stratum has its own law -- see THM-2454's center law).
-  rigid-SC(12) = 6 with [1,9,9,9,9,81] remains predicted. Within the tower grammar the converse is PROVED
+  rigid-SC(12) = 6 with [1,9,9,9,9,81] was subsequently confirmed (section 5). Within the tower grammar the converse is PROVED
   for all n (run-transfer expansion: C3[A,B,C] is rigid iff it is
   C3 itself); and 'no rigid class outside the grammar' is now
-  PROVED for all n <= 62 by THM-2477 (open only beyond 62, pending
-  its lemma ML).
+  PROVED for every n by the 2026-10-20 Hamiltonian-bypass argument:
+  the strong rigid atoms are exactly the singleton and C3. The
+  old through-62 frontier and its dependence on lemma ML are
+  SUPERSEDED. The separate 2026-10-20 prefix-rerouting theorem
+  also closes the pure-blue strong alphabet: {1,C3,regular C5}.
 source: kind-pasteur-2026-07-26-S132
 depends_on:
   - THM-2450-rigid-self-converse-classes-are-cyclic-ternary-towers
@@ -33,6 +36,39 @@ hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2453 -- the rigid stratum is Narayana's palindromes
+
+## Current supersession — 2026-10-20
+
+The rigid classification is now **PROVED for every order**, not only
+inside the tower grammar or through `n=62`. The
+[all-order rigid-strong proof](../../05-knowledge/results/merged_metagraph_finite_pure_atoms_20261020/FINITE_ATOMS_AND_RIGID_CLOSURE.md#3-rigid-strong-tournaments-are-completely-classified)
+uses the Hamiltonian-bypass theorem of Benhocine–Wojda (1983): if all
+Hamiltonian paths form one automorphism orbit, every path closes along a
+Hamiltonian cycle, whereas the cited theorem supplies a nonclosing bypass
+at every order at least seven. The remaining orders leave only `C3`
+besides the singleton. No unproved group lemma ML is needed.
+
+Hamiltonian-path counts and automorphism orders multiply over the uniquely
+ordered strong-component decomposition. Hence **every rigid tournament**
+is an ordered stack of `1` and `C3`, and **every rigid self-converse class**
+is exactly a palindromic such stack. Formula (1), including its `H=|Aut|=3^t`
+multiset description, therefore holds for all `n`.
+
+Together with the [even-purity/rigidity theorem](../../05-knowledge/results/merged_metagraph_purity_and_strong_core_20261020/PURE_BLUE_STRONG_CYCLE_REDUCTION.md#3-every-even-pure-blue-node-is-rigid),
+this proves `pure-blue(2r)=c(r)` for all positive `r`, with `c(0)=1`,
+`c(j)=0` for `j<0`, and `c(r)=c(r-1)+c(r-3)`. Literal complement-line
+claims still start at `n>=3`; even blue leaves start at `n>=4`.
+
+The predictions, finite censuses, and former open frontier below remain
+dated history. In particular the first item of §5b is now closed. This
+rigidity proof alone does **not** classify nonrigid odd pure-blue centers.
+That distinct question is now also **PROVED** by the separate
+[uniform prefix-rerouting classification](../../05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md):
+the strong pure-blue atoms are exactly `1`, `C3`, and the regular cyclic
+`C5` (the `T5` of THM-2454). Combining that alphabet with the center law
+proves the full odd count `pure-blue(2r+1)=c(r+2)`. Thus both former
+open items of §5b are superseded, by two different mechanisms.
+
 
 **PROVED + FINITE-EXACT** as itemized in the status.
 

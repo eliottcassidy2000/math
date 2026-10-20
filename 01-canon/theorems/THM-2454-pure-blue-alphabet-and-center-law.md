@@ -2,6 +2,9 @@
 id: THM-2454
 title: "The pure-blue alphabet: palindromic stacks with rigid halves and atomic centers"
 status: >
+  PROVED (2026-10-20: the complete strong pure-blue alphabet is
+  {1,C3,regular C5}, so formula (2) and the center law hold at
+  EVERY order; the former odd-atom gap is closed). Historical
   FINITE-EXACT (pure-blue(11) = 9 by exhaustive 2^25 blue-cube
   census, C++ engine with n = 9, 10 controls reproducing canon; the
   nine census points n = 3..11 all match the closed form
@@ -15,8 +18,12 @@ status: >
   [1,3,9,9,9,27,27]) + REFUTED (the "+1 per odd n" clause of
   THM-2444's repaired form: n = 11 has TWO nonrigid pure-blues,
   (15,5,3) = (1,1,1,T5,1,1,1) and the new (135,45,3) = (C3,T5,C3)).
-  The completeness of the atom alphabet {1, C3, T5} beyond n = 11
-  and the strong-atom classification are OPEN.
+  The even-order formula pure-blue(2r)=c(r) is now PROVED for all
+  r>=1 (2026-10-20): strong rigid atoms are exactly {1,C3}, and
+  every even pure-blue class is rigid. The completeness of the
+  ODD pure-blue atom alphabet {1,C3,T5} is now PROVED by the
+  separate prefix-rerouting classification. Nonrigid pure-blue
+  atoms must not be confused with rigid strong atoms.
 source: kind-pasteur-2026-07-26-S132
 depends_on:
   - THM-2453-palindromic-narayana-law-for-the-rigid-stratum
@@ -36,6 +43,48 @@ hash_basis: working-tree bytes (LF)
 ---
 
 # THM-2454 -- pure-blue is spelled in a three-letter alphabet
+
+## Current supersession — 2026-10-20
+
+The complete pure-blue alphabet `{1,C3,T5}` and both lines of formula (2)
+are now **PROVED at every order**, not merely finite-exact. Here `T5`
+means the regular cyclic five-vertex tournament, also denoted `C5`.
+
+The even line of formula (2) is now **PROVED at every even order**:
+`pure-blue(2r)=c(r)`, where `c(0)=1`, `c(j)=0` for `j<0`, and
+`c(r)=c(r-1)+c(r-3)`. The dependencies are separate:
+
+1. The [all-order cycle/crossing reduction](../../05-knowledge/results/merged_metagraph_purity_and_strong_core_20261020/PURE_BLUE_STRONG_CYCLE_REDUCTION.md)
+   excludes even-order pure-blue strong centers and proves that every
+   even-order pure-blue class is self-converse and path-rigid.
+2. The [all-order rigid-strong classification](../../05-knowledge/results/merged_metagraph_finite_pure_atoms_20261020/FINITE_ATOMS_AND_RIGID_CLOSURE.md#3-rigid-strong-tournaments-are-completely-classified)
+   identifies the rigid strong atoms as exactly `{1,C3}`.
+3. The proved center law in §2 then counts the unique half-word by
+   Narayana's recurrence, with no central component at even order.
+
+The separate [uniform prefix-rerouting theorem](../../05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md)
+now rules out every odd circulant of order at least seven. Together with
+the cycle/crossing reduction and positive `C3,C5` controls, it proves the
+strong **pure-blue** alphabet exactly: `{1,C3,T5}`. This classification
+is not a consequence of nonrigidity: regular cyclic `T5` has `tc=3`
+and is pure-blue.
+
+Consequently, including the empty object, the ordinary generating function
+for pure-blue tournament isomorphism classes is
+
+    P(z)=(1+z+z^3+z^5)/(1-z^2-z^6).
+
+Equivalently, `pure-blue(2r)=c(r)` and `pure-blue(2r+1)=c(r+2)`
+(with `r>=0`, interpreting order zero as the empty object). The odd
+identity is the recurrence simplification of the three center terms in
+formula (2). It is a class count, not a labelled-tournament count.
+
+The historical finite censuses, predictions, and earlier frontier text
+below are preserved as provenance. The former open alphabet question
+in §4 is closed by the linked all-order proof, not by a larger census
+or the independent intermediate order-131 bound. This settles the
+pure-blue atom alphabet, not the complete metagraph adjacency problem.
+
 
 **FINITE-EXACT + PROVED + CONFIRMED + REFUTED** as itemized.
 
