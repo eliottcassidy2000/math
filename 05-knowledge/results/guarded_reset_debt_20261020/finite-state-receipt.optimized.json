@@ -1,0 +1,13 @@
+{
+  "checks": 83452,
+  "exhaustive_feasible_graphs": 448,
+  "exhaustive_two_state_graphs": 2401,
+  "global_collatz_conclusion": false,
+  "independent_feasibility_method": "exact rational Fourier-Motzkin elimination",
+  "physical_graphs_checked": 300,
+  "physical_graphs_with_barriers": 167,
+  "sampled_three_state_multigraphs": 1000,
+  "scope": "Finite controls; proofs of all graph and all-depth claims are in the addendum",
+  "status": "PASS",
+  "unit_bank_words": 168
+}

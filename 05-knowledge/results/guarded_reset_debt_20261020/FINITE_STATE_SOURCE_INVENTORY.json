@@ -1,0 +1,45 @@
+{
+  "mathematical_dependencies": [
+    {
+      "bytes": 16678,
+      "repository_path": "05-knowledge/results/guarded_reset_debt_20261020/RESET_DEBT_COMPOSITION.md",
+      "scope": "Exact valuation-cylinder and ROOT guard conventions. The addendum includes its own all-ones witness proof.",
+      "sha256": "de0e4af2db76a676848da5d46d1b74bd722746182e92a0d138608191989c716e"
+    }
+  ],
+  "producer_files": [
+    {
+      "bytes": 12809,
+      "published_basename": "FINITE_STATE_BARRIERS_ADDENDUM.md",
+      "sha256": "ddcae18d24536dc584f2356691b281a75df3f36e842a263ee3a69dbd957df5ec"
+    },
+    {
+      "bytes": 4245,
+      "published_basename": "FINITE_STATE_INDEPENDENT_REVIEW.md",
+      "sha256": "7e3da44c04a1137f213db66679ade7402ca49ceb521e5a38d09ab5fd7ae67a44"
+    },
+    {
+      "bytes": 473,
+      "published_basename": "finite-state-receipt.json",
+      "sha256": "3bef11f1df108f74b71c32d0a5ca5967db92a7fb8e224e962a26e76c5ce800d5"
+    },
+    {
+      "bytes": 473,
+      "published_basename": "finite-state-receipt.optimized.json",
+      "sha256": "3bef11f1df108f74b71c32d0a5ca5967db92a7fb8e224e962a26e76c5ce800d5"
+    },
+    {
+      "bytes": 9677,
+      "published_basename": "verify_finite_state_barriers.py",
+      "sha256": "ba96ab3a8200d7e90bf308ef0e9dfd3a96473bdc39af0d55a2967f75402267e6"
+    }
+  ],
+  "producer_source_changes": false,
+  "repository_head_read": "1a32bd3b9dac0a5acd4d3b9527635226932e683d",
+  "repository_or_remote_mutations": false,
+  "runtime_dependencies": {
+    "independent_finite_state_audit.py": "Python 3 standard library: fractions, itertools, random, json; no package-local or third-party imports.",
+    "verify_finite_state_barriers.py": "Python 3 standard library: fractions, itertools, random, json; no package-local or third-party imports."
+  },
+  "scope": "Elementary finite-graph barrier criterion and guarded finite-fixed-word physical-height coverage obstruction. No literature-novelty or global Collatz claim."
+}

@@ -1,0 +1,19 @@
+{
+  "all_ones_source_prefixes": 640,
+  "checks": 146537,
+  "exact_LP_method": "enumeration of rational basic feasible vertices, not Fourier-Motzkin",
+  "exhaustive_physical_two_state_graphs": 6561,
+  "exhaustive_two_state_feasible": 448,
+  "exhaustive_two_state_graphs": 2401,
+  "global_Collatz_coverage_or_convergence_claim": false,
+  "maximum_all_ones_prefix": 128,
+  "physical_two_state_graphs_with_barriers": 1375,
+  "random_path_identities": 1200,
+  "rational_construction_method": "cycle perturbation plus multiplicative Floyd-Warshall",
+  "reset_bank_words": 1359,
+  "sampled_multigraphs_by_vertices": {
+    "3": 400,
+    "4": 50
+  },
+  "status": "PASS"
+}
