@@ -4,6 +4,7 @@
     "counts": {
       "fixed_path_blue": 2,
       "strong": 1,
+      "regular_strong": 1,
       "all_same_start_blue": 1,
       "pure_blue": 1
     },
@@ -16,6 +17,8 @@
       "strong": 3,
       "all_same_start_blue": 2,
       "mixed_hostile": 2,
+      "reverse_transitive_path": 1,
+      "cyclic_blowup_pure_blue_middle": 1,
       "black_same_start": 1
     },
     "hostiles": [
@@ -45,7 +48,8 @@
           2,
           3,
           0
-        ]
+        ],
+        "family": "reverse_transitive_path"
       },
       {
         "a": [
@@ -73,7 +77,8 @@
           2,
           3,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       }
     ]
   },
@@ -84,8 +89,11 @@
       "strong": 14,
       "all_same_start_blue": 6,
       "mixed_hostile": 3,
+      "reverse_transitive_path": 1,
       "black_same_start": 8,
-      "pure_blue": 3
+      "regular_strong": 3,
+      "pure_blue": 3,
+      "cyclic_blowup_pure_blue_middle": 2
     },
     "hostiles": [
       {
@@ -118,7 +126,8 @@
           3,
           4,
           0
-        ]
+        ],
+        "family": "reverse_transitive_path"
       },
       {
         "a": [
@@ -164,7 +173,8 @@
           3,
           4,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       },
       {
         "a": [
@@ -196,7 +206,8 @@
           3,
           4,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       }
     ]
   },
@@ -207,7 +218,9 @@
       "strong": 59,
       "all_same_start_blue": 2,
       "mixed_hostile": 2,
-      "black_same_start": 57
+      "reverse_transitive_path": 1,
+      "black_same_start": 57,
+      "cyclic_blowup_pure_blue_middle": 1
     },
     "hostiles": [
       {
@@ -244,7 +257,8 @@
           4,
           5,
           0
-        ]
+        ],
+        "family": "reverse_transitive_path"
       },
       {
         "a": [
@@ -280,7 +294,8 @@
           4,
           5,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       }
     ]
   },
@@ -291,7 +306,10 @@
       "strong": 495,
       "all_same_start_blue": 6,
       "mixed_hostile": 6,
-      "black_same_start": 489
+      "reverse_transitive_path": 1,
+      "black_same_start": 489,
+      "regular_strong": 21,
+      "cyclic_blowup_pure_blue_middle": 5
     },
     "hostiles": [
       {
@@ -332,7 +350,8 @@
           5,
           6,
           0
-        ]
+        ],
+        "family": "reverse_transitive_path"
       },
       {
         "a": [
@@ -498,7 +517,8 @@
           5,
           6,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       },
       {
         "a": [
@@ -556,7 +576,8 @@
           5,
           6,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       },
       {
         "a": [
@@ -722,7 +743,8 @@
           5,
           6,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       },
       {
         "a": [
@@ -888,7 +910,8 @@
           5,
           6,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       },
       {
         "a": [
@@ -928,7 +951,8 @@
           5,
           6,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       }
     ]
   },
@@ -939,7 +963,9 @@
       "strong": 4026,
       "all_same_start_blue": 3,
       "mixed_hostile": 3,
-      "black_same_start": 4023
+      "reverse_transitive_path": 1,
+      "black_same_start": 4023,
+      "cyclic_blowup_pure_blue_middle": 2
     },
     "hostiles": [
       {
@@ -984,7 +1010,8 @@
           6,
           7,
           0
-        ]
+        ],
+        "family": "reverse_transitive_path"
       },
       {
         "a": [
@@ -1108,7 +1135,8 @@
           6,
           7,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       },
       {
         "a": [
@@ -1152,7 +1180,8 @@
           6,
           7,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       }
     ]
   },
@@ -1163,7 +1192,10 @@
       "strong": 65017,
       "all_same_start_blue": 7,
       "mixed_hostile": 7,
-      "black_same_start": 65010
+      "reverse_transitive_path": 1,
+      "black_same_start": 65010,
+      "regular_strong": 499,
+      "cyclic_blowup_pure_blue_middle": 6
     },
     "hostiles": [
       {
@@ -1212,7 +1244,8 @@
           7,
           8,
           0
-        ]
+        ],
+        "family": "reverse_transitive_path"
       },
       {
         "a": [
@@ -1414,7 +1447,8 @@
           7,
           8,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       },
       {
         "a": [
@@ -1484,7 +1518,8 @@
           7,
           8,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       },
       {
         "a": [
@@ -1686,7 +1721,8 @@
           7,
           8,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       },
       {
         "a": [
@@ -1888,7 +1924,8 @@
           7,
           8,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       },
       {
         "a": [
@@ -2024,7 +2061,8 @@
           7,
           8,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       },
       {
         "a": [
@@ -2072,7 +2110,8 @@
           7,
           8,
           0
-        ]
+        ],
+        "family": "cyclic_blowup_pure_blue_middle"
       }
     ]
   }

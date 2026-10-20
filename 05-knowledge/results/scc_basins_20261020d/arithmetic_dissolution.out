@@ -1,0 +1,234 @@
+{
+  "scope": "all standard-HP presentations of nonempty A through order6",
+  "literal_B": [
+    6,
+    4,
+    8,
+    3
+  ],
+  "literal_target_D": [
+    10,
+    0,
+    3,
+    6
+  ],
+  "first_suffix": [
+    3,
+    0,
+    1,
+    2
+  ],
+  "second_suffix": [
+    3,
+    2,
+    0,
+    1
+  ],
+  "census": [
+    {
+      "order": 1,
+      "presentations": 1,
+      "active": 0,
+      "pure_blue_target": 1,
+      "two_black": 0,
+      "six_black": 0,
+      "path_selection_needed": 0
+    },
+    {
+      "order": 2,
+      "presentations": 1,
+      "active": 1,
+      "pure_blue_target": 0,
+      "two_black": 1,
+      "six_black": 0,
+      "path_selection_needed": 0
+    },
+    {
+      "order": 3,
+      "presentations": 2,
+      "active": 2,
+      "pure_blue_target": 0,
+      "two_black": 2,
+      "six_black": 0,
+      "path_selection_needed": 0
+    },
+    {
+      "order": 4,
+      "presentations": 8,
+      "active": 7,
+      "pure_blue_target": 1,
+      "two_black": 6,
+      "six_black": 1,
+      "path_selection_needed": 0
+    },
+    {
+      "order": 5,
+      "presentations": 64,
+      "active": 63,
+      "pure_blue_target": 1,
+      "two_black": 62,
+      "six_black": 1,
+      "path_selection_needed": 0
+    },
+    {
+      "order": 6,
+      "presentations": 1024,
+      "active": 1023,
+      "pure_blue_target": 1,
+      "two_black": 1022,
+      "six_black": 1,
+      "path_selection_needed": 0
+    }
+  ],
+  "extra_prefix_orders": [
+    8
+  ],
+  "branch_witnesses": {
+    "pure_blue_target": {
+      "active": false,
+      "A": [
+        0
+      ],
+      "target_paths": 3
+    },
+    "six_black_repair": {
+      "active": true,
+      "steps": 6,
+      "first_blue": true,
+      "switched_path": false,
+      "standard_second_blue": false,
+      "A": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "prefix_path": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "route": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          6,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        [
+          7,
+          6,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          7,
+          5,
+          6,
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          0,
+          1,
+          2,
+          3,
+          7,
+          4
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          7,
+          6,
+          4,
+          5
+        ]
+      ]
+    },
+    "path_selection_needed": {
+      "active": true,
+      "steps": 2,
+      "first_blue": false,
+      "switched_path": true,
+      "standard_second_blue": true,
+      "A": [
+        254,
+        244,
+        248,
+        242,
+        96,
+        192,
+        128,
+        16
+      ],
+      "prefix_path": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        4
+      ],
+      "route": [
+        [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          4,
+          11,
+          8,
+          9,
+          10
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          4,
+          11,
+          10,
+          8,
+          9
+        ]
+      ]
+    }
+  },
+  "source_sha256_lf": "9992c7f93e43062db4fa7e71c87e0b3ade361d22acaec1a3c7e89585be8bcc2e"
+}

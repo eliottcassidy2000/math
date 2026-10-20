@@ -9,7 +9,7 @@ from collections import Counter
 import csv
 import gzip
 import hashlib
-from itertools import permutations, product
+from itertools import combinations, permutations, product
 import json
 from math import comb
 from pathlib import Path
@@ -293,22 +293,144 @@ def stack_controls():
     return examples, choices
 
 
+def reverse_path(adj, path):
+    answer = list(adj)
+    for u, v in zip(path, path[1:]):
+        need(answer[u] >> v & 1, 'path reversal input arc')
+        answer[u] ^= 1 << v
+        answer[v] ^= 1 << u
+    return tuple(answer)
+
+
+def triangles(adj):
+    total = 0
+    for vertices in combinations(range(len(adj)), 3):
+        if all(sum(adj[u] >> v & 1 for v in vertices) == 1 for u in vertices):
+            total += 1
+    return total
+
+
+def neighbour_controls():
+    output = []
+    for word in quiet_words(4):
+        left = quiet(word)
+        tournament = ordered_sum([left, R4, quiet(word[::-1])])
+        p = next(p for p in paths(tournament) if not blue(tournament, p))
+        neighbour = reverse_path(tournament, p)
+        masses = literal_masses(neighbour)
+        need(masses['b'] == 0, 'mixed-leaf neighbour must be nonselfconverse')
+        aut = automorphisms(neighbour)
+        centre = tuple(range(len(left), len(left) + 4))
+        scores = [row.bit_count() for row in neighbour]
+        if word:
+            shell = tuple(i for i, score in enumerate(scores)
+                          if score in (len(left) + 1, len(left) + 2))
+            need(shell == centre, 'intrinsic central score shell')
+            need(strong(neighbour) and len(aut) == 1, 'strong asymmetric neighbour')
+            expected_triangles = len(tournament) + 2 * word.count(3) - 2 * (word[0] == 3)
+            need(triangles(neighbour) == expected_triangles, 'neighbour triangle current')
+            for score in set(scores):
+                vertices = [i for i, s in enumerate(scores) if s == score]
+                sub = tuple(sum((neighbour[u] >> v & 1) << j for j, v in enumerate(vertices))
+                            for u in vertices)
+                need(triangles(sub) == 0, 'score class is transitive')
+        else:
+            need(not strong(neighbour) and len(aut) == 3 and masses['h'] == 1,
+                 'empty-padding exception')
+        output.append(dict(word=word, n=len(tournament), original_rows=tournament,
+                           black_path=p, neighbour_rows=neighbour, scores=scores,
+                           strong=strong(neighbour), Aut=len(aut),
+                           directed_triangles=triangles(neighbour), **masses))
+    return output
+
+
+def recover_left_word(neighbour):
+    """Decode the canonical orientation whose central shell is C3 -> 1."""
+    n = len(neighbour)
+    if n == 4:
+        return ()
+    r = (n - 4) // 2
+    scores = [row.bit_count() for row in neighbour]
+    left = [i for i, s in enumerate(scores) if s >= r + 3]
+    need(len(left) == r, 'left shell size')
+    top_score = max(scores[i] for i in left)
+    top = [i for i in left if scores[i] == top_score]
+    if len(top) == 1:
+        prefix, removed = (1,), set(top)
+    else:
+        need(len(top) == 2, 'top shell size')
+        following = [i for i in left if scores[i] == top_score - 1]
+        need(len(following) <= 1, 'next shell size')
+        vertices = top + following
+        is_triangle = (len(vertices) == 3 and
+                       all(sum(neighbour[u] >> v & 1 for v in vertices) == 1
+                           for u in vertices))
+        if following and not is_triangle:
+            prefix, removed = (3,), set(vertices)
+        else:
+            prefix, removed = (1, 1), set(top)
+    rest = Counter(scores[i] for i in left if i not in removed)
+    need(all(size in (1, 3) for size in rest.values()), 'remaining atom shells')
+    return prefix + tuple(rest[s] for s in sorted(rest, reverse=True))
+
+
+def large_neighbour_inverse():
+    addresses, counts = {}, Counter()
+    digest = hashlib.sha256()
+    for word in quiet_words(18):
+        r = sum(word)
+        tournament = ordered_sum([quiet(word), R4, quiet(word[::-1])])
+        p = tuple(range(r)) + (r, r + 3, r + 2, r + 1) + tuple(range(r + 4, 2 * r + 4))
+        neighbour = reverse_path(tournament, p)
+        need(recover_left_word(neighbour) == word, 'intrinsic inverse word decoder')
+        if word:
+            scores = [row.bit_count() for row in neighbour]
+            groups = [[i for i, s in enumerate(scores) if s == score] for score in sorted(set(scores))]
+            ordering = []
+            for group in groups:
+                degrees = {i: sum(neighbour[i] >> j & 1 for j in group) for i in group}
+                need(sorted(degrees.values()) == list(range(len(group))), 'score group transitive')
+                ordering.extend(sorted(group, key=degrees.get))
+            address = (len(neighbour), word_code(neighbour, ordering))
+            need(address not in addresses, 'distinct mixed leaves share black neighbour')
+            addresses[address] = word
+            # Literal closed reversed path certifies strongness.
+            cycle = p[::-1]
+            need(all(neighbour[u] >> v & 1 for u, v in zip(cycle, cycle[1:] + cycle[:1])),
+                 'neighbour Hamilton cycle')
+        else:
+            address = (4, 0)
+        digest.update(repr((word, address)).encode('ascii'))
+        digest.update(b'\n')
+        counts[r] += 1
+    return dict(max_half_order=18, max_total_order=40,
+                checked_words=sum(counts.values()), words_by_half_order=dict(sorted(counts.items())),
+                actual_neighbour_collisions=0, exact_inverse_failures=0,
+                word_address_sha256=digest.hexdigest())
+
+
 def main():
     census, sources = finite_census()
     family = family_audit()
     polynomials = polynomial_audit()
     stacks, choices = stack_controls()
+    neighbours = neighbour_controls()
+    inverse = large_neighbour_inverse()
     receipt = dict(status='PASS', universe='complete inherited classes n3..9; independent low-deficit checks; all quiet words of size at most9',
                    sources_sha256=sources, census=census, cap_family=family,
                    fibonacci_polynomials=polynomials, stack_controls=stacks,
+                   exact_black_neighbours=neighbours,
+                   black_neighbour_inverse=inverse,
                    possible_nonrigid_outer_corrections=choices)
     (HERE / 'centers.json').write_text(json.dumps(receipt, indent=2, sort_keys=True) + '\n', encoding='utf-8')
     print('PASS complete inherited self-converse census n3..9; all beta<=20 witnesses independently checked')
     print('Strong beta<=10:', {n: {d: c for d, c in v['strong_beta_le20'].items() if d <= 10} for n, v in census.items()})
     print('PASS', len(family), 'quiet-word caps of inner order<=9: literal h,b, Aut, feedback, moved support')
     print('PASS Fibonacci polynomial identities ell0..12 and seven literal SCC-stack controls')
+    print('PASS', len(neighbours), 'explicit mixed-leaf neighbours: score shell, nonselfconverseness, Aut, triangle current')
+    print('PASS', inverse['checked_words'], 'mixed-leaf words of half-order<=18: intrinsic inverse and unique neighbour addresses')
     print('FINITE-EXACT D2(z)=z^4 through order9; PROVED within the entire symmetry-slack3 strong-centre family')
-    print('All-order D2(z)=z^4 beyond that family remains OPEN.')
+    print('All-order D2(z)=z^4 is imported from deficit_two_centers_20261020; its residual census is not replayed by this script.')
 
 
 if __name__ == '__main__':

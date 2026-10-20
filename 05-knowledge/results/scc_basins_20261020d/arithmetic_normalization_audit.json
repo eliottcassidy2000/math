@@ -1,0 +1,232 @@
+{
+  "status": "FINITE-EXACT independent controls; all-order proof audited separately",
+  "end_ledger": {
+    "census": [
+      {
+        "context_order": 1,
+        "presentations": 1
+      },
+      {
+        "context_order": 2,
+        "presentations": 1
+      },
+      {
+        "context_order": 3,
+        "presentations": 1
+      },
+      {
+        "context_order": 4,
+        "presentations": 2
+      },
+      {
+        "context_order": 5,
+        "presentations": 8
+      },
+      {
+        "context_order": 6,
+        "presentations": 64
+      },
+      {
+        "context_order": 7,
+        "presentations": 1024
+      }
+    ],
+    "total": 1101,
+    "unpadded_R4_black_paths": [
+      {
+        "path": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "target": [
+          10,
+          12,
+          9,
+          0
+        ]
+      },
+      {
+        "path": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "target": [
+          2,
+          8,
+          11,
+          1
+        ]
+      }
+    ]
+  },
+  "symbolic_normalization": {
+    "vertex_weight_bound": 24,
+    "ordinary_words": 142129,
+    "active_words": 141726,
+    "active_strata": 84,
+    "branches": {
+      "interior": 186979,
+      "interior_alternate": 1612,
+      "left_boundary_repair": 86,
+      "left_ordinary": 20649,
+      "midpoint_nonpalindrome": 3934,
+      "right_boundary_repair": 645,
+      "right_ordinary": 20090,
+      "rigid_swaps": 2038158,
+      "unpadded_R4": 1
+    },
+    "census": [
+      {
+        "order": 0,
+        "words": 1,
+        "pure_blue": 1
+      },
+      {
+        "order": 1,
+        "words": 1,
+        "pure_blue": 1
+      },
+      {
+        "order": 2,
+        "words": 1,
+        "pure_blue": 1
+      },
+      {
+        "order": 3,
+        "words": 2,
+        "pure_blue": 2
+      },
+      {
+        "order": 4,
+        "words": 4,
+        "pure_blue": 1,
+        "active": 3
+      },
+      {
+        "order": 5,
+        "words": 6,
+        "pure_blue": 2,
+        "active": 4
+      },
+      {
+        "order": 6,
+        "words": 9,
+        "pure_blue": 2,
+        "active": 7
+      },
+      {
+        "order": 7,
+        "words": 15,
+        "pure_blue": 3,
+        "active": 12
+      },
+      {
+        "order": 8,
+        "words": 25,
+        "pure_blue": 3,
+        "active": 22
+      },
+      {
+        "order": 9,
+        "words": 40,
+        "pure_blue": 5,
+        "active": 35
+      },
+      {
+        "order": 10,
+        "words": 64,
+        "pure_blue": 4,
+        "active": 60
+      },
+      {
+        "order": 11,
+        "words": 104,
+        "pure_blue": 7,
+        "active": 97
+      },
+      {
+        "order": 12,
+        "words": 169,
+        "pure_blue": 6,
+        "active": 163
+      },
+      {
+        "order": 13,
+        "words": 273,
+        "pure_blue": 10,
+        "active": 263
+      },
+      {
+        "order": 14,
+        "words": 441,
+        "pure_blue": 9,
+        "active": 432
+      },
+      {
+        "order": 15,
+        "words": 714,
+        "pure_blue": 15,
+        "active": 699
+      },
+      {
+        "order": 16,
+        "words": 1156,
+        "pure_blue": 13,
+        "active": 1143
+      },
+      {
+        "order": 17,
+        "words": 1870,
+        "pure_blue": 22,
+        "active": 1848
+      },
+      {
+        "order": 18,
+        "words": 3025,
+        "pure_blue": 19,
+        "active": 3006
+      },
+      {
+        "order": 19,
+        "words": 4895,
+        "pure_blue": 32,
+        "active": 4863
+      },
+      {
+        "order": 20,
+        "words": 7921,
+        "pure_blue": 28,
+        "active": 7893
+      },
+      {
+        "order": 21,
+        "words": 12816,
+        "pure_blue": 47,
+        "active": 12769
+      },
+      {
+        "order": 22,
+        "words": 20736,
+        "pure_blue": 41,
+        "active": 20695
+      },
+      {
+        "order": 23,
+        "words": 33552,
+        "pure_blue": 69,
+        "active": 33483
+      },
+      {
+        "order": 24,
+        "words": 54289,
+        "pure_blue": 60,
+        "active": 54229
+      }
+    ]
+  },
+  "source_sha256_lf": "815e2e90e5601461fdb5110b33ccaa9b0e93e59506f6a21c1dff7678212f18bc"
+}

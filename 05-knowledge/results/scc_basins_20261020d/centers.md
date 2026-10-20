@@ -1,11 +1,12 @@
 # Black deficits, strong centres, and the first Fibonacci centre sector
 
 Status: **PROVED** for the factorization, grammar, capped-word family, and
-black-support degree statements below. **FINITE-EXACT** for the complete
-order-three through order-nine centre census. **OPEN**: the assertion that
-the four-vertex strong tournament is the only strong black-deficit-two
-centre at every order; all-order black connectivity and terminal-basin
-confluence are not consequences of these counting formulas.
+black-neighbour statements below. **PROVED, imported computer-assisted
+theorem:** `D_2(z)=z^4`, from the concurrently received
+[deficit-two centre packet](../deficit_two_centers_20261020/README.md).
+**FINITE-EXACT** for this lane's independent order-three through order-nine
+centre checks. **OPEN:** all-order black connectivity and terminal-basin
+confluence; neither follows from these counting formulas.
 
 This is the deficit-centre lane of the 20 October continuation. Its closest
 proved mechanisms are the SCC centre law in
@@ -54,8 +55,9 @@ quantity. In particular the four-vertex strong tournament R4 has
     (h,b,beta)=(5,3,2),       (f,s,delta)=(1,0,3).
 
 The notation `D_2(z)` below means the series of **strong self-converse
-centres with beta=2**. No inherited definition identifies it with a transfer
-determinant, the capped-core deficiency, or a symmetry-slack series.
+centres with beta=2**, now recovered explicitly in the incoming centre
+packet. It is unrelated to the transfer determinant, capped-core
+deficiency, or symmetry-slack series.
 
 ## 2. Exact SCC factorization and the first deficit layers
 
@@ -104,16 +106,17 @@ The first corrections are:
 | 6 | W_3(z^2)(1+z+z^3) |
 | 18 | W_3(z^2) z^5 |
 | 20 | W_5(z^2)(1+z+z^3) |
-| 24 | W_3(z^2) C_(3,1)(z) |
+| 24 | 0 |
 | 30 | 0 |
-| 36 | W_3(z^2) C_(5,3)(z) |
+| 36 | W_3(z^2) z^4 |
 | 42 | W_3(z^2) C_(5,1)(z)+W_7(z^2)(1+z+z^3) |
 
 Here `C_(1,1)=1+z+z^3` and `C_(3,3)=z^5` follow from the proved pure-blue
 classification. The potential beta30 correction would require a pure-blue
-centre of mass five, which does not exist. `C_(3,1)` has not been declared
-empty by a finite check. If the global conjecture `D_2=z^4` is proved, it
-would imply `C_(3,1)=0` and `C_(5,3)=z^4`.
+centre of mass five, which does not exist. The imported all-order theorem
+`D_2=z^4` implies `C_(3,1)=0` and `C_(5,3)=z^4`, justifying the beta24 and
+beta36 simplifications. Before that theorem, those were genuine unknown
+centre terms; a bounded census alone would not justify erasing them.
 
 For beta0, (4) recovers exactly
 
@@ -123,9 +126,33 @@ For beta2 it gives the useful all-order equivalence
 
     B_2(z)=D_2(z)/(1-z^2-z^6).                               (5)
 
-Thus `D_2=z^4` would classify all deficit-two nodes as rigid palindromic
-padding around R4. Equation (5) is proved; that global identification of
-`D_2` is presently open outside the sector proved next.
+The incoming all-order theorem therefore classifies all deficit-two nodes
+as rigid palindromic padding around R4 and gives
+
+    B_2(z)=z^4/(1-z^2-z^6).
+
+**Imported proof mechanism.** The
+[cutoff proof](../deficit_two_centers_20261020/session15-deficit-centers/PREFIX_CONNECTIVITY_CUTOFF.md)
+shows that three Hamiltonian words whose pairwise relative permutations
+have even order and disjoint reflected support require at least four
+black path orbits. A four-cycle prefix supplies these words when at least
+three of its vertices beat a prescribed next vertex. A local configuration
+lemma then forces vertex connectivity at most four for a hypothetical
+deficit-two centre of order at least eight. Hamiltonian-cycle rotation
+orbits give the opposite bound `kappa>=ceil(m/2)` when there are at least
+two orbits of odd size m. The cycle-cut quotient has at most four states,
+so only seven new orders remain:10,12,14,15,20,21,28.
+
+The [complete residual census](../deficit_two_centers_20261020/session15-deficit-centers/DEFICIT_TWO_COMPLETE_CENSUS.md)
+covers all2,121,984 necessary symmetry-normalized presentations, with no
+reflection constraint incorrectly imposed in the two-orbit cases. Every
+presentation has a literal four-cycle prefix obstruction. Its
+[independent audit](../deficit_two_centers_20261020/session15-deficit-census-audit/AUDIT.md)
+reconstructs the entire covering spaces by full-pair linear equations and
+replays every certificate. We read and checked the structural arguments
+and audit scope; this lane's script does not claim to rerun that residual
+census. The following Fibonacci-sector theorem was derived independently
+and explains additional deficit layers rather than replacing this proof.
 
 ## 3. A complete infinite strong-centre sector
 
@@ -282,8 +309,10 @@ For an odd prime p this yields, with each formula an identity of series,
 The power `A^(j+1)` counts the j+1 rigid gaps around j nonrigid strong
 letters. These formulas combine with (4); they do not identify beta with
 the number of nonrigid letters. The series G_m are actual strong-class
-inventories, not universally known polynomials merely because the first
-few coefficients were computed.
+inventories. Their polynomial finiteness is now proved independently in
+[strata, Theorem1](strata.md), with an effective order bound; a few computed
+coefficients alone would not supply that theorem or determine the remaining
+coefficients.
 
 Second, symmetry slack **is** additive over SCCs. If S_j(z) counts strong
 classes of slack j, the continuation-width theorem gives
@@ -363,8 +392,124 @@ The rigorous reduction achieved here is:
    black-normalization path, and mixed blue bridge removal still requires
    a bypass preserving the needed boundary data.
 
-No proof of universal black connectivity, of a global `D_2=z^4`, or of
-the absence of non-leaf full-metagraph bridges is claimed here.
+The imported `D_2=z^4` now makes item2 unnecessary for the global
+deficit-two classification, but its higher-deficit formulas remain new.
+No proof of universal black connectivity or the absence of non-leaf
+full-metagraph bridges is claimed here.
+
+### The unique neighbour of every mixed paired-black leaf is pure black
+
+Here a **mixed paired-black leaf** means a mixed vertex of degree one in
+the black multigraph after dividing every twin-line multiplicity by two;
+loops still count twice. It does not mean an arbitrary degree-one vertex
+of the simple black-support graph. A simple-support leaf could have more
+parallel black lines and beta greater than two. The centre classification
+does give more than a degree count when combined with its path words.
+For a rigid word W, define
+
+    M_W=W -> R4 -> W^op.
+
+Choose one Hamiltonian path in each rigid atom and either black path orbit
+of the central R4, concatenate them to P, and reverse the arcs of P.
+Call the resulting converse-merged node Q_W. The two central black choices
+are sigma-paired, and all other path choices are related by automorphisms;
+thus this construction gives the unique black neighbour from Proposition3.
+
+**Proposition 4.** If W is nonempty, Q_W is strong, non-self-converse, and
+has trivial automorphism group. If W is empty, Q_W is the nonstrong
+pure-black node `{C3->1,1->C3}`. In particular **every mixed paired-black
+leaf attaches directly to a pure-black node**, not to another mixed node.
+
+**Proof.** Let r=|W| and n=2r+4. For nonempty W, P is open because its
+first SCC dominates its last SCC. Its reversal in Q_W closes using the
+untouched first-to-last arc, giving a Hamiltonian cycle and strongness.
+
+Only the first and last vertices of the full path change their total
+outdegrees under path reversal, by minus one and plus one respectively.
+The central four vertices therefore still have scores r+1,r+1,r+2,r+2.
+Every left vertex has score at least r+3 and every right vertex has score
+at most r. Thus the central four-set is intrinsically exactly the score
+shell `{r+1,r+2}`. An anti-automorphism would preserve this shell because
+`n-1=2r+3` interchanges its two scores.
+
+Within that shell, reversing a black R4 Hamiltonian path gives `C3->1`
+or its converse. Neither is self-converse. The restriction of a putative
+anti-automorphism is therefore impossible. Q_W is pure black.
+
+For the automorphism statement, every total-score class induces a
+transitive tournament. In each outer triangle atom the two path arcs
+are reversed, turning its induced triangle into a transitive triple.
+Distinct atom score ranges do not overlap, except that reducing the first
+vertex's score can merge the first two singleton atoms, and dually at the
+last two singletons. Those exceptional classes have size two. A first or
+last triangle can split into smaller score classes, still transitive.
+Each of the two central score classes also has size two. Automorphisms
+preserve score classes and a transitive tournament has no nonidentity
+automorphism. Hence Aut(Q_W)=1.
+
+For empty W, direct reversal of either black R4 path gives the displayed
+singleton/triangle stack, with automorphism group of order three. This
+exception is not covered by the central score-shell argument.
+
+The construction has an explicit block normal form. Start with the ordered
+blocks W,R4,W^op; turn each outer C3 into its path-reversed transitive
+triple, turn the central R4 into its path-reversed `C3->1` block, and reverse
+the one path arc at every consecutive block boundary. All other cross-block
+arcs remain forward. This determines the actual neighbour, with the word
+W retained, rather than merely predicting its degree.
+
+If t is the number of triangle letters in W, its triangle potential is
+
+    c3(Q_W)=n+2t       when W begins with1,
+    c3(Q_W)=n+2t-2     when W begins withC3.                 (17)
+
+Indeed `c3(M_W)=2t+2`; the initial and final path scores are respectively
+`(n-1,0)` or `(n-2,1)`. The exact path-reversal current
+`Delta c3=s(first)-s(last)-1` gives (17). Thus the unique black edge from
+Q_W back to M_W is an authenticated strict descent when W is nonempty.
+It identifies the attachment point of every mixed twig, while connections
+among the different Q_W remain a separate normalization problem.
+
+**Proposition 5.** The map from mixed paired-black leaves to their black
+neighbours is injective: two different words W do not give the same merged
+node Q_W.
+
+**Proof by an intrinsic inverse.** For n>4, first orient the converse pair
+so its intrinsic central four-shell is `C3->1`, rather than `1->C3`.
+These two induced types are nonisomorphic, so this choice is unique.
+The r left vertices are exactly those of score at least r+3. Their scores
+decrease with the original atom order. Away from the first atom, each
+singleton gives a score class of size one and each triangle gives one
+of size three.
+
+Only the first path vertex lost one score unit. If the maximum-score
+class on this left side has size one, the first atom is1. Remove it.
+If that class has size two, the beginning was either C3 or11. There is
+at most one left vertex of score exactly one smaller. If present,
+inspect these top three vertices. A transitive induced triple means the
+first atom was C3: reversing its two path arcs turned it transitive.
+A directed triangle means the first three atoms were111: reversing
+two consecutive arcs of their transitive triple produced a directed
+triangle. Thus in the first case remove the three vertices and decode
+C3; in the second remove just the maximum pair and decode11. If there
+is no vertex one score unit lower, the beginning was11 and the same
+pair removal applies.
+
+After this initial step, read the remaining score classes in decreasing
+score order, writing1 or C3 according to their size. No further endpoint
+perturbation occurs on the left side. This recovers W uniquely. The n4
+case has only the empty word. The decoder is invariant under graph
+isomorphism and, after the central-shell orientation choice, under the
+converse merge. This proves injectivity.
+
+Thus every mixed paired-black leaf has its own distinct pure-black
+attachment node. This does not assert that the attachment node has only
+one neighbour, or that all such nodes belong to a common black component.
+
+The companion [fixed-deficit strata theorem](strata.md) proves that every
+positive fixed-deficit series is rational. It identifies the exact first
+thresholds for higher pole powers, while retaining the finite strong-centre
+and strong-mass coefficients that are still unknown.
 
 ## 7. Exact computation and reproduction
 
@@ -401,5 +546,14 @@ automorphisms, feedback minima, moved supports, and strong connectivity all
 match (7)--(9). Seven explicit larger SCC stacks verify the nonlinear
 deficit law, including `C5 R4 C5` at order14 and four R4 blocks at order16.
 The Fibonacci coefficient identities are independently checked through
-effective weight12. Raw canonical centre words and all receipts are in
+effective weight12. All eight words W of size at most four also have
+their actual black-neighbour adjacency rows and Hamiltonian witnesses
+recorded: intrinsic shell, non-self-converseness, automorphism order,
+strongness, and triangle current are checked independently. Raw canonical
+centre words and all receipts are in
 [centers.json](centers.json).
+The intrinsic inverse is additionally checked on every rigid half-word
+of vertex size at most18, giving actual neighbours through order40;
+canonical addresses obtained from the transitive score classes are all
+distinct. This larger test does not enumerate the Hamiltonian paths of
+those neighbours; strongness uses their explicit Hamiltonian cycles.

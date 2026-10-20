@@ -1,0 +1,8 @@
+PASS complete inherited self-converse census n3..9; all beta<=20 witnesses independently checked
+Strong beta<=10: {'3': {0: 1}, '4': {2: 1}, '5': {0: 1, 4: 1, 6: 1, 8: 2, 10: 1}, '6': {6: 1}, '7': {6: 1, 8: 1}, '8': {}, '9': {}}
+PASS 57 quiet-word caps of inner order<=9: literal h,b, Aut, feedback, moved support
+PASS Fibonacci polynomial identities ell0..12 and seven literal SCC-stack controls
+PASS 8 explicit mixed-leaf neighbours: score shell, nonselfconverseness, Aut, triangle current
+PASS 1872 mixed-leaf words of half-order<=18: intrinsic inverse and unique neighbour addresses
+FINITE-EXACT D2(z)=z^4 through order9; PROVED within the entire symmetry-slack3 strong-centre family
+All-order D2(z)=z^4 is imported from deficit_two_centers_20261020; its residual census is not replayed by this script.

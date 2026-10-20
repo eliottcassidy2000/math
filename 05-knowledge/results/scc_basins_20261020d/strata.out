@@ -1,0 +1,4 @@
+PASS actual atom masses: 1,C3,R4,C5,Paley7
+PASS independent word-DP versus rational rigid-gap expansion: sizes0..30, odd masses1..81
+PASS exact pole thresholds j1..8; first beta values6,72,702,6480
+Scope: restricted finite controls; unrestricted rationality and cutoff follow from strata.md proofs.

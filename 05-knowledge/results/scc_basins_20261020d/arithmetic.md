@@ -5,14 +5,18 @@ fixed-insertion formula and asymptotics, restricted terminal count, and
 marked golden-character incidence below. **FINITE-EXACT:** literal small
 tournament inventories and the ranks of the specified boundary banks.
 The existing arithmetic105 dictionary is inherited and replayed here.
-No all-order black connectivity or Petersen-forcing theorem is inferred.
+The companion [interior theorem](arithmetic_interior.md) now proves
+ambient black connectivity of this SCC language at fixed vertex count
+and feedback-arc count. Global black-core connectivity and Petersen
+forcing remain open.
 
 ## 1. Recovering the meaning before using a symbol
 
-The new request describes `D(z)` as a series of strong centers with
-deficit two. This notation is not defined in either of the two cited
-incoming packets. In particular, it must not be replaced silently by
-the earlier, explicitly chosen metagraph degree polynomial.
+The new request describes `D(z)` as a series of strong self-converse
+centers with deficit two. The incoming
+[complete deficit-two proof](../deficit_two_centers_20261020/README.md)
+now recovers and determines exactly this series. It must not be replaced
+by the earlier, explicitly chosen metagraph degree polynomial.
 
 Three actual parameters need separate names:
 
@@ -30,16 +34,21 @@ Thus R4 is only the smallest of that *different* family. The
 [deficiency equation](../defect_transitions_20261020/strata.md) concerns
 heavy gaps and backward endpoints, and is a third grading.
 
-The compatible interpretation of the new `D(z)` is therefore
+The recovered definition and proved answer are
 
 ```text
-D_2(z) = sum_[strong center T with beta(T)=2] z^|T|.
+D_2(z) = sum_[strong self-converse center T with beta(T)=2] z^|T|
+       = z^4.
 ```
 
-This is a reconstruction from the user's description, not recovered old
-notation. Its all-order classification belongs to the companion center
-analysis. The results below require only the actual atom R4; they do not
-assume the assertion `D_2(z)=z^4` in order to prove it.
+Thus its degree is four, its coefficient at degree four is one, and every
+other coefficient is zero. The proof combines an all-order cutoff with
+complete exclusion certificates for 2,121,984 necessary periodic
+presentations; those presentations are not nonisomorphic class counts.
+The incoming independent audits establish the global result. The
+[companion center analysis](centers.md) explains its SCC padding and a
+second Fibonacci grading. The results below use only the actual atom R4
+and are independently valid without the incoming classification.
 
 Inheritance: the closest mechanism is unique ordered SCC decomposition;
 the corrected near miss is confusing the three deficiencies above; the
@@ -147,13 +156,94 @@ to a graph of local domino moves, and does not prove connectivity of
 the terminal basins.
 
 One operation nevertheless already has an authenticated image. The
-[four-black SCC interchange](../black_descent_20261020c/scc.md), section5,
-changes `A ->1 ->C3` to `A ->C3 ->1` when A begins with two dominating
-singletons. Under(2) this is the rewrite `code(A)121 <-> code(A)211`,
-with the guard that `code(A)` begins11. The four actual Hamiltonian paths
-are its certificate, including any intermediate tournaments outside the
-language. This is a valid guarded rewrite, not an assertion that every
-unrestricted adjacent swap has a black implementation.
+[unrestricted-prefix four-black SCC interchange](prefix.md) changes
+`A ->1 ->C3` to `A ->C3 ->1` whenever both endpoints are black-active.
+For a prefix of at least two vertices, under(2) this is the rewrite
+`code(A)121 <-> code(A)211`. The old two-singleton prefix guard has been
+removed by choosing the internal Hamiltonian path appropriately. Empty
+A already gives converse-equivalent endpoints; singleton A fails the
+activity hypothesis. The four actual Hamiltonian paths are the
+certificate, including intermediate tournaments outside the language.
+This end macro alone acts at the right-hand end of the SCC word (and
+by converse at the left-hand end). The interior theorem linked below
+supplies arbitrary interior swaps with active endpoints.
+
+### A new contextual dissolution of R4
+
+**PROVED, all orders.** For every nonempty tournament A, if
+`A -> C3 -> 1` is black-active, then it is connected to `A -> R4` by
+at most six black moves in the converse-merged metagraph. The literal
+destination restores every arc of A and every arc from A to the suffix.
+If the first SCC of A is not R4, two black moves suffice. For empty A,
+the two merged types are already the endpoints of the order-four black
+line. The activity condition is necessary: A=1 gives the pure-blue
+target `1 -> C3 -> 1`.
+
+Here `K_P` complements every arc except the consecutive edges of a
+directed Hamiltonian path P; it represents the same merged line as
+reversing P. Label the final R4 by outneighbor bit masks
+`B=(6,4,8,3)` on vertices0,1,2,3. For any Hamiltonian path p in A,
+successively use
+
+```text
+P1=(p,3,0,1,2),       P2=(p,3,2,0,1).                 (5a)
+```
+
+These are directed paths. On B alone the successive matrices are
+`(2,12,1,5)` and `D=(10,0,3,6)`. The final D consists of the cycle
+`0 -> 3 -> 2 -> 0` followed by the sink1. All internal path edges of A
+are retained twice; every other internal edge is complemented twice.
+Both paths attach A to vertex3, so each cross edge is also either
+retained twice or complemented twice. This proves the literal identity
+for arbitrary A without assuming a particular internal orientation.
+
+It remains to make both moves black. Blue status is unchanged by K:
+positional reversal preserves the set of consecutive path edges, so
+it is an anti-automorphism before K exactly when it is one afterward.
+Let S be the first SCC of A.
+
+* If S is neither R4 nor a singleton, neither the source nor the target
+  is self-converse: their first and last SCCs have different types.
+  Thus both moves in(5a) are black for any p.
+* If S is a singleton, the source is not self-converse, so P1 is black.
+  Choose a black Hamiltonian path of the target, which exists by the
+  hypothesis. Every target path concatenates a path of A, one of the
+  three paths of C3, and the sink. A cycle automorphism sends its C3
+  segment to `(3,2,0)` while fixing A and the sink. Its A segment is
+  therefore a choice of p for which P2 is black in the target and,
+  by K invariance, in the intermediate tournament.
+* If S is R4, the target is not self-converse, so P2 is black. If P1
+  happens to be blue, apply the
+  [paired-R4 black detour](moves.md), section2, to that first line.
+  It replaces P1 by five black moves reaching exactly the same labelled
+  intermediate tournament. Its right-hand R4 presentation along P1 is
+  `(6,12,8,1)`, the five-step case of the table. Append P2.
+
+The blue first-step case and the blue second-step case cannot coincide:
+they require first SCCs of different orders. The argument uses actual
+path words and the paired-R4 detour, rather than an inference from
+positive black degree.
+
+Under the Fibonacci codec, this is the guarded end rewrite
+`code(A)22 <-> code(A)211`. Together with the earlier interchange it
+also reaches `code(A)121` when that endpoint is active. This gives a
+real operation that changes the number of R4 atoms. The separate
+[interior four-K theorem](arithmetic_interior.md) now handles arbitrary
+nonempty contexts on both sides, and the
+[empty-context boundary repair](moves.md), section10, supplies the
+remaining end case. Together they prove normalization of all active
+three-atom words at fixed n and `f=#C3+#R4` to
+`1^(n-3f) -> C3^f` in the ambient black metagraph. The paths can leave
+the SCC language and need not preserve f at intermediate tournaments.
+
+The independent [dissolution checker](arithmetic_dissolution.py) executes
+every standard-Hamiltonian-path presentation of A through order6:
+1,100 presentations, of which1,096 have active targets. It verifies all
+literal paths and final arcs;1,093 use two black moves and three use the
+six-move repair. An additional order-eight prefix `1 -> C3 -> R4`
+exercises the necessary change of internal path when the standard
+second move is blue. This is a hostile control, not a complete
+order-eight enumeration.
 
 ## 3. What squares, cubics and quartics count
 
@@ -234,6 +324,27 @@ In particular the joins of one through four copies of R4 have
 Already the second row rejects additive beta and a naive interpretation
 of `D^2` as a deficit-four series. Formula(6) counts inserted atoms,
 which is a different and well-defined grading.
+
+### A second, distinct Fibonacci grading for strong centers
+
+The [companion center theorem](centers.md), sections3–4, supplies an
+additional exact connection. In the complete symmetry-slack-three
+sector `C3[1,U,1]`, take a rigid half-word W and grade it by
+`ell=#1(W)+2#C3(W)`. Its vertex-size polynomial is
+
+```text
+p_ell(z)=sum_(j=0..floor(ell/2)) binom(ell-j,j) z^(ell+j),
+p_0=1, p_1=z, p_ell=z p_(ell-1)+z^3 p_(ell-2).
+```
+
+The even word `U=W W^op` gives black deficit
+`2^ell(2^ell-1)` and center polynomial `z^2 p_ell(z^2)`, for ell>=1.
+Thus deficits2,12,56 give respectively `z^4`, `z^6+z^8`, and
+`z^8+2z^10` within that sector. Evaluating p at1 counts Fibonacci words,
+while the variable z retains actual vertex count. This grading counts
+strong centers and changes their black deficit; equations(6)–(8) count
+ordered insertions of R4 into nonstrong SCC words. They are two precise
+maps, not interchangeable uses of a common Fibonacci denominator.
 
 ## 4. A counted family of actual terminal boundary states
 
@@ -409,6 +520,14 @@ explicit exceptions rather than optimization-disabled assertions.
 Normal and optimized runs passed with identical stdout and byte-identical
 JSON receipts.
 
+The additional command
+`python3 05-knowledge/results/scc_basins_20261020d/arithmetic_dissolution.py`
+replays all1,100 contextual-dissolution presentations through prefix
+order6 and the explicit order-eight path-selection hostile described
+above. Normal and optimized runs give identical stdout and byte-identical
+JSON receipts, with SHA256
+`f4342c97121502826b964eada32a84c7a619a9fe629408ce1cb2e2bf9704bfe6`.
+
 | Connection | Preserved | Required retained data / failure boundary |
 |---|---|---|
 |SCC words -> Fibonacci words|Vertex count and directed-triangle potential with flag correction|Full token word and terminal flag; black moves need not stay in the language|
@@ -417,7 +536,8 @@ JSON receipts.
 |Golden character -> three junctions|Marked Fano incidence and closure tests|Character/address mark; all seven Kempe coordinates remain invisible|
 |Fibonacci parameters -> Euclid triple|Primitive-triple parameters and leg ratio|The ratio is not the golden SCC growth rate|
 
-The useful next operation is to transport an authenticated black route
-between terminal SCC words through(2), retaining every intermediate
-tournament that leaves the language. A purely scalar recurrence, even
-one with an exact golden factor, does not supply that missing route.
+The authenticated local routes now transport through(2), retaining
+their intermediate tournaments outside the language. The remaining
+operation problem is to connect different endpoint inventories f, or
+to normalize SCCs outside the three-atom alphabet. A purely scalar
+recurrence does not supply those missing routes.

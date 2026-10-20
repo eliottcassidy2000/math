@@ -1,0 +1,455 @@
+{
+  "scope": "complete abstract macrograph on active golden words through vertex order18, modulo reversal",
+  "alphabet": {
+    "a": "singleton",
+    "b": "C3",
+    "c": "R4"
+  },
+  "total_ordinary_words": 7920,
+  "total_active_merged_nodes": 3957,
+  "fixed_inventory_strata": 45,
+  "strata": [
+    {
+      "n": 4,
+      "f": 1,
+      "ordinary_golden_words": 4,
+      "active_merged_nodes": 2,
+      "simple_macro_edges": 1,
+      "components": 1,
+      "normal_target": "ab"
+    },
+    {
+      "n": 5,
+      "f": 1,
+      "ordinary_golden_words": 6,
+      "active_merged_nodes": 2,
+      "simple_macro_edges": 1,
+      "components": 1,
+      "normal_target": "aab"
+    },
+    {
+      "n": 6,
+      "f": 1,
+      "ordinary_golden_words": 9,
+      "active_merged_nodes": 4,
+      "simple_macro_edges": 4,
+      "components": 1,
+      "normal_target": "aaab"
+    },
+    {
+      "n": 7,
+      "f": 1,
+      "ordinary_golden_words": 15,
+      "active_merged_nodes": 4,
+      "simple_macro_edges": 4,
+      "components": 1,
+      "normal_target": "aaaab"
+    },
+    {
+      "n": 7,
+      "f": 2,
+      "ordinary_golden_words": 15,
+      "active_merged_nodes": 2,
+      "simple_macro_edges": 1,
+      "components": 1,
+      "normal_target": "abb"
+    },
+    {
+      "n": 8,
+      "f": 1,
+      "ordinary_golden_words": 25,
+      "active_merged_nodes": 6,
+      "simple_macro_edges": 7,
+      "components": 1,
+      "normal_target": "aaaaab"
+    },
+    {
+      "n": 8,
+      "f": 2,
+      "ordinary_golden_words": 25,
+      "active_merged_nodes": 6,
+      "simple_macro_edges": 8,
+      "components": 1,
+      "normal_target": "aabb"
+    },
+    {
+      "n": 9,
+      "f": 1,
+      "ordinary_golden_words": 40,
+      "active_merged_nodes": 6,
+      "simple_macro_edges": 7,
+      "components": 1,
+      "normal_target": "aaaaaab"
+    },
+    {
+      "n": 9,
+      "f": 2,
+      "ordinary_golden_words": 40,
+      "active_merged_nodes": 12,
+      "simple_macro_edges": 21,
+      "components": 1,
+      "normal_target": "aaabb"
+    },
+    {
+      "n": 10,
+      "f": 1,
+      "ordinary_golden_words": 64,
+      "active_merged_nodes": 8,
+      "simple_macro_edges": 10,
+      "components": 1,
+      "normal_target": "aaaaaaab"
+    },
+    {
+      "n": 10,
+      "f": 2,
+      "ordinary_golden_words": 64,
+      "active_merged_nodes": 20,
+      "simple_macro_edges": 40,
+      "components": 1,
+      "normal_target": "aaaabb"
+    },
+    {
+      "n": 10,
+      "f": 3,
+      "ordinary_golden_words": 64,
+      "active_merged_nodes": 4,
+      "simple_macro_edges": 4,
+      "components": 1,
+      "normal_target": "abbb"
+    },
+    {
+      "n": 11,
+      "f": 1,
+      "ordinary_golden_words": 104,
+      "active_merged_nodes": 8,
+      "simple_macro_edges": 10,
+      "components": 1,
+      "normal_target": "aaaaaaaab"
+    },
+    {
+      "n": 11,
+      "f": 2,
+      "ordinary_golden_words": 104,
+      "active_merged_nodes": 30,
+      "simple_macro_edges": 65,
+      "components": 1,
+      "normal_target": "aaaaabb"
+    },
+    {
+      "n": 11,
+      "f": 3,
+      "ordinary_golden_words": 104,
+      "active_merged_nodes": 12,
+      "simple_macro_edges": 21,
+      "components": 1,
+      "normal_target": "aabbb"
+    },
+    {
+      "n": 12,
+      "f": 1,
+      "ordinary_golden_words": 169,
+      "active_merged_nodes": 10,
+      "simple_macro_edges": 13,
+      "components": 1,
+      "normal_target": "aaaaaaaaab"
+    },
+    {
+      "n": 12,
+      "f": 2,
+      "ordinary_golden_words": 169,
+      "active_merged_nodes": 42,
+      "simple_macro_edges": 96,
+      "components": 1,
+      "normal_target": "aaaaaabb"
+    },
+    {
+      "n": 12,
+      "f": 3,
+      "ordinary_golden_words": 169,
+      "active_merged_nodes": 33,
+      "simple_macro_edges": 84,
+      "components": 1,
+      "normal_target": "aaabbb"
+    },
+    {
+      "n": 13,
+      "f": 1,
+      "ordinary_golden_words": 273,
+      "active_merged_nodes": 10,
+      "simple_macro_edges": 13,
+      "components": 1,
+      "normal_target": "aaaaaaaaaab"
+    },
+    {
+      "n": 13,
+      "f": 2,
+      "ordinary_golden_words": 273,
+      "active_merged_nodes": 56,
+      "simple_macro_edges": 133,
+      "components": 1,
+      "normal_target": "aaaaaaabb"
+    },
+    {
+      "n": 13,
+      "f": 3,
+      "ordinary_golden_words": 273,
+      "active_merged_nodes": 64,
+      "simple_macro_edges": 186,
+      "components": 1,
+      "normal_target": "aaaabbb"
+    },
+    {
+      "n": 13,
+      "f": 4,
+      "ordinary_golden_words": 273,
+      "active_merged_nodes": 4,
+      "simple_macro_edges": 4,
+      "components": 1,
+      "normal_target": "abbbb"
+    },
+    {
+      "n": 14,
+      "f": 1,
+      "ordinary_golden_words": 441,
+      "active_merged_nodes": 12,
+      "simple_macro_edges": 16,
+      "components": 1,
+      "normal_target": "aaaaaaaaaaab"
+    },
+    {
+      "n": 14,
+      "f": 2,
+      "ordinary_golden_words": 441,
+      "active_merged_nodes": 72,
+      "simple_macro_edges": 176,
+      "components": 1,
+      "normal_target": "aaaaaaaabb"
+    },
+    {
+      "n": 14,
+      "f": 3,
+      "ordinary_golden_words": 441,
+      "active_merged_nodes": 118,
+      "simple_macro_edges": 380,
+      "components": 1,
+      "normal_target": "aaaaabbb"
+    },
+    {
+      "n": 14,
+      "f": 4,
+      "ordinary_golden_words": 441,
+      "active_merged_nodes": 20,
+      "simple_macro_edges": 40,
+      "components": 1,
+      "normal_target": "aabbbb"
+    },
+    {
+      "n": 15,
+      "f": 1,
+      "ordinary_golden_words": 714,
+      "active_merged_nodes": 12,
+      "simple_macro_edges": 16,
+      "components": 1,
+      "normal_target": "aaaaaaaaaaaab"
+    },
+    {
+      "n": 15,
+      "f": 2,
+      "ordinary_golden_words": 714,
+      "active_merged_nodes": 90,
+      "simple_macro_edges": 225,
+      "components": 1,
+      "normal_target": "aaaaaaaaabb"
+    },
+    {
+      "n": 15,
+      "f": 3,
+      "ordinary_golden_words": 714,
+      "active_merged_nodes": 188,
+      "simple_macro_edges": 639,
+      "components": 1,
+      "normal_target": "aaaaaabbb"
+    },
+    {
+      "n": 15,
+      "f": 4,
+      "ordinary_golden_words": 714,
+      "active_merged_nodes": 64,
+      "simple_macro_edges": 186,
+      "components": 1,
+      "normal_target": "aaabbbb"
+    },
+    {
+      "n": 16,
+      "f": 1,
+      "ordinary_golden_words": 1156,
+      "active_merged_nodes": 14,
+      "simple_macro_edges": 19,
+      "components": 1,
+      "normal_target": "aaaaaaaaaaaaab"
+    },
+    {
+      "n": 16,
+      "f": 2,
+      "ordinary_golden_words": 1156,
+      "active_merged_nodes": 110,
+      "simple_macro_edges": 280,
+      "components": 1,
+      "normal_target": "aaaaaaaaaabb"
+    },
+    {
+      "n": 16,
+      "f": 3,
+      "ordinary_golden_words": 1156,
+      "active_merged_nodes": 291,
+      "simple_macro_edges": 1036,
+      "components": 1,
+      "normal_target": "aaaaaaabbb"
+    },
+    {
+      "n": 16,
+      "f": 4,
+      "ordinary_golden_words": 1156,
+      "active_merged_nodes": 161,
+      "simple_macro_edges": 552,
+      "components": 1,
+      "normal_target": "aaaabbbb"
+    },
+    {
+      "n": 16,
+      "f": 5,
+      "ordinary_golden_words": 1156,
+      "active_merged_nodes": 6,
+      "simple_macro_edges": 7,
+      "components": 1,
+      "normal_target": "abbbbb"
+    },
+    {
+      "n": 17,
+      "f": 1,
+      "ordinary_golden_words": 1870,
+      "active_merged_nodes": 14,
+      "simple_macro_edges": 19,
+      "components": 1,
+      "normal_target": "aaaaaaaaaaaaaab"
+    },
+    {
+      "n": 17,
+      "f": 2,
+      "ordinary_golden_words": 1870,
+      "active_merged_nodes": 132,
+      "simple_macro_edges": 341,
+      "components": 1,
+      "normal_target": "aaaaaaaaaaabb"
+    },
+    {
+      "n": 17,
+      "f": 3,
+      "ordinary_golden_words": 1870,
+      "active_merged_nodes": 416,
+      "simple_macro_edges": 1524,
+      "components": 1,
+      "normal_target": "aaaaaaaabbb"
+    },
+    {
+      "n": 17,
+      "f": 4,
+      "ordinary_golden_words": 1870,
+      "active_merged_nodes": 341,
+      "simple_macro_edges": 1320,
+      "components": 1,
+      "normal_target": "aaaaabbbb"
+    },
+    {
+      "n": 17,
+      "f": 5,
+      "ordinary_golden_words": 1870,
+      "active_merged_nodes": 30,
+      "simple_macro_edges": 65,
+      "components": 1,
+      "normal_target": "aabbbbb"
+    },
+    {
+      "n": 18,
+      "f": 1,
+      "ordinary_golden_words": 3025,
+      "active_merged_nodes": 16,
+      "simple_macro_edges": 22,
+      "components": 1,
+      "normal_target": "aaaaaaaaaaaaaaab"
+    },
+    {
+      "n": 18,
+      "f": 2,
+      "ordinary_golden_words": 3025,
+      "active_merged_nodes": 156,
+      "simple_macro_edges": 408,
+      "components": 1,
+      "normal_target": "aaaaaaaaaaaabb"
+    },
+    {
+      "n": 18,
+      "f": 3,
+      "ordinary_golden_words": 3025,
+      "active_merged_nodes": 584,
+      "simple_macro_edges": 2196,
+      "components": 1,
+      "normal_target": "aaaaaaaaabbb"
+    },
+    {
+      "n": 18,
+      "f": 4,
+      "ordinary_golden_words": 3025,
+      "active_merged_nodes": 647,
+      "simple_macro_edges": 2688,
+      "components": 1,
+      "normal_target": "aaaaaabbbb"
+    },
+    {
+      "n": 18,
+      "f": 5,
+      "ordinary_golden_words": 3025,
+      "active_merged_nodes": 118,
+      "simple_macro_edges": 380,
+      "components": 1,
+      "normal_target": "aaabbbbb"
+    }
+  ],
+  "boundary_macro_presentations": {
+    "interior": 13395,
+    "left_end": 1143,
+    "right_end": 3403,
+    "whole_word": 3
+  },
+  "n4_n5_controls": {
+    "4": {
+      "nodes": [
+        "ab",
+        "c"
+      ],
+      "edges": [
+        [
+          "ab",
+          "c"
+        ]
+      ],
+      "target": "ab"
+    },
+    "5": {
+      "nodes": [
+        "aab",
+        "ac"
+      ],
+      "edges": [
+        [
+          "aab",
+          "ac"
+        ]
+      ],
+      "target": "aab"
+    }
+  },
+  "node_universe_sha256": "311a6a8d6cc9646d50ce8a1f2a89384cae842ab97f3b744856833370796e8c55",
+  "simple_edge_universe_sha256": "4e07a133bf76083eed31bd607672a6635972beb1978c6625449e5ed9e85443c6",
+  "source_sha256_lf": "6b31ad197b29e16835e06ce9ddce9dd63c524cdbb0169ec34552fcdf615aebf3"
+}
