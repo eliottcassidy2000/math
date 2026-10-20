@@ -1,0 +1,38 @@
+transfer: 2 K3 + 3 C6 + 3 isolates; T^2 = 8*(I3+J3) + 3*[0]
+supports: |T|=48, |T^2|=72, supp(T^(r+2))=supp(T^r), r=2..14
+closure formulas checked k=3..41: twisted odd=0, even=3*2^(k+1); untwisted odd=2^(k+1)-4, even=2^(k+3)+16
+three-cycle strand closure: odd=2^(k+1)+2, even=2^(k+3)-8
+matching J3: vertices=12, perfect_matchings=8, labelled_Tait_colourings=0
+matching J4: vertices=16, perfect_matchings=34, labelled_Tait_colourings=96
+matching J5: vertices=20, perfect_matchings=32, labelled_Tait_colourings=0
+matching J6: vertices=24, perfect_matchings=118, labelled_Tait_colourings=384
+matching J7: vertices=28, perfect_matchings=128, labelled_Tait_colourings=0
+matching J8: vertices=32, perfect_matchings=418, labelled_Tait_colourings=1536
+matching J9: vertices=36, perfect_matchings=512, labelled_Tait_colourings=0
+matching J10: vertices=40, perfect_matchings=1510, labelled_Tait_colourings=6144
+matching J11: vertices=44, perfect_matchings=2048, labelled_Tait_colourings=0
+matching J12: vertices=48, perfect_matchings=5554, labelled_Tait_colourings=24576
+matching J13: vertices=52, perfect_matchings=8192, labelled_Tait_colourings=0
+matching J14: vertices=56, perfect_matchings=20758, labelled_Tait_colourings=98304
+matching J15: vertices=60, perfect_matchings=32768, labelled_Tait_colourings=0
+minor J5: vertices=20, six-port replacements=1, final triangle contraction=Petersen
+minor J7: vertices=28, six-port replacements=2, final triangle contraction=Petersen
+minor J9: vertices=36, six-port replacements=3, final triangle contraction=Petersen
+minor J11: vertices=44, six-port replacements=4, final triangle contraction=Petersen
+minor J15: vertices=60, six-port replacements=6, final triangle contraction=Petersen
+minor J21: vertices=84, six-port replacements=9, final triangle contraction=Petersen
+minor J51: vertices=204, six-port replacements=24, final triangle contraction=Petersen
+minor J101: vertices=404, six-port replacements=49, final triangle contraction=Petersen
+BlanusaI: marked_edge=(7, 8), signature=(4, 4, 0, 0), three_smoothing_counts=(36, 12, 12)
+BlanusaII: marked_edge=(9, 15), signature=(6, 6, 0, 0), three_smoothing_counts=(54, 18, 18)
+J3 four-poles: m_e={(0, 1): 4, (0, 2): 2, (1, 5): 0, (2, 6): 2}; all (m,m,0,0)
+J5 four-poles: m_e={(0, 1): 12, (0, 2): 10, (1, 5): 4, (2, 6): 6}; all (m,m,0,0)
+J7 four-poles: m_e={(0, 1): 44, (0, 2): 42, (1, 5): 20, (2, 6): 22}; all (m,m,0,0)
+J9 four-poles: m_e={(0, 1): 172, (0, 2): 170, (1, 5): 84, (2, 6): 86}; all (m,m,0,0)
+J11 four-poles: m_e={(0, 1): 684, (0, 2): 682, (1, 5): 340, (2, 6): 342}; all (m,m,0,0)
+J13 four-poles: m_e={(0, 1): 2732, (0, 2): 2730, (1, 5): 1364, (2, 6): 1366}; all (m,m,0,0)
+J15 four-poles: m_e={(0, 1): 10924, (0, 2): 10922, (1, 5): 5460, (2, 6): 5462}; all (m,m,0,0)
+bridged hostile: 10 vertices, 15 edges, signature=(4,4,0,0), no Petersen minor by equal-order/equal-size rigidity
+BlanusaI rooted Petersen minor: authenticated 15 paths, retained branch edge (7, 8), complementary B-pole replacement
+BlanusaII rooted Petersen minor: authenticated 15 paths, retained branch edge (9, 15), complementary B-pole replacement
+PASS: 2832 exact checks

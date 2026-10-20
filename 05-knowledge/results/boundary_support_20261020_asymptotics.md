@@ -13,7 +13,7 @@ interpretation:
     D_n(z) = sum over converse-merged nodes v of z^deg(v),
     M_n = deg D_n = max_v deg(v).
 
-This is the **complement-line multigraph**, not the single-arc-flip graph.
+Throughout n>=3. This is the **complement-line multigraph**, not the single-arc-flip graph.
 Keep parallel lines; count a loop twice in the degree. Write N=binom(n,2),
 m=binom(n-1,2), a_n for ordinary tournament classes and s_n for self-converse
 classes. Its vertex count is V_n=(a_n+s_n)/2, and its total degree is 2^m.

@@ -54,3 +54,19 @@ drafts and reflections found several incompatible meanings. The user
 clarified "the tournament metagraph", which fixes the subject but does not
 by itself identify these symbols. Results must state any selected
 definition explicitly; no unrelated sequence may silently be substituted.
+
+## Final comparison pass
+
+The user clarified the tournament subject; the session then explicitly
+adopted D_n(z)=sum_v z^deg(v), M_n=deg D_n for the converse-merged line
+multigraph. The distinction is preserved in every report.
+
+The six-port transfer yielded a genuine minor reduction; the eight-port
+matching bank yielded a 91-dimensional measurement quotient but no general
+minor theorem. The tournament cube at order four supplies a literal common
+eight-state carrier. Its quotient loses the actual matching even when
+coloured degrees and fibres survive. The twin operation turns the bridge
+question into a smaller exact blue-graph problem. Finally, the transfer
+block eigenvalues give primitive 345-rooted triples, while its support
+zeros preserve the separate isosceles geometry. The limits and predicates
+of those two arithmetic charts remain distinct.
