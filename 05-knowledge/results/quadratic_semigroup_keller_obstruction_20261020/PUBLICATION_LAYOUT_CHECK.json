@@ -1,0 +1,27 @@
+{
+  "normal_optimized_identical": true,
+  "proof_scope": "all odd m>=3; constant nonzero leading coefficient; no prime-m or saturation assumption",
+  "relative_links": [
+    {
+      "exists": true,
+      "file": "README.md",
+      "target": "QUADRATIC_SEMIGROUP_KELLER_OBSTRUCTION.md"
+    },
+    {
+      "exists": true,
+      "file": "README.md",
+      "target": "PRIMARY_SOURCES.md"
+    },
+    {
+      "exists": true,
+      "file": "README.md",
+      "target": "DEPENDENCIES.md"
+    },
+    {
+      "exists": true,
+      "file": "README.md",
+      "target": "review/AUDIT.md"
+    }
+  ],
+  "status": "PASS"
+}
