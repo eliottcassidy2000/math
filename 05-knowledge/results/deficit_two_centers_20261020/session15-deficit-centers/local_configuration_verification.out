@@ -1,0 +1,3 @@
+full_32768 {'nonstrong': 10448, 'strong': 22320, 'witness_indegree_3': 19494, 'witness_indegree_4': 2826}
+fixed_s4_512 {'nonstrong': 62, 'strong': 450, 'witness_indegree_3': 418, 'witness_indegree_4': 32}
+certificate_sha256 217e34aa3d62e8c24aee6194fe331a8fa954642d05061e527f3ae7166ccb6b27

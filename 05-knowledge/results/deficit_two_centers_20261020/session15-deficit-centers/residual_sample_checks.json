@@ -1,0 +1,90 @@
+[
+  {
+    "n": 10,
+    "q": 2,
+    "low": null,
+    "tested": 128,
+    "frame_invariants": true,
+    "independent_prefix_predicate": true
+  },
+  {
+    "n": 12,
+    "q": 4,
+    "low": null,
+    "tested": 2048,
+    "frame_invariants": true,
+    "independent_prefix_predicate": true
+  },
+  {
+    "n": 14,
+    "q": 2,
+    "low": null,
+    "tested": 2048,
+    "frame_invariants": true,
+    "independent_prefix_predicate": true
+  },
+  {
+    "n": 15,
+    "q": 3,
+    "low": null,
+    "tested": 4096,
+    "frame_invariants": true,
+    "independent_prefix_predicate": true
+  },
+  {
+    "n": 20,
+    "q": 4,
+    "low": null,
+    "tested": 514,
+    "frame_invariants": true,
+    "independent_prefix_predicate": true
+  },
+  {
+    "n": 21,
+    "q": 3,
+    "low": 0,
+    "tested": 64,
+    "frame_invariants": true,
+    "independent_prefix_predicate": true
+  },
+  {
+    "n": 21,
+    "q": 3,
+    "low": 2,
+    "tested": 64,
+    "frame_invariants": true,
+    "independent_prefix_predicate": true
+  },
+  {
+    "n": 28,
+    "q": 4,
+    "low": 0,
+    "tested": 4096,
+    "frame_invariants": true,
+    "independent_prefix_predicate": true
+  },
+  {
+    "n": 28,
+    "q": 4,
+    "low": 1,
+    "tested": 4096,
+    "frame_invariants": true,
+    "independent_prefix_predicate": true
+  },
+  {
+    "n": 28,
+    "q": 4,
+    "low": 2,
+    "tested": 4096,
+    "frame_invariants": true,
+    "independent_prefix_predicate": true
+  },
+  {
+    "n": 28,
+    "q": 4,
+    "low": 3,
+    "tested": 4096,
+    "frame_invariants": true,
+    "independent_prefix_predicate": true
+  }
+]

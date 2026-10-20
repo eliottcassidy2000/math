@@ -1,0 +1,3 @@
+all_labelled_six {'nonstrong': 10448, 'strong': 22320, 'has_four_exits': 10800}
+fixed_s4_extensions {'nonstrong': 62, 'strong': 450, 'has_four_exits': 190}
+all checks passed

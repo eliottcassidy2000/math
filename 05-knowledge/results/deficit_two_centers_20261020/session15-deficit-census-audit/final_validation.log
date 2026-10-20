@@ -1,0 +1,32 @@
+{
+  "verdict": "APPROVED",
+  "total_presentations": 2121984,
+  "runs": {
+    "independent_full_scan.jsonl": {
+      "families": 11,
+      "presentations": 2121984,
+      "survivors": 0
+    },
+    "producer_certificate_replay.jsonl": {
+      "families": 11,
+      "presentations": 2121984,
+      "survivors": 0
+    },
+    "sanitized_full_scan.jsonl": {
+      "families": 11,
+      "presentations": 2121984,
+      "survivors": 0
+    }
+  },
+  "producer_plaintext_descriptors_equal_to_json": true,
+  "producer_replay_streams_equal": true,
+  "all_sanitized_streams_equal": true,
+  "address_sanitizer": "passed all presentations",
+  "undefined_behavior_sanitizer": "passed all presentations",
+  "leak_sanitizer": "disabled because ptrace environment is unsupported",
+  "independent_compressed_certificates": 11,
+  "python_normal_and_optimized_reconstructions_equal": true
+}
+AUDIT.md 9b332af98fc3272bfdad21bd53218ba3bbb746f0da92aa21d4fbb814285037f8
+HAND_SUPPLEMENT_AUDIT.md 87f0df72451af4f184dab26251bcd431e3a2492ea3afde3841aa399cfd683194
+SHA256SUMS d97973dadcfc87602ae0981c8b3f9e99e7ef3561435fdbd0d70d80058362cb1f

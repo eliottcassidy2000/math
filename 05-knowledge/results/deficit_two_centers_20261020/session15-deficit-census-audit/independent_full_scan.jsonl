@@ -1,0 +1,11 @@
+{"n":10,"q":2,"low":-1,"free":7,"checked":128,"survivors":0,"mode":"independent_binary_search","last_subset_position":4}
+{"n":12,"q":4,"low":-1,"free":11,"checked":2048,"survivors":0,"mode":"independent_binary_search","last_subset_position":27}
+{"n":14,"q":2,"low":-1,"free":11,"checked":2048,"survivors":0,"mode":"independent_binary_search","last_subset_position":6}
+{"n":15,"q":3,"low":-1,"free":12,"checked":4096,"survivors":0,"mode":"independent_binary_search","last_subset_position":23}
+{"n":20,"q":4,"low":-1,"free":21,"checked":2097152,"survivors":0,"mode":"independent_binary_search","last_subset_position":41}
+{"n":21,"q":3,"low":0,"free":6,"checked":64,"survivors":0,"mode":"independent_binary_search","last_subset_position":2}
+{"n":21,"q":3,"low":2,"free":6,"checked":64,"survivors":0,"mode":"independent_binary_search","last_subset_position":35}
+{"n":28,"q":4,"low":0,"free":12,"checked":4096,"survivors":0,"mode":"independent_binary_search","last_subset_position":1}
+{"n":28,"q":4,"low":1,"free":12,"checked":4096,"survivors":0,"mode":"independent_binary_search","last_subset_position":1}
+{"n":28,"q":4,"low":2,"free":12,"checked":4096,"survivors":0,"mode":"independent_binary_search","last_subset_position":50}
+{"n":28,"q":4,"low":3,"free":12,"checked":4096,"survivors":0,"mode":"independent_binary_search","last_subset_position":25}

@@ -1,0 +1,95 @@
+{
+  "algebra_checked_through": 500,
+  "total_denominator_degree": 9,
+  "total_gcd": 1,
+  "mixed_denominator_degree": 6,
+  "homogeneous_total_onset": 8,
+  "homogeneous_mixed_onset": 5,
+  "coefficients_0_through_30": [
+    0,
+    0,
+    0,
+    0,
+    2,
+    1,
+    3,
+    3,
+    6,
+    7,
+    14,
+    17,
+    30,
+    39,
+    64,
+    87,
+    138,
+    192,
+    297,
+    420,
+    638,
+    913,
+    1371,
+    1977,
+    2946,
+    4270,
+    6329,
+    9206,
+    13596,
+    19824,
+    29206
+  ],
+  "q2_boundaries": [
+    {
+      "n": 10,
+      "total": 128,
+      "standard_reflection_anti": 32,
+      "standard_reflection_not_anti": 96,
+      "nonanti_control": {
+        "binary_assignment": 1,
+        "outneighbors": [
+          402,
+          964,
+          585,
+          787,
+          294,
+          79,
+          153,
+          316,
+          612,
+          241
+        ]
+      }
+    },
+    {
+      "n": 14,
+      "total": 2048,
+      "standard_reflection_anti": 256,
+      "standard_reflection_not_anti": 1792,
+      "nonanti_control": {
+        "binary_assignment": 1,
+        "outneighbors": [
+          7746,
+          16132,
+          14601,
+          15379,
+          9255,
+          12367,
+          4254,
+          319,
+          633,
+          1276,
+          2532,
+          5104,
+          10128,
+          4033
+        ]
+      }
+    }
+  ],
+  "S4": {
+    "automorphisms": 1,
+    "hamilton_paths": 5,
+    "blue_paths": 3,
+    "deficit": 2
+  }
+}

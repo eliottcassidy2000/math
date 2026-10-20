@@ -1,0 +1,23 @@
+{
+  "explicit_balanced_exits_checked": 4,
+  "five_core_complete_counts": {
+    "strong": 544,
+    "exit_or_entry": 480,
+    "C5": 24,
+    "Q5": 40
+  },
+  "all_external_vertex_extensions": {
+    "C5": {
+      "exit": 31,
+      "entry": 31,
+      "both": 30,
+      "neither": 0
+    },
+    "Q5": {
+      "exit": 31,
+      "entry": 31,
+      "both": 30,
+      "neither": 0
+    }
+  }
+}

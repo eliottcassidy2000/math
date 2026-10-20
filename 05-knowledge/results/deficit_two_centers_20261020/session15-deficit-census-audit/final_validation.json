@@ -1,0 +1,29 @@
+{
+  "verdict": "APPROVED",
+  "total_presentations": 2121984,
+  "runs": {
+    "independent_full_scan.jsonl": {
+      "families": 11,
+      "presentations": 2121984,
+      "survivors": 0
+    },
+    "producer_certificate_replay.jsonl": {
+      "families": 11,
+      "presentations": 2121984,
+      "survivors": 0
+    },
+    "sanitized_full_scan.jsonl": {
+      "families": 11,
+      "presentations": 2121984,
+      "survivors": 0
+    }
+  },
+  "producer_plaintext_descriptors_equal_to_json": true,
+  "producer_replay_streams_equal": true,
+  "all_sanitized_streams_equal": true,
+  "address_sanitizer": "passed all presentations",
+  "undefined_behavior_sanitizer": "passed all presentations",
+  "leak_sanitizer": "disabled because ptrace environment is unsupported",
+  "independent_compressed_certificates": 11,
+  "python_normal_and_optimized_reconstructions_equal": true
+}

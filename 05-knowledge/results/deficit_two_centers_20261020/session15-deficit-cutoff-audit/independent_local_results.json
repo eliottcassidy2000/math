@@ -1,0 +1,165 @@
+{
+  "all_labelled_six": {
+    "canonical_witness_sha256": "68d91464d449a96f8bac0072c5c52781d018190ab4493f28affcfa5388ed49f8",
+    "cases": 32768,
+    "counts": {
+      "has_four_exits": 10800,
+      "nonstrong": 10448,
+      "strong": 22320
+    },
+    "first_witness_records": [
+      [
+        16,
+        [
+          0,
+          5,
+          3,
+          2
+        ],
+        1,
+        3
+      ],
+      [
+        18,
+        [
+          0,
+          5,
+          3,
+          1
+        ],
+        2,
+        3
+      ],
+      [
+        20,
+        [
+          0,
+          5,
+          4,
+          1
+        ],
+        3,
+        3
+      ],
+      [
+        22,
+        [
+          0,
+          5,
+          3,
+          1
+        ],
+        2,
+        3
+      ],
+      [
+        24,
+        [
+          0,
+          4,
+          3,
+          2
+        ],
+        1,
+        3
+      ]
+    ],
+    "witness_count_histogram": {
+      "3": 3120,
+      "4": 9360,
+      "5": 8640,
+      "6": 1200
+    }
+  },
+  "fixed_s4_extensions": {
+    "canonical_witness_sha256": "96dcc7f113c075653c370a5d87b9cbbde2d891b49315a679ca0ff27ee59b18c6",
+    "cases": 512,
+    "counts": {
+      "has_four_exits": 190,
+      "nonstrong": 62,
+      "strong": 450
+    },
+    "first_witness_records": [
+      [
+        2,
+        [
+          0,
+          5,
+          1,
+          3
+        ],
+        2,
+        3
+      ],
+      [
+        3,
+        [
+          0,
+          4,
+          1,
+          3
+        ],
+        2,
+        3
+      ],
+      [
+        6,
+        [
+          0,
+          1,
+          4,
+          3
+        ],
+        2,
+        3
+      ],
+      [
+        7,
+        [
+          0,
+          1,
+          4,
+          3
+        ],
+        2,
+        3
+      ],
+      [
+        8,
+        [
+          0,
+          1,
+          5,
+          3
+        ],
+        2,
+        3
+      ]
+    ],
+    "witness_count_histogram": {
+      "3": 48,
+      "4": 188,
+      "5": 182,
+      "6": 32
+    }
+  },
+  "implementation_sha256": "af1c6953e53b332bfe72235eb0fe98009f8e804270ea4c1c780859c7b86a7995",
+  "regular_connectivity_controls": {
+    "1": {
+      "safe_deletions": 1,
+      "tournaments": 1
+    },
+    "3": {
+      "safe_deletions": 2,
+      "tournaments": 2
+    },
+    "5": {
+      "safe_deletions": 144,
+      "tournaments": 24
+    },
+    "7": {
+      "safe_deletions": 232,
+      "tournaments": 8
+    }
+  }
+}

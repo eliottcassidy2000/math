@@ -1,0 +1,83 @@
+{
+  "half_support": {
+    "even_order_permutations_checked": 15
+  },
+  "sharp_q2_connectivity": [
+    {
+      "m": 3,
+      "n": 6,
+      "connectivity": 2,
+      "safe_deletions_checked": 7,
+      "separator": [
+        1,
+        3
+      ]
+    },
+    {
+      "m": 5,
+      "n": 10,
+      "connectivity": 3,
+      "safe_deletions_checked": 56,
+      "separator": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "m": 7,
+      "n": 14,
+      "connectivity": 4,
+      "safe_deletions_checked": 470,
+      "separator": [
+        1,
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "m": 9,
+      "n": 18,
+      "connectivity": 5,
+      "safe_deletions_checked": 4048,
+      "separator": [
+        1,
+        2,
+        3,
+        4,
+        9
+      ]
+    }
+  ],
+  "overlap_c5": {
+    "H": 15,
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "Q": [
+      0,
+      2,
+      3,
+      4,
+      1
+    ],
+    "relative_order": 4,
+    "support": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "reflected_support": [
+      0,
+      1,
+      2,
+      3
+    ]
+  }
+}
