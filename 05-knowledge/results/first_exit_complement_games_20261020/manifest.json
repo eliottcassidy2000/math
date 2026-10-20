@@ -1,0 +1,32 @@
+{
+  "base_commit": "7f8df95a96ea6ed01d2eb29a15dd347a38ad84f5",
+  "dependencies": {
+    "01-canon/theorems/THM-2646-braid-three-modular-central-pullback-and-full-twist-knot-fibre.md": "cd30c5951a3feee95573ee451583477445410bc5f7319fb097b853fd80bf1dcc",
+    "01-canon/theorems/THM-4512-coefficient-descent-classes-one-member.md": "1418a73b801f7fd26f76cd4c52e0bc7c63ad24ccbd1b9fc4c19b7b553918ac55",
+    "01-canon/theorems/THM-4558-residue-colourings-of-field-planes-the-heegner-tower-is-at-most-four-chromatic.md": "db90449c5c8f8f95d1f96f2a1873f06581158f318d65d227171556811479ed33",
+    "05-knowledge/results/adaptive_budgets_smooth_interfaces_20261020/CONNECTIONS.md": "5e280163e69c838e17663a6bebcef3df4d4f7e57e6c01301cc900602a7359b62",
+    "05-knowledge/results/adaptive_budgets_smooth_interfaces_20261020/README.md": "d8dc5fd23506c07ce6a058ee0cdb43569d80b4bc0d4f81cac7aa890b868b873d",
+    "05-knowledge/results/boundary_palette_compression_20261011.md": "c7318387c1c27acc2b7c17962405210bdc8cf0cd01b70982518d1268e2c2b7f7",
+    "05-knowledge/results/collatz_boundary_compiler_20261004.md": "210ad495d0f06738240994949731d9475e8710098bbfd1737dc0b7b7f8f135c9",
+    "05-knowledge/results/collatz_two_swap_neighbor_disjoint_exclusion_20261020/NEIGHBOR_DISJOINT_EXCLUSION.md": "173b29299e9ad356037112c65fa903e8a56fad05a643d0afb53cb87ce7a94a31",
+    "05-knowledge/results/defect_boundary_20261020/web.md": "48b9b1ea886de15e4fcc9ab84747c7a0dc101abb69e6f38ef7d3923a4d0fd06d",
+    "05-knowledge/results/spectrum_basins_20261020e/README.md": "a8b722dd97f364514512abddaa6a1bbb26f62ae1c27a2178e0e1e217e6dd1403",
+    "05-knowledge/results/spectrum_basins_20261020e/arithmetic_interaction.md": "cfbb8ef8306c9c359dd4ce0f53604dc28babb5742c4adc56adacb565ca4609db"
+  },
+  "files": {
+    "AUDIT.md": "5e266716ece2a0ad1d1a6686e38c230b602e2e06d1366595295a589001d341dc",
+    "INHERITANCE.md": "ad56ac9431b02ebd923b167f513769b2af93995a3937fad988198d87b1f333a5",
+    "README.md": "c79e74a1c0853abfd093303d9a755b9636f48939bbafa1edb9daafb92da7c220",
+    "charge_scout.cpp": "eabe860818a497f569a2b00b53ec3fa66dcf05cbab74a96ef2abc0cd90ef4a76",
+    "coarse-charge.json": "b785a96693606b81366d2989e37c8903a7cec8e7050389fee22fa101c4a44972",
+    "coarse_charge_audit.py": "6f8d3885a826f57423614cfb0406d3f23700b62ed0233748a5c804ba75d4947a",
+    "geometry-games.json": "65f30e291bc0991d7f878f5ddae1c4d0140ac644eb317252970a2411f3fe08cb",
+    "geometry_games.py": "bde5fe5124bfcc58973673b91957c953c21ec09175d6191714cc3c22a7b2c936",
+    "numerical-scout.txt": "e06fc45dd625f19d83db3102f26338f3907831cdeca2e38d3b733656fecfe68d",
+    "separate-controls.json": "912a51b9e4f25d10a07e931631bfd3cc5615e4cb70a1be2e4507fbcb586af68c",
+    "separate_controls.py": "9926c35f5567b0a15d41a9c0709d328ab4e891ddbc3e231dfd6dd2bf4c8dd28f",
+    "symbolic-charge.json": "c2da12eb0c7cd81c267d67438d4ba913f4945b5ab04eb844615ccf8a868b02df",
+    "symbolic_charge.py": "358b73fbee5feb8a55f303a141d8bf3a3d559712866d7ed708953cc34dcc9309"
+  },
+  "status": "same-agent review; exact receipts plus separately marked numerical scout"
+}

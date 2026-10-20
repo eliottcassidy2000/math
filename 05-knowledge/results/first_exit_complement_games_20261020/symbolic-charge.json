@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "automatic_exponent_tails": 1166058,
+    "nonempty_children": 3066535,
+    "paid_exit_cylinders": 8,
+    "prefixes": 1166058
+  },
+  "depth": 18,
+  "failures": [],
+  "scope": "all positive odd sources whose first strict descent has at most depth odd steps",
+  "status": "FINITE-EXACT symbolic cylinder certificate",
+  "unresolved_frontier": {
+    "bounded_cylinders": 0,
+    "cylinders": 1900470,
+    "least_source": 27
+  }
+}

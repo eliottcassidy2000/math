@@ -1,0 +1,32 @@
+{
+  "depth": 18,
+  "exceptions": [],
+  "exit_cylinders_by_length": [
+    1,
+    1,
+    2,
+    3,
+    7,
+    12,
+    30,
+    85,
+    173,
+    476,
+    961,
+    2652,
+    8045,
+    17637,
+    51033,
+    108950,
+    312455,
+    663535
+  ],
+  "minimum_integer_payment_margin": 4,
+  "sharp_threshold_check_m_1_to_64": {
+    "K": 8,
+    "m": 5,
+    "ratio": "161/256"
+  },
+  "status": "FINITE-EXACT separate coarse-cylinder checker",
+  "total_exit_cylinders": 1166058
+}
