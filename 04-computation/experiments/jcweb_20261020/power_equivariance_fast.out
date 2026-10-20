@@ -1,0 +1,10 @@
+p = 5 (1 mod 4): Mult types T 1 E 1 | Gamma-orbits T 1, E 1, Gamma-even E 1 (Gamma-even sets 1 of 1 even) | Burnside prediction 1 | T = Gamma-even OK; all even are Gamma-even
+p = 7 (3 mod 4): Mult types T 2 E 2 | Gamma-orbits T 2, E 2, Gamma-even E 2 (Gamma-even sets 4 of 4 even) | Burnside prediction 2 | T = Gamma-even OK; all even are Gamma-even
+p = 11 (3 mod 4): Mult types T 4 E 4 | Gamma-orbits T 3, E 3, Gamma-even E 3 (Gamma-even sets 16 of 16 even) | Burnside prediction 3 | T = Gamma-even OK; all even are Gamma-even
+p = 13 (1 mod 4): Mult types T 6 E 6 | Gamma-orbits T 4, E 6, Gamma-even E 4 (Gamma-even sets 16 of 28 even) | Burnside prediction 4 | T = Gamma-even OK; E has Gamma-odd members
+p = 17 (1 mod 4): Mult types T 16 E 16 | Gamma-orbits T 3, E 10, Gamma-even E 3 (Gamma-even sets 25 of 117 even) | Burnside prediction 3 | T = Gamma-even OK; E has Gamma-odd members
+p = 19 (3 mod 4): Mult types T 30 E 30 | Gamma-orbits T 11, E 11, Gamma-even E 11 (Gamma-even sets 256 of 256 even) | Burnside prediction 11 | T = Gamma-even OK; all even are Gamma-even
+p = 23 (3 mod 4): Mult types T 94 E 94 | Gamma-orbits T 15, E 15, Gamma-even E 15 (Gamma-even sets 1024 of 1024 even) | Burnside prediction 15 | T = Gamma-even OK; all even are Gamma-even
+p = 29 (1 mod 4): Mult types T 586 E 586 | Gamma-orbits T 65, E 125, Gamma-even E 65 (Gamma-even sets 4096 of 8128 even) | Burnside prediction 65 | T = Gamma-even OK; E has Gamma-odd members
+p = 31 (3 mod 4): Mult types T 1096 E 1096 | Gamma-orbits T 184, E 184, Gamma-even E 184 (Gamma-even sets 16384 of 16384 even) | Burnside prediction 184 | T = Gamma-even OK; all even are Gamma-even
+p = 37 (1 mod 4): Mult types T 7286 E 7286 | Gamma-orbits T 673, E 1335, Gamma-even E 673 (Gamma-even sets 65536 of 130816 even) | Burnside prediction 673 | T = Gamma-even OK; E has Gamma-odd members

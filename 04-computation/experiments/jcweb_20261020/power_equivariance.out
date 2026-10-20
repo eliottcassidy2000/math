@@ -1,0 +1,7 @@
+p = 5: multiplier types T 1 E 1 | Gamma-orbits T 1 E 1 EQUAL | Hall (Gamma): matched 1 of 1
+p = 7: multiplier types T 2 E 2 | Gamma-orbits T 2 E 2 EQUAL | Hall (Gamma): matched 2 of 2
+p = 11: multiplier types T 4 E 4 | Gamma-orbits T 3 E 3 EQUAL | Hall (Gamma): matched 3 of 3
+p = 13: multiplier types T 6 E 6 | Gamma-orbits T 4 E 6 DIFFER | Hall (Gamma): matched 4 of 4  <-- no Gamma-equivariant type bijection
+p = 17: multiplier types T 16 E 16 | Gamma-orbits T 3 E 10 DIFFER | Hall (Gamma): matched 3 of 3  <-- no Gamma-equivariant type bijection
+p = 19: multiplier types T 30 E 30 | Gamma-orbits T 11 E 11 EQUAL | Hall (Gamma): matched 11 of 11
+p = 23: multiplier types T 94 E 94 | Gamma-orbits T 15 E 15 EQUAL | Hall (Gamma): matched 15 of 15

@@ -1,0 +1,20 @@
+(A) det JF = -2
+    equivariance (1,-1,-2) -> (-2,-1,1): [True, True, True]
+    collision: [(-1/4, 0, 0), (-1/4, 0, 0), (-1/4, 0, 0)]
+    quotient map Fbar(v,t) = (F2 F3, F1 F3^2):
+      v' = -(t + 3*v - 2)*(3*t*v**2 + 6*t*v + 3*t + 9*v**3 + 12*v**2 + v)
+      t' = (v + 1)*(t + 3*v - 2)**2*(t*v**2 + 2*t*v + t + 3*v**3 + 4*v**2)
+    det J Fbar = 2*(t + 3*v - 2)**2
+    descended collision: Fbar at (v,t) of the three points: [(0, 0), (0, 0), (0, 0)]  (source (v,t): [(0, 0), (-3/2, 13/2), (-3/2, 13/2)] )
+    degrees of Fbar components in (v,t): [4, 6]
+    Fbar^{-1}(0,0) = [{t: 2 - 3*v}, {t: 0, v: 0}]
+(B) MY field: N = JX + I nilpotent? N^3 = True ; eigenvalues of JX: {-1: 3}
+    equivariance weights (1,2,-1): [True, True, True]
+    Keller companion H = x + X + x: det JH = 1
+    H preserves d = x + yz: True ; inverse: x = x' - z d^2, y = y' + d^2 with d = x' + z y'
+    H on the quotient (a,b) = (xz, yz^2): (a**2 + 2*a*b + a + b**2, -a**2 - 2*a*b - b**2 + b)
+(C) planar hyperbolic weights: search for Keller pairs F = (x^i y^j f(x^b y^a), x^k y^l g(x^b y^a)) with constant Jacobian
+    weights (1,-1): nonlinear weighted-homogeneous Keller pairs found: 0
+    weights (1,-2): nonlinear weighted-homogeneous Keller pairs found: 0
+    weights (2,-3): nonlinear weighted-homogeneous Keller pairs found: 0
+    weights (1,-3): nonlinear weighted-homogeneous Keller pairs found: 0

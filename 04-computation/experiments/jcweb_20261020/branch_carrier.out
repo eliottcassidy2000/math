@@ -1,0 +1,42 @@
+
+=== n = 4: classes 2, even-Aut classes 2 ===
+  |Aut|    4 Syl2  4  inv-classes 1  2-elt-classes 3  1-rho 0.7500  sum rho(C(x)) 0.7500  tau-fixed(C,g) [True]
+  |Aut|   12 Syl2  4  inv-classes 1  2-elt-classes 1  1-rho 0.2500  sum rho(C(x)) 0.2500  tau-fixed(C,g) [True]
+  N_lev(4) = 1.0000; decorated pairs (C, involution class): 2, of which tau-fixed 2
+
+=== n = 6: classes 6, even-Aut classes 4 ===
+  |Aut|    2 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    6 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    6 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|   18 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  N_lev(6) = 2.0000; decorated pairs (C, involution class): 4, of which tau-fixed 0
+
+=== n = 8: classes 79, even-Aut classes 27 ===
+  |Aut|    2 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    2 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    2 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    2 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    2 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    2 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    2 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    2 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    2 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    2 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    2 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    2 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [True]
+  |Aut|    2 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [True]
+  |Aut|    2 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [True]
+  |Aut|    4 Syl2  4  inv-classes 1  2-elt-classes 3  1-rho 0.7500  sum rho(C(x)) 0.7500  tau-fixed(C,g) [True]
+  |Aut|    4 Syl2  4  inv-classes 1  2-elt-classes 3  1-rho 0.7500  sum rho(C(x)) 0.7500  tau-fixed(C,g) [True]
+  |Aut|    4 Syl2  4  inv-classes 3  2-elt-classes 3  1-rho 0.7500  sum rho(C(x)) 0.7500  tau-fixed(C,g) [True, False, True]
+  |Aut|    6 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    6 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    6 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|    8 Syl2  8  inv-classes 1  2-elt-classes 7  1-rho 0.8750  sum rho(C(x)) 0.8750  tau-fixed(C,g) [False]
+  |Aut|    8 Syl2  8  inv-classes 1  2-elt-classes 7  1-rho 0.8750  sum rho(C(x)) 0.8750  tau-fixed(C,g) [False]
+  |Aut|    8 Syl2  8  inv-classes 3  2-elt-classes 4  1-rho 0.8750  sum rho(C(x)) 0.8750  tau-fixed(C,g) [True, False, True]
+  |Aut|   12 Syl2  4  inv-classes 1  2-elt-classes 1  1-rho 0.2500  sum rho(C(x)) 0.2500  tau-fixed(C,g) [False]
+  |Aut|   18 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|   18 Syl2  2  inv-classes 1  2-elt-classes 1  1-rho 0.5000  sum rho(C(x)) 0.5000  tau-fixed(C,g) [False]
+  |Aut|  168 Syl2  8  inv-classes 1  2-elt-classes 2  1-rho 0.3750  sum rho(C(x)) 0.3750  tau-fixed(C,g) [False]
+  N_lev(8) = 15.0000; decorated pairs (C, involution class): 31, of which tau-fixed 9

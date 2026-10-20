@@ -1,0 +1,4 @@
+det JN = 1
+equivariant for weights (3,1,-1): [True, True, True]
+w z^2 = x z^3 + (y z)^2: True
+Nagata on the quotient (a, b) = (yz, xz^3): (a**2 + a + b, -a**4 - 2*a**3 - 2*a**2*b - 2*a*b - b**2 + b)

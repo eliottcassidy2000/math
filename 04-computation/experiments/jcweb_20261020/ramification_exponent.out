@@ -1,0 +1,8 @@
+source weights (1,-1,-2), target weights (1,-1,-2): identity holds = True
+source weights (1,-1,-2), target weights (1,-2,-1): identity holds = True
+source weights (1,-1,-1), target weights (1,-1,-1): identity holds = True
+source weights (1,-2,-3), target weights (1,-2,-3): identity holds = True
+source weights (1,-1,-1,-1), target weights (1,-1,-1,-1): identity holds = True
+source weights (1,-1), target weights (1,-1): identity holds = True
+source weights (1,-2), target weights (1,-2): identity holds = True
+source weights (1,-1,-2), target weights (1,-1,-1): identity holds = True
