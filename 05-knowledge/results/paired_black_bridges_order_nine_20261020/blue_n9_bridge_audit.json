@@ -1,0 +1,1354 @@
+{
+  "n": 9,
+  "edge_total": 32768,
+  "support_pairs": 31832,
+  "components": 94393,
+  "bridge_count": 24,
+  "leaf_bridges": 24,
+  "bridges": [
+    {
+      "ends": [
+        0,
+        97118
+      ],
+      "tiling": 0,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 0,
+          "representative": 0,
+          "mass": 1,
+          "blue": 1,
+          "H": 1,
+          "aut": 1,
+          "SC": true,
+          "strong": false,
+          "degree": 0,
+          "c3": 0,
+          "scores": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "node": 97118,
+          "representative": 20160125,
+          "mass": 105,
+          "blue": 9,
+          "H": 105,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 48,
+          "c3": 7,
+          "scores": [
+            1,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        1,
+        94761
+      ],
+      "tiling": 1,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 1,
+          "representative": 1,
+          "mass": 129,
+          "blue": 1,
+          "H": 129,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 64,
+          "c3": 7,
+          "scores": [
+            1,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            7
+          ]
+        },
+        {
+          "node": 94761,
+          "representative": 1187573,
+          "mass": 411,
+          "blue": 9,
+          "H": 411,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 201,
+          "c3": 12,
+          "scores": [
+            1,
+            2,
+            2,
+            3,
+            4,
+            5,
+            6,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        187,
+        31311
+      ],
+      "tiling": 256,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 187,
+          "representative": 256,
+          "mass": 33,
+          "blue": 1,
+          "H": 33,
+          "aut": 1,
+          "SC": true,
+          "strong": false,
+          "degree": 16,
+          "c3": 5,
+          "scores": [
+            0,
+            2,
+            2,
+            3,
+            4,
+            5,
+            6,
+            6,
+            8
+          ]
+        },
+        {
+          "node": 31311,
+          "representative": 73194,
+          "mass": 351,
+          "blue": 9,
+          "H": 351,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 171,
+          "c3": 12,
+          "scores": [
+            1,
+            2,
+            2,
+            3,
+            4,
+            5,
+            6,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        188,
+        64476
+      ],
+      "tiling": 257,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 188,
+          "representative": 257,
+          "mass": 645,
+          "blue": 1,
+          "H": 645,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 322,
+          "c3": 12,
+          "scores": [
+            1,
+            2,
+            2,
+            3,
+            4,
+            5,
+            6,
+            6,
+            7
+          ]
+        },
+        {
+          "node": 64476,
+          "representative": 335338,
+          "mass": 1097,
+          "blue": 9,
+          "H": 1097,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 544,
+          "c3": 17,
+          "scores": [
+            2,
+            2,
+            2,
+            3,
+            4,
+            5,
+            6,
+            6,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        3280,
+        96534
+      ],
+      "tiling": 2129920,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 3280,
+          "representative": 4717,
+          "mass": 191,
+          "blue": 9,
+          "H": 191,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 91,
+          "c3": 11,
+          "scores": [
+            1,
+            1,
+            3,
+            4,
+            4,
+            4,
+            5,
+            7,
+            7
+          ]
+        },
+        {
+          "node": 96534,
+          "representative": 2129920,
+          "mass": 5,
+          "blue": 1,
+          "H": 15,
+          "aut": 3,
+          "SC": true,
+          "strong": false,
+          "degree": 2,
+          "c3": 4,
+          "scores": [
+            0,
+            1,
+            3,
+            4,
+            4,
+            4,
+            5,
+            7,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        4329,
+        97143
+      ],
+      "tiling": 132120511,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 4329,
+          "representative": 7281,
+          "mass": 129,
+          "blue": 9,
+          "H": 129,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 60,
+          "c3": 8,
+          "scores": [
+            1,
+            1,
+            2,
+            4,
+            4,
+            4,
+            6,
+            7,
+            7
+          ]
+        },
+        {
+          "node": 97143,
+          "representative": 136314944,
+          "mass": 1,
+          "blue": 1,
+          "H": 27,
+          "aut": 27,
+          "SC": true,
+          "strong": false,
+          "degree": 0,
+          "c3": 3,
+          "scores": [
+            1,
+            1,
+            1,
+            4,
+            4,
+            4,
+            7,
+            7,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        4517,
+        47296
+      ],
+      "tiling": 32769,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 4517,
+          "representative": 8162,
+          "mass": 345,
+          "blue": 1,
+          "H": 345,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 172,
+          "c3": 10,
+          "scores": [
+            1,
+            1,
+            3,
+            3,
+            4,
+            5,
+            5,
+            7,
+            7
+          ]
+        },
+        {
+          "node": 47296,
+          "representative": 174610,
+          "mass": 685,
+          "blue": 9,
+          "H": 685,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 338,
+          "c3": 15,
+          "scores": [
+            1,
+            2,
+            3,
+            3,
+            4,
+            5,
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        4522,
+        85471
+      ],
+      "tiling": 2097153,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 4522,
+          "representative": 8180,
+          "mass": 65,
+          "blue": 1,
+          "H": 195,
+          "aut": 3,
+          "SC": true,
+          "strong": true,
+          "degree": 32,
+          "c3": 8,
+          "scores": [
+            1,
+            1,
+            2,
+            4,
+            4,
+            4,
+            6,
+            7,
+            7
+          ]
+        },
+        {
+          "node": 85471,
+          "representative": 663415,
+          "mass": 479,
+          "blue": 9,
+          "H": 479,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 235,
+          "c3": 13,
+          "scores": [
+            1,
+            2,
+            2,
+            4,
+            4,
+            4,
+            6,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        7294,
+        96536
+      ],
+      "tiling": 2130176,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 7294,
+          "representative": 12909,
+          "mass": 589,
+          "blue": 9,
+          "H": 589,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 290,
+          "c3": 16,
+          "scores": [
+            1,
+            2,
+            3,
+            4,
+            4,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "node": 96536,
+          "representative": 2130176,
+          "mass": 41,
+          "blue": 1,
+          "H": 123,
+          "aut": 3,
+          "SC": true,
+          "strong": false,
+          "degree": 20,
+          "c3": 9,
+          "scores": [
+            0,
+            2,
+            3,
+            4,
+            4,
+            4,
+            5,
+            6,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        17374,
+        43137
+      ],
+      "tiling": 32768,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 17374,
+          "representative": 32768,
+          "mass": 9,
+          "blue": 1,
+          "H": 9,
+          "aut": 1,
+          "SC": true,
+          "strong": false,
+          "degree": 4,
+          "c3": 3,
+          "scores": [
+            0,
+            1,
+            3,
+            3,
+            4,
+            5,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "node": 43137,
+          "representative": 137908,
+          "mass": 191,
+          "blue": 9,
+          "H": 191,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 91,
+          "c3": 10,
+          "scores": [
+            1,
+            1,
+            3,
+            3,
+            4,
+            5,
+            5,
+            7,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        17391,
+        20569
+      ],
+      "tiling": 33024,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 17391,
+          "representative": 33024,
+          "mass": 93,
+          "blue": 1,
+          "H": 93,
+          "aut": 1,
+          "SC": true,
+          "strong": false,
+          "degree": 46,
+          "c3": 8,
+          "scores": [
+            0,
+            2,
+            3,
+            3,
+            4,
+            5,
+            5,
+            6,
+            8
+          ]
+        },
+        {
+          "node": 20569,
+          "representative": 39910,
+          "mass": 525,
+          "blue": 9,
+          "H": 525,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 258,
+          "c3": 15,
+          "scores": [
+            1,
+            2,
+            3,
+            3,
+            4,
+            5,
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        17392,
+        57027
+      ],
+      "tiling": 33025,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 17392,
+          "representative": 33025,
+          "mass": 1233,
+          "blue": 1,
+          "H": 1233,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 616,
+          "c3": 15,
+          "scores": [
+            1,
+            2,
+            3,
+            3,
+            4,
+            5,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "node": 57027,
+          "representative": 302054,
+          "mass": 1619,
+          "blue": 9,
+          "H": 1619,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 805,
+          "c3": 20,
+          "scores": [
+            2,
+            2,
+            3,
+            3,
+            4,
+            5,
+            5,
+            6,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        19938,
+        50617
+      ],
+      "tiling": 2129921,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 19938,
+          "representative": 38562,
+          "mass": 709,
+          "blue": 9,
+          "H": 709,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 350,
+          "c3": 16,
+          "scores": [
+            1,
+            2,
+            3,
+            4,
+            4,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "node": 50617,
+          "representative": 260658,
+          "mass": 149,
+          "blue": 1,
+          "H": 447,
+          "aut": 3,
+          "SC": true,
+          "strong": true,
+          "degree": 74,
+          "c3": 11,
+          "scores": [
+            1,
+            1,
+            3,
+            4,
+            4,
+            4,
+            5,
+            7,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        31308,
+        50622
+      ],
+      "tiling": 67112961,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 31308,
+          "representative": 73177,
+          "mass": 537,
+          "blue": 13,
+          "H": 537,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 262,
+          "c3": 14,
+          "scores": [
+            2,
+            2,
+            2,
+            2,
+            4,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        {
+          "node": 50622,
+          "representative": 261800,
+          "mass": 33,
+          "blue": 1,
+          "H": 297,
+          "aut": 9,
+          "SC": true,
+          "strong": true,
+          "degree": 16,
+          "c3": 9,
+          "scores": [
+            1,
+            2,
+            2,
+            2,
+            4,
+            6,
+            6,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        48909,
+        97142
+      ],
+      "tiling": 134217663,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 48909,
+          "representative": 203897,
+          "mass": 91,
+          "blue": 9,
+          "H": 91,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 41,
+          "c3": 7,
+          "scores": [
+            1,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            7
+          ]
+        },
+        {
+          "node": 97142,
+          "representative": 134217792,
+          "mass": 1,
+          "blue": 1,
+          "H": 9,
+          "aut": 9,
+          "SC": true,
+          "strong": false,
+          "degree": 0,
+          "c3": 2,
+          "scores": [
+            1,
+            1,
+            1,
+            3,
+            4,
+            5,
+            7,
+            7,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        50294,
+        96471
+      ],
+      "tiling": 134184638,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 50294,
+          "representative": 237857,
+          "mass": 399,
+          "blue": 1,
+          "H": 1197,
+          "aut": 3,
+          "SC": true,
+          "strong": true,
+          "degree": 199,
+          "c3": 17,
+          "scores": [
+            2,
+            2,
+            2,
+            3,
+            4,
+            5,
+            6,
+            6,
+            6
+          ]
+        },
+        {
+          "node": 96471,
+          "representative": 1870097,
+          "mass": 1651,
+          "blue": 9,
+          "H": 1651,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 821,
+          "c3": 20,
+          "scores": [
+            2,
+            2,
+            3,
+            3,
+            4,
+            5,
+            5,
+            6,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        50557,
+        50594
+      ],
+      "tiling": 2097408,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 50557,
+          "representative": 243988,
+          "mass": 443,
+          "blue": 9,
+          "H": 443,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 217,
+          "c3": 13,
+          "scores": [
+            1,
+            2,
+            2,
+            4,
+            4,
+            4,
+            6,
+            6,
+            7
+          ]
+        },
+        {
+          "node": 50594,
+          "representative": 252416,
+          "mass": 17,
+          "blue": 1,
+          "H": 51,
+          "aut": 3,
+          "SC": true,
+          "strong": false,
+          "degree": 8,
+          "c3": 6,
+          "scores": [
+            0,
+            2,
+            2,
+            4,
+            4,
+            4,
+            6,
+            6,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        50595,
+        96661
+      ],
+      "tiling": 2097409,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 50595,
+          "representative": 252417,
+          "mass": 277,
+          "blue": 1,
+          "H": 831,
+          "aut": 3,
+          "SC": true,
+          "strong": true,
+          "degree": 138,
+          "c3": 13,
+          "scores": [
+            1,
+            2,
+            2,
+            4,
+            4,
+            4,
+            6,
+            6,
+            7
+          ]
+        },
+        {
+          "node": 96661,
+          "representative": 3416642,
+          "mass": 1313,
+          "blue": 9,
+          "H": 1313,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 652,
+          "c3": 18,
+          "scores": [
+            2,
+            2,
+            2,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        52698,
+        96663
+      ],
+      "tiling": 132087486,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 52698,
+          "representative": 285678,
+          "mass": 1753,
+          "blue": 9,
+          "H": 1753,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 872,
+          "c3": 21,
+          "scores": [
+            2,
+            2,
+            3,
+            4,
+            4,
+            4,
+            5,
+            6,
+            6
+          ]
+        },
+        {
+          "node": 96663,
+          "representative": 3571985,
+          "mass": 163,
+          "blue": 1,
+          "H": 1467,
+          "aut": 9,
+          "SC": true,
+          "strong": true,
+          "degree": 81,
+          "c3": 18,
+          "scores": [
+            2,
+            2,
+            2,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        56627,
+        96537
+      ],
+      "tiling": 2130177,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 56627,
+          "representative": 300706,
+          "mass": 1783,
+          "blue": 9,
+          "H": 1783,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 887,
+          "c3": 21,
+          "scores": [
+            2,
+            2,
+            3,
+            4,
+            4,
+            4,
+            5,
+            6,
+            6
+          ]
+        },
+        {
+          "node": 96537,
+          "representative": 2130177,
+          "mass": 493,
+          "blue": 1,
+          "H": 1479,
+          "aut": 3,
+          "SC": true,
+          "strong": true,
+          "degree": 246,
+          "c3": 16,
+          "scores": [
+            1,
+            2,
+            3,
+            4,
+            4,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        86328,
+        96631
+      ],
+      "tiling": 69243136,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 86328,
+          "representative": 678743,
+          "mass": 835,
+          "blue": 13,
+          "H": 835,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 411,
+          "c3": 18,
+          "scores": [
+            1,
+            3,
+            3,
+            3,
+            4,
+            5,
+            5,
+            5,
+            7
+          ]
+        },
+        {
+          "node": 96631,
+          "representative": 2656512,
+          "mass": 45,
+          "blue": 1,
+          "H": 135,
+          "aut": 3,
+          "SC": true,
+          "strong": false,
+          "degree": 22,
+          "c3": 11,
+          "scores": [
+            0,
+            3,
+            3,
+            3,
+            4,
+            5,
+            5,
+            5,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        96523,
+        96568
+      ],
+      "tiling": 2097152,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 96523,
+          "representative": 2097152,
+          "mass": 1,
+          "blue": 1,
+          "H": 3,
+          "aut": 3,
+          "SC": true,
+          "strong": false,
+          "degree": 0,
+          "c3": 1,
+          "scores": [
+            0,
+            1,
+            2,
+            4,
+            4,
+            4,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "node": 96568,
+          "representative": 2333821,
+          "mass": 129,
+          "blue": 9,
+          "H": 129,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 60,
+          "c3": 8,
+          "scores": [
+            1,
+            1,
+            2,
+            4,
+            4,
+            4,
+            6,
+            7,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        96632,
+        96642
+      ],
+      "tiling": 69243137,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 96632,
+          "representative": 2656513,
+          "mass": 561,
+          "blue": 1,
+          "H": 1683,
+          "aut": 3,
+          "SC": true,
+          "strong": true,
+          "degree": 280,
+          "c3": 18,
+          "scores": [
+            1,
+            3,
+            3,
+            3,
+            4,
+            5,
+            5,
+            5,
+            7
+          ]
+        },
+        {
+          "node": 96642,
+          "representative": 2777865,
+          "mass": 2041,
+          "blue": 13,
+          "H": 2041,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 1014,
+          "c3": 23,
+          "scores": [
+            2,
+            3,
+            3,
+            3,
+            4,
+            5,
+            5,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "ends": [
+        96657,
+        97139
+      ],
+      "tiling": 67112960,
+      "leaf": true,
+      "nodes": [
+        {
+          "node": 96657,
+          "representative": 3391108,
+          "mass": 187,
+          "blue": 13,
+          "H": 187,
+          "aut": 1,
+          "SC": true,
+          "strong": true,
+          "degree": 87,
+          "c3": 9,
+          "scores": [
+            1,
+            2,
+            2,
+            2,
+            4,
+            6,
+            6,
+            6,
+            7
+          ]
+        },
+        {
+          "node": 97139,
+          "representative": 67112960,
+          "mass": 1,
+          "blue": 1,
+          "H": 9,
+          "aut": 9,
+          "SC": true,
+          "strong": false,
+          "degree": 0,
+          "c3": 2,
+          "scores": [
+            0,
+            2,
+            2,
+            2,
+            4,
+            6,
+            6,
+            6,
+            8
+          ]
+        }
+      ]
+    }
+  ]
+}

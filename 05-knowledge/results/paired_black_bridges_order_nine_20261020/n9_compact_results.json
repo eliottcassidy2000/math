@@ -1,0 +1,414 @@
+{
+  "n": 9,
+  "tilings": 268435456,
+  "classes": 191536,
+  "merged": 97144,
+  "SC": 2752,
+  "paired_black": {
+    "edges": 67092480,
+    "loops": 4499,
+    "components": 7,
+    "active_vertices": 97138,
+    "cycle_rank": 66995343,
+    "bridges": [
+      {
+        "tiling": 64,
+        "reflection": 134217728,
+        "complement": 268435391,
+        "ends": [
+          58,
+          96545
+        ]
+      },
+      {
+        "tiling": 4096,
+        "reflection": 67108864,
+        "complement": 268431359,
+        "ends": [
+          2964,
+          96655
+        ]
+      },
+      {
+        "tiling": 131072,
+        "reflection": 16777216,
+        "complement": 268304383,
+        "ends": [
+          42880,
+          96554
+        ]
+      },
+      {
+        "tiling": 2097216,
+        "reflection": 136314880,
+        "complement": 266338239,
+        "ends": [
+          96524,
+          43209
+        ]
+      },
+      {
+        "tiling": 16777280,
+        "reflection": 134348800,
+        "complement": 251658175,
+        "ends": [
+          97113,
+          48851
+        ]
+      },
+      {
+        "tiling": 16781312,
+        "reflection": 67239936,
+        "complement": 251654143,
+        "ends": [
+          97114,
+          50272
+        ]
+      },
+      {
+        "tiling": 67108928,
+        "reflection": 134221824,
+        "complement": 201326527,
+        "ends": [
+          97138,
+          48911
+        ]
+      }
+    ]
+  },
+  "blue": {
+    "edges": 32768,
+    "loops": 0,
+    "components": 94393,
+    "bridge_count": 24
+  },
+  "elapsed_seconds": 34.7651,
+  "bridge_nodes": [
+    {
+      "node": 58,
+      "representative": 64,
+      "mass": 2,
+      "blue": 0,
+      "H": 3,
+      "aut": 3,
+      "SC": false,
+      "strong": false,
+      "degree": 1,
+      "c3": 1,
+      "scores": [
+        1,
+        1,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "node": 2964,
+      "representative": 4096,
+      "mass": 2,
+      "blue": 0,
+      "H": 3,
+      "aut": 3,
+      "SC": false,
+      "strong": false,
+      "degree": 1,
+      "c3": 1,
+      "scores": [
+        0,
+        2,
+        2,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "node": 42880,
+      "representative": 131072,
+      "mass": 2,
+      "blue": 0,
+      "H": 3,
+      "aut": 3,
+      "SC": false,
+      "strong": false,
+      "degree": 1,
+      "c3": 1,
+      "scores": [
+        0,
+        1,
+        3,
+        3,
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "node": 43209,
+      "representative": 138353,
+      "mass": 262,
+      "blue": 0,
+      "H": 131,
+      "aut": 1,
+      "SC": false,
+      "strong": true,
+      "degree": 131,
+      "c3": 8,
+      "scores": [
+        1,
+        1,
+        2,
+        4,
+        4,
+        4,
+        6,
+        7,
+        7
+      ]
+    },
+    {
+      "node": 48851,
+      "representative": 202873,
+      "mass": 246,
+      "blue": 0,
+      "H": 123,
+      "aut": 1,
+      "SC": false,
+      "strong": true,
+      "degree": 123,
+      "c3": 8,
+      "scores": [
+        1,
+        1,
+        3,
+        3,
+        3,
+        5,
+        6,
+        7,
+        7
+      ]
+    },
+    {
+      "node": 48911,
+      "representative": 203912,
+      "mass": 262,
+      "blue": 0,
+      "H": 131,
+      "aut": 1,
+      "SC": false,
+      "strong": true,
+      "degree": 131,
+      "c3": 8,
+      "scores": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        5,
+        6,
+        7,
+        7
+      ]
+    },
+    {
+      "node": 50272,
+      "representative": 236680,
+      "mass": 374,
+      "blue": 0,
+      "H": 187,
+      "aut": 1,
+      "SC": false,
+      "strong": true,
+      "degree": 187,
+      "c3": 9,
+      "scores": [
+        1,
+        2,
+        2,
+        2,
+        5,
+        5,
+        5,
+        7,
+        7
+      ]
+    },
+    {
+      "node": 96524,
+      "representative": 2097216,
+      "mass": 2,
+      "blue": 0,
+      "H": 9,
+      "aut": 9,
+      "SC": false,
+      "strong": false,
+      "degree": 1,
+      "c3": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        4,
+        4,
+        4,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "node": 96545,
+      "representative": 2301049,
+      "mass": 194,
+      "blue": 0,
+      "H": 97,
+      "aut": 1,
+      "SC": false,
+      "strong": true,
+      "degree": 97,
+      "c3": 7,
+      "scores": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        7
+      ]
+    },
+    {
+      "node": 96554,
+      "representative": 2301561,
+      "mass": 274,
+      "blue": 0,
+      "H": 137,
+      "aut": 1,
+      "SC": false,
+      "strong": true,
+      "degree": 137,
+      "c3": 8,
+      "scores": [
+        1,
+        1,
+        2,
+        3,
+        5,
+        5,
+        5,
+        7,
+        7
+      ]
+    },
+    {
+      "node": 96655,
+      "representative": 3382916,
+      "mass": 282,
+      "blue": 0,
+      "H": 141,
+      "aut": 1,
+      "SC": false,
+      "strong": true,
+      "degree": 141,
+      "c3": 8,
+      "scores": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        5,
+        6,
+        7,
+        7
+      ]
+    },
+    {
+      "node": 97113,
+      "representative": 16777280,
+      "mass": 2,
+      "blue": 0,
+      "H": 9,
+      "aut": 9,
+      "SC": false,
+      "strong": false,
+      "degree": 1,
+      "c3": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        3,
+        5,
+        5,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "node": 97114,
+      "representative": 16781312,
+      "mass": 2,
+      "blue": 0,
+      "H": 9,
+      "aut": 9,
+      "SC": false,
+      "strong": false,
+      "degree": 1,
+      "c3": 2,
+      "scores": [
+        0,
+        2,
+        2,
+        2,
+        5,
+        5,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "node": 97138,
+      "representative": 67108928,
+      "mass": 2,
+      "blue": 0,
+      "H": 9,
+      "aut": 9,
+      "SC": false,
+      "strong": false,
+      "degree": 1,
+      "c3": 2,
+      "scores": [
+        1,
+        1,
+        1,
+        3,
+        4,
+        6,
+        6,
+        6,
+        8
+      ]
+    }
+  ],
+  "strong_degree_minima": {
+    "False": 33,
+    "True": 10
+  }
+}

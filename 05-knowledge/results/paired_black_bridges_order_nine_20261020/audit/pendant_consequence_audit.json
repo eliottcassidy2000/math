@@ -1,0 +1,60 @@
+{
+  "imported_result": "D(z)=z^4; accepted from separately independently audited companion, not reproved here",
+  "companion_manifest_sha256": "0123f01652018d17f62b6bf25f3acfa71fa743e55e798edb4daf1f7dfaf9a55c",
+  "leaf_series_coefficients_checked_through": 200,
+  "pendant_series": "L(z)-z^4",
+  "total_bridge_series": "L(z)-z^4+E(z)",
+  "nonleaf_remainder": "E(z)=O(z^10), with nonnegative integer coefficients; not proved zero",
+  "finite_checks": [
+    {
+      "n": 3,
+      "leaves": 0,
+      "pendant_bridges": 0,
+      "total_bridges": 0,
+      "nonleaf_bridges": 0
+    },
+    {
+      "n": 4,
+      "leaves": 2,
+      "pendant_bridges": 1,
+      "total_bridges": 1,
+      "nonleaf_bridges": 0
+    },
+    {
+      "n": 5,
+      "leaves": 1,
+      "pendant_bridges": 1,
+      "total_bridges": 1,
+      "nonleaf_bridges": 0
+    },
+    {
+      "n": 6,
+      "leaves": 3,
+      "pendant_bridges": 3,
+      "total_bridges": 3,
+      "nonleaf_bridges": 0
+    },
+    {
+      "n": 7,
+      "leaves": 3,
+      "pendant_bridges": 3,
+      "total_bridges": 3,
+      "nonleaf_bridges": 0
+    },
+    {
+      "n": 8,
+      "leaves": 6,
+      "pendant_bridges": 6,
+      "total_bridges": 6,
+      "nonleaf_bridges": 0
+    },
+    {
+      "n": 9,
+      "leaves": 7,
+      "pendant_bridges": 7,
+      "total_bridges": 7,
+      "nonleaf_bridges": 0
+    }
+  ],
+  "all_checks": "passed"
+}

@@ -1,0 +1,56 @@
+{
+  "sparse_paired_black": {
+    "certificate_edges": 194267,
+    "forest_sizes": {
+      "1": 97137,
+      "2": 97130
+    },
+    "components": 7,
+    "bridges": [
+      [
+        64,
+        58,
+        96545
+      ],
+      [
+        4096,
+        2964,
+        96655
+      ],
+      [
+        131072,
+        42880,
+        96554
+      ],
+      [
+        2097216,
+        96524,
+        43209
+      ],
+      [
+        16777280,
+        97113,
+        48851
+      ],
+      [
+        16781312,
+        97114,
+        50272
+      ],
+      [
+        67108928,
+        97138,
+        48911
+      ]
+    ],
+    "all_checks": "passed"
+  },
+  "blue": {
+    "edges": 32768,
+    "support_pairs": 31832,
+    "components": 94393,
+    "bridge_count": 24,
+    "leaf_bridges": 24,
+    "all_checks": "passed"
+  }
+}

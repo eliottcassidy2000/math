@@ -1,0 +1,50 @@
+{
+  "3": {
+    "loops": 0,
+    "digon_edges": 0,
+    "triangle_edges": 0,
+    "quadrilateral_edges": 0,
+    "leaf_edges": 0,
+    "uncovered_edges": 0
+  },
+  "4": {
+    "loops": 0,
+    "digon_edges": 0,
+    "triangle_edges": 0,
+    "quadrilateral_edges": 0,
+    "leaf_edges": 1,
+    "uncovered_edges": 0
+  },
+  "5": {
+    "loops": 2,
+    "digon_edges": 0,
+    "triangle_edges": 9,
+    "quadrilateral_edges": 0,
+    "leaf_edges": 1,
+    "uncovered_edges": 0
+  },
+  "6": {
+    "loops": 12,
+    "digon_edges": 122,
+    "triangle_edges": 101,
+    "quadrilateral_edges": 2,
+    "leaf_edges": 3,
+    "uncovered_edges": 0
+  },
+  "7": {
+    "loops": 57,
+    "digon_edges": 3759,
+    "triangle_edges": 4217,
+    "quadrilateral_edges": 28,
+    "leaf_edges": 3,
+    "uncovered_edges": 0
+  },
+  "8": {
+    "loops": 309,
+    "digon_edges": 156250,
+    "triangle_edges": 366250,
+    "quadrilateral_edges": 449,
+    "leaf_edges": 6,
+    "uncovered_edges": 0
+  }
+}

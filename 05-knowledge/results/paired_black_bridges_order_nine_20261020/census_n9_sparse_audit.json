@@ -1,0 +1,1 @@
+{"n":9,"vertices":97144,"all_Q_edges_scanned":67092480,"certificate_edges":194267,"components":7,"bridges":[{"tiling":64,"ends":[58,96545]},{"tiling":4096,"ends":[2964,96655]},{"tiling":131072,"ends":[42880,96554]},{"tiling":2097216,"ends":[96524,43209]},{"tiling":16777280,"ends":[97113,48851]},{"tiling":16781312,"ends":[97114,50272]},{"tiling":67108928,"ends":[97138,48911]}]}

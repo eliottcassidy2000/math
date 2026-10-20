@@ -1,0 +1,14 @@
+{
+  "7": {
+    "map_entries_identical": 32768,
+    "nodes_identical": 272,
+    "ordinary_classes": 456,
+    "all_summary_checks": "pass"
+  },
+  "8": {
+    "map_entries_identical": 2097152,
+    "nodes_identical": 3528,
+    "ordinary_classes": 6880,
+    "all_summary_checks": "pass"
+  }
+}

@@ -1,0 +1,24 @@
+#include <algorithm>
+#include <cassert>
+#include <cstdint>
+#include <fstream>
+#include <iostream>
+#include <set>
+#include <string>
+#include <vector>
+using namespace std;
+uint64_t key(uint32_t a,uint32_t b){if(a>b)swap(a,b);return (uint64_t(a)<<32)|b;}
+int main(){constexpr int n=9,m=28;constexpr uint32_t full=(1u<<m)-1;vector<int32_t> mp(1u<<m);ifstream file("census_n9.map",ios::binary);file.read((char*)mp.data(),4*mp.size());assert(file.gcount()==streamsize(4*mp.size()));int N=*max_element(mp.begin(),mp.end())+1;vector<pair<int,int>> chords;for(int j=n-1;j>=2;j--)for(int i=0;i<j-1;i++)chords.push_back({i,j});vector<int>sig;for(auto [i,j]:chords)sig.push_back(find(chords.begin(),chords.end(),pair<int,int>{n-1-j,n-1-i})-chords.begin());vector<uint32_t>rl(1<<14),rh(1<<14);for(uint32_t a=0;a<1<<14;a++)for(int i=0;i<14;i++)if(a>>i&1){rl[a]|=1u<<sig[i];rh[a]|=1u<<sig[i+14];}auto reflect=[&](uint32_t t){return rl[t&16383]|rh[t>>14];};vector<uint64_t> deg(N),keys;keys.reserve(1u<<26);uint64_t total=0,loops=0;
+ // Enumerate all masks, accepting exactly the minimum of the four-element
+ // complement/reflection orbit, independently of the producer's half-range loop.
+ for(uint32_t t=0;t<=full;t++){uint32_t rt=reflect(t);if(t==rt)continue;if(t!=min({t,full^t,rt,full^rt}))continue;assert(t!= (full^rt));int a=mp[t],b=mp[full^t];assert(mp[t]==mp[rt]&&mp[full^t]==mp[full^rt]);total++;deg[a]++;deg[b]++;if(a==b){loops++;continue;}keys.push_back(key(a,b));}cerr<<"Enumerated "<<total<<" multigraph edges.\n";mp.clear();mp.shrink_to_fit();sort(keys.begin(),keys.end());vector<uint32_t>counts;size_t j=0;for(size_t i=0;i<keys.size();){size_t end=i+1;while(end<keys.size()&&keys[end]==keys[i])end++;keys[j++]=keys[i];counts.push_back(end-i);i=end;}keys.resize(j);keys.shrink_to_fit();vector<uint32_t>off(N+1);for(auto k:keys){off[(k>>32)+1]++;off[uint32_t(k)+1]++;}for(int i=1;i<=N;i++)off[i]+=off[i-1];vector<uint32_t>adj(off.back()),cur=off;for(auto k:keys){uint32_t a=k>>32,b=k;adj[cur[a]++]=b;adj[cur[b]++]=a;}for(int i=0;i<N;i++)assert(is_sorted(adj.begin()+off[i],adj.begin()+off[i+1]));auto multiplicity=[&](int a,int b){auto it=lower_bound(keys.begin(),keys.end(),key(a,b));assert(it!=keys.end()&&*it==key(a,b));return counts[it-keys.begin()];};auto adjacent=[&](int a,int b){return binary_search(keys.begin(),keys.end(),key(a,b));};
+ // Direct iterative low-link traversal of the entire support, not the supplied
+ // two-forest certificate. Parallel copies veto a support bridge.
+ vector<int>tin(N),low(N),parent(N,-1),stack;cur=off;int timer=0,components=0;vector<pair<int,int>>bridges;
+ for(int root=0;root<N;root++){if(tin[root])continue;components++;tin[root]=low[root]=++timer;stack.push_back(root);while(!stack.empty()){int v=stack.back();if(cur[v]<off[v+1]){int w=adj[cur[v]++];if(w==parent[v])continue;if(tin[w]){low[v]=min(low[v],tin[w]);}else{parent[w]=v;tin[w]=low[w]=++timer;stack.push_back(w);}}else{stack.pop_back();int p=parent[v];if(p!=-1){if(low[v]>tin[p]&&multiplicity(v,p)==1)bridges.push_back(minmax(v,p));low[p]=min(low[p],low[v]);}}}}sort(bridges.begin(),bridges.end());
+ // Validate each supplied quadrilateral as a four-distinct-vertex Q cycle.
+ ifstream q("census_n9_quadrilaterals.tsv");string header;getline(q,header);int a,b,x,y;set<uint64_t>quads;while(q>>a>>b>>x>>y){set<int>vertices{a,b,x,y};assert(vertices.size()==4);assert(adjacent(a,b)&&adjacent(a,x)&&adjacent(x,y)&&adjacent(y,b));assert(multiplicity(a,b)==1&&deg[a]>1&&deg[b]>1);assert(quads.insert(key(a,b)).second);}assert(quads.size()==27524);
+ // Independently classify every support pair; for the triangle-free remainder
+ // rely only on the explicit, already checked quadrilateral witnesses.
+ uint64_t digons=0,triangles=0,squares=0,leaves=0;set<uint64_t>used;for(size_t i=0;i<keys.size();i++){uint32_t a=keys[i]>>32,b=keys[i];if(counts[i]>1){digons+=counts[i];continue;}if(deg[a]==1||deg[b]==1){leaves++;assert(binary_search(bridges.begin(),bridges.end(),pair<int,int>{int(a),int(b)}));continue;}bool tri=false;uint32_t p=off[a],z=off[b];while(p<off[a+1]&&z<off[b+1]){uint32_t u=adj[p],v=adj[z];if(u==v){tri=true;break;}if(u<v)p++;else z++;}if(tri){triangles++;continue;}assert(quads.count(keys[i])==1);used.insert(keys[i]);squares++;}assert(used==quads);assert(total==loops+digons+triangles+squares+leaves);ofstream out("audit/graph_audit.json");out<<"{\"Q_edges\":"<<total<<",\"support_nonloop_pairs\":"<<keys.size()<<",\"components\":"<<components<<",\"loops\":"<<loops<<",\"digon_edges\":"<<digons<<",\"triangle_edges\":"<<triangles<<",\"quadrilateral_witnesses_verified\":"<<squares<<",\"leaf_edges\":"<<leaves<<",\"bridges\":[";bool first=true;for(auto[a,b]:bridges){if(!first)out<<",";first=false;out<<"["<<a<<","<<b<<"]";}out<<"],\"all_checks\":\"passed\"}\n";cerr<<"Direct full-support Tarjan: "<<bridges.size()<<" bridges; every nonleaf edge has a verified cycle of length <= 4.\n";
+}
