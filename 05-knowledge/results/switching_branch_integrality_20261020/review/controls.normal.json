@@ -1,0 +1,352 @@
+{
+  "status": "ALL INDEPENDENT CONTROLS PASSED",
+  "switching": [
+    {
+      "n": 1,
+      "labelled_classes": 1,
+      "type_count": 1,
+      "N_odd": "1",
+      "N_lev": "0",
+      "types": [
+        {
+          "mask": 0,
+          "aut_order": 1,
+          "rho": "1",
+          "flips": []
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "labelled_classes": 1,
+      "type_count": 1,
+      "N_odd": "1/2",
+      "N_lev": "1/2",
+      "types": [
+        {
+          "mask": 0,
+          "aut_order": 2,
+          "rho": "1/2",
+          "flips": [
+            {
+              "g": [
+                1,
+                0
+              ],
+              "target_mask": 0,
+              "target_type": 0,
+              "commuting_witness": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "labelled_classes": 2,
+      "type_count": 1,
+      "N_odd": "1",
+      "N_lev": "0",
+      "types": [
+        {
+          "mask": 0,
+          "aut_order": 3,
+          "rho": "1",
+          "flips": []
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "labelled_classes": 8,
+      "type_count": 2,
+      "N_odd": "1",
+      "N_lev": "1",
+      "types": [
+        {
+          "mask": 0,
+          "aut_order": 4,
+          "rho": "1/4",
+          "flips": [
+            {
+              "g": [
+                2,
+                3,
+                0,
+                1
+              ],
+              "target_mask": 7,
+              "target_type": 0,
+              "commuting_witness": [
+                0,
+                3,
+                2,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "mask": 2,
+          "aut_order": 12,
+          "rho": "3/4",
+          "flips": [
+            {
+              "g": [
+                1,
+                0,
+                3,
+                2
+              ],
+              "target_mask": 5,
+              "target_type": 2,
+              "commuting_witness": [
+                0,
+                1,
+                3,
+                2
+              ]
+            },
+            {
+              "g": [
+                2,
+                3,
+                0,
+                1
+              ],
+              "target_mask": 5,
+              "target_type": 2,
+              "commuting_witness": [
+                0,
+                3,
+                2,
+                1
+              ]
+            },
+            {
+              "g": [
+                3,
+                2,
+                1,
+                0
+              ],
+              "target_mask": 5,
+              "target_type": 2,
+              "commuting_witness": [
+                0,
+                2,
+                1,
+                3
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "labelled_classes": 1024,
+      "type_count": 6,
+      "N_odd": "4",
+      "N_lev": "2",
+      "types": [
+        {
+          "mask": 0,
+          "aut_order": 6,
+          "rho": "1/2",
+          "flips": [
+            {
+              "g": [
+                3,
+                4,
+                5,
+                0,
+                1,
+                2
+              ],
+              "target_mask": 470,
+              "target_type": 40,
+              "commuting_witness": null
+            }
+          ]
+        },
+        {
+          "mask": 2,
+          "aut_order": 3,
+          "rho": "1",
+          "flips": []
+        },
+        {
+          "mask": 4,
+          "aut_order": 2,
+          "rho": "1/2",
+          "flips": [
+            {
+              "g": [
+                3,
+                4,
+                5,
+                0,
+                1,
+                2
+              ],
+              "target_mask": 466,
+              "target_type": 41,
+              "commuting_witness": null
+            }
+          ]
+        },
+        {
+          "mask": 10,
+          "aut_order": 5,
+          "rho": "1",
+          "flips": []
+        },
+        {
+          "mask": 40,
+          "aut_order": 18,
+          "rho": "1/2",
+          "flips": [
+            {
+              "g": [
+                2,
+                3,
+                0,
+                1,
+                5,
+                4
+              ],
+              "target_mask": 603,
+              "target_type": 0,
+              "commuting_witness": null
+            },
+            {
+              "g": [
+                3,
+                4,
+                5,
+                0,
+                1,
+                2
+              ],
+              "target_mask": 510,
+              "target_type": 0,
+              "commuting_witness": null
+            },
+            {
+              "g": [
+                4,
+                2,
+                1,
+                5,
+                0,
+                3
+              ],
+              "target_mask": 909,
+              "target_type": 0,
+              "commuting_witness": null
+            }
+          ]
+        },
+        {
+          "mask": 41,
+          "aut_order": 6,
+          "rho": "1/2",
+          "flips": [
+            {
+              "g": [
+                1,
+                0,
+                3,
+                2,
+                5,
+                4
+              ],
+              "target_mask": 566,
+              "target_type": 4,
+              "commuting_witness": null
+            },
+            {
+              "g": [
+                3,
+                5,
+                4,
+                0,
+                2,
+                1
+              ],
+              "target_mask": 403,
+              "target_type": 4,
+              "commuting_witness": null
+            },
+            {
+              "g": [
+                4,
+                2,
+                1,
+                5,
+                0,
+                3
+              ],
+              "target_mask": 908,
+              "target_type": 4,
+              "commuting_witness": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "groups": {
+    "C2": {
+      "order": 2,
+      "element_orders": {
+        "1": 1,
+        "2": 1
+      },
+      "odd_order_elements": 1,
+      "rho": "1/2"
+    },
+    "A4": {
+      "order": 12,
+      "element_orders": {
+        "1": 1,
+        "2": 3,
+        "3": 8
+      },
+      "odd_order_elements": 9,
+      "rho": "3/4"
+    },
+    "GL(3,2)=PSL(2,7)": {
+      "order": 168,
+      "element_orders": {
+        "1": 1,
+        "2": 21,
+        "3": 56,
+        "4": 42,
+        "7": 48
+      },
+      "odd_order_elements": 105,
+      "rho": "5/8"
+    },
+    "criterion_not_necessary": {
+      "group": "C6",
+      "set": "one fixed point plus C6/C2",
+      "prime": 2,
+      "terms": [
+        "2/3",
+        "1/6",
+        "1/6"
+      ],
+      "B_p": "1"
+    }
+  },
+  "n8": {
+    "scope": "inherited census; arithmetic checked independently",
+    "even_aut_types": 27,
+    "N_lev": "15"
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "records": [
+    {
+      "n": 4,
+      "classes": [
+        {
+          "q": 0,
+          "aut_order": 4,
+          "rho": "1/4",
+          "number_involutions": 1,
+          "flips": [
+            {
+              "g": [
+                2,
+                3,
+                0,
+                1
+              ],
+              "target": 7,
+              "target_type": 0,
+              "isomorphic": true,
+              "commuting_witness": [
+                0,
+                3,
+                2,
+                1
+              ],
+              "commuting_witness_order": 2
+            }
+          ]
+        },
+        {
+          "q": 2,
+          "aut_order": 12,
+          "rho": "3/4",
+          "number_involutions": 3,
+          "flips": [
+            {
+              "g": [
+                1,
+                0,
+                3,
+                2
+              ],
+              "target": 5,
+              "target_type": 2,
+              "isomorphic": true,
+              "commuting_witness": [
+                0,
+                1,
+                3,
+                2
+              ],
+              "commuting_witness_order": 2
+            },
+            {
+              "g": [
+                2,
+                3,
+                0,
+                1
+              ],
+              "target": 5,
+              "target_type": 2,
+              "isomorphic": true,
+              "commuting_witness": [
+                0,
+                3,
+                2,
+                1
+              ],
+              "commuting_witness_order": 2
+            },
+            {
+              "g": [
+                3,
+                2,
+                1,
+                0
+              ],
+              "target": 5,
+              "target_type": 2,
+              "isomorphic": true,
+              "commuting_witness": [
+                0,
+                2,
+                1,
+                3
+              ],
+              "commuting_witness_order": 2
+            }
+          ]
+        }
+      ],
+      "N_odd": "1",
+      "N_lev": "1"
+    },
+    {
+      "n": 6,
+      "classes": [
+        {
+          "q": 0,
+          "aut_order": 6,
+          "rho": "1/2",
+          "number_involutions": 1,
+          "flips": [
+            {
+              "g": [
+                3,
+                4,
+                5,
+                0,
+                1,
+                2
+              ],
+              "target": 470,
+              "target_type": 40,
+              "isomorphic": false,
+              "commuting_witness": null,
+              "commuting_witness_order": null
+            }
+          ]
+        },
+        {
+          "q": 2,
+          "aut_order": 3,
+          "rho": "1",
+          "number_involutions": 0,
+          "flips": []
+        },
+        {
+          "q": 4,
+          "aut_order": 2,
+          "rho": "1/2",
+          "number_involutions": 1,
+          "flips": [
+            {
+              "g": [
+                3,
+                4,
+                5,
+                0,
+                1,
+                2
+              ],
+              "target": 466,
+              "target_type": 41,
+              "isomorphic": false,
+              "commuting_witness": null,
+              "commuting_witness_order": null
+            }
+          ]
+        },
+        {
+          "q": 10,
+          "aut_order": 5,
+          "rho": "1",
+          "number_involutions": 0,
+          "flips": []
+        },
+        {
+          "q": 40,
+          "aut_order": 18,
+          "rho": "1/2",
+          "number_involutions": 3,
+          "flips": [
+            {
+              "g": [
+                2,
+                3,
+                0,
+                1,
+                5,
+                4
+              ],
+              "target": 603,
+              "target_type": 0,
+              "isomorphic": false,
+              "commuting_witness": null,
+              "commuting_witness_order": null
+            },
+            {
+              "g": [
+                3,
+                4,
+                5,
+                0,
+                1,
+                2
+              ],
+              "target": 510,
+              "target_type": 0,
+              "isomorphic": false,
+              "commuting_witness": null,
+              "commuting_witness_order": null
+            },
+            {
+              "g": [
+                4,
+                2,
+                1,
+                5,
+                0,
+                3
+              ],
+              "target": 909,
+              "target_type": 0,
+              "isomorphic": false,
+              "commuting_witness": null,
+              "commuting_witness_order": null
+            }
+          ]
+        },
+        {
+          "q": 41,
+          "aut_order": 6,
+          "rho": "1/2",
+          "number_involutions": 3,
+          "flips": [
+            {
+              "g": [
+                1,
+                0,
+                3,
+                2,
+                5,
+                4
+              ],
+              "target": 566,
+              "target_type": 4,
+              "isomorphic": false,
+              "commuting_witness": null,
+              "commuting_witness_order": null
+            },
+            {
+              "g": [
+                3,
+                5,
+                4,
+                0,
+                2,
+                1
+              ],
+              "target": 403,
+              "target_type": 4,
+              "isomorphic": false,
+              "commuting_witness": null,
+              "commuting_witness_order": null
+            },
+            {
+              "g": [
+                4,
+                2,
+                1,
+                5,
+                0,
+                3
+              ],
+              "target": 908,
+              "target_type": 4,
+              "isomorphic": false,
+              "commuting_witness": null,
+              "commuting_witness_order": null
+            }
+          ]
+        }
+      ],
+      "N_odd": "4",
+      "N_lev": "2"
+    }
+  ],
+  "inherited_n8_arithmetic": {
+    "even_aut_types": 27,
+    "N_lev": 15,
+    "carrier_cardinality_is_odd": true
+  },
+  "status": "ALL CHECKS PASSED"
+}

@@ -1,0 +1,9 @@
+ALL CHECKS PASSED
+n 4 types 2 N_odd 1 N_lev 1
+  type 0 Aut 4 rho 1/4 flip target types [0]
+  type 2 Aut 12 rho 3/4 flip target types [2]
+n 6 types 6 N_odd 4 N_lev 2
+  type 0 Aut 6 rho 1/2 flip target types [40]
+  type 4 Aut 2 rho 1/2 flip target types [41]
+  type 40 Aut 18 rho 1/2 flip target types [0]
+  type 41 Aut 6 rho 1/2 flip target types [4]
