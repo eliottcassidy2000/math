@@ -235,6 +235,15 @@ two inherited finite facts imply exactly three leaf bridges and no
 others. The order-eight line TSV is not committed, so this note does
 not call that conclusion an independent replay of its wiring.
 
+**Incoming all-even refinement.** The subsequently audited strong-core
+packet proves that, for even n>=4, pure-blue nodes are exactly the leaves.
+Deleting those leaves from Q leaves precisely the quotient problem for
+non-leaf bridges. The
+[integration note](boundary_support_20261020_incoming.md) records the
+proof, its cited crossing-theorem dependency, and the new strong/periphery
+and triangle-current constraints. No black-core connectivity assumption
+is needed.
+
 ## 4. Sufficient criteria for abstract complete wiring data
 
 Here “complete wiring data” means specifying every coloured edge

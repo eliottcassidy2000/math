@@ -70,3 +70,14 @@ question into a smaller exact blue-graph problem. Finally, the transfer
 block eigenvalues give primitive 345-rooted triples, while its support
 zeros preserve the separate isosceles geometry. The limits and predicates
 of those two arithmetic charts remain distinct.
+
+Late incoming commits supplied two further connections, audited in
+[the integration note](boundary_support_20261020_incoming.md). The 105
+matchings also index leading feedback-budget-four templates, whereas the
+91-dimensional colouring quotient loses template identities. Shared
+endpoints fail a naive equality translation but admit a cubic-junction
+parity repair. The strong-core packet gives an exact even-order split
+between pure-blue leaf bridges and bridges in the remaining contracted
+blue graph. Its triangle-current law rejects our degree-preserving false
+wiring, while its strong/periphery cut alone does not. Neither addition
+removes the full presentation sidecar or proves the general snark reduction.

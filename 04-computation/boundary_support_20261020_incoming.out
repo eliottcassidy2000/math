@@ -1,0 +1,8 @@
+Eight-port direction bank: {1: 7, 2: 42, 4: 56}
+Sum of matching kernels, all 6561 words: {0: 4920, 3: 1260, 9: 210, 15: 168, 105: 3}
+Budget-four top templates: core_order=17 capped_weight=53 heavy_gaps=9
+Top generating term: 105*x^53/(1-x)^9
+Leading coefficient: 1/384
+Seven-port equality hostile: support=27 parity-compatible=0
+Seven-port cubic junction: support=54 parity-compatible=54
+PASS: all identities checked by exhaustive labelled words

@@ -156,6 +156,15 @@ staircase involution constraints and produce the same coloured
 metagraph. This is a literal common carrier and an explicit example of
 the information lost on passing to the quotient.
 
+A late incoming defect-grammar proof supplies another exact dictionary:
+these 105 matchings are the 105 leading feedback-budget-four tournament
+templates, contributing `105*x^53/(1-x)^9`. The
+[incoming integration](boundary_support_20261020_incoming.md) audits the
+normalization and shows why the rank-91 colouring quotient cannot replace
+105 in the tournament class count. Sharing a defect endpoint fails the
+naive equality-kernel translation; one new cubic vertex repairs its
+seven-port parity, giving a concrete next operation to test.
+
 ## 5. Tournament bridges and complete wiring
 
 Throughout this section the graph is the **converse-merged complement-line
@@ -175,6 +184,14 @@ census implies three leaf bridges. An explicit six-node abstract wiring
 satisfies all the parity and twin laws but has a non-leaf bridge, showing
 that those laws alone cannot prove a universal leaf classification.
 
+The incoming strong-core work sharpens the even-order conclusion:
+pure-blue nodes are exactly leaves, attached to mixed strong nodes.
+Delete these leaves from the contracted blue graph Q. Every remaining
+bridge corresponds precisely to a non-leaf bridge of the original
+metagraph. The audited proof and its cited Lu-theorem dependency are
+recorded in the [incoming integration](boundary_support_20261020_incoming.md).
+No connectivity of the remaining black-active quotient is assumed.
+
 There is a constructive abstract realization theorem. A blue multigraph
 supported on self-converse nodes together with an even-multiplicity black
 multigraph can be realized by commuting involutions: two flags per blue
@@ -188,6 +205,11 @@ transitive node to the wrong partner. A sufficient actual certificate
 retains a partition of the full tiling cube, tournament isomorphism
 witnesses for its fibres, and every complement pair. The compatible-face
 recursion of THM-796 supplies an inductive version.
+
+Incoming work gives useful additional necessary screens: nonstrong
+nodes have only strong neighbors, and blue lines obey a triangle-count
+current law. Our false order-five wiring survives the first screen but
+fails the second, changing allowed jumps 3 and 1 into forbidden 4 and 2.
 
 If "complete metagraph" means a complete underlying simple graph, it is
 impossible at n>=4: the transitive node has degree one, and there are at
@@ -266,7 +288,7 @@ leading constant remain open in this work.
 | Tournament wiring | Full inherited line tables through n=7; independent small tiling construction; degree coefficients through n=8 |
 | Proof review | Root and agents independently checked support, asymptotics, quotient types, and scope |
 
-The four scripts and receipts are linked in the component notes. Normal
+The five scripts and receipts are linked in the component notes. Normal
 and optimized runs agree; no claim rests on assertions removed by `-O`.
 
 The next serious obligation is to find an unavoidable, support-preserving
