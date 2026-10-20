@@ -1,0 +1,270 @@
+{
+  "directed_edge_occurrences": 1848,
+  "distance_layers": {
+    "0": 1,
+    "1": 8,
+    "2": 29,
+    "3": 60,
+    "4": 82,
+    "5": 90,
+    "6": 43,
+    "7": 14,
+    "8": 3
+  },
+  "explicit_checks": 1894,
+  "full_graph_vertices": 330,
+  "independent_shortest_path": [
+    "01011011011",
+    "10011011011",
+    "10010111011",
+    "10001111011"
+  ],
+  "independent_shortest_path_swap_starts": [
+    0,
+    4,
+    3
+  ],
+  "minimum_necklace_distance": 3,
+  "p": 7,
+  "q": 11,
+  "rotations": [
+    {
+      "bfs_distance": 6,
+      "flow_lower_bound": 6,
+      "minimizing_circulation": 2,
+      "prefix_imbalances": [
+        -1,
+        -1,
+        -2,
+        -2,
+        -1,
+        -2,
+        -2,
+        -2,
+        -2,
+        -1,
+        0
+      ],
+      "rotation": 0,
+      "word": "11110111000"
+    },
+    {
+      "bfs_distance": 5,
+      "flow_lower_bound": 5,
+      "minimizing_circulation": 1,
+      "prefix_imbalances": [
+        -1,
+        -1,
+        -2,
+        -1,
+        -1,
+        -2,
+        -2,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "rotation": 1,
+      "word": "11101110001"
+    },
+    {
+      "bfs_distance": 5,
+      "flow_lower_bound": 5,
+      "minimizing_circulation": 1,
+      "prefix_imbalances": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rotation": 2,
+      "word": "11011100011"
+    },
+    {
+      "bfs_distance": 6,
+      "flow_lower_bound": 6,
+      "minimizing_circulation": 0,
+      "prefix_imbalances": [
+        -1,
+        0,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "rotation": 3,
+      "word": "10111000111"
+    },
+    {
+      "bfs_distance": 4,
+      "flow_lower_bound": 4,
+      "minimizing_circulation": 0,
+      "prefix_imbalances": [
+        0,
+        0,
+        -1,
+        -1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "rotation": 4,
+      "word": "01110001111"
+    },
+    {
+      "bfs_distance": 6,
+      "flow_lower_bound": 6,
+      "minimizing_circulation": 1,
+      "prefix_imbalances": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        -1,
+        0
+      ],
+      "rotation": 5,
+      "word": "11100011110"
+    },
+    {
+      "bfs_distance": 5,
+      "flow_lower_bound": 5,
+      "minimizing_circulation": 0,
+      "prefix_imbalances": [
+        -1,
+        -1,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "rotation": 6,
+      "word": "11000111101"
+    },
+    {
+      "bfs_distance": 3,
+      "flow_lower_bound": 3,
+      "minimizing_circulation": 0,
+      "prefix_imbalances": [
+        -1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rotation": 7,
+      "word": "10001111011"
+    },
+    {
+      "bfs_distance": 5,
+      "flow_lower_bound": 5,
+      "minimizing_circulation": 0,
+      "prefix_imbalances": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "rotation": 8,
+      "word": "00011110111"
+    },
+    {
+      "bfs_distance": 4,
+      "flow_lower_bound": 4,
+      "minimizing_circulation": 0,
+      "prefix_imbalances": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        -1,
+        -1,
+        0
+      ],
+      "rotation": 9,
+      "word": "00111101110"
+    },
+    {
+      "bfs_distance": 4,
+      "flow_lower_bound": 4,
+      "minimizing_circulation": 1,
+      "prefix_imbalances": [
+        0,
+        0,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -2,
+        -1,
+        0
+      ],
+      "rotation": 10,
+      "word": "01111011100"
+    }
+  ],
+  "script_sha256": "ca2326b38bea5245659c33dfb4407f1dd6482f18f493437477217ab56af1fa6c",
+  "source": "01011011011",
+  "status": "PASS: exact cyclic adjacent-swap necklace distance is three",
+  "supplied_path": [
+    "01011011011",
+    "10011011011",
+    "10010111011",
+    "10001111011"
+  ],
+  "supplied_path_swap_starts": [
+    0,
+    4,
+    3
+  ],
+  "target_carry": 12649,
+  "target_clock": -139,
+  "target_cycle_word": "11110111000",
+  "target_fixed_point": -91
+}

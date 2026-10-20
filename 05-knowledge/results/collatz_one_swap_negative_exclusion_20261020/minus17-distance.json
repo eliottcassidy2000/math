@@ -1,0 +1,264 @@
+{
+  "status": "PASS",
+  "distance_definition": "minimum cyclic unequal-adjacent-swap path length between the rotation orbits of source and target",
+  "source": "01011011011",
+  "target_reference": "11110111000",
+  "binary_word_universe": 330,
+  "bfs_layer_counts": {
+    "0": 1,
+    "1": 8,
+    "2": 29,
+    "3": 60,
+    "4": 82,
+    "5": 90,
+    "6": 43,
+    "7": 14,
+    "8": 3
+  },
+  "rotation_rows": [
+    {
+      "rotation": 0,
+      "word": "11110111000",
+      "bfs_distance": 6,
+      "prefix_difference": [
+        -1,
+        -1,
+        -2,
+        -2,
+        -1,
+        -2,
+        -2,
+        -2,
+        -2,
+        -1,
+        0
+      ],
+      "median": -2,
+      "flow_lower_bound": 6
+    },
+    {
+      "rotation": 1,
+      "word": "11101110001",
+      "bfs_distance": 5,
+      "prefix_difference": [
+        -1,
+        -1,
+        -2,
+        -1,
+        -1,
+        -2,
+        -2,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "median": -1,
+      "flow_lower_bound": 5
+    },
+    {
+      "rotation": 2,
+      "word": "11011100011",
+      "bfs_distance": 5,
+      "prefix_difference": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "median": -1,
+      "flow_lower_bound": 5
+    },
+    {
+      "rotation": 3,
+      "word": "10111000111",
+      "bfs_distance": 6,
+      "prefix_difference": [
+        -1,
+        0,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "median": 0,
+      "flow_lower_bound": 6
+    },
+    {
+      "rotation": 4,
+      "word": "01110001111",
+      "bfs_distance": 4,
+      "prefix_difference": [
+        0,
+        0,
+        -1,
+        -1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "median": 0,
+      "flow_lower_bound": 4
+    },
+    {
+      "rotation": 5,
+      "word": "11100011110",
+      "bfs_distance": 6,
+      "prefix_difference": [
+        -1,
+        -1,
+        -2,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        -1,
+        0
+      ],
+      "median": -1,
+      "flow_lower_bound": 6
+    },
+    {
+      "rotation": 6,
+      "word": "11000111101",
+      "bfs_distance": 5,
+      "prefix_difference": [
+        -1,
+        -1,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "median": 0,
+      "flow_lower_bound": 5
+    },
+    {
+      "rotation": 7,
+      "word": "10001111011",
+      "bfs_distance": 3,
+      "prefix_difference": [
+        -1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "median": 0,
+      "flow_lower_bound": 3
+    },
+    {
+      "rotation": 8,
+      "word": "00011110111",
+      "bfs_distance": 5,
+      "prefix_difference": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "median": 0,
+      "flow_lower_bound": 5
+    },
+    {
+      "rotation": 9,
+      "word": "00111101110",
+      "bfs_distance": 4,
+      "prefix_difference": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        -1,
+        -1,
+        0
+      ],
+      "median": 0,
+      "flow_lower_bound": 4
+    },
+    {
+      "rotation": 10,
+      "word": "01111011100",
+      "bfs_distance": 4,
+      "prefix_difference": [
+        0,
+        0,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -2,
+        -1,
+        0
+      ],
+      "median": -1,
+      "flow_lower_bound": 4
+    }
+  ],
+  "minimum_distance": 3,
+  "explicit_path": [
+    "01011011011",
+    "10011011011",
+    "10010111011",
+    "10001111011"
+  ],
+  "explicit_edges_zero_based": [
+    [
+      0,
+      1
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "final_word_carry": 12649,
+  "clock": -139,
+  "final_word_fixed_point": -91
+}

@@ -1,0 +1,21 @@
+{
+  "audited_sha256": {
+    "NEGATIVE_ONE_SWAP_EXCLUSION.md": "90e3818b0d8ac966d007c1b1941fabdb35866da663ca0ca020738976df724f93",
+    "audit/compare_negative_receipts.py": "dd4deeee38f3dd092f6b8ea023c68ead45ab8ae94c267259e0050515f8fc7ca2",
+    "audit/independent-receipt.json": "32966e83b811abab8c36ea341cef6cbb65158e30300169a578f854bca43267b4",
+    "audit/verify_negative_independent.py": "f762fe823235631e158cc30311392f1bccb2588a4f40b6bfae35a8a9ae5d0b63",
+    "certify_negative_swap_exclusion.py": "f1ba60034afcd91e9ef200ef77288185fd178e142c627c45490f0457239a3b76",
+    "negative-receipt.json": "33811b85ca3bfcb7e880514c32dc42f702dfde6588254e7f8236036ee3ea6509"
+  },
+  "comparisons": {
+    "identical_cf_digits": true,
+    "identical_hostile_q120_count": true,
+    "identical_large_convergent_pairs": true,
+    "identical_small_hit_set": true,
+    "identical_small_shape_rows": true,
+    "identical_terminal_convergent": true,
+    "independent_normal_optimized_identical": true,
+    "production_normal_optimized_identical": true
+  },
+  "status": "PASS"
+}
