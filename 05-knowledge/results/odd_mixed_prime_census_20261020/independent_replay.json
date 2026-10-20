@@ -1,0 +1,126 @@
+{
+  "checks": 621,
+  "rows": [
+    {
+      "class": "F21_fixed",
+      "direct_full_even_graph_types": 1,
+      "direct_full_graph_types": 2,
+      "direct_full_tournament_types": 1,
+      "n": 7,
+      "normalizer_order": 42,
+      "ordinary_Burnside_numerator": 42,
+      "relative_orbits_each": 1,
+      "reversed_vertex_labeling_check": "PASS",
+      "signed_Burnside_numerator": 42
+    },
+    {
+      "class": "F21_fixed",
+      "direct_full_even_graph_types": 2,
+      "direct_full_graph_types": 4,
+      "direct_full_tournament_types": 2,
+      "n": 8,
+      "normalizer_order": 42,
+      "ordinary_Burnside_numerator": 84,
+      "relative_orbits_each": 2,
+      "reversed_vertex_labeling_check": "PASS",
+      "signed_Burnside_numerator": 84
+    },
+    {
+      "class": "C15_5plus3",
+      "direct_full_even_graph_types": 2,
+      "direct_full_graph_types": 12,
+      "direct_full_tournament_types": 2,
+      "n": 8,
+      "normalizer_order": 120,
+      "ordinary_Burnside_numerator": 240,
+      "relative_orbits_each": 2,
+      "reversed_vertex_labeling_check": "PASS",
+      "signed_Burnside_numerator": 240
+    },
+    {
+      "class": "F21_fixed",
+      "direct_full_even_graph_types": 4,
+      "direct_full_graph_types": 12,
+      "direct_full_tournament_types": 4,
+      "n": 9,
+      "normalizer_order": 84,
+      "ordinary_Burnside_numerator": 336,
+      "relative_orbits_each": 4,
+      "reversed_vertex_labeling_check": "PASS",
+      "signed_Burnside_numerator": 336
+    },
+    {
+      "class": "C15_5plus3",
+      "direct_full_even_graph_types": 8,
+      "direct_full_graph_types": 48,
+      "direct_full_tournament_types": 8,
+      "n": 9,
+      "normalizer_order": 120,
+      "ordinary_Burnside_numerator": 960,
+      "relative_orbits_each": 8,
+      "reversed_vertex_labeling_check": "PASS",
+      "signed_Burnside_numerator": 960
+    },
+    {
+      "class": "F21_fixed",
+      "direct_full_even_graph_types": 12,
+      "direct_full_graph_types": 40,
+      "direct_full_tournament_types": 12,
+      "n": 10,
+      "normalizer_order": 252,
+      "ordinary_Burnside_numerator": 3024,
+      "relative_orbits_each": 12,
+      "reversed_vertex_labeling_check": "PASS",
+      "signed_Burnside_numerator": 3024
+    },
+    {
+      "class": "C15_5plus3",
+      "direct_full_even_graph_types": 31,
+      "direct_full_graph_types": 238,
+      "direct_full_tournament_types": 32,
+      "n": 10,
+      "normalizer_order": 240,
+      "ordinary_Burnside_numerator": 7680,
+      "relative_orbits_each": 32,
+      "reversed_vertex_labeling_check": "PASS",
+      "signed_Burnside_numerator": 7680
+    },
+    {
+      "class": "C21_7plus3",
+      "direct_full_even_graph_types": 4,
+      "direct_full_graph_types": 16,
+      "direct_full_tournament_types": 4,
+      "n": 10,
+      "normalizer_order": 252,
+      "ordinary_Burnside_numerator": 1008,
+      "relative_orbits_each": 4,
+      "reversed_vertex_labeling_check": "PASS",
+      "signed_Burnside_numerator": 1008
+    },
+    {
+      "class": "F21_diagonal_7plus3",
+      "direct_full_even_graph_types": 2,
+      "direct_full_graph_types": 8,
+      "direct_full_tournament_types": 2,
+      "n": 10,
+      "normalizer_order": 126,
+      "ordinary_Burnside_numerator": 504,
+      "relative_orbits_each": 4,
+      "reversed_vertex_labeling_check": "PASS",
+      "signed_Burnside_numerator": 504
+    },
+    {
+      "class": "F21_times_C3",
+      "direct_full_even_graph_types": 2,
+      "direct_full_graph_types": 8,
+      "direct_full_tournament_types": 2,
+      "n": 10,
+      "normalizer_order": 252,
+      "ordinary_Burnside_numerator": 504,
+      "relative_orbits_each": 2,
+      "reversed_vertex_labeling_check": "PASS",
+      "signed_Burnside_numerator": 504
+    }
+  ],
+  "status": "PASS"
+}

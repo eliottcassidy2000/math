@@ -1,0 +1,97 @@
+{
+  "checks": 14122,
+  "rows": [
+    {
+      "graph_types": 2,
+      "group": "F21_fixed",
+      "largest_full_graph_automorphism_order": 5040,
+      "n": 7,
+      "sign_even_graph_types": 1,
+      "stabilizer_chain_generators_tested": 56,
+      "tournament_types": 1
+    },
+    {
+      "graph_types": 4,
+      "group": "F21_fixed",
+      "largest_full_graph_automorphism_order": 40320,
+      "n": 8,
+      "sign_even_graph_types": 2,
+      "stabilizer_chain_generators_tested": 130,
+      "tournament_types": 2
+    },
+    {
+      "graph_types": 12,
+      "group": "C15_5plus3",
+      "largest_full_graph_automorphism_order": 40320,
+      "n": 8,
+      "sign_even_graph_types": 2,
+      "stabilizer_chain_generators_tested": 262,
+      "tournament_types": 2
+    },
+    {
+      "graph_types": 12,
+      "group": "F21_fixed",
+      "largest_full_graph_automorphism_order": 362880,
+      "n": 9,
+      "sign_even_graph_types": 4,
+      "stabilizer_chain_generators_tested": 410,
+      "tournament_types": 4
+    },
+    {
+      "graph_types": 48,
+      "group": "C15_5plus3",
+      "largest_full_graph_automorphism_order": 362880,
+      "n": 9,
+      "sign_even_graph_types": 8,
+      "stabilizer_chain_generators_tested": 1112,
+      "tournament_types": 8
+    },
+    {
+      "graph_types": 40,
+      "group": "F21_fixed",
+      "largest_full_graph_automorphism_order": 3628800,
+      "n": 10,
+      "sign_even_graph_types": 12,
+      "stabilizer_chain_generators_tested": 1414,
+      "tournament_types": 12
+    },
+    {
+      "graph_types": 238,
+      "group": "C15_5plus3",
+      "largest_full_graph_automorphism_order": 3628800,
+      "n": 10,
+      "sign_even_graph_types": 31,
+      "stabilizer_chain_generators_tested": 5726,
+      "tournament_types": 32
+    },
+    {
+      "graph_types": 16,
+      "group": "C21_7plus3",
+      "largest_full_graph_automorphism_order": 3628800,
+      "n": 10,
+      "sign_even_graph_types": 4,
+      "stabilizer_chain_generators_tested": 474,
+      "tournament_types": 4
+    },
+    {
+      "graph_types": 8,
+      "group": "F21_diagonal_7plus3",
+      "largest_full_graph_automorphism_order": 3628800,
+      "n": 10,
+      "sign_even_graph_types": 2,
+      "stabilizer_chain_generators_tested": 314,
+      "tournament_types": 2
+    },
+    {
+      "graph_types": 8,
+      "group": "F21_times_C3",
+      "largest_full_graph_automorphism_order": 3628800,
+      "n": 10,
+      "sign_even_graph_types": 2,
+      "stabilizer_chain_generators_tested": 314,
+      "tournament_types": 2
+    }
+  ],
+  "scope": "All fixed graph and tournament types in the ten census rows; independent isomorphism and complete automorphism-generator sign test.",
+  "status": "PASS"
+}

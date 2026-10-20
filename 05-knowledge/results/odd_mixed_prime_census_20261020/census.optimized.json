@@ -1,0 +1,2404 @@
+{
+  "checks": 306,
+  "class_counts_by_degree": {
+    "1": 0,
+    "10": 5,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 1,
+    "8": 2,
+    "9": 2
+  },
+  "prime_degree_controls": [
+    {
+      "all_cyclic_tournaments": 4,
+      "automorphism_order_histogram": {
+        "5": 4
+      },
+      "degree": 5,
+      "records": [
+        {
+          "automorphism_order": 5,
+          "mask": 76
+        },
+        {
+          "automorphism_order": 5,
+          "mask": 725
+        },
+        {
+          "automorphism_order": 5,
+          "mask": 298
+        },
+        {
+          "automorphism_order": 5,
+          "mask": 947
+        }
+      ]
+    },
+    {
+      "all_cyclic_tournaments": 8,
+      "automorphism_order_histogram": {
+        "7": 6,
+        "21": 2
+      },
+      "degree": 7,
+      "records": [
+        {
+          "automorphism_order": 7,
+          "mask": 17976
+        },
+        {
+          "automorphism_order": 7,
+          "mask": 1363545
+        },
+        {
+          "automorphism_order": 7,
+          "mask": 610986
+        },
+        {
+          "automorphism_order": 21,
+          "mask": 1956555
+        },
+        {
+          "automorphism_order": 21,
+          "mask": 140596
+        },
+        {
+          "automorphism_order": 7,
+          "mask": 1486165
+        },
+        {
+          "automorphism_order": 7,
+          "mask": 733606
+        },
+        {
+          "automorphism_order": 7,
+          "mask": 2079175
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "class": "F21_fixed",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 1
+      },
+      "even_graph_types": [
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "multiplicity": 1,
+          "representative_mask": 0,
+          "twin_class_sizes": [
+            7
+          ]
+        }
+      ],
+      "fixed_objects_each": 2,
+      "generators": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          0
+        ],
+        [
+          0,
+          2,
+          4,
+          6,
+          1,
+          3,
+          5
+        ]
+      ],
+      "n": 7,
+      "normalizer_order": 42,
+      "order": 21,
+      "pair_orbits": 1,
+      "relative_even_graph_orbits": 1,
+      "relative_tournament_orbits": 1,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "sign_escape_types": [],
+      "tau_E": 1,
+      "tau_T": 1,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 1
+      },
+      "tournament_types": [
+        {
+          "multiplicity": 1,
+          "representative_mask": 140596
+        }
+      ]
+    },
+    {
+      "class": "F21_fixed",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 2
+      },
+      "even_graph_types": [
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "multiplicity": 1,
+          "representative_mask": 0,
+          "twin_class_sizes": [
+            8
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            7
+          ],
+          "multiplicity": 1,
+          "representative_mask": 220336192,
+          "twin_class_sizes": [
+            1,
+            7
+          ]
+        }
+      ],
+      "fixed_objects_each": 4,
+      "generators": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          0,
+          7
+        ],
+        [
+          0,
+          2,
+          4,
+          6,
+          1,
+          3,
+          5,
+          7
+        ]
+      ],
+      "n": 8,
+      "normalizer_order": 42,
+      "order": 21,
+      "pair_orbits": 2,
+      "relative_even_graph_orbits": 2,
+      "relative_tournament_orbits": 2,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "sign_escape_types": [],
+      "tau_E": 2,
+      "tau_T": 2,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 2
+      },
+      "tournament_types": [
+        {
+          "multiplicity": 1,
+          "representative_mask": 1083956
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 221420148
+        }
+      ]
+    },
+    {
+      "class": "C15_5plus3",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 2
+      },
+      "even_graph_types": [
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "multiplicity": 1,
+          "representative_mask": 0,
+          "twin_class_sizes": [
+            8
+          ]
+        },
+        {
+          "degrees": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5
+          ],
+          "multiplicity": 1,
+          "representative_mask": 33266800,
+          "twin_class_sizes": [
+            3,
+            5
+          ]
+        }
+      ],
+      "fixed_objects_each": 16,
+      "generators": [
+        [
+          1,
+          2,
+          3,
+          4,
+          0,
+          5,
+          6,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          5
+        ]
+      ],
+      "n": 8,
+      "normalizer_order": 120,
+      "order": 15,
+      "pair_orbits": 4,
+      "relative_even_graph_orbits": 2,
+      "relative_tournament_orbits": 2,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "sign_escape_types": [],
+      "tau_E": 2,
+      "tau_T": 2,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 2
+      },
+      "tournament_types": [
+        {
+          "multiplicity": 1,
+          "representative_mask": 67109388
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 100376188
+        }
+      ]
+    },
+    {
+      "class": "F21_fixed",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 4
+      },
+      "even_graph_types": [
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "multiplicity": 1,
+          "representative_mask": 0,
+          "twin_class_sizes": [
+            9
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            7
+          ],
+          "multiplicity": 1,
+          "representative_mask": 11023163456,
+          "twin_class_sizes": [
+            1,
+            1,
+            7
+          ]
+        },
+        {
+          "degrees": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            7,
+            7
+          ],
+          "multiplicity": 1,
+          "representative_mask": 33069490368,
+          "twin_class_sizes": [
+            2,
+            7
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            8
+          ],
+          "multiplicity": 1,
+          "representative_mask": 45382901824,
+          "twin_class_sizes": [
+            1,
+            8
+          ]
+        }
+      ],
+      "fixed_objects_each": 16,
+      "generators": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          0,
+          7,
+          8
+        ],
+        [
+          0,
+          2,
+          4,
+          6,
+          1,
+          3,
+          5,
+          7,
+          8
+        ]
+      ],
+      "n": 9,
+      "normalizer_order": 84,
+      "order": 21,
+      "pair_orbits": 4,
+      "relative_even_graph_orbits": 4,
+      "relative_tournament_orbits": 4,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "sign_escape_types": [],
+      "tau_E": 4,
+      "tau_T": 4,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 4
+      },
+      "tournament_types": [
+        {
+          "multiplicity": 1,
+          "representative_mask": 8524852
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 11031688308
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 22054851764
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 33078015220
+        }
+      ]
+    },
+    {
+      "class": "C15_5plus3",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 8
+      },
+      "even_graph_types": [
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "multiplicity": 1,
+          "representative_mask": 0,
+          "twin_class_sizes": [
+            9
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5
+          ],
+          "multiplicity": 1,
+          "representative_mask": 500054128,
+          "twin_class_sizes": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            5
+          ],
+          "multiplicity": 1,
+          "representative_mask": 571490432,
+          "twin_class_sizes": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5
+          ],
+          "multiplicity": 1,
+          "representative_mask": 1071544560,
+          "twin_class_sizes": [
+            4,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            3
+          ],
+          "multiplicity": 1,
+          "representative_mask": 55834574848,
+          "twin_class_sizes": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            6,
+            6,
+            6
+          ],
+          "multiplicity": 1,
+          "representative_mask": 56334628976,
+          "twin_class_sizes": [
+            3,
+            6
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            8
+          ],
+          "multiplicity": 1,
+          "representative_mask": 56406065280,
+          "twin_class_sizes": [
+            1,
+            8
+          ]
+        },
+        {
+          "degrees": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6,
+            8
+          ],
+          "multiplicity": 1,
+          "representative_mask": 56906119408,
+          "twin_class_sizes": [
+            1,
+            3,
+            5
+          ]
+        }
+      ],
+      "fixed_objects_each": 64,
+      "generators": [
+        [
+          1,
+          2,
+          3,
+          4,
+          0,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          5,
+          8
+        ]
+      ],
+      "n": 9,
+      "normalizer_order": 120,
+      "order": 15,
+      "pair_orbits": 6,
+      "relative_even_graph_orbits": 8,
+      "relative_tournament_orbits": 8,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "sign_escape_types": [],
+      "tau_E": 8,
+      "tau_T": 8,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 8
+      },
+      "tournament_types": [
+        {
+          "multiplicity": 1,
+          "representative_mask": 2147484684
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 2647538812
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 2718975116
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 3219029244
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 57982059532
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 58482113660
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 58553549964
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 59053604092
+        }
+      ]
+    },
+    {
+      "class": "F21_fixed",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 12
+      },
+      "even_graph_types": [
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "multiplicity": 1,
+          "representative_mask": 0,
+          "twin_class_sizes": [
+            10
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            7
+          ],
+          "multiplicity": 1,
+          "representative_mask": 622906589248,
+          "twin_class_sizes": [
+            1,
+            2,
+            7
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            7,
+            7
+          ],
+          "multiplicity": 1,
+          "representative_mask": 1868719767744,
+          "twin_class_sizes": [
+            1,
+            2,
+            7
+          ]
+        },
+        {
+          "degrees": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            7,
+            7,
+            7
+          ],
+          "multiplicity": 1,
+          "representative_mask": 4360346124736,
+          "twin_class_sizes": [
+            3,
+            7
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            8
+          ],
+          "multiplicity": 1,
+          "representative_mask": 5020953100352,
+          "twin_class_sizes": [
+            1,
+            1,
+            8
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            7,
+            8
+          ],
+          "multiplicity": 1,
+          "representative_mask": 7512579457344,
+          "twin_class_sizes": [
+            1,
+            1,
+            1,
+            7
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            2
+          ],
+          "multiplicity": 1,
+          "representative_mask": 13194139533312,
+          "twin_class_sizes": [
+            1,
+            2,
+            7
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            9
+          ],
+          "multiplicity": 1,
+          "representative_mask": 13817046122560,
+          "twin_class_sizes": [
+            1,
+            9
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            8
+          ],
+          "multiplicity": 1,
+          "representative_mask": 14439952711808,
+          "twin_class_sizes": [
+            1,
+            1,
+            1,
+            7
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            8,
+            9
+          ],
+          "multiplicity": 1,
+          "representative_mask": 15062859301056,
+          "twin_class_sizes": [
+            1,
+            1,
+            1,
+            7
+          ]
+        },
+        {
+          "degrees": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            8,
+            8
+          ],
+          "multiplicity": 1,
+          "representative_mask": 16931579068800,
+          "twin_class_sizes": [
+            2,
+            8
+          ]
+        },
+        {
+          "degrees": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            8,
+            8,
+            9
+          ],
+          "multiplicity": 1,
+          "representative_mask": 17554485658048,
+          "twin_class_sizes": [
+            1,
+            2,
+            7
+          ]
+        }
+      ],
+      "fixed_objects_each": 128,
+      "generators": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          0,
+          7,
+          8,
+          9
+        ],
+        [
+          0,
+          2,
+          4,
+          6,
+          1,
+          3,
+          5,
+          7,
+          8,
+          9
+        ]
+      ],
+      "n": 10,
+      "normalizer_order": 252,
+      "order": 21,
+      "pair_orbits": 7,
+      "relative_even_graph_orbits": 12,
+      "relative_tournament_orbits": 12,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "sign_escape_types": [],
+      "tau_E": 12,
+      "tau_T": 12,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 12
+      },
+      "tournament_types": [
+        {
+          "multiplicity": 1,
+          "representative_mask": 67643444
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 622974232692
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 1245880821940
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 1868787411188
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 2491694000436
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 3114600589684
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 3737507178932
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 4360413768180
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 8796160665652
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 9419067254900
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 10664880433396
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 13156506790388
+        }
+      ]
+    },
+    {
+      "class": "C15_5plus3",
+      "difference": 1,
+      "escape_graph_multiplicity_histogram": {
+        "1": 1
+      },
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 31
+      },
+      "even_graph_types": [
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "multiplicity": 1,
+          "representative_mask": 0,
+          "twin_class_sizes": [
+            10
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            0,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5
+          ],
+          "multiplicity": 1,
+          "representative_mask": 7754772592,
+          "twin_class_sizes": [
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            5
+          ],
+          "multiplicity": 1,
+          "representative_mask": 8862597248,
+          "twin_class_sizes": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5,
+            5,
+            5,
+            5
+          ],
+          "multiplicity": 1,
+          "representative_mask": 16617369840,
+          "twin_class_sizes": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            2,
+            2,
+            2,
+            2,
+            2,
+            5,
+            5
+          ],
+          "multiplicity": 1,
+          "representative_mask": 26587791744,
+          "twin_class_sizes": [
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            3
+          ],
+          "multiplicity": 1,
+          "representative_mask": 5634997092352,
+          "twin_class_sizes": [
+            1,
+            3,
+            6
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            6,
+            6,
+            6
+          ],
+          "multiplicity": 1,
+          "representative_mask": 5642751864944,
+          "twin_class_sizes": [
+            1,
+            3,
+            6
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            8
+          ],
+          "multiplicity": 1,
+          "representative_mask": 5643859689600,
+          "twin_class_sizes": [
+            1,
+            1,
+            8
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            4,
+            4,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6,
+            8
+          ],
+          "multiplicity": 1,
+          "representative_mask": 5651614462192,
+          "twin_class_sizes": [
+            1,
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3,
+            5
+          ],
+          "multiplicity": 1,
+          "representative_mask": 5652722286848,
+          "twin_class_sizes": [
+            1,
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5,
+            6,
+            6,
+            6
+          ],
+          "multiplicity": 1,
+          "representative_mask": 5660477059440,
+          "twin_class_sizes": [
+            1,
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            5,
+            8
+          ],
+          "multiplicity": 1,
+          "representative_mask": 5661584884096,
+          "twin_class_sizes": [
+            1,
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            6,
+            8
+          ],
+          "multiplicity": 1,
+          "representative_mask": 5669339656688,
+          "twin_class_sizes": [
+            1,
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            2,
+            3,
+            3
+          ],
+          "multiplicity": 1,
+          "representative_mask": 16904991277056,
+          "twin_class_sizes": [
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            7,
+            7,
+            7
+          ],
+          "multiplicity": 1,
+          "representative_mask": 16912746049648,
+          "twin_class_sizes": [
+            3,
+            7
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            3,
+            8
+          ],
+          "multiplicity": 1,
+          "representative_mask": 16913853874304,
+          "twin_class_sizes": [
+            1,
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            7,
+            7,
+            7,
+            8
+          ],
+          "multiplicity": 1,
+          "representative_mask": 16921608646896,
+          "twin_class_sizes": [
+            1,
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            8,
+            8
+          ],
+          "multiplicity": 1,
+          "representative_mask": 16931579068800,
+          "twin_class_sizes": [
+            2,
+            8
+          ]
+        },
+        {
+          "degrees": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            7,
+            7,
+            7,
+            8,
+            8
+          ],
+          "multiplicity": 1,
+          "representative_mask": 16939333841392,
+          "twin_class_sizes": [
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            6
+          ],
+          "multiplicity": 1,
+          "representative_mask": 17601048641664,
+          "twin_class_sizes": [
+            1,
+            3,
+            6
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            4,
+            4,
+            4,
+            4,
+            4,
+            5,
+            5,
+            5,
+            6
+          ],
+          "multiplicity": 1,
+          "representative_mask": 17608803414256,
+          "twin_class_sizes": [
+            1,
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            4
+          ],
+          "multiplicity": 1,
+          "representative_mask": 23227183136768,
+          "twin_class_sizes": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            6,
+            6,
+            6
+          ],
+          "multiplicity": 1,
+          "representative_mask": 23234937909360,
+          "twin_class_sizes": [
+            1,
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            9
+          ],
+          "multiplicity": 1,
+          "representative_mask": 23236045734016,
+          "twin_class_sizes": [
+            1,
+            9
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            4,
+            4,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6,
+            9
+          ],
+          "multiplicity": 1,
+          "representative_mask": 23243800506608,
+          "twin_class_sizes": [
+            1,
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            4,
+            6
+          ],
+          "multiplicity": 1,
+          "representative_mask": 23244908331264,
+          "twin_class_sizes": [
+            1,
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6,
+            6
+          ],
+          "multiplicity": 1,
+          "representative_mask": 23252663103856,
+          "twin_class_sizes": [
+            4,
+            6
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            6,
+            9
+          ],
+          "multiplicity": 1,
+          "representative_mask": 23253770928512,
+          "twin_class_sizes": [
+            1,
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            6,
+            6,
+            6,
+            6,
+            9
+          ],
+          "multiplicity": 1,
+          "representative_mask": 23261525701104,
+          "twin_class_sizes": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            4,
+            9
+          ],
+          "multiplicity": 1,
+          "representative_mask": 34506039918720,
+          "twin_class_sizes": [
+            1,
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "degrees": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            7,
+            7,
+            7,
+            9
+          ],
+          "multiplicity": 1,
+          "representative_mask": 34513794691312,
+          "twin_class_sizes": [
+            1,
+            3,
+            6
+          ]
+        }
+      ],
+      "fixed_objects_each": 512,
+      "generators": [
+        [
+          1,
+          2,
+          3,
+          4,
+          0,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          5,
+          8,
+          9
+        ]
+      ],
+      "n": 10,
+      "normalizer_order": 240,
+      "order": 15,
+      "pair_orbits": 9,
+      "relative_even_graph_orbits": 32,
+      "relative_tournament_orbits": 32,
+      "sign_escape_global_types": 1,
+      "sign_escape_relative_orbits": 1,
+      "sign_escape_types": [
+        {
+          "degrees": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          "multiplicity": 1,
+          "odd_automorphism": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "representative_mask": 34342564336,
+          "twin_class_sizes": [
+            5,
+            5
+          ]
+        }
+      ],
+      "tau_E": 31,
+      "tau_T": 32,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 32
+      },
+      "tournament_types": [
+        {
+          "multiplicity": 1,
+          "representative_mask": 68719478796
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 76474251388
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 77582076044
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 85336848636
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 86444673292
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 94199445884
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 95307270540
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 103062043132
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 5703716571148
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 5711471343740
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 5712579168396
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 5720333940988
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 5721441765644
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 5729196538236
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 5730304362892
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 5738059135484
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 11338713663500
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 11346468436092
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 11347576260748
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 11355331033340
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 11356438857996
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 11364193630588
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 11365301455244
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 11373056227836
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 16973710755852
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 16981465528444
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 16982573353100
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 16990328125692
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 16991435950348
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 16999190722940
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 17000298547596
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 17008053320188
+        }
+      ]
+    },
+    {
+      "class": "C21_7plus3",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 4
+      },
+      "even_graph_types": [
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "multiplicity": 1,
+          "representative_mask": 0,
+          "twin_class_sizes": [
+            10
+          ]
+        },
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "multiplicity": 1,
+          "representative_mask": 2249997342,
+          "twin_class_sizes": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3
+          ]
+        },
+        {
+          "degrees": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            7,
+            7,
+            7
+          ],
+          "multiplicity": 1,
+          "representative_mask": 4360346124736,
+          "twin_class_sizes": [
+            3,
+            7
+          ]
+        },
+        {
+          "degrees": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ],
+          "multiplicity": 1,
+          "representative_mask": 4362596122078,
+          "twin_class_sizes": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3
+          ]
+        }
+      ],
+      "fixed_objects_each": 32,
+      "generators": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          0,
+          7,
+          8,
+          9
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          7
+        ]
+      ],
+      "n": 10,
+      "normalizer_order": 252,
+      "order": 21,
+      "pair_orbits": 5,
+      "relative_even_graph_orbits": 4,
+      "relative_tournament_orbits": 4,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "sign_escape_types": [],
+      "tau_E": 4,
+      "tau_T": 4,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 4
+      },
+      "tournament_types": [
+        {
+          "multiplicity": 1,
+          "representative_mask": 8796094083128
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 8796160665652
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 13156440207864
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 13156506790388
+        }
+      ]
+    },
+    {
+      "class": "F21_diagonal_7plus3",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {
+        "1": 2
+      },
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 2
+      },
+      "even_graph_types": [
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "multiplicity": 1,
+          "representative_mask": 0,
+          "twin_class_sizes": [
+            10
+          ]
+        },
+        {
+          "degrees": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            7,
+            7,
+            7
+          ],
+          "multiplicity": 1,
+          "representative_mask": 4360346124736,
+          "twin_class_sizes": [
+            3,
+            7
+          ]
+        }
+      ],
+      "fixed_objects_each": 8,
+      "generators": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          0,
+          7,
+          8,
+          9
+        ],
+        [
+          0,
+          2,
+          4,
+          6,
+          1,
+          3,
+          5,
+          8,
+          9,
+          7
+        ]
+      ],
+      "n": 10,
+      "normalizer_order": 126,
+      "order": 21,
+      "pair_orbits": 3,
+      "relative_even_graph_orbits": 4,
+      "relative_tournament_orbits": 4,
+      "sign_escape_global_types": 2,
+      "sign_escape_relative_orbits": 2,
+      "sign_escape_types": [
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            2
+          ],
+          "multiplicity": 1,
+          "odd_automorphism": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            7,
+            9
+          ],
+          "representative_mask": 30786325577728,
+          "twin_class_sizes": [
+            3,
+            7
+          ]
+        },
+        {
+          "degrees": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            9,
+            9,
+            9
+          ],
+          "multiplicity": 1,
+          "odd_automorphism": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            7,
+            9
+          ],
+          "representative_mask": 35146671702464,
+          "twin_class_sizes": [
+            3,
+            7
+          ]
+        }
+      ],
+      "tau_E": 2,
+      "tau_T": 2,
+      "tournament_fusion_defect": 2,
+      "tournament_multiplicity_histogram": {
+        "2": 2
+      },
+      "tournament_types": [
+        {
+          "multiplicity": 2,
+          "representative_mask": 8796160665652
+        },
+        {
+          "multiplicity": 2,
+          "representative_mask": 13156506790388
+        }
+      ]
+    },
+    {
+      "class": "F21_times_C3",
+      "difference": 0,
+      "escape_graph_multiplicity_histogram": {},
+      "even_graph_fusion_defect": 0,
+      "even_graph_multiplicity_histogram": {
+        "1": 2
+      },
+      "even_graph_types": [
+        {
+          "degrees": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "multiplicity": 1,
+          "representative_mask": 0,
+          "twin_class_sizes": [
+            10
+          ]
+        },
+        {
+          "degrees": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            7,
+            7,
+            7
+          ],
+          "multiplicity": 1,
+          "representative_mask": 4360346124736,
+          "twin_class_sizes": [
+            3,
+            7
+          ]
+        }
+      ],
+      "fixed_objects_each": 8,
+      "generators": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          0,
+          7,
+          8,
+          9
+        ],
+        [
+          0,
+          2,
+          4,
+          6,
+          1,
+          3,
+          5,
+          7,
+          8,
+          9
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          7
+        ]
+      ],
+      "n": 10,
+      "normalizer_order": 252,
+      "order": 63,
+      "pair_orbits": 3,
+      "relative_even_graph_orbits": 2,
+      "relative_tournament_orbits": 2,
+      "sign_escape_global_types": 0,
+      "sign_escape_relative_orbits": 0,
+      "sign_escape_types": [],
+      "tau_E": 2,
+      "tau_T": 2,
+      "tournament_fusion_defect": 0,
+      "tournament_multiplicity_histogram": {
+        "1": 2
+      },
+      "tournament_types": [
+        {
+          "multiplicity": 1,
+          "representative_mask": 8796160665652
+        },
+        {
+          "multiplicity": 1,
+          "representative_mask": 13156506790388
+        }
+      ]
+    }
+  ],
+  "scope": "all odd non-prime-power subgroups H <= S_n, 1 <= n <= 10, up to S_n-conjugacy; completeness proof in README.md",
+  "status": "PASS"
+}
