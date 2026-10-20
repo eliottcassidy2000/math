@@ -1,0 +1,30 @@
+{
+  "checker_read_in_full": true,
+  "checker_rerun": false,
+  "date_utc": "2026-10-20",
+  "external_source": {
+    "section": "2.2, Theorem 2.6",
+    "status": "CITED",
+    "url": "https://arxiv.org/html/2508.12924v2"
+  },
+  "final_odd_degree_restriction_reviewed": true,
+  "normal_optimized_receipts_identical": true,
+  "reported_checks": 8063,
+  "reported_field_degrees": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "source_hashes": {
+    "ARTIN_SCHREIER_AND_CRITICAL_PERIODS.md": "952b8a3ae29f5737f2015ee920b70fad3635585c574b40e5667b5959020ae6f7",
+    "check_artin_routing.py": "43804e15e3ac0ad5f88a3c46b223fd2f286a8db18ef2bec00e6ff00687ff088d",
+    "verification.json": "c401804b9bac99c843957a0090ca259f7f6668dbcdd557f85ddc53ea961ed439",
+    "verification_optimized.json": "c401804b9bac99c843957a0090ca259f7f6668dbcdd557f85ddc53ea961ed439"
+  },
+  "status": "PASS"
+}

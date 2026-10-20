@@ -1,0 +1,262 @@
+{
+  "status": "PASS",
+  "checks": 8063,
+  "fields": [
+    {
+      "m": 1,
+      "modulus": 3,
+      "orbits": 2,
+      "source_count": 1,
+      "branch_count": 1,
+      "depth": 1,
+      "max_steps": 1,
+      "pairs": [
+        {
+          "source_polynomial": 3,
+          "target_polynomial": 2
+        }
+      ]
+    },
+    {
+      "m": 2,
+      "modulus": 7,
+      "orbits": 3,
+      "source_count": 1,
+      "branch_count": 1,
+      "depth": 2,
+      "max_steps": 2,
+      "pairs": [
+        {
+          "source_polynomial": 7,
+          "target_polynomial": 2
+        }
+      ]
+    },
+    {
+      "m": 3,
+      "modulus": 11,
+      "orbits": 4,
+      "source_count": 2,
+      "branch_count": 2,
+      "depth": 1,
+      "max_steps": 1,
+      "pairs": [
+        {
+          "source_polynomial": 3,
+          "target_polynomial": 2
+        },
+        {
+          "source_polynomial": 13,
+          "target_polynomial": 11
+        }
+      ]
+    },
+    {
+      "m": 4,
+      "modulus": 19,
+      "orbits": 6,
+      "source_count": 2,
+      "branch_count": 2,
+      "depth": 4,
+      "max_steps": 4,
+      "pairs": [
+        {
+          "source_polynomial": 31,
+          "target_polynomial": 19
+        },
+        {
+          "source_polynomial": 25,
+          "target_polynomial": 2
+        }
+      ]
+    },
+    {
+      "m": 5,
+      "modulus": 37,
+      "orbits": 8,
+      "source_count": 4,
+      "branch_count": 4,
+      "depth": 1,
+      "max_steps": 1,
+      "pairs": [
+        {
+          "source_polynomial": 3,
+          "target_polynomial": 2
+        },
+        {
+          "source_polynomial": 55,
+          "target_polynomial": 47
+        },
+        {
+          "source_polynomial": 59,
+          "target_polynomial": 41
+        },
+        {
+          "source_polynomial": 61,
+          "target_polynomial": 37
+        }
+      ]
+    },
+    {
+      "m": 6,
+      "modulus": 67,
+      "orbits": 14,
+      "source_count": 6,
+      "branch_count": 6,
+      "depth": 2,
+      "max_steps": 2,
+      "pairs": [
+        {
+          "source_polynomial": 103,
+          "target_polynomial": 67
+        },
+        {
+          "source_polynomial": 97,
+          "target_polynomial": 73
+        },
+        {
+          "source_polynomial": 109,
+          "target_polynomial": 11
+        },
+        {
+          "source_polynomial": 117,
+          "target_polynomial": 91
+        },
+        {
+          "source_polynomial": 115,
+          "target_polynomial": 87
+        },
+        {
+          "source_polynomial": 7,
+          "target_polynomial": 2
+        }
+      ]
+    },
+    {
+      "m": 7,
+      "modulus": 131,
+      "orbits": 20,
+      "source_count": 10,
+      "branch_count": 10,
+      "depth": 1,
+      "max_steps": 1,
+      "pairs": [
+        {
+          "source_polynomial": 3,
+          "target_polynomial": 2
+        },
+        {
+          "source_polynomial": 253,
+          "target_polynomial": 131
+        },
+        {
+          "source_polynomial": 193,
+          "target_polynomial": 143
+        },
+        {
+          "source_polynomial": 213,
+          "target_polynomial": 167
+        },
+        {
+          "source_polynomial": 211,
+          "target_polynomial": 191
+        },
+        {
+          "source_polynomial": 203,
+          "target_polynomial": 145
+        },
+        {
+          "source_polynomial": 247,
+          "target_polynomial": 157
+        },
+        {
+          "source_polynomial": 229,
+          "target_polynomial": 185
+        },
+        {
+          "source_polynomial": 239,
+          "target_polynomial": 171
+        },
+        {
+          "source_polynomial": 241,
+          "target_polynomial": 137
+        }
+      ]
+    },
+    {
+      "m": 8,
+      "modulus": 285,
+      "orbits": 36,
+      "source_count": 16,
+      "branch_count": 16,
+      "depth": 8,
+      "max_steps": 8,
+      "pairs": [
+        {
+          "source_polynomial": 499,
+          "target_polynomial": 301
+        },
+        {
+          "source_polynomial": 395,
+          "target_polynomial": 379
+        },
+        {
+          "source_polynomial": 451,
+          "target_polynomial": 351
+        },
+        {
+          "source_polynomial": 425,
+          "target_polynomial": 319
+        },
+        {
+          "source_polynomial": 471,
+          "target_polynomial": 375
+        },
+        {
+          "source_polynomial": 445,
+          "target_polynomial": 355
+        },
+        {
+          "source_polynomial": 391,
+          "target_polynomial": 2
+        },
+        {
+          "source_polynomial": 505,
+          "target_polynomial": 283
+        },
+        {
+          "source_polynomial": 397,
+          "target_polynomial": 357
+        },
+        {
+          "source_polynomial": 501,
+          "target_polynomial": 313
+        },
+        {
+          "source_polynomial": 487,
+          "target_polynomial": 285
+        },
+        {
+          "source_polynomial": 415,
+          "target_polynomial": 299
+        },
+        {
+          "source_polynomial": 477,
+          "target_polynomial": 333
+        },
+        {
+          "source_polynomial": 433,
+          "target_polynomial": 361
+        },
+        {
+          "source_polynomial": 419,
+          "target_polynomial": 19
+        },
+        {
+          "source_polynomial": 463,
+          "target_polynomial": 369
+        }
+      ]
+    }
+  ]
+}
