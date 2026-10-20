@@ -1,0 +1,115 @@
+{
+  "checks": 4544,
+  "hostile_control": {
+    "closed_surface": false,
+    "f_vector": [
+      3,
+      3,
+      1
+    ],
+    "field_order": 2,
+    "reason": "The sign quotient degenerates and every edge has only one incident triangle."
+  },
+  "runs": [
+    {
+      "SL2Fp_stabilizer_order": 24,
+      "SL2_order": 24,
+      "characteristic": 3,
+      "component_f_vector": [
+        4,
+        6,
+        4
+      ],
+      "component_genus": 0,
+      "components_per_original_vertex": 1,
+      "edges": 6,
+      "euler_characteristic": 2,
+      "extension_degree": 1,
+      "field_model": "integers modulo p",
+      "field_order": 3,
+      "graph_connected": true,
+      "link_cycle_lengths": [
+        3
+      ],
+      "normalization_components": 1,
+      "triangles": 4,
+      "vertices": 4
+    },
+    {
+      "SL2Fp_stabilizer_order": 120,
+      "SL2_order": 120,
+      "characteristic": 5,
+      "component_f_vector": [
+        12,
+        30,
+        20
+      ],
+      "component_genus": 0,
+      "components_per_original_vertex": 1,
+      "edges": 30,
+      "euler_characteristic": 2,
+      "extension_degree": 1,
+      "field_model": "integers modulo p",
+      "field_order": 5,
+      "graph_connected": true,
+      "link_cycle_lengths": [
+        5
+      ],
+      "normalization_components": 1,
+      "triangles": 20,
+      "vertices": 12
+    },
+    {
+      "SL2Fp_stabilizer_order": 336,
+      "SL2_order": 336,
+      "characteristic": 7,
+      "component_f_vector": [
+        24,
+        84,
+        56
+      ],
+      "component_genus": 3,
+      "components_per_original_vertex": 1,
+      "edges": 84,
+      "euler_characteristic": -4,
+      "extension_degree": 1,
+      "field_model": "integers modulo p",
+      "field_order": 7,
+      "graph_connected": true,
+      "link_cycle_lengths": [
+        7
+      ],
+      "normalization_components": 1,
+      "triangles": 56,
+      "vertices": 24
+    },
+    {
+      "SL2Fp_stabilizer_order": 24,
+      "SL2_order": 720,
+      "characteristic": 3,
+      "component_f_vector": [
+        4,
+        6,
+        4
+      ],
+      "component_genus": 0,
+      "components_per_original_vertex": 3,
+      "edges": 180,
+      "euler_characteristic": -20,
+      "extension_degree": 2,
+      "field_model": "F3[t]/(t^2+1); a+3b encodes a+b*t",
+      "field_order": 9,
+      "graph_connected": true,
+      "link_cycle_lengths": [
+        3,
+        3,
+        3
+      ],
+      "normalization_components": 30,
+      "triangles": 120,
+      "vertices": 40
+    }
+  ],
+  "scope": "Finite-exact controls only; uniform proof is in FINITE_FIELD_SURFACES.md.",
+  "status": "PASS"
+}

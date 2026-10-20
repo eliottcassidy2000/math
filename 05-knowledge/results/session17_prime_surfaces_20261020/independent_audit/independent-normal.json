@@ -1,0 +1,142 @@
+{
+  "checks": {
+    "F9_SL2_counts": 1,
+    "F9_cosets_equal_dual_surface_components": 1,
+    "F9_distinct_planes_share_no_edges": 435,
+    "F9_each_plane_is_one_left_coset_gH": 30,
+    "F9_singular_complex_homology": 1,
+    "F9_thirty_tetrahedral_boundaries_not_filled": 1,
+    "branches_through_each_vertex": 5,
+    "coherent_orientation_cancels_every_edge": 5,
+    "f_vector": 5,
+    "graph_connected": 5,
+    "graph_degree_q": 5,
+    "homology_after_vertex_identifications": 5,
+    "homology_component_fundamental_classes": 5,
+    "link_components_are_p_cycles": 140,
+    "link_degree_two": 140,
+    "normalization_component_number": 5,
+    "normalization_surface_f_vector": 34,
+    "orientation_is_cyclic": 420,
+    "p3_boundary_not_clique_complex": 1,
+    "prime_surface_homology": 4,
+    "two_faces_per_edge": 5,
+    "unique_triangle_orientation": 420
+  },
+  "runs": [
+    {
+      "betti_mod3": [
+        1,
+        0,
+        1
+      ],
+      "characteristic": 3,
+      "coset_summary": null,
+      "f_vector": [
+        4,
+        6,
+        4
+      ],
+      "field_order": 3,
+      "genus_per_normalized_component": 0,
+      "link_lengths": [
+        3
+      ],
+      "normalization_components": 1,
+      "vertex_branches": 1
+    },
+    {
+      "betti_mod3": [
+        1,
+        0,
+        1
+      ],
+      "characteristic": 5,
+      "coset_summary": null,
+      "f_vector": [
+        12,
+        30,
+        20
+      ],
+      "field_order": 5,
+      "genus_per_normalized_component": 0,
+      "link_lengths": [
+        5
+      ],
+      "normalization_components": 1,
+      "vertex_branches": 1
+    },
+    {
+      "betti_mod3": [
+        1,
+        6,
+        1
+      ],
+      "characteristic": 7,
+      "coset_summary": null,
+      "f_vector": [
+        24,
+        84,
+        56
+      ],
+      "field_order": 7,
+      "genus_per_normalized_component": 3,
+      "link_lengths": [
+        7
+      ],
+      "normalization_components": 1,
+      "vertex_branches": 1
+    },
+    {
+      "betti_mod3": [
+        1,
+        52,
+        1
+      ],
+      "characteristic": 11,
+      "coset_summary": null,
+      "f_vector": [
+        60,
+        330,
+        220
+      ],
+      "field_order": 11,
+      "genus_per_normalized_component": 26,
+      "link_lengths": [
+        11
+      ],
+      "normalization_components": 1,
+      "vertex_branches": 1
+    },
+    {
+      "betti_mod3": [
+        1,
+        51,
+        30
+      ],
+      "characteristic": 3,
+      "coset_summary": {
+        "K4_cliques_not_filled": 30,
+        "SL2_F3": 24,
+        "SL2_F9": 720,
+        "left_cosets": 30
+      },
+      "f_vector": [
+        40,
+        180,
+        120
+      ],
+      "field_order": 9,
+      "genus_per_normalized_component": 0,
+      "link_lengths": [
+        3,
+        3,
+        3
+      ],
+      "normalization_components": 30,
+      "vertex_branches": 3
+    }
+  ],
+  "status": "PASS",
+  "total_checks": 1673
+}

@@ -1,0 +1,20 @@
+{
+  "checked_utc": "2026-10-20",
+  "primary_source": {
+    "author": "Bogdan Nica",
+    "title": "Unimodular graphs and Eisenstein sums",
+    "arxiv": "1505.05034v2",
+    "url": "https://arxiv.org/pdf/1505.05034",
+    "locator": "Section 1.3, printed page 5; Section 8, printed page 15",
+    "imported": "The graph with nonzero vectors over a finite field modulo sign and determinant plus or minus one adjacency is the established Platonic graph over that field.",
+    "not_imported": ["Spectral theorems", "Modular-curve identification", "Any assertion of priority for the normalization proof"]
+  },
+  "secondary_provenance_pointer_not_proof_dependency": {
+    "authors": ["M. DeDeo", "D. Lanphier", "M. Minei"],
+    "title": "The spectrum of Platonic graphs over finite fields",
+    "journal": "Discrete Mathematics 307 (2007), 1074-1081",
+    "locator": "Nica reference [11]",
+    "full_text_checked": false
+  },
+  "priority_status": "No novelty claim for either the graph family or the normalization result. The latter is proved directly in this addendum."
+}
