@@ -1,0 +1,13 @@
+FINITE-EXACT: weighted-core run-shuffle transport.
+Multiset shuffle rank/unrank words (length <=7, alphabet <=3): 2785
+Complete fixed-path cubes n=1..6: states = 1100
+Exact reflection/tau/renormalization and compressed blue controls = 1100
+Endpoint closure controls (including tau flip, n>=3) = 1098
+Dilation controls = 2200 ; unique decorated-root controls = 1109
+Admissible single-clone endpoint growth controls = 5164
+Equal inversion profiles: A-shuffles1221/2112, weights(4,1,2).
+Both inversion-hostile presentations are OPEN; endpoint bit also agrees.
+Tau degree multisets: [[1, 2, 3, 3, 3, 4, 5], [1, 2, 2, 4, 4, 4, 4]]
+Lexicographic multiset ranks: 2 3
+Unbounded-growth theorem controls: one core vertex -> N core vertices, N=5..100.
+PASS: no assertions; all checks survive optimized Python.

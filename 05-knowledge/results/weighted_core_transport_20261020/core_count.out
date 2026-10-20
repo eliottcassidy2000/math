@@ -1,0 +1,69 @@
+FINITE-EXACT: all pair-free tournament cores through order 7.
+Weight orbits generated constructively by increment/canonicalize through total 12.
+
+core_order=1: all_classes=1, pair_free_cores=1
+self_converse_cores= 1 automorphism_mass= 1 labelled_cores= 1
+core automorphism cycle-index histogram: [((1, (((1,), 1),)), 1)]
+
+core_order=2: all_classes=1, pair_free_cores=0
+self_converse_cores= 0 automorphism_mass= 0 labelled_cores= 0
+core automorphism cycle-index histogram: []
+
+core_order=3: all_classes=2, pair_free_cores=1
+self_converse_cores= 1 automorphism_mass= 1/3 labelled_cores= 2
+core automorphism cycle-index histogram: [((3, (((1, 1, 1), 1), ((3,), 2))), 1)]
+
+core_order=4: all_classes=4, pair_free_cores=2
+self_converse_cores= 0 automorphism_mass= 2/3 labelled_cores= 16
+core automorphism cycle-index histogram: [((3, (((1, 1, 1, 1), 1), ((1, 3), 2))), 2)]
+
+core_order=5: all_classes=12, pair_free_cores=5
+self_converse_cores= 5 automorphism_mass= 43/15 labelled_cores= 344
+core automorphism cycle-index histogram: [((1, (((1, 1, 1, 1, 1), 1),)), 2), ((3, (((1, 1, 1, 1, 1), 1), ((1, 1, 3), 2))), 2), ((5, (((1, 1, 1, 1, 1), 1), ((5,), 4))), 1)]
+
+core_order=6: all_classes=56, pair_free_cores=26
+self_converse_cores= 4 automorphism_mass= 908/45 labelled_cores= 14528
+core automorphism cycle-index histogram: [((1, (((1, 1, 1, 1, 1, 1), 1),)), 18), ((3, (((1, 1, 1, 1, 1, 1), 1), ((1, 1, 1, 3), 2))), 4), ((3, (((1, 1, 1, 1, 1, 1), 1), ((3, 3), 2))), 1), ((5, (((1, 1, 1, 1, 1, 1), 1), ((1, 5), 4))), 2), ((9, (((1, 1, 1, 1, 1, 1), 1), ((1, 1, 1, 3), 4), ((3, 3), 4))), 1)]
+
+core_order=7: all_classes=456, pair_free_cores=255
+self_converse_cores= 69 automorphism_mass= 73301/315 labelled_cores= 1172816
+core automorphism cycle-index histogram: [((1, (((1, 1, 1, 1, 1, 1, 1), 1),)), 224), ((3, (((1, 1, 1, 1, 1, 1, 1), 1), ((1, 1, 1, 1, 3), 2))), 18), ((3, (((1, 1, 1, 1, 1, 1, 1), 1), ((1, 3, 3), 2))), 5), ((5, (((1, 1, 1, 1, 1, 1, 1), 1), ((1, 1, 5), 4))), 2), ((7, (((1, 1, 1, 1, 1, 1, 1), 1), ((7,), 6))), 1), ((9, (((1, 1, 1, 1, 1, 1, 1), 1), ((1, 1, 1, 1, 3), 4), ((1, 3, 3), 4))), 4), ((21, (((1, 1, 1, 1, 1, 1, 1), 1), ((1, 3, 3), 14), ((7,), 6))), 1)]
+
+EXACT TRIANGULAR COUNT: row n lists core_order: contribution.
+n= 1 contributions= [(1, 1)] A(n)= 1 gcd_primitive= 1
+self_converse= 1 merged= 1
+n= 2 contributions= [(1, 1)] A(n)= 1 gcd_primitive= 0
+self_converse= 1 merged= 1
+n= 3 contributions= [(1, 1), (3, 1)] A(n)= 2 gcd_primitive= 1
+self_converse= 2 merged= 2
+n= 4 contributions= [(1, 1), (3, 1), (4, 2)] A(n)= 4 gcd_primitive= 3
+self_converse= 2 merged= 3
+n= 5 contributions= [(1, 1), (3, 2), (4, 4), (5, 5)] A(n)= 12 gcd_primitive= 11
+self_converse= 8 merged= 10
+n= 6 contributions= [(1, 1), (3, 4), (4, 8), (5, 17), (6, 26)] A(n)= 56 gcd_primitive= 54
+self_converse= 12 merged= 34
+n= 7 contributions= [(1, 1), (3, 5), (4, 16), (5, 47), (6, 132), (7, 255)] A(n)= 456 gcd_primitive= 455
+self_converse= 88 merged= 272
+
+SAME-ORDER, SAME-GROUP-ORDER RESPONSE HOSTILE:
+A core_order 6 rows (0, 33, 11, 19, 7, 29) group_order 3 automorphisms ((0, 1, 2, 3, 4, 5), (0, 1, 3, 4, 2, 5), (0, 1, 4, 2, 3, 5)) cycles [((1, 1, 1, 1, 1, 1), 1), ((1, 1, 1, 3), 2)] weight_response_n=q..12 [1, 4, 11, 26, 54, 102, 180]
+B core_order 6 rows (10, 20, 33, 38, 13, 19) group_order 3 automorphisms ((0, 1, 2, 3, 4, 5), (1, 2, 0, 4, 5, 3), (2, 0, 1, 5, 3, 4)) cycles [((1, 1, 1, 1, 1, 1), 1), ((3, 3), 2)] weight_response_n=q..12 [1, 2, 7, 20, 42, 84, 156]
+first separating total= 7
+
+FULL FORMAL CYCLE-INDEX CONTROLS THROUGH WEIGHTED DEGREE 7:
+C boundary p1=0 (cycle-length multiset, coefficient): [((), '1'), ((3,), '2/3'), ((3, 3), '10/9'), ((5,), '4/5'), ((7,), '8/7')]
+Core and tournament substitution/inversion: passed through weighted degree7.
+Rooted T derivative and core PDE: passed through weighted degree6.
+
+C3 PRIMITIVE NUMBER-THEORY CONTROL:
+P_C3(n)=(J2(n)-3*phi(n))/6+(2/3)[n=3], n>1; P_C3(1)=0.
+Independent primitive composition orbit audit n=1..60 passed.
+
+FROZEN-CORE TRUNCATION, NOT THE FULL A(n) FOR n>7:
+n= 8 classes with pair-free core order <=7= 2278 by_core_order= [(1, 1), (3, 7), (4, 26), (5, 107), (6, 444), (7, 1693)]
+n= 9 classes with pair-free core order <=7= 8093 by_core_order= [(1, 1), (3, 10), (4, 40), (5, 210), (6, 1168), (7, 6664)]
+n= 10 classes with pair-free core order <=7= 22907 by_core_order= [(1, 1), (3, 12), (4, 60), (5, 374), (6, 2600), (7, 19860)]
+n= 11 classes with pair-free core order <=7= 55320 by_core_order= [(1, 1), (3, 15), (4, 84), (5, 618), (6, 5172), (7, 49430)]
+n= 12 classes with pair-free core order <=7= 118996 by_core_order= [(1, 1), (3, 19), (4, 114), (5, 966), (6, 9450), (7, 108446)]
+Total constructed weight orbits in the checked finite universe= 208126
+ALL CHECKS PASSED (explicit exceptions; normal and -O active).

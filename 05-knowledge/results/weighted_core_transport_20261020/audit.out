@@ -1,0 +1,4 @@
+growth_check: normal = -O = retained stdout; no assertions; PASS
+core_count: normal = -O = retained stdout; no assertions; PASS
+allocation_check: normal = -O = retained stdout; no assertions; PASS
+PACKET REPLAY PASS

@@ -1,0 +1,18 @@
+{
+  "basis": "SHA-256 after CRLF-to-LF normalization",
+  "files": {
+    "allocation.md": "7bf7b75906d18df4885807617b5b68f2d693823b8628bc25f9b0277e2d022868",
+    "allocation_check.out": "2b13b45945bd034b1beefdf44c6845f804ad2710dc857c615dcc65c594c1a95a",
+    "allocation_check.py": "30962bc20c1e0865f2ebafbe627000464f86b5d368a029e67563e06d07902fa8",
+    "audit.out": "5c6f77f7172e08891343bd990365a540514a346f224b4440f74d23ab538723e0",
+    "audit.py": "b551aad5a6a2bd3d9b17411022fd2aeafec396d630dd719a7456001d8304867a",
+    "core_count.md": "94c06341010fc4e762c7cd912a071c6f433155d9bd20259ce5de23ea9b3287a9",
+    "core_count.out": "d87811a22dc5f2a16b6fd45af001da108659a081f766e48bafb2bcebddc4d70c",
+    "core_count.py": "72607c53489666b2c16dd84403f8528e02e97a73b29963d120fa9c5f7fd81880",
+    "growth_check.out": "7188e823e9ed32daad9c3eead1fdf18f57fd5ac7055fd3d48140fc5016395608",
+    "growth_check.py": "b0bd03fa09eba0fa0680d84d50468aa7a54e28cfc75525377d9f8a96b7a5ae2f",
+    "inheritance.md": "19a81365cf793353d9b677c82b7b23af036f0010eadd81f4520a540e9402d7b8",
+    "README.md": "65d309cdb5ef7740f7e0d5f54d3fb74e634ee6a83380857b9624e14be636ee49",
+    "VALIDATION.md": "d0e433239e64810eaa552acbaab65f0db0bb50ce2475a2f205fe5660bdb228b6"
+  }
+}

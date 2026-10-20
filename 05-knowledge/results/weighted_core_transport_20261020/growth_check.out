@@ -1,0 +1,20 @@
+EXHAUSTIVE labelled parents orders 1..5: 33866 attachments; clone dichotomy, split law, kernel, alternating gate PASS
+Labelled kernel and formal-series inversion agree through order 20.
+Labelled pair-free core counts n=1..8: [1, 0, 2, 16, 344, 14528, 1172816, 180364032]
+HOSTILE n=4,b=4 source+C3 versus C3+sink: equal core-size kernels, different ordinary-class extension profiles.
+HOSTILE tau(transitive chain): 1 core vertex -> n core vertices, verified n=5..40 (general proof in allocation.md).
+HOSTILE naive rooted count: C3 has one TT2-parent alternating attachment; 1/3 is not 1. Aut(C3)/Aut(TT2)=3 repairs it.
+n classes pair_free_cores alternating_trials accepted_trials exact_core_mass
+1 1 1 0 0 1
+2 1 0 2 0 0
+3 2 1 2 1 1
+4 4 2 10 4 2
+5 12 5 42 25 5
+6 56 26 242 188 26
+7 456 255 2370 2041 255
+8 6880 4602 42890 39188 4602
+Complete fixed-path cubes orders 1..7 independently match the generated bank.
+HOSTILE same complete core cycle index p1^6, different pair-free child automorphism-order profiles:
+  rows= (0, 5, 25, 35, 11, 23) child_Aut_histogram= ((1, 50), (3, 2))
+  rows= (8, 17, 3, 38, 13, 23) child_Aut_histogram= ((1, 51), (3, 1))
+ALL CHECKS PASS
