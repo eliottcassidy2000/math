@@ -1,0 +1,134 @@
+{
+  "all_signing_controls": [
+    {
+      "containing_word_coefficients": 1,
+      "n": 1,
+      "signings": 1
+    },
+    {
+      "containing_word_coefficients": 2,
+      "n": 2,
+      "signings": 2
+    },
+    {
+      "containing_word_coefficients": 8,
+      "n": 3,
+      "signings": 8
+    },
+    {
+      "containing_word_coefficients": 64,
+      "n": 4,
+      "signings": 64
+    },
+    {
+      "containing_word_coefficients": 1024,
+      "n": 5,
+      "signings": 1024
+    }
+  ],
+  "checks": 4661,
+  "n9_each_component_nullity_lower_bound": 84,
+  "n9_full_nullity_lower_bound": 168,
+  "odd_component_note": "Complementary characters restrict to scalar negatives on the odd coset; they represent the same one-dimensional eigenspace.",
+  "orders": [
+    {
+      "characters": 1,
+      "n": 1,
+      "spectrum": {
+        "1": 1
+      }
+    },
+    {
+      "characters": 1,
+      "n": 2,
+      "spectrum": {
+        "2": 1
+      }
+    },
+    {
+      "characters": 2,
+      "n": 3,
+      "spectrum": {
+        "-6": 1,
+        "6": 1
+      }
+    },
+    {
+      "characters": 8,
+      "n": 4,
+      "spectrum": {
+        "-8": 3,
+        "0": 4,
+        "24": 1
+      }
+    },
+    {
+      "characters": 64,
+      "n": 5,
+      "spectrum": {
+        "-40": 12,
+        "-8": 30,
+        "24": 20,
+        "120": 2
+      }
+    },
+    {
+      "characters": 1024,
+      "n": 6,
+      "spectrum": {
+        "-240": 6,
+        "-80": 72,
+        "-48": 255,
+        "16": 540,
+        "48": 120,
+        "144": 30,
+        "720": 1
+      }
+    }
+  ],
+  "signing_switch_hostile": {
+    "empty_signed_path_sum": 6,
+    "n": 3,
+    "vertex_cut_signed_path_sum": -2
+  },
+  "source_sha256": "c7dbce1a30327b8edba5b0987ee9e9dd1d9e5708945e6e7147c5ef96c5cdf3a9",
+  "status": "PASS",
+  "triangle_modes": [
+    {
+      "n": 3,
+      "triangle_eigenvalue": -6
+    },
+    {
+      "n": 4,
+      "triangle_eigenvalue": 0
+    },
+    {
+      "n": 5,
+      "triangle_eigenvalue": 24
+    },
+    {
+      "n": 6,
+      "triangle_eigenvalue": 144
+    },
+    {
+      "n": 7,
+      "triangle_eigenvalue": 720
+    },
+    {
+      "n": 8,
+      "triangle_eigenvalue": 2880
+    },
+    {
+      "n": 9,
+      "triangle_eigenvalue": 0
+    },
+    {
+      "n": 10,
+      "triangle_eigenvalue": -241920
+    },
+    {
+      "n": 11,
+      "triangle_eigenvalue": -5080320
+    }
+  ]
+}

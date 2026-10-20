@@ -1,0 +1,20 @@
+[
+  {
+    "source": "session17-trijections/TRIJECTIONS_AND_TREE_GAUGES.md",
+    "expected_sha256": "4a19202298e373dff64cb9ca4b887642c415b560102ff40d34d01735ce0660e7",
+    "actual_sha256": "4a19202298e373dff64cb9ca4b887642c415b560102ff40d34d01735ce0660e7",
+    "match": true
+  },
+  {
+    "source": "session17-trijections-halvedcube/DISTANCE_FOUR_SIX_CUBE.md",
+    "expected_sha256": "143f7009085bd69e7dfe594236f4f291b51e53d00fa5831727df332a98f0ce61",
+    "actual_sha256": "143f7009085bd69e7dfe594236f4f291b51e53d00fa5831727df332a98f0ce61",
+    "match": true
+  },
+  {
+    "source": "math/01-canon/theorems/THM-4433-signed-hamilton-second-minimum-and-cross-scale-stability.md",
+    "expected_sha256": "17546af9baed30a5b4eebf6ae5d2fced02b4e2f095b37c97e03abd77932ac9aa",
+    "actual_sha256": "17546af9baed30a5b4eebf6ae5d2fced02b4e2f095b37c97e03abd77932ac9aa",
+    "match": true
+  }
+]

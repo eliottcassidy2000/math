@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "links": [
+    {
+      "from": "05-knowledge/results/tournament_cut_fourier_squares_20261020/FOURIER_MODES_AND_COMMUTING_SQUARES.md",
+      "label": "the trijections packet",
+      "url": "../tournament_graph_trijections_20261020/TRIJECTIONS_AND_TREE_GAUGES.md",
+      "resolved_destination": "05-knowledge/results/tournament_graph_trijections_20261020/TRIJECTIONS_AND_TREE_GAUGES.md",
+      "verified": true
+    },
+    {
+      "from": "05-knowledge/results/tournament_cut_fourier_squares_20261020/FOURIER_MODES_AND_COMMUTING_SQUARES.md",
+      "label": "THM-4433, signed Hamilton second minimum",
+      "url": "../../../01-canon/theorems/THM-4433-signed-hamilton-second-minimum-and-cross-scale-stability.md",
+      "resolved_destination": "01-canon/theorems/THM-4433-signed-hamilton-second-minimum-and-cross-scale-stability.md",
+      "verified": true
+    },
+    {
+      "from": "05-knowledge/results/tournament_cut_fourier_squares_20261020/FOURIER_MODES_AND_COMMUTING_SQUARES.md",
+      "label": "the distance-four six-bit graph",
+      "url": "../tournament_graph_distance_four_20261020/DISTANCE_FOUR_SIX_CUBE.md",
+      "resolved_destination": "05-knowledge/results/tournament_graph_distance_four_20261020/DISTANCE_FOUR_SIX_CUBE.md",
+      "verified": true
+    },
+    {
+      "from": "05-knowledge/results/tournament_cut_fourier_squares_20261020/audit/AUDIT.md",
+      "label": "proof note",
+      "url": "../FOURIER_MODES_AND_COMMUTING_SQUARES.md",
+      "resolved_destination": "05-knowledge/results/tournament_cut_fourier_squares_20261020/FOURIER_MODES_AND_COMMUTING_SQUARES.md",
+      "verified": true
+    },
+    {
+      "from": "05-knowledge/results/tournament_cut_fourier_squares_20261020/audit/AUDIT.md",
+      "label": "main cut-aggregate packet",
+      "url": "../../tournament_graph_trijections_20261020/TRIJECTIONS_AND_TREE_GAUGES.md",
+      "resolved_destination": "05-knowledge/results/tournament_graph_trijections_20261020/TRIJECTIONS_AND_TREE_GAUGES.md",
+      "verified": true
+    },
+    {
+      "from": "05-knowledge/results/tournament_cut_fourier_squares_20261020/audit/AUDIT.md",
+      "label": "order-five distance-four packet",
+      "url": "../../tournament_graph_distance_four_20261020/DISTANCE_FOUR_SIX_CUBE.md",
+      "resolved_destination": "05-knowledge/results/tournament_graph_distance_four_20261020/DISTANCE_FOUR_SIX_CUBE.md",
+      "verified": true
+    },
+    {
+      "from": "05-knowledge/results/tournament_cut_fourier_squares_20261020/audit/AUDIT.md",
+      "label": "independent checker",
+      "url": "independent_controls.py",
+      "resolved_destination": "05-knowledge/results/tournament_cut_fourier_squares_20261020/audit/independent_controls.py",
+      "verified": true
+    },
+    {
+      "from": "05-knowledge/results/tournament_cut_fourier_squares_20261020/audit/AUDIT.md",
+      "label": "receipts",
+      "url": "independent_controls.json",
+      "resolved_destination": "05-knowledge/results/tournament_cut_fourier_squares_20261020/audit/independent_controls.json",
+      "verified": true
+    }
+  ],
+  "co_publication_dependencies": [
+    {
+      "source": "session17-trijections/TRIJECTIONS_AND_TREE_GAUGES.md",
+      "destination": "05-knowledge/results/tournament_graph_trijections_20261020/TRIJECTIONS_AND_TREE_GAUGES.md",
+      "sha256": "4a19202298e373dff64cb9ca4b887642c415b560102ff40d34d01735ce0660e7",
+      "co_publication_required": false
+    },
+    {
+      "source": "session17-trijections-halvedcube/DISTANCE_FOUR_SIX_CUBE.md",
+      "destination": "05-knowledge/results/tournament_graph_distance_four_20261020/DISTANCE_FOUR_SIX_CUBE.md",
+      "sha256": "143f7009085bd69e7dfe594236f4f291b51e53d00fa5831727df332a98f0ce61",
+      "co_publication_required": false
+    }
+  ]
+}

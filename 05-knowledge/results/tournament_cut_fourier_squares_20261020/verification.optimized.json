@@ -1,0 +1,113 @@
+{
+  "checks": 2744,
+  "n9_nullity_lower_bound_each_component": 84,
+  "n9_nullity_lower_bound_full": 168,
+  "orders": [
+    {
+      "generator_count": 1,
+      "n": 1,
+      "positive_weight": 1,
+      "quotient_vertices": 1,
+      "spectrum": {
+        "1": 1
+      }
+    },
+    {
+      "generator_count": 1,
+      "n": 2,
+      "positive_weight": 2,
+      "quotient_vertices": 1,
+      "spectrum": {
+        "2": 1
+      }
+    },
+    {
+      "generator_count": 1,
+      "n": 3,
+      "positive_weight": 6,
+      "quotient_vertices": 2,
+      "spectrum": {
+        "-6": 1,
+        "6": 1
+      }
+    },
+    {
+      "generator_count": 6,
+      "n": 4,
+      "positive_weight": 4,
+      "quotient_vertices": 8,
+      "spectrum": {
+        "-8": 3,
+        "0": 4,
+        "24": 1
+      }
+    },
+    {
+      "generator_count": 15,
+      "n": 5,
+      "positive_weight": 8,
+      "quotient_vertices": 64,
+      "spectrum": {
+        "-40": 12,
+        "-8": 30,
+        "24": 20,
+        "120": 2
+      }
+    },
+    {
+      "generator_count": 180,
+      "n": 6,
+      "positive_weight": 4,
+      "quotient_vertices": 1024,
+      "spectrum": {
+        "-240": 6,
+        "-80": 72,
+        "-48": 255,
+        "16": 540,
+        "48": 120,
+        "144": 30,
+        "720": 1
+      }
+    }
+  ],
+  "source_sha256": "663222a67adbc27004a1e583faa73d69f49c9a08d3ee32332ba5c3c1af646292",
+  "status": "PASS",
+  "triangle_modes": [
+    {
+      "n": 3,
+      "triangle_eigenvalue": -6
+    },
+    {
+      "n": 4,
+      "triangle_eigenvalue": 0
+    },
+    {
+      "n": 5,
+      "triangle_eigenvalue": 24
+    },
+    {
+      "n": 6,
+      "triangle_eigenvalue": 144
+    },
+    {
+      "n": 7,
+      "triangle_eigenvalue": 720
+    },
+    {
+      "n": 8,
+      "triangle_eigenvalue": 2880
+    },
+    {
+      "n": 9,
+      "triangle_eigenvalue": 0
+    },
+    {
+      "n": 10,
+      "triangle_eigenvalue": -241920
+    },
+    {
+      "n": 11,
+      "triangle_eigenvalue": -5080320
+    }
+  ]
+}
