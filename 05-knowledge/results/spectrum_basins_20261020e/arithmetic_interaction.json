@@ -1,0 +1,1063 @@
+{
+  "LR_matrix": [
+    [
+      2,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "determinant_terms": [
+    {
+      "coefficient": 1,
+      "u_degree": 0,
+      "v_degree": 0,
+      "z_degree": 0
+    },
+    {
+      "coefficient": -1,
+      "u_degree": 0,
+      "v_degree": 0,
+      "z_degree": 1
+    },
+    {
+      "coefficient": -1,
+      "u_degree": 1,
+      "v_degree": 0,
+      "z_degree": 3
+    },
+    {
+      "coefficient": -1,
+      "u_degree": 2,
+      "v_degree": 1,
+      "z_degree": 4
+    }
+  ],
+  "examples": [
+    {
+      "C": 0,
+      "E": 2,
+      "H": 9,
+      "chi": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "feedback": 2,
+      "word": [
+        3,
+        3
+      ]
+    },
+    {
+      "C": 1,
+      "E": 2,
+      "H": 5,
+      "chi": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "feedback": 1,
+      "word": [
+        4,
+        1,
+        1
+      ]
+    },
+    {
+      "C": 0,
+      "E": 1,
+      "H": 3,
+      "chi": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "feedback": 1,
+      "word": [
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "C": 0,
+      "E": 2,
+      "H": 9,
+      "chi": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "feedback": 2,
+      "word": [
+        3,
+        3
+      ]
+    }
+  ],
+  "integer_H_terminal_vector": [
+    1,
+    3,
+    1,
+    1
+  ],
+  "integer_H_transfer": [
+    [
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      3,
+      5
+    ],
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ]
+  ],
+  "limitations": [
+    "Golden SCC language only",
+    "Endpoint weights do not constrain intermediate black moves",
+    "Shear action changes order; it is not a fixed-order black move"
+  ],
+  "literal_H_checks_through_n8": 64,
+  "rows": [
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        }
+      ],
+      "n": 0,
+      "sum_H": 1,
+      "words": 1
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        }
+      ],
+      "n": 1,
+      "sum_H": 1,
+      "words": 1
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        }
+      ],
+      "n": 2,
+      "sum_H": 1,
+      "words": 1
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 1
+        }
+      ],
+      "n": 3,
+      "sum_H": 4,
+      "words": 2
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 2
+        },
+        {
+          "C": 1,
+          "E": 2,
+          "count": 1
+        }
+      ],
+      "n": 4,
+      "sum_H": 12,
+      "words": 4
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 3
+        },
+        {
+          "C": 1,
+          "E": 2,
+          "count": 2
+        }
+      ],
+      "n": 5,
+      "sum_H": 20,
+      "words": 6
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 4
+        },
+        {
+          "C": 0,
+          "E": 2,
+          "count": 1
+        },
+        {
+          "C": 1,
+          "E": 2,
+          "count": 3
+        }
+      ],
+      "n": 6,
+      "sum_H": 37,
+      "words": 9
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 5
+        },
+        {
+          "C": 0,
+          "E": 2,
+          "count": 3
+        },
+        {
+          "C": 1,
+          "E": 2,
+          "count": 4
+        },
+        {
+          "C": 1,
+          "E": 3,
+          "count": 2
+        }
+      ],
+      "n": 7,
+      "sum_H": 93,
+      "words": 15
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 6
+        },
+        {
+          "C": 0,
+          "E": 2,
+          "count": 6
+        },
+        {
+          "C": 1,
+          "E": 2,
+          "count": 5
+        },
+        {
+          "C": 1,
+          "E": 3,
+          "count": 6
+        },
+        {
+          "C": 2,
+          "E": 4,
+          "count": 1
+        }
+      ],
+      "n": 8,
+      "sum_H": 213,
+      "words": 25
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 7
+        },
+        {
+          "C": 0,
+          "E": 2,
+          "count": 10
+        },
+        {
+          "C": 1,
+          "E": 2,
+          "count": 6
+        },
+        {
+          "C": 0,
+          "E": 3,
+          "count": 1
+        },
+        {
+          "C": 1,
+          "E": 3,
+          "count": 12
+        },
+        {
+          "C": 2,
+          "E": 4,
+          "count": 3
+        }
+      ],
+      "n": 9,
+      "sum_H": 424,
+      "words": 40
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 8
+        },
+        {
+          "C": 0,
+          "E": 2,
+          "count": 15
+        },
+        {
+          "C": 1,
+          "E": 2,
+          "count": 7
+        },
+        {
+          "C": 0,
+          "E": 3,
+          "count": 4
+        },
+        {
+          "C": 1,
+          "E": 3,
+          "count": 20
+        },
+        {
+          "C": 1,
+          "E": 4,
+          "count": 3
+        },
+        {
+          "C": 2,
+          "E": 4,
+          "count": 6
+        }
+      ],
+      "n": 10,
+      "sum_H": 888,
+      "words": 64
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 9
+        },
+        {
+          "C": 0,
+          "E": 2,
+          "count": 21
+        },
+        {
+          "C": 1,
+          "E": 2,
+          "count": 8
+        },
+        {
+          "C": 0,
+          "E": 3,
+          "count": 10
+        },
+        {
+          "C": 1,
+          "E": 3,
+          "count": 30
+        },
+        {
+          "C": 1,
+          "E": 4,
+          "count": 12
+        },
+        {
+          "C": 2,
+          "E": 4,
+          "count": 10
+        },
+        {
+          "C": 2,
+          "E": 5,
+          "count": 3
+        }
+      ],
+      "n": 11,
+      "sum_H": 1992,
+      "words": 104
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 10
+        },
+        {
+          "C": 0,
+          "E": 2,
+          "count": 28
+        },
+        {
+          "C": 1,
+          "E": 2,
+          "count": 9
+        },
+        {
+          "C": 0,
+          "E": 3,
+          "count": 20
+        },
+        {
+          "C": 1,
+          "E": 3,
+          "count": 42
+        },
+        {
+          "C": 0,
+          "E": 4,
+          "count": 1
+        },
+        {
+          "C": 1,
+          "E": 4,
+          "count": 30
+        },
+        {
+          "C": 2,
+          "E": 4,
+          "count": 15
+        },
+        {
+          "C": 2,
+          "E": 5,
+          "count": 12
+        },
+        {
+          "C": 3,
+          "E": 6,
+          "count": 1
+        }
+      ],
+      "n": 12,
+      "sum_H": 4329,
+      "words": 169
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 11
+        },
+        {
+          "C": 0,
+          "E": 2,
+          "count": 36
+        },
+        {
+          "C": 1,
+          "E": 2,
+          "count": 10
+        },
+        {
+          "C": 0,
+          "E": 3,
+          "count": 35
+        },
+        {
+          "C": 1,
+          "E": 3,
+          "count": 56
+        },
+        {
+          "C": 0,
+          "E": 4,
+          "count": 5
+        },
+        {
+          "C": 1,
+          "E": 4,
+          "count": 60
+        },
+        {
+          "C": 2,
+          "E": 4,
+          "count": 21
+        },
+        {
+          "C": 1,
+          "E": 5,
+          "count": 4
+        },
+        {
+          "C": 2,
+          "E": 5,
+          "count": 30
+        },
+        {
+          "C": 3,
+          "E": 6,
+          "count": 4
+        }
+      ],
+      "n": 13,
+      "sum_H": 9113,
+      "words": 273
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 12
+        },
+        {
+          "C": 0,
+          "E": 2,
+          "count": 45
+        },
+        {
+          "C": 1,
+          "E": 2,
+          "count": 11
+        },
+        {
+          "C": 0,
+          "E": 3,
+          "count": 56
+        },
+        {
+          "C": 1,
+          "E": 3,
+          "count": 72
+        },
+        {
+          "C": 0,
+          "E": 4,
+          "count": 15
+        },
+        {
+          "C": 1,
+          "E": 4,
+          "count": 105
+        },
+        {
+          "C": 2,
+          "E": 4,
+          "count": 28
+        },
+        {
+          "C": 1,
+          "E": 5,
+          "count": 20
+        },
+        {
+          "C": 2,
+          "E": 5,
+          "count": 60
+        },
+        {
+          "C": 2,
+          "E": 6,
+          "count": 6
+        },
+        {
+          "C": 3,
+          "E": 6,
+          "count": 10
+        }
+      ],
+      "n": 14,
+      "sum_H": 19529,
+      "words": 441
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 13
+        },
+        {
+          "C": 0,
+          "E": 2,
+          "count": 55
+        },
+        {
+          "C": 1,
+          "E": 2,
+          "count": 12
+        },
+        {
+          "C": 0,
+          "E": 3,
+          "count": 84
+        },
+        {
+          "C": 1,
+          "E": 3,
+          "count": 90
+        },
+        {
+          "C": 0,
+          "E": 4,
+          "count": 35
+        },
+        {
+          "C": 1,
+          "E": 4,
+          "count": 168
+        },
+        {
+          "C": 2,
+          "E": 4,
+          "count": 36
+        },
+        {
+          "C": 0,
+          "E": 5,
+          "count": 1
+        },
+        {
+          "C": 1,
+          "E": 5,
+          "count": 60
+        },
+        {
+          "C": 2,
+          "E": 5,
+          "count": 105
+        },
+        {
+          "C": 2,
+          "E": 6,
+          "count": 30
+        },
+        {
+          "C": 3,
+          "E": 6,
+          "count": 20
+        },
+        {
+          "C": 3,
+          "E": 7,
+          "count": 4
+        }
+      ],
+      "n": 15,
+      "sum_H": 42476,
+      "words": 714
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 14
+        },
+        {
+          "C": 0,
+          "E": 2,
+          "count": 66
+        },
+        {
+          "C": 1,
+          "E": 2,
+          "count": 13
+        },
+        {
+          "C": 0,
+          "E": 3,
+          "count": 120
+        },
+        {
+          "C": 1,
+          "E": 3,
+          "count": 110
+        },
+        {
+          "C": 0,
+          "E": 4,
+          "count": 70
+        },
+        {
+          "C": 1,
+          "E": 4,
+          "count": 252
+        },
+        {
+          "C": 2,
+          "E": 4,
+          "count": 45
+        },
+        {
+          "C": 0,
+          "E": 5,
+          "count": 6
+        },
+        {
+          "C": 1,
+          "E": 5,
+          "count": 140
+        },
+        {
+          "C": 2,
+          "E": 5,
+          "count": 168
+        },
+        {
+          "C": 1,
+          "E": 6,
+          "count": 5
+        },
+        {
+          "C": 2,
+          "E": 6,
+          "count": 90
+        },
+        {
+          "C": 3,
+          "E": 6,
+          "count": 35
+        },
+        {
+          "C": 3,
+          "E": 7,
+          "count": 20
+        },
+        {
+          "C": 4,
+          "E": 8,
+          "count": 1
+        }
+      ],
+      "n": 16,
+      "sum_H": 91460,
+      "words": 1156
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 15
+        },
+        {
+          "C": 0,
+          "E": 2,
+          "count": 78
+        },
+        {
+          "C": 1,
+          "E": 2,
+          "count": 14
+        },
+        {
+          "C": 0,
+          "E": 3,
+          "count": 165
+        },
+        {
+          "C": 1,
+          "E": 3,
+          "count": 132
+        },
+        {
+          "C": 0,
+          "E": 4,
+          "count": 126
+        },
+        {
+          "C": 1,
+          "E": 4,
+          "count": 360
+        },
+        {
+          "C": 2,
+          "E": 4,
+          "count": 55
+        },
+        {
+          "C": 0,
+          "E": 5,
+          "count": 21
+        },
+        {
+          "C": 1,
+          "E": 5,
+          "count": 280
+        },
+        {
+          "C": 2,
+          "E": 5,
+          "count": 252
+        },
+        {
+          "C": 1,
+          "E": 6,
+          "count": 30
+        },
+        {
+          "C": 2,
+          "E": 6,
+          "count": 210
+        },
+        {
+          "C": 3,
+          "E": 6,
+          "count": 56
+        },
+        {
+          "C": 2,
+          "E": 7,
+          "count": 10
+        },
+        {
+          "C": 3,
+          "E": 7,
+          "count": 60
+        },
+        {
+          "C": 4,
+          "E": 8,
+          "count": 5
+        }
+      ],
+      "n": 17,
+      "sum_H": 195612,
+      "words": 1870
+    },
+    {
+      "edge_interaction_distribution": [
+        {
+          "C": 0,
+          "E": 0,
+          "count": 1
+        },
+        {
+          "C": 0,
+          "E": 1,
+          "count": 16
+        },
+        {
+          "C": 0,
+          "E": 2,
+          "count": 91
+        },
+        {
+          "C": 1,
+          "E": 2,
+          "count": 15
+        },
+        {
+          "C": 0,
+          "E": 3,
+          "count": 220
+        },
+        {
+          "C": 1,
+          "E": 3,
+          "count": 156
+        },
+        {
+          "C": 0,
+          "E": 4,
+          "count": 210
+        },
+        {
+          "C": 1,
+          "E": 4,
+          "count": 495
+        },
+        {
+          "C": 2,
+          "E": 4,
+          "count": 66
+        },
+        {
+          "C": 0,
+          "E": 5,
+          "count": 56
+        },
+        {
+          "C": 1,
+          "E": 5,
+          "count": 504
+        },
+        {
+          "C": 2,
+          "E": 5,
+          "count": 360
+        },
+        {
+          "C": 0,
+          "E": 6,
+          "count": 1
+        },
+        {
+          "C": 1,
+          "E": 6,
+          "count": 105
+        },
+        {
+          "C": 2,
+          "E": 6,
+          "count": 420
+        },
+        {
+          "C": 3,
+          "E": 6,
+          "count": 84
+        },
+        {
+          "C": 2,
+          "E": 7,
+          "count": 60
+        },
+        {
+          "C": 3,
+          "E": 7,
+          "count": 140
+        },
+        {
+          "C": 3,
+          "E": 8,
+          "count": 10
+        },
+        {
+          "C": 4,
+          "E": 8,
+          "count": 15
+        }
+      ],
+      "n": 18,
+      "sum_H": 420685,
+      "words": 3025
+    }
+  ],
+  "source_sha256": "25e99194a2b7e3dd24e652a3488900d155a9c3581d5fe52666f0e73a5e5eb70e",
+  "status": "FINITE-EXACT supporting the uniform local proof",
+  "universe": "All7920golden SCC words through vertex order18; independently generated four-state occupancy strings"
+}

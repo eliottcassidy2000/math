@@ -1,0 +1,47 @@
+{
+  "inherited_pure_hubs": {
+    "outer_weights": "1..8",
+    "outer_words": 39,
+    "black_hub_routes": 117,
+    "empty_outer_routes": 3,
+    "common_order_five_hub": [
+      26,
+      20,
+      25,
+      18,
+      0
+    ]
+  },
+  "elementary_rigidity_witnesses": [
+    {
+      "order": 5,
+      "marked_step_sets": 2,
+      "threshold_sets": 1
+    },
+    {
+      "order": 7,
+      "marked_step_sets": 4,
+      "threshold_sets": 1
+    },
+    {
+      "order": 9,
+      "marked_step_sets": 8,
+      "threshold_sets": 1
+    },
+    {
+      "order": 11,
+      "marked_step_sets": 16,
+      "threshold_sets": 1
+    },
+    {
+      "order": 13,
+      "marked_step_sets": 32,
+      "threshold_sets": 1
+    },
+    {
+      "order": 15,
+      "marked_step_sets": 64,
+      "threshold_sets": 1
+    }
+  ]
+}

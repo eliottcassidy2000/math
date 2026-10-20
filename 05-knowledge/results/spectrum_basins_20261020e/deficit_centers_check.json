@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "universe": "two specified labelled tournaments; positive controls only",
+  "source_sha256": "596d64e069417be325f0b71e071313d3c00e1a3e72f2998b68c20ef3e182893f",
+  "witnesses": [
+    {
+      "n": 5,
+      "mask": 10,
+      "outmasks": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "H": 9,
+      "aut": 1,
+      "raw_blue": 3,
+      "h": 9,
+      "b": 3,
+      "delta": 6,
+      "anti_witness": [
+        0,
+        4,
+        3,
+        2,
+        1
+      ],
+      "path_witness": [
+        0,
+        4,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 408,
+      "outmasks": [
+        48,
+        49,
+        3,
+        7,
+        12,
+        28
+      ],
+      "H": 45,
+      "aut": 3,
+      "raw_blue": 27,
+      "h": 15,
+      "b": 9,
+      "delta": 6,
+      "anti_witness": [
+        1,
+        0,
+        5,
+        4,
+        3,
+        2
+      ],
+      "path_witness": [
+        0,
+        4,
+        2,
+        1,
+        5,
+        3
+      ]
+    }
+  ]
+}

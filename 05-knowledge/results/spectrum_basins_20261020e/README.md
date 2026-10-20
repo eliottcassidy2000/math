@@ -54,6 +54,14 @@ Here a bridge is tested in the full metagraph, or after contracting its
 black components. The blue-only subgraph can have bridges that acquire
 black detours in the full graph; it is a different question.
 
+[Combining this with the recovered pure-blue hubs](pure_hubs.md) gives an
+exact all-order reduction, for n>=4: **the active black graph is connected
+if and only if every strong-to-strong mixed blue line has a black detour**.
+This uses Reid's CITED combined connectivity. Merely excluding blue
+bridges is weaker: several black components could be joined by a blue cycle.
+The same integration note gives an elementary replacement for the
+rigid-strong classification input, using the incoming circulant reroutings.
+
 ## 3. The sequence has an exact matching interpretation
 
 [The arithmetic bijection](arithmetic.md) maps a golden SCC word of
@@ -90,6 +98,13 @@ The two-step Fibonacci update also has a precise upper-half-plane action:
 `z -> (2z+1)/(z+1)`, with determinant one and boundary fixed points
 `phi,-1/phi`. It preserves Farey adjacency, but increases the tournament
 order by four rather than moving within one metagraph.
+
+The [local interaction refinement](arithmetic_interaction.md) retains the
+raw Hamiltonian count too. If chi_i marks edge `(i,i+2)`, put
+`E=sum chi_i` and `C=sum chi_i chi_(i+1)`. Then C counts R4 atoms,
+`c3=E`, minimum feedback-arc number is `E-C`, and
+`H=3^(E-2C)5^C`. A four-state transfer records this adjacent-row interaction;
+weighting the two parity paths independently would give the wrong R4 count.
 
 ## 4. The forbidden raw counts are a known open conjecture
 
@@ -141,12 +156,20 @@ components follows from the labelled obstruction alone.
 The [all-order rigid-strong classification](../merged_metagraph_finite_pure_atoms_20261020/FINITE_ATOMS_AND_RIGID_CLOSURE.md)
 is used in the endpoint-rigid recursion above. It classifies one-path-orbit
 strong tournaments; it does not identify rigidity with being pure blue.
+The [independent pure-blue closure](../rotation_owners_spectrum_20261020e/purity_closure.md)
+now gives exactly the strong atoms `{1,C3,C5}` and the ordinary class series
+`(1+z+z^3+z^5)/(1-z^2-z^6)`. Its cutoff and certificate composition was
+independently replayed during integration.
 The [incoming Reid translation](../paired_black_bridges_order_nine_20261020/BRIDGES_THROUGH_NINE_AND_LOCAL_CYCLE_LAWS.md),
 Section 6, gives combined blue-and-black connectivity and a black path
 from every nonselfconverse node to some mixed self-converse node.
 Neither input identifies all mixed anchors with each other.
 
 The separately audited deficit-two classification gives `D(z)=z^4`.
+The [higher-center refinement](deficit_centers.md) uses the incoming cubic
+order bound to make every fixed-defect center series D_d a polynomial.
+It also supplies two small strong self-converse witnesses proving
+`D_6 >= z^5+z^6`: the quartic result does not continue as a monomial ladder.
 For the paired-black quotient Q, the incoming complete census excludes
 nonleaf bridges through order nine; the all-order nonleaf contribution
 remains unknown. This is distinct from the mixed blue-edge question.
@@ -174,6 +197,9 @@ records distinguish source-dependent theorems from finite controls.
 |`arithmetic_probe.py`|inverse matching bijection and reflection through order18; exact recurrences through200|
 |`regular_probe.py`|all regular labelled tournaments through7, all36,960 order7 triangle moves|
 |`spectrum_probe.py`|all1,100 fixed-path presentations through6; raw-count polynomials and one-apex controls|
+|`pure_hubs.py`|117 inherited padded hub routes, three C5 boundary routes, 126 circulant witnesses|
+|`arithmetic_interaction.py`|all7,920 words through18; local weights, symbolic and integer transfers|
+|`deficit_centers_check.py`|two specified positive defect-six witnesses; no large-defect census|
 
 The next structural targets are now narrower: normalize interior SCCs
 beyond R4; connect terminals with arbitrary larger atoms to the golden
