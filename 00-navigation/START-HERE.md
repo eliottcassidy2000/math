@@ -3,7 +3,7 @@
 **Rolling brief — 2026-09-06.**
 [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status.
 
-**Oct 20:** [Coloring/clock map](../05-knowledge/results/coloring_clock_session_20261020/README.md). Scoped proofs; major conjectures OPEN. [Prior maps](../05-knowledge/results/coloring_clock_session_20261020/PUBLICATION_LEDGER.md#prior-session-maps).
+**Oct 20:** [Tournament/even-graph map](../05-knowledge/results/tournament_even_bijections_session_20261020/README.md). Scoped constructions and symmetry refutations. [Prior maps](../05-knowledge/results/tournament_even_bijections_session_20261020/PUBLICATION_LEDGER.md#prior-session-maps).
 
 ## The five-minute orientation
 
