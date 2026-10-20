@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "reports": [
+    {
+      "m": 1,
+      "nilpotent_depth": 1,
+      "necklaces": 2,
+      "sources": 1,
+      "branches": 1,
+      "max_steps": 1
+    },
+    {
+      "m": 2,
+      "nilpotent_depth": 2,
+      "necklaces": 3,
+      "sources": 1,
+      "branches": 1,
+      "max_steps": 2
+    },
+    {
+      "m": 3,
+      "nilpotent_depth": 1,
+      "necklaces": 4,
+      "sources": 2,
+      "branches": 2,
+      "max_steps": 1
+    },
+    {
+      "m": 4,
+      "nilpotent_depth": 4,
+      "necklaces": 6,
+      "sources": 2,
+      "branches": 2,
+      "max_steps": 4
+    },
+    {
+      "m": 5,
+      "nilpotent_depth": 1,
+      "necklaces": 8,
+      "sources": 4,
+      "branches": 4,
+      "max_steps": 1
+    },
+    {
+      "m": 6,
+      "nilpotent_depth": 2,
+      "necklaces": 14,
+      "sources": 6,
+      "branches": 6,
+      "max_steps": 2
+    },
+    {
+      "m": 7,
+      "nilpotent_depth": 1,
+      "necklaces": 20,
+      "sources": 10,
+      "branches": 10,
+      "max_steps": 1
+    },
+    {
+      "m": 8,
+      "nilpotent_depth": 8,
+      "necklaces": 36,
+      "sources": 16,
+      "branches": 16,
+      "max_steps": 8
+    },
+    {
+      "m": 9,
+      "nilpotent_depth": 1,
+      "necklaces": 60,
+      "sources": 30,
+      "branches": 30,
+      "max_steps": 1
+    },
+    {
+      "m": 10,
+      "nilpotent_depth": 2,
+      "necklaces": 108,
+      "sources": 52,
+      "branches": 52,
+      "max_steps": 2
+    },
+    {
+      "m": 11,
+      "nilpotent_depth": 1,
+      "necklaces": 188,
+      "sources": 94,
+      "branches": 94,
+      "max_steps": 1
+    },
+    {
+      "m": 12,
+      "nilpotent_depth": 4,
+      "necklaces": 352,
+      "sources": 172,
+      "branches": 172,
+      "max_steps": 4
+    },
+    {
+      "m": 13,
+      "nilpotent_depth": 1,
+      "necklaces": 632,
+      "sources": 316,
+      "branches": 316,
+      "max_steps": 1
+    },
+    {
+      "m": 14,
+      "nilpotent_depth": 2,
+      "necklaces": 1182,
+      "sources": 586,
+      "branches": 586,
+      "max_steps": 2
+    }
+  ]
+}
