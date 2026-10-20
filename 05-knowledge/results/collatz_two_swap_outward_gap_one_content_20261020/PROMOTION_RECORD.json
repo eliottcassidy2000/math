@@ -1,0 +1,12 @@
+{
+  "status": "AUDIT_PASS_STATUS_PROMOTION_ONLY",
+  "candidate_main_sha256": "3fe990c9f4cd28ad7a27be735c2ea44aeb76df14fbf8f8373b02a9327e931d84",
+  "proved_main_sha256": "0de423398fd700beaa72835594cf082be4d1a1916d9c9977b94d2d85c2b0e44f",
+  "audit_report_sha256": "ec05273e8a9d9e5e938611730f26f6b404629448d241cd79c1598321f4e577c9",
+  "changes": [
+    "Promoted status after independent final PASS and linked the audit report.",
+    "Clarified finite census universe as 2<=p<=60, including the excluded p=2 physical boundary."
+  ],
+  "mathematical_or_code_changes": false,
+  "original_audit_hash_inventory_preserved": "audit/AUDITED_CANDIDATE_SHA256SUMS"
+}

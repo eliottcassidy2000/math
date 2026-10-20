@@ -1,0 +1,18 @@
+{
+  "status": "HASHED_FROZEN_DEPENDENCIES",
+  "files": [
+    {
+      "publication_relative_path": "../collatz_two_swap_norm_barrier_20261020/symbolic/TWO_SWAP_SPARSE_FORMS_AND_BARRIER.md",
+      "sha256": "2941c54699874e1fd9a155bf401cd37ba0a4abd8292d53f1744a2151b829acbc",
+      "bytes": 14311,
+      "published_bytes_match": true
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_overlap_lattice_content_20261020/OVERLAPPING_TWO_ONE_CONTENT.md",
+      "sha256": "daa6608352fac8cfaedbb65c95fac736b74b959644e8f457dbb28057d8493272",
+      "bytes": 15038,
+      "published_bytes_match": true
+    }
+  ],
+  "cited_standard_input": "Minkowski second theorem, Barvinok lattice notes Theorem 22.5, as cited and audited in the overlap lattice packet"
+}
