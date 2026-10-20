@@ -1,0 +1,29 @@
+{
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "descent_builds": [
+    "-std=c++17 -O2 -Wall -Wextra -Wconversion -pedantic",
+    "-std=c++17 -O0 -fsanitize=undefined -fno-sanitize-recover=all"
+  ],
+  "files": {
+    "SIGNED_DESCENT_AND_SMALL_WEIGHT_AUDIT.md": "6b831df230fe7403c9eebcb2081fc929a23356b3c9c0efbe5520302a160f0231",
+    "audit_overlapping_path_types.py": "d6478689ad3469aeccaccf1d820057ba3508d800e4f86f16b7713785c289dd97",
+    "audit_signed_descent.cpp": "6c8fb9faab03e8a895b4573f9204ff65946df132077275e5efbea0867cc89f51",
+    "audit_small_cf_and_overlaps.py": "61d86aefd3b6d4c5b1a72bef326e8d80f4aadcf7a19801dc4d19a897d463bcf8",
+    "candidates.receipt.json": "2e03092199d1fe317c3000113171099c195e02b1362789e4679a490db1573b86",
+    "candidates.receipt.optimized.json": "2e03092199d1fe317c3000113171099c195e02b1362789e4679a490db1573b86",
+    "descent.hostile.stderr.txt": "a37b508541652692acaf69496548ed7e50e8ec955f6ff39f3c0cb25b139c36bf",
+    "descent.hostile.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "descent.receipt.txt": "b136e17bef8eea1f2676b2f35e1a3750f40a4d4d1d07f2d46c70efb85861e70c",
+    "descent.receipt.unoptimized.txt": "b136e17bef8eea1f2676b2f35e1a3750f40a4d4d1d07f2d46c70efb85861e70c",
+    "path-types.receipt.json": "60a8a2f2a2554000b57e1e50f9e9c876093a6e1092dcda4d45df726e5d186ed3",
+    "path-types.receipt.optimized.json": "60a8a2f2a2554000b57e1e50f9e9c876093a6e1092dcda4d45df726e5d186ed3",
+    "producer.candidates.replay.json": "298a5be4b2506763bdd69323c318e0b776f2b9c000298376b4019604dcd46a71",
+    "producer.descent.replay.json": "a658cd5f90c57ba9051fd921d16b199bd326b7a4c9c8aa98ceec39a6f00749ec"
+  },
+  "hostile_build": "-std=c++17 -O2 -DAUDIT_STEP_LIMIT=1; required exit1 at start3",
+  "reviewed_producer_source_hashes": {
+    "verify_signed_descent.cpp": "f75adee112e13b7a02df2eb44e0d5700305d88c725d0dbbff2fa1fae1d369418",
+    "verify_small_convergent_overlaps.py": "18c10ebadc1c3ee65a2c5e4c71d49aa0f54d19268ea66c3e09638133b1b1289a"
+  },
+  "status": "FROZEN independent audit, 2026-10-20"
+}

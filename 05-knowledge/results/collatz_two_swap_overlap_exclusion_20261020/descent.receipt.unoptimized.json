@@ -1,0 +1,15 @@
+{
+  "status": "PASS_EXACT_BOUNDED_SIGNED_DESCENT",
+  "magnitude_limit_inclusive": 16777216,
+  "arithmetic": "checked unsigned 128-bit trajectories",
+  "failure_policy": "nonzero exit on overflow, step cap, cycle error, or incomplete coverage",
+  "per_start_odd_step_cap": 1000000,
+  "proof_method": "induction on the start; even starts halve immediately, every other odd start reaches a smaller value or an explicitly verified known cycle",
+  "maps": [
+    {"sign": 1, "tested_odd_starts": 8388607, "known_minimum_starts": 1, "even_starts_covered_by_immediate_halving": 8388608, "total_odd_descent_steps": 29285622, "maximum_odd_descent_steps": 181, "first_maximum_step_start": 13421671, "maximum_prehalving_numerator": "60342610919632", "trace_mod_2_to_64": "9025453781190860899"},
+    {"sign": -1, "tested_odd_starts": 8388605, "known_minimum_starts": 3, "even_starts_covered_by_immediate_halving": 8388608, "total_odd_descent_steps": 29303560, "maximum_odd_descent_steps": 172, "first_maximum_step_start": 5960769, "maximum_prehalving_numerator": "30541433029400", "trace_mod_2_to_64": "9006112460426096375"}
+  ],
+  "known_positive_cycle": [1, 2],
+  "known_negative_magnitude_cycles": [[1], [5, 7, 10], [17, 25, 37, 55, 82, 41, 61, 91, 136, 68, 34]],
+  "scope": "All integer magnitudes at most the stated bound only; no claim of global Collatz convergence."
+}

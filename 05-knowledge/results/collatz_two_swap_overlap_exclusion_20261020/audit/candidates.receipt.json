@@ -1,0 +1,239 @@
+{
+  "checks": 2793,
+  "continued_fraction_prefix": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    3,
+    1,
+    5,
+    2,
+    23
+  ],
+  "convergent_shapes_p_q": [
+    [
+      2,
+      3
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      12,
+      19
+    ],
+    [
+      41,
+      65
+    ],
+    [
+      53,
+      84
+    ],
+    [
+      306,
+      485
+    ],
+    [
+      665,
+      1054
+    ]
+  ],
+  "convergents_through_first_excess": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      19,
+      12
+    ],
+    [
+      65,
+      41
+    ],
+    [
+      84,
+      53
+    ],
+    [
+      485,
+      306
+    ],
+    [
+      1054,
+      665
+    ],
+    [
+      24727,
+      15601
+    ]
+  ],
+  "exact_trace_sha256": "f738115e92ada8ce600dd405a17a7a4d0dfe37d7d7ff5e0ec88ea895d2d61c15",
+  "extra_known_cycle_shapes_p_q": [
+    [
+      7,
+      11
+    ]
+  ],
+  "integral_outputs": [
+    {
+      "B": 5,
+      "D": -1,
+      "direction": -1,
+      "edges": [
+        0,
+        1
+      ],
+      "fixed_point": -5,
+      "orbit": [
+        -5,
+        -7,
+        -10
+      ],
+      "p": 2,
+      "q": 3,
+      "word": "110"
+    },
+    {
+      "B": 7,
+      "D": -1,
+      "direction": 1,
+      "edges": [
+        2,
+        1
+      ],
+      "fixed_point": -7,
+      "orbit": [
+        -7,
+        -10,
+        -5
+      ],
+      "p": 2,
+      "q": 3,
+      "word": "101"
+    }
+  ],
+  "known_cycles": [
+    {
+      "minimum": 1,
+      "p": 1,
+      "q": 2,
+      "sign": 1
+    },
+    {
+      "minimum": 1,
+      "p": 1,
+      "q": 1,
+      "sign": -1
+    },
+    {
+      "minimum": 5,
+      "p": 2,
+      "q": 3,
+      "sign": -1
+    },
+    {
+      "minimum": 17,
+      "p": 7,
+      "q": 11,
+      "sign": -1
+    }
+  ],
+  "log_decomposition": "log3=log2+log(3/2), 80 terms each",
+  "original_cut_crossing_paths": 8,
+  "path_count": 906,
+  "producer_compatible_trace_sha256": "10721e4caf578f6475281c6a5085e27a955b1fe6c5c0b71d943fee50e437f505",
+  "producer_script_sha256": "18c10ebadc1c3ee65a2c5e4c71d49aa0f54d19268ea66c3e09638133b1b1289a",
+  "rows": [
+    {
+      "D_sign": -1,
+      "minimum_nonintegral_denominator": null,
+      "minus_paths": 1,
+      "p": 2,
+      "plus_paths": 1,
+      "q": 3,
+      "r": 1
+    },
+    {
+      "D_sign": 1,
+      "minimum_nonintegral_denominator": 13,
+      "minus_paths": 2,
+      "p": 5,
+      "plus_paths": 2,
+      "q": 8,
+      "r": 3
+    },
+    {
+      "D_sign": -1,
+      "minimum_nonintegral_denominator": 139,
+      "minus_paths": 3,
+      "p": 7,
+      "plus_paths": 3,
+      "q": 11,
+      "r": 4
+    },
+    {
+      "D_sign": -1,
+      "minimum_nonintegral_denominator": 7153,
+      "minus_paths": 5,
+      "p": 12,
+      "plus_paths": 5,
+      "q": 19,
+      "r": 7
+    },
+    {
+      "D_sign": 1,
+      "minimum_nonintegral_denominator": 14499716215459201,
+      "minus_paths": 17,
+      "p": 41,
+      "plus_paths": 17,
+      "q": 65,
+      "r": 24
+    },
+    {
+      "D_sign": -1,
+      "minimum_nonintegral_denominator": 3675686713268463772537,
+      "minus_paths": 22,
+      "p": 53,
+      "plus_paths": 22,
+      "q": 84,
+      "r": 31
+    },
+    {
+      "D_sign": 1,
+      "minimum_nonintegral_denominator": 102065376400825306534437391838939444403106454408085639783964140880896699835673006969445010534504805079858638689074275443284439551032910142670903,
+      "minus_paths": 127,
+      "p": 306,
+      "plus_paths": 127,
+      "q": 485,
+      "r": 179
+    },
+    {
+      "D_sign": -1,
+      "minimum_nonintegral_denominator": 227744726469140201819496364035018506099776838106281440467666540934327383477557163103625637475169182797446393996889387351117171103317228241647898677700380525107371846640512147549928306382100429401761178009848230511599560032883089031241029153491009091015007513266959814746519278358502667448749900918810889964416807,
+      "minus_paths": 276,
+      "p": 665,
+      "plus_paths": 276,
+      "q": 1054,
+      "r": 389
+    }
+  ],
+  "script_sha256": "61d86aefd3b6d4c5b1a72bef326e8d80f4aadcf7a19801dc4d19a897d463bcf8",
+  "status": "FINITE-EXACT independent signed small-CF and actual-edge audit"
+}

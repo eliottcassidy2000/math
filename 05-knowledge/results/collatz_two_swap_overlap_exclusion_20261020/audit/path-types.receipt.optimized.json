@@ -1,0 +1,38 @@
+{
+  "checks": 104286,
+  "counts": {
+    "nonprimitive_nonundo": 11676,
+    "single_one": 14894,
+    "two_ones": 14894,
+    "undo": 44706
+  },
+  "integral_nonundo_outputs": [
+    {
+      "edges": [
+        0,
+        1
+      ],
+      "fixed_point": -5,
+      "p": 2,
+      "q": 3,
+      "word": "110"
+    },
+    {
+      "edges": [
+        2,
+        1
+      ],
+      "fixed_point": -7,
+      "p": 2,
+      "q": 3,
+      "word": "101"
+    }
+  ],
+  "q_range_inclusive": [
+    2,
+    64
+  ],
+  "script_sha256": "d6478689ad3469aeccaccf1d820057ba3508d800e4f86f16b7713785c289dd97",
+  "shape_count": 2016,
+  "status": "FINITE-EXACT structural hostile controls only"
+}
