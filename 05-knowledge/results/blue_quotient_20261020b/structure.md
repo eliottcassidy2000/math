@@ -59,9 +59,14 @@ is J. W. Moon, [On Subtournaments of a Tournament](https://doi.org/10.4153/CMB-1
 Canadian Mathematical Bulletin 9(3) (1966), 297–301, Theorem 1:
 its vertex-pancyclicity theorem includes the required Hamiltonian cycle.
 See the [source intake](../../reference/CORE-PAPERS-TOURNAMENT-STRONG-EARS-2026-08-25.md).
-This is an inherited primary citation; the DOI was not freshly accessible
-through this session's browser. No unverified original Camion bibliography
-is supplied.
+The concurrently inherited
+[endpoint-transport note, Section 3](../merged_metagraph_endpoint_transport_20261020/endpoint-transport-and-complement-leakage.md)
+also supplies the elementary proof, checked in this session: take a
+longest directed cycle. An outside vertex with both arc directions to
+the cycle inserts at a consecutive transition. Otherwise all outside
+vertices dominate or are dominated by the cycle. Strong connectivity
+forces an outside edge from the latter set to the former, inserting
+two vertices and contradicting maximality. Thus the cycle spans.
 Its cut starting at v_j has reversal
 
     r_j(v_i)=v_(2j-1-i),                    indices modulo n.
@@ -314,6 +319,18 @@ That is not a consequence of the moment identities currently proved.
 
 The missing invariant is literal path normalization and its compatible
 boundary data. Sections 2–4 retain it; the false mean shortcut discards it.
+
+The concurrent endpoint-transport note, equations (2.1)–(2.3), further
+prescribes each node's black-neighbour triangle-current polynomial and
+folded-score capacities from its black Hamiltonian-path endpoint
+inventory. A proposed black-component cut must contain the required
+destination shells. Regular black-active nodes have black neighbours
+in the almost-regular shell, which is strong for n>=5. These are useful
+necessary constraints, but the inventory omits whether the path is
+closed and the destination's identity within its shell. It therefore
+does not prove the closed-path descent claim or connectivity. Its
+regular-end-SCC characterization of current rigidity applies to the
+total path inventory; no such iff is inferred for the black restriction.
 
 ## Reproduction
 

@@ -180,6 +180,22 @@ subspace. Classifying these compatible **Boolean fibre indicators**
 remains the missing all-order step; positive Gram matrices alone do not
 classify them.
 
+The subsequently received
+[endpoint-transport theorem](../merged_metagraph_endpoint_transport_20261020/endpoint-transport-and-complement-leakage.md)
+prescribes the entire coloured triangle-current row and folded-score
+capacities from each tournament's Hamiltonian-path endpoint inventory.
+It strengthens the necessary conditions on a proposed black-component
+cut. Its inventory still omits closedness and destination identity
+within a score shell, so it does not settle our descent or connectivity
+obligation. Its elementary Hamiltonicity proof also provides a direct
+audited input to our closed-path theorem.
+
+The incoming
+[weighted marked-branch correction](../weighted_branch_carrier_audit_20261020/WEIGHTED_BRANCH_AUDIT.md)
+was checked for relevance. It concerns decorated tournament switching
+classes, not the ordinary/converse-merged classes used here; none of
+our counts or proofs depends on its corrected fixed-point formulas.
+
 ## 7. Reproduction and next precise obligations
 
 - [Census](census.md): full rebuild and independent replay harness,
@@ -190,6 +206,8 @@ classify them.
   controls, 18–74-vertex snarks and tree failures.
 - [Junctions](junctions.md): all seven-port kernels, complete measurements
   and independent tree checks.
+- [Audit ledger](AUDIT.md): independent checks, inherited corrections and
+  exact limits of the conclusions.
 
 The next tournament target is a cycle-changing black descent or a
 boundary-compatible normalization of ordered rigid SCC words.
