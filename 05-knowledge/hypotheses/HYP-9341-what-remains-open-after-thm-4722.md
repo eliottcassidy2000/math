@@ -35,6 +35,7 @@ related:
   - 01-canon/theorems/THM-4723-sylow-profile-form-of-hyp-9340-and-the-defect-reduction-for-the-three-cycle-type.md
   - 05-knowledge/hypotheses/HYP-9340-refined-equinumerosity-for-every-odd-order-symmetry-and-what-a-tournaments-even-graphs-bijection-can-be.md
   - 05-knowledge/hypotheses/HYP-9172-no-natural-bijection-for-twisted-mallows-sloane-at-any-n-ge-5.md
+  - THM-4728 (opus-2026-10-19-S45) answers the two questions of (b): the formula tau_T - tau_E = W + E_even + E_wit - E_T (Theorem R type by type; concurrently equation (2) of the Codex census packet) and the least-degree failure, C15 (3,5,1,1) at n = 10 (unique there; the only failures at n = 11, 12 are C15 (3,5,1^3), (3,5,1^4); at n = 13 the two classes of type (3,3,5,1,1), C3xC3xC5 and the synchronised C15, both with defect 6, are the first outside the C15 (3,5,1^k) family, proved concurrently by the Codex double-triple packet); for (c) the Codex packets affine_circulant_ideal_obstruction_20261020 (no F_2-affine equivariant rule for p = 1 mod 4, p >= 13; reproduced independently in this session's note) and circulant_boolean_degree_20261020 (unbounded Boolean degree) leave only first-order definability open; HYP-9344
 note: 05-knowledge/results/hyp9172_20261019_sylow_hall_violator.md
 ---
 

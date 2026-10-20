@@ -1,0 +1,12 @@
+# mixed-prime odd symmetry classes: tau_T(H) against tau_E(H), Theorem R orbit counts, defect witnesses (restricted to ['F21 x diagC3'])
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\networkx\utils\backends.py:535: UserWarning: The hashes produced for directed graphs changed in version v3.5 due to a bugfix to track in and out edges separately (see documentation).
+  return self.orig_func(*args, **kwargs)
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\networkx\algorithms\graph_hashing.py:211: UserWarning: The hashes produced for graphs without node or edge attributeschanged in v3.5 due to a bugfix (see documentation).
+  node_labels = _init_node_labels(G, edge_attr, node_attr)
+  n=13 F21 x diagC3 (7,3,3)            : |H|=  63 |N|= 1512 c_2= 8 |Fix|=   256 | N-orbits: T    16, N-even G    16 (R OK) | tau_T=   12 tau_E=   12 defect=  0 | W=  4 E_T=  4 E_even=  0 E_wit=  0 identity OK |  59.8s
+      witness type 56: 6 edges, degrees [0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2], |Aut| = 362880, m^ev = 1, H skipped (|Aut| large)
+      witness type 58: 27 edges, degrees [2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 9, 9, 9], |Aut| = 181440, m^ev = 1, H skipped (|Aut| large)
+      witness type 60: 48 edges, degrees [6, 6, 6, 6, 6, 6, 6, 9, 9, 9, 9, 9, 9], |Aut| = 362880, m^ev = 1, H skipped (|Aut| large)
+      witness type 76: 36 edges, degrees [3, 3, 3, 3, 3, 3, 3, 5, 5, 5, 12, 12, 12], |Aut| = 181440, m^ev = 1, H skipped (|Aut| large)
+done
+addendum2 exit 0

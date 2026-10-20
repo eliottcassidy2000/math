@@ -1,0 +1,279 @@
+# mixed-prime odd symmetry classes: tau_T(H) against tau_E(H), Theorem R orbit counts, defect witnesses (restricted to ['F21diag x diagC3', 'C15 (3,3,5,1^2)'])
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\networkx\utils\backends.py:535: UserWarning: The hashes produced for directed graphs changed in version v3.5 due to a bugfix to track in and out edges separately (see documentation).
+  return self.orig_func(*args, **kwargs)
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\networkx\algorithms\graph_hashing.py:211: UserWarning: The hashes produced for graphs without node or edge attributeschanged in v3.5 due to a bugfix (see documentation).
+  node_labels = _init_node_labels(G, edge_attr, node_attr)
+  n=13 C15 (3,3,5,1^2) synchronised    : |H|=  15 |N|= 1440 c_2=16 |Fix|= 65536 | N-orbits: T  1024, N-even G  1024 (R OK) | tau_T=  768 tau_E=  762 defect=  6 | W=258 E_T=256 E_even=  4 E_wit=  0 identity OK | 1781.7s
+      witness type 46: 6 edges, degrees [0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2], |Aut| = 362880, m^ev = 1, H skipped (|Aut| large)
+      witness type 51: 21 edges, degrees [0, 0, 2, 2, 2, 3, 3, 3, 3, 3, 7, 7, 7], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 57: 30 edges, degrees [0, 0, 3, 3, 3, 3, 3, 5, 5, 5, 10, 10, 10], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 59: 9 edges, degrees [0, 0, 0, 0, 0, 0, 2, 2, 2, 3, 3, 3, 3], |Aut| = 103680, m^ev = 1, H skipped (|Aut| large)
+      witness type 65: 18 edges, degrees [0, 0, 0, 0, 0, 0, 3, 5, 5, 5, 6, 6, 6], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 67: 24 edges, degrees [0, 2, 2, 2, 3, 3, 3, 3, 3, 3, 8, 8, 8], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 73: 33 edges, degrees [0, 3, 3, 3, 3, 3, 3, 5, 5, 5, 11, 11, 11], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 75: 12 edges, degrees [0, 0, 0, 0, 0, 2, 2, 2, 3, 3, 4, 4, 4], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 81: 21 edges, degrees [0, 0, 0, 0, 0, 3, 3, 5, 5, 5, 7, 7, 7], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 83: 27 edges, degrees [2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 9, 9, 9], |Aut| = 181440, m^ev = 1, H skipped (|Aut| large)
+      witness type 89: 36 edges, degrees [3, 3, 3, 3, 3, 3, 3, 5, 5, 5, 12, 12, 12], |Aut| = 181440, m^ev = 1, H skipped (|Aut| large)
+      witness type 130: 36 edges, degrees [0, 0, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 135: 24 edges, degrees [0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 7, 7, 7], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 141: 33 edges, degrees [0, 3, 3, 3, 3, 3, 3, 6, 6, 6, 10, 10, 10], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 143: 39 edges, degrees [0, 3, 6, 6, 6, 6, 6, 7, 7, 7, 8, 8, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 149: 48 edges, degrees [0, 3, 6, 6, 6, 6, 6, 10, 10, 10, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 151: 27 edges, degrees [3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 7, 7, 7], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 157: 36 edges, degrees [3, 3, 3, 3, 3, 3, 3, 7, 7, 7, 10, 10, 10], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 159: 42 edges, degrees [3, 3, 6, 6, 6, 6, 6, 7, 7, 7, 9, 9, 9], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 165: 51 edges, degrees [3, 3, 6, 6, 6, 6, 6, 10, 10, 10, 12, 12, 12], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 214: 12 edges, degrees [0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 6], |Aut| = 51840, m^ev = 1, H NOT pronormal in Aut X
+      witness type 219: 27 edges, degrees [0, 3, 3, 3, 3, 3, 3, 3, 3, 6, 8, 8, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 225: 36 edges, degrees [0, 3, 3, 3, 3, 3, 6, 6, 6, 6, 11, 11, 11], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 226: 12 edges, degrees [0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3], |Aut| = 138240, m^ev = 1, H skipped (|Aut| large)
+      witness type 231: 27 edges, degrees [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 8, 8, 8], |Aut| = 103680, m^ev = 1, H skipped (|Aut| large)
+      witness type 237: 36 edges, degrees [3, 3, 3, 3, 3, 3, 3, 6, 6, 6, 11, 11, 11], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 239: 15 edges, degrees [0, 0, 0, 0, 0, 3, 3, 3, 3, 4, 4, 4, 6], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 245: 24 edges, degrees [0, 0, 0, 0, 0, 3, 6, 6, 6, 6, 7, 7, 7], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 247: 30 edges, degrees [3, 3, 3, 3, 3, 3, 3, 3, 3, 6, 9, 9, 9], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 253: 39 edges, degrees [3, 3, 3, 3, 3, 3, 6, 6, 6, 6, 12, 12, 12], |Aut| = 103680, m^ev = 1, H skipped (|Aut| large)
+      witness type 286: 42 edges, degrees [0, 6, 6, 6, 6, 6, 6, 8, 8, 8, 8, 8, 8], |Aut| = 51840, m^ev = 1, H NOT pronormal in Aut X
+      witness type 290: 42 edges, degrees [3, 3, 6, 6, 6, 6, 6, 8, 8, 8, 8, 8, 8], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 295: 30 edges, degrees [3, 3, 3, 3, 3, 3, 4, 4, 4, 6, 8, 8, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 301: 39 edges, degrees [3, 3, 3, 3, 3, 3, 6, 7, 7, 7, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 303: 45 edges, degrees [3, 6, 6, 6, 6, 6, 6, 8, 8, 8, 9, 9, 9], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 309: 54 edges, degrees [3, 6, 6, 6, 6, 6, 6, 11, 11, 11, 12, 12, 12], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 326: 18 edges, degrees [0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 6, 6], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 331: 33 edges, degrees [3, 3, 3, 3, 3, 4, 4, 4, 6, 6, 9, 9, 9], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 337: 42 edges, degrees [3, 3, 3, 3, 3, 6, 6, 7, 7, 7, 12, 12, 12], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 346: 48 edges, degrees [6, 6, 6, 6, 6, 6, 6, 9, 9, 9, 9, 9, 9], |Aut| = 362880, m^ev = 1, H skipped (|Aut| large)
+      witness type 1118: 11 edges, degrees [0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 5], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1123: 26 edges, degrees [0, 2, 2, 2, 4, 4, 4, 4, 4, 5, 7, 7, 7], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1129: 35 edges, degrees [0, 4, 4, 4, 4, 4, 5, 5, 5, 5, 10, 10, 10], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1131: 14 edges, degrees [0, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1137: 23 edges, degrees [0, 1, 1, 1, 1, 1, 5, 5, 5, 6, 6, 6, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1139: 29 edges, degrees [0, 2, 2, 2, 4, 4, 4, 4, 4, 8, 8, 8, 8], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1145: 38 edges, degrees [0, 4, 4, 4, 4, 4, 5, 5, 5, 8, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1147: 14 edges, degrees [1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 5], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1153: 23 edges, degrees [1, 1, 1, 1, 1, 3, 5, 5, 5, 5, 6, 6, 6], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1155: 29 edges, degrees [2, 2, 2, 3, 4, 4, 4, 4, 4, 5, 8, 8, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1161: 38 edges, degrees [3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1163: 17 edges, degrees [1, 1, 1, 1, 1, 2, 2, 2, 3, 4, 4, 4, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1169: 26 edges, degrees [1, 1, 1, 1, 1, 3, 5, 5, 5, 7, 7, 7, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1171: 32 edges, degrees [2, 2, 2, 3, 4, 4, 4, 4, 4, 8, 9, 9, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1177: 41 edges, degrees [3, 4, 4, 4, 4, 4, 5, 5, 5, 8, 12, 12, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1234: 41 edges, degrees [0, 5, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1239: 29 edges, degrees [0, 3, 3, 3, 4, 4, 4, 4, 4, 7, 7, 7, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1245: 38 edges, degrees [0, 4, 4, 4, 4, 4, 6, 6, 6, 8, 10, 10, 10], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1247: 44 edges, degrees [0, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1253: 53 edges, degrees [0, 7, 7, 7, 7, 7, 8, 10, 10, 10, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1255: 29 edges, degrees [3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 7, 7, 7], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1261: 38 edges, degrees [3, 4, 4, 4, 4, 4, 5, 6, 6, 6, 10, 10, 10], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1263: 44 edges, degrees [3, 5, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1269: 53 edges, degrees [3, 5, 7, 7, 7, 7, 7, 10, 10, 10, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1271: 32 edges, degrees [3, 4, 4, 4, 4, 4, 4, 4, 4, 7, 7, 7, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1277: 41 edges, degrees [3, 4, 4, 4, 4, 4, 7, 7, 7, 8, 10, 10, 10], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1279: 47 edges, degrees [3, 7, 7, 7, 7, 7, 7, 7, 7, 8, 9, 9, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1285: 56 edges, degrees [3, 7, 7, 7, 7, 7, 8, 10, 10, 10, 12, 12, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1334: 17 edges, degrees [0, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 11], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1339: 32 edges, degrees [0, 3, 3, 3, 4, 4, 4, 4, 4, 8, 8, 8, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1345: 41 edges, degrees [0, 4, 4, 4, 4, 4, 6, 6, 6, 11, 11, 11, 11], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1347: 17 edges, degrees [1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 8], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1353: 26 edges, degrees [1, 1, 1, 1, 1, 3, 6, 6, 6, 6, 6, 6, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1355: 32 edges, degrees [3, 3, 3, 3, 4, 4, 4, 4, 4, 8, 8, 8, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1361: 41 edges, degrees [3, 4, 4, 4, 4, 4, 6, 6, 6, 8, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1363: 20 edges, degrees [1, 1, 1, 1, 1, 3, 3, 3, 3, 4, 4, 4, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1369: 29 edges, degrees [1, 1, 1, 1, 1, 3, 6, 6, 6, 7, 7, 7, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1371: 35 edges, degrees [3, 3, 3, 3, 4, 4, 4, 4, 4, 9, 9, 9, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1377: 44 edges, degrees [3, 4, 4, 4, 4, 4, 6, 6, 6, 11, 12, 12, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1418: 47 edges, degrees [0, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 11], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1423: 32 edges, degrees [3, 3, 3, 3, 4, 4, 4, 4, 4, 8, 8, 8, 8], |Aut| = 69120, m^ev = 1, H skipped (|Aut| large)
+      witness type 1429: 41 edges, degrees [3, 4, 4, 4, 4, 4, 6, 6, 6, 8, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1431: 47 edges, degrees [3, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1437: 56 edges, degrees [3, 7, 7, 7, 7, 7, 8, 11, 11, 11, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1439: 35 edges, degrees [3, 4, 4, 4, 4, 4, 4, 4, 4, 8, 8, 8, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1445: 44 edges, degrees [3, 4, 4, 4, 4, 4, 7, 7, 7, 11, 11, 11, 11], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1447: 50 edges, degrees [3, 7, 7, 7, 7, 7, 8, 8, 8, 9, 9, 9, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1453: 59 edges, degrees [3, 7, 7, 7, 7, 7, 11, 11, 11, 11, 12, 12, 12], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1486: 17 edges, degrees [1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 5, 6], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1491: 32 edges, degrees [3, 3, 3, 4, 4, 4, 4, 4, 5, 6, 8, 8, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1497: 41 edges, degrees [4, 4, 4, 4, 4, 5, 6, 6, 6, 6, 11, 11, 11], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1499: 20 edges, degrees [1, 1, 1, 1, 1, 3, 3, 3, 4, 4, 4, 6, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1505: 29 edges, degrees [1, 1, 1, 1, 1, 6, 6, 6, 6, 7, 7, 7, 8], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1507: 35 edges, degrees [3, 3, 3, 4, 4, 4, 4, 4, 6, 8, 9, 9, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1513: 44 edges, degrees [4, 4, 4, 4, 4, 6, 6, 6, 6, 8, 12, 12, 12], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1538: 47 edges, degrees [5, 6, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1543: 35 edges, degrees [4, 4, 4, 4, 4, 4, 4, 4, 6, 8, 8, 8, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1549: 44 edges, degrees [4, 4, 4, 4, 4, 6, 7, 7, 7, 8, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1551: 50 edges, degrees [6, 7, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1557: 59 edges, degrees [6, 7, 7, 7, 7, 7, 8, 11, 11, 11, 12, 12, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1574: 23 edges, degrees [1, 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 6, 11], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1579: 38 edges, degrees [4, 4, 4, 4, 4, 4, 4, 4, 6, 9, 9, 9, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1585: 47 edges, degrees [4, 4, 4, 4, 4, 6, 7, 7, 7, 11, 12, 12, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 1594: 53 edges, degrees [6, 7, 7, 7, 7, 7, 9, 9, 9, 9, 9, 9, 11], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2692: 25 edges, degrees [0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], |Aut| = 172800, m^ev = 1, H skipped (|Aut| large)
+      witness type 2732: 16 edges, degrees [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 5, 5], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2737: 31 edges, degrees [2, 2, 2, 5, 5, 5, 5, 5, 5, 5, 7, 7, 7], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2743: 40 edges, degrees [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 10, 10, 10], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2745: 19 edges, degrees [2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 5, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2751: 28 edges, degrees [2, 2, 2, 2, 2, 5, 5, 5, 5, 6, 6, 6, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2753: 34 edges, degrees [2, 2, 2, 5, 5, 5, 5, 5, 5, 8, 8, 8, 8], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2759: 43 edges, degrees [5, 5, 5, 5, 5, 5, 5, 5, 5, 8, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2761: 22 edges, degrees [2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 8, 8], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2767: 31 edges, degrees [2, 2, 2, 2, 2, 5, 5, 5, 7, 7, 7, 8, 8], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2769: 37 edges, degrees [2, 2, 2, 5, 5, 5, 5, 5, 8, 8, 9, 9, 9], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2775: 46 edges, degrees [5, 5, 5, 5, 5, 5, 5, 5, 8, 8, 12, 12, 12], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2812: 55 edges, degrees [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 10, 10, 10], |Aut| = 172800, m^ev = 1, H skipped (|Aut| large)
+      witness type 2814: 46 edges, degrees [5, 5, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2819: 34 edges, degrees [3, 3, 3, 5, 5, 5, 5, 5, 5, 7, 7, 7, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2825: 43 edges, degrees [5, 5, 5, 5, 5, 5, 6, 6, 6, 8, 10, 10, 10], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2827: 49 edges, degrees [5, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2833: 58 edges, degrees [5, 8, 8, 8, 8, 8, 8, 10, 10, 10, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2835: 37 edges, degrees [4, 4, 4, 5, 5, 5, 5, 5, 7, 7, 7, 8, 8], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2841: 46 edges, degrees [5, 5, 5, 5, 5, 7, 7, 7, 8, 8, 10, 10, 10], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2843: 52 edges, degrees [7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2849: 61 edges, degrees [8, 8, 8, 8, 8, 8, 8, 10, 10, 10, 12, 12, 12], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2898: 22 edges, degrees [2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 5, 11], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2903: 37 edges, degrees [3, 3, 3, 5, 5, 5, 5, 5, 5, 8, 8, 8, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2909: 46 edges, degrees [5, 5, 5, 5, 5, 5, 6, 6, 6, 11, 11, 11, 11], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2910: 22 edges, degrees [2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 8, 8], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2915: 37 edges, degrees [3, 3, 3, 5, 5, 5, 5, 5, 8, 8, 8, 8, 8], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2921: 46 edges, degrees [5, 5, 5, 5, 5, 6, 6, 6, 8, 8, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2923: 25 edges, degrees [2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 8, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2929: 34 edges, degrees [2, 2, 2, 2, 2, 6, 6, 6, 7, 7, 7, 8, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2931: 40 edges, degrees [3, 3, 3, 5, 5, 5, 5, 5, 8, 9, 9, 9, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2937: 49 edges, degrees [5, 5, 5, 5, 5, 6, 6, 6, 8, 11, 12, 12, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2970: 52 edges, degrees [5, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 11], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2974: 52 edges, degrees [8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8], |Aut| = 138240, m^ev = 1, H skipped (|Aut| large)
+      witness type 2979: 40 edges, degrees [4, 4, 4, 5, 5, 5, 5, 5, 8, 8, 8, 8, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2985: 49 edges, degrees [5, 5, 5, 5, 5, 7, 7, 7, 8, 11, 11, 11, 11], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2987: 55 edges, degrees [8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 2993: 64 edges, degrees [8, 8, 8, 8, 8, 8, 11, 11, 11, 11, 12, 12, 12], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3010: 28 edges, degrees [2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 11, 11], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3015: 43 edges, degrees [4, 4, 4, 5, 5, 5, 5, 5, 9, 9, 9, 11, 11], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3021: 52 edges, degrees [5, 5, 5, 5, 5, 7, 7, 7, 11, 11, 12, 12, 12], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3030: 58 edges, degrees [8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 11, 11], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3798: 10 edges, degrees [0, 0, 0, 0, 0, 1, 2, 2, 2, 3, 3, 3, 4], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3804: 19 edges, degrees [0, 0, 0, 0, 0, 1, 4, 5, 5, 5, 6, 6, 6], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3806: 25 edges, degrees [1, 2, 2, 2, 3, 3, 3, 3, 3, 4, 8, 8, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3812: 34 edges, degrees [1, 3, 3, 3, 3, 3, 4, 5, 5, 5, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3872: 25 edges, degrees [1, 3, 3, 3, 3, 3, 3, 3, 3, 4, 7, 7, 7], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3878: 34 edges, degrees [1, 3, 3, 3, 3, 3, 4, 6, 6, 6, 10, 10, 10], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3880: 40 edges, degrees [1, 4, 6, 6, 6, 6, 6, 7, 7, 7, 8, 8, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3886: 49 edges, degrees [1, 4, 6, 6, 6, 6, 6, 10, 10, 10, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3950: 13 edges, degrees [0, 0, 0, 0, 0, 1, 3, 3, 3, 3, 3, 3, 7], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3955: 28 edges, degrees [1, 3, 3, 3, 3, 3, 3, 3, 3, 7, 8, 8, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3961: 37 edges, degrees [1, 3, 3, 3, 3, 3, 6, 6, 6, 7, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3965: 22 edges, degrees [0, 0, 0, 0, 0, 4, 4, 6, 6, 6, 6, 6, 6], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3967: 28 edges, degrees [3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 8, 8, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3973: 37 edges, degrees [3, 3, 3, 3, 3, 4, 4, 6, 6, 6, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3975: 16 edges, degrees [0, 0, 0, 0, 0, 3, 3, 3, 4, 4, 4, 4, 7], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3981: 25 edges, degrees [0, 0, 0, 0, 0, 4, 6, 6, 6, 7, 7, 7, 7], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3983: 31 edges, degrees [3, 3, 3, 3, 3, 3, 3, 3, 4, 7, 9, 9, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 3989: 40 edges, degrees [3, 3, 3, 3, 3, 4, 6, 6, 6, 7, 12, 12, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4022: 43 edges, degrees [1, 6, 6, 6, 6, 6, 7, 8, 8, 8, 8, 8, 8], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4029: 52 edges, degrees [4, 4, 6, 6, 6, 6, 6, 11, 11, 11, 11, 11, 11], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4031: 31 edges, degrees [3, 3, 3, 3, 3, 4, 4, 4, 4, 7, 8, 8, 8], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4037: 40 edges, degrees [3, 3, 3, 3, 3, 4, 7, 7, 7, 7, 11, 11, 11], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4039: 46 edges, degrees [4, 6, 6, 6, 6, 6, 7, 8, 8, 8, 9, 9, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4045: 55 edges, degrees [4, 6, 6, 6, 6, 6, 7, 11, 11, 11, 12, 12, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4847: 12 edges, degrees [1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 6], |Aut| = 51840, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4851: 27 edges, degrees [1, 2, 2, 2, 4, 4, 4, 4, 4, 6, 7, 7, 7], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4857: 36 edges, degrees [1, 4, 4, 4, 4, 4, 5, 5, 5, 6, 10, 10, 10], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4859: 15 edges, degrees [1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 9], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4865: 24 edges, degrees [1, 1, 1, 1, 1, 1, 5, 5, 5, 6, 6, 6, 9], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4867: 30 edges, degrees [1, 2, 2, 2, 4, 4, 4, 4, 4, 8, 8, 8, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4873: 39 edges, degrees [1, 4, 4, 4, 4, 4, 5, 5, 5, 9, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4875: 15 edges, degrees [1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 6], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4881: 24 edges, degrees [1, 1, 1, 1, 1, 4, 5, 5, 5, 6, 6, 6, 6], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4883: 30 edges, degrees [2, 2, 2, 4, 4, 4, 4, 4, 4, 6, 8, 8, 8], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4889: 39 edges, degrees [4, 4, 4, 4, 4, 4, 5, 5, 5, 6, 11, 11, 11], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4891: 18 edges, degrees [1, 1, 1, 1, 1, 2, 2, 2, 4, 4, 4, 4, 9], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4897: 27 edges, degrees [1, 1, 1, 1, 1, 4, 5, 5, 5, 7, 7, 7, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4899: 33 edges, degrees [2, 2, 2, 4, 4, 4, 4, 4, 4, 9, 9, 9, 9], |Aut| = 103680, m^ev = 1, H skipped (|Aut| large)
+      witness type 4905: 42 edges, degrees [4, 4, 4, 4, 4, 4, 5, 5, 5, 9, 12, 12, 12], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4962: 42 edges, degrees [1, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4967: 30 edges, degrees [1, 3, 3, 3, 4, 4, 4, 4, 4, 7, 7, 7, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4973: 39 edges, degrees [1, 4, 4, 4, 4, 4, 6, 6, 6, 9, 10, 10, 10], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4975: 45 edges, degrees [1, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4981: 54 edges, degrees [1, 7, 7, 7, 7, 7, 9, 10, 10, 10, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4983: 30 edges, degrees [3, 3, 3, 4, 4, 4, 4, 4, 4, 6, 7, 7, 7], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4989: 39 edges, degrees [4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 10, 10, 10], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4991: 45 edges, degrees [4, 6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4997: 54 edges, degrees [4, 6, 7, 7, 7, 7, 7, 10, 10, 10, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 4999: 33 edges, degrees [4, 4, 4, 4, 4, 4, 4, 4, 4, 7, 7, 7, 9], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5005: 42 edges, degrees [4, 4, 4, 4, 4, 4, 7, 7, 7, 9, 10, 10, 10], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5007: 48 edges, degrees [4, 7, 7, 7, 7, 7, 7, 7, 7, 9, 9, 9, 9], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5013: 57 edges, degrees [4, 7, 7, 7, 7, 7, 9, 10, 10, 10, 12, 12, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5062: 18 edges, degrees [1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 12], |Aut| = 51840, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5067: 33 edges, degrees [1, 3, 3, 3, 4, 4, 4, 4, 4, 8, 8, 8, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5073: 42 edges, degrees [1, 4, 4, 4, 4, 4, 6, 6, 6, 11, 11, 11, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5075: 18 edges, degrees [1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 4, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5081: 27 edges, degrees [1, 1, 1, 1, 1, 4, 6, 6, 6, 6, 6, 6, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5083: 33 edges, degrees [3, 3, 3, 4, 4, 4, 4, 4, 4, 8, 8, 8, 9], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5089: 42 edges, degrees [4, 4, 4, 4, 4, 4, 6, 6, 6, 9, 11, 11, 11], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5091: 21 edges, degrees [1, 1, 1, 1, 1, 3, 3, 3, 4, 4, 4, 4, 12], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5097: 30 edges, degrees [1, 1, 1, 1, 1, 4, 6, 6, 6, 7, 7, 7, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5099: 36 edges, degrees [3, 3, 3, 4, 4, 4, 4, 4, 4, 9, 9, 9, 12], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5105: 45 edges, degrees [4, 4, 4, 4, 4, 4, 6, 6, 6, 12, 12, 12, 12], |Aut| = 103680, m^ev = 1, H skipped (|Aut| large)
+      witness type 5146: 48 edges, degrees [1, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 12], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5151: 33 edges, degrees [3, 3, 3, 4, 4, 4, 4, 4, 4, 8, 8, 8, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5157: 42 edges, degrees [4, 4, 4, 4, 4, 4, 6, 6, 6, 9, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5159: 48 edges, degrees [4, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5165: 57 edges, degrees [4, 7, 7, 7, 7, 7, 9, 11, 11, 11, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5167: 36 edges, degrees [4, 4, 4, 4, 4, 4, 4, 4, 4, 8, 8, 8, 12], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5173: 45 edges, degrees [4, 4, 4, 4, 4, 4, 7, 7, 7, 11, 11, 11, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5175: 51 edges, degrees [4, 7, 7, 7, 7, 7, 8, 8, 8, 9, 9, 9, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5181: 60 edges, degrees [4, 7, 7, 7, 7, 7, 11, 11, 11, 12, 12, 12, 12], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5214: 18 edges, degrees [1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 6, 7], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5219: 33 edges, degrees [3, 3, 3, 4, 4, 4, 4, 4, 6, 7, 8, 8, 8], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5225: 42 edges, degrees [4, 4, 4, 4, 4, 6, 6, 6, 6, 7, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5227: 21 edges, degrees [1, 1, 1, 1, 1, 3, 3, 3, 4, 4, 4, 7, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5233: 30 edges, degrees [1, 1, 1, 1, 1, 6, 6, 6, 7, 7, 7, 7, 9], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5235: 36 edges, degrees [3, 3, 3, 4, 4, 4, 4, 4, 7, 9, 9, 9, 9], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5241: 45 edges, degrees [4, 4, 4, 4, 4, 6, 6, 6, 7, 9, 12, 12, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5265: 48 edges, degrees [6, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8], |Aut| = 51840, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5269: 36 edges, degrees [4, 4, 4, 4, 4, 4, 4, 4, 7, 8, 8, 8, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5275: 45 edges, degrees [4, 4, 4, 4, 4, 7, 7, 7, 7, 9, 11, 11, 11], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5277: 51 edges, degrees [7, 7, 7, 7, 7, 7, 8, 8, 8, 9, 9, 9, 9], |Aut| = 103680, m^ev = 1, H skipped (|Aut| large)
+      witness type 5283: 60 edges, degrees [7, 7, 7, 7, 7, 7, 9, 11, 11, 11, 12, 12, 12], |Aut| = 25920, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5300: 24 edges, degrees [1, 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 7, 12], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5305: 39 edges, degrees [4, 4, 4, 4, 4, 4, 4, 4, 7, 9, 9, 9, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 5311: 48 edges, degrees [4, 4, 4, 4, 4, 7, 7, 7, 7, 12, 12, 12, 12], |Aut| = 69120, m^ev = 1, H skipped (|Aut| large)
+      witness type 5320: 54 edges, degrees [7, 7, 7, 7, 7, 7, 9, 9, 9, 9, 9, 9, 12], |Aut| = 51840, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6472: 20 edges, degrees [2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 6, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6478: 29 edges, degrees [2, 2, 2, 2, 2, 5, 5, 5, 6, 6, 6, 6, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6480: 35 edges, degrees [2, 2, 2, 5, 5, 5, 5, 5, 6, 8, 8, 8, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6486: 44 edges, degrees [5, 5, 5, 5, 5, 5, 5, 5, 6, 9, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6546: 35 edges, degrees [3, 3, 3, 5, 5, 5, 5, 5, 6, 7, 7, 7, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6552: 44 edges, degrees [5, 5, 5, 5, 5, 6, 6, 6, 6, 9, 10, 10, 10], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6554: 50 edges, degrees [6, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6560: 59 edges, degrees [6, 8, 8, 8, 8, 8, 9, 10, 10, 10, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6624: 23 edges, degrees [2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 6, 12], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6629: 38 edges, degrees [3, 3, 3, 5, 5, 5, 5, 5, 6, 8, 8, 8, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6635: 47 edges, degrees [5, 5, 5, 5, 5, 6, 6, 6, 6, 11, 11, 11, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6639: 32 edges, degrees [2, 2, 2, 2, 2, 6, 6, 6, 6, 6, 6, 9, 9], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6641: 38 edges, degrees [3, 3, 3, 5, 5, 5, 5, 5, 8, 8, 8, 9, 9], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6647: 47 edges, degrees [5, 5, 5, 5, 5, 6, 6, 6, 9, 9, 11, 11, 11], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6649: 26 edges, degrees [2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 9, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6655: 35 edges, degrees [2, 2, 2, 2, 2, 6, 6, 6, 7, 7, 7, 9, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6657: 41 edges, degrees [3, 3, 3, 5, 5, 5, 5, 5, 9, 9, 9, 9, 12], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6663: 50 edges, degrees [5, 5, 5, 5, 5, 6, 6, 6, 9, 12, 12, 12, 12], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6696: 53 edges, degrees [6, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 12], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6703: 62 edges, degrees [8, 8, 8, 8, 8, 9, 9, 11, 11, 11, 11, 11, 11], |Aut| = 8640, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6705: 41 edges, degrees [4, 4, 4, 5, 5, 5, 5, 5, 8, 8, 8, 9, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6711: 50 edges, degrees [5, 5, 5, 5, 5, 7, 7, 7, 9, 11, 11, 11, 12], |Aut| = 4320, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6713: 56 edges, degrees [8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 12], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+      witness type 6719: 65 edges, degrees [8, 8, 8, 8, 8, 9, 11, 11, 11, 12, 12, 12, 12], |Aut| = 17280, m^ev = 1, H NOT pronormal in Aut X
+  n=13 F21diag x diagC3 (7,3,3)        : |H|=  63 |N|=  756 c_2= 6 |Fix|=    64 | N-orbits: T    16, N-even G    16 (R OK) | tau_T=    4 tau_E=    4 defect=  0 | W= 12 E_T= 12 E_even=  0 E_wit=  0 identity OK |   3.8s
+      witness type 6: 3 edges, degrees [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2], |Aut| = 21772800, m^ev = 1, H skipped (|Aut| large)
+      witness type 8: 24 edges, degrees [0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 9, 9, 9], |Aut| = 181440, m^ev = 1, H skipped (|Aut| large)
+      witness type 10: 24 edges, degrees [2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 7, 7, 7], |Aut| = 181440, m^ev = 1, H skipped (|Aut| large)
+      witness type 12: 45 edges, degrees [6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 9, 9, 9], |Aut| = 181440, m^ev = 1, H skipped (|Aut| large)
+      witness type 20: 12 edges, degrees [0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 5, 5, 5], |Aut| = 181440, m^ev = 1, H skipped (|Aut| large)
+      witness type 22: 33 edges, degrees [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 12, 12, 12], |Aut| = 21772800, m^ev = 1, H skipped (|Aut| large)
+      witness type 24: 33 edges, degrees [3, 3, 3, 3, 3, 3, 3, 5, 5, 5, 10, 10, 10], |Aut| = 181440, m^ev = 1, H skipped (|Aut| large)
+      witness type 26: 54 edges, degrees [6, 6, 6, 6, 6, 6, 6, 10, 10, 10, 12, 12, 12], |Aut| = 181440, m^ev = 1, H skipped (|Aut| large)
+      witness type 28: 6 edges, degrees [0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2], |Aut| = 362880, m^ev = 1, H skipped (|Aut| large)
+      witness type 30: 27 edges, degrees [2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 9, 9, 9], |Aut| = 181440, m^ev = 1, H skipped (|Aut| large)
+      witness type 32: 48 edges, degrees [6, 6, 6, 6, 6, 6, 6, 9, 9, 9, 9, 9, 9], |Aut| = 362880, m^ev = 1, H skipped (|Aut| large)
+      witness type 36: 36 edges, degrees [3, 3, 3, 3, 3, 3, 3, 5, 5, 5, 12, 12, 12], |Aut| = 181440, m^ev = 1, H skipped (|Aut| large)
+done
+addendum exit 0

@@ -30,6 +30,7 @@ related:
   - 01-canon/theorems/THM-4531-twisted-mallows-sloane-principle-and-no-natural-bijection-for-switching-classes.md
   - 05-knowledge/hypotheses/HYP-9172-no-natural-bijection-for-twisted-mallows-sloane-at-any-n-ge-5.md
   - 05-knowledge/hypotheses/HYP-9339-the-two-three-axis-numbers-fixed-points-and-relations.md
+  - THM-4728 (opus-2026-10-19-S45: the defect identity tau_T - tau_E = W + E_even + E_wit - E_T, concurrently equation (2) of the Codex census packet; the object-relative pronormal Frattini lemma; the census to n = 13 with failures C15 (3,5,1^k) at n = 10, 11, 12 and the two classes of type (3,3,5,1,1) at n = 13, C3xC3xC5 and the synchronised C15, both with defect 6), HYP-9344; the Codex packets odd_mixed_prime_census_20261020 and mixed_prime_census_extension_20261020 (complete classification and census through n = 12)
 note: 05-knowledge/results/even_graphs_20261019_sylow_refinement_components_walsh_duality.md
 ---
 
