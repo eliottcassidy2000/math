@@ -1,0 +1,154 @@
+{
+  "checks": [
+    "exhaustive 1024-subset symmetric genus-five census",
+    "gap count (2, 11)",
+    "conductor ten (2, 11)",
+    "primitive generator check (2, 11)",
+    "gap count (4, 6, 7)",
+    "conductor ten (4, 6, 7)",
+    "primitive generator check (4, 6, 7)",
+    "gap count (5, 6, 7, 8)",
+    "conductor ten (5, 6, 7, 8)",
+    "primitive generator check (5, 6, 7, 8)",
+    "nonprincipal bounded initial gcd at most three and prime if >1",
+    "all bounded characteristic sequences genus five",
+    "nonplanar symmetric hostile excluded",
+    "independent target-filtered recursion agrees",
+    "full symbolic-function Jacobian coefficient 7",
+    "full symbolic-function Jacobian coefficient 6",
+    "full symbolic-function Jacobian coefficient 5",
+    "full symbolic-function Jacobian coefficient 4",
+    "full symbolic-function Jacobian coefficient 3",
+    "full symbolic-function Jacobian coefficient 2",
+    "full symbolic-function Jacobian coefficient 1",
+    "full symbolic-function Jacobian coefficient 0",
+    "integrate c from degree seven",
+    "integrate e from degree five after c",
+    "integrate h from degree four after c",
+    "integrate full scalar f from degree three",
+    "candidate f derivative agrees with primitive",
+    "first integral I1 controls degree two",
+    "first integral I2 controls degree one",
+    "entire remaining scalar coefficient",
+    "whole residual Jacobian identity",
+    "integrated upper coefficient 7",
+    "integrated upper coefficient 6",
+    "integrated upper coefficient 5",
+    "integrated upper coefficient 4",
+    "integrated upper coefficient 3",
+    "independent jet-ring coefficient 0",
+    "independent jet-ring coefficient 1",
+    "independent jet-ring coefficient 2",
+    "independent jet-ring coefficient 3",
+    "independent jet-ring coefficient 4",
+    "independent jet-ring coefficient 5",
+    "independent jet-ring coefficient 6",
+    "independent jet-ring coefficient 7",
+    "completing-square equivalence",
+    "factor difference retains cubic b degree",
+    "degree lower bound nonzero product witness 1",
+    "zero-product exception witness 1",
+    "degree lower bound nonzero product witness 2",
+    "zero-product exception witness 2",
+    "degree lower bound nonzero product witness 3",
+    "zero-product exception witness 3",
+    "degree lower bound nonzero product witness 7",
+    "zero-product exception witness 7",
+    "degree eleven remainder coefficient",
+    "degree nine remainder coefficient",
+    "degree seven remainder coefficient",
+    "distinct residue module degrees 11",
+    "module exact gap codimension 11",
+    "distinct residue module degrees 9",
+    "module exact gap codimension 9",
+    "distinct residue module degrees 7",
+    "module exact gap codimension 7",
+    "distinct residue module degrees 5",
+    "module exact gap codimension 5",
+    "distinct residue module degrees 3",
+    "module exact gap codimension 3",
+    "unimodular full module transition",
+    "genus-five quartic sextic exact remainder",
+    "genus-five quartic sextic immersion",
+    "genus-five quartic sextic primitive degrees",
+    "genus-five quartic sextic Ap\u00e9ry degrees",
+    "quadratic undecic immersion",
+    "quadratic undecic primitive degrees",
+    "quadratic undecic gaps",
+    "moving H=0 nonconstant-Jacobian hostile",
+    "hostile Jacobian is not zero and not constant",
+    "moving hostile is generic delta-three not genus-five",
+    "moving hostile generic module codimension three",
+    "moving zero-Jacobian b-zero hostile",
+    "x-dependent scalar subtraction changes actual Jacobian",
+    "polynomial source-centering chain rule",
+    "genuine quadratic Keller control 1",
+    "quadratic target reduction control 1",
+    "genuine quadratic Keller control 6",
+    "quadratic target reduction control 6",
+    "genuine quadratic Keller control 10",
+    "quadratic target reduction control 10"
+  ],
+  "count": 88,
+  "nonprincipal_characteristic_sequences": [
+    [
+      2,
+      11
+    ],
+    [
+      4,
+      6,
+      7
+    ],
+    [
+      6,
+      4,
+      7
+    ],
+    [
+      11,
+      2
+    ]
+  ],
+  "not_claimed": [
+    "unconditional planar Jacobian conjecture",
+    "all nonmonic source algebras",
+    "all terminal (4,6) pairs without delta bound",
+    "all special-fiber conductors"
+  ],
+  "polynomial_realizations": {
+    "quadratic_undecic": [
+      "t^2",
+      "t^11+t"
+    ],
+    "quartic_sextic": [
+      "t^4+t",
+      "t^6+(3/2)t^3+t"
+    ]
+  },
+  "status": "PASS",
+  "symmetric_genus_five_gap_sets": [
+    [
+      1,
+      2,
+      3,
+      4,
+      9
+    ],
+    [
+      1,
+      2,
+      3,
+      5,
+      9
+    ],
+    [
+      1,
+      3,
+      5,
+      7,
+      9
+    ]
+  ],
+  "universal_identity": "J = (H*a+3*b*v)' t^2 + (H*b+3*v^2/2-3*a*b^2/4)' t + H*d' -(3/4)*(b^2*b'+b*v*a')"
+}

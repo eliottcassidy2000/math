@@ -1,0 +1,64 @@
+{
+  "added_scalar_primitive": "f=C*d+3*a*d/4-a^3/16+E*a/2+3*b^2/8+F",
+  "candidate_formula_corrections": [],
+  "conductor_at_least_twelve_dependency_checked": true,
+  "generic_delta_five_excluded": true,
+  "hostile_scope_correction": "The moving H=0 family has generic delta three, not five. It is a hostile for first-integral stationarity only.",
+  "independent_check_count": 88,
+  "nonplanar_semigroup": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "nonprincipal_characteristic_sequences": [
+    [
+      2,
+      11
+    ],
+    [
+      11,
+      2
+    ],
+    [
+      4,
+      6,
+      7
+    ],
+    [
+      6,
+      4,
+      7
+    ]
+  ],
+  "normal_optimized_byte_parity": true,
+  "open_boundaries": [
+    "No unrestricted planar JC theorem",
+    "No arbitrary nonmonic source claim",
+    "No special-fiber uniformity",
+    "No all-delta terminal-(4,6) exclusion"
+  ],
+  "predecessor_synthesis_sha256": "4366ee86a86d4d8d435b18b4aa6ac886d89576b757fb76104fd07edea8270ee4",
+  "publication_proof_sha256": "9f2bb9c8f03248627f08e9f480585f44d03c9faabe3e4e912c72ad518714fb63",
+  "publication_status": "prepared; not yet published",
+  "reviewed_source_proof_sha256": "a5c72cfc90b5fa2fd217611efc2b6d1d367e7c1521e427bc246224b34aee4d39",
+  "scope": "Genus-five plane degree-semigroup and terminal-pattern classification; full delta<=5 quartic/sextic Jacobian exclusion; generic codimension-five primitive monic Keller exclusion; exact-dependency conductor-at-least-twelve synthesis.",
+  "status": "PASS",
+  "symmetric_genus_five_semigroups": [
+    [
+      2,
+      11
+    ],
+    [
+      4,
+      6,
+      7
+    ],
+    [
+      5,
+      6,
+      7,
+      8
+    ]
+  ]
+}

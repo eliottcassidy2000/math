@@ -1,0 +1,62 @@
+{
+  "copy_lineage": [
+    {
+      "byte_identical": false,
+      "changes": [
+        "Retitle the reviewed audit as a proof document and record independent PASS/publication status.",
+        "Replace original proposal provenance by accurate proposed-and-independently-checked attribution.",
+        "Use canonical relative links to the predecessor; no mathematical changes.",
+        "Add independent-review and dependency links."
+      ],
+      "publication_file": "CONDUCTOR_TEN_SOURCE_EXCLUSION.md",
+      "publication_sha256": "9f2bb9c8f03248627f08e9f480585f44d03c9faabe3e4e912c72ad518714fb63",
+      "source_sha256": "a5c72cfc90b5fa2fd217611efc2b6d1d367e7c1521e427bc246224b34aee4d39"
+    },
+    {
+      "byte_identical": true,
+      "changes": [],
+      "publication_file": "independent_checks.py",
+      "publication_sha256": "b3c7b1fb5ef76a8f1df1bb8a7f7a13425c4a2b6f0c85b60ab41807fef4b86ab8",
+      "source_sha256": "b3c7b1fb5ef76a8f1df1bb8a7f7a13425c4a2b6f0c85b60ab41807fef4b86ab8"
+    },
+    {
+      "byte_identical": true,
+      "changes": [],
+      "publication_file": "results.json",
+      "publication_sha256": "f36abb01dc8d408948b9b1aa9f223cbf0a41930516d693e409734315dc7cd637",
+      "source_sha256": "f36abb01dc8d408948b9b1aa9f223cbf0a41930516d693e409734315dc7cd637"
+    },
+    {
+      "byte_identical": true,
+      "changes": [],
+      "publication_file": "results-optimized.json",
+      "publication_sha256": "f36abb01dc8d408948b9b1aa9f223cbf0a41930516d693e409734315dc7cd637",
+      "source_sha256": "f36abb01dc8d408948b9b1aa9f223cbf0a41930516d693e409734315dc7cd637"
+    },
+    {
+      "byte_identical": true,
+      "changes": [],
+      "publication_file": "PRIMARY_SOURCES.md",
+      "publication_sha256": "4c800a4111ec4ac9a377b36d6bf8890c34b59033745c7353ea32a940fb46a7b5",
+      "source_sha256": "4c800a4111ec4ac9a377b36d6bf8890c34b59033745c7353ea32a940fb46a7b5"
+    },
+    {
+      "byte_identical": false,
+      "changes": [
+        "Remove administrative write-location boolean; distinguish reviewed-source/publication proof hashes and mark publication pending."
+      ],
+      "publication_file": "REVIEW_SUMMARY.json",
+      "publication_sha256": "ca045677bd20001ca4a99f9bfcaa491ab8b9ce1ff49ea5e7698ccf36c3ed899c",
+      "source_sha256": "06e1e1996aa9b105668160d1cc43e9cfe0a2568af08a596a1a2158c6282292e9"
+    }
+  ],
+  "mathematical_review": "The complete reviewed source, including classification, coefficient proof and exact-dependency synthesis, received independent PASS before publication preparation.",
+  "new_publication_documents": [
+    "README.md",
+    "DEPENDENCIES.md",
+    "DEPENDENCY_HASHES.json",
+    "INDEPENDENT_REVIEW.md",
+    "PROVENANCE.json"
+  ],
+  "publication_status": "prepared; not yet published"
+}
