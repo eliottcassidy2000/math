@@ -1,18 +1,12 @@
 ---
 id: THM-1870
-title: "THE CYCLE-COUNT SPECTRAL BOUNDARY IS THE HAMILTONIAN LENGTH — the simple directed k-cycle count c_k is spectral (a function of the trace moments = char_A coefficients) for every k ≤ n−1, and only the Hamiltonian-length count c_n leaves the rational floor, first at n = 6. This RECONNECTS a forgotten era-2 thread (opus THM-172, cited once: 'the total directed 5-cycle count is λ-determined') to the current binary-form / moment-nullcone ladder (THM-1775/1810) and to H's #P-jump (THM-1780), placing every cycle statistic on the ladder with ONE sharp boundary. (1) VERIFIED exhaustively: grouping all tournaments by their moment vector (tr A¹,…,tr Aⁿ) — equivalently the characteristic polynomial — c3, c4, c5 are CONSTANT on every co-spectral class (spectral) for n ≤ 6, extending THM-172's c5 result to c3, c4 and confirming it; and c6 SPLITS at n = 6 — first at the moment vector (0,0,12,12,10,48). (2) THE PUNCHLINE: that is the SAME co-spectral class at which H (Hamiltonian-path count) splits (THM-1780, H = 13 vs 17). At n = 6 a 6-cycle IS a Hamiltonian cycle, so c6 = #Hamiltonian cycles, and it leaves the spectral floor at exactly the size and class where the Hamiltonian statistics turn #P. So the boundary is not gradual — it is precisely the Hamiltonian length: sub-Hamiltonian cycle counts (k ≤ n−1) are rational-floor invariants, Hamiltonian counts (k = n, and H) are #P. (3) ON THE LADDER: 'spectral' = 'a function of the trace moments' = 'a polynomial in the char_A coefficients' (THM-1775, THM-1810), so c3,…,c_{n−1} are SL₂-invariants of the characteristic binary form, while c_n and H live in the co-spectral fiber the form forgets. The forgotten cycle-count theorems (THM-171 c3-disjointness, THM-172 c5-λ-determined, THM-173 c5-per-vertex-set) are exactly the sub-Hamiltonian, spectral part of this statement, rediscovered and completed. (4) FOUND BY CORPUS ARCHAEOLOGY: a citation-graph scan of the 1392-theorem corpus flagged THM-172 as a 1-reference dead-end leaf; reconnecting it to the live frame produced the boundary"
+title: "Cycles of lengths three through five are single traces; six-cycles are nonspectral at every ambient order at least six"
 status: >
-  (1) VERIFIED exhaustively n = 4,5,6 (all tournaments grouped by moment vector; c3,c4,c5
-  constant per class, c6 splits at n=6 with the exact witness class).  c3 = tr(A³)/3 is
-  spectral by definition; c4, c5 spectral is the content (they are NOT single traces but ARE
-  functions of the trace vector), confirming and extending THM-172.
-  (2) The coincidence of the split class with THM-1780's is exact (same (0,0,12,12,10,48)).
-  (3) PROVED direction: k ≤ n−1 ⟹ spectral is verified n ≤ 6; the general claim "c_k spectral
-  for all k ≤ n−1, c_n non-spectral from n=6" is a CONJECTURE beyond n = 6 (n = 7 not computed:
-  the O(n!) cycle enumeration was not run).  What is solid: the boundary EXISTS and sits at the
-  Hamiltonian length at n = 6.
-  (4) Method note: the reconnection was surfaced by the archaeology tool
-  (corpus_archaeology_kps_S128c136.py), not by memory — the point of the tool.
+  CORRECTED / PROVED: c_k=tr(A^k)/k for k=3,4,5 in every loopless digraph without digons.
+  FINITE-EXACT: six-vertex tournament masks 73 and 83 have equal characteristic polynomial and c6=0 and 1.
+  PROVED: adjoining universal sources propagates the discrepancy to every ambient order n>=6.
+  REFUTED: the historical conjecture that every sub-Hamiltonian count c_k, k<n, is spectral.
+  No complexity-class distinction or assertion about every k>=7 is inferred. Original dependencies below are historical context.
 source: kind-pasteur-2026-07-21-S128c136 (owner: keep adding to the zoo; find forgotten threads; find the gaps)
 depends_on:
   - THM-1780    # H leaves the spectral ladder at n=6 (the #P side of the boundary)
@@ -20,6 +14,11 @@ depends_on:
 related: [THM-172, THM-171, THM-173, THM-1775, THM-133]
 script: 04-computation/cycle_counts_spectral_boundary_kps_S128c136.py, corpus_archaeology_kps_S128c136.py (+ .out)
 ---
+
+> **Correction, 2026-10-19.** The all-order Hamiltonian-length extrapolation below is false. Co-spectral six-vertex tournament masks 73 and 83 have `c6=0` and `1`; adjoining a universal source preserves every cycle count and multiplies the characteristic polynomial by `x`, giving co-spectral seven-vertex tournaments with different sub-Hamiltonian `c6`. Repeated source padding extends this witness to every ambient order `n>=6`. Conversely, `c3,c4,c5` are exactly `tr(A^k)/k` at every order: a repeated vertex in a closed walk of length at most five would split it into two nonempty closed walks of lengths at least three. The old “NOT single traces” claim and the complexity inference are withdrawn. The historical finite six-vertex observation survives. [Proofs, exact witnesses and independent review](../../05-knowledge/results/squarefree_cycle_inventory_20261019/SQUAREFREE_CYCLE_BRIDGES.md).
+
+## Historical text below: retain for provenance; the correction above controls all general claims
+
 
 # THM-1870 — the cycle-count spectral boundary is the Hamiltonian length
 

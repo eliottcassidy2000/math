@@ -17,7 +17,7 @@ related:
   - THM-1862  # order-join reduction principle
   - THM-1875  # kps: transitive char_S cot ladder (the acyclic atom on the skew side — ζ=1 here)
   - THM-1880  # kps: a/b monoid; Paley char_S=x(x^2+p)^{(p-1)/2} Gauss sum (poles 1/λ, |λ|=√p)
-  - THM-1870  # kps: cycle-count spectral boundary = Hamiltonian length (the N_k here)
+  - THM-1870  # corrected 2026-10-19: c3,c4,c5 are single traces; c6 is nonspectral for every n>=6
   - "07-reflections/the-reduction-is-a-product-of-trigonometric-functions-boxeph-S194.md"
 script: 04-computation/tournament_zeta_boxeph_S195.py (+ .out)
 ---
@@ -51,8 +51,10 @@ Every tournament has **N₁ = 0** (no loops) and **N₂ = tr(A²) = 0** (no digo
 `ζ_T(u) = exp(c₃·u³ + (N₄/4)u⁴ + …)` — the expansion **starts at u³**. The smallest primitive cycle
 is the 3-cycle, and `N₃ = tr(A³) = 3·c₃`, so **c₃ is read straight off ζ's u³ log-coefficient**.
 The 3-cycle atom has `ζ = 1/(1 − u³)` (a single length-3 prime) — the simplest nontrivial zeta, and
-exactly the intransitivity atom of THM-1830. The higher `N_k` are kps's cycle-count spectral data
-(THM-1870).
+exactly the intransitivity atom of THM-1830. The higher `N_k` count closed walks, not necessarily simple cycles.
+[THM-1870, corrected cycle-count boundary](THM-1870-the-cycle-count-spectral-boundary-is-the-hamiltonian-length.md)
+withdraws its ambient-length extrapolation: `c3,c4,c5=N_k/k` in their respective degrees,
+but `c6` is nonspectral for every ambient order `n>=6`. The zeta identity here survives.
 
 ## 4. Complement-invariance and the trigonometric poles
 
