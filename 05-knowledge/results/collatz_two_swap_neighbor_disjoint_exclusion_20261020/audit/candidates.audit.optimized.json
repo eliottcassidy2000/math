@@ -1,0 +1,126 @@
+{
+  "status": "PASS: independent physical-label enumeration and rational-affine integrality",
+  "script_sha256": "d35d66eb357f99c5b0143cf5a6da6081472d37f03da40266910e04000f20c4c6",
+  "comparison_receipt_sha256": "4f579d0213f8572d934e55b3d660c0c99320aaee36fdd662d6b18a445ed3ae6f",
+  "checks": 8575,
+  "logarithms": "48 terms for log2 and log(3/2), with log3=log2+log(3/2)",
+  "continued_fraction_prefix": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    3,
+    1,
+    5,
+    2,
+    23
+  ],
+  "terminal_convergent": {
+    "p": 15601,
+    "q": 24727
+  },
+  "small_convergents": [
+    {
+      "p": 2,
+      "q": 3
+    },
+    {
+      "p": 5,
+      "q": 8
+    },
+    {
+      "p": 12,
+      "q": 19
+    },
+    {
+      "p": 41,
+      "q": 65
+    },
+    {
+      "p": 53,
+      "q": 84
+    },
+    {
+      "p": 306,
+      "q": 485
+    },
+    {
+      "p": 665,
+      "q": 1054
+    }
+  ],
+  "known_cycle_shapes": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      7,
+      11
+    ]
+  ],
+  "candidate_shapes": [
+    {
+      "p": 2,
+      "q": 3,
+      "paths": 0,
+      "maximum_content": 0
+    },
+    {
+      "p": 5,
+      "q": 8,
+      "paths": 4,
+      "maximum_content": 1
+    },
+    {
+      "p": 7,
+      "q": 11,
+      "paths": 4,
+      "maximum_content": 1
+    },
+    {
+      "p": 12,
+      "q": 19,
+      "paths": 8,
+      "maximum_content": 311
+    },
+    {
+      "p": 41,
+      "q": 65,
+      "paths": 28,
+      "maximum_content": 19
+    },
+    {
+      "p": 53,
+      "q": 84,
+      "paths": 36,
+      "maximum_content": 11
+    },
+    {
+      "p": 306,
+      "q": 485,
+      "paths": 208,
+      "maximum_content": 1
+    },
+    {
+      "p": 665,
+      "q": 1054,
+      "paths": 452,
+      "maximum_content": 37
+    }
+  ],
+  "total_paths": 740,
+  "original_cut_crossing_paths": 14,
+  "all_case_trace_sha256": "a089dddaa4a1c19eb6846ee3671b5938fe6ab8939f43899fc403dbf3272f4aaf",
+  "all_integer_outputs_excluded": true,
+  "scope": "Primitive q=p+r; same-direction disjoint moves of consecutive source ones only."
+}

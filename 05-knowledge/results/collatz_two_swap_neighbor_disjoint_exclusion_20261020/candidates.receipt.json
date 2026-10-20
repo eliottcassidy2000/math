@@ -1,0 +1,131 @@
+{
+  "status": "FINITE-EXACT complete candidate check after signed descent reduction",
+  "script_sha256": "ccdada2d80282b1aa4fe508c89f4f1bfbe43e6db4da50fa5195e39e1b9ba20e9",
+  "checks": 2996,
+  "log_series_terms": 80,
+  "continued_fraction_prefix": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    3,
+    1,
+    5,
+    2,
+    23
+  ],
+  "terminal_convergent": {
+    "q": 24727,
+    "p": 15601
+  },
+  "small_convergent_shapes": [
+    {
+      "p": 2,
+      "q": 3
+    },
+    {
+      "p": 5,
+      "q": 8
+    },
+    {
+      "p": 12,
+      "q": 19
+    },
+    {
+      "p": 41,
+      "q": 65
+    },
+    {
+      "p": 53,
+      "q": 84
+    },
+    {
+      "p": 306,
+      "q": 485
+    },
+    {
+      "p": 665,
+      "q": 1054
+    }
+  ],
+  "candidate_shapes": [
+    {
+      "p": 2,
+      "q": 3,
+      "r": 1,
+      "clock": -1,
+      "paths": 0,
+      "maximum_content": 0,
+      "reason_included": "small ordinary convergent"
+    },
+    {
+      "p": 5,
+      "q": 8,
+      "r": 3,
+      "clock": 13,
+      "paths": 4,
+      "maximum_content": 1,
+      "reason_included": "small ordinary convergent"
+    },
+    {
+      "p": 7,
+      "q": 11,
+      "r": 4,
+      "clock": -139,
+      "paths": 4,
+      "maximum_content": 1,
+      "reason_included": "known negative 17-cycle"
+    },
+    {
+      "p": 12,
+      "q": 19,
+      "r": 7,
+      "clock": -7153,
+      "paths": 8,
+      "maximum_content": 311,
+      "reason_included": "small ordinary convergent"
+    },
+    {
+      "p": 41,
+      "q": 65,
+      "r": 24,
+      "clock": 420491770248316829,
+      "paths": 28,
+      "maximum_content": 19,
+      "reason_included": "small ordinary convergent"
+    },
+    {
+      "p": 53,
+      "q": 84,
+      "r": 31,
+      "clock": -40432553845953101497907,
+      "paths": 36,
+      "maximum_content": 11,
+      "reason_included": "small ordinary convergent"
+    },
+    {
+      "p": 306,
+      "q": 485,
+      "r": 179,
+      "clock": 102065376400825306534437391838939444403106454408085639783964140880896699835673006969445010534504805079858638689074275443284439551032910142670903,
+      "paths": 208,
+      "maximum_content": 1,
+      "reason_included": "small ordinary convergent"
+    },
+    {
+      "p": 665,
+      "q": 1054,
+      "r": 389,
+      "clock": -8426554879358187467321365469295684725691743009932413297303662014570113188669615034834148586581259763505516577884907331991335330822737444940972251074914079428972758325698949459347347336137715887865163586364384528929183721216674294155918078679167336367555277990877513145621213299264598695603746333996002928683421859,
+      "paths": 452,
+      "maximum_content": 37,
+      "reason_included": "small ordinary convergent"
+    }
+  ],
+  "total_paths": 740,
+  "integer_hits": [],
+  "all_case_trace_sha256": "a089dddaa4a1c19eb6846ee3671b5938fe6ab8939f43899fc403dbf3272f4aaf",
+  "dependency": "The separate complete signed-descent certificate through 2^26 is required to make this reduced candidate universe complete.",
+  "scope": "Primitive k=1 same-direction disjoint swaps of consecutive source ones, not arbitrary two edits."
+}

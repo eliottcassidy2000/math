@@ -1,0 +1,11 @@
+--- ../../two-edit-overlap-closure/audit/audit_signed_descent.cpp	2026-10-20 00:37:01.254966005 -0600
++++ audit_signed_descent.cpp	2026-10-20 00:57:03.027121912 -0600
+@@ -9,7 +9,7 @@
+ #include <string>
+ #include <vector>
+ using U = std::uint64_t;
+-constexpr U N = U{1} << 24;
++constexpr U N = U{1} << 26;
+ #ifndef AUDIT_STEP_LIMIT
+ #define AUDIT_STEP_LIMIT 1000000
+ #endif

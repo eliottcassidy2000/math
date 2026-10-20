@@ -1,0 +1,3 @@
+positive N=67108864 known_cycle_bases=1 certified_descents=67108863 total_steps=234384451 max_steps=376 max_steps_start=63728127 max_value=237318849425546 max_value_start=38595583 step_limit=1000000 PASS
+negative_magnitude N=67108864 known_cycle_bases=3 certified_descents=67108861 total_steps=234370991 max_steps=276 max_steps_start=30430361 max_value=127143512668792 max_value_start=58882625 step_limit=1000000 PASS
+BOTH_SIGNED_UNIVERSES_VERIFIED

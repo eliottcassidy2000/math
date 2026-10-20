@@ -1,0 +1,20 @@
+{
+  "status": "PASS_REPRODUCIBLE_PRODUCER_BUILDS",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "cpp_builds": [
+    "-std=c++17 -O2 -Wall -Wextra",
+    "-std=c++17 -O0 -Wall -Wextra",
+    "-std=c++17 -O1 -g -fsanitize=undefined -fno-sanitize-recover=all"
+  ],
+  "cpp_outputs_identical": true,
+  "python_normal_optimized_outputs_identical": true,
+  "sha256": {
+    "verify_signed_descent.cpp": "e570d106599405c946b128fefa2a7a0248c75d71daed164f99fa3a60bb953504",
+    "descent.receipt.json": "a2118333ddb3b729d33f12f389ab71c0a08230279ef8b502c1bd57378848a50c",
+    "descent.receipt.unoptimized.json": "a2118333ddb3b729d33f12f389ab71c0a08230279ef8b502c1bd57378848a50c",
+    "descent.receipt.sanitized.json": "a2118333ddb3b729d33f12f389ab71c0a08230279ef8b502c1bd57378848a50c",
+    "verify_small_neighbor_candidates.py": "ccdada2d80282b1aa4fe508c89f4f1bfbe43e6db4da50fa5195e39e1b9ba20e9",
+    "candidates.receipt.json": "4f579d0213f8572d934e55b3d660c0c99320aaee36fdd662d6b18a445ed3ae6f",
+    "candidates.receipt.optimized.json": "4f579d0213f8572d934e55b3d660c0c99320aaee36fdd662d6b18a445ed3ae6f"
+  }
+}
