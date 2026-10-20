@@ -1,0 +1,273 @@
+{
+  "checks": 3280927,
+  "counts": {
+    "cut_crossing_paths": 25908,
+    "half_turn_ordered_paths": 5964,
+    "half_turn_presentations": 5964,
+    "illegal_presentations": 658996,
+    "integral_presentations": 0,
+    "legal_presentations": 328268,
+    "negative_clock_presentations": 65981,
+    "ordered_physical_paths": 650572,
+    "positive_clock_presentations": 262287,
+    "resultant_checks": 7474,
+    "separation_shapes": 6562,
+    "shapes": 670
+  },
+  "h_two_smooth_controls": [
+    {
+      "K": 8,
+      "directions": [
+        1,
+        -1
+      ],
+      "h": 2,
+      "t": 0
+    },
+    {
+      "K": -16,
+      "directions": [
+        -1,
+        1
+      ],
+      "h": 2,
+      "t": 2
+    }
+  ],
+  "half_turn_control": {
+    "h": 3,
+    "ordered_paths": 16,
+    "oriented_presentations": 16,
+    "p": 6,
+    "r": 5
+  },
+  "illegal_physical_controls": [
+    {
+      "directions": [
+        1,
+        1
+      ],
+      "h": 3,
+      "p": 6,
+      "r": 1,
+      "u": 5,
+      "v": 2
+    },
+    {
+      "directions": [
+        1,
+        -1
+      ],
+      "h": 3,
+      "p": 6,
+      "r": 1,
+      "u": 5,
+      "v": 2
+    },
+    {
+      "directions": [
+        -1,
+        1
+      ],
+      "h": 3,
+      "p": 6,
+      "r": 1,
+      "u": 5,
+      "v": 2
+    },
+    {
+      "directions": [
+        -1,
+        -1
+      ],
+      "h": 3,
+      "p": 6,
+      "r": 1,
+      "u": 5,
+      "v": 2
+    }
+  ],
+  "legal_presentations_by_h": {
+    "3": 35008,
+    "4": 34964,
+    "5": 34840,
+    "6": 17032,
+    "7": 34382,
+    "8": 16484,
+    "9": 15952,
+    "10": 15384,
+    "11": 32440,
+    "12": 13840,
+    "13": 12916,
+    "14": 11884,
+    "15": 10334,
+    "16": 8800,
+    "17": 7248,
+    "18": 5364,
+    "19": 2992,
+    "20": 800,
+    "21": 2380,
+    "30": 4840,
+    "44": 10384
+  },
+  "maximum_content": {
+    "J": 10379,
+    "delta": 14,
+    "directions": [
+      -1,
+      -1
+    ],
+    "edges": [
+      119,
+      106
+    ],
+    "epsilon": 1,
+    "g": 56461,
+    "h": 7,
+    "p": 89,
+    "r": 79,
+    "t": 6,
+    "u": 17,
+    "v": 36
+  },
+  "maximum_tested_coefficient_ratio": "4763953126592087027609707050071207692541/5784800237655953878877368326340059594752",
+  "physical_digest_sha256": "6ba86174bd7f87df91e7cac6115856285c57ce46c2e1bdd161b11a52e8537095",
+  "prime_cube_control": {
+    "J": 37,
+    "delta": 6,
+    "directions": [
+      1,
+      -1
+    ],
+    "edges": [
+      13,
+      7
+    ],
+    "epsilon": -1,
+    "g": 125,
+    "h": 3,
+    "p": 19,
+    "prime_cube_divisor": 125,
+    "r": 14,
+    "t": 2,
+    "u": 2,
+    "v": 6
+  },
+  "resultant_digest_sha256": "eab449f7b84212deefcd150485f5b102970bdc1a96346443c17fd73291425482",
+  "script_sha256": "d5009dbe82ab4d1c3ef616880ad31e66a8e5db75ab4d86600283f2d8d794e2c9",
+  "special_resultant_controls": [
+    {
+      "actual_g": 125,
+      "gcd_with_clock": 625,
+      "polynomials": [
+        [
+          64,
+          0,
+          -37,
+          37
+        ],
+        [
+          1369,
+          -5810,
+          1369
+        ]
+      ],
+      "resultant": 292412882560000,
+      "vectors": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          -1
+        ]
+      ]
+    },
+    {
+      "actual_g": 125,
+      "gcd_with_clock": 7427673125,
+      "polynomials": [
+        [
+          64,
+          0,
+          -37,
+          37
+        ],
+        [
+          1162261467,
+          0,
+          -4966055936,
+          4966055936
+        ]
+      ],
+      "resultant": -20756949165825172194968810791015625,
+      "vectors": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          19,
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "actual_g": 125,
+      "gcd_with_clock": 7427673125,
+      "polynomials": [
+        [
+          7427673125
+        ],
+        [
+          64,
+          0,
+          -37,
+          37
+        ]
+      ],
+      "resultant": 409787162968139541487548828125,
+      "vectors": [
+        [
+          19,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    }
+  ],
+  "status": "FINITE-EXACT independent controls, not an all-length finite-residual closure",
+  "universe": {
+    "algebraic_gate_checks_h": [
+      3,
+      64
+    ],
+    "all_four_directions": true,
+    "exhaustive_h": "3<=h<=floor(p/2)",
+    "exhaustive_p": [
+      6,
+      40
+    ],
+    "extra_h": "3,4,5,7,11,floor(p/2)",
+    "extra_p": [
+      43,
+      61,
+      89
+    ],
+    "r": "1<=r<p, gcd(p,r)=1",
+    "resultant_exhaustive_p": [
+      6,
+      18
+    ]
+  }
+}

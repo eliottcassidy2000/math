@@ -1,0 +1,65 @@
+{
+  "external_theorems": [
+    {
+      "source": "Barvinok, Math 669 lattice notes",
+      "status": "CITED, primary theorem checked 2026-10-20",
+      "theorem": "22.5, printed page 46",
+      "url": "https://sites.lsa.umich.edu/barvinok/wp-content/uploads/sites/1434/2025/05/latticenotes669.pdf",
+      "use": "lambda_1 lambda_2 lambda_3 vol(cube) <= 2^3 det L"
+    },
+    {
+      "source": "Bugeaud--Mignotte--Siksek, Classical and modular approaches to exponential Diophantine equations I: Fibonacci and Lucas perfect powers",
+      "status": "CITED via frozen absolute-gap theorem, primary theorem checked 2026-10-20",
+      "theorem": "9.4, real case, printed page 16",
+      "url": "https://arxiv.org/pdf/math/0403046",
+      "use": "Multiplicative-minus-one U lower bound, not an additive logarithm lower bound"
+    }
+  ],
+  "imported_certificate_files": [
+    {
+      "local_copy": "inherited-absolute-gap/audit/audit_endpoint_large_range.py",
+      "repository_path": "05-knowledge/results/collatz_two_swap_endpoint_exclusion_20261020/audit/audit_endpoint_large_range.py",
+      "sha256": "c23283a3a3ca67397eafa29ce99f061adcb39273525704438a63a637a584270c",
+      "transformation": "Byte-identical imported dependency."
+    },
+    {
+      "local_copy": "inherited-absolute-gap/large-range/certify_endpoint_large_range.py",
+      "repository_path": "05-knowledge/results/collatz_two_swap_endpoint_exclusion_20261020/large-range/certify_endpoint_large_range.py",
+      "sha256": "63a44efbbef69533782ad9ea1144b172ef3dcd3f2bb8e0eee1722924c18bff8f",
+      "transformation": "Byte-identical imported dependency."
+    },
+    {
+      "local_copy": "inherited-absolute-gap/large-range/receipt.json",
+      "repository_path": "05-knowledge/results/collatz_two_swap_endpoint_exclusion_20261020/large-range/receipt.json",
+      "sha256": "2b51239a248924281bfcb5d9065abeccad551e820d81012e5447ef0d6a1ad0be",
+      "transformation": "Byte-identical imported dependency."
+    },
+    {
+      "local_copy": "inherited-absolute-gap/large-range/receipt.optimized.json",
+      "repository_path": "05-knowledge/results/collatz_two_swap_endpoint_exclusion_20261020/large-range/receipt.optimized.json",
+      "sha256": "2b51239a248924281bfcb5d9065abeccad551e820d81012e5447ef0d6a1ad0be",
+      "transformation": "Byte-identical imported dependency."
+    }
+  ],
+  "proof_dependencies": [
+    {
+      "path": "05-knowledge/results/collatz_two_swap_norm_barrier_20261020/symbolic/TWO_SWAP_SPARSE_FORMS_AND_BARRIER.md",
+      "role": "Section 3 moving-anchor full-modulus carry identity, including cut transport",
+      "sha256": "2941c54699874e1fd9a155bf401cd37ba0a4abd8292d53f1744a2151b829acbc",
+      "status": "PROVED dependency"
+    },
+    {
+      "path": "05-knowledge/results/collatz_two_swap_overlap_lattice_content_20261020/OVERLAPPING_TWO_ONE_CONTENT.md",
+      "role": "Sections 3--6 rank-three lattice, valuation noncancellation, Minkowski product and resultant divisibility",
+      "sha256": "daa6608352fac8cfaedbb65c95fac736b74b959644e8f457dbb28057d8493272",
+      "status": "PROVED dependency and inherited mechanism"
+    },
+    {
+      "path": "05-knowledge/results/collatz_two_swap_endpoint_exclusion_20261020/ENDPOINT_TWO_EDIT_CLASSIFICATION.md",
+      "role": "Sections 3--4 absolute-gap arithmetic lemma for coprime p>=100 and p<q<2p",
+      "sha256": "89110e0ec91a2a65aadd900d2d5911b0bec2cdf7918414440854e5f1fec0090a",
+      "status": "PROVED dependency"
+    }
+  ],
+  "scope": "Exact proved inputs and finite certificates for the fixed-separation theorem. The three inherited proof packets are identified by their repository paths because they have no separate theorem ID."
+}

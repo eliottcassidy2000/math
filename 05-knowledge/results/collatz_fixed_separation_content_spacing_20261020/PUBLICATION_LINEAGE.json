@@ -1,0 +1,117 @@
+{
+  "added_expository_files": [
+    "README.md",
+    "SOURCES.md"
+  ],
+  "byte_identical_imports": [
+    {
+      "local_copy": "inherited-absolute-gap/audit/audit_endpoint_large_range.py",
+      "repository_path": "05-knowledge/results/collatz_two_swap_endpoint_exclusion_20261020/audit/audit_endpoint_large_range.py",
+      "sha256": "c23283a3a3ca67397eafa29ce99f061adcb39273525704438a63a637a584270c",
+      "transformation": "Byte-identical imported dependency."
+    },
+    {
+      "local_copy": "inherited-absolute-gap/large-range/certify_endpoint_large_range.py",
+      "repository_path": "05-knowledge/results/collatz_two_swap_endpoint_exclusion_20261020/large-range/certify_endpoint_large_range.py",
+      "sha256": "63a44efbbef69533782ad9ea1144b172ef3dcd3f2bb8e0eee1722924c18bff8f",
+      "transformation": "Byte-identical imported dependency."
+    },
+    {
+      "local_copy": "inherited-absolute-gap/large-range/receipt.json",
+      "repository_path": "05-knowledge/results/collatz_two_swap_endpoint_exclusion_20261020/large-range/receipt.json",
+      "sha256": "2b51239a248924281bfcb5d9065abeccad551e820d81012e5447ef0d6a1ad0be",
+      "transformation": "Byte-identical imported dependency."
+    },
+    {
+      "local_copy": "inherited-absolute-gap/large-range/receipt.optimized.json",
+      "repository_path": "05-knowledge/results/collatz_two_swap_endpoint_exclusion_20261020/large-range/receipt.optimized.json",
+      "sha256": "2b51239a248924281bfcb5d9065abeccad551e820d81012e5447ef0d6a1ad0be",
+      "transformation": "Byte-identical imported dependency."
+    }
+  ],
+  "byte_identical_new_research_artifacts": [
+    {
+      "artifact": "verify_fixed_separation.py",
+      "sha256": "d5009dbe82ab4d1c3ef616880ad31e66a8e5db75ab4d86600283f2d8d794e2c9"
+    },
+    {
+      "artifact": "certify_spacing_constants.py",
+      "sha256": "f563aef085372eceb3273b783744104319a440fcd5a8a11bf918230d543f643c"
+    },
+    {
+      "artifact": "receipt.json",
+      "sha256": "62ae6814cd13266c3e9269a185257a98e49abd9294a2f1d735651c46356e3b0d"
+    },
+    {
+      "artifact": "receipt.optimized.json",
+      "sha256": "62ae6814cd13266c3e9269a185257a98e49abd9294a2f1d735651c46356e3b0d"
+    },
+    {
+      "artifact": "spacing_constants.json",
+      "sha256": "75efa45a3ddaa0d49bb11500c2c294609064411cc92cfec6c6c16b56204cf2db"
+    },
+    {
+      "artifact": "spacing_constants.optimized.json",
+      "sha256": "75efa45a3ddaa0d49bb11500c2c294609064411cc92cfec6c6c16b56204cf2db"
+    },
+    {
+      "artifact": "inherited_absolute_gap.replay.json",
+      "sha256": "e6f30570be154f1444a3178ed047e5ef7a28843e1160ff5ee26c3b98160b700f"
+    },
+    {
+      "artifact": "inherited_absolute_gap.optimized.json",
+      "sha256": "e6f30570be154f1444a3178ed047e5ef7a28843e1160ff5ee26c3b98160b700f"
+    }
+  ],
+  "mathematical_changes": "None. All theorem statements, proofs, bounds, scope restrictions, finite universes, and exact controls are unchanged.",
+  "proof_status_change": "The reviewed source draft was promoted to PROVED after independent construction/exact verification and a second full-proof audit.",
+  "remaining_open": [
+    "Complete fixed-h finite-residual emptiness",
+    "Unrestricted rank-four noncancellation",
+    "Arbitrary two-edit exclusion"
+  ],
+  "review_date": "2026-10-20",
+  "status": "REVIEWED PUBLICATION COPY",
+  "transformed_source_files": [
+    {
+      "changes": [
+        "Replaced the provisional opening with the approved proof status.",
+        "Removed operational coordination wording and retained the mathematical dependency distinction."
+      ],
+      "publication_artifact": "FIXED_SEPARATION_CONTENT_AND_SPACING.md",
+      "publication_sha256": "c0310bfbb7bc14f6136c2f12ef546318d6e35487bfcf953f6d1c4cbfd180089c",
+      "source_artifact": "Reviewed source draft FIXED_SEPARATION_CONTENT_AND_SPACING.md",
+      "source_sha256": "e6418bbf658d04c8436a553adbd26cfb9769d55e00f927b0a9100ea51c3f2b8d"
+    },
+    {
+      "changes": [
+        "Recorded completed mathematical review.",
+        "Removed operational checkout and coordination details."
+      ],
+      "publication_artifact": "AUDIT_SUMMARY.md",
+      "publication_sha256": "8b8bebb687be7847556225be58d94a0fbc803d3b42cf6e3e388ff6d2df9018d4",
+      "source_artifact": "Reviewed source audit AUDIT_SUMMARY.md",
+      "source_sha256": "a7eb3e5d23f3c6ed7599f3686463dcbb3c165bf24dfca838b94c5421263c5e78"
+    },
+    {
+      "changes": [
+        "Retained proved mathematical dependencies and external-source pins.",
+        "Used portable repository paths and byte-identical local copies for the replayed certificates.",
+        "Excluded proposal-only provenance from the proved dependency graph."
+      ],
+      "publication_artifact": "DEPENDENCIES.json",
+      "publication_sha256": "6223b809f6845850b62c4e5aac3030c8eaa7412a876cbe4a31d8c480ec8aa68b",
+      "source_artifact": "Source dependency inventory DEPENDENCIES.json",
+      "source_sha256": "c96e574b3dc855ec08803618a2cf5ba74f569d2d5ada380d072b4349b1231ef6"
+    },
+    {
+      "changes": [
+        "Replaced checkout-specific commands with local publication-package replay commands."
+      ],
+      "publication_artifact": "REPRODUCE.md",
+      "publication_sha256": "9ec14f84846ced51f37233d5d5014e922f00cf7660b9161505dd0b8c501ce18c",
+      "source_artifact": "Source reproduction note REPRODUCE.md",
+      "source_sha256": "fe2d13d0a2d321d9e13078dcc787f6ee689b6a709d8fc8b4a656ce999082049c"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Exact mathematical sources
+
+The following cited results are used only in their stated scopes. No historical novelty claim is made.
+
+1. [Two actual adjacent swaps: labelled sparse forms and the norm barrier](../collatz_two_swap_norm_barrier_20261020/symbolic/TWO_SWAP_SPARSE_FORMS_AND_BARRIER.md), Section 3, provides the moving-anchor carry identity over the complete common clock modulus.
+2. [Subexponential actual content for every primitive mechanical two-one overlap](../collatz_two_swap_overlap_lattice_content_20261020/OVERLAPPING_TWO_ONE_CONTENT.md), Sections 3--6, supplies the inherited rank-three/external-denominator-prime mechanism, including degeneracy bookkeeping and full-resultant divisibility. The present proof rederives its general-denominator application.
+3. [All-length integer classification for two mechanical endpoint chains](../collatz_two_swap_endpoint_exclusion_20261020/ENDPOINT_TWO_EDIT_CLASSIFICATION.md), Sections 3--4, provides the absolute-gap arithmetic lemma for coprime p>=100 with p<q<2p. Its edit-family-specific finite residual is not imported.
+4. Alexander Barvinok, [Math 669: Combinatorics, Geometry and Complexity of Integer Points](https://sites.lsa.umich.edu/barvinok/wp-content/uploads/sites/1434/2025/05/latticenotes669.pdf), Theorem 22.5, printed page 46. The stated successive-minimum upper bound was checked directly on 20 October 2026.
+5. Yann Bugeaud, Maurice Mignotte and Samir Siksek, [Classical and modular approaches to exponential Diophantine equations I: Fibonacci and Lucas perfect powers](https://arxiv.org/pdf/math/0403046), Theorem 9.4, real case, printed page 16. The theorem concerns a nonzero multiplicative expression minus one. Its statement and constant were checked directly on 20 October 2026; its use here is through the frozen absolute-gap certificate.
+
+The byte-identical imported certificate files under `inherited-absolute-gap/` allow local replay of the eighteen-convergent absolute-gap audit without accessing a separate source checkout. `DEPENDENCIES.json` records their original repository locations and hashes. The exact continued-fraction interval checks and numerical inequalities do not replace the cited Matveev theorem.
