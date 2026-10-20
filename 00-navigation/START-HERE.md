@@ -3,7 +3,7 @@
 **Rolling brief — 2026-09-06.**
 [`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status.
 
-**Oct 20:** [Carmichael map](../05-knowledge/results/carmichael_character_session_20261019/README.md). Scoped transfers; Collatz/LRC OPEN. [Prior maps](../05-knowledge/results/carmichael_character_session_20261019/PUBLICATION_LEDGER.md#prior-session-maps).
+**Oct 20:** [Coloring/clock map](../05-knowledge/results/coloring_clock_session_20261020/README.md). Scoped proofs; major conjectures OPEN. [Prior maps](../05-knowledge/results/coloring_clock_session_20261020/PUBLICATION_LEDGER.md#prior-session-maps).
 
 ## The five-minute orientation
 
