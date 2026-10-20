@@ -1,0 +1,14 @@
+n=0: self=1 nonself_pairs=0 even-edge=1 odd-edge=0; all parity+valuation+support controls pass
+  p3 matching: [[0, 0, 1]]
+n=1: self=1 nonself_pairs=0 even-edge=1 odd-edge=0; all parity+valuation+support controls pass
+  p3 matching: [[0, 0, 1]]
+n=2: self=1 nonself_pairs=0 even-edge=1 odd-edge=0; all parity+valuation+support controls pass
+  p3 matching: [[0, 0, 1]]
+n=3: self=2 nonself_pairs=0 even-edge=2 odd-edge=0; all parity+valuation+support controls pass
+  p3 matching: [[0, 3, 1], [2, 0, 1]]
+n=4: self=2 nonself_pairs=1 even-edge=3 odd-edge=1; all parity+valuation+support controls pass
+  p3 matching: [[0, 3, 4], [2, 0, 1], [4, 30, 1], [5, 7, 4]]
+n=5: self=8 nonself_pairs=2 even-edge=10 odd-edge=2; all parity+valuation+support controls pass
+  p3 matching: [[0, 3, 10], [2, 0, 1], [4, 221, -4], [5, 15, 5], [8, 63, -4], [9, 62, -8], [10, 29, -4], [11, 7, 8], [12, 54, 5], [40, 126, 2], [41, 58, 8], [76, 495, 5]]
+n=6: self=12 nonself_pairs=22 even-edge=34 odd-edge=22; all parity+valuation+support controls pass
+ALL CONVERSE BLOCK CHECKS PASSED

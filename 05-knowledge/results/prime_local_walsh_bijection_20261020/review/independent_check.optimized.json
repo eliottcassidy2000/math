@@ -1,0 +1,102 @@
+{
+  "hall_obstruction": {
+    "automorphism_orders": [
+      3,
+      5
+    ],
+    "neighbor_automorphism_order": 120,
+    "rows": [
+      [
+        1,
+        6,
+        0,
+        5,
+        12,
+        -3,
+        0,
+        0,
+        12,
+        -10,
+        12,
+        -3
+      ],
+      [
+        1,
+        -10,
+        0,
+        5,
+        -20,
+        5,
+        0,
+        0,
+        -20,
+        -10,
+        -20,
+        5
+      ]
+    ],
+    "sole_coprime15_neighbor_mask": 0,
+    "tournament_masks": [
+      5,
+      76
+    ]
+  },
+  "independent_atlas_controls": [
+    {
+      "all_graph_classes": 1,
+      "cofactor_steps_checked_by_fresh_inverse": 4,
+      "determinant": 1,
+      "joint_odd_parts_equal": true,
+      "n": 0,
+      "tournament_and_even_graph_classes": 1
+    },
+    {
+      "all_graph_classes": 1,
+      "cofactor_steps_checked_by_fresh_inverse": 4,
+      "determinant": 1,
+      "joint_odd_parts_equal": true,
+      "n": 1,
+      "tournament_and_even_graph_classes": 1
+    },
+    {
+      "all_graph_classes": 2,
+      "cofactor_steps_checked_by_fresh_inverse": 4,
+      "determinant": 1,
+      "joint_odd_parts_equal": true,
+      "n": 2,
+      "tournament_and_even_graph_classes": 1
+    },
+    {
+      "all_graph_classes": 4,
+      "cofactor_steps_checked_by_fresh_inverse": 8,
+      "determinant": -4,
+      "joint_odd_parts_equal": true,
+      "n": 3,
+      "tournament_and_even_graph_classes": 2
+    },
+    {
+      "all_graph_classes": 11,
+      "cofactor_steps_checked_by_fresh_inverse": 16,
+      "determinant": 256,
+      "joint_odd_parts_equal": true,
+      "n": 4,
+      "tournament_and_even_graph_classes": 4
+    },
+    {
+      "all_graph_classes": 34,
+      "cofactor_steps_checked_by_fresh_inverse": 48,
+      "determinant": 562949953421312,
+      "joint_odd_parts_equal": false,
+      "n": 5,
+      "tournament_and_even_graph_classes": 12
+    }
+  ],
+  "scope": "Complete independent labelled atlases only through n=5. No n=6 enumeration. No imported target code.",
+  "source_hashes": {
+    "PRIME_VALUATION_THEOREM.md": "e7498c1aabdec73f391cb41520727550133a0fb4996fd038353797cf339f71b3",
+    "walsh_support.json": "3cfd4f2419bf324a296ada971945588e1ef7821f9a3f3efd791c2225ca97b458",
+    "walsh_support.out": "7eded7835d35d7087286ac5f267488bb653016a4778f17b83690fddefd6495f1",
+    "walsh_support.py": "24de9e0392147d8c5a45e651168696086b4672d096d12058792b82b282033e8b"
+  },
+  "status": "PASS"
+}

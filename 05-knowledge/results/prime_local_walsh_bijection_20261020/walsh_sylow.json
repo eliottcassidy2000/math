@@ -1,0 +1,557 @@
+[
+  {
+    "n": 0,
+    "nontrivial_p_unit_edges_checked": 0,
+    "explicit_matched_transporters": []
+  },
+  {
+    "n": 1,
+    "nontrivial_p_unit_edges_checked": 0,
+    "explicit_matched_transporters": []
+  },
+  {
+    "n": 2,
+    "nontrivial_p_unit_edges_checked": 0,
+    "explicit_matched_transporters": []
+  },
+  {
+    "n": 3,
+    "nontrivial_p_unit_edges_checked": 1,
+    "explicit_matched_transporters": [
+      {
+        "p": 3,
+        "tournament_mask": 2,
+        "canonical_graph_mask": 0,
+        "fixed_graph_copy": 0,
+        "graph_transporter": [
+          0,
+          1,
+          2
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          3
+        ],
+        "fixed_copy_count": 1,
+        "fixed_signed_sum": 1,
+        "Phi": 1
+      }
+    ]
+  },
+  {
+    "n": 4,
+    "nontrivial_p_unit_edges_checked": 4,
+    "explicit_matched_transporters": [
+      {
+        "p": 3,
+        "tournament_mask": 2,
+        "canonical_graph_mask": 0,
+        "fixed_graph_copy": 0,
+        "graph_transporter": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          3
+        ],
+        "fixed_copy_count": 1,
+        "fixed_signed_sum": 1,
+        "Phi": 1
+      },
+      {
+        "p": 3,
+        "tournament_mask": 5,
+        "canonical_graph_mask": 7,
+        "fixed_graph_copy": 25,
+        "graph_transporter": [
+          1,
+          0,
+          2,
+          3
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          3
+        ],
+        "fixed_copy_count": 1,
+        "fixed_signed_sum": 1,
+        "Phi": 4
+      }
+    ]
+  },
+  {
+    "n": 5,
+    "nontrivial_p_unit_edges_checked": 13,
+    "explicit_matched_transporters": [
+      {
+        "p": 3,
+        "tournament_mask": 2,
+        "canonical_graph_mask": 0,
+        "fixed_graph_copy": 0,
+        "graph_transporter": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          1,
+          3
+        ],
+        "fixed_copy_count": 1,
+        "fixed_signed_sum": 1,
+        "Phi": 1
+      },
+      {
+        "p": 3,
+        "tournament_mask": 5,
+        "canonical_graph_mask": 15,
+        "fixed_graph_copy": 113,
+        "graph_transporter": [
+          1,
+          0,
+          2,
+          3,
+          4
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          1,
+          3
+        ],
+        "fixed_copy_count": 2,
+        "fixed_signed_sum": 2,
+        "Phi": 5
+      },
+      {
+        "p": 3,
+        "tournament_mask": 11,
+        "canonical_graph_mask": 7,
+        "fixed_graph_copy": 97,
+        "graph_transporter": [
+          1,
+          0,
+          3,
+          4,
+          2
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          1,
+          3
+        ],
+        "fixed_copy_count": 2,
+        "fixed_signed_sum": 2,
+        "Phi": 8
+      },
+      {
+        "p": 3,
+        "tournament_mask": 40,
+        "canonical_graph_mask": 126,
+        "fixed_graph_copy": 839,
+        "graph_transporter": [
+          0,
+          4,
+          1,
+          2,
+          3
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          1,
+          3
+        ],
+        "fixed_copy_count": 1,
+        "fixed_signed_sum": -1,
+        "Phi": 2
+      },
+      {
+        "p": 5,
+        "tournament_mask": 76,
+        "canonical_graph_mask": 0,
+        "fixed_graph_copy": 0,
+        "graph_transporter": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "sylow_order": 5,
+        "vertex_orbit_sizes": [
+          5
+        ],
+        "fixed_copy_count": 1,
+        "fixed_signed_sum": 1,
+        "Phi": 1
+      }
+    ]
+  },
+  {
+    "n": 6,
+    "nontrivial_p_unit_edges_checked": 97,
+    "explicit_matched_transporters": [
+      {
+        "p": 3,
+        "tournament_mask": 2,
+        "canonical_graph_mask": 3,
+        "fixed_graph_copy": 12288,
+        "graph_transporter": [
+          3,
+          4,
+          5,
+          0,
+          1,
+          2
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "fixed_copy_count": 3,
+        "fixed_signed_sum": 1,
+        "Phi": 16
+      },
+      {
+        "p": 3,
+        "tournament_mask": 5,
+        "canonical_graph_mask": 7,
+        "fixed_graph_copy": 97,
+        "graph_transporter": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "fixed_copy_count": 3,
+        "fixed_signed_sum": -1,
+        "Phi": -4
+      },
+      {
+        "p": 3,
+        "tournament_mask": 11,
+        "canonical_graph_mask": 15,
+        "fixed_graph_copy": 225,
+        "graph_transporter": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "fixed_copy_count": 6,
+        "fixed_signed_sum": 4,
+        "Phi": 10
+      },
+      {
+        "p": 3,
+        "tournament_mask": 23,
+        "canonical_graph_mask": 31,
+        "fixed_graph_copy": 481,
+        "graph_transporter": [
+          1,
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "fixed_copy_count": 3,
+        "fixed_signed_sum": 1,
+        "Phi": 4
+      },
+      {
+        "p": 3,
+        "tournament_mask": 72,
+        "canonical_graph_mask": 238,
+        "fixed_graph_copy": 5255,
+        "graph_transporter": [
+          0,
+          4,
+          1,
+          2,
+          3,
+          5
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "fixed_copy_count": 3,
+        "fixed_signed_sum": -1,
+        "Phi": -4
+      },
+      {
+        "p": 3,
+        "tournament_mask": 80,
+        "canonical_graph_mask": 61,
+        "fixed_graph_copy": 5272,
+        "graph_transporter": [
+          4,
+          0,
+          5,
+          1,
+          2,
+          3
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "fixed_copy_count": 6,
+        "fixed_signed_sum": -2,
+        "Phi": 16
+      },
+      {
+        "p": 3,
+        "tournament_mask": 87,
+        "canonical_graph_mask": 0,
+        "fixed_graph_copy": 0,
+        "graph_transporter": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "sylow_order": 9,
+        "vertex_orbit_sizes": [
+          3,
+          3
+        ],
+        "fixed_copy_count": 1,
+        "fixed_signed_sum": 1,
+        "Phi": 1
+      },
+      {
+        "p": 3,
+        "tournament_mask": 88,
+        "canonical_graph_mask": 255,
+        "fixed_graph_copy": 5279,
+        "graph_transporter": [
+          0,
+          4,
+          1,
+          2,
+          3,
+          5
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "fixed_copy_count": 6,
+        "fixed_signed_sum": -2,
+        "Phi": -8
+      },
+      {
+        "p": 3,
+        "tournament_mask": 176,
+        "canonical_graph_mask": 510,
+        "fixed_graph_copy": 3645,
+        "graph_transporter": [
+          0,
+          2,
+          1,
+          3,
+          4,
+          5
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "fixed_copy_count": 3,
+        "fixed_signed_sum": 1,
+        "Phi": -5
+      },
+      {
+        "p": 3,
+        "tournament_mask": 178,
+        "canonical_graph_mask": 4063,
+        "fixed_graph_copy": 26431,
+        "graph_transporter": [
+          0,
+          2,
+          5,
+          1,
+          3,
+          4
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "fixed_copy_count": 3,
+        "fixed_signed_sum": -1,
+        "Phi": -16
+      },
+      {
+        "p": 3,
+        "tournament_mask": 377,
+        "canonical_graph_mask": 254,
+        "fixed_graph_copy": 3133,
+        "graph_transporter": [
+          0,
+          2,
+          1,
+          4,
+          5,
+          3
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "fixed_copy_count": 6,
+        "fixed_signed_sum": -4,
+        "Phi": 8
+      },
+      {
+        "p": 3,
+        "tournament_mask": 408,
+        "canonical_graph_mask": 1880,
+        "fixed_graph_copy": 6324,
+        "graph_transporter": [
+          0,
+          2,
+          4,
+          1,
+          3,
+          5
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          3,
+          3
+        ],
+        "fixed_copy_count": 3,
+        "fixed_signed_sum": -1,
+        "Phi": 8
+      },
+      {
+        "p": 3,
+        "tournament_mask": 1332,
+        "canonical_graph_mask": 15870,
+        "fixed_graph_copy": 24535,
+        "graph_transporter": [
+          0,
+          4,
+          1,
+          2,
+          3,
+          5
+        ],
+        "sylow_order": 3,
+        "vertex_orbit_sizes": [
+          3,
+          3
+        ],
+        "fixed_copy_count": 3,
+        "fixed_signed_sum": -1,
+        "Phi": -7
+      },
+      {
+        "p": 5,
+        "tournament_mask": 140,
+        "canonical_graph_mask": 0,
+        "fixed_graph_copy": 0,
+        "graph_transporter": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "sylow_order": 5,
+        "vertex_orbit_sizes": [
+          1,
+          5
+        ],
+        "fixed_copy_count": 1,
+        "fixed_signed_sum": 1,
+        "Phi": 1
+      },
+      {
+        "p": 5,
+        "tournament_mask": 314,
+        "canonical_graph_mask": 31,
+        "fixed_graph_copy": 3618,
+        "graph_transporter": [
+          2,
+          0,
+          1,
+          3,
+          4,
+          5
+        ],
+        "sylow_order": 5,
+        "vertex_orbit_sizes": [
+          1,
+          5
+        ],
+        "fixed_copy_count": 1,
+        "fixed_signed_sum": 1,
+        "Phi": -4
+      }
+    ]
+  }
+]

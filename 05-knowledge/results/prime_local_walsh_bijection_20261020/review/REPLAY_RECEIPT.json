@@ -1,0 +1,34 @@
+{
+  "commands": [
+    "python3 -B session10-walsh-review/independent_small_check.py",
+    "python3 -B -O session10-walsh-review/independent_small_check.py"
+  ],
+  "date_utc": "2026-10-20",
+  "final_sylow_revision": "Proof unchanged; appended finite action controls inspected, no n=6 rerun.",
+  "independent_output_sha256": "04a30e60ed0ba7c2d76f51acc3f02637df171cf59c7b74a4fc55fd3deb2d8ee9",
+  "no_n6_enumeration": true,
+  "no_target_code_imported": true,
+  "normal_optimized_outputs_identical": true,
+  "python_version": "3.12.14",
+  "review_scope": [
+    "Initial prime-valuation theorem and constructive minor matching",
+    "Sylow-action addendum proof",
+    "Cokernel addendum proof",
+    "Independent exact finite atlases n=0 through n=5 only"
+  ],
+  "source_hashes": {
+    "CHECKPOINT_SHA256.txt": "de7d0b944f85284ca69658ddec797d5820da654b6948ee7ed40ab4776fb96b3e",
+    "COKERNEL_ADDENDUM.md": "f35dad137b7b41ab348f7142a7511f8f6b8039470a1ff62acfec34c508658ded",
+    "PRIME_VALUATION_THEOREM.md": "e7498c1aabdec73f391cb41520727550133a0fb4996fd038353797cf339f71b3",
+    "SYLOW_ACTION_ADDENDUM.md": "17431560b037d5dc12b027d8a55a99edbac7ac5b5772243f6f0ec30d49a9b6ec",
+    "walsh_support.json": "3cfd4f2419bf324a296ada971945588e1ef7821f9a3f3efd791c2225ca97b458",
+    "walsh_support.out": "7eded7835d35d7087286ac5f267488bb653016a4778f17b83690fddefd6495f1",
+    "walsh_support.py": "24de9e0392147d8c5a45e651168696086b4672d096d12058792b82b282033e8b",
+    "walsh_sylow.json": "b03c69f068e1afce96d9cc62e7eda959bbc9b9c37cfccaebc84af53763ea48b9",
+    "walsh_sylow.optimized.out": "33bc97b36c022190e0f5575375b12017493e9a47eecdd916a2de0f34e2763341",
+    "walsh_sylow.out": "33bc97b36c022190e0f5575375b12017493e9a47eecdd916a2de0f34e2763341",
+    "walsh_sylow.py": "d3ca7e3c1d890a5ea29fb46a340a0a83c946c88ef8423ac5240ee877d3d13705"
+  },
+  "status": "PASS",
+  "sympy_version": "1.14.0"
+}

@@ -1,0 +1,47 @@
+n=0 N=1 det=1 support=1/1 odd-part-equal=True mod15-unit-matching=True
+  p=3: valuation distribution={0: 1}; all matched entries p-units and aut valuations preserved
+  p=5: valuation distribution={0: 1}; all matched entries p-units and aut valuations preserved
+  p=7: valuation distribution={0: 1}; all matched entries p-units and aut valuations preserved
+  rational matching (tournament mask, graph mask, Phi): [[0, 0, 1]]
+  mod3 matching: [[0, 0, 1]]
+  mod5 matching: [[0, 0, 1]]
+n=1 N=1 det=1 support=1/1 odd-part-equal=True mod15-unit-matching=True
+  p=3: valuation distribution={0: 1}; all matched entries p-units and aut valuations preserved
+  p=5: valuation distribution={0: 1}; all matched entries p-units and aut valuations preserved
+  p=7: valuation distribution={0: 1}; all matched entries p-units and aut valuations preserved
+  rational matching (tournament mask, graph mask, Phi): [[0, 0, 1]]
+  mod3 matching: [[0, 0, 1]]
+  mod5 matching: [[0, 0, 1]]
+n=2 N=1 det=1 support=1/1 odd-part-equal=True mod15-unit-matching=True
+  p=3: valuation distribution={0: 1}; all matched entries p-units and aut valuations preserved
+  p=5: valuation distribution={0: 1}; all matched entries p-units and aut valuations preserved
+  p=7: valuation distribution={0: 1}; all matched entries p-units and aut valuations preserved
+  rational matching (tournament mask, graph mask, Phi): [[0, 0, 1]]
+  mod3 matching: [[0, 0, 1]]
+  mod5 matching: [[0, 0, 1]]
+n=3 N=2 det=-4 support=4/4 odd-part-equal=True mod15-unit-matching=True
+  p=3: valuation distribution={0: 1, 1: 1}; all matched entries p-units and aut valuations preserved
+  p=5: valuation distribution={0: 2}; all matched entries p-units and aut valuations preserved
+  p=7: valuation distribution={0: 2}; all matched entries p-units and aut valuations preserved
+  rational matching (tournament mask, graph mask, Phi): [[0, 0, 1], [2, 3, -3]]
+  mod3 matching: [[0, 3, 1], [2, 0, 1]]
+  mod5 matching: [[0, 0, 1], [2, 3, -3]]
+n=4 N=4 det=256 support=12/16 odd-part-equal=True mod15-unit-matching=True
+  p=3: valuation distribution={0: 2, 1: 2}; all matched entries p-units and aut valuations preserved
+  p=5: valuation distribution={0: 4}; all matched entries p-units and aut valuations preserved
+  p=7: valuation distribution={0: 4}; all matched entries p-units and aut valuations preserved
+  rational matching (tournament mask, graph mask, Phi): [[0, 0, 1], [2, 7, -4], [4, 3, -4], [5, 30, -3]]
+  mod3 matching: [[0, 3, 4], [2, 0, 1], [4, 30, 1], [5, 7, 4]]
+  mod5 matching: [[0, 0, 1], [2, 7, -4], [4, 3, -4], [5, 30, -3]]
+n=5 N=12 det=562949953421312 support=122/144 odd-part-equal=False mod15-unit-matching=False
+  p=3: valuation distribution={0: 8, 1: 4}; all matched entries p-units and aut valuations preserved
+  p=5: valuation distribution={0: 11, 1: 1}; all matched entries p-units and aut valuations preserved
+  p=7: valuation distribution={0: 12}; all matched entries p-units and aut valuations preserved
+  rational matching (tournament mask, graph mask, Phi): [[0, 0, 1], [2, 3, 6], [4, 7, -8], [5, 54, -3], [8, 15, -3], [9, 29, 4], [10, 63, 12], [11, 62, 24], [12, 58, -8], [40, 126, 2], [41, 221, -4], [76, 495, 5]]
+  mod3 matching: [[0, 3, 10], [2, 0, 1], [4, 62, 8], [5, 15, 5], [8, 63, -4], [9, 221, -4], [10, 29, -4], [11, 7, 8], [12, 54, 5], [40, 126, 2], [41, 58, 8], [76, 495, 5]]
+  mod5 matching: [[0, 15, 1], [2, 3, 6], [4, 7, -8], [5, 54, -3], [8, 29, 12], [9, 62, -8], [10, 63, 12], [11, 126, -2], [12, 58, -8], [40, 221, 12], [41, 495, -7], [76, 0, 1]]
+n=6 N=56 det=-615656346818663737691860001564743965704370926101022604186692084441339402679643915803347910232576806887603562348544 support=2329/3136 odd-part-equal=False mod15-unit-matching=False
+  p=3: valuation distribution={0: 43, 1: 12, 2: 1}; all matched entries p-units and aut valuations preserved
+  p=5: valuation distribution={0: 54, 1: 2}; all matched entries p-units and aut valuations preserved
+  p=7: valuation distribution={0: 56}; all matched entries p-units and aut valuations preserved
+ALL EXACT CHECKS PASSED

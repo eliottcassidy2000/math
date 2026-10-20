@@ -1,0 +1,8 @@
+n=0: direct signed localization on 0 nontrivial p-unit edges; 0 matched Sylow transporters
+n=1: direct signed localization on 0 nontrivial p-unit edges; 0 matched Sylow transporters
+n=2: direct signed localization on 0 nontrivial p-unit edges; 0 matched Sylow transporters
+n=3: direct signed localization on 1 nontrivial p-unit edges; 1 matched Sylow transporters
+n=4: direct signed localization on 4 nontrivial p-unit edges; 2 matched Sylow transporters
+n=5: direct signed localization on 13 nontrivial p-unit edges; 5 matched Sylow transporters
+n=6: direct signed localization on 97 nontrivial p-unit edges; 15 matched Sylow transporters
+ALL SYLOW LOCALIZATION CHECKS PASSED
