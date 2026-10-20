@@ -1,0 +1,6 @@
+LOW_DELTA_QUADRATIC_AND_RELATIVE_GLOBALIZATION.md: OK
+PRIMARY_SOURCES.md: OK
+README.md: OK
+verify_low_delta.py: OK
+results.json: OK
+results-optimized.json: OK

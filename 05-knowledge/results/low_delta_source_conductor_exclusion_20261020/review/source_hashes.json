@@ -1,0 +1,22 @@
+{
+  "dependencies_read": {
+    "session13-cylinder-continuation/MOVING_HYPERELLIPTIC_GENERATOR_OBSTRUCTION.md": "17ae49f2e6af886e892d61094c5cf415a974c0f0d0f7f15685125221181ae215",
+    "session13-cylinder-review/AUDIT.md": "fc66c1302b0b3717d24b8dc6fb0d657106ccdcc7d8fb7561df447f54fc702917",
+    "session13-cylinder-review/PRIMARY_SOURCE_CHECK.md": "500f97faf490df9d2936993dd803f1130c5a96b0cad39e56482f44f3e1b7ebeb",
+    "session13-trace-lattice/ACTUAL_SOURCE_CONDUCTOR_AND_COLLISION_MULTIPLICITY.md": "45494620a95261528932376918d078be3d0e8bf7c3ab9a31f9a5643f8f43bd84"
+  },
+  "pinned_cylinder_dependency": {
+    "commit": "9605e62f324416ddb1a448c2e923d12e7806166f",
+    "path": "05-knowledge/results/cylinder_generator_period_obstructions_20261020/MOVING_HYPERELLIPTIC_GENERATOR_OBSTRUCTION.md",
+    "sha256": "17ae49f2e6af886e892d61094c5cf415a974c0f0d0f7f15685125221181ae215"
+  },
+  "reviewed_files": {
+    "session13-low-delta/LOW_DELTA_QUADRATIC_AND_RELATIVE_GLOBALIZATION.md": "82fcb171ad10bfd75058d722726d4ea0d709f9c802aff5695605b523287939f8",
+    "session13-low-delta/PRIMARY_SOURCES.md": "89c3d8991946c37e255538bd9adda988b46242073461df74288ac65616387138",
+    "session13-low-delta/README.md": "8bf79c54e03ae844115bb771e0a099667041f9ec7e6c7966de23da5d5b8354f1",
+    "session13-low-delta/SOURCE_SHA256SUMS": "a9c294626cdbd91f537e5cb306de30514d31b50e2223c57eecc4d6875bd0ea0b",
+    "session13-low-delta/results-optimized.json": "279f11a56a387919b6a84f9debd2ad51d3a7cb40a489ea2d1c2b3755823cb484",
+    "session13-low-delta/results.json": "279f11a56a387919b6a84f9debd2ad51d3a7cb40a489ea2d1c2b3755823cb484",
+    "session13-low-delta/verify_low_delta.py": "08abbef6e6fde26b7c30b83645fa7d14e8af9e4bd9dc2860bc3e5e91e85773c2"
+  }
+}

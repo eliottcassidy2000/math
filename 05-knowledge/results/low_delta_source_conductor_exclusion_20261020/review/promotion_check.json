@@ -1,0 +1,22 @@
+{
+  "accepted_scope": "Generic conductor >=6 for noninvertible actual monic primitive complex Keller maps; equality leaves only generic cubic/quartic generation, not a global presentation or a degree-eight universal bound.",
+  "final_main_sha256": "82fcb171ad10bfd75058d722726d4ea0d709f9c802aff5695605b523287939f8",
+  "final_readme_sha256": "8bf79c54e03ae844115bb771e0a099667041f9ec7e6c7966de23da5d5b8354f1",
+  "frozen_controls_and_source_record_unchanged": true,
+  "new_section_6_1_independently_checked": true,
+  "nonmathematical_readme_changes_reviewed": true,
+  "normalization_changes": [
+    "Restore original status paragraph.",
+    "Remove new outcome item 7.",
+    "Replace new Section 6.1 with the two original dependency-pending paragraphs."
+  ],
+  "normalized_main_sha256": "f140834611adac7d842b5642f81c1476e120603f0ddef140a886f20239567665",
+  "original_proof_body_recovered_exactly": true,
+  "original_reviewed_main_sha256": "f140834611adac7d842b5642f81c1476e120603f0ddef140a886f20239567665",
+  "pinned_dependency": {
+    "commit": "9605e62f324416ddb1a448c2e923d12e7806166f",
+    "path": "05-knowledge/results/cylinder_generator_period_obstructions_20261020/MOVING_HYPERELLIPTIC_GENERATOR_OBSTRUCTION.md",
+    "sha256": "17ae49f2e6af886e892d61094c5cf415a974c0f0d0f7f15685125221181ae215"
+  },
+  "verdict": "PASS: final status promotion, combined corollary and README accepted"
+}

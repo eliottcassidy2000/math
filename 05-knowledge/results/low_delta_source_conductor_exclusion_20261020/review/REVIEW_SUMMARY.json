@@ -1,0 +1,16 @@
+{
+  "combined_consequence": "Noninvertible actual monic primitive complex Keller source: generic conductor degree >=6; equality leaves only the nonquadratic cubic/quartic C(x)-generated sector.",
+  "final_promotion_verified": true,
+  "frozen_or_shared_checkout_edits": false,
+  "independent_checks": 967,
+  "independent_normal_optimized_identical": true,
+  "independent_pairs": 12,
+  "new_sharp_hostile": "C[x,y^3,xy^2+y]: monic, slice-immersed, slice-primitive, saturated, and generically quadratic, but no global monic quadratic; Jacobian=-3*y^4.",
+  "pinned_cylinder_commit": "9605e62f324416ddb1a448c2e923d12e7806166f",
+  "producer_checks": 33,
+  "producer_normal_matches_frozen": true,
+  "producer_optimized_matches_frozen": true,
+  "resultant_sign_issue": "SymPy 1.14.0 direct odd lower-degree-first case can have wrong sign. The independent checker uses monic-first remainder reduction, guarded by an explicit Sylvester determinant. Frozen low-delta cases avoid that parity; the trace-lattice D-resultant helper already reduces.",
+  "source_manifest_verified": true,
+  "verdict": "PASS under exact stated hypotheses and cited one-line theorem"
+}

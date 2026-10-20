@@ -1,0 +1,9 @@
+{
+  "sympy_version": "1.14.0",
+  "f": "t**3",
+  "g": "t**5 + 1",
+  "direct_library_resultant": "-1",
+  "independent_sylvester_determinant": "1",
+  "monic_reduction_resultant": "1",
+  "effect": "No theorem defect; independent checker reduces modulo its monic first argument before calling resultant."
+}
