@@ -1,7 +1,8 @@
-SHA256 source/input/receipt coverage: 27 PASS
-Scripts parse without removable assertions: 4
-Local Markdown link targets: 36 PASS
+SHA256 source/input/receipt coverage: 41 PASS
+Scripts parse without removable assertions: 5
+Local Markdown link targets: 43 PASS
 Normal/optimized replay: endpoint_check.py PASS
+Normal/optimized replay: incoming_endpoint_audit.py PASS
 Normal/optimized replay: microcosm_check.py PASS
 Normal/optimized replay: profile_growth_check.py PASS
 Normal/optimized replay: zero_heavy_check.py PASS

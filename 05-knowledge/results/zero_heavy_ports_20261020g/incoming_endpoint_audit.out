@@ -1,0 +1,7 @@
+Incoming finite receipt source hashes: PASS
+Full-n independent generator/replay: n=6, sources=12, finite_fallbacks=3
+Full-n independent generator/replay: n=7, sources=64, finite_fallbacks=1
+Full-n independent generator/replay: n=8, sources=320, finite_fallbacks=1
+Independent unified replay: n=9, sources=3072, coincident=512, branches=7
+Independent unified replay: n=10, sources=28672, coincident=0, branches=7
+PASS: no strongness/mixedness filter; no receipt writes; no discovery search; no all-order inference from finite controls

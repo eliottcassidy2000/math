@@ -36,6 +36,18 @@ def inputs():
         "strong_blue_games_20261020f/transport.md",
         "feedback_word_hamilton_spectrum_20261020/proofs.md",
         "regular_return_gram_icosahedra_20261020/gram_return_addendum.md",
+        "endpoint_two_repairs_20261020g/README.md",
+        "endpoint_two_repairs_20261020g/probe.md",
+        "endpoint_two_repairs_20261020g/lift.md",
+        "endpoint_two_repairs_20261020g/theory.md",
+        "endpoint_two_repairs_20261020g/probe_coverage.py",
+        "endpoint_two_repairs_20261020g/probe.py",
+        "endpoint_two_repairs_20261020g/probe_search.py",
+        "endpoint_two_repairs_20261020g/probe_coverage.json",
+        "endpoint_two_repairs_20261020g/unified_check.py",
+        "endpoint_two_repairs_20261020g/unified_check.json",
+        "endpoint_two_repairs_20261020g/theory_unified_audit.py",
+        "endpoint_two_repairs_20261020g/theory_unified_audit.json",
     )]
     return sorted(set(own + deps))
 

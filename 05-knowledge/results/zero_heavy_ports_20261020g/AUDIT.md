@@ -36,8 +36,9 @@ scores, feedback minimum, and complete rigid automorphism cycle index.
 The endpoint investigator supplied literal three-K ledgers and all-order
 blackness proofs. The root checked their joins, XOR targets, reflection
 permutations, score contradictions and endpoint-availability guards. The
-scope is every source in the exact endpoint layer outside the three listed
-residual placements, with the stated order thresholds. Clone equivalences
+initial scope was every source in the exact endpoint layer outside the three
+listed residual placements, with the stated order thresholds. The final
+concurrent completion below closes those placements as well. Clone equivalences
 in section 7 explicitly require the closed middle. Infinite failed
 endpoint-sidecar families obstruct only those particular repairs.
 An independent inheritance investigator additionally reviewed both
@@ -53,9 +54,11 @@ is essential, while the alternate section6 repair starts at n=7.
 |profile_growth_check.py|All1+1+2+4+12+56 classes through order6 and4,054 attachments. Cover DP is compared with cuts of all permutations and explicit unordered covers. All128 hostile children receive literal7-vertex HP counts; isomorphism, converse, feedback and automorphisms use separate full-permutation checks.|
 |microcosm_check.py|Direct Hamiltonian DFS versus product states for k=2..7; explicit involution orbits, full endpoint responses and five actual deletion maps; rectangular and64 weighted-core controls; arithmetic k=2..100. No producer mathematics imports.|
 |endpoint_check.py|All32,140 labelled blue-middle/port sources with middle orders4..8; every applicable ledger, exact target and blackness; clone equivalences; sidecar controls; reflection cycle tables through100; both infinite-method hostiles through middle order24; two restricted120-word small-boundary universes. No inherited producer imports.|
+|incoming_endpoint_audit.py|Independently generates every full-n blue source at n=6..8, then filters only the closed endpoint scores:12,64,320 sources and all five finite fallback certificates. Independently constructs and replays all3,072 and28,672 sources at n=9,10, including512 coincident-port n=9 sources. Imports candidate word banks and the seven-case dispatcher, but evaluates every K move, directed path, positional reversal and literal target locally. No discovery search, receipt writes, or strongness/mixedness source filter.|
 
 The class/chain helpers imported by the first two scripts are pinned by the
-manifest. Their reuse is disclosed; the independent checks listed above
+manifest, as are the incoming word banks and dispatcher used by the last
+script. Their reuse is disclosed; the independent checks listed above
 do not assert total code independence. All checks use explicit exceptions,
 not removable assertions. Normal and `-O` stdout must match the saved
 receipts. The all-order results rest on the proofs, not the census bounds.
@@ -99,8 +102,28 @@ after reviewing changes; `--replay` refuses changed inputs or receipts.
 The verifier parses scripts for removable assertions and resolves every
 local Markdown target.
 
+## Final concurrent endpoint completion
+
+During the final clean rebase, commits 8a97a7e82e and f3e658d7cc supplied
+the complete [endpoint-two theorem](../endpoint_two_repairs_20261020g/README.md).
+The root independently reviewed its open-middle arbitrary-block repair;
+the endpoint investigator independently checked lift.md Theorem A and
+theory.md section5, including the position-4 and n=7,9 boundary witnesses.
+These resolve the three earlier residuals. Their direction checks, physical
+port incidences and blackness proofs all pass. The finite head covers every
+marked source at orders6–8; source/target mixedness is checked for every
+presentation rather than used to discard any. The inheritance investigator
+also audited and replayed the finite and unified certificates separately.
+
+The completed theorem gives three black moves to the literal K partner for
+every closed blue endpoint-two word at n>=6. Our infinite sidecar failures
+survive as failures of those methods, but their status as unresolved
+endpoint cases is SUPERSEDED. The manuscripts and router now reflect this
+stronger combined result. The next direct layer is (n-4,3), with two
+exceptional middle ports and their reflected partners.
+
 The outstanding mathematical targets are explicit: transport the canonical
 owner languages between growing anchor bounds; update endpoint tensors
-without losing the quotient or clone ownership; and build black detours for
-the three residual endpoint placements. Unrestricted A000568 compression
-and all-order black-core connectivity remain OPEN.
+without losing quotient or clone ownership; and treat the next endpoint
+defect. Unrestricted A000568 compression and all-order black-core
+connectivity remain OPEN.

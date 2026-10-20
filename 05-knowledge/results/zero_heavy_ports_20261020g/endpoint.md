@@ -1,9 +1,11 @@
 # Two exact ports in the closed blue endpoint layer (n-3,2)
 
-**Status: PROVED** for the stated labelled three-black ledgers and reduction
-to three residual boundary locations. **FINITE-EXACT** for the explicit
-small controls. **OPEN**: black-core connectivity, including the residual
-cases not covered by these ledgers. Research continuation: 2026-10-20.
+**Status: PROVED** for the stated labelled three-black ledgers.
+The three residual locations isolated by these ledgers are now **CLOSED**
+by the incoming [complete endpoint-two theorem](../endpoint_two_repairs_20261020g/README.md),
+integrated below in section9. The entire layer has three-black detours for
+every n>=6, with a FINITE-EXACT head at orders6–8 and structural proof from9.
+General black-core connectivity remains **OPEN**. Research: 2026-10-20.
 
 ## 1. Inheritance and the retained object
 
@@ -333,7 +335,7 @@ labelled K target. This finite statement retains W contiguous and forward
 and searches only these 120 words. It says nothing about longer detours,
 split W words, or a final target reached only up to isomorphism.
 
-## 8. Surviving frontier and reproduction
+## 8. Earlier template boundary and reproduction
 
 For every n>=8, all sources in this endpoint layer are covered by the
 displayed three-black ledgers **except potentially** these three positions:
@@ -345,8 +347,10 @@ displayed three-black ledgers **except potentially** these three positions:
 | closed, epsilon=1 | x=u=p_2 | a different first join or a different ledger |
 
 The first two displayed endpoint-repair routes have the infinite hostile
-families proved above. No residual case is asserted to be a bridge; no
-all-order connectivity conclusion follows from this reduction alone.
+families proved above. These were open obligations for this particular bank
+of ledgers; section9 records their subsequent closure by different
+whole-block words. The infinite method obstructions remain valid and explain
+why a different repair was needed. No bridge is asserted by their failure.
 
 `endpoint_check.py` is self-contained, standard-library-only, and uses
 explicit RuntimeError checks. It enumerates every blue fixed-path middle
@@ -367,3 +371,40 @@ python -O 05-knowledge/results/zero_heavy_ports_20261020g/endpoint_check.py
 ```
 
 The checked normal/optimized output is retained in `endpoint_check.out`.
+
+## 9. Incoming completion of all three residuals
+
+Commits 8a97a7e82e and f3e658d7cc arrived during final integration. They
+prove the [complete endpoint-two theorem](../endpoint_two_repairs_20261020g/README.md).
+The present investigators independently checked the three new mechanisms
+below; they retain physical ports even on our infinite hostile families.
+Write W=(u,D), preserving this note's convention that x is the exceptional
+incoming port. The incoming notes use different letters for those roles.
+
+* **Open middle, x=v:** the arbitrary-block repair in
+  [probe.md, Theorem B](../endpoint_two_repairs_20261020g/probe.md) is
+  `(a,b,c,z,u,D)`, `(b,c,a,z,u,D)`, `(b,u,D,c,a,z)`.
+  It works at every n>=6 and needs no prescribed-endpoint path in K_V(V).
+* **Closed middle, epsilon=0, x=c:** the block repair in
+  [lift.md, Theorem A](../endpoint_two_repairs_20261020g/lift.md) is
+  `(a,u,D,c,z,b)`, `(D,a,u,c,z,b)`, `(D,a,b,u,c,z)`.
+  It works at n=7 and all n>=9; the remaining small orders have the
+  separately replayed finite certificates. It applies to the full-tiling
+  hostile, without requiring the absent endpoint-preserving R path.
+* **Closed middle, epsilon=1, x=u:** write W=(u,U,v), with U nonempty.
+  [theory.md, section5](../endpoint_two_repairs_20261020g/theory.md) gives
+  `(a,b,u,U,z,v,c)`, `(a,u,U,z,v,b,c)`, `(a,u,U,v,b,c,z)`.
+  Three explicit arc contradictions prove blackness for every n>=7.
+
+Together with the preceding lemmas this covers all n>=9. The incoming
+finite head exhausts all12,64,320 marked sources at n=6,7,8 and retains
+the five exceptional literal certificates. Independent arc-set and bit-row
+replays also cover all31,744 sources at n=9,10 without strongness filters.
+The large-order sample checks supplement, rather than replace, the proofs.
+
+Hence the earlier three-location frontier is superseded. The next direct
+endpoint target is the closed score pair (n-4,3), which has **two** extra
+incoming middle ports and their reflected outgoing partners. These marked
+port defects are not the heavy-coordinate deficiency or black-orbit deficit.
+The completed layer does not imply that every strong mixed blue edge has
+such a presentation, so all-order black-core connectivity is still open.
