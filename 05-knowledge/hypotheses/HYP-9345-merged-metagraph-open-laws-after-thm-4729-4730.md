@@ -1,7 +1,15 @@
 ---
 id: HYP-9345
 title: "Open laws of the merged tournament metagraph after THM-4729/4730: the closure conjecture (H > n HC for every strong tournament of order >= 6), connectivity, the blue self-line classes, the black self-line law, the determination problem, and the strong-tiling sequence"
-status: OPEN (pre-audit); each item carries its finite evidence and the first untested case
+status: >
+  MIXED current status (2026-10-20): (a) fully closed classification PROVED via the cited
+  bypass theorem and exhaustive small cases; (e) rigid-strong/counting obstruction
+  SUPERSEDED by the independent bypass proof, while auxiliary group lemma ML remains separate;
+  (f) proposed leading coefficient1 REFUTED and corrected coefficient2 PROVED with explicit bounds.
+  Items (b)-(c), remaining counting questions in (d), broader (f) questions and (g)-(h) remain OPEN.
+  The incoming refutation in (d), including its finite-count scope, is preserved unchanged.
+  See the dated scoped updates; historical statements and evidence are retained.
+historical_status_at_eb6c3e9818e: OPEN (pre-audit); each item carries its finite evidence and the first untested case
 source: mac-mini-2026-10-20-metagraph
 depends_on:
   - 01-canon/theorems/THM-4729-closed-and-open-tilings-hamiltonian-cycle-bipartition-of-the-metagraph-lines-and-the-forced-arrangement.md
@@ -17,11 +25,32 @@ related:
 **Audit scope update, 2026-10-20:** THM-4730's odd-order proof has an affine/nonaffine anti-automorphism gap. References below to its all-order alphabet and dependent count laws remain provisional; see its current status and the [exact witness](../results/weighted_core_transport_20261020/inheritance.md). The independent open problems and THM-4729's elementary closure laws are unchanged.
 
 
+## Current scoped reconciliation — 2026-10-20
+
+The [closure and asymptotic packet](../results/merged_metagraph_closure_reconciliation_20261020/README.md)
+settles (a), removes the rigid-classification obstacle in (e), and corrects the
+leading coefficient proposed in (f). It does not settle all-order connectivity,
+blue self-line uniqueness or near-regularity, self-line counting laws, the full
+determination problem, or rotation-incidence questions. The independent proof
+paths and the precise caveat in THM-4730's historical odd-order proof are linked
+there. The now-populated THM-4731/HYP-9346 and the incoming same-class
+self-line refutation in (d) are preserved; their larger censuses are not
+independently recertified by this update.
+
+
 Setting and names: THM-4729 (closed/open tilings, closure number `cl(C) = n HC/|Aut|`,
 fully closed / fully open nodes, first-cut count `a(n)`, `NS(n)`), THM-4730 (points of
 symmetry = pure-blue nodes; strong ones are `K1, C3, T5`).
 
 ## (a) The closure conjecture
+
+**PROVED, current update:** For n>=3 the fully closed classes are exactly C3 and
+nonregular `Q5=a -> C3 -> b -> a`. In particular every strong tournament of
+order n>=6 satisfies `H(T)>n HC(T)`. The [full proof](../results/merged_metagraph_closure_reconciliation_20261020/CLOSURE_AND_NONSTRONG_ASYMPTOTIC.md#3-fully-closed-classes-are-completely-classified)
+uses the cited Benhocine–Wojda bypass theorem for n>=7, oddness of H at even
+orders, and complete small-order enumeration. Order10 is no longer a frontier.
+The conjecture statement and finite evidence below are retained as history.
+
 
 **Claim.** Every strongly connected tournament of order `n >= 6` has a Hamiltonian path
 that does not close to a Hamiltonian cycle: `H(T) > n HC(T)`. Equivalently (THM-4729 L2)
@@ -59,6 +88,15 @@ census is feasible in C). *(Settled by THM-4731, opus-2026-10-20-S46, by summing
 
 ## (e) Rigid strong tournaments of composite order >= 63
 
+**Classification obstacle resolved, auxiliary ML not promoted:** The separate
+[bypass proof](../results/merged_metagraph_finite_pure_atoms_20261020/FINITE_ATOMS_AND_RIGID_CLOSURE.md#3-rigid-strong-tournaments-are-completely-classified)
+shows that C3 is the only nontrivial rigid strong tournament at every order.
+The pure-blue count law consequently holds at all orders with the completed
+atom classification. This proof bypasses the historical stronger group lemma
+ML; it does not prove or re-audit ML itself. The historical claim that this
+lemma is necessary for the count law is superseded.
+
+
 THM-2477's lemma ML. THM-4730 shows the count law for pure-blue nodes is equivalent to
 ML beyond `n = 125`. A rigid strong tournament is vertex-transitive with `Aut` regular on
 Hamiltonian paths, hence circulant with respect to every Hamiltonian cycle and with
@@ -67,6 +105,19 @@ Hamiltonian paths, hence circulant with respect to every Hamiltonian cycle and w
 through the arc `0 -> 1`, for `p >= 7`).
 
 ## (f) The strong-tiling sequence
+
+**Leading asymptotic corrected and proved:** Put `T_n=2^binom(n-1,2)`.
+The first-cut terms k=1 and k=n-1 contribute `T_(n-1)` and `a(n-1)`, which
+are asymptotically equal. Thus `NS(n)~2*T_(n-1)`, not `T_(n-1)`.
+The [proof and explicit middle-term bound](../results/merged_metagraph_closure_reconciliation_20261020/CLOSURE_AND_NONSTRONG_ASYMPTOTIC.md#4-correct-leading-asymptotic-of-nonstrong-tilings)
+give, for every n>=4,
+
+    2-(n-2)*2^(-(n-3)) <= NS(n)/T_(n-1) <= 2+(n-3)*2^(-(n-3)).
+
+Higher asymptotic terms and the broader transform question are not settled
+here. The original coefficient1 suggestion below is retained as a refuted
+historical proposal, not an open conjecture.
+
 
 `a(n) = 1, 0, 1, 5, 50, 903, 30773, 2032504` (strong tilings = labelled strong
 tournaments on `[n]` containing a fixed Hamiltonian path) and `NS(n) = 2^{C(n-1,2)} - a(n)`

@@ -1,7 +1,18 @@
 ---
 id: THM-4730
-title: "The strong pure-blue alphabet is complete: a strongly connected tournament all of whose Hamiltonian paths are palindromic (a pure-blue node = a point of symmetry of the merged metagraph) is K1, C3 or T5. (A) Rotation lemma: for a pure-blue tournament and any Hamiltonian cycle (v_0 ... v_{n-1}), every reflection v_x -> v_{2i-1-x} is an anti-automorphism and the rotation by two steps v_x -> v_{x+2} is an automorphism; for odd n the rotation itself is an automorphism, so a strong pure-blue tournament of odd order is a circulant on Z_n with 1 in S (with respect to EVERY Hamiltonian cycle). (B) No circulant tournament of odd order n >= 7 is pure-blue: with 1 in S, either two distinct a, b in S\{1} have a + b <= n + 1 and the three-interval path (0..a-2, a+b-2..n-1, a-1..a+b-3) is a non-palindromic Hamiltonian path, or S = {1} u [(n+1)/2, n-2] and the descending-pairs path (0,1, n-2,n-1, n-4,n-3, ..., 3,4, 2) is one. (C) No strong pure-blue tournament has even order: for n = 0 mod 4 the two-step rotation has even order and a tournament has no involutory automorphism; for n = 2 mod 4 the tournament is a Z_{n/2}-bicirculant (S', D) whose mixing Hamiltonian cycle (0, 2s, ..., -2s, d-2s, d, ..., d-4s) (s = +-1 in S', d in D with d - 4s not in D, which exists because D is not a union of even cosets) has a two-step rotation carrying an even vertex to an odd one, making Aut vertex-transitive, impossible for even n. (D) Hence THM-2454's alphabet {1, C3, T5} is complete for all n, THM-643's conjecture C3 holds (pure-blue fibres are 1 or 3), the Paley tournament T_p is not pure-blue for any prime p >= 7, and pure-blue(n) = c(n/2) (n even), c((n-1)/2) + c((n-3)/2) + c((n-5)/2) (n odd), c = A000930, is PROVED for every n <= 125 (THM-2477's rigid classification through 62 supplies the halves) and for all n conditional on THM-2477's lemma ML"
+title: "Strong pure-blue atoms: independent odd-proof repair and the all-order count law"
+historical_title_at_eb6c3e9818e: >
+  The strong pure-blue alphabet is complete: a strongly connected tournament all of whose Hamiltonian paths are palindromic (a pure-blue node = a point of symmetry of the merged metagraph) is K1, C3 or T5. (A) Rotation lemma: for a pure-blue tournament and any Hamiltonian cycle (v_0 ... v_{n-1}), every reflection v_x -> v_{2i-1-x} is an anti-automorphism and the rotation by two steps v_x -> v_{x+2} is an automorphism; for odd n the rotation itself is an automorphism, so a strong pure-blue tournament of odd order is a circulant on Z_n with 1 in S (with respect to EVERY Hamiltonian cycle). (B) No circulant tournament of odd order n >= 7 is pure-blue: with 1 in S, either two distinct a, b in S\{1} have a + b <= n + 1 and the three-interval path (0..a-2, a+b-2..n-1, a-1..a+b-3) is a non-palindromic Hamiltonian path, or S = {1} u [(n+1)/2, n-2] and the descending-pairs path (0,1, n-2,n-1, n-4,n-3, ..., 3,4, 2) is one. (C) No strong pure-blue tournament has even order: for n = 0 mod 4 the two-step rotation has even order and a tournament has no involutory automorphism; for n = 2 mod 4 the tournament is a Z_{n/2}-bicirculant (S', D) whose mixing Hamiltonian cycle (0, 2s, ..., -2s, d-2s, d, ..., d-4s) (s = +-1 in S', d in D with d - 4s not in D, which exists because D is not a union of even cosets) has a two-step rotation carrying an even vertex to an odd one, making Aut vertex-transitive, impossible for even n. (D) Hence THM-2454's alphabet {1, C3, T5} is complete for all n, THM-643's conjecture C3 holds (pure-blue fibres are 1 or 3), the Paley tournament T_p is not pure-blue for any prime p >= 7, and pure-blue(n) = c(n/2) (n even), c((n-1)/2) + c((n-3)/2) + c((n-5)/2) (n odd), c = A000930, is PROVED for every n <= 125 (THM-2477's rigid classification through 62 supplies the halves) and for all n conditional on THM-2477's lemma ML
 status: >
+  PROVED current alphabet and all-order count conclusions via the separately audited
+  prefix/violated-arc classification and rigid-strong bypass proof linked below.
+  PROVED on inspection: historical rotation lemma and even-order mixing-cycle argument.
+  INCOMPLETE historical odd-order proof: nonconstant paired label sums alone do not
+  exclude a general anti-automorphism; no all-order repair of those explicit paths is claimed.
+  FINITE-EXACT actual arc retest: 41,992 paths at odd n=7..23; zero invalid witnesses.
+  SUPERSEDED count cutoff n<=125; auxiliary group lemma ML itself is not proved here.
+  Historical status, arguments and computations are preserved below with this correction taking precedence.
+historical_status_at_eb6c3e9818e: >
   AUDIT OVERRIDE (2026-10-20, weighted-core session): Theorem B's implication
   from nonconstant partner sums to a non-palindromic path is invalid for
   general circulants; it tests only affine reflections. The all-order
@@ -33,7 +44,8 @@ status: >
   Terminology: pure-blue node (THM-643) = point of symmetry (the owner's name) = a class all of whose tilings
   are grid-symmetric = a tournament all of whose Hamiltonian paths are palindromic. T5 = the regular
   tournament of order 5 = the circulant {1, 2} on Z_5.
-source: mac-mini-2026-10-20-metagraph (owner's prompt: comprehensive patterns of the merged metagraph, points of symmetry, forced arrangements, new terminology)
+source: >
+  mac-mini-2026-10-20-metagraph (owner's prompt: comprehensive patterns of the merged metagraph, points of symmetry, forced arrangements, new terminology)
 depends_on:
   - 01-canon/theorems/THM-643-blue-black-line-parity-structure.md
   - 01-canon/theorems/THM-644-gridsym-fiber-law-and-anti-redei.md
@@ -69,6 +81,39 @@ claims are not refuted; they need an actual arc argument. Theorem B and
 the all-order alphabet consequences below are therefore provisional.
 The rotation lemma A, even-order argument C, and properly stated finite
 censuses are unaffected. Original pre-audit prose is retained for lineage.
+
+
+## Independent completion after the incoming proof correction — 2026-10-20
+
+The weighted-core audit at commit eb6c3e9818e already established the gap in
+the original odd-order argument and repaired the finite checker. That warning
+is preserved above. The alphabet conclusion is nevertheless supplied by the
+independent proof linked below. The precise distinction is that unequal sums of opposite path labels rule out only an affine
+reflection, not every anti-automorphism of a circulant. The [exact order-nine
+hostile and finite retest](../../05-knowledge/results/merged_metagraph_closure_reconciliation_20261020/ANTI_AUTOMORPHISM_AUDIT.md)
+show this distinction. The displayed path families pass the actual arc test in
+41,992 cases through order23; that does not supply an all-order proof of those
+particular formulas. The original checker implemented the weaker sum test; the incoming repair now
+checks actual arc reversal. Our separate hostile and audit retain independent credit.
+
+The independently audited [prefix-rerouting and explicit violated-arc proof](../../05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md)
+provides the all-order odd-circulant exclusion without that assumption. Together
+with its strong-cycle reduction, it proves the same alphabet
+`{1,C3,regular cyclic C5}`. The rotation lemma and elementary even-order
+mixing-cycle argument here remain valid; their independent provenance is retained.
+This correction is not a counterexample to the alphabet theorem.
+
+The separate [Hamiltonian-bypass proof of rigid-strong classification](../../05-knowledge/results/merged_metagraph_finite_pure_atoms_20261020/FINITE_ATOMS_AND_RIGID_CLOSURE.md#3-rigid-strong-tournaments-are-completely-classified)
+removes the old order62 restriction without invoking auxiliary lemma ML.
+Consequently the [pure-blue generating function and count law](../../05-knowledge/results/pure_blue_atom_classification_20261020/PURE_BLUE_COUNTS_AND_BRANCH_GEOMETRY.md)
+hold at **every order**, not only through125. The separately formulated
+stronger group-theoretic ML statement is not proved by this argument.
+
+The incoming repairs to the count totals and regular-C5 terminology are retained.
+Regular cyclic C5 is not a Paley tournament. The incoming audit status and all
+original proof text remain preserved, not silently relabelled as independently
+audited all-order arguments. This completion bypasses rather than repairs the
+original special-path proof.
 
 **PROVED (pre-audit) + MACHINE-CHECKED + FINITE-EXACT** as itemized in the status.
 
