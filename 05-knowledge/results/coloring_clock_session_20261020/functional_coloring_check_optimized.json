@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "cutoff": 4,
+  "state_count": 512,
+  "directed_nonfixed_edges_checked": 496,
+  "all_checks": 1612
+}
