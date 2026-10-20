@@ -1,0 +1,220 @@
+{
+  "changes": {
+    "DEPENDENCIES.md": [
+      {
+        "new": "20 October 2026. Exact dependencies of the audited frontier map.",
+        "old": "20 October 2026. Local staging packet; no publication is asserted."
+      },
+      {
+        "new": "../conductor_ten_source_exclusion_20261020/",
+        "old": "session13-conductor-ten-review/frozen/conductor_ten_source_exclusion_20261020/"
+      },
+      {
+        "new": "../quadratic_semigroup_keller_obstruction_20261020/",
+        "old": "session13-hyperelliptic-line-review/frozen/quadratic_semigroup_keller_obstruction_20261020/"
+      },
+      {
+        "new": "4. The supplemental alternate-realization note supplies formulas and\n   parameter families. The main checker does not import its code and\n   independently rechecks both concrete realizations. The parameter\n   families are supplemental, not needed to exclude either nonplanar\n   semigroup or to exhaust terminal degrees.",
+        "old": "4. The explicit alternate realization worker supplied formulas and\n   parameter families. The main checker does not import its code and\n   independently rechecks both concrete realizations. Its separate\n   parameter-family note is supplemental, not needed to exclude either\n   nonplanar semigroup or to exhaust terminal degrees."
+      },
+      {
+        "new": "The exact inspected dependency bytes are recorded in\n`DEPENDENCY_HASHES.json`. These hashes were verified against the\naudited staged dependency copies; this is not a claim of remote\npublication verification. The original tentative genus-six map was\na discovery prompt, not a proof dependency.",
+        "old": "The exact inspected dependency bytes are recorded in\n`DEPENDENCY_HASHES.json`. The root's tentative genus-six map was a\ndiscovery prompt, not a proof dependency."
+      }
+    ],
+    "DEPENDENCY_HASHES.json": [
+      "Only original staging path keys rewritten to corresponding sibling publication paths; every dependency digest unchanged."
+    ],
+    "FRONTIER.md": [
+      {
+        "new": "**PROVED classification and realization statements; independently audited PASS in the stated scope.**",
+        "old": "**VERIFIED frontier packet; independent publication audit pending.**"
+      },
+      {
+        "new": "The supplementary realization checker has 48 additional checks and\nnormal/optimized parity. The independent audit adds 119 checks using\na separate Kunz-coordinate census and exact Ap\u00e9ry computation. Exact\ndependency hashes and primary-source limitations are recorded beside\nthis report; see [the independent audit](audit/INDEPENDENT_AUDIT.md).",
+        "old": "The supplementary realization checker has 48 additional checks and\nnormal/optimized parity. Exact dependency hashes and primary-source\nlimitations are recorded beside this report. No shared-repository or\nremote write was made by this work unit."
+      }
+    ],
+    "README.md": [
+      {
+        "new": "20 October 2026. Independently audited PASS in the stated classification and realization scopes.",
+        "old": "20 October 2026. Verified, awaiting independent publication audit."
+      },
+      {
+        "new": "- [Dependency scope](DEPENDENCIES.md)\n- [Independent audit](audit/INDEPENDENT_AUDIT.md) and [119-check reconstruction](audit/independent_audit.py)",
+        "old": "- [Dependency scope](DEPENDENCIES.md)"
+      }
+    ],
+    "audit/INDEPENDENT_AUDIT.md": [
+      {
+        "new": "in `AUDITED_HASHES.json`, which preserves the inspected source-version\nhashes. Publication-copy changes are recorded in\n`../PUBLICATION_COPY_LINEAGE.json`.",
+        "old": "in `AUDITED_HASHES.json`. Audit writes were confined to this directory.\nNo shared-repository, Git history, or remote mutation was performed."
+      }
+    ],
+    "audit/independent-results-optimized.json": [
+      "Only dependency-path labels changed; normalized result byte-matches original audit receipt."
+    ],
+    "audit/independent-results.json": [
+      "Only dependency-path labels changed; normalized result byte-matches original audit receipt."
+    ]
+  },
+  "copied_layout_replay": [
+    {
+      "checks": 129,
+      "normal_optimized_identical": true,
+      "output_sha256": "3a756e2477546b201041a69372552c13c44303f1ed8788d022ef82e9a5a13f5f",
+      "script": "verify_frontier.py"
+    },
+    {
+      "checks": 48,
+      "normal_optimized_identical": true,
+      "output_sha256": "c69ea66b5cb802e85d2b0723705ba18b29e1fe071e30dce721fbefc247810132",
+      "script": "realizations/verify_realizations.py"
+    },
+    {
+      "checks": 119,
+      "normal_optimized_identical": true,
+      "output_sha256": "e740038c042168a2c19085f2540a956e483b6b5611b16eefc66210b9f6a17c87",
+      "script": "audit/independent_audit.py"
+    }
+  ],
+  "files": [
+    {
+      "audited_source_sha256": "387128c463db2e7bdae15884adb72afb390d73957d04f9679e9ba473bbbd08a5",
+      "modified": true,
+      "path": "DEPENDENCIES.md",
+      "publication_copy_sha256": "54ebe70d9135992cdbaef4d008e9cfe9cac1ebe7b54db5c5f2ee73d2c1381299"
+    },
+    {
+      "audited_source_sha256": "a58856f7b744000851d54096e66249689a9e79e7532ccdffa733c628136dd13c",
+      "modified": true,
+      "path": "DEPENDENCY_HASHES.json",
+      "publication_copy_sha256": "77adfe62f2c6e2ecb9ee0740dc09fbfe90b7f52f3929be0a639eee43e4a5dc79"
+    },
+    {
+      "audited_source_sha256": "709dc8bd7e95bef496c76fca824e30918e2a4a2a6747f0594fbea0438af34323",
+      "modified": true,
+      "path": "FRONTIER.md",
+      "publication_copy_sha256": "5e695fe5bc877490e14f11ff94a74ee49a4425ebd96b1f6b9b55c52789506bf1"
+    },
+    {
+      "audited_source_sha256": "4de58bfde36e4d81a819ccc2374c52f5319fc0e38b60b9f632fb0b9e903b0666",
+      "modified": false,
+      "path": "PRIMARY_SOURCES.md",
+      "publication_copy_sha256": "4de58bfde36e4d81a819ccc2374c52f5319fc0e38b60b9f632fb0b9e903b0666"
+    },
+    {
+      "audited_source_sha256": "6519ac9e29c00f570cdc83d5735ecd8236cf0bc532ac4297245944a3b302261e",
+      "modified": true,
+      "path": "README.md",
+      "publication_copy_sha256": "40f7c5c1c4a51574d33b92569c49a457b0f328c409c8bfaaaad9ec5a444df323"
+    },
+    {
+      "audited_source_sha256": "1570323667d85b199c526a5f4362676e1931bc48efb1d6f778183521883ed851",
+      "modified": true,
+      "path": "audit/INDEPENDENT_AUDIT.md",
+      "publication_copy_sha256": "d27104146b85bd19d3d00fd34d64a4c935541c4e3d1a226eafc5e8521b816e46"
+    },
+    {
+      "audited_source_sha256": "5d96c0973afc01b97ce144cabbd641e22c64b01c689a88dbbf8ac46e53bf7051",
+      "modified": true,
+      "path": "audit/independent-results-optimized.json",
+      "publication_copy_sha256": "e740038c042168a2c19085f2540a956e483b6b5611b16eefc66210b9f6a17c87"
+    },
+    {
+      "audited_source_sha256": "5d96c0973afc01b97ce144cabbd641e22c64b01c689a88dbbf8ac46e53bf7051",
+      "modified": true,
+      "path": "audit/independent-results.json",
+      "publication_copy_sha256": "e740038c042168a2c19085f2540a956e483b6b5611b16eefc66210b9f6a17c87"
+    },
+    {
+      "audited_source_sha256": "f3af5d0a48c14a2fdefe31f9f17d7a813bac7da08fba904982aa9d97ab22955f",
+      "modified": false,
+      "path": "audit/independent_audit.py",
+      "publication_copy_sha256": "f3af5d0a48c14a2fdefe31f9f17d7a813bac7da08fba904982aa9d97ab22955f"
+    },
+    {
+      "audited_source_sha256": "3a756e2477546b201041a69372552c13c44303f1ed8788d022ef82e9a5a13f5f",
+      "modified": false,
+      "path": "audit/producer-frontier-replay-optimized.json",
+      "publication_copy_sha256": "3a756e2477546b201041a69372552c13c44303f1ed8788d022ef82e9a5a13f5f"
+    },
+    {
+      "audited_source_sha256": "3a756e2477546b201041a69372552c13c44303f1ed8788d022ef82e9a5a13f5f",
+      "modified": false,
+      "path": "audit/producer-frontier-replay.json",
+      "publication_copy_sha256": "3a756e2477546b201041a69372552c13c44303f1ed8788d022ef82e9a5a13f5f"
+    },
+    {
+      "audited_source_sha256": "c69ea66b5cb802e85d2b0723705ba18b29e1fe071e30dce721fbefc247810132",
+      "modified": false,
+      "path": "audit/producer-realizations-replay-optimized.json",
+      "publication_copy_sha256": "c69ea66b5cb802e85d2b0723705ba18b29e1fe071e30dce721fbefc247810132"
+    },
+    {
+      "audited_source_sha256": "c69ea66b5cb802e85d2b0723705ba18b29e1fe071e30dce721fbefc247810132",
+      "modified": false,
+      "path": "audit/producer-realizations-replay.json",
+      "publication_copy_sha256": "c69ea66b5cb802e85d2b0723705ba18b29e1fe071e30dce721fbefc247810132"
+    },
+    {
+      "audited_source_sha256": "645f78de81ad90e8840dc11227885f13e1cfe81a564e6b4414a0cf491e51d107",
+      "modified": false,
+      "path": "realizations/ALTERNATE_DEGREE_REALIZATIONS.md",
+      "publication_copy_sha256": "645f78de81ad90e8840dc11227885f13e1cfe81a564e6b4414a0cf491e51d107"
+    },
+    {
+      "audited_source_sha256": "c78f69fefe718e1e314d93d62c124623645d12210c4431726ee53b89710d1db7",
+      "modified": false,
+      "path": "realizations/SHA256SUMS",
+      "publication_copy_sha256": "c78f69fefe718e1e314d93d62c124623645d12210c4431726ee53b89710d1db7"
+    },
+    {
+      "audited_source_sha256": "c69ea66b5cb802e85d2b0723705ba18b29e1fe071e30dce721fbefc247810132",
+      "modified": false,
+      "path": "realizations/results-optimized.json",
+      "publication_copy_sha256": "c69ea66b5cb802e85d2b0723705ba18b29e1fe071e30dce721fbefc247810132"
+    },
+    {
+      "audited_source_sha256": "c69ea66b5cb802e85d2b0723705ba18b29e1fe071e30dce721fbefc247810132",
+      "modified": false,
+      "path": "realizations/results.json",
+      "publication_copy_sha256": "c69ea66b5cb802e85d2b0723705ba18b29e1fe071e30dce721fbefc247810132"
+    },
+    {
+      "audited_source_sha256": "3a3a131fe96793211d364ef5a5b157d9e6848b24221c0cfa5f964b6b459e4485",
+      "modified": false,
+      "path": "realizations/verify_realizations.py",
+      "publication_copy_sha256": "3a3a131fe96793211d364ef5a5b157d9e6848b24221c0cfa5f964b6b459e4485"
+    },
+    {
+      "audited_source_sha256": "3a756e2477546b201041a69372552c13c44303f1ed8788d022ef82e9a5a13f5f",
+      "modified": false,
+      "path": "results-optimized.json",
+      "publication_copy_sha256": "3a756e2477546b201041a69372552c13c44303f1ed8788d022ef82e9a5a13f5f"
+    },
+    {
+      "audited_source_sha256": "3a756e2477546b201041a69372552c13c44303f1ed8788d022ef82e9a5a13f5f",
+      "modified": false,
+      "path": "results.json",
+      "publication_copy_sha256": "3a756e2477546b201041a69372552c13c44303f1ed8788d022ef82e9a5a13f5f"
+    },
+    {
+      "audited_source_sha256": "2193473301538fce97f2690318981ac53ccf909134f90f1861054e115574fd9b",
+      "modified": false,
+      "path": "verify_frontier.py",
+      "publication_copy_sha256": "2193473301538fce97f2690318981ac53ccf909134f90f1861054e115574fd9b"
+    },
+    {
+      "audited_source_sha256": "14f0fd0b713e435c9b73f96c5ba5f22825b909e92a78f398c5e6c537af0385fe",
+      "modified": false,
+      "path": "audit/AUDITED_HASHES.json",
+      "publication_copy_sha256": "14f0fd0b713e435c9b73f96c5ba5f22825b909e92a78f398c5e6c537af0385fe"
+    }
+  ],
+  "original_audit_hashes_file_sha256": "14f0fd0b713e435c9b73f96c5ba5f22825b909e92a78f398c5e6c537af0385fe",
+  "remote_publication_confirmed": false,
+  "review_verdict": "PASS",
+  "scope": "Classification, realizations, and beta boundary only; inherited conductor bound twelve unchanged.",
+  "status": "AUDITED_PUBLICATION_COPY"
+}

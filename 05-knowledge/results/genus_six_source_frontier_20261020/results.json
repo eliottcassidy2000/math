@@ -1,0 +1,456 @@
+{
+  "characteristic_universe_counts_by_length": {
+    "2": 108,
+    "3": 1188,
+    "4": 13068
+  },
+  "check_count": 129,
+  "checks": [
+    "all 4096 subsets give exactly six symmetric genus-six semigroups",
+    "independent complementary-pair census agrees",
+    "primitive generators (2, 13)",
+    "six gaps and Frobenius eleven (2, 13)",
+    "conductor twelve from Apery (2, 13)",
+    "Apery genus formula (2, 13)",
+    "conductor interval certificate (2, 13)",
+    "primitive generators (3, 7)",
+    "six gaps and Frobenius eleven (3, 7)",
+    "conductor twelve from Apery (3, 7)",
+    "Apery genus formula (3, 7)",
+    "conductor interval certificate (3, 7)",
+    "primitive generators (4, 5)",
+    "six gaps and Frobenius eleven (4, 5)",
+    "conductor twelve from Apery (4, 5)",
+    "Apery genus formula (4, 5)",
+    "conductor interval certificate (4, 5)",
+    "primitive generators (4, 6, 9)",
+    "six gaps and Frobenius eleven (4, 6, 9)",
+    "conductor twelve from Apery (4, 6, 9)",
+    "Apery genus formula (4, 6, 9)",
+    "conductor interval certificate (4, 6, 9)",
+    "primitive generators (5, 7, 8, 9)",
+    "six gaps and Frobenius eleven (5, 7, 8, 9)",
+    "conductor twelve from Apery (5, 7, 8, 9)",
+    "Apery genus formula (5, 7, 8, 9)",
+    "conductor interval certificate (5, 7, 8, 9)",
+    "primitive generators (6, 7, 8, 9, 10)",
+    "six gaps and Frobenius eleven (6, 7, 8, 9, 10)",
+    "conductor twelve from Apery (6, 7, 8, 9, 10)",
+    "Apery genus formula (6, 7, 8, 9, 10)",
+    "conductor interval certificate (6, 7, 8, 9, 10)",
+    "minimal generator census agrees with all gap sets",
+    "complete initial universe has gcds one through four",
+    "length-four sequences cannot be omitted a priori",
+    "entire bounded characteristic universe at conductor twelve",
+    "length-four sector contributes no conductor-twelve sequence",
+    "sequence semigroup agrees with conductor formula (2, 13)",
+    "every primitive occurs in the sequence (2, 13)",
+    "sequence semigroup agrees with conductor formula (3, 7)",
+    "every primitive occurs in the sequence (3, 7)",
+    "sequence semigroup agrees with conductor formula (4, 5)",
+    "every primitive occurs in the sequence (4, 5)",
+    "sequence semigroup agrees with conductor formula (5, 4)",
+    "every primitive occurs in the sequence (5, 4)",
+    "sequence semigroup agrees with conductor formula (7, 3)",
+    "every primitive occurs in the sequence (7, 3)",
+    "sequence semigroup agrees with conductor formula (13, 2)",
+    "every primitive occurs in the sequence (13, 2)",
+    "sequence semigroup agrees with conductor formula (4, 6, 9)",
+    "every primitive occurs in the sequence (4, 6, 9)",
+    "sequence semigroup agrees with conductor formula (4, 10, 5)",
+    "every primitive occurs in the sequence (4, 10, 5)",
+    "sequence semigroup agrees with conductor formula (6, 4, 9)",
+    "every primitive occurs in the sequence (6, 4, 9)",
+    "sequence semigroup agrees with conductor formula (6, 9, 4)",
+    "every primitive occurs in the sequence (6, 9, 4)",
+    "sequence semigroup agrees with conductor formula (9, 6, 4)",
+    "every primitive occurs in the sequence (9, 6, 4)",
+    "sequence semigroup agrees with conductor formula (10, 4, 5)",
+    "every primitive occurs in the sequence (10, 4, 5)",
+    "independent target-filtered recursion agrees",
+    "nonplanar symmetric semigroup (5, 7, 8, 9)",
+    "nonplanar symmetric semigroup (6, 7, 8, 9, 10)",
+    "actual coordinate degrees (2, 13)",
+    "immersion derivative gcd (2, 13)",
+    "primitive fraction field by degree gcd (2, 13)",
+    "full module distinct residues (2, 13)",
+    "module gap count exactly six (2, 13)",
+    "module proves entire claimed semigroup (2, 13)",
+    "resultant has full expected degree (2, 13)",
+    "actual coordinate degrees (3, 7)",
+    "immersion derivative gcd (3, 7)",
+    "primitive fraction field by degree gcd (3, 7)",
+    "full module distinct residues (3, 7)",
+    "module gap count exactly six (3, 7)",
+    "module proves entire claimed semigroup (3, 7)",
+    "resultant has full expected degree (3, 7)",
+    "actual coordinate degrees (4, 5)",
+    "immersion derivative gcd (4, 5)",
+    "primitive fraction field by degree gcd (4, 5)",
+    "full module distinct residues (4, 5)",
+    "module gap count exactly six (4, 5)",
+    "module proves entire claimed semigroup (4, 5)",
+    "resultant has full expected degree (4, 5)",
+    "actual coordinate degrees (4, 6, 9)",
+    "immersion derivative gcd (4, 6, 9)",
+    "exact remainder degree (4, 6, 9)",
+    "full monogenic module transition determinant (4, 6, 9)",
+    "primitive fraction field by degree gcd (4, 6, 9)",
+    "full module distinct residues (4, 6, 9)",
+    "module gap count exactly six (4, 6, 9)",
+    "module proves entire claimed semigroup (4, 6, 9)",
+    "resultant has full expected degree (4, 6, 9)",
+    "actual coordinate degrees (4, 10, 5)",
+    "immersion derivative gcd (4, 10, 5)",
+    "exact remainder degree (4, 10, 5)",
+    "full monogenic module transition determinant (4, 10, 5)",
+    "primitive fraction field by degree gcd (4, 10, 5)",
+    "full module distinct residues (4, 10, 5)",
+    "module gap count exactly six (4, 10, 5)",
+    "module proves entire claimed semigroup (4, 10, 5)",
+    "resultant has full expected degree (4, 10, 5)",
+    "actual coordinate degrees (6, 9, 4)",
+    "immersion derivative gcd (6, 9, 4)",
+    "exact remainder degree (6, 9, 4)",
+    "full monogenic module transition determinant (6, 9, 4)",
+    "primitive fraction field by degree gcd (6, 9, 4)",
+    "full module distinct residues (6, 9, 4)",
+    "module gap count exactly six (6, 9, 4)",
+    "module proves entire claimed semigroup (6, 9, 4)",
+    "resultant has full expected degree (6, 9, 4)",
+    "exact quartic-decic alternate remainder",
+    "quartic-decic derivative remainder",
+    "exact sextic-nonic alternate remainder",
+    "sextic-nonic derivative at zero",
+    "sextic-nonic derivative at other critical points",
+    "first odd defect at degree eleven",
+    "second odd defect at degree nine",
+    "odd-defect module codimension 11",
+    "odd-defect distinct module residues 11",
+    "odd-defect module codimension 9",
+    "odd-defect distinct module residues 9",
+    "odd-defect module codimension 7",
+    "odd-defect distinct module residues 7",
+    "upper Jacobian coefficient seven",
+    "upper Jacobian coefficient six",
+    "constant-defect differential gate",
+    "delta-six hostile escapes prior B=3b/2 condition"
+  ],
+  "keller_scope": {
+    "excluded_by_inherited_quadratic_theorem": [
+      [
+        2,
+        13
+      ]
+    ],
+    "new_conductor_bound_claimed": false,
+    "remaining_unoriented_terminal_pairs": [
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        6,
+        9
+      ]
+    ]
+  },
+  "nonprincipal_sequences": [
+    [
+      2,
+      13
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      6,
+      9
+    ],
+    [
+      4,
+      10,
+      5
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      6,
+      4,
+      9
+    ],
+    [
+      6,
+      9,
+      4
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      9,
+      6,
+      4
+    ],
+    [
+      10,
+      4,
+      5
+    ],
+    [
+      13,
+      2
+    ]
+  ],
+  "realizations": [
+    {
+      "basis_degrees": [
+        0,
+        13
+      ],
+      "module_codimension": 6,
+      "p": "t**2",
+      "q": "t**13 + t",
+      "remainder": null,
+      "sequence": [
+        2,
+        13
+      ]
+    },
+    {
+      "basis_degrees": [
+        0,
+        7,
+        14
+      ],
+      "module_codimension": 6,
+      "p": "t**3",
+      "q": "t**7 + t",
+      "remainder": null,
+      "sequence": [
+        3,
+        7
+      ]
+    },
+    {
+      "basis_degrees": [
+        0,
+        5,
+        10,
+        15
+      ],
+      "module_codimension": 6,
+      "p": "t**4",
+      "q": "t**5 + t",
+      "remainder": null,
+      "sequence": [
+        4,
+        5
+      ]
+    },
+    {
+      "basis_degrees": [
+        0,
+        6,
+        9,
+        15
+      ],
+      "module_codimension": 6,
+      "p": "t**4",
+      "q": "t**6 + t**3 + t",
+      "remainder": "2*t**9 + 2*t**7 + t**6 + 2*t**4 + t**2",
+      "sequence": [
+        4,
+        6,
+        9
+      ]
+    },
+    {
+      "basis_degrees": [
+        0,
+        10,
+        5,
+        15
+      ],
+      "module_codimension": 6,
+      "p": "t**4 + t",
+      "q": "t**10 + 5*t**7/2 + 15*t**4/8 + 5*t/16",
+      "remainder": "t**5/64 + 5*t**2/256",
+      "sequence": [
+        4,
+        10,
+        5
+      ]
+    },
+    {
+      "basis_degrees": [
+        0,
+        9,
+        4,
+        13,
+        8,
+        17
+      ],
+      "module_codimension": 6,
+      "p": "t**6 + t**4",
+      "q": "t**9 + 3*t**7/2 + 3*t**5/8 - 5*t**3/32 - 3*t/128",
+      "remainder": "t**4/2048 + 9*t**2/16384",
+      "sequence": [
+        6,
+        9,
+        4
+      ]
+    }
+  ],
+  "scope": "genus-six classification and explicit realizations; no new Keller bound",
+  "status": "PASS",
+  "symmetric_genus_six": [
+    {
+      "apery_by_residue": [
+        0,
+        13
+      ],
+      "gaps": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11
+      ],
+      "minimal_generators": [
+        2,
+        13
+      ]
+    },
+    {
+      "apery_by_residue": [
+        0,
+        7,
+        14
+      ],
+      "gaps": [
+        1,
+        2,
+        4,
+        5,
+        8,
+        11
+      ],
+      "minimal_generators": [
+        3,
+        7
+      ]
+    },
+    {
+      "apery_by_residue": [
+        0,
+        5,
+        10,
+        15
+      ],
+      "gaps": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        11
+      ],
+      "minimal_generators": [
+        4,
+        5
+      ]
+    },
+    {
+      "apery_by_residue": [
+        0,
+        9,
+        6,
+        15
+      ],
+      "gaps": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        11
+      ],
+      "minimal_generators": [
+        4,
+        6,
+        9
+      ]
+    },
+    {
+      "apery_by_residue": [
+        0,
+        16,
+        7,
+        8,
+        9
+      ],
+      "gaps": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        11
+      ],
+      "minimal_generators": [
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "apery_by_residue": [
+        0,
+        7,
+        8,
+        9,
+        10,
+        17
+      ],
+      "gaps": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        11
+      ],
+      "minimal_generators": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "dependency_hashes": {
+    "conductor_ten_source_exclusion_20261020/CONDUCTOR_TEN_SOURCE_EXCLUSION.md": "9f2bb9c8f03248627f08e9f480585f44d03c9faabe3e4e912c72ad518714fb63",
+    "conductor_ten_source_exclusion_20261020/INDEPENDENT_REVIEW.md": "f1591e7beb4d4baf9f2a6d0364f03006b3ec2ecbaa859c6568e6bfb9b5a60eb7",
+    "conductor_ten_source_exclusion_20261020/PRIMARY_SOURCES.md": "4c800a4111ec4ac9a377b36d6bf8890c34b59033745c7353ea32a940fb46a7b5",
+    "quadratic_semigroup_keller_obstruction_20261020/QUADRATIC_SEMIGROUP_KELLER_OBSTRUCTION.md": "1c879295410b193ef62f50c2ad4ae6909c0524af2b8f5feb7bcee4dd6d3a217c",
+    "quadratic_semigroup_keller_obstruction_20261020/review/AUDIT.md": "3a32267c1a8562bc804afbe1a15ef9598de87f29d4e67c97363a93afa0b74592"
+  },
+  "dependency_hashes_unchanged": true,
+  "remote_publication_confirmed": false,
+  "replays": [
+    {
+      "checks": 129,
+      "normal_optimized_identical": true,
+      "output_sha256": "3a756e2477546b201041a69372552c13c44303f1ed8788d022ef82e9a5a13f5f",
+      "script": "verify_frontier.py"
+    },
+    {
+      "checks": 48,
+      "normal_optimized_identical": true,
+      "output_sha256": "c69ea66b5cb802e85d2b0723705ba18b29e1fe071e30dce721fbefc247810132",
+      "script": "realizations/verify_realizations.py"
+    },
+    {
+      "checks": 119,
+      "normal_optimized_identical": true,
+      "output_sha256": "e740038c042168a2c19085f2540a956e483b6b5611b16eefc66210b9f6a17c87",
+      "script": "audit/independent_audit.py"
+    }
+  ],
+  "status": "PASS",
+  "verification": "STAGED_PUBLICATION_COPY"
+}

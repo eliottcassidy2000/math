@@ -1,0 +1,313 @@
+{
+  "characteristic_method": "Gcd-drop recursion with no length cutoff; exact Apery conductor selection",
+  "check_count": 119,
+  "checks": [
+    "Kunz conductor symmetry (2, 13)",
+    "Kunz conductor symmetry (3, 7)",
+    "Kunz conductor symmetry (4, 5)",
+    "Kunz conductor symmetry (4, 6, 9)",
+    "Kunz conductor symmetry (5, 7, 8, 9)",
+    "Kunz conductor symmetry (6, 7, 8, 9, 10)",
+    "Kunz census, all multiplicities two through seven",
+    "Kunz universe has 32 positive compositions",
+    "All genus-six characteristic sequences, exact Apery selection",
+    "Initial universe and maximum gcd",
+    "No valid recursion chain exceeds length four",
+    "Length-four positive control",
+    "Length-four genus-six sector empty",
+    "Independent conductor formula (2, 13)",
+    "Primitive occurrence and genus (2, 13)",
+    "Independent conductor formula (3, 7)",
+    "Primitive occurrence and genus (3, 7)",
+    "Independent conductor formula (4, 5)",
+    "Primitive occurrence and genus (4, 5)",
+    "Independent conductor formula (4, 6, 9)",
+    "Primitive occurrence and genus (4, 6, 9)",
+    "Independent conductor formula (4, 10, 5)",
+    "Primitive occurrence and genus (4, 10, 5)",
+    "Independent conductor formula (5, 4)",
+    "Primitive occurrence and genus (5, 4)",
+    "Independent conductor formula (6, 4, 9)",
+    "Primitive occurrence and genus (6, 4, 9)",
+    "Independent conductor formula (6, 9, 4)",
+    "Primitive occurrence and genus (6, 9, 4)",
+    "Independent conductor formula (7, 3)",
+    "Primitive occurrence and genus (7, 3)",
+    "Independent conductor formula (9, 6, 4)",
+    "Primitive occurrence and genus (9, 6, 4)",
+    "Independent conductor formula (10, 4, 5)",
+    "Primitive occurrence and genus (10, 4, 5)",
+    "Independent conductor formula (13, 2)",
+    "Primitive occurrence and genus (13, 2)",
+    "Exactly four planar semigroups",
+    "Quadratic exclusion leaves exactly five degree pairs",
+    "Actual degree pair (2, 13)",
+    "Immersion over algebraic closure (2, 13)",
+    "Field index degree-gcd certificate (2, 13)",
+    "Whole-module residue separation (2, 13)",
+    "All-degree semigroup equality (2, 13)",
+    "Exact module codimension (2, 13)",
+    "Actual degree pair (3, 7)",
+    "Immersion over algebraic closure (3, 7)",
+    "Field index degree-gcd certificate (3, 7)",
+    "Whole-module residue separation (3, 7)",
+    "All-degree semigroup equality (3, 7)",
+    "Exact module codimension (3, 7)",
+    "Actual degree pair (4, 5)",
+    "Immersion over algebraic closure (4, 5)",
+    "Field index degree-gcd certificate (4, 5)",
+    "Whole-module residue separation (4, 5)",
+    "All-degree semigroup equality (4, 5)",
+    "Exact module codimension (4, 5)",
+    "Actual degree pair (4, 6, 9)",
+    "Immersion over algebraic closure (4, 6, 9)",
+    "Cancellation degree (4, 6, 9)",
+    "Field index degree-gcd certificate (4, 6, 9)",
+    "Whole-module residue separation (4, 6, 9)",
+    "All-degree semigroup equality (4, 6, 9)",
+    "Exact module codimension (4, 6, 9)",
+    "Actual degree pair (4, 10, 5)",
+    "Immersion over algebraic closure (4, 10, 5)",
+    "Cancellation degree (4, 10, 5)",
+    "Field index degree-gcd certificate (4, 10, 5)",
+    "Whole-module residue separation (4, 10, 5)",
+    "All-degree semigroup equality (4, 10, 5)",
+    "Exact module codimension (4, 10, 5)",
+    "Actual degree pair (6, 9, 4)",
+    "Immersion over algebraic closure (6, 9, 4)",
+    "Cancellation degree (6, 9, 4)",
+    "Field index degree-gcd certificate (6, 9, 4)",
+    "Whole-module residue separation (6, 9, 4)",
+    "All-degree semigroup equality (6, 9, 4)",
+    "Exact module codimension (6, 9, 4)",
+    "Universal full module transition 4",
+    "Universal full module transition 6",
+    "Quartic family cancellation",
+    "Quartic family derivative Euclidean certificate",
+    "Quartic exceptional composition index",
+    "Sextic family cancellation",
+    "Genus-six leading remainder coefficient",
+    "Parity derivative reconstruction",
+    "Sextic derivative at zero",
+    "Sextic derivative remainder",
+    "Sextic derivative resultant",
+    "Nonimmersed genus-six divisor has only the zero critical point",
+    "Genus-four degeneration coefficient",
+    "Genus-four odd generator",
+    "Nonprimitive divisor p is cubic square",
+    "Nonprimitive divisor q is cubic cube",
+    "Genus-four degeneration exact semigroup",
+    "Unique parity elimination at degree 16",
+    "Unique parity elimination at degree 14",
+    "Unique parity elimination at degree 12",
+    "Unique parity elimination at degree 10",
+    "Parity degree-eight factored obstruction",
+    "Parity generic family forced",
+    "Parity generic A forced",
+    "Parity degree-six B determined",
+    "Parity generic B forced",
+    "Parity exceptional composition q",
+    "Parity exceptional A",
+    "Parity exceptional B and vanishing full remainder",
+    "Odd eleven defect",
+    "Odd nine defect",
+    "Degree ten removed",
+    "Odd defect exact codimension 11",
+    "Odd defect exact codimension 9",
+    "Full scalar-retaining Jacobian degree seven",
+    "Full scalar-retaining Jacobian degree six",
+    "Frozen dependency hash conductor_ten_source_exclusion_20261020/CONDUCTOR_TEN_SOURCE_EXCLUSION.md",
+    "Frozen dependency hash conductor_ten_source_exclusion_20261020/INDEPENDENT_REVIEW.md",
+    "Frozen dependency hash conductor_ten_source_exclusion_20261020/PRIMARY_SOURCES.md",
+    "Frozen dependency hash quadratic_semigroup_keller_obstruction_20261020/QUADRATIC_SEMIGROUP_KELLER_OBSTRUCTION.md",
+    "Frozen dependency hash quadratic_semigroup_keller_obstruction_20261020/review/AUDIT.md"
+  ],
+  "independent_semigroup_method": "All 32 positive Kunz compositions; exact residue shortest paths",
+  "nonprincipal_characteristic_sequences": [
+    [
+      2,
+      13
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      6,
+      9
+    ],
+    [
+      4,
+      10,
+      5
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      6,
+      4,
+      9
+    ],
+    [
+      6,
+      9,
+      4
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      9,
+      6,
+      4
+    ],
+    [
+      10,
+      4,
+      5
+    ],
+    [
+      13,
+      2
+    ]
+  ],
+  "scope": "Genus-six classification, realizations, exact beta boundary; no new Keller bound",
+  "semigroups": [
+    {
+      "apery": [
+        0,
+        13
+      ],
+      "gaps": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11
+      ],
+      "generators": [
+        2,
+        13
+      ]
+    },
+    {
+      "apery": [
+        0,
+        7,
+        14
+      ],
+      "gaps": [
+        1,
+        2,
+        4,
+        5,
+        8,
+        11
+      ],
+      "generators": [
+        3,
+        7
+      ]
+    },
+    {
+      "apery": [
+        0,
+        5,
+        10,
+        15
+      ],
+      "gaps": [
+        1,
+        2,
+        3,
+        6,
+        7,
+        11
+      ],
+      "generators": [
+        4,
+        5
+      ]
+    },
+    {
+      "apery": [
+        0,
+        9,
+        6,
+        15
+      ],
+      "gaps": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        11
+      ],
+      "generators": [
+        4,
+        6,
+        9
+      ]
+    },
+    {
+      "apery": [
+        0,
+        16,
+        7,
+        8,
+        9
+      ],
+      "gaps": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        11
+      ],
+      "generators": [
+        5,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "apery": [
+        0,
+        7,
+        8,
+        9,
+        10,
+        17
+      ],
+      "gaps": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        11
+      ],
+      "generators": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ],
+  "source_independence": "Neither supplied checker is imported",
+  "status": "PASS"
+}
