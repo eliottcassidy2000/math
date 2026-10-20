@@ -1,0 +1,133 @@
+
+===== n = 2: graphs 2, even 1, odd 1, tournaments 1 =====
+labelled even graphs 1 of 2; connected even 0; connected odd 1; strong tournaments 0
+rigid: even graphs 0  tournaments 1
+|Aut| spectrum even graphs: [(2, 1)]
+|Aut| spectrum tournaments : [(1, 1)]
+even graphs by #edges: [(0, 1)]
+sum over even graphs of (-1)^edges = 1  (THM-4531 G2: should equal #self-converse tournaments)
+cycle type lambda: t_lambda (tournaments with such an automorphism) / e_lambda (even graphs) / all graphs
+  (2,): 0 / 1 / 2
+Hall (Lemma N1): nontrivial-Aut tournaments 0, max matched 0, deficit 0
+signed even-subgraph matrix M (rows tournaments, cols even graphs by edges [0] )
+   [1]
+  det M = 1  rank 1
+
+===== n = 3: graphs 4, even 2, odd 2, tournaments 2 =====
+labelled even graphs 4 of 8; connected even 1; connected odd 1; strong tournaments 1
+rigid: even graphs 0  tournaments 1
+|Aut| spectrum even graphs: [(2, 1), (6, 1)]
+|Aut| spectrum tournaments : [(1, 1), (3, 1)]
+even graphs by #edges: [(0, 1), (2, 1)]
+sum over even graphs of (-1)^edges = 2  (THM-4531 G2: should equal #self-converse tournaments)
+cycle type lambda: t_lambda (tournaments with such an automorphism) / e_lambda (even graphs) / all graphs
+  (3,): 1 / 1 / 2
+  (2, 1): 0 / 2 / 4
+Hall (Lemma N1): nontrivial-Aut tournaments 1, max matched 1, deficit 0
+signed even-subgraph matrix M (rows tournaments, cols even graphs by edges [0, 2] )
+   [1, 1]
+   [1, -3]
+  det M = -4  rank 2
+
+===== n = 4: graphs 11, even 4, odd 7, tournaments 4 =====
+labelled even graphs 20 of 64; connected even 2; connected odd 4; strong tournaments 1
+rigid: even graphs 0  tournaments 2
+|Aut| spectrum even graphs: [(2, 1), (6, 1), (8, 1), (24, 1)]
+|Aut| spectrum tournaments : [(1, 2), (3, 2)]
+even graphs by #edges: [(0, 1), (2, 1), (3, 1), (4, 1)]
+sum over even graphs of (-1)^edges = 2  (THM-4531 G2: should equal #self-converse tournaments)
+cycle type lambda: t_lambda (tournaments with such an automorphism) / e_lambda (even graphs) / all graphs
+  (4,): 0 / 2 / 4
+  (3, 1): 2 / 2 / 4
+  (2, 1, 1): 0 / 4 / 10
+  (2, 2): 0 / 2 / 7
+Hall (Lemma N1): nontrivial-Aut tournaments 2, max matched 2, deficit 0
+signed even-subgraph matrix M (rows tournaments, cols even graphs by edges [0, 2, 3, 4] )
+   [1, 4, 0, 1]
+   [1, 0, -4, -3]
+   [1, 0, 4, -3]
+   [1, -4, 0, 1]
+  det M = -256  rank 4
+
+===== n = 5: graphs 34, even 12, odd 22, tournaments 12 =====
+labelled even graphs 396 of 1024; connected even 8; connected odd 13; strong tournaments 6
+rigid: even graphs 0  tournaments 7
+|Aut| spectrum even graphs: [(2, 5), (4, 1), (6, 1), (8, 2), (12, 1), (24, 1), (120, 1)]
+|Aut| spectrum tournaments : [(1, 7), (3, 4), (5, 1)]
+even graphs by #edges: [(0, 1), (2, 1), (3, 1), (4, 4), (5, 1), (6, 3), (8, 1)]
+sum over even graphs of (-1)^edges = 8  (THM-4531 G2: should equal #self-converse tournaments)
+cycle type lambda: t_lambda (tournaments with such an automorphism) / e_lambda (even graphs) / all graphs
+  (5,): 1 / 1 / 3
+  (4, 1): 0 / 4 / 8
+  (3, 1, 1): 4 / 4 / 12
+  (3, 2): 0 / 2 / 8
+  (2, 1, 1, 1): 0 / 10 / 28
+  (2, 2, 1): 0 / 8 / 26
+Hall (Lemma N1): nontrivial-Aut tournaments 5, max matched 4, deficit 1
+  violator: 5 tournaments with neighbourhood of size 4
+  violator tournaments (|Aut|, cycle types): [((3, ((3, 1, 1),)), 4), ((5, ((5,),)), 1)]
+  neighbourhood even graphs (|Aut|, edges): [((6, 3), 1), ((12, 6), 1), ((24, 4), 1), ((120, 0), 1)]
+signed even-subgraph matrix M (rows tournaments, cols even graphs by edges [0, 2, 3, 4, 4, 4, 5, 6, 6, 4, 6, 8] )
+   [1, 10, 0, 1, 4, 5, 0, 4, 2, 8, -4, 1]
+   [1, 6, -8, -3, 12, -3, -24, -12, -2, 0, 12, -3]
+   [1, 2, 8, 1, -4, -3, -8, -4, 2, -8, -4, 1]
+   [1, -6, 0, 1, 4, 5, 0, 4, 2, -8, 12, 1]
+   [1, -6, 0, 1, 4, -3, 0, 4, 2, 8, -4, -7]
+   [1, -2, 0, -3, 4, -3, 0, 12, -2, 0, -4, 5]
+   [1, -2, 0, -3, -12, 5, 0, -4, -2, 0, -4, -3]
+   [1, -10, 0, 5, 20, 5, 0, -20, -10, 0, -20, 5]
+   [1, 6, 0, 5, -12, -3, 0, 12, -10, 0, 12, -3]
+   [1, -6, 0, 1, -12, -3, 0, -12, 2, 24, 12, 9]
+   [1, 2, -8, 1, -4, -3, 8, -4, 2, -8, -4, 1]
+   [1, 6, 8, -3, 12, -3, 24, -12, -2, 0, 12, -3]
+  det M = 562949953421312  rank 12
+
+===== n = 6: graphs 156, even 56, odd 100, tournaments 56 =====
+labelled even graphs 16432 of 32768; connected even 43; connected odd 69; strong tournaments 35
+rigid: even graphs 8  tournaments 41
+|Aut| spectrum even graphs: [(1, 8), (2, 23), (4, 7), (6, 3), (8, 4), (12, 5), (16, 1), (24, 1), (48, 2), (120, 1), (720, 1)]
+|Aut| spectrum tournaments : [(1, 41), (3, 12), (5, 2), (9, 1)]
+even graphs by #edges: [(0, 1), (2, 1), (3, 1), (4, 5), (5, 5), (6, 10), (7, 8), (8, 12), (9, 6), (10, 4), (11, 2), (12, 1)]
+sum over even graphs of (-1)^edges = 12  (THM-4531 G2: should equal #self-converse tournaments)
+cycle type lambda: t_lambda (tournaments with such an automorphism) / e_lambda (even graphs) / all graphs
+  (6,): 0 / 3 / 8
+  (5, 1): 2 / 2 / 6
+  (4, 1, 1): 0 / 8 / 24
+  (4, 2): 0 / 6 / 24
+  (3, 1, 1, 1): 11 / 11 / 38
+  (3, 2, 1): 0 / 7 / 30
+  (3, 3): 3 / 3 / 12
+  (2, 1, 1, 1, 1): 0 / 36 / 120
+  (2, 2, 1, 1): 0 / 30 / 112
+  (2, 2, 2): 0 / 12 / 48
+Hall (Lemma N1): nontrivial-Aut tournaments 15, max matched 13, deficit 2
+  violator: 13 tournaments with neighbourhood of size 11
+  violator tournaments (|Aut|, cycle types): [((3, ((3, 1, 1, 1),)), 10), ((5, ((5, 1),)), 2), ((9, ((3, 1, 1, 1), (3, 3))), 1)]
+  neighbourhood even graphs (|Aut|, edges): [((6, 5), 1), ((6, 7), 1), ((6, 8), 1), ((12, 2), 1), ((12, 3), 1), ((12, 6), 1), ((12, 11), 1), ((24, 4), 1), ((48, 8), 1), ((120, 5), 1), ((720, 0), 1)]
+
+===== n = 7: graphs 1044, even 456, odd 588, tournaments 456 =====
+labelled even graphs 1312056 of 2097152; connected even 398; connected odd 455; strong tournaments 353
+rigid: even graphs 152  tournaments 399
+|Aut| spectrum even graphs: [(1, 152), (2, 174), (4, 58), (6, 17), (8, 15), (12, 17), (14, 1), (16, 4), (24, 4), (36, 1), (48, 8), (120, 1), (144, 1), (240, 1), (720, 1), (5040, 1)]
+|Aut| spectrum tournaments : [(1, 399), (3, 47), (5, 4), (7, 1), (9, 4), (21, 1)]
+even graphs by #edges: [(0, 1), (2, 1), (3, 1), (4, 5), (5, 6), (6, 22), (7, 23), (8, 55), (9, 56), (10, 85), (11, 61), (12, 69), (13, 31), (14, 28), (15, 6), (16, 5), (18, 1)]
+sum over even graphs of (-1)^edges = 88  (THM-4531 G2: should equal #self-converse tournaments)
+cycle type lambda: t_lambda (tournaments with such an automorphism) / e_lambda (even graphs) / all graphs
+  (7,): 2 / 2 / 4
+  (6, 1): 0 / 6 / 16
+  (5, 1, 1): 4 / 4 / 18
+  (5, 2): 0 / 2 / 12
+  (4, 1, 1, 1): 0 / 24 / 80
+  (4, 2, 1): 0 / 24 / 96
+  (4, 3): 0 / 4 / 16
+  (3, 1, 1, 1, 1): 44 / 44 / 168
+  (3, 2, 1, 1): 0 / 26 / 124
+  (3, 2, 2): 0 / 8 / 52
+  (3, 3, 1): 12 / 12 / 40
+  (2, 1, 1, 1, 1, 1): 0 / 224 / 720
+  (2, 2, 1, 1, 1): 0 / 156 / 596
+  (2, 2, 2, 1): 0 / 88 / 336
+Hall (Lemma N1): nontrivial-Aut tournaments 57, max matched 52, deficit 5
+  violator: 49 tournaments with neighbourhood of size 44
+  violator tournaments (|Aut|, cycle types): [((3, ((3, 1, 1, 1, 1),)), 40), ((5, ((5, 1, 1),)), 4), ((9, ((3, 1, 1, 1, 1), (3, 3, 1))), 4), ((21, ((3, 3, 1), (7,))), 1)]
+  neighbourhood even graphs (|Aut|, edges): [((6, 5), 1), ((6, 6), 1), ((6, 7), 2), ((6, 8), 2), ((6, 9), 1), ((6, 10), 1), ((6, 11), 2), ((6, 12), 2), ((6, 13), 1), ((12, 5), 1), ((12, 6), 1), ((12, 7), 1), ((12, 8), 3), ((12, 9), 2), ((12, 10), 2), ((12, 11), 2), ((12, 12), 1), ((12, 13), 1), ((12, 14), 1), ((24, 6), 2), ((24, 9), 1), ((24, 10), 1), ((36, 3), 1), ((48, 2), 1), ((48, 4), 2), ((48, 8), 1), ((48, 14), 1), ((48, 16), 1), ((120, 5), 1), ((144, 12), 1), ((240, 10), 1), ((720, 6), 1), ((5040, 0), 1)]

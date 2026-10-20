@@ -1,0 +1,3 @@
+n=3: N=2, orthogonality 1 True, orthogonality 2 True, det M = -4 = +-2^2 -> True; prod|Aut T|=3, prod|Aut X|=12, ratio = 2^-2
+n=4: N=4, orthogonality 1 True, orthogonality 2 True, det M = -256 = +-2^8 -> True; prod|Aut T|=9, prod|Aut X|=2304, ratio = 2^-8
+n=5: N=12, orthogonality 1 True, orthogonality 2 True, det M = 562949953421312 = +-2^49 -> True; prod|Aut T|=405, prod|Aut X|=1698693120, ratio = 2^-22

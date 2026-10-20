@@ -1,0 +1,9 @@
+K = 2 colours (k = 1 arc colours), n = 2: even 2-coloured complete graphs 1, T_2(2) = 1 OK
+K = 2 colours (k = 1 arc colours), n = 3: even 2-coloured complete graphs 2, T_2(3) = 2 OK
+K = 2 colours (k = 1 arc colours), n = 4: even 2-coloured complete graphs 4, T_2(4) = 4 OK
+K = 4 colours (k = 2 arc colours), n = 2: even 4-coloured complete graphs 2, T_4(2) = 2 OK
+K = 4 colours (k = 2 arc colours), n = 3: even 4-coloured complete graphs 12, T_4(3) = 12 OK
+K = 4 colours (k = 2 arc colours), n = 4: even 4-coloured complete graphs 176, T_4(4) = 176 OK
+K = 6 colours (k = 3 arc colours), n = 2: even 6-coloured complete graphs 3, T_6(2) = 3 OK
+K = 6 colours (k = 3 arc colours), n = 3: even 6-coloured complete graphs 38, T_6(3) = 38 OK
+K = 6 colours (k = 3 arc colours), n = 4: even 6-coloured complete graphs 1956, T_6(4) = 1956 OK

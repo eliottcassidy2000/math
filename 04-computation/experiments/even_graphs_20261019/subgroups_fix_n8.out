@@ -1,0 +1,8 @@
+=== n = 8: graphs 12346, even 6880 ===
+  H = Z7 type (7, 1) (|H|=7, pair orbits 4): tau = 4, eps = 4, all graph types 8
+  H = Z15 type (5, 3) (|H|=15, pair orbits 4): tau = 2, eps = 2, all graph types 12
+  H = Z5 type (5, 1, 1, 1) (|H|=5, pair orbits 8): tau = 12, eps = 12, all graph types 60
+  H = Z3 type (3, 3, 1, 1) (|H|=3, pair orbits 10): tau = 48, eps = 48, all graph types 192
+  H = Z3 type (3, 1, 1, 1, 1, 1) (|H|=3, pair orbits 16): tau = 280, eps = 280, all graph types 1024
+  H = Z3xZ3 = <(012),(345)> (|H|=9, pair orbits 8): tau = 16, eps = 16, all graph types 96
+  H = Z7:Z3 (AGL(1,7) odd part) (|H|=21, pair orbits 2): tau = 2, eps = 2, all graph types 4

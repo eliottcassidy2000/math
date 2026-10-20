@@ -1,0 +1,26 @@
+
+=== n = 3 ===
+lambda | t_types e_types | clT = clE + clOdd* ? | sgT sgE | odd-graph types with lambda, clOdd, sgOdd
+  (3,): 1 1 | 2 = 1 + 1 OK | 1 1 | 1 1 1
+
+=== n = 4 ===
+lambda | t_types e_types | clT = clE + clOdd* ? | sgT sgE | odd-graph types with lambda, clOdd, sgOdd
+  (3, 1): 2 2 | 4 = 2 + 2 OK | 2 2 | 2 2 2
+
+=== n = 5 ===
+lambda | t_types e_types | clT = clE + clOdd* ? | sgT sgE | odd-graph types with lambda, clOdd, sgOdd
+  (5,): 1 1 | 4 = 1 + 3 OK | 1 1 | 2 3 2
+  (3, 1, 1): 4 4 | 8 = 4 + 4 OK | 4 4 | 8 8 8
+
+=== n = 6 ===
+lambda | t_types e_types | clT = clE + clOdd* ? | sgT sgE | odd-graph types with lambda, clOdd, sgOdd
+  (5, 1): 2 2 | 8 = 2 + 6 OK | 2 2 | 4 6 4
+  (3, 1, 1, 1): 11 11 | 24 = 11 + 13 OK | 12 11 | 27 29 29
+  (3, 3): 3 3 | 8 = 3 + 5 OK | 4 3 | 9 9 9
+
+=== n = 7 ===
+lambda | t_types e_types | clT = clE + clOdd* ? | sgT sgE | odd-graph types with lambda, clOdd, sgOdd
+  (7,): 2 2 | 8 = 4 + 4 OK | 2 2 | 2 4 2
+  (5, 1, 1): 4 4 | 16 = 4 + 12 OK | 4 4 | 14 20 14
+  (3, 1, 1, 1, 1): 44 44 | 96 = 46 + 50 OK | 48 46 | 124 134 134
+  (3, 3, 1): 12 12 | 32 = 12 + 20 OK | 16 12 | 28 28 28
