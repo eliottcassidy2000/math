@@ -198,7 +198,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ### Reliable structural toolkit
 
-- [Fixed-D kernels/strong detours](../05-knowledge/results/kernels_games_detours_20261020f/README.md); [adaptive blocks](../05-knowledge/results/adaptive_budgets_smooth_interfaces_20261020/README.md). Zero-heavy boundary, black connectivity, scalar A000568, odd H-spectrum and Collatz entry OPEN.
+- [Fixed-anchor rational owners/two-port detours](../05-knowledge/results/zero_heavy_ports_20261020g/README.md); [fixed-D kernels](../05-knowledge/results/kernels_games_detours_20261020f/README.md). Growing-anchor A000568, three endpoint residuals, black connectivity, odd H-spectrum and Collatz entry OPEN.
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md) makes `d_iso` exactly `l1` on fixed order-join patches by image-swap uncrossing; the ambient quotient still has triangles and is not a partial cube.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) gives the scalar iff-transitive boundary; THM-2242/2249/2256 give its response, envelope, and scale limit.

@@ -193,6 +193,9 @@ def main():
                     bd = all(arc(t,b,w) for w in W)
                     cz = all(arc(t,w,c) for w in W)
                     need(bd == cz == twins(t,a,b) == twins(t,c,z), "clone equivalence")
+                    if bd:
+                        need(all(not twins(t,e,w) for e in (a,b,c,z) for w in W),
+                             "outer clone chains cannot absorb W")
                     counts[(n, "clone-controls")] += 1
                 if opened and x == v and 7 <= n <= 8:
                     C = K(middle, tuple(range(n-2)))
@@ -250,6 +253,24 @@ def main():
         need(next(paths(reversed_R, allowed_starts={0}, end=len(R)-1),None) is None,
              "full-tiling endpoint obstruction")
     print("full-tiling endpoint-repair obstruction: all r=4..24 PASS")
+
+    # Independent infinite family for the open endpoint-availability obstruction.
+    # C-b is transitive; c is b's only predecessor. Thus the unique HP ending
+    # at b starts at the prohibited u=y. Exhaustive tiny paths also check this.
+    for r in range(4,25):
+        C = tuple(sum(1 << j for j in range(i+1,r)) for i in range(r))
+        C = flip(C, ((0,r-1),))
+        middle = K(C, tuple(range(r)))
+        t = wrap(middle,r-1)
+        need(blue(C,tuple(range(r))) and arc(middle,0,r-1), "open hostile type")
+        need({i for i in range(1,r) if arc(C,i,0)} == {r-1}, "sole predecessor")
+        need(all(arc(C,i,j) for i in range(1,r) for j in range(i+1,r)),
+             "transitive deletion")
+        need(strong(t) and strong(K(t,tuple(range(r+2)))), "open hostile strong ends")
+        if r <= 8:
+            need(list(paths(C,end=0)) == [tuple(range(1,r))+(0,)],
+                 "open hostile unique end-path")
+    print("one-reversed-outer-arc open-sidecar obstruction: all r=4..24 PASS")
 
     # Exact small boundary: keep W=(2,3) contiguous and forward, permute five blocks.
     blocks = ((0,),(1,),(2,3),(4,),(5,))

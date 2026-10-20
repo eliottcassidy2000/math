@@ -1,0 +1,32 @@
+{
+  "files": {
+    "05-knowledge/results/feedback_word_hamilton_spectrum_20261020/proofs.md": "c24aca5ffd092e216985eb794512d584c08db2610dd84982aabb6a5d24a69b6c",
+    "05-knowledge/results/kernels_games_detours_20261020f/detours.md": "bcda56b298d471abba40d9788d166ea8101ef9194f78364192c917a07e8df022",
+    "05-knowledge/results/kernels_games_detours_20261020f/general_fixed_deficiency.md": "6c9c6db4c31bc3fe2ef522e0e0070c9d8bf7037babc36b8647c3115a0845c0df",
+    "05-knowledge/results/metagraph_growth_20261020/enumeration.py": "3cbb610596bb4430af69924ba991ed11efc67d7ccee4a93b318cd7b638bc3d26",
+    "05-knowledge/results/metagraph_growth_20261020/growth_check.py": "583ae12878d6a7420ccdf695c80c003199bffff172a8a107085ed3b499274d96",
+    "05-knowledge/results/regular_return_gram_icosahedra_20261020/gram_return_addendum.md": "52532f05483cd2b6cf437ea28e6179a2449e3cfa929a2689fbef98be73209046",
+    "05-knowledge/results/strong_blue_games_20261020f/detours.md": "23206637f68d551d4bdecdd774da7e57fabb36143959f05d9e7847792b83e8e0",
+    "05-knowledge/results/strong_blue_games_20261020f/double_return_counts.md": "b2a8aeea26d4375fa28f1b604a64c0465ccdbedc587f8f2d0b5bd5c8f3cbd6ae",
+    "05-knowledge/results/strong_blue_games_20261020f/transport.md": "cac01d4517a4d08e5e28a8cfb5c982f95070f292b126eb2f164e42bb2051b765",
+    "05-knowledge/results/weighted_core_transport_20261020/inheritance.md": "a8e619362b9e9e055a62dfe0bd1a9b1c4a26566d3d57da1fbed6d6b0adc50bb2",
+    "05-knowledge/results/zero_heavy_ports_20261020g/AUDIT.md": "7493cdec056995e9acc05197ae047142b4d40a4bc45787a94d2896ca5682b411",
+    "05-knowledge/results/zero_heavy_ports_20261020g/README.md": "918abfd88a6c432ab60f2905fd0a1bca0af9d46c2280fc81d56140c519e00923",
+    "05-knowledge/results/zero_heavy_ports_20261020g/endpoint.md": "d6444033b75b4a2eef6a699b18df416abf651f7d43ca349d48e09bd27d5cfb30",
+    "05-knowledge/results/zero_heavy_ports_20261020g/endpoint_check.out": "b0b6d5f83718d04fce6c5fb4b549c724ef3665d0c475ea76ab83635bee687c94",
+    "05-knowledge/results/zero_heavy_ports_20261020g/endpoint_check.py": "bbc8b095137f76e81c04959c95a9b53b80184b6afbc27257eb2396313b5a147d",
+    "05-knowledge/results/zero_heavy_ports_20261020g/microcosm.md": "3e898a5bbc37c5931c20aa578e06977ebe5639e439b35ff5c1517be5b1d8828a",
+    "05-knowledge/results/zero_heavy_ports_20261020g/microcosm_check.json": "d51e6a1485582865b6d6d581dcac5b21903877fd096649f6a9691be80c70f9df",
+    "05-knowledge/results/zero_heavy_ports_20261020g/microcosm_check.out": "d12420d6450dd6d78aeb64582f52515e53e4aeac3a60ae4f9639b2465678560f",
+    "05-knowledge/results/zero_heavy_ports_20261020g/microcosm_check.py": "13a36aeb03bf540d8aaeca92dc872f5f71e244d29682ff44eb78184b36aa33c5",
+    "05-knowledge/results/zero_heavy_ports_20261020g/profile_growth.md": "e2a48f3917e6297cd21779058ed1221225a3ab08a1a926aa5f89234434677809",
+    "05-knowledge/results/zero_heavy_ports_20261020g/profile_growth_check.optimized.out": "9fd3aca60db544b5273b2ec20939d5427cf212062573936289a481000b1cd23f",
+    "05-knowledge/results/zero_heavy_ports_20261020g/profile_growth_check.out": "9fd3aca60db544b5273b2ec20939d5427cf212062573936289a481000b1cd23f",
+    "05-knowledge/results/zero_heavy_ports_20261020g/profile_growth_check.py": "2f2010c8c6819cb0e6f23823070b98581872e29f89e7bd085d6483cafc0d3284",
+    "05-knowledge/results/zero_heavy_ports_20261020g/verify.py": "ec12c15634ed2857986110cdf35339df1349e07a91a48efccfd3488e5acb5e2c",
+    "05-knowledge/results/zero_heavy_ports_20261020g/zero_heavy.md": "285ac062cd955eab06487ea0c16c97d2c511226ee942725acfceb6b45b803ac1",
+    "05-knowledge/results/zero_heavy_ports_20261020g/zero_heavy_check.out": "4480dd62b340db1a124b918cb590bc0f2a6af8f3203776a9a12d16d917d7e95c",
+    "05-knowledge/results/zero_heavy_ports_20261020g/zero_heavy_check.py": "a72896f2889136b823176cfcd6d471adad1c62ac86aba4f33f193f96a25f36e6"
+  },
+  "normalization": "CRLF to LF"
+}

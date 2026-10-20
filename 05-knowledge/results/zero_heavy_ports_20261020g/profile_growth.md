@@ -109,6 +109,11 @@ sorted scores = (1,2,2,3,3,4)
 minimum feedback arcs = 3.
 ```
 
+Both also have feedback vertex number exactly two. For A the disjoint
+triangles are {0,1,2} and {3,4,5}; for B they are {0,1,5} and {2,3,4}.
+Deleting {1,3} makes either tournament transitive. Thus the hostile already
+lies in the next fixed-anchor slice after the explicit one-anchor formula.
+
 They are neither isomorphic nor converses. Hence even their complete
 automorphism cycle indices agree. Their unit-weight versions are literal
 zero-heavy cores at feedback budget 3 (deficiency D=7).
@@ -155,6 +160,13 @@ different jobs. Their combination preserves the immediate numeric and
 clone outputs, but still needs child port tensors, automorphism orbits,
 and parent ownership to iterate as an unlabelled recurrence. No closure of
 those data has been proved.
+
+For a transitive parent the tensor reduces to the incoming
+[binary weighted-inversion formula](../feedback_word_hamilton_spectrum_20261020/proofs.md):
+B_1(u,v)=1 if v=u+1; B_1(u,v)=2^(u-v-1) if u>v; all other entries vanish.
+This follows by assigning the vertices between v and u to the two increasing
+components. Thus that four-coordinate counter is an explicit structured
+case of (1), while arbitrary parents retain an incidence tensor.
 
 ## 4. Proof repair in the older insertion note
 

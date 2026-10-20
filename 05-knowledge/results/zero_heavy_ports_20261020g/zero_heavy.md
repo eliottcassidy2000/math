@@ -2,11 +2,11 @@
 
 **PROVED:** the exact unlabelled count for tournaments made transitive by
 one vertex deletion, its pair-free subfamily, the port-word clone criterion,
-and a sharp family requiring linearly many separating anchors.
+and a sharp family requiring linearly many separating anchors. The exact
+finite-state canonical re-anchoring construction in section 5 also proves
+rational class-count generating functions at every fixed feedback-vertex
+bound, including the pair-free subclass.
 **FINITE-EXACT:** independent class, word, clone, and re-anchoring controls.
-**CONDITIONAL / PROOF CANDIDATE:** section 5 gives a finite-state canonical
-re-anchoring construction for arbitrary fixed feedback-vertex bound; it is
-not a dependency until its finite-memory argument is independently audited.
 No literature-priority claim is made.
 
 ## Inheritance and the changed parameter
@@ -65,7 +65,13 @@ sum_(n>=0) A_1(n) z^n
 ```
 
 This is a genuine class-count recurrence without a growing core bank, on
-the stated one-feedback-vertex slice. It does not count all tournaments.
+the stated one-feedback-vertex slice. Explicitly, for n>=6,
+
+```text
+A_1(n)=5A_1(n-1)-9A_1(n-2)+7A_1(n-3)-2A_1(n-4).
+```
+
+It does not count all tournaments.
 
 ### Rooted words and the exact quotient correction
 
@@ -104,8 +110,10 @@ When |W|=1 the only cycle is the displayed triangle, and its three rotations
 are automorphisms. All three triangle vertices are eligible and equivalent.
 When |W|>=2, deleting any one W vertex leaves a cyclic triangle, whereas
 deleting u or v removes every cycle. No automorphism exchanges u and v:
-the unique nontrivial canonical chain W is fixed, its two distinct incident
-directions distinguish u and v, and the transitive outer chains are ordered.
+the unique nontrivial canonical chain W within the cyclic strong component
+is fixed, its two distinct incident directions distinguish u and v, and
+the transitive outer chains are ordered. The outer chains themselves may
+also be nontrivial canonical chains.
 The two eligible roots are therefore inequivalent. QED.
 
 There are consequently three cases contributing an excess over one rooted
@@ -121,6 +129,24 @@ lengths recover the triple intrinsically. Subtracting these excesses from
 `2^(n-1)` proves (1). In particular dividing by n, or subtracting the number
 of eligible vertices instead of their orbit count, would already fail on
 the directed triangle.
+
+### An explicit least-word language
+
+With 0<1, the lexicographically least binary-word representatives are
+exactly all binary words except the two disjoint regular languages
+
+```text
+0* 1+                 and                 0* 1{2,} 0 1*.
+```
+
+The first removes every transitive presentation except the all-zero word.
+For (3) with m>=2, the two inequivalent root words are
+`0^a 1 0^m 1^b` and `0^a 1^m 0 1^b`; the first is smaller, so the second
+is removed. The m=1 presentations coincide and must not be removed.
+Every other nontransitive class has one eligible-root orbit and thus one
+word. This proves the language claim, rather than inferring regularity
+from the rational count. It provides a concrete instance of section 5's
+general canonical-owner construction.
 
 ## 2. Pair-free cores in the one-anchor slice
 
@@ -215,10 +241,9 @@ both the anchor size and the feedback-vertex parameter must grow on an
 explicit zero-heavy family. Fixed-a results cannot be read as a uniform
 solution for unrestricted tournaments.
 
-## 5. Candidate all-fixed-a canonical regular language
+## 5. All-fixed-a canonical regular language
 
-**Status: CONDITIONAL pending independent audit of the construction below.**
-The proposed conclusion is that, for each fixed a, the numbers of ordinary
+**Theorem.** For each fixed a>=0, the numbers of ordinary
 tournament classes with feedback vertex number at most a, and the numbers
 of pair-free such classes, both have rational ordinary generating functions.
 This is stronger than a finite Hamilton-count automaton: it must remove
@@ -235,10 +260,12 @@ record reconstructs the complete tournament. Thus there is exactly one
 least record per unrooted class, regardless of how many anchor choices or
 automorphisms yield that same record.
 
-The missing step is to recognize the existence of a smaller record by a
-finite nondeterministic automaton on w. The following gives its proposed
-finite metadata and transition rules; no unbounded position counter is
-used.
+To prove the theorem, recognize the existence of a smaller record by a
+finite nondeterministic automaton on w. The following specifies its finite
+metadata and transition rules; no unbounded position counter is used.
+There are finitely many anchor headers F. Treat each as a separate initial
+branch and take their finite union; header comparisons below always use
+the same fixed ordering on these finite bit strings.
 
 ### 5.1 Metadata for an alternative anchor set
 
@@ -266,6 +293,9 @@ While reading w, nondeterministically mark exactly s positions as the new
 base-origin anchors in the guessed order, verifying their guessed letters.
 Those positions do not appear in the output base word. At word boundaries,
 insert the displaced old anchors in their guessed order.
+These insertions are epsilon transitions, of which at most a can occur
+in an accepting run. Epsilon transitions do not change regularity and can
+be removed by ordinary finite-state epsilon closure.
 
 To certify that the new base is transitive, every ordinary input position
 not selected as an anchor must have bit i equal to 0 if displaced anchor
@@ -301,8 +331,8 @@ transitive, and restriction to the surviving old base has the unique old
 order. Hence this construction represents all competing records, not just
 a convenient family of anchor moves.
 
-If this finite-state recognition argument is accepted, the smaller-record
-language is regular. Determinize and complement it to obtain the owner
+The smaller-record language is therefore regular. Determinize and
+complement it to obtain the owner
 language; intersect with the finite clone filter in section 3 when counting
 pair-free cores. Count accepted **words**, not nondeterministic accepting
 paths: different metadata guesses can produce the same competitor and
@@ -316,6 +346,15 @@ independent of word length. Determinization can make the state set very
 large. This is an effective fixed-parameter route, not an efficient global
 recurrence or a claim that all zero-heavy interfaces are bounded.
 
+For clarity, if M is the adjacency matrix of the resulting deterministic
+automaton, its entries count input letters producing transitions, and
+the order-n count for a fixed header is `u M^(n-a) v`. Its generating
+function is `z^a u(I-zM)^(-1)v`. Sum over the finite header branches and
+add the finite n<a prefix. This supplies a constant-coefficient recurrence
+for each fixed a. The effective construction can have a very large state
+space; a full general deterministic automaton has not been materialized
+in this packet.
+
 ## 6. Exact tests and stopping boundary
 
 The checker generates all tournament classes through order seven by exact
@@ -326,6 +365,9 @@ to a transitive remainder. The one-feedback counts agree with (1).
 Separately, all 1,023 binary words of lengths zero through nine are
 constructed, quotient-counted, and tested for homogeneous pairs. The
 ordinary counts agree with (1), and the core counts with (4). Every
+one-anchor word is also checked against the explicit regular owner
+language in section 1 and direct minimization over all eligible roots.
+The order-four scalar recurrence passes on the available values. Every
 eligible-root multiplicity in the full class census agrees with the
 classification in section 1, including the essential three-vertex/one-orbit
 triangle case.
@@ -354,12 +396,21 @@ python -O 05-knowledge/results/zero_heavy_ports_20261020g/zero_heavy_check.py
 ```
 
 The [receipt](zero_heavy_check.out) distinguishes the proved one-anchor
-formula from bounded tests of the candidate general owner. No polynomial
+formula from bounded tests of the general owner. No polynomial
 or recurrence is fitted to the two-anchor counts. All checks use explicit
 exceptions rather than removable assertions.
+Normal and `-O` runs passed in 1.58 and 1.57 seconds, respectively, with
+byte-identical 899-byte output.
 
-The immediate achievement is a complete quotient correction on a
-nontrivial unbounded zero-heavy slice. The larger proposal needs the
-finite-state canonicalization audit, and unrestricted A000568 still needs
+The parent and an independent agent audited the general finite-state proof,
+including future selected-anchor incidences, displaced-anchor comparisons,
+bounded stream delay, anchor relabeling, and nondeterministic duplicate
+witnesses. Both accepted the construction. The only correction was to
+scope W's canonical-chain uniqueness to its cyclic strong component in
+section 1; no quotient or state condition was removed.
+
+The achievement is a complete quotient correction on a nontrivial
+unbounded zero-heavy slice, and a finite-state canonicalization theorem
+for every fixed feedback-vertex bound. Unrestricted A000568 still needs
 control as the anchor parameter grows. Neither the incoming H automaton
 nor a rational fixed-a class count alone settles that remaining step.

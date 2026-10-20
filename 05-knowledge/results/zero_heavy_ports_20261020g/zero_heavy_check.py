@@ -4,6 +4,7 @@ from importlib.util import module_from_spec, spec_from_file_location
 from itertools import combinations, permutations, product
 from math import comb
 from pathlib import Path
+import re
 
 
 def load(name, filename):
@@ -191,6 +192,11 @@ def main():
             rows = from_word(1, 0, word)
             code = E.canonical(rows)
             ordinary.add(code)
+            literal = "".join(map(str, word))
+            language_owner = (re.fullmatch("0*1+", literal) is None and
+                              re.fullmatch("0*1{2,}01*", literal) is None)
+            actual_owner = (0, word) == min(rep for _, rep, _ in representations(rows, 1))
+            need(language_owner == actual_owner, "explicit one-anchor least-word regular language")
             pf = pair_free_word(1, 0, word)
             need(pf == (len(G.clone_chains(rows)) == n), "binary clone classifier")
             if pf:
@@ -203,6 +209,10 @@ def main():
         core_counts.append(len(cores))
     print("independent binary-word quotient n=1..10=", tuple(binary_counts), flush=True)
     print("pair-free feedback<=1 counts=", tuple(core_counts), "words_checked=", word_tests, flush=True)
+    for n in range(6, 11):
+        need(binary_counts[n - 1] == 5 * binary_counts[n - 2] - 9 * binary_counts[n - 3] +
+             7 * binary_counts[n - 4] - 2 * binary_counts[n - 5], "one-anchor scalar recurrence")
+    print("explicit one-anchor regular owner language and order-four recurrence pass", flush=True)
 
     owners = []
     for n in range(2, 8):

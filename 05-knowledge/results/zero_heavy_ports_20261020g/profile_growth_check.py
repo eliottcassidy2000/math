@@ -4,7 +4,7 @@ Run: python 05-knowledge/results/zero_heavy_ports_20261020g/profile_growth_check
 """
 from collections import Counter, defaultdict
 from functools import lru_cache
-from itertools import permutations
+from itertools import combinations, permutations
 from pathlib import Path
 import importlib.util
 
@@ -221,6 +221,11 @@ def main():
                  for p in permutations(range(6))) == 3, 'independent feedback')
         need(sum(E.ordercode(rows, p) == E.rowcode(rows) for p in permutations(range(6))) == 1,
              'independent automorphism')
+        triangles = [set(S) for S in combinations(range(6), 3)
+                     if all(sum(rows[u] >> v & 1 for v in S) == 1 for u in S)]
+        fv = min(len(S) for k in range(7) for S in combinations(range(6), k)
+                 if all(set(S) & C for C in triangles))
+        need(fv == 2, 'witness has feedback vertex number exactly two')
     print('WITNESS minimum differing response', min(set(lh) | set(rh), key=lambda k: (lh[k] == rh[k], k)))
     print('RUN-WORD exact clone tests', run_tests)
     print('PASS')

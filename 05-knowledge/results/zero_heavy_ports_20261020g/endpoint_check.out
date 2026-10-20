@@ -1,0 +1,14 @@
+order 6 sources=12 open=0 closed0=0 closed1=0 closed1-port-c=0 clone-controls=2
+order 7 sources=64 open=24 closed0=0 closed1=0 closed1-port-c=4 clone-controls=8
+order 8 sources=320 open=128 closed0=64 closed1=48 closed1-port-c=16 clone-controls=32
+order 9 sources=3072 open=1280 closed0=640 closed1=512 closed1-port-c=128 clone-controls=256
+order 10 sources=28672 open=12288 closed0=6144 closed1=5120 closed1-port-c=1024 clone-controls=2048
+open residual endpoint-sidecar [((7, 'available'), 6), ((7, 'unavailable'), 2), ((8, 'available'), 28), ((8, 'unavailable'), 4)]
+first unavailable open residual ((46, 100, 8, 82, 103, 76, 5), 4)
+reflection-composition controls: all orders 6..100 PASS
+full-tiling endpoint-repair obstruction: all r=4..24 PASS
+one-reversed-outer-arc open-sidecar obstruction: all r=4..24 PASS
+small boundary closed0 rows (14, 4, 40, 50, 39, 3) restricted triples 0 black paths (0, 2, 3, 4, 5, 1) (0, 1, 2, 4, 5, 3)
+small boundary closed1-clones rows (14, 12, 56, 48, 35, 3) restricted triples 0 black paths (0, 2, 5, 1, 3, 4) (0, 1, 4, 5, 2, 3)
+six-vertex shift-by-two/clone hostile PASS
+ALL CHECKS PASS; finite controls support the stated proofs, not global connectivity.
