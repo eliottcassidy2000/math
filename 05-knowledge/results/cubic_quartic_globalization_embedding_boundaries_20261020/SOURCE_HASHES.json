@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-20",
+  "producer_base_commit": "83d084190ba1",
+  "reading_aids_not_for_publication": [
+    "sources/"
+  ],
+  "scope": "New staging files only; no shared checkout mutation or publication.",
+  "source_sha256": {
+    "session13-cubic-quartic/sources/gurycz_2001_eudml.pdf": "208ff5e0ca6ffcdf39eefd56cb8bd76694607dee10c5edddf950bdd8048f1e9f",
+    "session13-cubic-quartic/sources/sathaye_stenerson.pdf": "29082e519b7379b7c70a1f424b7f47e8a57c396b4301263595c45fb3d10d664c",
+    "session13-cylinder-continuation/MOVING_HYPERELLIPTIC_GENERATOR_OBSTRUCTION.md": "17ae49f2e6af886e892d61094c5cf415a974c0f0d0f7f15685125221181ae215",
+    "session13-low-delta/LOW_DELTA_QUADRATIC_AND_RELATIVE_GLOBALIZATION.md": "82fcb171ad10bfd75058d722726d4ea0d709f9c802aff5695605b523287939f8",
+    "session13-low-delta/review/AUDIT.md": "758648d087c76420171a972d04d8fcdb02647c8cdb314725fa6a8ddb12c57368",
+    "session13-root/cubic-quartic/NEXT_SECTOR.md": "b94767a865b1f33212ef7679670dab68bed82dec5dcb55013f46931c39b555d9"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "characteristic_patterns": [
+    [
+      4,
+      3
+    ],
+    [
+      6,
+      4,
+      3
+    ]
+  ],
+  "check_count": 74,
+  "checks": {
+    "embedding:alternate_characteristic_equation": true,
+    "embedding:alternate_equation": true,
+    "embedding:alternate_period_on_triple": true,
+    "embedding:alternate_period_primitive": true,
+    "embedding:entire_generation_identity": true,
+    "embedding:equal_finite_algebras": true,
+    "embedding:forced_local_determinant": true,
+    "embedding:immersion": true,
+    "embedding:normalization_symmetry_h": true,
+    "embedding:normalization_symmetry_k": true,
+    "embedding:period_obstruction": true,
+    "embedding:period_ratio": true,
+    "embedding:singular_point_equation": true,
+    "embedding:singular_point_u_gradient": true,
+    "embedding:singular_point_v_gradient": true,
+    "embedding:standard_conductor": true,
+    "embedding:standard_equation": true,
+    "embedding:standard_period_on_triple": true,
+    "embedding:standard_period_primitive": true,
+    "embedding:three_distinct_conductor_roots": true,
+    "fiber:-1:closed_under_f": true,
+    "fiber:-1:closed_under_g": true,
+    "fiber:-1:delta": true,
+    "fiber:-1:gaps": true,
+    "fiber:0:closed_under_f": true,
+    "fiber:0:closed_under_g": true,
+    "fiber:0:delta": true,
+    "fiber:0:gaps": true,
+    "fiber:1/2:closed_under_f": true,
+    "fiber:1/2:closed_under_g": true,
+    "fiber:1/2:delta": true,
+    "fiber:1/2:gaps": true,
+    "fiber:1:closed_under_f": true,
+    "fiber:1:closed_under_g": true,
+    "fiber:1:delta": true,
+    "fiber:1:gaps": true,
+    "fiber:2:closed_under_f": true,
+    "fiber:2:closed_under_g": true,
+    "fiber:2:delta": true,
+    "fiber:2:gaps": true,
+    "hostile:characteristic_equation": true,
+    "hostile:conductor_module_0": true,
+    "hostile:conductor_module_1": true,
+    "hostile:conductor_module_2": true,
+    "hostile:conductor_module_3": true,
+    "hostile:conductor_module_identity_0": true,
+    "hostile:conductor_module_identity_1": true,
+    "hostile:conductor_module_identity_2": true,
+    "hostile:conductor_module_identity_3": true,
+    "hostile:conductor_norm_index_square": true,
+    "hostile:cubic_leading_coefficient_is_nonunit": true,
+    "hostile:derivative_at_only_possible_ramification": true,
+    "hostile:derivative_resultant": true,
+    "hostile:divided_difference_conductor": true,
+    "hostile:equation_on_parametrization": true,
+    "hostile:generic_conductor_degree": true,
+    "hostile:generic_monic_cubic_pole": true,
+    "hostile:generic_opposite_pair_P": true,
+    "hostile:generic_opposite_pair_Q": true,
+    "hostile:jacobian_not_keller": true,
+    "hostile:primitive_cubic_coefficient_gcd": true,
+    "hostile:special_birational_identity": true,
+    "hostile:special_collision_P": true,
+    "hostile:special_collision_Q": true,
+    "hostile:special_conductor": true,
+    "hostile:special_conductor_squarefree": true,
+    "hostile:trace_dual_conductor": true,
+    "hostile:translated_odd_generator": true,
+    "hostile:translated_quadratic": true,
+    "semigroup:bounded_characteristic_patterns": true,
+    "triple_alternate:closed_under_f": true,
+    "triple_alternate:closed_under_g": true,
+    "triple_standard:closed_under_f": true,
+    "triple_standard:closed_under_g": true
+  },
+  "embedding": {
+    "alternate_degrees": [
+      4,
+      6
+    ],
+    "forced_ambient_determinant": 4,
+    "generation_identity": "z^2-64*k^3-9=8*h",
+    "period_ratio": "-28/5",
+    "standard_degrees": [
+      3,
+      4
+    ]
+  },
+  "hostile": {
+    "P": "y**4",
+    "Q": "x*y**3 + y**2 + y",
+    "conductor": "(x*y**2 + 1)*(x**2*y**4 + 2*x*y**3 + 2*y**2 + 2*y + 1)",
+    "fibers": {
+      "-1": {
+        "delta": 3,
+        "gaps": [
+          1,
+          2,
+          5
+        ]
+      },
+      "0": {
+        "delta": 1,
+        "gaps": [
+          1
+        ]
+      },
+      "1": {
+        "delta": 3,
+        "gaps": [
+          1,
+          2,
+          5
+        ]
+      },
+      "1/2": {
+        "delta": 3,
+        "gaps": [
+          1,
+          2,
+          5
+        ]
+      },
+      "2": {
+        "delta": 3,
+        "gaps": [
+          1,
+          2,
+          5
+        ]
+      }
+    },
+    "index": "-(u*x**2 - 1)*(u**2*x**4 + 2*u*x**2 - 8*u*x + 4*u + 1)",
+    "jacobian": "-4*y**6",
+    "relation": "-u**3*x**4 - 4*u**2*v*x**2 + 2*u**2*x**2 - 4*u**2*x + u**2 - 4*u*v**2*x - 2*u*v**2 - 4*u*v - u + v**4"
+  },
+  "status": "PASS: finite exact controls, not a substitute for the proofs",
+  "sympy_version": "1.14.0"
+}

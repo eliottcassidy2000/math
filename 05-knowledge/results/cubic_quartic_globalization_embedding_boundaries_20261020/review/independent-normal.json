@@ -1,0 +1,169 @@
+{
+  "characteristic_patterns": [
+    [
+      4,
+      3
+    ],
+    [
+      6,
+      4,
+      3
+    ]
+  ],
+  "check_count": 56,
+  "checks": {
+    "all_automorphisms_local_determinant": true,
+    "all_automorphisms_period_obstruction": true,
+    "all_nonzero_fiber_collision_P": true,
+    "all_nonzero_fiber_collision_Q": true,
+    "alternate:delta_three": true,
+    "alternate:no_larger_conductor_mod_c": true,
+    "alternate:same_gaps": true,
+    "conductor_derivative_identity": true,
+    "direct_resultant_relation": true,
+    "fiber_-1/2:codimension": true,
+    "fiber_-1/2:no_larger_conductor_mod_c": true,
+    "fiber_-1/2:semigroup_gaps": true,
+    "fiber_-1:codimension": true,
+    "fiber_-1:no_larger_conductor_mod_c": true,
+    "fiber_-1:semigroup_gaps": true,
+    "fiber_-2:codimension": true,
+    "fiber_-2:no_larger_conductor_mod_c": true,
+    "fiber_-2:semigroup_gaps": true,
+    "fiber_0:codimension": true,
+    "fiber_0:no_larger_conductor_mod_c": true,
+    "fiber_0:semigroup_gaps": true,
+    "fiber_1/2:codimension": true,
+    "fiber_1/2:no_larger_conductor_mod_c": true,
+    "fiber_1/2:semigroup_gaps": true,
+    "fiber_1:codimension": true,
+    "fiber_1:no_larger_conductor_mod_c": true,
+    "fiber_1:semigroup_gaps": true,
+    "fiber_2:codimension": true,
+    "fiber_2:no_larger_conductor_mod_c": true,
+    "fiber_2:semigroup_gaps": true,
+    "generation_inverse": true,
+    "nonzero_collision_image_P": true,
+    "nonzero_collision_image_Q": true,
+    "normalization_scaling_condition": true,
+    "normalization_translation_forced_zero": true,
+    "period_denominator_nonzero": true,
+    "period_ratio": true,
+    "relative_conductor_containment_0": true,
+    "relative_conductor_containment_1": true,
+    "relative_conductor_containment_2": true,
+    "relative_conductor_containment_3": true,
+    "relative_conductor_identity_0": true,
+    "relative_conductor_identity_1": true,
+    "relative_conductor_identity_2": true,
+    "relative_conductor_identity_3": true,
+    "second_equation_on_image": true,
+    "second_kernel_degree": true,
+    "second_kernel_primitive": true,
+    "source_axioms_recursive_characteristic_patterns": true,
+    "standard:delta_three": true,
+    "standard:no_larger_conductor_mod_c": true,
+    "standard:same_gaps": true,
+    "standard_triple_point_tangent_cone": true,
+    "trace_gram_unit_antidiagonal": true,
+    "trace_gram_zero_below_antidiagonal": true,
+    "two_dimensional_base_trace_gram_determinant": true
+  },
+  "fibers": {
+    "-1": {
+      "conductor_kernel_dimension": 0,
+      "delta": 3,
+      "gaps": [
+        1,
+        2,
+        5
+      ]
+    },
+    "-1/2": {
+      "conductor_kernel_dimension": 0,
+      "delta": 3,
+      "gaps": [
+        1,
+        2,
+        5
+      ]
+    },
+    "-2": {
+      "conductor_kernel_dimension": 0,
+      "delta": 3,
+      "gaps": [
+        1,
+        2,
+        5
+      ]
+    },
+    "0": {
+      "conductor_kernel_dimension": 0,
+      "delta": 1,
+      "gaps": [
+        1
+      ]
+    },
+    "1": {
+      "conductor_kernel_dimension": 0,
+      "delta": 3,
+      "gaps": [
+        1,
+        2,
+        5
+      ]
+    },
+    "1/2": {
+      "conductor_kernel_dimension": 0,
+      "delta": 3,
+      "gaps": [
+        1,
+        2,
+        5
+      ]
+    },
+    "2": {
+      "conductor_kernel_dimension": 0,
+      "delta": 3,
+      "gaps": [
+        1,
+        2,
+        5
+      ]
+    }
+  },
+  "producer_hashes": {
+    "CUBIC_QUARTIC_GLOBALIZATION_AND_EMBEDDING_BOUNDARIES.md": "9dd1e5111c3ac911d5decd463159b725f12dbd68a61020391ca31ff9eea2d1f4",
+    "PRIMARY_SOURCES.md": "94edb2958e3a53decfa64573bd2c4b16dc5ef013109ca35b126e5fb72d7e73f1",
+    "verify_cubic_quartic_boundaries.py": "36174eda9df2355b9fc59a2090f2f9d0ab9e5996251512b03bbb29b8fc3d4173"
+  },
+  "relative_conductor_coefficients": [
+    [
+      "-u*x**2 + u*x + 1",
+      "2",
+      "x",
+      "0"
+    ],
+    [
+      "2*u*x - u",
+      "u*x**2 + 1",
+      "1",
+      "0"
+    ],
+    [
+      "u**2*x**3 - u*x + u",
+      "2*u*x",
+      "1",
+      "0"
+    ],
+    [
+      "-u**2*x**2 - u",
+      "-2*u*x - u",
+      "0",
+      "1"
+    ]
+  ],
+  "status": "PASS",
+  "sympy_version": "1.14.0",
+  "trace_dual_gram": "Matrix([[0, 0, 0, 1], [0, 0, 1, 0], [0, 1, 0, 4*u*x + 2*u], [1, 0, 4*u*x + 2*u, 4*u**2*x**2 + 4*u]])"
+}

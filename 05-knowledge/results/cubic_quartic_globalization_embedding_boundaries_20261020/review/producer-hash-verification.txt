@@ -1,0 +1,7 @@
+CUBIC_QUARTIC_GLOBALIZATION_AND_EMBEDDING_BOUNDARIES.md: OK
+README.md: OK
+PRIMARY_SOURCES.md: OK
+SOURCE_HASHES.json: OK
+verify_cubic_quartic_boundaries.py: OK
+results.json: OK
+results-optimized.json: OK

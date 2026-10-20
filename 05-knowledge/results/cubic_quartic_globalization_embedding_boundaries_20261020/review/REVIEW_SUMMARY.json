@@ -1,0 +1,29 @@
+{
+  "exposition_issue": "Resolved: closed embeddings are of Spec A; the y maps are normalization parametrizations.",
+  "final_frozen_verdict": "PASS; final status wording, reviewed hashes, producer manifest, and normal/optimized receipts reconciled. No unresolved issue.",
+  "independent_check_count": 56,
+  "independent_normal_optimized_equal": true,
+  "inherited_source_hashes_match": {
+    "session13-cubic-quartic/sources/gurycz_2001_eudml.pdf": true,
+    "session13-cubic-quartic/sources/sathaye_stenerson.pdf": true,
+    "session13-cylinder-continuation/MOVING_HYPERELLIPTIC_GENERATOR_OBSTRUCTION.md": true,
+    "session13-low-delta/LOW_DELTA_QUADRATIC_AND_RELATIVE_GLOBALIZATION.md": true,
+    "session13-low-delta/review/AUDIT.md": true,
+    "session13-root/cubic-quartic/NEXT_SECTOR.md": true
+  },
+  "producer_check_count": 74,
+  "producer_hashes": {
+    "CUBIC_QUARTIC_GLOBALIZATION_AND_EMBEDDING_BOUNDARIES.md": "9dd1e5111c3ac911d5decd463159b725f12dbd68a61020391ca31ff9eea2d1f4",
+    "PRIMARY_SOURCES.md": "94edb2958e3a53decfa64573bd2c4b16dc5ef013109ca35b126e5fb72d7e73f1",
+    "README.md": "cca0dc0be666fa0244a834f1d0707a8cf4b9f02726da675ec77f2ff8aef21953",
+    "SOURCE_HASHES.json": "2964c027d4c30795ca620aac5403b23b4fb08c20406f1bcd57087fe862e5d3f9",
+    "results-optimized.json": "786cd93603725928bfdcf6b284217ce9b3dc89492187f97c13752792f3f02374",
+    "results.json": "786cd93603725928bfdcf6b284217ce9b3dc89492187f97c13752792f3f02374",
+    "verify_cubic_quartic_boundaries.py": "36174eda9df2355b9fc59a2090f2f9d0ab9e5996251512b03bbb29b8fc3d4173"
+  },
+  "producer_manifest_all_entries_match": true,
+  "producer_normal_optimized_equal": true,
+  "producer_replay_receipt_equal": true,
+  "scope": "Writes confined to review/. No shared checkout mutation, publication, or claim of a Keller-sector exclusion.",
+  "verdict": "PASS within the stated hypotheses; no substantive mathematical defect found"
+}
