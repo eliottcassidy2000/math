@@ -1,0 +1,9 @@
+Exact field: Q(sqrt3,sqrt11); distinct geometric points: 19
+Spindle edges: 11 ; gate16 edges: 31 ; full19 edges: 34
+Core triple circumcentres: {'circumradius not one': 25, 'unit centre is core vertex': 10}
+Private central rational direction parameters: [1, 2, 3]
+Gate output multiplicities at colours 0..5: [0, 0, 0, 24, 24, 24]
+19-point boundary blocked; all 12 single-port deletions extend.
+Whole 19-point graph is 4-colourable, and its spindle is not 3-colourable.
+100585 degree-list diamond cases and 4096 two-hub list pairs pass.
+PASS exact contacts, minimum-port certificate, lists and hostile controls.

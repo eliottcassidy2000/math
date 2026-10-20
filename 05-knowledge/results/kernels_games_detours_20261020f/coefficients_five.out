@@ -1,0 +1,5 @@
+exact j= 5 component_graphs= 15435 primitive_records= 1988280 polynomial= (893760, 788970, 231840, 22680)
+signature_coefficients= {(0, 0, 3, 0): 589680, (0, 0, 3, 1): 597240, (0, 0, 3, 2): 201600, (0, 0, 3, 3): 22680, (0, 1, 2, 0): 264600, (0, 1, 2, 1): 178920, (0, 1, 2, 2): 30240, (0, 2, 1, 0): 37800, (0, 2, 1, 1): 12810, (0, 3, 0, 0): 1680}
+j5 activation sectors (delta,u,matched_gap)= {(0, 3, 0): 20160, (0, 3, 1): 2520, (1, 2, 0): 27720, (1, 2, 1): 2520, (2, 1, 0): 12180, (2, 1, 1): 630, (3, 0, 0): 1680}
+shortcut j=5 polynomial= (893760, 788970, 231840, 22680) full_owner_controls= 1352
+PASS complete j5 independent full-owner comparison

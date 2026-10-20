@@ -1,0 +1,14 @@
+Sharp controls: C3/TT3 pure, r2 merged loop, even shift-by-two hostile.
+wrap 3 {'pure_target_hostile': 1, 'open': 1}
+wrap 4 {'closed_no_chord': 1, 'closed_chord': 1, 'open': 2}
+wrap 5 {'closed_no_chord': 4, 'closed_chord': 4, 'open': 8}
+wrap 6 {'closed_no_chord': 16, 'closed_chord': 16, 'open': 32}
+wrap 7 {'closed_no_chord': 128, 'closed_chord': 128, 'open': 256}
+wrap 8 {'closed_no_chord': 1024, 'closed_chord': 1024, 'open': 2048}
+wrapped totals {'open': 2347, 'closed_no_chord': 1173, 'closed_chord': 1173}
+4 {'strong_mixed_open': 1, 'loop': 1} hostiles []
+5 {'strong_mixed_open': 3, 'endpoint_release': 1, 'hub_fail': 3, 'endpoint_frozen': 3, 'release_repairs_hub_failure': 1} hostiles [((18, 4, 9, 19, 6), (2, 1, 2, 3, 2), False), ((22, 4, 24, 19, 2), (3, 1, 2, 3, 1), False), ((26, 28, 9, 16, 4), (3, 3, 2, 1, 1), False)]
+6 {'strong_mixed_open': 27, 'endpoint_release': 7, 'hub_fail': 20, 'endpoint_frozen': 20, 'release_repairs_hub_failure': 5, 'loop': 2, 'hub': 5} hostiles [((34, 4, 9, 19, 39, 14), (2, 1, 2, 3, 4, 3), False), ((38, 4, 8, 51, 39, 6), (3, 1, 1, 4, 4, 2), False), ((42, 4, 41, 18, 39, 10), (3, 1, 3, 2, 4, 2), False), ((46, 4, 40, 50, 39, 2), (4, 1, 2, 3, 4, 1), False)]
+7 {'strong_mixed_open': 239, 'endpoint_release': 62, 'hub_fail': 81, 'endpoint_frozen': 74, 'release_repairs_hub_failure': 29, 'hub': 158, 'endpoint_flexible': 7} hostiles [((66, 4, 9, 19, 39, 79, 30), (2, 1, 2, 3, 4, 5, 4), False), ((70, 4, 8, 19, 103, 79, 14), (3, 1, 1, 3, 5, 5, 3), False), ((74, 4, 9, 82, 39, 79, 22), (3, 1, 2, 3, 4, 5, 3), False), ((78, 4, 8, 82, 103, 79, 6), (4, 1, 1, 3, 5, 5, 2), False)]
+8 {'strong_mixed_open': 1978, 'endpoint_release': 511, 'hub_fail': 228, 'endpoint_frozen': 224, 'release_repairs_hub_failure': 88, 'hub': 1746, 'loop': 4, 'endpoint_flexible': 4} hostiles [((130, 4, 9, 19, 39, 79, 159, 62), (2, 1, 2, 3, 4, 5, 6, 5), False), ((134, 4, 8, 19, 39, 207, 159, 30), (3, 1, 1, 3, 4, 6, 6, 4), False), ((138, 4, 9, 18, 167, 79, 159, 46), (3, 1, 2, 2, 5, 5, 6, 4), False), ((142, 4, 8, 18, 167, 207, 159, 14), (4, 1, 1, 2, 5, 6, 6, 3), False)]
+PASS: directedness, literal targets, symbolic charges, sharp boundaries and guarded hostiles.

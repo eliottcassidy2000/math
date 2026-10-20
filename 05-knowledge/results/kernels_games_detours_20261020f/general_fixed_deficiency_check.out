@@ -1,0 +1,6 @@
+new-owner D3 j= 2 coefficients= (756, 792, 270, 30)
+new-owner D3 j= 3 coefficients= (13380, 12974, 4140, 435)
+old/new owner decisions compared= 36942 changed= 392 same full-class totals= (756, 36473)
+bulk matching and joint controls= 7105 L substitution controls= 313 unequal-L controls= 168
+D0 empty kernel and all three two-edge completions pass; prefix hostile retained
+PASS full-position owner, arbitrary matching ports, and independent large-light controls
