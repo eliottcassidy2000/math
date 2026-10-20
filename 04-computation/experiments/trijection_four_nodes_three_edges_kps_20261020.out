@@ -1,0 +1,54 @@
+
+== A. the three 3-edge graphs on 4 nodes ==
+PASS A1 number of 3-edge subgraphs of K4 is C(6,3) = 20  [20]
+PASS A2 labelled copies: P4 12, K3+K1 4, K13 4  [{'K13': 4, 'K3+K1': 4, 'P4': 12}]
+PASS A3 complement: P4 -> P4, K3+K1 <-> K13 (involution with one fixed type)  [{'K13': {'K3+K1'}, 'K3+K1': {'K13'}, 'P4': {'P4'}}]
+PASS A4 opposite-edge map has the same type action  [{'K13': {'K3+K1'}, 'K3+K1': {'K13'}, 'P4': {'P4'}}]
+PASS A5 on every triangle and every star, opposite-edge map == complement (8 of 8)  [8]
+PASS A6 on every P4, opposite-edge map != complement (0 of 12) and |P4^opp & P4| = 2 always  [(0, {2})]
+PASS A7 every 3-edge graph on 4 nodes has exactly 2 coherent orientations (and 8 in all)  [{'K13': [2], 'K3+K1': [2], 'P4': [2]}]
+
+== B. n = 4 dictionary ==
+PASS B1 all 64: H = 1 + 2 c3
+PASS B2 all 64: c3 + s = 2  (s = #sources + #sinks)
+PASS B3 all 64: c3 = C(4,3) - sum_v C(score_v, 2)
+PASS B4 the four types carry (H, c3, s) = TT4 (1,0,2), C3+source/sink (3,1,1), strong (5,2,0)  [{'TT4': {(1, 0, 2)}, 'C3+sink': {(3, 1, 1)}, 'strong': {(5, 2, 0)}, 'C3+source': {(3, 1, 1)}}]
+PASS B5 (s-1)(s-2)/2 = [s in {0,3}] for s = 0,1,2,3 (the mechanism of B2)
+
+== C. tetrahedral duality ==
+PASS C1 all 64: c3(T) = #sources+#sinks of T*
+PASS C2 all 64: #sources+#sinks of T = c3(T*)
+PASS C3 all 64: H(T*) = 6 - H(T)
+PASS C4 T** is always the same one of {T, T^op}  [{'T'}]
+PASS C5 duality on types: TT4 <-> strong, and the two C3 types stay inside the C3 class  [{'TT4': {'strong'}, 'C3+sink': {'C3+sink', 'C3+source'}, 'strong': {'TT4'}, 'C3+source': {'C3+sink', 'C3+source'}}]
+PASS C6 converse on types: C3+source <-> C3+sink, TT4 and strong fixed  [{'TT4': {'TT4'}, 'C3+sink': {'C3+source'}, 'strong': {'strong'}, 'C3+source': {'C3+sink'}}]
+PASS C7 (T^op)* = (T*)^op on all 64 (converse and duality commute)
+PASS C8 the dual arc of u->v lies on the opposite edge of the tetrahedron
+
+== D. marked structures at n = 4 ==
+PASS D1 Aut(T) acts freely on Hamiltonian paths (all 64)
+PASS D2 labelled (T, Ham path) pairs = 4! 2^C(3,2) = 192; marked types = 8  [192]
+PASS D3 (T, cyclic triangle) marked types = 4 (Burnside: 96/24)  [(96, 4)]
+PASS D4 (T, source-or-sink) marked types = 4 = 2 t(3)  [(96, 4)]
+PASS D5 lines = cycles + stars at n = 4:  8 = 4 + 4
+
+== E. line-and-staircase bijection, general n ==
+PASS E1 n=4: sum over labelled T of H(T) = n! 2^C(n-1,2) (Szele)  [192]
+PASS E1 n=5: sum over labelled T of H(T) = n! 2^C(n-1,2) (Szele)  [7680]
+PASS E1 n=6: sum over labelled T of H(T) = n! 2^C(n-1,2) (Szele)  [737280]
+PASS E2 marked (lines, cycles, stars) = (8,4,4), (64,16,8), (1024,208,24) for n = 4,5,6  [{4: (8, 4, 4), 5: (64, 16, 8), 6: (1024, 208, 24)}]
+PASS E3 HOSTILE: lines = cycles + stars holds only at n = 4 among 4,5,6
+PASS E4 n=6: a 5-cycle of S6 fixes exactly 16 marked (T, directed 5-cycle) pairs  [16]
+PASS E7 cycles(n) direct Burnside over Z_{n-1} == (1/(n-1)) sum_{d|n-1 odd} phi(d) 2^(C(n-1,2)/d) for n = 4..7  [({4: 4, 5: 16, 6: 208, 7: 5472}, {4: 4, 5: 16, 6: 208, 7: 5472})]
+     cycles(n) by the formula, n = 4..10: [4, 16, 208, 5472, 299600, 33554432, 7635498336]
+PASS E8 odd-order elements of S3 are exactly the three rotations (so stars(4) = 2 * (1/6) sum_Z3 = cycles(4))
+PASS E5 upset graphs on the anti-path: {} -> TT4, {02} and {13} -> the two C3 types, the other 5 -> strong  [{'TT4': 1, 'C3+sink': 1, 'C3+source': 1, 'strong': 5}]
+PASS E6 anti-path complement pairs marked types as TT4<->strong, C3+source<->strong, C3+sink<->strong, strong<->strong  [{('C3+sink', 'strong'), ('strong', 'strong'), ('TT4', 'strong'), ('C3+source', 'strong')}]
+
+== F. the divisor triple F = S + U next to the graph triple ==
+PASS F1 F = S + U at 7, 27, 60 with (F,S,U) = (0,0,0), (2,1,1), (10,7,3)  [{'p': (0, 0, 0), 'p^3': (2, 1, 1), 'p^2qr': (10, 7, 3)}]
+PASS F2 all solutions N < 1000 have exponent profile (1), (3) or (2,1,1)  [DB1 of arithmetic_braids_20260917]  [{(1,), (3,), (2, 1, 1)}]
+PASS F3 the numbers (8,4,4) vs {(0,0,0),(2,1,1),(10,7,3)}: no shape has F = 8, so no termwise match (recorded hostile)
+
+38 checks, 0 failed
+ALL CHECKS PASSED
