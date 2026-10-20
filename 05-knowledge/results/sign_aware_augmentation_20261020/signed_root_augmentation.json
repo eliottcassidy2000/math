@@ -1,0 +1,233 @@
+{
+  "checks": 1324371,
+  "complete_graph_thresholds": [
+    {
+      "min_roots": 0,
+      "n": 1
+    },
+    {
+      "min_roots": 1,
+      "n": 2
+    },
+    {
+      "min_roots": 2,
+      "n": 3
+    },
+    {
+      "min_roots": 2,
+      "n": 4
+    },
+    {
+      "min_roots": 3,
+      "n": 5
+    },
+    {
+      "min_roots": 3,
+      "n": 6
+    },
+    {
+      "min_roots": 3,
+      "n": 7
+    },
+    {
+      "min_roots": 3,
+      "n": 8
+    },
+    {
+      "min_roots": 4,
+      "n": 9
+    },
+    {
+      "min_roots": 4,
+      "n": 10
+    },
+    {
+      "min_roots": 4,
+      "n": 11
+    },
+    {
+      "min_roots": 4,
+      "n": 12
+    },
+    {
+      "min_roots": 4,
+      "n": 13
+    },
+    {
+      "min_roots": 4,
+      "n": 14
+    },
+    {
+      "min_roots": 4,
+      "n": 15
+    },
+    {
+      "min_roots": 4,
+      "n": 16
+    }
+  ],
+  "direct_color_tests": 212,
+  "hostile_same_ordinary_group_different_sign": [
+    {
+      "aut_order": 6,
+      "automaton_states": 4,
+      "b_k_0_to_4": [
+        1,
+        4,
+        20,
+        120,
+        816
+      ],
+      "mask": 0,
+      "min_colors": 1,
+      "n": 3,
+      "weighted_cycle_buckets": {
+        "1": 2,
+        "2": 3,
+        "3": 1
+      }
+    },
+    {
+      "aut_order": 6,
+      "automaton_states": 4,
+      "b_k_0_to_4": [
+        0,
+        0,
+        4,
+        56,
+        560
+      ],
+      "mask": 7,
+      "min_colors": 3,
+      "n": 3,
+      "weighted_cycle_buckets": {
+        "1": 2,
+        "2": -3,
+        "3": 1
+      }
+    }
+  ],
+  "rows": [
+    {
+      "codec_roundtrips": 1,
+      "globally_even_rooted_types": 0,
+      "graph_types": 1,
+      "max_stabilizer_states": 1,
+      "min_colors_histogram": {
+        "1": 1
+      },
+      "n": 0,
+      "odd_graph_root_defect": 0,
+      "rooted_extension_counts_k_0_1_2": [
+        1,
+        1,
+        1
+      ],
+      "sign_even_types": 1,
+      "tournament_rooted_types": 0
+    },
+    {
+      "codec_roundtrips": 4,
+      "globally_even_rooted_types": 1,
+      "graph_types": 1,
+      "max_stabilizer_states": 1,
+      "min_colors_histogram": {
+        "1": 1
+      },
+      "n": 1,
+      "odd_graph_root_defect": 0,
+      "rooted_extension_counts_k_0_1_2": [
+        1,
+        2,
+        4
+      ],
+      "sign_even_types": 1,
+      "tournament_rooted_types": 1
+    },
+    {
+      "codec_roundtrips": 16,
+      "globally_even_rooted_types": 1,
+      "graph_types": 2,
+      "max_stabilizer_states": 2,
+      "min_colors_histogram": {
+        "1": 1,
+        "2": 1
+      },
+      "n": 2,
+      "odd_graph_root_defect": 1,
+      "rooted_extension_counts_k_0_1_2": [
+        1,
+        4,
+        16
+      ],
+      "sign_even_types": 1,
+      "tournament_rooted_types": 2
+    },
+    {
+      "codec_roundtrips": 88,
+      "globally_even_rooted_types": 3,
+      "graph_types": 4,
+      "max_stabilizer_states": 4,
+      "min_colors_histogram": {
+        "1": 2,
+        "2": 1,
+        "3": 1
+      },
+      "n": 3,
+      "odd_graph_root_defect": 1,
+      "rooted_extension_counts_k_0_1_2": [
+        2,
+        12,
+        88
+      ],
+      "sign_even_types": 2,
+      "tournament_rooted_types": 4
+    },
+    {
+      "codec_roundtrips": 704,
+      "globally_even_rooted_types": 7,
+      "graph_types": 11,
+      "max_stabilizer_states": 8,
+      "min_colors_histogram": {
+        "1": 4,
+        "2": 5,
+        "3": 1,
+        "4": 1
+      },
+      "n": 4,
+      "odd_graph_root_defect": 5,
+      "rooted_extension_counts_k_0_1_2": [
+        4,
+        48,
+        704
+      ],
+      "sign_even_types": 4,
+      "tournament_rooted_types": 12
+    },
+    {
+      "codec_roundtrips": 8912,
+      "globally_even_rooted_types": 33,
+      "graph_types": 34,
+      "max_stabilizer_states": 16,
+      "min_colors_histogram": {
+        "1": 12,
+        "2": 15,
+        "3": 5,
+        "4": 1,
+        "5": 1
+      },
+      "n": 5,
+      "odd_graph_root_defect": 15,
+      "rooted_extension_counts_k_0_1_2": [
+        12,
+        296,
+        8912
+      ],
+      "sign_even_types": 12,
+      "tournament_rooted_types": 48
+    }
+  ],
+  "status": "PASS",
+  "total_stabilizer_states": 247,
+  "universe": "all simple graph types n<=5; direct q-color orbit/stabilizer checks q=1..4"
+}
