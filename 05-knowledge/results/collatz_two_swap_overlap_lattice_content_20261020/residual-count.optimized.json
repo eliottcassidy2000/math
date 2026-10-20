@@ -1,0 +1,12 @@
+{
+  "status": "EXACT COUNTS ONLY, NOT AN INTEGRALITY CENSUS",
+  "script_sha256": "62837f87d24816c833b2c1c1d6d3b4d1b600c84f6a59a4b43b6352054ca497c2",
+  "checks": 5,
+  "universe": "2<=p<4096; every coprime 1<=r<p; both exact legal overlapping two-one parameter ranges",
+  "source_shapes": 5097971,
+  "ordered_paths": 6959303782,
+  "source_shapes_after_omitting_p2_exception": 5097970,
+  "ordered_paths_after_omitting_p2_exception": 6959303780,
+  "independent_count": "Euler phi plus Mobius inversion of coprime half sums",
+  "not_done": "No branch carry or integer-cycle check in this script. The large finite residual is not claimed to have been excluded."
+}

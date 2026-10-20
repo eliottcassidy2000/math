@@ -1,0 +1,82 @@
+{
+  "status": "PASS_EXACT; excludes all integral legal k=1 overlaps with p>=4096",
+  "checks": 42,
+  "external_dependency": "Bugeaud\u2013Mignotte\u2013Siksek, arXiv:math/0403046, Theorem 9.4 real case, printed p.16; inspected independently.",
+  "threshold": 4096,
+  "log46_exponential_partial_sum": "10119867931808989/219419659468800",
+  "exact_exponential_margin": "-1/8 < -1/9",
+  "frozen_audit_script_sha256": "c23283a3a3ca67397eafa29ce99f061adcb39273525704438a63a637a584270c",
+  "frozen_audit_receipt_sha256": "e6f30570be154f1444a3178ed047e5ef7a28843e1160ff5ee26c3b98160b700f",
+  "inherited_arithmetic_checks": 52,
+  "relevant_convergents": [
+    {
+      "q": 24727,
+      "p": 15601
+    },
+    {
+      "q": 50508,
+      "p": 31867
+    },
+    {
+      "q": 125743,
+      "p": 79335
+    },
+    {
+      "q": 176251,
+      "p": 111202
+    },
+    {
+      "q": 301994,
+      "p": 190537
+    },
+    {
+      "q": 16785921,
+      "p": 10590737
+    },
+    {
+      "q": 17087915,
+      "p": 10781274
+    },
+    {
+      "q": 85137581,
+      "p": 53715833
+    },
+    {
+      "q": 272500658,
+      "p": 171928773
+    },
+    {
+      "q": 357638239,
+      "p": 225644606
+    },
+    {
+      "q": 630138897,
+      "p": 397573379
+    },
+    {
+      "q": 9809721694,
+      "p": 6189245291
+    },
+    {
+      "q": 10439860591,
+      "p": 6586818670
+    },
+    {
+      "q": 103768467013,
+      "p": 65470613321
+    },
+    {
+      "q": 217976794617,
+      "p": 137528045312
+    },
+    {
+      "q": 1193652440098,
+      "p": 753110839881
+    }
+  ],
+  "terminal_convergent": [
+    8573543875303,
+    5409303924479
+  ],
+  "unverified_residual": "Every legal overlap, every coprime q=p+r with 3<=p<4096 and 1<=r<p; both clock signs."
+}

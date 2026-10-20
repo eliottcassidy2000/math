@@ -1,0 +1,431 @@
+{
+  "status": "PASS_EXACT",
+  "checks": 914397,
+  "legality_universe": "2<=p<=18, 1<=r<p, gcd(p,r)=1, every ordered actual two-edge path",
+  "legality_shapes": 101,
+  "all_two_edge_paths": 21308,
+  "distinct_one_overlapping_paths": 630,
+  "root_universe": "2<=p<=120, 1<=r<p, gcd(p,r)=1, every legal same-sign overlap",
+  "root_shapes": 4385,
+  "root_paths": 175670,
+  "negative_clock_shapes": 2565,
+  "cut_crossing_paths": 4385,
+  "nontrivial_content_paths": 6249,
+  "nonendpoint_square_controls": [
+    {
+      "p": 18,
+      "r": 5,
+      "u": 2,
+      "delta": 1,
+      "content": 6647,
+      "squared_primes": [
+        17
+      ]
+    },
+    {
+      "p": 34,
+      "r": 19,
+      "u": 5,
+      "delta": 2,
+      "content": 49,
+      "squared_primes": [
+        7
+      ]
+    },
+    {
+      "p": 50,
+      "r": 23,
+      "u": 15,
+      "delta": 2,
+      "content": 49,
+      "squared_primes": [
+        7
+      ]
+    },
+    {
+      "p": 58,
+      "r": 25,
+      "u": 23,
+      "delta": 2,
+      "content": 49,
+      "squared_primes": [
+        7
+      ]
+    },
+    {
+      "p": 61,
+      "r": 27,
+      "u": 12,
+      "delta": 1,
+      "content": 121,
+      "squared_primes": [
+        11
+      ]
+    },
+    {
+      "p": 61,
+      "r": 27,
+      "u": 18,
+      "delta": 2,
+      "content": 121,
+      "squared_primes": [
+        11
+      ]
+    },
+    {
+      "p": 62,
+      "r": 5,
+      "u": 4,
+      "delta": 1,
+      "content": 343,
+      "squared_primes": [
+        7
+      ]
+    },
+    {
+      "p": 62,
+      "r": 47,
+      "u": 4,
+      "delta": 1,
+      "content": 49,
+      "squared_primes": [
+        7
+      ]
+    }
+  ],
+  "lattice_universe": "2<=p<=36, 1<=r<p, gcd(p,r)=1, every 0<=u<p-r, both constants",
+  "lattice_instances": 4759,
+  "resultant_tests": 9518,
+  "selected_dependent_projection_pairs": 0,
+  "selected_constant_cases": 0,
+  "largest_selected_minima_product": {
+    "p": 28,
+    "r": 3,
+    "u": 9,
+    "pair": [
+      [
+        -3,
+        1,
+        0
+      ],
+      [
+        -2,
+        1,
+        3
+      ]
+    ],
+    "heights": [
+      3,
+      3
+    ],
+    "product": 9
+  },
+  "hostile_controls": [
+    {
+      "p": 2,
+      "r": 1,
+      "u": 0,
+      "delta": 1,
+      "tag": "dependent_projection",
+      "degrees": [
+        1,
+        2
+      ]
+    },
+    {
+      "p": 2,
+      "r": 1,
+      "u": 0,
+      "delta": 1,
+      "tag": "constant",
+      "degrees": [
+        0,
+        1
+      ]
+    },
+    {
+      "p": 2,
+      "r": 1,
+      "u": 0,
+      "delta": 1,
+      "tag": "negative_constant",
+      "degrees": [
+        0,
+        1
+      ]
+    },
+    {
+      "p": 2,
+      "r": 1,
+      "u": 0,
+      "delta": 2,
+      "tag": "dependent_projection",
+      "degrees": [
+        1,
+        2
+      ]
+    },
+    {
+      "p": 2,
+      "r": 1,
+      "u": 0,
+      "delta": 2,
+      "tag": "constant",
+      "degrees": [
+        0,
+        1
+      ]
+    },
+    {
+      "p": 2,
+      "r": 1,
+      "u": 0,
+      "delta": 2,
+      "tag": "negative_constant",
+      "degrees": [
+        0,
+        1
+      ]
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "u": 3,
+      "delta": 1,
+      "tag": "dependent_projection",
+      "degrees": [
+        1,
+        5
+      ]
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "u": 3,
+      "delta": 1,
+      "tag": "constant",
+      "degrees": [
+        0,
+        4
+      ]
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "u": 3,
+      "delta": 1,
+      "tag": "negative_constant",
+      "degrees": [
+        0,
+        4
+      ]
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "u": 3,
+      "delta": 2,
+      "tag": "dependent_projection",
+      "degrees": [
+        1,
+        5
+      ]
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "u": 3,
+      "delta": 2,
+      "tag": "constant",
+      "degrees": [
+        0,
+        4
+      ]
+    },
+    {
+      "p": 5,
+      "r": 1,
+      "u": 3,
+      "delta": 2,
+      "tag": "negative_constant",
+      "degrees": [
+        0,
+        4
+      ]
+    },
+    {
+      "p": 11,
+      "r": 7,
+      "u": 2,
+      "delta": 1,
+      "tag": "dependent_projection",
+      "degrees": [
+        7,
+        11
+      ]
+    },
+    {
+      "p": 11,
+      "r": 7,
+      "u": 2,
+      "delta": 1,
+      "tag": "constant",
+      "degrees": [
+        0,
+        3
+      ]
+    },
+    {
+      "p": 11,
+      "r": 7,
+      "u": 2,
+      "delta": 1,
+      "tag": "negative_constant",
+      "degrees": [
+        0,
+        3
+      ]
+    },
+    {
+      "p": 11,
+      "r": 7,
+      "u": 2,
+      "delta": 2,
+      "tag": "dependent_projection",
+      "degrees": [
+        7,
+        11
+      ]
+    },
+    {
+      "p": 11,
+      "r": 7,
+      "u": 2,
+      "delta": 2,
+      "tag": "constant",
+      "degrees": [
+        0,
+        3
+      ]
+    },
+    {
+      "p": 11,
+      "r": 7,
+      "u": 2,
+      "delta": 2,
+      "tag": "negative_constant",
+      "degrees": [
+        0,
+        3
+      ]
+    },
+    {
+      "p": 13,
+      "r": 5,
+      "u": 4,
+      "delta": 1,
+      "tag": "dependent_projection",
+      "degrees": [
+        5,
+        13
+      ]
+    },
+    {
+      "p": 13,
+      "r": 5,
+      "u": 4,
+      "delta": 1,
+      "tag": "constant",
+      "degrees": [
+        0,
+        5
+      ]
+    },
+    {
+      "p": 13,
+      "r": 5,
+      "u": 4,
+      "delta": 1,
+      "tag": "negative_constant",
+      "degrees": [
+        0,
+        5
+      ]
+    },
+    {
+      "p": 13,
+      "r": 5,
+      "u": 4,
+      "delta": 2,
+      "tag": "dependent_projection",
+      "degrees": [
+        5,
+        13
+      ]
+    },
+    {
+      "p": 13,
+      "r": 5,
+      "u": 4,
+      "delta": 2,
+      "tag": "constant",
+      "degrees": [
+        0,
+        5
+      ]
+    },
+    {
+      "p": 13,
+      "r": 5,
+      "u": 4,
+      "delta": 2,
+      "tag": "negative_constant",
+      "degrees": [
+        0,
+        5
+      ]
+    }
+  ],
+  "primepower_controls": [
+    {
+      "p": 418,
+      "r": 237,
+      "u": 180,
+      "delta": 1,
+      "content": 11849,
+      "pair": [
+        [
+          1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          6,
+          7
+        ]
+      ],
+      "resultant": 9350284660952096
+    },
+    {
+      "p": 203,
+      "r": 165,
+      "u": 0,
+      "delta": 2,
+      "content": 169,
+      "pair": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          -11,
+          1,
+          12
+        ]
+      ],
+      "resultant": -995510901979994140
+    }
+  ]
+}
