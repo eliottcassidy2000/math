@@ -1,0 +1,34 @@
+{
+  "status": "FINITE-EXACT independent complete layer replay",
+  "universe": "Every standard-blue marked path at orders9,10 with closed endpoint scores(n-3,2); no partner-strongness or mixedness filter",
+  "results": [
+    {
+      "n": 9,
+      "total": 3072,
+      "coincident_port_presentations": 512,
+      "branches": {
+        "closed_epsilon0": 640,
+        "last_port_backward_chord": 256,
+        "closed_second_port": 128,
+        "closed_epsilon1": 512,
+        "last_port_forward_chord": 256,
+        "open_other_port": 1024,
+        "open_penultimate_port": 256
+      }
+    },
+    {
+      "n": 10,
+      "total": 28672,
+      "coincident_port_presentations": 0,
+      "branches": {
+        "closed_epsilon0": 6144,
+        "last_port_backward_chord": 2048,
+        "closed_second_port": 1024,
+        "closed_epsilon1": 5120,
+        "last_port_forward_chord": 2048,
+        "open_other_port": 10240,
+        "open_penultimate_port": 2048
+      }
+    }
+  ]
+}

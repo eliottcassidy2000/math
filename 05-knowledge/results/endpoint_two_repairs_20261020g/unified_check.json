@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "universe": "all marked closed-blue endpoint-two presentations at n=9,10",
+  "exhaustive": {
+    "9": {
+      "counts": {
+        "closed_epsilon0": 640,
+        "last_port_block": 256,
+        "open_interior_port": 1024,
+        "open_penultimate_port": 256,
+        "closed_second_port": 128,
+        "closed_epsilon1": 512,
+        "last_port_chord": 256
+      },
+      "total": 3072
+    },
+    "10": {
+      "counts": {
+        "closed_epsilon0": 6144,
+        "last_port_block": 2048,
+        "open_interior_port": 10240,
+        "open_penultimate_port": 2048,
+        "closed_second_port": 1024,
+        "closed_epsilon1": 5120,
+        "last_port_chord": 2048
+      },
+      "total": 28672
+    }
+  },
+  "deterministic_orders": [
+    11,
+    100
+  ],
+  "sample_counts": {
+    "closed_epsilon0": 174,
+    "open_interior_port": 300,
+    "last_port_block": 11,
+    "closed_epsilon1": 125,
+    "last_port_chord": 9,
+    "closed_second_port": 3,
+    "open_penultimate_port": 8
+  },
+  "sample_total": 630,
+  "hostile_n8_blue_moves": 1,
+  "no_strong_partner_filter": true
+}

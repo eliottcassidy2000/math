@@ -1,0 +1,235 @@
+{
+  "family": {
+    "arbitrary_mirrored_large_middles": [
+      7,
+      8,
+      9,
+      12,
+      17,
+      24,
+      31
+    ],
+    "exhaustive_blue_middle_orders": {
+      "3": 2,
+      "4": 4,
+      "5": 16,
+      "6": 64
+    },
+    "r1": {
+      "isomorphism": [
+        4,
+        0,
+        2,
+        3,
+        1
+      ],
+      "source_R": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "target_R": [
+        0,
+        2,
+        4,
+        3,
+        1
+      ]
+    },
+    "r2": {
+      "R_words": [
+        [
+          0,
+          2,
+          5,
+          1,
+          3,
+          4
+        ],
+        [
+          4,
+          0,
+          1,
+          5,
+          2,
+          3
+        ],
+        [
+          3,
+          1,
+          2,
+          0,
+          4,
+          5
+        ]
+      ],
+      "endpoint_sums": [
+        6,
+        6,
+        5
+      ]
+    }
+  },
+  "last_port": [
+    {
+      "counts": {
+        "fixed_tail_word_all_black": 8,
+        "presentations": 8,
+        "some_legal_cut_all_black": 8
+      },
+      "finite_universe": "complete fixed-boundary presentations",
+      "n": 7,
+      "variable_cut_failures": []
+    },
+    {
+      "counts": {
+        "fixed_tail_word_all_black": 30,
+        "presentations": 32,
+        "some_legal_cut_all_black": 31
+      },
+      "finite_universe": "complete fixed-boundary presentations",
+      "n": 8,
+      "variable_cut_failures": [
+        [
+          62,
+          28,
+          184,
+          240,
+          224,
+          194,
+          135,
+          3
+        ]
+      ]
+    },
+    {
+      "counts": {
+        "fixed_tail_word_all_black": 256,
+        "presentations": 256,
+        "some_legal_cut_all_black": 256
+      },
+      "finite_universe": "complete fixed-boundary presentations",
+      "n": 9,
+      "variable_cut_failures": []
+    },
+    {
+      "counts": {
+        "fixed_tail_word_all_black": 16,
+        "presentations": 16
+      },
+      "finite_universe": "sixteen deterministic mirrored-chord samples",
+      "n": 10,
+      "variable_cut_failures": []
+    },
+    {
+      "counts": {
+        "fixed_tail_word_all_black": 16,
+        "presentations": 16
+      },
+      "finite_universe": "sixteen deterministic mirrored-chord samples",
+      "n": 11,
+      "variable_cut_failures": []
+    },
+    {
+      "counts": {
+        "fixed_tail_word_all_black": 16,
+        "presentations": 16
+      },
+      "finite_universe": "sixteen deterministic mirrored-chord samples",
+      "n": 16,
+      "variable_cut_failures": []
+    },
+    {
+      "counts": {
+        "fixed_tail_word_all_black": 16,
+        "presentations": 16
+      },
+      "finite_universe": "sixteen deterministic mirrored-chord samples",
+      "n": 25,
+      "variable_cut_failures": []
+    }
+  ],
+  "port_criterion": {
+    "exact_lift_predicate_controls": 36,
+    "mirrored_naive_lift_hostile": {
+      "expanded_K_words": [
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          0,
+          1
+        ],
+        [
+          5,
+          6,
+          3,
+          4,
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          5,
+          6,
+          3,
+          4,
+          2
+        ]
+      ],
+      "failures": [
+        null,
+        null,
+        {
+          "step": 3,
+          "wrongly_directed_joins": [
+            [
+              1,
+              5
+            ]
+          ]
+        }
+      ],
+      "macro_K_words": [
+        [
+          1,
+          2,
+          3,
+          4,
+          0
+        ],
+        [
+          4,
+          2,
+          3,
+          1,
+          0
+        ],
+        [
+          0,
+          4,
+          2,
+          3,
+          1
+        ]
+      ],
+      "macro_order": 5,
+      "sizes": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "terminal_labelled_target_matches": false
+    }
+  },
+  "source_sha256": "5cf8dda686cc4ccc8a8ddf26f48b2362b6da3ccbb6f64caba9ea67de92d55de1",
+  "status": "PASS"
+}

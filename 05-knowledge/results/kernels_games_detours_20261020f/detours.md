@@ -215,12 +215,14 @@ marked order. Conversely, that cyclic extension has these endpoint
 scores. Reading the same edge from its open complement partner gives
 the equivalent sufficient endpoint pattern `(2,n-3)`, by (1).
 
-The next precise endpoint layer has closed scores `(n-3,2)`. It retains
-one additional incoming arc at the first vertex and its mirrored outgoing
-arc at the last. Those two exceptional incidences are new retained ports;
-the uniform middle-module proof above does not erase them. This is a
-specific next construction target, not a claim that every remaining
-strong blue edge lies in that layer.
+The next endpoint layer, closed scores `(n-3,2)`, is now repaired by the
+[endpoint-two theorem](../endpoint_two_repairs_20261020g/README.md): three
+literal black moves for every n>=6, with a structural proof at n>=9 and
+an exact finite head. It retains the extra incoming arc at the first
+vertex and its mirrored outgoing arc at the last. Whole-block transport
+and actual anti-involution witnesses replace the missing middle-module
+assumption. Arbitrary strong mixed blue lines remain open; the next
+direct endpoint layer is `(n-4,3)`.
 
 If r=1, U=C3 and its target is TT3; both vertices are pure blue. If
 r=2, U is the strong four-vertex tournament and its blue target is in

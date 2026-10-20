@@ -1,0 +1,494 @@
+{
+  "status": "FINITE-EXACT: every retained labelled presentation has three black K moves to its literal blue partner",
+  "universe": "All standard closed blue endpoint-score (n-3,2) presentations at n=6,7,8,9; every blue middle and every allowed marked incoming port u=2,...,n-2; no isomorphism quotient",
+  "inherited_filters": "Both literal endpoints strong and mixed; these are tested, not assumed",
+  "checks": "Every selected ledger is independently replayed with directed arc sets, actual reversal failure, and literal target equality. Complete labelled three-K search is used only after template failure.",
+  "source_hashes": {
+    "probe_coverage.py": "1ee661dadb06669bbdcdb49e5ff5ead792dfd57a677efbb86e2e741bfffea201",
+    "probe.py": "7dc74795c028018145e60b51552ef9c5cd34845004ac20ccae6dc24892555bf7",
+    "probe_search.py": "77b852efe30e9582988c0f96882002f6abfb031b27e5d406ab22cc24ae2ebb0c"
+  },
+  "universe_sha256": "aebeee28f8555439a1930efc7b752e8d4988dc88b816fcb59a114e4b49e7854f",
+  "certificate_stream_sha256": "fa40fc2e6c84c9937b9c6014e601b2604e18d051bbd4ce5d703f56a526659b85",
+  "summaries": [
+    {
+      "n": 6,
+      "universe": 12,
+      "strong_mixed": 12,
+      "template_residual": 3,
+      "finite_certified": 3,
+      "template_covered": 9,
+      "selected_templates": {
+        "A_last_port_cut_4": 2,
+        "B_open_penultimate": 2,
+        "L2_last_port": 1,
+        "closed_chord": 1,
+        "closed_no_chord": 1,
+        "release": 2
+      }
+    },
+    {
+      "n": 7,
+      "universe": 64,
+      "strong_mixed": 64,
+      "template_covered": 63,
+      "template_residual": 1,
+      "finite_certified": 1,
+      "selected_templates": {
+        "A_last_port_cut_4": 4,
+        "A_last_port_cut_5": 4,
+        "B_open_penultimate": 8,
+        "C_closed_second_port": 4,
+        "L2_last_port": 8,
+        "closed_chord": 7,
+        "closed_no_chord": 12,
+        "release": 16
+      }
+    },
+    {
+      "n": 8,
+      "universe": 320,
+      "strong_mixed": 320,
+      "template_covered": 319,
+      "template_residual": 1,
+      "finite_certified": 1,
+      "selected_templates": {
+        "A_last_port_cut_4": 16,
+        "A_last_port_cut_5": 8,
+        "A_last_port_cut_6": 7,
+        "B_open_penultimate": 32,
+        "C_closed_second_port": 16,
+        "L2_last_port": 32,
+        "closed_chord": 48,
+        "closed_no_chord": 64,
+        "release": 96
+      }
+    },
+    {
+      "n": 9,
+      "universe": 3072,
+      "strong_mixed": 3072,
+      "template_covered": 3072,
+      "selected_templates": {
+        "A_last_port_cut_4": 128,
+        "A_last_port_cut_5": 64,
+        "A_last_port_cut_6": 32,
+        "A_last_port_cut_7": 32,
+        "B_open_penultimate": 256,
+        "C_closed_second_port": 128,
+        "L2_last_port": 256,
+        "closed_chord": 512,
+        "closed_no_chord": 640,
+        "release": 1024
+      }
+    }
+  ],
+  "finite_residual_certificates": [
+    {
+      "n": 6,
+      "rows": [
+        26,
+        36,
+        41,
+        18,
+        38,
+        9
+      ],
+      "partner_rows": [
+        38,
+        28,
+        24,
+        49,
+        33,
+        6
+      ],
+      "u": 2,
+      "v": 3,
+      "words": [
+        [
+          0,
+          1,
+          2,
+          5,
+          3,
+          4
+        ],
+        [
+          2,
+          5,
+          3,
+          0,
+          1,
+          4
+        ],
+        [
+          2,
+          3,
+          0,
+          1,
+          4,
+          5
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          0,
+          3,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          4,
+          3
+        ],
+        [
+          2,
+          1,
+          0,
+          5
+        ]
+      ],
+      "endpoint_excesses": [
+        1,
+        -2,
+        1
+      ],
+      "complete_search_counts": {
+        "first_black_paths": 18,
+        "last_black_paths": 18,
+        "pairs_examined": 324,
+        "three_K_certificates": 4
+      }
+    },
+    {
+      "n": 6,
+      "rows": [
+        26,
+        44,
+        57,
+        16,
+        34,
+        9
+      ],
+      "partner_rows": [
+        38,
+        20,
+        8,
+        51,
+        37,
+        6
+      ],
+      "u": 2,
+      "v": 3,
+      "words": [
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          3
+        ],
+        [
+          1,
+          2,
+          4,
+          0,
+          5,
+          3
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          0,
+          5
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          1,
+          3,
+          0,
+          5
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          3,
+          4,
+          2
+        ]
+      ],
+      "endpoint_excesses": [
+        -1,
+        0,
+        1
+      ],
+      "complete_search_counts": {
+        "first_black_paths": 22,
+        "last_black_paths": 30,
+        "pairs_examined": 660,
+        "three_K_certificates": 12
+      }
+    },
+    {
+      "n": 6,
+      "rows": [
+        14,
+        12,
+        56,
+        48,
+        35,
+        3
+      ],
+      "partner_rows": [
+        50,
+        52,
+        9,
+        19,
+        36,
+        12
+      ],
+      "u": 4,
+      "v": 1,
+      "words": [
+        [
+          0,
+          2,
+          5,
+          1,
+          3,
+          4
+        ],
+        [
+          3,
+          2,
+          5,
+          1,
+          0,
+          4
+        ],
+        [
+          3,
+          1,
+          2,
+          0,
+          4,
+          5
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          0,
+          1,
+          5,
+          4
+        ],
+        [
+          0,
+          5,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          5,
+          2
+        ]
+      ],
+      "endpoint_excesses": [
+        1,
+        -1,
+        0
+      ],
+      "complete_search_counts": {
+        "first_black_paths": 18,
+        "last_black_paths": 32,
+        "pairs_examined": 576,
+        "three_K_certificates": 6
+      }
+    },
+    {
+      "n": 7,
+      "rows": [
+        54,
+        84,
+        104,
+        19,
+        100,
+        74,
+        9
+      ],
+      "partner_rows": [
+        74,
+        44,
+        25,
+        112,
+        35,
+        69,
+        22
+      ],
+      "u": 3,
+      "v": 3,
+      "words": [
+        [
+          0,
+          1,
+          2,
+          6,
+          3,
+          4,
+          5
+        ],
+        [
+          2,
+          6,
+          3,
+          4,
+          0,
+          1,
+          5
+        ],
+        [
+          2,
+          3,
+          4,
+          0,
+          1,
+          5,
+          6
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          0,
+          2,
+          3,
+          5
+        ],
+        [
+          1,
+          2,
+          5,
+          6
+        ],
+        [
+          1,
+          6,
+          2,
+          4
+        ]
+      ],
+      "endpoint_excesses": [
+        1,
+        -1,
+        0
+      ],
+      "complete_search_counts": {
+        "first_black_paths": 148,
+        "last_black_paths": 126,
+        "pairs_examined": 18648,
+        "three_K_certificates": 88
+      }
+    },
+    {
+      "n": 8,
+      "rows": [
+        62,
+        28,
+        184,
+        240,
+        224,
+        194,
+        135,
+        3
+      ],
+      "partner_rows": [
+        194,
+        228,
+        73,
+        19,
+        39,
+        77,
+        152,
+        60
+      ],
+      "u": 6,
+      "v": 1,
+      "words": [
+        [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          1
+        ],
+        [
+          7,
+          2,
+          1,
+          0,
+          6,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          7,
+          2,
+          0,
+          6,
+          3,
+          4,
+          5
+        ]
+      ],
+      "independent_anti_failures": [
+        [
+          0,
+          5,
+          4,
+          1
+        ],
+        [
+          0,
+          2,
+          4,
+          6
+        ],
+        [
+          0,
+          3,
+          2,
+          6
+        ]
+      ],
+      "endpoint_excesses": [
+        1,
+        2,
+        -1
+      ],
+      "complete_search_counts": {
+        "first_black_paths": 526,
+        "last_black_paths": 504,
+        "pairs_examined": 265104,
+        "three_K_certificates": 252
+      }
+    }
+  ],
+  "unresolved": []
+}

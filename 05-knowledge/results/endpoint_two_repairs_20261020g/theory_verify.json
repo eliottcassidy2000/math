@@ -1,0 +1,38 @@
+{
+  "status": "FINITE-EXACT bounded controls plus deterministic large samples",
+  "complete_universe": "closed standard-blue middles, total n8..10, every extra incoming port u except first/last middle",
+  "complete": [
+    {
+      "n": 8,
+      "counts": {
+        "epsilon0": 64,
+        "second_port": 16,
+        "epsilon1": 48
+      }
+    },
+    {
+      "n": 9,
+      "counts": {
+        "epsilon0": 640,
+        "second_port": 128,
+        "epsilon1": 512
+      }
+    },
+    {
+      "n": 10,
+      "counts": {
+        "epsilon0": 6144,
+        "second_port": 1024,
+        "epsilon1": 5120
+      }
+    }
+  ],
+  "second_port_n7": 4,
+  "permutation_identity_checks": 390,
+  "large_sample_orders": "11..31; 32 per order; seed20261020",
+  "large_samples": {
+    "epsilon0": 339,
+    "epsilon1": 306,
+    "second_port": 27
+  }
+}

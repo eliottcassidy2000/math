@@ -140,8 +140,9 @@ The concrete next targets are:
    leaves arbitrary core complexity. Counting relocation-connected fibres
    still requires exact fibre sizes and transport; connectedness alone
    supplies no isomorphism-class recurrence.
-2. Extend the endpoint detour beyond the closed score pair `(n-2,1)` to
-   `(n-3,2)`, retaining the extra mirrored boundary incidences.
+2. The [endpoint-two continuation](../endpoint_two_repairs_20261020g/README.md)
+   now repairs every closed `(n-3,2)` blue line for n>=6. Next retain two
+   mirrored exceptional ports in the layer `(n-4,3)`.
 3. Realize the palette gate's input relation geometrically while retaining
    the actual induced boundary graph and a proper-colouring hostile.
 4. For the Collatz comparison, keep exact integer affine carries on the
