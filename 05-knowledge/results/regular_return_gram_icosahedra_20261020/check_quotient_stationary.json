@@ -1,0 +1,109 @@
+{
+  "dependency_sha256": "fc1cef9cfbc91417b180e708887cdfd75c41d713ee32adc90170b53d39e0be52",
+  "regular7": {
+    "class_order_H": [
+      171,
+      175,
+      189
+    ],
+    "classes": [
+      {
+        "H": 171,
+        "aut_order": 3,
+        "intermediate_degree_distribution": {
+          "4": 9,
+          "5": 51,
+          "6": 6,
+          "7": 18,
+          "8": 21,
+          "9": 42,
+          "10": 24
+        },
+        "labelled_orbit_size": 1680,
+        "path_orbit_mass": 57,
+        "row_support": 334,
+        "self_converse": true
+      },
+      {
+        "H": 175,
+        "aut_order": 7,
+        "intermediate_degree_distribution": {
+          "4": 7,
+          "5": 77,
+          "6": 21,
+          "7": 7,
+          "8": 7,
+          "9": 42,
+          "10": 14
+        },
+        "labelled_orbit_size": 720,
+        "path_orbit_mass": 25,
+        "row_support": 330,
+        "self_converse": true
+      },
+      {
+        "H": 189,
+        "aut_order": 21,
+        "intermediate_degree_distribution": {
+          "5": 147,
+          "6": 21,
+          "9": 21
+        },
+        "labelled_orbit_size": 240,
+        "path_orbit_mass": 9,
+        "row_support": 295,
+        "self_converse": true
+      }
+    ],
+    "quotient_kernel": [
+      [
+        "101657/143640",
+        "2209/9576",
+        "158/2565"
+      ],
+      [
+        "2209/4200",
+        "22277/63000",
+        "271/2250"
+      ],
+      [
+        "158/405",
+        "271/810",
+        "223/810"
+      ]
+    ],
+    "scope": "Rows from the three inherited complete regular-order-seven classes; their full relabelling orbits independently rebuilt. No all-order class census.",
+    "stationary_class_distribution": [
+      "57/91",
+      "25/91",
+      "9/91"
+    ],
+    "stationary_class_weights": [
+      "57",
+      "25",
+      "9"
+    ]
+  },
+  "small_orders": [
+    {
+      "H": 1,
+      "detailed_balance_entries": 1,
+      "n": 1,
+      "states": 1
+    },
+    {
+      "H": 3,
+      "detailed_balance_entries": 4,
+      "n": 3,
+      "states": 2
+    },
+    {
+      "H": 15,
+      "detailed_balance_entries": 576,
+      "n": 5,
+      "states": 24
+    }
+  ],
+  "source_sha256": "28ee642b5b29e287a9bd86be273240b6b68a255a8003de9670252bc6831d36a0",
+  "status": "PASS"
+}

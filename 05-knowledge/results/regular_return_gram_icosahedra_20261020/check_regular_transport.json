@@ -1,0 +1,633 @@
+{
+  "endpoint_controls": [
+    {
+      "labelled_tournaments": 8,
+      "n": 3,
+      "single_arc_checks": 24,
+      "triangle_H_increments": {
+        "0": 2
+      },
+      "triangle_checks": 2
+    },
+    {
+      "labelled_tournaments": 64,
+      "n": 4,
+      "single_arc_checks": 384,
+      "triangle_H_increments": {
+        "0": 64
+      },
+      "triangle_checks": 64
+    },
+    {
+      "labelled_tournaments": 1024,
+      "n": 5,
+      "single_arc_checks": 10240,
+      "triangle_H_increments": {
+        "-4": 120,
+        "-2": 240,
+        "0": 1840,
+        "2": 240,
+        "4": 120
+      },
+      "triangle_checks": 2560
+    }
+  ],
+  "icosahedron_certificate": {
+    "edge_count": 30,
+    "lower": [
+      313,
+      682,
+      355,
+      410,
+      806
+    ],
+    "north": 947,
+    "path_orbits": [
+      {
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "Q": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "P": [
+          0,
+          2,
+          3,
+          4,
+          1
+        ],
+        "Q": [
+          [
+            0,
+            2,
+            3,
+            4,
+            1
+          ],
+          [
+            0,
+            3,
+            4,
+            2,
+            1
+          ],
+          [
+            0,
+            4,
+            2,
+            3,
+            1
+          ]
+        ]
+      },
+      {
+        "P": [
+          0,
+          2,
+          4,
+          1,
+          3
+        ],
+        "Q": [
+          [
+            0,
+            2,
+            4,
+            1,
+            3
+          ]
+        ]
+      }
+    ],
+    "south": 76,
+    "upper": [
+      613,
+      217,
+      710,
+      341,
+      668
+    ]
+  },
+  "regular7_triangles": [
+    {
+      "H": 175,
+      "changes": {
+        "-4": 7,
+        "0": 7
+      },
+      "endpoint_splits": [
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "delta": -4,
+          "linear": 4,
+          "quadratic": -8,
+          "triangle": [
+            0,
+            2,
+            4
+          ]
+        },
+        {
+          "delta": -4,
+          "linear": 4,
+          "quadratic": -8,
+          "triangle": [
+            0,
+            2,
+            5
+          ]
+        },
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "delta": -4,
+          "linear": 4,
+          "quadratic": -8,
+          "triangle": [
+            0,
+            3,
+            5
+          ]
+        },
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            0,
+            3,
+            6
+          ]
+        },
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "delta": -4,
+          "linear": 4,
+          "quadratic": -8,
+          "triangle": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "delta": -4,
+          "linear": 4,
+          "quadratic": -8,
+          "triangle": [
+            1,
+            3,
+            6
+          ]
+        },
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "delta": -4,
+          "linear": 4,
+          "quadratic": -8,
+          "triangle": [
+            1,
+            4,
+            6
+          ]
+        },
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            2,
+            3,
+            6
+          ]
+        },
+        {
+          "delta": -4,
+          "linear": 4,
+          "quadratic": -8,
+          "triangle": [
+            2,
+            4,
+            6
+          ]
+        },
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            2,
+            5,
+            6
+          ]
+        }
+      ],
+      "rows": [
+        14,
+        28,
+        56,
+        112,
+        97,
+        67,
+        7
+      ]
+    },
+    {
+      "H": 171,
+      "changes": {
+        "0": 9,
+        "4": 3,
+        "18": 2
+      },
+      "endpoint_splits": [
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "delta": 4,
+          "linear": -4,
+          "quadratic": 8,
+          "triangle": [
+            0,
+            4,
+            2
+          ]
+        },
+        {
+          "delta": 18,
+          "linear": 24,
+          "quadratic": -6,
+          "triangle": [
+            0,
+            3,
+            5
+          ]
+        },
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            0,
+            3,
+            6
+          ]
+        },
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            0,
+            4,
+            5
+          ]
+        },
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            0,
+            4,
+            6
+          ]
+        },
+        {
+          "delta": 4,
+          "linear": -4,
+          "quadratic": 8,
+          "triangle": [
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            1,
+            3,
+            5
+          ]
+        },
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            1,
+            3,
+            6
+          ]
+        },
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "delta": 18,
+          "linear": 24,
+          "quadratic": -6,
+          "triangle": [
+            1,
+            4,
+            6
+          ]
+        },
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "delta": 4,
+          "linear": -4,
+          "quadratic": 8,
+          "triangle": [
+            2,
+            3,
+            6
+          ]
+        },
+        {
+          "delta": 0,
+          "linear": 0,
+          "quadratic": 0,
+          "triangle": [
+            2,
+            5,
+            6
+          ]
+        }
+      ],
+      "rows": [
+        26,
+        28,
+        41,
+        112,
+        100,
+        67,
+        7
+      ]
+    },
+    {
+      "H": 189,
+      "changes": {
+        "-18": 14
+      },
+      "endpoint_splits": [
+        {
+          "delta": -18,
+          "linear": -24,
+          "quadratic": 6,
+          "triangle": [
+            0,
+            1,
+            3
+          ]
+        },
+        {
+          "delta": -18,
+          "linear": -24,
+          "quadratic": 6,
+          "triangle": [
+            0,
+            1,
+            5
+          ]
+        },
+        {
+          "delta": -18,
+          "linear": -24,
+          "quadratic": 6,
+          "triangle": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "delta": -18,
+          "linear": -24,
+          "quadratic": 6,
+          "triangle": [
+            0,
+            2,
+            6
+          ]
+        },
+        {
+          "delta": -18,
+          "linear": -24,
+          "quadratic": 6,
+          "triangle": [
+            0,
+            4,
+            5
+          ]
+        },
+        {
+          "delta": -18,
+          "linear": -24,
+          "quadratic": 6,
+          "triangle": [
+            0,
+            4,
+            6
+          ]
+        },
+        {
+          "delta": -18,
+          "linear": -24,
+          "quadratic": 6,
+          "triangle": [
+            1,
+            2,
+            4
+          ]
+        },
+        {
+          "delta": -18,
+          "linear": -24,
+          "quadratic": 6,
+          "triangle": [
+            1,
+            2,
+            6
+          ]
+        },
+        {
+          "delta": -18,
+          "linear": -24,
+          "quadratic": 6,
+          "triangle": [
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "delta": -18,
+          "linear": -24,
+          "quadratic": 6,
+          "triangle": [
+            1,
+            5,
+            6
+          ]
+        },
+        {
+          "delta": -18,
+          "linear": -24,
+          "quadratic": 6,
+          "triangle": [
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "delta": -18,
+          "linear": -24,
+          "quadratic": 6,
+          "triangle": [
+            2,
+            4,
+            5
+          ]
+        },
+        {
+          "delta": -18,
+          "linear": -24,
+          "quadratic": 6,
+          "triangle": [
+            3,
+            4,
+            6
+          ]
+        },
+        {
+          "delta": -18,
+          "linear": -24,
+          "quadratic": 6,
+          "triangle": [
+            3,
+            5,
+            6
+          ]
+        }
+      ],
+      "rows": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ]
+    }
+  ],
+  "return_graphs": [
+    {
+      "component_sizes": [
+        1,
+        1
+      ],
+      "degrees": {
+        "0": 2
+      },
+      "n": 3,
+      "presentation_support": {
+        "0": 6
+      },
+      "states": 2
+    },
+    {
+      "component_sizes": [
+        12,
+        12
+      ],
+      "degrees": {
+        "5": 24
+      },
+      "n": 5,
+      "presentation_support": {
+        "0": 360,
+        "6": 240
+      },
+      "states": 24
+    }
+  ],
+  "source_sha256": "72f7b7d10ac6464e90f5f3e665f95f3bec67429e215cc38bf861f238cbc67700",
+  "status": "PASS"
+}

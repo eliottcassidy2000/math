@@ -1,0 +1,293 @@
+{
+  "audit_seven_vertex_example": {
+    "P": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      2
+    ],
+    "Q": [
+      0,
+      1,
+      5,
+      6,
+      3,
+      4,
+      2
+    ],
+    "target": 1698631
+  },
+  "certificate_vertices": [
+    76,
+    217,
+    313,
+    341,
+    355,
+    410,
+    613,
+    668,
+    682,
+    710,
+    806,
+    947
+  ],
+  "checked_file_sha256": {
+    "AUDIT.md": "d95f72e9561ca69a857557c82466d91d0817d3c3096d18356e36abcae186e294",
+    "gram_return_addendum.md": "52532f05483cd2b6cf437ea28e6179a2449e3cfa929a2689fbef98be73209046",
+    "regular_return_icosahedra.svg": "c7e37d37ca15fc2cc73e66f25c0dcbb8d11976c94ae4240fd3557a3ed0d75c47",
+    "regular_return_theorems.md": "db2bd384ca2ad4251870723f2e8cea7a872c65ec487ac10fb0a35e84bbef001b"
+  },
+  "directed_triangles": [
+    [
+      0,
+      1,
+      3
+    ],
+    [
+      0,
+      2,
+      3
+    ],
+    [
+      0,
+      2,
+      4
+    ],
+    [
+      1,
+      2,
+      4
+    ],
+    [
+      1,
+      3,
+      4
+    ]
+  ],
+  "figure": {
+    "all_edges_exact": true,
+    "all_regular_codes": true,
+    "distinct_edges": 60,
+    "labels": 24,
+    "visual_review": "Final-reviewer visual inspection; this checker validates the literal labels and edges only."
+  },
+  "intermediate_type_control": [
+    {
+      "H": 11,
+      "aut_order": 1,
+      "blue_fibre": 3,
+      "column_degree": 1,
+      "labelled_columns": 120
+    },
+    {
+      "H": 13,
+      "aut_order": 1,
+      "blue_fibre": 3,
+      "column_degree": 1,
+      "labelled_columns": 120
+    },
+    {
+      "H": 15,
+      "aut_order": 3,
+      "blue_fibre": 1,
+      "column_degree": 3,
+      "labelled_columns": 40
+    }
+  ],
+  "literal_intermediate": {
+    "code": 654,
+    "neighbors": [
+      217,
+      613,
+      947
+    ],
+    "rows": [
+      28,
+      1,
+      10,
+      18,
+      6
+    ]
+  },
+  "literal_pair_11": {
+    "P": [
+      0,
+      2,
+      3,
+      4,
+      1
+    ],
+    "Q": [
+      0,
+      3,
+      4,
+      2,
+      1
+    ],
+    "target": 613
+  },
+  "original_typo_hostile": {
+    "P": [
+      0,
+      1,
+      3,
+      4,
+      2
+    ],
+    "missing_arcs": [
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  "proof_table": [
+    {
+      "P": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "Q": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "intermediate_H": 11,
+      "intermediate_aut_order": 1,
+      "intermediate_blue_fibre": 3,
+      "intermediate_code": 733
+    },
+    {
+      "P": [
+        0,
+        2,
+        4,
+        1,
+        3
+      ],
+      "Q": [
+        [
+          0,
+          2,
+          4,
+          1,
+          3
+        ]
+      ],
+      "intermediate_H": 13,
+      "intermediate_aut_order": 1,
+      "intermediate_blue_fibre": 3,
+      "intermediate_code": 302
+    },
+    {
+      "P": [
+        0,
+        2,
+        3,
+        4,
+        1
+      ],
+      "Q": [
+        [
+          0,
+          2,
+          3,
+          4,
+          1
+        ],
+        [
+          0,
+          3,
+          4,
+          2,
+          1
+        ],
+        [
+          0,
+          4,
+          2,
+          3,
+          1
+        ]
+      ],
+      "intermediate_H": 15,
+      "intermediate_aut_order": 3,
+      "intermediate_blue_fibre": 1,
+      "intermediate_code": 654
+    }
+  ],
+  "source_sha256": "526662432a63627f1ca70a94a49cf0cb0b82dc1af402031bacb791b03ee31334",
+  "status": "PASS",
+  "triangle_pairs": [
+    [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        2,
+        4
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        1,
+        2,
+        4
+      ]
+    ],
+    [
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        4
+      ]
+    ],
+    [
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        1,
+        3,
+        4
+      ]
+    ],
+    [
+      [
+        0,
+        2,
+        4
+      ],
+      [
+        1,
+        3,
+        4
+      ]
+    ]
+  ]
+}

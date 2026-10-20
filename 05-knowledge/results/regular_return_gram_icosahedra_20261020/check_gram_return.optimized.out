@@ -1,0 +1,53 @@
+{
+  "all_score_fibre_Gram_checks": [
+    {
+      "Hamilton_path_incidences": 1,
+      "n": 1,
+      "ordered_same_score_pairs": 1,
+      "same_score_return_presentations": 1,
+      "score_fibres": 1,
+      "tournaments": 1
+    },
+    {
+      "Hamilton_path_incidences": 2,
+      "n": 2,
+      "ordered_same_score_pairs": 2,
+      "same_score_return_presentations": 2,
+      "score_fibres": 2,
+      "tournaments": 2
+    },
+    {
+      "Hamilton_path_incidences": 12,
+      "n": 3,
+      "ordered_same_score_pairs": 10,
+      "same_score_return_presentations": 12,
+      "score_fibres": 7,
+      "tournaments": 8
+    },
+    {
+      "Hamilton_path_incidences": 192,
+      "n": 4,
+      "ordered_same_score_pairs": 152,
+      "same_score_return_presentations": 192,
+      "score_fibres": 38,
+      "tournaments": 64
+    },
+    {
+      "Hamilton_path_incidences": 7680,
+      "n": 5,
+      "ordered_same_score_pairs": 7736,
+      "same_score_return_presentations": 9600,
+      "score_fibres": 291,
+      "tournaments": 1024
+    }
+  ],
+  "icosahedron_integer_matrix_checks": 144,
+  "regular5_column_degrees": {
+    "1": 240,
+    "3": 40
+  },
+  "regular5_distinct_face_columns": 40,
+  "regular5_intermediate_columns": 280,
+  "source_sha256": "15852575f9190de42b24a63f3e44b3301a1475a3bab5593d5dfe98931b50ce69",
+  "status": "PASS"
+}

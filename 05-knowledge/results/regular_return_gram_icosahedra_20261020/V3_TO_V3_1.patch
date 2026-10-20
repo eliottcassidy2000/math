@@ -1,0 +1,53 @@
+--- ready_package_v3/README.md
++++ ready_package_v3_1/README.md
+@@ -16,7 +16,7 @@
+ 
+ `independent_audit.py` and `independent_gram_audit.py` use a separate arc-set/literal-word implementation. The second imports the first. Their JSON receipts and identical optimized-mode receipts are included.
+ 
+-`FROZEN_SHA256SUMS` preserves historical V1/V2 proof/code hashes and staging paths. `PUBLICATION_SHA256SUMS_V3` verifies the current corrected package. V1 and V2 remain separately preserved; `V2_TO_V3.patch` records the changed prose exactly.
++`FROZEN_SHA256SUMS` preserves historical V1/V2 proof/code hashes and staging paths. `PUBLICATION_SHA256SUMS_V3_1` verifies the current corrected package. V1 and V2 remain separately preserved; `V2_TO_V3.patch` records the changed prose exactly.
+ 
+ `check_literal_examples.py` reads the current proof examples directly and verifies them against literal paths and tournament codes, including the original erroneous word as a hostile control.
+ 
+--- ready_package_v3/AUDIT.md
++++ ready_package_v3_1/AUDIT.md
+@@ -16,7 +16,7 @@
+ - `check_regular_transport.py`, SHA256 `72f7b7d10ac6464e90f5f3e665f95f3bec67429e215cc38bf861f238cbc67700`.
+ - `check_gram_return.py`, SHA256 `15852575f9190de42b24a63f3e44b3301a1475a3bab5593d5dfe98931b50ce69`.
+ 
+-The original frozen files and V1/V2 packages remain preserved unchanged. The V3 theorem changes only the mistyped table row; the Gram addendum and both producer programs remain byte-identical. `FROZEN_SHA256SUMS` is a historical record of original staging paths and hashes, not the current V3 package checksum. Use `PUBLICATION_SHA256SUMS_V3` for the corrected package.
++The original frozen files and V1/V2 packages remain preserved unchanged. The V3 theorem changes only the mistyped table row; the Gram addendum and both producer programs remain byte-identical. `FROZEN_SHA256SUMS` is a historical record of original staging paths and hashes, not the current V3 package checksum. Use `PUBLICATION_SHA256SUMS_V3_1` for the corrected package.
+ 
+ The objects are labelled tournaments, raw Hamiltonian vertex words, and a graph derived from **two** path-complement steps with an unrestricted intermediate tournament. Path-pair multiplicities, graph degrees, raw H, and automorphism-normalized path counts remain separate throughout.
+ 
+--- ready_package_v3/CORRECTION_HISTORY_V3.md
++++ ready_package_v3_1/CORRECTION_HISTORY_V3.md
+@@ -53,4 +53,8 @@
+ 
+ `V2_TO_V3.patch` records every change to existing Markdown files exactly. The main theorem changes only the one table row; `AUDIT.md` and `README.md` are amended for the correction and the newly included figure. All original producer programs, receipts, the Gram addendum, the independent mathematical checks, and the stationary-mass proof/checker remain byte-identical.
+ 
+-Historical V1/V2 package checksum lists are not copied as current verification lists into V3, because the corrected files intentionally have different hashes. They remain with the preserved V1/V2 package. The original `FROZEN_SHA256SUMS` is retained as a clearly historical staging record. `PUBLICATION_SHA256SUMS_V3` is the current package-relative verification list; `READY_MANIFEST_V3.json` identifies the proposed replacement package.
++Historical V1/V2 package checksum lists are not copied as current verification lists into V3, because the corrected files intentionally have different hashes. They remain with the preserved V1/V2 package. The original `FROZEN_SHA256SUMS` is retained as a clearly historical staging record. `PUBLICATION_SHA256SUMS_V3_1` is the current package-relative verification list; `READY_MANIFEST_V3_1.json` identifies the proposed replacement package.
++
++## Receipt-only staging repair before approval
++
++The first V3 proposal's new checker validated equation (11) correctly, but a later supplementary loop reused its local P variable before JSON serialization. Consequently that proposal's receipt printed the wrong P in its `literal_pair_11` field. This was caught immediately after staging and reported before approval. V3.1 snapshots the checked equation-(11) witness before that loop; its printed P is now exactly `(0,2,3,4,1)`. No theorem, validation outcome, or numerical result changed. The V3 proposal remains preserved separately, and `V3_TO_V3_1.patch` records the checker/provenance repair.
+--- ready_package_v3/check_literal_examples.py
++++ ready_package_v3_1/check_literal_examples.py
+@@ -41,6 +41,7 @@
+     require(directed(S,q),'literal pair Q invalid')
+     U=complement_path(S,q)
+     require(degree(U,5)==(2,)*5 and len(R-U)==6,'literal pair return')
++    pair11=dict(P=p,Q=q,target=code_of(U,5))
+     m=re.search(r'five directed triangles are\s+([0-9, .]+)\n',proof)
+     declared_tri={tuple(map(int,t)) for t in re.findall(r'\b\d{3}\b',m.group(1))}
+     actual_tri={tuple(sorted(t)) for t in directed_triangles(R,5)}
+@@ -127,7 +128,7 @@
+         row.update(intermediate_H=h,intermediate_aut_order=aut,intermediate_blue_fibre=blue)
+     result=dict(status='PASS',proof_table=table,
+                 intermediate_type_control=[dict(column_degree=c,H=h,aut_order=a,blue_fibre=b,labelled_columns=count) for (c,h,a,b),count in sorted(kinds.items())],original_typo_hostile=dict(P=bad,missing_arcs=missing),
+-                literal_pair_11=dict(P=p,Q=q,target=code_of(U,5)),
++                literal_pair_11=pair11,
+                 directed_triangles=sorted(actual_tri),triangle_pairs=sorted(pairs),
+                 certificate_vertices=sorted(cert),literal_intermediate=dict(code=sid,rows=masks,neighbors=sorted(neighbors)),
+                 audit_seven_vertex_example=dict(P=p7,Q=q7,target=code_of(U7,7)),

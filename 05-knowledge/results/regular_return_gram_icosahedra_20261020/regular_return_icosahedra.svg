@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650"><rect width="100%" height="100%" fill="#faf8f2"/>
+<text x="550" y="54" font-family="DejaVu Sans,sans-serif" font-size="29" fill="#24313f" text-anchor="middle">Two path-complements reveal two icosahedra</text>
+<text x="550" y="85" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#24313f" text-anchor="middle">Labelled regular tournaments on five vertices; distinct same-score returns</text>
+<text x="550" y="111" font-family="DejaVu Sans,sans-serif" font-size="15" fill="#7a4b31" text-anchor="middle">An auxiliary return graph, NOT the original merged tournament metagraph</text>
+<text x="285" y="160" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#285778" text-anchor="middle">Parity sheet 1</text>
+<line x1="414.69" y1="259.72" x2="325.08" y2="195.25" stroke="#285778" stroke-width="2"/>
+<line x1="244.92" y1="434.75" x2="155.31" y2="370.28" stroke="#285778" stroke-width="2"/>
+<line x1="389.92" y1="410.13" x2="325.08" y2="324.19" stroke="#285778" stroke-width="2"/>
+<line x1="180.08" y1="219.87" x2="180.08" y2="299.56" stroke="#285778" stroke-width="2"/>
+<line x1="180.08" y1="299.56" x2="325.08" y2="324.19" stroke="#285778" stroke-width="2"/>
+<line x1="389.92" y1="330.44" x2="389.92" y2="410.13" stroke="#285778" stroke-width="2"/>
+<line x1="244.92" y1="305.81" x2="389.92" y2="330.44" stroke="#285778" stroke-width="2"/>
+<line x1="414.69" y1="259.72" x2="325.08" y2="324.19" stroke="#285778" stroke-width="2"/>
+<line x1="244.92" y1="434.75" x2="285" y2="438.62" stroke="#285778" stroke-width="2"/>
+<line x1="244.92" y1="434.75" x2="180.08" y2="299.56" stroke="#285778" stroke-width="2"/>
+<line x1="244.92" y1="305.81" x2="155.31" y2="370.28" stroke="#285778" stroke-width="2"/>
+<line x1="285" y1="191.38" x2="414.69" y2="259.72" stroke="#285778" stroke-width="2"/>
+<line x1="285" y1="191.38" x2="325.08" y2="195.25" stroke="#285778" stroke-width="2"/>
+<line x1="414.69" y1="259.72" x2="389.92" y2="410.13" stroke="#285778" stroke-width="2"/>
+<line x1="414.69" y1="259.72" x2="389.92" y2="330.44" stroke="#285778" stroke-width="2"/>
+<line x1="244.92" y1="434.75" x2="325.08" y2="324.19" stroke="#285778" stroke-width="2"/>
+<line x1="180.08" y1="299.56" x2="155.31" y2="370.28" stroke="#285778" stroke-width="2"/>
+<line x1="389.92" y1="330.44" x2="325.08" y2="195.25" stroke="#285778" stroke-width="2"/>
+<line x1="244.92" y1="305.81" x2="325.08" y2="195.25" stroke="#285778" stroke-width="2"/>
+<line x1="285" y1="191.38" x2="180.08" y2="299.56" stroke="#285778" stroke-width="2"/>
+<line x1="285" y1="191.38" x2="180.08" y2="219.87" stroke="#285778" stroke-width="2"/>
+<line x1="180.08" y1="219.87" x2="155.31" y2="370.28" stroke="#285778" stroke-width="2"/>
+<line x1="155.31" y1="370.28" x2="285" y2="438.62" stroke="#285778" stroke-width="2"/>
+<line x1="389.92" y1="330.44" x2="285" y2="438.62" stroke="#285778" stroke-width="2"/>
+<line x1="244.92" y1="305.81" x2="285" y2="438.62" stroke="#285778" stroke-width="2"/>
+<line x1="244.92" y1="434.75" x2="389.92" y2="410.13" stroke="#285778" stroke-width="2"/>
+<line x1="389.92" y1="410.13" x2="285" y2="438.62" stroke="#285778" stroke-width="2"/>
+<line x1="244.92" y1="305.81" x2="180.08" y2="219.87" stroke="#285778" stroke-width="2"/>
+<line x1="285" y1="191.38" x2="325.08" y2="324.19" stroke="#285778" stroke-width="2"/>
+<line x1="180.08" y1="219.87" x2="325.08" y2="195.25" stroke="#285778" stroke-width="2"/>
+<ellipse cx="285" cy="191.38" rx="17" ry="13" fill="white" stroke="#285778" stroke-width="2"/>
+<text x="285" y="195.38" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">76</text>
+<ellipse cx="285" cy="438.62" rx="17" ry="13" fill="white" stroke="#285778" stroke-width="2"/>
+<text x="285" y="442.62" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">947</text>
+<ellipse cx="414.69" cy="259.72" rx="17" ry="13" fill="white" stroke="#285778" stroke-width="2"/>
+<text x="414.69" y="263.72" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">313</text>
+<ellipse cx="325.08" cy="195.25" rx="17" ry="13" fill="white" stroke="#285778" stroke-width="2"/>
+<text x="325.08" y="199.25" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">682</text>
+<ellipse cx="180.08" cy="219.87" rx="17" ry="13" fill="white" stroke="#285778" stroke-width="2"/>
+<text x="180.08" y="223.87" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">355</text>
+<ellipse cx="180.08" cy="299.56" rx="17" ry="13" fill="white" stroke="#285778" stroke-width="2"/>
+<text x="180.08" y="303.56" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">410</text>
+<ellipse cx="325.08" cy="324.19" rx="17" ry="13" fill="white" stroke="#285778" stroke-width="2"/>
+<text x="325.08" y="328.19" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">806</text>
+<ellipse cx="389.92" cy="330.44" rx="17" ry="13" fill="white" stroke="#285778" stroke-width="2"/>
+<text x="389.92" y="334.44" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">613</text>
+<ellipse cx="244.92" cy="305.81" rx="17" ry="13" fill="white" stroke="#285778" stroke-width="2"/>
+<text x="244.92" y="309.81" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">217</text>
+<ellipse cx="155.31" cy="370.28" rx="17" ry="13" fill="white" stroke="#285778" stroke-width="2"/>
+<text x="155.31" y="374.28" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">710</text>
+<ellipse cx="244.92" cy="434.75" rx="17" ry="13" fill="white" stroke="#285778" stroke-width="2"/>
+<text x="244.92" y="438.75" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">341</text>
+<ellipse cx="389.92" cy="410.13" rx="17" ry="13" fill="white" stroke="#285778" stroke-width="2"/>
+<text x="389.92" y="414.13" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">668</text>
+<text x="285" y="508" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#24313f" text-anchor="middle">12 vertices · 30 edges · 20 triangular faces</text>
+<text x="815" y="160" font-family="DejaVu Sans,sans-serif" font-size="21" fill="#277b73" text-anchor="middle">Parity sheet 0</text>
+<line x1="815" y1="191.38" x2="944.69" y2="259.72" stroke="#277b73" stroke-width="2"/>
+<line x1="774.92" y1="434.75" x2="685.31" y2="370.28" stroke="#277b73" stroke-width="2"/>
+<line x1="919.92" y1="410.13" x2="815" y2="438.62" stroke="#277b73" stroke-width="2"/>
+<line x1="815" y1="191.38" x2="855.08" y2="195.25" stroke="#277b73" stroke-width="2"/>
+<line x1="855.08" y1="195.25" x2="919.92" y2="330.44" stroke="#277b73" stroke-width="2"/>
+<line x1="774.92" y1="305.81" x2="685.31" y2="370.28" stroke="#277b73" stroke-width="2"/>
+<line x1="710.08" y1="299.56" x2="855.08" y2="324.19" stroke="#277b73" stroke-width="2"/>
+<line x1="685.31" y1="370.28" x2="815" y2="438.62" stroke="#277b73" stroke-width="2"/>
+<line x1="944.69" y1="259.72" x2="855.08" y2="324.19" stroke="#277b73" stroke-width="2"/>
+<line x1="919.92" y1="330.44" x2="815" y2="438.62" stroke="#277b73" stroke-width="2"/>
+<line x1="815" y1="191.38" x2="710.08" y2="299.56" stroke="#277b73" stroke-width="2"/>
+<line x1="774.92" y1="305.81" x2="710.08" y2="219.87" stroke="#277b73" stroke-width="2"/>
+<line x1="919.92" y1="410.13" x2="855.08" y2="324.19" stroke="#277b73" stroke-width="2"/>
+<line x1="774.92" y1="305.81" x2="855.08" y2="195.25" stroke="#277b73" stroke-width="2"/>
+<line x1="944.69" y1="259.72" x2="919.92" y2="330.44" stroke="#277b73" stroke-width="2"/>
+<line x1="774.92" y1="434.75" x2="815" y2="438.62" stroke="#277b73" stroke-width="2"/>
+<line x1="774.92" y1="305.81" x2="815" y2="438.62" stroke="#277b73" stroke-width="2"/>
+<line x1="919.92" y1="410.13" x2="919.92" y2="330.44" stroke="#277b73" stroke-width="2"/>
+<line x1="815" y1="191.38" x2="855.08" y2="324.19" stroke="#277b73" stroke-width="2"/>
+<line x1="855.08" y1="195.25" x2="710.08" y2="219.87" stroke="#277b73" stroke-width="2"/>
+<line x1="710.08" y1="299.56" x2="774.92" y2="434.75" stroke="#277b73" stroke-width="2"/>
+<line x1="710.08" y1="299.56" x2="685.31" y2="370.28" stroke="#277b73" stroke-width="2"/>
+<line x1="774.92" y1="434.75" x2="855.08" y2="324.19" stroke="#277b73" stroke-width="2"/>
+<line x1="710.08" y1="299.56" x2="710.08" y2="219.87" stroke="#277b73" stroke-width="2"/>
+<line x1="919.92" y1="410.13" x2="774.92" y2="434.75" stroke="#277b73" stroke-width="2"/>
+<line x1="944.69" y1="259.72" x2="855.08" y2="195.25" stroke="#277b73" stroke-width="2"/>
+<line x1="919.92" y1="410.13" x2="944.69" y2="259.72" stroke="#277b73" stroke-width="2"/>
+<line x1="774.92" y1="305.81" x2="919.92" y2="330.44" stroke="#277b73" stroke-width="2"/>
+<line x1="685.31" y1="370.28" x2="710.08" y2="219.87" stroke="#277b73" stroke-width="2"/>
+<line x1="815" y1="191.38" x2="710.08" y2="219.87" stroke="#277b73" stroke-width="2"/>
+<ellipse cx="815" cy="191.38" rx="17" ry="13" fill="white" stroke="#277b73" stroke-width="2"/>
+<text x="815" y="195.38" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">105</text>
+<ellipse cx="815" cy="438.62" rx="17" ry="13" fill="white" stroke="#277b73" stroke-width="2"/>
+<text x="815" y="442.62" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">918</text>
+<ellipse cx="944.69" cy="259.72" rx="17" ry="13" fill="white" stroke="#277b73" stroke-width="2"/>
+<text x="944.69" y="263.72" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">284</text>
+<ellipse cx="855.08" cy="195.25" rx="17" ry="13" fill="white" stroke="#277b73" stroke-width="2"/>
+<text x="855.08" y="199.25" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">467</text>
+<ellipse cx="710.08" cy="219.87" rx="17" ry="13" fill="white" stroke="#277b73" stroke-width="2"/>
+<text x="710.08" y="223.87" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">821</text>
+<ellipse cx="710.08" cy="299.56" rx="17" ry="13" fill="white" stroke="#277b73" stroke-width="2"/>
+<text x="710.08" y="303.56" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">326</text>
+<ellipse cx="855.08" cy="324.19" rx="17" ry="13" fill="white" stroke="#277b73" stroke-width="2"/>
+<text x="855.08" y="328.19" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">725</text>
+<ellipse cx="919.92" cy="330.44" rx="17" ry="13" fill="white" stroke="#277b73" stroke-width="2"/>
+<text x="919.92" y="334.44" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">697</text>
+<ellipse cx="774.92" cy="305.81" rx="17" ry="13" fill="white" stroke="#277b73" stroke-width="2"/>
+<text x="774.92" y="309.81" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">298</text>
+<ellipse cx="685.31" cy="370.28" rx="17" ry="13" fill="white" stroke="#277b73" stroke-width="2"/>
+<text x="685.31" y="374.28" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">739</text>
+<ellipse cx="774.92" cy="434.75" rx="17" ry="13" fill="white" stroke="#277b73" stroke-width="2"/>
+<text x="774.92" y="438.75" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">556</text>
+<ellipse cx="919.92" cy="410.13" rx="17" ry="13" fill="white" stroke="#277b73" stroke-width="2"/>
+<text x="919.92" y="414.13" font-family="DejaVu Sans,sans-serif" font-size="12" fill="#24313f" text-anchor="middle">202</text>
+<text x="815" y="508" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#24313f" text-anchor="middle">12 vertices · 30 edges · 20 triangular faces</text>
+<text x="550" y="553" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#24313f" text-anchor="middle">Each node: 15 Hamiltonian paths and 2 return presentations to each neighbour.</text>
+<text x="550" y="585" font-family="DejaVu Sans,sans-serif" font-size="17" fill="#24313f" text-anchor="middle">Each triangular face corresponds to an actual intermediate tournament.</text>
+<text x="550" y="622" font-family="DejaVu Sans,sans-serif" font-size="16" fill="#7a4b31" text-anchor="middle">All 24 states belong to ONE ordinary tournament isomorphism class.</text>
+</svg>

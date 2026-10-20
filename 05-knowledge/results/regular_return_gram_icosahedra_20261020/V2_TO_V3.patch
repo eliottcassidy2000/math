@@ -1,0 +1,92 @@
+--- ready_package/README.md
++++ ready_package_v3_1/README.md
+@@ -1,12 +1,14 @@
+ # Regular score-fibre transport and icosahedral face incidence
+ 
+-**Status: independently audited and ready.** All-order statements are proved in their specified labelled score-fibre setting. The regular order-five return graph and incidence geometry are proved by structural arguments and explicit finite certificates.
++**Status: corrected V3, rechecked after a literal path-table typo was caught before publication.** All-order statements are proved in their specified labelled score-fibre setting. The regular order-five return graph and incidence geometry are proved by structural arguments and explicit finite certificates.
+ 
+ ## Main results
+ 
+ - `regular_return_theorems.md`: the same-endpoint return criterion; sharp six-edge support and block-interchange classification; the two-icosahedron graph at order five; exact endpoint formulas for local Hamiltonian-path count changes.
+ - `gram_return_addendum.md`: the literal incidence factorization `W=BB^T`, with raw Hamiltonian-path counts on the diagonal; actual intermediate tournaments representing all forty icosahedral faces; private-column/face factorization, two sampling rules, and exact finite spectra.
+-- `AUDIT.md`: independent proof review, finite-check universes, reproduction instructions, additional precursor attribution, and precise scope boundaries.
++- `AUDIT.md`: amended independent proof review, finite-check universes, reproduction instructions, additional precursor attribution, and precise scope boundaries.
++- `QUOTIENT_STATIONARY_MASS.md`: the reversible regular-return walk and its exact ordinary/merged stationary masses h and kappa h.
++- `CORRECTION_HISTORY_V3.md`: the displayed-word correction, why the initial audit missed it, and the source-aware regression checks.
+ 
+ ## Computation
+ 
+@@ -14,7 +16,13 @@
+ 
+ `independent_audit.py` and `independent_gram_audit.py` use a separate arc-set/literal-word implementation. The second imports the first. Their JSON receipts and identical optimized-mode receipts are included.
+ 
+-`FROZEN_SHA256SUMS` preserves the original proof/code hashes and staging paths. `PUBLICATION_SHA256SUMS` provides package-relative hashes.
++`FROZEN_SHA256SUMS` preserves historical V1/V2 proof/code hashes and staging paths. `PUBLICATION_SHA256SUMS_V3_1` verifies the current corrected package. V1 and V2 remain separately preserved; `V2_TO_V3.patch` records the changed prose exactly.
++
++`check_literal_examples.py` reads the current proof examples directly and verifies them against literal paths and tournament codes, including the original erroneous word as a hostile control.
++
++## Figure
++
++[The two labelled icosahedral components](regular_return_icosahedra.svg) is a projected drawing of the derived labelled return graph, not the original merged metagraph or a unit-distance embedding. All 24 displayed states belong to one ordinary tournament isomorphism class.
+ 
+ ## Boundaries
+ 
+--- ready_package/regular_return_theorems.md
++++ ready_package_v3_1/regular_return_theorems.md
+@@ -138,7 +138,7 @@
+ | P | Q in K_P(R), with the same endpoints |
+ |---|---|
+ | (0,1,2,3,4) | P only |
+-| (0,1,3,4,2) | P only |
++| (0,2,4,1,3) | P only |
+ | (0,2,3,4,1) | P; (0,3,4,2,1); (0,4,2,3,1) |
+ 
+ Rotation gives H=5*3=15 and M=5*(1+1+3)=25. The five neighbours are a single stabilizer orbit, so the ten nonidentity presentations distribute equally, two per neighbour. The path-orbit mass is H/|Aut|=3; the pair-presentation orbit mass is M/|Aut|=5. They are different objects.
+--- ready_package/AUDIT.md
++++ ready_package_v3_1/AUDIT.md
+@@ -1,14 +1,14 @@
+ # Independent audit: regular two-complement transport and face incidence
+ 
+-**Verdict: PASS; READY, with no required mathematical fixes.**
++**Verdict: PASS for corrected V3. The initial literal-table audit error is corrected and recorded in `CORRECTION_HISTORY_V3.md`.**
+ 
+-The frozen endpoint/icosahedron packet and the separately frozen Gram addendum are valid in their stated scopes. The all-order assertions have direct proofs; the order-five classification has a structural proof and an explicit finite adjacency certificate. Independent finite checks are supporting evidence, not substitutes for the all-order arguments. No all-order component classification, ordinary Hamiltonian-path spectrum closure, or black-metagraph connectivity result follows.
++The corrected V3 endpoint/icosahedron packet and the unchanged Gram addendum are valid in their stated scopes. The V1/V2 table contained one invalid displayed path, missed by the initial audit and caught by direct root inspection before publication. The all-order assertions have direct proofs; the order-five classification has a structural proof and an explicit finite adjacency certificate. Independent finite checks are supporting evidence, not substitutes for the all-order arguments. No all-order component classification, ordinary Hamiltonian-path spectrum closure, or black-metagraph connectivity result follows.
+ 
+ ## 1. Frozen material and scope
+ 
+ Audited proofs:
+ 
+-- `regular_return_theorems.md`, SHA256 `ea9c2b020b1ed632682b023873806069153fd0eae8655038a23e0955d7925729`.
++- `regular_return_theorems.md` (corrected V3), SHA256 `db2bd384ca2ad4251870723f2e8cea7a872c65ec487ac10fb0a35e84bbef001b`. The original V1/V2 hash was `ea9c2b020b1ed632682b023873806069153fd0eae8655038a23e0955d7925729`.
+ - `gram_return_addendum.md`, SHA256 `52532f05483cd2b6cf437ea28e6179a2449e3cfa929a2689fbef98be73209046`.
+ 
+ Audited producer programs:
+@@ -16,7 +16,7 @@
+ - `check_regular_transport.py`, SHA256 `72f7b7d10ac6464e90f5f3e665f95f3bec67429e215cc38bf861f238cbc67700`.
+ - `check_gram_return.py`, SHA256 `15852575f9190de42b24a63f3e44b3301a1475a3bab5593d5dfe98931b50ce69`.
+ 
+-All four original frozen hashes were verified after the independent checks. Neither proof nor producer program was modified. The original `FROZEN_SHA256SUMS` records the original staging paths; `PUBLICATION_SHA256SUMS` supplies package-relative verification paths.
++The original frozen files and V1/V2 packages remain preserved unchanged. The V3 theorem changes only the mistyped table row; the Gram addendum and both producer programs remain byte-identical. `FROZEN_SHA256SUMS` is a historical record of original staging paths and hashes, not the current V3 package checksum. Use `PUBLICATION_SHA256SUMS_V3_1` for the corrected package.
+ 
+ The objects are labelled tournaments, raw Hamiltonian vertex words, and a graph derived from **two** path-complement steps with an unrestricted intermediate tournament. Path-pair multiplicities, graph degrees, raw H, and automorphism-normalized path counts remain separate throughout.
+ 
+@@ -42,7 +42,7 @@
+ 
+ For two regular five-tournaments, an eight-edge disagreement is impossible: complementing one would produce a balanced nonempty two-edge disagreement, which cannot occur in a tournament. A nontrivial return therefore has six changed arcs. Its support consists of two edge-disjoint directed triangles meeting in one vertex. The displayed legal block exchange and its rotations realize all five possibilities from a carousel.
+ 
+-All twelve codes, all rows of the displayed icosahedral adjacency certificate, both parity components, and the claimed converse-antipode relation were independently verified. Every vertex has five neighbours, 15 identity presentations, ten nonidentity presentations, and total presentation mass 25. Every neighbour has weight two. The three starting-at-zero path-orbit representatives and their endpoint-matching continuations are correct.
++All twelve codes, all rows of the displayed icosahedral adjacency certificate, both parity components, and the claimed converse-antipode relation were independently verified. Every vertex has five neighbours, 15 identity presentations, ten nonidentity presentations, and total presentation mass 25. Every neighbour has weight two. The corrected V3 table has now been parsed directly from the proof and checked against literal enumeration. The initial audit incorrectly endorsed the V1/V2 table without comparing its displayed words to the enumerated receipt. The invalid word `(0,1,3,4,2)` is replaced by `(0,2,4,1,3)`, whose only matching-endpoint continuation is itself. The counts and all subsequent conclusions remain unchanged.
+ 
+ The conclusion is precisely two labelled icosahedra. The ordinary-isomorphism quotient has one vertex. It is not an identification of the original tournament metagraph with an icosahedron.
+ 
+@@ -113,6 +113,8 @@
+ 
+ Compare each replay with its corresponding supplied JSON receipt.
+ 
++The V3 source-aware regression checker `check_literal_examples.py` additionally parses and validates the proof's displayed path table, explicit return pair, triangle lists and pairs, all certificate codes, the Gram addendum's explicit intermediate masks/code/cycle/neighbours, the audit's seven-vertex example, and the SVG's 24 labels and 60 edges. It tests the original mistyped word as a hostile control. See its receipts and `CORRECTION_HISTORY_V3.md`.
++
+ ## 9. Inheritance and non-consequences
+ 
+ The frozen packet correctly credits `spectrum_basins_20261020e/regular.md` for classical score-fibre connectivity, the cycle-to-triangle compiler, the regular order-seven census, one-step endpoint defects, and the fixed-label parity boundary. It does not promote these to new claims. The inherited H-values 171, 175, and 189 correctly refute an intermediate-value inference from score-fibre connectivity and increment gcd two.

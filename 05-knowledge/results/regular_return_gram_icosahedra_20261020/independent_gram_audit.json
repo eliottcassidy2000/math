@@ -1,0 +1,86 @@
+{
+  "A_characteristic_coefficients": [
+    1,
+    0,
+    -30,
+    -40,
+    255,
+    576,
+    -580,
+    -2640,
+    -1425,
+    3200,
+    5250,
+    3000,
+    625
+  ],
+  "W_characteristic_coefficients": [
+    1,
+    -180,
+    14730,
+    -724820,
+    23891655,
+    -555888168,
+    9363639020,
+    -115079350920,
+    1024386028575,
+    -6442418056100,
+    27177604574250,
+    -69063882478500,
+    79968390165625
+  ],
+  "all_score_fibre_Gram_checks": [
+    {
+      "Hamilton_path_incidences": 1,
+      "n": 1,
+      "ordered_same_score_pairs": 1,
+      "same_score_return_presentations": 1,
+      "score_fibres": 1,
+      "tournaments": 1
+    },
+    {
+      "Hamilton_path_incidences": 2,
+      "n": 2,
+      "ordered_same_score_pairs": 2,
+      "same_score_return_presentations": 2,
+      "score_fibres": 2,
+      "tournaments": 2
+    },
+    {
+      "Hamilton_path_incidences": 12,
+      "n": 3,
+      "ordered_same_score_pairs": 10,
+      "same_score_return_presentations": 12,
+      "score_fibres": 7,
+      "tournaments": 8
+    },
+    {
+      "Hamilton_path_incidences": 192,
+      "n": 4,
+      "ordered_same_score_pairs": 152,
+      "same_score_return_presentations": 192,
+      "score_fibres": 38,
+      "tournaments": 64
+    },
+    {
+      "Hamilton_path_incidences": 7680,
+      "n": 5,
+      "ordered_same_score_pairs": 7736,
+      "same_score_return_presentations": 9600,
+      "score_fibres": 291,
+      "tournaments": 1024
+    }
+  ],
+  "degree_counts": {
+    "1": 240,
+    "3": 40
+  },
+  "full_intermediate_reconstructions": 40,
+  "incidence_factorization_and_stochastic_matrix_entries": 576,
+  "independent_audit_dependency_sha256": "fc1cef9cfbc91417b180e708887cdfd75c41d713ee32adc90170b53d39e0be52",
+  "orbit_compression": "25",
+  "reconstructed_graph_faces": 40,
+  "regular5_intermediate_columns": 280,
+  "source_sha256": "cf8e1f5e369ff8b93f31517517373d9487712fd7eb8027bae374bc53efe6f4a3",
+  "status": "PASS"
+}

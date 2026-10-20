@@ -1,0 +1,519 @@
+{
+  "formulas": [
+    {
+      "arc_checks": 0,
+      "n": 1,
+      "tournaments": 1,
+      "triangle_component_checks": 0
+    },
+    {
+      "arc_checks": 2,
+      "n": 2,
+      "tournaments": 2,
+      "triangle_component_checks": 0
+    },
+    {
+      "arc_checks": 24,
+      "n": 3,
+      "tournaments": 8,
+      "triangle_component_checks": 2
+    },
+    {
+      "arc_checks": 384,
+      "n": 4,
+      "tournaments": 64,
+      "triangle_component_checks": 64
+    },
+    {
+      "arc_checks": 10240,
+      "n": 5,
+      "tournaments": 1024,
+      "triangle_component_checks": 2560
+    }
+  ],
+  "independent_source_sha256": "fc1cef9cfbc91417b180e708887cdfd75c41d713ee32adc90170b53d39e0be52",
+  "path_pair_geometry": {
+    "equality_shape_witnesses": {
+      "directed_six_cycle": {
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "Q": [
+          0,
+          3,
+          4,
+          1,
+          2,
+          5
+        ],
+        "changed_arcs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            2
+          ]
+        ],
+        "n": 6
+      },
+      "two_triangles_shared_vertex": {
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "Q": [
+          0,
+          2,
+          3,
+          1,
+          4
+        ],
+        "changed_arcs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "n": 5
+      }
+    },
+    "rows": [
+      {
+        "compatible_pairs": 1,
+        "matching_endpoint_pairs": 1,
+        "n": 1,
+        "q_universe": "all permutations",
+        "rejected_reverse_shared_edges": 0,
+        "six_arc_pairs": 0,
+        "support_histogram": {
+          "0": 1
+        }
+      },
+      {
+        "compatible_pairs": 1,
+        "matching_endpoint_pairs": 1,
+        "n": 2,
+        "q_universe": "all permutations",
+        "rejected_reverse_shared_edges": 1,
+        "six_arc_pairs": 0,
+        "support_histogram": {
+          "0": 1
+        }
+      },
+      {
+        "compatible_pairs": 3,
+        "matching_endpoint_pairs": 1,
+        "n": 3,
+        "q_universe": "all permutations",
+        "rejected_reverse_shared_edges": 3,
+        "six_arc_pairs": 0,
+        "support_histogram": {
+          "0": 1
+        }
+      },
+      {
+        "compatible_pairs": 11,
+        "matching_endpoint_pairs": 1,
+        "n": 4,
+        "q_universe": "all permutations",
+        "rejected_reverse_shared_edges": 13,
+        "six_arc_pairs": 0,
+        "support_histogram": {
+          "0": 1
+        }
+      },
+      {
+        "compatible_pairs": 53,
+        "matching_endpoint_pairs": 3,
+        "n": 5,
+        "q_universe": "all permutations",
+        "rejected_reverse_shared_edges": 67,
+        "six_arc_pairs": 2,
+        "support_histogram": {
+          "0": 1,
+          "6": 2
+        }
+      },
+      {
+        "compatible_pairs": 309,
+        "matching_endpoint_pairs": 11,
+        "n": 6,
+        "q_universe": "all permutations",
+        "rejected_reverse_shared_edges": 411,
+        "six_arc_pairs": 7,
+        "support_histogram": {
+          "0": 1,
+          "6": 7,
+          "8": 1,
+          "10": 2
+        }
+      },
+      {
+        "compatible_pairs": 2119,
+        "matching_endpoint_pairs": 53,
+        "n": 7,
+        "q_universe": "all permutations",
+        "rejected_reverse_shared_edges": 2921,
+        "six_arc_pairs": 16,
+        "support_histogram": {
+          "0": 1,
+          "6": 16,
+          "8": 6,
+          "10": 20,
+          "12": 10
+        }
+      },
+      {
+        "compatible_pairs": 309,
+        "matching_endpoint_pairs": 309,
+        "n": 8,
+        "q_universe": "all matching-endpoint permutations",
+        "rejected_reverse_shared_edges": 411,
+        "six_arc_pairs": 30,
+        "support_histogram": {
+          "0": 1,
+          "6": 30,
+          "8": 19,
+          "10": 93,
+          "12": 98,
+          "14": 68
+        }
+      },
+      {
+        "compatible_pairs": 2119,
+        "matching_endpoint_pairs": 2119,
+        "n": 9,
+        "q_universe": "all matching-endpoint permutations",
+        "rejected_reverse_shared_edges": 2921,
+        "six_arc_pairs": 50,
+        "support_histogram": {
+          "0": 1,
+          "6": 50,
+          "8": 45,
+          "10": 292,
+          "12": 501,
+          "14": 730,
+          "16": 500
+        }
+      },
+      {
+        "compatible_pairs": 16687,
+        "matching_endpoint_pairs": 16687,
+        "n": 10,
+        "q_universe": "all matching-endpoint permutations",
+        "rejected_reverse_shared_edges": 23633,
+        "six_arc_pairs": 77,
+        "support_histogram": {
+          "0": 1,
+          "6": 77,
+          "8": 90,
+          "10": 728,
+          "12": 1772,
+          "14": 4050,
+          "16": 5795,
+          "18": 4174
+        }
+      }
+    ]
+  },
+  "regular5": {
+    "H": 15,
+    "aut": 5,
+    "components": [
+      {
+        "distance_shells": {
+          "0": 1,
+          "1": 5,
+          "2": 5,
+          "3": 1
+        },
+        "representative": 76,
+        "size": 12
+      },
+      {
+        "distance_shells": {
+          "0": 1,
+          "1": 5,
+          "2": 5,
+          "3": 1
+        },
+        "representative": 105,
+        "size": 12
+      }
+    ],
+    "neighbors_per_vertex": 5,
+    "nonloop_edges_total": 60,
+    "states": 24,
+    "total_presentation_mass": 25,
+    "weight_per_neighbor": 2
+  },
+  "regular7": [
+    {
+      "H": 175,
+      "rows": [
+        14,
+        28,
+        56,
+        112,
+        97,
+        67,
+        7
+      ],
+      "triangle_splits": [
+        {
+          "linear": 0,
+          "multiplicity": 7,
+          "quadratic": 0
+        },
+        {
+          "linear": 4,
+          "multiplicity": 7,
+          "quadratic": -8
+        }
+      ]
+    },
+    {
+      "H": 171,
+      "rows": [
+        26,
+        28,
+        41,
+        112,
+        100,
+        67,
+        7
+      ],
+      "triangle_splits": [
+        {
+          "linear": -4,
+          "multiplicity": 3,
+          "quadratic": 8
+        },
+        {
+          "linear": 0,
+          "multiplicity": 9,
+          "quadratic": 0
+        },
+        {
+          "linear": 24,
+          "multiplicity": 2,
+          "quadratic": -6
+        }
+      ]
+    },
+    {
+      "H": 189,
+      "rows": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ],
+      "triangle_splits": [
+        {
+          "linear": -24,
+          "multiplicity": 14,
+          "quadratic": 6
+        }
+      ]
+    }
+  ],
+  "regular_support_witnesses": [
+    {
+      "P": [
+        0,
+        2,
+        3,
+        4,
+        1
+      ],
+      "Q": [
+        0,
+        3,
+        4,
+        2,
+        1
+      ],
+      "changed_arcs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "n": 5,
+      "shape": "two_triangles_shared_vertex",
+      "source_code": 947,
+      "target_code": 613
+    },
+    {
+      "P": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        2
+      ],
+      "Q": [
+        0,
+        1,
+        5,
+        6,
+        3,
+        4,
+        2
+      ],
+      "changed_arcs": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "n": 7,
+      "shape": "directed_six_cycle",
+      "source_code": 2079175,
+      "target_code": 1698631
+    },
+    {
+      "P": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        2
+      ],
+      "Q": [
+        0,
+        1,
+        6,
+        3,
+        4,
+        5,
+        2
+      ],
+      "changed_arcs": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          2
+        ]
+      ],
+      "n": 7,
+      "shape": "two_triangles_shared_vertex",
+      "source_code": 2079175,
+      "target_code": 908615
+    }
+  ],
+  "status": "PASS"
+}
