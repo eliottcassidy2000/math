@@ -1,0 +1,490 @@
+{
+  "all_invariant_quotients": [
+    {
+      "n": 0,
+      "all_subspaces": 1,
+      "invariant_subspaces": 1,
+      "checks": [
+        {
+          "n": 0,
+          "dim_U": 0,
+          "classes": 1,
+          "types": 1,
+          "determinant": 1,
+          "total_odd_valuations": {
+            "3": 0,
+            "5": 0
+          }
+        }
+      ]
+    },
+    {
+      "n": 1,
+      "all_subspaces": 1,
+      "invariant_subspaces": 1,
+      "checks": [
+        {
+          "n": 1,
+          "dim_U": 0,
+          "classes": 1,
+          "types": 1,
+          "determinant": 1,
+          "total_odd_valuations": {
+            "3": 0,
+            "5": 0
+          }
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "all_subspaces": 2,
+      "invariant_subspaces": 2,
+      "checks": [
+        {
+          "n": 2,
+          "dim_U": 0,
+          "classes": 2,
+          "types": 1,
+          "determinant": 1,
+          "total_odd_valuations": {
+            "3": 0,
+            "5": 0
+          }
+        },
+        {
+          "n": 2,
+          "dim_U": 1,
+          "classes": 1,
+          "types": 1,
+          "determinant": 1,
+          "total_odd_valuations": {
+            "3": 0,
+            "5": 0
+          }
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "all_subspaces": 16,
+      "invariant_subspaces": 4,
+      "checks": [
+        {
+          "n": 3,
+          "dim_U": 0,
+          "classes": 8,
+          "types": 2,
+          "determinant": -4,
+          "total_odd_valuations": {
+            "3": 1,
+            "5": 0
+          }
+        },
+        {
+          "n": 3,
+          "dim_U": 1,
+          "classes": 4,
+          "types": 2,
+          "determinant": -4,
+          "total_odd_valuations": {
+            "3": 1,
+            "5": 0
+          }
+        },
+        {
+          "n": 3,
+          "dim_U": 2,
+          "classes": 2,
+          "types": 1,
+          "determinant": 1,
+          "total_odd_valuations": {
+            "3": 1,
+            "5": 0
+          }
+        },
+        {
+          "n": 3,
+          "dim_U": 3,
+          "classes": 1,
+          "types": 1,
+          "determinant": 1,
+          "total_odd_valuations": {
+            "3": 1,
+            "5": 0
+          }
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "all_subspaces": 2825,
+      "invariant_subspaces": 9,
+      "checks": [
+        {
+          "n": 4,
+          "dim_U": 0,
+          "classes": 64,
+          "types": 4,
+          "determinant": 256,
+          "total_odd_valuations": {
+            "3": 2,
+            "5": 0
+          }
+        },
+        {
+          "n": 4,
+          "dim_U": 1,
+          "classes": 32,
+          "types": 3,
+          "determinant": -32,
+          "total_odd_valuations": {
+            "3": 1,
+            "5": 0
+          }
+        },
+        {
+          "n": 4,
+          "dim_U": 2,
+          "classes": 16,
+          "types": 3,
+          "determinant": 32,
+          "total_odd_valuations": {
+            "3": 2,
+            "5": 0
+          }
+        },
+        {
+          "n": 4,
+          "dim_U": 3,
+          "classes": 8,
+          "types": 2,
+          "determinant": -4,
+          "total_odd_valuations": {
+            "3": 1,
+            "5": 0
+          }
+        },
+        {
+          "n": 4,
+          "dim_U": 3,
+          "classes": 8,
+          "types": 3,
+          "determinant": 32,
+          "total_odd_valuations": {
+            "3": 2,
+            "5": 0
+          }
+        },
+        {
+          "n": 4,
+          "dim_U": 3,
+          "classes": 8,
+          "types": 2,
+          "determinant": -4,
+          "total_odd_valuations": {
+            "3": 1,
+            "5": 0
+          }
+        },
+        {
+          "n": 4,
+          "dim_U": 4,
+          "classes": 4,
+          "types": 2,
+          "determinant": -4,
+          "total_odd_valuations": {
+            "3": 1,
+            "5": 0
+          }
+        },
+        {
+          "n": 4,
+          "dim_U": 5,
+          "classes": 2,
+          "types": 1,
+          "determinant": 1,
+          "total_odd_valuations": {
+            "3": 1,
+            "5": 0
+          }
+        },
+        {
+          "n": 4,
+          "dim_U": 6,
+          "classes": 1,
+          "types": 1,
+          "determinant": 1,
+          "total_odd_valuations": {
+            "3": 1,
+            "5": 0
+          }
+        }
+      ]
+    }
+  ],
+  "tournament_and_switching_controls": [
+    {
+      "n": 0,
+      "dim_U": 0,
+      "classes": 1,
+      "types": 1,
+      "determinant": 1,
+      "total_odd_valuations": {
+        "3": 0,
+        "5": 0
+      },
+      "maximum_containment_matching": 1,
+      "source_stabilizer_orders": [
+        1
+      ],
+      "target_stabilizer_orders": [
+        1
+      ],
+      "kind": "tournaments"
+    },
+    {
+      "n": 0,
+      "dim_U": 0,
+      "classes": 1,
+      "types": 1,
+      "determinant": 1,
+      "total_odd_valuations": {
+        "3": 0,
+        "5": 0
+      },
+      "maximum_containment_matching": 1,
+      "source_stabilizer_orders": [
+        1
+      ],
+      "target_stabilizer_orders": [
+        1
+      ],
+      "kind": "switching"
+    },
+    {
+      "n": 1,
+      "dim_U": 0,
+      "classes": 1,
+      "types": 1,
+      "determinant": 1,
+      "total_odd_valuations": {
+        "3": 0,
+        "5": 0
+      },
+      "maximum_containment_matching": 1,
+      "source_stabilizer_orders": [
+        1
+      ],
+      "target_stabilizer_orders": [
+        1
+      ],
+      "kind": "tournaments"
+    },
+    {
+      "n": 1,
+      "dim_U": 0,
+      "classes": 1,
+      "types": 1,
+      "determinant": 1,
+      "total_odd_valuations": {
+        "3": 0,
+        "5": 0
+      },
+      "maximum_containment_matching": 1,
+      "source_stabilizer_orders": [
+        1
+      ],
+      "target_stabilizer_orders": [
+        1
+      ],
+      "kind": "switching"
+    },
+    {
+      "n": 2,
+      "dim_U": 0,
+      "classes": 2,
+      "types": 1,
+      "determinant": 1,
+      "total_odd_valuations": {
+        "3": 0,
+        "5": 0
+      },
+      "maximum_containment_matching": 1,
+      "source_stabilizer_orders": [
+        1
+      ],
+      "target_stabilizer_orders": [
+        2
+      ],
+      "kind": "tournaments"
+    },
+    {
+      "n": 2,
+      "dim_U": 1,
+      "classes": 1,
+      "types": 1,
+      "determinant": 1,
+      "total_odd_valuations": {
+        "3": 0,
+        "5": 0
+      },
+      "maximum_containment_matching": 1,
+      "source_stabilizer_orders": [
+        2
+      ],
+      "target_stabilizer_orders": [
+        2
+      ],
+      "kind": "switching"
+    },
+    {
+      "n": 3,
+      "dim_U": 0,
+      "classes": 8,
+      "types": 2,
+      "determinant": -4,
+      "total_odd_valuations": {
+        "3": 1,
+        "5": 0
+      },
+      "maximum_containment_matching": 2,
+      "source_stabilizer_orders": [
+        1,
+        3
+      ],
+      "target_stabilizer_orders": [
+        6,
+        2
+      ],
+      "kind": "tournaments"
+    },
+    {
+      "n": 3,
+      "dim_U": 2,
+      "classes": 2,
+      "types": 1,
+      "determinant": 1,
+      "total_odd_valuations": {
+        "3": 1,
+        "5": 0
+      },
+      "maximum_containment_matching": 1,
+      "source_stabilizer_orders": [
+        3
+      ],
+      "target_stabilizer_orders": [
+        6
+      ],
+      "kind": "switching"
+    },
+    {
+      "n": 4,
+      "dim_U": 0,
+      "classes": 64,
+      "types": 4,
+      "determinant": 256,
+      "total_odd_valuations": {
+        "3": 2,
+        "5": 0
+      },
+      "maximum_containment_matching": 4,
+      "source_stabilizer_orders": [
+        1,
+        3,
+        1,
+        3
+      ],
+      "target_stabilizer_orders": [
+        24,
+        2,
+        6,
+        8
+      ],
+      "kind": "tournaments"
+    },
+    {
+      "n": 4,
+      "dim_U": 3,
+      "classes": 8,
+      "types": 2,
+      "determinant": -4,
+      "total_odd_valuations": {
+        "3": 1,
+        "5": 0
+      },
+      "maximum_containment_matching": 2,
+      "source_stabilizer_orders": [
+        4,
+        12
+      ],
+      "target_stabilizer_orders": [
+        24,
+        8
+      ],
+      "kind": "switching"
+    },
+    {
+      "n": 5,
+      "dim_U": 0,
+      "classes": 1024,
+      "types": 12,
+      "determinant": 562949953421312,
+      "total_odd_valuations": {
+        "3": 4,
+        "5": 1
+      },
+      "maximum_containment_matching": 11,
+      "source_stabilizer_orders": [
+        1,
+        3,
+        1,
+        3,
+        1,
+        1,
+        1,
+        3,
+        1,
+        3,
+        1,
+        5
+      ],
+      "target_stabilizer_orders": [
+        120,
+        4,
+        6,
+        24,
+        2,
+        8,
+        2,
+        2,
+        2,
+        12,
+        2,
+        8
+      ],
+      "kind": "tournaments"
+    },
+    {
+      "n": 5,
+      "dim_U": 4,
+      "classes": 64,
+      "types": 2,
+      "determinant": -8,
+      "total_odd_valuations": {
+        "3": 1,
+        "5": 1
+      },
+      "maximum_containment_matching": 1,
+      "source_stabilizer_orders": [
+        5,
+        3
+      ],
+      "target_stabilizer_orders": [
+        120,
+        8
+      ],
+      "kind": "switching"
+    }
+  ]
+}

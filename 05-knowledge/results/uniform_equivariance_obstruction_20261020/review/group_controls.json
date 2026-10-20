@@ -1,0 +1,55 @@
+{
+  "cycle_pair_controls": [
+    {
+      "n": 3,
+      "ordered_overlap_one_pairs": 0,
+      "ordered_overlap_two_pairs": 0
+    },
+    {
+      "n": 4,
+      "ordered_overlap_one_pairs": 0,
+      "ordered_overlap_two_pairs": 48
+    },
+    {
+      "n": 5,
+      "ordered_overlap_one_pairs": 120,
+      "ordered_overlap_two_pairs": 240
+    },
+    {
+      "n": 6,
+      "ordered_overlap_one_pairs": 720,
+      "ordered_overlap_two_pairs": 720
+    },
+    {
+      "n": 7,
+      "ordered_overlap_one_pairs": 2520,
+      "ordered_overlap_two_pairs": 1680
+    }
+  ],
+  "source_involution_controls": [
+    {
+      "n": 2,
+      "nontrivial_involutions": 1,
+      "fixed_point_involutions": 0,
+      "switching_classes_with_double_transposition": 0
+    },
+    {
+      "n": 3,
+      "nontrivial_involutions": 3,
+      "fixed_point_involutions": 3,
+      "switching_classes_with_double_transposition": 0
+    },
+    {
+      "n": 4,
+      "nontrivial_involutions": 9,
+      "fixed_point_involutions": 6,
+      "switching_classes_with_double_transposition": 8
+    },
+    {
+      "n": 5,
+      "nontrivial_involutions": 25,
+      "fixed_point_involutions": 25,
+      "switching_classes_with_double_transposition": 0
+    }
+  ]
+}
