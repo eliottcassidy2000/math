@@ -1,0 +1,50 @@
+{
+  "destination": "05-knowledge/results/collatz_local_prime_power_gates_20261020",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 982,
+      "sha256": "a780611896559d24c30185365f6a0b6a66b60792376972ffce49eff04d738a22"
+    },
+    {
+      "path": "LOCAL_CARRY_AND_PRIME_POWER_GATES.md",
+      "bytes": 12291,
+      "sha256": "526f318af2fde233683b4412514d8cda00c5b39a1b2d2d1589cca78924298240"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 1353,
+      "sha256": "a3859a2c5107fe8eed45a6d0cc7f94a404cf692157e1032aed7b6604abe201c9"
+    },
+    {
+      "path": "verify_local_integrality.py",
+      "bytes": 6848,
+      "sha256": "bc6119b8975cefc1d525be8945d88a537019c7ed0323064fdf82ad28d015775e"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 2377,
+      "sha256": "e8d88699980b88a98e5fd2a7936ff940301f4a42a20772ac63e2cf6c23785d3c"
+    },
+    {
+      "path": "receipt.optimized.json",
+      "bytes": 2377,
+      "sha256": "e8d88699980b88a98e5fd2a7936ff940301f4a42a20772ac63e2cf6c23785d3c"
+    },
+    {
+      "path": "independent_controls.py",
+      "bytes": 4830,
+      "sha256": "d910e2e4d9b5a5f4739bca05750563c5754d7c3b4648e93b61a6bf3b533dbfd7"
+    },
+    {
+      "path": "independent-controls.json",
+      "bytes": 1171,
+      "sha256": "3dc46b3ebc871c651b3597eec7468fa6264a861e472d6a6deae859c15a790a31"
+    },
+    {
+      "path": "independent-controls.optimized.json",
+      "bytes": 1171,
+      "sha256": "3dc46b3ebc871c651b3597eec7468fa6264a861e472d6a6deae859c15a790a31"
+    }
+  ]
+}

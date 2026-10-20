@@ -1,0 +1,31 @@
+{
+  "checks": {
+    "affine_composition": 2026,
+    "all_period_two_ones": 62499,
+    "arbitrary_rotation_content": 16298,
+    "balanced_edge_smooth": 6280,
+    "bounded_swap_gcd_gate": 6280,
+    "clean_edge_bound": 1032,
+    "core_width_bound": 2026,
+    "direct_swap_no_integral_abs_D_gt_1": 1,
+    "exception_cut_removed": 25120,
+    "five_term_edge": 6280,
+    "rational_fixed_point": 2026,
+    "rotation_affine_identity": 16298,
+    "single_core_exact": 2026,
+    "two_one_positive_exclusion": 62496,
+    "two_swap_perturbation": 12560
+  },
+  "direct_swap_digest_sha256": "2ce02a2215f9f06d26044abaeb6cfccba5a6f1d89671877baa7e95d68fdb10ce",
+  "direct_swap_integral_abs_D_gt_1": 0,
+  "direct_swap_nonunit": 12924,
+  "direct_swap_occurrences": 175668,
+  "status": "PASS",
+  "total_checks": 223248,
+  "universes": {
+    "all_words": "nonconstant binary words 2<=q<=10, all rotation shifts",
+    "direct_swaps": "all directed unequal cyclic swaps of coprime mechanical words, 3<=q<=120, repeated outputs retained",
+    "two_ones": "3<=q<=500, every 1<=d<=floor(q/2)",
+    "two_swaps": "all two-successive unequal cyclic swaps of coprime mechanical words, 3<=q<=12"
+  }
+}

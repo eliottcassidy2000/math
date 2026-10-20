@@ -1,0 +1,87 @@
+{
+  "boundary": "The q<=400 absence is finite evidence only. The all-q one-swap conjecture remains OPEN; the two-one formula and the other algebraic results have all-length proofs.",
+  "exact_checks": 258828,
+  "fixed_shape_spectra": {
+    "11,5": {
+      "necklace_content_histogram": {
+        "1": 34,
+        "5": 5,
+        "19": 2,
+        "95": 1
+      },
+      "word_content_histogram": {
+        "1": 374,
+        "5": 55,
+        "19": 22,
+        "95": 11
+      }
+    },
+    "15,8": {
+      "necklace_content_histogram": {
+        "1": 418,
+        "73": 10,
+        "359": 1
+      },
+      "word_content_histogram": {
+        "1": 6270,
+        "73": 150,
+        "359": 15
+      }
+    },
+    "7,2": {
+      "necklace_content_histogram": {
+        "1": 2,
+        "7": 1
+      },
+      "word_content_histogram": {
+        "1": 14,
+        "7": 7
+      }
+    }
+  },
+  "higher_displacement_hostiles": [
+    {
+      "g": 49,
+      "k": 27,
+      "q": 55,
+      "s": 10,
+      "short_gap": 17
+    },
+    {
+      "g": 439,
+      "k": 99,
+      "q": 199,
+      "s": 36,
+      "short_gap": 63
+    },
+    {
+      "g": 6559,
+      "k": 102,
+      "q": 205,
+      "s": 58,
+      "short_gap": 44
+    }
+  ],
+  "integer_candidates_abs_D_gt_1": [],
+  "maximum_content": {
+    "B": 1406648774440568533634115020228839122426889736108645595080865577773359705571893711038743779350498395814544,
+    "D": 2293498615990071511610820895302086940796564989168281123737588839386873606478680026095579858706723558788757,
+    "g": 3924169,
+    "p": 79,
+    "q": 350,
+    "swap_start": 186
+  },
+  "negative_clock_occurrences": 1769598,
+  "neighbor_edge_cases": 89958,
+  "neighbor_edge_universe": "every binary word containing both bits, 2<=q<=12, every chronological neighboring rotation",
+  "nonunit_occurrences": 494393,
+  "positive_clock_occurrences": 4723382,
+  "status": "PASS",
+  "swap_digest_sha256": "0376a6c0dcfad4ffbdf6990865d68f6b016eafbbea50eb1a9c6fbf1d2670c06c",
+  "swap_occurrences": 6492980,
+  "swap_universe": "all directed unequal cyclic adjacent swaps of zero-intercept lower mechanical words, gcd(q,p)=1, 3<=q<=400; duplicate outputs retained",
+  "two_one_cases": 20099,
+  "two_one_universe": "2<=k<=200, 0<=s<k, q=2k+1 and short cyclic one-gap k-s",
+  "word_power_cases": 2470,
+  "word_power_universe": "every binary word containing both bits, 2<=q<=8, repetitions 1<=k<=5"
+}
