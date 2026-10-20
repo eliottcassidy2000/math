@@ -1,0 +1,73 @@
+{
+  "actual_max_clique": 4,
+  "actual_spectrum": {
+    "-5": 6,
+    "-1": 15,
+    "3": 10,
+    "15": 1
+  },
+  "actual_trace_moments_0_through_4": [
+    32,
+    0,
+    480,
+    2880,
+    55200
+  ],
+  "canonical_cycle_pairs": [
+    [
+      220,
+      803
+    ],
+    [
+      234,
+      789
+    ],
+    [
+      316,
+      707
+    ],
+    [
+      358,
+      665
+    ],
+    [
+      425,
+      598
+    ],
+    [
+      453,
+      570
+    ]
+  ],
+  "checks": 35980,
+  "component_vertices": 32,
+  "halved_cube_max_clique": 6,
+  "halved_cube_spectrum": {
+    "-3": 10,
+    "-1": 15,
+    "5": 6,
+    "15": 1
+  },
+  "halved_cube_trace_moments_0_through_4": [
+    32,
+    0,
+    480,
+    3840,
+    55200
+  ],
+  "labelled_tournaments": 1024,
+  "normalizer_orders": [
+    20,
+    20,
+    20,
+    20,
+    20,
+    20
+  ],
+  "ordered_incidence_pairs": 7680,
+  "six_point_action_order": 120,
+  "source_sha256": "52e4ea669163a653db67ab08aa6937a6f2aa1d43756ea541b8f4da49fb347838",
+  "status": "PASS",
+  "switching_classes": 64,
+  "weighted_adjacency_comparisons": 4096
+}

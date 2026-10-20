@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "links": [
+    {
+      "from": "05-knowledge/results/tournament_graph_distance_four_20261020/audit/AUDIT.md",
+      "label": "the distance-four addendum",
+      "url": "../DISTANCE_FOUR_SIX_CUBE.md",
+      "resolved_destination": "05-knowledge/results/tournament_graph_distance_four_20261020/DISTANCE_FOUR_SIX_CUBE.md",
+      "resolution": "in this publication manifest",
+      "verified": true
+    },
+    {
+      "from": "05-knowledge/results/tournament_graph_distance_four_20261020/audit/AUDIT.md",
+      "label": "trijections and tree-gauges packet",
+      "url": "../../tournament_graph_trijections_20261020/TRIJECTIONS_AND_TREE_GAUGES.md",
+      "resolved_destination": "05-knowledge/results/tournament_graph_trijections_20261020/TRIJECTIONS_AND_TREE_GAUGES.md",
+      "resolution": "co-published inherited main packet",
+      "verified": true
+    },
+    {
+      "from": "05-knowledge/results/tournament_graph_distance_four_20261020/audit/AUDIT.md",
+      "label": "independent checker",
+      "url": "independent_controls.py",
+      "resolved_destination": "05-knowledge/results/tournament_graph_distance_four_20261020/audit/independent_controls.py",
+      "resolution": "in this publication manifest",
+      "verified": true
+    },
+    {
+      "from": "05-knowledge/results/tournament_graph_distance_four_20261020/audit/AUDIT.md",
+      "label": "receipts",
+      "url": "independent_controls.json",
+      "resolved_destination": "05-knowledge/results/tournament_graph_distance_four_20261020/audit/independent_controls.json",
+      "resolution": "in this publication manifest",
+      "verified": true
+    }
+  ],
+  "inherited_main_source": "session17-trijections/TRIJECTIONS_AND_TREE_GAUGES.md",
+  "inherited_main_destination": "05-knowledge/results/tournament_graph_trijections_20261020/TRIJECTIONS_AND_TREE_GAUGES.md",
+  "inherited_main_sha256": "4a19202298e373dff64cb9ca4b887642c415b560102ff40d34d01735ce0660e7",
+  "co_publication_required_for_main_link": false
+}

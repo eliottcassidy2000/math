@@ -1,0 +1,83 @@
+{
+  "aggregate_edge_weight": 8,
+  "checks": 5977,
+  "component_degree": 15,
+  "component_vertices": 32,
+  "cycle_masks": [
+    220,
+    234,
+    316,
+    358,
+    425,
+    453
+  ],
+  "generator_image_masks": [
+    15,
+    23,
+    27,
+    29,
+    30,
+    39,
+    43,
+    45,
+    46,
+    51,
+    53,
+    54,
+    57,
+    58,
+    60
+  ],
+  "generator_masks": {
+    "3": 8,
+    "5": 8,
+    "6": 8,
+    "9": 8,
+    "10": 8,
+    "17": 8,
+    "20": 8,
+    "24": 8,
+    "30": 8,
+    "34": 8,
+    "36": 8,
+    "40": 8,
+    "45": 8,
+    "48": 8,
+    "51": 8
+  },
+  "halved_cube_spectrum": {
+    "-3": 10,
+    "-1": 15,
+    "5": 6,
+    "15": 1
+  },
+  "local_graph": "Kneser KG(6,2)",
+  "maximum_clique": 4,
+  "model": "Hamming-distance-four graph on even-weight six-bit vectors",
+  "not_model": "halved six-cube, which uses Hamming distance two",
+  "parity_rows": [
+    13,
+    14,
+    19,
+    22,
+    26,
+    28
+  ],
+  "seed_cycle_intersections": [
+    2,
+    1,
+    1,
+    0,
+    2,
+    2
+  ],
+  "six_point_action_order": 120,
+  "source_sha256": "25d79b7968ee098412822e71f7e1d53fc32f87ebebd0cdcf8f26ec0df1517304",
+  "spectrum": {
+    "-5": 6,
+    "-1": 15,
+    "3": 10,
+    "15": 1
+  },
+  "status": "PASS"
+}
