@@ -1,0 +1,3 @@
+Normalized SHA256 inputs verified: 29
+All four experiment sources parse; checks contain no removable assertions.
+PASS

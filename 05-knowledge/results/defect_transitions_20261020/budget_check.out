@@ -1,0 +1,10 @@
+budget 0 -> 1 parent cap states= 1 child cap states= 20 raw branches= {'carry': 2, 'same chain': 27}
+distinct-parent multiplicity histogram: {1: 20}
+budget 1 -> 2 parent cap states= 20 child cap states= 2691 raw branches= {'carry': 51, 'same chain': 2624, 'different chains': 4144}
+distinct-parent multiplicity histogram: {1: 570, 2: 2026, 3: 32, 4: 43, 5: 15, 6: 4, 19: 1}
+Literal full-vertex arc controls through order6= 991 core-jump histogram= {-4: 10, -3: 34, -2: 88, -1: 154, 0: 453, 1: 158, 2: 72, 3: 18, 4: 4}
+Cap hostile: old singleton cap1 carries actual lengths1,2,3,...; length3 creates C3, and untouched length2 requires new cap2.
+C3[2,1,1] hostile: first/second clone arc reversals give core3/core4; quotient-arc reversal gives transitive core1.
+Same C3->sink core, one heavy, cap mass5: heavy sink has66 successors; heavy triangle vertex has95.
+Fixed-mass refinement guard boundary controls= 1100
+PASS (explicit exceptions active under normal and -O Python)

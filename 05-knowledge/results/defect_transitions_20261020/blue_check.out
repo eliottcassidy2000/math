@@ -1,0 +1,35 @@
+PROVED construction / FINITE-EXACT controls: trivalent blue edges have black detours.
+n=5: source path (0, 1, 2, 3, 4) ; H(partner)= 11 ; black rerouting (3, 1, 4, 2, 0) ; hub relabelling (0, 1, 2, 3, 4)
+n=5: source path (0, 2, 3, 4, 1) ; H(partner)= 15 ; black rerouting (1, 2, 3, 4, 0) ; hub relabelling (0, 2, 3, 1, 4)
+n=5: source path (0, 2, 4, 1, 3) ; H(partner)= 13 ; black rerouting (2, 4, 1, 3, 0) ; hub relabelling (1, 3, 0, 2, 4)
+Pinned-endpoint HP counts: [1, 3, 1] (two branches cannot reroute locally).
+All A-words of weight 1..12: [1, 1, 2, 3, 4, 6, 9, 13, 19, 28, 41, 60] ; total 187
+All three labelled common-hub routes checked per word; total 561 ; tournament orders 7..29.
+Regular hostile: all cycle cuts remain blue in cyclic controls n=3,5,7,9.
+All blue presentations n=3: mixed nonstrong=0; anchored failures=0; shared-edge failures=0; all-path rotation controls=0
+All blue presentations n=4: mixed nonstrong=0; anchored failures=0; shared-edge failures=0; all-path rotation controls=1
+All blue presentations n=5: mixed nonstrong=0; anchored failures=0; shared-edge failures=0; all-path rotation controls=4
+All blue presentations n=6: mixed nonstrong=3; anchored failures=2; shared-edge failures=0; all-path rotation controls=25
+All blue presentations n=7: mixed nonstrong=11; anchored failures=3; shared-edge failures=0; all-path rotation controls=181
+Minimal anchored hostile 1->R4->1, black paths: [(0, 2, 3, 4, 1, 5), (0, 4, 1, 2, 3, 5)]
+Same hostile repaired by internal shared edge (1,2), degree sum 4 != 5; hub rows (30, 32, 42, 50, 38, 1)
+Canonical SCC sources n=8: all=70 mixed=67 anchored failures=5 shared-edge failures=3
+Canonical SCC sources n=9: all=519 mixed=511 anchored failures=9 shared-edge failures=3
+R4 -> Z -> R4^op endpoint obstruction: every fixed-endpoint path is blue; Z=empty,1,C3,C5 checked.
+n=6 detour path (0, 2, 3, 4, 1, 5) -> rows (2, 28, 9, 17, 37, 15)
+n=6 detour path (0, 1, 3, 4, 5, 2) -> rows (62, 20, 56, 18, 32, 10)
+n=6 detour path (0, 1, 2, 4, 5, 3) -> rows (2, 52, 9, 51, 37, 5)
+n=6 shortest black detour length=3; terminal relabelling (0, 1, 4, 5, 2, 3)
+Padded mixed-center three-black-line bypass controls: 608 ; center classes 6 ; A weight 2..8.
+Census n=3: multigraph bridges=1; simple-support bridges=1
+Census n=4: multigraph bridges=1; simple-support bridges=2
+Census n=5 branch=6 neighbors=[2, 3, 5] common black hubs=[4]
+Census n=5: multigraph bridges=2; simple-support bridges=3
+Census n=6: multigraph bridges=2; simple-support bridges=4
+Census n=7 branch=441 neighbors=[145, 199, 296] common black hubs=[187, 201, 227, 238, 241]
+Census n=7: multigraph bridges=3; simple-support bridges=6
+UNREALIZED n5 hostile: exact fibres, coloured degrees, pure-blue incidences and
+common black hub retained, but mixed edge (0,2) is a multigraph bridge.
+Incoming endpoint-current gate REJECTS the fake: node0 blue row
+z^-3+2z becomes z^-3+z+1; node3 row 2z^-1+z becomes 2+z.
+No actual tournament bridge is claimed. All controls passed.

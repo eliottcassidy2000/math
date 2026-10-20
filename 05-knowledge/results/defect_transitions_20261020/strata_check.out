@@ -1,0 +1,18 @@
+Sharp |b(T^e)-b(T)|=4 witness: TT5, flip positions (1,3).
+k= 1 stratum_counts= {1: 9, 2: 5, 3: 1} raw_by_source_deficiency= {0: 1, 1: 6, 2: 13}
+normalization_deficiency_transitions= {(0, 0): 1, (1, 1): 5, (1, 2): 1, (2, 2): 13} cross_signature_duplicates= 1
+collision_degree_profiles= {} top_three_scaled_coefficients= ['1', '-3', '4']
+deficiency_two_by_core_order= {1: 1, 3: 1, 4: 4, 5: 3}
+k= 2 stratum_counts= {3: 264, 4: 45, 5: 3} raw_by_source_deficiency= {0: 3, 1: 48, 2: 309}
+normalization_deficiency_transitions= {(0, 0): 3, (1, 1): 45, (1, 2): 3, (2, 2): 292, (2, 3): 16, (2, 4): 1} cross_signature_duplicates= 5
+collision_degree_profiles= {} top_three_scaled_coefficients= ['1', '-6', '-1']
+deficiency_two_by_core_order= {5: 3, 6: 6, 7: 39, 8: 96, 9: 120}
+k= 3 stratum_counts= {5: 5365, 6: 435, 7: 15} raw_by_source_deficiency= {0: 15, 1: 450, 2: 5791}
+normalization_deficiency_transitions= {(0, 0): 15, (1, 1): 435, (1, 2): 15, (2, 2): 5545, (2, 3): 240, (2, 4): 6} cross_signature_duplicates= 27
+collision_degree_profiles= {(2, 2): 12, (3,): 4} top_three_scaled_coefficients= ['1', '-9', '-15']
+deficiency_two_by_core_order= {9: 31, 10: 132, 11: 747, 12: 1620, 13: 2835}
+k= 4 stratum_counts= {7: 102750, 8: 4935, 9: 105} raw_by_source_deficiency= {0: 105, 1: 5040, 2: 107535}
+normalization_deficiency_transitions= {(0, 0): 105, (1, 1): 4935, (1, 2): 105, (2, 2): 104250, (2, 3): 3240, (2, 4): 45} cross_signature_duplicates= 195
+collision_degree_profiles= {(2, 2): 270, (3,): 60} top_three_scaled_coefficients= ['1', '-12', '-38']
+deficiency_two_by_core_order= {13: 435, 14: 2070, 15: 12885, 16: 26880, 17: 60480}
+PASS: complete grammar controls k=1,2; deficiency<=2 generation k=1..4.

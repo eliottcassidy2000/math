@@ -1,0 +1,18 @@
+pole Petersen cut=(0, 5) ports=(1, 4, 7, 8) m=2 kempe_paths=((1, 2, 3, 4), (7, 9, 6, 8))
+pole BlanusaI cut=(7, 8) ports=(6, 17, 3, 9) m=4 kempe_paths=((6, 11, 10, 15, 14, 2, 1, 17), (3, 4, 5, 0, 16, 12, 13, 9))
+pole BlanusaII cut=(9, 15) ports=(3, 8, 13, 16) m=6 kempe_paths=((3, 4, 5, 6, 2, 0, 1, 11, 12, 17, 7, 8), (13, 14, 10, 16))
+pole J5_spoke cut=(0, 1) ports=(2, 3, 5, 17) m=12 kempe_paths=((2, 19, 15, 11, 7, 3), (5, 4, 6, 10, 8, 9, 13, 12, 14, 18, 16, 17))
+pole J5_ring cut=(1, 5) ports=(0, 17, 4, 9) m=4 kempe_paths=((0, 2, 6, 10, 8, 11, 15, 19, 16, 17), (4, 7, 3, 18, 14, 12, 13, 9))
+pole J3_zero cut=(1, 5) ports=(0, 9, 4, 9) m=0 kempe_paths=()
+three_pole triangle support=6 multiplicity=1
+three_pole K2_3 support=6 multiplicity=2
+hostiles empty Petersen three-pole; two-vertex wire-minor pole support=12 disjoint from B; crossed pairing rejected
+seven_port triangle_x_Petersen support=54 multiplicity=2 total=108
+colourable controls all 3 independent-edge K4 insertions: 6 -> 12
+Petersen independent-edge insertions=75 BlanusaI=15 BlanusaII=60
+named example Blanusa1: edges_and_five_cycles=((0, 1), (3, 8), 8)
+named example Blanusa2: edges_and_five_cycles=((0, 1), (2, 3), 10)
+seven_port closure K4: vertices=14 Tait=12
+seven_port closure Petersen: vertices=20 Tait=0
+iterated Petersen substitution depth=100 vertices=810 edges=1215; all 100 subdivision certificates pass
+PASS exact supports, independent whole-graph counts, labelled reductions, named-bank isomorphisms, and hostiles

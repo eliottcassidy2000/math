@@ -198,7 +198,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ### Reliable structural toolkit
 
-- [Defect layers](../05-knowledge/results/defect_boundary_20261020/README.md): fixed-budget polynomials. [Future response](../05-knowledge/results/tournament_future_boundary_20261020/README.md): A000568 transfer, sharp `3r-2`; uniform complexity OPEN.
+- [Budget recurrence](../05-knowledge/results/defect_transitions_20261020/README.md): third coefficient, black detours, Petersen reductions. [A000568 transfer](../05-knowledge/results/tournament_future_boundary_20261020/README.md): through200; complexity OPEN.
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md) makes `d_iso` exactly `l1` on fixed order-join patches by image-swap uncrossing; the ambient quotient still has triangles and is not a partial cube.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) gives the scalar iff-transitive boundary; THM-2242/2249/2256 give its response, envelope, and scale limit.
