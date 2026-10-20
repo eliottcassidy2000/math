@@ -1,0 +1,172 @@
+[
+  {
+    "n": 3,
+    "k": 1,
+    "frame_masks": 2,
+    "classes": 2,
+    "selected_nontrivial_orbit_classes": 0,
+    "nontrivial_centralizer_classes": 0,
+    "blue_sum": 2,
+    "shore_spectrum": {
+      "1": 1
+    },
+    "cube_packet_dimensions": {
+      "1": 1
+    },
+    "inherited_classes_checked": 2,
+    "assertions": [
+      "all frame class orbits",
+      "hollow group odd",
+      "selected orbit odd",
+      "equivariant intrinsic orbit selection",
+      "class involution",
+      "no fixed class",
+      "blue preserved",
+      "c3 parity reversed",
+      "centralizer preserved",
+      "symmetric HP count preserved",
+      "independent blue cube equals symmetric-HP/centralizer formula",
+      "free full hollow-orbit toggle cubes",
+      "cube B/centralizer/h_rho constant",
+      "cube shores balanced",
+      "cube dimension has parity k",
+      "integer diagonal triangle affine law",
+      "hollow blue factor odd integer"
+    ],
+    "elapsed_seconds": 0.0
+  },
+  {
+    "n": 5,
+    "k": 2,
+    "frame_masks": 16,
+    "classes": 8,
+    "selected_nontrivial_orbit_classes": 0,
+    "nontrivial_centralizer_classes": 0,
+    "blue_sum": 16,
+    "shore_spectrum": {
+      "1": 2,
+      "3": 2
+    },
+    "cube_packet_dimensions": {
+      "2": 2
+    },
+    "inherited_classes_checked": 8,
+    "assertions": [
+      "all frame class orbits",
+      "hollow group odd",
+      "selected orbit odd",
+      "equivariant intrinsic orbit selection",
+      "class involution",
+      "no fixed class",
+      "blue preserved",
+      "c3 parity reversed",
+      "centralizer preserved",
+      "symmetric HP count preserved",
+      "independent blue cube equals symmetric-HP/centralizer formula",
+      "free full hollow-orbit toggle cubes",
+      "cube B/centralizer/h_rho constant",
+      "cube shores balanced",
+      "cube dimension has parity k",
+      "integer diagonal triangle affine law",
+      "hollow blue factor odd integer"
+    ],
+    "elapsed_seconds": 0.001
+  },
+  {
+    "n": 7,
+    "k": 3,
+    "frame_masks": 512,
+    "classes": 88,
+    "selected_nontrivial_orbit_classes": 8,
+    "nontrivial_centralizer_classes": 4,
+    "blue_sum": 512,
+    "shore_spectrum": {
+      "1": 5,
+      "3": 6,
+      "5": 8,
+      "7": 16,
+      "9": 9
+    },
+    "cube_packet_dimensions": {
+      "1": 4,
+      "3": 10
+    },
+    "inherited_classes_checked": 88,
+    "assertions": [
+      "all frame class orbits",
+      "hollow group odd",
+      "selected orbit odd",
+      "equivariant intrinsic orbit selection",
+      "class involution",
+      "no fixed class",
+      "blue preserved",
+      "c3 parity reversed",
+      "centralizer preserved",
+      "symmetric HP count preserved",
+      "independent blue cube equals symmetric-HP/centralizer formula",
+      "free full hollow-orbit toggle cubes",
+      "cube B/centralizer/h_rho constant",
+      "cube shores balanced",
+      "cube dimension has parity k",
+      "integer diagonal triangle affine law",
+      "hollow blue factor odd integer"
+    ],
+    "elapsed_seconds": 0.14
+  },
+  {
+    "n": 9,
+    "k": 4,
+    "frame_masks": 65536,
+    "classes": 2752,
+    "selected_nontrivial_orbit_classes": 48,
+    "nontrivial_centralizer_classes": 32,
+    "blue_sum": 65536,
+    "shore_spectrum": {
+      "1": 12,
+      "3": 14,
+      "5": 26,
+      "7": 36,
+      "9": 50,
+      "11": 26,
+      "13": 42,
+      "15": 66,
+      "17": 56,
+      "19": 120,
+      "21": 60,
+      "23": 120,
+      "25": 120,
+      "27": 88,
+      "29": 136,
+      "31": 136,
+      "33": 138,
+      "35": 64,
+      "37": 48,
+      "39": 18
+    },
+    "cube_packet_dimensions": {
+      "2": 16,
+      "4": 168
+    },
+    "inherited_classes_checked": 0,
+    "assertions": [
+      "all frame class orbits",
+      "hollow group odd",
+      "selected orbit odd",
+      "equivariant intrinsic orbit selection",
+      "class involution",
+      "no fixed class",
+      "blue preserved",
+      "c3 parity reversed",
+      "centralizer preserved",
+      "symmetric HP count preserved",
+      "independent blue cube equals symmetric-HP/centralizer formula",
+      "free full hollow-orbit toggle cubes",
+      "cube B/centralizer/h_rho constant",
+      "cube shores balanced",
+      "cube dimension has parity k",
+      "integer diagonal triangle affine law",
+      "hollow blue factor odd integer"
+    ],
+    "elapsed_seconds": 0.641
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "n": 3,
+  "k": 1,
+  "frame_masks": 2,
+  "classes": 2,
+  "selected_nontrivial_orbit_classes": 0,
+  "nontrivial_centralizer_classes": 0,
+  "blue_sum": 2,
+  "shore_spectrum": {
+    "1": 1
+  },
+  "cube_packet_dimensions": {
+    "1": 1
+  },
+  "inherited_classes_checked": 2,
+  "assertions": [
+    "all frame class orbits",
+    "hollow group odd",
+    "selected orbit odd",
+    "equivariant intrinsic orbit selection",
+    "class involution",
+    "no fixed class",
+    "blue preserved",
+    "c3 parity reversed",
+    "centralizer preserved",
+    "symmetric HP count preserved",
+    "independent blue cube equals symmetric-HP/centralizer formula",
+    "free full hollow-orbit toggle cubes",
+    "cube B/centralizer/h_rho constant",
+    "cube shores balanced",
+    "cube dimension has parity k",
+    "integer diagonal triangle affine law",
+    "hollow blue factor odd integer"
+  ],
+  "elapsed_seconds": 0.0,
+  "rows": [
+    {
+      "id": 0,
+      "mask": 0,
+      "c3": 1,
+      "blue": 1,
+      "symmetric_HP": 1,
+      "centralizer": 1,
+      "hollow_aut": 1,
+      "hollow_blue_factor": 1,
+      "triangle_coefficients": [
+        -1
+      ],
+      "selected_pair_mask": 1,
+      "selected_pair_count": 1,
+      "hollow_pair_orbits": [
+        1
+      ],
+      "partner": 1,
+      "cube_packet": 0,
+      "cube_dimension": 1,
+      "inherited_node": 1,
+      "inherited_representative": 1,
+      "mass": 1,
+      "type": "PB",
+      "H_total": 3,
+      "aut_total": 3
+    },
+    {
+      "id": 1,
+      "mask": 1,
+      "c3": 0,
+      "blue": 1,
+      "symmetric_HP": 1,
+      "centralizer": 1,
+      "hollow_aut": 1,
+      "hollow_blue_factor": 1,
+      "triangle_coefficients": [
+        -1
+      ],
+      "selected_pair_mask": 1,
+      "selected_pair_count": 1,
+      "hollow_pair_orbits": [
+        1
+      ],
+      "partner": 0,
+      "cube_packet": 0,
+      "cube_dimension": 1,
+      "inherited_node": 0,
+      "inherited_representative": 0,
+      "mass": 1,
+      "type": "PB",
+      "H_total": 1,
+      "aut_total": 1
+    }
+  ]
+}

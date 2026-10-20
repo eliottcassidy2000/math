@@ -1,0 +1,228 @@
+{
+  "n": 5,
+  "label_convention": "x0,x1 -> f -> y0,y1; a_i=1 means x_i->y_i. A has x1->x0. Cross bit0: y1->x0 and y0->x1; cross bit1 reverses both. Canonical frame mask encodes [a0,a1,A01,B01].",
+  "source": "pairing_n5.json, exact verifier cross-matched to census_n5.json",
+  "edge_warning": "These are auxiliary matching-orbit toggle edges, NOT literal antipodal blue edges.",
+  "packets": [
+    {
+      "packet_id": 0,
+      "hollow_frame_mask": 0,
+      "blue_degree": 3,
+      "hollow_group_order": 1,
+      "pair_orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "vertices": [
+        {
+          "completion_bits": [
+            0,
+            0
+          ],
+          "frame_class_id": 0,
+          "normalized_frame_canonical_mask": 0,
+          "inherited_census_node": 3,
+          "inherited_explorer_representative": 3,
+          "blue_degree": 3,
+          "total_mass": 11,
+          "c3": 4,
+          "type": "MX",
+          "H": 11,
+          "Aut": 1
+        },
+        {
+          "completion_bits": [
+            1,
+            0
+          ],
+          "frame_class_id": 1,
+          "normalized_frame_canonical_mask": 1,
+          "inherited_census_node": 7,
+          "inherited_explorer_representative": 11,
+          "blue_degree": 3,
+          "total_mass": 3,
+          "c3": 5,
+          "type": "PB",
+          "H": 15,
+          "Aut": 5
+        },
+        {
+          "completion_bits": [
+            0,
+            1
+          ],
+          "frame_class_id": 2,
+          "normalized_frame_canonical_mask": 2,
+          "inherited_census_node": 5,
+          "inherited_explorer_representative": 5,
+          "blue_degree": 3,
+          "total_mass": 9,
+          "c3": 3,
+          "type": "MX",
+          "H": 9,
+          "Aut": 1
+        },
+        {
+          "completion_bits": [
+            1,
+            1
+          ],
+          "frame_class_id": 3,
+          "normalized_frame_canonical_mask": 3,
+          "inherited_census_node": 6,
+          "inherited_explorer_representative": 10,
+          "blue_degree": 3,
+          "total_mass": 13,
+          "c3": 4,
+          "type": "MX",
+          "H": 13,
+          "Aut": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": 0,
+          "to": 1,
+          "toggled_pair_orbit": [
+            0
+          ]
+        },
+        {
+          "from": 0,
+          "to": 2,
+          "toggled_pair_orbit": [
+            1
+          ]
+        },
+        {
+          "from": 1,
+          "to": 3,
+          "toggled_pair_orbit": [
+            1
+          ]
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "toggled_pair_orbit": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "packet_id": 4,
+      "hollow_frame_mask": 8,
+      "blue_degree": 1,
+      "hollow_group_order": 1,
+      "pair_orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "vertices": [
+        {
+          "completion_bits": [
+            0,
+            0
+          ],
+          "frame_class_id": 4,
+          "normalized_frame_canonical_mask": 8,
+          "inherited_census_node": 9,
+          "inherited_explorer_representative": 17,
+          "blue_degree": 1,
+          "total_mass": 5,
+          "c3": 4,
+          "type": "MX",
+          "H": 15,
+          "Aut": 3
+        },
+        {
+          "completion_bits": [
+            1,
+            0
+          ],
+          "frame_class_id": 5,
+          "normalized_frame_canonical_mask": 9,
+          "inherited_census_node": 1,
+          "inherited_explorer_representative": 1,
+          "blue_degree": 1,
+          "total_mass": 9,
+          "c3": 3,
+          "type": "MX",
+          "H": 9,
+          "Aut": 1
+        },
+        {
+          "completion_bits": [
+            0,
+            1
+          ],
+          "frame_class_id": 6,
+          "normalized_frame_canonical_mask": 10,
+          "inherited_census_node": 8,
+          "inherited_explorer_representative": 16,
+          "blue_degree": 1,
+          "total_mass": 1,
+          "c3": 1,
+          "type": "PB",
+          "H": 3,
+          "Aut": 3
+        },
+        {
+          "completion_bits": [
+            1,
+            1
+          ],
+          "frame_class_id": 7,
+          "normalized_frame_canonical_mask": 11,
+          "inherited_census_node": 0,
+          "inherited_explorer_representative": 0,
+          "blue_degree": 1,
+          "total_mass": 1,
+          "c3": 0,
+          "type": "PB",
+          "H": 1,
+          "Aut": 1
+        }
+      ],
+      "edges": [
+        {
+          "from": 4,
+          "to": 5,
+          "toggled_pair_orbit": [
+            0
+          ]
+        },
+        {
+          "from": 4,
+          "to": 6,
+          "toggled_pair_orbit": [
+            1
+          ]
+        },
+        {
+          "from": 5,
+          "to": 7,
+          "toggled_pair_orbit": [
+            1
+          ]
+        },
+        {
+          "from": 6,
+          "to": 7,
+          "toggled_pair_orbit": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

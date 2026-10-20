@@ -1,0 +1,72 @@
+[
+  {
+    "n": 3,
+    "hollow_frame_classes": 1,
+    "cube_packets": 1,
+    "cube_dimensions": {
+      "1": 1
+    },
+    "each_shore_spectrum": {
+      "1": 1
+    }
+  },
+  {
+    "n": 5,
+    "hollow_frame_classes": 2,
+    "cube_packets": 2,
+    "cube_dimensions": {
+      "2": 2
+    },
+    "each_shore_spectrum": {
+      "1": 2,
+      "3": 2
+    }
+  },
+  {
+    "n": 7,
+    "hollow_frame_classes": 12,
+    "cube_packets": 14,
+    "cube_dimensions": {
+      "1": 4,
+      "3": 10
+    },
+    "each_shore_spectrum": {
+      "1": 5,
+      "3": 6,
+      "5": 8,
+      "7": 16,
+      "9": 9
+    }
+  },
+  {
+    "n": 9,
+    "hollow_frame_classes": 176,
+    "cube_packets": 184,
+    "cube_dimensions": {
+      "2": 16,
+      "4": 168
+    },
+    "each_shore_spectrum": {
+      "1": 12,
+      "3": 14,
+      "5": 26,
+      "7": 36,
+      "9": 50,
+      "11": 26,
+      "13": 42,
+      "15": 66,
+      "17": 56,
+      "19": 120,
+      "21": 60,
+      "23": 120,
+      "25": 120,
+      "27": 88,
+      "29": 136,
+      "31": 136,
+      "33": 138,
+      "35": 64,
+      "37": 48,
+      "39": 18
+    }
+  }
+]

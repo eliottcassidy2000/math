@@ -1,0 +1,30 @@
+{
+  "n": 9,
+  "m": 4,
+  "e": 194,
+  "b": 0,
+  "h_r": 39,
+  "hollow_group": 1,
+  "adjacency_row_masks": [
+    356,
+    273,
+    274,
+    263,
+    169,
+    206,
+    158,
+    15,
+    240
+  ],
+  "c3": 28,
+  "exact_full_S9": {
+    "H": 2659,
+    "aut": 1,
+    "fibre": 2659,
+    "blue": 39,
+    "anti_involutions": 1,
+    "centralizer": 1
+  },
+  "historical_cap": 27,
+  "cap_refuted": true
+}

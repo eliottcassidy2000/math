@@ -1,0 +1,271 @@
+{
+  "n": 5,
+  "k": 2,
+  "frame_masks": 16,
+  "classes": 8,
+  "selected_nontrivial_orbit_classes": 0,
+  "nontrivial_centralizer_classes": 0,
+  "blue_sum": 16,
+  "shore_spectrum": {
+    "1": 2,
+    "3": 2
+  },
+  "cube_packet_dimensions": {
+    "2": 2
+  },
+  "inherited_classes_checked": 8,
+  "assertions": [
+    "all frame class orbits",
+    "hollow group odd",
+    "selected orbit odd",
+    "equivariant intrinsic orbit selection",
+    "class involution",
+    "no fixed class",
+    "blue preserved",
+    "c3 parity reversed",
+    "centralizer preserved",
+    "symmetric HP count preserved",
+    "independent blue cube equals symmetric-HP/centralizer formula",
+    "free full hollow-orbit toggle cubes",
+    "cube B/centralizer/h_rho constant",
+    "cube shores balanced",
+    "cube dimension has parity k",
+    "integer diagonal triangle affine law",
+    "hollow blue factor odd integer"
+  ],
+  "elapsed_seconds": 0.001,
+  "rows": [
+    {
+      "id": 0,
+      "mask": 0,
+      "c3": 4,
+      "blue": 3,
+      "symmetric_HP": 3,
+      "centralizer": 1,
+      "hollow_aut": 1,
+      "hollow_blue_factor": 3,
+      "triangle_coefficients": [
+        1,
+        -1
+      ],
+      "selected_pair_mask": 1,
+      "selected_pair_count": 1,
+      "hollow_pair_orbits": [
+        1,
+        2
+      ],
+      "partner": 1,
+      "cube_packet": 0,
+      "cube_dimension": 2,
+      "inherited_node": 3,
+      "inherited_representative": 3,
+      "mass": 11,
+      "type": "MX",
+      "H_total": 11,
+      "aut_total": 1
+    },
+    {
+      "id": 1,
+      "mask": 1,
+      "c3": 5,
+      "blue": 3,
+      "symmetric_HP": 3,
+      "centralizer": 1,
+      "hollow_aut": 1,
+      "hollow_blue_factor": 3,
+      "triangle_coefficients": [
+        1,
+        -1
+      ],
+      "selected_pair_mask": 1,
+      "selected_pair_count": 1,
+      "hollow_pair_orbits": [
+        1,
+        2
+      ],
+      "partner": 0,
+      "cube_packet": 0,
+      "cube_dimension": 2,
+      "inherited_node": 7,
+      "inherited_representative": 11,
+      "mass": 3,
+      "type": "PB",
+      "H_total": 15,
+      "aut_total": 5
+    },
+    {
+      "id": 2,
+      "mask": 2,
+      "c3": 3,
+      "blue": 3,
+      "symmetric_HP": 3,
+      "centralizer": 1,
+      "hollow_aut": 1,
+      "hollow_blue_factor": 3,
+      "triangle_coefficients": [
+        1,
+        -1
+      ],
+      "selected_pair_mask": 1,
+      "selected_pair_count": 1,
+      "hollow_pair_orbits": [
+        1,
+        2
+      ],
+      "partner": 3,
+      "cube_packet": 0,
+      "cube_dimension": 2,
+      "inherited_node": 5,
+      "inherited_representative": 5,
+      "mass": 9,
+      "type": "MX",
+      "H_total": 9,
+      "aut_total": 1
+    },
+    {
+      "id": 3,
+      "mask": 3,
+      "c3": 4,
+      "blue": 3,
+      "symmetric_HP": 3,
+      "centralizer": 1,
+      "hollow_aut": 1,
+      "hollow_blue_factor": 3,
+      "triangle_coefficients": [
+        1,
+        -1
+      ],
+      "selected_pair_mask": 1,
+      "selected_pair_count": 1,
+      "hollow_pair_orbits": [
+        1,
+        2
+      ],
+      "partner": 2,
+      "cube_packet": 0,
+      "cube_dimension": 2,
+      "inherited_node": 6,
+      "inherited_representative": 10,
+      "mass": 13,
+      "type": "MX",
+      "H_total": 13,
+      "aut_total": 1
+    },
+    {
+      "id": 4,
+      "mask": 8,
+      "c3": 4,
+      "blue": 1,
+      "symmetric_HP": 1,
+      "centralizer": 1,
+      "hollow_aut": 1,
+      "hollow_blue_factor": 1,
+      "triangle_coefficients": [
+        -1,
+        -3
+      ],
+      "selected_pair_mask": 1,
+      "selected_pair_count": 1,
+      "hollow_pair_orbits": [
+        1,
+        2
+      ],
+      "partner": 5,
+      "cube_packet": 4,
+      "cube_dimension": 2,
+      "inherited_node": 9,
+      "inherited_representative": 17,
+      "mass": 5,
+      "type": "MX",
+      "H_total": 15,
+      "aut_total": 3
+    },
+    {
+      "id": 5,
+      "mask": 9,
+      "c3": 3,
+      "blue": 1,
+      "symmetric_HP": 1,
+      "centralizer": 1,
+      "hollow_aut": 1,
+      "hollow_blue_factor": 1,
+      "triangle_coefficients": [
+        -1,
+        -3
+      ],
+      "selected_pair_mask": 1,
+      "selected_pair_count": 1,
+      "hollow_pair_orbits": [
+        1,
+        2
+      ],
+      "partner": 4,
+      "cube_packet": 4,
+      "cube_dimension": 2,
+      "inherited_node": 1,
+      "inherited_representative": 1,
+      "mass": 9,
+      "type": "MX",
+      "H_total": 9,
+      "aut_total": 1
+    },
+    {
+      "id": 6,
+      "mask": 10,
+      "c3": 1,
+      "blue": 1,
+      "symmetric_HP": 1,
+      "centralizer": 1,
+      "hollow_aut": 1,
+      "hollow_blue_factor": 1,
+      "triangle_coefficients": [
+        -1,
+        -3
+      ],
+      "selected_pair_mask": 1,
+      "selected_pair_count": 1,
+      "hollow_pair_orbits": [
+        1,
+        2
+      ],
+      "partner": 7,
+      "cube_packet": 4,
+      "cube_dimension": 2,
+      "inherited_node": 8,
+      "inherited_representative": 16,
+      "mass": 1,
+      "type": "PB",
+      "H_total": 3,
+      "aut_total": 3
+    },
+    {
+      "id": 7,
+      "mask": 11,
+      "c3": 0,
+      "blue": 1,
+      "symmetric_HP": 1,
+      "centralizer": 1,
+      "hollow_aut": 1,
+      "hollow_blue_factor": 1,
+      "triangle_coefficients": [
+        -1,
+        -3
+      ],
+      "selected_pair_mask": 1,
+      "selected_pair_count": 1,
+      "hollow_pair_orbits": [
+        1,
+        2
+      ],
+      "partner": 6,
+      "cube_packet": 4,
+      "cube_dimension": 2,
+      "inherited_node": 0,
+      "inherited_representative": 0,
+      "mass": 1,
+      "type": "PB",
+      "H_total": 1,
+      "aut_total": 1
+    }
+  ]
+}

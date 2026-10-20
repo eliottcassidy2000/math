@@ -1,0 +1,81 @@
+{
+  "source": {
+    "id": 87,
+    "mask": 471,
+    "c3": 2,
+    "blue": 1,
+    "symmetric_HP": 3,
+    "centralizer": 3,
+    "hollow_aut": 3,
+    "hollow_blue_factor": 1,
+    "triangle_coefficients": [
+      -3,
+      -3,
+      -3
+    ],
+    "selected_pair_mask": 7,
+    "selected_pair_count": 3,
+    "hollow_pair_orbits": [
+      7
+    ],
+    "partner": 84,
+    "cube_packet": 84,
+    "cube_dimension": 1,
+    "inherited_node": 271,
+    "inherited_representative": 16400,
+    "mass": 1,
+    "type": "PB",
+    "H_total": 9,
+    "aut_total": 9
+  },
+  "auxiliary_toggle_target": {
+    "id": 84,
+    "mask": 464,
+    "c3": 11,
+    "blue": 1,
+    "symmetric_HP": 3,
+    "centralizer": 3,
+    "hollow_aut": 3,
+    "hollow_blue_factor": 1,
+    "triangle_coefficients": [
+      -3,
+      -3,
+      -3
+    ],
+    "selected_pair_mask": 7,
+    "selected_pair_count": 3,
+    "hollow_pair_orbits": [
+      7
+    ],
+    "partner": 87,
+    "cube_packet": 84,
+    "cube_dimension": 1,
+    "inherited_node": 267,
+    "inherited_representative": 2633,
+    "mass": 45,
+    "type": "MX",
+    "H_total": 135,
+    "aut_total": 3
+  },
+  "actual_blue_neighbors": [
+    {
+      "node": 21,
+      "multiplicity": 1
+    }
+  ],
+  "actual_blue_neighbor_record": {
+    "node": 21,
+    "classes": [
+      24
+    ],
+    "representative": 25,
+    "mass": 25,
+    "blue": 5,
+    "reflection_pairs": 10,
+    "SC": true,
+    "c3": 5,
+    "type": "MX",
+    "quotient_black_charge": 0
+  },
+  "claim": "The auxiliary toggle preserves B but not actual antipodal adjacency, purity, mass, full automorphism order or H."
+}

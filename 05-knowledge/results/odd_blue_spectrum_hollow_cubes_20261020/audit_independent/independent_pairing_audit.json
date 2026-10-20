@@ -1,0 +1,1134 @@
+[
+  {
+    "n": 3,
+    "raw_marked_completions": 2,
+    "SC_classes": 2,
+    "pairs": 1,
+    "skeleton_group_orders": {
+      "1": 1
+    },
+    "selected_orbit_sizes": {
+      "1": 1
+    },
+    "each_parity_spectrum": {
+      "1": 1
+    },
+    "full_Sn_checks": 2,
+    "pair_examples": [
+      {
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          1
+        ],
+        "blue": 1,
+        "source_c3": 1,
+        "target_c3": 0,
+        "source_H": 3,
+        "target_H": 1,
+        "source_aut": 3,
+        "target_aut": 1,
+        "source_fibre": 1,
+        "target_fibre": 1,
+        "centralizer": 1,
+        "P_r": 1
+      }
+    ],
+    "seconds": 0.0
+  },
+  {
+    "n": 5,
+    "raw_marked_completions": 16,
+    "SC_classes": 8,
+    "pairs": 4,
+    "skeleton_group_orders": {
+      "1": 4
+    },
+    "selected_orbit_sizes": {
+      "1": 4
+    },
+    "each_parity_spectrum": {
+      "1": 2,
+      "3": 2
+    },
+    "full_Sn_checks": 8,
+    "pair_examples": [
+      {
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          1
+        ],
+        "blue": 3,
+        "source_c3": 4,
+        "target_c3": 5,
+        "source_H": 11,
+        "target_H": 15,
+        "source_aut": 1,
+        "target_aut": 5,
+        "source_fibre": 11,
+        "target_fibre": 3,
+        "centralizer": 1,
+        "P_r": 3
+      },
+      {
+        "source": [
+          0,
+          2
+        ],
+        "target": [
+          0,
+          3
+        ],
+        "blue": 3,
+        "source_c3": 3,
+        "target_c3": 4,
+        "source_H": 9,
+        "target_H": 13,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 9,
+        "target_fibre": 13,
+        "centralizer": 1,
+        "P_r": 3
+      },
+      {
+        "source": [
+          2,
+          0
+        ],
+        "target": [
+          2,
+          1
+        ],
+        "blue": 1,
+        "source_c3": 4,
+        "target_c3": 3,
+        "source_H": 15,
+        "target_H": 9,
+        "source_aut": 3,
+        "target_aut": 1,
+        "source_fibre": 5,
+        "target_fibre": 9,
+        "centralizer": 1,
+        "P_r": 1
+      },
+      {
+        "source": [
+          2,
+          2
+        ],
+        "target": [
+          2,
+          3
+        ],
+        "blue": 1,
+        "source_c3": 1,
+        "target_c3": 0,
+        "source_H": 3,
+        "target_H": 1,
+        "source_aut": 3,
+        "target_aut": 1,
+        "source_fibre": 1,
+        "target_fibre": 1,
+        "centralizer": 1,
+        "P_r": 1
+      }
+    ],
+    "seconds": 0.002
+  },
+  {
+    "n": 7,
+    "raw_marked_completions": 512,
+    "SC_classes": 88,
+    "pairs": 44,
+    "skeleton_group_orders": {
+      "1": 60,
+      "3": 4
+    },
+    "selected_orbit_sizes": {
+      "1": 60,
+      "3": 4
+    },
+    "each_parity_spectrum": {
+      "1": 5,
+      "3": 6,
+      "5": 8,
+      "7": 16,
+      "9": 9
+    },
+    "full_Sn_checks": 88,
+    "pair_examples": [
+      {
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          1
+        ],
+        "blue": 7,
+        "source_c3": 9,
+        "target_c3": 12,
+        "source_H": 51,
+        "target_H": 123,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 51,
+        "target_fibre": 123,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          0,
+          2
+        ],
+        "target": [
+          0,
+          3
+        ],
+        "blue": 7,
+        "source_c3": 10,
+        "target_c3": 13,
+        "source_H": 83,
+        "target_H": 155,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 83,
+        "target_fibre": 155,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          0,
+          4
+        ],
+        "target": [
+          0,
+          5
+        ],
+        "blue": 7,
+        "source_c3": 8,
+        "target_c3": 11,
+        "source_H": 45,
+        "target_H": 105,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 45,
+        "target_fibre": 105,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          0,
+          6
+        ],
+        "target": [
+          0,
+          7
+        ],
+        "blue": 7,
+        "source_c3": 9,
+        "target_c3": 12,
+        "source_H": 77,
+        "target_H": 141,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 77,
+        "target_fibre": 141,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          2,
+          0
+        ],
+        "target": [
+          2,
+          7
+        ],
+        "blue": 3,
+        "source_c3": 11,
+        "target_c3": 14,
+        "source_H": 99,
+        "target_H": 189,
+        "source_aut": 9,
+        "target_aut": 21,
+        "source_fibre": 11,
+        "target_fibre": 9,
+        "centralizer": 3,
+        "P_r": 9
+      },
+      {
+        "source": [
+          2,
+          1
+        ],
+        "target": [
+          2,
+          3
+        ],
+        "blue": 9,
+        "source_c3": 12,
+        "target_c3": 13,
+        "source_H": 129,
+        "target_H": 159,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 129,
+        "target_fibre": 159,
+        "centralizer": 1,
+        "P_r": 9
+      },
+      {
+        "source": [
+          8,
+          0
+        ],
+        "target": [
+          8,
+          1
+        ],
+        "blue": 9,
+        "source_c3": 13,
+        "target_c3": 14,
+        "source_H": 151,
+        "target_H": 175,
+        "source_aut": 1,
+        "target_aut": 7,
+        "source_fibre": 151,
+        "target_fibre": 25,
+        "centralizer": 1,
+        "P_r": 9
+      },
+      {
+        "source": [
+          8,
+          2
+        ],
+        "target": [
+          8,
+          3
+        ],
+        "blue": 9,
+        "source_c3": 12,
+        "target_c3": 13,
+        "source_H": 135,
+        "target_H": 151,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 135,
+        "target_fibre": 151,
+        "centralizer": 1,
+        "P_r": 9
+      },
+      {
+        "source": [
+          8,
+          4
+        ],
+        "target": [
+          8,
+          5
+        ],
+        "blue": 9,
+        "source_c3": 12,
+        "target_c3": 13,
+        "source_H": 137,
+        "target_H": 157,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 137,
+        "target_fibre": 157,
+        "centralizer": 1,
+        "P_r": 9
+      },
+      {
+        "source": [
+          8,
+          6
+        ],
+        "target": [
+          8,
+          7
+        ],
+        "blue": 9,
+        "source_c3": 11,
+        "target_c3": 12,
+        "source_H": 129,
+        "target_H": 145,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 129,
+        "target_fibre": 145,
+        "centralizer": 1,
+        "P_r": 9
+      },
+      {
+        "source": [
+          10,
+          0
+        ],
+        "target": [
+          10,
+          1
+        ],
+        "blue": 9,
+        "source_c3": 13,
+        "target_c3": 12,
+        "source_H": 151,
+        "target_H": 133,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 151,
+        "target_fibre": 133,
+        "centralizer": 1,
+        "P_r": 9
+      },
+      {
+        "source": [
+          10,
+          2
+        ],
+        "target": [
+          10,
+          3
+        ],
+        "blue": 9,
+        "source_c3": 12,
+        "target_c3": 11,
+        "source_H": 139,
+        "target_H": 117,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 139,
+        "target_fibre": 117,
+        "centralizer": 1,
+        "P_r": 9
+      },
+      {
+        "source": [
+          10,
+          4
+        ],
+        "target": [
+          10,
+          5
+        ],
+        "blue": 9,
+        "source_c3": 14,
+        "target_c3": 13,
+        "source_H": 171,
+        "target_H": 153,
+        "source_aut": 3,
+        "target_aut": 1,
+        "source_fibre": 57,
+        "target_fibre": 153,
+        "centralizer": 1,
+        "P_r": 9
+      },
+      {
+        "source": [
+          10,
+          6
+        ],
+        "target": [
+          10,
+          7
+        ],
+        "blue": 9,
+        "source_c3": 13,
+        "target_c3": 12,
+        "source_H": 147,
+        "target_H": 125,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 147,
+        "target_fibre": 125,
+        "centralizer": 1,
+        "P_r": 9
+      },
+      {
+        "source": [
+          11,
+          0
+        ],
+        "target": [
+          11,
+          1
+        ],
+        "blue": 7,
+        "source_c3": 11,
+        "target_c3": 8,
+        "source_H": 115,
+        "target_H": 61,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 115,
+        "target_fibre": 61,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          11,
+          2
+        ],
+        "target": [
+          11,
+          3
+        ],
+        "blue": 7,
+        "source_c3": 12,
+        "target_c3": 9,
+        "source_H": 145,
+        "target_H": 75,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 145,
+        "target_fibre": 75,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          11,
+          4
+        ],
+        "target": [
+          11,
+          5
+        ],
+        "blue": 7,
+        "source_c3": 12,
+        "target_c3": 9,
+        "source_H": 141,
+        "target_H": 87,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 141,
+        "target_fibre": 87,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          11,
+          6
+        ],
+        "target": [
+          11,
+          7
+        ],
+        "blue": 7,
+        "source_c3": 13,
+        "target_c3": 10,
+        "source_H": 159,
+        "target_H": 93,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 159,
+        "target_fibre": 93,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          14,
+          0
+        ],
+        "target": [
+          14,
+          1
+        ],
+        "blue": 5,
+        "source_c3": 9,
+        "target_c3": 8,
+        "source_H": 79,
+        "target_H": 69,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 79,
+        "target_fibre": 69,
+        "centralizer": 1,
+        "P_r": 5
+      },
+      {
+        "source": [
+          14,
+          2
+        ],
+        "target": [
+          14,
+          3
+        ],
+        "blue": 5,
+        "source_c3": 6,
+        "target_c3": 5,
+        "source_H": 31,
+        "target_H": 25,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 31,
+        "target_fibre": 25,
+        "centralizer": 1,
+        "P_r": 5
+      },
+      {
+        "source": [
+          14,
+          4
+        ],
+        "target": [
+          14,
+          5
+        ],
+        "blue": 5,
+        "source_c3": 12,
+        "target_c3": 11,
+        "source_H": 143,
+        "target_H": 117,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 143,
+        "target_fibre": 117,
+        "centralizer": 1,
+        "P_r": 5
+      },
+      {
+        "source": [
+          14,
+          6
+        ],
+        "target": [
+          14,
+          7
+        ],
+        "blue": 5,
+        "source_c3": 9,
+        "target_c3": 8,
+        "source_H": 67,
+        "target_H": 49,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 67,
+        "target_fibre": 49,
+        "centralizer": 1,
+        "P_r": 5
+      },
+      {
+        "source": [
+          24,
+          0
+        ],
+        "target": [
+          24,
+          1
+        ],
+        "blue": 7,
+        "source_c3": 13,
+        "target_c3": 12,
+        "source_H": 159,
+        "target_H": 137,
+        "source_aut": 3,
+        "target_aut": 1,
+        "source_fibre": 53,
+        "target_fibre": 137,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          24,
+          2
+        ],
+        "target": [
+          24,
+          3
+        ],
+        "blue": 7,
+        "source_c3": 12,
+        "target_c3": 11,
+        "source_H": 135,
+        "target_H": 105,
+        "source_aut": 3,
+        "target_aut": 1,
+        "source_fibre": 45,
+        "target_fibre": 105,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          24,
+          4
+        ],
+        "target": [
+          24,
+          5
+        ],
+        "blue": 7,
+        "source_c3": 10,
+        "target_c3": 9,
+        "source_H": 99,
+        "target_H": 81,
+        "source_aut": 3,
+        "target_aut": 1,
+        "source_fibre": 33,
+        "target_fibre": 81,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          24,
+          6
+        ],
+        "target": [
+          24,
+          7
+        ],
+        "blue": 7,
+        "source_c3": 9,
+        "target_c3": 8,
+        "source_H": 111,
+        "target_H": 85,
+        "source_aut": 3,
+        "target_aut": 1,
+        "source_fibre": 37,
+        "target_fibre": 85,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          25,
+          0
+        ],
+        "target": [
+          25,
+          1
+        ],
+        "blue": 5,
+        "source_c3": 11,
+        "target_c3": 8,
+        "source_H": 127,
+        "target_H": 65,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 127,
+        "target_fibre": 65,
+        "centralizer": 1,
+        "P_r": 5
+      },
+      {
+        "source": [
+          25,
+          2
+        ],
+        "target": [
+          25,
+          3
+        ],
+        "blue": 5,
+        "source_c3": 12,
+        "target_c3": 9,
+        "source_H": 141,
+        "target_H": 67,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 141,
+        "target_fibre": 67,
+        "centralizer": 1,
+        "P_r": 5
+      },
+      {
+        "source": [
+          25,
+          4
+        ],
+        "target": [
+          25,
+          5
+        ],
+        "blue": 5,
+        "source_c3": 8,
+        "target_c3": 5,
+        "source_H": 69,
+        "target_H": 31,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 69,
+        "target_fibre": 31,
+        "centralizer": 1,
+        "P_r": 5
+      },
+      {
+        "source": [
+          25,
+          6
+        ],
+        "target": [
+          25,
+          7
+        ],
+        "blue": 5,
+        "source_c3": 9,
+        "target_c3": 6,
+        "source_H": 91,
+        "target_H": 41,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 91,
+        "target_fibre": 41,
+        "centralizer": 1,
+        "P_r": 5
+      },
+      {
+        "source": [
+          26,
+          0
+        ],
+        "target": [
+          26,
+          1
+        ],
+        "blue": 7,
+        "source_c3": 13,
+        "target_c3": 10,
+        "source_H": 159,
+        "target_H": 95,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 159,
+        "target_fibre": 95,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          26,
+          2
+        ],
+        "target": [
+          26,
+          3
+        ],
+        "blue": 7,
+        "source_c3": 12,
+        "target_c3": 9,
+        "source_H": 139,
+        "target_H": 71,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 139,
+        "target_fibre": 71,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          26,
+          4
+        ],
+        "target": [
+          26,
+          5
+        ],
+        "blue": 7,
+        "source_c3": 12,
+        "target_c3": 9,
+        "source_H": 133,
+        "target_H": 77,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 133,
+        "target_fibre": 77,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          26,
+          6
+        ],
+        "target": [
+          26,
+          7
+        ],
+        "blue": 7,
+        "source_c3": 11,
+        "target_c3": 8,
+        "source_H": 129,
+        "target_H": 65,
+        "source_aut": 3,
+        "target_aut": 1,
+        "source_fibre": 43,
+        "target_fibre": 65,
+        "centralizer": 1,
+        "P_r": 7
+      },
+      {
+        "source": [
+          27,
+          0
+        ],
+        "target": [
+          27,
+          1
+        ],
+        "blue": 3,
+        "source_c3": 9,
+        "target_c3": 4,
+        "source_H": 111,
+        "target_H": 11,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 111,
+        "target_fibre": 11,
+        "centralizer": 1,
+        "P_r": 3
+      },
+      {
+        "source": [
+          27,
+          2
+        ],
+        "target": [
+          27,
+          3
+        ],
+        "blue": 3,
+        "source_c3": 10,
+        "target_c3": 5,
+        "source_H": 135,
+        "target_H": 15,
+        "source_aut": 5,
+        "target_aut": 5,
+        "source_fibre": 27,
+        "target_fibre": 3,
+        "centralizer": 1,
+        "P_r": 3
+      },
+      {
+        "source": [
+          27,
+          4
+        ],
+        "target": [
+          27,
+          5
+        ],
+        "blue": 3,
+        "source_c3": 8,
+        "target_c3": 3,
+        "source_H": 93,
+        "target_H": 9,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 93,
+        "target_fibre": 9,
+        "centralizer": 1,
+        "P_r": 3
+      },
+      {
+        "source": [
+          27,
+          6
+        ],
+        "target": [
+          27,
+          7
+        ],
+        "blue": 3,
+        "source_c3": 9,
+        "target_c3": 4,
+        "source_H": 117,
+        "target_H": 13,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 117,
+        "target_fibre": 13,
+        "centralizer": 1,
+        "P_r": 3
+      },
+      {
+        "source": [
+          56,
+          0
+        ],
+        "target": [
+          56,
+          1
+        ],
+        "blue": 1,
+        "source_c3": 9,
+        "target_c3": 8,
+        "source_H": 123,
+        "target_H": 93,
+        "source_aut": 3,
+        "target_aut": 1,
+        "source_fibre": 41,
+        "target_fibre": 93,
+        "centralizer": 1,
+        "P_r": 1
+      },
+      {
+        "source": [
+          56,
+          2
+        ],
+        "target": [
+          56,
+          3
+        ],
+        "blue": 1,
+        "source_c3": 6,
+        "target_c3": 5,
+        "source_H": 51,
+        "target_H": 33,
+        "source_aut": 3,
+        "target_aut": 1,
+        "source_fibre": 17,
+        "target_fibre": 33,
+        "centralizer": 1,
+        "P_r": 1
+      },
+      {
+        "source": [
+          56,
+          4
+        ],
+        "target": [
+          56,
+          5
+        ],
+        "blue": 1,
+        "source_c3": 4,
+        "target_c3": 3,
+        "source_H": 15,
+        "target_H": 9,
+        "source_aut": 3,
+        "target_aut": 1,
+        "source_fibre": 5,
+        "target_fibre": 9,
+        "centralizer": 1,
+        "P_r": 1
+      },
+      {
+        "source": [
+          56,
+          6
+        ],
+        "target": [
+          56,
+          7
+        ],
+        "blue": 1,
+        "source_c3": 1,
+        "target_c3": 0,
+        "source_H": 3,
+        "target_H": 1,
+        "source_aut": 3,
+        "target_aut": 1,
+        "source_fibre": 1,
+        "target_fibre": 1,
+        "centralizer": 1,
+        "P_r": 1
+      },
+      {
+        "source": [
+          58,
+          0
+        ],
+        "target": [
+          58,
+          7
+        ],
+        "blue": 1,
+        "source_c3": 11,
+        "target_c3": 2,
+        "source_H": 135,
+        "target_H": 9,
+        "source_aut": 3,
+        "target_aut": 9,
+        "source_fibre": 45,
+        "target_fibre": 1,
+        "centralizer": 3,
+        "P_r": 3
+      },
+      {
+        "source": [
+          58,
+          1
+        ],
+        "target": [
+          58,
+          3
+        ],
+        "blue": 3,
+        "source_c3": 8,
+        "target_c3": 5,
+        "source_H": 65,
+        "target_H": 27,
+        "source_aut": 1,
+        "target_aut": 1,
+        "source_fibre": 65,
+        "target_fibre": 27,
+        "centralizer": 1,
+        "P_r": 3
+      }
+    ],
+    "seconds": 0.75
+  },
+  {
+    "n": 9,
+    "raw_marked_completions": 65536,
+    "SC_classes": 2752,
+    "pairs": 1376,
+    "skeleton_group_orders": {
+      "1": 4032,
+      "3": 64
+    },
+    "selected_orbit_sizes": {
+      "1": 4048,
+      "3": 48
+    },
+    "each_parity_spectrum": {
+      "1": 12,
+      "3": 14,
+      "5": 26,
+      "7": 36,
+      "9": 50,
+      "11": 26,
+      "13": 42,
+      "15": 66,
+      "17": 56,
+      "19": 120,
+      "21": 60,
+      "23": 120,
+      "25": 120,
+      "27": 88,
+      "29": 136,
+      "31": 136,
+      "33": 138,
+      "35": 64,
+      "37": 48,
+      "39": 18
+    },
+    "full_Sn_checks": 0,
+    "pair_examples": [],
+    "seconds": 89.999
+  }
+]
