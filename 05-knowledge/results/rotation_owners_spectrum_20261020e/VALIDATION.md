@@ -1,6 +1,6 @@
 # Validation and scope
 
-The six executable checks use explicit exceptions, so optimization does not
+The seven executable checks use explicit exceptions, so optimization does not
 remove their predicates. Normal and `python -O` runs must both reproduce the
 saved stdout exactly after CRLF normalization. `verify.py --replay` enforces
 this and authenticates the recorded source and inherited data hashes.
@@ -13,6 +13,7 @@ this and authenticates the recorded source and inherited data hashes.
 | regular_check.py | All3 regular classes at7 and15 at9; full endpoint matrices by subset DP and literal DFS; independent labelled degree-demand counts versus orbit masses2640 and3230080; pairwise nonisomorphism and full automorphism enumeration; non-Hamiltonian-connected orders3/5 |
 | spectrum_check.py | All33867 labelled tournaments at orders1..6, independent literal path counts through5; all14 carousel7 triangle reversals; all576 ordered labelled regular5 pairs for cycle-flip transport; exact cutoff and arithmetic checks |
 | arithmetic_check.py | All7920 SCC words and parity-path matchings through18; every preserved triangle weight;64 literal Hamiltonian controls through8; marked-edge273 partitions; operation fibres through200;3600 Euclidean inverses; braid matrix kernel and linking hostile |
+| purity_check.py | Every65534 skew presentation at odd orders3..31; explicit nonblue certificates in all65528 negative cases; all Hamiltonian words of the six positive order3/5 presentations; symmetric SCC grammar through32 |
 
 The main owner checker imports the already published exact ordered-template and
 local-owner implementation. Its new kernel extraction, completion and symbolic

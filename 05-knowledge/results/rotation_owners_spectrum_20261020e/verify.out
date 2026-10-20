@@ -1,0 +1,10 @@
+SHA256 inputs verified: 44
+All seven sources parse; no removable assertions.
+Normal and optimized transcript equality: black_check.py
+Normal and optimized transcript equality: owners_check.py
+Normal and optimized transcript equality: regular_check.py
+Normal and optimized transcript equality: spectrum_check.py
+Normal and optimized transcript equality: arithmetic_check.py
+Normal and optimized transcript equality: owners_independent.py
+Normal and optimized transcript equality: purity_check.py
+PASS

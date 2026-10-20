@@ -1,6 +1,7 @@
 # Regular endcap detours, a deficiency-three recurrence, and Fibonacci matchings
 
-Research continuation, October 20, 2026. Integrated base: `7c6b843800`.
+Research continuation, October 20, 2026. Initial base: `7c6b843800`;
+incoming work subsequently integrated through `7441e88d7c`.
 The results below distinguish all-order proofs, cited inputs, finite controls,
 and the global problems that remain open. No literature novelty is claimed.
 
@@ -53,6 +54,44 @@ bound `n<=floor(3 log_3 h)`. Degree-preserving directed-cycle flips connect
 each labelled score fibre, but the regular seven-vertex reversal175->171
 refutes automatic two-unit interpolation. These cycle flips are different
 from Hamiltonian-path-complement metagraph lines.
+
+## Incoming proofs that meet at the cutoff
+
+The incoming [effective black-defect bound](../effective_black_defect_order_bound_20261020/PROOF.txt)
+gives `n<=32` for a strong tournament with zero black path orbits. The
+inherited odd-circulant reduction makes `n<=31`; the independent certificate
+bank covers every skew connection set through31. [The composed proof and
+replay](purity_closure.md) therefore confirm the complete strong pure-blue
+alphabet `{1,C3,C5}` and the all-order class series, including the empty object,
+
+    P(z)=(1+z+z^3+z^5)/(1-z^2-z^6).
+
+This is an independent proof route, not the first classification: the
+repository already contains an audited
+[uniform prefix-rerouting proof](../pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md).
+The new connection removes the residual33..131 range from the separate
+finite-atoms packet by composing its certificates with the stronger incoming
+bound. It gives an exact recurrence for the pure-blue part of the metagraph,
+not for all tournament classes.
+
+The incoming [relocation theorem](../hamilton_path_relocation_connectivity_20261020/THEOREM.txt)
+also proves that all labelled Hamiltonian words of any tournament are connected
+under legal single-vertex relocation. These moves remain inside one class
+fibre; they are not black complement lines. Consequently, if L_n has the
+`2^binom(n-1,2)` fixed-path tilings as vertices and legal normalized
+relocations as edges, then `A000568(n)=number of connected components of L_n`
+for n>=3. Every tournament is represented by Redei's Hamiltonian-path theorem;
+relocation cannot change its class, and the new theorem connects its whole
+fibre. Adding reflection instead counts converse-merged classes. This is an
+exact structural generation rule without Burnside, but generating that entire
+cube is still exponential in n squared; it is not the sought small recurrence.
+The incoming
+[bridge-hub and double-descent theorem](../bridge_hubs_and_double_descent_20261020/BOUNDARY_HUB_AND_DOUBLE_DESCENT.md)
+rules out nonleaf paired-black bridges at its rigidly guarded sources and
+forces any terminal-free bridge branch through a self-converse single-descent
+bottleneck. It leaves bridges between terminal basins and general connectivity
+open. Together these results narrow the unresolved objects without conflating
+three different graphs.
 
 ## Inheritance and concept board
 

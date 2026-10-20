@@ -10,7 +10,8 @@ import sys
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 SCRIPTS = ('black_check.py', 'owners_check.py', 'regular_check.py',
-           'spectrum_check.py', 'arithmetic_check.py', 'owners_independent.py')
+           'spectrum_check.py', 'arithmetic_check.py', 'owners_independent.py',
+           'purity_check.py')
 
 
 def need(ok, why):
@@ -39,7 +40,17 @@ def inputs():
         '05-knowledge/results/metagraph_growth_20261020/enumeration.py',
         '05-knowledge/results/metagraph_growth_20261020/growth_check.py',
         '05-knowledge/results/blue_quotient_20261020b/n9_classes.tsv.gz',
+        '05-knowledge/results/effective_black_defect_order_bound_20261020/PROOF.txt',
+        '05-knowledge/results/merged_metagraph_purity_and_strong_core_20261020/PURE_BLUE_STRONG_CYCLE_REDUCTION.md',
+        '05-knowledge/results/merged_metagraph_purity_and_strong_core_20261020/LU_CROSSING_SOURCE.md',
+        '05-knowledge/results/merged_metagraph_finite_pure_atoms_20261020/FINITE_ATOMS_AND_RIGID_CLOSURE.md',
+        '05-knowledge/results/merged_metagraph_finite_pure_atoms_20261020/SHA256SUMS.txt',
+        '05-knowledge/results/merged_metagraph_finite_pure_atoms_20261020/cycle_certificates.json',
+        '05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md',
+        '01-canon/theorems/THM-2454-pure-blue-alphabet-and-center-law.md',
     )]
+    deps += [ROOT / ('05-knowledge/results/merged_metagraph_finite_pure_atoms_20261020/'
+                    f'circulant_n{n}_certificates.json.gz') for n in range(17, 32, 2)]
     return sorted(set(own + deps))
 
 
@@ -65,7 +76,7 @@ def main():
         need(not any(isinstance(node, ast.Assert) for node in ast.walk(tree)),
              f'removable assertion in {name}')
         need((HERE / name.replace('.py', '.out')).is_file(), 'missing receipt')
-    print('All six sources parse; no removable assertions.', flush=True)
+    print('All seven sources parse; no removable assertions.', flush=True)
     if args.replay:
         for name in SCRIPTS:
             expected = normalized((HERE / name.replace('.py', '.out')).read_bytes())
