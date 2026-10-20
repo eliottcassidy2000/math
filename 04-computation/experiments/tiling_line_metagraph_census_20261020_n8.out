@@ -1,0 +1,15 @@
+# tiling line metagraph census, n = 8, m = 21, tilings = 2097152, max depth = 3
+classes 6880 (SC 176, merged 3528); sum tc = 2097152 (2^m = 2097152); fibre law violations 0; even tc 0; blue-parity violations 0
+node types: pure-blue 3, mixed 173, pure-black 6704
+handshake: #NS merged nodes = 3352, #SC with (tc-bm)/2 odd = 84, sum parity = 0 (must be 0)
+lines: blue 2048 (2^(e-1) check), black 1046528, total 1048576 = 2^(m-1)
+self-lines (class level): blue 4, black 202; converse-merged self-loops: blue 4, black 618; path-reversal self-lines (kappa t in the converse class, c1 != c2) 416
+sigma-twin check on black lines (twin joins the sigma-image classes): ok 1046528, bad 0
+lines by depth: d0=2048 d1=63488 d2=458752 d3=524288
+lines by node types (blue, black): (PB,PB)=(0,0) (PB,MX)=(3,0) (PB,PK)=(0,0) (MX,MX)=(2045,772) (MX,PK)=(0,53072) (PK,PK)=(0,992684)
+distinct class pairs joined: 911027; blue multiplicity histogram: 1:1562 2:212 3:18 4:2; black multiplicity histogram: 1:794158 2:98871 3:12464 4:2863 5:622 6:283 7:84 8:29 9:16 12:1
+merged-level black multiplicities: 438216 node pairs, odd multiplicities 0 (must be 0)
+tilings by depth: d0=4096 d1=126976 d2=917504 d3=1048576
+Q^B = 8, Q^K = 404 (Q^K mod 4 = 0)
+wrote per-class and line files for n = 8
+exit 0

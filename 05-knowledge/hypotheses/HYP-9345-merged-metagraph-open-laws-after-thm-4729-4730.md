@@ -51,7 +51,7 @@ MISTAKE-124).
 
 THM-793's conjecture `black self-lines (same class) = SC(n)/2` at odd `n` (`4 = 8/2`,
 `44 = 88/2` at `n = 5, 7`) is still untested at `n = 9` (`2^28` tilings; a score-filtered
-census is feasible in C). Merged black loops (same node, converse sheets included):
+census is feasible in C). *(Settled by THM-4731, opus-2026-10-20-S46, by summing affine solution spaces over `S_n` instead of enumerating tilings: `1704` black self-lines at `n = 9` against `1376`, and `116096` against `139984` at `n = 11`; the law is false in both directions. Merged black loops continue `8998, 62666, 620472` at `n = 9, 10, 11`.)* Merged black loops (same node, converse sheets included):
 `0, 0, 4, 24, 114, 618` for `n = 3..8`, all even (THM-796 (4.7)); no formula is known.
 
 ## (e) Rigid strong tournaments of composite order >= 63

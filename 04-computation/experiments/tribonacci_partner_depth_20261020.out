@@ -1,0 +1,9 @@
+n= 4 H=    5 depth profile {0: 3, 1: 2}
+n= 5 H=    9 depth profile {0: 3, 1: 6}
+n= 6 H=   17 depth profile {0: 5, 1: 6, 2: 6}
+n= 7 H=   31 depth profile {0: 5, 1: 6, 2: 20}
+n= 8 H=   57 depth profile {0: 9, 1: 6, 2: 16, 3: 26}
+n= 9 H=  105 depth profile {0: 9, 1: 4, 2: 22, 3: 70}
+n=10 H=  193 depth profile {0: 17, 1: 4, 2: 24, 3: 58, 4: 90}
+n=11 H=  355 depth profile {0: 17, 1: 4, 2: 20, 3: 62, 4: 252}
+n=12 H=  653 depth profile {0: 31, 1: 4, 2: 26, 3: 94, 4: 204, 5: 294}

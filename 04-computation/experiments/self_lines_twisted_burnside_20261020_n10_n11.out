@@ -1,0 +1,13 @@
+n=10: perms 3628800, pairs 45, tiles 36; time 187.8s
+  SC(n) by all-pairs twisted Burnside = 8784
+  Q_n (kappa t ~ t): |Q| = 22376 (blue 48, black 22328); self-lines blue 24, black 11164; P_kappa = sum|Aut| = 22408; |Aut| histogram all {1: 22362, 3: 12, 5: 2}, blue {1: 46, 5: 2}; Klein closure True; |Q^K| mod 4 = 0
+  Q'_n (kappa t ~ t^op, i.e. path reversal neutral): |Q'| = 103264, P_rev = 103272, |Aut| histogram {1: 103262, 5: 2}; |Q cap Q'| = 260
+  converse-merged self-loop endpoints |Q cup Q'| = 125380 (blue 48, black 125332); merged self-loops blue 24, black 62666
+  leg conditions: Q' with s_0 != s_(n-1) + 1: 0; Q with s_0 != s_(n-1) + 1: 0; Q with s_0 != s_(n-1): 22376
+n=11: perms 39916800, pairs 55, tiles 45; time 2172.5s
+  SC(n) by all-pairs twisted Burnside = 279968
+  Q_n (kappa t ~ t): |Q| = 232192 (blue 0, black 232192); self-lines blue 0, black 116096; P_kappa = sum|Aut| = 232208; |Aut| histogram all {1: 232184, 3: 8}, blue {}; Klein closure True; |Q^K| mod 4 = 0
+  Q'_n (kappa t ~ t^op, i.e. path reversal neutral): |Q'| = 1009360, P_rev = 1009376, |Aut| histogram {1: 1009352, 3: 8}; |Q cap Q'| = 608
+  converse-merged self-loop endpoints |Q cup Q'| = 1240944 (blue 0, black 1240944); merged self-loops blue 0, black 620472
+  leg conditions: Q' with s_0 != s_(n-1) + 1: 0; Q with s_0 != s_(n-1) + 1: 0; Q with s_0 != s_(n-1): 232192
+exit 0

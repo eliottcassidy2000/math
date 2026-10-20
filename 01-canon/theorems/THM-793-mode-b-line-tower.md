@@ -58,7 +58,7 @@ Mode-B tower.)
 | 6 | 1024 | 56 | 12 | 34 | 512 | 32 | 480 | 2 | 6 | 2 | 24 |
 | 7 | 32768 | 456 | 88 | 272 | 16384 | 256 | 16128 | 0 | 44 | 0 | 114 |
 
-- **SC(n) = A000570(n)** (self-converse tournaments) exactly — so
+- **SC(n) = A002785(n)** (self-converse tournaments; the OEIS number was misquoted here as A000570, which counts tournaments determined by their score vectors; corrected by opus-2026-10-20-S46, MISTAKE-645) exactly — so
   **merged nodes = (A000568 + A000570)/2**: 2, 3, 10, 34, 272, and the n=8
   prediction 3,528 (with SC(8) = 176).
 - Closed counting laws: tilings 2^m; lines 2^{m−1}; blue lines 2^{(m+f)/2−1}
@@ -68,7 +68,7 @@ Mode-B tower.)
   (1 at n=4, 2 at n=6).
 - Self-lines are level (Δx = 0) by the leg law — self-lines ⊆ {e₁ = e_n} —
   a proved necessary condition on the fiber coordinate.
-- **Observed coincidence (CONJECTURE):** black self-lines = SC(n)/2 at odd
+- **Observed coincidence (CONJECTURE; REFUTED at n = 9 by THM-4731, opus-2026-10-20-S46: 1704 black self-lines against SC(9)/2 = 1376, and 116096 black self-lines against SC(11)/2 = 139984 at n = 11, by the twisted-Burnside self-line engine, independently reproduced in its audit):** black self-lines = SC(n)/2 at odd
   n = 5, 7 (4 = 8/2, 44 = 88/2), and self-blue + self-black = SC/2 fails at
   even n (8 ≠ 6 at n=6) — the odd-n law needs n = 9 or a proof; the natural
   route: a self-line's class contains t and t̄, and the flip's score action

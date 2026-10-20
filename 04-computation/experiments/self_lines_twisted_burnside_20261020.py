@@ -46,9 +46,11 @@ def run(n):
                 i, j = pairs[k]; out |= 1 << tilepos[pid[(n - 1 - j, n - 1 - i)]]
         return out
 
-    def solve(g, twist):
+    def solve(g, twist, pin=True):
         """twist(e, a, b) -> parity constant c for the equation y_e + y_{g^-1 e} = c.
-        Returns (consistent, components list) where each component is (list of (pair, parity-vs-root), pinned_value or None)."""
+        pin: path pairs are pinned to the base-path orientation (tilings); pin=False ranges over all
+        labelled tournaments (the classical self-converse Burnside control).
+        Returns None if inconsistent, else (components, root of the constant node ONE)."""
         parent = list(range(P + 1)); par = [0] * (P + 1)  # parity relative to parent
         def find(x):
             if parent[x] == x: return x, 0
@@ -57,11 +59,10 @@ def run(n):
             rx, px = find(x); ry, py = find(y)
             if rx == ry: return (px ^ py) == c
             parent[rx] = ry; par[rx] = px ^ py ^ c; return True
-        ok = True
-        for k in range(P):
-            if ispath[k]:
-                if not union(k, ONE, 0): ok = False; break   # y_e = 1 for path pairs (value of ONE is 1)
-        if not ok: return None
+        if pin:
+            for k in range(P):
+                if ispath[k]:
+                    if not union(k, ONE, 0): return None   # y_e = 1 for path pairs (value of ONE is 1)
         ginv = [0] * n
         for v in range(n): ginv[g[v]] = v
         for k, (u, v) in enumerate(pairs):
@@ -72,15 +73,15 @@ def run(n):
         comps = {}
         for k in range(P + 1):
             r, p = find(k); comps.setdefault(r, []).append((k, p))
-        rootONE, _ = find(ONE)
-        return comps, rootONE
+        rootONE, pONE = find(ONE)
+        return comps, rootONE, pONE
 
     def enumerate_solutions(res):
-        comps, rootONE = res
+        comps, rootONE, pONE = res
         free = [r for r in comps if r != rootONE]
         sols = []
         for choice in itertools.product((0, 1), repeat=len(free)):
-            val = {rootONE: 1}
+            val = {rootONE: 1 ^ pONE}      # the constant node ONE must take the value 1
             for r, c in zip(free, choice): val[r] = c
             bits = 0
             for r, members in comps.items():
@@ -109,9 +110,9 @@ def run(n):
         if r is not None:
             sols = enumerate_solutions(r); Prev += len(sols)
             for s in sols: Qrev[s] += 1
-        r = solve(g, tw_sc)
+        r = solve(g, tw_sc, pin=False)
         if r is not None:
-            comps, rootONE = r; sc_sum += 2 ** (len(comps) - 1)
+            comps, rootONE, pONE = r; sc_sum += 2 ** (len(comps) - 1)   # ONE is isolated when unpinned
     fact = 1
     for i in range(2, n + 1): fact *= i
     SC = sc_sum // fact
@@ -143,8 +144,9 @@ def run(n):
             else: s[j] += 1
         return s
     bad_rev = sum(1 for t in Qrev if scores(t)[0] != scores(t)[n - 1] + 1)
-    bad_k = sum(1 for t in Q if scores(t)[0] != scores(t)[n - 1])   # e_0 = e_{n-1}: equal tile out-degrees at the legs <=> s_0 - 1 = s_{n-1}?  see note below
-    print(f"  leg conditions: Q' with s_0 != s_(n-1) + 1: {bad_rev}; Q with s_0 != s_(n-1): {bad_k}")
+    bad_k1 = sum(1 for t in Q if scores(t)[0] != scores(t)[n - 1] + 1)
+    bad_k0 = sum(1 for t in Q if scores(t)[0] != scores(t)[n - 1])
+    print(f"  leg conditions: Q' with s_0 != s_(n-1) + 1: {bad_rev}; Q with s_0 != s_(n-1) + 1: {bad_k1}; Q with s_0 != s_(n-1): {bad_k0}")
     sys.stdout.flush()
     return dict(n=n, SC=SC, Q=len(Q), blueQ=blueQ, blackQ=blackQ, Pk=Pk, Qrev=len(Qrev), union=len(union), blueU=blueU)
 

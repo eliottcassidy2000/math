@@ -32,6 +32,7 @@ unweighted counts agree.
 
 This refutes HYP-6890's all-size sharpening.  It does not decide the narrower
 odd-size conjecture in THM-793/HYP-6885; `n=9` remains its next test.
+(Decided by THM-4731, opus-2026-10-20-S46: at `n=9` there are `3408` endpoints, all black and rigid, i.e. `1704` black self-lines against `SC(9)/2 = 1376`; the engine sums the affine solution spaces of `g T_t = T_{kappa t}` over all `g`, no `2^28` enumeration; at `n=11` there are `232192` endpoints, `116096` black self-lines against `139984`, eight endpoints with `|Aut| = 3`.)
 
 ## 1. The three different fixed-point questions
 
