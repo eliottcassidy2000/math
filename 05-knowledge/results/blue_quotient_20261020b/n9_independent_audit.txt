@@ -1,0 +1,12 @@
+PASS
+independent_canonicalizer inherited_score_block_full_permutations
+ordinary_classes 191536
+labelled_orbit_mass 68719476736
+SC_classes 2752
+merged_nodes 97144
+black_tree_witnesses_replayed 97137
+black_active_components 1
+blue_tilings_recomputed 65536
+blue_node_pairs 31832
+pure_blue_leaves 5
+pure_blue_trivalent 1

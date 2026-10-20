@@ -1,0 +1,25 @@
+NetworkX 3.5; exact labelled supports, no random graph samples
+Petersen eight-vertex four-pole: exact vector=2B, rooted wire paths=((-1, 4, 9, 7, 5, -2), (-3, 2, 3, 8, 6, -4))
+J5 deleted (0, 1): support=9, multiplicity=12, paired Kempe minor path lengths=(15, 5)
+BlanusaI deleted (0, 1): support=9, multiplicity=4, paired Kempe minor path lengths=(13, 5)
+BlanusaII deleted (0, 1): support=9, multiplicity=4, paired Kempe minor path lengths=(9, 9)
+Petersen opened-edge heterochromatic census: 75/75 full support and rooted junction minors
+dot family step=1, n=18, m=27, girth=5, bridgefree, exact predecessor minor, PM=19
+dot family step=2, n=26, m=39, girth=5, bridgefree, exact predecessor minor, PM=57
+dot family step=3, n=34, m=51, girth=5, bridgefree, exact predecessor minor, PM=163
+dot family step=4, n=42, m=63, girth=5, bridgefree, exact predecessor minor, PM=458
+dot family step=5, n=50, m=75, girth=5, bridgefree, exact predecessor minor, PM=1288
+dot family step=6, n=58, m=87, girth=5, bridgefree, exact predecessor minor, PM=3655
+dot family step=7, n=66, m=99, girth=5, bridgefree, exact predecessor minor, PM=10108
+dot family step=8, n=74, m=111, girth=5, bridgefree, exact predecessor minor, PM=28425
+K4 positive insertion control step=1, C=12
+K4 positive insertion control step=2, C=24
+K4 positive insertion control step=3, C=48
+connected seven-pole: internal_vertices=17, support=54, mass=216, exact vector=4J, two certified rooted reductions to junction+2 wires
+tree seven-pole hostile: shapes=2, reductions=5, original support96, every smoothed support54 disjoint
+Petersen seven-poles from triples inducing one edge: 60/60 support=mass=120, none equivalent to a 54-word junction kernel
+type hostile: P8 -> two wires, closed by adjacent junctions, produces two loops plus bridge; reject as simple-snark reduction
+seven-port Kempe identity connected_17_vertex_4J: orbit_dots=(0, 0, 0, 0, 0, 0, 0), N=(0, 0, 0, 0, 0, 0, 0)
+seven-port Kempe identity five_vertex_path: orbit_dots=(0, 0, 0, -4, 0, 0, 0), N=(0, 0, 0, 24, 0, 0, 0)
+seven-port Kempe identity Petersen_minus_0_1_3: orbit_dots=(0, -4, 0, -4, 0, 0, 0), N=(0, 24, 0, 24, 0, 0, 0)
+PASS: 2763 exact checks

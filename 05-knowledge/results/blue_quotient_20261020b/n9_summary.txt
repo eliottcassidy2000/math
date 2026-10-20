@@ -1,0 +1,16 @@
+ordinary_classes 191536
+SC_classes 2752
+merged_nodes 97144
+labelled_orbit_mass 68719476736
+blue_tilings 65536
+blue_lines 32768
+blue_node_pairs 31832
+pure_blue 6
+pure_blue_leaves 5
+pure_blue_trivalent 1
+black_active_nodes 97138
+black_active_components_certified 1
+black_spanning_forest_edges 97137
+tested_Hamiltonian_paths 97719
+black_paths_tested 97601
+remaining_components_by_round 237 1

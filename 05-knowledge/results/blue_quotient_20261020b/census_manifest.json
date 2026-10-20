@@ -1,0 +1,24 @@
+{
+  "owned_sha256": {
+    "census.cpp": "ff4cb8fddad0118ad3aaaf9ec5052291a958f49a8021ff4523b4ecc2bd774234",
+    "audit.cpp": "ab9666975bcfc769bb0dd9cd105b683c8aa2d480f28dd51beed9e21f3f35a24e",
+    "analyse_census.py": "3674daa89b870b7f7fa3258abef36c18db26c65e5997abe1fca8746e72c99508",
+    "replay_census.py": "e26d922fa6555c611318594bced8919646e57e4e8185c584937179137d1e4fc2",
+    "census.md": "598380f98f57b871e211731d33fe56d41035fa673ee56acd9d77ed251dcf3ed2",
+    ".gitignore": "f2816bf490cd682277aa21ec9b0fe7f793aee99ffc96b1e34aeb7255848a6839",
+    "n9_analysis.json": "848a8bde25adccb615d8ecf074b4c4bbae202ee831ee8fd91706346ec52b66b5",
+    "n9_second_round.json": "9c519f193d01a081631c116d67c2dd5dadebe846e5b8967254be5bd29a4b55df",
+    "n9_summary.txt": "408375c724064c5462e7be86ffe51c390a71aeb53fdad98086dc92cfb760a867",
+    "n9_independent_audit.txt": "668b92579412ddf33face6e4f68f77cee3a50c7477d9495ddaacd2d93f851a54",
+    "n9_classes.tsv.gz": "959c2276c57108d55b56d4906edfbd761fb9737e708b14114d66dd4ad618db0c",
+    "n9_blue.tsv.gz": "bcd409aad9356d55cb7c89b4021b88815c2935ce5588ee7182a5685380a31af7",
+    "n9_black_tree.tsv.gz": "a15d68be543b625a2e2dc2aff564534b9aa5e3a013d6cd1a753f26b9ef15e580"
+  },
+  "inherited_sha256": {
+    "04-computation/experiments/tiling_line_metagraph_census_20261020.cpp": "1fd89ca99e305804c1b024d07e5322c0fd9595029bd9bcb61b85a32acf2c33c7",
+    "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n8.tsv": "7d13cd79f9273d903bb8f7e5b34f413cd36a2a98cd4b05e9994fe2baa79c29ab"
+  },
+  "compiler": "g++.exe (GCC) 15.2.0",
+  "flags": "-O3 -std=c++17",
+  "encoding": "Text hashes use canonical LF; raw archived Windows TSVs retain CRLF; deterministic gzip mtime=0"
+}

@@ -1,0 +1,8059 @@
+[
+  {
+    "source_code": 17,
+    "target_code": 34561589797,
+    "path": [
+      7,
+      8,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      6,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      4,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 6
+  },
+  {
+    "source_code": 17,
+    "target_code": 34528559653,
+    "path": [
+      8,
+      5,
+      7,
+      6,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      6,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      4,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 6
+  },
+  {
+    "source_code": 100,
+    "target_code": 34561343525,
+    "path": [
+      5,
+      4,
+      8,
+      6,
+      7,
+      3,
+      2,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 3,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      5,
+      1,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 5
+  },
+  {
+    "source_code": 129,
+    "target_code": 17180131365,
+    "path": [
+      5,
+      4,
+      7,
+      8,
+      6,
+      3,
+      2,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      5,
+      6,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      5,
+      1,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 4
+  },
+  {
+    "source_code": 129,
+    "target_code": 17181196325,
+    "path": [
+      6,
+      4,
+      7,
+      8,
+      5,
+      3,
+      2,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      5,
+      6,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      5,
+      1,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 5
+  },
+  {
+    "source_code": 260,
+    "target_code": 34528567333,
+    "path": [
+      8,
+      7,
+      4,
+      6,
+      5,
+      3,
+      2,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      5,
+      6,
+      6,
+      8
+    ],
+    "scc_sizes": [
+      4,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 261,
+    "target_code": 17181450277,
+    "path": [
+      6,
+      7,
+      8,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      5,
+      6,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      5,
+      1,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 5
+  },
+  {
+    "source_code": 556,
+    "target_code": 34443640869,
+    "path": [
+      6,
+      4,
+      5,
+      8,
+      7,
+      3,
+      2,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      5,
+      1,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 5
+  },
+  {
+    "source_code": 562,
+    "target_code": 2282749989,
+    "path": [
+      4,
+      5,
+      7,
+      6,
+      8,
+      3,
+      2,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      5,
+      1,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 4
+  },
+  {
+    "source_code": 797,
+    "target_code": 19361955877,
+    "path": [
+      4,
+      5,
+      8,
+      6,
+      7,
+      3,
+      2,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 5,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      5,
+      1,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 5
+  },
+  {
+    "source_code": 797,
+    "target_code": 36676042789,
+    "path": [
+      4,
+      6,
+      5,
+      7,
+      8,
+      3,
+      2,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 5,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      5,
+      1,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 5
+  },
+  {
+    "source_code": 1060,
+    "target_code": 34561196037,
+    "path": [
+      4,
+      3,
+      8,
+      5,
+      6,
+      7,
+      2,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 3,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      4,
+      6,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 1284,
+    "target_code": 34528563205,
+    "path": [
+      3,
+      8,
+      7,
+      4,
+      6,
+      5,
+      2,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 2049,
+    "target_code": 17180921861,
+    "path": [
+      4,
+      3,
+      7,
+      8,
+      6,
+      5,
+      2,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      4,
+      5,
+      6,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 2049,
+    "target_code": 17180938757,
+    "path": [
+      5,
+      3,
+      7,
+      8,
+      6,
+      4,
+      2,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      4,
+      5,
+      6,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 4
+  },
+  {
+    "source_code": 2593,
+    "target_code": 17181446661,
+    "path": [
+      4,
+      3,
+      7,
+      8,
+      5,
+      6,
+      2,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 3,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      5,
+      5,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 4
+  },
+  {
+    "source_code": 4164,
+    "target_code": 8623493125,
+    "path": [
+      3,
+      6,
+      7,
+      4,
+      8,
+      5,
+      2,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 4358,
+    "target_code": 34562134533,
+    "path": [
+      5,
+      3,
+      6,
+      8,
+      7,
+      4,
+      2,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 4
+  },
+  {
+    "source_code": 8209,
+    "target_code": 17180000261,
+    "path": [
+      4,
+      3,
+      5,
+      7,
+      8,
+      6,
+      2,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      4,
+      5,
+      6,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 8209,
+    "target_code": 17180942597,
+    "path": [
+      5,
+      7,
+      8,
+      6,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      4,
+      5,
+      6,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 4
+  },
+  {
+    "source_code": 8209,
+    "target_code": 4295229701,
+    "path": [
+      6,
+      3,
+      5,
+      7,
+      8,
+      4,
+      2,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      4,
+      5,
+      6,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 5
+  },
+  {
+    "source_code": 8224,
+    "target_code": 17181196549,
+    "path": [
+      8,
+      7,
+      6,
+      3,
+      5,
+      4,
+      2,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      4,
+      5,
+      5,
+      7,
+      8
+    ],
+    "scc_sizes": [
+      4,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 8236,
+    "target_code": 34561597989,
+    "path": [
+      5,
+      8,
+      6,
+      7,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      4,
+      6,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 5
+  },
+  {
+    "source_code": 8242,
+    "target_code": 4430233861,
+    "path": [
+      3,
+      5,
+      7,
+      6,
+      8,
+      4,
+      2,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      4,
+      6,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 8242,
+    "target_code": 34503393285,
+    "path": [
+      4,
+      3,
+      5,
+      6,
+      8,
+      7,
+      2,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      4,
+      6,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 8477,
+    "target_code": 18288214021,
+    "path": [
+      3,
+      5,
+      8,
+      4,
+      6,
+      7,
+      2,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 8477,
+    "target_code": 21509439749,
+    "path": [
+      3,
+      5,
+      8,
+      6,
+      7,
+      4,
+      2,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 8765,
+    "target_code": 35602301445,
+    "path": [
+      4,
+      3,
+      5,
+      6,
+      7,
+      8,
+      2,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 3,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 4
+  },
+  {
+    "source_code": 16770,
+    "target_code": 34460410405,
+    "path": [
+      4,
+      6,
+      8,
+      7,
+      5,
+      3,
+      2,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 4
+  },
+  {
+    "source_code": 17057,
+    "target_code": 17180525061,
+    "path": [
+      5,
+      3,
+      4,
+      7,
+      8,
+      6,
+      2,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      5,
+      5,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 4
+  },
+  {
+    "source_code": 17058,
+    "target_code": 1140867077,
+    "path": [
+      3,
+      4,
+      7,
+      5,
+      6,
+      8,
+      2,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 17181,
+    "target_code": 18288214021,
+    "path": [
+      3,
+      4,
+      5,
+      8,
+      6,
+      7,
+      2,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 17181,
+    "target_code": 6577717509,
+    "path": [
+      4,
+      5,
+      7,
+      8,
+      6,
+      3,
+      2,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 4
+  },
+  {
+    "source_code": 24996,
+    "target_code": 34595824133,
+    "path": [
+      8,
+      3,
+      4,
+      7,
+      5,
+      6,
+      2,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 5,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      2,
+      5,
+      5,
+      5,
+      5,
+      5,
+      8
+    ],
+    "scc_sizes": [
+      5,
+      1,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 36868,
+    "target_code": 4362078721,
+    "path": [
+      2,
+      8,
+      4,
+      3,
+      6,
+      7,
+      5,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      3,
+      4,
+      4,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 65537,
+    "target_code": 17180934273,
+    "path": [
+      3,
+      2,
+      7,
+      8,
+      6,
+      5,
+      4,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      3,
+      3,
+      4,
+      5,
+      6,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 68129,
+    "target_code": 17198221345,
+    "path": [
+      3,
+      2,
+      7,
+      8,
+      4,
+      5,
+      6,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 3,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 73760,
+    "target_code": 1209286785,
+    "path": [
+      8,
+      2,
+      7,
+      6,
+      3,
+      5,
+      4,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      3,
+      4,
+      4,
+      5,
+      5,
+      6,
+      8
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 100897,
+    "target_code": 18271963137,
+    "path": [
+      2,
+      8,
+      3,
+      7,
+      4,
+      5,
+      6,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 3,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      5,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 115361,
+    "target_code": 18389671953,
+    "path": [
+      2,
+      7,
+      8,
+      4,
+      5,
+      6,
+      3,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      5,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 115361,
+    "target_code": 9798500865,
+    "path": [
+      2,
+      7,
+      8,
+      5,
+      6,
+      3,
+      4,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      5,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 115361,
+    "target_code": 18321522817,
+    "path": [
+      2,
+      7,
+      8,
+      6,
+      3,
+      4,
+      5,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      5,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 115473,
+    "target_code": 18321514513,
+    "path": [
+      2,
+      7,
+      8,
+      4,
+      6,
+      5,
+      3,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      5,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 115473,
+    "target_code": 18389665793,
+    "path": [
+      2,
+      7,
+      8,
+      5,
+      3,
+      4,
+      6,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      5,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 115473,
+    "target_code": 9799032833,
+    "path": [
+      2,
+      7,
+      8,
+      6,
+      3,
+      4,
+      5,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      5,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 131334,
+    "target_code": 34561597713,
+    "path": [
+      4,
+      2,
+      6,
+      8,
+      7,
+      5,
+      3,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      3,
+      3,
+      5,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 4
+  },
+  {
+    "source_code": 135174,
+    "target_code": 34561343649,
+    "path": [
+      3,
+      2,
+      6,
+      8,
+      7,
+      5,
+      4,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      3,
+      4,
+      4,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 135174,
+    "target_code": 34561606305,
+    "path": [
+      4,
+      2,
+      6,
+      8,
+      7,
+      5,
+      3,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      3,
+      4,
+      4,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 180740,
+    "target_code": 34528571921,
+    "path": [
+      3,
+      2,
+      8,
+      6,
+      7,
+      4,
+      5,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 3,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      4,
+      4,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 197634,
+    "target_code": 9697233409,
+    "path": [
+      2,
+      6,
+      4,
+      3,
+      8,
+      7,
+      5,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      4,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 197634,
+    "target_code": 5435826305,
+    "path": [
+      2,
+      6,
+      5,
+      3,
+      8,
+      7,
+      4,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      4,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 204839,
+    "target_code": 35602303489,
+    "path": [
+      2,
+      6,
+      7,
+      8,
+      4,
+      3,
+      5,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      4,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 262717,
+    "target_code": 21509439617,
+    "path": [
+      3,
+      2,
+      5,
+      6,
+      7,
+      8,
+      4,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 3,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      3,
+      3,
+      5,
+      6,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 263204,
+    "target_code": 34561147393,
+    "path": [
+      2,
+      5,
+      4,
+      3,
+      8,
+      6,
+      7,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      3,
+      4,
+      4,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 266269,
+    "target_code": 35065430529,
+    "path": [
+      2,
+      5,
+      4,
+      3,
+      6,
+      7,
+      8,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      3,
+      4,
+      4,
+      6,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 266295,
+    "target_code": 17751343617,
+    "path": [
+      2,
+      5,
+      4,
+      3,
+      6,
+      7,
+      8,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      3,
+      4,
+      4,
+      6,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 331815,
+    "target_code": 17726194177,
+    "path": [
+      2,
+      5,
+      4,
+      3,
+      6,
+      7,
+      8,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      4,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 344483,
+    "target_code": 18271969297,
+    "path": [
+      2,
+      5,
+      4,
+      7,
+      6,
+      8,
+      3,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      5,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 395280,
+    "target_code": 4332978977,
+    "path": [
+      8,
+      2,
+      5,
+      4,
+      3,
+      7,
+      6,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5,
+      8
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 401460,
+    "target_code": 4370744081,
+    "path": [
+      8,
+      2,
+      6,
+      3,
+      5,
+      7,
+      4,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5,
+      8
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 561668,
+    "target_code": 8623501441,
+    "path": [
+      2,
+      8,
+      4,
+      3,
+      6,
+      7,
+      5,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      4,
+      4,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 594432,
+    "target_code": 8623763729,
+    "path": [
+      8,
+      2,
+      7,
+      4,
+      3,
+      6,
+      5,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      4,
+      4,
+      5,
+      6,
+      8
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 598353,
+    "target_code": 17726709761,
+    "path": [
+      2,
+      4,
+      6,
+      3,
+      5,
+      7,
+      8,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      5,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 659972,
+    "target_code": 8595206689,
+    "path": [
+      8,
+      2,
+      4,
+      5,
+      3,
+      6,
+      7,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      4,
+      4,
+      5,
+      6,
+      8
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 659972,
+    "target_code": 8623763729,
+    "path": [
+      8,
+      2,
+      6,
+      7,
+      4,
+      5,
+      3,
+      1,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      4,
+      4,
+      5,
+      6,
+      8
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 790869,
+    "target_code": 25904750593,
+    "path": [
+      2,
+      4,
+      3,
+      6,
+      7,
+      8,
+      5,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      5,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 803737,
+    "target_code": 19395665937,
+    "path": [
+      2,
+      4,
+      6,
+      5,
+      7,
+      8,
+      3,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      5,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 1095780,
+    "target_code": 35639804417,
+    "path": [
+      2,
+      3,
+      5,
+      6,
+      4,
+      8,
+      7,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 3,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      5,
+      5,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 1107364,
+    "target_code": 35551003137,
+    "path": [
+      2,
+      3,
+      8,
+      4,
+      7,
+      5,
+      6,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      5,
+      5,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 1135104,
+    "target_code": 8623579937,
+    "path": [
+      8,
+      2,
+      7,
+      4,
+      5,
+      3,
+      6,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      4,
+      4,
+      5,
+      6,
+      8
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 1204788,
+    "target_code": 4379132721,
+    "path": [
+      8,
+      2,
+      3,
+      5,
+      6,
+      7,
+      4,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5,
+      8
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 1331344,
+    "target_code": 4345365281,
+    "path": [
+      8,
+      2,
+      3,
+      6,
+      5,
+      4,
+      7,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 3,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5,
+      8
+    ],
+    "scc_sizes": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 1335869,
+    "target_code": 12952031873,
+    "path": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      4,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 9,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      4,
+      4,
+      4,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 3
+  },
+  {
+    "source_code": 1842599,
+    "target_code": 18867577345,
+    "path": [
+      2,
+      3,
+      6,
+      8,
+      4,
+      7,
+      5,
+      1,
+      0
+    ],
+    "rank": 2,
+    "Aut": 7,
+    "self_converse": false,
+    "scores": [
+      0,
+      1,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 4
+  },
+  {
+    "source_code": 2507380,
+    "target_code": 36743238177,
+    "path": [
+      1,
+      8,
+      2,
+      6,
+      3,
+      4,
+      5,
+      7,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      4,
+      4,
+      5,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 2888020,
+    "target_code": 36742763045,
+    "path": [
+      1,
+      8,
+      2,
+      4,
+      6,
+      5,
+      7,
+      3,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      4,
+      4,
+      5,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 4588561,
+    "target_code": 13019718433,
+    "path": [
+      1,
+      7,
+      2,
+      5,
+      4,
+      3,
+      8,
+      6,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 4588561,
+    "target_code": 21610701601,
+    "path": [
+      1,
+      7,
+      2,
+      6,
+      4,
+      3,
+      8,
+      5,
+      0
+    ],
+    "rank": 4,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 4595754,
+    "target_code": 19362104081,
+    "path": [
+      1,
+      7,
+      2,
+      6,
+      3,
+      5,
+      8,
+      4,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 4727203,
+    "target_code": 18271963137,
+    "path": [
+      1,
+      7,
+      2,
+      4,
+      6,
+      8,
+      3,
+      5,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 4785697,
+    "target_code": 6451364513,
+    "path": [
+      1,
+      7,
+      3,
+      8,
+      4,
+      5,
+      6,
+      2,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 5267810,
+    "target_code": 25778790401,
+    "path": [
+      1,
+      7,
+      2,
+      3,
+      4,
+      8,
+      5,
+      6,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 8405508,
+    "target_code": 1140875332,
+    "path": [
+      8,
+      2,
+      1,
+      6,
+      7,
+      3,
+      4,
+      5,
+      0
+    ],
+    "rank": 4,
+    "Aut": 3,
+    "self_converse": true,
+    "scores": [
+      0,
+      2,
+      2,
+      4,
+      4,
+      4,
+      6,
+      6,
+      8
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 8454210,
+    "target_code": 18271453201,
+    "path": [
+      1,
+      6,
+      2,
+      7,
+      5,
+      4,
+      8,
+      3,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      5,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 8519686,
+    "target_code": 34561212940,
+    "path": [
+      2,
+      1,
+      6,
+      8,
+      7,
+      5,
+      4,
+      3,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      4,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 8652839,
+    "target_code": 9667887617,
+    "path": [
+      1,
+      6,
+      2,
+      5,
+      4,
+      3,
+      7,
+      8,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      4,
+      4,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 8658973,
+    "target_code": 10770989841,
+    "path": [
+      1,
+      6,
+      3,
+      2,
+      5,
+      7,
+      8,
+      4,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      4,
+      4,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 8913446,
+    "target_code": 34511783969,
+    "path": [
+      1,
+      6,
+      8,
+      7,
+      3,
+      2,
+      4,
+      5,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      4,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 11010564,
+    "target_code": 34498413600,
+    "path": [
+      1,
+      8,
+      6,
+      7,
+      3,
+      2,
+      4,
+      5,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      3,
+      3,
+      3,
+      4,
+      4,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 13107751,
+    "target_code": 35048653856,
+    "path": [
+      1,
+      6,
+      7,
+      8,
+      3,
+      2,
+      4,
+      5,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      3,
+      3,
+      3,
+      4,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 13177347,
+    "target_code": 25774802720,
+    "path": [
+      1,
+      6,
+      4,
+      3,
+      2,
+      7,
+      8,
+      5,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      3,
+      4,
+      4,
+      4,
+      4,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 16908317,
+    "target_code": 19361956001,
+    "path": [
+      1,
+      5,
+      3,
+      2,
+      6,
+      7,
+      8,
+      4,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      4,
+      6,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 16908343,
+    "target_code": 19361956113,
+    "path": [
+      1,
+      5,
+      4,
+      2,
+      6,
+      7,
+      8,
+      3,
+      0
+    ],
+    "rank": 3,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      4,
+      6,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 17039410,
+    "target_code": 4362084625,
+    "path": [
+      1,
+      5,
+      7,
+      6,
+      8,
+      4,
+      3,
+      2,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      4,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 17047608,
+    "target_code": 34561728580,
+    "path": [
+      2,
+      1,
+      5,
+      8,
+      7,
+      6,
+      4,
+      3,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      4,
+      4,
+      5,
+      5,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 17172531,
+    "target_code": 21479424545,
+    "path": [
+      1,
+      5,
+      3,
+      7,
+      4,
+      2,
+      6,
+      8,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 17368357,
+    "target_code": 6447170337,
+    "path": [
+      1,
+      5,
+      2,
+      4,
+      6,
+      7,
+      3,
+      8,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 17842220,
+    "target_code": 34561590028,
+    "path": [
+      2,
+      1,
+      5,
+      8,
+      6,
+      7,
+      3,
+      4,
+      0
+    ],
+    "rank": 4,
+    "Aut": 3,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      3,
+      6,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 17842226,
+    "target_code": 4430234385,
+    "path": [
+      1,
+      5,
+      7,
+      6,
+      8,
+      2,
+      3,
+      4,
+      0
+    ],
+    "rank": 4,
+    "Aut": 3,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      3,
+      6,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 19040292,
+    "target_code": 35014099744,
+    "path": [
+      1,
+      5,
+      2,
+      8,
+      6,
+      4,
+      3,
+      7,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 21110834,
+    "target_code": 34532491872,
+    "path": [
+      1,
+      5,
+      4,
+      2,
+      6,
+      8,
+      7,
+      3,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      3,
+      3,
+      4,
+      4,
+      5,
+      5,
+      5,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 22037665,
+    "target_code": 17751380480,
+    "path": [
+      1,
+      5,
+      2,
+      3,
+      8,
+      4,
+      7,
+      6,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      3,
+      3,
+      4,
+      4,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 25428020,
+    "target_code": 2231517365,
+    "path": [
+      8,
+      1,
+      6,
+      2,
+      5,
+      7,
+      4,
+      3,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      0,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      8
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 34079509,
+    "target_code": 2214609189,
+    "path": [
+      1,
+      4,
+      6,
+      5,
+      7,
+      8,
+      3,
+      2,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      4,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 36713112,
+    "target_code": 35100696576,
+    "path": [
+      1,
+      4,
+      2,
+      3,
+      6,
+      5,
+      8,
+      7,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 42205331,
+    "target_code": 17453023776,
+    "path": [
+      1,
+      4,
+      3,
+      2,
+      5,
+      7,
+      6,
+      8,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      3,
+      3,
+      3,
+      4,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 50594103,
+    "target_code": 34796997152,
+    "path": [
+      1,
+      4,
+      3,
+      2,
+      5,
+      6,
+      7,
+      8,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      3,
+      3,
+      3,
+      4,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 67123300,
+    "target_code": 1275871749,
+    "path": [
+      1,
+      3,
+      5,
+      6,
+      7,
+      4,
+      8,
+      2,
+      0
+    ],
+    "rank": 3,
+    "Aut": 3,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      2,
+      5,
+      5,
+      5,
+      5,
+      5,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 67918685,
+    "target_code": 52186735105,
+    "path": [
+      1,
+      3,
+      2,
+      4,
+      5,
+      8,
+      6,
+      7,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      4,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 101740868,
+    "target_code": 17189849858,
+    "path": [
+      1,
+      3,
+      5,
+      4,
+      8,
+      6,
+      7,
+      2,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 135004453,
+    "target_code": 2148008209,
+    "path": [
+      1,
+      2,
+      5,
+      4,
+      6,
+      7,
+      8,
+      3,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      4,
+      5,
+      5,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 135315492,
+    "target_code": 34561589922,
+    "path": [
+      2,
+      8,
+      5,
+      6,
+      7,
+      3,
+      4,
+      1,
+      0
+    ],
+    "rank": 4,
+    "Aut": 3,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      3,
+      6,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 2
+  },
+  {
+    "source_code": 135414293,
+    "target_code": 553648161,
+    "path": [
+      1,
+      2,
+      6,
+      3,
+      4,
+      5,
+      7,
+      8,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      4,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 135544961,
+    "target_code": 17179942945,
+    "path": [
+      1,
+      2,
+      5,
+      3,
+      4,
+      7,
+      8,
+      6,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      4,
+      4,
+      6,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 135545093,
+    "target_code": 536879137,
+    "path": [
+      1,
+      2,
+      5,
+      3,
+      4,
+      6,
+      7,
+      8,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      4,
+      4,
+      6,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 135545104,
+    "target_code": 553680928,
+    "path": [
+      8,
+      1,
+      2,
+      5,
+      7,
+      3,
+      4,
+      6,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      4,
+      5,
+      5,
+      6,
+      8
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 135545125,
+    "target_code": 537133089,
+    "path": [
+      1,
+      2,
+      5,
+      3,
+      4,
+      6,
+      7,
+      8,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      4,
+      5,
+      5,
+      7,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 135545143,
+    "target_code": 17734565921,
+    "path": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      5,
+      7,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      4,
+      6,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 135553333,
+    "target_code": 671744513,
+    "path": [
+      1,
+      2,
+      3,
+      5,
+      4,
+      6,
+      7,
+      8,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      4,
+      4,
+      5,
+      5,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 135553335,
+    "target_code": 35099005441,
+    "path": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      5,
+      7,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      4,
+      4,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 135612513,
+    "target_code": 21542734625,
+    "path": [
+      1,
+      2,
+      3,
+      7,
+      5,
+      4,
+      8,
+      6,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 135795347,
+    "target_code": 38857099809,
+    "path": [
+      1,
+      2,
+      3,
+      6,
+      4,
+      7,
+      8,
+      5,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      5,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 135798834,
+    "target_code": 4430234273,
+    "path": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      6,
+      8,
+      4,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      3,
+      6,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 135799357,
+    "target_code": 35065430561,
+    "path": [
+      1,
+      2,
+      4,
+      3,
+      5,
+      6,
+      7,
+      8,
+      0
+    ],
+    "rank": 4,
+    "Aut": 3,
+    "self_converse": false,
+    "scores": [
+      0,
+      2,
+      3,
+      3,
+      4,
+      6,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      8,
+      1
+    ],
+    "triangle_change": 1
+  },
+  {
+    "source_code": 135803140,
+    "target_code": 604528960,
+    "path": [
+      8,
+      1,
+      2,
+      3,
+      6,
+      7,
+      5,
+      4,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      0,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      8
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 152584612,
+    "target_code": 2183397684,
+    "path": [
+      8,
+      1,
+      2,
+      3,
+      4,
+      7,
+      5,
+      6,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      0,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      8
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 169362340,
+    "target_code": 2189951798,
+    "path": [
+      8,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      3,
+      0
+    ],
+    "rank": 4,
+    "Aut": 9,
+    "self_converse": true,
+    "scores": [
+      0,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      8
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 202269072,
+    "target_code": 738845472,
+    "path": [
+      8,
+      1,
+      2,
+      4,
+      6,
+      5,
+      7,
+      3,
+      0
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      0,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      8
+    ],
+    "scc_sizes": [
+      7,
+      1,
+      1
+    ],
+    "triangle_change": 7
+  },
+  {
+    "source_code": 12969332580,
+    "target_code": 9731323972,
+    "path": [
+      0,
+      3,
+      2,
+      4,
+      8,
+      1,
+      5,
+      6,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 14043076503,
+    "target_code": 43027806276,
+    "path": [
+      0,
+      3,
+      2,
+      4,
+      6,
+      1,
+      5,
+      7,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 17247645826,
+    "target_code": 4430500100,
+    "path": [
+      0,
+      2,
+      1,
+      3,
+      6,
+      8,
+      4,
+      7,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 17247658770,
+    "target_code": 8590090500,
+    "path": [
+      0,
+      2,
+      1,
+      3,
+      4,
+      6,
+      8,
+      5,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -6
+  },
+  {
+    "source_code": 17784516677,
+    "target_code": 4698935556,
+    "path": [
+      0,
+      2,
+      1,
+      3,
+      6,
+      7,
+      4,
+      8,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 17784529677,
+    "target_code": 34429100292,
+    "path": [
+      0,
+      2,
+      1,
+      3,
+      4,
+      6,
+      7,
+      5,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 17784647781,
+    "target_code": 34429481508,
+    "path": [
+      0,
+      2,
+      1,
+      3,
+      5,
+      6,
+      7,
+      4,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 18321322053,
+    "target_code": 5504238852,
+    "path": [
+      0,
+      2,
+      1,
+      3,
+      6,
+      7,
+      4,
+      8,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 18321335053,
+    "target_code": 34435293444,
+    "path": [
+      0,
+      2,
+      1,
+      3,
+      4,
+      6,
+      7,
+      5,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 18866783829,
+    "target_code": 34706303504,
+    "path": [
+      0,
+      2,
+      1,
+      3,
+      4,
+      8,
+      6,
+      5,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 19394806067,
+    "target_code": 34380742688,
+    "path": [
+      0,
+      2,
+      5,
+      7,
+      1,
+      3,
+      4,
+      6,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      3,
+      3,
+      4,
+      5,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 22088789314,
+    "target_code": 9699856000,
+    "path": [
+      0,
+      2,
+      1,
+      3,
+      5,
+      4,
+      8,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 22621465922,
+    "target_code": 8900841088,
+    "path": [
+      0,
+      2,
+      1,
+      3,
+      5,
+      4,
+      8,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 25803761933,
+    "target_code": 5435830796,
+    "path": [
+      0,
+      2,
+      1,
+      4,
+      3,
+      7,
+      5,
+      8,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 25803769509,
+    "target_code": 34460542500,
+    "path": [
+      0,
+      2,
+      1,
+      4,
+      5,
+      6,
+      7,
+      3,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 25804552717,
+    "target_code": 34460538372,
+    "path": [
+      0,
+      2,
+      1,
+      4,
+      3,
+      6,
+      7,
+      5,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 25804683533,
+    "target_code": 34460669188,
+    "path": [
+      0,
+      2,
+      1,
+      4,
+      3,
+      6,
+      7,
+      5,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 25820612936,
+    "target_code": 21542390544,
+    "path": [
+      0,
+      2,
+      1,
+      4,
+      6,
+      5,
+      8,
+      3,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 26349941845,
+    "target_code": 12910104080,
+    "path": [
+      0,
+      2,
+      1,
+      4,
+      3,
+      6,
+      5,
+      7,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 26357450129,
+    "target_code": 51644020496,
+    "path": [
+      0,
+      2,
+      1,
+      4,
+      6,
+      5,
+      7,
+      3,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 26882618453,
+    "target_code": 12903910928,
+    "path": [
+      0,
+      2,
+      1,
+      4,
+      3,
+      6,
+      5,
+      7,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 34499477777,
+    "target_code": 2151677984,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      7,
+      8,
+      3,
+      4,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      2,
+      3,
+      3,
+      4,
+      5,
+      5,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 34499735813,
+    "target_code": 4299293184,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      7,
+      8,
+      5,
+      4
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 34503410194,
+    "target_code": 1073741828,
+    "path": [
+      0,
+      1,
+      6,
+      8,
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      2,
+      2,
+      3,
+      4,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -6
+  },
+  {
+    "source_code": 34511864081,
+    "target_code": 2151677984,
+    "path": [
+      0,
+      1,
+      2,
+      7,
+      8,
+      3,
+      4,
+      6,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      2,
+      3,
+      3,
+      4,
+      5,
+      5,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 34520449176,
+    "target_code": 2156003348,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      3,
+      4,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 34528576274,
+    "target_code": 8589951236,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      5,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      2,
+      2,
+      3,
+      4,
+      5,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -6
+  },
+  {
+    "source_code": 34528838033,
+    "target_code": 8606728352,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8,
+      6,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      2,
+      3,
+      3,
+      4,
+      5,
+      5,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 34561602066,
+    "target_code": 8589959428,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      6,
+      8,
+      5,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      2,
+      2,
+      4,
+      4,
+      4,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -6
+  },
+  {
+    "source_code": 34561608450,
+    "target_code": 4362084612,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      8,
+      3,
+      7,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      2,
+      2,
+      4,
+      4,
+      4,
+      6,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 34561731109,
+    "target_code": 8598347904,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      7,
+      8,
+      5,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 34561741445,
+    "target_code": 4430372992,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      7,
+      8,
+      3,
+      6,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 34561872549,
+    "target_code": 17213751840,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      3
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      2,
+      3,
+      4,
+      4,
+      4,
+      5,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 34562007441,
+    "target_code": 17247593248,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      5,
+      7,
+      8,
+      3
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      2,
+      4,
+      4,
+      4,
+      4,
+      4,
+      6,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 34565927442,
+    "target_code": 8598413572,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      6,
+      8,
+      5,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 34565933826,
+    "target_code": 4370538756,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      8,
+      3,
+      7,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 34566201745,
+    "target_code": 34565861920,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      5,
+      7,
+      8,
+      3
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 34570056210,
+    "target_code": 8598413440,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      6,
+      8,
+      5,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 34570062594,
+    "target_code": 4366409988,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      8,
+      3,
+      7,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 34595031829,
+    "target_code": 8598858256,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      3,
+      7,
+      8,
+      4,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      1,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      7
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 34788884632,
+    "target_code": 1359216692,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      3,
+      4,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 34834362898,
+    "target_code": 8866849028,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      6,
+      8,
+      5,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 34834369282,
+    "target_code": 4638974212,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      8,
+      3,
+      7,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 34834637201,
+    "target_code": 34834297376,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      5,
+      7,
+      8,
+      3
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 34838491666,
+    "target_code": 8866848896,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      6,
+      8,
+      5,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 34838498050,
+    "target_code": 4634845444,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      8,
+      3,
+      7,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 34863467285,
+    "target_code": 8867293712,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      3,
+      7,
+      8,
+      4,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 35100975505,
+    "target_code": 35102700064,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      5,
+      7,
+      8,
+      3
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 35342394501,
+    "target_code": 5974827268,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      8,
+      6,
+      4,
+      7,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -2
+  },
+  {
+    "source_code": 35375426058,
+    "target_code": 34707923204,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      7,
+      6,
+      5,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 35579766914,
+    "target_code": 5379260932,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      7,
+      6,
+      8,
+      5,
+      4
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 35602310277,
+    "target_code": 4630520068,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      8,
+      6,
+      4,
+      7,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      2,
+      4,
+      4,
+      4,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 35602317962,
+    "target_code": 34428961028,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      6,
+      5,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      2,
+      3,
+      4,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 35635341834,
+    "target_code": 34428969220,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      7,
+      6,
+      5,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      2,
+      4,
+      4,
+      4,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 35635880477,
+    "target_code": 8592039972,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      6,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      2,
+      3,
+      4,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 35637506578,
+    "target_code": 9667928324,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      6,
+      8,
+      5,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 35637512962,
+    "target_code": 5506146564,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      8,
+      3,
+      7,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 35639568933,
+    "target_code": 9665863808,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      7,
+      8,
+      5,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 35639579269,
+    "target_code": 5437988992,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      7,
+      8,
+      3,
+      6,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 35668675349,
+    "target_code": 9666308624,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      3,
+      7,
+      8,
+      4,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 36141409413,
+    "target_code": 5169619204,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      8,
+      6,
+      4,
+      7,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -2
+  },
+  {
+    "source_code": 36147603522,
+    "target_code": 5774582020,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      7,
+      6,
+      4,
+      8,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -2
+  },
+  {
+    "source_code": 36174439957,
+    "target_code": 34701730052,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      8,
+      6,
+      5,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 36180634122,
+    "target_code": 35506937984,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      7,
+      6,
+      5,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 36653252760,
+    "target_code": 3238035508,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      3,
+      4,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 36661510296,
+    "target_code": 3355738164,
+    "path": [
+      0,
+      1,
+      2,
+      6,
+      5,
+      8,
+      3,
+      4,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 36661903788,
+    "target_code": 21491908916,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      5,
+      8,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 36709618205,
+    "target_code": 8606712868,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      6,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      2,
+      3,
+      4,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 37817429221,
+    "target_code": 12904853900,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      4,
+      8,
+      6,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 38815416536,
+    "target_code": 25803759732,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      8,
+      6,
+      5,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 38857106205,
+    "target_code": 8623497316,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      6,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      2,
+      3,
+      4,
+      5,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 43009462054,
+    "target_code": 21542356756,
+    "path": [
+      0,
+      1,
+      4,
+      2,
+      3,
+      8,
+      5,
+      6,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 43097138706,
+    "target_code": 1677877316,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      8,
+      5,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 43097147970,
+    "target_code": 38734536772,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      8,
+      3,
+      7,
+      6,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 43105536610,
+    "target_code": 12893365796,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      8,
+      3,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 43109665378,
+    "target_code": 12893365776,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      8,
+      3,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 43117719693,
+    "target_code": 34460411428,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      4,
+      7,
+      8,
+      3,
+      6
+    ],
+    "rank": 2,
+    "Aut": 3,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      2,
+      4,
+      4,
+      4,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 43117728397,
+    "target_code": 8623514380,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      3,
+      6,
+      4,
+      7,
+      8
+    ],
+    "rank": 2,
+    "Aut": 3,
+    "self_converse": true,
+    "scores": [
+      2,
+      2,
+      2,
+      4,
+      4,
+      4,
+      6,
+      6,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -5
+  },
+  {
+    "source_code": 43122050722,
+    "target_code": 5435894280,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      3,
+      8,
+      4,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 43126179490,
+    "target_code": 5435896332,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      3,
+      8,
+      4,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 43127421122,
+    "target_code": 9799492996,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      4,
+      8,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 43134887605,
+    "target_code": 5436098192,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      5,
+      7,
+      8,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 43135809762,
+    "target_code": 13020456756,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      4,
+      8,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 43135824794,
+    "target_code": 13020444772,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      8,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 43155863058,
+    "target_code": 12893361668,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      6,
+      8,
+      5,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 43159991826,
+    "target_code": 12893359616,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      6,
+      8,
+      5,
+      7
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 43184967445,
+    "target_code": 12893555840,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      3,
+      7,
+      8,
+      4,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 43185232581,
+    "target_code": 5436893376,
+    "path": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      3,
+      7,
+      8,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 44195685538,
+    "target_code": 35536315920,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      4,
+      7,
+      6,
+      3,
+      8
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 44195685653,
+    "target_code": 35538380304,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      4,
+      6,
+      7,
+      3,
+      8
+    ],
+    "rank": 2,
+    "Aut": 3,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 44195686501,
+    "target_code": 35536315940,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      4,
+      8,
+      6,
+      3,
+      7
+    ],
+    "rank": 2,
+    "Aut": 3,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 44195688589,
+    "target_code": 34733172260,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      4,
+      7,
+      8,
+      3,
+      6
+    ],
+    "rank": 2,
+    "Aut": 3,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 44195694357,
+    "target_code": 9701483276,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      3,
+      8,
+      4,
+      6,
+      7
+    ],
+    "rank": 2,
+    "Aut": 3,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 44195695205,
+    "target_code": 8900403980,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      3,
+      7,
+      4,
+      8,
+      6
+    ],
+    "rank": 2,
+    "Aut": 3,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 44195697293,
+    "target_code": 9699418760,
+    "path": [
+      0,
+      1,
+      2,
+      5,
+      3,
+      6,
+      4,
+      7,
+      8
+    ],
+    "rank": 2,
+    "Aut": 3,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 47481109957,
+    "target_code": 12969319748,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      5,
+      4,
+      7,
+      8
+    ],
+    "rank": 4,
+    "Aut": 9,
+    "self_converse": true,
+    "scores": [
+      3,
+      3,
+      3,
+      4,
+      4,
+      4,
+      5,
+      5,
+      5
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 51620094254,
+    "target_code": 3356559368,
+    "path": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      6,
+      8,
+      7,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 51628351790,
+    "target_code": 3356756021,
+    "path": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      6,
+      8,
+      7,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 51632671022,
+    "target_code": 3356565554,
+    "path": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      6,
+      8,
+      7,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 51632685486,
+    "target_code": 3357024434,
+    "path": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      6,
+      8,
+      7,
+      5
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 51645256474,
+    "target_code": 6577850645,
+    "path": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      5,
+      8,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 51645838133,
+    "target_code": 43008468128,
+    "path": [
+      0,
+      1,
+      3,
+      4,
+      2,
+      5,
+      7,
+      8,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 51646315177,
+    "target_code": 43119891236,
+    "path": [
+      0,
+      1,
+      3,
+      5,
+      6,
+      4,
+      7,
+      8,
+      2
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  },
+  {
+    "source_code": 51649448730,
+    "target_code": 6577787442,
+    "path": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      5,
+      8,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 51649463194,
+    "target_code": 6578246322,
+    "path": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      5,
+      8,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 51657706266,
+    "target_code": 6577787148,
+    "path": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      5,
+      8,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 51657720730,
+    "target_code": 6578246028,
+    "path": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      5,
+      8,
+      7,
+      6
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -4
+  },
+  {
+    "source_code": 51658274981,
+    "target_code": 43004339360,
+    "path": [
+      0,
+      1,
+      3,
+      5,
+      2,
+      6,
+      7,
+      8,
+      4
+    ],
+    "rank": 2,
+    "Aut": 1,
+    "self_converse": true,
+    "scores": [
+      2,
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      6
+    ],
+    "scc_sizes": [
+      9
+    ],
+    "triangle_change": -3
+  }
+]

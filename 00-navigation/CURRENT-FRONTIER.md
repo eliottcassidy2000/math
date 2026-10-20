@@ -198,6 +198,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ### Reliable structural toolkit
 
+- [Blue quotient and boundary reductions](../05-knowledge/results/blue_quotient_20261020b/README.md): n9 black-active core connected by complete certificates; exactly5 leaf bridges. Black closed-path existence PROVED; all-order connectivity OPEN. Rooted nonflower Petersen reductions and complete112-test seven-port tomography.
 - [Defect layers](../05-knowledge/results/defect_boundary_20261020/README.md): fixed-budget polynomials. [Future response](../05-knowledge/results/tournament_future_boundary_20261020/README.md): A000568 transfer, sharp `3r-2`; uniform complexity OPEN.
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md) makes `d_iso` exactly `l1` on fixed order-join patches by image-swap uncrossing; the ambient quotient still has triangles and is not a partial cube.

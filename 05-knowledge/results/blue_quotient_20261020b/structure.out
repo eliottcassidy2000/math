@@ -1,0 +1,8 @@
+{"n": 3, "tilings": 2, "strong_black_active": 0, "black_closed_descent_failures": 0, "positive_blue_current_classes": 0, "positive_blue_current_first": [], "cycle_cosets_checked": 1, "literal_two_black_switches_checked": 0}
+{"n": 4, "tilings": 8, "strong_black_active": 1, "black_closed_descent_failures": 0, "positive_blue_current_classes": 0, "positive_blue_current_first": [], "cycle_cosets_checked": 4, "literal_two_black_switches_checked": 2}
+{"n": 5, "tilings": 64, "strong_black_active": 5, "black_closed_descent_failures": 0, "positive_blue_current_classes": 2, "positive_blue_current_first": [[10, 2], [41, 2]], "cycle_cosets_checked": 32, "literal_two_black_switches_checked": 72}
+{"n": 6, "tilings": 1024, "strong_black_active": 22, "black_closed_descent_failures": 0, "positive_blue_current_classes": 4, "positive_blue_current_first": [[83, 2], [153, 4]], "cycle_cosets_checked": 512, "literal_two_black_switches_checked": 2288}
+{"n": 7, "tilings": 32768, "strong_black_active": 216, "black_closed_descent_failures": 0, "positive_blue_current_classes": 38, "positive_blue_current_first": [[299, 4], [291, 4]], "cycle_cosets_checked": 0, "literal_two_black_switches_checked": 0}
+{"even_two_orbit_constructions": 63, "orders": [6, 10, 14, 18, 22], "failures": 0}
+{"same_cycle_hostile_n": 9, "out_bitsets": [98, 92, 409, 273, 225, 206, 140, 267, 115], "tiling_mask": 48440728, "scores": [3, 4, 5, 3, 4, 5, 3, 4, 5], "blue_cuts": [0, 3, 6], "black_cut_endpoint_difference": -1, "changed_cycle_black_closed_path": [0, 1, 2, 3, 8, 4, 5, 6, 7], "triangle_count_change": -2}
+ALL STRUCTURAL CONTROLS PASSED; all-order black connectivity remains OPEN.

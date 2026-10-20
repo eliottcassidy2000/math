@@ -1,0 +1,4 @@
+# The compact certificates are committed as deterministic gzip files.
+n9_classes.tsv
+n9_blue.tsv
+n9_black_tree.tsv
