@@ -1,0 +1,994 @@
+{
+  "D8_hostiles": [
+    {
+      "coarse_isomorphism": [
+        0,
+        5,
+        1,
+        2,
+        3,
+        6,
+        4,
+        7
+      ],
+      "commutes": false,
+      "flipped_state": 594445,
+      "g": [
+        1,
+        0,
+        3,
+        2,
+        6,
+        7,
+        4,
+        5
+      ],
+      "state": 4722,
+      "transported_g_back": [
+        2,
+        7,
+        0,
+        4,
+        3,
+        6,
+        5,
+        1
+      ],
+      "weight": "1/4"
+    },
+    {
+      "coarse_isomorphism": [
+        0,
+        2,
+        3,
+        4,
+        6,
+        1,
+        5,
+        7
+      ],
+      "commutes": false,
+      "flipped_state": 269715,
+      "g": [
+        2,
+        7,
+        0,
+        4,
+        3,
+        6,
+        5,
+        1
+      ],
+      "state": 4722,
+      "transported_g_back": [
+        1,
+        0,
+        3,
+        2,
+        6,
+        7,
+        4,
+        5
+      ],
+      "weight": "1/4"
+    }
+  ],
+  "centralizer_constrained_isomorphism_tests": 12114,
+  "finite_group_controls": {
+    "A5": {
+      "classes": [
+        {
+          "centralizer_size": 4,
+          "class_size": 15,
+          "element_order": 2,
+          "weight": "1/4"
+        }
+      ],
+      "even_proportion": "1/4",
+      "order": 60
+    },
+    "C2_times_A5": {
+      "classes": [
+        {
+          "centralizer_size": 8,
+          "class_size": 15,
+          "element_order": 2,
+          "weight": "1/8"
+        },
+        {
+          "centralizer_size": 120,
+          "class_size": 1,
+          "element_order": 2,
+          "weight": "3/8"
+        },
+        {
+          "centralizer_size": 8,
+          "class_size": 15,
+          "element_order": 2,
+          "weight": "1/8"
+        }
+      ],
+      "even_proportion": "5/8",
+      "order": 120
+    },
+    "C3_times_D8": {
+      "classes": [
+        {
+          "centralizer_size": 12,
+          "class_size": 2,
+          "element_order": 2,
+          "weight": "1/4"
+        },
+        {
+          "centralizer_size": 12,
+          "class_size": 2,
+          "element_order": 2,
+          "weight": "1/4"
+        },
+        {
+          "centralizer_size": 12,
+          "class_size": 2,
+          "element_order": 4,
+          "weight": "1/4"
+        },
+        {
+          "centralizer_size": 24,
+          "class_size": 1,
+          "element_order": 2,
+          "weight": "1/8"
+        }
+      ],
+      "even_proportion": "7/8",
+      "order": 24
+    },
+    "D8": {
+      "classes": [
+        {
+          "centralizer_size": 4,
+          "class_size": 2,
+          "element_order": 2,
+          "weight": "1/4"
+        },
+        {
+          "centralizer_size": 4,
+          "class_size": 2,
+          "element_order": 2,
+          "weight": "1/4"
+        },
+        {
+          "centralizer_size": 4,
+          "class_size": 2,
+          "element_order": 4,
+          "weight": "1/4"
+        },
+        {
+          "centralizer_size": 8,
+          "class_size": 1,
+          "element_order": 2,
+          "weight": "1/8"
+        }
+      ],
+      "even_proportion": "7/8",
+      "order": 8
+    },
+    "S4": {
+      "classes": [
+        {
+          "centralizer_size": 4,
+          "class_size": 6,
+          "element_order": 2,
+          "weight": "1/4"
+        },
+        {
+          "centralizer_size": 8,
+          "class_size": 3,
+          "element_order": 2,
+          "weight": "1/8"
+        },
+        {
+          "centralizer_size": 4,
+          "class_size": 6,
+          "element_order": 4,
+          "weight": "1/4"
+        }
+      ],
+      "even_proportion": "5/8",
+      "order": 24
+    }
+  },
+  "marked_checks": [
+    {
+      "fixed": 1,
+      "fixed_mass": "1/2",
+      "involution_mass": "1/2",
+      "involution_pairs": 1,
+      "n": 2,
+      "transpositions": 0
+    },
+    {
+      "fixed": 2,
+      "fixed_mass": "1/2",
+      "involution_mass": "1/2",
+      "involution_pairs": 2,
+      "n": 4,
+      "transpositions": 0
+    },
+    {
+      "fixed": 0,
+      "fixed_mass": "0",
+      "involution_mass": "2",
+      "involution_pairs": 4,
+      "n": 6,
+      "transpositions": 2
+    },
+    {
+      "fixed": 7,
+      "fixed_mass": "5/2",
+      "involution_mass": "12",
+      "involution_pairs": 31,
+      "n": 8,
+      "transpositions": 12
+    }
+  ],
+  "marked_pair_details": [
+    {
+      "centralizer_size_in_Sn": 2,
+      "commuting_isomorphism_count": 2,
+      "flipped_state": 0,
+      "involution": [
+        1,
+        0
+      ],
+      "n": 2,
+      "one_witness": [
+        [
+          0,
+          1
+        ]
+      ],
+      "state": 0
+    },
+    {
+      "centralizer_size_in_Sn": 8,
+      "commuting_isomorphism_count": 4,
+      "flipped_state": 7,
+      "involution": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "n": 4,
+      "one_witness": [
+        [
+          0,
+          3,
+          2,
+          1
+        ]
+      ],
+      "state": 0
+    },
+    {
+      "centralizer_size_in_Sn": 8,
+      "commuting_isomorphism_count": 4,
+      "flipped_state": 5,
+      "involution": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "n": 4,
+      "one_witness": [
+        [
+          0,
+          1,
+          3,
+          2
+        ]
+      ],
+      "state": 2
+    },
+    {
+      "centralizer_size_in_Sn": 48,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 470,
+      "involution": [
+        3,
+        4,
+        5,
+        0,
+        1,
+        2
+      ],
+      "n": 6,
+      "one_witness": [],
+      "state": 0
+    },
+    {
+      "centralizer_size_in_Sn": 48,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 466,
+      "involution": [
+        3,
+        4,
+        5,
+        0,
+        1,
+        2
+      ],
+      "n": 6,
+      "one_witness": [],
+      "state": 4
+    },
+    {
+      "centralizer_size_in_Sn": 48,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 603,
+      "involution": [
+        2,
+        3,
+        0,
+        1,
+        5,
+        4
+      ],
+      "n": 6,
+      "one_witness": [],
+      "state": 40
+    },
+    {
+      "centralizer_size_in_Sn": 48,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 566,
+      "involution": [
+        1,
+        0,
+        3,
+        2,
+        5,
+        4
+      ],
+      "n": 6,
+      "one_witness": [],
+      "state": 41
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 248460,
+      "involution": [
+        4,
+        5,
+        6,
+        7,
+        0,
+        1,
+        2,
+        3
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 0
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 248452,
+      "involution": [
+        4,
+        5,
+        6,
+        7,
+        0,
+        1,
+        2,
+        3
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 8
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 840615,
+      "involution": [
+        5,
+        4,
+        6,
+        7,
+        1,
+        0,
+        2,
+        3
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 171
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 962982,
+      "involution": [
+        5,
+        2,
+        1,
+        6,
+        7,
+        0,
+        3,
+        4
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 175
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 2,
+      "flipped_state": 248732,
+      "involution": [
+        4,
+        5,
+        6,
+        7,
+        0,
+        1,
+        2,
+        3
+      ],
+      "n": 8,
+      "one_witness": [
+        [
+          2,
+          7,
+          0,
+          5,
+          6,
+          3,
+          4,
+          1
+        ]
+      ],
+      "state": 272
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 2,
+      "flipped_state": 247941,
+      "involution": [
+        4,
+        6,
+        5,
+        7,
+        0,
+        2,
+        1,
+        3
+      ],
+      "n": 8,
+      "one_witness": [
+        [
+          1,
+          4,
+          3,
+          5,
+          6,
+          7,
+          0,
+          2
+        ]
+      ],
+      "state": 273
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 248724,
+      "involution": [
+        4,
+        5,
+        6,
+        7,
+        0,
+        1,
+        2,
+        3
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 280
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 4,
+      "flipped_state": 239751,
+      "involution": [
+        4,
+        7,
+        5,
+        6,
+        0,
+        2,
+        3,
+        1
+      ],
+      "n": 8,
+      "one_witness": [
+        [
+          1,
+          6,
+          4,
+          5,
+          7,
+          0,
+          2,
+          3
+        ]
+      ],
+      "state": 291
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 962616,
+      "involution": [
+        5,
+        2,
+        1,
+        6,
+        7,
+        0,
+        3,
+        4
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 305
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 840103,
+      "involution": [
+        5,
+        4,
+        6,
+        7,
+        1,
+        0,
+        2,
+        3
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 683
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 963493,
+      "involution": [
+        5,
+        2,
+        1,
+        6,
+        7,
+        0,
+        3,
+        4
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 684
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 4,
+      "flipped_state": 963492,
+      "involution": [
+        5,
+        2,
+        1,
+        6,
+        7,
+        0,
+        3,
+        4
+      ],
+      "n": 8,
+      "one_witness": [
+        [
+          1,
+          0,
+          5,
+          7,
+          6,
+          2,
+          4,
+          3
+        ]
+      ],
+      "state": 685
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 70905,
+      "involution": [
+        2,
+        7,
+        0,
+        5,
+        6,
+        3,
+        4,
+        1
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 792
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 963131,
+      "involution": [
+        5,
+        2,
+        1,
+        6,
+        7,
+        0,
+        3,
+        4
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 818
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 963130,
+      "involution": [
+        5,
+        2,
+        1,
+        6,
+        7,
+        0,
+        3,
+        4
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 819
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 551014,
+      "involution": [
+        3,
+        4,
+        6,
+        0,
+        1,
+        7,
+        2,
+        5
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 4640
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 950568,
+      "involution": [
+        5,
+        3,
+        6,
+        1,
+        7,
+        0,
+        2,
+        4
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 4642
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 244615,
+      "involution": [
+        4,
+        7,
+        5,
+        6,
+        0,
+        2,
+        3,
+        1
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 4643
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 594509,
+      "involution": [
+        1,
+        0,
+        3,
+        2,
+        6,
+        7,
+        4,
+        5
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 4658
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 231623,
+      "involution": [
+        4,
+        7,
+        6,
+        5,
+        0,
+        3,
+        2,
+        1
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 4707
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 2,
+      "flipped_state": 885517,
+      "involution": [
+        5,
+        7,
+        3,
+        2,
+        6,
+        0,
+        4,
+        1
+      ],
+      "n": 8,
+      "one_witness": [
+        [
+          4,
+          3,
+          7,
+          1,
+          0,
+          6,
+          5,
+          2
+        ]
+      ],
+      "state": 4709
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 594445,
+      "involution": [
+        1,
+        0,
+        3,
+        2,
+        6,
+        7,
+        4,
+        5
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 4722
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 269715,
+      "involution": [
+        2,
+        7,
+        0,
+        4,
+        3,
+        6,
+        5,
+        1
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 4722
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 1405286,
+      "involution": [
+        6,
+        4,
+        5,
+        7,
+        1,
+        2,
+        0,
+        3
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 4722
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 1900983,
+      "involution": [
+        6,
+        3,
+        4,
+        1,
+        2,
+        7,
+        0,
+        5
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 8997
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 1072622,
+      "involution": [
+        3,
+        4,
+        5,
+        0,
+        1,
+        2,
+        7,
+        6
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 9384
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 4,
+      "flipped_state": 145046,
+      "involution": [
+        1,
+        0,
+        6,
+        5,
+        7,
+        3,
+        2,
+        4
+      ],
+      "n": 8,
+      "one_witness": [
+        [
+          2,
+          6,
+          0,
+          7,
+          5,
+          4,
+          1,
+          3
+        ]
+      ],
+      "state": 9385
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 1072227,
+      "involution": [
+        3,
+        5,
+        4,
+        0,
+        2,
+        1,
+        7,
+        6
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 9385
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 4,
+      "flipped_state": 897443,
+      "involution": [
+        5,
+        3,
+        7,
+        1,
+        6,
+        0,
+        4,
+        2
+      ],
+      "n": 8,
+      "one_witness": [
+        [
+          2,
+          4,
+          5,
+          6,
+          3,
+          7,
+          1,
+          0
+        ]
+      ],
+      "state": 9385
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 955810,
+      "involution": [
+        5,
+        2,
+        1,
+        6,
+        7,
+        0,
+        3,
+        4
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 9387
+    },
+    {
+      "centralizer_size_in_Sn": 384,
+      "commuting_isomorphism_count": 0,
+      "flipped_state": 544077,
+      "involution": [
+        1,
+        0,
+        3,
+        2,
+        6,
+        7,
+        4,
+        5
+      ],
+      "n": 8,
+      "one_witness": [],
+      "state": 85298
+    }
+  ],
+  "method": "Direct adjacency matrices, explicit wreath-product centralizers, exhaustive S8 check of D8 hostile; independent finite permutation groups"
+}

@@ -1,0 +1,94 @@
+{
+  "collatz_prime_depth_hostile": {
+    "carry": 475,
+    "clock": 1805,
+    "gcd": 95,
+    "reduced_denominator": 19,
+    "v19_carry": 1,
+    "v19_clock": 2,
+    "word": "11101000100"
+  },
+  "collatz_same_word_hostile": {
+    "clock": 26207,
+    "necklace_content_counts": {
+      "1": 418,
+      "73": 10,
+      "359": 1
+    },
+    "ones": 8,
+    "q": 15
+  },
+  "n3_gain_comparison": {
+    "affine_tournament_full_orbits": 1,
+    "common_regular_branch": "1",
+    "linear_complement": "1",
+    "linear_full_orbits": 2,
+    "tournament_N_lev": "0"
+  },
+  "partition_branches": {
+    "1": {
+      "N_lev": "0",
+      "N_odd": "1"
+    },
+    "10": {
+      "N_lev": "280",
+      "N_odd": "19296"
+    },
+    "11": {
+      "N_lev": "0",
+      "N_odd": "886288"
+    },
+    "12": {
+      "N_lev": "23464",
+      "N_odd": "75346496"
+    },
+    "13": {
+      "N_lev": "0",
+      "N_odd": "11856006240"
+    },
+    "14": {
+      "N_lev": "6819360",
+      "N_odd": "3467423603904"
+    },
+    "15": {
+      "N_lev": "0",
+      "N_odd": "1893448825054528"
+    },
+    "16": {
+      "N_lev": "6981258440",
+      "N_odd": "1938818705520727296"
+    },
+    "2": {
+      "N_lev": "1/2",
+      "N_odd": "1/2"
+    },
+    "3": {
+      "N_lev": "0",
+      "N_odd": "1"
+    },
+    "4": {
+      "N_lev": "1",
+      "N_odd": "1"
+    },
+    "5": {
+      "N_lev": "0",
+      "N_odd": "2"
+    },
+    "6": {
+      "N_lev": "2",
+      "N_odd": "4"
+    },
+    "7": {
+      "N_lev": "0",
+      "N_odd": "12"
+    },
+    "8": {
+      "N_lev": "15",
+      "N_odd": "64"
+    },
+    "9": {
+      "N_lev": "0",
+      "N_odd": "792"
+    }
+  }
+}

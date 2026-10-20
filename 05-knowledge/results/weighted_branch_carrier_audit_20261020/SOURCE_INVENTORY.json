@@ -1,0 +1,42 @@
+{
+  "audited_commit": "127698803818637f07ae89c32ac5d04c59161292",
+  "sources": [
+    {
+      "repository_path": "01-canon/theorems/THM-4726-level-branch-as-a-weighted-count-over-two-element-decorations-and-the-decorated-flip.md",
+      "commit": "127698803818637f07ae89c32ac5d04c59161292",
+      "bytes": 6906,
+      "sha256": "9a74d32c1ef98dddbfb345c859fe42cc67d0f9bd0ae8082d20b3dca6b7866024"
+    },
+    {
+      "repository_path": "04-computation/experiments/jcweb_20261020/branch_carrier.py",
+      "commit": "127698803818637f07ae89c32ac5d04c59161292",
+      "bytes": 3259,
+      "sha256": "f6f2fc5b1f92e9677fdbd5cd0c06ad5b01a4e8bcc915f0097a317cdf50b91ef1"
+    },
+    {
+      "repository_path": "04-computation/experiments/jcweb_20261020/branch_carrier.out",
+      "commit": "127698803818637f07ae89c32ac5d04c59161292",
+      "bytes": 4140,
+      "sha256": "63a750551900a45906f65d81c8c220988d0cf34ebc9adaecf7ed70763c6a5563"
+    },
+    {
+      "repository_path": "05-knowledge/results/prime_local_branch_code_lifts_20261020/PRIME_LOCAL_BRANCHES_CODES_AND_LIFTS.md",
+      "commit": "127698803818637f07ae89c32ac5d04c59161292",
+      "bytes": 20276,
+      "sha256": "ecebf2743b498d203568e711be9b38d8fa4ebe706c871bc0a5ef105c2af92a73"
+    },
+    {
+      "repository_path": "05-knowledge/results/collatz_local_prime_power_gates_20261020/LOCAL_CARRY_AND_PRIME_POWER_GATES.md",
+      "commit": "127698803818637f07ae89c32ac5d04c59161292",
+      "bytes": 12291,
+      "sha256": "526f318af2fde233683b4412514d8cda00c5b39a1b2d2d1589cca78924298240"
+    },
+    {
+      "repository_path": "05-knowledge/results/switching_branch_integrality_20261020/PAIRING_BOUNDARY.md",
+      "commit": "127698803818637f07ae89c32ac5d04c59161292",
+      "bytes": 3251,
+      "sha256": "a0b76d94b5f36cfdd420a0f29bc6af6eeb83fc3a970827495f725cde0a40636c"
+    }
+  ],
+  "scope": "THM-4726 only; prior-packet comparison; no THM-4727 endorsement"
+}
