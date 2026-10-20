@@ -1,0 +1,1 @@
+{'resultants': 748}

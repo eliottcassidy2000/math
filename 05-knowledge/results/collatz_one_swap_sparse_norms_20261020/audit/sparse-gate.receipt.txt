@@ -1,0 +1,1 @@
+{'norms': 550, 'swaps': 78938, 'k1_swaps': 2722, 'endpoint_plus': 2394, 'endpoint_minus': 2394}

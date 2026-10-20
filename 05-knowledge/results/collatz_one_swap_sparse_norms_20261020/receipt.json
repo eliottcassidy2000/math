@@ -1,0 +1,65 @@
+{
+  "balanced_return_checks": 2240,
+  "crossing_cut_checks": 1120,
+  "direct_swap_checks": 15096,
+  "direct_universe": "2<=p<=12; p<q<=180; gcd(p,q)=1; every unequal cyclic adjacent swap occurrence",
+  "k_equals_1_checks": 374,
+  "maximum_content_in_direct_universe": {
+    "epsilon": 1,
+    "g": 1055,
+    "j": 9,
+    "p": 11,
+    "q": 53
+  },
+  "period_classes": 68,
+  "period_replay_checks": 2690,
+  "sharpness_examples": [
+    {
+      "g": 7,
+      "k": 3,
+      "p": 2,
+      "q": 7
+    },
+    {
+      "g": 25,
+      "k": 20,
+      "p": 3,
+      "q": 61
+    },
+    {
+      "g": 79,
+      "k": 39,
+      "p": 4,
+      "q": 157
+    },
+    {
+      "g": 241,
+      "k": 24,
+      "p": 5,
+      "q": 121
+    },
+    {
+      "g": 727,
+      "k": 121,
+      "p": 6,
+      "q": 727
+    },
+    {
+      "g": 2185,
+      "k": 396,
+      "p": 7,
+      "q": 2773
+    },
+    {
+      "g": 6559,
+      "k": 117,
+      "p": 8,
+      "q": 937
+    }
+  ],
+  "status": "PASS",
+  "symbolic_resultant_comparisons": 432,
+  "symbolic_universe": "2<=p<=10; every coprime 1<=r<p; all p roots and both directions",
+  "universal_norm_count": 154,
+  "universal_norm_universe": "2<=p<=12; all a and both directions"
+}
