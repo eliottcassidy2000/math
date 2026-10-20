@@ -1,0 +1,8 @@
+{
+  "status": "FINITE-EXACT; all 65 saved literal certificates passed",
+  "scope": "All incident Q edges at the nine listed eligible source nodes; not an independent enumeration of eligible n8 classes.",
+  "n7_routes": 5,
+  "n8_routes": 60,
+  "listed_source_nodes": 9,
+  "total_routes": 65
+}

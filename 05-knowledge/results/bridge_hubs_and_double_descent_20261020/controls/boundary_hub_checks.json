@@ -1,0 +1,106 @@
+{
+  "status": "all literal checks passed",
+  "orders": [
+    {
+      "n": 3,
+      "eligible_nodes": 0,
+      "eligible_incident_edges": 0,
+      "literal_four_walks": 0,
+      "minimum_hub_triangle_change": null,
+      "strong_nonself_nodes": 0,
+      "minimum_descending_edges_nonself": null,
+      "self_converse_single_descent_nodes": []
+    },
+    {
+      "n": 4,
+      "eligible_nodes": 0,
+      "eligible_incident_edges": 0,
+      "literal_four_walks": 0,
+      "minimum_hub_triangle_change": null,
+      "strong_nonself_nodes": 0,
+      "minimum_descending_edges_nonself": null,
+      "self_converse_single_descent_nodes": [
+        {
+          "node": 1,
+          "representative": 1,
+          "degree": 1,
+          "c3": 2
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "eligible_nodes": 0,
+      "eligible_incident_edges": 0,
+      "literal_four_walks": 0,
+      "minimum_hub_triangle_change": null,
+      "strong_nonself_nodes": 0,
+      "minimum_descending_edges_nonself": null,
+      "self_converse_single_descent_nodes": [
+        {
+          "node": 3,
+          "representative": 3,
+          "degree": 4,
+          "c3": 4
+        },
+        {
+          "node": 5,
+          "representative": 5,
+          "degree": 3,
+          "c3": 3
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "eligible_nodes": 0,
+      "eligible_incident_edges": 0,
+      "literal_four_walks": 0,
+      "minimum_hub_triangle_change": null,
+      "strong_nonself_nodes": 13,
+      "minimum_descending_edges_nonself": 4,
+      "self_converse_single_descent_nodes": [
+        {
+          "node": 31,
+          "representative": 77,
+          "degree": 6,
+          "c3": 4
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "eligible_nodes": 1,
+      "eligible_incident_edges": 5,
+      "literal_four_walks": 5,
+      "minimum_hub_triangle_change": 4,
+      "strong_nonself_nodes": 137,
+      "minimum_descending_edges_nonself": 4,
+      "self_converse_single_descent_nodes": [
+        {
+          "node": 266,
+          "representative": 2461,
+          "degree": 13,
+          "c3": 5
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "eligible_nodes": 8,
+      "eligible_incident_edges": 60,
+      "literal_four_walks": 60,
+      "minimum_hub_triangle_change": 3,
+      "strong_nonself_nodes": 2923,
+      "minimum_descending_edges_nonself": 4,
+      "self_converse_single_descent_nodes": [
+        {
+          "node": 3517,
+          "representative": 157501,
+          "degree": 24,
+          "c3": 6
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "n": 5,
+  "source_commit": "8c8d59a4f126801c9a5c4c2d6f6a7b810c1d937b",
+  "source_path": "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n5.json",
+  "source_sha256": "c5e68df205d8b9ce5de786e46352db83aebe93d954c9a0d5057bf862afdd143c",
+  "projection": "nodes with only node, representative, SC retained, in original order",
+  "nodes": [
+    {
+      "node": 0,
+      "representative": 0,
+      "SC": true
+    },
+    {
+      "node": 1,
+      "representative": 1,
+      "SC": true
+    },
+    {
+      "node": 2,
+      "representative": 2,
+      "SC": false
+    },
+    {
+      "node": 3,
+      "representative": 3,
+      "SC": true
+    },
+    {
+      "node": 4,
+      "representative": 4,
+      "SC": false
+    },
+    {
+      "node": 5,
+      "representative": 5,
+      "SC": true
+    },
+    {
+      "node": 6,
+      "representative": 10,
+      "SC": true
+    },
+    {
+      "node": 7,
+      "representative": 11,
+      "SC": true
+    },
+    {
+      "node": 8,
+      "representative": 16,
+      "SC": true
+    },
+    {
+      "node": 9,
+      "representative": 17,
+      "SC": true
+    }
+  ]
+}

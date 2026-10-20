@@ -1,0 +1,85 @@
+{
+  "status": "FINITE-EXACT; all checks passed",
+  "quotient": [
+    {
+      "n": 3,
+      "strong_nonself_nodes": 0,
+      "all_literal_paths": 0,
+      "descending_path_orbits": 0,
+      "minimum_descending_Q_edges": null,
+      "cycle_cut_pairs_checked": 0
+    },
+    {
+      "n": 4,
+      "strong_nonself_nodes": 0,
+      "all_literal_paths": 0,
+      "descending_path_orbits": 0,
+      "minimum_descending_Q_edges": null,
+      "cycle_cut_pairs_checked": 0
+    },
+    {
+      "n": 5,
+      "strong_nonself_nodes": 0,
+      "all_literal_paths": 0,
+      "descending_path_orbits": 0,
+      "minimum_descending_Q_edges": null,
+      "cycle_cut_pairs_checked": 0
+    },
+    {
+      "n": 6,
+      "strong_nonself_nodes": 13,
+      "all_literal_paths": 375,
+      "descending_path_orbits": 145,
+      "minimum_descending_Q_edges": 4,
+      "cycle_cut_pairs_checked": 608
+    },
+    {
+      "n": 7,
+      "strong_nonself_nodes": 137,
+      "all_literal_paths": 12131,
+      "descending_path_orbits": 4626,
+      "minimum_descending_Q_edges": 4,
+      "cycle_cut_pairs_checked": 17840
+    }
+  ],
+  "two_orbit": [
+    {
+      "p": 3,
+      "total_systems": 8,
+      "literal_block_cycles": 4,
+      "verified_self_converse_exceptions": 4
+    },
+    {
+      "p": 5,
+      "total_systems": 128,
+      "literal_block_cycles": 128,
+      "verified_self_converse_exceptions": 0
+    },
+    {
+      "p": 7,
+      "total_systems": 2048,
+      "literal_block_cycles": 2048,
+      "verified_self_converse_exceptions": 0
+    }
+  ],
+  "prime_block": [
+    {
+      "p": 3,
+      "orbits": 3,
+      "all_nonempty_cross_systems": 343,
+      "signed_boundary_certificates": 2744
+    },
+    {
+      "p": 3,
+      "orbits": 4,
+      "all_nonempty_cross_systems": 2401,
+      "signed_boundary_certificates": 38416
+    },
+    {
+      "p": 5,
+      "orbits": 3,
+      "all_nonempty_cross_systems": 29791,
+      "signed_boundary_certificates": 238328
+    }
+  ]
+}

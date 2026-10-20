@@ -1,0 +1,179 @@
+{
+  "n": 6,
+  "source_commit": "8c8d59a4f126801c9a5c4c2d6f6a7b810c1d937b",
+  "source_path": "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n6.json",
+  "source_sha256": "54499269e5f00fa1fdeafca1cf122f955a1d79606f6afc87bf1fedc8906086a7",
+  "projection": "nodes with only node, representative, SC retained, in original order",
+  "nodes": [
+    {
+      "node": 0,
+      "representative": 0,
+      "SC": true
+    },
+    {
+      "node": 1,
+      "representative": 1,
+      "SC": true
+    },
+    {
+      "node": 2,
+      "representative": 2,
+      "SC": false
+    },
+    {
+      "node": 3,
+      "representative": 3,
+      "SC": false
+    },
+    {
+      "node": 4,
+      "representative": 4,
+      "SC": false
+    },
+    {
+      "node": 5,
+      "representative": 5,
+      "SC": false
+    },
+    {
+      "node": 6,
+      "representative": 6,
+      "SC": false
+    },
+    {
+      "node": 7,
+      "representative": 8,
+      "SC": false
+    },
+    {
+      "node": 8,
+      "representative": 9,
+      "SC": false
+    },
+    {
+      "node": 9,
+      "representative": 10,
+      "SC": false
+    },
+    {
+      "node": 10,
+      "representative": 18,
+      "SC": true
+    },
+    {
+      "node": 11,
+      "representative": 19,
+      "SC": true
+    },
+    {
+      "node": 12,
+      "representative": 20,
+      "SC": false
+    },
+    {
+      "node": 13,
+      "representative": 21,
+      "SC": false
+    },
+    {
+      "node": 14,
+      "representative": 22,
+      "SC": false
+    },
+    {
+      "node": 15,
+      "representative": 25,
+      "SC": false
+    },
+    {
+      "node": 16,
+      "representative": 26,
+      "SC": false
+    },
+    {
+      "node": 17,
+      "representative": 32,
+      "SC": true
+    },
+    {
+      "node": 18,
+      "representative": 33,
+      "SC": true
+    },
+    {
+      "node": 19,
+      "representative": 36,
+      "SC": false
+    },
+    {
+      "node": 20,
+      "representative": 37,
+      "SC": false
+    },
+    {
+      "node": 21,
+      "representative": 38,
+      "SC": false
+    },
+    {
+      "node": 22,
+      "representative": 41,
+      "SC": false
+    },
+    {
+      "node": 23,
+      "representative": 43,
+      "SC": true
+    },
+    {
+      "node": 24,
+      "representative": 50,
+      "SC": true
+    },
+    {
+      "node": 25,
+      "representative": 51,
+      "SC": true
+    },
+    {
+      "node": 26,
+      "representative": 53,
+      "SC": false
+    },
+    {
+      "node": 27,
+      "representative": 61,
+      "SC": false
+    },
+    {
+      "node": 28,
+      "representative": 64,
+      "SC": false
+    },
+    {
+      "node": 29,
+      "representative": 65,
+      "SC": false
+    },
+    {
+      "node": 30,
+      "representative": 66,
+      "SC": false
+    },
+    {
+      "node": 31,
+      "representative": 77,
+      "SC": true
+    },
+    {
+      "node": 32,
+      "representative": 165,
+      "SC": true
+    },
+    {
+      "node": 33,
+      "representative": 520,
+      "SC": true
+    }
+  ]
+}

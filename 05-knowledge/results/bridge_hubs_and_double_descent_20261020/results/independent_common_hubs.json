@@ -1,0 +1,40 @@
+{
+  "status": "FINITE-EXACT; all literal checks passed",
+  "orders": [
+    {
+      "n": 3,
+      "nonstrong_sources": 1,
+      "qualifying_shared_edge_groups": 0,
+      "literal_alternate_routes": 0,
+      "first_second_last_routes": 0
+    },
+    {
+      "n": 4,
+      "nonstrong_sources": 2,
+      "qualifying_shared_edge_groups": 0,
+      "literal_alternate_routes": 0,
+      "first_second_last_routes": 0
+    },
+    {
+      "n": 5,
+      "nonstrong_sources": 4,
+      "qualifying_shared_edge_groups": 0,
+      "literal_alternate_routes": 0,
+      "first_second_last_routes": 0
+    },
+    {
+      "n": 6,
+      "nonstrong_sources": 12,
+      "qualifying_shared_edge_groups": 50,
+      "literal_alternate_routes": 108,
+      "first_second_last_routes": 14
+    },
+    {
+      "n": 7,
+      "nonstrong_sources": 56,
+      "qualifying_shared_edge_groups": 1289,
+      "literal_alternate_routes": 3669,
+      "first_second_last_routes": 709
+    }
+  ]
+}

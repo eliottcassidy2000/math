@@ -1,0 +1,75 @@
+{
+  "status": "PASS; portable and optional full-atlas checks passed normally and under Python -O",
+  "commands": [
+    {
+      "script": "independent_controls.py",
+      "optimized": false,
+      "exit_code": 0,
+      "stdout_bytes": 1600,
+      "stdout_sha256": "27fae454adb4929ea4a2d3a15889bc80b3a5ee725df6c8047f76d60c88470911",
+      "stderr_empty": true
+    },
+    {
+      "script": "independent_controls.py",
+      "optimized": true,
+      "exit_code": 0,
+      "stdout_bytes": 1600,
+      "stdout_sha256": "27fae454adb4929ea4a2d3a15889bc80b3a5ee725df6c8047f76d60c88470911",
+      "stderr_empty": true
+    },
+    {
+      "script": "independent_common_hubs.py",
+      "optimized": false,
+      "exit_code": 0,
+      "stdout_bytes": 716,
+      "stdout_sha256": "590a2f69ab50c5550269cc712dc8bee6365dde578a3d3ba228933bf87f58282e",
+      "stderr_empty": true
+    },
+    {
+      "script": "independent_common_hubs.py",
+      "optimized": true,
+      "exit_code": 0,
+      "stdout_bytes": 716,
+      "stdout_sha256": "590a2f69ab50c5550269cc712dc8bee6365dde578a3d3ba228933bf87f58282e",
+      "stderr_empty": true
+    },
+    {
+      "script": "replay_guard_certificates.py",
+      "optimized": false,
+      "exit_code": 0,
+      "stdout_bytes": 292,
+      "stdout_sha256": "0141bc574086593d0aaeec78a664ffa27b4e06125be2ea6b054ebfb7424d8886",
+      "stderr_empty": true
+    },
+    {
+      "script": "replay_guard_certificates.py",
+      "optimized": true,
+      "exit_code": 0,
+      "stdout_bytes": 292,
+      "stdout_sha256": "0141bc574086593d0aaeec78a664ffa27b4e06125be2ea6b054ebfb7424d8886",
+      "stderr_empty": true
+    },
+    {
+      "script": "replay_full_atlas.py",
+      "optimized": false,
+      "exit_code": 0,
+      "stdout_bytes": 1776,
+      "stdout_sha256": "f5d7b8f9b73df919748b7f8fe9350916f029ecb4b721c6e9f2555758bf4d7023",
+      "stderr_empty": true
+    },
+    {
+      "script": "replay_full_atlas.py",
+      "optimized": true,
+      "exit_code": 0,
+      "stdout_bytes": 1776,
+      "stdout_sha256": "f5d7b8f9b73df919748b7f8fe9350916f029ecb4b721c6e9f2555758bf4d7023",
+      "stderr_empty": true
+    }
+  ],
+  "normal_optimized_outputs_identical": true,
+  "original_candidate_unchanged_sha256": "cb1246527eb2cecc663c4d4125f2febe9ca8210a75c1f7684302aebe12b208a3",
+  "destination_absent_in_filesystem_and_HEAD": true,
+  "repository_head_observed": "17da5bb798d9c6687ceb942378e236a95433296c",
+  "repository_status_observed": "## main...origin/main",
+  "packaging_changes": "Input-path and output-comparison adaptations only; standalone guard replay checks existing certificates and is not an eligible-source census."
+}

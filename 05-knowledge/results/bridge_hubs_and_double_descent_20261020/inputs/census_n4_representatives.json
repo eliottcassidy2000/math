@@ -1,0 +1,24 @@
+{
+  "n": 4,
+  "source_commit": "8c8d59a4f126801c9a5c4c2d6f6a7b810c1d937b",
+  "source_path": "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n4.json",
+  "source_sha256": "7bb57d67035db9edb0bce5ee35897035f4c04219832505ecf54872e311863faa",
+  "projection": "nodes with only node, representative, SC retained, in original order",
+  "nodes": [
+    {
+      "node": 0,
+      "representative": 0,
+      "SC": true
+    },
+    {
+      "node": 1,
+      "representative": 1,
+      "SC": true
+    },
+    {
+      "node": 2,
+      "representative": 2,
+      "SC": false
+    }
+  ]
+}

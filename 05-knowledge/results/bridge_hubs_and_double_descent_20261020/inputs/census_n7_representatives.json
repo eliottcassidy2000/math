@@ -1,0 +1,1369 @@
+{
+  "n": 7,
+  "source_commit": "8c8d59a4f126801c9a5c4c2d6f6a7b810c1d937b",
+  "source_path": "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n7.json",
+  "source_sha256": "68f4e92612034d79984c706850515954ca0f9e08e7eebd27b4a567ba88115c83",
+  "projection": "nodes with only node, representative, SC retained, in original order",
+  "nodes": [
+    {
+      "node": 0,
+      "representative": 0,
+      "SC": true
+    },
+    {
+      "node": 1,
+      "representative": 1,
+      "SC": true
+    },
+    {
+      "node": 2,
+      "representative": 2,
+      "SC": false
+    },
+    {
+      "node": 3,
+      "representative": 3,
+      "SC": false
+    },
+    {
+      "node": 4,
+      "representative": 4,
+      "SC": false
+    },
+    {
+      "node": 5,
+      "representative": 5,
+      "SC": false
+    },
+    {
+      "node": 6,
+      "representative": 6,
+      "SC": false
+    },
+    {
+      "node": 7,
+      "representative": 7,
+      "SC": true
+    },
+    {
+      "node": 8,
+      "representative": 8,
+      "SC": false
+    },
+    {
+      "node": 9,
+      "representative": 9,
+      "SC": false
+    },
+    {
+      "node": 10,
+      "representative": 10,
+      "SC": false
+    },
+    {
+      "node": 11,
+      "representative": 11,
+      "SC": true
+    },
+    {
+      "node": 12,
+      "representative": 12,
+      "SC": false
+    },
+    {
+      "node": 13,
+      "representative": 13,
+      "SC": false
+    },
+    {
+      "node": 14,
+      "representative": 14,
+      "SC": false
+    },
+    {
+      "node": 15,
+      "representative": 16,
+      "SC": false
+    },
+    {
+      "node": 16,
+      "representative": 17,
+      "SC": false
+    },
+    {
+      "node": 17,
+      "representative": 18,
+      "SC": false
+    },
+    {
+      "node": 18,
+      "representative": 20,
+      "SC": false
+    },
+    {
+      "node": 19,
+      "representative": 21,
+      "SC": true
+    },
+    {
+      "node": 20,
+      "representative": 22,
+      "SC": false
+    },
+    {
+      "node": 21,
+      "representative": 25,
+      "SC": true
+    },
+    {
+      "node": 22,
+      "representative": 26,
+      "SC": false
+    },
+    {
+      "node": 23,
+      "representative": 34,
+      "SC": true
+    },
+    {
+      "node": 24,
+      "representative": 35,
+      "SC": true
+    },
+    {
+      "node": 25,
+      "representative": 36,
+      "SC": false
+    },
+    {
+      "node": 26,
+      "representative": 37,
+      "SC": false
+    },
+    {
+      "node": 27,
+      "representative": 38,
+      "SC": false
+    },
+    {
+      "node": 28,
+      "representative": 39,
+      "SC": true
+    },
+    {
+      "node": 29,
+      "representative": 40,
+      "SC": false
+    },
+    {
+      "node": 30,
+      "representative": 41,
+      "SC": false
+    },
+    {
+      "node": 31,
+      "representative": 42,
+      "SC": false
+    },
+    {
+      "node": 32,
+      "representative": 43,
+      "SC": true
+    },
+    {
+      "node": 33,
+      "representative": 44,
+      "SC": false
+    },
+    {
+      "node": 34,
+      "representative": 45,
+      "SC": false
+    },
+    {
+      "node": 35,
+      "representative": 46,
+      "SC": false
+    },
+    {
+      "node": 36,
+      "representative": 49,
+      "SC": false
+    },
+    {
+      "node": 37,
+      "representative": 50,
+      "SC": false
+    },
+    {
+      "node": 38,
+      "representative": 52,
+      "SC": false
+    },
+    {
+      "node": 39,
+      "representative": 53,
+      "SC": true
+    },
+    {
+      "node": 40,
+      "representative": 54,
+      "SC": false
+    },
+    {
+      "node": 41,
+      "representative": 57,
+      "SC": true
+    },
+    {
+      "node": 42,
+      "representative": 58,
+      "SC": false
+    },
+    {
+      "node": 43,
+      "representative": 64,
+      "SC": true
+    },
+    {
+      "node": 44,
+      "representative": 65,
+      "SC": true
+    },
+    {
+      "node": 45,
+      "representative": 68,
+      "SC": false
+    },
+    {
+      "node": 46,
+      "representative": 69,
+      "SC": false
+    },
+    {
+      "node": 47,
+      "representative": 70,
+      "SC": false
+    },
+    {
+      "node": 48,
+      "representative": 71,
+      "SC": false
+    },
+    {
+      "node": 49,
+      "representative": 72,
+      "SC": false
+    },
+    {
+      "node": 50,
+      "representative": 73,
+      "SC": false
+    },
+    {
+      "node": 51,
+      "representative": 74,
+      "SC": false
+    },
+    {
+      "node": 52,
+      "representative": 75,
+      "SC": false
+    },
+    {
+      "node": 53,
+      "representative": 76,
+      "SC": false
+    },
+    {
+      "node": 54,
+      "representative": 77,
+      "SC": false
+    },
+    {
+      "node": 55,
+      "representative": 81,
+      "SC": false
+    },
+    {
+      "node": 56,
+      "representative": 82,
+      "SC": false
+    },
+    {
+      "node": 57,
+      "representative": 83,
+      "SC": false
+    },
+    {
+      "node": 58,
+      "representative": 84,
+      "SC": false
+    },
+    {
+      "node": 59,
+      "representative": 85,
+      "SC": false
+    },
+    {
+      "node": 60,
+      "representative": 86,
+      "SC": false
+    },
+    {
+      "node": 61,
+      "representative": 87,
+      "SC": true
+    },
+    {
+      "node": 62,
+      "representative": 89,
+      "SC": false
+    },
+    {
+      "node": 63,
+      "representative": 90,
+      "SC": false
+    },
+    {
+      "node": 64,
+      "representative": 91,
+      "SC": false
+    },
+    {
+      "node": 65,
+      "representative": 98,
+      "SC": true
+    },
+    {
+      "node": 66,
+      "representative": 99,
+      "SC": true
+    },
+    {
+      "node": 67,
+      "representative": 100,
+      "SC": false
+    },
+    {
+      "node": 68,
+      "representative": 101,
+      "SC": false
+    },
+    {
+      "node": 69,
+      "representative": 102,
+      "SC": false
+    },
+    {
+      "node": 70,
+      "representative": 103,
+      "SC": true
+    },
+    {
+      "node": 71,
+      "representative": 104,
+      "SC": false
+    },
+    {
+      "node": 72,
+      "representative": 105,
+      "SC": false
+    },
+    {
+      "node": 73,
+      "representative": 106,
+      "SC": false
+    },
+    {
+      "node": 74,
+      "representative": 107,
+      "SC": false
+    },
+    {
+      "node": 75,
+      "representative": 108,
+      "SC": false
+    },
+    {
+      "node": 76,
+      "representative": 109,
+      "SC": false
+    },
+    {
+      "node": 77,
+      "representative": 114,
+      "SC": false
+    },
+    {
+      "node": 78,
+      "representative": 115,
+      "SC": false
+    },
+    {
+      "node": 79,
+      "representative": 116,
+      "SC": false
+    },
+    {
+      "node": 80,
+      "representative": 117,
+      "SC": false
+    },
+    {
+      "node": 81,
+      "representative": 118,
+      "SC": true
+    },
+    {
+      "node": 82,
+      "representative": 121,
+      "SC": false
+    },
+    {
+      "node": 83,
+      "representative": 125,
+      "SC": false
+    },
+    {
+      "node": 84,
+      "representative": 128,
+      "SC": false
+    },
+    {
+      "node": 85,
+      "representative": 129,
+      "SC": false
+    },
+    {
+      "node": 86,
+      "representative": 130,
+      "SC": false
+    },
+    {
+      "node": 87,
+      "representative": 131,
+      "SC": false
+    },
+    {
+      "node": 88,
+      "representative": 136,
+      "SC": false
+    },
+    {
+      "node": 89,
+      "representative": 137,
+      "SC": false
+    },
+    {
+      "node": 90,
+      "representative": 138,
+      "SC": false
+    },
+    {
+      "node": 91,
+      "representative": 140,
+      "SC": false
+    },
+    {
+      "node": 92,
+      "representative": 141,
+      "SC": false
+    },
+    {
+      "node": 93,
+      "representative": 145,
+      "SC": false
+    },
+    {
+      "node": 94,
+      "representative": 146,
+      "SC": false
+    },
+    {
+      "node": 95,
+      "representative": 147,
+      "SC": false
+    },
+    {
+      "node": 96,
+      "representative": 149,
+      "SC": false
+    },
+    {
+      "node": 97,
+      "representative": 150,
+      "SC": false
+    },
+    {
+      "node": 98,
+      "representative": 153,
+      "SC": false
+    },
+    {
+      "node": 99,
+      "representative": 157,
+      "SC": false
+    },
+    {
+      "node": 100,
+      "representative": 162,
+      "SC": false
+    },
+    {
+      "node": 101,
+      "representative": 163,
+      "SC": false
+    },
+    {
+      "node": 102,
+      "representative": 164,
+      "SC": false
+    },
+    {
+      "node": 103,
+      "representative": 165,
+      "SC": false
+    },
+    {
+      "node": 104,
+      "representative": 166,
+      "SC": false
+    },
+    {
+      "node": 105,
+      "representative": 168,
+      "SC": false
+    },
+    {
+      "node": 106,
+      "representative": 169,
+      "SC": false
+    },
+    {
+      "node": 107,
+      "representative": 170,
+      "SC": false
+    },
+    {
+      "node": 108,
+      "representative": 171,
+      "SC": true
+    },
+    {
+      "node": 109,
+      "representative": 173,
+      "SC": false
+    },
+    {
+      "node": 110,
+      "representative": 178,
+      "SC": true
+    },
+    {
+      "node": 111,
+      "representative": 179,
+      "SC": false
+    },
+    {
+      "node": 112,
+      "representative": 180,
+      "SC": false
+    },
+    {
+      "node": 113,
+      "representative": 181,
+      "SC": false
+    },
+    {
+      "node": 114,
+      "representative": 182,
+      "SC": true
+    },
+    {
+      "node": 115,
+      "representative": 192,
+      "SC": true
+    },
+    {
+      "node": 116,
+      "representative": 193,
+      "SC": true
+    },
+    {
+      "node": 117,
+      "representative": 194,
+      "SC": false
+    },
+    {
+      "node": 118,
+      "representative": 195,
+      "SC": false
+    },
+    {
+      "node": 119,
+      "representative": 196,
+      "SC": false
+    },
+    {
+      "node": 120,
+      "representative": 197,
+      "SC": false
+    },
+    {
+      "node": 121,
+      "representative": 198,
+      "SC": false
+    },
+    {
+      "node": 122,
+      "representative": 201,
+      "SC": false
+    },
+    {
+      "node": 123,
+      "representative": 202,
+      "SC": false
+    },
+    {
+      "node": 124,
+      "representative": 205,
+      "SC": false
+    },
+    {
+      "node": 125,
+      "representative": 210,
+      "SC": false
+    },
+    {
+      "node": 126,
+      "representative": 211,
+      "SC": true
+    },
+    {
+      "node": 127,
+      "representative": 212,
+      "SC": false
+    },
+    {
+      "node": 128,
+      "representative": 213,
+      "SC": false
+    },
+    {
+      "node": 129,
+      "representative": 218,
+      "SC": false
+    },
+    {
+      "node": 130,
+      "representative": 226,
+      "SC": false
+    },
+    {
+      "node": 131,
+      "representative": 227,
+      "SC": true
+    },
+    {
+      "node": 132,
+      "representative": 228,
+      "SC": false
+    },
+    {
+      "node": 133,
+      "representative": 229,
+      "SC": false
+    },
+    {
+      "node": 134,
+      "representative": 233,
+      "SC": false
+    },
+    {
+      "node": 135,
+      "representative": 234,
+      "SC": false
+    },
+    {
+      "node": 136,
+      "representative": 237,
+      "SC": false
+    },
+    {
+      "node": 137,
+      "representative": 242,
+      "SC": false
+    },
+    {
+      "node": 138,
+      "representative": 245,
+      "SC": false
+    },
+    {
+      "node": 139,
+      "representative": 250,
+      "SC": false
+    },
+    {
+      "node": 140,
+      "representative": 253,
+      "SC": false
+    },
+    {
+      "node": 141,
+      "representative": 256,
+      "SC": false
+    },
+    {
+      "node": 142,
+      "representative": 257,
+      "SC": false
+    },
+    {
+      "node": 143,
+      "representative": 258,
+      "SC": false
+    },
+    {
+      "node": 144,
+      "representative": 260,
+      "SC": false
+    },
+    {
+      "node": 145,
+      "representative": 261,
+      "SC": false
+    },
+    {
+      "node": 146,
+      "representative": 262,
+      "SC": false
+    },
+    {
+      "node": 147,
+      "representative": 281,
+      "SC": false
+    },
+    {
+      "node": 148,
+      "representative": 282,
+      "SC": false
+    },
+    {
+      "node": 149,
+      "representative": 285,
+      "SC": true
+    },
+    {
+      "node": 150,
+      "representative": 290,
+      "SC": false
+    },
+    {
+      "node": 151,
+      "representative": 292,
+      "SC": false
+    },
+    {
+      "node": 152,
+      "representative": 293,
+      "SC": false
+    },
+    {
+      "node": 153,
+      "representative": 294,
+      "SC": false
+    },
+    {
+      "node": 154,
+      "representative": 298,
+      "SC": false
+    },
+    {
+      "node": 155,
+      "representative": 301,
+      "SC": true
+    },
+    {
+      "node": 156,
+      "representative": 306,
+      "SC": true
+    },
+    {
+      "node": 157,
+      "representative": 309,
+      "SC": false
+    },
+    {
+      "node": 158,
+      "representative": 320,
+      "SC": true
+    },
+    {
+      "node": 159,
+      "representative": 321,
+      "SC": true
+    },
+    {
+      "node": 160,
+      "representative": 324,
+      "SC": false
+    },
+    {
+      "node": 161,
+      "representative": 325,
+      "SC": false
+    },
+    {
+      "node": 162,
+      "representative": 326,
+      "SC": false
+    },
+    {
+      "node": 163,
+      "representative": 329,
+      "SC": false
+    },
+    {
+      "node": 164,
+      "representative": 341,
+      "SC": true
+    },
+    {
+      "node": 165,
+      "representative": 346,
+      "SC": false
+    },
+    {
+      "node": 166,
+      "representative": 354,
+      "SC": false
+    },
+    {
+      "node": 167,
+      "representative": 357,
+      "SC": true
+    },
+    {
+      "node": 168,
+      "representative": 358,
+      "SC": false
+    },
+    {
+      "node": 169,
+      "representative": 361,
+      "SC": false
+    },
+    {
+      "node": 170,
+      "representative": 362,
+      "SC": true
+    },
+    {
+      "node": 171,
+      "representative": 370,
+      "SC": false
+    },
+    {
+      "node": 172,
+      "representative": 409,
+      "SC": true
+    },
+    {
+      "node": 173,
+      "representative": 420,
+      "SC": false
+    },
+    {
+      "node": 174,
+      "representative": 422,
+      "SC": false
+    },
+    {
+      "node": 175,
+      "representative": 425,
+      "SC": true
+    },
+    {
+      "node": 176,
+      "representative": 426,
+      "SC": true
+    },
+    {
+      "node": 177,
+      "representative": 436,
+      "SC": false
+    },
+    {
+      "node": 178,
+      "representative": 474,
+      "SC": false
+    },
+    {
+      "node": 179,
+      "representative": 506,
+      "SC": true
+    },
+    {
+      "node": 180,
+      "representative": 580,
+      "SC": true
+    },
+    {
+      "node": 181,
+      "representative": 581,
+      "SC": true
+    },
+    {
+      "node": 182,
+      "representative": 582,
+      "SC": false
+    },
+    {
+      "node": 183,
+      "representative": 583,
+      "SC": true
+    },
+    {
+      "node": 184,
+      "representative": 585,
+      "SC": false
+    },
+    {
+      "node": 185,
+      "representative": 586,
+      "SC": false
+    },
+    {
+      "node": 186,
+      "representative": 587,
+      "SC": true
+    },
+    {
+      "node": 187,
+      "representative": 589,
+      "SC": false
+    },
+    {
+      "node": 188,
+      "representative": 596,
+      "SC": false
+    },
+    {
+      "node": 189,
+      "representative": 597,
+      "SC": true
+    },
+    {
+      "node": 190,
+      "representative": 598,
+      "SC": false
+    },
+    {
+      "node": 191,
+      "representative": 602,
+      "SC": false
+    },
+    {
+      "node": 192,
+      "representative": 614,
+      "SC": true
+    },
+    {
+      "node": 193,
+      "representative": 615,
+      "SC": true
+    },
+    {
+      "node": 194,
+      "representative": 617,
+      "SC": false
+    },
+    {
+      "node": 195,
+      "representative": 618,
+      "SC": true
+    },
+    {
+      "node": 196,
+      "representative": 621,
+      "SC": false
+    },
+    {
+      "node": 197,
+      "representative": 626,
+      "SC": false
+    },
+    {
+      "node": 198,
+      "representative": 628,
+      "SC": false
+    },
+    {
+      "node": 199,
+      "representative": 629,
+      "SC": true
+    },
+    {
+      "node": 200,
+      "representative": 630,
+      "SC": true
+    },
+    {
+      "node": 201,
+      "representative": 642,
+      "SC": false
+    },
+    {
+      "node": 202,
+      "representative": 643,
+      "SC": false
+    },
+    {
+      "node": 203,
+      "representative": 646,
+      "SC": false
+    },
+    {
+      "node": 204,
+      "representative": 649,
+      "SC": false
+    },
+    {
+      "node": 205,
+      "representative": 650,
+      "SC": false
+    },
+    {
+      "node": 206,
+      "representative": 651,
+      "SC": false
+    },
+    {
+      "node": 207,
+      "representative": 653,
+      "SC": false
+    },
+    {
+      "node": 208,
+      "representative": 658,
+      "SC": false
+    },
+    {
+      "node": 209,
+      "representative": 659,
+      "SC": false
+    },
+    {
+      "node": 210,
+      "representative": 662,
+      "SC": false
+    },
+    {
+      "node": 211,
+      "representative": 667,
+      "SC": true
+    },
+    {
+      "node": 212,
+      "representative": 676,
+      "SC": true
+    },
+    {
+      "node": 213,
+      "representative": 678,
+      "SC": true
+    },
+    {
+      "node": 214,
+      "representative": 681,
+      "SC": false
+    },
+    {
+      "node": 215,
+      "representative": 682,
+      "SC": true
+    },
+    {
+      "node": 216,
+      "representative": 683,
+      "SC": true
+    },
+    {
+      "node": 217,
+      "representative": 690,
+      "SC": true
+    },
+    {
+      "node": 218,
+      "representative": 691,
+      "SC": false
+    },
+    {
+      "node": 219,
+      "representative": 692,
+      "SC": false
+    },
+    {
+      "node": 220,
+      "representative": 693,
+      "SC": false
+    },
+    {
+      "node": 221,
+      "representative": 694,
+      "SC": true
+    },
+    {
+      "node": 222,
+      "representative": 706,
+      "SC": true
+    },
+    {
+      "node": 223,
+      "representative": 707,
+      "SC": true
+    },
+    {
+      "node": 224,
+      "representative": 709,
+      "SC": false
+    },
+    {
+      "node": 225,
+      "representative": 714,
+      "SC": false
+    },
+    {
+      "node": 226,
+      "representative": 722,
+      "SC": false
+    },
+    {
+      "node": 227,
+      "representative": 723,
+      "SC": true
+    },
+    {
+      "node": 228,
+      "representative": 725,
+      "SC": false
+    },
+    {
+      "node": 229,
+      "representative": 730,
+      "SC": false
+    },
+    {
+      "node": 230,
+      "representative": 757,
+      "SC": true
+    },
+    {
+      "node": 231,
+      "representative": 762,
+      "SC": true
+    },
+    {
+      "node": 232,
+      "representative": 804,
+      "SC": false
+    },
+    {
+      "node": 233,
+      "representative": 806,
+      "SC": false
+    },
+    {
+      "node": 234,
+      "representative": 821,
+      "SC": false
+    },
+    {
+      "node": 235,
+      "representative": 841,
+      "SC": false
+    },
+    {
+      "node": 236,
+      "representative": 869,
+      "SC": true
+    },
+    {
+      "node": 237,
+      "representative": 882,
+      "SC": false
+    },
+    {
+      "node": 238,
+      "representative": 932,
+      "SC": true
+    },
+    {
+      "node": 239,
+      "representative": 934,
+      "SC": true
+    },
+    {
+      "node": 240,
+      "representative": 948,
+      "SC": false
+    },
+    {
+      "node": 241,
+      "representative": 1152,
+      "SC": true
+    },
+    {
+      "node": 242,
+      "representative": 1153,
+      "SC": true
+    },
+    {
+      "node": 243,
+      "representative": 1162,
+      "SC": false
+    },
+    {
+      "node": 244,
+      "representative": 1190,
+      "SC": false
+    },
+    {
+      "node": 245,
+      "representative": 1193,
+      "SC": false
+    },
+    {
+      "node": 246,
+      "representative": 1195,
+      "SC": true
+    },
+    {
+      "node": 247,
+      "representative": 1203,
+      "SC": true
+    },
+    {
+      "node": 248,
+      "representative": 1211,
+      "SC": true
+    },
+    {
+      "node": 249,
+      "representative": 1216,
+      "SC": true
+    },
+    {
+      "node": 250,
+      "representative": 1217,
+      "SC": true
+    },
+    {
+      "node": 251,
+      "representative": 1307,
+      "SC": false
+    },
+    {
+      "node": 252,
+      "representative": 1316,
+      "SC": true
+    },
+    {
+      "node": 253,
+      "representative": 1317,
+      "SC": true
+    },
+    {
+      "node": 254,
+      "representative": 1371,
+      "SC": true
+    },
+    {
+      "node": 255,
+      "representative": 1379,
+      "SC": true
+    },
+    {
+      "node": 256,
+      "representative": 1395,
+      "SC": true
+    },
+    {
+      "node": 257,
+      "representative": 1645,
+      "SC": true
+    },
+    {
+      "node": 258,
+      "representative": 1653,
+      "SC": true
+    },
+    {
+      "node": 259,
+      "representative": 1859,
+      "SC": true
+    },
+    {
+      "node": 260,
+      "representative": 1972,
+      "SC": true
+    },
+    {
+      "node": 261,
+      "representative": 2048,
+      "SC": true
+    },
+    {
+      "node": 262,
+      "representative": 2082,
+      "SC": true
+    },
+    {
+      "node": 263,
+      "representative": 2112,
+      "SC": true
+    },
+    {
+      "node": 264,
+      "representative": 2113,
+      "SC": true
+    },
+    {
+      "node": 265,
+      "representative": 2146,
+      "SC": true
+    },
+    {
+      "node": 266,
+      "representative": 2461,
+      "SC": true
+    },
+    {
+      "node": 267,
+      "representative": 2633,
+      "SC": true
+    },
+    {
+      "node": 268,
+      "representative": 4112,
+      "SC": false
+    },
+    {
+      "node": 269,
+      "representative": 5291,
+      "SC": true
+    },
+    {
+      "node": 270,
+      "representative": 8208,
+      "SC": false
+    },
+    {
+      "node": 271,
+      "representative": 16400,
+      "SC": true
+    }
+  ]
+}

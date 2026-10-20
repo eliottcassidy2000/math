@@ -1,0 +1,152 @@
+{
+  "original_candidate": {
+    "source_path": "/workspace/scratch/07d5532f2fce/session15-bridge-continuation/BOUNDARY_HUB_AND_DOUBLE_DESCENT.md",
+    "bytes": 12647,
+    "sha256": "cb1246527eb2cecc663c4d4125f2febe9ca8210a75c1f7684302aebe12b208a3",
+    "preserved_unchanged": true
+  },
+  "incoming_files": [
+    {
+      "commit": "7d21b9fdcfaa30e723b92a51ebe02d35ff57b250",
+      "repository_path": "05-knowledge/results/black_descent_20261020c/cycles.md",
+      "bytes": 19260,
+      "sha256": "b8c998e416dae8a9b7397a2b02b17a380b49bb272a272e07a1255214b5ff6280",
+      "git_blob": "4c546b0d51d2d41302322a241c9c575d28e85a29",
+      "role": "Prime-orbit block lemma and all-order strong black descent; proof checked."
+    },
+    {
+      "commit": "7d21b9fdcfaa30e723b92a51ebe02d35ff57b250",
+      "repository_path": "05-knowledge/results/black_descent_20261020c/scc.md",
+      "bytes": 12531,
+      "sha256": "72c3e2ab6d3b98d45a4cb0e50e0884afc65d0d65c1ed9aa9b073e1d267c93f47",
+      "git_blob": "c29885db938b8f57d7b47a8fa9118a77a6030e90",
+      "role": "Nonstrong strict minima and descent terminals."
+    },
+    {
+      "commit": "7d21b9fdcfaa30e723b92a51ebe02d35ff57b250",
+      "repository_path": "05-knowledge/results/defect_transitions_20261020/blue.md",
+      "bytes": 21756,
+      "sha256": "7da49b2e28f73953a940dee75ccb96ab083ae1713f06e12302b04f2b4ace5707",
+      "git_blob": "5f24ffca52fe62e07e9649a601f85bec5a23614b",
+      "role": "Original common-hub and shared-edge literal identities; credit retained."
+    },
+    {
+      "commit": "7d21b9fdcfaa30e723b92a51ebe02d35ff57b250",
+      "repository_path": "05-knowledge/results/blue_quotient_20261020b/structure.md",
+      "bytes": 16559,
+      "sha256": "ad380c7bd6ab8ed0b6b48c8e042183813ced001dc03d1931ab816d9cbe42ad74",
+      "git_blob": "ade24f7a1e13fe5b9ff12b6d11a939d952d4e1fd",
+      "role": "Black closed-path input and blue-cut cosets; proof checked."
+    },
+    {
+      "commit": "7d21b9fdcfaa30e723b92a51ebe02d35ff57b250",
+      "repository_path": "05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md",
+      "bytes": 10837,
+      "sha256": "787ab6282c22e9f60ac734d2c3e96c0836d34b8e1d2b0c6fb11c05e5eefd4388",
+      "git_blob": "4bcf5fe8955eca7f5c1a80f5b0f319cff384912d",
+      "role": "Odd-circulant prefix construction used by black closed-path input; checked."
+    },
+    {
+      "commit": "126830b14ba947b188f5fa6f1c7a080ffe636a82",
+      "repository_path": "05-knowledge/results/blue_quotient_20261020b/census.md",
+      "bytes": 10192,
+      "sha256": "598380f98f57b871e211731d33fe56d41035fa673ee56acd9d77ed251dcf3ed2",
+      "git_blob": "975b76d61d06c62d446ea67c07e1c823598cd140",
+      "role": "Incoming order-nine counts and ambient versus blue leaf convention."
+    },
+    {
+      "commit": "0fccdd7bc00ab288a7dd182b0c8fc50fd72bd4ae",
+      "repository_path": "05-knowledge/results/scc_basins_20261020d/README.md",
+      "bytes": 14667,
+      "sha256": "c9811d29cddd64bf5dd7e46e3a818a5f45a1451baddf99b012b17c6d5d1d11d0",
+      "git_blob": "46adc7f6f2ff05a8ce633e30250709409f49148e",
+      "role": "Freshness/credit comparison only; not a dependency of the original candidate proof."
+    },
+    {
+      "commit": "0fccdd7bc00ab288a7dd182b0c8fc50fd72bd4ae",
+      "repository_path": "05-knowledge/results/scc_basins_20261020d/moves.md",
+      "bytes": 37180,
+      "sha256": "b0adca76624d46784a29cc45b6d782e45ba0412f57abd296e661ffe02ce3ac7c",
+      "git_blob": "393e5d19ce0df1267b88ef047e9075640f5672a1",
+      "role": "Freshness/credit comparison only; not a dependency of the original candidate proof."
+    },
+    {
+      "commit": "8c8d59a4f126801c9a5c4c2d6f6a7b810c1d937b",
+      "repository_path": "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n3.json",
+      "bytes": 1392,
+      "sha256": "3e18318a5ad836155c3d603443f4ac2cc2863aba9921961ba7b95b9151011d09",
+      "git_blob": "fafdea6a76e5d5f8743e6dd80fa6daefafc80a2a",
+      "role": "Source of the minimal representative input; no new class enumeration."
+    },
+    {
+      "commit": "8c8d59a4f126801c9a5c4c2d6f6a7b810c1d937b",
+      "repository_path": "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n4.json",
+      "bytes": 1812,
+      "sha256": "7bb57d67035db9edb0bce5ee35897035f4c04219832505ecf54872e311863faa",
+      "git_blob": "d01e363740f31bbe234d73a20209ac1fcd7a7d4b",
+      "role": "Source of the minimal representative input; no new class enumeration."
+    },
+    {
+      "commit": "8c8d59a4f126801c9a5c4c2d6f6a7b810c1d937b",
+      "repository_path": "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n5.json",
+      "bytes": 4242,
+      "sha256": "c5e68df205d8b9ce5de786e46352db83aebe93d954c9a0d5057bf862afdd143c",
+      "git_blob": "dd77d7d1bfb5362240c5183dc09f3fd856b277e7",
+      "role": "Source of the minimal representative input; no new class enumeration."
+    },
+    {
+      "commit": "8c8d59a4f126801c9a5c4c2d6f6a7b810c1d937b",
+      "repository_path": "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n6.json",
+      "bytes": 21309,
+      "sha256": "54499269e5f00fa1fdeafca1cf122f955a1d79606f6afc87bf1fedc8906086a7",
+      "git_blob": "dc31126430f9a2f388bc0a488b5de40adb22d9b5",
+      "role": "Source of the minimal representative input; no new class enumeration."
+    },
+    {
+      "commit": "8c8d59a4f126801c9a5c4c2d6f6a7b810c1d937b",
+      "repository_path": "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n7.json",
+      "bytes": 476677,
+      "sha256": "68f4e92612034d79984c706850515954ca0f9e08e7eebd27b4a567ba88115c83",
+      "git_blob": "129ca9d05b63f95497fc40c3761edf9bd29051e0",
+      "role": "Source of the minimal representative input; no new class enumeration."
+    },
+    {
+      "commit": "8c8d59a4f126801c9a5c4c2d6f6a7b810c1d937b",
+      "repository_path": "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/FULL_ATLAS_SHA256SUMS",
+      "bytes": 489,
+      "sha256": "4986892baeb220c71595b751998e9f43888dfa0709fc161c68c7504d5a7390de",
+      "git_blob": "a61e85be89b22678dd9134fc06b8ce4daa18dc95",
+      "role": "Authentication of optional omitted full n8 atlas; regenerate for the historical full-atlas replay."
+    },
+    {
+      "commit": "10d849fde4c963a8786511dbc26537981c68facf",
+      "repository_path": "05-knowledge/results/paired_black_bridges_order_nine_20261020/census_n9_sparse_audit.json",
+      "bytes": 380,
+      "sha256": "40fdd00b35eea1c6893bb768612576347e0ddde700fe92f3f58366d9cc03e67d",
+      "git_blob": "537fa7ea91f21a17b686e60ac63b9008300e9bce",
+      "role": "Prior finite order-nine graph controls; not rerun in this review."
+    },
+    {
+      "commit": "10d849fde4c963a8786511dbc26537981c68facf",
+      "repository_path": "05-knowledge/results/paired_black_bridges_order_nine_20261020/census_n9_short_cycle_audit.json",
+      "bytes": 196,
+      "sha256": "3b60aaae1a79896a45faeeb149f9c629fc1bf99ce6256fe3761dffc12b816f1f",
+      "git_blob": "bf0309dfc6e68bf395b54bb38b86ad053de67dfe",
+      "role": "Prior finite order-nine graph controls; not rerun in this review."
+    },
+    {
+      "commit": "10d849fde4c963a8786511dbc26537981c68facf",
+      "repository_path": "05-knowledge/results/paired_black_bridges_order_nine_20261020/blue_n9_bridge_audit.json",
+      "bytes": 23798,
+      "sha256": "bcbc42fb5e957d7a6339ebb1abb179d67452c7765b0f02c69239ff21d03fc532",
+      "git_blob": "eb37583683b7497835145c83aa6b41ae609f27e7",
+      "role": "Prior finite order-nine graph controls; not rerun in this review."
+    }
+  ],
+  "omitted_full_atlas": {
+    "source_path": "session14-metagraph-census/n8/census_n8.json",
+    "bytes": 33755145,
+    "sha256": "e5e8a1f76e400f3f81e7a6c6985e7203aad4e37607db08e0243d6ba9e3b0f887",
+    "reason": "Not needed by standalone controls; full atlas is regenerable from the cited atlas packet."
+  }
+}
