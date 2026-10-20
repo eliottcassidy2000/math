@@ -145,7 +145,7 @@ arbitrary prefix.
 ## 4. Incoming work: actual transfers and their boundaries
 
 The session began at eda06857a3, after integrating eleven incoming commits.
-During work it fetched 5fe1bfd347, 8c8d59a4f1 and 8313f3db06. The relevant
+During work it integrated the further series through 3f6fb6a438. The relevant
 proofs, rather than just commit titles, were read before these connections.
 
 * [Golden junction certificate](../scc_basins_20261020d/arithmetic_junction_certificate.md):
@@ -170,12 +170,48 @@ proofs, rather than just commit titles, were read before these connections.
   the exact product `q^c product(1+q^d_j)` has a zero of exact order r at -1.
   Cancellation survives the full cube; a selected corner need not inherit
   it. This is why source selection cannot be replaced by a phase trace.
-* [Finite pure atoms](../merged_metagraph_finite_pure_atoms_20261020/FINITE_ATOMS_AND_RIGID_CLOSURE.md):
-  the rigid strong alphabet is now exactly `{1,C3}` at every order; the
-  pure-blue alphabet has a finite numerator, still not fully classified in
-  that packet. The rational word grammar is real, but its finite exceptional
-  alphabet is an input proved from Hamiltonian structure. Collatz cannot
+* [Complete pure-blue atom classification](../pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md),
+  now reconciled in [THM-2454](../../../01-canon/theorems/THM-2454-pure-blue-alphabet-and-center-law.md):
+  the rigid strong alphabet is exactly `{1,C3}`, and the pure-blue strong
+  alphabet is exactly `{1,C3,regular C5}` at every order. The earlier
+  finite-but-unclassified numerator has been superseded by
+  `P(z)=(1+z+z^3+z^5)/(1-z^2-z^6)`. Explicit even-order prefix reroutings
+  force direct violated arcs; unit-step reindexing by 2 or -2 eliminates
+  the residual sign patterns, including composite orders. This proves its
+  finite exception bank from actual Hamiltonian structure. Collatz cannot
   assume a finite exceptional first-exit bank by analogy.
+* [Effective black-defect bound](../effective_black_defect_order_bound_20261020/PROOF.txt):
+  for a strong tournament with Delta black Hamilton-path orbits,
+  `n<16(Delta+2)^2(Delta+1)`. Rotation-frame control plus a removable
+  power-of-two cycle produces too many distinct black orbits. This Delta
+  is not the feedback slack `3f-s` of the previous packet. The useful move
+  is to turn an omitted family of probes into many certified distinct
+  responses, as the smooth-bank construction does; there is no established
+  replacement of black path orbits by Collatz odd charges.
+* [Hamilton-path relocation connectivity](../hamilton_path_relocation_connectivity_20261020/THEOREM.txt):
+  all labelled Hamilton words are connected by legal single-vertex
+  relocations. Nonempty insertion fibres, lifted edges and access to a
+  removable vertex prove an all-order induction. This closes necessity of
+  the auxiliary local forest certificate, not black metagraph connectivity.
+  The Collatz analogue would need both a legal lift and universal access to
+  the smaller carrier. Our block refinements preserve an existing word;
+  they do not supply that missing access.
+* [Regular endcaps and D3 owners](../rotation_owners_spectrum_20261020e/README.md):
+  regular outer endcaps now have short authenticated black bypasses; the
+  complete deficiency-three owner stratum has a degree-seven normalized
+  polynomial, with external matching partners retained. This reinforces
+  the need for named ports in the wing gadget. Its explicit SCC-to-two-path
+  matching bijection retains block decoding for Hamiltonian weights;
+  replacing two C3 blocks by one R4 changes weight9 to5 despite a matching
+  count resemblance. The corrected strong-path minimum and the still-open
+  odd H-spectrum completeness are kept separate from these proved rules.
+* [Complete mixed-prime census through degree thirteen](../complete_mixed_prime_census_degree13_20261020/CORRECTION_NOTE.md):
+  the C15(5+3+1^5) full-type defect is84, not either extrapolation88 or64.
+  Relative embedding multiplicity, distinct full types and escaping sign
+  witnesses contribute separately. Our lower bound deliberately counts
+  response histories and wordwise rank, not distinct tournament classes;
+  the same separation prevents it being mistaken for a class-count lower
+  bound or for a restriction on every possible A000568 algorithm.
 
 ### Extending the sharper counter to converse-merged node counts
 

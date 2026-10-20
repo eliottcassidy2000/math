@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md": "ab1960d1b4dc9117f1ff2a6cb4d429cd3f790cb63b965a98f5ab2b41c13f5b95",
+    "01-canon/theorems/THM-2454-pure-blue-alphabet-and-center-law.md": "1afae3b3afadee521c3f4f0c7f619ff5f9619e1719ed6cb414b9e3d457a011f7",
+    "01-canon/theorems/THM-2646-braid-three-modular-central-pullback-and-full-twist-knot-fibre.md": "cd30c5951a3feee95573ee451583477445410bc5f7319fb097b853fd80bf1dcc",
+    "01-canon/theorems/THM-4057-stern-brocot-depth-pullback-and-rational-edge-tournament-gauge.md": "5ddfc01ae446f3d20e5d8a9ce362c76c072da07745c1c405fe882173efcda4f5",
+    "01-canon/theorems/THM-4614-three-colourable-contexts-cannot-change-the-six-colour-port-relation-in-q-zeta55.md": "223649e38b3d11e871fc998887daf0815be4f565391f9f8bea783fc8fea866f1",
+    "01-canon/theorems/THM-516-burnside-core-kernel-phi-reframe.md": "10ef8808ad62bd5aee87ff0261380a0ec4648fed026747ec978e89eb157845f5",
+    "05-knowledge/results/complete_mixed_prime_census_degree13_20261020/CORRECTION_NOTE.md": "2831e7a1f28431f90269ccbabbab584d97ed74d555d281e3497bc56d4a308d52",
+    "05-knowledge/results/effective_black_defect_order_bound_20261020/PROOF.txt": "3f7977d49ec055c06abe856699d959e1c13b1afa3ced1c64186d088d6857dd25",
+    "05-knowledge/results/hamilton_path_relocation_connectivity_20261020/THEOREM.txt": "9365e8472a229a625eb6c09a9a43c707d0a6d9b967f0fe4a11e84c55b3d35fee",
+    "05-knowledge/results/merged_metagraph_realizability_20261020/REALIZABILITY.txt": "d187d2e51d7763203038b5f09749fe9fa24eca32338060f6685275cf8a5be9ed",
+    "05-knowledge/results/prime_batch_triangle_20261020/README.md": "6dbc7d185966fe64a6db2700d19dc7d526cee38d54640fe0cb4ab9d18a32ed05",
+    "05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md": "787ab6282c22e9f60ac734d2c3e96c0836d34b8e1d2b0c6fb11c05e5eefd4388",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/arithmetic.md": "e93362cec237337b207cda0775c3e7d90770c2cab7f59259e0bfbfeaf340b1fc"
+  },
+  "files": {
+    "AUDIT.md": "983743fa091c81dc508f9cae1cf15cb568815c8f4ac4dc834f49547256245f83",
+    "CONNECTIONS.md": "5e280163e69c838e17663a6bebcef3df4d4f7e57e6c01301cc900602a7359b62",
+    "README.md": "d8dc5fd23506c07ce6a058ee0cdb43569d80b4bc0d4f81cac7aa890b868b873d",
+    "charge-receipt.json": "62fb07d1476a7c42afec5ed12a86d7b3216ba7fdd7cfd658b1f0f238143260cb",
+    "charge_probe.py": "3b1476bddd0bc094659826ab96d127cdeb656ee50755fe66dbba0e43aad9d6f5",
+    "receipt.json": "f02ef3dcb3746659aaeeca6dc7a13e15f537c8470c4a9130f33e033fdc5e484b",
+    "separate-receipt.json": "5831712e6cd0e0ab7a86579b1fd3fec160a699b14697da05a0a5fe27280b3986",
+    "separate_controls.py": "eefe373afb52281b9a3a5ae33ad1430a6ca0459adcccddee98c77ece045faca1",
+    "verify.py": "9b4542c7f9bd2ce027a2e2e755df230753bc884863f060239ce2ea7824c95681"
+  },
+  "hash_basis": "raw Git/file bytes",
+  "integrated_remote": "3f6fb6a438",
+  "status": "same-agent review; separate exact implementations; no independent-agent audit"
+}
