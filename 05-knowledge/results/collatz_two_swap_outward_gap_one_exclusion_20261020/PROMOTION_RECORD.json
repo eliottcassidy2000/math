@@ -1,0 +1,29 @@
+{
+  "status": "AUDIT_PASS_STATUS_PROMOTION_ONLY",
+  "candidate_main_sha256": "bdd8daf3ed631bd0f37e6a85e95adb695061bcb72924647dc300ee54f2937f21",
+  "proved_main_sha256": "55dc4708ba3750770d42d0d0bc5c1998647556e86cb66d396f116b979be32455",
+  "changes": [
+    "Promoted status after independent smooth-content PASS and separate root mathematical and physical-path review.",
+    "Linked the copied root review; no mathematical statement or code changed."
+  ],
+  "mathematical_or_code_changes": false,
+  "root_review_sources_copied_unchanged": true,
+  "root_review_files": [
+    {
+      "path": "root-review/ROOT_AUDIT.md",
+      "sha256": "3afcd79edf9a4048666759b7e9c522ba1c8c99f19fbac9474a66073f3031d7b5"
+    },
+    {
+      "path": "root-review/check_physical_blocks.py",
+      "sha256": "c12009ed25d85815f4939bd1d70540311aef87a87dff417d7317d90f2d2b9c47"
+    },
+    {
+      "path": "root-review/receipt.json",
+      "sha256": "4e93d52052841873816c607064020de823209404ee21412785724362f0f91ac3"
+    },
+    {
+      "path": "root-review/receipt.optimized.json",
+      "sha256": "4e93d52052841873816c607064020de823209404ee21412785724362f0f91ac3"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "status": "HASHED_FROZEN_DEPENDENCIES",
+  "files": [
+    {
+      "publication_relative_path": "../collatz_two_swap_outward_gap_one_content_20261020/OUTWARD_GAP_ONE_CONTENT.md",
+      "bytes": 10893,
+      "sha256": "0de423398fd700beaa72835594cf082be4d1a1916d9c9977b94d2d85c2b0e44f",
+      "published_bytes_match": false
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_outward_gap_one_content_20261020/audit/OUTWARD_GAP_ONE_AUDIT.md",
+      "bytes": 16925,
+      "sha256": "ec05273e8a9d9e5e938611730f26f6b404629448d241cd79c1598321f4e577c9",
+      "published_bytes_match": false
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_endpoint_exclusion_20261020/ENDPOINT_TWO_EDIT_CLASSIFICATION.md",
+      "bytes": 10286,
+      "sha256": "89110e0ec91a2a65aadd900d2d5911b0bec2cdf7918414440854e5f1fec0090a",
+      "published_bytes_match": true
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_endpoint_exclusion_20261020/PRIMARY_SOURCES.md",
+      "bytes": 1320,
+      "sha256": "c36baad204a2e4330adc36cb504e9e462dcc7d923c424c8c20e011538bb5c87e",
+      "published_bytes_match": true
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_endpoint_exclusion_20261020/large-range/certify_endpoint_large_range.py",
+      "bytes": 2951,
+      "sha256": "63a44efbbef69533782ad9ea1144b172ef3dcd3f2bb8e0eee1722924c18bff8f",
+      "published_bytes_match": true
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_endpoint_exclusion_20261020/large-range/receipt.json",
+      "bytes": 44497,
+      "sha256": "2b51239a248924281bfcb5d9065abeccad551e820d81012e5447ef0d6a1ad0be",
+      "published_bytes_match": true
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_endpoint_exclusion_20261020/audit/audit_endpoint_large_range.py",
+      "bytes": 4608,
+      "sha256": "c23283a3a3ca67397eafa29ce99f061adcb39273525704438a63a637a584270c",
+      "published_bytes_match": true
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_endpoint_exclusion_20261020/audit/large-range.receipt.json",
+      "bytes": 21640,
+      "sha256": "e6f30570be154f1444a3178ed047e5ef7a28843e1160ff5ee26c3b98160b700f",
+      "published_bytes_match": true
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_overlap_exclusion_20261020/OVERLAPPING_TWO_SWAP_CLASSIFICATION.md",
+      "bytes": 13567,
+      "sha256": "63a2ab7cd46b6a5207b177444c2d10a1e37b4c371e3dfb7d125005c2a5285758",
+      "published_bytes_match": true
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_overlap_exclusion_20261020/verify_signed_descent.cpp",
+      "bytes": 6232,
+      "sha256": "f75adee112e13b7a02df2eb44e0d5700305d88c725d0dbbff2fa1fae1d369418",
+      "published_bytes_match": true
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_overlap_exclusion_20261020/descent.receipt.json",
+      "bytes": 1363,
+      "sha256": "a658cd5f90c57ba9051fd921d16b199bd326b7a4c9c8aa98ceec39a6f00749ec",
+      "published_bytes_match": true
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_overlap_exclusion_20261020/verify_small_convergent_overlaps.py",
+      "bytes": 5785,
+      "sha256": "18c10ebadc1c3ee65a2c5e4c71d49aa0f54d19268ea66c3e09638133b1b1289a",
+      "published_bytes_match": true
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_overlap_exclusion_20261020/candidates.receipt.json",
+      "bytes": 3616,
+      "sha256": "298a5be4b2506763bdd69323c318e0b776f2b9c000298376b4019604dcd46a71",
+      "published_bytes_match": true
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_overlap_exclusion_20261020/audit/audit_signed_descent.cpp",
+      "bytes": 4579,
+      "sha256": "6c8fb9faab03e8a895b4573f9204ff65946df132077275e5efbea0867cc89f51",
+      "published_bytes_match": true
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_overlap_exclusion_20261020/audit/descent.receipt.txt",
+      "bytes": 442,
+      "sha256": "b136e17bef8eea1f2676b2f35e1a3750f40a4d4d1d07f2d46c70efb85861e70c",
+      "published_bytes_match": true
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_overlap_exclusion_20261020/audit/audit_small_cf_and_overlaps.py",
+      "bytes": 8350,
+      "sha256": "61d86aefd3b6d4c5b1a72bef326e8d80f4aadcf7a19801dc4d19a897d463bcf8",
+      "published_bytes_match": true
+    },
+    {
+      "publication_relative_path": "../collatz_two_swap_overlap_exclusion_20261020/audit/candidates.receipt.json",
+      "bytes": 4126,
+      "sha256": "2e03092199d1fe317c3000113171099c195e02b1362789e4679a490db1573b86",
+      "published_bytes_match": true
+    }
+  ],
+  "scope": "Smooth content theorem; explicit real Matveev and universal both-sign absolute-gap interval certificate; signed descent and exact convergent list through p<4096. The global source-neighbor partition is not a dependency and is not promoted.",
+  "source_only_provenance_not_published": [
+    {
+      "bytes": 2729,
+      "sha256": "c30c34183d435e86d8ac80dab43daaf0d569a06f6a20ffffe6f9ee2a96d008c1",
+      "source_handoff_manifest": "session13-collatz-resultants/two-edit-outward-gap-one/SOURCE_MANIFEST.json"
+    }
+  ]
+}

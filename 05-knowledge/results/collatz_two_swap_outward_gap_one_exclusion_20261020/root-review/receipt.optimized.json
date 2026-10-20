@@ -1,0 +1,54 @@
+{
+  "rows": [
+    {
+      "maximum_g": null,
+      "ordered_paths": 0,
+      "p": 2,
+      "q": 3
+    },
+    {
+      "maximum_g": 1,
+      "ordered_paths": 4,
+      "p": 5,
+      "q": 8
+    },
+    {
+      "maximum_g": 1,
+      "ordered_paths": 6,
+      "p": 7,
+      "q": 11
+    },
+    {
+      "maximum_g": 1,
+      "ordered_paths": 10,
+      "p": 12,
+      "q": 19
+    },
+    {
+      "maximum_g": 551,
+      "ordered_paths": 34,
+      "p": 41,
+      "q": 65
+    },
+    {
+      "maximum_g": 11,
+      "ordered_paths": 44,
+      "p": 53,
+      "q": 84
+    },
+    {
+      "maximum_g": 1,
+      "ordered_paths": 254,
+      "p": 306,
+      "q": 485
+    },
+    {
+      "maximum_g": 37,
+      "ordered_paths": 552,
+      "p": 665,
+      "q": 1054
+    }
+  ],
+  "status": "PASS",
+  "total": 904
+}

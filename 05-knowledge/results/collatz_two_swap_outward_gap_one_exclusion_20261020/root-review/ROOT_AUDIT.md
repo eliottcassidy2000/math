@@ -1,0 +1,9 @@
+# Root independent review of outward gap-one closure
+
+2026-10-20 07:28 UTC. Mathematical review PASS, publication not prepared.
+
+Read the full candidate session13-collatz-resultants/two-edit-outward-closure/OUTWARD_GAP_ONE_EXCLUSION.md. The content dependency now has independent PASS from audit_smooth_outward_content; its scope includes all legal primitive gap-one outward paths, not just tested cases. The lattice bound22^(4p^(2/3)) implies the stated gap for p>=14^3, since4 log22/14-log3<19/21-13/12=-5/28<-1/9. The frozen absolute-gap Matveev/continued-fraction lemma is used only under its actual clock hypotheses. The signed-descent bound2^24 and p<2744<4096 correctly imply Legendre's criterion for unknown cycles. Known cycles are separately handled, particularly(7,11), and repeated traversals are impossible by coprimality. No assumption of global Collatz convergence occurs.
+
+Independent root checker does NOT import producer enumeration, residue formulas, or carry helpers. It constructs lower mechanical binary words directly, finds cyclic four-distinct-position blocks0110, physically performs both orders of the two swaps to1001, computes carry by chronological recurrence, and tests full gcd against the full clock. It obtains exactly904 paths with each of the eight shape counts and maxima as in the candidate. Every output is nonintegral. Normal and -O receipts are identical. Explicit runtime guards remain active under -O. The p2,q3 shared-zero false path is excluded by four-position distinctness.
+
+This completes a separate mathematical and physical residual review of the stated closure, not the all-neighbor partition or an arbitrary disjoint-edit theorem. Before publication, freeze dependency hashes, full authored payload, relative links, candidate status promotion, and a manifest. Do not publish this scratch recovery directory directly or alter the sole publisher's pending operation.
