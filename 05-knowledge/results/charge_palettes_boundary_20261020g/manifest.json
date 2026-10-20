@@ -1,0 +1,38 @@
+{
+  "base_commit": "5ae8a4f8d0d5686f97a584dcea04e45b2894dde1",
+  "dependencies": {
+    "05-knowledge/results/adaptive_budgets_smooth_interfaces_20261020/CONNECTIONS.md": "5e280163e69c838e17663a6bebcef3df4d4f7e57e6c01301cc900602a7359b62",
+    "05-knowledge/results/defect_boundary_20261020/boundary.md": "c359a51a188d2746e6abf19a547962ebe7c59aa32840e4cce93e221a5eccc7f3",
+    "05-knowledge/results/defect_boundary_20261020/sparse_count.py": "c7d09bd86dfe077f367c4c56df488c5d2c0efb23cb017da4016632e50ec539dd",
+    "05-knowledge/results/defect_boundary_20261020/sparse_theory.md": "131f05f3e65032466a430a2eeebd6b456519916dc5250884d11962be788f309a",
+    "05-knowledge/results/first_exit_complement_games_20261020/PALETTE-GLUE.md": "3e996d47377ba3da6c9c39e94dfa396c8b4a4f06c49766a4fa8bf6e6a3d67149",
+    "05-knowledge/results/first_exit_complement_games_20261020/README.md": "d6a5900183b50c247888b162cf2fab8ac7e12ba7eff24389281d8b2f009f0c56",
+    "05-knowledge/results/first_exit_complement_games_20261020/palette-glue.json": "266f1c1dec1e79a4c0e34a80f3416e57157f8bcda5ff83cf5a55809bfe8bde10",
+    "05-knowledge/results/kernels_games_detours_20261020f/detours.md": "bcda56b298d471abba40d9788d166ea8101ef9194f78364192c917a07e8df022",
+    "05-knowledge/results/kernels_games_detours_20261020f/general_fixed_deficiency.md": "6c9c6db4c31bc3fe2ef522e0e0070c9d8bf7037babc36b8647c3115a0845c0df",
+    "05-knowledge/results/metagraph_growth_20261020/enumeration.py": "3cbb610596bb4430af69924ba991ed11efc67d7ccee4a93b318cd7b638bc3d26",
+    "05-knowledge/results/metagraph_growth_20261020/growth_check.py": "583ae12878d6a7420ccdf695c80c003199bffff172a8a107085ed3b499274d96",
+    "05-knowledge/results/torus_voltage_and_halfplane_forcing_20261020/geometric_forcing_bridges.md": "e915c72e6f55d91d434a32b8e642eb4466808a02d2fe0eb54ecc5c09f9ca145b",
+    "05-knowledge/results/zero_heavy_ports_20261020g/microcosm.md": "3e898a5bbc37c5931c20aa578e06977ebe5639e439b35ff5c1517be5b1d8828a",
+    "05-knowledge/results/zero_heavy_ports_20261020g/zero_heavy.md": "f993cfc3432e7672806dc662b96167bf8db920df3708d280055eba72d90abb6f"
+  },
+  "files": {
+    "AUDIT.md": "e1c8967a0a089dcaeaace97590100a082dbb744cfb358fb0a7f7709d22e6e78a",
+    "INHERITANCE.md": "0f8c284acf65981ede1cad16466dd6c139cab9f54baabf8e0ce08d0db5d646f9",
+    "README.md": "ba58def74b2a41e4d0b1cdcbe7fbb434860fe661d388d07a6151f9203947964d",
+    "charge-cone.json": "1c7ffddd1d0b304aa9480c3c695d5aec894205a86d7565daf3e1648aeacac60b",
+    "charge.md": "96ca9beae47a1769fc7f164ae447eca8e834d3d2655c435c1c76159cf30450cf",
+    "charge_cone.py": "0e3547885abe8b3e0d990331351cc8bbc4c0eb4b0c6d53e893afe9d99ff41646",
+    "endpoint-layer.json": "e3726671c98c033d3f62474163b301144fa38b0a5b209847c3060586e1fc5f2d",
+    "endpoint_layer.py": "699f72831cbe542ff6851aa8da49a40a5b7a411cc481fed467d1a8707fec8e63",
+    "endpoints.md": "42515661380f5c8a2796eca36b12fbffd5d99eaf23f7a8ebaf9da1b81777acf5",
+    "palette-perturb.json": "8b3252d3f499491c0a1c4b69659962dac94a65d4a04388abc700f5ab35cf67cb",
+    "palette_perturb.py": "495bb526843ef4ca4f6bf022693d8acf9bc2f3753c28f9775e3b590522a5f7a3",
+    "palettes.md": "5d94c78d33143d26e5ee852e25c9ed6c0461c3f553d85e01a85639dfff45fee4",
+    "zero-heavy-mass.json": "c6d91f752599cc4959bf846a9b4ac9c675e5e2832de221decb9141ad35e0cef8",
+    "zero_heavy.md": "bcbe190d0a15233fcda0633f942510b0f36610922d3bb38539ed240681db633f",
+    "zero_heavy_mass.py": "618c01e84cc94516f14c3b540a6211c04f37c28d41ef0e48bcdd54b908274487"
+  },
+  "incoming_read_commit": "ed0719d0ca3d4aef09e57e8e5788ce10ba8e8ccf",
+  "status": "PROVED scoped; FINITE-EXACT; same-agent review"
+}

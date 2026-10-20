@@ -1,0 +1,382 @@
+{
+  "status": "FINITE-EXACT presentations; all-order proofs separate",
+  "rows": [
+    {
+      "r": 3,
+      "n": 5,
+      "counts": {
+        "total": 4,
+        "closed_chord_undirected": 2,
+        "open_undirected": 1,
+        "open_blue": 1
+      }
+    },
+    {
+      "r": 4,
+      "n": 6,
+      "counts": {
+        "total": 12,
+        "closed_no_chord_blue": 1,
+        "closed_no_chord_paid": 1,
+        "closed_no_chord_undirected": 1,
+        "closed_chord_undirected": 2,
+        "closed_chord_paid": 1,
+        "open_paid": 4,
+        "open_undirected": 2
+      }
+    },
+    {
+      "r": 5,
+      "n": 7,
+      "counts": {
+        "total": 64,
+        "closed_no_chord_paid": 12,
+        "theorem_covered": 36,
+        "closed_no_chord_undirected": 4,
+        "closed_chord_undirected": 8,
+        "closed_chord_blue": 1,
+        "closed_chord_paid": 7,
+        "open_paid": 24,
+        "open_undirected": 8
+      }
+    },
+    {
+      "r": 6,
+      "n": 8,
+      "counts": {
+        "total": 320,
+        "closed_no_chord_paid": 64,
+        "theorem_covered": 192,
+        "closed_no_chord_undirected": 16,
+        "closed_chord_undirected": 32,
+        "closed_chord_paid": 48,
+        "open_paid": 128,
+        "open_undirected": 32
+      }
+    },
+    {
+      "r": 7,
+      "n": 9,
+      "counts": {
+        "total": 3072,
+        "closed_no_chord_paid": 640,
+        "theorem_covered": 1920,
+        "closed_no_chord_undirected": 128,
+        "closed_chord_undirected": 256,
+        "closed_chord_paid": 512,
+        "open_paid": 1280,
+        "open_undirected": 256
+      }
+    },
+    {
+      "r": 8,
+      "n": 10,
+      "counts": {
+        "total": 28672,
+        "closed_no_chord_paid": 6144,
+        "theorem_covered": 18432,
+        "closed_no_chord_undirected": 1024,
+        "closed_chord_undirected": 2048,
+        "closed_chord_paid": 5120,
+        "open_paid": 12288,
+        "open_undirected": 2048
+      }
+    }
+  ],
+  "small_blue_cyclic_cut_hostiles": [
+    {
+      "r": 3,
+      "j": 2,
+      "rows": [
+        10,
+        20,
+        9,
+        18,
+        5
+      ]
+    },
+    {
+      "r": 3,
+      "j": 3,
+      "rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "r": 4,
+      "j": 2,
+      "rows": [
+        26,
+        36,
+        41,
+        18,
+        38,
+        9
+      ]
+    },
+    {
+      "r": 4,
+      "j": 4,
+      "rows": [
+        14,
+        12,
+        56,
+        48,
+        35,
+        3
+      ]
+    }
+  ],
+  "retained_residuals": [
+    {
+      "r": 3,
+      "j": 2,
+      "branch": "closed_chord",
+      "failure": "undirected",
+      "middle": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "r": 3,
+      "j": 3,
+      "branch": "closed_chord",
+      "failure": "undirected",
+      "middle": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "r": 3,
+      "j": 2,
+      "branch": "open",
+      "failure": "undirected",
+      "middle": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "r": 3,
+      "j": 3,
+      "branch": "open",
+      "failure": "blue",
+      "middle": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "r": 4,
+      "j": 2,
+      "branch": "closed_no_chord",
+      "failure": "blue",
+      "middle": [
+        2,
+        4,
+        9,
+        3
+      ]
+    },
+    {
+      "r": 4,
+      "j": 4,
+      "branch": "closed_no_chord",
+      "failure": "undirected",
+      "middle": [
+        2,
+        4,
+        9,
+        3
+      ]
+    },
+    {
+      "r": 4,
+      "j": 2,
+      "branch": "closed_chord",
+      "failure": "undirected",
+      "middle": [
+        6,
+        12,
+        8,
+        1
+      ]
+    },
+    {
+      "r": 4,
+      "j": 4,
+      "branch": "closed_chord",
+      "failure": "undirected",
+      "middle": [
+        6,
+        12,
+        8,
+        1
+      ]
+    },
+    {
+      "r": 4,
+      "j": 3,
+      "branch": "open",
+      "failure": "undirected",
+      "middle": [
+        10,
+        4,
+        9,
+        2
+      ]
+    },
+    {
+      "r": 4,
+      "j": 3,
+      "branch": "open",
+      "failure": "undirected",
+      "middle": [
+        14,
+        12,
+        8,
+        0
+      ]
+    },
+    {
+      "r": 5,
+      "j": 5,
+      "branch": "closed_no_chord",
+      "failure": "undirected",
+      "middle": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ]
+    },
+    {
+      "r": 5,
+      "j": 5,
+      "branch": "closed_no_chord",
+      "failure": "undirected",
+      "middle": [
+        6,
+        4,
+        24,
+        19,
+        3
+      ]
+    },
+    {
+      "r": 5,
+      "j": 2,
+      "branch": "closed_chord",
+      "failure": "undirected",
+      "middle": [
+        10,
+        20,
+        9,
+        18,
+        5
+      ]
+    },
+    {
+      "r": 5,
+      "j": 3,
+      "branch": "closed_chord",
+      "failure": "blue",
+      "middle": [
+        10,
+        20,
+        9,
+        18,
+        5
+      ]
+    },
+    {
+      "r": 5,
+      "j": 5,
+      "branch": "closed_chord",
+      "failure": "undirected",
+      "middle": [
+        10,
+        20,
+        9,
+        18,
+        5
+      ]
+    },
+    {
+      "r": 5,
+      "j": 2,
+      "branch": "closed_chord",
+      "failure": "undirected",
+      "middle": [
+        14,
+        20,
+        24,
+        18,
+        1
+      ]
+    },
+    {
+      "r": 5,
+      "j": 5,
+      "branch": "closed_chord",
+      "failure": "undirected",
+      "middle": [
+        14,
+        20,
+        24,
+        18,
+        1
+      ]
+    },
+    {
+      "r": 5,
+      "j": 4,
+      "branch": "open",
+      "failure": "undirected",
+      "middle": [
+        18,
+        4,
+        9,
+        19,
+        6
+      ]
+    },
+    {
+      "r": 5,
+      "j": 4,
+      "branch": "open",
+      "failure": "undirected",
+      "middle": [
+        22,
+        4,
+        24,
+        19,
+        2
+      ]
+    },
+    {
+      "r": 5,
+      "j": 4,
+      "branch": "open",
+      "failure": "undirected",
+      "middle": [
+        26,
+        20,
+        9,
+        18,
+        4
+      ]
+    }
+  ]
+}

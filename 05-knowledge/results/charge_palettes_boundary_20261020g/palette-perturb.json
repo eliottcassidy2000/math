@@ -1,0 +1,585 @@
+{
+  "status": "FINITE-EXACT, externally conditioned ports",
+  "internal_24_decoder": "two labelled triangles joined by one edge: 3*2*2*2",
+  "one_port_changes": [
+    {
+      "port": 7,
+      "old": 0,
+      "new": 1,
+      "output_counts": [
+        60,
+        84,
+        84,
+        8,
+        8,
+        8
+      ],
+      "extensions_with_other_palette_345": 576
+    },
+    {
+      "port": 7,
+      "old": 0,
+      "new": 2,
+      "output_counts": [
+        60,
+        84,
+        84,
+        8,
+        8,
+        8
+      ],
+      "extensions_with_other_palette_345": 576
+    },
+    {
+      "port": 7,
+      "old": 0,
+      "new": 3,
+      "output_counts": [
+        32,
+        48,
+        48,
+        8,
+        4,
+        4
+      ],
+      "extensions_with_other_palette_345": 384
+    },
+    {
+      "port": 7,
+      "old": 0,
+      "new": 4,
+      "output_counts": [
+        32,
+        48,
+        48,
+        4,
+        8,
+        4
+      ],
+      "extensions_with_other_palette_345": 384
+    },
+    {
+      "port": 7,
+      "old": 0,
+      "new": 5,
+      "output_counts": [
+        32,
+        48,
+        48,
+        4,
+        4,
+        8
+      ],
+      "extensions_with_other_palette_345": 384
+    },
+    {
+      "port": 8,
+      "old": 0,
+      "new": 2,
+      "output_counts": [
+        24,
+        96,
+        96,
+        18,
+        18,
+        18
+      ],
+      "extensions_with_other_palette_345": 1296
+    },
+    {
+      "port": 8,
+      "old": 0,
+      "new": 3,
+      "output_counts": [
+        10,
+        66,
+        66,
+        18,
+        14,
+        14
+      ],
+      "extensions_with_other_palette_345": 1104
+    },
+    {
+      "port": 8,
+      "old": 0,
+      "new": 4,
+      "output_counts": [
+        10,
+        66,
+        66,
+        14,
+        18,
+        14
+      ],
+      "extensions_with_other_palette_345": 1104
+    },
+    {
+      "port": 8,
+      "old": 0,
+      "new": 5,
+      "output_counts": [
+        10,
+        66,
+        66,
+        14,
+        14,
+        18
+      ],
+      "extensions_with_other_palette_345": 1104
+    },
+    {
+      "port": 9,
+      "old": 0,
+      "new": 1,
+      "output_counts": [
+        60,
+        84,
+        84,
+        8,
+        8,
+        8
+      ],
+      "extensions_with_other_palette_345": 576
+    },
+    {
+      "port": 9,
+      "old": 0,
+      "new": 2,
+      "output_counts": [
+        60,
+        84,
+        84,
+        8,
+        8,
+        8
+      ],
+      "extensions_with_other_palette_345": 576
+    },
+    {
+      "port": 9,
+      "old": 0,
+      "new": 3,
+      "output_counts": [
+        32,
+        48,
+        48,
+        8,
+        4,
+        4
+      ],
+      "extensions_with_other_palette_345": 384
+    },
+    {
+      "port": 9,
+      "old": 0,
+      "new": 4,
+      "output_counts": [
+        32,
+        48,
+        48,
+        4,
+        8,
+        4
+      ],
+      "extensions_with_other_palette_345": 384
+    },
+    {
+      "port": 9,
+      "old": 0,
+      "new": 5,
+      "output_counts": [
+        32,
+        48,
+        48,
+        4,
+        4,
+        8
+      ],
+      "extensions_with_other_palette_345": 384
+    },
+    {
+      "port": 10,
+      "old": 1,
+      "new": 3,
+      "output_counts": [
+        66,
+        10,
+        66,
+        18,
+        14,
+        14
+      ],
+      "extensions_with_other_palette_345": 1104
+    },
+    {
+      "port": 10,
+      "old": 1,
+      "new": 4,
+      "output_counts": [
+        66,
+        10,
+        66,
+        14,
+        18,
+        14
+      ],
+      "extensions_with_other_palette_345": 1104
+    },
+    {
+      "port": 10,
+      "old": 1,
+      "new": 5,
+      "output_counts": [
+        66,
+        10,
+        66,
+        14,
+        14,
+        18
+      ],
+      "extensions_with_other_palette_345": 1104
+    },
+    {
+      "port": 11,
+      "old": 1,
+      "new": 0,
+      "output_counts": [
+        120,
+        60,
+        120,
+        16,
+        16,
+        16
+      ],
+      "extensions_with_other_palette_345": 1152
+    },
+    {
+      "port": 11,
+      "old": 1,
+      "new": 2,
+      "output_counts": [
+        120,
+        60,
+        120,
+        16,
+        16,
+        16
+      ],
+      "extensions_with_other_palette_345": 1152
+    },
+    {
+      "port": 11,
+      "old": 1,
+      "new": 3,
+      "output_counts": [
+        88,
+        36,
+        88,
+        12,
+        14,
+        14
+      ],
+      "extensions_with_other_palette_345": 960
+    },
+    {
+      "port": 11,
+      "old": 1,
+      "new": 4,
+      "output_counts": [
+        88,
+        36,
+        88,
+        14,
+        12,
+        14
+      ],
+      "extensions_with_other_palette_345": 960
+    },
+    {
+      "port": 11,
+      "old": 1,
+      "new": 5,
+      "output_counts": [
+        88,
+        36,
+        88,
+        14,
+        14,
+        12
+      ],
+      "extensions_with_other_palette_345": 960
+    },
+    {
+      "port": 12,
+      "old": 1,
+      "new": 0,
+      "output_counts": [
+        120,
+        60,
+        120,
+        16,
+        16,
+        16
+      ],
+      "extensions_with_other_palette_345": 1152
+    },
+    {
+      "port": 12,
+      "old": 1,
+      "new": 2,
+      "output_counts": [
+        120,
+        60,
+        120,
+        16,
+        16,
+        16
+      ],
+      "extensions_with_other_palette_345": 1152
+    },
+    {
+      "port": 12,
+      "old": 1,
+      "new": 3,
+      "output_counts": [
+        88,
+        36,
+        88,
+        12,
+        14,
+        14
+      ],
+      "extensions_with_other_palette_345": 960
+    },
+    {
+      "port": 12,
+      "old": 1,
+      "new": 4,
+      "output_counts": [
+        88,
+        36,
+        88,
+        14,
+        12,
+        14
+      ],
+      "extensions_with_other_palette_345": 960
+    },
+    {
+      "port": 12,
+      "old": 1,
+      "new": 5,
+      "output_counts": [
+        88,
+        36,
+        88,
+        14,
+        14,
+        12
+      ],
+      "extensions_with_other_palette_345": 960
+    },
+    {
+      "port": 13,
+      "old": 2,
+      "new": 0,
+      "output_counts": [
+        96,
+        96,
+        24,
+        18,
+        18,
+        18
+      ],
+      "extensions_with_other_palette_345": 1296
+    },
+    {
+      "port": 13,
+      "old": 2,
+      "new": 3,
+      "output_counts": [
+        66,
+        66,
+        10,
+        18,
+        14,
+        14
+      ],
+      "extensions_with_other_palette_345": 1104
+    },
+    {
+      "port": 13,
+      "old": 2,
+      "new": 4,
+      "output_counts": [
+        66,
+        66,
+        10,
+        14,
+        18,
+        14
+      ],
+      "extensions_with_other_palette_345": 1104
+    },
+    {
+      "port": 13,
+      "old": 2,
+      "new": 5,
+      "output_counts": [
+        66,
+        66,
+        10,
+        14,
+        14,
+        18
+      ],
+      "extensions_with_other_palette_345": 1104
+    },
+    {
+      "port": 14,
+      "old": 2,
+      "new": 0,
+      "output_counts": [
+        84,
+        84,
+        60,
+        8,
+        8,
+        8
+      ],
+      "extensions_with_other_palette_345": 576
+    },
+    {
+      "port": 14,
+      "old": 2,
+      "new": 1,
+      "output_counts": [
+        84,
+        84,
+        60,
+        8,
+        8,
+        8
+      ],
+      "extensions_with_other_palette_345": 576
+    },
+    {
+      "port": 14,
+      "old": 2,
+      "new": 3,
+      "output_counts": [
+        48,
+        48,
+        32,
+        8,
+        4,
+        4
+      ],
+      "extensions_with_other_palette_345": 384
+    },
+    {
+      "port": 14,
+      "old": 2,
+      "new": 4,
+      "output_counts": [
+        48,
+        48,
+        32,
+        4,
+        8,
+        4
+      ],
+      "extensions_with_other_palette_345": 384
+    },
+    {
+      "port": 14,
+      "old": 2,
+      "new": 5,
+      "output_counts": [
+        48,
+        48,
+        32,
+        4,
+        4,
+        8
+      ],
+      "extensions_with_other_palette_345": 384
+    },
+    {
+      "port": 15,
+      "old": 2,
+      "new": 0,
+      "output_counts": [
+        84,
+        84,
+        60,
+        8,
+        8,
+        8
+      ],
+      "extensions_with_other_palette_345": 576
+    },
+    {
+      "port": 15,
+      "old": 2,
+      "new": 1,
+      "output_counts": [
+        84,
+        84,
+        60,
+        8,
+        8,
+        8
+      ],
+      "extensions_with_other_palette_345": 576
+    },
+    {
+      "port": 15,
+      "old": 2,
+      "new": 3,
+      "output_counts": [
+        48,
+        48,
+        32,
+        8,
+        4,
+        4
+      ],
+      "extensions_with_other_palette_345": 384
+    },
+    {
+      "port": 15,
+      "old": 2,
+      "new": 4,
+      "output_counts": [
+        48,
+        48,
+        32,
+        4,
+        8,
+        4
+      ],
+      "extensions_with_other_palette_345": 384
+    },
+    {
+      "port": 15,
+      "old": 2,
+      "new": 5,
+      "output_counts": [
+        48,
+        48,
+        32,
+        4,
+        4,
+        8
+      ],
+      "extensions_with_other_palette_345": 384
+    }
+  ],
+  "histogram": {
+    "repairs_disjoint_join": 41,
+    "improper_boundary": 4
+  },
+  "fresh_two_port_controls": 36
+}
