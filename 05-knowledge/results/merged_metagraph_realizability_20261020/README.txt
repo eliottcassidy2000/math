@@ -1,5 +1,7 @@
 Complete merged metagraph realizability
 
+Publication update, 2026-10-20: This is a preserved precursor. The later all-order Hamilton-path relocation theorem proves necessity as well as sufficiency of the local forest criterion, retaining every coordinate, complement, colour and exact class-count condition. See ../hamilton_path_relocation_connectivity_20261020/README.txt and LOCAL_FOREST_ADDENDUM.txt in that sibling directory. The finite-through-n8 wording below describes this earlier packet, not the current theorem boundary.
+
 Read REALIZABILITY.txt first. It contains the full plaintext proof and exact
 claim boundaries.
 

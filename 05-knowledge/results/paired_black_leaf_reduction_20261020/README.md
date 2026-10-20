@@ -1,5 +1,7 @@
 # Exact leaf reduction for the paired-black quotient
 
+Publication update, 2026-10-20: This is a preserved precursor. The later [complete deficit-two center classification](../deficit_two_centers_20261020/README.md) proves D(z)=z^4. The unknown-center and OPEN language below records the earlier boundary, not the current status; the leaf reduction remains valid.
+
 This packet upgrades the former constructed NS leaf family to an all-order
 classification and reduces every mixed leaf to a rigidly wrapped strong
 deficit-two center. It does not claim all bridges are leaf edges.

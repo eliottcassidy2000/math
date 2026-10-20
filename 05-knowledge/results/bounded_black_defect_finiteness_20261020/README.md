@@ -1,5 +1,7 @@
 # Strong tournaments of bounded black defect form a finite family
 
+Publication update, 2026-10-20: This is a preserved precursor. The later [complete deficit-two center classification](../deficit_two_centers_20261020/README.md) proves D(z)=z^4, and a separate [effective order-bound proof](../effective_black_defect_order_bound_20261020/README.txt) supplies a cubic bound. The unknown-center and non-effective language below records this earlier packet, not the current theorem boundary.
+
 PROVED from cited published theorems: for each fixed d>=0, only finitely many strong tournaments have Delta=H/|Aut|-b<=d, where b counts literal-blue Hamiltonian-path orbits and is zero for non-self-converse tournaments.
 
 The proof restores the missing degree coordinate from cycle-rotation orbits, then compares Thomassen's factorial cycle lower bound with Dixon's exponential automorphism upper bound. It is not a classification or a census extrapolation.
