@@ -24,7 +24,8 @@ ideal (1 + x) IS the sign-even set (root parity = total parity when m/d is odd),
 A of generator_free_circulants_20261020) or f -> f * (1 + a), a a generator of the squares, realise it.
 
 Checks: Lemma V against the definition for m <= 40; the span of the sign-even words for m <= 40; an exhaustive search
-over all equivariant affine rules (image = coset of an ideal (D), D | x^m - 1) for p <= 61: none for p = 1 mod 4, p >= 13,
+over all equivariant affine rules (image = an ideal (D), D | x^m - 1; cosets are excluded by the proof) for p <= 31, i.e. m <= 16
+(for 37 <= p <= 61 only the span / all-ones test is run, the proof covering the rest): none for p = 1 mod 4, p >= 13,
 exactly the ideal (1 + x) for p = 3 mod 4; the two explicit rules for p = 3 mod 4 verified as type bijections.
 """
 import itertools
@@ -63,7 +64,7 @@ def v2(k):
     while k % 2 == 0: k //= 2; v += 1
     return v
 
-print("# Lemma V: sign-even iff v_(x+1)(h) >= 2^(v_2 m) - 2^(v_2 d) + 1, checked for every word of length m <= 40 (m <= 14 exhaustively, larger m on all rotations of 400 random words)")
+print("# Lemma V: sign-even iff v_(x+1)(h) >= 2^(v_2 m) - 2^(v_2 d) + 1, checked for every word of length m <= 40 (m <= 14 exhaustively, larger m on 400 random words)")
 import random; random.seed(1)
 for m in range(1, 41):
     words = [tuple((bits >> i) & 1 for i in range(m)) for bits in range(2 ** m)] if m <= 14 else [tuple(random.randint(0, 1) for _ in range(m)) for _ in range(400)]
