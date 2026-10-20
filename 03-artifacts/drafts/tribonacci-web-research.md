@@ -1,3 +1,16 @@
+> **Historical-source correction, 2026-10-20.** Retain the run and
+> odd-interval-packing mechanisms below; do not inherit the scalar
+> clique-cutset factorization or the assertion that interval graphs are
+> always claw-free. Two edges glued at a vertex already refute the former;
+> the odd-interval conflict graph of `T_full_9` contains a claw on
+> `[0,8]`, `[0,2]`, `[3,5]`, `[6,8]`. Boundary-conditioned extension
+> vectors repair the gluing. The proposed identification of an `n x n`
+> tournament matrix with the tribonacci transfer matrix remains unproved.
+> Also, unrestricted compositions into `1,2,3` have different initial
+> values from A000213; the exact path language is compositions with no
+> adjacent singleton parts. See the [proved refinement and hostile
+> controls](../../05-knowledge/results/tournament_future_boundary_20261020/README.md).
+
 # Web Research: Tribonacci Structure and Deep Connections for OCF
 
 **Source:** opus-2026-03-05-S6 (web research session with Tribonacci focus)

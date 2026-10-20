@@ -1,0 +1,22 @@
+{
+  "base_commit": "eb6c3e9818",
+  "files": {
+    "README.md": "a01aa678ff7741d3153de9a893084bbd4373396b0dbc932226ed804d3554b685",
+    "VALIDATION.md": "3fc6d6124effc90ccea97691ceb61a7506a607a713490c555d202e7935ebc3ab",
+    "a000568-reference.txt": "df0af23faa1147885d52d2bb0018ae8bb83d66483cb380640b7b529e3607f897",
+    "incoming.md": "5a9892278fa98ace55548e4d4d22fd40ae157dc75ca348ac9c85313a151621d3",
+    "inheritance.md": "d34bfe9cc166fa3e9f5b7903c14abcf2d55c4ce22fdc91e797944b564c85f429",
+    "receipt.json": "28a3133a6f4d1a27e7819258731850e8722b6063146fc63598ca3907da920fbc",
+    "verify.py": "3bd5b74354809c8ed365163d3c08281a25c796ee2a06e9ef177ca301f65612e4"
+  },
+  "hash_basis": "SHA-256 of exact file bytes",
+  "incoming_commits": [
+    "fe848abe68",
+    "602286dc6f",
+    "b57c87b03d",
+    "bccc56795e",
+    "fcf72e76dd"
+  ],
+  "independent_agent_audit": false,
+  "validation": "34,705 always-active checks; normal and optimized output byte-identical"
+}
