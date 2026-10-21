@@ -198,3 +198,7 @@ computation needs universe, controls, command, and output. Route `CLAIMED` and
 
 - **HYP-8871/HYP-8846/HYP-8841 (OPEN):** retain deck, owner, phase, endpoints,
   clocks, and tails through any discharge.
+
+## Archived from INDEX.md on 2026-10-20 (mac-mini-2026-10-20-debtcones, line budget)
+
+- **THM-2116/2120/2122/2123/2124/2125 (PROVED):** a rank-eight cover needs a guard

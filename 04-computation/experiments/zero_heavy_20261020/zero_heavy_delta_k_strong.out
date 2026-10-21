@@ -1,0 +1,6 @@
+k = 2: I_k = 2 crossing matchings, S_k = 10, weight 8; raw records A 6, B 6
+  dropped (homogeneous pair) 1, nonstrong 0, wrong feedback 0; distinct strong classes 11 by family {'A': 6, 'B': 5}
+  formula check: I_k*(C(3k-2,k)-(2k-1)) = 6 for A; B = I_k*(2k-1) - drops = 6 - 1 = 5; total 11
+k = 3: I_k = 10 crossing matchings, S_k = 21, weight 18; raw records A 300, B 50
+  dropped (homogeneous pair) 6, nonstrong 0, wrong feedback 0; distinct strong classes 344 by family {'A': 300, 'B': 44}
+  formula check: I_k*(C(3k-2,k)-(2k-1)) = 300 for A; B = I_k*(2k-1) - drops = 50 - 6 = 44; total 344

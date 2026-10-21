@@ -1,0 +1,7 @@
+fold: 16 patterns -> 12 divisors; fibre sizes {(0, 0, 0): 1, (0, 0, 1): 1, (0, 1, 0): 1, (0, 1, 1): 1, (1, 0, 0): 2, (1, 0, 1): 2, (1, 1, 0): 2, (1, 1, 1): 2, (2, 0, 0): 1, (2, 0, 1): 1, (2, 1, 0): 1, (2, 1, 1): 1}
+rank levels 3-4-3: [3, 4, 3]  sign levels 4-2-4: [4, 2, 4]
+fixed divisors: C 0 Q 4 CQ 2
+embedding: ten-pattern invariant subset, equivariant bijection for C->kappa, Q->sigma (abstract Klein isomorphism; NOT a section of Phi: Phi(0000) = (0, 0, 0) )
+full n=5 cube: kappa-fixed 0 ; sigma kappa-fixed 0 (obstruction: must be 0); sigma-fixed 16
+four-tile cube: sigma kappa-fixed 4 (the preimages of pq, pr)
+PASS

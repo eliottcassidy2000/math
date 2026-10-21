@@ -1,0 +1,8 @@
+k = 2: M_k = 14, weight 12; raw records: A 30, B 15, total 45
+  dropped (homogeneous pair): 3 -> [('B', [(1, 2), (3, 4)], [2, 0, 2, 2, 2]), ('B', [(1, 2), (3, 4)], [2, 2, 2, 0, 2]), ('B', [(1, 4), (2, 3)], [2, 2, 0, 2, 2])]
+  pair-free records 42, wrong feedback 0, distinct weighted classes 42 (prediction (2k-1)!!(C(3k,k)-1) = 42), strong 0
+  distinct classes by family: {'A': 30, 'B': 12}; strong by family: {'A': 0, 'B': 0}
+k = 3: M_k = 27, weight 24; raw records: A 1155, B 105, total 1260
+  dropped (homogeneous pair): 15 -> [('B', [(1, 2), (3, 4), (5, 6)], [3, 0, 3, 3, 3, 3, 3]), ('B', [(1, 2), (3, 4), (5, 6)], [3, 3, 3, 0, 3, 3, 3]), ('B', [(1, 2), (3, 4), (5, 6)], [3, 3, 3, 3, 3, 0, 3]), ('B', [(1, 2), (3, 5), (4, 6)], [3, 0, 3, 3, 3, 3, 3]), ('B', [(1, 2), (3, 6), (4, 5)], [3, 0, 3, 3, 3, 3, 3]), ('B', [(1, 2), (3, 6), (4, 5)], [3, 3, 3, 3, 0, 3, 3])]
+  pair-free records 1245, wrong feedback 0, distinct weighted classes 1245 (prediction (2k-1)!!(C(3k,k)-1) = 1245), strong 0
+  distinct classes by family: {'A': 1155, 'B': 90}; strong by family: {'A': 0, 'B': 0}

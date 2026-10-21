@@ -1,0 +1,22 @@
+templates 50
+5000 {'universe': 5000, 'covered': 5000} 0s
+10000 {'universe': 10000, 'covered': 10000} 1s
+15000 {'universe': 15000, 'covered': 15000} 1s
+20000 {'universe': 20000, 'covered': 20000} 2s
+25000 {'universe': 25000, 'covered': 25000} 2s
+30000 {'universe': 30000, 'covered': 30000} 2s
+35000 {'universe': 35000, 'covered': 35000} 3s
+40000 {'universe': 40000, 'covered': 40000} 3s
+45000 {'universe': 45000, 'covered': 45000} 4s
+50000 {'universe': 50000, 'covered': 49999, 'residual': 1} 4s
+55000 {'universe': 55000, 'covered': 54998, 'residual': 2} 4s
+60000 {'universe': 60000, 'covered': 59998, 'residual': 2} 5s
+65000 {'universe': 65000, 'covered': 64998, 'residual': 2} 5s
+70000 {'universe': 70000, 'covered': 69998, 'residual': 2} 6s
+75000 {'universe': 75000, 'covered': 74997, 'residual': 3} 6s
+80000 {'universe': 80000, 'covered': 79997, 'residual': 3} 6s
+85000 {'universe': 85000, 'covered': 84997, 'residual': 3} 7s
+{"n": 10, "universe": 86016, "covered": 86013, "residual": 3}
+residual patterns {'closed I=3,6': 1, 'closed I=5,6': 1, 'closed I=7,8': 1}
+selected templates {'release': 30720, 'closed_no_chord': 20479, 'closed_chord': 10239, 'L2': 5119, 'C': 4096, 'A_cut_4': 3072, 'B_cut_4': 3072, 'A_cut_5': 1792, 'B_cut_5': 1536, 'last_c_x': 1024, 'C_two_ports': 1024, 'A_cut_6': 1024, 'B_cut_7': 768, 'B_cut_6': 768, 'A_cut_7': 511, 'A_cut_8': 511, 'closed_last_c_cut_3': 129, 'closed_end_pair_final': 64, 'open_end_pair': 64, 'closed_last_c_cut_5': 1}
+saved 3 residuals

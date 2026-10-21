@@ -1,0 +1,13 @@
+reduced primitive forms of discriminant -420: [(1, 0, 105), (2, 2, 53), (3, 0, 35), (5, 0, 21), (6, 6, 19), (7, 0, 15), (10, 10, 13), (11, 8, 11)] h = 8
+form (1, 0, 105): 6 residue classes mod 420; genus characters (3,5,7,mod4) = {(1, 1, 1, 1)}; classes mod 105 = 6, (mod 15, mod 35) pairs = 6
+form (2, 2, 53): 6 residue classes mod 420; genus characters (3,5,7,mod4) = {(-1, -1, 1, 1)}; classes mod 105 = 6, (mod 15, mod 35) pairs = 6
+form (3, 0, 35): 6 residue classes mod 420; genus characters (3,5,7,mod4) = {(-1, -1, -1, -1)}; classes mod 105 = 6, (mod 15, mod 35) pairs = 6
+form (5, 0, 21): 6 residue classes mod 420; genus characters (3,5,7,mod4) = {(-1, 1, -1, 1)}; classes mod 105 = 6, (mod 15, mod 35) pairs = 6
+form (6, 6, 19): 6 residue classes mod 420; genus characters (3,5,7,mod4) = {(1, 1, -1, -1)}; classes mod 105 = 6, (mod 15, mod 35) pairs = 6
+form (7, 0, 15): 6 residue classes mod 420; genus characters (3,5,7,mod4) = {(1, -1, 1, -1)}; classes mod 105 = 6, (mod 15, mod 35) pairs = 6
+form (10, 10, 13): 6 residue classes mod 420; genus characters (3,5,7,mod4) = {(1, -1, -1, 1)}; classes mod 105 = 6, (mod 15, mod 35) pairs = 6
+form (11, 8, 11): 6 residue classes mod 420; genus characters (3,5,7,mod4) = {(-1, 1, 1, -1)}; classes mod 105 = 6, (mod 15, mod 35) pairs = 6
+residue classes disjoint across forms: True
+union covers all units mod 420: 48 of 96
+65 idoneal numbers: 65 ; 15 idoneal True ; 35 idoneal False ; 105 idoneal True ; 21 True ; 63 False ; 153 False ; 420 False
+idoneal multiples of 105: [105, 210, 840, 1365] ; idoneal products of exactly three distinct odd primes: [105, 165, 273, 345, 357, 385]

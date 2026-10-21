@@ -1,0 +1,1 @@
+sources 50000: lambda_w >= 1 cases 0 []; splits checked 123470, V < D_w violations 0, min (V - D_w) = 0.000000; pays <=> P < (1-lambda) z mismatches 0

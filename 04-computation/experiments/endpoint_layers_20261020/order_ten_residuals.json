@@ -1,0 +1,281 @@
+[
+ {
+  "rows": [
+   438,
+   724,
+   808,
+   339,
+   676,
+   842,
+   149,
+   812,
+   594,
+   73
+  ],
+  "incoming": [
+   3,
+   6
+  ],
+  "outgoing": [
+   3,
+   6
+  ],
+  "kind": "closed",
+  "strong_partner": true,
+  "certificate": [
+   [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    8,
+    6,
+    7,
+    9
+   ],
+   [
+    0,
+    1,
+    2,
+    3,
+    5,
+    8,
+    6,
+    7,
+    9,
+    4
+   ],
+   [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    4
+   ]
+  ],
+  "independent_anti_failures": [
+   [
+    0,
+    2,
+    6,
+    9
+   ],
+   [
+    0,
+    3,
+    6,
+    4
+   ],
+   [
+    0,
+    7,
+    3,
+    4
+   ]
+  ],
+  "endpoint_excesses": [
+   0,
+   0,
+   0
+  ],
+  "search": {
+   "scope": "prefix search stopped at first certificate",
+   "first_black_paths": 13314,
+   "last_black_paths": 14540,
+   "pairs_examined": 10
+  }
+ },
+ {
+  "rows": [
+   414,
+   628,
+   616,
+   466,
+   420,
+   841,
+   657,
+   806,
+   582,
+   25
+  ],
+  "incoming": [
+   5,
+   6
+  ],
+  "outgoing": [
+   3,
+   4
+  ],
+  "kind": "closed",
+  "strong_partner": true,
+  "certificate": [
+   [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    8,
+    6,
+    7,
+    9
+   ],
+   [
+    0,
+    1,
+    2,
+    3,
+    9,
+    8,
+    7,
+    4,
+    6,
+    5
+   ],
+   [
+    0,
+    1,
+    2,
+    3,
+    9,
+    7,
+    4,
+    6,
+    8,
+    5
+   ]
+  ],
+  "independent_anti_failures": [
+   [
+    0,
+    8,
+    3,
+    9
+   ],
+   [
+    0,
+    6,
+    1,
+    5
+   ],
+   [
+    0,
+    3,
+    4,
+    5
+   ]
+  ],
+  "endpoint_excesses": [
+   0,
+   -1,
+   1
+  ],
+  "search": {
+   "scope": "prefix search stopped at first certificate",
+   "first_black_paths": 13614,
+   "last_black_paths": 14630,
+   "pairs_examined": 21
+  }
+ },
+ {
+  "rows": [
+   126,
+   44,
+   120,
+   752,
+   994,
+   704,
+   898,
+   775,
+   559,
+   7
+  ],
+  "incoming": [
+   7,
+   8
+  ],
+  "outgoing": [
+   1,
+   2
+  ],
+  "kind": "closed",
+  "strong_partner": true,
+  "certificate": [
+   [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    5,
+    9
+   ],
+   [
+    0,
+    1,
+    2,
+    3,
+    8,
+    5,
+    9,
+    4,
+    6,
+    7
+   ],
+   [
+    0,
+    1,
+    2,
+    3,
+    8,
+    9,
+    4,
+    5,
+    6,
+    7
+   ]
+  ],
+  "independent_anti_failures": [
+   [
+    0,
+    5,
+    1,
+    9
+   ],
+   [
+    0,
+    8,
+    5,
+    7
+   ],
+   [
+    0,
+    5,
+    2,
+    7
+   ]
+  ],
+  "endpoint_excesses": [
+   0,
+   -1,
+   1
+  ],
+  "search": {
+   "scope": "prefix search stopped at first certificate",
+   "first_black_paths": 10206,
+   "last_black_paths": 11888,
+   "pairs_examined": 2
+  }
+ }
+]

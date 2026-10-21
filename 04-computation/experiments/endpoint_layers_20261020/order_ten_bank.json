@@ -1,0 +1,276 @@
+{
+ "stats": {
+  "universe": 86016,
+  "covered": 86013,
+  "residual": 3
+ },
+ "patterns": {
+  "closed I=2,3": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=2,4": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=2,5": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=2,6": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=2,7": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=2,8": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=3,4": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=3,5": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=3,6": {
+   "total": 2048,
+   "covered": 2047,
+   "residual": 1
+  },
+  "closed I=3,7": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=3,8": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=4,5": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=4,6": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=4,7": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=4,8": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=5,6": {
+   "total": 2048,
+   "covered": 2047,
+   "residual": 1
+  },
+  "closed I=5,7": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=5,8": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=6,7": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=6,8": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "closed I=7,8": {
+   "total": 2048,
+   "covered": 2047,
+   "residual": 1
+  },
+  "open I=2,3": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=2,4": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=2,5": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=2,6": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=2,7": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=2,8": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=3,4": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=3,5": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=3,6": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=3,7": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=3,8": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=4,5": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=4,6": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=4,7": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=4,8": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=5,6": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=5,7": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=5,8": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=6,7": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=6,8": {
+   "total": 2048,
+   "covered": 2048
+  },
+  "open I=7,8": {
+   "total": 2048,
+   "covered": 2048
+  }
+ },
+ "selected": {
+  "closed_no_chord": 20479,
+  "last_c_x": 1024,
+  "A_cut_5": 1792,
+  "A_cut_4": 3072,
+  "C_two_ports": 1024,
+  "C": 4096,
+  "B_cut_7": 768,
+  "closed_chord": 10239,
+  "L2": 5119,
+  "B_cut_4": 3072,
+  "B_cut_5": 1536,
+  "B_cut_6": 768,
+  "release": 30720,
+  "A_cut_6": 1024,
+  "A_cut_7": 511,
+  "A_cut_8": 511,
+  "closed_last_c_cut_3": 129,
+  "closed_end_pair_final": 64,
+  "open_end_pair": 64,
+  "closed_last_c_cut_5": 1
+ },
+ "residuals": [
+  {
+   "rows": [
+    438,
+    724,
+    808,
+    339,
+    676,
+    842,
+    149,
+    812,
+    594,
+    73
+   ],
+   "incoming": [
+    3,
+    6
+   ],
+   "outgoing": [
+    3,
+    6
+   ],
+   "kind": "closed",
+   "strong_partner": true
+  },
+  {
+   "rows": [
+    414,
+    628,
+    616,
+    466,
+    420,
+    841,
+    657,
+    806,
+    582,
+    25
+   ],
+   "incoming": [
+    5,
+    6
+   ],
+   "outgoing": [
+    3,
+    4
+   ],
+   "kind": "closed",
+   "strong_partner": true
+  },
+  {
+   "rows": [
+    126,
+    44,
+    120,
+    752,
+    994,
+    704,
+    898,
+    775,
+    559,
+    7
+   ],
+   "incoming": [
+    7,
+    8
+   ],
+   "outgoing": [
+    1,
+    2
+   ],
+   "kind": "closed",
+   "strong_partner": true
+  }
+ ]
+}

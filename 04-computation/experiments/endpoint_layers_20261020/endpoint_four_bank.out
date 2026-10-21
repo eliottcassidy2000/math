@@ -1,0 +1,36 @@
+9 5000 {'universe': 5000, 'covered': 4840, 'search_certified': 160} 4s
+9 10000 {'universe': 10000, 'covered': 9679, 'search_certified': 321} 8s
+{"n": 9, "k": 4, "universe": 10240, "covered": 9915, "search_certified": 325}
+patterns needing search/unresolved {'closed I=2,3,4': (128, 0), 'closed I=2,3,5': (1, 0), 'closed I=2,6,7': (128, 0), 'closed I=4,6,7': (1, 0), 'closed I=5,6,7': (33, 0), 'open I=2,3,4': (1, 0), 'open I=3,4,7': (1, 0), 'open I=5,6,7': (32, 0)}
+selected {'release': 2556, 'closed_no_chord': 2047, 'L2': 639, 'B_cut_4': 575, 'A_cut_4': 512, 'C': 512, 'closed_chord': 512, 'A_cut_5': 382, 'open_end_pair': 320, 'B_cut_6': 289, 'B_cut_5': 289, 'closed_last_c_cut_5': 256, 'last_c_x': 256, 'A_cut_6': 193, 'A_cut_7': 192, 'closed_last_c_cut_3': 129, 'C_two_ports': 128, 'closed_end_pair_final': 65, 'mirrored_TT3_nonmodule': 63}
+10 5000 {'universe': 5000, 'covered': 4921, 'search_certified': 79} 9s
+10 10000 {'universe': 10000, 'covered': 9842, 'search_certified': 158} 19s
+10 15000 {'universe': 15000, 'covered': 14775, 'search_certified': 225} 27s
+10 20000 {'universe': 20000, 'covered': 19678, 'search_certified': 322} 39s
+10 25000 {'universe': 25000, 'covered': 24604, 'search_certified': 396} 47s
+10 30000 {'universe': 30000, 'covered': 29523, 'search_certified': 477} 57s
+10 35000 {'universe': 35000, 'covered': 34429, 'search_certified': 571} 66s
+10 40000 {'universe': 40000, 'covered': 39357, 'search_certified': 643} 74s
+10 45000 {'universe': 45000, 'covered': 44287, 'search_certified': 713} 82s
+10 50000 {'universe': 50000, 'covered': 49208, 'search_certified': 792} 91s
+10 55000 {'universe': 55000, 'covered': 54101, 'search_certified': 899} 103s
+10 60000 {'universe': 60000, 'covered': 59037, 'search_certified': 963} 111s
+10 65000 {'universe': 65000, 'covered': 63972, 'search_certified': 1028} 118s
+10 70000 {'universe': 70000, 'covered': 68885, 'search_certified': 1115} 128s
+10 75000 {'universe': 75000, 'covered': 73782, 'search_certified': 1218} 140s
+10 80000 {'universe': 80000, 'covered': 78717, 'search_certified': 1283} 148s
+10 85000 {'universe': 85000, 'covered': 83653, 'search_certified': 1347} 156s
+10 90000 {'universe': 90000, 'covered': 88545, 'search_certified': 1455} 169s
+10 95000 {'universe': 95000, 'covered': 93465, 'search_certified': 1535} 180s
+10 100000 {'universe': 100000, 'covered': 98396, 'search_certified': 1604} 188s
+10 105000 {'universe': 105000, 'covered': 103331, 'search_certified': 1669} 196s
+10 110000 {'universe': 110000, 'covered': 108228, 'search_certified': 1772} 206s
+10 115000 {'universe': 115000, 'covered': 113149, 'search_certified': 1851} 215s
+10 120000 {'universe': 120000, 'covered': 118075, 'search_certified': 1925} 222s
+10 125000 {'universe': 125000, 'covered': 122984, 'search_certified': 2016} 231s
+10 130000 {'universe': 130000, 'covered': 127913, 'search_certified': 2087} 240s
+10 135000 {'universe': 135000, 'covered': 132832, 'search_certified': 2168} 249s
+10 140000 {'universe': 140000, 'covered': 137754, 'search_certified': 2246} 255s
+{"n": 10, "k": 4, "universe": 143360, "covered": 141050, "search_certified": 2310}
+patterns needing search/unresolved {'closed I=2,3,4': (1024, 0), 'closed I=2,3,6': (1, 0), 'closed I=2,5,6': (1, 0), 'closed I=2,7,8': (1024, 0), 'closed I=3,4,6': (1, 0), 'closed I=4,5,6': (1, 0), 'closed I=4,7,8': (1, 0), 'closed I=6,7,8': (128, 0), 'open I=2,3,4': (1, 0), 'open I=6,7,8': (128, 0)}
+selected {'release': 40956, 'closed_no_chord': 30717, 'closed_chord': 10239, 'L2': 9214, 'C': 7168, 'B_cut_4': 7167, 'A_cut_4': 6656, 'A_cut_5': 4608, 'B_cut_5': 3584, 'last_c_x': 3072, 'A_cut_6': 3072, 'open_end_pair': 2432, 'closed_last_c_cut_6': 2048, 'C_two_ports': 2048, 'B_cut_7': 1793, 'B_cut_6': 1793, 'A_cut_7': 1536, 'A_cut_8': 1535, 'closed_last_c_cut_3': 770, 'closed_end_pair_final': 384, 'mirrored_TT3_nonmodule': 256, 'closed_last_c_cut_4': 1, 'closed_last_c_cut_5': 1}
