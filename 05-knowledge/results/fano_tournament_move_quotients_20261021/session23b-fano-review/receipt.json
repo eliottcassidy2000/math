@@ -1,0 +1,255 @@
+{
+  "H_class_sizes": {
+    "171": 1680,
+    "175": 720,
+    "189": 240
+  },
+  "all_orientation_count": 2097152,
+  "characteristic_polynomial_high_first": [
+    1,
+    -16,
+    14,
+    196
+  ],
+  "class_order": [
+    189,
+    171,
+    175
+  ],
+  "cube_distance_pairs_checked": 16384,
+  "cube_returns": [
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      2,
+      7,
+      7
+    ],
+    [
+      3,
+      42,
+      0
+    ],
+    [
+      4,
+      301,
+      133
+    ],
+    [
+      5,
+      2100,
+      0
+    ],
+    [
+      6,
+      14707,
+      3787
+    ],
+    [
+      7,
+      102942,
+      0
+    ],
+    [
+      8,
+      720601,
+      134953
+    ],
+    [
+      9,
+      5044200,
+      0
+    ],
+    [
+      10,
+      35309407,
+      5501167
+    ],
+    [
+      11,
+      247165842,
+      0
+    ],
+    [
+      12,
+      1730160901,
+      243147373
+    ]
+  ],
+  "cube_returns_columns": [
+    "t",
+    "to_Paley_locus",
+    "to_same_presentation"
+  ],
+  "fano_aut_order": 168,
+  "fano_sheet_count_in_Paley": 2,
+  "findings": "No mathematical error found. Frozen artifacts reproduced; inheritance and operation-relative limitations retained.",
+  "first_hit_means": [
+    10,
+    12
+  ],
+  "full_graph_directed_edges": 36960,
+  "independence": "Gray-code global generation; direct 5040 Hamilton-path predicates per regular tournament; all full-graph BFS distances for 128 cube sources; actual-state walk distributions.",
+  "neighbor_matrix": [
+    [
+      0,
+      14,
+      0
+    ],
+    [
+      2,
+      9,
+      3
+    ],
+    [
+      0,
+      7,
+      7
+    ]
+  ],
+  "paley_anti_count": 21,
+  "paley_aut_order": 21,
+  "path_profile": [
+    [
+      1,
+      7,
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      21,
+      1,
+      1,
+      1
+    ],
+    [
+      3,
+      63,
+      3,
+      1,
+      2
+    ],
+    [
+      4,
+      147,
+      7,
+      3,
+      5
+    ],
+    [
+      5,
+      273,
+      13,
+      3,
+      8
+    ],
+    [
+      6,
+      315,
+      15,
+      3,
+      9
+    ],
+    [
+      7,
+      189,
+      9,
+      3,
+      6
+    ]
+  ],
+  "path_profile_columns": [
+    "k",
+    "labelled_paths",
+    "Aut_orbits",
+    "converse_fixed",
+    "converse_merged"
+  ],
+  "producer_replays": {
+    "check.py:optimized=False": "500d1e886640fbaea139dd64fc89ec480f8a886aef9575a0b07ac6f358bea2c3",
+    "check.py:optimized=True": "500d1e886640fbaea139dd64fc89ec480f8a886aef9575a0b07ac6f358bea2c3",
+    "global_triangle_check.py:optimized=False": "ec93cfbe83356ba9279cc85b0e7e58cc352f94f1a24d5816fc0d7f4c86bc7cd2",
+    "global_triangle_check.py:optimized=True": "ec93cfbe83356ba9279cc85b0e7e58cc352f94f1a24d5816fc0d7f4c86bc7cd2"
+  },
+  "regular_count": 2640,
+  "scope": "Exact labelled n=7 only; all 2^21 orientations, all 2640 regular tournaments; no larger-order inference.",
+  "single_face_repairs": {
+    "1": [
+      83,
+      103
+    ],
+    "2": [
+      84,
+      96
+    ],
+    "4": [
+      74,
+      126
+    ],
+    "7": [
+      6,
+      50
+    ]
+  },
+  "source_manifest_sha256": "a5e41b30b17ee1808d150127a1aa37bb468e18cb4d9e8d174fa323b0d4553ab0",
+  "stationary_mean_H": "1911/11",
+  "stationary_probabilities": [
+    "1/11",
+    "7/11",
+    "3/11"
+  ],
+  "status": "PASS",
+  "tetrahedron_boundary_masks": [
+    66,
+    70,
+    82,
+    86,
+    98,
+    102,
+    114,
+    118
+  ],
+  "triangle_holonomy_supports": [
+    7,
+    25,
+    42,
+    52,
+    76,
+    82,
+    97
+  ],
+  "verified_source_hashes": {
+    "README.md": "40ba37c6d9d6bc97ca2213ff71905cb0e2a8ab2e56f1ed69ea8407313fb262b0",
+    "check.py": "d00588a0102f4cc64a864b13578077cf3d4f0c6b6ccb845fda95e443b9441b00",
+    "global-optimized-receipt.json": "ec93cfbe83356ba9279cc85b0e7e58cc352f94f1a24d5816fc0d7f4c86bc7cd2",
+    "global-receipt.json": "ec93cfbe83356ba9279cc85b0e7e58cc352f94f1a24d5816fc0d7f4c86bc7cd2",
+    "global_triangle_check.py": "f718d636e8ec9f66d86a3f50bb359c2ede935c080b8154d7b6438391db2d31a7",
+    "optimized-receipt.json": "500d1e886640fbaea139dd64fc89ec480f8a886aef9575a0b07ac6f358bea2c3",
+    "receipt.json": "500d1e886640fbaea139dd64fc89ec480f8a886aef9575a0b07ac6f358bea2c3"
+  },
+  "weighted_actual_graph_walks": [
+    189,
+    2394,
+    34188,
+    476448,
+    6675312,
+    93433872,
+    1308103776,
+    18313225056,
+    256385109120,
+    3589388255040,
+    50251428441984,
+    703519938113664,
+    9849278913643008
+  ]
+}

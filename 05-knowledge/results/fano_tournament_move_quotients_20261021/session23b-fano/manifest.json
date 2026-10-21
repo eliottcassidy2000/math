@@ -1,0 +1,12 @@
+{
+  "status": "produced; independent review pending",
+  "files": {
+    "global-optimized-receipt.json": "ec93cfbe83356ba9279cc85b0e7e58cc352f94f1a24d5816fc0d7f4c86bc7cd2",
+    "README.md": "40ba37c6d9d6bc97ca2213ff71905cb0e2a8ab2e56f1ed69ea8407313fb262b0",
+    "receipt.json": "500d1e886640fbaea139dd64fc89ec480f8a886aef9575a0b07ac6f358bea2c3",
+    "global_triangle_check.py": "f718d636e8ec9f66d86a3f50bb359c2ede935c080b8154d7b6438391db2d31a7",
+    "optimized-receipt.json": "500d1e886640fbaea139dd64fc89ec480f8a886aef9575a0b07ac6f358bea2c3",
+    "global-receipt.json": "ec93cfbe83356ba9279cc85b0e7e58cc352f94f1a24d5816fc0d7f4c86bc7cd2",
+    "check.py": "d00588a0102f4cc64a864b13578077cf3d4f0c6b6ccb845fda95e443b9441b00"
+  }
+}

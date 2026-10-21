@@ -1,0 +1,14 @@
+{
+  "files": {
+    "REVIEW.md": "935386e86e63e839296619b9a86eb77658339fdf95c8a67d8c102f1ba7032e5f",
+    "independent_audit.py": "5442d352809b6f6bbe7daf5c711ce2e16f930f7cccf874f41b154a341fb0f846",
+    "optimized-receipt.json": "4aa4b7a6d3b40316123ef915f654352c2d7d673334776d395084fa58806cf285",
+    "receipt.json": "4aa4b7a6d3b40316123ef915f654352c2d7d673334776d395084fa58806cf285",
+    "small-circle-optimized-receipt.json": "b4a8543e0e6e173572fc94a560def60dfbd353be323907fe9f4b5ccfeb0ba06d",
+    "small-circle-receipt.json": "b4a8543e0e6e173572fc94a560def60dfbd353be323907fe9f4b5ccfeb0ba06d",
+    "small_circle_witness.py": "ed6f8726b1c9084a4ab8818711408a9bf28d97cf594db6232a984d2d1c53bb42"
+  },
+  "source_manifest_sha256": "a5e41b30b17ee1808d150127a1aa37bb468e18cb4d9e8d174fa323b0d4553ab0",
+  "source_packet": "session23b-fano",
+  "status": "PASS; independent audit complete"
+}

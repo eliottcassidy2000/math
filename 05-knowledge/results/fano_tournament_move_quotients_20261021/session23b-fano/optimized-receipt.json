@@ -1,0 +1,1499 @@
+{
+  "all_Fano_automorphisms_even": true,
+  "all_Paley_anti_automorphisms_odd": true,
+  "distinct_triangle_voltages": [
+    7,
+    25,
+    42,
+    52,
+    76,
+    82,
+    97
+  ],
+  "extended_subset_stabilizers": {
+    "0": {
+      "42": 1
+    },
+    "1": {
+      "6": 7
+    },
+    "2": {
+      "2": 21
+    },
+    "3": {
+      "2": 21,
+      "3": 14
+    },
+    "4": {
+      "2": 21,
+      "3": 14
+    },
+    "5": {
+      "2": 21
+    },
+    "6": {
+      "6": 7
+    },
+    "7": {
+      "42": 1
+    }
+  },
+  "fano_subset_stabilizers": {
+    "0": {
+      "168": 1
+    },
+    "1": {
+      "24": 7
+    },
+    "2": {
+      "8": 21
+    },
+    "3": {
+      "6": 28,
+      "24": 7
+    },
+    "4": {
+      "6": 28,
+      "24": 7
+    },
+    "5": {
+      "8": 21
+    },
+    "6": {
+      "24": 7
+    },
+    "7": {
+      "168": 1
+    }
+  },
+  "line_flip_return_counts": [
+    {
+      "return_to_Paley_locus": 1,
+      "return_to_exact_mask": 1,
+      "t": 0
+    },
+    {
+      "return_to_Paley_locus": 0,
+      "return_to_exact_mask": 0,
+      "t": 1
+    },
+    {
+      "return_to_Paley_locus": 7,
+      "return_to_exact_mask": 7,
+      "t": 2
+    },
+    {
+      "return_to_Paley_locus": 42,
+      "return_to_exact_mask": 0,
+      "t": 3
+    },
+    {
+      "return_to_Paley_locus": 301,
+      "return_to_exact_mask": 133,
+      "t": 4
+    },
+    {
+      "return_to_Paley_locus": 2100,
+      "return_to_exact_mask": 0,
+      "t": 5
+    },
+    {
+      "return_to_Paley_locus": 14707,
+      "return_to_exact_mask": 3787,
+      "t": 6
+    },
+    {
+      "return_to_Paley_locus": 102942,
+      "return_to_exact_mask": 0,
+      "t": 7
+    },
+    {
+      "return_to_Paley_locus": 720601,
+      "return_to_exact_mask": 134953,
+      "t": 8
+    },
+    {
+      "return_to_Paley_locus": 5044200,
+      "return_to_exact_mask": 0,
+      "t": 9
+    },
+    {
+      "return_to_Paley_locus": 35309407,
+      "return_to_exact_mask": 5501167,
+      "t": 10
+    },
+    {
+      "return_to_Paley_locus": 247165842,
+      "return_to_exact_mask": 0,
+      "t": 11
+    },
+    {
+      "return_to_Paley_locus": 1730160901,
+      "return_to_exact_mask": 243147373,
+      "t": 12
+    }
+  ],
+  "lines": {
+    "1": [
+      2,
+      4,
+      6
+    ],
+    "2": [
+      1,
+      4,
+      5
+    ],
+    "3": [
+      3,
+      4,
+      7
+    ],
+    "4": [
+      1,
+      2,
+      3
+    ],
+    "5": [
+      2,
+      5,
+      7
+    ],
+    "6": [
+      1,
+      6,
+      7
+    ],
+    "7": [
+      3,
+      5,
+      6
+    ]
+  },
+  "orientation_H_counts": {
+    "171": 112,
+    "189": 16
+  },
+  "orientation_rows": [
+    {
+      "H": 171,
+      "mask": 0,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    },
+    {
+      "H": 189,
+      "mask": 1,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 171,
+      "mask": 2,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 171,
+      "mask": 3,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 4,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 5,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 189,
+      "mask": 6,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 171,
+      "mask": 7,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    },
+    {
+      "H": 171,
+      "mask": 8,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 9,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 10,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 11,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 12,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 13,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 14,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 15,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 16,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 17,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 18,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 19,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 20,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 21,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 22,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 23,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 189,
+      "mask": 24,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 171,
+      "mask": 25,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    },
+    {
+      "H": 171,
+      "mask": 26,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 27,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 171,
+      "mask": 28,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 171,
+      "mask": 29,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 30,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    },
+    {
+      "H": 189,
+      "mask": 31,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 171,
+      "mask": 32,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 33,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 34,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 35,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 36,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 37,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 38,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 39,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 40,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 171,
+      "mask": 41,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 42,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    },
+    {
+      "H": 189,
+      "mask": 43,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 189,
+      "mask": 44,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 171,
+      "mask": 45,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    },
+    {
+      "H": 171,
+      "mask": 46,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 47,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 171,
+      "mask": 48,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 49,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 189,
+      "mask": 50,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 171,
+      "mask": 51,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    },
+    {
+      "H": 171,
+      "mask": 52,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    },
+    {
+      "H": 189,
+      "mask": 53,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 171,
+      "mask": 54,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 171,
+      "mask": 55,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 56,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 57,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 58,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 59,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 60,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 61,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 62,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 63,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 64,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 65,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 66,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 67,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 68,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 69,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 70,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 71,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 72,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 73,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 189,
+      "mask": 74,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 171,
+      "mask": 75,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    },
+    {
+      "H": 171,
+      "mask": 76,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    },
+    {
+      "H": 189,
+      "mask": 77,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 171,
+      "mask": 78,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 171,
+      "mask": 79,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 80,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 171,
+      "mask": 81,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 82,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    },
+    {
+      "H": 189,
+      "mask": 83,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 189,
+      "mask": 84,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 171,
+      "mask": 85,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    },
+    {
+      "H": 171,
+      "mask": 86,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 87,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 171,
+      "mask": 88,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 89,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 90,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 91,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 92,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 93,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 94,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 95,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 189,
+      "mask": 96,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 171,
+      "mask": 97,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    },
+    {
+      "H": 171,
+      "mask": 98,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 99,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 171,
+      "mask": 100,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 171,
+      "mask": 101,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 102,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    },
+    {
+      "H": 189,
+      "mask": 103,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 171,
+      "mask": 104,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 105,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 106,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 107,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 108,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 109,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 110,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 111,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 112,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 113,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 114,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 115,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 116,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 6
+    },
+    {
+      "H": 171,
+      "mask": 117,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 118,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 119,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 5
+    },
+    {
+      "H": 171,
+      "mask": 120,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    },
+    {
+      "H": 189,
+      "mask": 121,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 171,
+      "mask": 122,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 171,
+      "mask": 123,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 124,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 125,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 3
+    },
+    {
+      "H": 189,
+      "mask": 126,
+      "neighbors_by_type": {
+        "1": 7
+      },
+      "syndrome": 0
+    },
+    {
+      "H": 171,
+      "mask": 127,
+      "neighbors_by_type": {
+        "0": 1,
+        "1": 6
+      },
+      "syndrome": 1
+    }
+  ],
+  "paley_anti_size": 21,
+  "paley_aut_size": 21,
+  "paley_marked_paths": [
+    {
+      "anti_fix_hist": {
+        "1": 21
+      },
+      "converse_fixed": 1,
+      "k": 1,
+      "labelled_paths": 7,
+      "merged": 1,
+      "ordinary_orbits": 1
+    },
+    {
+      "anti_fix_hist": {
+        "0": 14,
+        "3": 7
+      },
+      "converse_fixed": 1,
+      "k": 2,
+      "labelled_paths": 21,
+      "merged": 1,
+      "ordinary_orbits": 1
+    },
+    {
+      "anti_fix_hist": {
+        "0": 14,
+        "3": 7
+      },
+      "converse_fixed": 1,
+      "k": 3,
+      "labelled_paths": 63,
+      "merged": 2,
+      "ordinary_orbits": 3
+    },
+    {
+      "anti_fix_hist": {
+        "0": 14,
+        "9": 7
+      },
+      "converse_fixed": 3,
+      "k": 4,
+      "labelled_paths": 147,
+      "merged": 5,
+      "ordinary_orbits": 7
+    },
+    {
+      "anti_fix_hist": {
+        "0": 14,
+        "9": 7
+      },
+      "converse_fixed": 3,
+      "k": 5,
+      "labelled_paths": 273,
+      "merged": 8,
+      "ordinary_orbits": 13
+    },
+    {
+      "anti_fix_hist": {
+        "0": 14,
+        "9": 7
+      },
+      "converse_fixed": 3,
+      "k": 6,
+      "labelled_paths": 315,
+      "merged": 9,
+      "ordinary_orbits": 15
+    },
+    {
+      "anti_fix_hist": {
+        "0": 14,
+        "9": 7
+      },
+      "converse_fixed": 3,
+      "k": 7,
+      "labelled_paths": 189,
+      "merged": 6,
+      "ordinary_orbits": 9
+    }
+  ],
+  "paley_subset_stabilizers": {
+    "0": {
+      "21": 1
+    },
+    "1": {
+      "3": 7
+    },
+    "2": {
+      "1": 21
+    },
+    "3": {
+      "1": 21,
+      "3": 14
+    },
+    "4": {
+      "1": 21,
+      "3": 14
+    },
+    "5": {
+      "1": 21
+    },
+    "6": {
+      "3": 7
+    },
+    "7": {
+      "21": 1
+    }
+  },
+  "status": "FINITE-EXACT",
+  "tetrahedron_boundary_bits": {
+    "1": 0,
+    "2": 1,
+    "4": 0,
+    "7": 1
+  },
+  "tetrahedron_boundary_completions": [
+    {
+      "H": 171,
+      "mask": 66,
+      "syndrome": 4
+    },
+    {
+      "H": 171,
+      "mask": 70,
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 82,
+      "syndrome": 1
+    },
+    {
+      "H": 171,
+      "mask": 86,
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 98,
+      "syndrome": 2
+    },
+    {
+      "H": 171,
+      "mask": 102,
+      "syndrome": 1
+    },
+    {
+      "H": 171,
+      "mask": 114,
+      "syndrome": 7
+    },
+    {
+      "H": 171,
+      "mask": 118,
+      "syndrome": 4
+    }
+  ],
+  "tetrahedron_edge_vectors": {
+    "(0, 1)": 3,
+    "(0, 2)": 5,
+    "(0, 3)": 1,
+    "(1, 2)": 6,
+    "(1, 3)": 2,
+    "(2, 3)": 4
+  },
+  "tetrahedron_single_face_repairs": {
+    "1": [
+      83,
+      103
+    ],
+    "2": [
+      84,
+      96
+    ],
+    "4": [
+      74,
+      126
+    ],
+    "7": [
+      6,
+      50
+    ]
+  },
+  "universe": "All 128 orientations of fixed labelled Fano lines; all 7! vertex permutations for groups and independent HP checks; all subsets and paths of fixed Paley7."
+}
