@@ -1,0 +1,9 @@
+m = 2: N_min(1,m) = 3; bound min lpf>=3 of m-1, m+1 = 3
+m = 6: N_min(1,m) = 5; bound min lpf>=3 of m-1, m+1 = 5
+m = 12: N_min(1,m) = 8; bound min lpf>=3 of m-1, m+1 = 11
+m = 18: N_min(1,m) = 11; bound min lpf>=3 of m-1, m+1 = 17
+m = 72: N_min(1,m) = 15; bound min lpf>=3 of m-1, m+1 = 71
+m = 3960: N_min(1,m) = 16; bound min lpf>=3 of m-1, m+1 = 17
+m = 8640: N_min(1,m) = 17; bound min lpf>=3 of m-1, m+1 = 53
+m = 16560: N_min(1,m) = 19; bound min lpf>=3 of m-1, m+1 = 29
+records (m, N_min, bound): [(2, 3, 3), (6, 5, 5), (12, 8, 11), (18, 11, 17), (72, 15, 71), (3960, 16, 17), (8640, 17, 53), (16560, 19, 29)]
