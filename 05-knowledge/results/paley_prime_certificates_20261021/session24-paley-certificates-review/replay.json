@@ -1,0 +1,100 @@
+{
+  "exhaustive_affine_triples": [
+    {
+      "free_orbits": 0,
+      "p": 5,
+      "stabilizer_histogram": {
+        "1": 0,
+        "2": 10,
+        "3": 0
+      }
+    },
+    {
+      "free_orbits": 0,
+      "p": 7,
+      "stabilizer_histogram": {
+        "1": 0,
+        "2": 21,
+        "3": 14
+      }
+    },
+    {
+      "free_orbits": 1,
+      "p": 11,
+      "stabilizer_histogram": {
+        "1": 110,
+        "2": 55,
+        "3": 0
+      }
+    },
+    {
+      "free_orbits": 1,
+      "p": 13,
+      "stabilizer_histogram": {
+        "1": 156,
+        "2": 78,
+        "3": 52
+      }
+    },
+    {
+      "free_orbits": 2,
+      "p": 17,
+      "stabilizer_histogram": {
+        "1": 544,
+        "2": 136,
+        "3": 0
+      }
+    },
+    {
+      "free_orbits": 2,
+      "p": 19,
+      "stabilizer_histogram": {
+        "1": 684,
+        "2": 171,
+        "3": 114
+      }
+    },
+    {
+      "free_orbits": 3,
+      "p": 23,
+      "stabilizer_histogram": {
+        "1": 1518,
+        "2": 253,
+        "3": 0
+      }
+    },
+    {
+      "free_orbits": 4,
+      "p": 29,
+      "stabilizer_histogram": {
+        "1": 3248,
+        "2": 406,
+        "3": 0
+      }
+    },
+    {
+      "free_orbits": 4,
+      "p": 31,
+      "stabilizer_histogram": {
+        "1": 3720,
+        "2": 465,
+        "3": 310
+      }
+    }
+  ],
+  "normalized_cases": 76797,
+  "normalized_primes_bound": 1009,
+  "small_Paley_full_permutation_controls": [
+    {
+      "p": 3,
+      "regular_subsets": 0,
+      "signed_group_order": 6
+    },
+    {
+      "p": 7,
+      "regular_subsets": 0,
+      "signed_group_order": 42
+    }
+  ],
+  "status": "PASS"
+}
