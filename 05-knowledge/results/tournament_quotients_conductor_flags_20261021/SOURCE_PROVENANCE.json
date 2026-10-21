@@ -1,0 +1,7 @@
+{
+  "source": "session20-synthesis/SESSION20_SYNTHESIS.md",
+  "sha256": "efd074c6e9b29c7526957128bf265b3e730090c64f671bac129d8ce92317cf13",
+  "source_preserved_unchanged": true,
+  "root_review": "Root reviewed all four proofs subject to final auditor pins; incorporated incoming marked-torsor/choice-network precursor, independent asymptotic check, and explicit d>=1 qualifier.",
+  "recorded_utc": "2026-10-21T02:42:24.926790+00:00"
+}

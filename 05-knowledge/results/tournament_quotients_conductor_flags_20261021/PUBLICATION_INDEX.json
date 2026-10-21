@@ -1,0 +1,628 @@
+{
+  "packets": [
+    {
+      "approved_payload_manifest_sha256": "b9f5f53c4d5da56d049fe297ad08c7a85fef0760e727d620d72cef9fc2acf016",
+      "bytes": 122461,
+      "entries": [
+        {
+          "bytes": 4199,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/ALL_DEPTH_TWO_SEAM_ADDENDUM.md",
+          "sha256": "7795770b6121e203486b829cdc683983f01154d691e21075e8524403e3fedd00"
+        },
+        {
+          "bytes": 18162,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/BALANCED_FIBRE_GROUP_AND_PORT_DEFECT.md",
+          "sha256": "4ce1d99cfff02b97997551fa1edf35a3f6baf64755d45d654e6d9da0afd88603"
+        },
+        {
+          "bytes": 2795,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/README.md",
+          "sha256": "2db83d96ec1c447af6212c7dbd423e9e6c01e32aee0bfcba2fb6311125a0f27d"
+        },
+        {
+          "bytes": 756,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/SOURCE_PINS.json",
+          "sha256": "c6ce3ac494b06ccc24cad07ffd801bd373fda46af27e22cbbc1265518eeeb28c"
+        },
+        {
+          "bytes": 1825,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/all_depth_ports.json",
+          "sha256": "270d370ff6b3f89a2280d97cec69ccdbcf30d7b2e385eb9a561604ac0653c1ce"
+        },
+        {
+          "bytes": 2388,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/balanced_group_ports.json",
+          "sha256": "dcba3084a4c28fbb8274568d90ad53ac96e9fe1889e942413b9bded63a33b154"
+        },
+        {
+          "bytes": 2492,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/check_all_depth_ports.py",
+          "sha256": "093dccdf3679047eaca8155de6a492c5cb5dd9d7d54733d5d90dedb2f0ca7e31"
+        },
+        {
+          "bytes": 8451,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/check_balanced_group_ports.py",
+          "sha256": "afb8e23d310cf1b8710e6da1e3f47b137b6013b6fba44bc6d1992f7add797fca"
+        },
+        {
+          "bytes": 6450,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/AUDIT.md",
+          "sha256": "4214ce7a64fe75dad238c2be7684a4611d95fb7097c50ec8cc5b6e8ed777c5f1"
+        },
+        {
+          "bytes": 2309,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/AUDIT_PINS.json",
+          "sha256": "17b25521ce1c257aacfc8b5aa7d62c7c4aa5c014176dacef830248e1ce12c6ae"
+        },
+        {
+          "bytes": 1413,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/SHA256SUMS",
+          "sha256": "b43492126273ad563c1377fbf9b962e46ec9fe0261cfa4b34cd3a33fa865a26e"
+        },
+        {
+          "bytes": 1825,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/depth_producer.normal.json",
+          "sha256": "270d370ff6b3f89a2280d97cec69ccdbcf30d7b2e385eb9a561604ac0653c1ce"
+        },
+        {
+          "bytes": 1825,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/depth_producer.optimized.json",
+          "sha256": "270d370ff6b3f89a2280d97cec69ccdbcf30d7b2e385eb9a561604ac0653c1ce"
+        },
+        {
+          "bytes": 4199,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/frozen/ALL_DEPTH_TWO_SEAM_ADDENDUM.md",
+          "sha256": "7795770b6121e203486b829cdc683983f01154d691e21075e8524403e3fedd00"
+        },
+        {
+          "bytes": 18162,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/frozen/BALANCED_FIBRE_GROUP_AND_PORT_DEFECT.md",
+          "sha256": "4ce1d99cfff02b97997551fa1edf35a3f6baf64755d45d654e6d9da0afd88603"
+        },
+        {
+          "bytes": 1825,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/frozen/all_depth_ports.json",
+          "sha256": "270d370ff6b3f89a2280d97cec69ccdbcf30d7b2e385eb9a561604ac0653c1ce"
+        },
+        {
+          "bytes": 2388,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/frozen/balanced_group_ports.json",
+          "sha256": "dcba3084a4c28fbb8274568d90ad53ac96e9fe1889e942413b9bded63a33b154"
+        },
+        {
+          "bytes": 2492,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/frozen/check_all_depth_ports.py",
+          "sha256": "093dccdf3679047eaca8155de6a492c5cb5dd9d7d54733d5d90dedb2f0ca7e31"
+        },
+        {
+          "bytes": 8451,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/frozen/check_balanced_group_ports.py",
+          "sha256": "afb8e23d310cf1b8710e6da1e3f47b137b6013b6fba44bc6d1992f7add797fca"
+        },
+        {
+          "bytes": 4968,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/independent.normal.json",
+          "sha256": "d7454aee8532dba406646db671cb2f67f0cd564fe00623278feecb2b6a127732"
+        },
+        {
+          "bytes": 4968,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/independent.optimized.json",
+          "sha256": "d7454aee8532dba406646db671cb2f67f0cd564fe00623278feecb2b6a127732"
+        },
+        {
+          "bytes": 15342,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/independent_literal_review.py",
+          "sha256": "01515c166d33b1136781b7c5de61284d7acd7afe7ed2bb4c60065fd7bbf6c41e"
+        },
+        {
+          "bytes": 2388,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/producer.normal.json",
+          "sha256": "dcba3084a4c28fbb8274568d90ad53ac96e9fe1889e942413b9bded63a33b154"
+        },
+        {
+          "bytes": 2388,
+          "destination": "05-knowledge/results/balanced_deletion_groups_ports_20261021/review/producer.optimized.json",
+          "sha256": "dcba3084a4c28fbb8274568d90ad53ac96e9fe1889e942413b9bded63a33b154"
+        }
+      ],
+      "files": 24,
+      "packet": "session20-balanced"
+    },
+    {
+      "approved_payload_manifest_sha256": "b780d725a3d40580123f127d4339e45a2b98a8d25ff3d2116781bfcf260eac79",
+      "bytes": 115856,
+      "entries": [
+        {
+          "bytes": 16075,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/PROOF.md",
+          "sha256": "0528b1db1005b29f1db631cda03c8b7b63a5a794b08b60e84c32784c402d136d"
+        },
+        {
+          "bytes": 3149,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/README.md",
+          "sha256": "bae00e187b75a9f1b2a724454a8fdc5a40a98cb39b969f6e87094fc3beb52adc"
+        },
+        {
+          "bytes": 789,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/SHA256SUMS",
+          "sha256": "36fa91aa983d49d0736b6c594a324c5c3d1a092858e420289248f62a22d9f13c"
+        },
+        {
+          "bytes": 516,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/hostile.json",
+          "sha256": "28c932c34e15ee045258cda7b9b2dd629e315146d69172fc577c25eea9bf8c3a"
+        },
+        {
+          "bytes": 516,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/hostile.optimized.out",
+          "sha256": "28c932c34e15ee045258cda7b9b2dd629e315146d69172fc577c25eea9bf8c3a"
+        },
+        {
+          "bytes": 516,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/hostile.out",
+          "sha256": "28c932c34e15ee045258cda7b9b2dd629e315146d69172fc577c25eea9bf8c3a"
+        },
+        {
+          "bytes": 1467,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/hostile.py",
+          "sha256": "d259c686923a18d4d6b183e12663cf1d6212063c576ee3c749883cdb9ae3b8db"
+        },
+        {
+          "bytes": 2832,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/probe.json",
+          "sha256": "668a5faa3440676511cbb06805f8408b92bf34ec7a39a41cdcacda64a06b217f"
+        },
+        {
+          "bytes": 1917,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/probe.optimized.out",
+          "sha256": "37a58c37984a71f0d4cd285b00b64b3590d8e3a2c8ea696d99e192f1900faffb"
+        },
+        {
+          "bytes": 1917,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/probe.out",
+          "sha256": "37a58c37984a71f0d4cd285b00b64b3590d8e3a2c8ea696d99e192f1900faffb"
+        },
+        {
+          "bytes": 5301,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/probe.py",
+          "sha256": "385fc28a1f0f8f21d4a77df66040bc76812805216d8df253c017efc397f53271"
+        },
+        {
+          "bytes": 1343,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/replay_review.py",
+          "sha256": "fe032d2efa6860337d06a22b3e7671a563554d47299feb1431c6a913b98879fb"
+        },
+        {
+          "bytes": 11946,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/AUDIT.md",
+          "sha256": "2dc8c98f0f3c2e0bf55860920059fb83bc4a27f945a1a55877a8e3663786874b"
+        },
+        {
+          "bytes": 1981,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/SHA256SUMS",
+          "sha256": "ed77791fa00160647dbb8b0c8e4662f4ed05c659c363b6bc1fcef9b6e4ccfcf5"
+        },
+        {
+          "bytes": 2751,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/audit_manifest.json",
+          "sha256": "4dea8bc0157db52c896c266b9247b37938dcceb331c94794281c0b9d8f4e473d"
+        },
+        {
+          "bytes": 1750,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/frozen_inputs.json",
+          "sha256": "0dbe142685c790c29387e30a87e220fe8c0355d67d658fb2ce9c4bce3637c511"
+        },
+        {
+          "bytes": 516,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/hostile.json",
+          "sha256": "28c932c34e15ee045258cda7b9b2dd629e315146d69172fc577c25eea9bf8c3a"
+        },
+        {
+          "bytes": 1467,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/hostile.py",
+          "sha256": "d259c686923a18d4d6b183e12663cf1d6212063c576ee3c749883cdb9ae3b8db"
+        },
+        {
+          "bytes": 2748,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/independent.optimized.out",
+          "sha256": "3352468ffd14ca3fe08b2df99f93cff0da44c34673b8ab010364ed95b0b2de5a"
+        },
+        {
+          "bytes": 2748,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/independent.out",
+          "sha256": "3352468ffd14ca3fe08b2df99f93cff0da44c34673b8ab010364ed95b0b2de5a"
+        },
+        {
+          "bytes": 16587,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/independent_audit.py",
+          "sha256": "767c371ccef7e2a52ae386d37419b59d8b0e5365412142f8ff47923c484b7936"
+        },
+        {
+          "bytes": 2748,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/independent_results.json",
+          "sha256": "3352468ffd14ca3fe08b2df99f93cff0da44c34673b8ab010364ed95b0b2de5a"
+        },
+        {
+          "bytes": 834,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/inheritance_pins.json",
+          "sha256": "de9096fa25a3e53af050c5d6ee1c622de7b381fa701cc840fcc74c870d61e9bf"
+        },
+        {
+          "bytes": 748,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/negative_pin_tests.out",
+          "sha256": "06acdb888c90e11ca1f9277ecdffb14086813c5569ccf663ff2a3c89d9f88bff"
+        },
+        {
+          "bytes": 1699,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/negative_pin_tests.py",
+          "sha256": "eb5fec1f0cca763bdfea3e96d52ae3acc83ae0b821c35d66f4f84d11f010cea4"
+        },
+        {
+          "bytes": 2832,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/probe.json",
+          "sha256": "668a5faa3440676511cbb06805f8408b92bf34ec7a39a41cdcacda64a06b217f"
+        },
+        {
+          "bytes": 5301,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/probe.py",
+          "sha256": "385fc28a1f0f8f21d4a77df66040bc76812805216d8df253c017efc397f53271"
+        },
+        {
+          "bytes": 450,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/proof_wording_revision.json",
+          "sha256": "f804f5e6ed30649133683822c8f53c246958a6ee4b8ba8f218a402cebff4d4a0"
+        },
+        {
+          "bytes": 516,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/replay-hostile.optimized.out",
+          "sha256": "28c932c34e15ee045258cda7b9b2dd629e315146d69172fc577c25eea9bf8c3a"
+        },
+        {
+          "bytes": 516,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/replay-hostile.out",
+          "sha256": "28c932c34e15ee045258cda7b9b2dd629e315146d69172fc577c25eea9bf8c3a"
+        },
+        {
+          "bytes": 1917,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/replay-probe.optimized.out",
+          "sha256": "37a58c37984a71f0d4cd285b00b64b3590d8e3a2c8ea696d99e192f1900faffb"
+        },
+        {
+          "bytes": 1917,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/replay-probe.out",
+          "sha256": "37a58c37984a71f0d4cd285b00b64b3590d8e3a2c8ea696d99e192f1900faffb"
+        },
+        {
+          "bytes": 1956,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/replay-voltage_audit.optimized.out",
+          "sha256": "0781c754cabe001569e1a581bcffa3c7bfcd7c81290acaaa5806351157c0a86c"
+        },
+        {
+          "bytes": 1956,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/replay-voltage_audit.out",
+          "sha256": "0781c754cabe001569e1a581bcffa3c7bfcd7c81290acaaa5806351157c0a86c"
+        },
+        {
+          "bytes": 2581,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/voltage_audit.json",
+          "sha256": "d10aa7988bf295baa3e4fb44cd2ae3e08c73f3d49f20edef46daddcf849d983d"
+        },
+        {
+          "bytes": 2280,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/review/voltage_audit.py",
+          "sha256": "0ede2a35db97bad60d9a5b07372bcb1d932d947ffc20e25eba528ae44388124f"
+        },
+        {
+          "bytes": 2581,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/voltage_audit.json",
+          "sha256": "d10aa7988bf295baa3e4fb44cd2ae3e08c73f3d49f20edef46daddcf849d983d"
+        },
+        {
+          "bytes": 1956,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/voltage_audit.optimized.out",
+          "sha256": "0781c754cabe001569e1a581bcffa3c7bfcd7c81290acaaa5806351157c0a86c"
+        },
+        {
+          "bytes": 1956,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/voltage_audit.out",
+          "sha256": "0781c754cabe001569e1a581bcffa3c7bfcd7c81290acaaa5806351157c0a86c"
+        },
+        {
+          "bytes": 2280,
+          "destination": "05-knowledge/results/metagraph_network_invariants_20261021/voltage_audit.py",
+          "sha256": "0ede2a35db97bad60d9a5b07372bcb1d932d947ffc20e25eba528ae44388124f"
+        }
+      ],
+      "files": 40,
+      "packet": "session20-networks"
+    },
+    {
+      "approved_payload_manifest_sha256": "ff00d92131366e869b649cc9f1c98b5ff2a6afaa824de3d494fa44eb5b6516d9",
+      "bytes": 505291,
+      "entries": [
+        {
+          "bytes": 297,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/01-canon/theorems/THM-4566-hilbert-class-field-planes-are-the-idoneal-planes.md",
+          "sha256": "01d262a87289d934ed59e6d9f9155c8fdc50ef7c427b9a35a860a71fca8e4587"
+        },
+        {
+          "bytes": 5287,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/AUDIT.md",
+          "sha256": "50a3411996068d551e813aa3ad8a735a0297e3502fdb199a71cc95734ef10584"
+        },
+        {
+          "bytes": 18179,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/CONDUCTOR_TOWER.md",
+          "sha256": "b6911f6479f9cb75a26b168573c97d6afa15843a61e535d63ca72a71088fd9f3"
+        },
+        {
+          "bytes": 1063,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/CORRECTIONS.md",
+          "sha256": "8de669a710bd484da26a03d8168b3bf91b00f9458e218d6488080fe599111bb6"
+        },
+        {
+          "bytes": 3041,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/README.md",
+          "sha256": "687c5e3e7cfd5ba2ee4d0bc19aab9e9e0f44f8fe280c5b6ba8329d7bb05bd851"
+        },
+        {
+          "bytes": 600,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/SHA256SUMS",
+          "sha256": "fab0d406aae03e62687a48bed2d453a42ddc41554926197aade6399d1e65edc1"
+        },
+        {
+          "bytes": 1641,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/SOURCE_PROVENANCE.json",
+          "sha256": "f883bde990706858e85821c36d3ce4b186d1187a1702538518646f4f4abf7459"
+        },
+        {
+          "bytes": 1027,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/ARCHIVAL_LINK_REDIRECTS.json",
+          "sha256": "a4fa9c64797875086284034a590a7ab579450aa652336365dec41248cfe41fea"
+        },
+        {
+          "bytes": 2407,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/FINAL_INPUT_PINS.json",
+          "sha256": "5178d60b8621a294788e08d1385d1e38be2b108c97db3eeea70f5d34a565ba5d"
+        },
+        {
+          "bytes": 14634,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/INDEPENDENT_AUDIT.md",
+          "sha256": "232e4bb94b50cf7baae3f2ba1695932fbb933dcfab2c74bcb66cac6b3133b4ec"
+        },
+        {
+          "bytes": 3314,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/PUBLIC_APPROVAL.json",
+          "sha256": "bdd529dc94a5343bd744b80903fd8e3f56081aca29f1bff5f6cfe413a924054f"
+        },
+        {
+          "bytes": 1336,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/README.md",
+          "sha256": "dbbb2105fb9f8bbd79e001216b866f327f97e9d38047e801bc8a313624fd78ad"
+        },
+        {
+          "bytes": 1944,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/SHA256SUMS",
+          "sha256": "80ae21d956567ad8b0dd752256b8c0d58448e428e1e2691a7341255497c4d3fc"
+        },
+        {
+          "bytes": 1461,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/SOURCE_CHECKS.json",
+          "sha256": "32ee23ec72609cd0ac60f45a0ffc2e7b4f6a6db3ede9e292f1b6832964b89750"
+        },
+        {
+          "bytes": 5287,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/current_inputs/AUDIT.md",
+          "sha256": "50a3411996068d551e813aa3ad8a735a0297e3502fdb199a71cc95734ef10584"
+        },
+        {
+          "bytes": 18162,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/current_inputs/BALANCED_FIBRE_GROUP_AND_PORT_DEFECT.md",
+          "sha256": "4ce1d99cfff02b97997551fa1edf35a3f6baf64755d45d654e6d9da0afd88603"
+        },
+        {
+          "bytes": 18179,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/current_inputs/CONDUCTOR_TOWER.md",
+          "sha256": "b6911f6479f9cb75a26b168573c97d6afa15843a61e535d63ca72a71088fd9f3"
+        },
+        {
+          "bytes": 1063,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/current_inputs/CORRECTIONS.md",
+          "sha256": "8de669a710bd484da26a03d8168b3bf91b00f9458e218d6488080fe599111bb6"
+        },
+        {
+          "bytes": 15495,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/current_inputs/DIVISOR_NORM_BALL.md",
+          "sha256": "73ee9b18c2a7cd82963e7d3ce6414d5ed4d8189f15295b1d48485a3524d8da1a"
+        },
+        {
+          "bytes": 600,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/current_inputs/SHA256SUMS",
+          "sha256": "fab0d406aae03e62687a48bed2d453a42ddc41554926197aade6399d1e65edc1"
+        },
+        {
+          "bytes": 1641,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/current_inputs/SOURCE_PROVENANCE.json",
+          "sha256": "f883bde990706858e85821c36d3ce4b186d1187a1702538518646f4f4abf7459"
+        },
+        {
+          "bytes": 50991,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/current_inputs/verification.json",
+          "sha256": "55029b081f5f387aa6d86cd356117b3f85046f5c4237b80deb217222aa60b1e4"
+        },
+        {
+          "bytes": 50991,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/current_inputs/verification.optimized.json",
+          "sha256": "55029b081f5f387aa6d86cd356117b3f85046f5c4237b80deb217222aa60b1e4"
+        },
+        {
+          "bytes": 12581,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/current_inputs/verify_conductor_tower.py",
+          "sha256": "04cbac2aaed5262ead2226da02713b94dc8ce0d8e1412295eaac2e3ea7311a2a"
+        },
+        {
+          "bytes": 278,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/divisor_reflection_resolution_20261021/REFLECTION_RESOLUTION.md",
+          "sha256": "b80a776cf917693e5abb582c7d97af518969b1a64528f2c96efb5c859f06e013"
+        },
+        {
+          "bytes": 254,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/eisenstein_circuit_completion_20261018g.md",
+          "sha256": "1daf9c214b47036181a58502b92ed7321e4278a0035ba0530097b0184bb6b953"
+        },
+        {
+          "bytes": 247,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/escape_renewal_idoneal_20261017d.md",
+          "sha256": "e29d6c33e2f9cd7df038cc420dcf9ca51a2d2f7c2ce7064ae0b4c88781302540"
+        },
+        {
+          "bytes": 22792,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/independent.normal.json",
+          "sha256": "388479d3e447612b6e6a09d1566ef2a97e372e62cfbbe2c37afde93eb5585f39"
+        },
+        {
+          "bytes": 22792,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/independent.optimized.json",
+          "sha256": "388479d3e447612b6e6a09d1566ef2a97e372e62cfbbe2c37afde93eb5585f39"
+        },
+        {
+          "bytes": 10908,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/independent_checker.py",
+          "sha256": "2f7a8cc632430eaa1ebfe7f136275b76dbe9163961cde22f443eb00c799440c7"
+        },
+        {
+          "bytes": 50991,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/producer.final.normal.json",
+          "sha256": "55029b081f5f387aa6d86cd356117b3f85046f5c4237b80deb217222aa60b1e4"
+        },
+        {
+          "bytes": 50991,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/producer.final.optimized.json",
+          "sha256": "55029b081f5f387aa6d86cd356117b3f85046f5c4237b80deb217222aa60b1e4"
+        },
+        {
+          "bytes": 254,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/review/evidence/trijection_reset_20261020/arithmetic.md",
+          "sha256": "a53f1a5bfaaf2e32fba529684435fe6ee877d86917f00afa1395bdd2bef5278a"
+        },
+        {
+          "bytes": 50991,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/verification.json",
+          "sha256": "55029b081f5f387aa6d86cd356117b3f85046f5c4237b80deb217222aa60b1e4"
+        },
+        {
+          "bytes": 50991,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/verification.optimized.json",
+          "sha256": "55029b081f5f387aa6d86cd356117b3f85046f5c4237b80deb217222aa60b1e4"
+        },
+        {
+          "bytes": 12581,
+          "destination": "05-knowledge/results/dyadic_conductor_blue_fibres_20261021/verify_conductor_tower.py",
+          "sha256": "04cbac2aaed5262ead2226da02713b94dc8ce0d8e1412295eaac2e3ea7311a2a"
+        }
+      ],
+      "files": 36,
+      "packet": "session20-conductors-current"
+    },
+    {
+      "approved_payload_manifest_sha256": "e53b85a58fbd4df936fe5fe17ef6db2f27a8c8dba2cd4cda7fb90f46b1c806a0",
+      "bytes": 127775,
+      "entries": [
+        {
+          "bytes": 10176,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/PROOF.md",
+          "sha256": "09959ef9f50e716e0df6965d3c86ff564a89ce9a3f4a7f629667a7e02120f7d0"
+        },
+        {
+          "bytes": 2632,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/README.md",
+          "sha256": "e03b5f31e7c596093555e070ac47c0226059c2defcd0bba11fdf8a0dc2def640"
+        },
+        {
+          "bytes": 3540,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/check.py",
+          "sha256": "117ff01b044c4dba9cd99928278ccce027726ed0ad6880aa2ef8cd3bcee5de0b"
+        },
+        {
+          "bytes": 5610,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/receipt.json",
+          "sha256": "97835a5189e0b0734f4baf7e70d948707ec07b4928aa4453823f3795a920f1fa"
+        },
+        {
+          "bytes": 5610,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/receipt.optimized.json",
+          "sha256": "97835a5189e0b0734f4baf7e70d948707ec07b4928aa4453823f3795a920f1fa"
+        },
+        {
+          "bytes": 724,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/replay_review.py",
+          "sha256": "b13e3e34e0490ceac1f3b86cd8bf9b97760fae967ecb9a2e95b3a2f1e228da3d"
+        },
+        {
+          "bytes": 11736,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/review/AUDIT.md",
+          "sha256": "185a8d2665344933f7b9fb57ea5777929974d713e7d3c15ae1ddc7bf5ab9e47b"
+        },
+        {
+          "bytes": 646,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/review/PIN_REJECTION.json",
+          "sha256": "ace527678360bc767e91bcb1a18a6a78e959fded2fdc913cb69b9e923afa4019"
+        },
+        {
+          "bytes": 675,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/review/SHA256SUMS",
+          "sha256": "b568335f44bc854aaa4e10658a9fdede7f9b2f40141f2e1122b9119f1c5c344f"
+        },
+        {
+          "bytes": 3972,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/review/SOURCE_PINS.json",
+          "sha256": "38e7b36e0965228172f1b57c45ca6064d12a567810c5bedc15c8e8932f943bb4"
+        },
+        {
+          "bytes": 19671,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/review/check_review.py",
+          "sha256": "f8296800d9f9b29f7bf6c57cc7bb8730535740ce7c49e374f34dbd40229ef29c"
+        },
+        {
+          "bytes": 5610,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/review/producer.normal.json",
+          "sha256": "97835a5189e0b0734f4baf7e70d948707ec07b4928aa4453823f3795a920f1fa"
+        },
+        {
+          "bytes": 5610,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/review/producer.optimized.json",
+          "sha256": "97835a5189e0b0734f4baf7e70d948707ec07b4928aa4453823f3795a920f1fa"
+        },
+        {
+          "bytes": 3508,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/review/review.normal.json",
+          "sha256": "2b6bdcdea0636cf8e867eb078acf8b76144051bc0a342ad11a9dbc0376c845b3"
+        },
+        {
+          "bytes": 3508,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/review/review.optimized.json",
+          "sha256": "2b6bdcdea0636cf8e867eb078acf8b76144051bc0a342ad11a9dbc0376c845b3"
+        },
+        {
+          "bytes": 18162,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/review/workspace/session20-balanced-fibres/BALANCED_FIBRE_GROUP_AND_PORT_DEFECT.md",
+          "sha256": "4ce1d99cfff02b97997551fa1edf35a3f6baf64755d45d654e6d9da0afd88603"
+        },
+        {
+          "bytes": 18179,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/review/workspace/session20-idoneal-conductors/CONDUCTOR_TOWER.md",
+          "sha256": "b6911f6479f9cb75a26b168573c97d6afa15843a61e535d63ca72a71088fd9f3"
+        },
+        {
+          "bytes": 8206,
+          "destination": "05-knowledge/results/balanced_choice_network_quotients_20261021/review/workspace/session20-synthesis/SESSION20_SYNTHESIS.md",
+          "sha256": "efd074c6e9b29c7526957128bf265b3e730090c64f671bac129d8ce92317cf13"
+        }
+      ],
+      "files": 18,
+      "packet": "session20-choices"
+    }
+  ],
+  "scope": "The four final reviewed Session 20 proof packets; hashes describe exact publication payloads, not independent mathematical proof. Superseded conductor source snapshots are excluded.",
+  "source_synthesis_sha256": "efd074c6e9b29c7526957128bf265b3e730090c64f671bac129d8ce92317cf13"
+}
