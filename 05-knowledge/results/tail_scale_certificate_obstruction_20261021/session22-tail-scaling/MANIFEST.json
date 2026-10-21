@@ -1,0 +1,13 @@
+{
+  "status": "Normal and optimized replay complete; independent review requested",
+  "suggested_repository_path": "05-knowledge/results/tail_scale_cone_obstruction_20261021",
+  "files": {
+    "README.md": "fd5ea3c1002a6ff469c918bd330fbf91082a3c02d4179ecf1c6511c55175e22b",
+    "check.py": "213a6ca60c69125451f9fd483ce166ad62fca485a17eb7ca4a8b5205ac935544",
+    "receipt.json": "0d23c15d441b67986e7d03d64c679df9536e75c225c826bf03cd49ecf3e11cf2",
+    "normal.out": "8539fe4d3aad3925d2a9e3ade47527836e35458e2a714ed3250f40f06952b26f",
+    "optimized.out": "012d221af711ee7bcf6f75e06e06224ea37834682f9d9c9a2c2501e72e1efa21"
+  },
+  "base_checker_sha256": "1d24188af100b3394b9e47b4b27e35e80b15863e9f033c05081868d7ff5a1632",
+  "base_receipt_sha256": "e5ec575906451e4a6ee293a98ed85dc3d90a2a8b18b878a921df151166d9032a"
+}

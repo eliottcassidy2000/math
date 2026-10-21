@@ -1,0 +1,53 @@
+{
+  "source_commit": "fe180d8ea4356bd31c7c3258a23982b0fd879d4a",
+  "files": {
+    "README.md": {
+      "sha256": "38bd778015496d45ca67c04ceb0503dde832020a099846c725a3aeb4efecb747",
+      "bytes": 2308
+    },
+    "session22-tail-review/REVIEW.md": {
+      "sha256": "4fcd48e1fb13184a3d6f1522aae36fb6d59c8dfe6c1acaef9c9e586bee4897e1",
+      "bytes": 7160
+    },
+    "session22-tail-review/audit.py": {
+      "sha256": "2f259bfb06f146e92dd96d4134e9810e0e69502e72d601e897d465960c44519c",
+      "bytes": 5745
+    },
+    "session22-tail-review/normal.out": {
+      "sha256": "91974871796250ab3ad3ab86df195e6a2bf0321fce7c136bd0fb1bf62064fff2",
+      "bytes": 1077
+    },
+    "session22-tail-review/optimized.out": {
+      "sha256": "91974871796250ab3ad3ab86df195e6a2bf0321fce7c136bd0fb1bf62064fff2",
+      "bytes": 1077
+    },
+    "session22-tail-review/receipt.json": {
+      "sha256": "d8c128123257a0422a0d3b7c6db88fda034a185e13e9d2d78962ca4958b81848",
+      "bytes": 997
+    },
+    "session22-tail-scaling/MANIFEST.json": {
+      "sha256": "3773601d841a4af0b2a69b5a70eb6a2287bc70ac3fc1135d355f8109916c8c1c",
+      "bytes": 812
+    },
+    "session22-tail-scaling/README.md": {
+      "sha256": "fd5ea3c1002a6ff469c918bd330fbf91082a3c02d4179ecf1c6511c55175e22b",
+      "bytes": 11599
+    },
+    "session22-tail-scaling/check.py": {
+      "sha256": "213a6ca60c69125451f9fd483ce166ad62fca485a17eb7ca4a8b5205ac935544",
+      "bytes": 5796
+    },
+    "session22-tail-scaling/normal.out": {
+      "sha256": "8539fe4d3aad3925d2a9e3ade47527836e35458e2a714ed3250f40f06952b26f",
+      "bytes": 1022
+    },
+    "session22-tail-scaling/optimized.out": {
+      "sha256": "012d221af711ee7bcf6f75e06e06224ea37834682f9d9c9a2c2501e72e1efa21",
+      "bytes": 1022
+    },
+    "session22-tail-scaling/receipt.json": {
+      "sha256": "0d23c15d441b67986e7d03d64c679df9536e75c225c826bf03cd49ecf3e11cf2",
+      "bytes": 127934
+    }
+  }
+}
