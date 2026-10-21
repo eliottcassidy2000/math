@@ -1,0 +1,246 @@
+{
+  "arithmetic": {
+    "divisibility_controls": [
+      1,
+      2000
+    ],
+    "m_enumerated": [
+      1,
+      64
+    ],
+    "power_two_hostile_exponents": [
+      3,
+      100
+    ],
+    "small_reduced_forms": {
+      "1": [
+        [
+          1,
+          0,
+          3
+        ]
+      ],
+      "2": [
+        [
+          1,
+          0,
+          12
+        ],
+        [
+          3,
+          0,
+          4
+        ]
+      ],
+      "4": [
+        [
+          1,
+          0,
+          48
+        ],
+        [
+          3,
+          0,
+          16
+        ],
+        [
+          4,
+          4,
+          13
+        ],
+        [
+          7,
+          2,
+          7
+        ]
+      ],
+      "8": [
+        [
+          1,
+          0,
+          192
+        ],
+        [
+          3,
+          0,
+          64
+        ],
+        [
+          4,
+          4,
+          49
+        ],
+        [
+          7,
+          -4,
+          28
+        ],
+        [
+          7,
+          4,
+          28
+        ],
+        [
+          12,
+          12,
+          19
+        ],
+        [
+          13,
+          -8,
+          16
+        ],
+        [
+          13,
+          8,
+          16
+        ]
+      ]
+    }
+  },
+  "checks": 6770,
+  "limits": [
+    "Choice-state complete graphs are not tournament metagraphs.",
+    "The arithmetic torsor bridge requires a marked origin and generators.",
+    "Wiring energy does not certify arbitrary fine path lifting.",
+    "No claim about completeness of the general 65-idoneal list is used."
+  ],
+  "literal_black_to_blue": {
+    "source": [
+      5,
+      6,
+      3,
+      0,
+      1,
+      2,
+      4
+    ],
+    "target": [
+      3,
+      4,
+      2,
+      0,
+      1
+    ]
+  },
+  "networks": [
+    {
+      "collapsed_edges": 2,
+      "conditional_entropy_bits": "8/5",
+      "finite_finite_R": "1/5",
+      "finite_infinity_R": "3/10",
+      "mass": 5,
+      "q": 3,
+      "weights": [
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "collapsed_edges": 4,
+      "conditional_entropy_bits": "16/9",
+      "finite_finite_R": "1/9",
+      "finite_infinity_R": "1/6",
+      "mass": 9,
+      "q": 5,
+      "weights": [
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "collapsed_edges": 8,
+      "conditional_entropy_bits": "32/17",
+      "finite_finite_R": "1/17",
+      "finite_infinity_R": "3/34",
+      "mass": 17,
+      "q": 9,
+      "weights": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    }
+  ],
+  "path_fibres": [
+    {
+      "coarse_paths": 9,
+      "collapsed_unoriented_black": 2,
+      "fine_paths": 25,
+      "k": 2,
+      "source_order": 7,
+      "target_order": 5
+    },
+    {
+      "coarse_paths": 25,
+      "collapsed_unoriented_black": 4,
+      "fine_paths": 81,
+      "k": 3,
+      "source_order": 9,
+      "target_order": 7
+    },
+    {
+      "coarse_paths": 81,
+      "collapsed_unoriented_black": 8,
+      "fine_paths": 289,
+      "k": 4,
+      "source_order": 11,
+      "target_order": 9
+    },
+    {
+      "coarse_paths": 289,
+      "collapsed_unoriented_black": 16,
+      "fine_paths": 1089,
+      "k": 5,
+      "source_order": 13,
+      "target_order": 11
+    }
+  ],
+  "schema": 1,
+  "status": "PROVED elementary transfers using cited classical class-group facts; FINITE-EXACT controls",
+  "wiring_hostile": {
+    "coarse_edges": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        1
+      ]
+    ],
+    "coarse_resistance": 2,
+    "connected_fine_resistance": 3,
+    "fine_edges": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        2,
+        3,
+        1
+      ]
+    ],
+    "fine_resistance": "infinite",
+    "projection": [
+      0,
+      1,
+      1,
+      2
+    ]
+  }
+}
