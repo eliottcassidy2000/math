@@ -1,0 +1,3 @@
+level L1, n = 6: classes 56, port classes forced 33 / free 196, variables 832; solutions 169359 (status FEASIBLE); actual merged metagraph among them: 0
+level L2, n = 6: classes 56, port classes forced 202 / free 153, variables 586; solutions 200000 (status FEASIBLE); actual merged metagraph among them: 0
+level L3, n = 6: classes 56, port classes forced 366 / free 37, variables 440; solutions 48000 (status OPTIMAL); actual merged metagraph among them: 3

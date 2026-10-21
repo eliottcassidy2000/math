@@ -1,0 +1,3 @@
+n = 12, k = 4, I = (2, 3, 4): {('eps0', 'ok'): 262144, ('eps1', 'ok'): 262144, 'open_middle': 524288}  (283s)  failures: []
+n = 11, k = 5, I = (2, 3, 4, 5): {('eps0', 'ok'): 16384, ('eps1', 'ok'): 16384, 'open_middle': 32768}  (16s)  failures: []
+n = 12, k = 5, I = (2, 3, 4, 5): {('eps0', 'ok'): 262144, ('eps1', 'ok'): 262144, 'open_middle': 524288}  (450s)  failures: []

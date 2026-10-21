@@ -1,0 +1,8 @@
+n = 9 pattern ('closed', (2, 3, 4)): 256 presentations, 22 templates, NO pair covers; best single 128
+n = 9 pattern ('closed', (2, 6, 7)): 256 presentations, 21 templates, NO pair covers; best single 64
+n = 9 pattern ('closed', (5, 6, 7)): 256 presentations, 10 templates, NO pair covers; best single 64
+n = 9 pattern ('open', (5, 6, 7)): 256 presentations, 12 templates, NO pair covers; best single 64
+n = 10 pattern ('closed', (2, 3, 4)): 2048 presentations, 64 templates, NO pair covers; best single 1024
+n = 10 pattern ('closed', (2, 7, 8)): 2048 presentations, 49 templates, NO pair covers; best single 512
+n = 10 pattern ('closed', (6, 7, 8)): 2048 presentations, 19 templates, NO pair covers; best single 256
+n = 10 pattern ('open', (6, 7, 8)): 2048 presentations, 19 templates, NO pair covers; best single 256

@@ -1,0 +1,48 @@
+n = 9 ('closed', (2, 3, 4)): 256 presentations; bank covers 128 via {'closed_no_chord': 128}; residual 128; greedy certificate cover: [128] templates 1, uncovered 0; separating arcs: [(1, 6, 'bank half has j->i'), (2, 7, 'bank half has j->i')]
+      template covering 128: ((0, 1, 2, 3, 8, 4, 5, 6, 7), (0, 2, 3, 8, 4, 5, 6, 1, 7), (0, 2, 3, 4, 5, 6, 1, 7, 8))
+n = 9 ('closed', (2, 3, 5)): 256 presentations; bank covers 255 via {'closed_no_chord': 127, 'C_two_ports': 128}; residual 1; greedy certificate cover: [1] templates 1, uncovered 0; separating arcs: []
+      template covering 1: ((0, 1, 2, 3, 4, 7, 8, 5, 6), (0, 1, 2, 4, 7, 3, 8, 5, 6), (0, 1, 2, 4, 5, 6, 7, 3, 8))
+n = 9 ('closed', (2, 6, 7)): 256 presentations; bank covers 128 via {'C': 128}; residual 128; greedy certificate cover: [62, 18, 16, 16, 16] templates 5, uncovered 0; separating arcs: [(1, 6, 'bank half has i->j'), (2, 7, 'bank half has i->j')]
+      template covering 62: ((0, 1, 2, 3, 4, 5, 8, 6, 7), (4, 5, 8, 6, 3, 0, 1, 2, 7), (4, 5, 6, 3, 0, 1, 2, 7, 8))
+      template covering 18: ((0, 1, 3, 4, 5, 6, 7, 8, 2), (1, 3, 0, 7, 4, 5, 6, 8, 2), (1, 2, 3, 0, 7, 4, 5, 6, 8))
+      template covering 16: ((0, 1, 2, 3, 4, 5, 7, 8, 6), (0, 2, 3, 1, 4, 5, 7, 8, 6), (0, 2, 3, 1, 4, 5, 6, 7, 8))
+n = 9 ('closed', (4, 6, 7)): 256 presentations; bank covers 255 via {'A_cut_4': 64, 'L2': 127, 'A_cut_6': 32, 'closed_end_pair_final': 32}; residual 1; greedy certificate cover: [1] templates 1, uncovered 0; separating arcs: []
+      template covering 1: ((0, 1, 2, 3, 5, 6, 7, 8, 4), (1, 2, 3, 5, 0, 6, 7, 8, 4), (1, 2, 3, 4, 5, 0, 6, 7, 8))
+n = 9 ('closed', (5, 6, 7)): 256 presentations; bank covers 223 via {'A_cut_4': 128, 'A_cut_5': 64, 'mirrored_TT3_nonmodule': 31}; residual 33; greedy certificate cover: [16, 8, 5, 4] templates 4, uncovered 0; separating arcs: []
+      template covering 16: ((0, 1, 2, 3, 4, 6, 7, 5, 8), (0, 1, 2, 3, 7, 5, 8, 4, 6), (0, 1, 2, 3, 7, 8, 4, 5, 6))
+      template covering 8: ((0, 1, 2, 3, 6, 7, 4, 5, 8), (1, 2, 3, 6, 7, 4, 0, 5, 8), (1, 2, 3, 4, 0, 5, 6, 7, 8))
+      template covering 5: ((0, 1, 2, 4, 5, 6, 7, 8, 3), (0, 5, 2, 4, 1, 6, 7, 8, 3), (0, 5, 2, 3, 4, 1, 6, 7, 8))
+n = 9 ('open', (2, 3, 4)): 256 presentations; bank covers 255 via {'release': 255}; residual 1; greedy certificate cover: [1] templates 1, uncovered 0; separating arcs: []
+      template covering 1: ((0, 1, 2, 3, 8, 5, 6, 7, 4), (0, 2, 6, 1, 3, 8, 5, 7, 4), (0, 2, 6, 1, 3, 4, 5, 7, 8))
+n = 9 ('open', (3, 4, 7)): 256 presentations; bank covers 255 via {'release': 255}; residual 1; greedy certificate cover: [1] templates 1, uncovered 0; separating arcs: []
+      template covering 1: ((0, 1, 2, 3, 4, 6, 7, 8, 5), (1, 2, 0, 3, 4, 6, 7, 8, 5), (1, 2, 0, 3, 4, 5, 6, 7, 8))
+n = 9 ('open', (5, 6, 7)): 256 presentations; bank covers 224 via {'A_cut_4': 128, 'A_cut_5': 64, 'mirrored_TT3_nonmodule': 32}; residual 32; greedy certificate cover: [16, 8, 8] templates 3, uncovered 0; separating arcs: []
+      template covering 16: ((0, 1, 2, 3, 6, 7, 4, 5, 8), (1, 2, 3, 6, 7, 4, 0, 5, 8), (1, 2, 3, 4, 0, 5, 6, 7, 8))
+      template covering 8: ((0, 1, 2, 4, 5, 6, 7, 8, 3), (0, 5, 2, 4, 1, 6, 7, 8, 3), (0, 5, 2, 3, 4, 1, 6, 7, 8))
+      template covering 8: ((0, 1, 2, 4, 5, 6, 7, 8, 3), (0, 5, 6, 7, 2, 4, 1, 8, 3), (0, 5, 6, 7, 2, 3, 4, 1, 8))
+n = 10 ('closed', (2, 3, 4)): 2048 presentations; bank covers 1024 via {'closed_no_chord': 1024}; residual 1024; greedy certificate cover: [1024] templates 1, uncovered 0; separating arcs: [(1, 7, 'bank half has j->i'), (2, 8, 'bank half has j->i')]
+      template covering 1024: ((0, 1, 2, 3, 4, 9, 5, 6, 7, 8), (0, 2, 3, 4, 9, 5, 6, 7, 1, 8), (0, 2, 3, 4, 5, 6, 7, 1, 8, 9))
+n = 10 ('closed', (2, 3, 6)): 2048 presentations; bank covers 2047 via {'closed_no_chord': 1023, 'C_two_ports': 1024}; residual 1; greedy certificate cover: [1] templates 1, uncovered 0; separating arcs: []
+      template covering 1: ((0, 1, 2, 3, 4, 5, 6, 8, 9, 7), (0, 1, 2, 4, 5, 6, 8, 3, 9, 7), (0, 1, 2, 4, 5, 6, 7, 8, 3, 9))
+n = 10 ('closed', (2, 5, 6)): 2048 presentations; bank covers 2047 via {'closed_no_chord': 1023, 'C': 1024}; residual 1; greedy certificate cover: [1] templates 1, uncovered 0; separating arcs: []
+      template covering 1: ((0, 1, 2, 3, 4, 5, 6, 9, 7, 8), (0, 1, 2, 3, 6, 9, 7, 4, 5, 8), (0, 1, 2, 3, 6, 7, 4, 5, 8, 9))
+n = 10 ('closed', (2, 7, 8)): 2048 presentations; bank covers 1024 via {'C': 1024}; residual 1024; greedy certificate cover: [508, 132, 128, 96, 64, 48, 48] templates 7, uncovered 0; separating arcs: [(1, 7, 'bank half has i->j'), (2, 8, 'bank half has i->j')]
+      template covering 508: ((0, 1, 2, 3, 4, 5, 6, 9, 7, 8), (4, 5, 6, 9, 7, 3, 0, 1, 2, 8), (4, 5, 6, 7, 3, 0, 1, 2, 8, 9))
+      template covering 132: ((0, 1, 3, 4, 5, 6, 7, 8, 9, 2), (1, 3, 0, 8, 4, 5, 6, 7, 9, 2), (1, 2, 3, 0, 8, 4, 5, 6, 7, 9))
+      template covering 128: ((0, 1, 2, 3, 4, 5, 6, 9, 7, 8), (0, 1, 3, 4, 5, 2, 6, 9, 7, 8), (0, 1, 3, 4, 5, 2, 6, 7, 8, 9))
+n = 10 ('closed', (3, 4, 6)): 2048 presentations; bank covers 2047 via {'closed_no_chord': 1024, 'closed_chord': 1023}; residual 1; greedy certificate cover: [1] templates 1, uncovered 0; separating arcs: []
+      template covering 1: ((0, 1, 2, 3, 4, 5, 8, 6, 7, 9), (0, 1, 2, 3, 4, 6, 5, 9, 8, 7), (0, 1, 2, 3, 4, 6, 8, 5, 9, 7))
+n = 10 ('closed', (4, 5, 6)): 2048 presentations; bank covers 2047 via {'closed_no_chord': 1023, 'closed_chord': 1024}; residual 1; greedy certificate cover: [1] templates 1, uncovered 0; separating arcs: []
+      template covering 1: ((0, 1, 2, 3, 4, 5, 8, 6, 7, 9), (0, 1, 2, 3, 4, 6, 5, 9, 8, 7), (0, 1, 2, 3, 4, 6, 8, 5, 9, 7))
+n = 10 ('closed', (4, 7, 8)): 2048 presentations; bank covers 2047 via {'A_cut_4': 512, 'L2': 1023, 'A_cut_6': 256, 'A_cut_7': 128, 'closed_end_pair_final': 128}; residual 1; greedy certificate cover: [1] templates 1, uncovered 0; separating arcs: []
+      template covering 1: ((0, 1, 2, 3, 4, 6, 7, 8, 9, 5), (0, 4, 6, 3, 7, 1, 8, 2, 9, 5), (0, 4, 5, 6, 3, 7, 1, 8, 2, 9))
+n = 10 ('closed', (6, 7, 8)): 2048 presentations; bank covers 1920 via {'A_cut_4': 1024, 'A_cut_5': 512, 'A_cut_6': 256, 'mirrored_TT3_nonmodule': 128}; residual 128; greedy certificate cover: [64, 32, 32] templates 3, uncovered 0; separating arcs: []
+      template covering 64: ((0, 1, 2, 3, 4, 5, 7, 8, 6, 9), (0, 1, 2, 3, 8, 6, 9, 4, 5, 7), (0, 1, 2, 3, 8, 9, 4, 5, 6, 7))
+      template covering 32: ((0, 1, 2, 3, 4, 7, 8, 5, 6, 9), (0, 1, 2, 3, 8, 5, 6, 9, 4, 7), (0, 1, 2, 3, 8, 9, 4, 5, 6, 7))
+      template covering 32: ((0, 1, 2, 4, 5, 6, 7, 8, 9, 3), (0, 6, 7, 5, 2, 4, 1, 8, 9, 3), (0, 6, 7, 5, 2, 3, 4, 1, 8, 9))
+n = 10 ('open', (2, 3, 4)): 2048 presentations; bank covers 2047 via {'release': 2047}; residual 1; greedy certificate cover: [1] templates 1, uncovered 0; separating arcs: []
+      template covering 1: ((0, 1, 2, 3, 4, 9, 5, 6, 7, 8), (0, 1, 3, 4, 9, 5, 7, 2, 6, 8), (0, 1, 3, 4, 5, 7, 2, 6, 8, 9))
+n = 10 ('open', (6, 7, 8)): 2048 presentations; bank covers 1920 via {'A_cut_4': 1024, 'A_cut_5': 512, 'A_cut_6': 256, 'mirrored_TT3_nonmodule': 128}; residual 128; greedy certificate cover: [64, 32, 15, 5, 4, 4, 4] templates 7, uncovered 0; separating arcs: []
+      template covering 64: ((0, 1, 2, 3, 4, 7, 8, 5, 6, 9), (0, 1, 2, 3, 8, 5, 6, 9, 4, 7), (0, 1, 2, 3, 8, 9, 4, 5, 6, 7))
+      template covering 32: ((0, 1, 2, 4, 5, 6, 3, 7, 8, 9), (0, 1, 6, 3, 7, 8, 9, 5, 2, 4), (0, 1, 6, 7, 8, 9, 5, 2, 3, 4))
+      template covering 15: ((0, 1, 2, 3, 4, 5, 7, 8, 6, 9), (0, 1, 2, 3, 8, 6, 9, 4, 5, 7), (0, 1, 2, 3, 8, 9, 4, 5, 6, 7))
