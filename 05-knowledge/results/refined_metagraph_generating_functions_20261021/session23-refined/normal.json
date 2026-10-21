@@ -1,0 +1,105 @@
+{
+  "checks": 839,
+  "degree_cutoff": 20,
+  "exact_denominator_3power_r_through": 7,
+  "h_cutoff": 81,
+  "literal_words": 16601,
+  "max_order": 13,
+  "mod2_top_numerator_r_through": 40,
+  "proof_sha256": "a43d55514aae772f516bac1d19db179647ca548d329b746b625b3e6ba8d0996b",
+  "recurrence_orders": [
+    9,
+    18,
+    21,
+    24,
+    33,
+    36,
+    45,
+    48
+  ],
+  "scope": "formal finite involutive alphabet; not a tournament census",
+  "source_sha256": "c74ebfc23d64cba2a3bf64e79985ae99438bd62f9fcc4765d956ba205122dcbd",
+  "status": "PASS",
+  "synthetic_letters": [
+    [
+      "1",
+      1,
+      1,
+      1,
+      "1",
+      0,
+      0
+    ],
+    [
+      "t",
+      3,
+      1,
+      1,
+      "t",
+      1,
+      0
+    ],
+    [
+      "r",
+      5,
+      3,
+      3,
+      "r",
+      0,
+      1
+    ],
+    [
+      "s",
+      4,
+      5,
+      3,
+      "s",
+      0,
+      0
+    ],
+    [
+      "a",
+      2,
+      7,
+      0,
+      "b",
+      1,
+      0
+    ],
+    [
+      "b",
+      2,
+      7,
+      0,
+      "a",
+      1,
+      0
+    ],
+    [
+      "c",
+      3,
+      9,
+      1,
+      "c",
+      0,
+      1
+    ],
+    [
+      "d",
+      4,
+      9,
+      9,
+      "d",
+      1,
+      1
+    ]
+  ],
+  "variables": [
+    "order",
+    "SCC count",
+    "nu3 Aut",
+    "nu5 Aut",
+    "h",
+    "blue"
+  ]
+}

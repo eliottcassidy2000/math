@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "checks": 1280,
+  "max_literal_order": 16,
+  "literal_words": 11435,
+  "markers_evaluated": {
+    "scc": 2,
+    "nu3_aut": 3,
+    "nu5_aut": 5,
+    "h": 7,
+    "b": 11
+  },
+  "formal_scope": "Only u,v,r,s have certified tournament signatures; all remaining letters are synthetic algebra controls, not realized tournaments.",
+  "literal_F_J_h_through": 200,
+  "literal_S_even_deficit_through": 200,
+  "literal_B_degree_through": 100,
+  "exact_F_h_through": 150,
+  "exact_S_even_deficit_through": 100,
+  "exact_B_power3_r_through": 8,
+  "orders": [
+    9,
+    18,
+    21,
+    24,
+    33,
+    36,
+    45,
+    48,
+    57
+  ],
+  "mod2_and_half_bound_r_through": 100,
+  "proof_sha256": "a43d55514aae772f516bac1d19db179647ca548d329b746b625b3e6ba8d0996b",
+  "checker_sha256": "0d3183903f6f70dd0344cb06c866575e931d71c187805bafd6cabb0c71915937"
+}

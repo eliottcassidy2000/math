@@ -1,0 +1,70 @@
+{
+  "status": "PROVED with inherited dependencies; independently reviewed",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1943,
+      "sha256": "a7fda068f847b3ba9ea01da80d69ac08c4619978319a0e130daf6c7bc148df9c"
+    },
+    {
+      "path": "session23-refined/PROOF.md",
+      "bytes": 16902,
+      "sha256": "a43d55514aae772f516bac1d19db179647ca548d329b746b625b3e6ba8d0996b"
+    },
+    {
+      "path": "session23-refined/README.md",
+      "bytes": 2720,
+      "sha256": "2a5155a2ded8d235435939aae6043c28aecf2e9c9608bd1787138282e6142648"
+    },
+    {
+      "path": "session23-refined/check.py",
+      "bytes": 7417,
+      "sha256": "c74ebfc23d64cba2a3bf64e79985ae99438bd62f9fcc4765d956ba205122dcbd"
+    },
+    {
+      "path": "session23-refined/manifest.json",
+      "bytes": 1139,
+      "sha256": "f955f5190b340da0cabb623c9a6c1ff6ad7790591984291c1f5fb55405b571e1"
+    },
+    {
+      "path": "session23-refined/normal.json",
+      "bytes": 1308,
+      "sha256": "0203f144d21ba03089f50f948b8c015f00c0cff0c134bba02c898d6b70426722"
+    },
+    {
+      "path": "session23-refined/optimized.json",
+      "bytes": 1308,
+      "sha256": "0203f144d21ba03089f50f948b8c015f00c0cff0c134bba02c898d6b70426722"
+    },
+    {
+      "path": "session23-refined/source_pins.json",
+      "bytes": 2373,
+      "sha256": "584477e90ffc8afa009a54e73190fab9f89052476bff472088263b8468c78232"
+    },
+    {
+      "path": "session23-refined-review/REVIEW.md",
+      "bytes": 6150,
+      "sha256": "74be31eb9fb6dcee2cc55c796d6e9caa7bf7a1124817a84a8038d0e7a470ce97"
+    },
+    {
+      "path": "session23-refined-review/check.py",
+      "bytes": 7404,
+      "sha256": "0d3183903f6f70dd0344cb06c866575e931d71c187805bafd6cabb0c71915937"
+    },
+    {
+      "path": "session23-refined-review/normal.json",
+      "bytes": 861,
+      "sha256": "a11ac759cdaa5fa2bc04c9fdd71b1e1f0da5c1f245c02cea242ba885b4a81f02"
+    },
+    {
+      "path": "session23-refined-review/optimized.json",
+      "bytes": 861,
+      "sha256": "a11ac759cdaa5fa2bc04c9fdd71b1e1f0da5c1f245c02cea242ba885b4a81f02"
+    },
+    {
+      "path": "session23-refined-review/receipt.json",
+      "bytes": 1180,
+      "sha256": "5b4f2e88c6d38b950a3a33d72ae2d7dd1f688d1099cf00ad76091d8b2dff3811"
+    }
+  ]
+}

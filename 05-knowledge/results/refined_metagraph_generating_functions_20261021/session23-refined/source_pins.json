@@ -1,0 +1,54 @@
+{
+  "hash_basis": "SHA256 of LF-normalized bytes",
+  "source_commit": "bd1c1b9be938b93d8f1b7dfe4e4cf0d5f58e6593",
+  "sources": [
+    {
+      "path": "05-knowledge/results/fixed_degree_metagraph_rationality_20261021/session22-fixed-degree/PROOF.md",
+      "sha256": "e428906db3b67dbf5c85eef86460a012be8a9574a06bcd62759e73778f23446d"
+    },
+    {
+      "path": "05-knowledge/results/effective_black_defect_order_bound_20261020/PROOF.txt",
+      "sha256": "3f7977d49ec055c06abe856699d959e1c13b1afa3ced1c64186d088d6857dd25"
+    },
+    {
+      "path": "05-knowledge/results/metagraph_classification_20261021a/README.md",
+      "sha256": "a8fd5875952710217d4398eabcead0868899a335da9d7ff1feabb989487beb62"
+    },
+    {
+      "path": "01-canon/theorems/THM-2454-pure-blue-alphabet-and-center-law.md",
+      "sha256": "1afae3b3afadee521c3f4f0c7f619ff5f9619e1719ed6cb414b9e3d457a011f7"
+    },
+    {
+      "path": "01-canon/theorems/THM-2450-rigid-self-converse-classes-are-cyclic-ternary-towers.md",
+      "sha256": "8c0a5fe9672aa2eff1b8dfa5428268b56e347f778142599ac59d1274f8ceafb9"
+    },
+    {
+      "path": "05-knowledge/results/merged_metagraph_finite_pure_atoms_20261020/FINITE_ATOMS_AND_RIGID_CLOSURE.md",
+      "sha256": "02e10c2f7b0676b84b257fdf1cb6b6e2fa69e84f00d72d1957af448480603975"
+    },
+    {
+      "path": "05-knowledge/results/deficiency_three_20261020/centers.md",
+      "sha256": "be5717f730c9325b6d68113eb6826b0b614c4e98af0e285eddd56fdaabd8ef3e"
+    },
+    {
+      "path": "05-knowledge/results/deficit_two_centers_20261020/session15-deficit-centers/EXACT_LEAF_SERIES.md",
+      "sha256": "a95fed35cd6fcdbe8d9b8118b5aec2acc9515e15f6d9eaf5881098820a759a42"
+    },
+    {
+      "path": "05-knowledge/results/continuation_width_symmetry_20261020/README.md",
+      "sha256": "348ac050570a47b7c044cae507cff1e355d5d7ddf931a427d9c54b7d7508226d"
+    },
+    {
+      "path": "05-knowledge/results/two_shore_deficit_exclusions_20261021/session22-incoming-center-review/RECONCILIATION.md",
+      "sha256": "42b68b26327cd4e09b52da349329c8f00b1d843c0ee113bfe756b8c3a61874c4"
+    },
+    {
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "fa66fea75074f148c78af934fe4b135c5e35d9f9f5c800c294df396265389b47"
+    },
+    {
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    }
+  ]
+}

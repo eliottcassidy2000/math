@@ -1,0 +1,19 @@
+{
+  "verdict": "PASS",
+  "reviewer": "audit_refined_denominator_laws",
+  "proof_path": "../session23-refined/PROOF.md",
+  "proof_sha256": "a43d55514aae772f516bac1d19db179647ca548d329b746b625b3e6ba8d0996b",
+  "checks": 1280,
+  "literal_words": 11435,
+  "normal_optimized_identical": true,
+  "python_version": "3.12.14",
+  "sympy_version": "1.14.0",
+  "scope": "Independent algebra and formal-word verification, conditional on inherited tournament classification and finite-atom inputs. Synthetic atoms are not tournament realizability claims.",
+  "reproduce": "From this directory: python check.py > replay.json; python -O check.py > replay-optimized.json; compare each to normal.json and optimized.json. The checker reads the sibling session23-refined/PROOF.md relative to its own file, not the working directory.",
+  "files": {
+    "REVIEW.md": "74be31eb9fb6dcee2cc55c796d6e9caa7bf7a1124817a84a8038d0e7a470ce97",
+    "check.py": "0d3183903f6f70dd0344cb06c866575e931d71c187805bafd6cabb0c71915937",
+    "normal.json": "a11ac759cdaa5fa2bc04c9fdd71b1e1f0da5c1f245c02cea242ba885b4a81f02",
+    "optimized.json": "a11ac759cdaa5fa2bc04c9fdd71b1e1f0da5c1f245c02cea242ba885b4a81f02"
+  }
+}

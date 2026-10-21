@@ -1,0 +1,37 @@
+{
+  "files": [
+    {
+      "path": "PROOF.md",
+      "sha256": "a43d55514aae772f516bac1d19db179647ca548d329b746b625b3e6ba8d0996b"
+    },
+    {
+      "path": "README.md",
+      "sha256": "2a5155a2ded8d235435939aae6043c28aecf2e9c9608bd1787138282e6142648"
+    },
+    {
+      "path": "check.py",
+      "sha256": "c74ebfc23d64cba2a3bf64e79985ae99438bd62f9fcc4765d956ba205122dcbd"
+    },
+    {
+      "path": "normal.json",
+      "sha256": "0203f144d21ba03089f50f948b8c015f00c0cff0c134bba02c898d6b70426722"
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "0203f144d21ba03089f50f948b8c015f00c0cff0c134bba02c898d6b70426722"
+    },
+    {
+      "path": "source_pins.json",
+      "sha256": "584477e90ffc8afa009a54e73190fab9f89052476bff472088263b8468c78232"
+    }
+  ],
+  "independent_review": "Supplied as separate session23-refined-review packet; root/publisher should preserve that packet alongside this one.",
+  "normal_optimized_equal": true,
+  "python": "3.12.14",
+  "reproduce": [
+    "python3 check.py",
+    "python3 -O check.py"
+  ],
+  "status": "PROVED analytic extension; FINITE-EXACT supporting controls",
+  "sympy": "1.14.0"
+}
