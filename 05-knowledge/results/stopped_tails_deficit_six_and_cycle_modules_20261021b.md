@@ -18,11 +18,13 @@ declared scales, including the new scale N=32768, while 1401 source paths
 are still unresolved. This is a sufficient stopping certificate; its eventual
 success at every scale is not proved.
 
-The tournament work reduces the maximum possible order of a strong
-self-converse deficit-six center from4096 to248. A complete necessary
-128-frame order-ten universe has no such center. Consequently the unknown
-center polynomial has known beginning `z^5+z^6+z^7+O(z^12)` and91 possible
-remaining orders. Separately, a cycle-count polynomial changes the exact
+The tournament work first reduced the maximum possible order of a strong
+self-converse deficit-six center from4096 to248. Merging the incoming
+odd-shore argument with an older closing-prefix theorem sharpens this to35.
+A complete necessary128-frame order-ten universe has no such center.
+Consequently the unknown center polynomial has known beginning
+`z^5+z^6+z^7+O(z^12)` and only ten possible remaining orders.
+Separately, a cycle-count polynomial changes the exact
 Burnside state space and substantially accelerates the tested signed-core
 enumeration. For ordinary A000568 the incoming scalar algorithm beats the
 full polynomial method and is essentially tied with the new hybrid tail.
@@ -43,8 +45,11 @@ receipts are not treated as fresh evidence.
 
 Before close-out, incoming commit `777c7240f7` supplied the independently
 reviewed [fixed-degree rationality theorem](fixed_degree_metagraph_rationality_20261021/README.md).
-Its exact connection to the new cutoff is recorded below. Both incoming
-commits were integrated from a clean tree.
+Its exact connection to the new cutoff is recorded below. A subsequent
+commit `6b12a62f6b` supplied the independently reviewed
+[odd-shore and score-run reduction](odd_shore_deficit_centers_20261021/README.md).
+Its bound47 combines with the prior nonautomorphic-cycle theorem to give35.
+All incoming commits were integrated from a clean tree.
 
 Closest proved mechanisms: synchronous one-edge cancellation, source-owned
 interval banks, regular rotation-orbit connectivity, half-supported path
@@ -162,15 +167,25 @@ reflected supports force each selected black orbit to have a distinct mate
 outside the selected list. This is the factor-two deficit bound; merely
 counting the selected words loses it.
 
-At d=6 the cutoff is248. The complete normalized two-shore order-ten census
+At d=6 this first cutoff is248. The complete normalized two-shore order-ten census
 has128 frames,64 self-converse, and none of deficit six. A nonautomorphic
 Hamilton-cycle successor also excludes order11. The three known centers
 retain every literal black path port and target; their orders are5,6,7.
-Ninety-one candidate orders from12 through248 remain unclassified.
+The original reduction left91 candidate orders. The
+[combined closing-prefix and odd-shore proof](deficit_six_centers_20261021b/COMBINED_CUTOFF.md)
+now removes the incoming proof's q=1 branch: every strong odd order at least7
+admits a Hamilton cycle with nonautomorphic successor, and even orders
+already have q>=2. Applying the incoming score-run bounds to that particular
+cycle leaves, after the order-ten exclusion, exactly
+
+`12,14,15,18,20,21,24,25,28,35`.
+
+Thus `deg R6<=35`; all ten remaining coefficients are OPEN. This is a
+necessary-support intersection, not a census at those orders.
 
 With `p=1-z-z^3`, the trivalent vertex series has exactly reduced denominator
 `p(z)^2 p(z^2)^2`, hence minimal eventual recurrence order18. The center cutoff
-gives a safe recurrence onset n>=261. The reduction is independent of the
+now gives a safe recurrence onset n>=48 (improving261). The reduction is independent of the
 unknown center coefficients; it does not supply those coefficients.
 
 The incoming rationality theorem extends the counting framework to every
@@ -178,8 +193,11 @@ fixed fundamental degree k. Our new cutoff applies to all its self-converse
 center polynomials: `x(x*a-b)=2k` implies `0<=a-b<=2k`. Consequently their
 degrees are at most `max(3r-1,(2k+2)(2r-1))`, with r the least power of two
 at least2k+4. This is a quadratic finite-center bound; its denominator law
-is unchanged. Ordinary non-self-converse atoms retain their separate inherited
-bound. Neither result recovers adjacency from the counting series.
+is unchanged. The subsequent incoming odd-shore argument further gives
+`n<4j^2` for every ordinary strong atom with odd presentation count j>=3,
+using separate self-converse and non-self-converse proofs. This is another
+quadratic finite search bound; its unknown atom coefficients remain unknown.
+Neither result recovers adjacency from the counting series.
 
 ## 4. Faster signed-core enumeration by retaining a polynomial sidecar
 

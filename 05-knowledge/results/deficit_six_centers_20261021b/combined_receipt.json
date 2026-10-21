@@ -1,0 +1,192 @@
+{
+  "checks": 16889,
+  "cycle_choice_hostile": {
+    "cycles": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        3
+      ]
+    ],
+    "exact_q": [
+      1,
+      7
+    ],
+    "source": [
+      22,
+      44,
+      88,
+      49,
+      98,
+      69,
+      11
+    ]
+  },
+  "incoming_commit": "6b12a62f6b",
+  "order_ten_consumption": {
+    "frames": 128,
+    "histogram": {
+      "1528": 8,
+      "1628": 8,
+      "2908": 12,
+      "2926": 12,
+      "3064": 12,
+      "3114": 12
+    },
+    "scope": "consumption of pinned exact census; map/word sidecars replayed, not a new census",
+    "self_converse_frames": 64
+  },
+  "proof_and_receipt_lf_pins": {
+    "05-knowledge/results/deficiency_three_20261020/centers.md": "be5717f730c9325b6d68113eb6826b0b614c4e98af0e285eddd56fdaabd8ef3e",
+    "05-knowledge/results/deficit_six_centers_20261021b/check.py": "52e9b7806c0d2502d81d2c96e02b761e1da44e894a1093d02a89c79a26af1a5e",
+    "05-knowledge/results/deficit_six_centers_20261021b/receipt.json": "8ea09c7747176477426a89184df29e5d385fe75e9fdfe11d8ccc70f6586d39af",
+    "05-knowledge/results/metagraph_classification_20261021a/README.md": "a8fd5875952710217d4398eabcead0868899a335da9d7ff1feabb989487beb62",
+    "05-knowledge/results/odd_shore_deficit_centers_20261021/session22-centers-review/THIRD_REVIEW.md": "9b4f0004fab410315f57264a3133e160292772e9caefa498ffaf9a4beed01df1",
+    "05-knowledge/results/odd_shore_deficit_centers_20261021/session22-centers/PROOF.md": "6f2108a23a1268afa3fa55dfbcacd8b1d406cd1fa8156255779fee0f39729d13",
+    "05-knowledge/results/paired_black_leaf_reduction_20261020/CYCLE_CUT_NEAR_PURITY_OBSTRUCTION.md": "f628ee105b839088c40c7144477ee667f8b333cabb9fc3e0a5d11227c53928a7",
+    "05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md": "787ab6282c22e9f60ac734d2c3e96c0836d34b8e1d2b0c6fb11c05e5eefd4388"
+  },
+  "remaining_support": {
+    "before_order10_exclusion": [
+      10,
+      12,
+      14,
+      15,
+      18,
+      20,
+      21,
+      24,
+      25,
+      28,
+      35
+    ],
+    "coefficient_status": "OPEN at every remaining order; no frame census here",
+    "remaining_normalized_parameter_pairs": [
+      [
+        12,
+        4,
+        3
+      ],
+      [
+        14,
+        2,
+        7
+      ],
+      [
+        15,
+        3,
+        5
+      ],
+      [
+        15,
+        5,
+        3
+      ],
+      [
+        18,
+        6,
+        3
+      ],
+      [
+        20,
+        4,
+        5
+      ],
+      [
+        21,
+        3,
+        7
+      ],
+      [
+        21,
+        7,
+        3
+      ],
+      [
+        24,
+        8,
+        3
+      ],
+      [
+        25,
+        5,
+        5
+      ],
+      [
+        28,
+        4,
+        7
+      ],
+      [
+        35,
+        5,
+        7
+      ],
+      [
+        35,
+        7,
+        5
+      ]
+    ],
+    "remaining_orders": [
+      12,
+      14,
+      15,
+      18,
+      20,
+      21,
+      24,
+      25,
+      28,
+      35
+    ]
+  },
+  "status": "PROVED combined bound35; ten residual orders OPEN",
+  "trivalent_recurrence": {
+    "denominator": [
+      1,
+      -2,
+      -1,
+      2,
+      1,
+      2,
+      -4,
+      2,
+      0,
+      0,
+      -1,
+      -4,
+      3,
+      -2,
+      3,
+      -2,
+      2,
+      0,
+      1
+    ],
+    "minimal_eventual_order": 18,
+    "safe_onset": 48,
+    "scope": "formal test, not existence of an order35 center",
+    "synthetic_R6_degrees": [
+      5,
+      6,
+      7,
+      35
+    ],
+    "synthetic_numerator_degree": 47,
+    "synthetic_numerator_top": -1
+  }
+}

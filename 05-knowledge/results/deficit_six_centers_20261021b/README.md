@@ -1,18 +1,22 @@
 # Deficit-six centers: a quadratic cutoff, complete order ten, and literal ports
 
-Research date: October 21, 2026. **PROVED**, using the audited inherited
-rotation-connectivity and half-supported-path lemmas: every strongly connected,
-self-converse tournament with black path-orbit deficit six has order at most
-**248**. **FINITE-EXACT:** all 128 necessary normalized order-ten presentations
-are excluded. The known center polynomial is therefore
+Research date: October 21, 2026. **PROVED current bound:35**, by combining the
+incoming odd-shore/score-run theorem with the inherited closing-prefix theorem;
+see [the combined proof](COMBINED_CUTOFF.md). The independent quadratic
+bound248 in section2 remains valid but is superseded as the sharpest cutoff.
+**FINITE-EXACT:** all128 necessary normalized order-ten presentations are
+excluded. The known center polynomial is therefore
 
 \[
-R_6(z)=z^5+z^6+z^7+O(z^{12}),\qquad \deg R_6\le248.
+R_6(z)=z^5+z^6+z^7+O(z^{12}),\qquad \deg R_6\le35.
 \]
 
-There remain **91 possible orders, from 12 through 248**. Their coefficients
-are **OPEN**. Neither the cutoff nor the order-ten computation establishes that
-the three known centers are the only centers.
+There remain **ten possible orders**, namely
+`12,14,15,18,20,21,24,25,28,35`. Their coefficients are **OPEN**. Neither
+the cutoff nor the order-ten computation establishes that the three known
+centers are the only centers. The original91-order reduction and receipt below
+are retained as valid weaker evidence; the combined receipt records the
+stronger support. The safe recurrence onset is now48, improving section6's261.
 
 ## 1. Inheritance and precise objects
 
@@ -145,6 +149,9 @@ checker retains that sharp logical boundary.
 
 ## 3. Honest residual orders and source-bound prefix receipts
 
+This section records the original quadratic reduction. Its91-order support
+is superseded by the ten-order intersection in [the combined proof](COMBINED_CUTOFF.md).
+
 For even $n$, $q\ge2$ automatically because $m$ is odd. For odd $n\ge7$, the
 inherited closing-prefix theorem ensures that some Hamilton-cycle successor
 is not an automorphism, so one may also choose $q\ge2$. Applying §2 to that
@@ -254,6 +261,10 @@ for port identity or target adjacency.
 
 ## 6. Enumeration payoff: order eighteen, onset at most 261
 
+The denominator/minimality proof below remains current. The subsequent
+combined cutoff35 improves its safe onset from261 to48; the original
+degree248 synthetic control remains a test of the earlier uniform bound.
+
 Let $p(z)=1-z-z^3$, $u(z)=p(z^2)$ and $A(z)=1/p(z)$. The inherited SCC laws,
 using the now proved three-presentation alphabet, give the trivalent
 paired-black vertex series
@@ -287,7 +298,7 @@ $R_6=z^5+z^6+z^7+z^{248}$. Its numerator has degree 260 and last coefficient
 $-1$, so the homogeneous identity fails at 260 and holds from 261. This tests
 the uniform algebraic onset; it does not assert a center of order 248.
 
-## 7. Verification, limits and next obligation
+## 7. Verification, limits and incoming connections
 
 ### Incoming fixed-degree rationality: a uniform center cutoff
 
@@ -314,6 +325,16 @@ deficit, not equality. It does not apply to ordinary non-self-converse
 strong atoms `P_j`, and supplies none of the missing center coefficients.
 The parent and an independent reader checked this direct substitution.
 
+The later incoming [odd-shore proof](../odd_shore_deficit_centers_20261021/README.md)
+sharpens both finite alphabets further. Its separately reviewed non-self-
+converse argument gives `n<4j^2` for a strong atom with odd `h=j>=3`.
+On the self-converse side, odd h forces b>=1 by the path-orbit involution;
+substituting d=j-1 in that packet's section6 gives `n<2j(j+1)<=4j^2`.
+Thus **every** strong atom with odd h=j>=3 has order `<4j^2`, by these
+incoming mechanisms. The singleton and C3 at h=1 remain separate. This
+stronger inherited corollary is credited to that packet, not to the earlier
+averaging argument in section2. It does not determine the atom polynomials.
+
 ### Reproduction
 
 Run from the repository root:
@@ -321,6 +342,7 @@ Run from the repository root:
 ```text
 python -B 05-knowledge/results/deficit_six_centers_20261021b/check.py --verify
 python -B -O 05-knowledge/results/deficit_six_centers_20261021b/check.py --verify
+python -B -O 05-knowledge/results/deficit_six_centers_20261021b/combined_check.py --verify
 ```
 
 The saved receipt is deterministic and uses exact integers and rational
@@ -328,10 +350,12 @@ polynomial arithmetic. All checks remain active under `-O`. The declared
 universe includes the 128 complete necessary order-ten frames, eight smaller
 positive frames, three fully replayed center sources, the inherited census
 filters, regular-orbit subset averages, literal prefix certificates and their
-hostiles. It contains no search through the remaining 91 orders.
+hostiles. It contains no search through the original91-order remainder or
+the current ten-order remainder. The combined checker separately verifies
+the necessary support and formal recurrence consequence.
 
 The precise next task is to exclude or classify the normalized cyclic frames
-at the orders in (5), starting with twelve. A successful exclusion must retain
+at the ten remaining orders listed above, starting with twelve. A successful exclusion must retain
 an actual source and a sufficiently large half-supported path clique, or
 compute the full orbit deficit. Merely finding a removable cycle, a large
 path count, or a small automorphism subgroup does not settle the coefficient.
@@ -346,5 +370,6 @@ normalization and generating-function proof. A separate peer checked the
 source-bound prefix consumer, regular-orbit averaging, both connectivity
 thresholds, distinct black mates, complete order-ten normalization and blue
 halfword counting, and independently ran `-B -O --verify` against the saved
-receipt. It matched exactly, with no requested correction. The 91 residual
-orders remain explicitly OPEN.
+receipt. It matched exactly, with no requested correction. This audit covered
+the original91-order reduction; the separately audited combined proof reduces
+the unresolved support to ten orders.
