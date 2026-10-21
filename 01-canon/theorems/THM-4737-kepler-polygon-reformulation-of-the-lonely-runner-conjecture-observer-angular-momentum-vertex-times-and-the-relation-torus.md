@@ -1,13 +1,13 @@
 ---
 id: THM-4737
-title: "The Kepler-polygon reformulation of the lonely runner conjecture. Put the n runners (one stationary observer at a vertex) on the regular n-gon of perimeter 1, so that one side is the loneliness threshold 1/n. (K1) Kepler's second law holds exactly for constant-speed motion on the polygon: about the centre every runner sweeps area at the constant rate a v/2 (a = apothem), and about the observer's vertex the rate on side s is d_s v/2 with d_s = R(cos(pi/n) - cos((2s+1)pi/n)), which vanishes exactly on the two sides incident to the observer; per lap the area swept about either point is the polygon area P. (K2) Kepler criterion: the observer is lonely at time t iff every runner has nonzero angular momentum about the observer at time t, i.e. iff every observer-centred area clock Phi_i(t) is strictly increasing; each clock is flat for exactly the fraction 2/n of its period (equal sides, equal times) and the lonely times are the common strict-increase set, of measure m(D) with m(D) > 0 iff kappa(D) > 1/n. (K3) Polygon vertex times: at t = j/N the runners sit on vertices of the regular N-gon and the observer is lonely iff every d j mod N lies in [N/n, N - N/n]; for N = n this says n divides no speed, so the n-gon alone proves the conjecture for every speed set with no multiple of n (at t = 1/n); the polygonal order N_min(D) (least N with a lonely vertex time) is a new invariant of the speed set, equal to n on the tight families {1..k} and {1,3,4,7}, {1,3,4,5,9}, and unbounded in general. (K4) For real speeds the Kepler flow t -> tD on the k-torus is Haar-equidistributed on its closure, the annihilator torus of the relation lattice L(D); the conjecture for D is equivalent to the zonotope M [1/n, 1-1/n]^k (M a basis matrix of L(D)) containing an integer point, which holds whenever rank L(D) <= 1 (the linear form of a relation has range of length >= 3(1 - 2/n) >= 1 on the box), while integer speeds are exactly the maximal-rank case in which the closure is the Kepler curve itself. Elementary throughout; the content is the dictionary and the invariant, not a proof of the conjecture"
+title: "Kepler polygon clocks with closed one-sided boundary guards, conditional finite polygonal order, and the real-orbit closure formulation"
 status: >
-  PROVED (pre-audit; elementary): (K1) by the angular-momentum formula (1/2)|r x v| on each side (distance from the
-  point to the line of the side), (K2) from (K1) and the side geometry, (K3) by reading t = j/N on the N-gon, (K4) by
-  Kronecker-Weyl on the annihilator torus and the range of a linear form on a box (relations among distinct positive
-  reals have coefficient sum >= 3).
-  FINITE-EXACT (kepler_polygon_lrc.out, polygon_orders.out): (K1) rates and per-lap areas numerically exact at n = 3..14;
-  (K2) 20,000 random (D,t) pairs with no mismatch between ||v t|| >= 1/n and 'no runner on an incident side'; (K3) the
+  PROVED elementary, with K2/K3/K4 scope corrected 2026-10-20: (K1) by the swept-area formula (1/2)|r x v| on each side;
+  (K2) by the per-runner maximum of the two one-sided area rates, including tight vertices; (K3) the vertex criterion,
+  finiteness of N_min iff the loneliness threshold is attained, and unbounded finite examples for every fixed k>=2;
+  (K4) the closed-orbit-closure/supremum equivalence, with actual-time attainment supplied separately for rank<=1.
+  VERIFIED numerical (kepler_polygon_lrc.out): K1 rates at n=3..14 and 20,000 random interior K2 probes; these did not
+  verify the missing boundary. FINITE-EXACT (kepler_polygon_lrc.out, polygon_orders.out): (K3) the
   n-gon law 'time 1/n is lonely iff n divides no speed' exhaustive for all primitive k-sets of speeds <= M (k = 2..6);
   exact kappa(D) over the same ranges (no violation of kappa >= 1/(k+1); tight sets exactly {1,2}, {1,2,3}, {1,2,3,4},
   {1,3,4,7}, {1,2,3,4,5}, {1,3,4,5,9} in range, each with lonely measure 0 and N_min = n); N_min histograms and
@@ -17,8 +17,8 @@ status: >
   tournament lenses (the tight witness {1..k} at t = 1/n is the regular n-gon minus the observer, the half-turn chord
   tournament), Kronecker-Weyl, Cusick's view-obstruction formulation, Barajas-Serra (seven runners),
   Sungkawichai-Trakulthongchai (CORE-PAPERS: LRC for k <= 12 nonzero speeds, preprint), Kravitz / Giri-Kravitz (spectra).
-  NOT PROVED: the lonely runner conjecture for any new k; any bound on N_min(D); the fractional-chromatic bridge is
-  recorded in HYP-9350 as CITED-from-memory pending verification.
+  NOT PROVED: the lonely runner conjecture for any new k or an all-source finite upper bound on N_min(D).
+  REFUTED: HYP-9350's recalled fractional-chromatic equality; D={1,3,4,7} has chi_f=4 and 1/kappa=5.
 source: mac-mini-2026-10-20-kepler (owner's prompt: lonely runner in the general sense, each runner count on a convex regular polygon loop, Kepler's second law used creatively, tournaments and Hadwiger-Nelson in view)
 depends_on:
   - 01-canon/theorems/THM-639-hamiltonian-path-frame-for-runner-families.md
@@ -41,20 +41,27 @@ outputs:
   - 04-computation/experiments/kepler_lrc_20261020/polygon_orders.out
 ---
 
-# THM-4737 -- lonely means every runner is sweeping area about you
+# THM-4737 -- closed loneliness through one-sided area rates
 
-**PROVED (pre-audit, elementary) + FINITE-EXACT** as itemized in the status.
+**Correction, 2026-10-20.** Strict area-flow positivity loses boundary-only
+witnesses; rational maximization does not prove that the threshold is reached;
+and closure intersection alone is a supremum statement. The repaired forms
+below retain those coordinates. [Proof, explicit hostiles and exact controls](../../05-knowledge/results/runner_area_clock_20261020j/boundary_and_colouring.md).
+The fractional-colouring equality recalled in HYP-9350 is also refuted there.
 
 ## 0. The lonely runner conjecture and the polygon
 
 For `D = {v_1 < ... < v_k}` positive integers (or reals), `kappa(D) = sup_t min_i ||v_i t||`
-(`||.||` = distance to the nearest integer). The conjecture (Wills 1967, Cusick 1973) is
-`kappa(D) >= 1/(k+1)`: with `n = k+1` runners including the stationary observer, at some time
-every runner is at circular distance at least `1/n` from the observer. Proved for `k <= 6`
-(Barajas-Serra) and, by a computer-assisted sieve, for `k <= 12` (CORE-PAPERS, preprint); the
-repo's LRC(14) programme is the case `k = 13`.
+(`||.||` = distance to the nearest integer). The supremum formulation is
+`kappa(D) >= 1/(k+1)`. The actual-time formulation asks, with `n = k+1`
+runners including the stationary observer, for a time when every runner
+is at circular distance at least `1/n`. For integer speeds attainment
+is automatic; the real-orbit qualification appears in K4 below.
+Literature status and runner-count conventions are maintained in
+[CORE-PAPERS](../../05-knowledge/reference/CORE-PAPERS.md); the repository's
+LRC(14) programme has `k=13` and is not itself closed by an external preprint.
 
-Take the loop to be the **regular n-gon of perimeter 1** (side `1/n`, circumradius
+For n>=3 take the loop to be the **regular n-gon of perimeter 1** (side `1/n`, circumradius
 `R = 1/(2n sin(pi/n))`, apothem `a = R cos(pi/n)`, area `P = a/2`), with the observer at
 vertex `0` and runner `i` at arc-length position `v_i t mod 1`, counter-clockwise, at constant
 speed `v_i` (laps per unit time). Side `s` runs from vertex `s` to vertex `s+1`; a runner is
@@ -84,36 +91,38 @@ Per lap the swept area about either point is the polygon area `P` (the triangle 
 interior or boundary point of a convex polygon covers it once): `sum_s d_s / (2n) = P`.
 Checked numerically to machine precision for `n = 3..14` (kepler_polygon_lrc.out (A)). `#`
 
-## 2. (K2) The Kepler criterion
+## 2. (K2) The closed Kepler criterion
 
-Runner `i` is within circular distance `< 1/n` of the observer iff it is on an open incident
-side (positions in `(-1/n, 1/n)` mod 1 are exactly the two incident sides minus their far
-vertices). Hence, with `L_i(t) = d_{s_i(t)} v_i / 2` the angular momentum of runner `i`
-about the observer:
+Let `L_i^-(t),L_i^+(t)` be the two one-sided derivatives of the observer's
+swept-area clock. On a side interior both equal `d_s v_i/2`; this is the
+area rate, half the unsigned angular momentum. Then exactly, including
+all polygon vertices,
 
 ```text
-the observer is lonely at t   <=>   L_i(t) > 0 for every i
-                             <=>   every observer area clock Phi_i(t) = int_0^t L_i is strictly increasing at t,
+the observer is lonely at t  <=>  for every i, max(L_i^-(t),L_i^+(t))>0.
 ```
 
-up to the measure-zero boundary (a runner exactly at the far vertex of an incident side is
-at distance exactly `1/n`, lonely-admissible, with `L_i = 0` at that instant). Each `Phi_i`
-is continuous, piecewise linear, non-decreasing, with slope `0` for exactly the fraction `2/n`
-of each lap (two of the `n` equal-time sides) and mean slope `v_i P`. The lonely set
-`Lambda(D) = {t : all L_i(t) > 0}` has measure `m(D) = |{t in [0,1) : all ||v_i t|| >= 1/n}|`
-(for integer speeds the picture is 1-periodic), and `m(D) > 0 <=> kappa(D) > 1/n`, while
-`kappa(D) = 1/n` exactly (the **tight** case) means the lonely set is finite: the runners
-touch the far vertices simultaneously. 20,000 random `(D, t)` tests show no mismatch between
-the arithmetic and the geometric criterion (kepler_polygon_lrc.out (B)). `#`
+At a far endpoint of an incident side one rate is zero and the other is
+positive; at the observer both are zero. This proves the criterion. The
+maximum is taken separately for each runner at the same time. For D={1,2}
+at t=1/3, the two runners need opposite sides; no single-sided positivity
+test retains this tight witness. Discarding measure-zero endpoints would
+discard every lonely time of this example.
 
-So the conjecture reads: *for every speed set, at some time every runner is sweeping area
-about the observer.* The observer is "lonely" in Kepler's sense -- it is a focus about which
-nobody is momentarily radial.
+Each area clock is continuous, piecewise linear, non-decreasing, with
+zero rate on fraction2/n of a lap and mean rate v_i P. For integer speeds
+the closed lonely set has the same measure m(D) as its strict interior,
+and m(D)>0 iff kappa(D)>1/n. Equality kappa(D)=1/n gives a nonempty finite
+lonely set modulo1; kappa(D)<1/n would give the empty set. Zero measure
+alone does not distinguish these. The original20,000 random interior
+probes did not test the closed endpoints; the linked correction packet
+does so exactly. `#`
 
 ## 3. (K3) Polygon vertex times and the polygonal order
 
-At `t = j/N` every runner sits on a vertex of the regular `N`-gon inscribed in the same loop
-(position `v_i j / N mod 1`). The observer is lonely at `t = j/N` iff
+For integer speeds, at `t = j/N` every runner has phase at a vertex of a
+regular `N`-gon representing the phase circle (position `v_i j / N mod 1`).
+The observer is lonely at `t = j/N` iff
 
 ```text
 v_i j mod N  in  [N/n, N - N/n]   for every i.                                     (V)
@@ -126,16 +135,26 @@ multiple of `n`; the whole difficulty is the speeds divisible by `n`, which sit 
 at every `n`-gon vertex time.
 
 Define the **polygonal order** `N_min(D)` = the least `N >= 2` for which some vertex time
-`j/N` is lonely. It is a well-defined invariant of the speed set (every integer speed set has
-a lonely rational time, because `kappa` is attained at a rational time `m/(2v_i)` or
-`m/(v_i +- v_j)`), it equals `n` on the tight families `{1, ..., k}` (time `1/n`, the regular
+`j/N` is lonely, or infinity if none exists. The finite piecewise-linear maximum
+`kappa` is attained at a rational candidate `m/(2v_i)` or `m/(v_i +- v_j)`.
+Consequently N_min is finite **iff kappa reaches1/n**; rational attainment
+alone does not prove this threshold. It equals `n` on the tight families `{1, ..., k}` (time `1/n`, the regular
 `n`-gon minus the observer of oracle-S517) and on `{1,3,4,7}`, `{1,3,4,5,9}`, it is `2` when all
-speeds are odd (everyone antipodal at `t = 1/2`), and it grows without bound, but slowly:
+speeds are odd (everyone antipodal at `t = 1/2`). Unboundedness is proved
+below; the observed growth is slow in the stated finite ranges:
 on the pairs `(1, m)` the records are `N_min = 3, 5, 8, 11, 15, 16, 17, 19` at
 `m = 2, 6, 12, 18, 72, 3960, 8640, 16560` (pair_one_m_growth.py), the record `m` being
 highly composite; the maxima over all primitive sets of speeds `<= M` are `15` (`k = 2`,
 `M = 200`), `18` (`k = 3`, `M = 45`), `17` (`k = 4`, `M = 24`) (polygonal_order_bound.out).
 Histograms over all primitive speed sets are in the outputs; the growth law is HYP-9350 (a).
+
+Unbounded finite values do have an elementary unconditional proof. Fix k>=2
+and L>=3, put m=lcm(2,...,L), and take D={1,m,2m,...,(k-1)m}. Every
+denominator N<=L fails because the speed m is at the observer at every
+j/N. But t=1/2+1/(km) is lonely: m is even, the multiple-speed phases
+are j/k for1<=j<k, and the speed1 distance is at least5/12>1/(k+1).
+Thus L<N_min(D)<=km for this explicit family. This proves the
+unboundedness part, not the proposed upper growth bound.
 
 ## 4. (K4) Real speeds: the Kepler flow, its closure, and the zonotope form
 
@@ -152,6 +171,10 @@ kappa(D) >= 1/n   <=>   K_D meets the closed box B = [1/n, 1-1/n]^k   <=>   M B 
 
 the second equivalence because `x in B` with `M x in Z^r` is exactly `x in B cap K_D`, and
 `M B` is the zonotope `M c + sum_i (1 - 2/n) M e_i [-1/2, 1/2]` (`c` the centre of the box).
+For a nonclosed real orbit this equivalence concerns the supremum kappa.
+Actual hitting follows from an interior safe point by density, or from
+closed-orbit attainment. It does not follow from density and a boundary
+intersection alone.
 Consequences:
 
 - `r = 0` (Q-independent speeds): `K_D = T^k`, lonely times are free, `m(D) = (1 - 2/n)^k`
@@ -159,8 +182,12 @@ Consequences:
 - `r = 1`, `L(D) = Z m`: the linear form `m . x` ranges over an interval of length
   `sum_i |m_i| (1 - 2/n)` on `B`; a relation among distinct positive reals has
   `sum_i |m_i| >= 3` (two terms force `a v_1 = b v_2` with `a + b >= 3`), so the length is
-  `>= 3(1 - 2/n) >= 1` for `n >= 3` and the interval contains an integer: **the conjecture holds
-  for every real speed set with at most one independent rational relation.**
+  `>= 3(1 - 2/n) >= 1` for `n >= 3`. For n>=4 the length is strictly
+  greater than1, so an integer lies in the interval's interior, giving
+  an interior safe point and hence an actual time by density. At n=3,
+  rank one means the two speeds are commensurable and the orbit is closed.
+  Therefore **the conjecture holds for every real speed set with at most
+  one independent rational relation.**
 - Integer (or commensurable) speeds are the opposite extreme, `r = k - 1`: `K_D` is the Kepler
   curve itself, and the zonotope statement is the classical view-obstruction form in the
   quotient. The Kepler/Haar reduction is exactly the standard reduction of the real conjecture
@@ -168,15 +195,16 @@ Consequences:
 
 ## 5. Tournaments at the vertices
 
-At a vertex time `j/N` the occupied vertices carry the half-turn chord orientation
-(`i -> i'` when `i'` is clockwise within half a turn of `i`), the vertex-time tournament of
-codex-S431; for the tight family at `t = 1/n` it is the rotational tournament on the regular
-`n`-gon minus the observer (oracle-S517), and THM-639's dictionary (steps = Hamiltonian path,
-balanced lattice = tiles, step reversal = the grid mirror) is the runner-world reading of the
-tiling model. The Kepler clock adds one thing to that dictionary: the observer's loneliness is
-the condition that its two neighbours in the circular order both lie at least one side away,
-i.e. the observer is a vertex of the vertex-time tournament with no neighbour on an incident
-side; nothing beyond this identification is claimed here.
+At a vertex time `j/N`, orient a pair from i to i' when its clockwise
+phase difference lies strictly in(0,1/2). Coincident and antipodal pairs
+are retained as ties; this is a tournament only when neither kind of tie
+occurs. Even a tight regular configuration can have antipodal pairs.
+The orientation alone does not determine loneliness: retain the phase
+gaps, observer, runner labels and common time. With those data, the
+observer is lonely iff both adjacent circular gaps are at least1/n.
+Far endpoints of the incident polygon sides are allowed. The exact
+same-orientation/different-loneliness hostile is recorded in the
+[runner packet](../../05-knowledge/results/runner_area_clock_20261020j/README.md).
 
 ## 6. Files
 

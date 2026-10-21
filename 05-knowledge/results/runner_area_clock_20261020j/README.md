@@ -263,3 +263,15 @@ APIs and independently reproduced the optimized output and saved hash:
 **PASS**. The root review also passed. The final prose explicitly restricts
 the regular $n$-gon sentence to $n\ge3$ and retains a separately marked
 observer; these clarification edits do not change the computation.
+
+## Incoming Kepler work: closed endpoints and the rotation sidecar
+
+The [boundary and colouring supplement](boundary_and_colouring.md) repairs
+THM-4737 / HYP-9350 at three exact interfaces: one-sided endpoint rates,
+conditional rational-witness existence, and the additive group action
+needed to recover a runner time from a graph colouring. Its explicit
+distance graph has chi_f=4 while1/kappa=5. An LCM family also proves that
+finite witness denominators are unbounded at each fixed runner count with
+at least two nonobservers. These are scoped proofs, not general LRC
+coverage. The supplement has its own exact checker and receipt and does
+not alter this packet's original25,317-check universe.

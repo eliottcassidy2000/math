@@ -172,6 +172,31 @@ must remain conditional on a lonely witness, or be defined as infinity
 when none exists. Rational attainment of a maximum alone does not prove
 that this maximum reaches1/n.
 
+The [boundary and rotation correction](runner_area_clock_20261020j/boundary_and_colouring.md)
+now gives the exact rule: for each runner separately, at least one of
+the two one-sided observer-area rates must be positive. It also supplies
+an explicit LCM family with finite but unbounded rational witness
+denominator at every fixed runner count with at least two nonobservers.
+The incoming fractional-colouring equality fails concretely:
+D={1,3,4,7} has chi_f=4 but1/kappa=5. The exact survivor is
+chi_f<=chi_c<=1/kappa, with the last value optimal among shared-rotation
+colourings. Erasing the additive group action creates extra colourings
+that cannot be lifted back to runner times. The canonical theorem,
+hypothesis and current index entries have been corrected together.
+
+The final pull added [clock-owned runner events](clock_owned_runner_events_20261021/README.md).
+Its oriented repair graph records actual first-entry times, and its
+quadratic-residue family defeats every selected inverse-clock endpoint
+while its loneliness tends to1/2. This is a precise scale-selection
+obstruction. A complementary common-time guard is immediate: with minimum
+speed L, maximum U, and n runners including the observer, U/L<=n/2 gives
+the witness t=1/(2U), because every phase lies in[L/(2U),1/2]. This guard
+handles the incoming near-equal-speed hostile family directly. Combining
+the two selectors is sound when each returns its own actual witness;
+composing repair-graph arrows without carrying their arrival times is not.
+This is the same missing coordinate as in independent Collatz block
+tests that cannot all be inserted last.
+
 ## 6. A concrete boundary-support exclusion for Hadwiger--Nelson
 
 The [conic packet](conic_boundary_support_20261020j/README.md) proves an

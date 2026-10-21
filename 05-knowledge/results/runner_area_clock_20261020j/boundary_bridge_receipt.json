@@ -1,0 +1,24 @@
+{
+  "status": "FINITE-EXACT controls; general proofs in boundary_and_colouring.md",
+  "checks": 11860,
+  "kappa": "1/5",
+  "rotation_circumference": 5,
+  "fractional_and_ordinary_chromatic": 4,
+  "finite_unbounded_denominator_controls": {
+    "k": [
+      2,
+      8
+    ],
+    "L": [
+      3,
+      12
+    ]
+  },
+  "maximizing_candidate_times": [
+    "1/5",
+    "2/5",
+    "3/5",
+    "4/5"
+  ],
+  "checker_sha256_lf": "7cd628cfce5b83f363a55fe002865c3628421316955f6390e9789719b3c8326b"
+}

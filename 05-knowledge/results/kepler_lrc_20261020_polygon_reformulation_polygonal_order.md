@@ -1,6 +1,14 @@
 # Session mac-mini-2026-10-20-kepler: the lonely runner on a regular polygon, Kepler's second law, the polygonal order, and the colouring bridge
 
-Status: pre-audit. Canon: THM-4737 (PROVED elementary + FINITE-EXACT), HYP-9350 (OPEN). THM-4738 was
+**Historical session record; corrected 2026-10-20.** The current THM-4737
+uses per-runner one-sided rates at closed endpoints, allows infinite
+polygonal order, and separates a real-orbit supremum from attainment.
+HYP-9350's recalled fractional-colouring equality is **REFUTED** by
+D={1,3,4,7}: chi_f=4 but1/kappa=5. The surviving bound retains the rotation
+constraint. [Correction and exact proofs](runner_area_clock_20261020j/boundary_and_colouring.md).
+The original narrative below is provenance, not the current truth source.
+
+Original status: pre-audit. Canon: THM-4737 (PROVED elementary + FINITE-EXACT), HYP-9350 (OPEN). THM-4738 was
 reserved and is ceded unused. Experiments: `04-computation/experiments/kepler_lrc_20261020/`.
 
 ## 1. The owner's prompt and the repo state
