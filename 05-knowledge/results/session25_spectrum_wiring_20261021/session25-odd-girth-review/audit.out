@@ -1,0 +1,62 @@
+PASS r=1 n=5 cycles=[] parity_flips=0
+PASS r=2 n=9 cycles=[2] parity_flips=1
+PASS r=3 n=13 cycles=[] parity_flips=0
+PASS r=4 n=17 cycles=[4] parity_flips=0
+PASS r=5 n=21 cycles=[2] parity_flips=1
+PASS r=6 n=25 cycles=[3, 3] parity_flips=1
+PASS r=7 n=29 cycles=[] parity_flips=0
+PASS r=8 n=33 cycles=[6, 2] parity_flips=2
+PASS r=9 n=37 cycles=[4] parity_flips=0
+PASS r=10 n=41 cycles=[10] parity_flips=1
+PASS r=11 n=45 cycles=[2] parity_flips=1
+PASS r=12 n=49 cycles=[12] parity_flips=0
+PASS r=13 n=53 cycles=[3, 3] parity_flips=1
+PASS r=14 n=57 cycles=[4, 4, 2, 4] parity_flips=3
+PASS r=15 n=61 cycles=[] parity_flips=0
+PASS r=16 n=65 cycles=[8, 8] parity_flips=0
+PASS r=17 n=69 cycles=[6, 2] parity_flips=2
+PASS r=18 n=73 cycles=[18] parity_flips=1
+PASS r=19 n=77 cycles=[4] parity_flips=0
+PASS r=20 n=81 cycles=[6, 3, 6, 2, 3] parity_flips=2
+PASS r=21 n=85 cycles=[10] parity_flips=1
+PASS r=22 n=89 cycles=[11, 11] parity_flips=1
+PASS r=23 n=93 cycles=[2] parity_flips=1
+PASS r=24 n=97 cycles=[20, 4] parity_flips=0
+PASS r=25 n=101 cycles=[12] parity_flips=0
+PASS r=26 n=105 cycles=[18, 6, 2] parity_flips=3
+PASS r=27 n=109 cycles=[3, 3] parity_flips=1
+PASS r=28 n=113 cycles=[28] parity_flips=0
+PASS r=29 n=117 cycles=[4, 4, 2, 4] parity_flips=3
+PASS r=30 n=121 cycles=[5, 5, 5, 5, 5, 5] parity_flips=3
+PASS r=31 n=125 cycles=[] parity_flips=0
+PASS r=32 n=129 cycles=[10, 10, 10, 2] parity_flips=4
+PASS r=33 n=133 cycles=[8, 8] parity_flips=0
+PASS r=34 n=137 cycles=[12, 12, 3, 4, 3] parity_flips=3
+PASS r=35 n=141 cycles=[6, 2] parity_flips=2
+PASS r=36 n=145 cycles=[36] parity_flips=0
+PASS r=37 n=149 cycles=[18] parity_flips=1
+PASS r=38 n=153 cycles=[12, 12, 12, 2] parity_flips=1
+PASS r=39 n=157 cycles=[4] parity_flips=0
+PASS r=40 n=161 cycles=[20, 20] parity_flips=0
+PASS r=41 n=165 cycles=[6, 3, 6, 2, 3] parity_flips=2
+PASS r=42 n=169 cycles=[14, 14, 14] parity_flips=3
+PASS r=43 n=173 cycles=[10] parity_flips=1
+PASS r=44 n=177 cycles=[12, 4, 6, 12, 4, 2, 4] parity_flips=6
+PASS r=45 n=181 cycles=[11, 11] parity_flips=1
+PASS r=46 n=185 cycles=[23, 23] parity_flips=1
+PASS r=47 n=189 cycles=[2] parity_flips=1
+PASS r=48 n=193 cycles=[21, 21, 3, 3] parity_flips=2
+PASS r=49 n=197 cycles=[20, 4] parity_flips=0
+PASS r=50 n=201 cycles=[8, 8, 8, 8, 8, 2, 8] parity_flips=3
+PASS r=51 n=205 cycles=[12] parity_flips=0
+PASS r=52 n=209 cycles=[52] parity_flips=0
+PASS r=53 n=213 cycles=[18, 6, 2] parity_flips=3
+PASS r=54 n=217 cycles=[20, 20, 10, 4] parity_flips=1
+PASS r=55 n=221 cycles=[3, 3] parity_flips=1
+PASS r=56 n=225 cycles=[18, 18, 18, 2] parity_flips=4
+PASS r=57 n=229 cycles=[28] parity_flips=0
+PASS r=58 n=233 cycles=[58] parity_flips=1
+PASS r=59 n=237 cycles=[4, 4, 2, 4] parity_flips=3
+PASS r=60 n=241 cycles=[60] parity_flips=0
+PASS r=75 n=301 cycles=[18] parity_flips=1
+PASS r=100 n=401 cycles=[100] parity_flips=0

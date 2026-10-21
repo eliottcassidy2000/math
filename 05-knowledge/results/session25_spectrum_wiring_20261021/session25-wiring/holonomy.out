@@ -1,0 +1,10 @@
+ODD_GIRTH exact 6 3 Hamilton decomposition and directed cycle verified
+ODD_GIRTH exact 10 5 Hamilton decomposition and directed cycle verified
+ODD_GIRTH exact 14 7 Hamilton decomposition and directed cycle verified
+ODD_GIRTH exact 18 9 Hamilton decomposition and directed cycle verified
+ODD_GIRTH exact 22 11 Hamilton decomposition and directed cycle verified
+ORDER5 odd-girth3 states [949, 617, 211, 949] paths [(2, 0, 1, 3, 4), (3, 0, 1, 4, 2), (4, 0, 1, 2, 3)]
+ORDER9 odd-girth5 states [5927068074, 45360910277, 59874146331, 9281284065, 58367449686, 5927068074] paths [(5, 0, 8, 6, 1, 2, 3, 7, 4), (4, 2, 3, 6, 0, 1, 5, 7, 8), (5, 4, 8, 3, 0, 1, 7, 2, 6), (6, 5, 2, 8, 1, 3, 4, 0, 7), (7, 6, 4, 1, 0, 2, 3, 5, 8)]
+LABELLED parity check 3 vertices 8 directed incidences 12
+LABELLED parity check 4 vertices 64 directed incidences 192
+ALL HOLONOMY CHECKS PASSED

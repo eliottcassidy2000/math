@@ -1,0 +1,8 @@
+CENSUS 3 classes 2 merged 2 bijections 24 lines 1 blue 1 fundamental_black 0 raw_black_loops 0 bridges []
+CENSUS 4 classes 4 merged 3 bijections 384 lines 4 blue 2 fundamental_black 1 raw_black_loops 0 bridges [(2, 4, 1, 1)]
+CENSUS 5 classes 12 merged 10 bijections 17280 lines 32 blue 8 fundamental_black 12 raw_black_loops 4 bridges [(2, 8, 1, 4)]
+CENSUS 6 classes 56 merged 34 bijections 2257920 lines 512 blue 32 fundamental_black 240 raw_black_loops 24 bridges [(2, 18, 1, 15), (5, 81, 1, 23), (9, 146, 1, 31)]
+HOSTILE degree-only agreement: [(0, 1), (2, 0), (1, 2)] cycle plus isolated vertex rejected
+S3 signed frames regular; synchronized two-block signed group 18 of 72 block permutations
+PORT_TRANSFER paths 2702 all exact
+ALL CHECKS PASSED
