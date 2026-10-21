@@ -1,0 +1,30 @@
+n=5: classes 12; tc=1 classes 4 (A000930 = 4), H histogram {1: 1, 3: 3}, pendant (non-SC) 2 (= a - p = 2), palindromic 2 (= p = 2)
+   tc=3 classes 1 (stacks with one T5: 1); (H,Aut) multiset [((15, 5), 1)]
+   odd tc values < 60 absent: [7, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59]; odd H values < 80 absent: [7, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79]
+   strong classes 6; strong tc spectrum (smallest) [(3, 1), (5, 1), (9, 2), (11, 1), (13, 1)]; min strong tc 3; min strong H 9; strong H values <= 30 [9, 11, 13, 15]
+   strong classes with tc <= 9 (tc,H,Aut,SC): [((3, 15, 5, 1), 1), ((5, 15, 3, 1), 1), ((9, 9, 1, 1), 2)]
+   H-descent sinks 4 (self-converse 0); sink H histogram {3: 2, 5: 2}
+n=6: classes 56; tc=1 classes 6 (A000930 = 6), H histogram {1: 1, 3: 4, 9: 1}, pendant (non-SC) 4 (= a - p = 4), palindromic 2 (= p = 2)
+   tc=3 classes 2 (stacks with one T5: 2); (H,Aut) multiset [((15, 5), 2)]
+   odd tc values < 60 absent: [7, 21, 27, 35, 39, 45, 47, 49, 51, 53, 55, 57, 59]; odd H values < 80 absent: [7, 21, 35, 39, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79]
+   strong classes 35; strong tc spectrum (smallest) [(9, 2), (11, 2), (15, 4), (17, 2), (19, 2), (23, 4), (25, 2), (29, 4)]; min strong tc 9; min strong H 15; strong H values <= 30 [15, 17, 19, 23, 25, 27, 29]
+   strong classes with tc <= 9 (tc,H,Aut,SC): [((9, 27, 3, 0), 2)]
+   H-descent sinks 19 (self-converse 1); sink H histogram {3: 4, 5: 3, 9: 4, 11: 2, 13: 2, 15: 4}
+n=7: classes 456; tc=1 classes 9 (A000930 = 9), H histogram {1: 1, 3: 5, 9: 3}, pendant (non-SC) 6 (= a - p = 6), palindromic 3 (= p = 3)
+   tc=3 classes 3 (stacks with one T5: 3); (H,Aut) multiset [((15, 5), 3)]
+   odd tc values < 60 absent: [7, 21]; odd H values < 80 absent: [7, 21, 63]
+   strong classes 353; strong tc spectrum (smallest) [(9, 1), (11, 1), (15, 2), (17, 3), (19, 2), (23, 6), (25, 4), (27, 4)]; min strong tc 9; min strong H 25; strong H values <= 30 [25, 27, 29]
+   strong classes with tc <= 9 (tc,H,Aut,SC): [((9, 189, 21, 1), 1)]
+   H-descent sinks 99 (self-converse 5); sink H histogram {3: 4, 5: 4, 9: 8, 11: 3, 13: 3, 15: 11, 17: 4, 19: 4, 23: 8, 25: 4}
+n=8: classes 6880; tc=1 classes 13 (A000930 = 13), H histogram {1: 1, 3: 6, 9: 6}, pendant (non-SC) 10 (= a - p = 10), palindromic 3 (= p = 3)
+   tc=3 classes 6 (stacks with one T5: 6); (H,Aut) multiset [((15, 5), 4), ((45, 15), 2)]
+   odd tc values < 60 absent: [7, 21]; odd H values < 80 absent: [7, 21]
+   strong classes 6008; strong tc spectrum (smallest) [(17, 1), (23, 4), (25, 2), (27, 4), (29, 2), (33, 8), (35, 2), (37, 4)]; min strong tc 17; min strong H 45; strong H values <= 30 []
+   strong classes with tc <= 9 (tc,H,Aut,SC): []
+   H-descent sinks 867 (self-converse 11); sink H histogram {3: 6, 5: 5, 9: 12, 11: 4, 13: 4, 15: 20, 17: 6, 19: 6, 23: 12, 25: 9}
+n=9: classes 191536; tc=1 classes 19 (A000930 = 19), H histogram {1: 1, 3: 7, 9: 10, 27: 1}, pendant (non-SC) 14 (= a - p = 14), palindromic 5 (= p = 5)
+   tc=3 classes 11 (stacks with one T5: 11); (H,Aut) multiset [((15, 5), 5), ((45, 15), 6)]
+   odd tc values < 60 absent: [7, 21]; odd H values < 80 absent: [7, 21]
+   strong classes 178133; strong tc spectrum (smallest) [(25, 1), (33, 5), (37, 2), (39, 1), (45, 10), (47, 8), (49, 3), (51, 10)]; min strong tc 25; min strong H 75; strong H values <= 30 []
+   strong classes with tc <= 9 (tc,H,Aut,SC): []
+   H-descent sinks 13258 (self-converse 88); sink H histogram {3: 6, 5: 6, 9: 18, 11: 5, 13: 5, 15: 29, 17: 8, 19: 8, 23: 16, 25: 14}

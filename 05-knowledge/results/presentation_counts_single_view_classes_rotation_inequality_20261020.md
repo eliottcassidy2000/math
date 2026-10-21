@@ -1,0 +1,102 @@
+# Presentation counts of metagraph nodes: single-presentation classes are the {K1, C3}-stacks (the pendant nodes of the black network), the rotation inequality, the forbidden fibre sizes 7 and 21, and the H-descent sinks
+
+2026-10-20, opus-2026-10-20-S48 (worktree `/tmp/math-wt-s48`). Owner prompt: *pursue next obligations as you continue to aim to completely understand and classify tournament metagraph structure, thinking in terms of intransitivity of information or electrical networks.* Lane split (message to mac-mini-2026-10-21-electric, who reserved THM-4739/4740 / HYP-9351 at 20:18 for the Kirchhoff/Hodge laws of the metagraph, gradient = scores, curl energy affine in `c3`, intransitivity currents, Laplacian identities, consecutive-port ledgers): this note takes the **presentation-count classification** of nodes, the **H-descent potential**, and the **order-11 three-move test**; everything electrical in the Kirchhoff/Hodge sense is theirs and is not claimed here. They closed out at 20:44 (THM-4739: the Hodge decomposition of the arc flow with the scores as potentials and the cyclic-triangle 2-form as curl, Kirchhoff's law of the merged metagraph for invariants with an exact line flux, second-order determination at `n = 5`, the consecutive-start-port ledgers; HYP-9351; THM-4740 ceded), and a Codex packet `metagraph_network_invariants_20261021` (20:47) proved componentwise network laws of the reflection-paired network `B + 2Q` (spanning-tree polynomials, critical-group two-rank, resistance witnesses) on the `n <= 7` atlas; both were read after my pre-audit checkpoint, both are disjoint from the presentation-count classification below, and neither is modified.
+
+**Status.** PROVED: Theorem A (the presentation count `tc` of a class is the number of automorphism orbits of Hamiltonian paths, is multiplicative over the strong-component stack, equals 1 exactly for the stacks over `{K1, C3}`, which number `A000930(n)` (compositions of `n` into parts 1 and 3) and are exactly the pendant nodes of the fundamental black graph when non-palindromic and the pure-blue nodes when palindromic; the rotation inequality `tc(T) >= n / |Z_C|` for strong `T` and any Hamiltonian cycle `C`), Theorem B (no tournament has exactly 7 or 21 Hamiltonian paths, so a rigid node never has fibre size 7 or 21; proof from the stack product, the insertion monotonicity `H(T) >= H(T - v)`, Moon's strong-subtournament theorem and the census minima; the statement is prior art of MathOverflow 232751 as reported in Grinberg's Rédei-Berge notes, CITED), Lemma C (a strong class with `tc = 3` is circulant or has a cyclic automorphism of order `n/3` along every Hamiltonian cycle). FINITE-EXACT: the strong presentation-count spectra and the minimum Hamiltonian-path counts of strong tournaments at `n = 3..9`; `tc = 3` classes are exactly the stacks over `{K1, C3, T5}` with one `T5` at `n = 5..9`; the fibre sizes 7 and 21 are absent from every class at `n <= 9`; the H-descent sink counts. REFUTED: the heuristic that `H` is a descent potential on the black graph. NUMERICAL: a seeded random sample of closed blue presentations at `n = 11` for the three-move law (section 6). CITED: THM-643, THM-849, THM-2444, THM-2454, THM-4729, THM-4730, THM-4731, THM-4732, LEM-003, Camion, Moon (1966), Rédei, Busch (2006). No literature-priority claim.
+
+## 1. What was already canon (read first)
+
+THM-643: a class with `H` Hamiltonian paths and automorphism group `Aut` has `tc = H/|Aut|` presentations (tilings), an odd number, `bm` of them blue (`bm` odd on self-converse classes, 0 otherwise). LEM-003: `Aut` acts freely on Hamiltonian paths. THM-849 section 1 names the presentations "observer paths" and counts their orbits. THM-2444's rigidity lemma: a self-converse class with `H = |Aut|` is pure-blue. THM-2454 / THM-4730: pure-blue classes are the palindromic stacks over `{K1, C3, T5}` with `T5` only at the centre, and (THM-4730 (B)) every circulant tournament of odd order `n >= 7` has a non-palindromic (black) Hamiltonian path. THM-4729 L2: a class has `n HC/|Aut|` closed presentations, positive iff the class is strong (Camion). THM-4731 (3): the merged black multigraph is `2B`, the fundamental black graph `B` having degree `tc` at a merged non-self-converse node and `(tc - bm)/2` at a self-converse node. THM-4732 (S47): black components `= 1 +` pure-blue at `n <= 9`; three-move detours for every closed blue line between non-pure-blue classes at `n = 6, 8, 9, 10`; single-presentation classes were observed to be the `{K1, C3}`-stacks at `n = 5..9` (the proof is Theorem A below). Classical: Camion (every strong tournament has a Hamiltonian cycle), Rédei (`H` is odd), Moon 1966 (every strong tournament on `n >= 4` vertices has a strong subtournament on `n - 1` vertices; strong tournaments are vertex-pancyclic).
+
+Conventions as in THM-4732: base path `0 -> ... -> n-1`, tiles, `kappa`, `sigma`, closed/open, blue/black, pure-blue (PB), self-converse (SC); the stack `(B_1, ..., B_m)` is the tournament whose strong components `B_1 > ... > B_m` have all arcs downward.
+
+## 2. Theorem A: presentation counts, the single-presentation classes, and the pendant nodes
+
+**Theorem A (PROVED).** Let `T` be a tournament on `n` vertices with strong components `B_1 > ... > B_m`.
+
+(A1) Two Hamiltonian paths of `T` have the same tiling iff they lie in one `Aut(T)`-orbit; hence `tc(T) = H(T)/|Aut(T)|` is the number of distinct tilings (presentations, "views") of the class.
+
+(A2) `H(T) = prod H(B_i)`, `|Aut(T)| = prod |Aut(B_i)|`, hence `tc(T) = prod tc(B_i)`.
+
+(A3) `tc(T) = 1` iff every `B_i` is `K1` or `C3`, i.e. `T` is a stack over `{K1, C3}`. The number of such classes of order `n` is the number of compositions of `n` into parts 1 and 3, `a(n) = a(n-1) + a(n-3)` (A000930: `1, 1, 1, 2, 3, 4, 6, 9, 13, 19, 28, ...`), which the census reproduces at `n = 5..9` (`4, 6, 9, 13, 19`). Their `H = |Aut| = 3^j` with `j` the number of `C3` blocks.
+
+(A4) (Rotation inequality.) If `T` is strong and `C = (v_0, ..., v_{n-1})` is a Hamiltonian cycle, let `Z_C <= Z_n` be the group of cyclic shifts of `C` that are automorphisms of `T`. The `n` rotations of `C` are Hamiltonian paths realising exactly `n/|Z_C|` distinct tilings, all closed; hence `tc(T) >= n/|Z_C|`, and `tc(T) < n` forces a nontrivial cyclic automorphism along every Hamiltonian cycle. A strong tournament with trivial automorphism group has `tc = H >= n`.
+
+(A5) In the fundamental black graph `B` of THM-4731, the pendant (degree-1) nodes are exactly the non-palindromic stacks over `{K1, C3}`, and the isolated (degree-0) nodes among the non-pure-black world are exactly the palindromic ones (the pure-blue classes without a central `T5`); their numbers are `a(n) - p(n)` and `p(n)`, where `p(n) = a(n/2)` for even `n` and `a((n-1)/2) + a((n-3)/2)` for odd `n` counts the palindromic compositions. At `n = 9`: `19 - 5 = 14` pendant nodes and `5` palindromic stacks (plus the sixth pure-blue class `(1,1,T5,1,1)`).
+
+*Proof.* (A1) Two paths `P, P'` have the same tiling iff the positional map `v_i(P) -> v_i(P')` preserves every arc, i.e. is an automorphism carrying `P` to `P'`; `Aut` acts freely (LEM-003), so orbits have size `|Aut|` and their number is `H/|Aut|`.
+
+(A2) A Hamiltonian path of a non-strong tournament must exhaust each strong component before entering the next one (all arcs between components point downward, so a path can never return to an earlier component), so the Hamiltonian paths are exactly the concatenations of Hamiltonian paths of `B_1, ..., B_m`, and every automorphism preserves the condensation order (it is the unique acyclic order of the components), so `Aut(T) = prod Aut(B_i)`; the tiling of a concatenation consists of the block tilings and forward tiles between blocks.
+
+(A3) (<=) `K1` and `C3` have a single tiling (the three rotations of `C3` all read "apex backward"), and (A2). (=>) By (A2) every block has `tc = 1`, so it suffices to show that a strong tournament with a single tiling is `K1` or `C3`. Let `T` be strong on `n >= 3` vertices with one tiling `t`, and `C = (v_0, ..., v_{n-1})` a Hamiltonian cycle (Camion). The rotation starting at `v_i` reads, at tile `(a, b)`, the orientation of `{v_{i+a}, v_{i+b}}`; since all rotations read `t`, `v_{i+a} -> v_{i+b}` iff `v_a -> v_b`, and comparing the rotation at `0` with the rotation at `-a` gives `v_a -> v_b` iff `b - a in S := {d : v_0 -> v_d}`: `T` is the circulant tournament on `Z_n` with symbol `S`. A circulant is regular, so `n` is odd. For `n = 3` it is `C3`. For `n = 5` the only circulant is the regular tournament `T5`, which has `tc = 15/5 = 3`. For odd `n >= 7`, the rotation tiling `t_C` (tile `(a,b)` forward iff `b - a in S`) is `sigma`-fixed, i.e. blue, whereas THM-4730 (B) exhibits a black Hamiltonian path, whose tiling is not `t_C`; so `tc >= 2`, contradiction. The count is the number of compositions into parts 1 and 3 because distinct block sequences give non-isomorphic stacks (the component sequence is an invariant), `|Aut(C3)| = H(C3) = 3`, and the recursion `a(n) = a(n-1) + a(n-3)` conditions on the last part.
+
+(A4) Rotations `i` and `j` have the same tiling iff the positional map `v_{i+a} -> v_{j+a}` is an automorphism, i.e. the shift by `j - i` lies in `Z_C`; so the rotation tilings are in bijection with `Z_n / Z_C`. Each rotation is closed because its apex pair `{v_i, v_{i-1}}` carries the cycle arc `v_{i-1} -> v_i`. If `Aut(T)` is trivial then `|Z_C| = 1` and `tc = H >= n` (the rotations are `n` distinct paths).
+
+(A5) By THM-4731 (3) the degree of a merged node in `B` is `tc` (non-self-converse) or `(tc - bm)/2` (self-converse, where `bm` is odd and `<= tc`). Degree 1 with `tc = 1` is therefore possible only for a non-self-converse class; degree 0 arises exactly when `tc = bm` (pure-blue). A stack over `{K1, C3}` is self-converse iff its block sequence is palindromic (the converse of a stack is the reversed stack of the converses, and `K1`, `C3` are self-converse), and a self-converse single-presentation class is pure-blue by THM-2444's rigidity lemma. Conversely every pendant node has `tc = 1` and is a non-palindromic stack by (A3). QED.
+
+*Information reading.* `tc` counts the distinct ways the class can be read along a Hamiltonian path, the number of distinct "views" of THM-849's observers. Single-view classes are the stacks of the two atoms `K1` (no intransitivity) and `C3` (the minimal intransitive atom, whose three views coincide by rotation). The black network grows out of these leaves; `T5`, the next atom, already has three views, and every strong tournament has at least `n / |Z_C|` views by (A4).
+
+## 3. The strong presentation-count spectrum and `tc = 3`
+
+By (A2) the presentation count of any class is the product of those of its strong blocks, so the classification of classes by `tc` reduces to the **strong spectrum** `S(n) = {tc(T) : T strong of order n}` and the strong classes realising each value. From the class files with THM-4729's closure column (`closed > 0` iff strong):
+
+| n | strong classes | smallest strong `tc` values (count) | strong classes with `tc <= 9` as `(tc, H, |Aut|, SC)` |
+|---|---|---|---|
+| 3 | 1 | 1 (1) | `(1, 3, 3, 1)` = `C3` |
+| 4 | 1 | 5 (1) | `(5, 5, 1, 1)` = `S4` |
+| 5 | 6 | 3 (1), 5 (1), 9 (2), 11 (1), 13 (1) | `(3, 15, 5, 1)` = `T5`; `(5, 15, 3, 1)` = `a -> C3 -> b -> a`; `(9, 9, 1, 1)` twice |
+| 6 | 35 | 9 (2), 11 (2), 15 (4), 17 (2), 19 (2) | `(9, 27, 3, 0)` twice |
+| 7 | 353 | 9 (1), 11 (1), 15 (2), 17 (3), 19 (2) | `(9, 189, 21, 1)` = the Paley tournament `P7` |
+| 8 | 6008 | 17 (1), 23 (4), 25 (2), 27 (4), 29 (2) | none |
+| 9 | 178133 | 25 (1), 33 (5), 37 (2), 39 (1), 45 (10) | none (the minimum, `tc = 25`, is a rigid class with `H = 75`) |
+
+**Lemma C (PROVED).** If `T` is strong with `tc(T) = 3`, then for every Hamiltonian cycle `C` either `Z_C = Z_n` (`T` is a circulant tournament with respect to `C`) or `|Z_C| = n/3` (so `3 | n`, and the rotations of `C` realise exactly three tilings). *Proof.* By (A4), `n/|Z_C| <= 3` and divides `n`, and `|Z_C|` is odd (tournaments have no automorphism of even order), so `n/|Z_C| in {1, 3}`. QED. The data give `tc = 3` for strong classes only at `n = 5` (`T5`), and the stack product then gives:
+
+**Corollary (FINITE-EXACT for `n <= 9`; conjectured for all `n`, HYP-9352 (1)).** The classes with `tc = 3` are exactly the stacks over `{K1, C3, T5}` with exactly one `T5` block; their number is `sum_j C(n - 5 - 2j, j) (n - 4 - 2j)` (`1, 2, 3, 6, 11` at `n = 5..9`, matching the census: at `n = 8, 9` the `(H, |Aut|) = (45, 15)` members are the stacks containing both a `T5` and a `C3`).
+
+The smallest strong `tc` grows with `n` (`1, 5, 3, 9, 9, 17, 25` at `n = 3..9`), so the strong spectrum leaves every small value behind; proving `tc >= 5` for strong `T notin {K1, C3, T5}` (the content of the corollary for all `n`) would follow from a lower bound `H(T) > 3 |Aut(T)|` for strong `T` of order `>= 6`, which the data support by a wide margin (the minimum strong `H` is `15, 25, 45, 75` at `n = 6, 7, 8, 9` against `|Aut| <= 3, 21, 9, 81` there; the strong class count `178,133` at `n = 9` agrees with THM-4729's independent value) but which is not proved here.
+
+## 4. Theorem B: no tournament has exactly 7 or 21 Hamiltonian paths; forbidden fibre sizes
+
+The presentation counts occurring at `n = 9` are the odd numbers `1, 3, 5, 9, 11, 13, 15, 17, 19, 23, ...`: among the odd values below 60 exactly `7` and `21` are missing, and the same holds at `n = 7` and `n = 8` (at `n = 5, 6` the spectra end at 13 and 45); the two values `7` and `21` are likewise missing from the set of Hamiltonian-path counts `H` of all classes at every `n = 5..9` (`63` is also missing at `n = 7` but occurs at `n = 8`). That `7` and `21` are not Hamiltonian-path counts of any tournament is prior art: MathOverflow question 232751 (answers by bof and Gordon Royle, as reported in D. Grinberg's notes on the Rédei-Berge symmetric function, KTH 2024) establishes that the Hamiltonian-path counts of tournaments between 1 and 80555 are exactly the odd numbers other than 7 and 21, and records as open whether these are the only exceptions. Here is a self-contained proof of the two exclusions.
+
+**Theorem B (PROVED; prior art as cited).** No tournament has exactly 7 or exactly 21 Hamiltonian paths. Consequently a node of the line metagraph with trivial automorphism group (a rigid class) never has fibre size `tc = 7` or `21`; at `n <= 9` no node of any kind has these fibre sizes.
+
+*Proof.* Let `h(n)` be the minimum number of Hamiltonian paths of a strong tournament on `n` vertices. (i) Insertion monotonicity: for any tournament `T` and vertex `v`, every Hamiltonian path of `T - v` extends to a Hamiltonian path of `T` (insert `v` at the front if `v` beats the first vertex, at the end if the last vertex beats `v`, and otherwise between two consecutive vertices `a -> v -> b` where the sign changes), distinct paths extending to distinct paths, so `H(T) >= H(T - v)`. (ii) Moon's theorem: a strong tournament on `n >= 4` vertices has a strong subtournament on `n - 1` vertices, so `h(n) >= h(n-1)`. (iii) The census (strong iff `closed > 0`) gives `h(3), ..., h(9) = 3, 5, 9, 15, 25, 45, 75`, which is `5^((n-1)/3)`, `3 . 5^((n-3)/3)`, `9 . 5^((n-5)/3)` for `n = 1, 0, 2 (mod 3)`, in agreement with Busch's theorem (Electron. J. Combin. 13 (2006), N3: a strong tournament of order `n` has at least `5^((n-1)/3)` Hamiltonian paths, sharp for `n = 1 mod 3`, with the corresponding minima in the other residues; CITED, and an independent route to `h(n) > 21` for `n >= 8`), and the strong Hamiltonian-path counts at `n = 5, 6, 7` are `{9, 11, 13, 15}`, `{15, 17, 19, 23, 25, 27, 29, ...}` and `{25, 27, 29, ...}`; by (ii) `h(n) >= 25` for `n >= 8`. (iv) By Theorem A (A2), `H(T) = prod H(B_i)` over the strong blocks. If `H(T) = 7` then some block has `H = 7` (7 is prime), impossible: a strong block with `H = 7` would need `n <= 4` by (iii), where the counts are 1, 3, 5. If `H(T) = 21` then the blocks have counts multiplying to 21, so either one block has `H = 21` (impossible: strong counts at `n <= 7` avoid 21 and `h(n) >= 25` beyond) or two blocks have counts 3 and 7 (impossible by the first case). For a rigid class `tc = H`, giving the fibre statement; the `n <= 9` statement for all classes is the census. QED.
+
+The census also shows that every other odd number up to the respective maximum occurs as a presentation count at `n = 9` (`1, 3, 5, 9, 11, ..., 59` except 7 and 21), so the fibre-size spectrum of the metagraph is "all odd numbers except 7 and 21" as far as it has been computed; whether `7` or `21` can occur for a non-rigid class (`H = 7 |Aut|` with `|Aut| >= 5`, e.g. `H = 35, 49, 63`) is HYP-9352 (2).
+
+## 5. The H-descent potential is refuted
+
+If `H` were a potential decreasing along some black line at every non-pure-blue class except a few sinks, black-core connectivity would reduce to the connectivity of the sink set. It is not: the census column `minHblack` (the minimum `H` over the black neighbours of a class) shows `4, 19, 99, 867, 13258` non-pure-blue classes at `n = 5, 6, 7, 8, 9` with no black neighbour of strictly smaller `H` (all of them have every black neighbour strictly larger), with `H` values spread through the range (at `n = 8`: `3 (x6), 5 (x5), 9 (x12), 11 (x4), 13 (x4), 15 (x20), ...`). The leaves of Theorem A are sinks (their single black neighbour is larger), but so are hundreds of interior classes, so `H` carries no gradient structure on the black graph. (The exact line law for the number of cyclic triangles, which does have a port-determined gradient, belongs to mac-mini-electric's lane and is not treated here.)
+
+## 6. The three-move law at `n = 11` (NUMERICAL)
+
+A full order-11 census (`2^24` closed blue presentations) runs at more than 25 ms per line on this machine for the low layers, i.e. days of CPU, so the program gained a seeded random-sample mode (`./bld 11 all rand N seed`, xorshift64* over the `2^25` sigma-orbit codes). Eight seeded samples of 12,500 codes each (100,000 codes, of which 50,190 are closed) gave 50,190 closed blue lines across all nine layers (`181, 1555, 5446, 11060, 13719, 10960, 5446, 1628, 195` for `k = 1..9`), every one with a literal three-black-move detour and none touching a pure-blue class (59 s per sample; `blue_line_black_detours_20261020_n11_rand.out`). The average cost, 9.4 ms per line, makes the full census about 160,000 core-seconds; it was launched as eight interleaved stride slices at 20:46 and its result is recorded in the close-out letter if it finishes before close-out (otherwise in a follow-up).
+
+## 7. Terminology
+
+- **Presentation count / view count** `tc(C)`: the number of distinct tilings of a class; **single-presentation (single-view) class**: `tc = 1`.
+- **Strong spectrum** `S(n)`: the set of presentation counts of strong tournaments of order `n`; every class's count is a product of strong-spectrum values by (A2).
+- **Rotation group** `Z_C`: the cyclic shifts of a Hamiltonian cycle that are automorphisms; the **rotation inequality** `tc >= n/|Z_C|`.
+- **Forbidden fibre sizes**: 7 and 21 (Theorem B).
+- **H-descent sink**: a non-pure-blue class with no black neighbour of smaller `H`.
+
+## 8. Next tests and obligations
+
+1. HYP-9352 (1): `tc >= 5` for every strong tournament other than `K1, C3, T5`, equivalently `H(T) > 3|Aut(T)|` for strong `T` of order `>= 6`; the strong spectrum minima `9, 9, 17, 25` suggest `min S(n)` grows at least linearly.
+2. HYP-9352 (2): fibre sizes 7 and 21 never occur (non-rigid case).
+3. The pendant-node count law `a(n) - p(n)` and the degree-2 nodes of `B` (one at `n = 9`, the self-converse `(15, 3, 5, 1)` class) for `n = 10` once a class census at `n = 10` (`2^36` tilings) becomes feasible by symmetry reduction.
+4. The full order-11 three-move census, layer by layer, on more cores.
+
+## 9. Reproduction
+
+```text
+g++ -O2 -std=c++17 -o tlm9 04-computation/experiments/tiling_line_metagraph_n9_20261020.cpp && ./tlm9 9     # class files with minHblack / maxHblack / closed columns
+python3 04-computation/experiments/presentation_counts_20261020.py                                              # strong spectra, A000930 counts, 7/21 gaps, sinks
+g++ -O2 -std=c++17 -o bld 04-computation/experiments/blue_line_black_detours_20261020.cpp && ./bld 11 all rand 12500 101
+```
+
+## 10. Audit
+
+(filled after the independent audit)

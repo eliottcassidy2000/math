@@ -1,0 +1,16 @@
+# line metagraph census (refinement canoniser), n = 9, m = 28, tilings = 268435456
+classes 191536 (SC 2752, merged 97144); PB/MX/PK 6/2746/188784; sum tc 268435456 (= 2^m: yes); fibre violations 0; blue-parity violations 0; pass 1 442 s
+lines: blue 32768, black 134184960; degree law violations 0; self-lines blue 0 black 1704; merged self-loops blue 0 black 8998; reversal-neutral lines 7294
+components: all lines 1 (largest 191536); blue on SC classes 1 (largest 2752); black 7 (largest 191530); black on non-pure-blue classes 1 (largest 191530 of 191530)
+H-descent: non-pure-blue sinks (no black neighbour with smaller H) 13258 (self-converse 88; strictly uphill only 13242); sink H histogram: 3:6 5:6 9:18 11:5 13:5 15:29 17:8 19:8 23:16 25:14 27:29 29:22 31:14 33:35 ...
+lines by node types (blue, black): (PB,PB)=(0,0) (PB,MX)=(8,0) (PB,PK)=(0,0) (MX,MX)=(32760,72524) (MX,PK)=(0,4297276) (PK,PK)=(0,129815160)
+lines by depth: d0=32768 d1=2064384 d2=31457280 d3=100663296 d4=0
+blue lines by closed-member endpoint layer k = s_(n-1) (pattern (n-1-k, k)): k: lines / cross-class / both non-PB / black-connected
+   k=1: 512 / 512 / 512 / 512
+   k=2: 3072 / 3072 / 3072 / 3072
+   k=3: 7680 / 7680 / 7680 / 7680
+   k=4: 10240 / 10240 / 10240 / 10240
+   k=5: 7680 / 7680 / 7680 / 7680
+   k=6: 3072 / 3072 / 3070 / 3070
+   k=7: 512 / 512 / 506 / 506
+done in 466 s; per-class file tiling_line_metagraph_n9_20261020_classes_n9.tsv

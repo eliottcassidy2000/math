@@ -133,15 +133,15 @@ int main(int argc, char **argv) {
 
     vector<uint32_t> cls(NT, 0xFFFFFFFFu);
     unordered_map<uint64_t, uint32_t> byCanon; byCanon.reserve(1 << 19);
-    vector<int> aut; vector<long long> H; vector<uint32_t> rep; vector<int> tc; vector<int> bm;
+    vector<int> aut; vector<long long> H; vector<uint32_t> rep; vector<int> tc; vector<int> bm; vector<int> closedCnt;   // closed presentations (apex backward): > 0 iff strong (THM-4729 L2)
     Canoniser C; uint16_t adj[16];
     for (uint32_t t = 0; t < NT; t++) {
         buildAdj(t, adj);
         Canon c = C.run(adj, n);
         auto it = byCanon.find(c.best); uint32_t id;
-        if (it == byCanon.end()) { id = (uint32_t)aut.size(); byCanon.emplace(c.best, id); aut.push_back(c.aut); H.push_back(hamPaths(adj)); rep.push_back(t); tc.push_back(0); bm.push_back(0); }
+        if (it == byCanon.end()) { id = (uint32_t)aut.size(); byCanon.emplace(c.best, id); aut.push_back(c.aut); H.push_back(hamPaths(adj)); rep.push_back(t); tc.push_back(0); bm.push_back(0); closedCnt.push_back(0); }
         else id = it->second;
-        cls[t] = id; tc[id]++; if (sigmaOf(t) == t) bm[id]++;
+        cls[t] = id; tc[id]++; if (sigmaOf(t) == t) bm[id]++; if (!((t >> apex) & 1)) closedCnt[id]++;
         if ((t & 0xFFFFFF) == 0 && t) { double el = chrono::duration<double>(chrono::steady_clock::now() - t0).count(); fprintf(stderr, "  %u / %u tilings, %zu classes, %.0f s\n", t, NT, aut.size(), el); }
     }
     uint32_t Cn = (uint32_t)aut.size();
@@ -198,8 +198,8 @@ int main(int argc, char **argv) {
     for (auto &kv : layer) printf("   k=%d: %lld / %lld / %lld / %lld\n", kv.first, kv.second[0], kv.second[1], kv.second[2], kv.second[3]);
     // ---- per-class dump ----
     char fname[160]; snprintf(fname, sizeof fname, "tiling_line_metagraph_n9_20261020_classes_n%d.tsv", n);
-    FILE *f = fopen(fname, "w"); fprintf(f, "class\tH\tAut\ttc\tbm\tSC\ttype\tselfBlue\tselfBlack\tblackComponent\tminHblack\tmaxHblack\n");
-    for (uint32_t c = 0; c < Cn; c++) fprintf(f, "%u\t%lld\t%d\t%d\t%d\t%d\t%s\t%d\t%d\t%d\t%lld\t%lld\n", c, H[c], aut[c], tc[c], bm[c], sigmaClass[c] == c ? 1 : 0, tn[type(c)], selfB[c], selfK[c], ufBlack.f(c), minHb[c] == LLONG_MAX ? -1 : minHb[c], maxHb[c]);
+    FILE *f = fopen(fname, "w"); fprintf(f, "class\tH\tAut\ttc\tbm\tSC\ttype\tselfBlue\tselfBlack\tblackComponent\tminHblack\tmaxHblack\tclosed\n");
+    for (uint32_t c = 0; c < Cn; c++) fprintf(f, "%u\t%lld\t%d\t%d\t%d\t%d\t%s\t%d\t%d\t%d\t%lld\t%lld\t%d\n", c, H[c], aut[c], tc[c], bm[c], sigmaClass[c] == c ? 1 : 0, tn[type(c)], selfB[c], selfK[c], ufBlack.f(c), minHb[c] == LLONG_MAX ? -1 : minHb[c], maxHb[c], closedCnt[c]);
     fclose(f);
     double el2 = chrono::duration<double>(chrono::steady_clock::now() - t0).count();
     printf("done in %.0f s; per-class file %s\n", el2, fname);

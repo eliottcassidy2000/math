@@ -86,7 +86,11 @@ int main(int argc, char **argv) {
     n = argc > 1 ? atoi(argv[1]) : 8; int layer = -1; if (argc > 2 && strcmp(argv[2], "all") != 0) layer = atoi(argv[2]);
     if (n < 4 || n > 11) { fprintf(stderr, "n in 4..11 (pair masks in 64 bits)\n"); return 1; }
     unsigned long long codeLo = 0, codeHi = 0; if (argc > 4) { codeLo = strtoull(argv[3], 0, 10); codeHi = strtoull(argv[4], 0, 10); }
-    bool subcase = argc > 5 && strcmp(argv[5], "sub") == 0;   // closed middle (c -> b) with y, c in I: the sub-case left open by endpoint_four_repairs_20261021
+    bool subcase = argc > 5 && strcmp(argv[5], "sub") == 0;
+    // random-sample mode: "./bld n k rand N seed" tests N uniformly random sigma-orbit codes (seeded xorshift64*)
+    // stride mode: "./bld n k stride r m" processes the codes congruent to r modulo m (interleaved slices for even progress)
+    bool strideMode = argc > 5 && strcmp(argv[3], "stride") == 0; unsigned long long strideR = strideMode ? strtoull(argv[4], 0, 10) : 0, strideM = strideMode ? strtoull(argv[5], 0, 10) : 1; if (strideMode) subcase = false;
+    bool randMode = argc > 4 && strcmp(argv[3], "rand") == 0; unsigned long long randN = randMode ? strtoull(argv[4], 0, 10) : 0; unsigned long long rng = randMode && argc > 5 ? strtoull(argv[5], 0, 10) * 0x9E3779B97F4A7C15ull + 1 : 1; if (randMode) subcase = false;   // closed middle (c -> b) with y, c in I: the sub-case left open by endpoint_four_repairs_20261021
     m = 0; for (int i = 0; i < n; i++) for (int j = 0; j < n; j++) cellIdx[i][j] = -1;
     for (int i = 0; i < n; i++) for (int j = i + 2; j < n; j++) { cellI[m] = i; cellJ[m] = j; cellIdx[i][j] = m; m++; }
     for (int k = 0; k < m; k++) sigmaCell[k] = cellIdx[n - 1 - cellJ[k]][n - 1 - cellI[k]];
@@ -102,7 +106,12 @@ int main(int argc, char **argv) {
     long long done = 0;
     if (codeHi == 0) codeHi = 1ull << e;
     printf("# code range [%llu, %llu)%s\n", codeLo, codeHi, subcase ? ", sub-case: closed middle with y, c in I" : ""); fflush(stdout);
-    for (unsigned long long code = codeLo; code < codeHi; code++) {
+    if (randMode) { codeLo = 0; codeHi = randN; printf("# random sample of %llu codes\n", randN); }
+    if (strideMode) { codeLo = 0; codeHi = ((1ull << e) - strideR + strideM - 1) / strideM; printf("# stride slice: codes = %llu mod %llu (%llu codes)\n", strideR, strideM, codeHi); }
+    for (unsigned long long iter = codeLo; iter < codeHi; iter++) {
+        unsigned long long code = iter;
+        if (randMode) { rng ^= rng >> 12; rng ^= rng << 25; rng ^= rng >> 27; code = (rng * 0x2545F4914F6CDD1Dull) >> (64 - e); }
+        if (strideMode) code = strideR + iter * strideM;
         uint64_t t = 0; for (int i = 0; i < e; i++) if ((code >> i) & 1) { t |= 1ull << reps[i]; t |= 1ull << sigmaCell[reps[i]]; }
         if ((t >> apex) & 1) continue;   // closed: apex tile backward (z -> a)
         Tour T; for (int u = 0; u < n; u++) T.adj[u] = 0;

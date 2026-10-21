@@ -800,6 +800,18 @@ all heights (THM-1289, published), δ ineffective.
   the full class-level line multigraph at n = 8 (911,027 joined pairs; connected; blue spine connected; black graph = 1 + pure-blue components). NUMERICAL (HYP-9346): connectivity for
   all n (HYP-9345 (b), re-observed, with the black-component refinement), near-regular concentration of self-lines; next tests n = 12 (compiled solver) and n = 9 (class-level census).
 
+- **Presentation counts of metagraph nodes (opus, 2026-10-20-S48; [note](../05-knowledge/results/presentation_counts_single_view_classes_rotation_inequality_20261020.md), THM-4741, HYP-9352).**
+  Owner directive: next obligations toward a complete classification of tournament metagraph structure, in the language of intransitivity of information or
+  electrical networks; lane split with mac-mini-2026-10-21-electric (Kirchhoff/Hodge laws, consecutive ports: THM-4739/4740, HYP-9351). PROVED: tc = H/|Aut| is the
+  number of distinct views (Aut-orbits of Hamiltonian paths), multiplicative over the strong-component stack; tc = 1 iff a stack over {K1, C3} (rotations of a
+  Hamiltonian cycle force a circulant; THM-4730 (B) supplies a black path for n >= 7; T5 has tc = 3), A000930 of them, exactly the pendant nodes of the
+  fundamental black graph when non-palindromic (2, 4, 6, 10, 14 at n = 5..9) and pure-blue when palindromic; rotation inequality tc >= n/|Z_C| (rigid strong
+  tournaments have tc >= n); no tournament has exactly 7 or 21 Hamiltonian paths (stack product + H(T) >= H(T - v) + Moon's strong subtournament theorem + census
+  minima; prior art MathOverflow 232751 via Grinberg; Busch 2006's 5^((n-1)/3) matches the census minima 3, 5, 9, 15, 25, 45, 75), so rigid nodes never have
+  fibre size 7 or 21; a strong tc = 3 class is circulant or 3-fold symmetric. FINITE-EXACT: strong spectra and minima n <= 9 (min strong tc 25, min strong H 75,
+  178,133 strong classes at n = 9); tc = 3 classes = one-T5 stacks (1, 2, 3, 6, 11); 7, 21 absent from all tc and H spectra n <= 9. REFUTED: H as a descent
+  potential (sinks 4, 19, 99, 867, 13258). NUMERICAL: three-move law at n = 11 on 50,190 random closed blue lines (full census running at close-out).
+  Next: tc >= 5 for strong T outside {K1, C3, T5} (equivalently H > 3|Aut|), fibre sizes 7/21 for non-rigid classes, tc-descent, the n = 11 census.
 - **Black detours of closed blue lines and the Klein dictionary (opus, 2026-10-20-S47; [note](../05-knowledge/results/black_detours_closed_blue_lines_klein_dictionary_20261020.md), THM-4732, HYP-9347).**
   Owner directive: information-flow view; debt cones / zero-heavy boundary / (n-4,3) detours; palette forcing, sources, ports, clocks; the 3-4-3 and 4-2-4 picture against
   complementation and path reversal; the order-10 case and the (n-5,4) layer; black-core connectivity via the trijection; the 153N annulus bill; the 65 idoneal numbers.
