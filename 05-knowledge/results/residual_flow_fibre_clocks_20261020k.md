@@ -242,8 +242,31 @@ the optimal ellipsoid while a timed repair cycle still fails to compose:
 their vertices and edge predicates are different. The1247 contact calculation
 above instantiates its one-leaf-pair repair. Our temporal cancellation flow
 instead uses horizon endpoints and source-owned job arcs. Neither graph is
-silently substituted for the tournament metagraph. The simultaneous
-THM-4739/4740 reservations are not proved dependencies of this session.
+silently substituted for the tournament metagraph. THM-4739/4740 were
+reserved at this packet's initial input and are not proof dependencies here.
+
+The final synchronization brought two independently audited positive
+developments. The [all-depth two-seam theorem](balanced_deletion_groups_ports_20261021/ALL_DEPTH_TWO_SEAM_ADDENDUM.md)
+shows that, inside the balanced family, two actual cut-port pairs suffice
+to reconstruct the deleted move target at every consecutive insertion
+depth. Growing bit addresses alone do not determine that target. The two
+size-two orbit types also retain different stabilizer lines, exchanged
+by reflection; a shore label is part of the marked correspondence.
+
+The [actual metagraph network packet](metagraph_network_invariants_20261021/PROOF.md)
+supplies a stronger electrical boundary: its literal network is B+2Q,
+where Q retains reflection-paired black lines. At order five, exact Kron
+resistance6092/5137 hides a full potential coordinate11327/10274. Its
+even denominator, forced by an integral parity obstruction, is recovered
+only when the harmonic-extension map is retained. This is a native
+metagraph witness for our distinction between preserved energy and lost
+integer data, not just the abstract four-vertex wiring hostile. Neither
+incoming result proves all-order black connectivity.
+
+The concurrently promoted [THM-4739, Kirchhoff/Hodge and consecutive ports](../../01-canon/theorems/THM-4739-kirchhoff-and-hodge-laws-of-the-tournament-metagraph-intransitivity-currents-second-order-determination-and-the-consecutive-start-port-ledgers.md)
+is recorded with its owner's **PROVED (pre-audit) / FINITE-EXACT** status.
+Its score-potential/curl decomposition is a relevant next representation;
+its local invariant counts are not imported as a complete classification.
 
 ## 7. Next obligations and validation
 
@@ -252,8 +275,9 @@ THM-4739/4740 reservations are not proved dependencies of this session.
    obstructions now identify where another type of interaction must enter.
 2. Extend the actual source-specific burst entry guards, or supply another
    grounded descent language; the common floor alone is not entry.
-3. Recover the fine port relation for a proposed actual metagraph quotient,
-   rather than infer path lifting from4,2,1 counts or a wired Laplacian.
+3. Extend the incoming balanced-family two-cut target correction to actual
+   black-path lifting, retaining shore labels and within-fibre connectors;
+   for integer electrical claims, also retain harmonic extension.
 4. Keep the original clock and lattice when using improved convex certificates
    in LRC or Hadwiger--Nelson. No plane-colouring or general-LRC closure is
    claimed by this session.
