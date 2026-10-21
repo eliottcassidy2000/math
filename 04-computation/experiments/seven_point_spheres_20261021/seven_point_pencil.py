@@ -14,6 +14,9 @@ Then C = v, D = t, E = 4t/T, F = 4w, B = w/k, H' = s - 2w, A = v + mu (s - 3v), 
        under the inversion x -> 4x/|x|^2 (radius 2R about O); Pow_S2(C) = Pow_S1(H') = 6 - 2 v.s = Sigma, where
        Sigma = |V0V1|^2 + |V0V2|^2 + |V0V3|^2 (in units of R^2); Pow_S1(A) = mu (16 - T); u1 - u2 is orthogonal to t and w,
        so the radical plane of S1, S2 is the plane O G O' and S1 = S2 iff Sigma = 0.
+  (P1n) PROVED: the same identities for an n-simplex, symbolic in n and in R^2 (no normalisation, no square roots):
+       with s = sum_(facet) (Vi - O), s.w = n|w|^2, constant term (n+1)R^2, H' = O' + n(G' - O'), the defect is
+       2nR^2 - 2 v.s = sum |V0Vi|^2.
   (P2) FINITE-EXACT: random rational tetrahedra in actual coordinates (no normalisation): all of (P1), with
        Pow_S2(V0) = Sigma exactly, and the four points B, D, E, F concyclic on S1 cap S2.
        Also (V0 - O).(G - V0) = -Sigma/8 and mu = Sigma/|s - 3v|^2: Sigma = 0 iff the median V0G is tangent to the
@@ -23,11 +26,13 @@ Then C = v, D = t, E = 4t/T, F = 4w, B = w/k, H' = s - 2w, A = v + mu (s - 3v), 
   (P4) FINITE-EXACT: an explicit nondegenerate tetrahedron over Q(i) with Sigma = 0: all seven labels lie on one sphere,
        with A = C (six distinct points).  Over R (any ordered field) Sigma > 0 for a nondegenerate tetrahedron, so the
        seventh incidence never holds.
-  (P5) FINITE-EXACT: the analogues for simplices of dimension 4 and 5 (D = O + (n+1)(G - O), F = O + (n+1)(O' - O),
-       H' = O' + n(G' - O')) have NO cospherical set of more than n + 1 of the seven labels in random exact trials; in the
-       plane, A, B, C, E and B, D, E, F are concyclic.  The pencil theorem is three-dimensional.
+  (P5) FINITE-EXACT, every dimension n = 3..6 (corrected after the S49 audit: the first version tested spheres in R^n
+       through n + 1 labels, but all labels lie in a 3-flat, so every system was singular and nothing was tested): with
+       D = O + (n+1)(G - O), F = O + (n+1)(O' - O) and H' = O' + n(G' - O') (the facet's own D-point; the orthocentre for
+       n = 3), the labels lie in the 3-flat O + span(V0 - O, s, O' - O), and there the whole pencil statement holds with
+       power (n+1)R^2 and defect sum |V0Vi|^2.  In the plane (n = 2) v, s, w are always dependent: the statement is void.
   (P6) The classical Fano anchor: the seventh line of the real Fano picture has determinant -2 (char 2 only).
-Prints ALL CHECKS PASSED.  Runtime about 1 minute."""
+Prints ALL CHECKS PASSED.  Runtime about 10 seconds."""
 import random, itertools, time
 from fractions import Fraction as Fr
 import sympy as sp
@@ -77,6 +82,31 @@ def section_P1():
           'both spheres are invariant under x -> 4x/|x|^2; 2(u1 - u2) = (Sigma, -Sigma, 0) on (v, s, w), so the radical '
           'plane is the plane O G O\' and S1 = S2 iff Sigma = 0; (V0 - O).(G - V0) = -Sigma/8 and mu = Sigma/|s - 3v|^2, so '
           'Sigma = 0 iff V0G is tangent at V0 iff A = C (PROVED, exact identities)')
+
+
+def section_P1n():
+    print('(P1n) the same identities for an n-simplex, homogeneous in R^2 (no normalisation)')
+    a, b, p, k, R2, n = sp.symbols('a b p k R2 n')     # a = v.s, b = |s|^2, p = v.w, k = |w|^2, |v|^2 = R2, s.w = n k
+    Gm = sp.Matrix([[R2, a, p], [a, b, n * k], [p, n * k, k]])
+    sq = lambda X: sp.expand((sp.Matrix([X]) * Gm * sp.Matrix(X))[0, 0])
+    T = sq([1, 1, 0])
+    q = [-n, 1, 0]                                    # q = t - (n+1) v = s - n v
+    mu = -2 * (a - n * R2) / sq(q)                    # A = v + mu q (second point of V0G on |x|^2 = R2)
+    pts = {'A': [1 - n * mu, mu, 0], 'B': [0, 0, R2 / k], 'C': [1, 0, 0], 'D': [1, 1, 0],
+           'E': [(n + 1) * R2 / T, (n + 1) * R2 / T, 0], 'F': [0, 0, n + 1], 'H': [0, 1, -(n - 1)]}
+    c0 = (n + 1) * R2
+    S1 = ((n + 2) * R2, T - R2, (n + 1) * k + R2)
+    S2 = (2 * a + (2 - n) * R2, b + 2 * n * R2, (n + 1) * k + R2)
+    Q = lambda S, X: sp.simplify(sq(X) - (X[0] * S[0] + X[1] * S[1] + X[2] * S[2]) + c0)
+    Sig = 2 * n * R2 - 2 * a
+    ok = all(Q(S1, pts[x]) == 0 for x in 'BCDEF') and all(Q(S2, pts[x]) == 0 for x in 'ABDEFH')
+    ok &= sp.simplify(Q(S2, pts['C']) - Sig) == 0 and sp.simplify(Q(S1, pts['H']) - Sig) == 0
+    ok &= sp.simplify(sq(pts['A']) - R2) == 0
+    d = [sp.simplify(S1[i] - S2[i]) for i in range(3)]
+    ok &= sp.simplify(d[0] - Sig) == 0 and sp.simplify(d[1] + Sig) == 0 and d[2] == 0
+    check(ok, 'for every n (symbolic) and every R^2: S1 contains B,C,D,E,F; S2 contains A,B,D,E,F,H\' (H\' = O\' + n(G\' - O\')); '
+              'power (n+1)R^2 at O; Pow_S2(C) = Pow_S1(H\') = 2nR^2 - 2 v.s = sum |V0Vi|^2; radical plane O G O\' (PROVED, '
+              'exact identities; needs only v, s, w independent)')
 
 
 # ---------------------------------------------------------------- exact helpers (any field via Fractions)
@@ -269,42 +299,60 @@ def labels_nd(V):
     A = add(V[0], mul(d, -2 * dot(sub(V[0], O), d) / dot(d, d)))
     Of = circ_affine(V[1:]); Gf = tuple(sum(v[i] for v in V[1:]) / Fr(n) for i in range(n))
     w = sub(Of, O); g = sub(G, O)
-    return dict(A=A, B=add(O, mul(w, R2 / dot(w, w))), C=tuple(V[0]), D=add(O, mul(g, n + 1)),
-                E=add(O, mul(g, R2 / dot(g, g))), F=add(O, mul(w, n + 1)), H=add(Of, mul(sub(Gf, Of), n)))
+    lab = dict(A=A, B=add(O, mul(w, R2 / dot(w, w))), C=tuple(V[0]), D=add(O, mul(g, n + 1)),
+               E=add(O, mul(g, R2 / dot(g, g))), F=add(O, mul(w, n + 1)), H=add(Of, mul(sub(Gf, Of), n)))
+    sv = (sum(V[i][j] for i in range(1, n + 1)) - n * O[j] for j in range(n))
+    return lab, O, R2, sub(V[0], O), tuple(sv), w
 
 
 def section_P5():
-    print('(P5) other dimensions')
+    print('(P5) other dimensions: the pencil inside the 3-flat O + span(v, s, w)')
     rng = random.Random(5)
-    res = {}
-    for n in (2, 3, 4, 5):
-        found = {}; trials = 0
-        while trials < 25:
+    summary = {}
+    for n in (2, 3, 4, 5, 6):
+        good = degenerate = 0; ok = True; trials = 0
+        while trials < 20:
             V = [tuple(Fr(rng.randint(-9, 9), rng.randint(1, 3)) for _ in range(n)) for _ in range(n + 1)]
             try:
-                L = labels_nd(V)
+                lab, O, R2, v, sv, w = labels_nd(V)
             except ZeroDivisionError:
                 continue
             trials += 1
-            sets = set()
-            for sub_ in itertools.combinations('ABCDEFH', n + 1):
-                P = [L[x] for x in sub_]
-                M = [[-2 * x for x in pp] + [1] for pp in P]
-                try:
-                    sol = solve_n(M, [-dot(pp, pp) for pp in P])
-                except ZeroDivisionError:
-                    continue
-                u, c = sol[:n], sol[n]
-                S = ''.join(x for x in 'ABCDEFH' if dot(L[x], L[x]) - 2 * dot(u, L[x]) + c == 0)
-                if len(S) > n + 1:
-                    sets.add(S)
-            for S in sets:
-                found[S] = found.get(S, 0) + 1
-        res[n] = found
-        print(f'     n = {n}: cospherical sets of more than n + 1 labels (trials containing them, of 25): {found}')
-    check(res[2] == {'ABCE': 25, 'BDEF': 25} and res[3] == {'ABDEFH': 25, 'BCDEF': 25} and res[4] == {} and res[5] == {},
-          'the two six-/five-label spheres are three-dimensional: none of the seven-label analogues has more than n + 1 '
-          'cospherical labels for n = 4, 5; in the plane A,B,C,E and B,D,E,F are concyclic (FINITE-EXACT, random exact trials)')
+            basis = [v, sv, w]
+            Gm = [[dot(a, b) for b in basis] for a in basis]
+            try:
+                coords = {}
+                for x, X in lab.items():
+                    rhs = [dot(e, sub(X, O)) for e in basis]
+                    c = solve_n(Gm, rhs)
+                    recon = tuple(O[j] + sum(c[i] * basis[i][j] for i in range(3)) for j in range(n))
+                    if recon != tuple(X):
+                        raise ValueError('label off the 3-flat')
+                    coords[x] = c
+            except ZeroDivisionError:
+                degenerate += 1          # v, s, w dependent: delta = 0
+                continue
+            quad = lambda c: sum(c[i] * Gm[i][j] * c[j] for i in range(3) for j in range(3))
+            def fit(names):
+                M = [[-coords[x][0], -coords[x][1], -coords[x][2], 1] for x in names]
+                return solve_n(M, [-quad(coords[x]) for x in names])
+            def Q(sph, x):
+                c = coords[x]
+                return quad(c) - sum(c[i] * sph[i] for i in range(3)) + sph[3]
+            Sig = sum(dot(sub(V[0], V[i]), sub(V[0], V[i])) for i in range(1, n + 1))
+            S2 = fit(['D', 'E', 'F', 'H']); S1 = fit(['B', 'C', 'D', 'F'])
+            ok &= all(Q(S2, x) == 0 for x in 'ABDEFH') and all(Q(S1, x) == 0 for x in 'BCDEF')
+            ok &= S1[3] == (n + 1) * R2 and S2[3] == (n + 1) * R2
+            ok &= Q(S2, 'C') == Sig and Q(S1, 'H') == Sig
+            ok &= [S1[i] - S2[i] for i in range(3)] == [Sig, -Sig, 0]
+            good += 1
+        summary[n] = (good, degenerate, ok)
+        print(f'     n = {n}: {good} generic simplices checked, {degenerate} with v, s, w dependent; identities hold: {ok}')
+    check(summary[2][0] == 0 and summary[2][1] == 20 and all(summary[n][0] == 20 and summary[n][2] for n in (3, 4, 5, 6)),
+          'for every n = 3..6 the labels (D = O + (n+1)(G - O), F = O + (n+1)(O\' - O), H\' = O\' + n(G\' - O\'), the facet\'s own '
+          'D-point) lie in the 3-flat O + span(V0 - O, s, O\' - O); there S2 contains A,B,D,E,F,H\', S1 contains B,C,D,E,F, both have '
+          'power (n+1)R^2 at O, Pow_S2(C) = Pow_S1(H\') = sum |V0Vi|^2 and the radical plane is O G O\'; in the plane (n = 2) v, s, w '
+          'are always dependent and the statement is void (FINITE-EXACT, exact Gram-coordinate checks)')
 
 
 # ---------------------------------------------------------------- (P6) the Fano anchor
@@ -322,5 +370,5 @@ def section_P6():
 
 if __name__ == '__main__':
     t0 = time.time()
-    section_P1(); section_P2(); section_P3(); section_P4(); section_P5(); section_P6()
+    section_P1(); section_P1n(); section_P2(); section_P3(); section_P4(); section_P5(); section_P6()
     print(f'\n{"ALL CHECKS PASSED" if not FAIL else "FAILURES: " + str(FAIL)}  ({time.time() - t0:.0f}s)')

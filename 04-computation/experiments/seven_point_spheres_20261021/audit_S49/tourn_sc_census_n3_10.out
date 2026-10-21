@@ -1,0 +1,8 @@
+n=3: labelled sigma0-anti tournaments 2^2 = 4; WL non-discrete 2; |Aut|>1 2; exceptional labelled 2; identified (of kept) {'C3': 2}  [8s]
+n=4: labelled sigma0-anti tournaments 2^4 = 16; WL non-discrete 0; |Aut|>1 0; exceptional labelled 0; identified (of kept) {}  [0s]
+n=5: labelled sigma0-anti tournaments 2^6 = 64; WL non-discrete 24; |Aut|>1 24; exceptional labelled 8; identified (of kept) {'T5': 8}  [0s]
+n=6: labelled sigma0-anti tournaments 2^9 = 512; WL non-discrete 80; |Aut|>1 80; exceptional labelled 0; identified (of kept) {}  [0s]
+n=7: labelled sigma0-anti tournaments 2^12 = 4096; WL non-discrete 688; |Aut|>1 688; exceptional labelled 16; identified (of kept) {'P7': 16}  [0s]
+n=8: labelled sigma0-anti tournaments 2^16 = 65536; WL non-discrete 2560; |Aut|>1 2560; exceptional labelled 0; identified (of kept) {}  [0s]
+n=9: labelled sigma0-anti tournaments 2^20 = 1048576; WL non-discrete 54784; |Aut|>1 51328; exceptional labelled 128; identified (of kept) {'C3[C3]': 128}  [1s]
+n=10: labelled sigma0-anti tournaments 2^25 = 33554432; WL non-discrete 311552; |Aut|>1 219392; exceptional labelled 0; identified (of kept) {}  [15s]

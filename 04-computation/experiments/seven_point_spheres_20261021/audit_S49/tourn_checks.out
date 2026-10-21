@@ -1,0 +1,48 @@
+(a) Paley P_q, groups by backtracking (no affine assumption)
+   q=3: |Aut|=3 |anti|=3; regular subsets Aut 6 (orbits 2), Aut+- 0 (orbits 0)
+   q=7: |Aut|=21 |anti|=21; regular subsets Aut 84 (orbits 4), Aut+- 0 (orbits 0)
+   q=11: |Aut|=55 |anti|=55; regular subsets Aut 1980 (orbits 36), Aut+- 1320 (orbits 12)
+   q=19: |Aut|=171 |anti|=171; regular subsets Aut 521892 (orbits 3052), Aut+- 502740 (orbits 1470)
+(c) prime: {'C3': True, 'T5': True, 'P7': True}
+(b) circulant tournaments, odd n <= 15 (exhaustive subsets, full Aut+-)
+   n=3: 2 connection sets, exceptional 2, iso classes 1, in family [True]  [6s]
+   n=5: 4 connection sets, exceptional 4, iso classes 1, in family [True]  [6s]
+   n=7: 8 connection sets, exceptional 2, iso classes 1, in family [True]  [6s]
+   n=9: 16 connection sets, exceptional 4, iso classes 1, in family [True]  [6s]
+   n=11: 32 connection sets, exceptional 0, iso classes 0, in family []  [7s]
+   n=13: 64 connection sets, exceptional 0, iso classes 0, in family []  [7s]
+   n=15: 128 connection sets, exceptional 8, iso classes 1, in family [True]  [11s]
+(d) HYP-9353 hunt
+   Cay(Z3^2,0): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   Cay(Z3^2,1): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   Cay(Z3^2,2): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   Cay(Z3^2,3): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   Cay(Z3^2,4): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   Cay(Z3^2,5): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   Cay(Z3^2,6): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   Cay(Z3^2,7): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   Cay(Z3^2,8): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   Cay(Z3^2,9): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   Cay(Z3^2,10): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   Cay(Z3^2,11): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   Cay(Z3^2,12): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   Cay(Z3^2,13): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   Cay(Z3^2,14): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   Cay(Z3^2,15): n=9; regular Aut+- subset found: False (after 3000 random tries)
+   C3[C3,C3,T5] (n=11): n=11; regular Aut+- subset found: True (after 8 random tries)
+   C3[C3,T5,T5] (n=13): n=13; regular Aut+- subset found: True (after 1 random tries)
+   C3[C3,C3,C3[C3]] (n=15): n=15; regular Aut+- subset found: True (after 1 random tries)
+   C3[C3[C3],C3[C3],C3] (n=21): n=21; regular Aut+- subset found: True (after 9 random tries)
+   C3[K1,K1,C3] (n=5): n=5; regular Aut+- subset found: True (after 4 random tries)
+   T5[C3,C3,C3,C3,K1] (n=13): n=13; regular Aut+- subset found: True (after 12 random tries)
+   T5[C3,K1,K1,K1,K1] (n=7): n=7; regular Aut+- subset found: True (after 1 random tries)
+   P7[C3,K1x6] (n=9): n=9; regular Aut+- subset found: True (after 2 random tries)
+   P7[C3,C3,K1,C3,K1,K1,K1] (n=13): n=13; regular Aut+- subset found: True (after 1 random tries)
+   TT2[C3] stack (n=6): n=6; regular Aut+- subset found: True (after 5 random tries)
+   C3=>C3=>C3 (n=9): n=9; regular Aut+- subset found: True (after 1 random tries)
+   C3=>T5=>C3 (n=11): n=11; regular Aut+- subset found: True (after 1 random tries)
+   P7=>P7conv? (n=14): n=14; regular Aut+- subset found: True (after 1 random tries)
+   C3[T5] (n=15): n=15; regular Aut+- subset found: True (after 5 random tries)
+   T5[C3] (n=15): n=15; regular Aut+- subset found: False (after 3000 random tries)
+   C3[C3[C3]] (n=27): n=27; regular Aut+- subset found: False (after 3000 random tries)
+done 14s

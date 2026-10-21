@@ -2,6 +2,8 @@
      S1 powers: {'A': -2*(a - 3)*(2*a + b - 15)/(6*a - b - 9), 'B': 0, 'C': 0, 'D': 0, 'E': 0, 'F': 0, 'H': -2*(a - 3)}
      S2 powers: {'A': 0, 'B': 0, 'C': -2*(a - 3), 'D': 0, 'E': 0, 'F': 0, 'H': 0}
   ok   S1 contains B,C,D,E,F; S2 contains A,B,D,E,F,H'; Pow_S2(C) = Pow_S1(H') = 6 - 2 v.s; Pow_S1(A) = mu (16 - T); both spheres are invariant under x -> 4x/|x|^2; 2(u1 - u2) = (Sigma, -Sigma, 0) on (v, s, w), so the radical plane is the plane O G O' and S1 = S2 iff Sigma = 0; (V0 - O).(G - V0) = -Sigma/8 and mu = Sigma/|s - 3v|^2, so Sigma = 0 iff V0G is tangent at V0 iff A = C (PROVED, exact identities)
+(P1n) the same identities for an n-simplex, homogeneous in R^2 (no normalisation)
+  ok   for every n (symbolic) and every R^2: S1 contains B,C,D,E,F; S2 contains A,B,D,E,F,H' (H' = O' + n(G' - O')); power (n+1)R^2 at O; Pow_S2(C) = Pow_S1(H') = 2nR^2 - 2 v.s = sum |V0Vi|^2; radical plane O G O' (PROVED, exact identities; needs only v, s, w independent)
 (P2) random rational tetrahedra, actual coordinates
   ok   150 rational tetrahedra: S1 contains B,C,D,E,F,iota(C); S2 contains A,B,D,E,F,H',iota(A),iota(H'); both have power 4R^2 at O; Pow_S2(V0) = Pow_S1(H') = Sigma = sum |V0Vi|^2 > 0; B,D,E,F lie in the plane O G O' (FINITE-EXACT)
 (P3) over F_p: seven labels on one quadric iff Sigma = 0
@@ -10,12 +12,13 @@
 (P4) an explicit seven-label sphere over Q(i)
      V0 = 0, V1 = e1, V2 = e2, V3 = (0, i, i): Sigma = 0, R^2 = -1/4 - I, delta = 3/8 - 3*I/4, A = C: True
   ok   over Q(i) the tetrahedron V0 = 0, V1 = e1, V2 = e2, V3 = (0, i, i) is nondegenerate with Sigma = 0: all seven labels lie on one sphere, the median V0G is tangent at V0, and A = C, so six distinct points (FINITE-EXACT); over R, Sigma = sum of squared edge lengths > 0
-(P5) other dimensions
-     n = 2: cospherical sets of more than n + 1 labels (trials containing them, of 25): {'ABCE': 25, 'BDEF': 25}
-     n = 3: cospherical sets of more than n + 1 labels (trials containing them, of 25): {'BCDEF': 25, 'ABDEFH': 25}
-     n = 4: cospherical sets of more than n + 1 labels (trials containing them, of 25): {}
-     n = 5: cospherical sets of more than n + 1 labels (trials containing them, of 25): {}
-  ok   the two six-/five-label spheres are three-dimensional: none of the seven-label analogues has more than n + 1 cospherical labels for n = 4, 5; in the plane A,B,C,E and B,D,E,F are concyclic (FINITE-EXACT, random exact trials)
+(P5) other dimensions: the pencil inside the 3-flat O + span(v, s, w)
+     n = 2: 0 generic simplices checked, 20 with v, s, w dependent; identities hold: True
+     n = 3: 20 generic simplices checked, 0 with v, s, w dependent; identities hold: True
+     n = 4: 20 generic simplices checked, 0 with v, s, w dependent; identities hold: True
+     n = 5: 20 generic simplices checked, 0 with v, s, w dependent; identities hold: True
+     n = 6: 20 generic simplices checked, 0 with v, s, w dependent; identities hold: True
+  ok   for every n = 3..6 the labels (D = O + (n+1)(G - O), F = O + (n+1)(O' - O), H' = O' + n(G' - O'), the facet's own D-point) lie in the 3-flat O + span(V0 - O, s, O' - O); there S2 contains A,B,D,E,F,H', S1 contains B,C,D,E,F, both have power (n+1)R^2 at O, Pow_S2(C) = Pow_S1(H') = sum |V0Vi|^2 and the radical plane is O G O'; in the plane (n = 2) v, s, w are always dependent and the statement is void (FINITE-EXACT, exact Gram-coordinate checks)
 (P6) the classical Fano anchor
      |det| of the seven Fano lines in the 0/1 coordinates: [0, 0, 0, 0, 0, 0, 2]
   ok   six Fano lines are real collinearities; the seventh, {(1,1,0),(1,0,1),(0,1,1)}, has determinant -2: realizable only where 2 = 0 (CLASSICAL)

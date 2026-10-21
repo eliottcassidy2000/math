@@ -19372,3 +19372,36 @@ the ambient space.
   - Compute a heuristic count in a committed script before quoting its comparison with the data.
 - **Second audit (2026-10-21, after the landing commit 1e25cb70ae):** no errors; corrected the THM-4610 remark (the 3x - 1 cycles are cited, not iterated), the typing of statement 6, the HEURISTIC naive count moved out of a FINITE-EXACT list, the "null-checked" wording (only rule (b) is simulated), three stale "audit pending" cross-references in HYP-9244 and two 2026-10-09 notes, four rounding slips, the GGM class (undivided p C_p), "net downward" for a non-monotone drift, search ranges for the Z_7 statement, and the S3 gap of about 16 standard errors.
 
+## MISTAKE-650 (2026-10-21, opus-2026-10-21-S49 seven-point sphere and converse-Gluck packet, THM-4742, THM-4743 and HYP-9353; found by the session's independent audit after the pre-audit checkpoint 04f449d747 was pushed, and in part independently by the concurrent Session24 review cba114930c) -- a vacuous computation read as a dimension theorem, a conjecture stated as a theorem in prose, a superseded canon file cited one day after the MISTAKE-647 lesson, stacking conflated with substitution, credits missing, and a regime and a field condition omitted
+
+- **A vacuous test read as a theorem (THM-4742 statement 5).**
+  - The pre-audit theorem said the pencil is "a three-dimensional phenomenon", with the six labels sharing no sphere in dimensions 2, 4 and 5.
+  - (P5) fitted spheres in `R^n` through `n + 1` labels and silently skipped singular systems. For `n ≥ 4` every system was singular, because all labels lie in the 3-flat `O + span(v, s, w)`, so nothing was tested.
+  - In fact the pencil holds verbatim for every `n ≥ 3`, with `H' = O' + n(G' − O')`, inversion radius `√(n+1) R` and `Σ = 2nR² − 2 v·s`. In the plane `v, s, w` are dependent and the statement is void.
+  - Now (P1n) proves the identities symbolically in `n` and `R²`, and (P5) checks `n = 3…6` in exact Gram coordinates with every label reconstructed.
+- **A conjecture stated as a theorem in prose.**
+  - Note §4 said THM-4743 decides when observers fail to break the sign: "only in the Gluck circulants and their triangle towers".
+  - That was HYP-9353's open direction. THM-4743 proved only the "if" direction and the primitive case.
+  - The Session24 review flagged the same sentence. Its structural proof (cba114930c) then proved HYP-9353 the same day, and the sentence now cites that proof.
+- **Other overclaims in §4.**
+  - Collatz cycles were said to be "killed by integrality plus size". Nontrivial cycles are excluded only up to 91 local minima (Hercher 2023); the general case is OPEN.
+  - Fano's seventh line was typed as killed "by positivity". Its obstruction is the characteristic (determinant `−2`).
+  - "(S5)" was attributed to THM-4610. It is a section of the `zp_rank_one_coalescence` note.
+  - An unscripted scratch claim about tangent spheres was removed.
+- **A superseded canon file cited — a repeat of MISTAKE-647 one day later.**
+  - THM-4743, HYP-9353 and the note cited THM-2450 ("rigid self-converse classes are cyclic-ternary towers") as a grammar, and called the exceptional family "the maximally symmetric corner of the same grammar".
+  - THM-2450 is FINITE-EXACT through `n = 10`. Its frontier is superseded by THM-2477 and the all-order bypass proof: path-rigid tournaments (`H = |Aut|`, not `Aut = 1`) are exactly the ordered stacks of `{1, C_3}`.
+  - Stacking and triangle substitution are different operations: `C_3[C_3]` is exceptional and has `H/|Aut| = 39`.
+  - MISTAKE-647 (S48) was about missing THM-2477. S49 cited the file that THM-2477 supersedes.
+  - The audit narrowed the citation's scope; the Session24 review identified THM-2477 and the conflation.
+- **Missing credits.**
+  - session23b had `Q1(H') = 6 − 2 v·s > 0` (that is, `Σ > 0` over `R`) and `A ≠ C` for a genuine tetrahedron before S49. The pre-audit THM-4742 presented both as new.
+  - `D(T) ≤ 2` for tournaments was credited to the Albertson–Collins conjecture, Lozano and Meslem–Sopena. It is Godsil (2002), as cited by Lozano; Meslem–Sopena treat cyclic tournaments.
+- **Regime and field condition omitted.**
+  - The pencil needs `O, V0, G, O'` not coplanar. The pre-audit statement gave no regime.
+  - The field dichotomy said `Σ` "vanishes exactly over non-real fields". In fact a nondegenerate zero needs `−1` to be a sum of at most `n² − 1` squares (level at most 8 for the tetrahedron), and the `F_p` statement is FINITE-EXACT for `5 ≤ p ≤ 97` (the audit added exhaustive `F_5`).
+- **A computation described as more than it was ((G1)).** The regular-orbit counts were described as computed for `Aut(P_q)`. They are for the affine group `{x ↦ ax + b}`, which is the full group for prime `q` (Goldberg 1970), and the closed form needs `q` prime. The audit recomputed the groups from the tournaments for `q ≤ 19`.
+- **Missing coordinates.**
+  1. A check whose cases are all skipped is not evidence. Count the cases actually tested, and assert that the count is positive.
+  2. Before citing a canon file, read its status line and grep for files that supersede it. This is the MISTAKE-645/647 lesson, now applied to citations as well as claims.
+  3. Before writing "only" or "exactly" in prose, check that the canon statement being summarized says the same.

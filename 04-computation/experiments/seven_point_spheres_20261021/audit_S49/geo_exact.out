@@ -1,0 +1,9 @@
+n=3: 300 rational tetrahedra, failures 0
+n=2: (affine rank of labels+O, ABDEFH cospherical, family dim, BCDEF cospherical, family dim, all 7): {(2, False, 0, False, 0, False): 12}
+   n=2 concyclic 4-sets of distinct points (count over 12 triangles): {'ABCE': 12, 'BDEF': 12}
+n=3: (affine rank of labels+O, ABDEFH cospherical, family dim, BCDEF cospherical, family dim, all 7): {(3, True, 0, True, 0, False): 12}
+n=4: (affine rank of labels+O, ABDEFH cospherical, family dim, BCDEF cospherical, family dim, all 7): {(3, True, 1, True, 1, False): 12}
+n=5: (affine rank of labels+O, ABDEFH cospherical, family dim, BCDEF cospherical, family dim, all 7): {(3, True, 2, True, 2, False): 12}
+n=6: (affine rank of labels+O, ABDEFH cospherical, family dim, BCDEF cospherical, family dim, all 7): {(3, True, 3, True, 3, False): 12}
+n=4: one sphere through ABDEFH: residuals [Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)], Pow(C) = 36043/36, Sigma = 36043/36, Pow(O) = 78272979556375/10519374096, (n+1)R^2 = 78272979556375/10519374096
+n=5: one sphere through ABDEFH: residuals [Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)], Pow(C) = 91549/144, Sigma = 91549/144, Pow(O) = 119423912733186478119/71968786686397568, (n+1)R^2 = 119423912733186478119/71968786686397568

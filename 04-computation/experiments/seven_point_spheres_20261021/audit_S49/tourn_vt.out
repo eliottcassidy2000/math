@@ -1,0 +1,6 @@
+Cayley tournaments on Z3^2 isomorphic to C3[C3]: 16 of 16
+circtourn21.d6: 88 tournaments; without a found regular subset: [87]; iso to P7[C3]: [True]  [1s]
+othervttourn21.d6: 22 tournaments; without a found regular subset: []; iso to P7[C3]: []  [1s]
+Z3^3: 8192 Cayley tournaments; tries histogram {1: 7536, 2: 225, 3: 15}; without regular after 400 tries: 416, of which iso to C3^[3]: 416  [32s]
+Z9xZ3: 8192 Cayley tournaments; tries histogram {1: 8012, 2: 60, 3: 4, 4: 2, 5: 2, 6: 3, 7: 4, 8: 2, 9: 1, 10: 46}; without regular after 400 tries: 56, of which iso to C3^[3]: 56  [38s]
+Z27: 8192 Cayley tournaments; tries histogram {1: 8128, 2: 33, 3: 2, 4: 1, 9: 2, 10: 18}; without regular after 400 tries: 8, of which iso to C3^[3]: 8  [40s]
