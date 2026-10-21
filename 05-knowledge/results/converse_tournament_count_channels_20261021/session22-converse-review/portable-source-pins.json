@@ -1,0 +1,5 @@
+{
+  "original_sha256": "c95d8685ba1ee99050a7695ebc5c891284eb0348923952768e4785e0335bbb49",
+  "published_sha256": "5863855b9abbea83b7272ed9f014124486e54f016dbcb2fdfd7729a0940e81ec",
+  "change": "Explicit real repository-root discovery and exact historical THM283 snapshot for the inherited old-source pin; no fallback."
+}

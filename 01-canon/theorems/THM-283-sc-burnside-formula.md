@@ -25,9 +25,7 @@ The exponent c(λ) is the SAME Davis formula as for A000568:
 2. **At most one fixed point:** Two fixed points u,v would require T(u,v) = T(v,u),
    which is impossible in a tournament. So 0 fixed points (n even) or 1 (n odd).
 
-3. **Parts ≡ 2 mod 4 (not ≡ 0 mod 4):** An even cycle of length ≡ 0 mod 4 creates
-   a pair orbit of odd length under the anti-automorphism map, killing the contribution.
-   Only ≡ 2 mod 4 cycles have all pair orbits of even length.
+3. **Parts ≡ 2 mod 4 (not ≡ 0 mod 4):** For an unordered-pair orbit of length L, consistency requires g^L to preserve the two endpoints individually when L is even and to swap them when L is odd. In an even vertex cycle of length r, its antipodal pair orbit has length r/2 and swaps endpoints, so r/2 must be odd. Thus r must be 2 mod 4; non-antipodal internal pair orbits then have even length and preserve endpoints.
 
 ## The Complete Mirror Symmetry
 

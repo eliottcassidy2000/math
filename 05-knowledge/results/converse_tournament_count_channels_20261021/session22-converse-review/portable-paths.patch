@@ -1,0 +1,18 @@
+--- original/audit.py
++++ published/audit.py
+@@ -9,7 +9,14 @@
+  checks+=1
+  if not ok:raise RuntimeError(msg)
+ pins=json.loads((ROOT/'session22-converse-channels/source-pins.json').read_text())
+-for p,h in pins.items():require(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==h,'pin '+p)
++REPO=next(p for p in ROOT.parents if (p/'AGENTS.md').is_file() and (p/'01-canon').is_dir())
++def provenance_path(path):
++ if path=='math/01-canon/theorems/THM-283-sc-burnside-formula.md':
++  return ROOT/'provenance/THM-283-original-historical-error.md'
++ if not path.startswith('math/'):
++  raise RuntimeError('Unexpected provenance path: '+path)
++ return REPO/path.removeprefix('math/')
++for p,h in pins.items():require(hashlib.sha256(provenance_path(p).read_bytes()).hexdigest()==h,'pin '+p)
+ def literal(n,p):
+  edges=list(itertools.combinations(range(n),2));idx={e:i for i,e in enumerate(edges)}
+  mapped=[(idx[tuple(sorted((p[u],p[v])))],p[u]>p[v]) for u,v in edges]

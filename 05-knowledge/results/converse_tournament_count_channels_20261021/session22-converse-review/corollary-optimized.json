@@ -1,0 +1,15 @@
+{
+  "checks": 5860,
+  "orders": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "tuple_sizes": [
+    1,
+    2,
+    3
+  ],
+  "result": "PASS"
+}

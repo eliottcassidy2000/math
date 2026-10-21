@@ -1,0 +1,99 @@
+{
+  "source_commit": "f4353d7da3e141ddad7d90f13c40ac1ded239552",
+  "files": {
+    "README.md": {
+      "sha256": "0e16355adad0e46ec91adb0aa6929bb39556a654b62adbb8530a8c24f23e7542",
+      "bytes": 3417
+    },
+    "canonical-correction.patch": {
+      "sha256": "d6f1e54e47bb31a736957dd2c85086f5a58e1eae8ca1bfbd871f9965d021aec2",
+      "bytes": 4284
+    },
+    "provenance/THM-283-original-historical-error.md": {
+      "sha256": "24aaf5ef50e34b3735de64ebe4c030ab5dd2e34dba456b0198ea747abe10e0c5",
+      "bytes": 2146
+    },
+    "session22-converse-channels/README.md": {
+      "sha256": "e48442ade5aa0083e893e77e41c9e7c281c8edccf221ebc932bf82a5715cdb55",
+      "bytes": 8109
+    },
+    "session22-converse-channels/channels.py": {
+      "sha256": "b27d30d8f8cc81768c8f6b382f446658515d86f2cf5f212d2b59e20859ba6792",
+      "bytes": 3995
+    },
+    "session22-converse-channels/check.py": {
+      "sha256": "27c3944e46da4db895495db2ff78af4f13d1c6550d99a52e7c80ec73b01a2247",
+      "bytes": 4804
+    },
+    "session22-converse-channels/incoming_local_scale.py": {
+      "sha256": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad",
+      "bytes": 2668
+    },
+    "session22-converse-channels/optimized-receipt.json": {
+      "sha256": "c91c9eb25c296b27f83707ec0b634a4f31bd4bfae346d7c15df302e0e4d1a101",
+      "bytes": 15972
+    },
+    "session22-converse-channels/receipt.json": {
+      "sha256": "c91c9eb25c296b27f83707ec0b634a4f31bd4bfae346d7c15df302e0e4d1a101",
+      "bytes": 15972
+    },
+    "session22-converse-channels/source-pins.json": {
+      "sha256": "36c483b10811136ecfd6327299a9f472a463d389f8f78c760dd815bae7efb632",
+      "bytes": 621
+    },
+    "session22-converse-review/COROLLARY_REVIEW.md": {
+      "sha256": "ba81ad86423b7288d131e56087859d845b242c245f3e743afebd648a0d17cdd7",
+      "bytes": 2520
+    },
+    "session22-converse-review/REVIEW.md": {
+      "sha256": "96073afa4bbc962fdfbed6d4749cd6c846a884b47c50aa55c672b848979740ec",
+      "bytes": 4445
+    },
+    "session22-converse-review/audit-normal.json": {
+      "sha256": "360d8baeca681642d2975d1099fb53524c915d8457e95e1fa96b7023f84be14c",
+      "bytes": 1611
+    },
+    "session22-converse-review/audit-optimized.json": {
+      "sha256": "360d8baeca681642d2975d1099fb53524c915d8457e95e1fa96b7023f84be14c",
+      "bytes": 1611
+    },
+    "session22-converse-review/audit.py": {
+      "sha256": "5863855b9abbea83b7272ed9f014124486e54f016dbcb2fdfd7729a0940e81ec",
+      "bytes": 3215
+    },
+    "session22-converse-review/corollary-normal.json": {
+      "sha256": "cb755ab0263706234af4dcfa8b23b4e15290023d5d56fe2a913163256ae0e8bc",
+      "bytes": 131
+    },
+    "session22-converse-review/corollary-optimized.json": {
+      "sha256": "cb755ab0263706234af4dcfa8b23b4e15290023d5d56fe2a913163256ae0e8bc",
+      "bytes": 131
+    },
+    "session22-converse-review/corollary_audit.py": {
+      "sha256": "0b1f33b0a3e9bbd11301fd3b5ad02af889da55fea8ad050011b2af56c5377eb4",
+      "bytes": 1358
+    },
+    "session22-converse-review/original-audit.json": {
+      "sha256": "c17d501e38fa523f16baaafa2c740a73b5a032730c1816db977ea0e16fa654db",
+      "bytes": 1611
+    },
+    "session22-converse-review/portable-paths.patch": {
+      "sha256": "f2af255dba62e9f335ffde0786ff772e726c6715f22cfa2a493a499117cccf4b",
+      "bytes": 963
+    },
+    "session22-converse-review/portable-source-pins.json": {
+      "sha256": "0bbbd8c9b277d169a101ee41019f13a478c0331c54437e396849643266485b6e",
+      "bytes": 321
+    }
+  },
+  "canonical_updates": {
+    "01-canon/theorems/THM-283-sc-burnside-formula.md": {
+      "sha256": "2282e0b1ff43b6516c1262172713ce7642f727bc73bbf28173c8b2f6bffcb178",
+      "bytes": 2328
+    },
+    "01-canon/MISTAKES.md": {
+      "sha256": "0e2a251fce6df7212a517857e47829d5cd5e93e2cab09fdfb256321927af46b1",
+      "bytes": 1705672
+    }
+  }
+}
