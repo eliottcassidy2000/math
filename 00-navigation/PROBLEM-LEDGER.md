@@ -803,9 +803,10 @@ all heights (THM-1289, published), δ ineffective.
 - **Presentation counts of metagraph nodes (opus, 2026-10-20-S48; [note](../05-knowledge/results/presentation_counts_single_view_classes_rotation_inequality_20261020.md), THM-4741, HYP-9352).**
   Owner directive: next obligations toward a complete classification of tournament metagraph structure, in the language of intransitivity of information or
   electrical networks; lane split with mac-mini-2026-10-21-electric (Kirchhoff/Hodge laws, consecutive ports: THM-4739/4740, HYP-9351). PROVED: the rotation inequality tc >= n/|Z_C| for
-  strong T (rigid strong tournaments have tc >= n); the pendant nodes of the fundamental black graph are exactly the non-palindromic {K1, C3}-stacks
-  (2, 4, 6, 10, 14 at n = 5..9); a second proof of THM-2477's all-order rigid classification (rotations force a circulant; THM-4730 (B)); a strong tc = 3 class
-  is circulant or 3-fold symmetric. PRIOR ART credited after the checkpoint (MISTAKE-647): tc = 1 iff {K1, C3}-stack with the A000930 count = THM-2477 (superseded
+  strong T (a corollary of THM-4729 L2; rigid strong tournaments have tc >= n); the pendant nodes of the converse-merged fundamental black graph are the
+  converse pairs of non-palindromic {K1, C3}-stacks plus the self-converse classes with tc - bm = 2 (1, 3, 3, 6, 7 at n = 5..9; corrects HYP-9347 (4),
+  MISTAKE-648); a second route to THM-2477's all-order rigid classification (rotations force a circulant; the audited prefix-rerouting theorem); a strong
+  tc = 3 class has n/|Z_C| in {1, 2, 3}. PRIOR ART credited after the checkpoint (MISTAKE-647): tc = 1 iff {K1, C3}-stack with the A000930 count = THM-2477 (superseded
   2026-10-20 via Benhocine-Wojda) / THM-2453; the 7 and 21 gaps of the path spectrum = THM-1370 (Busch's 5^((n-1)/3) matches the census minima 3, 5, 9, 15, 25, 45, 75). FINITE-EXACT: strong spectra and minima n <= 9 (min strong tc 25, min strong H 75,
   178,133 strong classes at n = 9); tc = 3 classes = one-T5 stacks (1, 2, 3, 6, 11); 7, 21 absent from all tc and H spectra n <= 9. REFUTED: H as a descent
   potential. NUMERICAL: three-move law at n = 11 on 50,190 random closed blue lines. Next: tc >= 5 for strong T outside {K1, C3, T5}, fibre sizes 7/21
