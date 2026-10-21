@@ -1,0 +1,41 @@
+{
+  "date_utc": "2026-10-21",
+  "files": {
+    "AUDIT.md": {
+      "bytes": 7145,
+      "sha256": "475e74ac31febc9d14b6736bbb7d4d8bcee5facb769ddc65f31c62eb6312ac6e"
+    },
+    "check_kepler_boundaries.json": {
+      "bytes": 884,
+      "sha256": "d3e5a6662d55a696d1e3dafbd4bffccbe59652411cf4ba1d5ea361eb589b0c34"
+    },
+    "check_kepler_boundaries.py": {
+      "bytes": 4611,
+      "sha256": "3a1d53f8019888ec53872597cdd2dacb2ce9cc9f455ac84fec6242c9a509e48f"
+    },
+    "inspected-source.sha256": {
+      "bytes": 224,
+      "sha256": "bcb157ae3db6df0f939004efaf4938e4bafa6c180b6fd92bd647b53d8ff10dd0"
+    }
+  },
+  "lineage": {
+    "inspected_source_record": "inspected-source.sha256 (preserved unchanged)",
+    "original_assert_based_script_sha256": "df005e84d20f6e5b794f934cb691ed5a7ff712f9cb87a19613fcf565b39f80bb",
+    "original_audit_note_sha256": "9b19cea7ee5a9ebe681aeed0fd6a877a17e02eb444b9c24f667a606ea6c3cd55"
+  },
+  "manifest_self_hash": "Excluded by design; pin the manifest independently.",
+  "packet": "session19-kepler-boundary-audit",
+  "schema": "scoped-mathematical-audit-packet-v1",
+  "scope": "K2 endpoint repair, K3 conditional finiteness and rational bound, K4 closure/attainment/density distinctions; no source edits or Git mutations",
+  "verification": {
+    "assertions_replaced": 13,
+    "normal_command": "python3 check_kepler_boundaries.py",
+    "normal_exit_code": 0,
+    "normal_optimized_and_saved_json_byte_identical": true,
+    "optimized_command": "python3 -O check_kepler_boundaries.py",
+    "optimized_exit_code": 0,
+    "optimized_forced_failure_control": "PASS: temporary mutated guard raises AssertionError under -O",
+    "remaining_assert_ast_nodes": 0,
+    "stdout_sha256": "d3e5a6662d55a696d1e3dafbd4bffccbe59652411cf4ba1d5ea361eb589b0c34"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS (finite exact checks; all-n proof supplied in note)",
+  "phase_partition": "n=3..32; every vertex and every open-side midpoint",
+  "phase_checks": 1050,
+  "old_right_rate_endpoint_mismatches": 30,
+  "minimal_counterexample": {
+    "n": 3,
+    "D": [
+      1,
+      2
+    ],
+    "t": "1/3",
+    "phases": [
+      "1/3",
+      "2/3"
+    ],
+    "lonely": true,
+    "all_right_rates_positive": false
+  },
+  "exact_tight_lonely_set_D_1_2_modulo_1": [
+    "1/3",
+    "2/3"
+  ],
+  "maximizer_checks": 154,
+  "maximizer_universe": "all distinct positive integer k-sets in 1..8, k=2..4",
+  "independent_paths": "complete piecewise-linear envelope versus pair-sum candidate grid",
+  "nonattainment_control": "D={1,2}, target 2/5 gives an empty rational closed-time set",
+  "scope": "No LRC proof, no general real-flow nonattainment counterexample, no repository changes."
+}
