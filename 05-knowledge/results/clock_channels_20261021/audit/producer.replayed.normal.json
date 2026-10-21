@@ -1,0 +1,268 @@
+{
+  "checks": {
+    "general_clock_difference": 15,
+    "general_modulus": 15,
+    "odd_word": 31,
+    "ordinary_clock_and_first_exit": 31,
+    "period": 15,
+    "primitive_clock": 31,
+    "printed_source": 1,
+    "same_guard_full_clock": 31,
+    "same_modular_clock": 31,
+    "shortcut_clock_and_first_exit": 31,
+    "source": 31
+  },
+  "rows": [
+    {
+      "P_clock": 3,
+      "first_shortcut_exit": 4,
+      "j": 0,
+      "ordinary_ROOT": 7,
+      "shortcut_ROOT": 5,
+      "source": 3
+    },
+    {
+      "P_clock": 9,
+      "first_shortcut_exit": 4,
+      "j": 1,
+      "ordinary_ROOT": 13,
+      "shortcut_ROOT": 11,
+      "source": 227
+    },
+    {
+      "P_clock": 15,
+      "first_shortcut_exit": 4,
+      "j": 2,
+      "ordinary_ROOT": 19,
+      "shortcut_ROOT": 17,
+      "source": 14563
+    },
+    {
+      "P_clock": 21,
+      "first_shortcut_exit": 4,
+      "j": 3,
+      "ordinary_ROOT": 25,
+      "shortcut_ROOT": 23,
+      "source": 932067
+    },
+    {
+      "P_clock": 27,
+      "first_shortcut_exit": 4,
+      "j": 4,
+      "ordinary_ROOT": 31,
+      "shortcut_ROOT": 29,
+      "source": 59652323
+    },
+    {
+      "P_clock": 33,
+      "first_shortcut_exit": 4,
+      "j": 5,
+      "ordinary_ROOT": 37,
+      "shortcut_ROOT": 35,
+      "source": 3817748707
+    },
+    {
+      "P_clock": 39,
+      "first_shortcut_exit": 4,
+      "j": 6,
+      "ordinary_ROOT": 43,
+      "shortcut_ROOT": 41,
+      "source": 244335917283
+    },
+    {
+      "P_clock": 45,
+      "first_shortcut_exit": 4,
+      "j": 7,
+      "ordinary_ROOT": 49,
+      "shortcut_ROOT": 47,
+      "source": 15637498706147
+    },
+    {
+      "P_clock": 51,
+      "first_shortcut_exit": 4,
+      "j": 8,
+      "ordinary_ROOT": 55,
+      "shortcut_ROOT": 53,
+      "source": 1000799917193443
+    },
+    {
+      "P_clock": 57,
+      "first_shortcut_exit": 4,
+      "j": 9,
+      "ordinary_ROOT": 61,
+      "shortcut_ROOT": 59,
+      "source": 64051194700380387
+    },
+    {
+      "P_clock": 63,
+      "first_shortcut_exit": 4,
+      "j": 10,
+      "ordinary_ROOT": 67,
+      "shortcut_ROOT": 65,
+      "source": 4099276460824344803
+    },
+    {
+      "P_clock": 69,
+      "first_shortcut_exit": 4,
+      "j": 11,
+      "ordinary_ROOT": 73,
+      "shortcut_ROOT": 71,
+      "source": 262353693492758067427
+    },
+    {
+      "P_clock": 75,
+      "first_shortcut_exit": 4,
+      "j": 12,
+      "ordinary_ROOT": 79,
+      "shortcut_ROOT": 77,
+      "source": 16790636383536516315363
+    },
+    {
+      "P_clock": 81,
+      "first_shortcut_exit": 4,
+      "j": 13,
+      "ordinary_ROOT": 85,
+      "shortcut_ROOT": 83,
+      "source": 1074600728546337044183267
+    },
+    {
+      "P_clock": 87,
+      "first_shortcut_exit": 4,
+      "j": 14,
+      "ordinary_ROOT": 91,
+      "shortcut_ROOT": 89,
+      "source": 68774446626965570827729123
+    },
+    {
+      "P_clock": 93,
+      "first_shortcut_exit": 4,
+      "j": 15,
+      "ordinary_ROOT": 97,
+      "shortcut_ROOT": 95,
+      "source": 4401564584125796532974663907
+    },
+    {
+      "P_clock": 99,
+      "first_shortcut_exit": 4,
+      "j": 16,
+      "ordinary_ROOT": 103,
+      "shortcut_ROOT": 101,
+      "source": 281700133384050978110378490083
+    },
+    {
+      "P_clock": 105,
+      "first_shortcut_exit": 4,
+      "j": 17,
+      "ordinary_ROOT": 109,
+      "shortcut_ROOT": 107,
+      "source": 18028808536579262599064223365347
+    },
+    {
+      "P_clock": 111,
+      "first_shortcut_exit": 4,
+      "j": 18,
+      "ordinary_ROOT": 115,
+      "shortcut_ROOT": 113,
+      "source": 1153843746341072806340110295382243
+    },
+    {
+      "P_clock": 117,
+      "first_shortcut_exit": 4,
+      "j": 19,
+      "ordinary_ROOT": 121,
+      "shortcut_ROOT": 119,
+      "source": 73845999765828659605767058904463587
+    },
+    {
+      "P_clock": 123,
+      "first_shortcut_exit": 4,
+      "j": 20,
+      "ordinary_ROOT": 127,
+      "shortcut_ROOT": 125,
+      "source": 4726143985013034214769091769885669603
+    },
+    {
+      "P_clock": 129,
+      "first_shortcut_exit": 4,
+      "j": 21,
+      "ordinary_ROOT": 133,
+      "shortcut_ROOT": 131,
+      "source": 302473215040834189745221873272682854627
+    },
+    {
+      "P_clock": 135,
+      "first_shortcut_exit": 4,
+      "j": 22,
+      "ordinary_ROOT": 139,
+      "shortcut_ROOT": 137,
+      "source": 19358285762613388143694199889451702696163
+    },
+    {
+      "P_clock": 141,
+      "first_shortcut_exit": 4,
+      "j": 23,
+      "ordinary_ROOT": 145,
+      "shortcut_ROOT": 143,
+      "source": 1238930288807256841196428792924908972554467
+    },
+    {
+      "P_clock": 147,
+      "first_shortcut_exit": 4,
+      "j": 24,
+      "ordinary_ROOT": 151,
+      "shortcut_ROOT": 149,
+      "source": 79291538483664437836571442747194174243485923
+    },
+    {
+      "P_clock": 153,
+      "first_shortcut_exit": 4,
+      "j": 25,
+      "ordinary_ROOT": 157,
+      "shortcut_ROOT": 155,
+      "source": 5074658462954524021540572335820427151583099107
+    },
+    {
+      "P_clock": 159,
+      "first_shortcut_exit": 4,
+      "j": 26,
+      "ordinary_ROOT": 163,
+      "shortcut_ROOT": 161,
+      "source": 324778141629089537378596629492507337701318342883
+    },
+    {
+      "P_clock": 165,
+      "first_shortcut_exit": 4,
+      "j": 27,
+      "ordinary_ROOT": 169,
+      "shortcut_ROOT": 167,
+      "source": 20785801064261730392230184287520469612884373944547
+    },
+    {
+      "P_clock": 171,
+      "first_shortcut_exit": 4,
+      "j": 28,
+      "ordinary_ROOT": 175,
+      "shortcut_ROOT": 173,
+      "source": 1330291268112750745102731794401310055224599932451043
+    },
+    {
+      "P_clock": 177,
+      "first_shortcut_exit": 4,
+      "j": 29,
+      "ordinary_ROOT": 181,
+      "shortcut_ROOT": 179,
+      "source": 85138641159216047686574834841683843534374395676866787
+    },
+    {
+      "P_clock": 183,
+      "first_shortcut_exit": 4,
+      "j": 30,
+      "ordinary_ROOT": 187,
+      "shortcut_ROOT": 185,
+      "source": 5448873034189827051940789429867765986199961323319474403
+    }
+  ],
+  "scope": "All-j result proved algebraically; finite replay is control, not global coverage.",
+  "status": "PASS",
+  "total_checks": 263
+}

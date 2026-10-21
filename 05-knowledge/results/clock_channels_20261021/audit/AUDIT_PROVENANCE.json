@@ -1,0 +1,23 @@
+{
+  "clock_proof_sha256": "a20ec35bcd408192091c93181d8d38c5ce8c7672982a162ac50bef93facc6304",
+  "companion_matches": true,
+  "companion_scope": "63/273 and3/7 examples cited in section1; main grounded family proof independent.",
+  "dependencies": [
+    {
+      "independently_observed_sha256": "91b52f8e7bd7332ff1edcbd1dfdd0b43afca15cf17c7e451b32f3d5621c0b839",
+      "matches": true,
+      "path": "05-knowledge/results/native_cancellation_105_20261018g.md",
+      "sha256": "91b52f8e7bd7332ff1edcbd1dfdd0b43afca15cf17c7e451b32f3d5621c0b839"
+    },
+    {
+      "independently_observed_sha256": "75a59e714f2aba35ebf6b9dcaff3e52e06d520ff42542bc06be35bf3f25c575b",
+      "matches": true,
+      "path": "05-knowledge/results/guarded_children_105_20261018g.md",
+      "sha256": "75a59e714f2aba35ebf6b9dcaff3e52e06d520ff42542bc06be35bf3f25c575b"
+    }
+  ],
+  "idoneal_companion_proof_sha256": "5b7790cc4adf658ab14cf893941fdbe0bd7a2d2c04aed135141cc105c6c1c229",
+  "independently_observed_companion_sha256": "5b7790cc4adf658ab14cf893941fdbe0bd7a2d2c04aed135141cc105c6c1c229",
+  "source_check_scope": "Primitive map and clock conventions read directly; explicit companion examples replayed. No global completeness theorem audited.",
+  "status": "PASS"
+}
