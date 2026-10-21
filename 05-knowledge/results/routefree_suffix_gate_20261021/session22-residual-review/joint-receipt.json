@@ -1,0 +1,7 @@
+{
+  "actual_quadratic_mixed_max": 17,
+  "brute_individual_sign_comparisons": 144,
+  "joint_G": 17,
+  "partial_assignment_cases": 2401,
+  "scope": "Algebraic independent test of exact joint extension; no new native census"
+}

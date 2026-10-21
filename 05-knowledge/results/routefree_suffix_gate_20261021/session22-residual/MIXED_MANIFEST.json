@@ -1,0 +1,11 @@
+{
+  "status": "Normal and optimized exact replay passed; separate refinement, base packet unchanged",
+  "files": {
+    "MIXED-COROLLARY.md": "0b8184b119ab701b4c5a2376965d45b8623d9323c394511214d1a0cb0f32d7a8",
+    "mixed_gate.py": "1bc34c05094ca2b855d3f50d2fc73a7994f563e6fabfcb75eadbacfc7c5f9e0d",
+    "mixed_receipt.json": "4a65b10d2066e63258eb9be99039a4c12c58d3960e999ab1f3d4668e35d6fbab",
+    "mixed_normal.out": "47e62c934d6e3ad2881331779ae2b7d46fe8d684e15535413f8f3fdfd8e5ef81",
+    "mixed_optimized.out": "66f15375b0dcce920c37694a1611e96aeaac1713b459653c47e0a1d86913e7e2"
+  },
+  "base_dependency_sha256": "1d24188af100b3394b9e47b4b27e35e80b15863e9f033c05081868d7ff5a1632"
+}

@@ -1,0 +1,18 @@
+{
+  "suggested_repository_path": "05-knowledge/results/routefree_suffix_gate_20261021",
+  "files": {
+    "README.md": "a60a8eb0dfe475e1907f372f7a503834cde84a085c1511fd39f64585ac228773",
+    "check.py": "1d24188af100b3394b9e47b4b27e35e80b15863e9f033c05081868d7ff5a1632",
+    "receipt.json": "e5ec575906451e4a6ee293a98ed85dc3d90a2a8b18b878a921df151166d9032a",
+    "normal.out": "e84ec7a12ba18801a1ac5b1cd60ad6c27621c47fdc1c25a5c40c91369b322d51",
+    "optimized.out": "ccb172f4dba07fa685f384c4b3454025d6fd58552e3b36b342ecaff3336f6523",
+    "moment-hostile.json": "780baef1f1d4e874ad8c69f6c9a542f84e36f443584ba0eb79348ceb96fedc8a",
+    "moment-hostile.out": "52ea05d4f88f53f362e2192cccda4a2fa26803dbe813da285175ad7c8f340318"
+  },
+  "reproduction": [
+    "python3 check.py --repo-root /path/to/math --output receipt.json",
+    "python3 -O check.py --repo-root /path/to/math --verify receipt.json",
+    "python3 check.py --repo-root /path/to/math --cases 4096:149 --verify moment-hostile.json"
+  ],
+  "status": "Normal and optimized immutable replay complete; root-coordinated independent audit in session22-residual-review."
+}

@@ -1,0 +1,2 @@
+{"delta": 425014, "D_old": 0, "D_new": 0, "L_old": 0, "L_new": 0, "mixed_ceiling": 0, "upper": 425014, "N": 4096, "horizon": 149, "budget": 626688, "old_unarrived": 0, "new_unarrived": 0, "pending_nonzero": 0, "arrived_count": 393216, "source_rows_sha256": "d51db550367e49b3adb942293996ea1f4ffa3cb312a59ee14677e3a45dfe5bde", "source_guard_count": 393216, "max_single_exploration": 114, "maximum_prefix_delta": 425014, "prefix_pass": true, "suffix_pass": true}
+{"checks": 3494179, "receipt_sha256": "780baef1f1d4e874ad8c69f6c9a542f84e36f443584ba0eb79348ceb96fedc8a"}
