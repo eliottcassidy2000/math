@@ -169,8 +169,8 @@ The same source lies just outside the incoming electrical star cone:
 the ellipsoid, giving correlation1/99 and a globally optimal weighted
 triangle-plus-leaf network. Its geometry and contact cycle do not supply
 the runner time; here that time is separately1/3. Multiplying all speeds
-by3 preserves the literal projected cube but changes N_min from3 to5,
-so the source/time normalization remains essential.
+by3 preserves the literal projected cube but, at threshold1/5, changes
+N_min from3 to5, so the source/time normalization remains essential.
 
 ## 6. What the4,2,1 fibres genuinely share with3,12,48
 
