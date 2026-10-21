@@ -810,8 +810,8 @@ all heights (THM-1289, published), δ ineffective.
   minima; prior art MathOverflow 232751 via Grinberg; Busch 2006's 5^((n-1)/3) matches the census minima 3, 5, 9, 15, 25, 45, 75), so rigid nodes never have
   fibre size 7 or 21; a strong tc = 3 class is circulant or 3-fold symmetric. FINITE-EXACT: strong spectra and minima n <= 9 (min strong tc 25, min strong H 75,
   178,133 strong classes at n = 9); tc = 3 classes = one-T5 stacks (1, 2, 3, 6, 11); 7, 21 absent from all tc and H spectra n <= 9. REFUTED: H as a descent
-  potential (sinks 4, 19, 99, 867, 13258). NUMERICAL: three-move law at n = 11 on 50,190 random closed blue lines (full census running at close-out).
-  Next: tc >= 5 for strong T outside {K1, C3, T5} (equivalently H > 3|Aut|), fibre sizes 7/21 for non-rigid classes, tc-descent, the n = 11 census.
+  potential. NUMERICAL: three-move law at n = 11 on 50,190 random closed blue lines. Next: tc >= 5 for strong T outside {K1, C3, T5}, fibre sizes 7/21
+  for non-rigid classes, the n = 11 census.
 - **Black detours of closed blue lines and the Klein dictionary (opus, 2026-10-20-S47; [note](../05-knowledge/results/black_detours_closed_blue_lines_klein_dictionary_20261020.md), THM-4732, HYP-9347).**
   Owner directive: information-flow view; debt cones / zero-heavy boundary / (n-4,3) detours; palette forcing, sources, ports, clocks; the 3-4-3 and 4-2-4 picture against
   complementation and path reversal; the order-10 case and the (n-5,4) layer; black-core connectivity via the trijection; the 153N annulus bill; the 65 idoneal numbers.
