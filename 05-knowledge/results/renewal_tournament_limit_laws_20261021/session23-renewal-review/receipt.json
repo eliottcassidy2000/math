@@ -1,0 +1,27 @@
+{
+  "actual_sampler_word_count": 4786,
+  "checks": 8928,
+  "dependencies": {
+    "math/05-knowledge/results/effective_black_defect_order_bound_20261020/PROOF.txt": "3f7977d49ec055c06abe856699d959e1c13b1afa3ced1c64186d088d6857dd25",
+    "math/05-knowledge/results/fixed_degree_metagraph_rationality_20261021/session22-fixed-degree-review/REVIEW.md": "b0593b639ed7b0550642ff6c4b6ecd115a9fb5c35735200577c52df5ab82b826",
+    "math/05-knowledge/results/fixed_degree_metagraph_rationality_20261021/session22-fixed-degree/PROOF.md": "e428906db3b67dbf5c85eef86460a012be8a9574a06bcd62759e73778f23446d",
+    "math/05-knowledge/results/metagraph_classification_20261021a/README.md": "a8fd5875952710217d4398eabcead0868899a335da9d7ff1feabb989487beb62"
+  },
+  "exact_actual_universe": "All 33,867 labelled tournaments on 1 through 6 vertices; every vertex-permutation orbit checked",
+  "files": {
+    "REVIEW.md": "3ad785fb10220edef8f1132ff03e3292dfb352509da9cfdb4d01ede741145bd3",
+    "check.py": "780da806b21be0139ece53986c1c3cf2af290d29887cb493d4659b347508f96c",
+    "normal.json": "72a6d816f6c0686c2f8d54af8c63f5d4b9edd6fd9516b9a5d9ae7a61fa025138",
+    "optimized.json": "72a6d816f6c0686c2f8d54af8c63f5d4b9edd6fd9516b9a5d9ae7a61fa025138"
+  },
+  "formal_atom_realizability_claim": false,
+  "formal_word_count": 11747,
+  "mathematical_candidate_sha256_before_status_only_promotion": "29af0d4f2af33289fa47c52b82b50cfbeebf11753d73264affda8a93125dc0da",
+  "normal_optimized_identical": true,
+  "proof_path": "session23-root/RENEWAL_LIMIT_LAWS.md",
+  "proof_sha256": "3f02867604f0c33a77ad1fd49906a9143894f59e31e1cd90e0dd386e8d7ab0f9",
+  "repository_or_git_mutations": false,
+  "scope": "Exact frozen proof, Theorems A-D, merged-node corollary and Corollary E; inherited audited finite-alphabet inputs",
+  "status_only_promotion_verified": true,
+  "verdict": "PASS"
+}

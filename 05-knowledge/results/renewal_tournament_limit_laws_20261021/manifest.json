@@ -1,0 +1,60 @@
+{
+  "status": "PROVED with inherited dependencies; independently reviewed",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1854,
+      "sha256": "41d7edbe909270cc9984bf3990dec91e58cd5e53ebfb1a2e8e6f5ea21c60122c"
+    },
+    {
+      "path": "session23-renewal-review/REVIEW.md",
+      "bytes": 9331,
+      "sha256": "3ad785fb10220edef8f1132ff03e3292dfb352509da9cfdb4d01ede741145bd3"
+    },
+    {
+      "path": "session23-renewal-review/check.py",
+      "bytes": 15970,
+      "sha256": "780da806b21be0139ece53986c1c3cf2af290d29887cb493d4659b347508f96c"
+    },
+    {
+      "path": "session23-renewal-review/normal.json",
+      "bytes": 16323,
+      "sha256": "72a6d816f6c0686c2f8d54af8c63f5d4b9edd6fd9516b9a5d9ae7a61fa025138"
+    },
+    {
+      "path": "session23-renewal-review/optimized.json",
+      "bytes": 16323,
+      "sha256": "72a6d816f6c0686c2f8d54af8c63f5d4b9edd6fd9516b9a5d9ae7a61fa025138"
+    },
+    {
+      "path": "session23-renewal-review/receipt.json",
+      "bytes": 1851,
+      "sha256": "f3588dd1f5eae82e44e591b474d24c2d80964050b0dcfe4fd8642f3d9dbaf0bf"
+    },
+    {
+      "path": "session23-root/RENEWAL_LIMIT_LAWS.md",
+      "bytes": 13449,
+      "sha256": "3f02867604f0c33a77ad1fd49906a9143894f59e31e1cd90e0dd386e8d7ab0f9"
+    },
+    {
+      "path": "session23-root/check_renewal.py",
+      "bytes": 5032,
+      "sha256": "3849e5d8ca75186714a55f6d8d8fd1a429cfa4351d8af7008c6e94f74966cc51"
+    },
+    {
+      "path": "session23-root/normal.json",
+      "bytes": 4480,
+      "sha256": "0032bb1c720e4da5bcf8702d6c4eb8ee5beeead76600333e240001f8d2cd0f4a"
+    },
+    {
+      "path": "session23-root/optimized.json",
+      "bytes": 4480,
+      "sha256": "0032bb1c720e4da5bcf8702d6c4eb8ee5beeead76600333e240001f8d2cd0f4a"
+    },
+    {
+      "path": "session23-root/source_pins.json",
+      "bytes": 532,
+      "sha256": "358085dadd75ba5dc9ab28d15ae5a9473538580f2b473d21a8342e3bf0c79156"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "checks": 2164,
+  "scope": "exact neutral-word coefficients and moments; no new strong-atom census; finite tests do not prove limits",
+  "proof_sha256": "3f02867604f0c33a77ad1fd49906a9143894f59e31e1cd90e0dd386e8d7ab0f9",
+  "script_sha256": "3849e5d8ca75186714a55f6d8d8fd1a429cfa4351d8af7008c6e94f74966cc51",
+  "rho": 0.6823278038280193,
+  "mu": 0.19425400402459375,
+  "sigma2": 0.049561517540450815,
+  "moment_controls": [
+    {
+      "gaps": 1,
+      "neutral_vertices": 60,
+      "triangle_mean": 11.493139941903953,
+      "triangle_variance": 2.990098296079343,
+      "mean_minus_muN": -0.16210029957167116,
+      "variance_minus_sigma2N": 0.016407243652293957,
+      "gap_second_moment_normalized": 1.0,
+      "dirichlet_target": 1.0
+    },
+    {
+      "gaps": 1,
+      "neutral_vertices": 180,
+      "triangle_mean": 34.803620424855204,
+      "triangle_variance": 8.937480400933454,
+      "mean_minus_muN": -0.16210029957166938,
+      "variance_minus_sigma2N": 0.016407243652308168,
+      "gap_second_moment_normalized": 1.0,
+      "dirichlet_target": 1.0
+    },
+    {
+      "gaps": 1,
+      "neutral_vertices": 540,
+      "triangle_mean": 104.73506187370896,
+      "triangle_variance": 26.779626715495745,
+      "mean_minus_muN": -0.16210029957166228,
+      "variance_minus_sigma2N": 0.01640724365230284,
+      "gap_second_moment_normalized": 1.0,
+      "dirichlet_target": 1.0
+    },
+    {
+      "gaps": 1,
+      "neutral_vertices": 1080,
+      "triangle_mean": 209.63222404698956,
+      "triangle_variance": 53.54284618733917,
+      "mean_minus_muN": -0.1621002995716765,
+      "variance_minus_sigma2N": 0.016407243652288628,
+      "gap_second_moment_normalized": 1.0,
+      "dirichlet_target": 1.0
+    },
+    {
+      "gaps": 2,
+      "neutral_vertices": 60,
+      "triangle_mean": 11.3358231474971,
+      "triangle_variance": 3.0052230799879793,
+      "mean_minus_muN": -0.31941709397852414,
+      "variance_minus_sigma2N": 0.03153202756093032,
+      "gap_second_moment_normalized": 0.33925995087430477,
+      "dirichlet_target": 0.3333333333333333
+    },
+    {
+      "gaps": 2,
+      "neutral_vertices": 180,
+      "triangle_mean": 34.64315253683252,
+      "triangle_variance": 8.953455138245518,
+      "mean_minus_muN": -0.32256818759435646,
+      "variance_minus_sigma2N": 0.03238198096437195,
+      "gap_second_moment_normalized": 0.33532849236224793,
+      "dirichlet_target": 0.3333333333333333
+    },
+    {
+      "gaps": 2,
+      "neutral_vertices": 540,
+      "triangle_mean": 104.57351005811877,
+      "triangle_variance": 26.795889233203546,
+      "mean_minus_muN": -0.323652115161849,
+      "variance_minus_sigma2N": 0.03266976136010413,
+      "gap_second_moment_normalized": 0.33400059502763413,
+      "dirichlet_target": 0.3333333333333333
+    },
+    {
+      "gaps": 2,
+      "neutral_vertices": 1080,
+      "triangle_mean": 209.47039853819496,
+      "triangle_variance": 53.55918099842189,
+      "mean_minus_muN": -0.32392580836628326,
+      "variance_minus_sigma2N": 0.03274205473500302,
+      "gap_second_moment_normalized": 0.33366724142535853,
+      "dirichlet_target": 0.3333333333333333
+    },
+    {
+      "gaps": 4,
+      "neutral_vertices": 60,
+      "triangle_mean": 11.034393888856423,
+      "triangle_variance": 3.0319424442191734,
+      "mean_minus_muN": -0.6208463526192016,
+      "variance_minus_sigma2N": 0.05825139179212435,
+      "gap_second_moment_normalized": 0.10525859847221411,
+      "dirichlet_target": 0.1
+    },
+    {
+      "gaps": 4,
+      "neutral_vertices": 180,
+      "triangle_mean": 34.326974159804685,
+      "triangle_variance": 8.984144574681755,
+      "mean_minus_muN": -0.6387465646221884,
+      "variance_minus_sigma2N": 0.06307141740060906,
+      "gap_second_moment_normalized": 0.1017868603933279,
+      "dirichlet_target": 0.1
+    },
+    {
+      "gaps": 4,
+      "neutral_vertices": 540,
+      "triangle_mean": 104.25203582910817,
+      "triangle_variance": 26.82798434269148,
+      "mean_minus_muN": -0.6451263441724535,
+      "variance_minus_sigma2N": 0.0647648708480375,
+      "gap_second_moment_normalized": 0.10059954332046021,
+      "dirichlet_target": 0.1
+    },
+    {
+      "gaps": 4,
+      "neutral_vertices": 1080,
+      "triangle_mean": 209.14756784737307,
+      "triangle_variance": 53.591634391402344,
+      "mean_minus_muN": -0.6467564991881716,
+      "variance_minus_sigma2N": 0.06519544771546038,
+      "gap_second_moment_normalized": 0.10030026818506742,
+      "dirichlet_target": 0.1
+    }
+  ]
+}
