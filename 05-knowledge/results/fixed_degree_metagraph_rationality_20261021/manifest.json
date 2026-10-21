@@ -1,0 +1,45 @@
+{
+  "source_commit": "622e4451384c6d6ec6ee56bba0f71dc50732512d",
+  "files": {
+    "README.md": {
+      "sha256": "b0d1cef5babb7af4fbc85d668bb0ccd6c945e5d83de718238d1b2a0d5ecd0a24",
+      "bytes": 2224
+    },
+    "session22-fixed-degree/PROOF.md": {
+      "sha256": "e428906db3b67dbf5c85eef86460a012be8a9574a06bcd62759e73778f23446d",
+      "bytes": 9218
+    },
+    "session22-fixed-degree/check.py": {
+      "sha256": "f6a7cd5af8bf011cc249d6e0b10d2d206b95332f88a564ef47e4d4a470d167ef",
+      "bytes": 4015
+    },
+    "session22-fixed-degree/normal.json": {
+      "sha256": "3ba74f01f25a156d16713274b5a18780ab19922a73d523f391c692a35537be07",
+      "bytes": 384
+    },
+    "session22-fixed-degree/optimized.json": {
+      "sha256": "3ba74f01f25a156d16713274b5a18780ab19922a73d523f391c692a35537be07",
+      "bytes": 384
+    },
+    "session22-fixed-degree-review/REVIEW.md": {
+      "sha256": "b0593b639ed7b0550642ff6c4b6ecd115a9fb5c35735200577c52df5ab82b826",
+      "bytes": 6425
+    },
+    "session22-fixed-degree-review/check.py": {
+      "sha256": "62ae5d87c823db167c79e6ffa46685d512238c989efc48d9c7156c7cc6ab8b0c",
+      "bytes": 4945
+    },
+    "session22-fixed-degree-review/receipt.json": {
+      "sha256": "ae2280f04edf10e365ca0edefcb1c443b5b35bb42c3fe2c9ee49634d6ea3dc76",
+      "bytes": 996
+    },
+    "session22-fixed-degree-review/stdout-optimized.json": {
+      "sha256": "ae2280f04edf10e365ca0edefcb1c443b5b35bb42c3fe2c9ee49634d6ea3dc76",
+      "bytes": 996
+    },
+    "session22-fixed-degree-review/stdout.json": {
+      "sha256": "ae2280f04edf10e365ca0edefcb1c443b5b35bb42c3fe2c9ee49634d6ea3dc76",
+      "bytes": 996
+    }
+  }
+}

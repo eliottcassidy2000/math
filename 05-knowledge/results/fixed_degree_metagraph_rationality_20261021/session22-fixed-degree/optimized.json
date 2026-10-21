@@ -1,0 +1,21 @@
+{
+  "checks": 463,
+  "degrees_checked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "max_order": 12,
+  "max_presentation_weight": 81,
+  "ordinary_words": 9236,
+  "scope": "formal involutive alphabet, not realizability or tournament census",
+  "source_sha256": "f6a7cd5af8bf011cc249d6e0b10d2d206b95332f88a564ef47e4d4a470d167ef",
+  "status": "PASS"
+}

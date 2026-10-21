@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "synthetic_only": true,
+  "max_order": 10,
+  "synthetic_letters": [
+    [
+      "u",
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      "v",
+      3,
+      1,
+      1,
+      1
+    ],
+    [
+      "a",
+      2,
+      3,
+      1,
+      2
+    ],
+    [
+      "b",
+      2,
+      3,
+      1,
+      3
+    ],
+    [
+      "c",
+      4,
+      3,
+      3,
+      4
+    ],
+    [
+      "d",
+      3,
+      9,
+      3,
+      5
+    ],
+    [
+      "e",
+      2,
+      5,
+      0,
+      7
+    ],
+    [
+      "f",
+      2,
+      5,
+      0,
+      6
+    ],
+    [
+      "g",
+      4,
+      15,
+      1,
+      8
+    ]
+  ],
+  "literal_words": 24419,
+  "checks": 1004,
+  "F_J_odd_h_through": 499,
+  "S_even_deficit_through": 200,
+  "B_degree_through": 100,
+  "symbolic_denominator_k_through": 40,
+  "known_specializations": [
+    "B1",
+    "B3 with arbitrary R6"
+  ],
+  "asymptotic_constant_r_through": 9,
+  "proof_sha256": "e428906db3b67dbf5c85eef86460a012be8a9574a06bcd62759e73778f23446d"
+}
