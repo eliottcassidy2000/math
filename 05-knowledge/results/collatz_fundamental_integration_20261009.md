@@ -34,7 +34,7 @@ the two clock differences, and the distinguished cycle's phase.
 | [THM-4605, Mersenne pair-chain absorption](../../01-canon/theorems/THM-4605-mersenne-exits-by-pair-chain-absorption-the-t23-fan-escapes-at-depth-1.9e7.md) | Equality of normalized future obligations, with stopping-time and odd-count invariants | A terminal or an arbitrary downward proof |
 | [THM-4604, reducible locus and carries](../../01-canon/theorems/THM-4604-collatz-words-are-the-reducible-locus-carries-are-the-extension-cocycle-and-traces-only-hear-the-tuning.md) | Faithful affine words; the carry is the extension data lost by traces | A frieze rewrite preserving actual endpoints |
 | [THM-4607..4609 and THM-4611, debt-rank requirements](debt_rank_least_requirements_20261008.md) | Multiplicative-ratio rank and covariance of a random pair process | Source height, ROOT rank, or integer descent |
-| [THM-4610, base-p rank-one work](../../01-canon/theorems/THM-4610-rank-one-haar-coalescence-for-the-base-p-collatz-maps-on-z-p.md) | A claimed Haar coalescence mechanism; its independent audit remains pending | A proof that specified positive inputs reach the distinguished cycle |
+| [THM-4610, base-p rank-one work](../../01-canon/theorems/THM-4610-rank-one-haar-coalescence-for-the-base-p-collatz-maps-on-z-p.md) | A Haar coalescence theorem (almost-sure part of HYP-9244's requirement 1 for C_p), independently audited 2026-10-21 (MISTAKE-649) | A proof that specified positive inputs reach the distinguished cycle |
 
 The last row is used here for its exact map and supplied finite cycles,
 not as a promoted probability theorem. HYP-9244/9245 retain their open

@@ -3,13 +3,14 @@ id: HYP-9245
 title: "Rank-one integer laws for the base-p Collatz maps C_p: (a) if C_p has several positive-integer cycles whose basins have limiting densities, the density of basin boundaries (n, n+1 in different basins) below N is of the order of q_p(T_N), the Haar probability that y and y+1 have not merged by the typical orbit length T_N = ln N/|Lambda_p| (THM-4590's cut heuristic for 3x + 1, transplanted); with the rank-one tail q_p(T) of order T^(-1/2) this is (ln N)^(-1/2); (b) on the repunit line R_K = p^K - 1 the fraction of exponents in [X, 2X) that are least members of their partner class (exponents whose orbits first reach a cycle at the same element and the same height n - K) is of order X^(-1/2), the base-p form of HYP-9243's Mersenne-line prediction"
 status: >
   OPEN. Restated after the session's independent audit (MISTAKE-649): attributions to THM-4590 and HYP-9243, the
-  density assumption made explicit, 'partner class' defined, and both refutation tests replaced by valid ones.
+  density assumption made explicit, 'partner class' defined, refutation test (b) replaced by a rule simulated under its
+  null (zp_orphan_fit.py (O4)), and test (a) restated as a pre-registered ratio band (not null-checked).
   PROVED around it (THM-4610): Haar coalescence for C_p (every odd prime p); basin boundaries have density 0;
   q_p(T) >= c T^(-1/2).
   NUMERICAL, part (a) (zp_boundary_ratio.py; q_p(T_N) from 10^5 Haar paths, standard error <= 0.0016):
     - R(N) = boundary/(2s(1-s) q_p(T_N)) at N = 10^3..10^7: p = 3: 1.65, 1.61, 1.40, 1.26, 1.19; p = 11: 1.14, 1.12,
       1.06, 1.06, 1.05; p = 17: 1.12, 1.13, 1.08, 1.07, 1.06; p = 23: 1.34, 1.12, 1.06, 1.04, 1.04.
-    - The ratio stays between 1.04 and 1.65 and drifts down at every p. Whether it tends to 1 is not resolved.
+    - The ratio stays between 1.04 and 1.65 with a net downward drift at every p. Whether it tends to 1 is not resolved.
     - Second-basin shares 0.967, 0.018, 0.292, 0.234, stable from 10^6 (zp_basins_survey.py (S2)).
     - p = 3: 0.459 of consecutive pairs n <= 10^6 merge at equal time above the cycles, against the Haar prediction
       0.498 +- 0.003 at T = 79 (S3).

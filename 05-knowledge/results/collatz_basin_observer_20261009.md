@@ -69,7 +69,7 @@ The supplied non-ROOT cycle for $p=3$ is
 7,10,14,19,26,35,47,63,21.
 \]
 
-The script supplies and authenticates all 57 edges of the $p=11$ cycle whose minimum is 642. It does not discover cycles by an unbounded search or claim these are the only positive cycles. The nontrivial $p=3,p=11$ cycles were already reported in THM-4610's computation; our new use is the exact pair-state and terminal observer test.
+The script supplies and authenticates all 57 edges of the $p=11$ cycle whose minimum is 642. It does not discover cycles by an unbounded search or claim these are the only positive cycles. The nontrivial $p=3,p=11$ cycles are in Carnielli's Table 1 (Applied Mathematics E-Notes 15 (2015), computed by K. R. Matthews) and were re-verified in THM-4610's computation; our new use is the exact pair-state and terminal observer test.
 
 ## 3. A complete terminal label on the certified periodic domain
 

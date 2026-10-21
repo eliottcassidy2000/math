@@ -40,7 +40,7 @@ Session opus-2026-10-08-S22.
   * rivers on repunit lines to `K = 8000`;
   * the dictionary facts of §6.
 * NUMERICAL: basin shares and boundaries, merge tails, repunit orphan fractions, all with error bars.
-* HEURISTIC: HYP-9245.
+* HEURISTIC: HYP-9245; the naive 1-cycle count of (S5).
 * DICTIONARY: §6.
 * Collatz OPEN.
 
@@ -67,7 +67,7 @@ Session opus-2026-10-08-S22.
      * the cycle at 642 (length 57) for `p = 11` captures **1.8%**.
    * Only the trivial cycle appears on the positive integers for `p = 5, 7, 13, 19` (starts `≤ 10^6`). On the negative integers, `C_p` has extra cycles for `p = 3, 5, 13, 19, 23` and none for `p = 7` (starts `≥ −10^5`, (S4)).
    * **How the owner's three bases compare:**
-     * `Z_7` has no extra cycles of either sign. It is the only prime `3 ≤ p ≤ 31` without one in these ranges ((S5)); Carnielli notes `d = 7` as the first base with none.
+     * `Z_7` has no extra cycles of either sign. It is the only prime `3 ≤ p ≤ 31` without one in these ranges (positive starts `≤ 10^6`, negative starts `≥ −10^5`; (S5)); Carnielli notes `d = 7` as apparently the first base with none.
      * `Z_13` has `3x + 1`'s pattern: only the trivial cycle among the positive integers, and an extra cycle among the negatives (least `|x|` 147, length 36).
      * `Z_11` has an extra positive cycle (642, length 57).
    * The remaining Collatz step is arithmetic. It must see the cycle and divergence structure of `3x + 1` itself, which no coalescence or rank argument can. THM-4590 (mac-mini) shows the `p = 2` face of this on the negative integers.
@@ -75,7 +75,7 @@ Session opus-2026-10-08-S22.
    * THM-4610 proves that basin boundaries have density 0. The convergence runs on a `ln N` clock and is slow.
    * At `N = 10^7`, the boundary density is the fraction 0.577, 0.883, 0.948, 0.959 (`p = 3, 11, 17, 23`) of `2s(1−s)`, its value for independent landing.
    * The Haar no-merge probability at the typical orbit length `T_N = ln N/|Λ_p|` is 0.484, 0.839, 0.896, 0.924 (± 0.002, from `10^5` paths). So the ratio is 1.19, 1.05, 1.06, 1.04.
-   * Over `N = 10^3 … 10^7` the ratio stays between 1.04 and 1.65 and drifts down at every `p`; for `p = 3` it runs 1.65, 1.61, 1.40, 1.26, 1.19. Whether it tends to 1 is not resolved.
+   * Over `N = 10^3 … 10^7` the ratio stays between 1.04 and 1.65 with a net downward drift at every `p` (not monotone: `p = 17` rises from 1.116 to 1.127 at `10^4`); for `p = 3` it runs 1.65, 1.61, 1.40, 1.26, 1.19. Whether it tends to 1 is not resolved.
    * This is THM-4590's cut heuristic for `3x + 1`, transplanted to base `p`.
 4. **Repunit lines** (`R_K = p^K − 1`, the base-p analogue of the S21 Mersenne line; `K ≤ 8000`).
    * Every `R_K` ends in a known cycle. For `p = 7, 13` all end in the trivial cycle. For `p = 11`, 50 end in the 642-cycle, in just 5 partner classes.
@@ -84,7 +84,7 @@ Session opus-2026-10-08-S22.
    * Orphans (least members of partner classes) decay with fitted exponents 0.57 [0.21, 0.93], 0.69 [0.37, 1.01] and 0.71 [0.39, 1.03] for `p = 7, 11, 13` (`K ∈ [800, 8000]`, 95% likelihood intervals). All three intervals contain 1/2, and none resolves the exponent (HYP-9245 (b)).
 5. **Merge tails.**
    * `√T q(T)` at `T = 10^4, 10^5` is 9.94 ± 0.43 and 10.87 ± 0.83 for `p = 2`, and 9.77 ± 0.43 and 9.75 ± 0.79 for `p = 3`. That is consistent with a `T^(−1/2)` plateau but does not establish one (4800 paths).
-   * For `p ≥ 7` it is still rising: 25.8 ± 1.3, 40.3 ± 1.5 and 49.9 ± 1.7 for `p = 7, 11, 13` at `10^5`, as a lazier skeleton predicts.
+   * For `p ≥ 7` it is still rising: 25.8 ± 1.2, 40.3 ± 1.5 and 49.9 ± 1.7 for `p = 7, 11, 13` at `10^5`, as a lazier skeleton predicts.
 
 ## 1. The maps
 
@@ -144,14 +144,14 @@ Session opus-2026-10-08-S22.
 
 | p | positive cycles (minimum: length, basin share; `(k_1, k_2)`, `λ`) | negative extra cycles (least `|x|`: length; `(k_1, k_2)`, `λ`) |
 |---|---|---|
-| 3 | 1: 3, 0.0332; **7: 9, 0.9668; (2, 7), 0.832** | −22: 5; (1, 4), 1.054 |
+| 3 | 1: 3, 0.0332; **7: 9, 0.9668; (2, 7), 0.832** | −22: 5; (1, 4), 1.053 |
 | 5 | 1: 5, 1.0 | −57: 10; (1, 9), 1.032 |
 | **7** | **1: 7, 1.0** | **none** |
 | **11** | **1: 11, 0.9820; 642: 57, 0.0180; (2, 55), 0.990** | **none** |
 | **13** | **1: 13, 1.0** | **−147: 36; (1, 35), 1.029** |
 | 17 | 1: 17, 0.7066; 79: 49, 0.2934; (1, 48), 0.914 | none |
 | 19 | 1: 19, 1.0 | −954: 117; (2, 115), 1.010 |
-| 23 | 1: 23, 0.7664; 82: 72, 0.2336; (1, 71), 0.893 | −800: 75; (1, 74), 1.014 |
+| 23 | 1: 23, 0.7664; 82: 72, 0.2336; (1, 71), 0.892 | −800: 75; (1, 74), 1.014 |
 | 29 | 1: 29, 0.9084; 111: 97, 0.0916; (1, 96), 0.893 | none |
 | 31 | 1: 31, 0.9722; 389: 108, 0.0278; (1, 107), 0.964 | none |
 
@@ -164,7 +164,7 @@ Session opus-2026-10-08-S22.
           x (p^(k_1+k_2) − (p+1)^(k_2)) = c_w,    c_w = Σ_j (p+1)^(k_2−1−j) p^j (p − i_j),
 
       with `i_j ∈ {1, …, p − 1}` the digits along the run. All ten extra 1-cycles above satisfy it.
-    * *`p = 2`.* The run's digits are all 1, so each shape `(k_1, k_2)` has a single candidate, `c = 3^(k_2) − 2^(k_2)`. Steiner (1977) proved that it is divisible only for the trivial cycle; checked here for `k_2 ≤ 2000`, where on the negative side only the cycles −1 and −5 occur. Steiner's proof, and its extensions to `m`-cycles with `m ≤ 91` (Simons–de Weger 2005; Hercher 2023), rest on linear forms in logarithms, because the near-balance `2^A ≈ 3^l` is rare.
+    * *`p = 2`.* The run's digits are all 1, so each shape `(k_1, k_2)` has a single candidate, `c = 3^(k_2) − 2^(k_2)`. Steiner (1977) proved that it is divisible only for the trivial cycle; checked here for `k_2 ≤ 2000`, where on the negative side only the cycles −1 and −5 occur. Steiner's proof, and its extensions to `m`-cycles with `m ≤ 91`, rest on linear forms in logarithms (the near-balance `2^A ≈ 3^l` is rare) together with computed verification bounds (Hercher uses every `n ≤ 3·2^69`). References: R. P. Steiner, Proc. 7th Manitoba Conf. Numer. Math. (1977) 553–559; J. Simons and B. de Weger, Acta Arith. 117 (2005) 51–70; C. Hercher, J. Integer Seq. 26 (2023), Art. 23.3.5.
     * *`p ≥ 3`.* Each shape has `(p − 1)^(k_2)` candidate numerators. The near-balance is also cheap: one multiplication moves `ln λ` by only `ln(1 + 1/p) ≈ 1/p`, so `1 − λ ≲ 1/p` is available for every `k_1`.
     * *The upshot.* Extra cycles appear for every prime `3 ≤ p ≤ 31` except 7, on one side or the other.
     * *Reading for `3x + 1`.* The cycle half is a statement about one equation per shape at rare near-balances. That is the regime where Baker-type bounds work, and the base-`p` maps leave it.
@@ -188,13 +188,13 @@ Session opus-2026-10-08-S22.
 
   * The boundary has density 0 (THM-4610 5(e)). At these sizes, though, it is still most of `2s(1−s)` for `p ≥ 11`: integers below `10^7` take only 92–169 steps to descend, and the lazy skeleton rarely merges a pair that fast.
   * **The ratio.**
-    * `R(N)` is above 1 throughout and drifts down at every `p`. That is the expected direction, since smaller `n` have shorter orbits. Whether `R(N) → 1` is not resolved.
+    * `R(N)` is above 1 throughout, with a net downward drift at every `p`. That is the expected direction, since smaller `n` have shorter orbits. Whether `R(N) → 1` is not resolved.
     * This is THM-4590's heuristic for `3x + 1`, transplanted to base `p`. There, cuts ≈ `(1 − Σ d_i²) q(4.8 log_2 x)` reproduces the decline, but the measured level is about 1.13 times the prediction.
   * **Densities.**
     * HYP-9245 (a) assumes that the basin densities have limits.
     * Gonçalves–Greenfeld–Madrid (Remark 1.7) observed numerically that the basins of the three cycles of `3x − 1` have densities of about 1/3 each. `C_3`'s shares of 0.033 and 0.967 show that such shares need not be equal.
   * For `p = 3`, boundary × `√ln N` is 0.150 at `10^6` and 0.147 at `10^7`. Two points establish no plateau.
-* **(S3)** For `p = 3`, the share of consecutive pairs `n ≤ 10^6` merging at equal time above the cycles is 0.459. The Haar prediction at the typical orbit length `T = 79` is 0.498 ± 0.003 from 40,000 Haar paths, and 0.502 ± 0.002 from `zp_boundary_ratio.py`'s `10^5` paths.
+* **(S3)** For `p = 3`, the share of consecutive pairs `n ≤ 10^6` merging at equal time above the cycles is 0.459. The Haar prediction at the typical orbit length `T = 79` is 0.498 ± 0.003 from 40,000 Haar paths, and 0.502 ± 0.002 from `zp_boundary_ratio.py`'s `10^5` paths. The gap (about 16 standard errors, at one size) is real; the script's 0.08 tolerance does not test agreement, only the order of magnitude.
 * **Relation to THM-4590.**
   * THM-4590 proves `o(x)` cuts for `3x + 1` and shows the negative-integer basins of −1, −5, −17. That is the `p = 2` instance of the same phenomenon, with three cycles.
   * Here the base-p family puts it on the positive integers. In `C_3` the "second" basin is the majority.
@@ -231,7 +231,7 @@ The start `(0, 1)`, 4800 paths per base. One binomial standard error of `√T q`
 |---|---|---|
 | 2 | 2.05, 4.71, 8.31, 9.94, 10.87 | 0.0344 ± 0.0026 |
 | 3 | 2.15, 4.95, 8.22, 9.77, 9.75 | 0.0308 ± 0.0025 |
-| 7 | 2.85, 7.55, 16.28, 23.10, 25.76 | 0.0815 ± 0.0040 |
+| 7 | 2.85, 7.55, 16.28, 23.10, 25.76 | 0.0815 ± 0.0039 |
 | 11 | 3.02, 8.51, 20.45, 34.35, 40.25 | 0.1273 ± 0.0048 |
 | 13 | 3.05, 8.74, 21.88, 39.08, 49.87 | 0.1577 ± 0.0053 |
 | 17 | 3.09, 9.14, 24.24, 49.00, 66.28 | 0.2096 ± 0.0059 |
@@ -289,8 +289,8 @@ The start `(0, 1)`, 4800 paths per base. One binomial standard error of `√T q`
    * The base-p family is a test bench, alongside `3x − 1`. On the positive integers it is false for `p = 3, 11` and apparently true for `p = 5, 7, 13`. Any proposed proof mechanism must fail for `C_3`, for `C_11` and for `3x − 1`.
    * For the cycle half, the shapes in §3 point somewhere specific. Every extra cycle found is a 1- or 2-cycle at a cheap near-balance, with many candidate numerators per shape. Those are exactly the cycle types that linear forms in logarithms exclude for `3x + 1`, where each shape has a single candidate (Steiner; Simons–de Weger; Hercher).
    * **A naive count makes this quantitative ((S5), HEURISTIC).** Suppose each candidate is divisible with probability `1/|D|`.
-     * Each base `p = 3, …, 31` then expects 0.73–0.96 positive 1-cycles (trivial cycle included) and 0.10–1.45 negative ones, the same order as found.
+     * Here `D = p^(k_1+k_2) − (p+1)^(k_2)`. Each base `p = 3, …, 31` then expects 0.73–0.96 positive 1-cycles with at least one division (trivial cycle included) and 0.10–1.45 negative ones, the same order as found (7.6 extra positive and 4.2 negative expected over the ten bases, against 5 and 5 found).
      * For `p = 2`, beyond the three shapes with `|D| = 1` (the cycles 1, −1, −5), the expectation is 0.30 positive and 0.18 negative from shapes with `k_2 ≤ 5`, all checked exactly. It is 0.005 and 0.019 from `5 < k_2 ≤ 2000`.
-     * So the heuristic places every `3x + 1` 1-cycle in shapes small enough to check, while for `p ≥ 3` it expects about one per base, spread over many shapes.
+     * So the heuristic places every `3x + 1` 1-cycle in shapes small enough to check, while for `p ≥ 3` it expects about one per base. For `p ≥ 11` that expectation is spread over many shapes; for `p ≤ 7` a few shapes carry half of it (at `p = 3` the shape `(1, 3)` alone carries 0.47 of 0.94), and every negative side is dominated by the first shape past balance.
      * Turning that small expectation into "none" is what Steiner's theorem does for 1-cycles. The open part of the cycle half is the same statement for every `m`.
 4. **HYP-9245.** Run the tests in its refutation section.

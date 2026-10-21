@@ -10,8 +10,8 @@ status: >
   the visit-length bookkeeping L_h. FINITE-EXACT: the local lemmas were also checked exhaustively on boxes of states x
   digits for p = 2, 3, 5, 7, 11, 13; the descent path for 2 <= |e| <= 20000. KNOWN: the remark after statement 5 (the
   3x - 1 barrier; Akin 2004's "the method is too general") and the cycles of C_p (Carnielli's Table 1, computed by
-  K. R. Matthews), re-verified here. NUMERICAL: statement 6 (merge-time tails, cycles and repunit lines on Z_7, Z_11,
-  Z_13). AUDITED 2026-10-08 by the session's independent audit: proofs sound and complete; corrections applied
+  K. R. Matthews), re-verified here. NUMERICAL: statement 6 (merge-time tails; its cycles are KNOWN/FINITE-EXACT and its repunit rivers
+  FINITE-EXACT). AUDITED 2026-10-08 by the session's independent audit: proofs sound and complete; corrections applied
   (MISTAKE-649). Session opus-2026-10-08-S22.
 session: opus-2026-10-08-S22 (owner: "keep aiming at remaining collatz steps, think about Z_7, Z_11 and Z_13")
 source: 05-knowledge/results/zp_rank_one_coalescence_20261008.md
@@ -109,11 +109,11 @@ related:
    * (c) **Rate, lower bound.** For every non-absorbed admissible start, `P(no merge by T) ≥ c T^(−1/2)`. The upper bound `C T^(−1/2)(log T)^2` of THM-4581 (4) should follow from the same sketch; it is not claimed here.
    * (d) **p = 2.** The argument specializes to `p = 2` and reproves THM-4581 3 there, with two differences: `μ_h = v_2(3^h − 1)` (1 for odd `h`, `2 + v_2(h)` for even `h`) replaces `1 + v_p(h)`, and the `λ_0` obtained is weaker than THM-4581's. There are no lazy steps, and `g(s) = 1` is THM-4581's equation for `s`. Statement 4 is replaced by THM-4581 3(iii).
    * (e) **Basin boundaries have density zero.** Let `B` be any set of positive integers that is a union of grand orbits of `C_p` restricted to `Z_(>0)` (for example the basin of one cycle). Then for every `e ≥ 1` the set `{n : n ∈ B xor n + e ∈ B}` has natural density 0. This is the base-`p` analogue of THM-4590's `o(x)` cuts.
-   * **Remark (the barrier; KNOWN).** Statements 1–4 and 5(a)–(e) are statements about Haar measure on `Z_p`. They are invariant under the measure-preserving conjugation `x ↦ −x`, so they hold verbatim for `F_p(x) = −C_p(−x)`, which is `x/p` or `⌊(p+1)x/p⌋` on the positive integers and fixes `1, …, p − 1`.
+   * **Remark (the barrier; KNOWN).** Statements 1–4 and 5(a)–(e) are statements about Haar measure on `Z_p`. They are invariant under the measure-preserving conjugation `x ↦ −x`, so their Haar content holds verbatim for `F_p(x) = −C_p(−x)`, which is `x/p` or `⌊(p+1)x/p⌋` on the positive integers and fixes `1, …, p − 1`. (The integer reading of 5(b) is specific to `C_p`: `F_p(R_E) = (p+1)p^(E−1) − 2`.)
      * For `p = 2`, `F_2` is the `3x − 1` map. Its positive-integer cycles `{1}`, `{5, 7, 10}` and `{17, …, 34}` are the negative-integer cycles of `3x + 1` (Kontorovich–Lagarias §1.1; Gonçalves–Greenfeld–Madrid Remark 1.7; THM-4590's negative basins).
      * So no argument built only from these properties can prove that every positive integer reaches the trivial cycle, for any `p`, including `p = 2`. Such an argument must distinguish `3x + 1` from `3x − 1`. This is the contracting, same-family form of Akin's observation (2004, §3) that the 2-adic conjugacy method "is too general": it works for every odd multiplier, and `5x + 1` has extra cycles.
      * In the base-`p` family the unconjugated maps show it too. `C_p` itself has extra positive-integer cycles for `p = 3, 11, 17, 23, 29, 31`, such as minimum 7 and length 9 for `p = 3`, and minimum 642 and length 57 for `p = 11` (Carnielli's Table 1; re-verified here for starts `≤ 10^6`, results note §3).
-6. **Numerics on `Z_7`, `Z_11`, `Z_13` (NUMERICAL).** See the results note: merge-time tails, cycles of `C_p` on positive integers, and the repunit lines.
+6. **Numerics on `Z_7`, `Z_11`, `Z_13`.** See the results note: merge-time tails (NUMERICAL), cycles of `C_p` on positive integers (KNOWN, re-verified FINITE-EXACT), and the repunit lines (rivers FINITE-EXACT, orphans NUMERICAL).
 
 ## Proofs
 
@@ -210,7 +210,7 @@ related:
   * Whether this happens by time `K` depends only on `n mod p^K` (Fact D; `C` on `Z` is the restriction).
   * So the density of `{n : n, n + e not merged by time K}` is exactly `q_e(K) = P(no merge by K)` from the start `(0, e)`.
   * Hence the upper density of the boundary is at most `q_e(K)` for every `K`, and `q_e(K) → 0` by 3.
-* **Remark.** `x ↦ −x` preserves Haar measure, commutes with the pair relation up to `e ↦ −e`, and conjugates `C_p` to `F_p`; `F_p(i) = ⌊i + i/p⌋ = i` for `1 ≤ i ≤ p − 1`. The cycles of `3x − 1` and of `C_p` are verified by direct iteration (`zp_basins_survey.py` (S1), (S4)). ∎
+* **Remark.** `x ↦ −x` preserves Haar measure, commutes with the pair relation up to `e ↦ −e`, and conjugates `C_p` to `F_p`; `F_p(i) = ⌊i + i/p⌋ = i` for `1 ≤ i ≤ p − 1`. The cycles of `C_p` are verified by direct iteration for `p = 3, …, 31` (`zp_basins_survey.py` (S1), (S4)). The cycles of `3x − 1` are those of `3x + 1` on the negative integers (Kontorovich–Lagarias §1.1; THM-4590's negative-basin table); they are not iterated here. ∎
 
 ## What this does and does not say
 
@@ -223,7 +223,7 @@ related:
 * For `p = 11` a second cycle exists on positive integers (minimum 642, length 57; Carnielli's Table 1, results note), so "every integer reaches 1" is false there. Yet translates still coalesce almost surely in the Haar sense.
 * **Prior art.**
   * The maps are Carnielli's `T_d` (Applied Mathematics E-Notes 15 (2015) 207–215, with a table of cycles for `d ≤ 150`, `|x| ≤ 50000` computed by K. R. Matthews). Bruschi (arXiv:0810.5169) studies the undivided form `p C_p`. Tremblay (arXiv:1907.13302) locates their cycles. They lie in Hasse's class and Möller's family (Möller 1978: eventual periodicity conjectured for `m < d^(d/(d−1))`), and in the Matthews–Watts class, whose maps preserve Haar measure and are strongly mixing on `Z_p` (Matthews–Watts 1984, Corollary 1, as quoted in Gonçalves–Greenfeld–Madrid Remark 1.6).
-  * arXiv:2111.06170 (Gonçalves–Greenfeld–Madrid) extends Tao's almost-bounded-orbits theorem to a class containing them.
+  * arXiv:2111.06170 (Gonçalves–Greenfeld–Madrid) extends Tao's almost-bounded-orbits theorem to undivided maps `C(N) = qN + r(j)` (their Definition 1.2). That class contains `p·C_p` (`q = p + 1`, `r(j) = p − j`), whose orbits interleave those of `C_p`.
   * No coalescence (merging) statement for them was found in two searches.
   * The proof follows THM-4581's (mac-mini) architecture, along the route of HYP-9244's requirement-1 sketch and audit G's drift check. mac-mini's `rank1_two_valued.out` row `Z_3` (1, 4, 4) is `C_3`; its tail (`√T q` = 7.85, 9.09, 8.11 at `T` = 1024, 4096, 16384) agrees with statement 6's.
 * **Audit (2026-10-08, the session's independent audit).** Statements 1–5: proofs sound and complete as elementary probability. Corrected after it: the reason for `κ(1) = 1`, the supermartingale wording, 5(b) stated for `x_E` with modulus `p^(n−2)`, the `p = 2` specialization, 5(f) re-typed as the known `3x − 1` barrier, citations (Carnielli, Bruschi), credits (HYP-9244's sketch, audit G, mac-mini's `C_3` row), and the scope of the claim (MISTAKE-649).

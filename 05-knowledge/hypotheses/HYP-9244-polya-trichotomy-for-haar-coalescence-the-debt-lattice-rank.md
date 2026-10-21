@@ -14,7 +14,7 @@ status: >
   and all 18 maps of a seeded Z_5 census. Accessibility: a second, twisted obstruction (audit G)
   shows that excluding the constant-c obstruction is not enough (Z_3 (1,1,5), r = (0,2,5), contracting: odd offsets never merge).
   Rank one on Z_p is PROVED for the base-p Collatz maps C_p (multipliers 1 and p + 1), every odd prime p, by THM-4610
-  (opus-2026-10-08-S22; its audit was pending when this line was written). Open: rank 1 for other maps with d >= 3, rank 2, a general theorem for ranks 3-5
+  (opus-2026-10-08-S22; the almost-sure part of requirement 1 for C_p, audited 2026-10-21, MISTAKE-649; the T^(-1/2) upper rate is open). Open: rank 1 for other maps with d >= 3, rank 2, a general theorem for ranks 3-5
   with an even-order coupling group, dependent multipliers or composite d (so far certificates are found map by map; every map tested
   has one), and a complete accessibility criterion.
   Earlier PROVED parts:
@@ -199,7 +199,7 @@ Author's runs and audit F's independent integer-orbit runs. Visit window = mean 
 | expanding (`Λ > 0`), any rank | PROVED for every map: `q(e) → 0` as `\|e\| → ∞`; `q(e) < 1` at every offset for `px + 1` (`r_0 = 0`, `r_1 = 1`) and for rank zero; elsewhere at small offsets NUMERICAL | THM-4607 |
 | `d = 2`, positive multipliers | PROVED: contracting maps coalesce a.s. iff the offset is accessible (explicit divisibility); expanding maps as in the row above | THM-4608 |
 | rank 0, contracting | PROVED for every `d`: a.s. iff 0 is reachable from every reachable offset | THM-4609 (2) |
-| rank 1, `d ≥ 3` | PROVED for the base-p Collatz maps `C_p` (multipliers 1 and `p + 1` on `Z_p`, every odd prime `p`; opus-2026-10-08-S22, audit pending at the time of writing); OPEN for other rank-one maps (sketch-level route below); NUMERICAL `T^(−1/2)` | THM-4610 |
+| rank 1, `d ≥ 3` | PROVED for the base-p Collatz maps `C_p` (multipliers 1 and `p + 1` on `Z_p`, every odd prime `p`; opus-2026-10-08-S22; audited 2026-10-21, MISTAKE-649); OPEN for other rank-one maps (sketch-level route below); NUMERICAL `T^(−1/2)` | THM-4610 |
 | rank 2 | OPEN (critical) | — |
 | rank ≥ 3, independent multipliers, prime `d` | PROVED transient for translation-only maps (all `m_i` congruent mod `d`; `d ≥ 5`), for odd-order coupling groups from rank 5, and for every map from rank 6 | THM-4609 (3)–(6) |
 | ranks 3–5 with an even-order coupling group | PROVED map by map through exact block certificates, fixed-length or adaptive: the evidence-table representative `Z_5` (1, 2, 3, 7, 1), all of audit F's rank ≥ 3 maps, and all 18 maps of a seeded `Z_5` census (six with coupling group `{±1}`); OPEN as a general theorem | THM-4611 (2)–(6) |
