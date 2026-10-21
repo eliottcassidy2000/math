@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "independent_checks": 329752,
+  "root_checks": 2266,
+  "normal_and_optimized_byte_identical": true,
+  "files": {
+    "proof": {
+      "path": "/workspace/scratch/07d5532f2fce/session23b-palettes/PALEY_MULTICOLORING_AND_CARRY.md",
+      "sha256": "fe009bd8cdb5a7ab03fb8758a7c969594295ff403e7c6da910378847499afa2d"
+    },
+    "root_checker": {
+      "path": "/workspace/scratch/07d5532f2fce/session23b-palettes/check_palettes.py",
+      "sha256": "ac510c6f287d22d84678e1df78d1ecab677a4cd7386e23ff3aa4b817d1efbaf0"
+    },
+    "audit_report": {
+      "path": "/workspace/scratch/07d5532f2fce/session23b-palettes-review/AUDIT_REPORT.md",
+      "sha256": "bddb90b49c25daa2b746484501ae56aa58337faafa5d0c4dfef520211887d85c"
+    },
+    "independent_checker": {
+      "path": "/workspace/scratch/07d5532f2fce/session23b-palettes-review/independent_audit.py",
+      "sha256": "429c6aa540088169cc2ef4f8467a67e5812f647e5a993ccc4363d2b43b9ad81e"
+    },
+    "normal_receipt": {
+      "path": "/workspace/scratch/07d5532f2fce/session23b-palettes-review/normal.json",
+      "sha256": "e3c663e28fa6e83872220c33f4ab8384b61f3e26f19354af5d45a0ed83260dee"
+    },
+    "optimized_receipt": {
+      "path": "/workspace/scratch/07d5532f2fce/session23b-palettes-review/optimized.json",
+      "sha256": "e3c663e28fa6e83872220c33f4ab8384b61f3e26f19354af5d45a0ed83260dee"
+    },
+    "full_result": {
+      "path": "/workspace/scratch/07d5532f2fce/session23b-palettes-review/audit_results.json",
+      "sha256": "0c985c7011764c7ed5e4a64799fd15fc18edbf159ee0815b4e3d6cc315dfbd8a"
+    },
+    "root_normal_receipt": {
+      "path": "/workspace/scratch/07d5532f2fce/session23b-palettes-review/root_checker_normal.json",
+      "sha256": "154c83ab0c87bc19267f67dabdba6363d092e8b1373360f6c813e2898fc63a7b"
+    },
+    "root_optimized_receipt": {
+      "path": "/workspace/scratch/07d5532f2fce/session23b-palettes-review/root_checker_optimized.json",
+      "sha256": "154c83ab0c87bc19267f67dabdba6363d092e8b1373360f6c813e2898fc63a7b"
+    }
+  }
+}
