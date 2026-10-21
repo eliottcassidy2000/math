@@ -1,0 +1,82 @@
+     n = 1: 1 classes, 1 distinct H values, max H = 1 (1 class(es)), strong classes 1  [15s]
+     n = 2: 1 classes, 1 distinct H values, max H = 1 (1 class(es)), strong classes 0  [15s]
+     n = 3: 2 classes, 2 distinct H values, max H = 3 (1 class(es)), strong classes 1  [15s]
+     n = 4: 4 classes, 3 distinct H values, max H = 5 (1 class(es)), strong classes 1  [15s]
+     n = 5: 12 classes, 7 distinct H values, max H = 15 (2 class(es)), strong classes 6  [15s]
+     n = 6: 56 classes, 19 distinct H values, max H = 45 (2 class(es)), strong classes 35  [15s]
+     n = 7: 456 classes, 77 distinct H values, max H = 189 (1 class(es)), strong classes 353  [15s]
+     n = 8: 6880 classes, 320 distinct H values, max H = 661 (6 class(es)), strong classes 6008  [15s]
+     n = 9: 191536 classes, 1520 distinct H values, max H = 3357 (1 class(es)), strong classes 178133  [18s]
+(M1) tables
+     n = 5: N(n,h) = {1: 1, 3: 3, 5: 2, 9: 2, 11: 1, 13: 1, 15: 2}
+     n = 6: N(n,h) = {1: 1, 3: 4, 5: 3, 9: 5, 11: 2, 13: 2, 15: 6, 17: 2, 19: 2, 23: 4, 25: 2, 27: 2, 29: 4, 31: 2, 33: 5, 37: 5, 41: 1, 43: 2, 45: 2}
+     n = 7: N(n,h) = {1: 1, 3: 5, 5: 4, 9: 9, 11: 3, 13: 3, 15: 12, 17: 4, 19: 4, 23: 8, 25: 5, 27: 7, 29: 10, 31: 6, 33: 13, 35: 2, 37: 12, 39: 2, 41: 7, 43: 6, 45: 9, 47: 2, 49: 7, 51: 8, 53: 4, 55: 4, 57: 4, 59: 8, 61: 1, 65: 11, 67: 6, 69: 12, 71: 7, 73: 8, 75: 7, 77: 10, 79: 5, 81: 11, 83: 7, 85: 1, 87: 1, 89: 14, 91: 15, 93: 7, 95: 5, 97: 6, 99: 4, 101: 10, 103: 10, 105: 4, 109: 14, 111: 10, 113: 4, 115: 7, 117: 7, 121: 4, 123: 10, 125: 1, 127: 1, 129: 7, 131: 8, 133: 6, 135: 8, 137: 6, 139: 6, 141: 3, 143: 3, 145: 2, 147: 1, 151: 5, 153: 3, 155: 1, 157: 1, 159: 4, 171: 1, 175: 1, 189: 1}
+     strong spectra: n=3: {3: 1}; n=4: {5: 1}; n=5: {9: 2, 11: 1, 13: 1, 15: 2}; n=6: {15: 2, 17: 2, 19: 2, 23: 4, 25: 2, 27: 2, 29: 4, 31: 2, 33: 5, 37: 5, 41: 1, 43: 2, 45: 2}
+  ok   class counts A000568 and labelled sums 2^C(n,2) for n <= 9; H and tc avoid 7 and 21 (FINITE-EXACT)
+(M2) the sequence law
+  ok   N(n,h) = sum over ordered tuples of nontrivial strong classes of C(n - t + k, k) for every n <= 9 and every h (PROVED; FINITE-EXACT check)
+(M3) exact multiplicities for every n
+     strong floor f(n), n = 3..9: [3, 5, 9, 15, 25, 45, 75]
+     N(n, 1) = 1   (n >= 0)
+     N(n, 3) = n - 2   (n >= 2)
+     N(n, 5) = n - 3   (n >= 3)
+     N(n, 9) = (n - 4)*(n - 1)/2   (n >= 4)
+     N(n, 11) = n - 4   (n >= 4)
+     N(n, 13) = n - 4   (n >= 4)
+     N(n, 15) = (n - 4)*(n - 3)   (n >= 5)
+     N(n, 17) = 2*(n - 5)   (n >= 5)
+     N(n, 19) = 2*(n - 5)   (n >= 5)
+     N(n, 23) = 4*(n - 5)   (n >= 5)
+     N(n, 25) = (n - 5)*(n - 2)/2   (n >= 6)
+     N(n, 27) = n*(n - 5)*(n - 4)/6   (n >= 6)
+     N(n, 33) = n**2 - 5*n - 1   (n >= 6)
+     N(n, 35) = 2*(n - 6)   (n >= 6)
+     N(n, 45) = 6*n**2 - 74*n + 233   (n >= 7)
+     N(n, 49) = 8*n - 49   (n >= 7)
+     N(n, 63) = 2*(n - 7)   (n >= 7)
+     N(n, 75) = 4*(n - 6)**2   (n >= 8)
+     predictions (exact for h < 75; for h < 125 given Busch):
+       h = 3: N(10..12) = [8, 9, 10]
+       h = 5: N(10..12) = [7, 8, 9]
+       h = 9: N(10..12) = [27, 35, 44]
+       h = 11: N(10..12) = [6, 7, 8]
+       h = 13: N(10..12) = [6, 7, 8]
+       h = 15: N(10..12) = [42, 56, 72]
+       h = 25: N(10..12) = [20, 27, 35]
+       h = 27: N(10..12) = [50, 77, 112]
+       h = 35: N(10..12) = [8, 10, 12]
+       h = 45: N(10..12) = [93, 145, 209]
+       h = 49: N(10..12) = [31, 39, 47]
+       h = 63: N(10..12) = [6, 8, 10]
+       h = 75: N(10..12) = [64, 100, 144]
+       h = 81: N(10..12) = [96, 134, 176]
+       h = 105: N(10..12) = [55, 73, 91]
+       h = 121: N(10..12) = [36, 48, 60]
+  ok   strong floor 3,5,9,15,25,45,75 = min 3^a 5^b (Moon-Busch); the multiplicity polynomials agree with the census wherever they apply (n >= n0) (PROVED for h < 75, conditional on Busch for h < 125)
+(M4) patterns
+     n = 5: 7 values; odd holes below the max: 1 (first [7]); values attained by exactly one class: 3 (e.g. [1, 11, 13] ... [1, 11, 13])
+     n = 6: 19 values; odd holes below the max: 4 (first [7, 21, 35, 39]); values attained by exactly one class: 2 (e.g. [1, 41] ... [1, 41])
+     n = 7: 77 values; odd holes below the max: 18 (first [7, 21, 63, 107, 119, 149, 161, 163]); values attained by exactly one class: 12 (e.g. [1, 61, 85, 87, 125, 127] ... [157, 171, 175, 189])
+     n = 8: 320 values; odd holes below the max: 11 (first [7, 21, 611, 615, 617, 619, 623, 625]); values attained by exactly one class: 3 (e.g. [1, 629, 637] ... [1, 629, 637])
+     n = 9: 1520 values; odd holes below the max: 159 (first [7, 21, 2883, 2887, 2889, 2893, 2895, 2897]); values attained by exactly one class: 26 (e.g. [1, 2891, 2917, 2919, 2931, 2959] ... [3299, 3303, 3333, 3357])
+     max H at n = 3: 3; maximizers (|Aut|, self-converse, strong): [(3, True, True)]
+     max H at n = 4: 5; maximizers (|Aut|, self-converse, strong): [(1, True, True)]
+     max H at n = 5: 15; maximizers (|Aut|, self-converse, strong): [(3, True, True), (5, True, True)]
+     max H at n = 6: 45; maximizers (|Aut|, self-converse, strong): [(3, True, True), (3, True, True)]
+     max H at n = 7: 189; maximizers (|Aut|, self-converse, strong): [(21, True, True)]
+     max H at n = 8: 661; maximizers (|Aut|, self-converse, strong): [(1, False, True), (1, False, True), (1, False, True), (1, True, True), (1, True, True), (1, False, True)]
+     max H at n = 9: 3357; maximizers (|Aut|, self-converse, strong): [(9, True, True)]
+     n = 9: fraction with 3 | H: classes 0.3463, labelled 0.3388
+     n = 9: fraction with 5 | H: classes 0.2006, labelled 0.2005
+     n = 9: fraction with 7 | H: classes 0.1417, labelled 0.1420
+     n = 9: fraction with 11 | H: classes 0.0919, labelled 0.0919
+     n = 9: fraction with 13 | H: classes 0.0763, labelled 0.0764
+     n = 7: H mod 8 over classes {1: 130, 3: 116, 5: 116, 7: 94}; over self-converse classes {1: 22, 3: 20, 5: 22, 7: 24}
+     n = 8: H mod 8 over classes {1: 1824, 3: 1692, 5: 1748, 7: 1616}; over self-converse classes {1: 82, 3: 0, 5: 94, 7: 0}
+     n = 9: H mod 8 over classes {1: 48596, 3: 47550, 5: 47806, 7: 47584}; over self-converse classes {1: 700, 3: 700, 5: 676, 7: 676}
+     n = 7: tc values <= 60: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59]; tc holes (odd, <= 60): [7, 21]
+     n = 8: tc values <= 60: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59]; tc holes (odd, <= 60): [7, 21]
+     n = 9: tc values <= 60: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59]; tc holes (odd, <= 60): [7, 21]
+  ok   pattern tables printed (FINITE-EXACT)
+
+ALL CHECKS PASSED  (19s)
