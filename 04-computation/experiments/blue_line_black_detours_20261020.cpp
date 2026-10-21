@@ -15,7 +15,8 @@
 // certificate of each line and reporting the lines with none (exhaustive for L <= 3).  For an even number of
 // moves the path-edge sets XOR to the COMPLEMENT of E(P), so L = 2 needs C(n-1,2) <= 2(n-1), i.e. n <= 6.
 //
-// Build: g++ -O2 -std=c++17 -o bld blue_line_black_detours_20261020.cpp ; run: ./bld n [k | all]
+// Build: g++ -O2 -std=c++17 -o bld blue_line_black_detours_20261020.cpp ; run: ./bld n [k | all] [codeLo codeHi]
+// (the optional code range slices the 2^e sigma-orbit codes for parallel runs; n <= 11 since pair masks use 64 bits)
 #include <cstdio>
 #include <cstdlib>
 #include <cstdint>
@@ -82,7 +83,8 @@ template <class F> static bool hamPaths(const Tour &T, F &&f) {
 
 int main(int argc, char **argv) {
     n = argc > 1 ? atoi(argv[1]) : 8; int layer = -1; if (argc > 2 && strcmp(argv[2], "all") != 0) layer = atoi(argv[2]);
-    if (n < 4 || n > 10) { fprintf(stderr, "n in 4..10\n"); return 1; }
+    if (n < 4 || n > 11) { fprintf(stderr, "n in 4..11 (pair masks in 64 bits)\n"); return 1; }
+    unsigned long long codeLo = 0, codeHi = 0; if (argc > 4) { codeLo = strtoull(argv[3], 0, 10); codeHi = strtoull(argv[4], 0, 10); }
     m = 0; for (int i = 0; i < n; i++) for (int j = 0; j < n; j++) cellIdx[i][j] = -1;
     for (int i = 0; i < n; i++) for (int j = i + 2; j < n; j++) { cellI[m] = i; cellJ[m] = j; cellIdx[i][j] = m; m++; }
     for (int k = 0; k < m; k++) sigmaCell[k] = cellIdx[n - 1 - cellJ[k]][n - 1 - cellI[k]];
@@ -96,7 +98,9 @@ int main(int argc, char **argv) {
     auto t0 = chrono::steady_clock::now();
     const int K = 16; long long lines[K] = {0}, len2[K] = {0}, len3[K] = {0}, none[K] = {0}, pbinv[K] = {0}, genuine[K] = {0}; double maxSec[K] = {0}; long long maxH[K] = {0};
     long long done = 0;
-    for (uint32_t code = 0; code < (1u << e); code++) {
+    if (codeHi == 0) codeHi = 1ull << e;
+    printf("# code range [%llu, %llu)\n", codeLo, codeHi); fflush(stdout);
+    for (unsigned long long code = codeLo; code < codeHi; code++) {
         uint64_t t = 0; for (int i = 0; i < e; i++) if ((code >> i) & 1) { t |= 1ull << reps[i]; t |= 1ull << sigmaCell[reps[i]]; }
         if ((t >> apex) & 1) continue;   // closed: apex tile backward (z -> a)
         Tour T; for (int u = 0; u < n; u++) T.adj[u] = 0;

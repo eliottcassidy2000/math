@@ -805,13 +805,17 @@ all heights (THM-1289, published), δ ineffective.
   complementation and path reversal; the order-10 case and the (n-5,4) layer; black-core connectivity via the trijection; the 153N annulus bill; the 65 idoneal numbers.
   FINITE-EXACT: class-level line multigraph at n = 9 by a refinement canoniser (191,536 classes; every THM-643/4729/4731 control; line metagraph and blue spine connected;
   black components = 1 + pure-blue = 7: HYP-9345 (b) / HYP-9346 (2) at n = 9); literal black detours of all closed blue presentations n = 5..10: at n = 6, 8, 9, 10 every
-  closed blue line between non-pure-blue classes has three black K moves to its literal partner in every layer (524,288 lines at n = 10, 321 s), closing the order-10 case
-  of the endpoint-three layer (n-4,3) (now every n >= 6) and settling (n-5,4) through n = 10; exceptions at n <= 10: F_5, F_7 only (open member = transitive with d->0,
+  closed blue line between non-pure-blue classes has three black K moves to its literal partner in every layer (524,288 lines at n = 10, 321 s), independently confirming the two
+  concurrent order-10 certificates of the endpoint-three layer (n-4,3) (now every n >= 7) and settling every layer through n = 10; exceptions at n <= 10: F_5, F_7 only (open member = transitive with d->0,
   n-1->d reversed; black distance exactly 5; F_9, F_11 distance 3). PROVED: detour parity (even L needs n <= 2L+2), the connectivity reduction, pure-blue-touching
   lines in layers n-2 / n-3 (bottom block K1 / C3, n >= 6), and the Klein dictionary (kappa, kappa sigma fixed-point-free at every n; D(N) embeds equivariantly iff an
   exponent outside the swapped pair is odd; the 4-2-4 central pair is the obstruction; eight non-central divisors of p^2qr = order-4 tilings, C = complementation,
-  Q = converse with path reversal, CQ = path reversal; 32 equivariant bijections, 2 sign-reading, 2 monotone, none both). NOT ADVANCED: zero-heavy boundary, palette
-  forcing, the Collatz increment bound (equation (4) of native_cancellation_105); idoneal relation = THM-4566 (congruence guards complete iff idoneal). Next: n = 11
+  Q = converse with path reversal, CQ = path reversal; 32 equivariant bijections, 2 sign-reading, 2 monotone, none both). CONCURRENT (same day, credited): endpoint_three_order10_20261021, endpoint_four_20261020h,
+  endpoint_four_repairs_20261021 ((n-5,4) for n >= 15 minus the sub-case where F_7 sits), divisor_reflection_resolution_20261021 (Theorem 1 = the even-k
+  obstruction), reflection_context_20261020h, idoneal_information_channels_20261021, session18_native_annulus, debt_annulus_20261020h, source63_separator_debt_20261021,
+  zero_heavy_robustness_20261021a, endpoint_four_endpair/frontier_20261021, and mac-mini-debtcones' THM-4733/4734 (same k = 3, 4 finite results at n <= 10; same
+  obstruction with a fold). NOT ADVANCED here: zero-heavy boundary, palette forcing, the Collatz increment bound (equation (4) of native_cancellation_105);
+  idoneal relation = THM-4566 (congruence guards complete iff idoneal). Next: n = 11
   detours (2^24 lines), structural (n-5,4), chirality halves of the fundamental black graph.
 - **HYP-9340 beyond p-groups and the prime-circulant rule (opus, 2026-10-19-S45; [note](../05-knowledge/results/odd_symmetry_beyond_sylow_and_affine_circulant_rules_20261019.md), THM-4728, HYP-9344).**
   Owner directive: prove HYP-9340 beyond Sylow (first open case Z_3 at n = 6), a uniform rule or definability obstruction for the prime-circulant bijection, prove or disprove HYP-9172, odd primes and
