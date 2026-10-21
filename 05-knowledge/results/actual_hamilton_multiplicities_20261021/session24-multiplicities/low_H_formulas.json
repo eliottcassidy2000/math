@@ -1,0 +1,1021 @@
+{
+  "1": {
+    "core_word_terms": [
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "eventual_ordinary_polynomial": "1.00000000000000",
+    "merged_denominator": "z - 1",
+    "merged_gf": "-1/(z - 1)",
+    "nontrivial_scc_max": 0,
+    "ordinary_denominator": "z - 1",
+    "ordinary_gf": "-1/(z - 1)",
+    "polynomial_valid_from_core_term_bound": 0,
+    "polynomial_valid_from_safe_bound": 0,
+    "self_converse_denominator": "z - 1",
+    "self_converse_gf": "-1/(z - 1)",
+    "strong_atoms": "0",
+    "strong_centers": "z + 1",
+    "universal_Busch_ordinary_onset": 0,
+    "universal_Busch_parity_onset": 1
+  },
+  "3": {
+    "core_word_terms": [
+      [
+        1,
+        3,
+        1
+      ]
+    ],
+    "eventual_ordinary_polynomial": "n - 2",
+    "merged_denominator": "(z - 1)**2*(z + 1)",
+    "merged_gf": "z**3/(z**3 - z**2 - z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "z**3/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 2,
+    "polynomial_valid_from_safe_bound": 3,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-z**3/(z**2 - 1)",
+    "strong_atoms": "z**3",
+    "strong_centers": "z**3",
+    "universal_Busch_ordinary_onset": 2,
+    "universal_Busch_parity_onset": 3
+  },
+  "5": {
+    "core_word_terms": [
+      [
+        1,
+        4,
+        1
+      ]
+    ],
+    "eventual_ordinary_polynomial": "n - 3",
+    "merged_denominator": "(z - 1)**2*(z + 1)",
+    "merged_gf": "z**4/(z**3 - z**2 - z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "z**4/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 3,
+    "polynomial_valid_from_safe_bound": 4,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-z**4/(z**2 - 1)",
+    "strong_atoms": "z**4",
+    "strong_centers": "z**4",
+    "universal_Busch_ordinary_onset": 3,
+    "universal_Busch_parity_onset": 4
+  },
+  "7": {
+    "core_word_terms": [],
+    "eventual_ordinary_polynomial": "0",
+    "merged_denominator": "1",
+    "merged_gf": "0",
+    "nontrivial_scc_max": null,
+    "ordinary_denominator": "1",
+    "ordinary_gf": "0",
+    "polynomial_valid_from_core_term_bound": 0,
+    "polynomial_valid_from_safe_bound": 0,
+    "self_converse_denominator": "1",
+    "self_converse_gf": "0",
+    "strong_atoms": "0",
+    "strong_centers": "0",
+    "universal_Busch_ordinary_onset": 3,
+    "universal_Busch_parity_onset": 4
+  },
+  "9": {
+    "core_word_terms": [
+      [
+        1,
+        5,
+        2
+      ],
+      [
+        2,
+        6,
+        1
+      ]
+    ],
+    "eventual_ordinary_polynomial": "(n - 4)*(n - 1)/2",
+    "merged_denominator": "(z - 1)**3*(z + 1)",
+    "merged_gf": "(z**6 - 2*z**5)/(z**4 - 2*z**3 + 2*z - 1)",
+    "nontrivial_scc_max": 2,
+    "ordinary_denominator": "(z - 1)**3",
+    "ordinary_gf": "(z**6 - 2*z**5)/(z**3 - 3*z**2 + 3*z - 1)",
+    "polynomial_valid_from_core_term_bound": 4,
+    "polynomial_valid_from_safe_bound": 6,
+    "self_converse_denominator": "(z - 1)**2*(z + 1)",
+    "self_converse_gf": "(-z**6 + 2*z**5)/(z**3 - z**2 - z + 1)",
+    "strong_atoms": "2*z**5",
+    "strong_centers": "2*z**5",
+    "universal_Busch_ordinary_onset": 4,
+    "universal_Busch_parity_onset": 5
+  },
+  "11": {
+    "core_word_terms": [
+      [
+        1,
+        5,
+        1
+      ]
+    ],
+    "eventual_ordinary_polynomial": "n - 4",
+    "merged_denominator": "(z - 1)**2*(z + 1)",
+    "merged_gf": "z**5/(z**3 - z**2 - z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "z**5/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 4,
+    "polynomial_valid_from_safe_bound": 5,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-z**5/(z**2 - 1)",
+    "strong_atoms": "z**5",
+    "strong_centers": "z**5",
+    "universal_Busch_ordinary_onset": 4,
+    "universal_Busch_parity_onset": 5
+  },
+  "13": {
+    "core_word_terms": [
+      [
+        1,
+        5,
+        1
+      ]
+    ],
+    "eventual_ordinary_polynomial": "n - 4",
+    "merged_denominator": "(z - 1)**2*(z + 1)",
+    "merged_gf": "z**5/(z**3 - z**2 - z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "z**5/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 4,
+    "polynomial_valid_from_safe_bound": 5,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-z**5/(z**2 - 1)",
+    "strong_atoms": "z**5",
+    "strong_centers": "z**5",
+    "universal_Busch_ordinary_onset": 4,
+    "universal_Busch_parity_onset": 5
+  },
+  "15": {
+    "core_word_terms": [
+      [
+        1,
+        5,
+        2
+      ],
+      [
+        1,
+        6,
+        2
+      ],
+      [
+        2,
+        7,
+        2
+      ]
+    ],
+    "eventual_ordinary_polynomial": "(n - 4)*(n - 3)",
+    "merged_denominator": "(z - 1)**3*(z + 1)",
+    "merged_gf": "(-z**7 + z**6 - 2*z**5)/(z**4 - 2*z**3 + 2*z - 1)",
+    "nontrivial_scc_max": 2,
+    "ordinary_denominator": "(z - 1)**3",
+    "ordinary_gf": "-2*z**5/(z**3 - 3*z**2 + 3*z - 1)",
+    "polynomial_valid_from_core_term_bound": 5,
+    "polynomial_valid_from_safe_bound": 7,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-2*z**5/(z**2 - 1)",
+    "strong_atoms": "2*z**6 + 2*z**5",
+    "strong_centers": "2*z**5",
+    "universal_Busch_ordinary_onset": 5,
+    "universal_Busch_parity_onset": 6
+  },
+  "17": {
+    "core_word_terms": [
+      [
+        1,
+        6,
+        2
+      ]
+    ],
+    "eventual_ordinary_polynomial": "2*(n - 5)",
+    "merged_denominator": "(z - 1)**2*(z + 1)",
+    "merged_gf": "2*z**6/(z**3 - z**2 - z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "2*z**6/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 5,
+    "polynomial_valid_from_safe_bound": 6,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-2*z**6/(z**2 - 1)",
+    "strong_atoms": "2*z**6",
+    "strong_centers": "2*z**6",
+    "universal_Busch_ordinary_onset": 5,
+    "universal_Busch_parity_onset": 6
+  },
+  "19": {
+    "core_word_terms": [
+      [
+        1,
+        6,
+        2
+      ]
+    ],
+    "eventual_ordinary_polynomial": "2*(n - 5)",
+    "merged_denominator": "(z - 1)**2",
+    "merged_gf": "z**6/(z**2 - 2*z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "2*z**6/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 5,
+    "polynomial_valid_from_safe_bound": 6,
+    "self_converse_denominator": "1",
+    "self_converse_gf": "0",
+    "strong_atoms": "2*z**6",
+    "strong_centers": "0",
+    "universal_Busch_ordinary_onset": 5,
+    "universal_Busch_parity_onset": 6
+  },
+  "21": {
+    "core_word_terms": [],
+    "eventual_ordinary_polynomial": "0",
+    "merged_denominator": "1",
+    "merged_gf": "0",
+    "nontrivial_scc_max": null,
+    "ordinary_denominator": "1",
+    "ordinary_gf": "0",
+    "polynomial_valid_from_core_term_bound": 0,
+    "polynomial_valid_from_safe_bound": 0,
+    "self_converse_denominator": "1",
+    "self_converse_gf": "0",
+    "strong_atoms": "0",
+    "strong_centers": "0",
+    "universal_Busch_ordinary_onset": 5,
+    "universal_Busch_parity_onset": 6
+  },
+  "23": {
+    "core_word_terms": [
+      [
+        1,
+        6,
+        4
+      ]
+    ],
+    "eventual_ordinary_polynomial": "4*(n - 5)",
+    "merged_denominator": "(z - 1)**2",
+    "merged_gf": "2*z**6/(z**2 - 2*z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "4*z**6/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 5,
+    "polynomial_valid_from_safe_bound": 6,
+    "self_converse_denominator": "1",
+    "self_converse_gf": "0",
+    "strong_atoms": "4*z**6",
+    "strong_centers": "0",
+    "universal_Busch_ordinary_onset": 5,
+    "universal_Busch_parity_onset": 6
+  },
+  "25": {
+    "core_word_terms": [
+      [
+        1,
+        6,
+        2
+      ],
+      [
+        1,
+        7,
+        1
+      ],
+      [
+        2,
+        8,
+        1
+      ]
+    ],
+    "eventual_ordinary_polynomial": "(n - 5)*(n - 2)/2",
+    "merged_denominator": "(z - 1)**3*(z + 1)",
+    "merged_gf": "(z**8 - z**7 - z**6)/(z**4 - 2*z**3 + 2*z - 1)",
+    "nontrivial_scc_max": 2,
+    "ordinary_denominator": "(z - 1)**3",
+    "ordinary_gf": "(z**7 - 2*z**6)/(z**3 - 3*z**2 + 3*z - 1)",
+    "polynomial_valid_from_core_term_bound": 6,
+    "polynomial_valid_from_safe_bound": 8,
+    "self_converse_denominator": "(z - 1)**2*(z + 1)",
+    "self_converse_gf": "z**7/(z**3 - z**2 - z + 1)",
+    "strong_atoms": "z**7 + 2*z**6",
+    "strong_centers": "z**7",
+    "universal_Busch_ordinary_onset": 6,
+    "universal_Busch_parity_onset": 7
+  },
+  "27": {
+    "core_word_terms": [
+      [
+        1,
+        6,
+        2
+      ],
+      [
+        1,
+        7,
+        3
+      ],
+      [
+        2,
+        8,
+        4
+      ],
+      [
+        3,
+        9,
+        1
+      ]
+    ],
+    "eventual_ordinary_polynomial": "n*(n - 5)*(n - 4)/6",
+    "merged_denominator": "(z - 1)**4*(z + 1)**2",
+    "merged_gf": "(-z**8 + 2*z**7 + z**6)/(z**6 - 2*z**5 - z**4 + 4*z**3 - z**2 - 2*z + 1)",
+    "nontrivial_scc_max": 3,
+    "ordinary_denominator": "(z - 1)**4",
+    "ordinary_gf": "(-z**7 + 2*z**6)/(z**4 - 4*z**3 + 6*z**2 - 4*z + 1)",
+    "polynomial_valid_from_core_term_bound": 6,
+    "polynomial_valid_from_safe_bound": 9,
+    "self_converse_denominator": "(z - 1)**2*(z + 1)**2",
+    "self_converse_gf": "z**7/(z**4 - 2*z**2 + 1)",
+    "strong_atoms": "3*z**7 + 2*z**6",
+    "strong_centers": "z**7",
+    "universal_Busch_ordinary_onset": 6,
+    "universal_Busch_parity_onset": 7
+  },
+  "29": {
+    "core_word_terms": [
+      [
+        1,
+        6,
+        4
+      ],
+      [
+        1,
+        7,
+        2
+      ]
+    ],
+    "eventual_ordinary_polynomial": "2*(3*n - 16)",
+    "merged_denominator": "(z - 1)**2*(z + 1)",
+    "merged_gf": "(z**8 + 2*z**7 + 3*z**6)/(z**3 - z**2 - z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "(2*z**7 + 4*z**6)/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 6,
+    "polynomial_valid_from_safe_bound": 7,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-2*z**6/(z**2 - 1)",
+    "strong_atoms": "2*z**7 + 4*z**6",
+    "strong_centers": "2*z**6",
+    "universal_Busch_ordinary_onset": 6,
+    "universal_Busch_parity_onset": 7
+  },
+  "31": {
+    "core_word_terms": [
+      [
+        1,
+        6,
+        2
+      ],
+      [
+        1,
+        7,
+        2
+      ]
+    ],
+    "eventual_ordinary_polynomial": "2*(2*n - 11)",
+    "merged_denominator": "(z - 1)**2*(z + 1)",
+    "merged_gf": "(3*z**7 + z**6)/(z**3 - z**2 - z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "(2*z**7 + 2*z**6)/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 6,
+    "polynomial_valid_from_safe_bound": 7,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-2*z**7/(z**2 - 1)",
+    "strong_atoms": "2*z**7 + 2*z**6",
+    "strong_centers": "2*z**7",
+    "universal_Busch_ordinary_onset": 6,
+    "universal_Busch_parity_onset": 7
+  },
+  "33": {
+    "core_word_terms": [
+      [
+        1,
+        6,
+        5
+      ],
+      [
+        1,
+        7,
+        3
+      ],
+      [
+        2,
+        8,
+        2
+      ]
+    ],
+    "eventual_ordinary_polynomial": "n**2 - 5*n - 1",
+    "merged_denominator": "(z - 1)**3",
+    "merged_gf": "(2*z**7 - 3*z**6)/(z**3 - 3*z**2 + 3*z - 1)",
+    "nontrivial_scc_max": 2,
+    "ordinary_denominator": "(z - 1)**3",
+    "ordinary_gf": "(z**8 + 2*z**7 - 5*z**6)/(z**3 - 3*z**2 + 3*z - 1)",
+    "polynomial_valid_from_core_term_bound": 6,
+    "polynomial_valid_from_safe_bound": 8,
+    "self_converse_denominator": "z - 1",
+    "self_converse_gf": "-z**6/(z - 1)",
+    "strong_atoms": "3*z**7 + 5*z**6",
+    "strong_centers": "z**7 + z**6",
+    "universal_Busch_ordinary_onset": 6,
+    "universal_Busch_parity_onset": 7
+  },
+  "35": {
+    "core_word_terms": [
+      [
+        1,
+        7,
+        2
+      ]
+    ],
+    "eventual_ordinary_polynomial": "2*(n - 6)",
+    "merged_denominator": "(z - 1)**2",
+    "merged_gf": "z**7/(z**2 - 2*z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "2*z**7/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 6,
+    "polynomial_valid_from_safe_bound": 7,
+    "self_converse_denominator": "1",
+    "self_converse_gf": "0",
+    "strong_atoms": "2*z**7",
+    "strong_centers": "0",
+    "universal_Busch_ordinary_onset": 6,
+    "universal_Busch_parity_onset": 7
+  },
+  "37": {
+    "core_word_terms": [
+      [
+        1,
+        6,
+        5
+      ],
+      [
+        1,
+        7,
+        2
+      ]
+    ],
+    "eventual_ordinary_polynomial": "7*n - 37",
+    "merged_denominator": "(z - 1)**2*(z + 1)",
+    "merged_gf": "(z**8 + 3*z**7 + 3*z**6)/(z**3 - z**2 - z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "(2*z**7 + 5*z**6)/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 6,
+    "polynomial_valid_from_safe_bound": 7,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-z**6/(z**2 - 1)",
+    "strong_atoms": "2*z**7 + 5*z**6",
+    "strong_centers": "z**6",
+    "universal_Busch_ordinary_onset": 6,
+    "universal_Busch_parity_onset": 7
+  },
+  "39": {
+    "core_word_terms": [
+      [
+        1,
+        7,
+        2
+      ],
+      [
+        2,
+        8,
+        2
+      ]
+    ],
+    "eventual_ordinary_polynomial": "(n - 6)*(n - 5)",
+    "merged_denominator": "(z - 1)**3",
+    "merged_gf": "-z**7/(z**3 - 3*z**2 + 3*z - 1)",
+    "nontrivial_scc_max": 2,
+    "ordinary_denominator": "(z - 1)**3",
+    "ordinary_gf": "-2*z**7/(z**3 - 3*z**2 + 3*z - 1)",
+    "polynomial_valid_from_core_term_bound": 6,
+    "polynomial_valid_from_safe_bound": 8,
+    "self_converse_denominator": "1",
+    "self_converse_gf": "0",
+    "strong_atoms": "2*z**7",
+    "strong_centers": "0",
+    "universal_Busch_ordinary_onset": 6,
+    "universal_Busch_parity_onset": 7
+  },
+  "41": {
+    "core_word_terms": [
+      [
+        1,
+        6,
+        1
+      ],
+      [
+        1,
+        7,
+        5
+      ]
+    ],
+    "eventual_ordinary_polynomial": "6*n - 35",
+    "merged_denominator": "(z - 1)**2",
+    "merged_gf": "(2*z**7 + z**6)/(z**2 - 2*z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "(5*z**7 + z**6)/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 6,
+    "polynomial_valid_from_safe_bound": 7,
+    "self_converse_denominator": "z - 1",
+    "self_converse_gf": "-z**6/(z - 1)",
+    "strong_atoms": "5*z**7 + z**6",
+    "strong_centers": "z**7 + z**6",
+    "universal_Busch_ordinary_onset": 6,
+    "universal_Busch_parity_onset": 7
+  },
+  "43": {
+    "core_word_terms": [
+      [
+        1,
+        6,
+        2
+      ],
+      [
+        1,
+        7,
+        2
+      ]
+    ],
+    "eventual_ordinary_polynomial": "2*(2*n - 11)",
+    "merged_denominator": "(z - 1)**2",
+    "merged_gf": "(z**7 + z**6)/(z**2 - 2*z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "(2*z**7 + 2*z**6)/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 6,
+    "polynomial_valid_from_safe_bound": 7,
+    "self_converse_denominator": "1",
+    "self_converse_gf": "0",
+    "strong_atoms": "2*z**7 + 2*z**6",
+    "strong_centers": "0",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  },
+  "45": {
+    "core_word_terms": [
+      [
+        1,
+        6,
+        2
+      ],
+      [
+        1,
+        7,
+        5
+      ],
+      [
+        1,
+        8,
+        5
+      ],
+      [
+        2,
+        8,
+        4
+      ],
+      [
+        2,
+        9,
+        8
+      ],
+      [
+        3,
+        10,
+        3
+      ]
+    ],
+    "eventual_ordinary_polynomial": "(n**3 - 12*n**2 + 43*n - 38)/2",
+    "merged_denominator": "(z - 1)**4*(z + 1)**2",
+    "merged_gf": "(-z**11 + 2*z**9 + 2*z**8 + z**7 + 2*z**6)/(z**6 - 2*z**5 - z**4 + 4*z**3 - z**2 - 2*z + 1)",
+    "nontrivial_scc_max": 3,
+    "ordinary_denominator": "(z - 1)**4",
+    "ordinary_gf": "(-z**9 + z**8 + z**7 + 2*z**6)/(z**4 - 4*z**3 + 6*z**2 - 4*z + 1)",
+    "polynomial_valid_from_core_term_bound": 7,
+    "polynomial_valid_from_safe_bound": 10,
+    "self_converse_denominator": "(z - 1)**2*(z + 1)**2",
+    "self_converse_gf": "(-z**9 - z**8 + z**7 + 2*z**6)/(z**4 - 2*z**2 + 1)",
+    "strong_atoms": "5*z**8 + 5*z**7 + 2*z**6",
+    "strong_centers": "z**8 + z**7 + 2*z**6",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  },
+  "47": {
+    "core_word_terms": [
+      [
+        1,
+        7,
+        2
+      ]
+    ],
+    "eventual_ordinary_polynomial": "2*(n - 6)",
+    "merged_denominator": "(z - 1)**2",
+    "merged_gf": "z**7/(z**2 - 2*z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "2*z**7/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 6,
+    "polynomial_valid_from_safe_bound": 7,
+    "self_converse_denominator": "1",
+    "self_converse_gf": "0",
+    "strong_atoms": "2*z**7",
+    "strong_centers": "0",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  },
+  "49": {
+    "core_word_terms": [
+      [
+        1,
+        7,
+        7
+      ],
+      [
+        1,
+        8,
+        1
+      ]
+    ],
+    "eventual_ordinary_polynomial": "8*n - 49",
+    "merged_denominator": "(z - 1)**2",
+    "merged_gf": "4*z**7/(z**2 - 2*z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "(z**8 + 7*z**7)/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 7,
+    "polynomial_valid_from_safe_bound": 8,
+    "self_converse_denominator": "z - 1",
+    "self_converse_gf": "-z**7/(z - 1)",
+    "strong_atoms": "z**8 + 7*z**7",
+    "strong_centers": "z**8 + z**7",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  },
+  "51": {
+    "core_word_terms": [
+      [
+        1,
+        7,
+        8
+      ],
+      [
+        1,
+        8,
+        4
+      ],
+      [
+        2,
+        9,
+        4
+      ]
+    ],
+    "eventual_ordinary_polynomial": "2*(n - 6)*(n - 3)",
+    "merged_denominator": "(z - 1)**3*(z + 1)",
+    "merged_gf": "(z**9 - 5*z**7)/(z**4 - 2*z**3 + 2*z - 1)",
+    "nontrivial_scc_max": 2,
+    "ordinary_denominator": "(z - 1)**3",
+    "ordinary_gf": "(4*z**8 - 8*z**7)/(z**3 - 3*z**2 + 3*z - 1)",
+    "polynomial_valid_from_core_term_bound": 7,
+    "polynomial_valid_from_safe_bound": 9,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-2*z**7/(z**2 - 1)",
+    "strong_atoms": "4*z**8 + 8*z**7",
+    "strong_centers": "2*z**7",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  },
+  "53": {
+    "core_word_terms": [
+      [
+        1,
+        7,
+        4
+      ],
+      [
+        1,
+        8,
+        6
+      ]
+    ],
+    "eventual_ordinary_polynomial": "2*(5*n - 33)",
+    "merged_denominator": "(z - 1)**2",
+    "merged_gf": "(3*z**8 + 2*z**7)/(z**2 - 2*z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "(6*z**8 + 4*z**7)/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 7,
+    "polynomial_valid_from_safe_bound": 8,
+    "self_converse_denominator": "1",
+    "self_converse_gf": "0",
+    "strong_atoms": "6*z**8 + 4*z**7",
+    "strong_centers": "0",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  },
+  "55": {
+    "core_word_terms": [
+      [
+        1,
+        7,
+        4
+      ],
+      [
+        2,
+        9,
+        2
+      ]
+    ],
+    "eventual_ordinary_polynomial": "n**2 - 11*n + 32",
+    "merged_denominator": "(z - 1)**3",
+    "merged_gf": "(-z**9 + 2*z**8 - 2*z**7)/(z**3 - 3*z**2 + 3*z - 1)",
+    "nontrivial_scc_max": 2,
+    "ordinary_denominator": "(z - 1)**3",
+    "ordinary_gf": "(-2*z**9 + 4*z**8 - 4*z**7)/(z**3 - 3*z**2 + 3*z - 1)",
+    "polynomial_valid_from_core_term_bound": 7,
+    "polynomial_valid_from_safe_bound": 9,
+    "self_converse_denominator": "1",
+    "self_converse_gf": "0",
+    "strong_atoms": "4*z**7",
+    "strong_centers": "0",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  },
+  "57": {
+    "core_word_terms": [
+      [
+        1,
+        7,
+        4
+      ],
+      [
+        1,
+        8,
+        3
+      ],
+      [
+        2,
+        9,
+        4
+      ]
+    ],
+    "eventual_ordinary_polynomial": "2*n**2 - 23*n + 67",
+    "merged_denominator": "(z - 1)**3*(z + 1)",
+    "merged_gf": "(-z**10 + z**9 - 2*z**8 - 2*z**7)/(z**4 - 2*z**3 + 2*z - 1)",
+    "nontrivial_scc_max": 2,
+    "ordinary_denominator": "(z - 1)**3",
+    "ordinary_gf": "(-z**9 + z**8 - 4*z**7)/(z**3 - 3*z**2 + 3*z - 1)",
+    "polynomial_valid_from_core_term_bound": 7,
+    "polynomial_valid_from_safe_bound": 9,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-z**8/(z**2 - 1)",
+    "strong_atoms": "3*z**8 + 4*z**7",
+    "strong_centers": "z**8",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  },
+  "59": {
+    "core_word_terms": [
+      [
+        1,
+        7,
+        8
+      ],
+      [
+        1,
+        8,
+        4
+      ]
+    ],
+    "eventual_ordinary_polynomial": "4*(3*n - 19)",
+    "merged_denominator": "(z - 1)**2",
+    "merged_gf": "(2*z**8 + 4*z**7)/(z**2 - 2*z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "(4*z**8 + 8*z**7)/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 7,
+    "polynomial_valid_from_safe_bound": 8,
+    "self_converse_denominator": "1",
+    "self_converse_gf": "0",
+    "strong_atoms": "4*z**8 + 8*z**7",
+    "strong_centers": "0",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  },
+  "61": {
+    "core_word_terms": [
+      [
+        1,
+        7,
+        1
+      ],
+      [
+        1,
+        8,
+        4
+      ]
+    ],
+    "eventual_ordinary_polynomial": "5*n - 34",
+    "merged_denominator": "(z - 1)**2*(z + 1)",
+    "merged_gf": "(2*z**9 + 2*z**8 + z**7)/(z**3 - z**2 - z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "(4*z**8 + z**7)/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 7,
+    "polynomial_valid_from_safe_bound": 8,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-z**7/(z**2 - 1)",
+    "strong_atoms": "4*z**8 + z**7",
+    "strong_centers": "z**7",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  },
+  "63": {
+    "core_word_terms": [
+      [
+        1,
+        8,
+        2
+      ]
+    ],
+    "eventual_ordinary_polynomial": "2*(n - 7)",
+    "merged_denominator": "(z - 1)**2",
+    "merged_gf": "z**8/(z**2 - 2*z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "2*z**8/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 7,
+    "polynomial_valid_from_safe_bound": 8,
+    "self_converse_denominator": "1",
+    "self_converse_gf": "0",
+    "strong_atoms": "2*z**8",
+    "strong_centers": "0",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  },
+  "65": {
+    "core_word_terms": [
+      [
+        1,
+        7,
+        11
+      ],
+      [
+        1,
+        8,
+        3
+      ],
+      [
+        2,
+        9,
+        2
+      ]
+    ],
+    "eventual_ordinary_polynomial": "n**2 - n - 31",
+    "merged_denominator": "(z - 1)**3*(z + 1)",
+    "merged_gf": "(4*z**9 + z**8 - 7*z**7)/(z**4 - 2*z**3 + 2*z - 1)",
+    "nontrivial_scc_max": 2,
+    "ordinary_denominator": "(z - 1)**3",
+    "ordinary_gf": "(z**9 + 8*z**8 - 11*z**7)/(z**3 - 3*z**2 + 3*z - 1)",
+    "polynomial_valid_from_core_term_bound": 7,
+    "polynomial_valid_from_safe_bound": 9,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "(-z**8 - 3*z**7)/(z**2 - 1)",
+    "strong_atoms": "3*z**8 + 11*z**7",
+    "strong_centers": "z**8 + 3*z**7",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  },
+  "67": {
+    "core_word_terms": [
+      [
+        1,
+        7,
+        6
+      ]
+    ],
+    "eventual_ordinary_polynomial": "6*(n - 6)",
+    "merged_denominator": "(z - 1)**2*(z + 1)",
+    "merged_gf": "(2*z**8 + 4*z**7)/(z**3 - z**2 - z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "6*z**7/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 6,
+    "polynomial_valid_from_safe_bound": 7,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-2*z**7/(z**2 - 1)",
+    "strong_atoms": "6*z**7",
+    "strong_centers": "2*z**7",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  },
+  "69": {
+    "core_word_terms": [
+      [
+        1,
+        7,
+        12
+      ],
+      [
+        1,
+        8,
+        6
+      ],
+      [
+        2,
+        9,
+        8
+      ]
+    ],
+    "eventual_ordinary_polynomial": "2*(n - 5)*(2*n - 11)",
+    "merged_denominator": "(z - 1)**3*(z + 1)",
+    "merged_gf": "(-z**10 + z**9 - z**8 - 7*z**7)/(z**4 - 2*z**3 + 2*z - 1)",
+    "nontrivial_scc_max": 2,
+    "ordinary_denominator": "(z - 1)**3",
+    "ordinary_gf": "(-2*z**9 + 6*z**8 - 12*z**7)/(z**3 - 3*z**2 + 3*z - 1)",
+    "polynomial_valid_from_core_term_bound": 7,
+    "polynomial_valid_from_safe_bound": 9,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-2*z**7/(z**2 - 1)",
+    "strong_atoms": "6*z**8 + 12*z**7",
+    "strong_centers": "2*z**7",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  },
+  "71": {
+    "core_word_terms": [
+      [
+        1,
+        7,
+        7
+      ],
+      [
+        1,
+        8,
+        4
+      ]
+    ],
+    "eventual_ordinary_polynomial": "11*n - 70",
+    "merged_denominator": "(z - 1)**2*(z + 1)",
+    "merged_gf": "(2*z**9 + 5*z**8 + 4*z**7)/(z**3 - z**2 - z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "(4*z**8 + 7*z**7)/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 7,
+    "polynomial_valid_from_safe_bound": 8,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-z**7/(z**2 - 1)",
+    "strong_atoms": "4*z**8 + 7*z**7",
+    "strong_centers": "z**7",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  },
+  "73": {
+    "core_word_terms": [
+      [
+        1,
+        7,
+        8
+      ],
+      [
+        1,
+        8,
+        11
+      ]
+    ],
+    "eventual_ordinary_polynomial": "19*n - 125",
+    "merged_denominator": "(z - 1)**2*(z + 1)",
+    "merged_gf": "(5*z**9 + 10*z**8 + 4*z**7)/(z**3 - z**2 - z + 1)",
+    "nontrivial_scc_max": 1,
+    "ordinary_denominator": "(z - 1)**2",
+    "ordinary_gf": "(11*z**8 + 8*z**7)/(z**2 - 2*z + 1)",
+    "polynomial_valid_from_core_term_bound": 7,
+    "polynomial_valid_from_safe_bound": 8,
+    "self_converse_denominator": "(z - 1)*(z + 1)",
+    "self_converse_gf": "-z**8/(z**2 - 1)",
+    "strong_atoms": "11*z**8 + 8*z**7",
+    "strong_centers": "z**8",
+    "universal_Busch_ordinary_onset": 7,
+    "universal_Busch_parity_onset": 8
+  }
+}

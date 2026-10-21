@@ -1,0 +1,50 @@
+{
+  "checks": 2063,
+  "complete_ordinary_classes_by_n": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 2,
+    "4": 4,
+    "5": 12,
+    "6": 56,
+    "7": 456,
+    "8": 6880
+  },
+  "complete_self_converse_classes_by_n": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 2,
+    "4": 2,
+    "5": 8,
+    "6": 12,
+    "7": 88,
+    "8": 176
+  },
+  "scope": "Actual H, ordinary and converse-merged classes kept separate. Full n<=8 census; complete strong atom inventory for odd H<=73, using classical Busch lower bound. No completeness theorem for all odd H except7,21 is assumed.",
+  "status": "PASS",
+  "witnesses": {
+    "49": {
+      "H": 49,
+      "aut": 1,
+      "code": 4588920935469484034,
+      "self_converse": 1,
+      "strong": 1
+    },
+    "63": {
+      "H": 63,
+      "aut": 1,
+      "code": 4588920948120421648,
+      "self_converse": 0,
+      "strong": 1
+    },
+    "343": {
+      "H": 343,
+      "aut": 1,
+      "code": 2273131864370717956,
+      "self_converse": 0,
+      "strong": 1
+    }
+  }
+}
