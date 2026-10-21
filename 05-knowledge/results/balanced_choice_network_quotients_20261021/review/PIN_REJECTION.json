@@ -1,0 +1,9 @@
+{
+  "status": "EXPECTED_STALE_PIN_REJECTION_THEN_RECONCILED",
+  "target": "session20-choice-networks/PROOF.md",
+  "old_sha256": "bfd048cbee73f300e241bfddb7dc09bedf02bc053b7bbd0e49f4a77598ae1180",
+  "new_sha256": "09959ef9f50e716e0df6965d3c86ff564a89ce9a3f4a7f629667a7e02120f7d0",
+  "observed_error": "RuntimeError: frozen source SHA256",
+  "cause": "Producer corrected the loop-recovery scope issue during audit; old byte pin correctly rejected the new proof.",
+  "resolution": "Reviewer inspected the correction, retained old hash as superseded, and approved the new hash before normal/optimized reruns. No unexplained source drift accepted."
+}

@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "independent_checks": 29865,
+  "checks_by_kind": {
+    "Dirichlet-solved Kron response": 30,
+    "Kron resistance preservation": 210,
+    "Pruefer weighted trees": 360,
+    "Smith order": 84,
+    "direct tournament DFS versus decoder": 4,
+    "dyadic fibre sizes": 36,
+    "dyadic primary factors": 48,
+    "enumerated black-to-blue correction": 36,
+    "enumerated child blue": 36,
+    "enumerated conditional Shannon entropy": 36,
+    "enumerated ordered fibres": 36,
+    "enumerated parent blue": 36,
+    "explicit integral equivalence AV=UD": 84,
+    "frozen source SHA256": 11,
+    "hostile arbitrary added loops invisible electrically": 1,
+    "hostile conductor16 order mismatch": 1,
+    "hostile denominator clearing changes lattice": 1,
+    "hostile dropping loops changes walk": 1,
+    "hostile exceptional resistance": 1,
+    "hostile full group is not its 2-primary part": 1,
+    "hostile higher-rank dyadic group not V4": 1,
+    "hostile known source model recovers loop mass from Laplacian": 1,
+    "hostile ordered versus unordered collapse": 1,
+    "hostile probability laws differ": 1,
+    "hostile s1 has nontrivial two-primary group": 1,
+    "hostile shorting is not Kron": 1,
+    "independent all-root cofactors": 1638,
+    "independent resistance solve": 3006,
+    "injective inherited decoder": 4,
+    "literal Laplacian": 360,
+    "literal all-depth path deletion": 1054,
+    "literal blue fixed predicate": 404,
+    "literal constant-fibre energy": 720,
+    "literal inherited fibre cardinality": 158,
+    "literal loops": 360,
+    "literal reflection swap": 404,
+    "loop darts preserve degree": 1638,
+    "loop-dart walk": 7650,
+    "microstate strong lumpability": 3276,
+    "producer frozen finite scope": 1,
+    "producer normal optimized identical": 1,
+    "producer optimized receipt byte-identical": 1,
+    "producer receipt byte-identical": 1,
+    "stationary detailed balance": 7650,
+    "stationary law": 360,
+    "uniform-parent alternate law": 36,
+    "unimodular certificate determinants": 84
+  },
+  "verified_pins": 11,
+  "producer_checks": 1328,
+  "arbitrary_weight_profiles": 360,
+  "integral_presentations": 84,
+  "kron_cases": 30,
+  "entropy_cases": 36,
+  "inherited_carrier_controls": {
+    "tournament_k": [
+      2,
+      5
+    ],
+    "path_counts": [
+      9,
+      25,
+      81,
+      289
+    ],
+    "actual_path_deletions": 1054
+  },
+  "hostile_witnesses": {
+    "shorting_not_kron": {
+      "contraction": [
+        "1/5",
+        "3/10"
+      ],
+      "kron": "2/5"
+    },
+    "drop_loops": {
+      "holding": [
+        "1/4",
+        "0"
+      ],
+      "finite_stationary": [
+        "2/5",
+        "3/8"
+      ]
+    },
+    "uniform_child_vs_uniform_parent_entropy": [
+      "8/5",
+      "4/3"
+    ],
+    "collapsed_black_mass": {
+      "undirected_edges": 2,
+      "ordered_paths": 4
+    },
+    "loop_recovery_scope": {
+      "known_pointed_model_recovers": [
+        1,
+        1,
+        0
+      ],
+      "same_electrical_network_with_extra_loop": [
+        2,
+        1,
+        0
+      ]
+    },
+    "critical_order_not_four": 20,
+    "higher_groups": {
+      "q5_s2_two_primary_order": 16,
+      "q3_s4_two_primary_order": 16,
+      "conductor16_comparator_order": 8
+    },
+    "d0_boundary": {
+      "q": 4,
+      "s": 1,
+      "critical_order": 16
+    },
+    "cleared_kron_tree_count": 75
+  },
+  "scope": "Independent exact finite controls and a human all-parameter proof audit; no tournament metagraph or novelty claim."
+}

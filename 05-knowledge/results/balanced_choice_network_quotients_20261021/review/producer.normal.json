@@ -1,0 +1,403 @@
+{
+  "status": "PASS",
+  "checks": 1328,
+  "declared_q": [
+    2,
+    7
+  ],
+  "declared_s": [
+    1,
+    5
+  ],
+  "rows": [
+    {
+      "q": 2,
+      "s": 1,
+      "Q": 2,
+      "tree_count": 1,
+      "smith": [
+        1
+      ],
+      "hidden_loops": 0
+    },
+    {
+      "q": 2,
+      "s": 2,
+      "Q": 3,
+      "tree_count": 2,
+      "smith": [
+        2
+      ],
+      "hidden_loops": 1
+    },
+    {
+      "q": 2,
+      "s": 3,
+      "Q": 4,
+      "tree_count": 3,
+      "smith": [
+        3
+      ],
+      "hidden_loops": 3
+    },
+    {
+      "q": 2,
+      "s": 4,
+      "Q": 5,
+      "tree_count": 4,
+      "smith": [
+        4
+      ],
+      "hidden_loops": 6
+    },
+    {
+      "q": 2,
+      "s": 5,
+      "Q": 6,
+      "tree_count": 5,
+      "smith": [
+        5
+      ],
+      "hidden_loops": 10
+    },
+    {
+      "q": 3,
+      "s": 1,
+      "Q": 3,
+      "tree_count": 3,
+      "smith": [
+        1,
+        3
+      ],
+      "hidden_loops": 0
+    },
+    {
+      "q": 3,
+      "s": 2,
+      "Q": 5,
+      "tree_count": 20,
+      "smith": [
+        2,
+        10
+      ],
+      "hidden_loops": 2
+    },
+    {
+      "q": 3,
+      "s": 3,
+      "Q": 7,
+      "tree_count": 63,
+      "smith": [
+        3,
+        21
+      ],
+      "hidden_loops": 6
+    },
+    {
+      "q": 3,
+      "s": 4,
+      "Q": 9,
+      "tree_count": 144,
+      "smith": [
+        4,
+        36
+      ],
+      "hidden_loops": 12
+    },
+    {
+      "q": 3,
+      "s": 5,
+      "Q": 11,
+      "tree_count": 275,
+      "smith": [
+        5,
+        55
+      ],
+      "hidden_loops": 20
+    },
+    {
+      "q": 4,
+      "s": 1,
+      "Q": 4,
+      "tree_count": 16,
+      "smith": [
+        1,
+        4,
+        4
+      ],
+      "hidden_loops": 0
+    },
+    {
+      "q": 4,
+      "s": 2,
+      "Q": 7,
+      "tree_count": 392,
+      "smith": [
+        2,
+        14,
+        14
+      ],
+      "hidden_loops": 3
+    },
+    {
+      "q": 4,
+      "s": 3,
+      "Q": 10,
+      "tree_count": 2700,
+      "smith": [
+        3,
+        30,
+        30
+      ],
+      "hidden_loops": 9
+    },
+    {
+      "q": 4,
+      "s": 4,
+      "Q": 13,
+      "tree_count": 10816,
+      "smith": [
+        4,
+        52,
+        52
+      ],
+      "hidden_loops": 18
+    },
+    {
+      "q": 4,
+      "s": 5,
+      "Q": 16,
+      "tree_count": 32000,
+      "smith": [
+        5,
+        80,
+        80
+      ],
+      "hidden_loops": 30
+    },
+    {
+      "q": 5,
+      "s": 1,
+      "Q": 5,
+      "tree_count": 125,
+      "smith": [
+        1,
+        5,
+        5,
+        5
+      ],
+      "hidden_loops": 0
+    },
+    {
+      "q": 5,
+      "s": 2,
+      "Q": 9,
+      "tree_count": 11664,
+      "smith": [
+        2,
+        18,
+        18,
+        18
+      ],
+      "hidden_loops": 4
+    },
+    {
+      "q": 5,
+      "s": 3,
+      "Q": 13,
+      "tree_count": 177957,
+      "smith": [
+        3,
+        39,
+        39,
+        39
+      ],
+      "hidden_loops": 12
+    },
+    {
+      "q": 5,
+      "s": 4,
+      "Q": 17,
+      "tree_count": 1257728,
+      "smith": [
+        4,
+        68,
+        68,
+        68
+      ],
+      "hidden_loops": 24
+    },
+    {
+      "q": 5,
+      "s": 5,
+      "Q": 21,
+      "tree_count": 5788125,
+      "smith": [
+        5,
+        105,
+        105,
+        105
+      ],
+      "hidden_loops": 40
+    },
+    {
+      "q": 6,
+      "s": 1,
+      "Q": 6,
+      "tree_count": 1296,
+      "smith": [
+        1,
+        6,
+        6,
+        6,
+        6
+      ],
+      "hidden_loops": 0
+    },
+    {
+      "q": 6,
+      "s": 2,
+      "Q": 11,
+      "tree_count": 468512,
+      "smith": [
+        2,
+        22,
+        22,
+        22,
+        22
+      ],
+      "hidden_loops": 5
+    },
+    {
+      "q": 6,
+      "s": 3,
+      "Q": 16,
+      "tree_count": 15925248,
+      "smith": [
+        3,
+        48,
+        48,
+        48,
+        48
+      ],
+      "hidden_loops": 15
+    },
+    {
+      "q": 6,
+      "s": 4,
+      "Q": 21,
+      "tree_count": 199148544,
+      "smith": [
+        4,
+        84,
+        84,
+        84,
+        84
+      ],
+      "hidden_loops": 30
+    },
+    {
+      "q": 6,
+      "s": 5,
+      "Q": 26,
+      "tree_count": 1428050000,
+      "smith": [
+        5,
+        130,
+        130,
+        130,
+        130
+      ],
+      "hidden_loops": 50
+    },
+    {
+      "q": 7,
+      "s": 1,
+      "Q": 7,
+      "tree_count": 16807,
+      "smith": [
+        1,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "hidden_loops": 0
+    },
+    {
+      "q": 7,
+      "s": 2,
+      "Q": 13,
+      "tree_count": 23762752,
+      "smith": [
+        2,
+        26,
+        26,
+        26,
+        26,
+        26
+      ],
+      "hidden_loops": 6
+    },
+    {
+      "q": 7,
+      "s": 3,
+      "Q": 19,
+      "tree_count": 1805076171,
+      "smith": [
+        3,
+        57,
+        57,
+        57,
+        57,
+        57
+      ],
+      "hidden_loops": 18
+    },
+    {
+      "q": 7,
+      "s": 4,
+      "Q": 25,
+      "tree_count": 40000000000,
+      "smith": [
+        4,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "hidden_loops": 36
+    },
+    {
+      "q": 7,
+      "s": 5,
+      "Q": 31,
+      "tree_count": 447330484375,
+      "smith": [
+        5,
+        155,
+        155,
+        155,
+        155,
+        155
+      ],
+      "hidden_loops": 60
+    }
+  ],
+  "literal_q3_s2": {
+    "critical_group": [
+      2,
+      10
+    ],
+    "two_primary": [
+      2,
+      2
+    ],
+    "entropy_bits": "8/5",
+    "child_blue": "5/25",
+    "parent_blue": "9/25"
+  },
+  "scope": "Choice-state graph only, not tournament metagraph or ideal-class identification."
+}

@@ -1,0 +1,89 @@
+{
+  "audit_date_utc": "2026-10-21",
+  "base_checkout_reported_by_parent": "32579ff9c2f4",
+  "pins": [
+    {
+      "root": "producer",
+      "path": "PROOF.md",
+      "sha256": "09959ef9f50e716e0df6965d3c86ff564a89ce9a3f4a7f629667a7e02120f7d0",
+      "role": "audited frozen producer"
+    },
+    {
+      "root": "producer",
+      "path": "check.py",
+      "sha256": "117ff01b044c4dba9cd99928278ccce027726ed0ad6880aa2ef8cd3bcee5de0b",
+      "role": "audited frozen producer"
+    },
+    {
+      "root": "producer",
+      "path": "receipt.json",
+      "sha256": "97835a5189e0b0734f4baf7e70d948707ec07b4928aa4453823f3795a920f1fa",
+      "role": "audited frozen producer"
+    },
+    {
+      "root": "producer",
+      "path": "receipt.optimized.json",
+      "sha256": "97835a5189e0b0734f4baf7e70d948707ec07b4928aa4453823f3795a920f1fa",
+      "role": "audited frozen producer"
+    },
+    {
+      "root": "repository",
+      "path": "05-knowledge/results/zero_heavy_ports_20261020g/microcosm.md",
+      "sha256": "3e898a5bbc37c5931c20aa578e06977ebe5639e439b35ff5c1517be5b1d8828a",
+      "role": "inherited source",
+      "scope": "Sections 2 and 4: product carrier, reflection/blue, literal central-pair deletion"
+    },
+    {
+      "root": "repository",
+      "path": "05-knowledge/results/balanced_fibre_endpoint_extensions_20261020/BALANCED_DELETION_EXTENSIONS.md",
+      "sha256": "d65624437b6091ff2c42e08e47b22664cd4ba223b7d7dd6acb1d1e7acbbae45b",
+      "role": "inherited source",
+      "scope": "Sections 1, 1.1 and 2: all-depth deletion, arbitrary product fibres, collapsed black edges"
+    },
+    {
+      "root": "repository",
+      "path": "05-knowledge/results/strong_blue_games_20261020f/double_return_counts.md",
+      "sha256": "b2a8aeea26d4375fa28f1b604a64c0465ccdbedc587f8f2d0b5bd5c8f3cbd6ae",
+      "role": "inherited source",
+      "scope": "Upstream product decoder and path classification"
+    },
+    {
+      "root": "workspace",
+      "path": "session20-balanced-fibres/BALANCED_FIBRE_GROUP_AND_PORT_DEFECT.md",
+      "sha256": "4ce1d99cfff02b97997551fa1edf35a3f6baf64755d45d654e6d9da0afd88603",
+      "role": "concurrent companion boundary, not independent inherited input",
+      "scope": "Companion port/flip obstruction; not proved by network quotient"
+    },
+    {
+      "root": "workspace",
+      "path": "session20-idoneal-conductors/CONDUCTOR_TOWER.md",
+      "sha256": "b6911f6479f9cb75a26b168573c97d6afa15843a61e535d63ca72a71088fd9f3",
+      "role": "concurrent companion boundary, not independent inherited input",
+      "scope": "Companion C4 x C2 conductor-16 comparator; no identification with choice critical group"
+    },
+    {
+      "root": "repository",
+      "path": "05-knowledge/results/metagraph_fibre_network_20261020k/README.md",
+      "sha256": "6c7c50e46f1a40e41a6e2a77320689747e8c338a324ff32b0f540688a8de7c99",
+      "role": "incoming proved precursor, commit 118eec39549 reported by parent",
+      "scope": "Section 4: one-step contraction, weighted resistance, held Markov law and conditional entropy; generic wiring distinct from Schur complement"
+    },
+    {
+      "root": "workspace",
+      "path": "session20-synthesis/SESSION20_SYNTHESIS.md",
+      "sha256": "efd074c6e9b29c7526957128bf265b3e730090c64f671bac129d8ce92317cf13",
+      "role": "root synthesis, choice-network statements only reviewed",
+      "scope": "Section 4 choice-network paragraphs and incoming-overlap attribution; no other-lane audit"
+    }
+  ],
+  "note": "SHA256 binds exact bytes. Network identities are proved independently; companion packet general claims are outside this audit. No Git commands or producer edits.",
+  "superseded_audited_versions": [
+    {
+      "root": "producer",
+      "path": "PROOF.md",
+      "sha256": "bfd048cbee73f300e241bfddb7dc09bedf02bc053b7bbd0e49f4a77598ae1180",
+      "role": "audited frozen producer",
+      "issue": "Overstrong loop-loss wording corrected by producer during review; not a current pin."
+    }
+  ]
+}
