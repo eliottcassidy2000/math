@@ -1,0 +1,151 @@
+{
+  "status": "FINITE-EXACT independent controls for separately proved all-order statements",
+  "source_path_checks": 5709,
+  "group_composition_checks": 91344,
+  "reports": [
+    {
+      "parent_k": 2,
+      "source_order": 7,
+      "paths": 25,
+      "direct_DFS_checked": true,
+      "fibre_orbit_counts": {
+        "1": 1,
+        "2": 4,
+        "4": 4
+      },
+      "cut_edge_count_distribution": {
+        "0": 6,
+        "1": 14,
+        "2": 5
+      }
+    },
+    {
+      "parent_k": 3,
+      "source_order": 9,
+      "paths": 81,
+      "direct_DFS_checked": true,
+      "fibre_orbit_counts": {
+        "1": 1,
+        "2": 8,
+        "4": 16
+      },
+      "cut_edge_count_distribution": {
+        "0": 10,
+        "1": 46,
+        "2": 25
+      }
+    },
+    {
+      "parent_k": 4,
+      "source_order": 11,
+      "paths": 289,
+      "direct_DFS_checked": true,
+      "fibre_orbit_counts": {
+        "1": 1,
+        "2": 16,
+        "4": 64
+      },
+      "cut_edge_count_distribution": {
+        "0": 18,
+        "1": 158,
+        "2": 113
+      }
+    },
+    {
+      "parent_k": 5,
+      "source_order": 13,
+      "paths": 1089,
+      "direct_DFS_checked": false,
+      "fibre_orbit_counts": {
+        "1": 1,
+        "2": 32,
+        "4": 256
+      },
+      "cut_edge_count_distribution": {
+        "0": 34,
+        "1": 574,
+        "2": 481
+      }
+    },
+    {
+      "parent_k": 6,
+      "source_order": 15,
+      "paths": 4225,
+      "direct_DFS_checked": false,
+      "fibre_orbit_counts": {
+        "1": 1,
+        "2": 64,
+        "4": 1024
+      },
+      "cut_edge_count_distribution": {
+        "0": 66,
+        "1": 2174,
+        "2": 1985
+      }
+    }
+  ],
+  "metagraph_hostile": {
+    "parent_path": [
+      4,
+      2,
+      0,
+      1,
+      3
+    ],
+    "source_paths": [
+      [
+        4,
+        6,
+        3,
+        0,
+        1,
+        2,
+        5
+      ],
+      [
+        2,
+        4,
+        6,
+        3,
+        0,
+        1,
+        5
+      ]
+    ],
+    "source_states": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "cut_sidecars": [
+      [
+        [
+          1,
+          3
+        ]
+      ],
+      []
+    ],
+    "deleted_target_score_spectra": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        0,
+        2,
+        2,
+        3,
+        3
+      ]
+    ]
+  }
+}

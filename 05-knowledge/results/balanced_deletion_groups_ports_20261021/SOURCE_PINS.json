@@ -1,0 +1,21 @@
+{
+  "checkout": "32579ff9c2f4",
+  "sources": [
+    {
+      "path": "05-knowledge/results/strong_blue_games_20261020f/double_return_counts.md",
+      "sha256": "b2a8aeea26d4375fa28f1b604a64c0465ccdbedc587f8f2d0b5bd5c8f3cbd6ae"
+    },
+    {
+      "path": "05-knowledge/results/zero_heavy_ports_20261020g/microcosm.md",
+      "sha256": "3e898a5bbc37c5931c20aa578e06977ebe5639e439b35ff5c1517be5b1d8828a"
+    },
+    {
+      "path": "05-knowledge/results/balanced_fibre_endpoint_extensions_20261020/BALANCED_DELETION_EXTENSIONS.md",
+      "sha256": "d65624437b6091ff2c42e08e47b22664cd4ba223b7d7dd6acb1d1e7acbbae45b"
+    },
+    {
+      "path": "01-canon/MISTAKES.md",
+      "sha256": "2ae58245fbfbd3f731a1f3ac09d51be2ca66413ba78a0319a5dd71508a311656"
+    }
+  ]
+}
