@@ -1,0 +1,37 @@
+(G1) Paley tournaments P_q, q prime = 3 mod 4
+     (q, regular Aut-orbits, regular Aut+--orbits on vertex subsets): [(3, 2, 0), (7, 4, 0), (11, 36, 12), (19, 3052, 1470), (23, 33156, 16392), (31, 4618100, 2306868)] ...
+  ok   Aut(P_q) always has regular subsets (Gluck); Aut+-(P_q) = AGL(1,q) has none exactly for q = 3, 7 among primes q <= 83; closed form = brute force for q <= 19 (P_7: 4 and 0 regular orbits) (FINITE-EXACT; THM-4743 by Gluck Lemma 6)
+(G2) P_27 and AGammaL(1, 27)
+  ok   P_27: the set GF(3) u {x} with Tr(x) != 0 has trivial stabilizer in AGammaL(1,27) = Aut+-(P_27) (order 2106) and in Aut(P_27) (FINITE-EXACT; Gluck Lemma 5)
+(G3) all tournament classes n <= 9: the converse-extended Gluck problem
+     n = 2: 1 classes, 1 self-converse; min size of an Aut+--regular subset (histogram over self-converse classes): {1: 1}; fewest regular Aut+--orbits: 1  [7s]
+     n = 3: 2 classes, 2 self-converse; min size of an Aut+--regular subset (histogram over self-converse classes): {1: 1}; fewest regular Aut+--orbits: 0  [7s]
+     n = 4: 4 classes, 2 self-converse; min size of an Aut+--regular subset (histogram over self-converse classes): {1: 2}; fewest regular Aut+--orbits: 6  [7s]
+     n = 5: 12 classes, 8 self-converse; min size of an Aut+--regular subset (histogram over self-converse classes): {1: 5, 2: 2}; fewest regular Aut+--orbits: 0  [7s]
+     n = 6: 56 classes, 12 self-converse; min size of an Aut+--regular subset (histogram over self-converse classes): {1: 11, 3: 1}; fewest regular Aut+--orbits: 1  [7s]
+     n = 7: 456 classes, 88 self-converse; min size of an Aut+--regular subset (histogram over self-converse classes): {1: 74, 2: 10, 3: 3}; fewest regular Aut+--orbits: 0  [7s]
+     n = 8: 6880 classes, 176 self-converse; min size of an Aut+--regular subset (histogram over self-converse classes): {1: 172, 3: 4}; fewest regular Aut+--orbits: 6  [7s]
+     n = 9: 191536 classes, 2752 self-converse; min size of an Aut+--regular subset (histogram over self-converse classes): {1: 2636, 2: 96, 3: 18, 4: 1}; fewest regular Aut+--orbits: 0  [10s]
+     exceptions (n, adjacency rows, |Aut|): [(3, [4, 1, 2], 3), (5, [24, 17, 3, 6, 12], 5), (7, [100, 81, 74, 35, 13, 22, 56], 21), (9, [396, 393, 394, 368, 71, 23, 39, 120, 240], 81)]
+     identified: ['circulant Z_3[1]', 'circulant Z_5[1, 2]', 'circulant Z_7[1, 2, 4]', None]
+  ok   class counts 1, 2, 4, 12, 56, 456, 6880, 191536 (A000568) and self-converse counts 1, 2, 2, 8, 12, 88, 176, 2752 (A002785) for n = 2..9; |anti| = |Aut| for every self-converse class; the orbit-pairing lemma holds on every class
+  ok   for n <= 9 the only tournaments whose automorphism/anti-automorphism group has no regular orbit on vertex subsets are C_3, the circulant Z_5{1,2}, the Paley tournament P_7 and the lexicographic product C_3[C_3] (FINITE-EXACT; evidence for HYP-9353)
+(G4) the substitution rule at n = 15
+     C3: |Aut| = 3, |anti| = 3, regular Aut-orbits r = 2, Aut+--regular subsets = 0
+     Z5{1,2}: |Aut| = 5, |anti| = 5, regular Aut-orbits r = 6, Aut+--regular subsets = 0
+     P7: |Aut| = 21, |anti| = 21, regular Aut-orbits r = 4, Aut+--regular subsets = 0
+     C3[C3]: |Aut| = 81, |anti| = 81, regular Aut-orbits r = 2, Aut+--regular subsets = 0
+     Z5{1,2}[C3]: |Aut| = 1215, |anti| = 1215, regular Aut-orbits r = 6, Aut+--regular subsets = 0
+     C3[Z5{1,2}]: |Aut| = 375, |anti| = 375, regular Aut-orbits r = 70, Aut+--regular subsets = 15000
+  ok   r = 2, 6, 4, 2 for C_3, Z_5{1,2}, P_7, C_3[C_3]; Z_5{1,2}[C_3] (n = 15) has NO Aut+--regular subset while C_3[Z_5{1,2}] has some; the automorphism groups are the wreath products (FINITE-EXACT; the substitution rule predicts both: 2 colours cannot distinguish D_10, 6 colours can distinguish S_3)
+(G5) all circulant tournaments on Z_n, n odd, n <= 15
+     n = 3: 2 connection sets, 2 exceptional, e.g. [[2], [1]]; all isomorphic to the predicted family member: True
+     n = 5: 4 connection sets, 4 exceptional, e.g. [[3, 4], [1, 3]]; all isomorphic to the predicted family member: True
+     n = 7: 8 connection sets, 2 exceptional, e.g. [[1, 2, 4], [3, 5, 6]]; all isomorphic to the predicted family member: True
+     n = 9: 16 connection sets, 4 exceptional, e.g. [[2, 5, 6, 8], [2, 3, 5, 8]]; all isomorphic to the predicted family member: True
+     n = 11: 32 connection sets, 0 exceptional, e.g. []; all isomorphic to the predicted family member: True
+     n = 13: 64 connection sets, 0 exceptional, e.g. []; all isomorphic to the predicted family member: True
+     n = 15: 128 connection sets, 8 exceptional, e.g. [[3, 4, 8, 9, 10, 13, 14], [3, 4, 5, 8, 9, 13, 14]]; all isomorphic to the predicted family member: True
+  ok   among circulant tournaments on Z_n (n odd, n <= 15) the exceptional ones are exactly C_3, Z_5{1,2}, P_7, C_3[C_3] and Z_5{1,2}[C_3] up to isomorphism; none at n = 11, 13 (FINITE-EXACT; evidence for HYP-9353)
+
+ALL CHECKS PASSED  (39s)

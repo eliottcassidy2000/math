@@ -1,0 +1,23 @@
+(P1) identities in the basis (v, s, w)
+     S1 powers: {'A': -2*(a - 3)*(2*a + b - 15)/(6*a - b - 9), 'B': 0, 'C': 0, 'D': 0, 'E': 0, 'F': 0, 'H': -2*(a - 3)}
+     S2 powers: {'A': 0, 'B': 0, 'C': -2*(a - 3), 'D': 0, 'E': 0, 'F': 0, 'H': 0}
+  ok   S1 contains B,C,D,E,F; S2 contains A,B,D,E,F,H'; Pow_S2(C) = Pow_S1(H') = 6 - 2 v.s; Pow_S1(A) = mu (16 - T); both spheres are invariant under x -> 4x/|x|^2; 2(u1 - u2) = (Sigma, -Sigma, 0) on (v, s, w), so the radical plane is the plane O G O' and S1 = S2 iff Sigma = 0; (V0 - O).(G - V0) = -Sigma/8 and mu = Sigma/|s - 3v|^2, so Sigma = 0 iff V0G is tangent at V0 iff A = C (PROVED, exact identities)
+(P2) random rational tetrahedra, actual coordinates
+  ok   150 rational tetrahedra: S1 contains B,C,D,E,F,iota(C); S2 contains A,B,D,E,F,H',iota(A),iota(H'); both have power 4R^2 at O; Pow_S2(V0) = Pow_S1(H') = Sigma = sum |V0Vi|^2 > 0; B,D,E,F lie in the plane O G O' (FINITE-EXACT)
+(P3) over F_p: seven labels on one quadric iff Sigma = 0
+     (p, valid configurations, all seven on one quadric, Sigma = 0, mismatches): [(5, 432, 51, 51, 0), (7, 782, 102, 102, 0), (11, 1309, 110, 110, 0), (13, 1477, 99, 99, 0), (17, 1736, 97, 97, 0), (19, 1875, 114, 114, 0), (23, 2027, 92, 92, 0), (29, 2178, 84, 84, 0), (31, 2214, 68, 68, 0), (37, 2365, 68, 68, 0), (41, 2373, 59, 59, 0), (43, 2407, 62, 62, 0), (47, 2452, 54, 54, 0), (53, 2516, 49, 49, 0), (59, 2558, 29, 29, 0), (61, 2579, 33, 33, 0), (67, 2620, 41, 41, 0), (71, 2631, 31, 31, 0), (73, 2658, 30, 30, 0), (79, 2684, 40, 40, 0), (83, 2695, 29, 29, 0), (89, 2702, 24, 24, 0), (97, 2755, 22, 22, 0)]
+  ok   for every p in 5..97: in every valid configuration the six labels A,B,D,E,F,H' share a quadric, all seven do iff Sigma = 0 iff A = C, and such configurations exist (FINITE-EXACT)
+(P4) an explicit seven-label sphere over Q(i)
+     V0 = 0, V1 = e1, V2 = e2, V3 = (0, i, i): Sigma = 0, R^2 = -1/4 - I, delta = 3/8 - 3*I/4, A = C: True
+  ok   over Q(i) the tetrahedron V0 = 0, V1 = e1, V2 = e2, V3 = (0, i, i) is nondegenerate with Sigma = 0: all seven labels lie on one sphere, the median V0G is tangent at V0, and A = C, so six distinct points (FINITE-EXACT); over R, Sigma = sum of squared edge lengths > 0
+(P5) other dimensions
+     n = 2: cospherical sets of more than n + 1 labels (trials containing them, of 25): {'ABCE': 25, 'BDEF': 25}
+     n = 3: cospherical sets of more than n + 1 labels (trials containing them, of 25): {'BCDEF': 25, 'ABDEFH': 25}
+     n = 4: cospherical sets of more than n + 1 labels (trials containing them, of 25): {}
+     n = 5: cospherical sets of more than n + 1 labels (trials containing them, of 25): {}
+  ok   the two six-/five-label spheres are three-dimensional: none of the seven-label analogues has more than n + 1 cospherical labels for n = 4, 5; in the plane A,B,C,E and B,D,E,F are concyclic (FINITE-EXACT, random exact trials)
+(P6) the classical Fano anchor
+     |det| of the seven Fano lines in the 0/1 coordinates: [0, 0, 0, 0, 0, 0, 2]
+  ok   six Fano lines are real collinearities; the seventh, {(1,1,0),(1,0,1),(0,1,1)}, has determinant -2: realizable only where 2 = 0 (CLASSICAL)
+
+ALL CHECKS PASSED  (7s)
