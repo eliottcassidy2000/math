@@ -1,0 +1,9 @@
+  ok   n = 3: 2 classes; the (H, strong, self-converse, |Aut|) multisets agree with the mac-mini census (2 classes)
+  ok   n = 4: 4 classes; the (H, strong, self-converse, |Aut|) multisets agree with the mac-mini census (4 classes)
+  ok   n = 5: 12 classes; the (H, strong, self-converse, |Aut|) multisets agree with the mac-mini census (12 classes)
+  ok   n = 6: 56 classes; the (H, strong, self-converse, |Aut|) multisets agree with the mac-mini census (56 classes)
+  ok   n = 7: 456 classes; the (H, strong, self-converse, |Aut|) multisets agree with the mac-mini census (456 classes)
+  ok   n = 8: 6880 classes; the (H, strong, self-converse, |Aut|) multisets agree with the mac-mini census (6880 classes)
+  ok   n = 9: 191536 classes; the (H, strong, self-converse, |Aut|) multisets agree with the mac-mini census (191536 classes)
+
+ALL CHECKS PASSED  (12s)
