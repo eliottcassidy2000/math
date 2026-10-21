@@ -1,0 +1,24 @@
+{
+  "verified_on": "2026-10-21",
+  "method": "Independently opened primary PDFs through web tool; checked specified passages. No whole-file PDF hash claimed.",
+  "sources": [
+    {
+      "url": "https://kconrad.math.uconn.edu/blurbs/gradnumthy/conductor.pdf",
+      "author": "Keith Conrad",
+      "verified_locations": ["Theorem 3.8, printed pp. 6-7", "Equation (5.4), printed p. 15", "Equation (5.7) and Theorem 5.3, printed p. 16"],
+      "supports": "Prime-to-conductor invertible ideal extension/contraction, the stated direction of the residue map, scalar/global-unit quotient, and order class-number formula."
+    },
+    {
+      "url": "https://www.labmath.uqam.ca/~annales/volumes/35-2/PDF/197-227.pdf",
+      "author": "Ernst Kani",
+      "verified_locations": ["Section 2.2, equation (2.2), printed p. 200", "Theorem 6 and Remark 7(b), printed p. 202"],
+      "supports": "Principal genus equals square subgroup; idoneality is equivalent to every genus containing one proper class, hence class-group exponent dividing two."
+    },
+    {
+      "url": "https://math.mit.edu/classes/18.785/2018fa/ProblemSet9.pdf",
+      "author": "MIT 18.785 / Andrew V. Sutherland",
+      "verified_locations": ["Problem 5 introduction, printed p. 6", "Problem 5(b)-(c), printed p. 7"],
+      "supports": "Reduced-form convention, ideal I(f)=<a,(-b+sqrt(D))/2>, explicit extension to nonmaximal orders, conjugate inverse, and ambiguous-boundary criterion."
+    }
+  ]
+}

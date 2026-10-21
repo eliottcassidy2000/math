@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-21",
+  "repository_base": "32579ff9c2f4",
+  "inherited_sources": [
+    {
+      "path": "05-knowledge/results/divisor_norm_ball_20261021/DIVISOR_NORM_BALL.md",
+      "scope": "Sections5\u20136, unconditional family classification and point/class firewall",
+      "sha256": "73ee9b18c2a7cd82963e7d3ce6414d5ed4d8189f15295b1d48485a3524d8da1a"
+    }
+  ],
+  "external_sources": [
+    {
+      "author": "Keith Conrad",
+      "url": "https://kconrad.math.uconn.edu/blurbs/gradnumthy/conductor.pdf",
+      "pins": [
+        "Theorem3.8 printed pp.6\u20137, prime-to-conductor extension/contraction",
+        "Equation(5.7), printed p.16, class-group exact sequence",
+        "Printed p.15, residue map alpha\u21a6[alpha R intersect O]"
+      ],
+      "verified": "Opened primary PDF through web tool 2026-10-21"
+    },
+    {
+      "author": "Ernst Kani",
+      "url": "https://www.labmath.uqam.ca/~annales/volumes/35-2/PDF/197-227.pdf",
+      "pins": [
+        "Equation(2.2), printed p.200, principal genus equals square subgroup",
+        "Theorem6 and Remark7(b), printed p.202, inherited idoneal equivalence"
+      ],
+      "verified": "Opened primary PDF through web tool 2026-10-21"
+    },
+    {
+      "author": "MIT18.785 / Andrew V. Sutherland",
+      "url": "https://math.mit.edu/classes/18.785/2018fa/ProblemSet9.pdf",
+      "pins": [
+        "Problem5(b)\u2013(c), printed p.7, reduction/inverse/ambiguous convention"
+      ],
+      "verified": "Opened primary PDF through web tool 2026-10-21"
+    }
+  ],
+  "scope": "Original explicit specialization and operation audit; no priority claim, no global idoneal claim."
+}

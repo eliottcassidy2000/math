@@ -1,0 +1,91 @@
+{
+  "status": "FINAL PASS",
+  "date": "2026-10-21",
+  "scope": "Approved current dyadic conductor tower, genus/extension labels, local blue-fibre bridge, and obstruction results.",
+  "producer_checks": 28754,
+  "independent_checks": 46719,
+  "normal_optimized_identical": true,
+  "isolated_directory_replay": "PASS with only this package; no external source dependency used",
+  "approved_producer_proof_and_checker_bytes": "Unchanged",
+  "approved_independent_checker_bytes": "Unchanged",
+  "current_receipt_bytes": "Unchanged",
+  "source_dependency_manifest": "FINAL_INPUT_PINS.json",
+  "files": [
+    {
+      "path": "FINAL_INPUT_PINS.json",
+      "sha256": "5178d60b8621a294788e08d1385d1e38be2b108c97db3eeea70f5d34a565ba5d"
+    },
+    {
+      "path": "INDEPENDENT_AUDIT.md",
+      "sha256": "232e4bb94b50cf7baae3f2ba1695932fbb933dcfab2c74bcb66cac6b3133b4ec"
+    },
+    {
+      "path": "README.md",
+      "sha256": "dbbb2105fb9f8bbd79e001216b866f327f97e9d38047e801bc8a313624fd78ad"
+    },
+    {
+      "path": "SOURCE_CHECKS.json",
+      "sha256": "32ee23ec72609cd0ac60f45a0ffc2e7b4f6a6db3ede9e292f1b6832964b89750"
+    },
+    {
+      "path": "current_inputs/AUDIT.md",
+      "sha256": "50a3411996068d551e813aa3ad8a735a0297e3502fdb199a71cc95734ef10584"
+    },
+    {
+      "path": "current_inputs/BALANCED_FIBRE_GROUP_AND_PORT_DEFECT.md",
+      "sha256": "4ce1d99cfff02b97997551fa1edf35a3f6baf64755d45d654e6d9da0afd88603"
+    },
+    {
+      "path": "current_inputs/CONDUCTOR_TOWER.md",
+      "sha256": "b6911f6479f9cb75a26b168573c97d6afa15843a61e535d63ca72a71088fd9f3"
+    },
+    {
+      "path": "current_inputs/CORRECTIONS.md",
+      "sha256": "8de669a710bd484da26a03d8168b3bf91b00f9458e218d6488080fe599111bb6"
+    },
+    {
+      "path": "current_inputs/DIVISOR_NORM_BALL.md",
+      "sha256": "73ee9b18c2a7cd82963e7d3ce6414d5ed4d8189f15295b1d48485a3524d8da1a"
+    },
+    {
+      "path": "current_inputs/SHA256SUMS",
+      "sha256": "fab0d406aae03e62687a48bed2d453a42ddc41554926197aade6399d1e65edc1"
+    },
+    {
+      "path": "current_inputs/SOURCE_PROVENANCE.json",
+      "sha256": "f883bde990706858e85821c36d3ce4b186d1187a1702538518646f4f4abf7459"
+    },
+    {
+      "path": "current_inputs/verification.json",
+      "sha256": "55029b081f5f387aa6d86cd356117b3f85046f5c4237b80deb217222aa60b1e4"
+    },
+    {
+      "path": "current_inputs/verification.optimized.json",
+      "sha256": "55029b081f5f387aa6d86cd356117b3f85046f5c4237b80deb217222aa60b1e4"
+    },
+    {
+      "path": "current_inputs/verify_conductor_tower.py",
+      "sha256": "04cbac2aaed5262ead2226da02713b94dc8ce0d8e1412295eaac2e3ea7311a2a"
+    },
+    {
+      "path": "independent.normal.json",
+      "sha256": "388479d3e447612b6e6a09d1566ef2a97e372e62cfbbe2c37afde93eb5585f39"
+    },
+    {
+      "path": "independent.optimized.json",
+      "sha256": "388479d3e447612b6e6a09d1566ef2a97e372e62cfbbe2c37afde93eb5585f39"
+    },
+    {
+      "path": "independent_checker.py",
+      "sha256": "2f7a8cc632430eaa1ebfe7f136275b76dbe9163961cde22f443eb00c799440c7"
+    },
+    {
+      "path": "producer.final.normal.json",
+      "sha256": "55029b081f5f387aa6d86cd356117b3f85046f5c4237b80deb217222aa60b1e4"
+    },
+    {
+      "path": "producer.final.optimized.json",
+      "sha256": "55029b081f5f387aa6d86cd356117b3f85046f5c4237b80deb217222aa60b1e4"
+    }
+  ]
+}

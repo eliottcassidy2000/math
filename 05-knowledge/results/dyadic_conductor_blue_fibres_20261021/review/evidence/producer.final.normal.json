@@ -1,0 +1,2875 @@
+{
+  "checks": 28754,
+  "finite_ring_conductors": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "hostiles": [
+    "conductor16 order4",
+    "nonsplit A lift",
+    "nonliftable shore reflection",
+    "distinct port stabilizers",
+    "geometric reflection action is not class translation action",
+    "blue bridge requires parent coincidence and active-port type",
+    "f40 norm kernel is larger than the square subgroup"
+  ],
+  "levels": [
+    {
+      "class_number": 1,
+      "conductor": 2,
+      "discriminant": -12,
+      "group": "trivial",
+      "rows": [
+        {
+          "coordinate_w_j": [
+            0,
+            0
+          ],
+          "form": [
+            1,
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "class_number": 2,
+      "conductor": 4,
+      "discriminant": -48,
+      "group": "C1 x C2",
+      "rows": [
+        {
+          "coordinate_w_j": [
+            0,
+            0
+          ],
+          "extension_form": [
+            1,
+            0,
+            3
+          ],
+          "form": [
+            1,
+            0,
+            12
+          ]
+        },
+        {
+          "coordinate_w_j": [
+            0,
+            1
+          ],
+          "extension_form": [
+            1,
+            0,
+            3
+          ],
+          "form": [
+            3,
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "class_number": 4,
+      "conductor": 8,
+      "discriminant": -192,
+      "group": "C2 x C2",
+      "rows": [
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            0,
+            0
+          ],
+          "extension_form": [
+            1,
+            0,
+            12
+          ],
+          "form": [
+            1,
+            0,
+            48
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            0,
+            1
+          ],
+          "extension_form": [
+            3,
+            0,
+            4
+          ],
+          "form": [
+            3,
+            0,
+            16
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            1,
+            0
+          ],
+          "extension_form": [
+            1,
+            0,
+            12
+          ],
+          "form": [
+            4,
+            4,
+            13
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            1,
+            1
+          ],
+          "extension_form": [
+            3,
+            0,
+            4
+          ],
+          "form": [
+            7,
+            2,
+            7
+          ],
+          "norm_mod8": 7
+        }
+      ]
+    },
+    {
+      "class_number": 8,
+      "conductor": 16,
+      "discriminant": -768,
+      "group": "C4 x C2",
+      "rows": [
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            0,
+            0
+          ],
+          "extension_form": [
+            1,
+            0,
+            48
+          ],
+          "form": [
+            1,
+            0,
+            192
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            0,
+            1
+          ],
+          "extension_form": [
+            3,
+            0,
+            16
+          ],
+          "form": [
+            3,
+            0,
+            64
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            1,
+            0
+          ],
+          "extension_form": [
+            4,
+            4,
+            13
+          ],
+          "form": [
+            13,
+            8,
+            16
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            1,
+            1
+          ],
+          "extension_form": [
+            7,
+            2,
+            7
+          ],
+          "form": [
+            7,
+            4,
+            28
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            2,
+            0
+          ],
+          "extension_form": [
+            1,
+            0,
+            48
+          ],
+          "form": [
+            4,
+            4,
+            49
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            2,
+            1
+          ],
+          "extension_form": [
+            3,
+            0,
+            16
+          ],
+          "form": [
+            12,
+            12,
+            19
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            3,
+            0
+          ],
+          "extension_form": [
+            4,
+            4,
+            13
+          ],
+          "form": [
+            13,
+            -8,
+            16
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            3,
+            1
+          ],
+          "extension_form": [
+            7,
+            2,
+            7
+          ],
+          "form": [
+            7,
+            -4,
+            28
+          ],
+          "norm_mod8": 7
+        }
+      ]
+    },
+    {
+      "class_number": 16,
+      "conductor": 32,
+      "discriminant": -3072,
+      "group": "C8 x C2",
+      "rows": [
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            0,
+            0
+          ],
+          "extension_form": [
+            1,
+            0,
+            192
+          ],
+          "form": [
+            1,
+            0,
+            768
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            0,
+            1
+          ],
+          "extension_form": [
+            3,
+            0,
+            64
+          ],
+          "form": [
+            3,
+            0,
+            256
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            1,
+            0
+          ],
+          "extension_form": [
+            13,
+            8,
+            16
+          ],
+          "form": [
+            13,
+            -10,
+            61
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            1,
+            1
+          ],
+          "extension_form": [
+            7,
+            4,
+            28
+          ],
+          "form": [
+            28,
+            -20,
+            31
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            2,
+            0
+          ],
+          "extension_form": [
+            4,
+            4,
+            49
+          ],
+          "form": [
+            16,
+            -8,
+            49
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            2,
+            1
+          ],
+          "extension_form": [
+            12,
+            12,
+            19
+          ],
+          "form": [
+            19,
+            14,
+            43
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            3,
+            0
+          ],
+          "extension_form": [
+            13,
+            -8,
+            16
+          ],
+          "form": [
+            21,
+            6,
+            37
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            3,
+            1
+          ],
+          "extension_form": [
+            7,
+            -4,
+            28
+          ],
+          "form": [
+            7,
+            6,
+            111
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            4,
+            0
+          ],
+          "extension_form": [
+            1,
+            0,
+            192
+          ],
+          "form": [
+            4,
+            4,
+            193
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            4,
+            1
+          ],
+          "extension_form": [
+            3,
+            0,
+            64
+          ],
+          "form": [
+            12,
+            12,
+            67
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            5,
+            0
+          ],
+          "extension_form": [
+            13,
+            8,
+            16
+          ],
+          "form": [
+            21,
+            -6,
+            37
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            5,
+            1
+          ],
+          "extension_form": [
+            7,
+            4,
+            28
+          ],
+          "form": [
+            7,
+            -6,
+            111
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            6,
+            0
+          ],
+          "extension_form": [
+            4,
+            4,
+            49
+          ],
+          "form": [
+            16,
+            8,
+            49
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            6,
+            1
+          ],
+          "extension_form": [
+            12,
+            12,
+            19
+          ],
+          "form": [
+            19,
+            -14,
+            43
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            7,
+            0
+          ],
+          "extension_form": [
+            13,
+            -8,
+            16
+          ],
+          "form": [
+            13,
+            10,
+            61
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            7,
+            1
+          ],
+          "extension_form": [
+            7,
+            -4,
+            28
+          ],
+          "form": [
+            28,
+            20,
+            31
+          ],
+          "norm_mod8": 7
+        }
+      ]
+    },
+    {
+      "class_number": 32,
+      "conductor": 64,
+      "discriminant": -12288,
+      "group": "C16 x C2",
+      "rows": [
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            0,
+            0
+          ],
+          "extension_form": [
+            1,
+            0,
+            768
+          ],
+          "form": [
+            1,
+            0,
+            3072
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            0,
+            1
+          ],
+          "extension_form": [
+            3,
+            0,
+            256
+          ],
+          "form": [
+            3,
+            0,
+            1024
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            1,
+            0
+          ],
+          "extension_form": [
+            13,
+            -10,
+            61
+          ],
+          "form": [
+            13,
+            6,
+            237
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            1,
+            1
+          ],
+          "extension_form": [
+            28,
+            -20,
+            31
+          ],
+          "form": [
+            39,
+            6,
+            79
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            2,
+            0
+          ],
+          "extension_form": [
+            16,
+            -8,
+            49
+          ],
+          "form": [
+            57,
+            -48,
+            64
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            2,
+            1
+          ],
+          "extension_form": [
+            19,
+            14,
+            43
+          ],
+          "form": [
+            19,
+            -10,
+            163
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            3,
+            0
+          ],
+          "extension_form": [
+            21,
+            6,
+            37
+          ],
+          "form": [
+            37,
+            -12,
+            84
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            3,
+            1
+          ],
+          "extension_form": [
+            7,
+            6,
+            111
+          ],
+          "form": [
+            28,
+            12,
+            111
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            4,
+            0
+          ],
+          "extension_form": [
+            4,
+            4,
+            193
+          ],
+          "form": [
+            16,
+            -8,
+            193
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            4,
+            1
+          ],
+          "extension_form": [
+            12,
+            12,
+            67
+          ],
+          "form": [
+            48,
+            24,
+            67
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            5,
+            0
+          ],
+          "extension_form": [
+            21,
+            -6,
+            37
+          ],
+          "form": [
+            21,
+            -12,
+            148
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            5,
+            1
+          ],
+          "extension_form": [
+            7,
+            -6,
+            111
+          ],
+          "form": [
+            7,
+            2,
+            439
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            6,
+            0
+          ],
+          "extension_form": [
+            16,
+            8,
+            49
+          ],
+          "form": [
+            49,
+            -16,
+            64
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            6,
+            1
+          ],
+          "extension_form": [
+            19,
+            -14,
+            43
+          ],
+          "form": [
+            43,
+            28,
+            76
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            7,
+            0
+          ],
+          "extension_form": [
+            13,
+            10,
+            61
+          ],
+          "form": [
+            52,
+            20,
+            61
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            7,
+            1
+          ],
+          "extension_form": [
+            28,
+            20,
+            31
+          ],
+          "form": [
+            31,
+            22,
+            103
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            8,
+            0
+          ],
+          "extension_form": [
+            1,
+            0,
+            768
+          ],
+          "form": [
+            4,
+            4,
+            769
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            8,
+            1
+          ],
+          "extension_form": [
+            3,
+            0,
+            256
+          ],
+          "form": [
+            12,
+            12,
+            259
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            9,
+            0
+          ],
+          "extension_form": [
+            13,
+            -10,
+            61
+          ],
+          "form": [
+            52,
+            -20,
+            61
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            9,
+            1
+          ],
+          "extension_form": [
+            28,
+            -20,
+            31
+          ],
+          "form": [
+            31,
+            -22,
+            103
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            10,
+            0
+          ],
+          "extension_form": [
+            16,
+            -8,
+            49
+          ],
+          "form": [
+            49,
+            16,
+            64
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            10,
+            1
+          ],
+          "extension_form": [
+            19,
+            14,
+            43
+          ],
+          "form": [
+            43,
+            -28,
+            76
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            11,
+            0
+          ],
+          "extension_form": [
+            21,
+            6,
+            37
+          ],
+          "form": [
+            21,
+            12,
+            148
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            11,
+            1
+          ],
+          "extension_form": [
+            7,
+            6,
+            111
+          ],
+          "form": [
+            7,
+            -2,
+            439
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            12,
+            0
+          ],
+          "extension_form": [
+            4,
+            4,
+            193
+          ],
+          "form": [
+            16,
+            8,
+            193
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            12,
+            1
+          ],
+          "extension_form": [
+            12,
+            12,
+            67
+          ],
+          "form": [
+            48,
+            -24,
+            67
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            13,
+            0
+          ],
+          "extension_form": [
+            21,
+            -6,
+            37
+          ],
+          "form": [
+            37,
+            12,
+            84
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            13,
+            1
+          ],
+          "extension_form": [
+            7,
+            -6,
+            111
+          ],
+          "form": [
+            28,
+            -12,
+            111
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            14,
+            0
+          ],
+          "extension_form": [
+            16,
+            8,
+            49
+          ],
+          "form": [
+            57,
+            48,
+            64
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            14,
+            1
+          ],
+          "extension_form": [
+            19,
+            -14,
+            43
+          ],
+          "form": [
+            19,
+            10,
+            163
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            15,
+            0
+          ],
+          "extension_form": [
+            13,
+            10,
+            61
+          ],
+          "form": [
+            13,
+            -6,
+            237
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            15,
+            1
+          ],
+          "extension_form": [
+            28,
+            20,
+            31
+          ],
+          "form": [
+            39,
+            -6,
+            79
+          ],
+          "norm_mod8": 7
+        }
+      ]
+    },
+    {
+      "class_number": 64,
+      "conductor": 128,
+      "discriminant": -49152,
+      "group": "C32 x C2",
+      "rows": [
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            0,
+            0
+          ],
+          "extension_form": [
+            1,
+            0,
+            3072
+          ],
+          "form": [
+            1,
+            0,
+            12288
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            0,
+            1
+          ],
+          "extension_form": [
+            3,
+            0,
+            1024
+          ],
+          "form": [
+            3,
+            0,
+            4096
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            1,
+            0
+          ],
+          "extension_form": [
+            13,
+            6,
+            237
+          ],
+          "form": [
+            13,
+            12,
+            948
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            1,
+            1
+          ],
+          "extension_form": [
+            39,
+            6,
+            79
+          ],
+          "form": [
+            39,
+            12,
+            316
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            2,
+            0
+          ],
+          "extension_form": [
+            57,
+            -48,
+            64
+          ],
+          "form": [
+            73,
+            14,
+            169
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            2,
+            1
+          ],
+          "extension_form": [
+            19,
+            -10,
+            163
+          ],
+          "form": [
+            76,
+            -20,
+            163
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            3,
+            0
+          ],
+          "extension_form": [
+            37,
+            -12,
+            84
+          ],
+          "form": [
+            109,
+            94,
+            133
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            3,
+            1
+          ],
+          "extension_form": [
+            28,
+            12,
+            111
+          ],
+          "form": [
+            112,
+            -88,
+            127
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            4,
+            0
+          ],
+          "extension_form": [
+            16,
+            -8,
+            193
+          ],
+          "form": [
+            64,
+            48,
+            201
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            4,
+            1
+          ],
+          "extension_form": [
+            48,
+            24,
+            67
+          ],
+          "form": [
+            67,
+            -48,
+            192
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            5,
+            0
+          ],
+          "extension_form": [
+            21,
+            -12,
+            148
+          ],
+          "form": [
+            84,
+            60,
+            157
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            5,
+            1
+          ],
+          "extension_form": [
+            7,
+            2,
+            439
+          ],
+          "form": [
+            28,
+            4,
+            439
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            6,
+            0
+          ],
+          "extension_form": [
+            49,
+            -16,
+            64
+          ],
+          "form": [
+            97,
+            30,
+            129
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            6,
+            1
+          ],
+          "extension_form": [
+            43,
+            28,
+            76
+          ],
+          "form": [
+            43,
+            -30,
+            291
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            7,
+            0
+          ],
+          "extension_form": [
+            52,
+            20,
+            61
+          ],
+          "form": [
+            93,
+            -18,
+            133
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            7,
+            1
+          ],
+          "extension_form": [
+            31,
+            22,
+            103
+          ],
+          "form": [
+            31,
+            -18,
+            399
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            8,
+            0
+          ],
+          "extension_form": [
+            4,
+            4,
+            769
+          ],
+          "form": [
+            16,
+            -8,
+            769
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            8,
+            1
+          ],
+          "extension_form": [
+            12,
+            12,
+            259
+          ],
+          "form": [
+            48,
+            24,
+            259
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            9,
+            0
+          ],
+          "extension_form": [
+            52,
+            -20,
+            61
+          ],
+          "form": [
+            61,
+            40,
+            208
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            9,
+            1
+          ],
+          "extension_form": [
+            31,
+            -22,
+            103
+          ],
+          "form": [
+            103,
+            44,
+            124
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            10,
+            0
+          ],
+          "extension_form": [
+            49,
+            16,
+            64
+          ],
+          "form": [
+            49,
+            32,
+            256
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            10,
+            1
+          ],
+          "extension_form": [
+            43,
+            -28,
+            76
+          ],
+          "form": [
+            91,
+            66,
+            147
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            11,
+            0
+          ],
+          "extension_form": [
+            21,
+            12,
+            148
+          ],
+          "form": [
+            21,
+            -18,
+            589
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            11,
+            1
+          ],
+          "extension_form": [
+            7,
+            -2,
+            439
+          ],
+          "form": [
+            7,
+            -4,
+            1756
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            12,
+            0
+          ],
+          "extension_form": [
+            16,
+            8,
+            193
+          ],
+          "form": [
+            64,
+            16,
+            193
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            12,
+            1
+          ],
+          "extension_form": [
+            48,
+            -24,
+            67
+          ],
+          "form": [
+            91,
+            38,
+            139
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            13,
+            0
+          ],
+          "extension_form": [
+            37,
+            12,
+            84
+          ],
+          "form": [
+            37,
+            24,
+            336
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            13,
+            1
+          ],
+          "extension_form": [
+            28,
+            -12,
+            111
+          ],
+          "form": [
+            111,
+            24,
+            112
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            14,
+            0
+          ],
+          "extension_form": [
+            57,
+            48,
+            64
+          ],
+          "form": [
+            57,
+            -18,
+            217
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            14,
+            1
+          ],
+          "extension_form": [
+            19,
+            10,
+            163
+          ],
+          "form": [
+            19,
+            -18,
+            651
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            15,
+            0
+          ],
+          "extension_form": [
+            13,
+            -6,
+            237
+          ],
+          "form": [
+            52,
+            -12,
+            237
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            15,
+            1
+          ],
+          "extension_form": [
+            39,
+            -6,
+            79
+          ],
+          "form": [
+            79,
+            12,
+            156
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            16,
+            0
+          ],
+          "extension_form": [
+            1,
+            0,
+            3072
+          ],
+          "form": [
+            4,
+            4,
+            3073
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            16,
+            1
+          ],
+          "extension_form": [
+            3,
+            0,
+            1024
+          ],
+          "form": [
+            12,
+            12,
+            1027
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            17,
+            0
+          ],
+          "extension_form": [
+            13,
+            6,
+            237
+          ],
+          "form": [
+            52,
+            12,
+            237
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            17,
+            1
+          ],
+          "extension_form": [
+            39,
+            6,
+            79
+          ],
+          "form": [
+            79,
+            -12,
+            156
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            18,
+            0
+          ],
+          "extension_form": [
+            57,
+            -48,
+            64
+          ],
+          "form": [
+            57,
+            18,
+            217
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            18,
+            1
+          ],
+          "extension_form": [
+            19,
+            -10,
+            163
+          ],
+          "form": [
+            19,
+            18,
+            651
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            19,
+            0
+          ],
+          "extension_form": [
+            37,
+            -12,
+            84
+          ],
+          "form": [
+            37,
+            -24,
+            336
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            19,
+            1
+          ],
+          "extension_form": [
+            28,
+            12,
+            111
+          ],
+          "form": [
+            111,
+            -24,
+            112
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            20,
+            0
+          ],
+          "extension_form": [
+            16,
+            -8,
+            193
+          ],
+          "form": [
+            64,
+            -16,
+            193
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            20,
+            1
+          ],
+          "extension_form": [
+            48,
+            24,
+            67
+          ],
+          "form": [
+            91,
+            -38,
+            139
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            21,
+            0
+          ],
+          "extension_form": [
+            21,
+            -12,
+            148
+          ],
+          "form": [
+            21,
+            18,
+            589
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            21,
+            1
+          ],
+          "extension_form": [
+            7,
+            2,
+            439
+          ],
+          "form": [
+            7,
+            4,
+            1756
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            22,
+            0
+          ],
+          "extension_form": [
+            49,
+            -16,
+            64
+          ],
+          "form": [
+            49,
+            -32,
+            256
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            22,
+            1
+          ],
+          "extension_form": [
+            43,
+            28,
+            76
+          ],
+          "form": [
+            91,
+            -66,
+            147
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            23,
+            0
+          ],
+          "extension_form": [
+            52,
+            20,
+            61
+          ],
+          "form": [
+            61,
+            -40,
+            208
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            23,
+            1
+          ],
+          "extension_form": [
+            31,
+            22,
+            103
+          ],
+          "form": [
+            103,
+            -44,
+            124
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            24,
+            0
+          ],
+          "extension_form": [
+            4,
+            4,
+            769
+          ],
+          "form": [
+            16,
+            8,
+            769
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            24,
+            1
+          ],
+          "extension_form": [
+            12,
+            12,
+            259
+          ],
+          "form": [
+            48,
+            -24,
+            259
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            25,
+            0
+          ],
+          "extension_form": [
+            52,
+            -20,
+            61
+          ],
+          "form": [
+            93,
+            18,
+            133
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            25,
+            1
+          ],
+          "extension_form": [
+            31,
+            -22,
+            103
+          ],
+          "form": [
+            31,
+            18,
+            399
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            26,
+            0
+          ],
+          "extension_form": [
+            49,
+            16,
+            64
+          ],
+          "form": [
+            97,
+            -30,
+            129
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            26,
+            1
+          ],
+          "extension_form": [
+            43,
+            -28,
+            76
+          ],
+          "form": [
+            43,
+            30,
+            291
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            27,
+            0
+          ],
+          "extension_form": [
+            21,
+            12,
+            148
+          ],
+          "form": [
+            84,
+            -60,
+            157
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            27,
+            1
+          ],
+          "extension_form": [
+            7,
+            -2,
+            439
+          ],
+          "form": [
+            28,
+            -4,
+            439
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            28,
+            0
+          ],
+          "extension_form": [
+            16,
+            8,
+            193
+          ],
+          "form": [
+            64,
+            -48,
+            201
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            28,
+            1
+          ],
+          "extension_form": [
+            48,
+            -24,
+            67
+          ],
+          "form": [
+            67,
+            48,
+            192
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            29,
+            0
+          ],
+          "extension_form": [
+            37,
+            12,
+            84
+          ],
+          "form": [
+            109,
+            -94,
+            133
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            29,
+            1
+          ],
+          "extension_form": [
+            28,
+            -12,
+            111
+          ],
+          "form": [
+            112,
+            88,
+            127
+          ],
+          "norm_mod8": 7
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            1,
+            1
+          ],
+          "coordinate_w_j": [
+            30,
+            0
+          ],
+          "extension_form": [
+            57,
+            48,
+            64
+          ],
+          "form": [
+            73,
+            -14,
+            169
+          ],
+          "norm_mod8": 1
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            -1,
+            1
+          ],
+          "coordinate_w_j": [
+            30,
+            1
+          ],
+          "extension_form": [
+            19,
+            10,
+            163
+          ],
+          "form": [
+            76,
+            20,
+            163
+          ],
+          "norm_mod8": 3
+        },
+        {
+          "characters_minus4_8_minus8": [
+            1,
+            -1,
+            -1
+          ],
+          "coordinate_w_j": [
+            31,
+            0
+          ],
+          "extension_form": [
+            13,
+            -6,
+            237
+          ],
+          "form": [
+            13,
+            -12,
+            948
+          ],
+          "norm_mod8": 5
+        },
+        {
+          "characters_minus4_8_minus8": [
+            -1,
+            1,
+            -1
+          ],
+          "coordinate_w_j": [
+            31,
+            1
+          ],
+          "extension_form": [
+            39,
+            -6,
+            79
+          ],
+          "form": [
+            39,
+            -12,
+            316
+          ],
+          "norm_mod8": 7
+        }
+      ]
+    }
+  ],
+  "non_dyadic_scope_hostile": {
+    "class_count": 24,
+    "conductor": 40,
+    "corrected_scope": "Genus/square-kernel identification here is dyadic only.",
+    "denominator_count": 48,
+    "norm_mod8_kernel_size": 6,
+    "square_subgroup_size": 3,
+    "unit_count": 1152,
+    "witness_alpha": [
+      1,
+      8
+    ],
+    "witness_form": [
+      25,
+      20,
+      52
+    ],
+    "witness_legendre_norm_mod5": -1,
+    "witness_norm": 57
+  },
+  "status": "FINITE-EXACT controls supporting written all-order proofs",
+  "valuation_exponents_checked": [
+    3,
+    64
+  ]
+}

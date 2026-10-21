@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-21",
+  "snapshot": "current_inputs",
+  "files": [
+    {
+      "original_path": "session20-idoneal-conductors/AUDIT.md",
+      "audit_copy": "current_inputs/AUDIT.md",
+      "sha256": "50a3411996068d551e813aa3ad8a735a0297e3502fdb199a71cc95734ef10584"
+    },
+    {
+      "original_path": "session20-balanced-fibres/BALANCED_FIBRE_GROUP_AND_PORT_DEFECT.md",
+      "audit_copy": "current_inputs/BALANCED_FIBRE_GROUP_AND_PORT_DEFECT.md",
+      "sha256": "4ce1d99cfff02b97997551fa1edf35a3f6baf64755d45d654e6d9da0afd88603"
+    },
+    {
+      "original_path": "session20-idoneal-conductors/CONDUCTOR_TOWER.md",
+      "audit_copy": "current_inputs/CONDUCTOR_TOWER.md",
+      "sha256": "b6911f6479f9cb75a26b168573c97d6afa15843a61e535d63ca72a71088fd9f3"
+    },
+    {
+      "original_path": "session20-idoneal-conductors/CORRECTIONS.md",
+      "audit_copy": "current_inputs/CORRECTIONS.md",
+      "sha256": "8de669a710bd484da26a03d8168b3bf91b00f9458e218d6488080fe599111bb6"
+    },
+    {
+      "original_path": "math/05-knowledge/results/divisor_norm_ball_20261021/DIVISOR_NORM_BALL.md",
+      "audit_copy": "current_inputs/DIVISOR_NORM_BALL.md",
+      "sha256": "73ee9b18c2a7cd82963e7d3ce6414d5ed4d8189f15295b1d48485a3524d8da1a"
+    },
+    {
+      "original_path": "session20-idoneal-conductors/SHA256SUMS",
+      "audit_copy": "current_inputs/SHA256SUMS",
+      "sha256": "fab0d406aae03e62687a48bed2d453a42ddc41554926197aade6399d1e65edc1"
+    },
+    {
+      "original_path": "session20-idoneal-conductors/SOURCE_PROVENANCE.json",
+      "audit_copy": "current_inputs/SOURCE_PROVENANCE.json",
+      "sha256": "f883bde990706858e85821c36d3ce4b186d1187a1702538518646f4f4abf7459"
+    },
+    {
+      "original_path": "session20-idoneal-conductors/verification.json",
+      "audit_copy": "current_inputs/verification.json",
+      "sha256": "55029b081f5f387aa6d86cd356117b3f85046f5c4237b80deb217222aa60b1e4"
+    },
+    {
+      "original_path": "session20-idoneal-conductors/verification.optimized.json",
+      "audit_copy": "current_inputs/verification.optimized.json",
+      "sha256": "55029b081f5f387aa6d86cd356117b3f85046f5c4237b80deb217222aa60b1e4"
+    },
+    {
+      "original_path": "session20-idoneal-conductors/verify_conductor_tower.py",
+      "audit_copy": "current_inputs/verify_conductor_tower.py",
+      "sha256": "04cbac2aaed5262ead2226da02713b94dc8ce0d8e1412295eaac2e3ea7311a2a"
+    }
+  ]
+}

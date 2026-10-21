@@ -1,0 +1,1477 @@
+{
+  "conductor40_scope_hostile": {
+    "classes": 24,
+    "conductor": 40,
+    "denominator": 48,
+    "nonsquare_norm1_witnesses": [
+      [
+        1,
+        8
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        1,
+        24
+      ]
+    ],
+    "norm8_kernel": 6,
+    "squares": 3,
+    "units": 1152
+  },
+  "g16_automorphisms": 8,
+  "independent_checks": 46719,
+  "levels": [
+    {
+      "classes": 1,
+      "conductor": 2,
+      "forms": 1,
+      "labels": [
+        {
+          "coordinate": [
+            0,
+            0
+          ],
+          "form": [
+            1,
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "classes": 2,
+      "conductor": 4,
+      "forms": 2,
+      "labels": [
+        {
+          "coordinate": [
+            0,
+            0
+          ],
+          "form": [
+            1,
+            0,
+            12
+          ]
+        },
+        {
+          "coordinate": [
+            0,
+            1
+          ],
+          "form": [
+            3,
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "classes": 4,
+      "conductor": 8,
+      "forms": 4,
+      "labels": [
+        {
+          "coordinate": [
+            0,
+            0
+          ],
+          "form": [
+            1,
+            0,
+            48
+          ]
+        },
+        {
+          "coordinate": [
+            0,
+            1
+          ],
+          "form": [
+            3,
+            0,
+            16
+          ]
+        },
+        {
+          "coordinate": [
+            1,
+            0
+          ],
+          "form": [
+            4,
+            4,
+            13
+          ]
+        },
+        {
+          "coordinate": [
+            1,
+            1
+          ],
+          "form": [
+            7,
+            2,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "classes": 8,
+      "conductor": 16,
+      "forms": 8,
+      "labels": [
+        {
+          "coordinate": [
+            0,
+            0
+          ],
+          "form": [
+            1,
+            0,
+            192
+          ]
+        },
+        {
+          "coordinate": [
+            0,
+            1
+          ],
+          "form": [
+            3,
+            0,
+            64
+          ]
+        },
+        {
+          "coordinate": [
+            1,
+            0
+          ],
+          "form": [
+            13,
+            8,
+            16
+          ]
+        },
+        {
+          "coordinate": [
+            1,
+            1
+          ],
+          "form": [
+            7,
+            4,
+            28
+          ]
+        },
+        {
+          "coordinate": [
+            2,
+            0
+          ],
+          "form": [
+            4,
+            4,
+            49
+          ]
+        },
+        {
+          "coordinate": [
+            2,
+            1
+          ],
+          "form": [
+            12,
+            12,
+            19
+          ]
+        },
+        {
+          "coordinate": [
+            3,
+            0
+          ],
+          "form": [
+            13,
+            -8,
+            16
+          ]
+        },
+        {
+          "coordinate": [
+            3,
+            1
+          ],
+          "form": [
+            7,
+            -4,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "classes": 16,
+      "conductor": 32,
+      "forms": 16,
+      "labels": [
+        {
+          "coordinate": [
+            0,
+            0
+          ],
+          "form": [
+            1,
+            0,
+            768
+          ]
+        },
+        {
+          "coordinate": [
+            0,
+            1
+          ],
+          "form": [
+            3,
+            0,
+            256
+          ]
+        },
+        {
+          "coordinate": [
+            1,
+            0
+          ],
+          "form": [
+            13,
+            -10,
+            61
+          ]
+        },
+        {
+          "coordinate": [
+            1,
+            1
+          ],
+          "form": [
+            28,
+            -20,
+            31
+          ]
+        },
+        {
+          "coordinate": [
+            2,
+            0
+          ],
+          "form": [
+            16,
+            -8,
+            49
+          ]
+        },
+        {
+          "coordinate": [
+            2,
+            1
+          ],
+          "form": [
+            19,
+            14,
+            43
+          ]
+        },
+        {
+          "coordinate": [
+            3,
+            0
+          ],
+          "form": [
+            21,
+            6,
+            37
+          ]
+        },
+        {
+          "coordinate": [
+            3,
+            1
+          ],
+          "form": [
+            7,
+            6,
+            111
+          ]
+        },
+        {
+          "coordinate": [
+            4,
+            0
+          ],
+          "form": [
+            4,
+            4,
+            193
+          ]
+        },
+        {
+          "coordinate": [
+            4,
+            1
+          ],
+          "form": [
+            12,
+            12,
+            67
+          ]
+        },
+        {
+          "coordinate": [
+            5,
+            0
+          ],
+          "form": [
+            21,
+            -6,
+            37
+          ]
+        },
+        {
+          "coordinate": [
+            5,
+            1
+          ],
+          "form": [
+            7,
+            -6,
+            111
+          ]
+        },
+        {
+          "coordinate": [
+            6,
+            0
+          ],
+          "form": [
+            16,
+            8,
+            49
+          ]
+        },
+        {
+          "coordinate": [
+            6,
+            1
+          ],
+          "form": [
+            19,
+            -14,
+            43
+          ]
+        },
+        {
+          "coordinate": [
+            7,
+            0
+          ],
+          "form": [
+            13,
+            10,
+            61
+          ]
+        },
+        {
+          "coordinate": [
+            7,
+            1
+          ],
+          "form": [
+            28,
+            20,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "classes": 32,
+      "conductor": 64,
+      "forms": 32,
+      "labels": [
+        {
+          "coordinate": [
+            0,
+            0
+          ],
+          "form": [
+            1,
+            0,
+            3072
+          ]
+        },
+        {
+          "coordinate": [
+            0,
+            1
+          ],
+          "form": [
+            3,
+            0,
+            1024
+          ]
+        },
+        {
+          "coordinate": [
+            1,
+            0
+          ],
+          "form": [
+            13,
+            6,
+            237
+          ]
+        },
+        {
+          "coordinate": [
+            1,
+            1
+          ],
+          "form": [
+            39,
+            6,
+            79
+          ]
+        },
+        {
+          "coordinate": [
+            2,
+            0
+          ],
+          "form": [
+            57,
+            -48,
+            64
+          ]
+        },
+        {
+          "coordinate": [
+            2,
+            1
+          ],
+          "form": [
+            19,
+            -10,
+            163
+          ]
+        },
+        {
+          "coordinate": [
+            3,
+            0
+          ],
+          "form": [
+            37,
+            -12,
+            84
+          ]
+        },
+        {
+          "coordinate": [
+            3,
+            1
+          ],
+          "form": [
+            28,
+            12,
+            111
+          ]
+        },
+        {
+          "coordinate": [
+            4,
+            0
+          ],
+          "form": [
+            16,
+            -8,
+            193
+          ]
+        },
+        {
+          "coordinate": [
+            4,
+            1
+          ],
+          "form": [
+            48,
+            24,
+            67
+          ]
+        },
+        {
+          "coordinate": [
+            5,
+            0
+          ],
+          "form": [
+            21,
+            -12,
+            148
+          ]
+        },
+        {
+          "coordinate": [
+            5,
+            1
+          ],
+          "form": [
+            7,
+            2,
+            439
+          ]
+        },
+        {
+          "coordinate": [
+            6,
+            0
+          ],
+          "form": [
+            49,
+            -16,
+            64
+          ]
+        },
+        {
+          "coordinate": [
+            6,
+            1
+          ],
+          "form": [
+            43,
+            28,
+            76
+          ]
+        },
+        {
+          "coordinate": [
+            7,
+            0
+          ],
+          "form": [
+            52,
+            20,
+            61
+          ]
+        },
+        {
+          "coordinate": [
+            7,
+            1
+          ],
+          "form": [
+            31,
+            22,
+            103
+          ]
+        },
+        {
+          "coordinate": [
+            8,
+            0
+          ],
+          "form": [
+            4,
+            4,
+            769
+          ]
+        },
+        {
+          "coordinate": [
+            8,
+            1
+          ],
+          "form": [
+            12,
+            12,
+            259
+          ]
+        },
+        {
+          "coordinate": [
+            9,
+            0
+          ],
+          "form": [
+            52,
+            -20,
+            61
+          ]
+        },
+        {
+          "coordinate": [
+            9,
+            1
+          ],
+          "form": [
+            31,
+            -22,
+            103
+          ]
+        },
+        {
+          "coordinate": [
+            10,
+            0
+          ],
+          "form": [
+            49,
+            16,
+            64
+          ]
+        },
+        {
+          "coordinate": [
+            10,
+            1
+          ],
+          "form": [
+            43,
+            -28,
+            76
+          ]
+        },
+        {
+          "coordinate": [
+            11,
+            0
+          ],
+          "form": [
+            21,
+            12,
+            148
+          ]
+        },
+        {
+          "coordinate": [
+            11,
+            1
+          ],
+          "form": [
+            7,
+            -2,
+            439
+          ]
+        },
+        {
+          "coordinate": [
+            12,
+            0
+          ],
+          "form": [
+            16,
+            8,
+            193
+          ]
+        },
+        {
+          "coordinate": [
+            12,
+            1
+          ],
+          "form": [
+            48,
+            -24,
+            67
+          ]
+        },
+        {
+          "coordinate": [
+            13,
+            0
+          ],
+          "form": [
+            37,
+            12,
+            84
+          ]
+        },
+        {
+          "coordinate": [
+            13,
+            1
+          ],
+          "form": [
+            28,
+            -12,
+            111
+          ]
+        },
+        {
+          "coordinate": [
+            14,
+            0
+          ],
+          "form": [
+            57,
+            48,
+            64
+          ]
+        },
+        {
+          "coordinate": [
+            14,
+            1
+          ],
+          "form": [
+            19,
+            10,
+            163
+          ]
+        },
+        {
+          "coordinate": [
+            15,
+            0
+          ],
+          "form": [
+            13,
+            -6,
+            237
+          ]
+        },
+        {
+          "coordinate": [
+            15,
+            1
+          ],
+          "form": [
+            39,
+            -6,
+            79
+          ]
+        }
+      ]
+    },
+    {
+      "classes": 64,
+      "conductor": 128,
+      "forms": 64,
+      "labels": [
+        {
+          "coordinate": [
+            0,
+            0
+          ],
+          "form": [
+            1,
+            0,
+            12288
+          ]
+        },
+        {
+          "coordinate": [
+            0,
+            1
+          ],
+          "form": [
+            3,
+            0,
+            4096
+          ]
+        },
+        {
+          "coordinate": [
+            1,
+            0
+          ],
+          "form": [
+            13,
+            12,
+            948
+          ]
+        },
+        {
+          "coordinate": [
+            1,
+            1
+          ],
+          "form": [
+            39,
+            12,
+            316
+          ]
+        },
+        {
+          "coordinate": [
+            2,
+            0
+          ],
+          "form": [
+            73,
+            14,
+            169
+          ]
+        },
+        {
+          "coordinate": [
+            2,
+            1
+          ],
+          "form": [
+            76,
+            -20,
+            163
+          ]
+        },
+        {
+          "coordinate": [
+            3,
+            0
+          ],
+          "form": [
+            109,
+            94,
+            133
+          ]
+        },
+        {
+          "coordinate": [
+            3,
+            1
+          ],
+          "form": [
+            112,
+            -88,
+            127
+          ]
+        },
+        {
+          "coordinate": [
+            4,
+            0
+          ],
+          "form": [
+            64,
+            48,
+            201
+          ]
+        },
+        {
+          "coordinate": [
+            4,
+            1
+          ],
+          "form": [
+            67,
+            -48,
+            192
+          ]
+        },
+        {
+          "coordinate": [
+            5,
+            0
+          ],
+          "form": [
+            84,
+            60,
+            157
+          ]
+        },
+        {
+          "coordinate": [
+            5,
+            1
+          ],
+          "form": [
+            28,
+            4,
+            439
+          ]
+        },
+        {
+          "coordinate": [
+            6,
+            0
+          ],
+          "form": [
+            97,
+            30,
+            129
+          ]
+        },
+        {
+          "coordinate": [
+            6,
+            1
+          ],
+          "form": [
+            43,
+            -30,
+            291
+          ]
+        },
+        {
+          "coordinate": [
+            7,
+            0
+          ],
+          "form": [
+            93,
+            -18,
+            133
+          ]
+        },
+        {
+          "coordinate": [
+            7,
+            1
+          ],
+          "form": [
+            31,
+            -18,
+            399
+          ]
+        },
+        {
+          "coordinate": [
+            8,
+            0
+          ],
+          "form": [
+            16,
+            -8,
+            769
+          ]
+        },
+        {
+          "coordinate": [
+            8,
+            1
+          ],
+          "form": [
+            48,
+            24,
+            259
+          ]
+        },
+        {
+          "coordinate": [
+            9,
+            0
+          ],
+          "form": [
+            61,
+            40,
+            208
+          ]
+        },
+        {
+          "coordinate": [
+            9,
+            1
+          ],
+          "form": [
+            103,
+            44,
+            124
+          ]
+        },
+        {
+          "coordinate": [
+            10,
+            0
+          ],
+          "form": [
+            49,
+            32,
+            256
+          ]
+        },
+        {
+          "coordinate": [
+            10,
+            1
+          ],
+          "form": [
+            91,
+            66,
+            147
+          ]
+        },
+        {
+          "coordinate": [
+            11,
+            0
+          ],
+          "form": [
+            21,
+            -18,
+            589
+          ]
+        },
+        {
+          "coordinate": [
+            11,
+            1
+          ],
+          "form": [
+            7,
+            -4,
+            1756
+          ]
+        },
+        {
+          "coordinate": [
+            12,
+            0
+          ],
+          "form": [
+            64,
+            16,
+            193
+          ]
+        },
+        {
+          "coordinate": [
+            12,
+            1
+          ],
+          "form": [
+            91,
+            38,
+            139
+          ]
+        },
+        {
+          "coordinate": [
+            13,
+            0
+          ],
+          "form": [
+            37,
+            24,
+            336
+          ]
+        },
+        {
+          "coordinate": [
+            13,
+            1
+          ],
+          "form": [
+            111,
+            24,
+            112
+          ]
+        },
+        {
+          "coordinate": [
+            14,
+            0
+          ],
+          "form": [
+            57,
+            -18,
+            217
+          ]
+        },
+        {
+          "coordinate": [
+            14,
+            1
+          ],
+          "form": [
+            19,
+            -18,
+            651
+          ]
+        },
+        {
+          "coordinate": [
+            15,
+            0
+          ],
+          "form": [
+            52,
+            -12,
+            237
+          ]
+        },
+        {
+          "coordinate": [
+            15,
+            1
+          ],
+          "form": [
+            79,
+            12,
+            156
+          ]
+        },
+        {
+          "coordinate": [
+            16,
+            0
+          ],
+          "form": [
+            4,
+            4,
+            3073
+          ]
+        },
+        {
+          "coordinate": [
+            16,
+            1
+          ],
+          "form": [
+            12,
+            12,
+            1027
+          ]
+        },
+        {
+          "coordinate": [
+            17,
+            0
+          ],
+          "form": [
+            52,
+            12,
+            237
+          ]
+        },
+        {
+          "coordinate": [
+            17,
+            1
+          ],
+          "form": [
+            79,
+            -12,
+            156
+          ]
+        },
+        {
+          "coordinate": [
+            18,
+            0
+          ],
+          "form": [
+            57,
+            18,
+            217
+          ]
+        },
+        {
+          "coordinate": [
+            18,
+            1
+          ],
+          "form": [
+            19,
+            18,
+            651
+          ]
+        },
+        {
+          "coordinate": [
+            19,
+            0
+          ],
+          "form": [
+            37,
+            -24,
+            336
+          ]
+        },
+        {
+          "coordinate": [
+            19,
+            1
+          ],
+          "form": [
+            111,
+            -24,
+            112
+          ]
+        },
+        {
+          "coordinate": [
+            20,
+            0
+          ],
+          "form": [
+            64,
+            -16,
+            193
+          ]
+        },
+        {
+          "coordinate": [
+            20,
+            1
+          ],
+          "form": [
+            91,
+            -38,
+            139
+          ]
+        },
+        {
+          "coordinate": [
+            21,
+            0
+          ],
+          "form": [
+            21,
+            18,
+            589
+          ]
+        },
+        {
+          "coordinate": [
+            21,
+            1
+          ],
+          "form": [
+            7,
+            4,
+            1756
+          ]
+        },
+        {
+          "coordinate": [
+            22,
+            0
+          ],
+          "form": [
+            49,
+            -32,
+            256
+          ]
+        },
+        {
+          "coordinate": [
+            22,
+            1
+          ],
+          "form": [
+            91,
+            -66,
+            147
+          ]
+        },
+        {
+          "coordinate": [
+            23,
+            0
+          ],
+          "form": [
+            61,
+            -40,
+            208
+          ]
+        },
+        {
+          "coordinate": [
+            23,
+            1
+          ],
+          "form": [
+            103,
+            -44,
+            124
+          ]
+        },
+        {
+          "coordinate": [
+            24,
+            0
+          ],
+          "form": [
+            16,
+            8,
+            769
+          ]
+        },
+        {
+          "coordinate": [
+            24,
+            1
+          ],
+          "form": [
+            48,
+            -24,
+            259
+          ]
+        },
+        {
+          "coordinate": [
+            25,
+            0
+          ],
+          "form": [
+            93,
+            18,
+            133
+          ]
+        },
+        {
+          "coordinate": [
+            25,
+            1
+          ],
+          "form": [
+            31,
+            18,
+            399
+          ]
+        },
+        {
+          "coordinate": [
+            26,
+            0
+          ],
+          "form": [
+            97,
+            -30,
+            129
+          ]
+        },
+        {
+          "coordinate": [
+            26,
+            1
+          ],
+          "form": [
+            43,
+            30,
+            291
+          ]
+        },
+        {
+          "coordinate": [
+            27,
+            0
+          ],
+          "form": [
+            84,
+            -60,
+            157
+          ]
+        },
+        {
+          "coordinate": [
+            27,
+            1
+          ],
+          "form": [
+            28,
+            -4,
+            439
+          ]
+        },
+        {
+          "coordinate": [
+            28,
+            0
+          ],
+          "form": [
+            64,
+            -48,
+            201
+          ]
+        },
+        {
+          "coordinate": [
+            28,
+            1
+          ],
+          "form": [
+            67,
+            48,
+            192
+          ]
+        },
+        {
+          "coordinate": [
+            29,
+            0
+          ],
+          "form": [
+            109,
+            -94,
+            133
+          ]
+        },
+        {
+          "coordinate": [
+            29,
+            1
+          ],
+          "form": [
+            112,
+            88,
+            127
+          ]
+        },
+        {
+          "coordinate": [
+            30,
+            0
+          ],
+          "form": [
+            73,
+            -14,
+            169
+          ]
+        },
+        {
+          "coordinate": [
+            30,
+            1
+          ],
+          "form": [
+            76,
+            20,
+            163
+          ]
+        },
+        {
+          "coordinate": [
+            31,
+            0
+          ],
+          "form": [
+            13,
+            -12,
+            948
+          ]
+        },
+        {
+          "coordinate": [
+            31,
+            1
+          ],
+          "form": [
+            39,
+            -12,
+            316
+          ]
+        }
+      ]
+    }
+  ],
+  "method": "even projective slopes plus Eisenstein Euclidean ideal gcd; no producer imports",
+  "status": "PASS for the corrected dyadic scope",
+  "written_all_order_induction": "audited separately in INDEPENDENT_AUDIT.md"
+}
