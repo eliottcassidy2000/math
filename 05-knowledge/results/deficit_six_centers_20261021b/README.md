@@ -289,6 +289,33 @@ the uniform algebraic onset; it does not assert a center of order 248.
 
 ## 7. Verification, limits and next obligation
 
+### Incoming fixed-degree rationality: a uniform center cutoff
+
+Incoming commit `777c7240f7` proves
+[rationality at every fixed fundamental degree](../fixed_degree_metagraph_rationality_20261021/README.md)
+from the inherited finite-atom and center-divisor laws. It is a counting
+theorem, not a wiring classification. Section2 above strengthens its finite
+center input without changing its denominator bounds.
+
+For degree k>=1, every strong self-converse center in its deficit-2k
+decomposition has signature `(a,b)` and some odd half-count x>=1 satisfying
+`x(x*a-b)=2k`. Thus
+
+\[
+0\le a-b=2k/x-(x-1)a\le2k.
+\]
+
+If r is the least power of two at least2k+4, **every** such strong center has
+order at most `max(3r-1,(2k+2)(2r-1))<4(2k+2)(2k+4)`. This bounds the degree
+of each of the incoming polynomials `R_(2k)` and `E_(x,2k)`; the empty center
+has order zero and is kept separately. The quadratic bound also covers
+zero-deficit strong centers, since the theorem assumes an upper bound on
+deficit, not equality. It does not apply to ordinary non-self-converse
+strong atoms `P_j`, and supplies none of the missing center coefficients.
+The parent and an independent reader checked this direct substitution.
+
+### Reproduction
+
 Run from the repository root:
 
 ```text

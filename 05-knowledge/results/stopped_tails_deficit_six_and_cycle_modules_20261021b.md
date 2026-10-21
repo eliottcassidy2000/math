@@ -41,6 +41,11 @@ new ordinary-count representation is faster. Explicitly reconstructed
 Session21 documents supplied questions and formulas; their missing old
 receipts are not treated as fresh evidence.
 
+Before close-out, incoming commit `777c7240f7` supplied the independently
+reviewed [fixed-degree rationality theorem](fixed_degree_metagraph_rationality_20261021/README.md).
+Its exact connection to the new cutoff is recorded below. Both incoming
+commits were integrated from a clean tree.
+
 Closest proved mechanisms: synchronous one-edge cancellation, source-owned
 interval banks, regular rotation-orbit connectivity, half-supported path
 cliques, and future-gcd-response enumeration. Hostiles: the native N7 cut8
@@ -167,6 +172,14 @@ With `p=1-z-z^3`, the trivalent vertex series has exactly reduced denominator
 `p(z)^2 p(z^2)^2`, hence minimal eventual recurrence order18. The center cutoff
 gives a safe recurrence onset n>=261. The reduction is independent of the
 unknown center coefficients; it does not supply those coefficients.
+
+The incoming rationality theorem extends the counting framework to every
+fixed fundamental degree k. Our new cutoff applies to all its self-converse
+center polynomials: `x(x*a-b)=2k` implies `0<=a-b<=2k`. Consequently their
+degrees are at most `max(3r-1,(2k+2)(2r-1))`, with r the least power of two
+at least2k+4. This is a quadratic finite-center bound; its denominator law
+is unchanged. Ordinary non-self-converse atoms retain their separate inherited
+bound. Neither result recovers adjacency from the counting series.
 
 ## 4. Faster signed-core enumeration by retaining a polynomial sidecar
 
