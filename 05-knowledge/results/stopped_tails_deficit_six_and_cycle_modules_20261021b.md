@@ -51,6 +51,12 @@ commit `6b12a62f6b` supplied the independently reviewed
 Its bound47 combines with the prior nonautomorphic-cycle theorem to give35.
 All incoming commits were integrated from a clean tree.
 
+The final incoming [suffix-gate](routefree_suffix_gate_20261021/README.md)
+and [tail-scale obstruction](tail_scale_certificate_obstruction_20261021/README.md)
+packets independently develop an ungrouped zonotope certificate and show why
+the affine lift alone cannot propagate it to every scale. The comparison and
+the nonrecycling minimum-selector consequence are recorded in the tail proof.
+
 Closest proved mechanisms: synchronous one-edge cancellation, source-owned
 interval banks, regular rotation-orbit connectivity, half-supported path
 cliques, and future-gcd-response enumeration. Hostiles: the native N7 cut8
@@ -122,6 +128,17 @@ does not cover the other sources in the enlarged annulus. The prior theorem
 `N>=2^(8d+12)` controls fixed early horizons; the new stopping predicate
 controls a whole tail after success. Their quantifiers do not yet join into
 a uniform all-N proof.
+
+The incoming zonotope gate certifies an additional supplied scale N16385.
+At the shared N4096,cut105, our synchronous-block bound557164 improves its
+617824 bound by60660; there is no asserted all-scale dominance. Selecting the
+minimum of available authenticated future bounds preserves the budget and
+allows adaptive use of both representations. The incoming4096-source hostile
+at N262144,cut111 refutes a naive depth+6 scale contraction for its ungrouped
+bound. It does not refute our within-scale monotonicity or153N coverage.
+Its exact source lift covers only1/64 of primitive addresses, and uniform
+old-source completion on an unbounded scale tower is itself equivalent to
+entry. These constraints are retained in the next uniform target.
 
 ## 2. Larger zero blocks via a four-point flow, with no recycled gain
 

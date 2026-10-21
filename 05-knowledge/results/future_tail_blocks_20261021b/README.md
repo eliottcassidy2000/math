@@ -238,3 +238,49 @@ This packet supplies a valid stopping predicate and examples where it
 fires before all sources are grounded. It supplies no universal bound on
 D(N), no theorem that the predicate must eventually fire, and no proof
 of arbitrary-source Collatz convergence.
+
+## 8. Incoming suffix gates and a nonrecycling selector
+
+Incoming commits `fe180d8ea4` and `f7e1e958a9` supply a separate
+[signed-zonotope suffix bound](../routefree_suffix_gate_20261021/README.md)
+and a [native scale obstruction](../tail_scale_certificate_obstruction_20261021/README.md).
+Their parallel proof bounds independently signed unfinished original sources;
+ours retains synchronous current-node fibres and permits both-channel-zero
+erasure. Both allow nonarrival and bound the physical increment directly.
+Neither adds a credit to153N. Their general mixed gate retains unfinished
+old sources; the simpler old-complete gate requires that guard to be checked.
+
+There is a direct same-cut comparison: at N4096,D105 both current increments
+are421276. The incoming bound is617824, while ours is557164, a60660 lower
+upper bound. This is one authenticated comparison, not a general dominance
+theorem. The incoming packet also supplies a producer certificate at N16385,
+which is outside our three-scale production universe. Its independent native
+replay covers4096/8192, as its publication explicitly states.
+
+Let V_r denote any correctly typed incoming bound for the same original
+source carrier at cut r. Whenever these certificates have been computed, set
+
+\[
+ B_D=\min\bigl(\{\mathcal U_D\}\cup
+               \{V_r:0\le r\le D,\ V_r\text{ authenticated}\}\bigr).
+\]
+
+Then every h>=D satisfies `Delta_h<=B_D`. Each candidate bounds that entire
+future interval; taking their minimum chooses a certificate, not a sum of
+credits. B_D is nonincreasing because U is nonincreasing and the retained
+candidate set only grows. All earlier physical cuts must still be covered.
+The incoming unsigned source multiset must be reconstructed according to its
+own specification; it is not silently replaced by our four-vector blocks.
+This selector supplies no theorem that a successful candidate exists for
+every N. An independent reader checked the comparison and selector proof.
+
+The incoming hostile makes the uniform obligation sharper. The affine
+64s+35/49 lift covers exactly1/64 of primitive source addresses. Moreover,
+at N'=262144 and native cut111,4096 explicit pending witnesses already refute
+the proposed depth+6 contraction of the ungrouped zonotope bound from
+N4096,cut105. This does not test or refute U's within-scale monotonicity,
+nor does it show a153N failure. The lift's +6 is an integer-division-clock
+increment, not six primitive arrival steps. Finally, requiring eventual
+completion of every old source along an unbounded scale tower is already
+equivalent to universal entry. The general mixed gate and our pending-block
+bound avoid taking that statement as an induction hypothesis.
