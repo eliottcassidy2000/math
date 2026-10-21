@@ -1,0 +1,147 @@
+{
+  "artifact": "session19-ellipsoid-audit",
+  "commands": [
+    "python3 -B replay.py",
+    "python3 -B -O replay.py"
+  ],
+  "dependencies": "Python 3.8+ standard library; no network or producer imports in independent checker",
+  "files": [
+    {
+      "bytes": 13222,
+      "path": "README.md",
+      "sha256": "b3df16efe9fffcd2546166bbe96c36e7a701e50e1d919fdf2f306c5421d636d0"
+    },
+    {
+      "bytes": 2556,
+      "path": "SOURCE-PINS.md",
+      "sha256": "78993017c14480dc5458896fa48ae03fd334e86ee1315f45f465f0a0e8ab5378"
+    },
+    {
+      "bytes": 13780,
+      "path": "check_independent.py",
+      "sha256": "8e36fb8d419d54c7966285648980a9c5ee005b297669bd8cde321cece2acd399"
+    },
+    {
+      "bytes": 1626,
+      "path": "frozen_sources/session19-ellipsoid-optimum/MANIFEST.json",
+      "sha256": "050fc733781c929b8d2eb36a128cec3bc3d0f7b85c95f491941dcb3dbf849dad"
+    },
+    {
+      "bytes": 80,
+      "path": "frozen_sources/session19-ellipsoid-optimum/MANIFEST.sha256",
+      "sha256": "64d24319e09007ae91247993bd1c38ad4caac792961dc42817ceebee0c96733f"
+    },
+    {
+      "bytes": 17013,
+      "path": "frozen_sources/session19-ellipsoid-optimum/README.md",
+      "sha256": "4824a239f153a002fdbece8e21a7fff6063a4eb437b64b7adfc7dd2b84e4e757"
+    },
+    {
+      "bytes": 2553,
+      "path": "frozen_sources/session19-ellipsoid-optimum/SOURCE-PINS.md",
+      "sha256": "22a3e3ca50452d9f08149bf41843896d9fe3752a7b274c435e6247616f226b30"
+    },
+    {
+      "bytes": 2472,
+      "path": "frozen_sources/session19-ellipsoid-optimum/check_exact.out",
+      "sha256": "f85654ad2842a210e5cd50ff387951f562ededbd2a7c2713b30ca35d6310dcc8"
+    },
+    {
+      "bytes": 14489,
+      "path": "frozen_sources/session19-ellipsoid-optimum/check_exact.py",
+      "sha256": "3984a7edceb89d570f7f0f0b53bdffb0a5265460bad1d825895c54b39642aa5a"
+    },
+    {
+      "bytes": 1524,
+      "path": "frozen_sources/session19-triangle-ellipsoid-repair/MANIFEST.json",
+      "sha256": "43ec88a26d022a7e10f9968a1a4e84f2634325c42550ab7defe34f9151ab17fe"
+    },
+    {
+      "bytes": 80,
+      "path": "frozen_sources/session19-triangle-ellipsoid-repair/MANIFEST.sha256",
+      "sha256": "c1a7a7fb252775d06d6c97a1bb61321da358cf5c21c3e434f7699dd8721685d9"
+    },
+    {
+      "bytes": 9979,
+      "path": "frozen_sources/session19-triangle-ellipsoid-repair/README.md",
+      "sha256": "7134f63dcf97d9ded686e36dce89e1884ac22f79c833cdb4e5a0317d4c8fd971"
+    },
+    {
+      "bytes": 1713,
+      "path": "frozen_sources/session19-triangle-ellipsoid-repair/check_exact.out",
+      "sha256": "407251c61250ef8900306dddebfb78ffa52dcd4f8be8e037541a568b22b00a81"
+    },
+    {
+      "bytes": 5949,
+      "path": "frozen_sources/session19-triangle-ellipsoid-repair/check_exact.py",
+      "sha256": "1ab9779aaa4966b5a0f9eed391a39dbe126eed5128ad084b65b1d74a2ad6df9f"
+    },
+    {
+      "bytes": 2228,
+      "path": "receipts/independent.normal.out",
+      "sha256": "068019679334336d41fb242efcb6d500d65f4ad8bfd71759e63b28673b1a316c"
+    },
+    {
+      "bytes": 2228,
+      "path": "receipts/independent.optimized.out",
+      "sha256": "068019679334336d41fb242efcb6d500d65f4ad8bfd71759e63b28673b1a316c"
+    },
+    {
+      "bytes": 3376,
+      "path": "receipts/replay.json",
+      "sha256": "9c3ca6493fe8fa2a24aa9d7cd90e309e9b0d0b8ce385451a1a787eb1067e51ec"
+    },
+    {
+      "bytes": 2472,
+      "path": "receipts/session19-ellipsoid-optimum.normal.out",
+      "sha256": "f85654ad2842a210e5cd50ff387951f562ededbd2a7c2713b30ca35d6310dcc8"
+    },
+    {
+      "bytes": 2472,
+      "path": "receipts/session19-ellipsoid-optimum.optimized.out",
+      "sha256": "f85654ad2842a210e5cd50ff387951f562ededbd2a7c2713b30ca35d6310dcc8"
+    },
+    {
+      "bytes": 1713,
+      "path": "receipts/session19-triangle-ellipsoid-repair.normal.out",
+      "sha256": "407251c61250ef8900306dddebfb78ffa52dcd4f8be8e037541a568b22b00a81"
+    },
+    {
+      "bytes": 1713,
+      "path": "receipts/session19-triangle-ellipsoid-repair.optimized.out",
+      "sha256": "407251c61250ef8900306dddebfb78ffa52dcd4f8be8e037541a568b22b00a81"
+    },
+    {
+      "bytes": 6660,
+      "path": "replay.py",
+      "sha256": "fce66478dad15548533f54396a838d79ffc8a1da8628aed751bab29534f5923f"
+    }
+  ],
+  "frozen_utc": "2026-10-21T01:55:04Z",
+  "independent_exact_gates": 7914,
+  "inputs": [
+    {
+      "artifact": "session19-ellipsoid-optimum",
+      "manifest_sha256": "050fc733781c929b8d2eb36a128cec3bc3d0f7b85c95f491941dcb3dbf849dad",
+      "producer_exact_gates": 71504
+    },
+    {
+      "artifact": "session19-triangle-ellipsoid-repair",
+      "manifest_sha256": "43ec88a26d022a7e10f9968a1a4e84f2634325c42550ab7defe34f9151ab17fe",
+      "producer_exact_gates": 31344
+    }
+  ],
+  "manifest_hash_policy": "This audit manifest excludes itself and its own sidecar; MANIFEST.sha256 pins its exact bytes.",
+  "no_producer_or_repository_writes": true,
+  "nonblocking_note": "Producer grid_unique_diagonal_lift branch has zero executions; analytic uniqueness proof complete and independent equality controls retained",
+  "replay": "All three checkers PASS in normal and -O; each pair byte-identical; producer outputs match frozen originals",
+  "scope": [
+    "Dominant-cone global ellipsoid, all translated competitors and equality cases",
+    "Boundary diagonal optimizer iff, k=2 exception, nonstar basis-tree obstruction",
+    "One-violating-pair repair, complete positive triple classification, strict entire-diagonal-class gap for k>=4",
+    "Intrinsic determinant normalization and volume-not-containment guard",
+    "No multiple-pair classification, global LRC improvement, or external computational-proof certification"
+  ],
+  "status": "PASS independent written-proof and frozen-artifact review",
+  "version": 1
+}

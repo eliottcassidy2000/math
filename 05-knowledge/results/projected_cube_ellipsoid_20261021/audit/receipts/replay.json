@@ -1,0 +1,97 @@
+{
+  "input_packets": [
+    {
+      "manifest_sha256": "050fc733781c929b8d2eb36a128cec3bc3d0f7b85c95f491941dcb3dbf849dad",
+      "packet": "session19-ellipsoid-optimum",
+      "pinned_files": 6,
+      "producer_exact_gates": 71504
+    },
+    {
+      "manifest_sha256": "43ec88a26d022a7e10f9968a1a4e84f2634325c42550ab7defe34f9151ab17fe",
+      "packet": "session19-triangle-ellipsoid-repair",
+      "pinned_files": 5,
+      "producer_exact_gates": 31344
+    }
+  ],
+  "python": "3.12.14",
+  "replays": [
+    {
+      "checker": "session19-ellipsoid-optimum",
+      "normal_optimized_byte_identical": true,
+      "runs": [
+        {
+          "mode": "normal",
+          "receipt": "receipts/session19-ellipsoid-optimum.normal.out",
+          "returncode": 0,
+          "stderr_bytes": 0,
+          "stdout_bytes": 2472,
+          "stdout_sha256": "f85654ad2842a210e5cd50ff387951f562ededbd2a7c2713b30ca35d6310dcc8",
+          "total_exact_gates": 71504
+        },
+        {
+          "mode": "optimized",
+          "receipt": "receipts/session19-ellipsoid-optimum.optimized.out",
+          "returncode": 0,
+          "stderr_bytes": 0,
+          "stdout_bytes": 2472,
+          "stdout_sha256": "f85654ad2842a210e5cd50ff387951f562ededbd2a7c2713b30ca35d6310dcc8",
+          "total_exact_gates": 71504
+        }
+      ],
+      "script_sha256": "3984a7edceb89d570f7f0f0b53bdffb0a5265460bad1d825895c54b39642aa5a"
+    },
+    {
+      "checker": "session19-triangle-ellipsoid-repair",
+      "normal_optimized_byte_identical": true,
+      "runs": [
+        {
+          "mode": "normal",
+          "receipt": "receipts/session19-triangle-ellipsoid-repair.normal.out",
+          "returncode": 0,
+          "stderr_bytes": 0,
+          "stdout_bytes": 1713,
+          "stdout_sha256": "407251c61250ef8900306dddebfb78ffa52dcd4f8be8e037541a568b22b00a81",
+          "total_exact_gates": 31344
+        },
+        {
+          "mode": "optimized",
+          "receipt": "receipts/session19-triangle-ellipsoid-repair.optimized.out",
+          "returncode": 0,
+          "stderr_bytes": 0,
+          "stdout_bytes": 1713,
+          "stdout_sha256": "407251c61250ef8900306dddebfb78ffa52dcd4f8be8e037541a568b22b00a81",
+          "total_exact_gates": 31344
+        }
+      ],
+      "script_sha256": "1ab9779aaa4966b5a0f9eed391a39dbe126eed5128ad084b65b1d74a2ad6df9f"
+    },
+    {
+      "checker": "independent",
+      "normal_optimized_byte_identical": true,
+      "runs": [
+        {
+          "mode": "normal",
+          "receipt": "receipts/independent.normal.out",
+          "returncode": 0,
+          "stderr_bytes": 0,
+          "stdout_bytes": 2228,
+          "stdout_sha256": "068019679334336d41fb242efcb6d500d65f4ad8bfd71759e63b28673b1a316c",
+          "total_exact_gates": 7914
+        },
+        {
+          "mode": "optimized",
+          "receipt": "receipts/independent.optimized.out",
+          "returncode": 0,
+          "stderr_bytes": 0,
+          "stdout_bytes": 2228,
+          "stdout_sha256": "068019679334336d41fb242efcb6d500d65f4ad8bfd71759e63b28673b1a316c",
+          "total_exact_gates": 7914
+        }
+      ],
+      "script_sha256": "8e36fb8d419d54c7966285648980a9c5ee005b297669bd8cde321cece2acd399"
+    }
+  ],
+  "scope": "Frozen-artifact validation and finite exact replay, not a formal proof assistant",
+  "source_hashes_rechecked_after_execution": true,
+  "status": "PASS"
+}

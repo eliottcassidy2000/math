@@ -1,0 +1,43 @@
+{
+  "artifact": "session19-ellipsoid-optimum",
+  "commands": [
+    "python3 -B check_exact.py",
+    "python3 -B -O check_exact.py"
+  ],
+  "dependencies": "Python 3 standard library only",
+  "files": [
+    {
+      "bytes": 17013,
+      "path": "README.md",
+      "sha256": "4824a239f153a002fdbece8e21a7fff6063a4eb437b64b7adfc7dd2b84e4e757"
+    },
+    {
+      "bytes": 2553,
+      "path": "SOURCE-PINS.md",
+      "sha256": "22a3e3ca50452d9f08149bf41843896d9fe3752a7b274c435e6247616f226b30"
+    },
+    {
+      "bytes": 14489,
+      "path": "check_exact.py",
+      "sha256": "3984a7edceb89d570f7f0f0b53bdffb0a5265460bad1d825895c54b39642aa5a"
+    },
+    {
+      "bytes": 2472,
+      "path": "check_exact.out",
+      "sha256": "f85654ad2842a210e5cd50ff387951f562ededbd2a7c2713b30ca35d6310dcc8"
+    }
+  ],
+  "frozen_utc": "2026-10-21T01:32:49Z",
+  "manifest_hash_policy": "Manifest does not hash itself; MANIFEST.sha256 pins its bytes.",
+  "replay": "Normal and -O output byte-identical to check_exact.out",
+  "repository_read_snapshot": "de0463bc8ddf",
+  "scope": [
+    "Unique maximum-volume ellipsoid of the positive-speed projected cube in the exact dominant-speed cone, including translated ellipsoids",
+    "Nonnegative diagonal boundary-optimizer iff classification",
+    "No nonstar pair-facet spanning-tree certificate for positive speeds",
+    "Fixed-shape strict volume comparison with Allikvere arXiv:2609.02604v2 Lemmas 3.1-3.2; not uniform LRC improvement"
+  ],
+  "status": "PROVED analytic result with exact finite companion; frozen pending independent artifact review",
+  "total_exact_gates": 71504,
+  "version": 1
+}

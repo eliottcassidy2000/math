@@ -1,0 +1,56 @@
+{
+  "additional_controls": "family (1,...,1,2,2,4) in k=4..10",
+  "arithmetic": "fractions.Fraction; no floating point",
+  "checks_by_label": {
+    "all_leaf_facets_contain_repair": 883,
+    "arbitrary_dimension_family_chart_determinant": 1,
+    "arbitrary_dimension_family_single_pair": 7,
+    "difference_of_squares_identity": 199,
+    "exact_correlation_positive_definite": 199,
+    "exact_inverse_certificate": 2404,
+    "higher_dimension_diagonal_obstruction": 109,
+    "ordered_single_pair_criterion": 2845,
+    "positive_coefficients_at_most_one": 23141,
+    "quadruple_example_correlation": 1,
+    "quadruple_example_optimum": 1,
+    "repaired_pair_contact": 199,
+    "simplified_repaired_determinant": 199,
+    "star_lift_identity": 184,
+    "strictly_positive_contact_weights": 199,
+    "trace_weight_normalization": 199,
+    "triple_boundary_continuity": 1,
+    "triple_example_optimum": 1,
+    "triple_example_source": 1,
+    "triple_example_squared_volume_ratio": 1,
+    "triple_lift_feasibility": 270,
+    "triple_lift_represents_repair": 90,
+    "triple_lift_strict_positivity": 90,
+    "triple_piece_determinant": 90,
+    "triple_star_piece": 30
+  },
+  "regime_counts": {
+    "3": {
+      "one_pair": 90,
+      "star": 30
+    },
+    "4": {
+      "multiple_pairs": 260,
+      "one_pair": 30,
+      "star": 40
+    },
+    "5": {
+      "multiple_pairs": 707,
+      "one_pair": 34,
+      "star": 51
+    },
+    "6": {
+      "multiple_pairs": 1615,
+      "one_pair": 38,
+      "star": 63
+    }
+  },
+  "scope": "complete k=3 classification; only one-violating-pair repair for k>=4",
+  "status": "PASS",
+  "total_exact_gates": 31344,
+  "universe": "nondecreasing positive integer tuples in 1..8, k=3..6"
+}

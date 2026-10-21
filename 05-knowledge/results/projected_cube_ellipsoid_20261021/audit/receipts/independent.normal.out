@@ -1,0 +1,60 @@
+{
+  "additional_universes": [
+    "all 16 labelled four-vertex facet bases; speeds in {1/2,1,3}^4",
+    "boundary controls k=3,4; speeds in {1/2,1,2}; positive q in {1/2,1}",
+    "nonempty one-pair family k=4..10 and exact named examples"
+  ],
+  "arithmetic": "Python standard-library Fraction only",
+  "checks_by_label": {
+    "ambient_rank_one_determinant_normalization": 441,
+    "boundary_direction_exact_feasibility": 1680,
+    "boundary_direction_matrix_derivative": 1680,
+    "compressed_inverse_hostile_matrix": 1,
+    "contact_trace_and_pair_tangency": 70,
+    "derived_inverse_contact_decomposition": 70,
+    "derived_positive_contact_weights": 70,
+    "diagonal_restriction_injectivity": 70,
+    "dimension_independent_nonempty_regime": 7,
+    "dominant_strict_source_volume": 80,
+    "exact_chart_inverse_and_projection": 441,
+    "exact_threshold_from_ambient_supports": 441,
+    "explicit_optimum_determinants": 4,
+    "k2_continuum_same_projected_interval": 24,
+    "labelled_four_vertex_basis_count": 81,
+    "no_real_diagonal_lift_linear_system": 31,
+    "nonstar_facet_basis_direct_matrix_failure": 972,
+    "repair_all_ambient_facets": 70,
+    "repair_positive_definite": 70,
+    "repaired_euclidean_determinant": 70,
+    "singular_star_ambient_covariance": 441,
+    "source_containment_ambient": 441,
+    "source_example_determinant": 1,
+    "star_facet_basis_exact_criterion": 324,
+    "translated_covariance_trace_and_volume_bound": 253,
+    "translated_covariance_unique_equality": 2,
+    "triple_feasibility_and_consistency": 39,
+    "triple_positive_diagonal_representation": 39,
+    "volume_not_containment_hostile": 1
+  },
+  "independence": "No producer code imported; ambient projection and exact linear-system checks",
+  "regime_counts": {
+    "3": {
+      "one_pair": 39,
+      "star": 17
+    },
+    "4": {
+      "multiple_pairs": 90,
+      "one_pair": 10,
+      "star": 26
+    },
+    "5": {
+      "multiple_pairs": 201,
+      "one_pair": 14,
+      "star": 37
+    }
+  },
+  "scope": "Finite companion to the retained analytic audit, not a substitute for real-parameter proofs",
+  "status": "PASS",
+  "total_exact_gates": 7914,
+  "universe": "nondecreasing tuples from {1/2,2/3,1,3/2,2,3}, k=3..5"
+}
