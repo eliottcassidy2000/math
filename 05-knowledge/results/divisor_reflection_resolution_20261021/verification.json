@@ -1,0 +1,445 @@
+{
+  "blue_codes": [
+    0,
+    4,
+    59,
+    63
+  ],
+  "checks": {
+    "actual_anti_reversal": 120,
+    "actual_colour": 12,
+    "actual_fixed_path": 12,
+    "actual_nonpath_flip": 120,
+    "free_orbit_capacity": 5,
+    "graph_action": 33866,
+    "graph_fixed_formula": 5,
+    "involutive_vertex_fixed_pair": 118,
+    "literal_equivariance": 12,
+    "literal_table_bijection": 1,
+    "minimal_resolution_size": 11,
+    "no_complement_reflection_fixed": 33866,
+    "not_divisibility_embedding": 1,
+    "pair_colours": 1,
+    "printed_table_matches": 1,
+    "resolved_orbits": 11,
+    "source_action": 672,
+    "source_fixed_counts": 22,
+    "two_orbit_capacity": 5
+  },
+  "complement_pairs": [
+    [
+      0,
+      63
+    ],
+    [
+      1,
+      62
+    ],
+    [
+      2,
+      61
+    ],
+    [
+      4,
+      59
+    ],
+    [
+      16,
+      47
+    ],
+    [
+      31,
+      32
+    ]
+  ],
+  "graph_rows": [
+    {
+      "N": 1,
+      "fixed_graphs": 2,
+      "free_orbits": 0,
+      "m": 2,
+      "reflection_edge_orbits": 1,
+      "two_orbits": 1
+    },
+    {
+      "N": 3,
+      "fixed_graphs": 4,
+      "free_orbits": 1,
+      "m": 3,
+      "reflection_edge_orbits": 2,
+      "two_orbits": 2
+    },
+    {
+      "N": 6,
+      "fixed_graphs": 16,
+      "free_orbits": 12,
+      "m": 4,
+      "reflection_edge_orbits": 4,
+      "two_orbits": 8
+    },
+    {
+      "N": 10,
+      "fixed_graphs": 64,
+      "free_orbits": 240,
+      "m": 5,
+      "reflection_edge_orbits": 6,
+      "two_orbits": 32
+    },
+    {
+      "N": 15,
+      "fixed_graphs": 512,
+      "free_orbits": 8064,
+      "m": 6,
+      "reflection_edge_orbits": 9,
+      "two_orbits": 256
+    }
+  ],
+  "literal_codes": [
+    0,
+    1,
+    2,
+    4,
+    16,
+    31,
+    32,
+    47,
+    59,
+    61,
+    62,
+    63
+  ],
+  "source_rows": [
+    {
+      "fix_C_Q_CQ": [
+        0,
+        4,
+        2
+      ],
+      "k": 2,
+      "lift": false,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 3,
+        "4": 1
+      },
+      "size": 10
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        4,
+        0
+      ],
+      "k": 2,
+      "lift": true,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 2,
+        "4": 2
+      },
+      "size": 12
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        6,
+        0
+      ],
+      "k": 3,
+      "lift": false,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 3,
+        "4": 2
+      },
+      "size": 14
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        6,
+        0
+      ],
+      "k": 3,
+      "lift": true,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 3,
+        "4": 2
+      },
+      "size": 14
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        8,
+        2
+      ],
+      "k": 4,
+      "lift": false,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 5,
+        "4": 2
+      },
+      "size": 18
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        8,
+        0
+      ],
+      "k": 4,
+      "lift": true,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 4,
+        "4": 3
+      },
+      "size": 20
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        10,
+        0
+      ],
+      "k": 5,
+      "lift": false,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 5,
+        "4": 3
+      },
+      "size": 22
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        10,
+        0
+      ],
+      "k": 5,
+      "lift": true,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 5,
+        "4": 3
+      },
+      "size": 22
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        12,
+        2
+      ],
+      "k": 6,
+      "lift": false,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 7,
+        "4": 3
+      },
+      "size": 26
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        12,
+        0
+      ],
+      "k": 6,
+      "lift": true,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 6,
+        "4": 4
+      },
+      "size": 28
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        14,
+        0
+      ],
+      "k": 7,
+      "lift": false,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 7,
+        "4": 4
+      },
+      "size": 30
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        14,
+        0
+      ],
+      "k": 7,
+      "lift": true,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 7,
+        "4": 4
+      },
+      "size": 30
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        16,
+        2
+      ],
+      "k": 8,
+      "lift": false,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 9,
+        "4": 4
+      },
+      "size": 34
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        16,
+        0
+      ],
+      "k": 8,
+      "lift": true,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 8,
+        "4": 5
+      },
+      "size": 36
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        18,
+        0
+      ],
+      "k": 9,
+      "lift": false,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 9,
+        "4": 5
+      },
+      "size": 38
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        18,
+        0
+      ],
+      "k": 9,
+      "lift": true,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 9,
+        "4": 5
+      },
+      "size": 38
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        20,
+        2
+      ],
+      "k": 10,
+      "lift": false,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 11,
+        "4": 5
+      },
+      "size": 42
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        20,
+        0
+      ],
+      "k": 10,
+      "lift": true,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 10,
+        "4": 6
+      },
+      "size": 44
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        22,
+        0
+      ],
+      "k": 11,
+      "lift": false,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 11,
+        "4": 6
+      },
+      "size": 46
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        22,
+        0
+      ],
+      "k": 11,
+      "lift": true,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 11,
+        "4": 6
+      },
+      "size": 46
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        24,
+        2
+      ],
+      "k": 12,
+      "lift": false,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 13,
+        "4": 6
+      },
+      "size": 50
+    },
+    {
+      "fix_C_Q_CQ": [
+        0,
+        24,
+        0
+      ],
+      "k": 12,
+      "lift": true,
+      "orbit_sizes": {
+        "1": 0,
+        "2": 12,
+        "4": 7
+      },
+      "size": 52
+    }
+  ],
+  "status": "PASS",
+  "total_checks": 68861
+}

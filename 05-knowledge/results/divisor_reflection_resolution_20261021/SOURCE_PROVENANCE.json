@@ -1,0 +1,21 @@
+{
+  "baseline": "c4a7875652a5ea516e93a31c3c6410d2204773b2",
+  "dependencies": [
+    {
+      "path": "05-knowledge/results/trijection_reset_20261020/arithmetic.md",
+      "sha256": "2ed6f99a61bc8497a1cf79e91e3fee2df8a338fe9c8fa76e569ae445a26525cb"
+    },
+    {
+      "path": "05-knowledge/results/trijection_reset_20261020/graph_audit.md",
+      "sha256": "e80bf447fe02bdebeb09841c6b59d1f2f108b8dcc07f7a00fd43bad0afb5d26e"
+    },
+    {
+      "path": "05-knowledge/results/tournament_graph_trijections_20261020/TRIJECTIONS_AND_TREE_GAUGES.md",
+      "sha256": "4a19202298e373dff64cb9ca4b887642c415b560102ff40d34d01735ce0660e7"
+    },
+    {
+      "path": "05-knowledge/results/session17_prime_shapes_20261020/PRIME_BALANCE_TETRAHEDRAL_BRIDGE.md",
+      "sha256": "94afd18887bb56a526b7ec8e2cca52c55ec4ef20dffd5a6992b21cceb8a6958e"
+    }
+  ]
+}
