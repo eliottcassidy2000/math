@@ -1,0 +1,80 @@
+{
+  "black_orbits_per_frame_at_least": 7,
+  "certificate_lf_sha256": "135cbc88608f3e6233cc82012984fda4fbd5b6a2b66ac7e1461191850965c151",
+  "checks": 163904,
+  "discovery_only": {
+    "max_completed_words": 32,
+    "max_nodes": 8377,
+    "nodes": 643594
+  },
+  "distinct_labelled_source_rows": 8176,
+  "frames": 8192,
+  "groups": [
+    "Z/25",
+    "(Z/5)^2"
+  ],
+  "literal_black_words": 57344,
+  "malformed_controls": 12,
+  "regular_nontransitive_hostile": {
+    "outneighbour_triangle_profile": [
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "rows": [
+      14,
+      84,
+      56,
+      50,
+      97,
+      67,
+      13
+    ]
+  },
+  "residual_orders_after_this_packet_alone": [
+    12,
+    14,
+    15,
+    18,
+    20,
+    21,
+    24,
+    28,
+    35
+  ],
+  "small_controls": [
+    {
+      "H_A_h_b": [
+        3,
+        3,
+        1,
+        1
+      ],
+      "n": 3
+    },
+    {
+      "H_A_h_b": [
+        15,
+        5,
+        3,
+        3
+      ],
+      "n": 5
+    },
+    {
+      "H_A_h_b": [
+        189,
+        21,
+        9,
+        3
+      ],
+      "n": 7
+    }
+  ],
+  "source_adjacency_sha256": "7a439c283f35fb85f04b1ad67e1c3b106cdb114abd3704bf833ed3d26b9c2b84",
+  "status": "FINITE-EXACT complete necessary Cayley-25 universe"
+}

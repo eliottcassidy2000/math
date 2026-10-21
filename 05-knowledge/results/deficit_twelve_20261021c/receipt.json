@@ -1,0 +1,247 @@
+{
+  "checks": 5357643,
+  "controls": {
+    "first_full_record": {
+      "mask": 0,
+      "ports": [
+        [
+          [
+            0,
+            8,
+            4,
+            5,
+            1,
+            9,
+            10,
+            6,
+            7,
+            2,
+            3,
+            11
+          ],
+          35204460037980133374
+        ],
+        [
+          [
+            0,
+            8,
+            4,
+            5,
+            1,
+            9,
+            10,
+            6,
+            7,
+            3,
+            11,
+            2
+          ],
+          35204460028884785150
+        ],
+        [
+          [
+            0,
+            8,
+            4,
+            5,
+            1,
+            9,
+            10,
+            11,
+            2,
+            3,
+            6,
+            7
+          ],
+          72115962450261415934
+        ],
+        [
+          [
+            0,
+            8,
+            4,
+            5,
+            1,
+            9,
+            10,
+            11,
+            7,
+            2,
+            3,
+            6
+          ],
+          71537249898647623678
+        ],
+        [
+          [
+            0,
+            8,
+            4,
+            5,
+            1,
+            9,
+            10,
+            11,
+            7,
+            3,
+            6,
+            2
+          ],
+          71537249890072369150
+        ],
+        [
+          [
+            0,
+            8,
+            4,
+            5,
+            1,
+            2,
+            9,
+            10,
+            11,
+            6,
+            7,
+            3
+          ],
+          72079933641026281470
+        ],
+        [
+          [
+            0,
+            8,
+            4,
+            5,
+            1,
+            2,
+            9,
+            10,
+            11,
+            7,
+            3,
+            6
+          ],
+          71537249890223103998
+        ],
+        [
+          [
+            0,
+            8,
+            4,
+            5,
+            1,
+            2,
+            10,
+            6,
+            7,
+            3,
+            11,
+            9
+          ],
+          7534343919125503998
+        ]
+      ],
+      "source": [
+        258,
+        788,
+        1849,
+        3955,
+        33,
+        323,
+        919,
+        1855,
+        528,
+        1073,
+        2419,
+        1015
+      ]
+    },
+    "regular_black_hostile": {
+      "score_string": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "source": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ],
+      "word": [
+        0,
+        8,
+        4,
+        5,
+        1,
+        9,
+        10,
+        6,
+        7,
+        2,
+        3,
+        11
+      ]
+    },
+    "six_center": {
+      "Aut": 3,
+      "H": 45,
+      "blue_H": 27,
+      "delta": 6,
+      "score_port_count": 6,
+      "source": [
+        36,
+        17,
+        10,
+        19,
+        37,
+        14
+      ]
+    }
+  },
+  "eight_black_score_certificates": 151040,
+  "frame_count": 262144,
+  "literal_word_count": 1208320,
+  "nonselfconverse_score_rejections": 111104,
+  "pins": {
+    "05-knowledge/results/deficit_six_centers_20261021b/COMBINED_CUTOFF.md": "fa7800fdd0a9c5c942799b818bb3ec5bf19605766023593d9429f3c27a35f7c1",
+    "05-knowledge/results/deficit_six_centers_20261021b/combined_receipt.json": "9a1bdb64fdc717cb3af1aa9c2c65eef5b59978786f161969fbe1147411d8e048",
+    "05-knowledge/results/paired_black_leaf_reduction_20261020/CYCLE_CUT_NEAR_PURITY_OBSTRUCTION.md": "f628ee105b839088c40c7144477ee667f8b333cabb9fc3e0a5d11227c53928a7"
+  },
+  "producer_sha256": "f887dfb5c2d3be83d64fe5f1a4f96c9eb435e8cbfb2a2d2dcdfb2242d2976078",
+  "raw_bank_sha256": "e80a2fde831fdca7cc9ad43d31a024d58b267cab1b053b53d64cf85f9c755132",
+  "remaining_orders": [
+    14,
+    15,
+    18,
+    20,
+    21,
+    24,
+    25,
+    28,
+    35
+  ],
+  "schema": "deficit-twelve-20261021c",
+  "scope": "No Aut enumeration, isomorphism-class census, or classification of remaining orders.",
+  "score_class_sets": {
+    "2,4,7,9": 256,
+    "2,5,6,9": 768,
+    "3,4,7,8": 6912,
+    "3,5,6,8": 15616,
+    "3,8": 256,
+    "4,5,6,7": 77824,
+    "4,7": 9216,
+    "5,6": 40192
+  },
+  "source_rows_sha256": "65961119e393e883f55516727b5e82d1bc1d906c20720392ff354649bfea32a8",
+  "status": "FINITE-EXACT complete necessary normalized universe; no order-twelve center",
+  "survivors": 0,
+  "word_target_sha256": "1e291d6dacd71759b01ce301cbb25ccebe474cf79ed9bfd2eab14a2447bf2b5c"
+}
