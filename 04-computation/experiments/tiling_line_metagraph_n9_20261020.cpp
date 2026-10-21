@@ -1,4 +1,4 @@
-// tiling_line_metagraph_n9_20261020.cpp -- opus-2026-10-20-S47
+// tiling_line_metagraph_n9_20261020.cpp -- opus-2026-10-20-S47 (S48: H-descent columns minHblack / maxHblack and sink statistics)
 //
 // Line metagraph census for n <= 9 with a colour-refinement / individualisation canonical form
 // (exact |Aut| from the number of leaves attaining the canonical word).  Frame as in
@@ -26,6 +26,7 @@
 #include <numeric>
 #include <cstring>
 #include <chrono>
+#include <climits>
 using namespace std;
 
 static int n, m;
@@ -156,6 +157,7 @@ int main(int argc, char **argv) {
     // ---- pass 2: lines ----
     UF ufAll(Cn), ufBlue(Cn), ufBlack(Cn);
     vector<int> blueDeg(Cn, 0), blackDeg(Cn, 0), selfB(Cn, 0), selfK(Cn, 0);
+    vector<long long> minHb(Cn, LLONG_MAX), maxHb(Cn, 0);   // H-descent: extreme H over black neighbours (other classes)
     long long blueLines = 0, blackLines = 0, mselfB = 0, mselfK = 0, pathRev = 0; long long byType[3][3][2]; memset(byType, 0, sizeof byType);
     long long linesByDepth[16] = {0};
     for (uint32_t t = 0; t < NT; t++) {
@@ -164,7 +166,7 @@ int main(int argc, char **argv) {
         int ta = type(c1), tb = type(c2); if (ta > tb) swap(ta, tb); byType[ta][tb][blue ? 0 : 1]++;
         ufAll.u(c1, c2);
         if (blue) { blueLines++; ufBlue.u(c1, c2); if (c1 == c2) { selfB[c1]++; blueDeg[c1] += 2; } else { blueDeg[c1]++; blueDeg[c2]++; } }
-        else { blackLines++; ufBlack.u(c1, c2); if (c1 == c2) { selfK[c1]++; blackDeg[c1] += 2; } else { blackDeg[c1]++; blackDeg[c2]++; } }
+        else { blackLines++; ufBlack.u(c1, c2); if (c1 == c2) { selfK[c1]++; blackDeg[c1] += 2; } else { blackDeg[c1]++; blackDeg[c2]++; minHb[c1] = min(minHb[c1], H[c2]); minHb[c2] = min(minHb[c2], H[c1]); maxHb[c1] = max(maxHb[c1], H[c2]); maxHb[c2] = max(maxHb[c2], H[c1]); } }
         bool merged = (c1 == c2) || (c2 == sigmaClass[c1]);
         if (merged) { if (blue) mselfB++; else mselfK++; }
         if (c2 == sigmaClass[c1] && c1 != c2) pathRev++;
@@ -176,6 +178,10 @@ int main(int argc, char **argv) {
     long long totalSB = 0, totalSK = 0; for (uint32_t c = 0; c < Cn; c++) { totalSB += selfB[c]; totalSK += selfK[c]; }
     printf("lines: blue %lld, black %lld; degree law violations %d; self-lines blue %lld black %lld; merged self-loops blue %lld black %lld; reversal-neutral lines %lld\n", blueLines, blackLines, badDeg, totalSB, totalSK, mselfB, mselfK, pathRev);
     printf("components: all lines %d (largest %d); blue on SC classes %d (largest %d); black %d (largest %d); black on non-pure-blue classes %d (largest %d of %d)\n", cAll.first, cAll.second, cBlue.first, cBlue.second, cBlack.first, cBlack.second, cBlackNoPB.first, cBlackNoPB.second, (int)Cn - PB);
+    // ---- H-descent statistics: a non-pure-blue class is a sink when no black neighbour has strictly smaller H ----
+    { long long sinks = 0, sinksSC = 0, sinkDegSum = 0; map<long long,int> sinkH; long long upOnly = 0;
+      for (uint32_t c = 0; c < Cn; c++) { if (type(c) == 0) continue; bool hasNb = minHb[c] != LLONG_MAX; if (!hasNb || minHb[c] >= H[c]) { sinks++; if (sigmaClass[c] == c) sinksSC++; sinkDegSum += blackDeg[c]; sinkH[H[c]]++; } if (hasNb && minHb[c] > H[c]) upOnly++; }
+      printf("H-descent: non-pure-blue sinks (no black neighbour with smaller H) %lld (self-converse %lld; strictly uphill only %lld); sink H histogram:", sinks, sinksSC, upOnly); int shown = 0; for (auto &kv : sinkH) { if (shown++ < 14) printf(" %lld:%d", kv.first, kv.second); } printf("%s\n", (int)sinkH.size() > 14 ? " ..." : ""); }
     const char *tn[3] = {"PB", "MX", "PK"}; printf("lines by node types (blue, black):"); for (int a = 0; a < 3; a++) for (int b = a; b < 3; b++) printf(" (%s,%s)=(%lld,%lld)", tn[a], tn[b], byType[a][b][0], byType[a][b][1]); printf("\n");
     printf("lines by depth:"); for (int d = 0; d <= maxDepth; d++) printf(" d%d=%lld", d, linesByDepth[d]); printf("\n");
     // ---- blue lines by closed endpoint layer k = s_(n-1) of the closed member; black-connectivity of their classes ----
@@ -192,8 +198,8 @@ int main(int argc, char **argv) {
     for (auto &kv : layer) printf("   k=%d: %lld / %lld / %lld / %lld\n", kv.first, kv.second[0], kv.second[1], kv.second[2], kv.second[3]);
     // ---- per-class dump ----
     char fname[160]; snprintf(fname, sizeof fname, "tiling_line_metagraph_n9_20261020_classes_n%d.tsv", n);
-    FILE *f = fopen(fname, "w"); fprintf(f, "class\tH\tAut\ttc\tbm\tSC\ttype\tselfBlue\tselfBlack\tblackComponent\n");
-    for (uint32_t c = 0; c < Cn; c++) fprintf(f, "%u\t%lld\t%d\t%d\t%d\t%d\t%s\t%d\t%d\t%d\n", c, H[c], aut[c], tc[c], bm[c], sigmaClass[c] == c ? 1 : 0, tn[type(c)], selfB[c], selfK[c], ufBlack.f(c));
+    FILE *f = fopen(fname, "w"); fprintf(f, "class\tH\tAut\ttc\tbm\tSC\ttype\tselfBlue\tselfBlack\tblackComponent\tminHblack\tmaxHblack\n");
+    for (uint32_t c = 0; c < Cn; c++) fprintf(f, "%u\t%lld\t%d\t%d\t%d\t%d\t%s\t%d\t%d\t%d\t%lld\t%lld\n", c, H[c], aut[c], tc[c], bm[c], sigmaClass[c] == c ? 1 : 0, tn[type(c)], selfB[c], selfK[c], ufBlack.f(c), minHb[c] == LLONG_MAX ? -1 : minHb[c], maxHb[c]);
     fclose(f);
     double el2 = chrono::duration<double>(chrono::steady_clock::now() - t0).count();
     printf("done in %.0f s; per-class file %s\n", el2, fname);
