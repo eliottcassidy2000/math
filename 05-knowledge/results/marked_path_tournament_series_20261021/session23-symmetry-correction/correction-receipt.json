@@ -1,0 +1,19 @@
+{
+  "status": "PREPARED; NOT APPLIED",
+  "original_sha256": {
+    "01-canon/theorems/THM-260-rooted-tournament-layer-decomposition.md": "da9e01ff14c4948b5f34994c73704ba525b3059380c2ab7bf239ad1958a9accf",
+    "01-canon/MISTAKES.md": "0e2a251fce6df7212a517857e47829d5cd5e93e2cab09fdfb256321927af46b1"
+  },
+  "patched_sha256": {
+    "01-canon/theorems/THM-260-rooted-tournament-layer-decomposition.md": "19ab2132a5aadcfb899247425a247b5b50fb2c56018458c2fb2ed4144e926e1d",
+    "01-canon/MISTAKES.md": "544057f54a3dc0b61c84c6aa7dbf3b94c6b94b5c782adeaec847addbff7ee871"
+  },
+  "patch_sha256": "095fb923703b338273431a449cbb0ae749582b33b949d6af6a07039e25d97dd1",
+  "scope_guards": [
+    "original headers preserved",
+    "correct mixed-cycle table preserved",
+    "unrelated graded-ring text preserved",
+    "no scarce ID reserved"
+  ],
+  "dry_run": "PASS; both files checked; original hashes unchanged"
+}

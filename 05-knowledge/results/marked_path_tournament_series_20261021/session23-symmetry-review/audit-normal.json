@@ -1,0 +1,615 @@
+{
+  "status": "PASS",
+  "checks": 499356,
+  "signed_burnside": [
+    {
+      "n": 1,
+      "k": 1,
+      "ordinary": 1,
+      "converse": 1,
+      "permutations": 1
+    },
+    {
+      "n": 2,
+      "k": 1,
+      "ordinary": 2,
+      "converse": 0,
+      "permutations": 1
+    },
+    {
+      "n": 2,
+      "k": 2,
+      "ordinary": 1,
+      "converse": 1,
+      "permutations": 1
+    },
+    {
+      "n": 3,
+      "k": 1,
+      "ordinary": 4,
+      "converse": 2,
+      "permutations": 2
+    },
+    {
+      "n": 3,
+      "k": 2,
+      "ordinary": 4,
+      "converse": 2,
+      "permutations": 1
+    },
+    {
+      "n": 3,
+      "k": 3,
+      "ordinary": 2,
+      "converse": 2,
+      "permutations": 1
+    },
+    {
+      "n": 4,
+      "k": 1,
+      "ordinary": 12,
+      "converse": 0,
+      "permutations": 6
+    },
+    {
+      "n": 4,
+      "k": 2,
+      "ordinary": 16,
+      "converse": 4,
+      "permutations": 2
+    },
+    {
+      "n": 4,
+      "k": 3,
+      "ordinary": 16,
+      "converse": 0,
+      "permutations": 1
+    },
+    {
+      "n": 4,
+      "k": 4,
+      "ordinary": 8,
+      "converse": 4,
+      "permutations": 1
+    },
+    {
+      "n": 5,
+      "k": 1,
+      "ordinary": 48,
+      "converse": 8,
+      "permutations": 24
+    },
+    {
+      "n": 5,
+      "k": 2,
+      "ordinary": 88,
+      "converse": 16,
+      "permutations": 6
+    },
+    {
+      "n": 5,
+      "k": 3,
+      "ordinary": 128,
+      "converse": 16,
+      "permutations": 2
+    },
+    {
+      "n": 5,
+      "k": 4,
+      "ordinary": 128,
+      "converse": 16,
+      "permutations": 1
+    },
+    {
+      "n": 5,
+      "k": 5,
+      "ordinary": 64,
+      "converse": 16,
+      "permutations": 1
+    },
+    {
+      "n": 6,
+      "k": 1,
+      "ordinary": 296,
+      "converse": 0,
+      "permutations": 120
+    },
+    {
+      "n": 6,
+      "k": 2,
+      "ordinary": 704,
+      "converse": 32,
+      "permutations": 24
+    },
+    {
+      "n": 6,
+      "k": 3,
+      "ordinary": 1376,
+      "converse": 0,
+      "permutations": 6
+    },
+    {
+      "n": 6,
+      "k": 4,
+      "ordinary": 2048,
+      "converse": 64,
+      "permutations": 2
+    },
+    {
+      "n": 6,
+      "k": 5,
+      "ordinary": 2048,
+      "converse": 0,
+      "permutations": 1
+    },
+    {
+      "n": 6,
+      "k": 6,
+      "ordinary": 1024,
+      "converse": 64,
+      "permutations": 1
+    },
+    {
+      "n": 7,
+      "k": 1,
+      "ordinary": 3040,
+      "converse": 88,
+      "permutations": 720
+    },
+    {
+      "n": 7,
+      "k": 2,
+      "ordinary": 8912,
+      "converse": 256,
+      "permutations": 120
+    },
+    {
+      "n": 7,
+      "k": 3,
+      "ordinary": 22016,
+      "converse": 256,
+      "permutations": 24
+    },
+    {
+      "n": 7,
+      "k": 4,
+      "ordinary": 43776,
+      "converse": 512,
+      "permutations": 6
+    },
+    {
+      "n": 7,
+      "k": 5,
+      "ordinary": 65536,
+      "converse": 512,
+      "permutations": 2
+    },
+    {
+      "n": 7,
+      "k": 6,
+      "ordinary": 65536,
+      "converse": 512,
+      "permutations": 1
+    },
+    {
+      "n": 7,
+      "k": 7,
+      "ordinary": 32768,
+      "converse": 512,
+      "permutations": 1
+    },
+    {
+      "n": 8,
+      "k": 1,
+      "ordinary": 54256,
+      "converse": 0,
+      "permutations": 5040
+    },
+    {
+      "n": 8,
+      "k": 2,
+      "ordinary": 188288,
+      "converse": 688,
+      "permutations": 720
+    },
+    {
+      "n": 8,
+      "k": 3,
+      "ordinary": 561984,
+      "converse": 0,
+      "permutations": 120
+    },
+    {
+      "n": 8,
+      "k": 4,
+      "ordinary": 1400832,
+      "converse": 2048,
+      "permutations": 24
+    },
+    {
+      "n": 8,
+      "k": 5,
+      "ordinary": 2797568,
+      "converse": 0,
+      "permutations": 6
+    },
+    {
+      "n": 8,
+      "k": 6,
+      "ordinary": 4194304,
+      "converse": 4096,
+      "permutations": 2
+    },
+    {
+      "n": 8,
+      "k": 7,
+      "ordinary": 4194304,
+      "converse": 0,
+      "permutations": 1
+    },
+    {
+      "n": 8,
+      "k": 8,
+      "ordinary": 2097152,
+      "converse": 4096,
+      "permutations": 1
+    },
+    {
+      "n": 9,
+      "k": 1,
+      "ordinary": 1716608,
+      "converse": 2752,
+      "permutations": 40320
+    },
+    {
+      "n": 9,
+      "k": 2,
+      "ordinary": 6847200,
+      "converse": 10944,
+      "permutations": 5040
+    },
+    {
+      "n": 9,
+      "k": 3,
+      "ordinary": 23919616,
+      "converse": 10944,
+      "permutations": 720
+    },
+    {
+      "n": 9,
+      "k": 4,
+      "ordinary": 71670272,
+      "converse": 32768,
+      "permutations": 120
+    },
+    {
+      "n": 9,
+      "k": 5,
+      "ordinary": 179044352,
+      "converse": 32768,
+      "permutations": 24
+    },
+    {
+      "n": 9,
+      "k": 6,
+      "ordinary": 357957632,
+      "converse": 65536,
+      "permutations": 6
+    },
+    {
+      "n": 9,
+      "k": 7,
+      "ordinary": 536870912,
+      "converse": 65536,
+      "permutations": 2
+    },
+    {
+      "n": 9,
+      "k": 8,
+      "ordinary": 536870912,
+      "converse": 65536,
+      "permutations": 1
+    },
+    {
+      "n": 9,
+      "k": 9,
+      "ordinary": 268435456,
+      "converse": 65536,
+      "permutations": 1
+    }
+  ],
+  "literal_orbits": [
+    {
+      "n": 1,
+      "k": 1,
+      "ordinary": 1,
+      "converse": 1,
+      "orbit_sizes": {
+        "1": 1
+      }
+    },
+    {
+      "n": 2,
+      "k": 1,
+      "ordinary": 2,
+      "converse": 0,
+      "orbit_sizes": {
+        "1": 2
+      }
+    },
+    {
+      "n": 2,
+      "k": 2,
+      "ordinary": 1,
+      "converse": 1,
+      "orbit_sizes": {
+        "1": 1
+      }
+    },
+    {
+      "n": 3,
+      "k": 1,
+      "ordinary": 4,
+      "converse": 2,
+      "orbit_sizes": {
+        "2": 4
+      }
+    },
+    {
+      "n": 3,
+      "k": 2,
+      "ordinary": 4,
+      "converse": 2,
+      "orbit_sizes": {
+        "1": 4
+      }
+    },
+    {
+      "n": 3,
+      "k": 3,
+      "ordinary": 2,
+      "converse": 2,
+      "orbit_sizes": {
+        "1": 2
+      }
+    },
+    {
+      "n": 4,
+      "k": 1,
+      "ordinary": 12,
+      "converse": 0,
+      "orbit_sizes": {
+        "2": 2,
+        "6": 10
+      }
+    },
+    {
+      "n": 4,
+      "k": 2,
+      "ordinary": 16,
+      "converse": 4,
+      "orbit_sizes": {
+        "2": 16
+      }
+    },
+    {
+      "n": 4,
+      "k": 3,
+      "ordinary": 16,
+      "converse": 0,
+      "orbit_sizes": {
+        "1": 16
+      }
+    },
+    {
+      "n": 4,
+      "k": 4,
+      "ordinary": 8,
+      "converse": 4,
+      "orbit_sizes": {
+        "1": 8
+      }
+    },
+    {
+      "n": 5,
+      "k": 1,
+      "ordinary": 48,
+      "converse": 8,
+      "orbit_sizes": {
+        "8": 8,
+        "24": 40
+      }
+    },
+    {
+      "n": 5,
+      "k": 2,
+      "ordinary": 88,
+      "converse": 16,
+      "orbit_sizes": {
+        "2": 4,
+        "6": 84
+      }
+    },
+    {
+      "n": 5,
+      "k": 3,
+      "ordinary": 128,
+      "converse": 16,
+      "orbit_sizes": {
+        "2": 128
+      }
+    },
+    {
+      "n": 5,
+      "k": 4,
+      "ordinary": 128,
+      "converse": 16,
+      "orbit_sizes": {
+        "1": 128
+      }
+    },
+    {
+      "n": 5,
+      "k": 5,
+      "ordinary": 64,
+      "converse": 16,
+      "orbit_sizes": {
+        "1": 64
+      }
+    },
+    {
+      "n": 6,
+      "k": 1,
+      "ordinary": 296,
+      "converse": 0,
+      "orbit_sizes": {
+        "24": 2,
+        "40": 32,
+        "120": 262
+      }
+    },
+    {
+      "n": 6,
+      "k": 2,
+      "ordinary": 704,
+      "converse": 32,
+      "orbit_sizes": {
+        "8": 32,
+        "24": 672
+      }
+    },
+    {
+      "n": 6,
+      "k": 3,
+      "ordinary": 1376,
+      "converse": 0,
+      "orbit_sizes": {
+        "2": 16,
+        "6": 1360
+      }
+    },
+    {
+      "n": 6,
+      "k": 4,
+      "ordinary": 2048,
+      "converse": 64,
+      "orbit_sizes": {
+        "2": 2048
+      }
+    },
+    {
+      "n": 6,
+      "k": 5,
+      "ordinary": 2048,
+      "converse": 0,
+      "orbit_sizes": {
+        "1": 2048
+      }
+    },
+    {
+      "n": 6,
+      "k": 6,
+      "ordinary": 1024,
+      "converse": 64,
+      "orbit_sizes": {
+        "1": 1024
+      }
+    },
+    {
+      "n": 7,
+      "k": 1,
+      "ordinary": 3040,
+      "converse": 88,
+      "orbit_sizes": {
+        "80": 4,
+        "144": 8,
+        "240": 176,
+        "720": 2852
+      }
+    },
+    {
+      "n": 7,
+      "k": 2,
+      "ordinary": 8912,
+      "converse": 256,
+      "orbit_sizes": {
+        "24": 4,
+        "40": 256,
+        "120": 8652
+      }
+    },
+    {
+      "n": 7,
+      "k": 3,
+      "ordinary": 22016,
+      "converse": 256,
+      "orbit_sizes": {
+        "8": 256,
+        "24": 21760
+      }
+    },
+    {
+      "n": 7,
+      "k": 4,
+      "ordinary": 43776,
+      "converse": 512,
+      "orbit_sizes": {
+        "2": 128,
+        "6": 43648
+      }
+    },
+    {
+      "n": 7,
+      "k": 5,
+      "ordinary": 65536,
+      "converse": 512,
+      "orbit_sizes": {
+        "2": 65536
+      }
+    },
+    {
+      "n": 7,
+      "k": 6,
+      "ordinary": 65536,
+      "converse": 512,
+      "orbit_sizes": {
+        "1": 65536
+      }
+    },
+    {
+      "n": 7,
+      "k": 7,
+      "ordinary": 32768,
+      "converse": 512,
+      "orbit_sizes": {
+        "1": 32768
+      }
+    }
+  ],
+  "correction": {
+    "mixed_cycle_true": "128/15",
+    "printed_formula": "64/15",
+    "rooted": [
+      1,
+      2,
+      4,
+      12,
+      48,
+      296,
+      3040,
+      54256
+    ],
+    "deficit": [
+      0,
+      0,
+      2,
+      4,
+      12,
+      40,
+      152,
+      784
+    ],
+    "unique_vertex_hostile": "Directed 3-cycle: all three vertices are possible anti-involution centers in one Aut orbit."
+  },
+  "source_sha256": "e4489b2f56aae5b0e2a170a8f2ae820f26489c3baeb3d34f2dfe698709fea850"
+}

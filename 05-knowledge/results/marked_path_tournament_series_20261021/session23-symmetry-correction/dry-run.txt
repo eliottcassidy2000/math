@@ -1,0 +1,2 @@
+checking file 01-canon/theorems/THM-260-rooted-tournament-layer-decomposition.md
+checking file 01-canon/MISTAKES.md

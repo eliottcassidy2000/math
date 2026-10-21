@@ -1,0 +1,105 @@
+{
+  "status": "PROVED in stated domains; independently reviewed",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2134,
+      "sha256": "90c16c3e335bcce7e4bfeab97a02de495885a2b3afdbf9c472d548d3064290e1"
+    },
+    {
+      "path": "session23-symmetry/README.md",
+      "bytes": 16210,
+      "sha256": "deab50db3bdd92f58e1f23a4204a2ad089f20a4cdeaa686dafe58c4545b46b6a"
+    },
+    {
+      "path": "session23-symmetry/check.py",
+      "bytes": 9518,
+      "sha256": "2ea7be0f165ffbe998c8209ee905a635e9e906dcb9a2b04fdb42f747724bfa77"
+    },
+    {
+      "path": "session23-symmetry/manifest.json",
+      "bytes": 440,
+      "sha256": "974f5403bfcdfc1071c8c80338623e05cb557414039e4e8796da72d233e7d222"
+    },
+    {
+      "path": "session23-symmetry/optimized-receipt.json",
+      "bytes": 8667,
+      "sha256": "50fafb7b88fe2dcc3d4a49d57cdf29bc52b3e89cab8424bd09d7ccf39f499ef8"
+    },
+    {
+      "path": "session23-symmetry/receipt.json",
+      "bytes": 8667,
+      "sha256": "50fafb7b88fe2dcc3d4a49d57cdf29bc52b3e89cab8424bd09d7ccf39f499ef8"
+    },
+    {
+      "path": "session23-symmetry/source-pins.json",
+      "bytes": 845,
+      "sha256": "a686507b3e62c2ce104a2bd16f14da362a1b24124ac84460957d3ec504c44399"
+    },
+    {
+      "path": "session23-symmetry-correction/README.md",
+      "bytes": 1232,
+      "sha256": "daf02a6ce1075b02c8aec9b94366541e561a404916d5e29d206052ea9d75b84e"
+    },
+    {
+      "path": "session23-symmetry-correction/THM260-correction.patch",
+      "bytes": 3594,
+      "sha256": "095fb923703b338273431a449cbb0ae749582b33b949d6af6a07039e25d97dd1"
+    },
+    {
+      "path": "session23-symmetry-correction/correction-receipt.json",
+      "bytes": 897,
+      "sha256": "00a3c9b495e418d5127646a4e07693d80184bdb939769a04460315a0f0c831fd"
+    },
+    {
+      "path": "session23-symmetry-correction/dry-run.txt",
+      "bytes": 116,
+      "sha256": "25a81c08bf7c6e10f01ebbe9eaf5e6b4c845302610ca96522644a786cc138d74"
+    },
+    {
+      "path": "session23-symmetry-correction/manifest.json",
+      "bytes": 449,
+      "sha256": "4dfd4b4ee3c88ff4672defdbda7460e3c159fefc912bd963e34b03a3e2fe7c5f"
+    },
+    {
+      "path": "session23-symmetry-correction/prepare.py",
+      "bytes": 4687,
+      "sha256": "ccd307b32c16ae96169663c3ba8ea93b225558e65ff5be54a93b821652c60a01"
+    },
+    {
+      "path": "session23-symmetry-review/REVIEW.md",
+      "bytes": 8653,
+      "sha256": "22de0ee75f16056c7a778b54f3ef7f186d1b7e787970312411661a27e52fb694"
+    },
+    {
+      "path": "session23-symmetry-review/audit-normal.json",
+      "bytes": 9662,
+      "sha256": "4b64b25838b785941c29fb672434ce6ab3bfb83366ccde17068c5518b522ffd1"
+    },
+    {
+      "path": "session23-symmetry-review/audit-optimized.json",
+      "bytes": 9662,
+      "sha256": "4b64b25838b785941c29fb672434ce6ab3bfb83366ccde17068c5518b522ffd1"
+    },
+    {
+      "path": "session23-symmetry-review/audit.py",
+      "bytes": 8007,
+      "sha256": "e4489b2f56aae5b0e2a170a8f2ae820f26489c3baeb3d34f2dfe698709fea850"
+    },
+    {
+      "path": "session23-symmetry-review/producer-normal.json",
+      "bytes": 8667,
+      "sha256": "50fafb7b88fe2dcc3d4a49d57cdf29bc52b3e89cab8424bd09d7ccf39f499ef8"
+    },
+    {
+      "path": "session23-symmetry-review/producer-optimized.json",
+      "bytes": 8667,
+      "sha256": "50fafb7b88fe2dcc3d4a49d57cdf29bc52b3e89cab8424bd09d7ccf39f499ef8"
+    },
+    {
+      "path": "session23-symmetry-review/review-manifest.json",
+      "bytes": 1516,
+      "sha256": "df370673d7ac03074400e6d6275bd6b184b3dd2267bc77699b3247b1e98dcdc7"
+    }
+  ]
+}

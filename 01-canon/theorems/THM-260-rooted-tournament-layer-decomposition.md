@@ -3,6 +3,13 @@
 **Status:** PROVED (exact Burnside computation, verified n=3..8)
 **Filed by:** kind-pasteur-2026-03-20-S6
 
+**Correction (2026-10-21):** The general layer denominator below now uses
+factorials of the multiplicities of each nontrivial cycle length, rather than
+`r!`. Unequal cycle lengths cannot be interchanged in the centralizer. The
+mixed `(5,3)` layer is `128/15`, as already recorded correctly in the table;
+the rooted count prefix and all displayed table entries are unchanged. This
+is a scoped denominator repair, not a re-audit of unrelated interpretations.
+
 ## Statement
 
 The rooted tournament sequence P(n) = 1, 2, 4, 12, 48, 296, 3040, 54256 satisfies:
@@ -29,10 +36,15 @@ D_k(n) = 2^{(k-1)/2 + C(n-k+1, 2)} / (n-k)!
 D_{3,3}(n) = 2^{5 + 2(n-6) + C(n-6, 2)} / (3 * (n-6)!)
 
 ### General formula:
-For partition lambda = (k_1, k_2, ..., k_r, 1^m) with all k_i >= 3 odd:
-D_lambda(n) = 2^{f(lambda,n)} * (n - m) / (prod k_i * r! * m!)
+For partition lambda = (k_1, k_2, ..., k_r, 1^m) with all k_i >= 3 odd,
+let a_l be the multiplicity of the nontrivial cycle length l. Then:
+D_lambda(n) = 2^{f(lambda,n)} * (n - m) / (m! * prod_l l^{a_l} a_l!)
 
-where f(lambda, n) = number of free edge-orbit pairs.
+where f(lambda, n) = number of free edge-orbit pairs. The denominator is the
+permutation centralizer size z_lambda. Its rooted Burnside term is
+m * 2^{f(lambda,n)} / z_lambda, so subtracting it from n times the ordinary
+term proves the displayed formula. For lambda = (5,3), f = 4 and z_lambda =
+15, giving 2^4 * 8 / 15 = 128/15; the former r! denominator gave 64/15.
 
 ## Verified Values
 
