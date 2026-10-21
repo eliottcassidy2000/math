@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "bytes": 13568,
+      "path": "README.md",
+      "sha256": "20d2cf37ed149345e259b1107509b7a9480de709461bad326df57b396f1b61ff"
+    },
+    {
+      "bytes": 8514,
+      "path": "check_phase_lifts.py",
+      "sha256": "e44d3884b0d83653a78ec8a664ba88ee2616e055f44090d6c53516563f339564"
+    },
+    {
+      "bytes": 8796,
+      "path": "frontier.json",
+      "sha256": "391f6d3380bcae4afb9a1bbd9522b74b1e9006012fa10a92be5bf0bbf938754f"
+    },
+    {
+      "bytes": 5424,
+      "path": "phase_receipt.json",
+      "sha256": "d1c9ce40b69d4952dee72b2f10b8b39ba7d960eaa6df8de5ba8e84d18a059de6"
+    },
+    {
+      "bytes": 223,
+      "path": "normal.log",
+      "sha256": "435546c608877e7559532b0dc68df6099c0ff432a01c95037a22c5cddef91770"
+    },
+    {
+      "bytes": 223,
+      "path": "optimized.log",
+      "sha256": "435546c608877e7559532b0dc68df6099c0ff432a01c95037a22c5cddef91770"
+    }
+  ],
+  "normal_optimized_outputs_match": true,
+  "proposed_destination": "05-knowledge/results/session18_native_phase_lifts/",
+  "scope": "Exact native phase lift with unit defects; synchronous packet cancellation; no universal annulus or entry claim",
+  "sources": [
+    {
+      "path": "05-knowledge/results/native_cancellation_105_20261018g.md",
+      "sha256": "91b52f8e7bd7332ff1edcbd1dfdd0b43afca15cf17c7e451b32f3d5621c0b839"
+    },
+    {
+      "path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "path": "05-knowledge/results/eisenstein_circuit_completion_20261018g.md",
+      "sha256": "ba08c30559bb5ba4a9757d9a048d8b008151cf00f586f1f43b03b671a176d367"
+    },
+    {
+      "path": "01-canon/theorems/THM-4690-first-arrival-ladder-port-and-integer-clock-decompositions-and-the-nineteen-adic-copy-obstruction.md",
+      "sha256": "083eef4977d1d7ea0a9336b7a9b933318433960691d518460b6c676843ddb3aa"
+    },
+    {
+      "path": "frozen annulus package MANIFEST.json",
+      "sha256": "8423a629603147141ef1a5f5570c7e74aecc6f55505f201c0d598d9aac6ad00a"
+    }
+  ],
+  "status": "Frozen bounded mechanism for independent proof review"
+}

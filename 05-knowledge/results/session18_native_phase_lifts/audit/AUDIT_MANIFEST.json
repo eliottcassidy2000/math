@@ -1,0 +1,45 @@
+{
+  "files": [
+    {
+      "bytes": 9126,
+      "path": "REPORT.md",
+      "sha256": "397246810bc90e99e0a1aa8a9325624b59fa05a789977c934b1ccbfbe7cdf627"
+    },
+    {
+      "bytes": 15299,
+      "path": "independent_audit.py",
+      "sha256": "8c2505a8abf29c2bdc4707574a61caf073c5861d935c0659164c93d29b97b7f7"
+    },
+    {
+      "bytes": 1517,
+      "path": "independent-normal.json",
+      "sha256": "2cdf1c6aa295916d44429e231378c9c558c325f5f4822f19e5e0c8ee414c917b"
+    },
+    {
+      "bytes": 1517,
+      "path": "independent-optimized.json",
+      "sha256": "2cdf1c6aa295916d44429e231378c9c558c325f5f4822f19e5e0c8ee414c917b"
+    },
+    {
+      "bytes": 223,
+      "path": "replay-normal.log",
+      "sha256": "435546c608877e7559532b0dc68df6099c0ff432a01c95037a22c5cddef91770"
+    },
+    {
+      "bytes": 223,
+      "path": "replay-optimized.log",
+      "sha256": "435546c608877e7559532b0dc68df6099c0ff432a01c95037a22c5cddef91770"
+    },
+    {
+      "bytes": 1412,
+      "path": "provenance.json",
+      "sha256": "0f4213ad20f4b44eab470246343941f7427d0099b14bb4dcfe56231adeefb4c8"
+    }
+  ],
+  "independent_checks": 6801996,
+  "normal_and_optimized_match": true,
+  "producer_files_unchanged": true,
+  "reviewed_packet_manifest_sha256": "f20cb439a11829cd1ba0529d06f5e598f5fa496faf19ac930697b9ad88850ffa",
+  "reviewed_packet_receipt_sha256": "d1c9ce40b69d4952dee72b2f10b8b39ba7d960eaa6df8de5ba8e84d18a059de6",
+  "verdict": "PASS scoped proof and exact checks; no universal annulus bound or entry claim"
+}

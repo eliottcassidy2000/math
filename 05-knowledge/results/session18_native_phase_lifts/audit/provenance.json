@@ -1,0 +1,38 @@
+{
+  "frontier_and_ranks_match_exact_source": true,
+  "frontier_original_sha256": "d2d4d152593a03eb653d1fd6fecfbc13f573a6eb74e1310f59b7a6cb78b01721",
+  "frontier_original_source": "05-knowledge/results/native_cancellation_105_20261018g.json",
+  "sources": [
+    {
+      "bytes": 13608,
+      "match": true,
+      "path": "05-knowledge/results/native_cancellation_105_20261018g.md",
+      "sha256": "91b52f8e7bd7332ff1edcbd1dfdd0b43afca15cf17c7e451b32f3d5621c0b839"
+    },
+    {
+      "bytes": 14898,
+      "match": true,
+      "path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 11244,
+      "match": true,
+      "path": "05-knowledge/results/eisenstein_circuit_completion_20261018g.md",
+      "sha256": "ba08c30559bb5ba4a9757d9a048d8b008151cf00f586f1f43b03b671a176d367"
+    },
+    {
+      "bytes": 29317,
+      "match": true,
+      "path": "01-canon/theorems/THM-4690-first-arrival-ladder-port-and-integer-clock-decompositions-and-the-nineteen-adic-copy-obstruction.md",
+      "sha256": "083eef4977d1d7ea0a9336b7a9b933318433960691d518460b6c676843ddb3aa"
+    },
+    {
+      "bytes": 2770,
+      "match": true,
+      "path": "frozen annulus package MANIFEST.json",
+      "sha256": "8423a629603147141ef1a5f5570c7e74aecc6f55505f201c0d598d9aac6ad00a"
+    }
+  ],
+  "status": "PASS"
+}
