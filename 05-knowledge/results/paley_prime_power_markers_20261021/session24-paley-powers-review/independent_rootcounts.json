@@ -1,0 +1,82 @@
+[
+  {
+    "actual_roots": 1,
+    "d": 1,
+    "e": 9,
+    "expected_M_d": 1,
+    "g": 1,
+    "p": 3
+  },
+  {
+    "actual_roots": 1,
+    "d": 3,
+    "e": 9,
+    "expected_M_d": 1,
+    "g": 3,
+    "p": 3
+  },
+  {
+    "actual_roots": 28,
+    "d": 9,
+    "e": 9,
+    "expected_M_d": 28,
+    "g": 3,
+    "p": 3
+  },
+  {
+    "actual_roots": 2,
+    "d": 1,
+    "e": 9,
+    "expected_M_d": 2,
+    "g": 1,
+    "p": 7
+  },
+  {
+    "actual_roots": 2,
+    "d": 3,
+    "e": 9,
+    "expected_M_d": 2,
+    "g": 3,
+    "p": 7
+  },
+  {
+    "actual_roots": 344,
+    "d": 9,
+    "e": 9,
+    "expected_M_d": 344,
+    "g": 3,
+    "p": 7
+  },
+  {
+    "actual_roots": 1,
+    "d": 1,
+    "e": 15,
+    "expected_M_d": 1,
+    "g": 1,
+    "p": 3
+  },
+  {
+    "actual_roots": 4,
+    "d": 3,
+    "e": 15,
+    "expected_M_d": 4,
+    "g": 1,
+    "p": 3
+  },
+  {
+    "actual_roots": 1,
+    "d": 5,
+    "e": 15,
+    "expected_M_d": 1,
+    "g": 5,
+    "p": 3
+  },
+  {
+    "actual_roots": 244,
+    "d": 15,
+    "e": 15,
+    "expected_M_d": 244,
+    "g": 5,
+    "p": 3
+  }
+]

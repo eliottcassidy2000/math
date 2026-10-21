@@ -1,0 +1,25 @@
+{
+  "approved_allowlist": {
+    "session24-paley-powers/RESULT.md": "c671b75603300143b6951b799d13564b50e6496b2fe1d05fd15a5ae0c395f763",
+    "session24-paley-powers/normal.json": "fece7bf19f055474a9525a51076ca4360722dc9b900974b9e0190225a4f0b844",
+    "session24-paley-powers/optimized.json": "fece7bf19f055474a9525a51076ca4360722dc9b900974b9e0190225a4f0b844",
+    "session24-paley-powers/receipt.json": "bd1b55e74b03d68fe62e2acc82e15784bca70c4517df8f71e08f3194ea51439d",
+    "session24-paley-powers/verify.py": "a27917eac166b67b606d246cbf95abd44ad96f483e87fcfe13c732ef748ea54a"
+  },
+  "git_commands_used": false,
+  "independent_q27_normal_optimized_identical": true,
+  "replay_normal_optimized_identical": true,
+  "repository_modified": false,
+  "review_artifacts_sha256": {
+    "session24-paley-powers-review/REVIEW.md": "25fe8320e3706cca4a8e5808741ef2ae62f56cda9a6f5498d7cbcb1a5cf4a2bf",
+    "session24-paley-powers-review/independent_q27.json": "3aba9857f41f856890bce85ee1a8f41e78d57cd383044b07e235a79ef04149dc",
+    "session24-paley-powers-review/independent_q27.optimized.json": "3aba9857f41f856890bce85ee1a8f41e78d57cd383044b07e235a79ef04149dc",
+    "session24-paley-powers-review/independent_q27.py": "50e131a806d3adbb0a08f830163a74278fb4d56d3cd0811a7f2d228b7ca2c15f",
+    "session24-paley-powers-review/independent_rootcounts.json": "7ec4e56a73678287a4c2a03e9892dc9b0cdc26ba3afdabe556ed225b4cce0c2a",
+    "session24-paley-powers-review/independent_rootcounts.py": "f70bd4825fd765c8fefb3e0c2f8f13220372acb8610389177789e9be36300fd3",
+    "session24-paley-powers-review/replay-normal.json": "fece7bf19f055474a9525a51076ca4360722dc9b900974b9e0190225a4f0b844",
+    "session24-paley-powers-review/replay-optimized.json": "fece7bf19f055474a9525a51076ca4360722dc9b900974b9e0190225a4f0b844"
+  },
+  "scope": "All q=p^e congruent to 3 modulo 4; e>1 odd marker and orbit formula, separate prime predecessor for e=1; cited full group theorem, no novelty claim",
+  "verdict": "APPROVED"
+}

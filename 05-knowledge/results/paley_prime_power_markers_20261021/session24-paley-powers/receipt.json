@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "normal_optimized_byte_identical": true,
+  "external_primary_source": {
+    "authors": "A. Bruen and B. Levinger",
+    "title": "A theorem on permutations of a finite field",
+    "year": 1973,
+    "theorem": "Theorem 1, page 1060",
+    "doi": "https://doi.org/10.4153/CJM-1973-113-4",
+    "verified": "Publisher PDF text and page 0 screenshot inspected on 2026-10-21"
+  },
+  "sha256": {
+    "RESULT.md": "c671b75603300143b6951b799d13564b50e6496b2fe1d05fd15a5ae0c395f763",
+    "verify.py": "a27917eac166b67b606d246cbf95abd44ad96f483e87fcfe13c732ef748ea54a",
+    "normal.json": "fece7bf19f055474a9525a51076ca4360722dc9b900974b9e0190225a4f0b844",
+    "optimized.json": "fece7bf19f055474a9525a51076ca4360722dc9b900974b9e0190225a4f0b844"
+  },
+  "inherited_sources_sha256": {
+    "session24-paley-certificates/RESULT.md": "6ede78c5ecead2b8f31877cdce73c04d9d01852f5151ca4f2f67701a42f0b129",
+    "math/01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md": "82f907f6d43f971de80e75b43b727a0b90d09906cc4dbc34b89ed2c88a13d502"
+  },
+  "repository_modified": false
+}

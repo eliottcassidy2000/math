@@ -1,0 +1,61 @@
+{
+  "affine_regular_semilinear_hostile": {
+    "S": [
+      0,
+      1,
+      5
+    ],
+    "stabilizers_and_images": [
+      [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          5
+        ]
+      ],
+      [
+        [
+          7,
+          5,
+          1
+        ],
+        [
+          5,
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          1,
+          5,
+          0
+        ]
+      ]
+    ],
+    "t_polynomial": "2+z"
+  },
+  "all_three_subset_stabilizer_histogram": {
+    "1": 2106,
+    "3": 702,
+    "18": 117
+  },
+  "free_signed_triple_orbits": 1,
+  "modulus_low_to_high": [
+    1,
+    0,
+    2,
+    1
+  ],
+  "q": 27
+}
