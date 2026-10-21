@@ -1,0 +1,59 @@
+{
+  "scope": "Exact approved source files with publication wrapper; finite computations and proof scopes remain distinct.",
+  "files": [
+    {
+      "source": "session23-final-preparation/bundle/session23_generating_function_synthesis_20261021/SESSION23_SYNTHESIS.md",
+      "path": "05-knowledge/results/session23_generating_function_synthesis_20261021/SESSION23_SYNTHESIS.md",
+      "bytes": 11668,
+      "sha256": "d8815510d96f84aa15de8c52e25139a61de14de6a8c3ca37571039f3d097ec06"
+    },
+    {
+      "source": "session23-final-preparation/bundle/session23_generating_function_synthesis_20261021/session23-synthesis-review/REVIEW.md",
+      "path": "05-knowledge/results/session23_generating_function_synthesis_20261021/session23-synthesis-review/REVIEW.md",
+      "bytes": 7231,
+      "sha256": "28ef3aa9b863562895c9f58878d15c2f8fc71b06201f8e118ada136a26d3b7b5"
+    },
+    {
+      "source": "session23-final-preparation/bundle/session23_generating_function_synthesis_20261021/session23-synthesis-review/check_synthesis.py",
+      "path": "05-knowledge/results/session23_generating_function_synthesis_20261021/session23-synthesis-review/check_synthesis.py",
+      "bytes": 5899,
+      "sha256": "fe73dd1e1ef9b66e0f1c7ee6cf3c8597c16815eeb1afd0dd711fc1d5eaba9bfd"
+    },
+    {
+      "source": "session23-final-preparation/bundle/session23_generating_function_synthesis_20261021/session23-synthesis-review/normal.json",
+      "path": "05-knowledge/results/session23_generating_function_synthesis_20261021/session23-synthesis-review/normal.json",
+      "bytes": 5445,
+      "sha256": "6413d1431c61050109925d72465f04c6c16aff7690ca354b573e7ee206ab6670"
+    },
+    {
+      "source": "session23-final-preparation/bundle/session23_generating_function_synthesis_20261021/session23-synthesis-review/optimized.json",
+      "path": "05-knowledge/results/session23_generating_function_synthesis_20261021/session23-synthesis-review/optimized.json",
+      "bytes": 5445,
+      "sha256": "6413d1431c61050109925d72465f04c6c16aff7690ca354b573e7ee206ab6670"
+    },
+    {
+      "source": "session23-final-preparation/bundle/session23_generating_function_synthesis_20261021/session23-synthesis-review/receipt.json",
+      "path": "05-knowledge/results/session23_generating_function_synthesis_20261021/session23-synthesis-review/receipt.json",
+      "bytes": 983,
+      "sha256": "c890bf023bd567f7ebad664840b36579841f368962d48516d01a0ef6ed3897d2"
+    },
+    {
+      "source": "session23-final-preparation/bundle/session23_generating_function_synthesis_20261021/session23-synthesis-review/PUBLICATION_FILES.txt",
+      "path": "05-knowledge/results/session23_generating_function_synthesis_20261021/session23-synthesis-review/PUBLICATION_FILES.txt",
+      "bytes": 102,
+      "sha256": "d507e1209156f8b2be6048d48ba99b03c6f882e02ae8e5d2a12eb9b5a83ff510"
+    },
+    {
+      "source": "session23-final-preparation/bundle/session23_generating_function_synthesis_20261021/session23-synthesis-review/SHA256SUMS",
+      "path": "05-knowledge/results/session23_generating_function_synthesis_20261021/session23-synthesis-review/SHA256SUMS",
+      "bytes": 487,
+      "sha256": "60932851cbd8e42505a26b475a8f4c0fea8c3f9472b8ca3749f72826c6de1c83"
+    },
+    {
+      "source": "session23-final-preparation/bundle/session23_generating_function_synthesis_20261021/README.md",
+      "path": "05-knowledge/results/session23_generating_function_synthesis_20261021/README.md",
+      "bytes": 5190,
+      "sha256": "96626697fbb5d4d3f78d6e57ec63288926c8a9fc32c2acd0071ed413ffb29bf4"
+    }
+  ]
+}

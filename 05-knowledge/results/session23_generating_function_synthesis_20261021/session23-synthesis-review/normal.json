@@ -1,0 +1,134 @@
+{
+  "status": "PASS",
+  "review_scope": "Synthesis fidelity, source bindings, arithmetic and recorded-output comparisons; not a rerun of the seven independent proof audits or fresh remote readback.",
+  "report": "session23-root/SESSION23_SYNTHESIS.md",
+  "report_sha256": "d8815510d96f84aa15de8c52e25139a61de14de6a8c3ca37571039f3d097ec06",
+  "proof_bindings": [
+    {
+      "lane": "refined",
+      "path": "session23-refined/PROOF.md",
+      "sha256": "a43d55514aae772f516bac1d19db179647ca548d329b746b625b3e6ba8d0996b"
+    },
+    {
+      "lane": "renewal",
+      "path": "session23-root/RENEWAL_LIMIT_LAWS.md",
+      "sha256": "3f02867604f0c33a77ad1fd49906a9143894f59e31e1cd90e0dd386e8d7ab0f9"
+    },
+    {
+      "lane": "partial paths",
+      "path": "session23-symmetry/README.md",
+      "sha256": "deab50db3bdd92f58e1f23a4204a2ad089f20a4cdeaa686dafe58c4545b46b6a"
+    },
+    {
+      "lane": "slack compiler",
+      "path": "session23-connections/SYMMETRY_SLACK_RATIONALITY.md",
+      "sha256": "22cb6aca899d9a485b2432d37a90d13040dfc6353ee41529a243d8489aa974a1"
+    },
+    {
+      "lane": "slack renewal",
+      "path": "session23-root/SLACK_RENEWAL_TRANSFER.md",
+      "sha256": "18c9bf4e131834de92b6dc72911729cd7cd82b0735638129572b790ec3e365d2"
+    },
+    {
+      "lane": "sharp slack",
+      "path": "session23-sharp-slack/SHARP_POLE_ORDER.md",
+      "sha256": "1e876eceba203e77031644a6e11c4f31cfebfa6bca649bc6e7eb7a34f3c4326b"
+    },
+    {
+      "lane": "slack spectrum",
+      "path": "session23-slack-spectrum/README.md",
+      "sha256": "a5f34a8d0aaa4be75649cca728dc2a46bc25a119b9e941c9151fde3a0dd05931"
+    }
+  ],
+  "checks": [
+    "exact final synthesis bytes",
+    "refined current proof matches independent review pin",
+    "renewal current proof matches independent review pin",
+    "partial paths current proof matches independent review pin",
+    "slack compiler current proof matches independent review pin",
+    "slack renewal current proof matches independent review pin",
+    "sharp slack current proof matches independent review pin",
+    "slack spectrum current proof matches independent review pin",
+    "sharp audit includes onset addition",
+    "refined independent recorded normal/optimized outputs agree",
+    "renewal independent recorded normal/optimized outputs agree",
+    "partial paths independent recorded normal/optimized outputs agree",
+    "slack compiler producer order seven recorded normal/optimized outputs agree",
+    "slack renewal independent recorded normal/optimized outputs agree",
+    "sharp slack independent recorded normal/optimized outputs agree",
+    "slack spectrum independent recorded normal/optimized outputs agree",
+    "power-three recurrence-order prefix",
+    "inherited Fibonacci-product prefix",
+    "strong fixed-spectrum coefficient sum e=2",
+    "strong fixed-spectrum coefficient sum e=3",
+    "strong fixed-spectrum coefficient sum e=4",
+    "strong fixed-spectrum coefficient sum e=5",
+    "strong fixed-spectrum coefficient sum e=6",
+    "strong fixed-spectrum coefficient sum e=7",
+    "strong fixed-spectrum coefficient sum e=8",
+    "strong fixed-spectrum coefficient sum e=9",
+    "strong fixed-spectrum coefficient sum e=10",
+    "strong fixed-spectrum coefficient sum e=11",
+    "strong fixed-spectrum coefficient sum e=12",
+    "strong fixed-spectrum coefficient sum e=13",
+    "strong fixed-spectrum coefficient sum e=14",
+    "strong fixed-spectrum coefficient sum e=15",
+    "strong fixed-spectrum coefficient sum e=16",
+    "strong fixed-spectrum coefficient sum e=17",
+    "strong fixed-spectrum coefficient sum e=18",
+    "strong fixed-spectrum coefficient sum e=19",
+    "strong fixed-spectrum coefficient sum e=20",
+    "cumulative half-exponent budget r=0",
+    "cumulative half-exponent budget r=1",
+    "cumulative half-exponent budget r=2",
+    "cumulative half-exponent budget r=3",
+    "cumulative half-exponent budget r=4",
+    "cumulative half-exponent budget r=5",
+    "cumulative half-exponent budget r=6",
+    "cumulative half-exponent budget r=7",
+    "cumulative half-exponent budget r=8",
+    "cumulative half-exponent budget r=9",
+    "cumulative half-exponent budget r=10",
+    "same-order hostile signature 1331",
+    "raw/orbit quotient 1331",
+    "local incidence degree 1331",
+    "28 distinct recorded destinations 1331",
+    "same-order hostile signature 3113",
+    "raw/orbit quotient 3113",
+    "local incidence degree 3113",
+    "28 distinct recorded destinations 3113",
+    "same-order recorded destination sets are disjoint",
+    "recorded publication checkpoint da7fc322",
+    "recorded publication checkpoint 9eea439e"
+  ],
+  "total_checks": 59,
+  "power_three_recurrence_orders": [
+    9,
+    18,
+    21,
+    24,
+    33,
+    36,
+    45,
+    48
+  ],
+  "same_order_hostile_destination_sizes": [
+    28,
+    28
+  ],
+  "same_order_hostile_intersection_size": 0,
+  "recorded_publication_checkpoints": [
+    {
+      "receipt": "SESSION23_REFINED_PUBLICATION_RECEIPT.json",
+      "commit": "da7fc32234c75670a1a668fbb1db4f62a14c5021",
+      "exact_readback": true
+    },
+    {
+      "receipt": "SESSION23_RENEWAL_PUBLICATION_RECEIPT.json",
+      "commit": "9eea439e3ee7a1488b0269fba0d3ded20955d1cd",
+      "exact_readback": true
+    }
+  ],
+  "publication_scope": "Only these two checkpoints are verified in the supplied receipts. Later publication is not established by this synthesis review.",
+  "repository_or_git_operations": false
+}

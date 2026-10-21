@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "report": "session23-root/SESSION23_SYNTHESIS.md",
+  "report_sha256": "d8815510d96f84aa15de8c52e25139a61de14de6a8c3ca37571039f3d097ec06",
+  "total_checks": 59,
+  "normal_optimized_identical": true,
+  "seven_current_proof_bindings_match": true,
+  "scope": "Synthesis fidelity, source bindings, arithmetic and recorded-output comparisons; not a rerun of the seven independent proof audits or fresh remote readback.",
+  "publication_status": "Only the two supplied exact-readback checkpoints are established; later publication remains separate.",
+  "repository_or_git_operations": false,
+  "files": {
+    "REVIEW.md": "28ef3aa9b863562895c9f58878d15c2f8fc71b06201f8e118ada136a26d3b7b5",
+    "check_synthesis.py": "fe73dd1e1ef9b66e0f1c7ee6cf3c8597c16815eeb1afd0dd711fc1d5eaba9bfd",
+    "normal.json": "6413d1431c61050109925d72465f04c6c16aff7690ca354b573e7ee206ab6670",
+    "optimized.json": "6413d1431c61050109925d72465f04c6c16aff7690ca354b573e7ee206ab6670"
+  }
+}

@@ -36,6 +36,11 @@ The [final Session22 overview](../results/session22_tournament_tail_synthesis_20
 records the scope through incoming `359ddd20` plus Session22 results: the degree-three formula still contains unknown
 strong deficit-six center coefficients at seven possible orders
 `{15,18,20,21,24,28,35}`, with degree at most35.
+The [Session23 generating-function overview](../results/session23_generating_function_synthesis_20261021/SESSION23_SYNTHESIS.md)
+adds exact minimal eventual recurrences for every degree `3^r` (`r >= 0`),
+rationality at every fixed symmetry slack, and a literal split-word
+obstruction to determining wiring from scalar invariants. These results do
+not supply the missing center coefficients or a full adjacency classification.
 This does not complete adjacency classification. The remaining sharper
 spectrum, forbidden-fibre, detour, descent, wiring, bridge and connectivity
 questions remain **OPEN**.
