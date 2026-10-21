@@ -1,0 +1,39 @@
+{
+  "artifact": "session19-triangle-ellipsoid-repair",
+  "base_artifact": "session19-ellipsoid-optimum",
+  "base_manifest_sha256": "050fc733781c929b8d2eb36a128cec3bc3d0f7b85c95f491941dcb3dbf849dad",
+  "commands": [
+    "python3 -B check_exact.py",
+    "python3 -B -O check_exact.py"
+  ],
+  "dependencies": "Python 3 standard library only; checker is standalone",
+  "files": [
+    {
+      "bytes": 9979,
+      "path": "README.md",
+      "sha256": "7134f63dcf97d9ded686e36dce89e1884ac22f79c833cdb4e5a0317d4c8fd971"
+    },
+    {
+      "bytes": 5949,
+      "path": "check_exact.py",
+      "sha256": "1ab9779aaa4966b5a0f9eed391a39dbe126eed5128ad084b65b1d74a2ad6df9f"
+    },
+    {
+      "bytes": 1713,
+      "path": "check_exact.out",
+      "sha256": "407251c61250ef8900306dddebfb78ffa52dcd4f8be8e037541a568b22b00a81"
+    }
+  ],
+  "frozen_utc": "2026-10-21T01:37:29Z",
+  "manifest_hash_policy": "Manifest does not hash itself; MANIFEST.sha256 pins its bytes.",
+  "replay": "Normal and -O output byte-identical to check_exact.out",
+  "scope": [
+    "Unique unrestricted maximum-volume ellipsoid for exactly one violating leaf pair",
+    "Complete positive three-speed maximum-ellipsoid classification",
+    "Strict failure of nonnegative diagonal-lift optimality in k>=4 in the single-pair regime",
+    "No multiple-pair classification or global LRC-bound improvement"
+  ],
+  "status": "PROVED analytic result with exact finite companion; frozen pending independent artifact review",
+  "total_exact_gates": 31344,
+  "version": 1
+}
