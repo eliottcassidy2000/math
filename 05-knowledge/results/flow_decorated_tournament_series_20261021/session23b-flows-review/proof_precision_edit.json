@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "previous_proof_sha256": "f65e28015417ad36c638416a08606bcb3e75a30ed99b4aca49fecaec611ecc14",
+  "final_proof_sha256": "253c95e582ab94ce4490e31ab115363ce41b74e96050d6fee1ba1241410b8ad0",
+  "change": "Only the inspected signed/tagged-group clarification, including the K1/empty degeneracy. Reversing those exact text replacements recovers the previously audited hash.",
+  "numerical_tests": "Independent normal and optimized results match byte for byte; producer code and receipts are unchanged."
+}

@@ -1,0 +1,22 @@
+{
+  "files": {
+    "PROOF.md": {
+      "bytes": 19744,
+      "sha256": "253c95e582ab94ce4490e31ab115363ce41b74e96050d6fee1ba1241410b8ad0"
+    },
+    "check.py": {
+      "bytes": 14138,
+      "sha256": "7116893ed7e5fd94e9a4b39403ca33ce5a9d2a8f166dbc89168e17806e41ebaa"
+    },
+    "normal.json": {
+      "bytes": 2633,
+      "sha256": "b032bc4e790516d37b072d24d2bf833c805d19ba87bc860a899b6a326d7ed25a"
+    },
+    "optimized.json": {
+      "bytes": 2633,
+      "sha256": "b032bc4e790516d37b072d24d2bf833c805d19ba87bc860a899b6a326d7ed25a"
+    }
+  },
+  "hash_basis": "raw bytes",
+  "normal_optimized_match": true
+}

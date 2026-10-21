@@ -1,0 +1,184 @@
+{
+  "R5": {
+    "flow_orbits": 127,
+    "flow_weight_bound": 14,
+    "one_triangle_stabilizer_order": 1,
+    "orbit_coefficients": [
+      1,
+      0,
+      0,
+      1,
+      1,
+      2,
+      3,
+      4,
+      4,
+      8,
+      13,
+      13,
+      21,
+      25,
+      31
+    ],
+    "raw_coefficients": [
+      1,
+      0,
+      0,
+      5,
+      5,
+      2,
+      15,
+      20,
+      20,
+      40,
+      53,
+      65,
+      105,
+      125,
+      155
+    ],
+    "raw_flows": 611,
+    "same_H_over_decorated_Aut": 15,
+    "self_converse_coefficients": [
+      1,
+      0,
+      0,
+      1,
+      1,
+      2,
+      3,
+      2,
+      4,
+      4,
+      5,
+      7,
+      9,
+      9,
+      11
+    ],
+    "simple_cycle_lengths": {
+      "3": 5,
+      "4": 5,
+      "5": 2
+    },
+    "underlying_Aut_order": 5,
+    "underlying_h": 3
+  },
+  "T4": {
+    "all_edge_vectors_tested": 134596,
+    "anti": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "arc_order": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "flow_weight_bound": 18,
+    "ordinary_coefficients": [
+      1,
+      0,
+      0,
+      2,
+      1,
+      0,
+      3,
+      2,
+      1,
+      4,
+      3,
+      2,
+      6,
+      4,
+      3,
+      8,
+      6,
+      4,
+      10
+    ],
+    "self_converse_coefficients": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      2,
+      0,
+      1,
+      0,
+      2,
+      0,
+      2
+    ],
+    "underlying_b": 3,
+    "underlying_h": 5
+  },
+  "fano": {
+    "full_group_order": 168,
+    "line_count": 7,
+    "point_count": 7,
+    "strong_support_fiber_size": 2,
+    "strong_support_patterns": 12,
+    "tetrahedral_subgroup_order": 24,
+    "tournament_census": {
+      "sink_C3": 8,
+      "source_C3": 8,
+      "strong": 24,
+      "transitive": 24
+    }
+  },
+  "scope": "Finite controls only. All-order claims are proved separately. No Euler tours or new metagraph adjacency are enumerated.",
+  "status": "PASS",
+  "word_controls": {
+    "actual_self_converse": 134,
+    "all_over_underlying_self_converse": 868,
+    "converse_orbits": 2594,
+    "decorated_words": 5054,
+    "edge_use_bound": 12,
+    "underlying_degree_slices": [
+      0,
+      1,
+      5,
+      10,
+      25
+    ],
+    "underlying_vs_decorated_hostile": {
+      "actual_self_converse": 0,
+      "edge_use": 3,
+      "ordinary_over_underlying_self_converse": 4,
+      "vertices": 6
+    },
+    "vertex_bound": 10
+  }
+}
