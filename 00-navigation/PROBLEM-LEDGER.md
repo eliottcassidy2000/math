@@ -806,9 +806,9 @@ all heights (THM-1289, published), δ ineffective.
   FINITE-EXACT: class-level line multigraph at n = 9 by a refinement canoniser (191,536 classes; every THM-643/4729/4731 control; line metagraph and blue spine connected;
   black components = 1 + pure-blue = 7: HYP-9345 (b) / HYP-9346 (2) at n = 9); literal black detours of all closed blue presentations n = 5..10: at n = 6, 8, 9, 10 every
   closed blue line between non-pure-blue classes has three black K moves to its literal partner in every layer (524,288 lines at n = 10, 321 s), independently confirming the two
-  concurrent order-10 certificates of the endpoint-three layer (n-4,3) (now every n >= 7) and settling every layer through n = 10; exceptions at n <= 10: F_5, F_7 only (open member = transitive with d->0,
-  n-1->d reversed; black distance exactly 5; F_9, F_11 distance 3). PROVED: detour parity (even L needs n <= 2L+2), the connectivity reduction, pure-blue-touching
-  lines in layers n-2 / n-3 (bottom block K1 / C3, n >= 6), and the Klein dictionary (kappa, kappa sigma fixed-point-free at every n; D(N) embeds equivariantly iff an
+  concurrent order-10 certificates of the endpoint-three layer (n-4,3) (now every n >= 7) and settling every layer through n = 10 plus the open (n-5,4) sub-case at n = 11 (196,608 presentations); exceptions at n <= 10: F_5, F_7 only (open member = transitive with d->0,
+  n-1->d reversed; black distance exactly 5; F_9, F_11 distance 3). PROVED: detour parity (even L needs n <= 2L+2 and C(n-1,2) even), the connectivity reduction, pure-blue-touching
+  lines in layers n-2 / n-3 (bottom block K1 / C3, n >= 6), and the Klein dictionary (kappa, kappa sigma fixed-point-free at every n, THM-849 section 2 cited; D(N) embeds equivariantly iff an
   exponent outside the swapped pair is odd; the 4-2-4 central pair is the obstruction; eight non-central divisors of p^2qr = order-4 tilings, C = complementation,
   Q = converse with path reversal, CQ = path reversal; 32 equivariant bijections, 2 sign-reading, 2 monotone, none both). CONCURRENT (same day, credited): endpoint_three_order10_20261021, endpoint_four_20261020h,
   endpoint_four_repairs_20261021 ((n-5,4) for n >= 15 minus the sub-case where F_7 sits), divisor_reflection_resolution_20261021 (Theorem 1 = the even-k

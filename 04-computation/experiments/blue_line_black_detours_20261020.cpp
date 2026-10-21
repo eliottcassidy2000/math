@@ -16,7 +16,8 @@
 // moves the path-edge sets XOR to the COMPLEMENT of E(P), so L = 2 needs C(n-1,2) <= 2(n-1), i.e. n <= 6.
 //
 // Build: g++ -O2 -std=c++17 -o bld blue_line_black_detours_20261020.cpp ; run: ./bld n [k | all] [codeLo codeHi]
-// (the optional code range slices the 2^e sigma-orbit codes for parallel runs; n <= 11 since pair masks use 64 bits)
+// (the optional code range slices the 2^e sigma-orbit codes for parallel runs; n <= 11 since pair masks use 64 bits;
+//  a trailing "sub" restricts to the closed-middle sub-case with y, c in I, the frontier of endpoint_four_repairs_20261021)
 #include <cstdio>
 #include <cstdlib>
 #include <cstdint>
@@ -85,6 +86,7 @@ int main(int argc, char **argv) {
     n = argc > 1 ? atoi(argv[1]) : 8; int layer = -1; if (argc > 2 && strcmp(argv[2], "all") != 0) layer = atoi(argv[2]);
     if (n < 4 || n > 11) { fprintf(stderr, "n in 4..11 (pair masks in 64 bits)\n"); return 1; }
     unsigned long long codeLo = 0, codeHi = 0; if (argc > 4) { codeLo = strtoull(argv[3], 0, 10); codeHi = strtoull(argv[4], 0, 10); }
+    bool subcase = argc > 5 && strcmp(argv[5], "sub") == 0;   // closed middle (c -> b) with y, c in I: the sub-case left open by endpoint_four_repairs_20261021
     m = 0; for (int i = 0; i < n; i++) for (int j = 0; j < n; j++) cellIdx[i][j] = -1;
     for (int i = 0; i < n; i++) for (int j = i + 2; j < n; j++) { cellI[m] = i; cellJ[m] = j; cellIdx[i][j] = m; m++; }
     for (int k = 0; k < m; k++) sigmaCell[k] = cellIdx[n - 1 - cellJ[k]][n - 1 - cellI[k]];
@@ -99,7 +101,7 @@ int main(int argc, char **argv) {
     const int K = 16; long long lines[K] = {0}, len2[K] = {0}, len3[K] = {0}, none[K] = {0}, pbinv[K] = {0}, genuine[K] = {0}; double maxSec[K] = {0}; long long maxH[K] = {0};
     long long done = 0;
     if (codeHi == 0) codeHi = 1ull << e;
-    printf("# code range [%llu, %llu)\n", codeLo, codeHi); fflush(stdout);
+    printf("# code range [%llu, %llu)%s\n", codeLo, codeHi, subcase ? ", sub-case: closed middle with y, c in I" : ""); fflush(stdout);
     for (unsigned long long code = codeLo; code < codeHi; code++) {
         uint64_t t = 0; for (int i = 0; i < e; i++) if ((code >> i) & 1) { t |= 1ull << reps[i]; t |= 1ull << sigmaCell[reps[i]]; }
         if ((t >> apex) & 1) continue;   // closed: apex tile backward (z -> a)
@@ -108,6 +110,7 @@ int main(int argc, char **argv) {
         for (int k = 0; k < m; k++) { int i = cellI[k], j = cellJ[k]; if ((t >> k) & 1) T.adj[i] |= 1u << j; else T.adj[j] |= 1u << i; }
         int kk = __builtin_popcount(T.adj[n - 1]);
         if (layer >= 0 && kk != layer) continue;
+        if (subcase && !(arc(T, n - 2, 1) && arc(T, n - 3, 0) && arc(T, n - 2, 0))) continue;
         int P[16]; for (int i = 0; i < n; i++) P[i] = i;
         if (isBlack(T, P)) { fprintf(stderr, "internal: base word not blue\n"); return 2; }
         lines[kk]++;

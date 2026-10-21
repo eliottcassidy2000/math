@@ -1,0 +1,98 @@
+# blue_line_black_detours_20261020.cpp, n = 11, layer 4, sub-case: closed middle (c -> b) with y, c in I (the sub-case left open by endpoint_four_repairs_20261021); sixteen code slices of 2^21 over the 2^25 sigma-orbit codes; 196,608 closed blue presentations, every one with a literal three-black-move detour
+## slice 0
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [0, 2097152), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (88735, 0.204)
+done in 101 s
+## slice 1
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [2097152, 4194304), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (89043, 0.207)
+done in 111 s
+## slice 2
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [4194304, 6291456), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (89043, 0.214)
+done in 116 s
+## slice 3
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [6291456, 8388608), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (88991, 0.172)
+done in 117 s
+## slice 4
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [8388608, 10485760), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (89043, 0.107)
+done in 112 s
+## slice 5
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [10485760, 12582912), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (89157, 0.172)
+done in 112 s
+## slice 6
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [12582912, 14680064), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (89043, 0.167)
+done in 116 s
+## slice 7
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [14680064, 16777216), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (88801, 0.162)
+done in 106 s
+## slice 8
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [16777216, 18874368), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (89007, 0.170)
+done in 97 s
+## slice 9
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [18874368, 20971520), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (89043, 0.165)
+done in 104 s
+## slice 10
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [20971520, 23068672), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (88861, 0.124)
+done in 100 s
+## slice 11
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [23068672, 25165824), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (89049, 0.255)
+done in 100 s
+## slice 12
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [25165824, 27262976), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (88801, 0.112)
+done in 104 s
+## slice 13
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [27262976, 29360128), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (89007, 0.212)
+done in 104 s
+## slice 14
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [29360128, 31457280), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (89157, 0.105)
+done in 99 s
+## slice 15
+# black detours of closed blue lines, n = 11, m = 45, e = 25, closed blue presentations = 16777216, layer = 4
+# code range [31457280, 33554432), sub-case: closed middle with y, c in I
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=4: 12288 / 0 / 12288 / 0 = 0 + 0   (88769, 0.085)
+done in 89 s
+## TOTAL lines 196608 with 3-detours 196608 (max H 89,157; max 0.255 s per line)

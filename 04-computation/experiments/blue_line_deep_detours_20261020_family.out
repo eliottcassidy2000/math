@@ -1,8 +1,12 @@
-n=9 family tiling 16777220
+# F_5: tiling 33 (tiles (0,2) and (2,4) forward)
+n=5 tiling=33 scores: 2 1 2 3 2; partner scores: 3 3 2 1 1
+black distance 5 (layers 2 + 3; frontier sizes 1 8 50 | 1 6 40 130)
+# F_7: tiling 8194 (tiles (0,3) and (3,6) forward)
+n=7 tiling=8194 scores: 2 1 2 3 4 5 4; partner scores: 5 5 4 3 2 1 1
+black distance 5 (layers 2 + 3; frontier sizes 1 54 3230 | 1 20 749 25269)
+# F_9: tiling 16777220 (tiles (0,4) and (4,8) forward)
 n=9 tiling=16777220 scores: 2 1 2 3 4 5 6 7 6; partner scores: 7 7 6 5 4 3 2 1 1
 black distance 3 (layers 1 + 2; frontier sizes 1 302 | 1 72 13940)
-n=11 family tiling 274877906952
-n=11 tiling=4294967295 scores: 10 9 8 7 6 5 4 3 2 1 0; partner scores: 1 1 2 3 4 5 6 7 8 9 9
-black distance > 7 (frontier sizes 1 0 | 1)
+# F_11: tiling 274877906952 (tiles (0,5) and (5,10) forward)
 n=11 tiling=274877906952 scores: 2 1 2 3 4 5 6 7 8 9 8; partner scores: 9 9 8 7 6 5 4 3 2 1 1
 black distance 3 (layers 1 + 2; frontier sizes 1 1574 | 1 272 244066)
