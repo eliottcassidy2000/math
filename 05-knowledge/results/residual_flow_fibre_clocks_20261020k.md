@@ -113,6 +113,43 @@ The mod15/mod35 registers agree modulo5 and decode a single mod105 source
 register. Native P-depth and full braid clock are retained. Optimizing the
 interval bank does not prove the outstanding uniform estimate on R_d.
 
+### 3.1 Additional owned pairs complete the finite bank
+
+The [targeted old/new extension](residual_external_credit_20261020k/README.md)
+finds94 distinct pair addresses outside the sibling bank. Each pairs an old
+grounded frontier source with a new source arriving at the same terminal
+at depth1; each contributes-3 thereafter. Assign one to each of the94
+unmatched intervals. Since every such interval begins at depth at least1,
+all8852 positive intervals now have source-owned payment assignments at
+N4096. This changes the available interaction family and therefore does
+not contradict the sibling-bank optimum94.
+
+Let C_d=-282 for d>=1 and C_0=0 be the added negative credit. It must be
+removed from the old remainder: R'_d=R_d-C_d. The exact identity is
+
+    I_d=R_d+J_d=R'_d+(J_d+C_d),       J_d=3(p_d-b_d).
+
+The enlarged selected bank is nonpositive. Discarding its remaining
+negative slack gives I_d<=R'_d, whose largest excess over M_d is-201392
+on the full257-cut control. Retaining that slack gives exactly the prior
+upper bound. Thus no physical energy or credit is manufactured; the useful
+new object is a complete finite assignment with a relocated, explicit
+remaining obligation R'_d<=M_d.
+
+The inverse-source formula explains how to extend these guards. For an
+actual first branch a in{1,2}, primitive parent u and j canonical strippings,
+
+    s = [2^a(3u+1)4^j-(2^a+3)]/9.
+
+Integrality, the literal branch and frontier exclusion remain guards.
+Increasing j by3 maps s to64s+35 or64s+49 and increases its braid clock
+by6. Under N->64N the annular band survives but the charge phase rotates.
+Three such lifts restore s modulo3, hence its band charge, while the old
+named source keeps its charge by the inherited64-scale identity. The
+negative pair therefore recurs at scale64^3 with clock increment18.
+These are infinite scale-spaced credit families, not a supply estimate
+sufficient for all growing residual banks.
+
 ## 4. Grounded children beyond an uninterrupted-reset rule
 
 The [burst packet](source_gap_bursts_20261020k/README.md) works in the
@@ -227,6 +264,7 @@ exact checker and receipt. Root and peer audits retain optimized-mode checks.
 | Packet | Exact checks in the reproduced report | Independent proof/API audit |
 |---|---:|---|
 | Native interval flow | 882,380, including saved-receipt comparison | PASS |
+| Additional old/new credits | 4,357, including saved-receipt comparison | PASS |
 | Source-gap bursts | 108,061, before saved-receipt comparison | PASS |
 | Runner1247 and electrical contacts | 1,765 | PASS |
 | Marked deletion fibres and wiring | 6,770 | PASS |
