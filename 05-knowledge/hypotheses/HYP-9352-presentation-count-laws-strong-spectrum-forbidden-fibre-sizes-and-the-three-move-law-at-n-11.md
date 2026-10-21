@@ -41,6 +41,11 @@ adds exact minimal eventual recurrences for every degree `3^r` (`r >= 0`),
 rationality at every fixed symmetry slack, and a literal split-word
 obstruction to determining wiring from scalar invariants. These results do
 not supply the missing center coefficients or a full adjacency classification.
+The [Session23 extension overview](../results/session23_extension_synthesis_20261021/README.md)
+adds flow-decorated rational series and regular-flow reciprocity, and lifts
+the actual fixed-path nonpath-complement operation to bounded integral flows
+with the selected path, capacity and changed endpoint demand retained. Its
+separate Fano move quotients do not classify the original metagraph's complete wiring.
 This does not complete adjacency classification. The remaining sharper
 spectrum, forbidden-fibre, detour, descent, wiring, bridge and connectivity
 questions remain **OPEN**.

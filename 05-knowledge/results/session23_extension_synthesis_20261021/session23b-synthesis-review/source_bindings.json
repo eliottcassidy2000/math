@@ -1,0 +1,663 @@
+{
+  "files": {
+    "session23-final-preparation/bundle/session23_generating_function_synthesis_20261021/README.md": {
+      "bytes": 5190,
+      "published": "session23_generating_function_synthesis_20261021/README.md",
+      "sha256": "96626697fbb5d4d3f78d6e57ec63288926c8a9fc32c2acd0071ed413ffb29bf4"
+    },
+    "session23b-capacity-review/REVIEW.md": {
+      "bytes": 9910,
+      "published": "capacity_flow_metagraph_transport_20261021/session23b-capacity-review/REVIEW.md",
+      "sha256": "f80ba5ad6d64604ee7cfd5cc1f6a903345eae9bb51dbee3dc5659562055aca2b"
+    },
+    "session23b-capacity-review/audit.py": {
+      "bytes": 9837,
+      "published": "capacity_flow_metagraph_transport_20261021/session23b-capacity-review/audit.py",
+      "sha256": "33ecb9d4604643cb92aae39c63d524214b15e0d5ba0933033028cb2cf8f1d7b8"
+    },
+    "session23b-capacity-review/manifest.json": {
+      "bytes": 1129,
+      "published": "capacity_flow_metagraph_transport_20261021/session23b-capacity-review/manifest.json",
+      "sha256": "81f282eb13d3cc090e8f748473c06b4664ad7788ce82b0d18a2b0024c0e32e8c"
+    },
+    "session23b-capacity-review/normal.json": {
+      "bytes": 1791,
+      "published": "capacity_flow_metagraph_transport_20261021/session23b-capacity-review/normal.json",
+      "sha256": "cfc97dfa05132ed3bfdc8e332f7269f8c59d9328eb21a645a69a1058045b42e3"
+    },
+    "session23b-capacity-review/optimized.json": {
+      "bytes": 1791,
+      "published": "capacity_flow_metagraph_transport_20261021/session23b-capacity-review/optimized.json",
+      "sha256": "cfc97dfa05132ed3bfdc8e332f7269f8c59d9328eb21a645a69a1058045b42e3"
+    },
+    "session23b-capacity-review/supplement-normal.json": {
+      "bytes": 680,
+      "published": "capacity_flow_metagraph_transport_20261021/session23b-capacity-review/supplement-normal.json",
+      "sha256": "5a423974ca11cbb2f220fc04453068ce9b90f5385f3f09ff6117d8d139d468a0"
+    },
+    "session23b-capacity-review/supplement-optimized.json": {
+      "bytes": 680,
+      "published": "capacity_flow_metagraph_transport_20261021/session23b-capacity-review/supplement-optimized.json",
+      "sha256": "5a423974ca11cbb2f220fc04453068ce9b90f5385f3f09ff6117d8d139d468a0"
+    },
+    "session23b-capacity-review/supplement.py": {
+      "bytes": 1612,
+      "published": "capacity_flow_metagraph_transport_20261021/session23b-capacity-review/supplement.py",
+      "sha256": "70a7018a9e71dfa956ad4d81bc29f8954d60124916537b4383968b4869c1db6d"
+    },
+    "session23b-capacity/PROOF.md": {
+      "bytes": 24129,
+      "published": "capacity_flow_metagraph_transport_20261021/session23b-capacity/PROOF.md",
+      "sha256": "57503d9f9f7586cb0496c872dcc8165522afa9589ed796f9c3de395b673d8460"
+    },
+    "session23b-capacity/check.py": {
+      "bytes": 11074,
+      "published": "capacity_flow_metagraph_transport_20261021/session23b-capacity/check.py",
+      "sha256": "09f66941c1ce2d077e8aa5f71149477129d554a23fbdfe5188f8ed576f777e89"
+    },
+    "session23b-capacity/manifest.json": {
+      "bytes": 462,
+      "published": "capacity_flow_metagraph_transport_20261021/session23b-capacity/manifest.json",
+      "sha256": "250cfd9d0b34f996899a4be4e4996660d8df3cbce222dee53b821d8fdb3b6c32"
+    },
+    "session23b-capacity/normal.json": {
+      "bytes": 9675,
+      "published": "capacity_flow_metagraph_transport_20261021/session23b-capacity/normal.json",
+      "sha256": "dfb35e063a67511b0d93f65063b06cf7d3274df9c1671d5e18567f1aecc56575"
+    },
+    "session23b-capacity/optimized.json": {
+      "bytes": 9675,
+      "published": "capacity_flow_metagraph_transport_20261021/session23b-capacity/optimized.json",
+      "sha256": "dfb35e063a67511b0d93f65063b06cf7d3274df9c1671d5e18567f1aecc56575"
+    },
+    "session23b-duality-review/REVIEW.md": {
+      "bytes": 5577,
+      "published": "tetrahedral_fano_duality_20261021/session23b-duality-review/REVIEW.md",
+      "sha256": "28504862efb5e17d94a179d1390c8a70b49daf80cca0c80bff03ac34a876b79b"
+    },
+    "session23b-duality-review/check_independent.py": {
+      "bytes": 8119,
+      "published": "tetrahedral_fano_duality_20261021/session23b-duality-review/check_independent.py",
+      "sha256": "2a959831c09577fa0b8f5a2b3484bdf450e87e2e88eff69fb59f8594df654995"
+    },
+    "session23b-duality-review/manifest.json": {
+      "bytes": 1024,
+      "published": "tetrahedral_fano_duality_20261021/session23b-duality-review/manifest.json",
+      "sha256": "e6a69f7adc700c8f11dd353c92df3fe4322c0806eb14e2a80cdb842b7cdd2fe8"
+    },
+    "session23b-duality-review/normal.json": {
+      "bytes": 583,
+      "published": "tetrahedral_fano_duality_20261021/session23b-duality-review/normal.json",
+      "sha256": "b068418d60128403fb095772b41687c035965e2e259788eee013664dbcc83b08"
+    },
+    "session23b-duality-review/optimized.json": {
+      "bytes": 583,
+      "published": "tetrahedral_fano_duality_20261021/session23b-duality-review/optimized.json",
+      "sha256": "b068418d60128403fb095772b41687c035965e2e259788eee013664dbcc83b08"
+    },
+    "session23b-duality/PROOF.md": {
+      "bytes": 4061,
+      "published": "tetrahedral_fano_duality_20261021/session23b-duality/PROOF.md",
+      "sha256": "af297f77570dc82643e1453eaccc3f7b6976001e4dc016996a07a01d96d43729"
+    },
+    "session23b-duality/check.py": {
+      "bytes": 1831,
+      "published": "tetrahedral_fano_duality_20261021/session23b-duality/check.py",
+      "sha256": "bc531f4099b72dce0671c692158b06d46870a8175d9a7ee68cba8e25af12f695"
+    },
+    "session23b-duality/normal.json": {
+      "bytes": 320,
+      "published": "tetrahedral_fano_duality_20261021/session23b-duality/normal.json",
+      "sha256": "6e8dfd115af255f987c8133c659b50e0550933312f684e5f4d1488bd3b03dc8f"
+    },
+    "session23b-duality/optimized.json": {
+      "bytes": 320,
+      "published": "tetrahedral_fano_duality_20261021/session23b-duality/optimized.json",
+      "sha256": "6e8dfd115af255f987c8133c659b50e0550933312f684e5f4d1488bd3b03dc8f"
+    },
+    "session23b-fano-review/REVIEW.md": {
+      "bytes": 10944,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano-review/REVIEW.md",
+      "sha256": "935386e86e63e839296619b9a86eb77658339fdf95c8a67d8c102f1ba7032e5f"
+    },
+    "session23b-fano-review/independent_audit.py": {
+      "bytes": 12930,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano-review/independent_audit.py",
+      "sha256": "5442d352809b6f6bbe7daf5c711ce2e16f930f7cccf874f41b154a341fb0f846"
+    },
+    "session23b-fano-review/manifest.json": {
+      "bytes": 880,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano-review/manifest.json",
+      "sha256": "a8277568dbef28c226ba46a0b84ff4889da0158b6c14860a86442485a136b412"
+    },
+    "session23b-fano-review/optimized-receipt.json": {
+      "bytes": 4339,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano-review/optimized-receipt.json",
+      "sha256": "4aa4b7a6d3b40316123ef915f654352c2d7d673334776d395084fa58806cf285"
+    },
+    "session23b-fano-review/receipt.json": {
+      "bytes": 4339,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano-review/receipt.json",
+      "sha256": "4aa4b7a6d3b40316123ef915f654352c2d7d673334776d395084fa58806cf285"
+    },
+    "session23b-fano-review/small-circle-optimized-receipt.json": {
+      "bytes": 1914,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano-review/small-circle-optimized-receipt.json",
+      "sha256": "b4a8543e0e6e173572fc94a560def60dfbd353be323907fe9f4b5ccfeb0ba06d"
+    },
+    "session23b-fano-review/small-circle-receipt.json": {
+      "bytes": 1914,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano-review/small-circle-receipt.json",
+      "sha256": "b4a8543e0e6e173572fc94a560def60dfbd353be323907fe9f4b5ccfeb0ba06d"
+    },
+    "session23b-fano-review/small_circle_witness.py": {
+      "bytes": 1749,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano-review/small_circle_witness.py",
+      "sha256": "ed6f8726b1c9084a4ab8818711408a9bf28d97cf594db6232a984d2d1c53bb42"
+    },
+    "session23b-fano/README.md": {
+      "bytes": 20286,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano/README.md",
+      "sha256": "40ba37c6d9d6bc97ca2213ff71905cb0e2a8ab2e56f1ed69ea8407313fb262b0"
+    },
+    "session23b-fano/check.py": {
+      "bytes": 8336,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano/check.py",
+      "sha256": "d00588a0102f4cc64a864b13578077cf3d4f0c6b6ccb845fda95e443b9441b00"
+    },
+    "session23b-fano/global-optimized-receipt.json": {
+      "bytes": 1425,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano/global-optimized-receipt.json",
+      "sha256": "ec93cfbe83356ba9279cc85b0e7e58cc352f94f1a24d5816fc0d7f4c86bc7cd2"
+    },
+    "session23b-fano/global-receipt.json": {
+      "bytes": 1425,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano/global-receipt.json",
+      "sha256": "ec93cfbe83356ba9279cc85b0e7e58cc352f94f1a24d5816fc0d7f4c86bc7cd2"
+    },
+    "session23b-fano/global_triangle_check.py": {
+      "bytes": 4548,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano/global_triangle_check.py",
+      "sha256": "f718d636e8ec9f66d86a3f50bb359c2ede935c080b8154d7b6438391db2d31a7"
+    },
+    "session23b-fano/manifest.json": {
+      "bytes": 727,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano/manifest.json",
+      "sha256": "a5e41b30b17ee1808d150127a1aa37bb468e18cb4d9e8d174fa323b0d4553ab0"
+    },
+    "session23b-fano/optimized-receipt.json": {
+      "bytes": 22676,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano/optimized-receipt.json",
+      "sha256": "500d1e886640fbaea139dd64fc89ec480f8a886aef9575a0b07ac6f358bea2c3"
+    },
+    "session23b-fano/receipt.json": {
+      "bytes": 22676,
+      "published": "fano_tournament_move_quotients_20261021/session23b-fano/receipt.json",
+      "sha256": "500d1e886640fbaea139dd64fc89ec480f8a886aef9575a0b07ac6f358bea2c3"
+    },
+    "session23b-flows-extra-review/REVIEW.md": {
+      "bytes": 10961,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-flows-extra-review/REVIEW.md",
+      "sha256": "1c0652c2d31e77b38bd2656ff37752c1a29ff1d4535dabe58d0daf8880da6891"
+    },
+    "session23b-flows-extra-review/check.py": {
+      "bytes": 12004,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-flows-extra-review/check.py",
+      "sha256": "57d12b3630bf4ffa58b809ae8e9890a92b9fb2a8c8b912e97b9a06ac0c2d709c"
+    },
+    "session23b-flows-extra-review/manifest.json": {
+      "bytes": 969,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-flows-extra-review/manifest.json",
+      "sha256": "1c6d4ddef2ee06b4018d72ff9b3e6157d9934075889d3a2a47256da122dc5ff2"
+    },
+    "session23b-flows-extra-review/normal.json": {
+      "bytes": 109449,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-flows-extra-review/normal.json",
+      "sha256": "7bc731adec846ed9cd8eaf6d8f8e3364806adf6c4acb94f54017ca10b820a004"
+    },
+    "session23b-flows-extra-review/optimized.json": {
+      "bytes": 109449,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-flows-extra-review/optimized.json",
+      "sha256": "7bc731adec846ed9cd8eaf6d8f8e3364806adf6c4acb94f54017ca10b820a004"
+    },
+    "session23b-flows-extra-review/producer-normal-rerun.json": {
+      "bytes": 19025,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-flows-extra-review/producer-normal-rerun.json",
+      "sha256": "0ed60dd30ac40fda6f90de34cd1d3e5ef5f0f4613b5c4df0e5a5072dde78e79f"
+    },
+    "session23b-flows-extra-review/producer-optimized-rerun.json": {
+      "bytes": 19025,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-flows-extra-review/producer-optimized-rerun.json",
+      "sha256": "0ed60dd30ac40fda6f90de34cd1d3e5ef5f0f4613b5c4df0e5a5072dde78e79f"
+    },
+    "session23b-flows-extra/ADDENDUM.md": {
+      "bytes": 8920,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-flows-extra/ADDENDUM.md",
+      "sha256": "ab0465a1d9fc9b1ed371205b5f12ab45aa1e95d24af79cba41671442cf5639a8"
+    },
+    "session23b-flows-extra/check.py": {
+      "bytes": 7328,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-flows-extra/check.py",
+      "sha256": "b3fccf3ff2674d9a3f59c04d317d7a600062c1461d1e5f65228c9395fbf2b19f"
+    },
+    "session23b-flows-extra/manifest.json": {
+      "bytes": 613,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-flows-extra/manifest.json",
+      "sha256": "51c75ca3eb16c72feb6c3684c175c1ec758804db260bbaf046b0ca909034701b"
+    },
+    "session23b-flows-extra/normal.json": {
+      "bytes": 19025,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-flows-extra/normal.json",
+      "sha256": "0ed60dd30ac40fda6f90de34cd1d3e5ef5f0f4613b5c4df0e5a5072dde78e79f"
+    },
+    "session23b-flows-extra/optimized.json": {
+      "bytes": 19025,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-flows-extra/optimized.json",
+      "sha256": "0ed60dd30ac40fda6f90de34cd1d3e5ef5f0f4613b5c4df0e5a5072dde78e79f"
+    },
+    "session23b-flows-review/INDEPENDENT_REVIEW.md": {
+      "bytes": 11083,
+      "published": "flow_decorated_tournament_series_20261021/session23b-flows-review/INDEPENDENT_REVIEW.md",
+      "sha256": "19a7c606ed3095ea9e6b9c8ee972f352cfc81a1eb2e38a6200bf3b335d10b8e4"
+    },
+    "session23b-flows-review/independent_check.py": {
+      "bytes": 16606,
+      "published": "flow_decorated_tournament_series_20261021/session23b-flows-review/independent_check.py",
+      "sha256": "e98befcbf7e1eb5f3dedce69df482816582a9a2e8e90dffa8ab3ca6a53ea1e7f"
+    },
+    "session23b-flows-review/normal.json": {
+      "bytes": 4451,
+      "published": "flow_decorated_tournament_series_20261021/session23b-flows-review/normal.json",
+      "sha256": "0fd9a4307a63cbaa8110958c4c02c580d7d9cd7cdf6a4e380a1210e704a18014"
+    },
+    "session23b-flows-review/optimized.json": {
+      "bytes": 4451,
+      "published": "flow_decorated_tournament_series_20261021/session23b-flows-review/optimized.json",
+      "sha256": "0fd9a4307a63cbaa8110958c4c02c580d7d9cd7cdf6a4e380a1210e704a18014"
+    },
+    "session23b-flows-review/producer-normal.json": {
+      "bytes": 2633,
+      "published": "flow_decorated_tournament_series_20261021/session23b-flows-review/producer-normal.json",
+      "sha256": "b032bc4e790516d37b072d24d2bf833c805d19ba87bc860a899b6a326d7ed25a"
+    },
+    "session23b-flows-review/producer-optimized.json": {
+      "bytes": 2633,
+      "published": "flow_decorated_tournament_series_20261021/session23b-flows-review/producer-optimized.json",
+      "sha256": "b032bc4e790516d37b072d24d2bf833c805d19ba87bc860a899b6a326d7ed25a"
+    },
+    "session23b-flows-review/proof_precision_edit.json": {
+      "bytes": 520,
+      "published": "flow_decorated_tournament_series_20261021/session23b-flows-review/proof_precision_edit.json",
+      "sha256": "5265af11644a28f41a4fbed2cee846a956aa9887d0210a39888332bec760c39e"
+    },
+    "session23b-flows/PROOF.md": {
+      "bytes": 19744,
+      "published": "flow_decorated_tournament_series_20261021/session23b-flows/PROOF.md",
+      "sha256": "253c95e582ab94ce4490e31ab115363ce41b74e96050d6fee1ba1241410b8ad0"
+    },
+    "session23b-flows/check.py": {
+      "bytes": 14138,
+      "published": "flow_decorated_tournament_series_20261021/session23b-flows/check.py",
+      "sha256": "7116893ed7e5fd94e9a4b39403ca33ce5a9d2a8f166dbc89168e17806e41ebaa"
+    },
+    "session23b-flows/manifest.json": {
+      "bytes": 610,
+      "published": "flow_decorated_tournament_series_20261021/session23b-flows/manifest.json",
+      "sha256": "283c5083002cea1bee0c9ac9097cbf790ea080a51782cf15009b43a9fed413c3"
+    },
+    "session23b-flows/normal.json": {
+      "bytes": 2633,
+      "published": "flow_decorated_tournament_series_20261021/session23b-flows/normal.json",
+      "sha256": "b032bc4e790516d37b072d24d2bf833c805d19ba87bc860a899b6a326d7ed25a"
+    },
+    "session23b-flows/optimized.json": {
+      "bytes": 2633,
+      "published": "flow_decorated_tournament_series_20261021/session23b-flows/optimized.json",
+      "sha256": "b032bc4e790516d37b072d24d2bf833c805d19ba87bc860a899b6a326d7ed25a"
+    },
+    "session23b-geometry-review/INDEPENDENT_REVIEW.md": {
+      "bytes": 8685,
+      "published": "tetrahedral_inversion_spheres_20261021/session23b-geometry-review/INDEPENDENT_REVIEW.md",
+      "sha256": "9a6059f471027cf06f580636a4cdcd1a3ce62b72c56588e2a3b743b7e98e6bef"
+    },
+    "session23b-geometry-review/exact_controls.py": {
+      "bytes": 10816,
+      "published": "tetrahedral_inversion_spheres_20261021/session23b-geometry-review/exact_controls.py",
+      "sha256": "9bd393ed1a2bb0d618d3574097984cce0e84446bc6faab2dc0c07d50cf4d8c59"
+    },
+    "session23b-geometry-review/normal.json": {
+      "bytes": 1941,
+      "published": "tetrahedral_inversion_spheres_20261021/session23b-geometry-review/normal.json",
+      "sha256": "674a0fd07fd4822ec2617978be2f7bf3908b45a9436899facd692415598b15dd"
+    },
+    "session23b-geometry-review/optimized.json": {
+      "bytes": 1941,
+      "published": "tetrahedral_inversion_spheres_20261021/session23b-geometry-review/optimized.json",
+      "sha256": "674a0fd07fd4822ec2617978be2f7bf3908b45a9436899facd692415598b15dd"
+    },
+    "session23b-geometry/geometry_report.md": {
+      "bytes": 11661,
+      "published": "tetrahedral_inversion_spheres_20261021/session23b-geometry/geometry_report.md",
+      "sha256": "bd541caa0f8db7a378430abce16afb82796281802d59282a7148304371febcd0"
+    },
+    "session23b-geometry/verification.txt": {
+      "bytes": 704,
+      "published": "tetrahedral_inversion_spheres_20261021/session23b-geometry/verification.txt",
+      "sha256": "94765a8453180d734b1109a1c5c996bd3133285f7c666d3861085bea1da3d6c3"
+    },
+    "session23b-geometry/verify_geometry.py": {
+      "bytes": 5456,
+      "published": "tetrahedral_inversion_spheres_20261021/session23b-geometry/verify_geometry.py",
+      "sha256": "2ca7bb13e8b33aa38317605226e6470dbd1511e372c0854d90a71e4afb08ed0b"
+    },
+    "session23b-palettes-review/AUDIT_REPORT.md": {
+      "bytes": 10253,
+      "published": "paley_multicoloring_and_carry_20261021/session23b-palettes-review/AUDIT_REPORT.md",
+      "sha256": "bddb90b49c25daa2b746484501ae56aa58337faafa5d0c4dfef520211887d85c"
+    },
+    "session23b-palettes-review/audit_results.json": {
+      "bytes": 3271,
+      "published": "paley_multicoloring_and_carry_20261021/session23b-palettes-review/audit_results.json",
+      "sha256": "0c985c7011764c7ed5e4a64799fd15fc18edbf159ee0815b4e3d6cc315dfbd8a"
+    },
+    "session23b-palettes-review/final_binding.json": {
+      "bytes": 2030,
+      "published": "paley_multicoloring_and_carry_20261021/session23b-palettes-review/final_binding.json",
+      "sha256": "c98d1c8c3c43570b0b664d7b7d505568fe87cbd8b17704289e7ea68cedeec4f5"
+    },
+    "session23b-palettes-review/independent_audit.py": {
+      "bytes": 10694,
+      "published": "paley_multicoloring_and_carry_20261021/session23b-palettes-review/independent_audit.py",
+      "sha256": "429c6aa540088169cc2ef4f8467a67e5812f647e5a993ccc4363d2b43b9ad81e"
+    },
+    "session23b-palettes-review/normal.json": {
+      "bytes": 1662,
+      "published": "paley_multicoloring_and_carry_20261021/session23b-palettes-review/normal.json",
+      "sha256": "e3c663e28fa6e83872220c33f4ab8384b61f3e26f19354af5d45a0ed83260dee"
+    },
+    "session23b-palettes-review/optimized.json": {
+      "bytes": 1662,
+      "published": "paley_multicoloring_and_carry_20261021/session23b-palettes-review/optimized.json",
+      "sha256": "e3c663e28fa6e83872220c33f4ab8384b61f3e26f19354af5d45a0ed83260dee"
+    },
+    "session23b-palettes-review/root_checker_normal.json": {
+      "bytes": 762,
+      "published": "paley_multicoloring_and_carry_20261021/session23b-palettes-review/root_checker_normal.json",
+      "sha256": "154c83ab0c87bc19267f67dabdba6363d092e8b1373360f6c813e2898fc63a7b"
+    },
+    "session23b-palettes-review/root_checker_optimized.json": {
+      "bytes": 762,
+      "published": "paley_multicoloring_and_carry_20261021/session23b-palettes-review/root_checker_optimized.json",
+      "sha256": "154c83ab0c87bc19267f67dabdba6363d092e8b1373360f6c813e2898fc63a7b"
+    },
+    "session23b-palettes/PALEY_MULTICOLORING_AND_CARRY.md": {
+      "bytes": 7474,
+      "published": "paley_multicoloring_and_carry_20261021/session23b-palettes/PALEY_MULTICOLORING_AND_CARRY.md",
+      "sha256": "fe009bd8cdb5a7ab03fb8758a7c969594295ff403e7c6da910378847499afa2d"
+    },
+    "session23b-palettes/check_palettes.py": {
+      "bytes": 3261,
+      "published": "paley_multicoloring_and_carry_20261021/session23b-palettes/check_palettes.py",
+      "sha256": "ac510c6f287d22d84678e1df78d1ecab677a4cd7386e23ff3aa4b817d1efbaf0"
+    },
+    "session23b-palettes/normal.json": {
+      "bytes": 762,
+      "published": "paley_multicoloring_and_carry_20261021/session23b-palettes/normal.json",
+      "sha256": "154c83ab0c87bc19267f67dabdba6363d092e8b1373360f6c813e2898fc63a7b"
+    },
+    "session23b-palettes/optimized.json": {
+      "bytes": 762,
+      "published": "paley_multicoloring_and_carry_20261021/session23b-palettes/optimized.json",
+      "sha256": "154c83ab0c87bc19267f67dabdba6363d092e8b1373360f6c813e2898fc63a7b"
+    },
+    "session23b-pentagon/CHECK-OPTIMIZED.json": {
+      "bytes": 1381,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-pentagon/CHECK-OPTIMIZED.json",
+      "sha256": "29b5aee77453c48edafcca9f71e078855e16c4e41b3a70900714cfc21bd1cf05"
+    },
+    "session23b-pentagon/CHECK.json": {
+      "bytes": 1381,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-pentagon/CHECK.json",
+      "sha256": "29b5aee77453c48edafcca9f71e078855e16c4e41b3a70900714cfc21bd1cf05"
+    },
+    "session23b-pentagon/PROOF.md": {
+      "bytes": 8964,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-pentagon/PROOF.md",
+      "sha256": "39e90350c8db1848b1fd6565f74894845143e62e9ef85e4de468ca84106eeb8c"
+    },
+    "session23b-pentagon/README.md": {
+      "bytes": 567,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-pentagon/README.md",
+      "sha256": "e94889e813e75da8da136a0e64e3745819356bc25c5fbdc9065502a907696144"
+    },
+    "session23b-pentagon/check.py": {
+      "bytes": 7450,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-pentagon/check.py",
+      "sha256": "5993ab0764ae97ff56aa0e8e95d6343783bb01df9a1d0564615142dcb1411043"
+    },
+    "session23b-pentagon/manifest.json": {
+      "bytes": 428,
+      "published": "pentagon_flow_generating_functions_20261021/session23b-pentagon/manifest.json",
+      "sha256": "fe9ac18a0b93a03d4494b81a05f6bc477c70afa93a67367bdeed1526cff4d0f6"
+    },
+    "session23b-publication/bundle/capacity_flow_metagraph_transport_20261021/README.md": {
+      "bytes": 924,
+      "published": "capacity_flow_metagraph_transport_20261021/README.md",
+      "sha256": "865ae05a9996098949171801391b2d599c808449d067ea87826686147a0b3b56"
+    },
+    "session23b-publication/bundle/fano_tournament_move_quotients_20261021/README.md": {
+      "bytes": 1028,
+      "published": "fano_tournament_move_quotients_20261021/README.md",
+      "sha256": "f930c9d8dde727d7981440361137788cd748f63c48e06a0a295c31e129a38aad"
+    },
+    "session23b-publication/bundle/flow_decorated_tournament_series_20261021/README.md": {
+      "bytes": 934,
+      "published": "flow_decorated_tournament_series_20261021/README.md",
+      "sha256": "1898507436373ce8e1ee6bd31ef9fffd7f43da86a516dffe0913dad138ccda90"
+    },
+    "session23b-publication/bundle/paley_multicoloring_and_carry_20261021/README.md": {
+      "bytes": 981,
+      "published": "paley_multicoloring_and_carry_20261021/README.md",
+      "sha256": "ec9b47d721a57f9d9999ef87b78ec11e9f51b92b50a6798ce726bcdb63106160"
+    },
+    "session23b-publication/bundle/pentagon_flow_generating_functions_20261021/README.md": {
+      "bytes": 1034,
+      "published": "pentagon_flow_generating_functions_20261021/README.md",
+      "sha256": "b889c232e2a887e47bc2cd391b64f1653bde5178d354a3aec1d5fceb4a30a172"
+    },
+    "session23b-publication/bundle/regular_tournament_flow_reciprocity_20261021/README.md": {
+      "bytes": 1104,
+      "published": "regular_tournament_flow_reciprocity_20261021/README.md",
+      "sha256": "828566909f9be1fb9400bbea9b73486681e71bb2bdbd0e5b516f7e44b1938997"
+    },
+    "session23b-publication/bundle/signed_tournament_palette_rigidity_20261021/README.md": {
+      "bytes": 1043,
+      "published": "signed_tournament_palette_rigidity_20261021/README.md",
+      "sha256": "8c480edb62535afac0417eac406e8be4fabb76f8506e7a6ab697798565ebda65"
+    },
+    "session23b-publication/bundle/tetrahedral_fano_duality_20261021/README.md": {
+      "bytes": 804,
+      "published": "tetrahedral_fano_duality_20261021/README.md",
+      "sha256": "379fa25515f8a54dc35bda76edd90ab4f23596ecc52aa249198b15e3356a1fbc"
+    },
+    "session23b-publication/bundle/tetrahedral_inversion_spheres_20261021/README.md": {
+      "bytes": 1051,
+      "published": "tetrahedral_inversion_spheres_20261021/README.md",
+      "sha256": "bd8c41637bd09b5bd666dc9595cecae6cd99aa6baada41bf169e163540368c5d"
+    },
+    "session23b-reciprocity-review/INDEPENDENT_REVIEW.md": {
+      "bytes": 14111,
+      "published": "regular_tournament_flow_reciprocity_20261021/session23b-reciprocity-review/INDEPENDENT_REVIEW.md",
+      "sha256": "16a6f45f6a87c7395aed4a4971b06a0aab34d5095478eecac13ea6d6f747aaaa"
+    },
+    "session23b-reciprocity-review/independent_check.py": {
+      "bytes": 16307,
+      "published": "regular_tournament_flow_reciprocity_20261021/session23b-reciprocity-review/independent_check.py",
+      "sha256": "160d6142d0ac7971322c4eeafb85f8228115942df9e5dfaf1bedbbca1a67e314"
+    },
+    "session23b-reciprocity-review/manifest.json": {
+      "bytes": 2174,
+      "published": "regular_tournament_flow_reciprocity_20261021/session23b-reciprocity-review/manifest.json",
+      "sha256": "5202c16a9551029198d2d0432458ce7ec2db9c1ddc82ccce83c845468129bb33"
+    },
+    "session23b-reciprocity-review/normal.json": {
+      "bytes": 18593,
+      "published": "regular_tournament_flow_reciprocity_20261021/session23b-reciprocity-review/normal.json",
+      "sha256": "38d5da17c1be4eac777ee87ad106eabe38f236957307a9a6220c3ca84914bc05"
+    },
+    "session23b-reciprocity-review/optimized.json": {
+      "bytes": 18593,
+      "published": "regular_tournament_flow_reciprocity_20261021/session23b-reciprocity-review/optimized.json",
+      "sha256": "38d5da17c1be4eac777ee87ad106eabe38f236957307a9a6220c3ca84914bc05"
+    },
+    "session23b-reciprocity-review/reproduced-root-normal.json": {
+      "bytes": 3039,
+      "published": "regular_tournament_flow_reciprocity_20261021/session23b-reciprocity-review/reproduced-root-normal.json",
+      "sha256": "ccf7a463aa10c1313d47d54a228a8fc5ccd2d6893bb7d4388377f41de6f8a731"
+    },
+    "session23b-reciprocity-review/reproduced-root-optimized.json": {
+      "bytes": 3039,
+      "published": "regular_tournament_flow_reciprocity_20261021/session23b-reciprocity-review/reproduced-root-optimized.json",
+      "sha256": "ccf7a463aa10c1313d47d54a228a8fc5ccd2d6893bb7d4388377f41de6f8a731"
+    },
+    "session23b-reciprocity/COROLLARIES.md": {
+      "bytes": 5979,
+      "published": "regular_tournament_flow_reciprocity_20261021/session23b-reciprocity/COROLLARIES.md",
+      "sha256": "9aa0a43a331c14849de8a3ec5bff57f2ce0f1f1a315d945a20461cdc941e64e2"
+    },
+    "session23b-reciprocity/REGULAR_FLOW_RECIPROCITY.md": {
+      "bytes": 8055,
+      "published": "regular_tournament_flow_reciprocity_20261021/session23b-reciprocity/REGULAR_FLOW_RECIPROCITY.md",
+      "sha256": "964397d9905dbc8f23cb6256ebc8e04b3ac3fd48249a4073c248219c31bd662d"
+    },
+    "session23b-reciprocity/check_corollaries.py": {
+      "bytes": 2366,
+      "published": "regular_tournament_flow_reciprocity_20261021/session23b-reciprocity/check_corollaries.py",
+      "sha256": "626cb35853c601b96f5c0615bbb5871a752d99a7904509dad241c3ce0da6d615"
+    },
+    "session23b-reciprocity/normal.json": {
+      "bytes": 3039,
+      "published": "regular_tournament_flow_reciprocity_20261021/session23b-reciprocity/normal.json",
+      "sha256": "ccf7a463aa10c1313d47d54a228a8fc5ccd2d6893bb7d4388377f41de6f8a731"
+    },
+    "session23b-reciprocity/optimized.json": {
+      "bytes": 3039,
+      "published": "regular_tournament_flow_reciprocity_20261021/session23b-reciprocity/optimized.json",
+      "sha256": "ccf7a463aa10c1313d47d54a228a8fc5ccd2d6893bb7d4388377f41de6f8a731"
+    },
+    "session23b-root/SESSION23_EXTENSION_SYNTHESIS.md": {
+      "bytes": 19898,
+      "published": "session23_extension_synthesis_20261021/SESSION23_EXTENSION_SYNTHESIS.md",
+      "sha256": "6701313d62bd1b2930ed5ecf064580110dfb0994af4aac3f54c6cc075417b824"
+    },
+    "session23b-stabilizers-review/REVIEW.md": {
+      "bytes": 8561,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers-review/REVIEW.md",
+      "sha256": "241dd8fd49a641d02cb6941d73350337902b23c4ca558ebaedd99e18d08d9c58"
+    },
+    "session23b-stabilizers-review/reproduced-producer-O.json": {
+      "bytes": 4442,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers-review/reproduced-producer-O.json",
+      "sha256": "e8255afce5bbf2417c7e9b7c020114a77212d8face24865c829345560056a18f"
+    },
+    "session23b-stabilizers-review/reproduced-producer.json": {
+      "bytes": 4442,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers-review/reproduced-producer.json",
+      "sha256": "e8255afce5bbf2417c7e9b7c020114a77212d8face24865c829345560056a18f"
+    },
+    "session23b-stabilizers-review/reproduced-secondary-O.json": {
+      "bytes": 1588,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers-review/reproduced-secondary-O.json",
+      "sha256": "cde6645e7843cf7fd8012b6d3bb8414469cea7aedcd6b10091c4de4f4fa55460"
+    },
+    "session23b-stabilizers-review/reproduced-secondary.json": {
+      "bytes": 1588,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers-review/reproduced-secondary.json",
+      "sha256": "cde6645e7843cf7fd8012b6d3bb8414469cea7aedcd6b10091c4de4f4fa55460"
+    },
+    "session23b-stabilizers-review/review-manifest.json": {
+      "bytes": 2048,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers-review/review-manifest.json",
+      "sha256": "e7834e77c8de6d89c140f310590d4e8fe65f9c0a6d91be44cac1baf1aff49850"
+    },
+    "session23b-stabilizers-review/reviewer-receipt-O.json": {
+      "bytes": 2195,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers-review/reviewer-receipt-O.json",
+      "sha256": "9c1e177c81e150c1ec70f6d041ddbd75401e4fc42d66ed7191bd6f51d6b2738a"
+    },
+    "session23b-stabilizers-review/reviewer-receipt.json": {
+      "bytes": 2195,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers-review/reviewer-receipt.json",
+      "sha256": "9c1e177c81e150c1ec70f6d041ddbd75401e4fc42d66ed7191bd6f51d6b2738a"
+    },
+    "session23b-stabilizers-review/reviewer_check.py": {
+      "bytes": 8925,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers-review/reviewer_check.py",
+      "sha256": "0599d7fa1baedd1256079e53e74d3046055c85f142fe91b2dd10f7ad07fee83f"
+    },
+    "session23b-stabilizers/REPORT.md": {
+      "bytes": 24332,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers/REPORT.md",
+      "sha256": "d197f61808e4cd65d8f26d27ad5663d793c4caf1f8b6133d948914b2dc5405d7"
+    },
+    "session23b-stabilizers/audit-receipt-O.json": {
+      "bytes": 1588,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers/audit-receipt-O.json",
+      "sha256": "cde6645e7843cf7fd8012b6d3bb8414469cea7aedcd6b10091c4de4f4fa55460"
+    },
+    "session23b-stabilizers/audit-receipt.json": {
+      "bytes": 1588,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers/audit-receipt.json",
+      "sha256": "cde6645e7843cf7fd8012b6d3bb8414469cea7aedcd6b10091c4de4f4fa55460"
+    },
+    "session23b-stabilizers/audit_independent.py": {
+      "bytes": 5912,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers/audit_independent.py",
+      "sha256": "73258dc69ad48b1806edc963c3b999d6dafd6f2e4cfadabf588956bc5c3eead1"
+    },
+    "session23b-stabilizers/check_groups.py": {
+      "bytes": 4858,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers/check_groups.py",
+      "sha256": "3943120fadb77f660bfff6ef44d4c9f62b1edcebd936588051aec7b684f79726"
+    },
+    "session23b-stabilizers/manifest.json": {
+      "bytes": 629,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers/manifest.json",
+      "sha256": "f91ccedc7c8cab28a119f3b2dfc760affe37ec10985a7047ccb45d66c5d3dc38"
+    },
+    "session23b-stabilizers/receipt-O.json": {
+      "bytes": 4442,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers/receipt-O.json",
+      "sha256": "e8255afce5bbf2417c7e9b7c020114a77212d8face24865c829345560056a18f"
+    },
+    "session23b-stabilizers/receipt.json": {
+      "bytes": 4442,
+      "published": "signed_tournament_palette_rigidity_20261021/session23b-stabilizers/receipt.json",
+      "sha256": "e8255afce5bbf2417c7e9b7c020114a77212d8face24865c829345560056a18f"
+    }
+  },
+  "source_manifests_verified_at_audit": {
+    "session23b-publication/capacity_flow_metagraph_transport_20261021.json": "d4c7eb5bc38703ca40f0d7f5ef744757676c89bed15be8a839ed59722c5a224c",
+    "session23b-publication/fano_tournament_move_quotients_20261021.json": "f7c9e4573c1510d7f6bbceba86e100033cb0b310fc31972511a46936442ead66",
+    "session23b-publication/flow_decorated_tournament_series_20261021.json": "6015b8d9a623e527ac212c6d00bc3a3d75e6d5a9abe2c9916f734356791eedcc",
+    "session23b-publication/paley_multicoloring_and_carry_20261021.json": "4cdcf4f7834c22e9b32bf303184855c8c4c141022900f2118d1cb463952c8729",
+    "session23b-publication/pentagon_flow_generating_functions_20261021.json": "5f8ec3cde70b43b9171b1f8f47b93b7c3dd6baaf1ff816beff2d0adf41cfc8a4",
+    "session23b-publication/regular_tournament_flow_reciprocity_20261021.json": "208eb22748f448b947cadfbabbe2e5be2cb60e9944d803b77d61000edd97d39a",
+    "session23b-publication/signed_tournament_palette_rigidity_20261021.json": "73c06616243f3ec795828e25bb637e0f0e21d972805ae6d6c0d2e0f4b0aefd6b",
+    "session23b-publication/tetrahedral_fano_duality_20261021.json": "00bcac2ca4ddc7126d4b7b3c1da5f6d224f364ec4d3274c135eb42fcec637257",
+    "session23b-publication/tetrahedral_inversion_spheres_20261021.json": "1181f4e5bf34134f820156292c3fc1c8e1f2bf7921389b8038be4245153212f9"
+  },
+  "status": "Exact bytes read and audited; no large controls rerun",
+  "synthesis_wrapper_destinations": [
+    "session23_generating_function_synthesis_20261021",
+    "capacity_flow_metagraph_transport_20261021",
+    "regular_tournament_flow_reciprocity_20261021",
+    "pentagon_flow_generating_functions_20261021",
+    "flow_decorated_tournament_series_20261021",
+    "tetrahedral_fano_duality_20261021",
+    "tetrahedral_inversion_spheres_20261021",
+    "fano_tournament_move_quotients_20261021",
+    "signed_tournament_palette_rigidity_20261021",
+    "paley_multicoloring_and_carry_20261021"
+  ]
+}

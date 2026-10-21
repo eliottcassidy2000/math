@@ -1,0 +1,67 @@
+{
+  "always_active_checks": 404,
+  "binding_sha256": "c56b29efcc82a7c34c77b23c8c76e55d41df3cc4751dcc6340a1c2242dd72d17",
+  "bound_files": 127,
+  "bound_wrapper_links": 10,
+  "checker_sha256": "e69548046390331cf80a0c49eccbe60271506b776d51482032402de707c139b8",
+  "cumulative_ratio_constant": "3150/17",
+  "cyclotomic_pole_profiles": [
+    {
+      "1": 6,
+      "2": 2,
+      "3": 3,
+      "4": 2,
+      "5": 1
+    },
+    {
+      "1": 6,
+      "2": 2,
+      "3": 3,
+      "4": 2,
+      "5": 2
+    },
+    {
+      "1": 4,
+      "2": 2,
+      "3": 2,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "8": 1
+    },
+    {
+      "1": 6,
+      "2": 2,
+      "3": 3,
+      "4": 2,
+      "5": 2,
+      "6": 1,
+      "8": 1
+    }
+  ],
+  "git_operations": false,
+  "large_censuses_rerun": false,
+  "minimal_quasiperiods": [
+    60,
+    60,
+    120,
+    120
+  ],
+  "minimal_recurrence_orders": [
+    22,
+    26,
+    22,
+    32
+  ],
+  "path_face_n7_h_star": {
+    "constant": 1,
+    "degree": 7,
+    "leading": 34,
+    "linear": 81
+  },
+  "pointwise_ratio_constant": "2100/17",
+  "publication_manifests_verified_at_audit": 9,
+  "scope_anchors": 66,
+  "status": "PASS",
+  "synthesis_sha256": "6701313d62bd1b2930ed5ecf064580110dfb0994af4aac3f54c6cc075417b824"
+}
