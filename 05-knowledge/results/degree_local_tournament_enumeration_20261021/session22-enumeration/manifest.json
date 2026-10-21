@@ -1,0 +1,10 @@
+{
+  "files": {
+    "README.md": "3eabebc98e46f535059e661ce87425d2caae7e03b3480ecf8c8b963605f4a41e",
+    "baseline.py": "8ef8429ff53764dc54af36ac45eb1e2729b7cf8e67c0b3d1309b8e9a308fcdbd",
+    "check.py": "8ccf59743fcd07c2c2e0ba2ae1a510e5c18a44e5d943b1a33eded54b0b07e2df",
+    "local_scale.py": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad",
+    "optimized-receipt.json": "58b64a04b26fbb94553803e61ed858cc688509ce503ccf396c2c92311aa196f0",
+    "receipt.json": "62079e8616df637083aef548cf7e573b5e195f867ca59b1750b380c7ffbd19d0"
+  }
+}

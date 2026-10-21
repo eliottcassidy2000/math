@@ -1,0 +1,77 @@
+{
+  "source_commit": "0bc8da01d9e5e2a72d2c3f410aa07d5245e61967",
+  "files": {
+    "README.md": {
+      "sha256": "d60dd509b15035f4518710cdc1731fe87fd737df4965d4be107d5cc51bd126d6",
+      "bytes": 2236
+    },
+    "session22-enumeration/README.md": {
+      "sha256": "3eabebc98e46f535059e661ce87425d2caae7e03b3480ecf8c8b963605f4a41e",
+      "bytes": 8306
+    },
+    "session22-enumeration/baseline.py": {
+      "sha256": "8ef8429ff53764dc54af36ac45eb1e2729b7cf8e67c0b3d1309b8e9a308fcdbd",
+      "bytes": 16293
+    },
+    "session22-enumeration/check.py": {
+      "sha256": "8ccf59743fcd07c2c2e0ba2ae1a510e5c18a44e5d943b1a33eded54b0b07e2df",
+      "bytes": 4354
+    },
+    "session22-enumeration/local_scale.py": {
+      "sha256": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad",
+      "bytes": 2668
+    },
+    "session22-enumeration/manifest.json": {
+      "sha256": "f730a1b745235a6beef370d0b81033bdd08ff4d110f0649486c86c9ad0e123d6",
+      "bytes": 552
+    },
+    "session22-enumeration/optimized-receipt.json": {
+      "sha256": "58b64a04b26fbb94553803e61ed858cc688509ce503ccf396c2c92311aa196f0",
+      "bytes": 542
+    },
+    "session22-enumeration/receipt.json": {
+      "sha256": "62079e8616df637083aef548cf7e573b5e195f867ca59b1750b380c7ffbd19d0",
+      "bytes": 3874
+    },
+    "session22-enumeration-review/README.md": {
+      "sha256": "a43de249d548ab653e19c228ef17121d5f23c1a7f4cdd334b6eaa06846683d99",
+      "bytes": 6152
+    },
+    "session22-enumeration-review/baseline_light.py": {
+      "sha256": "1573f6915057357ad8b57efcd6e8369547384ad6a745dd8aab3bdc94ba1c042a",
+      "bytes": 16221
+    },
+    "session22-enumeration-review/benchmark.json": {
+      "sha256": "cd98e32fc90522e70c9bd85f103d1ddf479b67db3069cf6f149508e0bafa6ca1",
+      "bytes": 1475
+    },
+    "session22-enumeration-review/benchmark.py": {
+      "sha256": "17f1a492cdb2c8a1e9f28113e8d3f48725b7841473594df3c278f22895b6fc8e",
+      "bytes": 2086
+    },
+    "session22-enumeration-review/benchmark_extra.json": {
+      "sha256": "f48171778b0bd83198c7a627256cbf1a5e46dd4327b9219cab2238d02ea00cf9",
+      "bytes": 1115
+    },
+    "session22-enumeration-review/benchmark_extra.py": {
+      "sha256": "85023ff74a52c8e268b7c3c5a93b752134518afa349be98da66f191e281005a4",
+      "bytes": 2074
+    },
+    "session22-enumeration-review/check.py": {
+      "sha256": "917400f896b52721fcf2b8a3ae6d091ec567c89475835a74220ca13f277a5031",
+      "bytes": 4063
+    },
+    "session22-enumeration-review/normal.json": {
+      "sha256": "96a22ab34ff8b67f33d0638c1ebb5a67d2ab10f2ab813f466152ad98485be12a",
+      "bytes": 582
+    },
+    "session22-enumeration-review/optimized.json": {
+      "sha256": "96a22ab34ff8b67f33d0638c1ebb5a67d2ab10f2ab813f466152ad98485be12a",
+      "bytes": 582
+    },
+    "session22-enumeration-review/telemetry.patch": {
+      "sha256": "76e5518a1b3eceeb6c0cca4ee4d2d5da8fbabf8272ac094a691a3eb0874364d0",
+      "bytes": 1298
+    }
+  }
+}

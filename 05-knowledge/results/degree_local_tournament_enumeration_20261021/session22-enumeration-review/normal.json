@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "source_sha256": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad",
+  "checks": {
+    "independent partition and substitution all four modes": 84,
+    "incoming baseline outputs": 84,
+    "same state and transition counts": 84,
+    "literal edge-action Burnside raw n<=6": 7,
+    "literal edge-action Burnside pair-free n<=6": 7,
+    "universal local transfer finite grid": 17712,
+    "nonnegative binary shift": 17712,
+    "bad bound rejected": 5,
+    "bad mode rejected": 8,
+    "observer remains rational mass": 1
+  },
+  "total": 35704
+}

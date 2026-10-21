@@ -1,0 +1,40 @@
+{
+  "description": "Baseline auxiliary per-transition coordinate telemetry and per-state tuple/bit telemetry removed; setup, arithmetic, rows and output retained. Shared-host sensitivity experiment, not attribution of all remaining differences.",
+  "baseline_light_sha256": "1573f6915057357ad8b57efcd6e8369547384ad6a745dd8aab3bdc94ba1c042a",
+  "benchmarks": [
+    {
+      "bound": 80,
+      "core": false,
+      "seconds": {
+        "baseline_light": [
+          0.034497936998377554,
+          0.03276593800546834,
+          0.035206198997912
+        ],
+        "local": [
+          0.01884219299972756,
+          0.017950064000615384,
+          0.018822133002686314
+        ]
+      },
+      "median_speedup": 1.8328388707833472
+    },
+    {
+      "bound": 150,
+      "core": false,
+      "seconds": {
+        "baseline_light": [
+          0.7925524689999293,
+          0.9451819220048492,
+          0.8563631919969339
+        ],
+        "local": [
+          0.41631353399861837,
+          0.3909275159967365,
+          0.39684153900452657
+        ]
+      },
+      "median_speedup": 2.1579474622165646
+    }
+  ]
+}

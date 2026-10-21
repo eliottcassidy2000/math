@@ -1,0 +1,140 @@
+{
+  "control_checks": 313,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "baseline_origin": "git HEAD:05-knowledge/results/tournament_enumeration_20261021a/check.py",
+  "hashes": {
+    "baseline.py": "8ef8429ff53764dc54af36ac45eb1e2729b7cf8e67c0b3d1309b8e9a308fcdbd",
+    "local_scale.py": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad",
+    "check.py": "8ccf59743fcd07c2c2e0ba2ae1a510e5c18a44e5d943b1a33eded54b0b07e2df"
+  },
+  "benchmarks": [
+    {
+      "bound": 80,
+      "core": false,
+      "seconds": {
+        "incoming": [
+          0.055246992997126654,
+          0.054297659000440035,
+          0.05430235600215383
+        ],
+        "local": [
+          0.028994143998716027,
+          0.028246994996152353,
+          0.028887533000670373
+        ]
+      },
+      "median_speedup": 1.879785165486221,
+      "transitions": 36384,
+      "precomputed_transfers": 6753,
+      "peak_states": 1227,
+      "output_sha256": "d107f897b2dc7b31fbaa8c3258e295e88fffa016b1aec0bc04228036c7ee588e"
+    },
+    {
+      "bound": 80,
+      "core": true,
+      "seconds": {
+        "incoming": [
+          0.482303332995798,
+          0.4184895280050114,
+          0.4089306609967025
+        ],
+        "local": [
+          0.3386063779980759,
+          0.29545804099325323,
+          0.2938523630000418
+        ]
+      },
+      "median_speedup": 1.4164093371707138,
+      "transitions": 645752,
+      "precomputed_transfers": 93858,
+      "peak_states": 2209,
+      "output_sha256": "a0e301073b7d5080da0fa60093050003b5aefc22b5b0a6ac0361e9172b25a4f6"
+    },
+    {
+      "bound": 100,
+      "core": false,
+      "seconds": {
+        "incoming": [
+          0.10030609499517595,
+          0.10017015999619616,
+          0.10412899400398601
+        ],
+        "local": [
+          0.04974543700518552,
+          0.05192367999552516,
+          0.04771225299919024
+        ]
+      },
+      "median_speedup": 2.0163878545226153,
+      "transitions": 90219,
+      "precomputed_transfers": 11109,
+      "peak_states": 2953,
+      "output_sha256": "e0acf28a70e995443381118b2d4bee58fbb849a217bbe5418fc8444587d188c7"
+    },
+    {
+      "bound": 100,
+      "core": true,
+      "seconds": {
+        "incoming": [
+          1.257172803998401,
+          1.1663427099992987,
+          1.2212708430015482
+        ],
+        "local": [
+          0.8762553630003822,
+          0.8665475509988028,
+          0.8854119139941758
+        ]
+      },
+      "median_speedup": 1.3937385088518033,
+      "transitions": 1697975,
+      "precomputed_transfers": 186770,
+      "peak_states": 5480,
+      "output_sha256": "4d51ff8b8043ec22b17c305fe0747b7e75cf1c1646d43f0fdd3bb8659244f1fa"
+    },
+    {
+      "bound": 150,
+      "core": false,
+      "seconds": {
+        "incoming": [
+          0.8903953439948964,
+          0.971725539995532,
+          1.0663508220022777
+        ],
+        "local": [
+          0.47606306499801576,
+          0.46851542399963364,
+          0.48067150399583625
+        ]
+      },
+      "median_speedup": 2.041169776528625,
+      "transitions": 601461,
+      "precomputed_transfers": 27274,
+      "peak_states": 20052,
+      "output_sha256": "aad4cc495bfa2b8c08170ded3b74944da1d3a08373d1ad8c9134520bed6ea6d4"
+    },
+    {
+      "bound": 200,
+      "core": false,
+      "seconds": {
+        "incoming": [
+          6.000405760998547,
+          5.66473651999695,
+          5.427087301999563
+        ],
+        "local": [
+          2.4963793229981093,
+          2.4883608099989942,
+          2.9148305760027142
+        ]
+      },
+      "median_speedup": 2.2691809965777545,
+      "transitions": 2994814,
+      "precomputed_transfers": 51374,
+      "peak_states": 96836,
+      "output_sha256": "4c61c9b2934f0e6691856655e299533d82a067580be86eec996a3ac15ccf7e3a"
+    }
+  ],
+  "checks": 331
+}

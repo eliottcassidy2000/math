@@ -1,0 +1,21 @@
+--- session22-enumeration/baseline.py	2026-10-21 11:01:21.218954551 -0600
++++ session22-enumeration-review/baseline_light.py	2026-10-21 11:05:10.750961202 -0600
+@@ -127,15 +127,14 @@
+                     signweight = (-1) ** excess * comb(k + excess - 1, excess) if k else 1
+                     new[newdegree, packed] += factor * signweight
+                     transitions += 1
+-                    response_coordinate_updates += count
++                    # Auxiliary coordinate telemetry omitted in matched control.
+         states = {key: value for key, value in new.items() if value}
+-        tuple_cells = sum(max(0, (min(ell - 2, bound - d) - start) // 2 + 1)
+-                          for d, _ in states)
++        tuple_cells = 0 # Auxiliary response telemetry omitted.
+         rows.append({"cycle_length": ell, "states": len(states),
+                      "transitions": transitions,
+                      "tuple_coordinate_updates_avoided": response_coordinate_updates,
+                      "tuple_response_cells": tuple_cells,
+-                     "packed_response_bits": sum(r.bit_length() for _, r in states)})
++                     "packed_response_bits": 0})
+     answer = [Fraction(0)] * (bound + 1)
+     for (degree, response), weight in states.items():
+         if response:

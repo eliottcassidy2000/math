@@ -1,0 +1,12 @@
+{
+  "control_checks": 313,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "baseline_origin": "git HEAD:05-knowledge/results/tournament_enumeration_20261021a/check.py",
+  "hashes": {
+    "baseline.py": "8ef8429ff53764dc54af36ac45eb1e2729b7cf8e67c0b3d1309b8e9a308fcdbd",
+    "local_scale.py": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad",
+    "check.py": "8ccf59743fcd07c2c2e0ba2ae1a510e5c18a44e5d943b1a33eded54b0b07e2df"
+  },
+  "checks": 313
+}
