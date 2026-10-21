@@ -1,0 +1,94 @@
+{
+  "exact": {
+    "shifted_hostile": {
+      "value": "15/94",
+      "maximizing_times": [
+        "63/188",
+        "39/94",
+        "45/94",
+        "55/94"
+      ],
+      "independent_bad_cover": true
+    },
+    "unshifted_AP_control": {
+      "value": "1/6",
+      "maximizing_times": [
+        "1/6",
+        "5/6"
+      ]
+    },
+    "speeds_1_3": {
+      "value": "1/2",
+      "maximizing_times": [
+        "1/2"
+      ]
+    },
+    "speeds_1_5": {
+      "value": "1/2",
+      "maximizing_times": [
+        "1/2"
+      ]
+    },
+    "speeds_2_4": {
+      "value": "1/3",
+      "maximizing_times": [
+        "1/6",
+        "1/3",
+        "2/3",
+        "5/6"
+      ]
+    },
+    "speeds_1_2_6": {
+      "value": "2/7",
+      "maximizing_times": [
+        "2/7",
+        "5/7"
+      ]
+    },
+    "speeds_1_3_5": {
+      "value": "1/2",
+      "maximizing_times": [
+        "1/2"
+      ]
+    },
+    "odd_triangle_orientation_hostile": {
+      "phase_difference": "23/48",
+      "determinant": "-7*sqrt(3)/128"
+    },
+    "square_chord_squared_at_same_phase_distance": [
+      "1",
+      "1/2"
+    ],
+    "same_labelled_tournament_different_loneliness": {
+      "lonely_phases": [
+        "0",
+        "2/5",
+        "3/5"
+      ],
+      "not_lonely_phases": [
+        "0",
+        "1/5",
+        "3/5"
+      ],
+      "edge_word": [
+        true,
+        false,
+        true
+      ]
+    }
+  },
+  "floating_diagnostics": {
+    "N_range": [
+      3,
+      20
+    ],
+    "m_choices": [
+      "N",
+      "2N"
+    ],
+    "boundary_checks": 3636,
+    "threshold_checks": 18180,
+    "even_polygon_orientation_checks": 13635,
+    "status": "sanity checks only; general statements proved in report"
+  }
+}

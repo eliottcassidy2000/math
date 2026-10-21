@@ -1,0 +1,13 @@
+{
+  "files": {
+    "REPORT.md": "a9af09551c9d683677e4f1e2d39e0aa446195c13946d98abf23fa841c92aaa5a",
+    "verify_geometry.py": "667d1ed24bea69839551998867cd59bf68a1a517da336ff1f6845922b4607b0e",
+    "verification.json": "d51795781600aa627b7a284ee8f3e9b01e9d180c9d7ef76c2ccf7ec8669ad289",
+    "verification.optimized.json": "d51795781600aa627b7a284ee8f3e9b01e9d180c9d7ef76c2ccf7ec8669ad289"
+  },
+  "baseline_repository_commit": "de0463bc8ddfe46adc61120fa98b9747055fe34f",
+  "freeze_owner": "root",
+  "reviewed_by": "independent_geometry_auditor",
+  "assert_ast_nodes": 0,
+  "producer_replay_normal_optimized_saved_byte_identical": true
+}

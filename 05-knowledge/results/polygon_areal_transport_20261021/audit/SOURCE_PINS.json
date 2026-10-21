@@ -1,0 +1,78 @@
+{
+  "checked_utc_date": "2026-10-21",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2609.02604v2",
+      "version_date": "2026-09-24",
+      "locations": [
+        "Theorem 1.1",
+        "section 6",
+        "Data availability"
+      ],
+      "verified_statement": "Claims fourteen and fifteen total runners; k counts nonzero speeds. Full computation not independently reimplemented or formally verified. Archives are linked below.",
+      "linked_archives": [
+        "https://doi.org/10.5281/zenodo.22066772",
+        "https://doi.org/10.5281/zenodo.22667683"
+      ],
+      "audit_scope": "Source claim and links only; not a proof, computation, or archive-content audit."
+    },
+    {
+      "url": "https://arxiv.org/html/2604.23906v2",
+      "version_date": "2026-09-01",
+      "locations": [
+        "Conjectures 1.1 and 1.2",
+        "Theorem 1.3"
+      ],
+      "verified_statement": "LRC(k) for k<=12; k nonzero speeds correspond to k+1 total runners.",
+      "audit_scope": "Source claim and indexing only; inherited result not re-proved here."
+    },
+    {
+      "url": "https://arxiv.org/html/2603.24784v3",
+      "version_date": "2026-10-02",
+      "locations": [
+        "Proposition 5.11",
+        "Figure 1"
+      ],
+      "verified_statement": "Shifted speeds (1,2,3,4,5), starts (0,46,38,47,72)/94, value 15/94.",
+      "audit_scope": "Fixed start vector independently certified; optimization over all starts not audited."
+    },
+    {
+      "url": "https://arxiv.org/abs/1609.01939v1",
+      "version_date": "2016-09-07",
+      "locations": [
+        "title, authors, abstract"
+      ],
+      "verified_statement": "Henze and Malikiosis: covering radii of lattice zonotopes and view-obstruction/LRC connection.",
+      "audit_scope": "Bibliographic background only; the report proves its specific quotient identity directly."
+    },
+    {
+      "url": "https://arxiv.org/abs/1606.01783v4",
+      "version_date": "2019-03-05",
+      "locations": [
+        "title, authors, abstract"
+      ],
+      "verified_statement": "Beck, Hosten and Schymura: Lonely Runner Polyhedra.",
+      "audit_scope": "Bibliographic background only."
+    }
+  ],
+  "repository_commit": "de0463bc8ddfe46adc61120fa98b9747055fe34f",
+  "repository_sources": [
+    {
+      "path": "05-knowledge/hypotheses/HYP-2009-lrc-polygon-outside-inside-arcs.md",
+      "sha256": "2b158ca65ad688b420dc130ca4d8ea3926f2f0e6016ccbb94f541bf31d7758c5"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-1995-lrc-twin-roots-of-unity-bridge.md",
+      "sha256": "a15c838f6e0919a4a1896eaa942ef602d60f1635ed74b5689596513d975a2b32"
+    },
+    {
+      "path": "01-canon/theorems/THM-1820-intransitivity-is-schur-convexity-not-covariant-vanishing.md",
+      "sha256": "31024f77325024dcac049c8b6f40d2c073f8348b182ceef475d0a1a1ec72acde"
+    },
+    {
+      "path": "01-canon/MISTAKES.md",
+      "sha256": "fd8b3de7e1291f2cee91a46f2f01313c154b23be1fe06bda608a97f5d0f6bd80"
+    }
+  ],
+  "version_pinning": "arXiv versions pin sources by identifier; no source HTML byte digest is claimed."
+}

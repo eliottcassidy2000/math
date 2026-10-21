@@ -1,0 +1,99 @@
+{
+  "format": "session19-geometry-audit-publication-manifest-v1",
+  "status": "FROZEN; PASS within documented scope",
+  "freeze_date_utc": "2026-10-21",
+  "suggested_repository_directory": "05-knowledge/results/polygon_areal_transport_20261021/",
+  "producer_files": [
+    {
+      "source": "session19-runner-geometry/REPORT.md",
+      "suggested_relative_destination": "REPORT.md",
+      "sha256": "a9af09551c9d683677e4f1e2d39e0aa446195c13946d98abf23fa841c92aaa5a",
+      "bytes": 19266
+    },
+    {
+      "source": "session19-runner-geometry/verify_geometry.py",
+      "suggested_relative_destination": "verify_geometry.py",
+      "sha256": "667d1ed24bea69839551998867cd59bf68a1a517da336ff1f6845922b4607b0e",
+      "bytes": 7780
+    },
+    {
+      "source": "session19-runner-geometry/verification.json",
+      "suggested_relative_destination": "verification.json",
+      "sha256": "d51795781600aa627b7a284ee8f3e9b01e9d180c9d7ef76c2ccf7ec8669ad289",
+      "bytes": 1695
+    },
+    {
+      "source": "session19-runner-geometry/verification.optimized.json",
+      "suggested_relative_destination": "verification.optimized.json",
+      "sha256": "d51795781600aa627b7a284ee8f3e9b01e9d180c9d7ef76c2ccf7ec8669ad289",
+      "bytes": 1695
+    }
+  ],
+  "audit_files": [
+    {
+      "source": "session19-geometry-audit/PROOF_AUDIT.md",
+      "suggested_relative_destination": "audit/PROOF_AUDIT.md",
+      "sha256": "2d529852a5ed6beacbb979371f8babd5cd43924272ddfaa7cb9d184d459d1098",
+      "bytes": 12813
+    },
+    {
+      "source": "session19-geometry-audit/SOURCE_PINS.json",
+      "suggested_relative_destination": "audit/SOURCE_PINS.json",
+      "sha256": "259c19c07377352b9f850f3f3e0208a9e3c2e48d14e23f51e57832c0f36eb27a",
+      "bytes": 3076
+    },
+    {
+      "source": "session19-geometry-audit/verify_geometry_independent.py",
+      "suggested_relative_destination": "audit/verify_geometry_independent.py",
+      "sha256": "4df8e8b3dce24fe0dd2493e7ac2abfd9dd37e8fd5089c533a09aba9e0b513a2c",
+      "bytes": 9183
+    },
+    {
+      "source": "session19-geometry-audit/independent-normal.json",
+      "suggested_relative_destination": "audit/independent-normal.json",
+      "sha256": "0517665a432b937db678d106141e021e6e1bd20c3f8403ce6b9e370324ac3b51",
+      "bytes": 10219
+    },
+    {
+      "source": "session19-geometry-audit/independent-optimized.json",
+      "suggested_relative_destination": "audit/independent-optimized.json",
+      "sha256": "0517665a432b937db678d106141e021e6e1bd20c3f8403ce6b9e370324ac3b51",
+      "bytes": 10219
+    },
+    {
+      "source": "session19-geometry-audit/producer_freeze.json",
+      "suggested_relative_destination": "audit/producer_freeze.json",
+      "sha256": "de800981a1395fa9586e078d897e2809e52f3ce0a722bdf5fa113b056a057d48",
+      "bytes": 636
+    },
+    {
+      "source": "session19-geometry-audit/producer-replay-normal.json",
+      "suggested_relative_destination": "audit/producer-replay-normal.json",
+      "sha256": "d51795781600aa627b7a284ee8f3e9b01e9d180c9d7ef76c2ccf7ec8669ad289",
+      "bytes": 1695
+    },
+    {
+      "source": "session19-geometry-audit/producer-replay-optimized.json",
+      "suggested_relative_destination": "audit/producer-replay-optimized.json",
+      "sha256": "d51795781600aa627b7a284ee8f3e9b01e9d180c9d7ef76c2ccf7ec8669ad289",
+      "bytes": 1695
+    }
+  ],
+  "manifest_handling": "Publish this manifest as audit/PUBLICATION_MANIFEST.json; its own digest is supplied separately to parent and publisher.",
+  "excluded": [
+    "__pycache__",
+    "temporary files"
+  ],
+  "conditions": [
+    "Preserve frozen bytes.",
+    "Use the scoped verdict in PROOF_AUDIT.md.",
+    "Do not promote N14/15 preprint claims to independently audited mathematics.",
+    "Do not claim a general LRC proof or all-start optimization."
+  ],
+  "validation": {
+    "producer_normal_optimized_saved_byte_identical": true,
+    "independent_normal_optimized_byte_identical": true,
+    "producer_assert_nodes": 0,
+    "independent_exact_checks_optimization_safe": true
+  }
+}
