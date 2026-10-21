@@ -1,0 +1,11 @@
+{
+  "Hamilton_counts": {
+    "flip_both_factors": 1,
+    "flip_lift": 2983,
+    "lift": 3159,
+    "lift_flip": 27
+  },
+  "checks": 15,
+  "scope": "Exact9-vertex noncommutation witness and port-module defect; no full wiring classification.",
+  "status": "PASS"
+}
