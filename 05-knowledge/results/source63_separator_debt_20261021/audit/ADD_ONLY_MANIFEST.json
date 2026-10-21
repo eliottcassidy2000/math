@@ -1,0 +1,54 @@
+{
+  "schema": "independent-audit-add-only-v1",
+  "operation": "add_only",
+  "overwrite_existing": false,
+  "source_paths_relative_to": "this manifest directory",
+  "files": [
+    {
+      "source": "README.md",
+      "destination": "05-knowledge/results/source63_separator_debt_20261021/audit/README.md",
+      "sha256": "731449fe2d18396c14f42cf92a6c4778e39526bdf828ead1974c16f9f832c557",
+      "bytes": 1958
+    },
+    {
+      "source": "PROOF_AUDIT.md",
+      "destination": "05-knowledge/results/source63_separator_debt_20261021/audit/PROOF_AUDIT.md",
+      "sha256": "6883c756d97d1661227912bb59479bc2ad57bef83410c9be0eb5268d303013a8",
+      "bytes": 13559
+    },
+    {
+      "source": "check_source_debt_cones.py",
+      "destination": "05-knowledge/results/source63_separator_debt_20261021/audit/check_source_debt_cones.py",
+      "sha256": "27022bf031dc81f55694c9f122ef53bed8c0508c1088f4d9643c48604587c7ed",
+      "bytes": 21667
+    },
+    {
+      "source": "receipt.normal.json",
+      "destination": "05-knowledge/results/source63_separator_debt_20261021/audit/receipt.normal.json",
+      "sha256": "dd99d61117672ac15548759e2c7d64f7a1db9757ac738694ec10d9c9f3c94636",
+      "bytes": 29477
+    },
+    {
+      "source": "receipt.optimized.json",
+      "destination": "05-knowledge/results/source63_separator_debt_20261021/audit/receipt.optimized.json",
+      "sha256": "dd99d61117672ac15548759e2c7d64f7a1db9757ac738694ec10d9c9f3c94636",
+      "bytes": 29477
+    },
+    {
+      "source": "SHA256SUMS",
+      "destination": "05-knowledge/results/source63_separator_debt_20261021/audit/SHA256SUMS",
+      "sha256": "d810ad4f340b3ec78a8252132150244b43b0bf69d0f837911a4b5f36a0158e3a",
+      "bytes": 425
+    }
+  ],
+  "manifest_file": {
+    "source": "ADD_ONLY_MANIFEST.json",
+    "destination": "05-knowledge/results/source63_separator_debt_20261021/audit/ADD_ONLY_MANIFEST.json",
+    "self_hash": "Provided separately in the auditor handoff; not recursively embedded."
+  },
+  "expected_existing_files_modified": [],
+  "expected_files_deleted": [],
+  "audited_packet_sha256": "8077d5e3552f93bca4dda19f5314bdadc26556396ea1df8658c4e9ca9466a22a",
+  "upstream_revision": "c4a7875652a5ea516e93a31c3c6410d2204773b2",
+  "publication_requires": "Root exact approval; this audit does not itself authorize publisher writes."
+}

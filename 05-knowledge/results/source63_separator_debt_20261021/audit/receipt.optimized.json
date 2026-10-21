@@ -1,0 +1,1270 @@
+{
+  "checks": {
+    "63 distinct original exponents": 1,
+    "N family first literal strict gap base": 1,
+    "N modular division exact": 5,
+    "N zero is exactly original63": 1,
+    "ROOT-word guard is not ROOT for its positive lift": 1,
+    "actual child suffix identity and clocks": 63,
+    "actual first odd half descent": 63,
+    "actual original 125-power ROOT endpoint": 63,
+    "actual original ROOT clocks": 63,
+    "actual original child native registers": 63,
+    "actual original child unchanged": 63,
+    "actual original template word prefix": 63,
+    "all proper odd checkpoints above half": 1282,
+    "all-depth equality finite controls": 8,
+    "all-height guard quantified least positive anchor": 63,
+    "all63 authentic ROOT total clocks": 1,
+    "all63 exact charge and barrier bounds": 63,
+    "anchor minimum terminal divisibility": 63,
+    "anchor proves all-height half inequality": 63,
+    "common barrier actually attained at638": 1,
+    "compiled endpoint terminal odd bit": 252,
+    "compiled word exact native valuation": 5380,
+    "complement 149 actual odd shortcut branches": 149,
+    "complement exact modulus and positive class": 1,
+    "complement misses baseline depth18 atlas": 1,
+    "complement misses every one of63 guards": 63,
+    "displayed complement actual exponent congruence": 1,
+    "displayed complement residue parsed": 1,
+    "displayed exact common barrier and debt": 1,
+    "displayed exact fraction: debt": 1,
+    "displayed exact fraction: exit debt": 1,
+    "displayed exact fraction: exit margin": 1,
+    "displayed exact fraction: lambda": 1,
+    "displayed exact fraction: ordinary cone": 1,
+    "displayed exact fraction: physical barrier": 1,
+    "displayed exact fraction: positive": 1,
+    "displayed exact fraction: positive barrier": 1,
+    "displayed exact fraction: separator cone": 1,
+    "displayed exact fraction: uniform margin": 1,
+    "displayed grounded-family carry": 1,
+    "displayed largest finite macro control": 1,
+    "displayed source63 word located": 1,
+    "distinct actual literal and odd half clocks": 63,
+    "every source63 proper odd prefix expands": 33,
+    "exact source63 first-exit lift": 5,
+    "exact terminal extension preserves original source guard": 252,
+    "exported common extrema": 1,
+    "exported infinite complement identity": 1,
+    "frozen input byte-identical to original Git source": 1,
+    "frozen mathematical note identity": 1,
+    "frozen original 63-source input identity": 1,
+    "huge period exact integer": 1,
+    "huge period order exact": 1,
+    "independent depth18 residual universe exactly retained": 1,
+    "independently discovered complete original ROOT word": 63,
+    "independently discovered source63 ROOT word": 1,
+    "inherited template exact carrier": 63,
+    "inherited terminal-packet criterion already sufficient": 1,
+    "lifting controls exact 3-adic valuation": 34,
+    "macro actual clocks and reset count": 8,
+    "macro actual first odd exit": 8,
+    "macro exact actual source and child": 8,
+    "macro literal clock": 8,
+    "macro strict payment margin": 8,
+    "minimal finite separator repair": 1,
+    "mixed-generator separator control": 42,
+    "native 15/35 compatible CRT": 252,
+    "native discovery cap not exhausted": 580401,
+    "native positive odd state": 580480,
+    "no early final-run literal descent coefficient": 1,
+    "no finite separator repair hostile": 1,
+    "no-separator cone counterexample": 1,
+    "observer period12 is exact": 1,
+    "original source native registers": 63,
+    "pinned Git object authentication": 14,
+    "pinned inherited repository revision": 1,
+    "positive integer valuation": 19344,
+    "prime register exact modular division": 756,
+    "prime register full denominator retained": 756,
+    "producer manifest hash": 7,
+    "producer normal and optimized receipts equal": 1,
+    "producer row agrees with independent coefficients": 63,
+    "second generator exact data": 1,
+    "second generator same cone": 1,
+    "source4575 first-exit debt exceeds two": 1,
+    "source55 later-descent hostile is not first exit": 1,
+    "source63 actual prime registers": 1,
+    "source63 cylinder preserves first clocks": 5,
+    "source63 exact endpoint-odd cylinder": 1,
+    "source63 first ROOT clocks": 1,
+    "source63 first literal descent": 1,
+    "source63 first odd descent": 1,
+    "source63 lifted first exit paid": 5,
+    "source63 prefix clocks": 1,
+    "symbolic N actual prime-register formula": 5,
+    "symbolic N integrality": 5,
+    "symbolic N oddness": 5,
+    "symbolic N separated clocks": 5,
+    "unique terminal-bit exponent inverse": 13503,
+    "unrolled signed identity": 447,
+    "variable terminal valuation charge control": 252
+  },
+  "count": 1204846,
+  "independent_residual_exponents": [
+    10,
+    14,
+    24,
+    74,
+    98,
+    126,
+    130,
+    138,
+    142,
+    162,
+    170,
+    202,
+    206,
+    218,
+    226,
+    280,
+    298,
+    344,
+    346,
+    366,
+    386,
+    398,
+    426,
+    458,
+    462,
+    474,
+    490,
+    514,
+    554,
+    568,
+    586,
+    590,
+    602,
+    610,
+    638,
+    642,
+    654,
+    658,
+    664,
+    666,
+    712,
+    714,
+    718,
+    730,
+    738,
+    766,
+    792,
+    802,
+    810,
+    824,
+    842,
+    846,
+    874,
+    920,
+    938,
+    952,
+    968,
+    970,
+    974,
+    984,
+    986,
+    1006,
+    1018
+  ],
+  "maximum_template_debt": "19570720043629832341867979099563244457/10633823966279326983230456482242756608",
+  "original_125_source_clocks": [
+    {
+      "first_literal_half": [
+        30,
+        48
+      ],
+      "first_odd_half": [
+        18,
+        30,
+        48
+      ],
+      "j": 10,
+      "odd": 142,
+      "ordinary": 437,
+      "shortcut": 295,
+      "word_sha256": "78d01641a75d0d135c2f57e3208ff18979f6654f4c0bf18192d9cd2753477a42"
+    },
+    {
+      "first_literal_half": [
+        40,
+        64
+      ],
+      "first_odd_half": [
+        24,
+        40,
+        64
+      ],
+      "j": 14,
+      "odd": 238,
+      "ordinary": 713,
+      "shortcut": 475,
+      "word_sha256": "4c3e7188226a1e2c32d70d4cb8fc54c07d2ea913162166e65876708ebb686d6c"
+    },
+    {
+      "first_literal_half": [
+        52,
+        84
+      ],
+      "first_odd_half": [
+        32,
+        52,
+        84
+      ],
+      "j": 24,
+      "odd": 355,
+      "ordinary": 1085,
+      "shortcut": 730,
+      "word_sha256": "ea1563a7457851731017cc76775d158ad5fd7f903238f1f4a61548b77a564344"
+    },
+    {
+      "first_literal_half": [
+        21,
+        33
+      ],
+      "first_odd_half": [
+        12,
+        21,
+        33
+      ],
+      "j": 74,
+      "odd": 1295,
+      "ordinary": 3863,
+      "shortcut": 2568,
+      "word_sha256": "79d7350bfc6a85f84c925ccf3ec31690acbf1fa1b8c2a92fa2896a9b9c5897a4"
+    },
+    {
+      "first_literal_half": [
+        33,
+        53
+      ],
+      "first_odd_half": [
+        20,
+        36,
+        56
+      ],
+      "j": 98,
+      "odd": 1590,
+      "ordinary": 4793,
+      "shortcut": 3203,
+      "word_sha256": "38d56f82531130617c3fdcee2bf09dcc212d8815b4053fbb4045d3611f7a239c"
+    },
+    {
+      "first_literal_half": [
+        24,
+        38
+      ],
+      "first_odd_half": [
+        14,
+        27,
+        41
+      ],
+      "j": 126,
+      "odd": 2156,
+      "ordinary": 6451,
+      "shortcut": 4295,
+      "word_sha256": "f1aa18fd15153beb4887d67a589b1d34c5f1a6e762d019ff4273d29df850a6c8"
+    },
+    {
+      "first_literal_half": [
+        24,
+        38
+      ],
+      "first_odd_half": [
+        14,
+        27,
+        41
+      ],
+      "j": 130,
+      "odd": 1944,
+      "ordinary": 5931,
+      "shortcut": 3987,
+      "word_sha256": "71ee175b6c93a1381d92e8b50b120e4db11bc13a4bcb3b8a07f30b8ff41eb12b"
+    },
+    {
+      "first_literal_half": [
+        32,
+        51
+      ],
+      "first_odd_half": [
+        19,
+        32,
+        51
+      ],
+      "j": 138,
+      "odd": 2673,
+      "ordinary": 7871,
+      "shortcut": 5198,
+      "word_sha256": "f63d67ec0c8c8b0b533880f9c84cf73850236ea85b9a7d3ed5e5624bcd1f374a"
+    },
+    {
+      "first_literal_half": [
+        49,
+        79
+      ],
+      "first_odd_half": [
+        30,
+        50,
+        80
+      ],
+      "j": 142,
+      "odd": 2355,
+      "ordinary": 7077,
+      "shortcut": 4722,
+      "word_sha256": "0e0e86c5c254a4a0898afa2ab4188fbcbd7be25e260dda1478766f3598699019"
+    },
+    {
+      "first_literal_half": [
+        25,
+        40
+      ],
+      "first_odd_half": [
+        15,
+        25,
+        40
+      ],
+      "j": 162,
+      "odd": 3281,
+      "ordinary": 9610,
+      "shortcut": 6329,
+      "word_sha256": "b3a9a135d476bde3959a7e2efd91b6a5e1ec47653d685a9ace6317b50c9102b7"
+    },
+    {
+      "first_literal_half": [
+        43,
+        69
+      ],
+      "first_odd_half": [
+        26,
+        44,
+        70
+      ],
+      "j": 170,
+      "odd": 3080,
+      "ordinary": 9146,
+      "shortcut": 6066,
+      "word_sha256": "4709dbbd08490b26bda5b58ce6c21e8cc83ef78405d2193804b209f0a6703a50"
+    },
+    {
+      "first_literal_half": [
+        79,
+        128
+      ],
+      "first_odd_half": [
+        49,
+        79,
+        128
+      ],
+      "j": 202,
+      "odd": 3239,
+      "ordinary": 9780,
+      "shortcut": 6541,
+      "word_sha256": "18ec3892bfad1d3d5d3ca00644c7d2b7954765d80edd8e74e61530dfeade0050"
+    },
+    {
+      "first_literal_half": [
+        44,
+        71
+      ],
+      "first_odd_half": [
+        27,
+        44,
+        71
+      ],
+      "j": 206,
+      "odd": 3383,
+      "ordinary": 10180,
+      "shortcut": 6797,
+      "word_sha256": "258268137909b068323f09c0b7cec9f815db91bdf7706261400193538423bb61"
+    },
+    {
+      "first_literal_half": [
+        36,
+        58
+      ],
+      "first_odd_half": [
+        22,
+        37,
+        59
+      ],
+      "j": 218,
+      "odd": 3575,
+      "ordinary": 10760,
+      "shortcut": 7185,
+      "word_sha256": "f946147b5028c0301c6c48d2c44aba2eaa8768174c7f204802783f72591ffd13"
+    },
+    {
+      "first_literal_half": [
+        59,
+        95
+      ],
+      "first_odd_half": [
+        36,
+        59,
+        95
+      ],
+      "j": 226,
+      "odd": 3885,
+      "ordinary": 11617,
+      "shortcut": 7732,
+      "word_sha256": "ff323a1e085042f248737a41d20b15be3eccdff10913a0fc9ffdc89f5d3abc64"
+    },
+    {
+      "first_literal_half": [
+        22,
+        35
+      ],
+      "first_odd_half": [
+        13,
+        22,
+        35
+      ],
+      "j": 280,
+      "odd": 4654,
+      "ordinary": 13981,
+      "shortcut": 9327,
+      "word_sha256": "abb6d50cb391f2fbcee8a644c5a64588ae1a2ad33ff3f001f08620d822fbd412"
+    },
+    {
+      "first_literal_half": [
+        27,
+        43
+      ],
+      "first_odd_half": [
+        16,
+        27,
+        43
+      ],
+      "j": 298,
+      "odd": 4913,
+      "ordinary": 14776,
+      "shortcut": 9863,
+      "word_sha256": "c41903004f504041f83352133e97f0e20481deff7e410e3045edcbda8a54f652"
+    },
+    {
+      "first_literal_half": [
+        25,
+        40
+      ],
+      "first_odd_half": [
+        15,
+        25,
+        40
+      ],
+      "j": 344,
+      "odd": 6251,
+      "ordinary": 18555,
+      "shortcut": 12304,
+      "word_sha256": "0d9375de0bbfea0e28a405c9c032be01c1196d21c565f382a9ccfcbf19f60130"
+    },
+    {
+      "first_literal_half": [
+        27,
+        43
+      ],
+      "first_odd_half": [
+        16,
+        27,
+        43
+      ],
+      "j": 346,
+      "odd": 5774,
+      "ordinary": 17336,
+      "shortcut": 11562,
+      "word_sha256": "9897be879997bb648087981eb24f479dc3355be221d9a437e5b0b620d3d8adc8"
+    },
+    {
+      "first_literal_half": [
+        24,
+        38
+      ],
+      "first_odd_half": [
+        14,
+        25,
+        39
+      ],
+      "j": 366,
+      "odd": 6213,
+      "ordinary": 18610,
+      "shortcut": 12397,
+      "word_sha256": "5563bd5664642e18fd6550fde10233aac315873dac3b6f3b706caf41cd030cb0"
+    },
+    {
+      "first_literal_half": [
+        22,
+        35
+      ],
+      "first_odd_half": [
+        13,
+        25,
+        38
+      ],
+      "j": 386,
+      "odd": 6349,
+      "ordinary": 19101,
+      "shortcut": 12752,
+      "word_sha256": "8fc17e14a4b9b60d8b2a0d4bd8fb3ee05ad36dfcfb9635587fde6b931d5e8ad8"
+    },
+    {
+      "first_literal_half": [
+        41,
+        66
+      ],
+      "first_odd_half": [
+        25,
+        41,
+        66
+      ],
+      "j": 398,
+      "odd": 6772,
+      "ordinary": 20278,
+      "shortcut": 13506,
+      "word_sha256": "538f2102f8c9745580a0d488f9e7e804d5051585e5825e5b70aafda3fd001a9e"
+    },
+    {
+      "first_literal_half": [
+        44,
+        71
+      ],
+      "first_odd_half": [
+        27,
+        44,
+        71
+      ],
+      "j": 426,
+      "odd": 7114,
+      "ordinary": 21357,
+      "shortcut": 14243,
+      "word_sha256": "9d52d8497203b88ed78e18de46410cf9c5bab74b79911c37924451b69625569f"
+    },
+    {
+      "first_literal_half": [
+        46,
+        74
+      ],
+      "first_odd_half": [
+        28,
+        47,
+        75
+      ],
+      "j": 458,
+      "odd": 7155,
+      "ordinary": 21686,
+      "shortcut": 14531,
+      "word_sha256": "a8e6b84da5b71c7534672f1a1afc909c27074781f62ed5bae09ff33ad4fe52ff"
+    },
+    {
+      "first_literal_half": [
+        28,
+        45
+      ],
+      "first_odd_half": [
+        17,
+        29,
+        46
+      ],
+      "j": 462,
+      "odd": 8113,
+      "ordinary": 24190,
+      "shortcut": 16077,
+      "word_sha256": "4d9e9dd5fd864c77d2fe7db66da7c8f6bc7935e6d46a158100ae70f89469bee3"
+    },
+    {
+      "first_literal_half": [
+        35,
+        56
+      ],
+      "first_odd_half": [
+        21,
+        35,
+        56
+      ],
+      "j": 474,
+      "odd": 7594,
+      "ordinary": 22932,
+      "shortcut": 15338,
+      "word_sha256": "a6ccc1ac93ca7d9dd2a26234918d47e7f7fb088c2dd92f70cad1e712be1d1542"
+    },
+    {
+      "first_literal_half": [
+        32,
+        51
+      ],
+      "first_odd_half": [
+        19,
+        35,
+        54
+      ],
+      "j": 490,
+      "odd": 7793,
+      "ordinary": 23558,
+      "shortcut": 15765,
+      "word_sha256": "8cc0acd7de2967e17f8b3ac569b21e7a042561a19a3116be18ffd8529c9195d6"
+    },
+    {
+      "first_literal_half": [
+        22,
+        35
+      ],
+      "first_odd_half": [
+        13,
+        22,
+        35
+      ],
+      "j": 514,
+      "odd": 8485,
+      "ordinary": 25514,
+      "shortcut": 17029,
+      "word_sha256": "de79fc4f5c449d5546cde71f2a40ca0007863bb7ec3b6f6266fbbfc71ca32851"
+    },
+    {
+      "first_literal_half": [
+        38,
+        61
+      ],
+      "first_odd_half": [
+        23,
+        40,
+        63
+      ],
+      "j": 554,
+      "odd": 9094,
+      "ordinary": 27367,
+      "shortcut": 18273,
+      "word_sha256": "a3e4692bba054b8e32b90d9c42f520850dbd9c40c827713d10119fa963c9be28"
+    },
+    {
+      "first_literal_half": [
+        55,
+        89
+      ],
+      "first_odd_half": [
+        34,
+        55,
+        89
+      ],
+      "j": 568,
+      "odd": 9524,
+      "ordinary": 28576,
+      "shortcut": 19052,
+      "word_sha256": "1e7fb76bbe1b5d47fc409408d439cb5eb81f41123104ff3db269076084aeecd5"
+    },
+    {
+      "first_literal_half": [
+        40,
+        64
+      ],
+      "first_odd_half": [
+        24,
+        41,
+        65
+      ],
+      "j": 586,
+      "odd": 9219,
+      "ordinary": 27913,
+      "shortcut": 18694,
+      "word_sha256": "762e87a01881a3bd65a4c19aaaedcca85fd80c748ffafb05e998f41cb105bcff"
+    },
+    {
+      "first_literal_half": [
+        25,
+        40
+      ],
+      "first_odd_half": [
+        15,
+        25,
+        40
+      ],
+      "j": 590,
+      "odd": 9079,
+      "ordinary": 27579,
+      "shortcut": 18500,
+      "word_sha256": "547654d67b8ce9a4ff0a89ea862ad0f3d37d3eeeca9466b035573de578d62ab6"
+    },
+    {
+      "first_literal_half": [
+        30,
+        48
+      ],
+      "first_odd_half": [
+        18,
+        30,
+        48
+      ],
+      "j": 602,
+      "odd": 9733,
+      "ordinary": 29353,
+      "shortcut": 19620,
+      "word_sha256": "eb5a611c2a7b731f9b07fd31cdcf5b88202961d147b60bac794c6097367baf31"
+    },
+    {
+      "first_literal_half": [
+        33,
+        53
+      ],
+      "first_odd_half": [
+        20,
+        33,
+        53
+      ],
+      "j": 610,
+      "odd": 10349,
+      "ordinary": 31001,
+      "shortcut": 20652,
+      "word_sha256": "164d6988d08216d695c658948865d48edad22f0b2f27f228e441c227230ef4ef"
+    },
+    {
+      "first_literal_half": [
+        149,
+        242
+      ],
+      "first_odd_half": [
+        93,
+        149,
+        242
+      ],
+      "j": 638,
+      "odd": 10547,
+      "ordinary": 31708,
+      "shortcut": 21161,
+      "word_sha256": "c92e1842ea7ce711a0257c646fe13f9b2d5fa60f69e75c2380803d2b530a0179"
+    },
+    {
+      "first_literal_half": [
+        27,
+        43
+      ],
+      "first_odd_half": [
+        16,
+        27,
+        43
+      ],
+      "j": 642,
+      "odd": 10166,
+      "ordinary": 30751,
+      "shortcut": 20585,
+      "word_sha256": "dbd2c60850684ecf0740d0cf9b30906ee98ebab4914bad9fb593ff3978b8957e"
+    },
+    {
+      "first_literal_half": [
+        25,
+        40
+      ],
+      "first_odd_half": [
+        15,
+        28,
+        43
+      ],
+      "j": 654,
+      "odd": 11336,
+      "ordinary": 33859,
+      "shortcut": 22523,
+      "word_sha256": "039247e5da764f1f6f2eee91ce8db7a72c0d96ba5f135a365c1eaa07c230db6b"
+    },
+    {
+      "first_literal_half": [
+        27,
+        43
+      ],
+      "first_odd_half": [
+        16,
+        27,
+        43
+      ],
+      "j": 658,
+      "odd": 11355,
+      "ordinary": 33936,
+      "shortcut": 22581,
+      "word_sha256": "337293c1a361184dedc190af5b2979d1221e8bf611e75be46d14991a8d1ce004"
+    },
+    {
+      "first_literal_half": [
+        22,
+        35
+      ],
+      "first_odd_half": [
+        13,
+        24,
+        37
+      ],
+      "j": 664,
+      "odd": 10766,
+      "ordinary": 32455,
+      "shortcut": 21689,
+      "word_sha256": "2ca1a01f6c95e7701cac4ca8eb23f58925a0352c6912bf3cbbe8757b8d900563"
+    },
+    {
+      "first_literal_half": [
+        25,
+        40
+      ],
+      "first_odd_half": [
+        15,
+        26,
+        41
+      ],
+      "j": 666,
+      "odd": 11532,
+      "ordinary": 34449,
+      "shortcut": 22917,
+      "word_sha256": "07e6dd192d28180e719199f9f356bfceb2ae1eb135fcd72de2e43d5f9e150a47"
+    },
+    {
+      "first_literal_half": [
+        28,
+        45
+      ],
+      "first_odd_half": [
+        17,
+        30,
+        47
+      ],
+      "j": 712,
+      "odd": 11514,
+      "ordinary": 34723,
+      "shortcut": 23209,
+      "word_sha256": "f8c4d5a10c3ded11b8a4b262b3d906179f27a9ea8566508e7dc5ec3c544b2ad3"
+    },
+    {
+      "first_literal_half": [
+        21,
+        33
+      ],
+      "first_odd_half": [
+        12,
+        21,
+        33
+      ],
+      "j": 714,
+      "odd": 11914,
+      "ordinary": 35771,
+      "shortcut": 23857,
+      "word_sha256": "0b212a4dc4b16191aea21c1a843244d95290d004455ac4839eaf831eeedd2c4e"
+    },
+    {
+      "first_literal_half": [
+        28,
+        45
+      ],
+      "first_odd_half": [
+        17,
+        29,
+        46
+      ],
+      "j": 718,
+      "odd": 12321,
+      "ordinary": 36851,
+      "shortcut": 24530,
+      "word_sha256": "3465b243bed97f6afa1256c6aa1d23abf1a22e3028149cd1f7ada9e6dd083e42"
+    },
+    {
+      "first_literal_half": [
+        51,
+        82
+      ],
+      "first_odd_half": [
+        31,
+        51,
+        82
+      ],
+      "j": 730,
+      "odd": 12267,
+      "ordinary": 36795,
+      "shortcut": 24528,
+      "word_sha256": "d4031ef9015ec0b6849a41dc5e6deb5719329391de568077090a2e78a7ca8281"
+    },
+    {
+      "first_literal_half": [
+        38,
+        61
+      ],
+      "first_odd_half": [
+        23,
+        39,
+        62
+      ],
+      "j": 738,
+      "odd": 11861,
+      "ordinary": 35801,
+      "shortcut": 23940,
+      "word_sha256": "76b6a3dd5acf38945e186789e7562307792cabee48f4d8f01da88b70b140eb5c"
+    },
+    {
+      "first_literal_half": [
+        30,
+        48
+      ],
+      "first_odd_half": [
+        18,
+        30,
+        48
+      ],
+      "j": 766,
+      "odd": 12722,
+      "ordinary": 38222,
+      "shortcut": 25500,
+      "word_sha256": "53b166492251121db4a30e9dc0de330aa224cf6bc12987c7aba7484f427d6bdd"
+    },
+    {
+      "first_literal_half": [
+        84,
+        136
+      ],
+      "first_odd_half": [
+        52,
+        88,
+        140
+      ],
+      "j": 792,
+      "odd": 13274,
+      "ordinary": 39830,
+      "shortcut": 26556,
+      "word_sha256": "988b69d2e9bc9489e48351b86d537feef1ee5878d6f14a249fa8726a12438ccf"
+    },
+    {
+      "first_literal_half": [
+        27,
+        43
+      ],
+      "first_odd_half": [
+        16,
+        28,
+        44
+      ],
+      "j": 802,
+      "odd": 13521,
+      "ordinary": 40538,
+      "shortcut": 27017,
+      "word_sha256": "9b9006db4cb615d6c2ed32f77ca140e66510af5adfefbb018d00ca7d06c23a8b"
+    },
+    {
+      "first_literal_half": [
+        25,
+        40
+      ],
+      "first_odd_half": [
+        15,
+        25,
+        40
+      ],
+      "j": 810,
+      "odd": 13870,
+      "ordinary": 41496,
+      "shortcut": 27626,
+      "word_sha256": "b5907d6dbef5bd66ae90387a35668b60cbb75355ebbdfeb5bf4e7a6bdcb7dd45"
+    },
+    {
+      "first_literal_half": [
+        24,
+        38
+      ],
+      "first_odd_half": [
+        14,
+        24,
+        38
+      ],
+      "j": 824,
+      "odd": 13840,
+      "ordinary": 41516,
+      "shortcut": 27676,
+      "word_sha256": "773eed6f45bc476d8d06aa1e19b217d74ba2e656e38caa07a5eed830ad00886b"
+    },
+    {
+      "first_literal_half": [
+        44,
+        71
+      ],
+      "first_odd_half": [
+        27,
+        44,
+        71
+      ],
+      "j": 842,
+      "odd": 13860,
+      "ordinary": 41693,
+      "shortcut": 27833,
+      "word_sha256": "fd77e6aa2cd25214ffd0e0586859103fa5237208536cc000a56f78958e016255"
+    },
+    {
+      "first_literal_half": [
+        21,
+        33
+      ],
+      "first_odd_half": [
+        12,
+        23,
+        35
+      ],
+      "j": 846,
+      "odd": 14250,
+      "ordinary": 42729,
+      "shortcut": 28479,
+      "word_sha256": "585413664ca5c3e03512cca69f833d840f629622381db7b974e7be26869a5370"
+    },
+    {
+      "first_literal_half": [
+        22,
+        35
+      ],
+      "first_odd_half": [
+        13,
+        23,
+        36
+      ],
+      "j": 874,
+      "odd": 14067,
+      "ordinary": 42451,
+      "shortcut": 28384,
+      "word_sha256": "e06757c207cc7ed2f2fde280e763fe1cb342f5913add4129b608edefbe8ac899"
+    },
+    {
+      "first_literal_half": [
+        25,
+        40
+      ],
+      "first_odd_half": [
+        15,
+        25,
+        40
+      ],
+      "j": 920,
+      "odd": 15692,
+      "ordinary": 46972,
+      "shortcut": 31280,
+      "word_sha256": "415f1d5d209d9542d80aeda36743de31faeefbe899dc44afbd8d99a0b2bf3723"
+    },
+    {
+      "first_literal_half": [
+        30,
+        48
+      ],
+      "first_odd_half": [
+        18,
+        30,
+        48
+      ],
+      "j": 938,
+      "odd": 15794,
+      "ordinary": 47361,
+      "shortcut": 31567,
+      "word_sha256": "b09bd34cedf78c151e2f58febda28f13e932532300dd1be0d516c65bad987bda"
+    },
+    {
+      "first_literal_half": [
+        25,
+        40
+      ],
+      "first_odd_half": [
+        15,
+        25,
+        40
+      ],
+      "j": 952,
+      "odd": 15622,
+      "ordinary": 47014,
+      "shortcut": 31392,
+      "word_sha256": "37e462ef59ed08a721d63d1d6cc54d8e97dfce14f1e91ac7c32531d5e74cf1b0"
+    },
+    {
+      "first_literal_half": [
+        33,
+        53
+      ],
+      "first_odd_half": [
+        20,
+        34,
+        54
+      ],
+      "j": 968,
+      "odd": 15982,
+      "ordinary": 48056,
+      "shortcut": 32074,
+      "word_sha256": "44d9edb9fb441d647a65f3d1cb4d10194c79c1352c34f01d087d59a6faf1b095"
+    },
+    {
+      "first_literal_half": [
+        47,
+        76
+      ],
+      "first_odd_half": [
+        29,
+        50,
+        79
+      ],
+      "j": 970,
+      "odd": 16425,
+      "ordinary": 49215,
+      "shortcut": 32790,
+      "word_sha256": "a7e40a22a786373887829bc5bd482dacc76fc381fedefeaf2ad8128a6aad79a9"
+    },
+    {
+      "first_literal_half": [
+        21,
+        33
+      ],
+      "first_odd_half": [
+        12,
+        21,
+        33
+      ],
+      "j": 974,
+      "odd": 16225,
+      "ordinary": 48726,
+      "shortcut": 32501,
+      "word_sha256": "49060b5bbd1129c8deedb78349e22fea507b7b8e95faa6d1a8293b1fbf23273d"
+    },
+    {
+      "first_literal_half": [
+        33,
+        53
+      ],
+      "first_odd_half": [
+        20,
+        36,
+        56
+      ],
+      "j": 984,
+      "odd": 15723,
+      "ordinary": 47498,
+      "shortcut": 31775,
+      "word_sha256": "efa4408e98e9bc58cde50bf107e36e040c6314a7fe90319cd2ee2078ae54060b"
+    },
+    {
+      "first_literal_half": [
+        30,
+        48
+      ],
+      "first_odd_half": [
+        18,
+        30,
+        48
+      ],
+      "j": 986,
+      "odd": 16404,
+      "ordinary": 49272,
+      "shortcut": 32868,
+      "word_sha256": "a769deecd982658b12763c164bf4ff7faf6545a2ca2888fa83dea0aaac7f9273"
+    },
+    {
+      "first_literal_half": [
+        30,
+        48
+      ],
+      "first_odd_half": [
+        18,
+        30,
+        48
+      ],
+      "j": 1006,
+      "odd": 17130,
+      "ordinary": 51288,
+      "shortcut": 34158,
+      "word_sha256": "453c6e65ea7674033eb98058e5d088b92ae2f97cb38a692280c80874c091a8f8"
+    },
+    {
+      "first_literal_half": [
+        27,
+        43
+      ],
+      "first_odd_half": [
+        16,
+        28,
+        44
+      ],
+      "j": 1018,
+      "odd": 18303,
+      "ordinary": 54404,
+      "shortcut": 36101,
+      "word_sha256": "a5eec9c04c5ad7401f9750a2b178c65c9a126706c99a27497d40b89d95c8e35e"
+    }
+  ],
+  "original_source63": {
+    "first_exit_margin": "66072391942765/140737488355328",
+    "odd": 39,
+    "ordinary": 107,
+    "separator_constant": "14060731968178560/14425381885981321",
+    "shortcut": 68
+  },
+  "packet_hashes": {
+    "README.md": "16606bf668fd1d5087ea8b16b2951ec09448e7ddcce0ea2bc6fa2244f1dc0957",
+    "SOURCE63_SEPARATOR_DEBT.md": "8077d5e3552f93bca4dda19f5314bdadc26556396ea1df8658c4e9ca9466a22a",
+    "SOURCE_INVENTORY.json": "a4b715a022e9fbdfd91534f7147f68e75231f37dca9cdc817cf1247dc02e8323",
+    "inputs/guarded_children_105_20261018g.json": "c08611140beb4db0545e67de0d9ff8f066d6bfbd909b29ca6e9b716432800822",
+    "receipt.normal.json": "45ed11eb921662d031cd40cfed89a9330a395f56006a1ddd8a38ff5aaaa5b936",
+    "receipt.optimized.json": "45ed11eb921662d031cd40cfed89a9330a395f56006a1ddd8a38ff5aaaa5b936",
+    "verify_source_debt_cones.py": "8ba01c75c93806e60b0fa0c59a6f6d08bf5cd3caccea0f6e46d4377d65abe940"
+  },
+  "sharp_common_barrier": "4266355147139105617099249103669931071699939909/477968830014611705030075252778875930010254189",
+  "status": "PASS: independently audited scoped proof and finite-exact sources; no universal coverage claim",
+  "symbolic_grounded_family_period": 11118121133111046,
+  "totals": {
+    "odd": 575652,
+    "ordinary": 1728357,
+    "shortcut": 1152705
+  },
+  "uncovered_progression": {
+    "modulus": "713623846352979940529142984724747568191373312",
+    "no_half_through": 151,
+    "residue": "664296726805932536334678166828372531073326538"
+  },
+  "upstream_git_authentication": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "path": "00-navigation/START-HERE.md",
+      "sha256": "3f50c6948f798d7ebc81e5568422c8bc560d393fa777aa6c3067a7b04c26cb6a"
+    },
+    {
+      "path": "00-navigation/CURRENT-FRONTIER.md",
+      "sha256": "3a651df3843f370f0590a6f86aef97961d138e8198990fd1fdeddbf236628bf7"
+    },
+    {
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "fa66fea75074f148c78af934fe4b135c5e35d9f9f5c800c294df396265389b47"
+    },
+    {
+      "path": "05-knowledge/results/charge_palettes_boundary_20261020g/charge.md",
+      "sha256": "b7c75f603b857995e8e3cee8bac7d1a48303481caf0b140d3fba4a2a6aecbf83"
+    },
+    {
+      "path": "05-knowledge/results/trijection_reset_20261020/reset_composition.md",
+      "sha256": "be7c98e400fa14fc5cb8f6ca0694f6551ba0d9ba6639c3acd45a2ca038b26f84"
+    },
+    {
+      "path": "05-knowledge/results/guarded_reset_debt_20261020/RESET_DEBT_COMPOSITION.md",
+      "sha256": "de0e4af2db76a676848da5d46d1b74bd722746182e92a0d138608191989c716e"
+    },
+    {
+      "path": "05-knowledge/results/guarded_reset_debt_20261020/FINITE_STATE_BARRIERS_ADDENDUM.md",
+      "sha256": "ddcae18d24536dc584f2356691b281a75df3f36e842a263ee3a69dbd957df5ec"
+    },
+    {
+      "path": "05-knowledge/results/guarded_children_105_20261018g.md",
+      "sha256": "75a59e714f2aba35ebf6b9dcaff3e52e06d520ff42542bc06be35bf3f25c575b"
+    },
+    {
+      "path": "05-knowledge/results/guarded_children_105_20261018g.json",
+      "sha256": "c08611140beb4db0545e67de0d9ff8f066d6bfbd909b29ca6e9b716432800822"
+    },
+    {
+      "path": "05-knowledge/results/digit_125_nested_105_20261018q.md",
+      "sha256": "c330588750b61454ec18d9f11db9f94d7937e3a5704571df6a9bdd5080f7c03e"
+    },
+    {
+      "path": "05-knowledge/results/first_exit_complement_games_20261020/README.md",
+      "sha256": "d6a5900183b50c247888b162cf2fab8ac7e12ba7eff24389281d8b2f009f0c56"
+    },
+    {
+      "path": "05-knowledge/results/adaptive_budgets_smooth_interfaces_20261020/CONNECTIONS.md",
+      "sha256": "5e280163e69c838e17663a6bebcef3df4d4f7e57e6c01301cc900602a7359b62"
+    }
+  ],
+  "upstream_revision": "c4a7875652a5ea516e93a31c3c6410d2204773b2"
+}

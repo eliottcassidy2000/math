@@ -1,0 +1,68 @@
+{
+  "repository_revision": "c4a7875652a5ea516e93a31c3c6410d2204773b2",
+  "source_files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "path": "00-navigation/START-HERE.md",
+      "sha256": "3f50c6948f798d7ebc81e5568422c8bc560d393fa777aa6c3067a7b04c26cb6a"
+    },
+    {
+      "path": "00-navigation/CURRENT-FRONTIER.md",
+      "sha256": "3a651df3843f370f0590a6f86aef97961d138e8198990fd1fdeddbf236628bf7"
+    },
+    {
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "fa66fea75074f148c78af934fe4b135c5e35d9f9f5c800c294df396265389b47"
+    },
+    {
+      "path": "05-knowledge/results/charge_palettes_boundary_20261020g/charge.md",
+      "sha256": "b7c75f603b857995e8e3cee8bac7d1a48303481caf0b140d3fba4a2a6aecbf83"
+    },
+    {
+      "path": "05-knowledge/results/trijection_reset_20261020/reset_composition.md",
+      "sha256": "be7c98e400fa14fc5cb8f6ca0694f6551ba0d9ba6639c3acd45a2ca038b26f84"
+    },
+    {
+      "path": "05-knowledge/results/guarded_reset_debt_20261020/RESET_DEBT_COMPOSITION.md",
+      "sha256": "de0e4af2db76a676848da5d46d1b74bd722746182e92a0d138608191989c716e"
+    },
+    {
+      "path": "05-knowledge/results/guarded_reset_debt_20261020/FINITE_STATE_BARRIERS_ADDENDUM.md",
+      "sha256": "ddcae18d24536dc584f2356691b281a75df3f36e842a263ee3a69dbd957df5ec"
+    },
+    {
+      "path": "05-knowledge/results/guarded_children_105_20261018g.md",
+      "sha256": "75a59e714f2aba35ebf6b9dcaff3e52e06d520ff42542bc06be35bf3f25c575b"
+    },
+    {
+      "path": "05-knowledge/results/guarded_children_105_20261018g.json",
+      "sha256": "c08611140beb4db0545e67de0d9ff8f066d6bfbd909b29ca6e9b716432800822"
+    },
+    {
+      "path": "05-knowledge/results/digit_125_nested_105_20261018q.md",
+      "sha256": "c330588750b61454ec18d9f11db9f94d7937e3a5704571df6a9bdd5080f7c03e"
+    },
+    {
+      "path": "05-knowledge/results/first_exit_complement_games_20261020/README.md",
+      "sha256": "d6a5900183b50c247888b162cf2fab8ac7e12ba7eff24389281d8b2f009f0c56"
+    },
+    {
+      "path": "05-knowledge/results/adaptive_budgets_smooth_interfaces_20261020/CONNECTIONS.md",
+      "sha256": "5e280163e69c838e17663a6bebcef3df4d4f7e57e6c01301cc900602a7359b62"
+    }
+  ],
+  "stage_only": true,
+  "proposed_destination": "05-knowledge/results/source63_separator_debt_20261021/",
+  "reproduction": [
+    "python3 verify_source_debt_cones.py",
+    "python3 -O verify_source_debt_cones.py"
+  ],
+  "scope": "No repository or remote edits by this producer. All63 source certificates are inherited, frozen and replayed; symbolic extensions are proved separately."
+}
