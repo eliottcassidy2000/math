@@ -17,7 +17,8 @@ status: >
   tournament of T*_7's score multiset not isomorphic to T*_7 (VF2); (5) the counts 32 / 4 / 16 / 2 / 2 over all 8!
   bijections (trijection_klein_dictionary_20261020.py).
   CITED: THM-643 (frame), THM-644, THM-646, THM-2444, THM-2454 (alphabet and centre law), THM-4566 (idoneal planes),
-  THM-4729 (closed/open, L3, Proposition K), THM-4730 (strong alphabet), THM-4731 (twins, depth, tribonacci node),
+  THM-4729 (closed/open, L3/L4, Proposition K), THM-4730 (strong alphabet), pure_blue_atom_classification_20261020 (the
+  pure-blue-touching total L_n + 3 J_n and the prefix classification), HYP-1824/1825 (the earlier class-level "chiral"), THM-4731 (twins, depth, tribonacci node),
   HYP-9345, HYP-9346; the endpoint-two and endpoint-three packets (05-knowledge/results/endpoint_two_repairs_20261020g,
   endpoint_three_repairs_20261020h: the (n-4,3) theorem for n >= 11, the "no order-ten census" scope); the trijection
   reset packet (05-knowledge/results/trijection_reset_20261020: the chart, C/Q/CQ, the tetrahedral obstruction); the
@@ -99,7 +100,7 @@ Consequence for the endpoint lanes: the `(n-4, 3)` three-move theorem, proved th
 
 ## 4. Pure-blue-touching layers (PROVED, scoped)
 
-For `n >= 6` the pure-blue end of a closed blue line is open (THM-4729 L4, conditional on the repaired odd-order part of THM-4730, with L3), the last vertex `z` of its presentation has out-degree `delta = 0` (bottom block `K1`) or `1` (bottom block `C3`; `T5` occurs only at the centre by THM-2454), and the closed partner has `d(z) = n - 2 - delta`. So the layer is `n - 2` or `n - 3`, the count in layer `k` is `sum tc(C)` over the pure-blue stacks with `delta = n - 2 - k`, and the layers `k <= n - 4` are pure-blue-free (`k = 3` for `n >= 7`, `k = 4` for `n >= 8`). At `n = 5` the strong pure-blue `T5` (`HC = 2`) gives two closed presentations at `k = 2` and an open one whose partner has `k = 1`.
+For `n >= 6` the pure-blue end of a closed blue line is open (THM-4729 L4, conditional on the repaired odd-order part of THM-4730, with L3), the last vertex `z` of its presentation has out-degree `delta = 0` (bottom block `K1`) or `1` (bottom block `C3`; `T5` occurs only at the centre by THM-2454), and the closed partner has `d(z) = n - 2 - delta`. So the layer is `n - 2` or `n - 3`, the count in layer `k` is `sum tc(C)` over the pure-blue stacks with `delta = n - 2 - k` (the total `sum tc` and the mixed other ends are pure_blue_atom_classification_20261020's, cited; the layer placement is new), and the layers `k <= n - 4` are pure-blue-free (`k = 3` for `n >= 7`, `k = 4` for `n >= 8`). At `n = 5` the strong pure-blue `T5` (`HC = 2`) gives two closed presentations at `k = 2` and an open one whose partner has `k = 1`.
 
 ## 5. The Klein dictionary (PROVED; counts FINITE-EXACT)
 
