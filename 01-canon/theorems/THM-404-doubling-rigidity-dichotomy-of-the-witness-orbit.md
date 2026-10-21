@@ -1,7 +1,7 @@
 ---
 id: THM-404
-title: Doubling-rigidity dichotomy — the AP witness orbit is ⟨×2⟩-connected iff n is odd
-status: PROVED
+title: Doubling preserves the AP unit-witness set iff n is odd; its cycles are subgroup cosets
+status: PROVED arithmetic statement; connectivity language corrected 2026-10-20; loneliness propagation remains OPEN
 source: opus-2026-06-03-S594
 depends_on:
   - THM-403   # the witness orbit is (ℤ/n)*
@@ -10,18 +10,18 @@ related:
   - THM-398   # C′ (the even-n residual)
 ---
 
-# THM-404 — doubling rigidity: the witness orbit is ⟨×2⟩-connected iff n is odd
+# THM-404 — doubling invariance and the subgroup-coset decomposition
 
 ## Statement
 
-Let `W = { j/n : j ∈ (ℤ/n)^* }` be the AP's floor-witness orbit (THM-403). The
+Let `n>=2` and `W = { j/n : j ∈ (ℤ/n)^* }` be the AP's floor-witness set (THM-403). The
 **doubling map** `t ↦ 2t` acts on the clock as `j ↦ 2j (mod n)`. Then:
 
 > `2 · W ⊆ W` **iff `2 ∈ (ℤ/n)^*` iff `n` is ODD.**
 >
 > - **`n` odd:** `×2` is a bijection of `(ℤ/n)^*`, permuting `W`; the orbits are the
 >   cosets of the cyclic subgroup `⟨2⟩ ≤ (ℤ/n)^*`, each of size `ord_n(2)`. The witness
->   orbit is **dynamically connected** (foliated by doubling cycles).
+>   set is one doubling cycle **iff `⟨2⟩=(ℤ/n)^*`**, not for every odd `n`.
 > - **`n` even:** `×2` maps every unit `j` to `2j`, which is even, hence
 >   `gcd(2j, n) ≥ 2`, so `2j ∉ (ℤ/n)^*`. Thus `2·W ∩ W = ∅` — the doubling action
 >   **fragments** the witness orbit (no nontrivial doubling cycle lies inside `W`).
@@ -38,27 +38,27 @@ multiplicative order `ord_n(2)`.
 `gcd(2j,n) ≥ 2`, so `2j` is a non-unit, i.e. `2j/n ∉ W`. Hence `×2` carries `W` entirely
 out of `W`. ∎
 
-## LRC corollary
+## Arithmetic consequence and the remaining LRC obligation
 
-The polynomial / sieve method propagates loneliness along the doubling `t ↦ 2t`
-(Frobenius at 2). It requires the witness orbit `W` to be **doubling-connected**:
+Oddness makes doubling a permutation of the witness set. It does not make
+that permutation transitive: at the first hostile modulus `n=7` its cycles
+are `1->2->4->1` and `3->6->5->3`. The missing coordinate in the original
+connectivity claim was the coset in `(Z/nZ)^*/<2>`.
 
-> **Odd `n`:** `W` is `⟨×2⟩`-connected, so the propagation rides the doubling cycles —
-> consistent with the odd cases being tractable.
-> **Even `n`:** `W` fragments (`2·W ∩ W = ∅`); the doubling propagation **stalls** — the
-> dynamical face of the even-`n` residual (C′ / the `2q` apex). For `n=14`,
-> `W = {1,3,5,9,11,13}/14` and `2·W = {2,6,10,18≡4,22≡8,26≡12}/14`, all non-units —
-> total fragmentation, the prime-2 nonunit obstruction.
-
-So the two rigidities of the same orbit (THM-403 static, THM-404 dynamical) **diverge
-exactly at the even-`n` frontier**: static (cyclotomic, `(ℤ/n)^*`) holds for all `n`;
-dynamical (`⟨×2⟩`-connectivity) holds iff `n` is odd.
+At `n=14`, `W={1,3,5,9,11,13}/14`, and doubling gives
+`{2,6,10,4,8,12}/14`, all non-units. Thus doubling does not preserve this
+exact-order witness set. These arithmetic statements do not themselves
+propagate a loneliness inequality, even within one cycle. A propagation
+claim additionally needs covariance of its actual safe-time predicate.
+The July 21 addendum below retains precisely that separate obligation.
 
 ## Verification
 
-`lrc_doubling_rigidity_dichotomy_s585.py`: the unit witness orbit is `⟨×2⟩`-connected for
-`n=5,7,9,11,13,15,17` (odd) and fragments into singletons for `n=6,8,10,12,14,16,18`
-(even) — exactly the theorem.
+The historical `lrc_doubling_rigidity_dichotomy_s585.py` artifact must not be
+quoted as a check of odd-modulus connectivity. The subgroup-coset proof
+above establishes permutation invariance, and the two literal `n=7` cycles
+refute connectivity. For even moduli no doubling edge stays in `W`; calling
+the induced graph isolated vertices does not give a self-map of `W`.
 
 **Artifacts:** see S585 (`lrc_doubling_rigidity_dichotomy_s585.out`). Builds on THM-403,
 THM-398. (Formalises HYP-2126.)

@@ -1,0 +1,96 @@
+{
+  "status": "FINITE-EXACT bounded audit; general proof in README",
+  "checks": 14,
+  "unit_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ]
+  ],
+  "counts": {
+    "atlas_graphs": 1253,
+    "geometric_necessary_graphs": 251,
+    "special_choices": 11094,
+    "failed_minimal_candidates": 0,
+    "codegree_removed_candidates": 3
+  },
+  "codegree_guard_near_miss": {
+    "vertices": 7,
+    "edges": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "special": [
+      0,
+      1
+    ],
+    "maximum_codegree": 4
+  },
+  "checker_sha256_lf": "0386763d9ccf78b1e399739948da49d56c45b97eb20e2b35e5565f30878f985f"
+}
