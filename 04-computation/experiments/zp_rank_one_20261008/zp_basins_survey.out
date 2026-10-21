@@ -9,6 +9,17 @@
      p = 23: min 1 (length 23): 0.76643, min 82 (length 72): 0.23357
      p = 29: min 1 (length 29): 0.90838, min 111 (length 97): 0.09162
      p = 31: min 1 (length 31): 0.97221, min 389 (length 108): 0.02779
+     p = 3: cycle shapes (minimum, k1, k2, lambda, runs of divisions) [(1, 1, 2, 0.5926, 1), (7, 2, 7, 0.8324, 1)]
+     p = 5: cycle shapes (minimum, k1, k2, lambda, runs of divisions) [(1, 1, 4, 0.4147, 1)]
+     p = 7: cycle shapes (minimum, k1, k2, lambda, runs of divisions) [(1, 1, 6, 0.3183, 1)]
+     p = 11: cycle shapes (minimum, k1, k2, lambda, runs of divisions) [(1, 1, 10, 0.217, 1), (642, 2, 55, 0.9899, 2)]
+     p = 13: cycle shapes (minimum, k1, k2, lambda, runs of divisions) [(1, 1, 12, 0.1872, 1)]
+     p = 17: cycle shapes (minimum, k1, k2, lambda, runs of divisions) [(1, 1, 16, 0.1468, 1), (79, 1, 48, 0.9143, 1)]
+     p = 19: cycle shapes (minimum, k1, k2, lambda, runs of divisions) [(1, 1, 18, 0.1325, 1)]
+     p = 23: cycle shapes (minimum, k1, k2, lambda, runs of divisions) [(1, 1, 22, 0.1109, 1), (82, 1, 71, 0.8925, 1)]
+     p = 29: cycle shapes (minimum, k1, k2, lambda, runs of divisions) [(1, 1, 28, 0.0891, 1), (111, 1, 96, 0.8934, 1)]
+     p = 31: cycle shapes (minimum, k1, k2, lambda, runs of divisions) [(1, 1, 30, 0.0836, 1), (389, 1, 107, 0.9638, 1)]
+  ok   the cycles agree with Carnielli's Table 1 (positive side; trivial cycle 1..p of length p); every cycle has lambda = (1/p)^k1 ((p+1)/p)^k2 < 1; every cycle has a single run of divisions (a 1-cycle) except the 642-cycle of C_11, which has two (a 2-cycle) (FINITE-EXACT; cycles KNOWN)
   ok   single trivial cycle for p = 5, 7, 13, 19; a second cycle with a positive basin share for p = 3, 11, 17, 23, 29, 31 (p = 11: minimum 642, length 57)
 (S2) basin boundaries, n <= 10^7
      p = 3: (N, second-basin share, boundary density, boundary x sqrt(ln N)) = [(1000, 0.921, 0.134, 0.3522), (10000, 0.9582, 0.0687, 0.2085), (100000, 0.96595, 0.04729, 0.1605), (1000000, 0.96679, 0.04031, 0.1498), (10000000, 0.96719, 0.0366, 0.147)]; q_eff = boundary/(2s(1-s)) at 10^7 = 0.577
@@ -19,5 +30,26 @@
 (S3) consecutive pairs merging at equal time before a cycle, p = 3
      n <= 10^6: merged at equal time above the cycles 0.4589; different basins 0.0403; Haar prediction 1 - q_3(T) at the typical orbit length T = ln(10^6)/|Lambda_3| = 79: 0.4983 (40000 paths)
   ok   the share of consecutive pairs merging above the cycles is within 0.08 of the Haar prediction at the typical orbit length (finite-size face of THM-4610 5(a)); pairs in different basins never merge (NUMERICAL)
+(S4) the sign-conjugate side: cycles of C_p on the negative integers (= cycles of F_p on the positive integers), starts -10^5..-1
+     p = 3: fixed points -1..-2; extra cycles (least |x|, length, share, k1, k2, lambda, runs): [(-22, 5, 0.2574, 1, 4, 1.0535, 1)]
+     p = 5: fixed points -1..-4; extra cycles (least |x|, length, share, k1, k2, lambda, runs): [(-57, 10, 0.1248, 1, 9, 1.032, 1)]
+     p = 7: fixed points -1..-6; extra cycles (least |x|, length, share, k1, k2, lambda, runs): []
+     p = 11: fixed points -1..-10; extra cycles (least |x|, length, share, k1, k2, lambda, runs): []
+     p = 13: fixed points -1..-12; extra cycles (least |x|, length, share, k1, k2, lambda, runs): [(-147, 36, 0.074, 1, 35, 1.0292, 1)]
+     p = 17: fixed points -1..-16; extra cycles (least |x|, length, share, k1, k2, lambda, runs): []
+     p = 19: fixed points -1..-18; extra cycles (least |x|, length, share, k1, k2, lambda, runs): [(-954, 117, 0.0144, 2, 115, 1.0099, 1)]
+     p = 23: fixed points -1..-22; extra cycles (least |x|, length, share, k1, k2, lambda, runs): [(-800, 75, 0.016, 1, 74, 1.014, 1)]
+     p = 29: fixed points -1..-28; extra cycles (least |x|, length, share, k1, k2, lambda, runs): []
+     p = 31: fixed points -1..-30; extra cycles (least |x|, length, share, k1, k2, lambda, runs): []
+  ok   on the negative integers C_p has the fixed points -1..-(p-1) and exactly the extra cycles of Carnielli's Table 1 (p = 3: -22; 5: -57; 13: -147; 19: -954; 23: -800; none for 7, 11, 17, 29, 31), for starts down to -10^5; so F_p, conjugate to C_p, has p - 1 fixed points on the positive integers; every extra negative cycle has lambda > 1 and a single run of divisions (FINITE-EXACT; cycles KNOWN)
+(S5) the 1-cycle equation x (p^(k1+k2) - (p+1)^k2) = c_w, and the single candidate for p = 2
+     extra 1-cycles (p, label, start of the multiplication run, k1, k2): [(3, 7, 7, 2, 7), (3, -22, -22, 1, 4), (5, -57, -57, 1, 9), (13, -147, -147, 1, 35), (17, 79, 79, 1, 48), (19, -954, -954, 2, 115), (23, 82, 82, 1, 71), (23, -800, -800, 1, 74), (29, 111, 111, 1, 96), (31, 389, 389, 1, 107)]
+     p = 2, k2 <= 2000: divisible single candidates, positive side [(1, 1, 1)], negative side [(0, 1, -1), (1, 2, -5)]
+  ok   every extra 1-cycle of C_p (p <= 31, both signs; 10 cycles) satisfies x (p^(k1+k2) - (p+1)^k2) = c_w for its run digits; for p = 2 the single candidate 3^k2 - 2^k2 is divisible only for the trivial cycle (positive side, as Steiner proved) and for the cycles -1, -5 (negative side), k2 <= 2000 (FINITE-EXACT)
+     naive expected 1-cycles with a division (positive, negative; trivial cycle included): {3: (0.94, 1.45), 5: (0.83, 1.02), 7: (0.96, 0.37), 11: (0.86, 0.28), 13: (0.83, 0.27), 17: (0.79, 0.21), 19: (0.82, 0.16), 23: (0.73, 0.21), 29: (0.76, 0.11), 31: (0.84, 0.1)}
+     p = 2, beyond the |D| = 1 shapes (the cycles 1, -1, -5): expected (positive, negative) from k2 <= 5: (0.298, 0.184); from 5 < k2 <= 2000: (4.77e-03, 1.94e-02)
+  ok   the naive count gives 0.5-1.2 expected positive 1-cycles per base p = 3..31 (the same order as found), while for p = 2 the expectation beyond the three |D| = 1 shapes sits in shapes with k2 <= 5 (checked exactly) and the tail is below 0.05 (HEURISTIC count, exact arithmetic)
+     primes p <= 31 (p >= 3) with an extra cycle of either sign: [3, 5, 11, 13, 17, 19, 23, 29, 31]
+  ok   among the primes 3 <= p <= 31, only p = 7 has no extra cycle of either sign in these ranges (FINITE-EXACT; Carnielli: d = 7 is the first d with none)
 
-ALL CHECKS PASSED  (38s)
+ALL CHECKS PASSED  (47s)

@@ -4,8 +4,11 @@ Note: 05-knowledge/results/zp_rank_one_coalescence_20261008.md (section 5).  Use
 Start (0, 1): Haar y and y + 1.  Digits are fresh uniform (Fact D), so the chain is simulated exactly from random digits.
 For p = 2, 3, 7, 11, 13, 17, 23: 4800 paths to T = 10^5; q(T) = P(no merge by T) and sqrt(T) q(T) (THM-4610 5(c):
 q >= c T^(-1/2); the T^(-1/2) upper rate is not claimed).  Also q at T_N = ln(10^7)/|Lambda_p|, the typical number of steps
-an integer near 10^7 takes to descend, to compare with q_eff of zp_basins_survey.py (S2).  Also the mean flip rate (2/p per step away from p | A) and the number of
-flips by T, so that q can be read against the flip clock.  NUMERICAL.  Prints ALL CHECKS PASSED.  Runtime about 10 minutes."""
+an integer near 10^7 takes to descend, to compare with q_eff of zp_basins_survey.py (S2) (with 10^5 paths at every N:
+zp_boundary_ratio.py).  Also the mean flip rate (2/p per step away from p | A) and the number of
+flips by T, so that q can be read against the flip clock.  Every q is printed with its binomial standard error (4800 paths: about 0.007 at q = 1/2); at this size the
+T^(-1/2) plateau of sqrt(T) q is not resolved (sqrt(T) x se is about 0.8 at T = 10^5).
+NUMERICAL.  Prints ALL CHECKS PASSED.  Runtime about 2 minutes."""
 import sys, os, math, random, time
 from multiprocessing import Pool
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -49,14 +52,15 @@ if __name__ == '__main__':
             row = []
             for T in TS:
                 q = sum(1 for ab, _ in r if ab is None or ab > T) / N
-                row.append((T, round(q, 5), round(math.sqrt(T) * q, 3)))
+                se = math.sqrt(q * (1 - q) / N)
+                row.append((T, round(q, 5), round(se, 5), round(math.sqrt(T) * q, 2), round(math.sqrt(T) * se, 2)))
             alive = [f for ab, f in r if ab is None]
             lam = (1 / p) * math.log(1 / p) + ((p - 1) / p) * math.log((p + 1) / p)
             TN = round(math.log(10 ** 7) / abs(lam))
             qTN = sum(1 for ab, _ in r if ab is None or ab > TN) / N
-            row.append(('T_N', TN, round(qTN, 4)))
+            row.append(('T_N', TN, round(qTN, 4), round(math.sqrt(qTN * (1 - qTN) / N), 4)))
             res[p] = row
-            print(f'     p = {p}: (T, q, sqrt(T) q) = {row}; unmerged at 10^5: {len(alive)} of {N}, '
+            print(f'     p = {p}: (T, q, se(q), sqrt(T) q, sqrt(T) se) = {row}; unmerged at 10^5: {len(alive)} of {N}, '
                   f'their mean flips {sum(alive) / max(1, len(alive)):.0f}  [{time.time() - t0:.0f}s]', flush=True)
     check(all(res[p][-2][1] > 0 and res[p][-2][1] < res[p][0][1] for p in res),
           'q(T) decreases and stays positive to T = 10^5 for p = 2, 3, 7, 11, 13, 17, 23 (NUMERICAL)')

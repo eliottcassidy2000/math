@@ -18,7 +18,7 @@ A = P^max(0,-k) e, digit i of v, digit j = (i + A) mod p of u (THM-4610's table)
       three 4-cycles with denominators 13, 7, -11 (l = 1, 2, 3), and {1, 2} is the integral member of the l = 2 family;
       the circulant tournaments on Z_7, Z_11, Z_13 with connection sets <2> = QR_7, <3> = QR_11 and <3> u 2<3> have affine
       automorphism groups of orders 21, 55, 39 (Z_p semidirect <2> or <3>).
-Prints ALL CHECKS PASSED.  Runtime about 1 minute."""
+Prints ALL CHECKS PASSED.  Runtime about 10 seconds."""
 import sys, math, random, time
 from fractions import Fraction as Fr
 
@@ -237,7 +237,7 @@ def descent(p, e):
 def section_C():
     print('(C) accessibility by explicit descent')
     for p in (3, 5, 7, 11, 13):
-        bad = 0; worst = 0.0
+        bad = 0; worst = 0.0; worst_all = (0.0, None)
         for e in range(-20000, 20001):
             if abs(e) < 2 or e % p == 0:
                 continue
@@ -249,6 +249,7 @@ def section_C():
                 bad += 1
             if abs(e) >= 1000:
                 worst = max(worst, abs(e2) / abs(e))
+            worst_all = max(worst_all, (abs(e2) / abs(e), -abs(e)))
         s1 = istep(p, *istep(p, 0, 1, 0), p - 2)
         s2 = istep(p, *istep(p, 0, -1, 1), 0)
         # full descent to (0,0) for every |e| <= 3000 following the explicit rules
@@ -267,7 +268,8 @@ def section_C():
                 full_bad += 1
         check(bad == 0 and s1 == (0, 0) and s2 == (0, 0) and full_bad == 0,
               f'p = {p}: the descent strictly decreases |e| for 2 <= |e| <= 20000 (positive bound (Pe - 1 + p^2 - p)/p^2 holds; '
-              f'worst ratio {worst:.3f} for |e| >= 1000); (0,1) -> (1,2) -> (0,0) and (0,-1) -> (-1,-2) -> (0,0); every |e| <= 3000 descends to 0')
+              f'worst ratio {worst:.3f} for |e| >= 1000, {worst_all[0]:.3f} over all 2 <= |e| <= 20000, first at |e| = {-worst_all[1]}); '
+              f'(0,1) -> (1,2) -> (0,0) and (0,-1) -> (-1,-2) -> (0,0); every |e| <= 3000 descends to 0')
 
 
 def section_D():

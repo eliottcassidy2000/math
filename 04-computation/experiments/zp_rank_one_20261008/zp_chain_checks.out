@@ -9,11 +9,11 @@
   ok   p = 11: factor law, direction and flip law on 21890 state-digit pairs (worst additive = (p-1)/p exactly); runs at k = 0 and valuation runs (mu_h = v_p(P^h - 1) = 1 + v_p(h)) for h <= 15
   ok   p = 13: factor law, direction and flip law on 25870 state-digit pairs (worst additive = (p-1)/p exactly); runs at k = 0 and valuation runs (mu_h = v_p(P^h - 1) = 1 + v_p(h)) for h <= 15
 (C) accessibility by explicit descent
-  ok   p = 3: the descent strictly decreases |e| for 2 <= |e| <= 20000 (positive bound (Pe - 1 + p^2 - p)/p^2 holds; worst ratio 0.445 for |e| >= 1000); (0,1) -> (1,2) -> (0,0) and (0,-1) -> (-1,-2) -> (0,0); every |e| <= 3000 descends to 0
-  ok   p = 5: the descent strictly decreases |e| for 2 <= |e| <= 20000 (positive bound (Pe - 1 + p^2 - p)/p^2 holds; worst ratio 0.241 for |e| >= 1000); (0,1) -> (1,2) -> (0,0) and (0,-1) -> (-1,-2) -> (0,0); every |e| <= 3000 descends to 0
-  ok   p = 7: the descent strictly decreases |e| for 2 <= |e| <= 20000 (positive bound (Pe - 1 + p^2 - p)/p^2 holds; worst ratio 0.164 for |e| >= 1000); (0,1) -> (1,2) -> (0,0) and (0,-1) -> (-1,-2) -> (0,0); every |e| <= 3000 descends to 0
-  ok   p = 11: the descent strictly decreases |e| for 2 <= |e| <= 20000 (positive bound (Pe - 1 + p^2 - p)/p^2 holds; worst ratio 0.100 for |e| >= 1000); (0,1) -> (1,2) -> (0,0) and (0,-1) -> (-1,-2) -> (0,0); every |e| <= 3000 descends to 0
-  ok   p = 13: the descent strictly decreases |e| for 2 <= |e| <= 20000 (positive bound (Pe - 1 + p^2 - p)/p^2 holds; worst ratio 0.084 for |e| >= 1000); (0,1) -> (1,2) -> (0,0) and (0,-1) -> (-1,-2) -> (0,0); every |e| <= 3000 descends to 0
+  ok   p = 3: the descent strictly decreases |e| for 2 <= |e| <= 20000 (positive bound (Pe - 1 + p^2 - p)/p^2 holds; worst ratio 0.445 for |e| >= 1000, 0.500 over all 2 <= |e| <= 20000, first at |e| = 2); (0,1) -> (1,2) -> (0,0) and (0,-1) -> (-1,-2) -> (0,0); every |e| <= 3000 descends to 0
+  ok   p = 5: the descent strictly decreases |e| for 2 <= |e| <= 20000 (positive bound (Pe - 1 + p^2 - p)/p^2 holds; worst ratio 0.241 for |e| >= 1000, 0.500 over all 2 <= |e| <= 20000, first at |e| = 2); (0,1) -> (1,2) -> (0,0) and (0,-1) -> (-1,-2) -> (0,0); every |e| <= 3000 descends to 0
+  ok   p = 7: the descent strictly decreases |e| for 2 <= |e| <= 20000 (positive bound (Pe - 1 + p^2 - p)/p^2 holds; worst ratio 0.164 for |e| >= 1000, 0.500 over all 2 <= |e| <= 20000, first at |e| = 2); (0,1) -> (1,2) -> (0,0) and (0,-1) -> (-1,-2) -> (0,0); every |e| <= 3000 descends to 0
+  ok   p = 11: the descent strictly decreases |e| for 2 <= |e| <= 20000 (positive bound (Pe - 1 + p^2 - p)/p^2 holds; worst ratio 0.100 for |e| >= 1000, 0.500 over all 2 <= |e| <= 20000, first at |e| = 2); (0,1) -> (1,2) -> (0,0) and (0,-1) -> (-1,-2) -> (0,0); every |e| <= 3000 descends to 0
+  ok   p = 13: the descent strictly decreases |e| for 2 <= |e| <= 20000 (positive bound (Pe - 1 + p^2 - p)/p^2 holds; worst ratio 0.084 for |e| >= 1000, 0.500 over all 2 <= |e| <= 20000, first at |e| = 2); (0,1) -> (1,2) -> (0,0) and (0,-1) -> (-1,-2) -> (0,0); every |e| <= 3000 descends to 0
 (D) the level weight
      (p, kappa(1/2), least s with g(s) <= 1, lambda_0 at s = 0.95): [(2, 0.9659, 0.8966, 0.9659), (3, 0.9623, 0.8539, 0.9623), (5, 0.9658, 0.8108, 0.9658), (7, 0.9703, 0.7878, 0.9703), (11, 0.9769, 0.7624, 0.9769), (13, 0.9793, 0.7544, 0.9793)]
   ok   kappa < 1 on (0,1) with kappa(0) = kappa(1) = 1; a level weight s < 1 exists; p = 2 gives s = 0.8966 (THM-4581)
@@ -25,4 +25,4 @@
      circulant tournaments (is a tournament, affine automorphisms): {7: (True, 21), 11: (True, 55), 13: (True, 39)}
   ok   T^4 fixed points c_w/(16 - 3^l): denominators 15, 13, 7, -11, -65; {1, 2} lies in the l = 2 family with the 5/7 cycle; the 1/13 and -19/11 cycles; affine automorphism groups of orders 21, 55, 39
 
-ALL CHECKS PASSED  (6s)
+ALL CHECKS PASSED  (4s)

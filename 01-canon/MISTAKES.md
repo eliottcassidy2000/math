@@ -19314,6 +19314,55 @@ the ambient space.
 - **Missing coordinate:** before drafting any classification claim, grep the canon for the objects' names in all their historical spellings ("rigid" = `tc = 1`, "path-rigid", "H = |Aut|"), and read the theorems whose titles name the object (THM-2444's "rigid class law" pointed straight at THM-2453/2477); the same lesson as MISTAKE-645/646, now for a result superseded the same day.
 - **Evidence:** [session note](../05-knowledge/results/presentation_counts_single_view_classes_rotation_inequality_20261020.md) sections 2 and 4; [THM-2477](theorems/THM-2477-rigid-strong-classification-through-sixty-two.md) status; [THM-1370](theorems/THM-1370-h-spectrum-omits-7-21-all-n.md).
 
+## MISTAKE-649 (2026-10-08, opus-2026-10-08-S22 Z_p rank-one note, THM-4610 and HYP-9245; found by the session's independent adversarial audit after checkpoint d304d4366 was pushed; landed 2026-10-21 after the session's worktree was lost and its stash recovered) -- a known barrier filed as a new no-go, known cycles cited to the wrong paper, missing credits for the proof route, a scope wider than what was proved, wrong reasons in two proof steps, two false sentences, numerics without error bars that hid a drift, and a refutation rule that rejects the true law 40% of the time
+
+- **A known barrier filed as a new no-go (THM-4610 5(f)).** The claim was that coalescence, contraction and accessibility cannot finish Collatz, since `C_3` and `C_11` satisfy all of them yet have second positive-integer cycles. It was typed PROVED as a statement of the theorem. It is KNOWN.
+  - Every Haar statement is invariant under `x ↦ −x`, which conjugates `3x + 1` to `3x − 1`, and `3x − 1` has three known positive cycles. Kontorovich–Lagarias (arXiv:0910.1944, §1.1) list them as the negative cycles of `3x + 1`.
+  - Akin (2004, §3) makes the same point for the 2-adic conjugacy method: it is "too general", and `5x + 1` has extra cycles.
+  - For every `p`, the sign-conjugate `F_p(x) = −C_p(−x)` satisfies all of THM-4610 and fixes `1, …, p − 1`.
+  - Now a remark, typed KNOWN.
+- **Known cycles cited to the wrong paper.** The cycles of `C_p` (positive: `p = 3, 11, 17, 23, 29, 31`; negative: `3, 5, 13, 19, 23`) are in Carnielli's Table 1 (Applied Mathematics E-Notes 15 (2015) 207–215; computed by K. R. Matthews for `d ≤ 150`, `|x| ≤ 50000`). The note cited "Carnielli (arXiv:0810.5169)", but that is Bruschi's paper. Now cited correctly, and re-verified for both signs (`zp_basins_survey.py` (S1), (S4)).
+- **Missing credits for the proof route.**
+  - The route is HYP-9244's requirement-1 sketch (THM-4581's architecture with a level weight), and audit G checked its per-step drift (`rank1_weight_check.py`).
+  - mac-mini's `rank1_two_valued.out` row `Z_3` (1, 4, 4) is `C_3`.
+  - All are now credited. THM-4610 now lists what is new: the odd-`p` valuation runs, Borel–Cantelli with injectivity, the explicit descent, and the `L_h` bookkeeping.
+- **Scope wider than proved.**
+  - "Proves the rank-one row of HYP-9244" should read "the almost-sure part of requirement 1 for `C_p`".
+  - The title called the debt a simple random walk; only its flip skeleton is one.
+  - The title said the factor law holds "at every step"; it holds at levels `h ≥ 1`, and at `k = 0` it depends on the step type.
+- **Wrong reasons in proofs.**
+  - `κ(1) = 1` holds because the multipliers sum to `p²`. The proof said it was because `C` preserves Haar measure, which every Matthews–Watts map does.
+  - "Nonnegative supermartingale": `V` minus the compensator is a supermartingale but not nonnegative. Fatou is applied to `V ≥ 0`.
+  - 5(b) used `R_E` for `p`-adic `E` and the modulus `p^(n−1)`. It is now stated for `x_E = p P^(E−1) − 1`, with modulus `p^(n−2)`.
+  - The `p = 2` specialization has `μ_h = v_2(3^h − 1)` and a weaker `λ_0`.
+- **Two false sentences in the results note.**
+  - "`p + 1` is the only contracting multiplier among two-valued translation-only maps with `m_0 = 1`" is false: `Z_3` (1, 1, 7) and `Z_5` (1, 1, 1, 1, 26) contract. The sentence is true for one common multiplier on all nonzero residues.
+  - The connection set `⟨3⟩ ∪ 2⟨3⟩` on `Z_13` is a union of two quartic cyclotomic classes, not a cubic-residue circulant.
+- **Numerics without error bars, hiding a drift.**
+  - The descent's worst ratio was quoted only for `|e| ≥ 1000`; over all `|e|` it is 0.5, at `|e| = 2`.
+  - `q_3(92) = 0.505` (4800 paths) was 2.9 standard errors above the `10^5`-path value 0.484 ± 0.002. So the ratio quoted as 1.14 is 1.19.
+  - "The Haar tail predicts `q_eff` well" hid a downward drift of the ratio: for `p = 3` it runs 1.65 → 1.19 over `N = 10^3 … 10^7`.
+  - "`√T q` plateaus" (`p = 3`) and "boundary × `√ln N` settles" are not resolved at these sizes.
+  - Now: binomial and Poisson errors throughout, a drift table (`zp_boundary_ratio.py`), and likelihood intervals (`zp_orphan_fit.py`). The orphan exponents are 0.57 [0.21, 0.93], 0.69 [0.37, 1.01] and 0.71 [0.39, 1.03], all unresolved.
+- **An invalid refutation rule (HYP-9245).**
+  - Rule (b) — refute if both of the last two local exponents fall outside `[0.35, 0.65]` — rejects a true `K^(−1/2)` law in about 40% of trials under its own null (simulated in `zp_orphan_fit.py` (O4)). It is replaced by a 99% likelihood-interval rule with 0.8% false rejection.
+  - (a)'s "faster than every power of `ln N`" clause was untestable. It is replaced by a ratio band, with the density assumption made explicit.
+  - "Partner class" was undefined; it is now defined.
+  - The `K^(−1/2)` prediction is HYP-9243's (HYP-9242 leaves faster decay open), and (a)'s mechanism is THM-4590's cut heuristic.
+- **Smaller fixes.**
+  - Docstring runtimes were wrong.
+  - A pointer named §4 of mac-mini's requirements note; requirement 1 is now §6 item 1.
+  - The cycle shapes added during the fixes showed that `C_11`'s 642-cycle is a 2-cycle, while every other extra cycle is a 1-cycle. The check was corrected to say so before anything was claimed.
+  - A heuristic sentence drafted during the fixes ("a naive count predicts far fewer 1-cycles than found") was false: the count gives 0.73–0.96 positive 1-cycles per base, the same order as found. It was caught by computing the count (now `zp_basins_survey.py` (S5)) before the sentence was committed.
+- **Process.** The fixes sat uncommitted in a temporary worktree that was deleted during a 13-day pause; they were recovered from the unreachable stash commit `e52a7b5bb8` and re-landed. Commit or checkpoint before any long pause.
+- **Reusable rules.**
+  - Before filing a barrier as new, apply the sign conjugation `x ↦ −x` and Akin's "too general" test. A Haar-only argument proves the same for `3x − 1`.
+  - When a map family is named after a paper, read that paper's tables before reporting cycles as found.
+  - Compare an integer statistic with a Haar prediction at several sizes, with the Haar side's error bar. One size hides drift.
+  - Simulate a refutation rule under its own null before writing it down.
+  - Test every "only" or "unique" claim against its obvious relaxation (here, multiplier 1 on some nonzero residues).
+  - Compute a heuristic count in a committed script before quoting its comparison with the data.
+
 ## MISTAKE-648 (2026-10-20, opus-2026-10-20-S47/S48) — the pendant nodes of the fundamental black graph were mischaracterised in S47 and repeated in S48; four further S48 slips caught by the audit
 
 - **Affected canon and drafts:** HYP-9347 (4) and THM-4732 section 1 (S47, published and audited) stated that the pendant nodes of THM-4731's fundamental black graph `B` are "exactly the non-self-converse single-presentation classes" (14 at `n = 9`), and S48's first THM-4741 (A5) repeated it as "the non-palindromic `{K1, C3}`-stacks, `a(n) - p(n)` of them". Both are wrong twice: `B` is converse-merged, so those classes pair up into `(a(n) - p(n))/2` nodes, and a self-converse class with `tc - bm = 2` has degree `(tc - bm)/2 = 1` as well; the session's own class files contain two such classes, `(1, S4, 1)` at `n = 6` and `(1, 1, S4, 1, 1)` at `n = 8` (`(H, |Aut|, tc, bm) = (5, 1, 5, 3)`). The correct pendant counts are `1, 3, 3, 6, 7` at `n = 5..9`, and the degree-0 nodes are all pure-blue classes, not only the palindromic stacks. S48's first draft also (i) billed the rotation inequality as new although it is a two-line corollary of THM-4729 L2, (ii) rested its second proof of THM-2477's theorem on THM-4730 (B), whose all-order status is INCOMPLETE (FINITE-EXACT to `n = 23`), instead of the audited uniform prefix-rerouting theorem, (iii) proved "a strong `tc = 3` class is circulant or `|Z_C| = n/3`" by the false step "`|Z_C|` odd, so `n/|Z_C| in {1, 3}`", missing `n/|Z_C| = 2` for `n = 2 mod 4` (witnessed at `n = 6`), (iv) wrote that THM-1370 settles the completeness question of MathOverflow 232751 (it lists attainment above 80555 as a conjecture), and (v) claimed every other odd number up to the maximum occurs as a presentation count at `n = 9` (false above 2883).

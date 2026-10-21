@@ -1,24 +1,31 @@
 ---
 id: THM-4610
-title: "Rank-one Haar coalescence on Z_p: for every odd prime p and the base-p Collatz map C_p(x) = x/p on pZ_p, ((p+1)x + p - i)/p on x = i mod p, i != 0 (on positive integers x/p or ceil((p+1)x/p); Carnielli's T_p, in Hasse's class and Moller's family with multiplier p+1; p = 2 gives the Terras map and THM-4581), two Haar p-adic orbits related by u = (p+1)^k v + e with (p+1)^max(0,-k) e in Z merge at equal time almost surely. The debt k is an exactly fair lazy simple random walk; at every step the normalized offset is multiplied by the branch factor (1/p or (p+1)/p) of a fresh uniform digit; a level weight s^|k| with s < 1 makes the per-step drift nonpositive; an explicit descent path gives accessibility from every integer offset; P(no merge by T) >= c T^(-1/2). This proves the rank-one row of HYP-9244 for these maps, including Z_7, Z_11 and Z_13"
+title: "Rank-one Haar coalescence on Z_p: for every odd prime p and the base-p Collatz map C_p(x) = x/p on pZ_p, ((p+1)x + p - i)/p on x = i mod p, i != 0 (on positive integers x/p or ceil((p+1)x/p); Carnielli's T_p, in Hasse's class and Moller's family with multiplier p+1; p = 2 gives the Terras map and THM-4581), two Haar p-adic orbits related by u = (p+1)^k v + e with (p+1)^max(0,-k) e in Z merge at equal time almost surely. The flip skeleton of the debt k is a fair simple random walk (k itself is lazy); at every level h >= 1 the normalized offset is multiplied by the branch factor (1/p or (p+1)/p) of a fresh uniform reference digit, up to a bounded additive term; a level weight s^|k| with s < 1 makes the accumulated drift summable; an explicit descent path gives accessibility from every integer offset; P(no merge by T) >= c T^(-1/2). This is the almost-sure part of HYP-9244's requirement 1 (rank one, d >= 3) for the maps C_p, including Z_7, Z_11 and Z_13"
 status: >
-  PROVED: statements 1-5 (elementary probability: the exact integer pair chain, a nonnegative supermartingale with a
-  summable compensator, optional stopping, Levy's extension of Borel-Cantelli, Levy's 0-1 law; the architecture of
-  THM-4581, with a per-step factor law replacing its parity-specific lemmas). FINITE-EXACT: the local lemmas were also
-  checked exhaustively on boxes of states x digits for p = 2, 3, 5, 7, 11, 13; the descent path for 2 <= |e| <= 20000.
-  NUMERICAL: statement 6 (merge-time tails, cycles and repunit lines on Z_7, Z_11, Z_13). Session opus-2026-10-08-S22.
+  PROVED: statements 1-5 (elementary probability: the exact integer pair chain; V_n minus its accumulated additive terms
+  is a supermartingale, and Fatou is applied to V >= 0; optional stopping, Levy's extension of Borel-Cantelli, Levy's 0-1
+  law). The route is HYP-9244's requirement-1 sketch (THM-4581's architecture with a level weight s^|k|), whose per-step
+  drift audit G checked in rank1_weight_check.py (mac-mini). New here: the odd-p valuation-run lemma 1(e), the
+  Borel-Cantelli plus injectivity step that replaces THM-4581's parity argument, the explicit descent of statement 4, and
+  the visit-length bookkeeping L_h. FINITE-EXACT: the local lemmas were also checked exhaustively on boxes of states x
+  digits for p = 2, 3, 5, 7, 11, 13; the descent path for 2 <= |e| <= 20000. KNOWN: the remark after statement 5 (the
+  3x - 1 barrier; Akin 2004's "the method is too general") and the cycles of C_p (Carnielli's Table 1, computed by
+  K. R. Matthews), re-verified here. NUMERICAL: statement 6 (merge-time tails, cycles and repunit lines on Z_7, Z_11,
+  Z_13). AUDITED 2026-10-08 by the session's independent audit: proofs sound and complete; corrections applied
+  (MISTAKE-649). Session opus-2026-10-08-S22.
 session: opus-2026-10-08-S22 (owner: "keep aiming at remaining collatz steps, think about Z_7, Z_11 and Z_13")
 source: 05-knowledge/results/zp_rank_one_coalescence_20261008.md
 scripts:
   - 04-computation/experiments/zp_rank_one_20261008/zp_chain_checks.py (+ .out) (A)-(F): table, local lemmas, descent, level weight, cycles, dictionary
-  - 04-computation/experiments/zp_rank_one_20261008/zp_basins_survey.py (+ .out): cycles and basins (statement 5(f)), boundaries
+  - 04-computation/experiments/zp_rank_one_20261008/zp_basins_survey.py (+ .out): cycles and basins, both signs (remark after statement 5), boundaries
   - 04-computation/experiments/zp_rank_one_20261008/zp_tails.py (+ .out): merge-time tails (statement 6)
   - 04-computation/experiments/zp_rank_one_20261008/zp_repunit_lines.py (+ .out): repunit lines (statement 6)
 related:
   - THM-4581 (p = 2: the Terras map; this proof follows its architecture)
-  - HYP-9244 (Polya trichotomy; open requirement 1, rank one for d >= 3); THM-4606, THM-4607, THM-4608, THM-4609 (mac-mini, the other rows)
-  - 05-knowledge/results/debt_rank_least_requirements_20261008.md (section 4: "Not yet written")
-  - Matthews and Watts (1984); Hasse; Moller (1978); Carnielli (arXiv:0810.5169); Durrett, Probability (Thms 4.3.1, 4.3.4)
+  - HYP-9244 (Polya trichotomy; requirement 1, rank one for d >= 3); THM-4606, THM-4607, THM-4608, THM-4609, THM-4611 (mac-mini, the other rows)
+  - 05-knowledge/results/debt_rank_least_requirements_20261008.md (section 6 item 1; the words "Not yet written" were in section 4 at commit 97b640656); 04-computation/experiments/rank_20261008/audit_G/rank1_weight_check.py (the level-weight drift); rank_20261008/rank1_two_valued.out (row Z_3 (1, 4, 4) is C_3)
+  - THM-4590 (p = 2: o(x) cuts; the negative-integer basins of 3x + 1, i.e. the cycles of 3x - 1)
+  - Matthews and Watts (1984); Hasse; Moller (1978); W. Carnielli, Some natural generalizations of the Collatz problem, Applied Mathematics E-Notes 15 (2015) 207-215 (T_d; Table 1 by K. R. Matthews); Bruschi arXiv:0810.5169 (the undivided form p C_p); Tremblay arXiv:1907.13302 (cycles of T_d); Goncalves-Greenfeld-Madrid arXiv:2111.06170 (Remarks 1.6, 1.7); Kontorovich-Lagarias arXiv:0910.1944 (section 1.1); Akin, Why is the 3x + 1 problem hard?, Contemp. Math. 356 (2004); Durrett, Probability (Thms 4.3.1, 4.3.4)
 ---
 
 # THM-4610 — rank-one Haar coalescence for the base-p Collatz maps on Z_p
@@ -61,7 +68,7 @@ related:
   * `μ_h = v_p(P^h − 1) = 1 + v_p(h)` for `h ≥ 1`.
   * `c = (p − 1)/p`.
   * For `θ > 0`:
-    * `κ(θ) = (1/p) p^(−θ) + ((p − 1)/p)(P/p)^θ`. It is strictly convex with `κ(0) = κ(1) = 1`; `κ(1) = 1` because `C` preserves Haar measure. So `κ(θ) < 1` for every `θ ∈ (0, 1)`. Fix such a `θ`.
+    * `κ(θ) = (1/p) p^(−θ) + ((p − 1)/p)(P/p)^θ`. It is strictly convex with `κ(0) = κ(1) = 1`; `κ(1) = 1` because the multipliers sum to `p²` (`1 + (p − 1)(p + 1) = p²`). So `κ(θ) < 1` for every `θ ∈ (0, 1)`. Fix such a `θ`.
     * `g(s) = (1/p) p^(−θ) s + (1/p)(P/p)^θ s^(−1) + ((p − 2)/p)(P/p)^θ`. Since `g(1) = κ(θ) < 1`, there is `s ∈ (0, 1)` with `g(s) ≤ 1`. Fix one.
     * At `θ = 1/2` the least such `s` is 0.788, 0.762, 0.754 for `p = 7, 11, 13`. The same equation at `p = 2` gives THM-4581's `s = 0.8966`.
 
@@ -95,19 +102,17 @@ related:
 5. **Consequences (PROVED).**
    * (a) **Translates.** For every nonzero integer `e`, Haar `y` and `y + e` merge at equal time almost surely. Absorption by time `K` depends only on `y mod p^K`, so for each `e` the integers `n` with `C^t(n) = C^t(n + e)` for some `t ≤ K` have density tending to 1 as `K → ∞`.
    * (b) **Repunit lines.**
-     * `R_E = p^E − 1` rises for `E − 1` steps to `x_E = p P^(E−1) − 1`. The child `R_(E−D)` gives the admissible start `(−D, 1 − P^D)`.
+     * For an integer `E ≥ 1`, `R_E = p^E − 1` rises for `E − 1` steps to `x_E = p P^(E−1) − 1`. For `E ∈ Z_p` put `x_E = p P^(E−1) − 1`, using the `p`-adic exponential (`R_E` itself has no meaning for `p`-adic `E`).
+     * `x_(E−D) = P^(−D) x_E + P^(−D) − 1`, so with reference orbit `y = x_E` the pair `(x_E, x_(E−D))` is the admissible start `(−D, 1 − P^D)`.
      * `E ↦ P^(E−1)` is a measure isomorphism from `Z_p` onto `1 + pZ_p` (p odd), so `x_E` is Haar on `p − 1 + p²Z_p`.
-     * Hence for each `D` the exits `R_E ⇝ R_(E−D)` hold for Haar-almost every `E ∈ Z_p`. Absorption by time `n` depends on `E mod p^(n−1)`, so the integer exponents with a certificate by time `n` have density tending to 1.
+     * Hence for each `D ≥ 1` the orbits of `x_E` and `x_(E−D)` merge at equal time for Haar-almost every `E ∈ Z_p`. Absorption by time `n ≥ 2` depends only on `E mod p^(n−2)`, so the integer exponents `E` with `C^n(x_E) = C^n(x_(E−D))` for some `n ≤ N` (an exit `R_E ⇝ R_(E−D)` with shift `D`, certified by time `N + E − 1`) have density tending to 1 as `N → ∞`.
    * (c) **Rate, lower bound.** For every non-absorbed admissible start, `P(no merge by T) ≥ c T^(−1/2)`. The upper bound `C T^(−1/2)(log T)^2` of THM-4581 (4) should follow from the same sketch; it is not claimed here.
-   * (d) **p = 2.** The proof specializes to THM-4581 3 with integer offsets: there are no lazy steps, and `g(s) = 1` is THM-4581's equation for `s`. Statement 4 is replaced by THM-4581 3(iii).
+   * (d) **p = 2.** The argument specializes to `p = 2` and reproves THM-4581 3 there, with two differences: `μ_h = v_2(3^h − 1)` (1 for odd `h`, `2 + v_2(h)` for even `h`) replaces `1 + v_p(h)`, and the `λ_0` obtained is weaker than THM-4581's. There are no lazy steps, and `g(s) = 1` is THM-4581's equation for `s`. Statement 4 is replaced by THM-4581 3(iii).
    * (e) **Basin boundaries have density zero.** Let `B` be any set of positive integers that is a union of grand orbits of `C_p` restricted to `Z_(>0)` (for example the basin of one cycle). Then for every `e ≥ 1` the set `{n : n ∈ B xor n + e ∈ B}` has natural density 0. This is the base-`p` analogue of THM-4590's `o(x)` cuts.
-   * (f) **No-go for the step from "almost all" to "all".** Statements 1–5 hold for `p = 3` and `p = 11`. Yet `C_3` and `C_11` have a second cycle on the positive integers: minimum 7 and length 9 for `p = 3`, minimum 642 and length 57 for `p = 11` (FINITE-EXACT, explicit). Hence no argument that uses only the structure of statements 1–4 can prove that every positive integer reaches the trivial cycle:
-     * rank-one translation-only coupling;
-     * contraction;
-     * the fair skeleton;
-     * accessibility.
-
-     The same holds for `p = 17, 23, 29, 31` (results note).
+   * **Remark (the barrier; KNOWN).** Statements 1–4 and 5(a)–(e) are statements about Haar measure on `Z_p`. They are invariant under the measure-preserving conjugation `x ↦ −x`, so they hold verbatim for `F_p(x) = −C_p(−x)`, which is `x/p` or `⌊(p+1)x/p⌋` on the positive integers and fixes `1, …, p − 1`.
+     * For `p = 2`, `F_2` is the `3x − 1` map. Its positive-integer cycles `{1}`, `{5, 7, 10}` and `{17, …, 34}` are the negative-integer cycles of `3x + 1` (Kontorovich–Lagarias §1.1; Gonçalves–Greenfeld–Madrid Remark 1.7; THM-4590's negative basins).
+     * So no argument built only from these properties can prove that every positive integer reaches the trivial cycle, for any `p`, including `p = 2`. Such an argument must distinguish `3x + 1` from `3x − 1`. This is the contracting, same-family form of Akin's observation (2004, §3) that the 2-adic conjugacy method "is too general": it works for every odd multiplier, and `5x + 1` has extra cycles.
+     * In the base-`p` family the unconjugated maps show it too. `C_p` itself has extra positive-integer cycles for `p = 3, 11, 17, 23, 29, 31`, such as minimum 7 and length 9 for `p = 3`, and minimum 642 and length 57 for `p = 11` (Carnielli's Table 1; re-verified here for starts `≤ 10^6`, results note §3).
 6. **Numerics on `Z_7`, `Z_11`, `Z_13` (NUMERICAL).** See the results note: merge-time tails, cycles of `C_p` on positive integers, and the repunit lines.
 
 ## Proofs
@@ -152,9 +157,9 @@ related:
 * **Level 0, `p | A`.** This is exact by 1(d): `E[V′] = κ(θ) V`.
 * **Return drift.**
   * Fix `j` and let `σ = τ_(j+1)`. The first step gives `E[V_(τ_j + 1)] ≤ λ_0 V_(τ_j) + c^θ`.
-  * After it, `V_n` minus the accumulated additive terms is a nonnegative supermartingale until `σ`.
+  * After it, `W_n = V_n − Σ_(m < n) a_m`, with `a_m` the additive term of step `m`, is a supermartingale until `σ`. It need not be nonnegative; `V` is.
   * `σ < ∞` almost surely: in the stay at level 0, every step with `p ∤ A` departs with probability `2/p`, and runs are finite by 1(d); the excursion is a recurrent SRW (statement 3(i) or directly).
-  * Optional stopping at `σ ∧ N` and Fatou give `E[V_σ] ≤ λ_0 V_(τ_j) + c^θ + E[Σ additive terms]`.
+  * Optional stopping at `σ ∧ N` gives `E[V_(σ∧N)] ≤ λ_0 V_(τ_j) + c^θ + E[Σ_(m < σ) a_m]`. Fatou, applied to `V ≥ 0` as `N → ∞`, gives `E[V_σ] ≤ λ_0 V_(τ_j) + c^θ + E[Σ additive terms]`.
   * **Additive terms of the stay at level 0.** At most `c^θ` per step with `p ∤ A`, and the number of such steps before departure is `Geom(2/p)`; runs at level 0 carry no additive term.
   * **Additive terms of the excursion.**
     * Its flip skeleton is a fair simple random walk from 1, killed at 0: by 1(b, c), given a flip, its direction is decided by a fresh digit with probability 1/2 each (optional skipping). So the expected number of visits to level `h ≥ 1` is `G(1, h) = 2`.
@@ -195,29 +200,30 @@ related:
 
 **5.**
 * (a) is 3 at `(k_0, A_0) = (0, e)`. The density statement uses Fact D: the event depends only on `y mod p^K`, and `C` restricted to `Z` is the integer map.
-* (b) For `p` odd, `n ↦ (1 + p)^n` is a measure isomorphism `Z_p → 1 + pZ_p` (the `p`-adic exponential). So `x_E = p P^(E−1) − 1` is Haar on the coset `p − 1 + p²Z_p`, which has positive measure, and 3 applies there. The digits `β_0, …, β_(n−1)` of `x_E` depend on `x_E mod p^n`, hence on `E mod p^(n−1)`.
+* (b) For `p` odd, `n ↦ (1 + p)^n` is a measure isomorphism `Z_p → 1 + pZ_p` (the `p`-adic exponential). So `x_E = p P^(E−1) − 1` is Haar on the coset `p − 1 + p²Z_p`, which has positive measure, and 3 applies there (conditioning on a positive-measure set preserves "almost surely"). Absorption by time `n` depends only on the reference digits `β_0, …, β_(n−1)` of `x_E`, hence on `x_E mod p^n`, hence on `P^(E−1) mod p^(n−1)`, hence on `E mod p^(n−2)`, since `1 + p` has order `p^(n−2)` modulo `p^(n−1)`.
 * (c) If `k_0 ≠ 0`, the chain starts away from level 0.
   * If `k_0 = 0` and `e_0 ≠ 0`: after the exact run of 1(d) the offset is nonzero and `p ∤ A`, so the next step departs with probability `2/p`. Absorption needs `e = 0` at level 0, so it cannot happen first.
   * From level `±1`, absorption needs the flip skeleton to return to 0. A simple random walk from 1 avoids 0 for `T` flips with probability at least `c′ T^(−1/2)`, and `T` steps contain at most `T` flips.
   * So `P(no merge by T) ≥ (2/p) c′ T^(−1/2)`.
-* (d) At `p = 2`: `(p − 2)/p = 0`, `g(s) = ½((1/2)^θ s + (3/2)^θ s^(−1))`, so `g(s) = 1` is THM-4581's equation for `s`, and `c = 1/2`.
+* (d) At `p = 2`: `(p − 2)/p = 0`, `g(s) = ½((1/2)^θ s + (3/2)^θ s^(−1))`, so `g(s) = 1` is THM-4581's equation for `s`, and `c = 1/2`. The valuation-run lemma 1(e) holds with `μ_h = v_2(3^h − 1)` (lifting the exponent at 2); `λ_0` comes out weaker than THM-4581's, which does not matter for 3.
 * (e) If `C^t(n) = C^t(n + e)` for some `t`, then `n` and `n + e` lie in the same grand orbit, so in `B` or outside it together.
   * Whether this happens by time `K` depends only on `n mod p^K` (Fact D; `C` on `Z` is the restriction).
   * So the density of `{n : n, n + e not merged by time K}` is exactly `q_e(K) = P(no merge by K)` from the start `(0, e)`.
   * Hence the upper density of the boundary is at most `q_e(K)` for every `K`, and `q_e(K) → 0` by 3.
-* (f) The cycles are verified by direct iteration, and statements 1–5 are proved for every odd prime. If such an argument existed, applied to `p = 3` it would place `7` in the basin of the trivial cycle. ∎
+* **Remark.** `x ↦ −x` preserves Haar measure, commutes with the pair relation up to `e ↦ −e`, and conjugates `C_p` to `F_p`; `F_p(i) = ⌊i + i/p⌋ = i` for `1 ≤ i ≤ p − 1`. The cycles of `3x − 1` and of `C_p` are verified by direct iteration (`zp_basins_survey.py` (S1), (S4)). ∎
 
 ## What this does and does not say
 
-* It proves HYP-9244's rank-one row (requirement 1 of `debt_rank_least_requirements_20261008.md`) for the canonical two-valued translation-only maps on prime bases.
+* It proves the almost-sure part of HYP-9244's requirement 1 (`debt_rank_least_requirements_20261008.md` §6 item 1) for the maps `C_p` on prime bases. The `T^(−1/2)` upper rate and other rank-one maps remain open.
 * **The same proof for general two-valued maps (sketch only).** It applies to any map with multipliers `a` on a residue set `A ∋ 0` (with `r_0 = 0`) and `b` elsewhere, `a ≡ b ≡ 1 mod p`, contracting, *given accessibility*.
   * Replace `1/p, P/p` by `a/p, b/p`.
   * The fair skeleton, the factor law and the valuation runs (with `μ_h = v_p(b^h − a^h)`) go through.
   * Accessibility is the only map-specific input, and the obstruction lemma of HYP-9244 shows it can fail.
 * It is a measure statement on `Z_p`. Its integer forms are density-one statements. It says nothing about particular integers, nor about whether integer orbits of `C_p` reach a cycle (Möller's conjecture for `m = p + 1`).
-* For `p = 11` a second cycle exists on positive integers (minimum 642, length 57; results note), so "every integer reaches 1" is false there. Yet translates still coalesce almost surely in the Haar sense.
+* For `p = 11` a second cycle exists on positive integers (minimum 642, length 57; Carnielli's Table 1, results note), so "every integer reaches 1" is false there. Yet translates still coalesce almost surely in the Haar sense.
 * **Prior art.**
-  * The maps are Carnielli's `T_d` (arXiv:0810.5169), in Hasse's class and Möller's family (Möller 1978: eventual periodicity conjectured for `m < d^(d/(d−1))`).
-  * arXiv:2111.06170 extends Tao's almost-bounded-orbits theorem to a class containing them.
+  * The maps are Carnielli's `T_d` (Applied Mathematics E-Notes 15 (2015) 207–215, with a table of cycles for `d ≤ 150`, `|x| ≤ 50000` computed by K. R. Matthews). Bruschi (arXiv:0810.5169) studies the undivided form `p C_p`. Tremblay (arXiv:1907.13302) locates their cycles. They lie in Hasse's class and Möller's family (Möller 1978: eventual periodicity conjectured for `m < d^(d/(d−1))`), and in the Matthews–Watts class, whose maps preserve Haar measure and are strongly mixing on `Z_p` (Matthews–Watts 1984, Corollary 1, as quoted in Gonçalves–Greenfeld–Madrid Remark 1.6).
+  * arXiv:2111.06170 (Gonçalves–Greenfeld–Madrid) extends Tao's almost-bounded-orbits theorem to a class containing them.
   * No coalescence (merging) statement for them was found in two searches.
-  * The proof is THM-4581's (mac-mini) architecture.
+  * The proof follows THM-4581's (mac-mini) architecture, along the route of HYP-9244's requirement-1 sketch and audit G's drift check. mac-mini's `rank1_two_valued.out` row `Z_3` (1, 4, 4) is `C_3`; its tail (`√T q` = 7.85, 9.09, 8.11 at `T` = 1024, 4096, 16384) agrees with statement 6's.
+* **Audit (2026-10-08, the session's independent audit).** Statements 1–5: proofs sound and complete as elementary probability. Corrected after it: the reason for `κ(1) = 1`, the supermartingale wording, 5(b) stated for `x_E` with modulus `p^(n−2)`, the `p = 2` specialization, 5(f) re-typed as the known `3x − 1` barrier, citations (Carnielli, Bruschi), credits (HYP-9244's sketch, audit G, mac-mini's `C_3` row), and the scope of the claim (MISTAKE-649).
