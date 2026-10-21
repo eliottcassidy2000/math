@@ -1,0 +1,406 @@
+{
+  "status": "FINITE-EXACT controls; not a substitute for all-order proofs",
+  "universe": "All labelled tournaments n=2..5; named controls through n=9; all palette involutions represented by (q,f), q<=10; actual local subset triples for C3,R5,P7; four nested base kernels in F3^3.",
+  "census": [
+    {
+      "n": 2,
+      "labelled_tournaments": 2,
+      "intransitive": 2,
+      "self_converse_intransitive": 2,
+      "exceptional": 0,
+      "q_two": 0
+    },
+    {
+      "n": 3,
+      "labelled_tournaments": 8,
+      "intransitive": 6,
+      "self_converse_intransitive": 6,
+      "exceptional": 2,
+      "q_two": 2
+    },
+    {
+      "n": 4,
+      "labelled_tournaments": 64,
+      "intransitive": 64,
+      "self_converse_intransitive": 48,
+      "exceptional": 0,
+      "q_two": 0
+    },
+    {
+      "n": 5,
+      "labelled_tournaments": 1024,
+      "intransitive": 1000,
+      "self_converse_intransitive": 680,
+      "exceptional": 24,
+      "q_two": 0
+    }
+  ],
+  "named": {
+    "C3": {
+      "n": 3,
+      "ordinary_order": 3,
+      "anti_count": 3,
+      "vertex_orbit_sizes": [
+        3
+      ],
+      "q": 2,
+      "f": 2,
+      "ordinary_regular_subsets": 6,
+      "signed_regular_subsets": 0
+    },
+    "R5": {
+      "n": 5,
+      "ordinary_order": 5,
+      "anti_count": 5,
+      "vertex_orbit_sizes": [
+        5
+      ],
+      "q": 6,
+      "f": 6,
+      "ordinary_regular_subsets": 30,
+      "signed_regular_subsets": 0
+    },
+    "P7": {
+      "n": 7,
+      "ordinary_order": 21,
+      "anti_count": 21,
+      "vertex_orbit_sizes": [
+        7
+      ],
+      "q": 4,
+      "f": 4,
+      "ordinary_regular_subsets": 84,
+      "signed_regular_subsets": 0
+    },
+    "C7_123_nonexceptional": {
+      "n": 7,
+      "ordinary_order": 7,
+      "anti_count": 7,
+      "vertex_orbit_sizes": [
+        7
+      ],
+      "q": 18,
+      "f": 14,
+      "ordinary_regular_subsets": 126,
+      "signed_regular_subsets": 28
+    },
+    "strong_unequal_C3_C3_1_C3": {
+      "n": 7,
+      "ordinary_order": 9,
+      "anti_count": 9,
+      "vertex_orbit_sizes": [
+        3,
+        1,
+        3
+      ],
+      "q": 8,
+      "f": 4,
+      "ordinary_regular_subsets": 72,
+      "signed_regular_subsets": 36,
+      "toggle_certificate_mask": 22
+    },
+    "stacked_two_C3": {
+      "n": 6,
+      "ordinary_order": 9,
+      "anti_count": 9,
+      "vertex_orbit_sizes": [
+        3,
+        3
+      ],
+      "q": 4,
+      "f": 2,
+      "ordinary_regular_subsets": 36,
+      "signed_regular_subsets": 18,
+      "toggle_certificate_mask": 14
+    },
+    "C3_C3": {
+      "n": 9,
+      "ordinary_order": 81,
+      "anti_count": 81,
+      "vertex_orbit_sizes": [
+        9
+      ],
+      "q": 2,
+      "f": 2,
+      "ordinary_regular_subsets": 162,
+      "signed_regular_subsets": 0
+    }
+  },
+  "palette_recursions": [
+    {
+      "q": 1,
+      "f": 1,
+      "q_next": 0,
+      "f_next": 0
+    },
+    {
+      "q": 2,
+      "f": 0,
+      "q_next": 2,
+      "f_next": 0
+    },
+    {
+      "q": 2,
+      "f": 2,
+      "q_next": 2,
+      "f_next": 2
+    },
+    {
+      "q": 3,
+      "f": 1,
+      "q_next": 8,
+      "f_next": 2
+    },
+    {
+      "q": 3,
+      "f": 3,
+      "q_next": 8,
+      "f_next": 6
+    },
+    {
+      "q": 4,
+      "f": 0,
+      "q_next": 20,
+      "f_next": 0
+    },
+    {
+      "q": 4,
+      "f": 2,
+      "q_next": 20,
+      "f_next": 6
+    },
+    {
+      "q": 4,
+      "f": 4,
+      "q_next": 20,
+      "f_next": 12
+    },
+    {
+      "q": 5,
+      "f": 1,
+      "q_next": 40,
+      "f_next": 4
+    },
+    {
+      "q": 5,
+      "f": 3,
+      "q_next": 40,
+      "f_next": 12
+    },
+    {
+      "q": 5,
+      "f": 5,
+      "q_next": 40,
+      "f_next": 20
+    },
+    {
+      "q": 6,
+      "f": 0,
+      "q_next": 70,
+      "f_next": 0
+    },
+    {
+      "q": 6,
+      "f": 2,
+      "q_next": 70,
+      "f_next": 10
+    },
+    {
+      "q": 6,
+      "f": 4,
+      "q_next": 70,
+      "f_next": 20
+    },
+    {
+      "q": 6,
+      "f": 6,
+      "q_next": 70,
+      "f_next": 30
+    },
+    {
+      "q": 7,
+      "f": 1,
+      "q_next": 112,
+      "f_next": 6
+    },
+    {
+      "q": 7,
+      "f": 3,
+      "q_next": 112,
+      "f_next": 18
+    },
+    {
+      "q": 7,
+      "f": 5,
+      "q_next": 112,
+      "f_next": 30
+    },
+    {
+      "q": 7,
+      "f": 7,
+      "q_next": 112,
+      "f_next": 42
+    },
+    {
+      "q": 8,
+      "f": 0,
+      "q_next": 168,
+      "f_next": 0
+    },
+    {
+      "q": 8,
+      "f": 2,
+      "q_next": 168,
+      "f_next": 14
+    },
+    {
+      "q": 8,
+      "f": 4,
+      "q_next": 168,
+      "f_next": 28
+    },
+    {
+      "q": 8,
+      "f": 6,
+      "q_next": 168,
+      "f_next": 42
+    },
+    {
+      "q": 8,
+      "f": 8,
+      "q_next": 168,
+      "f_next": 56
+    },
+    {
+      "q": 9,
+      "f": 1,
+      "q_next": 240,
+      "f_next": 8
+    },
+    {
+      "q": 9,
+      "f": 3,
+      "q_next": 240,
+      "f_next": 24
+    },
+    {
+      "q": 9,
+      "f": 5,
+      "q_next": 240,
+      "f_next": 40
+    },
+    {
+      "q": 9,
+      "f": 7,
+      "q_next": 240,
+      "f_next": 56
+    },
+    {
+      "q": 9,
+      "f": 9,
+      "q_next": 240,
+      "f_next": 72
+    },
+    {
+      "q": 10,
+      "f": 0,
+      "q_next": 330,
+      "f_next": 0
+    },
+    {
+      "q": 10,
+      "f": 2,
+      "q_next": 330,
+      "f_next": 18
+    },
+    {
+      "q": 10,
+      "f": 4,
+      "q_next": 330,
+      "f_next": 36
+    },
+    {
+      "q": 10,
+      "f": 6,
+      "q_next": 330,
+      "f_next": 54
+    },
+    {
+      "q": 10,
+      "f": 8,
+      "q_next": 330,
+      "f_next": 72
+    },
+    {
+      "q": 10,
+      "f": 10,
+      "q_next": 330,
+      "f_next": 90
+    }
+  ],
+  "actual_substitution_counts": [
+    {
+      "base_order": 3,
+      "q": 2,
+      "f": 2,
+      "product_ordinary_order": 81,
+      "actual_local_triples_enumerated": 216,
+      "ordinary_regular_subsets": 162,
+      "signed_regular_subsets": 0,
+      "signed_regular_orbits": 0
+    },
+    {
+      "base_order": 5,
+      "q": 6,
+      "f": 6,
+      "product_ordinary_order": 375,
+      "actual_local_triples_enumerated": 27000,
+      "ordinary_regular_subsets": 26250,
+      "signed_regular_subsets": 15000,
+      "signed_regular_orbits": 20
+    },
+    {
+      "base_order": 7,
+      "q": 4,
+      "f": 4,
+      "product_ordinary_order": 27783,
+      "actual_local_triples_enumerated": 592704,
+      "ordinary_regular_subsets": 555660,
+      "signed_regular_subsets": 222264,
+      "signed_regular_orbits": 4
+    }
+  ],
+  "proper_kernel_controls": [
+    {
+      "kernel": "zero",
+      "kernel_order": 1,
+      "signed_group_order": 6,
+      "signed_regular_subsets": 420,
+      "all_27_markers_covered": false
+    },
+    {
+      "kernel": "diagonal",
+      "kernel_order": 3,
+      "signed_group_order": 18,
+      "signed_regular_subsets": 288,
+      "all_27_markers_covered": false
+    },
+    {
+      "kernel": "sum_zero",
+      "kernel_order": 9,
+      "signed_group_order": 54,
+      "signed_regular_subsets": 216,
+      "all_27_markers_covered": false
+    },
+    {
+      "kernel": "full",
+      "kernel_order": 27,
+      "signed_group_order": 162,
+      "signed_regular_subsets": 0,
+      "all_27_markers_covered": true
+    }
+  ],
+  "all_order_claim": "Not inferred from finite controls; see STRUCTURE.md Sections3-7.",
+  "checks": 6427,
+  "script_sha256": "a2a323f78713c5a13ca0a3ed09ca3f3048ec2b0a59ecdfc667ebb29938d05d41"
+}

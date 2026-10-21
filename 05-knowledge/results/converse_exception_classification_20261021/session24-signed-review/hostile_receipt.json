@@ -1,0 +1,446 @@
+{
+  "status": "PASS",
+  "palette_recursions": [
+    {
+      "q": 1,
+      "f": 1,
+      "q_next": 0,
+      "f_next": 0
+    },
+    {
+      "q": 2,
+      "f": 0,
+      "q_next": 2,
+      "f_next": 0
+    },
+    {
+      "q": 2,
+      "f": 2,
+      "q_next": 2,
+      "f_next": 2
+    },
+    {
+      "q": 3,
+      "f": 1,
+      "q_next": 8,
+      "f_next": 2
+    },
+    {
+      "q": 3,
+      "f": 3,
+      "q_next": 8,
+      "f_next": 6
+    },
+    {
+      "q": 4,
+      "f": 0,
+      "q_next": 20,
+      "f_next": 0
+    },
+    {
+      "q": 4,
+      "f": 2,
+      "q_next": 20,
+      "f_next": 6
+    },
+    {
+      "q": 4,
+      "f": 4,
+      "q_next": 20,
+      "f_next": 12
+    },
+    {
+      "q": 5,
+      "f": 1,
+      "q_next": 40,
+      "f_next": 4
+    },
+    {
+      "q": 5,
+      "f": 3,
+      "q_next": 40,
+      "f_next": 12
+    },
+    {
+      "q": 5,
+      "f": 5,
+      "q_next": 40,
+      "f_next": 20
+    },
+    {
+      "q": 6,
+      "f": 0,
+      "q_next": 70,
+      "f_next": 0
+    },
+    {
+      "q": 6,
+      "f": 2,
+      "q_next": 70,
+      "f_next": 10
+    },
+    {
+      "q": 6,
+      "f": 4,
+      "q_next": 70,
+      "f_next": 20
+    },
+    {
+      "q": 6,
+      "f": 6,
+      "q_next": 70,
+      "f_next": 30
+    },
+    {
+      "q": 7,
+      "f": 1,
+      "q_next": 112,
+      "f_next": 6
+    },
+    {
+      "q": 7,
+      "f": 3,
+      "q_next": 112,
+      "f_next": 18
+    },
+    {
+      "q": 7,
+      "f": 5,
+      "q_next": 112,
+      "f_next": 30
+    },
+    {
+      "q": 7,
+      "f": 7,
+      "q_next": 112,
+      "f_next": 42
+    },
+    {
+      "q": 8,
+      "f": 0,
+      "q_next": 168,
+      "f_next": 0
+    },
+    {
+      "q": 8,
+      "f": 2,
+      "q_next": 168,
+      "f_next": 14
+    },
+    {
+      "q": 8,
+      "f": 4,
+      "q_next": 168,
+      "f_next": 28
+    },
+    {
+      "q": 8,
+      "f": 6,
+      "q_next": 168,
+      "f_next": 42
+    },
+    {
+      "q": 8,
+      "f": 8,
+      "q_next": 168,
+      "f_next": 56
+    },
+    {
+      "q": 9,
+      "f": 1,
+      "q_next": 240,
+      "f_next": 8
+    },
+    {
+      "q": 9,
+      "f": 3,
+      "q_next": 240,
+      "f_next": 24
+    },
+    {
+      "q": 9,
+      "f": 5,
+      "q_next": 240,
+      "f_next": 40
+    },
+    {
+      "q": 9,
+      "f": 7,
+      "q_next": 240,
+      "f_next": 56
+    },
+    {
+      "q": 9,
+      "f": 9,
+      "q_next": 240,
+      "f_next": 72
+    }
+  ],
+  "linear_marker_controls": [
+    {
+      "m": 3,
+      "invariant_subspaces": 4,
+      "proper_kernel_reflection_tests": 9,
+      "witnesses": [
+        {
+          "kernel_size": 9,
+          "reflection": 0,
+          "outside_image": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "kernel_size": 9,
+          "reflection": 1,
+          "outside_image": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "kernel_size": 9,
+          "reflection": 2,
+          "outside_image": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "kernel_size": 1,
+          "reflection": 0,
+          "outside_image": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "kernel_size": 1,
+          "reflection": 1,
+          "outside_image": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "kernel_size": 1,
+          "reflection": 2,
+          "outside_image": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "kernel_size": 3,
+          "reflection": 0,
+          "outside_image": [
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "kernel_size": 3,
+          "reflection": 1,
+          "outside_image": [
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "kernel_size": 3,
+          "reflection": 2,
+          "outside_image": [
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "m": 5,
+      "invariant_subspaces": 4,
+      "proper_kernel_reflection_tests": 15,
+      "witnesses": [
+        {
+          "kernel_size": 1,
+          "reflection": 0,
+          "outside_image": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "kernel_size": 1,
+          "reflection": 1,
+          "outside_image": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "kernel_size": 1,
+          "reflection": 2,
+          "outside_image": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "kernel_size": 1,
+          "reflection": 3,
+          "outside_image": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "kernel_size": 1,
+          "reflection": 4,
+          "outside_image": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "kernel_size": 81,
+          "reflection": 0,
+          "outside_image": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "kernel_size": 81,
+          "reflection": 1,
+          "outside_image": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "kernel_size": 81,
+          "reflection": 2,
+          "outside_image": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "kernel_size": 81,
+          "reflection": 3,
+          "outside_image": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "kernel_size": 81,
+          "reflection": 4,
+          "outside_image": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "kernel_size": 3,
+          "reflection": 0,
+          "outside_image": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "kernel_size": 3,
+          "reflection": 1,
+          "outside_image": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "kernel_size": 3,
+          "reflection": 2,
+          "outside_image": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "kernel_size": 3,
+          "reflection": 3,
+          "outside_image": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "kernel_size": 3,
+          "reflection": 4,
+          "outside_image": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "without_transitivity_hostile": {
+    "dimension": 3,
+    "proper_kernel_size": 9,
+    "image_contained": true
+  }
+}

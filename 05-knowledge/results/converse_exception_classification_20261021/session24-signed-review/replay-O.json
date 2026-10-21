@@ -1,0 +1,345 @@
+{
+  "census": [
+    {
+      "exceptional": 0,
+      "exceptional_primitive": 0,
+      "labelled_tournaments": 2,
+      "n": 2,
+      "non_strong": 2,
+      "signed_primitive": 2
+    },
+    {
+      "exceptional": 2,
+      "exceptional_primitive": 2,
+      "labelled_tournaments": 8,
+      "n": 3,
+      "non_strong": 6,
+      "signed_primitive": 2
+    },
+    {
+      "exceptional": 0,
+      "exceptional_primitive": 0,
+      "labelled_tournaments": 64,
+      "n": 4,
+      "non_strong": 40,
+      "signed_primitive": 0
+    },
+    {
+      "exceptional": 24,
+      "exceptional_primitive": 24,
+      "labelled_tournaments": 1024,
+      "n": 5,
+      "non_strong": 480,
+      "signed_primitive": 24
+    }
+  ],
+  "indecomposable_but_not_permutation_primitive": {
+    "hamilton_data": {
+      "converse_fixed_hamilton_orbits": 3,
+      "ordered_hamilton_paths": 9,
+      "ordinary_hamilton_orbits": 9,
+      "signed_hamilton_orbits": 6
+    },
+    "mask": 10,
+    "module_masks": [],
+    "n": 5,
+    "ordinary_order": 1,
+    "ordinary_primitive": false,
+    "ordinary_regular_orbits": 32,
+    "ordinary_regular_subsets": 32,
+    "outneighbors": [
+      [
+        2,
+        4
+      ],
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "signed_order": 2,
+    "signed_primitive": false,
+    "signed_regular_orbits": 12,
+    "signed_regular_subsets": 24,
+    "strong": true
+  },
+  "named_examples": {
+    "C3": {
+      "hamilton_data": {
+        "converse_fixed_hamilton_orbits": 1,
+        "ordered_hamilton_paths": 3,
+        "ordinary_hamilton_orbits": 1,
+        "signed_hamilton_orbits": 1
+      },
+      "module_masks": [],
+      "n": 3,
+      "ordinary_order": 3,
+      "ordinary_primitive": true,
+      "ordinary_regular_orbits": 2,
+      "ordinary_regular_subsets": 6,
+      "outneighbors": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          0
+        ]
+      ],
+      "signed_order": 6,
+      "signed_primitive": true,
+      "signed_regular_orbits": 0,
+      "signed_regular_subsets": 0,
+      "strong": true
+    },
+    "C3_of_C3": {
+      "hamilton_data": {
+        "converse_fixed_hamilton_orbits": 11,
+        "ordered_hamilton_paths": 3159,
+        "ordinary_hamilton_orbits": 39,
+        "signed_hamilton_orbits": 25
+      },
+      "module_masks": [
+        7,
+        56,
+        448
+      ],
+      "n": 9,
+      "ordinary_order": 81,
+      "ordinary_primitive": false,
+      "ordinary_regular_orbits": 2,
+      "ordinary_regular_subsets": 162,
+      "outneighbors": [
+        [
+          1,
+          3,
+          4,
+          5
+        ],
+        [
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          4,
+          5
+        ],
+        [
+          4,
+          6,
+          7,
+          8
+        ],
+        [
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          3,
+          6,
+          7,
+          8
+        ],
+        [
+          0,
+          1,
+          2,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          8
+        ],
+        [
+          0,
+          1,
+          2,
+          6
+        ]
+      ],
+      "signed_order": 162,
+      "signed_primitive": false,
+      "signed_regular_orbits": 0,
+      "signed_regular_subsets": 0,
+      "strong": true
+    },
+    "C5_12": {
+      "hamilton_data": {
+        "converse_fixed_hamilton_orbits": 3,
+        "ordered_hamilton_paths": 15,
+        "ordinary_hamilton_orbits": 3,
+        "signed_hamilton_orbits": 3
+      },
+      "module_masks": [],
+      "n": 5,
+      "ordinary_order": 5,
+      "ordinary_primitive": true,
+      "ordinary_regular_orbits": 6,
+      "ordinary_regular_subsets": 30,
+      "outneighbors": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "signed_order": 10,
+      "signed_primitive": true,
+      "signed_regular_orbits": 0,
+      "signed_regular_subsets": 0,
+      "strong": true
+    },
+    "C7_123": {
+      "hamilton_data": {
+        "converse_fixed_hamilton_orbits": 9,
+        "ordered_hamilton_paths": 175,
+        "ordinary_hamilton_orbits": 25,
+        "signed_hamilton_orbits": 17
+      },
+      "module_masks": [],
+      "n": 7,
+      "ordinary_order": 7,
+      "ordinary_primitive": true,
+      "ordinary_regular_orbits": 18,
+      "ordinary_regular_subsets": 126,
+      "outneighbors": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "signed_order": 14,
+      "signed_primitive": true,
+      "signed_regular_orbits": 2,
+      "signed_regular_subsets": 28,
+      "strong": true
+    },
+    "P7": {
+      "hamilton_data": {
+        "converse_fixed_hamilton_orbits": 3,
+        "ordered_hamilton_paths": 189,
+        "ordinary_hamilton_orbits": 9,
+        "signed_hamilton_orbits": 6
+      },
+      "module_masks": [],
+      "n": 7,
+      "ordinary_order": 21,
+      "ordinary_primitive": true,
+      "ordinary_regular_orbits": 4,
+      "ordinary_regular_subsets": 84,
+      "outneighbors": [
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          3,
+          4,
+          6
+        ],
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          1,
+          3
+        ]
+      ],
+      "signed_order": 42,
+      "signed_primitive": true,
+      "signed_regular_orbits": 0,
+      "signed_regular_subsets": 0,
+      "strong": true
+    }
+  },
+  "scope": "All labelled tournaments 2<=n<=5, plus four named odd-order controls and C3[C3]. No all-order completeness claim.",
+  "script_sha256": "ae8982b0a2a8677124f1c9cf198b411c5c840fdc94002512c20dd716819e0146",
+  "status": "PASS"
+}
