@@ -1,0 +1,265 @@
+even n=4 : n | s(n)
+even n=6 : n | s(n)
+even n=8 : n | s(n)
+n=9 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=7 circ=7
+even n=10 : n | s(n)
+even n=12 : n | s(n)
+even n=14 : n | s(n)
+n=15 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=8 circ=8
+even n=16 : n | s(n)
+even n=18 : n | s(n)
+n=21 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=16 circ=16
+even n=22 : n | s(n)
+even n=24 : n | s(n)
+even n=26 : n | s(n)
+even n=30 : n | s(n)
+even n=32 : n | s(n)
+n=33 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=31 circ=31
+even n=34 : n | s(n)
+even n=36 : n | s(n)
+even n=38 : n | s(n)
+n=39 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=11 circ=11
+n=45 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=34 circ=34
+even n=46 : n | s(n)
+even n=48 : n | s(n)
+n=51 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+even n=54 : n | s(n)
+even n=56 : n | s(n)
+n=57 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=55 circ=55
+even n=58 : n | s(n)
+even n=62 : n | s(n)
+n=63 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+even n=64 : n | s(n)
+n=69 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=25 circ=25
+even n=72 : n | s(n)
+even n=74 : n | s(n)
+even n=82 : n | s(n)
+n=85 composite: camion=0 tfp=1 eulerjacobi2=0 s mod n=34 circ=4
+even n=86 : n | s(n)
+n=87 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=56 circ=56
+even n=90 : n | s(n)
+n=93 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=64 circ=64
+even n=94 : n | s(n)
+even n=96 : n | s(n)
+n=105 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=16 circ=16
+even n=106 : n | s(n)
+even n=108 : n | s(n)
+n=111 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=35 circ=35
+even n=118 : n | s(n)
+even n=122 : n | s(n)
+n=123 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+even n=128 : n | s(n)
+n=129 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=127 circ=127
+even n=132 : n | s(n)
+n=133 composite: camion=0 tfp=1 eulerjacobi2=0 s mod n=22 circ=106
+even n=134 : n | s(n)
+even n=136 : n | s(n)
+n=141 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=49 circ=49
+even n=142 : n | s(n)
+even n=144 : n | s(n)
+even n=146 : n | s(n)
+even n=158 : n | s(n)
+n=159 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=104 circ=104
+even n=162 : n | s(n)
+even n=166 : n | s(n)
+n=169 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=105 circ=105
+n=177 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=175 circ=175
+even n=178 : n | s(n)
+even n=182 : n | s(n)
+n=183 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=59 circ=59
+even n=186 : n | s(n)
+even n=192 : n | s(n)
+even n=194 : n | s(n)
+n=195 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+n=201 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=199 circ=199
+even n=202 : n | s(n)
+even n=206 : n | s(n)
+n=213 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=73 circ=73
+even n=214 : n | s(n)
+even n=216 : n | s(n)
+even n=218 : n | s(n)
+n=219 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+even n=224 : n | s(n)
+even n=226 : n | s(n)
+n=231 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=65 circ=65
+n=237 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=160 circ=160
+n=249 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=247 circ=247
+even n=254 : n | s(n)
+even n=256 : n | s(n)
+even n=262 : n | s(n)
+n=267 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+even n=270 : n | s(n)
+even n=274 : n | s(n)
+even n=278 : n | s(n)
+even n=288 : n | s(n)
+n=291 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+even n=298 : n | s(n)
+even n=302 : n | s(n)
+n=303 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=200 circ=200
+even n=306 : n | s(n)
+n=309 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=208 circ=208
+even n=314 : n | s(n)
+n=315 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+n=321 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=319 circ=319
+even n=324 : n | s(n)
+even n=326 : n | s(n)
+n=327 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=107 circ=107
+even n=334 : n | s(n)
+n=339 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+n=341 composite: camion=0 tfp=1 eulerjacobi2=0 s mod n=23 circ=1
+even n=346 : n | s(n)
+even n=352 : n | s(n)
+even n=358 : n | s(n)
+even n=362 : n | s(n)
+even n=368 : n | s(n)
+n=381 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=256 circ=256
+even n=382 : n | s(n)
+even n=384 : n | s(n)
+even n=386 : n | s(n)
+n=393 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=391 circ=391
+even n=394 : n | s(n)
+even n=398 : n | s(n)
+n=399 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+even n=408 : n | s(n)
+n=411 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+n=417 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=415 circ=415
+even n=422 : n | s(n)
+even n=432 : n | s(n)
+even n=446 : n | s(n)
+n=447 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=296 circ=296
+n=453 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=304 circ=304
+even n=454 : n | s(n)
+even n=458 : n | s(n)
+even n=466 : n | s(n)
+n=471 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=155 circ=155
+even n=478 : n | s(n)
+n=481 composite: camion=0 tfp=1 eulerjacobi2=0 s mod n=27 circ=417
+even n=482 : n | s(n)
+even n=486 : n | s(n)
+n=489 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=487 circ=487
+n=501 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=169 circ=169
+even n=502 : n | s(n)
+n=511 composite: camion=0 tfp=1 eulerjacobi2=0 s mod n=386 circ=8
+even n=512 : n | s(n)
+even n=514 : n | s(n)
+n=519 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=344 circ=344
+even n=526 : n | s(n)
+even n=530 : n | s(n)
+n=537 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=535 circ=535
+even n=538 : n | s(n)
+even n=542 : n | s(n)
+n=543 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=179 circ=179
+even n=552 : n | s(n)
+even n=554 : n | s(n)
+n=561 composite: camion=1 tfp=1 eulerjacobi2=1 s mod n=1 circ=1
+even n=562 : n | s(n)
+even n=566 : n | s(n)
+n=573 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=193 circ=193
+even n=576 : n | s(n)
+n=579 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+even n=586 : n | s(n)
+n=591 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=392 circ=392
+n=595 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=512 circ=512
+n=597 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=400 circ=400
+even n=614 : n | s(n)
+even n=622 : n | s(n)
+even n=626 : n | s(n)
+n=633 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=631 circ=631
+even n=634 : n | s(n)
+n=645 composite: camion=0 tfp=1 eulerjacobi2=0 s mod n=514 circ=259
+even n=648 : n | s(n)
+even n=662 : n | s(n)
+n=669 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=448 circ=448
+even n=674 : n | s(n)
+n=681 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=679 circ=679
+n=687 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=227 circ=227
+n=693 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=394 circ=394
+even n=694 : n | s(n)
+even n=698 : n | s(n)
+n=699 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+even n=706 : n | s(n)
+n=717 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=241 circ=241
+even n=718 : n | s(n)
+n=723 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+even n=734 : n | s(n)
+even n=738 : n | s(n)
+even n=746 : n | s(n)
+n=753 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=751 circ=751
+even n=758 : n | s(n)
+even n=766 : n | s(n)
+even n=768 : n | s(n)
+n=771 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+even n=778 : n | s(n)
+n=789 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=265 circ=265
+even n=792 : n | s(n)
+even n=794 : n | s(n)
+even n=802 : n | s(n)
+n=807 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=536 circ=536
+even n=810 : n | s(n)
+n=813 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=544 circ=544
+even n=818 : n | s(n)
+n=819 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+n=831 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=275 circ=275
+even n=838 : n | s(n)
+even n=842 : n | s(n)
+n=843 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+n=849 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=847 circ=847
+even n=862 : n | s(n)
+even n=864 : n | s(n)
+even n=866 : n | s(n)
+even n=870 : n | s(n)
+even n=878 : n | s(n)
+n=879 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=584 circ=584
+even n=886 : n | s(n)
+even n=896 : n | s(n)
+even n=898 : n | s(n)
+even n=914 : n | s(n)
+n=921 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=919 circ=919
+even n=922 : n | s(n)
+even n=926 : n | s(n)
+n=933 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=313 circ=313
+even n=934 : n | s(n)
+n=939 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+n=949 composite: camion=0 tfp=1 eulerjacobi2=0 s mod n=597 circ=64
+n=951 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=632 circ=632
+even n=958 : n | s(n)
+even n=972 : n | s(n)
+even n=974 : n | s(n)
+even n=982 : n | s(n)
+even n=992 : n | s(n)
+n=993 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=991 circ=991
+even n=998 : n | s(n)
+even n=1006 : n | s(n)
+n=1011 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+even n=1018 : n | s(n)
+n=1023 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+even n=1024 : n | s(n)
+n=1035 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=47 circ=47
+n=1041 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=1039 circ=1039
+even n=1042 : n | s(n)
+even n=1046 : n | s(n)
+n=1047 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=347 circ=347
+n=1059 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=2 circ=2
+even n=1064 : n | s(n)
+n=1077 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=361 circ=361
+even n=1082 : n | s(n)
+even n=1094 : n | s(n)
+n=1101 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=736 circ=736
+n=1105 composite: camion=1 tfp=1 eulerjacobi2=1 s mod n=1 circ=1
+even n=1114 : n | s(n)
+even n=1116 : n | s(n)
+n=1119 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=371 circ=371
+even n=1122 : n | s(n)
+even n=1126 : n | s(n)
+even n=1128 : n | s(n)
+n=1137 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=1135 circ=1135
+even n=1138 : n | s(n)
+even n=1142 : n | s(n)
+n=1149 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=385 circ=385
+even n=1152 : n | s(n)
+even n=1154 : n | s(n)
+n=1167 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=776 circ=776
+even n=1174 : n | s(n)
+even n=1186 : n | s(n)
+n=1191 composite: camion=1 tfp=0 eulerjacobi2=0 s mod n=395 circ=395
+even n=1198 : n | s(n)

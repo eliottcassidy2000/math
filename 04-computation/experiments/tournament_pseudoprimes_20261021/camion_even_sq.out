@@ -1,0 +1,10 @@
+even n<=400 (odd part squarefree): agree 142 disagree 0
+universal zero classes include 1,2,3: True
+mod 9: odd m<=36 with D(m) != 0: 5; first few [7, 13, 19, 25, 31]
+mod 25: odd m<=100 with D(m) != 0: 44; first few [5, 7, 9, 11, 13, 15, 17, 19, 21, 25, 27, 29]
+mod 27: odd m<=108 with D(m) != 0: 41; first few [7, 9, 11, 13, 15, 17, 19, 25, 27, 29, 31, 33]
+mod 49: odd m<=196 with D(m) != 0: 78; first few [5, 7, 9, 11, 13, 17, 21, 23, 25, 27, 29, 31]
+mod 121: odd m<=300 with D(m) != 0: 138; first few [5, 7, 9, 11, 13, 15, 17, 19, 21, 25, 27, 29]
+mod 169: odd m<=300 with D(m) != 0: 141; first few [5, 7, 9, 11, 15, 17, 19, 21, 23, 25, 27, 29]
+mod 289: odd m<=300 with D(m) != 0: 146; first few [5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27]
+mod 361: odd m<=300 with D(m) != 0: 146; first few [5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27]

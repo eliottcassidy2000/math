@@ -1,0 +1,3 @@
+(A) squarefree Camion pseudoprimes <= 20000: 2145 ; Carmichael numbers 9 of which pass 9
+(B) Camion-Wieferich primes p<=3000 (D(p)=0 mod p^2): 3 13
+exit 0

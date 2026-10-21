@@ -1,0 +1,55 @@
+s(1..10)= [1, 0, 2, 24, 544, 22320, 1677488, 236522496, 64026088576, 33832910196480]
+9 PASS 3^2:y
+15 PASS 3^1:y 5^1:y
+21 PASS 3^1:y 7^1:y
+25 fail 5^2:n
+27 fail 3^3:n
+33 PASS 3^1:y 11^1:y
+35 fail 5^1:y 7^1:n
+39 PASS 3^1:y 13^1:y
+45 PASS 3^2:y 5^1:y
+49 fail 7^2:n
+51 PASS 3^1:y 17^1:y
+55 fail 5^1:y 11^1:n
+57 PASS 3^1:y 19^1:y
+63 PASS 3^2:y 7^1:y
+65 fail 5^1:y 13^1:n
+69 PASS 3^1:y 23^1:y
+75 fail 3^1:y 5^2:n
+77 fail 7^1:n 11^1:n
+81 fail 3^4:n
+85 fail 5^1:y 17^1:n
+87 PASS 3^1:y 29^1:y
+91 fail 7^1:y 13^1:n
+93 PASS 3^1:y 31^1:y
+95 fail 5^1:y 19^1:n
+99 fail 3^2:y 11^1:n
+105 PASS 3^1:y 5^1:y 7^1:y
+111 PASS 3^1:y 37^1:y
+115 fail 5^1:y 23^1:n
+117 fail 3^2:y 13^1:n
+119 fail 7^1:n 17^1:n
+121 fail 11^2:n
+123 PASS 3^1:y 41^1:y
+125 fail 5^3:n
+129 PASS 3^1:y 43^1:y
+133 fail 7^1:y 19^1:n
+135 fail 3^3:n 5^1:y
+141 PASS 3^1:y 47^1:y
+143 fail 11^1:y 13^1:n
+145 fail 5^1:y 29^1:n
+147 fail 3^1:y 7^2:n
+153 fail 3^2:y 17^1:n
+155 fail 5^1:y 31^1:n
+159 PASS 3^1:y 53^1:y
+161 fail 7^1:n 23^1:n
+165 fail 3^1:y 5^1:y 11^1:n
+169 PASS 13^2:y
+171 fail 3^2:y 19^1:n
+175 fail 5^2:n 7^1:y
+177 PASS 3^1:y 59^1:y
+183 PASS 3^1:y 61^1:y
+185 fail 5^1:y 37^1:n
+187 fail 11^1:n 17^1:n
+189 fail 3^3:n 7^1:y
+195 PASS 3^1:y 5^1:y 13^1:y
