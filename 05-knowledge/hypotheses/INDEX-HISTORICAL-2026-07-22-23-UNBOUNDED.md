@@ -202,3 +202,7 @@ computation needs universe, controls, command, and output. Route `CLAIMED` and
 ## Archived from INDEX.md on 2026-10-20 (mac-mini-2026-10-20-debtcones, line budget)
 
 - **THM-2116/2120/2122/2123/2124/2125 (PROVED):** a rank-eight cover needs a guard
+
+## Archived from INDEX.md on 2026-10-20 (mac-mini-2026-10-20-kepler, line budget)
+
+- **THM-2114/2115 (PROVED):** finite-ring needles force `13`- and `11`-content
