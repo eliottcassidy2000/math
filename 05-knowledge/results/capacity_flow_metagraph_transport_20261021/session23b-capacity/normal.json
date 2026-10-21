@@ -1,0 +1,641 @@
+{
+  "fixed_path_transport": {
+    "rows": [
+      {
+        "M": 1,
+        "bits": 1,
+        "count": 2,
+        "n": 3,
+        "partner_circulation_count": 1,
+        "path_zero_count": 1,
+        "path_zero_total_use_histogram": {
+          "0": 1
+        }
+      },
+      {
+        "M": 2,
+        "bits": 1,
+        "count": 3,
+        "n": 3,
+        "partner_circulation_count": 1,
+        "path_zero_count": 1,
+        "path_zero_total_use_histogram": {
+          "0": 1
+        }
+      },
+      {
+        "M": 3,
+        "bits": 1,
+        "count": 4,
+        "n": 3,
+        "partner_circulation_count": 1,
+        "path_zero_count": 1,
+        "path_zero_total_use_histogram": {
+          "0": 1
+        }
+      },
+      {
+        "M": 1,
+        "bits": 22,
+        "count": 24,
+        "n": 5,
+        "partner_circulation_count": 14,
+        "path_zero_count": 3,
+        "path_zero_total_use_histogram": {
+          "0": 1,
+          "3": 1,
+          "5": 1
+        }
+      },
+      {
+        "M": 2,
+        "bits": 22,
+        "count": 219,
+        "n": 5,
+        "partner_circulation_count": 90,
+        "path_zero_count": 6,
+        "path_zero_total_use_histogram": {
+          "0": 1,
+          "3": 1,
+          "5": 1,
+          "6": 1,
+          "8": 1,
+          "10": 1
+        }
+      },
+      {
+        "M": 3,
+        "bits": 22,
+        "count": 1136,
+        "n": 5,
+        "partner_circulation_count": 374,
+        "path_zero_count": 10,
+        "path_zero_total_use_histogram": {
+          "0": 1,
+          "3": 1,
+          "5": 1,
+          "6": 1,
+          "8": 1,
+          "9": 1,
+          "10": 1,
+          "11": 1,
+          "13": 1,
+          "15": 1
+        }
+      },
+      {
+        "M": 1,
+        "bits": 45,
+        "count": 24,
+        "n": 5,
+        "partner_circulation_count": 14,
+        "path_zero_count": 3,
+        "path_zero_total_use_histogram": {
+          "0": 1,
+          "4": 1,
+          "5": 1
+        }
+      },
+      {
+        "M": 2,
+        "bits": 45,
+        "count": 219,
+        "n": 5,
+        "partner_circulation_count": 90,
+        "path_zero_count": 6,
+        "path_zero_total_use_histogram": {
+          "0": 1,
+          "4": 1,
+          "5": 1,
+          "8": 1,
+          "9": 1,
+          "10": 1
+        }
+      },
+      {
+        "M": 3,
+        "bits": 45,
+        "count": 1136,
+        "n": 5,
+        "partner_circulation_count": 374,
+        "path_zero_count": 10,
+        "path_zero_total_use_histogram": {
+          "0": 1,
+          "4": 1,
+          "5": 1,
+          "8": 1,
+          "9": 1,
+          "10": 1,
+          "12": 1,
+          "13": 1,
+          "14": 1,
+          "15": 1
+        }
+      },
+      {
+        "M": 1,
+        "bits": 51,
+        "count": 24,
+        "n": 5,
+        "partner_circulation_count": 14,
+        "path_zero_count": 3,
+        "path_zero_total_use_histogram": {
+          "0": 1,
+          "3": 1,
+          "4": 1
+        }
+      },
+      {
+        "M": 2,
+        "bits": 51,
+        "count": 219,
+        "n": 5,
+        "partner_circulation_count": 90,
+        "path_zero_count": 6,
+        "path_zero_total_use_histogram": {
+          "0": 1,
+          "3": 1,
+          "4": 1,
+          "6": 1,
+          "7": 1,
+          "8": 1
+        }
+      },
+      {
+        "M": 3,
+        "bits": 51,
+        "count": 1136,
+        "n": 5,
+        "partner_circulation_count": 374,
+        "path_zero_count": 10,
+        "path_zero_total_use_histogram": {
+          "0": 1,
+          "3": 1,
+          "4": 1,
+          "6": 1,
+          "7": 1,
+          "8": 1,
+          "9": 1,
+          "10": 1,
+          "11": 1,
+          "12": 1
+        }
+      }
+    ],
+    "transported_flows": 4146
+  },
+  "general_K4_transport": {
+    "all_demands": true,
+    "capacity": 1,
+    "orientation_reversal_vector_triples": 262144
+  },
+  "multiplicity_hostile": {
+    "M": 2,
+    "labelled_parallel_edge_weighted": 10,
+    "n": 3,
+    "unweighted": 3
+  },
+  "n5": {
+    "coefficient_cache_states": [
+      5,
+      6,
+      13,
+      18,
+      28,
+      37,
+      52,
+      65,
+      85,
+      104,
+      129
+    ],
+    "counts_M0_to_10": [
+      1,
+      24,
+      219,
+      1136,
+      4175,
+      12216,
+      30429,
+      67264,
+      135621,
+      254200,
+      449031
+    ],
+    "dimension": 6,
+    "h_star": [
+      1,
+      17,
+      72,
+      72,
+      17,
+      1
+    ],
+    "independent_star_counts_M0_to_8": [
+      1,
+      24,
+      219,
+      1136,
+      4175,
+      12216,
+      30429,
+      67264,
+      135621
+    ],
+    "path_zero_counts_M0_to_8": [
+      1,
+      3,
+      6,
+      10,
+      15,
+      21,
+      28,
+      36,
+      45
+    ],
+    "polynomial_coefficients_low_to_high": [
+      "1",
+      "23/6",
+      "79/12",
+      "20/3",
+      "25/6",
+      "3/2",
+      "1/4"
+    ]
+  },
+  "n5_score_fibres": {
+    "labelled_score_vectors": 291,
+    "labelled_tournaments": 1024,
+    "regular_fibre": 24
+  },
+  "n7": [
+    {
+      "H": 175,
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "capacity1": 2640,
+      "capacity1_total_use_histogram": [
+        1,
+        0,
+        0,
+        14,
+        28,
+        28,
+        91,
+        220,
+        245,
+        266,
+        427,
+        427,
+        266,
+        245,
+        220,
+        91,
+        28,
+        28,
+        14,
+        0,
+        0,
+        1
+      ],
+      "name": "cyclic",
+      "path_zero_capacity1": 91
+    },
+    {
+      "H": 189,
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "capacity1": 2640,
+      "capacity1_total_use_histogram": [
+        1,
+        0,
+        0,
+        14,
+        21,
+        42,
+        105,
+        171,
+        252,
+        336,
+        378,
+        378,
+        336,
+        252,
+        171,
+        105,
+        42,
+        21,
+        14,
+        0,
+        0,
+        1
+      ],
+      "name": "Paley",
+      "path_zero_capacity1": 91
+    },
+    {
+      "H": 171,
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "capacity1": 2640,
+      "capacity1_total_use_histogram": [
+        1,
+        0,
+        0,
+        14,
+        24,
+        36,
+        102,
+        183,
+        249,
+        330,
+        381,
+        381,
+        330,
+        249,
+        183,
+        102,
+        36,
+        24,
+        14,
+        0,
+        0,
+        1
+      ],
+      "name": "cyclic_triangle_reversed",
+      "path_zero_capacity1": 91
+    }
+  ],
+  "n7_M1_coefficient_states": 14,
+  "n7_fixed_path_presentations": {
+    "by_H": {
+      "171": 57,
+      "175": 25,
+      "189": 9
+    },
+    "regular_count": 91,
+    "universe": 32768
+  },
+  "n7_path_face_h_star": {
+    "codegree": 3,
+    "constant": 1,
+    "degree": 7,
+    "dimension": 9,
+    "leading": 34,
+    "linear": 81,
+    "palindromic": false
+  },
+  "status": "PASS; proof and finite controls are separately scoped"
+}

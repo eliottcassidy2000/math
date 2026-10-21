@@ -1,0 +1,9 @@
+{
+  "files": {
+    "PROOF.md": "57503d9f9f7586cb0496c872dcc8165522afa9589ed796f9c3de395b673d8460",
+    "check.py": "09f66941c1ce2d077e8aa5f71149477129d554a23fbdfe5188f8ed576f777e89",
+    "normal.json": "dfb35e063a67511b0d93f65063b06cf7d3274df9c1671d5e18567f1aecc56575",
+    "optimized.json": "dfb35e063a67511b0d93f65063b06cf7d3274df9c1671d5e18567f1aecc56575"
+  },
+  "status": "PROVED with separately scoped FINITE-EXACT controls; frozen for independent audit"
+}

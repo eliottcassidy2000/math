@@ -1,0 +1,19 @@
+{
+  "git_operations": false,
+  "producer_snapshot": {
+    "PROOF.md": "57503d9f9f7586cb0496c872dcc8165522afa9589ed796f9c3de395b673d8460",
+    "check.py": "09f66941c1ce2d077e8aa5f71149477129d554a23fbdfe5188f8ed576f777e89",
+    "normal.json": "dfb35e063a67511b0d93f65063b06cf7d3274df9c1671d5e18567f1aecc56575",
+    "optimized.json": "dfb35e063a67511b0d93f65063b06cf7d3274df9c1671d5e18567f1aecc56575"
+  },
+  "review_artifacts": {
+    "REVIEW.md": "f80ba5ad6d64604ee7cfd5cc1f6a903345eae9bb51dbee3dc5659562055aca2b",
+    "audit.py": "33ecb9d4604643cb92aae39c63d524214b15e0d5ba0933033028cb2cf8f1d7b8",
+    "normal.json": "cfc97dfa05132ed3bfdc8e332f7269f8c59d9328eb21a645a69a1058045b42e3",
+    "optimized.json": "cfc97dfa05132ed3bfdc8e332f7269f8c59d9328eb21a645a69a1058045b42e3",
+    "supplement-normal.json": "5a423974ca11cbb2f220fc04453068ce9b90f5385f3f09ff6117d8d139d468a0",
+    "supplement-optimized.json": "5a423974ca11cbb2f220fc04453068ce9b90f5385f3f09ff6117d8d139d468a0",
+    "supplement.py": "70a7018a9e71dfa956ad4d81bc29f8954d60124916537b4383968b4869c1db6d"
+  },
+  "status": "PASS; independent proof review and finite tests"
+}
