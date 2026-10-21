@@ -1,0 +1,114 @@
+{
+  "files": [
+    {
+      "bytes": 11950,
+      "path": "README.md",
+      "sha256": "e75ad212280e644a145137936b7312c3d90373e724cb77a1a0cf61c2715e90e6"
+    },
+    {
+      "bytes": 3262,
+      "path": "audit_printed_witnesses.py",
+      "sha256": "89a0edc41542da3e7a9d957a8f54c4e96ba056b1d3357bdf46ac42236d98af43"
+    },
+    {
+      "bytes": 8858,
+      "path": "audit_receipt.json",
+      "sha256": "0e180e1c0efd154abeb98c968ff37791b33258df68252a221bfc341467820859"
+    },
+    {
+      "bytes": 8858,
+      "path": "audit_receipt_optimized.json",
+      "sha256": "0e180e1c0efd154abeb98c968ff37791b33258df68252a221bfc341467820859"
+    },
+    {
+      "bytes": 4609,
+      "path": "audit_recurrence.py",
+      "sha256": "41967e96c1f249bcb4d201f072a9fb66b201e724ab47b878bc42eeaee047345f"
+    },
+    {
+      "bytes": 14078,
+      "path": "independent_audit.py",
+      "sha256": "fb5bd0351d3fcb48b0a1e0c59f92e384c144af42c33215bb89fc24d96fa97ec6"
+    },
+    {
+      "bytes": 1723,
+      "path": "normal.log",
+      "sha256": "9afa58e5ab379fd7b1b4537f73126c0fc8ce18ee90d078d9b3d1a98be4aa9fd0"
+    },
+    {
+      "bytes": 1723,
+      "path": "optimized.log",
+      "sha256": "9afa58e5ab379fd7b1b4537f73126c0fc8ce18ee90d078d9b3d1a98be4aa9fd0"
+    },
+    {
+      "bytes": 603,
+      "path": "printed-witness-normal.log",
+      "sha256": "5751851cc31b4e4098b83e5059afe96b16565f5dd877e5c9c3c223e32291be4d"
+    },
+    {
+      "bytes": 603,
+      "path": "printed-witness-optimized.log",
+      "sha256": "5751851cc31b4e4098b83e5059afe96b16565f5dd877e5c9c3c223e32291be4d"
+    },
+    {
+      "bytes": 159,
+      "path": "producer-recurrence-normal.log",
+      "sha256": "26607e74c79c1f552258a0a4e5729573c988cf6bcc88857055d206fbfb926ea3"
+    },
+    {
+      "bytes": 159,
+      "path": "producer-recurrence-optimized.log",
+      "sha256": "26607e74c79c1f552258a0a4e5729573c988cf6bcc88857055d206fbfb926ea3"
+    },
+    {
+      "bytes": 187,
+      "path": "recurrence-normal.log",
+      "sha256": "5af65be8827d585eae66bfc799f96323088db3b2fbb7e8e4e3629dd0d62db698"
+    },
+    {
+      "bytes": 187,
+      "path": "recurrence-optimized.log",
+      "sha256": "5af65be8827d585eae66bfc799f96323088db3b2fbb7e8e4e3629dd0d62db698"
+    },
+    {
+      "bytes": 12300,
+      "path": "recurrence_audit_receipt.json",
+      "sha256": "668fc8626275e9e8425c4b1f19b2416f874ed7317e86cf8231432659453b175a"
+    },
+    {
+      "bytes": 12300,
+      "path": "recurrence_audit_receipt_optimized.json",
+      "sha256": "668fc8626275e9e8425c4b1f19b2416f874ed7317e86cf8231432659453b175a"
+    }
+  ],
+  "no_repo_or_remote_mutations": true,
+  "normal_optimized_pairs_identical": [
+    [
+      "audit_receipt.json",
+      "audit_receipt_optimized.json"
+    ],
+    [
+      "recurrence_audit_receipt.json",
+      "recurrence_audit_receipt_optimized.json"
+    ],
+    [
+      "normal.log",
+      "optimized.log"
+    ],
+    [
+      "recurrence-normal.log",
+      "recurrence-optimized.log"
+    ],
+    [
+      "producer-recurrence-normal.log",
+      "producer-recurrence-optimized.log"
+    ],
+    [
+      "printed-witness-normal.log",
+      "printed-witness-optimized.log"
+    ]
+  ],
+  "producer_manifest_sha256": "8423a629603147141ef1a5f5570c7e74aecc6f55505f201c0d598d9aac6ad00a",
+  "producer_unchanged": true,
+  "status": "PASS, scoped independent audit; no universal payment result"
+}

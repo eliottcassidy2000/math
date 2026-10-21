@@ -1,0 +1,1 @@
+{"base_range": [4096, 16384], "checks": 72837792, "receipt_sha256": "a6d0bc95554667b77c05afb1367624783ca41ea17c37b799db42ea9a65abc263", "route_dag": {"max_requested_depth": 190, "nodes": 2539078, "sha256": "d317e5afa943893ad094c3b7eea88f6b24cee12ba8719930b8cde63c7bdcf159"}, "status": "PASS", "worst_increment_ratio": [5332, 581462, 150]}

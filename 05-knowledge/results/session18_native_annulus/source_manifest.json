@@ -1,0 +1,98 @@
+{
+  "base_commit": "c4a7875652a5ea516e93a31c3c6410d2204773b2",
+  "commands": [
+    "python3 -B verify_annulus.py --write",
+    "python3 -B -O verify_annulus.py",
+    "python3 -B verify_rays.py --write",
+    "python3 -B -O verify_rays.py",
+    "python3 -B verify_recurrence.py --write",
+    "python3 -B -O verify_recurrence.py"
+  ],
+  "energy_scope": "Arrived-frontier Eisenstein energy only, as native cancellation section3 Eq(4). Moving complement is original source-norm collateral, not coalesced moving-endpoint Gram energy.",
+  "inherited_canonical_jsonl_source_rows": {
+    "11002": {
+      "rows": 16503,
+      "sha256": "00c3cebe1da14e7f50f0d1f8642eac8f2d6e3ef83891eca6c5a1976cf1cbac99"
+    },
+    "16384": {
+      "rows": 24576,
+      "sha256": "8bfe48c77c6968e28c0a608c902f8aab8342fa781807eef4d449c2255fdbba71"
+    },
+    "4096": {
+      "rows": 6144,
+      "sha256": "391ff278538ec91153947a7a2c2a95dab45f6a4b0528b89973b88eece0720606"
+    },
+    "5997": {
+      "rows": 8996,
+      "sha256": "d0cefc22d3c56ae1abb2b560d115852e8ae00dafb9c49eace9aec560dbf19077"
+    }
+  },
+  "inherited_mechanisms": "The equivalent three-endpoint sweep and separate-scale all-prefix contraction census already occur in root_eisenstein_first_arrival_20261018j.md section5. The new finite predicate compares cross-scale coherence, not those individual contractions.",
+  "inherited_producer_declared_sha256": "6349cd853a933e49dc31cfc3dd6d733ee0271977c1cf5339ac8fa9bc56970385",
+  "inherited_producer_note": "Hash quoted by inherited authenticated receipt; the historical producer is not needed or imported by these portable checkers.",
+  "repository": "eliottcassidy2000/math",
+  "scope": "Finite base-scale interval 4096..16384 plus six explicit hostile-ray scales; unbounded energy and universal entry OPEN",
+  "source_clock_convention": "native primitive P-edge depth and full integer braid clock, not fully odd U-word length/cost",
+  "source_files": [
+    {
+      "bytes": 6823,
+      "lf_sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "bytes": 10465,
+      "lf_sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "bytes": 23187,
+      "lf_sha256": "fa66fea75074f148c78af934fe4b135c5e35d9f9f5c800c294df396265389b47",
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "fa66fea75074f148c78af934fe4b135c5e35d9f9f5c800c294df396265389b47"
+    },
+    {
+      "bytes": 13608,
+      "lf_sha256": "91b52f8e7bd7332ff1edcbd1dfdd0b43afca15cf17c7e451b32f3d5621c0b839",
+      "path": "05-knowledge/results/native_cancellation_105_20261018g.md",
+      "sha256": "91b52f8e7bd7332ff1edcbd1dfdd0b43afca15cf17c7e451b32f3d5621c0b839"
+    },
+    {
+      "bytes": 2968518,
+      "lf_sha256": "d2d4d152593a03eb653d1fd6fecfbc13f573a6eb74e1310f59b7a6cb78b01721",
+      "path": "05-knowledge/results/native_cancellation_105_20261018g.json",
+      "sha256": "d2d4d152593a03eb653d1fd6fecfbc13f573a6eb74e1310f59b7a6cb78b01721"
+    },
+    {
+      "bytes": 11244,
+      "lf_sha256": "ba08c30559bb5ba4a9757d9a048d8b008151cf00f586f1f43b03b671a176d367",
+      "path": "05-knowledge/results/eisenstein_circuit_completion_20261018g.md",
+      "sha256": "ba08c30559bb5ba4a9757d9a048d8b008151cf00f586f1f43b03b671a176d367"
+    },
+    {
+      "bytes": 739711,
+      "lf_sha256": "70e6a862a58662aa98130dc2cef7c27b53dab2849d07fc14106321d203203585",
+      "path": "05-knowledge/results/eisenstein_circuit_completion_20261018g.json",
+      "sha256": "70e6a862a58662aa98130dc2cef7c27b53dab2849d07fc14106321d203203585"
+    },
+    {
+      "bytes": 13690,
+      "lf_sha256": "75a59e714f2aba35ebf6b9dcaff3e52e06d520ff42542bc06be35bf3f25c575b",
+      "path": "05-knowledge/results/guarded_children_105_20261018g.md",
+      "sha256": "75a59e714f2aba35ebf6b9dcaff3e52e06d520ff42542bc06be35bf3f25c575b"
+    },
+    {
+      "bytes": 14898,
+      "lf_sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233",
+      "path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 26664,
+      "lf_sha256": "2a82460174f806daa64cae31b1fe856ff6b24812e4d90e285a50d51c03805dec",
+      "path": "05-knowledge/results/root_sparse_boundary_module_20261017i.md",
+      "sha256": "2a82460174f806daa64cae31b1fe856ff6b24812e4d90e285a50d51c03805dec"
+    }
+  ]
+}

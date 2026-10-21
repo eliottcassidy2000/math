@@ -1,0 +1,89 @@
+{
+  "energy_scope": "Arrived-frontier Eisenstein energy; original-norm moving collateral, not full-state moving Gram",
+  "files": [
+    {
+      "bytes": 18210,
+      "path": "README.md",
+      "sha256": "f5edff0fe9009171f00b23e9bb38f5732eac72b682e58f9ae38f05e8fbff16fb"
+    },
+    {
+      "bytes": 12246,
+      "path": "verify_annulus.py",
+      "sha256": "ee6c6af3d77d1e51e49b9a6db75806926d084c8e65f6b1c85829627fdf5ea9b7"
+    },
+    {
+      "bytes": 2039,
+      "path": "verify_rays.py",
+      "sha256": "f7f4d2231da456fdf777dd24ef5744b41b77ba69cb6e9263ac85a7e27ef0d103"
+    },
+    {
+      "bytes": 2669,
+      "path": "verify_recurrence.py",
+      "sha256": "84f82ed09d268bb031ecb260f7a04cae0c6cd9cc1d63a47b5d3f265559ee53a3"
+    },
+    {
+      "bytes": 8796,
+      "path": "frontier.json",
+      "sha256": "391f6d3380bcae4afb9a1bbd9522b74b1e9006012fa10a92be5bf0bbf938754f"
+    },
+    {
+      "bytes": 424902,
+      "path": "annulus_receipt.json",
+      "sha256": "a6d0bc95554667b77c05afb1367624783ca41ea17c37b799db42ea9a65abc263"
+    },
+    {
+      "bytes": 74949,
+      "path": "ray_receipt.json",
+      "sha256": "121d75dc652fc1d0882d8a168ba66283dbfedfd17a5ffa512046449700fe4364"
+    },
+    {
+      "bytes": 6061,
+      "path": "recurrence_receipt.json",
+      "sha256": "db9e5b12dfc8c59dd7c234e03865437c91ce992c53602398e6a1f26ff13bf7e7"
+    },
+    {
+      "bytes": 4672,
+      "path": "source_manifest.json",
+      "sha256": "bb394fca644710db803c9f24db7e15ffb54c7feac6eb2bfd4bb289e4fa472689"
+    },
+    {
+      "bytes": 339,
+      "path": "normal.log",
+      "sha256": "4911110c028d6f53d5ce7fdb6c967cff04fefe39ce0a2817c5e674082ca121a0"
+    },
+    {
+      "bytes": 339,
+      "path": "optimized.log",
+      "sha256": "4911110c028d6f53d5ce7fdb6c967cff04fefe39ce0a2817c5e674082ca121a0"
+    },
+    {
+      "bytes": 314,
+      "path": "rays-normal.log",
+      "sha256": "aa1cf9d1efe1ebd9c1fd9e8a355486b972dafca851b4cf95550bb45e6db4d3ec"
+    },
+    {
+      "bytes": 314,
+      "path": "rays-optimized.log",
+      "sha256": "aa1cf9d1efe1ebd9c1fd9e8a355486b972dafca851b4cf95550bb45e6db4d3ec"
+    },
+    {
+      "bytes": 159,
+      "path": "recurrence-normal.log",
+      "sha256": "26607e74c79c1f552258a0a4e5729573c988cf6bcc88857055d206fbfb926ea3"
+    },
+    {
+      "bytes": 159,
+      "path": "recurrence-optimized.log",
+      "sha256": "26607e74c79c1f552258a0a4e5729573c988cf6bcc88857055d206fbfb926ea3"
+    }
+  ],
+  "normal_optimized_outputs_match": true,
+  "proposed_destination": "05-knowledge/results/session18_native_annulus/",
+  "receipts": {
+    "annulus_receipt.json": 72837792,
+    "ray_receipt.json": 123608649,
+    "recurrence_receipt.json": 6929714
+  },
+  "status": "Frozen for independent review; no repository mutations by worker",
+  "total_bytes": 556168
+}
