@@ -1,0 +1,7969 @@
+{
+  "cones": {
+    "boundary_facets": 50,
+    "count": 25,
+    "determinants": [
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "facets": [
+      {
+        "boundary_inequalities": [
+          4
+        ],
+        "incident_cells": [
+          0
+        ],
+        "rays": [
+          0,
+          1,
+          2,
+          6,
+          7
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          3
+        ],
+        "incident_cells": [
+          1
+        ],
+        "rays": [
+          0,
+          1,
+          2,
+          6,
+          10
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          0,
+          1
+        ],
+        "rays": [
+          0,
+          1,
+          2,
+          6,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          2
+        ],
+        "incident_cells": [
+          2
+        ],
+        "rays": [
+          0,
+          1,
+          2,
+          7,
+          10
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          0,
+          2
+        ],
+        "rays": [
+          0,
+          1,
+          2,
+          7,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          1,
+          2
+        ],
+        "rays": [
+          0,
+          1,
+          2,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          1
+        ],
+        "incident_cells": [
+          5
+        ],
+        "rays": [
+          0,
+          1,
+          5,
+          8,
+          9
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          3
+        ],
+        "incident_cells": [
+          6
+        ],
+        "rays": [
+          0,
+          1,
+          5,
+          8,
+          10
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          5,
+          6
+        ],
+        "rays": [
+          0,
+          1,
+          5,
+          8,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          2
+        ],
+        "incident_cells": [
+          7
+        ],
+        "rays": [
+          0,
+          1,
+          5,
+          9,
+          10
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          5,
+          7
+        ],
+        "rays": [
+          0,
+          1,
+          5,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          6,
+          7
+        ],
+        "rays": [
+          0,
+          1,
+          5,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          4
+        ],
+        "incident_cells": [
+          3
+        ],
+        "rays": [
+          0,
+          1,
+          6,
+          7,
+          9
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          0,
+          3
+        ],
+        "rays": [
+          0,
+          1,
+          6,
+          7,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          1
+        ],
+        "incident_cells": [
+          8
+        ],
+        "rays": [
+          0,
+          1,
+          6,
+          8,
+          9
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          3
+        ],
+        "incident_cells": [
+          9
+        ],
+        "rays": [
+          0,
+          1,
+          6,
+          8,
+          10
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          8,
+          9
+        ],
+        "rays": [
+          0,
+          1,
+          6,
+          8,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          3,
+          8
+        ],
+        "rays": [
+          0,
+          1,
+          6,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          1,
+          9
+        ],
+        "rays": [
+          0,
+          1,
+          6,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          2
+        ],
+        "incident_cells": [
+          4
+        ],
+        "rays": [
+          0,
+          1,
+          7,
+          9,
+          10
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          3,
+          4
+        ],
+        "rays": [
+          0,
+          1,
+          7,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          2,
+          4
+        ],
+        "rays": [
+          0,
+          1,
+          7,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          5,
+          8
+        ],
+        "rays": [
+          0,
+          1,
+          8,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          6,
+          9
+        ],
+        "rays": [
+          0,
+          1,
+          8,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          4,
+          7
+        ],
+        "rays": [
+          0,
+          1,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          4
+        ],
+        "incident_cells": [
+          10
+        ],
+        "rays": [
+          0,
+          2,
+          3,
+          6,
+          7
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          3
+        ],
+        "incident_cells": [
+          11
+        ],
+        "rays": [
+          0,
+          2,
+          3,
+          6,
+          8
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          10,
+          11
+        ],
+        "rays": [
+          0,
+          2,
+          3,
+          6,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          0
+        ],
+        "incident_cells": [
+          12
+        ],
+        "rays": [
+          0,
+          2,
+          3,
+          7,
+          8
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          10,
+          12
+        ],
+        "rays": [
+          0,
+          2,
+          3,
+          7,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          11,
+          12
+        ],
+        "rays": [
+          0,
+          2,
+          3,
+          8,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          0,
+          10
+        ],
+        "rays": [
+          0,
+          2,
+          6,
+          7,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          3
+        ],
+        "incident_cells": [
+          13
+        ],
+        "rays": [
+          0,
+          2,
+          6,
+          8,
+          10
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          11,
+          13
+        ],
+        "rays": [
+          0,
+          2,
+          6,
+          8,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          1,
+          13
+        ],
+        "rays": [
+          0,
+          2,
+          6,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          0
+        ],
+        "incident_cells": [
+          14
+        ],
+        "rays": [
+          0,
+          2,
+          7,
+          8,
+          10
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          12,
+          14
+        ],
+        "rays": [
+          0,
+          2,
+          7,
+          8,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          2,
+          14
+        ],
+        "rays": [
+          0,
+          2,
+          7,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          13,
+          14
+        ],
+        "rays": [
+          0,
+          2,
+          8,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          0
+        ],
+        "incident_cells": [
+          15
+        ],
+        "rays": [
+          0,
+          3,
+          4,
+          7,
+          8
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          4
+        ],
+        "incident_cells": [
+          16
+        ],
+        "rays": [
+          0,
+          3,
+          4,
+          7,
+          9
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          15,
+          16
+        ],
+        "rays": [
+          0,
+          3,
+          4,
+          7,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          1
+        ],
+        "incident_cells": [
+          17
+        ],
+        "rays": [
+          0,
+          3,
+          4,
+          8,
+          9
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          15,
+          17
+        ],
+        "rays": [
+          0,
+          3,
+          4,
+          8,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          16,
+          17
+        ],
+        "rays": [
+          0,
+          3,
+          4,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          4
+        ],
+        "incident_cells": [
+          18
+        ],
+        "rays": [
+          0,
+          3,
+          6,
+          7,
+          9
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          10,
+          18
+        ],
+        "rays": [
+          0,
+          3,
+          6,
+          7,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          1
+        ],
+        "incident_cells": [
+          19
+        ],
+        "rays": [
+          0,
+          3,
+          6,
+          8,
+          9
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          11,
+          19
+        ],
+        "rays": [
+          0,
+          3,
+          6,
+          8,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          18,
+          19
+        ],
+        "rays": [
+          0,
+          3,
+          6,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          12,
+          15
+        ],
+        "rays": [
+          0,
+          3,
+          7,
+          8,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          16,
+          18
+        ],
+        "rays": [
+          0,
+          3,
+          7,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          17,
+          19
+        ],
+        "rays": [
+          0,
+          3,
+          8,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          1
+        ],
+        "incident_cells": [
+          20
+        ],
+        "rays": [
+          0,
+          4,
+          5,
+          8,
+          9
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          0
+        ],
+        "incident_cells": [
+          21
+        ],
+        "rays": [
+          0,
+          4,
+          5,
+          8,
+          10
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          20,
+          21
+        ],
+        "rays": [
+          0,
+          4,
+          5,
+          8,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          2
+        ],
+        "incident_cells": [
+          22
+        ],
+        "rays": [
+          0,
+          4,
+          5,
+          9,
+          10
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          20,
+          22
+        ],
+        "rays": [
+          0,
+          4,
+          5,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          21,
+          22
+        ],
+        "rays": [
+          0,
+          4,
+          5,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          0
+        ],
+        "incident_cells": [
+          23
+        ],
+        "rays": [
+          0,
+          4,
+          7,
+          8,
+          10
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          15,
+          23
+        ],
+        "rays": [
+          0,
+          4,
+          7,
+          8,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          2
+        ],
+        "incident_cells": [
+          24
+        ],
+        "rays": [
+          0,
+          4,
+          7,
+          9,
+          10
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          16,
+          24
+        ],
+        "rays": [
+          0,
+          4,
+          7,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          23,
+          24
+        ],
+        "rays": [
+          0,
+          4,
+          7,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          17,
+          20
+        ],
+        "rays": [
+          0,
+          4,
+          8,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          21,
+          23
+        ],
+        "rays": [
+          0,
+          4,
+          8,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          22,
+          24
+        ],
+        "rays": [
+          0,
+          4,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          5,
+          20
+        ],
+        "rays": [
+          0,
+          5,
+          8,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          6,
+          21
+        ],
+        "rays": [
+          0,
+          5,
+          8,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          7,
+          22
+        ],
+        "rays": [
+          0,
+          5,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          3,
+          18
+        ],
+        "rays": [
+          0,
+          6,
+          7,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          8,
+          19
+        ],
+        "rays": [
+          0,
+          6,
+          8,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          9,
+          13
+        ],
+        "rays": [
+          0,
+          6,
+          8,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          14,
+          23
+        ],
+        "rays": [
+          0,
+          7,
+          8,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [],
+        "incident_cells": [
+          4,
+          24
+        ],
+        "rays": [
+          0,
+          7,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          5
+        ],
+        "incident_cells": [
+          0
+        ],
+        "rays": [
+          1,
+          2,
+          6,
+          7,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          5
+        ],
+        "incident_cells": [
+          1
+        ],
+        "rays": [
+          1,
+          2,
+          6,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          5
+        ],
+        "incident_cells": [
+          2
+        ],
+        "rays": [
+          1,
+          2,
+          7,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          9
+        ],
+        "incident_cells": [
+          5
+        ],
+        "rays": [
+          1,
+          5,
+          8,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          9
+        ],
+        "incident_cells": [
+          6
+        ],
+        "rays": [
+          1,
+          5,
+          8,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          9
+        ],
+        "incident_cells": [
+          7
+        ],
+        "rays": [
+          1,
+          5,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          5
+        ],
+        "incident_cells": [
+          3
+        ],
+        "rays": [
+          1,
+          6,
+          7,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          9
+        ],
+        "incident_cells": [
+          8
+        ],
+        "rays": [
+          1,
+          6,
+          8,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          9
+        ],
+        "incident_cells": [
+          9
+        ],
+        "rays": [
+          1,
+          6,
+          8,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          5
+        ],
+        "incident_cells": [
+          4
+        ],
+        "rays": [
+          1,
+          7,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          6
+        ],
+        "incident_cells": [
+          10
+        ],
+        "rays": [
+          2,
+          3,
+          6,
+          7,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          6
+        ],
+        "incident_cells": [
+          11
+        ],
+        "rays": [
+          2,
+          3,
+          6,
+          8,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          6
+        ],
+        "incident_cells": [
+          12
+        ],
+        "rays": [
+          2,
+          3,
+          7,
+          8,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          6
+        ],
+        "incident_cells": [
+          13
+        ],
+        "rays": [
+          2,
+          6,
+          8,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          6
+        ],
+        "incident_cells": [
+          14
+        ],
+        "rays": [
+          2,
+          7,
+          8,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          7
+        ],
+        "incident_cells": [
+          15
+        ],
+        "rays": [
+          3,
+          4,
+          7,
+          8,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          7
+        ],
+        "incident_cells": [
+          16
+        ],
+        "rays": [
+          3,
+          4,
+          7,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          7
+        ],
+        "incident_cells": [
+          17
+        ],
+        "rays": [
+          3,
+          4,
+          8,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          7
+        ],
+        "incident_cells": [
+          18
+        ],
+        "rays": [
+          3,
+          6,
+          7,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          7
+        ],
+        "incident_cells": [
+          19
+        ],
+        "rays": [
+          3,
+          6,
+          8,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          8
+        ],
+        "incident_cells": [
+          20
+        ],
+        "rays": [
+          4,
+          5,
+          8,
+          9,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          8
+        ],
+        "incident_cells": [
+          21
+        ],
+        "rays": [
+          4,
+          5,
+          8,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          8
+        ],
+        "incident_cells": [
+          22
+        ],
+        "rays": [
+          4,
+          5,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          8
+        ],
+        "incident_cells": [
+          23
+        ],
+        "rays": [
+          4,
+          7,
+          8,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_inequalities": [
+          8
+        ],
+        "incident_cells": [
+          24
+        ],
+        "rays": [
+          4,
+          7,
+          9,
+          10,
+          11
+        ]
+      }
+    ],
+    "generic_vector": [
+      6143,
+      2626,
+      3204,
+      2376,
+      2704,
+      3360
+    ],
+    "grouped_shifts": [
+      {
+        "shifts": {
+          "10": 2,
+          "13": 1,
+          "3": 2,
+          "6": 2,
+          "7": 2,
+          "9": 1
+        },
+        "weights": [
+          3,
+          3,
+          3,
+          4,
+          5,
+          5
+        ]
+      },
+      {
+        "shifts": {
+          "0": 1,
+          "10": 3,
+          "3": 1,
+          "4": 3,
+          "6": 2,
+          "7": 4,
+          "8": 1
+        },
+        "weights": [
+          3,
+          3,
+          4,
+          4,
+          5,
+          5
+        ]
+      }
+    ],
+    "internal_facets": 50,
+    "pairwise_separators": [
+      {
+        "common_rays": [
+          0,
+          1,
+          2,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1
+        ],
+        "pair": [
+          0,
+          1
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          2,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "pair": [
+          0,
+          2
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          6,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          0,
+          -1,
+          0
+        ],
+        "pair": [
+          0,
+          3
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          2,
+          -1,
+          -2
+        ],
+        "pair": [
+          0,
+          4
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          2,
+          1,
+          -1,
+          -2
+        ],
+        "pair": [
+          0,
+          5
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          -2
+        ],
+        "pair": [
+          0,
+          6
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          2,
+          2,
+          -1,
+          -3
+        ],
+        "pair": [
+          0,
+          7
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          2,
+          0,
+          -1,
+          -1
+        ],
+        "pair": [
+          0,
+          8
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          -2
+        ],
+        "pair": [
+          0,
+          9
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          6,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          0
+        ],
+        "pair": [
+          0,
+          10
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -1,
+          1,
+          -1
+        ],
+        "pair": [
+          0,
+          11
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          0,
+          -1,
+          0,
+          -1
+        ],
+        "pair": [
+          0,
+          12
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -1,
+          1,
+          -1
+        ],
+        "pair": [
+          0,
+          13
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "pair": [
+          0,
+          14
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "pair": [
+          0,
+          15
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          3,
+          -1,
+          -3,
+          -1
+        ],
+        "pair": [
+          0,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          4,
+          -1,
+          -3,
+          -2
+        ],
+        "pair": [
+          0,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          -1,
+          -2,
+          0
+        ],
+        "pair": [
+          0,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          3,
+          -1,
+          -2,
+          -1
+        ],
+        "pair": [
+          0,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          3,
+          0,
+          -2,
+          -2
+        ],
+        "pair": [
+          0,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          1,
+          -1,
+          -3
+        ],
+        "pair": [
+          0,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          3,
+          2,
+          -2,
+          -4
+        ],
+        "pair": [
+          0,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          1,
+          -1,
+          -2
+        ],
+        "pair": [
+          0,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          2,
+          -2,
+          -3
+        ],
+        "pair": [
+          0,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          2,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          0,
+          1,
+          -1,
+          0
+        ],
+        "pair": [
+          1,
+          2
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          0,
+          -2,
+          1
+        ],
+        "pair": [
+          1,
+          3
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          2,
+          -2,
+          -1
+        ],
+        "pair": [
+          1,
+          4
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          3,
+          1,
+          -2,
+          -2
+        ],
+        "pair": [
+          1,
+          5
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          2,
+          1,
+          -1,
+          -2
+        ],
+        "pair": [
+          1,
+          6
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "pair": [
+          1,
+          7
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          2,
+          0,
+          -1,
+          -1
+        ],
+        "pair": [
+          1,
+          8
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          6,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1
+        ],
+        "pair": [
+          1,
+          9
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -1,
+          -1,
+          1
+        ],
+        "pair": [
+          1,
+          10
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          0,
+          -2,
+          -1,
+          1
+        ],
+        "pair": [
+          1,
+          11
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          11
+        ],
+        "normal": [
+          0,
+          3,
+          0,
+          -2,
+          -2,
+          1
+        ],
+        "pair": [
+          1,
+          12
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          6,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          0
+        ],
+        "pair": [
+          1,
+          13
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          0,
+          -1,
+          -1,
+          0
+        ],
+        "pair": [
+          1,
+          14
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          1,
+          -1,
+          -2,
+          0
+        ],
+        "pair": [
+          1,
+          15
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          1,
+          -1,
+          -3,
+          1
+        ],
+        "pair": [
+          1,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          2,
+          -1,
+          -3,
+          0
+        ],
+        "pair": [
+          1,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          -1,
+          -2,
+          1
+        ],
+        "pair": [
+          1,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          -1,
+          -2,
+          0
+        ],
+        "pair": [
+          1,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          0,
+          -2,
+          -1
+        ],
+        "pair": [
+          1,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          0,
+          -1,
+          -1
+        ],
+        "pair": [
+          1,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          1,
+          -2,
+          -1
+        ],
+        "pair": [
+          1,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          1,
+          0,
+          -2,
+          -1
+        ],
+        "pair": [
+          1,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          1,
+          -2,
+          -1
+        ],
+        "pair": [
+          1,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        "pair": [
+          2,
+          3
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          7,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "pair": [
+          2,
+          4
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          2,
+          0,
+          -1,
+          -1
+        ],
+        "pair": [
+          2,
+          5
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1
+        ],
+        "pair": [
+          2,
+          6
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          2,
+          1,
+          -1,
+          -2
+        ],
+        "pair": [
+          2,
+          7
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          2,
+          -1,
+          -1,
+          0
+        ],
+        "pair": [
+          2,
+          8
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          -1,
+          1,
+          -1
+        ],
+        "pair": [
+          2,
+          9
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -2,
+          0,
+          1
+        ],
+        "pair": [
+          2,
+          10
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -3,
+          1,
+          1
+        ],
+        "pair": [
+          2,
+          11
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -2,
+          0,
+          1
+        ],
+        "pair": [
+          2,
+          12
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -2,
+          1,
+          0
+        ],
+        "pair": [
+          2,
+          13
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          7,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          0
+        ],
+        "pair": [
+          2,
+          14
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          -1,
+          -1,
+          0
+        ],
+        "pair": [
+          2,
+          15
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          -1,
+          -2,
+          0
+        ],
+        "pair": [
+          2,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          3,
+          -1,
+          -2,
+          -1
+        ],
+        "pair": [
+          2,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          -2,
+          -2,
+          1
+        ],
+        "pair": [
+          2,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          3,
+          -2,
+          -2,
+          0
+        ],
+        "pair": [
+          2,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          3,
+          0,
+          -2,
+          -2
+        ],
+        "pair": [
+          2,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          0,
+          -1,
+          -2
+        ],
+        "pair": [
+          2,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          3,
+          1,
+          -2,
+          -3
+        ],
+        "pair": [
+          2,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          0,
+          -1,
+          -1
+        ],
+        "pair": [
+          2,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          1,
+          -2,
+          -2
+        ],
+        "pair": [
+          2,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          7,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "pair": [
+          3,
+          4
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          -2
+        ],
+        "pair": [
+          3,
+          5
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          -2
+        ],
+        "pair": [
+          3,
+          6
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          -2
+        ],
+        "pair": [
+          3,
+          7
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          6,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1
+        ],
+        "pair": [
+          3,
+          8
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1
+        ],
+        "pair": [
+          3,
+          9
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -1,
+          1,
+          0
+        ],
+        "pair": [
+          3,
+          10
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -1,
+          2,
+          -1
+        ],
+        "pair": [
+          3,
+          11
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "pair": [
+          3,
+          12
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -1,
+          2,
+          -1
+        ],
+        "pair": [
+          3,
+          13
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          0,
+          1,
+          -1
+        ],
+        "pair": [
+          3,
+          14
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "pair": [
+          3,
+          15
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          2,
+          -1,
+          -2,
+          -1
+        ],
+        "pair": [
+          3,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          3,
+          -1,
+          -2,
+          -2
+        ],
+        "pair": [
+          3,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          7,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          -1,
+          -1,
+          0
+        ],
+        "pair": [
+          3,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          -1,
+          -1,
+          -1
+        ],
+        "pair": [
+          3,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          0,
+          -1,
+          -2
+        ],
+        "pair": [
+          3,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          2,
+          0,
+          -1,
+          -3
+        ],
+        "pair": [
+          3,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          1,
+          -1,
+          -3
+        ],
+        "pair": [
+          3,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          1,
+          0,
+          -1,
+          -2
+        ],
+        "pair": [
+          3,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          1,
+          -1,
+          -2
+        ],
+        "pair": [
+          3,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          2,
+          -1,
+          0,
+          -1
+        ],
+        "pair": [
+          4,
+          5
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          -1,
+          1,
+          -1
+        ],
+        "pair": [
+          4,
+          6
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          9,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1
+        ],
+        "pair": [
+          4,
+          7
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          -1,
+          0,
+          0
+        ],
+        "pair": [
+          4,
+          8
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          0,
+          -1,
+          1,
+          0
+        ],
+        "pair": [
+          4,
+          9
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -3,
+          1,
+          2
+        ],
+        "pair": [
+          4,
+          10
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -4,
+          2,
+          2
+        ],
+        "pair": [
+          4,
+          11
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -3,
+          1,
+          2
+        ],
+        "pair": [
+          4,
+          12
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -3,
+          2,
+          1
+        ],
+        "pair": [
+          4,
+          13
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -2,
+          1,
+          1
+        ],
+        "pair": [
+          4,
+          14
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          1,
+          -2,
+          -1,
+          0
+        ],
+        "pair": [
+          4,
+          15
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          -1,
+          -1,
+          0
+        ],
+        "pair": [
+          4,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          -1,
+          -1,
+          -1
+        ],
+        "pair": [
+          4,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          -2,
+          -1,
+          1
+        ],
+        "pair": [
+          4,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          -2,
+          -1,
+          0
+        ],
+        "pair": [
+          4,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          -1,
+          -1,
+          -1
+        ],
+        "pair": [
+          4,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          2,
+          -1,
+          -1,
+          -2
+        ],
+        "pair": [
+          4,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          0,
+          -1,
+          -2
+        ],
+        "pair": [
+          4,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "pair": [
+          4,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          9,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          0,
+          -1,
+          -1
+        ],
+        "pair": [
+          4,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          5,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0
+        ],
+        "pair": [
+          5,
+          6
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          5,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          -1,
+          1,
+          0,
+          0
+        ],
+        "pair": [
+          5,
+          7
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          8,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1
+        ],
+        "pair": [
+          5,
+          8
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          -2,
+          -1,
+          2,
+          1
+        ],
+        "pair": [
+          5,
+          9
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -2,
+          -2,
+          0,
+          3
+        ],
+        "pair": [
+          5,
+          10
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -2,
+          0,
+          2
+        ],
+        "pair": [
+          5,
+          11
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -1,
+          0,
+          1
+        ],
+        "pair": [
+          5,
+          12
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -3,
+          -2,
+          2,
+          2
+        ],
+        "pair": [
+          5,
+          13
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -2,
+          -1,
+          1,
+          1
+        ],
+        "pair": [
+          5,
+          14
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        "pair": [
+          5,
+          15
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -1,
+          -1,
+          2
+        ],
+        "pair": [
+          5,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -1,
+          -1,
+          1
+        ],
+        "pair": [
+          5,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -2,
+          -1,
+          3
+        ],
+        "pair": [
+          5,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -2,
+          -1,
+          2
+        ],
+        "pair": [
+          5,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          5,
+          8,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0
+        ],
+        "pair": [
+          5,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          5,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          0,
+          -1,
+          0
+        ],
+        "pair": [
+          5,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          5,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "pair": [
+          5,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          3,
+          -2,
+          -1,
+          -1,
+          1
+        ],
+        "pair": [
+          5,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -2,
+          1,
+          -1,
+          1
+        ],
+        "pair": [
+          5,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          5,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          0,
+          1,
+          -1,
+          0
+        ],
+        "pair": [
+          6,
+          7
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        "pair": [
+          6,
+          8
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          8,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          -1,
+          -1,
+          1,
+          1
+        ],
+        "pair": [
+          6,
+          9
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -2,
+          -2,
+          0,
+          3
+        ],
+        "pair": [
+          6,
+          10
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -2,
+          0,
+          2
+        ],
+        "pair": [
+          6,
+          11
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -2,
+          0,
+          2
+        ],
+        "pair": [
+          6,
+          12
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -2,
+          -2,
+          1,
+          2
+        ],
+        "pair": [
+          6,
+          13
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -1,
+          0,
+          1
+        ],
+        "pair": [
+          6,
+          14
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -1,
+          -1,
+          1
+        ],
+        "pair": [
+          6,
+          15
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -1,
+          -2,
+          2
+        ],
+        "pair": [
+          6,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          -1,
+          -2,
+          1
+        ],
+        "pair": [
+          6,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -2,
+          -2,
+          3
+        ],
+        "pair": [
+          6,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          -2,
+          -2,
+          2
+        ],
+        "pair": [
+          6,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          5,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          0,
+          -2,
+          0
+        ],
+        "pair": [
+          6,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          5,
+          8,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0
+        ],
+        "pair": [
+          6,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          5,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          1,
+          -2,
+          0
+        ],
+        "pair": [
+          6,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        "pair": [
+          6,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          1,
+          -2,
+          1
+        ],
+        "pair": [
+          6,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          -2,
+          0,
+          1
+        ],
+        "pair": [
+          7,
+          8
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          -1,
+          -2,
+          2,
+          1
+        ],
+        "pair": [
+          7,
+          9
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -2,
+          0,
+          2
+        ],
+        "pair": [
+          7,
+          10
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -3,
+          1,
+          2
+        ],
+        "pair": [
+          7,
+          11
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          -3,
+          0,
+          2
+        ],
+        "pair": [
+          7,
+          12
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -2,
+          1,
+          1
+        ],
+        "pair": [
+          7,
+          13
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          -2,
+          0,
+          1
+        ],
+        "pair": [
+          7,
+          14
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          0,
+          -2,
+          -1,
+          1
+        ],
+        "pair": [
+          7,
+          15
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -1,
+          -1,
+          1
+        ],
+        "pair": [
+          7,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          -2,
+          -1,
+          1
+        ],
+        "pair": [
+          7,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -2,
+          -1,
+          2
+        ],
+        "pair": [
+          7,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          -2,
+          -1,
+          1
+        ],
+        "pair": [
+          7,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          5,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          -1,
+          -1,
+          0
+        ],
+        "pair": [
+          7,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          5,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          0,
+          -1,
+          -1,
+          0
+        ],
+        "pair": [
+          7,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          5,
+          9,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0
+        ],
+        "pair": [
+          7,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          3,
+          -1,
+          -2,
+          -1,
+          1
+        ],
+        "pair": [
+          7,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          0,
+          -1,
+          1
+        ],
+        "pair": [
+          7,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          1,
+          6,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0
+        ],
+        "pair": [
+          8,
+          9
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -2,
+          -1,
+          0,
+          2
+        ],
+        "pair": [
+          8,
+          10
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -1,
+          0,
+          1
+        ],
+        "pair": [
+          8,
+          11
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        "pair": [
+          8,
+          12
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -2,
+          -1,
+          1,
+          1
+        ],
+        "pair": [
+          8,
+          13
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "pair": [
+          8,
+          14
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        "pair": [
+          8,
+          15
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          -1,
+          -2,
+          2
+        ],
+        "pair": [
+          8,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          0,
+          -1,
+          -2,
+          1
+        ],
+        "pair": [
+          8,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -1,
+          -1,
+          2
+        ],
+        "pair": [
+          8,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          8,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -1,
+          -1,
+          1
+        ],
+        "pair": [
+          8,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          1,
+          -1,
+          -1
+        ],
+        "pair": [
+          8,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        "pair": [
+          8,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          2,
+          -1,
+          -1
+        ],
+        "pair": [
+          8,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          0,
+          -1,
+          0
+        ],
+        "pair": [
+          8,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "pair": [
+          8,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -1,
+          -1,
+          2
+        ],
+        "pair": [
+          9,
+          10
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          -2,
+          -1,
+          2
+        ],
+        "pair": [
+          9,
+          11
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          3,
+          -1,
+          -2,
+          -2,
+          2
+        ],
+        "pair": [
+          9,
+          12
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          8,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -1,
+          0,
+          1
+        ],
+        "pair": [
+          9,
+          13
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        "pair": [
+          9,
+          14
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          0,
+          -1,
+          -2,
+          1
+        ],
+        "pair": [
+          9,
+          15
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          0,
+          -1,
+          -3,
+          2
+        ],
+        "pair": [
+          9,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          1,
+          -1,
+          -3,
+          1
+        ],
+        "pair": [
+          9,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          -1,
+          -2,
+          2
+        ],
+        "pair": [
+          9,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          -1,
+          -2,
+          1
+        ],
+        "pair": [
+          9,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          1,
+          -3,
+          -1
+        ],
+        "pair": [
+          9,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          1,
+          -2,
+          -1
+        ],
+        "pair": [
+          9,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          2,
+          -3,
+          -1
+        ],
+        "pair": [
+          9,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0
+        ],
+        "pair": [
+          9,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          1,
+          -2,
+          0
+        ],
+        "pair": [
+          9,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          3,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1
+        ],
+        "pair": [
+          10,
+          11
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          3,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1
+        ],
+        "pair": [
+          10,
+          12
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          0,
+          1,
+          2,
+          -2
+        ],
+        "pair": [
+          10,
+          13
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          -2
+        ],
+        "pair": [
+          10,
+          14
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          0,
+          -1,
+          -1
+        ],
+        "pair": [
+          10,
+          15
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          0,
+          -2,
+          -1
+        ],
+        "pair": [
+          10,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          3,
+          0,
+          -2,
+          -2
+        ],
+        "pair": [
+          10,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          6,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          0,
+          -1,
+          0
+        ],
+        "pair": [
+          10,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          2,
+          0,
+          -1,
+          -1
+        ],
+        "pair": [
+          10,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          2,
+          1,
+          -1,
+          -2
+        ],
+        "pair": [
+          10,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          1,
+          -1,
+          -3
+        ],
+        "pair": [
+          10,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          2,
+          2,
+          -1,
+          -3
+        ],
+        "pair": [
+          10,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          1,
+          -1,
+          -2
+        ],
+        "pair": [
+          10,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          2,
+          -1,
+          -2
+        ],
+        "pair": [
+          10,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          3,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0
+        ],
+        "pair": [
+          11,
+          12
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          6,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          0,
+          1,
+          1,
+          -1
+        ],
+        "pair": [
+          11,
+          13
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          1,
+          -1,
+          -1
+        ],
+        "pair": [
+          11,
+          14
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          0,
+          -2,
+          0
+        ],
+        "pair": [
+          11,
+          15
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          0,
+          -3,
+          1
+        ],
+        "pair": [
+          11,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          0,
+          -2,
+          0
+        ],
+        "pair": [
+          11,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          0,
+          -2,
+          1
+        ],
+        "pair": [
+          11,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          6,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          0,
+          -1,
+          0
+        ],
+        "pair": [
+          11,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "pair": [
+          11,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          2,
+          -1,
+          -2
+        ],
+        "pair": [
+          11,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          1,
+          3,
+          -1,
+          -2
+        ],
+        "pair": [
+          11,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          2,
+          -2,
+          -2
+        ],
+        "pair": [
+          11,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          3,
+          -2,
+          -2
+        ],
+        "pair": [
+          11,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          -2,
+          0,
+          1,
+          2,
+          -1
+        ],
+        "pair": [
+          12,
+          13
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          7,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "pair": [
+          12,
+          14
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          7,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          0,
+          -1,
+          0
+        ],
+        "pair": [
+          12,
+          15
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          1
+        ],
+        "pair": [
+          12,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          2,
+          0,
+          -1,
+          0
+        ],
+        "pair": [
+          12,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          1
+        ],
+        "pair": [
+          12,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "pair": [
+          12,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          2,
+          1,
+          -1,
+          -1
+        ],
+        "pair": [
+          12,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          2,
+          3,
+          -1,
+          -3
+        ],
+        "pair": [
+          12,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          -2,
+          2,
+          4,
+          -1,
+          -3
+        ],
+        "pair": [
+          12,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          2,
+          -1,
+          -2
+        ],
+        "pair": [
+          12,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          1,
+          3,
+          -1,
+          -2
+        ],
+        "pair": [
+          12,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          2,
+          8,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0
+        ],
+        "pair": [
+          13,
+          14
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          1,
+          -1,
+          -3,
+          1
+        ],
+        "pair": [
+          13,
+          15
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          1,
+          -1,
+          -4,
+          2
+        ],
+        "pair": [
+          13,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          1,
+          -1,
+          -3,
+          1
+        ],
+        "pair": [
+          13,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          -1,
+          -3,
+          2
+        ],
+        "pair": [
+          13,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          6,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          -1,
+          -2,
+          1
+        ],
+        "pair": [
+          13,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          2,
+          1,
+          -2,
+          -1
+        ],
+        "pair": [
+          13,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "pair": [
+          13,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          1,
+          2,
+          -1,
+          -1
+        ],
+        "pair": [
+          13,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          1,
+          -2,
+          -1
+        ],
+        "pair": [
+          13,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          2,
+          -2,
+          -1
+        ],
+        "pair": [
+          13,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        "pair": [
+          14,
+          15
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          1,
+          -1,
+          -1,
+          2
+        ],
+        "pair": [
+          14,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          2,
+          -1,
+          -1,
+          1
+        ],
+        "pair": [
+          14,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          1,
+          -1,
+          -1,
+          2
+        ],
+        "pair": [
+          14,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          1,
+          -1,
+          0,
+          1
+        ],
+        "pair": [
+          14,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          2,
+          1,
+          -1,
+          -1
+        ],
+        "pair": [
+          14,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          2,
+          2,
+          -1,
+          -2
+        ],
+        "pair": [
+          14,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          -2,
+          2,
+          3,
+          -1,
+          -2
+        ],
+        "pair": [
+          14,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          8,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "pair": [
+          14,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          1,
+          2,
+          -1,
+          -1
+        ],
+        "pair": [
+          14,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          4,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "pair": [
+          15,
+          16
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          4,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "pair": [
+          15,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        "pair": [
+          15,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          -2,
+          1,
+          0,
+          1,
+          0
+        ],
+        "pair": [
+          15,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          1,
+          1,
+          0,
+          -1
+        ],
+        "pair": [
+          15,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          1,
+          2,
+          0,
+          -2
+        ],
+        "pair": [
+          15,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          11
+        ],
+        "normal": [
+          0,
+          -2,
+          1,
+          3,
+          0,
+          -2
+        ],
+        "pair": [
+          15,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          7,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "pair": [
+          15,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          0,
+          2,
+          0,
+          -1
+        ],
+        "pair": [
+          15,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          4,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1
+        ],
+        "pair": [
+          16,
+          17
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          7,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          -1,
+          0,
+          1,
+          1
+        ],
+        "pair": [
+          16,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          1,
+          0,
+          1,
+          -1
+        ],
+        "pair": [
+          16,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          -2
+        ],
+        "pair": [
+          16,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          -3
+        ],
+        "pair": [
+          16,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          -2
+        ],
+        "pair": [
+          16,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          -2
+        ],
+        "pair": [
+          16,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          7,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "pair": [
+          16,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          -2,
+          0,
+          1,
+          2
+        ],
+        "pair": [
+          17,
+          18
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          8,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "pair": [
+          17,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          8,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "pair": [
+          17,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "pair": [
+          17,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          -1,
+          2,
+          0,
+          -1
+        ],
+        "pair": [
+          17,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "pair": [
+          17,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          -1,
+          1,
+          0,
+          0
+        ],
+        "pair": [
+          17,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          3,
+          6,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1
+        ],
+        "pair": [
+          18,
+          19
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          1,
+          -1,
+          -3
+        ],
+        "pair": [
+          18,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          2,
+          1,
+          -1,
+          -4
+        ],
+        "pair": [
+          18,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          2,
+          1,
+          -1,
+          -3
+        ],
+        "pair": [
+          18,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          1,
+          1,
+          -1,
+          -3
+        ],
+        "pair": [
+          18,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          7,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          1,
+          1,
+          -1,
+          -2
+        ],
+        "pair": [
+          18,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          0,
+          1,
+          -1,
+          -1
+        ],
+        "pair": [
+          19,
+          20
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        "pair": [
+          19,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          2,
+          -1,
+          -1
+        ],
+        "pair": [
+          19,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        "pair": [
+          19,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          1,
+          -1,
+          0
+        ],
+        "pair": [
+          19,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          5,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "pair": [
+          20,
+          21
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          5,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          -1,
+          1,
+          0,
+          0
+        ],
+        "pair": [
+          20,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          8,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -2,
+          -1,
+          0,
+          1
+        ],
+        "pair": [
+          20,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          9,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          -2,
+          1,
+          0,
+          1
+        ],
+        "pair": [
+          20,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          5,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "pair": [
+          21,
+          22
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          8,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          1,
+          -1,
+          -1,
+          0,
+          1
+        ],
+        "pair": [
+          21,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          -1,
+          1,
+          0,
+          1
+        ],
+        "pair": [
+          21,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          2,
+          -1,
+          -2,
+          0,
+          1
+        ],
+        "pair": [
+          22,
+          23
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          9,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1
+        ],
+        "pair": [
+          22,
+          24
+        ]
+      },
+      {
+        "common_rays": [
+          0,
+          4,
+          7,
+          10,
+          11
+        ],
+        "normal": [
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "pair": [
+          23,
+          24
+        ]
+      }
+    ]
+  },
+  "controls": {
+    "boundary_points": 8896,
+    "fixed_bound": 100,
+    "fixed_coefficients": [
+      1,
+      0,
+      0,
+      1,
+      1,
+      2,
+      3,
+      2,
+      4,
+      4,
+      5,
+      7,
+      9,
+      9,
+      11,
+      13,
+      15,
+      17,
+      21,
+      21,
+      26,
+      29,
+      31,
+      36,
+      41,
+      42,
+      49,
+      53,
+      58,
+      64,
+      71,
+      74,
+      83,
+      89,
+      95,
+      104,
+      114,
+      118,
+      130,
+      138,
+      147,
+      158,
+      170,
+      177,
+      192,
+      203,
+      214,
+      228,
+      244,
+      252,
+      271,
+      285,
+      299,
+      317,
+      335,
+      347,
+      370,
+      386,
+      404,
+      425,
+      448,
+      463,
+      489,
+      510,
+      531,
+      556,
+      583,
+      601,
+      633,
+      657,
+      682,
+      712,
+      743,
+      765,
+      801,
+      830,
+      860,
+      894,
+      930,
+      956,
+      998,
+      1031,
+      1065,
+      1105,
+      1146,
+      1177,
+      1224,
+      1262,
+      1302,
+      1346,
+      1393,
+      1429,
+      1482,
+      1526,
+      1570,
+      1621,
+      1674,
+      1714,
+      1774,
+      1823,
+      1874
+    ],
+    "merged_coefficients": [
+      1,
+      0,
+      0,
+      1,
+      1,
+      2,
+      3,
+      3,
+      4,
+      6,
+      9,
+      10,
+      15,
+      17,
+      21,
+      31,
+      35,
+      41,
+      55,
+      64,
+      78,
+      95,
+      111,
+      130,
+      159,
+      184,
+      211,
+      252,
+      288,
+      328,
+      389,
+      437,
+      495,
+      571,
+      643,
+      726,
+      826,
+      920,
+      1028,
+      1162,
+      1293,
+      1428,
+      1602,
+      1767,
+      1948,
+      2169
+    ],
+    "ordinary_coefficients": [
+      1,
+      0,
+      0,
+      1,
+      1,
+      2,
+      3,
+      4,
+      4,
+      8,
+      13,
+      13,
+      21,
+      25,
+      31,
+      49,
+      55,
+      65,
+      89,
+      107,
+      130,
+      161,
+      191,
+      224,
+      277,
+      326,
+      373,
+      451,
+      518,
+      592,
+      707,
+      800,
+      907,
+      1053,
+      1191,
+      1348,
+      1538,
+      1722,
+      1926,
+      2186,
+      2439,
+      2698,
+      3034,
+      3357,
+      3704,
+      4135
+    ],
+    "ownership_bound": 25,
+    "ownership_points": 8921,
+    "raw_bound": 45,
+    "raw_coefficients": [
+      1,
+      0,
+      0,
+      5,
+      5,
+      2,
+      15,
+      20,
+      20,
+      40,
+      53,
+      65,
+      105,
+      125,
+      155,
+      229,
+      275,
+      325,
+      445,
+      535,
+      630,
+      805,
+      955,
+      1120,
+      1385,
+      1606,
+      1865,
+      2255,
+      2590,
+      2960,
+      3507,
+      4000,
+      4535,
+      5265,
+      5955,
+      6708,
+      7690,
+      8610,
+      9630,
+      10930,
+      12159,
+      13490,
+      15170,
+      16785,
+      18520,
+      20635
+    ]
+  },
+  "independent_method": "Fraction Gaussian elimination, exact pairwise strict separators, facet incidence/side certificate, dense rational polynomial arithmetic, bounded direct enumeration; no producer execution or triangulation recursion imported",
+  "rational_consequences": {
+    "fixed_fraction": "2100/17",
+    "fixed_leading": "7/4320",
+    "ordinary_leading": "17/1296000",
+    "profiles": {
+      "R": {
+        "minimal_quasiperiod": 60,
+        "minimal_recurrence_order": 22,
+        "numerator_degree": 12,
+        "pole_orders": {
+          "1": 6,
+          "2": 2,
+          "3": 3,
+          "4": 2,
+          "5": 1
+        }
+      },
+      "f": {
+        "minimal_quasiperiod": 60,
+        "minimal_recurrence_order": 26,
+        "numerator_degree": 16,
+        "pole_orders": {
+          "1": 6,
+          "2": 2,
+          "3": 3,
+          "4": 2,
+          "5": 2
+        }
+      },
+      "k": {
+        "minimal_quasiperiod": 120,
+        "minimal_recurrence_order": 22,
+        "numerator_degree": 12,
+        "pole_orders": {
+          "1": 4,
+          "2": 2,
+          "3": 2,
+          "4": 1,
+          "5": 1,
+          "6": 1,
+          "8": 1
+        }
+      },
+      "merged": {
+        "minimal_quasiperiod": 120,
+        "minimal_recurrence_order": 32,
+        "numerator_degree": 22,
+        "pole_orders": {
+          "1": 6,
+          "2": 2,
+          "3": 3,
+          "4": 2,
+          "5": 2,
+          "6": 1,
+          "8": 1
+        }
+      }
+    },
+    "raw_leading": "17/259200",
+    "recurrence_denominators": {
+      "R": [
+        1,
+        0,
+        0,
+        -3,
+        -2,
+        -1,
+        3,
+        6,
+        4,
+        1,
+        -6,
+        -6,
+        -6,
+        1,
+        4,
+        6,
+        3,
+        -1,
+        -2,
+        -3,
+        0,
+        0,
+        1
+      ],
+      "f": [
+        1,
+        1,
+        1,
+        -2,
+        -4,
+        -6,
+        -3,
+        3,
+        10,
+        13,
+        8,
+        -1,
+        -13,
+        -16,
+        -13,
+        -1,
+        8,
+        13,
+        10,
+        3,
+        -3,
+        -6,
+        -4,
+        -2,
+        1,
+        1,
+        1
+      ],
+      "k": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        -1,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        -1,
+        0,
+        -1,
+        0,
+        0,
+        1
+      ],
+      "merged": [
+        1,
+        0,
+        1,
+        -2,
+        0,
+        -4,
+        0,
+        -2,
+        3,
+        2,
+        4,
+        4,
+        0,
+        2,
+        -5,
+        0,
+        -8,
+        0,
+        -5,
+        2,
+        0,
+        4,
+        4,
+        2,
+        3,
+        -2,
+        0,
+        -4,
+        0,
+        -2,
+        1,
+        0,
+        1
+      ]
+    }
+  },
+  "source_manifest_verified": {
+    "files": {
+      "ADDENDUM.md": {
+        "bytes": 8920,
+        "sha256": "ab0465a1d9fc9b1ed371205b5f12ab45aa1e95d24af79cba41671442cf5639a8"
+      },
+      "check.py": {
+        "bytes": 7328,
+        "sha256": "b3fccf3ff2674d9a3f59c04d317d7a600062c1461d1e5f65228c9395fbf2b19f"
+      },
+      "normal.json": {
+        "bytes": 19025,
+        "sha256": "0ed60dd30ac40fda6f90de34cd1d3e5ef5f0f4613b5c4df0e5a5072dde78e79f"
+      },
+      "optimized.json": {
+        "bytes": 19025,
+        "sha256": "0ed60dd30ac40fda6f90de34cd1d3e5ef5f0f4613b5c4df0e5a5072dde78e79f"
+      }
+    },
+    "hash_basis": "raw bytes",
+    "normal_optimized_match": true
+  },
+  "status": "PASS",
+  "vertices": {
+    "active_sets": 252,
+    "nonsingular_sets": 122,
+    "vertices": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2",
+        "1/2"
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    ]
+  }
+}

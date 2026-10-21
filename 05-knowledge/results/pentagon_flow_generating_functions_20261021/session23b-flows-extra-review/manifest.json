@@ -1,0 +1,32 @@
+{
+  "files": {
+    "REVIEW.md": {
+      "bytes": 10961,
+      "sha256": "1c0652c2d31e77b38bd2656ff37752c1a29ff1d4535dabe58d0daf8880da6891"
+    },
+    "check.py": {
+      "bytes": 12004,
+      "sha256": "57d12b3630bf4ffa58b809ae8e9890a92b9fb2a8c8b912e97b9a06ac0c2d709c"
+    },
+    "normal.json": {
+      "bytes": 109449,
+      "sha256": "7bc731adec846ed9cd8eaf6d8f8e3364806adf6c4acb94f54017ca10b820a004"
+    },
+    "optimized.json": {
+      "bytes": 109449,
+      "sha256": "7bc731adec846ed9cd8eaf6d8f8e3364806adf6c4acb94f54017ca10b820a004"
+    },
+    "producer-normal-rerun.json": {
+      "bytes": 19025,
+      "sha256": "0ed60dd30ac40fda6f90de34cd1d3e5ef5f0f4613b5c4df0e5a5072dde78e79f"
+    },
+    "producer-optimized-rerun.json": {
+      "bytes": 19025,
+      "sha256": "0ed60dd30ac40fda6f90de34cd1d3e5ef5f0f4613b5c4df0e5a5072dde78e79f"
+    }
+  },
+  "hash_basis": "raw bytes",
+  "normal_optimized_match": true,
+  "producer_receipts_match": true,
+  "status": "PASS"
+}

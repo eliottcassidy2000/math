@@ -1,0 +1,22 @@
+{
+  "files": {
+    "ADDENDUM.md": {
+      "bytes": 8920,
+      "sha256": "ab0465a1d9fc9b1ed371205b5f12ab45aa1e95d24af79cba41671442cf5639a8"
+    },
+    "check.py": {
+      "bytes": 7328,
+      "sha256": "b3fccf3ff2674d9a3f59c04d317d7a600062c1461d1e5f65228c9395fbf2b19f"
+    },
+    "normal.json": {
+      "bytes": 19025,
+      "sha256": "0ed60dd30ac40fda6f90de34cd1d3e5ef5f0f4613b5c4df0e5a5072dde78e79f"
+    },
+    "optimized.json": {
+      "bytes": 19025,
+      "sha256": "0ed60dd30ac40fda6f90de34cd1d3e5ef5f0f4613b5c4df0e5a5072dde78e79f"
+    }
+  },
+  "hash_basis": "raw bytes",
+  "normal_optimized_match": true
+}
