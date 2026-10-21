@@ -162,3 +162,6 @@ physical energy has been altered. The next proof obligation is a bound
 on authenticated block excursions, or a uniform stopping-gate hypothesis
 such as the linked coalescence condition in the
 [tail-geometry packet](../tail_geometry_20261021c/README.md).
+
+Independent full proof/consumer review and optimized replay by collatz_memory,
+October21,2026: PASS, with the same receipt and406481 checks including equality.

@@ -1,0 +1,32 @@
+{
+  "affine_basis_sources": 18,
+  "black_orbits_per_frame_at_least": 7,
+  "center_degree_at_most": 28,
+  "checks": 2122941,
+  "delta_even_hence_at_least": 8,
+  "discovery_only": {
+    "max_completed_words": 9,
+    "max_nodes": 262205,
+    "nodes": 14094183
+  },
+  "distinct_literal_words": 707,
+  "expanded_word_sha256": "ae5b3ec05fe258101452dda1e06704671562e211f63ac7a72027f7c5c4da6745",
+  "frames": 131072,
+  "index_sha256": "0086908936b4b316bbefa74a777637cc69b285a518525f7b5c6a8d9e5b357d3d",
+  "input_lf_sha256": "3898c6953e483f8444bfd7e864488ecba57d1b883774ab839e104b3831304ae1",
+  "literal_word_positions": 917504,
+  "native_basis_controls": 257,
+  "remaining_after_this_folder_alone": [
+    12,
+    14,
+    15,
+    18,
+    20,
+    21,
+    24,
+    28
+  ],
+  "safe_recurrence_onset": 41,
+  "schema": "C35-complete-seven-black-v1",
+  "scope": "All VT35 sources by the proved reduction with CITED odd-order solvability. No isomorphism or full H/Aut counts."
+}

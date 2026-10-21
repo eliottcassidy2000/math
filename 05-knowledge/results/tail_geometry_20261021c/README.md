@@ -221,7 +221,8 @@ local maximum. Reusing a node in two selected pairs is rejected.
 
 ## 5. Hostiles, selector and unchanged ownership
 
-Let `b=((-5,0),(8,0))` and take initially empty current ports.
+The following is an algebraic state hostile; no native source realization
+is asserted. Let `b=((-5,0),(8,0))` and take initially empty current ports.
 Here delta(b)=-16. Maximizing delta only at the two vertices ±b gives -16,
 whereas optional nonarrival gives0. Convexity of Q cannot be transferred to
 the indefinite delta without the majorant in section2.
@@ -316,4 +317,8 @@ does not prove that global stopping statement.
 Normal generated receipt: **76,851 checks**. Optimized replay: **76,852
 checks**, including the final saved-equality gate. Both reproduce LF SHA256
 `fe7d8190a61e3e883f1b82ad38d6d11a9abeebc9da0833aafa2eb5fa9c16aae9`.
-Parent proof review of sections2–5 passed; independent peer audit is pending.
+Independent peer proof/API audit **PASS**: hyperbolic identities, optional
+destination domination, arbitrary-direction angular sweep, rational flooring,
+perimeter relaxation, exact two-port optimizer, literal source binding and
+disjoint ownership. Parent independently replayed the full optimized saved
+receipt and also passed the proof review. No correction remains.

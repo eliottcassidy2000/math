@@ -1,0 +1,9 @@
+{
+  "black_orbits_at_least": 7,
+  "checks": 2073,
+  "frames": 128,
+  "input_lf_sha256": "6d915ad4e7eec9e957f826c1c263837c3e15a6fad261343d05371946810c5607",
+  "literal_words": 896,
+  "remaining_order15_scope": "Any deficit-six center must be non-vertex-transitive; existence remains OPEN.",
+  "status": "FINITE-EXACT all128 cyclicC15 frames; only vertex-transitive order15 excluded"
+}

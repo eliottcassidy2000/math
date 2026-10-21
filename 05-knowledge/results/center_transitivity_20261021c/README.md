@@ -1,5 +1,11 @@
 # Full vertex orbits, regular subgroups, and the order-25 exclusion
 
+**Current follow-up:** [ORDER35.md](ORDER35.md) subsequently excludes 35 and
+lowers the center-degree bound to 28. The next two paragraphs and list (1)
+retain the explicitly order-25-only intermediate result; they are not the
+current combined unresolved list. [VT15.md](VT15.md) separately excludes the
+vertex-transitive part of the still-open order-15 lane.
+
 October 21, 2026. **PROVED:** a deficit-six center of order 25 or 35 must be
 vertex-transitive. **FINITE-EXACT, with a complete necessary universe:** no
 order-25 tournament is such a center. This packet alone reduces the inherited
@@ -243,5 +249,9 @@ serialized text, with LF-normalized reading. No mathematical payload or
 certificate changed. The producer is optional for verification and its
 executable is not included.
 
-Independent review of the prime-square regular-subgroup lemma: tiling_fold,
-October 21, 2026. Full proof/API and final receipt peer audit pending.
+Independent full proof/API review: tiling_fold, October 21, 2026, **PASS**.
+The parent independently replayed the normal consumer and reproduced all
+163,904 checks and the saved receipt. The author separately replayed optimized
+verification with identical output. The subsequent
+[order-35 proof and complete certificate](ORDER35.md) extend this packet;
+the nine-order list above is expressly the result of the order-25 step alone.

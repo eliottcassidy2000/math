@@ -1,0 +1,70 @@
+{
+  "center_degree_at_most": 28,
+  "checks": 13,
+  "denominator_coefficients": [
+    1,
+    -2,
+    -1,
+    2,
+    1,
+    2,
+    -4,
+    2,
+    0,
+    0,
+    -1,
+    -4,
+    3,
+    -2,
+    3,
+    -2,
+    2,
+    0,
+    1
+  ],
+  "formal_z28_control_is_not_an_existence_claim": true,
+  "known_trivalent_coefficients_orders_0_through_14": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    7,
+    11,
+    18,
+    29,
+    47,
+    71
+  ],
+  "minimal_eventual_order_inherited": 18,
+  "pins": {
+    "center_transitivity_20261021c/receipt.json": "1cd59dbfdc5ff5c296fc69aa7f5327a41991e237ba2c291d991697e2792ad0c8",
+    "center_transitivity_20261021c/receipt15.json": "4697b30544a6e55a8bc4d81e2d4b1bffd61fe00cf6eb5e37be80c33dae720280",
+    "center_transitivity_20261021c/receipt35.json": "360ac9b31f78935cda6699c5dc08693f75d0a02079e777d1d31be720f5e47be1",
+    "deficit_fourteen_20261021c/receipt.json": "2b150fd9d93ea708cd201aef0eaa41fa5d5205daed5b1dba41757cf0da3c329d",
+    "deficit_six_centers_20261021b/combined_receipt.json": "9a1bdb64fdc717cb3af1aa9c2c65eef5b59978786f161969fbe1147411d8e048",
+    "deficit_twelve_20261021c/receipt.json": "fe54716a7b6e6fac30a41e118e9a59e2e80cdea0da6e7602932cfa0697779da2",
+    "tail_geometry_20261021c/receipt.json": "fe7d8190a61e3e883f1b82ad38d6d11a9abeebc9da0833aafa2eb5fa9c16aae9"
+  },
+  "remaining_order15_must_be_non_vertex_transitive": true,
+  "remaining_orders": [
+    15,
+    18,
+    20,
+    21,
+    24,
+    28
+  ],
+  "removed_orders": [
+    12,
+    14,
+    25,
+    35
+  ],
+  "safe_onset": 41,
+  "status": "PROVED consequences consuming separately audited finite exclusions; six center coefficients OPEN"
+}
