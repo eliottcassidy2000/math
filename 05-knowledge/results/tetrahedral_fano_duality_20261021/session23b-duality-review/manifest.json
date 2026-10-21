@@ -1,0 +1,17 @@
+{
+  "candidate_sources": {
+    "session23b-duality/PROOF.md": "af297f77570dc82643e1453eaccc3f7b6976001e4dc016996a07a01d96d43729",
+    "session23b-duality/check.py": "bc531f4099b72dce0671c692158b06d46870a8175d9a7ee68cba8e25af12f695"
+  },
+  "independent_check_count": 1364,
+  "normal_optimized_identical": true,
+  "review_artifacts": {
+    "REVIEW.md": "28504862efb5e17d94a179d1390c8a70b49daf80cca0c80bff03ac34a876b79b",
+    "check_independent.py": "2a959831c09577fa0b8f5a2b3484bdf450e87e2e88eff69fb59f8594df654995",
+    "normal.json": "b068418d60128403fb095772b41687c035965e2e259788eee013664dbcc83b08",
+    "optimized.json": "b068418d60128403fb095772b41687c035965e2e259788eee013664dbcc83b08"
+  },
+  "scope": "Bounded elementary tetrahedral Fano duality and stated strong-order-four tournament compatibility; no novelty or metric claim",
+  "status_promotion_verified": "Exact status-sentence replacement reconstructs the previously reviewed PROOF.md hash; no mathematical or candidate-checker changes.",
+  "verdict": "PASS"
+}

@@ -1,0 +1,23 @@
+{
+  "checks": 1364,
+  "computed_cycle_point_orbits": [
+    3,
+    4
+  ],
+  "computed_edge_point_orbits": [
+    1,
+    6
+  ],
+  "cycle_line_count": 7,
+  "flag_incidence_cases": 49,
+  "independent_cycle_space_size": 8,
+  "source_hashes": {
+    "PROOF.md": "af297f77570dc82643e1453eaccc3f7b6976001e4dc016996a07a01d96d43729",
+    "check.py": "bc531f4099b72dce0671c692158b06d46870a8175d9a7ee68cba8e25af12f695"
+  },
+  "status": "PASS",
+  "strong_tournaments_checked": 24,
+  "tetrahedral_permutations": 24,
+  "triple_incidence_cases": 35,
+  "wrong_standard_covector_action_failures": 108
+}
