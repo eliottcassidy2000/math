@@ -329,6 +329,26 @@ This interface turns the new endpoint repairs into valid moves in the
 ordered-graph representation. It does not infer global connectivity from
 the existence of a local repair.
 
+### Incoming compression of the same order-ten boundary
+
+Incoming commit4ec382bd66, read during the final clean sync, supplies an
+independent [168-cell affine certificate](../endpoint_three_order10_20261021/README.md)
+for the same order-ten theorem. It splits the21 port sets by three actual
+arc bits, proves all4,536 directed joins symbolically, and authenticates
+501 inconsistent blue-step systems plus three singleton exceptions using
+explicit GF(2) equation witnesses. Its three literal exceptional sources
+and replacement words agree with section2 here.
+
+This strengthens the representation of that boundary: our complete source
+replay and its affine parameter-space proof reach the same unfiltered
+conclusion by different verification routes. The incoming proof imports
+none of the inherited Python implementations. Its affine contradiction
+certificates are a useful next method for the remaining fourth-layer
+guards, where another large census should not replace a structural
+partition. This packet does not claim to have already produced that full
+fourth-layer partition. Incoming results and their attribution are retained
+separately rather than counted as newly derived here.
+
 ## 7. Reproduction and audit boundary
 
 Run from the repository root:

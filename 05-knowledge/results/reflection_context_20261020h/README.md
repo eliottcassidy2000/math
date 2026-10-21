@@ -116,6 +116,42 @@ entry/exit ports, prove each path legal and black, and reach the literal
 target; the [endpoint-four packet](../endpoint_four_20261020h/README.md)
 performs those separate checks for its stated layer.
 
+### Incoming resolution: keep the ordinary operations by retaining two more states
+
+During the final sync, incoming commit098cb67c1d supplied the independent
+[minimal twelve-state resolution](../divisor_reflection_resolution_20261021/REFLECTION_RESOLUTION.md).
+It retains each divisor as a projection, splitting only pq and pr into two
+orientation states each. Its graph carrier uses ordinary complement K and
+order reversal R. Twelve states are minimal: over each of the two F-fixed
+divisors, the fixed-point-free target KR needs a positive even fibre.
+The original obstruction and this resolution are compatible: the new source
+is a cover of D, not an equivariant section from D into the old graph space.
+
+The two constructions can be joined explicitly. With edge-bit order
+`01,02,03,12,13,23`, the incoming graph codes map to our switch-chart codes
+as follows:
+
+| Incoming code |0|63|4|59|1|32|62|31|2|47|61|16|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Switch-chart code |0|33|8|37|5|36|40|9|1|1|32|32|
+
+Call this quotient H and our switched reflection S. Directly on all twelve
+states,
+
+    H K = S H,       H R = R H.
+
+It collapses precisely the two orientation pairs over pq and pr, retains
+the actual divisor, and preserves the fixed-path blue predicate. It does
+not preserve full graph complement as the same operation: K becomes S.
+There is no equivariant reverse section retaining K,R, by section1. This
+is an exact tradeoff between context and operation, rather than a numerical
+coincidence between ten and twelve. Neither construction transfers arbitrary
+path incidence or black-core connectivity.
+
+`incoming_bridge.py` reproduces the37 exact checks of this new quotient;
+normal and optimized output agree. The minimality and all-exponent orbit
+capacity theorem belong to the incoming packet, not to this session.
+
 ## 3. Freely composing palette gates destroys their exclusions
 
 This statement concerns exact boundary-relation composition. It does not
