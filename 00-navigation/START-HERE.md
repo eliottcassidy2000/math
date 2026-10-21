@@ -7,7 +7,7 @@
 
 ## The five-minute orientation
 
-1. **Main prize:** LRC(14), with 13 nonzero relative speeds, is **OPEN**; LRC is known through 13 total runners.
+1. **Main prize:** LRC(14), with 13 relative speeds: repository proof **OPEN**; external claims are qualified in CORE-PAPERS.
 2. **Do not chase old shortcuts:** uniform good period `q <= 25` is false; uniform emptiness of the twelve-speed sporadic branch remains open.
 3. **Major closures:** THM-2022 proves NC2/GMC(2), and THM-2801 makes the Special Image boundary true at one pair and false from two; neither settles the restricted planar-JC sectors.
 4. **Truth discipline:** corrected canon outranks canon, exact computation, hypothesis, synthesis, and historical prose.
@@ -23,7 +23,7 @@ Then read frontier, guardrails, theorem; logs are history.
 
 ## Nineteen high-signal facts
 
-1. **LRC(14) is first open.** THM-4347 closes height `40`;
+1. **Repo LRC(14) remains OPEN.** THM-4347 closes height `40`;
    THM-4441/4444/4445 classify tails, THM-4442/4446 close bounded rays,
    THM-4447 leaves clocks `2,3,4`; THM-4448 closes cofinal two-shore cones;
    THM-4449--4453 and the inert-profile envelope sharpen dyadic mass/width gates;

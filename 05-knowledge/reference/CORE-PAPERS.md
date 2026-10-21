@@ -4,7 +4,7 @@
 
 ## Fast frontier snapshot
 
-- **LRC:** fourteen runners is open; April 2026 reaches twelve nonzero speeds.
+- **LRC:** repo proof unclosed; external 14/15-total-runner claim unaudited here.
 - **Moments:** [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md) gives GMC exactly through 2; [THM-2801](../../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md) gives SIC only at 1; JC-bearing restrictions remain.
 - **Tournament citations:** 2412.10572 Irving--Omar; 2307.05569 Grinberg--Stanley; 2406.09697 Klanderman et al.
 - **Flows:** [THM-2177](../../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes the exact-cost conjecture; cost-free `d_max` and planar `2d_max` survive.
@@ -26,12 +26,14 @@
 
 ## Lonely Runner Conjecture
 
+- **Source check 2026-10-21:** [Allikvere v2](https://arxiv.org/html/2609.02604v2), 2026-09-24, claims 14/15 total runners. **Proof/computation NOT INDEPENDENTLY AUDITED HERE**; general LRC open, no canon promotion.
+
 ### Sungkawichai--Trakulthongchai — *Eleven, twelve, and thirteen lonely runners*
 
-- **Primary:** [arXiv:2604.23906v2](https://arxiv.org/abs/2604.23906v2), 2026-09-01. **PREPRINT; abstract/Theorem 1.3 checked 2026-09-06.**
-- **Imported role:** a computer-assisted divisibility sieve proves LRC for `k=10,11,12` nonzero speeds; it also gives a finite-field polynomial shortcut when `k+1` and a sufficiently large auxiliary modulus are odd primes, and identifies the initial improper-tuple computation as the extension bottleneck.
-- **Repo consumers:** [LRC14 frontier](../../00-navigation/LRC14-FRONTIER-2026-07-15.md), [finite-check feasibility ledger](../../00-navigation/LRC14-FINITE-CHECK-FEASIBILITY-LEDGER-2026-07-19.md), [THM-1288, literal Conjecture 7.1 refutation](../../01-canon/theorems/THM-1288-c71-refuted-divisor-aligned-clusters.md), and [THM-523](../../01-canon/theorems/THM-523-lrc14-singular-series-proof-skeleton.md).
-- **Does not prove:** `k=13`, the standard fourteen-runner case. The v1 Conjecture 7.1 is false as literally written by THM-1288's exact family; do not use it as an inverse theorem. The prime shortcut also does not cross the composite `k+1=14` lift wall.
+- **Primary:** [2604.23906v2](https://arxiv.org/abs/2604.23906v2), 2026-09-01. **PREPRINT; abstract/Theorem 1.3 checked 2026-09-06.**
+- **Imported:** computer-assisted divisibility sieve for `k=10,11,12` nonzero speeds; finite-field polynomial shortcut for odd-prime `k+1` and large enough odd-prime modulus. Initial improper tuples bottleneck extension.
+- **Repo consumers:** [LRC14 frontier](../../00-navigation/LRC14-FRONTIER-2026-07-15.md), [finite-check ledger](../../00-navigation/LRC14-FINITE-CHECK-FEASIBILITY-LEDGER-2026-07-19.md), [THM-1288](../../01-canon/theorems/THM-1288-c71-refuted-divisor-aligned-clusters.md), and [THM-523](../../01-canon/theorems/THM-523-lrc14-singular-series-proof-skeleton.md).
+- **Does not prove:** `k=13` (14 runners); the prime shortcut misses composite `k+1=14`. THM-1288 refutes literal v1 Conjecture 7.1: not an inverse theorem.
 
 ### Vaaler — *Some extremal functions in Fourier analysis*
 
@@ -50,7 +52,7 @@
 
 ### 2026-08-23 primary pins: lonely-runner polyhedra and Khinchin flatness
 - Beck--Hoşten--Schymura [arXiv:1606.01783](https://arxiv.org/abs/1606.01783) pins the line-plus-box formulation; Codenotti--Freyer [arXiv:2307.09429](https://arxiv.org/abs/2307.09429) pins integral-dual width; Averkov--Hofscheier--Nill [arXiv:1911.03511](https://arxiv.org/abs/1911.03511) records Barvinok's bound used by [THM-3743](../../01-canon/theorems/THM-3743-lonely-runner-polyhedron-khinchin-flatness-relation-reduction.md). None proves LRC(14), sharpness/sparsity, or recursive slicing.
-- [Banaszczyk (1993)](https://doi.org/10.1007/BF01445125) supplies THM-4009's input `2 mu(L) lambda_1(L*)<=d`; the inball/sidecars are local and LRC(14) is open.
+- [Banaszczyk (1993)](https://doi.org/10.1007/BF01445125) supplies THM-4009's input `2 mu(L) lambda_1(L*)<=d`; the inball/sidecars are local; the repo proof remains open.
 
 ### Giri--Kravitz — *The structure of Lonely Runner spectra*
 
