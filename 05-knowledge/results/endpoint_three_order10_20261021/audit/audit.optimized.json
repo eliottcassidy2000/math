@@ -1,0 +1,332 @@
+{
+  "affine_verification": {
+    "branch_cells": {
+      "closed_endpair_two_block": 2,
+      "closed_endpair_xy": 1,
+      "closed_endpair_yx": 1,
+      "closed_epsilon_one": 20,
+      "closed_epsilon_zero": 30,
+      "closed_movable_cut": 20,
+      "closed_second": 8,
+      "closed_second_pair": 2,
+      "open_endpair": 4,
+      "open_penultimate": 20,
+      "open_release": 60
+    },
+    "inconsistent": 501,
+    "joins": 4536,
+    "literal_XOR_targets": 168,
+    "rank_distribution": {
+      "(10, True)": 89,
+      "(12, False)": 3,
+      "(12, True)": 318,
+      "(3, True)": 30,
+      "(6, True)": 4,
+      "(7, True)": 60
+    },
+    "singleton": 3,
+    "systems": 504,
+    "unit_certificates": 36
+  },
+  "checker_sha256": "0094043370fb8e3686e859ab2856f45e899d18825e30ac58bd028d1c3d6ef7a4",
+  "hostile": {
+    "cyclic_cut": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      0
+    ],
+    "cyclic_cut_is_blue": true,
+    "literal_target_rows": [
+      834,
+      980,
+      265,
+      851,
+      37,
+      335,
+      148,
+      317,
+      592,
+      244
+    ],
+    "repair_actual_source_anti_failures_with_values": [
+      [
+        0,
+        5,
+        1,
+        9,
+        1,
+        0
+      ],
+      [
+        0,
+        3,
+        9,
+        7,
+        0,
+        1
+      ],
+      [
+        0,
+        9,
+        8,
+        7,
+        0,
+        1
+      ]
+    ],
+    "rows": [
+      190,
+      44,
+      760,
+      176,
+      994,
+      704,
+      907,
+      770,
+      559,
+      11
+    ]
+  },
+  "inherited_pins_verified": 11,
+  "inherited_repository_commit": "c4a7875652a5ea516e93a31c3c6410d2204773b2",
+  "inherited_selector_ast_equality": true,
+  "negative_controls": {
+    "corrupt_contradiction": "invalid contradiction certificate",
+    "corrupt_singleton": "residual does not solve all equations",
+    "duplicate_cell": "extra, duplicate or invalid cell",
+    "invalid_word": "word is not a permutation",
+    "omit_cell": "incomplete source partition"
+  },
+  "printed_repair_checks": [
+    {
+      "actual_source_anti_failures_with_values": [
+        [
+          0,
+          2,
+          6,
+          9,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          7,
+          4,
+          0,
+          1
+        ],
+        [
+          0,
+          6,
+          5,
+          4,
+          0,
+          1
+        ]
+      ],
+      "endpoint_score_sums": [
+        9,
+        9,
+        9
+      ],
+      "incoming": [
+        3,
+        6
+      ],
+      "literal_target_rows": [
+        586,
+        300,
+        217,
+        688,
+        355,
+        197,
+        906,
+        275,
+        557,
+        182
+      ],
+      "mask": 2202
+    },
+    {
+      "actual_source_anti_failures_with_values": [
+        [
+          0,
+          6,
+          2,
+          9,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          4,
+          5,
+          0,
+          1
+        ],
+        [
+          0,
+          3,
+          4,
+          5,
+          1,
+          0
+        ]
+      ],
+      "endpoint_score_sums": [
+        9,
+        8,
+        10
+      ],
+      "incoming": [
+        5,
+        6
+      ],
+      "literal_target_rows": [
+        610,
+        396,
+        409,
+        561,
+        611,
+        198,
+        398,
+        281,
+        569,
+        230
+      ],
+      "mask": 2446
+    },
+    {
+      "actual_source_anti_failures_with_values": [
+        [
+          0,
+          5,
+          1,
+          9,
+          1,
+          0
+        ],
+        [
+          0,
+          3,
+          9,
+          7,
+          0,
+          1
+        ],
+        [
+          0,
+          5,
+          2,
+          7,
+          1,
+          0
+        ]
+      ],
+      "endpoint_score_sums": [
+        9,
+        8,
+        10
+      ],
+      "incoming": [
+        7,
+        8
+      ],
+      "literal_target_rows": [
+        898,
+        980,
+        905,
+        275,
+        37,
+        335,
+        157,
+        312,
+        592,
+        248
+      ],
+      "mask": 3525
+    }
+  ],
+  "residuals": [
+    {
+      "branch": "closed_epsilon_one",
+      "cell": [
+        0,
+        1,
+        0
+      ],
+      "incoming": [
+        3,
+        6
+      ],
+      "mask": 2202,
+      "step": 3
+    },
+    {
+      "branch": "closed_epsilon_zero",
+      "cell": [
+        0,
+        0,
+        0
+      ],
+      "incoming": [
+        5,
+        6
+      ],
+      "mask": 2446,
+      "step": 3
+    },
+    {
+      "branch": "closed_endpair_yx",
+      "cell": [
+        0,
+        0,
+        0
+      ],
+      "incoming": [
+        7,
+        8
+      ],
+      "mask": 3525,
+      "step": 2
+    }
+  ],
+  "scope": "FINITE-EXACT n=10; inherited structural n>=11 theorem is not reproved here",
+  "source_packet_hashes": {
+    "README.md": "044079416827b3114772cdf2ff7b1f782e914b2c8d75e0a082eb15e437551825",
+    "certificates.json": "3d059e559c84353e4d6182eaf2901513f942066114645f4106f1ecc15dcdd757",
+    "check.py": "3249c75b38292a254e8c72b3a9ad9bd0df2d1cbadc45d8ba7d79d373f7f99f07",
+    "exceptions.json": "a832c2211da0398af1fe7a020605dd3427a3e5713f4574eaeaf31ccd012ea52b",
+    "independent.normal.json": "b8e4fd1a32a26920e7cc60582ac1c9f8480b95afaa120c2acac7dd367951581e",
+    "independent.optimized.json": "b8e4fd1a32a26920e7cc60582ac1c9f8480b95afaa120c2acac7dd367951581e",
+    "receipt.normal.json": "869072afb22fd633235314852b5ba66cdb6592107f95d3d69bb22dfbfad1d2d6",
+    "receipt.optimized.json": "869072afb22fd633235314852b5ba66cdb6592107f95d3d69bb22dfbfad1d2d6",
+    "source_pins.json": "484179c16c39907625a207a89a844cd37ee30d994ec4cae7d7cc1bd00597017a",
+    "verify_certificates.py": "12651169248ce4ce1eb222a38b4401338a1c0e89ced63dfb4ca10b53a6de85f3"
+  },
+  "source_packet_manifest_sha256": "97d1c2d5fd82e0e36aab69c6469b835813c1e25d3b4f06c9ebd67e55a1c3834d",
+  "source_universe": {
+    "assignment_census_performed": false,
+    "cell_dimension": 9,
+    "cells": 168,
+    "constraint_rank": 33,
+    "filters": [],
+    "free_coordinates": 12,
+    "marked_presentations": 86016,
+    "port_pairs": 21,
+    "raw_arc_variables": 45
+  },
+  "status": "PASS: independent mathematical and literal-text audit",
+  "stored_actual_source_witnesses_verified": 21,
+  "supplemental_dependencies_sha256": "e2e5f15806293846374cd8becc3fe32a489c90f33125bc663fe438b38e565223",
+  "supplemental_dependencies_verified": 3
+}

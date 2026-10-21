@@ -1,0 +1,92 @@
+{
+  "status": "PASS: independent direct-XOR certificate verification",
+  "cells": 168,
+  "inconsistent_blue_systems": 501,
+  "singleton_residuals": 3,
+  "symbolic_direction_checks": 4536,
+  "numeric_replays": [
+    {
+      "incoming": [
+        3,
+        6
+      ],
+      "anti_failures": [
+        [
+          0,
+          2,
+          6,
+          9
+        ],
+        [
+          0,
+          2,
+          7,
+          4
+        ],
+        [
+          0,
+          6,
+          5,
+          4
+        ]
+      ]
+    },
+    {
+      "incoming": [
+        5,
+        6
+      ],
+      "anti_failures": [
+        [
+          0,
+          6,
+          2,
+          9
+        ],
+        [
+          0,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          3,
+          4,
+          5
+        ]
+      ]
+    },
+    {
+      "incoming": [
+        7,
+        8
+      ],
+      "anti_failures": [
+        [
+          0,
+          5,
+          1,
+          9
+        ],
+        [
+          0,
+          3,
+          9,
+          7
+        ],
+        [
+          0,
+          5,
+          2,
+          7
+        ]
+      ]
+    }
+  ],
+  "source_hashes": {
+    "verify_certificates.py": "12651169248ce4ce1eb222a38b4401338a1c0e89ced63dfb4ca10b53a6de85f3",
+    "certificates.json": "3d059e559c84353e4d6182eaf2901513f942066114645f4106f1ecc15dcdd757",
+    "exceptions.json": "a832c2211da0398af1fe7a020605dd3427a3e5713f4574eaeaf31ccd012ea52b"
+  }
+}

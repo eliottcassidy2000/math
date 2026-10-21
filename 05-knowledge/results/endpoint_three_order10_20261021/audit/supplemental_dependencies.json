@@ -1,0 +1,8 @@
+{
+  "purpose": "Read-only contextual dependencies supplementing, not changing, the frozen producer source pins. The finite order-ten proof is independent of the all-order structural argument. The open-end-pair proof is linked by the pinned predecessor README and is included here for explicit inheritance traceability.",
+  "sources": {
+    "AGENTS.md": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+    "00-navigation/RESEARCH-PROTOCOL.md": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/probe_new_ledgers.md": "f094c5cd9f27d2f1cea7f6a4c0c8d879ee576750163c2c831a4ed8f539543065"
+  }
+}

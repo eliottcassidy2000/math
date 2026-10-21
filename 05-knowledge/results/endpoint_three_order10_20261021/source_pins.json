@@ -1,0 +1,16 @@
+{
+  "repository_commit": "c4a7875652a5ea516e93a31c3c6410d2204773b2",
+  "sources": {
+    "05-knowledge/results/endpoint_three_repairs_20261020h/README.md": "d562ea2889fefc1c9a8db725f2752378bbe3ee11919f00e104e40c7e39583985",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/root_check.py": "ee7ebdbe081c1ce423079996952b2f69dcae194ac8174d3f8de2ecc2de80d7bf",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/theory.md": "8caed95d5dce6ea5ef6616626eab8a4d8a3a6e4eb40dfb27b770b4d1af56cc6c",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/root.md": "f3e5dd63a4010d8eb6e3f5e8ebc068d3baefe8549037c684b0d4e7d7b31804e2",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/lift.md": "c131dfb6e40075906817d65eda735bf60de5c0a549330704c1dcdac77ad59fa8",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/probe.md": "94b765e6781925f7bcb0bb9442e09303acbf61b82d0ba26f588abb682b5aa067",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/probe_complete.py": "53c124c25203bf9e5a6938672ed7f8db9d6c4812f4e0eb3a72ab1fb41587d7f4",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/probe_search.py": "125bd73eb7dcb103af133ef8e0a9fb78d9ffd88c318edd4eae922e1d357cd4c9",
+    "05-knowledge/results/trijection_reset_20261020/graph_audit.md": "e80bf447fe02bdebeb09841c6b59d1f2f108b8dcc07f7a00fd43bad0afb5d26e",
+    "01-canon/MISTAKES.md": "c860718c3c57bc99e965f633fb9767297e722b84c9ba99b21ef863ed400429c9",
+    "01-canon/ACTIVE-GUARDRAILS.md": "fa66fea75074f148c78af934fe4b135c5e35d9f9f5c800c294df396265389b47"
+  }
+}

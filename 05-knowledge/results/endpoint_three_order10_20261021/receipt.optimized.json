@@ -1,0 +1,125 @@
+{
+  "status": "PASS: complete exact affine certificate",
+  "claim": "Every marked closed blue order-ten source with endpoint scores (6,3) has a literal three-black K detour.",
+  "filters": "None: no isomorphism, source/target mixedness, or strong-partner filter.",
+  "source_universe_size": 86016,
+  "complete_source_census_performed": false,
+  "cell_representatives_constructed": 168,
+  "port_pairs": 21,
+  "cells": 168,
+  "sources_per_cell": 512,
+  "blue_systems": 504,
+  "inconsistent_blue_systems": 501,
+  "singleton_blue_systems": 3,
+  "symbolic_direction_checks": 4536,
+  "literal_exception_replays": [
+    {
+      "incoming": [
+        3,
+        6
+      ],
+      "mask": 2202,
+      "anti_failures": [
+        [
+          0,
+          2,
+          6,
+          9
+        ],
+        [
+          0,
+          3,
+          6,
+          4
+        ],
+        [
+          0,
+          7,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "incoming": [
+        5,
+        6
+      ],
+      "mask": 2446,
+      "anti_failures": [
+        [
+          0,
+          8,
+          3,
+          9
+        ],
+        [
+          0,
+          6,
+          1,
+          5
+        ],
+        [
+          0,
+          3,
+          4,
+          5
+        ]
+      ]
+    },
+    {
+      "incoming": [
+        7,
+        8
+      ],
+      "mask": 3525,
+      "anti_failures": [
+        [
+          0,
+          5,
+          1,
+          9
+        ],
+        [
+          0,
+          8,
+          5,
+          7
+        ],
+        [
+          0,
+          5,
+          2,
+          7
+        ]
+      ]
+    }
+  ],
+  "cyclic_cut_hostile_repaired": [
+    [
+      0,
+      5,
+      1,
+      9
+    ],
+    [
+      0,
+      8,
+      5,
+      7
+    ],
+    [
+      8,
+      7,
+      0,
+      9
+    ]
+  ],
+  "source_hashes": {
+    "check.py": "3249c75b38292a254e8c72b3a9ad9bd0df2d1cbadc45d8ba7d79d373f7f99f07",
+    "exceptions.json": "a832c2211da0398af1fe7a020605dd3427a3e5713f4574eaeaf31ccd012ea52b",
+    "source_pins.json": "484179c16c39907625a207a89a844cd37ee30d994ec4cae7d7cc1bd00597017a"
+  },
+  "inherited_repository_commit": "c4a7875652a5ea516e93a31c3c6410d2204773b2",
+  "certificates_sha256": "3d059e559c84353e4d6182eaf2901513f942066114645f4106f1ecc15dcdd757"
+}
