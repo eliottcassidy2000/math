@@ -1,7 +1,7 @@
 ---
 id: HYP-9352
 title: "After THM-4741: tc >= 5 for every strong tournament other than K1, C3, T5 (so tc = 3 classes are exactly the one-T5 stacks for all n); fibre sizes 7 and 21 never occur; the three-move law at n = 11 (random sample); growth of the strong spectrum minimum; the pendant nodes of the fundamental black graph (converse pairs of non-palindromic {K1,C3}-stacks plus the self-converse classes with tc - bm = 2) and their count law"
-status: "NUMERICAL ((1), (2), (4) exhaustive at n <= 9; (3) sampled at n = 11); OPEN"
+status: "PARTIAL: (1) basic strong floor/tc=3 classification PROVED; (4) pendant classification PROVED, quasi-polynomial expectation REFUTED; sharper spectrum, forbidden fibres, detours and descent OPEN"
 session: opus-2026-10-20-S48
 source: 05-knowledge/results/presentation_counts_single_view_classes_rotation_inequality_20261020.md
 related:
@@ -13,6 +13,28 @@ related:
 
 # HYP-9352: presentation-count laws after THM-4741
 
+**Current scoped update, 2026-10-21.** The independently audited
+[three-presentation classification](../results/metagraph_classification_20261021a/README.md)
+proves the basic floor in (1): the only strong `tc=3` type is the cyclic
+five-vertex tournament, and all ordinary `tc=3` types are ordered
+`{K1,C3,T5}` stacks with exactly one `T5`. Their series is
+`z^5/(1-z-z^3)^2`. The stronger monotonicity and `2n-1` clauses remain OPEN.
+
+The pendant-center classification in (4) was already proved by the audited
+[deficit-two center packet](../results/deficit_two_centers_20261020/README.md):
+the only strong self-converse center of deficit two is `S4`. Thus its
+self-converse pendant series is `z^4/(1-z^2-z^6)`, and the complete pendant
+series is `(2z^4-z^5-z^7)/((1-z-z^3)(1-z^2-z^6))`. The expectation that every
+fixed-degree count is eventually quasi-polynomial is REFUTED: mirroring
+arbitrary words of `k` blocks chosen from `(K1,C3)` and `(C3,K1)` gives at
+least `2^k` distinct degree-zero nodes of order `8k`. The repaired direction
+is rational generating functions with possible exponential growth. The
+new degree-three formula still contains an unknown finite strong
+deficit-six center polynomial; it is not a completed adjacency classification.
+
+The numbered original proposals below are retained for lineage; the scoped
+update overrides their older status phrases.
+
 1. **Strong spectrum floor.** Every strong tournament other than `K1`, `C3`, `T5` has presentation count `tc >= 5`; equivalently `H(T) > 3 |Aut(T)|` for strong `T` of order `>= 6`. With the stack multiplicativity (THM-2450 section 2) this makes the `tc = 3` classes exactly the stacks over `{K1, C3, T5}` with one `T5` for every `n` (exhaustive at `n <= 9`: `1, 2, 3, 6, 11`). Sharper: the minimum of the strong spectrum `min S(n)` (`1, 5, 3, 9, 9, 17, 25` at `n = 3..9`) is non-decreasing for `n >= 5` and at least `2n - 1` for `n >= 8`. What THM-4741 (C) gives for `tc = 3`: along every Hamiltonian cycle `T` is a circulant, or `|Z_C| = n/3`, or `n = 2 mod 4` with `|Z_C| = n/2`. Hostile: a strong tournament with a large automorphism group and few Hamiltonian paths (the wreath products `C3[C3[...]]` have `|Aut| = 3^((n-1)/2)` but far more paths).
 
 2. **Forbidden fibre sizes.** No node of the line metagraph has `tc = 7` or `tc = 21` at any order (THM-1370 proves it for rigid nodes, where `tc = H`; a non-rigid counterexample needs `H = 7 |Aut|` or `21 |Aut|` with `|Aut| >= 3`, e.g. `H = 35, 49, 63`). Exhaustive at `n <= 9`. Companion (corrected by the audit): at `n = 9` every odd value below 2883 other than 7 and 21 occurs as a presentation count, with gaps only between 2883 and the maximum 3299; conjecture: for every `n` the presentation-count spectrum is an initial segment of the odd numbers minus `{7, 21}` followed by a sparse tail.
@@ -23,4 +45,4 @@ related:
 
 5. **Descent potentials.** `black_descent_20261020c/cycles.md` proves that the cyclic-triangle count descends along a black line from every strong black-active node; THM-4741 (D) shows that `H` has no such property. Conjecture: every non-pure-blue class with `tc >= 3` has a black neighbour with strictly smaller `tc`, except the strong classes with `tc = min S(n)`; untested (the census column for `tc`-descent is the next cheap addition).
 
-Non-consequences: (1) does not bound `tc` for non-strong classes (products); (3) is a sample, not a certificate; (4) (ii) is conjectural beyond `n = 9`.
+Non-consequences: (1)'s strong floor does not bound `tc` for arbitrary non-strong classes (products); (3)'s listed evidence is a sample, not a certificate. The former beyond-order-nine uncertainty in (4)(ii) is superseded by the audited center classification linked above. Full metagraph adjacency, black connectivity, and the remaining spectrum clauses are not settled here.

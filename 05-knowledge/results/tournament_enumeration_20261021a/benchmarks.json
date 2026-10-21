@@ -1,0 +1,48 @@
+{
+  "scope": "Single sequential runs on this Windows host, Python 3.13.14 AMD64; timings are observations, not portable performance guarantees. The three implementations return identical coefficients and have identical mathematical state counts. Memory tracing changes timings.",
+  "runs": [
+    {
+      "bound": 100,
+      "core": false,
+      "memory_tracing": false,
+      "inherited_tuple_fraction_seconds": 1.1074666999920737,
+      "packed_fraction_seconds": 0.9802208000037353,
+      "packed_odd_integer_seconds": 0.17054819999611937,
+      "peak_states": 2953,
+      "transitions": 90219
+    },
+    {
+      "bound": 200,
+      "core": false,
+      "memory_tracing": false,
+      "inherited_tuple_fraction_seconds": 50.302810399996815,
+      "packed_fraction_seconds": 39.99204169999575,
+      "packed_odd_integer_seconds": 7.935109599988209,
+      "peak_states": 96836,
+      "transitions": 2994814
+    },
+    {
+      "bound": 100,
+      "core": true,
+      "memory_tracing": false,
+      "inherited_tuple_fraction_seconds": 15.958089899999322,
+      "packed_fraction_seconds": 15.460983800003305,
+      "packed_odd_integer_seconds": 2.008663599990541,
+      "peak_states": 5480,
+      "transitions": 1697975
+    },
+    {
+      "bound": 100,
+      "core": false,
+      "memory_tracing": true,
+      "inherited_tuple_fraction_seconds": 6.85509650001768,
+      "packed_fraction_seconds": 6.189988500002073,
+      "packed_odd_integer_seconds": 3.591255800012732,
+      "inherited_tuple_fraction_peak_bytes": 2935995,
+      "packed_fraction_peak_bytes": 1672240,
+      "packed_odd_integer_peak_bytes": 1504240,
+      "peak_states": 2953,
+      "transitions": 90219
+    }
+  ]
+}
