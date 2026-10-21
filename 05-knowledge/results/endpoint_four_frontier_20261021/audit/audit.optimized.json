@@ -1,0 +1,88 @@
+{
+  "counts": {
+    "complete_h_equals_x_affine_cells": 90,
+    "exact_permutation_and_witness_controls": 10868,
+    "odd_prefix_affine_cells": 6827
+  },
+  "h_equals_x_orders": [
+    15,
+    104
+  ],
+  "method": "independent GF(2) elimination over complete affine source families; no producer imports",
+  "odd_prefix_all_h_orders": [
+    15,
+    50
+  ],
+  "permutation_and_direct_witness_orders": [
+    15,
+    300
+  ],
+  "same_source_hostile_repairs": [
+    {
+      "cut": 6,
+      "h": 3,
+      "n": 15,
+      "new_blue_steps": [
+        false,
+        false,
+        false
+      ],
+      "old_blue_steps": [
+        false,
+        false,
+        true
+      ],
+      "same_literal_source_and_target": true
+    },
+    {
+      "cut": 6,
+      "h": 6,
+      "n": 15,
+      "new_blue_steps": [
+        false,
+        false,
+        false
+      ],
+      "old_blue_steps": [
+        false,
+        false,
+        true
+      ],
+      "same_literal_source_and_target": true
+    },
+    {
+      "cut": 6,
+      "h": 3,
+      "n": 18,
+      "new_blue_steps": [
+        false,
+        false,
+        false
+      ],
+      "old_blue_steps": [
+        false,
+        false,
+        true
+      ],
+      "same_literal_source_and_target": true
+    },
+    {
+      "cut": 6,
+      "h": 9,
+      "n": 18,
+      "new_blue_steps": [
+        false,
+        false,
+        false
+      ],
+      "old_blue_steps": [
+        false,
+        false,
+        true
+      ],
+      "same_literal_source_and_target": true
+    }
+  ],
+  "scope": "Guarded odd prefixes and the closed h=x,x->c branch. Remaining sources must also fail every applicable odd-prefix guard.",
+  "status": "PASS"
+}

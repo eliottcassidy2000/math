@@ -1,0 +1,31 @@
+{
+  "commands": [
+    "python3 verify.py",
+    "python3 -O verify.py",
+    "python3 audit/independent_audit.py",
+    "python3 -O audit/independent_audit.py"
+  ],
+  "earlier_frozen_audit_payloads_unchanged": true,
+  "independent_normal_equals_optimized": true,
+  "inheritance_verification_basis": "Repository dependencies use exact Git objects at the pinned commit; prior packet dependencies use separately frozen producer bytes.",
+  "inherited_source_hashes_verified": {
+    "05-knowledge/results/endpoint_four_endpair_20261021/MANIFEST.sha256": "9dc316a4ecf1f6faa125a14ac485a7fd7050e01d90b66561a122f1e7e24c0991",
+    "05-knowledge/results/endpoint_four_endpair_20261021/README.md": "844b8cff7b2e8b6c25cec1fe3e64ce1bd9d9ee25454002253f3d452c544e4518",
+    "05-knowledge/results/endpoint_four_endpair_20261021/verify.py": "84f2c10120b590155dccecfde6e3904ec202de9e8d672d176d451243f858f8ab",
+    "05-knowledge/results/endpoint_four_repairs_20261021/MANIFEST.sha256": "2601a21dd65c134d32f49a1a49346a3a3cdbf9d46edfc2a61813b7c31cfeb87c",
+    "05-knowledge/results/endpoint_four_repairs_20261021/README.md": "f93c347295be6a11ccd3183ac2440563d563678587e948775bdaf30b6656ee65",
+    "05-knowledge/results/endpoint_four_repairs_20261021/verify.py": "849832074942b682752685bef81a72370cdeec23e22634adad0952ad4e31a887",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/lift.md": "c131dfb6e40075906817d65eda735bf60de5c0a549330704c1dcdac77ad59fa8",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/root.md": "f3e5dd63a4010d8eb6e3f5e8ebc068d3baefe8549037c684b0d4e7d7b31804e2",
+    "05-knowledge/results/trijection_reset_20261020/graph_audit.md": "e80bf447fe02bdebeb09841c6b59d1f2f108b8dcc07f7a00fd43bad0afb5d26e"
+  },
+  "no_producer_imports": true,
+  "no_remote_writes": true,
+  "no_repository_writes": true,
+  "producer_manifest_sha256": "ff50d3fc618f24f2ed227628780b411d3b9d535a7b12c8dd1e792962b7f1b462",
+  "producer_normal_matches_frozen": true,
+  "producer_optimized_matches_frozen": true,
+  "producer_sources_unchanged": true,
+  "relocated_run_from_unrelated_working_directory": true,
+  "status": "PASS"
+}
