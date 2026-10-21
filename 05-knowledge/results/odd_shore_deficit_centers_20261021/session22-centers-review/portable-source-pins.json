@@ -1,0 +1,12 @@
+{
+  "repaired_audit.py": {
+    "original_sha256": "7e6f807556029109a6850f2df81cdbf71bd59f407c13ca72e44ffd9d3521cbd4",
+    "published_sha256": "e937244ec6802aeb0b04a6e643b14a1e857f899ffbf78f347ee1ebbd2e90eda2",
+    "change": "Only receipt input paths redirected to final producer receipts."
+  },
+  "repaired_schema.py": {
+    "original_sha256": "aa8449cb303990a407cbd2dee74cad70a55dfa72fb2026b6f5cffb1f261cd603",
+    "published_sha256": "f232ff842b74b6bf08ed2ca8c85ad10684651dc1903fbb918fafffb150a9c8d7",
+    "change": "Only receipt input paths redirected to final producer receipts."
+  }
+}

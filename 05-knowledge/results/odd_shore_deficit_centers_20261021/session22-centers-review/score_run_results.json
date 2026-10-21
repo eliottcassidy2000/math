@@ -1,0 +1,13 @@
+{
+  "scope": "binary score words only, not tournament enumeration",
+  "q_range": [
+    5,
+    8
+  ],
+  "shore_multiplicities": [
+    1,
+    4
+  ],
+  "repetitions": 5,
+  "cut_cases_checked": 12340
+}

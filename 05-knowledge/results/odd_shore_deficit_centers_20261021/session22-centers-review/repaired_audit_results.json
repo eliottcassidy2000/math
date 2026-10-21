@@ -1,0 +1,73 @@
+{
+  "source_sha256": "44ae88a6d25a922348e668ec537d70f567bdb1b21120635c567fbd920ec4a992",
+  "normal_checks": 10374,
+  "optimized_checks": 10374,
+  "nonvolatile_receipts_equal": true,
+  "independently_valid_prefix_receipts": 16,
+  "producer_accepts_negative_label_alias": false,
+  "strict_consumer_rejects_alias": true,
+  "half_support_boundaries": [
+    {
+      "r": 2,
+      "n": 3,
+      "square_order": 3
+    },
+    {
+      "r": 2,
+      "n": 4,
+      "square_order": 2
+    },
+    {
+      "r": 2,
+      "n": 5,
+      "square_order": 2
+    },
+    {
+      "r": 4,
+      "n": 7,
+      "square_order": 7
+    },
+    {
+      "r": 4,
+      "n": 8,
+      "square_order": 4
+    },
+    {
+      "r": 4,
+      "n": 9,
+      "square_order": 4
+    },
+    {
+      "r": 8,
+      "n": 15,
+      "square_order": 15
+    },
+    {
+      "r": 8,
+      "n": 16,
+      "square_order": 8
+    },
+    {
+      "r": 8,
+      "n": 17,
+      "square_order": 8
+    },
+    {
+      "r": 16,
+      "n": 31,
+      "square_order": 31
+    },
+    {
+      "r": 16,
+      "n": 32,
+      "square_order": 16
+    },
+    {
+      "r": 16,
+      "n": 33,
+      "square_order": 16
+    }
+  ],
+  "entry_receipts": 16,
+  "exit_receipts": 0
+}

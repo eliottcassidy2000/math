@@ -1,0 +1,113 @@
+{
+  "source_commit": "777c7240f75d3c574c6d0b91e8f6e65a70b2fde6",
+  "files": {
+    "README.md": {
+      "sha256": "4ba81e36fe30c6bbce66ce07a955d73701bbd703e35e2a2c57b4b1223e85e7c2",
+      "bytes": 2893
+    },
+    "session22-centers/PROOF.md": {
+      "sha256": "6f2108a23a1268afa3fa55dfbcacd8b1d406cd1fa8156255779fee0f39729d13",
+      "bytes": 14377
+    },
+    "session22-centers/README.md": {
+      "sha256": "679a47bd8c4d4dd9ecafe17bc8026a7b15be749140e42b70957f176cebae6818",
+      "bytes": 1873
+    },
+    "session22-centers/check.out": {
+      "sha256": "8fa1f9fe900dc2bc706ec627fe35f2174dfe751843c4a70e6741071779b221cb",
+      "bytes": 595
+    },
+    "session22-centers/check.py": {
+      "sha256": "44ae88a6d25a922348e668ec537d70f567bdb1b21120635c567fbd920ec4a992",
+      "bytes": 8082
+    },
+    "session22-centers/check_optimized.out": {
+      "sha256": "827704cee3375a31ec590d0ddabeeba0cdc2d8aac9b193b1f62de62c33451224",
+      "bytes": 596
+    },
+    "session22-centers/receipt.json": {
+      "sha256": "1e1e759db9e3de8821769e088149745c8bd7ad227ccb7151cd0deaa2e5baf975",
+      "bytes": 42335
+    },
+    "session22-centers/receipt_normal.json": {
+      "sha256": "d375bd3df801c7cc7275b1fe23514eb5df2a0fbc2b47bf88810c24b8fc981325",
+      "bytes": 42334
+    },
+    "session22-centers/source_pins.json": {
+      "sha256": "27427c330e37581f8084a3dd10419ecfd419b40b51c331382a9471d25d2f06fe",
+      "bytes": 551
+    },
+    "session22-centers-review/NONSELFCONVERSE_REVIEW.md": {
+      "sha256": "fd67524430bc88a6b5ae0574277f7388f12e20441d9bcda3a62964b03edc4357",
+      "bytes": 2974
+    },
+    "session22-centers-review/REVIEW.md": {
+      "sha256": "07b3efb3e5e5fc3d715f288c8b11c4180e284379f4c80e95eedbd9b1158f84a2",
+      "bytes": 4948
+    },
+    "session22-centers-review/SECOND_REVIEW.md": {
+      "sha256": "c38224db17a8e22899a666c166e7fbccced29dd6df226c9609131ca78600bf2d",
+      "bytes": 3891
+    },
+    "session22-centers-review/THIRD_REVIEW.md": {
+      "sha256": "9b4f0004fab410315f57264a3133e160292772e9caefa498ffaf9a4beed01df1",
+      "bytes": 3416
+    },
+    "session22-centers-review/current_source_pins.json": {
+      "sha256": "20aa6e34eb3fca99de2095ec0ef5932a6e572298547bb8d4efe8094987fb0db5",
+      "bytes": 336
+    },
+    "session22-centers-review/nonselfconverse_source_pins.json": {
+      "sha256": "449caf3a64a36880ab637a3177d37da4e8c8402310bd39403c327d5275c98242",
+      "bytes": 120
+    },
+    "session22-centers-review/portable-paths.patch": {
+      "sha256": "14868f5f131e86b670d221af2ab23c621bed5ba85a627fed703e002e4f7f04f4",
+      "bytes": 1336
+    },
+    "session22-centers-review/portable-source-pins.json": {
+      "sha256": "8de649874771ec155a05c75f5fbe6964a832801d653282696edda5959c530211",
+      "bytes": 590
+    },
+    "session22-centers-review/repaired_audit.py": {
+      "sha256": "e937244ec6802aeb0b04a6e643b14a1e857f899ffbf78f347ee1ebbd2e90eda2",
+      "bytes": 3121
+    },
+    "session22-centers-review/repaired_audit_results.json": {
+      "sha256": "a0d248d891adf863348bd1a3991926ec5c57a1cd571ae9428e8e8ce380bec4f1",
+      "bytes": 1193
+    },
+    "session22-centers-review/repaired_schema.py": {
+      "sha256": "f232ff842b74b6bf08ed2ca8c85ad10684651dc1903fbb918fafffb150a9c8d7",
+      "bytes": 1445
+    },
+    "session22-centers-review/repaired_schema_results.json": {
+      "sha256": "ffc6a0359b2afd97caa92d31784f6f87eb04863a109ab80d516dcd064f36ed29",
+      "bytes": 181
+    },
+    "session22-centers-review/score_run_control.py": {
+      "sha256": "01dd063247ff1c0901c23df5bf756ed92286d5398c85d93c68d6edb42897f886",
+      "bytes": 699
+    },
+    "session22-centers-review/score_run_results.json": {
+      "sha256": "0edf7b9123bda16f2825eb9f5eb16ab29c2f73a312d2975c86f2d13e74c0d704",
+      "bytes": 198
+    },
+    "session22-fixed-degree-review/TRIVALENT_RECURRENCE_REVIEW.md": {
+      "sha256": "539af00fe31be76fef399c9212dcff5c47fdaf1b30b02e563a93b7c82f13c3b1",
+      "bytes": 2459
+    },
+    "session22-fixed-degree-review/trivalent_recurrence_check.py": {
+      "sha256": "9dfae8b60fd6ef22d29f09a997ad929493e3d2fb6011955c0a78fe2d7826bbcf",
+      "bytes": 1738
+    },
+    "session22-fixed-degree-review/trivalent_recurrence_receipt.json": {
+      "sha256": "69286f016b8307a535cde37f2d9021e6507c6d3c9ac8ade2d5b41b35e52ccd73",
+      "bytes": 874
+    },
+    "session22-root/NONSELFCONVERSE_QUADRATIC.md": {
+      "sha256": "49902c59edbb7ffa81be01a3949e508ae976056a5f4ff1e7df484273ac98612e",
+      "bytes": 2919
+    }
+  }
+}

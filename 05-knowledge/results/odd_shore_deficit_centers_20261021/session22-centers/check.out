@@ -1,0 +1,33 @@
+{
+  "status": "FINITE-EXACT scoped controls, not complete center classification",
+  "start_utc": "2026-10-21T17:09:26.772394+00:00",
+  "end_utc": "2026-10-21T17:09:26.909324+00:00",
+  "wall_seconds": 0.1369380789983552,
+  "checks": 10374,
+  "frame_counts": {
+    "3": 8,
+    "5": 128,
+    "9_scoped": 2048
+  },
+  "small_controls": {
+    "C3": [
+      3,
+      3,
+      1,
+      1
+    ],
+    "R5": [
+      15,
+      5,
+      3,
+      3
+    ],
+    "Paley7": [
+      189,
+      21,
+      9,
+      3
+    ]
+  },
+  "source_sha256": "44ae88a6d25a922348e668ec537d70f567bdb1b21120635c567fbd920ec4a992"
+}

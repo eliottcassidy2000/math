@@ -1,0 +1,22 @@
+--- original/repaired_audit.py
++++ published/repaired_audit.py
+@@ -3,7 +3,7 @@
+ source=(P.parent/'session22-centers/check.py').read_text()
+ ns={'__file__':str(P.parent/'session22-centers/check.py')}
+ exec(compile(source.split('start=datetime.datetime')[0],'<producer definitions>','exec'),ns)
+-R=json.loads((P/'repaired-normal/receipt.json').read_text()); O=json.loads((P/'repaired-optimized/receipt.json').read_text())
++R=json.loads((P.parent/'session22-centers/receipt_normal.json').read_text()); O=json.loads((P.parent/'session22-centers/receipt.json').read_text())
+ volatile={'start_utc','end_utc','wall_seconds'}
+ assert {k:v for k,v in R.items() if k not in volatile}=={k:v for k,v in O.items() if k not in volatile}
+ def verify(r):
+--- original/repaired_schema.py
++++ published/repaired_schema.py
+@@ -3,7 +3,7 @@
+ s=(P.parent/'session22-centers/check.py').read_text();ns={'__file__':str(P.parent/'session22-centers/check.py')};exec(s.split('start=datetime.datetime')[0],ns);audit=ns['audit_receipt']
+ def need(value):
+  if not value:raise RuntimeError('schema check failed')
+-valid=json.loads((P/'repaired-normal/receipt.json').read_text())['prefix_receipts'];tests=[]
++valid=json.loads((P.parent/'session22-centers/receipt_normal.json').read_text())['prefix_receipts'];tests=[]
+ for v in valid:
+  need(audit(v))
+  for key in v:
