@@ -1,0 +1,90 @@
+{
+  "generic_counterexample": {
+    "four_point_ranks": [
+      3,
+      4
+    ],
+    "circle_determinant": "-56/9",
+    "three_distinct_collinear_labels": [
+      "H",
+      "B",
+      "F"
+    ]
+  },
+  "valid_exception": {
+    "tetrahedron_determinant": "3/4",
+    "center": [
+      "0",
+      "1/2",
+      "1"
+    ],
+    "radius_squared": "5/4",
+    "sphere_ranks": [
+      4,
+      4
+    ],
+    "distinct_points": 5,
+    "coincidences": [
+      [
+        "B",
+        "F"
+      ],
+      [
+        "D",
+        "E"
+      ]
+    ],
+    "four_point_affine_determinant": "3*sqrt(3)/4"
+  },
+  "negative_endpoint": {
+    "tetrahedron_determinant": "3/2",
+    "all_three_scalar_conditions_hold": true,
+    "sphere_ranks": [
+      3,
+      4
+    ],
+    "no_finite_sphere": true
+  },
+  "positive_endpoint": {
+    "tetrahedron_determinant": "0",
+    "sphere_ranks": [
+      3,
+      3
+    ],
+    "nonunique_spheres_if_degenerate_inputs_allowed": true
+  },
+  "undefined_controls": {
+    "G_equals_O": "E undefined",
+    "w_equals_O": "B undefined; tangent system ranks 2,3"
+  },
+  "symbolic_controls": {
+    "gram_determinant": "-3*(4*p - 1)*(4*p + 1)/16",
+    "center_and_radius_formulas": "verified",
+    "affine_determinant_factor": -3,
+    "four_point_residual": "(T-4)(T-16)/(3T)"
+  },
+  "generic_six_point_core": {
+    "delta": "-4/15",
+    "center": [
+      "-43/24",
+      "37/6",
+      "-5/2"
+    ],
+    "radius_squared": "25049/576",
+    "sphere_ranks": [
+      4,
+      4
+    ],
+    "outside_residuals": {
+      "A": "1178/225",
+      "H": "38/5"
+    },
+    "symbolic_residuals_and_inversion": "verified"
+  },
+  "reviewed_sources": {
+    "geometry_report.md": "bd541caa0f8db7a378430abce16afb82796281802d59282a7148304371febcd0",
+    "verify_geometry.py": "2ca7bb13e8b33aa38317605226e6470dbd1511e372c0854d90a71e4afb08ed0b",
+    "verification.txt": "94765a8453180d734b1109a1c5c996bd3133285f7c666d3861085bea1da3d6c3"
+  },
+  "status": "PASS"
+}
