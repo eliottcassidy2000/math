@@ -1,0 +1,49 @@
+{
+  "baseline": "c4a7875652a5ea516e93a31c3c6410d2204773b2",
+  "dependencies": [
+    {
+      "path": "01-canon/theorems/THM-4566-hilbert-class-field-planes-are-the-idoneal-planes.md",
+      "sha256": "87c5fce658dc8a660391a0ea5cc6c64a15af59db915539058d1c98a5110e53f7"
+    },
+    {
+      "path": "05-knowledge/results/golden_tail_idoneal_20261017c.md",
+      "sha256": "70b6152c4cfdaa7d1d970c2f4496389c13d52bebb6a3f9d3a44823d473dfd546"
+    },
+    {
+      "path": "05-knowledge/results/escape_renewal_idoneal_20261017d.md",
+      "sha256": "7b9a0e966016723cbb3eef0ce7637cec259172e1099f699d579cd95dff8e80e8"
+    },
+    {
+      "path": "05-knowledge/results/digit_idoneal_difference_20261018b.md",
+      "sha256": "b1cdeb1749f2383b77a10f4fd1d0e3286cfb8c15398c5540397d43c775facd16"
+    },
+    {
+      "path": "05-knowledge/results/trijection_reset_20261020/graph_audit.md",
+      "sha256": "e80bf447fe02bdebeb09841c6b59d1f2f108b8dcc07f7a00fd43bad0afb5d26e"
+    },
+    {
+      "path": "05-knowledge/results/native_cancellation_105_20261018g.md",
+      "sha256": "91b52f8e7bd7332ff1edcbd1dfdd0b43afca15cf17c7e451b32f3d5621c0b839"
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex",
+      "git_blob": "2000faddbbebac5de0ecfe0b962534ea61a852d5",
+      "bytes": 169005,
+      "role": "Directly read main theorem and idoneal consequence; no independent analytic audit; not needed for new maps."
+    },
+    {
+      "url": "https://arxiv.org/html/2003.08914v7",
+      "role": "Remark1.5 classical completeness qualifications; not newer #003."
+    },
+    {
+      "url": "https://arxiv.org/abs/1803.02056",
+      "role": "EKN explicit no-Siegel-zero hypothesis."
+    },
+    {
+      "url": "https://www.labmath.uqam.ca/~annales/volumes/35-2/PDF/197-227.pdf",
+      "role": "Verified publisher PDF; reduction/genus references, printed pages 200–202."
+    }
+  ]
+}

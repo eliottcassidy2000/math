@@ -1,0 +1,33 @@
+--- provenance/original/IDONEAL_INFORMATION_CHANNELS.md
++++ IDONEAL_INFORMATION_CHANNELS.md
+@@ -11,7 +11,7 @@
+ None of our class-group, reflection, register, or Collatz examples needs completeness of the list. They concern explicit small quadratic orders and are unconditionally certified by reduction of positive binary forms.
+ 
+ Primary sources:
+-- [Kani, Idoneal Numbers and Some Generalizations, Theorem6 and genus discussion](https://mast.queensu.ca/~kani/papers/2011K1.pdf).
++- [Kani, Idoneal Numbers and Some Generalizations, Theorem6 and genus discussion](https://www.labmath.uqam.ca/~annales/volumes/35-2/PDF/197-227.pdf).
+ - [Brandhorst–Sonel–Veniani, Remark1.5](https://arxiv.org/html/2003.08914v7).
+ - [Elsenhans–Klüners–Nicolae, class groups of small exponent](https://arxiv.org/abs/1803.02056), whose stated computation/completeness theorem retains its zero-free hypothesis.
+ - [OpenAI, Quasi-Riemann Hypothesis, public source](https://github.com/openai/math/blob/main/preprints/The-Quasi-Riemann-Hypothesis-October-5-2026/build/paper2.tex).
+@@ -101,7 +101,7 @@
+ 
+  U(3)=5, U(7)=11, U(17)=13.
+ 
+-The small reduced-form check certifies3,5,7,13 idoneal and11,17 non-idoneal. Thus idoneality can be lost and gained. More sharply,3 and7 share the same idoneal flag but their successors do not. Consequently no deterministic function of the idoneal flag alone intertwines U. No ROOT issue is involved:3 and7 are both nonROOT sources.
++The small reduced-form check certifies3,5,7,13 idoneal and11,17 non-idoneal. Thus idoneality can be lost and gained. More sharply,3 and7 share the same idoneal flag but their successors do not. Consequently no deterministic function of the idoneal flag alone intertwines U. These are unstopped odd-map transitions at sources greater than1, not first-arrival statements to a frontier.
+ 
+ This rules out the proposed simplest information channel, not every possible arithmetic connection. The positive class-group/graph code in section4 preserves precisely stated algebraic operations; it supplies neither a decreasing Collatz potential nor source-authenticated annulus cancellation. The65-number completeness input does not repair either missing implication.
+ 
+--- provenance/original/SOURCE_PROVENANCE.json
++++ SOURCE_PROVENANCE.json
+@@ -42,8 +42,8 @@
+       "role": "EKN explicit no-Siegel-zero hypothesis."
+     },
+     {
+-      "url": "https://mast.queensu.ca/~kani/papers/2011K1.pdf",
+-      "role": "Primary indexed text; reduction/genus references, author-hosted."
++      "url": "https://www.labmath.uqam.ca/~annales/volumes/35-2/PDF/197-227.pdf",
++      "role": "Verified publisher PDF; reduction/genus references, printed pages 200–202."
+     }
+   ]
+ }

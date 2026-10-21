@@ -1,0 +1,372 @@
+{
+  "checks": {
+    "actual_blue_path": 80,
+    "actual_odd_hostiles": 1,
+    "actual_path_complement": 80,
+    "all_regular_four_graphs": 1,
+    "bounded_65_census": 1,
+    "clock_type_boundary": 1,
+    "conductor_63": 1,
+    "cyclic_four_63": 1,
+    "form_valid": 12,
+    "graph_group_code": 64,
+    "hamiltonian_path": 8,
+    "idoneal_small_flag": 6,
+    "inversion_reflection": 8,
+    "joint_register_hostile": 1,
+    "literal_complete_forms": 2,
+    "literal_primitive_step": 1,
+    "lossless_genus_273": 1,
+    "maximal_order_hostile": 1,
+    "named_eta": 1,
+    "primitive_source_membership": 1,
+    "printed_character_row": 8,
+    "printed_representative": 8,
+    "printed_table_complete": 1,
+    "reduction_nonempty": 1848,
+    "representation_character_controls": 990,
+    "translation_complement": 8
+  },
+  "class_rows": {
+    "63": [
+      {
+        "characters": [
+          1
+        ],
+        "form": [
+          1,
+          0,
+          63
+        ],
+        "representative": 1,
+        "self_inverse": true
+      },
+      {
+        "characters": [
+          1
+        ],
+        "form": [
+          7,
+          0,
+          9
+        ],
+        "representative": 37,
+        "self_inverse": true
+      },
+      {
+        "characters": [
+          -1
+        ],
+        "form": [
+          8,
+          -6,
+          9
+        ],
+        "representative": 11,
+        "self_inverse": false
+      },
+      {
+        "characters": [
+          -1
+        ],
+        "form": [
+          8,
+          6,
+          9
+        ],
+        "representative": 11,
+        "self_inverse": false
+      }
+    ],
+    "273": [
+      {
+        "characters": [
+          1,
+          1,
+          1
+        ],
+        "form": [
+          1,
+          0,
+          273
+        ],
+        "representative": 1,
+        "self_inverse": true
+      },
+      {
+        "characters": [
+          1,
+          -1,
+          1
+        ],
+        "form": [
+          2,
+          2,
+          137
+        ],
+        "representative": 137,
+        "self_inverse": true
+      },
+      {
+        "characters": [
+          -1,
+          1,
+          -1
+        ],
+        "form": [
+          3,
+          0,
+          91
+        ],
+        "representative": 103,
+        "self_inverse": true
+      },
+      {
+        "characters": [
+          -1,
+          -1,
+          -1
+        ],
+        "form": [
+          6,
+          6,
+          47
+        ],
+        "representative": 47,
+        "self_inverse": true
+      },
+      {
+        "characters": [
+          -1,
+          1,
+          1
+        ],
+        "form": [
+          7,
+          0,
+          39
+        ],
+        "representative": 67,
+        "self_inverse": true
+      },
+      {
+        "characters": [
+          1,
+          1,
+          -1
+        ],
+        "form": [
+          13,
+          0,
+          21
+        ],
+        "representative": 73,
+        "self_inverse": true
+      },
+      {
+        "characters": [
+          -1,
+          -1,
+          1
+        ],
+        "form": [
+          14,
+          14,
+          23
+        ],
+        "representative": 23,
+        "self_inverse": true
+      },
+      {
+        "characters": [
+          1,
+          -1,
+          -1
+        ],
+        "form": [
+          17,
+          8,
+          17
+        ],
+        "representative": 17,
+        "self_inverse": true
+      }
+    ]
+  },
+  "graph_code_rows": [
+    {
+      "bits": [
+        0,
+        0,
+        0
+      ],
+      "form": [
+        1,
+        0,
+        273
+      ],
+      "graph_code": 0
+    },
+    {
+      "bits": [
+        0,
+        1,
+        0
+      ],
+      "form": [
+        2,
+        2,
+        137
+      ],
+      "graph_code": 18
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1
+      ],
+      "form": [
+        3,
+        0,
+        91
+      ],
+      "graph_code": 45
+    },
+    {
+      "bits": [
+        1,
+        1,
+        1
+      ],
+      "form": [
+        6,
+        6,
+        47
+      ],
+      "graph_code": 63
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "form": [
+        7,
+        0,
+        39
+      ],
+      "graph_code": 33
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1
+      ],
+      "form": [
+        13,
+        0,
+        21
+      ],
+      "graph_code": 12
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0
+      ],
+      "form": [
+        14,
+        14,
+        23
+      ],
+      "graph_code": 51
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "form": [
+        17,
+        8,
+        17
+      ],
+      "graph_code": 30
+    }
+  ],
+  "known_up_to_1848": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    13,
+    15,
+    16,
+    18,
+    21,
+    22,
+    24,
+    25,
+    28,
+    30,
+    33,
+    37,
+    40,
+    42,
+    45,
+    48,
+    57,
+    58,
+    60,
+    70,
+    72,
+    78,
+    85,
+    88,
+    93,
+    102,
+    105,
+    112,
+    120,
+    130,
+    133,
+    165,
+    168,
+    177,
+    190,
+    210,
+    232,
+    240,
+    253,
+    273,
+    280,
+    312,
+    330,
+    345,
+    357,
+    385,
+    408,
+    462,
+    520,
+    760,
+    840,
+    1320,
+    1365,
+    1848
+  ],
+  "scope": "Finite reduction checks; genus homomorphism uses cited theory; no global completeness or Collatz inference.",
+  "status": "PASS",
+  "total_checks": 3135
+}
