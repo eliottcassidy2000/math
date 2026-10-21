@@ -1,0 +1,13 @@
+{
+  "producer_files": {
+    "session19-electrical-certificate/check.py": "9d14bb3cfc0ed012680c656ac30af0daca0a8cf3d082df6123514232b42b2ff2",
+    "session19-electrical-certificate/receipt.json": "d6cde057bb3870b79e3296bd8b5f03826ff872a07163f252a37dc61e1b126135",
+    "session19-electrical-certificate/README.md": "f467cd2aac8aceb0a92dbdda48ffff0e16723e8c363e6c4cd905b2d81ce88d6c",
+    "session19-electrical-certificate/receipt.optimized.json": "d6cde057bb3870b79e3296bd8b5f03826ff872a07163f252a37dc61e1b126135"
+  },
+  "companion_prose_read_for_context": {
+    "session19-ellipsoid-optimum/README.md": "4824a239f153a002fdbece8e21a7fff6063a4eb437b64b7adfc7dd2b84e4e757",
+    "session19-triangle-ellipsoid-repair/README.md": "7134f63dcf97d9ded686e36dce89e1884ac22f79c833cdb4e5a0317d4c8fd971"
+  },
+  "derivation_policy": "Audit rederives carrier, tree obstruction, and literal star/triangle directly; companion general triangle theorem not recertified."
+}

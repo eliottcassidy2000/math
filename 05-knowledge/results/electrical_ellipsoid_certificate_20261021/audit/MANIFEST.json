@@ -1,0 +1,70 @@
+{
+  "verdict": "PASS",
+  "audit_date_utc": "2026-10-21",
+  "final_producer_hashes_verified": true,
+  "reviewed_changes_during_audit": "Root applied only three nonblocking clarity suggestions; initial source pins and README retained. No checker or receipt changes.",
+  "normal_optimized_byte_identical": true,
+  "portable_from_tmp": true,
+  "producer_replay_matches_both_receipts": true,
+  "owned_artifacts": {
+    "PROOF_AUDIT.md": {
+      "sha256": "6808fcf78b0915920be462113904df56049a622ff4771275a7011c815aab5e2b",
+      "bytes": 13415
+    },
+    "SOURCE_PINS.json": {
+      "sha256": "9c74f9a665098c6e16e61cc67fc835921822962541e56a64675794d209dfe5cb",
+      "bytes": 1176
+    },
+    "frozen-inputs/README.md": {
+      "sha256": "493e454602518eb85ab458f6d866f73bbb34a84e066c95cc3abc4a1a37cc513f",
+      "bytes": 7816
+    },
+    "frozen-inputs/check.py": {
+      "sha256": "9d14bb3cfc0ed012680c656ac30af0daca0a8cf3d082df6123514232b42b2ff2",
+      "bytes": 3526
+    },
+    "frozen-inputs/receipt.json": {
+      "sha256": "d6cde057bb3870b79e3296bd8b5f03826ff872a07163f252a37dc61e1b126135",
+      "bytes": 1073
+    },
+    "frozen-inputs/receipt.optimized.json": {
+      "sha256": "d6cde057bb3870b79e3296bd8b5f03826ff872a07163f252a37dc61e1b126135",
+      "bytes": 1073
+    },
+    "independent-normal.json": {
+      "sha256": "92cdb1c822e1887d17224c82bc170e126509ee0522b873846879eea0d9e002bc",
+      "bytes": 1579
+    },
+    "independent-optimized.json": {
+      "sha256": "92cdb1c822e1887d17224c82bc170e126509ee0522b873846879eea0d9e002bc",
+      "bytes": 1579
+    },
+    "independent_check.py": {
+      "sha256": "500ce4c828eddbcd5583388114bdbb99ca9347633c0c4723a0426be01dd5baf4",
+      "bytes": 10452
+    },
+    "initial-snapshot/README.md": {
+      "sha256": "f467cd2aac8aceb0a92dbdda48ffff0e16723e8c363e6c4cd905b2d81ce88d6c",
+      "bytes": 7586
+    },
+    "initial-snapshot/SOURCE_PINS.json": {
+      "sha256": "68f45b3985cc7e289f5a025106d1ad7cb94d282f49c8aea1bf5e84b5509ea20c",
+      "bytes": 951
+    },
+    "producer-replay-normal.json": {
+      "sha256": "d6cde057bb3870b79e3296bd8b5f03826ff872a07163f252a37dc61e1b126135",
+      "bytes": 1073
+    },
+    "producer-replay-optimized.json": {
+      "sha256": "d6cde057bb3870b79e3296bd8b5f03826ff872a07163f252a37dc61e1b126135",
+      "bytes": 1073
+    }
+  },
+  "commands": [
+    "python3 -B independent_check.py",
+    "python3 -B -O independent_check.py",
+    "python3 -B frozen-inputs/check.py",
+    "python3 -B -O frozen-inputs/check.py"
+  ],
+  "boundaries": "No producer edits by auditor, no repository writes, no Git writes; no LRC proof or novelty claim."
+}

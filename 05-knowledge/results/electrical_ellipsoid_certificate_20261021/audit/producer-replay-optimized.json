@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "examples": [
+    {
+      "speeds": [
+        1,
+        2,
+        4
+      ],
+      "det_covariance_in_grounded_potential_coordinates": "225/256",
+      "tree_sum": "256/225",
+      "conductances": {
+        "(0, 1)": "0",
+        "(0, 2)": "16/25",
+        "(1, 2)": "16/9"
+      },
+      "resistances": {
+        "(0, 1)": "17/8",
+        "(0, 2)": "25/16",
+        "(1, 2)": "9/16"
+      }
+    },
+    {
+      "speeds": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "det_covariance_in_grounded_potential_coordinates": "124/625",
+      "tree_sum": "625/124",
+      "conductances": {
+        "(0, 1)": "0",
+        "(0, 2)": "0",
+        "(0, 3)": "25/36",
+        "(1, 2)": "9/31",
+        "(1, 3)": "55/31",
+        "(2, 3)": "405/124"
+      },
+      "resistances": {
+        "(0, 1)": "193/100",
+        "(0, 2)": "388/225",
+        "(0, 3)": "36/25",
+        "(1, 2)": "25/36",
+        "(1, 3)": "49/100",
+        "(2, 3)": "64/225"
+      }
+    }
+  ],
+  "scope": "Exact electrical contact certificates; no LRC orbit-hit claim."
+}

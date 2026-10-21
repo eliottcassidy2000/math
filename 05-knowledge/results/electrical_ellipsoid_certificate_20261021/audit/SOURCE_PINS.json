@@ -1,0 +1,14 @@
+{
+  "producer_files": {
+    "session19-electrical-certificate/README.md": "493e454602518eb85ab458f6d866f73bbb34a84e066c95cc3abc4a1a37cc513f",
+    "session19-electrical-certificate/check.py": "9d14bb3cfc0ed012680c656ac30af0daca0a8cf3d082df6123514232b42b2ff2",
+    "session19-electrical-certificate/receipt.json": "d6cde057bb3870b79e3296bd8b5f03826ff872a07163f252a37dc61e1b126135",
+    "session19-electrical-certificate/receipt.optimized.json": "d6cde057bb3870b79e3296bd8b5f03826ff872a07163f252a37dc61e1b126135"
+  },
+  "companion_prose_read_for_context": {
+    "session19-ellipsoid-optimum/README.md": "4824a239f153a002fdbece8e21a7fff6063a4eb437b64b7adfc7dd2b84e4e757",
+    "session19-triangle-ellipsoid-repair/README.md": "7134f63dcf97d9ded686e36dce89e1884ac22f79c833cdb4e5a0317d4c8fd971"
+  },
+  "derivation_policy": "Audit rederives carrier, tree obstruction, and literal star/triangle directly; companion general triangle theorem not recertified.",
+  "reviewed_revision": "Root added only the audit-recommended explicit cube normalization, grounded map/inverse, and dual domain. Diff independently inspected; initial README and initial pins retained in initial-snapshot/."
+}
