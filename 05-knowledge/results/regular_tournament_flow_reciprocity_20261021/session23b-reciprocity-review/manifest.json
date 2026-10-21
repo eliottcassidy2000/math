@@ -1,0 +1,64 @@
+{
+  "action_instances": 80,
+  "audit_phase": "final_source_bound_packaging",
+  "corollary_sections_exactly_match_reviewed_sections_3_and_4": true,
+  "direct_edge_vectors_examined": 81874,
+  "exhaustive_regular_labelled_total": 2667,
+  "isomorphism_classes": 6,
+  "named_fixed_cone_coefficient_bound": 80,
+  "no_git_operations": true,
+  "normal_optimized_identical": true,
+  "producer_exact_checks": 81,
+  "producer_rerun_matches_original_receipts": true,
+  "producer_rerun_normal_optimized_identical": true,
+  "reviewed_final_sources": {
+    "COROLLARIES.md": {
+      "bytes": 5979,
+      "sha256": "9aa0a43a331c14849de8a3ec5bff57f2ce0f1f1a315d945a20461cdc941e64e2"
+    },
+    "REGULAR_FLOW_RECIPROCITY.md": {
+      "bytes": 8055,
+      "sha256": "964397d9905dbc8f23cb6256ebc8e04b3ac3fd48249a4073c248219c31bd662d"
+    },
+    "check_corollaries.py": {
+      "bytes": 2366,
+      "sha256": "626cb35853c601b96f5c0615bbb5871a752d99a7904509dad241c3ce0da6d615"
+    },
+    "normal.json": {
+      "bytes": 3039,
+      "sha256": "ccf7a463aa10c1313d47d54a228a8fc5ccd2d6893bb7d4388377f41de6f8a731"
+    },
+    "optimized.json": {
+      "bytes": 3039,
+      "sha256": "ccf7a463aa10c1313d47d54a228a8fc5ccd2d6893bb7d4388377f41de6f8a731"
+    }
+  },
+  "reviewer_files": {
+    "INDEPENDENT_REVIEW.md": {
+      "bytes": 14111,
+      "sha256": "16a6f45f6a87c7395aed4a4971b06a0aab34d5095478eecac13ea6d6f747aaaa"
+    },
+    "independent_check.py": {
+      "bytes": 16307,
+      "sha256": "160d6142d0ac7971322c4eeafb85f8228115942df9e5dfaf1bedbbca1a67e314"
+    },
+    "normal.json": {
+      "bytes": 18593,
+      "sha256": "38d5da17c1be4eac777ee87ad106eabe38f236957307a9a6220c3ca84914bc05"
+    },
+    "optimized.json": {
+      "bytes": 18593,
+      "sha256": "38d5da17c1be4eac777ee87ad106eabe38f236957307a9a6220c3ca84914bc05"
+    },
+    "reproduced-root-normal.json": {
+      "bytes": 3039,
+      "sha256": "ccf7a463aa10c1313d47d54a228a8fc5ccd2d6893bb7d4388377f41de6f8a731"
+    },
+    "reproduced-root-optimized.json": {
+      "bytes": 3039,
+      "sha256": "ccf7a463aa10c1313d47d54a228a8fc5ccd2d6893bb7d4388377f41de6f8a731"
+    }
+  },
+  "status": "PASS",
+  "supplied_source_pins_verified": true
+}
