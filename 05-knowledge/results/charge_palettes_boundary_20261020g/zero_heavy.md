@@ -117,8 +117,11 @@ changes the feedback budget and does not preserve K moves or graph minors.
 The strong subfamily has its additional proper-cut condition.
 
 Extremality fixes this much boundary information. Arbitrary zero-heavy
-vertices do not inherit that conclusion. At delta=k missing gaps and
-shared endpoints can enter. The complete
+vertices do not inherit that conclusion. At delta=k missing gaps can
+enter, but shared endpoints require at least delta=k+1, as proved in the
+[next-layer classification](../zero_heavy_next_20261020h/README.md).
+This corrects the earlier sentence placing both phenomena at delta=k.
+The complete
 k2 compiler gives42 classes at weight12 (delta2), whereas extrapolating
 (3) would give45. The formula is not unrestricted.
 

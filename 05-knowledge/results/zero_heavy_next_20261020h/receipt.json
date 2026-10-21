@@ -1,0 +1,337 @@
+{
+  "checks": 224169,
+  "clone_hostiles": [
+    {
+      "clone_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "gaps": [
+        1,
+        0,
+        1
+      ],
+      "k": 1,
+      "matching": [
+        [
+          0,
+          1
+        ]
+      ],
+      "rows": [
+        14,
+        8,
+        10,
+        0
+      ],
+      "strong": false,
+      "weights": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "clone_pairs": [
+        [
+          0,
+          1
+        ]
+      ],
+      "gaps": [
+        0
+      ],
+      "k": 1,
+      "matching": [
+        [
+          0,
+          1
+        ]
+      ],
+      "rows": [
+        0,
+        1
+      ],
+      "strong": true,
+      "weights": [
+        1,
+        1
+      ]
+    },
+    {
+      "clone_pairs": [
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "gaps": [
+        2,
+        2,
+        2,
+        0,
+        2
+      ],
+      "k": 2,
+      "matching": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "rows": [
+        254,
+        244,
+        248,
+        242,
+        224,
+        128,
+        160,
+        0
+      ],
+      "strong": false,
+      "weights": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2
+      ]
+    }
+  ],
+  "formula_values": [
+    {
+      "all": 2,
+      "k": 1,
+      "strong": 0
+    },
+    {
+      "all": 42,
+      "k": 2,
+      "strong": 11
+    },
+    {
+      "all": 1245,
+      "k": 3,
+      "strong": 344
+    },
+    {
+      "all": 51870,
+      "k": 4,
+      "strong": 15490
+    },
+    {
+      "all": 2836890,
+      "k": 5,
+      "strong": 908104
+    },
+    {
+      "all": 192962385,
+      "k": 6,
+      "strong": 65354942
+    },
+    {
+      "all": 15713362665,
+      "k": 7,
+      "strong": 5563249298
+    },
+    {
+      "all": 1490816076750,
+      "k": 8,
+      "strong": 546291714050
+    },
+    {
+      "all": 161505260116200,
+      "k": 9,
+      "strong": 60782701410440
+    },
+    {
+      "all": 19671344224582050,
+      "k": 10,
+      "strong": 7559402209699498
+    }
+  ],
+  "layers": [
+    {
+      "classes": 2,
+      "clone_rejections": 1,
+      "k": 1,
+      "raw_records": 3,
+      "sectors": {
+        "missing": 2
+      },
+      "strong": false,
+      "unit_cell_sizes": {
+        "4": 2
+      }
+    },
+    {
+      "classes": 0,
+      "clone_rejections": 1,
+      "k": 1,
+      "raw_records": 1,
+      "sectors": {},
+      "strong": true,
+      "unit_cell_sizes": {}
+    },
+    {
+      "classes": 42,
+      "clone_rejections": 3,
+      "k": 2,
+      "raw_records": 45,
+      "sectors": {
+        "full": 30,
+        "missing": 12
+      },
+      "strong": false,
+      "unit_cell_sizes": {
+        "1": 6,
+        "2": 9,
+        "3": 15,
+        "4": 6,
+        "5": 6
+      }
+    },
+    {
+      "classes": 11,
+      "clone_rejections": 1,
+      "k": 2,
+      "raw_records": 12,
+      "sectors": {
+        "full": 6,
+        "missing": 5
+      },
+      "strong": true,
+      "unit_cell_sizes": {
+        "2": 5,
+        "3": 2,
+        "5": 4
+      }
+    },
+    {
+      "classes": 1245,
+      "clone_rejections": 15,
+      "k": 3,
+      "raw_records": 1260,
+      "sectors": {
+        "full": 1155,
+        "missing": 90
+      },
+      "strong": false,
+      "unit_cell_sizes": {
+        "1": 555,
+        "2": 240,
+        "3": 450
+      }
+    },
+    {
+      "classes": 344,
+      "clone_rejections": 6,
+      "k": 3,
+      "raw_records": 350,
+      "sectors": {
+        "full": 300,
+        "missing": 44
+      },
+      "strong": true,
+      "unit_cell_sizes": {
+        "1": 100,
+        "2": 44,
+        "3": 200
+      }
+    },
+    {
+      "classes": 51870,
+      "clone_rejections": 105,
+      "k": 4,
+      "raw_records": 51975,
+      "sectors": {
+        "full": 51030,
+        "missing": 840
+      },
+      "strong": false,
+      "unit_cell_sizes": {
+        "1": 43680,
+        "2": 2310,
+        "3": 5880
+      }
+    },
+    {
+      "classes": 15490,
+      "clone_rejections": 50,
+      "k": 4,
+      "raw_records": 15540,
+      "sectors": {
+        "full": 15022,
+        "missing": 468
+      },
+      "strong": true,
+      "unit_cell_sizes": {
+        "1": 11914,
+        "2": 468,
+        "3": 3108
+      }
+    }
+  ],
+  "next_layer_shared_endpoint": {
+    "backward_edges": [
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "deficit": 3,
+    "k": 2,
+    "rows": [
+      126,
+      116,
+      120,
+      82,
+      96,
+      72,
+      0
+    ],
+    "weights": [
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2
+    ]
+  },
+  "relabel_controls": 176,
+  "status": "PROVED first missing-gap layer; FINITE-EXACT complete quotient controls",
+  "weighted_DP_controls": 63
+}

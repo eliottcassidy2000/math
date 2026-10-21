@@ -1,0 +1,703 @@
+{
+  "checks": 71746,
+  "domain_fixed_points": {
+    "C": 0,
+    "Q": 4,
+    "F": 2
+  },
+  "marked_rows": [
+    {
+      "divisor_exponents": [
+        0,
+        0,
+        1
+      ],
+      "graph_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "strong": true,
+      "hamilton_paths": 9,
+      "f": -1,
+      "g": -1
+    },
+    {
+      "divisor_exponents": [
+        0,
+        1,
+        0
+      ],
+      "graph_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "strong": true,
+      "hamilton_paths": 9,
+      "f": -1,
+      "g": 1
+    },
+    {
+      "divisor_exponents": [
+        0,
+        1,
+        1
+      ],
+      "graph_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "strong": true,
+      "hamilton_paths": 13,
+      "f": -2,
+      "g": 0
+    },
+    {
+      "divisor_exponents": [
+        1,
+        0,
+        0
+      ],
+      "graph_edges": [],
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "strong": false,
+      "hamilton_paths": 1,
+      "f": 1,
+      "g": 0
+    },
+    {
+      "divisor_exponents": [
+        1,
+        0,
+        1
+      ],
+      "graph_edges": [
+        [
+          2,
+          3
+        ]
+      ],
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "strong": false,
+      "hamilton_paths": 3,
+      "f": 0,
+      "g": -1
+    },
+    {
+      "divisor_exponents": [
+        1,
+        1,
+        0
+      ],
+      "graph_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "strong": false,
+      "hamilton_paths": 3,
+      "f": 0,
+      "g": 1
+    },
+    {
+      "divisor_exponents": [
+        1,
+        1,
+        1
+      ],
+      "graph_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "strong": true,
+      "hamilton_paths": 9,
+      "f": -1,
+      "g": 0
+    },
+    {
+      "divisor_exponents": [
+        2,
+        0,
+        0
+      ],
+      "graph_edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "strong": false,
+      "hamilton_paths": 3,
+      "f": 2,
+      "g": 0
+    },
+    {
+      "divisor_exponents": [
+        2,
+        0,
+        1
+      ],
+      "graph_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "strong": false,
+      "hamilton_paths": 5,
+      "f": 1,
+      "g": -1
+    },
+    {
+      "divisor_exponents": [
+        2,
+        1,
+        0
+      ],
+      "graph_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "strong": false,
+      "hamilton_paths": 5,
+      "f": 1,
+      "g": 1
+    }
+  ],
+  "target_graph_universes": [
+    {
+      "vertices": 2,
+      "graphs": 2,
+      "fixed_K_R_KR": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "vertices": 3,
+      "graphs": 8,
+      "fixed_K_R_KR": [
+        0,
+        4,
+        0
+      ]
+    },
+    {
+      "vertices": 4,
+      "graphs": 64,
+      "fixed_K_R_KR": [
+        0,
+        16,
+        0
+      ]
+    },
+    {
+      "vertices": 5,
+      "graphs": 1024,
+      "fixed_K_R_KR": [
+        0,
+        64,
+        0
+      ]
+    },
+    {
+      "vertices": 6,
+      "graphs": 32768,
+      "fixed_K_R_KR": [
+        0,
+        512,
+        0
+      ]
+    }
+  ],
+  "palette_chains": [
+    {
+      "length": 1,
+      "min_unscaled_entry": 0,
+      "max_unscaled_entry": 3,
+      "row_sum": 30
+    },
+    {
+      "length": 2,
+      "min_unscaled_entry": 36,
+      "max_unscaled_entry": 54,
+      "row_sum": 900
+    },
+    {
+      "length": 3,
+      "min_unscaled_entry": 1296,
+      "max_unscaled_entry": 1404,
+      "row_sum": 27000
+    },
+    {
+      "length": 4,
+      "min_unscaled_entry": 40176,
+      "max_unscaled_entry": 40824,
+      "row_sum": 810000
+    },
+    {
+      "length": 5,
+      "min_unscaled_entry": 1213056,
+      "max_unscaled_entry": 1216944,
+      "row_sum": 24300000
+    }
+  ],
+  "scope": "Exact finite controls for the all-order proofs in README.md; no Collatz coverage or forcing claim."
+}
