@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-21",
+  "repository_sources": [
+    {
+      "path": "05-knowledge/results/trijection_reset_20261020/arithmetic.md",
+      "repository_commit": "8730121c06121d741fa68fdb366bc1bbc75d00a4",
+      "sha256": "2ed6f99a61bc8497a1cf79e91e3fee2df8a338fe9c8fa76e569ae445a26525cb",
+      "scope_used": "Sections 3–4: faithful divisor chart, Klein action, parity, and proper-divisor balance.",
+      "url": "https://github.com/eliottcassidy2000/math/blob/8730121c06121d741fa68fdb366bc1bbc75d00a4/05-knowledge/results/trijection_reset_20261020/arithmetic.md"
+    },
+    {
+      "path": "05-knowledge/results/divisor_reflection_resolution_20261021/REFLECTION_RESOLUTION.md",
+      "repository_commit": "8730121c06121d741fa68fdb366bc1bbc75d00a4",
+      "sha256": "eecbe71f9cd36aba84ed3836d3f24c81b62ee50b7303eb430b4db6ac7f5da80c",
+      "scope_used": "Joint reflection obstruction and minimal source-preserving resolution, retained as distinct.",
+      "url": "https://github.com/eliottcassidy2000/math/blob/8730121c06121d741fa68fdb366bc1bbc75d00a4/05-knowledge/results/divisor_reflection_resolution_20261021/REFLECTION_RESOLUTION.md"
+    },
+    {
+      "path": "05-knowledge/results/eisenstein_circuit_completion_20261018g.md",
+      "repository_commit": "8730121c06121d741fa68fdb366bc1bbc75d00a4",
+      "sha256": "ba08c30559bb5ba4a9757d9a048d8b008151cf00f586f1f43b03b671a176d367",
+      "scope_used": "Section 1: the source-authenticated signed twelve-vector alphabet with norms one and three.",
+      "url": "https://github.com/eliottcassidy2000/math/blob/8730121c06121d741fa68fdb366bc1bbc75d00a4/05-knowledge/results/eisenstein_circuit_completion_20261018g.md"
+    },
+    {
+      "path": "05-knowledge/results/escape_renewal_idoneal_20261017d.md",
+      "repository_commit": "8730121c06121d741fa68fdb366bc1bbc75d00a4",
+      "sha256": "7b9a0e966016723cbb3eef0ce7637cec259172e1099f699d579cd95dff8e80e8",
+      "scope_used": "Section 6: conductor calculations, denominator caveat, and repository global idoneal qualification.",
+      "url": "https://github.com/eliottcassidy2000/math/blob/8730121c06121d741fa68fdb366bc1bbc75d00a4/05-knowledge/results/escape_renewal_idoneal_20261017d.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4566-hilbert-class-field-planes-are-the-idoneal-planes.md",
+      "repository_commit": "8730121c06121d741fa68fdb366bc1bbc75d00a4",
+      "sha256": "87c5fce658dc8a660391a0ea5cc6c64a15af59db915539058d1c98a5110e53f7",
+      "scope_used": "Inherited adopted completeness modulo openai/math #003; not used by restricted classification.",
+      "url": "https://github.com/eliottcassidy2000/math/blob/8730121c06121d741fa68fdb366bc1bbc75d00a4/01-canon/theorems/THM-4566-hilbert-class-field-planes-are-the-idoneal-planes.md"
+    }
+  ],
+  "external_sources": [
+    {
+      "author": "Keith Conrad",
+      "title": "The conductor ideal of an order",
+      "url": "https://kconrad.math.uconn.edu/blurbs/gradnumthy/conductor.pdf",
+      "pins": [
+        "Theorem 1.3, page 1: largest maximal-order ideal lying in an order.",
+        "Example 2.1, page 2: conductor of a quadratic order.",
+        "Theorem 5.3 and exact sequence (5.7), page 16: class-number quotient including unit index."
+      ],
+      "checked_via": "Full PDF read through public web on 2026-10-21.",
+      "use": "Classical input and direct finite-ring specialization; not a new general theorem."
+    },
+    {
+      "author": "Ernst Kani",
+      "title": "Idoneal numbers and some generalizations",
+      "bibliography": "Ann. Sci. Math. Québec 35 (2011), no. 2, 197–227.",
+      "url": "https://www.labmath.uqam.ca/~annales/volumes/35-2/PDF/197-227.pdf",
+      "pins": [
+        "Theorem 6 and Remark 7(b), printed page 202: idoneality iff all proper classes are ambiguous/exponent divides two.",
+        "Remark 18(a), printed page 204: a strictly interior primitive reduced form is not ambiguous.",
+        "Theorem 12, printed page 203: broader classical nonsquarefree classification, acknowledging prior art."
+      ],
+      "checked_via": "Full publisher-hosted PDF read through public web on 2026-10-21.",
+      "use": "Classical idoneal equivalence and ambiguity criterion.",
+      "obsolete_link_note": "The old mast.queensu.ca links redirected to the author landing page; this publisher-hosted PDF was verified instead."
+    },
+    {
+      "author": "Andrew V. Sutherland / MIT 18.785",
+      "title": "Number Theory Fall 2018, Problem Set 9",
+      "url": "https://math.mit.edu/classes/18.785/2018fa/ProblemSet9.pdf",
+      "pins": [
+        "Problem 5, pages 6–7: primitive reduced forms, unique representative convention and A ≤ sqrt(|D|/3), extending to orders.",
+        "Problem 5(b)–(c), page 7: inverse form and precise ambiguous boundary criterion."
+      ],
+      "checked_via": "Full university-hosted PDF read through public web on 2026-10-21.",
+      "use": "Standard reduction conventions; all displayed finite lists are independently enumerated."
+    }
+  ],
+  "status_boundaries": [
+    "All-exponent norm-ball and rotation conclusions use direct proofs.",
+    "Even-conductor classification is an unconditional classical specialization, not literature novelty.",
+    "Global 65-idoneal completeness remains qualified modulo the repository-adopted openai/math #003; not used here.",
+    "No native source, clock, endpoint, annulus-current, or cancellation identity is supplied."
+  ]
+}

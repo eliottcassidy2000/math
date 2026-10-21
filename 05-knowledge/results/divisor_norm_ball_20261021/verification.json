@@ -1,0 +1,410 @@
+{
+  "ball_rows": [
+    {
+      "CQ_fixed": 0,
+      "Q_fixed": 2,
+      "k": 1,
+      "rotor_core": 6,
+      "size": 6
+    },
+    {
+      "CQ_fixed": 2,
+      "Q_fixed": 4,
+      "k": 2,
+      "rotor_core": 6,
+      "size": 10
+    },
+    {
+      "CQ_fixed": 0,
+      "Q_fixed": 6,
+      "k": 3,
+      "rotor_core": 6,
+      "size": 14
+    },
+    {
+      "CQ_fixed": 2,
+      "Q_fixed": 8,
+      "k": 4,
+      "rotor_core": 6,
+      "size": 18
+    },
+    {
+      "CQ_fixed": 0,
+      "Q_fixed": 10,
+      "k": 5,
+      "rotor_core": 6,
+      "size": 22
+    },
+    {
+      "CQ_fixed": 2,
+      "Q_fixed": 12,
+      "k": 6,
+      "rotor_core": 6,
+      "size": 26
+    },
+    {
+      "CQ_fixed": 0,
+      "Q_fixed": 14,
+      "k": 7,
+      "rotor_core": 6,
+      "size": 30
+    },
+    {
+      "CQ_fixed": 2,
+      "Q_fixed": 16,
+      "k": 8,
+      "rotor_core": 6,
+      "size": 34
+    }
+  ],
+  "even_idoneal_rows": [
+    {
+      "ambiguous_classes": 1,
+      "class_number": 1,
+      "conductor": 2,
+      "discriminant": -12,
+      "forms": [
+        [
+          1,
+          0,
+          3
+        ]
+      ],
+      "idoneal_integer": 3
+    },
+    {
+      "ambiguous_classes": 2,
+      "class_number": 2,
+      "conductor": 4,
+      "discriminant": -48,
+      "forms": [
+        [
+          1,
+          0,
+          12
+        ],
+        [
+          3,
+          0,
+          4
+        ]
+      ],
+      "idoneal_integer": 12
+    },
+    {
+      "ambiguous_classes": 4,
+      "class_number": 4,
+      "conductor": 8,
+      "discriminant": -192,
+      "forms": [
+        [
+          1,
+          0,
+          48
+        ],
+        [
+          3,
+          0,
+          16
+        ],
+        [
+          4,
+          4,
+          13
+        ],
+        [
+          7,
+          2,
+          7
+        ]
+      ],
+      "idoneal_integer": 48
+    },
+    {
+      "ambiguous_classes": 4,
+      "class_number": 8,
+      "conductor": 16,
+      "discriminant": -768,
+      "forms": [
+        [
+          1,
+          0,
+          192
+        ],
+        [
+          3,
+          0,
+          64
+        ],
+        [
+          4,
+          4,
+          49
+        ],
+        [
+          7,
+          -4,
+          28
+        ],
+        [
+          7,
+          4,
+          28
+        ],
+        [
+          12,
+          12,
+          19
+        ],
+        [
+          13,
+          -8,
+          16
+        ],
+        [
+          13,
+          8,
+          16
+        ]
+      ],
+      "idoneal_integer": 192
+    }
+  ],
+  "k2_norm_histogram": {
+    "1": 2,
+    "3": 2,
+    "4": 6
+  },
+  "literal_k2_table": [
+    {
+      "C": "p^2q",
+      "CQ": "p^2r",
+      "Q": "q",
+      "divisor": "r",
+      "eisenstein_basis": [
+        -2,
+        -2
+      ],
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "norm": 4,
+      "rectangular_basis": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "C": "p^2r",
+      "CQ": "p^2q",
+      "Q": "r",
+      "divisor": "q",
+      "eisenstein_basis": [
+        0,
+        2
+      ],
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "norm": 4,
+      "rectangular_basis": [
+        -1,
+        1
+      ]
+    },
+    {
+      "C": "pqr",
+      "CQ": "pqr",
+      "Q": "p",
+      "divisor": "p",
+      "eisenstein_basis": [
+        1,
+        0
+      ],
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "norm": 1,
+      "rectangular_basis": [
+        1,
+        0
+      ]
+    },
+    {
+      "C": "p^2",
+      "CQ": "p^2",
+      "Q": "qr",
+      "divisor": "qr",
+      "eisenstein_basis": [
+        -2,
+        0
+      ],
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "norm": 4,
+      "rectangular_basis": [
+        -2,
+        0
+      ]
+    },
+    {
+      "C": "pq",
+      "CQ": "pr",
+      "Q": "pq",
+      "divisor": "pr",
+      "eisenstein_basis": [
+        -1,
+        -2
+      ],
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "norm": 3,
+      "rectangular_basis": [
+        0,
+        -1
+      ]
+    },
+    {
+      "C": "pr",
+      "CQ": "pq",
+      "Q": "pr",
+      "divisor": "pq",
+      "eisenstein_basis": [
+        1,
+        2
+      ],
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "norm": 3,
+      "rectangular_basis": [
+        0,
+        1
+      ]
+    },
+    {
+      "C": "qr",
+      "CQ": "qr",
+      "Q": "p^2",
+      "divisor": "p^2",
+      "eisenstein_basis": [
+        2,
+        0
+      ],
+      "exponents": [
+        2,
+        0,
+        0
+      ],
+      "norm": 4,
+      "rectangular_basis": [
+        2,
+        0
+      ]
+    },
+    {
+      "C": "p",
+      "CQ": "p",
+      "Q": "pqr",
+      "divisor": "pqr",
+      "eisenstein_basis": [
+        -1,
+        0
+      ],
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "norm": 1,
+      "rectangular_basis": [
+        -1,
+        0
+      ]
+    },
+    {
+      "C": "q",
+      "CQ": "r",
+      "Q": "p^2q",
+      "divisor": "p^2r",
+      "eisenstein_basis": [
+        0,
+        -2
+      ],
+      "exponents": [
+        2,
+        0,
+        1
+      ],
+      "norm": 4,
+      "rectangular_basis": [
+        1,
+        -1
+      ]
+    },
+    {
+      "C": "r",
+      "CQ": "q",
+      "Q": "p^2r",
+      "divisor": "p^2q",
+      "eisenstein_basis": [
+        2,
+        2
+      ],
+      "exponents": [
+        2,
+        1,
+        0
+      ],
+      "norm": 4,
+      "rectangular_basis": [
+        1,
+        1
+      ]
+    }
+  ],
+  "live_checks": 72384,
+  "native_alphabet_norm_histogram": {
+    "1": 6,
+    "3": 6
+  },
+  "scope": {
+    "direct_divisor_assignments": 3,
+    "direct_divisor_k": [
+      1,
+      5
+    ],
+    "dyadic_witness_exponents": [
+      4,
+      128
+    ],
+    "norm_balls_k": [
+      1,
+      64
+    ],
+    "reduced_forms_conductors": [
+      1,
+      128
+    ],
+    "whole_lattice_k": [
+      1,
+      16
+    ]
+  },
+  "status": "PASS",
+  "uniform_theorem_basis": "written proofs, not extrapolation from these finite checks"
+}

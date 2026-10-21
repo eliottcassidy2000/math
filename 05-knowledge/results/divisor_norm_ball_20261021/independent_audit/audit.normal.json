@@ -1,0 +1,191 @@
+{
+  "checks_by_category": {
+    "ball": 132864,
+    "class_group": 381,
+    "dyadic": 3063,
+    "finite_ring": 573,
+    "integer_divisors": 504,
+    "integrity": 21,
+    "isometry": 423,
+    "labelled_obstruction": 1114,
+    "nonidentification": 4,
+    "producer_replay": 4,
+    "provenance": 5,
+    "reflection": 264960,
+    "rotor": 1280,
+    "whole_lattice": 75456
+  },
+  "finite_ring_group_rows": [
+    {
+      "class_number": 1,
+      "conductor": 2,
+      "scalar_root_subgroup_size": 3,
+      "self_inverse_classes": 1,
+      "square_obstruction": null,
+      "unit_count": 3
+    },
+    {
+      "class_number": 2,
+      "conductor": 4,
+      "scalar_root_subgroup_size": 6,
+      "self_inverse_classes": 2,
+      "square_obstruction": null,
+      "unit_count": 12
+    },
+    {
+      "class_number": 3,
+      "conductor": 6,
+      "scalar_root_subgroup_size": 6,
+      "self_inverse_classes": 1,
+      "square_obstruction": [
+        1,
+        3
+      ],
+      "unit_count": 18
+    },
+    {
+      "class_number": 4,
+      "conductor": 8,
+      "scalar_root_subgroup_size": 12,
+      "self_inverse_classes": 4,
+      "square_obstruction": null,
+      "unit_count": 48
+    },
+    {
+      "class_number": 8,
+      "conductor": 16,
+      "scalar_root_subgroup_size": 24,
+      "self_inverse_classes": 4,
+      "square_obstruction": [
+        1,
+        3
+      ],
+      "unit_count": 192
+    },
+    {
+      "class_number": 16,
+      "conductor": 32,
+      "scalar_root_subgroup_size": 48,
+      "self_inverse_classes": 4,
+      "square_obstruction": [
+        1,
+        3
+      ],
+      "unit_count": 768
+    },
+    {
+      "class_number": 32,
+      "conductor": 64,
+      "scalar_root_subgroup_size": 96,
+      "self_inverse_classes": 4,
+      "square_obstruction": [
+        1,
+        3
+      ],
+      "unit_count": 3072
+    },
+    {
+      "class_number": 64,
+      "conductor": 128,
+      "scalar_root_subgroup_size": 192,
+      "self_inverse_classes": 4,
+      "square_obstruction": [
+        1,
+        3
+      ],
+      "unit_count": 12288
+    },
+    {
+      "class_number": 96,
+      "conductor": 192,
+      "scalar_root_subgroup_size": 192,
+      "self_inverse_classes": 4,
+      "square_obstruction": [
+        1,
+        3
+      ],
+      "unit_count": 18432
+    }
+  ],
+  "isometry_rows": [
+    {
+      "isometries": 12,
+      "k": 1
+    },
+    {
+      "isometries": 4,
+      "k": 2
+    },
+    {
+      "isometries": 4,
+      "k": 3
+    },
+    {
+      "isometries": 4,
+      "k": 4
+    },
+    {
+      "isometries": 4,
+      "k": 5
+    },
+    {
+      "isometries": 4,
+      "k": 6
+    },
+    {
+      "isometries": 4,
+      "k": 7
+    },
+    {
+      "isometries": 4,
+      "k": 8
+    }
+  ],
+  "live_checks": 480652,
+  "nonclaims": [
+    "No global 65-idoneal completeness proof.",
+    "No native source, clock, or cancellation identity.",
+    "No divisor/ring multiplicativity or divisor/ideal-class bijection."
+  ],
+  "producer_checks_per_mode": 72384,
+  "producer_modes_byte_identical": true,
+  "reviewed_producer_manifest_sha256": "7f00140b9b85d0b670231f8481f9cc78ec5f615975a60dde36a7e423f9072265",
+  "scope": {
+    "balls_and_reflections_k": [
+      1,
+      256
+    ],
+    "direct_divisors_k": [
+      1,
+      8
+    ],
+    "dyadic_witness_exponents": [
+      4,
+      1024
+    ],
+    "even_reduced_forms_f": [
+      2,
+      192
+    ],
+    "finite_ring_quotients_f": [
+      2,
+      192
+    ],
+    "gram_isometry_k": [
+      1,
+      32
+    ],
+    "involutive_vertex_permutations_n": [
+      2,
+      8
+    ],
+    "prime_assignments": 3,
+    "repository_sources_checked": 5,
+    "whole_lattice_k": [
+      1,
+      64
+    ]
+  },
+  "status": "PASS",
+  "uniform_claim_basis": "Written mathematical proof, not extrapolation from these finite controls."
+}

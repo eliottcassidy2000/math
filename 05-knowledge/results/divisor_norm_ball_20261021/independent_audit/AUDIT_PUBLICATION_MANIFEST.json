@@ -1,0 +1,40 @@
+{
+  "status": "PASS_FROZEN_INDEPENDENT_AUDIT",
+  "date": "2026-10-21",
+  "target_directory": "05-knowledge/results/divisor_norm_ball_20261021/independent_audit",
+  "reviewed_producer_manifest_sha256": "7f00140b9b85d0b670231f8481f9cc78ec5f615975a60dde36a7e423f9072265",
+  "files": [
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session18-norm-ball-audit/INDEPENDENT_AUDIT.md",
+      "target": "05-knowledge/results/divisor_norm_ball_20261021/independent_audit/INDEPENDENT_AUDIT.md",
+      "sha256": "6874d672726f5ab7489706e322aef97eae20d53c41320cd45c664a201caa705c"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session18-norm-ball-audit/independent_audit.py",
+      "target": "05-knowledge/results/divisor_norm_ball_20261021/independent_audit/independent_audit.py",
+      "sha256": "7da39b79d84912b2bb25d77915e3a5d71022c3fa3a974a2691371832a2781003"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session18-norm-ball-audit/audit.normal.json",
+      "target": "05-knowledge/results/divisor_norm_ball_20261021/independent_audit/audit.normal.json",
+      "sha256": "ee3cec8f4c1c9d655aa3b6b312503053efa8e6df251d9c007791f05720dfb031"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session18-norm-ball-audit/audit.optimized.json",
+      "target": "05-knowledge/results/divisor_norm_ball_20261021/independent_audit/audit.optimized.json",
+      "sha256": "ee3cec8f4c1c9d655aa3b6b312503053efa8e6df251d9c007791f05720dfb031"
+    }
+  ],
+  "validation": {
+    "independent_live_checks": 480652,
+    "producer_live_checks_per_mode": 72384,
+    "independent_normal_optimized_byte_identical": true,
+    "producer_normal_optimized_byte_identical": true,
+    "repository_source_hashes_verified": 5
+  },
+  "verdict": "PASS for the exact frozen producer manifest and the limited claims stated in INDEPENDENT_AUDIT.md; no correction required.",
+  "metadata_files": [
+    "AUDIT_PUBLICATION_MANIFEST.json",
+    "AUDIT_SHA256SUMS"
+  ]
+}

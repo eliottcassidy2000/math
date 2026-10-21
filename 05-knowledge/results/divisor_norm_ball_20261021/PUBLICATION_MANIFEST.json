@@ -1,0 +1,57 @@
+{
+  "status": "FROZEN_FOR_INDEPENDENT_REVIEW",
+  "date": "2026-10-21",
+  "target_directory": "05-knowledge/results/divisor_norm_ball_20261021",
+  "files": [
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session18-divisor-norm-ball/README.md",
+      "target": "05-knowledge/results/divisor_norm_ball_20261021/README.md",
+      "sha256": "59d174bff95f0a86f7cee709c0d809e6cc9bd8563ec621001abdb7131f29dc0d"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session18-divisor-norm-ball/DIVISOR_NORM_BALL.md",
+      "target": "05-knowledge/results/divisor_norm_ball_20261021/DIVISOR_NORM_BALL.md",
+      "sha256": "73ee9b18c2a7cd82963e7d3ce6414d5ed4d8189f15295b1d48485a3524d8da1a"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session18-divisor-norm-ball/verify_norm_ball.py",
+      "target": "05-knowledge/results/divisor_norm_ball_20261021/verify_norm_ball.py",
+      "sha256": "32854d5881538d2bb90cb7ddc9fea7e3529a9b9f82d9816006c34a7591c7e489"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session18-divisor-norm-ball/verification.json",
+      "target": "05-knowledge/results/divisor_norm_ball_20261021/verification.json",
+      "sha256": "f5083079fa790c789bb32db240abfed652fc20d70d0a60d080ccec82aef80bd0"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session18-divisor-norm-ball/verification.optimized.json",
+      "target": "05-knowledge/results/divisor_norm_ball_20261021/verification.optimized.json",
+      "sha256": "f5083079fa790c789bb32db240abfed652fc20d70d0a60d080ccec82aef80bd0"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session18-divisor-norm-ball/SOURCE_PROVENANCE.json",
+      "target": "05-knowledge/results/divisor_norm_ball_20261021/SOURCE_PROVENANCE.json",
+      "sha256": "69bb9ddffc353b070892c66b73e24ffd51e0cf54167a80afbe1a4c31196997f7"
+    }
+  ],
+  "validation": {
+    "command_normal": "python3 -B verify_norm_ball.py",
+    "command_optimized": "python3 -B -O verify_norm_ball.py",
+    "receipts_byte_identical": true,
+    "live_checks": 72384
+  },
+  "claims": [
+    "Exact all-exponent quadratic-order norm-ball bijection with decoded source and both reflections.",
+    "Rotation-admissible sublattice equals conductor ideal; exact six-point core; full isometry group Klein four for k>=2.",
+    "Classical even-conductor exponent-two classification k=2,4,8, via explicit all-level reduced-form witnesses."
+  ],
+  "prohibited_inferences": [
+    "Native source/clock/annulus/cancellation equivalence.",
+    "Divisor/ring multiplicativity or ideal-class group identification.",
+    "New general idoneal classification or removal of repository global #003 qualification."
+  ],
+  "metadata_files": [
+    "PUBLICATION_MANIFEST.json",
+    "SHA256SUMS"
+  ]
+}
