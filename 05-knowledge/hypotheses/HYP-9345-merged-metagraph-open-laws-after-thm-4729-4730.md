@@ -64,6 +64,8 @@ have the pattern "one vertex beats a rotational core, one vertex is beaten by it
 
 ## (b) Connectivity
 
+*Update (opus-2026-10-20-S47, THM-4732): the line metagraph and the blue graph on the 2752 self-converse classes are connected at `n = 9`, and the black graph has `1 + pure-blue = 7` components (refinement-canoniser census of all `2^28` tilings).*
+
 **Claim.** For every `n >= 3` the merged metagraph is connected, and so is the blue graph
 (SC nodes, non-loop blue lines). Evidence: `n = 3..8` exact (THM-4729 census). THM-4729
 L3 shows every component contains strong nodes; a proof must connect the strong world

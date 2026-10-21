@@ -1,0 +1,9 @@
+# black detours of closed blue lines, n = 8, m = 21, e = 12, closed blue presentations = 2048, layer = all
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=1: 64 / 0 / 64 / 0 = 0 + 0   (477, 0.000)
+   k=2: 320 / 0 / 320 / 0 = 0 + 0   (577, 0.000)
+   k=3: 640 / 0 / 640 / 0 = 0 + 0   (661, 0.000)
+   k=4: 640 / 0 / 640 / 0 = 0 + 0   (661, 0.000)
+   k=5: 320 / 0 / 319 / 1 = 1 + 0   (561, 0.000)
+   k=6: 64 / 0 / 62 / 2 = 2 + 0   (357, 0.000)
+done in 0 s

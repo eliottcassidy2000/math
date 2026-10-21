@@ -1,0 +1,27 @@
+divisors p^2qr: 10 points; fixed (C,Q,CQ) = (0, 4, 2); orbit stabilisers {(): 1, ('B',): 2, ('AB',): 1}; sign f (4, 2, 4); sign g (3, 4, 3)
+divisors p^3qr: 14 points; fixed (C,Q,CQ) = (0, 6, 0); orbit stabilisers {(): 2, ('B',): 3}; sign f (7, 0, 7); sign g (4, 6, 4)
+divisors p^4qr: 18 points; fixed (C,Q,CQ) = (0, 8, 2); orbit stabilisers {(): 2, ('B',): 4, ('AB',): 1}; sign f (8, 2, 8); sign g (5, 8, 5)
+divisors p^5qr: 22 points; fixed (C,Q,CQ) = (0, 10, 0); orbit stabilisers {(): 3, ('B',): 5}; sign f (11, 0, 11); sign g (6, 10, 6)
+divisors p^6qr: 26 points; fixed (C,Q,CQ) = (0, 12, 2); orbit stabilisers {(): 3, ('B',): 6, ('AB',): 1}; sign f (12, 2, 12); sign g (7, 12, 7)
+divisors p^7qr: 30 points; fixed (C,Q,CQ) = (0, 14, 0); orbit stabilisers {(): 4, ('B',): 7}; sign f (15, 0, 15); sign g (8, 14, 8)
+divisors p^8qr: 34 points; fixed (C,Q,CQ) = (0, 16, 2); orbit stabilisers {(): 4, ('B',): 8, ('AB',): 1}; sign f (16, 2, 16); sign g (9, 16, 9)
+tilings n=4: 8 points; fixed (kappa,sigma,kappa sigma) = (0, 4, 0); orbits: blue lines 2, black twin pairs 1
+tilings n=5: 64 points; fixed (kappa,sigma,kappa sigma) = (0, 16, 0); orbits: blue lines 8, black twin pairs 12
+tilings n=6: 1024 points; fixed (kappa,sigma,kappa sigma) = (0, 64, 0); orbits: blue lines 32, black twin pairs 240
+tilings n=7: 32768 points; fixed (kappa,sigma,kappa sigma) = (0, 512, 0); orbits: blue lines 256, black twin pairs 8064
+tilings n=8: 2097152 points; fixed (kappa,sigma,kappa sigma) = (0, 4096, 0); orbits: blue lines 2048, black twin pairs 523264
+PROVED by the apex tile: kappa flips the sigma-fixed apex, so kappa and kappa*sigma have no fixed tiling at any n.
+k=2: equivariant bijections eight divisors -> n=4 tilings: 32; with sign f = closedness: 4; with sign g = chirality: 16; both: 2; divisibility-monotone into the cube: 2
+monotone: r->[100]closed, q->[001]closed, qr->[101]closed, p->[000]closed, pqr->[111]open, p^2->[010]open, p^2r->[110]open, p^2q->[011]open
+monotone: r->[001]closed, q->[100]closed, qr->[101]closed, p->[000]closed, pqr->[111]open, p^2->[010]open, p^2r->[011]open, p^2q->[110]open
+both signs: r->[011]open, q->[110]open, qr->[010]open, p->[000]closed, pqr->[111]open, p^2->[101]closed, p^2r->[001]closed, p^2q->[100]closed
+both signs: r->[011]open, q->[110]open, qr->[111]open, p->[101]closed, pqr->[010]open, p^2->[000]closed, p^2r->[001]closed, p^2q->[100]closed
+tile order in the bit strings: (0, 2), (0, 3), (1, 3); closed = apex tile (0,3) backward
+ten divisors: the orbit {pq, pr} has stabiliser <CQ>; tilings have no orbit with stabiliser <kappa sigma>; no equivariant injection at any n.
+p^2qr embeds equivariantly into tilings: False (needs 2 blue lines and 1 black twin pairs; n = 4 offers 2 and 1, n = 5 offers 8 and 12)
+p^3qr embeds equivariantly into tilings: True (needs 3 blue lines and 2 black twin pairs; n = 4 offers 2 and 1, n = 5 offers 8 and 12)
+p^4qr embeds equivariantly into tilings: False (needs 4 blue lines and 2 black twin pairs; n = 4 offers 2 and 1, n = 5 offers 8 and 12)
+p^5qr embeds equivariantly into tilings: True (needs 5 blue lines and 3 black twin pairs; n = 4 offers 2 and 1, n = 5 offers 8 and 12)
+p^6qr embeds equivariantly into tilings: False (needs 6 blue lines and 3 black twin pairs; n = 4 offers 2 and 1, n = 5 offers 8 and 12)
+p^7qr embeds equivariantly into tilings: True (needs 7 blue lines and 4 black twin pairs; n = 4 offers 2 and 1, n = 5 offers 8 and 12)
+p^8qr embeds equivariantly into tilings: False (needs 8 blue lines and 4 black twin pairs; n = 4 offers 2 and 1, n = 5 offers 8 and 12)

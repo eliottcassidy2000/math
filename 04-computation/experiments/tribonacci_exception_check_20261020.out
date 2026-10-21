@@ -1,0 +1,2 @@
+n=5 tiling=33: closed member scores [1, 2, 2, 2, 3] iso T*_n: False, iso T_n: False; open partner scores [1, 1, 2, 3, 3] iso T*_n: True, iso T_n: False; partner is converse of closed member: False; closed member self-converse: True
+n=7 tiling=8194: closed member scores [1, 2, 2, 3, 4, 4, 5] iso T*_n: False, iso T_n: False; open partner scores [1, 1, 2, 3, 4, 5, 5] iso T*_n: False, iso T_n: False; partner is converse of closed member: False; closed member self-converse: True

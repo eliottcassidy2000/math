@@ -1,0 +1,7 @@
+# black detours of closed blue lines, n = 5, m = 6, e = 4, closed blue presentations = 8, layer = all
+NO 3-detour (both classes non-pure-blue): n=5 layer=2 tiling=33 scores: 2 1 2 3 2
+layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)
+   k=1: 2 / 0 / 1 / 1 = 1 + 0   (9, 0.000)
+   k=2: 4 / 0 / 1 / 3 = 2 + 1   (13, 0.000)
+   k=3: 2 / 0 / 0 / 2 = 2 + 0   (0, 0.000)
+done in 0 s

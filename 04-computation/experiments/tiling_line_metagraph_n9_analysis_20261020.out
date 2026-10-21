@@ -1,0 +1,9 @@
+n=9: classes 191536, SC 2752, merged 97144, types {'MX': 2746, 'PK': 188784, 'PB': 6}
+handshake: SC classes with (tc-bm)/2 odd: 1358; (T-SC)/2 = 94392 -> parities 0 vs 0
+fundamental black degree distribution (smallest 12 values): [(0, 6), (1, 14), (2, 1), (3, 12), (4, 3), (5, 29), (8, 2), (9, 34), (10, 3), (11, 24), (12, 2), (13, 13)]; max degree 3109
+pure-blue classes (H, Aut, tc = blue degree): [(27, 27, 1), (9, 9, 1), (9, 9, 1), (15, 5, 3), (3, 3, 1), (1, 1, 1)] total blue degree 8
+classes carrying black self-lines: 1484; black self-lines 1704; blue self-lines 0
+self-line class multiplicity histogram: [(1, 1314), (2, 148), (3, 8), (4, 6), (5, 4), (6, 3), (8, 1)]
+black components: 7; sizes [191530, 1, 1, 1, 1, 1, 1]
+max H class: 3357 ; max |Aut|: 81 ; rigid classes: 188337
+tc distribution (smallest 8): [(1, 19), (3, 11), (5, 29), (9, 37), (11, 26), (13, 11), (15, 32), (17, 23)]
