@@ -1,0 +1,14 @@
+{
+  "files": {
+    "README.md": "33006feb994515cc1592e9d4b01566172e6d9654e87039b4931239ae78a2bc45",
+    "check.py": "d18a1384eb147a3e86acfebe83aeb62eaa5b94f936a51435b3b3ec0a68ab2e56",
+    "normal.json": "5f7f359013d23ea35ca9a6500ed625ab70bfaba5b4a93dcdd922f5575e08645b",
+    "optimized.json": "1917d225c45ccf00e63c46d5367518e4e80aeca833d1ee9d3981e5170ffb97e3",
+    "receipt.json": "d2f996a98d6a12b8cc203223cc62f8bc18ec97b105cf9246f21ef612ebde0dd2"
+  },
+  "reproduction": [
+    "python -B check.py --repo-root /path/to/math --verify",
+    "python -B -O check.py --repo-root /path/to/math --verify"
+  ],
+  "scope": "Current cross-scale credit packet; source pins in check.py and receipt.json; independent review supplied separately."
+}

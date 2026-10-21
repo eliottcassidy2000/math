@@ -1,0 +1,56 @@
+{
+  "all_original_scientific_manifest_hashes_match": true,
+  "canonical_receipt_bytes": 4121366,
+  "handoff_segments": 148959,
+  "inherited_dependencies_exact": [
+    {
+      "bytes": 445397,
+      "required_destination": "05-knowledge/results/annulus_block_completion_20261020j/receipt.json",
+      "sha256": "b85cfd8a95962c827d9e21d1418a8fe7f4086c6cca6203f042f547d32ad3b609"
+    },
+    {
+      "bytes": 1549469,
+      "required_destination": "05-knowledge/results/annulus_residual_flow_20261020k/receipt.json",
+      "sha256": "35974096cbf893fb209ce5c47d915a9837b4a048ac7579b1d0806b46e106ed4d"
+    },
+    {
+      "bytes": 29334,
+      "required_destination": "05-knowledge/results/residual_external_credit_20261020k/receipt.json",
+      "sha256": "d702d85fd51e0f9778ac1fb9a784a1426b3af76ea4aa0cb1d5a32392711eef82"
+    },
+    {
+      "bytes": 8796,
+      "required_destination": "05-knowledge/results/session18_native_annulus/frontier.json",
+      "sha256": "391f6d3380bcae4afb9a1bbd9522b74b1e9006012fa10a92be5bf0bbf938754f"
+    },
+    {
+      "bytes": 13568,
+      "required_destination": "05-knowledge/results/session18_native_phase_lifts/README.md",
+      "sha256": "20d2cf37ed149345e259b1107509b7a9480de709461bad326df57b396f1b61ff"
+    },
+    {
+      "bytes": 11215,
+      "required_destination": "05-knowledge/results/sibling_annulus_guards_20261020i/README.md",
+      "sha256": "1f4964733fd8d0f85d3b17b33628d739972f03d74687affb1973c695ed65adef"
+    }
+  ],
+  "new_independent_audit": false,
+  "replays": [
+    {
+      "command": "python3 -B check.py --repo-root <repo-root> --verify",
+      "cwd": "05-knowledge/results/cross_scale_frontier_credits_20261021",
+      "exit_code": 0,
+      "scientific_receipt_sha256": "d2f996a98d6a12b8cc203223cc62f8bc18ec97b105cf9246f21ef612ebde0dd2",
+      "stdout_sha256": "1917d225c45ccf00e63c46d5367518e4e80aeca833d1ee9d3981e5170ffb97e3"
+    },
+    {
+      "command": "python3 -B -O check.py --repo-root <repo-root> --verify",
+      "cwd": "05-knowledge/results/cross_scale_frontier_credits_20261021",
+      "exit_code": 0,
+      "scientific_receipt_sha256": "d2f996a98d6a12b8cc203223cc62f8bc18ec97b105cf9246f21ef612ebde0dd2",
+      "stdout_sha256": "1917d225c45ccf00e63c46d5367518e4e80aeca833d1ee9d3981e5170ffb97e3"
+    }
+  ],
+  "source_commit": "881a9903995884c02a03ffb45c68e9174f8b6c58",
+  "status": "PASS_EXACT_PRODUCER_RECOVERY_REPLAY_NOT_INDEPENDENT_AUDIT"
+}

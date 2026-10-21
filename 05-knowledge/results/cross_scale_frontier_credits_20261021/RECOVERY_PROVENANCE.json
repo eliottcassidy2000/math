@@ -1,0 +1,77 @@
+{
+  "confirmed_batch0_root_tree": "0b658e199eb6b36b1400029c7a40e663990a1d2e",
+  "confirmed_batch1_packet_subtree": "6f44dab995550f6ee943a86573945ca2ac31fc2c",
+  "current_independent_audit_replayed": false,
+  "former_commit_or_ref_update_reached": false,
+  "missing_original_paths": [
+    "review/REVIEW.md",
+    "review/check_independent.py",
+    "review/check_handoffs.py",
+    "review/core_normal.json",
+    "review/core_optimized.json",
+    "review/handoff_optimized.json",
+    "review/handoff_portable_optimized.json",
+    "review/handoff_review_receipt.json",
+    "review/independent_receipt.json",
+    "review/producer_optimized.json",
+    "review/review_manifest.json"
+  ],
+  "old_upload_retried": false,
+  "original_approved_packet_files": 18,
+  "original_exact_approval_manifest_sha256": "f541511de987f803889a171540fb26233c8e28174ff89f9ac899859f245d8455",
+  "receipt_regeneration_sha256": "d2f996a98d6a12b8cc203223cc62f8bc18ec97b105cf9246f21ef612ebde0dd2",
+  "recovered_original_files": [
+    {
+      "bytes": 734,
+      "git_blob_sha1": "92d1285ffd49c101c66496019015c2d3bf535788",
+      "original_name": "MANIFEST.json",
+      "published_name": "MANIFEST.json",
+      "sha256": "dda425b4a9adf801b758b0a6d3e0862cbea3336bf4a55c73058d9d78fdf75ae0"
+    },
+    {
+      "bytes": 1819,
+      "git_blob_sha1": "ef15885646497cde5fefb09190cf027b56edffe2",
+      "original_name": "PUBLICATION.md",
+      "published_name": "ORIGINAL_PUBLICATION.md",
+      "sha256": "4dac743f9e86488f0f520b01b1057521ac7c32d2092a9dbb6c75ad32bfecb64d"
+    },
+    {
+      "bytes": 13914,
+      "git_blob_sha1": "fcbfd949e06b2edfda01b47b85cb0d243cd1eafd",
+      "original_name": "README.md",
+      "published_name": "README.md",
+      "sha256": "33006feb994515cc1592e9d4b01566172e6d9654e87039b4931239ae78a2bc45"
+    },
+    {
+      "bytes": 15284,
+      "git_blob_sha1": "10afe87c828ddec2e14ac0ab7e04b4e3e156e853",
+      "original_name": "check.py",
+      "published_name": "check.py",
+      "sha256": "d18a1384eb147a3e86acfebe83aeb62eaa5b94f936a51435b3b3ec0a68ab2e56"
+    },
+    {
+      "bytes": 1161,
+      "git_blob_sha1": "ba1a75d1b7233493372de37056164ffcdc0c4794",
+      "original_name": "normal.json",
+      "published_name": "normal.json",
+      "sha256": "5f7f359013d23ea35ca9a6500ed625ab70bfaba5b4a93dcdd922f5575e08645b"
+    },
+    {
+      "bytes": 1161,
+      "git_blob_sha1": "3498bbfd955bd25dc0c35a932368c6da461a019b",
+      "original_name": "optimized.json",
+      "published_name": "optimized.json",
+      "sha256": "1917d225c45ccf00e63c46d5367518e4e80aeca833d1ee9d3981e5170ffb97e3"
+    },
+    {
+      "bytes": 4121366,
+      "git_blob_sha1": "531d1754f0c3ed61ad48ddc83082078b3ff4dfb6",
+      "original_name": "receipt.json",
+      "published_name": "receipt.json",
+      "sha256": "d2f996a98d6a12b8cc203223cc62f8bc18ec97b105cf9246f21ef612ebde0dd2"
+    }
+  ],
+  "recovery_notice_at_review_path": "The new review/REVIEW.md is explicitly a missing-audit notice, not the missing original report.",
+  "scientific_receipt_regenerated_exactly": true,
+  "status": "EXACT_PRODUCER_RECOVERY_WITH_EXPLICITLY_MISSING_INDEPENDENT_AUDIT"
+}
