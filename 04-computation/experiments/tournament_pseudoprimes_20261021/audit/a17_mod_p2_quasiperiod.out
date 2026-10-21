@@ -1,0 +1,8 @@
+p=3: u = 2^(p(p-1)/2) mod p^2 = 8; m<= 56 with s(m+p(p-1)) != u s(m) mod p^2: [1, 2]; same for D: [1, 2]; m with D(m+2p(p-1)) != D(m): [1, 2]
+      connected graphs: m with cg(m+p(p-1)) != u cg(m) mod p^2: [1, 2]
+p=5: u = 2^(p(p-1)/2) mod p^2 = 24; m<= 140 with s(m+p(p-1)) != u s(m) mod p^2: [1, 2]; same for D: [1, 2]; m with D(m+2p(p-1)) != D(m): [1, 2]
+      connected graphs: m with cg(m+p(p-1)) != u cg(m) mod p^2: [1]
+p=7: u = 2^(p(p-1)/2) mod p^2 = 1; m<= 272 with s(m+p(p-1)) != u s(m) mod p^2: [1]; same for D: [1]; m with D(m+2p(p-1)) != D(m): [1]
+      connected graphs: m with cg(m+p(p-1)) != u cg(m) mod p^2: [1, 2]
+p=11: u = 2^(p(p-1)/2) mod p^2 = 120; m<= 680 with s(m+p(p-1)) != u s(m) mod p^2: [1, 2]; same for D: [1, 2]; m with D(m+2p(p-1)) != D(m): [1, 2]
+p=13: u = 2^(p(p-1)/2) mod p^2 = 168; m<= 956 with s(m+p(p-1)) != u s(m) mod p^2: [1]; same for D: [1]; m with D(m+2p(p-1)) != D(m): [1]

@@ -1,6 +1,9 @@
-# Positive control: strong semicomplete digraphs (3^C(m,2), linear condensation) -> quasi-period (3/p).
-# Hostile control: connected labeled graphs (2^C(m,2), unordered components, exp/log) -> expect no such law.
-from math import comb
+# camion_controls.py (corrected after the independent audit, MISTAKE-651)
+# (i)  strong semicomplete digraphs (3^C(m,2), linear condensation): quasi-period p-1 with (3/p), m >= 1, p >= 5.
+# (ii) connected labelled graphs (2^C(m,2), unordered components): quasi-period p-1 with (2/p) for m >= 2
+#      (audit Lemma C; Mani-Stones 2016); the law FAILS only at m = 1.  The pre-audit version tested from m = 1
+#      and wrongly concluded "no period".
+# (iii) genuine negative control: the rooted count m*s(m) has quasi-period p(p-1), not p-1.
 def strong_mod(base,M,p):
     T=[pow(base,j*(j-1)//2,p) for j in range(M+1)]; s=[0]*(M+1); row=[1]
     for k in range(1,M+1):
@@ -8,17 +11,21 @@ def strong_mod(base,M,p):
         s[k]=(T[k]-sum(row[i]*s[i]*T[k-i] for i in range(1,k)))%p
     return s
 def connected_mod(M,p):
-    # g(m) = sum_{k=1}^m C(m-1,k-1) c(k) g(m-k)  (component of vertex 1), g(m)=2^C(m,2)
     g=[pow(2,j*(j-1)//2,p) for j in range(M+1)]; c=[0]*(M+1); row=[1]
     for m in range(1,M+1):
-        # row = C(m-1, .)
         if m>1: row=[1]+[(row[i-1]+row[i])%p for i in range(1,m-1)]+[1]
         c[m]=(g[m]-sum(row[k-1]*c[k]*g[m-k] for k in range(1,m)))%p
     return c
 def leg(a,p): return 1 if pow(a,(p-1)//2,p)==1 else -1
-for p in [5,7,11,13,17,19,23]:
-    M=4*p; s3=strong_mod(3,M,p); e=leg(3,p)
-    ok3=all((s3[m+p-1]-e*s3[m])%p==0 for m in range(1,M-p+2))
-    cg=connected_mod(M,p)
-    okc=[L for L in range(1,2*p) if all((cg[m+L]-cg[m])%p==0 for m in range(1,M-L+1)) or all((cg[m+L]+cg[m])%p==0 for m in range(1,M-L+1))]
-    print(f'p={p}: semicomplete strong quasi-period (3/p)={e:+d}: {ok3};  connected graphs: (anti)periods L<2p: {okc}')
+def law(seq,L,e,p,m0,M): return all((seq[m+L]-e*seq[m])%p==0 for m in range(m0,M-L+1))
+for p in [5,7,11,13,17,19,23,29,31]:
+    M=3*p*(p-1)+10 if p<=13 else 6*p
+    s3=strong_mod(3,M,p); e3=leg(3,p)
+    cg=connected_mod(M,p); e2=leg(2,p)
+    s2=strong_mod(2,M,p); rooted=[(m*s2[m])%p for m in range(M+1)]
+    out=[f'p={p}:',
+         f'semicomplete (3/p)={e3:+d} from m>=1: {law(s3,p-1,e3,p,1,M)}',
+         f'connected (2/p) from m>=2: {law(cg,p-1,e2,p,2,M)}, from m>=1: {law(cg,p-1,e2,p,1,M)}',
+         f'rooted m*s(m) period p-1: {law(rooted,p-1,e2,p,1,M)}']
+    if p<=13: out.append(f'rooted period p(p-1): {law(rooted,p*(p-1),e2,p,1,M)}')
+    print('  '.join(out))

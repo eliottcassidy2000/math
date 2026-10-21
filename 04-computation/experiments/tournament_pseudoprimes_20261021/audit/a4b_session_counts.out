@@ -1,0 +1,3 @@
+odd squarefree composites <= 2500 with prime factors <= 199: 472  passing (direct): 56
+even n <= 400 with squarefree odd part, odd primes <= 100: 142
+even n <= 400 with squarefree odd part (no prime bound): 163

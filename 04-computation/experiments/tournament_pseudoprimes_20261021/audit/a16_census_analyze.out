@@ -1,0 +1,46 @@
+n=3: classes 2, sum n!/|Aut| = 8 == 2^C(n,2): True; max H 3, max C 1
+   odd H missing below the first missing value > 21 (= None): []; #missing odd H in [None,3]: 0
+   tc = H/|Aut| odd values missing below 60: [3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59]
+   C values missing in [0,1]: []
+   strong H min 3; odd values missing in [3,43]: [5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43]
+n=4: classes 4, sum n!/|Aut| = 64 == 2^C(n,2): True; max H 5, max C 1
+   odd H missing below the first missing value > 21 (= None): []; #missing odd H in [None,5]: 0
+   tc = H/|Aut| odd values missing below 60: [3, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59]
+   C values missing in [0,1]: []
+   strong H min 5; odd values missing in [5,45]: [7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45]
+n=5: classes 12, sum n!/|Aut| = 1024 == 2^C(n,2): True; max H 15, max C 3
+   odd H missing below the first missing value > 21 (= None): [7]; #missing odd H in [None,15]: 0
+   tc = H/|Aut| odd values missing below 60: [7, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59]
+   C values missing in [0,3]: []
+   strong H min 9; odd values missing in [9,49]: [17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49]
+n=6: classes 56, sum n!/|Aut| = 32768 == 2^C(n,2): True; max H 45, max C 5
+   odd H missing below the first missing value > 21 (= 35): [7, 21]; #missing odd H in [35,45]: 2
+   tc = H/|Aut| odd values missing below 60: [7, 21, 27, 35, 39, 45, 47, 49, 51, 53, 55, 57, 59]
+   C values missing in [0,5]: []
+   strong H min 15; odd values missing in [15,55]: [21, 35, 39, 47, 49, 51, 53, 55]
+n=7: classes 456, sum n!/|Aut| = 2097152 == 2^C(n,2): True; max H 189, max C 24
+   odd H missing below the first missing value > 21 (= 63): [7, 21]; #missing odd H in [63,189]: 16
+   odd H missing (first 12): [7, 21, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173]
+   tc = H/|Aut| odd values missing below 60: [7, 21]
+   C values missing in [0,24]: [16, 18, 19, 20, 21, 22, 23]
+   strong H min 25; odd values missing in [25,65]: [63]
+   tournaments with C = 24: [(189, 24, 1, 21)]
+n=8: classes 6880, sum n!/|Aut| = 268435456 == 2^C(n,2): True; max H 661, max C 54
+   odd H missing below the first missing value > 21 (= 611): [7, 21]; #missing odd H in [611,661]: 9
+   odd H missing (first 12): [7, 21, 611, 615, 617, 619, 623, 625, 635, 647, 655]
+   tc = H/|Aut| odd values missing below 60: [7, 21]
+   C values missing in [0,54]: []
+   strong H min 45; odd values missing in [45,85]: [47, 55, 67]
+n=9: classes 191536, sum n!/|Aut| = 68719476736 == 2^C(n,2): True; max H 3357, max C 249
+   odd H missing below the first missing value > 21 (= 2883): [7, 21]; #missing odd H in [2883,3357]: 157
+   odd H missing (first 12): [7, 21, 2883, 2887, 2889, 2893, 2895, 2897, 2899, 2901, 2905, 2907]
+   tc = H/|Aut| odd values missing below 60: [7, 21]
+   C values missing in [0,249]: [215, 219, 223, 226, 229, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 244, 245, 246, 247, 248]
+   strong H min 75; odd values missing in [75,115]: [77, 79, 83]
+n=3: multiset of (H,C,strong,|Aut|) identical to session census: True
+n=4: multiset of (H,C,strong,|Aut|) identical to session census: True
+n=5: multiset of (H,C,strong,|Aut|) identical to session census: True
+n=6: multiset of (H,C,strong,|Aut|) identical to session census: True
+n=7: multiset of (H,C,strong,|Aut|) identical to session census: True
+n=8: multiset of (H,C,strong,|Aut|) identical to session census: True
+n=9: multiset of (H,C,strong,|Aut|) identical to session census: True

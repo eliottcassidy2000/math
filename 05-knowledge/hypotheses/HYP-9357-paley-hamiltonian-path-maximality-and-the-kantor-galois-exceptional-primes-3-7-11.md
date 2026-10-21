@@ -1,17 +1,27 @@
 ---
 id: HYP-9357
-title: "Paley extremality stops where Kantor's 2-transitive designs stop: the Paley tournament P_q maximises the number of Hamiltonian paths (among circulants, and conjecturally among all tournaments of order q) iff q is 3, 7 or 11, which are exactly the q = 3 mod 4 for which the design of translates of the quadratic residues is 2-transitive (trivial, the Fano plane under PSL(2,7), the (11,5,2) biplane under PSL(2,11)); for q >= 19 the rotational circulant Z_q{1..(q-1)/2} has more"
+title: "Paley extremality stops where Kantor's 2-transitive designs stop: for prime q = 3 mod 4 the Paley tournament P_q maximises the number of Hamiltonian paths among circulants, and conjecturally among all tournaments of order q, iff q is 3, 7 or 11. These are exactly the q = 3 mod 4 for which the design of translates of the quadratic residues is 2-transitive (trivial, the Fano plane under PSL(2,7), the (11,5,2) biplane under PSL(2,11)). For q >= 19 the rotational circulant Z_q{1..(q-1)/2} has more, as in Alon's and Wormald's conjecture that the rotational tournament is the maximiser for large odd n. At n = 13 a rigid regular tournament beats every circulant."
 status: >
-  OPEN (the iff, and the global form for q >= 19). FINITE-EXACT: the circulant maxima for every odd order 3 <= n <= 23
-  (circ_counts.c, all multiplier classes); P_q is the circulant maximum for q = 3, 7, 11 and is beaten by the
-  rotational circulant at q = 19 and 23. CITED: the global maxima for n <= 11 (OEIS A038375: 3, 15, 189, 3357, 95095
-  at n = 3, 5, 7, 9, 11, all attained by circulants found here); Kantor's classification of 2-transitive symmetric
-  designs (W. M. Kantor, J. Combin. Theory A 38 (1985) 66-74); Galois' exceptional actions of PSL(2,p) on p points
-  (p <= 11). PROVED (elementary, here, given Kantor): the Paley design (q, (q-1)/2, (q-3)/4) can match only the
-  point-hyperplane design of PG(m-1, 2) (q = 2^m - 1) or the (11,5,2) biplane, the Higman and symplectic designs
-  having even order; for prime q = 2^m - 1 >= 31 the quadratic-residue set is not equivalent to a Singer set,
-  because equivalent difference sets have equal multiplier groups and these have orders (q-1)/2 and m. So the
-  Paley design is 2-transitive iff q = 3, 7, 11.
+  OPEN: the iff, and the global form for q >= 19.
+  FINITE-EXACT:
+  - the circulant maxima for every odd order 3 <= n <= 23 (circ_counts.c, all multiplier classes; reproduced by the
+    independent audit); P_q is the circulant maximum for prime q = 3, 7, 11 and is beaten by the rotational circulant
+    at q = 19 and 23;
+  - at n = 13 a regular tournament with |Aut| = 1 and H = 3719893 (local search, 160 restarts, found 51 times with its
+    converse; H, C, strongness and |Aut| re-verified by the census DP) beats every circulant (best 3711175, the
+    rotational one), and its 168361 Hamiltonian cycles beat every circulant too (best 166848).
+  CITED:
+  - global maxima for n <= 11 (OEIS A038375: 3, 15, 189, 3357, 95095 at n = 3, 5, 7, 9, 11, all attained by circulants);
+  - W. M. Kantor, Classification of 2-transitive symmetric designs, Graphs Combin. 1 (1985) 165-166, DOI 10.1007/BF02582940;
+  - Galois' exceptional actions of PSL(2,p) on p points (p <= 11);
+  - N. Alon, The maximum number of Hamiltonian paths in tournaments, Combinatorica 10 (1990) 319-324;
+  - N. C. Wormald, Tournaments with many Hamilton cycles (preprint), who conjectures that the rotational tournament
+    maximises for large odd n and whose blow-ups give the constant about 2.8559;
+  - Adler-Alon-Ross, Random Structures Algorithms 18 (2001), for the lower bound (e - o(1)) n!/2^(n-1).
+  PROVED (elementary, here, given Kantor): the Paley design is 2-transitive iff q = 3, 7, 11 (argument below,
+  repaired after the audit, MISTAKE-651; nauty confirms that it is not 2-transitive for q = 19, 23, 27, 31, 43, 47).
+  AUDITED 2026-10-21: citation corrected; the design-isomorphism step repaired; prior conjecture credited;
+  "circulant" restricted to prime q.
 session: mac-mini-2026-10-21-fanopsp
 source: 05-knowledge/results/tournament_pseudoprimes_camion_fermat_20261021.md
 related:
@@ -21,6 +31,8 @@ related:
   - 01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md (top structure of the spectrum)
 scripts:
   - 04-computation/experiments/tournament_pseudoprimes_20261021/circ_counts.c (+ circ_*.out, paley19.out, paley23.out)
+  - 04-computation/experiments/tournament_pseudoprimes_20261021/hmax_search.c (+ hmax_search_13.out, hmax_search_13b.out, hmax_search_15.out, hmax13_best.txt)
+  - 04-computation/experiments/tournament_pseudoprimes_20261021/audit/a18_thm4747_checks.py, a20_designs.py (independent audit)
 ---
 
 # HYP-9357 — Paley extremality and the exceptional primes 3, 7, 11
@@ -29,7 +41,7 @@ scripts:
 
 The maximum of `H` over circulant tournaments `Cay(Z_n, S)` (all connection sets) is:
 
-| `n` | maximiser | `H` | `H·2^(n−1)/n!` | `H(P_n)` if Paley exists |
+| `n` | circulant maximiser | `H` | `H·2^(n−1)/n!` | `H(P_n)` if Paley exists |
 |---|---|---|---|---|
 | 3 | C_3 | 3 | 2.00 | 3 |
 | 5 | Z_5{1,2} | 15 | 2.00 | — |
@@ -44,31 +56,66 @@ The maximum of `H` over circulant tournaments `Cay(Z_n, S)` (all connection sets
 | 23 | rotational | 16011537490557279 | 2.60 | 15760206976379349 |
 
 * *Rotational* means `Z_n{1, …, (n−1)/2}`.
-* At `n = 3, 5, 7, 9, 11` the circulant maximum equals the global maximum (A038375). Those are the only orders where the global value is known.
-* The Paley tournament wins at 7 and 11 and loses at 19 and 23.
+* For orientation, Wormald's blow-ups of rotational tournaments give the best known asymptotic constant for the maximum, about 2.8559. The Adler–Alon–Ross bound is `e`.
+* At `n = 3, 5, 7, 9, 11` the circulant maximum equals the global maximum (A038375).
+  * Their automorphism orders are 3, (5 and 3), 21, 9, 55.
+  * The class is unique at `n = 7, 9`; at `n = 5` two classes reach 15.
+* **At `n = 13` the circulant maximum is not global.**
+  * A regular tournament with **trivial automorphism group** has `H = 3719893`, against `3711175` for the best circulant. Its converse has the same `H`; both were found 51 times in 160 restarts of a steepest ascent over cyclic-triangle reversals.
+  * It also has more Hamiltonian cycles than any circulant: 168361 against 166848.
+  * This gives the lower bound `max H(13) ≥ 3719893`. OEIS A038375 stops at `n = 11`.
+* At `n = 15`, 16 restarts found nothing above the rotational circulant. That search is weak; this is not evidence either way.
+* The Paley tournament wins among circulants at 7 and 11 and loses at 19 and 23.
 
 ## Conjecture
 
-1. `P_q` is `H`-maximal among all tournaments of order `q` iff `q ∈ {3, 7, 11}`.
-2. Equivalently, by Kantor's classification: iff the design of translates of `QR_q` is 2-transitive.
+1. For prime `q ≡ 3 (mod 4)`, `P_q` is `H`-maximal among all tournaments of order `q` iff `q ∈ {3, 7, 11}`.
+2. Equivalently, by Kantor's classification: iff the Paley design of translates of `QR_q` is 2-transitive.
 3. The rotational circulant beats `P_q` for every prime `q ≥ 19` with `q ≡ 3 (mod 4)`.
 
-## Why this is a live alignment and not only a coincidence
+**Credit.** (3) and the "only if" half of (1) for large `q` are special cases of the conjecture of Alon (1990) and Wormald: the rotational tournament maximises Hamilton cycles, and analogously paths, for large odd `n`.
+
+* The naive all-`n` form fails at small `n`: `C(P_7) = 24 > C(R_7) = 17`, and the `n = 9` maximum is `Z_9{2,3,4,8}`, not `R_9`.
+* The `n = 13` record shows that "large" must exceed 13, for paths and for cycles.
+
+## The design statement (PROVED given Kantor; repaired after the audit)
+
+The Paley design has parameters `(q, (q−1)/2, (q−3)/4)`. Kantor's 2-transitive symmetric designs, up to complementation, are:
+
+* the point-hyperplane designs of `PG(m−1, r)`;
+* the unique `(11,5,2)` biplane;
+* the `(176,50,14)` Higman design;
+* the symplectic designs on `2^(2m)` points.
+
+The Higman and symplectic designs have even order. A point-hyperplane design (or its complement) with `k = (v−1)/2` forces `r = 2`, so `q = 2^m − 1`. This is prime, because `2^m − 1` is never a proper prime power.
+
+**Matching against `PG(m−1, 2)` for `q = 2^m − 1 ≥ 31`.**
+
+* `q ∥ |PGL(m,2)|`, so every regular cyclic subgroup is a Sylow `q`-subgroup, and they are all conjugate.
+* A design isomorphism can therefore be chosen to intertwine the translation groups. It is then affine, so it is an equivalence of difference sets.
+* Equivalent difference sets have equal multiplier groups.
+  * For the Singer set, the multiplier group is `⟨2⟩`, of order `m`. The automorphism group of `PG(m−1,2)` is `PGL(m,2)` for `m ≥ 3`, and the normaliser of a Singer cycle there is the cycle extended by the Frobenius, of order `qm`.
+  * For `QR_q`, the multiplier group is `QR_q`, of order `(q−1)/2`.
+* `(q−1)/2 = m` forces `q = 7`.
+
+**Conclusion.** The Paley design is 2-transitive exactly for `q = 3` (trivial), `7` (Fano) and `11` (biplane). The audit confirmed with nauty that the designs for `q = 31` and `127` are not isomorphic to `PG(4,2)` and `PG(6,2)`.
+
+## Why this is a live alignment
 
 **Three Paley lists nest.**
 
 * `{3, 7}`: converse-Gluck exceptional (THM-4743).
 * `{3, 7, 11}`: `H`-maximal and 2-transitive design.
 * Galois' exceptional primes are those `p` for which `PSL(2,p)` has a subgroup of index `p`: `p ∈ {2, 3, 5, 7, 11}` (via `A_4 < A_5`, `S_4 < PSL(2,7)`, `A_5 < PSL(2,11)`). Restricted to `q ≡ 3 (mod 4)`, the list is exactly `{3, 7, 11}`.
-* For `q = 7` and `q = 11` the index-`q` action is the action on the out-neighbourhood design of `P_q`: the Fano plane, resp. the biplane. The octahedral stabiliser `S_4` of a Fano point is the full symmetry group of the tetrahedron, whose six edges plus one formal point give the Fano plane (session23's tetrahedral bridge).
 
-**One structural explanation.** Extra design symmetry should mean extra balance in the 5- and 6-vertex subtournament statistics that drive `H`.
+**The index-`q` actions are design actions.**
 
-* All doubly regular tournaments of a given order share their 3- and 4-vertex statistics.
-* The Fano and biplane symmetry (`PSL(2,7)`, `PSL(2,11)` acting on the out-neighbourhood design) is a candidate reason why `P_7` and `P_11` sit at the top. Its absence for `q ≥ 19` is a candidate reason why the locally transitive rotational circulant overtakes.
-* This explanation is a HEURISTIC; no inequality is proved.
+* For `q = 7` and `q = 11` the index-`q` action is the action on the out-neighbourhood design of `P_q`: the Fano plane, resp. the biplane.
+* The octahedral stabiliser `S_4` of a Fano point is the full symmetry group of the tetrahedron, whose six edges plus one formal point give the Fano plane (session23's tetrahedral bridge).
+
+**Symmetric maximisers stop at 11.** The rigid `n = 13` record fits a picture in which design symmetry (`PSL(2,7)`, `PSL(2,11)`) balances the 5- and 6-vertex statistics and keeps `P_7`, `P_11` on top. Beyond 11 no such symmetry is available and the maximisers lose all symmetry. This explanation is a HEURISTIC; no inequality is proved.
 
 ## Cheapest decisive tests
 
 * `H(P_27)` (Paley over `F_27`; prime power), `H(P_31)` and `H(P_43)` against the rotational circulant. These need an orbit-reduced or meet-in-the-middle path count; the present subset DP stops at `n = 23`.
-* A local search at `n = 13, 15` for non-circulant tournaments beating the rotational circulant. This would refine (1) to "Paley is maximal iff …" without any circulant restriction.
+* A stronger search at `n = 15, 17` (simulated annealing, larger move sets) for non-circulant tournaments above the rotational one.

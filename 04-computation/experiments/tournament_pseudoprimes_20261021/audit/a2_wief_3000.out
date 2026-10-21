@@ -1,0 +1,2 @@
+odd primes p <= 3000 with D(p) = 0 mod p^2: 3 13
+(429 odd primes tested)

@@ -1,0 +1,8 @@
+p=43 eps=-1: violations of s(m+p-1) = eps s(m) for 1<=m<=3p: 0; D(3) mod p = 0, D(1) = 0
+p=127 eps=+1: violations of s(m+p-1) = eps s(m) for 1<=m<=3p: 0; D(3) mod p = 0, D(1) = 0
+p=2731 eps=-1: violations of s(m+p-1) = eps s(m) for 1<=m<=3p: 0; D(3) mod p = 0, D(1) = 0
+p=8191 eps=+1: violations of s(m+p-1) = eps s(m) for 1<=m<=3p: 0; D(3) mod p = 0, D(1) = 0
+67108863 residues r_p: {3: 1, 2731: 3, 8191: 3}
+16383 residues r_p: {3: 1, 43: 3, 127: 3}
+2p <= 2000 failing directly: [] (of 167)
+3p <= 2000 failing directly: [] (of 119)

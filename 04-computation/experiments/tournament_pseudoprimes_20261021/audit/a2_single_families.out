@@ -1,0 +1,10 @@
+n=2465 M=2465 s(n) mod M = 1  c(n) mod M = 1  pass=1
+n=2821 M=2821 s(n) mod M = 1520  c(n) mod M = 1520  pass=1
+n=4623 M=4623 s(n) mod M = 2  c(n) mod M = 2  pass=1
+n=6601 M=6601 s(n) mod M = 1  c(n) mod M = 1  pass=1
+n=8911 M=8911 s(n) mod M = 6364  c(n) mod M = 6364  pass=1
+n=10585 M=10585 s(n) mod M = 1  c(n) mod M = 1  pass=1
+n=12099 M=12099 s(n) mod M = 2  c(n) mod M = 2  pass=1
+n=15841 M=15841 s(n) mod M = 1  c(n) mod M = 1  pass=1
+n=16383 M=16383 s(n) mod M = 2  c(n) mod M = 2  pass=1
+n=19599 M=19599 s(n) mod M = 2  c(n) mod M = 2  pass=1

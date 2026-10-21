@@ -1,0 +1,20 @@
+multiplier classes per odd n: {3: 1, 5: 1, 7: 2, 9: 4, 11: 4, 13: 6, 15: 16, 17: 16, 19: 30, 21: 88, 23: 94}  total 262
+violations of THM-4747 (2),(3), H = 0 mod n, rho0 odd: []
+composite n: classes with C = A (mod n): {9: '0/4', 15: '0/16', 21: '0/88'}
+session circ_*.out (without paley19/23 duplicates): rows 262 ; multiset equal to auditor's: True
+n=3: max H over circulants 3 at S=(1,) (rotational: True); ratio H*2^(n-1)/n! = 2.0000
+n=5: max H over circulants 15 at S=(1, 2) (rotational: True); ratio H*2^(n-1)/n! = 2.0000
+n=7: max H over circulants 189 at S=(3, 5, 6) (rotational: False); ratio H*2^(n-1)/n! = 2.4000
+n=9: max H over circulants 3357 at S=(2, 3, 4, 8) (rotational: False); ratio H*2^(n-1)/n! = 2.3683
+n=11: max H over circulants 95095 at S=(1, 3, 4, 5, 9) (rotational: False); ratio H*2^(n-1)/n! = 2.4395
+n=13: max H over circulants 3711175 at S=(1, 2, 3, 4, 5, 6) (rotational: True); ratio H*2^(n-1)/n! = 2.4411
+n=15: max H over circulants 198464295 at S=(1, 2, 3, 4, 5, 6, 7) (rotational: True); ratio H*2^(n-1)/n! = 2.4866
+n=17: max H over circulants 13689269499 at S=(1, 2, 3, 4, 5, 6, 7, 8) (rotational: True); ratio H*2^(n-1)/n! = 2.5223
+n=19: max H over circulants 1184212824763 at S=(1, 2, 3, 4, 5, 6, 7, 8, 9) (rotational: True); ratio H*2^(n-1)/n! = 2.5520
+n=21: max H over circulants 125547534942879 at S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) (rotational: True); ratio H*2^(n-1)/n! = 2.5767
+n=23: max H over circulants 16011537490557279 at S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11) (rotational: True); ratio H*2^(n-1)/n! = 2.5978
+P_3: H=3 C=1 tc=H/(q(q-1)/2)=1 {} tc mod q = 1; rho0=1; t=0; rotational H=[3]
+P_7: H=189 C=24 tc=H/(q(q-1)/2)=9 {3: 2} tc mod q = 2; rho0=9; t=1; rotational H=[175]
+P_11: H=95095 C=5505 tc=H/(q(q-1)/2)=1729 {7: 1, 13: 1, 19: 1} tc mod q = 2; rho0=185; t=100; rotational H=[93027]
+P_19: H=1172695746915 C=34358763933 tc=H/(q(q-1)/2)=6857869865 {5: 1, 7: 1, 11: 1, 23: 1, 774463: 1} tc mod q = 4; rho0=573057; t=200928444; rotational H=[1184212824763]
+P_23: H=15760206976379349 C=374127973957716 tc=H/(q(q-1)/2)=62293308207033 {3: 1, 167: 1, 4567: 1, 27225299: 1} tc mod q = 14; rho0=63871533; t=1478766695485; rotational H=[16011537490557279]

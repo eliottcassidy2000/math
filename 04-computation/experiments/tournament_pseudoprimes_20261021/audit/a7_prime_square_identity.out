@@ -1,0 +1,25 @@
+p=  3 eps=-1  s(p^2)-c(p^2) mod p^2 =      0   eps*D(p) mod p^2 =      0   equal=True   p^2 passes=True
+p=  5 eps=-1  s(p^2)-c(p^2) mod p^2 =     10   eps*D(p) mod p^2 =     10   equal=True   p^2 passes=False
+p=  7 eps=+1  s(p^2)-c(p^2) mod p^2 =     14   eps*D(p) mod p^2 =     14   equal=True   p^2 passes=False
+p= 11 eps=-1  s(p^2)-c(p^2) mod p^2 =     44   eps*D(p) mod p^2 =     44   equal=True   p^2 passes=False
+p= 13 eps=-1  s(p^2)-c(p^2) mod p^2 =      0   eps*D(p) mod p^2 =      0   equal=True   p^2 passes=True
+p= 17 eps=+1  s(p^2)-c(p^2) mod p^2 =    238   eps*D(p) mod p^2 =    238   equal=True   p^2 passes=False
+p= 19 eps=-1  s(p^2)-c(p^2) mod p^2 =    342   eps*D(p) mod p^2 =    342   equal=True   p^2 passes=False
+p= 23 eps=+1  s(p^2)-c(p^2) mod p^2 =    184   eps*D(p) mod p^2 =    184   equal=True   p^2 passes=False
+p= 29 eps=-1  s(p^2)-c(p^2) mod p^2 =    638   eps*D(p) mod p^2 =    638   equal=True   p^2 passes=False
+p= 31 eps=+1  s(p^2)-c(p^2) mod p^2 =     62   eps*D(p) mod p^2 =     62   equal=True   p^2 passes=False
+p= 37 eps=-1  s(p^2)-c(p^2) mod p^2 =   1295   eps*D(p) mod p^2 =   1295   equal=True   p^2 passes=False
+p= 41 eps=+1  s(p^2)-c(p^2) mod p^2 =    656   eps*D(p) mod p^2 =    656   equal=True   p^2 passes=False
+p= 43 eps=-1  s(p^2)-c(p^2) mod p^2 =   1161   eps*D(p) mod p^2 =   1161   equal=True   p^2 passes=False
+p= 47 eps=+1  s(p^2)-c(p^2) mod p^2 =    564   eps*D(p) mod p^2 =    564   equal=True   p^2 passes=False
+p= 53 eps=-1  s(p^2)-c(p^2) mod p^2 =   1431   eps*D(p) mod p^2 =   1431   equal=True   p^2 passes=False
+p= 59 eps=-1  s(p^2)-c(p^2) mod p^2 =     59   eps*D(p) mod p^2 =     59   equal=True   p^2 passes=False
+p= 61 eps=-1  s(p^2)-c(p^2) mod p^2 =   1647   eps*D(p) mod p^2 =   1647   equal=True   p^2 passes=False
+p= 67 eps=-1  s(p^2)-c(p^2) mod p^2 =   2479   eps*D(p) mod p^2 =   2479   equal=True   p^2 passes=False
+p= 71 eps=+1  s(p^2)-c(p^2) mod p^2 =   1633   eps*D(p) mod p^2 =   1633   equal=True   p^2 passes=False
+p= 73 eps=+1  s(p^2)-c(p^2) mod p^2 =   4161   eps*D(p) mod p^2 =   4161   equal=True   p^2 passes=False
+p= 79 eps=+1  s(p^2)-c(p^2) mod p^2 =   3634   eps*D(p) mod p^2 =   3634   equal=True   p^2 passes=False
+p= 83 eps=-1  s(p^2)-c(p^2) mod p^2 =   5063   eps*D(p) mod p^2 =   5063   equal=True   p^2 passes=False
+p= 89 eps=+1  s(p^2)-c(p^2) mod p^2 =   5073   eps*D(p) mod p^2 =   5073   equal=True   p^2 passes=False
+p= 97 eps=+1  s(p^2)-c(p^2) mod p^2 =   2037   eps*D(p) mod p^2 =   2037   equal=True   p^2 passes=False
+IDENTITY HOLDS FOR ALL p <= 97

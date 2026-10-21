@@ -1,0 +1,27 @@
+s(1..10) = [1, 0, 2, 24, 544, 22320, 1677488, 236522496, 64026088576, 33832910196480]
+matches A054946 prefix (from memory/OEIS data): True
+Wright recurrence holds for m<60: True
+n=1: strong labelled = 1 (recurrence 1), circulant tournaments = 1 (formula c=1), strong circulants = 1, Camion violations = 0
+n=2: strong labelled = 0 (recurrence 0), circulant tournaments = 0 (formula c=0), strong circulants = 0, Camion violations = 0
+n=3: strong labelled = 2 (recurrence 2), circulant tournaments = 2 (formula c=2), strong circulants = 2, Camion violations = 0
+n=4: strong labelled = 24 (recurrence 24), circulant tournaments = 0 (formula c=0), strong circulants = 0, Camion violations = 0
+n=5: strong labelled = 544 (recurrence 544), circulant tournaments = 4 (formula c=4), strong circulants = 4, Camion violations = 0
+n=6: strong labelled = 22320 (recurrence 22320), circulant tournaments = 0 (formula c=0), strong circulants = 0, Camion violations = 0
+D(1..7) = [0, 0, 0, 24, 540, 22320, 1677480]
+D(r) > 0 for all 4 <= r <= 200: True
+1 1 0 0
+2 0 0 0
+3 2 0 0
+4 24 24 {2: 3, 3: 1}
+5 544 540 {2: 2, 3: 3, 5: 1}
+6 22320 22320 {2: 4, 3: 2, 5: 1, 31: 1}
+7 1677488 1677480 {2: 3, 3: 1, 5: 1, 7: 1, 1997: 1}
+8 236522496 236522496 {2: 10, 3: 1, 7: 1, 17: 1, 647: 1}
+9 64026088576 64026088560 {2: 4, 3: 2, 5: 1, 7: 1, 12703589: 1}
+10 33832910196480 33832910196480 {2: 8, 3: 1, 5: 1, 53: 1, 166238749: 1}
+11 35262092417856512 35262092417856480 {2: 5, 3: 2, 5: 1, 11: 1, 2226142198097: 1}
+12 72926863133112198144 72926863133112198144 {2: 10, 3: 2, 11: 1, 251: 1, 15017: 1, 190851457: 1}
+13 300318571786159783496704 300318571786159783496640 {2: 6, 3: 1, 5: 1, 7: 1, 11: 1, 13: 2, 883: 1, 27225309372271: 1}
+14 2467430973323656141183549440 2467430973323656141183549440 {2: 15, 3: 1, 5: 1, 7: 1, 13: 1, 563: 1, 97983744196708459: 1}
+15 40490606137578335674252914280448 40490606137578335674252914280320 {2: 7, 3: 2, 5: 1, 7: 2, 13: 1, 251: 1, 3511: 1, 12522406896872037251: 1}
+16 1327930515100058029678730655939526656 1327930515100058029678730655939526656 {2: 15, 3: 1, 23: 1, 523721813: 1, 2669102098679: 1, 420155909: 1}

@@ -1,0 +1,25 @@
+p=3 eps=-1  s(p-1) mod p = 0
+p=5 eps=-1  s(p-1) mod p = 4
+p=7 eps=+1  s(p-1) mod p = 4
+p=11 eps=-1  s(p-1) mod p = 10
+p=13 eps=-1  s(p-1) mod p = 12
+p=17 eps=+1  s(p-1) mod p = 12
+p=19 eps=-1  s(p-1) mod p = 12
+p=23 eps=+1  s(p-1) mod p = 18
+p=29 eps=-1  s(p-1) mod p = 4
+p=31 eps=+1  s(p-1) mod p = 16
+p=37 eps=-1  s(p-1) mod p = 18
+p=41 eps=+1  s(p-1) mod p = 21
+p=43 eps=-1  s(p-1) mod p = 7
+p=47 eps=+1  s(p-1) mod p = 1
+p=53 eps=-1  s(p-1) mod p = 31
+p=59 eps=-1  s(p-1) mod p = 6
+p=61 eps=-1  s(p-1) mod p = 0
+p=67 eps=-1  s(p-1) mod p = 17
+p=71 eps=+1  s(p-1) mod p = 24
+p=73 eps=+1  s(p-1) mod p = 35
+p=79 eps=+1  s(p-1) mod p = 36
+p=83 eps=-1  s(p-1) mod p = 24
+p=89 eps=+1  s(p-1) mod p = 14
+p=97 eps=+1  s(p-1) mod p = 90
+period checks 4232 failures 0

@@ -1,0 +1,5 @@
+universal {1,2,3} subset of Z_p for every p>=5: True  Z_3 = [1, 2]
+odd zero classes agree with camion_verify.out for all 45 primes <= 199: True
+even sporadic classes (r>=4) for p <= 199: {17: [8], 23: [16], 31: [6], 41: [18], 43: [28], 47: [24], 53: [10, 38], 61: [60], 67: [58], 73: [26], 79: [18], 97: [24], 101: [48, 82], 109: [44], 151: [42], 173: [110, 134], 181: [170], 191: [76], 197: [184]}
+primes 7..400: 75  observed mean 0.9466666666666667  model mean 0.9453096963685799
+k observed Poisson: [(0, 31, 29.1), (1, 25, 27.5), (2, 13, 13.0), (3, 4, 4.1), (4, 2, 1.0), (5, 0, 0.2)]

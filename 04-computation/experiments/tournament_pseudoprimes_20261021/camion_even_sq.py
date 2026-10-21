@@ -37,3 +37,11 @@ for q in [9,25,27,49,121,169,289,361]:
     s=smod(M,q)
     bad=[m for m in range(1,M+1,2) if (s[m]-circ(m,q))%q]
     print(f'mod {q}: odd m<={M} with D(m) != 0: {len(bad)}; first few {bad[:12]}')
+# Lemma B of the independent audit (MISTAKE-651 corrected the pre-audit claim "D is not periodic mod p^2",
+# which had tested periods from m = 1): s(m + p(p-1)) = (2/p) s(m) (mod p^2) for all m >= 3, failing only at m = 1, 2.
+for p in [3,5,7,11,13]:
+    q=p*p; L=p*(p-1); M=3*L+10; s=smod(M,q); eps=1 if p%8 in (1,7) else -1
+    fails=[m for m in range(1,M-L+1) if (s[m+L]-eps*s[m])%q]
+    D=[None]+[(s[m]-circ(m,q))%q for m in range(1,M+1)]
+    failsD=[m for m in range(1,M-L+1) if (D[m+L]-eps*D[m])%q]
+    print(f'Lemma B check p={p}: period L={L}, eps={eps:+d}: s fails at m={fails}, D fails at m={failsD}')

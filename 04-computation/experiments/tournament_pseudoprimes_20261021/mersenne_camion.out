@@ -1,3 +1,6 @@
+NOTE (MISTAKE-651): this script does NOT decide the 'squareful' rows and caps residues at 3000 ('undecided').
+The complete, audited table is audit/a5_mersenne.out: the composite 2^k-1, k<=64, that are Camion pseudoprimes
+are exactly k = 4, 6, 10, 12, 14, 26, 34, 38, 62 (63 and 4095 pass; 2^59-1 fails at 179951).
 4 PASS [(3, 1), (5, 3)]
 6 squareful [3, 7]
 8 fail [(3, 1), (5, 3), (17, 15)]

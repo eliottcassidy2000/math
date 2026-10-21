@@ -1,6 +1,6 @@
 # Tournament pseudoprimes: the Camion test, Hamiltonian-cycle congruences, Paley extremality, and the 7 / 21 / 341 dictionary
 
-Session mac-mini-2026-10-21-fanopsp. **Canon:** THM-4746, THM-4747. **Hypotheses:** HYP-9357, HYP-9358.
+Session mac-mini-2026-10-21-fanopsp. **Canon:** THM-4746, THM-4747. **Hypotheses:** HYP-9357, HYP-9358. **Independently audited** ([report](tournament_pseudoprimes_audit_20261021.md)); corrections logged as MISTAKE-651.
 
 **Owner prompt.**
 * The owner sent three pasted blocks: the seven-point sphere with the Fano analogy and arXiv:2610.26686; the converse-symmetry exceptions `C_3, C_5{1,2}, P_7`; and the `{7, 21}` Hamiltonian-path gaps with their multiplicities, `341 = 11·31` and `{2, 3, 11}`.
@@ -14,38 +14,37 @@ Session mac-mini-2026-10-21-fanopsp. **Canon:** THM-4746, THM-4747. **Hypotheses
 | opus-2026-10-21-S49 | THM-4742 (the seven-point sphere is two spheres; Fano's seventh line); THM-4743 (Gluck with the converse) |
 | Session24 | HYP-9353 PROVED: the converse exceptions are exactly `X[C_3^[k]]`, `X ∈ {C_3, Z_5{1,2}, P_7}` |
 | session23b | the tetrahedral Fano bridge |
-| opus-2026-10-21-S50 | THM-4744/4745 and HYP-9355/9356 reserved: the multiplicity laws of the H spectrum |
+| opus-2026-10-21-S50 | THM-4744/4745, HYP-9355/9356: the multiplicity laws of the H spectrum (interval chains `H = Π(2^(p_i−1)+1)`; Busch-extremal classes = optimal chains; H equidistributes mod every integer with a 2-adic pull toward 1). S50's census agrees with this session's class by class (commit 29d15e4ae1). |
 
 * I sent S50 a lane message (`agents/opus/inbox/MSG-2395…`) and took only the pseudoprime lens.
 * The link arXiv:2610.26686 is Bucić–He–Lee's proof of the Erdős–Szemerédi sunflower conjecture (§7.6), not the Gluck paper S49 cites.
 
-**Scripts.** All are in `04-computation/experiments/tournament_pseudoprimes_20261021/`, each with an `.out`.
-
-* C: `circ_counts.c`, `tour_census.c`, `camion_psp.c`, `camion_verify.c`, `camion_list.c`.
-* Python: `camion_*.py`, `check_congruences.py`, `analyze*.py`, `mersenne_camion.py`.
-* Reproduction commands are in §9.
+**Scripts.** All are in `04-computation/experiments/tournament_pseudoprimes_20261021/`, each with an `.out`; the independent audit's scripts are in `audit/`.
 
 ## 0. Results
 
-1. **Camion pseudoprimes (THM-4746, PROVED + FINITE-EXACT).**
+1. **Camion pseudoprimes (THM-4746, PROVED + FINITE-EXACT, audited).**
    * At prime order `p`, rotations force #strong labelled tournaments ≡ #circulants `= 2^((p−1)/2) ≡ (2/p) (mod p)`.
    * The strong count is quasi-periodic: `s(m+p−1) ≡ (2/p) s(m) (mod p)`.
+   * The audit's Lemma B adds that `s(m+p(p−1)) ≡ (2/p) s(m) (mod p²)` for `m ≥ 3`.
    * This gives a **Korselt-type criterion** whose free residues `1, 2, 3` are K1, the missing strong K2, and the **triangle**.
    * Consequences:
      * every Carmichael number, every `2p`, every `3p`, and every `3b(3b−2)` with both factors prime is a pseudoprime;
      * this includes `4^q − 1` whenever `2^q − 1` and `(2^q+1)/3` are both prime;
-     * `21` is one; `341` is not, because its residue at 31 is the Wagstaff factor 11; `3·341 = 1023 = 2^10 − 1` is one.
-2. **Hamiltonian-cycle congruences (THM-4747, PROVED + FINITE-EXACT).**
+     * `21` is one; `341` is not, because its residue at 31 is the Wagstaff factor 11; `3·341 = 1023 = 2^10 − 1` is one;
+     * `p²` passes iff `p² | D(p)`, which below 10000 happens only for `p = 3, 13`.
+   * The quasi-periodicity itself is shared with connected graphs (Mani–Stones 2016). What is tournament-specific is the circulant target and its free residues.
+2. **Hamiltonian-cycle congruences (THM-4747, PROVED + FINITE-EXACT, audited).**
    * An automorphism of prime order with a fixed vertex divides `C(T)`.
    * Circulants on `Z_p`: `C ≡ (p−1)/2 (mod p·μ_S)`; Paley: `C(P_p) ≡ (p−1)/2 (mod p(p−1)/2)`.
    * Reflection-symmetric paths: `ρ_0 ≡ μ_S (mod 2μ_S)`.
-   * Summing over tournaments gives Wilson's theorem.
+   * Summing over tournaments gives Wilson's theorem (the classical rotation proof, weighted).
    * Composite orders 9, 15, 21 pass no circulant version of the naive test.
-3. **Paley extremality (HYP-9357, FINITE-EXACT + CITED).**
-   * `P_q` is the circulant H-maximum exactly at `q = 3, 7, 11`; the rotational circulant beats it at 19 and 23.
-   * These are exactly the `q ≡ 3 (mod 4)` whose Paley design is 2-transitive (Kantor), i.e. Galois' exceptional primes.
-   * The converse-Gluck Paley exceptions `{3, 7}` sit inside this list.
-4. **Census `n ≤ 9` (FINITE-EXACT, lens-specific; S50 owns the multiplicity laws).**
+3. **Paley extremality (HYP-9357, FINITE-EXACT + CITED, audited).**
+   * For prime `q`, `P_q` is the circulant H-maximum exactly at `q = 3, 7, 11`; the rotational circulant beats it at 19 and 23. This is in line with Alon's and Wormald's conjecture that the rotational tournament is the maximiser for large odd `n`.
+   * `{3, 7, 11}` are exactly the `q ≡ 3 (mod 4)` whose Paley design is 2-transitive (Kantor), i.e. Galois' exceptional primes.
+   * **New:** at `n = 13` a rigid regular tournament (`|Aut| = 1`) has `H = 3719893` and `C = 168361`, beating every circulant on both counts.
+4. **Census `n ≤ 9` (FINITE-EXACT, lens-specific).**
    * The presentation counts `tc = H/|Aut|` miss exactly `7` and `21` below 60 at `n = 7, 8, 9`.
    * The Hamiltonian-cycle spectrum has no floor gaps, only ceiling gaps (§6).
 5. **Dictionary (§7).** Typed bridges:
@@ -58,17 +57,23 @@ Session mac-mini-2026-10-21-fanopsp. **Canon:** THM-4746, THM-4747. **Hypotheses
 ## 1. Inheritance pass
 
 * **Closest proved mechanisms.**
-  * THM-1370 (1): `H` is multiplicative over the ordered strong components. The same ordered decomposition is Wright's recurrence, which drives THM-4746.
+  * THM-1370 (1): `H` is multiplicative over the ordered strong components (Wright's recurrence is the same decomposition).
   * LEM-003: automorphisms act freely on Hamiltonian paths.
   * THM-2477: the path-rigid strong atoms are `K1, C3`.
   * THM-4743 / Session24.
+  * In the literature: Specker–Blatter (ultimate periodicity of MSO-definable labelled counts modulo every `m`) and Mani–Stones (connected graphs modulo prime powers).
 * **Canonical hostile examples.**
   * `341`: the first base-2 pseudoprime, which fails the strong test.
-  * Connected graphs: same total `2^C(m,2)`, unordered components, no quasi-period.
-* **Corrected near misses (this session).**
+  * The rooted count `m·s(m)`, which is not `(p−1)`-quasi-periodic (period `p(p−1)`).
+  * *Corrected by the audit:* connected graphs are **not** a hostile control. They obey `cg(m+p−1) ≡ (2/p)cg(m)` for `m ≥ 2`; the pre-audit test demanded it from `m = 1` (MISTAKE-651).
+* **Corrected near misses.**
   * (i) I first read the `n = 7` interior holes of the H spectrum (`63, 107, 119, 149`) as "prime-like" (realisable only by strong tournaments). That is vacuous: at `n = 7` every `H ≥ 47` comes only from strong tournaments, by vertex count. Withdrawn before writing.
   * (ii) `tc(P_11) = 1729` is a Carmichael number, but `tc(P_19)` fails Korselt at 7: NUMEROLOGY.
   * (iii) A program bug (zero classes allocated only for `p ≤ N/3`) truncated a first list run; it was fixed and rerun.
+  * (iv) The audit's three major corrections:
+    * the connected-graph control (above);
+    * the Mersenne table (squareful `k` silently skipped, `k = 59` miscalled undecided);
+    * "`D` is not periodic mod `p²`", a test begun at `m = 1` where Lemma B starts at `m = 3`.
 * **Least-used sidecar.** The Hurwitz ring of binomial convolution over `F_p`, and the group algebra `K[(Z/p)]` inside it.
 
 ## 2. Camion pseudoprimes (THM-4746)
@@ -82,23 +87,22 @@ Session mac-mini-2026-10-21-fanopsp. **Canon:** THM-4746, THM-4747. **Hypotheses
 
 **Quasi-periodicity (proof in THM-4746).**
 * `2^C(m,2)` is quasi-periodic mod `p` with multiplier `(2/p)`, so it is a combination of exponentials `E_g = (g^m)`, with `g` running over an additive group `G ≅ Z/p` in `F_p` or `F_(p²)`.
-* Wright's recurrence is `(e − S) ∗ T = e` in the Hurwitz ring.
-* `K[G]` is a local ring, so `e − S` is again a combination of the same exponentials.
+* Wright's recurrence is `(e − S) ∗ T = e` in the Hurwitz ring. `K[G]` is a local ring, so `e − S` is again a combination of the same exponentials.
 * Hence `s(m+p−1) ≡ (2/p)s(m)`.
-* Linearity of the condensation is essential:
-  * strong semicomplete digraphs obey the same law with `(3/p)`;
-  * connected graphs obey none (`camion_controls.out`).
+* The same algebra is closed under the shift, so connected graphs obey the law too, from `m = 2` (audit Lemma C; Mani–Stones). Strong semicomplete digraphs obey it with `(3/p)`. Rooted counts are the genuine negative (`camion_controls.out`, corrected).
+* **Mod `p²` (Lemma B).** `s(m+p(p−1)) ≡ (2/p)s(m)` for `m ≥ 3`. The failures are exactly at `m = 1, 2` (`camion_even_sq.out`, corrected).
 
 **Korselt-type criterion.** For `n` with squarefree odd part:
 
     s(n) ≡ c(n) (mod n)  ⟺  p | D(n mod (p−1)) for every odd prime p | n.
 
-* It agrees with direct computation for all 472 odd squarefree composites `≤ 2500` and all 142 even `n ≤ 400` (`camion_verify.out`, `camion_even_sq.out`).
+* With Lemma B it extends to cube-free odd parts (residues mod `p(p−1)`).
+* It agrees with direct computation on all 1,321 composites `n ≤ 2000` with squarefree odd part, and on all 346 cube-free cases `≤ 2500` (audit).
 
 **Zero classes.**
-* `Z_p = {r : p | D(r)} ⊇ {1, 2, 3}`, because `D(1) = D(2) = D(3) = 0`.
+* `Z_p = {r : p | D(r)} ⊇ {1, 2, 3}` for `p ≥ 5`, because `D(1) = D(2) = D(3) = 0`.
 * For `r ≥ 4`, `D(r) > 0`, and the extra (sporadic) classes are Poisson with mean `(p−4)/p` (HYP-9358(b)). Examples: `43: 39`; `47: 17`; `59: 21`; `103: 37, 43`; `139: 77, 103`; ….
-* `3` and `5` are blind primes: the odd residues mod `p−1 ∈ {2, 4}` are only `1` and `3`.
+* For odd `n`, `3` and `5` are blind primes: the odd residues mod `p−1 ∈ {2, 4}` are only `1` and `3`. For `4 | n` the prime 5 obstructs (`D(4) = 24`): `20, 40, 60` fail.
 * `7` is the first prime with a nonzero odd class, `r = 5`: `D(5) = 540 = 2²·3³·5 ≢ 0 (mod 7)`.
 
 **Families (all PROVED by the criterion).**
@@ -107,20 +111,24 @@ Session mac-mini-2026-10-21-fanopsp. **Canon:** THM-4746, THM-4747. **Hypotheses
 |---|---|---|
 | Carmichael | all `r = 1` | 561, 1105, 1729, 2465, 2821, 6601, 8911, 10585, 15841 (all ≤ 20000 pass) |
 | `2p` | `r_p = 2` | 6, 10, 14, 22, 26, … (1228 below 20000) |
-| `3p` | `r_p = 3`, `r_3 = 1` | 9, 15, 21, 33, 39, 51, 57, 69, … (857 below 20000) |
-| `3b(3b−2)`, `b ≥ 5`, both prime | both `3` | 195, 399, 1023, 1443, 4623, 12099, 16383, 19599 |
-| `4^q − 1`, `2^q−1` and `(2^q+1)/3` prime | both `3` | `q = 5, 7, 13, 17, 19, 31, …` (`k = 10, 14, 26, 34, 38, 62` among `2^k − 1`, `k ≤ 64`) |
-| sporadic | uses `Z_p \ {1,2,3}` | 1239 (59: 21), 3765 (251: 15), 8401 (271: 31), 12019 (101: 19), 14317 (103: 37; 139: 103) |
+| `3p` (`p > 3`) | `r_p = 3`, `r_3 = 1` | 15, 21, 33, 39, 51, 57, 69, … (857 below 20000); `9` also passes |
+| `3b(3b−2)`, `b ≥ 5`, both prime | `3` at both large primes, `1` at 3 | 195, 399, 1023, 1443, 4623, 12099, 16383, 19599 |
+| `4^q − 1` (Mersenne–Wagstaff double primes) | as above | `q = 5, 7, 13, 17, 19, 31, …`; among `2^k − 1`, `k ≤ 64`, exactly `k = 4, 6, 10, 12, 14, 26, 34, 38, 62` pass (audit) |
+| sporadic | uses `Z_p \ {1,2,3}` | odd: 1239, 3765, 8401, 12019, 14317; even: 186, 530, 1898, 3290, 7202, 8282, 17066 |
 
-**Prime squares.**
-* `9` and `169` pass; `25, 27, 49, 81, 121, 125` fail.
-* The Camion–Wieferich primes (`D(p) ≡ 0 mod p²`) below 3000 are only `3` and `13`.
-* Modulo 9, the bad odd `m` are exactly `m ≡ 1 (mod 6)`, `m ≥ 7` (to 700).
-* `D` is not periodic modulo `p²` with any period dividing `2p(p−1)`.
+**The 60 exotic squarefree members up to 20000** (not of the form `2p` or `3p`).
 
-**The tournament-count test** `2^C(n,2) ≡ c(n) (mod n)` is the Fermat test to the base `c(n) = 2^((n−1)/2)`.
+* **Odd (37):** 105 = 3·5·7, 195 = 3·5·13, 231 = 3·7·11, 399 = 3·7·19, 561 = 3·11·17, 595 = 5·7·17, 1023 = 3·11·31, 1105 = 5·13·17, 1239 = 3·7·59, 1443 = 3·13·37, 1729 = 7·13·19, 2465 = 5·17·29, 2821 = 7·13·31, 3003 = 3·7·11·13, 3315 = 3·5·13·17, 3765 = 3·5·251, 4465 = 5·19·47, 4623 = 3·23·67, 5187 = 3·7·13·19, 5565 = 3·5·7·53, 6601 = 7·23·41, 7395 = 3·5·17·29, 8401 = 31·271, 8463 = 3·7·13·31, 8911 = 7·19·67, 10153 = 11·13·71, 10585 = 5·29·73, 10815 = 3·5·7·103, 12019 = 7·17·101, 12099 = 3·37·109, 14317 = 103·139, 14763 = 3·7·19·37, 15841 = 7·31·73, 16383 = 3·43·127, 18915 = 3·5·13·97, 19599 = 3·47·139, 19803 = 3·7·23·41.
+* **Even (23):** 30, 182, 186, 530, 870, 1122, 1406, 1898, 2210, 3290, 3458, 3782, 4930, 5402, 5642, 6734, 7202, 8282, 11102, 13202, 17066, 17390, 17822.
+
+**Prime squares (PROVED by Lemma B).**
+* `p²` passes iff `p² | D(p)`. The Camion–Wieferich primes below 10000 are `3` and `13` only, so `9` and `169` pass.
+* Mod 9: `D(m+6) ≡ −D(m)` for `m ≥ 3`. So the factor 9 never obstructs, and `63 = 4³ − 1` and `4095 = 2^12 − 1` pass.
+
+**The tournament-count test** `2^C(n,2) ≡ c(n) (mod n)` (odd `n`) is the Fermat test to the base `c(n) = 2^((n−1)/2)`.
 * It contains all odd base-2 pseudoprimes, plus `85 = (4⁴−1)/3, 133, 481, 511 = 2⁹−1, 949, …`. This sequence is not in the OEIS.
-* Its only universal residue is `1`. **The triangle is exactly the difference between the two tests.**
+* Its only universal residue is `1`, while the strong test has `1, 3`. **The universal residue sets differ exactly by the triangle class.**
+* The tests also disagree for non-universal reasons (audit).
 
 | | count test | strong (Camion) test |
 |---|---|---|
@@ -136,14 +144,14 @@ Session mac-mini-2026-10-21-fanopsp. **Canon:** THM-4746, THM-4747. **Hypotheses
 
 **Statements.**
 * An automorphism fixing a directed Hamiltonian cycle rotates it, so it has no fixed vertex.
-* For `Cay(Z_p, S)` with `μ = |{a : aS = S}|`:
+* For `Cay(Z_p, S)` with `μ = |{a : aS = S}|` (odd: `M_S` misses `−1`):
   * the `(p−1)/2` arithmetic cycles form orbits of size `μ`;
   * every other cycle has a free orbit of size `pμ`;
   * hence `C ≡ (p−1)/2 (mod pμ)`.
 * The signed group of order `2pμ` acts on paths, and only the reflections `x ↦ 2c−x` fix paths. Burnside gives `ρ_0 ≡ μ (mod 2μ)`.
 * An involutory anti-automorphism always reverses an odd number of Hamiltonian paths (Rédei).
 
-**Checks.** All 264 circulant classes `3 ≤ n ≤ 23` pass. At `n = 9, 15, 21`, no class satisfies `C ≡ #(S ∩ Z_n^*) (mod n)`. Summing over labelled tournaments yields Wilson's theorem, so the summed cycle count has no pseudoprimes.
+**Checks.** All 262 circulant classes `3 ≤ n ≤ 23` pass (the audit re-derived every value, with brute force over all permutations for every connection set `n ≤ 11`). At `n = 9, 15, 21`, no class satisfies `C ≡ #(S ∩ Z_n^*) (mod n)`.
 
 **Paley table.**
 
@@ -161,48 +169,52 @@ Session mac-mini-2026-10-21-fanopsp. **Canon:** THM-4746, THM-4747. **Hypotheses
   * `P_q` at `q = 7, 11`;
   * the rotational `Z_n{1..m}` at `n = 13, 15, 17, 19, 21, 23`, beating `P_19` by 0.98% and `P_23` by 1.6%;
   * `Z_9{2,3,4,8}` (`H = 3357`, the global maximum) at `n = 9`.
-* **Ratios.** `H·2^(n−1)/n!` climbs towards `e`: from 2.40 (`P_7`) to 2.60 (rotational 23).
+* **Ratios.** `H·2^(n−1)/n!` rises from 2.40 (`P_7`) to 2.60 (rotational 23). For orientation, Adler–Alon–Ross give `e − o(1)` as a lower bound for the maximum, and Wormald's blow-ups of rotational tournaments about 2.8559.
+* **`n = 13` (new).** Steepest ascent over cyclic-triangle reversals, 160 restarts, finds a regular tournament with `|Aut| = 1`, not self-converse, with `H = 3719893` and `C = 168361`. The best circulant values are `3711175` and `166848`. So the global maximum at 13 is not a circulant, and `max H(13) ≥ 3719893` (OEIS A038375 stops at 11).
+  * The maximisers' symmetry orders run 3, 5/3, 21, 9, 55 for `n = 3..11`, then 1 at `n = 13`.
+  * At `n = 15`, 16 restarts found nothing above the rotational circulant (a weak search).
 * **Why the list `{3, 7, 11}` is not arbitrary.**
   * It is Galois' list of exceptional primes for `PSL(2,p)` acting on `p` points, restricted to `q ≡ 3 (mod 4)`.
-  * It is also Kantor's list for 2-transitive Paley designs: the trivial design, the Fano plane, the biplane.
-  * By the multiplier-group argument, `QR_q` is a Singer set only for `q = 3, 7`.
+  * It is also Kantor's list for 2-transitive Paley designs: the trivial design, the Fano plane, the biplane. The deduction was repaired after the audit, via Sylow conjugacy of regular cyclic subgroups of `PGL(m,2)`.
 * **Nesting.** Converse-Gluck `{3, 7}` ⊂ H-maximal `{3, 7, 11}` = 2-transitive design.
-* **Mechanism.** A HEURISTIC: design symmetry balances the 5- and 6-vertex statistics.
+* **Credit.** Part 3 is a special case of Alon's and Wormald's conjecture that the rotational tournament maximises for large odd `n`. The `n = 13` record shows that "large" exceeds 13.
+* **Mechanism.** A HEURISTIC: design symmetry balances the 5- and 6-vertex statistics while it exists, i.e. through 11.
 
 ## 5. What the pseudoprime lens says about the 7/21 gaps (honest scope)
 
 * **Not explained here.** The gaps are THM-1370: multiplicativity plus the strong floor `3, 5 | 9`. Nothing here gives a new proof.
-* **Shared mechanism.** The same object, the **ordered strong decomposition**, produces three things:
-  1. the multiplicativity of `H`, and so the gaps;
-  2. the quasi-periodicity of `s`, and so the Camion pseudoprimes;
-  3. the multiplicativity of `tc = H/|Aut|` over components. That is why the presentation-count spectrum inherits exactly the same gaps `7, 21` (`analyze_census.out`: no other odd value below 60 is missing at `n = 7, 8, 9`).
+* **What is shared, after the audit.** The ordered strong decomposition makes `H` and `tc = H/|Aut|` multiplicative over components. That is why the presentation-count spectrum inherits exactly the gaps `7, 21` (`analyze_census.out`: no other odd value below 60 is missing at `n = 7, 8, 9`).
+  * The quasi-periodicity of the strong count is **not** a consequence of that decomposition. It is a property of the exponential family generated by `2^C(m,2)` mod `p`, and connected graphs share it.
+  * The pre-audit claim of a single shared mechanism is withdrawn (MISTAKE-651).
 * **Shared atoms.** The orders where every strong tournament is a circulant are `1` and `3`: K1 and C3. They recur across the canon:
   * the universal Camion residues;
   * the path-rigid atoms (`tc = 1`, THM-2477/4741);
   * the first two members of the pure-blue alphabet `{K1, C3, T5}` (THM-4730);
   * the substituted towers of every converse-Gluck exception (Session24);
   * the first two H-values `1, 3`.
+  * S50's checkpoint 93356203d1 records a proved four-way intersection `{C3}` of its own atom lists.
 * **The 7.** Order 5 is where the shared structure breaks.
   * The strong 5-tournaments jump to `H ≥ 9`, so `7` is skipped.
   * There are 544 strong labelled ones against 4 circulants, so `7` is the first prime that sees them in the Camion test.
   * `T5 = Z_5{1,2}` is pure-blue and converse-exceptional, but not path-rigid (`tc = 3`).
   * This is ANALOGY: both statements are about strong 5-tournaments, but there is no map between them.
 
-## 6. Census `n ≤ 9` (FINITE-EXACT; lens-specific)
+## 6. Census `n ≤ 9` (FINITE-EXACT; reproduced by the audit and by S50)
 
 * **Method.** `tour_census.c` reads every gentourng class. Class counts are 2, 4, 12, 56, 456, 6880, 191536 (A000568 ✓). For each class it computes `H`, `C`, strongness, `|Aut|`, the anti-automorphism count, and `c3`.
 * **H.** Below the ceiling, the missing odd values are exactly `7, 21` at `n = 8, 9`.
   * At `n = 6` the missing values are `7, 21, 35, 39`; at `n = 7` they are `7, 21, 63, 107, 119, 149` plus the ceiling run.
   * The strong spectra have extra holes just above the Moon–Busch floor: `47, 55, 67` at `n = 8`; `77, 79, 83` at `n = 9`.
-  * The class multiplicities for `n ≤ 6` are in `analyze_census.out`; the laws are S50's lane.
+  * Class multiplicities for `n ≤ 6` are in `analyze_census.out`; the multiplicity laws are S50's lane.
 * **C (directed Hamiltonian cycles).**
   * Every value from 0 to the maximum occurs at `n = 3..6` and `n = 8`.
-  * At `n = 7` the values `16, 18–23` are missing (maximum 24, at `P_7`).
+  * At `n = 7` the values `16, 18–23` are missing (maximum 24, at `P_7` only).
   * At `n = 9`, 21 values in `[215, 248]` are missing (maximum 249).
   * There are no floor gaps: the cycle spectrum has no analogue of 7 and 21.
 * **tc = H/|Aut|.** The missing odd values below 60 are exactly `{7, 21}` at `n = 7, 8, 9` (THM-4741, HYP-9352).
 * **Labelled multiplicities.** `N_n(h) = Σ n!/|Aut|` is divisible by `n!/gcd(n!, h)` (forced by `|Aut| | h`). There are no violations at `n ≤ 9`.
-* **Divisibility frequencies.** The frequencies of `p | H` match `1/p` for `p = 3, 5, 7, 11, 13`, so 7 has no special bias.
+* **Divisibility frequencies.** The frequencies of `p | H` match `1/p` for `p = 3, 5, 7, 11, 13`, so 7 has no special bias (also S50's HYP-9355).
+* **Strong tilings.** Tournaments containing the path `1→…→n` that are strong: `σ(n) = 1, 0, 1, 5, 50, 903, 30773, …` (not in the OEIS). They compose as an ordinary generating function, and `σ(p) mod p` shows no Fermat-type law (`strong_tilings.out`). The labelled count with its rotation action is what carries the congruence.
 
 ## 7. Dictionary (typed)
 
@@ -238,15 +250,14 @@ Each line gives source → target, the map, what is preserved, and the status.
 
 **7.6 Sunflowers (arXiv:2610.26686).** Bucić–He–Lee prove that families in `2^[n]` with no `k`-sunflower have size `≤ 3(2 − 1/(16k³))^n`.
 * The OCF `H = I(Ω, 2)` counts families of pairwise disjoint odd cycles with weight `2^k`, i.e. empty-kernel sunflowers among odd cycles.
-* The converse towers `C_3^[k] = Cay(F_3^k, lexicographic)` live on the cap-set space. Its lines are cyclic triangles. Its cyclic-triangle-free sets are its transitive subtournaments, of maximum size exactly `2^k` (two of three blocks at each level). Cap sets (no line) can be larger, `≥ 2.2^k`; the `k = 3` sunflower bound comes from them (Alon–Shpilka–Umans).
+* The converse towers `C_3^[k] = Cay(F_3^k, lexicographic)` live on the cap-set space. Every line is a cyclic triangle, though not conversely. Its cyclic-triangle-free sets are its transitive subtournaments, of maximum size exactly `2^k` (two of three blocks at each level). Cap sets (no line) can be larger, `≥ 2.2^k`; the `k = 3` sunflower bound comes from them (Alon–Shpilka–Umans).
 * ANALOGY; cheapest test: whether a sunflower-type bound controls the number of odd-cycle packings, i.e. `I(Ω, x)` for large `x`.
 
 ## 8. Next obligations
 
-1. HYP-9358: a mod-`p²` refinement (prime squares; the mod-9 law); search for Camion–Wieferich primes beyond 3000 with a faster `p²` recurrence.
-2. HYP-9357: `H(P_27)`, `H(P_31)` by an orbit-reduced or meet-in-the-middle count; a local search for non-circulant maxima at `n = 13, 15`.
-3. Quasi-periodicity for other linearly decomposed classes (HYP-9358(e)); a Camion analogue for presentation counts (rotation classes of closed tilings).
-4. Cross-check S50's multiplicity tables against `census_n*.txt` when they land.
+1. HYP-9358(d′): the mod-`p^k` law for `k ≥ 3` (derivatives up to order `2(k−1)`); a faster `p²` search for Camion–Wieferich primes beyond `10^4`.
+2. HYP-9357: `H(P_27)`, `H(P_31)` by an orbit-reduced or meet-in-the-middle count; a stronger search at `n = 15, 17`; certify or improve `max H(13) ≥ 3719893`.
+3. HYP-9358(e): the exact thresholds for shifted and rooted decompositions.
 
 ## 9. Reproduction
 
@@ -254,22 +265,46 @@ Each line gives source → target, the map, what is preserved, and the status.
 cd 04-computation/experiments/tournament_pseudoprimes_20261021
 clang -O3 -o circ_counts circ_counts.c && for n in 3 5 7 9 11; do ./circ_counts $n; done > circ_small.out
 ./circ_counts 19 paley > paley19.out; ./circ_counts 23 paley > paley23.out; ./circ_counts 23 > circ_23.out   # ~4 min
-clang -O3 -o tour_census tour_census.c && for k in 3 4 5 6 7 8 9; do gentourng -q $k | ./tour_census $k > census_n$k.txt; done
+clang -O3 -o tour_census tour_census.c && for k in 3 4 5 6 7 8 9; do gentourng -q $k | ./tour_census $k > census_n$k.txt; done   # n = 9 stored gzipped
 clang -O3 -o camion_psp camion_psp.c && ./camion_psp 1200 > camion_psp_1200.out
 clang -O3 -o camion_verify camion_verify.c && ./camion_verify 199 2500 1500 > camion_verify.out
 clang -O3 -o camion_list camion_list.c && ./camion_list 20000 3000 > camion_list_20000.out   # ~6 min
-for s in camion_period camion_split camion_even_sq camion_D_factor camion_controls camion_sporadic check_congruences analyze_census analyze2 analyze3 mersenne_camion; do python3 $s.py > $s.out; done
+clang -O3 -o camion_wieferich camion_wieferich.c && ./camion_wieferich 3 10000 > camion_wieferich_10000.out
+clang -O3 -o hmax_search hmax_search.c && ./hmax_search 13 40 7 > hmax_search_13.out; ./hmax_search 13 120 23 > hmax_search_13b.out; ./hmax_search 15 16 11 > hmax_search_15.out
+for s in camion_period camion_split camion_even_sq camion_D_factor camion_controls camion_sporadic check_congruences analyze_census analyze2 analyze3 mersenne_camion strong_tilings; do python3 $s.py > $s.out; done
+cd audit && sh run_audit.sh   # the independent audit, ~5.5 min
 ```
 
 ## 10. Status
 
 | item | status |
 |---|---|
-| quasi-periodicity, Euler criterion, rotation lemma, mod 3 / mod 5, Korselt criterion, families, count-test comparison, semicomplete analogue (THM-4746) | PROVED |
-| criterion vs direct, lists, zero classes, Camion–Wieferich ≤ 3000, Mersenne `k ≤ 64`, controls | FINITE-EXACT |
-| fixed-vertex lemma, circulant/Paley cycle congruences, `ρ_0` law, Wilson (THM-4747) | PROVED |
-| circulant and Paley data `n ≤ 23` | FINITE-EXACT |
-| Paley H-max iff `{3, 7, 11}` iff 2-transitive design (HYP-9357) | OPEN (data + CITED Kantor) |
-| Camion–Wieferich infinitude, Poisson classes, counting, mod 9, general principle (HYP-9358) | OPEN |
+| quasi-periodicity, Euler criterion, rotation lemma, mod 3 / mod 5, Korselt criterion, families, count-test comparison, semicomplete and connected-graph analogues, mod-`p²` lemma (THM-4746) | PROVED (audited; Lemmas B, C by the auditor) |
+| criterion vs direct, lists, zero classes, Camion–Wieferich ≤ 10000, Mersenne `k ≤ 64`, controls | FINITE-EXACT |
+| fixed-vertex lemma, circulant/Paley cycle congruences, `ρ_0` law, Wilson (THM-4747) | PROVED (audited) |
+| circulant and Paley data `n ≤ 23`; `n = 13` rigid record | FINITE-EXACT |
+| Paley H-max iff `{3, 7, 11}` iff 2-transitive design (HYP-9357) | OPEN (data + CITED Kantor; design part PROVED given Kantor) |
+| Camion–Wieferich infinitude, Poisson classes, counting, mod `p^k` for `k ≥ 3`, thresholds (HYP-9358) | OPEN |
 | §7 bridges | as typed there |
-| novelty of THM-4746 | NOT CHECKED beyond OEIS (no congruence recorded on A054946) |
+| novelty of THM-4746 | no prior statement found of the explicit law, the criterion, or Camion pseudoprimes; prior art for periodicity in principle (Specker–Blatter) and for connected graphs (Mani–Stones) credited |
+
+## 11. Audit
+
+The independent adversarial audit reproduced every number and checked every proof. Its report is [here](tournament_pseudoprimes_audit_20261021.md); its scripts are in `audit/`.
+
+**Corrections applied (MISTAKE-651).**
+* **Three MAJOR.**
+  * Connected graphs obey the law (Lemma C; Mani–Stones), so the "linear condensation is the mechanism" thesis is withdrawn.
+  * The Mersenne table had omitted `k = 6, 12` and miscalled `k = 59`.
+  * "`D` is not periodic mod `p²`" is replaced by Lemma B. Lemma B proves the mod-9 law, the `p²` equivalence and the cube-free criterion.
+* **Ten MINOR.**
+  * The class count is 262.
+  * The Kantor citation and the Sylow step of HYP-9357 were fixed.
+  * The equivalence "`p²` passes ⟺ `p² | D(p)`" is now proved.
+  * The pointer to the exotic list now points to §2, and the even sporadic members were added.
+  * The 142/163 even-case count was corrected.
+  * "3 and 5 test nothing" now reads "for odd `n`".
+  * The missing hypotheses `p ≥ 5`, `odd n` and `μ` odd were added.
+  * The "climbs towards e" remark was replaced.
+* **Credits added.** Specker–Blatter; Mani–Stones; Alon (1990) and Wormald; Adler–Alon–Ross; Peterson/Sagan and Anderson–Benjamin–Rouse for the rotation proofs; Gessel.
+* **Overclaim fixed.** "The triangle exactly separates the two tests" now reads "the universal residue sets differ by the triangle class".

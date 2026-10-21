@@ -1,0 +1,12 @@
+(A) strong semicomplete digraphs, brute force n=1..5: [1, 1, 15, 543, 51969]  recurrence: [1, 1, 15, 543, 51969]  equal: True
+(B) s3(m+p-1) = (3/p) s3(m) mod p, 1<=m<=4p: [(3, 0, True), (5, -1, True), (7, -1, True), (11, 1, True), (13, 1, True), (17, -1, True), (19, -1, True), (23, 1, True), (29, -1, True), (31, -1, True), (37, 1, True), (41, -1, True), (43, -1, True), (47, 1, True), (53, -1, True), (59, 1, True), (61, 1, True)]
+(C) connected labelled graphs 1..8 (A001187): [1, 1, 4, 38, 728, 26704, 1866256, 251548592]
+p=5: session test (anti)periods L<2p: [];  auditor: quasi-period p-1 with eps=-1 on m != 0,1 mod p (m<= 30): violations 0 of 18;  all m where it fails: [1]
+p=7: session test (anti)periods L<2p: [];  auditor: quasi-period p-1 with eps=+1 on m != 0,1 mod p (m<= 42): violations 0 of 30;  all m where it fails: [1]
+p=11: session test (anti)periods L<2p: [];  auditor: quasi-period p-1 with eps=-1 on m != 0,1 mod p (m<= 66): violations 0 of 54;  all m where it fails: [1]
+p=13: session test (anti)periods L<2p: [];  auditor: quasi-period p-1 with eps=-1 on m != 0,1 mod p (m<= 78): violations 0 of 66;  all m where it fails: [1]
+p=17: session test (anti)periods L<2p: [];  auditor: quasi-period p-1 with eps=+1 on m != 0,1 mod p (m<= 102): violations 0 of 90;  all m where it fails: [1]
+p=19: session test (anti)periods L<2p: [];  auditor: quasi-period p-1 with eps=-1 on m != 0,1 mod p (m<= 114): violations 0 of 102;  all m where it fails: [1]
+p=23: session test (anti)periods L<2p: [];  auditor: quasi-period p-1 with eps=+1 on m != 0,1 mod p (m<= 138): violations 0 of 126;  all m where it fails: [1]
+p=29: session test (anti)periods L<2p: [];  auditor: quasi-period p-1 with eps=-1 on m != 0,1 mod p (m<= 174): violations 0 of 162;  all m where it fails: [1]
+p=31: session test (anti)periods L<2p: [];  auditor: quasi-period p-1 with eps=+1 on m != 0,1 mod p (m<= 186): violations 0 of 174;  all m where it fails: [1]

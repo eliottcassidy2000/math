@@ -1,0 +1,11 @@
+p=3 eps=-1 K=F_p^2 g0=(0, 1): tau=iota(t) True, aug(t)=1 True, (z-1)^p=0 True, t invertible True, s(m)=-sum d_a (g0 a)^m for 1<=m<=14: True, sum_x d_x (m=0) = (1, 0), d_0 = (1, 0)
+p=5 eps=-1 K=F_p^2 g0=(0, 1): tau=iota(t) True, aug(t)=1 True, (z-1)^p=0 True, t invertible True, s(m)=-sum d_a (g0 a)^m for 1<=m<=22: True, sum_x d_x (m=0) = (1, 0), d_0 = (2, 0)
+p=7 eps=+1 K=F_p g0=(1, 0): tau=iota(t) True, aug(t)=1 True, (z-1)^p=0 True, t invertible True, s(m)=-sum d_a (g0 a)^m for 1<=m<=30: True, sum_x d_x (m=0) = (1, 0), d_0 = (5, 0)
+p=11 eps=-1 K=F_p^2 g0=(0, 1): tau=iota(t) True, aug(t)=1 True, (z-1)^p=0 True, t invertible True, s(m)=-sum d_a (g0 a)^m for 1<=m<=46: True, sum_x d_x (m=0) = (1, 0), d_0 = (2, 0)
+p=13 eps=-1 K=F_p^2 g0=(0, 1): tau=iota(t) True, aug(t)=1 True, (z-1)^p=0 True, t invertible True, s(m)=-sum d_a (g0 a)^m for 1<=m<=54: True, sum_x d_x (m=0) = (1, 0), d_0 = (2, 0)
+p=17 eps=+1 K=F_p g0=(1, 0): tau=iota(t) True, aug(t)=1 True, (z-1)^p=0 True, t invertible True, s(m)=-sum d_a (g0 a)^m for 1<=m<=70: True, sum_x d_x (m=0) = (1, 0), d_0 = (13, 0)
+p=19 eps=-1 K=F_p^2 g0=(0, 1): tau=iota(t) True, aug(t)=1 True, (z-1)^p=0 True, t invertible True, s(m)=-sum d_a (g0 a)^m for 1<=m<=78: True, sum_x d_x (m=0) = (1, 0), d_0 = (8, 0)
+p=23 eps=+1 K=F_p g0=(1, 0): tau=iota(t) True, aug(t)=1 True, (z-1)^p=0 True, t invertible True, s(m)=-sum d_a (g0 a)^m for 1<=m<=94: True, sum_x d_x (m=0) = (1, 0), d_0 = (19, 0)
+p=29 eps=-1 K=F_p^2 g0=(0, 1): tau=iota(t) True, aug(t)=1 True, (z-1)^p=0 True, t invertible True, s(m)=-sum d_a (g0 a)^m for 1<=m<=118: True, sum_x d_x (m=0) = (1, 0), d_0 = (26, 0)
+p=31 eps=+1 K=F_p g0=(1, 0): tau=iota(t) True, aug(t)=1 True, (z-1)^p=0 True, t invertible True, s(m)=-sum d_a (g0 a)^m for 1<=m<=126: True, sum_x d_x (m=0) = (1, 0), d_0 = (17, 0)
+ALL GROUP-RING CHECKS PASSED

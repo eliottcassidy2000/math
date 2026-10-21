@@ -1,0 +1,7 @@
+p=3 eps=-1: t_k = eps^k T(k) True; F_k = eps^k s(k) True; s(kp) = F_k mod p True  (k <= 8)
+p=5 eps=-1: t_k = eps^k T(k) True; F_k = eps^k s(k) True; s(kp) = F_k mod p True  (k <= 8)
+p=7 eps=+1: t_k = eps^k T(k) True; F_k = eps^k s(k) True; s(kp) = F_k mod p True  (k <= 8)
+p=11 eps=-1: t_k = eps^k T(k) True; F_k = eps^k s(k) True; s(kp) = F_k mod p True  (k <= 8)
+p=13 eps=-1: t_k = eps^k T(k) True; F_k = eps^k s(k) True; s(kp) = F_k mod p True  (k <= 8)
+brute force Z_6, x->x+2: invariant tournaments 32 (t_2 = 32), strong invariant 24 (F_2 exact = 24)
+ALL ROTATION-PROOF CHECKS PASSED

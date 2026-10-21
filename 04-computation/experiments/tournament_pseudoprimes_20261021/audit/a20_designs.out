@@ -1,0 +1,21 @@
+(1) Paley designs
+  q=7: |Aut(D(q))| = 168; stabiliser of point 0 has the other points in one orbit (2-transitive): True
+  q=11: |Aut(D(q))| = 660; stabiliser of point 0 has the other points in one orbit (2-transitive): True
+  q=19: |Aut(D(q))| = 171; stabiliser of point 0 has the other points in one orbit (2-transitive): False
+  q=23: |Aut(D(q))| = 253; stabiliser of point 0 has the other points in one orbit (2-transitive): False
+  q=27: |Aut(D(q))| = 1053; stabiliser of point 0 has the other points in one orbit (2-transitive): False
+  q=31: |Aut(D(q))| = 465; stabiliser of point 0 has the other points in one orbit (2-transitive): False
+  q=43: |Aut(D(q))| = 903; stabiliser of point 0 has the other points in one orbit (2-transitive): False
+  q=47: |Aut(D(q))| = 1081; stabiliser of point 0 has the other points in one orbit (2-transitive): False
+(2) Singer vs QR multiplier groups and triple-intersection invariants
+  q=7: Singer set size 3; |M(Singer)| = 3 [1, 2, 4]; |M(QR)| = 3
+     triple-intersection profile Singer [(0, 28), (1, 7)]
+     triple-intersection profile Paley  [(0, 28), (1, 7)]
+  q=31: Singer set size 15; |M(Singer)| = 5 [1, 2, 4, 8, 16]; |M(QR)| = 15
+     triple-intersection profile Singer [(3, 4340), (7, 155)]
+     triple-intersection profile Paley  [(2, 930), (3, 2015), (4, 1550)]
+  q=127: Singer set size 63; |M(Singer)| = 7 [1, 2, 4, 8, 16, 32, 64]; |M(QR)| = 63
+     triples through block 0: Singer [(15, 7812), (31, 63)]
+     triples through block 0: Paley  [(13, 1197), (14, 1890), (15, 1323), (16, 1890), (17, 1323), (18, 252)]
+(3) Fano plane automorphisms
+  |Aut(Fano)| = 168; |Stab(0)| = 24; element orders in Stab(0): [(1, 1), (2, 9), (3, 8), (4, 6)] (S_4 has [(1,1),(2,9),(3,8),(4,6)])

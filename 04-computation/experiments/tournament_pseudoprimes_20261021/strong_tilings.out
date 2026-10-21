@@ -1,0 +1,9 @@
+sigma(1..12)= [1, 0, 1, 5, 50, 903, 30773, 2032504, 264271477, 68184627441, 35047197032002, 35958496436958947]
+3 sigma(p) mod p = 1  sigma(p-1) mod p= 0  sigma(p+1) mod p= 2
+5 sigma(p) mod p = 0  sigma(p-1) mod p= 0  sigma(p+1) mod p= 3
+7 sigma(p) mod p = 1  sigma(p-1) mod p= 0  sigma(p+1) mod p= 5
+11 sigma(p) mod p = 1  sigma(p-1) mod p= 7  sigma(p+1) mod p= 5
+13 sigma(p) mod p = 12  sigma(p-1) mod p= 7  sigma(p+1) mod p= 6
+17 sigma(p) mod p = 15  sigma(p-1) mod p= 4  sigma(p+1) mod p= 16
+19 sigma(p) mod p = 13  sigma(p-1) mod p= 9  sigma(p+1) mod p= 18
+23 sigma(p) mod p = 12  sigma(p-1) mod p= 22  sigma(p+1) mod p= 5

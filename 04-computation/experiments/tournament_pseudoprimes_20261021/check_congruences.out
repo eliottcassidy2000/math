@@ -1,2 +1,2 @@
-rows checked 264 violations 0
+distinct circulant classes checked 262 violations 0
 composite n: classes passing naive C = A (mod n): {9: '0/4', 15: '0/16', 21: '0/88'}

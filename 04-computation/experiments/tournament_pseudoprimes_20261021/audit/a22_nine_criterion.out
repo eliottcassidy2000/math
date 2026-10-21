@@ -1,0 +1,2 @@
+9 | D(m) for all 3 <= m <= 1401 with 3 | m: True
+n <= 2500 with 9 || n and the rest squarefree (odd and even): criterion without the 9-part agrees 170, disagrees 0

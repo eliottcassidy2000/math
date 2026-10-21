@@ -1,7 +1,9 @@
-p=5: semicomplete strong quasi-period (3/p)=-1: True;  connected graphs: (anti)periods L<2p: []
-p=7: semicomplete strong quasi-period (3/p)=-1: True;  connected graphs: (anti)periods L<2p: []
-p=11: semicomplete strong quasi-period (3/p)=+1: True;  connected graphs: (anti)periods L<2p: []
-p=13: semicomplete strong quasi-period (3/p)=+1: True;  connected graphs: (anti)periods L<2p: []
-p=17: semicomplete strong quasi-period (3/p)=-1: True;  connected graphs: (anti)periods L<2p: []
-p=19: semicomplete strong quasi-period (3/p)=-1: True;  connected graphs: (anti)periods L<2p: []
-p=23: semicomplete strong quasi-period (3/p)=+1: True;  connected graphs: (anti)periods L<2p: []
+p=5:  semicomplete (3/p)=-1 from m>=1: True  connected (2/p) from m>=2: True, from m>=1: False  rooted m*s(m) period p-1: False  rooted period p(p-1): True
+p=7:  semicomplete (3/p)=-1 from m>=1: True  connected (2/p) from m>=2: True, from m>=1: False  rooted m*s(m) period p-1: False  rooted period p(p-1): True
+p=11:  semicomplete (3/p)=+1 from m>=1: True  connected (2/p) from m>=2: True, from m>=1: False  rooted m*s(m) period p-1: False  rooted period p(p-1): True
+p=13:  semicomplete (3/p)=+1 from m>=1: True  connected (2/p) from m>=2: True, from m>=1: False  rooted m*s(m) period p-1: False  rooted period p(p-1): True
+p=17:  semicomplete (3/p)=-1 from m>=1: True  connected (2/p) from m>=2: True, from m>=1: False  rooted m*s(m) period p-1: False
+p=19:  semicomplete (3/p)=-1 from m>=1: True  connected (2/p) from m>=2: True, from m>=1: False  rooted m*s(m) period p-1: False
+p=23:  semicomplete (3/p)=+1 from m>=1: True  connected (2/p) from m>=2: True, from m>=1: False  rooted m*s(m) period p-1: False
+p=29:  semicomplete (3/p)=-1 from m>=1: True  connected (2/p) from m>=2: True, from m>=1: False  rooted m*s(m) period p-1: False
+p=31:  semicomplete (3/p)=-1 from m>=1: True  connected (2/p) from m>=2: True, from m>=1: False  rooted m*s(m) period p-1: False

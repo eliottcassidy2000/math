@@ -1,21 +1,32 @@
 ---
 id: HYP-9358
-title: "Open laws for Camion pseudoprimes (THM-4746): (a) the Camion-Wieferich primes (s(p) = 2^((p-1)/2) mod p^2, equivalently p^2 a Camion pseudoprime) are infinite in number but of density zero, like Wieferich primes (only 3 and 13 below 3000); (b) the sporadic zero classes {r >= 4 : p | s(r) - c(r)} are Poisson with mean (p-4)/p; (c) the Camion pseudoprimes up to x are 5x/(6 log x)(1 + o(1)), all but o(x/log x) of them of the form 2p or 3p; (d) modulo 9, s(m) = 2^((m-1)/2) for every odd m not = 1 mod 6 (or m = 1), and fails for every m = 1 mod 6 with m >= 7; (e) the quasi-periodicity of THM-4746 holds for every class of labelled structures whose components are linearly ordered and whose total count is a finite combination of exponentials modulo p"
+title: "Open laws for Camion pseudoprimes (THM-4746). (a) The Camion-Wieferich primes, with s(p) = 2^((p-1)/2) (mod p^2), equivalently (THM-4746 (7)) p^2 a Camion pseudoprime, are infinite in number but of density zero, like Wieferich primes (only 3 and 13 below 10000). (b) The sporadic zero classes {r >= 4 : p | s(r) - c(r)} are Poisson with mean (p-4)/p. (c) The Camion pseudoprimes up to x number 5x/(6 log x)(1 + o(1)), all but o(x/log x) of them of the form 2p or 3p. (d') For every odd prime p and k >= 1, s(m + phi(p^k)) = (2/p) s(m) (mod p^k) for all m >= 2k - 1 (proved for k = 1, 2). (e) Thresholds: for each class of labelled structures obtained from 2^C(m,2) by Hurwitz inversion and shifts, determine the exact index from which the mod-p law holds."
 status: >
-  OPEN. FINITE-EXACT evidence: (a) p <= 3000 (camion_list_20000.out) and the agreement of the two forms for
-  p <= 1500 (camion_verify.out); (b) the 75 primes 7 <= p <= 400: observed 31, 25, 13, 4, 2, 0 primes with
-  0..5 sporadic classes against the Poisson prediction 29.1, 27.5, 13.0, 4.1, 1.0, 0.2 (camion_sporadic.out);
-  (c) up to 20000: 2145 squarefree Camion pseudoprimes, of which 857 are 3p and 1228 are 2p, leaving 60 exotic
-  ones (37 odd, 23 even); (d) odd m <= 700; (e) proved for tournaments (THM-4746) and strong semicomplete digraphs
-  (THM-4746 (7)); a counterexample would be a linearly ordered decomposition whose total is not quasi-periodic.
+  OPEN. FINITE-EXACT evidence:
+  - (a): p <= 10000 (camion_wieferich_10000.out); the equivalence with "p^2 passes" is PROVED by Lemma B of the audit,
+    THM-4746 (7).
+  - (b): the 75 primes 7 <= p <= 400. Observed 31, 25, 13, 4, 2, 0 primes with 0..5 sporadic classes, against the
+    Poisson prediction 29.1, 27.5, 13.0, 4.1, 1.0, 0.2 (camion_sporadic.out; reproduced exactly by the audit).
+  - (c): up to 20000 there are 2145 squarefree Camion pseudoprimes. Of these 857 are 3p and 1228 are 2p, leaving
+    60 exotic ones (37 odd, 23 even).
+  - (d'): k = 3 for p <= 7 and k = 4 for p = 3 (audit a17b). k = 1 is THM-4746 (1); k = 2 is the audit's Lemma B.
+    The former (d), the mod-9 law, is now PROVED (THM-4746 (7)).
+  - (e): the thresholds known so far are m >= 1 for strong tournaments and strong semicomplete digraphs, and m >= 2
+    for connected graphs (mod p). Mod p^2 they are m >= 3 for strong tournaments; for connected graphs the audit's a17
+    observed m >= 3 as well.
+  AUDITED 2026-10-21 (MISTAKE-651). The pre-audit (e) used connected graphs as a hostile control; they obey the law.
+  The pre-audit (d) is now a theorem.
 session: mac-mini-2026-10-21-fanopsp
 source: 05-knowledge/results/tournament_pseudoprimes_camion_fermat_20261021.md
 related:
   - 01-canon/theorems/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md
+  - 05-knowledge/results/tournament_pseudoprimes_audit_20261021.md (Lemmas B and C)
 scripts:
   - 04-computation/experiments/tournament_pseudoprimes_20261021/camion_sporadic.py (+ .out)
   - 04-computation/experiments/tournament_pseudoprimes_20261021/camion_list.c (+ camion_list_20000.out)
+  - 04-computation/experiments/tournament_pseudoprimes_20261021/camion_wieferich.c (+ camion_wieferich_10000.out)
   - 04-computation/experiments/tournament_pseudoprimes_20261021/camion_verify.c (+ camion_verify.out)
+  - 04-computation/experiments/tournament_pseudoprimes_20261021/audit/a17_mod_p2_quasiperiod.py, a17b_mod_pk_quasiperiod.py
 ---
 
 # HYP-9358 — open laws for Camion pseudoprimes
@@ -25,8 +36,9 @@ scripts:
 **(a) Camion–Wieferich primes.**
 
 * The *Camion quotient* `q_C(p) = (s(p) − 2^((p−1)/2))/p mod p` is the analogue of the Fermat quotient.
-* Its zeros below 3000 are `p = 3` (`D(3) = 0` exactly) and `p = 13` (`13² | D(13)`).
-* The random model predicts about `Σ 1/p ≈ log log x` zeros up to `x`. That is infinitely many, but very sparse: the same heuristic as for the Wieferich primes 1093 and 3511.
+* Its zeros below 10000 are `p = 3` (`D(3) = 0` exactly) and `p = 13` (`13² ∥ D(13)`).
+* `q_C` shows no relation to the Euler quotient of 2 (scratch comparison for `p ≤ 139`). So Camion–Wieferich primes are not Wieferich primes in disguise.
+* The random model predicts about `log log x` zeros up to `x`. That is infinitely many, but very sparse: the same heuristic as for the Wieferich primes 1093 and 3511.
 * Curiosity: `3511 | D(15)`.
 
 **(b) Sporadic classes.** Besides the universal classes `{1, 2, 3}`, a prime `p` has the classes `r ∈ [4, p−1]` with `p | D(r)`.
@@ -36,25 +48,23 @@ scripts:
 
 **(c) Counting.** The families `2p` and `3p` already give `~5x/(6 log x)`.
 
-* The exotic Camion pseudoprimes are the Carmichael numbers, the Chernick-type `3b(3b−2)`, mixed `{1,2,3}`-residue products, and products using sporadic classes (`1239, 3765, 8401, 12019, 14317` below 20000).
+* The exotic Camion pseudoprimes are:
+  * the Carmichael numbers;
+  * the Chernick-type `3b(3b−2)`;
+  * mixed `{1, 2, 3}`-residue products;
+  * products using sporadic classes: odd `1239, 3765, 8401, 12019, 14317` and even `186, 530, 1898, 3290, 7202, 8282, 17066` below 20000.
 * They are conjectured to be `O(x^θ)` for some `θ < 1`.
 
-**(d) Modulo 9.** The bad odd classes are exactly `m ≡ 1 (mod 6)`, `m ≥ 7`.
+**(d′) Higher prime powers.** Lemma B (`k = 2`) lifts to `Z_p` with first and second derivatives of exponentials. For `p^k` one expects derivatives up to order `2(k−1)`, giving the threshold `m ≥ 2k − 1`. The tested cases fit.
 
-* `D` is not periodic modulo `p²` with any period dividing `2p(p−1)`. So a proof needs a mod-`p²` refinement of the group-ring argument, where binomial coefficients are no longer governed by Lucas' theorem alone.
-* If (d) holds, the factor `9` never obstructs: every odd `n` divisible by `9` passes modulo 9, because `n ≡ 3 (mod 6)`.
+**(e) Thresholds.**
 
-**(e) General principle.**
-
-* Positive instances: tournaments, and semicomplete digraphs with multiplier `(3/p)`.
-* Hostile control: connected graphs, whose components are unordered, have no quasi-period.
-* Candidate next instances:
-  * tournaments with a marked vertex;
-  * ordered set partitions weighted by `a^C(block,2)`;
-  * `k`-hypertournaments if they have a linear condensation.
+* The audit observed (`a10`, `a17`) that both the mod-`p` and the mod-`p²` laws for connected graphs start at small indices.
+* Conjecture: for any finite combination of inversions and shifts the threshold is bounded by the number of shifts plus the power of `p`.
+* **Hostile control.** Rooted counts such as `m·s(m)` are genuinely not `(p−1)`-quasi-periodic. Their quasi-period is `p(p−1)` (`camion_controls.out`).
 
 ## What would refute
 
 * (a): a proof that the Camion quotient vanishes only finitely often.
 * (b): a structured excess of sporadic classes, e.g. a residue `r ≥ 4` that is a zero class for a positive proportion of primes.
-* (d): an odd `m ≡ 3, 5 (mod 6)` with `D(m) ≢ 0 (mod 9)`.
+* (d′): a failure of `s(m + φ(p³)) ≡ (2/p)s(m) (mod p³)` for some `m ≥ 5`.

@@ -1,12 +1,18 @@
 ---
 id: THM-4747
-title: "Hamiltonian cycles and paths under (anti-)automorphisms: Fermat and Wilson congruences. (1) A nontrivial automorphism that maps a directed Hamiltonian cycle to itself acts semiregularly; so an automorphism of prime order q with a fixed vertex forces q | C(T), where C(T) is the number of directed Hamiltonian cycles. (2) For a circulant tournament Cay(Z_p, S), p prime, with multiplier stabilizer M_S = {a : aS = S} of order mu: C(T) = (p-1)/2 (mod p*mu); for the Paley tournament, C(P_p) = (p-1)/2 (mod p(p-1)/2). (3) The number rho_0 of Hamiltonian paths reversed by the reflection x -> -x satisfies rho_0 = mu (mod 2 mu); in particular it is odd, and every tournament with an involutory anti-automorphism has an odd number of Hamiltonian paths reversed by it. (4) Summing over all labelled tournaments on Z_p recovers Wilson's theorem. (5) FINITE-EXACT: all 264 circulant classes of odd order 3 <= n <= 23 satisfy (2)-(3); at the composite orders 9, 15, 21 no circulant class satisfies the naive prime-order congruence C = #(S cap Z_n^*) (mod n) (0/4, 0/16, 0/88). Exact Paley data: (H, C, H/|Aut|, rho_0) = (3, 1, 1, 1), (189, 24, 9, 9), (95095, 5505, 1729, 185), (1172695746915, 34358763933, 6857869865, 573057), (15760206976379349, 374127973957716, 62293308207033, 63871533) for q = 3, 7, 11, 19, 23."
+title: "Hamiltonian cycles and paths under (anti-)automorphisms: Fermat and Wilson congruences. (1) A nontrivial automorphism that maps a directed Hamiltonian cycle to itself acts semiregularly; so an automorphism of prime order q with a fixed vertex forces q | C(T), where C(T) is the number of directed Hamiltonian cycles. (2) For a circulant tournament Cay(Z_p, S), p prime, with multiplier stabilizer M_S = {a : aS = S} of order mu: C(T) = (p-1)/2 (mod p*mu); for the Paley tournament, C(P_p) = (p-1)/2 (mod p(p-1)/2). (3) The number rho_0 of Hamiltonian paths reversed by the reflection x -> -x satisfies rho_0 = mu (mod 2 mu); in particular it is odd (mu is odd, since M_S is a subgroup of the cyclic group Z_p^* not containing -1), and every tournament with an involutory anti-automorphism has an odd number of Hamiltonian paths reversed by it. (4) Summing over all labelled tournaments on Z_p recovers Wilson's theorem (a tournament-weighted form of the classical rotation proof). (5) FINITE-EXACT: all 262 circulant classes of odd order 3 <= n <= 23 satisfy (2)-(3); at the composite orders 9, 15, 21 no circulant class satisfies the naive prime-order congruence C = #(S cap Z_n^*) (mod n) (0/4, 0/16, 0/88). Exact Paley data: (H, C, H/|Aut|, rho_0) = (3, 1, 1, 1), (189, 24, 9, 9), (95095, 5505, 1729, 185), (1172695746915, 34358763933, 6857869865, 573057), (15760206976379349, 374127973957716, 62293308207033, 63871533) for q = 3, 7, 11, 19, 23."
 status: >
-  PROVED: statements 1-4 (elementary group actions; |Aut| | H is the classical free action, LEM-003). FINITE-EXACT:
+  PROVED: statements 1-4 (elementary group actions; |Aut| | H is the classical free action, LEM-003). AUDITED
+  2026-10-21 (independent audit, MISTAKE-651): proofs and every datum reproduced (brute force over all permutations
+  for every connection set n <= 11, subset DP to n = 23, all four Paley values); one correction, the class count is
+  262 (two Paley rows had been counted twice); the parity remark now states why mu is odd. FINITE-EXACT:
   statement 5, from 04-computation/experiments/tournament_pseudoprimes_20261021/circ_counts.c (subset DP from vertex 0,
   64-bit counts; H(P_11) = 95095 and H(P_7) = 189 reproduce A038375, H(C_3[C_3]) = 3159 and the n <= 9 values reproduce
   the gentourng census tour_census.c). NOT CHECKED: novelty (statements 1-4 are routine orbit counting and are recorded
   because the repo had not stated them; the Paley cycle counts beyond q = 11 are not checked against the literature).
+  CREDIT: the un-weighted rotation proofs of Fermat and Wilson are classical (Peterson 1872, via B. E. Sagan,
+  Congruences via abelian groups, J. Number Theory 20 (1985); Anderson-Benjamin-Rouse, Amer. Math. Monthly 112 (2005);
+  Golomb's necklace proof).
 session: mac-mini-2026-10-21-fanopsp
 source: 05-knowledge/results/tournament_pseudoprimes_camion_fermat_20261021.md
 scripts:
@@ -71,6 +77,8 @@ Hence
 
     ρ_0 ≡ μ (mod 2μ).
 
+`μ` is odd, because `M_S` is a subgroup of the cyclic group `Z_p^*` that does not contain `−1` (else `S = −S`); so `ρ_0` is odd.
+
 In general, for any tournament with an involutory anti-automorphism `σ`, `P ↦ σ(P)^rev` is an involution on the odd set of Hamiltonian paths. So `σ` reverses an odd number of them.
 
 ## 4. Wilson's theorem from tournaments (PROVED; a remark)
@@ -82,7 +90,7 @@ In general, for any tournament with an involutory anti-automorphism `σ`, `P ↦
 
 **Conclude.** Hence `(p−1)!·2^(C(p,2)−p) ≡ (p−1)·2^((p−3)/2) (mod p)`. Fermat gives `2^(C(p,2)−p) ≡ 2^((p−3)/2)`, and so `(p−1)! ≡ −1`.
 
-* This is the classical necklace proof, weighted by tournaments.
+* This is the classical rotation (necklace) proof of Wilson (Peterson; Sagan 1985; Anderson–Benjamin–Rouse 2005), weighted by tournaments; the weighting cancels by Fermat.
 * For composite `n > 4`, `(n−1)! ≡ 0 (mod n)`, so the summed cycle count has no pseudoprimes. This contrasts with the strong-tournament count of THM-4746.
 
 ## 5. Computations (FINITE-EXACT)
@@ -96,9 +104,9 @@ In general, for any tournament with an involutory anti-automorphism `σ`, `P ↦
 
 `check_congruences.out`:
 
-* Every one of the 264 classes has `H ≡ 0 (mod n)` and `ρ_0` odd.
+* Every one of the 262 classes (264 rows: `P_19` and `P_23` appear twice) has `H ≡ 0 (mod n)` and `ρ_0` odd.
 * At prime `n`, every class satisfies `H ≡ 0 (mod nμ)`, `C ≡ (n−1)/2 (mod nμ)` and `ρ_0 ≡ μ (mod 2μ)`.
-* At `n = 9, 15, 21`, no class satisfies `C ≡ A (mod n)`. The exact congruence there is the necklace one, `Σ_(e|n) μ(e) F(e) ≡ 0 (mod n)`, where `F(e)` counts the cycles fixed by the rotation subgroup of order `e`.
+* At `n = 9, 15, 21`, no class satisfies `C ≡ A (mod n)`. The exact congruence there is the necklace one, `Σ_(e|n) μ_Möb(e) F(e) ≡ 0 (mod n)` (`μ_Möb` the Möbius function), where `F(e)` counts the cycles fixed by the rotation subgroup of order `e`.
 
 **Paley data.**
 

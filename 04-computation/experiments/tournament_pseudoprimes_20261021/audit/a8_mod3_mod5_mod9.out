@@ -1,0 +1,7 @@
+mod 3: m <= 200 violating s(m) = sin-coefficient (odd: (-1)^((m-1)/2), even: 0): [] ; odd m with s != 2^((m-1)/2): []
+mod 5: odd m <= 200 with s(m) != 2^((m-1)/2): []
+mod 5: m = 2 mod 4 with s(m) != 0: [] ; residues of s(m) mod 5 for 4|m: [1, 4] (+-24 = +-4 mod 5)
+mod 9: odd m <= 1401 with D(m) != 0 mod 9: count 233
+   all = 1 mod 6 and >= 7: True ; every m = 1 mod 6, 7 <= m <= 1401 is bad: True
+   residue of D(m) mod 9 on the bad class, by m mod 18 / mod 54: [(1, 3), (1, 6), (7, 3), (7, 6), (13, 3), (13, 6), (19, 3), (19, 6), (25, 3), (25, 6), (31, 3), (31, 6), (37, 3), (37, 6), (43, 3), (43, 6), (49, 3), (49, 6)]
+mod 9: even m <= 60, s(m) mod 9: [0, 6, 0, 3, 3, 0, 6, 6, 0, 3, 3, 0, 6, 6, 0, 3, 3, 0, 6, 6, 0, 3, 3, 0, 6, 6, 0, 3, 3, 0]

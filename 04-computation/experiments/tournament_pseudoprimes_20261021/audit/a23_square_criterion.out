@@ -1,0 +1,2 @@
+composite n <= 2500, odd part cube-free but not squarefree: criterion agrees 346, disagrees 0
+passing examples: [9, 18, 36, 45, 63, 72, 90, 144, 169, 288, 306, 315, 576, 693, 738, 792, 819, 1035, 1116, 1152, 1224, 1422, 1683, 1935, 1953, 2070, 2304]

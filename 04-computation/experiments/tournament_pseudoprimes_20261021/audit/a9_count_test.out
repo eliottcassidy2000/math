@@ -1,0 +1,22 @@
+odd composite n <= 20000: count test <=> ord_n(2) | (n-1)^2/2 mismatches: 0
+odd composite count-test passes <= 1200: [85, 133, 341, 481, 511, 561, 645, 949, 1105]
+   of these NOT base-2 pseudoprimes: [85, 133, 481, 511, 949]
+n=85 {5: 1, 17: 1}: count test True, base-2 psp False, ord_n(2)=8, strong (Camion) test False
+n=133 {7: 1, 19: 1}: count test True, base-2 psp False, ord_n(2)=18, strong (Camion) test False
+n=481 {13: 1, 37: 1}: count test True, base-2 psp False, ord_n(2)=36, strong (Camion) test False
+n=511 {7: 1, 73: 1}: count test True, base-2 psp False, ord_n(2)=9, strong (Camion) test False
+n=949 {13: 1, 73: 1}: count test True, base-2 psp False, ord_n(2)=36, strong (Camion) test False
+n=341 {11: 1, 31: 1}: count test True, base-2 psp True, ord_n(2)=10, strong (Camion) test False
+n=561 {3: 1, 11: 1, 17: 1}: count test True, base-2 psp True, ord_n(2)=40, strong (Camion) test True
+n=645 {3: 1, 5: 1, 43: 1}: count test True, base-2 psp True, ord_n(2)=28, strong (Camion) test False
+n=1105 {5: 1, 13: 1, 17: 1}: count test True, base-2 psp True, ord_n(2)=24, strong (Camion) test True
+n=21 {3: 1, 7: 1}: count test False, base-2 psp False, ord_n(2)=6, strong (Camion) test True
+n=1023 {3: 1, 11: 1, 31: 1}: count test False, base-2 psp False, ord_n(2)=10, strong (Camion) test True
+n=1729 {7: 1, 13: 1, 19: 1}: count test True, base-2 psp True, ord_n(2)=36, strong (Camion) test True
+r=1: 2^((r-1)^2/2)-1 = 0 = 0
+r=3: 2^((r-1)^2/2)-1 = 3 = {3: 1}
+r=5: 2^((r-1)^2/2)-1 = 255 = {3: 1, 5: 1, 17: 1}
+r=7: 2^((r-1)^2/2)-1 = 262143 = {3: 3, 7: 1, 19: 1, 73: 1}
+m=3: rotation classes all 4 vs (T+(m-1)c)/m = 4; strong 2 vs (s+(m-1)c)/m = 2
+m=5: rotation classes all 208 vs (T+(m-1)c)/m = 208; strong 112 vs (s+(m-1)c)/m = 112
+m=7: rotation classes all 299600 vs (T+(m-1)c)/m = 299600; strong 239648 vs (s+(m-1)c)/m = 239648
