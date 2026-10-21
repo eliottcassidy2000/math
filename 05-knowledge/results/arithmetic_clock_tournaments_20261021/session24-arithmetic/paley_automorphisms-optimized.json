@@ -1,0 +1,14 @@
+[
+  {
+    "p": 11,
+    "fix0_automorphisms": 5,
+    "full_automorphisms": 55,
+    "nodes": 52
+  },
+  {
+    "p": 31,
+    "fix0_automorphisms": 15,
+    "full_automorphisms": 465,
+    "nodes": 572
+  }
+]

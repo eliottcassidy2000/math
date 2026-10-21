@@ -1,0 +1,32 @@
+{
+  "finite_controls": [
+    {
+      "m": 9,
+      "n": 5,
+      "factor_pairs": 64,
+      "prime_count": 64,
+      "proper_closure_sizes": []
+    },
+    {
+      "m": 3,
+      "n": 5,
+      "factor_pairs": 8,
+      "prime_count": 8,
+      "proper_closure_sizes": []
+    },
+    {
+      "m": 3,
+      "n": 3,
+      "factor_pairs": 4,
+      "prime_count": 0,
+      "proper_closure_sizes": [
+        3
+      ]
+    }
+  ],
+  "noncoprime_hostile_diagonal": [
+    0,
+    4,
+    8
+  ]
+}

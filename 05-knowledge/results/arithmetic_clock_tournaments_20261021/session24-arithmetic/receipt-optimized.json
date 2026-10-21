@@ -1,0 +1,613 @@
+{
+  "Fano_H_histogram": {
+    "171": 112,
+    "189": 16
+  },
+  "Fano_divisor_labels": {
+    "1": 2,
+    "2": 3,
+    "3": 6,
+    "4": 11,
+    "5": 22,
+    "6": 33,
+    "7": 66
+  },
+  "Fano_lines": {
+    "1": [
+      3,
+      11,
+      33
+    ],
+    "2": [
+      2,
+      11,
+      22
+    ],
+    "3": [
+      6,
+      11,
+      66
+    ],
+    "4": [
+      2,
+      3,
+      6
+    ],
+    "5": [
+      3,
+      22,
+      66
+    ],
+    "6": [
+      2,
+      33,
+      66
+    ],
+    "7": [
+      6,
+      22,
+      33
+    ]
+  },
+  "Fano_syndrome_histogram": {
+    "0": 16,
+    "1": 16,
+    "2": 16,
+    "3": 16,
+    "4": 16,
+    "5": 16,
+    "6": 16,
+    "7": 16
+  },
+  "automorphism_subgroup_order": 25575,
+  "bracket_escape_control_under10000": [
+    2,
+    3,
+    11
+  ],
+  "checks": 745,
+  "clock_sections": {
+    "2": {
+      "full": {
+        "flipped_orbits": 1,
+        "orbit_lengths": {
+          "5": 6,
+          "10": 31
+        },
+        "section_count": 0
+      },
+      "units": {
+        "flipped_orbits": 0,
+        "orbit_lengths": {
+          "10": 30
+        },
+        "section_count": 32768
+      }
+    },
+    "3": {
+      "full": {
+        "flipped_orbits": 1,
+        "orbit_lengths": {
+          "5": 2,
+          "30": 11
+        },
+        "section_count": 0
+      },
+      "units": {
+        "flipped_orbits": 0,
+        "orbit_lengths": {
+          "30": 10
+        },
+        "section_count": 32
+      }
+    },
+    "4": {
+      "full": {
+        "flipped_orbits": 0,
+        "orbit_lengths": {
+          "5": 68
+        },
+        "section_count": 17179869184
+      },
+      "units": {
+        "flipped_orbits": 0,
+        "orbit_lengths": {
+          "5": 60
+        },
+        "section_count": 1073741824
+      }
+    },
+    "81": {
+      "full": {
+        "flipped_orbits": 0,
+        "orbit_lengths": {
+          "5": 2,
+          "15": 22
+        },
+        "section_count": 4096
+      },
+      "units": {
+        "flipped_orbits": 0,
+        "orbit_lengths": {
+          "15": 20
+        },
+        "section_count": 1024
+      }
+    }
+  },
+  "isomorphism_class_count": 4,
+  "joint_group_order": 75,
+  "joint_orbit_pairs": [
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      5,
+      7
+    ]
+  ],
+  "joint_orbits": [
+    [
+      1,
+      75
+    ],
+    [
+      2,
+      75
+    ],
+    [
+      3,
+      75
+    ],
+    [
+      6,
+      75
+    ],
+    [
+      11,
+      15
+    ],
+    [
+      31,
+      5
+    ],
+    [
+      33,
+      15
+    ],
+    [
+      62,
+      5
+    ]
+  ],
+  "joint_tournaments": [
+    {
+      "CRT_coset_module": {
+        "11": false,
+        "31": false
+      },
+      "arc_common_out_profile": {
+        "82": 90,
+        "84": 75,
+        "137": 5
+      },
+      "bits": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pair_closure_sizes": {
+        "341": 340
+      },
+      "prime": true
+    },
+    {
+      "CRT_coset_module": {
+        "11": false,
+        "31": false
+      },
+      "arc_common_out_profile": {
+        "82": 90,
+        "84": 75,
+        "137": 5
+      },
+      "bits": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "pair_closure_sizes": {
+        "341": 340
+      },
+      "prime": true
+    },
+    {
+      "CRT_coset_module": {
+        "11": false,
+        "31": true
+      },
+      "arc_common_out_profile": {
+        "82": 165,
+        "167": 5
+      },
+      "bits": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "pair_closure_sizes": {
+        "11": 10,
+        "341": 330
+      },
+      "prime": false
+    },
+    {
+      "CRT_coset_module": {
+        "11": false,
+        "31": true
+      },
+      "arc_common_out_profile": {
+        "82": 165,
+        "167": 5
+      },
+      "bits": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "pair_closure_sizes": {
+        "11": 10,
+        "341": 330
+      },
+      "prime": false
+    },
+    {
+      "CRT_coset_module": {
+        "11": true,
+        "31": false
+      },
+      "arc_common_out_profile": {
+        "77": 155,
+        "162": 15
+      },
+      "bits": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "pair_closure_sizes": {
+        "31": 30,
+        "341": 310
+      },
+      "prime": false
+    },
+    {
+      "CRT_coset_module": {
+        "11": false,
+        "31": false
+      },
+      "arc_common_out_profile": {
+        "77": 80,
+        "79": 75,
+        "152": 15
+      },
+      "bits": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "pair_closure_sizes": {
+        "341": 340
+      },
+      "prime": true
+    },
+    {
+      "CRT_coset_module": {
+        "11": true,
+        "31": false
+      },
+      "arc_common_out_profile": {
+        "77": 155,
+        "162": 15
+      },
+      "bits": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "pair_closure_sizes": {
+        "31": 30,
+        "341": 310
+      },
+      "prime": false
+    },
+    {
+      "CRT_coset_module": {
+        "11": false,
+        "31": false
+      },
+      "arc_common_out_profile": {
+        "77": 80,
+        "79": 75,
+        "152": 15
+      },
+      "bits": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "pair_closure_sizes": {
+        "341": 340
+      },
+      "prime": true
+    },
+    {
+      "CRT_coset_module": {
+        "11": false,
+        "31": false
+      },
+      "arc_common_out_profile": {
+        "77": 80,
+        "79": 75,
+        "152": 15
+      },
+      "bits": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "pair_closure_sizes": {
+        "341": 340
+      },
+      "prime": true
+    },
+    {
+      "CRT_coset_module": {
+        "11": true,
+        "31": false
+      },
+      "arc_common_out_profile": {
+        "77": 155,
+        "162": 15
+      },
+      "bits": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "pair_closure_sizes": {
+        "31": 30,
+        "341": 310
+      },
+      "prime": false
+    },
+    {
+      "CRT_coset_module": {
+        "11": false,
+        "31": false
+      },
+      "arc_common_out_profile": {
+        "77": 80,
+        "79": 75,
+        "152": 15
+      },
+      "bits": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "pair_closure_sizes": {
+        "341": 340
+      },
+      "prime": true
+    },
+    {
+      "CRT_coset_module": {
+        "11": true,
+        "31": false
+      },
+      "arc_common_out_profile": {
+        "77": 155,
+        "162": 15
+      },
+      "bits": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "pair_closure_sizes": {
+        "31": 30,
+        "341": 310
+      },
+      "prime": false
+    },
+    {
+      "CRT_coset_module": {
+        "11": false,
+        "31": true
+      },
+      "arc_common_out_profile": {
+        "82": 165,
+        "167": 5
+      },
+      "bits": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "pair_closure_sizes": {
+        "11": 10,
+        "341": 330
+      },
+      "prime": false
+    },
+    {
+      "CRT_coset_module": {
+        "11": false,
+        "31": true
+      },
+      "arc_common_out_profile": {
+        "82": 165,
+        "167": 5
+      },
+      "bits": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "pair_closure_sizes": {
+        "11": 10,
+        "341": 330
+      },
+      "prime": false
+    },
+    {
+      "CRT_coset_module": {
+        "11": false,
+        "31": false
+      },
+      "arc_common_out_profile": {
+        "82": 90,
+        "84": 75,
+        "137": 5
+      },
+      "bits": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "pair_closure_sizes": {
+        "341": 340
+      },
+      "prime": true
+    },
+    {
+      "CRT_coset_module": {
+        "11": false,
+        "31": false
+      },
+      "arc_common_out_profile": {
+        "82": 90,
+        "84": 75,
+        "137": 5
+      },
+      "bits": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "pair_closure_sizes": {
+        "341": 340
+      },
+      "prime": true
+    }
+  ],
+  "normal_forms": [
+    {
+      "arc_common_out_profile": {
+        "77": 155,
+        "162": 15
+      },
+      "axis_sign": 1,
+      "dominant_prime": 11,
+      "other_prime": 31,
+      "prime": false
+    },
+    {
+      "arc_common_out_profile": {
+        "77": 80,
+        "79": 75,
+        "152": 15
+      },
+      "axis_sign": -1,
+      "dominant_prime": 11,
+      "other_prime": 31,
+      "prime": true
+    },
+    {
+      "arc_common_out_profile": {
+        "82": 165,
+        "167": 5
+      },
+      "axis_sign": 1,
+      "dominant_prime": 31,
+      "other_prime": 11,
+      "prime": false
+    },
+    {
+      "arc_common_out_profile": {
+        "82": 90,
+        "84": 75,
+        "137": 5
+      },
+      "axis_sign": -1,
+      "dominant_prime": 31,
+      "other_prime": 11,
+      "prime": true
+    }
+  ],
+  "orders": {
+    "11": {
+      "2": 10,
+      "3": 5,
+      "4": 5,
+      "81": 5
+    },
+    "31": {
+      "2": 5,
+      "3": 30,
+      "4": 5,
+      "81": 15
+    },
+    "341": {
+      "2": 10,
+      "3": 30,
+      "4": 5,
+      "81": 15
+    }
+  },
+  "signed_group_order_prime_forms": 51150,
+  "signed_three_corner_stabilizer": [
+    [
+      1,
+      0
+    ]
+  ],
+  "status": "FINITE-EXACT controls; elementary proofs in README",
+  "three_corner_stabilizer": [
+    [
+      1,
+      0
+    ]
+  ],
+  "three_corner_subset": [
+    0,
+    155,
+    187
+  ]
+}
