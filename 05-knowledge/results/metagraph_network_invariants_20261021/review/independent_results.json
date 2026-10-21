@@ -1,0 +1,103 @@
+{
+  "atlas_pin_enforced": true,
+  "explicit_checks": 109301,
+  "generic_component_cases": 888,
+  "independent_methods": [
+    "full-adjacency permutation classifier through n=5",
+    "C/R line and pair reconstruction through n=7",
+    "integer Bareiss determinants",
+    "exact finite-difference tree polynomial and Sturm negative-root check",
+    "full literal blue incidence rank",
+    "Fraction Gauss-Jordan voltage solves through n=6",
+    "group exponent from inverse denominators"
+  ],
+  "producer_pin_enforced": true,
+  "records": [
+    {
+      "NS_pairs_checked": 0,
+      "Q_components": 2,
+      "bicycle": 0,
+      "blue_components": 1,
+      "classification": "independent full adjacency permutations",
+      "group_exponent": 1,
+      "literal_edges": 1,
+      "loops": 0,
+      "n": 3,
+      "odd_resistance_denominator_pairs": 0,
+      "tree_polynomial": {
+        "0": 1
+      },
+      "trees": 1,
+      "two_rank": 0,
+      "vertices": 2
+    },
+    {
+      "NS_pairs_checked": 2,
+      "Q_components": 2,
+      "bicycle": 0,
+      "blue_components": 2,
+      "classification": "independent full adjacency permutations",
+      "group_exponent": 2,
+      "literal_edges": 4,
+      "loops": 1,
+      "n": 4,
+      "odd_resistance_denominator_pairs": 0,
+      "tree_polynomial": {
+        "1": 1
+      },
+      "trees": 2,
+      "two_rank": 1,
+      "vertices": 3
+    },
+    {
+      "NS_pairs_checked": 18,
+      "Q_components": 4,
+      "bicycle": 1,
+      "blue_components": 3,
+      "classification": "independent full adjacency permutations",
+      "group_exponent": 10274,
+      "literal_edges": 32,
+      "loops": 4,
+      "n": 5,
+      "odd_resistance_denominator_pairs": 10,
+      "tree_polynomial": {
+        "2": 20,
+        "3": 197,
+        "4": 599,
+        "5": 603,
+        "6": 165
+      },
+      "trees": 41096,
+      "two_rank": 3,
+      "vertices": 10
+    },
+    {
+      "NS_pairs_checked": 726,
+      "Q_components": 3,
+      "bicycle": 3,
+      "blue_components": 23,
+      "classification": "inherited frozen owner labels",
+      "group_exponent": 576549211255110098978565180761188,
+      "literal_edges": 512,
+      "loops": 26,
+      "n": 6,
+      "odd_resistance_denominator_pairs": 174,
+      "trees": 9672890651856613234344767407709495492608,
+      "two_rank": 25,
+      "vertices": 34
+    },
+    {
+      "Q_components": 5,
+      "bicycle": 11,
+      "blue_components": 185,
+      "classification": "inherited frozen owner labels",
+      "literal_edges": 16384,
+      "loops": 114,
+      "n": 7,
+      "two_rank": 195,
+      "vertices": 272
+    }
+  ],
+  "scope": "No expanded atlas census, no all-order connectivity, no alternative owner-map realizability, no reserved theorem inputs.",
+  "status": "PASS"
+}

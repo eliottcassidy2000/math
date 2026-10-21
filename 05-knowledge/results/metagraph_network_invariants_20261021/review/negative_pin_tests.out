@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "mutation": "atlas",
+      "optimized": false,
+      "returncode": 1,
+      "reason": "Changed frozen atlas census_n3.json",
+      "status": "correctly rejected"
+    },
+    {
+      "mutation": "producer",
+      "optimized": false,
+      "returncode": 1,
+      "reason": "Changed producer PROOF.md",
+      "status": "correctly rejected"
+    },
+    {
+      "mutation": "atlas",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "Changed frozen atlas census_n3.json",
+      "status": "correctly rejected"
+    },
+    {
+      "mutation": "producer",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "Changed producer PROOF.md",
+      "status": "correctly rejected"
+    }
+  ]
+}

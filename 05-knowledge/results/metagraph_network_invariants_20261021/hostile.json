@@ -1,0 +1,40 @@
+{
+  "n": 5,
+  "removed_paired_black_edges": [
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "added_paired_black_edges": [
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "paired_black_degrees": [
+    0,
+    4,
+    5,
+    4,
+    1,
+    3,
+    5,
+    0,
+    0,
+    2
+  ],
+  "literal_tree_count_actual": 41096,
+  "literal_tree_count_rewired": 39232,
+  "same_blue_graph": true,
+  "same_nodes_fibres_colours_loops_degrees_charges": true,
+  "not_a_tiling_realizability_claim": true
+}

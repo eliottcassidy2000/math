@@ -1,0 +1,11 @@
+{
+  "authorization": "Parent requested precisely this terminology-only correction before final freeze.",
+  "file": "PROOF.md",
+  "before_sha256": "fad4b8c6aba1c70f9428619341226278b7819c5ec46b74a8e0620ff426d00476",
+  "after_sha256": "0528b1db1005b29f1db631cda03c8b7b63a5a794b08b60e84c32784c402d136d",
+  "changes": [
+    "leading coefficient -> lowest-degree coefficient",
+    "leading term -> lowest-degree term"
+  ],
+  "mathematical_change": false
+}

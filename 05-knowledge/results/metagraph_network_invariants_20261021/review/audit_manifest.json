@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "audited_proof_sha256": "0528b1db1005b29f1db631cda03c8b7b63a5a794b08b60e84c32784c402d136d",
+  "scope": "Componentwise network proofs; finite exact data n=3..7; independent classifier n<=5; voltages and group structure n<=6. No expanded atlas census.",
+  "explicit_checks": 109301,
+  "generic_component_cases": 888,
+  "normal_optimized_identical": true,
+  "producer_replays_identical": true,
+  "negative_pin_controls": 4,
+  "no_reserved_theorem_inputs": true,
+  "repository_or_git_writes": false,
+  "authorized_producer_changes": [
+    "Two terminology replacements in PROOF.md; corresponding SHA256SUMS entry."
+  ],
+  "files": {
+    "AUDIT.md": "2dc8c98f0f3c2e0bf55860920059fb83bc4a27f945a1a55877a8e3663786874b",
+    "frozen_inputs.json": "0dbe142685c790c29387e30a87e220fe8c0355d67d658fb2ce9c4bce3637c511",
+    "hostile.json": "28c932c34e15ee045258cda7b9b2dd629e315146d69172fc577c25eea9bf8c3a",
+    "hostile.py": "d259c686923a18d4d6b183e12663cf1d6212063c576ee3c749883cdb9ae3b8db",
+    "independent.optimized.out": "3352468ffd14ca3fe08b2df99f93cff0da44c34673b8ab010364ed95b0b2de5a",
+    "independent.out": "3352468ffd14ca3fe08b2df99f93cff0da44c34673b8ab010364ed95b0b2de5a",
+    "independent_audit.py": "767c371ccef7e2a52ae386d37419b59d8b0e5365412142f8ff47923c484b7936",
+    "independent_results.json": "3352468ffd14ca3fe08b2df99f93cff0da44c34673b8ab010364ed95b0b2de5a",
+    "inheritance_pins.json": "de9096fa25a3e53af050c5d6ee1c622de7b381fa701cc840fcc74c870d61e9bf",
+    "negative_pin_tests.out": "06acdb888c90e11ca1f9277ecdffb14086813c5569ccf663ff2a3c89d9f88bff",
+    "negative_pin_tests.py": "eb5fec1f0cca763bdfea3e96d52ae3acc83ae0b821c35d66f4f84d11f010cea4",
+    "probe.json": "668a5faa3440676511cbb06805f8408b92bf34ec7a39a41cdcacda64a06b217f",
+    "probe.py": "385fc28a1f0f8f21d4a77df66040bc76812805216d8df253c017efc397f53271",
+    "proof_wording_revision.json": "f804f5e6ed30649133683822c8f53c246958a6ee4b8ba8f218a402cebff4d4a0",
+    "replay-hostile.optimized.out": "28c932c34e15ee045258cda7b9b2dd629e315146d69172fc577c25eea9bf8c3a",
+    "replay-hostile.out": "28c932c34e15ee045258cda7b9b2dd629e315146d69172fc577c25eea9bf8c3a",
+    "replay-probe.optimized.out": "37a58c37984a71f0d4cd285b00b64b3590d8e3a2c8ea696d99e192f1900faffb",
+    "replay-probe.out": "37a58c37984a71f0d4cd285b00b64b3590d8e3a2c8ea696d99e192f1900faffb",
+    "replay-voltage_audit.optimized.out": "0781c754cabe001569e1a581bcffa3c7bfcd7c81290acaaa5806351157c0a86c",
+    "replay-voltage_audit.out": "0781c754cabe001569e1a581bcffa3c7bfcd7c81290acaaa5806351157c0a86c",
+    "voltage_audit.json": "d10aa7988bf295baa3e4fb44cd2ae3e08c73f3d49f20edef46daddcf849d983d",
+    "voltage_audit.py": "0ede2a35db97bad60d9a5b07372bcb1d932d947ffc20e25eba528ae44388124f"
+  }
+}
