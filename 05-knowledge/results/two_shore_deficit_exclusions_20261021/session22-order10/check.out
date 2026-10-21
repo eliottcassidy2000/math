@@ -1,0 +1,22 @@
+{
+  "status": "FINITE-EXACT complete marked q2,m5 universe, not all order10 tournaments",
+  "start_utc": "2026-10-21T17:19:07.035993+00:00",
+  "end_utc": "2026-10-21T17:19:12.404949+00:00",
+  "wall_seconds": 5.369229056996119,
+  "checks": 1088,
+  "source_sha256": "34fc39b5819d44f346250ee8d84bb2118a20cdaee13b128d1ed526f59f6c27f7",
+  "summary": {
+    "frames": 128,
+    "self_converse_frames": 64,
+    "deficit_six_frames": 0,
+    "minimum_self_converse_deficit": 1528,
+    "self_converse_deficit_histogram": {
+      "1528": 8,
+      "1628": 8,
+      "2908": 12,
+      "2926": 12,
+      "3064": 12,
+      "3114": 12
+    }
+  }
+}

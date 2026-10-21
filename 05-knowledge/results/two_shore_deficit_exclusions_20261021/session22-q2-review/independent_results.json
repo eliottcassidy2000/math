@@ -1,0 +1,15 @@
+{
+  "checks": 1614,
+  "structural_literal_samples": 12,
+  "order10_frames_independent_H_blue_DP": 128,
+  "self_converse_frames": 64,
+  "deficit_histogram": {
+    "1528": 8,
+    "2908": 12,
+    "2926": 12,
+    "1628": 8,
+    "3114": 12,
+    "3064": 12
+  },
+  "scope": "marked-frame controls, not ordinary-class census"
+}

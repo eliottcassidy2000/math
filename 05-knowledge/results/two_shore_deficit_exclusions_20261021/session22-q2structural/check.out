@@ -1,0 +1,13 @@
+{
+  "status": "FINITE-EXACT literal construction controls; deficit consequence requires self-converseness",
+  "start_utc": "2026-10-21T17:22:03.690783+00:00",
+  "end_utc": "2026-10-21T17:22:03.886662+00:00",
+  "wall_seconds": 0.19590102399524767,
+  "checks": 21504,
+  "frame_counts": {
+    "5": 128,
+    "7": 2048
+  },
+  "all_constructions_sha256": "d6bfdc135f5b5598dd8975fa4502bd1d5ed82ef9f1afcd782a6f4eafc0827b06",
+  "source_sha256": "e847e544503d7f16d41f519e174076c4bb2e1aee72c8c6d9d163f17628e55cda"
+}

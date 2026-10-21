@@ -1,0 +1,30 @@
+{
+  "observed_HEAD_after_initial_reads": "8e4d6ab4b53a043a65528913f6803737256941a9",
+  "hash_convention": "SHA256 of exact file bytes; HEAD can advance concurrently; file pins are authoritative",
+  "files": {
+    "05-knowledge/results/future_tail_blocks_20261021b/README.md": "1c5d39ee8e226c662f7dcd5b45c66ff19872b89e93bd74c1ab4f9e6e60334606",
+    "05-knowledge/results/future_tail_blocks_20261021b/check.py": "d6ee2b1d1667c10217173f48c8288500697d2ba510cc851438f021d4b3b3cf3c",
+    "05-knowledge/results/future_tail_blocks_20261021b/receipt.json": "7731a9a9ddf8e5f0478b8d6455e53c6130870f2004353db2e0fefa345bb509c0",
+    "05-knowledge/results/future_tail_blocks_20261021b/audit_receipt.py": "f9069fba9459ff2da4923099acec427846cf45ae1b155525edad2d8098b8c1e5",
+    "05-knowledge/results/long_horizon_pairs_20261021b/README.md": "08025449fdd8a681c107fb737e30a5e21dd14304032f89b5e15095bdd9a57bdd",
+    "05-knowledge/results/long_horizon_pairs_20261021b/check.py": "cc0b89fce2c1f3b9aefdcb93447a4f2867ee3faf485f34030ee96b0fa6b1281a",
+    "05-knowledge/results/long_horizon_pairs_20261021b/receipt.json": "a365ec43470e2c34907eb5239c1df7df1d1a9338673cb5013a632dde92363a68",
+    "05-knowledge/results/stopped_tails_deficit_six_and_cycle_modules_20261021b.md": "eb5a01080e65cac30b0be8ea133443ca6006046ce08b30343fea6b3437e2cd77",
+    "05-knowledge/results/routefree_suffix_gate_20261021/README.md": "78496fb464ac84c56691b8f5687d0a08a101a734f0d45ad70dd4e6e4ffc66db1",
+    "05-knowledge/results/routefree_suffix_gate_20261021/session22-residual/README.md": "a60a8eb0dfe475e1907f372f7a503834cde84a085c1511fd39f64585ac228773",
+    "05-knowledge/results/routefree_suffix_gate_20261021/session22-residual/MIXED-COROLLARY.md": "0b8184b119ab701b4c5a2376965d45b8623d9323c394511214d1a0cb0f32d7a8",
+    "05-knowledge/results/routefree_suffix_gate_20261021/session22-residual/check.py": "1d24188af100b3394b9e47b4b27e35e80b15863e9f033c05081868d7ff5a1632",
+    "05-knowledge/results/routefree_suffix_gate_20261021/session22-residual/mixed_gate.py": "1bc34c05094ca2b855d3f50d2fc73a7994f563e6fabfcb75eadbacfc7c5f9e0d",
+    "05-knowledge/results/routefree_suffix_gate_20261021/session22-residual/receipt.json": "e5ec575906451e4a6ee293a98ed85dc3d90a2a8b18b878a921df151166d9032a",
+    "05-knowledge/results/routefree_suffix_gate_20261021/session22-residual-review/REVIEW.md": "a06ed7d1ce1325f1e33dea607ff37bec95f29fa155946f1f845f12f4511b4474"
+  },
+  "pin_updates": [
+    {
+      "path": "05-knowledge/results/future_tail_blocks_20261021b/README.md",
+      "prior_sha256": "3ff58b162a2eb0d83937b28531ebb4fee808a718c065e4294d2af3f0cb31bd3a",
+      "current_sha256": "1c5d39ee8e226c662f7dcd5b45c66ff19872b89e93bd74c1ab4f9e6e60334606",
+      "reason": "Reviewed incoming commit 5872b76a section8: attributed selector and scale-obstruction reconciliation."
+    }
+  ],
+  "observed_HEAD_at_freshness_review": "7320f4118c91a706d750120a01b23d09cece5be6"
+}

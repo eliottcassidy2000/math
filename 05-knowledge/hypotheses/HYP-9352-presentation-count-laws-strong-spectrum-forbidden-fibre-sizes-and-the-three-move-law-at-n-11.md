@@ -28,9 +28,17 @@ series is `(2z^4-z^5-z^7)/((1-z-z^3)(1-z^2-z^6))`. The expectation that every
 fixed-degree count is eventually quasi-polynomial is REFUTED: mirroring
 arbitrary words of `k` blocks chosen from `(K1,C3)` and `(C3,K1)` gives at
 least `2^k` distinct degree-zero nodes of order `8k`. The repaired direction
-is rational generating functions with possible exponential growth. The
-new degree-three formula still contains an unknown finite strong
-deficit-six center polynomial; it is not a completed adjacency classification.
+is rational generating functions with possible exponential growth. This
+repaired fixed-degree statement is now **PROVED** for every fixed degree in
+the fundamental converse-merged paired-black graph by the audited
+[fixed-degree rationality packet](../results/fixed_degree_metagraph_rationality_20261021/README.md).
+The [final Session22 overview](../results/session22_tournament_tail_synthesis_20261021/SESSION22_SYNTHESIS.md)
+records the scope through incoming `359ddd20` plus Session22 results: the degree-three formula still contains unknown
+strong deficit-six center coefficients at seven possible orders
+`{15,18,20,21,24,28,35}`, with degree at most35.
+This does not complete adjacency classification. The remaining sharper
+spectrum, forbidden-fibre, detour, descent, wiring, bridge and connectivity
+questions remain **OPEN**.
 
 The numbered original proposals below are retained for lineage; the scoped
 update overrides their older status phrases.

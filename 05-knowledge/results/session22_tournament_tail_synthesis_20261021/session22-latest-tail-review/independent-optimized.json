@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "D": 12,
+      "N": 7,
+      "U": 1153,
+      "angular": 21,
+      "base": 1092,
+      "earlier_cut_predicate_cited": false,
+      "lambda1_bound": 1153,
+      "linear": 40
+    },
+    {
+      "D": 105,
+      "N": 4096,
+      "U": 557164,
+      "angular": 56476,
+      "base": 421276,
+      "earlier_cut_predicate_cited": true,
+      "lambda1_bound": 551844,
+      "linear": 74092
+    },
+    {
+      "D": 110,
+      "N": 8192,
+      "U": 1138407,
+      "angular": 172963,
+      "base": 793715,
+      "earlier_cut_predicate_cited": true,
+      "lambda1_bound": 1118881,
+      "linear": 152203
+    },
+    {
+      "D": 130,
+      "N": 32768,
+      "U": 4241482,
+      "angular": 654736,
+      "base": 2838302,
+      "earlier_cut_predicate_cited": true,
+      "lambda1_bound": 4142214,
+      "linear": 649176
+    }
+  ],
+  "checks": 142,
+  "status": "PASS; independent algebra and frozen-state arithmetic only"
+}

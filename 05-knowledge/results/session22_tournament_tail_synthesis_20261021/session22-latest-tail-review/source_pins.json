@@ -1,0 +1,16 @@
+{
+  "head_observed": "336b76f137a6bc4843a9b1cb702132ad41574d58",
+  "incoming_commit": "359ddd20",
+  "files": {
+    "05-knowledge/results/tail_geometry_20261021c/README.md": "19b0840600913f9755f7e47146460abaa2bbede7ca051029fd98d84acb453d95",
+    "05-knowledge/results/tail_geometry_20261021c/check.py": "a6fa97c41fa8d364f174addcaa231da19a1d2a93406a6eb2146ce7a142c74dbf",
+    "05-knowledge/results/tail_geometry_20261021c/receipt.json": "fe7d8190a61e3e883f1b82ad38d6d11a9abeebc9da0833aafa2eb5fa9c16aae9",
+    "05-knowledge/results/uniform_prefix_20261021c/README.md": "05123a8214f4d07ec0a01f10215d9c821bf6f1d62694c379333cf4a9c389bc8a",
+    "05-knowledge/results/uniform_prefix_20261021c/check.py": "37c3561571835b5e948b42ced31209ceab69fd7cd7aa0baaf798a521998e0653",
+    "05-knowledge/results/uniform_prefix_20261021c/probe_4096.json": "91df1d9adf5c714c8e0713e36ee267423a2a3f33991ffc75c6e3328d5c80f044",
+    "05-knowledge/results/uniform_prefix_20261021c/probe_potential.py": "a64b830f50a1ef3810b59a4b195bd889162b85076cfdb5e214e76e89982cddda",
+    "05-knowledge/results/uniform_prefix_20261021c/receipt.json": "75694fcf2e9d37b03464e94d6e014f29dd15541346d44562db3caed25d22878e",
+    "05-knowledge/results/future_tail_blocks_20261021b/receipt.json": "7731a9a9ddf8e5f0478b8d6455e53c6130870f2004353db2e0fefa345bb509c0",
+    "05-knowledge/results/session18_native_annulus/frontier.json": "391f6d3380bcae4afb9a1bbd9522b74b1e9006012fa10a92be5bf0bbf938754f"
+  }
+}

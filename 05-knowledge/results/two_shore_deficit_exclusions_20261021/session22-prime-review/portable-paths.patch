@@ -1,0 +1,11 @@
+--- original/independent.py
++++ published/independent.py
+@@ -15,7 +15,7 @@
+   for S in itertools.combinations(range(n),k):
+    if not sc(n,D,set(range(n))-set(S)):return k
+  raise RuntimeError('no cut')
+-r=json.loads((P/'normal/receipt.json').read_text());o=json.loads((P/'optimized/receipt.json').read_text());nv=lambda x:{k:v for k,v in x.items() if k not in ('start_utc','end_utc','wall_seconds')};need(nv(r)==nv(o));need(r['checks']==17159)
++r=json.loads((P.parent/'session22-primecenters/receipt_normal.json').read_text());o=json.loads((P.parent/'session22-primecenters/receipt.json').read_text());nv=lambda x:{k:v for k,v in x.items() if k not in ('start_utc','end_utc','wall_seconds')};need(nv(r)==nv(o));need(r['checks']==17159)
+ for row in r['prime_connectivity_controls']:
+  n=row['p'];D=set(row['connection_set']);need(cut(n,D)==(n-1)//2==row['minimum_cut_size'])
+ need(cut(9,{1,3,4,7})==3)

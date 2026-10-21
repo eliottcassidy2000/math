@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "total": 25763,
+  "checks": {
+    "direct partitions all four modes": 300,
+    "terminal fold versus full payload": 100,
+    "hybrid exact basis change": 200,
+    "normalized history integer": 762,
+    "normalized insertion": 12192,
+    "local transfer integer": 12192,
+    "functional not multiplicative": 1,
+    "rational observer": 1,
+    "benchmark source pin": 3,
+    "median exact receipt consistency": 10,
+    "all timed outputs equal saved vector": 2
+  },
+  "source_pins": {
+    "README.md": "4304e6ad60d7ccab7b0f1ec430a21ee240b34e433bc3d5bf3d217eda7eef6391",
+    "receipt.json": "d45245f0b1ae5321beb3152c37ce8e5246a355eb65d2349cf31031df9c11c5d2",
+    "incoming_local.py": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad",
+    "check.py": "6c72647b829565fa97429c188ca0f58da5bd35fc4d617efb4977c0c69c8a2272",
+    "benchmarks.json": "2bb79e980b5f11b825db6ab3c591cbc1b45cbd0163f46ab8eb2cc2b9784f1ca9"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "time_utc": "2026-10-21T18:10:06.961840+00:00",
+  "incoming_commit_reported_by_parent": "359ddd20",
+  "commit_independently_verified": false,
+  "pins": {
+    "math/05-knowledge/results/center_transitivity_20261021c/README.md": {
+      "bytes": 12908,
+      "sha256": "f8f3202dd4091aa20630eb777ce80dbaf576bb490604708312be286402bc7247",
+      "lf_sha256": "f8f3202dd4091aa20630eb777ce80dbaf576bb490604708312be286402bc7247"
+    },
+    "math/05-knowledge/results/center_transitivity_20261021c/certificates.txt": {
+      "bytes": 1587544,
+      "sha256": "135cbc88608f3e6233cc82012984fda4fbd5b6a2b66ac7e1461191850965c151",
+      "lf_sha256": "135cbc88608f3e6233cc82012984fda4fbd5b6a2b66ac7e1461191850965c151"
+    },
+    "math/05-knowledge/results/center_transitivity_20261021c/check.py": {
+      "bytes": 9757,
+      "sha256": "fa732ba84de05a6df4f36f6fce5411b60047fcf2d3dd47dad89d234faa179325",
+      "lf_sha256": "fa732ba84de05a6df4f36f6fce5411b60047fcf2d3dd47dad89d234faa179325"
+    },
+    "math/05-knowledge/results/center_transitivity_20261021c/produce.cpp": {
+      "bytes": 2382,
+      "sha256": "49912e11430f1e82cde341fcaecc199c663860bf3efbab02d0bc5d65f0fb6a8b",
+      "lf_sha256": "49912e11430f1e82cde341fcaecc199c663860bf3efbab02d0bc5d65f0fb6a8b"
+    },
+    "math/05-knowledge/results/center_transitivity_20261021c/receipt.json": {
+      "bytes": 1269,
+      "sha256": "1cd59dbfdc5ff5c296fc69aa7f5327a41991e237ba2c291d991697e2792ad0c8",
+      "lf_sha256": "1cd59dbfdc5ff5c296fc69aa7f5327a41991e237ba2c291d991697e2792ad0c8"
+    },
+    "math/05-knowledge/results/deficit_fourteen_20261021c/README.md": {
+      "bytes": 6673,
+      "sha256": "cc131709cee181dd86805c94dbd7775d5ac2c477c0a13c061a7aa42c50abdbac",
+      "lf_sha256": "cc131709cee181dd86805c94dbd7775d5ac2c477c0a13c061a7aa42c50abdbac"
+    },
+    "math/05-knowledge/results/deficit_fourteen_20261021c/census.cpp": {
+      "bytes": 4255,
+      "sha256": "f6477822dfa9beb8f0cd40a583f5c8e82fbbf148410ef98f113bb24d77218142",
+      "lf_sha256": "f6477822dfa9beb8f0cd40a583f5c8e82fbbf148410ef98f113bb24d77218142"
+    },
+    "math/05-knowledge/results/deficit_fourteen_20261021c/check.py": {
+      "bytes": 7687,
+      "sha256": "88bf9fba21c148c9fb7166945247d7350b50880cb267f3a308249549a5905df2",
+      "lf_sha256": "88bf9fba21c148c9fb7166945247d7350b50880cb267f3a308249549a5905df2"
+    },
+    "math/05-knowledge/results/deficit_fourteen_20261021c/inputs.json": {
+      "bytes": 202751,
+      "sha256": "e617e73d07f35c55ccedb6864d8cedf76523da5a3af46e17d691e8b975f6b580",
+      "lf_sha256": "e617e73d07f35c55ccedb6864d8cedf76523da5a3af46e17d691e8b975f6b580"
+    },
+    "math/05-knowledge/results/deficit_fourteen_20261021c/pack_bank.py": {
+      "bytes": 1352,
+      "sha256": "e990de5610a0a7fcea666050ed98dac178209bce38476642010ae4deb2a6d262",
+      "lf_sha256": "e990de5610a0a7fcea666050ed98dac178209bce38476642010ae4deb2a6d262"
+    },
+    "math/05-knowledge/results/deficit_fourteen_20261021c/receipt.json": {
+      "bytes": 6886,
+      "sha256": "2b150fd9d93ea708cd201aef0eaa41fa5d5205daed5b1dba41757cf0da3c329d",
+      "lf_sha256": "2b150fd9d93ea708cd201aef0eaa41fa5d5205daed5b1dba41757cf0da3c329d"
+    },
+    "math/05-knowledge/results/deficit_six_centers_20261021b/COMBINED_CUTOFF.md": {
+      "bytes": 11859,
+      "sha256": "fa7800fdd0a9c5c942799b818bb3ec5bf19605766023593d9429f3c27a35f7c1",
+      "lf_sha256": "fa7800fdd0a9c5c942799b818bb3ec5bf19605766023593d9429f3c27a35f7c1"
+    },
+    "math/05-knowledge/results/deficit_twelve_20261021c/README.md": {
+      "bytes": 12289,
+      "sha256": "7929d3d8990e64e19f1f7fd3bec24ec1d1ee45c6d73d5c03a15b728f39d5b7d7",
+      "lf_sha256": "7929d3d8990e64e19f1f7fd3bec24ec1d1ee45c6d73d5c03a15b728f39d5b7d7"
+    },
+    "math/05-knowledge/results/deficit_twelve_20261021c/census.cpp": {
+      "bytes": 4253,
+      "sha256": "f887dfb5c2d3be83d64fe5f1a4f96c9eb435e8cbfb2a2d2dcdfb2242d2976078",
+      "lf_sha256": "f887dfb5c2d3be83d64fe5f1a4f96c9eb435e8cbfb2a2d2dcdfb2242d2976078"
+    },
+    "math/05-knowledge/results/deficit_twelve_20261021c/check.py": {
+      "bytes": 14916,
+      "sha256": "bf4f77ac297f9b3862a481ed1f3c203030480471d69924dfa51d0738dcc177e3",
+      "lf_sha256": "bf4f77ac297f9b3862a481ed1f3c203030480471d69924dfa51d0738dcc177e3"
+    },
+    "math/05-knowledge/results/deficit_twelve_20261021c/inputs.json": {
+      "bytes": 2345434,
+      "sha256": "977f54262bbd134e45ed35673c91f52513b2c5c5d75a67561c18ca317e208381",
+      "lf_sha256": "977f54262bbd134e45ed35673c91f52513b2c5c5d75a67561c18ca317e208381"
+    },
+    "math/05-knowledge/results/deficit_twelve_20261021c/pack_bank.py": {
+      "bytes": 1817,
+      "sha256": "fe49153590a14bb89d1f4ae53f253651a70f05b67bf22cd036dae1e2447f43be",
+      "lf_sha256": "fe49153590a14bb89d1f4ae53f253651a70f05b67bf22cd036dae1e2447f43be"
+    },
+    "math/05-knowledge/results/deficit_twelve_20261021c/receipt.json": {
+      "bytes": 4526,
+      "sha256": "fe54716a7b6e6fac30a41e118e9a59e2e80cdea0da6e7602932cfa0697779da2",
+      "lf_sha256": "fe54716a7b6e6fac30a41e118e9a59e2e80cdea0da6e7602932cfa0697779da2"
+    },
+    "math/05-knowledge/results/odd_shore_deficit_centers_20261021/session22-centers/PROOF.md": {
+      "bytes": 14377,
+      "sha256": "6f2108a23a1268afa3fa55dfbcacd8b1d406cd1fa8156255779fee0f39729d13",
+      "lf_sha256": "6f2108a23a1268afa3fa55dfbcacd8b1d406cd1fa8156255779fee0f39729d13"
+    },
+    "math/05-knowledge/results/paired_black_leaf_reduction_20261020/CYCLE_CUT_NEAR_PURITY_OBSTRUCTION.md": {
+      "bytes": 7169,
+      "sha256": "f628ee105b839088c40c7144477ee667f8b333cabb9fc3e0a5d11227c53928a7",
+      "lf_sha256": "f628ee105b839088c40c7144477ee667f8b333cabb9fc3e0a5d11227c53928a7"
+    },
+    "math/05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md": {
+      "bytes": 10837,
+      "sha256": "787ab6282c22e9f60ac734d2c3e96c0836d34b8e1d2b0c6fb11c05e5eefd4388",
+      "lf_sha256": "787ab6282c22e9f60ac734d2c3e96c0836d34b8e1d2b0c6fb11c05e5eefd4388"
+    }
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "status": "PREPARED_NOT_PUBLISHED",
+  "result_directory": "session22_tournament_tail_synthesis_20261021",
+  "files": [
+    {
+      "source": "session22-root/SESSION22_SYNTHESIS.md",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/SESSION22_SYNTHESIS.md",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/SESSION22_SYNTHESIS.md",
+      "sha256": "6017def60fa77fd30581632d603653b63e43ee125dfb935e58471231f606bd56",
+      "bytes": 16970
+    },
+    {
+      "source": "session22-synthesis-review/REVIEW.md",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-synthesis-review/REVIEW.md",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-synthesis-review/REVIEW.md",
+      "sha256": "2a8dd993eb56af5a1025ca6f0da56bb356bfd43d364998af89c86036d2f32466",
+      "bytes": 6700
+    },
+    {
+      "source": "session22-synthesis-review/source_pins.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-synthesis-review/source_pins.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-synthesis-review/source_pins.json",
+      "sha256": "f9eb00b37b3c3c4a8c99c18d375fee356eac52255c360803c00e9c022d23b3cd",
+      "bytes": 7326
+    },
+    {
+      "source": "session22-synthesis-review/destinations.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-synthesis-review/destinations.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-synthesis-review/destinations.json",
+      "sha256": "60dbead4bdc8642fe2963655ac65a2ef7419b47366320bb8e223d90a882fd2cb",
+      "bytes": 3847
+    },
+    {
+      "source": "session22-incoming-tail-review/REVIEW.md",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-incoming-tail-review/REVIEW.md",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-incoming-tail-review/REVIEW.md",
+      "sha256": "112fa476f2abbb43811cda82848aeed57ebf20f7a2cbeed0ee87ab2f1ee9f9d5",
+      "bytes": 12676
+    },
+    {
+      "source": "session22-incoming-tail-review/audit.py",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-incoming-tail-review/audit.py",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-incoming-tail-review/audit.py",
+      "sha256": "761c4e3a7a99393b63eb3ec296f0130e101385279763eedf53685ac8af08c989",
+      "bytes": 4431
+    },
+    {
+      "source": "session22-incoming-tail-review/receipt.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-incoming-tail-review/receipt.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-incoming-tail-review/receipt.json",
+      "sha256": "d10e031e875346e8a2bb572f2e83f63ece2cf4b0d80584f026b2b38b9cbbbfda",
+      "bytes": 515
+    },
+    {
+      "source": "session22-incoming-tail-review/receipt.optimized.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-incoming-tail-review/receipt.optimized.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-incoming-tail-review/receipt.optimized.json",
+      "sha256": "d10e031e875346e8a2bb572f2e83f63ece2cf4b0d80584f026b2b38b9cbbbfda",
+      "bytes": 515
+    },
+    {
+      "source": "session22-incoming-tail-review/source_pins.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-incoming-tail-review/source_pins.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-incoming-tail-review/source_pins.json",
+      "sha256": "70be1f86e0c69496304c53155ca43a515d66696b1468a53859a452356bc3a535",
+      "bytes": 2916
+    },
+    {
+      "source": "session22-incoming-enumeration-review/README.md",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-incoming-enumeration-review/README.md",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-incoming-enumeration-review/README.md",
+      "sha256": "18751f9f33cca106209899589f3eb6bfafbe79d071f7f71294b005434a42e270",
+      "bytes": 7650
+    },
+    {
+      "source": "session22-incoming-enumeration-review/check.py",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-incoming-enumeration-review/check.py",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-incoming-enumeration-review/check.py",
+      "sha256": "2881b920373247bdc87063e10c7700d6bde26b38b4697aecf671f384241006ee",
+      "bytes": 4138
+    },
+    {
+      "source": "session22-incoming-enumeration-review/normal.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-incoming-enumeration-review/normal.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-incoming-enumeration-review/normal.json",
+      "sha256": "939ed0171285039aa31ca3bc8ed84eaed05608c971342856957b5cce3c1ac3a7",
+      "bytes": 953
+    },
+    {
+      "source": "session22-incoming-enumeration-review/optimized.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-incoming-enumeration-review/optimized.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-incoming-enumeration-review/optimized.json",
+      "sha256": "939ed0171285039aa31ca3bc8ed84eaed05608c971342856957b5cce3c1ac3a7",
+      "bytes": 953
+    },
+    {
+      "source": "session22-incoming-enumeration-review/upstream-normal.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-incoming-enumeration-review/upstream-normal.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-incoming-enumeration-review/upstream-normal.json",
+      "sha256": "5b3551d539df0a835fda3a91b091efd966d62066871a2fb38dd6ab8c74b52124",
+      "bytes": 141
+    },
+    {
+      "source": "session22-incoming-enumeration-review/upstream-optimized.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-incoming-enumeration-review/upstream-optimized.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-incoming-enumeration-review/upstream-optimized.json",
+      "sha256": "5b3551d539df0a835fda3a91b091efd966d62066871a2fb38dd6ab8c74b52124",
+      "bytes": 141
+    },
+    {
+      "source": "session22-final-preparation/README.wrapper.md",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/README.md",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/README.md",
+      "sha256": "6dac56563bd5581069802868d2d81a46ee0970275ce7921f8c87c7d4f1c140be",
+      "bytes": 5652
+    },
+    {
+      "source": "session22-final-preparation/replays/tail-normal.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/preparation-replays/tail-normal.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/preparation-replays/tail-normal.json",
+      "sha256": "d10e031e875346e8a2bb572f2e83f63ece2cf4b0d80584f026b2b38b9cbbbfda",
+      "bytes": 515
+    },
+    {
+      "source": "session22-final-preparation/replays/tail-optimized.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/preparation-replays/tail-optimized.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/preparation-replays/tail-optimized.json",
+      "sha256": "d10e031e875346e8a2bb572f2e83f63ece2cf4b0d80584f026b2b38b9cbbbfda",
+      "bytes": 515
+    },
+    {
+      "source": "session22-final-preparation/replays/enumeration-normal.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/preparation-replays/enumeration-normal.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/preparation-replays/enumeration-normal.json",
+      "sha256": "939ed0171285039aa31ca3bc8ed84eaed05608c971342856957b5cce3c1ac3a7",
+      "bytes": 953
+    },
+    {
+      "source": "session22-final-preparation/replays/enumeration-optimized.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/preparation-replays/enumeration-optimized.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/preparation-replays/enumeration-optimized.json",
+      "sha256": "939ed0171285039aa31ca3bc8ed84eaed05608c971342856957b5cce3c1ac3a7",
+      "bytes": 953
+    },
+    {
+      "source": "session22-latest-center-review/PROOF_REVIEW.md",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/PROOF_REVIEW.md",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/PROOF_REVIEW.md",
+      "sha256": "b5eed7f2381c040b4b62b9c285745f4f1c18556257bae63c641394fa0835f638",
+      "bytes": 7067
+    },
+    {
+      "source": "session22-latest-center-review/order12-normal.log",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/order12-normal.log",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/order12-normal.log",
+      "sha256": "09899ec07675bdc4c4c4fa15ab627b92d2542db371e081b8d8a59edf1c35b999",
+      "bytes": 143
+    },
+    {
+      "source": "session22-latest-center-review/order12-optimized.log",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/order12-optimized.log",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/order12-optimized.log",
+      "sha256": "468b18ffc74f93174e84730ea7eaf645b7606882040241a87af14ae6a81e28ec",
+      "bytes": 143
+    },
+    {
+      "source": "session22-latest-center-review/order14-normal.log",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/order14-normal.log",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/order14-normal.log",
+      "sha256": "586ccfb04a21f5aff9372e252bde6630967e15bc29e19e7a9b8258512a21ed5e",
+      "bytes": 138
+    },
+    {
+      "source": "session22-latest-center-review/order14-optimized.log",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/order14-optimized.log",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/order14-optimized.log",
+      "sha256": "8e53747f95b29d0aeedfec3a8609badc2fceaee6cc0caf0af529b5242e977652",
+      "bytes": 138
+    },
+    {
+      "source": "session22-latest-center-review/order25-normal.log",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/order25-normal.log",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/order25-normal.log",
+      "sha256": "23fa617153c79116cca654d290918decc8022ac33fb981f307437e22d3eef1c0",
+      "bytes": 142
+    },
+    {
+      "source": "session22-latest-center-review/order25-optimized.log",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/order25-optimized.log",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/order25-optimized.log",
+      "sha256": "eb6bd78fab51cca316cbd1d3336b896ccaa5202d6666de56c23e35fd518f967d",
+      "bytes": 142
+    },
+    {
+      "source": "session22-latest-center-review/source_pins.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/source_pins.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-center-review/source_pins.json",
+      "sha256": "ec68d31d450646d59f3ddb2b0740bcdd962c80b0774852a4b6c3c2f3cda40287",
+      "bytes": 5996
+    },
+    {
+      "source": "session22-latest-tail-review/REVIEW.md",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/REVIEW.md",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/REVIEW.md",
+      "sha256": "39e7784f5e521069b5de633c31fa8de17c44fc7d5578a6ae28807156c7757e23",
+      "bytes": 8076
+    },
+    {
+      "source": "session22-latest-tail-review/audit.py",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/audit.py",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/audit.py",
+      "sha256": "237abe7687d45d156a698452376d86c59a53c5397b1482f87c15de5cf66f18d4",
+      "bytes": 2620
+    },
+    {
+      "source": "session22-latest-tail-review/independent-normal.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/independent-normal.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/independent-normal.json",
+      "sha256": "a52a58b6fa37ef604cfa22cf3b29d216578464f224dd67023e7afba04d54431b",
+      "bytes": 934
+    },
+    {
+      "source": "session22-latest-tail-review/independent-optimized.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/independent-optimized.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/independent-optimized.json",
+      "sha256": "a52a58b6fa37ef604cfa22cf3b29d216578464f224dd67023e7afba04d54431b",
+      "bytes": 934
+    },
+    {
+      "source": "session22-latest-tail-review/prefix-normal.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/prefix-normal.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/prefix-normal.json",
+      "sha256": "1a7af9d46dfe30c57ca2dabd6728dfff5b551230951ec46a19eaf4c95bde4d19",
+      "bytes": 100
+    },
+    {
+      "source": "session22-latest-tail-review/prefix-optimized.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/prefix-optimized.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/prefix-optimized.json",
+      "sha256": "1a7af9d46dfe30c57ca2dabd6728dfff5b551230951ec46a19eaf4c95bde4d19",
+      "bytes": 100
+    },
+    {
+      "source": "session22-latest-tail-review/replay_summary.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/replay_summary.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/replay_summary.json",
+      "sha256": "51a7668f0cf92df9435c0b017bfc572996b8e5a5b4f5e77bf801eeef7bd8e0cc",
+      "bytes": 4257
+    },
+    {
+      "source": "session22-latest-tail-review/source_pins.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/source_pins.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/source_pins.json",
+      "sha256": "c07624d5bcf15cfb0587415c2644dc16dfc826c39d650828f7150a4725191338",
+      "bytes": 1453
+    },
+    {
+      "source": "session22-latest-tail-review/tail-normal.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/tail-normal.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/tail-normal.json",
+      "sha256": "2e4c9998498c84f147fe0f9d95e97743823d0c348fd58088887e49b2521ae853",
+      "bytes": 246
+    },
+    {
+      "source": "session22-latest-tail-review/tail-optimized.json",
+      "prepared_source": "session22-final-preparation/bundle/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/tail-optimized.json",
+      "destination": "05-knowledge/results/session22_tournament_tail_synthesis_20261021/session22-latest-tail-review/tail-optimized.json",
+      "sha256": "2e4c9998498c84f147fe0f9d95e97743823d0c348fd58088887e49b2521ae853",
+      "bytes": 246
+    }
+  ],
+  "excluded": [
+    "HISTORICAL_*",
+    "SESSION22_SYNTHESIS_DRAFT.md",
+    "center reconciliation and orbit-color packet (separate Q2 publication)"
+  ],
+  "navigation_patch": "PROPOSED-navigation.patch",
+  "navigation_patch_sha256": "3180df03333637ed2522d46f0a3ad3032edbf8312c2090c538c21a4121c96262",
+  "reviewed_incoming_cutoff": "359ddd20b63b00e24bc64204e1e7e78ed5abd5e4",
+  "historical_local_bundle": "historical-nine-position/"
+}

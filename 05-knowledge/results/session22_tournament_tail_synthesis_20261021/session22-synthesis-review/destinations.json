@@ -1,0 +1,86 @@
+[
+  {
+    "link": "../fixed_degree_metagraph_rationality_20261021/README.md",
+    "intended_destination": "math/05-knowledge/results/fixed_degree_metagraph_rationality_20261021/README.md",
+    "exists": true,
+    "sha256": "b0d1cef5babb7af4fbc85d668bb0ccd6c945e5d83de718238d1b2a0d5ecd0a24"
+  },
+  {
+    "link": "../odd_shore_deficit_centers_20261021/README.md",
+    "intended_destination": "math/05-knowledge/results/odd_shore_deficit_centers_20261021/README.md",
+    "exists": true,
+    "sha256": "4ba81e36fe30c6bbce66ce07a955d73701bbd703e35e2a2c57b4b1223e85e7c2"
+  },
+  {
+    "link": "../two_shore_deficit_exclusions_20261021/README.md",
+    "intended_destination": "math/05-knowledge/results/two_shore_deficit_exclusions_20261021/README.md",
+    "exists": true,
+    "sha256": "d885c42504cbd8189bfc80145756a14e5ea7e2c9afa607671552f323ec0a1f74"
+  },
+  {
+    "link": "../deficit_six_centers_20261021b/COMBINED_CUTOFF.md",
+    "intended_destination": "math/05-knowledge/results/deficit_six_centers_20261021b/COMBINED_CUTOFF.md",
+    "exists": true,
+    "sha256": "fa7800fdd0a9c5c942799b818bb3ec5bf19605766023593d9429f3c27a35f7c1"
+  },
+  {
+    "link": "../center_transitivity_20261021c/README.md",
+    "intended_destination": "math/05-knowledge/results/center_transitivity_20261021c/README.md",
+    "exists": true,
+    "sha256": "f8f3202dd4091aa20630eb777ce80dbaf576bb490604708312be286402bc7247"
+  },
+  {
+    "link": "../deficit_twelve_20261021c/README.md",
+    "intended_destination": "math/05-knowledge/results/deficit_twelve_20261021c/README.md",
+    "exists": true,
+    "sha256": "7929d3d8990e64e19f1f7fd3bec24ec1d1ee45c6d73d5c03a15b728f39d5b7d7"
+  },
+  {
+    "link": "../degree_local_tournament_enumeration_20261021/README.md",
+    "intended_destination": "math/05-knowledge/results/degree_local_tournament_enumeration_20261021/README.md",
+    "exists": true,
+    "sha256": "d60dd509b15035f4518710cdc1731fe87fd737df4965d4be107d5cc51bd126d6"
+  },
+  {
+    "link": "../converse_tournament_count_channels_20261021/README.md",
+    "intended_destination": "math/05-knowledge/results/converse_tournament_count_channels_20261021/README.md",
+    "exists": true,
+    "sha256": "0e16355adad0e46ec91adb0aa6929bb39556a654b62adbb8530a8c24f23e7542"
+  },
+  {
+    "link": "../tournament_tail_kernels_20261021b/README.md",
+    "intended_destination": "math/05-knowledge/results/tournament_tail_kernels_20261021b/README.md",
+    "exists": true,
+    "sha256": "4304e6ad60d7ccab7b0f1ec430a21ee240b34e433bc3d5bf3d217eda7eef6391"
+  },
+  {
+    "link": "../routefree_suffix_gate_20261021/README.md",
+    "intended_destination": "math/05-knowledge/results/routefree_suffix_gate_20261021/README.md",
+    "exists": true,
+    "sha256": "78496fb464ac84c56691b8f5687d0a08a101a734f0d45ad70dd4e6e4ffc66db1"
+  },
+  {
+    "link": "../future_tail_blocks_20261021b/README.md",
+    "intended_destination": "math/05-knowledge/results/future_tail_blocks_20261021b/README.md",
+    "exists": true,
+    "sha256": "1c5d39ee8e226c662f7dcd5b45c66ff19872b89e93bd74c1ab4f9e6e60334606"
+  },
+  {
+    "link": "../tail_geometry_20261021c/README.md",
+    "intended_destination": "math/05-knowledge/results/tail_geometry_20261021c/README.md",
+    "exists": true,
+    "sha256": "19b0840600913f9755f7e47146460abaa2bbede7ca051029fd98d84acb453d95"
+  },
+  {
+    "link": "../uniform_prefix_20261021c/README.md",
+    "intended_destination": "math/05-knowledge/results/uniform_prefix_20261021c/README.md",
+    "exists": true,
+    "sha256": "05123a8214f4d07ec0a01f10215d9c821bf6f1d62694c379333cf4a9c389bc8a"
+  },
+  {
+    "link": "../tail_scale_certificate_obstruction_20261021/README.md",
+    "intended_destination": "math/05-knowledge/results/tail_scale_certificate_obstruction_20261021/README.md",
+    "exists": true,
+    "sha256": "38bd778015496d45ca67c04ceb0503dde832020a099846c725a3aeb4efecb747"
+  }
+]

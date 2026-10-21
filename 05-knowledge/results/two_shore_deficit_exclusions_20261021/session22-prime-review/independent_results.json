@@ -1,0 +1,16 @@
+{
+  "checks": 17160,
+  "producer_checks_per_mode": 17159,
+  "nonvolatile_equal": true,
+  "prime_additive_pair_counts": {
+    "3": 49,
+    "5": 961,
+    "7": 16129
+  },
+  "prime_connectivity_orientations": 14,
+  "composite9_minimum_cut": 3,
+  "degree_bound": 45,
+  "unknown_coefficients": 20,
+  "safe_recurrence_onset": 58,
+  "scope": "tiny controls and arithmetic only, not large center census"
+}

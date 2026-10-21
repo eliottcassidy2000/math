@@ -1,0 +1,5 @@
+{
+  "original_sha256": "30f7bad5941464465e17e78dedff9d4411e477c6b099b44b8d41bb4bbcafd7fe",
+  "published_sha256": "c8dbac907f404f86618d9684ce525795fb1ccffaca49eaeb90019ab9c4f8a81f",
+  "change": "Only receipt input paths redirect to final producer receipts."
+}

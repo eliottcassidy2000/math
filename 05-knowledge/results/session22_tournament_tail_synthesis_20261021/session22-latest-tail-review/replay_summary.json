@@ -1,0 +1,183 @@
+{
+  "source_pins_unchanged": true,
+  "changed": [],
+  "replays": {
+    "tail": {
+      "normal_equals_optimized": true,
+      "normal": {
+        "checks": 76852,
+        "sha256_lf": "fe7d8190a61e3e883f1b82ad38d6d11a9abeebc9da0833aafa2eb5fa9c16aae9",
+        "cases": [
+          [
+            7,
+            12,
+            1153,
+            1152,
+            1
+          ],
+          [
+            4096,
+            105,
+            557164,
+            551844,
+            5320
+          ],
+          [
+            8192,
+            110,
+            1138407,
+            1118881,
+            19526
+          ],
+          [
+            32768,
+            130,
+            4241482,
+            4142214,
+            99268
+          ]
+        ]
+      },
+      "optimized": {
+        "checks": 76852,
+        "sha256_lf": "fe7d8190a61e3e883f1b82ad38d6d11a9abeebc9da0833aafa2eb5fa9c16aae9",
+        "cases": [
+          [
+            7,
+            12,
+            1153,
+            1152,
+            1
+          ],
+          [
+            4096,
+            105,
+            557164,
+            551844,
+            5320
+          ],
+          [
+            8192,
+            110,
+            1138407,
+            1118881,
+            19526
+          ],
+          [
+            32768,
+            130,
+            4241482,
+            4142214,
+            99268
+          ]
+        ]
+      }
+    },
+    "prefix": {
+      "normal_equals_optimized": true,
+      "normal": {
+        "checks": 406481,
+        "sha256_lf": "75694fcf2e9d37b03464e94d6e014f29dd15541346d44562db3caed25d22878e"
+      },
+      "optimized": {
+        "checks": 406481,
+        "sha256_lf": "75694fcf2e9d37b03464e94d6e014f29dd15541346d44562db3caed25d22878e"
+      }
+    },
+    "independent": {
+      "normal_equals_optimized": true,
+      "normal": {
+        "cases": [
+          {
+            "D": 12,
+            "N": 7,
+            "U": 1153,
+            "angular": 21,
+            "base": 1092,
+            "earlier_cut_predicate_cited": false,
+            "lambda1_bound": 1153,
+            "linear": 40
+          },
+          {
+            "D": 105,
+            "N": 4096,
+            "U": 557164,
+            "angular": 56476,
+            "base": 421276,
+            "earlier_cut_predicate_cited": true,
+            "lambda1_bound": 551844,
+            "linear": 74092
+          },
+          {
+            "D": 110,
+            "N": 8192,
+            "U": 1138407,
+            "angular": 172963,
+            "base": 793715,
+            "earlier_cut_predicate_cited": true,
+            "lambda1_bound": 1118881,
+            "linear": 152203
+          },
+          {
+            "D": 130,
+            "N": 32768,
+            "U": 4241482,
+            "angular": 654736,
+            "base": 2838302,
+            "earlier_cut_predicate_cited": true,
+            "lambda1_bound": 4142214,
+            "linear": 649176
+          }
+        ],
+        "checks": 142,
+        "status": "PASS; independent algebra and frozen-state arithmetic only"
+      },
+      "optimized": {
+        "cases": [
+          {
+            "D": 12,
+            "N": 7,
+            "U": 1153,
+            "angular": 21,
+            "base": 1092,
+            "earlier_cut_predicate_cited": false,
+            "lambda1_bound": 1153,
+            "linear": 40
+          },
+          {
+            "D": 105,
+            "N": 4096,
+            "U": 557164,
+            "angular": 56476,
+            "base": 421276,
+            "earlier_cut_predicate_cited": true,
+            "lambda1_bound": 551844,
+            "linear": 74092
+          },
+          {
+            "D": 110,
+            "N": 8192,
+            "U": 1138407,
+            "angular": 172963,
+            "base": 793715,
+            "earlier_cut_predicate_cited": true,
+            "lambda1_bound": 1118881,
+            "linear": 152203
+          },
+          {
+            "D": 130,
+            "N": 32768,
+            "U": 4241482,
+            "angular": 654736,
+            "base": 2838302,
+            "earlier_cut_predicate_cited": true,
+            "lambda1_bound": 4142214,
+            "linear": 649176
+          }
+        ],
+        "checks": 142,
+        "status": "PASS; independent algebra and frozen-state arithmetic only"
+      }
+    }
+  }
+}
