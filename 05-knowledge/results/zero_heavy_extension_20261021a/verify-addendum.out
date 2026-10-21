@@ -1,0 +1,53 @@
+{
+  "runs": [
+    {
+      "bytes": 20603,
+      "checker": "extension_check.py",
+      "optimized": false,
+      "sha256": "9a4eb0dcc2d2b1d7d491d2207f58a4bc34b05fe834c8d2bcf8ea15f0209fc6ef"
+    },
+    {
+      "bytes": 20603,
+      "checker": "extension_check.py",
+      "optimized": true,
+      "sha256": "9a4eb0dcc2d2b1d7d491d2207f58a4bc34b05fe834c8d2bcf8ea15f0209fc6ef"
+    },
+    {
+      "bytes": 1966,
+      "checker": "local_ports_check.py",
+      "optimized": false,
+      "sha256": "59bc137d5be7b9191c5899156794c818667f38898098945d96762cb2518354d3"
+    },
+    {
+      "bytes": 1966,
+      "checker": "local_ports_check.py",
+      "optimized": true,
+      "sha256": "59bc137d5be7b9191c5899156794c818667f38898098945d96762cb2518354d3"
+    },
+    {
+      "bytes": 2405,
+      "checker": "first_owner_check.py",
+      "optimized": false,
+      "sha256": "6f8e2abd589e3b92ba9ef4256a160517f2d41aa1d834da9bbcca8f27bb373f59"
+    },
+    {
+      "bytes": 2405,
+      "checker": "first_owner_check.py",
+      "optimized": true,
+      "sha256": "6f8e2abd589e3b92ba9ef4256a160517f2d41aa1d834da9bbcca8f27bb373f59"
+    },
+    {
+      "bytes": 733,
+      "checker": "owner_four_check.py",
+      "optimized": false,
+      "sha256": "aa72c3489694ca2943fed6cca5fbb1ee95ea064007eca9ec0aa03c7a0e1cf727"
+    },
+    {
+      "bytes": 733,
+      "checker": "owner_four_check.py",
+      "optimized": true,
+      "sha256": "aa72c3489694ca2943fed6cca5fbb1ee95ea064007eca9ec0aa03c7a0e1cf727"
+    }
+  ],
+  "status": "PASS"
+}

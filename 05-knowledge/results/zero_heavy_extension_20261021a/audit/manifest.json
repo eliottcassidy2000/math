@@ -1,0 +1,38 @@
+{
+  "auditor_support_origin": {
+    "audit_manifest_sha256": "5e83c680f7f584a0ebda64b3bdaf11dbed2a4c87dddd06f3b541787e9eb413fd",
+    "source_file": "independent_audit.py",
+    "source_sha256": "cea1b371c06e2cbf34470972889ec9d2ad6dd1fb8fd575726403a571ceca3da9"
+  },
+  "base_manifest_sha256": "a5490b17a42062db222676a44a1eb2ef1c3f0b55499b2389cc70691886f9112c",
+  "exclusions": [
+    "No delta>2k result",
+    "No full k4 delta8 census",
+    "No revised approval of the unchanged main-packet source"
+  ],
+  "extension_manifest_sha256": "a6667f7a99d5fa186ba09b5b6df462c13d084599f1af2c0001aba9f9aff4c390",
+  "files": {
+    "AUDIT.md": "b3e354d98ff46b96b21fd92657ae2a90e51e3cd0aee2bdf7c48c1a9079a13621",
+    "README.md": "7a89ffaba4b7b420fa7f4a82144797ac09066394fa59fcfdda1827385f59ecb0",
+    "core_audit_support.py": "cea1b371c06e2cbf34470972889ec9d2ad6dd1fb8fd575726403a571ceca3da9",
+    "frozen_base_zero_heavy.md": "34fc50fbc4c5d6c58d8f8a683a4b7d74b2c712347be80d063396a556ecc0eebf",
+    "independent_extension_audit.py": "c2c4b5347b6bf1a77d92259b2551e69f03319e5f4a52084c94df05350b5ba124",
+    "receipt.normal.json": "61452d42625266a5346e41a24277c2ff9c5b528e9dd86d712d6f5e114519c21e",
+    "receipt.optimized.json": "61452d42625266a5346e41a24277c2ff9c5b528e9dd86d712d6f5e114519c21e",
+    "verification.json": "66173b4a887f9aebf83dc357248f92e32f8e4477b249b2261be0649728e3bb68",
+    "verify.py": "77655d08b5f1ce4a74dc2d327b8da063f41a45b026bdad2132ddec3262c3233e"
+  },
+  "historical_source_capture": {
+    "commit": "c4a7875652a5ea516e93a31c3c6410d2204773b2",
+    "file": "frozen_base_zero_heavy.md",
+    "original_path": "05-knowledge/results/charge_palettes_boundary_20261020g/zero_heavy.md",
+    "sha256": "34fc50fbc4c5d6c58d8f8a683a4b7d74b2c712347be80d063396a556ecc0eebf"
+  },
+  "incoming_deficit_k_commit": "e265436678941418bc34a9eb3b697acd989524d0",
+  "scope": [
+    "Corridor 0<=delta<=2k-1 for k>=3",
+    "First-owner correction at delta=2k for k>=4",
+    "Explicitly scoped finite exceptions and C/D-only controls"
+  ],
+  "status": "PASS independent frozen extension audit"
+}

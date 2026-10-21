@@ -1,0 +1,30 @@
+{
+  "base_packet_manifest_sha256": "a5490b17a42062db222676a44a1eb2ef1c3f0b55499b2389cc70691886f9112c",
+  "dependencies": {
+    "05-knowledge/results/defect_boundary_20261020/sparse_theory.md": "131f05f3e65032466a430a2eeebd6b456519916dc5250884d11962be788f309a",
+    "05-knowledge/results/defect_transitions_20261020/strata.md": "bd21de7b25442acc66914a19bcd5550f5bb2ffbc731179bcfdf8f51824d858ff",
+    "05-knowledge/results/zero_heavy_next_20261020h/AUDIT.md": "8db016453896bb475da6e4be0c3260b59f3ebc4768e33b22cb012706f3e1fd1f",
+    "05-knowledge/results/zero_heavy_next_20261020h/README.md": "c30f3bae680af2119862fda6bb0ade2b786d879103283b240a9ef4525e4f797c",
+    "05-knowledge/results/zero_heavy_next_20261020h/receipt.json": "ab4172650a0c387a39fbf4f6c450105e20a264896079c66c4b130aca16ec5391"
+  },
+  "files": {
+    "AUDIT.md": "6686b4607d89d0a5547a7aac945fa813dbf73ec8aa81bf88099fb7fdfc597b5e",
+    "README.md": "21da0e933974eb21dfc087e887a048930a3f1940bab46429e21e3266719d638f",
+    "extension-check.json": "9a4eb0dcc2d2b1d7d491d2207f58a4bc34b05fe834c8d2bcf8ea15f0209fc6ef",
+    "extension_check.py": "0d5d0f95d4b9ccd97193da1a76e9dca33cff0a32cf9d152eccdd796db48a1bc0",
+    "first-owner-check.json": "6f8e2abd589e3b92ba9ef4256a160517f2d41aa1d834da9bbcca8f27bb373f59",
+    "first_owner.md": "e7d2e954c139cf015361e42cbbe3f60d124e93ad83c9f4281ffffdb7ee6b3d1a",
+    "first_owner_check.py": "fce1a9933b242ca9b5ade99840d1b3fc203472ebd788d67bf93cfa4323ed2776",
+    "local-ports-check.json": "59bc137d5be7b9191c5899156794c818667f38898098945d96762cb2518354d3",
+    "local_ports_check.py": "e297ea436ecb56f619ecc02659a2c0a1b44ea08dfc4fadf4a8a379fbd8857e9b",
+    "owner-four-check.json": "aa72c3489694ca2943fed6cca5fbb1ee95ea064007eca9ec0aa03c7a0e1cf727",
+    "owner_four_check.py": "e7552067b29631730ecd7c55758fd31e5c98791cea6515cba5745b1f39b9e21e",
+    "two_unit_cells.md": "4fd5ce748c34264231b2d59e1f6a9c32882f03e43c49b874c9648d90bd94594b",
+    "verify_addendum.py": "329b56419c69a9d3a8ab374e6c22b0534b2e22ef510d9f34befb4ca99629474a",
+    "zero_heavy_check.py": "533fa6c595db3b3489825d1fb6ee48e1295f665c4ac059fcb441f4246e31b12c"
+  },
+  "incoming_deficit_k_commit": "e265436678941418bc34a9eb3b697acd989524d0",
+  "incoming_read_through_commit": "426f287975230d09433a6bd527479826185af503",
+  "scope": "total-weight deficit at most 2k, with proof ranges stated separately",
+  "status": "PROVED scoped; FINITE-EXACT controls; independent audit pending"
+}

@@ -1,0 +1,786 @@
+{
+  "base_manifest_sha256": "a5490b17a42062db222676a44a1eb2ef1c3f0b55499b2389cc70691886f9112c",
+  "dependency_files_authenticated": 5,
+  "extended_corridor": [
+    {
+      "accepted": {
+        "A": 2415,
+        "B": 540,
+        "C": 30
+      },
+      "classes": 2985,
+      "delta": 4,
+      "fibre_histogram": {
+        "A": 2415,
+        "B": 540,
+        "C": 30
+      },
+      "formal_corridor_expression": 2985,
+      "k": 3,
+      "owner_correction": null,
+      "raw_records": 2985,
+      "rejected": {
+        "B": 90
+      },
+      "relabel_checks": 6,
+      "scope": "ABC",
+      "strong": false
+    },
+    {
+      "accepted": {
+        "A": 450,
+        "B": 176,
+        "C": 24
+      },
+      "classes": 650,
+      "delta": 4,
+      "fibre_histogram": {
+        "A": 450,
+        "B": 176,
+        "C": 24
+      },
+      "formal_corridor_expression": 650,
+      "k": 3,
+      "owner_correction": null,
+      "raw_records": 650,
+      "rejected": {
+        "B": 24
+      },
+      "relabel_checks": 6,
+      "scope": "ABC",
+      "strong": true
+    },
+    {
+      "accepted": {
+        "A": 3990,
+        "B": 1890,
+        "C": 180
+      },
+      "classes": 6060,
+      "delta": 5,
+      "fibre_histogram": {
+        "A": 3990,
+        "B": 1890,
+        "C": 180
+      },
+      "formal_corridor_expression": 6060,
+      "k": 3,
+      "owner_correction": null,
+      "raw_records": 6060,
+      "rejected": {
+        "B": 315
+      },
+      "relabel_checks": 6,
+      "scope": "ABC",
+      "strong": false
+    },
+    {
+      "accepted": {
+        "A": 510,
+        "B": 440,
+        "C": 96
+      },
+      "classes": 1046,
+      "delta": 5,
+      "fibre_histogram": {
+        "A": 510,
+        "B": 440,
+        "C": 96
+      },
+      "formal_corridor_expression": 1046,
+      "k": 3,
+      "owner_correction": null,
+      "raw_records": 1046,
+      "rejected": {
+        "B": 60
+      },
+      "relabel_checks": 6,
+      "scope": "ABC",
+      "strong": true
+    },
+    {
+      "accepted": {
+        "A": 272790,
+        "B": 30240,
+        "C": 2520
+      },
+      "classes": 305550,
+      "delta": 6,
+      "fibre_histogram": {
+        "A": 272790,
+        "B": 30240,
+        "C": 2520
+      },
+      "formal_corridor_expression": 305550,
+      "k": 4,
+      "owner_correction": null,
+      "raw_records": 305550,
+      "rejected": {
+        "B": 3780
+      },
+      "relabel_checks": 6,
+      "scope": "ABC",
+      "strong": false
+    },
+    {
+      "accepted": {
+        "A": 53872,
+        "B": 9828,
+        "C": 1476
+      },
+      "classes": 65176,
+      "delta": 6,
+      "fibre_histogram": {
+        "A": 53872,
+        "B": 9828,
+        "C": 1476
+      },
+      "formal_corridor_expression": 65176,
+      "k": 4,
+      "owner_correction": null,
+      "raw_records": 65176,
+      "rejected": {
+        "B": 1050
+      },
+      "relabel_checks": 6,
+      "scope": "ABC",
+      "strong": true
+    },
+    {
+      "accepted": {
+        "A": 83472,
+        "B": 26208,
+        "C": 5166
+      },
+      "classes": 114846,
+      "delta": 7,
+      "fibre_histogram": {
+        "A": 83472,
+        "B": 26208,
+        "C": 5166
+      },
+      "formal_corridor_expression": 114846,
+      "k": 4,
+      "owner_correction": null,
+      "raw_records": 114846,
+      "rejected": {
+        "B": 2800
+      },
+      "relabel_checks": 6,
+      "scope": "ABC",
+      "strong": true
+    }
+  ],
+  "extension_manifest_sha256": "a6667f7a99d5fa186ba09b5b6df462c13d084599f1af2c0001aba9f9aff4c390",
+  "frozen_base_source_capture": {
+    "commit": "c4a7875652a5ea516e93a31c3c6410d2204773b2",
+    "path": "05-knowledge/results/charge_palettes_boundary_20261020g/zero_heavy.md",
+    "sha256": "34fc50fbc4c5d6c58d8f8a683a4b7d74b2c712347be80d063396a556ecc0eebf"
+  },
+  "incoming_commit": "e265436678941418bc34a9eb3b697acd989524d0",
+  "local_ports": {
+    "full_cells": [
+      {
+        "degree": 0,
+        "name": "12",
+        "pointed_automorphisms": 3,
+        "port": 4,
+        "rooted_key": [
+          0,
+          1,
+          11,
+          19,
+          7
+        ]
+      },
+      {
+        "degree": 2,
+        "name": "13",
+        "pointed_automorphisms": 1,
+        "port": 2,
+        "rooted_key": [
+          6,
+          4,
+          8,
+          19,
+          7
+        ]
+      },
+      {
+        "degree": 4,
+        "name": "23",
+        "pointed_automorphisms": 3,
+        "port": 0,
+        "rooted_key": [
+          30,
+          4,
+          8,
+          2,
+          14
+        ]
+      }
+    ],
+    "literal_collisions": [
+      {
+        "k": 2,
+        "matching_port": 2,
+        "outside_fixed_isomorphisms": [
+          [
+            0,
+            3,
+            1,
+            2,
+            4,
+            5,
+            6
+          ],
+          [
+            0,
+            2,
+            3,
+            1,
+            4,
+            5,
+            6
+          ]
+        ],
+        "strong": false
+      },
+      {
+        "k": 2,
+        "matching_port": 1,
+        "outside_fixed_isomorphisms": [
+          [
+            2,
+            0,
+            1,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            0,
+            3,
+            4
+          ]
+        ],
+        "strong": true
+      },
+      {
+        "k": 3,
+        "matching_port": 2,
+        "outside_fixed_isomorphisms": [
+          [
+            0,
+            3,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          [
+            0,
+            2,
+            3,
+            1,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        ],
+        "strong": false
+      },
+      {
+        "k": 3,
+        "matching_port": 1,
+        "outside_fixed_isomorphisms": [
+          [
+            2,
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            1,
+            2,
+            0,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "strong": true
+      },
+      {
+        "k": 4,
+        "matching_port": 2,
+        "outside_fixed_isomorphisms": [
+          [
+            0,
+            3,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          [
+            0,
+            2,
+            3,
+            1,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ]
+        ],
+        "strong": false
+      },
+      {
+        "k": 4,
+        "matching_port": 1,
+        "outside_fixed_isomorphisms": [
+          [
+            2,
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          [
+            1,
+            2,
+            0,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        ],
+        "strong": true
+      },
+      {
+        "k": 5,
+        "matching_port": 2,
+        "outside_fixed_isomorphisms": [
+          [
+            0,
+            3,
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          [
+            0,
+            2,
+            3,
+            1,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ]
+        ],
+        "strong": false
+      },
+      {
+        "k": 5,
+        "matching_port": 1,
+        "outside_fixed_isomorphisms": [
+          [
+            2,
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          [
+            1,
+            2,
+            0,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ]
+        ],
+        "strong": true
+      }
+    ],
+    "mixed_cells": [
+      {
+        "bare_key": [
+          2,
+          4,
+          9,
+          3
+        ],
+        "degree": 2,
+        "name": "X13",
+        "pointed_automorphisms": 1,
+        "port": 1,
+        "rooted_key": [
+          6,
+          4,
+          8,
+          3
+        ]
+      },
+      {
+        "bare_key": [
+          2,
+          4,
+          1,
+          7
+        ],
+        "degree": 3,
+        "name": "X23",
+        "pointed_automorphisms": 3,
+        "port": 0,
+        "rooted_key": [
+          14,
+          4,
+          8,
+          2
+        ]
+      },
+      {
+        "bare_key": [
+          0,
+          5,
+          9,
+          3
+        ],
+        "degree": 0,
+        "name": "Y12",
+        "pointed_automorphisms": 3,
+        "port": 3,
+        "rooted_key": [
+          0,
+          5,
+          9,
+          3
+        ]
+      },
+      {
+        "bare_key": [
+          2,
+          4,
+          9,
+          3
+        ],
+        "degree": 1,
+        "name": "Y13",
+        "pointed_automorphisms": 1,
+        "port": 2,
+        "rooted_key": [
+          2,
+          4,
+          9,
+          3
+        ]
+      }
+    ]
+  },
+  "matching_incidence": [
+    {
+      "all_H": 2,
+      "all_K": 1,
+      "k": 2,
+      "strong_H": 2,
+      "strong_K": 0
+    },
+    {
+      "all_H": 12,
+      "all_K": 6,
+      "k": 3,
+      "strong_H": 8,
+      "strong_K": 1
+    },
+    {
+      "all_H": 90,
+      "all_K": 45,
+      "k": 4,
+      "strong_H": 60,
+      "strong_K": 12
+    },
+    {
+      "all_H": 840,
+      "all_K": 420,
+      "k": 5,
+      "strong_H": 592,
+      "strong_K": 150
+    },
+    {
+      "all_H": 9450,
+      "all_K": 4725,
+      "k": 6,
+      "strong_H": 7060,
+      "strong_K": 2072
+    },
+    {
+      "all_H": 124740,
+      "all_K": 62370,
+      "k": 7,
+      "strong_H": 97944,
+      "strong_K": 31770
+    }
+  ],
+  "owner_layers": [
+    {
+      "accepted": {
+        "A": 15,
+        "B": 72,
+        "C": 12,
+        "D": 19
+      },
+      "classes": 114,
+      "delta": 4,
+      "fibre_histogram": {
+        "A": 15,
+        "B": 72,
+        "C": 8,
+        "C,C,D": 2,
+        "D": 17
+      },
+      "formal_corridor_expression": 117,
+      "k": 2,
+      "owner_correction": -3,
+      "raw_records": 118,
+      "rejected": {
+        "B": 18,
+        "D": 11
+      },
+      "relabel_checks": 8,
+      "scope": "ABCD",
+      "strong": false
+    },
+    {
+      "accepted": {
+        "B": 5,
+        "C": 6,
+        "D": 4
+      },
+      "classes": 11,
+      "delta": 4,
+      "fibre_histogram": {
+        "B": 5,
+        "C": 2,
+        "C,C,D": 2,
+        "D": 2
+      },
+      "formal_corridor_expression": 15,
+      "k": 2,
+      "owner_correction": -4,
+      "raw_records": 15,
+      "rejected": {
+        "B": 1,
+        "D": 2
+      },
+      "relabel_checks": 6,
+      "scope": "ABCD",
+      "strong": true
+    },
+    {
+      "accepted": {
+        "A": 5355,
+        "B": 4500,
+        "C": 630,
+        "D": 231
+      },
+      "classes": 10692,
+      "delta": 6,
+      "fibre_histogram": {
+        "A": 5355,
+        "B": 4500,
+        "C": 606,
+        "C,C,D": 12,
+        "D": 219
+      },
+      "formal_corridor_expression": 10710,
+      "k": 3,
+      "owner_correction": -18,
+      "raw_records": 10716,
+      "rejected": {
+        "B": 750,
+        "D": 84
+      },
+      "relabel_checks": 8,
+      "scope": "ABCD",
+      "strong": false
+    },
+    {
+      "accepted": {
+        "A": 450,
+        "B": 704,
+        "C": 240,
+        "D": 77
+      },
+      "classes": 1455,
+      "delta": 6,
+      "fibre_histogram": {
+        "A": 450,
+        "B": 704,
+        "C": 224,
+        "C,C,D": 8,
+        "D": 69
+      },
+      "formal_corridor_expression": 1470,
+      "k": 3,
+      "owner_correction": -15,
+      "raw_records": 1471,
+      "rejected": {
+        "B": 96,
+        "D": 23
+      },
+      "relabel_checks": 8,
+      "scope": "ABCD",
+      "strong": true
+    },
+    {
+      "accepted": {
+        "C": 37800,
+        "D": 2985
+      },
+      "classes": 40605,
+      "delta": 8,
+      "fibre_histogram": {
+        "C": 37620,
+        "C,C,D": 90,
+        "D": 2895
+      },
+      "formal_corridor_expression": 1198575,
+      "k": 4,
+      "owner_correction": -135,
+      "raw_records": 40785,
+      "rejected": {
+        "D": 795
+      },
+      "relabel_checks": 4,
+      "scope": "CD",
+      "strong": false
+    },
+    {
+      "accepted": {
+        "C": 13776,
+        "D": 1266
+      },
+      "classes": 14922,
+      "delta": 8,
+      "fibre_histogram": {
+        "C": 13656,
+        "C,C,D": 60,
+        "D": 1206
+      },
+      "formal_corridor_expression": 186186,
+      "k": 4,
+      "owner_correction": -108,
+      "raw_records": 15042,
+      "rejected": {
+        "D": 288
+      },
+      "relabel_checks": 4,
+      "scope": "CD",
+      "strong": true
+    }
+  ],
+  "presentation_identity_checks": 58,
+  "retained_records_checked": 564460,
+  "source_files_authenticated": 14,
+  "status": "PASS independent frozen extension audit; mathematical scopes reviewed separately"
+}

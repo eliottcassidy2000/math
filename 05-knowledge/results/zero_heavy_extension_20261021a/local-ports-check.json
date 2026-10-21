@@ -1,0 +1,156 @@
+{
+  "full_two_unit_cells": [
+    {
+      "degree": 0,
+      "pair": "12",
+      "port": 4,
+      "rooted_key": [
+        0,
+        1,
+        11,
+        19,
+        7
+      ],
+      "rows": [
+        26,
+        28,
+        25,
+        16,
+        0
+      ]
+    },
+    {
+      "degree": 2,
+      "pair": "13",
+      "port": 2,
+      "rooted_key": [
+        6,
+        4,
+        8,
+        19,
+        7
+      ],
+      "rows": [
+        14,
+        28,
+        24,
+        16,
+        1
+      ]
+    },
+    {
+      "degree": 4,
+      "pair": "23",
+      "port": 0,
+      "rooted_key": [
+        30,
+        4,
+        8,
+        2,
+        14
+      ],
+      "rows": [
+        30,
+        28,
+        8,
+        16,
+        4
+      ]
+    }
+  ],
+  "missing_plus_unit_cells": [
+    {
+      "bare_key": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "degree": 2,
+      "name": "X13",
+      "port": 1,
+      "rooted_key": [
+        6,
+        4,
+        8,
+        3
+      ],
+      "rows": [
+        6,
+        12,
+        8,
+        1
+      ]
+    },
+    {
+      "bare_key": [
+        2,
+        4,
+        1,
+        7
+      ],
+      "degree": 3,
+      "name": "X23",
+      "port": 0,
+      "rooted_key": [
+        14,
+        4,
+        8,
+        2
+      ],
+      "rows": [
+        14,
+        4,
+        8,
+        2
+      ]
+    },
+    {
+      "bare_key": [
+        0,
+        5,
+        9,
+        3
+      ],
+      "degree": 0,
+      "name": "Y12",
+      "port": 3,
+      "rooted_key": [
+        0,
+        5,
+        9,
+        3
+      ],
+      "rows": [
+        10,
+        12,
+        9,
+        0
+      ]
+    },
+    {
+      "bare_key": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "degree": 1,
+      "name": "Y13",
+      "port": 2,
+      "rooted_key": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "rows": [
+        6,
+        12,
+        8,
+        1
+      ]
+    }
+  ],
+  "status": "PASS exact finite port controls"
+}

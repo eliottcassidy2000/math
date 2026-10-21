@@ -1,0 +1,140 @@
+{
+  "layers": [
+    {
+      "accepted": {
+        "A": 15,
+        "B": 72,
+        "C": 12,
+        "D": 19
+      },
+      "classes": 114,
+      "correction": -3,
+      "corridor_extrapolation": 117,
+      "fibre_histogram": {
+        "A": 15,
+        "B": 72,
+        "C": 8,
+        "C,C,D": 2,
+        "D": 17
+      },
+      "k": 2,
+      "raw_records": 118,
+      "rejected": {
+        "B": 18,
+        "D": 11
+      },
+      "strong": false
+    },
+    {
+      "accepted": {
+        "B": 5,
+        "C": 6,
+        "D": 4
+      },
+      "classes": 11,
+      "correction": -4,
+      "corridor_extrapolation": 15,
+      "fibre_histogram": {
+        "B": 5,
+        "C": 2,
+        "C,C,D": 2,
+        "D": 2
+      },
+      "k": 2,
+      "raw_records": 15,
+      "rejected": {
+        "B": 1,
+        "D": 2
+      },
+      "strong": true
+    },
+    {
+      "accepted": {
+        "A": 5355,
+        "B": 4500,
+        "C": 630,
+        "D": 231
+      },
+      "classes": 10692,
+      "correction": -18,
+      "corridor_extrapolation": 10710,
+      "fibre_histogram": {
+        "A": 5355,
+        "B": 4500,
+        "C": 606,
+        "C,C,D": 12,
+        "D": 219
+      },
+      "k": 3,
+      "raw_records": 10716,
+      "rejected": {
+        "B": 750,
+        "D": 84
+      },
+      "strong": false
+    },
+    {
+      "accepted": {
+        "A": 450,
+        "B": 704,
+        "C": 240,
+        "D": 77
+      },
+      "classes": 1455,
+      "correction": -15,
+      "corridor_extrapolation": 1470,
+      "fibre_histogram": {
+        "A": 450,
+        "B": 704,
+        "C": 224,
+        "C,C,D": 8,
+        "D": 69
+      },
+      "k": 3,
+      "raw_records": 1471,
+      "rejected": {
+        "B": 96,
+        "D": 23
+      },
+      "strong": true
+    }
+  ],
+  "matching_incidence": [
+    {
+      "all_H": 2,
+      "all_K": 1,
+      "k": 2,
+      "strong_H": 2,
+      "strong_K": 0
+    },
+    {
+      "all_H": 12,
+      "all_K": 6,
+      "k": 3,
+      "strong_H": 8,
+      "strong_K": 1
+    },
+    {
+      "all_H": 90,
+      "all_K": 45,
+      "k": 4,
+      "strong_H": 60,
+      "strong_K": 12
+    },
+    {
+      "all_H": 840,
+      "all_K": 420,
+      "k": 5,
+      "strong_H": 592,
+      "strong_K": 150
+    },
+    {
+      "all_H": 9450,
+      "all_K": 4725,
+      "k": 6,
+      "strong_H": 7060,
+      "strong_K": 2072
+    }
+  ],
+  "status": "FINITE-EXACT first-owner fibres and incidence controls"
+}

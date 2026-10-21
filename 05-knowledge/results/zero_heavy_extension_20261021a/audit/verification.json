@@ -1,0 +1,19 @@
+{
+  "base_manifest_sha256": "a5490b17a42062db222676a44a1eb2ef1c3f0b55499b2389cc70691886f9112c",
+  "extension_manifest_sha256": "a6667f7a99d5fa186ba09b5b6df462c13d084599f1af2c0001aba9f9aff4c390",
+  "runs": [
+    {
+      "bytes": 13995,
+      "optimized": false,
+      "returncode": 0,
+      "sha256": "61452d42625266a5346e41a24277c2ff9c5b528e9dd86d712d6f5e114519c21e"
+    },
+    {
+      "bytes": 13995,
+      "optimized": true,
+      "returncode": 0,
+      "sha256": "61452d42625266a5346e41a24277c2ff9c5b528e9dd86d712d6f5e114519c21e"
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,37 @@
+{
+  "rows": [
+    {
+      "accepted": {
+        "C": 37800,
+        "D": 2985
+      },
+      "classes": 40605,
+      "clone_rejections": 795,
+      "fibres": {
+        "C": 37620,
+        "C,C,D": 90,
+        "D": 2895
+      },
+      "k": 4,
+      "scope": "C/D owner families only; not the complete mass layer",
+      "strong": false
+    },
+    {
+      "accepted": {
+        "C": 13776,
+        "D": 1266
+      },
+      "classes": 14922,
+      "clone_rejections": 288,
+      "fibres": {
+        "C": 13656,
+        "C,C,D": 60,
+        "D": 1206
+      },
+      "k": 4,
+      "scope": "C/D owner families only; not the complete mass layer",
+      "strong": true
+    }
+  ],
+  "status": "FINITE-EXACT complete k4 C/D owner universe"
+}
