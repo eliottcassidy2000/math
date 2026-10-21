@@ -1,0 +1,29 @@
+{
+  "base_commit": "c4a7875652a5ea516e93a31c3c6410d2204773b2",
+  "dependencies": {
+    "05-knowledge/results/charge_palettes_boundary_20261020g/palettes.md": "5d94c78d33143d26e5ee852e25c9ed6c0461c3f553d85e01a85639dfff45fee4",
+    "05-knowledge/results/charge_palettes_boundary_20261020g/unit_gap_boundary.py": "b89109596f68bad0147e679bf910915b951a0365416daf386c0e76c45b27ea78",
+    "05-knowledge/results/charge_palettes_boundary_20261020g/zero-heavy-mass.json": "c6d91f752599cc4959bf846a9b4ac9c675e5e2832de221decb9141ad35e0cef8",
+    "05-knowledge/results/charge_palettes_boundary_20261020g/zero_heavy.md": "34fc50fbc4c5d6c58d8f8a683a4b7d74b2c712347be80d063396a556ecc0eebf",
+    "05-knowledge/results/defect_boundary_20261020/sparse_theory.md": "131f05f3e65032466a430a2eeebd6b456519916dc5250884d11962be788f309a",
+    "05-knowledge/results/defect_transitions_20261020/strata.md": "bd21de7b25442acc66914a19bcd5550f5bb2ffbc731179bcfdf8f51824d858ff",
+    "05-knowledge/results/first_exit_complement_games_20261020/PALETTE-GLUE.md": "3e996d47377ba3da6c9c39e94dfa396c8b4a4f06c49766a4fa8bf6e6a3d67149",
+    "05-knowledge/results/first_exit_complement_games_20261020/palette-glue.json": "266f1c1dec1e79a4c0e34a80f3416e57157f8bcda5ff83cf5a55809bfe8bde10",
+    "05-knowledge/results/kernels_games_detours_20261020f/forcing.md": "be8c9bb228afaee492aa0f8484fe59919cee26c7391229312d17b2db962264f9",
+    "05-knowledge/results/torus_voltage_and_halfplane_forcing_20261020/geometric_forcing_bridges.md": "e915c72e6f55d91d434a32b8e642eb4466808a02d2fe0eb54ecc5c09f9ca145b",
+    "05-knowledge/results/zero_heavy_ports_20261020g/zero_heavy.md": "285ac062cd955eab06487ea0c16c97d2c511226ee942725acfceb6b45b803ac1"
+  },
+  "files": {
+    "AUDIT.md": "151e977de76cce47f5cbd87ce01b46e8db82e653ab37d5b64a517c331330be7a",
+    "INHERITANCE.md": "370fc30e77411f5911cdecb8fa6c943d625d6ce7715537f94e4a7cc32d51ecce",
+    "README.md": "ce7f6d5cd97bbfe9e990773d93a7e463c4eb0f1a21712a61b35ccf6c3f0ee329",
+    "palette-check.json": "3d4289ff0d07731a6671e4ba68f0898d4d954ca6ee62ccc30bf209a75602378a",
+    "palette_check.py": "e372fd891f3e79a454eb6320a45b4092d39da99796fd935ad3acf7fc7989a258",
+    "palettes.md": "cbb6d0cbecb305664a62b9f48fdc992232df5421d1e491fc81e2ba8b822c5f9a",
+    "verify.py": "58f01f740f4e68076feb909923c5d5b186bbd870f4332b20cca4c46c4f75bc17",
+    "zero-heavy-check.json": "eaae9b3baaa4e46a0b513aaa1533fb246f73e6589d8a335be8f712fe07c58c78",
+    "zero_heavy.md": "147dea4a02084cc17d9eb1c6c1fc0221caf4150f7051546d6725e87f8a2800ed",
+    "zero_heavy_check.py": "533fa6c595db3b3489825d1fb6ee48e1295f665c4ac059fcb441f4246e31b12c"
+  },
+  "status": "PROVED scoped; FINITE-EXACT controls; pending root audit"
+}

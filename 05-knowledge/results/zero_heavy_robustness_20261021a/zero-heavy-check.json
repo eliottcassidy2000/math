@@ -1,0 +1,283 @@
+{
+  "boundary_layers": [
+    {
+      "classes": 42,
+      "clone_rejections": {
+        "B": 3
+      },
+      "delta": 2,
+      "k": 2,
+      "max_unit_cell_histogram": {
+        "1": 6,
+        "2": 9,
+        "3": 15,
+        "4": 6,
+        "5": 6
+      },
+      "strong": false,
+      "types": {
+        "A": 30,
+        "B": 12
+      }
+    },
+    {
+      "classes": 11,
+      "clone_rejections": {
+        "B": 1
+      },
+      "delta": 2,
+      "k": 2,
+      "max_unit_cell_histogram": {
+        "2": 5,
+        "3": 2,
+        "5": 4
+      },
+      "strong": true,
+      "types": {
+        "A": 6,
+        "B": 5
+      }
+    },
+    {
+      "classes": 81,
+      "clone_rejections": {
+        "B": 12
+      },
+      "delta": 3,
+      "k": 2,
+      "max_unit_cell_histogram": {
+        "1": 3,
+        "2": 14,
+        "3": 29,
+        "4": 20,
+        "5": 6,
+        "6": 6,
+        "7": 3
+      },
+      "strong": false,
+      "types": {
+        "A": 30,
+        "B": 48,
+        "C": 3
+      }
+    },
+    {
+      "classes": 15,
+      "clone_rejections": {
+        "B": 2
+      },
+      "delta": 3,
+      "k": 2,
+      "max_unit_cell_histogram": {
+        "1": 3,
+        "3": 4,
+        "4": 6,
+        "7": 2
+      },
+      "strong": true,
+      "types": {
+        "A": 2,
+        "B": 10,
+        "C": 3
+      }
+    },
+    {
+      "classes": 1245,
+      "clone_rejections": {
+        "B": 15
+      },
+      "delta": 3,
+      "k": 3,
+      "max_unit_cell_histogram": {
+        "1": 555,
+        "2": 240,
+        "3": 450
+      },
+      "strong": false,
+      "types": {
+        "A": 1155,
+        "B": 90
+      }
+    },
+    {
+      "classes": 344,
+      "clone_rejections": {
+        "B": 6
+      },
+      "delta": 3,
+      "k": 3,
+      "max_unit_cell_histogram": {
+        "1": 100,
+        "2": 44,
+        "3": 200
+      },
+      "strong": true,
+      "types": {
+        "A": 300,
+        "B": 44
+      }
+    },
+    {
+      "classes": 2985,
+      "clone_rejections": {
+        "B": 90
+      },
+      "delta": 4,
+      "k": 3,
+      "max_unit_cell_histogram": {
+        "1": 735,
+        "2": 825,
+        "3": 1335,
+        "4": 30,
+        "5": 60
+      },
+      "strong": false,
+      "types": {
+        "A": 2415,
+        "B": 540,
+        "C": 30
+      }
+    },
+    {
+      "classes": 650,
+      "clone_rejections": {
+        "B": 24
+      },
+      "delta": 4,
+      "k": 3,
+      "max_unit_cell_histogram": {
+        "1": 74,
+        "2": 176,
+        "3": 360,
+        "5": 40
+      },
+      "strong": true,
+      "types": {
+        "A": 450,
+        "B": 176,
+        "C": 24
+      }
+    },
+    {
+      "classes": 51870,
+      "clone_rejections": {
+        "B": 105
+      },
+      "delta": 4,
+      "k": 4,
+      "max_unit_cell_histogram": {
+        "1": 43680,
+        "2": 2310,
+        "3": 5880
+      },
+      "strong": false,
+      "types": {
+        "A": 51030,
+        "B": 840
+      }
+    },
+    {
+      "classes": 15490,
+      "clone_rejections": {
+        "B": 50
+      },
+      "delta": 4,
+      "k": 4,
+      "max_unit_cell_histogram": {
+        "1": 11914,
+        "2": 468,
+        "3": 3108
+      },
+      "strong": true,
+      "types": {
+        "A": 15022,
+        "B": 468
+      }
+    },
+    {
+      "classes": 133665,
+      "clone_rejections": {
+        "B": 840
+      },
+      "delta": 5,
+      "k": 4,
+      "max_unit_cell_histogram": {
+        "1": 94605,
+        "2": 12600,
+        "3": 26460
+      },
+      "strong": false,
+      "types": {
+        "A": 126630,
+        "B": 6720,
+        "C": 315
+      }
+    },
+    {
+      "classes": 33616,
+      "clone_rejections": {
+        "B": 300
+      },
+      "delta": 5,
+      "k": 4,
+      "max_unit_cell_histogram": {
+        "1": 19930,
+        "2": 2808,
+        "3": 10878
+      },
+      "strong": true,
+      "types": {
+        "A": 30562,
+        "B": 2808,
+        "C": 246
+      }
+    }
+  ],
+  "graph_checks": [
+    {
+      "adjacent": 1,
+      "irreducible": 2,
+      "irreducible_p3": 3,
+      "k": 2,
+      "matchings": 3,
+      "p3_graphs": 3
+    },
+    {
+      "adjacent": 6,
+      "irreducible": 10,
+      "irreducible_p3": 24,
+      "k": 3,
+      "matchings": 15,
+      "p3_graphs": 30
+    },
+    {
+      "adjacent": 50,
+      "irreducible": 74,
+      "irreducible_p3": 246,
+      "k": 4,
+      "matchings": 105,
+      "p3_graphs": 315
+    },
+    {
+      "adjacent": 518,
+      "irreducible": 706,
+      "irreducible_p3": 3012,
+      "k": 5,
+      "matchings": 945,
+      "p3_graphs": 3780
+    }
+  ],
+  "relabel_controls": 36,
+  "small_k2_full_compiler_reference": {
+    "delta2": [
+      42,
+      11
+    ],
+    "delta3": [
+      81,
+      15
+    ]
+  },
+  "status": "FINITE-EXACT quotient and hostile controls; proofs separate",
+  "weighted_subset_dp_checks": 20
+}

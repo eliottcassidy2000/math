@@ -1,0 +1,29 @@
+{
+  "runs": [
+    {
+      "bytes": 4772,
+      "checker": "zero_heavy_check.py",
+      "optimized": false,
+      "sha256": "eaae9b3baaa4e46a0b513aaa1533fb246f73e6589d8a335be8f712fe07c58c78"
+    },
+    {
+      "bytes": 4772,
+      "checker": "zero_heavy_check.py",
+      "optimized": true,
+      "sha256": "eaae9b3baaa4e46a0b513aaa1533fb246f73e6589d8a335be8f712fe07c58c78"
+    },
+    {
+      "bytes": 22332,
+      "checker": "palette_check.py",
+      "optimized": false,
+      "sha256": "3d4289ff0d07731a6671e4ba68f0898d4d954ca6ee62ccc30bf209a75602378a"
+    },
+    {
+      "bytes": 22332,
+      "checker": "palette_check.py",
+      "optimized": true,
+      "sha256": "3d4289ff0d07731a6671e4ba68f0898d4d954ca6ee62ccc30bf209a75602378a"
+    }
+  ],
+  "status": "PASS"
+}

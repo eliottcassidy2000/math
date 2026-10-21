@@ -1,0 +1,52 @@
+{
+  "status": "Reviewed provenance-only overlay; frozen producer and independent audit bytes unchanged",
+  "original_source_manifest_sha256": "a5490b17a42062db222676a44a1eb2ef1c3f0b55499b2389cc70691886f9112c",
+  "independent_audit_manifest_sha256": "5e83c680f7f584a0ebda64b3bdaf11dbed2a4c87dddd06f3b541787e9eb413fd",
+  "source_baseline_commit": "c4a7875652a5ea516e93a31c3c6410d2204773b2",
+  "incoming_preserved_commit": "df1b3a0008e1be62052c69dd215878a9b2e5703f",
+  "incoming_correction_commit": "e2654366789",
+  "incoming_pins": [
+    {
+      "required_destination": "05-knowledge/results/charge_palettes_boundary_20261020g/zero_heavy.md",
+      "sha256": "b09e5fc30d9b41b19db61988e01ef324dae03c6be6ddd2bc2c8339800253c584",
+      "bytes": 8186
+    },
+    {
+      "required_destination": "05-knowledge/results/zero_heavy_next_20261020h/README.md",
+      "sha256": "c30f3bae680af2119862fda6bb0ade2b786d879103283b240a9ef4525e4f797c",
+      "bytes": 13871
+    },
+    {
+      "required_destination": "05-knowledge/results/zero_heavy_next_20261020h/verify.py",
+      "sha256": "63d102cb75d9f851a501007800b618ba08a3329f59c0eacc71caa00f2284ebe6",
+      "bytes": 12510
+    },
+    {
+      "required_destination": "05-knowledge/results/zero_heavy_next_20261020h/receipt.json",
+      "sha256": "ab4172650a0c387a39fbf4f6c450105e20a264896079c66c4b130aca16ec5391",
+      "bytes": 4964
+    }
+  ],
+  "historical_dependencies": [
+    {
+      "required_destination": "05-knowledge/results/charge_palettes_boundary_20261020g/zero_heavy.md",
+      "sha256": "34fc50fbc4c5d6c58d8f8a683a4b7d74b2c712347be80d063396a556ecc0eebf",
+      "bytes": 8002,
+      "commit": "c4a7875652a5ea516e93a31c3c6410d2204773b2"
+    }
+  ],
+  "source_edits": [],
+  "mathematical_formula_changes": [],
+  "recovered_not_new": [
+    "Deficit-k missing-gap classification and endpoint overlap onset at k+1",
+    "Budget-two two-unit-gap local correction"
+  ],
+  "remaining_main_scope": [
+    "Unified one-unit-gap corridor through2k-3 including deficit>=k+1",
+    "Physical-port root-only robustness metric"
+  ],
+  "excluded": [
+    "Separately evolving later two-unit-gap extension",
+    "Any general black-core connectivity or unconditional six-colour forcing promotion"
+  ]
+}

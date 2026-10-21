@@ -1,0 +1,23 @@
+{
+  "exclusions": [
+    "Any evolving or later corridor addendum",
+    "Unconditional six-colour forcing or six-chromatic carrier",
+    "Unrestricted A000568 recurrence"
+  ],
+  "files": {
+    "AUDIT.md": "13a5524a138043e968e4ed44d05d8aa304e4bd1b7450b3d74ad69dc1ae8e1068",
+    "README.md": "85f5eb0340b5778189bf1781b08f691ff391080e1964d5f43631c457dbedd813",
+    "independent_audit.py": "cea1b371c06e2cbf34470972889ec9d2ad6dd1fb8fd575726403a571ceca3da9",
+    "receipt.normal.json": "a3a740aaf95b83d78b43c6ac747a4d77f5c5ecf6f40fa60f37b8994ab0dccdf8",
+    "receipt.optimized.json": "a3a740aaf95b83d78b43c6ac747a4d77f5c5ecf6f40fa60f37b8994ab0dccdf8",
+    "verification.json": "0e4d15a4e933a97b2642b39c5d0cff6297773de8155eb501c7357f2b30750c9e",
+    "verify.py": "5764497d4aa194aa5f58e124ec97a760c27dc91dcf87ead9a3245b7d46eb37cb"
+  },
+  "scope": [
+    "zero_heavy.md sections 1-6 including corridor 0<=delta<=2k-3, k>=3",
+    "palettes.md sections 1-5 including actual geometry and all physical ports"
+  ],
+  "source_base_commit": "c4a7875652a5ea516e93a31c3c6410d2204773b2",
+  "source_manifest_sha256": "a5490b17a42062db222676a44a1eb2ef1c3f0b55499b2389cc70691886f9112c",
+  "status": "PASS independent audit of the frozen main packet only"
+}

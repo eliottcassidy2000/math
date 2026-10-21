@@ -1,0 +1,18 @@
+{
+  "frozen_manifest_sha256": "a5490b17a42062db222676a44a1eb2ef1c3f0b55499b2389cc70691886f9112c",
+  "runs": [
+    {
+      "bytes": 9038,
+      "optimized": false,
+      "returncode": 0,
+      "sha256": "a3a740aaf95b83d78b43c6ac747a4d77f5c5ecf6f40fa60f37b8994ab0dccdf8"
+    },
+    {
+      "bytes": 9038,
+      "optimized": true,
+      "returncode": 0,
+      "sha256": "a3a740aaf95b83d78b43c6ac747a4d77f5c5ecf6f40fa60f37b8994ab0dccdf8"
+    }
+  ],
+  "status": "PASS"
+}
