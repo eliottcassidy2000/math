@@ -206,3 +206,7 @@ computation needs universe, controls, command, and output. Route `CLAIMED` and
 ## Archived from INDEX.md on 2026-10-20 (mac-mini-2026-10-20-kepler, line budget)
 
 - **THM-2114/2115 (PROVED):** finite-ring needles force `13`- and `11`-content
+
+## Archived from INDEX.md on 2026-10-21 (mac-mini-2026-10-21-electric, line budget)
+
+- **THM-2104/2105 (PROVED):** quotient valuations cross `2,3,5` walls, and emptiness forces exact affine carriers through denominator fourteen.
