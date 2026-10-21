@@ -1,0 +1,9 @@
+{
+  "exact_allowlist": {
+    "PALETTE_DYNAMICS.md": "1a6b679bf8900c38baa8377cff39ca86931dd9ecc02a2ecb73f25bba53150ae3",
+    "verify_palette_dynamics.py": "ac0cb27acda8106d152371147c49eb0378462cd4b62fb2d3d50daab31b52e643",
+    "receipt.json": "9ac0200e62204ab5ae1044bdaaaabd9cbba004edda87751aad97bd753f216916",
+    "receipt-O.json": "9ac0200e62204ab5ae1044bdaaaabd9cbba004edda87751aad97bd753f216916",
+    "SOURCES.json": "7956451293a4dfdc8f233dd4712c74154fd0b4e584af67f9cfec49b130d28f95"
+  }
+}

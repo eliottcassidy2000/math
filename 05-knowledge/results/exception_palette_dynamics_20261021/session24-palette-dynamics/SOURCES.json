@@ -1,0 +1,21 @@
+{
+  "inheritance": "No external novelty claim. Structural completeness is an independently audited dependency, not re-proved here; twisted C3 recursion and unlabelled non-D-finiteness are inherited. Session23 seed ordinary/signed Paley polynomials are inherited.",
+  "sources": [
+    {
+      "path": "session24-structure/STRUCTURE.md",
+      "sha256": "675e8943bbf39317af11dce4ab3f64f97dc07375871bdb0ad5e54aca504432bd"
+    },
+    {
+      "path": "session23b-publication/bundle/signed_tournament_palette_rigidity_20261021/README.md",
+      "sha256": "8c480edb62535afac0417eac406e8be4fabb76f8506e7a6ab697798565ebda65"
+    },
+    {
+      "path": "session23b-publication/bundle/signed_tournament_palette_rigidity_20261021/session23b-stabilizers/REPORT.md",
+      "sha256": "d197f61808e4cd65d8f26d27ad5663d793c4caf1f8b6133d948914b2dc5405d7"
+    },
+    {
+      "path": "session23b-publication/bundle/signed_tournament_palette_rigidity_20261021/session23b-stabilizers-review/REVIEW.md",
+      "sha256": "241dd8fd49a641d02cb6941d73350337902b23c4ca558ebaedd99e18d08d9c58"
+    }
+  ]
+}

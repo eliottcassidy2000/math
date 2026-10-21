@@ -1,0 +1,697 @@
+{
+  "status": "FINITE-EXACT, supplements all-order proofs",
+  "universe": "All q-color words on C3,R5,P7 for q=0..6; every palette involution conjugacy type f=0..q with f=q mod 2; full anti-stabilizer incidence checks q<=4. No imported checker or receipt.",
+  "seeds": [
+    {
+      "n": 3,
+      "group_order": 3,
+      "anti_involutions": 3,
+      "max_q": 6,
+      "rows": [
+        {
+          "q": 0,
+          "f": 0,
+          "Q": 0,
+          "F": 0,
+          "regular_words": 0,
+          "fixed_reflection": 0
+        },
+        {
+          "q": 1,
+          "f": 1,
+          "Q": 0,
+          "F": 0,
+          "regular_words": 0,
+          "fixed_reflection": 0
+        },
+        {
+          "q": 2,
+          "f": 0,
+          "Q": 2,
+          "F": 0,
+          "regular_words": 6,
+          "fixed_reflection": 0
+        },
+        {
+          "q": 2,
+          "f": 2,
+          "Q": 2,
+          "F": 2,
+          "regular_words": 6,
+          "fixed_reflection": 2
+        },
+        {
+          "q": 3,
+          "f": 1,
+          "Q": 8,
+          "F": 2,
+          "regular_words": 24,
+          "fixed_reflection": 2
+        },
+        {
+          "q": 3,
+          "f": 3,
+          "Q": 8,
+          "F": 6,
+          "regular_words": 24,
+          "fixed_reflection": 6
+        },
+        {
+          "q": 4,
+          "f": 0,
+          "Q": 20,
+          "F": 0,
+          "regular_words": 60,
+          "fixed_reflection": 0
+        },
+        {
+          "q": 4,
+          "f": 2,
+          "Q": 20,
+          "F": 6,
+          "regular_words": 60,
+          "fixed_reflection": 6
+        },
+        {
+          "q": 4,
+          "f": 4,
+          "Q": 20,
+          "F": 12,
+          "regular_words": 60,
+          "fixed_reflection": 12
+        },
+        {
+          "q": 5,
+          "f": 1,
+          "Q": 40,
+          "F": 4,
+          "regular_words": 120,
+          "fixed_reflection": 4
+        },
+        {
+          "q": 5,
+          "f": 3,
+          "Q": 40,
+          "F": 12,
+          "regular_words": 120,
+          "fixed_reflection": 12
+        },
+        {
+          "q": 5,
+          "f": 5,
+          "Q": 40,
+          "F": 20,
+          "regular_words": 120,
+          "fixed_reflection": 20
+        },
+        {
+          "q": 6,
+          "f": 0,
+          "Q": 70,
+          "F": 0,
+          "regular_words": 210,
+          "fixed_reflection": 0
+        },
+        {
+          "q": 6,
+          "f": 2,
+          "Q": 70,
+          "F": 10,
+          "regular_words": 210,
+          "fixed_reflection": 10
+        },
+        {
+          "q": 6,
+          "f": 4,
+          "Q": 70,
+          "F": 20,
+          "regular_words": 210,
+          "fixed_reflection": 20
+        },
+        {
+          "q": 6,
+          "f": 6,
+          "Q": 70,
+          "F": 30,
+          "regular_words": 210,
+          "fixed_reflection": 30
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "group_order": 5,
+      "anti_involutions": 5,
+      "max_q": 6,
+      "rows": [
+        {
+          "q": 0,
+          "f": 0,
+          "Q": 0,
+          "F": 0,
+          "regular_words": 0,
+          "fixed_reflection": 0
+        },
+        {
+          "q": 1,
+          "f": 1,
+          "Q": 0,
+          "F": 0,
+          "regular_words": 0,
+          "fixed_reflection": 0
+        },
+        {
+          "q": 2,
+          "f": 0,
+          "Q": 6,
+          "F": 0,
+          "regular_words": 30,
+          "fixed_reflection": 0
+        },
+        {
+          "q": 2,
+          "f": 2,
+          "Q": 6,
+          "F": 6,
+          "regular_words": 30,
+          "fixed_reflection": 6
+        },
+        {
+          "q": 3,
+          "f": 1,
+          "Q": 48,
+          "F": 8,
+          "regular_words": 240,
+          "fixed_reflection": 8
+        },
+        {
+          "q": 3,
+          "f": 3,
+          "Q": 48,
+          "F": 24,
+          "regular_words": 240,
+          "fixed_reflection": 24
+        },
+        {
+          "q": 4,
+          "f": 0,
+          "Q": 204,
+          "F": 0,
+          "regular_words": 1020,
+          "fixed_reflection": 0
+        },
+        {
+          "q": 4,
+          "f": 2,
+          "Q": 204,
+          "F": 30,
+          "regular_words": 1020,
+          "fixed_reflection": 30
+        },
+        {
+          "q": 4,
+          "f": 4,
+          "Q": 204,
+          "F": 60,
+          "regular_words": 1020,
+          "fixed_reflection": 60
+        },
+        {
+          "q": 5,
+          "f": 1,
+          "Q": 624,
+          "F": 24,
+          "regular_words": 3120,
+          "fixed_reflection": 24
+        },
+        {
+          "q": 5,
+          "f": 3,
+          "Q": 624,
+          "F": 72,
+          "regular_words": 3120,
+          "fixed_reflection": 72
+        },
+        {
+          "q": 5,
+          "f": 5,
+          "Q": 624,
+          "F": 120,
+          "regular_words": 3120,
+          "fixed_reflection": 120
+        },
+        {
+          "q": 6,
+          "f": 0,
+          "Q": 1554,
+          "F": 0,
+          "regular_words": 7770,
+          "fixed_reflection": 0
+        },
+        {
+          "q": 6,
+          "f": 2,
+          "Q": 1554,
+          "F": 70,
+          "regular_words": 7770,
+          "fixed_reflection": 70
+        },
+        {
+          "q": 6,
+          "f": 4,
+          "Q": 1554,
+          "F": 140,
+          "regular_words": 7770,
+          "fixed_reflection": 140
+        },
+        {
+          "q": 6,
+          "f": 6,
+          "Q": 1554,
+          "F": 210,
+          "regular_words": 7770,
+          "fixed_reflection": 210
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "group_order": 21,
+      "anti_involutions": 7,
+      "max_q": 6,
+      "rows": [
+        {
+          "q": 0,
+          "f": 0,
+          "Q": 0,
+          "F": 0,
+          "regular_words": 0,
+          "fixed_reflection": 0
+        },
+        {
+          "q": 1,
+          "f": 1,
+          "Q": 0,
+          "F": 0,
+          "regular_words": 0,
+          "fixed_reflection": 0
+        },
+        {
+          "q": 2,
+          "f": 0,
+          "Q": 4,
+          "F": 0,
+          "regular_words": 84,
+          "fixed_reflection": 0
+        },
+        {
+          "q": 2,
+          "f": 2,
+          "Q": 4,
+          "F": 4,
+          "regular_words": 84,
+          "fixed_reflection": 12
+        },
+        {
+          "q": 3,
+          "f": 1,
+          "Q": 96,
+          "F": 8,
+          "regular_words": 2016,
+          "fixed_reflection": 24
+        },
+        {
+          "q": 3,
+          "f": 3,
+          "Q": 96,
+          "F": 24,
+          "regular_words": 2016,
+          "fixed_reflection": 72
+        },
+        {
+          "q": 4,
+          "f": 0,
+          "Q": 760,
+          "F": 0,
+          "regular_words": 15960,
+          "fixed_reflection": 0
+        },
+        {
+          "q": 4,
+          "f": 2,
+          "Q": 760,
+          "F": 40,
+          "regular_words": 15960,
+          "fixed_reflection": 120
+        },
+        {
+          "q": 4,
+          "f": 4,
+          "Q": 760,
+          "F": 80,
+          "regular_words": 15960,
+          "fixed_reflection": 240
+        },
+        {
+          "q": 5,
+          "f": 1,
+          "Q": 3680,
+          "F": 40,
+          "regular_words": 77280,
+          "fixed_reflection": 120
+        },
+        {
+          "q": 5,
+          "f": 3,
+          "Q": 3680,
+          "F": 120,
+          "regular_words": 77280,
+          "fixed_reflection": 360
+        },
+        {
+          "q": 5,
+          "f": 5,
+          "Q": 3680,
+          "F": 200,
+          "regular_words": 77280,
+          "fixed_reflection": 600
+        },
+        {
+          "q": 6,
+          "f": 0,
+          "Q": 13260,
+          "F": 0,
+          "regular_words": 278460,
+          "fixed_reflection": 0
+        },
+        {
+          "q": 6,
+          "f": 2,
+          "Q": 13260,
+          "F": 140,
+          "regular_words": 278460,
+          "fixed_reflection": 420
+        },
+        {
+          "q": 6,
+          "f": 4,
+          "Q": 13260,
+          "F": 280,
+          "regular_words": 278460,
+          "fixed_reflection": 840
+        },
+        {
+          "q": 6,
+          "f": 6,
+          "Q": 13260,
+          "F": 420,
+          "regular_words": 278460,
+          "fixed_reflection": 1260
+        }
+      ]
+    }
+  ],
+  "dynamics": [
+    {
+      "c": 2,
+      "k": 0,
+      "n": 1,
+      "q": "2",
+      "f": "2",
+      "aut": "1",
+      "ordinary_probability": "1"
+    },
+    {
+      "c": 2,
+      "k": 1,
+      "n": 3,
+      "q": "2",
+      "f": "2",
+      "aut": "3",
+      "ordinary_probability": "3/4"
+    },
+    {
+      "c": 2,
+      "k": 2,
+      "n": 9,
+      "q": "2",
+      "f": "2",
+      "aut": "81",
+      "ordinary_probability": "81/256"
+    },
+    {
+      "c": 2,
+      "k": 3,
+      "n": 27,
+      "q": "2",
+      "f": "2",
+      "aut": "1594323"
+    },
+    {
+      "c": 2,
+      "k": 4,
+      "n": 81,
+      "q": "2",
+      "f": "2",
+      "aut": "12157665459056928801"
+    },
+    {
+      "c": 3,
+      "k": 0,
+      "n": 1,
+      "q": "3",
+      "f": "3",
+      "aut": "1",
+      "ordinary_probability": "1"
+    },
+    {
+      "c": 3,
+      "k": 1,
+      "n": 3,
+      "q": "8",
+      "f": "6",
+      "aut": "3",
+      "ordinary_probability": "8/9"
+    },
+    {
+      "c": 3,
+      "k": 2,
+      "n": 9,
+      "q": "168",
+      "f": "42",
+      "aut": "81",
+      "ordinary_probability": "56/81"
+    },
+    {
+      "c": 3,
+      "k": 3,
+      "n": 27,
+      "q": "1580488",
+      "f": "7014",
+      "aut": "1594323"
+    },
+    {
+      "c": 3,
+      "k": 4,
+      "n": 81,
+      "q": "1315989286172397928",
+      "f": "11085535818",
+      "aut": "12157665459056928801"
+    },
+    {
+      "c": 4,
+      "k": 0,
+      "n": 1,
+      "q": "4",
+      "f": "4",
+      "aut": "1",
+      "ordinary_probability": "1"
+    },
+    {
+      "c": 4,
+      "k": 1,
+      "n": 3,
+      "q": "20",
+      "f": "12",
+      "aut": "3",
+      "ordinary_probability": "15/16"
+    },
+    {
+      "c": 4,
+      "k": 2,
+      "n": 9,
+      "q": "2660",
+      "f": "228",
+      "aut": "81",
+      "ordinary_probability": "53865/65536"
+    },
+    {
+      "c": 4,
+      "k": 3,
+      "n": 27,
+      "q": "6273697780",
+      "f": "606252",
+      "aut": "1594323"
+    },
+    {
+      "c": 4,
+      "k": 4,
+      "n": 81,
+      "q": "82309417205543300830675084740",
+      "f": "3803441825914308",
+      "aut": "12157665459056928801"
+    },
+    {
+      "c": 5,
+      "k": 0,
+      "n": 1,
+      "q": "5",
+      "f": "5",
+      "aut": "1",
+      "ordinary_probability": "1"
+    },
+    {
+      "c": 5,
+      "k": 1,
+      "n": 3,
+      "q": "40",
+      "f": "20",
+      "aut": "3",
+      "ordinary_probability": "24/25"
+    },
+    {
+      "c": 5,
+      "k": 2,
+      "n": 9,
+      "q": "21320",
+      "f": "780",
+      "aut": "81",
+      "ordinary_probability": "345384/390625"
+    },
+    {
+      "c": 5,
+      "k": 3,
+      "n": 27,
+      "q": "3230281315560",
+      "f": "16628820",
+      "aut": "1594323"
+    },
+    {
+      "c": 5,
+      "k": 4,
+      "n": 81,
+      "q": "11235690859397186708165344468015433480",
+      "f": "53715766545793810380",
+      "aut": "12157665459056928801"
+    },
+    {
+      "c": 6,
+      "k": 0,
+      "n": 1,
+      "q": "6",
+      "f": "6",
+      "aut": "1",
+      "ordinary_probability": "1"
+    },
+    {
+      "c": 6,
+      "k": 1,
+      "n": 3,
+      "q": "70",
+      "f": "30",
+      "aut": "3",
+      "ordinary_probability": "35/36"
+    },
+    {
+      "c": 6,
+      "k": 2,
+      "n": 9,
+      "q": "114310",
+      "f": "2070",
+      "aut": "81",
+      "ordinary_probability": "57155/62208"
+    },
+    {
+      "c": 6,
+      "k": 3,
+      "n": 27,
+      "q": "497887725292230",
+      "f": "236619630",
+      "aut": "1594323"
+    },
+    {
+      "c": 6,
+      "k": 4,
+      "n": 81,
+      "q": "41140825700496227603252764503785345429091590",
+      "f": "117810009340188867855270",
+      "aut": "12157665459056928801"
+    }
+  ],
+  "labelled": [
+    {
+      "d": 3,
+      "k": 0,
+      "n": 3,
+      "aut": "3",
+      "labelled": "2"
+    },
+    {
+      "d": 3,
+      "k": 1,
+      "n": 9,
+      "aut": "81",
+      "labelled": "4480"
+    },
+    {
+      "d": 3,
+      "k": 2,
+      "n": 27,
+      "aut": "1594323",
+      "labelled": "6829776306569216000000"
+    },
+    {
+      "d": 5,
+      "k": 0,
+      "n": 5,
+      "aut": "5",
+      "labelled": "24"
+    },
+    {
+      "d": 5,
+      "k": 1,
+      "n": 15,
+      "aut": "1215",
+      "labelled": "1076275200"
+    },
+    {
+      "d": 5,
+      "k": 2,
+      "n": 45,
+      "aut": "17433922005",
+      "labelled": "6861463578371686914172538280531197952000000000"
+    },
+    {
+      "d": 7,
+      "k": 0,
+      "n": 7,
+      "aut": "21",
+      "labelled": "240"
+    },
+    {
+      "d": 7,
+      "k": 1,
+      "n": 21,
+      "aut": "45927",
+      "labelled": "1112438046720000"
+    },
+    {
+      "d": 7,
+      "k": 2,
+      "n": 63,
+      "aut": "480412641554181",
+      "labelled": "4126886230534050676640201002393596270580415712668025461145600000000000000"
+    }
+  ],
+  "source_sha256": "ac0cb27acda8106d152371147c49eb0378462cd4b62fb2d3d50daab31b52e643"
+}
