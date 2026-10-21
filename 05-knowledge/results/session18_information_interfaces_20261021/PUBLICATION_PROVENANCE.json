@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "scope": "Research synthesis and exact publication index only; no new mathematical theorem",
+  "session": "18",
+  "previous_session_head": "c4a7875652a5ea516e93a31c3c6410d2204773b2",
+  "verified_result_head": "d4c3bfb2264954ff3e71e5bba5a78c97bba59fd6",
+  "root_corrected_source_sha256": "28f0d54ebeb52fb5b795d65fc3e869bb42e7a33e31e532074fd5537db27248fb",
+  "publication_mode": "add-only; fresh-prior guarded nonforce updates; exact-byte readback",
+  "result_packets": [
+    {
+      "packet": "session18-reflections",
+      "commit": "098cb67c1ddd3e932e85c17974fcc6d5a6193a9f",
+      "manifest_sha256": "26a2c9f280c01e3769c78caf40107515d4f07b51cfc30d07a6cf2eebd75f5618",
+      "files": 11,
+      "bytes": 56013,
+      "proof_path": "05-knowledge/results/divisor_reflection_resolution_20261021/REFLECTION_RESOLUTION.md",
+      "proof_sha256": "eecbe71f9cd36aba84ed3836d3f24c81b62ee50b7303eb430b4db6ac7f5da80c",
+      "reviewed_scope": "PROVED scoped action obstruction and minimal lift; finite controls, not unmarked connectivity.",
+      "all_payload_bytes_currently_match": true
+    },
+    {
+      "packet": "session18-order10",
+      "commit": "4ec382bd66a84b035b3b0e77e8cbfa36508cc96a",
+      "manifest_sha256": "7adc91e0d4432d1b8480b2ea77ab5b3ea1b10eca82a9a7d386fb8d676c2ff8f2",
+      "files": 18,
+      "bytes": 243690,
+      "proof_path": "05-knowledge/results/endpoint_three_order10_20261021/README.md",
+      "proof_sha256": "044079416827b3114772cdf2ff7b1f782e914b2c8d75e0a082eb15e437551825",
+      "reviewed_scope": "FINITE-EXACT n=10 plus inherited structural n>=11; no general connectivity promotion.",
+      "all_payload_bytes_currently_match": true
+    },
+    {
+      "packet": "session18-debt",
+      "commit": "426f287975230d09433a6bd527479826185af503",
+      "manifest_sha256": "4ae4773452e1a641a2ab6433d2db39617b31550f5a335b8ec8f81c24fe660f5e",
+      "files": 15,
+      "bytes": 606774,
+      "proof_path": "05-knowledge/results/source63_separator_debt_20261021/SOURCE63_SEPARATOR_DEBT.md",
+      "proof_sha256": "8077d5e3552f93bca4dda19f5314bdadc26556396ea1df8658c4e9ca9466a22a",
+      "reviewed_scope": "PROVED guarded cones and named grounding; unhandled coverage and universal entry OPEN.",
+      "all_payload_bytes_currently_match": true
+    },
+    {
+      "packet": "session18-idoneal",
+      "commit": "df1b3a0008e1be62052c69dd215878a9b2e5703f",
+      "manifest_sha256": "faf8d5311d306a4e6039202f040a24838b72d2518a8ca73da4116f40359d6eb1",
+      "files": 19,
+      "bytes": 93533,
+      "proof_path": "05-knowledge/results/idoneal_information_channels_20261021/IDONEAL_INFORMATION_CHANNELS.md",
+      "proof_sha256": "a0cefdfb729632e0dafc89733779dcb016b2ebddae3dc6ae87e8ba911c710ceb",
+      "reviewed_scope": "PROVED elementary maps, CITED genus theory, FINITE-EXACT forms; no global completeness proof.",
+      "all_payload_bytes_currently_match": true
+    },
+    {
+      "packet": "session18-annulus",
+      "commit": "8730121c06121d741fa68fdb366bc1bbc75d00a4",
+      "manifest_sha256": "68955de730a9cced620357e29f0aaee81ea44057a52f0980b66e3264c4c6c0d8",
+      "files": 34,
+      "bytes": 645951,
+      "proof_path": "05-knowledge/results/session18_native_annulus/README.md",
+      "proof_sha256": "f5edff0fe9009171f00b23e9bb38f5732eac72b682e58f9ae38f05e8fbff16fb",
+      "reviewed_scope": "PROVED identities and FINITE-EXACT producer sweep; independent selected universes, uniform bound OPEN.",
+      "all_payload_bytes_currently_match": true
+    },
+    {
+      "packet": "session18-zero-heavy",
+      "commit": "a2855757c3e914f57ba60606a0570d74582be274",
+      "manifest_sha256": "13cc37eb97ce20c0450ab27cb860c777f1f4b5ec751a4e4be1688f5aa8d65ce5",
+      "files": 23,
+      "bytes": 141570,
+      "proof_path": "05-knowledge/results/zero_heavy_robustness_20261021a/PUBLICATION_REVIEW.md",
+      "proof_sha256": "955a654b3eb19e239ddb52ad73ac85f87068c27bdf2840161956190f1e67e6e5",
+      "reviewed_scope": "PROVED scoped corridor and root-only repair metric; historical correction credited, no unconditional forcing.",
+      "all_payload_bytes_currently_match": true
+    },
+    {
+      "packet": "session18-endpoint4",
+      "commit": "1f96b513c5e9f9dae371eab8d394c1a42709ba42",
+      "manifest_sha256": "c2a610d1e309a2b80bd8cbe7bcbb55f09a2382da11cada5e2502b29b67373991",
+      "files": 13,
+      "bytes": 84231,
+      "proof_path": "05-knowledge/results/endpoint_four_repairs_20261021/README.md",
+      "proof_sha256": "f93c347295be6a11ccd3183ac2440563d563678587e948775bdaf30b6656ee65",
+      "reviewed_scope": "PROVED guarded structural branches n>=15 with finite boundary controls; full layer OPEN.",
+      "all_payload_bytes_currently_match": true
+    },
+    {
+      "packet": "session18-endpair",
+      "commit": "6842408f745108878bf9d89e4eb5275c33f6fd09",
+      "manifest_sha256": "670da0e2362ac2a08f5388996be71e31e268c570229ee82c1c7254b66e43a3f8",
+      "files": 14,
+      "bytes": 31712,
+      "proof_path": "05-knowledge/results/endpoint_four_endpair_20261021/README.md",
+      "proof_sha256": "844b8cff7b2e8b6c25cec1fe3e64ce1bd9d9ee25454002253f3d452c544e4518",
+      "reviewed_scope": "PROVED guarded additional branch; literal finite template hostiles retained.",
+      "all_payload_bytes_currently_match": true
+    },
+    {
+      "packet": "session18-frontier",
+      "commit": "f1fab29088af72616d5da186774357fe5da9ca73",
+      "manifest_sha256": "0fc6fb0eb53a017e3b50284e6663b5a60b732f6a93f99b2f75df1561cbe38793",
+      "files": 14,
+      "bytes": 51659,
+      "proof_path": "05-knowledge/results/endpoint_four_frontier_20261021/README.md",
+      "proof_sha256": "605f4757436d54026d21cef69d1df73328f925a7b883b80be0c1fd386443e7af",
+      "reviewed_scope": "PROVED guarded odd-prefix repairs and finite hostile replay; residual family remains OPEN.",
+      "all_payload_bytes_currently_match": true
+    },
+    {
+      "packet": "session18-clock-channels",
+      "commit": "7a225615601347cbda80b3335bef06e93732b042",
+      "manifest_sha256": "11a19d6faa5c92de424bf75ab3e8dbd171f9853aa44096fd19e4683d93cce4fc",
+      "files": 17,
+      "bytes": 179257,
+      "proof_path": "05-knowledge/results/clock_channels_20261021/README.md",
+      "proof_sha256": "6fd1710219d990a0d9fe83af2bd14d958dd647acc55b16c5c27bc4609d05d7c7",
+      "reviewed_scope": "PROVED finite-static observer obstruction; not a finite-state computation impossibility theorem.",
+      "all_payload_bytes_currently_match": true
+    },
+    {
+      "packet": "session18-norm-ball",
+      "commit": "8649e1ee0f3875f8fed4117d94d349a36a182b4d",
+      "manifest_sha256": "3ef6fd0ddc0997f4a34f977d2c9905db32e652bd7f8bcd28a9faceda1e1b8266",
+      "files": 14,
+      "bytes": 77191,
+      "proof_path": "05-knowledge/results/divisor_norm_ball_20261021/DIVISOR_NORM_BALL.md",
+      "proof_sha256": "73ee9b18c2a7cd82963e7d3ce6414d5ed4d8189f15295b1d48485a3524d8da1a",
+      "reviewed_scope": "PROVED static norm-ball/conductor bridge; CITED classical restricted idoneal family, no native dynamics.",
+      "all_payload_bytes_currently_match": true
+    },
+    {
+      "packet": "session18-zero-heavy-extension",
+      "commit": "3379f905b3c3b6e3e9ceabe30bde6554407d3739",
+      "manifest_sha256": "0ffd3e9890af5338b469d6e14e342df9240b69eaebcb727392fd3f3749fcced5",
+      "files": 29,
+      "bytes": 178564,
+      "proof_path": "05-knowledge/results/zero_heavy_extension_20261021a/README.md",
+      "proof_sha256": "21da0e933974eb21dfc087e887a048930a3f1940bab46429e21e3266719d638f",
+      "reviewed_scope": "PROVED corridor through2k-1 and first-owner correction at2k with stated k bounds; no larger-layer claim.",
+      "all_payload_bytes_currently_match": true
+    },
+    {
+      "packet": "session18-phase-lifts",
+      "commit": "d4c3bfb2264954ff3e71e5bba5a78c97bba59fd6",
+      "manifest_sha256": "bbfec0c41937cbb39bdcc008ba6bbb46e1a4c79a424a8134c960aaa7ac1e0638",
+      "files": 15,
+      "bytes": 69733,
+      "proof_path": "05-knowledge/results/session18_native_phase_lifts/README.md",
+      "proof_sha256": "20d2cf37ed149345e259b1107509b7a9480de709461bad326df57b396f1b61ff",
+      "reviewed_scope": "PROVED residue/frontier-guarded cancellation and unit defects; external debt and uniform153N OPEN.",
+      "all_payload_bytes_currently_match": true
+    }
+  ],
+  "result_payload_totals": {
+    "packets": 13,
+    "files": 236,
+    "bytes": 2459878
+  },
+  "incoming_commits_preserved": [
+    {
+      "commit": "3a987fe8aae8cc9801fca4815889fc83a62fc529",
+      "subject": "opus-2026-10-20-S47: reserve THM-4732, HYP-9347 (line metagraph at n = 9: black-core connectivity and endpoint layers; the divisor-chart / marked-tournament Klein dictionary)",
+      "preserved": true,
+      "adopted_as_new_dependency_by_this_synthesis": false
+    },
+    {
+      "commit": "37e6aed289eb46efe581399bae2d38a5dfd4f234",
+      "subject": "mac-mini-2026-10-20-debtcones: reserve THM-4733..4736, HYP-9348/9349 (divisor plane vs tiling cube; endpoint layers order ten and (n-5,4); valuation-dependent debt cones; zero-heavy delta = k; annulus increments)",
+      "preserved": true,
+      "adopted_as_new_dependency_by_this_synthesis": false
+    },
+    {
+      "commit": "e265436678941418bc34a9eb3b697acd989524d0",
+      "subject": "codex-tiling: ground the 63 family and extend guarded endpoint and mass layers",
+      "preserved": true,
+      "adopted_as_new_dependency_by_this_synthesis": false
+    },
+    {
+      "commit": "3bf29747b6a2e5c63134e4fd91327c8164f24f07",
+      "subject": "codex-tiling: connect incoming affine proofs and minimal reflection resolution",
+      "preserved": true,
+      "adopted_as_new_dependency_by_this_synthesis": false
+    },
+    {
+      "commit": "96b6efb6f3ebe25bb1a09db0d390babf46c7db82",
+      "subject": "opus-2026-10-20-S47: checkpoint (pre-audit) - THM-4732 + HYP-9347 + note: order-9 class-level line multigraph by a refinement canoniser (191,536 classes, black components = 1 + pure-blue = 7, every THM-643/4729/4731 control), exhaustive literal three-black-move detours for every closed blue line between non-pure-blue classes at n = 6, 8, 9, 10 (closes the order-10 case of the (n-4,3) layer; (n-5,4) through n = 10; exceptions F_5, F_7 of black distance 5), pure-blue-touching lines in layers n-2 / n-3, Klein dictionary of the 3-4-3 / 4-2-4 chart (central pair = obstruction; eight non-central divisors = order-4 tilings; 32 / 2 / 2 bijections)",
+      "preserved": true,
+      "adopted_as_new_dependency_by_this_synthesis": false
+    },
+    {
+      "commit": "ea44263007b02dc5052521b4346844794bf6e033",
+      "subject": "mac-mini-2026-10-20-debtcones: THM-4735 valuation-dependent debt cones (payment up to c_max(a) = (2^a+4)/(2^a-3) covers 63; optimal terminal splits; every split value >= D_w so debt >= 2 defeats all threshold-two cones: 3 exits below 1e5, 42 below 1e6; all 500,000 pay), THM-4736 zero-heavy deficit-k layer ((2k-1)!!(C(3k,k)-1), strong I_k C(3k-2,k) - (2k-3) I_{k-1}; 42, 1245; 11, 344, 15490), THM-4734 endpoint layers ((n-4,3) complete at order ten: 86,016 presentations, 3 by search; (n-5,4) complete at n = 9, 10: 10,240 and 143,360), THM-4733 divisor plane of p^2qr = folded four-tile cube ((C,Q,CQ) = complement line, converse, path reversal; no embedding in a full cube), HYP-9348/9349 (structural (n-5,4), black-core connectivity, deficit k+1, first-exit payment conjecture, annulus increment <= 0.68 x 153N at every horizon on four scales with negative cross term, idoneal dictionary of 105), note, indexes, ledger, scripts and outputs",
+      "preserved": true,
+      "adopted_as_new_dependency_by_this_synthesis": false
+    },
+    {
+      "commit": "c36706a5da4359d475a5c9810b4480f025cce97f",
+      "subject": "mac-mini-2026-10-20-debtcones: close-out - letter (THM-4733..4736, HYP-9348/9349)",
+      "preserved": true,
+      "adopted_as_new_dependency_by_this_synthesis": false
+    },
+    {
+      "commit": "c0f68a15db0ed1f47a1aa81d456de86344e7a2d9",
+      "subject": "opus-2026-10-20-S47: message to mac-mini-debtcones (lane status: order-ten and (n-5,4) layers finite-exact through n = 10, Klein dictionary, concurrent Codex packets)",
+      "preserved": true,
+      "adopted_as_new_dependency_by_this_synthesis": false
+    }
+  ],
+  "limitations": [
+    "Incoming broad mathematical claims not independently adopted merely from Git status labels.",
+    "Full contiguous annulus sweep is producer FINITE-EXACT, with selected complete independent universes rather than independent full interval replay.",
+    "Historical zero-heavy dependencies are retained with correction lineage and explicit current navigation.",
+    "Classical genus and ring-class inputs are CITED, not claimed as new.",
+    "Global Collatz entry, universal annulus bound, full moving-endpoint Gram and full black-core connectivity remain OPEN."
+  ]
+}
