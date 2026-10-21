@@ -213,5 +213,4 @@ computation needs universe, controls, command, and output. Route `CLAIMED` and
 
 ## Archived from INDEX.md on 2026-10-21 (mac-mini-2026-10-21-electric, rebase line budget)
 
-- **THM-2095 (PROVED):** the live guard-ratio scale divides `252576225`; the `240*1165=279600` marked-pair ledger does not bound the other six speeds.
 - **THM-2101/2111 (PROVED PAPER):** additive DvdK avoids root products; the effective first return is a compound-determinant order at most `binom(M+N,min(M,N))`. Sharpening and Lean assembly are separate.
