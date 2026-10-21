@@ -1,0 +1,15 @@
+{
+  "changed_file": "README.md",
+  "diff": "literature-qualification.patch",
+  "original_manifest": "manifest.producer.json",
+  "original_readme": "README.producer.md",
+  "original_sha256": "152ea9aa06768d3f1e7e3f737b9d8d0c4d520c06d761fc79451853f80ccf5626",
+  "published_sha256": "9557a7e9427c4cbdd5f582e412f29b5684673f9ddfdb7f73317ff64a2c7d8d17",
+  "reason": "Root review required qualification of dated fourteen-total-runner open-status headline; only general LRC remains described as open here. Current preprint is source-verified, not independently mathematically audited.",
+  "source_directory": "session19-polygon-palettes",
+  "source_manifest_sha256": "dc0451b432bb19d76dee2871c6efe94fd97776feaf1753b2dfd5dce685e09662",
+  "source_url": "https://arxiv.org/html/2609.02604v2",
+  "status": "NARROW_EDITORIAL_PUBLICATION_OVERLAY",
+  "unchanged_computation_and_receipts": true,
+  "unchanged_mathematical_proofs": true
+}

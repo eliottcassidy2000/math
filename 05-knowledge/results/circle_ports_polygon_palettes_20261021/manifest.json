@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-21",
+  "external_claim_scope": "primary literature is contextual; no external theorem is needed by the elementary proofs or checker",
+  "files": {
+    "AUDIT.md": "d0ad7e4bdd710d1f2d1b606c2b2f3578f2fa4f0739f35b0fdad41ee9106bfe1c",
+    "README.md": "9557a7e9427c4cbdd5f582e412f29b5684673f9ddfdb7f73317ff64a2c7d8d17",
+    "check.py": "a11380162e1d4c5ffee571ca9c25b4d87b78deac98bafa8fe41422dfb6ab7071",
+    "provenance/PUBLICATION_OVERLAY.json": "5e71263359894e8dd2c33b8a632e7aaa7ef2e02dbce6674e8d4ee7de7b1b97c4",
+    "provenance/README.producer.md": "152ea9aa06768d3f1e7e3f737b9d8d0c4d520c06d761fc79451853f80ccf5626",
+    "provenance/literature-qualification.patch": "0bba21ac0263cf5ff8f7e5854d6934430dc21f250be9797d3f4ca42076111fb0",
+    "provenance/manifest.producer.json": "dc0451b432bb19d76dee2871c6efe94fd97776feaf1753b2dfd5dce685e09662",
+    "receipt.json": "52c89a83dc2eecfd662f83d56ea71f17463dc4d2fa2548b1aac25a2f60ed6396",
+    "receipt.optimized.json": "52c89a83dc2eecfd662f83d56ea71f17463dc4d2fa2548b1aac25a2f60ed6396",
+    "verify.py": "e8b2ff97aa4e2b86120b2024b329d425568eb1a1ea8526ce8604739e5d0e1b74"
+  },
+  "independent_reviewer": "independent-circle-port-audit",
+  "mathematical_runtime_dependencies": [],
+  "producer": "session19-circle-port-certificate",
+  "publication_overlay": "provenance/PUBLICATION_OVERLAY.json",
+  "schema_version": 1,
+  "status": "frozen producer packet; independently reviewed",
+  "supplementary_unretained_check": "reviewer reported 3584 additional polygon-pair cases; not part of replay certificate"
+}

@@ -1,0 +1,159 @@
+{
+  "full_C6_four_colour_two_lists_with_witnesses": 46656,
+  "hostiles": [
+    "odd cycle at a different radius is not bipartite",
+    "fixed rim ports cannot be treated as free two-lists",
+    "conditional failure does not imply high chromatic number"
+  ],
+  "induced_C6_two_lists_independently_checked": 4096,
+  "phased_polygon_cases": 972,
+  "rational_single_polygon_cases": 805,
+  "runner_clock_controls": {
+    "AP12_component_sizes": [
+      6,
+      6
+    ],
+    "AP14_radius_one_edges": 0,
+    "AP14_side_unit_component_sizes": [
+      14
+    ],
+    "pair_clock_cases": 30888
+  },
+  "scope": "exact finite controls of stated all-size proofs; not a graph census",
+  "sharp_fixed_centre_example": {
+    "all_unordered_distances_checked": 36,
+    "off_circle_fixed_colours": [
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        6,
+        0
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        8,
+        2
+      ]
+    ],
+    "ordinary_three_colouring": [
+      2,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "points_x_y_sqrt3": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0"
+      ],
+      [
+        "1/2",
+        "1/2"
+      ],
+      [
+        "2/13",
+        "4/13"
+      ],
+      [
+        "1/14",
+        "3/14"
+      ],
+      [
+        "2/49",
+        "8/49"
+      ],
+      [
+        "0",
+        "1"
+      ],
+      [
+        "-9/19",
+        "12/19"
+      ],
+      [
+        "-105/218",
+        "133/218"
+      ]
+    ],
+    "repaired_five_colouring": [
+      0,
+      3,
+      4,
+      0,
+      1,
+      2,
+      0,
+      1,
+      2
+    ],
+    "rotation_parameters": [
+      2,
+      3,
+      4,
+      1,
+      5,
+      6
+    ],
+    "unit_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        8
+      ]
+    ]
+  },
+  "status": "PASS"
+}

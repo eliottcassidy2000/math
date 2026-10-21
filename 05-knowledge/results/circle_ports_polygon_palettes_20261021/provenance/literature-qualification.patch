@@ -1,0 +1,20 @@
+--- README.producer.md
++++ README.md
+@@ -2,8 +2,15 @@
+ 
+ 2026-10-21. **PROVED scoped elementary statements; FINITE-EXACT controls.**
+ No new chromatic lower bound and no claim of literature priority. The
+-Hadwiger–Nelson and LRC(14) problems remain open. All radius statements below
+-refer to the Euclidean unit of distance, not to a normalized drawing.
++Hadwiger–Nelson problem and the general Lonely Runner conjecture remain open.
++All radius statements below refer to the Euclidean unit of distance, not to a
++normalized drawing.
++
++Current literature qualification: [arXiv:2609.02604v2](https://arxiv.org/html/2609.02604v2)
++claims fourteen and fifteen total runners. Its proof and large computations
++were not independently audited here; this preprint claim is not promoted to
++audited repository canon. The dated repository headline for LRC(14) should
++therefore not be read as an unqualified statement of the current literature.
+ 
+ ## 1. Inheritance and the exact next question
+ 
