@@ -195,7 +195,7 @@ coprimality, with sharp unbounded-channel examples; general cores stay OPEN.
 proves the full A2 parity response negative at the original zero; beta-skip is OPEN.
 
 ## Tournaments
-- **[Session24 synthesis](../05-knowledge/results/session24_research_synthesis_20261021.md):** HYP-9353 is PROVED by the independently audited signed-exception classification, relative to its cited classical dependencies; actual Hamiltonian-path multiplicities, exact tower transfers, twisted palettes and metagraph consequences are routed separately with their scopes.
+- [Session24 research synthesis](../05-knowledge/results/session24_research_synthesis_20261021.md).
 ### Reliable structural toolkit
 
 - [Owners](../05-knowledge/results/zero_heavy_ports_20261020g/README.md); [mass](../05-knowledge/results/charge_palettes_boundary_20261020g/zero_heavy.md), deficit<=k-1. [Endpoint3](../05-knowledge/results/endpoint_three_repairs_20261020h/README.md): 3-black detours,n>=11. Unbounded A000568 and black connectivity OPEN.
