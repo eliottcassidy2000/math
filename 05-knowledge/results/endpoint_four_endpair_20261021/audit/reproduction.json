@@ -1,0 +1,27 @@
+{
+  "commands": [
+    "python3 verify.py",
+    "python3 -O verify.py",
+    "python3 audit/independent_audit.py",
+    "python3 -O audit/independent_audit.py"
+  ],
+  "independent_normal_equals_optimized": true,
+  "inheritance_verification_basis": "Repository dependencies use exact Git objects at the pinned commit; unpublished base dependencies use separately frozen producer bytes.",
+  "inherited_source_hashes_verified": {
+    "05-knowledge/results/endpoint_four_repairs_20261021/MANIFEST.sha256": "2601a21dd65c134d32f49a1a49346a3a3cdbf9d46edfc2a61813b7c31cfeb87c",
+    "05-knowledge/results/endpoint_four_repairs_20261021/README.md": "f93c347295be6a11ccd3183ac2440563d563678587e948775bdaf30b6656ee65",
+    "05-knowledge/results/endpoint_four_repairs_20261021/verify.py": "849832074942b682752685bef81a72370cdeec23e22634adad0952ad4e31a887",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/lift.md": "c131dfb6e40075906817d65eda735bf60de5c0a549330704c1dcdac77ad59fa8",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/theory.md": "8caed95d5dce6ea5ef6616626eab8a4d8a3a6e4eb40dfb27b770b4d1af56cc6c",
+    "05-knowledge/results/trijection_reset_20261020/graph_audit.md": "e80bf447fe02bdebeb09841c6b59d1f2f108b8dcc07f7a00fd43bad0afb5d26e"
+  },
+  "no_producer_imports": true,
+  "no_remote_writes": true,
+  "no_repository_writes": true,
+  "producer_manifest_sha256": "9dc316a4ecf1f6faa125a14ac485a7fd7050e01d90b66561a122f1e7e24c0991",
+  "producer_normal_matches_frozen": true,
+  "producer_optimized_matches_frozen": true,
+  "producer_sources_unchanged": true,
+  "relocated_run_from_unrelated_working_directory": true,
+  "status": "PASS"
+}

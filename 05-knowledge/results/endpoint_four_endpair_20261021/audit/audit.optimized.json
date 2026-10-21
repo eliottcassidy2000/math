@@ -1,0 +1,58 @@
+{
+  "all_h_orders": [
+    15,
+    80
+  ],
+  "counts": {
+    "all_h_affine_cells": 2673
+  },
+  "individual_witness_and_chain_orders": [
+    15,
+    300
+  ],
+  "literal_hostiles": [
+    {
+      "actual_blue_flags": [
+        false,
+        false,
+        true
+      ],
+      "h": 3,
+      "n": 15,
+      "printed_words_match": true
+    },
+    {
+      "actual_blue_flags": [
+        false,
+        false,
+        true
+      ],
+      "h": 6,
+      "n": 15,
+      "printed_words_match": true
+    },
+    {
+      "actual_blue_flags": [
+        false,
+        false,
+        true
+      ],
+      "h": 3,
+      "n": 18,
+      "printed_words_match": true
+    },
+    {
+      "actual_blue_flags": [
+        false,
+        false,
+        true
+      ],
+      "h": 9,
+      "n": 18,
+      "printed_words_match": true
+    }
+  ],
+  "method": "independent GF(2) affine source families, printed-formula parsing, and exact labelled rows",
+  "scope": "Guarded c->x and x->y only. Opposite-chord examples refute only the printed final-word template.",
+  "status": "PASS"
+}

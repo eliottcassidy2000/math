@@ -1,0 +1,13 @@
+{
+  "repository_commit": "c4a7875652a5ea516e93a31c3c6410d2204773b2",
+  "inherited_files": {
+    "05-knowledge/results/endpoint_three_repairs_20261020h/lift.md": "c131dfb6e40075906817d65eda735bf60de5c0a549330704c1dcdac77ad59fa8",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/theory.md": "8caed95d5dce6ea5ef6616626eab8a4d8a3a6e4eb40dfb27b770b4d1af56cc6c",
+    "05-knowledge/results/trijection_reset_20261020/graph_audit.md": "e80bf447fe02bdebeb09841c6b59d1f2f108b8dcc07f7a00fd43bad0afb5d26e"
+  },
+  "base_packet_files": {
+    "README.md": "f93c347295be6a11ccd3183ac2440563d563678587e948775bdaf30b6656ee65",
+    "verify.py": "849832074942b682752685bef81a72370cdeec23e22634adad0952ad4e31a887",
+    "MANIFEST.sha256": "2601a21dd65c134d32f49a1a49346a3a3cdbf9d46edfc2a61813b7c31cfeb87c"
+  }
+}

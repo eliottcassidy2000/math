@@ -1,0 +1,49 @@
+{
+  "chain_orders": [
+    15,
+    200
+  ],
+  "checker_sha256": "84f2c10120b590155dccecfde6e3904ec202de9e8d672d176d451243f858f8ab",
+  "hostiles": [
+    {
+      "blue_steps": [
+        false,
+        false,
+        true
+      ],
+      "h": 3,
+      "n": 15
+    },
+    {
+      "blue_steps": [
+        false,
+        false,
+        true
+      ],
+      "h": 6,
+      "n": 15
+    },
+    {
+      "blue_steps": [
+        false,
+        false,
+        true
+      ],
+      "h": 3,
+      "n": 18
+    },
+    {
+      "blue_steps": [
+        false,
+        false,
+        true
+      ],
+      "h": 9,
+      "n": 18
+    }
+  ],
+  "replay_digest_sha256": "f71032925dd9b00eb3a6f93a061c79527cb656a4e3fad2b41d3a07835e5a0a78",
+  "status": "PASS",
+  "three_black_controls": 1069,
+  "witnesses_sha256": "06822e7fe66249652ca4c5414949f7fa5d9801bf98db9bd5274d3a74571fe449"
+}
