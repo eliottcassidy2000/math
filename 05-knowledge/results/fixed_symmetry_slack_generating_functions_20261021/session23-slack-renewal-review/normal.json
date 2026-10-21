@@ -1,0 +1,476 @@
+{
+  "checks_by_kind": {
+    "actual_diagonal_semidirect_group_control": 1,
+    "actual_known_census_through_seven": 6,
+    "actual_low_slack_exact_bivariate_row": 294,
+    "bounded_perturbation_covariance_hostile": 5,
+    "center_specific_half_cutoff": 4,
+    "exact_raw_moment_recurrence": 1323,
+    "finite_mean_residual_sanity": 48,
+    "finite_variance_residual_sanity": 48,
+    "literal_palindrome_tail": 4,
+    "not_feedback_exponential_exact_not_independent_triangles": 1,
+    "synthetic_exact_bivariate_row": 147,
+    "unit_constant": 18,
+    "unsupported_parity": 6
+  },
+  "compiler_sha256": "22cb6aca899d9a485b2432d37a90d13040dfc6353ee41529a243d8489aa974a1",
+  "exact_assertions": 1809,
+  "low_slack_counts_order_0_through_7": {
+    "delta0": [
+      1,
+      1,
+      1,
+      2,
+      3,
+      4,
+      6,
+      9
+    ],
+    "delta0_sc": [
+      1,
+      1,
+      1,
+      2,
+      1,
+      2,
+      2,
+      3
+    ],
+    "delta3": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      4,
+      10,
+      22
+    ],
+    "delta3_sc": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      2,
+      4
+    ],
+    "delta4": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      3
+    ],
+    "delta4_sc": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ]
+  },
+  "moment_controls": [
+    {
+      "family": "synthetic_ordinary",
+      "mean": 27.849757276601828,
+      "mean_residual": 4.539276793650579,
+      "n": 120,
+      "variance": 7.870901045665093,
+      "variance_residual": 1.923518940810995
+    },
+    {
+      "family": "synthetic_ordinary",
+      "mean": 28.043533819963404,
+      "mean_residual": 4.538799332987558,
+      "n": 121,
+      "variance": 7.921716792842225,
+      "variance_residual": 1.9247731704476765
+    },
+    {
+      "family": "synthetic_ordinary",
+      "mean": 74.43334913734887,
+      "mean_residual": 4.501907688495123,
+      "n": 360,
+      "variance": 19.864992219535356,
+      "variance_residual": 2.022845904973064
+    },
+    {
+      "family": "synthetic_ordinary",
+      "mean": 74.62755357012607,
+      "mean_residual": 4.501858117247721,
+      "n": 361,
+      "variance": 19.914686265806957,
+      "variance_residual": 2.0229784337042105
+    },
+    {
+      "family": "synthetic_ordinary",
+      "mean": 214.2845142655472,
+      "mean_residual": 4.490189918985948,
+      "n": 1080,
+      "variance": 55.580612640805484,
+      "variance_residual": 2.0541736971185998
+    },
+    {
+      "family": "synthetic_ordinary",
+      "mean": 214.47876295068147,
+      "mean_residual": 4.490184600095631,
+      "n": 1081,
+      "variance": 55.63018837423713,
+      "variance_residual": 2.054187913009798
+    },
+    {
+      "family": "synthetic_sc_parity_unequal_pole_orders",
+      "mean": 23.234292183775135,
+      "mean_residual": -0.07618829917611336,
+      "n": 120,
+      "variance": 11.970134882472937,
+      "variance_residual": 0.07537067276474119
+    },
+    {
+      "family": "synthetic_sc_parity_unequal_pole_orders",
+      "mean": 24.62960971194862,
+      "mean_residual": 1.1248752249727758,
+      "n": 121,
+      "variance": 12.033627362820889,
+      "variance_residual": 0.03974011803179245
+    },
+    {
+      "family": "synthetic_sc_parity_unequal_pole_orders",
+      "mean": 69.85525314967765,
+      "mean_residual": -0.0761882991760956,
+      "n": 360,
+      "variance": 35.75966330188975,
+      "variance_residual": 0.07537067276516751
+    },
+    {
+      "family": "synthetic_sc_parity_unequal_pole_orders",
+      "mean": 71.27311732454952,
+      "mean_residual": 1.1474218716711704,
+      "n": 361,
+      "variance": 35.8180985099663,
+      "variance_residual": 0.03468284576080549
+    },
+    {
+      "family": "synthetic_sc_parity_unequal_pole_orders",
+      "mean": 209.71813604738514,
+      "mean_residual": -0.0761882991760956,
+      "n": 1080,
+      "variance": 107.12824856013891,
+      "variance_residual": 0.0753706727651462
+    },
+    {
+      "family": "synthetic_sc_parity_unequal_pole_orders",
+      "mean": 211.14270474116384,
+      "mean_residual": 1.154126390578,
+      "n": 1081,
+      "variance": 107.18498381196356,
+      "variance_residual": 0.032982889508900826
+    },
+    {
+      "family": "synthetic_sc_even_only_unbounded",
+      "mean": 22.658497290904776,
+      "mean_residual": -0.6519831920464725,
+      "n": 120,
+      "variance": 12.019796318905412,
+      "variance_residual": 0.12503210919721575
+    },
+    {
+      "family": "synthetic_sc_even_only_unbounded",
+      "mean": 69.28197288409304,
+      "mean_residual": -0.6494685647607099,
+      "n": 360,
+      "variance": 35.81369807965609,
+      "variance_residual": 0.12940545053150743
+    },
+    {
+      "family": "synthetic_sc_even_only_unbounded",
+      "mean": 209.14557950790135,
+      "mean_residual": -0.6487448386598942,
+      "n": 1080,
+      "variance": 107.18353967032692,
+      "variance_residual": 0.13066178295315467
+    },
+    {
+      "family": "delta0",
+      "mean": 23.148380183379583,
+      "mean_residual": -0.16210029957166583,
+      "n": 120,
+      "variance": 5.963789348506407,
+      "variance_residual": 0.016407243652309056
+    },
+    {
+      "family": "delta0",
+      "mean": 23.342634187404176,
+      "mean_residual": -0.16210029957166938,
+      "n": 121,
+      "variance": 6.013350866046858,
+      "variance_residual": 0.016407243652309944
+    },
+    {
+      "family": "delta0",
+      "mean": 69.76934114928208,
+      "mean_residual": -0.16210029957166228,
+      "n": 360,
+      "variance": 17.8585535582146,
+      "variance_residual": 0.01640724365230639
+    },
+    {
+      "family": "delta0",
+      "mean": 69.96359515330667,
+      "mean_residual": -0.1621002995716765,
+      "n": 361,
+      "variance": 17.90811507575505,
+      "variance_residual": 0.01640724365230284
+    },
+    {
+      "family": "delta0",
+      "mean": 209.63222404698956,
+      "mean_residual": -0.1621002995716765,
+      "n": 1080,
+      "variance": 53.54284618733917,
+      "variance_residual": 0.016407243652288628
+    },
+    {
+      "family": "delta0",
+      "mean": 209.82647805101416,
+      "mean_residual": -0.1621002995716765,
+      "n": 1081,
+      "variance": 53.592407704879626,
+      "variance_residual": 0.016407243652295733
+    },
+    {
+      "family": "delta0_sc",
+      "mean": 22.986279883807907,
+      "mean_residual": -0.3242005991433423,
+      "n": 120,
+      "variance": 11.960393184317372,
+      "variance_residual": 0.06562897460917583
+    },
+    {
+      "family": "delta0_sc",
+      "mean": 23.234292183775135,
+      "mean_residual": -0.27044230320070994,
+      "n": 121,
+      "variance": 11.970134882472937,
+      "variance_residual": -0.023752362316159292
+    },
+    {
+      "family": "delta0_sc",
+      "mean": 69.60724084971041,
+      "mean_residual": -0.32420059914333876,
+      "n": 360,
+      "variance": 35.74992160373382,
+      "variance_residual": 0.06562897460923267
+    },
+    {
+      "family": "delta0_sc",
+      "mean": 69.85525314967765,
+      "mean_residual": -0.27044230320069573,
+      "n": 361,
+      "variance": 35.75966330188975,
+      "variance_residual": -0.023752362315740072
+    },
+    {
+      "family": "delta0_sc",
+      "mean": 209.47012374741792,
+      "mean_residual": -0.32420059914332455,
+      "n": 1080,
+      "variance": 107.11850686198298,
+      "variance_residual": 0.06562897460921135
+    },
+    {
+      "family": "delta0_sc",
+      "mean": 209.71813604738514,
+      "mean_residual": -0.27044230320069573,
+      "n": 1081,
+      "variance": 107.12824856013891,
+      "variance_residual": -0.023752362315747177
+    },
+    {
+      "family": "delta3",
+      "mean": 23.43931461037634,
+      "mean_residual": 0.12883412742509037,
+      "n": 120,
+      "variance": 5.896445841897817,
+      "variance_residual": -0.05093626295628084
+    },
+    {
+      "family": "delta3",
+      "mean": 23.63353826452689,
+      "mean_residual": 0.12880377755104533,
+      "n": 121,
+      "variance": 5.946016046040389,
+      "variance_residual": -0.050927576354159676
+    },
+    {
+      "family": "delta3",
+      "mean": 70.05784040281186,
+      "mean_residual": 0.12639895395811607,
+      "n": 360,
+      "variance": 17.791903601985048,
+      "variance_residual": -0.05024271257724422
+    },
+    {
+      "family": "delta3",
+      "mean": 70.25209105211857,
+      "mean_residual": 0.12639559924022592,
+      "n": 361,
+      "variance": 17.84146607014973,
+      "variance_residual": -0.05024176195301777
+    },
+    {
+      "family": "delta3",
+      "mean": 209.9199173515758,
+      "mean_residual": 0.12559300501456505,
+      "n": 1080,
+      "variance": 53.476424229243364,
+      "variance_residual": -0.05001471444352035
+    },
+    {
+      "family": "delta3",
+      "mean": 210.1141709834781,
+      "mean_residual": 0.12559263289224987,
+      "n": 1081,
+      "variance": 53.52598585187703,
+      "variance_residual": -0.05001460935029911
+    },
+    {
+      "family": "delta3_sc",
+      "mean": 23.274655744679844,
+      "mean_residual": -0.035824738271404755,
+      "n": 120,
+      "variance": 11.821429092095917,
+      "variance_residual": -0.07333511761227918
+    },
+    {
+      "family": "delta3_sc",
+      "mean": 23.52782657523877,
+      "mean_residual": 0.023092088262924193,
+      "n": 121,
+      "variance": 11.833885872639407,
+      "variance_residual": -0.16000137214969
+    },
+    {
+      "family": "delta3_sc",
+      "mean": 69.89489183987816,
+      "mean_residual": -0.036549608975590786,
+      "n": 360,
+      "variance": 35.6152001764418,
+      "variance_residual": -0.06909245268278141
+    },
+    {
+      "family": "delta3_sc",
+      "mean": 70.14462063124404,
+      "mean_residual": 0.01892517836569141,
+      "n": 361,
+      "variance": 35.625847076011226,
+      "variance_residual": -0.1575685881942661
+    },
+    {
+      "family": "delta3_sc",
+      "mean": 209.757534797255,
+      "mean_residual": -0.0367895493062349,
+      "n": 1080,
+      "variance": 106.985189572856,
+      "variance_residual": -0.06768831451776691
+    },
+    {
+      "family": "delta3_sc",
+      "mean": 210.00611892585073,
+      "mean_residual": 0.017540575264888503,
+      "n": 1081,
+      "variance": 106.99523302607895,
+      "variance_residual": -0.15676789637571176
+    },
+    {
+      "family": "delta4",
+      "mean": 25.017547889334722,
+      "mean_residual": 1.707067406383473,
+      "n": 120,
+      "variance": 5.731714257798449,
+      "variance_residual": -0.21566784705564945
+    },
+    {
+      "family": "delta4",
+      "mean": 25.211780414796337,
+      "mean_residual": 1.7070459278204915,
+      "n": 121,
+      "variance": 5.781281539572797,
+      "variance_residual": -0.21566208282175126
+    },
+    {
+      "family": "delta4",
+      "mean": 71.6368034102405,
+      "mean_residual": 1.7053619613867568,
+      "n": 360,
+      "variance": 17.626933288405215,
+      "variance_residual": -0.21521302615707683
+    },
+    {
+      "family": "delta4",
+      "mean": 71.8310550896956,
+      "mean_residual": 1.7053596368172492,
+      "n": 361,
+      "variance": 17.676495421909515,
+      "variance_residual": -0.21521241019323156
+    },
+    {
+      "family": "delta4",
+      "mean": 211.49912979359914,
+      "mean_residual": 1.7048054470378986,
+      "n": 1080,
+      "variance": 53.31137307414912,
+      "variance_residual": -0.21506586953776718
+    },
+    {
+      "family": "delta4",
+      "mean": 211.69338354157188,
+      "mean_residual": 1.7048051909860362,
+      "n": 1081,
+      "variance": 53.36093465925367,
+      "variance_residual": -0.2150658019736582
+    },
+    {
+      "family": "delta4_sc",
+      "mean": 25.2092638677096,
+      "mean_residual": 1.704529380733753,
+      "n": 121,
+      "variance": 11.563901043994942,
+      "variance_residual": -0.42998620079415417
+    },
+    {
+      "family": "delta4_sc",
+      "mean": 71.83022483361204,
+      "mean_residual": 1.704529380733689,
+      "n": 361,
+      "variance": 35.353429463410215,
+      "variance_residual": -0.42998620079527683
+    },
+    {
+      "family": "delta4_sc",
+      "mean": 211.69310773131954,
+      "mean_residual": 1.7045293807337032,
+      "n": 1081,
+      "variance": 106.72201472165936,
+      "variance_residual": -0.42998620079529815
+    }
+  ],
+  "mu": 0.19425400402459375,
+  "numerical_sanity_assertions": 96,
+  "rho": 0.6823278038280193,
+  "scope": "Synthetic finite compiler models are not actual slack inventories. Actual low-slack formula checks concern delta 0, 3, 4 only; one actual delta 6 diagonal-group control. Finite tests do not prove asymptotics.",
+  "script_sha256": "9dc951140d39544f268520b010e0b4d18d0aa1f5712c120a68d6b3c3178709a4",
+  "sigma2": 0.049561517540450815,
+  "source_sha256": "18c9bf4e131834de92b6dc72911729cd7cd82b0735638129572b790ec3e365d2",
+  "status": "PASS",
+  "total_assertions": 1905
+}

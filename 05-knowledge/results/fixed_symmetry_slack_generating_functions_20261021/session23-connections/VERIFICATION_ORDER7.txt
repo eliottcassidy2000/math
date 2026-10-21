@@ -1,0 +1,16 @@
+n 1 classes 1 slack {0: 1} self_converse 1
+n 2 classes 1 slack {0: 1} self_converse 1
+n 3 classes 2 slack {0: 2} self_converse 2
+n 4 classes 4 slack {0: 3, 3: 1} self_converse 2
+n 5 classes 12 slack {0: 4, 3: 4, 4: 1, 6: 3} self_converse 8
+n 6 classes 56 slack {0: 6, 3: 10, 4: 2, 6: 21, 9: 15, 12: 2} self_converse 12
+n 7 classes 456 slack {0: 9, 3: 22, 4: 3, 6: 69, 7: 1, 9: 135, 11: 1, 12: 143, 14: 1, 15: 64, 18: 8} self_converse 88
+diagonal_c3_maximal_W_blocks [[0, 5], [1, 3], [2, 4]] configuration (((0, 1, 0), (0, 0, 1), (1, 0, 0)), ((1, 1), (1, 1), (1, 1)), set(), 4)
+delta6_symmetric_order6 1296 aut 3 feedback 3 scores [1, 2, 3, 3, 3, 3] maxW [[0, 1], [2, 3, 4], [5]] self_converse False
+delta6_symmetric_order6 8850 aut 3 feedback 4 scores [2, 2, 2, 3, 3, 3] maxW [[0], [1], [2], [3], [4], [5]] self_converse True
+delta6_symmetric_order6 8881 aut 3 feedback 4 scores [2, 2, 2, 3, 3, 3] maxW [[0, 3], [1, 5], [2, 4]] self_converse True
+delta6_symmetric_order6 88 aut 3 feedback 3 scores [2, 2, 2, 2, 3, 4] maxW [[0], [1, 2, 3], [4, 5]] self_converse False
+exact checks 21749 {'admissible_cost': 507, 'class_count': 7, 'converse_configuration': 507, 'core_feedback_bound': 533, 'core_order_bound': 507, 'delta0_palindrome': 7, 'delta0_series': 7, 'delta3_bivariate': 49, 'delta3_converse_bivariate': 49, 'delta3_series': 7, 'delta4_bivariate': 49, 'delta4_converse_bivariate': 49, 'delta4_series': 7, 'diagonal_c3_hostile': 1, 'diagonal_orbits_not_modules': 1, 'exact_stabilizer': 507, 'finite_maximality': 533, 'long_anti_pairs_middle': 107, 'long_fill_maximality': 67, 'long_fill_slack': 67, 'long_fixed': 507, 'long_slot_bound': 507, 'moved_mass_bound': 533, 'nonnegative_slack': 533, 'overlap_union': 13231, 'partition': 605, 'reconstruction': 533, 'slack_formula': 533, 'support_formula': 533, 'unique_long_anti_action': 107, 'weighted_straightening': 533, 'zero_slack': 26}
+delta_histograms {"0": {"1": 1, "2": 1, "3": 2, "4": 3, "5": 4, "6": 6, "7": 9}, "3": {"4": 1, "5": 4, "6": 10, "7": 22}, "4": {"5": 1, "6": 2, "7": 3}, "6": {"5": 3, "6": 21, "7": 69}, "7": {"7": 1}, "9": {"6": 15, "7": 135}, "11": {"7": 1}, "12": {"6": 2, "7": 143}, "14": {"7": 1}, "15": {"7": 64}, "18": {"7": 8}}
+self_converse_histograms {"0": {"1": 1, "2": 1, "3": 2, "4": 1, "5": 2, "6": 2, "7": 3}, "3": {"4": 1, "5": 2, "6": 2, "7": 4}, "4": {"5": 1, "6": 0, "7": 1}, "6": {"5": 3, "6": 5, "7": 9}, "7": {"7": 1}, "9": {"6": 3, "7": 19}, "11": {"7": 1}, "12": {"6": 0, "7": 23}, "14": {"7": 1}, "15": {"7": 22}, "18": {"7": 4}}
+PASS

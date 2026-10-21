@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "date": "2026-10-21",
+  "final_proof": "session23-connections/SYMMETRY_SLACK_RATIONALITY.md",
+  "final_proof_sha256": "22cb6aca899d9a485b2432d37a90d13040dfc6353ee41529a243d8489aa974a1",
+  "producer_verifier_sha256": "14f993131caf5903b83aa468f77886aeaa714664d2427dc4b4b2052a9aab9fb9",
+  "independent_verifier_sha256": "4aaa93ed94fb8bfac615659ec10ecd1c247427641e49141d98aedb74349fb4bd",
+  "audit_sha256": "de38abf45585a662de6be49a331df316bdec4488031fab4551686849deca1201",
+  "independent_computation_receipt_sha256": "b18f70d4e7b5d74ebeaf63569d7143415ab34125f240449a67f2199de198afc8",
+  "final_exposition_diff_sha256": "60e2588576067020168022a93e03679510651216dbf51738e7e35c035be46984",
+  "publication_allowlist_sha256": "004c98ec4c7c645ae841a93f06e87a9c291cb6b28822b0b300ad9459710a53f5",
+  "checked_final_changes": [
+    "status promotion",
+    "moved-singleton-mass hostile",
+    "configuration representative-transport uniqueness",
+    "explicit low-slack bivariate and converse controls",
+    "opposite-triangle synchronization singleton-canonical-block hostile"
+  ],
+  "mathematical_repairs_required": false,
+  "scope": "Canonical fixed-symmetry-slack rationality and self-converse/converse-merged compiler, inherited bounded exceptional skeleton dependency, stated denominator and asymptotic claims. No sharper pole-exponent follow-on."
+}

@@ -1,0 +1,149 @@
+{
+  "scope": "Exact approved source files with publication wrapper; finite computations and proof scopes remain distinct.",
+  "files": [
+    {
+      "source": "session23-connections/README.md",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-connections/README.md",
+      "bytes": 1974,
+      "sha256": "8094b98118a9553b90a8e40040d51c758fa00c34cba9b678ba789d3c729dbb9f"
+    },
+    {
+      "source": "session23-connections/SYMMETRY_SLACK_RATIONALITY.md",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-connections/SYMMETRY_SLACK_RATIONALITY.md",
+      "bytes": 20976,
+      "sha256": "22cb6aca899d9a485b2432d37a90d13040dfc6353ee41529a243d8489aa974a1"
+    },
+    {
+      "source": "session23-connections/verify_symmetry_slack.py",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-connections/verify_symmetry_slack.py",
+      "bytes": 11128,
+      "sha256": "14f993131caf5903b83aa468f77886aeaa714664d2427dc4b4b2052a9aab9fb9"
+    },
+    {
+      "source": "session23-connections/VERIFICATION.txt",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-connections/VERIFICATION.txt",
+      "bytes": 2132,
+      "sha256": "13e7dd19112947a147b9623e81ee89808b15ee06df8fb1b22227f5f4e0cad5f0"
+    },
+    {
+      "source": "session23-connections/VERIFICATION_OPTIMIZED.txt",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-connections/VERIFICATION_OPTIMIZED.txt",
+      "bytes": 2132,
+      "sha256": "13e7dd19112947a147b9623e81ee89808b15ee06df8fb1b22227f5f4e0cad5f0"
+    },
+    {
+      "source": "session23-connections/VERIFICATION_ORDER7.txt",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-connections/VERIFICATION_ORDER7.txt",
+      "bytes": 2532,
+      "sha256": "49df6b708890ced868e5ffbff454fcb71327cc752228b16eae19a7b42d69f28a"
+    },
+    {
+      "source": "session23-connections/VERIFICATION_ORDER7_OPTIMIZED.txt",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-connections/VERIFICATION_ORDER7_OPTIMIZED.txt",
+      "bytes": 2532,
+      "sha256": "49df6b708890ced868e5ffbff454fcb71327cc752228b16eae19a7b42d69f28a"
+    },
+    {
+      "source": "session23-connections/SHA256SUMS",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-connections/SHA256SUMS",
+      "bytes": 717,
+      "sha256": "9bb5601c5cd90f47402d8311f71062afef85a7199685566745346d6c575fce49"
+    },
+    {
+      "source": "session23-connections/PUBLICATION_FILES.txt",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-connections/PUBLICATION_FILES.txt",
+      "bytes": 200,
+      "sha256": "004c98ec4c7c645ae841a93f06e87a9c291cb6b28822b0b300ad9459710a53f5"
+    },
+    {
+      "source": "session23-slack-review/AUDIT.md",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-slack-review/AUDIT.md",
+      "bytes": 14076,
+      "sha256": "de38abf45585a662de6be49a331df316bdec4488031fab4551686849deca1201"
+    },
+    {
+      "source": "session23-slack-review/actual-tournament-receipt.json",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-slack-review/actual-tournament-receipt.json",
+      "bytes": 66242,
+      "sha256": "b18f70d4e7b5d74ebeaf63569d7143415ab34125f240449a67f2199de198afc8"
+    },
+    {
+      "source": "session23-slack-review/actual-tournament-run.txt",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-slack-review/actual-tournament-run.txt",
+      "bytes": 7030,
+      "sha256": "2caaf5827540f811701fc8563b68820622f38d7e85ec8cf0e8751a011af3f856"
+    },
+    {
+      "source": "session23-slack-review/check_actual_tournaments.py",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-slack-review/check_actual_tournaments.py",
+      "bytes": 12746,
+      "sha256": "4aaa93ed94fb8bfac615659ec10ecd1c247427641e49141d98aedb74349fb4bd"
+    },
+    {
+      "source": "session23-slack-review/final-review-receipt.json",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-slack-review/final-review-receipt.json",
+      "bytes": 1367,
+      "sha256": "3b326c00bdd757825a0dccf037a099e0c2400a9fa4f3b18644b8ab76ad9d3559"
+    },
+    {
+      "source": "session23-root/SLACK_RENEWAL_TRANSFER.md",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-root/SLACK_RENEWAL_TRANSFER.md",
+      "bytes": 5551,
+      "sha256": "18c9bf4e131834de92b6dc72911729cd7cd82b0735638129572b790ec3e365d2"
+    },
+    {
+      "source": "session23-slack-renewal-review/REVIEW.md",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-slack-renewal-review/REVIEW.md",
+      "bytes": 10409,
+      "sha256": "cb5a37d60183c1930cd4accdfde06ace319b47059ca275dcff93608d74b92acf"
+    },
+    {
+      "source": "session23-slack-renewal-review/check_slack_transfer.py",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-slack-renewal-review/check_slack_transfer.py",
+      "bytes": 9824,
+      "sha256": "9dc951140d39544f268520b010e0b4d18d0aa1f5712c120a68d6b3c3178709a4"
+    },
+    {
+      "source": "session23-slack-renewal-review/normal.json",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-slack-renewal-review/normal.json",
+      "bytes": 12739,
+      "sha256": "6d0241d2f288869052e6a5fa82ceaf798384d992c46bb9370abb54ceea14c80a"
+    },
+    {
+      "source": "session23-slack-renewal-review/optimized.json",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-slack-renewal-review/optimized.json",
+      "bytes": 12739,
+      "sha256": "6d0241d2f288869052e6a5fa82ceaf798384d992c46bb9370abb54ceea14c80a"
+    },
+    {
+      "source": "session23-slack-renewal-review/final-exposition.diff",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-slack-renewal-review/final-exposition.diff",
+      "bytes": 3812,
+      "sha256": "99cf2c82ee59109139ad77f145fc0046cfa1c15d836399a0e4669a3fa87428dc"
+    },
+    {
+      "source": "session23-slack-renewal-review/final-review-receipt.json",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-slack-renewal-review/final-review-receipt.json",
+      "bytes": 2311,
+      "sha256": "cda72f35aba60d158dd0eccbd07d2388584d12a06a87259eb92a1c768fdc6c66"
+    },
+    {
+      "source": "session23-slack-renewal-review/PUBLICATION_ALLOWLIST.txt",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-slack-renewal-review/PUBLICATION_ALLOWLIST.txt",
+      "bytes": 435,
+      "sha256": "a7c3006515e5f8f879447c069c24df3f9d9f5f458d7b49889371e8ad7ebffe24"
+    },
+    {
+      "source": "session23-slack-renewal-review/SHA256SUMS",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/session23-slack-renewal-review/SHA256SUMS",
+      "bytes": 597,
+      "sha256": "06dcf2c10a77f1fd7f57762fc2baac2c3a4cb34dd705b3deecc87037e043ab90"
+    },
+    {
+      "source": "publisher wrapper",
+      "path": "05-knowledge/results/fixed_symmetry_slack_generating_functions_20261021/README.md",
+      "bytes": 2026,
+      "sha256": "0bd799153d51de15af873e66a75ab6695aa40263c8e20260dde06ba4d0a937bb"
+    }
+  ]
+}

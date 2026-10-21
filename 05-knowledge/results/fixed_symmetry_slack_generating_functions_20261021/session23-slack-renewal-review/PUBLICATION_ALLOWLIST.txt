@@ -1,0 +1,9 @@
+session23-root/SLACK_RENEWAL_TRANSFER.md
+session23-slack-renewal-review/REVIEW.md
+session23-slack-renewal-review/check_slack_transfer.py
+session23-slack-renewal-review/normal.json
+session23-slack-renewal-review/optimized.json
+session23-slack-renewal-review/final-exposition.diff
+session23-slack-renewal-review/final-review-receipt.json
+session23-slack-renewal-review/PUBLICATION_ALLOWLIST.txt
+session23-slack-renewal-review/SHA256SUMS

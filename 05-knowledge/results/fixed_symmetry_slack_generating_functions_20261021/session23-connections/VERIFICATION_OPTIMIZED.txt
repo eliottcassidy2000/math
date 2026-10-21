@@ -1,0 +1,15 @@
+n 1 classes 1 slack {0: 1} self_converse 1
+n 2 classes 1 slack {0: 1} self_converse 1
+n 3 classes 2 slack {0: 2} self_converse 2
+n 4 classes 4 slack {0: 3, 3: 1} self_converse 2
+n 5 classes 12 slack {0: 4, 3: 4, 4: 1, 6: 3} self_converse 8
+n 6 classes 56 slack {0: 6, 3: 10, 4: 2, 6: 21, 9: 15, 12: 2} self_converse 12
+diagonal_c3_maximal_W_blocks [[0, 5], [1, 3], [2, 4]] configuration (((0, 1, 0), (0, 0, 1), (1, 0, 0)), ((1, 1), (1, 1), (1, 1)), set(), 4)
+delta6_symmetric_order6 1296 aut 3 feedback 3 scores [1, 2, 3, 3, 3, 3] maxW [[0, 1], [2, 3, 4], [5]] self_converse False
+delta6_symmetric_order6 8850 aut 3 feedback 4 scores [2, 2, 2, 3, 3, 3] maxW [[0], [1], [2], [3], [4], [5]] self_converse True
+delta6_symmetric_order6 8881 aut 3 feedback 4 scores [2, 2, 2, 3, 3, 3] maxW [[0, 3], [1, 5], [2, 4]] self_converse True
+delta6_symmetric_order6 88 aut 3 feedback 3 scores [2, 2, 2, 2, 3, 4] maxW [[0], [1, 2, 3], [4, 5]] self_converse False
+exact checks 4744 {'admissible_cost': 60, 'class_count': 6, 'converse_configuration': 60, 'core_feedback_bound': 77, 'core_order_bound': 60, 'delta0_palindrome': 6, 'delta0_series': 6, 'delta3_bivariate': 42, 'delta3_converse_bivariate': 42, 'delta3_series': 6, 'delta4_bivariate': 42, 'delta4_converse_bivariate': 42, 'delta4_series': 6, 'diagonal_c3_hostile': 1, 'diagonal_orbits_not_modules': 1, 'exact_stabilizer': 60, 'finite_maximality': 77, 'long_anti_pairs_middle': 20, 'long_fill_maximality': 21, 'long_fill_slack': 21, 'long_fixed': 60, 'long_slot_bound': 60, 'moved_mass_bound': 77, 'nonnegative_slack': 77, 'overlap_union': 3366, 'partition': 103, 'reconstruction': 77, 'slack_formula': 77, 'support_formula': 77, 'unique_long_anti_action': 20, 'weighted_straightening': 77, 'zero_slack': 17}
+delta_histograms {"0": {"1": 1, "2": 1, "3": 2, "4": 3, "5": 4, "6": 6}, "3": {"4": 1, "5": 4, "6": 10}, "4": {"5": 1, "6": 2}, "6": {"5": 3, "6": 21}, "9": {"6": 15}, "12": {"6": 2}}
+self_converse_histograms {"0": {"1": 1, "2": 1, "3": 2, "4": 1, "5": 2, "6": 2}, "3": {"4": 1, "5": 2, "6": 2}, "4": {"5": 1, "6": 0}, "6": {"5": 3, "6": 5}, "9": {"6": 3}, "12": {"6": 0}}
+PASS

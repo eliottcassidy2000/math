@@ -1,0 +1,3664 @@
+{
+  "status": "PASS",
+  "scope": "Independent focused audit: direct actual tournaments, no imports from candidate.\nUniverse: every labelled tournament <=4; seeded arbitrary tournaments 5..8;\nstructured actual tournament controls <=15; all 27 C3 weight profiles 1..3.\nNo large general tournament census. All claims checked exactly.\n",
+  "actual_tournaments": 139,
+  "proposed_partitions_tested": 548,
+  "checks": {
+    "C3[1,longword,1] positive delta3 family": 5,
+    "actual converse pairing matches long-word reversal": 9,
+    "actual feedback equals straightened weighted cost": 139,
+    "actual full automorphism group order factors": 139,
+    "actual slack equals 3C-U": 139,
+    "actual support equals internal triangle support plus moved singleton mass": 139,
+    "admissible-order compiler cost equals actual weighted cost": 83,
+    "all 27 cyclic weight profiles straighten exactly": 27,
+    "all overlapping W modules have W union": 1689,
+    "anti-isomorphism action squares to identity on long slots": 46,
+    "anti-isomorphism long slots have at most one middle slot": 46,
+    "canonical blocks pass exact maximality test": 110,
+    "canonical quotient at most 4delta+1": 139,
+    "canonical quotient weighted cost at most delta": 139,
+    "configuration anti-isomorphism has unique action on long slots": 46,
+    "cyclic nontransitive homogeneous modules straighten exactly": 3,
+    "distinct long words give distinct actual tournament classes": 9,
+    "every long slot fixed by configuration automorphisms": 83,
+    "hostile distinguishes moved whole block mass from moved singleton mass": 2,
+    "long slot bound": 83,
+    "mandatory synchronization hostile exact invariants": 1,
+    "maximal W modules disjoint": 139,
+    "maximal W modules partition by size": 139,
+    "maximality flags match actual induced inflation": 110,
+    "moved canonical block whole mass is bounded by 2delta": 139,
+    "nonnegative slack": 139,
+    "outer words preserve delta3": 6,
+    "palindrome and paired-reversal test equals actual self-converse": 83,
+    "proposed-block maximality iff flag test including rejected configurations": 548,
+    "regular-five delta4": 1,
+    "short-word long-flag stabilizer equals actual stabilizer": 83,
+    "synchronization canonical quotient is C3 on three transitive pairs": 1,
+    "zero slack canonical quotient is one word": 56,
+    "zero slack self-converse iff word palindrome": 56
+  },
+  "total_checks": 4576,
+  "records": [
+    {
+      "name": "all-labelled-1-0",
+      "n": 1,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-2-0",
+      "n": 2,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-2-1",
+      "n": 2,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-3-0",
+      "n": 3,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-3-1",
+      "n": 3,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-3-2",
+      "n": 3,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          3
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-3-3",
+      "n": 3,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-3-4",
+      "n": 3,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-3-5",
+      "n": 3,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          3
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-3-6",
+      "n": 3,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-3-7",
+      "n": 3,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-0",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-1",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-2",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1,
+          3
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-3",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-4",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-5",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          3,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-6",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-7",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-8",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-9",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1,
+          3
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-10",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-11",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-12",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-13",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-14",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          3,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-15",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-16",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          3,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-17",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-18",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-19",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-20",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-21",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-22",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-23",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1,
+          3
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-24",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-25",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-26",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-27",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          3,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-28",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1,
+          3
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-29",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-30",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-31",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-32",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-33",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-34",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-35",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          3,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-36",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1,
+          3
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-37",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-38",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-39",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-40",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          3,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-41",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-42",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-43",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-44",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-45",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-46",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-47",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1,
+          3
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-48",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-49",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1,
+          3
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-50",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-51",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-52",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-53",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-54",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          3,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-55",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-56",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-57",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-58",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1,
+          3
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-59",
+      "n": 4,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-60",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-61",
+      "n": 4,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          3,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "all-labelled-4-62",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "all-labelled-4-63",
+      "n": 4,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "seeded-arbitrary-5-0",
+      "n": 5,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 4,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-5-1",
+      "n": 5,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 4,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-5-2",
+      "n": 5,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          3
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-5-3",
+      "n": 5,
+      "f": 2,
+      "s": 0,
+      "delta": 6,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 5,
+      "weighted_feedback": 2,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "seeded-arbitrary-5-4",
+      "n": 5,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 4,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-5-5",
+      "n": 5,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          3,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-5-6",
+      "n": 5,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 4,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-5-7",
+      "n": 5,
+      "f": 2,
+      "s": 0,
+      "delta": 6,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 5,
+      "weighted_feedback": 2,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "seeded-arbitrary-5-8",
+      "n": 5,
+      "f": 0,
+      "s": 0,
+      "delta": 0,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "seeded-arbitrary-5-9",
+      "n": 5,
+      "f": 2,
+      "s": 3,
+      "delta": 3,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          3
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "seeded-arbitrary-5-10",
+      "n": 5,
+      "f": 2,
+      "s": 0,
+      "delta": 6,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 2,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "seeded-arbitrary-5-11",
+      "n": 5,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "seeded-arbitrary-6-0",
+      "n": 6,
+      "f": 2,
+      "s": 0,
+      "delta": 6,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 5,
+      "weighted_feedback": 2,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-6-1",
+      "n": 6,
+      "f": 3,
+      "s": 0,
+      "delta": 9,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 6,
+      "weighted_feedback": 3,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-6-2",
+      "n": 6,
+      "f": 2,
+      "s": 0,
+      "delta": 6,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 5,
+      "weighted_feedback": 2,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-6-3",
+      "n": 6,
+      "f": 2,
+      "s": 0,
+      "delta": 6,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 5,
+      "weighted_feedback": 2,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-6-4",
+      "n": 6,
+      "f": 3,
+      "s": 0,
+      "delta": 9,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 5,
+      "weighted_feedback": 3,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-6-5",
+      "n": 6,
+      "f": 2,
+      "s": 3,
+      "delta": 3,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          3
+        ]
+      ],
+      "canonical_quotient_size": 4,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-6-6",
+      "n": 6,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1,
+          3,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-6-7",
+      "n": 6,
+      "f": 1,
+      "s": 3,
+      "delta": 0,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          3,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 1,
+      "weighted_feedback": 0,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-6-8",
+      "n": 6,
+      "f": 4,
+      "s": 6,
+      "delta": 6,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 4,
+      "moved_singleton_mass_U": 6,
+      "moved_block_mass_V": 6,
+      "self_converse": true
+    },
+    {
+      "name": "seeded-arbitrary-6-9",
+      "n": 6,
+      "f": 2,
+      "s": 0,
+      "delta": 6,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 5,
+      "weighted_feedback": 2,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-6-10",
+      "n": 6,
+      "f": 2,
+      "s": 0,
+      "delta": 6,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 6,
+      "weighted_feedback": 2,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "seeded-arbitrary-6-11",
+      "n": 6,
+      "f": 2,
+      "s": 0,
+      "delta": 6,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 6,
+      "weighted_feedback": 2,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-7-0",
+      "n": 7,
+      "f": 4,
+      "s": 0,
+      "delta": 12,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 7,
+      "weighted_feedback": 4,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-7-1",
+      "n": 7,
+      "f": 4,
+      "s": 0,
+      "delta": 12,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 7,
+      "weighted_feedback": 4,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-7-2",
+      "n": 7,
+      "f": 2,
+      "s": 0,
+      "delta": 6,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 5,
+      "weighted_feedback": 2,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-7-3",
+      "n": 7,
+      "f": 4,
+      "s": 0,
+      "delta": 12,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 7,
+      "weighted_feedback": 4,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-7-4",
+      "n": 7,
+      "f": 3,
+      "s": 0,
+      "delta": 9,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 5,
+      "weighted_feedback": 3,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-7-5",
+      "n": 7,
+      "f": 3,
+      "s": 0,
+      "delta": 9,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 7,
+      "weighted_feedback": 3,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-7-6",
+      "n": 7,
+      "f": 4,
+      "s": 0,
+      "delta": 12,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 7,
+      "weighted_feedback": 4,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-7-7",
+      "n": 7,
+      "f": 2,
+      "s": 0,
+      "delta": 6,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 4,
+      "weighted_feedback": 2,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-7-8",
+      "n": 7,
+      "f": 2,
+      "s": 0,
+      "delta": 6,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 6,
+      "weighted_feedback": 2,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-7-9",
+      "n": 7,
+      "f": 5,
+      "s": 0,
+      "delta": 15,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 7,
+      "weighted_feedback": 5,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "seeded-arbitrary-7-10",
+      "n": 7,
+      "f": 3,
+      "s": 0,
+      "delta": 9,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 6,
+      "weighted_feedback": 3,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-7-11",
+      "n": 7,
+      "f": 4,
+      "s": 0,
+      "delta": 12,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 4,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "seeded-arbitrary-8-0",
+      "n": 8,
+      "f": 5,
+      "s": 0,
+      "delta": 15,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 7,
+      "weighted_feedback": 5,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-8-1",
+      "n": 8,
+      "f": 6,
+      "s": 0,
+      "delta": 18,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 8,
+      "weighted_feedback": 6,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-8-2",
+      "n": 8,
+      "f": 3,
+      "s": 0,
+      "delta": 9,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 7,
+      "weighted_feedback": 3,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-8-3",
+      "n": 8,
+      "f": 5,
+      "s": 0,
+      "delta": 15,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 7,
+      "weighted_feedback": 5,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-8-4",
+      "n": 8,
+      "f": 4,
+      "s": 0,
+      "delta": 12,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 7,
+      "weighted_feedback": 4,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-8-5",
+      "n": 8,
+      "f": 4,
+      "s": 0,
+      "delta": 12,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 7,
+      "weighted_feedback": 4,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-8-6",
+      "n": 8,
+      "f": 4,
+      "s": 0,
+      "delta": 12,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 8,
+      "weighted_feedback": 4,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-8-7",
+      "n": 8,
+      "f": 6,
+      "s": 0,
+      "delta": 18,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 7,
+      "weighted_feedback": 6,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-8-8",
+      "n": 8,
+      "f": 3,
+      "s": 0,
+      "delta": 9,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 6,
+      "weighted_feedback": 3,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-8-9",
+      "n": 8,
+      "f": 7,
+      "s": 0,
+      "delta": 21,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 8,
+      "weighted_feedback": 7,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-8-10",
+      "n": 8,
+      "f": 6,
+      "s": 0,
+      "delta": 18,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 8,
+      "weighted_feedback": 6,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "seeded-arbitrary-8-11",
+      "n": 8,
+      "f": 6,
+      "s": 0,
+      "delta": 18,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 8,
+      "weighted_feedback": 6,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "diagonal-C3-synchronization",
+      "n": 6,
+      "f": 4,
+      "s": 6,
+      "delta": 6,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 4,
+      "moved_singleton_mass_U": 6,
+      "moved_block_mass_V": 6,
+      "self_converse": true
+    },
+    {
+      "name": "long-central-delta3-0",
+      "n": 6,
+      "f": 2,
+      "s": 3,
+      "delta": 3,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "long-central-delta3-1",
+      "n": 6,
+      "f": 2,
+      "s": 3,
+      "delta": 3,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "long-central-delta3-2",
+      "n": 7,
+      "f": 2,
+      "s": 3,
+      "delta": 3,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "long-central-delta3-3",
+      "n": 8,
+      "f": 3,
+      "s": 6,
+      "delta": 3,
+      "aut_order": 9,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "long-central-delta3-4",
+      "n": 6,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "long-palindrome-channel-0",
+      "n": 12,
+      "f": 1,
+      "s": 0,
+      "delta": 3,
+      "aut_order": 1,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 5,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "long-palindrome-channel-1",
+      "n": 12,
+      "f": 3,
+      "s": 6,
+      "delta": 3,
+      "aut_order": 9,
+      "canonical_block_words": [
+        [
+          1,
+          3
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 5,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "long-palindrome-channel-2",
+      "n": 12,
+      "f": 3,
+      "s": 6,
+      "delta": 3,
+      "aut_order": 9,
+      "canonical_block_words": [
+        [
+          1,
+          3
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "canonical_quotient_size": 5,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "long-palindrome-channel-3",
+      "n": 11,
+      "f": 2,
+      "s": 3,
+      "delta": 3,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 4,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "long-palindrome-channel-4",
+      "n": 11,
+      "f": 2,
+      "s": 3,
+      "delta": 3,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 4,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": false
+    },
+    {
+      "name": "long-palindrome-channel-5",
+      "n": 15,
+      "f": 2,
+      "s": 3,
+      "delta": 3,
+      "aut_order": 3,
+      "canonical_block_words": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 5,
+      "weighted_feedback": 1,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 0,
+      "self_converse": true
+    },
+    {
+      "name": "moved-whole-block-not-singleton-mass-0",
+      "n": 9,
+      "f": 12,
+      "s": 9,
+      "delta": 27,
+      "aut_order": 81,
+      "canonical_block_words": [
+        [
+          3
+        ],
+        [
+          3
+        ],
+        [
+          3
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 9,
+      "moved_singleton_mass_U": 0,
+      "moved_block_mass_V": 9,
+      "self_converse": true
+    },
+    {
+      "name": "moved-whole-block-not-singleton-mass-1",
+      "n": 12,
+      "f": 19,
+      "s": 12,
+      "delta": 45,
+      "aut_order": 81,
+      "canonical_block_words": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "canonical_quotient_size": 3,
+      "weighted_feedback": 16,
+      "moved_singleton_mass_U": 3,
+      "moved_block_mass_V": 12,
+      "self_converse": false
+    },
+    {
+      "name": "regular-five",
+      "n": 5,
+      "f": 3,
+      "s": 5,
+      "delta": 4,
+      "aut_order": 5,
+      "canonical_block_words": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "canonical_quotient_size": 5,
+      "weighted_feedback": 3,
+      "moved_singleton_mass_U": 5,
+      "moved_block_mass_V": 5,
+      "self_converse": true
+    },
+    {
+      "name": "regular-five-with-word-tails",
+      "n": 13,
+      "f": 5,
+      "s": 11,
+      "delta": 4,
+      "aut_order": 45,
+      "canonical_block_words": [
+        [
+          1,
+          3
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "canonical_quotient_size": 7,
+      "weighted_feedback": 3,
+      "moved_singleton_mass_U": 5,
+      "moved_block_mass_V": 5,
+      "self_converse": true
+    }
+  ],
+  "seconds": 0.858,
+  "source_sha256": "4aaa93ed94fb8bfac615659ec10ecd1c247427641e49141d98aedb74349fb4bd"
+}
