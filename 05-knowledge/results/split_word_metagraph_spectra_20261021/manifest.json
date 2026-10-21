@@ -1,0 +1,95 @@
+{
+  "scope": "Exact approved source files with publication wrapper; finite computations and proof scopes remain distinct.",
+  "files": [
+    {
+      "source": "session23-slack-spectrum/README.md",
+      "path": "05-knowledge/results/split_word_metagraph_spectra_20261021/session23-slack-spectrum/README.md",
+      "bytes": 21476,
+      "sha256": "a5f34a8d0aaa4be75649cca728dc2a46bc25a119b9e941c9151fde3a0dd05931"
+    },
+    {
+      "source": "session23-slack-spectrum/check.py",
+      "path": "05-knowledge/results/split_word_metagraph_spectra_20261021/session23-slack-spectrum/check.py",
+      "bytes": 9891,
+      "sha256": "b4e34fd8570457dac96c142dbf081ba4da721e1709ce5cfd35c9d6963abbb686"
+    },
+    {
+      "source": "session23-slack-spectrum/manifest.json",
+      "path": "05-knowledge/results/split_word_metagraph_spectra_20261021/session23-slack-spectrum/manifest.json",
+      "bytes": 440,
+      "sha256": "2d22974f2a9198147a63e9c4b1742fc84a6f4fd6e61042126d2a6f0049bde516"
+    },
+    {
+      "source": "session23-slack-spectrum/optimized-receipt.json",
+      "path": "05-knowledge/results/split_word_metagraph_spectra_20261021/session23-slack-spectrum/optimized-receipt.json",
+      "bytes": 22262,
+      "sha256": "c9a0eb87aed4274fcef40492674a4fd2954f3c164118650959578567bae42360"
+    },
+    {
+      "source": "session23-slack-spectrum/receipt.json",
+      "path": "05-knowledge/results/split_word_metagraph_spectra_20261021/session23-slack-spectrum/receipt.json",
+      "bytes": 22262,
+      "sha256": "c9a0eb87aed4274fcef40492674a4fd2954f3c164118650959578567bae42360"
+    },
+    {
+      "source": "session23-slack-spectrum/source-pins.json",
+      "path": "05-knowledge/results/split_word_metagraph_spectra_20261021/session23-slack-spectrum/source-pins.json",
+      "bytes": 1027,
+      "sha256": "391b903ae56a6a4ed7b20c1a7a3ff4a0e3b01e17614c8d58c5dae2ed26970c27"
+    },
+    {
+      "source": "session23-slack-spectrum-review/AUDIT.md",
+      "path": "05-knowledge/results/split_word_metagraph_spectra_20261021/session23-slack-spectrum-review/AUDIT.md",
+      "bytes": 14159,
+      "sha256": "2cc46f0aed1306639db647833d16bdd1a98d68988a024439087e2ac4f7b96e41"
+    },
+    {
+      "source": "session23-slack-spectrum-review/check_literal_ports.py",
+      "path": "05-knowledge/results/split_word_metagraph_spectra_20261021/session23-slack-spectrum-review/check_literal_ports.py",
+      "bytes": 18437,
+      "sha256": "1e9c45fa9de6c7467671b6f7196c15653e66fd10a7f690da219ba96619f06c1b"
+    },
+    {
+      "source": "session23-slack-spectrum-review/manifest.json",
+      "path": "05-knowledge/results/split_word_metagraph_spectra_20261021/session23-slack-spectrum-review/manifest.json",
+      "bytes": 615,
+      "sha256": "8926c228171e894b7663514d7e115be015d23882a54df531ebebbefb0a3404b1"
+    },
+    {
+      "source": "session23-slack-spectrum-review/normal.json",
+      "path": "05-knowledge/results/split_word_metagraph_spectra_20261021/session23-slack-spectrum-review/normal.json",
+      "bytes": 136439,
+      "sha256": "a645388117cf121968e153f8e593b28389bef2904f7e14c0072b4e3aeaf555a9"
+    },
+    {
+      "source": "session23-slack-spectrum-review/normal.txt",
+      "path": "05-knowledge/results/split_word_metagraph_spectra_20261021/session23-slack-spectrum-review/normal.txt",
+      "bytes": 6739,
+      "sha256": "1587d4269945d47114bb89875e1d6492fe30790f824f7a7e20d588b84518cbde"
+    },
+    {
+      "source": "session23-slack-spectrum-review/optimized.json",
+      "path": "05-knowledge/results/split_word_metagraph_spectra_20261021/session23-slack-spectrum-review/optimized.json",
+      "bytes": 136439,
+      "sha256": "a645388117cf121968e153f8e593b28389bef2904f7e14c0072b4e3aeaf555a9"
+    },
+    {
+      "source": "session23-slack-spectrum-review/optimized.txt",
+      "path": "05-knowledge/results/split_word_metagraph_spectra_20261021/session23-slack-spectrum-review/optimized.txt",
+      "bytes": 6739,
+      "sha256": "1587d4269945d47114bb89875e1d6492fe30790f824f7a7e20d588b84518cbde"
+    },
+    {
+      "source": "session23-slack-spectrum-review/source-pins.json",
+      "path": "05-knowledge/results/split_word_metagraph_spectra_20261021/session23-slack-spectrum-review/source-pins.json",
+      "bytes": 1553,
+      "sha256": "383def77c3a56b56da1f3131a2bbc4c7d0790197b02f91f23f74aa7858532dfd"
+    },
+    {
+      "source": "publisher wrapper",
+      "path": "05-knowledge/results/split_word_metagraph_spectra_20261021/README.md",
+      "bytes": 1474,
+      "sha256": "c99ed1a4cc3ac413030a828e798f941cd15f7113f45b52227fa2a1b524d563aa"
+    }
+  ]
+}

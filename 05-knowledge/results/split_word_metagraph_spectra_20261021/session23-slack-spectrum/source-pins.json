@@ -1,0 +1,26 @@
+[
+  {
+    "path": "05-knowledge/results/continuation_width_symmetry_20261020/README.md",
+    "sha256": "348ac050570a47b7c044cae507cff1e355d5d7ddf931a427d9c54b7d7508226d"
+  },
+  {
+    "path": "01-canon/theorems/THM-284-linear-coefficient-formula.md",
+    "sha256": "db69b6838df8fa553d132a300978885a788117ce7173b93b77004b3c8ea1a9c4"
+  },
+  {
+    "path": "01-canon/theorems/THM-115-h21-permanent-gap.md",
+    "sha256": "fec17180bbaee3d6fdbe47eb27da19fa32d5cf55281a9c019c52d295dbdb9a5f"
+  },
+  {
+    "path": "05-knowledge/results/deficiency_three_20261020/centers.md",
+    "sha256": "be5717f730c9325b6d68113eb6826b0b614c4e98af0e285eddd56fdaabd8ef3e"
+  },
+  {
+    "path": "05-knowledge/results/fixed_degree_metagraph_rationality_20261021/session22-fixed-degree/PROOF.md",
+    "sha256": "e428906db3b67dbf5c85eef86460a012be8a9574a06bcd62759e73778f23446d"
+  },
+  {
+    "path": "05-knowledge/results/metagraph_spectrum_torus_session16_20261020.md",
+    "sha256": "2edb51d112a0e133403ef1061ad1de7545e50953fa3803810195ccb2f87a3534"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "reviewed_producer": {
+    "session23-slack-spectrum/README.md": "a5f34a8d0aaa4be75649cca728dc2a46bc25a119b9e941c9151fde3a0dd05931",
+    "session23-slack-spectrum/check.py": "b4e34fd8570457dac96c142dbf081ba4da721e1709ce5cfd35c9d6963abbb686",
+    "session23-slack-spectrum/manifest.json": "2d22974f2a9198147a63e9c4b1742fc84a6f4fd6e61042126d2a6f0049bde516",
+    "session23-slack-spectrum/optimized-receipt.json": "c9a0eb87aed4274fcef40492674a4fd2954f3c164118650959578567bae42360",
+    "session23-slack-spectrum/receipt.json": "c9a0eb87aed4274fcef40492674a4fd2954f3c164118650959578567bae42360",
+    "session23-slack-spectrum/source-pins.json": "391b903ae56a6a4ed7b20c1a7a3ff4a0e3b01e17614c8d58c5dae2ed26970c27"
+  },
+  "inherited_sources": {
+    "math/05-knowledge/results/continuation_width_symmetry_20261020/README.md": "348ac050570a47b7c044cae507cff1e355d5d7ddf931a427d9c54b7d7508226d",
+    "math/01-canon/theorems/THM-284-linear-coefficient-formula.md": "db69b6838df8fa553d132a300978885a788117ce7173b93b77004b3c8ea1a9c4",
+    "math/01-canon/theorems/THM-115-h21-permanent-gap.md": "fec17180bbaee3d6fdbe47eb27da19fa32d5cf55281a9c019c52d295dbdb9a5f",
+    "math/05-knowledge/results/metagraph_spectrum_torus_session16_20261020.md": "2edb51d112a0e133403ef1061ad1de7545e50953fa3803810195ccb2f87a3534",
+    "math/05-knowledge/results/metagraph_classification_20261021a/README.md": "a8fd5875952710217d4398eabcead0868899a335da9d7ff1feabb989487beb62"
+  },
+  "normal_and_optimized_json_identical": true,
+  "normal_and_optimized_transcripts_identical": true
+}

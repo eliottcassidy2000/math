@@ -1,0 +1,144 @@
+{
+  "status": "PASS",
+  "method": "Independent exact audit using literal Hamilton paths in their own vertex coordinates.\nNo imports from candidate code. Path-coordinate tournament masks quotient the paths\nwithout computing or assuming the automorphism group. All valid middle words of\nvertex weight <=9, plus selected longer controls; padded cases have total order <=9.\n",
+  "literal_cores": 58,
+  "literal_hamilton_paths": 49076,
+  "literal_path_orbits": 6250,
+  "maximum_core_order": 14,
+  "padding_cases": 66,
+  "fixed_e_range": [
+    2,
+    20
+  ],
+  "degree_series_summary": {
+    "maximum_order": 14,
+    "ordinary_signatures": 3967,
+    "merged_signatures": 2036,
+    "nonzero_degree_order_coefficients": 106
+  },
+  "matching_bridge": {
+    "max_half_exponent": 10,
+    "rows": [
+      {
+        "r": 0,
+        "unequal_pair_count": 1,
+        "balanced_layer": 0,
+        "straddling_layer": 0
+      },
+      {
+        "r": 1,
+        "unequal_pair_count": 2,
+        "balanced_layer": 1,
+        "straddling_layer": 1
+      },
+      {
+        "r": 2,
+        "unequal_pair_count": 6,
+        "balanced_layer": 4,
+        "straddling_layer": 1
+      },
+      {
+        "r": 3,
+        "unequal_pair_count": 15,
+        "balanced_layer": 9,
+        "straddling_layer": 4
+      },
+      {
+        "r": 4,
+        "unequal_pair_count": 40,
+        "balanced_layer": 25,
+        "straddling_layer": 9
+      },
+      {
+        "r": 5,
+        "unequal_pair_count": 104,
+        "balanced_layer": 64,
+        "straddling_layer": 25
+      },
+      {
+        "r": 6,
+        "unequal_pair_count": 273,
+        "balanced_layer": 169,
+        "straddling_layer": 64
+      },
+      {
+        "r": 7,
+        "unequal_pair_count": 714,
+        "balanced_layer": 441,
+        "straddling_layer": 169
+      },
+      {
+        "r": 8,
+        "unequal_pair_count": 1870,
+        "balanced_layer": 1156,
+        "straddling_layer": 441
+      },
+      {
+        "r": 9,
+        "unequal_pair_count": 4895,
+        "balanced_layer": 3025,
+        "straddling_layer": 1156
+      },
+      {
+        "r": 10,
+        "unequal_pair_count": 12816,
+        "balanced_layer": 7921,
+        "straddling_layer": 3025
+      }
+    ]
+  },
+  "checks": {
+    "X times X coordinates convert reflection to swap": 740,
+    "actual anti-isomorphism palindrome criterion": 58,
+    "actual empty unit at decoder boundary": 11,
+    "actual-vertex nonpath flip agrees with path-coordinate target": 69,
+    "arbitrary neutral padding preserves h": 66,
+    "balanced and straddling channels have correct cardinalities": 10,
+    "black local ports are two-subsets X": 8,
+    "blue diagonal X complete": 8,
+    "blue masks equal parity formula": 58,
+    "complete degree-channel rational coefficients match direct converse quotient": 1,
+    "complete split-mask bijection": 58,
+    "excluded W=1 is triangle not h=3 delta-three atom": 1,
+    "fixed-e binomial polynomial literal-word enumeration": 19,
+    "fixed-e even-palindrome coefficient formula": 19,
+    "fixed-e odd-palindrome coefficient formula": 19,
+    "full actual automorphism order": 58,
+    "inherited Fibonacci-product sequence with exact index": 1,
+    "literal free-orbit quotient": 58,
+    "literal path-mask h formula": 58,
+    "literal raw H formula": 58,
+    "literal reflection is complement-reversal": 2132,
+    "matching bridge decoder and inverse recover literal pair": 20736,
+    "matching bridge image is exactly cumulative balanced-cut cores plus unit": 11,
+    "matching bridge injective and onto": 11,
+    "mirrored padding preserves b including parity channels": 66,
+    "nonpath complement commutes with reflection": 69,
+    "ordinary minus self-converse coefficients are even": 165,
+    "padded actual self-converse iff reversed tails and palindromic core": 66,
+    "path-coordinate orbit has one split coordinate": 42826,
+    "reflection stays in actual path fibre": 20,
+    "same e does not ensure palindrome or nonzero b": 1,
+    "same h different blue counts hostile": 1,
+    "same-order equal-scalar cores have disjoint actual merged destination sets": 1,
+    "same-order wiring hostile has 28 distinct destinations on each side": 1,
+    "same-order wiring hostile has identical full scalar signature": 1,
+    "six-port wiring hostile has unequal neighbor multiplicity profiles": 1,
+    "straddler leaves equal lower-weight sides": 4895,
+    "target adjacency is exact nonpath complement": 69,
+    "tiling decoder stops at a monomer or unit": 20736,
+    "twinned local ports have same actual merged destination": 69,
+    "two-subset indexing is injective at local incidences": 8,
+    "unique straddler is a triangle at half exponent": 4895,
+    "unrestricted formula fails at excluded singleton boundary": 1,
+    "weighted fixed-even-exponent polynomial splits into two Fibonacci squares": 10
+  },
+  "total_checks": 98169,
+  "checker_sha256": "1e9c45fa9de6c7467671b6f7196c15653e66fd10a7f690da219ba96619f06c1b"
+}
+LOCAL INCIDENCE TARGET CONTROLS:
+{"word": [1, 1], "n": 4, "e": 2, "H": 5, "aut": 1, "h": 5, "b": 3, "self_converse": true, "actual_black_incidence_ports": 1, "distinct_actual_merged_destinations": 1, "destination_incidence_multiplicities": [1], "black_loop_incidences": 0, "source_adjacency_rows": [6, 12, 8, 1]}
+{"word": [1, 1, 1, 1], "n": 6, "e": 4, "H": 17, "aut": 1, "h": 17, "b": 5, "self_converse": true, "actual_black_incidence_ports": 6, "distinct_actual_merged_destinations": 5, "destination_incidence_multiplicities": [1, 1, 1, 1, 2], "black_loop_incidences": 0, "source_adjacency_rows": [30, 60, 56, 48, 32, 1]}
+{"word": [1, 3, 3, 1], "n": 10, "e": 6, "H": 585, "aut": 9, "h": 65, "b": 9, "self_converse": true, "actual_black_incidence_ports": 28, "distinct_actual_merged_destinations": 28, "destination_incidence_multiplicities": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "black_loop_incidences": 0, "source_adjacency_rows": [510, 1020, 1000, 1008, 996, 832, 896, 800, 512, 1]}
+{"word": [3, 1, 1, 3], "n": 10, "e": 6, "H": 585, "aut": 9, "h": 65, "b": 9, "self_converse": true, "actual_black_incidence_ports": 28, "distinct_actual_merged_destinations": 28, "destination_incidence_multiplicities": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "black_loop_incidences": 0, "source_adjacency_rows": [510, 1012, 1016, 1010, 992, 960, 640, 768, 576, 1]}
+{"word": [3, 3], "n": 8, "e": 4, "H": 153, "aut": 9, "h": 17, "b": 5, "self_converse": true, "actual_black_incidence_ports": 6, "distinct_actual_merged_destinations": 6, "destination_incidence_multiplicities": [1, 1, 1, 1, 1, 1], "black_loop_incidences": 0, "source_adjacency_rows": [126, 244, 248, 242, 160, 192, 144, 1]}

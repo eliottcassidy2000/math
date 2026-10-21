@@ -1,0 +1,8615 @@
+{
+  "status": "PASS",
+  "method": "Independent exact audit using literal Hamilton paths in their own vertex coordinates.\nNo imports from candidate code. Path-coordinate tournament masks quotient the paths\nwithout computing or assuming the automorphism group. All valid middle words of\nvertex weight <=9, plus selected longer controls; padded cases have total order <=9.\n",
+  "literal_cores": 58,
+  "literal_hamilton_paths": 49076,
+  "literal_path_orbits": 6250,
+  "maximum_core_order": 14,
+  "padding_cases": 66,
+  "fixed_e_range": [
+    2,
+    20
+  ],
+  "degree_series_summary": {
+    "maximum_order": 14,
+    "ordinary_signatures": 3967,
+    "merged_signatures": 2036,
+    "nonzero_degree_order_coefficients": 106
+  },
+  "matching_bridge": {
+    "max_half_exponent": 10,
+    "rows": [
+      {
+        "r": 0,
+        "unequal_pair_count": 1,
+        "balanced_layer": 0,
+        "straddling_layer": 0
+      },
+      {
+        "r": 1,
+        "unequal_pair_count": 2,
+        "balanced_layer": 1,
+        "straddling_layer": 1
+      },
+      {
+        "r": 2,
+        "unequal_pair_count": 6,
+        "balanced_layer": 4,
+        "straddling_layer": 1
+      },
+      {
+        "r": 3,
+        "unequal_pair_count": 15,
+        "balanced_layer": 9,
+        "straddling_layer": 4
+      },
+      {
+        "r": 4,
+        "unequal_pair_count": 40,
+        "balanced_layer": 25,
+        "straddling_layer": 9
+      },
+      {
+        "r": 5,
+        "unequal_pair_count": 104,
+        "balanced_layer": 64,
+        "straddling_layer": 25
+      },
+      {
+        "r": 6,
+        "unequal_pair_count": 273,
+        "balanced_layer": 169,
+        "straddling_layer": 64
+      },
+      {
+        "r": 7,
+        "unequal_pair_count": 714,
+        "balanced_layer": 441,
+        "straddling_layer": 169
+      },
+      {
+        "r": 8,
+        "unequal_pair_count": 1870,
+        "balanced_layer": 1156,
+        "straddling_layer": 441
+      },
+      {
+        "r": 9,
+        "unequal_pair_count": 4895,
+        "balanced_layer": 3025,
+        "straddling_layer": 1156
+      },
+      {
+        "r": 10,
+        "unequal_pair_count": 12816,
+        "balanced_layer": 7921,
+        "straddling_layer": 3025
+      }
+    ]
+  },
+  "checks": {
+    "X times X coordinates convert reflection to swap": 740,
+    "actual anti-isomorphism palindrome criterion": 58,
+    "actual empty unit at decoder boundary": 11,
+    "actual-vertex nonpath flip agrees with path-coordinate target": 69,
+    "arbitrary neutral padding preserves h": 66,
+    "balanced and straddling channels have correct cardinalities": 10,
+    "black local ports are two-subsets X": 8,
+    "blue diagonal X complete": 8,
+    "blue masks equal parity formula": 58,
+    "complete degree-channel rational coefficients match direct converse quotient": 1,
+    "complete split-mask bijection": 58,
+    "excluded W=1 is triangle not h=3 delta-three atom": 1,
+    "fixed-e binomial polynomial literal-word enumeration": 19,
+    "fixed-e even-palindrome coefficient formula": 19,
+    "fixed-e odd-palindrome coefficient formula": 19,
+    "full actual automorphism order": 58,
+    "inherited Fibonacci-product sequence with exact index": 1,
+    "literal free-orbit quotient": 58,
+    "literal path-mask h formula": 58,
+    "literal raw H formula": 58,
+    "literal reflection is complement-reversal": 2132,
+    "matching bridge decoder and inverse recover literal pair": 20736,
+    "matching bridge image is exactly cumulative balanced-cut cores plus unit": 11,
+    "matching bridge injective and onto": 11,
+    "mirrored padding preserves b including parity channels": 66,
+    "nonpath complement commutes with reflection": 69,
+    "ordinary minus self-converse coefficients are even": 165,
+    "padded actual self-converse iff reversed tails and palindromic core": 66,
+    "path-coordinate orbit has one split coordinate": 42826,
+    "reflection stays in actual path fibre": 20,
+    "same e does not ensure palindrome or nonzero b": 1,
+    "same h different blue counts hostile": 1,
+    "same-order equal-scalar cores have disjoint actual merged destination sets": 1,
+    "same-order wiring hostile has 28 distinct destinations on each side": 1,
+    "same-order wiring hostile has identical full scalar signature": 1,
+    "six-port wiring hostile has unequal neighbor multiplicity profiles": 1,
+    "straddler leaves equal lower-weight sides": 4895,
+    "target adjacency is exact nonpath complement": 69,
+    "tiling decoder stops at a monomer or unit": 20736,
+    "twinned local ports have same actual merged destination": 69,
+    "two-subset indexing is injective at local incidences": 8,
+    "unique straddler is a triangle at half exponent": 4895,
+    "unrestricted formula fails at excluded singleton boundary": 1,
+    "weighted fixed-even-exponent polynomial splits into two Fibonacci squares": 10
+  },
+  "total_checks": 98169,
+  "rows": [
+    {
+      "word": [
+        1,
+        1
+      ],
+      "n": 4,
+      "e": 2,
+      "H": 5,
+      "aut": 1,
+      "h": 5,
+      "b": 3,
+      "self_converse": true,
+      "actual_black_incidence_ports": 1,
+      "distinct_actual_merged_destinations": 1,
+      "destination_incidence_multiplicities": [
+        1
+      ],
+      "black_loop_incidences": 0,
+      "source_adjacency_rows": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "literal_port_receipts": [
+        {
+          "split": [
+            1,
+            1
+          ],
+          "twin_split": [
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "source_path_mask": 1,
+          "target_path_mask": 6,
+          "target_adjacency_rows": [
+            10,
+            12,
+            9,
+            0
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "word": [
+        1,
+        1,
+        1
+      ],
+      "n": 5,
+      "e": 3,
+      "H": 9,
+      "aut": 1,
+      "h": 9,
+      "b": 1,
+      "self_converse": true
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "n": 6,
+      "e": 4,
+      "H": 17,
+      "aut": 1,
+      "h": 17,
+      "b": 5,
+      "self_converse": true,
+      "actual_black_incidence_ports": 6,
+      "distinct_actual_merged_destinations": 5,
+      "destination_incidence_multiplicities": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "black_loop_incidences": 0,
+      "source_adjacency_rows": [
+        30,
+        60,
+        56,
+        48,
+        32,
+        1
+      ],
+      "literal_port_receipts": [
+        {
+          "split": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "twin_split": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            0
+          ],
+          "source_path_mask": 183,
+          "target_path_mask": 840,
+          "target_adjacency_rows": [
+            34,
+            36,
+            41,
+            51,
+            39,
+            0
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "twin_split": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            5,
+            0,
+            4
+          ],
+          "source_path_mask": 347,
+          "target_path_mask": 676,
+          "target_adjacency_rows": [
+            18,
+            20,
+            25,
+            51,
+            32,
+            7
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "twin_split": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            4,
+            5,
+            0,
+            3
+          ],
+          "source_path_mask": 91,
+          "target_path_mask": 932,
+          "target_adjacency_rows": [
+            18,
+            20,
+            57,
+            51,
+            32,
+            3
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "twin_split": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "literal_path": [
+            1,
+            3,
+            4,
+            5,
+            0,
+            2
+          ],
+          "source_path_mask": 27,
+          "target_path_mask": 996,
+          "target_adjacency_rows": [
+            18,
+            52,
+            57,
+            51,
+            32,
+            1
+          ],
+          "target_merged_canonical_key": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "twin_split": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "literal_path": [
+            1,
+            4,
+            5,
+            0,
+            2,
+            3
+          ],
+          "source_path_mask": 525,
+          "target_path_mask": 498,
+          "target_adjacency_rows": [
+            10,
+            60,
+            57,
+            16,
+            33,
+            9
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "twin_split": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "literal_path": [
+            2,
+            3,
+            4,
+            5,
+            0,
+            1
+          ],
+          "source_path_mask": 19,
+          "target_path_mask": 1004,
+          "target_adjacency_rows": [
+            50,
+            52,
+            57,
+            51,
+            32,
+            0
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n": 7,
+      "e": 5,
+      "H": 33,
+      "aut": 1,
+      "h": 33,
+      "b": 1,
+      "self_converse": true
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n": 8,
+      "e": 6,
+      "H": 65,
+      "aut": 1,
+      "h": 65,
+      "b": 9,
+      "self_converse": true
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n": 9,
+      "e": 7,
+      "H": 129,
+      "aut": 1,
+      "h": 129,
+      "b": 1,
+      "self_converse": true
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n": 10,
+      "e": 8,
+      "H": 257,
+      "aut": 1,
+      "h": 257,
+      "b": 17,
+      "self_converse": true
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n": 11,
+      "e": 9,
+      "H": 513,
+      "aut": 1,
+      "h": 513,
+      "b": 1,
+      "self_converse": true
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "n": 11,
+      "e": 8,
+      "H": 771,
+      "aut": 3,
+      "h": 257,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "n": 10,
+      "e": 7,
+      "H": 387,
+      "aut": 3,
+      "h": 129,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "n": 11,
+      "e": 8,
+      "H": 771,
+      "aut": 3,
+      "h": 257,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "n": 9,
+      "e": 6,
+      "H": 195,
+      "aut": 3,
+      "h": 65,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "n": 10,
+      "e": 7,
+      "H": 387,
+      "aut": 3,
+      "h": 129,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "n": 11,
+      "e": 8,
+      "H": 771,
+      "aut": 3,
+      "h": 257,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "n": 8,
+      "e": 5,
+      "H": 99,
+      "aut": 3,
+      "h": 33,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        3,
+        1
+      ],
+      "n": 9,
+      "e": 6,
+      "H": 195,
+      "aut": 3,
+      "h": 65,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "n": 10,
+      "e": 7,
+      "H": 387,
+      "aut": 3,
+      "h": 129,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "n": 11,
+      "e": 8,
+      "H": 771,
+      "aut": 3,
+      "h": 257,
+      "b": 1,
+      "self_converse": true
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "n": 11,
+      "e": 7,
+      "H": 1161,
+      "aut": 9,
+      "h": 129,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        3
+      ],
+      "n": 7,
+      "e": 4,
+      "H": 51,
+      "aut": 3,
+      "h": 17,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        3,
+        1
+      ],
+      "n": 8,
+      "e": 5,
+      "H": 99,
+      "aut": 3,
+      "h": 33,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "n": 9,
+      "e": 6,
+      "H": 195,
+      "aut": 3,
+      "h": 65,
+      "b": 1,
+      "self_converse": true
+    },
+    {
+      "word": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "n": 10,
+      "e": 7,
+      "H": 387,
+      "aut": 3,
+      "h": 129,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n": 11,
+      "e": 8,
+      "H": 771,
+      "aut": 3,
+      "h": 257,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        3,
+        1,
+        3
+      ],
+      "n": 11,
+      "e": 7,
+      "H": 1161,
+      "aut": 9,
+      "h": 129,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "n": 10,
+      "e": 6,
+      "H": 585,
+      "aut": 9,
+      "h": 65,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        1,
+        3,
+        3,
+        1
+      ],
+      "n": 11,
+      "e": 7,
+      "H": 1161,
+      "aut": 9,
+      "h": 129,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        3
+      ],
+      "n": 6,
+      "e": 3,
+      "H": 27,
+      "aut": 3,
+      "h": 9,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        3,
+        1
+      ],
+      "n": 7,
+      "e": 4,
+      "H": 51,
+      "aut": 3,
+      "h": 17,
+      "b": 1,
+      "self_converse": true
+    },
+    {
+      "word": [
+        1,
+        3,
+        1,
+        1
+      ],
+      "n": 8,
+      "e": 5,
+      "H": 99,
+      "aut": 3,
+      "h": 33,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        3,
+        1,
+        1,
+        1
+      ],
+      "n": 9,
+      "e": 6,
+      "H": 195,
+      "aut": 3,
+      "h": 65,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n": 10,
+      "e": 7,
+      "H": 387,
+      "aut": 3,
+      "h": 129,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n": 11,
+      "e": 8,
+      "H": 771,
+      "aut": 3,
+      "h": 257,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        3,
+        1,
+        1,
+        3
+      ],
+      "n": 11,
+      "e": 7,
+      "H": 1161,
+      "aut": 9,
+      "h": 129,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        3,
+        1,
+        3
+      ],
+      "n": 10,
+      "e": 6,
+      "H": 585,
+      "aut": 9,
+      "h": 65,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        3,
+        1,
+        3,
+        1
+      ],
+      "n": 11,
+      "e": 7,
+      "H": 1161,
+      "aut": 9,
+      "h": 129,
+      "b": 1,
+      "self_converse": true
+    },
+    {
+      "word": [
+        1,
+        3,
+        3
+      ],
+      "n": 9,
+      "e": 5,
+      "H": 297,
+      "aut": 9,
+      "h": 33,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "n": 10,
+      "e": 6,
+      "H": 585,
+      "aut": 9,
+      "h": 65,
+      "b": 9,
+      "self_converse": true,
+      "actual_black_incidence_ports": 28,
+      "distinct_actual_merged_destinations": 28,
+      "destination_incidence_multiplicities": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "black_loop_incidences": 0,
+      "source_adjacency_rows": [
+        510,
+        1020,
+        1000,
+        1008,
+        996,
+        832,
+        896,
+        800,
+        512,
+        1
+      ],
+      "literal_port_receipts": [
+        {
+          "split": [
+            1,
+            3,
+            3,
+            1
+          ],
+          "twin_split": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            0
+          ],
+          "source_path_mask": 12246302335,
+          "target_path_mask": 56473174400,
+          "target_adjacency_rows": [
+            514,
+            524,
+            521,
+            529,
+            615,
+            591,
+            655,
+            831,
+            639,
+            0
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            3,
+            3,
+            0
+          ],
+          "twin_split": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            0,
+            8
+          ],
+          "source_path_mask": 23269465791,
+          "target_path_mask": 45450010944,
+          "target_adjacency_rows": [
+            258,
+            268,
+            265,
+            273,
+            359,
+            335,
+            399,
+            831,
+            512,
+            127
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            3,
+            2,
+            1
+          ],
+          "twin_split": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            0,
+            7
+          ],
+          "source_path_mask": 5619834559,
+          "target_path_mask": 63099642176,
+          "target_adjacency_rows": [
+            258,
+            268,
+            265,
+            273,
+            807,
+            335,
+            927,
+            831,
+            512,
+            47
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "twin_split": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            9,
+            0,
+            7,
+            8
+          ],
+          "source_path_mask": 41464622815,
+          "target_path_mask": 27254853920,
+          "target_adjacency_rows": [
+            130,
+            140,
+            137,
+            145,
+            423,
+            207,
+            927,
+            256,
+            559,
+            191
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            3,
+            1,
+            1
+          ],
+          "twin_split": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8,
+            9,
+            0,
+            6,
+            7
+          ],
+          "source_path_mask": 34753736415,
+          "target_path_mask": 33965740320,
+          "target_adjacency_rows": [
+            130,
+            140,
+            137,
+            145,
+            679,
+            975,
+            927,
+            256,
+            543,
+            143
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            3,
+            1,
+            0
+          ],
+          "twin_split": [
+            1,
+            2,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            9,
+            0,
+            6,
+            7,
+            8
+          ],
+          "source_path_mask": 60863411951,
+          "target_path_mask": 7856064784,
+          "target_adjacency_rows": [
+            66,
+            76,
+            73,
+            81,
+            359,
+            975,
+            128,
+            287,
+            591,
+            223
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            3,
+            0,
+            1
+          ],
+          "twin_split": [
+            0,
+            3,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            8,
+            9,
+            0,
+            5,
+            6,
+            7
+          ],
+          "source_path_mask": 25832584943,
+          "target_path_mask": 42886891792,
+          "target_adjacency_rows": [
+            66,
+            76,
+            73,
+            81,
+            999,
+            975,
+            128,
+            783,
+            591,
+            79
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "twin_split": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            0,
+            4
+          ],
+          "source_path_mask": 1289199551,
+          "target_path_mask": 67430277184,
+          "target_adjacency_rows": [
+            258,
+            772,
+            265,
+            819,
+            807,
+            839,
+            927,
+            831,
+            512,
+            5
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "twin_split": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            9,
+            0,
+            4,
+            8
+          ],
+          "source_path_mask": 39298256863,
+          "target_path_mask": 29421219872,
+          "target_adjacency_rows": [
+            130,
+            388,
+            137,
+            435,
+            423,
+            455,
+            927,
+            256,
+            517,
+            191
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "twin_split": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            8,
+            9,
+            0,
+            4,
+            7
+          ],
+          "source_path_mask": 34971832287,
+          "target_path_mask": 33747644448,
+          "target_adjacency_rows": [
+            130,
+            388,
+            137,
+            915,
+            423,
+            975,
+            927,
+            256,
+            517,
+            151
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            2,
+            2,
+            0
+          ],
+          "twin_split": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            9,
+            0,
+            4,
+            7,
+            8
+          ],
+          "source_path_mask": 60972460015,
+          "target_path_mask": 7747016720,
+          "target_adjacency_rows": [
+            66,
+            196,
+            73,
+            467,
+            231,
+            975,
+            128,
+            261,
+            599,
+            223
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            2,
+            1,
+            1
+          ],
+          "twin_split": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            5,
+            8,
+            9,
+            0,
+            4,
+            6,
+            7
+          ],
+          "source_path_mask": 60150376431,
+          "target_path_mask": 8569100304,
+          "target_adjacency_rows": [
+            66,
+            196,
+            73,
+            723,
+            999,
+            975,
+            128,
+            261,
+            591,
+            199
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            2,
+            0,
+            1
+          ],
+          "twin_split": [
+            0,
+            3,
+            1,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            8,
+            9,
+            0,
+            4,
+            5,
+            6,
+            7
+          ],
+          "source_path_mask": 33288025079,
+          "target_path_mask": 35431451656,
+          "target_adjacency_rows": [
+            34,
+            100,
+            41,
+            1011,
+            999,
+            64,
+            133,
+            807,
+            615,
+            103
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            1,
+            3,
+            1
+          ],
+          "twin_split": [
+            0,
+            0,
+            2,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            8,
+            9,
+            0,
+            3,
+            4
+          ],
+          "source_path_mask": 34433347551,
+          "target_path_mask": 34286129184,
+          "target_adjacency_rows": [
+            130,
+            644,
+            921,
+            915,
+            931,
+            975,
+            927,
+            256,
+            515,
+            129
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            1,
+            3,
+            0
+          ],
+          "twin_split": [
+            1,
+            0,
+            2,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            9,
+            0,
+            3,
+            4,
+            8
+          ],
+          "source_path_mask": 60703201263,
+          "target_path_mask": 8016275472,
+          "target_adjacency_rows": [
+            66,
+            324,
+            473,
+            467,
+            483,
+            975,
+            128,
+            259,
+            577,
+            223
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            1,
+            2,
+            1
+          ],
+          "twin_split": [
+            0,
+            1,
+            2,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            5,
+            6,
+            8,
+            9,
+            0,
+            3,
+            4,
+            7
+          ],
+          "source_path_mask": 60165314543,
+          "target_path_mask": 8554162192,
+          "target_adjacency_rows": [
+            66,
+            324,
+            969,
+            467,
+            999,
+            975,
+            128,
+            259,
+            577,
+            203
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "twin_split": [
+            0,
+            2,
+            2,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            5,
+            8,
+            9,
+            0,
+            3,
+            4,
+            6,
+            7
+          ],
+          "source_path_mask": 67646319607,
+          "target_path_mask": 1073157128,
+          "target_adjacency_rows": [
+            34,
+            164,
+            745,
+            1011,
+            999,
+            64,
+            131,
+            289,
+            615,
+            227
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "twin_split": [
+            0,
+            3,
+            2,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            8,
+            9,
+            0,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "source_path_mask": 34292659707,
+          "target_path_mask": 34426817028,
+          "target_adjacency_rows": [
+            18,
+            84,
+            1017,
+            1011,
+            32,
+            67,
+            145,
+            819,
+            627,
+            115
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            0,
+            3,
+            1
+          ],
+          "twin_split": [
+            0,
+            0,
+            3,
+            0
+          ],
+          "literal_path": [
+            1,
+            5,
+            6,
+            7,
+            8,
+            9,
+            0,
+            2,
+            3,
+            4
+          ],
+          "source_path_mask": 25772001007,
+          "target_path_mask": 42947475728,
+          "target_adjacency_rows": [
+            66,
+            972,
+            969,
+            977,
+            999,
+            975,
+            128,
+            769,
+            577,
+            65
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            0,
+            2,
+            1
+          ],
+          "twin_split": [
+            0,
+            1,
+            3,
+            0
+          ],
+          "literal_path": [
+            1,
+            5,
+            6,
+            8,
+            9,
+            0,
+            2,
+            3,
+            4,
+            7
+          ],
+          "source_path_mask": 59056882679,
+          "target_path_mask": 9662594056,
+          "target_adjacency_rows": [
+            34,
+            996,
+            489,
+            1011,
+            999,
+            64,
+            385,
+            289,
+            545,
+            229
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "twin_split": [
+            0,
+            2,
+            3,
+            0
+          ],
+          "literal_path": [
+            1,
+            5,
+            8,
+            9,
+            0,
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "source_path_mask": 67578634747,
+          "target_path_mask": 1140841988,
+          "target_adjacency_rows": [
+            18,
+            756,
+            1017,
+            1011,
+            32,
+            193,
+            145,
+            273,
+            627,
+            241
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "twin_split": [
+            0,
+            3,
+            3,
+            0
+          ],
+          "literal_path": [
+            1,
+            8,
+            9,
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "source_path_mask": 34290532605,
+          "target_path_mask": 34428944130,
+          "target_adjacency_rows": [
+            10,
+            1020,
+            1017,
+            16,
+            97,
+            73,
+            137,
+            825,
+            633,
+            121
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            0,
+            3,
+            3,
+            1
+          ],
+          "twin_split": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "literal_path": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            0,
+            1
+          ],
+          "source_path_mask": 1288150846,
+          "target_path_mask": 67431325889,
+          "target_adjacency_rows": [
+            774,
+            772,
+            776,
+            819,
+            807,
+            839,
+            927,
+            831,
+            512,
+            0
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "twin_split": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "literal_path": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            0,
+            1,
+            7
+          ],
+          "source_path_mask": 34971307934,
+          "target_path_mask": 33748168801,
+          "target_adjacency_rows": [
+            390,
+            388,
+            392,
+            915,
+            423,
+            975,
+            927,
+            256,
+            512,
+            151
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            0,
+            3,
+            1,
+            1
+          ],
+          "twin_split": [
+            0,
+            2,
+            0,
+            1
+          ],
+          "literal_path": [
+            2,
+            3,
+            4,
+            5,
+            8,
+            9,
+            0,
+            1,
+            6,
+            7
+          ],
+          "source_path_mask": 60150114254,
+          "target_path_mask": 8569362481,
+          "target_adjacency_rows": [
+            198,
+            196,
+            200,
+            723,
+            999,
+            975,
+            128,
+            256,
+            591,
+            199
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "twin_split": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "literal_path": [
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            0,
+            1,
+            4
+          ],
+          "source_path_mask": 34433355551,
+          "target_path_mask": 34286121184,
+          "target_adjacency_rows": [
+            898,
+            388,
+            921,
+            915,
+            931,
+            975,
+            927,
+            256,
+            512,
+            130
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            0,
+            2,
+            2,
+            1
+          ],
+          "twin_split": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "literal_path": [
+            2,
+            3,
+            5,
+            6,
+            8,
+            9,
+            0,
+            1,
+            4,
+            7
+          ],
+          "source_path_mask": 60165318543,
+          "target_path_mask": 8554158192,
+          "target_adjacency_rows": [
+            450,
+            196,
+            969,
+            467,
+            999,
+            975,
+            128,
+            256,
+            578,
+            203
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            0,
+            1,
+            3,
+            1
+          ],
+          "twin_split": [
+            0,
+            0,
+            2,
+            1
+          ],
+          "literal_path": [
+            2,
+            5,
+            6,
+            7,
+            8,
+            9,
+            0,
+            1,
+            3,
+            4
+          ],
+          "source_path_mask": 60131739215,
+          "target_path_mask": 8587737520,
+          "target_adjacency_rows": [
+            706,
+            972,
+            969,
+            977,
+            999,
+            975,
+            128,
+            256,
+            577,
+            192
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "word": [
+        1,
+        3,
+        3,
+        1,
+        1
+      ],
+      "n": 11,
+      "e": 7,
+      "H": 1161,
+      "aut": 9,
+      "h": 129,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        3
+      ],
+      "n": 5,
+      "e": 2,
+      "H": 15,
+      "aut": 3,
+      "h": 5,
+      "b": 1,
+      "self_converse": true
+    },
+    {
+      "word": [
+        3,
+        1
+      ],
+      "n": 6,
+      "e": 3,
+      "H": 27,
+      "aut": 3,
+      "h": 9,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        3,
+        1,
+        1
+      ],
+      "n": 7,
+      "e": 4,
+      "H": 51,
+      "aut": 3,
+      "h": 17,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        3,
+        1,
+        1,
+        1
+      ],
+      "n": 8,
+      "e": 5,
+      "H": 99,
+      "aut": 3,
+      "h": 33,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n": 9,
+      "e": 6,
+      "H": 195,
+      "aut": 3,
+      "h": 65,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n": 10,
+      "e": 7,
+      "H": 387,
+      "aut": 3,
+      "h": 129,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n": 11,
+      "e": 8,
+      "H": 771,
+      "aut": 3,
+      "h": 257,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        3,
+        1,
+        1,
+        1,
+        3
+      ],
+      "n": 11,
+      "e": 7,
+      "H": 1161,
+      "aut": 9,
+      "h": 129,
+      "b": 1,
+      "self_converse": true
+    },
+    {
+      "word": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "n": 10,
+      "e": 6,
+      "H": 585,
+      "aut": 9,
+      "h": 65,
+      "b": 9,
+      "self_converse": true,
+      "actual_black_incidence_ports": 28,
+      "distinct_actual_merged_destinations": 28,
+      "destination_incidence_multiplicities": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "black_loop_incidences": 0,
+      "source_adjacency_rows": [
+        510,
+        1012,
+        1016,
+        1010,
+        992,
+        960,
+        640,
+        768,
+        576,
+        1
+      ],
+      "literal_port_receipts": [
+        {
+          "split": [
+            3,
+            1,
+            1,
+            3
+          ],
+          "twin_split": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            0
+          ],
+          "source_path_mask": 11239669630,
+          "target_path_mask": 57479807105,
+          "target_adjacency_rows": [
+            518,
+            516,
+            520,
+            531,
+            551,
+            719,
+            671,
+            799,
+            639,
+            0
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            3,
+            1,
+            1,
+            2
+          ],
+          "twin_split": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            0,
+            8
+          ],
+          "source_path_mask": 19041607614,
+          "target_path_mask": 49677869121,
+          "target_adjacency_rows": [
+            262,
+            260,
+            264,
+            275,
+            295,
+            847,
+            415,
+            831,
+            512,
+            95
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            3,
+            1,
+            1,
+            1
+          ],
+          "twin_split": [
+            2,
+            0,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            9,
+            0,
+            7,
+            8
+          ],
+          "source_path_mask": 37438091230,
+          "target_path_mask": 31281385505,
+          "target_adjacency_rows": [
+            134,
+            132,
+            136,
+            147,
+            167,
+            719,
+            927,
+            256,
+            575,
+            159
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            3,
+            1,
+            1,
+            0
+          ],
+          "twin_split": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            9,
+            0,
+            6,
+            7,
+            8
+          ],
+          "source_path_mask": 26772109294,
+          "target_path_mask": 41947367441,
+          "target_adjacency_rows": [
+            70,
+            68,
+            72,
+            83,
+            103,
+            975,
+            128,
+            799,
+            607,
+            95
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            3,
+            1,
+            0,
+            3
+          ],
+          "twin_split": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            0,
+            5
+          ],
+          "source_path_mask": 1257758654,
+          "target_path_mask": 67461718081,
+          "target_adjacency_rows": [
+            262,
+            260,
+            264,
+            275,
+            871,
+            847,
+            911,
+            831,
+            512,
+            15
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "twin_split": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            9,
+            0,
+            5,
+            8
+          ],
+          "source_path_mask": 38780268510,
+          "target_path_mask": 29939208225,
+          "target_adjacency_rows": [
+            134,
+            132,
+            136,
+            147,
+            935,
+            463,
+            927,
+            256,
+            527,
+            175
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            3,
+            1,
+            0,
+            1
+          ],
+          "twin_split": [
+            2,
+            1,
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            9,
+            0,
+            5,
+            7,
+            8
+          ],
+          "source_path_mask": 60460759022,
+          "target_path_mask": 8258717713,
+          "target_adjacency_rows": [
+            70,
+            68,
+            72,
+            83,
+            743,
+            975,
+            128,
+            271,
+            607,
+            207
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "split": [
+            3,
+            0,
+            1,
+            3
+          ],
+          "twin_split": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            8,
+            9,
+            0,
+            4
+          ],
+          "source_path_mask": 1224204222,
+          "target_path_mask": 67495272513,
+          "target_adjacency_rows": [
+            262,
+            260,
+            264,
+            787,
+            871,
+            847,
+            911,
+            831,
+            512,
+            7
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "twin_split": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            9,
+            0,
+            4,
+            8
+          ],
+          "source_path_mask": 38763491294,
+          "target_path_mask": 29955985441,
+          "target_adjacency_rows": [
+            134,
+            132,
+            136,
+            403,
+            935,
+            463,
+            927,
+            256,
+            519,
+            175
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            3,
+            0,
+            1,
+            1
+          ],
+          "twin_split": [
+            2,
+            0,
+            1,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            9,
+            0,
+            4,
+            7,
+            8
+          ],
+          "source_path_mask": 60452370414,
+          "target_path_mask": 8267106321,
+          "target_adjacency_rows": [
+            70,
+            68,
+            72,
+            211,
+            743,
+            975,
+            128,
+            263,
+            607,
+            207
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            3,
+            0,
+            0,
+            3
+          ],
+          "twin_split": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            6,
+            7,
+            8,
+            9,
+            0,
+            4,
+            5
+          ],
+          "source_path_mask": 34432872414,
+          "target_path_mask": 34286604321,
+          "target_adjacency_rows": [
+            134,
+            132,
+            136,
+            947,
+            935,
+            967,
+            927,
+            256,
+            519,
+            135
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            3,
+            0,
+            0,
+            2
+          ],
+          "twin_split": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            6,
+            7,
+            9,
+            0,
+            4,
+            5,
+            8
+          ],
+          "source_path_mask": 60670474222,
+          "target_path_mask": 8049002513,
+          "target_adjacency_rows": [
+            70,
+            68,
+            72,
+            979,
+            487,
+            975,
+            128,
+            263,
+            583,
+            215
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            3,
+            0,
+            0,
+            1
+          ],
+          "twin_split": [
+            2,
+            1,
+            1,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            6,
+            9,
+            0,
+            4,
+            5,
+            7,
+            8
+          ],
+          "source_path_mask": 67664542710,
+          "target_path_mask": 1054934025,
+          "target_adjacency_rows": [
+            38,
+            36,
+            40,
+            755,
+            999,
+            64,
+            135,
+            295,
+            623,
+            231
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "split": [
+            2,
+            1,
+            1,
+            3
+          ],
+          "twin_split": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "literal_path": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            0,
+            3
+          ],
+          "source_path_mask": 1223155519,
+          "target_path_mask": 67496321216,
+          "target_adjacency_rows": [
+            770,
+            260,
+            777,
+            787,
+            871,
+            847,
+            911,
+            831,
+            512,
+            2
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "twin_split": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "literal_path": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            9,
+            0,
+            3,
+            8
+          ],
+          "source_path_mask": 38762966943,
+          "target_path_mask": 29956509792,
+          "target_adjacency_rows": [
+            386,
+            132,
+            393,
+            403,
+            935,
+            463,
+            927,
+            256,
+            514,
+            175
+          ],
+          "target_merged_canonical_key": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            2,
+            1,
+            1,
+            1
+          ],
+          "twin_split": [
+            2,
+            0,
+            0,
+            1
+          ],
+          "literal_path": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            9,
+            0,
+            3,
+            7,
+            8
+          ],
+          "source_path_mask": 60452108239,
+          "target_path_mask": 8267368496,
+          "target_adjacency_rows": [
+            194,
+            68,
+            201,
+            211,
+            743,
+            975,
+            128,
+            258,
+            607,
+            207
+          ],
+          "target_merged_canonical_key": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "split": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "twin_split": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "literal_path": [
+            1,
+            2,
+            4,
+            6,
+            7,
+            8,
+            9,
+            0,
+            3,
+            5
+          ],
+          "source_path_mask": 34432348063,
+          "target_path_mask": 34287128672,
+          "target_adjacency_rows": [
+            386,
+            132,
+            393,
+            947,
+            935,
+            967,
+            927,
+            256,
+            514,
+            135
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "split": [
+            2,
+            1,
+            0,
+            2
+          ],
+          "twin_split": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "literal_path": [
+            1,
+            2,
+            4,
+            6,
+            7,
+            9,
+            0,
+            3,
+            5,
+            8
+          ],
+          "source_path_mask": 60670212047,
+          "target_path_mask": 8049264688,
+          "target_adjacency_rows": [
+            194,
+            68,
+            201,
+            979,
+            487,
+            975,
+            128,
+            258,
+            583,
+            215
+          ],
+          "target_merged_canonical_key": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "split": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "twin_split": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "literal_path": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            8,
+            9,
+            0,
+            3,
+            4
+          ],
+          "source_path_mask": 34431299487,
+          "target_path_mask": 34288177248,
+          "target_adjacency_rows": [
+            386,
+            132,
+            905,
+            947,
+            935,
+            967,
+            927,
+            256,
+            514,
+            131
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            2,
+            0,
+            1,
+            2
+          ],
+          "twin_split": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "literal_path": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            9,
+            0,
+            3,
+            4,
+            8
+          ],
+          "source_path_mask": 60669687759,
+          "target_path_mask": 8049788976,
+          "target_adjacency_rows": [
+            194,
+            68,
+            457,
+            979,
+            487,
+            975,
+            128,
+            258,
+            579,
+            215
+          ],
+          "target_merged_canonical_key": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            2,
+            0,
+            0,
+            3
+          ],
+          "twin_split": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "literal_path": [
+            1,
+            2,
+            6,
+            7,
+            8,
+            9,
+            0,
+            3,
+            4,
+            5
+          ],
+          "source_path_mask": 60131735503,
+          "target_path_mask": 8587741232,
+          "target_adjacency_rows": [
+            194,
+            68,
+            985,
+            979,
+            995,
+            975,
+            128,
+            258,
+            579,
+            195
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            2,
+            0,
+            0,
+            2
+          ],
+          "twin_split": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "literal_path": [
+            1,
+            2,
+            6,
+            7,
+            9,
+            0,
+            3,
+            4,
+            5,
+            8
+          ],
+          "source_path_mask": 67679353831,
+          "target_path_mask": 1040122904,
+          "target_adjacency_rows": [
+            98,
+            36,
+            1001,
+            499,
+            999,
+            64,
+            130,
+            291,
+            611,
+            235
+          ],
+          "target_merged_canonical_key": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            1,
+            1,
+            3
+          ],
+          "twin_split": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "literal_path": [
+            1,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            0,
+            2,
+            3
+          ],
+          "source_path_mask": 34431274847,
+          "target_path_mask": 34288201888,
+          "target_adjacency_rows": [
+            642,
+            900,
+            905,
+            947,
+            935,
+            967,
+            927,
+            256,
+            513,
+            128
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "twin_split": [
+            1,
+            0,
+            0,
+            2
+          ],
+          "literal_path": [
+            1,
+            4,
+            5,
+            6,
+            7,
+            9,
+            0,
+            2,
+            3,
+            8
+          ],
+          "source_path_mask": 60669675439,
+          "target_path_mask": 8049801296,
+          "target_adjacency_rows": [
+            322,
+            452,
+            457,
+            979,
+            487,
+            975,
+            128,
+            257,
+            576,
+            215
+          ],
+          "target_merged_canonical_key": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            1,
+            0,
+            3
+          ],
+          "twin_split": [
+            0,
+            1,
+            0,
+            2
+          ],
+          "literal_path": [
+            1,
+            4,
+            6,
+            7,
+            8,
+            9,
+            0,
+            2,
+            3,
+            5
+          ],
+          "source_path_mask": 60131723183,
+          "target_path_mask": 8587753552,
+          "target_adjacency_rows": [
+            322,
+            452,
+            985,
+            979,
+            995,
+            975,
+            128,
+            257,
+            576,
+            195
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            0,
+            1,
+            3
+          ],
+          "twin_split": [
+            0,
+            0,
+            1,
+            2
+          ],
+          "literal_path": [
+            1,
+            5,
+            6,
+            7,
+            8,
+            9,
+            0,
+            2,
+            3,
+            4
+          ],
+          "source_path_mask": 60131706799,
+          "target_path_mask": 8587769936,
+          "target_adjacency_rows": [
+            322,
+            964,
+            985,
+            979,
+            995,
+            975,
+            128,
+            257,
+            576,
+            193
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            0,
+            0,
+            3
+          ],
+          "twin_split": [
+            0,
+            1,
+            1,
+            2
+          ],
+          "literal_path": [
+            1,
+            6,
+            7,
+            8,
+            9,
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "source_path_mask": 67645768407,
+          "target_path_mask": 1073708328,
+          "target_adjacency_rows": [
+            162,
+            1004,
+            1001,
+            1009,
+            999,
+            64,
+            129,
+            288,
+            609,
+            225
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            0,
+            1,
+            1,
+            3
+          ],
+          "twin_split": [
+            0,
+            0,
+            0,
+            3
+          ],
+          "literal_path": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            0,
+            1,
+            2,
+            3
+          ],
+          "source_path_mask": 25771968271,
+          "target_path_mask": 42947508464,
+          "target_adjacency_rows": [
+            962,
+            964,
+            985,
+            979,
+            995,
+            975,
+            128,
+            768,
+            576,
+            64
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "word": [
+        3,
+        1,
+        1,
+        3,
+        1
+      ],
+      "n": 11,
+      "e": 7,
+      "H": 1161,
+      "aut": 9,
+      "h": 129,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        3,
+        1,
+        3
+      ],
+      "n": 9,
+      "e": 5,
+      "H": 297,
+      "aut": 9,
+      "h": 33,
+      "b": 1,
+      "self_converse": true
+    },
+    {
+      "word": [
+        3,
+        1,
+        3,
+        1
+      ],
+      "n": 10,
+      "e": 6,
+      "H": 585,
+      "aut": 9,
+      "h": 65,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        3,
+        1,
+        3,
+        1,
+        1
+      ],
+      "n": 11,
+      "e": 7,
+      "H": 1161,
+      "aut": 9,
+      "h": 129,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        3,
+        3
+      ],
+      "n": 8,
+      "e": 4,
+      "H": 153,
+      "aut": 9,
+      "h": 17,
+      "b": 5,
+      "self_converse": true,
+      "actual_black_incidence_ports": 6,
+      "distinct_actual_merged_destinations": 6,
+      "destination_incidence_multiplicities": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "black_loop_incidences": 0,
+      "source_adjacency_rows": [
+        126,
+        244,
+        248,
+        242,
+        160,
+        192,
+        144,
+        1
+      ],
+      "literal_port_receipts": [
+        {
+          "split": [
+            3,
+            3
+          ],
+          "twin_split": [
+            0,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            0
+          ],
+          "source_path_mask": 343006,
+          "target_path_mask": 1754145,
+          "target_adjacency_rows": [
+            134,
+            132,
+            136,
+            179,
+            167,
+            199,
+            159,
+            0
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "split": [
+            3,
+            2
+          ],
+          "twin_split": [
+            1,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            0,
+            6
+          ],
+          "source_path_mask": 581102,
+          "target_path_mask": 1516049,
+          "target_adjacency_rows": [
+            70,
+            68,
+            72,
+            211,
+            103,
+            207,
+            128,
+            23
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            3,
+            1
+          ],
+          "twin_split": [
+            2,
+            0
+          ],
+          "literal_path": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            0,
+            5,
+            6
+          ],
+          "source_path_mask": 1142518,
+          "target_path_mask": 954633,
+          "target_adjacency_rows": [
+            38,
+            36,
+            40,
+            179,
+            231,
+            64,
+            143,
+            39
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            2,
+            3
+          ],
+          "twin_split": [
+            0,
+            1
+          ],
+          "literal_path": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            0,
+            3
+          ],
+          "source_path_mask": 38351,
+          "target_path_mask": 2058800,
+          "target_adjacency_rows": [
+            194,
+            68,
+            217,
+            211,
+            227,
+            207,
+            128,
+            2
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            2,
+            2
+          ],
+          "twin_split": [
+            1,
+            1
+          ],
+          "literal_path": [
+            1,
+            2,
+            4,
+            5,
+            7,
+            0,
+            3,
+            6
+          ],
+          "source_path_mask": 1183463,
+          "target_path_mask": 913688,
+          "target_adjacency_rows": [
+            98,
+            36,
+            233,
+            115,
+            231,
+            64,
+            130,
+            43
+          ],
+          "target_merged_canonical_key": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "split": [
+            1,
+            3
+          ],
+          "twin_split": [
+            0,
+            2
+          ],
+          "literal_path": [
+            1,
+            4,
+            5,
+            6,
+            7,
+            0,
+            2,
+            3
+          ],
+          "source_path_mask": 1050775,
+          "target_path_mask": 1046376,
+          "target_adjacency_rows": [
+            162,
+            236,
+            233,
+            241,
+            231,
+            64,
+            129,
+            32
+          ],
+          "target_merged_canonical_key": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "word": [
+        3,
+        3,
+        1
+      ],
+      "n": 9,
+      "e": 5,
+      "H": 297,
+      "aut": 9,
+      "h": 33,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        3,
+        3,
+        1,
+        1
+      ],
+      "n": 10,
+      "e": 6,
+      "H": 585,
+      "aut": 9,
+      "h": 65,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        3,
+        3,
+        1,
+        1,
+        1
+      ],
+      "n": 11,
+      "e": 7,
+      "H": 1161,
+      "aut": 9,
+      "h": 129,
+      "b": 0,
+      "self_converse": false
+    },
+    {
+      "word": [
+        3,
+        3,
+        3
+      ],
+      "n": 11,
+      "e": 6,
+      "H": 1755,
+      "aut": 27,
+      "h": 65,
+      "b": 1,
+      "self_converse": true
+    },
+    {
+      "word": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "n": 14,
+      "e": 8,
+      "H": 20817,
+      "aut": 81,
+      "h": 257,
+      "b": 17,
+      "self_converse": true
+    }
+  ],
+  "fixed_e": [
+    {
+      "e": 2,
+      "ordinary": {
+        "4": 1,
+        "5": 1
+      },
+      "SC_even": {
+        "4": 1
+      },
+      "SC_odd": {
+        "5": 1
+      }
+    },
+    {
+      "e": 3,
+      "ordinary": {
+        "5": 1,
+        "6": 2
+      },
+      "SC_even": {},
+      "SC_odd": {
+        "5": 1
+      }
+    },
+    {
+      "e": 4,
+      "ordinary": {
+        "6": 1,
+        "7": 3,
+        "8": 1
+      },
+      "SC_even": {
+        "6": 1,
+        "8": 1
+      },
+      "SC_odd": {
+        "7": 1
+      }
+    },
+    {
+      "e": 5,
+      "ordinary": {
+        "7": 1,
+        "8": 4,
+        "9": 3
+      },
+      "SC_even": {},
+      "SC_odd": {
+        "7": 1,
+        "9": 1
+      }
+    },
+    {
+      "e": 6,
+      "ordinary": {
+        "8": 1,
+        "9": 5,
+        "10": 6,
+        "11": 1
+      },
+      "SC_even": {
+        "8": 1,
+        "10": 2
+      },
+      "SC_odd": {
+        "9": 1,
+        "11": 1
+      }
+    },
+    {
+      "e": 7,
+      "ordinary": {
+        "9": 1,
+        "10": 6,
+        "11": 10,
+        "12": 4
+      },
+      "SC_even": {},
+      "SC_odd": {
+        "9": 1,
+        "11": 2
+      }
+    },
+    {
+      "e": 8,
+      "ordinary": {
+        "10": 1,
+        "11": 7,
+        "12": 15,
+        "13": 10,
+        "14": 1
+      },
+      "SC_even": {
+        "10": 1,
+        "12": 3,
+        "14": 1
+      },
+      "SC_odd": {
+        "11": 1,
+        "13": 2
+      }
+    },
+    {
+      "e": 9,
+      "ordinary": {
+        "11": 1,
+        "12": 8,
+        "13": 21,
+        "14": 20,
+        "15": 5
+      },
+      "SC_even": {},
+      "SC_odd": {
+        "11": 1,
+        "13": 3,
+        "15": 1
+      }
+    },
+    {
+      "e": 10,
+      "ordinary": {
+        "12": 1,
+        "13": 9,
+        "14": 28,
+        "15": 35,
+        "16": 15,
+        "17": 1
+      },
+      "SC_even": {
+        "12": 1,
+        "14": 4,
+        "16": 3
+      },
+      "SC_odd": {
+        "13": 1,
+        "15": 3,
+        "17": 1
+      }
+    },
+    {
+      "e": 11,
+      "ordinary": {
+        "13": 1,
+        "14": 10,
+        "15": 36,
+        "16": 56,
+        "17": 35,
+        "18": 6
+      },
+      "SC_even": {},
+      "SC_odd": {
+        "13": 1,
+        "15": 4,
+        "17": 3
+      }
+    },
+    {
+      "e": 12,
+      "ordinary": {
+        "14": 1,
+        "15": 11,
+        "16": 45,
+        "17": 84,
+        "18": 70,
+        "19": 21,
+        "20": 1
+      },
+      "SC_even": {
+        "14": 1,
+        "16": 5,
+        "18": 6,
+        "20": 1
+      },
+      "SC_odd": {
+        "15": 1,
+        "17": 4,
+        "19": 3
+      }
+    },
+    {
+      "e": 13,
+      "ordinary": {
+        "15": 1,
+        "16": 12,
+        "17": 55,
+        "18": 120,
+        "19": 126,
+        "20": 56,
+        "21": 7
+      },
+      "SC_even": {},
+      "SC_odd": {
+        "15": 1,
+        "17": 5,
+        "19": 6,
+        "21": 1
+      }
+    },
+    {
+      "e": 14,
+      "ordinary": {
+        "16": 1,
+        "17": 13,
+        "18": 66,
+        "19": 165,
+        "20": 210,
+        "21": 126,
+        "22": 28,
+        "23": 1
+      },
+      "SC_even": {
+        "16": 1,
+        "18": 6,
+        "20": 10,
+        "22": 4
+      },
+      "SC_odd": {
+        "17": 1,
+        "19": 5,
+        "21": 6,
+        "23": 1
+      }
+    },
+    {
+      "e": 15,
+      "ordinary": {
+        "17": 1,
+        "18": 14,
+        "19": 78,
+        "20": 220,
+        "21": 330,
+        "22": 252,
+        "23": 84,
+        "24": 8
+      },
+      "SC_even": {},
+      "SC_odd": {
+        "17": 1,
+        "19": 6,
+        "21": 10,
+        "23": 4
+      }
+    },
+    {
+      "e": 16,
+      "ordinary": {
+        "18": 1,
+        "19": 15,
+        "20": 91,
+        "21": 286,
+        "22": 495,
+        "23": 462,
+        "24": 210,
+        "25": 36,
+        "26": 1
+      },
+      "SC_even": {
+        "18": 1,
+        "20": 7,
+        "22": 15,
+        "24": 10,
+        "26": 1
+      },
+      "SC_odd": {
+        "19": 1,
+        "21": 6,
+        "23": 10,
+        "25": 4
+      }
+    },
+    {
+      "e": 17,
+      "ordinary": {
+        "19": 1,
+        "20": 16,
+        "21": 105,
+        "22": 364,
+        "23": 715,
+        "24": 792,
+        "25": 462,
+        "26": 120,
+        "27": 9
+      },
+      "SC_even": {},
+      "SC_odd": {
+        "19": 1,
+        "21": 7,
+        "23": 15,
+        "25": 10,
+        "27": 1
+      }
+    },
+    {
+      "e": 18,
+      "ordinary": {
+        "20": 1,
+        "21": 17,
+        "22": 120,
+        "23": 455,
+        "24": 1001,
+        "25": 1287,
+        "26": 924,
+        "27": 330,
+        "28": 45,
+        "29": 1
+      },
+      "SC_even": {
+        "20": 1,
+        "22": 8,
+        "24": 21,
+        "26": 20,
+        "28": 5
+      },
+      "SC_odd": {
+        "21": 1,
+        "23": 7,
+        "25": 15,
+        "27": 10,
+        "29": 1
+      }
+    },
+    {
+      "e": 19,
+      "ordinary": {
+        "21": 1,
+        "22": 18,
+        "23": 136,
+        "24": 560,
+        "25": 1365,
+        "26": 2002,
+        "27": 1716,
+        "28": 792,
+        "29": 165,
+        "30": 10
+      },
+      "SC_even": {},
+      "SC_odd": {
+        "21": 1,
+        "23": 8,
+        "25": 21,
+        "27": 20,
+        "29": 5
+      }
+    },
+    {
+      "e": 20,
+      "ordinary": {
+        "22": 1,
+        "23": 19,
+        "24": 153,
+        "25": 680,
+        "26": 1820,
+        "27": 3003,
+        "28": 3003,
+        "29": 1716,
+        "30": 495,
+        "31": 55,
+        "32": 1
+      },
+      "SC_even": {
+        "22": 1,
+        "24": 9,
+        "26": 28,
+        "28": 35,
+        "30": 15,
+        "32": 1
+      },
+      "SC_odd": {
+        "23": 1,
+        "25": 8,
+        "27": 21,
+        "29": 20,
+        "31": 5
+      }
+    }
+  ],
+  "padding": [
+    {
+      "left": [],
+      "core": [
+        1,
+        1
+      ],
+      "right": [],
+      "n": 4,
+      "h": 5,
+      "b": 3
+    },
+    {
+      "left": [],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        1
+      ],
+      "n": 5,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        3
+      ],
+      "n": 7,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        1,
+        1
+      ],
+      "n": 6,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        1,
+        3
+      ],
+      "n": 8,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        3,
+        1
+      ],
+      "n": 8,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [],
+      "n": 5,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        1
+      ],
+      "n": 6,
+      "h": 5,
+      "b": 3
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        3
+      ],
+      "n": 8,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        1,
+        1
+      ],
+      "n": 7,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        1,
+        3
+      ],
+      "n": 9,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        3,
+        1
+      ],
+      "n": 9,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        3
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [],
+      "n": 7,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        3
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        1
+      ],
+      "n": 8,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        3
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        1,
+        1
+      ],
+      "n": 9,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1,
+        1
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [],
+      "n": 6,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1,
+        1
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        1
+      ],
+      "n": 7,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1,
+        1
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        3
+      ],
+      "n": 9,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1,
+        1
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        1,
+        1
+      ],
+      "n": 8,
+      "h": 5,
+      "b": 3
+    },
+    {
+      "left": [
+        1,
+        3
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [],
+      "n": 8,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1,
+        3
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        1
+      ],
+      "n": 9,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        3,
+        1
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [],
+      "n": 8,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        3,
+        1
+      ],
+      "core": [
+        1,
+        1
+      ],
+      "right": [
+        1
+      ],
+      "n": 9,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        3
+      ],
+      "right": [],
+      "n": 5,
+      "h": 5,
+      "b": 1
+    },
+    {
+      "left": [],
+      "core": [
+        3
+      ],
+      "right": [
+        1
+      ],
+      "n": 6,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        3
+      ],
+      "right": [
+        3
+      ],
+      "n": 8,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        3
+      ],
+      "right": [
+        1,
+        1
+      ],
+      "n": 7,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        3
+      ],
+      "right": [
+        1,
+        3
+      ],
+      "n": 9,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        3
+      ],
+      "right": [
+        3,
+        1
+      ],
+      "n": 9,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        3
+      ],
+      "right": [],
+      "n": 6,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        3
+      ],
+      "right": [
+        1
+      ],
+      "n": 7,
+      "h": 5,
+      "b": 1
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        3
+      ],
+      "right": [
+        3
+      ],
+      "n": 9,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        3
+      ],
+      "right": [
+        1,
+        1
+      ],
+      "n": 8,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        3
+      ],
+      "core": [
+        3
+      ],
+      "right": [],
+      "n": 8,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        3
+      ],
+      "core": [
+        3
+      ],
+      "right": [
+        1
+      ],
+      "n": 9,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1,
+        1
+      ],
+      "core": [
+        3
+      ],
+      "right": [],
+      "n": 7,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1,
+        1
+      ],
+      "core": [
+        3
+      ],
+      "right": [
+        1
+      ],
+      "n": 8,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        1,
+        1
+      ],
+      "core": [
+        3
+      ],
+      "right": [
+        1,
+        1
+      ],
+      "n": 9,
+      "h": 5,
+      "b": 1
+    },
+    {
+      "left": [
+        1,
+        3
+      ],
+      "core": [
+        3
+      ],
+      "right": [],
+      "n": 9,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [
+        3,
+        1
+      ],
+      "core": [
+        3
+      ],
+      "right": [],
+      "n": 9,
+      "h": 5,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        1,
+        3
+      ],
+      "right": [],
+      "n": 6,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        1,
+        3
+      ],
+      "right": [
+        1
+      ],
+      "n": 7,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        1,
+        3
+      ],
+      "right": [
+        3
+      ],
+      "n": 9,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        1,
+        3
+      ],
+      "right": [
+        1,
+        1
+      ],
+      "n": 8,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        1,
+        3
+      ],
+      "right": [],
+      "n": 7,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        1,
+        3
+      ],
+      "right": [
+        1
+      ],
+      "n": 8,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        1,
+        3
+      ],
+      "right": [
+        1,
+        1
+      ],
+      "n": 9,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [
+        3
+      ],
+      "core": [
+        1,
+        3
+      ],
+      "right": [],
+      "n": 9,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [
+        1,
+        1
+      ],
+      "core": [
+        1,
+        3
+      ],
+      "right": [],
+      "n": 8,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [
+        1,
+        1
+      ],
+      "core": [
+        1,
+        3
+      ],
+      "right": [
+        1
+      ],
+      "n": 9,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        3,
+        1
+      ],
+      "right": [],
+      "n": 6,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        3,
+        1
+      ],
+      "right": [
+        1
+      ],
+      "n": 7,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        3,
+        1
+      ],
+      "right": [
+        3
+      ],
+      "n": 9,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        3,
+        1
+      ],
+      "right": [
+        1,
+        1
+      ],
+      "n": 8,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        3,
+        1
+      ],
+      "right": [],
+      "n": 7,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        3,
+        1
+      ],
+      "right": [
+        1
+      ],
+      "n": 8,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        3,
+        1
+      ],
+      "right": [
+        1,
+        1
+      ],
+      "n": 9,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [
+        3
+      ],
+      "core": [
+        3,
+        1
+      ],
+      "right": [],
+      "n": 9,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [
+        1,
+        1
+      ],
+      "core": [
+        3,
+        1
+      ],
+      "right": [],
+      "n": 8,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [
+        1,
+        1
+      ],
+      "core": [
+        3,
+        1
+      ],
+      "right": [
+        1
+      ],
+      "n": 9,
+      "h": 9,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        1,
+        3,
+        1
+      ],
+      "right": [],
+      "n": 7,
+      "h": 17,
+      "b": 1
+    },
+    {
+      "left": [],
+      "core": [
+        1,
+        3,
+        1
+      ],
+      "right": [
+        1
+      ],
+      "n": 8,
+      "h": 17,
+      "b": 0
+    },
+    {
+      "left": [],
+      "core": [
+        1,
+        3,
+        1
+      ],
+      "right": [
+        1,
+        1
+      ],
+      "n": 9,
+      "h": 17,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        1,
+        3,
+        1
+      ],
+      "right": [],
+      "n": 8,
+      "h": 17,
+      "b": 0
+    },
+    {
+      "left": [
+        1
+      ],
+      "core": [
+        1,
+        3,
+        1
+      ],
+      "right": [
+        1
+      ],
+      "n": 9,
+      "h": 17,
+      "b": 1
+    },
+    {
+      "left": [
+        1,
+        1
+      ],
+      "core": [
+        1,
+        3,
+        1
+      ],
+      "right": [],
+      "n": 9,
+      "h": 17,
+      "b": 0
+    }
+  ],
+  "degree_series": {
+    "maximum_order": 14,
+    "ordinary_signatures": 3967,
+    "merged_signatures": 2036,
+    "nonzero_degree_order_coefficients": 106,
+    "coefficients": [
+      {
+        "degree": 1,
+        "n": 4,
+        "count": 1
+      },
+      {
+        "degree": 1,
+        "n": 6,
+        "count": 1
+      },
+      {
+        "degree": 1,
+        "n": 8,
+        "count": 1
+      },
+      {
+        "degree": 1,
+        "n": 10,
+        "count": 2
+      },
+      {
+        "degree": 1,
+        "n": 12,
+        "count": 3
+      },
+      {
+        "degree": 1,
+        "n": 14,
+        "count": 4
+      },
+      {
+        "degree": 2,
+        "n": 5,
+        "count": 1
+      },
+      {
+        "degree": 2,
+        "n": 7,
+        "count": 1
+      },
+      {
+        "degree": 2,
+        "n": 9,
+        "count": 1
+      },
+      {
+        "degree": 2,
+        "n": 11,
+        "count": 2
+      },
+      {
+        "degree": 2,
+        "n": 13,
+        "count": 3
+      },
+      {
+        "degree": 4,
+        "n": 5,
+        "count": 1
+      },
+      {
+        "degree": 4,
+        "n": 7,
+        "count": 1
+      },
+      {
+        "degree": 4,
+        "n": 9,
+        "count": 1
+      },
+      {
+        "degree": 4,
+        "n": 11,
+        "count": 2
+      },
+      {
+        "degree": 4,
+        "n": 13,
+        "count": 3
+      },
+      {
+        "degree": 5,
+        "n": 5,
+        "count": 1
+      },
+      {
+        "degree": 5,
+        "n": 6,
+        "count": 2
+      },
+      {
+        "degree": 5,
+        "n": 7,
+        "count": 4
+      },
+      {
+        "degree": 5,
+        "n": 8,
+        "count": 8
+      },
+      {
+        "degree": 5,
+        "n": 9,
+        "count": 14
+      },
+      {
+        "degree": 5,
+        "n": 10,
+        "count": 23
+      },
+      {
+        "degree": 5,
+        "n": 11,
+        "count": 39
+      },
+      {
+        "degree": 5,
+        "n": 12,
+        "count": 64
+      },
+      {
+        "degree": 5,
+        "n": 13,
+        "count": 104
+      },
+      {
+        "degree": 5,
+        "n": 14,
+        "count": 167
+      },
+      {
+        "degree": 6,
+        "n": 6,
+        "count": 1
+      },
+      {
+        "degree": 6,
+        "n": 8,
+        "count": 2
+      },
+      {
+        "degree": 6,
+        "n": 10,
+        "count": 2
+      },
+      {
+        "degree": 6,
+        "n": 12,
+        "count": 3
+      },
+      {
+        "degree": 6,
+        "n": 14,
+        "count": 5
+      },
+      {
+        "degree": 8,
+        "n": 7,
+        "count": 1
+      },
+      {
+        "degree": 8,
+        "n": 9,
+        "count": 1
+      },
+      {
+        "degree": 8,
+        "n": 11,
+        "count": 1
+      },
+      {
+        "degree": 8,
+        "n": 13,
+        "count": 2
+      },
+      {
+        "degree": 9,
+        "n": 6,
+        "count": 2
+      },
+      {
+        "degree": 9,
+        "n": 7,
+        "count": 3
+      },
+      {
+        "degree": 9,
+        "n": 8,
+        "count": 6
+      },
+      {
+        "degree": 9,
+        "n": 9,
+        "count": 11
+      },
+      {
+        "degree": 9,
+        "n": 10,
+        "count": 20
+      },
+      {
+        "degree": 9,
+        "n": 11,
+        "count": 32
+      },
+      {
+        "degree": 9,
+        "n": 12,
+        "count": 55
+      },
+      {
+        "degree": 9,
+        "n": 13,
+        "count": 89
+      },
+      {
+        "degree": 9,
+        "n": 14,
+        "count": 146
+      },
+      {
+        "degree": 16,
+        "n": 7,
+        "count": 1
+      },
+      {
+        "degree": 16,
+        "n": 9,
+        "count": 2
+      },
+      {
+        "degree": 16,
+        "n": 11,
+        "count": 2
+      },
+      {
+        "degree": 16,
+        "n": 13,
+        "count": 3
+      },
+      {
+        "degree": 17,
+        "n": 7,
+        "count": 2
+      },
+      {
+        "degree": 17,
+        "n": 8,
+        "count": 4
+      },
+      {
+        "degree": 17,
+        "n": 9,
+        "count": 8
+      },
+      {
+        "degree": 17,
+        "n": 10,
+        "count": 15
+      },
+      {
+        "degree": 17,
+        "n": 11,
+        "count": 28
+      },
+      {
+        "degree": 17,
+        "n": 12,
+        "count": 46
+      },
+      {
+        "degree": 17,
+        "n": 13,
+        "count": 78
+      },
+      {
+        "degree": 17,
+        "n": 14,
+        "count": 128
+      },
+      {
+        "degree": 28,
+        "n": 8,
+        "count": 1
+      },
+      {
+        "degree": 28,
+        "n": 10,
+        "count": 3
+      },
+      {
+        "degree": 28,
+        "n": 12,
+        "count": 3
+      },
+      {
+        "degree": 28,
+        "n": 14,
+        "count": 4
+      },
+      {
+        "degree": 32,
+        "n": 9,
+        "count": 1
+      },
+      {
+        "degree": 32,
+        "n": 11,
+        "count": 2
+      },
+      {
+        "degree": 32,
+        "n": 13,
+        "count": 2
+      },
+      {
+        "degree": 33,
+        "n": 8,
+        "count": 3
+      },
+      {
+        "degree": 33,
+        "n": 9,
+        "count": 6
+      },
+      {
+        "degree": 33,
+        "n": 10,
+        "count": 12
+      },
+      {
+        "degree": 33,
+        "n": 11,
+        "count": 21
+      },
+      {
+        "degree": 33,
+        "n": 12,
+        "count": 40
+      },
+      {
+        "degree": 33,
+        "n": 13,
+        "count": 66
+      },
+      {
+        "degree": 33,
+        "n": 14,
+        "count": 112
+      },
+      {
+        "degree": 64,
+        "n": 9,
+        "count": 1
+      },
+      {
+        "degree": 64,
+        "n": 11,
+        "count": 3
+      },
+      {
+        "degree": 64,
+        "n": 13,
+        "count": 3
+      },
+      {
+        "degree": 65,
+        "n": 9,
+        "count": 3
+      },
+      {
+        "degree": 65,
+        "n": 10,
+        "count": 8
+      },
+      {
+        "degree": 65,
+        "n": 11,
+        "count": 16
+      },
+      {
+        "degree": 65,
+        "n": 12,
+        "count": 29
+      },
+      {
+        "degree": 65,
+        "n": 13,
+        "count": 55
+      },
+      {
+        "degree": 65,
+        "n": 14,
+        "count": 94
+      },
+      {
+        "degree": 120,
+        "n": 10,
+        "count": 1
+      },
+      {
+        "degree": 120,
+        "n": 12,
+        "count": 4
+      },
+      {
+        "degree": 120,
+        "n": 14,
+        "count": 5
+      },
+      {
+        "degree": 128,
+        "n": 11,
+        "count": 1
+      },
+      {
+        "degree": 128,
+        "n": 13,
+        "count": 3
+      },
+      {
+        "degree": 129,
+        "n": 10,
+        "count": 4
+      },
+      {
+        "degree": 129,
+        "n": 11,
+        "count": 11
+      },
+      {
+        "degree": 129,
+        "n": 12,
+        "count": 24
+      },
+      {
+        "degree": 129,
+        "n": 13,
+        "count": 41
+      },
+      {
+        "degree": 129,
+        "n": 14,
+        "count": 78
+      },
+      {
+        "degree": 256,
+        "n": 11,
+        "count": 1
+      },
+      {
+        "degree": 256,
+        "n": 13,
+        "count": 4
+      },
+      {
+        "degree": 257,
+        "n": 11,
+        "count": 4
+      },
+      {
+        "degree": 257,
+        "n": 12,
+        "count": 14
+      },
+      {
+        "degree": 257,
+        "n": 13,
+        "count": 32
+      },
+      {
+        "degree": 257,
+        "n": 14,
+        "count": 57
+      },
+      {
+        "degree": 496,
+        "n": 12,
+        "count": 1
+      },
+      {
+        "degree": 496,
+        "n": 14,
+        "count": 5
+      },
+      {
+        "degree": 512,
+        "n": 13,
+        "count": 1
+      },
+      {
+        "degree": 513,
+        "n": 12,
+        "count": 5
+      },
+      {
+        "degree": 513,
+        "n": 13,
+        "count": 18
+      },
+      {
+        "degree": 513,
+        "n": 14,
+        "count": 46
+      },
+      {
+        "degree": 1024,
+        "n": 13,
+        "count": 1
+      },
+      {
+        "degree": 1025,
+        "n": 13,
+        "count": 5
+      },
+      {
+        "degree": 1025,
+        "n": 14,
+        "count": 22
+      },
+      {
+        "degree": 2016,
+        "n": 14,
+        "count": 1
+      },
+      {
+        "degree": 2049,
+        "n": 14,
+        "count": 6
+      }
+    ]
+  },
+  "checker_sha256": "1e9c45fa9de6c7467671b6f7196c15653e66fd10a7f690da219ba96619f06c1b"
+}
