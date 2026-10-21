@@ -1,0 +1,5275 @@
+{
+  "all_r_31_architecture": [
+    {
+      "C": 106346764803351611,
+      "P": 50031545098999707,
+      "ROOT_suffix": [
+        1,
+        1,
+        5,
+        4
+      ],
+      "child": 23,
+      "cut": 33,
+      "first_valuation": 3,
+      "head": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        4,
+        2,
+        2,
+        4
+      ],
+      "head_cost": 53,
+      "index0": {
+        "ROOT_odd_steps": 39,
+        "ROOT_ordinary_steps": 106,
+        "ROOT_valuation_cost": 67,
+        "child": 23,
+        "final_valuation": 3,
+        "head": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4
+        ],
+        "index": 0,
+        "source": {
+          "divide": 50031545098999707,
+          "numerator_coefficient": 23,
+          "power_of_two": 56,
+          "subtract": 106346764803351611
+        }
+      },
+      "period": 33354363399333138,
+      "r": 1,
+      "registers": [
+        31,
+        3,
+        101,
+        73,
+        66,
+        38
+      ]
+    },
+    {
+      "C": 2326215169950795283,
+      "P": 450283905890997363,
+      "ROOT_suffix": [
+        1,
+        1,
+        5,
+        4
+      ],
+      "child": 23,
+      "cut": 33,
+      "first_valuation": 265513516350064983,
+      "head": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        4,
+        2,
+        2,
+        4,
+        3,
+        4
+      ],
+      "head_cost": 60,
+      "index0": {
+        "ROOT_odd_steps": 41,
+        "ROOT_ordinary_steps": 265513516350065095,
+        "ROOT_valuation_cost": 265513516350065054,
+        "child": 23,
+        "final_valuation": 265513516350064983,
+        "head": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4,
+          3,
+          4
+        ],
+        "index": 0,
+        "source": {
+          "divide": 450283905890997363,
+          "numerator_coefficient": 23,
+          "power_of_two": 265513516350065043,
+          "subtract": 2326215169950795283
+        }
+      },
+      "period": 300189270593998242,
+      "r": 2,
+      "registers": [
+        92,
+        36,
+        22,
+        71,
+        57,
+        1
+      ]
+    },
+    {
+      "C": 196180005229797897899,
+      "P": 4052555153018976267,
+      "ROOT_suffix": [
+        1,
+        1,
+        5,
+        4
+      ],
+      "child": 23,
+      "cut": 33,
+      "first_valuation": 1782759286902088575,
+      "head": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        4,
+        2,
+        2,
+        4,
+        3,
+        4,
+        3,
+        4
+      ],
+      "head_cost": 67,
+      "index0": {
+        "ROOT_odd_steps": 43,
+        "ROOT_ordinary_steps": 1782759286902088696,
+        "ROOT_valuation_cost": 1782759286902088653,
+        "child": 23,
+        "final_valuation": 1782759286902088575,
+        "head": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4,
+          3,
+          4,
+          3,
+          4
+        ],
+        "index": 0,
+        "source": {
+          "divide": 4052555153018976267,
+          "numerator_coefficient": 23,
+          "power_of_two": 1782759286902088642,
+          "subtract": 196180005229797897899
+        }
+      },
+      "period": 2701703435345984178,
+      "r": 3,
+      "registers": [
+        104,
+        97,
+        69,
+        62,
+        34,
+        27
+      ]
+    },
+    {
+      "C": 24196860840698995846147,
+      "P": 36472996377170786403,
+      "ROOT_suffix": [
+        1,
+        1,
+        5,
+        4
+      ],
+      "child": 23,
+      "cut": 33,
+      "first_valuation": 22842434062564807905,
+      "head": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        4,
+        2,
+        2,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4
+      ],
+      "head_cost": 74,
+      "index0": {
+        "ROOT_odd_steps": 45,
+        "ROOT_ordinary_steps": 22842434062564808035,
+        "ROOT_valuation_cost": 22842434062564807990,
+        "child": 23,
+        "final_valuation": 22842434062564807905,
+        "head": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4
+        ],
+        "index": 0,
+        "source": {
+          "divide": 36472996377170786403,
+          "numerator_coefficient": 23,
+          "power_of_two": 22842434062564807979,
+          "subtract": 24196860840698995846147
+        }
+      },
+      "period": 24315330918113857602,
+      "r": 4,
+      "registers": [
+        4,
+        53,
+        39,
+        88,
+        74,
+        18
+      ]
+    },
+    {
+      "C": 6476736293446791444621909063907,
+      "P": 239299329230617529590083,
+      "ROOT_suffix": [
+        1,
+        1,
+        5,
+        4
+      ],
+      "child": 23,
+      "cut": 33,
+      "first_valuation": 15112100508988760997237,
+      "head": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        4,
+        2,
+        2,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4
+      ],
+      "head_cost": 102,
+      "index0": {
+        "ROOT_odd_steps": 53,
+        "ROOT_ordinary_steps": 15112100508988760997403,
+        "ROOT_valuation_cost": 15112100508988760997350,
+        "child": 23,
+        "final_valuation": 15112100508988760997237,
+        "head": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4
+        ],
+        "index": 0,
+        "source": {
+          "divide": 239299329230617529590083,
+          "numerator_coefficient": 23,
+          "power_of_two": 15112100508988760997339,
+          "subtract": 6476736293446791444621909063907
+        }
+      },
+      "period": 159532886153745019726722,
+      "r": 8,
+      "registers": [
+        59,
+        3,
+        94,
+        38,
+        24,
+        73
+      ]
+    },
+    {
+      "C": 466698001836758934583718413461167539234792625827,
+      "P": 10301051460877537453973547267843,
+      "ROOT_suffix": [
+        1,
+        1,
+        5,
+        4
+      ],
+      "child": 23,
+      "cut": 33,
+      "first_valuation": 1157877156621593195008624373301,
+      "head": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        1,
+        4,
+        2,
+        2,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4,
+        3,
+        4
+      ],
+      "head_cost": 158,
+      "index0": {
+        "ROOT_odd_steps": 69,
+        "ROOT_ordinary_steps": 1157877156621593195008624373539,
+        "ROOT_valuation_cost": 1157877156621593195008624373470,
+        "child": 23,
+        "final_valuation": 1157877156621593195008624373301,
+        "head": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4,
+          3,
+          4
+        ],
+        "index": 0,
+        "source": {
+          "divide": 10301051460877537453973547267843,
+          "numerator_coefficient": 23,
+          "power_of_two": 1157877156621593195008624373459,
+          "subtract": 466698001836758934583718413461167539234792625827
+        }
+      },
+      "period": 6867367640585024969315698178562,
+      "r": 16,
+      "registers": [
+        99,
+        43,
+        29,
+        78,
+        64,
+        8
+      ]
+    }
+  ],
+  "cap3_paid_grounded": [
+    {
+      "ROOT_cost": 75,
+      "ROOT_rank": 41,
+      "actual_gap": 290,
+      "cap": 3,
+      "child": 637,
+      "cut": 11,
+      "source": 927,
+      "stable_sum": [
+        1816213,
+        4194304
+      ],
+      "terminal": [
+        3,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        4
+      ],
+      "whole_debt": [
+        375816387,
+        268435456
+      ]
+    },
+    {
+      "ROOT_cost": 63,
+      "ROOT_rank": 33,
+      "actual_gap": 1294,
+      "cap": 3,
+      "child": 89,
+      "cut": 19,
+      "source": 1383,
+      "stable_sum": [
+        66485,
+        196608
+      ],
+      "terminal": [
+        5,
+        2,
+        1,
+        1,
+        7
+      ],
+      "whole_debt": [
+        1120393025,
+        1073741824
+      ]
+    },
+    {
+      "ROOT_cost": 109,
+      "ROOT_rank": 62,
+      "actual_gap": 1250,
+      "cap": 3,
+      "child": 157,
+      "cut": 36,
+      "source": 1407,
+      "stable_sum": [
+        731591095,
+        2147483648
+      ],
+      "terminal": [
+        3,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        5,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        6
+      ],
+      "whole_debt": [
+        83222605368336726185811,
+        75557863725914323419136
+      ]
+    },
+    {
+      "ROOT_cost": 68,
+      "ROOT_rank": 36,
+      "actual_gap": 1550,
+      "cap": 3,
+      "child": 89,
+      "cut": 11,
+      "source": 1639,
+      "stable_sum": [
+        4610712263,
+        12884901888
+      ],
+      "terminal": [
+        4,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        5,
+        2,
+        1,
+        1,
+        7
+      ],
+      "whole_debt": [
+        290307398801,
+        274877906944
+      ]
+    },
+    {
+      "ROOT_cost": 49,
+      "ROOT_rank": 24,
+      "actual_gap": 1574,
+      "cap": 3,
+      "child": 89,
+      "cut": 10,
+      "source": 1663,
+      "stable_sum": [
+        66485,
+        196608
+      ],
+      "terminal": [
+        5,
+        2,
+        1,
+        1,
+        7
+      ],
+      "whole_debt": [
+        16439,
+        16384
+      ]
+    },
+    {
+      "ROOT_cost": 108,
+      "ROOT_rank": 61,
+      "actual_gap": 1954,
+      "cap": 3,
+      "child": 157,
+      "cut": 18,
+      "source": 2111,
+      "stable_sum": [
+        52577389579593517,
+        144115188075855872
+      ],
+      "terminal": [
+        4,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        3,
+        2,
+        3,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        5,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        6
+      ],
+      "whole_debt": [
+        83222605368336726185811,
+        75557863725914323419136
+      ]
+    },
+    {
+      "ROOT_cost": 89,
+      "ROOT_rank": 49,
+      "actual_gap": 2112,
+      "cap": 3,
+      "child": 143,
+      "cut": 8,
+      "source": 2255,
+      "stable_sum": [
+        4319,
+        12288
+      ],
+      "terminal": [
+        3,
+        1,
+        1,
+        7
+      ],
+      "whole_debt": [
+        267425,
+        262144
+      ]
+    },
+    {
+      "ROOT_cost": 102,
+      "ROOT_rank": 57,
+      "actual_gap": 104,
+      "cap": 3,
+      "child": 2711,
+      "cut": 8,
+      "source": 2815,
+      "stable_sum": [
+        498245,
+        786432
+      ],
+      "terminal": [
+        5,
+        1,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1,
+        3
+      ],
+      "whole_debt": [
+        109799,
+        65536
+      ]
+    },
+    {
+      "ROOT_cost": 69,
+      "ROOT_rank": 36,
+      "actual_gap": 1616,
+      "cap": 3,
+      "child": 1663,
+      "cut": 6,
+      "source": 3279,
+      "stable_sum": [
+        2077,
+        4096
+      ],
+      "terminal": [
+        3,
+        1,
+        1,
+        1,
+        2,
+        4
+      ],
+      "whole_debt": [
+        38913,
+        32768
+      ]
+    },
+    {
+      "ROOT_cost": 77,
+      "ROOT_rank": 41,
+      "actual_gap": 82,
+      "cap": 3,
+      "child": 3349,
+      "cut": 22,
+      "source": 3431,
+      "stable_sum": [
+        15135,
+        32768
+      ],
+      "terminal": [
+        5,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2
+      ],
+      "whole_debt": [
+        383577291,
+        268435456
+      ]
+    },
+    {
+      "ROOT_cost": 123,
+      "ROOT_rank": 70,
+      "actual_gap": 2752,
+      "cap": 3,
+      "child": 815,
+      "cut": 18,
+      "source": 3567,
+      "stable_sum": [
+        1247,
+        3072
+      ],
+      "terminal": [
+        3,
+        1,
+        1,
+        5
+      ],
+      "whole_debt": [
+        2089,
+        2048
+      ]
+    },
+    {
+      "ROOT_cost": 50,
+      "ROOT_rank": 24,
+      "actual_gap": 3650,
+      "cap": 3,
+      "child": 301,
+      "cut": 11,
+      "source": 3951,
+      "stable_sum": [
+        740653,
+        2097152
+      ],
+      "terminal": [
+        3,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        6
+      ],
+      "whole_debt": [
+        537820779,
+        536870912
+      ]
+    },
+    {
+      "ROOT_cost": 120,
+      "ROOT_rank": 68,
+      "actual_gap": 2288,
+      "cap": 3,
+      "child": 1711,
+      "cut": 11,
+      "source": 3999,
+      "stable_sum": [
+        845,
+        2048
+      ],
+      "terminal": [
+        5,
+        1,
+        1,
+        4
+      ],
+      "whole_debt": [
+        79905,
+        65536
+      ]
+    },
+    {
+      "ROOT_cost": 82,
+      "ROOT_rank": 44,
+      "actual_gap": 4126,
+      "cap": 3,
+      "child": 161,
+      "cut": 6,
+      "source": 4287,
+      "stable_sum": [
+        4157,
+        12288
+      ],
+      "terminal": [
+        4,
+        1,
+        7
+      ],
+      "whole_debt": [
+        1019,
+        1024
+      ]
+    },
+    {
+      "ROOT_cost": 117,
+      "ROOT_rank": 66,
+      "actual_gap": 1472,
+      "cap": 3,
+      "child": 3071,
+      "cut": 8,
+      "source": 4543,
+      "stable_sum": [
+        589,
+        1536
+      ],
+      "terminal": [
+        5,
+        1,
+        3
+      ],
+      "whole_debt": [
+        127,
+        128
+      ]
+    },
+    {
+      "ROOT_cost": 79,
+      "ROOT_rank": 42,
+      "actual_gap": 110,
+      "cap": 3,
+      "child": 4465,
+      "cut": 23,
+      "source": 4575,
+      "stable_sum": [
+        5045,
+        8192
+      ],
+      "terminal": [
+        5,
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "whole_debt": [
+        2377272981729,
+        1099511627776
+      ]
+    },
+    {
+      "ROOT_cost": 60,
+      "ROOT_rank": 30,
+      "actual_gap": 3480,
+      "cap": 3,
+      "child": 1103,
+      "cut": 12,
+      "source": 4583,
+      "stable_sum": [
+        17333,
+        49152
+      ],
+      "terminal": [
+        5,
+        1,
+        2,
+        1,
+        5
+      ],
+      "whole_debt": [
+        2302459,
+        2097152
+      ]
+    },
+    {
+      "ROOT_cost": 109,
+      "ROOT_rank": 61,
+      "actual_gap": 50,
+      "cap": 3,
+      "child": 4541,
+      "cut": 36,
+      "source": 4591,
+      "stable_sum": [
+        1565,
+        3072
+      ],
+      "terminal": [
+        3,
+        1,
+        1,
+        2,
+        3
+      ],
+      "whole_debt": [
+        718544761,
+        536870912
+      ]
+    },
+    {
+      "ROOT_cost": 60,
+      "ROOT_rank": 30,
+      "actual_gap": 2546,
+      "cap": 3,
+      "child": 2089,
+      "cut": 6,
+      "source": 4635,
+      "stable_sum": [
+        445,
+        1024
+      ],
+      "terminal": [
+        4,
+        1,
+        1,
+        4
+      ],
+      "whole_debt": [
+        273,
+        256
+      ]
+    },
+    {
+      "ROOT_cost": 111,
+      "ROOT_rank": 62,
+      "actual_gap": 828,
+      "cap": 3,
+      "child": 4907,
+      "cut": 11,
+      "source": 5735,
+      "stable_sum": [
+        823,
+        1536
+      ],
+      "terminal": [
+        4,
+        1,
+        1,
+        3
+      ],
+      "whole_debt": [
+        43681,
+        32768
+      ]
+    },
+    {
+      "ROOT_cost": 62,
+      "ROOT_rank": 31,
+      "actual_gap": 5008,
+      "cap": 3,
+      "child": 1103,
+      "cut": 13,
+      "source": 6111,
+      "stable_sum": [
+        17333,
+        49152
+      ],
+      "terminal": [
+        5,
+        1,
+        2,
+        1,
+        5
+      ],
+      "whole_debt": [
+        38433667,
+        33554432
+      ]
+    },
+    {
+      "ROOT_cost": 51,
+      "ROOT_rank": 24,
+      "actual_gap": 5424,
+      "cap": 3,
+      "child": 1103,
+      "cut": 6,
+      "source": 6527,
+      "stable_sum": [
+        17333,
+        49152
+      ],
+      "terminal": [
+        5,
+        1,
+        2,
+        1,
+        5
+      ],
+      "whole_debt": [
+        4151,
+        4096
+      ]
+    },
+    {
+      "ROOT_cost": 43,
+      "ROOT_rank": 19,
+      "actual_gap": 2698,
+      "cap": 3,
+      "child": 4061,
+      "cut": 6,
+      "source": 6759,
+      "stable_sum": [
+        317,
+        768
+      ],
+      "terminal": [
+        4,
+        1,
+        3
+      ],
+      "whole_debt": [
+        59,
+        64
+      ]
+    },
+    {
+      "ROOT_cost": 43,
+      "ROOT_rank": 19,
+      "actual_gap": 5690,
+      "cap": 3,
+      "child": 1157,
+      "cut": 8,
+      "source": 6847,
+      "stable_sum": [
+        1085,
+        3072
+      ],
+      "terminal": [
+        4,
+        1,
+        5
+      ],
+      "whole_debt": [
+        251,
+        256
+      ]
+    },
+    {
+      "ROOT_cost": 78,
+      "ROOT_rank": 41,
+      "actual_gap": 2160,
+      "cap": 3,
+      "child": 4703,
+      "cut": 15,
+      "source": 6863,
+      "stable_sum": [
+        57103,
+        98304
+      ],
+      "terminal": [
+        3,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        5
+      ],
+      "whole_debt": [
+        6389461979,
+        4294967296
+      ]
+    },
+    {
+      "ROOT_cost": 108,
+      "ROOT_rank": 60,
+      "actual_gap": 2346,
+      "cap": 3,
+      "child": 4541,
+      "cut": 32,
+      "source": 6887,
+      "stable_sum": [
+        364919,
+        786432
+      ],
+      "terminal": [
+        6,
+        1,
+        1,
+        3,
+        1,
+        1,
+        2,
+        3
+      ],
+      "whole_debt": [
+        718544761,
+        536870912
+      ]
+    },
+    {
+      "ROOT_cost": 113,
+      "ROOT_rank": 63,
+      "actual_gap": 6318,
+      "cap": 3,
+      "child": 961,
+      "cut": 35,
+      "source": 7279,
+      "stable_sum": [
+        50070343,
+        134217728
+      ],
+      "terminal": [
+        5,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        3,
+        1,
+        6
+      ],
+      "whole_debt": [
+        4879423811301,
+        4398046511104
+      ]
+    },
+    {
+      "ROOT_cost": 121,
+      "ROOT_rank": 68,
+      "actual_gap": 6904,
+      "cap": 3,
+      "child": 1319,
+      "cut": 13,
+      "source": 8223,
+      "stable_sum": [
+        1085,
+        3072
+      ],
+      "terminal": [
+        4,
+        1,
+        5
+      ],
+      "whole_debt": [
+        251,
+        256
+      ]
+    },
+    {
+      "ROOT_cost": 69,
+      "ROOT_rank": 35,
+      "actual_gap": 8410,
+      "cap": 3,
+      "child": 1421,
+      "cut": 19,
+      "source": 9831,
+      "stable_sum": [
+        139213,
+        393216
+      ],
+      "terminal": [
+        4,
+        1,
+        1,
+        1,
+        1,
+        4,
+        5
+      ],
+      "whole_debt": [
+        37772847451,
+        34359738368
+      ]
+    }
+  ],
+  "checks": 54400,
+  "counts": {
+    "additional_mixed_blocks": 29,
+    "additional_supplied_children": 18,
+    "cap3_additional": 29,
+    "consecutive_suffix": 117,
+    "inherited_plus_new_controller": 5000,
+    "new": 175,
+    "old_pending": 175,
+    "remaining": 0,
+    "supplied_children": 113,
+    "unit_cap_new": 146,
+    "unit_cap_supplied_children": 95
+  },
+  "input_LF_SHA256": "2368cd7308b817efd9c051ead7042b2982b42abe9c681ff6e09d9ebc70ebe2f2",
+  "mersenne_controller_anchors": [
+    31,
+    127,
+    2047
+  ],
+  "new_paid_grounded": [
+    {
+      "ROOT_cost": 67,
+      "ROOT_rank": 39,
+      "child": 23,
+      "cut": 33,
+      "factory_period": 33354363399333138,
+      "registers_index0_5": [
+        31,
+        3,
+        101,
+        73,
+        66,
+        38
+      ],
+      "source": 31,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 66,
+      "ROOT_rank": 38,
+      "child": 23,
+      "cut": 32,
+      "factory_period": 11118121133111046,
+      "registers_index0_5": [
+        47,
+        75,
+        82,
+        5,
+        12,
+        40
+      ],
+      "source": 47,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 24,
+      "ROOT_rank": 11,
+      "child": 19,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        79,
+        65,
+        9,
+        100,
+        44,
+        30
+      ],
+      "source": 79,
+      "stable_sum": [
+        117,
+        128
+      ],
+      "terminal": [
+        3,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 31,
+      "ROOT_rank": 15,
+      "child": 77,
+      "cut": 7,
+      "factory_period": 13122,
+      "registers_index0_5": [
+        22,
+        8,
+        57,
+        43,
+        92,
+        78
+      ],
+      "source": 127,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 55,
+      "ROOT_rank": 30,
+      "child": 61,
+      "cut": 21,
+      "factory_period": 564859072962,
+      "registers_index0_5": [
+        50,
+        22,
+        15,
+        92,
+        85,
+        57
+      ],
+      "source": 155,
+      "stable_sum": [
+        3477,
+        4096
+      ],
+      "terminal": [
+        4,
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 30,
+      "ROOT_rank": 14,
+      "child": 77,
+      "cut": 6,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        86,
+        100,
+        51,
+        65,
+        16,
+        30
+      ],
+      "source": 191,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 46,
+      "ROOT_rank": 24,
+      "child": 61,
+      "cut": 15,
+      "factory_period": 774840978,
+      "registers_index0_5": [
+        13,
+        62,
+        48,
+        97,
+        83,
+        27
+      ],
+      "source": 223,
+      "stable_sum": [
+        3477,
+        4096
+      ],
+      "terminal": [
+        4,
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 40,
+      "ROOT_rank": 20,
+      "child": 61,
+      "cut": 11,
+      "factory_period": 9565938,
+      "registers_index0_5": [
+        73,
+        59,
+        3,
+        94,
+        38,
+        24
+      ],
+      "source": 283,
+      "stable_sum": [
+        3477,
+        4096
+      ],
+      "terminal": [
+        4,
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 37,
+      "ROOT_rank": 18,
+      "child": 61,
+      "cut": 9,
+      "factory_period": 1062882,
+      "registers_index0_5": [
+        4,
+        102,
+        74,
+        67,
+        39,
+        32
+      ],
+      "source": 319,
+      "stable_sum": [
+        3477,
+        4096
+      ],
+      "terminal": [
+        4,
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 90,
+      "ROOT_rank": 51,
+      "child": 31,
+      "cut": 8,
+      "factory_period": 354294,
+      "registers_index0_5": [
+        67,
+        81,
+        32,
+        46,
+        102,
+        11
+      ],
+      "source": 487,
+      "stable_sum": [
+        4029,
+        4096
+      ],
+      "terminal": [
+        3,
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "ROOT_cost": 63,
+      "ROOT_rank": 34,
+      "child": 239,
+      "cut": 15,
+      "factory_period": 86093442,
+      "registers_index0_5": [
+        75,
+        89,
+        40,
+        54,
+        5,
+        19
+      ],
+      "source": 495,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 87,
+      "ROOT_rank": 49,
+      "child": 109,
+      "cut": 6,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        18,
+        74,
+        88,
+        39,
+        53,
+        4
+      ],
+      "source": 543,
+      "stable_sum": [
+        117,
+        128
+      ],
+      "terminal": [
+        3,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 38,
+      "ROOT_rank": 18,
+      "child": 281,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        66,
+        73,
+        101,
+        3,
+        31,
+        38
+      ],
+      "source": 591,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 94,
+      "ROOT_rank": 53,
+      "child": 235,
+      "cut": 5,
+      "factory_period": 1458,
+      "registers_index0_5": [
+        39,
+        74,
+        4,
+        39,
+        74,
+        4
+      ],
+      "source": 879,
+      "stable_sum": [
+        117,
+        128
+      ],
+      "terminal": [
+        3,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 61,
+      "ROOT_rank": 32,
+      "child": 901,
+      "cut": 11,
+      "factory_period": 9565938,
+      "registers_index0_5": [
+        1,
+        50,
+        36,
+        85,
+        71,
+        15
+      ],
+      "source": 1051,
+      "stable_sum": [
+        189,
+        256
+      ],
+      "terminal": [
+        3,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "ROOT_cost": 107,
+      "ROOT_rank": 61,
+      "child": 157,
+      "cut": 47,
+      "factory_period": 478598658461235059180166,
+      "registers_index0_5": [
+        5,
+        96,
+        40,
+        26,
+        75,
+        61
+      ],
+      "source": 1055,
+      "stable_sum": [
+        3975,
+        4096
+      ],
+      "terminal": [
+        4,
+        2,
+        6
+      ]
+    },
+    {
+      "ROOT_cost": 88,
+      "ROOT_rank": 49,
+      "child": 581,
+      "cut": 5,
+      "factory_period": 1458,
+      "registers_index0_5": [
+        37,
+        51,
+        2,
+        16,
+        72,
+        86
+      ],
+      "source": 1087,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 31,
+      "ROOT_rank": 13,
+      "child": 131,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        53,
+        81,
+        88,
+        11,
+        18,
+        46
+      ],
+      "source": 1103,
+      "stable_sum": [
+        245,
+        256
+      ],
+      "terminal": [
+        3,
+        5
+      ]
+    },
+    {
+      "ROOT_cost": 112,
+      "ROOT_rank": 64,
+      "child": 797,
+      "cut": 19,
+      "factory_period": 6973568802,
+      "registers_index0_5": [
+        47,
+        40,
+        12,
+        5,
+        82,
+        75
+      ],
+      "source": 1307,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 63,
+      "ROOT_rank": 33,
+      "child": 767,
+      "cut": 12,
+      "factory_period": 3188646,
+      "registers_index0_5": [
+        83,
+        90,
+        13,
+        20,
+        48,
+        55
+      ],
+      "source": 1343,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 52,
+      "ROOT_rank": 26,
+      "child": 767,
+      "cut": 5,
+      "factory_period": 1458,
+      "registers_index0_5": [
+        70,
+        63,
+        35,
+        28,
+        0,
+        98
+      ],
+      "source": 1435,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 109,
+      "ROOT_rank": 62,
+      "child": 797,
+      "cut": 17,
+      "factory_period": 774840978,
+      "registers_index0_5": [
+        1,
+        50,
+        36,
+        85,
+        71,
+        15
+      ],
+      "source": 1471,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 60,
+      "ROOT_rank": 31,
+      "child": 767,
+      "cut": 10,
+      "factory_period": 354294,
+      "registers_index0_5": [
+        41,
+        97,
+        6,
+        62,
+        76,
+        27
+      ],
+      "source": 1511,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 106,
+      "ROOT_rank": 60,
+      "child": 157,
+      "cut": 41,
+      "factory_period": 159532886153745019726722,
+      "registers_index0_5": [
+        8,
+        22,
+        78,
+        92,
+        43,
+        57
+      ],
+      "source": 1583,
+      "stable_sum": [
+        2089173,
+        2097152
+      ],
+      "terminal": [
+        5,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        6
+      ]
+    },
+    {
+      "ROOT_cost": 49,
+      "ROOT_rank": 24,
+      "child": 767,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        40,
+        89,
+        75,
+        19,
+        5,
+        54
+      ],
+      "source": 1615,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 49,
+      "ROOT_rank": 24,
+      "child": 367,
+      "cut": 6,
+      "factory_period": 39366,
+      "registers_index0_5": [
+        52,
+        38,
+        87,
+        73,
+        17,
+        3
+      ],
+      "source": 1627,
+      "stable_sum": [
+        957,
+        1024
+      ],
+      "terminal": [
+        3,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 114,
+      "ROOT_rank": 65,
+      "child": 689,
+      "cut": 17,
+      "factory_period": 2324522934,
+      "registers_index0_5": [
+        15,
+        64,
+        50,
+        99,
+        85,
+        29
+      ],
+      "source": 1695,
+      "stable_sum": [
+        391,
+        512
+      ],
+      "terminal": [
+        4,
+        2,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 114,
+      "ROOT_rank": 65,
+      "child": 797,
+      "cut": 20,
+      "factory_period": 20920706406,
+      "registers_index0_5": [
+        63,
+        77,
+        28,
+        42,
+        98,
+        7
+      ],
+      "source": 1743,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 57,
+      "ROOT_rank": 29,
+      "child": 1067,
+      "cut": 7,
+      "factory_period": 13122,
+      "registers_index0_5": [
+        95,
+        81,
+        25,
+        11,
+        60,
+        46
+      ],
+      "source": 1775,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 103,
+      "ROOT_rank": 58,
+      "child": 487,
+      "cut": 5,
+      "factory_period": 1458,
+      "registers_index0_5": [
+        38,
+        94,
+        3,
+        59,
+        73,
+        24
+      ],
+      "source": 1823,
+      "stable_sum": [
+        117,
+        128
+      ],
+      "terminal": [
+        3,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 111,
+      "ROOT_rank": 63,
+      "child": 1253,
+      "cut": 14,
+      "factory_period": 28697814,
+      "registers_index0_5": [
+        61,
+        12,
+        26,
+        82,
+        96,
+        47
+      ],
+      "source": 1951,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 100,
+      "ROOT_rank": 56,
+      "child": 1067,
+      "cut": 31,
+      "factory_period": 100063090197999414,
+      "registers_index0_5": [
+        52,
+        66,
+        17,
+        31,
+        87,
+        101
+      ],
+      "source": 2047,
+      "stable_sum": [
+        6607,
+        8192
+      ],
+      "terminal": [
+        5,
+        1,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 51,
+      "ROOT_rank": 25,
+      "child": 505,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        27,
+        97,
+        62,
+        27,
+        97,
+        62
+      ],
+      "source": 2127,
+      "stable_sum": [
+        117,
+        128
+      ],
+      "terminal": [
+        3,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 97,
+      "ROOT_rank": 54,
+      "child": 685,
+      "cut": 6,
+      "factory_period": 13122,
+      "registers_index0_5": [
+        74,
+        39,
+        4,
+        74,
+        39,
+        4
+      ],
+      "source": 2279,
+      "stable_sum": [
+        255,
+        256
+      ],
+      "terminal": [
+        3,
+        1,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 78,
+      "ROOT_rank": 42,
+      "child": 157,
+      "cut": 28,
+      "factory_period": 411782264189298,
+      "registers_index0_5": [
+        82,
+        33,
+        47,
+        103,
+        12,
+        68
+      ],
+      "source": 2287,
+      "stable_sum": [
+        3975,
+        4096
+      ],
+      "terminal": [
+        4,
+        2,
+        6
+      ]
+    },
+    {
+      "ROOT_cost": 59,
+      "ROOT_rank": 30,
+      "child": 1067,
+      "cut": 8,
+      "factory_period": 39366,
+      "registers_index0_5": [
+        57,
+        85,
+        92,
+        15,
+        22,
+        50
+      ],
+      "source": 2367,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 105,
+      "ROOT_rank": 59,
+      "child": 487,
+      "cut": 6,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        16,
+        9,
+        86,
+        79,
+        51,
+        44
+      ],
+      "source": 2431,
+      "stable_sum": [
+        477,
+        512
+      ],
+      "terminal": [
+        5,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 113,
+      "ROOT_rank": 64,
+      "child": 811,
+      "cut": 14,
+      "factory_period": 28697814,
+      "registers_index0_5": [
+        7,
+        21,
+        77,
+        91,
+        42,
+        56
+      ],
+      "source": 2527,
+      "stable_sum": [
+        477,
+        512
+      ],
+      "terminal": [
+        5,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 94,
+      "ROOT_rank": 52,
+      "child": 1253,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        14,
+        0,
+        49,
+        35,
+        84,
+        70
+      ],
+      "source": 2639,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 56,
+      "ROOT_rank": 28,
+      "child": 1067,
+      "cut": 6,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        38,
+        52,
+        3,
+        17,
+        73,
+        87
+      ],
+      "source": 2663,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 45,
+      "ROOT_rank": 21,
+      "child": 817,
+      "cut": 7,
+      "factory_period": 13122,
+      "registers_index0_5": [
+        94,
+        101,
+        24,
+        31,
+        59,
+        66
+      ],
+      "source": 2719,
+      "stable_sum": [
+        237,
+        256
+      ],
+      "terminal": [
+        4,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 110,
+      "ROOT_rank": 62,
+      "child": 811,
+      "cut": 12,
+      "factory_period": 3188646,
+      "registers_index0_5": [
+        8,
+        15,
+        43,
+        50,
+        78,
+        85
+      ],
+      "source": 2843,
+      "stable_sum": [
+        477,
+        512
+      ],
+      "terminal": [
+        5,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 83,
+      "ROOT_rank": 45,
+      "child": 365,
+      "cut": 10,
+      "factory_period": 354294,
+      "registers_index0_5": [
+        44,
+        79,
+        9,
+        44,
+        79,
+        9
+      ],
+      "source": 2879,
+      "stable_sum": [
+        245,
+        256
+      ],
+      "terminal": [
+        3,
+        5
+      ]
+    },
+    {
+      "ROOT_cost": 99,
+      "ROOT_rank": 55,
+      "child": 2845,
+      "cut": 30,
+      "factory_period": 11118121133111046,
+      "registers_index0_5": [
+        26,
+        96,
+        61,
+        26,
+        96,
+        61
+      ],
+      "source": 3071,
+      "stable_sum": [
+        837,
+        1024
+      ],
+      "terminal": [
+        5,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "ROOT_cost": 88,
+      "ROOT_rank": 48,
+      "child": 1679,
+      "cut": 11,
+      "factory_period": 774840978,
+      "registers_index0_5": [
+        54,
+        82,
+        89,
+        12,
+        19,
+        47
+      ],
+      "source": 3099,
+      "stable_sum": [
+        31693,
+        32768
+      ],
+      "terminal": [
+        3,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 42,
+      "ROOT_rank": 19,
+      "child": 157,
+      "cut": 5,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        90,
+        62,
+        55,
+        27,
+        20,
+        97
+      ],
+      "source": 3135,
+      "stable_sum": [
+        3975,
+        4096
+      ],
+      "terminal": [
+        4,
+        2,
+        6
+      ]
+    },
+    {
+      "ROOT_cost": 42,
+      "ROOT_rank": 19,
+      "child": 187,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        1,
+        8,
+        36,
+        43,
+        71,
+        78
+      ],
+      "source": 3151,
+      "stable_sum": [
+        501,
+        512
+      ],
+      "terminal": [
+        3,
+        6
+      ]
+    },
+    {
+      "ROOT_cost": 107,
+      "ROOT_rank": 60,
+      "child": 811,
+      "cut": 10,
+      "factory_period": 354294,
+      "registers_index0_5": [
+        49,
+        0,
+        14,
+        70,
+        84,
+        35
+      ],
+      "source": 3199,
+      "stable_sum": [
+        477,
+        512
+      ],
+      "terminal": [
+        5,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 80,
+      "ROOT_rank": 43,
+      "child": 365,
+      "cut": 8,
+      "factory_period": 39366,
+      "registers_index0_5": [
+        89,
+        54,
+        19,
+        89,
+        54,
+        19
+      ],
+      "source": 3239,
+      "stable_sum": [
+        245,
+        256
+      ],
+      "terminal": [
+        3,
+        5
+      ]
+    },
+    {
+      "ROOT_cost": 77,
+      "ROOT_rank": 41,
+      "child": 2489,
+      "cut": 24,
+      "factory_period": 137260754729766,
+      "registers_index0_5": [
+        39,
+        32,
+        4,
+        102,
+        74,
+        67
+      ],
+      "source": 3399,
+      "stable_sum": [
+        3749,
+        4096
+      ],
+      "terminal": [
+        3,
+        1,
+        2,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 34,
+      "ROOT_rank": 14,
+      "child": 1901,
+      "cut": 5,
+      "factory_period": 1458,
+      "registers_index0_5": [
+        94,
+        3,
+        59,
+        73,
+        24,
+        38
+      ],
+      "source": 3559,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 47,
+      "ROOT_rank": 22,
+      "child": 1739,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        93,
+        16,
+        23,
+        51,
+        58,
+        86
+      ],
+      "source": 3663,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 131,
+      "ROOT_rank": 75,
+      "child": 3331,
+      "cut": 6,
+      "factory_period": 39366,
+      "registers_index0_5": [
+        20,
+        27,
+        55,
+        62,
+        90,
+        97
+      ],
+      "source": 3695,
+      "stable_sum": [
+        189,
+        256
+      ],
+      "terminal": [
+        3,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "ROOT_cost": 112,
+      "ROOT_rank": 63,
+      "child": 811,
+      "cut": 13,
+      "factory_period": 9565938,
+      "registers_index0_5": [
+        11,
+        102,
+        46,
+        32,
+        81,
+        67
+      ],
+      "source": 3791,
+      "stable_sum": [
+        477,
+        512
+      ],
+      "terminal": [
+        5,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 112,
+      "ROOT_rank": 63,
+      "child": 1553,
+      "cut": 15,
+      "factory_period": 2324522934,
+      "registers_index0_5": [
+        43,
+        71,
+        78,
+        1,
+        8,
+        36
+      ],
+      "source": 3823,
+      "stable_sum": [
+        1591,
+        2048
+      ],
+      "terminal": [
+        3,
+        1,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 74,
+      "ROOT_rank": 39,
+      "child": 1973,
+      "cut": 22,
+      "factory_period": 188286357654,
+      "registers_index0_5": [
+        59,
+        66,
+        94,
+        101,
+        24,
+        31
+      ],
+      "source": 3839,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 44,
+      "ROOT_rank": 20,
+      "child": 817,
+      "cut": 6,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        89,
+        82,
+        54,
+        47,
+        19,
+        12
+      ],
+      "source": 4079,
+      "stable_sum": [
+        237,
+        256
+      ],
+      "terminal": [
+        4,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 109,
+      "ROOT_rank": 61,
+      "child": 2387,
+      "cut": 24,
+      "factory_period": 1694577218886,
+      "registers_index0_5": [
+        32,
+        88,
+        102,
+        53,
+        67,
+        18
+      ],
+      "source": 4127,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 74,
+      "ROOT_rank": 39,
+      "child": 991,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        80,
+        24,
+        10,
+        59,
+        45,
+        94
+      ],
+      "source": 4175,
+      "stable_sum": [
+        117,
+        128
+      ],
+      "terminal": [
+        3,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 55,
+      "ROOT_rank": 27,
+      "child": 1703,
+      "cut": 6,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        51,
+        2,
+        16,
+        72,
+        86,
+        37
+      ],
+      "source": 4251,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 71,
+      "ROOT_rank": 37,
+      "child": 2489,
+      "cut": 20,
+      "factory_period": 1694577218886,
+      "registers_index0_5": [
+        103,
+        75,
+        68,
+        40,
+        33,
+        5
+      ],
+      "source": 4303,
+      "stable_sum": [
+        3749,
+        4096
+      ],
+      "terminal": [
+        3,
+        1,
+        2,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 117,
+      "ROOT_rank": 66,
+      "child": 2387,
+      "cut": 29,
+      "factory_period": 411782264189298,
+      "registers_index0_5": [
+        42,
+        14,
+        7,
+        84,
+        77,
+        49
+      ],
+      "source": 4347,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 98,
+      "ROOT_rank": 54,
+      "child": 2225,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        67,
+        32,
+        102,
+        67,
+        32,
+        102
+      ],
+      "source": 4687,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 49,
+      "ROOT_rank": 23,
+      "child": 1085,
+      "cut": 7,
+      "factory_period": 39366,
+      "registers_index0_5": [
+        90,
+        20,
+        55,
+        90,
+        20,
+        55
+      ],
+      "source": 4815,
+      "stable_sum": [
+        511,
+        512
+      ],
+      "terminal": [
+        3,
+        1,
+        5
+      ]
+    },
+    {
+      "ROOT_cost": 106,
+      "ROOT_rank": 59,
+      "child": 4141,
+      "cut": 11,
+      "factory_period": 9565938,
+      "registers_index0_5": [
+        9,
+        58,
+        44,
+        93,
+        79,
+        23
+      ],
+      "source": 4839,
+      "stable_sum": [
+        189,
+        256
+      ],
+      "terminal": [
+        3,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "ROOT_cost": 114,
+      "ROOT_rank": 64,
+      "child": 2387,
+      "cut": 19,
+      "factory_period": 45753584909922,
+      "registers_index0_5": [
+        61,
+        47,
+        96,
+        82,
+        26,
+        12
+      ],
+      "source": 4891,
+      "stable_sum": [
+        1016141,
+        1048576
+      ],
+      "terminal": [
+        4,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 49,
+      "ROOT_rank": 23,
+      "child": 2657,
+      "cut": 5,
+      "factory_period": 1458,
+      "registers_index0_5": [
+        40,
+        33,
+        5,
+        103,
+        75,
+        68
+      ],
+      "source": 4975,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 60,
+      "ROOT_rank": 30,
+      "child": 503,
+      "cut": 6,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        88,
+        102,
+        53,
+        67,
+        18,
+        32
+      ],
+      "source": 5023,
+      "stable_sum": [
+        493,
+        512
+      ],
+      "terminal": [
+        4,
+        5
+      ]
+    },
+    {
+      "ROOT_cost": 76,
+      "ROOT_rank": 40,
+      "child": 1973,
+      "cut": 23,
+      "factory_period": 564859072962,
+      "registers_index0_5": [
+        79,
+        65,
+        9,
+        100,
+        44,
+        30
+      ],
+      "source": 5119,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 60,
+      "ROOT_rank": 30,
+      "child": 1765,
+      "cut": 20,
+      "factory_period": 62762119218,
+      "registers_index0_5": [
+        6,
+        76,
+        41,
+        6,
+        76,
+        41
+      ],
+      "source": 5151,
+      "stable_sum": [
+        255,
+        256
+      ],
+      "terminal": [
+        3,
+        1,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 38,
+      "ROOT_rank": 16,
+      "child": 173,
+      "cut": 5,
+      "factory_period": 1458,
+      "registers_index0_5": [
+        38,
+        10,
+        3,
+        80,
+        73,
+        45
+      ],
+      "source": 5183,
+      "stable_sum": [
+        2029,
+        2048
+      ],
+      "terminal": [
+        4,
+        7
+      ]
+    },
+    {
+      "ROOT_cost": 95,
+      "ROOT_rank": 52,
+      "child": 617,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        54,
+        40,
+        89,
+        75,
+        19,
+        5
+      ],
+      "source": 5199,
+      "stable_sum": [
+        245,
+        256
+      ],
+      "terminal": [
+        3,
+        5
+      ]
+    },
+    {
+      "ROOT_cost": 41,
+      "ROOT_rank": 18,
+      "child": 331,
+      "cut": 10,
+      "factory_period": 354294,
+      "registers_index0_5": [
+        78,
+        92,
+        43,
+        57,
+        8,
+        22
+      ],
+      "source": 5223,
+      "stable_sum": [
+        501,
+        512
+      ],
+      "terminal": [
+        3,
+        6
+      ]
+    },
+    {
+      "ROOT_cost": 57,
+      "ROOT_rank": 28,
+      "child": 665,
+      "cut": 10,
+      "factory_period": 354294,
+      "registers_index0_5": [
+        102,
+        32,
+        67,
+        102,
+        32,
+        67
+      ],
+      "source": 5247,
+      "stable_sum": [
+        493,
+        512
+      ],
+      "terminal": [
+        4,
+        5
+      ]
+    },
+    {
+      "ROOT_cost": 122,
+      "ROOT_rank": 69,
+      "child": 2225,
+      "cut": 18,
+      "factory_period": 2324522934,
+      "registers_index0_5": [
+        19,
+        89,
+        54,
+        19,
+        89,
+        54
+      ],
+      "source": 5479,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 111,
+      "ROOT_rank": 62,
+      "child": 2387,
+      "cut": 17,
+      "factory_period": 5083731656658,
+      "registers_index0_5": [
+        43,
+        36,
+        8,
+        1,
+        78,
+        71
+      ],
+      "source": 5503,
+      "stable_sum": [
+        1016141,
+        1048576
+      ],
+      "terminal": [
+        4,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 30,
+      "ROOT_rank": 11,
+      "child": 1477,
+      "cut": 5,
+      "factory_period": 1458,
+      "registers_index0_5": [
+        71,
+        22,
+        36,
+        92,
+        1,
+        57
+      ],
+      "source": 5531,
+      "stable_sum": [
+        117,
+        128
+      ],
+      "terminal": [
+        3,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 46,
+      "ROOT_rank": 21,
+      "child": 1123,
+      "cut": 5,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        42,
+        14,
+        7,
+        84,
+        77,
+        49
+      ],
+      "source": 5607,
+      "stable_sum": [
+        447,
+        512
+      ],
+      "terminal": [
+        3,
+        2,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 84,
+      "ROOT_rank": 45,
+      "child": 2711,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        41,
+        48,
+        76,
+        83,
+        6,
+        13
+      ],
+      "source": 5711,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 138,
+      "ROOT_rank": 79,
+      "child": 3947,
+      "cut": 8,
+      "factory_period": 118098,
+      "registers_index0_5": [
+        64,
+        36,
+        29,
+        1,
+        99,
+        71
+      ],
+      "source": 5839,
+      "stable_sum": [
+        191,
+        256
+      ],
+      "terminal": [
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 111,
+      "ROOT_rank": 62,
+      "child": 3161,
+      "cut": 5,
+      "factory_period": 1458,
+      "registers_index0_5": [
+        39,
+        53,
+        4,
+        18,
+        74,
+        88
+      ],
+      "source": 5919,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 81,
+      "ROOT_rank": 43,
+      "child": 2387,
+      "cut": 6,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        79,
+        93,
+        44,
+        58,
+        9,
+        23
+      ],
+      "source": 5959,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 165,
+      "ROOT_rank": 96,
+      "child": 3215,
+      "cut": 34,
+      "factory_period": 100063090197999414,
+      "registers_index0_5": [
+        81,
+        11,
+        46,
+        81,
+        11,
+        46
+      ],
+      "source": 6171,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 27,
+      "ROOT_rank": 9,
+      "child": 1477,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        28,
+        56,
+        63,
+        91,
+        98,
+        21
+      ],
+      "source": 6223,
+      "stable_sum": [
+        117,
+        128
+      ],
+      "terminal": [
+        3,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 119,
+      "ROOT_rank": 67,
+      "child": 3161,
+      "cut": 10,
+      "factory_period": 354294,
+      "registers_index0_5": [
+        40,
+        33,
+        5,
+        103,
+        75,
+        68
+      ],
+      "source": 6235,
+      "stable_sum": [
+        221,
+        256
+      ],
+      "terminal": [
+        5,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 100,
+      "ROOT_rank": 55,
+      "child": 337,
+      "cut": 13,
+      "factory_period": 9565938,
+      "registers_index0_5": [
+        3,
+        31,
+        38,
+        66,
+        73,
+        101
+      ],
+      "source": 6303,
+      "stable_sum": [
+        1005,
+        1024
+      ],
+      "terminal": [
+        4,
+        6
+      ]
+    },
+    {
+      "ROOT_cost": 127,
+      "ROOT_rank": 72,
+      "child": 3551,
+      "cut": 41,
+      "factory_period": 218837978263024718418,
+      "registers_index0_5": [
+        83,
+        6,
+        13,
+        41,
+        48,
+        76
+      ],
+      "source": 6383,
+      "stable_sum": [
+        989,
+        1024
+      ],
+      "terminal": [
+        5,
+        5
+      ]
+    },
+    {
+      "ROOT_cost": 51,
+      "ROOT_rank": 24,
+      "child": 611,
+      "cut": 7,
+      "factory_period": 1062882,
+      "registers_index0_5": [
+        22,
+        78,
+        92,
+        43,
+        57,
+        8
+      ],
+      "source": 6427,
+      "stable_sum": [
+        60989,
+        65536
+      ],
+      "terminal": [
+        4,
+        2,
+        1,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "ROOT_cost": 108,
+      "ROOT_rank": 60,
+      "child": 1843,
+      "cut": 11,
+      "factory_period": 3188646,
+      "registers_index0_5": [
+        58,
+        44,
+        93,
+        79,
+        23,
+        9
+      ],
+      "source": 6463,
+      "stable_sum": [
+        903,
+        1024
+      ],
+      "terminal": [
+        4,
+        2,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 35,
+      "ROOT_rank": 14,
+      "child": 1477,
+      "cut": 8,
+      "factory_period": 39366,
+      "registers_index0_5": [
+        45,
+        31,
+        80,
+        66,
+        10,
+        101
+      ],
+      "source": 6555,
+      "stable_sum": [
+        117,
+        128
+      ],
+      "terminal": [
+        3,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 154,
+      "ROOT_rank": 89,
+      "child": 3215,
+      "cut": 27,
+      "factory_period": 45753584909922,
+      "registers_index0_5": [
+        81,
+        46,
+        11,
+        81,
+        46,
+        11
+      ],
+      "source": 6591,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 108,
+      "ROOT_rank": 60,
+      "child": 2125,
+      "cut": 10,
+      "factory_period": 28697814,
+      "registers_index0_5": [
+        8,
+        43,
+        78,
+        8,
+        43,
+        78
+      ],
+      "source": 6623,
+      "stable_sum": [
+        15933,
+        16384
+      ],
+      "terminal": [
+        4,
+        2,
+        1,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 59,
+      "ROOT_rank": 29,
+      "child": 3197,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        15,
+        64,
+        50,
+        99,
+        85,
+        29
+      ],
+      "source": 6735,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 62,
+      "ROOT_rank": 31,
+      "child": 1477,
+      "cut": 22,
+      "factory_period": 5083731656658,
+      "registers_index0_5": [
+        91,
+        42,
+        56,
+        7,
+        21,
+        77
+      ],
+      "source": 6811,
+      "stable_sum": [
+        4023,
+        4096
+      ],
+      "terminal": [
+        3,
+        1,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 162,
+      "ROOT_rank": 94,
+      "child": 3215,
+      "cut": 32,
+      "factory_period": 11118121133111046,
+      "registers_index0_5": [
+        13,
+        83,
+        48,
+        13,
+        83,
+        48
+      ],
+      "source": 6943,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 86,
+      "ROOT_rank": 46,
+      "child": 3143,
+      "cut": 8,
+      "factory_period": 39366,
+      "registers_index0_5": [
+        45,
+        52,
+        80,
+        87,
+        10,
+        17
+      ],
+      "source": 6975,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 116,
+      "ROOT_rank": 65,
+      "child": 3161,
+      "cut": 8,
+      "factory_period": 39366,
+      "registers_index0_5": [
+        85,
+        29,
+        15,
+        64,
+        50,
+        99
+      ],
+      "source": 7015,
+      "stable_sum": [
+        221,
+        256
+      ],
+      "terminal": [
+        5,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 124,
+      "ROOT_rank": 70,
+      "child": 2813,
+      "cut": 5,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        93,
+        44,
+        58,
+        9,
+        23,
+        79
+      ],
+      "source": 7023,
+      "stable_sum": [
+        191,
+        256
+      ],
+      "terminal": [
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 54,
+      "ROOT_rank": 26,
+      "child": 3011,
+      "cut": 10,
+      "factory_period": 9565938,
+      "registers_index0_5": [
+        4,
+        32,
+        39,
+        67,
+        74,
+        102
+      ],
+      "source": 7039,
+      "stable_sum": [
+        1591,
+        2048
+      ],
+      "terminal": [
+        3,
+        1,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 124,
+      "ROOT_rank": 70,
+      "child": 3863,
+      "cut": 17,
+      "factory_period": 774840978,
+      "registers_index0_5": [
+        100,
+        86,
+        30,
+        16,
+        65,
+        51
+      ],
+      "source": 7135,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 78,
+      "ROOT_rank": 41,
+      "child": 3949,
+      "cut": 27,
+      "factory_period": 411782264189298,
+      "registers_index0_5": [
+        55,
+        104,
+        90,
+        34,
+        20,
+        69
+      ],
+      "source": 7195,
+      "stable_sum": [
+        3477,
+        4096
+      ],
+      "terminal": [
+        4,
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 48,
+      "ROOT_rank": 22,
+      "child": 6517,
+      "cut": 5,
+      "factory_period": 39366,
+      "registers_index0_5": [
+        91,
+        35,
+        21,
+        70,
+        56,
+        0
+      ],
+      "source": 7231,
+      "stable_sum": [
+        1215,
+        2048
+      ],
+      "terminal": [
+        4,
+        2,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "ROOT_cost": 78,
+      "ROOT_rank": 41,
+      "child": 215,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        2,
+        72,
+        37,
+        2,
+        72,
+        37
+      ],
+      "source": 7247,
+      "stable_sum": [
+        1013,
+        1024
+      ],
+      "terminal": [
+        3,
+        7
+      ]
+    },
+    {
+      "ROOT_cost": 67,
+      "ROOT_rank": 34,
+      "child": 1567,
+      "cut": 13,
+      "factory_period": 9565938,
+      "registers_index0_5": [
+        82,
+        89,
+        12,
+        19,
+        47,
+        54
+      ],
+      "source": 7327,
+      "stable_sum": [
+        117,
+        128
+      ],
+      "terminal": [
+        3,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 94,
+      "ROOT_rank": 51,
+      "child": 3191,
+      "cut": 24,
+      "factory_period": 5083731656658,
+      "registers_index0_5": [
+        9,
+        23,
+        79,
+        93,
+        44,
+        58
+      ],
+      "source": 7359,
+      "stable_sum": [
+        791,
+        1024
+      ],
+      "terminal": [
+        5,
+        2,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 32,
+      "ROOT_rank": 12,
+      "child": 1477,
+      "cut": 6,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        25,
+        18,
+        95,
+        88,
+        60,
+        53
+      ],
+      "source": 7375,
+      "stable_sum": [
+        117,
+        128
+      ],
+      "terminal": [
+        3,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 56,
+      "ROOT_rank": 27,
+      "child": 511,
+      "cut": 5,
+      "factory_period": 1458,
+      "registers_index0_5": [
+        95,
+        67,
+        60,
+        32,
+        25,
+        102
+      ],
+      "source": 7655,
+      "stable_sum": [
+        501,
+        512
+      ],
+      "terminal": [
+        3,
+        6
+      ]
+    },
+    {
+      "ROOT_cost": 75,
+      "ROOT_rank": 39,
+      "child": 5261,
+      "cut": 21,
+      "factory_period": 62762119218,
+      "registers_index0_5": [
+        14,
+        42,
+        49,
+        77,
+        84,
+        7
+      ],
+      "source": 7679,
+      "stable_sum": [
+        445,
+        512
+      ],
+      "terminal": [
+        6,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 59,
+      "ROOT_rank": 29,
+      "child": 6275,
+      "cut": 18,
+      "factory_period": 2324522934,
+      "registers_index0_5": [
+        62,
+        97,
+        27,
+        62,
+        97,
+        27
+      ],
+      "source": 7727,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 94,
+      "ROOT_rank": 51,
+      "child": 3683,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        94,
+        80,
+        24,
+        10,
+        59,
+        45
+      ],
+      "source": 7759,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 83,
+      "ROOT_rank": 44,
+      "child": 3143,
+      "cut": 6,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        77,
+        28,
+        42,
+        98,
+        7,
+        63
+      ],
+      "source": 7847,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 113,
+      "ROOT_rank": 63,
+      "child": 95,
+      "cut": 17,
+      "factory_period": 564859072962,
+      "registers_index0_5": [
+        12,
+        47,
+        82,
+        12,
+        47,
+        82
+      ],
+      "source": 7887,
+      "stable_sum": [
+        8386981,
+        8388608
+      ],
+      "terminal": [
+        4,
+        1,
+        3,
+        2,
+        1,
+        1,
+        2,
+        9
+      ]
+    },
+    {
+      "ROOT_cost": 51,
+      "ROOT_rank": 24,
+      "child": 3011,
+      "cut": 8,
+      "factory_period": 1062882,
+      "registers_index0_5": [
+        44,
+        58,
+        9,
+        23,
+        79,
+        93
+      ],
+      "source": 7919,
+      "stable_sum": [
+        1591,
+        2048
+      ],
+      "terminal": [
+        3,
+        1,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 64,
+      "ROOT_rank": 32,
+      "child": 3191,
+      "cut": 5,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        92,
+        64,
+        57,
+        29,
+        22,
+        99
+      ],
+      "source": 7967,
+      "stable_sum": [
+        191,
+        256
+      ],
+      "terminal": [
+        3,
+        2,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 121,
+      "ROOT_rank": 68,
+      "child": 3863,
+      "cut": 15,
+      "factory_period": 86093442,
+      "registers_index0_5": [
+        47,
+        40,
+        12,
+        5,
+        82,
+        75
+      ],
+      "source": 8027,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 64,
+      "ROOT_rank": 32,
+      "child": 1211,
+      "cut": 7,
+      "factory_period": 13122,
+      "registers_index0_5": [
+        83,
+        90,
+        13,
+        20,
+        48,
+        55
+      ],
+      "source": 8063,
+      "stable_sum": [
+        245,
+        256
+      ],
+      "terminal": [
+        3,
+        5
+      ]
+    },
+    {
+      "ROOT_cost": 94,
+      "ROOT_rank": 51,
+      "child": 3497,
+      "cut": 13,
+      "factory_period": 9565938,
+      "registers_index0_5": [
+        90,
+        76,
+        20,
+        6,
+        55,
+        41
+      ],
+      "source": 8175,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 64,
+      "ROOT_rank": 32,
+      "child": 1963,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        81,
+        88,
+        11,
+        18,
+        46,
+        53
+      ],
+      "source": 8271,
+      "stable_sum": [
+        117,
+        128
+      ],
+      "terminal": [
+        3,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 64,
+      "ROOT_rank": 32,
+      "child": 4199,
+      "cut": 10,
+      "factory_period": 354294,
+      "registers_index0_5": [
+        93,
+        65,
+        58,
+        30,
+        23,
+        100
+      ],
+      "source": 8283,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 64,
+      "ROOT_rank": 32,
+      "child": 1421,
+      "cut": 21,
+      "factory_period": 62762119218,
+      "registers_index0_5": [
+        0,
+        7,
+        35,
+        42,
+        70,
+        77
+      ],
+      "source": 8295,
+      "stable_sum": [
+        493,
+        512
+      ],
+      "terminal": [
+        4,
+        5
+      ]
+    },
+    {
+      "ROOT_cost": 45,
+      "ROOT_rank": 20,
+      "child": 5015,
+      "cut": 6,
+      "factory_period": 13122,
+      "registers_index0_5": [
+        52,
+        17,
+        87,
+        52,
+        17,
+        87
+      ],
+      "source": 8347,
+      "stable_sum": [
+        127,
+        128
+      ],
+      "terminal": [
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 72,
+      "ROOT_rank": 37,
+      "child": 961,
+      "cut": 19,
+      "factory_period": 20920706406,
+      "registers_index0_5": [
+        15,
+        43,
+        50,
+        78,
+        85,
+        8
+      ],
+      "source": 8415,
+      "stable_sum": [
+        1023,
+        1024
+      ],
+      "terminal": [
+        3,
+        1,
+        6
+      ]
+    },
+    {
+      "ROOT_cost": 72,
+      "ROOT_rank": 37,
+      "child": 5261,
+      "cut": 19,
+      "factory_period": 6973568802,
+      "registers_index0_5": [
+        29,
+        43,
+        99,
+        8,
+        64,
+        78
+      ],
+      "source": 8639,
+      "stable_sum": [
+        445,
+        512
+      ],
+      "terminal": [
+        6,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 83,
+      "ROOT_rank": 44,
+      "child": 3497,
+      "cut": 6,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        16,
+        30,
+        86,
+        100,
+        51,
+        65
+      ],
+      "source": 8731,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 110,
+      "ROOT_rank": 61,
+      "child": 4169,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        68,
+        96,
+        103,
+        26,
+        33,
+        61
+      ],
+      "source": 8783,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 80,
+      "ROOT_rank": 42,
+      "child": 1259,
+      "cut": 12,
+      "factory_period": 3188646,
+      "registers_index0_5": [
+        11,
+        102,
+        46,
+        32,
+        81,
+        67
+      ],
+      "source": 8831,
+      "stable_sum": [
+        493,
+        512
+      ],
+      "terminal": [
+        4,
+        5
+      ]
+    },
+    {
+      "ROOT_cost": 53,
+      "ROOT_rank": 25,
+      "child": 1421,
+      "cut": 14,
+      "factory_period": 28697814,
+      "registers_index0_5": [
+        39,
+        32,
+        4,
+        102,
+        74,
+        67
+      ],
+      "source": 8859,
+      "stable_sum": [
+        493,
+        512
+      ],
+      "terminal": [
+        4,
+        5
+      ]
+    },
+    {
+      "ROOT_cost": 48,
+      "ROOT_rank": 22,
+      "child": 535,
+      "cut": 15,
+      "factory_period": 86093442,
+      "registers_index0_5": [
+        75,
+        5,
+        40,
+        75,
+        5,
+        40
+      ],
+      "source": 8895,
+      "stable_sum": [
+        1005,
+        1024
+      ],
+      "terminal": [
+        4,
+        6
+      ]
+    },
+    {
+      "ROOT_cost": 72,
+      "ROOT_rank": 37,
+      "child": 6449,
+      "cut": 16,
+      "factory_period": 258280326,
+      "registers_index0_5": [
+        10,
+        101,
+        45,
+        31,
+        80,
+        66
+      ],
+      "source": 8935,
+      "stable_sum": [
+        445,
+        512
+      ],
+      "terminal": [
+        6,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 99,
+      "ROOT_rank": 54,
+      "child": 2287,
+      "cut": 10,
+      "factory_period": 354294,
+      "registers_index0_5": [
+        98,
+        70,
+        63,
+        35,
+        28,
+        0
+      ],
+      "source": 9023,
+      "stable_sum": [
+        117,
+        128
+      ],
+      "terminal": [
+        3,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 118,
+      "ROOT_rank": 66,
+      "child": 3863,
+      "cut": 13,
+      "factory_period": 9565938,
+      "registers_index0_5": [
+        1,
+        50,
+        36,
+        85,
+        71,
+        15
+      ],
+      "source": 9031,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 61,
+      "ROOT_rank": 30,
+      "child": 1211,
+      "cut": 5,
+      "factory_period": 1458,
+      "registers_index0_5": [
+        41,
+        97,
+        6,
+        62,
+        76,
+        27
+      ],
+      "source": 9071,
+      "stable_sum": [
+        245,
+        256
+      ],
+      "terminal": [
+        3,
+        5
+      ]
+    },
+    {
+      "ROOT_cost": 45,
+      "ROOT_rank": 20,
+      "child": 4109,
+      "cut": 6,
+      "factory_period": 39366,
+      "registers_index0_5": [
+        89,
+        75,
+        19,
+        5,
+        54,
+        40
+      ],
+      "source": 9119,
+      "stable_sum": [
+        917,
+        1024
+      ],
+      "terminal": [
+        4,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 61,
+      "ROOT_rank": 30,
+      "child": 3479,
+      "cut": 11,
+      "factory_period": 1062882,
+      "registers_index0_5": [
+        16,
+        72,
+        86,
+        37,
+        51,
+        2
+      ],
+      "source": 9151,
+      "stable_sum": [
+        445,
+        512
+      ],
+      "terminal": [
+        6,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 91,
+      "ROOT_rank": 49,
+      "child": 1855,
+      "cut": 6,
+      "factory_period": 4374,
+      "registers_index0_5": [
+        23,
+        58,
+        93,
+        23,
+        58,
+        93
+      ],
+      "source": 9263,
+      "stable_sum": [
+        117,
+        128
+      ],
+      "terminal": [
+        3,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 61,
+      "ROOT_rank": 30,
+      "child": 4955,
+      "cut": 5,
+      "factory_period": 1458,
+      "registers_index0_5": [
+        39,
+        74,
+        4,
+        39,
+        74,
+        4
+      ],
+      "source": 9279,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 42,
+      "ROOT_rank": 18,
+      "child": 1103,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        55,
+        104,
+        90,
+        34,
+        20,
+        69
+      ],
+      "source": 9295,
+      "stable_sum": [
+        245,
+        256
+      ],
+      "terminal": [
+        3,
+        5
+      ]
+    },
+    {
+      "ROOT_cost": 61,
+      "ROOT_rank": 30,
+      "child": 4199,
+      "cut": 8,
+      "factory_period": 39366,
+      "registers_index0_5": [
+        79,
+        65,
+        9,
+        100,
+        44,
+        30
+      ],
+      "source": 9319,
+      "stable_sum": [
+        109,
+        128
+      ],
+      "terminal": [
+        4,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 42,
+      "ROOT_rank": 18,
+      "child": 37,
+      "cut": 10,
+      "factory_period": 354294,
+      "registers_index0_5": [
+        103,
+        96,
+        68,
+        61,
+        33,
+        26
+      ],
+      "source": 9343,
+      "stable_sum": [
+        8181,
+        8192
+      ],
+      "terminal": [
+        3,
+        10
+      ]
+    },
+    {
+      "ROOT_cost": 69,
+      "ROOT_rank": 35,
+      "child": 961,
+      "cut": 17,
+      "factory_period": 2324522934,
+      "registers_index0_5": [
+        17,
+        31,
+        87,
+        101,
+        52,
+        66
+      ],
+      "source": 9467,
+      "stable_sum": [
+        1023,
+        1024
+      ],
+      "terminal": [
+        3,
+        1,
+        6
+      ]
+    },
+    {
+      "ROOT_cost": 34,
+      "ROOT_rank": 13,
+      "child": 5141,
+      "cut": 5,
+      "factory_period": 1458,
+      "registers_index0_5": [
+        72,
+        86,
+        37,
+        51,
+        2,
+        16
+      ],
+      "source": 9627,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 102,
+      "ROOT_rank": 56,
+      "child": 6599,
+      "cut": 17,
+      "factory_period": 62762119218,
+      "registers_index0_5": [
+        76,
+        83,
+        6,
+        13,
+        41,
+        48
+      ],
+      "source": 9631,
+      "stable_sum": [
+        4073,
+        4096
+      ],
+      "terminal": [
+        2,
+        3,
+        1,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 107,
+      "ROOT_rank": 59,
+      "child": 1843,
+      "cut": 10,
+      "factory_period": 1062882,
+      "registers_index0_5": [
+        35,
+        49,
+        0,
+        14,
+        70,
+        84
+      ],
+      "source": 9695,
+      "stable_sum": [
+        903,
+        1024
+      ],
+      "terminal": [
+        4,
+        2,
+        4
+      ]
+    },
+    {
+      "ROOT_cost": 69,
+      "ROOT_rank": 35,
+      "child": 4655,
+      "cut": 3,
+      "factory_period": 162,
+      "registers_index0_5": [
+        42,
+        7,
+        77,
+        42,
+        7,
+        77
+      ],
+      "source": 9807,
+      "stable_sum": [
+        53,
+        64
+      ],
+      "terminal": [
+        3,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 64,
+      "ROOT_rank": 32,
+      "child": 4001,
+      "cut": 17,
+      "factory_period": 2324522934,
+      "registers_index0_5": [
+        90,
+        76,
+        20,
+        6,
+        55,
+        41
+      ],
+      "source": 9855,
+      "stable_sum": [
+        791,
+        1024
+      ],
+      "terminal": [
+        5,
+        2,
+        3
+      ]
+    },
+    {
+      "ROOT_cost": 50,
+      "ROOT_rank": 23,
+      "child": 1421,
+      "cut": 12,
+      "factory_period": 3188646,
+      "registers_index0_5": [
+        97,
+        41,
+        27,
+        76,
+        62,
+        6
+      ],
+      "source": 9967,
+      "stable_sum": [
+        493,
+        512
+      ],
+      "terminal": [
+        4,
+        5
+      ]
+    }
+  ],
+  "old_receipt_LF_SHA256": "e8d2c3995e80ce79f557504b0611b40b47535e8fc5324483f56a5eeaea92ec49",
+  "pending": [],
+  "scope": "coarse rays are paid; only marked fixed-child subfamilies are grounded; no universal ROOT or first-exit claim for repeated architecture",
+  "status": "PROVED block monoid and exact grounded factories; FINITE-EXACT175 inherited pending anchors",
+  "unit_cap_pending": [
+    927,
+    1383,
+    1407,
+    1639,
+    1663,
+    2111,
+    2255,
+    2815,
+    3279,
+    3431,
+    3567,
+    3951,
+    3999,
+    4287,
+    4543,
+    4575,
+    4583,
+    4591,
+    4635,
+    5735,
+    6111,
+    6527,
+    6759,
+    6847,
+    6863,
+    6887,
+    7279,
+    8223,
+    9831
+  ],
+  "unstable_interval_hostiles": [
+    [
+      [
+        1
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        4
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        13,
+        18
+      ],
+      [
+        13,
+        8
+      ]
+    ],
+    [
+      [
+        1,
+        2
+      ],
+      [
+        17,
+        18
+      ],
+      [
+        17,
+        16
+      ]
+    ],
+    [
+      [
+        1,
+        3
+      ],
+      [
+        17,
+        18
+      ],
+      [
+        33,
+        32
+      ]
+    ]
+  ]
+}
