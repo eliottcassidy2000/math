@@ -1,0 +1,35 @@
+{
+  "commands": [
+    "python3 verify.py",
+    "python3 -O verify.py",
+    "python3 audit/independent_audit.py",
+    "python3 -O audit/independent_audit.py"
+  ],
+  "independent_normal_equals_optimized": true,
+  "inheritance_verification_basis": "Repository dependencies use exact Git objects at the pinned commit; unpublished base dependencies use separately frozen producer bytes.",
+  "inherited_source_hashes_verified": {
+    "00-navigation/CURRENT-FRONTIER.md": "3a651df3843f370f0590a6f86aef97961d138e8198990fd1fdeddbf236628bf7",
+    "00-navigation/RESEARCH-PROTOCOL.md": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+    "00-navigation/START-HERE.md": "3f50c6948f798d7ebc81e5568422c8bc560d393fa777aa6c3067a7b04c26cb6a",
+    "01-canon/ACTIVE-GUARDRAILS.md": "fa66fea75074f148c78af934fe4b135c5e35d9f9f5c800c294df396265389b47",
+    "01-canon/MISTAKES.md": "c860718c3c57bc99e965f633fb9767297e722b84c9ba99b21ef863ed400429c9",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/README.md": "d562ea2889fefc1c9a8db725f2752378bbe3ee11919f00e104e40c7e39583985",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/lift.md": "c131dfb6e40075906817d65eda735bf60de5c0a549330704c1dcdac77ad59fa8",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/probe_new_ledgers.md": "f094c5cd9f27d2f1cea7f6a4c0c8d879ee576750163c2c831a4ed8f539543065",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/root.md": "f3e5dd63a4010d8eb6e3f5e8ebc068d3baefe8549037c684b0d4e7d7b31804e2",
+    "05-knowledge/results/endpoint_three_repairs_20261020h/theory.md": "8caed95d5dce6ea5ef6616626eab8a4d8a3a6e4eb40dfb27b770b4d1af56cc6c",
+    "05-knowledge/results/tournament_graph_trijections_20261020/TRIJECTIONS_AND_TREE_GAUGES.md": "4a19202298e373dff64cb9ca4b887642c415b560102ff40d34d01735ce0660e7",
+    "05-knowledge/results/trijection_reset_20261020/README.md": "a182f29d2911f5904b18b6b5b748afb8fb897ed6d88a73319c451233d41111af",
+    "05-knowledge/results/trijection_reset_20261020/graph_audit.md": "e80bf447fe02bdebeb09841c6b59d1f2f108b8dcc07f7a00fd43bad0afb5d26e",
+    "AGENTS.md": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+  },
+  "no_producer_imports": true,
+  "no_remote_writes": true,
+  "no_repository_writes": true,
+  "producer_manifest_sha256": "2601a21dd65c134d32f49a1a49346a3a3cdbf9d46edfc2a61813b7c31cfeb87c",
+  "producer_normal_matches_frozen": true,
+  "producer_optimized_matches_frozen": true,
+  "producer_sources_unchanged": true,
+  "relocated_run_from_unrelated_working_directory": true,
+  "status": "PASS"
+}

@@ -1,0 +1,216 @@
+{
+  "checker_sha256": "849832074942b682752685bef81a72370cdeec23e22634adad0952ad4e31a887",
+  "finite_boundary_affine_systems": [
+    {
+      "branch": "open",
+      "inconsistent": false,
+      "minimum_middle_inports": 6,
+      "n": 15
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 15
+    },
+    {
+      "branch": "open",
+      "inconsistent": true,
+      "n": 16
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 16
+    },
+    {
+      "branch": "open",
+      "inconsistent": false,
+      "minimum_middle_inports": 6,
+      "n": 17
+    },
+    {
+      "branch": "closed",
+      "inconsistent": false,
+      "minimum_middle_inports": 6,
+      "n": 17
+    },
+    {
+      "branch": "open",
+      "inconsistent": true,
+      "n": 18
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 18
+    },
+    {
+      "branch": "open",
+      "inconsistent": false,
+      "minimum_middle_inports": 8,
+      "n": 19
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 19
+    },
+    {
+      "branch": "open",
+      "inconsistent": true,
+      "n": 20
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 20
+    },
+    {
+      "branch": "open",
+      "inconsistent": false,
+      "minimum_middle_inports": 8,
+      "n": 21
+    },
+    {
+      "branch": "closed",
+      "inconsistent": false,
+      "minimum_middle_inports": 8,
+      "n": 21
+    },
+    {
+      "branch": "open",
+      "inconsistent": true,
+      "n": 22
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 22
+    },
+    {
+      "branch": "open",
+      "inconsistent": false,
+      "minimum_middle_inports": 10,
+      "n": 23
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 23
+    },
+    {
+      "branch": "open",
+      "inconsistent": true,
+      "n": 24
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 24
+    },
+    {
+      "branch": "open",
+      "inconsistent": false,
+      "minimum_middle_inports": 10,
+      "n": 25
+    },
+    {
+      "branch": "closed",
+      "inconsistent": false,
+      "minimum_middle_inports": 10,
+      "n": 25
+    },
+    {
+      "branch": "open",
+      "inconsistent": true,
+      "n": 26
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 26
+    }
+  ],
+  "hostile_controls": {
+    "old_adjacent_pair_cut": {
+      "illegal_join": [
+        6,
+        10
+      ],
+      "n": 11,
+      "ports": [
+        2,
+        3,
+        4
+      ],
+      "rows": [
+        994,
+        1324,
+        1737,
+        1489,
+        1447,
+        1612,
+        146,
+        802,
+        612,
+        1114,
+        449
+      ]
+    },
+    "old_endpair_insertion": {
+      "illegal_join": [
+        5,
+        0
+      ],
+      "n": 9,
+      "ports": [
+        5,
+        6,
+        7
+      ],
+      "rows": [
+        30,
+        252,
+        248,
+        240,
+        480,
+        449,
+        385,
+        257,
+        15
+      ]
+    }
+  },
+  "large_deterministic_n15_to60": {
+    "closed_endpair_guarded": 81,
+    "closed_last_movable": 632,
+    "closed_one": 2970,
+    "closed_second_fixed": 56,
+    "closed_second_movable": 351,
+    "closed_second_tail4": 21,
+    "closed_zero": 3365,
+    "open_endrun": 253,
+    "open_penultimate": 800,
+    "open_release": 6657,
+    "small_blue_steps": 0,
+    "unclaimed": 178
+  },
+  "permutation_control_orders": [
+    7,
+    200
+  ],
+  "port_chain_control_orders": [
+    27,
+    200
+  ],
+  "replay_digest_sha256": "1ada6cedbe9647ea36a0918e0520d6b7449fc714587d8c42d13d1c25acfd8bee",
+  "small_exhaustive_n7_to9": {
+    "below_threshold_not_replayed": 8416,
+    "closed_second_movable": 400,
+    "closed_second_tail4": 144,
+    "open_endrun": 1120,
+    "small_blue_steps": 0,
+    "unclaimed": 864
+  },
+  "status": "PASS; structural proofs separate from finite controls"
+}

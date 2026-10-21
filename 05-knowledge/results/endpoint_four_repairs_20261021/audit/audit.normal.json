@@ -1,0 +1,543 @@
+{
+  "all_port_orders": [
+    15,
+    16,
+    17
+  ],
+  "chain_and_orbit_controls": {
+    "chain_controls": 1404,
+    "four_port_orders": 254
+  },
+  "finite_boundary": [
+    {
+      "branch": "open",
+      "inconsistent": false,
+      "minimizing_inports": [
+        2,
+        3,
+        5,
+        9,
+        10,
+        12
+      ],
+      "minimum_middle_inports": 6,
+      "n": 15,
+      "projected_free_components": [
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          5,
+          8
+        ]
+      ]
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 15
+    },
+    {
+      "branch": "open",
+      "inconsistent": true,
+      "n": 16
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 16
+    },
+    {
+      "branch": "open",
+      "inconsistent": false,
+      "minimizing_inports": [
+        3,
+        6,
+        7,
+        9,
+        11,
+        14
+      ],
+      "minimum_middle_inports": 6,
+      "n": 17,
+      "projected_free_components": [
+        [
+          3,
+          12
+        ],
+        [
+          6,
+          13
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9,
+          10
+        ]
+      ]
+    },
+    {
+      "branch": "closed",
+      "inconsistent": false,
+      "minimizing_inports": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "minimum_middle_inports": 6,
+      "n": 17,
+      "projected_free_components": [
+        [
+          5,
+          14
+        ],
+        [
+          6,
+          13
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          10
+        ]
+      ]
+    },
+    {
+      "branch": "open",
+      "inconsistent": true,
+      "n": 18
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 18
+    },
+    {
+      "branch": "open",
+      "inconsistent": false,
+      "minimizing_inports": [
+        2,
+        3,
+        5,
+        6,
+        8,
+        13,
+        14,
+        16
+      ],
+      "minimum_middle_inports": 8,
+      "n": 19,
+      "projected_free_components": [
+        [
+          2,
+          11
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          5,
+          12
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ]
+      ]
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 19
+    },
+    {
+      "branch": "open",
+      "inconsistent": true,
+      "n": 20
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 20
+    },
+    {
+      "branch": "open",
+      "inconsistent": false,
+      "minimizing_inports": [
+        3,
+        6,
+        7,
+        8,
+        9,
+        10,
+        15,
+        18
+      ],
+      "minimum_middle_inports": 8,
+      "n": 21,
+      "projected_free_components": [
+        [
+          3,
+          16
+        ],
+        [
+          6,
+          17
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          14
+        ],
+        [
+          10,
+          13
+        ]
+      ]
+    },
+    {
+      "branch": "closed",
+      "inconsistent": false,
+      "minimizing_inports": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "minimum_middle_inports": 8,
+      "n": 21,
+      "projected_free_components": [
+        [
+          5,
+          18
+        ],
+        [
+          6,
+          17
+        ],
+        [
+          7,
+          16
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          9,
+          14
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          12
+        ]
+      ]
+    },
+    {
+      "branch": "open",
+      "inconsistent": true,
+      "n": 22
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 22
+    },
+    {
+      "branch": "open",
+      "inconsistent": false,
+      "minimizing_inports": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        17,
+        18,
+        20
+      ],
+      "minimum_middle_inports": 10,
+      "n": 23,
+      "projected_free_components": [
+        [
+          2,
+          15
+        ],
+        [
+          3,
+          14
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          13
+        ],
+        [
+          9,
+          12
+        ]
+      ]
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 23
+    },
+    {
+      "branch": "open",
+      "inconsistent": true,
+      "n": 24
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 24
+    },
+    {
+      "branch": "open",
+      "inconsistent": false,
+      "minimizing_inports": [
+        3,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        19,
+        22
+      ],
+      "minimum_middle_inports": 10,
+      "n": 25,
+      "projected_free_components": [
+        [
+          3,
+          20
+        ],
+        [
+          6,
+          21
+        ],
+        [
+          7,
+          16
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          9,
+          18
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          13,
+          14
+        ]
+      ]
+    },
+    {
+      "branch": "closed",
+      "inconsistent": false,
+      "minimizing_inports": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "minimum_middle_inports": 10,
+      "n": 25,
+      "projected_free_components": [
+        [
+          5,
+          22
+        ],
+        [
+          6,
+          21
+        ],
+        [
+          7,
+          20
+        ],
+        [
+          8,
+          19
+        ],
+        [
+          9,
+          18
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          11,
+          16
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          14
+        ]
+      ]
+    },
+    {
+      "branch": "open",
+      "inconsistent": true,
+      "n": 26
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 26
+    }
+  ],
+  "hostile_replays": [
+    {
+      "blue_steps": [
+        false,
+        false,
+        false
+      ],
+      "n": 11,
+      "name": "old_adjacent_pair_cut",
+      "ports": [
+        2,
+        3,
+        4
+      ],
+      "repair": "closed_second_movable"
+    },
+    {
+      "blue_steps": [
+        false,
+        false,
+        false
+      ],
+      "n": 9,
+      "name": "old_endpair_insertion",
+      "ports": [
+        5,
+        6,
+        7
+      ],
+      "repair": "open_endrun"
+    }
+  ],
+  "method": "independent GF(2) row elimination; no producer imports",
+  "small_order_scope": "Only the two stored fixed-template failures are replayed here; no full n<15 theorem is claimed.",
+  "source_cells": {
+    "closed_endpair_guarded": 216,
+    "closed_last_movable": 2276,
+    "closed_one": 2773,
+    "closed_second_fixed": 216,
+    "closed_second_movable": 892,
+    "closed_second_tail4": 30,
+    "closed_zero": 3911,
+    "open_endrun": 552,
+    "open_penultimate": 2276,
+    "open_release": 7822,
+    "unclaimed_cells": 336
+  },
+  "status": "PASS",
+  "strategic_port_orders": [
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    47,
+    60,
+    81,
+    104
+  ]
+}
