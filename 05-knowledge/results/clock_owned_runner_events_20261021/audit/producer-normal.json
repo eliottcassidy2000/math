@@ -1,0 +1,772 @@
+{
+  "inverse_pair_checks": 2006,
+  "tight_AP_controls": [
+    {
+      "k": 2,
+      "tied_witness": {
+        "time": "1/3",
+        "exit": [
+          1
+        ],
+        "entry": [
+          2
+        ],
+        "before": 1,
+        "point": 0,
+        "after": 1
+      }
+    },
+    {
+      "k": 3,
+      "tied_witness": {
+        "time": "1/4",
+        "exit": [
+          1
+        ],
+        "entry": [
+          3
+        ],
+        "before": 1,
+        "point": 0,
+        "after": 1
+      }
+    },
+    {
+      "k": 4,
+      "tied_witness": {
+        "time": "1/5",
+        "exit": [
+          1
+        ],
+        "entry": [
+          4
+        ],
+        "before": 1,
+        "point": 0,
+        "after": 1
+      }
+    },
+    {
+      "k": 5,
+      "tied_witness": {
+        "time": "1/6",
+        "exit": [
+          1
+        ],
+        "entry": [
+          5
+        ],
+        "before": 1,
+        "point": 0,
+        "after": 1
+      }
+    },
+    {
+      "k": 6,
+      "tied_witness": {
+        "time": "1/7",
+        "exit": [
+          1
+        ],
+        "entry": [
+          6
+        ],
+        "before": 1,
+        "point": 0,
+        "after": 1
+      }
+    },
+    {
+      "k": 7,
+      "tied_witness": {
+        "time": "1/8",
+        "exit": [
+          1
+        ],
+        "entry": [
+          7
+        ],
+        "before": 1,
+        "point": 0,
+        "after": 1
+      }
+    },
+    {
+      "k": 8,
+      "tied_witness": {
+        "time": "1/9",
+        "exit": [
+          1
+        ],
+        "entry": [
+          8
+        ],
+        "before": 1,
+        "point": 0,
+        "after": 1
+      }
+    },
+    {
+      "k": 9,
+      "tied_witness": {
+        "time": "1/10",
+        "exit": [
+          1
+        ],
+        "entry": [
+          9
+        ],
+        "before": 1,
+        "point": 0,
+        "after": 1
+      }
+    },
+    {
+      "k": 10,
+      "tied_witness": {
+        "time": "1/11",
+        "exit": [
+          1
+        ],
+        "entry": [
+          10
+        ],
+        "before": 1,
+        "point": 0,
+        "after": 1
+      }
+    },
+    {
+      "k": 11,
+      "tied_witness": {
+        "time": "1/12",
+        "exit": [
+          1
+        ],
+        "entry": [
+          11
+        ],
+        "before": 1,
+        "point": 0,
+        "after": 1
+      }
+    },
+    {
+      "k": 12,
+      "tied_witness": {
+        "time": "1/13",
+        "exit": [
+          1
+        ],
+        "entry": [
+          12
+        ],
+        "before": 1,
+        "point": 0,
+        "after": 1
+      }
+    },
+    {
+      "k": 13,
+      "tied_witness": {
+        "time": "1/14",
+        "exit": [
+          1
+        ],
+        "entry": [
+          13
+        ],
+        "before": 1,
+        "point": 0,
+        "after": 1
+      }
+    }
+  ],
+  "composite_unit_positive": {
+    "q": 9,
+    "grid": [
+      3,
+      6
+    ],
+    "repairs": []
+  },
+  "forward_triangle": {
+    "q": 7,
+    "grid": [],
+    "repairs": [
+      {
+        "owner": 11,
+        "clock": "2/7",
+        "sign": 1,
+        "endpoint": "13/44",
+        "actual_blockers": [
+          50
+        ],
+        "corridor_blockers": [
+          50
+        ],
+        "first_tooth_blockers": [
+          50
+        ],
+        "timed_entries": [
+          {
+            "target": 50,
+            "first_entry": "59/200"
+          }
+        ]
+      },
+      {
+        "owner": 11,
+        "clock": "2/7",
+        "sign": -1,
+        "endpoint": "1/4",
+        "actual_blockers": [],
+        "corridor_blockers": [
+          19,
+          50
+        ],
+        "first_tooth_blockers": [],
+        "timed_entries": [
+          {
+            "target": 19,
+            "first_entry": "21/76"
+          },
+          {
+            "target": 50,
+            "first_entry": "57/200"
+          }
+        ]
+      },
+      {
+        "owner": 19,
+        "clock": "3/7",
+        "sign": 1,
+        "endpoint": "33/76",
+        "actual_blockers": [
+          11
+        ],
+        "corridor_blockers": [
+          11
+        ],
+        "first_tooth_blockers": [
+          11
+        ],
+        "timed_entries": [
+          {
+            "target": 11,
+            "first_entry": "19/44"
+          }
+        ]
+      },
+      {
+        "owner": 19,
+        "clock": "3/7",
+        "sign": -1,
+        "endpoint": "31/76",
+        "actual_blockers": [],
+        "corridor_blockers": [
+          50
+        ],
+        "first_tooth_blockers": [],
+        "timed_entries": [
+          {
+            "target": 50,
+            "first_entry": "17/40"
+          }
+        ]
+      },
+      {
+        "owner": 50,
+        "clock": "1/7",
+        "sign": 1,
+        "endpoint": "29/200",
+        "actual_blockers": [
+          19
+        ],
+        "corridor_blockers": [
+          19
+        ],
+        "first_tooth_blockers": [
+          19
+        ],
+        "timed_entries": [
+          {
+            "target": 19,
+            "first_entry": "11/76"
+          }
+        ]
+      },
+      {
+        "owner": 50,
+        "clock": "1/7",
+        "sign": -1,
+        "endpoint": "27/200",
+        "actual_blockers": [],
+        "corridor_blockers": [],
+        "first_tooth_blockers": [],
+        "timed_entries": []
+      }
+    ]
+  },
+  "two_sided_hostile": {
+    "speeds": [
+      4,
+      5,
+      9,
+      12,
+      14
+    ],
+    "witness": "1/24",
+    "certificate": {
+      "q": 11,
+      "grid": [],
+      "repairs": [
+        {
+          "owner": 4,
+          "clock": "3/11",
+          "sign": 1,
+          "endpoint": "7/24",
+          "actual_blockers": [
+            14
+          ],
+          "corridor_blockers": [
+            14
+          ],
+          "first_tooth_blockers": [
+            14
+          ],
+          "timed_entries": [
+            {
+              "target": 14,
+              "first_entry": "23/84"
+            }
+          ]
+        },
+        {
+          "owner": 4,
+          "clock": "3/11",
+          "sign": -1,
+          "endpoint": "5/24",
+          "actual_blockers": [
+            5,
+            9,
+            14
+          ],
+          "corridor_blockers": [
+            5,
+            9,
+            12,
+            14
+          ],
+          "first_tooth_blockers": [
+            5,
+            9,
+            14
+          ],
+          "timed_entries": [
+            {
+              "target": 5,
+              "first_entry": "7/30"
+            },
+            {
+              "target": 9,
+              "first_entry": "13/54"
+            },
+            {
+              "target": 12,
+              "first_entry": "19/72"
+            },
+            {
+              "target": 14,
+              "first_entry": "19/84"
+            }
+          ]
+        },
+        {
+          "owner": 5,
+          "clock": "9/11",
+          "sign": 1,
+          "endpoint": "5/6",
+          "actual_blockers": [
+            12
+          ],
+          "corridor_blockers": [
+            12
+          ],
+          "first_tooth_blockers": [
+            12
+          ],
+          "timed_entries": [
+            {
+              "target": 12,
+              "first_entry": "59/72"
+            }
+          ]
+        },
+        {
+          "owner": 5,
+          "clock": "9/11",
+          "sign": -1,
+          "endpoint": "23/30",
+          "actual_blockers": [
+            4,
+            9
+          ],
+          "corridor_blockers": [
+            4,
+            9,
+            14
+          ],
+          "first_tooth_blockers": [
+            4,
+            9
+          ],
+          "timed_entries": [
+            {
+              "target": 4,
+              "first_entry": "19/24"
+            },
+            {
+              "target": 9,
+              "first_entry": "43/54"
+            },
+            {
+              "target": 14,
+              "first_entry": "67/84"
+            }
+          ]
+        },
+        {
+          "owner": 9,
+          "clock": "5/11",
+          "sign": 1,
+          "endpoint": "25/54",
+          "actual_blockers": [
+            4
+          ],
+          "corridor_blockers": [
+            4
+          ],
+          "first_tooth_blockers": [
+            4
+          ],
+          "timed_entries": [
+            {
+              "target": 4,
+              "first_entry": "11/24"
+            }
+          ]
+        },
+        {
+          "owner": 9,
+          "clock": "5/11",
+          "sign": -1,
+          "endpoint": "23/54",
+          "actual_blockers": [
+            5,
+            12,
+            14
+          ],
+          "corridor_blockers": [
+            5,
+            12,
+            14
+          ],
+          "first_tooth_blockers": [
+            5,
+            12,
+            14
+          ],
+          "timed_entries": [
+            {
+              "target": 5,
+              "first_entry": "13/30"
+            },
+            {
+              "target": 12,
+              "first_entry": "31/72"
+            },
+            {
+              "target": 14,
+              "first_entry": "37/84"
+            }
+          ]
+        },
+        {
+          "owner": 12,
+          "clock": "1/11",
+          "sign": 1,
+          "endpoint": "7/72",
+          "actual_blockers": [
+            9
+          ],
+          "corridor_blockers": [
+            9
+          ],
+          "first_tooth_blockers": [
+            9
+          ],
+          "timed_entries": [
+            {
+              "target": 9,
+              "first_entry": "5/54"
+            }
+          ]
+        },
+        {
+          "owner": 12,
+          "clock": "1/11",
+          "sign": -1,
+          "endpoint": "5/72",
+          "actual_blockers": [
+            14
+          ],
+          "corridor_blockers": [
+            14
+          ],
+          "first_tooth_blockers": [
+            14
+          ],
+          "timed_entries": [
+            {
+              "target": 14,
+              "first_entry": "1/12"
+            }
+          ]
+        },
+        {
+          "owner": 14,
+          "clock": "4/11",
+          "sign": 1,
+          "endpoint": "31/84",
+          "actual_blockers": [
+            5
+          ],
+          "corridor_blockers": [
+            5
+          ],
+          "first_tooth_blockers": [
+            5
+          ],
+          "timed_entries": [
+            {
+              "target": 5,
+              "first_entry": "11/30"
+            }
+          ]
+        },
+        {
+          "owner": 14,
+          "clock": "4/11",
+          "sign": -1,
+          "endpoint": "29/84",
+          "actual_blockers": [
+            9,
+            12
+          ],
+          "corridor_blockers": [
+            9,
+            12
+          ],
+          "first_tooth_blockers": [
+            9,
+            12
+          ],
+          "timed_entries": [
+            {
+              "target": 9,
+              "first_entry": "19/54"
+            },
+            {
+              "target": 12,
+              "first_entry": "25/72"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "quadratic_residue_families": [
+    {
+      "q": 11,
+      "k": 5,
+      "M": 10,
+      "min": 111,
+      "max": 119,
+      "ordinary_witness": "1/238",
+      "margin": "111/238",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 11,
+      "k": 5,
+      "M": 100,
+      "min": 1101,
+      "max": 1109,
+      "ordinary_witness": "1/2218",
+      "margin": "1101/2218",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 11,
+      "k": 5,
+      "M": 1000,
+      "min": 11001,
+      "max": 11009,
+      "ordinary_witness": "1/22018",
+      "margin": "11001/22018",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 19,
+      "k": 9,
+      "M": 10,
+      "min": 191,
+      "max": 207,
+      "ordinary_witness": "1/414",
+      "margin": "191/414",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 19,
+      "k": 9,
+      "M": 100,
+      "min": 1901,
+      "max": 1917,
+      "ordinary_witness": "1/3834",
+      "margin": "1901/3834",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 19,
+      "k": 9,
+      "M": 1000,
+      "min": 19001,
+      "max": 19017,
+      "ordinary_witness": "1/38034",
+      "margin": "19001/38034",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 43,
+      "k": 21,
+      "M": 10,
+      "min": 431,
+      "max": 471,
+      "ordinary_witness": "1/942",
+      "margin": "431/942",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 43,
+      "k": 21,
+      "M": 100,
+      "min": 4301,
+      "max": 4341,
+      "ordinary_witness": "1/8682",
+      "margin": "4301/8682",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 43,
+      "k": 21,
+      "M": 1000,
+      "min": 43001,
+      "max": 43041,
+      "ordinary_witness": "1/86082",
+      "margin": "43001/86082",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 59,
+      "k": 29,
+      "M": 10,
+      "min": 591,
+      "max": 647,
+      "ordinary_witness": "1/1294",
+      "margin": "591/1294",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 59,
+      "k": 29,
+      "M": 100,
+      "min": 5901,
+      "max": 5957,
+      "ordinary_witness": "1/11914",
+      "margin": "843/1702",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 59,
+      "k": 29,
+      "M": 1000,
+      "min": 59001,
+      "max": 59057,
+      "ordinary_witness": "1/118114",
+      "margin": "59001/118114",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 67,
+      "k": 33,
+      "M": 10,
+      "min": 671,
+      "max": 735,
+      "ordinary_witness": "1/1470",
+      "margin": "671/1470",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 67,
+      "k": 33,
+      "M": 100,
+      "min": 6701,
+      "max": 6765,
+      "ordinary_witness": "1/13530",
+      "margin": "6701/13530",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 67,
+      "k": 33,
+      "M": 1000,
+      "min": 67001,
+      "max": 67065,
+      "ordinary_witness": "1/134130",
+      "margin": "67001/134130",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 83,
+      "k": 41,
+      "M": 10,
+      "min": 831,
+      "max": 911,
+      "ordinary_witness": "1/1822",
+      "margin": "831/1822",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 83,
+      "k": 41,
+      "M": 100,
+      "min": 8301,
+      "max": 8381,
+      "ordinary_witness": "1/16762",
+      "margin": "8301/16762",
+      "all_repair_endpoints_fail": true
+    },
+    {
+      "q": 83,
+      "k": 41,
+      "M": 1000,
+      "min": 83001,
+      "max": 83081,
+      "ordinary_witness": "1/166162",
+      "margin": "83001/166162",
+      "all_repair_endpoints_fail": true
+    }
+  ],
+  "scope": "Exact certificate tests, not an LRC census or general proof."
+}

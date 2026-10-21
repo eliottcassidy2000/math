@@ -1,0 +1,187 @@
+{
+  "controls": {
+    "composite_unit_rows": 11,
+    "constructed_cycle_edges": 1104,
+    "cycle_equality_rejections": 20,
+    "cycle_surplus_rejections": 1372,
+    "deficient_cycles_constructed": 88,
+    "event_tapes": 13,
+    "events": 934,
+    "exhaustive_signed_height_rows": 252,
+    "extended_QR_rows": 28,
+    "extended_inverse_pairs": 50532,
+    "later_tooth_endpoint_blockers": 157,
+    "physical_endpoints": 5640,
+    "physical_rows": 301,
+    "residue_cycles": 1480
+  },
+  "negative_controls": [
+    "tie occupancy",
+    "endpoint blocker",
+    "arrival clock",
+    "witness margin",
+    "producer duplicate speed normal",
+    "producer duplicate speed -O"
+  ],
+  "rational_cycle_lift_examples": [
+    {
+      "T_min": 1,
+      "coefficients": [
+        13,
+        1,
+        1
+      ],
+      "integer_weights": [
+        18,
+        120,
+        47
+      ],
+      "q": 7,
+      "residues": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "T_min": 1,
+      "coefficients": [
+        1,
+        13,
+        1
+      ],
+      "integer_weights": [
+        234,
+        120,
+        611
+      ],
+      "q": 7,
+      "residues": [
+        1,
+        5,
+        3
+      ]
+    },
+    {
+      "T_min": 1,
+      "coefficients": [
+        1,
+        1,
+        13
+      ],
+      "integer_weights": [
+        234,
+        120,
+        47
+      ],
+      "q": 7,
+      "residues": [
+        1,
+        5,
+        4
+      ]
+    },
+    {
+      "T_min": 1,
+      "coefficients": [
+        1,
+        13,
+        1
+      ],
+      "integer_weights": [
+        234,
+        120,
+        611
+      ],
+      "q": 7,
+      "residues": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "T_min": 1,
+      "coefficients": [
+        13,
+        1,
+        1
+      ],
+      "integer_weights": [
+        18,
+        120,
+        47
+      ],
+      "q": 7,
+      "residues": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "T_min": 1,
+      "coefficients": [
+        1,
+        13,
+        1
+      ],
+      "integer_weights": [
+        234,
+        120,
+        611
+      ],
+      "q": 7,
+      "residues": [
+        4,
+        6,
+        5
+      ]
+    },
+    {
+      "T_min": 1,
+      "coefficients": [
+        37,
+        1,
+        1
+      ],
+      "integer_weights": [
+        50,
+        480,
+        173
+      ],
+      "q": 11,
+      "residues": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "T_min": 1,
+      "coefficients": [
+        1,
+        1,
+        37
+      ],
+      "integer_weights": [
+        925,
+        405,
+        103
+      ],
+      "q": 11,
+      "residues": [
+        1,
+        9,
+        4
+      ]
+    }
+  ],
+  "scope": "Exact certificate/obstruction audit; no general LRC proof or LRC(14) closure.",
+  "source_sha256": {
+    "README.md": "cf49309a88e3113843a0b7cfc03ea3b15ec8fa789d98c85e314e8df3e9e7fdc3",
+    "certificate.json": "d02d1800e54f2dd2b150ca1ee4d658d1df5fe625d1f89a6b0f7ea4bb3bf520c7",
+    "verify.py": "94e0c6b1a3bf5721c2cfffb24e74d5bad5895335c5eebdc26368c9337f5c35e0"
+  },
+  "status": "PASS"
+}

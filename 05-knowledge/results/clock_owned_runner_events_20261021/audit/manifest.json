@@ -1,0 +1,140 @@
+{
+  "accepted_source_sha256": {
+    "README.md": "cf49309a88e3113843a0b7cfc03ea3b15ec8fa789d98c85e314e8df3e9e7fdc3",
+    "certificate.json": "d02d1800e54f2dd2b150ca1ee4d658d1df5fe625d1f89a6b0f7ea4bb3bf520c7",
+    "verify.py": "94e0c6b1a3bf5721c2cfffb24e74d5bad5895335c5eebdc26368c9337f5c35e0"
+  },
+  "artifacts": [
+    {
+      "bytes": 13983,
+      "path": "README.md",
+      "sha256": "d9ed457fb682188677ccd580d8bf94c82af423bef56193c766104eacd9c4bc44"
+    },
+    {
+      "bytes": 3069,
+      "path": "audit-normal.json",
+      "sha256": "af3fe3f1251e794ea100edad912cc8804d95f827861a516f2b86f61bd334f0ce"
+    },
+    {
+      "bytes": 3069,
+      "path": "audit-optimized.json",
+      "sha256": "af3fe3f1251e794ea100edad912cc8804d95f827861a516f2b86f61bd334f0ce"
+    },
+    {
+      "bytes": 19322,
+      "path": "audit.py",
+      "sha256": "e930032ee4771103139b03c83330ae347dd8b500feafef88403a596486ee19d7"
+    },
+    {
+      "bytes": 1200,
+      "path": "external-negative-controls.json",
+      "sha256": "6a93655aba5c3f5af4887dbddfc829b706cc5fff1a3ddaa518fac45ae2d65dfe"
+    },
+    {
+      "bytes": 16919,
+      "path": "initial-source/README.md",
+      "sha256": "46580074e05d1abbe433aee4acecf8ad11d6536e196d59348c9bcdbdbc11c5f2"
+    },
+    {
+      "bytes": 14607,
+      "path": "initial-source/certificate.json",
+      "sha256": "d02d1800e54f2dd2b150ca1ee4d658d1df5fe625d1f89a6b0f7ea4bb3bf520c7"
+    },
+    {
+      "bytes": 6068,
+      "path": "initial-source/verify.py",
+      "sha256": "e504a2454fb42a2ebdbcac7a00a17cc06079f2bd4639efc64f44064a42d76556"
+    },
+    {
+      "bytes": 14607,
+      "path": "producer-normal.json",
+      "sha256": "d02d1800e54f2dd2b150ca1ee4d658d1df5fe625d1f89a6b0f7ea4bb3bf520c7"
+    },
+    {
+      "bytes": 14607,
+      "path": "producer-optimized.json",
+      "sha256": "d02d1800e54f2dd2b150ca1ee4d658d1df5fe625d1f89a6b0f7ea4bb3bf520c7"
+    },
+    {
+      "bytes": 17054,
+      "path": "source/README.md",
+      "sha256": "cf49309a88e3113843a0b7cfc03ea3b15ec8fa789d98c85e314e8df3e9e7fdc3"
+    },
+    {
+      "bytes": 14607,
+      "path": "source/certificate.json",
+      "sha256": "d02d1800e54f2dd2b150ca1ee4d658d1df5fe625d1f89a6b0f7ea4bb3bf520c7"
+    },
+    {
+      "bytes": 7530,
+      "path": "source/verify.py",
+      "sha256": "94e0c6b1a3bf5721c2cfffb24e74d5bad5895335c5eebdc26368c9337f5c35e0"
+    }
+  ],
+  "audit_worktree_policy": "Audit artifacts only; no producer or Git writes by auditor.",
+  "date_utc": "2026-10-21",
+  "initial_source_sha256": {
+    "README.md": "46580074e05d1abbe433aee4acecf8ad11d6536e196d59348c9bcdbdbc11c5f2",
+    "certificate.json": "d02d1800e54f2dd2b150ca1ee4d658d1df5fe625d1f89a6b0f7ea4bb3bf520c7",
+    "verify.py": "e504a2454fb42a2ebdbcac7a00a17cc06079f2bd4639efc64f44064a42d76556"
+  },
+  "nonclaims": [
+    "general LRC proof",
+    "LRC(14) closure",
+    "arbitrary phases or arbitrary real speeds",
+    "smallest or minimal hostile",
+    "novelty or priority"
+  ],
+  "proof_scope": [
+    "tied event occupancy and exact event witness",
+    "critical all-unit signed-grid dichotomy, including composite clocks",
+    "forward corridor and endpoint graph distinction",
+    "no reciprocal forward edges",
+    "prescribed residue cycle deficiency iff arbitrarily large first-tooth endpoint realization",
+    "two-sided hostile example",
+    "QR-family endpoint failures with actual maximum loneliness tending to 1/2"
+  ],
+  "replay": [
+    "python3 audit.py > /tmp/runner-audit-normal.json",
+    "python3 -O audit.py > /tmp/runner-audit-optimized.json",
+    "cmp /tmp/runner-audit-normal.json /tmp/runner-audit-optimized.json"
+  ],
+  "resolved_findings": [
+    {
+      "finding": "Section 6 incorrectly described extremal speed ratios as strict bounds.",
+      "mathematical_result_changed": false,
+      "resolution": "Closed interval [1/R,R], with strict spread hypothesis supplying strict tooth bounds."
+    },
+    {
+      "certificate_bytes_changed": false,
+      "finding": "Producer validation used assert statements that disappear under optimization.",
+      "resolution": "Every producer check now uses an explicit exception; invalid speeds fail under normal and -O."
+    }
+  ],
+  "schema": "session19-runner-events-independent-audit-v1",
+  "verdict": "PASS",
+  "verification": {
+    "arbitrary_working_directory_replay_identical": true,
+    "controls": {
+      "composite_unit_rows": 11,
+      "constructed_cycle_edges": 1104,
+      "cycle_equality_rejections": 20,
+      "cycle_surplus_rejections": 1372,
+      "deficient_cycles_constructed": 88,
+      "event_tapes": 13,
+      "events": 934,
+      "exhaustive_signed_height_rows": 252,
+      "extended_QR_rows": 28,
+      "extended_inverse_pairs": 50532,
+      "later_tooth_endpoint_blockers": 157,
+      "physical_endpoints": 5640,
+      "physical_rows": 301,
+      "residue_cycles": 1480
+    },
+    "imports_producer_computations": false,
+    "independent_checker_uses_assert": false,
+    "normal_and_optimized_independent_outputs_identical": true,
+    "producer_replays_equal_frozen_certificate_in_both_modes": true,
+    "subprocess_mutated_certificate_rejections": 8
+  }
+}

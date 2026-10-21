@@ -1,0 +1,64 @@
+[
+  {
+    "control": "tie",
+    "mode": "normal",
+    "exit_code": 1,
+    "explicit_failure": true,
+    "stdout_empty": true
+  },
+  {
+    "control": "tie",
+    "mode": "optimized",
+    "exit_code": 1,
+    "explicit_failure": true,
+    "stdout_empty": true
+  },
+  {
+    "control": "endpoint",
+    "mode": "normal",
+    "exit_code": 1,
+    "explicit_failure": true,
+    "stdout_empty": true
+  },
+  {
+    "control": "endpoint",
+    "mode": "optimized",
+    "exit_code": 1,
+    "explicit_failure": true,
+    "stdout_empty": true
+  },
+  {
+    "control": "chronology",
+    "mode": "normal",
+    "exit_code": 1,
+    "explicit_failure": true,
+    "stdout_empty": true
+  },
+  {
+    "control": "chronology",
+    "mode": "optimized",
+    "exit_code": 1,
+    "explicit_failure": true,
+    "stdout_empty": true
+  },
+  {
+    "control": "margin",
+    "mode": "normal",
+    "exit_code": 1,
+    "explicit_failure": true,
+    "stdout_empty": true
+  },
+  {
+    "control": "margin",
+    "mode": "optimized",
+    "exit_code": 1,
+    "explicit_failure": true,
+    "stdout_empty": true
+  },
+  {
+    "control": "arbitrary working directory replay",
+    "mode": "normal",
+    "exit_code": 0,
+    "byte_identical": true
+  }
+]
