@@ -1,0 +1,39 @@
+     A = (2,), B = (2,): done [2s]
+     A = (2,), B = (3,): done [2s]
+     A = (2,), B = (2, 2): done [2s]
+     A = (2,), B = (4,): done [2s]
+     A = (2,), B = (2, 3): done [2s]
+     A = (2,), B = (3, 2): done [2s]
+     A = (2,), B = (5,): done [2s]
+     A = (3,), B = (2,): done [2s]
+     A = (3,), B = (3,): done [2s]
+     A = (3,), B = (2, 2): done [2s]
+     A = (3,), B = (4,): done [3s]
+     A = (3,), B = (2, 3): done [9s]
+     A = (3,), B = (3, 2): done [16s]
+     A = (3,), B = (5,): done [22s]
+     A = (2, 2), B = (2,): done [22s]
+     A = (2, 2), B = (3,): done [23s]
+     A = (2, 2), B = (2, 2): done [38s]
+     A = (2, 2), B = (4,): done [52s]
+     A = (4,), B = (2,): done [52s]
+     A = (4,), B = (3,): done [52s]
+     A = (4,), B = (2, 2): done [67s]
+     A = (4,), B = (4,): done [82s]
+     A = (2, 3), B = (2,): done [82s]
+     A = (2, 3), B = (3,): done [89s]
+     A = (3, 2), B = (2,): done [89s]
+     A = (3, 2), B = (3,): done [96s]
+     A = (5,), B = (2,): done [96s]
+     A = (5,), B = (3,): done [102s]
+     A = (2,), B = (3, 3): done [103s]
+     A = (3, 3), B = (2,): done [104s]
+     A = (3,), B = (3, 3): done [267s]
+     A = (3, 3), B = (3,): done [443s]
+     32 ordered chain pairs, 136 exact gluings
+  ok   (X1) Busch's merge inequality H(T) >= H(A)H(B) for every gluing tested
+  ok   (X2) one-way lemma: every exact gluing has all cross arcs in one direction
+  ok   (X3) every exact gluing is an end-to-start concatenation (up to the rotations of a 3-cycle factor)
+  ok   (X4) both concatenations of every pair are exact (consistent with the product law)
+
+ALL CHECKS PASSED  (443s)

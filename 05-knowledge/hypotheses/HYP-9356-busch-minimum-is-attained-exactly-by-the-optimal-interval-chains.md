@@ -2,7 +2,11 @@
 id: HYP-9356
 title: "Busch's minimum is attained exactly by the optimal interval chains: for every m >= 3 the strong m-tournaments with f(m) = min 3^a 5^b (2a + 3b = m - 1) Hamiltonian paths are exactly the interval chains IC(p_1, ..., p_k) - the transitive order 0 -> 1 -> ... -> m-1 with one back arc from the last to the first vertex of each block [l_i, l_i + p_i], consecutive blocks sharing an end vertex - whose parts lie in {2, 3, 4} with prod (2^(p_i - 1) + 1) = f(m). Hence E(3q) = q, E(3q+1) = 1, E(3q+2) = q(q+3)/2 classes; the self-converse ones are the palindromic compositions; all are rigid, with scores (1,1,2,3,...,m-2,m-2) and m - 2 cyclic triples"
 status: >
-  OPEN for m >= 12. FINITE-EXACT for m = 3..11: the census for m <= 9 (h_multiplicities.py) and exact ears for m = 10, 11
+  OPEN for m >= 13. Pre-registered predictions 1-3 PASSED (strong_ears.py 375: E(12) = 4, the four chains, none
+  self-converse; no strong 12-tournament below 375; strong spectrum below 375 misses only 1, 7, 21).
+  REDUCED (THM-4745, PROVED) to a one-way lemma: every exact gluing of two extremal chains of compatible orders has
+  all cross arcs in one direction. That lemma is FINITE-EXACT for small chain pairs (exact_gluings.py).
+  Through order 12 the classification is verified directly. FINITE-EXACT for m = 3..11: the census for m <= 9 (h_multiplicities.py) and exact ears for m = 10, 11
   (strong_ears.py 225, complete by Moon's strong-deletion theorem and the insertion lemma of THM-1370). The extremal
   classes are exactly the optimal chains, distinct optimal compositions give distinct classes, and self-converse
   is equivalent to palindromic. PROVED for all m (THM-4744, to be filed): every interval chain has exactly
@@ -81,3 +85,18 @@ Any of the following would refute it:
 * an extremal strong tournament that is not an interval chain;
 * two optimal compositions with isomorphic chains;
 * `E(12) ≠ 4`.
+
+## Results of the pre-registered predictions (computed after `fad6a40581`)
+
+1. **Passed.** `E(12) = 4`: the strong 12-classes with `H = 375` are exactly the chains `(2,3,3,3)`, `(3,2,3,3)`, `(3,3,2,3)`, `(3,3,3,2)`. None is self-converse (`strong_ears_375.out`).
+2. **Passed.** They are rigid.
+3. **Passed.** No strong 12-tournament has `H < 375`, and the odd `d < 375` with `P_d = 0` are exactly 1, 7, 21.
+4. **Untested.** The predictions `E(13) = 1`, `E(14) = 14`, `E(15) = 5`, `E(16) = 1`, `E(17) = 20` stand.
+
+## Reduction (THM-4745)
+
+* By Busch's Lemma 1, an extremal tournament of order `m ≥ 6` glues two extremal strong tournaments `A`, `B` exactly at one vertex, with `f(|A|)f(|B|) = f(m)`.
+* THM-4745 (2) proves that a one-way exact gluing of two chains is the end-to-start concatenation.
+* So the hypothesis for all orders follows from the **one-way lemma**: an exact gluing of two extremal chains has all its cross arcs in one direction.
+* The lemma is exhaustive for chain pairs of at most 6 vertices with `(|A|−1)(|B|−1) ≤ 16`, and for `C_3`, `R_4` with the optimal 7-chain `IC(3,3)`. This covers every induction step up to order 10.
+* `gluing_failure_modes.py` shows that a proof must use both the restriction condition and the merge condition.

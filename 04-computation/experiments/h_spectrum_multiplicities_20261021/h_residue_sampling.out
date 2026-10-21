@@ -1,0 +1,22 @@
+  ok   n = 10: 4000000 samples, every H odd (Redei) [112s]
+     n = 10: p | H: 3: 0.33445 (rel 1.0034 +- 0.0007), 5: 0.19988 (rel 0.9994 +- 0.0010), 7: 0.14275 (rel 0.9992 +- 0.0012), 11: 0.09095 (rel 1.0004 +- 0.0016), 13: 0.07688 (rel 0.9994 +- 0.0017)
+     n = 10: mod 8 relative masses (1,3,5,7): 1:1.0030, 3:0.9961, 5:1.0020, 7:0.9989  (s.e. 0.0009)
+     n = 10: mod 16 relative masses: 1:1.002, 3:0.997, 5:1.004, 7:0.998, 9:1.004, 11:0.996, 13:1.000, 15:1.000
+  ok   n = 11: 2000000 samples, every H odd (Redei) [257s]
+     n = 11: p | H: 3: 0.33367 (rel 1.0010 +- 0.0010), 5: 0.20000 (rel 1.0000 +- 0.0014), 7: 0.14288 (rel 1.0002 +- 0.0017), 11: 0.09121 (rel 1.0033 +- 0.0022), 13: 0.07681 (rel 0.9985 +- 0.0024)
+     n = 11: mod 8 relative masses (1,3,5,7): 1:0.9982, 3:1.0003, 5:1.0010, 7:1.0005  (s.e. 0.0012)
+     n = 11: mod 16 relative masses: 1:0.998, 3:1.000, 5:1.001, 7:1.002, 9:0.998, 11:1.001, 13:1.001, 15:0.999
+  ok   n = 12: 500000 samples, every H odd (Redei) [347s]
+     n = 12: p | H: 3: 0.33191 (rel 0.9957 +- 0.0020), 5: 0.19938 (rel 0.9969 +- 0.0028), 7: 0.14173 (rel 0.9921 +- 0.0035), 11: 0.09135 (rel 1.0049 +- 0.0045), 13: 0.07733 (rel 1.0053 +- 0.0049)
+     n = 12: mod 8 relative masses (1,3,5,7): 1:1.0032, 3:0.9990, 5:1.0002, 7:0.9977  (s.e. 0.0024)
+     n = 12: mod 16 relative masses: 1:1.004, 3:1.000, 5:1.001, 7:0.998, 9:1.002, 11:0.998, 13:1.000, 15:0.997
+verdicts on the predictions committed in fad6a40581
+  P1 PASSED (|p freq - 1| < 0.02 within 3 s.e.)
+     n = 10: residue 1 mass 1.0030; best other 1.0020; strictly largest: True
+     n = 11: residue 1 mass 0.9982; best other 1.0010; strictly largest: False
+     n = 12: residue 1 mass 1.0032; best other 1.0002; strictly largest: True
+  P2 PASSED (residue 1 mod 8 not beaten by more than 3 s.e.)
+  P3 PASSED (n = 10 mass of 1 mod 8 = 1.0030 +- 0.0009, predicted in (1, 1.0153)) ; strictly inside without the tolerance: True
+  P4 (informative): excess of residue 1 mod 8: {10: 0.003, 11: -0.0018, 12: 0.0032} -> not monotone
+
+ALL CHECKS PASSED  (347s)

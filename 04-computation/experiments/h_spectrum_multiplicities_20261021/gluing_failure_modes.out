@@ -1,0 +1,55 @@
+     A = (2,), i = 0; B = (2,), j = 0: exact 2; mixed 14, least surplus 2; R-violations only 4, extra merges only 4, both 6  [end-to-start position]
+     A = (2,), i = 0; B = (2,), j = 1: exact 2; mixed 14, least surplus 2; R-violations only 4, extra merges only 4, both 6  [end-to-start position]
+     A = (2,), i = 0; B = (2,), j = 2: exact 2; mixed 14, least surplus 2; R-violations only 4, extra merges only 4, both 6  [end-to-start position]
+     A = (2,), i = 1; B = (2,), j = 0: exact 2; mixed 14, least surplus 2; R-violations only 4, extra merges only 4, both 6  [end-to-start position]
+     A = (2,), i = 1; B = (2,), j = 1: exact 2; mixed 14, least surplus 2; R-violations only 4, extra merges only 4, both 6  [end-to-start position]
+     A = (2,), i = 1; B = (2,), j = 2: exact 2; mixed 14, least surplus 2; R-violations only 4, extra merges only 4, both 6  [end-to-start position]
+     A = (2,), i = 2; B = (2,), j = 0: exact 2; mixed 14, least surplus 2; R-violations only 4, extra merges only 4, both 6  [end-to-start position]
+     A = (2,), i = 2; B = (2,), j = 1: exact 2; mixed 14, least surplus 2; R-violations only 4, extra merges only 4, both 6  [end-to-start position]
+     A = (2,), i = 2; B = (2,), j = 2: exact 2; mixed 14, least surplus 2; R-violations only 4, extra merges only 4, both 6  [end-to-start position]
+     A = (2,), i = 0; B = (3,), j = 0: exact 1; mixed 62, least surplus 4; R-violations only 8, extra merges only 0, both 54  [end-to-start position]
+     A = (2,), i = 0; B = (3,), j = 1: exact 0; mixed 62, least surplus 8; R-violations only 1, extra merges only 1, both 60
+     A = (2,), i = 0; B = (3,), j = 2: exact 0; mixed 62, least surplus 8; R-violations only 1, extra merges only 1, both 60
+     A = (2,), i = 0; B = (3,), j = 3: exact 1; mixed 62, least surplus 4; R-violations only 8, extra merges only 0, both 54  [end-to-start position]
+     A = (2,), i = 1; B = (3,), j = 0: exact 1; mixed 62, least surplus 4; R-violations only 8, extra merges only 0, both 54  [end-to-start position]
+     A = (2,), i = 1; B = (3,), j = 1: exact 0; mixed 62, least surplus 8; R-violations only 1, extra merges only 1, both 60
+     A = (2,), i = 1; B = (3,), j = 2: exact 0; mixed 62, least surplus 8; R-violations only 1, extra merges only 1, both 60
+     A = (2,), i = 1; B = (3,), j = 3: exact 1; mixed 62, least surplus 4; R-violations only 8, extra merges only 0, both 54  [end-to-start position]
+     A = (2,), i = 2; B = (3,), j = 0: exact 1; mixed 62, least surplus 4; R-violations only 8, extra merges only 0, both 54  [end-to-start position]
+     A = (2,), i = 2; B = (3,), j = 1: exact 0; mixed 62, least surplus 8; R-violations only 1, extra merges only 1, both 60
+     A = (2,), i = 2; B = (3,), j = 2: exact 0; mixed 62, least surplus 8; R-violations only 1, extra merges only 1, both 60
+     A = (2,), i = 2; B = (3,), j = 3: exact 1; mixed 62, least surplus 4; R-violations only 8, extra merges only 0, both 54  [end-to-start position]
+     A = (3,), i = 0; B = (2,), j = 0: exact 1; mixed 62, least surplus 4; R-violations only 8, extra merges only 0, both 54  [end-to-start position]
+     A = (3,), i = 0; B = (2,), j = 1: exact 1; mixed 62, least surplus 4; R-violations only 8, extra merges only 0, both 54  [end-to-start position]
+     A = (3,), i = 0; B = (2,), j = 2: exact 1; mixed 62, least surplus 4; R-violations only 8, extra merges only 0, both 54  [end-to-start position]
+     A = (3,), i = 1; B = (2,), j = 0: exact 0; mixed 62, least surplus 8; R-violations only 1, extra merges only 1, both 60
+     A = (3,), i = 1; B = (2,), j = 1: exact 0; mixed 62, least surplus 8; R-violations only 1, extra merges only 1, both 60
+     A = (3,), i = 1; B = (2,), j = 2: exact 0; mixed 62, least surplus 8; R-violations only 1, extra merges only 1, both 60
+     A = (3,), i = 2; B = (2,), j = 0: exact 0; mixed 62, least surplus 8; R-violations only 1, extra merges only 1, both 60
+     A = (3,), i = 2; B = (2,), j = 1: exact 0; mixed 62, least surplus 8; R-violations only 1, extra merges only 1, both 60
+     A = (3,), i = 2; B = (2,), j = 2: exact 0; mixed 62, least surplus 8; R-violations only 1, extra merges only 1, both 60
+     A = (3,), i = 3; B = (2,), j = 0: exact 1; mixed 62, least surplus 4; R-violations only 8, extra merges only 0, both 54  [end-to-start position]
+     A = (3,), i = 3; B = (2,), j = 1: exact 1; mixed 62, least surplus 4; R-violations only 8, extra merges only 0, both 54  [end-to-start position]
+     A = (3,), i = 3; B = (2,), j = 2: exact 1; mixed 62, least surplus 4; R-violations only 8, extra merges only 0, both 54  [end-to-start position]
+     A = (3,), i = 0; B = (3,), j = 0: exact 0; mixed 510, least surplus 14; R-violations only 18, extra merges only 0, both 492
+     A = (3,), i = 0; B = (3,), j = 1: exact 0; mixed 510, least surplus 20; R-violations only 2, extra merges only 0, both 508
+     A = (3,), i = 0; B = (3,), j = 2: exact 0; mixed 510, least surplus 16; R-violations only 2, extra merges only 0, both 508
+     A = (3,), i = 0; B = (3,), j = 3: exact 1; mixed 510, least surplus 6; R-violations only 18, extra merges only 0, both 492  [end-to-start position]
+     A = (3,), i = 1; B = (3,), j = 0: exact 0; mixed 510, least surplus 20; R-violations only 2, extra merges only 0, both 508
+     A = (3,), i = 1; B = (3,), j = 1: exact 0; mixed 510, least surplus 26; R-violations only 0, extra merges only 0, both 510
+     A = (3,), i = 1; B = (3,), j = 2: exact 0; mixed 510, least surplus 16; R-violations only 0, extra merges only 0, both 510
+     A = (3,), i = 1; B = (3,), j = 3: exact 0; mixed 510, least surplus 16; R-violations only 2, extra merges only 0, both 508
+     A = (3,), i = 2; B = (3,), j = 0: exact 0; mixed 510, least surplus 16; R-violations only 2, extra merges only 0, both 508
+     A = (3,), i = 2; B = (3,), j = 1: exact 0; mixed 510, least surplus 16; R-violations only 0, extra merges only 0, both 510
+     A = (3,), i = 2; B = (3,), j = 2: exact 0; mixed 510, least surplus 26; R-violations only 0, extra merges only 0, both 510
+     A = (3,), i = 2; B = (3,), j = 3: exact 0; mixed 510, least surplus 20; R-violations only 2, extra merges only 0, both 508
+     A = (3,), i = 3; B = (3,), j = 0: exact 1; mixed 510, least surplus 6; R-violations only 18, extra merges only 0, both 492  [end-to-start position]
+     A = (3,), i = 3; B = (3,), j = 1: exact 0; mixed 510, least surplus 16; R-violations only 2, extra merges only 0, both 508
+     A = (3,), i = 3; B = (3,), j = 2: exact 0; mixed 510, least surplus 20; R-violations only 2, extra merges only 0, both 508
+     A = (3,), i = 3; B = (3,), j = 3: exact 0; mixed 510, least surplus 14; R-violations only 18, extra merges only 0, both 492
+  ok   every exact gluing among these is one-way
+  ok   every mixed pattern has positive surplus
+  ok   at the end-to-start positions with an R_4 factor every mixed pattern has a Hamiltonian path of T violating (R)
+  ok   C_3 u C_3: at every gluing position exactly 4 of the 14 mixed patterns fail only through extra merges (no R-violation)
+
+ALL CHECKS PASSED  (53s)

@@ -6,7 +6,13 @@ status: >
   At n = 7, 8, 9 the relative mass of H = 1 (mod 8) is 1.179, 1.064 and 1.015; the mod-8 masses at n = 9 order
   1 > 5 > 7 > 3. Mod 16 at n = 7 the masses fall from residues 1 and 9 (1.205, 1.154) to 7 and 15 (0.824, 0.790);
   the residues at 2-adic distance 1/2 from 1 lie in between but are not monotone (h_patterns.py (Q4b)).
-  The sampling predictions below are committed BEFORE the sampler is run.
+  The sampling predictions below were committed in fad6a40581 BEFORE the sampler was run.
+  Results (h_residue_sampling.py, 4e6 / 2e6 / 5e5 samples at n = 10, 11, 12):
+  - P1 PASSED;
+  - P2 PASSED within its 3-s.e. tolerance, though residue 1 is strictly largest only at n = 10 and 12;
+  - P3 PASSED (n = 10: 1.0030 +- 0.0009);
+  - P4 not monotone (+0.0030, -0.0018, +0.0032). Inconclusive: the pull is resolved at n <= 10 and lies within
+    noise at n = 11, 12.
 source: opus-2026-10-21-S50, 05-knowledge/results/h_spectrum_multiplicities_20261021.md (to be written)
 related:
   - 01-canon/theorems/THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md (H = sum alpha_k 2^k mod 2^m)
@@ -14,7 +20,7 @@ related:
   - 05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md (concurrent multiplicities)
 scripts:
   - 04-computation/experiments/h_spectrum_multiplicities_20261021/h_patterns.py (+ .out)
-  - 04-computation/experiments/h_spectrum_multiplicities_20261021/h_residue_sampling.py (to be written and run after this commit)
+  - 04-computation/experiments/h_spectrum_multiplicities_20261021/h_residue_sampling.py (+ .out; the first attempt crashed at n = 12, its partial output kept as h_residue_sampling_run1_crashed_at_n12.out)
 ---
 
 # HYP-9355 — residues of the Hamiltonian-path count
@@ -54,3 +60,25 @@ The sampler draws `4·10^6` labelled tournaments at `n = 10`, `2·10^6` at `n = 
 * **P4 (informative).** The excess `4·freq(H ≡ 1 mod 8) − 1` decreases from `n = 10` to `n = 12`, within errors.
 
 **Refutation.** P1, P2 or P3 fails by more than 3 standard errors. If P4 fails, the decay claim is weakened.
+
+## Results of the pre-registered test
+
+The sampler is `h_residue_sampling.py`. Fixed seeds; exact path counts.
+
+| | `n = 10` | `n = 11` | `n = 12` |
+|---|---|---|---|
+| `p·freq(p | H)`, `p = 3` | 1.0034 ± 0.0007 | 1.0010 ± 0.0010 | 0.9957 ± 0.0020 |
+| `p = 5` | 0.9994 ± 0.0010 | 1.0000 ± 0.0014 | 0.9969 ± 0.0028 |
+| `p = 7` | 0.9992 ± 0.0012 | 1.0002 ± 0.0017 | 0.9921 ± 0.0035 |
+| `p = 11` | 1.0004 ± 0.0016 | 1.0033 ± 0.0022 | 1.0049 ± 0.0045 |
+| `p = 13` | 0.9994 ± 0.0017 | 0.9985 ± 0.0024 | 1.0053 ± 0.0049 |
+| mod 8, residues 1/3/5/7 | 1.0030 / 0.9961 / 1.0020 / 0.9989 | 0.9982 / 1.0003 / 1.0010 / 1.0005 | 1.0032 / 0.9990 / 1.0002 / 0.9977 |
+| s.e. of a mod-8 mass | 0.0009 | 0.0012 | 0.0024 |
+
+* **P1 passed.** Every deviation is below 0.6%.
+* **P2 passed** within its stated tolerance. Residue 1 is strictly largest at `n = 10` and 12. At `n = 11` residue 5 exceeds it by 0.0028, which is 1.6 standard errors of the difference.
+* **P3 passed.** At `n = 10` the mass is 1.0030, which is 3.3 standard errors above 1 and below the `n = 9` value.
+* **P4 (informative) was not monotone.** The excesses are +0.0030, −0.0018 and +0.0032. Within errors, the pull is not resolved beyond `n = 10`.
+* **Side observation: the excess of `3 | H`** is 1.016 at `n = 9` (exact), 1.0034 ± 0.0007 at `n = 10` and 1.0010 ± 0.0010 at `n = 11`. It decays.
+
+**Verdict.** Equidistribution is supported through `n = 12`. The 2-adic pull is real at `n ≤ 10` and decays quickly; at these sample sizes its sign is not resolved at `n = 11, 12`. The statement stays OPEN.
