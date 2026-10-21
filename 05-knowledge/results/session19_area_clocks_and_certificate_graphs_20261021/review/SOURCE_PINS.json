@@ -1,0 +1,84 @@
+{
+  "review_date_utc": "2026-10-21",
+  "source_identity_checks": "PASS; geometry, palettes, events, base ellipsoid, triangle ellipsoid, electrical match reviewed/frozen files",
+  "files": {
+    "session19-synthesis/SESSION19_SYNTHESIS.md": {
+      "sha256": "226fb695611b96166ffefcff271b9784cdcc220dee2f3c171c16f34cffc320e0",
+      "bytes": 18859
+    },
+    "session19-runner-geometry/REPORT.md": {
+      "sha256": "a9af09551c9d683677e4f1e2d39e0aa446195c13946d98abf23fa841c92aaa5a",
+      "bytes": 19266
+    },
+    "session19-geometry-audit/PROOF_AUDIT.md": {
+      "sha256": "2d529852a5ed6beacbb979371f8babd5cd43924272ddfaa7cb9d184d459d1098",
+      "bytes": 12813
+    },
+    "session19-polygon-palettes/README.md": {
+      "sha256": "152ea9aa06768d3f1e7e3f737b9d8d0c4d520c06d761fc79451853f80ccf5626",
+      "bytes": 13885
+    },
+    "session19-polygon-palettes/AUDIT.md": {
+      "sha256": "d0ad7e4bdd710d1f2d1b606c2b2f3578f2fa4f0739f35b0fdad41ee9106bfe1c",
+      "bytes": 2233
+    },
+    "session19-runner-events/README.md": {
+      "sha256": "cf49309a88e3113843a0b7cfc03ea3b15ec8fa789d98c85e314e8df3e9e7fdc3",
+      "bytes": 17054
+    },
+    "session19-runner-events-audit/README.md": {
+      "sha256": "d9ed457fb682188677ccd580d8bf94c82af423bef56193c766104eacd9c4bc44",
+      "bytes": 13983
+    },
+    "session19-ellipsoid-optimum/README.md": {
+      "sha256": "4824a239f153a002fdbece8e21a7fff6063a4eb437b64b7adfc7dd2b84e4e757",
+      "bytes": 17013
+    },
+    "session19-triangle-ellipsoid-repair/README.md": {
+      "sha256": "7134f63dcf97d9ded686e36dce89e1884ac22f79c833cdb4e5a0317d4c8fd971",
+      "bytes": 9979
+    },
+    "session19-ellipsoid-audit/README.md": {
+      "sha256": "b3df16efe9fffcd2546166bbe96c36e7a701e50e1d919fdf2f306c5421d636d0",
+      "bytes": 13222
+    },
+    "session19-electrical-certificate/README.md": {
+      "sha256": "493e454602518eb85ab458f6d866f73bbb34a84e066c95cc3abc4a1a37cc513f",
+      "bytes": 7816
+    },
+    "session19-electrical-audit/PROOF_AUDIT.md": {
+      "sha256": "6808fcf78b0915920be462113904df56049a622ff4771275a7011c815aab5e2b",
+      "bytes": 13415
+    },
+    "session19-kepler-boundary-audit/AUDIT.md": {
+      "sha256": "475e74ac31febc9d14b6736bbb7d4d8bcee5facb769ddc65f31c62eb6312ac6e",
+      "bytes": 7145
+    },
+    "math/05-knowledge/results/runner_area_clock_20261020j/boundary_and_colouring.md": {
+      "sha256": "d83a06b4d6f376530d392d555432dcca6ea8b7b8798c10bfedf94b11c1f95429",
+      "bytes": 7959
+    },
+    "math/01-canon/theorems/THM-4737-kepler-polygon-reformulation-of-the-lonely-runner-conjecture-observer-angular-momentum-vertex-times-and-the-relation-torus.md": {
+      "sha256": "859453551375340557d52de9f9cfa19c92722f0fa2c650832f7f59ef76b93f8a",
+      "bytes": 13557
+    },
+    "publication-captures/packetsession19-kepler-correction-operation-state.json": {
+      "sha256": "1e0d11bff611d8646d342bf904bd4d84ecddf867994f58eac11901b10d4eec8e",
+      "bytes": 1432
+    },
+    "publication-captures/packetsession19-kepler-correction-ref-result.json": {
+      "sha256": "2e33245e872a3425356f9bcb0c4b74c446d1a45e783abf2339a454dff6a87ffa",
+      "bytes": 554
+    },
+    "session19-publication/CHECKPOINT.json": {
+      "sha256": "ae233fd01fa9d5d7086cda280f54839102ee673ab7167ab6e6b900f356c9b7e0",
+      "bytes": 15488
+    }
+  },
+  "revision_lineage": {
+    "initial_reviewed_synthesis_sha256": "8634be01aed686d0f2abc2e6f9ae40033d77b25db59b02553ec26eeab78a0fbe",
+    "final_graph_and_provenance_revision_sha256": "226fb695611b96166ffefcff271b9784cdcc220dee2f3c171c16f34cffc320e0",
+    "other_science_unchanged": "Confirmed byte-for-byte by removing only the two added sections"
+  },
+  "publication_evidence_limit": "Retained publisher records inspected; no independent remote read or Git operation by this reviewer."
+}

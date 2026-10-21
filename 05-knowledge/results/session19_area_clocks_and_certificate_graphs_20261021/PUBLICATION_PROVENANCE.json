@@ -1,0 +1,80 @@
+{
+  "reviewed_source_sha256": "226fb695611b96166ffefcff271b9784cdcc220dee2f3c171c16f34cffc320e0",
+  "published_synthesis_sha256": "fb579936166cd413a12b2dc38e9e3d03fb68068d9060164ec88e8e82b4b19f93",
+  "only_changes": [
+    {
+      "from": "Status: synthesis in progress.",
+      "to": "Status: independently scope-reviewed synthesis; linked research packets published and exact-byte verified."
+    },
+    {
+      "from": "Our independent audit is being prepared alongside it",
+      "to": "Our independent audit is published alongside it"
+    }
+  ],
+  "unchanged_review_files": {
+    "ADDITION_CHECK.json": "0198aea478280397e946dd005412462ac82542efcda12c73a03b418d77ecde5d",
+    "REVIEW.md": "2b8e9a46359660d7bb551aa872d932bbcfbed3ab3d6845a50aa0a6ffdd61ab3e",
+    "SOURCE_PINS.json": "0afb5471928aed0f31abbc21293d6edf6810612def4bf8628885cb9d168315b6"
+  },
+  "verified_research_publications": [
+    {
+      "packet": "session19-geometry",
+      "commit": "589091321fb9eb63e5f29e296436c26a656273af",
+      "manifest_sha256": "2c685275ee660b33446e631c61a95d47ddd0195f4b4db55b8e2806e324959fc0",
+      "files": 13,
+      "bytes": 83997
+    },
+    {
+      "packet": "session19-palettes",
+      "commit": "fce5b0efa5f0a318ab14adda47fdb2ed6e3c10bc",
+      "manifest_sha256": "6f48e8bffb9800b1102c2d0716a232e7e2935f1708daa451e510aaf1786db783",
+      "files": 11,
+      "bytes": 52887
+    },
+    {
+      "packet": "session19-events",
+      "commit": "f55a3c10df77805f01cd977ee6d882672cc28cce",
+      "manifest_sha256": "fef0898271f29dd2d59cebb0bfa4fe9205a9df3fc17721fb841cccfacbe280aa",
+      "files": 19,
+      "bytes": 205625
+    },
+    {
+      "packet": "session19-ellipsoid",
+      "commit": "dd40097e90435139210f1ac52a600ea8c952e9ef",
+      "manifest_sha256": "b6c0af257c6508eb30d788378af861c85fef498350d14e3dcdc87c2bf1ff4f3b",
+      "files": 31,
+      "bytes": 156723
+    },
+    {
+      "packet": "session19-triangle-ellipsoid",
+      "commit": "e992d4902693884f291c04546f921f2e021fd4bd",
+      "manifest_sha256": "cae2f9df9f69740b7483cc84cf421fd19739264830e4ec6a0aa513fc546b2514",
+      "files": 6,
+      "bytes": 21392
+    },
+    {
+      "packet": "session19-electrical",
+      "commit": "47db5920a858b0c32e76cc80d19c6607ed75dd71",
+      "manifest_sha256": "313362a37ab709f69b5fbe3272b33e085e79ba59ad0280cdf817d6816a46781a",
+      "files": 20,
+      "bytes": 71208
+    },
+    {
+      "packet": "session19-kepler-concordance",
+      "commit": "5df3c24e1f2599e76670bdd4a131a37296001b08",
+      "manifest_sha256": "3618e20d57e0587e0aa4a686f4e32d4b1c4def7af7a411b0a12123423f37b911",
+      "files": 7,
+      "bytes": 32339
+    },
+    {
+      "packet": "session19-literature-status",
+      "commit": "a1c1b48f161d3aae1d9ad1216f9113ecfa6855f6",
+      "manifest_sha256": "816d63c153c7175e67ebcba2a3fe597266fd94b416f4bcdf40c3997f391fed11",
+      "files": 3,
+      "bytes": 87465
+    }
+  ],
+  "concurrent_correction_commit": "cfcb930344470c60cf13ffc8694e990eaa074209",
+  "stale_overlay_commit_not_on_main": "c0559c2805936edaa6bbbc2137b97d01d31d5f10",
+  "scope": "Status and link packaging only; mathematical text and review records unchanged."
+}

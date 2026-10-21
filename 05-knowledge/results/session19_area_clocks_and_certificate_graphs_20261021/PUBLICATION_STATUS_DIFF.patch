@@ -1,0 +1,16 @@
+--- source/SESSION19_SYNTHESIS.md
++++ SESSION19_SYNTHESIS.md
+@@ -1,6 +1,6 @@
+ # Session 19: area clocks, physical ports, and the graph of a convex certificate
+ 
+-Status: synthesis in progress. The separately reviewed proofs and their scope statements are authoritative. No general Lonely Runner proof or new Hadwiger–Nelson lower bound is claimed.
++Status: independently scope-reviewed synthesis; linked research packets published and exact-byte verified. The separately reviewed proofs and their scope statements are authoritative. No general Lonely Runner proof or new Hadwiger–Nelson lower bound is claimed.
+ 
+ ## 1. What the creative analogy actually preserves
+ 
+@@ -123,4 +123,4 @@
+ 
+ ## 8. Publication reconciliation
+ 
+-While our Kepler correction was awaiting publication, concurrent commit cfcb930344470c60cf13ffc8694e990eaa074209 repaired the same closed-endpoint and existence issues. That correction was preserved. Our independent audit is being prepared alongside it with the original inspected source and a current concordance, rather than overwriting the owner's repaired theorem or duplicating its correction entry. The additional conditional denominator bound and explicit density qualification remain in the audit. A failed guarded-ref attempt did not become an extra main-branch commit.
++While our Kepler correction was awaiting publication, concurrent commit cfcb930344470c60cf13ffc8694e990eaa074209 repaired the same closed-endpoint and existence issues. That correction was preserved. Our independent audit is published alongside it with the original inspected source and a current concordance, rather than overwriting the owner's repaired theorem or duplicating its correction entry. The additional conditional denominator bound and explicit density qualification remain in the audit. A failed guarded-ref attempt did not become an extra main-branch commit.

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "Exact bounded proof controls only for added integer distance graph D={1,3,4,7}; no new census, no producer checker rerun",
+  "six_clique_pairs": true,
+  "periodic_edge_residue_cases": 32,
+  "closed_interval_cover_pieces": 5,
+  "symmetry_reduction": "||d(1-t)||=||dt|| and period one for integer d",
+  "kappa": "1/5",
+  "witness_time": "1/5",
+  "chromatic_number": 4,
+  "fractional_chromatic_number": 4,
+  "interpretation": "Clique lower bound and 4-color upper bound; rotation optimum 1/kappa=5; not a Euclidean unit-distance embedding",
+  "previous_source_recovered_exactly_after_removing_two_additions": "8634be01aed686d0f2abc2e6f9ae40033d77b25db59b02553ec26eeab78a0fbe"
+}
