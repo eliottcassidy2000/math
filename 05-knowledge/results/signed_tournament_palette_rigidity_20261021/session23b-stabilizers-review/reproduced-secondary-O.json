@@ -1,0 +1,87 @@
+{
+  "paley_aut": {
+    "group_order": 21,
+    "regular_set_partitions_by_blocks": {
+      "2": 42,
+      "3": 294,
+      "4": 350
+    },
+    "regular_ordered_colorings": {
+      "1": 0,
+      "2": 84,
+      "3": 2016,
+      "4": 15960
+    }
+  },
+  "paley_aut_pm": {
+    "group_order": 42,
+    "regular_set_partitions_by_blocks": {
+      "3": 252,
+      "4": 343
+    },
+    "regular_ordered_colorings": {
+      "1": 0,
+      "2": 0,
+      "3": 1512,
+      "4": 14280
+    }
+  },
+  "fano_aut": {
+    "group_order": 168,
+    "regular_set_partitions_by_blocks": {
+      "4": 168
+    },
+    "regular_ordered_colorings": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 4032
+    }
+  },
+  "degree8_affine_semilinear": {
+    "degree": 8,
+    "order": 168,
+    "regular_subsets": 0,
+    "max_constant_cardinality_layer": 70
+  },
+  "disjoint_product_controls": [
+    {
+      "B": 7,
+      "H_order": 21,
+      "t": 1,
+      "u": 1,
+      "R_H": 84,
+      "R_T": 1008,
+      "rho_H": 2,
+      "rho_T": 3,
+      "regular_orbits": 16
+    },
+    {
+      "B": 0,
+      "H_order": 1,
+      "t": 3,
+      "u": 2,
+      "R_H": 1,
+      "R_T": 864,
+      "rho_H": 0,
+      "rho_T": 3,
+      "regular_orbits": 32
+    },
+    {
+      "B": 3,
+      "H_order": 3,
+      "t": 2,
+      "u": 1,
+      "R_H": 6,
+      "R_T": 432,
+      "rho_H": 1,
+      "rho_T": 3,
+      "regular_orbits": 16
+    }
+  ],
+  "partial_path_control": {
+    "all_labelled_tournaments_n_le_4": true,
+    "ordered_path_objects_checked": 1283
+  },
+  "source_sha256": "73258dc69ad48b1806edc963c3b999d6dafd6f2e4cfadabf588956bc5c3eead1"
+}

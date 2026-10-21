@@ -1,0 +1,114 @@
+{
+  "ordinary_paley": {
+    "group_order": 21,
+    "distinct_prime_cycle_constraints": 8,
+    "regular_color_polynomial_coefficients": {
+      "1": 6,
+      "3": -7,
+      "7": 1
+    },
+    "regular_named_colorings_q_1_to_4": [
+      0,
+      84,
+      2016,
+      15960
+    ]
+  },
+  "signed_paley": {
+    "group_order": 42,
+    "distinct_prime_cycle_constraints": 15,
+    "regular_color_polynomial_coefficients": {
+      "1": 6,
+      "2": 7,
+      "3": -7,
+      "4": -7,
+      "7": 1
+    },
+    "regular_named_colorings_q_1_to_4": [
+      0,
+      0,
+      1512,
+      14280
+    ]
+  },
+  "fano": {
+    "group_order": 168,
+    "distinct_prime_cycle_constraints": 50,
+    "regular_color_polynomial_coefficients": {
+      "1": 48,
+      "2": -112,
+      "3": 56,
+      "4": 28,
+      "5": -21,
+      "7": 1
+    },
+    "regular_named_colorings_q_1_to_4": [
+      0,
+      0,
+      0,
+      4032
+    ]
+  },
+  "signed_partial_paths": [
+    {
+      "n": 1,
+      "ordered_path_objects": 1,
+      "with_negative_map_by_omitted_size": {
+        "0": 1
+      },
+      "with_signed_kernel_by_omitted_size": {
+        "0": 1
+      }
+    },
+    {
+      "n": 2,
+      "ordered_path_objects": 6,
+      "with_negative_map_by_omitted_size": {
+        "0": 2
+      },
+      "with_signed_kernel_by_omitted_size": {
+        "0": 2
+      }
+    },
+    {
+      "n": 3,
+      "ordered_path_objects": 60,
+      "with_negative_map_by_omitted_size": {
+        "0": 12,
+        "1": 12,
+        "2": 12
+      },
+      "with_signed_kernel_by_omitted_size": {
+        "0": 12,
+        "1": 12
+      }
+    },
+    {
+      "n": 4,
+      "ordered_path_objects": 1216,
+      "with_negative_map_by_omitted_size": {
+        "0": 96,
+        "2": 96
+      },
+      "with_signed_kernel_by_omitted_size": {
+        "0": 96
+      }
+    },
+    {
+      "n": 5,
+      "ordered_path_objects": 53760,
+      "with_negative_map_by_omitted_size": {
+        "0": 1920,
+        "1": 1920,
+        "2": 1920,
+        "3": 1760,
+        "4": 960
+      },
+      "with_signed_kernel_by_omitted_size": {
+        "0": 1920,
+        "1": 1920
+      }
+    }
+  ],
+  "source_sha256": "0599d7fa1baedd1256079e53e74d3046055c85f142fe91b2dd10f7ad07fee83f"
+}
