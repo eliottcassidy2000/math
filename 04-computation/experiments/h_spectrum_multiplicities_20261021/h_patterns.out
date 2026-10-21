@@ -1,0 +1,134 @@
+census n <= 9 loaded [9s]
+(Q1) strong raw-count polynomials P_d, every odd d < 125
+  ok   Busch floor f(m) = 3,5,9,15,25,45,75 attained exhaustively for m = 3..9; f(10) = 125 (CITED), so P_d is complete for d < 125
+  ok   odd d < 125 with P_d = 0: [1, 7, 21]: every odd d in [3, 123] other than 7, 21 is the count of a STRONG tournament
+  ok   spectrum_basins (6) reproduced: P3=z^3, P5=z^4, P9=2z^5, P11=P13=z^5, P15=2z^5+2z^6, P17=P19=2z^6, P23=4z^6
+     P_25 = 2z^6 + z^7
+     P_27 = 2z^6 + 3z^7
+     P_29 = 4z^6 + 2z^7
+     P_31 = 2z^6 + 2z^7
+     P_33 = 5z^6 + 3z^7
+     P_35 = 2z^7
+     P_37 = 5z^6 + 2z^7
+     P_39 = 2z^7
+     P_41 = z^6 + 5z^7
+     P_43 = 2z^6 + 2z^7
+     P_45 = 2z^6 + 5z^7 + 5z^8
+     P_47 = 2z^7
+     P_49 = 7z^7 + z^8
+     P_51 = 8z^7 + 4z^8
+     P_53 = 4z^7 + 6z^8
+     P_55 = 4z^7
+     P_57 = 4z^7 + 3z^8
+     P_59 = 8z^7 + 4z^8
+     P_61 = z^7 + 4z^8
+     P_63 = 2z^8
+     P_65 = 11z^7 + 3z^8
+     P_67 = 6z^7
+     P_69 = 12z^7 + 6z^8
+     P_71 = 7z^7 + 4z^8
+     P_73 = 8z^7 + 11z^8
+     P_75 = 7z^7 + 2z^8 + 3z^9
+     P_77 = 10z^7 + 6z^8
+     P_79 = 5z^7 + 6z^8
+     P_81 = 11z^7 + 10z^8 + 5z^9
+     P_83 = 7z^7 + 4z^8
+     P_85 = z^7 + 5z^8 + 4z^9
+     P_87 = z^7 + 6z^8 + 4z^9
+     P_89 = 14z^7 + 7z^8 + 2z^9
+     P_91 = 15z^7 + 12z^8 + 2z^9
+     P_93 = 7z^7 + 4z^8 + 4z^9
+     P_95 = 5z^7 + 10z^8 + 2z^9
+     P_97 = 6z^7 + 10z^8 + 7z^9
+     P_99 = 4z^7 + 14z^8 + 6z^9
+     P_101 = 10z^7 + 4z^8 + 4z^9
+     P_103 = 10z^7 + 4z^8 + 2z^9
+     P_105 = 4z^7 + 11z^8 + 3z^9
+     P_107 = 10z^8 + 4z^9
+     P_109 = 14z^7 + 8z^8 + 4z^9
+     P_111 = 10z^7 + 12z^8 + 5z^9
+     P_113 = 4z^7 + 8z^8 + 2z^9
+     P_115 = 7z^7 + 14z^8 + 4z^9
+     P_117 = 7z^7 + 15z^8 + 5z^9
+     P_119 = 12z^8 + 8z^9
+     P_121 = 4z^7 + 4z^8 + 4z^9
+     P_123 = 10z^7 + 14z^8 + 11z^9
+     P_d(1) for odd d = 3..123: [1, 1, 0, 2, 1, 1, 4, 2, 2, 0, 4, 3, 5, 6, 4, 8, 2, 7, 2, 6, 4, 12, 2, 8, 12, 10, 4, 7, 12, 5, 2, 14, 6, 18, 11, 19, 12, 16, 11, 26, 11, 10, 11, 23, 29, 15, 17, 23, 24, 18, 16, 18, 14, 26, 27, 14, 25, 27, 20, 12, 35]
+     Busch-extremal strong classes E(m), m = 3..9: [1, 1, 2, 2, 1, 5, 3]
+     second-lowest strong count at m = 5..9: [11, 17, 27, 49, 81] (m = 3, 4 have one strong class each)
+  ok   E(3) = E(4) = 1 (C_3, the strong 4-tournament)
+(Q2) converse pairing of multiplicities
+  ok   N(n,h) = SC(n,h) (mod 2) for every n <= 9 and h (non-self-converse classes pair with their converses; PROVED)
+  ok   the same for strong classes: P_d(z) = SC_d(z) (mod 2) coefficientwise
+  ok   even n <= 8: every self-converse class has H = 1 (mod 4) (THM-791 with a fixed-point-free anti-involution)
+  ok   hence at even n every value H = 3 (mod 4) is attained by an even number of classes
+  ok   n = 5: 3 uniquely attained values, all self-converse: 1(|Aut| 1), 11(|Aut| 1), 13(|Aut| 1)
+  ok   n = 6: 2 uniquely attained values, all self-converse: 1(|Aut| 1), 41(|Aut| 1)
+  ok   n = 7: 12 uniquely attained values, all self-converse: 1(|Aut| 1), 61(|Aut| 1), 85(|Aut| 1), 87(|Aut| 1), 125(|Aut| 1), 127(|Aut| 1), 147(|Aut| 1), 155(|Aut| 1), 157(|Aut| 1), 171(|Aut| 3, regular), 175(|Aut| 7, regular), 189(|Aut| 21, regular)
+  ok   n = 8: 3 uniquely attained values, all self-converse: 1(|Aut| 1), 629(|Aut| 1), 637(|Aut| 1)
+  ok   n = 9: 26 uniquely attained values, all self-converse: 1(|Aut| 1), 2891(|Aut| 1), 2917(|Aut| 1), 2919(|Aut| 1), 2931(|Aut| 3), 2959(|Aut| 1), 2963(|Aut| 1), 2979(|Aut| 1), 3079(|Aut| 1), 3081(|Aut| 1), 3083(|Aut| 1), 3085(|Aut| 1), 3095(|Aut| 1), 3101(|Aut| 1) ...
+(Q3) late primes and the late seven
+     (p, first order whose strong range holds an odd multiple of p, first order with p | H strong): [(7, 6, 7), (107, 7, 8), (149, 7, 8), (163, 7, 8), (167, 7, 8), (173, 7, 8), (179, 7, 8), (181, 7, 8)]
+  ok   p = 7 is late: odd multiples of 7 (21, 35) enter the strong range [15, 45] at order 6, but 7 | H first at order 7; 3, 5, 11, ..., 31 divide a strong count at the first order whose range allows it; the other late primes (107, 149, ...) sit above the order-7 holes near its maximum
+  ok   no tournament with n <= 6 has 7 | H (FINITE-EXACT); so 7 | H(T) forces a strong component of order >= 7 with 7 | H (PROVED from multiplicativity)
+  ok   at n = 7 every tournament with 7 | H is strong; the multiples of 7 attained: 35x2, 49x7, 77x10, 91x15, 105x4, 133x6, 147x1, 175x1, 189x1
+     n = 7: odd multiples of 7 below the maximum that are missing: [7, 21, 63, 119, 161]; all odd holes: [7, 21, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187]
+     n = 7: holes in (45, 150): [63, 107, 119, 149] -> multiples of 7: [63, 119], primes: [107, 149]
+     n = 7: labelled fraction with 7 | H = 0.1086; among strong labelled = 0.1358  (1/7 = 0.1429)
+     n = 8: labelled fraction with 7 | H = 0.1377; among strong labelled = 0.1409  (1/7 = 0.1429)
+     n = 9: labelled fraction with 7 | H = 0.1420; among strong labelled = 0.1422  (1/7 = 0.1429)
+(Q4) residues of H over labelled tournaments
+     p =  3: fraction with p | H, n = 3..9: [0.25, 0.25, 0.4141, 0.2969, 0.3147, 0.3297, 0.3388]   (1/p = 0.3333)
+     p =  5: fraction with p | H, n = 3..9: [0.0, 0.375, 0.2969, 0.1919, 0.1681, 0.1806, 0.2005]   (1/p = 0.2000)
+     p =  7: fraction with p | H, n = 3..9: [0.0, 0.0, 0.0, 0.0, 0.1086, 0.1377, 0.142]   (1/p = 0.1429)
+     p = 11: fraction with p | H, n = 3..9: [0.0, 0.0, 0.1172, 0.1245, 0.0884, 0.0882, 0.0919]   (1/p = 0.0909)
+     p = 13: fraction with p | H, n = 3..9: [0.0, 0.0, 0.1172, 0.0439, 0.0985, 0.0756, 0.0764]   (1/p = 0.0769)
+     labelled #{H = 1 mod 4} - #{H = 3 mod 4}, n = 1..9: [1, 2, 4, 32, 416, 8192, 218368, 11149312, 516939776]
+     divided by 2^(C(n,2)): [1.0, 1.0, 0.5, 0.5, 0.40625, 0.25, 0.10413, 0.04153, 0.00752]
+     labelled counts of H mod 8 = (1,3,5,7), n = 7..9: [(618240, 516320, 539520, 423072), (71400448, 65676800, 68391936, 62966272), (17442593280, 17041087488, 17175614976, 17060180992)]
+  ok   n = 9 labelled residue counts sum to 2^36
+(Q4b) relative labelled masses of H mod 16 (8 x frequency), residues 1,3,...,15
+     n = 7: 1:1.205, 3:0.867, 5:1.000, 7:0.824, 9:1.154, 11:1.102, 13:1.058, 15:0.790
+     n = 8: 1:1.101, 3:0.964, 5:1.004, 7:0.907, 9:1.027, 11:0.993, 13:1.034, 15:0.969
+     n = 9: 1:1.016, 3:0.991, 5:1.000, 7:0.989, 9:1.015, 11:0.992, 13:0.999, 15:0.998
+(Q5) repunits, Cipolla numbers and 2^k + 1 against a local baseline (n = 8, 9)
+     n = 8 2^k-1    : 31:10/16(pct 0.00), 63:2/16(pct 0.00), 127:10/28(pct 0.00), 255:28/29(pct 0.44)
+     n = 8 (4^k-1)/3: 85:7/22(pct 0.00), 341:26/33(pct 0.18)
+     n = 8 2^k+1    : 33:23/10(pct 1.00), 65:25/15(pct 0.83), 129:40/25(pct 1.00), 257:30/28(pct 0.56)
+     n = 9 2^k-1    : 31:14/30(pct 0.00), 63:4/27(pct 0.00), 127:22/56(pct 0.00), 255:91/84(pct 0.72), 511:136/120(pct 0.80), 1023:193/185(pct 0.62)
+     n = 9 (4^k-1)/3: 85:17/40(pct 0.00), 341:103/108(pct 0.41), 1365:205/206(pct 0.48)
+     n = 9 2^k+1    : 33:35/14(pct 1.00), 65:41/24(pct 0.83), 129:84/54(pct 1.00), 257:90/84(pct 0.64), 513:155/120(pct 0.96), 1025:168/186(pct 0.28)
+     percentile ranks of the family values within their +-10% windows: mean 0.47 over 25 cases (0.5 = typical)
+  ok   repunit probe ran on at least 10 (value, n) cases (NUMERICAL; the verdict is in the note)
+(Q6) the converse-Gluck family: H, |Aut|, tc, uniqueness
+     C_3            n =  3: H = 3, |Aut| = 3, tc = 1 = {}; N(3,3) = 1; max H(3) = 3
+  ok   C_3: |Aut| = 3 divides H (free action)
+     Z_5{1,2}       n =  5: H = 15, |Aut| = 5, tc = 3 = {3: 1}; N(5,15) = 2; max H(5) = 15
+  ok   Z_5{1,2}: |Aut| = 5 divides H (free action)
+     P_7            n =  7: H = 189, |Aut| = 21, tc = 9 = {3: 2}; N(7,189) = 1; max H(7) = 189
+  ok   P_7: |Aut| = 21 divides H (free action)
+     C_3[C_3]       n =  9: H = 3159, |Aut| = 81, tc = 39 = {3: 1, 13: 1}; N(9,3159) = 1; max H(9) = 3357
+  ok   C_3[C_3]: |Aut| = 81 divides H (free action)
+     Z_5{1,2}[C_3]  n = 15: H = 197030475, |Aut| = 1215, tc = 162165 = {3: 1, 5: 1, 19: 1, 569: 1}; mean n!/2^(n-1) = 7.981e+07; H/mean = 2.469
+  ok   Z_5{1,2}[C_3]: |Aut| = 1215 divides H (free action)
+     P_7[C_3]       n = 21: H = 123156134945235, |Aut| = 45927, tc = 2681562805 = {5: 1, 22469: 1, 23869: 1}; mean n!/2^(n-1) = 4.872e+13; H/mean = 2.528
+  ok   P_7[C_3]: |Aut| = 45927 divides H (free action)
+  ok   H(C_3[C_3]) = 3159, attained by no other 9-class; C_3, P_7 are likewise unique, Z_5{1,2} ties at 15
+(Q7) Paley presentation counts tc(P_q) = H(P_q)/(q(q-1)/2)
+  ok   H(P_7) = 189, H(P_11) = 95095, H(P_19) = 1172695746915 recomputed
+     q =  3: tc = 1 = {}; base-2 pseudoprime: False; Carmichael (Korselt): False; tc mod 8 = 1
+  ok   q = 3: |Aut(P_q)| = 3 divides H
+     q =  7: tc = 9 = {3: 2}; base-2 pseudoprime: False; Carmichael (Korselt): False; tc mod 8 = 1
+  ok   q = 7: |Aut(P_q)| = 21 divides H
+     q = 11: tc = 1729 = {7: 1, 13: 1, 19: 1}; base-2 pseudoprime: True; Carmichael (Korselt): True; tc mod 8 = 1
+  ok   q = 11: |Aut(P_q)| = 55 divides H
+     q = 19: tc = 6857869865 = {5: 1, 7: 1, 11: 1, 23: 1, 774463: 1}; base-2 pseudoprime: False; Carmichael (Korselt): False; tc mod 8 = 1
+  ok   q = 19: |Aut(P_q)| = 171 divides H
+     q = 23: tc = 62293308207033 = {3: 1, 167: 1, 4567: 1, 27225299: 1}; base-2 pseudoprime: False; Carmichael (Korselt): False; tc mod 8 = 1
+  ok   q = 23: |Aut(P_q)| = 253 divides H
+     q = 27: tc = 397365570454381227 = {3: 2, 702696721: 1, 62831843: 1}; base-2 pseudoprime: False; Carmichael (Korselt): False; tc mod 8 = 3
+  ok   q = 27: |Aut(P_q)| = 1053 divides H
+     q = 31: tc = 42745655163116955307561 = {47: 1, 139: 1, 62981: 1, 31183: 1, 3331592479: 1}; base-2 pseudoprime: False; Carmichael (Korselt): False; tc mod 8 = 1
+  ok   q = 31: |Aut(P_q)| = 465 divides H
+
+ALL CHECKS PASSED  (11s)

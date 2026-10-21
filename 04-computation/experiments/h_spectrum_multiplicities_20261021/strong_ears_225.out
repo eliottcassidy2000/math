@@ -1,0 +1,82 @@
+(E0) interval chains [LIMIT = 225]
+  ok   H(IC(p_1..p_k)) = prod (2^(p_i - 1) + 1) for all 305 compositions of n - 1 <= 13 into parts 2..6 (PROVED in the note; checked)
+  ok   no interval chain beats Busch (consistency); the optimal ones use parts 2, 3 and at most one 4 (or two 2s)
+census n <= 9 loaded [9s]; strong 9-classes with H <= 225: 816
+(E1) strong classes of order 10 with H <= 225
+     order 10: 239 classes; least H = 125; first values [125, 135, 145, 147, 153, 155, 159, 161, 165, 167] [18s]
+  ok   the least H of a strong 10-tournament is f(10) = 125 (Busch, CITED; exact here)
+  ok   order 10: |Aut| divides H for every class found
+  ok   order 10: converse pairing P_d[10] = SC_d[10] (mod 2)
+  ok   order 10 (even): every self-converse class found has H = 1 (mod 4)
+(E2) strong classes of order 11 with H = f(11) = 225
+  ok   no strong 11-tournament has H < 225 (least ear value 225)
+     9 classes [26s]
+(E3) strong polynomials P_d for every odd d < 225
+  ok   odd d < 225 with P_d = 0: [1, 7, 21]
+     P_125 = 1z^7 + 10z^8 + 2z^9 + 1z^10
+     P_127 = 1z^7 + 8z^8 + 3z^9
+     P_129 = 7z^7 + 26z^8 + 7z^9
+     P_131 = 8z^7 + 8z^8 + 8z^9
+     P_133 = 6z^7 + 17z^8 + 8z^9
+     P_135 = 8z^7 + 14z^8 + 14z^9 + 10z^10
+     P_137 = 6z^7 + 14z^8 + 10z^9
+     P_139 = 6z^7 + 18z^8 + 6z^9
+     P_141 = 3z^7 + 18z^8 + 7z^9
+     P_143 = 3z^7 + 14z^8 + 12z^9
+     P_145 = 2z^7 + 8z^8 + 6z^9 + 4z^10
+     P_147 = 1z^7 + 10z^8 + 10z^9 + 2z^10
+     P_149 = 14z^8 + 12z^9
+     P_151 = 5z^7 + 6z^8 + 8z^9
+     P_153 = 3z^7 + 21z^8 + 20z^9 + 10z^10
+     P_155 = 1z^7 + 26z^8 + 12z^9 + 4z^10
+     P_157 = 1z^7 + 14z^8 + 14z^9
+     P_159 = 4z^7 + 20z^8 + 22z^9 + 12z^10
+     P_161 = 12z^8 + 6z^9 + 1z^10
+     P_163 = 20z^8 + 8z^9
+     P_165 = 17z^8 + 9z^9 + 7z^10
+     P_167 = 8z^8 + 8z^9 + 4z^10
+     P_169 = 19z^8 + 14z^9 + 5z^10
+     P_171 = 1z^7 + 22z^8 + 18z^9 + 6z^10
+     P_173 = 30z^8 + 8z^9
+     P_175 = 1z^7 + 16z^8 + 10z^9 + 2z^10
+     P_177 = 35z^8 + 14z^9 + 12z^10
+     P_179 = 26z^8 + 9z^9 + 4z^10
+     P_181 = 18z^8 + 12z^9 + 2z^10
+     P_183 = 14z^8 + 20z^9 + 6z^10
+     P_185 = 18z^8 + 8z^9 + 10z^10
+     P_187 = 24z^8 + 17z^9 + 8z^10
+     P_189 = 1z^7 + 20z^8 + 17z^9 + 4z^10
+     P_191 = 22z^8 + 12z^9 + 2z^10
+     P_193 = 21z^8 + 25z^9 + 3z^10
+     P_195 = 14z^8 + 26z^9 + 6z^10
+     P_197 = 40z^8 + 12z^9 + 2z^10
+     P_199 = 24z^8 + 3z^9 + 12z^10
+     P_201 = 15z^8 + 13z^9 + 1z^10
+     P_203 = 26z^8 + 12z^9 + 10z^10
+     P_205 = 18z^8 + 28z^9 + 8z^10
+     P_207 = 28z^8 + 16z^9 + 10z^10
+     P_209 = 16z^8 + 18z^9 + 2z^10
+     P_211 = 20z^8 + 25z^9 + 4z^10
+     P_213 = 28z^8 + 37z^9 + 4z^10
+     P_215 = 20z^8 + 26z^9 + 8z^10
+     P_217 = 22z^8 + 19z^9 + 4z^10
+     P_219 = 42z^8 + 30z^9 + 22z^10
+     P_221 = 29z^8 + 22z^9 + 7z^10
+     P_223 = 18z^8 + 11z^9 + 6z^10
+     P_d(1), odd d = 3..223: [1, 1, 0, 2, 1, 1, 4, 2, 2, 0, 4, 3, 5, 6, 4, 8, 2, 7, 2, 6, 4, 12, 2, 8, 12, 10, 4, 7, 12, 5, 2, 14, 6, 18, 11, 19, 12, 16, 11, 26, 11, 10, 11, 23, 29, 15, 17, 23, 24, 18, 16, 18, 14, 26, 27, 14, 25, 27, 20, 12, 35, 14, 12, 40, 24, 31, 46, 30, 30, 28, 29, 20, 23, 26, 19, 54, 43, 29, 58, 19, 28, 33, 20, 38, 47, 38, 29, 61, 39, 32, 40, 36, 49, 42, 36, 49, 46, 54, 39, 29, 48, 54, 54, 36, 49, 69, 54, 45, 94, 58, 35]
+(E4) Busch-extremal strong classes against the optimal interval chains
+     (m, f(m), E(m), #optimal compositions): [(3, 3, 1, 1), (4, 5, 1, 1), (5, 9, 2, 2), (6, 15, 2, 2), (7, 25, 1, 1), (8, 45, 5, 5), (9, 75, 3, 3), (10, 125, 1, 1), (11, 225, 9, 9)]
+  ok   E(m) = number of optimal compositions for m = 3..11
+  ok   for every m = 3..11 the Busch-extremal classes are exactly the optimal interval chains, and distinct optimal compositions give distinct classes
+  ok   an optimal interval chain is self-converse iff its composition is a palindrome
+  ok   every optimal interval chain of order >= 4 has trivial automorphism group
+  ok   every optimal interval chain of order m >= 4 has scores (1,1,2,3,...,m-3,m-2,m-2) and exactly m - 2 cyclic triples
+     self-converse extremal classes (palindromes), m = 3..11: [1, 1, 2, 0, 1, 1, 1, 1, 3]
+(E5) exact multiplicities N(n,h) for every odd h < 225
+     n = 10: N(n,h), h in (63, 75, 105, 125, 135, 147, 189, 195, 223): {63: 6, 75: 70, 105: 59, 125: 43, 135: 146, 147: 70, 189: 102, 195: 126, 223: 82}
+     n = 11: N(n,h), h in (63, 75, 105, 125, 135, 147, 189, 195, 223): {63: 8, 75: 121, 105: 85, 125: 67, 135: 278, 147: 123, 189: 148, 195: 238, 223: 117}
+     n = 12: N(n,h), h in (63, 75, 105, 125, 135, 147, 189, 195, 223): {63: 10, 75: 192, 105: 115, 125: 98, 135: 490, 147: 192, 189: 198, 195: 396, 223: 152}
+  ok   N(n,7) = N(n,21) = 0 for every n <= 30 (consistency)
+  ok   the class series reproduces the census N(n,h) for every n <= 9 and odd h < 225
+
+ALL CHECKS PASSED  (27s)
