@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "symbolic_group_transport": true,
+  "fixed_reflection_hostile": [
+    [
+      1,
+      2
+    ],
+    [
+      -2,
+      3
+    ],
+    [
+      -3,
+      1
+    ],
+    [
+      -1,
+      -2
+    ],
+    [
+      2,
+      -3
+    ],
+    [
+      3,
+      -1
+    ]
+  ],
+  "A9_first_return_cases": 44521,
+  "bounded_width_separation_cases": 123,
+  "explicit_fragment_support_cases": 54,
+  "Collatz_clock_cases": 101,
+  "scope": "Algebraic proofs audited separately; finite checks do not prove global halting or graph coloring claims."
+}

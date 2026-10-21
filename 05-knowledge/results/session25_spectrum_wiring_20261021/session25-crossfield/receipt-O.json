@@ -1,0 +1,178 @@
+{
+  "status": "PASS",
+  "A9_first_returns_checked": 10201,
+  "hard_skeleton_assemblies_checked": 54,
+  "boundary_prefix": [
+    {
+      "state": [
+        17,
+        0,
+        3
+      ],
+      "macro_rules": 3
+    },
+    {
+      "state": [
+        14,
+        0,
+        9
+      ],
+      "macro_rules": 3
+    },
+    {
+      "state": [
+        47,
+        0,
+        2
+      ],
+      "macro_rules": 9
+    },
+    {
+      "state": [
+        8,
+        0,
+        25
+      ],
+      "macro_rules": 2
+    }
+  ],
+  "clock_controls": [
+    {
+      "j": 0,
+      "valuation": 2,
+      "raw_steps": 3
+    },
+    {
+      "j": 1,
+      "valuation": 14,
+      "raw_steps": 15
+    },
+    {
+      "j": 2,
+      "valuation": 26,
+      "raw_steps": 27
+    },
+    {
+      "j": 3,
+      "valuation": 38,
+      "raw_steps": 39
+    },
+    {
+      "j": 4,
+      "valuation": 50,
+      "raw_steps": 51
+    },
+    {
+      "j": 5,
+      "valuation": 62,
+      "raw_steps": 63
+    },
+    {
+      "j": 6,
+      "valuation": 74,
+      "raw_steps": 75
+    },
+    {
+      "j": 7,
+      "valuation": 86,
+      "raw_steps": 87
+    },
+    {
+      "j": 8,
+      "valuation": 98,
+      "raw_steps": 99
+    },
+    {
+      "j": 9,
+      "valuation": 110,
+      "raw_steps": 111
+    },
+    {
+      "j": 10,
+      "valuation": 122,
+      "raw_steps": 123
+    },
+    {
+      "j": 11,
+      "valuation": 134,
+      "raw_steps": 135
+    },
+    {
+      "j": 12,
+      "valuation": 146,
+      "raw_steps": 147
+    },
+    {
+      "j": 13,
+      "valuation": 158,
+      "raw_steps": 159
+    },
+    {
+      "j": 14,
+      "valuation": 170,
+      "raw_steps": 171
+    },
+    {
+      "j": 15,
+      "valuation": 182,
+      "raw_steps": 183
+    },
+    {
+      "j": 16,
+      "valuation": 194,
+      "raw_steps": 195
+    },
+    {
+      "j": 17,
+      "valuation": 206,
+      "raw_steps": 207
+    },
+    {
+      "j": 18,
+      "valuation": 218,
+      "raw_steps": 219
+    },
+    {
+      "j": 19,
+      "valuation": 230,
+      "raw_steps": 231
+    },
+    {
+      "j": 20,
+      "valuation": 242,
+      "raw_steps": 243
+    }
+  ],
+  "sharp_abstract_skeletons": [
+    {
+      "k": 2,
+      "equal_colourings": 2,
+      "separating_colourings": 0,
+      "width_upper": 1
+    },
+    {
+      "k": 3,
+      "equal_colourings": 6,
+      "separating_colourings": 0,
+      "width_upper": 2
+    },
+    {
+      "k": 4,
+      "equal_colourings": 24,
+      "separating_colourings": 0,
+      "width_upper": 3
+    },
+    {
+      "k": 5,
+      "equal_colourings": 120,
+      "separating_colourings": 0,
+      "width_upper": 4
+    },
+    {
+      "k": 6,
+      "equal_colourings": 720,
+      "separating_colourings": 0,
+      "width_upper": 5
+    }
+  ]
+}

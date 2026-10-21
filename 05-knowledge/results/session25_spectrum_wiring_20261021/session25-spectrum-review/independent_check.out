@@ -1,0 +1,44 @@
+{
+  "all_word_DP_split_pair_recurrence_controls": 511,
+  "block_state_controls": 393472,
+  "closed_form_controls": 112,
+  "direct_modular_word_controls": 113,
+  "hostiles": {
+    "L0_not_fvs1": {
+      "H": 1,
+      "feedback_vertex_number": 0,
+      "word": []
+    },
+    "insufficient_dyadic_L": {
+      "L": 1,
+      "M": 8,
+      "actual": 1,
+      "claimed_linear": 5,
+      "t": 2
+    },
+    "missing_odd_order_condition": {
+      "L": 1,
+      "M": 3,
+      "actual": 0,
+      "claimed_linear": 2,
+      "t": 2
+    },
+    "residue7_not_exact7": {
+      "H": 207127,
+      "L": 3,
+      "M": 8,
+      "t": 3
+    },
+    "t0_not_fvs1": {
+      "H": 1,
+      "feedback_vertex_number": 0,
+      "word": []
+    }
+  },
+  "literal_controls": 63,
+  "max_L": 1018,
+  "moduli": 1024,
+  "sparse_lower_bound_controls": 300,
+  "status": "PASS",
+  "untuned_mod3_controls": 30
+}

@@ -1,0 +1,33 @@
+{
+  "counts": {
+    "closed_form": 200,
+    "connectivity": 255,
+    "moduli": 512,
+    "residue_instances": 98432,
+    "slot_formula": 1023,
+    "word_dp": 1023,
+    "word_permutations": 127
+  },
+  "family_L1_first8": [
+    3,
+    9,
+    31,
+    117,
+    459,
+    1825,
+    7287,
+    29133
+  ],
+  "hostiles": {
+    "C3_H": 3,
+    "L1_mod3_residues": [
+      0,
+      1
+    ],
+    "equal_H_00_vs_01_append0": [
+      1,
+      3
+    ]
+  },
+  "status": "PASS"
+}

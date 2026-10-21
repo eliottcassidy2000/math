@@ -1,0 +1,32 @@
+{
+  "A9_reparameterization_cases": 59582,
+  "A9_phase_forgetting_counterexample": {
+    "input_phase0": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "input_phase1": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "output_phase0": [
+      1,
+      2,
+      2,
+      1
+    ],
+    "output_phase1": [
+      0,
+      1,
+      0,
+      3
+    ]
+  },
+  "six_vector_group_order": 12,
+  "centralizer_of_B_in_group": 6,
+  "scope": "Finite controls of algebraic proofs; not a raw Turing-machine audit or proof of halting."
+}
