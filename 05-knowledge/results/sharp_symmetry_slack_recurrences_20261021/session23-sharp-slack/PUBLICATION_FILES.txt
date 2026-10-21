@@ -1,0 +1,8 @@
+README.md
+SHARP_POLE_ORDER.md
+verify_sharp_poles.py
+VERIFICATION.txt
+VERIFICATION_OPTIMIZED.txt
+sharp_pole_rows.json
+SHA256SUMS
+PUBLICATION_FILES.txt

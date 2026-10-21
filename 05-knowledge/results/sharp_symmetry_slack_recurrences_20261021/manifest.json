@@ -1,0 +1,107 @@
+{
+  "scope": "Exact approved source files with publication wrapper; finite computations and proof scopes remain distinct.",
+  "files": [
+    {
+      "source": "session23-sharp-slack/README.md",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack/README.md",
+      "bytes": 2019,
+      "sha256": "037bd2da66025092b3c308b1d2937f2d9b2b94c8ba98ec5b7b23c812b67b8732"
+    },
+    {
+      "source": "session23-sharp-slack/SHARP_POLE_ORDER.md",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack/SHARP_POLE_ORDER.md",
+      "bytes": 18318,
+      "sha256": "1e876eceba203e77031644a6e11c4f31cfebfa6bca649bc6e7eb7a34f3c4326b"
+    },
+    {
+      "source": "session23-sharp-slack/verify_sharp_poles.py",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack/verify_sharp_poles.py",
+      "bytes": 3242,
+      "sha256": "6aa97e07167dd42a517aa140b423a5648d439133dcb0e9616c13a93ea506f4a8"
+    },
+    {
+      "source": "session23-sharp-slack/VERIFICATION.txt",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack/VERIFICATION.txt",
+      "bytes": 6646,
+      "sha256": "831809fb77cd4fe2394cd32120ef0c5b4cfa7853137fe14ca6675870307837a9"
+    },
+    {
+      "source": "session23-sharp-slack/VERIFICATION_OPTIMIZED.txt",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack/VERIFICATION_OPTIMIZED.txt",
+      "bytes": 6646,
+      "sha256": "831809fb77cd4fe2394cd32120ef0c5b4cfa7853137fe14ca6675870307837a9"
+    },
+    {
+      "source": "session23-sharp-slack/sharp_pole_rows.json",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack/sharp_pole_rows.json",
+      "bytes": 188416,
+      "sha256": "23fc9f20b3d3dec66a66576d7acf2b05fd2dd19c7f4d382f60f6631ec14b0d49"
+    },
+    {
+      "source": "session23-sharp-slack/SHA256SUMS",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack/SHA256SUMS",
+      "bytes": 601,
+      "sha256": "4c947e2807df46f37a5d1a6c85ffb2116d3bbd4542113a35a548f4b3cdd35717"
+    },
+    {
+      "source": "session23-sharp-slack/PUBLICATION_FILES.txt",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack/PUBLICATION_FILES.txt",
+      "bytes": 150,
+      "sha256": "e082f6d71ac6c2d093d028a387dd7c655e2ab653e2e7e36a7ec4c5b23e2090c0"
+    },
+    {
+      "source": "session23-sharp-slack-review/README.md",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack-review/README.md",
+      "bytes": 397,
+      "sha256": "97916122060f82f930e815da4f8087070bb009a6f15e29cdeeda9182b13baaed"
+    },
+    {
+      "source": "session23-sharp-slack-review/AUDIT.md",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack-review/AUDIT.md",
+      "bytes": 14215,
+      "sha256": "62f2b52eb7223fe31d97630eec64a96164e99a75bce08f43ac06879fca4d7ed2"
+    },
+    {
+      "source": "session23-sharp-slack-review/check_sharp_slack.py",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack-review/check_sharp_slack.py",
+      "bytes": 13982,
+      "sha256": "515dc9b0b0f357302c9ea924661d813d0960963108ccb326e3938ac440640102"
+    },
+    {
+      "source": "session23-sharp-slack-review/receipt.json",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack-review/receipt.json",
+      "bytes": 5406,
+      "sha256": "e4aa18cdd235415cb58787c5f0e1e82cad7301e09ff821a0c805708309e0361f"
+    },
+    {
+      "source": "session23-sharp-slack-review/receipt-optimized.json",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack-review/receipt-optimized.json",
+      "bytes": 5406,
+      "sha256": "e4aa18cdd235415cb58787c5f0e1e82cad7301e09ff821a0c805708309e0361f"
+    },
+    {
+      "source": "session23-sharp-slack-review/source-pins.json",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack-review/source-pins.json",
+      "bytes": 506,
+      "sha256": "d0673e59b7619e4096b4d66bea4a1de0086578a1cb704e6eb06113b0da99e623"
+    },
+    {
+      "source": "session23-sharp-slack-review/SHA256SUMS",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack-review/SHA256SUMS",
+      "bytes": 577,
+      "sha256": "03cb5cb7d38ffd6c96f4e77be85fbaf8f72138412212070742dd8dca00fdd93d"
+    },
+    {
+      "source": "session23-sharp-slack-review/PUBLICATION_FILES.txt",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/session23-sharp-slack-review/PUBLICATION_FILES.txt",
+      "bytes": 126,
+      "sha256": "ec724410ef17371982f6765d8bec7ddbea5be11050adc98aa6960eb36792df23"
+    },
+    {
+      "source": "publisher wrapper",
+      "path": "05-knowledge/results/sharp_symmetry_slack_recurrences_20261021/README.md",
+      "bytes": 1500,
+      "sha256": "5dabd291ec5568ea88709ec3830518ef939b54f8d0d920bfdb59d9e511db9df6"
+    }
+  ]
+}

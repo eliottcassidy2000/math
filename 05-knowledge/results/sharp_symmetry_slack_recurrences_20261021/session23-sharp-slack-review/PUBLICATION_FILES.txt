@@ -1,0 +1,8 @@
+README.md
+AUDIT.md
+check_sharp_slack.py
+receipt.json
+receipt-optimized.json
+source-pins.json
+SHA256SUMS
+PUBLICATION_FILES.txt
