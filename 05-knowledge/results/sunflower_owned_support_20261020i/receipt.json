@@ -10,7 +10,7 @@
     ]
   },
   "checks": 88302,
-  "frontier_sha256": "0570d659280fea7f22a98a736e4eb40bf2f2b47829b601e917f4f97849cf93b8",
+  "frontier_sha256": "391f6d3380bcae4afb9a1bbd9522b74b1e9006012fa10a92be5bf0bbf938754f",
   "native_sunflower": {
     "N": 4096,
     "common_space_dimension": 3,

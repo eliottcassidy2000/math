@@ -309,7 +309,7 @@ def verify():
                 'common_space_dimension':3,'compressed_bins':flower_packet,
                 'final_ledger':ledger(flower,end),'depth10_ledger':ledger(flower,10)},
             'amplitude_hostile':{'123':interpolation((1,2,3))[0],'132':interpolation((1,3,2))[0]},
-            'frontier_sha256':hashlib.sha256(FRONTIER.read_bytes()).hexdigest()}
+            'frontier_sha256':hashlib.sha256(FRONTIER.read_bytes().replace(b'\r\n',b'\n')).hexdigest()}
 
 if __name__=='__main__':
     output=json.dumps(serial(verify()),indent=2,sort_keys=True)+'\n'
@@ -317,4 +317,3 @@ if __name__=='__main__':
     else:
         need((HERE/'receipt.json').read_text(encoding='utf-8')==output,'saved receipt mismatch')
     print(json.dumps({'checks':json.loads(output)['checks'],'LF_SHA256':hashlib.sha256(output.encode()).hexdigest()}))
-

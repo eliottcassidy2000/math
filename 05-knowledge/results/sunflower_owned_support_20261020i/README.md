@@ -299,7 +299,9 @@ All checks are explicit and remain active under optimization.
 
 Normal and optimized runs reproduce **88,302 checks** and identical saved
 JSON. LF SHA256:
-`c036b4b149fe5423dc7ab8763ed6bbf542981244c6f8dfd3e27c18d9e77dc575`.
+`6024d636e09521e952bb5a2e833f71663549f65860be7c4366b05053d3a8c9ff`.
+The input provenance digest normalizes CRLF to LF for cross-platform replay;
+this changes no source, observer or mathematical check.
 The final coefficient-domain control separates the linear norm bill from
 the quadratic diagonal of reweighted atoms; no physical reweighting is
 used in the native examples.
@@ -309,4 +311,3 @@ plus a separate optimized replay matching the saved receipt. The review
 checked terminal-wise rank minimality, literal source and first-arrival
 binding, overlap capacity, partial-clock boundaries, and the distinction
 between the linear bill and the quadratic diagonal of reweighted atoms.
-

@@ -136,6 +136,6 @@ if __name__=='__main__':
     result=run(); path=HERE/'receipt.json'
     data=(json.dumps(result,sort_keys=True,indent=2)+'\n').encode()
     if '--write' in sys.argv:path.write_bytes(data)
-    else:ck(path.read_bytes()==data,'saved receipt agreement')
+    else:ck(path.read_bytes().replace(b'\r\n',b'\n')==data,'saved receipt agreement')
     print(json.dumps({'checks':checks,'sha256':hashlib.sha256(data).hexdigest(),
                       'counts':result['counts'],'most_negative_retired':result['most_negative_retired']}))
