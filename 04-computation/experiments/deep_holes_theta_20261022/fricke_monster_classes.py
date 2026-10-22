@@ -1,8 +1,8 @@
 """The seven shell-1 Hauptmoduln are the Monster series 4A, 8A, 12H, 16C, 20F, 24I, 32A (session opus-2026-10-22-S53;
 HYP-9368 (B), THM-4760).
 
-fricke_cusp_certificate.py proves that Z_v - 24 is the normalized Hauptmodul of Gamma_0(e)+e for the D-type shell-1
-points v. This script identifies it. For each class X, E_X = prod eta(delta tau)^{r_delta} is the eta quotient of the
+fricke_cusp_certificate.py proves that Z_v - 24 is the normalized Hauptmodul of Gamma_0(e)+e for seven shell-1
+points v (carriers A1, D4, D6, D8, E7 in D10E7^2, D12, E8 in D16E8). This script identifies it. For each class X, E_X = prod eta(delta tau)^{r_delta} is the eta quotient of the
 OEIS entry for T_X (CITED; 4A and 8A derived below):
   - Ligozat: E_X is a modular function on Gamma_0(e) (weight 0, sum delta r = 0 and sum (e/delta) r = 0 mod 24,
     prod delta^r a square);

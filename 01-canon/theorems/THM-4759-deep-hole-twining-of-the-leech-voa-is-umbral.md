@@ -55,7 +55,7 @@ status: >
   - The M24-point orbit O6a is in the ATLAS (p. 181); see Sun-Wang arXiv 2111.10999, §2.3 and Lemma 2.11.
   - NOT FOUND, so new as far as we know: the Leech-side statements of (10) (they follow in a line from Borcherds'
     lemmas); the Fricke Hauptmodul twining (7), (10); the Fricke swap theorem (11); the p = 3, 5 descents
-    (E6^4 -> A2^12, E8^3 -> A8^3, A4^6); the H -> pH + 1 reading; the D-type shell-1 family. CDH Remark 2.2 asks for
+    (E6^4 -> A2^12, E8^3 -> A8^3, A4^6); the H -> pH + 1 reading; the shell-1 Fricke family (THM-4760). CDH Remark 2.2 asks for
   a conceptual proof that T^X is genus zero; (2) identifies T^X as a VOA trace but does not by itself prove genus zero.
   Session opus-2026-10-22-S53.
 session: opus-2026-10-22-S53
@@ -74,10 +74,10 @@ scripts:
   - 04-computation/experiments/deep_holes_theta_20261022/swap_fricke_proof.py (+ .out) (the Fricke swap theorem: certificates for the 23 pairs (rho, z''))
   - 04-computation/experiments/deep_holes_theta_20261022/swap_shell_test.py (+ .out) (the next shell m = h + 2 fails)
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_nudge.py (+ .out) (Fricke point = deep hole nudged 1/(h+1) toward a second-shell point; z'' = z + Leech wall)
-  - 04-computation/experiments/deep_holes_theta_20261022/fricke_shell_test.py (+ .out) (shell-1 points: Fricke-invariant twining for the seven D-types despite shallow multiples)
+  - 04-computation/experiments/deep_holes_theta_20261022/fricke_shell_test.py (+ .out) (shell-1 points: Fricke-invariant twining for seven of Borcherds' 2-targets despite shallow multiples)
 related:
   - THM-4758 (swap theorem and deep-hole theta identity)
-  - THM-4760 (cusp criterion for Fricke twinings; rationality input of (10); the D-type shell-1 family)
+  - THM-4760 (cusp criterion for Fricke twinings; rationality input of (10); the shell-1 Fricke family)
   - HYP-9363 (proved in THM-4758)
   - HYP-9368 (genus-zero inner automorphisms of V_Lambda: deep holes and Fricke points)
 ---
@@ -398,9 +398,10 @@ over the shells of N + ρ_N/h. Shell 0 gives m = h + 1. The next shell, m = h + 
 types (swap_shell_test.py): the coset theta series already differ below norm 2. So the swap holds
 exactly for m = h and m = h + 1.
 
-*But the Fricke twining extends one shell further for the D-types (now THM-4760).* The shell-1 Leech points
-(m = h + 2) still have a unique minimal vector at the Fricke norm 2 − 2/(h + 2). For the D-type components of the
-seven lattices A1²⁴ = D2¹², D4⁶, D6⁴, D8³, D10E7², D12² and D16E8, the twining is the Fricke Hauptmodul. The classes
+*But the Fricke twining extends one shell further for seven lattices (now THM-4760).* The shell-1 Leech points
+(m = h + 2) still have a unique minimal vector at the Fricke norm 2 − 2/(h + 2). For one shell-1 class in each of
+the seven lattices A1²⁴, D4⁶, D6⁴, D8³, D10E7² (E7 carrier), D12² and D16E8 (E8 carrier), the twining is the Fricke
+Hauptmodul. The classes
 are 4A, 8A, 12H, 16C, 20F, 24I and 32A, at orders 4, 8, 12, 16, 20, 24 and 32. This is PROVED in THM-4760 by a cusp
 criterion with Ligozat certificates for the names.
 
@@ -559,7 +560,7 @@ multiples, through q³ for all 23 types (fricke_h_plus_one.out; through q² in f
 - the deep proper multiples (verified);
 - the rationality of Θ_Λ^{[c″]}, so that F is Γ_0(e)-invariant.
 
-The first version of this proof left the third input implicit; it is not automatic. The E8 shell-1 points pass the
+The first version of this proof left the third input implicit; it is not automatic. The E8³ shell-1 points pass the
 first two conditions but are irrational (THM-4760 (4)). For the 23 (h+1)-points rationality is certified by
 THM-4760 (2)–(3): vector-valued Sturm on the theta vector of {x : x·c″ ∈ Z}. For the multiples of (7) it follows
 from (3), since Θ^{[c]} = η²⁴(T^X + 24 + k) is rational.

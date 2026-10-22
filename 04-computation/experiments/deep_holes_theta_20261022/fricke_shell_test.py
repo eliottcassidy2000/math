@@ -8,7 +8,7 @@ yields a Leech point c_w of order m. The script reports:
   - the minimal norms of the proper multiples j c_w;
   - the exact Fricke identity Theta^[c_w]/Delta = theta(Lambda + c_w)(m tau)/Delta(m tau) through q^(NORM/2 - 1).
 A line marked "ok" would be a strict Fricke point (unique Fricke-norm vector, 24 norm-2 vectors, deep multiples,
-Fricke-invariant). At shell 1 no type is ok. But for the seven D-type lattices the twining is Fricke-invariant
+Fricke-invariant). At shell 1 no type is ok. But for seven lattices (A1^24, D4^6, D6^4, D8^3, D10E7^2, D12^2, D16E8: one class each) the twining is Fricke-invariant
 although some multiple is shallow; that is the (B) family of HYP-9368.
 Usage: python fricke_shell_test.py NORM SHELL [types...]"""
 import sys, time, math, re

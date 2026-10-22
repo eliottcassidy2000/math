@@ -1,6 +1,6 @@
 ---
 id: THM-4760
-title: "Cusp criterion for Fricke twinings of the Leech VOA, and the 2-descent family. For v in Lambda (x) Q of order e with e v^2/2 in Z, Z_v - 24 = Theta_Lambda^[v]/eta^24 - 24 is the normalized Hauptmodul of Gamma_0(e)+e iff (0') Z_v has rational coefficients, (i) Lambda + v has a unique vector of norm 2 - 2/e, (ii) exactly 24 of norm 2, and (iii) at every intermediate cusp the twined shallow vectors of Lambda + cv cancel (Phi_c divides their residue polynomial). (0') is certified through q^1 by the vector-valued Sturm lemma. On the cusps adjacent to the 23 deep-hole cusps the criterion holds exactly for the 23 (h+1)-points (shell 0) and for seven shell-1 points, those of the D-type components of A1^24, D4^6, D6^4, D8^3, D10E7^2, D12^2, D16E8, of orders 4, 8, 12, 16, 20, 24, 32, which twine V_Lambda by 24 + T_4A, T_8A, T_12H, T_16C, T_20F, T_24I, T_32A; shell 2 gives none. Doubling realises Borcherds' 2-descent: for the nine Niemeier lattices with -1 in W the orbifold of 2v is the source N_1 (h = 2h_1 + 2) and 2v has a cancelling pair of minimal vectors, while for the other even h the point 2v is the (h/2+1)-point of a lattice of Coxeter number h/2. The E7, E8 and D24 shell-1 points satisfy (i)-(iii) but are irrational (fields containing Q(sqrt 5), Q(sqrt 2), Q(sqrt 3))"
+title: "Cusp criterion for Fricke twinings of the Leech VOA, and the 2-descent family. For v in Lambda (x) Q of order e with e v^2/2 in Z, Z_v - 24 = Theta_Lambda^[v]/eta^24 - 24 is the normalized Hauptmodul of Gamma_0(e)+e iff (0') Z_v has rational coefficients, (i) Lambda + v has a unique vector of norm 2 - 2/e, (ii) exactly 24 of norm 2, and (iii) at every intermediate cusp the twined shallow vectors of Lambda + cv cancel (Phi_c divides their residue polynomial). (0') is certified through q^1 by the vector-valued Sturm lemma. On the cusps adjacent to the 23 deep-hole cusps the criterion holds exactly for the 23 (h+1)-points (shell 0) and for seven shell-1 points, carried by A1 in A1^24, D4, D6, D8, E7 in D10E7^2, D12 and E8 in D16E8, of orders 4, 8, 12, 16, 20, 24, 32, which twine V_Lambda by 24 + T_4A, T_8A, T_12H, T_16C, T_20F, T_24I, T_32A; shell 2 gives none. Doubling realises Borcherds' 2-descent: for the nine Niemeier lattices with -1 in W the orbifold of 2v is the source N_1 (h = 2h_1 + 2) and 2v has a cancelling pair of minimal vectors, while for the other even h the point 2v is the (h/2+1)-point of a lattice of Coxeter number h/2. The other shell-1 points of the nine (carriers D10 in D10E7^2, D16 in D16E8, E8 in E8^3, D24) satisfy (i)-(iii) but are irrational (fields containing Q(sqrt 5), Q(sqrt 2), Q(sqrt 2), Q(sqrt 3)). The selection is Galois acting on Kac classes: for D_n at order 2n the shell-1 class is stable iff n in {2, 4, 6, 8, 12}; for E8 at order 32 the shell-1 class is stable and the principal one is not; for E7 at order 20 Galois swaps the two, which the swap of the two E7's of D10E7^2 undoes"
 status: >
   PROVED (the criterion), plus FINITE-EXACT certificates and CITED class names.
   - The criterion (1) is PROVED: classical theta transformations of lattice cosets, the Weil representation of
@@ -34,6 +34,9 @@ scripts:
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_cusp_certificate.py (+ .out: shells 0-2, all 23 types; _deep.out: shells 0-8 of the large-h types)
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_monster_classes.py (+ .out) (Ligozat certificates for 4A, 8A, 12H, 16C, 20F, 24I, 32A)
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_cusp_orbifolds.py (+ .out) (orbifolds of the shell-1 points and their multiples)
+  - 04-computation/experiments/deep_holes_theta_20261022/fricke_cusp_carriers.py (+ .out) (which component carries each shell-1 class)
+  - 04-computation/experiments/deep_holes_theta_20261022/root_multisets.py (+ .out) (Galois action on the root spectra, (4'))
+  - 04-computation/experiments/deep_holes_theta_20261022/fricke_cusp_distance.py (+ _A2.out, _A3.out) (cusps at distance 2 and 3 from the deep-hole cusps)
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_shell_test.py (+ .out), fricke_shell_all.py (+ .out) (q-series checks through q^2; q^4 for A1^24, D4^6)
 related:
   - THM-4759 (deep-hole twining; (7), (10): this theorem supplies the rationality input of their proofs)
@@ -87,22 +90,30 @@ related:
 the twining 24 + T_{(h+1)+(h+1)} of THM-4759 (10), and it supplies the rationality input that the proof given there
 leaves implicit.
 
-**(3′) Deeper shells (FINITE-EXACT, sampled where large).** No cusp in shell 2 of any type, and none in shells 2-8 of
-the eight lattices with h ≥ 16, satisfies the criterion. The orders reached include every missing genus-zero Fricke
-level between 18 and 50: 18, 21, 25, 27, 29, 35, 36, 39, 49 and 50.
+**(3′) Deeper shells and farther cusps (FINITE-EXACT, sampled where large).**
+- No cusp in shell 2 of any type, and none in shells 2-8 of the eight lattices with h ≥ 16, satisfies the criterion.
+  The orders reached include every missing genus-zero Fricke level between 18 and 50: 18, 21, 25, 27, 29, 35, 36, 39,
+  49 and 50.
+- Every cusp w has w·z = −A for some A ≥ 1, w = Az′ + y + (y²/2A)z, of height (h/2A)|y − Aρ_N/h|². At A = 2 (14 types
+  with h ≥ 10) and A = 3 (D12², A24, D16E8, E8³, D24), the cusps with |y − Aρ/h|² ≤ 4.5 have heights 4–53, sampled.
+  Every class that passes is one of the 30 of (3) and (4), recognised by its orbifold and series; no new order
+  appears.
+- The same Leech point is reached from several deep holes. For example, the D4⁶ shell-1 point (8A) and the A6⁴
+  (h+1)-point (also 8A) both appear at A = 2 from D6⁴; they are inequivalent (2v shallow versus deep).
 
-**(4) Shell 1 (FINITE-EXACT; class names CITED).** Exactly seven shell-1 classes satisfy the criterion. In each,
-the component carrying θ_j is of type D (A1 counts as D2).
+**(4) Shell 1 (FINITE-EXACT; class names CITED).** Exactly seven shell-1 classes satisfy the criterion, one in each
+of the lattices below. The column "carrier" is the component j with y = θ_j (identified by the excess
+(h/2)|y_j − ρ_j/h|² − (h/2)|ρ_j/h|² = 1).
 
-| order e = h + 2 | N | component | Z_v − 24 = q⁻¹ + … | class |
+| order e = h + 2 | N | carrier | Z_v − 24 = q⁻¹ + … | class |
 |---|---|---|---|---|
 | 4 | A1²⁴ | A1 | 276q + 2048q² + 11202q³ + 49152q⁴ | 4A |
 | 8 | D4⁶ | D4 | 36q + 128q² + 386q³ + 1024q⁴ | 8A |
 | 12 | D6⁴ | D6 | 14q + 36q² | 12H (A058486) |
 | 16 | D8³ | D8 | 8q + 16q² | 16C (A058516) |
-| 20 | D10E7² | D10 | 5q + 10q² | 20F (A058555) |
+| 20 | D10E7² | E7 | 5q + 10q² | 20F (A058555) |
 | 24 | D12² | D12 | 4q + 6q² | 24I (A058579) |
-| 32 | D16E8 | D16 | 2q + 4q² | 32A (A058629) |
+| 32 | D16E8 | E8 | 2q + 4q² | 32A (A058629) |
 
 In all seven, the only shallow proper multiple is 2v. Its coset Λ + 2v has exactly two vectors of norm < 2, namely
 ±μ with μ² = 2 − 4/e, and P = 1 + T. The eigenvalues of g on the two lowest states of the g²-twisted sector are
@@ -112,10 +123,30 @@ Every other shell-1 class fails, and each failure is a proof of non-Hauptmodular
 - **Odd h** (A2¹², A4⁶, A6⁴, A8³, A12², A24): n_2 = 23, and the point is irrational.
 - **Even h outside the nine lattices of (5)**: 2v has a single vector of norm < 2, so P = 1 and there is a pole at
   1/2.
-- **The E7 components of D10E7², the E8 components of D16E8 and E8³, and D24**: these pass (i), (ii) and (iii) but
-  are IRRATIONAL. Only the units d ≡ ±1 mod 10, ±1 mod 8 and ±1 mod 12 respectively preserve θ(Λ + dv) below norm 2.
-  So the coefficient fields contain Q(√5), Q(√2) and Q(√3). For E8 at d = 3, Λ + 3v has minimum 15/8, below the
-  Fricke norm 31/16.
+- **The other carriers of the nine lattices of (5)**: D10 in D10E7², D16 in D16E8, the E8's of E8³, and D24. These
+  pass (i), (ii) and (iii) but are IRRATIONAL. Only the units d ≡ ±1 mod 10, ±1 mod 8, ±1 mod 8 and ±1 mod 12
+  respectively preserve θ(Λ + dv) below norm 2. So the coefficient fields contain Q(√5), Q(√2), Q(√2) and Q(√3).
+  For E8³ at d = 3, Λ + 3v has minimum 15/8, below the Fricke norm 31/16.
+
+**(4′) Why these seven: Galois permutes Kac classes (VERIFIED on root spectra).** On a component R of Coxeter number
+h, the N-side element of a shell-1 point has one of two Kac classes of order h + 2:
+- P = ρ/(h + 2), Kac type (3; 1, …, 1), on every non-carrier;
+- C = (ρ + θ)/(h + 2), Kac type 2 at the node(s) next to α_0 and 1 at every other node, on the carrier.
+
+The Galois power x ↦ dx must permute the multiset of component classes up to Aut(N). On the root eigenvalue
+spectra (root_multisets.py, an independent necessary check), this works out as follows.
+
+| component, order | P stable | C stable | behaviour |
+|---|---|---|---|
+| D_n, 2n | yes (the degrees 2, 4, …, 2n − 2, n are stable) | iff (n − 2)d ≡ ±(n − 2) or ±2 mod 2n for all units d, i.e. n ∈ {2, 4, 6, 8, 12} among the Niemeier D_n | n = 10, 16, 24 are unstable |
+| E8, 32 | no | yes | |
+| E7, 20 | — | — | d ≡ ±3 mod 10 swaps P and C |
+
+This reproduces all nine cases:
+- A1²⁴, D4⁶, D6⁴, D8³ and D12² are stable.
+- D10E7² with an E7 carrier is stable up to the swap of its two E7's (its umbral Z/2).
+- D16E8 with the E8 carrier is stable, being an E8 C next to a D16 P.
+- The D10 carrier (an unstable C), the D16 carrier, E8³ (two unstable E8 P's) and D24 (an unstable C) are not.
 
 **(5) Doubling realises Borcherds' 2-descent (VERIFIED, all 23 types).** For every shell-1 point v of a Niemeier
 lattice N with even h, the orbifold of V_Λ at v is V_N, and 2v has order (h + 2)/2. Two cases occur.
@@ -252,9 +283,13 @@ both the twinings and the OEIS terms.
 - **Two kinds of Fricke points.** The 23 (h+1)-points are strict: all proper multiples are deep. The seven
   2-descent points are not: their double is a "doubled" Fricke point with a ± pair. Both kinds now satisfy the
   single criterion (1).
+- **Two classes, one twining.** Several orders carry two inequivalent Fricke points with the same Hauptmodul:
+  4 (A2¹² (h+1)-point and A1²⁴ shell-1), 7 (A5⁴D4, D4⁶), 8 (A6⁴ (h+1)-point and D4⁶ shell-1), 11, 13, 19 and 31.
+  Equal twining does not determine the point; the orbifolds differ.
 - **Prediction (registered in HYP-9368).** The realised Fricke orders are the 23 values 3–17, 19, 20, 23, 24, 26,
   31, 32 and 47. No Fricke Hauptmodul twining of V_Λ by a translation should exist at the other genus-zero Fricke
   levels: 18, 21, 25, 27, 29, 35, 36, 39, 41, 49, 50, 59, 71. Prime orders other than h + 1 are excluded by the
   dimension argument of HYP-9368 (A). The adjacent cusps of (3′) already exclude 18 through 50 on the shells tested.
-- **Rationality is the real filter for the E-types.** At shell 1, the poles cancel for all nine lattices with
-  −1 ∈ W. What separates D (n < 24) from E7, E8 and D24 is whether the Galois conjugates g^d stay conjugate to g.
+- **Rationality is the real filter.** At shell 1, the poles cancel for all nine lattices with −1 ∈ W. What selects
+  seven of the 13 classes is whether Galois permutes the component Kac classes, (4′). The answer is not "D-type":
+  E7 and E8 carriers occur, and the D10, D16 and D24 carriers are irrational.

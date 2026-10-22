@@ -354,16 +354,28 @@ Fricke constant n_2 - 24 (fricke_cusp_certificate.py).
 **Verdicts on the cusps adjacent to the deep-hole cusps.**
 - Shell 0: all 23 (h+1)-points pass. This also supplies the rationality input that the THM-4759 (10) proof left
   implicit.
-- Shell 1: exactly seven classes pass, the D-type components of A1^24, D4^6, D6^4, D8^3, D10E7^2, D12^2 and D16E8.
+- Shell 1: exactly seven classes pass, one in each of A1^24, D4^6, D6^4, D8^3, D10E7^2 (E7 carrier), D12^2 and
+  D16E8 (E8 carrier).
   Their twinings are 4A, 8A, 12H, 16C, 20F, 24I and 32A, with the names certified by Ligozat orders and
   W_e-symmetry of the OEIS eta quotients (fricke_monster_classes.py).
 - Shell 2 of all types, and shells 2-8 of the h >= 16 types: nothing passes. This covers every missing genus-zero
   Fricke level from 18 to 50.
 
-**Why D.** In the seven D-type points the only shallow multiple is 2v, with a pair +-mu of opposite eigenvalue, which
-cancels the pole at 1/2. The cancellation holds for all nine lattices with -1 in W. What fails for E7, E8 and D24 is
-rationality: some d v has a shallower coset (E8, d = 3: 15/8 < 31/16), and the fields contain Q(sqrt 5), Q(sqrt 2)
-and Q(sqrt 3).
+**What selects the seven.** In the seven points the only shallow multiple is 2v, with a pair +-mu of opposite
+eigenvalue, which cancels the pole at 1/2. The cancellation holds for all nine lattices with -1 in W. What fails for
+the D10 and D16 carriers, E8^3 and D24 is
+rationality. Some dv has a shallower coset (E8^3, d = 3: 15/8 < 31/16), and the fields contain Q(sqrt 5) (D10),
+Q(sqrt 2) (D16, E8^3) and Q(sqrt 3) (D24).
+
+Mechanism (root_multisets.py): Galois permutes the Kac classes of the components.
+- For D_n at order 2n, the principal class P is always stable. The shell-1 class C is stable iff n is 2, 4, 6, 8
+  or 12.
+- For E8 at order 32, C is stable and P is not.
+- For E7 at order 20, d = 3 swaps P and C. So D10E7^2 with an E7 carrier is rational up to the swap of its two
+  E7's.
+
+The pushed first version attributed the 20F and 32A classes to the D10 and D16 components. That was corrected the
+same session (MISTAKE-662).
 
 **Doubling = Borcherds' 2-descent (fricke_cusp_orbifolds.py).** For the nine lattices with -1 in W, the orbifold of
 V_Lambda at 2v is Borcherds' source N_1, with h = 2h_1 + 2:

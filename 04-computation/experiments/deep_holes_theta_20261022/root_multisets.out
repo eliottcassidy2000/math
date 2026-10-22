@@ -1,0 +1,16 @@
+a1^24     carrier A1  (m = 4): root multiset invariant under 2/2 units
+d4^6      carrier D4  (m = 8): root multiset invariant under 4/4 units
+d6^4      carrier D6  (m = 12): root multiset invariant under 4/4 units
+d8^3      carrier D8  (m = 16): root multiset invariant under 8/8 units
+d10e7^2   carrier D10 (m = 20): root multiset invariant under 4/8 units  [1, 9, 11, 19]
+d10e7^2   carrier E7  (m = 20): root multiset invariant under 8/8 units
+d12^2     carrier D12 (m = 24): root multiset invariant under 8/8 units
+d16e8     carrier D16 (m = 32): root multiset invariant under 8/16 units  [1, 7, 9, 15, 17, 23, 25, 31]
+d16e8     carrier E8  (m = 32): root multiset invariant under 16/16 units
+e8^3      carrier E8  (m = 32): root multiset invariant under 8/16 units  [1, 7, 9, 15, 17, 23, 25, 31]
+d24       carrier D24 (m = 48): root multiset invariant under 8/16 units  [1, 11, 13, 23, 25, 35, 37, 47]
+a5^4d4    carrier A5  (m = 8): root multiset invariant under 2/4 units  [1, 7]
+a5^4d4    carrier D4  (m = 8): root multiset invariant under 2/4 units  [1, 7]
+e6^4      carrier E6  (m = 14): root multiset invariant under 2/6 units  [1, 13]
+a15d9     carrier A15 (m = 18): root multiset invariant under 6/6 units
+a15d9     carrier D9  (m = 18): root multiset invariant under 2/6 units  [1, 17]

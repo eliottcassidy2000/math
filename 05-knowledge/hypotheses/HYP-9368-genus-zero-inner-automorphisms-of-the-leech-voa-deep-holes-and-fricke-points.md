@@ -1,6 +1,6 @@
 ---
 id: HYP-9368
-title: "Fricke points of the Leech lattice and genus-zero inner automorphisms of V_Lambda. (A) The strict Fricke points (order n, a unique nearest Leech point at squared distance 2 - 2/n, all proper multiples deep holes or in Lambda) are exactly the 23 points c''_N of THM-4759 (10), one per Niemeier lattice N, of order h(N) + 1, classified by their orbifold neighbour N. (B) The genus-zero inner automorphisms (Tr_{V_Lambda}(e^{2 pi i v(0)} q^{L_0 - 1}) - 24 a normalised Hauptmodul) are 0, the 23 deep holes, the strict Fricke points, and a further family of Fricke-type points whose shallow proper multiples cancel in the twining. Its known members are the shell-1 points of the D-type components (A1^24 = D2^12, D4^6, D6^4, D8^3, D10E7^2, D12^2, D16E8; orders 4, 8, 12, 16, 20, 24, 32), PROVED in THM-4760 to twine by 4A, 8A, 12H, 16C, 20F, 24I, 32A. Conjecture (B'): there are no others, so the Fricke orders realised by translations are exactly 3-17, 19, 20, 23, 24, 26, 31, 32, 47"
+title: "Fricke points of the Leech lattice and genus-zero inner automorphisms of V_Lambda. (A) The strict Fricke points (order n, a unique nearest Leech point at squared distance 2 - 2/n, all proper multiples deep holes or in Lambda) are exactly the 23 points c''_N of THM-4759 (10), one per Niemeier lattice N, of order h(N) + 1, classified by their orbifold neighbour N. (B) The genus-zero inner automorphisms (Tr_{V_Lambda}(e^{2 pi i v(0)} q^{L_0 - 1}) - 24 a normalised Hauptmodul) are 0, the 23 deep holes, the strict Fricke points, and a further family of Fricke-type points whose shallow proper multiples cancel in the twining. Its known members are seven shell-1 points of Borcherds' 2-targets (A1^24, D4^6, D6^4, D8^3, D10E7^2 with E7 carrier, D12^2, D16E8 with E8 carrier; orders 4, 8, 12, 16, 20, 24, 32), PROVED in THM-4760 to twine by 4A, 8A, 12H, 16C, 20F, 24I, 32A. Conjecture (B'): there are no others, so the Fricke orders realised by translations are exactly 3-17, 19, 20, 23, 24, 26, 31, 32, 47"
 status: >
   OPEN (conjecture). The 'if' directions are PROVED in THM-4759 (3), (9), (10) and THM-4760 (3), (4); THM-4760 also
   supplies the rationality input of THM-4759 (10).
@@ -24,25 +24,27 @@ status: >
   proper multiple to be deep. That is wrong: the twined contributions of shallow vectors at an intermediate cusp can
   cancel.
   - The members found are PROVED in THM-4760 by its cusp criterion: rationality (vector-valued Sturm), a unique
-    Fricke-norm vector, 24 norm-2 vectors, and Phi_c | P at the intermediate cusps. They are the seven D-type shell-1
-    points, of orders 4, 8, 12, 16, 20, 24 and 32, twining by 4A, 8A, 12H, 16C, 20F, 24I and 32A (Ligozat
+    Fricke-norm vector, 24 norm-2 vectors, and Phi_c | P at the intermediate cusps. They are seven shell-1
+    points (carriers A1, D4, D6, D8, E7 in D10E7^2, D12, E8 in D16E8), of orders 4, 8, 12, 16, 20, 24 and 32, twining by 4A, 8A, 12H, 16C, 20F, 24I and 32A (Ligozat
     certificates for the eta quotients; q^4 agreement for 4A and 8A).
   - Their only shallow multiple is 2v. It carries a pair +-mu with opposite eigenvalues, and its orbifold is
     Borcherds' 2-descent source N_1 (h = 2h_1 + 2).
   - The orbifold of v is N itself, of Coxeter number e - 2, so dim V'_1 = 24(e - 1), not 24e.
-  - All other shell-1 classes fail, each provably. The E7, E8 and D24 points pass (i)-(iii) and fail only
-    rationality (fields contain Q(sqrt 5), Q(sqrt 2), Q(sqrt 3)). The other A-free cases fail at a single shallow
+  - All other shell-1 classes fail, each provably. The D10 (in D10E7^2), D16 (in D16E8), E8^3 and D24 points
+    pass (i)-(iii) and fail only rationality (fields contain Q(sqrt 5), Q(sqrt 2), Q(sqrt 2), Q(sqrt 3)). The selection
+    is Galois acting on component Kac classes, THM-4760 (4'): E7 at order 20 has its two classes swapped by d = 3, which
+    the swap of the two E7's undoes. The other A-free cases fail at a single shallow
     vector of 2v, and odd h fails at n_2 = 23.
   - Shell 2 of every type, and shells 2-8 of the eight types with h >= 16, give nothing (sampled where large).
   - (B') below is the sharpened conjecture.
   OPEN:
   - (B') for cusps not adjacent to a deep-hole cusp.
   - A referenced write-up of the prime-order sketch.
-  - A conceptual proof of the rationality of the D-type points (they are certified, not explained).
+  - A conjugacy proof of the rationality (THM-4760 (4') explains it on root spectra; the certificate proves it).
   History:
   - The first S53 draft allowed only the eleven bad-prime multiples; the (h+1)-points refuted it.
   - The second version (registered as c31e9a6a3f..23dc8edd9e) claimed the 'only if' for all orders; the shell-1
-    D-type points refuted it. Both refutations happened within the session.
+    D-type-lattice points refuted it. Both refutations happened within the session.
   Session opus-2026-10-22-S53.
 session: opus-2026-10-22-S53
 source: 05-knowledge/results/leech_deep_hole_swap_theorem_20261022.md
@@ -84,7 +86,8 @@ nudged deep hole (fricke_nudge.py).
 - a strict Fricke point;
 - a Fricke-type point with shallow but cancelling multiples.
 
-The members of the last family found so far are the shell-1 points of the seven D-type components, of orders 4, 8,
+The members of the last family found so far are seven shell-1 points (carriers A1, D4, D6, D8, E7 in D10E7², D12,
+E8 in D16E8), of orders 4, 8,
 12, 16, 20, 24 and 32 (PROVED in THM-4760).
 
 **Conjecture (B′), sharpened.** There are no further Fricke-type points. So the Fricke Hauptmodul twinings of V_Λ by
@@ -116,7 +119,8 @@ the twining Z_{c_w} − 24 is the Fricke Hauptmodul of Γ_0(e) + e. This is PROV
 with the Monster names 4A, 8A, 12H (A058486), 16C (A058516), 20F (A058555), 24I (A058579) and 32A (A058629) certified
 by Ligozat. Yet 2c_w is shallow, carrying a pair ±μ whose twined contributions cancel. So the absence of extra poles
 comes from cancellation of the twined shallow states, not from deep multiples. Rationality is the remaining filter:
-the E7, E8 and D24 shell-1 points cancel too, but are irrational.
+the D10, D16, E8³ and D24 shell-1 points cancel too, but are irrational. In D10E7² and D16E8 the rational carrier
+is the E-component, not the D-component (THM-4760 (4), (4′)).
 
 The orbifold of V_Λ at c_w is V_N, of Coxeter number e − 2, so dim V′_1 = 24(e − 1). These are therefore not strict
 Fricke points, and they do not contradict (A).
