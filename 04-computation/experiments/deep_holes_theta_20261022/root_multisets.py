@@ -85,3 +85,40 @@ for name, comps in TYPES.items():
         good = [d for d in units if multiset(comps, j, m, d) == base]
         print(f'{name:9s} carrier {cj[0]}{cj[1]:<2d} (m = {m}): root multiset invariant under {len(good)}/{len(units)} units'
               + ('' if len(good) == len(units) else f'  {good}'))
+
+
+# Level-2 reading: x = (rho + lambda)/(h + 2) with lambda a level-2 weight; carrier = adjoint (theta), others = 2 Lambda_0.
+# Galois action on the level-2 primaries of E8 (k + h = 32) and E7 (k + h = 20), compared through root spectra.
+def spectrum(t, n, lam, m, d):
+    A = cartan(t, n)
+    c = Counter()
+    for r in positive_roots(A):
+        val = sum(r) + sum(lam.get(i, 0) * r[i] for i in range(n))
+        c[(d * val) % m] += 1
+        c[(-d * val) % m] += 1
+    return c
+
+
+print()
+for (t, n, m) in [('E', 8, 32), ('E', 7, 20)]:
+    A = cartan(t, n)
+    th = positive_roots(A)[-1]
+    prim = {'2L0': {}}
+    for i in range(n):
+        if th[i] == 2:
+            prim[f'L{i + 1}'] = {i: 1}
+        if th[i] == 1:
+            prim[f'L0+L{i + 1}'] = {i: 1}
+            for j in range(i, n):
+                if th[j] == 1:
+                    prim[f'L{i + 1}+L{j + 1}'] = {i: 2} if i == j else {i: 1, j: 1}
+    adj = [i for i in range(n) if sum(th[j] * A[j][i] for j in range(n)) != 0][0]
+    specs = {k: spectrum(t, n, v, m, 1) for k, v in prim.items()}
+    print(f'{t}{n} level 2 (k + h = {m}): primaries {list(prim)}, adjoint L{adj + 1}')
+    for d in [d for d in range(2, m // 2) if math.gcd(d, m) == 1]:
+        row = []
+        for k, v in prim.items():
+            img = spectrum(t, n, v, m, d)
+            hit = [k2 for k2, s2 in specs.items() if s2 == img]
+            row.append(f'{k}->{"/".join(hit) if hit else "?"}')
+        print(f'   sigma_{d}: ' + ', '.join(row))

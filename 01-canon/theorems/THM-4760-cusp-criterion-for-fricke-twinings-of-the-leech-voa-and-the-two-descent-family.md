@@ -283,6 +283,23 @@ both the twinings and the OEIS terms.
 - **Two kinds of Fricke points.** The 23 (h+1)-points are strict: all proper multiples are deep. The seven
   2-descent points are not: their double is a "doubled" Fricke point with a ± pair. Both kinds now satisfy the
   single criterion (1).
+- **Levels 0, 1, 2 (the THM-4759 (11) analogy extended; VERIFIED on root spectra).** Write the N-side element of a
+  cusp as (ρ̂ + λ̂)/(h + k) for a level-k weight λ̂ of each component.
+  - The deep hole is level 0 (λ̂ = 0, Kostant's principal element).
+  - The (h+1)-point is the level-1 vacuum (λ̂ = Λ_0, Kac (2; 1, …, 1)).
+  - A shell-1 point is level 2, with the adjoint θ̂ (the level-2 weight with finite part θ) on the carrier and the
+    vacuum 2Λ_0 on every other component. This is the Kac type of (4′).
+
+  Rationality is then Galois stability of this level-2 configuration under the Galois action on affine primaries,
+  σ_d(λ̂) = w(d(λ̂ + ρ̂)) − ρ̂ (Coste-Gannon 1994; Fuchs-Gato-Rivera-Schellekens-Schweigert 1994; CITED as the
+  framework). The computed instances (root_multisets.py) are:
+  - D_n at level 2 always fixes the vacuum, and fixes the adjoint iff n ∈ {2, 4, 6, 8, 12};
+  - E8 at level 2 is Ising-like: σ_3 swaps 2Λ_0 ↔ Λ_1 and fixes the adjoint Λ_8;
+  - E7 at level 2: σ_3 swaps the vacuum class {2Λ_0, 2Λ_7} with the adjoint class {Λ_1, Λ_6} (classes up to the
+    affine diagram symmetry).
+
+  The level-1 vacuum is always Galois-fixed, which is why all 23 (h+1)-points are rational. The swap theorem holds at
+  levels 0 and 1 and fails at level 2, where the Fricke property survives only for the Galois-stable configurations.
 - **Two classes, one twining.** Several orders carry two inequivalent Fricke points with the same Hauptmodul:
   4 (A2¹² (h+1)-point and A1²⁴ shell-1), 7 (A5⁴D4, D4⁶), 8 (A6⁴ (h+1)-point and D4⁶ shell-1), 11, 13, 19 and 31.
   Equal twining does not determine the point; the orbifolds differ.

@@ -14,3 +14,16 @@ a5^4d4    carrier D4  (m = 8): root multiset invariant under 2/4 units  [1, 7]
 e6^4      carrier E6  (m = 14): root multiset invariant under 2/6 units  [1, 13]
 a15d9     carrier A15 (m = 18): root multiset invariant under 6/6 units
 a15d9     carrier D9  (m = 18): root multiset invariant under 2/6 units  [1, 17]
+
+E8 level 2 (k + h = 32): primaries ['2L0', 'L1', 'L8'], adjoint L8
+   sigma_3: 2L0->L1, L1->2L0, L8->L8
+   sigma_5: 2L0->L1, L1->2L0, L8->L8
+   sigma_7: 2L0->2L0, L1->L1, L8->L8
+   sigma_9: 2L0->2L0, L1->L1, L8->L8
+   sigma_11: 2L0->L1, L1->2L0, L8->L8
+   sigma_13: 2L0->L1, L1->2L0, L8->L8
+   sigma_15: 2L0->2L0, L1->L1, L8->L8
+E7 level 2 (k + h = 20): primaries ['2L0', 'L1', 'L2', 'L6', 'L0+L7', 'L7+L7'], adjoint L1
+   sigma_3: 2L0->L1/L6, L1->2L0/L7+L7, L2->L0+L7, L6->2L0/L7+L7, L0+L7->L2, L7+L7->L1/L6
+   sigma_7: 2L0->L1/L6, L1->2L0/L7+L7, L2->L0+L7, L6->2L0/L7+L7, L0+L7->L2, L7+L7->L1/L6
+   sigma_9: 2L0->2L0/L7+L7, L1->L1/L6, L2->L2, L6->L1/L6, L0+L7->L0+L7, L7+L7->2L0/L7+L7

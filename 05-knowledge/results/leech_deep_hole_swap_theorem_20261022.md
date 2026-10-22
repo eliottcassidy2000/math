@@ -377,6 +377,16 @@ Mechanism (root_multisets.py): Galois permutes the Kac classes of the components
 The pushed first version attributed the 20F and 32A classes to the D10 and D16 components. That was corrected the
 same session (MISTAKE-662).
 
+**Levels.** In WZW language the shell-1 element is the level-2 point (rho^ + lambda^)/(h+2), with the adjoint on the
+carrier and the vacuum 2 Lambda_0 elsewhere. So the picture is:
+- deep hole = level 0;
+- Fricke point = level-1 vacuum;
+- shell-1 point = level-2 adjoint.
+
+Rationality is Galois symmetry of the level-2 primaries (Coste-Gannon; Fuchs-Gato-Rivera-Schellekens-Schweigert).
+E8 at level 2 is Ising-like (sigma_3: 2 Lambda_0 <-> Lambda_1, adjoint fixed), and E7 at level 2 has sigma_3 swapping
+vacuum and adjoint (root_multisets.py).
+
 **Doubling = Borcherds' 2-descent (fricke_cusp_orbifolds.py).** For the nine lattices with -1 in W, the orbifold of
 V_Lambda at 2v is Borcherds' source N_1, with h = 2h_1 + 2:
 
