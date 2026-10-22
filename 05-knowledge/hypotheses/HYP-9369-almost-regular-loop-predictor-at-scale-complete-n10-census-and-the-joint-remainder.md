@@ -1,6 +1,6 @@
 ---
 id: HYP-9369
-title: "The loop expansion beyond regular tournaments, tested at scale, and the joint remainder. On almost-regular even-order tournaments the weight-graded second-order predictor (Session30 decorated cores, w = excess + leaves) has RMSE(y - y2) of about 200/n^4 in y = n(1 - kappa/rho): 0.048, 0.020, 0.0096, 0.0053, 0.0030, 0.0010 at n = 8 (all 85 classes), 10 (all 13,333 classes), 12, 14, 16, 20 (samples). The remainder must be bounded jointly: after second order the cluster part log Phi(1) - log rho and the finite-size part log(kappa/Phi(1)) miss by -(234..260)/n^3 and +(235..261)/n^3, per-tournament correlation -0.998 to -0.999, while their sum misses by about 1/n^3 on average with per-tournament spread about 200/n^5. A terminal leaf acts as a pendant loop with the vector 1 in place of the loop diagonal d (decoration rule; square and claw identities)."
+title: "The loop expansion beyond regular tournaments, tested at scale, and the joint remainder. On almost-regular even-order tournaments the weight-graded second-order predictor (Session30 decorated cores, w = excess + leaves) has RMSE(y - y2) of about 200/n^4 in y = n(1 - kappa/rho): 0.048, 0.020, 0.0096, 0.0053, 0.0030, 0.0010 at n = 8 (all 85 classes), 10 (all 13,333 classes), 12, 14, 16, 20 (samples). The remainder must be bounded jointly: after second order the cluster part log Phi(1) - log rho and the finite-size part log(kappa/Phi(1)) miss by -(234..260)/n^3 and +(235..261)/n^3, per-tournament correlation -0.998 to -0.999, while their sum misses by about 1/n^3 on average with per-tournament spread about 200/n^5 (all 13 doubly regular 23-tournaments: -218.5, +225.3, joint +6.85). A terminal leaf acts as a pendant loop with the vector 1 in place of the loop diagonal d (decoration rule; square and claw identities)."
 status: >
   OPEN (opus-2026-10-22-S54). FINITE-EXACT: H for every class (Held-Karp, ar_tool.c) and exact forest numbers for
   n <= 16; the class lists at n = 4, 6, 8, 10 are complete (labelled masses 24, 2640, 3,230,080, 48,251,508,480 = the
@@ -94,8 +94,11 @@ The predictor approximates `A` by `W1 + W2`, the weight-one and weight-two core 
 | 12 | 1500 samples | −247.0 | +248.1 | −0.9988 | +1.14 | 198.9 |
 | 14 | 1500 samples | −254.2 | +255.3 | −0.9989 | +1.12 | 194.0 |
 | 16 | 600 samples | −259.6 | +260.6 | −0.9990 | +1.02 | 186.5 |
+| 23 | all 13 doubly regular classes | −218.5 | +225.3 | (classes agree to ±0.12) | +6.85 | — |
 
 Here `joint = log(κ/ρ) − W1 − W2 − B_f` (`scaling_table.out`, `budget*.txt`).
+
+The `n = 23` row is a regular family. It uses mac-mini's exact forest numbers for the 13 doubly regular 23-tournament classes (`budget_drt23.out`; HYP-9371 lane). The same cancellation appears there: separate parts `∓220/n³`, joint `+6.85/n³`. This joint remainder is the second-order predictor's actual residual: `y − y2 = −0.0117` for every class, with `P_23` the outlier at `+7.02`. It is about 3% of either part. For doubly regular `T` the cluster part `A − W1 − W2` is the four-loop vacuum term plus all higher loops. Since `n³X_3(P_23) = −363.5` (HYP-9371), the five-loop and higher terms contribute about `+145/n³` at `n = 23`. That is the asymptotic-series growth that HYP-9371 records (3.5, 29, 341).
 
 Three facts stand out:
 * **Each part is third order with a huge constant.** `n³(A − W1 − W2)` runs from −234 to −260 and `n³(B − B_f)` from +235 to +261 over `8 ≤ n ≤ 16`, drifting by about 3.2 per unit of `n`.
