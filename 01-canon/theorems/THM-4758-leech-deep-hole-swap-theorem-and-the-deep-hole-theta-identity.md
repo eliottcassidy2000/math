@@ -23,7 +23,8 @@ scripts:
 related:
   - HYP-9363 (stated in S52; proved here)
   - THM-4752 (the A_24 cusp nu = (1/2^25 | 5/2) in tournament coordinates)
-  - HYP-9368 (the swap theorem for arbitrary pairs of cusps)
+  - THM-4759 (Coxeter Frame shapes, umbral twining, Fricke points, Fricke swap theorem)
+  - HYP-9368 (genus-zero inner automorphisms of V_Lambda)
 ---
 
 # THM-4758 — the swap theorem for the Leech cusp
@@ -114,8 +115,13 @@ This is checked independently by direct enumeration of Leech vectors weighted by
 A2¹², A4⁶, A6⁴ and A24 (twined_hauptmodul.py).
 
 **(4) Divisor lattice.** The root counts R(L_d) = 24h_d of the intermediate Niemeier lattices are tabulated in
-swap_theorem_proof.out. Often h_d = d. The D- and E-types drop at odd d; for example D24 gives L_23 with h = 22, and
-E8³ gives L_15 with h = 14.
+swap_theorem_proof.out. Often h_d = d. For the D- and E-types it drops by one; for example D24 gives L_23 with h = 22,
+and E8³ gives L_15 with h = 14.
+
+This is explained in THM-4759 (8). L_d is the orbifold of V_Λ by g_c^{h/d}:
+- h_d = d − 1 exactly when h/d is a bad prime of every component, with h/d ∥ h (Fricke descent: the roots of height
+  divisible by h/d);
+- otherwise h_d = d, and (h/d)c is a deep hole of an A-containing type.
 
 ## Proof
 
@@ -179,3 +185,10 @@ All eight cases are also checked against exact enumeration (all_holes_J2.out).
 - **The Leech cusp is special.** The same certificate applied to arbitrary pairs of cusps of II_{25,1} passes for 275
   of the 276 pairs of Borcherds' representatives. It fails for A4⁶ × E8³ (m = 7), whose M^* has asymmetric vectors of
   norm 12/7 (cusp_pairs.py).
+
+  Around the Leech cusp it holds for exactly the two nearest cusp types of each N:
+  - m = h (this theorem);
+  - m = h + 1, the cusp z″ = z + r one Leech wall away. This is the Fricke swap theorem, THM-4759 (11), with
+    defect 24.
+
+  It fails at the next shell, m = h + 2 (swap_shell_test.py).
