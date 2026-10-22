@@ -1,6 +1,7 @@
 # Session30: complete formal near-regular loop corrections
 
-ACTIVE checkpoint,2026-10-22. The mathematical session has not yet ended.
+Research completed2026-10-22. Final publication verification and portable replay
+are recorded in the accompanying close-out receipt.
 
 ## Main answer
 
@@ -199,3 +200,19 @@ variables leaves an endpoint vector, a rooted class, or an exterior/boundary
 quadratic term. Dropping that surviving data causes the concrete failures above.
 This is a comparison of explicit elimination maps, not a claimed equivalence
 between tournament counting and Collatz dynamics.
+
+
+## Close-out and reproduction
+
+The mathematical exploration is complete. Sixteen representative checks passed
+in a temporary copy of the exact published packet;39 local Markdown link targets
+were checked without a broken target. See [portable replay receipt](session30-root/SMOKE_RECEIPT.json)
+and [close-out](session30-root/CLOSEOUT.md). These checks complement, rather than
+replace, the independent proof and finite-universe audits above.
+
+Run the smoke suite from any working directory with:
+
+    python3 session30-root/run_smoke_checks.py --packet-root PATH_TO_THIS_PACKET --repository-root PATH_TO_MATH_REPO --out receipt.json
+
+It copies the packet before running checks that write results. The Collatz
+checks require the existing pinned frontier in the specified repository.

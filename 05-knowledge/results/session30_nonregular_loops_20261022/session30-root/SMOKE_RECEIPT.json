@@ -1,0 +1,175 @@
+{
+  "scope": "Representative portable replay, not a new exhaustive mathematical audit",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "session30-root/check_centering.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.1659,
+      "output_sha256": "3b964d4e606f5ece57012f5cbbda49d59d7e14abced8d39d8447b1394ccea5fc",
+      "output_tail": "877356888,\n      \"tree_penalty\": 1.0285714285714285\n    },\n    {\n      \"q\": 11,\n      \"rho\": 2.4684143798607843,\n      \"tree_penalty\": 1.0101010101010102\n    },\n    {\n      \"q\": 19,\n      \"rho\": 2.574157313276137,\n      \"tree_penalty\": 1.0030959752321982\n    },\n    {\n      \"q\": 23,\n      \"rho\": 2.59935111631197,\n      \"tree_penalty\": 1.0020703933747408\n    },\n    {\n      \"q\": 31,\n      \"rho\": 2.6301696539123136,\n      \"tree_penalty\": 1.0011123470522807\n    },\n    {\n      \"q\": 43,\n      \"rho\": 2.6548381027426804,\n      \"tree_penalty\": 1.000567214974475\n    },\n    {\n      \"q\": 47,\n      \"rho\": 2.6602540884885073,\n      \"tree_penalty\": 1.0004728132387712\n    },\n    {\n      \"q\": 59,\n      \"rho\": 2.6720857445393005,\n      \"tree_penalty\": 1.0002973535533752\n    },\n    {\n      \"q\": 67,\n      \"rho\": 2.6776140659038945,\n      \"tree_penalty\": 1.0002296211251434\n    },\n    {\n      \"q\": 71,\n      \"rho\": 2.6799101043023614,\n      \"tree_penalty\": 1.0002041232904677\n    },\n    {\n      \"q\": 79,\n      \"rho\": 2.683803369368761,\n      \"tree_penalty\": 1.0001643925694566\n    },\n    {\n      \"q\": 83,\n      \"rho\": 2.685468064028219,\n      \"tree_penalty\": 1.0001487431206308\n    }\n  ],\n  \"status\": \"PASS\"\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "session30-root/check_isospectral_metagraph.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.3635,
+      "output_sha256": "f9a8423870b276419e9d48e2a6a9db2fdaab24c22593b982cf071f466d28e54e",
+      "output_tail": "{\n  \"status\": \"PASS\",\n  \"universe\": \"two explicit six-vertex witnesses; all720 permutations for each\",\n  \"witnesses\": [\n    {\n      \"bits\": \"000110001000000\",\n      \"H\": 41,\n      \"Aut\": 1,\n      \"anti\": 1,\n      \"h\": 41,\n      \"b\": 9,\n      \"deficit\": 32,\n      \"fundamental_black_degree\": 16,\n      \"charpoly\": [\n        1,\n        0,\n        15,\n        0,\n        15,\n        0,\n        1\n      ],\n      \"rho\": \"66637/27755\"\n    },\n    {\n      \"bits\": \"000110011000000\",\n      \"H\": 45,\n      \"Aut\": 3,\n      \"anti\": 3,\n      \"h\": 15,\n      \"b\": 9,\n      \"deficit\": 6,\n      \"fundamental_black_degree\": 3,\n      \"charpoly\": [\n        1,\n        0,\n        15,\n        0,\n        15,\n        0,\n        1\n      ],\n      \"rho\": \"66637/27755\"\n    }\n  ]\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "session30-root/check_random_controls.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0504,
+      "output_sha256": "496bb5e43e75914d0337856f955a51a0a2220649ad5d61b8963167f6cd44530d",
+      "output_tail": "[\n  {\n    \"n\": 2,\n    \"count\": 2,\n    \"E_W\": \"2\",\n    \"Var_W\": \"0\",\n    \"E_trS4\": \"2\"\n  },\n  {\n    \"n\": 3,\n    \"count\": 8,\n    \"E_W\": \"6\",\n    \"Var_W\": \"12\",\n    \"E_trS4\": \"18\"\n  },\n  {\n    \"n\": 4,\n    \"count\": 64,\n    \"E_W\": \"12\",\n    \"Var_W\": \"48\",\n    \"E_trS4\": \"60\"\n  },\n  {\n    \"n\": 5,\n    \"count\": 1024,\n    \"E_W\": \"20\",\n    \"Var_W\": \"120\",\n    \"E_trS4\": \"140\"\n  }\n]\n"
+    },
+    {
+      "command": [
+        "python3",
+        "session30-root/check_selfconverse_completion.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0964,
+      "output_sha256": "972e173b82e102cc832175a22e09fa85e6d54921f2c4ac9428d262efbec84bf3",
+      "output_tail": "\n          \"bits\": \"1101000100101111010110101110\",\n          \"self_converse\": true,\n          \"admissible_fixed_vertices\": null\n        },\n        {\n          \"bits\": \"0111010100101111010110101110\",\n          \"self_converse\": false,\n          \"admissible_fixed_vertices\": null\n        },\n        {\n          \"bits\": \"0011010101000001010110101110\",\n          \"self_converse\": false,\n          \"admissible_fixed_vertices\": null\n        },\n        {\n          \"bits\": \"0010011001001001100101000010\",\n          \"self_converse\": true,\n          \"admissible_fixed_vertices\": null\n        },\n        {\n          \"bits\": \"0110110001001001100101000010\",\n          \"self_converse\": false,\n          \"admissible_fixed_vertices\": null\n        },\n        {\n          \"bits\": \"0110110010011001100101000010\",\n          \"self_converse\": false,\n          \"admissible_fixed_vertices\": null\n        },\n        {\n          \"bits\": \"0010110010011010010101000010\",\n          \"self_converse\": false,\n          \"admissible_fixed_vertices\": null\n        },\n        {\n          \"bits\": \"0011010001011001010010001000\",\n          \"self_converse\": false,\n          \"admissible_fixed_vertices\": null\n        }\n      ]\n    }\n  }\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "session30-root/check_completion_blue_gates.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0419,
+      "output_sha256": "b313457b37edf25f59a66db29175d0334f9be31c6f7beea6a1a585cfc5dcd85c",
+      "output_tail": "{\n  \"status\": \"PASS\",\n  \"records\": [\n    {\n      \"bits\": \"000110001000000\",\n      \"T\": {\n        \"H\": 41,\n        \"Aut\": 1,\n        \"b\": 9\n      },\n      \"completion\": {\n        \"H\": 175,\n        \"Aut\": 7,\n        \"b\": 9\n      },\n      \"anti_involution\": [\n        5,\n        4,\n        3,\n        2,\n        1,\n        0\n      ],\n      \"centralizer\": 1,\n      \"halfpath_endpoint_counts\": [\n        4,\n        2,\n        3,\n        3,\n        2,\n        2\n      ],\n      \"even_gate\": 9,\n      \"completion_gate\": 9,\n      \"gate_flux\": 0\n    },\n    {\n      \"bits\": \"000110011000000\",\n      \"T\": {\n        \"H\": 45,\n        \"Aut\": 3,\n        \"b\": 9\n      },\n      \"completion\": {\n        \"H\": 171,\n        \"Aut\": 3,\n        \"b\": 9\n      },\n      \"anti_involution\": [\n        1,\n        0,\n        5,\n        4,\n        3,\n        2\n      ],\n      \"centralizer\": 1,\n      \"halfpath_endpoint_counts\": [\n        3,\n        3,\n        2,\n        2,\n        4,\n        2\n      ],\n      \"even_gate\": 9,\n      \"completion_gate\": 9,\n      \"gate_flux\": 0\n    }\n  ]\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "session30-root/check_blue_flux_census.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0491,
+      "output_sha256": "90e2bc6a8f38e42117498eea4331f0f8c614d1853473b4aaa1692f1ebc8d3fe2",
+      "output_tail": "3,\n        1,\n        0,\n        2\n      ],\n      \"centralizer\": 1,\n      \"endpoint_halfpaths\": [\n        6,\n        6,\n        9,\n        8,\n        8,\n        10,\n        8,\n        9\n      ],\n      \"f_even\": 35,\n      \"f_completion\": 35,\n      \"blue_even\": 35,\n      \"blue_completion\": 35,\n      \"flux\": 0\n    },\n    {\n      \"bits\": \"1101000100101111010110101110\",\n      \"sigma\": [\n        6,\n        3,\n        7,\n        1,\n        5,\n        4,\n        0,\n        2\n      ],\n      \"centralizer\": 1,\n      \"endpoint_halfpaths\": [\n        9,\n        10,\n        10,\n        8,\n        10,\n        8,\n        9,\n        8\n      ],\n      \"f_even\": 37,\n      \"f_completion\": 35,\n      \"blue_even\": 37,\n      \"blue_completion\": 35,\n      \"flux\": 2\n    },\n    {\n      \"bits\": \"0010011001001001100101000010\",\n      \"sigma\": [\n        2,\n        5,\n        0,\n        7,\n        6,\n        1,\n        4,\n        3\n      ],\n      \"centralizer\": 3,\n      \"endpoint_halfpaths\": [\n        10,\n        9,\n        8,\n        8,\n        10,\n        9,\n        8,\n        10\n      ],\n      \"f_even\": 33,\n      \"f_completion\": 39,\n      \"blue_even\": 11,\n      \"blue_completion\": 13,\n      \"flux\": -2\n    }\n  ]\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "session30-deficit-six/check.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.405,
+      "output_sha256": "107653d2d26d1e32515500749d2525866b1d0069119554c9df8ef2cbc61f7f13",
+      "output_tail": "{\n  \"status\": \"conditional global classification; exact algebra and known-family controls\",\n  \"numerator\": \"-z**18 + z**17 - z**16 + 2*z**15 - z**14 + 3*z**10 + z**9 - 2*z**8 - 2*z**7 + z**5\",\n  \"denominator\": \"z**18 + 2*z**16 - 2*z**15 + 3*z**14 - 2*z**13 + 3*z**12 - 4*z**11 - z**10 + 2*z**7 - 4*z**6 + 2*z**5 + z**4 + 2*z**3 - z**2 - 2*z + 1\",\n  \"gcd\": 1,\n  \"minimal_recurrence_order\": 18,\n  \"conditional_sharp_onset\": 19,\n  \"coefficients_0_to_40\": [\n    0,\n    0,\n    0,\n    0,\n    0,\n    1,\n    2,\n    3,\n    4,\n    7,\n    11,\n    18,\n    29,\n    47,\n    71,\n    114,\n    175,\n    276,\n    425,\n    665,\n    1019,\n    1583,\n    2422,\n    3739,\n    5712,\n    8774,\n    13375,\n    20461,\n    31125,\n    47450,\n    72038,\n    109498,\n    165922,\n    251565,\n    380512,\n    575653,\n    869272,\n    1312539,\n    1978965,\n    2983022,\n    4491233\n  ],\n  \"remaining_source_orders\": [\n    15,\n    18,\n    20,\n    21,\n    24,\n    28\n  ],\n  \"known_n6_H\": 45\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "session30-nonregular/prove_closed_kernels.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.2226,
+      "output_sha256": "c1e5bad2f6f0155eb301712ffe6608acf2ab64f82d92470ef52c7f5285dcf5d2",
+      "output_tail": "path actual= x**2/(x**2 + 1) exact_difference= 0\nlollipop actual= -4*x**2*y**2/((x - 1)*(x + 1)*(x**2 + 1)*(y**2 + 1)) exact_difference= 0\nY actual= 2*x*y*z*(x*y*z + x + y + z)/(3*(x**2 + 1)*(y**2 + 1)*(z**2 + 1)) exact_difference= 0\n"
+    },
+    {
+      "command": [
+        "python3",
+        "session30-nonregular/compare_symbolic.py",
+        "session30-decorated-engine/symbolic-kernels.json"
+      ],
+      "exit_code": 0,
+      "seconds": 12.8508,
+      "output_sha256": "32ef8e74277e8352abef8a539476eb7f0efed091031b8a8d1baed683d9312f75",
+      "output_tail": "T 2 ((0, 0), (0, 1), (0, 1), (0, 1)) 33\nEXACT 2 ((0, 0), (0, 1), (0, 1), (1, 1)) 47\nEXACT 2 ((0, 1), (0, 1), (0, 1), (0, 1)) 57\nEXACT 2 ((0, 0), (0, 0), (0, 1)) 5\nEXACT 2 ((0, 0), (0, 1), (0, 1), (1, 2), (2, 2)) 99\nEXACT 2 ((0, 0), (0, 1), (0, 2), (1, 1), (2, 2)) 135\nEXACT 2 ((0, 0), (0, 1), (0, 2), (1, 2), (1, 2)) 89\nEXACT 2 ((0, 0), (0, 1), (1, 2), (1, 2), (1, 2)) 123\nEXACT 2 ((0, 1), (0, 1), (0, 2), (0, 2), (1, 2)) 101\nEXACT 2 ((0, 0), (0, 1), (0, 1), (1, 2)) 33\nEXACT 2 ((0, 0), (0, 1), (0, 2), (1, 1)) 45\nEXACT 2 ((0, 1), (0, 1), (0, 1), (0, 2)) 41\nEXACT 2 ((0, 0), (0, 1), (0, 2)) 15\nEXACT 2 ((0, 0), (0, 1), (1, 2), (1, 2), (2, 3), (3, 3)) 243\nEXACT 2 ((0, 0), (0, 1), (1, 2), (1, 3), (2, 2), (3, 3)) 351\nEXACT 2 ((0, 0), (0, 1), (1, 2), (1, 3), (2, 3), (2, 3)) 201\nEXACT 2 ((0, 1), (0, 1), (0, 2), (1, 3), (2, 3), (2, 3)) 197\nEXACT 2 ((0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)) 158\nEXACT 2 ((0, 0), (0, 1), (1, 2), (1, 2), (2, 3)) 81\nEXACT 2 ((0, 0), (0, 1), (1, 2), (1, 3), (2, 2)) 117\nEXACT 2 ((0, 1), (0, 1), (0, 2), (1, 2), (2, 3)) 67\nEXACT 2 ((0, 0), (0, 1), (1, 2), (1, 3)) 39\nEXACT 2 ((0, 1), (0, 1), (0, 2), (1, 3)) 27\nEXACT 2 ((0, 1), (0, 2), (0, 3)) 13\nALL31 EXACTLY EQUAL\n"
+    },
+    {
+      "command": [
+        "python3",
+        "session30-decorated-engine/check_prediction_stability.py"
+      ],
+      "exit_code": 0,
+      "seconds": 4.3853,
+      "output_sha256": "f3840aad9f2efc8db2176434f7693c64c0f317042ada5b1208cad02c7bcf0495",
+      "output_tail": "{\n  \"status\": \"PASS\",\n  \"checks\": [\n    {\n      \"q\": 7,\n      \"differences\": {\n        \"D_A1\": 6.217248937900877e-15,\n        \"D2_A1\": 1.2789769243681803e-13,\n        \"y2\": 5.46229728115577e-14,\n        \"kappa2\": 2.1094237467877974e-14\n      }\n    },\n    {\n      \"q\": 11,\n      \"differences\": {\n        \"D_A1\": 4.6629367034256575e-15,\n        \"D2_A1\": 3.4638958368304884e-13,\n        \"y2\": 1.7852386235972517e-13,\n        \"kappa2\": 4.440892098500626e-14\n      }\n    }\n  ]\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "session30-deleted-drt/derive_a1.py"
+      ],
+      "exit_code": 0,
+      "seconds": 3.0776,
+      "output_sha256": "5cc5a9ce0ebe235007d74b3e9ac252ac864b4999e0b9bbb4e5495958da41570f",
+      "output_tail": "X1 -7*u*z**4/2 + u**2*(z**6/3 - 3*z**4*(2*z**2 - 2)/2 + 5*z**4) + O(u**3)\nT -u*z**2 + O(u**3)\nL 4*u**2*z**4 + O(u**3)\nA1 u*(-7*z**4/2 - z**2) + u**2*(z**6/3 - 3*z**4*(2*z**2 - 2)/2 + 9*z**4) + O(u**3)\nY1(z) -u*z**2*(16*u*z**4 - 48*u*z**2 + 6*u + 9*z**2)/6\nY2(z) u**2*z**4*(27*z**4 + 176*z**2 - 168)/24\nY1(1) 13*u**2/3 - 3*u/2\nY2(1) 35*u**2/24\nkappa1/e 1 - 5*u/2 + 20*u**2/3 + O(u**3)\nkappa2/e 1 - 5*u/2 + 65*u**2/8 + O(u**3)\n"
+    },
+    {
+      "command": [
+        "python3",
+        "session30-deleted-drt/derive_a2_leading.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.0343,
+      "output_sha256": "77cf3896b797b0411330a2e96ec7abf7e07781fa424a1c9de4eaf9297b247e0c",
+      "output_tail": "(0, 0), (0, 1), (1, 2), (1, 3), (2, 2), (3, 3)], 'excess': 2, 'leaves': 0, 'leading': {}}\n{'core_index': 22, 'V': 4, 'edges': [(0, 0), (0, 1), (1, 2), (1, 3), (2, 3), (2, 3)], 'excess': 2, 'leaves': 0, 'leading': {}}\n{'core_index': 23, 'V': 4, 'edges': [(0, 1), (0, 1), (0, 2), (1, 3), (2, 3), (2, 3)], 'excess': 2, 'leaves': 0, 'leading': {}}\n{'core_index': 24, 'V': 4, 'edges': [(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 3)], 'excess': 2, 'leaves': 0, 'leading': {}}\n{'core_index': 25, 'V': 4, 'edges': [(0, 0), (0, 1), (1, 2), (1, 2), (2, 3)], 'excess': 1, 'leaves': 1, 'leading': {}}\n{'core_index': 26, 'V': 4, 'edges': [(0, 0), (0, 1), (1, 2), (1, 3), (2, 2)], 'excess': 1, 'leaves': 1, 'leading': {}}\n{'core_index': 27, 'V': 4, 'edges': [(0, 1), (0, 1), (0, 2), (1, 2), (2, 3)], 'excess': 1, 'leaves': 1, 'leading': {}}\n{'core_index': 28, 'V': 4, 'edges': [(0, 0), (0, 1), (1, 2), (1, 3)], 'excess': 0, 'leaves': 2, 'leading': {}}\n{'core_index': 29, 'V': 4, 'edges': [(0, 1), (0, 1), (0, 2), (1, 3)], 'excess': 0, 'leaves': 2, 'leading': {}}\n{'core_index': 30, 'V': 4, 'edges': [(0, 1), (0, 2), (0, 3)], 'excess': -1, 'leaves': 3, 'leading': {}}\nTOTAL {6: Fraction(26, 1), 4: Fraction(7, 1)}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "session30-flat-universality/verify_formal.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9195,
+      "output_sha256": "165438d8f567f09dbf00d5da8565a42ec6830b63146cc74bafce898e58896cdf",
+      "output_tail": "{\n  \"figure_eight\": \"-3*u**2*z**6 + 7*u**2*z**4 - 7*u*z**4/2\",\n  \"vacuum_A1\": \"-8*u**2*z**6/3 + 8*u**2*z**4 - 7*u*z**4/2\",\n  \"A1\": \"-8*u**2*z**6/3 + 12*u**2*z**4 - 7*u*z**4/2 - u*z**2\",\n  \"Y1\": \"-8*u**2*z**6/3 + 8*u**2*z**4 - u**2*z**2 - 3*u*z**4/2\",\n  \"Y2\": \"9*u**2*z**8/8 + 22*u**2*z**6/3 - 7*u**2*z**4\",\n  \"kappa1_over_e\": \"20*u**2/3 - 5*u/2 + 1\",\n  \"kappa2_over_e\": \"65*u**2/8 - 5*u/2 + 1\"\n}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "session30-flat-audit/audit.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.067,
+      "output_sha256": "62f69b8331fa0ead0d7d54bb35076f7d9606c2a7a9bf92e7f7a84db115ffce3b",
+      "output_tail": "z': '1.2j', 'pack_sizes': [14, 15], 'max_B': 16, 'max_Sd': 9, 'scaled_A1_remainder_abs': 52.549224500144135}\n{'n': 82, 'z': '1', 'pack_sizes': [27, 27], 'max_B': 18, 'max_Sd': 9, 'scaled_A1_remainder_abs': 129.0876767998984}\n{'n': 82, 'z': '(0.7+0.4j)', 'pack_sizes': [27, 27], 'max_B': 18, 'max_Sd': 9, 'scaled_A1_remainder_abs': 31.27687806780935}\n{'n': 82, 'z': '1.2j', 'pack_sizes': [27, 27], 'max_B': 18, 'max_Sd': 9, 'scaled_A1_remainder_abs': 127.83087770323984}\n{'n': 130, 'z': '1', 'pack_sizes': [42, 43], 'max_B': 18, 'max_Sd': 9, 'scaled_A1_remainder_abs': 127.32567167933534}\n{'n': 130, 'z': '(0.7+0.4j)', 'pack_sizes': [42, 43], 'max_B': 18, 'max_Sd': 9, 'scaled_A1_remainder_abs': 31.424538251420294}\n{'n': 130, 'z': '1.2j', 'pack_sizes': [42, 43], 'max_B': 18, 'max_Sd': 9, 'scaled_A1_remainder_abs': 156.5607711152562}\n{'n': 198, 'z': '1', 'pack_sizes': [65, 66], 'max_B': 18, 'max_Sd': 9, 'scaled_A1_remainder_abs': 131.25251134689938}\n{'n': 198, 'z': '(0.7+0.4j)', 'pack_sizes': [65, 66], 'max_B': 18, 'max_Sd': 9, 'scaled_A1_remainder_abs': 32.91502000995139}\n{'n': 198, 'z': '1.2j', 'pack_sizes': [65, 66], 'max_B': 18, 'max_Sd': 9, 'scaled_A1_remainder_abs': 167.41523152505786}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "session30-collatz/verify.py",
+        "--repo-root",
+        "/workspace/scratch/07d5532f2fce/math",
+        "--out",
+        "base-replay.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8208,
+      "output_sha256": "5ac8ade52e039d73d0167530d2f10f84e2b2ddf243afe0173c9f363c0e973ae9",
+      "output_tail": "4487542793012780631851008], [730166745731460135262101046296576, 15211807202738752817960438464512, 15211807202738752817960438464512], [46730671726813448656774466962980864, 973555660975280180349468061728768, 973555660975280180349468061728768], [2990762990516060714033565885630775296, 62307562302417931542365955950641152, 62307562302417931542365955950641152], [100000000000000000000000000000000000000000000000007, 2083333333333333333333333333333333333333333333333, 2083333333333333333333333333333333333333333333334]], \"literal_family_rows\": 29595, \"open\": [\"uniform outside-plus-boundary Schur gate\", \"uniform 153N\", \"universal source entry\"], \"outside_algebra_cases\": 6561, \"reported_bounds_independently_recovered\": false, \"reported_composed_bounds\": [520738, 1039055, 3848613], \"selected_scale_counts\": [{\"N\": 4096, \"counts\": {\"A\": 85, \"B\": 86}}, {\"N\": 8192, \"counts\": {\"A\": 171, \"B\": 171}}, {\"N\": 32768, \"counts\": {\"A\": 683, \"B\": 683}}, {\"N\": 63666, \"counts\": {\"A\": 1327, \"B\": 1326}}, {\"N\": 100000, \"counts\": {\"A\": 2083, \"B\": 2084}}], \"source_and_register_hash\": \"3576517481230f4bab4b548b0969b6e58ca9003ff328f210f232e8492be96379\", \"status\": \"PROVED_SCOPED_AND_FINITE_EXACT\", \"unresolved_at_500\": 0}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "session30-collatz/verify_extension.py",
+        "--repo-root",
+        "/workspace/scratch/07d5532f2fce/math",
+        "--out",
+        "extension-replay.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7384,
+      "output_sha256": "88545576b466a0ca48aa3a6925cc5fbc8b686cf3399c0c9ee1e7569de6a91058",
+      "output_tail": "{\"checks\": 701482, \"completed_contraction\": \"4/9, sharp over real span\", \"finite_child_arrival_checks\": 6631, \"frozen_base_verifier_sha256\": \"fb69bee26e2617a8853ba2daef1528288f32435eb0c20d4319aea32e349fbe62\", \"literal_clusters\": 64647, \"outside_bank_cross_terms\": \"retained by REPORT section4, with new bank partition\", \"scales\": [{\"N\": 4096, \"distinct_original_sources\": 767, \"families\": {\"A\": 85, \"B\": 86, \"C\": 85, \"D\": 85}}, {\"N\": 8192, \"distinct_original_sources\": 1537, \"families\": {\"A\": 171, \"B\": 171, \"C\": 171, \"D\": 170}}, {\"N\": 32768, \"distinct_original_sources\": 6145, \"families\": {\"A\": 683, \"B\": 683, \"C\": 683, \"D\": 682}}, {\"N\": 63666, \"distinct_original_sources\": 11936, \"families\": {\"A\": 1327, \"B\": 1326, \"C\": 1326, \"D\": 1326}}, {\"N\": 65536, \"distinct_original_sources\": 12289, \"families\": {\"A\": 1366, \"B\": 1366, \"C\": 1365, \"D\": 1365}}, {\"N\": 100000, \"distinct_original_sources\": 18749, \"families\": {\"A\": 2083, \"B\": 2084, \"C\": 2083, \"D\": 2083}}], \"source_clock_register_hash\": \"83d27e0593a4fe3bf61fca310fb6c83c7e90904818c7db350b8b9f3d756e49ae\", \"uniform153N\": \"OPEN\"}\n"
+    }
+  ],
+  "status": "PASS"
+}
