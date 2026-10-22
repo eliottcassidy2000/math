@@ -7,6 +7,10 @@ number h). For f = 1/eta_{pi_X} = prod_d eta(d tau)^(r_d) on Gamma_0(h):
   3. certificate: the poles of f are exactly the S-orbit of infinity, all simple, S acting freely on it.
 Then f descends to X_0(h)/S with a single simple pole, so X_0(h)/S has genus 0 and f is a Hauptmodul.
 The group Gamma_0(h)+S is compared with the lambency of X in Cheng-Duncan-Harvey's umbral moonshine.
+Finally, for every irreducible simply-laced R (A_n, D_n with n <= 60, E_6, E_7, E_8) it checks the exact rule
+    pi_R is W_e-invariant (e || h, e > 1)  <=>  e = h/p for a bad prime p of R with p || h,
+so that S_X = {1} u {h/p : p a bad prime of every component of X, p || h}: the lambency is the Coxeter number plus
+the Atkin-Lehner involutions of the common bad primes that exactly divide h.
 Needs mpmath. Usage: python hauptmodul_cert.py"""
 import math
 import re
@@ -121,4 +125,27 @@ for name in TYPES:
     check(cert and lam_ok and ser[1] == -k,
           f'{name:9s} pi_X = {pistr:28s} poles at cusps 1/d, d in {poles}; invariant under W_e, e in {S}; '
           f'Hauptmodul of Gamma_0({lam}) (CDH lambency {LAMBENCY.get(name, str(h))}); T_X = q^-1 + {Tser[2:6]}...')
+
+def al_invariant(pi, e):
+    return all(pi.get(d * e // math.gcd(d, e) ** 2, 0) == m for d, m in pi.items())
+
+
+def bad_primes(t, r):
+    return [] if t == 'a' else [2] if t == 'd' else ([2, 3] if r in (6, 7) else [2, 3, 5])
+
+
+rule_ok = True
+tested = 0
+for t, rng in (('a', range(1, 61)), ('d', range(4, 61)), ('e', (6, 7, 8))):
+    for rr in rng:
+        pi = {a: m for a, m in coxeter_frame(t, rr).items() if m}
+        h = max(pi)
+        for e in range(2, h + 1):
+            if h % e or math.gcd(e, h // e) != 1:
+                continue
+            pred = (h // e) in bad_primes(t, rr) and math.gcd(h // e, e) == 1
+            rule_ok &= al_invariant(pi, e) == pred
+            tested += 1
+check(rule_ok, f'component rule: pi_R is W_e-invariant iff e = h/p, p a bad prime with p || h '
+               f'({tested} pairs (R, e) for A_1..A_60, D_4..D_60, E_6, E_7, E_8)')
 print('ALL CHECKS PASSED' if not FAIL else f'FAILED: {FAIL}')
