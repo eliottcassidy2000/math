@@ -1,0 +1,6 @@
+  ***   Warning: new stack size = 256000000 (244.141 Mbytes).
+Eichler counts #X_0(N)^ss = number of <2>-orbits on X_1(N)^ss (N = 5, 7, 9; 5 <= p <= 60): failures 0
+N = 7, linear F_{p^2}-factors over j = 0 and their <2>-orbit sizes [p, orbit size] (1 = fixed = elliptic point of X_0(7)):
+   [[5, 1], [5, 1], [11, 1], [11, 1], [17, 1], [17, 1], [23, 1], [23, 1], [29, 1], [29, 3], [29, 3], [29, 3], [29, 3], [29, 3], [29, 3], [29, 1], [41, 3], [41, 3], [41, 3], [41, 3], [41, 3], [41, 3], [41, 1], [41, 1], [47, 1], [47, 1], [53, 1], [53, 1], [59, 1], [59, 1]]
+   for k(p) = 3 the linear factors over j = 0 are all <2>-fixed: 1 (14 factors)
+ALL AUDIT CHECKS PASSED

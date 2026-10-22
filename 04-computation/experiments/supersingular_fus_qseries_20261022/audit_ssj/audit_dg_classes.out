@@ -1,0 +1,2 @@
+primes 5 <= p < 1000 checked: 166; #floor classes = h(-4p), #surface classes = [p=3 mod 4] h(-p): failures 0
+ALL AUDIT CHECKS PASSED

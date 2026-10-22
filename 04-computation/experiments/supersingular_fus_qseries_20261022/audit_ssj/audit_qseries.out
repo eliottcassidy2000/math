@@ -1,0 +1,33 @@
+  ***   Warning: new stack size = 256000000 (244.141 Mbytes).
+  OK   psi(-q): (q;q^2)(q^4;q^4) = (q^2;q^2)/(-q;q^2)
+  OK   DS15 2.7.1  f(-q^1,-q^6)/f(-q^2)
+  OK   DS15 2.7.2  f(-q^2,-q^5)/f(-q^2)
+  OK   DS15 2.7.3  f(-q^3,-q^4)/f(-q^2)
+  OK   DS15 2.8.1  f(-q,-q^7)/psi(-q)
+  OK   DS15 2.8.4  f(-q^3,-q^5)/psi(-q)
+  OK   DS15 2.8.9  f(q,q^7)/f(-q^2)
+  OK   DS15 2.8.10 f(q^3,q^5)/f(-q^2)
+  OK   DS15 2.9.1  f(-q^1,-q^8)/f(-q^3)
+  OK   DS15 2.9.2  f(-q^2,-q^7)/f(-q^3)
+  OK   DS15 2.9.3  f(-q^4,-q^5)/f(-q^3)
+  OK   DS15 2.14.1 f(-q^2,-q^12)/f(-q)
+  OK   DS15 2.14.2 f(-q^4,-q^10)/f(-q)
+  OK   DS15 2.14.3 f(-q^6,-q^8)/f(-q)
+  OK   DS15 2.27.1 f(-q^3,-q^24)/f(-q)
+  OK   DS15 2.27.2 f(-q^6,-q^21)/f(-q)
+  OK   DS15 2.27.3 f(-q^9,-q^18)/f(-q)
+  OK   DS15 2.27.4 f(-q^12,-q^15)/f(-q)
+  hostile controls (must DIFF):
+  DIFF   RS_1 sum against f(-q^2,-q^5)/f(-q^2) first difference at q^1
+  DIFF   Dyson_1 sum against f(-q^6,-q^21)/f(-q) first difference at q^3
+  theta families / sum-side corollaries:
+  OK     RS_1(q^2) f(-q^4) = R14_2(q) f(-q)
+  OK     RS_2(q^2) f(-q^4) = R14_4(q) f(-q)
+  OK     RS_3(q^2) f(-q^4) = R14_6(q) f(-q)
+  OK     B_1(q^3) f(-q^9) = D_1(q) f(-q)   [D_b has numerator theta_27(3b)]
+  OK     B_2(q^3) f(-q^9) = D_2(q) f(-q)   [D_b has numerator theta_27(3b)]
+  OK     B_4(q^3) f(-q^9) = D_4(q) f(-q)   [D_b has numerator theta_27(3b)]
+  OK     GG_1(-q) psi(q) = JS_1(q) f(-q^2)
+  OK     GG_3(-q) psi(q) = JS_3(q) f(-q^2)
+  OK     Dyson 2.27.3 product = (q^9;q^9)/(q;q)
+ALL AUDIT CHECKS PASSED (K = 1200)

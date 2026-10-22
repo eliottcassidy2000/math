@@ -14,7 +14,7 @@ No HYP was opened. Every conjectural formula that came up was either proved here
 ## 0. The answers in one page
 
 1. **The arXiv link is not a paper on supersingular curves.** arXiv:2610.05474v1 is Bizeul–Klartag–Lehec, *Presenting a proof of the Kannan–Lovász–Simonovits conjecture* (math.FA, 4 Oct 2026). Section 1 records what it proves and what it uses.
-   * The supersingular facts in the brief are standard. They were checked computationally against standard formulas, not against that paper, for all primes 5 ≤ p < 3000 by three independent routes.
+   * The supersingular facts in the brief are standard. They were checked computationally against standard formulas, not against that paper: for all primes 5 ≤ p < 3000 by one route, cross-checked by a second route for p < 700 and a third for p < 2000.
    * Which paper was meant must be confirmed by the user.
 2. **F, U, S are counts of divisors, and at the three shapes they are constants.** Here D(N) = {d : d | N, 1 < d < N}, F = |D|, S = #squarefree elements of D, U = #prime elements of D (DB1).
 
@@ -28,7 +28,7 @@ No HYP was opened. Every conjectural formula that came up was either proved here
    * The three shapes are exactly the solution sets of F = U + S − 1 (p^2, p^2 q) and F = U + S − 2 (pq). These are the first two levels below the balanced set {p, p^3, p^2 q r}.
    * A new prime-adjunction recursion, δ(Nr) = 2δ(N) + U(N) − [N squarefree] − [N prime], builds the chain p^2 → p^2 q → p^2 q r (defects −1, −1, 0). Raising the exponent instead gives p^2 → p^3 (−1 → 0).
 3. **F, U, S cannot see supersingular counts.** No identity between them is possible.
-   * F, U, S are prime-blind, while every supersingular count is affine in p with slope ψ/12.
+   * F, U, S are prime-blind, while every supersingular count grows linearly in the prime: slope ψ(M)/12 plus a bounded correction.
    * The only genuine meeting point is the bad reduction of X_0(N). The divisors of the ℓ-part of N index the components of the fibre at ℓ, and the supersingular points glue them.
    * At pq: g(X_0(pq)) = 2g(X_0(q)) + H(p,q) − 1 = 2g(X_0(p)) + H(q,p) − 1.
    * At p^2 q: g(X_0(p^2 q)) = 2g(X_0(p^2)) + H(q,p^2) − 1.
@@ -47,8 +47,8 @@ No HYP was opened. Every conjectural formula that came up was either proved here
 **Identification.**
 * The arXiv API and the HTML page (sha256 prefix `ebf2bf23e635b236`, fetched 2026-10-22) both give *Presenting a proof of the Kannan–Lovász–Simonovits conjecture*, by Pierre Bizeul, Boaz Klartag and Joseph Lehec, arXiv:2610.05474v1 [math.FA], 04 Oct 2026.
 * The full page text contains no "supersingular", "elliptic curve" or "j-invariant"; the only "elliptic" is elliptic regularity.
-* Sixteen neighbouring identifiers were checked: ±1, ±2 and digit transpositions of 05474, and 05474 in other months. None is about elliptic curves.
-* The most recent arXiv papers on supersingular curves are 2609.11037 (supersingularity testing on twisted Hessian curves), 2609.03249 (memetic search for supersingular curves over F_p) and 2608.13371 (Gross vectors mod 2). They were listed, not read.
+* Sixteen neighbouring identifiers were checked through the arXiv API: 2610.05473 and 2610.05475; the transpositions 2610.05447, 2610.04574 and 2610.05744; and 05474 in eleven other months (2410, 2510, 2601–2609). None is about elliptic curves.
+* An arXiv API search for abstracts containing both "supersingular" and "j-invariant", sorted by date, returns 2609.11037 (supersingularity testing on twisted Hessian curves), 2609.03249 (memetic search for supersingular curves over F_p) and 2608.13371 (Gross vectors mod 2) as the most recent. They were listed, not read.
 * The brief's description fits any introduction to the subject, so the intended source is unknown.
 
 **What the KLS paper proves.**
@@ -63,7 +63,7 @@ No HYP was opened. Every conjectural formula that came up was either proved here
 * The Song–Zhang criterion ([34, Theorem 5.1], reproved as Theorem 3.1), which turns this into C_P ≤ C R^2.
 * The acknowledgements state: "Most proofs and mathematical ideas in this paper were found by ChatGPT; a notable exception is the idea to use suspension which was suggested by the authors."
 
-**Repository status.** CITED and unaudited. No map to an open repository problem was found or sought.
+**Repository status.** CITED and unaudited. No map to an open repository problem was found or sought. It is registered in [CORE-PAPERS-INTAKE-2026-10-22-KLS-IDENTIFIER](../reference/CORE-PAPERS-INTAKE-2026-10-22-KLS-IDENTIFIER.md). That follows the precedent for supplied identifiers that resolve elsewhere, the "Zhao's GVC in three variables" entry of CORE-PAPERS (arXiv:2606.17854). It is a separate file because the startup byte budget of CORE-PAPERS.md is full.
 
 ## 2. The supersingular facts in the brief, checked (CITED + FINITE-EXACT)
 
@@ -79,7 +79,7 @@ Script: `supersingular_census.gp`, run on all 428 primes 5 ≤ p < 3000 with 0 f
 
 Three routes compute ss_p.
 * **Route A (Hasse invariant):** E_{p−1} ≡ 1 (mod p) as a q-expansion. Hence ss_p(j) = j^δ (j − 1728)^ε f(j), where f is the polynomial part in j of 1/(Δ^m E_4^δ E_6^ε) and p − 1 = 12m + 4δ + 6ε.
-* **Route B (Legendre line):** the squarefree part of Res_λ(H_p(λ), 256(λ^2−λ+1)^3 − jλ^2(λ−1)^2). It equals route A on 123 primes p < 700.
+* **Route B (Legendre line):** the squarefree part of Res_λ(H_p(λ), 256(λ^2−λ+1)^3 − jλ^2(λ−1)^2). It equals route A on 123 primes p < 700. Auer–Top (math/0106273, §3; already in CORE-PAPERS) identifies the roots of the Deuring polynomial H_p with the supersingular Legendre parameters.
 * **Route C (point counting):** #{j ∈ F_p : a_p(E_j) = 0} equals the number of linear factors on 301 primes p < 2000.
 
 This inherits and extends [ogg_triangular_chowla_20260927 §2](ogg_triangular_chowla_20260927.md), which checked the list for p < 200 (p < 1000 in its audit).
@@ -269,7 +269,7 @@ Tests (all primes 5 ≤ p < 400):
 * The three Bailey products are cycled for p ≢ ±1 (mod 9).
 * The two Göllnitz–Gordon products are exchanged for p ≡ ±3 (mod 8).
 
-The identity index set is the Galois group of the F_{p^2}-structure. At level 1 that group is trivial, which is why every supersingular j lies in F_{p^2}.
+So the F_{p^2}-Frobenius acts through the identity index set (Z/N)^×/±1, as its element p; its orbits have length k(p) = ord(p). At level 1 the group is trivial, which is why every supersingular j lies in F_{p^2}.
 
 ### 6.3 Class-number content: F_p-rational supersingular points (PROVED modulo CITED inputs; FINITE-EXACT)
 

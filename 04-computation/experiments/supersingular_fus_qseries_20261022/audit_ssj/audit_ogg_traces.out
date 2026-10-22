@@ -1,0 +1,4 @@
+  ***   Warning: new stack size = 256000000 (244.141 Mbytes).
+primes checked: 428; g(X_0(p)^+) from newform traces = (g + 1 - n_p)/2 failures: 0
+primes 5 <= p < 3000 with g(X_0(p)^+) = 0: [5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71]
+ALL AUDIT CHECKS PASSED (Ogg's list restricted to p >= 5)

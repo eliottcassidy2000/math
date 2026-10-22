@@ -1,0 +1,23 @@
+  ***   Warning: new stack size = 256000000 (244.141 Mbytes).
+== #X_0(N)^ss(F_p) as Frobenius-stable <2>-orbits on Tate-normal-form X_1(N), 5 <= p < 400 ==
+  [p, n_p, [#X_0(5), #X_0(7), #X_0(9)]] (sample p < 50):
+     [5, 1, ["-", 2, 2]]
+     [7, 1, [0, "-", 0]]
+     [11, 2, [4, 0, 4]]
+     [13, 1, [0, 2, 0]]
+     [17, 2, [0, 4, 4]]
+     [19, 2, [4, 4, 0]]
+     [23, 3, [0, 0, 6]]
+     [29, 3, [6, 0, 6]]
+     [31, 3, [6, 6, 0]]
+     [37, 1, [0, 0, 0]]
+     [41, 4, [8, 8, 8]]
+     [43, 2, [0, 0, 0]]
+     [47, 5, [0, 10, 10]]
+  predictions (1 + (-p/l)) n_p with l = 5, 7, 3: failures 0
+
+== genus relation for N = 7, 9 (and 5) via newform traces ==
+  pairs checked: 41
+
+failures: 0
+ALL AUDIT CHECKS PASSED

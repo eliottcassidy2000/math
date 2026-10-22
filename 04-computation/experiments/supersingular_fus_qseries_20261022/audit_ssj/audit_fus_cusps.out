@@ -1,0 +1,39 @@
+1. (F,U,S) = (1,1,1), (2,2,2), (4,2,3) at p^2, pq, p^2 q via sympy.divisors: {'p^2': 78, 'pq': 1560, 'p^2q': 1560}
+2(i). defect level sets d <= 0 for 2 <= N <= 300000 (exponent profiles):
+     d = -6 [(1, 1, 1, 1, 1, 1)]
+     d = -5 [(1, 1, 1, 1, 1)]
+     d = -4 [(1, 1, 1, 1)]
+     d = -3 [(1, 1, 1)]
+     d = -2 [(1, 1)]
+     d = -1 [(2,), (2, 1)]
+     d = 0 [(1,), (2, 1, 1), (3,)]
+2(ii). non-squarefree profiles with delta <= 0 (complete: tau monotone in exponents, r >= 4 impossible): {-1: [(2,), (2, 1)], 0: [(3,), (2, 1, 1)]}
+       squarefree: r = 1 -> delta 0 (primes); r >= 2 -> delta = -r  (tau = 2^r)
+3. recursion: 2922 random (N, r) pairs and all profiles r <= 6, e <= 6: ok
+4. Klein orbits (a,b,c): [[(0, 0, 1), (0, 1, 0), (2, 0, 1), (2, 1, 0)], [(0, 1, 1), (2, 0, 0)], [(1, 0, 0), (1, 1, 1)], [(1, 0, 1), (1, 1, 0)]]
+   quadrant representatives: [[(2, 1, 0)], [(2, 0, 0)], [(1, 0, 0)], [(1, 1, 0)]]
+5. cusps of X_0(N) (explicit Gamma_0(N)-equivalence) and Atkin-Lehner action on denominator classes
+   N=   6: #cusp classes =   4 = sum_d phi(gcd(d,N/d)) =   4; tau(N) =  4; squarefree True; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N=   9: #cusp classes =   4 = sum_d phi(gcd(d,N/d)) =   4; tau(N) =  3; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N=  12: #cusp classes =   6 = sum_d phi(gcd(d,N/d)) =   6; tau(N) =  6; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N=  18: #cusp classes =   8 = sum_d phi(gcd(d,N/d)) =   8; tau(N) =  6; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N=  25: #cusp classes =   6 = sum_d phi(gcd(d,N/d)) =   6; tau(N) =  3; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N=  30: #cusp classes =   8 = sum_d phi(gcd(d,N/d)) =   8; tau(N) =  8; squarefree True; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N=  36: #cusp classes =  12 = sum_d phi(gcd(d,N/d)) =  12; tau(N) =  9; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N=  49: #cusp classes =   8 = sum_d phi(gcd(d,N/d)) =   8; tau(N) =  3; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N=  50: #cusp classes =  12 = sum_d phi(gcd(d,N/d)) =  12; tau(N) =  6; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N=  60: #cusp classes =  12 = sum_d phi(gcd(d,N/d)) =  12; tau(N) = 12; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N=  75: #cusp classes =  12 = sum_d phi(gcd(d,N/d)) =  12; tau(N) =  6; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N=  98: #cusp classes =  16 = sum_d phi(gcd(d,N/d)) =  16; tau(N) =  6; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N= 100: #cusp classes =  18 = sum_d phi(gcd(d,N/d)) =  18; tau(N) =  9; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N= 147: #cusp classes =  16 = sum_d phi(gcd(d,N/d)) =  16; tau(N) =  6; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N= 150: #cusp classes =  24 = sum_d phi(gcd(d,N/d)) =  24; tau(N) = 12; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N= 180: #cusp classes =  24 = sum_d phi(gcd(d,N/d)) =  24; tau(N) = 18; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N= 245: #cusp classes =  16 = sum_d phi(gcd(d,N/d)) =  16; tau(N) =  6; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N= 275: #cusp classes =  12 = sum_d phi(gcd(d,N/d)) =  12; tau(N) =  6; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N= 300: #cusp classes =  36 = sum_d phi(gcd(d,N/d)) =  36; tau(N) = 18; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   N= 637: #cusp classes =  16 = sum_d phi(gcd(d,N/d)) =  16; tau(N) =  6; squarefree False; W_Q toggles Q-part of d: True; Fricke d -> N/d: True
+   Klein group <C,Q> meets the Atkin-Lehner reflection group in: ['C'] (+ identity)
+
+failures: 0
+ALL AUDIT CHECKS PASSED

@@ -1,0 +1,18 @@
+  ***   Warning: new stack size = 64000000 (61.035 Mbytes).
+(M1) curves of conductor 27 (no elldata installed: explicit Weierstrass models; isogeny class of [0,0,1,0,-7]):
+   [0, 0, 1, 0, -7]:  conductor 27,  j = 0,  modular degree 1,  CM by disc -3
+   [0, 0, 1, 0, 0]:  conductor 27,  j = 0,  modular degree 1/3,  CM by disc -3
+   [0, 0, 1, -30, 63]:  conductor 27,  j = -12288000,  modular degree 1,  CM by disc -27
+   [0, 0, 1, -270, -1708]:  conductor 27,  j = -12288000,  modular degree 3,  CM by disc -27
+   the curve of modular degree 1 is X_0(27) itself (g(X_0(27)) = 1)
+   [1,0,1,4,-6]: conductor 14, j = 9938375/21952, modular degree 1;  g(X_0(14)) = 1
+
+(M2) fraction of F_p-rational supersingular points, primes 5 <= p < 2000 where it is >= 1/2:
+   p = 5: X_0(7)  #ss(F_p) = 2 of #ss = 4   (exactly half)
+   p = 5: X_0(9)  #ss(F_p) = 2 of #ss = 4   (exactly half)
+   p = 7: X_0(8)  #ss(F_p) = 4 of #ss = 6   (F_p-heavy)
+   p = 23: X_0(8)  #ss(F_p) = 12 of #ss = 22   (F_p-heavy)
+
+(M3) nu2, nu3 of 14 and 27: [0, 0] and [0 (4 does not divide 27 but 1 + (-4/3) = 0), 0 (9 | 27)]: [0, 0]
+
+(M4) h(-36) = 2 (qfbclassno 2), h(-56) = 4 (qfbclassno 4)

@@ -1,0 +1,17 @@
+X_0(2): [s(floor), s(surface)] over all classes p mod 8: distinct values [(1, 3), (1, None)]
+X_0(4): [s(floor), s(surface)] over all classes p mod 16: distinct values [(0, None), (2, 0), (2, 4)]
+X_0(8): [s(floor), s(surface)] over all classes p mod 32: distinct values [(0, 0), (0, None), (4, 4)]
+X_1(8): [s(floor), s(surface)] over all classes p mod 32: distinct values [(0, 0), (0, None), (4, 0), (4, 8)]
+X_0(5): [s(floor), s(surface)] over all classes p mod 20: distinct values [(0, 0), (0, None), (2, 2), (2, None)]
+X_1(5): [s(floor), s(surface)] over all classes p mod 20: distinct values [(0, 0), (0, None), (4, 4), (4, None)]
+X_0(7): [s(floor), s(surface)] over all classes p mod 28: distinct values [(0, 0), (0, None), (2, 2), (2, None)]
+X_1(7): [s(floor), s(surface)] over all classes p mod 28: distinct values [(0, 0), (0, None), (6, 6), (6, None)]
+X_0(9): [s(floor), s(surface)] over all classes p mod 36: distinct values [(0, 0), (0, None), (2, 2), (2, None)]
+X_1(9): [s(floor), s(surface)] over all classes p mod 36: distinct values [(0, 0), (0, None), (6, 6), (6, None)]
+X_0(3): [s(floor), s(surface)] over all classes p mod 12: distinct values [(0, 0), (0, None), (2, 2), (2, None)]
+X_1(16): [s(floor), s(surface)] over all classes p mod 64: distinct values [(0, 0), (0, None), (8, 0), (8, 16)]
+X_1(8) surface by p mod 32: {3: 0, 7: 0, 11: 0, 15: 8, 19: 0, 23: 0, 27: 0, 31: 8}
+X_1(16) (beyond the note, for curiosity): floor/surface by p mod 64 (classes with nonzero entries): {15: (8, 0), 31: (8, 16), 47: (8, 0), 63: (8, 16)}
+
+failures: 0
+ALL AUDIT CHECKS PASSED
