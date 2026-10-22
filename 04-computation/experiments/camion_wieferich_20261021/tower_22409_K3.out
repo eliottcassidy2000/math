@@ -1,0 +1,7 @@
+p=22409 K=3 eps=+1  (s computed to m=112041)
+  a=1: v_p(D(p^1)) = 2
+  a=2: v_p(D(p^2)) = 2
+  a=3: v_p(D(p^3)) = 2
+  a=4: v_p(D(p^4)) = 2
+  a=5: v_p(D(p^5)) = 2
+  Lambda_p (limit, up to sign): v_p = 2   => h(p) = 2

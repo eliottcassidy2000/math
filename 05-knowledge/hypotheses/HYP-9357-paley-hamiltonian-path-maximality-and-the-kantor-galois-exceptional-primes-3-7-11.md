@@ -22,6 +22,14 @@ status: >
   repaired after the audit, MISTAKE-651; nauty confirms that it is not 2-transitive for q = 19, 23, 27, 31, 43, 47).
   AUDITED 2026-10-21: citation corrected; the design-isomorphism step repaired; prior conjecture credited;
   "circulant" restricted to prime q.
+  CONTINUATION (2026-10-21, mac-mini-2026-10-21-fanopsp with opus-2026-10-21-S51; two independent methods): the
+  decisive tests at q = 27 (prime power) and q = 31 PASS prediction (3): H(R_27) = 426990256001863046739 >
+  H(P_27) = 418425945688463432031 (ratio 1.0205) and H(R_31) = 20351875726012821643802839 > H(P_31) =
+  19876729650849384218015865 (ratio 1.0239). Method A (mac-mini, paley_extremal_20261021/ie_ham.c): inclusion-exclusion
+  over vertex subsets in Z/2^128 with necklace (circulants) or F_27-translation-orbit reduction, validated on P_7, R_7,
+  P_11, R_11, P_19, P_23. Method B (S51, repunits_hyp9357_20261021/hyp9357_rotational_vs_paley.py): Karp inclusion-exclusion
+  modulo three 58-bit primes. H(P_27) and H(P_31) also equal |Aut| times S50's orbit counts (1053 * 397365570454381227,
+  465 * 42745655163116955307561).
 session: mac-mini-2026-10-21-fanopsp
 source: 05-knowledge/results/tournament_pseudoprimes_camion_fermat_20261021.md
 related:
@@ -54,6 +62,8 @@ The maximum of `H` over circulant tournaments `Cay(Z_n, S)` (all connection sets
 | 19 | rotational | 1184212824763 | 2.55 | 1172695746915 |
 | 21 | rotational | 125547534942879 | 2.58 | — |
 | 23 | rotational | 16011537490557279 | 2.60 | 15760206976379349 |
+| 27 | rotational only (full circulant maximum not computed) | 426990256001863046739 | 2.63 | 418425945688463432031 (`P_27` on `F_27`) |
+| 31 | rotational only (full circulant maximum not computed) | 20351875726012821643802839 | 2.66 | 19876729650849384218015865 |
 
 * *Rotational* means `Z_n{1, …, (n−1)/2}`.
 * For orientation, Wormald's blow-ups of rotational tournaments give the best known asymptotic constant for the maximum, about 2.8559. The Adler–Alon–Ross bound is `e`.
@@ -65,7 +75,9 @@ The maximum of `H` over circulant tournaments `Cay(Z_n, S)` (all connection sets
   * It also has more Hamiltonian cycles than any circulant: 168361 against 166848.
   * This gives the lower bound `max H(13) ≥ 3719893`. OEIS A038375 stops at `n = 11`.
 * At `n = 15`, 16 restarts found nothing above the rotational circulant. That search is weak; this is not evidence either way.
-* The Paley tournament wins among circulants at 7 and 11 and loses at 19 and 23.
+* The Paley tournament wins among circulants at 7 and 11 and loses at 19, 23 and 31. At the prime power 27 it also loses to the rotational circulant.
+  * Rotational/Paley ratios: `1.0098, 1.0159, 1.0205, 1.0239` at `q = 19, 23, 27, 31`; the gap grows.
+  * At `n = 27, 31` only the rotational circulant was computed, not the full circulant maximum.
 
 ## Conjecture
 
@@ -117,5 +129,7 @@ The Higman and symplectic designs have even order. A point-hyperplane design (or
 
 ## Cheapest decisive tests
 
-* `H(P_27)` (Paley over `F_27`; prime power), `H(P_31)` and `H(P_43)` against the rotational circulant. These need an orbit-reduced or meet-in-the-middle path count; the present subset DP stops at `n = 23`.
+* DONE: `H(P_27)` (Paley over `F_27`; prime power) and `H(P_31)` against the rotational circulant. Both lose (table above), by two independent exact methods (`paley_extremal_20261021/ie_ham.c`, Z/2^128 inclusion-exclusion with necklace or `F_27`-translation reduction; S51's `repunits_hyp9357_20261021/hyp9357_rotational_vs_paley.py`, Karp inclusion-exclusion modulo three 58-bit primes).
+* Still open: `H(P_43)`. The same inclusion-exclusion needs about `2^43/43 · 43^3 ≈ 1.6·10^16` operations, out of reach here; a meet-in-the-middle or transfer-matrix count would be needed.
+* The full circulant maximum at `n = 25, 27, 29, 31` (all multiplier classes), to see whether the rotational circulant is still the circulant maximum there.
 * A stronger search at `n = 15, 17` (simulated annealing, larger move sets) for non-circulant tournaments above the rotational one.
