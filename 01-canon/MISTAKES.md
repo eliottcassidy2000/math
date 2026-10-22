@@ -19659,3 +19659,31 @@ Two historical reflections receive warning-only corrections, preserving their or
 The valid survivor distinguishes a finite configuration from an infinite symmetry requirement. A planar full-rank lattice has finite orthogonal automorphism group, so it cannot be invariant under an irrational-angle rotation. This does not exclude finite equal-length lattice vectors meeting at such an angle. Separate square/triangular norm-graph colorings and Niven's criterion are not retracted; no changes to THM-418/419 are proposed.
 
 Prevention: identify the operator versus angle coordinate, the geometric carrier, and the exact group action before claiming an invariant transports. Rotation-covariant harmonic tensors are not rotation-invariant scissors data. The Session29 exact hostile script and proof report provide the replacement distinctions; the repair packet records source preimages and proposed hashes for conflict-safe publication.
+
+## MISTAKE-661 (2026-10-22, opus-2026-10-21-S52 lattices lane, THM-4752, HYP-9363; found by the session's independent audit `04-computation/experiments/lattices_repunits_20261021/audit_S52/REPORT.md` after the pre-audit checkpoint d9193e48bd was pushed) -- a pairing called a distance, a published lattice table missed, two overclaims about older canon, a PDF claim misquoted, a topology sentence inverted, and four misstatements of S51
+
+- **THM-4752 (b), pre-audit.** It said U(T) = -v_T . rho_s is "the Lorentzian distance" from v_T to the nearest Leech cusp.
+  - In fact v_T - rho_pi = (s - pi | 0) is spacelike with |v_T - rho_pi|^2 = 2(BL_T(pi) - c3). So the squared distance to the nearest cusp is 2(U - c3).
+  - Counterexample: U = 956 against squared distance 710 (c3 = 601).
+  - U is the pairing, a horospherical height. The minimising cusp is still the nearest one.
+- **THM-4752 (c), pre-audit.** Typed as new. The A_24 cusp nu = (1/2^25 | 5/2) is the entry 2nu (height 25, simple roots 25/5/5) of Borcherds' published table of norm-0 vectors of II_{25,1} (https://math.berkeley.edu/~reb/lattices/norm0), in Conway's standard coordinates. Borcherds' thesis (Lemmas 2.2.4, 2.4.2, 2.5.1) gives z . rho = -h and rho = (rho_N, h, h+1).
+  - Retyped KNOWN; the tournament reading is the new part.
+  - Lesson: search the authors' data pages (Borcherds' lattice tables, Nebe-Sloane catalogue) as well as papers and MathOverflow.
+- **Overclaims, pre-audit note and THM.**
+  - "Answers, at n = 25, the question left open in THM-869/872." That question concerns n = 24, which stays open. At n = 25 the centred scores are THM-872's odd-n case; only the canonical ambient N(A_24) = nu^perp/nu is new.
+  - "Settles THM-484 Remark 1." That remark concerns the spectral identity of THM-472, not score vectors.
+- **Nebe-48 PDF misquoted.** The referee row dropped "at least" from the PDF's lower bound of 6,648,079,969,440 facets and certified it as an exact count.
+- **Smale sentence inverted.** It said the h-cobordism theorem identifies Theta_n with h-cobordism classes. Theta_n *is* that group. Smale identifies it with diffeomorphism classes S_n for n >= 5 (Milnor 2011, footnote 2).
+- **S51 misstated in the merged repunit answer.**
+  - "2^k - 1 needs three back arcs" holds only for k >= 5; 15 needs two.
+  - Uniqueness of the Fibonacci fan holds "with its converse, among strong classes with H < 2100" (FINITE-EXACT).
+  - HYP-9359 is NUMERICAL, with "almost all".
+  - N(n,h) is a polynomial only eventually, for n >= floor(3 log_5 h).
+- **Caught before commit.**
+  - (1^25 | 5) as the A_24 cusp; it is 2 nu, not primitive.
+  - The Niemeier table entry G_2(A_2^12) recalled as M_11; the exact Siegel mass forces M_12.
+  - Four wrong expectations in numerology_tests.py: the perfect m, |Aut| versus |Aff| at q = 27, code lengths, and "only 31 rare".
+- **Historical erratum found by the S52 catalogue sweep.** `04-computation/surgery_exotic_23.py` says M_12(SL_2(Z)) = span{E4^3, E6^2, Delta} has dimension 3. It has dimension 2, since Delta = (E4^3 - E6^2)/1728. This is not in MISTAKE-563's list; the script is not edited.
+- **Missing coordinate.** Two kinds of failure:
+  - A Lorentzian pairing and a Lorentzian distance were conflated; with null vectors they differ by the spacelike part.
+  - Lattice-side facts in famous coordinates (Conway's (0, ..., 24 | 70)) must be checked against the coordinate tables published by those authors before typing them new.
