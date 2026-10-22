@@ -1,0 +1,19 @@
+PARI stack size set to 2000000000 bytes, maximum size set to 2000000000
+  ok   Leech lattice Lambda = {rho, rho'}^perp rebuilt (even, unimodular, rootless)
+  ok   found an A_2^12 deep hole c = (a + b)/3 (36 nearest points, none closer) after 1 candidate triangles
+     A2: enumerated 76315590 Leech points with |lambda - c|^2 <= 7.33; closer than sqrt 2: 0 [56s]
+     prediction: 729 (eta^3/eta(tau/3))^12 + 36 Delta
+      k   N_k (exact)    prediction
+       0             36             36
+       1            729            729
+       2           8748           8748
+       3          64746          64746
+       4         352836         352836
+       5        1533087        1533087
+       6        5599044        5599044
+       7       17851752       17851752
+       8       50904612       50904612
+  ok   no Leech point closer than sqrt 2; 36 at distance sqrt 2 (vertices of A~_2^12)
+  ok   theta_(Lambda + c) = 729 (eta^3/eta(tau/3))^12 + 36 Delta through q^(1 + 8/3)
+
+ALL CHECKS PASSED  (56s)

@@ -13,7 +13,7 @@
     direct convergent sum; and the correct Leech analogue at s = 10 (only by analytic continuation, the series
     converges for s > 24): zeta_Leech(s) = (65520/691) 2^(-s/2) [zeta(s/2) zeta(s/2 - 11) - L(Delta, s/2)], so
     zeta_Leech(10) = -(65520/691) 2^-5 L(Delta, 5) because zeta(-6) = 0.  Inside the convergent range the 'odd zeta'
-    Leech value the PDF anticipates carries an irremovable cusp term: zeta_Leech(26) = (65520/691) 2^-13 [zeta(13)
+    Leech value the PDF anticipates carries the cusp term L(Delta, 13): zeta_Leech(26) = (65520/691) 2^-13 [zeta(13)
     zeta(2) - L(Delta, 13)], checked against the direct shell sum.  L(Delta, s) by the rapidly convergent
     incomplete-gamma formula, validated against the absolutely convergent Dirichlet series at s = 10 and s = 13.
 The 'Bit Depth' trace claim of e8.pdf is tested separately in bitdepth_trace_test.py.  Prints ALL CHECKS PASSED."""
@@ -146,7 +146,7 @@ for d in range(1, M2 + 1):
 shells = mpmath.fsum(mpmath.mpf(65520 * (sig11[k] - tau3000[k])) / 691 / (2 * mpmath.mpf(k)) ** 13 for k in range(1, M2 + 1))
 tail26 = mpmath.mpf(65520) / 691 * mpmath.mpf(2) ** -13 * mpmath.zeta(12) / M2   # mean sigma_11(n) = zeta(12) n^11; sum_{n > M} n^-2 ~ 1/M
 check(abs(L13 - direct13) < mpmath.mpf(10) ** -12 and abs(shells + tail26 - z26) < 1e-5 * z26,
-      f'zeta_Leech(26) = (65520/691) 2^-13 [zeta(13) zeta(2) - L(Delta, 13)] = {mpmath.nstr(z26, 15)} (shell sum {mpmath.nstr(shells + tail26, 10)}); L(Delta, 13) = {mpmath.nstr(L13, 15)} is not removable')
+      f'zeta_Leech(26) = (65520/691) 2^-13 [zeta(13) zeta(2) - L(Delta, 13)] = {mpmath.nstr(z26, 15)} (shell sum {mpmath.nstr(shells + tail26, 10)}); L(Delta, 13) = {mpmath.nstr(L13, 15)} is present (a non-critical value); the shell sum uses the same sigma_11 - tau split, so the independent check is audit_S52/c_pdf_numerics_audit.py')
 
 print()
 print('ALL CHECKS PASSED' if not FAIL else f'FAILED: {FAIL}')

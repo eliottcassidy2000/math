@@ -1,0 +1,27 @@
+B1  Vinberg diagrams of II_{9,1}, II_{17,1} (independent implementation)
+  ok   II_{9,1}: 10 simple roots; levels (2|time|, #new, same-level pairwise <= 0) = [(1, 1, True)]; finite volume certified (Vinberg criterion)
+  ok   II_{9,1}: cusps (parabolic subdiagrams of rank 8) = [['E~8']]
+  ok   II_{9,1} cusp ['E~8']: marks sum = [30], common null vector (future) = (0,0,0,0,0,0,0,0,1 | 1)
+  ok   E10 Gram det = -1, Weyl vector norm rho^2 = -1240.000000 (expected -1240)
+  ok   rho . z = sum of marks of E~8 = 30 = h(E8) (up to the sign convention)
+  ok   II_{17,1}: 19 simple roots; levels (2|time|, #new, same-level pairwise <= 0) = [(1, 0, True), (2, 1, True), (3, 1, True)]; finite volume certified (Vinberg criterion)
+  ok   II_{17,1}: cusps (parabolic subdiagrams of rank 16) = [['D~16'], ['E~8', 'E~8']]
+  ok   II_{17,1} cusp ['D~16']: marks sum = [30], common null vector (future) = (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1 | 1)
+  ok   II_{17,1} cusp ['E~8', 'E~8']: marks sum = [30, 30], common null vector (future) = (0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1 | 3)
+B2  Siegel mass formula
+  ok   rank 8: Siegel mass = 1/696729600 = 1/|W(E8)|
+  ok   rank 16: Siegel mass 691/277667181515243520000 = 1/|Aut(E8^2)| + 1/|Aut(D16+)| (|Aut(D16+)| = 2^15 16!)
+  ok   23 root systems: rank 24, single Coxeter number h, 24h roots; |Co_0| = 8315553613086720000
+  ok   rank 24: sum of 1/|Aut| over the 24 Niemeier lattices = Siegel mass exactly (1027637932586061520960267/129477933340026851560636148613120000000)
+  ok   with |G2(A2^12)| = |M11| = 7920 instead of |M12| = 95040 the mass identity fails (M12 is forced)
+  ok   doubling any single |G1| or |G2| breaks the identity (the exact mass check pins every table entry it uses)
+B3  E8 holes and Milnor's pair
+  ok   E8 shells by brute force: {0: 1, 2: 240, 4: 2160, 6: 6720} (1, 240, 2160, 6720 = 240 sigma_3(n))
+  ok   shallow hole ('5/6', '1/6', '1/6', '1/6', '1/6', '1/6', '1/6', '1/6'): squared distance 8/9, 9 nearest points, centroid = hole: True (all lattice points of norm <= 6 searched; enough since |c| < 1)
+  ok   shallow-hole vertices pairwise at squared distance 2: regular simplex
+  ok   deep hole ('1', '0', '0', '0', '0', '0', '0', '0'): squared distance 1, 16 nearest points, centroid = hole: True (all lattice points of norm <= 6 searched; enough since |c| < 1)
+  ok   deep-hole vertices come in 8 antipodal pairs about the hole: a cross-polytope
+  ok   theta(E8)^2 = theta(D16+) through norm 8: [1, 480, 61920, 1050240, 7926240] (480 roots, 61920 norm-4 vectors) - Milnor's pair
+  ok   both theta series are supported on even norms (even lattices)
+
+ALL CHECKS PASSED (4s)

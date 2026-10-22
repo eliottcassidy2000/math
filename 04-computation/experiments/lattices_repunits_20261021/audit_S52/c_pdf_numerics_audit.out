@@ -1,0 +1,42 @@
+C1  q-series
+  ok   tau(1..12) from the Jacobi triple product: [1, -24, 252, -1472, 4830, -6048]...
+  ok   tau multiplicative on coprime pairs (m, n < 40)
+  ok   Hecke relation tau(p^2) = tau(p)^2 - p^11 for p <= 53
+  ok   Delta = (E4^3 - E6^2)/1728 through q^60
+  ok   Leech theta E4^3 - 720 Delta: [1, 0, 196560, 16773120, 398034000]
+  ok   Leech coefficients a(n) = (65520/691)(sigma_11(n) - tau(n)) for all n <= 3000 (two independent routes)
+     [1s]
+C2  extremal rank-48 theta series
+  ok   extremal theta (from E4^6, E4^3 E6^2, E6^4): shells [1, 0, 0, 52416000, 39007332000, 6609020221440, 437824977408000]
+     coefficients in that basis: [721/3456, 1295/1728, 145/3456]; a_6 (norm 12) = 437824977408000
+  ok   norms 6, 8, 10 total 6,648,079,969,440 vectors = 3,324,039,984,720 antipodal pairs (a LOWER bound for the facet count, as the PDF says)
+  ok   density (3 pi/2)^24/24! = 2.31782953105e-8
+  ok   PDF Sec. 6 covering bound R_cov >= (24!/pi^24)^(1/48) = 1.7664707, 4R^2 >= 12.4816746 (correct)
+  ok   interpolation sanity: LP (log2 density)/d at d = 24 interpolates to -0.37551; Leech (LP sharp) = -0.37573
+  ok   LP bound at d = 48 interpolates to (log2 density)/48 = -0.43906 / -0.43896, i.e. density ~ 4.53e-07 / 4.54e-07, about 20x the extremal density (-0.52839); the PDF value 3.01e-8 (and its "23% gap") is inconsistent with the published LP numerics
+     [2s]
+C3  L(Delta, s) with two split points; Manin/Zagier period relations
+  ok   Lambda(k) independent of the split point (t0 = 1 vs 1.37) to 45 digits, k = 1..11
+  ok   Lambda(k) = Lambda(12 - k)
+  ok   r_0 : r_2 : r_4 = 36/691 : 1/45 : 1/70 (Zagier r^+), i.e. r_0/r_4 = 3.6468885672937771346 = 2520/691, r_2/r_4 = 14/9
+  ok   r_1 : r_3 : r_5 = 2/5 : 5/24 : 1/6 (Zagier r^-), i.e. r_1/r_5 = 12/5, r_3/r_5 = 5/4
+  ok   L(Delta, 13) = 0.997209868061244662340403 (Mellin) = direct Dirichlet sum to n = 3000 (|diff| = 2.09e-26, tail < 1e-20)
+     L(Delta, 5) = 0.666709188434003643826130221671   L(Delta, 6) (central) = 0.792122838646030569355944890487
+  ok   session value L(Delta, 5) = 0.666709188434003643 confirmed
+     [2s]
+C4/C5  Epstein zeta functions by Riemann's theta method (no L-functions)
+  ok   zeta_Leech(10) (theta continuation, Leech coefficients only) = -1.975523970070365355620842 = -(65520/691) 2^-5 L(Delta, 5) = -1.975523970070365355620842
+  ok   session value -1.97552397007037 confirmed
+     sanity: Z(s) -> -1 as s -> 0: Z(2e-30) = -1.0
+  ok   zeta_Leech(26): closed form 0.007499483288926841708429 = theta method 0.007499483288926841708429; direct sum (n <= 3000, exact sigma tail) 0.007499483288926841708429, |diff| = 2.42e-28 <= cusp-tail bound 5.29e-24
+  ok   session values zeta_Leech(26) = 0.00749948328893 and L(Delta, 13) = 0.99720986806 confirmed
+  ok   zeta_E8(10) = (5/4) pi^2 zeta(5) = 12.7925834197184 by the theta method
+     [4s]
+C6  McLaughlin slice
+  ok   Gram matrices [[2a, b], [b, 2c]] with det 15 and min >= 4 (2a <= 2c <= 198, |b| <= 2a): 4 found, all Gauss-reduce to [[4, +-1], [+-1, 4]]
+  ok   fundamental D in (-4000, 0) with a reduced form (2, b, 2): [(-15, -1), (-15, 1)] (b = 0, +-2 give D = -16, -12, not fundamental): Prop. 6.1 true, its proof skips even D
+  ok   extended Golay code: weight distribution {0: 1, 8: 759, 12: 2576, 16: 759, 24: 1}
+  ok   Leech minimal vectors constructed: 196560 distinct, raw norm 32 (= 4 after /8)
+  ok   v = 2 * (dodecad) has norm 6; minimal x with x.v = 3 (|v - x|^2 = 4): 552 = 2 * 276 (Co_3 on 276 pairs {x, v - x}, stabiliser McL:2)
+
+ALL CHECKS PASSED (5s)

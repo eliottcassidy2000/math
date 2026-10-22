@@ -18,6 +18,6 @@
   ok   direct shell sum 12.7925834198 (N = 2e5, with tail) = closed form 12.7925834197
   ok   L(Delta, 10) by the incomplete-gamma formula = direct Dirichlet sum = 0.97980908825122
   ok   L(Delta, 5) = 0.66670918843400364383; zeta(-6) = 0, so zeta_Leech(10) = -(65520/691) 2^-5 L(Delta, 5) = -1.9755239700703653556 (analytic continuation)
-  ok   zeta_Leech(26) = (65520/691) 2^-13 [zeta(13) zeta(2) - L(Delta, 13)] = 0.00749948328892684 (shell sum 0.007499483932); L(Delta, 13) = 0.997209868061245 is not removable
+  ok   zeta_Leech(26) = (65520/691) 2^-13 [zeta(13) zeta(2) - L(Delta, 13)] = 0.00749948328892684 (shell sum 0.007499483932); L(Delta, 13) = 0.997209868061245 is present (a non-critical value); the shell sum uses the same sigma_11 - tau split, so the independent check is audit_S52/c_pdf_numerics_audit.py
 
 ALL CHECKS PASSED

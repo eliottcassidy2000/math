@@ -41,7 +41,7 @@
   ok   (1 + n) | 2^n for n < 4100 exactly at n = [1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095] = 2^r - 1 (Hamming)
   ok   Golay: 1 + 23 + 253 + 1771 = 2^11 (perfect, radius 3)
 (Q) projective-plane sizes in the strong H-spectrum below 2100
-     strong inventory below 2100: 723544 classes [125s]
+     strong inventory below 2100: 723544 classes [129s]
   ok   strong inventory below 2100 = 723,544 classes (as in S51 fan_uniqueness.out / repunit_degrees.out)
      q =  2: |PG(2,q)| =    7: S = 0, local median 0
      q =  3: |PG(2,q)| =   13: S = 1, local median 1
@@ -66,5 +66,7 @@
      q = 43: |PG(2,q)| = 1893: S = 1689, local median 1481
   ok   missing projective-plane sizes: [7, 21] (q = 2, 4: the two H-spectrum gaps)
   ok   every other size within a factor 2 of its local median (31 = |PG(2,5)|: 4 vs 6); the projective-plane reading stops at q = 2, 4: NUMEROLOGY
+     base rate: 0.986 of all odd d in [9, 1899] (except 21) lie in the same factor-2 band: the band test has little power
+  ok   extendable projective planes: (q + 2) | 12 forces q in {2, 4, 10} (q = 10 does not exist, Lam 1989); point sets 111_2 = 7, 111_4 = 21; extensions S(3,4,8) (14 blocks) and S(5,8,24) (759 octads): KNOWN; as H statement NUMEROLOGY
 
-ALL CHECKS PASSED  (125s)
+ALL CHECKS PASSED  (129s)

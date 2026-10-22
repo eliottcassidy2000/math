@@ -1,0 +1,66 @@
+A1  Weyl vector, the A24 cusp and its 25 roots
+  ok   rho = (0..24 | 70) in II_{25,1}, null
+  ok   nu = (1/2^25 | 5/2) in II_{25,1}, null, nu.rho = -25
+  ok   nu/k is not in the lattice for k = 2..49 (primitive)
+  ok   e_i - e_(i+1) (i < 24) and r* are lattice roots with r.rho = -1 and r.nu = 0
+  ok   Gram(r_0..r_23, r*) = affine Cartan matrix of A~24 (25-cycle; r* adjacent to r_0 and r_23)
+  ok   r_0 + ... + r_23 + r* = nu (all marks 1)
+  ok   the 25 roots are linearly independent in R^26 and lie in nu^perp (dim 25): they span nu^perp over R (over Z only an index-5 sublattice mod nu, see A6)
+  ok   Gram matrix PSD of rank 24
+A2  25-vertex tournaments
+     transitive     c3 =    0  U =     0  |s - 12|^2 = 1300
+     rotational     c3 =  650  U =  1300  |s - 12|^2 = 0
+     random p=0.5   c3 =  601  U =   956  |s - 12|^2 = 98
+     random p=0.5   c3 =  581  U =   907  |s - 12|^2 = 138
+     random p=0.5   c3 =  601  U =   954  |s - 12|^2 = 98
+     random p=0.5   c3 =  598  U =   948  |s - 12|^2 = 104
+     random p=0.4   c3 =  523  U =   742  |s - 12|^2 = 254
+     random p=0.3   c3 =  438  U =   587  |s - 12|^2 = 424
+     random p=0.2   c3 =  278  U =   328  |s - 12|^2 = 744
+     random p=0.1   c3 =  118  U =   132  |s - 12|^2 = 1064
+     random p=0.05  c3 =  137  U =   149  |s - 12|^2 = 1026
+     random p=0.02  c3 =   43  U =    47  |s - 12|^2 = 1214
+  ok   v_T in II_{25,1}, v_T^2 = -2 c3 (direct triple count), v_T.nu = -25, null iff c3 = 0 (12 tournaments)
+  ok   score ranking: BL (from arcs) = -v_T.rho_pi = Landau slack sum = c3 + |s_sorted - iota|^2/2
+  ok   720 random rankings: BL (from arcs) = -v_T.rho_pi and BL >= U, equality iff score-consistent
+  ok   (s | 60) in nu^perp n II_{25,1}; |s - 12|^2 = 1300 - 2 c3
+A3  exhaustive small n (BL computed from arcs)
+  ok   n = 2: all 2 tournaments x 2 rankings: BL = sum j^2 - sum pi s [True], min BL = U [True], U = c3 + |s_sorted - iota|^2/2 [True], argmin = score-consistent [True]
+  ok   n = 3: all 8 tournaments x 6 rankings: BL = sum j^2 - sum pi s [True], min BL = U [True], U = c3 + |s_sorted - iota|^2/2 [True], argmin = score-consistent [True]
+  ok   n = 4: all 64 tournaments x 24 rankings: BL = sum j^2 - sum pi s [True], min BL = U [True], U = c3 + |s_sorted - iota|^2/2 [True], argmin = score-consistent [True]
+  ok   n = 5: all 1024 tournaments x 120 rankings: BL = sum j^2 - sum pi s [True], min BL = U [True], U = c3 + |s_sorted - iota|^2/2 [True], argmin = score-consistent [True]
+  ok   n = 6: all 32768 tournaments x 720 rankings: BL = sum j^2 - sum pi s [True], min BL = U [True], U = c3 + |s_sorted - iota|^2/2 [True], argmin = score-consistent [True]
+  ok   n = 7: 1500 random tournaments x all 5040 rankings: same four checks (True, True, True, True)
+  ok   U = Landau slack sum = c3 + |s_sorted - iota|^2/2 for 190 random tournaments, n = 3..40
+A4  is U the Lorentzian distance to the nearest Leech cusp?
+     rotational     U =  1300   |v_T - rho_s|^2 =  1300 = 2(U - c3) = 1300   (c3 = 650)
+     random p=0.5   U =   956   |v_T - rho_s|^2 =   710 = 2(U - c3) = 710   (c3 = 601)
+     random p=0.5   U =   907   |v_T - rho_s|^2 =   652 = 2(U - c3) = 652   (c3 = 581)
+     random p=0.5   U =   954   |v_T - rho_s|^2 =   706 = 2(U - c3) = 706   (c3 = 601)
+     random p=0.5   U =   948   |v_T - rho_s|^2 =   700 = 2(U - c3) = 700   (c3 = 598)
+     random p=0.4   U =   742   |v_T - rho_s|^2 =   438 = 2(U - c3) = 438   (c3 = 523)
+  ok   |v_T - rho_pi|^2 = 2(BL_T(pi) - c3) (purely spacelike difference (s - pi | 0)); the squared distance to the nearest cusp is |s_sorted - iota|^2 = 2(U - c3), which differs from U except when U = 2 c3 (e.g. regular T)
+     the counts of Leech roots by r.nu = -k (A5) turn out to be 25, then 5 p(k-1) (p = partition numbers), see below
+A5  complete enumeration of Leech roots by height
+     Leech roots with -70 <= t <= 70: 33678  [4s]
+  ok   every enumerated vector is a root of II_{25,1} with r.rho = -1
+  ok   no Leech root has r.nu > 0 (any root with r.nu = -k, k <= 0, has -70 <= t <= t_max(k) <= 5.2, inside the window): nu lies in the closed chamber (FINITE-EXACT)
+  ok   Leech roots with r.nu = 0: exactly the 25 roots of the A~24 cycle (25 found; complete)
+     #Leech roots with r.nu = -k: {0: 25, 1: 5, 2: 5, 3: 10, 4: 15, 5: 25, 6: 35, 7: 55, 8: 75, 9: 110, 10: 150, 11: 210, 12: 280, 13: 385, 14: 505, 15: 675, 16: 880, 17: 1155, 18: 1485, 19: 1925, 20: 2450, 21: 3135, 22: 3960}; complete for k in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22] (t_max(k) = 2.8k + 0.1 + sqrt(26 + 1.04k) <= 70)
+  ok   observation (FINITE-EXACT, k <= 22): #roots with r.nu = -k equals 5 p(k-1) (partition numbers) for k >= 1
+  ok   counts for r.nu = 0, -1, -2 are 25, 5, 5 = Borcherds norm0 table, line "25 25 5 5 a24 2 5 1 ... 1" (height 25; coordinates 2 nu)
+  ok   pairwise r.r' <= 0 for all 570 Leech roots with t <= 30 (Conway: 2 - |l - m|^2/2)
+A6  nu^perp / nu computed directly
+  ok   w = (1/2^15, -1/2^10 | 1/2) is a lattice vector of nu^perp
+  ok   proj(w) = ((2/5)^15, (-3/5)^10) = the A24 glue vector [10] (norm 10*15/25 = 6)
+  ok   so proj(nu^perp n II) = A24 + Z[10] = A24 + Z[5]: index 5 in A24* (det 25/25 = 1)
+  ok   glue coset minima i(25-i)/25 = {5: 4, 10: 6, 15: 6, 20: 4}: no roots outside A24, so nu^perp/nu = N(A24) directly
+A7  canonicity and the transitive class
+  ok   nu is the unique primitive future null vector fixed by S_25 (S_25-fixed null vectors are (a^25 | 5a))
+  ok   all S_25-invariant lattice vectors w with w.nu = -25 give the same class of v_T - w, namely s - 12 (canonical, S_25-equivariant)
+  ok   transitive T: class = (12, ..., -12) up to order = Weyl vector of A24, norm 1300 = 2h(h+1): Borcherds rho_II = (rho_N, h, h+1)
+A8  light cone and Watson
+  ok   proper convex combinations of distinct vertices of conv(S_25 (0..24)) are strictly timelike
+  ok   sum_(k<n) k^2 is a square for n <= 10^7 only at n = [1, 2, 25]; n = 1 gives the zero vector, so n = 25 is the only nonzero null case with n = 1 mod 8
+
+ALL CHECKS PASSED (13s)

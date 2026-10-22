@@ -1,0 +1,28 @@
+D1  is a_p = 5 (or -5)?  [p + 1 -+ 5] P for a random point P
+  ok   dps  15 q = 5/4   : nonsingular; [p - 4] P != O and [p + 6] P != O, so a_p != 5 and a_p != -5 (PROVED)  [0.0s]
+  ok   dps  15 q = 1/1   : nonsingular; [p - 4] P != O and [p + 6] P != O, so a_p != 5 and a_p != -5 (PROVED)  [0.0s]
+  ok   dps  15 q = 3/2   : nonsingular; [p - 4] P != O and [p + 6] P != O, so a_p != 5 and a_p != -5 (PROVED)  [0.0s]
+  ok   dps  15 q = 2/1   : nonsingular; [p - 4] P != O and [p + 6] P != O, so a_p != 5 and a_p != -5 (PROVED)  [0.1s]
+  ok   dps  15 q = 240/96: nonsingular; [p - 4] P != O and [p + 6] P != O, so a_p != 5 and a_p != -5 (PROVED)  [0.1s]
+  ok   dps 200 q = 5/4   : nonsingular; [p - 4] P != O and [p + 6] P != O, so a_p != 5 and a_p != -5 (PROVED)  [0.1s]
+  ok   dps 200 q = 1/1   : nonsingular; [p - 4] P != O and [p + 6] P != O, so a_p != 5 and a_p != -5 (PROVED)  [0.1s]
+  ok   dps 200 q = 3/2   : nonsingular; [p - 4] P != O and [p + 6] P != O, so a_p != 5 and a_p != -5 (PROVED)  [0.1s]
+  ok   dps 200 q = 2/1   : nonsingular; [p - 4] P != O and [p + 6] P != O, so a_p != 5 and a_p != -5 (PROVED)  [0.2s]
+  ok   dps 200 q = 240/96: nonsingular; [p - 4] P != O and [p + 6] P != O, so a_p != 5 and a_p != -5 (PROVED)  [0.2s]
+D2  the session SEA values: [N] P = O and an order certificate
+  ok   dps  15 q = 5/4   : a_p = session value (260 bits), [N] P = O for 3 random P; CERTIFIED: N = 37824 * c, c a 506-bit probable prime > 4 sqrt(p), [N/c] P != O
+  ok   dps  15 q = 1/1   : a_p = session value (261 bits), [N] P = O for 3 random P; uncertified beyond [N]P = O (small factors [5, 47, 563, 1361], cofactor 494 bits, prime: False)
+  ok   dps  15 q = 3/2   : a_p = session value (261 bits), [N] P = O for 3 random P; uncertified beyond [N]P = O (small factors [2, 2, 3, 13, 61], cofactor 508 bits, prime: False)
+  ok   dps  15 q = 2/1   : a_p = session value (261 bits), [N] P = O for 3 random P; uncertified beyond [N]P = O (small factors [2, 2, 2, 3, 18911], cofactor 503 bits, prime: False)
+  ok   dps  15 q = 240/96: a_p = session value (260 bits), [N] P = O for 3 random P; uncertified beyond [N]P = O (small factors [7, 23, 3881], cofactor 502 bits, prime: False)
+  ok   dps 200 q = 5/4   : a_p = session value (261 bits), [N] P = O for 3 random P; uncertified beyond [N]P = O (small factors [2], cofactor 520 bits, prime: False)
+  ok   dps 200 q = 1/1   : a_p = session value (260 bits), [N] P = O for 3 random P; uncertified beyond [N]P = O (small factors [2, 2, 3, 257, 3967], cofactor 498 bits, prime: False)
+  ok   dps 200 q = 3/2   : a_p = session value (259 bits), [N] P = O for 3 random P; uncertified beyond [N]P = O (small factors [2, 2, 2, 5, 7], cofactor 513 bits, prime: False)
+  ok   dps 200 q = 2/1   : a_p = session value (262 bits), [N] P = O for 3 random P; uncertified beyond [N]P = O (small factors [2, 2, 2, 3, 5, 5, 37, 109]..., cofactor 478 bits, prime: False)
+  ok   dps 200 q = 240/96: a_p = session value (259 bits), [N] P = O for 3 random P; uncertified beyond [N]P = O (small factors [2, 2, 2, 2, 2, 11], cofactor 513 bits, prime: False)
+D3  PARI cross-check (optional)
+  ok   PARI ellmul: [N] P = O and [p - 4] P != O on curve (15, '5/4')
+  ok   PARI ellmul: [N] P = O and [p - 4] P != O on curve (200, '5/4')
+  ok   PARI ellmul: [N] P = O and [p - 4] P != O on curve (200, '2/1')
+
+ALL CHECKS PASSED (2s)

@@ -4,6 +4,7 @@
   ok   nu = (1/2^25 | 5/2) is a primitive null vector of II_{25,1} (nu/2 is not in the lattice) with nu . rho = -25 = -h(A_24)
   ok   e_i - e_(i+1) (i = 0..23) and r* = (-1/2, 1/2^23, 3/2 | 5/2) are Leech roots (r^2 = 2, r . rho = -1) orthogonal to nu
   ok   their Gram matrix is the affine Cartan matrix of A~_24 (a 25-cycle, all marks 1) and they sum to nu: the A_24 deep hole, imaginary root = nu
+  ok   the S_25-fixed future null rays are nu and nu- = (-1^25 | 5); nu- . (-e_0 - e_1) = 2 > 0 for the Leech root -e_0 - e_1, so only nu lies in the closed Leech chamber
 (T) 25-vertex tournaments
      transitive                  : c3 =    0, v_T^2 =      0, U = -v.rho_s =     0 = Landau slack 0 = c3 + |d|^2/2 = 0 + 0/2; v.nu = -25; |s - 12|^2 = 1300
      rotational R_25 (regular)   : c3 =  650, v_T^2 =  -1300, U = -v.rho_s =  1300 = Landau slack 1300 = c3 + |d|^2/2 = 650 + 1300/2; v.nu = -25; |s - 12|^2 = 0
@@ -14,8 +15,9 @@
      random p = 0.05             : c3 =  103, v_T^2 =   -206, U = -v.rho_s =   113 = Landau slack 113 = c3 + |d|^2/2 = 103 + 20/2; v.nu = -25; |s - 12|^2 = 1094
      random p = 0.01             : c3 =   12, v_T^2 =    -24, U = -v.rho_s =    14 = Landau slack 14 = c3 + |d|^2/2 = 12 + 4/2; v.nu = -25; |s - 12|^2 = 1276
   ok   v_T in II_{25,1}, v_T^2 = -2 c3, -v_T . rho_s = U(T) = Landau slack = c3 + |d|^2/2, v_T . nu = -25, null iff transitive (8 tournaments)
-  ok   BL_T(pi) = -v_T . rho_pi for 320 random rankings, and no random ranking or adjacent swap beats the score ranking
+  ok   BL_T(pi) = -v_T . rho_pi and |v_T - rho_pi|^2 = 2(BL_T(pi) - c3) for 320 random rankings; no random ranking or adjacent swap beats the score ranking; the nearest cusp is at squared distance 2(U - c3), not U
   ok   (s | 60) in nu^perp, its N(A_24) class is s - 12 in A_24 with |s - 12|^2 = 1300 - 2 c3; zero exactly for the regular R_25
+  ok   a 25-vertex digraph with m arcs (5 | m) has centred out-degrees in the glue class [-m mod 25] of N(A_24): tournaments (m = 300) only in class 0
   ok   U(T) = c3(T) + |s_sorted - (0..n-1)|^2/2 holds at every order n = 3..14 (360 random tournaments)
   ok   n <= 7 (30 tournaments, all n! rankings): min BL = U(T), attained only by score-consistent rankings (Kano-Sakamoto); BL(pi) = sum j^2 - sum pi(v) s_v
      n = 2: 2 score vectors = 2 permutohedron lattice points (Landau) = 2 labelled forests (Stanley)

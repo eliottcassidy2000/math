@@ -1,0 +1,48 @@
+E1  Paley H by a start-vertex subset DP (own code)
+  ok   H(P_3) = 3 (own DP, 1s) = repo value
+  ok   H(P_7) = 189 (own DP, 0s) = repo value
+  ok   H(P_11) = 95095 (own DP, 0s) = repo value
+  ok   H(P_19) = 1172695746915 (own DP, 0s) = repo value
+  ok   H(P_23) = 15760206976379349 (own DP, 1s) = repo value
+  ok   H(P_27) = 418425945688463432031 (own DP, 20s) = repo value
+     H(P_31) not recomputed (2^30 x 31 states); repo value from paley_H31_exact_20261014.out, independently reproduced by the S34 audit (Karp inclusion-exclusion)
+E2  |Aut(P_q)| by backtracking
+  ok   |Aut(P_3)| = 3 = q(q-1)/2 * 1 (0.0s)
+  ok   |Aut(P_7)| = 21 = q(q-1)/2 * 1 (0.0s)
+  ok   |Aut(P_11)| = 55 = q(q-1)/2 * 1 (0.0s)
+  ok   |Aut(P_19)| = 171 = q(q-1)/2 * 1 (0.0s)
+  ok   |Aut(P_23)| = 253 = q(q-1)/2 * 1 (0.0s)
+  ok   |Aut(P_27)| = 1053 = q(q-1)/2 * 3 (0.0s)
+  ok   |Aut(P_31)| = 465 = q(q-1)/2 * 1 (0.0s)
+E3  cube pattern and HYP-9273
+     q =  3: H/|Aut| = 1, (H/|Aut| - 1)/8 a cube: True; H/|Aff| mod 8 = 1; H/|Aut| mod 8 = 1
+     q =  7: H/|Aut| = 9, (H/|Aut| - 1)/8 a cube: True; H/|Aff| mod 8 = 1; H/|Aut| mod 8 = 1
+     q = 11: H/|Aut| = 1729, (H/|Aut| - 1)/8 a cube: True; H/|Aff| mod 8 = 1; H/|Aut| mod 8 = 1
+     q = 19: H/|Aut| = 6857869865, (H/|Aut| - 1)/8 a cube: False; H/|Aff| mod 8 = 1; H/|Aut| mod 8 = 1
+     q = 23: H/|Aut| = 62293308207033, (H/|Aut| - 1)/8 a cube: False; H/|Aff| mod 8 = 1; H/|Aut| mod 8 = 1
+     q = 27: H/|Aut| = 397365570454381227, (H/|Aut| - 1)/8 a cube: False; H/|Aff| mod 8 = 1; H/|Aut| mod 8 = 3
+     q = 31: H/|Aut| = 42745655163116955307561, (H/|Aut| - 1)/8 a cube: False; H/|Aff| mod 8 = 1; H/|Aut| mod 8 = 1
+  ok   H/|Aut| - 1 = 8 m^3 exactly at q = 3, 7, 11 (m = 0, 1, 6)
+  ok   H/|Aff| = 1 mod 8 at all seven q; at q = 27 H/|Aut| = 3 mod 8 (as already recorded in HYP-9273 (B), S33/S34)
+E4  Kervaire-Milnor, Adams, Eisenstein
+  ok   |bP_4m| = 2^(2m-2)(2^(2m-1)-1) num(4|B_2m|/m), m = 2..7: [28, 992, 8128, 261632, 1448424448, 67100672] (MISTAKE-563 corrected values)
+  ok   equivalent form a_m 2^(2m-2)(2^(2m-1)-1) num(|B_2m|/4m) agrees for m <= 15; the legacy double-count gives 1984 at m = 3
+  ok   |Theta_23| = |coker J_23| * |bP_24| = 48 * 1448424448 = 69524373504 (MISTAKE-563 reference)
+  ok   2^(2m-1) - 1 prime for m in [2, 3, 4, 7, 9, 10] (perfect Euclid factors)
+  ok   Adams |im J| in stem 4s-1 = denom(B_2s/4s) = [24, 240, 504, 480, 264, 65520]; Eisenstein coefficients -4s/B_2s = ['-24', '240', '-504', '480', '-264', '65520/691']: numerators equal the im J orders TAUTOLOGICALLY (one is the reciprocal of the other)
+  ok   691 = |num(B_12/24)| divides |bP_24|
+E5  abelianisations, eta, j, Heegner
+  ok   SL2(Z) = <S,T | S^4, S^2 = (ST)^3>, Mp2(Z) = <S,T | S^8, S^2 = (ST)^3>: abelianisations Z/12, Z/24
+  ok   eta(tau + 1) = e^(2 pi i/24) eta(tau): the multiplier has order 24
+  ok   q j(q) = [1, 744, 196884, 21493760]; 744 = 720 + 24 = 3 * 248
+  ok   Heegner j-values are the listed cubes; e^(pi sqrt 163) - 640320^3 - 744 = -7.49927e-13
+E6  projective-plane sizes vs the strong spectrum below 2100
+  ok   inventory: 723544 strong classes with H <= 2100 [150s]
+     base rate: 0.986 of all odd d in [9, 1899] (except 21) lie within a factor 2 of their local median; windows with <= 3 values: d <= 39
+     PG sizes (d, S, median, ratio): [(13, 1, 1, 1.0), (31, 4, 6, 0.667), (57, 7, 10, 0.7), (73, 19, 12, 1.583), (91, 29, 17, 1.706), (133, 31, 28, 1.107), (183, 40, 39, 1.026), (273, 87, 75, 1.16), (307, 78, 92, 0.848), (381, 144, 123, 1.171), (553, 180, 205, 0.878), (651, 276, 261, 1.057), (757, 315, 334, 0.943), (871, 370, 435, 0.851), (993, 617, 533, 1.158), (1057, 564, 593, 0.951), (1407, 1079, 938, 1.15), (1723, 1276, 1283, 0.995), (1893, 1689, 1481, 1.14)]
+  ok   the factor-2 band contains 98.6% of ALL odd d: the PG statement is consistent but has little power
+     regression log S(d) ~ cubic(log d) + [3|d] + [9|d] + [5|d] on odd d in [101, 2099]: coefficients [0.233, 0.071, 0.05], residual s.d. 0.107
+     standardised residuals of the PG sizes: [(133, 2.74), (183, -1.45), (273, 0.26), (307, -0.23), (381, 0.28), (553, -0.78), (651, -1.31), (757, -0.09), (871, -0.63), (993, 0.05), (1057, 0.46), (1407, 0.1), (1723, 0.79), (1893, -0.19)]
+  ok   no projective-plane size >= 101 is an outlier (|z| < 3) once the 3|d, 9|d, 5|d support is controlled
+
+ALL CHECKS PASSED (150s)

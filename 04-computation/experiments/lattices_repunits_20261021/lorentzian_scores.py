@@ -9,14 +9,18 @@ For a tournament T on 25 vertices with score vector s:
   (3) for every ranking pi of the vertices (a bijection to 0..24, 24 = top) with rho_pi = (pi | 70):
       backward length BL_T(pi) = sum over arcs u -> w with pi(u) < pi(w) of pi(w) - pi(u) = -v_T . rho_pi;
       it is minimised exactly by the rankings sorted like s (rearrangement; Kano-Sakamoto 1983 for tournaments), with
-      minimum U(T) = sum_k (Landau slack of the k lowest scores) = c3(T) + |s_sorted - (0..24)|^2 / 2;
+      minimum U(T) = sum_k (Landau slack of the k lowest scores) = c3(T) + |s_sorted - (0..24)|^2 / 2; the minimising
+      cusp is also the nearest, at squared distance |v_T - rho_s|^2 = 2(U - c3) (not U);
   (4) nu = (1/2, ..., 1/2 | 5/2) is a primitive null vector with nu . rho = -25 = -h(A_24) and v_T . nu = -25 for all T;
       the Leech roots (r^2 = 2, r . rho = -1) e_i - e_(i+1) (i = 0..23) and r* = (-1/2, 1/2^23, 3/2 | 5/2) are orthogonal
       to nu, form the affine diagram A~_24 (a 25-cycle) and sum to nu: they are the vertices of the A_24 deep hole of the
-      Leech lattice, and nu^perp / nu is the Niemeier lattice N(A_24) (Niemeier-Venkov: rank 24, contains A_24);
+      Leech lattice, and nu^perp / nu is the Niemeier lattice N(A_24) (Niemeier-Venkov: rank 24, contains A_24).  The
+      lattice side is KNOWN: 2 nu is the A_24 entry of Borcherds' table of norm-0 vectors of II_{25,1} (height 25);
+      among the two S_25-fixed future null rays nu, (-1^25 | 5) only nu lies in the closed Leech chamber;
   (5) u_T = v_T - 10 (0^25 | 1) = (s | 60) lies in nu^perp and u_T - 24 nu = (s - 12 | 0): the class of T in N(A_24) is
       its centred score vector d_T = s - 12 in the root lattice A_24, |d_T|^2 = 1300 - 2 c3(T), and d_T = 0 iff T is
-      regular (the n = 25 rung of the THM-868 score-deviation map);
+      regular (the n = 25 rung of the THM-868 score-deviation map); a 25-vertex digraph with m arcs, 5 | m, lands in the
+      glue class [-m mod 25];
   (6) the reflections in e_i - e_j generate S_25 = W(A_24) (relabelling) and the score vectors are exactly the lattice
       points of the permutohedron conv(S_25 rho) (Landau), inscribed in the light cone: its 25! vertices are the Leech
       cusps sigma(rho), every other point is timelike.
@@ -101,6 +105,11 @@ G = [[lor(a, b) for b in hole] for a in hole]
 cycle = all(G[i][j] == (2 if i == j else -1 if (i - j) % 25 in (1, 24) else 0) for i in range(25) for j in range(25))
 check(cycle and [sum(c) for c in zip(*hole)] == nu,
       'their Gram matrix is the affine Cartan matrix of A~_24 (a 25-cycle, all marks 1) and they sum to nu: the A_24 deep hole, imaginary root = nu')
+num = [-1] * n + [5]                       # the other S_25-fixed future null ray
+r_d = [-1, -1] + [0] * (n - 2) + [0]       # -e_0 - e_1, a Leech root
+check(lor(num, num) == 0 and in_II(num) and not in_II([Fraction(t, 2) for t in num]) and lor(r_d, r_d) == 2
+      and lor(r_d, rho) == -1 and lor(num, r_d) == 2 and lor(nu, r_d) == -1,
+      'the S_25-fixed future null rays are nu and nu- = (-1^25 | 5); nu- . (-e_0 - e_1) = 2 > 0 for the Leech root -e_0 - e_1, so only nu lies in the closed Leech chamber')
 
 print('(T) 25-vertex tournaments')
 rng = random.Random(20261021)
@@ -129,7 +138,10 @@ for name, adj in cases:
     for _ in range(40):
         pi = list(range(n)); rng.shuffle(pi)
         bl = backward_length(adj, pi)
-        ok_bl &= bl == -lor(v, pi + [70]) and bl >= U
+        diff = [a - b for a, b in zip(v, pi + [70])]
+        ok_bl &= bl == -lor(v, pi + [70]) and bl >= U and lor(diff, diff) == 2 * (bl - C3)
+    diff_s = [a - b for a, b in zip(v, rho_s)]
+    ok_bl &= lor(diff_s, diff_s) == d2 == 2 * (U - C3)
     for a in range(n - 1):
         pi = pi_s[:]
         x, y = pi.index(a), pi.index(a + 1)
@@ -142,8 +154,18 @@ for name, adj in cases:
                and sum(t * t for t in d[:-1]) == 1300 - 2 * C3 and ((C3 == 650) == all(t == 0 for t in d)))
     print(f'     {name:28s}: c3 = {C3:4d}, v_T^2 = {lor(v, v):6d}, U = -v.rho_s = {U:5d} = Landau slack {slack} = c3 + |d|^2/2 = {C3} + {d2}/2; v.nu = {lor(v, nu)}; |s - 12|^2 = {1300 - 2 * C3}')
 check(ok, 'v_T in II_{25,1}, v_T^2 = -2 c3, -v_T . rho_s = U(T) = Landau slack = c3 + |d|^2/2, v_T . nu = -25, null iff transitive (8 tournaments)')
-check(ok_bl, 'BL_T(pi) = -v_T . rho_pi for 320 random rankings, and no random ranking or adjacent swap beats the score ranking')
+check(ok_bl, 'BL_T(pi) = -v_T . rho_pi and |v_T - rho_pi|^2 = 2(BL_T(pi) - c3) for 320 random rankings; no random ranking or adjacent swap beats the score ranking; the nearest cusp is at squared distance 2(U - c3), not U')
 check(ok_a24, '(s | 60) in nu^perp, its N(A_24) class is s - 12 in A_24 with |s - 12|^2 = 1300 - 2 c3; zero exactly for the regular R_25')
+# glue classes: N(A_24) = { x - (sum x/25) 1 : x in Z^25, 5 | sum x }; a digraph with m arcs lands in class [-m mod 25]
+ok = True
+for m_arcs in (295, 305, 290, 310, 300):
+    x = [m_arcs // 25] * n
+    for i in range(m_arcs - sum(x)):
+        x[i] += 1
+    cen = [Fraction(t) - Fraction(m_arcs, 25) for t in x]
+    resid = {t % 1 for t in cen}
+    ok &= len(resid) == 1 and sum(cen) == 0 and resid.pop() == Fraction((-m_arcs) % 25, 25)
+check(ok, 'a 25-vertex digraph with m arcs (5 | m) has centred out-degrees in the glue class [-m mod 25] of N(A_24): tournaments (m = 300) only in class 0')
 # the identity U = c3 + |d|^2/2 at every order (it does not need 25), and exhaustive backward-length minimisation, n <= 7
 ok = ok_ks = True
 for m in range(3, 15):

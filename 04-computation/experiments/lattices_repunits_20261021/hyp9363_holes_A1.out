@@ -1,0 +1,16 @@
+PARI stack size set to 2000000000 bytes, maximum size set to 2000000000
+  ok   Leech lattice Lambda = {rho, rho'}^perp rebuilt (even, unimodular, rootless)
+     c = v/2, v = [0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0, 0, 0, -1, 0, 1, -1, 0] (norm 8)
+     A1: enumerated 55417584 Leech points with |lambda - c|^2 <= 7.00; closer than sqrt 2: 0 [33s]
+     prediction: 4096 (eta^2/eta(tau/2))^24 + 48 Delta
+      k   N_k (exact)    prediction
+       0             48             48
+       1           4096           4096
+       2          97152          97152
+       3        1130496        1130496
+       4        8400704        8400704
+       5       45785088       45785088
+  ok   no Leech point closer than sqrt 2; 48 at distance sqrt 2 (vertices of A~_1^24)
+  ok   theta_(Lambda + c) = 4096 (eta^2/eta(tau/2))^24 + 48 Delta through q^(1 + 5/2)
+
+ALL CHECKS PASSED  (33s)

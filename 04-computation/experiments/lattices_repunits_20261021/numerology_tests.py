@@ -23,7 +23,12 @@
 (Q) The projective-plane sizes q^2 + q + 1 = 111 in base q (q a prime power) against the strong H-spectrum below
     2100 (complete strong inventory as in S50/S51, 723,544 classes): only 7 = |PG(2,2)| and 21 = |PG(2,4)| are
     missing; every other size up to 1893 is attained within a factor 2 of its local median (31 = |PG(2,5)|: 4 classes
-    against a median of 6).  The projective-plane reading of {7, 21} does not extend: NUMEROLOGY beyond q = 2, 4.
+    against a median of 6).  The band has little power (it holds 98.6% of all odd d; audit_S52 regresses log S(d) on
+    log d and 3|d, 9|d, 5|d and finds no projective-plane outlier).  KNOWN design side: a projective plane of order q
+    extends to a 3-design only if (q + 2) | 12, i.e. q in {2, 4, 10}, and order 10 does not exist (Lam 1989), so
+    {7, 21} = {111_2, 111_4} are exactly the point sets of the extendable planes, which extend to S(3,4,8) (8 points,
+    extended Hamming -> E8) and S(5,8,24) (24 points, Golay -> Leech).  As an H statement this is NUMEROLOGY.
+HYP-9273 (H(P_q)/|Aff| = 1 mod 8) is the S33/S34 hypothesis with its pre-registered q = 31 pass; it is re-checked here.
 Prints ALL CHECKS PASSED."""
 import os, sys, math, time
 from fractions import Fraction
@@ -173,6 +178,18 @@ def main():
     check(missing == [7, 21], f'missing projective-plane sizes: {missing} (q = 2, 4: the two H-spectrum gaps)')
     off = [q for q, (s_, med) in rel.items() if q not in (2, 4) and not (med and 0.5 * med <= s_ <= 2 * med)]
     check(off == [] and rel[5] == (4, 6), f'every other size within a factor 2 of its local median (31 = |PG(2,5)|: {rel[5][0]} vs {rel[5][1]}); the projective-plane reading stops at q = 2, 4: NUMEROLOGY')
+    band = []
+    for d in range(9, 1900, 2):
+        if d == 21:
+            continue
+        win = sorted(S[x] for x in range(int(d * 0.9) | 1, int(d * 1.1) + 1, 2) if x != d)
+        med = win[len(win) // 2] if win else 0
+        band.append(bool(med) and 0.5 * med <= S[d] <= 2 * med)
+    print(f'     base rate: {sum(band) / len(band):.3f} of all odd d in [9, 1899] (except 21) lie in the same factor-2 band: the band test has little power')
+    ext = [q for q in range(2, 2000) if Fraction((q * q + q + 2) * (q * q + q + 1), q + 2).denominator == 1]
+    check(ext == [2, 4, 10] and [q * q + q + 1 for q in ext] == [int('111', q) for q in ext] == [7, 21, 111]
+          and Fraction(math.comb(24, 5), math.comb(8, 5)) == 759 and Fraction(math.comb(8, 3), math.comb(4, 3)) == 14,
+          'extendable projective planes: (q + 2) | 12 forces q in {2, 4, 10} (q = 10 does not exist, Lam 1989); point sets 111_2 = 7, 111_4 = 21; extensions S(3,4,8) (14 blocks) and S(5,8,24) (759 octads): KNOWN; as H statement NUMEROLOGY')
 
     print()
     print('ALL CHECKS PASSED' if not FAIL else f'FAILED: {FAIL}', f' ({time.time() - T0:.0f}s)')

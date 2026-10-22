@@ -1,0 +1,13 @@
+PARI stack size set to 1000000000 bytes, maximum size set to 1000000000
+  ok   rho, rho' = rho + e_0 - e_1, nu, nu' = nu - e_0 - e_1 null; rho.rho' = nu.nu' = -1; rho.nu = -25
+  ok   M = {rho, nu}^perp: even, positive definite rank 24, det 625
+  ok   |D| = |M^*/M| = 625
+  ok   Lambda_M/M and N_M/M are isotropic subgroups H_L, H_N of order 25 with H_L n H_N = 0 (D = H_L + H_N)
+  ok   c_M (|c|^2 = 2) and w_M = lift of rho_N/25 (|rho_N|^2 = 1300 = 2h(h+1), |w_M|^2 = 52/25) lie in M (x) Q
+  ok   c_M and w_M lie in M^*
+     |A| = 25, |B| = 25, |A n B| = 1, A = -A: False, B = -B: False
+  ok   A = c_M + H_L and B = w_M + H_N are lines of D meeting in exactly one class
+  ok   naive T-condition FAILS as expected: f = 1_A - 1_B (symmetrised) is supported on 92 classes, not all isotropic
+  ok   naive S-condition FAILS as expected (exact in Z[zeta_25]): the identity is not a consequence of Weil-invariance of f alone
+
+ALL CHECKS PASSED
