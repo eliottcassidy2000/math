@@ -270,7 +270,7 @@ c″ = proj_Λ(z″)/(h + 1), a point of order e = h + 1. Then for all 23 types:
 | 23 | D12² | 4q + 7q² + 13q³ (23AB, A058570) |
 | 26 | A24 | 3q + 6q² + 9q³ (26+26 = T_26B, A058597; (η(2τ)η(13τ)/(η(τ)η(26τ)))² − 2) |
 | 31 | D16E8, E8³ | 3q + 3q² + 6q³ (31AB, A058628) |
-| 47 | D24 | q + 2q² (47AB, A058690) |
+| 47 | D24 | q + 2q² + 3q³ (47AB, A058690) |
 
 *Geometry: a Fricke point is a deep hole nudged towards the second shell.* fricke_nudge.py checks all 23 types.
 - **The cusp.** z″ = z + r, where r is a Leech root (a wall of the Leech chamber, r·ρ = −1) with r·z = −1. So z″ is
@@ -497,8 +497,7 @@ the table are its output.
 
 *On the Leech side,* leech_h_plus_one.py builds z″ from the closest-vector normalisation of ρ_N, and checks that z″ is
 null with −z″·ρ = h + 1. It enumerates Λ + c″ exactly. fricke_h_plus_one.py checks the Fricke identity and the proper
-multiples. Through q² this holds for all 23 types (fricke_h_plus_one_q2.out); a check through q³ is in
-fricke_h_plus_one.out.
+multiples, through q³ for all 23 types (fricke_h_plus_one.out; through q² in fricke_h_plus_one_q2.out).
 
 *On the N side,* weyl_h_plus_one.py enumerates N + ρ_N/(h+1) and the (h+1)-neighbour, which is rootless and hence Λ.
 
