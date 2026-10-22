@@ -1,0 +1,18 @@
+n=3: E kappa^2 formula 4/3 = 1.333333; brute force over all tournaments 4/3; equal: True
+n=4: E kappa^2 formula 4/3 = 1.333333; brute force over all tournaments 4/3; equal: True
+n=5: E kappa^2 formula 79/60 = 1.316667; brute force over all tournaments 79/60; equal: True
+n=6: E kappa^2 formula 58/45 = 1.288889; brute force over all tournaments 58/45; equal: True
+n=3: Var(kappa) = 0.333333 (n Var = 1.0000); L=2 (score) share 1.0000; by level: L2: 3.333e-01
+n=4: Var(kappa) = 0.333333 (n Var = 1.3333); L=2 (score) share 1.0000; by level: L2: 3.333e-01
+n=5: Var(kappa) = 0.316667 (n Var = 1.5833); L=2 (score) share 0.9474; by level: L2: 3.000e-01, L4: 1.667e-02
+n=6: Var(kappa) = 0.288889 (n Var = 1.7333); L=2 (score) share 0.9231; by level: L2: 2.667e-01, L4: 2.222e-02
+n=8: Var(kappa) = 0.233929 (n Var = 1.8714); L=2 (score) share 0.9160; by level: L2: 2.143e-01, L4: 1.905e-02, L6: 5.952e-04
+n=10: Var(kappa) = 0.192654 (n Var = 1.9265); L=2 (score) share 0.9228; by level: L2: 1.778e-01, L4: 1.429e-02, L6: 5.820e-04, L8: 8.818e-06
+n=12: Var(kappa) = 0.162738 (n Var = 1.9529); L=2 (score) share 0.9310; by level: L2: 1.515e-01, L4: 1.077e-02, L6: 4.389e-04, L8: 9.620e-06
+n=14: Var(kappa) = 0.140519 (n Var = 1.9673); L=2 (score) share 0.9384; by level: L2: 1.319e-01, L4: 8.325e-03, L6: 3.182e-04, L8: 7.532e-06
+n=16: Var(kappa) = 0.123498 (n Var = 1.9760); L=2 (score) share 0.9447; by level: L2: 1.167e-01, L4: 6.593e-03, L6: 2.324e-04, L8: 5.427e-06
+n=20: Var(kappa) = 0.099274 (n Var = 1.9855); L=2 (score) share 0.9543; by level: L2: 9.474e-02, L4: 4.403e-03, L6: 1.314e-04, L8: 2.760e-06
+n=30: Var(kappa) = 0.066467 (n Var = 1.9940); L=2 (score) share 0.9684; by level: L2: 6.437e-02, L4: 2.056e-03, L6: 4.315e-05, L8: 6.645e-07
+n=50: Var(kappa) = 0.039959 (n Var = 1.9980); L=2 (score) share 0.9806; by level: L2: 3.918e-02, L4: 7.657e-04, L6: 9.930e-06, L8: 9.594e-08
+rand12_samples.txt (n=12, 1500 samples): mean kappa 0.9876, var 0.17002 (exact 0.16274); corr(kappa, 1 + N2/(n)_2) 0.9628, var of the L=2 projection 0.15827 (exact 0.15152)
+rand14_samples.txt (n=14, 800 samples): mean kappa 1.0115, var 0.14766 (exact 0.14052); corr(kappa, 1 + N2/(n)_2) 0.9705, var of the L=2 projection 0.13570 (exact 0.13187)

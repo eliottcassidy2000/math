@@ -1,0 +1,65 @@
+cores with excess -1, 2 leaves: 1
+cores with excess -1, 3 leaves: 1
+cores with excess -1, 4 leaves: 2
+cores with excess 0, 1 leaves: 1
+cores with excess 0, 2 leaves: 3
+cores with excess 0, 3 leaves: 7
+cores with excess 1, 0 leaves: 3
+cores with excess 1, 1 leaves: 7
+cores with excess 2, 0 leaves: 15
+n=8 L=2 class (-1, 2): brute -1.250000000000e-01 engine -1.250000000000e-01 diff +0.0e+00
+n=8 L=2 class (-1, 3): brute +0.000000000000e+00 engine +2.507217523873e-19 diff -2.5e-19
+n=8 L=2 class (-1, 4): brute +0.000000000000e+00 engine -1.634067727411e-20 diff +1.6e-20
+n=8 L=2 class (0, 1): brute +0.000000000000e+00 engine -3.848917712324e-18 diff +3.8e-18
+n=8 L=2 class (0, 2): brute +0.000000000000e+00 engine -1.807003620809e-20 diff +1.8e-20
+n=8 L=2 class (0, 3): brute +0.000000000000e+00 engine +3.275194062717e-20 diff -3.3e-20
+n=8 L=2 class (1, 0): brute +0.000000000000e+00 engine +4.481368979607e-18 diff -4.5e-18
+n=8 L=2 class (1, 1): brute +0.000000000000e+00 engine +2.303929616532e-19 diff -2.3e-19
+n=8 L=2 class (2, 0): brute +0.000000000000e+00 engine +2.457524924300e-18 diff -2.5e-18
+n=8 L=4 class (-1, 2): brute -3.320312500000e-02 engine -3.320312500000e-02 diff -5.6e-17
+n=8 L=4 class (-1, 3): brute -3.906250000000e-03 engine -3.906250000000e-03 diff -2.6e-18
+n=8 L=4 class (-1, 4): brute -9.765625000000e-04 engine -9.765625000000e-04 diff +0.0e+00
+n=8 L=4 class (0, 1): brute +5.468750000000e-02 engine +5.468750000000e-02 diff -6.9e-18
+n=8 L=4 class (0, 2): brute +5.859375000000e-02 engine +5.859375000000e-02 diff +0.0e+00
+n=8 L=4 class (0, 3): brute +0.000000000000e+00 engine +2.066760391300e-19 diff -2.1e-19
+n=8 L=4 class (1, 0): brute -3.232421875000e-01 engine -3.232421875000e-01 diff +0.0e+00
+n=8 L=4 class (1, 1): brute -1.171875000000e-02 engine -1.171875000000e-02 diff -5.2e-18
+n=8 L=4 class (2, 0): brute +4.101562500000e-02 engine +4.101562500000e-02 diff +0.0e+00
+n=8 L=6 class (-1, 2): brute -1.004028320312e-02 engine -1.004028320313e-02 diff +5.8e-16
+n=8 L=6 class (-1, 3): brute -3.133138020833e-03 engine -3.133138020833e-03 diff +4.3e-19
+n=8 L=6 class (-1, 4): brute -2.746582031250e-03 engine -2.746582031250e-03 diff -1.7e-18
+n=8 L=6 class (0, 1): brute +1.452636718750e-02 engine +1.452636718750e-02 diff +5.6e-17
+n=8 L=6 class (0, 2): brute +6.365966796875e-02 engine +6.365966796875e-02 diff -2.5e-16
+n=8 L=6 class (0, 3): brute +8.178710937500e-03 engine +8.178710937500e-03 diff -3.5e-18
+n=8 L=6 class (1, 0): brute -7.796223958333e-02 engine -7.796223958333e-02 diff +2.9e-16
+n=8 L=6 class (1, 1): brute -7.739257812500e-02 engine -7.739257812500e-02 diff -2.5e-15
+n=8 L=6 class (2, 0): brute +2.834472656250e-01 engine +2.834472656250e-01 diff -2.4e-15
+n=8: max |brute - engine| = 2.47e-15
+n=10 L=2 class (-1, 2): brute -1.000000000000e-01 engine -1.000000000000e-01 diff +1.4e-17
+n=10 L=2 class (-1, 3): brute +0.000000000000e+00 engine -1.790062961864e-19 diff +1.8e-19
+n=10 L=2 class (-1, 4): brute +0.000000000000e+00 engine -5.223369841402e-21 diff +5.2e-21
+n=10 L=2 class (0, 1): brute +0.000000000000e+00 engine +2.728575467422e-18 diff -2.7e-18
+n=10 L=2 class (0, 2): brute +0.000000000000e+00 engine -5.692061405549e-19 diff +5.7e-19
+n=10 L=2 class (0, 3): brute +0.000000000000e+00 engine -5.265721488764e-20 diff +5.3e-20
+n=10 L=2 class (1, 0): brute +0.000000000000e+00 engine +1.011922027653e-18 diff -1.0e-18
+n=10 L=2 class (1, 1): brute +0.000000000000e+00 engine +4.291633599422e-20 diff -4.3e-20
+n=10 L=2 class (2, 0): brute +0.000000000000e+00 engine -2.529805069133e-19 diff +2.5e-19
+n=10 L=4 class (-1, 2): brute -1.380000000000e-02 engine -1.380000000000e-02 diff -6.6e-17
+n=10 L=4 class (-1, 3): brute -2.000000000000e-03 engine -2.000000000000e-03 diff +4.3e-19
+n=10 L=4 class (-1, 4): brute -5.000000000000e-04 engine -5.000000000000e-04 diff -1.1e-19
+n=10 L=4 class (0, 1): brute +3.600000000000e-02 engine +3.600000000000e-02 diff +0.0e+00
+n=10 L=4 class (0, 2): brute +3.800000000000e-02 engine +3.800000000000e-02 diff +6.9e-18
+n=10 L=4 class (0, 3): brute +0.000000000000e+00 engine +2.823443157514e-19 diff -2.8e-19
+n=10 L=4 class (1, 0): brute -2.755000000000e-01 engine -2.755000000000e-01 diff -1.1e-16
+n=10 L=4 class (1, 1): brute -6.000000000000e-03 engine -6.000000000000e-03 diff +1.7e-18
+n=10 L=4 class (2, 0): brute +2.700000000000e-02 engine +2.700000000000e-02 diff -6.9e-18
+n=10 L=6 class (-1, 2): brute -2.442000000000e-03 engine -2.442000000000e-03 diff +1.9e-16
+n=10 L=6 class (-1, 3): brute -1.090666666667e-03 engine -1.090666666667e-03 diff -3.0e-18
+n=10 L=6 class (-1, 4): brute -7.400000000000e-04 engine -7.400000000000e-04 diff -8.7e-19
+n=10 L=6 class (0, 1): brute +4.968000000000e-03 engine +4.968000000000e-03 diff +7.1e-17
+n=10 L=6 class (0, 2): brute +2.387600000000e-02 engine +2.387600000000e-02 diff +6.2e-17
+n=10 L=6 class (0, 3): brute +3.400000000000e-03 engine +3.400000000000e-03 diff -4.3e-19
+n=10 L=6 class (1, 0): brute -4.813066666667e-02 engine -4.813066666667e-02 diff +5.9e-16
+n=10 L=6 class (1, 1): brute -3.907200000000e-02 engine -3.907200000000e-02 diff -5.6e-17
+n=10 L=6 class (2, 0): brute +1.931680000000e-01 engine +1.931680000000e-01 diff -1.7e-16
+n=10: max |brute - engine| = 5.90e-16

@@ -1,0 +1,6 @@
+n=8: (-1, 2): -1.593045251049e-01 (engine diff -2.8e-17); (0, 1): +7.154321258697e-02 (engine diff +5.6e-17); (-1, 3): -5.878988699776e-03 (engine diff -6.1e-18); (0, 2): +1.605545442667e-01 (engine diff +5.6e-17); square identity diff +1.4e-17
+n=10: (-1, 2): -1.164596742383e-01 (engine diff +1.1e-16); (0, 1): +4.355124217275e-02 (engine diff -2.1e-17); (-1, 3): -2.284957280694e-03 (engine diff +1.0e-17); (0, 2): +7.252166659790e-02 (engine diff -5.6e-17); square identity diff -6.9e-17
+n=12: (-1, 2): -9.226247443801e-02 (engine diff +1.4e-16); (0, 1): +2.883351402547e-02 (engine diff -6.2e-17); (-1, 3): -1.768584509720e-03 (engine diff +0.0e+00); (0, 2): +4.513972641695e-02 (engine diff +1.4e-17); square identity diff -5.6e-17
+n=16: (-1, 2): -6.851795237274e-02 (engine diff +3.2e-16); (0, 1): +1.638414328331e-02 (engine diff -5.6e-17); (-1, 3): -6.850980276705e-04 (engine diff +2.5e-18); (0, 2): +2.352214819611e-02 (engine diff -1.4e-17); square identity diff +2.1e-17
+n=20: (-1, 2): -5.498573017586e-02 (engine diff +3.5e-17); (0, 1): +1.071220761633e-02 (engine diff +4.3e-17); (-1, 3): -3.950362013437e-04 (engine diff -2.0e-18); (0, 2): +1.493031969123e-02 (engine diff +2.3e-17); square identity diff +6.9e-18
+max |closed - engine| = 3.19e-16

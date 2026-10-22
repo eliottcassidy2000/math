@@ -1,0 +1,8 @@
+n=8 (85 tournaments, ar8_classes.txt), degree 3 in w = z^2:
+  exact Phi:             |z| median 1.2603 (range 1.2222..1.2950), median arg(w) 3.142
+  truncated rho(z):      |z| median 1.2999 (range 1.2423..1.3216), median arg(w) 3.142;  median |w_exact/w_trunc| 0.9498
+  truncated exp(c z^2):  |z| median 1.3506 (range 1.3506..1.3506), median arg(w) 3.142
+n=10 (3000 tournaments, ar10_classes.txt), degree 4 in w = z^2:
+  exact Phi:             |z| median 1.2911 (range 1.2467..1.3342), median arg(w) 3.142
+  truncated rho(z):      |z| median 1.4066 (range 1.3211..1.4389), median arg(w) 2.664;  median |w_exact/w_trunc| 0.8423
+  truncated exp(c z^2):  |z| median 1.4699 (range 1.4699..1.4699), median arg(w) 2.667

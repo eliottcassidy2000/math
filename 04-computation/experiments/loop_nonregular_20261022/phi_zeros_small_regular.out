@@ -1,0 +1,30 @@
+n=4: 1 tournaments (ar4_classes.txt)
+  smallest zero modulus of Phi: min 1.4142, 5% 1.4142, median 1.4142, max 1.4142; fraction with a zero in |z| <= 1: 0.0000; in |z| <= 1.2: 0.0000
+  spectral singularity 1/max|x|: min 1.6569; exact cluster part A: mean -0.37960, sd 0.00000
+  zeros on the positive w = z^2 axis (real z): 0 in total
+  argument of the smallest zero in the w = z^2 plane: w > 0 (real z) 0.000, w < 0 (imaginary z) 1.000, complex 0.000; median |arg w| 3.1416
+n=5: 1 tournaments (reg5_completions.txt)
+  smallest zero modulus of Phi: min 1.1180, 5% 1.1180, median 1.1180, max 1.1180; fraction with a zero in |z| <= 1: 0.0000; in |z| <= 1.2: 1.0000
+  spectral singularity 1/max|x|: min 1.6246; exact cluster part A: mean -0.25196, sd 0.00000
+  zeros on the positive w = z^2 axis (real z): 0 in total
+  argument of the smallest zero in the w = z^2 plane: w > 0 (real z) 0.000, w < 0 (imaginary z) 1.000, complex 0.000; median |arg w| 3.1416
+n=6: 5 tournaments (ar6_classes.txt)
+  smallest zero modulus of Phi: min 1.2335, 5% 1.2415, median 1.2735, max 1.3257; fraction with a zero in |z| <= 1: 0.0000; in |z| <= 1.2: 0.0000
+  spectral singularity 1/max|x|: min 1.6077; exact cluster part A: mean -0.32792, sd 0.01986
+  zeros on the positive w = z^2 axis (real z): 0 in total
+  argument of the smallest zero in the w = z^2 plane: w > 0 (real z) 0.000, w < 0 (imaginary z) 1.000, complex 0.000; median |arg w| 3.1416
+n=7: 5 tournaments (reg7_completions.txt)
+  smallest zero modulus of Phi: min 1.1311, 5% 1.1331, median 1.1445, max 1.1445; fraction with a zero in |z| <= 1: 0.0000; in |z| <= 1.2: 1.0000
+  spectral singularity 1/max|x|: min 1.5977; exact cluster part A: mean -0.22139, sd 0.01351
+  zeros on the positive w = z^2 axis (real z): 3 in total
+  argument of the smallest zero in the w = z^2 plane: w > 0 (real z) 0.000, w < 0 (imaginary z) 1.000, complex 0.000; median |arg w| 3.1416
+n=9: 85 tournaments (reg9_completions.txt)
+  smallest zero modulus of Phi: min 1.1790, 5% 1.1830, median 1.1865, max 1.2111; fraction with a zero in |z| <= 1: 0.0000; in |z| <= 1.2: 0.9882
+  spectral singularity 1/max|x|: min 1.5869; exact cluster part A: mean -0.20001, sd 0.00678
+  zeros on the positive w = z^2 axis (real z): 29 in total
+  argument of the smallest zero in the w = z^2 plane: w > 0 (real z) 0.000, w < 0 (imaginary z) 1.000, complex 0.000; median |arg w| 3.1416
+n=11: 13333 tournaments (reg11_completions.txt)
+  smallest zero modulus of Phi: min 1.2194, 5% 1.2326, median 1.2391, max 1.2567; fraction with a zero in |z| <= 1: 0.0000; in |z| <= 1.2: 0.0000
+  spectral singularity 1/max|x|: min 1.5816; exact cluster part A: mean -0.17939, sd 0.00402
+  zeros on the positive w = z^2 axis (real z): 7038 in total
+  argument of the smallest zero in the w = z^2 plane: w > 0 (real z) 0.000, w < 0 (imaginary z) 1.000, complex 0.000; median |arg w| 3.1416
