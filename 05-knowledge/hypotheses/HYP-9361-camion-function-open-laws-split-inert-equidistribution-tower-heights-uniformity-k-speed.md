@@ -22,7 +22,7 @@ status: >
   - the sporadic-class count per prime is underdispersed against the binomial model of HYP-9358 (b) (variance 0.874,
     dispersion z = -2.47).
 session: mac-mini-2026-10-21-fanopsp
-source: 01-canon/theorems/THM-4750-the-camion-function-strong-tournament-counts-interpolate-p-adically-at-half-speed-fermat-quotient-curvature-wieferich-collapse-second-order-zeros-in-pairs-and-the-camion-limit.md
+source: 01-canon/theorems/THM-4750-the-camion-function-half-speed-interpolation-and-the-camion-lift.md
 related:
   - 05-knowledge/hypotheses/HYP-9358-camion-pseudoprimes-open-laws-wieferich-type-primes-sporadic-zero-classes-prime-squares.md
   - 05-knowledge/results/camion_function_audit_20261021.md

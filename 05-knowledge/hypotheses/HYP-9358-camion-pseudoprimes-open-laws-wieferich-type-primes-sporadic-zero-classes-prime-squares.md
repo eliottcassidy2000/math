@@ -33,7 +33,7 @@ related:
   - 05-knowledge/results/session25_spectrum_wiring_20261021/session25-additive-review/REVIEW.md (independent proof and corollary audit)
   - 01-canon/theorems/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md
   - 05-knowledge/results/tournament_pseudoprimes_audit_20261021.md (Lemmas B and C)
-  - 01-canon/theorems/THM-4750-the-camion-function-strong-tournament-counts-interpolate-p-adically-at-half-speed-fermat-quotient-curvature-wieferich-collapse-second-order-zeros-in-pairs-and-the-camion-limit.md (continuation: Camion function, tower heights, 22409)
+  - 01-canon/theorems/THM-4750-the-camion-function-half-speed-interpolation-and-the-camion-lift.md (continuation: Camion function, tower heights, 22409)
   - 05-knowledge/hypotheses/HYP-9361-camion-function-open-laws-split-inert-equidistribution-tower-heights-uniformity-k-speed.md
 scripts:
   - 04-computation/experiments/tournament_pseudoprimes_20261021/camion_sporadic.py (+ .out)
