@@ -256,6 +256,17 @@ c″ = proj_Λ(z″)/(h + 1), a point of order e = h + 1. Then for all 23 types:
 | 31 | D16E8, E8³ | 3q + 3q² (31A) |
 | 47 | D24 | q + 2q² (47A) |
 
+*Heights mod h + 1 (PROVED).* The dual automorphism on V_N is e^{2πiρ_N(0)/(h+1)}. A root α lies in its ζ^j-eigenspace
+iff ht(α) ≡ j mod (h + 1). Per component, the count is n_j + n_{h+1−j}, where n_j = #{exponents ≥ j}. Under
+m ↦ h − m this equals ℓ. So the roots of N are equidistributed: exactly 24 in each nonzero class of ht mod h + 1, and
+none in the zero class.
+
+This gives two consequences:
+- dim V′_1 = 24 + 24h = 24(h+1), and V_Λ^{orb} = V_N;
+- the 24 norm-2 vectors of Λ + c″ correspond to the 24 simple roots of N.
+
+So the "vertices" of a Fricke point are the simple roots.
+
 Consequences:
 - **Supersingular primes.** The prime values of h + 1 are 3, 5, 7, 11, 13, 17, 19, 23, 31 and 47. Each of them is
   therefore a prime p for which X_0(p)/W_p has genus zero: Ogg's supersingular primes, here forced by a lattice. The
