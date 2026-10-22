@@ -1,0 +1,76 @@
+(I) strong inventory below 2100
+     order 4: 1 strong classes with H <= 2100 [2s]
+     order 5: 6 strong classes with H <= 2100 [2s]
+     order 6: 35 strong classes with H <= 2100 [3s]
+     order 7: 353 strong classes with H <= 2100 [3s]
+     order 8: 6008 strong classes with H <= 2100 [4s]
+     order 9: 146376 strong classes with H <= 2100 [10s]
+     order 10: 268683 strong classes with H <= 2100 [30s]
+     order 11: 180284 strong classes with H <= 2100 [58s]
+     order 12: 88379 strong classes with H <= 2100 [85s]
+     order 13: 28817 strong classes with H <= 2100 [107s]
+     order 14: 4545 strong classes with H <= 2100 [119s]
+     order 15: 56 strong classes with H <= 2100 [123s]
+  ok   classes with H <= 625 at orders 9-13: {9: 13439, 10: 8769, 11: 3536, 12: 658, 13: 1} (THM-4744: 13,439 / 8,769 / 3,536 / 658, and IC(3,3,3,3) at 625)
+  ok   every odd 3 <= d < 2100 except 7, 21 is a strong count
+(R) the arithmetic-support model; pre-registered predictions
+     training [301,1098] (399 values, residual s.d. 0.100): 3|d +0.239(0.014), 9|d +0.088(0.018), 5|d +0.065(0.014), prime -0.002(0.014), blocked +0.028(0.023), d=7 mod 8 -0.027(0.012)
+     test     [1101,2099] (500 values, residual s.d. 0.047): 3|d +0.219(0.006), 9|d +0.060(0.008), 5|d +0.054(0.006), prime +0.005(0.006), blocked +0.008(0.010), d=7 mod 8 -0.015(0.005)
+     S(2047) = 1599, S(2049) = 1968; S(1365) = 1037 (residual +0.148); order 14: beta(3|d) = +1.191
+  ok   class counts N(n,h) from sequences of strong components = the class census for n <= 9, every h < 2100
+     n = 8: 15:20 vs 17:6; 31:10 vs 33:23; 63:2 vs 65:25; 127:10 vs 129:40; 255:28 vs 257:30; 511:32 vs 513:35; 1023:0 vs 1025:0; 2047:0 vs 2049:0
+     n = 9: 15:30 vs 17:8; 31:14 vs 33:35; 63:4 vs 65:41; 127:22 vs 129:84; 255:91 vs 257:90; 511:136 vs 513:155; 1023:193 vs 1025:168; 2047:149 vs 2049:174
+     n = 10: 15:42 vs 17:10; 31:18 vs 33:49; 63:6 vs 65:59; 127:34 vs 129:136; 255:188 vs 257:163; 511:290 vs 513:363; 1023:602 vs 1025:543; 2047:990 vs 2049:1029
+     n = 11: 15:56 vs 17:12; 31:22 vs 33:65; 63:8 vs 65:79; 127:46 vs 129:196; 255:333 vs 257:236; 511:454 vs 513:663; 1023:1229 vs 1025:1032; 2047:2325 vs 2049:2435
+     n = 12: 15:72 vs 17:14; 31:26 vs 33:83; 63:10 vs 65:101; 127:58 vs 129:264; 255:538 vs 257:309; 511:618 vs 513:1082; 1023:2112 vs 1025:1596; 2047:3848 vs 2049:4471
+     n = 13: 15:90 vs 17:16; 31:30 vs 33:103; 63:12 vs 65:125; 127:70 vs 129:340; 255:815 vs 257:382; 511:782 vs 513:1655; 1023:3283 vs 1025:2291; 2047:5547 vs 2049:7060
+     n = 14: 15:110 vs 17:18; 31:34 vs 33:125; 63:14 vs 65:151; 127:82 vs 129:424; 255:1176 vs 257:455; 511:946 vs 513:2427; 1023:4770 vs 1025:3133; 2047:7426 vs 2049:10168
+     pre-registered verdicts: {'R1': 'PASS', 'R2': 'PASS', 'R3': 'PASS', 'R4': 'PASS', 'R5': 'PASS', 'R6': 'PASS', 'R7': 'PASS'}
+  ok   R1-R7 evaluated (the script reports verdicts; it does not assert them)
+(D) mechanism: exact one-vertex covers and automorphisms of order 3
+     order 3: covers done [146s]
+     order 4: covers done [146s]
+     order 5: covers done [146s]
+     order 6: covers done [146s]
+     order 7: covers done [146s]
+     order 8: covers done [146s]
+     order 9: covers done [149s]
+     order 10: covers done [155s]
+     order 11: covers done [161s]
+     order 12: covers done [166s]
+     order 13: covers done [168s]
+     order 14: covers done [169s]
+     order 15: covers done [169s]
+  ok   |Aut| divides H for every class (free action on Hamiltonian paths)
+     [301,1098] all                                   : 3|d +0.237(0.012), 9|d +0.088(0.018), 5|d +0.064(0.012), 1 mod 8 +0.038(0.012), 7 mod 8 -0.015(0.012)
+     [301,1098] no exact cover                        : 3|d +0.139(0.012), 9|d +0.005(0.018), 5|d -0.003(0.012), 1 mod 8 +0.045(0.012), 7 mod 8 -0.011(0.012)
+     [301,1098] generic (no exact cover, 3 not | Aut) : 3|d -0.015(0.012), 9|d +0.024(0.019), 5|d +0.002(0.013), 1 mod 8 +0.046(0.012), 7 mod 8 -0.011(0.012)
+     [1101,2099] all                                   : 3|d +0.217(0.005), 9|d +0.060(0.008), 5|d +0.052(0.005), 1 mod 8 +0.013(0.005), 7 mod 8 -0.011(0.005)
+     [1101,2099] no exact cover                        : 3|d +0.135(0.005), 9|d -0.009(0.008), 5|d -0.005(0.005), 1 mod 8 +0.014(0.005), 7 mod 8 -0.010(0.005)
+     [1101,2099] generic (no exact cover, 3 not | Aut) : 3|d +0.010(0.005), 9|d -0.007(0.008), 5|d -0.005(0.005), 1 mod 8 +0.017(0.005), 7 mod 8 -0.012(0.005)
+     share of strong classes with 3 | |Aut|: [301,1098] 0.0514; [1101,2099] 0.0447
+     pre-registered verdicts: {'G1': 'PASS', 'G2': 'PASS', 'G3': 'PASS', 'G4': 'PASS'}
+  ok   G1-G4 evaluated (reported, not asserted)
+     d = 31: S = 4, without exact covers 4, generic 4
+     d = 33: S = 8, without exact covers 8, generic 6
+     d = 63: S = 2, without exact covers 2, generic 2
+     d = 65: S = 14, without exact covers 14, generic 14
+     d = 127: S = 12, without exact covers 12, generic 12
+     d = 129: S = 40, without exact covers 38, generic 37
+     d = 255: S = 107, without exact covers 75, generic 67
+     d = 257: S = 73, without exact covers 73, generic 73
+     d = 511: S = 164, without exact covers 164, generic 164
+     d = 513: S = 265, without exact covers 230, generic 192
+     d = 1023: S = 663, without exact covers 593, generic 500
+     d = 1025: S = 537, without exact covers 510, generic 510
+     d = 2047: S = 1599, without exact covers 1587, generic 1587
+     d = 2049: S = 1968, without exact covers 1828, generic 1622
+(O) per order: H mod 8 by position in the strong spectrum; minimum feedback arc number at n = 8
+     order 6: H/f in <2: 1:0.89 3:0.89 5:0.89 7:1.33; H/f in 2-4: 1:1.41 3:0.47 5:1.65 7:0.47
+     order 7: H/f in <2: 1:1.68 3:0.74 5:0.95 7:0.63; H/f in 2-4: 1:1.30 3:1.33 5:0.84 7:0.53; H/f in 4-8: 1:0.81 3:0.91 5:1.15 7:1.13
+     order 8: H/f in <2: 1:1.41 3:0.57 5:1.29 7:0.73; H/f in 2-4: 1:1.05 3:1.22 5:0.95 7:0.78; H/f in 4-8: 1:0.94 3:0.98 5:1.07 7:1.01; H/f in >=8: 1:1.14 3:0.93 5:0.97 7:0.96
+     order 9: H/f in <2: 1:0.92 3:1.08 5:1.00 7:1.00; H/f in 2-4: 1:1.03 3:1.02 5:1.06 7:0.89; H/f in 4-8: 1:1.01 3:0.98 5:1.03 7:0.98; H/f in >=8: 1:1.01 3:0.99 5:0.99 7:1.00
+     n = 8: corr(log-multiplicity residual, least feedback arc number) = -0.194; mean residual by least fa: {1: (0.645, 2), 2: (0.095, 28), 3: (-0.005, 73), 4: (-0.061, 48), 5: (-0.311, 2)}
+  ok   n = 8: least fa of 31, 63, 127 is >= 3; of 33, 65 it is 1
+
+ALL CHECKS PASSED  (171s)

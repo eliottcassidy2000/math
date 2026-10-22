@@ -5,6 +5,10 @@
   ok   no 2^k - 1 (k >= 5) among them; 15 = 2^4 - 1 is the only repunit
   ok   formula scan (crossing p,q,r < 40; nested s,x+y < 60; shared endpoint L < 80; products a,b < 80): every value = 7 mod 8 is 15, 23, 3*2^j-1 or 5*2^j-1, and no repunit 2^k-1 with k >= 5 occurs
   ok   2^k + 1 = H(NT_(k+2)): one reversed arc (k <= 12)
+(FAN) the Fibonacci fan realizes 2^k - 1 with three back arcs
+  ok   H(fan_k) = 2^k - 1 by DP for 4 <= k <= 14 (the apex loses exactly to floor(k/2), k+1-floor(k/2), k+1)
+  ok   and by the one-apex pairwise formula for 4 <= k <= 400
+  ok   one-apex pairwise formula H - 1 = sum 2^(s-1) - sum_{s<t} 2^max(t-s-1,1) equals the DP for every in-set A, m <= 12
 (K) the class census n <= 9: every class with H = 2^k - 1, k >= 5, has feedback arc number >= 3
   ok   n = 5: least feedback arc number of classes with H = 2^k - 1 (k >= 5): {}; fa <= 2 values = 7 mod 8: [15]
   ok   n = 6: least feedback arc number of classes with H = 2^k - 1 (k >= 5): {31: 3}; fa <= 2 values = 7 mod 8: [15, 23]
@@ -12,4 +16,4 @@
   ok   n = 8: least feedback arc number of classes with H = 2^k - 1 (k >= 5): {31: 3, 255: 4, 127: 3, 511: 5, 63: 3}; fa <= 2 values = 7 mod 8: [15, 23, 39, 47, 79, 95]
   ok   n = 9: least feedback arc number of classes with H = 2^k - 1 (k >= 5): {31: 3, 255: 3, 127: 3, 511: 4, 2047: 7, 1023: 5, 63: 3}; fa <= 2 values = 7 mod 8: [15, 23, 39, 47, 79, 95, 159, 191]
 
-ALL CHECKS PASSED  (13s)
+ALL CHECKS PASSED  (14s)

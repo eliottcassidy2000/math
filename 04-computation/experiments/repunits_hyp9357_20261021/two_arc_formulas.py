@@ -20,6 +20,13 @@ Consequences (PROVED, checked here for m <= 14 and argued for all m in THM-4748)
   (C1) the values = 7 (mod 8) of tournaments with fa <= 2 are exactly 15, 23, 3*2^j - 1 (j >= 3), 5*2^j - 1 (j >= 3);
   (C2) hence no tournament with fa <= 2 has H = 2^k - 1 for k >= 5 (and H = 7 never occurs);
   (C3) 2^k + 1 = H(NT_(k+2)) has fa = 1.
+  (FAN) the Fibonacci fan: the transitive order on {1, ..., k+1} plus a vertex 0 that loses exactly to a = floor(k/2),
+        b = k + 1 - a and a + b = k + 1 (so b - a is 1 or 2) has H = 2^k - 1 (k >= 4) and three back arcs, so for
+        k >= 5 the least feedback arc number of H = 2^k - 1 is exactly 3.  Via the one-apex formula (KNOWN,
+        05-knowledge/variables/single-core-cycle-count.md): for an apex 0 losing exactly to the vertices of a set
+        A of positions >= 2, H - 1 = sum_{s in A} 2^(s-1) - sum_{s<t in A} 2^max(t-s-1, 1); for A = {a, b, a+b} the
+        pair terms 2^(b-1), 2^(a-1) cancel the singleton terms of a and b, leaving 2^(a+b-1) - 2.  Checked by DP for
+        k <= 14, by the one-apex formula for k <= 400, and the pairwise formula against DP for every A with m <= 12.
 Also checked against the full class census n <= 9 (minimum feedback arc number by subset DP).
 Prints ALL CHECKS PASSED."""
 import sys, os, time, itertools
@@ -143,6 +150,51 @@ for a in range(1, 80):
 check(ok, 'formula scan (crossing p,q,r < 40; nested s,x+y < 60; shared endpoint L < 80; products a,b < 80): '
           'every value = 7 mod 8 is 15, 23, 3*2^j-1 or 5*2^j-1, and no repunit 2^k-1 with k >= 5 occurs')
 check(all(int(ham(k + 2, tour(k + 2, [(k + 1, 0)]))) == 2 ** k + 1 for k in range(1, 13)), '2^k + 1 = H(NT_(k+2)): one reversed arc (k <= 12)')
+
+print('(FAN) the Fibonacci fan realizes 2^k - 1 with three back arcs')
+
+
+def fan(k):
+    a = k // 2; b = k + 1 - a
+    m = k + 2
+    out = [0] * m
+    for i in range(1, m):
+        for j in range(i + 1, m):
+            out[i] |= 1 << j
+    for j in range(1, m):
+        if j in (a, b, a + b):
+            out[j] |= 1 << 0
+        else:
+            out[0] |= 1 << j
+    return m, np.array(out, dtype=np.int64), (a, b, a + b)
+
+
+def one_apex_pairwise(A):
+    A = sorted(A)
+    return 1 + sum(2 ** (s - 1) for s in A) - sum(2 ** max(t - s - 1, 1) for s, t in itertools.combinations(A, 2))
+
+
+ok = True
+for k in range(4, 15):
+    m, out, A = fan(k)
+    ok &= int(ham(m, out)) == 2 ** k - 1 == one_apex_pairwise(A)
+check(ok, 'H(fan_k) = 2^k - 1 by DP for 4 <= k <= 14 (the apex loses exactly to floor(k/2), k+1-floor(k/2), k+1)')
+check(all(one_apex_pairwise((k // 2, k + 1 - k // 2, k + 1)) == 2 ** k - 1 for k in range(4, 401)), 'and by the one-apex pairwise formula for 4 <= k <= 400')
+ok = True
+for m in range(3, 13):
+    for r in range(0, m - 1):
+        for A in itertools.combinations(range(2, m), r):
+            out = [0] * m
+            for i in range(1, m):
+                for j in range(i + 1, m):
+                    out[i] |= 1 << j
+            for j in range(1, m):
+                if j in A:
+                    out[j] |= 1
+                else:
+                    out[0] |= 1 << j
+            ok &= int(ham(m, np.array(out, dtype=np.int64))) == one_apex_pairwise(A)
+check(ok, 'one-apex pairwise formula H - 1 = sum 2^(s-1) - sum_{s<t} 2^max(t-s-1,1) equals the DP for every in-set A, m <= 12')
 
 print('(K) the class census n <= 9: every class with H = 2^k - 1, k >= 5, has feedback arc number >= 3')
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'h_spectrum_multiplicities_20261021'))
