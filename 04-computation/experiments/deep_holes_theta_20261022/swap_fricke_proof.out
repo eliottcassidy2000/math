@@ -1,0 +1,71 @@
+  ok   a1^24     h= 3: M^* vectors |x|^2<=2: 51 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [2s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 3: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 3: (48, 2)}
+  ok   a2^12     h= 4: M^* vectors |x|^2<=2: 99 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 2: 0, 4: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 2: (48, 2), 4: (72, 3)}
+  ok   a3^8      h= 5: M^* vectors |x|^2<=2: 101 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 5: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 5: (96, 4)}
+  ok   a4^6      h= 6: M^* vectors |x|^2<=2: 171 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 2: 0, 3: 0, 6: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 2: (48, 2), 3: (72, 3), 6: (120, 5)}
+  ok   a5^4d4    h= 7: M^* vectors |x|^2<=2: 151 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 7: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 7: (144, 6)}
+  ok   d4^6      h= 7: M^* vectors |x|^2<=2: 151 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 7: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 7: (144, 6)}
+  ok   a6^4      h= 8: M^* vectors |x|^2<=2: 213 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 2: 0, 4: 0, 8: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 2: (48, 2), 4: (96, 4), 8: (168, 7)}
+  ok   a7^2d5^2  h= 9: M^* vectors |x|^2<=2: 223 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 3: 0, 9: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 3: (72, 3), 9: (192, 8)}
+  ok   a8^3      h=10: M^* vectors |x|^2<=2: 269 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 2: 0, 5: 0, 10: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 2: (48, 2), 5: (120, 5), 10: (216, 9)}
+  ok   a9^2d6    h=11: M^* vectors |x|^2<=2: 251 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 11: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 11: (240, 10)}
+  ok   d6^4      h=11: M^* vectors |x|^2<=2: 251 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 11: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 11: (240, 10)}
+  ok   a11d7e6   h=13: M^* vectors |x|^2<=2: 301 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 13: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 13: (288, 12)}
+  ok   e6^4      h=13: M^* vectors |x|^2<=2: 301 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 13: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 13: (288, 12)}
+  ok   a12^2     h=14: M^* vectors |x|^2<=2: 367 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 2: 0, 7: 0, 14: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 2: (48, 2), 7: (168, 7), 14: (312, 13)}
+  ok   d8^3      h=15: M^* vectors |x|^2<=2: 393 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 3: 0, 5: 0, 15: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 3: (72, 3), 5: (120, 5), 15: (336, 14)}
+  ok   a15d9     h=17: M^* vectors |x|^2<=2: 401 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 17: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 17: (384, 16)}
+  ok   a17e7     h=19: M^* vectors |x|^2<=2: 451 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 19: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 19: (432, 18)}
+  ok   d10e7^2   h=19: M^* vectors |x|^2<=2: 451 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 19: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 19: (432, 18)}
+  ok   d12^2     h=23: M^* vectors |x|^2<=2: 551 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 23: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 23: (528, 22)}
+  ok   a24       h=26: M^* vectors |x|^2<=2: 661 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 2: 0, 13: 0, 26: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 2: (48, 2), 13: (312, 13), 26: (600, 25)}
+  ok   d16e8     h=31: M^* vectors |x|^2<=2: 751 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 31: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 31: (720, 30)}
+  ok   e8^3      h=31: M^* vectors |x|^2<=2: 751 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 31: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 31: (720, 30)}
+  ok   d24       h=47: M^* vectors |x|^2<=2: 1151 (PARI qfminim agrees: True); E = 0 below norm 2; v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); B = sigma(A); sum over the Leech line A of v = 24 (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = 24 Delta [0s]
+       v = sum_d c_d 1_(S_d): True; c_d = {1: -24, 47: 24}
+       intermediate lattices L_d: (roots, Coxeter number) = {1: (0, 0), 47: (1104, 46)}
+
+ALL CHECKS PASSED  (8s)

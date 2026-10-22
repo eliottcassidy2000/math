@@ -27,6 +27,8 @@ status: >
     - It is identified as the subsystem of roots of height divisible by p (height_descent.py).
     - It is PROVED for prime e = h/p by the inclusion R(L_e) >= X_p together with the root count 24(e - 1).
   - (9) is PROVED from (3), (5) and (7).
+  - (11) The Fricke swap theorem is PROVED by the same vector-valued Sturm certificate as THM-4758, run on the 23 pairs
+    (rho, z'') (swap_fricke_proof.py). It also supplies the Leech-side facts of (10) from the N side.
   - The M24-point remark is VERIFIED (sampling plus exact orbit-size arithmetic). It is not a proof that the k = 0
     vectors form a single orbit.
   Prior-art search (agent, 2026-10-22): no published statement of (2), (3) or (5) was found. CDH Remark 2.2 asks for
@@ -45,6 +47,7 @@ scripts:
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_neighbors.py (+ .out) (Fricke descent: neighbour root systems)
   - 04-computation/experiments/deep_holes_theta_20261022/order3_fricke_census.py (+ .out) (the order-3 Fricke point is the M24-point)
   - 04-computation/experiments/deep_holes_theta_20261022/height_descent.py (+ .out) (Fricke descent = roots of height divisible by p)
+  - 04-computation/experiments/deep_holes_theta_20261022/swap_fricke_proof.py (+ .out) (the Fricke swap theorem: certificates for the 23 pairs (rho, z''))
 related:
   - THM-4758 (swap theorem and deep-hole theta identity)
   - HYP-9363 (proved in THM-4758)
@@ -275,6 +278,29 @@ Consequences:
   example, the D4⁶ point 2c is the (h+1)-point of A1²⁴. This is why its order is e = h(X_p) + 1.
 - **The A1²⁴ point is fixed by M24.** Its stabiliser contains the umbral group G^X = M24, and by the order-3 census it
   is the point (2²⁴)/(3√8).
+
+**(11) The Fricke swap theorem (PROVED).** The certificate of THM-4758 applies verbatim to the cusp pair (ρ, z″), with
+M″ = {ρ, z″}^⊥ and D = (Z/(h+1))². It succeeds for all 23 types (swap_fricke_proof.py, 8 s): Θ_{M″} − σ*Θ_{M″} = Δ·v″,
+with line sum 24. Hence
+
+    θ_{Λ+c″} − θ_{N+ρ_N/(h+1)} = 24 Δ,     Θ_Λ^{[c″]} − Θ_N^{[ρ_N/(h+1)]} = 24 Δ,
+
+and so
+
+    Tr_{V_N}(e^{2πiρ_N(0)/(h+1)} q^{L_0 − 1}) = T_{(h+1)+(h+1)}   exactly.
+
+The weight-one trace is 24 + 24(ζ + … + ζ^h) = 0, by the height equidistribution. The Leech trace is this plus 24.
+N + ρ_N/(h+1) has no vectors of norm 2, and Λ + c″ has 24.
+
+The two theorems sit side by side:
+
+| | point of Λ | order | defect | what the defect counts |
+|---|---|---|---|---|
+| THM-4758 | deep hole c | h = Σ_{i≥0} a_i | 24 + k | nodes of the extended Dynkin diagrams (the hole vertices) |
+| (11) | Fricke point c″ | h + 1 | 24 | nodes of the finite Dynkin diagrams (the simple roots) |
+
+The twining sides are parallel too. V_N twined by the principal element of order h gives the non-Fricke umbral T^X.
+Twined by the element of Kac type (2;1,…,1) and order h + 1, it gives the Fricke T_{(h+1)+}.
 
 **(6) The Monster corner (CITED).** For X ≠ A24:
 - π^X is the Frame shape of a fixed-point-free element g_X ∈ Co_0, so Z_{V_Λ}(ĝ_X) = 1/η_{π^X} = T^X as well (CDH
