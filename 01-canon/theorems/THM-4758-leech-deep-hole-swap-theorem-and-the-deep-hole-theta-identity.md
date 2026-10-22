@@ -4,7 +4,7 @@ title: "The swap theorem for the Leech cusp, and the deep-hole theta identity: f
 status: >
   PROVED for each of the 23 types by a finite exact certificate (swap_theorem_proof.py).
   - The inputs are Borcherds' theorem that the vector-valued theta function of a lattice is a modular form for the
-    Weil representation (Duke 1998, Thm 4.1), and a vector-valued Sturm lemma (proved below from the valence formula).
+    Weil representation (Borcherds, Invent. Math. 132 (1998), Thm 4.1), and a vector-valued Sturm lemma (proved below from the valence formula).
   - The cusp vectors come from Borcherds' table of norm-0 vectors of II_{25,1}
     (https://math.berkeley.edu/~reb/lattices/norm0); its N_0, N_1, N_2 columns are reproduced.
   - Independently corroborated by exact enumeration of both sides through q^3 for all 23 types (all_holes.py) and, for
@@ -107,9 +107,9 @@ In vertex-algebra terms, the deep-hole automorphism g_c = e^{2πi c(0)} of the L
 
     Tr_{V_Λ}(g_c q^{L_0 − 1}) = 24 + T_h(τ),
 
-the Leech character 24 + J with J replaced by T_h. Equivalently, its twined trace coincides with that of a
-fixed-point-free Conway element of Frame shape h^k/1^k, plus the constant 24 + k, which lives on the weight-one
-space.
+the Leech character 24 + J with J replaced by T_h. Equivalently, for h ≠ 25, its twined trace coincides with that
+of a fixed-point-free Conway element of Frame shape h^k/1^k, plus the constant 24 + k, which lives on the weight-one
+space. For h = 25 there is no such element: Co_0 has no element of order 25 (audit S53 §1(b)).
 
 This is checked independently by direct enumeration of Leech vectors weighted by e^{2πiλ·c}, through q⁴, for A1²⁴,
 A2¹², A4⁶, A6⁴ and A24 (twined_hauptmodul.py).
@@ -172,7 +172,9 @@ All eight cases are also checked against exact enumeration (all_holes_J2.out).
 - Representation theory alone forces (1) only for prime h. For prime h, the torus-invariant, σ-antisymmetric weight-12
   cusp space has dimension 1. For h = 4, 9 and 25 it is larger, of dimension 2, 3 and 5 (swap_dimension.py). So the
   vanishing of the extra components is arithmetic, and is certified case by case.
-- For prime h there is also a two-line proof. W(R) realizes the torus on D, and the sum rule
+- For prime h there is also a two-line argument (SKETCH, audit S53 §1(c)). As written it is not justified: W(R)
+  does not fix ρ, so it does not act on M, and the argument needs the rationality of the coset theta series instead.
+  The intended steps are that W(R) realizes the torus on D, and the sum rule
   Σ_v R_v = Σ_u C_u = θ_{M^*} gives R(1) − C(1) = (θ_N − θ_Λ)/(h − 1) = 24hΔ/(h − 1) = (24 + k)Δ.
 - Dividing (2) by η²⁴ gives a statement about the deep-hole orbifold of the Leech VOA (Möller–Scheithauer): the
   characters of the c-twisted V_Λ-module and of the (ρ_N/h)-twisted V_N-module differ by the constant 24 + k.

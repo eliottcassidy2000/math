@@ -1,0 +1,6 @@
+ok   D5 (h=8): shifted theta = eta^l eta_pi(tau/h) through p^23: True [1, 1, 1, 2, 3, 4, 5, 7, 4, 7, 10, 9]...; twined theta = eta^l/eta_pi through q^6: True [1, -6, 10, 4, -20, 4, -8]
+ok   D6 (h=10): shifted theta = eta^l eta_pi(tau/h) through p^29: True [1, 1, 1, 2, 2, 4, 5, 6, 8, 10, 8, 11]...; twined theta = eta^l/eta_pi through q^6: True [1, -7, 15, 0, -33, 13, 24]
+ok   E6 (h=12): shifted theta = eta^l eta_pi(tau/h) through p^35: True [1, 1, 1, 1, 2, 3, 3, 4, 6, 7, 8, 10]...; twined theta = eta^l/eta_pi through q^6: True [1, -7, 15, 1, -41, 36, 3]
+ok   E7 (h=18): shifted theta = eta^l eta_pi(tau/h) through p^53: True [1, 1, 1, 1, 1, 2, 2, 3, 3, 4, 5, 6]...; twined theta = eta^l/eta_pi through q^6: True [1, -8, 21, -7, -56, 69, 22]
+ok   E8 (h=30): shifted theta = eta^l eta_pi(tau/h) through p^89: True [1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3]...; twined theta = eta^l/eta_pi through q^6: True [1, -9, 28, -20, -70, 134, -8]
+ALL OK

@@ -1,0 +1,13 @@
+ok   4A  (4+)     N= 4: Ligozat True; W_N-symmetric True; orders at 1/d: {1: '-1', 2: '2', 4: '-1'}; E = q^-1 + 24 + [276, 2048, 11202] q..; claimed [276, 2048, 11202]
+ok   8A  (8+)     N= 8: Ligozat True; W_N-symmetric True; orders at 1/d: {1: '-1', 2: '1', 4: '1', 8: '-1'}; E = q^-1 + 8 + [36, 128, 386] q..; claimed [36, 128, 386]
+ok   12H (12+12)  N=12: Ligozat True; W_N-symmetric True; orders at 1/d: {1: '-1', 2: '0', 3: '1', 4: '1', 6: '0', 12: '-1'}; E = q^-1 + 4 + [14, 36, 85] q..; claimed [14, 36]
+ok   16C (16+)    N=16: Ligozat True; W_N-symmetric True; orders at 1/d: {1: '-1', 2: '0', 4: '1', 8: '0', 16: '-1'}; E = q^-1 + 2 + [8, 16, 34] q..; claimed [8, 16]
+ok   20F (20+20)  N=20: Ligozat True; W_N-symmetric True; orders at 1/d: {1: '-1', 2: '0', 4: '1', 5: '1', 10: '0', 20: '-1'}; E = q^-1 + 2 + [5, 10, 18] q..; claimed [5, 10]
+ok   24I (24+24)  N=24: Ligozat True; W_N-symmetric True; orders at 1/d: {1: '-1', 2: '0', 3: '0', 4: '1', 6: '1', 8: '0', 12: '0', 24: '-1'}; E = q^-1 + 1 + [4, 6, 11] q..; claimed [4, 6]
+ok   32A (32+)    N=32: Ligozat True; W_N-symmetric True; orders at 1/d: {1: '-1', 2: '1', 4: '0', 8: '0', 16: '1', 32: '-1'}; E = q^-1 + 2 + [2, 4, 6] q..; claimed [2, 4]
+ok   6B  (6+6)    N= 6: Ligozat True; W_N-symmetric True; orders at 1/d: {1: '-1', 2: '1', 3: '1', 6: '-1'}; E = q^-1 + 12 + [78, 364, 1365] q..; claimed [78, 364, 1365]
+ok   10D (10+10)  N=10: Ligozat True; W_N-symmetric True; orders at 1/d: {1: '-1', 2: '1', 5: '1', 10: '-1'}; E = q^-1 + 6 + [21, 62, 162] q..; claimed [21, 62, 162]
+ok   15C (15+15)  N=15: Ligozat True; W_N-symmetric True; orders at 1/d: {1: '-1', 3: '1', 5: '1', 15: '-1'}; E = q^-1 + 3 + [9, 19, 42] q..; claimed [9, 19, 42]
+ok   14C (14+14)  N=14: Ligozat True; W_N-symmetric True; orders at 1/d: {1: '-1', 2: '1', 7: '1', 14: '-1'}; E = q^-1 + 4 + [10, 24, 51] q..; claimed [10, 24, 51]
+ok   26B (26+26)  N=26: Ligozat True; W_N-symmetric True; orders at 1/d: {1: '-1', 2: '1', 13: '1', 26: '-1'}; E = q^-1 + 2 + [3, 6, 9] q..; claimed [3, 6, 9]
+ALL OK

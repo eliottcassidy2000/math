@@ -8,8 +8,11 @@ status: >
     made explicit and shallow multiples allowed).
   - The rationality certificate (0) is PROVED: an isometry of the discriminant form commutes with the Weil
     representation, and the vector-valued Sturm lemma (weight 12) reduces invariance to vectors of norm <= 2.
-  - The verdicts (3)-(6) are FINITE-EXACT: exact integer enumeration of all vectors of norm <= 2 in the e cosets
-    Lambda + bv (fricke_cusp_certificate.py, fricke_cusp_certificate.out).
+  - The verdicts (3), (4) and (5) are FINITE-EXACT: exact integer enumeration of all vectors of norm <= 2 in the e
+    cosets Lambda + bv (fricke_cusp_certificate.py, fricke_cusp_certificate.out). (3') is VERIFIED (sampled in large
+    shells).
+  - Independently AUDITED (audit_S53/REPORT.md, T1-T5): the criterion, the certificate (re-run plus an independent
+    implementation), the carrier table and the Ligozat names. The audit also found condition (ii) redundant.
     - Shell 0 is complete.
     - Shell 1 is complete: its classes are the component orbits, every orbit occurs in the sample, and the counts
       are proportional to the component numbers.
@@ -73,7 +76,8 @@ related:
 Γ_0(e) + e (in particular X_0(e)/W_e has genus 0) if and only if all four of the following hold:
 - **(0′) Rationality.** Θ_Λ^{[v]} has rational coefficients. Equivalently, Θ^{[dv]} = Θ^{[v]} for every unit d mod e.
 - **(i) Simple pole at 0.** Λ + v has a unique vector of norm < 2, and its norm is 2 − 2/e.
-- **(ii) Fricke constant.** Λ + v has exactly 24 vectors of norm 2.
+- **(ii) Fricke constant.** Λ + v has exactly 24 vectors of norm 2. This is implied by (0′), (i) and (iii), and is
+  kept as a cheap necessary check: G − Z_v is a constant that is odd under W_e, hence 0 (audit S53, T1).
 - **(iii) No other poles.** Take any c | e with 1 < c < e and any norm t < 2 occurring in Λ + cv.
   - On that norm, e(v·x) runs through one coset r_0 + (e/c)Z of Z/e.
   - Put P(T) = Σ_x T^{s(x)}, with s(x) = (e(v·x) − r_0)/(e/c) mod c.
@@ -97,7 +101,7 @@ related:
 the twining 24 + T_{(h+1)+(h+1)} of THM-4759 (10), and it supplies the rationality input that the proof given there
 leaves implicit.
 
-**(3′) Deeper shells and farther cusps (FINITE-EXACT, sampled where large).**
+**(3′) Deeper shells and farther cusps (VERIFIED: exhaustive for small shells, sampled for large ones; audit S53).**
 - No cusp in shell 2 of any type satisfies the criterion. Nor does any in shells 2-6 of the 14 lattices with h ≤ 14
   (fricke_cusp_certificate_small.out), or in shells 2-8 of the eight with h ≥ 16. For h ≤ 7 this includes every root
   cusp y = α, at height 2h + 1 − ht α (Chenevier-Lannes' neighbours).
@@ -253,7 +257,8 @@ because W_e normalises Γ_0(e). The difference G − Z_v is holomorphic at:
 - ∞ and 0, where the leading coefficients 1 cancel;
 - the other cusps, by (iii), since W_e permutes them.
 
-So G − Z_v is constant, equal to n_2 − 24, which is 0 by (ii). Then Z_v is W_e-invariant with simple poles exactly
+So G − Z_v is constant, equal to n_2 − 24. It is also odd under W_e, since W_e² acts trivially, so it is 0. So
+(ii) follows from the other conditions. Then Z_v is W_e-invariant with simple poles exactly
 at the two cusps ∞ and 0, which W_e exchanges. So it has degree 1 on X_0(e)/W_e, and Z_v − 24 is the normalized
 Hauptmodul.
 

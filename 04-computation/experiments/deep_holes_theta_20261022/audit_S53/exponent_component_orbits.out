@@ -1,0 +1,14 @@
+(a) exponent law and hand formulas: OK ; equality cases e > 1: [('D(n even)', 'n-1'), ('E6', 4), ('E7', 9), ('E8', 6), ('E8', 10), ('E8', 15)]
+COMPONENT RULE MISMATCH D 4 3 False True
+COMPONENT RULE MISMATCH D 6 5 False True
+COMPONENT RULE MISMATCH D 8 7 False True
+COMPONENT RULE MISMATCH D 10 9 False True
+COMPONENT RULE MISMATCH D 12 11 False True
+COMPONENT RULE MISMATCH E 6 4 False True
+COMPONENT RULE MISMATCH E 7 9 False True
+COMPONENT RULE MISMATCH E 8 6 False True
+COMPONENT RULE MISMATCH E 8 10 False True
+COMPONENT RULE MISMATCH E 8 15 False True
+(b) component rule with exact multiplier at a random point: A1..A12, D4..D12, E6..E8: FAIL
+(c) |Co0|/|M24| = 33965568000, |Co0|/|U6(2):2| = 452088000, sum = 34417656000 (theta_Leech coefficient of q^6 is 34417656000: True)
+(d) (2^24)/sqrt8 . lambda over the 196560 minimal vectors: {-5: 24, -4: 759, -3: 6072, -2: 21528, -1: 43056, 0: 53682, 1: 43056, 2: 21528, 3: 6072, 4: 759, 5: 24}

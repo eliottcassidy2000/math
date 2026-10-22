@@ -1,0 +1,7 @@
+PARI stack size set to 2000000000 bytes, maximum size set to 2000000000
+c-like: y^2 = 40; vectors of Lambda + Zv with norm <= 2: 100
+   coset 1 v: 8/5: 1, 2: 24
+   coset 2 v: 8/5: 1, 2: 24
+irrational: y^2 = 40; vectors of Lambda + Zv with norm <= 2: 76
+   coset 1 v: 8/5: 1, 2: 23
+   coset 2 v: 6/5: 1, 2: 13

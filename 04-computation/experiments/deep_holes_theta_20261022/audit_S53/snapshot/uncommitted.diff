@@ -1,0 +1,285 @@
+diff --git a/01-canon/theorems/THM-4759-deep-hole-twining-of-the-leech-voa-is-umbral.md b/01-canon/theorems/THM-4759-deep-hole-twining-of-the-leech-voa-is-umbral.md
+index eb1c006115..5f730ff80c 100644
+--- a/01-canon/theorems/THM-4759-deep-hole-twining-of-the-leech-voa-is-umbral.md
++++ b/01-canon/theorems/THM-4759-deep-hole-twining-of-the-leech-voa-is-umbral.md
+@@ -55,7 +55,7 @@ status: >
+   - The M24-point orbit O6a is in the ATLAS (p. 181); see Sun-Wang arXiv 2111.10999, §2.3 and Lemma 2.11.
+   - NOT FOUND, so new as far as we know: the Leech-side statements of (10) (they follow in a line from Borcherds'
+     lemmas); the Fricke Hauptmodul twining (7), (10); the Fricke swap theorem (11); the p = 3, 5 descents
+-    (E6^4 -> A2^12, E8^3 -> A8^3, A4^6); the H -> pH + 1 reading; the D-type shell-1 family. CDH Remark 2.2 asks for
++    (E6^4 -> A2^12, E8^3 -> A8^3, A4^6); the H -> pH + 1 reading; the shell-1 Fricke family (THM-4760). CDH Remark 2.2 asks for
+   a conceptual proof that T^X is genus zero; (2) identifies T^X as a VOA trace but does not by itself prove genus zero.
+   Session opus-2026-10-22-S53.
+ session: opus-2026-10-22-S53
+@@ -74,10 +74,10 @@ scripts:
+   - 04-computation/experiments/deep_holes_theta_20261022/swap_fricke_proof.py (+ .out) (the Fricke swap theorem: certificates for the 23 pairs (rho, z''))
+   - 04-computation/experiments/deep_holes_theta_20261022/swap_shell_test.py (+ .out) (the next shell m = h + 2 fails)
+   - 04-computation/experiments/deep_holes_theta_20261022/fricke_nudge.py (+ .out) (Fricke point = deep hole nudged 1/(h+1) toward a second-shell point; z'' = z + Leech wall)
+-  - 04-computation/experiments/deep_holes_theta_20261022/fricke_shell_test.py (+ .out) (shell-1 points: Fricke-invariant twining for the seven D-types despite shallow multiples)
++  - 04-computation/experiments/deep_holes_theta_20261022/fricke_shell_test.py (+ .out) (shell-1 points: Fricke-invariant twining for seven of Borcherds' 2-targets despite shallow multiples)
+ related:
+   - THM-4758 (swap theorem and deep-hole theta identity)
+-  - THM-4760 (cusp criterion for Fricke twinings; rationality input of (10); the D-type shell-1 family)
++  - THM-4760 (cusp criterion for Fricke twinings; rationality input of (10); the shell-1 Fricke family)
+   - HYP-9363 (proved in THM-4758)
+   - HYP-9368 (genus-zero inner automorphisms of V_Lambda: deep holes and Fricke points)
+ ---
+@@ -398,9 +398,10 @@ over the shells of N + ρ_N/h. Shell 0 gives m = h + 1. The next shell, m = h +
+ types (swap_shell_test.py): the coset theta series already differ below norm 2. So the swap holds
+ exactly for m = h and m = h + 1.
+ 
+-*But the Fricke twining extends one shell further for the D-types (now THM-4760).* The shell-1 Leech points
+-(m = h + 2) still have a unique minimal vector at the Fricke norm 2 − 2/(h + 2). For the D-type components of the
+-seven lattices A1²⁴ = D2¹², D4⁶, D6⁴, D8³, D10E7², D12² and D16E8, the twining is the Fricke Hauptmodul. The classes
++*But the Fricke twining extends one shell further for seven lattices (now THM-4760).* The shell-1 Leech points
++(m = h + 2) still have a unique minimal vector at the Fricke norm 2 − 2/(h + 2). For one shell-1 class in each of
++the seven lattices A1²⁴, D4⁶, D6⁴, D8³, D10E7² (E7 carrier), D12² and D16E8 (E8 carrier), the twining is the Fricke
++Hauptmodul. The classes
+ are 4A, 8A, 12H, 16C, 20F, 24I and 32A, at orders 4, 8, 12, 16, 20, 24 and 32. This is PROVED in THM-4760 by a cusp
+ criterion with Ligozat certificates for the names.
+ 
+@@ -559,7 +560,7 @@ multiples, through q³ for all 23 types (fricke_h_plus_one.out; through q² in f
+ - the deep proper multiples (verified);
+ - the rationality of Θ_Λ^{[c″]}, so that F is Γ_0(e)-invariant.
+ 
+-The first version of this proof left the third input implicit; it is not automatic. The E8 shell-1 points pass the
++The first version of this proof left the third input implicit; it is not automatic. The E8³ shell-1 points pass the
+ first two conditions but are irrational (THM-4760 (4)). For the 23 (h+1)-points rationality is certified by
+ THM-4760 (2)–(3): vector-valued Sturm on the theta vector of {x : x·c″ ∈ Z}. For the multiples of (7) it follows
+ from (3), since Θ^{[c]} = η²⁴(T^X + 24 + k) is rational.
+diff --git a/01-canon/theorems/THM-4760-cusp-criterion-for-fricke-twinings-of-the-leech-voa-and-the-two-descent-family.md b/01-canon/theorems/THM-4760-cusp-criterion-for-fricke-twinings-of-the-leech-voa-and-the-two-descent-family.md
+index 2b52e76983..8b828a0e99 100644
+--- a/01-canon/theorems/THM-4760-cusp-criterion-for-fricke-twinings-of-the-leech-voa-and-the-two-descent-family.md
++++ b/01-canon/theorems/THM-4760-cusp-criterion-for-fricke-twinings-of-the-leech-voa-and-the-two-descent-family.md
+@@ -1,6 +1,6 @@
+ ---
+ id: THM-4760
+-title: "Cusp criterion for Fricke twinings of the Leech VOA, and the 2-descent family. For v in Lambda (x) Q of order e with e v^2/2 in Z, Z_v - 24 = Theta_Lambda^[v]/eta^24 - 24 is the normalized Hauptmodul of Gamma_0(e)+e iff (0') Z_v has rational coefficients, (i) Lambda + v has a unique vector of norm 2 - 2/e, (ii) exactly 24 of norm 2, and (iii) at every intermediate cusp the twined shallow vectors of Lambda + cv cancel (Phi_c divides their residue polynomial). (0') is certified through q^1 by the vector-valued Sturm lemma. On the cusps adjacent to the 23 deep-hole cusps the criterion holds exactly for the 23 (h+1)-points (shell 0) and for seven shell-1 points, those of the D-type components of A1^24, D4^6, D6^4, D8^3, D10E7^2, D12^2, D16E8, of orders 4, 8, 12, 16, 20, 24, 32, which twine V_Lambda by 24 + T_4A, T_8A, T_12H, T_16C, T_20F, T_24I, T_32A; shell 2 gives none. Doubling realises Borcherds' 2-descent: for the nine Niemeier lattices with -1 in W the orbifold of 2v is the source N_1 (h = 2h_1 + 2) and 2v has a cancelling pair of minimal vectors, while for the other even h the point 2v is the (h/2+1)-point of a lattice of Coxeter number h/2. The E7, E8 and D24 shell-1 points satisfy (i)-(iii) but are irrational (fields containing Q(sqrt 5), Q(sqrt 2), Q(sqrt 3))"
++title: "Cusp criterion for Fricke twinings of the Leech VOA, and the 2-descent family. For v in Lambda (x) Q of order e with e v^2/2 in Z, Z_v - 24 = Theta_Lambda^[v]/eta^24 - 24 is the normalized Hauptmodul of Gamma_0(e)+e iff (0') Z_v has rational coefficients, (i) Lambda + v has a unique vector of norm 2 - 2/e, (ii) exactly 24 of norm 2, and (iii) at every intermediate cusp the twined shallow vectors of Lambda + cv cancel (Phi_c divides their residue polynomial). (0') is certified through q^1 by the vector-valued Sturm lemma. On the cusps adjacent to the 23 deep-hole cusps the criterion holds exactly for the 23 (h+1)-points (shell 0) and for seven shell-1 points, carried by A1 in A1^24, D4, D6, D8, E7 in D10E7^2, D12 and E8 in D16E8, of orders 4, 8, 12, 16, 20, 24, 32, which twine V_Lambda by 24 + T_4A, T_8A, T_12H, T_16C, T_20F, T_24I, T_32A; shell 2 gives none. Doubling realises Borcherds' 2-descent: for the nine Niemeier lattices with -1 in W the orbifold of 2v is the source N_1 (h = 2h_1 + 2) and 2v has a cancelling pair of minimal vectors, while for the other even h the point 2v is the (h/2+1)-point of a lattice of Coxeter number h/2. The other shell-1 points of the nine (carriers D10 in D10E7^2, D16 in D16E8, E8 in E8^3, D24) satisfy (i)-(iii) but are irrational (fields containing Q(sqrt 5), Q(sqrt 2), Q(sqrt 2), Q(sqrt 3)). The selection is Galois acting on Kac classes: for D_n at order 2n the shell-1 class is stable iff n in {2, 4, 6, 8, 12}; for E8 at order 32 the shell-1 class is stable and the principal one is not; for E7 at order 20 Galois swaps the two, which the swap of the two E7's of D10E7^2 undoes"
+ status: >
+   PROVED (the criterion), plus FINITE-EXACT certificates and CITED class names.
+   - The criterion (1) is PROVED: classical theta transformations of lattice cosets, the Weil representation of
+@@ -91,18 +91,19 @@ leaves implicit.
+ the eight lattices with h ≥ 16, satisfies the criterion. The orders reached include every missing genus-zero Fricke
+ level between 18 and 50: 18, 21, 25, 27, 29, 35, 36, 39, 49 and 50.
+ 
+-**(4) Shell 1 (FINITE-EXACT; class names CITED).** Exactly seven shell-1 classes satisfy the criterion. In each,
+-the component carrying θ_j is of type D (A1 counts as D2).
++**(4) Shell 1 (FINITE-EXACT; class names CITED).** Exactly seven shell-1 classes satisfy the criterion, one in each
++of the lattices below. The column "carrier" is the component j with y = θ_j (identified by the excess
++(h/2)|y_j − ρ_j/h|² − (h/2)|ρ_j/h|² = 1).
+ 
+-| order e = h + 2 | N | component | Z_v − 24 = q⁻¹ + … | class |
++| order e = h + 2 | N | carrier | Z_v − 24 = q⁻¹ + … | class |
+ |---|---|---|---|---|
+ | 4 | A1²⁴ | A1 | 276q + 2048q² + 11202q³ + 49152q⁴ | 4A |
+ | 8 | D4⁶ | D4 | 36q + 128q² + 386q³ + 1024q⁴ | 8A |
+ | 12 | D6⁴ | D6 | 14q + 36q² | 12H (A058486) |
+ | 16 | D8³ | D8 | 8q + 16q² | 16C (A058516) |
+-| 20 | D10E7² | D10 | 5q + 10q² | 20F (A058555) |
++| 20 | D10E7² | E7 | 5q + 10q² | 20F (A058555) |
+ | 24 | D12² | D12 | 4q + 6q² | 24I (A058579) |
+-| 32 | D16E8 | D16 | 2q + 4q² | 32A (A058629) |
++| 32 | D16E8 | E8 | 2q + 4q² | 32A (A058629) |
+ 
+ In all seven, the only shallow proper multiple is 2v. Its coset Λ + 2v has exactly two vectors of norm < 2, namely
+ ±μ with μ² = 2 − 4/e, and P = 1 + T. The eigenvalues of g on the two lowest states of the g²-twisted sector are
+@@ -112,10 +113,30 @@ Every other shell-1 class fails, and each failure is a proof of non-Hauptmodular
+ - **Odd h** (A2¹², A4⁶, A6⁴, A8³, A12², A24): n_2 = 23, and the point is irrational.
+ - **Even h outside the nine lattices of (5)**: 2v has a single vector of norm < 2, so P = 1 and there is a pole at
+   1/2.
+-- **The E7 components of D10E7², the E8 components of D16E8 and E8³, and D24**: these pass (i), (ii) and (iii) but
+-  are IRRATIONAL. Only the units d ≡ ±1 mod 10, ±1 mod 8 and ±1 mod 12 respectively preserve θ(Λ + dv) below norm 2.
+-  So the coefficient fields contain Q(√5), Q(√2) and Q(√3). For E8 at d = 3, Λ + 3v has minimum 15/8, below the
+-  Fricke norm 31/16.
++- **The other carriers of the nine lattices of (5)**: D10 in D10E7², D16 in D16E8, the E8's of E8³, and D24. These
++  pass (i), (ii) and (iii) but are IRRATIONAL. Only the units d ≡ ±1 mod 10, ±1 mod 8, ±1 mod 8 and ±1 mod 12
++  respectively preserve θ(Λ + dv) below norm 2. So the coefficient fields contain Q(√5), Q(√2), Q(√2) and Q(√3).
++  For E8³ at d = 3, Λ + 3v has minimum 15/8, below the Fricke norm 31/16.
++
++**(4′) Why these seven: Galois permutes Kac classes (VERIFIED on root spectra).** On a component R of Coxeter number
++h, the N-side element of a shell-1 point has one of two Kac classes of order h + 2:
++- P = ρ/(h + 2), Kac type (3; 1, …, 1), on every non-carrier;
++- C = (ρ + θ)/(h + 2), Kac type 2 at the node(s) next to α_0 and 1 at every other node, on the carrier.
++
++The Galois power x ↦ dx must permute the multiset of component classes up to Aut(N). On the root eigenvalue
++spectra (root_multisets.py, an independent necessary check), this works out as follows.
++
++| component, order | P stable | C stable | behaviour |
++|---|---|---|---|
++| D_n, 2n | yes (the degrees 2, 4, …, 2n − 2, n are stable) | iff (n − 2)d ≡ ±(n − 2) or ±2 mod 2n for all units d, i.e. n ∈ {2, 4, 6, 8, 12} among the Niemeier D_n | n = 10, 16, 24 are unstable |
++| E8, 32 | no | yes | |
++| E7, 20 | — | — | d ≡ ±3 mod 10 swaps P and C |
++
++This reproduces all nine cases:
++- A1²⁴, D4⁶, D6⁴, D8³ and D12² are stable.
++- D10E7² with an E7 carrier is stable up to the swap of its two E7's (its umbral Z/2).
++- D16E8 with the E8 carrier is stable, being an E8 C next to a D16 P.
++- The D10 carrier (an unstable C), the D16 carrier, E8³ (two unstable E8 P's) and D24 (an unstable C) are not.
+ 
+ **(5) Doubling realises Borcherds' 2-descent (VERIFIED, all 23 types).** For every shell-1 point v of a Niemeier
+ lattice N with even h, the orbifold of V_Λ at v is V_N, and 2v has order (h + 2)/2. Two cases occur.
+@@ -256,5 +277,6 @@ both the twinings and the OEIS terms.
+   31, 32 and 47. No Fricke Hauptmodul twining of V_Λ by a translation should exist at the other genus-zero Fricke
+   levels: 18, 21, 25, 27, 29, 35, 36, 39, 41, 49, 50, 59, 71. Prime orders other than h + 1 are excluded by the
+   dimension argument of HYP-9368 (A). The adjacent cusps of (3′) already exclude 18 through 50 on the shells tested.
+-- **Rationality is the real filter for the E-types.** At shell 1, the poles cancel for all nine lattices with
+-  −1 ∈ W. What separates D (n < 24) from E7, E8 and D24 is whether the Galois conjugates g^d stay conjugate to g.
++- **Rationality is the real filter.** At shell 1, the poles cancel for all nine lattices with −1 ∈ W. What selects
++  seven of the 13 classes is whether Galois permutes the component Kac classes, (4′). The answer is not "D-type":
++  E7 and E8 carriers occur, and the D10, D16 and D24 carriers are irrational.
+diff --git a/04-computation/experiments/deep_holes_theta_20261022/fricke_monster_classes.py b/04-computation/experiments/deep_holes_theta_20261022/fricke_monster_classes.py
+index d6a5ca338c..cd196192b1 100644
+--- a/04-computation/experiments/deep_holes_theta_20261022/fricke_monster_classes.py
++++ b/04-computation/experiments/deep_holes_theta_20261022/fricke_monster_classes.py
+@@ -1,8 +1,8 @@
+ """The seven shell-1 Hauptmoduln are the Monster series 4A, 8A, 12H, 16C, 20F, 24I, 32A (session opus-2026-10-22-S53;
+ HYP-9368 (B), THM-4760).
+ 
+-fricke_cusp_certificate.py proves that Z_v - 24 is the normalized Hauptmodul of Gamma_0(e)+e for the D-type shell-1
+-points v. This script identifies it. For each class X, E_X = prod eta(delta tau)^{r_delta} is the eta quotient of the
++fricke_cusp_certificate.py proves that Z_v - 24 is the normalized Hauptmodul of Gamma_0(e)+e for seven shell-1
++points v (carriers A1, D4, D6, D8, E7 in D10E7^2, D12, E8 in D16E8). This script identifies it. For each class X, E_X = prod eta(delta tau)^{r_delta} is the eta quotient of the
+ OEIS entry for T_X (CITED; 4A and 8A derived below):
+   - Ligozat: E_X is a modular function on Gamma_0(e) (weight 0, sum delta r = 0 and sum (e/delta) r = 0 mod 24,
+     prod delta^r a square);
+diff --git a/04-computation/experiments/deep_holes_theta_20261022/fricke_shell_test.py b/04-computation/experiments/deep_holes_theta_20261022/fricke_shell_test.py
+index 7f17389dc9..713e8023bb 100644
+--- a/04-computation/experiments/deep_holes_theta_20261022/fricke_shell_test.py
++++ b/04-computation/experiments/deep_holes_theta_20261022/fricke_shell_test.py
+@@ -8,7 +8,7 @@ yields a Leech point c_w of order m. The script reports:
+   - the minimal norms of the proper multiples j c_w;
+   - the exact Fricke identity Theta^[c_w]/Delta = theta(Lambda + c_w)(m tau)/Delta(m tau) through q^(NORM/2 - 1).
+ A line marked "ok" would be a strict Fricke point (unique Fricke-norm vector, 24 norm-2 vectors, deep multiples,
+-Fricke-invariant). At shell 1 no type is ok. But for the seven D-type lattices the twining is Fricke-invariant
++Fricke-invariant). At shell 1 no type is ok. But for seven lattices (A1^24, D4^6, D6^4, D8^3, D10E7^2, D12^2, D16E8: one class each) the twining is Fricke-invariant
+ although some multiple is shallow; that is the (B) family of HYP-9368.
+ Usage: python fricke_shell_test.py NORM SHELL [types...]"""
+ import sys, time, math, re
+diff --git a/05-knowledge/hypotheses/HYP-9368-genus-zero-inner-automorphisms-of-the-leech-voa-deep-holes-and-fricke-points.md b/05-knowledge/hypotheses/HYP-9368-genus-zero-inner-automorphisms-of-the-leech-voa-deep-holes-and-fricke-points.md
+index 2e69e9dfa6..84435401f2 100644
+--- a/05-knowledge/hypotheses/HYP-9368-genus-zero-inner-automorphisms-of-the-leech-voa-deep-holes-and-fricke-points.md
++++ b/05-knowledge/hypotheses/HYP-9368-genus-zero-inner-automorphisms-of-the-leech-voa-deep-holes-and-fricke-points.md
+@@ -1,6 +1,6 @@
+ ---
+ id: HYP-9368
+-title: "Fricke points of the Leech lattice and genus-zero inner automorphisms of V_Lambda. (A) The strict Fricke points (order n, a unique nearest Leech point at squared distance 2 - 2/n, all proper multiples deep holes or in Lambda) are exactly the 23 points c''_N of THM-4759 (10), one per Niemeier lattice N, of order h(N) + 1, classified by their orbifold neighbour N. (B) The genus-zero inner automorphisms (Tr_{V_Lambda}(e^{2 pi i v(0)} q^{L_0 - 1}) - 24 a normalised Hauptmodul) are 0, the 23 deep holes, the strict Fricke points, and a further family of Fricke-type points whose shallow proper multiples cancel in the twining. Its known members are the shell-1 points of the D-type components (A1^24 = D2^12, D4^6, D6^4, D8^3, D10E7^2, D12^2, D16E8; orders 4, 8, 12, 16, 20, 24, 32), PROVED in THM-4760 to twine by 4A, 8A, 12H, 16C, 20F, 24I, 32A. Conjecture (B'): there are no others, so the Fricke orders realised by translations are exactly 3-17, 19, 20, 23, 24, 26, 31, 32, 47"
++title: "Fricke points of the Leech lattice and genus-zero inner automorphisms of V_Lambda. (A) The strict Fricke points (order n, a unique nearest Leech point at squared distance 2 - 2/n, all proper multiples deep holes or in Lambda) are exactly the 23 points c''_N of THM-4759 (10), one per Niemeier lattice N, of order h(N) + 1, classified by their orbifold neighbour N. (B) The genus-zero inner automorphisms (Tr_{V_Lambda}(e^{2 pi i v(0)} q^{L_0 - 1}) - 24 a normalised Hauptmodul) are 0, the 23 deep holes, the strict Fricke points, and a further family of Fricke-type points whose shallow proper multiples cancel in the twining. Its known members are seven shell-1 points of Borcherds' 2-targets (A1^24, D4^6, D6^4, D8^3, D10E7^2 with E7 carrier, D12^2, D16E8 with E8 carrier; orders 4, 8, 12, 16, 20, 24, 32), PROVED in THM-4760 to twine by 4A, 8A, 12H, 16C, 20F, 24I, 32A. Conjecture (B'): there are no others, so the Fricke orders realised by translations are exactly 3-17, 19, 20, 23, 24, 26, 31, 32, 47"
+ status: >
+   OPEN (conjecture). The 'if' directions are PROVED in THM-4759 (3), (9), (10) and THM-4760 (3), (4); THM-4760 also
+   supplies the rationality input of THM-4759 (10).
+@@ -24,25 +24,27 @@ status: >
+   proper multiple to be deep. That is wrong: the twined contributions of shallow vectors at an intermediate cusp can
+   cancel.
+   - The members found are PROVED in THM-4760 by its cusp criterion: rationality (vector-valued Sturm), a unique
+-    Fricke-norm vector, 24 norm-2 vectors, and Phi_c | P at the intermediate cusps. They are the seven D-type shell-1
+-    points, of orders 4, 8, 12, 16, 20, 24 and 32, twining by 4A, 8A, 12H, 16C, 20F, 24I and 32A (Ligozat
++    Fricke-norm vector, 24 norm-2 vectors, and Phi_c | P at the intermediate cusps. They are seven shell-1
++    points (carriers A1, D4, D6, D8, E7 in D10E7^2, D12, E8 in D16E8), of orders 4, 8, 12, 16, 20, 24 and 32, twining by 4A, 8A, 12H, 16C, 20F, 24I and 32A (Ligozat
+     certificates for the eta quotients; q^4 agreement for 4A and 8A).
+   - Their only shallow multiple is 2v. It carries a pair +-mu with opposite eigenvalues, and its orbifold is
+     Borcherds' 2-descent source N_1 (h = 2h_1 + 2).
+   - The orbifold of v is N itself, of Coxeter number e - 2, so dim V'_1 = 24(e - 1), not 24e.
+-  - All other shell-1 classes fail, each provably. The E7, E8 and D24 points pass (i)-(iii) and fail only
+-    rationality (fields contain Q(sqrt 5), Q(sqrt 2), Q(sqrt 3)). The other A-free cases fail at a single shallow
++  - All other shell-1 classes fail, each provably. The D10 (in D10E7^2), D16 (in D16E8), E8^3 and D24 points
++    pass (i)-(iii) and fail only rationality (fields contain Q(sqrt 5), Q(sqrt 2), Q(sqrt 2), Q(sqrt 3)). The selection
++    is Galois acting on component Kac classes, THM-4760 (4'): E7 at order 20 has its two classes swapped by d = 3, which
++    the swap of the two E7's undoes. The other A-free cases fail at a single shallow
+     vector of 2v, and odd h fails at n_2 = 23.
+   - Shell 2 of every type, and shells 2-8 of the eight types with h >= 16, give nothing (sampled where large).
+   - (B') below is the sharpened conjecture.
+   OPEN:
+   - (B') for cusps not adjacent to a deep-hole cusp.
+   - A referenced write-up of the prime-order sketch.
+-  - A conceptual proof of the rationality of the D-type points (they are certified, not explained).
++  - A conjugacy proof of the rationality (THM-4760 (4') explains it on root spectra; the certificate proves it).
+   History:
+   - The first S53 draft allowed only the eleven bad-prime multiples; the (h+1)-points refuted it.
+   - The second version (registered as c31e9a6a3f..23dc8edd9e) claimed the 'only if' for all orders; the shell-1
+-    D-type points refuted it. Both refutations happened within the session.
++    D-type-lattice points refuted it. Both refutations happened within the session.
+   Session opus-2026-10-22-S53.
+ session: opus-2026-10-22-S53
+ source: 05-knowledge/results/leech_deep_hole_swap_theorem_20261022.md
+@@ -84,7 +86,8 @@ nudged deep hole (fricke_nudge.py).
+ - a strict Fricke point;
+ - a Fricke-type point with shallow but cancelling multiples.
+ 
+-The members of the last family found so far are the shell-1 points of the seven D-type components, of orders 4, 8,
++The members of the last family found so far are seven shell-1 points (carriers A1, D4, D6, D8, E7 in D10E7², D12,
++E8 in D16E8), of orders 4, 8,
+ 12, 16, 20, 24 and 32 (PROVED in THM-4760).
+ 
+ **Conjecture (B′), sharpened.** There are no further Fricke-type points. So the Fricke Hauptmodul twinings of V_Λ by
+@@ -116,7 +119,8 @@ the twining Z_{c_w} − 24 is the Fricke Hauptmodul of Γ_0(e) + e. This is PROV
+ with the Monster names 4A, 8A, 12H (A058486), 16C (A058516), 20F (A058555), 24I (A058579) and 32A (A058629) certified
+ by Ligozat. Yet 2c_w is shallow, carrying a pair ±μ whose twined contributions cancel. So the absence of extra poles
+ comes from cancellation of the twined shallow states, not from deep multiples. Rationality is the remaining filter:
+-the E7, E8 and D24 shell-1 points cancel too, but are irrational.
++the D10, D16, E8³ and D24 shell-1 points cancel too, but are irrational. In D10E7² and D16E8 the rational carrier
++is the E-component, not the D-component (THM-4760 (4), (4′)).
+ 
+ The orbifold of V_Λ at c_w is V_N, of Coxeter number e − 2, so dim V′_1 = 24(e − 1). These are therefore not strict
+ Fricke points, and they do not contradict (A).
+diff --git a/05-knowledge/hypotheses/INDEX.md b/05-knowledge/hypotheses/INDEX.md
+index dd18ef4211..03c935014e 100644
+--- a/05-knowledge/hypotheses/INDEX.md
++++ b/05-knowledge/hypotheses/INDEX.md
+@@ -1,5 +1,5 @@
+ > **CURRENT DIGEST — refreshed 2026-07-24.** Corrections and proved canon outrank hypotheses. Older entries remain in the [archive through 2026-07-21](INDEX-HISTORICAL-THROUGH-2026-07-21.md) and [recovered 2026-07-22--23 ledger](INDEX-HISTORICAL-2026-07-22-23-UNBOUNDED.md).
+-- **THM-4758, THM-4759, THM-4760, HYP-9368 (2026-10-22, opus-2026-10-22-S53; PRE-AUDIT; HYP-9369, HYP-9370 released unused; [THM-4758](../../01-canon/theorems/THM-4758-leech-deep-hole-swap-theorem-and-the-deep-hole-theta-identity.md), [THM-4759](../../01-canon/theorems/THM-4759-deep-hole-twining-of-the-leech-voa-is-umbral.md), [THM-4760](../../01-canon/theorems/THM-4760-cusp-criterion-for-fricke-twinings-of-the-leech-voa-and-the-two-descent-family.md), [HYP-9368](HYP-9368-genus-zero-inner-automorphisms-of-the-leech-voa-deep-holes-and-fricke-points.md), [note](../results/leech_deep_hole_swap_theorem_20261022.md)):** lattice/modular side of the 3^k+1 prompt. THM-4758 PROVES HYP-9363 for all 23 deep holes: swap theorem Theta_M - sigma^*Theta_M = Delta sum_d (T(d)-T(h/d)) 1_{S_d} on M = {rho,z}^perp (vector-valued Sturm certificates), theta(Lambda+c) - theta(N+rho/h) = (24+k)Delta; h-cores (A24: 5p(j-1)), 3-cores at A2^12 = divisors of 3n+1. THM-4759: theta(Lambda+c) = Delta(24+k+|N/Q| eta_{pi^X}(tau/h)) with pi^X the Coxeter Frame shape (Kostant); Tr_{V_N}(principal) = T^X = Cheng-Duncan-Harvey's umbral principal modulus and Tr_{V_Lambda}(deep hole) = T^X+24+k (all weights but 1 agree); lambency = h + {h/p: p common bad prime, p || h} via the exponent law sum (m_i mod e)(e - m_i mod e) >= l e(e-1)/6 (equality iff e = h/p); every Niemeier N also gives a Fricke point of order h+1 (second holy construction at rho/(h+1)) twining V_Lambda by 24 + the Gamma_0(h+1)+ Hauptmodul (3A..47A; the prime values of h+1 are supersingular); bad-prime multiples = Borel-de Siebenthal descent D24 -> D12^2 -> D6^4 -> A3^8; A24 = Frame shape 25.1^-1 is the only non-monstrous corner ({25,1}); order-3 Fricke point = M24-point. THM-4760: cusp criterion (Z_v - 24 = Fricke Hauptmodul iff rational [vector-valued Sturm certificate], unique Fricke-norm vector, 24 norm-2 vectors, Phi_c cancellation at the intermediate cusps); on the cusps adjacent to the deep-hole cusps exactly the 23 (h+1)-points and seven D-type shell-1 points pass, the latter twining by 4A, 8A, 12H, 16C, 20F, 24I, 32A (Ligozat-certified); 2v realises Borcherds' 2-descent (orbifold = source N_1, h = 2h_1 + 2); E7/E8/D24 shell-1 points cancel but are irrational; supplies the rationality input missing from the THM-4759 (10) proof. HYP-9368: (A) strict Fricke points = the 23 (h+1)-points (prime orders sketched, orders 3/4/6 sampled); (B) the D-type family (two earlier versions REFUTED in-session); (B') no Fricke translation twining at 18, 21, 25, 27, 29, 35, 36, 39, 41, 49, 50, 59, 71.
++- **THM-4758, THM-4759, THM-4760, HYP-9368 (2026-10-22, opus-2026-10-22-S53; PRE-AUDIT; HYP-9369, HYP-9370 released unused; [THM-4758](../../01-canon/theorems/THM-4758-leech-deep-hole-swap-theorem-and-the-deep-hole-theta-identity.md), [THM-4759](../../01-canon/theorems/THM-4759-deep-hole-twining-of-the-leech-voa-is-umbral.md), [THM-4760](../../01-canon/theorems/THM-4760-cusp-criterion-for-fricke-twinings-of-the-leech-voa-and-the-two-descent-family.md), [HYP-9368](HYP-9368-genus-zero-inner-automorphisms-of-the-leech-voa-deep-holes-and-fricke-points.md), [note](../results/leech_deep_hole_swap_theorem_20261022.md)):** lattice/modular side of the 3^k+1 prompt. THM-4758 PROVES HYP-9363 for all 23 deep holes: swap theorem Theta_M - sigma^*Theta_M = Delta sum_d (T(d)-T(h/d)) 1_{S_d} on M = {rho,z}^perp (vector-valued Sturm certificates), theta(Lambda+c) - theta(N+rho/h) = (24+k)Delta; h-cores (A24: 5p(j-1)), 3-cores at A2^12 = divisors of 3n+1. THM-4759: theta(Lambda+c) = Delta(24+k+|N/Q| eta_{pi^X}(tau/h)) with pi^X the Coxeter Frame shape (Kostant); Tr_{V_N}(principal) = T^X = Cheng-Duncan-Harvey's umbral principal modulus and Tr_{V_Lambda}(deep hole) = T^X+24+k (all weights but 1 agree); lambency = h + {h/p: p common bad prime, p || h} via the exponent law sum (m_i mod e)(e - m_i mod e) >= l e(e-1)/6 (equality iff e = h/p); every Niemeier N also gives a Fricke point of order h+1 (second holy construction at rho/(h+1)) twining V_Lambda by 24 + the Gamma_0(h+1)+ Hauptmodul (3A..47A; the prime values of h+1 are supersingular); bad-prime multiples = Borel-de Siebenthal descent D24 -> D12^2 -> D6^4 -> A3^8; A24 = Frame shape 25.1^-1 is the only non-monstrous corner ({25,1}); order-3 Fricke point = M24-point. THM-4760: cusp criterion (Z_v - 24 = Fricke Hauptmodul iff rational [vector-valued Sturm certificate], unique Fricke-norm vector, 24 norm-2 vectors, Phi_c cancellation at the intermediate cusps); on the cusps adjacent to the deep-hole cusps exactly the 23 (h+1)-points and seven shell-1 points pass (carriers A1, D4, D6, D8, E7 in D10E7^2, D12, E8 in D16E8), the latter twining by 4A, 8A, 12H, 16C, 20F, 24I, 32A (Ligozat-certified); 2v realises Borcherds' 2-descent (orbifold = source N_1, h = 2h_1 + 2); the D10, D16, E8^3, D24 carriers cancel but are irrational (Galois permutes component Kac classes; E7 at order 20 has its two classes swapped); supplies the rationality input missing from the THM-4759 (10) proof. HYP-9368: (A) strict Fricke points = the 23 (h+1)-points (prime orders sketched, orders 3/4/6 sampled); (B) the shell-1 family (two earlier versions REFUTED in-session); (B') no Fricke translation twining at 18, 21, 25, 27, 29, 35, 36, 39, 41, 49, 50, 59, 71.
+ - **THM-4754..4757 / HYP-9364..9365 (AUDITED 2026-10-22, [audit 1](../results/sierpinski_audit_20261022.md), [audit 2](../results/sierpinski_audit2_20261022.md): no mathematical error), mac-mini-2026-10-22-sierp; [HYP-9367](HYP-9367-three-loop-law-the-loop-expansion-is-asymptotic.md) (pre-audit): three-loop law - general loop engine (15 three-loop cores, validated against brute force) leaves residual O(n^-3) (Paley n^3 resid ~6, R_n ~3.7; circulant scatter down 5x at n = 25) and gives the universal doubly regular curve kappa = e(1 - 3/(2n) + 25/(8n^2) + O(n^-3)) exactly (three-loop sum q^2 X_2 -> 29; exact data 3.09-3.13); [HYP-9366](HYP-9366-cosine-twin-and-the-alternating-end-of-the-forest-series.md) (pre-audit): R_n and the transitive tournament are cospectral twins (skew spectrum i cot(pi(2m+1)/2n)), same rho; F(T,-1) = tangent-number OCF; |F(R_n,-1)|/n! ~ C(2/pi)^n/n (fit), carries the n mod 4 wobble; the forest numbers are THM-059's W-coefficients; [THM-4757](../../01-canon/theorems/THM-4757-linear-forest-loop-expansion-of-hamiltonian-paths.md), [HYP-9365](HYP-9365-two-loop-law-for-hamiltonian-paths-in-regular-tournaments.md), [THM-4756](../../01-canon/theorems/THM-4756-forward-step-polynomial-mod-3-is-h-times-eulerian.md), [THM-4754](../../01-canon/theorems/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md), [THM-4755](../../01-canon/theorems/THM-4755-blow-up-gains-skew-spectrum-lexicographic-law-ternary-tower.md), [HYP-9364](HYP-9364-self-blow-up-principle-tower-limit-rotational-cosh-over-cos.md), [note](../results/sierpinski_steiner_collatz_tournaments_20261022.md)):** tournament side of the 3^k+1 / Sierpinski / Collatz prompt (Collatz cylinders: Session29). THM-4757: loop expansion kappa = H 2^(n-1)/n! = sum_L N_L(S)/(n)_L over linear forests; for regular T the one-loop (cycle) clusters sum EXACTLY to log of Wormald's blow-up gain rho = det(nI-S)/|det(inI-S)|, two loops (figure-eight, theta, dumbbell) in closed form via G, H, O propagators. HYP-9365: parameter-free two-loop law kappa = rho(1 - y/n + O(n^-2)) (corr 0.998 on all circulants n = 25, 0.978 on all regular n = 11); doubly regular: kappa = e(1 - 3/(2n)); R_n: y -> tan1 tanh1 + tan^2(1)/2 - 1; doubly regular tournaments agree through three loops (H(D_19)/H(P_19) = 1 + 3.2e-5; three D_23 classes 1 - 1.6e-5..1.9e-5; n^3-scaled gap ~0.2 at both orders); n mod 4 wobble of R_n non-perturbative (F(R_n,-1)/n!). THM-4756: F(T,x) = H(T) A_n(x) mod 3, F = (1+x)^(n-1) mod 2 (proves THM-086, THM-094). THM-4754: C_3^[k] = Cay(Z/3^k, unit part = 1 mod 3), x -> 3x+b self-similarities, halving reverses arcs, Collatz arc-flip law, Steiner rule = F_3 midpoint, Jacobsthal split. THM-4755: Wormald gain (Bhattacharjee 2026, rederived), lexicographic law, ternary tower product (second factor (28/26)^3), Conj. 1 regular d = 11, 13. HYP-9364: self-blow-up principle = one-loop term; R_n -> cosh1/cos1 (mod-4-split fits 2.855930), P_q -> e.
+ - **THM-4751 / HYP-9362 (AUDITED, two passes, 2026-10-22, mac-mini-2026-10-21-fanopsp; MISTAKE-659, MISTAKE-660; [THM-4751](../../01-canon/theorems/THM-4751-circulant-h-landscape-paley-peak-at-class-number-distance.md), [HYP-9362](HYP-9362-one-flip-conjecture-paley-peak-and-the-7-21-to-8-24-dictionary.md), [note](../results/lattices_codes_tournaments_20261021.md), [audit](../results/lattice_bridges_audit_20261021.md)):** the circulant H-landscape. Its two peaks are the two extremes of the additive energy E of the connection set: R_n (arithmetic progression, maximum: Lev 2001, RLT c_4 theorem) and the flat class (minimum: Paley at q = 3 mod 4; prior art THM-140, THM-162, Savchenko). PROVED: their flip distance is B_q = ((q-1)/2 - (2-(2/q))h(-q))/2 (Dirichlet), so the class number is the distance between the energy extremes; B_q <= 1 iff q in {3,7,11}; c_4 = n(E-m)/4 on circulants. FINITE-EXACT: the H-max circulant is the energy minimum for odd n <= 11 and R_n for 13 <= n <= 25 (complete n = 25 table); R_n is a strict local max to n = 31; OCF split H = sum 2^k alpha_k: the flat class wins alpha_1, alpha_2, R_n wins every alpha_k, k >= 3 (n = 13 only through alpha_4), refuting HYP-474 at k = p = 19, 23 and correcting THM-137 (MISTAKE-660). HYP-9362: one-flip/packing conjectures (=> HYP-9357 circulant 'only if'); {7,21} = the only extendable projective planes -> S(3,4,8), S(5,8,24) is NUMEROLOGY. Note also: independent checks of the four SRFP311T1 PDFs (norm-24 vectors in the extremal-96 base lattice, ADE c_5 wrong) and an index of the parallel S52 / Session27 lanes.
+ - **THM-4752 / HYP-9363 (2026-10-22, opus-2026-10-21-S52; independently audited, MISTAKE-661; THM-4753 released unused; [note](../results/lattices_modular_repunits_20261021.md), [audit](../../04-computation/experiments/lattices_repunits_20261021/audit_S52/REPORT.md)):** [THM-4752](../../01-canon/theorems/THM-4752-tournament-scores-in-ii-25-1-backward-length-and-the-a24-deep-hole.md) 25-vertex scores in II_{25,1}: v_T = (s|70), v_T^2 = -2c3, transitive = Conway's Weyl vector (Leech cusps); backward length BL(pi) = -v_T.rho_pi (score rankings minimise, Kano-Sakamoto; nearest cusp at squared distance 2(U - c3)); the score set is the level -25 slice of the A24 cusp nu = (1/2^25|5/2) (Borcherds' table, KNOWN), every T has the class s - 12 in N(A24). [HYP-9363](HYP-9363-leech-deep-hole-theta-series-equal-niemeier-weyl-point-theta-plus-vertices-times-delta.md) theta(Leech + deep hole) = theta(N + rho/h) + (24 + k) Delta; pure A-types h^(k/2)(eta^h/eta(tau/h))^k + (24+k)Delta (h-cores): exact for A24 to q^(1+60/25), A1^24 to q^(7/2), A2^12 to q^(1+8/3); proof OPEN (naive Weil invariance fails).
+diff --git a/05-knowledge/results/INDEX.md b/05-knowledge/results/INDEX.md
+index 2c54cbe0b8..66e105c3ea 100755
+--- a/05-knowledge/results/INDEX.md
++++ b/05-knowledge/results/INDEX.md
+@@ -1,6 +1,6 @@
+ # Script Results Index
+ 
+-- [The Leech lattice seen from its deep holes: swap theorem, umbral and Fricke moonshine](leech_deep_hole_swap_theorem_20261022.md): **PROVED (THM-4758: swap theorem and HYP-9363 for all 23 deep holes; THM-4759: Coxeter-Frame-shape theta formula, V_N principal twining = CDH principal modulus T^X, V_Lambda deep-hole twining = T^X + 24 + k, exponent law for bad primes/Atkin-Lehner, Fricke points of order h+1 for every Niemeier lattice with Fricke Hauptmodul twining, Borel-de Siebenthal Fricke descent; THM-4760: cusp criterion for Fricke twinings, D-type shell-1 family 4A/8A/12H/16C/20F/24I/32A, doubling = Borcherds' 2-descent)**; HYP-9368 genus-zero classification of inner automorphisms (OPEN). opus-2026-10-22-S53, pre-audit.
++- [The Leech lattice seen from its deep holes: swap theorem, umbral and Fricke moonshine](leech_deep_hole_swap_theorem_20261022.md): **PROVED (THM-4758: swap theorem and HYP-9363 for all 23 deep holes; THM-4759: Coxeter-Frame-shape theta formula, V_N principal twining = CDH principal modulus T^X, V_Lambda deep-hole twining = T^X + 24 + k, exponent law for bad primes/Atkin-Lehner, Fricke points of order h+1 for every Niemeier lattice with Fricke Hauptmodul twining, Borel-de Siebenthal Fricke descent; THM-4760: cusp criterion for Fricke twinings, shell-1 Fricke family 4A/8A/12H/16C/20F/24I/32A, doubling = Borcherds' 2-descent)**; HYP-9368 genus-zero classification of inner automorphisms (OPEN). opus-2026-10-22-S53, pre-audit.
+ - [Tournament scores in II_{25,1}, Leech deep-hole theta series, and three PDF referee reports](lattices_modular_repunits_20261021.md): **PROVED (THM-4752: 25-vertex score lifts in II_{25,1}, transitive = Weyl vector, backward length = Weyl pairing, every tournament's N(A24) class = centred scores; lattice side KNOWN, Borcherds) + FINITE-EXACT (HYP-9363: theta of Leech at its A24 / A1^24 / A2^12 deep holes = h^(k/2)(eta^h/eta(tau/h))^k + (24+k) Delta, h-cores; Vinberg cusps of II_{9,1}, II_{17,1}; exact Niemeier mass) + REFUTED (e8.pdf trace lock a_p = 5; 1729 cube pattern beyond q = 11)**, independently audited (MISTAKE-661). opus-2026-10-21-S52.
+ - [Why the repunits 31, 63, 127 are rare Hamiltonian-path counts, and the HYP-9357 test](repunit_rarity_hyp9357_20261021.md): **PROVED (THM-4748: two reversed arcs - exact formulas, the 7 mod 8 lines 3*2^j-1 and 5*2^j-1, the Mersenne side needs three arcs, the Fibonacci fan; THM-4749: the repunit degree law via Phi_2(2) = 3 = H(C_3) and the gap Phi_3(2) = 7) + KNOWN (Session24 degree law; one-apex formula) + FINITE-EXACT (strong inventory below 2100, 723,544 classes; N(n, 2^k +- 1) for n <= 14) + NUMERICAL (HYP-9359: +0.22[3|d], +0.06[9|d], +0.05[5|d], primality neutral; mechanism = exact gluings + order-3 automorphisms; 11 pre-registered predictions passed, blindness partial) + OPEN (the order-7 hole at 63; the residual 2-adic attraction).** Independently audited (MISTAKE-657: prior art Moon 1972, bof MO 234029, El Sahili-Abi Aad 2020; remark and typing fixes). HYP-9357: H(R_27) > H(P_27), H(R_31) = 20351875726012821643802839 > H(P_31). Scripts `04-computation/experiments/repunits_hyp9357_20261021/`.
+ - [Tournament pseudoprimes: the Camion test, Hamiltonian-cycle congruences, Paley extremality, and the 7 / 21 / 341 dictionary](tournament_pseudoprimes_camion_fermat_20261021.md): **PROVED + FINITE-EXACT, independently audited ([audit](tournament_pseudoprimes_audit_20261021.md), MISTAKE-651) (THM-4746 Camion pseudoprimes: strong counts quasi-periodic mod p and, by the audit's Lemma B, mod p^2; Korselt criterion with triangle residue 3; Carmichael/2p/3p/3b(3b-2) families; 21 passes and 341 fails; p^2 passes iff p^2 | D(p), only 3, 13 below 10^4; the periodicity is shared with connected graphs (Mani-Stones); THM-4747 Hamiltonian-cycle congruences for circulant and Paley tournaments; HYP-9357 Paley H-maximal iff q = 3, 7, 11 = Kantor/Galois, and a rigid n = 13 record beating every circulant; HYP-9358 open Camion laws; census n <= 9 of H, C, tc).** mac-mini-2026-10-21-fanopsp.
+diff --git a/05-knowledge/results/leech_deep_hole_swap_theorem_20261022.md b/05-knowledge/results/leech_deep_hole_swap_theorem_20261022.md
+index 4de9207665..00de67701f 100644
+--- a/05-knowledge/results/leech_deep_hole_swap_theorem_20261022.md
++++ b/05-knowledge/results/leech_deep_hole_swap_theorem_20261022.md
+@@ -354,16 +354,28 @@ Fricke constant n_2 - 24 (fricke_cusp_certificate.py).
+ **Verdicts on the cusps adjacent to the deep-hole cusps.**
+ - Shell 0: all 23 (h+1)-points pass. This also supplies the rationality input that the THM-4759 (10) proof left
+   implicit.
+-- Shell 1: exactly seven classes pass, the D-type components of A1^24, D4^6, D6^4, D8^3, D10E7^2, D12^2 and D16E8.
++- Shell 1: exactly seven classes pass, one in each of A1^24, D4^6, D6^4, D8^3, D10E7^2 (E7 carrier), D12^2 and
++  D16E8 (E8 carrier).
+   Their twinings are 4A, 8A, 12H, 16C, 20F, 24I and 32A, with the names certified by Ligozat orders and
+   W_e-symmetry of the OEIS eta quotients (fricke_monster_classes.py).
+ - Shell 2 of all types, and shells 2-8 of the h >= 16 types: nothing passes. This covers every missing genus-zero
+   Fricke level from 18 to 50.
+ 
+-**Why D.** In the seven D-type points the only shallow multiple is 2v, with a pair +-mu of opposite eigenvalue, which
+-cancels the pole at 1/2. The cancellation holds for all nine lattices with -1 in W. What fails for E7, E8 and D24 is
+-rationality: some d v has a shallower coset (E8, d = 3: 15/8 < 31/16), and the fields contain Q(sqrt 5), Q(sqrt 2)
+-and Q(sqrt 3).
++**What selects the seven.** In the seven points the only shallow multiple is 2v, with a pair +-mu of opposite
++eigenvalue, which cancels the pole at 1/2. The cancellation holds for all nine lattices with -1 in W. What fails for
++the D10 and D16 carriers, E8^3 and D24 is
++rationality. Some dv has a shallower coset (E8^3, d = 3: 15/8 < 31/16), and the fields contain Q(sqrt 5) (D10),
++Q(sqrt 2) (D16, E8^3) and Q(sqrt 3) (D24).
++
++Mechanism (root_multisets.py): Galois permutes the Kac classes of the components.
++- For D_n at order 2n, the principal class P is always stable. The shell-1 class C is stable iff n is 2, 4, 6, 8
++  or 12.
++- For E8 at order 32, C is stable and P is not.
++- For E7 at order 20, d = 3 swaps P and C. So D10E7^2 with an E7 carrier is rational up to the swap of its two
++  E7's.
++
++The pushed first version attributed the 20F and 32A classes to the D10 and D16 components. That was corrected the
++same session (MISTAKE-662).
+ 
+ **Doubling = Borcherds' 2-descent (fricke_cusp_orbifolds.py).** For the nine lattices with -1 in W, the orbifold of
+ V_Lambda at 2v is Borcherds' source N_1, with h = 2h_1 + 2:

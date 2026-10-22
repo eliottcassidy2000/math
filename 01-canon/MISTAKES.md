@@ -19687,3 +19687,82 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **Missing coordinate.** Two kinds of failure:
   - A Lorentzian pairing and a Lorentzian distance were conflated; with null vectors they differ by the spacelike part.
   - Lattice-side facts in famous coordinates (Conway's (0, ..., 24 | 70)) must be checked against the coordinate tables published by those authors before typing them new.
+
+## MISTAKE-662 (2026-10-22, opus-2026-10-22-S53 lattice lane, THM-4758, THM-4759, THM-4760, HYP-9368; self-caught within the session, plus the session's independent audit `04-computation/experiments/deep_holes_theta_20261022/audit_S53/REPORT.md`) -- a Fricke-point definition blind to Galois conjugates, two premature classifications, a wrong 'only if', an implicit rationality step in a pushed proof, a component misattribution in a pushed theorem, a per-component Atkin-Lehner phase, and smaller canon errors
+
+- **A definition blind to Galois conjugates (audit (a)).**
+  - HYP-9368 (A), as registered (c31e9a6a3f .. dcf5129a81), defined a strict Fricke point by geometry alone: a unique
+    vector of norm 2 - 2/n and deep proper multiples. It constrained only v and its non-unit multiples.
+  - Its censuses were at orders 3, 4 and 6, where the only units are +-1, so they could not see Galois conjugates.
+  - At order 5 the audit's census finds 6,568 of 45,890 sampled such points with n_2 = 23 and Lambda + 2v of minimum
+    6/5. Their twining is irrational, and they are inequivalent to the A3^8 (h+1)-point.
+  - The session identified the class as the A2^12 shell-1 point (order5_compare.py; identical y.lambda distribution
+    over Lambda_4).
+  - This refuted (A) as stated, the claim that THM-4759 (10) applies to every geometric Fricke point, and step 1 of the
+    prime-order sketch.
+  - Fixed in 19e71373ee: the definition now requires the Hauptmodul property, i.e. rationality and n_2 = 24.
+  - Lesson: for order n with phi(n) > 2, test every generator of <v>, or the rationality of the twining.
+- **A proof step left implicit in pushed canon (THM-4759 (10)).**
+  - The Fricke twining of the 23 (h+1)-points was proved by the principal-part argument on X_0(e). That argument needs
+    Gamma_0(e)-invariance, i.e. rational coefficients, and nothing in the proof established it. (7) asserted
+    rationality without a reason; there it does follow from (3).
+  - Rationality is not automatic. The E8^3 shell-1 point has a unique Fricke-norm vector, 24 norm-2 vectors and a
+    cancelling 2v, yet 3v has a shallower coset (15/8 < 31/16), so its twining is irrational.
+  - Closed by THM-4760 (2)-(3): vector-valued Sturm on the theta vector of {x : x.v in Z}, for all 23 types. The audit
+    closed it independently (units_hplus1.py).
+  - Lesson: a principal-part argument on X_0(e) needs the function to live on X_0(e).
+- **Premature classification 1 (checkpoint c31e9a6a3f).**
+  - The first THM-4759 (7) note gave the Fricke levels as "3, 4, 5, 6, 7, 9, 10, 11, 15 and 23", and the first
+    HYP-9368 draft allowed only the eleven bad-prime multiples.
+  - The (h+1)-points refuted this within hours: orders 8, 13, 14, 17, 19, 26, 31 and 47.
+- **Premature classification 2, a wrong 'only if' (registered c31e9a6a3f .. 23dc8edd9e).**
+  - HYP-9368 claimed 'Z_v - 24 is a Hauptmodul iff v = 0, a deep hole or a strict Fricke point', arguing that "no
+    further poles, so every proper multiple is a deep hole".
+  - Shallow states can cancel. The seven shell-1 points of THM-4760 have a shallow 2v carrying a pair +-mu with opposite
+    eigenvalues, and twine by Fricke Hauptmoduln.
+  - Lesson: "no pole" means no surviving principal part, not "no shallow vector".
+- **Component misattribution in pushed canon (THM-4760 first version 62771af470, outputs fc8da89dd0).**
+  - THM-4760, the note, the INDEX and HYP-9368 said the seven Hauptmoduln are carried by the D-type components, so 20F
+    by D10 in D10E7^2 and 32A by D16 in D16E8, and that the E7 and E8 carriers fail.
+  - In fact the rational carriers there are E7 and E8; the D10 and D16 carriers are irrational.
+  - The labels had been inferred from the pure D_n^k cases plus a "why D" narrative. Caught in-session, before any
+    external use, by root_multisets.py and the exact carrier excess (fricke_cusp_carriers.py). Fixed in b5a5cca171,
+    with the mechanism THM-4760 (4'): Galois permutes level-2 Kac classes, and d = 3 swaps the two E7 classes.
+  - Lesson: identify each class by a computed invariant before naming it. The multiplicities (8 = 4 + 4) already
+    showed the x8 class was the two E7's.
+- **A per-component Atkin-Lehner phase (audit; fixed effcde315f).**
+  - THM-4759 (5') stated the component rule as invariance of the functions T^R.
+  - Per component it holds only up to the central-charge phase: T^R o W_e = exp(-2 pi i rank/24) T^R
+    (al_multipliers.py). The phases cancel over each Niemeier root system, so W_e fixes T^X exactly (audit
+    we_niemeier_check.py).
+- **Smaller canon errors (audit (b)).**
+  - THM-4758 (3') invoked a Conway element of Frame shape 25/1, which does not exist.
+  - The Borcherds theorem was cited to the wrong journal ("Duke 1998"; it is Invent. Math. 132).
+  - THM-4758's "two-line proof" for prime h used a W(R)-action that does not exist on M; it is now SKETCH.
+  - The note's divisor-lattice sentences ("odd d"; "E8^3 gives ... 6, 10") were stale; the rule is
+    h(L_d) = d - 1 iff h/d is a common bad prime || h.
+  - "Exactly the types with a Fricke point" contradicted (10).
+  - The (h+1)-point identification of the shallow multiples was stated as fact but is proved only at order 3.
+  - The M24 orbit was left VERIFIED although Conway's SPLAG Ch. 10 Thm 29 makes it PROVED (CITED).
+  - THM-4759's Leech-side step in (5) lacked the line θ_{Λ+d′c} = θ_{Λ+dc} (unit powers conjugate).
+  - THM-4760 (3') was typed FINITE-EXACT although its large shells were sampled.
+  - All of these are fixed after the audit.
+- **A wrong prediction committed with its refutation.** weyl_h_plus_one.py first shipped a DESCENTS prediction; its 13
+  FAIL lines were the refutation. The script now states the universal result.
+- **Static 'PROVED' text.** swap_theorem_proof.py printed "(PROVED)" whatever the flags, beside FAIL in the reused
+  shell-1 test. The proof runs were all ok; the messages now print the flags.
+- **Novelty typed before the second search.** THM-4759 (8) and (10) were written before the second prior-art search,
+  which found the following, now retyped KNOWN:
+  - the (h+1)-neighbour (Chenevier-Lannes Thm 3.4.2.10, Prop. 3.4.2.16);
+  - z'' = z + r (Borcherds' thesis);
+  - the Kac element (Kac LNM 848);
+  - the p = 2 descents (Borcherds Prop. 4.5.3);
+  - the M24 orbit (ATLAS, SPLAG).
+
+  The third search added Kac-Peterson (11.6) and Lepowsky 1979 for (1), and Chenevier-Lannes Prop. III.4.3.4 for the
+  lattice side of the shell-1 cusps. Still NOT FOUND: every twining statement and the cusp criterion.
+- **Missing coordinate.** Two recurring failures:
+  - Naming before measuring: Fricke levels before the (h+1)-points, 'only if' before the next shell, "strict" before
+    the Galois conjugates, D-carriers before the carrier computation.
+  - Analytic arguments used outside their domain: principal parts on X_0(e) without Gamma_0(e)-invariance, and
+    per-component invariance where only the product over a central charge of 24 is invariant.

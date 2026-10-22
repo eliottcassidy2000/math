@@ -50,8 +50,9 @@ status: >
     - PROVED: the height equidistribution mod h+1.
   - (11) The Fricke swap theorem is PROVED by the same vector-valued Sturm certificate as THM-4758, run on the 23 pairs
     (rho, z'') (swap_fricke_proof.py). It also supplies the Leech-side facts of (10) from the N side.
-  - The M24-point remark is VERIFIED (sampling plus exact orbit-size arithmetic). It is not a proof that the k = 0
-    vectors form a single orbit.
+  - The M24-point remark is PROVED (CITED). Conway (SPLAG Ch. 10, Thm 29 and Table 10.4) shows that Co_0 is
+    transitive on the type-6_32 vectors (stabiliser M24) and on the type-6_22 vectors (stabiliser PSU6(2).2). The
+    sampling and the orbit-size arithmetic agree with this.
   Prior art. A first agent search (2026-10-22) found no published statement of (2), (3) or (5). A second search
   covered (7)-(11).
   - (10), lattice level: KNOWN. Lambda is the (h+1)-neighbour of N at rho, and the reflection s_rho exchanges the
@@ -201,8 +202,8 @@ it a **Fricke point**. Then
 where T_{e+e} = q^{−1} + O(q) is the normalized Hauptmodul of the Fricke group Γ_0(e) + e. Moreover Λ + v contains
 exactly 24 vectors of norm 2 and exactly one of norm 2 − 2/e.
 
-The eleven Fricke points come from the nine A-free types. These are exactly the types with a Fricke point, because
-A_n has no bad primes.
+The eleven Fricke points come from the nine A-free types. These are exactly the types whose deep hole has a
+Fricke multiple, because A_n has no bad primes. By (10), every type has a Fricke point, its (h+1)-point.
 
 | X | d | e | Z − 24, through q³ | Γ |
 |---|---|---|---|---|
@@ -262,7 +263,8 @@ classes of height ≡ 0 mod p, so R(L_e) ⊇ X_p. The Fricke twining (7) gives d
 Then h = p(h′ + 1) becomes H = pH′ + 1. Descent at the bad prime p is H ↦ (H − 1)/p:
 - p = 2, the Cunningham chain 5 → 11 → 23 → 47: A3⁸ → D6⁴ → D12² → D24;
 - p = 2, the Mersenne chain 3 → 7 → 15 → 31: A1²⁴ → D4⁶ → D8³ → D16E8 or E8³; also 9 → 19: A7²D5² → D10E7²;
-- p = 3, the Collatz map 3n + 1: A2¹² (H = 4 = 3¹ + 1) → E6⁴ (H = 13), and A8³ (H = 10 = 3² + 1) → E8³ (H = 31);
+- p = 3, H ↦ 3H + 1, the affine map of the Collatz odd step (ANALOGY; no dynamics is claimed): A2¹²
+  (H = 4 = 3¹ + 1) → E6⁴ (H = 13), and A8³ (H = 10 = 3² + 1) → E8³ (H = 31);
 - p = 5: A4⁶ (H = 6) → E8³ (H = 31).
 
 E8³ is reached in three ways: 31 = 2·15 + 1 = 3·10 + 1 = 5·6 + 1.
@@ -370,8 +372,10 @@ Consequences:
 - **Supersingular primes.** The prime values of h + 1 are 3, 5, 7, 11, 13, 17, 19, 23, 31 and 47. Each of them is
   therefore a prime p for which X_0(p)/W_p has genus zero: Ogg's supersingular primes, here forced by a lattice. The
   missing supersingular primes are 2, 29, 41, 59 and 71, for which h = p − 1 is not a Niemeier Coxeter number.
-- **The shallow multiples of (7).** Each is the (h+1)-point of the corresponding Fricke descent X_p of (8). For
-  example, the D4⁶ point 2c is the (h+1)-point of A1²⁴. This is why its order is e = h(X_p) + 1.
+- **The shallow multiples of (7).** Each has the same orbifold neighbour and theta data as the (h+1)-point of the
+  corresponding Fricke descent X_p of (8). For example, the D4⁶ point 2c matches the (h+1)-point of A1²⁴, and this is
+  why its order is e = h(X_p) + 1. That the points themselves are equivalent is proved only at order 3, by the M24
+  point; in general it would follow from HYP-9368 (A) (audit S53 §6).
 - **The A1²⁴ point is fixed by M24.** Its stabiliser contains the umbral group G^X = M24, and by the order-3 census it
   is the point (2²⁴)/(3√8).
 
@@ -437,12 +441,12 @@ the first registered form of that hypothesis (fricke_shell_test.py).
 - π^X is the Frame shape of a fixed-point-free element g_X ∈ Co_0, so Z_{V_Λ}(ĝ_X) = 1/η_{π^X} = T^X as well (CDH
   §2.3);
 - Γ^X is a monstrous non-Fricke group;
-- Carnahan's orbifold duality (2017, Cor. 4.6) applies. His hypotheses are fixed-point-freeness and positive twisted
+- Carnahan's orbifold duality (2017, Thm 4.5; Cor. 4.6 is the class bijection) applies. His hypotheses are fixed-point-freeness and positive twisted
   vacuum energy E_0 = −(1/24) Σ_a m_a/a, which holds componentwise here; for example D_n contributes (1/2 + 1/h)/24.
   It gives V_Λ^{orb(ĝ_X)} ≅ V^♮, with dual element g'_X ∈ M of McKay–Thompson series T^X + k. His appendix lists the
   22 reciprocal eta products with the classes 2B, 3B, 4C, 5B, 6E, 6C, 7B, 8E, 9B, 10E, 10B, 12I, 12B, 13B, 14B,
-  16B, 18D, 18C, 22B, 30G, 30A and 46AB. These class names were read through a summarising tool and should be checked
-  against the source before being relied on.
+  16B, 18D, 18C, 22B, 30G, 30A and 46AB. The appendix lists 38 anomaly-free classes, including these 22, and the names
+  agree with CDH Table 2 (checked by the S53 audit).
 
 So each X ≠ A24 has four graded traces that agree in every weight n ≥ 2:
 
@@ -534,6 +538,10 @@ cusp 1/d has width e, so a simple pole means exponent −1/e: some y has |y|² =
 
 *Leech side.* The swap σ maps the vertical line of D through the class of dρ_N/h to the horizontal line through the
 class of d′c, with gcd(d′, h) = d. By THM-4758 (1), the coset theta series of N + dρ_N/h and Λ + d′c agree below q¹.
+
+Write d′ = du with u prime to e = h/d. The principal element of V_N is conjugate to its unit powers (Kostant), so by
+orbifold duality g_c is conjugate to its unit powers in Aut(V_Λ). Then g_c^{d′} and g_c^d are conjugate, and
+θ_{Λ+d′c} = θ_{Λ+dc}. This line was missing; the S53 audit (§5) caught it.
 The covering radius √2 of Λ forces min|Λ + dc|² ≤ 2, so in case (b) dc is a deep hole.
 
 *Component rule.*

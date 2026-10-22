@@ -21,13 +21,15 @@ status: >
   - Order 3: a Fricke point is y/3 with y a norm-12 vector having no lambda in Lambda_4 at y.lambda = 6.
     order3_fricke_census.py finds two orbit invariants among 2977 sampled norm-12 vectors; the k = 0 one is that of the
     M24-fixed vector (2^24)/sqrt 8. The orbit sizes |Co_0|/|M24| + |Co_0|/|U6(2):2| account exactly for all
-    34,417,656,000 norm-12 vectors. So there is exactly one order-3 class, given the classical two-orbit decomposition
-    (VERIFIED).
+    34,417,656,000 norm-12 vectors. So there is exactly one order-3 class: PROVED (CITED), since the two-orbit
+    decomposition is Conway's (SPLAG Ch. 10, Thm 29, Table 10.4).
   - Order 4 (2v deep): order4_fricke_census.py finds 2046 samples, all with the invariant of the A2^12 (h+1)-point
     (VERIFIED by sampling).
   - Order 6 (v = a - b with a an A1^24 hole and b an A2^12 hole): order6_fricke_census.py finds 1399 samples, all with
     6-neighbour A4^6, i.e. dim V'_1 = 24e (VERIFIED by sampling).
-  - Prime order p: classification by the Niemeier lattices with h = p - 1 (PROVED as a sketch, below). It uses:
+  - Prime order p: classification by the Niemeier lattices with h = p - 1. This is a SKETCH for the classification
+    and PROVED for the dimension step, given rationality, which the refined definition includes (audit S53). Hence
+    no translation twines by T_{p+} for p = 2, 29, 41, 59, 71 (PROVED). It uses:
     dim V'_1 = 24p via U_p F; the dual automorphism is inner and regular; Kac coordinates (2;1,...,1);
     gcd(h + 1, |P/N'|) = 1; orbifold duality.
   - Composite orders: the missing step is dim V'_1 = 24e. It holds in all samples.
@@ -91,8 +93,7 @@ Call v a **strict Fricke point** if it satisfies both of these:
 The geometric conditions alone (a unique Fricke-norm vector and deep multiples) are not enough. The audit's order-5
 census finds an irrational class with n_2 = 23 among them.
 
-THM-4759 (10) proves that then Z_v − 24 is the Fricke Hauptmodul of Γ_0(n) + n, and that the 23 points c″_N (orders
-h(N) + 1) are strict Fricke points.
+THM-4759 (10) and THM-4760 (3) prove that the 23 points c″_N (orders h(N) + 1) are strict Fricke points.
 
 **Conjecture (A).** The strict Fricke points are, up to Co_0 ⋉ Λ, exactly the 23 points c″_N. Each is determined by its
 orbifold neighbour N, which has h(N) = n − 1.
@@ -117,7 +118,10 @@ and 47. In particular none exists at the remaining genus-zero Fricke levels 18, 
 50, 59 and 71.
 
 Evidence:
-- Primes are covered by (A).
+- **Prime levels, PROVED** (audit S53, from the prime-order argument with rationality). A Fricke Hauptmodul twining of
+  prime order p is rational, so dim V′_1 = 24p and the orbifold is a Niemeier lattice with h = p − 1. Hence no
+  translation of V_Λ twines by T_{p+} for p = 2, 29, 41, 59, 71. These are exactly the supersingular primes not of
+  the form h + 1.
 - On the cusps adjacent to a deep-hole cusp, shells 0–2 of all types and shells 2–8 of the eight types with h ≥ 16
   give nothing new. These shells reach every missing level from 18 to 50.
 
@@ -152,9 +156,11 @@ D24 cancels at every cusp, but it is irrational.
 ## Evidence for (A)
 
 - **Order 2.** Impossible: v ≡ −v pairs the minimal vectors.
-- **Order 3.** One class, the M24-point (2²⁴)/(3√8). This rests on the two-orbit decomposition of the norm-12 vectors,
-  which is classical: orbits O6a and O6b, ATLAS p. 181; see Sun–Wang, arXiv 2111.10999, §2.3, whose Lemma 2.11 gives
-  the unique minimal vector of the class (order3_fricke_census.py).
+- **Order 3. PROVED (CITED).** There is one class, the M24-point (2²⁴)/(3√8). The two Co_0-orbits on the norm-12
+  vectors are classical: Conway, SPLAG Ch. 10, Thm 29 and Table 10.4 (types 6_32, stabiliser M24, and 6_22, stabiliser
+  PSU6(2).2); also ATLAS p. 181 and Sun–Wang, arXiv 2111.10999, §2.3, Lemma 2.11. Only one orbit has a unique
+  Fricke-norm vector (order3_fricke_census.py). Orders 3, 4 and 6 have units {±1} only, so their censuses could not
+  see Galois-conjugate classes.
 - **Order 4, with 2v deep.** One invariant in 2046 samples, that of the A2¹² point (order4_fricke_census.py).
 - **Order 6.** All 1399 samples have neighbour A4⁶ (order6_fricke_census.py).
 - **Prime orders.** The sketch below.

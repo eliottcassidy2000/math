@@ -94,9 +94,9 @@ This is a reciprocity law for the roots of II_{25,1} between the Leech cusp and 
   directions for arithmetic reasons, which the certificates verify.
 
 **Divisor lattice.** Each S_d defines an intermediate Niemeier lattice L_d between Leech (d = 1) and N (d = h).
-- Their Coxeter numbers are often d: A24 gives L_5 with h = 5, which looks like A4^6, and E8^3 gives 2, 3, 5, 6, 10.
-- At odd d the D/E types drop by one: D24 gives L_23 with h = 22, D12^2 gives L_11 with h = 10, E8^3 gives L_15 with
-  h = 14.
+- Rule (audit S53): h(L_d) = d - 1 when h/d is a common bad prime p with p || h, and h(L_d) = d otherwise.
+- Examples: A24 gives L_5 with h = 5, which looks like A4^6. E8^3 gives h(L_d) = 2, 3, 5, 5, 9, 14 for d = 2, 3, 5, 6,
+  10, 15. D24 gives L_23 with h = 22, D12^2 gives L_11 with h = 10, and E6^4 drops at d = 4 (L_4 has h = 3).
 - Explained in THM-4759 (8): L_d is the orbifold of V_Lambda by g_c^(h/d). Its Coxeter number is d - 1 exactly when
   h/d is a common bad prime || h (Fricke descent, roots of height divisible by h/d), and d otherwise.
 
@@ -268,8 +268,9 @@ On the N side, rho_N/(h+1) is the unique minimum of its coset, and the (h+1)-nei
 holy construction. The prime values of h + 1 are 3, 5, 7, 11, 13, 17, 19, 23, 31 and 47, all supersingular. This is
 forced: the twining gives a degree-1 function on X_0(p)/W_p.
 
-**The eleven bad-prime multiples are the (h+1)-points of the descents.** For example, D4^6's 2c is A1^24's
-(h+1)-point, which is the M24-fixed point (2^24)/(3 sqrt 8).
+**The eleven bad-prime multiples carry the neighbour and theta data of the (h+1)-points of the descents.** For
+example, D4^6's 2c matches A1^24's (h+1)-point, the M24-fixed point (2^24)/(3 sqrt 8). Equivalence of the points is
+proved only at order 3 (audit S53).
 
 The Leech orbifold at pc is the Niemeier lattice of the **Borel-de Siebenthal descent** X_p. Its roots are the roots of
 N whose height is divisible by p (height_descent.py); it is proved for prime h/p:
