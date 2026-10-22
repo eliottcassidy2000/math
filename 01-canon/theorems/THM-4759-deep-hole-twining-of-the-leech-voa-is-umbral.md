@@ -262,8 +262,8 @@ c″ = proj_Λ(z″)/(h + 1), a point of order e = h + 1. Then for all 23 types:
 | 13 | A11D7E6, E6⁴ | 12q + 28q² (13A, A034319) |
 | 14 | A12² | 10q + 24q² + 51q³ (14C, A058504) |
 | 15 | D8³ | 9q + 19q² (15C) |
-| 17 | A15D9 | 7q + 14q² (17A) |
-| 19 | A17E7, D10E7² | 6q + 10q² (19A) |
+| 17 | A15D9 | 7q + 14q² + 29q³ (17A, A058530) |
+| 19 | A17E7, D10E7² | 6q + 10q² + 21q³ (19A, A058549) |
 | 23 | D12² | 4q + 7q² (23AB) |
 | 26 | A24 | 3q + 6q² (26+26 = T_26B, A058597; (η(2τ)η(13τ)/(η(τ)η(26τ)))² − 2) |
 | 31 | D16E8, E8³ | 3q + 3q² (31AB) |
@@ -326,6 +326,16 @@ The two theorems sit side by side:
 
 The twining sides are parallel too. V_N twined by the principal element of order h gives the non-Fricke umbral T^X.
 Twined by the element of Kac type (2;1,…,1) and order h + 1, it gives the Fricke T_{(h+1)+}.
+
+*Levels 0 and 1 (ANALOGY with a precise core).* At level k the Weyl point of the level-k alcove is
+(ρ̂ + kΛ_0)/(k + h^∨), with Kac coordinates (k + 1; 1, …, 1).
+- k = 0 gives ρ/h, Kostant's principal element: the deep hole.
+- k = 1 gives ρ/(h + 1), Kac type (2; 1, …, 1): the Fricke point. This is the point at which the level-1 (WZW)
+  modular data S_{0λ} ∝ Π sin(π(λ + ρ, α)/(1 + h)) live.
+
+So the two swap theorems are the levels 0 and 1, the level of V_N itself. The next shell would be level 2, and there
+the swap fails. Equivalently, the deep hole sees the 24 + k nodes of the affine diagrams and the Fricke point sees
+the 24 finite simple roots.
 
 *Only the two nearest cusp types.* The cusps w of type N adjacent to z satisfy −w·ρ = (h/2)|y − ρ_N/h|², where y runs
 over the shells of N + ρ_N/h. Shell 0 gives m = h + 1. The next shell, m = h + 2, FAILS the certificate for A1²⁴,
