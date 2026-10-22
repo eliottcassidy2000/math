@@ -118,3 +118,20 @@ The C_3 substitution recursion (THM-3121, Session24) gives `H(S_k)` exactly for 
 * For cyclic `R_d`, `σ_j/d → 2/(πj)` for odd `j`, and `σ_j/d → 0` for even `j`. So `ρ_T(R_d) → Π_(j odd) (1 + 4/(π² j²))/(1 − 4/(π² j²)) = cosh(1)/cos(1) = 2.855957892565…`.
 * This is Wormald's fitted constant 2.8559579 (Bhattacharjee's closed form `((d+1)^d + (d−1)^d)/((d+i)^d + (d−i)^d)` has the same limit).
 * **Reading.** A flat spectrum gives `e`; the most concentrated spectrum gives `cosh(1)/cos(1)`.
+
+## Addendum: Wormald's Conjecture 1 for regular bases, d ≤ 13 (FINITE-EXACT)
+
+Over every regular tournament on `d` vertices, `ρ = Π (d² + σ_k²)/(d² − σ_k²)` has a unique maximum at the rotational `R_d` (`wormald_conj1.out`, `wormald_conj1_13.out`):
+
+| `d` | regular classes | `ρ(R_d)` | runner-up |
+|---|---|---|---|
+| 5 | 1 | 2.3157894737 | — |
+| 7 | 3 | 2.4630381803 | 2.3993783994 |
+| 9 | 15 | 2.5475143943 | 2.4981158008 (`C_3[C_3]`) |
+| 11 | 1223 | 2.6021808258 | 2.5682251025 |
+| 13 | 1,495,297 | 2.6404182020 | 2.6170585197 |
+
+**Context.**
+* Conjecture 1 asks for the maximum over all tournaments on `d` vertices. Non-regular bases are not covered by the determinant formula: their balanced block counts are exponentially unlikely, so `ρ = 0` in the limit. That reduction is not proved here.
+* `ρ` is a Schur-convex function of `(σ_k²)` with the fixed sum `d(d − 1)/2`. But the squared skew spectrum of `R_d` does not majorise those of all regular `d`-tournaments: there is 1 violation at `d = 7`, 7 at `d = 9` and 626 at `d = 11` (`majorization_test.out`).
+* So the conjecture is not a Schur-convexity consequence. `R_d` wins through its dominant top value `σ_1² ≈ 4d²/π²`, even where later partial sums are beaten.

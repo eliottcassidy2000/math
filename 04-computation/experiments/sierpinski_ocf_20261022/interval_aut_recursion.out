@@ -1,0 +1,7 @@
+recursion vs nauty, N <= 90: 90 values, mismatches []
+symmetry v(3^k - t) = v(3^k + t), checked by the recursion:
+  k=2: symmetric for 1 <= t <= 6 (first failure at t = 7; 2*3^(k-1) = 6)
+  k=3: symmetric for 1 <= t <= 18 (first failure at t = 19; 2*3^(k-1) = 18)
+  k=4: symmetric for 1 <= t <= 54 (first failure at t = 55; 2*3^(k-1) = 54)
+  k=5: symmetric for 1 <= t <= 162 (first failure at t = 163; 2*3^(k-1) = 162)
+  k=6: symmetric for 1 <= t <= 486 (first failure at t = 487; 2*3^(k-1) = 486)

@@ -48,3 +48,22 @@ related:
 * `H(P_43)` is out of reach. `H(P_47)` could be attacked through the Paley automorphism group.
 * The tower at `k = 7` needs a memory-lean DP.
 * A proof of (a) via the exact recursion: the renormalisation `α ↦ (2 + α)/3` and the level product are its fixed-point form.
+
+## Addendum (same session): the second-order law
+
+The residual `y = n(1 − κ/ρ)` is almost a linear function of the normalised fourth spectral moment `M4 = Σ_k σ_k⁴/n⁴` (`principle_residual.out`).
+* `corr(y, M4)` = 0.982, 0.983, 0.958, 0.987, 0.992 for `n = 17, 19, 21, 23, 25` (all circulant classes).
+* The per-`n` fits `y = a + b·M4` have `a ≈ 0.24–0.35` and `b ≈ 4.3–5.3`.
+
+**(f) Conjecture: second-order law.** For regular `T` on `n` vertices,
+
+    H(T) 2^(n−1)/n!  =  ρ(T) · (1 − (a + b·M4(T))/n + o(1/n)),
+
+with universal constants `a`, `b` (fitted: `a ≈ 0.35`, `b ≈ 5.2` near `n = 25`).
+* On circulants it brings the rank correlation with `κ` from about 0 (with `ρ` alone) to 0.72–0.88.
+* Its relative error is at most `2.6·10^(−3)` at `n = 23, 25`, and about `10^(−2)` at the composite `n = 15, 21`.
+* It finds the maximiser every time.
+
+For circulants, `M4` is an affine function of the 4-cycle count `c_4` (equivalently of the additive energy). So the second-order term is the energy correction of THM-4751 (6), now with a sign and a size. A fourth-cumulant (Edgeworth) correction to the local limit theorem is the natural source of an `M4` term. No derivation of `a`, `b` is claimed.
+
+**Wormald's Conjecture 1** (regular bases, `d ≤ 13`) is verified exhaustively: see THM-4755, addendum.

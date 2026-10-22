@@ -1,6 +1,6 @@
 ---
 id: THM-4756
-title: "Every tournament is H copies of the transitive tournament modulo 3: the forward-step polynomial F(T,x) = sum over permutations of x^(number of T-forward steps) satisfies F(T,x) = H(T) A_n(x) (mod 3), with A_n the Eulerian polynomial; A_n = (x-1)^(n-1) (n odd), (x-1)^(n-2)(x+1) (n even) mod 3. Proof: F(T,x) = sum_m c_m(T)(x-1)^(n-m) with c_m the ordered path-cover numbers, c_m = 0 mod 3 for m >= 3 (factor m!), and c_2 = ((-1)^n + 1) H mod 3 from the exact doubled Redei-Berge identity sum_(X subset V) H(T[X])H(T[V\\X]) = sum_R 4^|R| 2^(n-|V(R)|) (R over sets of disjoint odd cycles). Also F(T,x) = (1+x)^(n-1) mod 2. This completes the proof of THM-086 (and its Eulerian corollary); at the orders n = 2*3^j + 1 the mod-3 pattern collapses to three terms."
+title: "Every tournament is H copies of the transitive tournament modulo 3: the forward-step polynomial F(T,x) = sum over permutations of x^(number of T-forward steps) satisfies F(T,x) = H(T) A_n(x) (mod 3), with A_n the Eulerian polynomial; A_n = (x-1)^(n-1) (n odd), (x-1)^(n-2)(x+1) (n even) mod 3. Proof: F(T,x) = sum_m c_m(T)(x-1)^(n-m) with c_m the ordered path-cover numbers, c_m = 0 mod 3 for m >= 3 (factor m!), and c_2 = ((-1)^n + 1) H mod 3 from the exact doubled Redei-Berge identity sum_(X subset V) H(T[X])H(T[V\\X]) = sum_R 4^|R| 2^(n-|V(R)|) (R over sets of disjoint odd cycles). Also F(T,x) = (1+x)^(n-1) mod 2. This completes the proof of THM-086 (and its Eulerian corollary); at the orders n = 2*3^j + 1 the mod-3 pattern collapses to three terms. Second level: the number u_3 of unordered 3-path covers satisfies u_3 = H + hc mod 3 for odd n (hc = directed Hamiltonian cycles) and u_3 = 0 mod 3 for even n."
 status: >
   PROVED (pre-audit, mac-mini-2026-10-22-sierp). Exhaustively verified for every tournament with n <= 9 (198,946 classes,
   fwd_poly_mod3.out), and the exact identity of step 2 for every tournament with n <= 6 (uT11_identity.out).
@@ -14,6 +14,7 @@ scripts:
   - 04-computation/experiments/sierpinski_ocf_20261022/fwd_poly_mod3.c (+ fwd_poly_mod3.out)
   - 04-computation/experiments/sierpinski_ocf_20261022/uT11_identity.py (+ .out)
   - 04-computation/experiments/sierpinski_ocf_20261022/fwd_mod3.py (+ .out)
+  - 04-computation/experiments/sierpinski_ocf_20261022/u3_congruence.py (+ .out): the second-level congruence u_3 = H + hc (odd n), 0 (even n) mod 3, every tournament n <= 8
 depends_on:
   - the OCF H(T) = I(Omega(T), 2) (Grinberg-Stanley) applied to every induced subtournament
 related:
@@ -51,6 +52,16 @@ So
 For the transitive tournament (`H = 1`), `F` is the Eulerian polynomial `A_n`. Hence `F(T, x) ≡ H(T) A_n(x)` for every `T`. Checked independently against the Eulerian numbers for `n ≤ 40`.
 
 **Modulo 2.** Every `c_m` with `m ≥ 2` is even and `H` is odd (Rédei). So `F(T, x) ≡ (1 + x)^(n−1)`: every tournament carries the binary Sierpinski row.
+
+**Second level (PROVED; exhaustive for every tournament with `n ≤ 8`, `u3_congruence.out`).** With `k = 3` in Step 2, `U_T(1,1,1) = Σ_R 6^|R| 3^(n − |V(R)|)`. Modulo 9:
+* every term vanishes except those with `|R| = 1` and `|V(R)| = n`, i.e. directed Hamiltonian cycles, which exist only for odd `n`;
+* so `U_T(1,1,1) ≡ 6·hc(T)` for odd `n` and `≡ 0` for even `n`.
+
+Inclusion–exclusion gives `c_3 = U_T(1,1,1) − 3U_T(1,1) + 3H`, and `3U_T(1,1) ≡ 3(−1)^n H (mod 9)` by Step 3. Hence the number `u_3 = c_3/6` of unordered covers by three directed paths satisfies
+
+    u_3(T) ≡ H(T) + hc(T)  (mod 3)  for n odd,       u_3(T) ≡ 0  (mod 3)  for n even.
+
+Further levels (`u_4`, `u_5`, …) need the cycle-length-graded independence polynomial: modulo 9 the weights `k^(−|C|)` depend on `|C| mod 3` or `mod 6`.
 
 **Consequences.**
 * For odd `n`, `F_k(T) ≡ H·(−1)^(n−1−k) C(n−1, k) (mod 3)`. The ternary Sierpinski (Lucas) pattern of Pascal's triangle, scaled by `H`, is the forward-step distribution of every tournament.

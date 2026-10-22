@@ -1,0 +1,6 @@
+n=3: 2 tournaments, violations of u_3 = H + hc (odd n) / u_3 = 0 (even n) mod 3: 0
+n=4: 4 tournaments, violations of u_3 = H + hc (odd n) / u_3 = 0 (even n) mod 3: 0
+n=5: 12 tournaments, violations of u_3 = H + hc (odd n) / u_3 = 0 (even n) mod 3: 0
+n=6: 56 tournaments, violations of u_3 = H + hc (odd n) / u_3 = 0 (even n) mod 3: 0
+n=7: 456 tournaments, violations of u_3 = H + hc (odd n) / u_3 = 0 (even n) mod 3: 0
+n=8: 6880 tournaments, violations of u_3 = H + hc (odd n) / u_3 = 0 (even n) mod 3: 0

@@ -184,3 +184,53 @@ The repo had no Pascal-mod-3 Collatz object (survey), so this dictionary is new.
 * Find a statistic that orders circulant classes at fixed `n`.
 * Push `H(R_33)`, `H(R_35)`.
 * Decide THM-086 in full; it is still a proof sketch.
+
+## 10. Later results of the same session
+
+**THM-4756, second level.** The `k`-coloured identity `U_T(1^k) = Σ_R (2k)^|R| k^(n−|V(R)|)` at `k = 3` gives a congruence for the number `u_3` of unordered covers by three directed paths:
+* `u_3(T) ≡ H(T) + hc(T) (mod 3)` for odd `n`, where `hc` counts directed Hamiltonian cycles;
+* `u_3(T) ≡ 0 (mod 3)` for even `n`.
+
+The reason is that modulo 9 only Hamiltonian cycles survive in `U_T(1,1,1)`. Checked on every tournament with `n ≤ 8` (`u3_congruence.out`). Deeper levels need cycle-length-graded data, so the clean mod-3 picture stops here.
+
+**Wormald's Conjecture 1 for regular bases, d ≤ 13** (FINITE-EXACT; `wormald_conj1.out`, `wormald_conj1_13.out`). Over every regular `d`-tournament, the blow-up gain `ρ = Π (d² + σ²)/(d² − σ²)` has a unique maximum at the rotational `R_d`:
+
+| `d` | regular classes | `ρ(R_d)` | runner-up |
+|---|---|---|---|
+| 5 | 1 | 2.3157894737 | — |
+| 7 | 3 | 2.4630381803 | 2.3993783994 (Wormald's non-circulant example) |
+| 9 | 15 | 2.5475143943 | 2.4981158008 (`C_3[C_3]`) |
+| 11 | 1223 | 2.6021808258 | 2.5682251025 |
+| 13 | 1,495,297 | 2.6404182020 | 2.6170585197 |
+
+The minimum equals the doubly regular bound when a doubly regular tournament exists (`d = 7, 11`). Bhattacharjee's release does not treat Conjecture 1.
+
+**The self-blow-up principle on all regular tournaments** (`principle_regular.out`). At `n = 11` (1223 classes), `κ/ρ ∈ [0.917, 0.980]`, the same band as for circulants. But the rank correlation between `κ` and `ρ` is strongly negative at `n = 9, 11` (−0.72, −0.74). This is the small-`n` regime where flat spectra win `H` (THM-4751 (7)). For circulants it is near 0 from `n = 15` on.
+
+**The Sierpinski interval tournaments `Σ_N`** (the 3-adic tournament on `{0, …, N−1}`).
+* **Recursion.** `Σ_N = C_3[Σ_(N_0), Σ_(N_1), Σ_(N_2)]` with `N_b = #{x < N : x ≡ b (mod 3)}`. So the C_3 substitution law computes `H(Σ_N)` for every `N` (`sierpinski_interval.py`, Held–Karp check for `N ≤ 14`).
+* **The sequence** `1, 1, 3, 5, 11, 45, 159, 621, 3159, 14877, 79359, 515997, 3210655, 22181917, …` is in `sierpinski_interval_90.out` and is not in OEIS. Neither is the tower sequence `3, 3159, 417382500592116023859, …`.
+* **Oscillation.** The normalised value has a base-3 oscillation. Multiples of 3 (balanced blocks) sit higher, the peaks are at `3^k`, and the pasted lengths `3^k + 1` sit in the dip right after each peak.
+* **Automorphisms.** By nauty, `Aut(Σ_N)` is a 3-group for every `N ≤ 90`. Its exponent is mirror-symmetric about `3^k`: around 9 for offsets `t ≤ 6`, around 27 over the tested range, and around 81 for `t ≤ 9` (`interval_aut.out`). Since `|Aut|` divides `H`, `v_3(H(Σ_N)) = v_3|Aut(Σ_N)| + δ(N)` with `δ ≤ 5` for `N ≤ 90`; this explains the near-symmetry of `v_3(H)` about 27 and 81.
+
+**The tower constant in Collatz form** (an exact rewriting; reading it as Collatz is NUMEROLOGY):
+
+    κ_S = Π_(n = 1, 9, 81, 729, …) ((3n + 1)/(3n − 1))^(√n).
+
+The numerators `4, 28, 244, 2188` are the Collatz images `3n + 1` of the even powers of 3, i.e. of the vertex counts of `S_0, S_2, S_4, S_6`.
+
+**The automorphism groups of `Σ_N`, exactly** (PROVED, pre-audit; `interval_aut_recursion.out` agrees with nauty for every `N ≤ 90`).
+
+*Recursion.* `|Aut(Σ_N)| = 3^(v(N))` with
+
+    v(1) = v(2) = 0,    v(N) = v(N_0) + v(N_1) + v(N_2) + [3 | N].
+
+* `C_3` is a prime quotient, so by modular decomposition (Gallai) every automorphism of `C_3[A, B, C]` permutes the three blocks by a rotation of `C_3`.
+* A rotation is possible exactly when the blocks are isomorphic. Here that means equal sizes, i.e. `3 | N`.
+
+*Mirror symmetry.* `v(3^k + t) = v(3^k − t)` for `0 ≤ t ≤ 2·3^(k−1)`, by induction on `k`.
+* The two numbers split into residue-class offsets with the same multiset `{⌈t/3⌉, ⌈(t−1)/3⌉, ⌈(t−2)/3⌉}`.
+* Each part is at most `2·3^(k−2)`, inside the previous level's range.
+* The first failure is at `t = 2·3^(k−1) + 1 = 7, 19, 55, 163, 487` (checked through `k = 6`).
+
+*Consequence.* Since `|Aut|` divides `H`, `v_3(H(Σ_N)) = v(N) + δ(N)` with `0 ≤ δ ≤ 5` for `N ≤ 90`. This explains the near-symmetry of the valuations of the Hamiltonian counts about 27 and 81.

@@ -1,0 +1,13 @@
+n=17 (16 classes): y in [0.473, 1.062]; corr(y, log rho) = +0.961, corr(y, M4) = +0.982, corr(y, M6) = +0.964, corr(y, max t) = +0.937; fit y ~ a + b M4 + c M6: R^2 = 0.972
+n=19 (30 classes): y in [0.398, 1.092]; corr(y, log rho) = +0.946, corr(y, M4) = +0.983, corr(y, M6) = +0.951, corr(y, max t) = +0.956; fit y ~ a + b M4 + c M6: R^2 = 0.978
+n=21 (88 classes): y in [0.460, 1.146]; corr(y, log rho) = +0.930, corr(y, M4) = +0.958, corr(y, M6) = +0.935, corr(y, max t) = +0.920; fit y ~ a + b M4 + c M6: R^2 = 0.920
+n=23 (94 classes): y in [0.417, 1.139]; corr(y, log rho) = +0.945, corr(y, M4) = +0.987, corr(y, M6) = +0.951, corr(y, max t) = +0.955; fit y ~ a + b M4 + c M6: R^2 = 0.982
+n=25 (208 classes): y in [0.458, 1.157]; corr(y, log rho) = +0.964, corr(y, M4) = +0.992, corr(y, M6) = +0.968, corr(y, max t) = +0.951; fit y ~ a + b M4 + c M6: R^2 = 0.984
+
+n=13: y = 0.2758 + 4.2797 M4; spearman(kappa, rho) = +0.600 -> spearman(kappa, rho*(1-(a+bM4)/n)) = +0.829; max rel. error 5.48e-03; argmax agree: True
+n=15: y = 0.2429 + 5.3218 M4; spearman(kappa, rho) = -0.035 -> spearman(kappa, rho*(1-(a+bM4)/n)) = +0.721; max rel. error 1.68e-02; argmax agree: True
+n=17: y = 0.3155 + 4.5810 M4; spearman(kappa, rho) = +0.118 -> spearman(kappa, rho*(1-(a+bM4)/n)) = +0.735; max rel. error 3.62e-03; argmax agree: True
+n=19: y = 0.3219 + 4.7888 M4; spearman(kappa, rho) = -0.009 -> spearman(kappa, rho*(1-(a+bM4)/n)) = +0.832; max rel. error 2.46e-03; argmax agree: True
+n=21: y = 0.3151 + 5.3304 M4; spearman(kappa, rho) = -0.025 -> spearman(kappa, rho*(1-(a+bM4)/n)) = +0.772; max rel. error 1.12e-02; argmax agree: True
+n=23: y = 0.3470 + 4.9466 M4; spearman(kappa, rho) = -0.044 -> spearman(kappa, rho*(1-(a+bM4)/n)) = +0.837; max rel. error 2.44e-03; argmax agree: True
+n=25: y = 0.3490 + 5.1721 M4; spearman(kappa, rho) = +0.092 -> spearman(kappa, rho*(1-(a+bM4)/n)) = +0.884; max rel. error 2.57e-03; argmax agree: True
