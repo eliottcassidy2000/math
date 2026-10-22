@@ -1,0 +1,5 @@
+Q(rho) = 0 mod 2^120: True
+f(n) = Tr(C rho^-n) mod 2^72 at large n: True
+norms: N(r) = True  N(t) = True
+v_2(r^N - t) for N = n* mod 2^64: 66 (>= 64 + v_2(r - 1) expected if n* = log t / log r)
+v_2(r - 1) = 2

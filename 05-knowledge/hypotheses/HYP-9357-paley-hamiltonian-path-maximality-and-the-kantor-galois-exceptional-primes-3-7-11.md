@@ -133,3 +133,7 @@ The Higman and symplectic designs have even order. A point-hyperplane design (or
 * Still open: `H(P_43)`. The same inclusion-exclusion needs about `2^43/43 · 43^3 ≈ 1.6·10^16` operations, out of reach here; a meet-in-the-middle or transfer-matrix count would be needed.
 * The full circulant maximum at `n = 25, 27, 29, 31` (all multiplier classes), to see whether the rotational circulant is still the circulant maximum there.
 * A stronger search at `n = 15, 17` (simulated annealing, larger move sets) for non-circulant tournaments above the rotational one.
+* NEGATIVE CONTROL (2026-10-21, spark from the wide-net survey). Does the global maximum on `q + 1` vertices lie in the switching class of "`P_q` + sink"? That class is the Legendre chirotope class of `P¹(F_q)` (THM-4602), on which `PSL(2,q)` acts 2-transitively.
+  * REFUTED: the class maxima are 3, 333 and 256023 at `q = 3, 7, 11`, against the global maxima `H_max(4) = 5` and `H_max(8) = 661`.
+  * The class spectra are `{3}`, `{189, 333}` and `{95095, 196815, 236447, 256023}`. The minimum is `H(P_q)`, attained at "`P_q` + sink" itself.
+  * Script: `paley_extremal_20261021/paley_sink_switching.c` (+ `.out`). So 2-transitivity on `q + 1` points does not produce `H`-maximisers.

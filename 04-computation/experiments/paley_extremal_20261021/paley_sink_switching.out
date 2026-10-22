@@ -1,0 +1,6 @@
+q=3 (n=4): switching class of P_q + sink, 8 members; max H = 3 (attained 8 times)
+  distinct H values: 3(x8)
+q=7 (n=8): switching class of P_q + sink, 128 members; max H = 333 (attained 112 times)
+  distinct H values: 189(x16) 333(x112)
+q=11 (n=12): switching class of P_q + sink, 2048 members; max H = 256023 (attained 440 times)
+  distinct H values: 95095(x24) 196815(x264) 236447(x1320) 256023(x440)
