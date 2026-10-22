@@ -1,0 +1,39 @@
+quasi-periodicity independent recurrence: 24000 checks
+n,s(n)%n,c(n)%n,D(n)%n: 9 7 7 0
+n,s(n)%n,c(n)%n,D(n)%n: 21 16 16 0
+n,s(n)%n,c(n)%n,D(n)%n: 63 2 2 0
+n,s(n)%n,c(n)%n,D(n)%n: 341 23 1 22
+n,s(n)%n,c(n)%n,D(n)%n: 1023 2 2 0
+D(11)%31= 22
+s(1)..s(7): [1, 0, 2, 24, 544, 22320, 1677488]
+all connection sets n=3,5,7,9,11: 62 DP/reflection checks
+checkpoint rows: 264 unique exact rows: 263
+unique row orders: {3: 1, 5: 1, 7: 2, 9: 4, 11: 4, 13: 6, 15: 16, 17: 16, 19: 30, 21: 88, 23: 95}
+distinct multiplier classes: 262
+multiplier-class orders: {3: 1, 5: 1, 7: 2, 9: 4, 11: 4, 13: 6, 15: 16, 17: 16, 19: 30, 21: 88, 23: 94}
+prime-square check p,D(p),D(p^2) modulo p^2: 3 0 0
+prime-square check p,D(p),D(p^2) modulo p^2: 5 15 10
+prime-square check p,D(p),D(p^2) modulo p^2: 7 14 14
+prime-square check p,D(p),D(p^2) modulo p^2: 11 77 44
+prime-square check p,D(p),D(p^2) modulo p^2: 13 0 0
+prime-square check p,D(p),D(p^2) modulo p^2: 17 238 238
+prime-square check p,D(p),D(p^2) modulo p^2: 19 19 342
+prime-square check p,D(p),D(p^2) modulo p^2: 23 184 184
+prime-square check p,D(p),D(p^2) modulo p^2: 29 203 638
+prime-square check p,D(p),D(p^2) modulo p^2: 31 62 62
+general prime-power lifting checked: 3 1 m=1..4 modulus 3
+general prime-power lifting checked: 3 2 m=1..4 modulus 9
+general prime-power lifting checked: 3 3 m=1..4 modulus 27
+general prime-power lifting checked: 3 4 m=1..4 modulus 81
+general prime-power lifting checked: 3 5 m=1..4 modulus 243
+general prime-power lifting checked: 5 1 m=1..2 modulus 5
+general prime-power lifting checked: 5 2 m=1..2 modulus 25
+general prime-power lifting checked: 5 3 m=1..2 modulus 125
+general prime-power lifting checked: 5 4 m=1..2 modulus 625
+general prime-power lifting checked: 7 1 m=1..3 modulus 7
+general prime-power lifting checked: 7 2 m=1..3 modulus 49
+general prime-power lifting checked: 7 3 m=1..3 modulus 343
+general prime-power lifting checked: 11 1 m=1..5 modulus 11
+general prime-power lifting checked: 11 2 m=1..5 modulus 121
+incoming connected-graph tail independently checked: 990 cases, plus 10 initial obstructions
+PASS: all runtime checks completed

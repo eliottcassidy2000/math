@@ -1,0 +1,24 @@
+p,r,modulus,shift,proved-threshold,earlier-failures: 3 1 3 2 1 []
+p,r,modulus,shift,proved-threshold,earlier-failures: 3 2 9 6 3 [1, 2]
+p,r,modulus,shift,proved-threshold,earlier-failures: 3 3 27 18 5 [1, 2]
+p,r,modulus,shift,proved-threshold,earlier-failures: 3 4 81 54 7 [1, 2, 3, 4]
+p,r,modulus,shift,proved-threshold,earlier-failures: 3 5 243 162 9 [1, 2, 3, 4, 5, 6]
+p,r,modulus,shift,proved-threshold,earlier-failures: 3 6 729 486 11 [1, 2, 3, 4, 5, 6, 7, 8]
+p,r,modulus,shift,proved-threshold,earlier-failures: 5 1 5 4 1 []
+p,r,modulus,shift,proved-threshold,earlier-failures: 5 2 25 20 3 [1, 2]
+p,r,modulus,shift,proved-threshold,earlier-failures: 5 3 125 100 5 [1, 2, 3]
+p,r,modulus,shift,proved-threshold,earlier-failures: 5 4 625 500 7 [1, 2, 3, 4]
+p,r,modulus,shift,proved-threshold,earlier-failures: 7 1 7 6 1 []
+p,r,modulus,shift,proved-threshold,earlier-failures: 7 2 49 42 3 [1]
+p,r,modulus,shift,proved-threshold,earlier-failures: 7 3 343 294 5 [1, 2, 3, 4]
+p,r,modulus,shift,proved-threshold,earlier-failures: 11 1 11 10 1 []
+p,r,modulus,shift,proved-threshold,earlier-failures: 11 2 121 110 3 [1, 2]
+p,r,modulus,shift,proved-threshold,earlier-failures: 11 3 1331 1210 5 [1, 2, 3, 4]
+p,r,modulus,shift,proved-threshold,earlier-failures: 13 1 13 12 1 []
+p,r,modulus,shift,proved-threshold,earlier-failures: 13 2 169 156 3 [1]
+p,r,modulus,shift,proved-threshold,earlier-failures: 17 1 17 16 1 []
+p,r,modulus,shift,proved-threshold,earlier-failures: 17 2 289 272 3 [1, 2]
+PASS: 1000 additive shift checks; earlier indices reported, not used to assert universal sharpness
+PASS: 420 arbitrary-unit-base checks
+PASS: 180 connected-graph prime-power tail checks
+PASS: 831 full CRT checks on every composite n<=1000, including unrestricted odd prime powers

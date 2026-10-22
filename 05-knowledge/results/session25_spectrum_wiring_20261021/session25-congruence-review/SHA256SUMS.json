@@ -1,0 +1,27 @@
+{
+  "computation_input_checkpoint": "f002fc425336",
+  "incoming_reconciliation_source": "3596c5d0b1990b05ae960e980a863956b47cc6b5",
+  "subsequent_additive_closure": "ADDITIVE_PRIME_POWER_PROOF.md",
+  "artifacts_sha256": {
+    "ADDITIVE_PRIME_POWER_PROOF.md": "ad3c9b993debf5cb2403d414eb532df9a19a8a260d8ddc1705f41545664451c6",
+    "HISTORICAL_SUPERSEDED_CANON_CORRECTIONS.txt": "f3385509c1d81201046ee84f984192f0d46ec2e2d8e3ff0045601ad9d96362dd",
+    "INCOMING_AUDIT_RECONCILIATION.md": "004bd9e782ef3e1ad15421be76a9a8cccbcfb2783dc8f95a8a0b6236b35daf3d",
+    "PRIME_POWER_PROOF.md": "ba3929d6a63c2c9fbcc0ef0605abe6b03903e7d2a50649f605e991cd92f0365f",
+    "PRIME_SQUARE_PROOF.md": "e456108f033159a2d4d381334fba62c20bcc917819df686b6541a5b0748ff926",
+    "PUBLICATION_AUDIT_NOTE.md": "4b93a1c417e6154a06929036e636f87660714f5d476219038baa206cf874b377",
+    "REVIEW.md": "e354cb553625b6090de015daa602c520774c226bcd0a10d5447ece79afbcc5c1",
+    "additive_audit.optimized.out": "49d437612647150131a524ba01c7d453af9b4c5e661dcab6156b9d643d5dd540",
+    "additive_audit.out": "49d437612647150131a524ba01c7d453af9b4c5e661dcab6156b9d643d5dd540",
+    "additive_audit.py": "96d35cb03b0a28a5b371d2fc231ac919bfb5980f4c354581594b0a41da0b421e",
+    "audit.optimized.out": "59182b61d4714922cd0f6dd6c19293cdc7eb5e27e79c48239d9b4a999e909254",
+    "audit.out": "59182b61d4714922cd0f6dd6c19293cdc7eb5e27e79c48239d9b4a999e909254",
+    "audit.py": "3f5f78572b03fec6ec65ba44de1752978c7a18e0e111bf7612d334683e2a14e7"
+  },
+  "incoming_canon_sha256": {
+    "01-canon/theorems/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md": "fcfbdbb852c8a10378173a731bfe24faf634d531e28be389d2792d36dce5cd3d",
+    "01-canon/theorems/THM-4747-hamiltonian-cycles-under-automorphisms-fermat-wilson-congruences-for-circulant-and-paley-tournaments.md": "de47a4bc5c720ad738108a945edcd29f4b5dc75805286640c37b90c88554ae55"
+  },
+  "normal_optimized_output_identical": true,
+  "additive_normal_optimized_output_identical": true,
+  "old_patch_status": "WITHDRAWN: historical text only; do not apply"
+}
