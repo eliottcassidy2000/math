@@ -1,0 +1,10 @@
+Circulant classes: H recomputed (hcount iecirc) vs repo; two-loop statistics
+  n=9: 4 classes  corr(y, y_pred) = +0.9991  spearman = +0.9487  mean(y - y_pred) = -0.0102  sd(y - y_pred) = 0.1204  y in [0.321, 0.971]  [H mismatches: 0; dense-vs-FFT max dev 7.5e-15]
+  n=11: 4 classes  corr(y, y_pred) = +0.9691  spearman = +0.8000  mean(y - y_pred) = -0.1015  sd(y - y_pred) = 0.0883  y in [0.216, 0.912]  [H mismatches: 0; dense-vs-FFT max dev 1.7e-14]
+  n=13: 6 classes  corr(y, y_pred) = +0.9885  spearman = +1.0000  mean(y - y_pred) = -0.0524  sd(y - y_pred) = 0.0296  y in [0.464, 0.981]  [H mismatches: 0; dense-vs-FFT max dev 2.7e-14]
+  n=15: 16 classes  corr(y, y_pred) = +0.9939  spearman = +0.9676  mean(y - y_pred) = -0.0478  sd(y - y_pred) = 0.0301  y in [0.479, 1.096]  [H mismatches: 0; dense-vs-FFT max dev 3.9e-14]
+  n=17: 16 classes  corr(y, y_pred) = +0.9939  spearman = +0.9824  mean(y - y_pred) = -0.0466  sd(y - y_pred) = 0.0183  y in [0.473, 1.062]  [H mismatches: 0; dense-vs-FFT max dev 4.0e-14]
+  n=19: 30 classes  corr(y, y_pred) = +0.9953  spearman = +0.9938  mean(y - y_pred) = -0.0453  sd(y - y_pred) = 0.0162  y in [0.398, 1.092]  [H mismatches: 0; dense-vs-FFT max dev 5.7e-14]
+  n=21: 88 classes  corr(y, y_pred) = +0.9969  spearman = +0.9920  mean(y - y_pred) = -0.0409  sd(y - y_pred) = 0.0142  y in [0.460, 1.146]  [H mismatches: 0; dense-vs-FFT max dev 8.0e-14]
+  n=23: 94 classes  corr(y, y_pred) = +0.9971  spearman = +0.9956  mean(y - y_pred) = -0.0398  sd(y - y_pred) = 0.0110  y in [0.417, 1.139]  [H mismatches: 0; dense-vs-FFT max dev 1.1e-13]
+  n=25: 208 classes  corr(y, y_pred) = +0.9984  spearman = +0.9974  mean(y - y_pred) = -0.0374  sd(y - y_pred) = 0.0090  y in [0.458, 1.157]  [H mismatches: 0; dense-vs-FFT max dev 1.0e-13]

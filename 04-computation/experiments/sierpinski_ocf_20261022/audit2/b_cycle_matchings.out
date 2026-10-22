@@ -1,0 +1,7 @@
+p=1: single-cycle matchings 1, (p-1)! 2^(p-1) = 1, match; orientation patterns uniform: True
+p=2: single-cycle matchings 2, (p-1)! 2^(p-1) = 2, match; orientation patterns uniform: True
+p=3: single-cycle matchings 8, (p-1)! 2^(p-1) = 8, match; orientation patterns uniform: True
+p=4: single-cycle matchings 48, (p-1)! 2^(p-1) = 48, match; orientation patterns uniform: True
+p=5: single-cycle matchings 384, (p-1)! 2^(p-1) = 384, match; orientation patterns uniform: True
+p=6: single-cycle matchings 3840, (p-1)! 2^(p-1) = 3840, match; orientation patterns uniform: True
+p=7: single-cycle matchings 46080, (p-1)! 2^(p-1) = 46080, match; orientation patterns uniform: True

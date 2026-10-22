@@ -2,12 +2,20 @@
 id: THM-4757
 title: "Loop expansion of Hamiltonian paths in tournaments. (1) For every tournament, kappa(T) = H(T) 2^(n-1)/n! = sum_L N_L(S)/(n)_L, where N_L(S) is the sum of prod S_e over the directed linear forests of K_n with L arcs (S = A - A^T). (2) Moebius inversion over coincidences of run positions writes log of Phi_T(z) = sum_L N_L (z/n)^L as a sum of connected clusters graded by excess e = arcs - blocks; for regular T, clusters with a free run end vanish, so e >= 0 (no tree level). (3) One loop: the e = 0 clusters (single cycles) sum exactly to (1/2) log det(I - z^2 Shat^2) - (1/2) log det(I + z^2 Shat^2), Shat = S/n; at z = 1 this is log rho(T), the Wormald blow-up gain det(nI - S)/|det(inI - S)|. (4) Two loops: the e = 1 clusters (figure-eight, theta, dumbbell) sum to sum_v [2 G_vv H_vv - (3/2) G_vv^2] + sum_(u,v) G_uv (H_uv^2 - O_uv^2 - (2/3) G_uv^2) - d^T G d, with G = -Shat^2 (I + Shat^2)^-1, H = Shat^2 (I - Shat^2)^-1, O = Shat (I - Shat^2)^-1, d = diag(H - G); the dumbbell vanishes for vertex-transitive T."
 status: >
-  PROVED, pre-audit (mac-mini-2026-10-22-sierp): (1)-(3) are elementary identities, (3) as a formal power series in z,
+  PROVED (mac-mini-2026-10-22-sierp; independently audited 2026-10-22, 05-knowledge/results/sierpinski_audit2_20261022.md:
+  (1)-(4) confirmed by exact rational brute force; one side remark corrected): (1)-(3) are elementary identities, (3) as a formal power series in z,
   convergent at z = 1 because every |x_k| < 1. (4) is proved as a formal power series modulo the kernel computation:
   each kernel is 4-periodic in every path length (rational generating functions with simple poles at fourth roots of
   unity, below), and the periodic values are fixed by exhaustive enumeration (two_loop_kernels.py). Independent check:
-  the closed formula's z^4 and z^6 coefficients equal the brute-force excess-1 cluster sums for R_15 and P_19, and the
-  brute-force excess-0 sums equal the log rho coefficients for L <= 6 (cluster_check.py, two_loop_series_check.py).
+  the closed formula's z^4 and z^6 coefficients agree with the brute-force excess-1 cluster sums for R_15 and P_19 to the
+  4 digits printed (vertex-transitive cases; the dumbbell has no term below z^14 for any regular T), and the brute-force
+  excess-0 sums equal the log rho coefficients for L <= 6 (cluster_check.py, two_loop_series_check.py). AUDIT
+  (sierpinski_ocf_20261022/audit2/): exact rational equality of the excess-0 and excess-1 cluster sums with (3) and (4),
+  by set-partition enumeration and by the blow-up scaling log Psi(M (x) J_m/m) = sum_e m^(-e) X_e(M), for all regular
+  tournaments with n = 7 (to z^12) and n = 9 (to z^10), R_11, P_11 and five non-vertex-transitive n = 11 classes (to
+  z^8), R_15 and P_19 (to z^8), the non-circulant regular 7-tournament to z^16 (dumbbell nonzero at z^14, z^16) and
+  Eulerian skew matrices (one to z^20; dumbbell from z^6); the kernel table equals the brute-force coefficient of every core class
+  of total length <= 14.
   The asymptotic consequence kappa = rho (1 - y/n + O(n^-2)) is NOT proved here; it is HYP-9365.
   PRIOR ART: (1) is inclusion-exclusion over forced arcs (classical in permanent/Hamiltonicity counting). The blow-up
   gain rho is Wormald's (arXiv:2610.16245) in Bhattacharjee's determinant form (GitHub release v1.0.0, 2026-10-14);
@@ -16,7 +24,9 @@ status: >
   Literature search 2026-10-22 (web): no single-tournament loop expansion found. Adler-Alon-Ross (RSA 2001) get e from a
   Poisson count of consecutive cyclic triangles in a triangle-correlated random tournament, the same local mechanism as
   the self-glued 2-runs here; Cuckler bounds Hamilton cycles of regular tournaments by a martingale on self-avoiding
-  walks; Wormald's generating functions use (I - AD)^-1 for blow-ups.
+  walks; Wormald's generating functions use (I - AD)^-1 for blow-ups. Wormald's Lemma 3 (a fixed linear forest with a arcs
+  and s nontrivial paths lies in a uniformly random regular tournament with probability ~ 2^(-a) e^((a-s)/n), by McKay's
+  method) is the averaged counterpart of the forest identity (1).
 session: mac-mini-2026-10-22-sierp
 source: 05-knowledge/results/sierpinski_steiner_collatz_tournaments_20261022.md
 scripts:
@@ -45,6 +55,8 @@ For every tournament,
 
 The top term is `N_(n−1) = Σ_σ (−1)^(#backward steps) = (−1)^(n−1) F(T, −1)`, the alternating value of the forward-step polynomial of THM-4756.
 
+Reversing one odd path (say the one through the least vertex lying on an odd path) is a sign-reversing involution, so only forests whose paths all have even length contribute to `N_L`; in particular `N_L = 0` for odd `L` (audit, `audit2/a_forest_identity.out`). The same involution on a single run kills every cluster that contains an odd run.
+
 ## 2. Clusters and excess
 
 Put `Φ_T(z) = Σ_L N_L (z/n)^L`.
@@ -52,9 +64,9 @@ Put `Φ_T(z) = Σ_L N_L (z/n)^L`.
 * Replace injectivity by Möbius inversion on the partition lattice of all run positions: a partition `π` gets the weight `μ(π) = Π_B (−1)^(|B|−1)(|B|−1)!` and the free homomorphism sum `Z_π = Σ_(f: blocks → [n]) Π_arcs (zŜ)_(f(·) f(·))`. Each `Z_π` factorises over the connected components of the quotient multigraph.
 * So, by the exponential formula,
 
-      log Φ_T(z) = Σ_(e ≥ 0) X_e(z),
+      log Φ_T(z) = Σ_(e ≥ −1) X_e(z),
 
-  where `X_e` sums `μ(π) Z_π / p!` over connected clusters (`p` runs and a partition) of **excess** `e = #arcs − #blocks`, i.e. cyclomatic number `e + 1`.
+  where `X_e` sums `μ(π) Z_π / p!` over connected clusters (`p` runs and a partition) of **excess** `e = #arcs − #blocks`, i.e. cyclomatic number `e + 1`. Trees (`e = −1`) occur exactly when `T` is not regular (`audit2/b_validate.out`).
 
 **Regular `T`.** If `S·1 = 0`, a block that is a single run end gives `Σ_v Ŝ_(vw) = 0`. So only quotient graphs of minimum degree ≥ 2 survive, and `e ≥ 0`. There is no tree level. The grading is a loop expansion with `1/n` as the loop-counting parameter: an excess-`e` cluster is `O(n^(−e))`.
 
@@ -107,7 +119,32 @@ All have simple poles at fourth roots of unity and no polynomial part beyond `z�
     X_1 = Σ_v [2 G_vv H_vv − (3/2) G_vv²]  +  Σ_(u,v) G_uv (H_uv² − O_uv² − (2/3) G_uv²)  −  dᵀ G d,     d = diag(H − G),
 
 with `Ŝ → zŜ` for the series in `z`.
-* The `z⁴` and `z⁶` coefficients match brute force: −0.19911 against −0.19910 and −0.060250 against −0.060250 for `R_15`; −0.16271 against −0.16270 and −0.0068139 against −0.0068140 for `P_19` (`two_loop_series_check.py`).
-* For vertex-transitive `T`, `d` is constant and `G·1 = 0`, so the dumbbell vanishes. The figure-eight becomes `(1/n)[2 tr G tr H − (3/2)(tr G)²]`, a function of the spectrum alone. The theta becomes `(1/n) Σ_(k_1+k_2+k_3 ≡ 0)` of products of `g, h, o` at three frequencies: the first place where the additive structure of the connection set, and not only the spectrum, enters.
+* The `z⁴`, `z⁶`, `z⁸` coefficients equal the brute-force cluster sums exactly: −0.1991111, −0.0602495, −0.0526505 for `R_15`; −0.1627059, −0.0068139, −0.0012067 for `P_19` (`audit2/c_session_cases.out`; `two_loop_series_check.py` compared 4 printed digits). Non-vertex-transitive tournaments and the dumbbell: `audit2/c_two_loop_check.out`, `audit2/c_dumbbell_n7_L16.out`.
+* For vertex-transitive `T`, `d` is constant and `G·1 = 0`, so the dumbbell vanishes. For every regular `T` the first term of `d` is the constant `2 diag(Ŝ²)`, so the dumbbell has no `z^L` term with `L < 14` (first term: loops `a = b = 6`, bridge `c = 2`, i.e. `(a, b; c) = (6, 6; 2)`). The figure-eight becomes `(1/n)[2 tr G tr H − (3/2)(tr G)²]`, a function of the spectrum alone. For circulant `T` the theta becomes `(1/n) Σ_(k_1+k_2+k_3 ≡ 0)` of products of `g, h, o` at three frequencies: the first place where the additive structure of the connection set, and not only the spectrum, enters.
 
-**Series–parallel ("least resistance") remark.** All three two-loop cores are series–parallel, and their values come from series and parallel composition of three propagators. The first non-series–parallel vacuum graph, `K_4`, appears at three loops (`e = 2`). That is where, for example, Paley character sums stop collapsing to polynomials in `q`.
+**Series–parallel ("least resistance") remark.** All three two-loop cores are series–parallel, and their values come from series and parallel composition of three propagators. The first non-series–parallel vacuum graph, `K_4`, appears at three loops (`e = 2`). For doubly regular tournaments, Paley included, the three-loop terms (`K_4` among them) still reduce to functions of `n`, because they are fixed by the 4-vertex census (HYP-9365 (d)); Paley character sums do not stop collapsing at three loops.
+
+## 5. Remarks (same session, after audit 2)
+
+**The forest numbers in other coordinates** (PROVED).
+* `Σ_L (n − L)! N_L t^L = (1 − t)^(n−1) F(T, (1 + t)/(1 − t))` (audit 2). So (1) is a reparametrisation of the forward-step polynomial.
+* `[r^(n−1−L)] W(r) = 2^(−L)(n − L)! N_L` for THM-059's W-polynomial `W(r) = Σ_P Π(r + s_i)`, `s_i = A − 1/2`.
+* So (1) is `W(1/2) = H`, and THM-061 is `W(−1/2) = (−1)^(n−1) H`.
+* THM-059 writes `W` as a deformed independence polynomial over the odd cycles of `T`. The one-loop identity (3) is therefore a bridge from the OCF side to the skew spectrum.
+
+**Only even paths count** (audit 2). Reversing the odd path through the least vertex that lies on an odd path is a sign-reversing involution on directed linear forests. So `N_L` is a sum over forests whose paths all have even length; in particular `N_L = 0` for odd `L`. The same involution kills every cluster with an odd run.
+
+**Gamma-integral form.**
+
+    κ(T) = ∫_0^∞ (t^n e^(−t)/n!) Φ_T(n/t) dt.
+
+* The saddle `t = n` gives the loop expansion.
+* The endpoint region `t = O(1)` sees only the top coefficients, `N_(n−1) = F(T, −1)` and its neighbours: the alternating end (HYP-9366).
+
+**Resolvents at the fourth roots of unity.** With `R_ω = ωŜ(I − ωŜ)^(−1)`, `ω⁴ = 1`:
+* `H = (R_1 + R_(−1))/2`, `O = (R_1 − R_(−1))/2`, `G = (R_i + R_(−i))/2`;
+* `ρ² = Π_(ω⁴=1) det(I − ωŜ)^(ω²)`.
+
+**Higher loops.** The general engine (`loop_engine.py`, `loop_engine_fast.py`) works for any excess. Cores of excess `e` have at most `2e` vertices: 3 cores at `e = 1`, 15 at `e = 2`. Per-path propagators are combinations of five matrices, `R_(±1)` and `−R_(s_1) R_(s_2) (I − Ŝ²)(I + Ŝ²)^(−1)`. The engine reproduces (4) to 12 digits and the brute-force excess-2 sums exactly. The second order is HYP-9367.
+
+**Beyond regular tournaments.** For `S·1 ≠ 0` the excess `−1` (tree) clusters survive. The path trees sum to `−δᵀ(I + Ŝ²)^(−1)δ`, `δ = Ŝ1`, and branched trees enter when `δ = O(1)`; see the results note §12.

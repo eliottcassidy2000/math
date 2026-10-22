@@ -1,0 +1,4 @@
+self-test Z_3^2 Cayley tournament [1, 3, 5, 8]: group IE 3159, Held-Karp 3159, ok
+self-test Z_3^2 Cayley tournament [2, 6, 7, 8]: group IE 3159, Held-Karp 3159, ok
+self-test Z_3^2 Cayley tournament [1, 3, 5, 8]: group IE 3159, Held-Karp 3159, ok
+P_27 (F_27 = F_3[t]/(t^3 - t + 1)): H = 418425945688463432031; repo P27.out value 418425945688463432031: MATCH

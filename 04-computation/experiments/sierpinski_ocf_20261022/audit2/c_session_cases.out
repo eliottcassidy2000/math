@@ -1,0 +1,8 @@
+R_15 z^2: excess-0 brute +9.333333333333e-01 formula +9.333333333333e-01 exact=True;  excess-1 brute +0.000000000000e+00 formula +0.000000000000e+00 exact=True
+R_15 z^4: excess-0 brute +0.000000000000e+00 formula +0.000000000000e+00 exact=True;  excess-1 brute -1.991111111111e-01 formula -1.991111111111e-01 exact=True
+R_15 z^6: excess-0 brute +4.346644718793e-02 formula +4.346644718793e-02 exact=True;  excess-1 brute -6.024954732510e-02 formula -6.024954732510e-02 exact=True
+R_15 z^8: excess-0 brute +0.000000000000e+00 formula +0.000000000000e+00 exact=True;  excess-1 brute -5.265054961134e-02 formula -5.265054961134e-02 exact=True
+P_19 z^2: excess-0 brute +9.473684210526e-01 formula +9.473684210526e-01 exact=True;  excess-1 brute +0.000000000000e+00 formula +0.000000000000e+00 exact=True
+P_19 z^4: excess-0 brute +0.000000000000e+00 formula +0.000000000000e+00 exact=True;  excess-1 brute -1.627059338096e-01 formula -1.627059338096e-01 exact=True
+P_19 z^6: excess-0 brute +8.747630849978e-04 formula +8.747630849978e-04 exact=True;  excess-1 brute -6.813944030509e-03 formula -6.813944030509e-03 exact=True
+P_19 z^8: excess-0 brute +0.000000000000e+00 formula +0.000000000000e+00 exact=True;  excess-1 brute -1.206736887338e-03 formula -1.206736887338e-03 exact=True

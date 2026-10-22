@@ -1,0 +1,20 @@
+TT4 counts: R_7 = 7  P_7 = 0  triangle-reversals of R_7 give TT4 in [3, 7]
+non-circulant regular 7-tournament rows: ['0101100', '0011100', '1001010', '0000111', '0010011', '1100001', '1110000']
+R_5: H = 15, N_L = [1, 0, 20, 0, 0], kappa = 2
+R_7: H = 175, N_L = [1, 0, 42, 0, 168, 0, 112], kappa = 20/9
+P_7: H = 189, N_L = [1, 0, 42, 0, 168, 0, 1008], kappa = 12/5
+non-circulant regular 7 (TT4=3): H = 171, N_L = [1, 0, 42, 0, 168, 0, -144], kappa = 76/35
+
+label: #tournaments, identity ok, N_odd = 0, even-path restriction ok, top term ok, #linear forests of K_n
+  all n=2: [2, 2, 2, 2, 2, 3]
+  all n=3: [8, 8, 8, 8, 8, 13]
+  all n=4: [64, 64, 64, 64, 64, 73]
+  random n=5: [40, 40, 40, 40, 40, 501]
+  random n=6: [40, 40, 40, 40, 40, 4051]
+  random n=7: [40, 40, 40, 40, 40, 37633]
+  random n=8: [12, 12, 12, 12, 12, 394353]
+  R_5: [1, 1, 1, 1, 1, 501]
+  R_7: [1, 1, 1, 1, 1, 37633]
+  P_7: [1, 1, 1, 1, 1, 37633]
+  non-circulant regular 7 (TT4=3): [1, 1, 1, 1, 1, 37633]
+ALL PASSED

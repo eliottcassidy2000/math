@@ -270,19 +270,19 @@ The numerators `4, 28, 244, 2188` are the Collatz images `3n + 1` of the even po
 | all regular 11-tournaments (1223) | corr 0.978; the corrected `ρ(1 − y_pred/n)` ranks `κ` with Spearman 0.896 (`ρ` alone −0.743) and finds `P_11` |
 | towers to 729 vertices | `y = 1.338620` against `y_pred = 1.339738`; limits 1.345606 (exact data) against 1.345726 (two-loop) |
 | Paley / doubly regular | `y → 1/2`, i.e. `κ = e(1 − 3/(2n) + O(n^(−2)))` |
-| rotational | `y → tan 1 tanh 1 + ½ tan² 1 − 1 = 1.398872`; exact-data extrapolation 1.3975–1.406 |
+| rotational | `y → tan 1 tanh 1 + ½ tan² 1 − 1 = 1.398872`; exact-data extrapolation within residue classes mod 4: 1.3971–1.4002 |
 
 **Doubly regular tournaments are indistinguishable through three loops.** Their propagators lie in `span{I, J, Ŝ}`, and three-loop cores have at most 4 vertices.
 * A non-Paley doubly regular 19-tournament `D_19` (found by annealing, nauty-certified) has `H(D_19) = 1172732961771`, against `H(P_19) = 1172695746915`: a ratio of `1 + 3.2·10^(−5)`.
 * Their 4-subtournament censuses coincide. Their 5-subtournament censuses do not, which is where four loops begin.
-* At order 23, three non-Paley classes differ from `P_23` by `−1.6·10^(−5)` to `−1.9·10^(−5)`. The scaled gap `n³(H/H(P) − 1)` is ≈ 0.2 at both orders 19 and 23, the `O(n^(−3))` four-loop scaling (`drt_results.out`).
+* At order 23, three non-Paley classes differ from `P_23` by `−1.6·10^(−5)` to `−1.9·10^(−5)`. The scaled gap `n³(H/H(P) − 1)` is ≈ 0.2 at both orders 19 and 23, consistent with the `O(n^(−3))` four-loop scaling (two orders only; `drt_results.out`).
 
 **A non-perturbative term.** The values `κ(R_n)` split by `n mod 4`.
 * The alternating component decays like `0.6^n` and carries the sign `(−1)^((n+1)/2)`.
-* It tracks the top term of the forest series, `F(R_n, −1)/n!`, the alternating forward-step count of THM-4756, with ratio ≈ 1.65 for `n = 13–21`.
+* It tracks the top term of the forest series, `F(R_n, −1)/n!`, the alternating forward-step count of THM-4756, with ratio ≈ 1.65 for `n = 13–21` (fit-dependent, NUMEROLOGY; `audit2/g_wobble.out`).
 * An exponentially small term with an alternating sign, invisible to the loop expansion, is the analogue of an instanton correction. The analogy is an interpretation, not a theorem.
 
-**Least resistance, once more.** All two-loop graphs are series–parallel, built from three propagators by series composition (matrix products) and parallel composition (entrywise products). So the first correction to the blow-up gain is literally a resistance-network computation (cf. §8). The tetrahedron `K_4`, the first non-series–parallel vacuum graph, enters at three loops. There the arithmetic of the tournament (Paley character sums, subtournament censuses) appears for the first time.
+**Least resistance, once more.** All two-loop graphs are series–parallel, built from three propagators by series composition (matrix products) and parallel composition (entrywise products). So the first correction to the blow-up gain is literally a resistance-network computation (cf. §8). The tetrahedron `K_4`, the first non-series–parallel vacuum graph, enters at three loops. There the 4-vertex subtournament census enters as a genuine 4-index sum; for doubly regular tournaments, Paley included, that census is fixed by `n`, so their individual arithmetic (5- and 6-vertex censuses) enters only at four loops.
 
 ## 12. The loop expansion, continued (same session, after §11)
 

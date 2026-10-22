@@ -1,0 +1,62 @@
+random tournament #0 (n=5, regular=False):
+  L=1: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=2: [z^L] log Phi = +4.800000000000e-01; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -3.200000e-01
+  L=3: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=4: [z^L] log Phi = -3.840000000000e-02; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -6.400000e-02
+random tournament #1 (n=5, regular=False):
+  L=1: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=2: [z^L] log Phi = +4.800000000000e-01; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -3.200000e-01
+  L=3: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=4: [z^L] log Phi = -1.408000000000e-01; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -1.664000e-01
+random tournament #2 (n=5, regular=False):
+  L=1: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=2: [z^L] log Phi = +4.800000000000e-01; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -3.200000e-01
+  L=3: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=4: [z^L] log Phi = -8.960000000000e-02; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -1.152000e-01
+random tournament #0 (n=6, regular=False):
+  L=1: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=2: [z^L] log Phi = -1.111111111111e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -1.944444e+00
+  L=3: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=4: [z^L] log Phi = -5.123456790123e-01; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -2.090278e+00
+  L=5: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+random tournament #1 (n=6, regular=False):
+  L=1: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=2: [z^L] log Phi = +2.222222222222e-01; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -6.111111e-01
+  L=3: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=4: [z^L] log Phi = +8.024691358025e-02; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -2.013889e-01
+  L=5: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+random tournament #2 (n=6, regular=False):
+  L=1: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=2: [z^L] log Phi = -2.222222222222e-01; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -1.055556e+00
+  L=3: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=4: [z^L] log Phi = -9.259259259259e-02; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -8.063272e-01
+  L=5: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+random tournament #0 (n=7, regular=False):
+  L=1: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=2: [z^L] log Phi = +4.081632653061e-02; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -8.163265e-01
+  L=3: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=4: [z^L] log Phi = -6.413994169096e-02; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -4.831320e-01
+  L=5: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; tree (e=-1) term = +0.000000e+00
+  L=6: [z^L] log Phi = +1.926634877191e-03; cluster total (even runs) ==; tree (e=-1) term = -5.100596e-01
+random tournament #1 (n=7, regular=False):
+  L=1: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=2: [z^L] log Phi = -7.755102040816e-01; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -1.632653e+00
+  L=3: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = +0.000000e+00
+  L=4: [z^L] log Phi = -2.840483132028e-01; cluster total (even runs) ==; all runs == (per excess); tree (e=-1) term = -1.419409e+00
+  L=5: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; tree (e=-1) term = +0.000000e+00
+  L=6: [z^L] log Phi = -1.415963303272e-01; cluster total (even runs) ==; tree (e=-1) term = -2.206020e+00
+R_7 (n=7, regular=True):
+  L=1: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); degree-1 pruning harmless; tree (e=-1) term = +0.000000e+00
+  L=2: [z^L] log Phi = +8.571428571429e-01; cluster total (even runs) ==; all runs == (per excess); degree-1 pruning harmless; tree (e=-1) term = +0.000000e+00
+  L=3: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); degree-1 pruning harmless; tree (e=-1) term = +0.000000e+00
+  L=4: [z^L] log Phi = -2.973760932945e-01; cluster total (even runs) ==; all runs == (per excess); degree-1 pruning harmless; tree (e=-1) term = +0.000000e+00
+  L=5: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; degree-1 pruning harmless; tree (e=-1) term = +0.000000e+00
+  L=6: [z^L] log Phi = +1.508895103231e-01; cluster total (even runs) ==; degree-1 pruning harmless; tree (e=-1) term = +0.000000e+00
+P_7 (n=7, regular=True):
+  L=1: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); degree-1 pruning harmless; tree (e=-1) term = +0.000000e+00
+  L=2: [z^L] log Phi = +8.571428571429e-01; cluster total (even runs) ==; all runs == (per excess); degree-1 pruning harmless; tree (e=-1) term = +0.000000e+00
+  L=3: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; all runs == (per excess); degree-1 pruning harmless; tree (e=-1) term = +0.000000e+00
+  L=4: [z^L] log Phi = -2.973760932945e-01; cluster total (even runs) ==; all runs == (per excess); degree-1 pruning harmless; tree (e=-1) term = +0.000000e+00
+  L=5: [z^L] log Phi = +0.000000000000e+00; cluster total (even runs) ==; degree-1 pruning harmless; tree (e=-1) term = +0.000000e+00
+  L=6: [z^L] log Phi = +1.585053846612e-01; cluster total (even runs) ==; degree-1 pruning harmless; tree (e=-1) term = +0.000000e+00
+VALIDATION PASSED

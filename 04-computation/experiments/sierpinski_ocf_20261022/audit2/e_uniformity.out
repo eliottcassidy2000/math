@@ -1,0 +1,2 @@
+regular n=11: y - y_pred in [-0.2442, +0.0064], n*(y - y_pred) in [-2.686, +0.070]
+circulants n=25: y - y_pred in [-0.0555, -0.0154], n*(y - y_pred) in [-1.387, -0.386]

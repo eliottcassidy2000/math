@@ -1,0 +1,10 @@
+P_23: 52 isomorphism types of 6-subtournaments present
+D_23.1: 56 isomorphism types of 6-subtournaments present
+D_23.2: 56 isomorphism types of 6-subtournaments present
+D_23.3: 56 isomorphism types of 6-subtournaments present
+  P_23 vs D_23.1: 6-vertex census differs in 56 of 56 types
+  P_23 vs D_23.2: 6-vertex census differs in 56 of 56 types
+  P_23 vs D_23.3: 6-vertex census differs in 56 of 56 types
+  D_23.1 vs D_23.2: 6-vertex census differs in 56 of 56 types
+  D_23.1 vs D_23.3: 6-vertex census differs in 54 of 56 types
+  D_23.2 vs D_23.3: 6-vertex census differs in 56 of 56 types

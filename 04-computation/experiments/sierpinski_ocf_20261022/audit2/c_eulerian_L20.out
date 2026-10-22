@@ -1,0 +1,14 @@
+degrees [4, 4, 2, 2, 4, 2, 4]
+time 36.1s, maxrss 2380 MB
+L= 2 X0 exact: True  X1 exact: True  X1 = +0.0000000000e+00  [F8 +0.000e+00, theta +0.000e+00, dumbbell +0.000e+00]
+L= 4 X0 exact: True  X1 exact: True  X1 = -1.0745522699e-01  [F8 -1.108e-01, theta +3.332e-03, dumbbell +0.000e+00]
+L= 6 X0 exact: True  X1 exact: True  X1 = -1.1542809544e-02  [F8 -1.091e-02, theta +1.870e-04, dumbbell -8.160e-04]
+L= 8 X0 exact: True  X1 exact: True  X1 = -3.5144318078e-03  [F8 -2.897e-03, theta -5.402e-04, dumbbell -7.771e-05]
+L=10 X0 exact: True  X1 exact: True  X1 = -4.1812512926e-04  [F8 -3.253e-04, theta -5.795e-05, dumbbell -3.489e-05]
+L=12 X0 exact: True  X1 exact: True  X1 = -9.3115617159e-05  [F8 -6.698e-05, theta -2.295e-05, dumbbell -3.188e-06]
+L=14 X0 exact: True  X1 exact: True  X1 = -1.1664348084e-05  [F8 -7.972e-06, theta -2.602e-06, dumbbell -1.090e-06]
+L=16 X0 exact: True  X1 exact: True  X1 = -2.2753305443e-06  [F8 -1.485e-06, theta -6.912e-07, dumbbell -9.874e-08]
+L=18 X0 exact: True  X1 exact: True  X1 = -2.9453488021e-07  [F8 -1.825e-07, theta -8.179e-08, dumbbell -3.029e-08]
+L=20 X0 exact: True  X1 exact: True  X1 = -5.3255022312e-08  [F8 -3.210e-08, theta -1.836e-08, dumbbell -2.788e-09]
+ALL EXACT
+python3 c_eulerian_L16.py 20  34.42s user 1.14s system 98% cpu 36.205 total

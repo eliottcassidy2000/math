@@ -1,0 +1,10 @@
+tournament (gentourng code): 110010111001110101111
+time 10.5s, maxrss 1155 MB
+L= 2 X0 exact: True  X1 exact: True  X1 = +0.000000000000e+00  [F8 +0.0000e+00, theta +0.0000e+00, dumbbell +0.0000e+00]  exact dumbbell = 0
+L= 4 X0 exact: True  X1 exact: True  X1 = -3.498542274052e-01  [F8 -3.6735e-01, theta +1.7493e-02, dumbbell +0.0000e+00]  exact dumbbell = 0
+L= 6 X0 exact: True  X1 exact: True  X1 = -7.595474674668e-02  [F8 -7.4357e-02, theta -1.5980e-03, dumbbell +0.0000e+00]  exact dumbbell = 0
+L= 8 X0 exact: True  X1 exact: True  X1 = -4.467526285816e-02  [F8 -4.1367e-02, theta -3.3087e-03, dumbbell +0.0000e+00]  exact dumbbell = 0
+L=10 X0 exact: True  X1 exact: True  X1 = -1.121344263334e-02  [F8 -9.7885e-03, theta -1.4249e-03, dumbbell +0.0000e+00]  exact dumbbell = 0
+L=12 X0 exact: True  X1 exact: True  X1 = -5.101305317536e-03  [F8 -4.2974e-03, theta -8.0388e-04, dumbbell +0.0000e+00]  exact dumbbell = 0
+L=14 X0 exact: True  X1 exact: True  X1 = -1.378705852740e-03  [F8 -1.0819e-03, theta -2.8082e-04, dumbbell -1.5980e-05]  exact dumbbell = -221184/13841287201
+L=16 X0 exact: True  X1 exact: True  X1 = -5.576392108179e-04  [F8 -4.2895e-04, theta -1.2640e-04, dumbbell -2.2829e-06]  exact dumbbell = -221184/96889010407

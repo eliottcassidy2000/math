@@ -1,0 +1,24 @@
+F(R_n,-1): n, value, sign, (-1)^((n+1)/2), F/n!, |F/n!| ratio to n-2
+  n= 3 F=                   6 sign=+1 expected=+1  F/n!=         1.0  
+  n= 5 F=                   0 sign=+0 expected=-1  F/n!=         0.0  0.0 (per vertex 0.0)
+  n= 7 F=                 112 sign=+1 expected=+1  F/n!=   0.0222222  
+  n= 9 F=               -2304 sign=-1 expected=-1  F/n!= -0.00634921  0.28571 (per vertex 0.53452)
+  n=11 F=               84480 sign=+1 expected=+1  F/n!=   0.0021164  0.33333 (per vertex 0.57735)
+  n=13 F=            -4499456 sign=-1 expected=-1  F/n!= -0.00072257  0.34141 (per vertex 0.58431)
+  n=15 F=           330332160 sign=+1 expected=+1  F/n!=  0.00025261  0.3496 (per vertex 0.59127)
+  n=17 F=        -31989497856 sign=-1 expected=-1  F/n!= -8.99371e-5  0.35603 (per vertex 0.59668)
+  n=19 F=       3951688548352 sign=+1 expected=+1  F/n!=  3.24854e-5  0.3612 (per vertex 0.601)
+  n=21 F=    -606498931605504 sign=-1 expected=-1  F/n!=  -1.1871e-5  0.36542 (per vertex 0.6045)
+
+w_n and the ratio w_n kappa_n / (F(R_n,-1)/n!) for three smooth fits of the other residue class:
+  n=13 sign(-1)^((n+1)/2)=-1  k=3: w=-0.0004543, ratio=1.535 | k=4: w=-0.000485, ratio=1.638 | k=5: w=-0.0004737, ratio=1.6
+  n=15 sign(-1)^((n+1)/2)=+1  k=3: w=9.321e-5, ratio=0.9175 | k=4: w=0.000169, ratio=1.663 | k=5: w=0.0001679, ratio=1.653
+  n=17 sign(-1)^((n+1)/2)=-1  k=3: w=-7.11e-5, ratio=1.994 | k=4: w=-5.78e-5, ratio=1.621 | k=5: w=-6.004e-5, ratio=1.684
+  n=19 sign(-1)^((n+1)/2)=+1  k=3: w=5.139e-6, ratio=0.4037 | k=4: w=2.155e-5, ratio=1.693 | k=5: w=2.14e-5, ratio=1.681
+  n=21 sign(-1)^((n+1)/2)=-1  k=3: w=-1.27e-5, ratio=2.756 | k=4: w=-7.44e-6, ratio=1.615 | k=5: w=-7.824e-6, ratio=1.698
+  n=23 sign(-1)^((n+1)/2)=+1  k=3: w=-1.715e-6 | k=4: w=2.914e-6 | k=5: w=2.934e-6
+  n=25 sign(-1)^((n+1)/2)=-1  k=3: w=-3.199e-6 | k=4: w=-9.807e-7 | k=5: w=-1.096e-6
+  n=27 sign(-1)^((n+1)/2)=+1  k=3: w=-1.235e-6 | k=4: w=4.185e-7 | k=5: w=4.19e-7
+  n=29 sign(-1)^((n+1)/2)=-1  k=3: w=-1.116e-6 | k=4: w=-2.549e-7 | k=5: w=-1.496e-7
+  n=31 sign(-1)^((n+1)/2)=+1  k=3: w=-6.4e-7 | k=4: w=4.851e-8 | k=5: w=4.805e-8
+  n=33 sign(-1)^((n+1)/2)=-1  k=3: -- | k=4: -- | k=5: --

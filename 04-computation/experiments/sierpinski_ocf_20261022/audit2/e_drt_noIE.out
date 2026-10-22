@@ -1,0 +1,49 @@
+code checks:
+  P_19: n=19, regular=True, S S^T = nI - J: True
+  D_19.1: n=19, regular=True, S S^T = nI - J: True
+  P_23: n=23, regular=True, S S^T = nI - J: True
+  D_23.1: n=23, regular=True, S S^T = nI - J: True
+  D_23.2: n=23, regular=True, S S^T = nI - J: True
+  D_23.3: n=23, regular=True, S S^T = nI - J: True
+
+order 19: nauty classes (index 0 = cyclotomic Paley; then the listed codes; then their converses)
+  P_19: isomorphic to Paley: True; self-converse: True; isomorphic to other listed: []; isomorphic to the converse of: []
+  D_19.1: isomorphic to Paley: False; self-converse: True; isomorphic to other listed: []; isomorphic to the converse of: []
+  P_19: H(file) = 1172695746915  H(recomputed) = 1172695746915  MATCH  (H - H(P))/H(P) = +0.0000e+00, n^3 * that = +0.0000
+  D_19.1: H(file) = 1172732961771  H(recomputed) = 1172732961771  MATCH  (H - H(P))/H(P) = +3.1734e-05, n^3 * that = +0.2177
+  P_19: x_k^2 in [0.052631578947, 0.052631578947] (1/n = 0.052631578947); rho = 2.581174791713 (formula 2.581174791713); y_pred = 0.479423868313; n*dumbbell = -1.7e-17
+  D_19.1: x_k^2 in [0.052631578947, 0.052631578947] (1/n = 0.052631578947); rho = 2.581174791713 (formula 2.581174791713); y_pred = 0.479423868313; n*dumbbell = -1.7e-17
+  4-vertex census (4 isomorphism types present):
+     P_19: [1026, 570, 1710, 570]
+     D_19.1: [1026, 570, 1710, 570]
+     all equal: True
+  5-vertex census (12 isomorphism types present):
+     P_19: [342, 342, 1368, 342, 1026, 1368, 1710, 342, 1368, 684, 2394, 342]
+     D_19.1: [360, 324, 1386, 324, 972, 1386, 1800, 324, 1386, 738, 2268, 360]
+     all equal: False
+
+order 23: nauty classes (index 0 = cyclotomic Paley; then the listed codes; then their converses)
+  P_23: isomorphic to Paley: True; self-converse: True; isomorphic to other listed: []; isomorphic to the converse of: []
+  D_23.1: isomorphic to Paley: False; self-converse: False; isomorphic to other listed: []; isomorphic to the converse of: []
+  D_23.2: isomorphic to Paley: False; self-converse: False; isomorphic to other listed: []; isomorphic to the converse of: []
+  D_23.3: isomorphic to Paley: False; self-converse: False; isomorphic to other listed: []; isomorphic to the converse of: []
+  P_23: H(file) = 15760206976379349  H(recomputed) = None  not recomputed  (H - H(P))/H(P) = +0.0000e+00, n^3 * that = +0.0000
+  D_23.1: H(file) = 15759953146384333  H(recomputed) = None  not recomputed  (H - H(P))/H(P) = -1.6106e-05, n^3 * that = -0.1960
+  D_23.2: H(file) = 15759901654866253  H(recomputed) = None  not recomputed  (H - H(P))/H(P) = -1.9373e-05, n^3 * that = -0.2357
+  D_23.3: H(file) = 15759902090984757  H(recomputed) = None  not recomputed  (H - H(P))/H(P) = -1.9345e-05, n^3 * that = -0.2354
+  P_23: x_k^2 in [0.043478260870, 0.043478260870] (1/n = 0.043478260870); rho = 2.604199011898 (formula 2.604199011898); y_pred = 0.483471074380; n*dumbbell = +2.4e-17
+  D_23.1: x_k^2 in [0.043478260870, 0.043478260870] (1/n = 0.043478260870); rho = 2.604199011898 (formula 2.604199011898); y_pred = 0.483471074380; n*dumbbell = +2.3e-17
+  D_23.2: x_k^2 in [0.043478260870, 0.043478260870] (1/n = 0.043478260870); rho = 2.604199011898 (formula 2.604199011898); y_pred = 0.483471074380; n*dumbbell = +2.3e-17
+  D_23.3: x_k^2 in [0.043478260870, 0.043478260870] (1/n = 0.043478260870); rho = 2.604199011898 (formula 2.604199011898); y_pred = 0.483471074380; n*dumbbell = +2.3e-17
+  4-vertex census (4 isomorphism types present):
+     P_23: [2530, 1265, 3795, 1265]
+     D_23.1: [2530, 1265, 3795, 1265]
+     D_23.2: [2530, 1265, 3795, 1265]
+     D_23.3: [2530, 1265, 3795, 1265]
+     all equal: True
+  5-vertex census (12 isomorphism types present):
+     P_23: [1518, 1012, 4048, 1012, 3036, 4048, 5060, 1012, 4048, 2024, 5819, 1012]
+     D_23.1: [1478, 1052, 4008, 1052, 3156, 4008, 4860, 1052, 4008, 1904, 6099, 972]
+     D_23.2: [1466, 1064, 3996, 1064, 3192, 3996, 4800, 1064, 3996, 1868, 6183, 960]
+     D_23.3: [1466, 1064, 3996, 1064, 3192, 3996, 4800, 1064, 3996, 1868, 6183, 960]
+     all equal: False

@@ -1,0 +1,16 @@
+n=3 #0: ok
+n=3 #1: ok
+n=3 #2: ok
+n=4 #0: ok
+n=4 #1: ok
+n=4 #2: ok
+n=5 #0: ok
+n=5 #1: ok
+n=5 #2: ok
+n=6 #0: ok
+n=6 #1: ok
+n=6 #2: ok
+n=7 #0: ok
+n=7 #1: ok
+n=7 #2: ok
+ALL OK

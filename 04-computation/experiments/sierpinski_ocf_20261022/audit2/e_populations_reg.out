@@ -1,0 +1,7 @@
+All regular tournaments (gentourng -d m -D m n): H by Held-Karp
+  n=9: 15 classes  corr(y, y_pred) = +0.9700  spearman = +0.9643  mean(y - y_pred) = -0.0528  sd(y - y_pred) = 0.0718  y in [0.321, 0.971]  n*dumbbell in [-1.91e-04, +1.58e-17]
+     ranking: spearman(kappa, rho) = -0.6996, spearman(kappa, rho(1 - y_pred/n)) = +0.8423; argmax kappa = class 1 (H = 3357, code 111010001110100111010111011110111111), argmax of corrected predictor = class 1, argmax rho = class 0; max |kappa_2/kappa - 1| = 2.46e-02
+     distinct H values: 13 of 15 classes
+  n=11: 1223 classes  corr(y, y_pred) = +0.9777  spearman = +0.9731  mean(y - y_pred) = -0.0608  sd(y - y_pred) = 0.0227  y in [0.216, 0.917]  n*dumbbell in [-2.96e-04, +4.29e-17]
+     ranking: spearman(kappa, rho) = -0.7428, spearman(kappa, rho(1 - y_pred/n)) = +0.8956; argmax kappa = class 1220 (H = 95095, code 1010101100111010100110010101111001110110110101101111111), argmax of corrected predictor = class 1220, argmax rho = class 0; max |kappa_2/kappa - 1| = 2.26e-02
+     distinct H values: 427 of 1223 classes
