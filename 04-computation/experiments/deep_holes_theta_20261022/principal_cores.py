@@ -121,9 +121,9 @@ def coset_counts(G, h, shift, B):
     L = [[Fr(0)] * r for _ in range(r)]
     D = [Fr(0)] * r
     for j in range(r):
-        D[j] = G[j][j] - sum(L[j][k] ** 2 * D[k] for k in range(j))
+        D[j] = Fr(G[j][j]) - sum((L[j][k] ** 2 * D[k] for k in range(j)), Fr(0))
         for i in range(j + 1, r):
-            L[i][j] = (G[i][j] - sum(L[i][k] * L[j][k] * D[k] for k in range(j))) / D[j]
+            L[i][j] = (Fr(G[i][j]) - sum((L[i][k] * L[j][k] * D[k] for k in range(j)), Fr(0))) / D[j]
     # q(a) = sum_j D[j] (y_j)^2 with y_j = (a_j - cen_j) + sum_{i>j} L[i][j] (a_i - cen_i)
     bound = Fr(2, h) * (B + base) + 1          # |a - cen|^2 <= bound (generous)
     out = {}

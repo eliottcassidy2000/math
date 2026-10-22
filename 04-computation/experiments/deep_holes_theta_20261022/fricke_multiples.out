@@ -1,0 +1,12 @@
+  ok   d4^6      v = 2c (order 3): Theta^[v]/Delta = theta_(Lambda+v)(e tau)/Delta(e tau) through q^3 (Fricke W_3 invariance); Z = 1q^-1 + 24q^0 + 783q^1 + 8672q^2 + 65367q^3 [115s]
+  ok   d6^4      v = 2c (order 5): Theta^[v]/Delta = theta_(Lambda+v)(e tau)/Delta(e tau) through q^3 (Fricke W_5 invariance); Z = 1q^-1 + 24q^0 + 134q^1 + 760q^2 + 3345q^3 [115s]
+  ok   e6^4      v = 3c (order 4): Theta^[v]/Delta = theta_(Lambda+v)(e tau)/Delta(e tau) through q^3 (Fricke W_4 invariance); Z = 1q^-1 + 24q^0 + 276q^1 + 2048q^2 + 11202q^3 [118s]
+  ok   d8^3      v = 2c (order 7): Theta^[v]/Delta = theta_(Lambda+v)(e tau)/Delta(e tau) through q^3 (Fricke W_7 invariance); Z = 1q^-1 + 24q^0 + 51q^1 + 204q^2 + 681q^3 [123s]
+  ok   d10e7^2   v = 2c (order 9): Theta^[v]/Delta = theta_(Lambda+v)(e tau)/Delta(e tau) through q^3 (Fricke W_9 invariance); Z = 1q^-1 + 24q^0 + 27q^1 + 86q^2 + 243q^3 [122s]
+  ok   d12^2     v = 2c (order 11): Theta^[v]/Delta = theta_(Lambda+v)(e tau)/Delta(e tau) through q^3 (Fricke W_11 invariance); Z = 1q^-1 + 24q^0 + 17q^1 + 46q^2 + 116q^3 [122s]
+  ok   d16e8     v = 2c (order 15): Theta^[v]/Delta = theta_(Lambda+v)(e tau)/Delta(e tau) through q^3 (Fricke W_15 invariance); Z = 1q^-1 + 24q^0 + 9q^1 + 19q^2 + 42q^3 [123s]
+  ok   e8^3      v = 2c (order 15): Theta^[v]/Delta = theta_(Lambda+v)(e tau)/Delta(e tau) through q^3 (Fricke W_15 invariance); Z = 1q^-1 + 24q^0 + 9q^1 + 19q^2 + 42q^3 [127s]
+  ok   e8^3      v = 3c (order 10): Theta^[v]/Delta = theta_(Lambda+v)(e tau)/Delta(e tau) through q^3 (Fricke W_10 invariance); Z = 1q^-1 + 24q^0 + 21q^1 + 62q^2 + 162q^3 [127s]
+  ok   e8^3      v = 5c (order 6): Theta^[v]/Delta = theta_(Lambda+v)(e tau)/Delta(e tau) through q^3 (Fricke W_6 invariance); Z = 1q^-1 + 24q^0 + 78q^1 + 364q^2 + 1365q^3 [127s]
+  ok   d24       v = 2c (order 23): Theta^[v]/Delta = theta_(Lambda+v)(e tau)/Delta(e tau) through q^3 (Fricke W_23 invariance); Z = 1q^-1 + 24q^0 + 4q^1 + 7q^2 + 13q^3 [129s]
+ALL CHECKS PASSED

@@ -1,0 +1,12 @@
+  ok   d4^6      v = 2c (order 3): neighbour Lambda' has 48 roots, Coxeter number 2: A1^24 [1s]
+  ok   d6^4      v = 2c (order 5): neighbour Lambda' has 96 roots, Coxeter number 4: A3^8 [0s]
+  ok   e6^4      v = 3c (order 4): neighbour Lambda' has 72 roots, Coxeter number 3: A2^12 [0s]
+  ok   d8^3      v = 2c (order 7): neighbour Lambda' has 144 roots, Coxeter number 6: D4^6 [0s]
+  ok   d10e7^2   v = 2c (order 9): neighbour Lambda' has 192 roots, Coxeter number 8: A7^2D5^2 [0s]
+  ok   d12^2     v = 2c (order 11): neighbour Lambda' has 240 roots, Coxeter number 10: D6^4 [0s]
+  ok   d16e8     v = 2c (order 15): neighbour Lambda' has 336 roots, Coxeter number 14: D8^3 [0s]
+  ok   e8^3      v = 2c (order 15): neighbour Lambda' has 336 roots, Coxeter number 14: D8^3 [0s]
+  ok   e8^3      v = 3c (order 10): neighbour Lambda' has 216 roots, Coxeter number 9: A8^3 [0s]
+  ok   e8^3      v = 5c (order 6): neighbour Lambda' has 120 roots, Coxeter number 5: A4^6 [0s]
+  ok   d24       v = 2c (order 23): neighbour Lambda' has 528 roots, Coxeter number 22: D12^2 [0s]
+ALL CHECKS PASSED

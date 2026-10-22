@@ -1,0 +1,9 @@
+  ok   D4^6: Lambda + 2c has a unique vector of norm 48/36 = 4/3
+  ok   D4^6 shallow vector y0 = 3 x0: k(y0) = #{lambda in Lambda_4 : y0.lambda = 6} = 0; inner-product distribution ((-5, 24), (-4, 759), (-3, 6072), (-2, 21528), (-1, 43056), (0, 53682), (1, 43056), (2, 21528), (3, 6072), (4, 759), (5, 24))
+       sampled 2977 norm-12 vectors from 4 randomised bases in 15s; 2 distinct inner-product distributions over Lambda_4 (orbit invariants)
+       k =     0  (x 2148)  distribution ((-5, 24), (-4, 759), (-3, 6072), (-2, 21528), (-1, 43056), (0, 53682), (1, 43056), (2, 21528), (3, 6072), (4, 759), (5, 24))
+       k =     2  (x  829)  distribution ((-6, 2), (-4, 891), (-3, 5632), (-2, 22518), (-1, 41472), (0, 55530), (1, 41472), (2, 22518), (3, 5632), (4, 891), (6, 2))
+  ok   two invariants among sampled norm-12 vectors (k = 0 and k = 2), and every k = 0 sample has the D4^6 invariant
+  ok   |Co_0|/|M24| + |Co_0|/|U6(2):2| = 33965568000 + 452088000 = 34417656000 = number of norm-12 vectors
+  ok   the D4^6 shallow vector has the inner-product distribution of the M24-fixed vector (2^24)/sqrt 8
+ALL CHECKS PASSED

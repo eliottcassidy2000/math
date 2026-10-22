@@ -1,4 +1,4 @@
-# The Leech lattice seen from its deep holes: a swap theorem, h-cores, divisors of 3n+1, and bad primes (opus-2026-10-22-S53)
+# The Leech lattice seen from its deep holes: a swap theorem, h-cores, divisors of 3n+1, bad primes, and umbral and Fricke moonshine (opus-2026-10-22-S53)
 
 **Prompt (2026-10-22, overnight).**
 - Pursue the next obligations: prove HYP-9363 and test the other hole types.
@@ -21,6 +21,14 @@ cusp_pairs, whose single failure is a genuine counterexample. All need cypari an
 - `swap_reciprocity.py`: the off-axis swap symmetry scans.
 - `swap_dimension.py`: dimensions of the antisymmetric torus-invariant cusp spaces.
 - `cusp_pairs.py`: the generalisation to arbitrary cusp pairs (275 of 276 pass).
+- For THM-4759 (section 6):
+  - `principal_cores.py`: the Kostant/Kac identity component by component, and the glue lemma;
+  - `coxeter_frame_twined.py`: Theta_N^[rho/h] = eta^24/eta_pi, all 23 types;
+  - `twined_hauptmodul.py`: Leech twined traces;
+  - `hauptmodul_cert.py`: lambencies, and the Atkin-Lehner component rule;
+  - `multiple_cosets.py` and `deep_hole_multiples.py`: shallow multiples on both sides;
+  - `exponent_law.py`: the exponent inequality;
+  - `fricke_multiples.py`: Fricke invariance of the shallow-multiple twining.
 
 ## 1. HYP-9363 is a theorem (THM-4758, PROVED for all 23 types)
 
@@ -131,18 +139,91 @@ but do not match the lines. So the Leech cusp is special. Explaining why the Lee
 ## 4. Prior work and literature
 
 **Repo.**
-- S52 HYP-9363 and THM-4752; the A24 cusp nu = (1/2^25 | 5/2) in tournament coordinates.
-- Borcherds' table and thesis: z . rho = -h, rho = (rho_N, h, h+1), Venkov's rho_N^2 = 2h(h+1).
+- S52: HYP-9363 and THM-4752, including the A24 cusp nu = (1/2^25 | 5/2) in tournament coordinates.
+- Borcherds' table and thesis: z . rho = -h, rho = (rho_N, h, h+1), and Venkov's rho_N^2 = 2h(h+1).
 - The audit_S52 observation 5p(k-1), k <= 22, is now explained.
 
-**Literature.** The background prior-art search covers Borcherds' thesis, Conway-Sloane, Moller-Scheithauer deep-hole
-orbifolds, Shimada and t-core papers; it is recorded in section 6 once complete. Garvan-Kim-Stanton for t-cores and
-Granville-Ono for 3-cores are cited for the corollaries.
+**Literature (prior-art agent, 2026-10-22, 113 tool calls).** No published statement was found of:
+- the swap theorem;
+- the deep-hole theta identity in either the theta or the twined form;
+- the A-type eta-quotient formula;
+- the A24 counts 5p(j-1).
+
+Sources searched include:
+- Borcherds' thesis (Lemma 2.2.7: |rho/h - y|^2 >= 2(1 + 1/h); section 2.7: the holy construction);
+- Moller-Scheithauer, Ann. Math. 2023 (Prop. 6.2: Lambda^d with (Z/h)^2 and its two isotropic subgroups; Prop. 6.3:
+  deep holes are extremal; weight-1 data only);
+- van Ekeren-Lam-Moller-Shimakura;
+- Chigira-Lam-Miyamoto (the V_N orbifold by e^{2 pi i rho(0)/h});
+- Lam-Shimakura;
+- Hohn-Moller;
+- Shimada;
+- Israel-Melnikov-Proto;
+- Cheng-Duncan-Harvey (CDH).
+
+Published numbers agree with the identity, but none of these sources states or uses it:
+- OEIS A004034 (the A1^24 hole, from SPLAG p. 511, no formula);
+- Dong, arXiv 2608.15431 (A3^8 twined sums computed by dynamic programming: T_4 = -25,520, T_12, T_16);
+- Bachoc-Moustrou-Vallentin-Zimmermann, Forum Math. Sigma 2026, Table 3: second radii 2 + 2/h. Their E8^3 entry
+  sqrt(32/15) looks like a misprint for sqrt(31/15).
+
+Gaps: SPLAG Ch. 24 p. 511 and Borcherds' thesis Ch. 5 could not be read.
+
+Classical inputs are cited: Garvan-Kim-Stanton (t-cores), Granville-Ono (3-cores), Kostant (1959; principal element
+~ Coxeter element), and CDH Prop. 2.1 (T^X is a principal modulus; Remark 2.2 asks for a conceptual proof).
 
 ## 5. Next
 
 1. A conceptual proof of the swap theorem. A natural target is to specialise the fake-monster denominator identity to
    span(rho, z).
-2. A conceptual proof of the bad-prime formula. Plausibly T(p) counts the cusps of Coxeter number p between rho and z.
+2. Bad primes. Partly done (section 6): the lower bounds come from the exponent law, but the T(d) values off the
+   shallow lines are still case-checked.
 3. Characterise the cusp pairs for which the swap holds.
 4. Identify the intermediate lattices L_d by type.
+5. HYP-9368: classify the genus-zero inner automorphisms of V_Lambda (section 6).
+
+## 6. The umbral picture (THM-4759) and Fricke twining
+
+**Coxeter Frame shapes do it for every type.** Let pi^X be the Frame shape of the Coxeter element, i.e.
+det(x - c) = prod (x^a - 1)^(m_a), taken over the components. Then:
+- **theta(N + rho_N/h) = |N/Q| eta^24 eta_{pi^X}(tau/h).** This is Kostant's conjugacy (principal element ~ Coxeter
+  element) applied to V_Q, plus a glue lemma (the special automorphisms fix rho/h). principal_cores.py checks it
+  component by component through q^29.
+- **Tr_{V_N}(sigma_N q^(L_0 - 1)) = T^X = 1/eta_{pi^X},** the principal modulus of Cheng-Duncan-Harvey's umbral
+  moonshine (their Prop. 2.1).
+- Combined with THM-4758: **Tr_{V_Lambda}(g_c q^(L_0 - 1)) = T^X + 24 + k,** and
+  theta(Lambda + c) = Delta (24 + k + |N/Q| eta_{pi^X}(tau/h)).
+- The two traces agree in every weight except weight 1.
+- For X != A24 (CDH: pi^X is a Co_0 Frame shape and Gamma^X is monstrous), Carnahan's orbifold duality adds two more
+  traces: a Conway lift with trace T^X, and a Monster element of V^nat with trace T^X + k. So four traces agree in all
+  weights >= 2.
+- A24, with Frame shape 25^1 1^-1, is the unique exception: that is the {25, 1}.
+
+**Bad primes = Atkin-Lehner = shallow multiples.** The lambency of X is h + {h/p : p a bad prime of every component,
+p || h} (D_n with n even: h + h/2; E6: 12 + 4; E8: 30 + 6, 10, 15). For d | h, the coset N + d rho_N/h:
+- has minimal norm 2 - 2d/h, with a unique minimal vector, exactly at those primes;
+- has minimal norm >= 2 otherwise.
+
+This is proved from the **exponent law**: sum_i (m_i mod e)(e - (m_i mod e)) >= l e (e - 1)/6. Equality holds iff e = 1
+or e = h/p with p bad and p || h. The proof is by hand for A and D; exponent_law.py checks 2815 cases, including E.
+The law is the vacuum anomaly of c^(h/e); its case e = h is the strange formula. It is special to ADE: it fails for
+H_3, H_4 and I_2(m >= 7), and has no bad-prime equality cases for B_n and C_n.
+
+On the Leech side every multiple jc is one of two things:
+- a deep hole of an A-containing type (39 instances);
+- at gcd(j, h) = d a common bad prime with d || h, an interior point at squared distance 2 - 2d/h from a unique Leech
+  point. Then Lambda + dc also has exactly 24 vectors of norm 2.
+
+**Fricke twining (new, fricke_multiples.py).** For the shallow multiple v = dc (order e = h/d), the trace
+Tr_{V_Lambda}(e^{2 pi i v(0)} q^(L_0 - 1)) is invariant under tau -> -1/(e tau). Hence it equals **24 + T_{e+}**, the
+normalised Hauptmodul of Gamma_0(e)+:
+- D4^6 gives q^-1 + 24 + 783q + 8672q^2 = 24 + T_3A;
+- D24 gives q^-1 + 24 + 4q + 7q^2 = 24 + T_23A.
+
+The proof is short. F = Theta^[v]/eta^24 has simple poles only at infinity and 0, because the proper multiples of v
+are deep holes. F o W_e has the same principal parts, because the shallow vector is unique. So F - F o W_e is a
+holomorphic function on X_0(e) that is odd under W_e, hence 0.
+
+So one deep hole carries both kinds of moonshine: non-Fricke through its Niemeier lattice, and Fricke through its
+bad-prime multiples. The Fricke levels that occur are 3, 4, 5, 6, 7, 9, 10, 11, 15 and 23. Level 2 is impossible: an
+order-2 point v is congruent to -v mod Lambda, so its minimal vectors come in pairs.
