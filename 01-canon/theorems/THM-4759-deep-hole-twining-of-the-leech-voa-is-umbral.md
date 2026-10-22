@@ -1,6 +1,6 @@
 ---
 id: THM-4759
-title: "Deep-hole twining of the Leech VOA is umbral. For every Niemeier root system X (Coxeter number h, k components, glue N/Q, Coxeter Frame shape pi^X): theta(N + rho_N/h) = |N/Q| eta(tau)^24 eta_{pi^X}(tau/h) and theta(Lambda + c) = Delta(tau) (24 + k + |N/Q| eta_{pi^X}(tau/h)); the principal automorphism e^{2 pi i rho_N(0)/h} of V_N has graded trace T^X = 1/eta_{pi^X}, the Cheng-Duncan-Harvey principal modulus of lambency X, and the deep-hole automorphism e^{2 pi i c(0)} of V_Lambda has graded trace T^X + 24 + k; the two traces agree in every weight except weight one. The poles of T^X away from infinity are the shallow multiples d c of the deep hole, which occur exactly at the bad primes d of every component with d || h, and the lambency is h + {h/p : p such a prime}. Those multiples v = pc (Fricke points) twine V_Lambda by 24 + the Fricke Hauptmodul of Gamma_0(h/p) + (h/p): 3A, 4A, 5A, 6+6, 7A, 9+, 10+10, 11A, 15+15 and 23A from the nine A-free types. The orbifold of V_Lambda at pc is the Niemeier lattice of the Borel-de Siebenthal descent X_p (delete the label-p nodes): D24 -> D12^2 -> D6^4 -> A3^8, D16E8 -> D8^3 -> D4^6 -> A1^24, E8^3 -> D8^3, A8^3, A4^6. So every power of a deep-hole automorphism twines V_Lambda by 24 + a Hauptmodul, and all the groups are monstrous except Gamma_0(25)"
+title: "Deep-hole twining of the Leech VOA is umbral. For every Niemeier root system X (Coxeter number h, k components, glue N/Q, Coxeter Frame shape pi^X): theta(N + rho_N/h) = |N/Q| eta(tau)^24 eta_{pi^X}(tau/h) and theta(Lambda + c) = Delta(tau) (24 + k + |N/Q| eta_{pi^X}(tau/h)); the principal automorphism e^{2 pi i rho_N(0)/h} of V_N has graded trace T^X = 1/eta_{pi^X}, the Cheng-Duncan-Harvey principal modulus of lambency X, and the deep-hole automorphism e^{2 pi i c(0)} of V_Lambda has graded trace T^X + 24 + k; the two traces agree in every weight except weight one. The poles of T^X away from infinity are the shallow multiples d c of the deep hole, which occur exactly at the bad primes d of every component with d || h, and the lambency is h + {h/p : p such a prime}. Those multiples v = pc (Fricke points) twine V_Lambda by 24 + the Fricke Hauptmodul of Gamma_0(h/p) + (h/p): 3A, 4A, 5A, 6B, 7A, 9A, 10D, 11A, 15C and 23AB from the nine A-free types. More generally, every Niemeier lattice gives a Fricke point c'' = c + (lambda - c)/(h+1) of order h+1, one Leech wall away. Its Fricke swap theorem theta(Lambda + c'') - theta(N + rho/(h+1)) = 24 Delta is PROVED, and it twines by 24 + T_{(h+1)+} (3A ... 47AB, 26B). The orbifold of V_Lambda at pc is the Niemeier lattice of the Borel-de Siebenthal descent X_p (delete the label-p nodes): D24 -> D12^2 -> D6^4 -> A3^8, D16E8 -> D8^3 -> D4^6 -> A1^24, E8^3 -> D8^3, A8^3, A4^6. So every power of a deep-hole automorphism twines V_Lambda by 24 + a Hauptmodul, and all the groups are monstrous except Gamma_0(25)"
 status: >
   PROVED modulo one classical input, plus VERIFIED structure.
   - (1) The per-component identity theta_{Q + rho/h} = eta^l eta_pi(tau/h) is CLASSICAL: Kostant's conjugacy of the
@@ -27,11 +27,17 @@ status: >
     - It is identified as the subsystem of roots of height divisible by p (height_descent.py).
     - It is PROVED for prime e = h/p by the inclusion R(L_e) >= X_p together with the root count 24(e - 1).
   - (9) is PROVED from (3), (5) and (7).
+  - (10) The (h+1)-points are covered as follows.
+    - VERIFIED for all 23 types: the unique minimal vector of norm 2 - 2/(h+1), the 24 norm-2 vectors and the deep
+      proper multiples (leech_h_plus_one.py, fricke_h_plus_one.py), and the nudge geometry (fricke_nudge.py).
+    - PROVED from those: the Fricke twining.
+    - PROVED: the height equidistribution mod h+1.
   - (11) The Fricke swap theorem is PROVED by the same vector-valued Sturm certificate as THM-4758, run on the 23 pairs
     (rho, z'') (swap_fricke_proof.py). It also supplies the Leech-side facts of (10) from the N side.
   - The M24-point remark is VERIFIED (sampling plus exact orbit-size arithmetic). It is not a proof that the k = 0
     vectors form a single orbit.
-  Prior-art search (agent, 2026-10-22): no published statement of (2), (3) or (5) was found. CDH Remark 2.2 asks for
+  Prior-art search (agent, 2026-10-22): no published statement of (2), (3) or (5) was found. The search predates
+  (7)-(11), which have not yet been searched. CDH Remark 2.2 asks for
   a conceptual proof that T^X is genus zero; (2) identifies T^X as a VOA trace but does not by itself prove genus zero.
   Session opus-2026-10-22-S53.
 session: opus-2026-10-22-S53
@@ -53,7 +59,7 @@ scripts:
 related:
   - THM-4758 (swap theorem and deep-hole theta identity)
   - HYP-9363 (proved in THM-4758)
-  - HYP-9368 (conceptual form of the shallow-multiple law)
+  - HYP-9368 (genus-zero inner automorphisms of V_Lambda: deep holes and Fricke points)
 ---
 
 # THM-4759 — deep-hole twining of the Leech VOA is umbral
@@ -164,7 +170,7 @@ A_n has no bad primes.
 | E8³ | 3 | 10 | q⁻¹ + 21q + 62q² + 162q³ | 10+10 (T_10D, A058100) |
 | D12² | 2 | 11 | q⁻¹ + 17q + 46q² + 116q³ | 11+ (T_11A) |
 | D16E8, E8³ | 2 | 15 | q⁻¹ + 9q + 19q² + 42q³ | 15+15 (T_15C, A058510) |
-| D24 | 2 | 23 | q⁻¹ + 4q + 7q² + 13q³ | 23+ (T_23A) |
+| D24 | 2 | 23 | q⁻¹ + 4q + 7q² + 13q³ | 23+ (T_23AB) |
 
 The squarefree composite levels have the eta-quotient Hauptmoduln (η(pτ)η(qτ)/(η(τ)η(pqτ)))^{24/((p−1)(q−1))} minus
 their constant terms:
@@ -258,10 +264,10 @@ c″ = proj_Λ(z″)/(h + 1), a point of order e = h + 1. Then for all 23 types:
 | 15 | D8³ | 9q + 19q² (15C) |
 | 17 | A15D9 | 7q + 14q² (17A) |
 | 19 | A17E7, D10E7² | 6q + 10q² (19A) |
-| 23 | D12² | 4q + 7q² (23A) |
+| 23 | D12² | 4q + 7q² (23AB) |
 | 26 | A24 | 3q + 6q² (26+26 = T_26B, A058597; (η(2τ)η(13τ)/(η(τ)η(26τ)))² − 2) |
-| 31 | D16E8, E8³ | 3q + 3q² (31A) |
-| 47 | D24 | q + 2q² (47A) |
+| 31 | D16E8, E8³ | 3q + 3q² (31AB) |
+| 47 | D24 | q + 2q² (47AB) |
 
 *Geometry: a Fricke point is a deep hole nudged towards the second shell.* fricke_nudge.py checks all 23 types.
 - **The cusp.** z″ = z + r, where r is a Leech root (a wall of the Leech chamber, r·ρ = −1) with r·z = −1. So z″ is
@@ -480,7 +486,8 @@ unique closest point of Q. The glue cosets are covered by the enumeration only.
 
 **(8).** fricke_neighbors.py constructs Λ′ = Λ_0 + Zw, with Λ_0 = {x ∈ Λ : x·v ∈ Z} and w ∈ v + Λ of even norm. It
 enumerates its roots exactly as the norm-2 vectors x ∈ Λ + jv with (x − jw)·v ∈ Z, and splits them into irreducible
-components. That the result is X_p is an observation in all eleven cases; a conceptual proof is open.
+components. The result is X_p in all eleven cases. For prime e the identification is PROVED by the inclusion
+R(L_e) ⊇ X_p plus the root count 24(e − 1) (see (8)); for composite e it is verified.
 
 **(9).** This combines (3), (5) and (7). The types of the deep-hole multiples come from deep_hole_multiples.py.
 
@@ -509,8 +516,8 @@ components. That the result is X_p is an observation in all eleven cases; a conc
   So T^X descends to X_0(h)/S_X with a single simple pole.
 
   What remains is case-dependent: the E-type checks, and the fact that S_X contains no element beyond
-  ∩_R S_R (checked for the 23 types). HYP-9368 asks for a uniform, case-free proof of the exponent law and of the
-  component rule.
+  ∩_R S_R (checked for the 23 types). A uniform, case-free proof of the exponent law and of the component rule is
+  open.
 - **27, 3n + 1, {25, 1}.**
   - For A8³ (h = 9 = 3², k = 3), |N/Q| = 27 = 24 + k, so θ_{Λ+c} = 27Δ(1 + η_{9³1^{−3}}(τ/9)) is the balanced case.
     Its Hauptmodul is T_{9B}, and 3c is an A2¹² hole.
@@ -518,14 +525,17 @@ components. That the result is X_p is an observation in all eleven cases; a conc
     vector x ∈ A_2 satisfy 3n + 1 = |3x + ρ|²/2, the Eisenstein norm of a primary integer. So Collatz's 3n + 1 is the
     norm form on the deep-hole coset A_2 + ρ/3.
   - {25, 1} is literally the Frame shape 25¹·1^{−1} of A24, the exceptional corner of (6).
-- **Least resistance.** ρ/h is the point of the alcove where every affine simple root takes the same value 1/h. It is
-  the barycentre only in type A.
+- **Least resistance.** ρ/h is the point of the alcove where every affine simple root takes the same value 1/h; it is
+  the barycentre only in type A. Kostant's theorem says that the "straight" flow exp(2πitρ), stopped at t = 1/h, is
+  conjugate to the product of the reflections in all simple walls. The swap theorem pairs this point of N with the deep
+  hole of Λ, the point of Λ ⊗ R farthest from Λ.
+
+  The two cusp types for which the swap holds, m = h and m = h + 1, are reached from z by crossing zero walls and one
+  wall of the Leech chamber.
 - **Collatz (NUMEROLOGY, recorded honestly).** The Collatz orbit of 3 is 3 → 10 → 5 → 16 → 8 → 4 → 2 → 1. Together
   with the doublings 6, 12 and 24 of 3, every term is the index of a D-component of some Niemeier root system (D3 = A3,
   D2 = A1²).
   - Every halving step in it is a Fricke descent (8): D24 → D12, D12 → D6, D6 → D3, D10 → D5, D16 → D8, D8 → D4,
     D4 → D2.
   - The two odd steps 3 → 10 and 5 → 16 have no lattice meaning that we know of.
-  - The D-indices 7 and 9 occur only next to A-components, which have no Fricke points. Kostant's theorem says that the "straight" flow exp(2πitρ), stopped at t = 1/h, is conjugate to the
-  product of the reflections in all simple walls. The swap theorem pairs this barycentre of N with the deep hole of Λ,
-  the point of Λ ⊗ R farthest from Λ.
+  - The D-indices 7 and 9 occur only next to A-components, which have no Fricke points.
