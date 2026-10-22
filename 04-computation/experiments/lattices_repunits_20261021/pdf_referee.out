@@ -1,0 +1,22 @@
+(D) modular identities
+  ok   Delta = (E4^3 - E6^2)/1728 = q prod (1 - q^n)^24 to q^40 (tau(1..6) = [1, -24, 252, -1472, 4830, -6048])
+  ok   E8 = E4^2, E10 = E4 E6, E14 = E4^2 E6 to q^40
+  ok   dim E8 = 248 = rank 8 + 240 roots (240 = 3 * 80 = the q-coefficient of E4 = the E8 kissing number)
+(N) the extremal even unimodular theta series in rank 48, and the Leech theta series
+  ok   a_1 = a_2 = 0 forces theta = E4^6 -1440 E4^3 Delta + 125280 Delta^2
+  ok   shell sizes 0, 0, 52416000, 39007332000, 6609020221440 (as in the PDF)
+  ok   sum of the first three shells = 6,648,079,969,440 (the PDF facet count)
+  ok   density (3 pi/2)^24/24! = 2.317829531e-8
+  ok   Leech theta E4^3 - 720 Delta: [1, 0, 196560, 16773120, 398034000]
+  ok   Leech shells a(n) = (65520/691)(sigma_11(n) - tau(n)) for n <= 40
+(M) the McLaughlin slice
+  ok   reduced even forms [2a, b, 2c] of determinant 15: [(1, -1, 4), (1, 1, 4), (2, -1, 2), (2, 1, 2)]; with minimum >= 4 only [4, +-1, 4]
+  ok   N(2a + b omega) = 4a^2 + 2ab + 4b^2 (Gram [[4,1],[1,4]], det 15)
+  ok   reduced forms with a = c = 2: (b, D, fundamental) = [(-2, -12, False), (-1, -15, True), (0, -16, False), (1, -15, True), (2, -12, False)]; only D = -15 is fundamental (Prop. 6.1, elementary)
+(E) Epstein zeta values
+  ok   zeta_E8(10) = 240 * 2^-5 zeta(5) zeta(2) = (5/4) pi^2 zeta(5) (exact)
+  ok   direct shell sum 12.7925834198 (N = 2e5, with tail) = closed form 12.7925834197
+  ok   L(Delta, 10) by the incomplete-gamma formula = direct Dirichlet sum = 0.97980908825122
+  ok   L(Delta, 5) = 0.66670918843400364383; zeta(-6) = 0, so zeta_Leech(10) = -(65520/691) 2^-5 L(Delta, 5) = -1.9755239700703653556 (analytic continuation)
+
+ALL CHECKS PASSED

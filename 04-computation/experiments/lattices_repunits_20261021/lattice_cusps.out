@@ -1,0 +1,26 @@
+(V) Vinberg diagrams and cusps
+  ok   II_{9,1}: Vinberg stops at level k = 1/2 with 10 simple roots, finite volume certified; Gram signature (9,1) + 0 null
+  ok   II_{9,1}: cusps (parabolic subdiagrams of rank 8) = [['E~8']]
+     cusp E~8  : sum of marks = Coxeter number 30, imaginary root z = (1,0,0,0,0,0,0,0,0 | 1), z^2 = 0
+  ok   II_{9,1}: the components of ['E~8'] share one null vector (the cusp)
+  ok   II_{9,1}: Weyl vector rho (rho . r = -1) has rho^2 = -1240 and rho . z = -30 = -h(E8)
+  ok   II_{17,1}: Vinberg stops at level k = 3/2 with 19 simple roots, finite volume certified; Gram signature (17,1) + 1 null
+  ok   II_{17,1}: cusps (parabolic subdiagrams of rank 16) = [['D~16'], ['E~8', 'E~8']]
+     cusp E~8  : sum of marks = Coxeter number 30, imaginary root z = (1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0 | 3), z^2 = 0
+     cusp E~8  : sum of marks = Coxeter number 30, imaginary root z = (1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0 | 3), z^2 = 0
+  ok   II_{17,1}: the components of ['E~8', 'E~8'] share one null vector (the cusp)
+     cusp D~16 : sum of marks = Coxeter number 30, imaginary root z = (1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 | 1), z^2 = 0
+  ok   II_{17,1}: the components of ['D~16'] share one null vector (the cusp)
+(M) mass formulas
+  ok   rank 8: mass = 1/696729600 = 1/|W(E8)|: E8 is the only even unimodular lattice
+  ok   rank 16: mass = 691/277667181515243520000 = 1/|Aut(E8+E8)| + 1/|Aut(D16+)| (numerator 691 from B_12)
+  ok   23 Niemeier root systems: rank 24, a single Coxeter number h each, 24 h roots
+  ok   rank 24: sum over the 24 Niemeier lattices of 1/|Aut| = 1027637932586061520960267/129477933340026851560636148613120000000 = Siegel mass 1027637932586061520960267/129477933340026851560636148613120000000 (exact)
+  ok   theta_N = E_12 + (24 h - 65520/691) Delta; 65520/691 = -24/B_12 is the E_12 Eisenstein coefficient (Leech: h = 0)
+(E) E8 holes and Milnor's isospectral pair
+  ok   240 roots of E8 = D8 u (D8 + (1/2)^8)
+  ok   shallow hole c = (5/6,1/6,1/6,1/6,1/6,1/6,1/6,1/6): squared distance 8/9 to exactly 9 lattice points (regular 8-simplex), none closer
+  ok   deep hole e_1: squared distance 1 to 16 points (0, 2e_1, e_1 +- e_j: a cross-polytope), covering radius 1
+  ok   E8+E8 and D16^+: 480 roots and 61920 norm-4 vectors each (E4^2 = 1 + 480 q + 61920 q^2), root systems 2E8 vs D16: Milnor's drums
+
+ALL CHECKS PASSED

@@ -1,0 +1,70 @@
+(J) j, 1728, 1729, Delta^-1, Heegner
+  ok   q j(q) = [1, 744, 196884, 21493760] ... (744 = 720 roots of E8^3 + 24 = 3 * 248; 196884 = 196883 + 1)
+  ok   SL_2(Z)^ab = Z/12, Mp_2(Z)^ab = Z/24 (Smith normal forms): the 24 of q^(1/24) is the order of eta's multiplier
+  ok   1/eta^24 = q^-1 (1 + 24 q + 324 q^2 + 3200 q^3 + ...): [1, 24, 324, 3200, 25650, 176256]
+  ok   j(i) = 1728 = 12^3; 1729 = 12^3 + 1^3 = 10^3 + 9^3
+  ok   j((1+sqrt(-d))/2) = [(3, 0), (7, -15), (11, -32), (19, -96), (43, -960), (67, -5280), (163, -640320)] cubed; e^(pi sqrt 163) - 640320^3 - 744 = -7.4993e-13
+(P) H(P_q)/|Aut(P_q)| and H(P_q)/|Aff(P_q)|
+     q =  3: H/|Aut| = 1; (H/|Aut| - 1)/8 a cube: True; H/|Aff| mod 8 = 1
+     q =  7: H/|Aut| = 9; (H/|Aut| - 1)/8 a cube: True; H/|Aff| mod 8 = 1
+     q = 11: H/|Aut| = 1729; (H/|Aut| - 1)/8 a cube: True; H/|Aff| mod 8 = 1
+     q = 19: H/|Aut| = 6857869865; (H/|Aut| - 1)/8 a cube: False; H/|Aff| mod 8 = 1
+     q = 23: H/|Aut| = 62293308207033; (H/|Aut| - 1)/8 a cube: False; H/|Aff| mod 8 = 1
+     q = 27: H/|Aut| = 397365570454381227; (H/|Aut| - 1)/8 a cube: False; H/|Aff| mod 8 = 1
+     q = 31: H/|Aut| = 42745655163116955307561; (H/|Aut| - 1)/8 a cube: False; H/|Aff| mod 8 = 1
+  ok   H/|Aut| - 1 = 8 m^3 at q = 3, 7, 11 (m = 0, 1, 6) and at no later q: NUMEROLOGY
+  ok   H(P_q)/|Aff(P_q)| = 1 (mod 8) at every known q, including q = 27 (HYP-9273)
+(K) Kervaire-Milnor bP_{4m}
+     m =  2: |bP_8| = 28 = 2^2 * 7 * 1; Mersenne factor 7 = {7: 1} (prime: Euclid factor 28 perfect)
+     m =  3: |bP_12| = 992 = 2^4 * 31 * 2; Mersenne factor 31 = {31: 1} (prime: Euclid factor 496 perfect)
+     m =  4: |bP_16| = 8128 = 2^6 * 127 * 1; Mersenne factor 127 = {127: 1} (prime: Euclid factor 8128 perfect)
+     m =  5: |bP_20| = 261632 = 2^8 * 511 * 2; Mersenne factor 511 = {7: 1, 73: 1}
+     m =  6: |bP_24| = 1448424448 = 2^10 * 2047 * 691; Mersenne factor 2047 = {23: 1, 89: 1}
+     m =  7: |bP_28| = 67100672 = 2^12 * 8191 * 2; Mersenne factor 8191 = {8191: 1} (prime: Euclid factor 33550336 perfect)
+     m =  8: |bP_32| = 1941802827776 = 2^14 * 32767 * 3617; Mersenne factor 32767 = {7: 1, 31: 1, 151: 1}
+     m =  9: |bP_36| = 753623571759104 = 2^16 * 131071 * 87734; Mersenne factor 131071 = {131071: 1} (prime: Euclid factor 8589869056 perfect)
+     m = 10: |bP_40| = 23998307331473408 = 2^18 * 524287 * 174611; Mersenne factor 524287 = {524287: 1} (prime: Euclid factor 137438691328 perfect)
+     m = 11: |bP_44| = 341653284209033216 = 2^20 * 2097151 * 155366; Mersenne factor 2097151 = {7: 2, 127: 1, 337: 1}
+     m = 12: |bP_48| = 8316321134799694594048 = 2^22 * 8388607 * 236364091; Mersenne factor 8388607 = {47: 1, 178481: 1}
+     m = 13: |bP_52| = 740764429532373450752 = 2^24 * 33554431 * 1315862; Mersenne factor 33554431 = {31: 1, 601: 1, 1801: 1}
+     m = 14: |bP_56| = 30559446583872811817762816 = 2^26 * 134217727 * 3392780147; Mersenne factor 134217727 = {7: 1, 73: 1, 262657: 1}
+     m = 15: |bP_60| = 496669433444154134078771167232 = 2^28 * 536870911 * 3446336510402; Mersenne factor 536870911 = {233: 1, 1103: 1, 2089: 1}
+  ok   reference orders 28, 992, 8128, 261632, 67100672 reproduced; perfect Euclid factors at m = [2, 3, 4, 7, 9, 10] (2m - 1 = 3, 5, 7, 13, 17, 19); 3 never divides 2^(2m-1) - 1
+     stem  3: |im J| = denom(B_2/4) = 24; E_2 q-coefficient = -24
+     stem  7: |im J| = denom(B_4/8) = 240; E_4 q-coefficient = 240
+     stem 11: |im J| = denom(B_6/12) = 504; E_6 q-coefficient = -504
+     stem 15: |im J| = denom(B_8/16) = 480; E_8 q-coefficient = 480
+     stem 19: |im J| = denom(B_10/20) = 264; E_10 q-coefficient = -264
+     stem 23: |im J| = denom(B_12/24) = 65520; E_12 q-coefficient = 65520/691
+  ok   im J orders 24, 240, 504, 480, 264, 65520 = numerators of the Eisenstein coefficients -24, 240, -504, 480, -264, 65520/691; 691 = |num(B_12/24)| divides |bP_24| (Adams; KNOWN)
+(H) perfect binary codes at repunit lengths
+  ok   (1 + n) | 2^n for n < 4100 exactly at n = [1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095] = 2^r - 1 (Hamming)
+  ok   Golay: 1 + 23 + 253 + 1771 = 2^11 (perfect, radius 3)
+(Q) projective-plane sizes in the strong H-spectrum below 2100
+     strong inventory below 2100: 723544 classes [125s]
+  ok   strong inventory below 2100 = 723,544 classes (as in S51 fan_uniqueness.out / repunit_degrees.out)
+     q =  2: |PG(2,q)| =    7: S = 0, local median 0
+     q =  3: |PG(2,q)| =   13: S = 1, local median 1
+     q =  4: |PG(2,q)| =   21: S = 0, local median 4
+     q =  5: |PG(2,q)| =   31: S = 4, local median 6
+     q =  7: |PG(2,q)| =   57: S = 7, local median 10
+     q =  8: |PG(2,q)| =   73: S = 19, local median 12
+     q =  9: |PG(2,q)| =   91: S = 29, local median 17
+     q = 11: |PG(2,q)| =  133: S = 31, local median 28
+     q = 13: |PG(2,q)| =  183: S = 40, local median 39
+     q = 16: |PG(2,q)| =  273: S = 87, local median 75
+     q = 17: |PG(2,q)| =  307: S = 78, local median 92
+     q = 19: |PG(2,q)| =  381: S = 144, local median 123
+     q = 23: |PG(2,q)| =  553: S = 180, local median 205
+     q = 25: |PG(2,q)| =  651: S = 276, local median 261
+     q = 27: |PG(2,q)| =  757: S = 315, local median 334
+     q = 29: |PG(2,q)| =  871: S = 370, local median 435
+     q = 31: |PG(2,q)| =  993: S = 617, local median 533
+     q = 32: |PG(2,q)| = 1057: S = 564, local median 593
+     q = 37: |PG(2,q)| = 1407: S = 1079, local median 938
+     q = 41: |PG(2,q)| = 1723: S = 1276, local median 1283
+     q = 43: |PG(2,q)| = 1893: S = 1689, local median 1481
+  ok   missing projective-plane sizes: [7, 21] (q = 2, 4: the two H-spectrum gaps)
+  ok   every other size within a factor 2 of its local median (31 = |PG(2,5)|: 4 vs 6); the projective-plane reading stops at q = 2, 4: NUMEROLOGY
+
+ALL CHECKS PASSED  (125s)

@@ -1,0 +1,31 @@
+(W) the Weyl vector, the cannonball identity and the A_24 deep hole
+  ok   rho = (0,1,...,24 | 70) is a null vector of II_{25,1} (sum k^2 = 4900 = 70^2)
+  ok   0^2 + ... + (n-1)^2 is a perfect square for n <= 10^6 exactly at n = [1, 2, 25] (n = 2: 0 + 1 = 1; cannonball n = 25)
+  ok   nu = (1/2^25 | 5/2) is a primitive null vector of II_{25,1} (nu/2 is not in the lattice) with nu . rho = -25 = -h(A_24)
+  ok   e_i - e_(i+1) (i = 0..23) and r* = (-1/2, 1/2^23, 3/2 | 5/2) are Leech roots (r^2 = 2, r . rho = -1) orthogonal to nu
+  ok   their Gram matrix is the affine Cartan matrix of A~_24 (a 25-cycle, all marks 1) and they sum to nu: the A_24 deep hole, imaginary root = nu
+(T) 25-vertex tournaments
+     transitive                  : c3 =    0, v_T^2 =      0, U = -v.rho_s =     0 = Landau slack 0 = c3 + |d|^2/2 = 0 + 0/2; v.nu = -25; |s - 12|^2 = 1300
+     rotational R_25 (regular)   : c3 =  650, v_T^2 =  -1300, U = -v.rho_s =  1300 = Landau slack 1300 = c3 + |d|^2/2 = 650 + 1300/2; v.nu = -25; |s - 12|^2 = 0
+     random p = 0.5              : c3 =  558, v_T^2 =  -1116, U = -v.rho_s =   819 = Landau slack 819 = c3 + |d|^2/2 = 558 + 522/2; v.nu = -25; |s - 12|^2 = 184
+     random p = 0.5              : c3 =  562, v_T^2 =  -1124, U = -v.rho_s =   828 = Landau slack 828 = c3 + |d|^2/2 = 562 + 532/2; v.nu = -25; |s - 12|^2 = 176
+     random p = 0.5              : c3 =  541, v_T^2 =  -1082, U = -v.rho_s =   811 = Landau slack 811 = c3 + |d|^2/2 = 541 + 540/2; v.nu = -25; |s - 12|^2 = 218
+     random p = 0.2              : c3 =  335, v_T^2 =   -670, U = -v.rho_s =   414 = Landau slack 414 = c3 + |d|^2/2 = 335 + 158/2; v.nu = -25; |s - 12|^2 = 630
+     random p = 0.05             : c3 =  103, v_T^2 =   -206, U = -v.rho_s =   113 = Landau slack 113 = c3 + |d|^2/2 = 103 + 20/2; v.nu = -25; |s - 12|^2 = 1094
+     random p = 0.01             : c3 =   12, v_T^2 =    -24, U = -v.rho_s =    14 = Landau slack 14 = c3 + |d|^2/2 = 12 + 4/2; v.nu = -25; |s - 12|^2 = 1276
+  ok   v_T in II_{25,1}, v_T^2 = -2 c3, -v_T . rho_s = U(T) = Landau slack = c3 + |d|^2/2, v_T . nu = -25, null iff transitive (8 tournaments)
+  ok   BL_T(pi) = -v_T . rho_pi for 320 random rankings, and no random ranking or adjacent swap beats the score ranking
+  ok   (s | 60) in nu^perp, its N(A_24) class is s - 12 in A_24 with |s - 12|^2 = 1300 - 2 c3; zero exactly for the regular R_25
+  ok   U(T) = c3(T) + |s_sorted - (0..n-1)|^2/2 holds at every order n = 3..14 (360 random tournaments)
+  ok   n <= 7 (30 tournaments, all n! rankings): min BL = U(T), attained only by score-consistent rankings (Kano-Sakamoto); BL(pi) = sum j^2 - sum pi(v) s_v
+     n = 2: 2 score vectors = 2 permutohedron lattice points (Landau) = 2 labelled forests (Stanley)
+     n = 3: 7 score vectors = 7 permutohedron lattice points (Landau) = 7 labelled forests (Stanley)
+     n = 4: 38 score vectors = 38 permutohedron lattice points (Landau) = 38 labelled forests (Stanley)
+     n = 5: 291 score vectors = 291 permutohedron lattice points (Landau) = 291 labelled forests (Stanley)
+     n = 6: 2932 score vectors = 2932 permutohedron lattice points (Landau) = 2932 labelled forests (Stanley)
+  ok   score vectors = lattice points of the permutohedron conv(S_n (0..n-1)) for n <= 6 (Landau/majorization), counted by labelled forests (Stanley 1980)
+(V) the contrast II_{9,1}: the E10 = T_{2,3,7} Weyl vector
+  ok   E10 Cartan matrix det = -1; Weyl vector (rho . alpha_i = 1): rho^2 = -1240 < 0 (II_{9,1} = E8 + U: finitely many simple roots)
+  ok   II_{n,1} exists for n = 1 (mod 8): n = 9, 17, 25; only n = 25 has a null Weyl vector (Conway), matching the cannonball n
+
+ALL CHECKS PASSED
