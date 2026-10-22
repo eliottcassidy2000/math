@@ -1,0 +1,50 @@
+python 3.10.0; all series exact mod q^701
+== Part 1: the identities ==
+  OK  control RR  G: f(-q^2,-q^3)/f(-q)                           [as expected]
+  OK  control RR  H: f(-q,-q^4)/f(-q)                             [as expected]
+  DIFF hostile: G against f(-q,-q^4)/f(-q)                        (first difference at q^1) [as expected]
+  DIFF hostile: RS S.33 against f(-q,-q^6)/f(-q^2)                (first difference at q^1) [as expected]
+  OK  Rogers-Selberg S.31: f(-q^1,-q^6)/f(-q^2)                   [as expected]
+  OK  Rogers-Selberg S.32: f(-q^2,-q^5)/f(-q^2)                   [as expected]
+  OK  Rogers-Selberg S.33: f(-q^3,-q^4)/f(-q^2)                   [as expected]
+  OK  Goellnitz-Gordon S.34: f(-q^1,-q^7)/psi(-q)                 [as expected]
+  OK  Goellnitz-Gordon S.36: f(-q^3,-q^5)/psi(-q)                 [as expected]
+  OK  Jackson-Slater S.38: f(q^1,q^7)/f(-q^2)                     [as expected]
+  OK  Jackson-Slater S.39: f(q^3,q^5)/f(-q^2)                     [as expected]
+  OK  Bailey S.40c: f(-q^1,-q^8)/f(-q^3)                          [as expected]
+  OK  Bailey S.41c: f(-q^2,-q^7)/f(-q^3)                          [as expected]
+  OK  Bailey S.42c: f(-q^4,-q^5)/f(-q^3)                          [as expected]
+  OK  Rogers mod 14 S.59: f(-q^2,-q^12)/f(-q)                     [as expected]
+  OK  Rogers mod 14 S.60: f(-q^4,-q^10)/f(-q)                     [as expected]
+  OK  Rogers mod 14 S.61: f(-q^6,-q^8)/f(-q)                      [as expected]
+  OK  Dyson mod 27 S.90: f(-q^3,-q^24)/f(-q)                      [as expected]
+  OK  Dyson mod 27 S.91: f(-q^6,-q^21)/f(-q)                      [as expected]
+  OK  Dyson mod 27 S.92: f(-q^9,-q^18)/f(-q)                      [as expected]
+  OK  Dyson mod 27 S.93: f(-q^12,-q^15)/f(-q)                     [as expected]
+
+== Part 2: three theta families shared by the six families ==
+  OK  theta_14(2a=2; q) = theta_7(a; q^2)                         [as expected]
+  OK  theta_14(2a=4; q) = theta_7(a; q^2)                         [as expected]
+  OK  theta_14(2a=6; q) = theta_7(a; q^2)                         [as expected]
+  OK  theta_27(3b=3; q) = theta_9(b; q^3)                         [as expected]
+  OK  theta_27(3b=6; q) = theta_9(b; q^3)                         [as expected]
+  OK  theta_27(3b=9; q) = theta_9(b; q^3)                         [as expected]
+  OK  theta_27(3b=12; q) = theta_9(b; q^3)                        [as expected]
+  OK  theta_9(3; q) = (q^3;q^3)_inf  (the non-unit Dyson member)  [as expected]
+  OK  theta_8(a=1; -q) = f(q^1,q^7)                               [as expected]
+  OK  theta_8(a=3; -q) = f(q^3,q^5)                               [as expected]
+  OK  psi(q)/f(-q^2) = 1/(q;q^2)_inf                              [as expected]
+  OK  RS_1-sum(q^2) f(-q^4) = R14_2-sum(q) f(-q)                  [as expected]
+  OK  RS_2-sum(q^2) f(-q^4) = R14_4-sum(q) f(-q)                  [as expected]
+  OK  RS_3-sum(q^2) f(-q^4) = R14_6-sum(q) f(-q)                  [as expected]
+  OK  B_1-sum(q^3) f(-q^9) = D_3-sum(q) f(-q)                     [as expected]
+  OK  B_2-sum(q^3) f(-q^9) = D_6-sum(q) f(-q)                     [as expected]
+  OK  B_4-sum(q^3) f(-q^9) = D_12-sum(q) f(-q)                    [as expected]
+  OK  GG_1-sum(-q) psi(q) = JS_1-sum(q) f(-q^2)                   [as expected]
+  OK  GG_3-sum(-q) psi(q) = JS_3-sum(q) f(-q^2)                   [as expected]
+  OK  Dyson S.92 product = (q^9;q^9)_inf/(q;q)_inf                [as expected]
+
+index sets: (Z/7)^x/+-1 = {1,2,3} (RS, R14 = 2*{1,2,3}); (Z/8)^x/+-1 = {1,3} (GG, JS);
+            (Z/9)^x/+-1 = {1,2,4} (Bailey; Dyson = 3*{1,2,4} plus the non-unit 3*3)
+
+ALL CHECKS PASSED

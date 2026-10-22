@@ -1,0 +1,76 @@
+  ***   Warning: new stack size = 256000000 (244.141 Mbytes).
+== (T1) supersingular points on X_1(N) and (T3) F_{p^2}-orbit lengths, primes 5 <= p < 400 ==
+  X_1(5) x=1/M5: d_N = 12; #ss = d_N (p-1)/12 on all 75 primes; generic F_{p^2}-degrees = k(p) on 75
+     exceptional fibres [p, p mod N, k(p), degrees over j=0, degrees over j=1728] (first 6 of 19): [[7, 2, 2, [], [1, 1, 2, 2]], [23, 3, 2, [2, 2], [1, 1, 2, 2]], [43, 3, 2, [], [1, 1, 2, 2]], [47, 2, 2, [2, 2], [1, 1, 2, 2]], [67, 2, 2, [], [1, 1, 2, 2]], [83, 3, 2, [2, 2], [1, 1, 2, 2]]]
+  X_1(7) x=M7: d_N = 24; #ss = d_N (p-1)/12 on all 75 primes; generic F_{p^2}-degrees = k(p) on 75
+     exceptional fibres [p, p mod N, k(p), degrees over j=0, degrees over j=1728] (first 6 of 28): [[5, 5, 3, [1, 1, 3, 3], []], [11, 4, 3, [1, 1, 3, 3], [3, 3, 3, 3]], [17, 3, 3, [1, 1, 3, 3], []], [23, 2, 3, [1, 1, 3, 3], [3, 3, 3, 3]], [47, 5, 3, [1, 1, 3, 3], [3, 3, 3, 3]], [53, 4, 3, [1, 1, 3, 3], []]]
+  X_1(8) x=1/M8: d_N = 24; #ss = d_N (p-1)/12 on all 76 primes; generic F_{p^2}-degrees = k(p) on 76
+     no exceptional fibre: degrees over j = 0, 1728 also equal k(p)
+  X_1(9) x=M9: d_N = 36; #ss = d_N (p-1)/12 on all 76 primes; generic F_{p^2}-degrees = k(p) on 76
+     no exceptional fibre: degrees over j = 0, 1728 also equal k(p)
+
+== (T2) supersingular points on X_0(N): Eichler's count ==
+  X_0(7), X_0(8), X_0(9): Eichler count confirmed on 227 (curve, prime) pairs
+  formulas: X_0(7): (2(p-1) + 4[p=2 mod 3])/3;  X_0(8): p-1;  X_0(9): p-1
+
+== (T4) Frobenius x -> x^(p^2) on supersingular x equals a diamond operator ==
+  X_1(7): 75 primes; x^(p^2) = <2>^e (x) with e by p mod 7 (predicted: <p> = <2>^e):
+     p=1: e=0  p=2: e=1  p=3: e=2  p=4: e=2  p=5: e=1  p=6: e=0  
+  X_1(9): 76 primes; x^(p^2) = <2>^e (x) with e by p mod 9 (predicted: <p> = <2>^e):
+     p=1: e=0  p=2: e=1  p=4: e=2  p=5: e=2  p=7: e=1  p=8: e=0  
+  X_1(8): 76 primes; x^(p^2) = <3>^e (x) with e by p mod 8 (predicted: <p> = <3>^e):
+     p=1: e=0  p=3: e=1  p=5: e=1  p=7: e=0  
+  the diamond <d> permutes the Klein forms f_a -> f_(da): on X_1(7) it cycles the three Rogers-Selberg
+  products, on X_1(9) the three Bailey products, on X_1(8) it swaps the two Goellnitz-Gordon products.
+
+== (T5) F_p-rational supersingular points ==
+  generic F_p-rational ss j (j != 0, 1728): fibre counts equal 1+(-p/7) on X_0(7), 1+(-p/3) on X_0(9),
+  6[p = 6 mod 7] on X_1(7), on all 75 primes (failures counted below)
+  special fibres j in {0, 1728} that are F_p-rational and supersingular: 77; deviations from the generic rule: 0
+  totals: #X_0(7)^ss(F_p) = (1+(-p/7)) n_p and #X_0(9)^ss(F_p) = (1+(-p/3)) n_p, n_p = (h(-4p) + [p=3 mod 4] h(-p))/2,
+          on all primes unless listed with the word total below
+  fibres over j = 0, 1728 [p, j, X_0(7) got, generic rule, X_0(9) got, rule, X_1(7) got, rule]:
+     [5, 0, 2, 2, 2, 2, 0, 0]
+     [11, 0, 0, 0, 2, 2, 0, 0]
+     [11, 1, 0, 0, 2, 2, 0, 0]
+     [17, 0, 2, 2, 2, 2, 0, 0]
+     [19, 18, 2, 2, 0, 0, 0, 0]
+     [23, 0, 0, 0, 2, 2, 0, 0]
+     [23, 3, 0, 0, 2, 2, 0, 0]
+     [29, 0, 0, 0, 2, 2, 0, 0]
+     [31, 23, 2, 2, 0, 0, 0, 0]
+     [41, 0, 2, 2, 2, 2, 6, 6]
+     [43, 8, 0, 0, 0, 0, 0, 0]
+     [47, 0, 2, 2, 2, 2, 0, 0]
+     [47, 36, 2, 2, 2, 2, 0, 0]
+     [53, 0, 0, 0, 2, 2, 0, 0]
+     [59, 0, 2, 2, 2, 2, 0, 0]
+     [59, 17, 2, 2, 2, 2, 0, 0]
+     [67, 53, 0, 0, 0, 0, 0, 0]
+     [71, 0, 0, 0, 2, 2, 0, 0]
+     [71, 24, 0, 0, 2, 2, 0, 0]
+     [79, 69, 0, 0, 0, 0, 0, 0]
+     [83, 0, 2, 2, 2, 2, 6, 6]
+     [83, 68, 2, 2, 2, 2, 6, 6]
+     [89, 0, 2, 2, 2, 2, 0, 0]
+     [101, 0, 2, 2, 2, 2, 0, 0]
+     [103, 80, 2, 2, 0, 0, 0, 0]
+     [107, 0, 0, 0, 2, 2, 0, 0]
+     [107, 16, 0, 0, 2, 2, 0, 0]
+     [113, 0, 0, 0, 2, 2, 0, 0]
+     [127, 77, 0, 0, 0, 0, 0, 0]
+     [131, 0, 2, 2, 2, 2, 0, 0]
+     [131, 25, 2, 2, 2, 2, 0, 0]
+     [137, 0, 0, 0, 2, 2, 0, 0]
+     [139, 60, 2, 2, 0, 0, 6, 6]
+     [149, 0, 0, 0, 2, 2, 0, 0]
+     [151, 67, 0, 0, 0, 0, 0, 0]
+     [163, 98, 0, 0, 0, 0, 0, 0]
+     [167, 0, 2, 2, 2, 2, 6, 6]
+     [167, 58, 2, 2, 2, 2, 6, 6]
+     [173, 0, 2, 2, 2, 2, 0, 0]
+     [179, 0, 0, 0, 2, 2, 0, 0]
+     ... 37 more
+
+failures: 0
+ALL CHECKS PASSED

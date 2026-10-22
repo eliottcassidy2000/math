@@ -1,0 +1,44 @@
+  ***   Warning: new stack size = 256000000 (244.141 Mbytes).
+== Hauptmodul relations j = A(M)/B(M) (solved on O(q^220), verified on O(q^520)) ==
+  N = 5 (1/M5): relation found; verified to O(q^520): 1
+  N = 5, x = 1/M5: deg A = 12, deg B = 11
+    A = x^12 + 684*x^11 + 157434*x^10 + 12527460*x^9 + 77460495*x^8 + 130689144*x^7 - 33211924*x^6 - 130689144*x^5 + 77460495*x^4 - 12527460*x^3 + 157434*x^2 - 684*x + 1
+    B = [x, 1; x^2 - 11*x - 1, 5]
+  N = 7 (M7): relation found; verified to O(q^520): 1
+  N = 7, x = M7: deg A = 24, deg B = 23
+    A = x^24 + 684*x^23 + 156078*x^22 + 11904600*x^21 + 4190613*x^20 - 265329288*x^19 + 435092658*x^18 + 1689314892*x^17 - 7528480230*x^16 + 9101578228*x^15 + 14120808918*x^14 - 78028578096*x^13 + 167218695917*x^12 - 234653356392*x^11 + 239260583070*x^10 - 182929335564*x^9 + 105019065594*x^8 - 44355556212*x^7 + 13188031738*x^6 - 2564908416*x^5 + 291463221*x^4 - 15513392*x^3 + 172086*x^2 - 708*x + 1
+    B = [x - 1, 1; x, 1; x^3 - 8*x^2 + 5*x + 1, 7]
+  hostile: degree 23 for M7 gives kernel dimension 0 (0 expected)
+  N = 8 (1/M8): relation found; verified to O(q^520): 1
+  N = 8, x = 1/M8: deg A = 24, deg B = 23
+    A = x^24 + 696*x^23 + 163668*x^22 + 13502536*x^21 + 118147842*x^20 + 176208360*x^19 - 701989116*x^18 - 405503208*x^17 + 2000636655*x^16 - 4224082000*x^15 + 9400171944*x^14 - 12735801264*x^13 + 12733864988*x^12 - 12735801264*x^11 + 9400171944*x^10 - 4224082000*x^9 + 2000636655*x^8 - 405503208*x^7 - 701989116*x^6 + 176208360*x^5 + 118147842*x^4 + 13502536*x^3 + 163668*x^2 + 696*x + 1
+    B = [x - 1, 2; x, 1; x + 1, 4; x^2 - 6*x + 1, 8]
+  A8 palindromic: 1;  j-map invariant under x -> 1/x: 1
+  X_0(8): t8 = x + 1/x, j = P8(t8)/Q8(t8) verified to O(q^520): 1
+  N = 8, X_0(8) coordinate t8: deg A = 12, deg B = 11
+    A = x^12 + 696*x^11 + 163656*x^10 + 13494880*x^9 + 116511216*x^8 + 54716160*x^7 - 1641443584*x^6 - 1274446848*x^5 + 8567344896*x^4 - 134686720*x^3 - 6806550528*x^2 - 3203014656*x - 425259008
+    B = [x - 6, 8; x - 2, 1; x + 2, 2]
+  N = 9 (M9): relation found; verified to O(q^520): 1
+  N = 9, x = M9: deg A = 36, deg B = 35
+    A = x^36 + 684*x^35 + 155394*x^34 + 11591760*x^33 - 31680621*x^32 - 282399732*x^31 + 1759015506*x^30 - 2174520348*x^29 - 15369438951*x^28 + 90016625704*x^27 - 226001369862*x^26 + 154426932648*x^25 + 1162694962728*x^24 - 6106674161052*x^23 + 18465710633226*x^22 - 42232767964956*x^21 + 78967402009596*x^20 - 124889130532620*x^19 + 169993953982500*x^18 - 200975274203832*x^17 + 207236816068347*x^16 - 186520018551552*x^15 + 146243350753668*x^14 - 99468039548520*x^13 + 58312735222923*x^12 - 29207794235868*x^11 + 12353846000274*x^10 - 4343810858816*x^9 + 1242881085123*x^8 - 280836910476*x^7 + 47966226582*x^6 - 5790338604*x^5 + 442559178*x^4 - 17289276*x^3 + 179964*x^2 - 720*x + 1
+    B = [x - 1, 1; x, 1; x^2 - x + 1, 3; x^3 - 6*x^2 + 3*x + 1, 9]
+  hostile: degree 35 for M9 gives kernel dimension 0 (0 expected)
+
+== Norm maps X_1(N) -> X_0(N) ==
+  t7 = (eta/eta_7)^4 = C(M7)/D(M7): C = x^3 - 8*x^2 + 5*x + 1,  D = x^2 - x; verified: 1
+  classical j(tau)   = (t^2+13t+49)(t^2+245t+2401)^3/t^7 at t = t7 holds: 1
+  classical j(7 tau) = (t^2+13t+49)(t^2+5t+1)^3/t at t = t7 holds: 1
+  (my first recollection j(tau) = (t^2+13t+49)(t^2+5t+1)^3/t is the j(7 tau) formula: 0)
+  t9 = (eta/eta_9)^3 = C(M9)/D(M9): C = x^3 - 6*x^2 + 3*x + 1,  D = x^2 - x; verified: 1
+  classical j(tau)   = (t+9)^3 (t^3+243t^2+2187t+6561)^3/(t^9 (t^2+9t+27)) at t = t9 holds: 1
+  classical j(9 tau) = (t+3)^3 (t^3+9t^2+27t+3)^3/(t(t^2+9t+27)) at t = t9 holds: 1
+
+== Diamond action on the Rogers-Selberg coordinate ==
+  f_1 f_3^2/f_2^3 = (a M7 + b)/(c M7 + d) with [a, b; c, d] = [-1, 1; -1, 0]
+  verified to O(q^520): 1
+  mu^3 is scalar (order 3 in PGL2): 1
+  (M7 has a simple pole at the cusp infinity; the permuted monomial is a unit there)
+  N = 9: f_1 f_4/f_2^2 = (a M9 + b)/(c M9 + d) with [a, b; c, d] = [-1, 1; -1, 0]; verified to O(q^520): 1; order 3: 1
+  N = 8: <3> acts as x -> 1/x on x = 1/M8 (equivalent to the palindromic j-map checked above)
+
+relations written to level_relations.gp

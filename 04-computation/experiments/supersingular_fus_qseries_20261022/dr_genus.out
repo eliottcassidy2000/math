@@ -1,0 +1,25 @@
+  ***   Warning: new stack size = 64000000 (61.035 Mbytes).
+(G1) on 1332 ordered prime pairs < 160;  (G2) on 408 pairs with p^2 q <= 40000;  (G3) on 35 primes
+failures: 0
+
+Table: the three asked shapes with their divisor counts (F,U,S), X_0(N) cusps, genus, and the
+supersingular gluing numbers at each prime of bad reduction.
+  shape  N      (F,U,S)    tau  #cusps  g(X_0(N))  gluing data
+  p^2    9   [1, 1, 1]  3   4      0        at p: 3 components (divisors 1,p,p^2; middle mult. p-1) meeting at ss(p) = 1 points
+  pq     6   [2, 2, 2]  4   4      0        at p: 2 x X_0(q) glued at H(p,q) = 1;  at q: 2 x X_0(p) glued at H(q,p) = 1
+  p^2q   18  [4, 2, 3]  6   8      0        at q: 2 x X_0(p^2) glued at H(q,p^2) = 1;  at p: 3 x X_0(q) meeting at H(p,q) = 1
+  p^2    25   [1, 1, 1]  3   6      0        at p: 3 components (divisors 1,p,p^2; middle mult. p-1) meeting at ss(p) = 1 points
+  pq     55   [2, 2, 2]  4   4      5        at p: 2 x X_0(q) glued at H(p,q) = 4;  at q: 2 x X_0(p) glued at H(q,p) = 6
+  p^2q   275  [4, 2, 3]  6   12      25        at q: 2 x X_0(p^2) glued at H(q,p^2) = 26;  at p: 3 x X_0(q) meeting at H(p,q) = 4
+  p^2    49   [1, 1, 1]  3   8      1        at p: 3 components (divisors 1,p,p^2; middle mult. p-1) meeting at ss(p) = 1 points
+  pq     91   [2, 2, 2]  4   4      7        at p: 2 x X_0(q) glued at H(p,q) = 8;  at q: 2 x X_0(p) glued at H(q,p) = 8
+  p^2q   637  [4, 2, 3]  6   16      57        at q: 2 x X_0(p^2) glued at H(q,p^2) = 56;  at p: 3 x X_0(q) meeting at H(p,q) = 8
+
+closed forms (p, q distinct primes; (a/b) Kronecker symbols):
+  H(p,q)   = (p-1)(q+1)/12 + (1/4)(1-(-4/p))(1+(-4/q)) + (1/3)(1-(-3/p))(1+(-3/q))
+  H(q,p^2) = (q-1)p(p+1)/12 + (1/4)(1-(-4/q)) nu2(p^2) + (1/3)(1-(-3/q)) nu3(p^2),
+             nu2(p^2) = 1+(-4/p) (0 at p = 2), nu3(p^2) = 1+(-3/p) (0 at p = 3)
+  symmetric form of (G1): 2 ss(q) + H(p,q) = 2 ss(p) + H(q,p)  (ss(l) := H(l,1))
+  symmetric form fails on 0 pairs
+  cusp dictionary: #cusps(X_0(N)) = tau(N) = F+2 for squarefree N; at p^2: p+1 = F+2 + (p-2); at p^2 q: 2(p+1)
+ALL CHECKS PASSED

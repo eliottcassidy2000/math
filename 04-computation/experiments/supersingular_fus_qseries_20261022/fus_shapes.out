@@ -1,0 +1,48 @@
+python 3.10.0
+== Part 1: F, U, S at p^2, pq, p^2 q (trial division, all primes < 400) ==
+  p^2  : (F, U, S) = (1, 1, 1),  F - U - S = -1;  confirmed on 78 prime choices
+  pq   : (F, U, S) = (2, 2, 2),  F - U - S = -2;  confirmed on 6006 prime choices
+  p^2q : (F, U, S) = (4, 2, 3),  F - U - S = -1;  confirmed on 6006 prime choices
+  slow independent trial-division path agrees on 561 cases (primes < 60)
+  controls (balanced shapes):
+    p = 7              (F,U,S) = (0,0,0)  balanced
+    p^3 = 27           (F,U,S) = (2,1,1)  balanced
+    p^3 = 8            (F,U,S) = (2,1,1)  balanced
+    p^2qr = 60         (F,U,S) = (10,3,7)  balanced
+    p^2qr = 2^2*7*11   (F,U,S) = (10,3,7)  balanced
+  hostiles:
+    q = p in pq -> p^2 (p=5)             (F,U,S) = (1,1,1), defect -1
+    q = p in p^2q -> p^3 (p=5)           (F,U,S) = (2,1,1), defect +0
+    literal p^q r, p=2,q=3,r=5 -> 2^3*5  (F,U,S) = (6,2,3), defect +1
+    pqr = 30                             (F,U,S) = (6,3,6), defect -3
+  (the collision q = p sends p^2 q to the balanced shape p^3: the defect jumps -1 -> 0)
+
+== Part 2: exhaustive defect level sets for 2 <= N <= 2000000 ==
+  defect -7: profiles(count) (1, 1, 1, 1, 1, 1, 1):48
+  defect -6: profiles(count) (1, 1, 1, 1, 1, 1):3465
+  defect -5: profiles(count) (1, 1, 1, 1, 1):42955
+  defect -4: profiles(count) (1, 1, 1, 1):197288
+  defect -3: profiles(count) (1, 1, 1):416126
+  defect -2: profiles(count) (1, 1):407061
+  defect -1: profiles(count) (2,):223, (2, 1):82145
+  defect +0: profiles(count) (1,):148933, (2, 1, 1):170462, (3,):30
+  verdict: delta = -1 exactly at p^2 and p^2 q; delta = -2 exactly at pq;
+           delta = 0 exactly at p, p^3, p^2 q r; every other delta < 0 is a squarefree
+           composite with delta = -omega (DB2 of arithmetic_braids, re-run exhaustively).
+
+== Part 3: prime-adjunction recursion delta(N r) = 2 delta(N) + U(N) - [N sqfree] - [N prime] ==
+  recursion verified on 59997 pairs (N <= 20000, three primes r per N)
+  chains:  p  --(x q)-->  pq        :  0  -> -2   (away from balance)
+           p^2 --(x q)--> p^2 q     : -1  -> -1   (2(-1) + U(p^2) = -2 + 1)
+           p^2 q --(x r)--> p^2 q r : -1  ->  0   (2(-1) + U(p^2 q) = -2 + 2)
+           p^2 --(x p)--> p^3       : -1  ->  0   (exponent raise: tau 3 -> 4)
+
+== Part 4: Klein orbits on D(p^2 q r) and the quadrant representatives ==
+  orbit ['p^2q', 'p^2r', 'q', 'r']  ->  quadrant representative p^2q
+  orbit ['p^2', 'qr']  ->  quadrant representative p^2
+  orbit ['p', 'pqr']  ->  quadrant representative p
+  orbit ['pq', 'pr']  ->  quadrant representative pq
+  the four Klein orbits have quadrant representatives {p, p^2, pq, p^2 q} = p * Div(pq):
+  the three asked shapes plus p, i.e. exactly the divisors of p^2 q divisible by p.
+
+ALL CHECKS PASSED
