@@ -1,0 +1,32 @@
+{
+  "basis": "E4^(11-3j) E6^(2j), j=0..3",
+  "method": "Delta independently from q product; Hecke verified through q18",
+  "theta_coefficients": [
+    "1",
+    "0",
+    "0",
+    "0",
+    "168498000",
+    "2480127344640",
+    "6298997202432000",
+    "4764126159175680000",
+    "1484694083069127810000",
+    "235069044912879108096000",
+    "21815618832372808777973760",
+    "1314174387256000130580480000",
+    "55406551041971930589627960000"
+  ],
+  "theta_basis_coordinates": [
+    "53981/1679616",
+    "63745/139968",
+    "260315/559872",
+    "39875/839808"
+  ],
+  "cusp_characteristic_polynomial": "x**3 + 2209944*x**2 - 15663522502656*x - 19976984434430705664",
+  "cusp_irreducible": true,
+  "cusp_real_roots": 3,
+  "cyclic_rank": 4,
+  "cyclic_determinant_in_independent_basis": "-218792213161134562973631210691580078125/139968",
+  "T2_theta_q2": "168498000",
+  "status": "Exact finite arithmetic audit; modular space dimension and Hecke theorem are cited separately; no rank88 minimum audit."
+}
