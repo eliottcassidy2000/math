@@ -12,6 +12,9 @@ tags:
   - chromatic-number-of-the-plane
 ---
 
+> **Correction warning (2026-10-22, Session29):** The historical equivalences “nonzero Dehn iff irrational angle iff lattice escape iff chromatic forcing” below are not valid and must not be used as a theorem, regardless of the older status wording. Classical three-dimensional Dehn data requires a polyhedral carrier and is not automatically an invariant of a planar graph. An irrational-angle two-edge path is still 2-colorable. Also the equal-length vectors `(1,2)` and `(2,1)` lie in the square lattice and have angle cosine `4/5`, an irrational multiple of π. Thus a finite irrational-angle configuration need not leave a lattice. What is true is the different, infinite statement: a full-rank planar lattice cannot be invariant under an irrational-angle rotation, because its orthogonal automorphism group is finite. Niven's rational-cosine criterion remains valid, but does not establish a Dehn/chromatic equivalence. This warning preserves the old prose and does not alter the separate coloring theorems THM-418/419.
+
+
 # The Hadwiger Needle: Niven = Dehn-Triviality = THM-416's 2D Cap = the Hadwiger-Nelson Lattice-Escape
 
 The buried key (the user's "keep Dehn in mind"): **Hugo Hadwiger** authored *both* the

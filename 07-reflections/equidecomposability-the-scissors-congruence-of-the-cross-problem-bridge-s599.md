@@ -4,6 +4,9 @@ status: SHARP SYNTHESIS — the cross-problem bridge is EQUIDECOMPOSABILITY (sci
 tags: [equidecomposability, equinumerosity, scissors-congruence, dehn-invariant, clausen, Cl2, lobachevsky, ideal-tetrahedron, strong-components, H-spectrum, pi-over-3, mahler-measure, unit-distance, sawin]
 ---
 
+> **Correction warning (2026-10-22, Session29):** The historical prose below is preserved, but its claim that the directed 3-cycle's skew matrix has eigenvalues `±2π/3` is false. For the standard skew adjacency matrix, the characteristic polynomial is `λ(λ²+3)` and the eigenvalues are `0, ±i√3`. The angles `±2π/3` describe the nontrivial cube roots of unity, not this skew spectrum. No tournament-to-Euclidean or tournament-to-hyperbolic scissors map follows from the displayed numerical analogy. This warning overrides the older verified/structural wording for those implications only; it does not retract a separately established Clausen integral identity or strong-component multiplicativity.
+
+
 # Equidecomposability: the scissors congruence of the cross-problem bridge
 
 **Prompt (user):** pursue the sharpest next targets, keeping in mind equinumerosity and
