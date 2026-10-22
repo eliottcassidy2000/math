@@ -1,0 +1,17 @@
+rank R1 = 43  rank R2 = 43
+printed-formula signature R1: ['318', '-4110', '89608', '-2433804', '93582144/5']
+printed-formula signature R2: ['318', '-4110', '89608', '-2433804', '94375104/5']
+c1..c4 equal: True  (c1,c2,3c3,c4) = (Fraction(318, 1), Fraction(-4110, 1), Fraction(268824, 1), Fraction(-2433804, 1))
+c5(R1) = 93582144/5  c5(R2) = 94375104/5  Delta c5 = 158592  480*Delta c5 = 76124160
+A9: O_5 brute force = 3628800, recursion = 3628800, agree: True
+A9: O_6 brute force = 0, recursion = 0, agree: True
+D6: O_5 brute force = 345600, recursion = 345600, agree: True
+D6: O_6 brute force = 691200, recursion = 691200, agree: True
+D8: O_5 brute force = 22579200, recursion = 22579200, agree: True
+D8: O_6 brute force = 135475200, recursion = 135475200, agree: True
+E6: O_5 brute force = 0, recursion = 0, agree: True
+E6: O_6 brute force = 0, recursion = 0, agree: True
+E7: O_5 brute force = 10886400, recursion = 10886400, agree: True
+E7: O_6 brute force = 43545600, recursion = 43545600, agree: True
+E8: O_5 brute force = 435456000, recursion = 435456000, agree: True
+E8: O_6 brute force = 2612736000, recursion = 2612736000, agree: True

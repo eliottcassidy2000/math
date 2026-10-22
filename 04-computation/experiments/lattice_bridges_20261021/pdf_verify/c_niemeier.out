@@ -1,0 +1,36 @@
+number of Niemeier root systems: 24
+distinct Coxeter numbers: 19 [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 16, 18, 22, 25, 30, 46]
+equal-h classes: {6: ['A5^4D4', 'D4^6'], 10: ['A9^2D6', 'D6^4'], 12: ['A11D7E6', 'E6^4'], 18: ['A17E7', 'D10E7^2'], 30: ['D16E8', 'E8^3']}
+all have rank 24 and #roots = 24h: OK
+E12 = E4^3 - (432000/691) Delta  =>  E12 + (24h - 65520/691)Delta = E4^3 + (24h - 720)Delta: OK
+Leech theta E4^3 - 720 Delta: [1, 0, 196560, 16773120, 398034000] (196560 minimal vectors: True )
+built root systems (0.0s)
+
+Table 2.1 / Theorem 2.8 / Theorem 4.11 (genus-5 root-frame coefficients a(T, F_h^(5)) = #frames(L1) - #frames(L2)):
+  h=6: a(T_A5) = -5,760 (printed -5,760) OK;  star-frame a(T_cyc) = -5,760 (printed -5,760) OK
+  h=10: a(T_D5) = 69,120 (printed 69,120) OK;  star-frame a(T_cyc) = -466,560 (printed -466,560) OK
+  h=12: a(T_D5) = 230,400 (printed 230,400) OK;  star-frame a(T_cyc) = -1,497,600 (printed -1,497,600) OK
+  h=18: a(T_D5) = 2,419,200 (printed 2,419,200) OK;  star-frame a(T_cyc) = -15,120,000 (printed -15,120,000) OK
+  h=30: a(T_D5) = 41,287,680 (printed 41,287,680) OK;  star-frame a(T_cyc) = -252,887,040
+
+root-type positive-definite Gram classes (up to permutation/sign): rank 3: 4, rank 4: 11
+Genus-3 test (Erokhin/Freitag claim: equal h => equal degree-3 theta): differences on all rank-3 root-type T:
+  h=6: [0, 0, 0, 0]
+  h=10: [0, 0, 0, 0]
+  h=12: [0, 0, 0, 0]
+  h=18: [0, 0, 0, 0]
+  h=30: [0, 0, 0, 0]
+  all zero: True
+
+Genus-4 test: F_h^(4) proportional to F_30^(4) = E4*(Theta_{E8^2}-Theta_{D16+}) on all rank-4 root-type T?
+  h=6: ratios F_h/F_30 over 11 classes = [Fraction(1, 896)]; zeros consistent: True
+  h=10: ratios F_h/F_30 over 11 classes = [Fraction(9, 896)]; zeros consistent: True
+  h=12: ratios F_h/F_30 over 11 classes = [Fraction(5, 224)]; zeros consistent: True
+  h=18: ratios F_h/F_30 over 11 classes = [Fraction(15, 128)]; zeros consistent: True
+  h=30: ratios F_h/F_30 over 11 classes = [Fraction(1, 1)]; zeros consistent: True
+  h=6: Delta m(D4) = 5, Delta m(D4)/5 = 1, c_h = Delta m(D4)/4480 = 1/896
+  h=10: Delta m(D4) = 45, Delta m(D4)/5 = 9, c_h = Delta m(D4)/4480 = 9/896
+  h=12: Delta m(D4) = 100, Delta m(D4)/5 = 20, c_h = Delta m(D4)/4480 = 5/224
+  h=18: Delta m(D4) = 525, Delta m(D4)/5 = 105, c_h = Delta m(D4)/4480 = 15/128
+  h=30: Delta m(D4) = 4480, Delta m(D4)/5 = 896, c_h = Delta m(D4)/4480 = 1
+(total 8.1s)

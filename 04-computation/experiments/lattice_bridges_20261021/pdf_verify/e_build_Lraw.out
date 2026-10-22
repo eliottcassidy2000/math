@@ -1,0 +1,9 @@
+candidate 0: H_J entries in O_F: True; diag h_J(b_i,b_i) = [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21]
+  G_raw symmetric: True  even: True  min diag: 42
+candidate 1: H_J entries in O_F: True; diag h_J(b_i,b_i) = [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21]
+  G_raw symmetric: True  even: True  min diag: 42
+candidate 2: H_J entries in O_F: True; diag h_J(b_i,b_i) = [14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14]
+  G_raw symmetric: True  even: True  min diag: 28
+candidate 3: H_J entries in O_F: True; diag h_J(b_i,b_i) = [14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14]
+  G_raw symmetric: True  even: True  min diag: 28
+done

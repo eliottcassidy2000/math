@@ -1,0 +1,10 @@
+n= 7 (  2 classes, 1 strict local maxima): E-max H-rank 2 (local max False) | E-min x1: H-rank 1, local max True
+n= 9 (  4 classes, 1 strict local maxima): E-max H-rank 2 (local max False) | E-min x1: H-rank 1, local max True
+n=11 (  4 classes, 1 strict local maxima): E-max H-rank 3 (local max False) | E-min x1: H-rank 1, local max True
+n=13 (  6 classes, 1 strict local maxima): E-max H-rank 1 (local max True) | E-min x1: H-rank 4, local max False
+n=15 ( 16 classes, 1 strict local maxima): E-max H-rank 1 (local max True) | E-min x4: H-rank 4, local max False; H-rank 3, local max False; H-rank 9, local max False; H-rank 6, local max False
+n=17 ( 16 classes, 2 strict local maxima): E-max H-rank 1 (local max True) | E-min x1: H-rank 3, local max True
+n=19 ( 30 classes, 3 strict local maxima): E-max H-rank 1 (local max True) | E-min x1: H-rank 3, local max True
+n=21 ( 88 classes, 5 strict local maxima): E-max H-rank 1 (local max True) | E-min x2: H-rank 11, local max True; H-rank 12, local max True
+n=23 ( 94 classes, 6 strict local maxima): E-max H-rank 1 (local max True) | E-min x1: H-rank 8, local max True
+n=25 (208 classes, 6 strict local maxima): E-max H-rank 1 (local max True) | E-min x1: H-rank 23, local max True

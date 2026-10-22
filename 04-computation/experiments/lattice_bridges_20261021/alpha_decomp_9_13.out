@@ -1,0 +1,38 @@
+n=11 S={1,2,3,4,5}
+  alpha_0=1  2^0*alpha_0=1
+  alpha_1=18397  2^1*alpha_1=36794
+  alpha_2=11110  2^2*alpha_2=44440
+  alpha_3=1474  2^3*alpha_3=11792
+  H=sum=93027
+n=11 S={1,3,4,5,9}
+  alpha_0=1  2^0*alpha_0=1
+  alpha_1=21169  2^1*alpha_1=42338
+  alpha_2=10879  2^2*alpha_2=43516
+  alpha_3=1155  2^3*alpha_3=9240
+  H=sum=95095
+n=13 S={1,2,3,4,5,6}
+  alpha_0=1  2^0*alpha_0=1
+  alpha_1=606027  2^1*alpha_1=1212054
+  alpha_2=436748  2^2*alpha_2=1746992
+  alpha_3=87568  2^3*alpha_3=700544
+  alpha_4=3224  2^4*alpha_4=51584
+  H=sum=3711175
+n=13 S={1,2,3,5,6,9}
+  alpha_0=1  2^0*alpha_0=1
+  alpha_1=645937  2^1*alpha_1=1291874
+  alpha_2=439452  2^2*alpha_2=1757808
+  alpha_3=77428  2^3*alpha_3=619424
+  alpha_4=2119  2^4*alpha_4=33904
+  H=sum=3703011
+n=9 S={1,2,3,4}
+  alpha_0=1  2^0*alpha_0=1
+  alpha_1=837  2^1*alpha_1=1674
+  alpha_2=354  2^2*alpha_2=1416
+  alpha_3=22  2^3*alpha_3=176
+  H=sum=3267
+n=9 S={1,2,3,5}
+  alpha_0=1  2^0*alpha_0=1
+  alpha_1=954  2^1*alpha_1=1908
+  alpha_2=336  2^2*alpha_2=1344
+  alpha_3=13  2^3*alpha_3=104
+  H=sum=3357

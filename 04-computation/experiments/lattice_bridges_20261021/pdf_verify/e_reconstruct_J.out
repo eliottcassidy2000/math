@@ -1,0 +1,3 @@
+lambda in K^+ (sigma_k(lambda) real for all k): True
+signs of sigma_k(lambda) for k in reps 1..17: [-1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, -1]
+totally positive: False

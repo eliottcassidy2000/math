@@ -1,0 +1,30 @@
+=== (iii) score vectors of tournaments vs labelled forests vs lattice points of the permutohedron ===
+  n=1: #score vectors = 1, #lattice points of permutohedron = 1, #forests = 1
+  n=2: #score vectors = 2, #lattice points of permutohedron = 2, #forests = 2
+  n=3: #score vectors = 7, #lattice points of permutohedron = 7, #forests = 7
+  n=4: #score vectors = 38, #lattice points of permutohedron = 38, #forests = 38
+  n=5: #score vectors = 291, #lattice points of permutohedron = 291, #forests = 291
+  n=6: #score vectors = 2932, #lattice points of permutohedron = 2932, #forests = 2932
+
+=== (iv) Voronoi cell of A_n^* = permutohedron (exact check, n = 1..5) ===
+  n=1: facets of permutohedron are Voronoi inequalities: True; all 2 vertices inside the Voronoi cell: True
+  n=2: facets of permutohedron are Voronoi inequalities: True; all 6 vertices inside the Voronoi cell: True
+  n=3: facets of permutohedron are Voronoi inequalities: True; all 24 vertices inside the Voronoi cell: True
+  n=4: facets of permutohedron are Voronoi inequalities: True; all 120 vertices inside the Voronoi cell: True
+  n=5: facets of permutohedron are Voronoi inequalities: True; all 720 vertices inside the Voronoi cell: True
+
+=== (v) binary extended QR codes of length 8 and 24; Construction A of the Golay code ===
+  p=7: 2 is a QR mod p: True (so the degree-(p-1)/2 factors of x^p-1 over F2 are the QR/NR generator polys); g = x^3 + x + 1
+     extended QR code length 8: weight enumerator {0: 1, 4: 14, 8: 1}
+  p=23: 2 is a QR mod p: True (so the degree-(p-1)/2 factors of x^p-1 over F2 are the QR/NR generator polys); g = x^11 + x^9 + x^7 + x^6 + x^5 + x + 1
+     extended QR code length 24: weight enumerator {0: 1, 8: 759, 12: 2576, 16: 759, 24: 1}
+  [8,4,4] with A4 = 14 is the extended Hamming code; [24,12,8] with 759/2576/759 is the extended Golay code (unique codes with these parameters)
+  Construction A on extended Golay code: min nonzero weight 8 > 4, so norm-2 vectors are exactly the 48 vectors +-2e_i/sqrt2 -> root system A1^24; all weights = 0 mod 4 -> even; |C| = 2^12 -> det = 2^24/|C|^2 = 1 -> Niemeier lattice N(A1^24)
+
+=== (vi) cannonball: sum_{k<=N} k^2 square for N <= 10^6 ===
+  solutions: [(1, 1), (24, 70)]    sum_{k=0}^{24} k^2 = 4900 = 70^2 = 4900  => w = (0,1,...,24|70) has norm 4900 - 4900 = 0 in II_{25,1}
+
+=== paper 1 / III-B claim: a(I_4, Theta^(4)_L) (ordered orthogonal root 4-frames) separates all 24 Niemeier lattices ===
+  a(I_4) values: {'Leech': 0, 'A1^24': 4080384, 'A2^12': 15396480, 'A3^8': 41900544, 'A4^6': 93456000, 'A5^4D4': 182460672, 'D4^6': 182691072, 'A6^4': 323616384, 'A7^2D5^2': 534850560, 'A8^3': 834551424, 'A9^2D6': 1247097600, 'D6^4': 1249171200, 'A11D7E6': 2510544384, 'E6^4': 2515152384, 'A12^2': 3412506240, 'D8^3': 4553627904, 'A15D9': 7631511552, 'A17E7': 12074469120, 'D10E7^2': 12098661120, 'D12^2': 26461949184, 'A24': 43609104000, 'D16E8': 89551929600, 'E8^3': 89758368000, 'D24': 483782568192}
+  pairwise distinct: True
+  O4(E8^3) - O4(D16E8) = 206438400 (c_niemeier_g4detail: 206438400)

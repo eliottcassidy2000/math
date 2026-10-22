@@ -19603,3 +19603,19 @@ the ambient space.
 **Repair and missing coordinates.** Explicit overriding headers preserve the historical prose and executable experiments/output, while THM-227's two invalid glosses are repaired directly. Required missing sidecars are a target-preserving map, actual bijective operators with verified relations, realizable cycle-conflict data rather than arbitrary coefficients, and the explicit assumption of unit membership. The recorded H mod8 coefficient inference is also corrected in the repunit warnings. These are local failures of stated arguments, not blanket impossibility theorems for future bridges. The independent fixed-H rational-series modular obstruction has its own hypotheses and does not prove the reflection's universal claim.
 
 **Future question.** Construct and audit a specified tournament-to-modular carrier/map or realizable spectrum extension; do not infer one from a shared integer, a formal coefficient tuple, or a short finite table. See the Session27 historical-correction packet for exact originals/proposals, hashes and source-by-source rationale.
+
+## MISTAKE-659 (2026-10-21, found by the mac-mini-2026-10-21-fanopsp lattice survey; errata in older files, not in this session's claims) -- an unaudited sphere-packing reflection with factual errors, a false "confirmed" H value, and a construction stated too loosely
+- **`07-reflections/sphere-packing-eight-twentyfour.md` (oracle-2026-05-02, never audited).** It contains these errors:
+  - "24 = Coxeter number of E_6": the correct value is 12.
+  - The `[23,11,8]` adjacency-kernel code is called "the unique perfect" Golay code, and `[24,12,8]` is called perfect. Only `[23,12,7]` is perfect.
+  - "`P_7` has exactly 7 cycles, `Ω(T_7) = K_7`": it has 80 odd cycles, with `α_2 = 7`.
+  - The 14 cyclic triples are called the 7 Fano lines in both orientations. They are two disjoint Fano planes.
+  - The dodecahedron is said to have 20 faces. It has 12 faces and 20 vertices.
+  - The Epstein zeta function of `E_8` is called a weight-4 modular form with a pole at 1. It is `240ζ(s)ζ(s−3)`, with its pole at 4.
+  - The mass formula paragraph is garbled.
+  - The `ζ_M` values rest on MISTAKE-028.
+  - An errata banner was added; the body is unchanged.
+- **HYP-1363** (frozen historical index) is marked CONFIRMED (exhaustive) for "all regular tournaments on n = 5 have H = 13". The correct value is `H = 15` (`Z_5{1,2}`; `circ_small.out`). The index is not edited; this entry is the correction of record.
+- **`one_twenty_eight_atlas_balance_gold_20261014.md`** said the Leech lattice comes "likewise", meaning by Construction A, from the Golay code. Plain Construction A gives the Niemeier lattice `A_1^24`, with theta series `E_4^3 − 672Δ`. Leech needs a twist or a `Z_4` lift. Fixed in place.
+- **Checked and correct:** `04-computation/golay_baer_bridge_88.py` describes Leech as the unique even unimodular 24-dimensional lattice *with no vectors of norm 2*, which is right.
+- **Missing coordinate.** Reflections that state numbers must be audited like results. Small-number "chains" between `{7, 21}` and `{8, 24}` need a map or a DICTIONARY label (MISTAKE-559).

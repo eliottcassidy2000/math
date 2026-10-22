@@ -1,0 +1,62 @@
+rank R1 = 43  rank R2 = 43
+printed-formula signature R1: ['318', '-4110', '89608', '-2433804', '93582144/5']
+printed-formula signature R2: ['318', '-4110', '89608', '-2433804', '94375104/5']
+c1..c4 equal: True  (c1,c2,3c3,c4) = (Fraction(318, 1), Fraction(-4110, 1), Fraction(268824, 1), Fraction(-2433804, 1))
+c5(R1) = 93582144/5  c5(R2) = 94375104/5  Delta c5 = 158592  480*Delta c5 = 76124160
+
+brute-force check of orthogonal-frame counts O_m (Z_X recursion vs explicit enumeration):
+  A5: O_1..O_4 = [30, 360, 720, 0]  (brute force agrees for m=2,3,4)
+  A7: O_1..O_4 = [56, 1680, 20160, 40320]  (brute force agrees for m=2,3,4)
+  D4: O_1..O_4 = [24, 144, 576, 1152]  (brute force agrees for m=2,3,4)
+  D6: O_1..O_4 = [60, 1560, 14400, 86400]  (brute force agrees for m=2,3,4)
+  E6: O_1..O_4 = [72, 2160, 25920, 51840]  (brute force agrees for m=2,3,4)
+  E7: O_1..O_4 = [126, 7560, 196560, 1814400]  (brute force agrees for m=2,3,4)
+  E8: O_1..O_4 = [240, 30240, 1814400, 47174400]  (brute force agrees for m=2,3,4)
+
+log-EGF coefficients l_m vs printed c_m:
+  l_1..l_4 == printed c_1..c_4 for A1..A15, D4..D15, E6, E7, E8: True
+  l_5 vs printed c_5 mismatches (type, true l5, printed c5):
+     ('A1', '32/5', '64/5')
+     ('A2', '7776/5', '1704/5')
+     ('A3', '153792/5', '35328/5')
+     ('A4', '232000', '55568')
+     ('A5', '1058400', '258240')
+     ('A6', '17795232/5', '4381944/5')
+     ('A7', '48814976/5', '12081664/5')
+     ('A8', '115800192/5', '28748448/5')
+   ... total mismatching types: 30 of 30
+  true l5(A_k) = 16*k*(k + 1)*(42*k**4 - 176*k**3 + 326*k**2 - 296*k + 105)/5
+  true l5(D_k) = 32*k*(k - 1)*(672*k**4 - 5784*k**3 + 19301*k**2 - 29489*k + 17295)/5
+  true l5(E6,E7,E8) = ['427151232/5', '4886705376/5', '17478892800']
+  l1(A_k) interpolant = k*(k + 1)
+  l2(A_k) interpolant = -k*(k + 1)*(2*k - 1)
+  l3(A_k) interpolant = 4*k*(k + 1)*(5*k**2 - 7*k + 3)/3
+  l4(A_k) interpolant = -2*k*(k + 1)*(14*k**3 - 37*k**2 + 39*k - 15)
+
+TRUE log-EGF signature R1: ['318', '-4110', '89608', '-2433804', '371536608/5']
+TRUE log-EGF signature R2: ['318', '-4110', '89608', '-2433804', '376951008/5']
+true Delta l5 = 1082880
+ordered orthogonal m-frame counts O_m, m=1..6:
+  R1: [318, 92904, 24853200, 6066809856, 1346387927040, 270587627458560]
+  R2: [318, 92904, 24853200, 6066809856, 1346517872640, 270741908828160]
+  Delta O_5 = O_5(R2)-O_5(R1) = 129945600  = 120 * true Delta l5: True
+
+Euler-Boole: kernel of (rank,c1..c4) on A1..A6 has dim 1 spanned by [-6, 15, -20, 15, -6, 1]
+  6th finite-difference vector: [-6, 15, -20, 15, -6, 1]  pos-part rank: 96  neg-part rank: 96
+  EB pair A1^6A3^20A5^6 vs A2^15A4^15A6: c1..c4 equal: True  Delta c5 = 24192  (6!*leading coeff of c5(A_k) = 720*(4/5)*42 = 24192 )
+
+per-rank A(h):  [h, -h*(2*h - 3), 4*h*(5*h**2 - 17*h + 15)/3, -2*h*(14*h**3 - 79*h**2 + 155*h - 105)]
+per-rank D(h):  [h, -h*(2*h - 3), 4*h*(5*h**2 - 17*h + 15)/3, -2*h*(14*h**3 - 84*h**2 + 185*h - 145)]
+delta4(h) = -10*h*(h - 4)*(h - 2)
+
+Table 3.1 witness pairs (rank1, rank2, first M moments equal, moment M+1 differs):
+   EB M1 (6, 6, True, True)
+   EB M2 (16, 16, True, True)
+   EB M3 (40, 40, True, True)
+   EB M4 (96, 96, True, True)
+   A M2 (14, 14, True, True)
+   A M3 (28, 28, True, True)
+   A M4 (48, 48, True, True)
+   ADE M2 (12, 12, True, True)
+   ADE M3 (12, 12, True, True)
+   ADE M4 (43, 43, True, True)

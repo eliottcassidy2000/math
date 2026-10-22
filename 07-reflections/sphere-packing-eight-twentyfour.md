@@ -1,5 +1,20 @@
 # The Forbidden Values {7, 21} and Optimal Sphere Packing in 8 and 24 Dimensions
 
+> **ERRATA (2026-10-21, MISTAKE-659; found by the mac-mini-2026-10-21-fanopsp lattice survey; this reflection was never audited).**
+> * §1.2: 24 is not the Coxeter number of E_6; `h(E_6) = 12`.
+> * §1.3:
+>   * The *perfect* Golay code is `[23,12,7]`. The `[23,11,8]` code obtained from the adjacency kernel is its even-weight subcode, which is not perfect.
+>   * Likewise in "Answer 1", the extended code `[24,12,8]` is self-dual but not perfect.
+>   * The proved Paley-to-code statement is THM-481.
+> * §2 item 2: `P_7` does not have "exactly 7 cycles" with `Ω(T_7) = K_7`. It has 14 + 42 + 24 = 80 odd cycles, with `α_2 = 7`, so `H = 1 + 2·80 + 4·7 = 189`.
+> * The 14 cyclic triples of `P_7` are two disjoint Fano planes, `dev{0,1,3}` and `dev{0,1,5}`, each with one orientation. They are not the 7 lines in both orientations.
+> * "240 = 20 × 12 = |faces of dodecahedron| × |vertices of icosahedron|": the dodecahedron has 12 faces and 20 vertices.
+> * The Epstein zeta function of `E_8` is `Z_(E8)(s) = 240 ζ(s) ζ(s−3)`, a Dirichlet series with its pole at `s = 4`. The weight-4 modular form is the theta series `E_4`.
+> * The mass-formula paragraph is garbled.
+> * The `ζ_M` values rest on the k-nacci numerology refuted in MISTAKE-028.
+> * The `{7, 21} ↔ {8, 24}` chains are DICTIONARY, not mechanism (MISTAKE-559). The current statement is THM-4751 and HYP-9362 (d).
+
+
 **Session:** oracle-2026-05-02
 **Arising from:** Investigation into roundabout connections between H-spectrum gaps and
 the Viazovska sphere packing results in dimensions 8 and 24.

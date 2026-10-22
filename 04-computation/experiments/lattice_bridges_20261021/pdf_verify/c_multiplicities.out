@@ -1,0 +1,36 @@
+A5: m(D5)=0, m(A5)=1, m(A5 via star frames)=1, m(D4)=0   expected {'D5': 0, 'A5': 1, 'D4': 0}  OK
+A6: m(D5)=0, m(A5)=7, m(A5 via star frames)=7, m(D4)=0   expected {'D5': 0, 'A5': 7, 'D4': 0}  OK
+A7: m(D5)=0, m(A5)=28, m(A5 via star frames)=28, m(D4)=0   expected {'D5': 0, 'A5': 28, 'D4': 0}  OK
+A8: m(D5)=0, m(A5)=84, m(A5 via star frames)=84, m(D4)=0   expected {'D5': 0, 'A5': 84, 'D4': 0}  OK
+A9: m(D5)=0, m(A5)=210, m(A5 via star frames)=210, m(D4)=0   expected {'D5': 0, 'A5': 210, 'D4': 0}  OK
+A10: m(D5)=0, m(A5)=462, m(A5 via star frames)=462, m(D4)=0   expected {'D5': 0, 'A5': 462, 'D4': 0}  OK
+A11: m(D5)=0, m(A5)=924, m(A5 via star frames)=924, m(D4)=0   expected {'D5': 0, 'A5': 924, 'D4': 0}  OK
+A12: m(D5)=0, m(A5)=1716, m(A5 via star frames)=1716, m(D4)=0   expected {'D5': 0, 'A5': 1716, 'D4': 0}  OK
+A13: m(D5)=0, m(A5)=3003, m(A5 via star frames)=3003, m(D4)=0   expected {'D5': 0, 'A5': 3003, 'D4': 0}  OK
+A14: m(D5)=0, m(A5)=5005, m(A5 via star frames)=5005, m(D4)=0   expected {'D5': 0, 'A5': 5005, 'D4': 0}  OK
+A15: m(D5)=0, m(A5)=8008, m(A5 via star frames)=8008, m(D4)=0   expected {'D5': 0, 'A5': 8008, 'D4': 0}  OK
+A16: m(D5)=0, m(A5)=12376, m(A5 via star frames)=12376, m(D4)=0   expected {'D5': 0, 'A5': 12376, 'D4': 0}  OK
+A17: m(D5)=0, m(A5)=18564, m(A5 via star frames)=18564, m(D4)=0   expected {'D5': 0, 'A5': 18564, 'D4': 0}  OK
+D4: m(D5)=0, m(A5)=0, m(A5 via star frames)=0, m(D4)=1   expected {'D5': 0, 'A5': 0, 'D4': 1}  OK
+D5: m(D5)=1, m(A5)=0, m(A5 via star frames)=0, m(D4)=5   expected {'D5': 1, 'A5': 0, 'D4': 5}  OK
+D6: m(D5)=6, m(A5)=32, m(A5 via star frames)=32, m(D4)=15   expected {'D5': 6, 'A5': 32, 'D4': 15}  OK
+D7: m(D5)=21, m(A5)=224, m(A5 via star frames)=224, m(D4)=35   expected {'D5': 21, 'A5': 224, 'D4': 35}  OK
+D8: m(D5)=56, m(A5)=896, m(A5 via star frames)=896, m(D4)=70   expected {'D5': 56, 'A5': 896, 'D4': 70}  OK
+D9: m(D5)=126, m(A5)=2688, m(A5 via star frames)=2688, m(D4)=126   expected {'D5': 126, 'A5': 2688, 'D4': 126}  OK
+D10: m(D5)=252, m(A5)=6720, m(A5 via star frames)=6720, m(D4)=210   expected {'D5': 252, 'A5': 6720, 'D4': 210}  OK
+D11: m(D5)=462, m(A5)=14784, m(A5 via star frames)=14784, m(D4)=330   expected {'D5': 462, 'A5': 14784, 'D4': 330}  OK
+D12: m(D5)=792, m(A5)=29568, m(A5 via star frames)=29568, m(D4)=495   expected {'D5': 792, 'A5': 29568, 'D4': 495}  OK
+D13: m(D5)=1287, m(A5)=54912, m(A5 via star frames)=54912, m(D4)=715   expected {'D5': 1287, 'A5': 54912, 'D4': 715}  OK
+D14: m(D5)=2002, m(A5)=96096, m(A5 via star frames)=96096, m(D4)=1001   expected {'D5': 2002, 'A5': 96096, 'D4': 1001}  OK
+D15: m(D5)=3003, m(A5)=160160, m(A5 via star frames)=160160, m(D4)=1365   expected {'D5': 3003, 'A5': 160160, 'D4': 1365}  OK
+D16: m(D5)=4368, m(A5)=256256, m(A5 via star frames)=256256, m(D4)=1820   expected {'D5': 4368, 'A5': 256256, 'D4': 1820}  OK
+E6: m(D5)=27, m(A5)=36, m(A5 via star frames)=36, m(D4)=45   expected {'D5': 27, 'A5': 36, 'D4': 45}  OK
+E7: m(D5)=378, m(A5)=1344, m(A5 via star frames)=1344, m(D4)=315   expected {'D5': 378, 'A5': 1344, 'D4': 315}  OK
+E8: m(D5)=7560, m(A5)=40320, m(A5 via star frames)=40320, m(D4)=3150   expected {'D5': 7560, 'A5': 40320, 'D4': 3150}  OK
+ALL MULTIPLICITY FORMULAS OK: True (2.2s)
+E6 A5-subsystems split by #roots orthogonal to the subsystem: 2 orth. roots: 36
+E6 D5-subsystems split by #roots orthogonal to the subsystem: 0 orth. roots: 27
+E7 A5-subsystems split by #roots orthogonal to the subsystem: 2 orth. roots: 1008, 6 orth. roots: 336
+E7 D5-subsystems split by #roots orthogonal to the subsystem: 2 orth. roots: 378
+E8 A5-subsystems split by #roots orthogonal to the subsystem: 8 orth. roots: 40320
+E8 D5-subsystems split by #roots orthogonal to the subsystem: 12 orth. roots: 7560

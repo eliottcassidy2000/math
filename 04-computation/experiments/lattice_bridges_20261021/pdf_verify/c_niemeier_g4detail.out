@@ -1,0 +1,11 @@
+det 4 offdiag [-1, -1, -1, 0, 0, 0]  F_30 coeff = 5160960  counts E8^3 / D16E8: 10886400 5725440
+det 5 offdiag [-1, -1, -1, 0, 0, 1]  F_30 coeff = -5160960  counts E8^3 / D16E8: 17418240 22579200
+det 4 offdiag [-1, -1, -1, 0, 1, 1]  F_30 coeff = 5160960  counts E8^3 / D16E8: 10886400 5725440
+det 5 offdiag [-1, -1, -1, 1, 1, 1]  F_30 coeff = -5160960  counts E8^3 / D16E8: 17418240 22579200
+det 5 offdiag [-1, -1, 0, 0, -1, 0]  F_30 coeff = -5160960  counts E8^3 / D16E8: 17418240 22579200
+det 4 offdiag [-1, -1, 0, 0, -1, 1]  F_30 coeff = 5160960  counts E8^3 / D16E8: 10886400 5725440
+det 8 offdiag [-1, -1, 0, 0, 0, 0]  F_30 coeff = 10321920  counts E8^3 / D16E8: 566092800 555770880
+det 8 offdiag [-1, -1, 0, 1, 0, 0]  F_30 coeff = 10321920  counts E8^3 / D16E8: 566092800 555770880
+det 9 offdiag [-1, 0, 0, 0, 0, -1]  F_30 coeff = 30965760  counts E8^3 / D16E8: 1141862400 1110896640
+det 12 offdiag [-1, 0, 0, 0, 0, 0]  F_30 coeff = -61931520  counts E8^3 / D16E8: 9957427200 10019358720
+det 16 offdiag [0, 0, 0, 0, 0, 0]  F_30 coeff = 206438400  counts E8^3 / D16E8: 89758368000 89551929600

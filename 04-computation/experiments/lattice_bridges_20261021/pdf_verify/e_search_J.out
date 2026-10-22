@@ -1,0 +1,4 @@
+sign-vector rank of generators: 11  kernel dim (totally positive combos mod squares, over these gens): 7
+number of candidate twists: 128
+candidates with integral Gram divisible by 7: 128
+wrote J_candidates.gp

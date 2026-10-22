@@ -1,0 +1,9 @@
+n=1: score vectors (Landau) = 1, labelled forests = 1, equal: True
+n=2: score vectors (Landau) = 2, labelled forests = 2, equal: True
+n=3: score vectors (Landau) = 7, labelled forests = 7, equal: True
+n=4: score vectors (Landau) = 38, labelled forests = 38, equal: True
+n=5: score vectors (Landau) = 291, labelled forests = 291, equal: True
+n=6: score vectors (Landau) = 2932, labelled forests = 2932, equal: True
+n=7: score vectors (Landau) = 36961, labelled forests = 36961, equal: True
+n=8: score vectors (Landau) = 561948, labelled forests = 561948, equal: True
+TT_25 score vector (0..24): sum of squares = 4900 = 70^2: True

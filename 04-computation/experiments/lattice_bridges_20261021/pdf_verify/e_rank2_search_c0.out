@@ -1,0 +1,6 @@
+E8 roots: 240, J minimal vectors: 196560  (4.6s)
+h_E on roots: {np.float64(1.0)}  h_J on min vectors: {np.float64(14.0)}
+distinct h_E(x1,x2) values over root pairs: 13  max |b| over non-collinear pairs: 0.7559289463830737
+sampled 3000 y1's: smallest trace norm of x1(x)y1 + x2(x)y2 found = 24.000000  (b, c) = ((-0.5+0.56694671j), (7.000000000000027+7.937253933193857j))
+histogram of min-over-b norms (norm: count) for small norms: {np.int64(24): 126000, np.int64(28): 390000}
+time 37.0s

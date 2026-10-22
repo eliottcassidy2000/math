@@ -1,0 +1,37 @@
+census p_n (n=1..43): [1, 2, 3, 6, 9, 16, 24, 39, 57, 88, 128, 193, 276, 403, 570, 815, 1137, 1599, 2207, 3058, 4177, 5713, 7728, 10458, 14021, 18786, 24985, 33186, 43801, 57721, 75655, 98981, 128897, 167524, 216842, 280117, 360537, 463108, 592930, 757618, 965192, 1227224, 1556185]
+sum_{n<=42} p_n = 5565832  p_43 = 1556185  sum_{n<=43} = 7122017
+printed Table 3.2 counts agree with generating function: True []
+  rank 40: 757618 multisets, 757618 distinct signatures, 0 colliding signatures, max multiplicity 1
+  rank 41: 965192 multisets, 965192 distinct signatures, 0 colliding signatures, max multiplicity 1
+  rank 42: 1227224 multisets, 1227224 distinct signatures, 0 colliding signatures, max multiplicity 1
+  rank 43: 1556185 multisets, 1556184 distinct signatures, 1 colliding signatures, max multiplicity 2
+total multisets ranks 1..42 enumerated: 5565832
+first rank with a 4-moment collision: 43
+rank-43 colliding signature(s) (c1,c2,3c3,c4): [[318, -4110, 268824, -2433804]]
+(ADE audit time 5.0s)
+  alphabet ADE, M=1: minimal collision rank = 6; colliding signatures there = [[18], [24], [42]]
+  alphabet ADE, M=2: minimal collision rank = 12; colliding signatures there = [[48, -288], [56, -392], [114, -2034]]
+  alphabet ADE, M=3: minimal collision rank = 12; colliding signatures there = [[56, -392, 13760]]
+  alphabet A, M=1: minimal collision rank = 6; colliding signatures there = [[18], [24]]
+  alphabet A, M=2: minimal collision rank = 14; colliding signatures there = [[88, -928]]
+  alphabet A, M=3: minimal collision rank = 28; colliding signatures there = [[192, -2280, 135456]]
+  alphabet A, M=4: minimal collision rank = 48; colliding signatures there = [[628, -16084, 2117968, -39383144]]
+(total time 9.4s)
+        9.44 real         9.09 user         0.21 sys
+           660078592  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               81613  page reclaims
+                 184  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 104  voluntary context switches
+                3951  involuntary context switches
+        156623824116  instructions retired
+         31362281633  cycles elapsed
+           423807296  peak memory footprint

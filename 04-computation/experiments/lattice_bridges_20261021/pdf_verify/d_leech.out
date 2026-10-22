@@ -1,0 +1,11 @@
+number of vectors: 196560  all norm 32 (=4 after /8): True
+inner products (norm-4 scaling) between minimal vectors (sample): [-4, -2, -1, 0, 1, 2, 4]
+  random direction 0: relative deviation of moments k=1..7 (degree 2..14): ['-3.3e-16', '-6.7e-16', '-1.0e-15', '-1.2e-15', '-1.8e-15', '-2.6e-04', '-1.3e-03']
+  random direction 1: relative deviation of moments k=1..7 (degree 2..14): ['-2.2e-16', '-2.2e-16', '-5.6e-16', '-6.7e-16', '-8.9e-16', '4.3e-04', '2.3e-03']
+  random direction 2: relative deviation of moments k=1..7 (degree 2..14): ['2.2e-16', '2.2e-16', '4.4e-16', '2.2e-16', '2.2e-16', '3.9e-03', '2.1e-02']
+  -> degrees <= 10 match the sphere (11-design); degree 12 deviates; degree 14 (k=7) mixes deg-12 harmonic part
+Lambda/2Lambda classes: 1 + N4/2 + N6/2 + N8/48 = 16777216 = 2^24: True
+=> relevant vectors (Voronoi facets) = N4 + N6 = 16969680
+w3/w2 = (6/4)^6/48 = 243/1024 = (3/4)^5: True
+Co0 order factorization: {2: 22, 3: 9, 5: 4, 7: 2, 11: 1, 13: 1, 23: 1}  = 2 * |Co1| with |Co1| = 4157776806543360000: True
+|Co0|/196560 = |Co2| = 42305421312000  (Co2 order 42305421312000: True )

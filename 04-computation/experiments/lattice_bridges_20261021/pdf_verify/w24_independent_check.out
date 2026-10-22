@@ -1,0 +1,6 @@
+dims [96, 96] symmetric 1
+all diagonal even 1
+det = 7^48 * 1
+min diag 28
+positive definite (qfsign) [96, 0]
+witness norm v~*G*v = 24

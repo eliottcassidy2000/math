@@ -1,0 +1,29 @@
+dim 24: weight 12, dim M_k = 2; coefficients a_j of E4^(.)Delta^j: [1, -720]
+  extremal theta: q^0:1, q^1:0, q^2:196560, q^3:16773120, q^4:398034000, q^5:4629381120, q^6:34417656000, q^7:187489935360, q^8:814879774800
+  Siegel average E_12: q^1:94.8191, q^2:194284, q^3:1.6797e+07, q^4:3.97894e+08, q^5:4.62984e+09, q^6:3.44171e+10, q^7:1.87488e+11
+  negative coefficients among q^0..q^39: []
+dim 48: weight 24, dim M_k = 3; coefficients a_j of E4^(.)Delta^j: [1, -1440, 125280]
+  extremal theta: q^0:1, q^1:0, q^2:0, q^3:52416000, q^4:39007332000, q^5:6609020221440, q^6:437824977408000, q^7:15173208925056000, q^8:327259384199748000
+  Siegel average E_24: q^1:0.000554399, q^2:4650.64, q^3:5.21929e+07, q^4:3.90124e+10, q^5:6.60895e+12, q^6:4.37826e+14, q^7:1.51732e+16
+  negative coefficients among q^0..q^39: []
+dim 72: weight 36, dim M_k = 4; coefficients a_j of E4^(.)Delta^j: [1, -2160, 965520, -27302400]
+  extremal theta: q^0:1, q^1:0, q^2:0, q^3:0, q^4:6218175600, q^5:15281788354560, q^6:9026867482214400, q^7:1989179450818560000, q^8:213006159759990870000
+  Siegel average E_36: q^1:5.25101e-12, q^2:0.180423, q^3:262716, q^4:6.1993e+09, q^5:1.52824e+13, q^6:9.02685e+15, q^7:1.98918e+18
+  negative coefficients among q^0..q^39: []
+dim 96: weight 48, dim M_k = 5; coefficients a_j of E4^(.)Delta^j: [1, -2880, 2324160, -465638400, 5611550400]
+  extremal theta: q^0:1, q^1:0, q^2:0, q^3:0, q^4:0, q^5:565866362880, q^6:2972108280960000, q^7:4164608980546560000, q^8:2214091221899586120000
+  Siegel average E_48: q^1:7.94266e-22, q^2:1.11783e-07, q^3:21.1186, q^4:1.57321e+07, q^5:5.6436e+11, q^6:2.97218e+15, q^7:4.16461e+18
+  negative coefficients among q^0..q^39: []
+
+DIM 96 extremal: q^5 = 565,866,362,880  q^6 = 2,972,108,280,960,000  q^7 = 4,164,608,980,546,560,000
+paper 3 q^6 = 2,972,108,280,960,000 -> True
+paper 4 q^6 = 184,139,089,776,640 -> False
+both papers q^5 = 565,866,362,880 -> True
+paper4 q^6 value equals some coefficient of the extremal form? {}
+B_48 = -5609403368997817686249127547/46410
+  E_48 coefficient q^1 (avg # vectors of norm 2): 7.942663e-22
+  E_48 coefficient q^2 (avg # vectors of norm 4): 1.117830e-07
+  E_48 coefficient q^3 (avg # vectors of norm 6): 2.111860e+01
+  E_48 coefficient q^4 (avg # vectors of norm 8): 1.573206e+07
+  E_48 coefficient q^5 (avg # vectors of norm 10): 5.643601e+11
+  E_48 coefficient q^6 (avg # vectors of norm 12): 2.972179e+15

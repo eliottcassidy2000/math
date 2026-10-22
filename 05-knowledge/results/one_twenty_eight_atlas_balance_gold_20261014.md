@@ -138,7 +138,7 @@ A read-only search of the corpus (1,258 raw hits for `\b128\b`, most of them run
 
   Here `C(q,2) = T_{q−1} = |Aff(P_q)|`: 55 for `q = 11` (the owner's triangular-Fibonacci `55 = T_10 = F_10`) and 253 for `q = 23`.
 - `P_3`, `P_7` and `P_11` are the orders where `T_{q−1}` is Fibonacci and Paley maximises `H` (companion note §5).
-- E8 is Construction A of the extended Hamming code. Its 240 roots split as `112 + 128`. The Leech lattice comes likewise from the extended binary Golay code.
+- E8 is Construction A of the extended Hamming code. Its 240 roots split as `112 + 128`. The Leech lattice also comes from the extended binary Golay code, but not by plain Construction A, which gives the Niemeier lattice with root system `A_1^24`. It needs Conway's twisted construction or a lift to `Z_4` (erratum 2026-10-21, MISTAKE-659).
 - The golden-lane snippet's `3^5 − 1 = 2·11²` is the ternary Golay identity rewritten: `1 + 22 + 220 = 243`. Its binary partner is Ramanujan–Nagell, `2^7 = 11² + 7`. That is the sphere-packing equation `(2n+1)² + 7 = 2^(r+3)` of 2-error-correcting binary perfect codes at `n = 5`, the repetition code. Both 11's are NUMEROLOGY, but each equation is exact.
 
 **(c) E8's 128 and tournament scores (THM-868, REFEREED there).**

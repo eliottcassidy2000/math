@@ -1,0 +1,21 @@
+n= 3 classes=   1  argmax M4 =      R  argmin M4 = [1]  argmax H = R  spearman(H, M4) = +nan
+n= 5 classes=   1  argmax M4 =      R  argmin M4 = [1, 2]  argmax H = R  spearman(H, M4) = +nan
+n= 7 classes=   2  argmax M4 =      R  argmin M4 = [1, 2, 4]  argmax H = [1, 2, 4]  spearman(H, M4) = -1.000
+n= 9 classes=   4  argmax M4 =      R  argmin M4 = [1, 2, 3, 5]  argmax H = [1, 2, 3, 5]  spearman(H, M4) = -0.200
+n=11 classes=   4  argmax M4 =      R  argmin M4 = [1, 3, 4, 5, 9]  argmax H = [1, 3, 4, 5, 9]  spearman(H, M4) = -0.400
+n=13 classes=   6  argmax M4 =      R  argmin M4 = [1, 2, 3, 5, 6, 9]  argmax H = R  spearman(H, M4) = +0.600
+n=15 classes=  16  argmax M4 =      R  argmin M4 = [1, 2, 3, 4, 6, 7, 10]  argmax H = R  spearman(H, M4) = -0.129
+n=17 classes=  16  argmax M4 =      R  argmin M4 = [1, 2, 3, 5, 7, 8, 11, 13]  argmax H = R  spearman(H, M4) = +0.109
+n=19 classes=  30  argmax M4 =      R  argmin M4 = [1, 4, 5, 6, 7, 9, 11, 16, 17]  argmax H = R  spearman(H, M4) = -0.042
+n=21 classes=  88  argmax M4 =      R  argmin M4 = [1, 2, 3, 4, 6, 9, 10, 13, 14, 16]  argmax H = R  spearman(H, M4) = -0.080
+n=23 classes=  94  argmax M4 =      R  argmin M4 = [1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18]  argmax H = R  spearman(H, M4) = -0.105
+
+n= 7: E range [15, 19]; unique max R (next 15), unique min [1, 2, 4] (next 19); c4 - nE/4 constant: True; c5 + nE/2 constant: True; H-max at E-min
+n= 9: E range [36, 44]; unique max R (next 40), unique min [1, 2, 3, 5] (next 40); c4 - nE/4 constant: True; c5 + nE/2 constant: True; H-max at E-min
+n=11: E range [65, 85]; unique max R (next 73), unique min [1, 3, 4, 5, 9] (next 69); c4 - nE/4 constant: True; c5 + nE/2 constant: True; H-max at E-min
+n=13: E range [114, 146]; unique max R (next 130), unique min [1, 2, 3, 5, 6, 9] (next 118); c4 - nE/4 constant: True; c5 + nE/2 constant: True; H-max at E-max
+n=15: E range [183, 231]; unique max R (next 223), unique min [1, 2, 3, 5, 6, 8, 11] (next 183); c4 - nE/4 constant: True; c5 + nE/2 constant: True; H-max at E-max
+n=17: E range [268, 344]; unique max R (next 320), unique min [1, 2, 3, 5, 7, 8, 11, 13] (next 272); c4 - nE/4 constant: True; c5 + nE/2 constant: True; H-max at E-max
+n=19: E range [369, 489]; unique max R (next 461), unique min [1, 4, 5, 6, 7, 9, 11, 16, 17] (next 381); c4 - nE/4 constant: True; c5 + nE/2 constant: True; H-max at E-max
+n=21: E range [514, 670]; unique max R (next 658), unique min [1, 2, 3, 7, 10, 12, 13, 15, 16, 17] (next 514); c4 - nE/4 constant: True; c5 + nE/2 constant: True; H-max at E-max
+n=23: E range [671, 891]; unique max R (next 855), unique min [1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18] (next 683); c4 - nE/4 constant: True; c5 + nE/2 constant: True; H-max at E-max
