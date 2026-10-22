@@ -1,0 +1,6 @@
+  ok   E6^4: Lambda + 3c has a unique vector of norm 216/144 = 3/2
+  ok   E6^4 reference y0 = 4 x0: max y0.mu over Lambda_4 = 7; distribution ((-7, 24), (-6, 264), (-5, 1608), (-4, 5610), (-3, 13464), (-2, 24312), (-1, 34056), (0, 37884), (1, 34056), (2, 24312), (3, 13464), (4, 5610), (5, 1608), (6, 264), (7, 24))
+       3000 samples of norm-24 vectors in type-4 classes mod 2 Lambda (13s); 3 invariants; Fricke (max y.mu <= 7): 2046 samples, 1 invariant(s)
+       Fricke invariant (x2046): ((-7, 24), (-6, 264), (-5, 1608), (-4, 5610), (-3, 13464), (-2, 24312), (-1, 34056), (0, 37884), (1, 34056), (2, 24312), (3, 13464), (4, 5610), (5, 1608), (6, 264), (7, 24))
+  ok   every sampled order-4 Fricke point has the invariant of the E6^4 shallow multiple 3c (= the A2^12 (h+1)-point)
+ALL CHECKS PASSED

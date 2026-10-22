@@ -15,6 +15,10 @@ status: >
     constant term 24 of U_p F. So it is a Niemeier lattice with Coxeter number p - 1. Fricke points of prime order p
     therefore exist only for p - 1 in {2, 4, 6, 10, 12, 16, 18, 22, 30, 46}; all of these are realised (PROVED
     argument).
+  - Order 4, the first composite order: a Fricke point is y/4 with y of norm 24 in a type-4 class mod 2 Lambda and
+    max_{Lambda_4} y.mu <= 7. order4_fricke_census.py found 2046 such samples, all with a single orbit invariant,
+    that of the E6^4 shallow multiple 3c (= the A2^12 (h+1)-point). This matches the predicted single class
+    (VERIFIED by sampling).
   - Prime order p, classification (PROVED as a sketch; the argument is below). Up to Co_0 x Lambda, the Fricke
     points of order p correspond bijectively to the Niemeier lattices with h = p - 1. The ingredients are:
     - (i) the orbifold at a Fricke point is V_N' with dim V_1 = 24p, so h(N') = p - 1;
@@ -38,7 +42,7 @@ source: 05-knowledge/results/leech_deep_hole_swap_theorem_20261022.md
 scripts:
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_h_plus_one.py (+ _q2.out, .out)
   - 04-computation/experiments/deep_holes_theta_20261022/leech_h_plus_one.py (+ .out), weyl_h_plus_one.py (+ .out)
-  - 04-computation/experiments/deep_holes_theta_20261022/order3_fricke_census.py (+ .out)
+  - 04-computation/experiments/deep_holes_theta_20261022/order3_fricke_census.py (+ .out), order4_fricke_census.py (+ .out)
 related:
   - THM-4759 (deep-hole twining, Fricke points, Fricke descent)
   - THM-4758 (swap theorem)
