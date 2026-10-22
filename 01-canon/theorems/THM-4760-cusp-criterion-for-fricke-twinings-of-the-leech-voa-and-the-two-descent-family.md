@@ -166,8 +166,10 @@ lattice N with even h, the orbifold of V_Λ at v is V_N, and 2v has order (h + 2
   | D24 | D12² |
 
 - **The other eight even-h lattices**: A3⁸, A5⁴D4, A7²D5², A9²D6, A11D7E6, E6⁴, A15D9, A17E7. Here 2v has a
-  *unique* minimal vector at norm 2 − 4/(h+2). It is the (h/2 + 1)-point of the lattice of Coxeter number h/2:
-  A1²⁴, A2¹², A3⁸, A4⁶, A5⁴D4, A5⁴D4, A7²D5², A8³ respectively.
+  *unique* minimal vector at norm 2 − 4/(h+2), and deep proper multiples, so it is a strict Fricke point. Its
+  orbifold is the lattice of Coxeter number h/2: A1²⁴, A2¹², A3⁸, A4⁶, A5⁴D4, A5⁴D4, A7²D5², A8³ respectively. By
+  HYP-9368 (A) it is that lattice's (h/2 + 1)-point. (A) is verified or sampled at orders 3, 4 and 6, sketched at
+  the primes, and open at the orders 9 and 10 that occur here.
 
 In both cases every multiple cv with c ≥ 3 is a deep hole of a lattice whose Coxeter number equals its order (an
 A-type lattice: A1²⁴, A2¹², A3⁸, A4⁶, A5⁴D4, A7²D5², A8³, A11D7E6, A15D9).
