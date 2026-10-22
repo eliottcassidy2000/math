@@ -1,0 +1,4 @@
+n=8: 85 almost-regular tournaments; path-tree term t = n delta^T (I + Shat^2)^-1 delta in [1.0863, 1.5399]
+  corr(y, y_pred) = +0.7895;  corr(y, y_pred + t) = +0.8595;  mean(y - y_pred) = +0.5639, mean(y - y_pred - t) = -0.6217; sd 0.0821 -> 0.0714
+n=10: 13333 almost-regular tournaments; path-tree term t = n delta^T (I + Shat^2)^-1 delta in [1.0101, 1.5461]
+  corr(y, y_pred) = +0.8441;  corr(y, y_pred + t) = +0.9243;  mean(y - y_pred) = +0.6303, mean(y - y_pred - t) = -0.5044; sd 0.0444 -> 0.0350
