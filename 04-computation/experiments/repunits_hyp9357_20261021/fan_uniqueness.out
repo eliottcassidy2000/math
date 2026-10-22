@@ -1,0 +1,19 @@
+     strong inventory below 2100: 723544 classes [119s]
+  ok   k = 5: H(F_k) = 31
+     k = 5, H = 31: 4 strong classes with fa <= 3 (orders [6, 7]); the fan or its converse among them: 1; fan self-converse: True
+  ok   k = 6: H(F_k) = 63
+     k = 6, H = 63: 2 strong classes with fa <= 3 (orders [8]); the fan or its converse among them: 2; fan self-converse: False
+  ok   k = 7: H(F_k) = 127
+     k = 7, H = 127: 4 strong classes with fa <= 3 (orders [8, 9]); the fan or its converse among them: 2; fan self-converse: False
+  ok   k = 8: H(F_k) = 255
+     k = 8, H = 255: 24 strong classes with fa <= 3 (orders [9, 10, 11]); the fan or its converse among them: 2; fan self-converse: False
+  ok   k = 9: H(F_k) = 511
+     k = 9, H = 511: 2 strong classes with fa <= 3 (orders [11]); the fan or its converse among them: 2; fan self-converse: False
+  ok   k = 10: H(F_k) = 1023
+     k = 10, H = 1023: 8 strong classes with fa <= 3 (orders [10, 11, 12]); the fan or its converse among them: 2; fan self-converse: False
+  ok   k = 11: H(F_k) = 2047
+     k = 11, H = 2047: 2 strong classes with fa <= 3 (orders [13]); the fan or its converse among them: 2; fan self-converse: False
+  ok   the least feedback arc number is 3 for every 5 <= k <= 11
+  ok   the fan and its converse are the only least-complexity realizations exactly for k in [6, 9, 11]
+
+ALL CHECKS PASSED  (120s)
