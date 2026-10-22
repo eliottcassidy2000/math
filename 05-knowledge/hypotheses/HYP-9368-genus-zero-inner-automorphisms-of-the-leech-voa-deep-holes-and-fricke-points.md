@@ -15,9 +15,20 @@ status: >
     constant term 24 of U_p F. So it is a Niemeier lattice with Coxeter number p - 1. Fricke points of prime order p
     therefore exist only for p - 1 in {2, 4, 6, 10, 12, 16, 18, 22, 30, 46}; all of these are realised (PROVED
     argument).
-  OPEN: the injectivity statement, that two Fricke points with the same orbifold neighbour N are equivalent; and the
-  composite orders, where (h+1)-points already realise every Fricke level h + 1. A natural route is the analogue for
-  Fricke points of Moller-Scheithauer's uniqueness of the inverse orbifold automorphism.
+  - Prime order p, classification (PROVED as a sketch; the argument is below). Up to Co_0 x Lambda, the Fricke
+    points of order p correspond bijectively to the Niemeier lattices with h = p - 1. The ingredients are:
+    - (i) the orbifold at a Fricke point is V_N' with dim V_1 = 24p, so h(N') = p - 1;
+    - (ii) the dual automorphism of V_N' is inner, e^{2 pi i u(0)} with u in (1/p)N', and regular, because its
+      fixed lattice is rootless;
+    - (iii) Kac: a regular element of order h + 1 has Kac coordinates (2 at one special node; 1 elsewhere), and the
+      special nodes form one Omega-orbit;
+    - (iv) gcd(h + 1, |P/N'|) = 1, so u is congruent to w(rho'/p) mod N' with w in W;
+    - (v) orbifold duality.
+  OPEN:
+  - Composite orders. Steps (ii)-(v) work for any order. The missing step is dim V'_1 = 24e at a Fricke point of
+    composite order e. The twisted sectors whose twist is a deep hole need the hole vertices and the g-action, and
+    the computations agree with 24e in all cases tested.
+  - A fully referenced write-up of (i)-(v).
   History: a first draft (S53, before fricke_h_plus_one.py) restricted the Fricke points to the eleven bad-prime
   multiples of deep holes, with orders 3, 4, 5, 6, 7, 9, 10, 11, 15, 23. The (h+1)-points REFUTED that version, by
   adding orders 8, 13, 14, 17, 19, 26, 31 and 47, before it was registered.
@@ -57,6 +68,30 @@ nearest Leech point at squared distance 2 − 2/n, all of whose proper multiples
 - Each Fricke class is determined by its orbifold neighbour N. For example, the D16E8 and E8³ shallow multiples of
   order 15 both have neighbour D8³, so they should be equivalent; they do have equal theta series of Λ + v
   (fricke_multiples.py).
+
+## The classification at prime order (sketch)
+
+Let v be a Fricke point of prime order p, and g = e^{2πi v(0)}.
+
+1. **Dimension.** Since gcd(i, p) = 1 for i ≠ 0, every twisted sector V_Λ(g^i) is a Galois and modular transform of
+   the g-twisted one. Its g-invariant part has character U_p F = Σ c_F(pn) qⁿ, whose constant term is c_F(0) = 24.
+   So V′ = V_Λ^{orb(g)} has dim V′_1 = 24 + 24(p − 1) = 24p.
+2. **The orbifold is a lattice VOA.** The orbifold of a lattice VOA by an inner automorphism is the lattice VOA of
+   the Kneser neighbour, so V′ = V_{N′} with N′ Niemeier and |R(N′)| = 24(p − 1). Hence h(N′) = p − 1, which forces
+   p ∈ {3, 5, 7, 11, 13, 17, 19, 23, 31, 47}.
+3. **The dual automorphism.** The dual automorphism τ of V_{N′} fixes V_{Λ_0} ⊃ Heisenberg, so τ = e^{2πiu(0)} with
+   u ∈ (1/p)N′. Its fixed lattice is Λ_0, which is rootless, so exp(2πiu) is regular.
+4. **Kac coordinates.** In each component, a regular element of order p = h + 1 lies in the open alcove with Kac
+   coordinates s_i ≥ 1 and Σ a_i s_i = h + 1. So exactly one node has s_i = 2, and it has label a_i = 1, i.e. it is
+   special. Ω permutes the special nodes transitively. Hence u_i ∈ W·(ρ_i/p) + P_i.
+5. **Glue.** u − w(ρ′/p) lies in P(X′) and p times it lies in N′. Since gcd(p, |P/N′|) = 1, it lies in N′. So
+   u ≡ w(ρ′/p) mod N′.
+6. **Duality.** Orbifold duality recovers (V_Λ, g) from (V_{N′}, τ). Conjugacy of inner automorphisms of V_Λ is
+   Co_0 ⋉ Λ-equivalence of v.
+
+So the order-p Fricke classes are indexed by the Niemeier lattices with h = p − 1:
+- two classes each at p = 7, 11, 13, 19 and 31;
+- one class each at p = 3, 5, 17, 23 and 47.
 
 ## Why the "only if" is plausible
 
