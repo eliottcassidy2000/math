@@ -1,0 +1,6 @@
+P_19 H 1172695746915 TT5 342 N_L (even L <= 10): [1, 342, 38304, 1915200, 46577664, 605159424] X_3(1) = -0.053994670471858894
+D_19.1 H 1172732961771 TT5 360 N_L (even L <= 10): [1, 342, 38304, 1915200, 46706688, 616771584] X_3(1) = -0.05398613518760344
+Delta TT5 = 18; Delta N_L for L = 2, 4, 6: [0, 0, 0]; Delta N_8 = 129024 = 7168 x Delta TT5
+four-loop delta_8 = +7.596992e-06, exact Delta phi_8 = +7.596992e-06 (Delta N_8/n^8)
+exact H(D_19)/H(P_19) - 1 = +3.1734e-05; strict four-loop Delta X_3(1) = +8.5353e-06 (ratio exact/strict 3.718); with the n^-4 finite-size term +2.9171e-05
+per forest length g(L) Delta phi_L / kappa: L8:+1.675e-05 L10:+1.371e-05 L12:+1.128e-07 L14:+1.099e-06 L16:+8.068e-08 L18:-1.879e-08 (sum +3.1734e-05)

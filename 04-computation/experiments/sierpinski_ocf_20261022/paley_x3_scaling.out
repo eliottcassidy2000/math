@@ -1,0 +1,19 @@
+P_19: q X_1 = -3.244979, q^2 X_2 = +28.376419, q^3 X_3 = -370.3494  (1s)
+P_23: q X_1 = -3.285870, q^2 X_2 = +28.420164, q^3 X_3 = -363.5059  (1s)
+P_31: q X_1 = -3.337888, q^2 X_2 = +28.509177, q^3 X_3 = -356.1392  (1s)
+P_43: q X_1 = -3.381198, q^2 X_2 = +28.609996, q^3 X_3 = -351.0156  (1s)
+P_47: q X_1 = -3.390914, q^2 X_2 = +28.635790, q^3 X_3 = -349.9999  (1s)
+P_59: q X_1 = -3.412407, q^2 X_2 = +28.696851, q^3 X_3 = -347.7620  (1s)
+P_67: q X_1 = -3.422578, q^2 X_2 = +28.727633, q^3 X_3 = -346.8239  (1s)
+P_71: q X_1 = -3.426826, q^2 X_2 = +28.740845, q^3 X_3 = -346.4425  (1s)
+P_79: q X_1 = -3.434062, q^2 X_2 = +28.763825, q^3 X_3 = -345.7683  (1s)
+P_83: q X_1 = -3.437169, q^2 X_2 = +28.773874, q^3 X_3 = -345.5076  (1s)
+q X_1: degree-3 fit in 1/q: limit -3.49999, 1/q coefficient +5.332, max resid 4.8e-07 (reference -3.5)
+q X_1: degree-4 fit in 1/q: limit -3.50000, 1/q coefficient +5.333, max resid 3.2e-07 (reference -3.5)
+q X_1: degree-5 fit in 1/q: limit -3.50000, 1/q coefficient +5.333, max resid 3.1e-07 (reference -3.5)
+q^2 X_2: degree-3 fit in 1/q: limit +28.99963, 1/q coefficient -20.939, max resid 1.4e-05 (reference 29.0)
+q^2 X_2: degree-4 fit in 1/q: limit +28.99998, 1/q coefficient -20.996, max resid 4.6e-07 (reference 29.0)
+q^2 X_2: degree-5 fit in 1/q: limit +29.00003, 1/q coefficient -21.006, max resid 2.1e-07 (reference 29.0)
+q^3 X_3: degree-3 fit in 1/q: limit -340.54943, 1/q coefficient -371.632, max resid 3.4e-02
+q^3 X_3: degree-4 fit in 1/q: limit -340.59517, 1/q coefficient -364.135, max resid 3.3e-02
+q^3 X_3: degree-5 fit in 1/q: limit -341.75049, 1/q coefficient -125.495, max resid 2.6e-02

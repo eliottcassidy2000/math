@@ -1,0 +1,13 @@
+D23_0  : F(T,x) exact (f_0 = H = 15759953146384333, sum = 23!, palindromic); N_L for even L: 1 506 91080 7832880 358074624 ...; forest identity sum N_L/(n)_L = H 2^22/23! exact
+D23_1  : F(T,x) exact (f_0 = H = 15759901654866253, sum = 23!, palindromic); N_L for even L: 1 506 91080 7832880 357988608 ...; forest identity sum N_L/(n)_L = H 2^22/23! exact
+D23_2  : F(T,x) exact (f_0 = H = 15759902090984757, sum = 23!, palindromic); N_L for even L: 1 506 91080 7832880 357988608 ...; forest identity sum N_L/(n)_L = H 2^22/23! exact
+D23_3  : F(T,x) exact (f_0 = H = 15759921650267341, sum = 23!, palindromic); N_L for even L: 1 506 91080 7832880 358017280 ...; forest identity sum N_L/(n)_L = H 2^22/23! exact
+D23_4  : F(T,x) exact (f_0 = H = 15760011998148461, sum = 23!, palindromic); N_L for even L: 1 506 91080 7832880 358174976 ...; forest identity sum N_L/(n)_L = H 2^22/23! exact
+D23_5  : F(T,x) exact (f_0 = H = 15760016645693693, sum = 23!, palindromic); N_L for even L: 1 506 91080 7832880 358189312 ...; forest identity sum N_L/(n)_L = H 2^22/23! exact
+D23_6  : F(T,x) exact (f_0 = H = 15759978266502125, sum = 23!, palindromic); N_L for even L: 1 506 91080 7832880 358117632 ...; forest identity sum N_L/(n)_L = H 2^22/23! exact
+D23_7  : F(T,x) exact (f_0 = H = 15759966226135093, sum = 23!, palindromic); N_L for even L: 1 506 91080 7832880 358103296 ...; forest identity sum N_L/(n)_L = H 2^22/23! exact
+D23_8  : F(T,x) exact (f_0 = H = 15760009030383957, sum = 23!, palindromic); N_L for even L: 1 506 91080 7832880 358160640 ...; forest identity sum N_L/(n)_L = H 2^22/23! exact
+D23_9  : F(T,x) exact (f_0 = H = 15759987145644133, sum = 23!, palindromic); N_L for even L: 1 506 91080 7832880 358131968 ...; forest identity sum N_L/(n)_L = H 2^22/23! exact
+D23_10 : F(T,x) exact (f_0 = H = 15759978266502125, sum = 23!, palindromic); N_L for even L: 1 506 91080 7832880 358117632 ...; forest identity sum N_L/(n)_L = H 2^22/23! exact
+D23_11 : F(T,x) exact (f_0 = H = 15759966226135093, sum = 23!, palindromic); N_L for even L: 1 506 91080 7832880 358103296 ...; forest identity sum N_L/(n)_L = H 2^22/23! exact
+P_23   : F(T,x) exact (f_0 = H = 15760206976379349, sum = 23!, palindromic); N_L for even L: 1 506 91080 7832880 358361344 ...; forest identity sum N_L/(n)_L = H 2^22/23! exact

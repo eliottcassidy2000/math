@@ -1,0 +1,15 @@
+n = 23: 1 distinct direction vector(s) Delta census / Delta TT5 over 12 classes
+n = 19: Delta TT5 = 18
+census type (scores|H)         n=23 per TT5   n=19 per TT5
+(0, 1, 2, 3, 4)|1                         1              1
+(0, 1, 3, 3, 3)|3                        -1             -1
+(0, 2, 2, 2, 4)|3                        -1             -1
+(0, 2, 2, 3, 3)|5                         1              1
+(1, 1, 1, 3, 4)|3                        -1             -1
+(1, 1, 2, 2, 4)|5                         1              1
+(1, 1, 2, 3, 3)|9                         2              2
+(1, 2, 2, 2, 3)|11                        1              1
+(1, 2, 2, 2, 3)|13                       -7             -7
+(1, 2, 2, 2, 3)|15                        3              3
+(2, 2, 2, 2, 2)|15                        1              1
+identical directions at n = 19 and n = 23: True

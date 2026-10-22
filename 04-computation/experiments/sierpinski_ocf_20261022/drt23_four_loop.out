@@ -1,0 +1,36 @@
+reduced weight tensors for 129 cores in 172s
+homomorphism tensors for 13 classes in 25s
+
+Universality (max over classes of |X(D) - X(P_23)|, value at z = 1 and largest series coefficient):
+   X1      : value at z=1 -1.4286391584e-01, max class difference 0.0e+00 (series 0.0e+00)
+   X2      : value at z=1 +5.3724316882e-02, max class difference 0.0e+00 (series 0.0e+00)
+   X3_small: value at z=1 -2.9885051893e-02, max class difference 0.0e+00 (series 8.8e-22)
+   X3 (P_23) = -2.9876381675e-02;  n^3 X3 = -363.5059
+
+Resummed second order: sum_(L<=22) g(L) phi_2(L) = 214.06345062; exact kappa(P_23) = 2.55698036 (ratio - 1 = +8.272e+01)
+weights w_j = E[g(M + j)]/E[g(M)] under Phi_2: w_0=1.000 w_2=4.101 w_4=15.658 w_6=44.626 w_8=137.869 w_10=638.329 w_12=2197.258 w_14=4101.990 w_16=10187.441
+negative control: the Phi_2 resummation weights above are unusable (sum g phi_2 is 80 times kappa).
+
+Per class (relative to P_23):  exact = log H(D) - log H(P_23);  strict = Delta X_3(1) = five + six;  dressed = strict + its n^-4 finite-size response
+class      TT5        exact       strict         five          six      dressed exact/strict   lowest Delta coefficients z^8, z^10, z^12
+D23_0     1478 -1.61059e-05 -4.02449e-06 -4.00991e-06 -1.45815e-08 -1.19888e-05        4.002   -3.661e-06 -3.184e-07 -4.153e-08
+D23_1     1466 -1.93731e-05 -5.23184e-06 -5.21288e-06 -1.89559e-08 -1.55854e-05        3.703   -4.760e-06 -4.139e-07 -5.399e-08
+D23_2     1466 -1.93455e-05 -5.23184e-06 -5.21288e-06 -1.89559e-08 -1.55854e-05        3.698   -4.760e-06 -4.139e-07 -5.399e-08
+D23_3     1470 -1.81044e-05 -4.82939e-06 -4.81189e-06 -1.74978e-08 -1.43865e-05        3.749   -4.394e-06 -3.820e-07 -4.983e-08
+D23_4     1492 -1.23716e-05 -2.61592e-06 -2.60644e-06 -9.47797e-09 -7.79271e-06        4.729   -2.380e-06 -2.069e-07 -2.699e-08
+D23_5     1494 -1.20767e-05 -2.41469e-06 -2.40595e-06 -8.74889e-09 -7.19327e-06        5.001   -2.197e-06 -1.910e-07 -2.492e-08
+D23_6     1484 -1.45120e-05 -3.42082e-06 -3.40842e-06 -1.23943e-08 -1.01905e-05        4.242   -3.112e-06 -2.706e-07 -3.530e-08
+D23_7     1482 -1.52759e-05 -3.62204e-06 -3.60892e-06 -1.31233e-08 -1.07899e-05        4.217   -3.295e-06 -2.865e-07 -3.737e-08
+D23_8     1490 -1.25599e-05 -2.81714e-06 -2.80694e-06 -1.02070e-08 -8.39215e-06        4.458   -2.563e-06 -2.229e-07 -2.907e-08
+D23_9     1486 -1.39486e-05 -3.21959e-06 -3.20793e-06 -1.16652e-08 -9.59103e-06        4.332   -2.929e-06 -2.547e-07 -3.322e-08
+D23_10    1484 -1.45120e-05 -3.42082e-06 -3.40842e-06 -1.23943e-08 -1.01905e-05        4.242   -3.112e-06 -2.706e-07 -3.530e-08
+D23_11    1482 -1.52759e-05 -3.62204e-06 -3.60892e-06 -1.31233e-08 -1.07899e-05        4.217   -3.295e-06 -2.865e-07 -3.737e-08
+P_23      1518 +0.00000e+00 +0.00000e+00 +0.00000e+00 +0.00000e+00 +0.00000e+00          nan   +0.000e+00 +0.000e+00 +0.000e+00
+
+Linear laws in TT5 over the 12 non-Paley classes (slope per transitive 5-set; max residual):
+   exact    : slope +2.6648e-07 (x H(P_23) = 4.1999e+09 per TT5), max residual 3.75e-07, line at Paley's TT5 = 1518: -5.473e-06
+   strict   : slope +1.0061e-07 (x H(P_23) = 1.5857e+09 per TT5), max residual 2.76e-18, line at Paley's TT5 = 1518: -2.873e-18
+   five     : slope +1.0025e-07 (x H(P_23) = 1.5799e+09 per TT5), max residual 2.28e-18, line at Paley's TT5 = 1518: +1.897e-18
+   six      : slope +3.6454e-10 (x H(P_23) = 5.7452e+06 per TT5), max residual 4.98e-21, line at Paley's TT5 = 1518: -1.482e-21
+   dressed  : slope +2.9972e-07 (x H(P_23) = 4.7236e+09 per TT5), max residual 1.67e-17, line at Paley's TT5 = 1518: -1.030e-17
+   resummed : slope +2.0385e-05 (x H(P_23) = 3.2128e+11 per TT5), max residual 9.17e-16, line at Paley's TT5 = 1518: -8.327e-17

@@ -1,0 +1,6 @@
+P_7 excess 1: z = 1: two-matrix -4.1501322751323e-01, general -4.1501322751323e-01; max series difference (L <= 12) 6.2e-14
+P_7 excess 2: z = 1: two-matrix +5.9520326584852e-01, general +5.9520326584852e-01; max series difference (L <= 12) 9.6e-15
+P_7 excess 3: z = 1: two-matrix -1.3881318346126e+00, general -1.3881318346126e+00; max series difference (L <= 12) 5.2e-15
+P_11 excess 1: z = 1: two-matrix -2.8070707070707e-01, general -2.8070707070707e-01; max series difference (L <= 12) 1.9e-14
+P_11 excess 2: z = 1: two-matrix +2.3515716049383e-01, general +2.3515716049383e-01; max series difference (L <= 12) 2.9e-15
+P_11 excess 3: z = 1: two-matrix -3.0488876505400e-01, general -3.0488876505400e-01; max series difference (L <= 12) 1.9e-15

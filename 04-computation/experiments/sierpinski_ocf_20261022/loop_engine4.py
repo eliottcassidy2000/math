@@ -130,7 +130,11 @@ class Network:
                 ops = [tuple(('b', e) for e in range(self.E))] + ops; out = ()
             else:
                 out = tuple(('b', e) for e in range(self.E))
-            cost, tree, opn = dp_plan(ops, dims, out)
+            for cap in (2 ** 25, 2 ** 26, 2 ** 27):          # escalate the intermediate-size cap only when needed
+                try:
+                    cost, tree, opn = dp_plan(ops, dims, out, memcap=cap); break
+                except ValueError:
+                    if cap == 2 ** 27: raise
             self.plans[key] = (cost, tree, opn, ops, out)
         return self.plans[key]
     def contract(self, Bstack, W=None):
