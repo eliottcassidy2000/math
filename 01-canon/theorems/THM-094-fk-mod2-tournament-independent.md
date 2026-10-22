@@ -2,7 +2,7 @@
 
 **Type:** Theorem (proved modulo universal Taylor zeros mod 2)
 **Certainty:** 4.5 — PROOF SKETCH COMPLETE (verified exhaustively n<=6, sampled n=7,8)
-**Status:** PROOF SKETCH + VERIFIED
+**Status:** PROVED by THM-4756 (mod-2 paragraph: F(T,x) = (1+x)^(n-1) mod 2), 2026-10-22, audited.
 **Added by:** kind-pasteur-2026-03-07-S38
 **Tags:** #f-polynomial #modular-arithmetic #redei #eulerian-numbers
 

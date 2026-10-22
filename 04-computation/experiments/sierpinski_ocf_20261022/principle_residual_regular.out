@@ -1,0 +1,2 @@
+n=9 (15 regular classes): corr(y, M4) = +0.841; fit y = 0.0073 + 6.2188 M4; spearman(kappa, rho) = -0.721 -> spearman(kappa, kappa2) = +0.796; max rel err 3.07e-02; argmax agree: True
+n=11 (1223 regular classes): corr(y, M4) = +0.956; fit y = 0.1179 + 5.8221 M4; spearman(kappa, rho) = -0.743 -> spearman(kappa, kappa2) = +0.849; max rel err 1.45e-02; argmax agree: True

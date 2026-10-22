@@ -2,7 +2,12 @@
 id: HYP-9028
 title: "The circulant Hamiltonian excess tends to e"
 status: >
-  OPEN (exact data n <= 17 rotational, p <= 19 Paley; both excess
+  PARTLY REFUTED (2026-10-22, mac-mini-2026-10-22-sierp, audit sierpinski_audit_20261022.md): the universality clause
+  (every regular sequence has exc -> e) is refuted by Wormald's Theorems 1, 2, 5 (regular blow-ups of C_3 have E exc ->
+  2 e^(1/3) = 2.7912; also exc(S_6) = 2.7826 > e); the rotational half is contradicted by exact data to n = 33 and by
+  HYP-9364 / HYP-9365 (limit cosh(1)/cos(1) = 2.855958, approach 1 - 1.3989/n); the Paley half survives as
+  HYP-9274 (A), now with rate e(1 - 3/(2q)) (HYP-9365 (a)).
+  ORIGINAL: OPEN (exact data n <= 17 rotational, p <= 19 Paley; both excess
   sequences increase toward ~2.52 with O(1/n)-shaped corrections
   consistent with limit e). Includes the proved free-rotation lemma
   n | H and the honest kill of the 1729/Carmichael numerology.

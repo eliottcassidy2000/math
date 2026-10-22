@@ -2,7 +2,7 @@
 
 **Type:** Theorem (proved for j < 3; inductive proof structure identified for all j)
 **Certainty:** 4.5 — PROOF SKETCH COMPLETE (algebraic proof for c_0,c_1,c_2; DC induction + palindrome for higher j; verified n<=10)
-**Status:** PROOF SKETCH + VERIFIED
+**Status:** PROVED by THM-4756 (2026-10-22; audited, 05-knowledge/results/sierpinski_audit_20261022.md). The deletion-contraction sketch below has a gap (T/e is not a tournament under THM-083's contraction); THM-4756 does not use it. Note: c_j here is the coefficient of (x-1)^j, i.e. c_(n-j) in THM-4756.
 **Added by:** kind-pasteur-2026-03-07-S37
 **Tags:** #f-polynomial #modular-arithmetic #taylor-expansion #eulerian-numbers
 

@@ -1,0 +1,13 @@
+q=  3 kappa=2.0 rho=2.0 kappa/rho=1.0 y_q=0.0  q(1-kappa/e)=0.79272335
+q=  7 kappa=2.4 rho=2.37037037037 kappa/rho=1.0125 y_q=-0.0875  q(1-kappa/e)=0.81962539
+q= 11 kappa=2.43950617284 rho=2.48832 kappa/rho=0.9803828177 y_q=0.21578901  q(1-kappa/e)=1.1281142
+q= 19 kappa=2.52714784933 rho=2.58117479171 kappa/rho=0.9790688556 y_q=0.39769174  q(1-kappa/e)=1.335971
+q= 23 kappa=2.55698036364 rho=2.6041990119 kappa/rho=0.9818682643 y_q=0.41702992  q(1-kappa/e)=1.3648083
+q= 27 kappa=2.57878836836 rho=2.62060088789 kappa/rho=0.9840446824 y_q=0.43079358  q(1-kappa/e)=1.385553
+q= 31 kappa=2.59551194521 rho=2.63287871773 kappa/rho=0.9858076362 y_q=0.43996328  q(1-kappa/e)=1.4001
+extrapolated y_inf from last 2 (q = [27, 31]): 0.50185876
+extrapolated y_inf from last 3 (q = [23, 27, 31]): 0.47864075
+extrapolated y_inf from last 4 (q = [19, 23, 27, 31]): 0.42515004
+extrapolated kappa_inf from last 2: 2.708396089  (e = 2.718281828)
+extrapolated kappa_inf from last 3: 2.720504708  (e = 2.718281828)
+extrapolated kappa_inf from last 4: 2.725664457  (e = 2.718281828)

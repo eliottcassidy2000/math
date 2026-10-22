@@ -1,0 +1,8 @@
+(1) S_k = Cay(Z/3^k, sign 1) is a tournament and equals C3^[k] (digit map), k<=5: True
+(2) x->3x+b embeds S_(k-1) on class b; class b -> class b+1 (k<=6, random): True
+    -1/2 = ...111 (base 3) mod 3^k and (3x+1)^k(x) = 3^k x + (3^k-1)/2: True
+(3) unit lambda = 1 mod 3 automorphism, = 2 mod 3 reverses every arc (all units, k<=5): True ; 1/2 mod 3 = 2
+(4) arc-flip law, 20000 random pairs x = y mod 2^t (t<=40): violations C-map 0, shortcut-map 0; (control without congruence: 964/2000 violate)
+(5) star = (x+y)/2 in F_3: True ; reduction = (-1)^(n-1) sum C(n-1,i) x_i (n<60): True ; endpoint-only lengths n<60: [1, 2, 4, 10, 28]
+(6) 2^k = 3J_k + (-1)^k (k<80): True ; J_0..J_8 = [0, 1, 1, 3, 5, 11, 21, 43, 85] ; odd n < 1e6 with 3n+1 a power of 2: [1, 5, 21, 85, 341, 1365, 5461, 21845, 87381, 349525] == J_(2m): True
+python3 c_thm4754_check.py  2.98s user 0.01s system 99% cpu 2.992 total

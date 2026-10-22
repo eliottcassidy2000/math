@@ -1,0 +1,6 @@
+rot n=15 L=1: excess-0 sum = +0.000000000000   predicted (log rho coeff) = +0.000000000000   
+rot n=15 L=2: excess-0 sum = +0.933333333333   predicted (log rho coeff) = +0.933333333333   
+rot n=15 L=3: excess-0 sum = -0.000000000000   predicted (log rho coeff) = +0.000000000000   exc1: -2.158e-19
+rot n=15 L=4: excess-0 sum = +0.000000000000   predicted (log rho coeff) = +0.000000000000   exc1: -1.991e-01  exc2: +1.244e-02
+rot n=15 L=5: excess-0 sum = +0.000000000000   predicted (log rho coeff) = +0.000000000000   exc1: -1.707e-18  exc2: +5.052e-19  exc3: +1.404e-21
+rot n=15 L=6: excess-0 sum = +0.043466447188   predicted (log rho coeff) = +0.043466447188   exc1: -6.025e-02  exc2: +1.005e-01  exc3: -1.766e-02  exc4: +7.374e-04

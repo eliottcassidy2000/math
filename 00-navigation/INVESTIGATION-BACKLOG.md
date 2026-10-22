@@ -8424,6 +8424,7 @@ and may yield the free density's exact edge constant (numerics give `Ã¢â€°
 **Next step:** (1) The Fourier proof cannot extend to n>=9 for middle degrees. Focus on algebraic approaches (OCF already proved by Grinberg-Stanley). (2) The degree-0, degree-2, and degree-(n-1) identities still hold for all n and have clean proofs. Can they be combined differently?
 
 ### INV-123: THM-086 Universal Taylor Zeros mod 3 Ã¢â‚¬â€ PROOF SKETCH COMPLETE
+**CLOSED 2026-10-22 (mac-mini-2026-10-22-sierp):** PROVED by THM-4756 (F(T,x) = H(T) A_n(x) mod 3 and F = (1+x)^(n-1) mod 2 for every tournament; audited, 05-knowledge/results/sierpinski_audit_20261022.md).
 **Source:** kind-pasteur-2026-03-07-S37
 **Status:** PROOF SKETCH COMPLETE. Verified n=5-10, inductive structure identified.
 **What:** c_j(T) = 0 mod 3 for all tournaments T on n vertices and all j < val(n), where val(n) = 2*floor((n-1)/2). This means (x-1)^{val(n)} | F(T,x) mod 3. For n odd, F(T,x) mod 3 is determined by a SINGLE parameter alpha = c_{n-1}(T) mod 3.
@@ -8434,6 +8435,7 @@ and may yield the free density's exact edge constant (numerics give `Ã¢â€°
 **Next step:** (1) Prove almost-tournament claim algebraically (N_uv formula reduces it to Taylor zeros of the "adjacent pair" polynomial). (2) Extend to mod 9. (3) Mod p for p>=5 INVESTIGATED (S38): universal zeros match Eulerian val for n >= p+2 but Eulerian conjecture FAILS for p>=5 (multiple free parameters).
 
 ### INV-124: THM-094 F_k mod 2 Tournament-Independent Ã¢â‚¬â€ PROOF SKETCH COMPLETE
+**CLOSED 2026-10-22 (mac-mini-2026-10-22-sierp):** PROVED by THM-4756 (F(T,x) = H(T) A_n(x) mod 3 and F = (1+x)^(n-1) mod 2 for every tournament; audited, 05-knowledge/results/sierpinski_audit_20261022.md).
 **Source:** kind-pasteur-2026-03-07-S38
 **Status:** PROOF SKETCH COMPLETE. Verified exhaustively n<=6, sampled n=7,8.
 **What:** F_k(T) = A(n,k) = C(n-1, k) mod 2 for ALL tournaments T. F(T,x) = (1+x)^{n-1} mod 2 is COMPLETELY tournament-independent. Proof via universal Taylor zeros mod 2 (c_j = 0 for j < n-1) + Redei's theorem (F_{n-1} = Hamiltonian path count is always odd). The mod-2 result is the strongest possible: individual F_k are determined, not just linear combinations.

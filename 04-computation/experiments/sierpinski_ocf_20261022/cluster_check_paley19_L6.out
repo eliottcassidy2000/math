@@ -1,0 +1,6 @@
+paley n=19 L=1: excess-0 sum = +0.000000000000   predicted (log rho coeff) = +0.000000000000   
+paley n=19 L=2: excess-0 sum = +0.947368421053   predicted (log rho coeff) = +0.947368421053   
+paley n=19 L=3: excess-0 sum = -0.000000000000   predicted (log rho coeff) = +0.000000000000   exc1: +0.000e+00
+paley n=19 L=4: excess-0 sum = +0.000000000000   predicted (log rho coeff) = +0.000000000000   exc1: -1.627e-01  exc2: +7.873e-03
+paley n=19 L=5: excess-0 sum = +0.000000000000   predicted (log rho coeff) = +0.000000000000   exc1: +1.489e-19  exc2: +1.445e-21  exc3: +1.186e-20
+paley n=19 L=6: excess-0 sum = +0.000874763085   predicted (log rho coeff) = +0.000874763085   exc1: -6.814e-03  exc2: +6.033e-02  exc3: -9.000e-03  exc4: +2.908e-04

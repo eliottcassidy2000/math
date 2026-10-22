@@ -1,0 +1,10 @@
+n= 7 classes=  2 kappa/rho in [0.9022, 1.0125]  n(1-min)=0.684 n(1-max)=-0.087  spearman(kappa,rho)=-1.000  argmax rho is R_n: True  argmax H is R_n: False
+n= 9 classes=  4 kappa/rho in [0.8922, 0.9644]  n(1-min)=0.971 n(1-max)=0.321  spearman(kappa,rho)=-0.333  argmax rho is R_n: True  argmax H is R_n: False
+n=11 classes=  4 kappa/rho in [0.9171, 0.9804]  n(1-min)=0.912 n(1-max)=0.216  spearman(kappa,rho)=-0.400  argmax rho is R_n: True  argmax H is R_n: False
+n=13 classes=  6 kappa/rho in [0.9245, 0.9643]  n(1-min)=0.981 n(1-max)=0.464  spearman(kappa,rho)=+0.600  argmax rho is R_n: True  argmax H is R_n: True
+n=15 classes= 16 kappa/rho in [0.9269, 0.9680]  n(1-min)=1.096 n(1-max)=0.479  spearman(kappa,rho)=-0.035  argmax rho is R_n: True  argmax H is R_n: True
+n=17 classes= 16 kappa/rho in [0.9375, 0.9722]  n(1-min)=1.062 n(1-max)=0.473  spearman(kappa,rho)=+0.118  argmax rho is R_n: True  argmax H is R_n: True
+n=19 classes= 30 kappa/rho in [0.9425, 0.9791]  n(1-min)=1.092 n(1-max)=0.398  spearman(kappa,rho)=-0.009  argmax rho is R_n: True  argmax H is R_n: True
+n=21 classes= 88 kappa/rho in [0.9454, 0.9781]  n(1-min)=1.146 n(1-max)=0.460  spearman(kappa,rho)=-0.025  argmax rho is R_n: True  argmax H is R_n: True
+n=23 classes= 94 kappa/rho in [0.9505, 0.9819]  n(1-min)=1.139 n(1-max)=0.417  spearman(kappa,rho)=-0.044  argmax rho is R_n: True  argmax H is R_n: True
+n=25 classes=208 kappa/rho in [0.9537, 0.9817]  n(1-min)=1.157 n(1-max)=0.458  spearman(kappa,rho)=+0.092  argmax rho is R_n: True  argmax H is R_n: True

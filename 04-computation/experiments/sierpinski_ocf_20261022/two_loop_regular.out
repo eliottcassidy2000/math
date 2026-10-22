@@ -1,0 +1,10 @@
+n=9: 15 regular classes
+  two-loop: corr(y, y_pred) = +0.9700, spearman = +0.9643, mean(y - y_pred) = -0.0528, rms scatter = 0.0718; y in [0.321, 0.971] (sd 0.1640)
+  dumbbell share: n*DB in [-0.0002, +0.0000]; without dumbbells corr = +0.9700
+  empirical a + b M4 (fitted a = 0.007, b = 6.219): rms scatter = 0.0888, corr = +0.8408
+  ranking: spearman(kappa, rho) = -0.7143, spearman(kappa, rho(1 - y_pred/n)) = +0.8321; argmax kappa found: True; max rel. error |kappa_2/kappa - 1| = 2.46e-02
+n=11: 1223 regular classes
+  two-loop: corr(y, y_pred) = +0.9777, spearman = +0.9731, mean(y - y_pred) = -0.0608, rms scatter = 0.0227; y in [0.216, 0.917] (sd 0.0679)
+  dumbbell share: n*DB in [-0.0003, +0.0000]; without dumbbells corr = +0.9777
+  empirical a + b M4 (fitted a = 0.118, b = 5.822): rms scatter = 0.0199, corr = +0.9559
+  ranking: spearman(kappa, rho) = -0.7427, spearman(kappa, rho(1 - y_pred/n)) = +0.8956; argmax kappa found: True; max rel. error |kappa_2/kappa - 1| = 2.26e-02

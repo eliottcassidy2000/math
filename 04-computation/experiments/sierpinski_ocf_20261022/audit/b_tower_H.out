@@ -1,0 +1,13 @@
+shape-sum law vs direct DP on 40 random C3[B0,B1,B2] (<= 12 vertices): mismatches = 0
+c_m(C3) = [3, 6, 6]
+c_m(S_2) direct DP = [3159, 42606, 253206, 874800, 1934280, 2812320, 2630880, 1451520, 362880]
+c_m(S_2) shape-sum == direct: True
+H(S_2) closed form from c(C3): 3159  H(S_3) closed form from c(S_2): 417382500592116023859  shape-sum M=1: 417382500592116023859
+F(S_3,x): palindromic: True  all >= 0: True  sum = 27!: True  F_26 = H: True
+H(S_4) via closed form from c(S_3): 13012108616881519383753309779003356224178920390892300114281566860926762310521473603393055140231223
+k=1 n=3: H has 1 digits, v3(H)=1, (3^k-1)/2=1, kappa=H 2^(n-1)/n! = 2.0000000
+k=2 n=9: H has 4 digits, v3(H)=5, (3^k-1)/2=4, kappa=H 2^(n-1)/n! = 2.2285714
+k=3 n=27: H has 21 digits, v3(H)=13, (3^k-1)/2=13, kappa=H 2^(n-1)/n! = 2.5723575
+k=4 n=81: H has 98 digits, v3(H)=40, (3^k-1)/2=40, kappa=H 2^(n-1)/n! = 2.7135298
+H(S_3) = 417382500592116023859
+python3 b_tower_H.py  0.51s user 0.01s system 99% cpu 0.521 total

@@ -1,0 +1,2 @@
+n=9: regular classes=15  kappa/rho in [0.8922, 0.9644]  spearman(kappa, rho) = -0.710
+n=11: regular classes=1223  kappa/rho in [0.9166, 0.9804]  spearman(kappa, rho) = -0.743

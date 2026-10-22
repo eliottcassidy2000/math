@@ -1,0 +1,25 @@
+All circulant classes: exact y = n(1 - kappa/rho) against two-loop y_pred
+ n= 9 (  4 classes): corr(y, y_pred) = +0.9991, spearman = +0.8000, mean(y - y_pred) = -0.0102, rms(y - y_pred - mean) = 0.1204, y range [0.321, 0.971]
+ n=11 (  4 classes): corr(y, y_pred) = +0.9691, spearman = +0.8000, mean(y - y_pred) = -0.1015, rms(y - y_pred - mean) = 0.0883, y range [0.216, 0.912]
+ n=13 (  6 classes): corr(y, y_pred) = +0.9885, spearman = +1.0000, mean(y - y_pred) = -0.0524, rms(y - y_pred - mean) = 0.0296, y range [0.464, 0.981]
+ n=15 ( 16 classes): corr(y, y_pred) = +0.9939, spearman = +0.9676, mean(y - y_pred) = -0.0478, rms(y - y_pred - mean) = 0.0301, y range [0.479, 1.096]
+ n=17 ( 16 classes): corr(y, y_pred) = +0.9939, spearman = +0.9824, mean(y - y_pred) = -0.0466, rms(y - y_pred - mean) = 0.0183, y range [0.473, 1.062]
+ n=19 ( 30 classes): corr(y, y_pred) = +0.9953, spearman = +0.9938, mean(y - y_pred) = -0.0453, rms(y - y_pred - mean) = 0.0162, y range [0.398, 1.092]
+ n=21 ( 88 classes): corr(y, y_pred) = +0.9969, spearman = +0.9920, mean(y - y_pred) = -0.0409, rms(y - y_pred - mean) = 0.0142, y range [0.460, 1.146]
+ n=23 ( 94 classes): corr(y, y_pred) = +0.9971, spearman = +0.9956, mean(y - y_pred) = -0.0398, rms(y - y_pred - mean) = 0.0110, y range [0.417, 1.139]
+ n=25 (208 classes): corr(y, y_pred) = +0.9984, spearman = +0.9974, mean(y - y_pred) = -0.0374, rms(y - y_pred - mean) = 0.0090, y range [0.458, 1.157]
+
+Rotational R_n: n, exact y, y_pred, (y - y_pred), n*(y - y_pred)
+  n=25: y=1.15729 y_pred=1.19170 diff=-0.03441 n*diff=-0.860  [nF8=-5.6225 nTheta=+0.0569 E0C(L,2)=4.3738]
+  n=27: y=1.17327 y_pred=1.20686 diff=-0.03360 n*diff=-0.907  [nF8=-5.6522 nTheta=+0.0531 E0C(L,2)=4.3923]
+  n=29: y=1.18728 y_pred=1.21996 diff=-0.03269 n*diff=-0.948  [nF8=-5.6777 nTheta=+0.0497 E0C(L,2)=4.4081]
+  n=31: y=1.19964 y_pred=1.23139 diff=-0.03175 n*diff=-0.984  [nF8=-5.6999 nTheta=+0.0467 E0C(L,2)=4.4217]
+  n=33: y=1.21064 y_pred=1.24145 diff=-0.03081 n*diff=-1.017  [nF8=-5.7192 nTheta=+0.0441 E0C(L,2)=4.4337]
+
+Paley P_q (prime q): q, exact y, y_pred, diff, q*diff
+  q=19: y=0.39769 y_pred=0.47942 diff=-0.08173 q*diff=-1.553  [nF8=-3.3000 nTheta=+0.0550 E0C(L,2)=2.7656]
+  q=23: y=0.41703 y_pred=0.48347 diff=-0.06644 q*diff=-1.528  [nF8=-3.3333 nTheta=+0.0475 E0C(L,2)=2.8024]
+  q=31: y=0.43996 y_pred=0.48815 diff=-0.04818 q*diff=-1.494  [nF8=-3.3750 nTheta=+0.0371 E0C(L,2)=2.8497]
+
+Limits: R_n at n = 2001 and Paley-like flat spectrum at q = 2003 (prime 3 mod 4):
+  R_2001: y_pred = 1.396259 [nF8=-6.00585 nTheta=+0.00078 E0=4.60881]

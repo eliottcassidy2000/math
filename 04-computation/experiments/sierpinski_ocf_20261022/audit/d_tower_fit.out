@@ -1,0 +1,15 @@
+kappa(S_k): {1: '2.0', 2: '2.2285714', 3: '2.5723575', 4: '2.7135298', 5: '2.7648911', 6: '2.7825644'}
+kappa_S = 2.7915098881983477675
+Richardson in 1/n through k=(3, 4, 5, 6): 2.791509575761   minus kappa_S = -3.12e-7
+Richardson in 1/n through k=(4, 5, 6): 2.791504731781   minus kappa_S = -5.16e-6
+Richardson in 1/n through k=(2, 3, 4, 5, 6): 2.791510114579   minus kappa_S = 2.26e-7
+Richardson in 1/n through k=(2, 3, 4, 5): 2.791466470372   minus kappa_S = -4.34e-5
+Richardson in 1/n through k=(3, 4, 5): 2.791378788301   minus kappa_S = -0.000131
+Richardson in 1/n through k=(5, 6): 2.791401072686   minus kappa_S = -0.000109
+differences ratios: ['1.504', '0.4106', '0.3638', '0.3441']
+k=1 n=3: rho(S_k)=2.0  1-kappa/rho = 0.0  n*(1-kappa/rho) = 0.0
+k=2 n=9: rho(S_k)=2.497951752  1-kappa/rho = 0.1078  n*(1-kappa/rho) = 0.9706
+k=3 n=27: rho(S_k)=2.690011824  1-kappa/rho = 0.04374  n*(1-kappa/rho) = 1.181
+k=4 n=81: rho(S_k)=2.757258665  1-kappa/rho = 0.01586  n*(1-kappa/rho) = 1.285
+k=5 n=243: rho(S_k)=2.780045798  1-kappa/rho = 0.005451  n*(1-kappa/rho) = 1.325
+k=6 n=729: rho(S_k)=2.787683282  1-kappa/rho = 0.001836  n*(1-kappa/rho) = 1.339

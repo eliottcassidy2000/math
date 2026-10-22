@@ -2,12 +2,17 @@
 id: THM-4756
 title: "Every tournament is H copies of the transitive tournament modulo 3: the forward-step polynomial F(T,x) = sum over permutations of x^(number of T-forward steps) satisfies F(T,x) = H(T) A_n(x) (mod 3), with A_n the Eulerian polynomial; A_n = (x-1)^(n-1) (n odd), (x-1)^(n-2)(x+1) (n even) mod 3. Proof: F(T,x) = sum_m c_m(T)(x-1)^(n-m) with c_m the ordered path-cover numbers, c_m = 0 mod 3 for m >= 3 (factor m!), and c_2 = ((-1)^n + 1) H mod 3 from the exact doubled Redei-Berge identity sum_(X subset V) H(T[X])H(T[V\\X]) = sum_R 4^|R| 2^(n-|V(R)|) (R over sets of disjoint odd cycles). Also F(T,x) = (1+x)^(n-1) mod 2. This completes the proof of THM-086 (and its Eulerian corollary); at the orders n = 2*3^j + 1 the mod-3 pattern collapses to three terms. Second level: the number u_3 of unordered 3-path covers satisfies u_3 = H + hc mod 3 for odd n (hc = directed Hamiltonian cycles) and u_3 = 0 mod 3 for even n."
 status: >
-  PROVED (pre-audit, mac-mini-2026-10-22-sierp). Exhaustively verified for every tournament with n <= 9 (198,946 classes,
+  PROVED (mac-mini-2026-10-22-sierp; audited 2026-10-22, 05-knowledge/results/sierpinski_audit_20261022.md: complete proof of THM-086). Exhaustively verified for every tournament with n <= 9 (198,946 classes,
   fwd_poly_mod3.out), and the exact identity of step 2 for every tournament with n <= 6 (uT11_identity.out).
   It upgrades THM-086 (kind-pasteur S37, "PROOF SKETCH + VERIFIED n <= 10") to a complete proof of its Theorem A
   (3 | c_j for j < val(n)) and of its Eulerian corollary (3 | A(n,k) implies 3 | F_k(T)). Step 2 is the principal
   specialisation U_T(1,1) of the Redei-Berge / Grinberg-Stanley function in power sums (GS-OCF bridge), read modulo 3.
-  The failure for p = 5 noted in THM-086 is explained: modulo 5 the weights 2^(-|C|) depend on the cycle length.
+  The failure for p = 5 noted in THM-086 is consistent with this (heuristic, not a proof): modulo 5 the weights 2^(-|C|) depend on the cycle length.
+  PRIOR ART: the exact identity of step 2 is already stated and checked (N <= 7) as "U_T(1,1) = sum over ordered 2-block covers of H(T[B1]) H(T[B2]) = sum_S 4^|S| 2^(N-|V(S)|)" in 05-knowledge/results/procgen_selfie_20261001_selfie_tournaments.md (THM-4524 package, section 2); its mod-3 use is new here.
+  The mod-2 paragraph completes THM-094 (F = (1+x)^(n-1) mod 2, previously a proof sketch). Theorem B of THM-086 also follows (the coefficient of (x-1)^val(n) is +-H mod 3, and H = 1 for the transitive tournament); its "30-35%" is the frequency of 3 | H (labelled: 25%, 25%, 41.4%, 29.7% at n = 3..6).
+  NOTATION: THM-086's c_j is the coefficient of (x-1)^j, i.e. c_(n-j) here. THM-086's deletion-contraction sketch assumed that T/e is a tournament, which fails for THM-083's contraction; this proof does not use it.
+  AUDIT: independently audited 2026-10-22 (05-knowledge/results/sierpinski_audit_20261022.md): no mathematical error;
+  credits, digits and labels corrected as required there.
 session: mac-mini-2026-10-22-sierp
 source: 05-knowledge/results/sierpinski_steiner_collatz_tournaments_20261022.md
 scripts:
@@ -20,6 +25,8 @@ depends_on:
 related:
   - 01-canon/theorems/THM-086-universal-taylor-zeros-mod3.md
   - 01-canon/theorems/THM-085-f-omega-mod9-universal.md
+  - 01-canon/theorems/THM-094-fk-mod2-tournament-independent.md
+  - 01-canon/theorems/THM-4524-selfie-tournaments-loop-gauge-arc-parity-and-the-odd-mallows-sloane-partner.md
   - 01-canon/theorems/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md
 ---
 
@@ -51,7 +58,7 @@ So
 
 For the transitive tournament (`H = 1`), `F` is the Eulerian polynomial `A_n`. Hence `F(T, x) ≡ H(T) A_n(x)` for every `T`. Checked independently against the Eulerian numbers for `n ≤ 40`.
 
-**Modulo 2.** Every `c_m` with `m ≥ 2` is even and `H` is odd (Rédei). So `F(T, x) ≡ (1 + x)^(n−1)`: every tournament carries the binary Sierpinski row.
+**Modulo 2.** Every `c_m` with `m ≥ 2` is even and `H` is odd (Rédei). So `F(T, x) ≡ (1 + x)^(n−1)`: every tournament carries the binary Sierpinski row. This proves THM-094.
 
 **Second level (PROVED; exhaustive for every tournament with `n ≤ 8`, `u3_congruence.out`).** With `k = 3` in Step 2, `U_T(1,1,1) = Σ_R 6^|R| 3^(n − |V(R)|)`. Modulo 9:
 * every term vanishes except those with `|R| = 1` and `|V(R)| = n`, i.e. directed Hamiltonian cycles, which exist only for odd `n`;

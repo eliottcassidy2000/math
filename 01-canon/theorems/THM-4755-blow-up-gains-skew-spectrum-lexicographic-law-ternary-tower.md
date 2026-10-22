@@ -1,8 +1,8 @@
 ---
 id: THM-4755
-title: "Blow-up gains through the skew spectrum, the lexicographic law, and the ternary tower product. Let T* be a regular tournament on d vertices with skew matrix S = A - A^T, whose nontrivial eigenvalues are +-i sigma_k. (1) Wormald's blow-up gain rho_T(T*) = lim E[H(T(T*))]/g(dn) equals det(dI - S)/|det(idI - S)| = prod_k (d^2 + sigma_k^2)/(d^2 - sigma_k^2). This is the formula claimed by Bhattacharjee (2026) for Wormald's Conjecture 6; it is rederived here from the block walk, whose transition matrix restricted to the mean-zero space is S/d. (2) Lexicographic law: for regular Q and B the nontrivial skew spectrum of Q[B] is |B| sigma(Q) together with |Q| copies of sigma(B); so the gain factorises by levels. (3) Ternary towers S_k = C_3^[k]: rho_T(S_k) = prod_(i<k) ((3^(2i+1)+1)/(3^(2i+1)-1))^(3^i), so rho_T(C_3[C_3]) = 2 (28/26)^3 = 5488/2197 (Wormald's entry for R'_9), and the limit is kappa_S = 2.79150988819834634766... (4) FINITE-EXACT: H(S_k) for k <= 6 (729 vertices); the normalised counts 2, 2.2286, 2.5724, 2.7135, 2.7649, 2.7826 extrapolate to kappa_S to within 3.1e-7; v_3(H(S_k)) = (3^k-1)/2 = v_3|Aut| for k = 1, 3, 4, 5, 6 and one more at k = 2. (5) log rho_T = sum_k 2 artanh(sigma_k^2/d^2) = -sum_(m>=0) tr(S^(4m+2))/((2m+1) d^(4m+2)); doubly regular T* give ((d+1)/(d-1))^((d-1)/2) -> e, and cyclic R_d give the limit cosh(1)/cos(1) (Bhattacharjee)."
+title: "Blow-up gains through the skew spectrum, the lexicographic law, and the ternary tower product. Let T* be a regular tournament on d vertices with skew matrix S = A - A^T, whose nontrivial eigenvalues are +-i sigma_k. (1) Wormald's blow-up gain rho_T(T*) = lim E[H(T(T*))]/g(dn) equals det(dI - S)/|det(idI - S)| = prod_k (d^2 + sigma_k^2)/(d^2 - sigma_k^2). This is the formula claimed by Bhattacharjee (2026) for Wormald's Conjecture 6; it is rederived here from the block walk, whose transition matrix restricted to the mean-zero space is S/d. (2) Lexicographic law: for regular Q and B the nontrivial skew spectrum of Q[B] is |B| sigma(Q) together with |Q| copies of sigma(B); so the gain factorises by levels. (3) Ternary towers S_k = C_3^[k]: rho_T(S_k) = prod_(i<k) ((3^(2i+1)+1)/(3^(2i+1)-1))^(3^i), so rho_T(C_3[C_3]) = 2 (28/26)^3 = 5488/2197 (Wormald's entry for R'_9), and the limit is kappa_S = 2.79150988819834776750... (4) FINITE-EXACT: H(S_k) for k <= 6 (729 vertices); the normalised counts 2, 2.2286, 2.5724, 2.7135, 2.7649, 2.7826 extrapolate to kappa_S to within 3.1e-7; v_3(H(S_k)) = (3^k-1)/2 = v_3|Aut| for k = 1, 3, 4, 5, 6 and one more at k = 2. (5) log rho_T = sum_k 2 artanh(sigma_k^2/d^2) = -sum_(m>=0) tr(S^(4m+2))/((2m+1) d^(4m+2)); doubly regular T* give ((d+1)/(d-1))^((d-1)/2) -> e, and cyclic R_d give the limit cosh(1)/cos(1) (Bhattacharjee)."
 status: >
-  Pre-audit (mac-mini-2026-10-22-sierp).
+  Audited 2026-10-22 (05-knowledge/results/sierpinski_audit_20261022.md): no mathematical error (mac-mini-2026-10-22-sierp).
   CITED + INDEPENDENTLY REDERIVED: statement 1. Wormald, "Tournaments with many Hamilton cycles", arXiv:2610.16245 (posted
   2026-10-12), Theorems 1-5 and the table on p. 5. D. Bhattacharjee, github.com/creelie/Breakthrough-problems-1, release v1.0.0
   (2026-10-14, MIT, unreviewed): H = d det(d^2 I + S^2)/det(d^2 I - S^2) for Conjecture 6, the closed form for R_d, the limit
@@ -10,9 +10,12 @@ status: >
   Proposition 3.1, which identifies Wormald's analytic H with a determinant and is not formalised.
   The derivation here (section 1) is independent and different; it is a derivation through the local limit theorem for
   finite Markov chains, not a formal proof. It agrees exactly with every regular-tournament entry of Wormald's table
-  (R_3 ... R_13, R'_9, the non-circulant 7-vertex example; R_21 ... R_101 to all printed digits). Wormald's six other 9-vertex
-  'circulants' are not tournaments as printed (each connection set contains both r and 9 - r), and their values lie below the
-  Jensen bound 2.44, so they cannot be regular tournaments.
+  (R_3 ... R_13, R'_9, the non-circulant 7-vertex example; R_21 ... R_101 to all printed digits). Wormald lists seven 9-vertex
+  'circulants' (p. 6): six are not tournaments as printed (each connection set contains both r and 9 - r) and lie below the
+  Jensen bound 2.44; the seventh, D = {1,2,3,5}, is a tournament with rho = 451696/183937 = 2.45571, matching his 2.4557.
+  This observation is Bhattacharjee's (Remark on Wormald's circulants in the release preprint), not new here.
+  AUDIT: independently audited 2026-10-22 (05-knowledge/results/sierpinski_audit_20261022.md): no mathematical error;
+  credits, digits and labels corrected as required there.
   PROVED: statements 2, 3 and 5 (linear algebra on top of statement 1).
   FINITE-EXACT: statement 4. The C_3 substitution recursion is THM-3121 (codex) and Session24's DP; Session24 holds the values
   through 243 vertices. New here are the value at 729 vertices, the normalised sequence and its limit.
@@ -85,18 +88,18 @@ So the nontrivial spectrum is `b·σ(Q)` together with `q` copies of `σ(B)`, an
 
 For `S_k = C_3[S_(k−1)]`, the level-`i` modes are `3^i` pairs with `σ^2 = 3^(2(k−i)−1)`, against `d^2 = 3^(2k)`. So
 
-    ρ_T(S_k) = Π_(i=0)^(k−1) ((3^(2i+1) + 1)/(3^(2i+1) − 1))^(3^i)  →  κ_S = 2 · (28/26)^3 · (244/242)^9 · (2188/2186)^27 ⋯ = 2.79150988819834634766…
+    ρ_T(S_k) = Π_(i=0)^(k−1) ((3^(2i+1) + 1)/(3^(2i+1) − 1))^(3^i)  →  κ_S = 2 · (28/26)^3 · (244/242)^9 · (2188/2186)^27 ⋯ = 2.79150988819834776750…
 
 This is exact for `k ≤ 3` against the determinant (`tower_rho.out`).
 
 * The first factor is `(3 + 1)/(3 − 1)`, i.e. Wormald's Theorem 2.
-* The second is `((3³ + 1)/(3³ − 1))^3 = ((7 + 21)/(25 + 1))^3`.
+* The second is `((3³ + 1)/(3³ − 1))^3`. (Reading 28 and 26 as `7 + 21` and `25 + 1` is NUMEROLOGY.)
 * Equivalently, `log κ_S = 2 Σ_(i≥0) 3^i artanh(3^(−2i−1)) = 1 + 2 Σ_(m≥3 odd) 3^(−m)/(m(1 − 3^(1−2m)))`. The leading 1 is the factor `e`.
 * `κ_S` exceeds Wormald's regular-block value for `C_3[C_3]`, `(5488/2197)·e^(1/9)`, by a relative `4·10^(−7)`.
 
 ## 4. Exact tower counts (FINITE-EXACT)
 
-The C_3 substitution recursion (THM-3121, Session24) gives `H(S_k)` exactly for `k ≤ 6` (`ternary_fast_k6.out`). The values for `k ≤ 3` also come from inclusion–exclusion (`ternary_H.out`).
+The C_3 substitution recursion (THM-3121, Session24) gives `H(S_k)` exactly for `k ≤ 6` (`ternary_fast_k6.out`). The values for `k ≤ 3` also come from inclusion–exclusion (`ternary_H.out`). The values for `k ≤ 5` were recomputed independently in the audit (`sierpinski_audit_20261022.md`). Since `Aut` acts freely on Hamiltonian paths (LEM-003), `v_3(H) ≥ v_3|Aut| = (3^k − 1)/2`.
 
 | `k` | `n` | `H·2^(n−1)/n!` | `v_3(H)` | `v_3|Aut|` |
 |---|---|---|---|---|
@@ -109,7 +112,7 @@ The C_3 substitution recursion (THM-3121, Session24) gives `H(S_k)` exactly for 
 
 * Successive differences shrink by ratios 0.41, 0.36, 0.34, which tend to 1/3.
 * Richardson extrapolation in `1/n` gives 2.79150957576 (four terms), against `κ_S = 2.79150988820`.
-* So the towers' own normalised counts converge to the limit of their blow-up gains (HYP-9364 (a)).
+* This supports the conjecture HYP-9364 (a) that the towers' own normalised counts converge to the limit of their blow-up gains. Richardson through 3 or 5 levels gives −5.2·10^(−6) and +2.3·10^(−7), so the agreement is robust to about 5–6 digits; it is not a proof.
 
 ## 5. Spectral moments, Paley and the rotational limit
 
@@ -121,13 +124,13 @@ The C_3 substitution recursion (THM-3121, Session24) gives `H(S_k)` exactly for 
 
 ## Addendum: Wormald's Conjecture 1 for regular bases, d ≤ 13 (FINITE-EXACT)
 
-Over every regular tournament on `d` vertices, `ρ = Π (d² + σ_k²)/(d² − σ_k²)` has a unique maximum at the rotational `R_d` (`wormald_conj1.out`, `wormald_conj1_13.out`):
+Over every regular tournament on `d` vertices, `ρ = Π (d² + σ_k²)/(d² − σ_k²)` has a unique maximum at the rotational `R_d` (`wormald_conj1.out`, `wormald_conj1_13.out`). The cases `d ≤ 9` are already in Bhattacharjee's release (its table of the regular tournaments on `d ≤ 9` vertices, with `R_d` maximal); `d = 11, 13` are new:
 
 | `d` | regular classes | `ρ(R_d)` | runner-up |
 |---|---|---|---|
 | 5 | 1 | 2.3157894737 | — |
 | 7 | 3 | 2.4630381803 | 2.3993783994 |
-| 9 | 15 | 2.5475143943 | 2.4981158008 (`C_3[C_3]`) |
+| 9 | 15 | 2.5475143943 | 2.4981158008 (443488/177529; `C_3[C_3]` = 5488/2197 = 2.4979517524 is third) |
 | 11 | 1223 | 2.6021808258 | 2.5682251025 |
 | 13 | 1,495,297 | 2.6404182020 | 2.6170585197 |
 

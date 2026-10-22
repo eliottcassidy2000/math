@@ -1,0 +1,14 @@
+n=1 mode=brute/all tournaments=1 | fails: (1)F=sum c_m(x-1)^(n-m):0 (2)sumHH=W4:0 (3)OCF:0 (4)c2:0 (5)F=H*A_n mod3:0 (6)F=(1+x)^(n-1) mod2:0 (7)u3:0 | frac 3|H = 0/1 = 0.0000
+n=2 mode=brute/all tournaments=2 | fails: (1)F=sum c_m(x-1)^(n-m):0 (2)sumHH=W4:0 (3)OCF:0 (4)c2:0 (5)F=H*A_n mod3:0 (6)F=(1+x)^(n-1) mod2:0 (7)u3:0 | frac 3|H = 0/2 = 0.0000
+n=3 mode=brute/all tournaments=8 | fails: (1)F=sum c_m(x-1)^(n-m):0 (2)sumHH=W4:0 (3)OCF:0 (4)c2:0 (5)F=H*A_n mod3:0 (6)F=(1+x)^(n-1) mod2:0 (7)u3:0 | frac 3|H = 2/8 = 0.2500
+n=4 mode=brute/all tournaments=64 | fails: (1)F=sum c_m(x-1)^(n-m):0 (2)sumHH=W4:0 (3)OCF:0 (4)c2:0 (5)F=H*A_n mod3:0 (6)F=(1+x)^(n-1) mod2:0 (7)u3:0 | frac 3|H = 16/64 = 0.2500
+n=5 mode=brute/all tournaments=1024 | fails: (1)F=sum c_m(x-1)^(n-m):0 (2)sumHH=W4:0 (3)OCF:0 (4)c2:0 (5)F=H*A_n mod3:0 (6)F=(1+x)^(n-1) mod2:0 (7)u3:0 | frac 3|H = 424/1024 = 0.4141
+n=6 mode=brute/all tournaments=32768 | fails: (1)F=sum c_m(x-1)^(n-m):0 (2)sumHH=W4:0 (3)OCF:0 (4)c2:0 (5)F=H*A_n mod3:0 (6)F=(1+x)^(n-1) mod2:0 (7)u3:0 | frac 3|H = 9728/32768 = 0.2969
+n=7 mode=brute/stdin tournaments=456 | fails: (1)F=sum c_m(x-1)^(n-m):0 (2)sumHH=W4:0 (3)OCF:0 (4)c2:0 (5)F=H*A_n mod3:0 (6)F=(1+x)^(n-1) mod2:0 (7)u3:0 | frac 3|H = 170/456 = 0.3728
+n=8 mode=brute/stdin tournaments=6880 | fails: (1)F=sum c_m(x-1)^(n-m):0 (2)sumHH=W4:0 (3)OCF:0 (4)c2:0 (5)F=H*A_n mod3:0 (6)F=(1+x)^(n-1) mod2:0 (7)u3:0 | frac 3|H = 2416/6880 = 0.3512
+n=9 mode=dp/stdin tournaments=191536 | fails: (1)F=sum c_m(x-1)^(n-m):0 (2)sumHH=W4:0 (3)OCF:0 (4)c2:0 (5)F=H*A_n mod3:0 (6)F=(1+x)^(n-1) mod2:0 (7)u3:0 | frac 3|H = 66320/191536 = 0.3463
+n=9 mode=brute/random tournaments=20 | fails: (1)F=sum c_m(x-1)^(n-m):0 (2)sumHH=W4:0 (3)OCF:0 (4)c2:0 (5)F=H*A_n mod3:0 (6)F=(1+x)^(n-1) mod2:0 (7)u3:0 | frac 3|H = 7/20 = 0.3500
+n=10 mode=dp/random tournaments=3000 | fails: (1)F=sum c_m(x-1)^(n-m):0 (2)sumHH=W4:0 (3)OCF:0 (4)c2:0 (5)F=H*A_n mod3:0 (6)F=(1+x)^(n-1) mod2:0 (7)u3:0 | frac 3|H = 994/3000 = 0.3313
+n=11 mode=dp/random tournaments=1000 | fails: (1)F=sum c_m(x-1)^(n-m):0 (2)sumHH=W4:0 (3)OCF:0 (4)c2:0 (5)F=H*A_n mod3:0 (6)F=(1+x)^(n-1) mod2:0 (7)u3:0 | frac 3|H = 315/1000 = 0.3150
+n=12 mode=dp/random tournaments=15 | fails: (1)F=sum c_m(x-1)^(n-m):0 (2)sumHH=W4:0 (3)OCF:0 (4)c2:0 (5)F=H*A_n mod3:0 (6)F=(1+x)^(n-1) mod2:0 (7)u3:0 | frac 3|H = 5/15 = 0.3333
+n=13 mode=dp/random tournaments=10 | fails: (1)F=sum c_m(x-1)^(n-m):0 (2)sumHH=W4:0 (3)OCF:0 (4)c2:0 (5)F=H*A_n mod3:0 (6)F=(1+x)^(n-1) mod2:0 (7)u3:0 | frac 3|H = 2/10 = 0.2000

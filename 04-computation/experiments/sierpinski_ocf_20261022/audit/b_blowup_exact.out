@@ -1,0 +1,17 @@
+C3: n=[20, 24, 28, 32, 36, 40] ratio=['1.994674', '1.995528', '1.996147', '1.996615', '1.996982', '1.997278']
+    extrapolation from last 2 points: 1.999936   (predicted rho = 2.000000)
+    extrapolation from last 3 points: 2.000002   (predicted rho = 2.000000)
+    extrapolation from last 4 points: 2.000000   (predicted rho = 2.000000)
+R5: n=[6, 8, 10, 12, 14] ratio=['2.278318', '2.287803', '2.293448', '2.297195', '2.299865']
+    extrapolation from last 2 points: 2.315884   (predicted rho = 2.315789)
+    extrapolation from last 3 points: 2.315765   (predicted rho = 2.315789)
+    extrapolation from last 4 points: 2.315794   (predicted rho = 2.315789)
+R7: n=[3, 4, 5, 6, 7] ratio=['2.378947', '2.400318', '2.413022', '2.421445', '2.427439']
+    extrapolation from last 2 points: 2.463402   (predicted rho = 2.463038)
+    extrapolation from last 3 points: 2.463010   (predicted rho = 2.463038)
+    extrapolation from last 4 points: 2.463026   (predicted rho = 2.463038)
+P7: n=[3, 4, 5, 6, 7] ratio=['2.326682', '2.336554', '2.342883', '2.347244', '2.350420']
+    extrapolation from last 2 points: 2.369479   (predicted rho = 2.370370)
+    extrapolation from last 3 points: 2.370558   (predicted rho = 2.370370)
+    extrapolation from last 4 points: 2.370318   (predicted rho = 2.370370)
+nice -n 5 python3 b_blowup_exact.py  12.76s user 1.74s system 99% cpu 14.595 total

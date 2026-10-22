@@ -12,7 +12,8 @@
 * Canon:
   * THM-4754 (3-adic Sierpinski tournament and Collatz);
   * THM-4755 (blow-up gains through the skew spectrum, the lexicographic law, the ternary tower product);
-  * HYP-9364 (the self-blow-up principle).
+  * HYP-9364 (the self-blow-up principle);
+  * THM-4757 (the loop expansion) and HYP-9365 (the two-loop law).
 * Scripts: `04-computation/experiments/sierpinski_ocf_20261022/`.
 
 **Status words** follow the repo: PROVED, CITED, FINITE-EXACT, DERIVED (a computation through a standard limit theorem, not a formal proof), NUMEROLOGY.
@@ -30,7 +31,10 @@
 | a tower's blow-up gain is the level product `Π ((3^(2i+1)+1)/(3^(2i+1)−1))^(3^i)`, whose second factor is `((27+1)/(27−1))^3` | PROVED, given the determinant formula | §4, THM-4755 |
 | Wormald's gain is `det(dI − S)/|det(idI − S)|`, and his constant is `cosh(1)/cos(1)` | Bhattacharjee 2026; rederived independently here | §5, THM-4755 |
 | the tower's own normalised `H` converges to the same limit `κ_S`, to 7 digits | FINITE-EXACT plus extrapolation | §4, HYP-9364 |
-| the same principle predicts `R_n → cosh 1/cos 1`, `P_q → e`, and `H(R_q)/H(P_q) → 1.0506` | data agree to 1e-3, 5e-5, 1e-3 | §6, HYP-9364 |
+| the same principle predicts `R_n → cosh 1/cos 1`, `P_q → e`, and `H(R_q)/H(P_q) → 1.0506` | selected 3–4-point fits land within 3e-3, 5e-5, 1.1e-3; the fit-to-fit spread is about 1e-2 (audit), removed for `R_n` by fitting each residue class mod 4 (2.855930 against 2.855958); the data exclude e for R_n | §6, HYP-9364 |
+| the principle is the one-loop term of an exact loop expansion: `κ = Σ_L N_L/(n)_L` over linear forests, the cycle clusters sum to `log ρ`, and the two-loop clusters have a closed formula | PROVED (THM-4757) | §11 |
+| the parameter-free two-loop law `κ = ρ(1 − y/n + …)`: corr 0.998 on all circulants at `n = 25`; Paley `κ = e(1 − 3/(2n) + …)`; `R_n` limit `y = tan 1 tanh 1 + ½tan² 1 − 1` | conjecture with FINITE-EXACT evidence (HYP-9365) | §11 |
+| non-isomorphic doubly regular tournaments agree through three loops: `H(D_19)/H(P_19) = 1 + 3.2·10^(−5)` | FINITE-EXACT | §11 |
 | number board for `{25, 1}`, `{7, 21}` and 27 | NUMEROLOGY, labelled | §7 |
 
 ## 1. The pasted Steiner reduction, and where it lives in tournaments
@@ -57,15 +61,15 @@
   * Exhaustive check on all 198,946 tournaments with `n ≤ 9`.
 
 **`H` mod 3.** `H ≡ I(Ω, −1) (mod 3)`, and `I(Ω, −1)` is minus the reduced Euler characteristic of the independence complex of `Ω`. Both are prior art: HYP-1028..1030, THM-467 and T274. The pasted deletion recurrence written with `⋆` is the same identity.
-* Prior work also rules out any congruence route to the 7/21 gaps. Session25 shows that every odd residue modulo every `M` is a strong `H`-value, and on strong classes of orders 5–8, `I(Ω, −1)` is never 0.
+* Prior work also rules out any congruence route to the 7/21 gaps. Session25 shows that every odd residue modulo every `M` is a strong `H`-value, and `repunit_rarity_hyp9357_20261021.md` (opus-2026-10-21-S51) that on strong classes of orders 5–8, `I(Ω, −1)` is never 0.
 
 ## 2. The profiles for 7 and 21
 
 * Since `2^k ≡ (−1)^k`, any `α_3 ≥ 1` forces `α_2 ≥ 3` (the three pairs inside a disjoint triple) and `α_1 ≥ 3`.
 * So the profiles `(6, 0, 1)` and `(4, 1, 1)` in the pasted list are impossible. The arithmetic list for `H = 21` is `(10, 0), (8, 1), (6, 2), (4, 3)` with `α_3 = 0`; for `H = 7` it is `(3, 0)` alone.
 * The repo already has these and more:
-  * THM-343 (`H = 7`, Lean-formalised);
-  * THM-079, THM-115 and THM-1370 (all `n`, via Busch's strong floor `f = 3, 5, 9, 15, 25, 45` and the "crevasses" `7 ∈ (5, 9)`, `21 ∈ (15, 25)`);
+  * THM-343 (`H = 7`, Lean-formalised modulo cited axioms, including the OCF);
+  * THM-079 and THM-115 (`H = 21`), and THM-1370 (both values, all `n`, via Busch's strong floor `f = 3, 5, 9, 15, 25, 45` and the "crevasses" `7 ∈ (5, 9)`, `21 ∈ (15, 25)`);
   * the graph-level list in `camion_busch_gaps_polyhedra_collatz_20261002.md`: `K_3`; and `K_10`, `K_8 − e`, `K_6 − 2K_2` or `K_6 − P_3`, `P_4` or `K_3 + K_1`.
 * Exhaustive data `n ≤ 9` (`analyze1.out`): no realized profile solves either equation.
 
@@ -104,7 +108,7 @@ The repo had no Pascal-mod-3 Collatz object (survey), so this dictionary is new.
     κ_S = Π_(i≥0) ((3^(2i+1) + 1)/(3^(2i+1) − 1))^(3^i) = 2 · (28/26)^3 · (244/242)^9 ⋯ = 2.79150988819834…,
 
 * This is within 3.1e-7 of the extrapolation.
-* The factors are exactly the numbers of the prompt, `3^(odd) ± 1`: `4/2`, then `28/26`, then `244/242`, …. The second factor is `(27 + 1)/(27 − 1) = (7 + 21)/(25 + 1)`, cubed.
+* The factors are exactly the numbers of the prompt, `3^(odd) ± 1`: `4/2`, then `28/26`, then `244/242`, …. The second factor is `(27 + 1)/(27 − 1)`, cubed; reading 28 and 26 as `7 + 21` and `25 + 1` is NUMEROLOGY.
 * Its appearance is forced by the spectrum of `C_3[C_3]`: the within-block modes have `σ² = 3` against `d² = 81`.
 
 **How the limit was first found.** The heuristic route was a renormalisation.
@@ -119,7 +123,7 @@ The repo had no Pascal-mod-3 Collatz object (survey), so this dictionary is new.
 * He conjectured that `d/H` is a rational square (Conjecture 6), that `ρ(R_d)` has a limit (Conjecture 2), and that `h(n)/g(n) → c ≈ 2.855958` (Conjecture 5).
 
 **Bhattacharjee's release** (github.com/creelie/Breakthrough-problems-1, v1.0.0, 2026-10-14, unreviewed). It claims:
-* `H = d det(d²I + S²)/det(d²I − S²)`, with `S` the skew adjacency matrix, settling Conjecture 6 modulo his Proposition 3.1;
+* `H = d det(d²I + S²)/det(d²I − S²)`, with `S` the skew adjacency matrix, settling Conjecture 6; its Proposition 3.1 (Wormald's analytic H equals a determinant) is proved on paper and checked by exact computation, but not formalised in Lean;
 * the cyclic closed form `((d+1)^d + (d−1)^d)/((d+i)^d + (d−i)^d)` and the limit `cosh(1)/cos(1)`, settling Conjecture 2;
 * the doubly regular lower bound.
 
@@ -130,8 +134,7 @@ The repo had no Pascal-mod-3 Collatz object (survey), so this dictionary is new.
 
 **New relative to the release:**
 * the lexicographic law and the tower product (§4);
-* the spectral moment expansion `log ρ = −Σ tr(S^(4m+2))/((2m+1) d^(4m+2))`;
-* the observation that Wormald's six other 9-vertex "circulants" are not tournaments as printed and lie below the Jensen bound;
+* the spectral moment expansion `log ρ = −Σ tr(S^(4m+2))/((2m+1) d^(4m+2))` (a Taylor expansion of the release's `log ρ = Σ log((d²+s_k)/(d²−s_k))`);
 * the self-blow-up principle (§6).
 
 ## 6. The self-blow-up principle (HYP-9364)
@@ -145,9 +148,9 @@ The repo had no Pascal-mod-3 Collatz object (survey), so this dictionary is new.
 **It does not fix the ordering of classes** (rank correlation near 0). That ordering is set by the packing corrections of THM-4751 (7).
 
 **Predictions, checked against exact data:**
-* `H(R_n)·2^(n−1)/n! → cosh(1)/cos(1)`. Fits in `1/n` over `n ≤ 31` give 2.8536 and 2.8572, bracketing 2.85596. This contradicts the rotational half of HYP-9028, which predicts `e`.
-* `H(P_q)·2^(q−1)/q! → e`. The 3-point fit gives 2.718332, against 2.718282 (HYP-9274 (A)).
-* `H(R_q)/H(P_q) → cosh(1)/(e cos 1) = 1.050648`. The 3-point fit gives 1.04953 (HYP-9362 (c), now with a conjectured value).
+* `H(R_n)·2^(n−1)/n! → cosh(1)/cos(1)`. Fits in `1/n` over `n ≤ 33` give 2.848–2.871 depending on the points (2.8536 and 2.8572 for the top 3 and 4 points up to 31): consistent with 2.85596 at the 1e-2 level, while the increments exclude `e`. Fitting each residue class mod 4 separately removes the instability (2.855930 for `n ≡ 1`, §11). This contradicts the rotational half of HYP-9028, which predicts `e`.
+* `H(P_q)·2^(q−1)/q! → e`. The 3-point fit (19, 23, 31) gives 2.718332, against 2.718282; adding `P_27` moves the fits to 2.7205–2.7257 (HYP-9274 (A)).
+* `H(R_q)/H(P_q) → cosh(1)/(e cos 1) = 1.050648`. The 3-point fit gives 1.04953, or 1.0476–1.0489 with `q = 27` (HYP-9362 (c), now with a conjectured value).
 
 **Picture.**
 * `e` is the gain of a flat spectrum: Paley, and random regular tournaments.
@@ -166,7 +169,7 @@ The repo had no Pascal-mod-3 Collatz object (survey), so this dictionary is new.
 * `{7, 13, 21} = {111_2, 111_3, 111_4}` are three iterations of `x ↦ bx + 1` from 0. The Collatz member `13 = (3x+1)^3(0)` is attained as `H`, and its neighbours are the two forbidden values. HYP-1043 (`Φ_3(2^k)`, which breaks at 73) and the F_21 note are prior art.
 * `21` is a multiple of 3, so it has no Collatz predecessor under `U`; `U(21) = 1`.
 * `H(R_7) = 175 = 7·25` and `H(P_7) = 189 = 7·27`. The per-vertex counts of the two vertex-transitive 7-tournaments are 25 and 27.
-* **27 in Collatz.** 111 steps: 41 odd and 70 halvings. Prior analysis is THM-4504 and THM-4502 (the 41-tail family).
+* **27 in Collatz.** 111 steps: 41 odd and 70 halvings. Prior analysis is THM-4504 and THM-4502 (whose "41-tail" is the orbit value 27 → 82 → 41, not the 41 odd steps).
   * The 70 halvings equal the last coordinate of the Weyl vector `(0, …, 24 | 70)` of `II_(25,1)`, the cannonball `Σ_(i≤24) i² = 70²`. The repo had no such link (survey).
   * Exact tournament form: a regular tournament on `2N + 1` vertices has `c_3 = Σ_(i≤N) i²`, so by Watson `c_3` is a square only for regular tournaments on 1, 3 and 49 vertices, and `c_3(R_49) = 70²`.
   * The link to 27's halvings is NUMEROLOGY.
@@ -183,7 +186,7 @@ The repo had no Pascal-mod-3 Collatz object (survey), so this dictionary is new.
 * Find the right error term in the principle.
 * Find a statistic that orders circulant classes at fixed `n`.
 * Push `H(R_33)`, `H(R_35)`.
-* Decide THM-086 in full; it is still a proof sketch.
+* Point THM-086, THM-094 and INV-123/INV-124 to THM-4756.
 
 ## 10. Later results of the same session
 
@@ -199,11 +202,11 @@ The reason is that modulo 9 only Hamiltonian cycles survive in `U_T(1,1,1)`. Che
 |---|---|---|---|
 | 5 | 1 | 2.3157894737 | — |
 | 7 | 3 | 2.4630381803 | 2.3993783994 (Wormald's non-circulant example) |
-| 9 | 15 | 2.5475143943 | 2.4981158008 (`C_3[C_3]`) |
+| 9 | 15 | 2.5475143943 | 2.4981158008 (443488/177529; `C_3[C_3]` = 2.4979517524 is third) |
 | 11 | 1223 | 2.6021808258 | 2.5682251025 |
 | 13 | 1,495,297 | 2.6404182020 | 2.6170585197 |
 
-The minimum equals the doubly regular bound when a doubly regular tournament exists (`d = 7, 11`). Bhattacharjee's release does not treat Conjecture 1.
+The minimum equals the doubly regular bound when a doubly regular tournament exists (`d = 7, 11`). Bhattacharjee's release treats Conjecture 1 for regular bases: it proves ((d+1)/(d−1))^((d−1)/2) ≤ ρ ≤ U_d and checks exhaustively that R_d is maximal for d ≤ 9; d = 11, 13 are new here.
 
 **The self-blow-up principle on all regular tournaments** (`principle_regular.out`). At `n = 11` (1223 classes), `κ/ρ ∈ [0.917, 0.980]`, the same band as for circulants. But the rank correlation between `κ` and `ρ` is strongly negative at `n = 9, 11` (−0.72, −0.74). This is the small-`n` regime where flat spectra win `H` (THM-4751 (7)). For circulants it is near 0 from `n = 15` on.
 
@@ -233,4 +236,49 @@ The numerators `4, 28, 244, 2188` are the Collatz images `3n + 1` of the even po
 * Each part is at most `2·3^(k−2)`, inside the previous level's range.
 * The first failure is at `t = 2·3^(k−1) + 1 = 7, 19, 55, 163, 487` (checked through `k = 6`).
 
-*Consequence.* Since `|Aut|` divides `H`, `v_3(H(Σ_N)) = v(N) + δ(N)` with `0 ≤ δ ≤ 5` for `N ≤ 90`. This explains the near-symmetry of the valuations of the Hamiltonian counts about 27 and 81.
+*Consequence.* Since `|Aut|` divides `H` (LEM-003), `v_3(H(Σ_N)) = v(N) + δ(N)` with `0 ≤ δ ≤ 5` for `N ≤ 90`. This explains the near-symmetry of the valuations of the Hamiltonian counts about 27 and 81.
+
+**Three symmetric tournaments on 27 vertices.**
+
+| tournament | `ρ` | `κ = H 2^26/27!` | `κ/ρ` |
+|---|---|---|---|
+| `R_27` | 2.75112 (closed form) | 2.63157 | 0.957 |
+| `S_3 = C_3^[3]` | `2(28/26)^3(244/242)^9` = 2.69001 | 2.57236 | 0.956 |
+| Paley `P_27` on `F_27` | `(28/26)^13` = 2.62060 | 2.57879 | 0.984 |
+
+* The Paley value is exact. `P_27` is doubly regular, so `ρ = ((27+1)/(27−1))^((27−1)/2)`: the prompt's `(7+21)/(25+1)` again, to the 13th power. Reading 28 and 26 as `7 + 21` and `25 + 1` is NUMEROLOGY.
+* `ρ` orders them `R > S_3 > P`, while `κ` orders them `R > P > S_3`. The `M4` penalty explains the swap qualitatively: the tower has the larger `M4`, about 0.115.
+* Quantitatively, the tower's residual `y ≈ 1.18` exceeds the linear prediction `≈ 0.95`. The `M4` law is approximate and has family-dependent deviations.
+* *Update (§11).* The two-loop law removes the discrepancy. It gives `y_pred(S_3) = 1.1873` against the exact 1.1809, because the tower's additively closed outlier frequencies switch on the theta term (`n·Θ = −0.19`), which `M4` cannot see.
+
+## 11. The loop expansion: why `κ ≈ ρ`, and the next term (THM-4757, HYP-9365)
+
+**Exact identity.** Expand `Π(1 + S_(σ_i σ_(i+1)))` over orderings. A directed linear forest with `L` arcs lies in `(n − L)!` orderings, so
+
+    κ(T) = H(T) 2^(n−1)/n! = Σ_L N_L(S)/(n)_L,      N_L(S) = Σ_(|F| = L) Π_(e∈F) S_e.
+
+**Clusters.** Möbius inversion over coincidences of run positions writes `log Σ_L N_L (z/n)^L` as a sum of connected clusters graded by excess `e` (arcs minus blocks). For regular `T`, every free run end gives `Σ_v S_(vw) = 0`, so `e ≥ 0` and there is no tree level.
+* **One loop** (`e = 0`, single cycles). This sums exactly to `½ log det(I − z²Ŝ²) − ½ log det(I + z²Ŝ²)`, so at `z = 1` it is Wormald's blow-up gain `log ρ`. The cancellation of all 4-cycles, i.e. of the `x⁴` terms, is visible in brute force (`cluster_check_*_L6.out`).
+* **Two loops** (`e = 1`). The figure-eight, theta and dumbbell have 4-periodic kernels. They resum into three propagators: `G = −Ŝ²(I+Ŝ²)^(−1)`, `H = Ŝ²(I−Ŝ²)^(−1)`, `O = Ŝ(I−Ŝ²)^(−1)`.
+* The principle of §6 is therefore the one-loop approximation, and `1/n` counts loops.
+
+**The two-loop law** `κ = ρ(1 − y/n + O(n^(−2)))` with `y` explicit and no fitted constants (HYP-9365):
+
+| test | result |
+|---|---|
+| all circulant classes, `n = 25` (208) | corr(`y`, `y_pred`) = 0.9984, Spearman 0.9974, scatter 0.009 |
+| all regular 11-tournaments (1223) | corr 0.978; the corrected `ρ(1 − y_pred/n)` ranks `κ` with Spearman 0.896 (`ρ` alone −0.743) and finds `P_11` |
+| towers to 729 vertices | `y = 1.338620` against `y_pred = 1.339738`; limits 1.345606 (exact data) against 1.345726 (two-loop) |
+| Paley / doubly regular | `y → 1/2`, i.e. `κ = e(1 − 3/(2n) + O(n^(−2)))` |
+| rotational | `y → tan 1 tanh 1 + ½ tan² 1 − 1 = 1.398872`; exact-data extrapolation 1.3975–1.406 |
+
+**Doubly regular tournaments are indistinguishable through three loops.** Their propagators lie in `span{I, J, Ŝ}`, and three-loop cores have at most 4 vertices.
+* A non-Paley doubly regular 19-tournament `D_19` (found by annealing, nauty-certified) has `H(D_19) = 1172732961771`, against `H(P_19) = 1172695746915`: a ratio of `1 + 3.2·10^(−5)`.
+* Their 4-subtournament censuses coincide. Their 5-subtournament censuses do not, which is where four loops begin.
+
+**A non-perturbative term.** The values `κ(R_n)` split by `n mod 4`.
+* The alternating component decays like `0.6^n` and carries the sign `(−1)^((n+1)/2)`.
+* It tracks the top term of the forest series, `F(R_n, −1)/n!`, the alternating forward-step count of THM-4756, with ratio ≈ 1.65 for `n = 13–21`.
+* An exponentially small term with an alternating sign, invisible to the loop expansion, is the analogue of an instanton correction. The analogy is an interpretation, not a theorem.
+
+**Least resistance, once more.** All two-loop graphs are series–parallel, built from three propagators by series composition (matrix products) and parallel composition (entrywise products). So the first correction to the blow-up gain is literally a resistance-network computation (cf. §8). The tetrahedron `K_4`, the first non-series–parallel vacuum graph, enters at three loops. There the arithmetic of the tournament (Paley character sums, subtournament censuses) appears for the first time.

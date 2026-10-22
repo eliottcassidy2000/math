@@ -1,0 +1,5 @@
+n=13: 1495297 regular classes; kappa/rho in [0.9245, 0.9687], mean 0.9564; kappa in [2.3958, 2.4469], rho in [2.5255, 2.6404]; spearman(kappa, rho) = -0.785; argmax kappa = argmax rho: False
+
+real	14m58.814s
+user	14m45.816s
+sys	0m3.568s

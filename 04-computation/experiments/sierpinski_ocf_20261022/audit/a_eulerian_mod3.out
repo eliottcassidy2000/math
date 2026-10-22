@@ -1,0 +1,8 @@
+Eulerian A_n mod 3 / mod 2 pattern, n = 1..80: failures = []
+n=3: nonzero A(n,k) mod 3 at k=[0, 1, 2], values [1, 1, 1]
+n=7: nonzero A(n,k) mod 3 at k=[0, 3, 6], values [1, 1, 1]
+n=19: nonzero A(n,k) mod 3 at k=[0, 9, 18], values [1, 1, 1]
+n=55: nonzero A(n,k) mod 3 at k=[0, 27, 54], values [1, 1, 1]
+n=4: A(n,k) mod 3 = [1, 2, 2, 1]
+n=10: A(n,k) mod 3 = [1, 2, 2, 2, 2, 2, 2, 2, 2, 1]
+n=28: A(n,k) mod 3 = [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1]

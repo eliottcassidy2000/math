@@ -1,0 +1,7 @@
+n=17: corr(y,M4)=0.982  fit a=0.315 b=4.581  spearman(kappa, rho)=+0.118  spearman(kappa, pred)=+0.735  max rel err=3.62e-03  argmax pred = argmax kappa: True
+n=19: corr(y,M4)=0.983  fit a=0.322 b=4.789  spearman(kappa, rho)=-0.009  spearman(kappa, pred)=+0.832  max rel err=2.46e-03  argmax pred = argmax kappa: True
+n=21: corr(y,M4)=0.958  fit a=0.315 b=5.330  spearman(kappa, rho)=-0.025  spearman(kappa, pred)=+0.772  max rel err=1.12e-02  argmax pred = argmax kappa: True
+n=23: corr(y,M4)=0.987  fit a=0.347 b=4.947  spearman(kappa, rho)=-0.044  spearman(kappa, pred)=+0.837  max rel err=2.44e-03  argmax pred = argmax kappa: True
+n=25: corr(y,M4)=0.992  fit a=0.349 b=5.172  spearman(kappa, rho)=+0.092  spearman(kappa, pred)=+0.884  max rel err=2.57e-03  argmax pred = argmax kappa: True
+rho(R_27) closed form = None
+rho(R_27) = 2.75111870471522288741891798958  (14/13)^13 = 2.62060088788573222107930994787

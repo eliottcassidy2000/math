@@ -1,0 +1,3 @@
+H(S_5) digits: 404  v3: 121  modulus digits: 540
+equals session's k=5 value: True
+nice -n 5 python3 b_tower_k5_modp.py  51.09s user 0.18s system 98% cpu 51.832 total
