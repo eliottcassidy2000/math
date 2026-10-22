@@ -3,7 +3,7 @@ r"""Does the swap theorem extend beyond the two nearest cusps of type N? (sessio
 The cusps w of type N adjacent to z (w.z = -1) satisfy -w.rho = (h/2)|y - rho_N/h|^2 for the vector y of N that
 defines w. Shell 0 of N + rho/h gives m = h + 1 (the Fricke cusps z''); shell 1 gives m = h + 2; and so on.
 This script runs the swap-theorem certificate of swap_theorem_proof.py on the pair (rho, w) for the chosen shell.
-Result for shell 1 (m = h + 2) on a24, a2^12, d4^6, e8^3, d24 and a1^24: the certificate FAILS. The coset theta
+Result for shell 1 (m = h + 2), all 23 types: the certificate FAILS. The coset theta
 series already differ below norm 2 (low-energy spectra not swap-symmetric) and S-invariance fails. So the swap
 theorem holds for exactly the two nearest cusp types around the Leech cusp, m = h (THM-4758) and m = h + 1
 (THM-4759 (11)).

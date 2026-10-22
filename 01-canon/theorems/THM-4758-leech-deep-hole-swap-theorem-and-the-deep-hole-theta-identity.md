@@ -191,4 +191,4 @@ All eight cases are also checked against exact enumeration (all_holes_J2.out).
   - m = h + 1, the cusp z″ = z + r one Leech wall away. This is the Fricke swap theorem, THM-4759 (11), with
     defect 24.
 
-  It fails at the next shell, m = h + 2 (swap_shell_test.py).
+  It fails at the next shell, m = h + 2, for all 23 types (swap_shell_test.py).

@@ -362,8 +362,8 @@ pole of higher order at 0, and is not of Fricke type. Equivalently, the deep hol
 the 24 finite simple roots.
 
 *Only the two nearest cusp types.* The cusps w of type N adjacent to z satisfy −w·ρ = (h/2)|y − ρ_N/h|², where y runs
-over the shells of N + ρ_N/h. Shell 0 gives m = h + 1. The next shell, m = h + 2, FAILS the certificate for A1²⁴,
-A2¹², D4⁶, A24, E8³ and D24 (swap_shell_test.py): the coset theta series already differ below norm 2. So the swap holds
+over the shells of N + ρ_N/h. Shell 0 gives m = h + 1. The next shell, m = h + 2, FAILS the certificate for all 23
+types (swap_shell_test.py): the coset theta series already differ below norm 2. So the swap holds
 exactly for m = h and m = h + 1.
 
 **(6) The Monster corner (CITED).** For X ≠ A24:
