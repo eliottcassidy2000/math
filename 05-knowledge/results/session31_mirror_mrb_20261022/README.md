@@ -19,3 +19,12 @@ Git base refreshed to 9860c2977d3698700eac0cbd8f1cc8eac9386418. Incoming four/fi
 - [Independent analytic audit](analytic-audit/AUDIT.md) records the complete proof and computational scope.
 
 The requested exact modular mechanism for the original MRB defect remains OPEN. These results supply both positive analytic structure and specific obstructions; they are not a proof that every enriched modular construction is impossible.
+
+## Third checkpoint
+
+- [Category and honeycomb audit](categories/CATEGORICAL-HONEYCOMB-MRB-AUDIT.md): exact scalar bridges, precise category hypotheses, and obstructions to literal dimension/character identifications.
+- [Supplied Collatz manuscript audit](collatz/AUDIT.md): explicit failures of the claimed contraction, with repaired finite-word constructions and guarded long-growth hostiles. This is not a Collatz convergence or divergence proof.
+- [Square-block and Many Worlds audit](square-blocks/AUDIT.md): corrected printed sign, nonnegative curvature kernel, explicit tail bounds, and a Galois-conjugate hostile. The Many Worlds mathematics survives within its stated idealizations.
+- [Independent structural audit](structural-audit/AUDIT.md) and [independent bridge audit](bridge-audit/README.md) preserve qualifications and required repairs.
+
+The nearest-residue expansion now has a proved global convergence statement for the stated dictionary, including signed reconstruction, exact-termination handling, and increasing integer indices. The new positive tree-moment reconstruction and blue-forest refinements are being independently audited and will be added in the final packet.

@@ -1,0 +1,38 @@
+{
+  "all_order_reason": "Period four modulo 105; each passing m progression is unbounded; previously proved growing-prefix formula applies.",
+  "audited_sha256": {
+    "session31-collatz/AUDIT.md": "6e0b0267e336d674e022c431c0e0a1291c0029a1ce0a90636caf74504a78c81b",
+    "session31-collatz/verify_audit.py": "79d69b738aa586ade6097e842aa2822348bb47431b7d882c20e05b986e78478c",
+    "session31-square-blocks/AUDIT.md": "dcdf8e690f0b017c7f698316573ff5fd937c6b1d0ad2a9ab6dbaf90103d8b1f9",
+    "session31-square-blocks/verify_square_blocks.py": "e66c735ba8be6955dabee8076f6683f2f54e25d386d7228444fd104c0496162d"
+  },
+  "base_check_count_preserved": 46965,
+  "guard_test_universe": "1 <= m <= 512",
+  "history": "history_v1/AUDIT.md and original hash-pinned receipts remain unchanged.",
+  "rows_m_mod4_0_through_3": [
+    [
+      12,
+      32,
+      102
+    ],
+    [
+      11,
+      11,
+      11
+    ],
+    [
+      3,
+      18,
+      18
+    ],
+    [
+      14,
+      4,
+      74
+    ]
+  ],
+  "scope_exclusion": "No native source-address map or guard is identified, and no later endpoint residue restriction is inferred.",
+  "separate_addendum_check_count": 1543,
+  "status": "PASS: bounded addendum, original audit history retained",
+  "unit_condition": "Both ordinary starting-integer guards pass iff m is odd."
+}

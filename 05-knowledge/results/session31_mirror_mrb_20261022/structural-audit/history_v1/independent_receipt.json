@@ -1,0 +1,100 @@
+{
+  "audited_sha256": {
+    "session31-collatz/AUDIT.md": "2d599cbf0d43df1166e97401f303d6e56c77164145a6c802048289ba230057cd",
+    "session31-collatz/verify_audit.py": "60b51a07676ffa9d297b5fa52d99ebe34073fa24920099528aa4cce6d8d8f384",
+    "session31-square-blocks/AUDIT.md": "6e88e7495c61d0fd4683c1edaae9d23ac45ac5eeb2e4863fa577f835bcb1d1f1",
+    "session31-square-blocks/verify_square_blocks.py": "e66c735ba8be6955dabee8076f6683f2f54e25d386d7228444fd104c0496162d"
+  },
+  "check_counts": {
+    "asymmetric_large_word": 450,
+    "binary_word_realization": 4096,
+    "compositum_degree_prime_to_13": 1,
+    "conjugate_real_part_bound": 1,
+    "cos_pi_over_13_greater_than_4_over_5": 1,
+    "curvature11_small_rational_bound": 1,
+    "e_greater_than_5_over_2": 1,
+    "exp_2_over_5_less_than_3_over_2": 1,
+    "explicit_euler_moments": 320,
+    "fixed_four_halving_cascade": 41,
+    "fixed_growth_cycle": 9720,
+    "independent_memoized_census": 1,
+    "independent_tail_decimal_match": 4,
+    "inverse_regeneration": 992,
+    "kernel_fourth_remainder": 64,
+    "kernel_independent_linear_interpolation": 6240,
+    "kernel_mass": 64,
+    "kernel_nonnegative_knots": 2080,
+    "log10_interval_by_rational_exp": 1,
+    "log11_less_than_12_over_5": 1,
+    "mod3_construction_endpoint": 4096,
+    "mod3_construction_literal_runs": 4096,
+    "mod3_construction_positive_odd": 4096,
+    "no_original_baseline_crossing": 9720,
+    "noncontracting_complete_cycle": 39,
+    "polynomial_peano_identity": 832,
+    "published_tail_decimal_outward": 4,
+    "root11_less_than_5_over_4": 1,
+    "root13_greater_than_6_over_5": 1
+  },
+  "collatz": {
+    "census": [
+      3997,
+      4011,
+      1579
+    ],
+    "growth_prefixes": "m = 1..80; q in {1,3,17}",
+    "large_word_examples": [
+      {
+        "r": 20,
+        "s": 20,
+        "start": "794663646659608575",
+        "t": 20
+      },
+      {
+        "r": 1,
+        "s": 80,
+        "start": "13701159288965797313336661",
+        "t": 1
+      },
+      {
+        "r": 80,
+        "s": 1,
+        "start": "5195108672517196233995469163912651057947599699967",
+        "t": 80
+      },
+      {
+        "r": 73,
+        "s": 61,
+        "start": "852429070308828752762457721635782246141960175721906175",
+        "t": 47
+      },
+      {
+        "r": 32,
+        "s": 64,
+        "start": "3381439888306402280048380638419078131281060638423045373951",
+        "t": 96
+      }
+    ],
+    "triple_count": 4096,
+    "triple_universe": "r,s,t = 1..16"
+  },
+  "kernel": {
+    "center": "2/3",
+    "method": "Exact polynomial integration of linearly interpolated paired kernels",
+    "polynomial_degrees": "0..12",
+    "radii": "1..64"
+  },
+  "rational": {
+    "alternate_curvature11_upper": "136/73205",
+    "conjugate_modulus_strict_lower": "1079/500",
+    "degree_divisor": 63360,
+    "tail_upper_decimals": {
+      "10": "0.002916802930051020125517",
+      "100": "0.000004988801113793516135",
+      "1000": "0.000000007248352833489898",
+      "10000": "0.000000000009544628508874"
+    },
+    "warning": "Field-existence and all-order statements are proofs in AUDIT.md, not finite computations."
+  },
+  "status": "PASS: independent finite exact checks; see proofs for all-order scope"
+}

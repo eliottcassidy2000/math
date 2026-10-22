@@ -1,0 +1,2406 @@
+{
+  "status": "PASS of addenda and corrected-scope categorical statements",
+  "source_sha256": {
+    "session31-categories/CATEGORICAL-HONEYCOMB-MRB-AUDIT.md": "cc10f982f2bf58f2ddb981460d631c882cd31791368f549540db5e517b895884",
+    "session31-categories/check_categorical_parameters.py": "f2884be387e01cde1c394014ca8b0ea60fb541392c3b0048761b54653379e127",
+    "session31-root/HAMILTONIAN_FOREST_SIZE_BIAS.md": "90006473db5973b0f7a47748be4d1850307f45f7170813cedcbb4296277a51bf"
+  },
+  "categorical": {
+    "status": "PASS with explicit scope repairs",
+    "beta_elimination_resultant": "-2*x**8 - 8*x**4 + 1",
+    "inverse_eisenstein_polynomial": "x**8 - 8*x**4 - 2",
+    "beta_degree": 8,
+    "beta_norm": "-1/2",
+    "prime_degree_controls": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31
+    ],
+    "parity_hostile": {
+      "matrix": "Matrix([[a, 1], [1 - a**2, -a]])",
+      "square": "I",
+      "supertrace": "2*a"
+    },
+    "branch_controls": [
+      {
+        "m": 3,
+        "proposed_dilute_g": "2/3",
+        "proposed_dense_g": "4/3",
+        "first_c": "0",
+        "second_c": "1/2",
+        "labels_have_standard_g_ranges": false
+      },
+      {
+        "m": 4,
+        "proposed_dilute_g": "1",
+        "proposed_dense_g": "1",
+        "first_c": "1",
+        "second_c": "1",
+        "labels_have_standard_g_ranges": true
+      },
+      {
+        "m": 8,
+        "proposed_dilute_g": "3/2",
+        "proposed_dense_g": "1/2",
+        "first_c": "0",
+        "second_c": "-2",
+        "labels_have_standard_g_ranges": true
+      },
+      {
+        "m": 12,
+        "proposed_dilute_g": "5/3",
+        "proposed_dense_g": "1/3",
+        "first_c": "-3/5",
+        "second_c": "-7",
+        "labels_have_standard_g_ranges": true
+      }
+    ]
+  },
+  "asymptotic": {
+    "status": "PASS",
+    "independent_method": "finite matching-binomial expansion and rational tail bound",
+    "through_order_3": "z**3*(-10/3 + 4/t + 12/t**2) - z**2*(3/2 + 4/t) + z + 1",
+    "order_4_coefficient": "(85*t**3 + 624*t**2 - 96*t - 768)/(24*t**3)",
+    "finite_exact_remainder_checks": [
+      {
+        "n": 8,
+        "t": "1/2",
+        "ratio_exact": "777961/746496",
+        "ell_ge_4_tail": "0",
+        "certified_upper_bound": "5/12457152"
+      },
+      {
+        "n": 8,
+        "t": "1",
+        "ratio_exact": "265251/250000",
+        "ell_ge_4_tail": "0",
+        "certified_upper_bound": "2/1153125"
+      },
+      {
+        "n": 8,
+        "t": "2",
+        "ratio_exact": "571621/531441",
+        "ell_ge_4_tail": "0",
+        "certified_upper_bound": "2560/632946231"
+      },
+      {
+        "n": 8,
+        "t": "7/3",
+        "ratio_exact": "15309310851/14200058896",
+        "ell_ge_4_tail": "0",
+        "certified_upper_bound": "57648010/12532439479401"
+      },
+      {
+        "n": 16,
+        "t": "1/2",
+        "ratio_exact": "212068546645044201/204800000000000000",
+        "ell_ge_4_tail": "2645044201/204800000000000000",
+        "certified_upper_bound": "1/9300000"
+      },
+      {
+        "n": 16,
+        "t": "1",
+        "ratio_exact": "48911242375945747/46851670947760128",
+        "ell_ge_4_tail": "1406314387/46851670947760128",
+        "certified_upper_bound": "160/639323523"
+      },
+      {
+        "n": 16,
+        "t": "2",
+        "ratio_exact": "176693328057958971/168377826559400929",
+        "ell_ge_4_tail": "7986469346/168377826559400929",
+        "certified_upper_bound": "40960/103477758303"
+      },
+      {
+        "n": 16,
+        "t": "7/3",
+        "ratio_exact": "13321340565624169939713121011/12684054964002433817523734528",
+        "ell_ge_4_tail": "643675832840616133747/12684054964002433817523734528",
+        "certified_upper_bound": "922368160/2177654410283907"
+      },
+      {
+        "n": 32,
+        "t": "1/2",
+        "ratio_exact": "3126056301050059109674458105274452375747310249/3054604873793078593082672017110912741603803136",
+        "ell_ge_4_tail": "19057633313751731820034107196744807081/3054604873793078593082672017110912741603803136",
+        "certified_upper_bound": "10/642512169"
+      },
+      {
+        "n": 32,
+        "t": "1",
+        "ratio_exact": "564291975015701158638150640151560182547208499/549854177082364390926666763697077098995777536",
+        "ell_ge_4_tail": "5421287523659526182851876681067649331/549854177082364390926666763697077098995777536",
+        "certified_upper_bound": "2560/104057059959"
+      },
+      {
+        "n": 32,
+        "t": "2",
+        "ratio_exact": "3692888122078643492225233838003231634001914949/3592677187515959257578986279730209409225510849",
+        "ell_ge_4_tail": "44986239074685692527338164774388560260/3592677187515959257578986279730209409225510849",
+        "certified_upper_bound": "655360/20972148348591"
+      },
+      {
+        "n": 32,
+        "t": "7/3",
+        "ratio_exact": "4568430604365178211194680226627694365172410867450870127227058951156499/4443396799446960189024347142901312299903062500000000000000000000000000",
+        "ell_ge_4_tail": "57605345447099137138354183546104804087200870127227058951156499/4443396799446960189024347142901312299903062500000000000000000000000000",
+        "certified_upper_bound": "2951578112/91226653984096875"
+      },
+      {
+        "n": 64,
+        "t": "1/2",
+        "ratio_exact": "13068444395061815887741705529079736962149964192922486940887150587640354598302233101458042636693351583936389034793/12894443675878729518255531683068054217673551778394862597389871351447827453657627453708385214390179404584511864832",
+        "ell_ge_4_tail": "12864980434180745596953077304760531696043104469908490828943419286331546292049503858388132638217531274025/12894443675878729518255531683068054217673551778394862597389871351447827453657627453708385214390179404584511864832",
+        "certified_upper_bound": "160/104346710787"
+      },
+      {
+        "n": 64,
+        "t": "1",
+        "ratio_exact": "2054723267583185263962584168274156093088617151383728568785925098117316106785634294851569319494265714470104126579/2025694856069468873897409856955573146460064638542305183927063375330373029086895589783846070721199597145196331008",
+        "ell_ge_4_tail": "2566602509658490562012037589481488501855876472339593648113080750307238335828826393189352420402475095155/2025694856069468873897409856955573146460064638542305183927063375330373029086895589783846070721199597145196331008",
+        "certified_upper_bound": "40960/21034138811103"
+      },
+      {
+        "n": 64,
+        "t": "2",
+        "ratio_exact": "25526951515908069484777607553786804921722630280109212544761014649397221922310405364970732804593537909277309608507/25155219534859975790279612906575461382723272550785449927315857251633999559781162957960987114347517490386962890625",
+        "ell_ge_4_tail": "36015421085395262188341377619937248564128165129812168499793837517552228025425732809324656588323940467882/25155219534859975790279612906575461382723272550785449927315857251633999559781162957960987114347517490386962890625",
+        "certified_upper_bound": "2097152/953038353271875"
+      },
+      {
+        "n": 64,
+        "t": "7/3",
+        "ratio_exact": "17326539255407096108075489020321221947629782846983758730817661030933461155898336513136896675980606480412538806994849487084602038318927680972328654830074874142675027/17073120235990418864410182080992064456812077213353433489887011408367917762814708051724374283948517607564937453482929693147834825470783461455665904958984339050201088",
+        "ell_ge_4_tail": "24878386149455582508799905976528351503005072887606691153585757903090801367641849180665802654210855084903256191028856523145879970683804553168012301355733075/17073120235990418864410182080992064456812077213353433489887011408367917762814708051724374283948517607564937453482929693147834825470783461455665904958984339050201088",
+        "certified_upper_bound": "236126248960/105432515126507812287"
+      }
+    ]
+  },
+  "metagraph": [
+    {
+      "n": 2,
+      "labelled_tournaments_covered": 2,
+      "unlabelled_classes": 1,
+      "merged_nodes": 1,
+      "fixed_path_presentations": 1,
+      "total_weight": 1,
+      "weighted_forest_coefficients": [
+        "1",
+        "1"
+      ],
+      "weighted_signed_score_energy": 2,
+      "classes": [
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 2,
+          "representative_mask_bit1_lower_to_higher": 0,
+          "H": 1,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            1
+          ],
+          "signed_score_energy": 2,
+          "converse_representative": 0
+        }
+      ],
+      "merged_inventory": [
+        {
+          "representatives": [
+            0
+          ],
+          "weight": 1,
+          "forest_average": [
+            "1",
+            "1"
+          ],
+          "signed_score_energy": 2
+        }
+      ],
+      "full_forest_collision": null
+    },
+    {
+      "n": 3,
+      "labelled_tournaments_covered": 8,
+      "unlabelled_classes": 2,
+      "merged_nodes": 2,
+      "fixed_path_presentations": 2,
+      "total_weight": 2,
+      "weighted_forest_coefficients": [
+        "2",
+        "6",
+        "5"
+      ],
+      "weighted_signed_score_energy": 8,
+      "classes": [
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 2,
+          "representative_mask_bit1_lower_to_higher": 2,
+          "H": 3,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            3,
+            3
+          ],
+          "signed_score_energy": 0,
+          "converse_representative": 2
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 6,
+          "representative_mask_bit1_lower_to_higher": 0,
+          "H": 1,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            3,
+            2
+          ],
+          "signed_score_energy": 8,
+          "converse_representative": 0
+        }
+      ],
+      "merged_inventory": [
+        {
+          "representatives": [
+            0
+          ],
+          "weight": 1,
+          "forest_average": [
+            "1",
+            "3",
+            "2"
+          ],
+          "signed_score_energy": 8
+        },
+        {
+          "representatives": [
+            2
+          ],
+          "weight": 1,
+          "forest_average": [
+            "1",
+            "3",
+            "3"
+          ],
+          "signed_score_energy": 0
+        }
+      ],
+      "full_forest_collision": null
+    },
+    {
+      "n": 4,
+      "labelled_tournaments_covered": 64,
+      "unlabelled_classes": 4,
+      "merged_nodes": 3,
+      "fixed_path_presentations": 8,
+      "total_weight": 8,
+      "weighted_forest_coefficients": [
+        "8",
+        "48",
+        "100",
+        "72"
+      ],
+      "weighted_signed_score_energy": 64,
+      "classes": [
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 24,
+          "representative_mask_bit1_lower_to_higher": 4,
+          "H": 5,
+          "h": 5,
+          "forest_coefficients": [
+            1,
+            6,
+            13,
+            10
+          ],
+          "signed_score_energy": 4,
+          "converse_representative": 4
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 8,
+          "representative_mask_bit1_lower_to_higher": 2,
+          "H": 3,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            6,
+            12,
+            9
+          ],
+          "signed_score_energy": 12,
+          "converse_representative": 5
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 8,
+          "representative_mask_bit1_lower_to_higher": 5,
+          "H": 3,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            6,
+            12,
+            7
+          ],
+          "signed_score_energy": 12,
+          "converse_representative": 2
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 24,
+          "representative_mask_bit1_lower_to_higher": 0,
+          "H": 1,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            6,
+            11,
+            6
+          ],
+          "signed_score_energy": 20,
+          "converse_representative": 0
+        }
+      ],
+      "merged_inventory": [
+        {
+          "representatives": [
+            0
+          ],
+          "weight": 1,
+          "forest_average": [
+            "1",
+            "6",
+            "11",
+            "6"
+          ],
+          "signed_score_energy": 20
+        },
+        {
+          "representatives": [
+            2,
+            5
+          ],
+          "weight": 2,
+          "forest_average": [
+            "1",
+            "6",
+            "12",
+            "8"
+          ],
+          "signed_score_energy": 12
+        },
+        {
+          "representatives": [
+            4
+          ],
+          "weight": 5,
+          "forest_average": [
+            "1",
+            "6",
+            "13",
+            "10"
+          ],
+          "signed_score_energy": 4
+        }
+      ],
+      "full_forest_collision": null
+    },
+    {
+      "n": 5,
+      "labelled_tournaments_covered": 1024,
+      "unlabelled_classes": 12,
+      "merged_nodes": 10,
+      "fixed_path_presentations": 64,
+      "total_weight": 64,
+      "weighted_forest_coefficients": [
+        "64",
+        "640",
+        "2448",
+        "4240",
+        "2804"
+      ],
+      "weighted_signed_score_energy": 896,
+      "classes": [
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 120,
+          "representative_mask_bit1_lower_to_higher": 10,
+          "H": 9,
+          "h": 9,
+          "forest_coefficients": [
+            1,
+            10,
+            38,
+            65,
+            43
+          ],
+          "signed_score_energy": 16,
+          "converse_representative": 10
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 120,
+          "representative_mask_bit1_lower_to_higher": 8,
+          "H": 9,
+          "h": 9,
+          "forest_coefficients": [
+            1,
+            10,
+            38,
+            65,
+            42
+          ],
+          "signed_score_energy": 16,
+          "converse_representative": 8
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 120,
+          "representative_mask_bit1_lower_to_higher": 41,
+          "H": 13,
+          "h": 13,
+          "forest_coefficients": [
+            1,
+            10,
+            39,
+            70,
+            49
+          ],
+          "signed_score_energy": 8,
+          "converse_representative": 41
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 120,
+          "representative_mask_bit1_lower_to_higher": 12,
+          "H": 11,
+          "h": 11,
+          "forest_coefficients": [
+            1,
+            10,
+            39,
+            70,
+            48
+          ],
+          "signed_score_energy": 8,
+          "converse_representative": 12
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 120,
+          "representative_mask_bit1_lower_to_higher": 4,
+          "H": 5,
+          "h": 5,
+          "forest_coefficients": [
+            1,
+            10,
+            37,
+            62,
+            40
+          ],
+          "signed_score_energy": 24,
+          "converse_representative": 9
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 40,
+          "representative_mask_bit1_lower_to_higher": 40,
+          "H": 15,
+          "h": 5,
+          "forest_coefficients": [
+            1,
+            10,
+            39,
+            70,
+            49
+          ],
+          "signed_score_energy": 8,
+          "converse_representative": 40
+        },
+        {
+          "automorphisms": 5,
+          "labelled_orbit_size": 24,
+          "representative_mask_bit1_lower_to_higher": 76,
+          "H": 15,
+          "h": 3,
+          "forest_coefficients": [
+            1,
+            10,
+            40,
+            75,
+            55
+          ],
+          "signed_score_energy": 0,
+          "converse_representative": 76
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 40,
+          "representative_mask_bit1_lower_to_higher": 2,
+          "H": 3,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            10,
+            36,
+            57,
+            36
+          ],
+          "signed_score_energy": 32,
+          "converse_representative": 11
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 120,
+          "representative_mask_bit1_lower_to_higher": 9,
+          "H": 5,
+          "h": 5,
+          "forest_coefficients": [
+            1,
+            10,
+            37,
+            58,
+            30
+          ],
+          "signed_score_energy": 24,
+          "converse_representative": 4
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 40,
+          "representative_mask_bit1_lower_to_higher": 5,
+          "H": 3,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            10,
+            36,
+            55,
+            28
+          ],
+          "signed_score_energy": 32,
+          "converse_representative": 5
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 40,
+          "representative_mask_bit1_lower_to_higher": 11,
+          "H": 3,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            10,
+            36,
+            53,
+            26
+          ],
+          "signed_score_energy": 32,
+          "converse_representative": 2
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 120,
+          "representative_mask_bit1_lower_to_higher": 0,
+          "H": 1,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            10,
+            35,
+            50,
+            24
+          ],
+          "signed_score_energy": 40,
+          "converse_representative": 0
+        }
+      ],
+      "merged_inventory": [
+        {
+          "representatives": [
+            0
+          ],
+          "weight": 1,
+          "forest_average": [
+            "1",
+            "10",
+            "35",
+            "50",
+            "24"
+          ],
+          "signed_score_energy": 40
+        },
+        {
+          "representatives": [
+            2,
+            11
+          ],
+          "weight": 2,
+          "forest_average": [
+            "1",
+            "10",
+            "36",
+            "55",
+            "31"
+          ],
+          "signed_score_energy": 32
+        },
+        {
+          "representatives": [
+            4,
+            9
+          ],
+          "weight": 10,
+          "forest_average": [
+            "1",
+            "10",
+            "37",
+            "60",
+            "35"
+          ],
+          "signed_score_energy": 24
+        },
+        {
+          "representatives": [
+            5
+          ],
+          "weight": 1,
+          "forest_average": [
+            "1",
+            "10",
+            "36",
+            "55",
+            "28"
+          ],
+          "signed_score_energy": 32
+        },
+        {
+          "representatives": [
+            8
+          ],
+          "weight": 9,
+          "forest_average": [
+            "1",
+            "10",
+            "38",
+            "65",
+            "42"
+          ],
+          "signed_score_energy": 16
+        },
+        {
+          "representatives": [
+            10
+          ],
+          "weight": 9,
+          "forest_average": [
+            "1",
+            "10",
+            "38",
+            "65",
+            "43"
+          ],
+          "signed_score_energy": 16
+        },
+        {
+          "representatives": [
+            12
+          ],
+          "weight": 11,
+          "forest_average": [
+            "1",
+            "10",
+            "39",
+            "70",
+            "48"
+          ],
+          "signed_score_energy": 8
+        },
+        {
+          "representatives": [
+            40
+          ],
+          "weight": 5,
+          "forest_average": [
+            "1",
+            "10",
+            "39",
+            "70",
+            "49"
+          ],
+          "signed_score_energy": 8
+        },
+        {
+          "representatives": [
+            41
+          ],
+          "weight": 13,
+          "forest_average": [
+            "1",
+            "10",
+            "39",
+            "70",
+            "49"
+          ],
+          "signed_score_energy": 8
+        },
+        {
+          "representatives": [
+            76
+          ],
+          "weight": 3,
+          "forest_average": [
+            "1",
+            "10",
+            "40",
+            "75",
+            "55"
+          ],
+          "signed_score_energy": 0
+        }
+      ],
+      "full_forest_collision": [
+        {
+          "root_mask": 40,
+          "H": 15,
+          "automorphisms": 3,
+          "out_forest": [
+            1,
+            10,
+            39,
+            70,
+            49
+          ],
+          "in_forest": [
+            1,
+            10,
+            39,
+            70,
+            49
+          ],
+          "arcs": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        {
+          "root_mask": 41,
+          "H": 13,
+          "automorphisms": 1,
+          "out_forest": [
+            1,
+            10,
+            39,
+            70,
+            49
+          ],
+          "in_forest": [
+            1,
+            10,
+            39,
+            70,
+            49
+          ],
+          "arcs": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "labelled_tournaments_covered": 32768,
+      "unlabelled_classes": 56,
+      "merged_nodes": 34,
+      "fixed_path_presentations": 1024,
+      "total_weight": 1024,
+      "weighted_forest_coefficients": [
+        "1024",
+        "15360",
+        "93184",
+        "285696",
+        "442560",
+        "277056"
+      ],
+      "weighted_signed_score_energy": 22528,
+      "classes": [
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 83,
+          "H": 17,
+          "h": 17,
+          "forest_coefficients": [
+            1,
+            15,
+            89,
+            261,
+            381,
+            225
+          ],
+          "signed_score_energy": 38,
+          "converse_representative": 83
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 22,
+          "H": 15,
+          "h": 15,
+          "forest_coefficients": [
+            1,
+            15,
+            89,
+            261,
+            380,
+            220
+          ],
+          "signed_score_energy": 38,
+          "converse_representative": 18
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 81,
+          "H": 23,
+          "h": 23,
+          "forest_coefficients": [
+            1,
+            15,
+            90,
+            271,
+            412,
+            255
+          ],
+          "signed_score_energy": 30,
+          "converse_representative": 147
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 18,
+          "H": 15,
+          "h": 15,
+          "forest_coefficients": [
+            1,
+            15,
+            89,
+            261,
+            380,
+            224
+          ],
+          "signed_score_energy": 38,
+          "converse_representative": 22
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 153,
+          "H": 29,
+          "h": 29,
+          "forest_coefficients": [
+            1,
+            15,
+            91,
+            279,
+            432,
+            270
+          ],
+          "signed_score_energy": 22,
+          "converse_representative": 153
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 147,
+          "H": 23,
+          "h": 23,
+          "forest_coefficients": [
+            1,
+            15,
+            90,
+            269,
+            400,
+            237
+          ],
+          "signed_score_energy": 30,
+          "converse_representative": 81
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 154,
+          "H": 29,
+          "h": 29,
+          "forest_coefficients": [
+            1,
+            15,
+            91,
+            279,
+            433,
+            273
+          ],
+          "signed_score_energy": 22,
+          "converse_representative": 154
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 26,
+          "H": 19,
+          "h": 19,
+          "forest_coefficients": [
+            1,
+            15,
+            90,
+            269,
+            399,
+            236
+          ],
+          "signed_score_energy": 30,
+          "converse_representative": 20
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 146,
+          "H": 31,
+          "h": 31,
+          "forest_coefficients": [
+            1,
+            15,
+            91,
+            279,
+            433,
+            273
+          ],
+          "signed_score_energy": 22,
+          "converse_representative": 149
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 282,
+          "H": 33,
+          "h": 33,
+          "forest_coefficients": [
+            1,
+            15,
+            92,
+            287,
+            453,
+            288
+          ],
+          "signed_score_energy": 14,
+          "converse_representative": 156
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 177,
+          "H": 29,
+          "h": 29,
+          "forest_coefficients": [
+            1,
+            15,
+            91,
+            279,
+            432,
+            270
+          ],
+          "signed_score_energy": 22,
+          "converse_representative": 181
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 10,
+          "H": 9,
+          "h": 9,
+          "forest_coefficients": [
+            1,
+            15,
+            88,
+            255,
+            368,
+            215
+          ],
+          "signed_score_energy": 46,
+          "converse_representative": 21
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 20,
+          "H": 19,
+          "h": 19,
+          "forest_coefficients": [
+            1,
+            15,
+            90,
+            271,
+            411,
+            250
+          ],
+          "signed_score_energy": 30,
+          "converse_representative": 26
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 240,
+          "representative_mask_bit1_lower_to_higher": 80,
+          "H": 27,
+          "h": 9,
+          "forest_coefficients": [
+            1,
+            15,
+            90,
+            271,
+            411,
+            252
+          ],
+          "signed_score_energy": 30,
+          "converse_representative": 176
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 16,
+          "H": 17,
+          "h": 17,
+          "forest_coefficients": [
+            1,
+            15,
+            89,
+            261,
+            378,
+            216
+          ],
+          "signed_score_energy": 38,
+          "converse_representative": 16
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 156,
+          "H": 33,
+          "h": 33,
+          "forest_coefficients": [
+            1,
+            15,
+            92,
+            289,
+            465,
+            306
+          ],
+          "signed_score_energy": 14,
+          "converse_representative": 282
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 150,
+          "H": 25,
+          "h": 25,
+          "forest_coefficients": [
+            1,
+            15,
+            91,
+            279,
+            432,
+            268
+          ],
+          "signed_score_energy": 22,
+          "converse_representative": 89
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 181,
+          "H": 29,
+          "h": 29,
+          "forest_coefficients": [
+            1,
+            15,
+            91,
+            279,
+            432,
+            270
+          ],
+          "signed_score_energy": 22,
+          "converse_representative": 177
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 152,
+          "H": 37,
+          "h": 37,
+          "forest_coefficients": [
+            1,
+            15,
+            92,
+            289,
+            465,
+            306
+          ],
+          "signed_score_energy": 14,
+          "converse_representative": 281
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 24,
+          "H": 23,
+          "h": 23,
+          "forest_coefficients": [
+            1,
+            15,
+            91,
+            279,
+            430,
+            264
+          ],
+          "signed_score_energy": 22,
+          "converse_representative": 28
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 144,
+          "H": 37,
+          "h": 37,
+          "forest_coefficients": [
+            1,
+            15,
+            91,
+            279,
+            432,
+            270
+          ],
+          "signed_score_energy": 22,
+          "converse_representative": 144
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 280,
+          "H": 41,
+          "h": 41,
+          "forest_coefficients": [
+            1,
+            15,
+            93,
+            297,
+            486,
+            324
+          ],
+          "signed_score_energy": 6,
+          "converse_representative": 280
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 145,
+          "H": 33,
+          "h": 33,
+          "forest_coefficients": [
+            1,
+            15,
+            91,
+            279,
+            432,
+            270
+          ],
+          "signed_score_energy": 22,
+          "converse_representative": 145
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 8,
+          "H": 9,
+          "h": 9,
+          "forest_coefficients": [
+            1,
+            15,
+            88,
+            255,
+            367,
+            210
+          ],
+          "signed_score_energy": 46,
+          "converse_representative": 17
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 149,
+          "H": 31,
+          "h": 31,
+          "forest_coefficients": [
+            1,
+            15,
+            91,
+            279,
+            433,
+            273
+          ],
+          "signed_score_energy": 22,
+          "converse_representative": 146
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 89,
+          "H": 25,
+          "h": 25,
+          "forest_coefficients": [
+            1,
+            15,
+            91,
+            279,
+            432,
+            272
+          ],
+          "signed_score_energy": 22,
+          "converse_representative": 150
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 240,
+          "representative_mask_bit1_lower_to_higher": 1332,
+          "H": 45,
+          "h": 15,
+          "forest_coefficients": [
+            1,
+            15,
+            93,
+            297,
+            489,
+            333
+          ],
+          "signed_score_energy": 6,
+          "converse_representative": 1332
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 313,
+          "H": 37,
+          "h": 37,
+          "forest_coefficients": [
+            1,
+            15,
+            92,
+            287,
+            454,
+            291
+          ],
+          "signed_score_energy": 14,
+          "converse_representative": 148
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 345,
+          "H": 43,
+          "h": 43,
+          "forest_coefficients": [
+            1,
+            15,
+            93,
+            297,
+            488,
+            330
+          ],
+          "signed_score_energy": 6,
+          "converse_representative": 344
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 344,
+          "H": 43,
+          "h": 43,
+          "forest_coefficients": [
+            1,
+            15,
+            93,
+            297,
+            488,
+            330
+          ],
+          "signed_score_energy": 6,
+          "converse_representative": 345
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 148,
+          "H": 37,
+          "h": 37,
+          "forest_coefficients": [
+            1,
+            15,
+            92,
+            289,
+            466,
+            309
+          ],
+          "signed_score_energy": 14,
+          "converse_representative": 313
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 73,
+          "H": 13,
+          "h": 13,
+          "forest_coefficients": [
+            1,
+            15,
+            89,
+            265,
+            399,
+            245
+          ],
+          "signed_score_energy": 38,
+          "converse_representative": 179
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 240,
+          "representative_mask_bit1_lower_to_higher": 408,
+          "H": 45,
+          "h": 15,
+          "forest_coefficients": [
+            1,
+            15,
+            93,
+            297,
+            486,
+            324
+          ],
+          "signed_score_energy": 6,
+          "converse_representative": 408
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 281,
+          "H": 37,
+          "h": 37,
+          "forest_coefficients": [
+            1,
+            15,
+            92,
+            287,
+            453,
+            288
+          ],
+          "signed_score_energy": 14,
+          "converse_representative": 152
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 28,
+          "H": 23,
+          "h": 23,
+          "forest_coefficients": [
+            1,
+            15,
+            91,
+            279,
+            430,
+            264
+          ],
+          "signed_score_energy": 22,
+          "converse_representative": 24
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 12,
+          "H": 11,
+          "h": 11,
+          "forest_coefficients": [
+            1,
+            15,
+            89,
+            265,
+            398,
+            240
+          ],
+          "signed_score_energy": 38,
+          "converse_representative": 25
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 240,
+          "representative_mask_bit1_lower_to_higher": 176,
+          "H": 27,
+          "h": 9,
+          "forest_coefficients": [
+            1,
+            15,
+            90,
+            269,
+            399,
+            234
+          ],
+          "signed_score_energy": 30,
+          "converse_representative": 80
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 240,
+          "representative_mask_bit1_lower_to_higher": 377,
+          "H": 33,
+          "h": 11,
+          "forest_coefficients": [
+            1,
+            15,
+            92,
+            287,
+            453,
+            286
+          ],
+          "signed_score_energy": 14,
+          "converse_representative": 88
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 4,
+          "H": 5,
+          "h": 5,
+          "forest_coefficients": [
+            1,
+            15,
+            87,
+            247,
+            350,
+            200
+          ],
+          "signed_score_energy": 54,
+          "converse_representative": 19
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 240,
+          "representative_mask_bit1_lower_to_higher": 88,
+          "H": 33,
+          "h": 11,
+          "forest_coefficients": [
+            1,
+            15,
+            92,
+            289,
+            465,
+            308
+          ],
+          "signed_score_energy": 14,
+          "converse_representative": 377
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 240,
+          "representative_mask_bit1_lower_to_higher": 72,
+          "H": 15,
+          "h": 5,
+          "forest_coefficients": [
+            1,
+            15,
+            89,
+            265,
+            399,
+            245
+          ],
+          "signed_score_energy": 38,
+          "converse_representative": 178
+        },
+        {
+          "automorphisms": 5,
+          "labelled_orbit_size": 144,
+          "representative_mask_bit1_lower_to_higher": 140,
+          "H": 15,
+          "h": 3,
+          "forest_coefficients": [
+            1,
+            15,
+            90,
+            275,
+            430,
+            275
+          ],
+          "signed_score_energy": 30,
+          "converse_representative": 314
+        },
+        {
+          "automorphisms": 9,
+          "labelled_orbit_size": 80,
+          "representative_mask_bit1_lower_to_higher": 87,
+          "H": 9,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            15,
+            87,
+            243,
+            333,
+            189
+          ],
+          "signed_score_energy": 54,
+          "converse_representative": 87
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 240,
+          "representative_mask_bit1_lower_to_higher": 2,
+          "H": 3,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            15,
+            86,
+            237,
+            321,
+            180
+          ],
+          "signed_score_energy": 62,
+          "converse_representative": 23
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 21,
+          "H": 9,
+          "h": 9,
+          "forest_coefficients": [
+            1,
+            15,
+            88,
+            249,
+            332,
+            157
+          ],
+          "signed_score_energy": 46,
+          "converse_representative": 10
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 17,
+          "H": 9,
+          "h": 9,
+          "forest_coefficients": [
+            1,
+            15,
+            88,
+            249,
+            331,
+            156
+          ],
+          "signed_score_energy": 46,
+          "converse_representative": 8
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 179,
+          "H": 13,
+          "h": 13,
+          "forest_coefficients": [
+            1,
+            15,
+            89,
+            257,
+            351,
+            169
+          ],
+          "signed_score_energy": 38,
+          "converse_representative": 73
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 25,
+          "H": 11,
+          "h": 11,
+          "forest_coefficients": [
+            1,
+            15,
+            89,
+            257,
+            350,
+            168
+          ],
+          "signed_score_energy": 38,
+          "converse_representative": 12
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 9,
+          "H": 5,
+          "h": 5,
+          "forest_coefficients": [
+            1,
+            15,
+            87,
+            243,
+            320,
+            150
+          ],
+          "signed_score_energy": 54,
+          "converse_representative": 9
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 240,
+          "representative_mask_bit1_lower_to_higher": 178,
+          "H": 15,
+          "h": 5,
+          "forest_coefficients": [
+            1,
+            15,
+            89,
+            257,
+            351,
+            169
+          ],
+          "signed_score_energy": 38,
+          "converse_representative": 72
+        },
+        {
+          "automorphisms": 5,
+          "labelled_orbit_size": 144,
+          "representative_mask_bit1_lower_to_higher": 314,
+          "H": 15,
+          "h": 3,
+          "forest_coefficients": [
+            1,
+            15,
+            90,
+            265,
+            370,
+            181
+          ],
+          "signed_score_energy": 30,
+          "converse_representative": 140
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 240,
+          "representative_mask_bit1_lower_to_higher": 5,
+          "H": 3,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            15,
+            86,
+            235,
+            303,
+            140
+          ],
+          "signed_score_energy": 62,
+          "converse_representative": 11
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 19,
+          "H": 5,
+          "h": 5,
+          "forest_coefficients": [
+            1,
+            15,
+            87,
+            239,
+            302,
+            136
+          ],
+          "signed_score_energy": 54,
+          "converse_representative": 4
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 240,
+          "representative_mask_bit1_lower_to_higher": 11,
+          "H": 3,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            15,
+            86,
+            233,
+            291,
+            130
+          ],
+          "signed_score_energy": 62,
+          "converse_representative": 5
+        },
+        {
+          "automorphisms": 3,
+          "labelled_orbit_size": 240,
+          "representative_mask_bit1_lower_to_higher": 23,
+          "H": 3,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            15,
+            86,
+            231,
+            285,
+            126
+          ],
+          "signed_score_energy": 62,
+          "converse_representative": 2
+        },
+        {
+          "automorphisms": 1,
+          "labelled_orbit_size": 720,
+          "representative_mask_bit1_lower_to_higher": 0,
+          "H": 1,
+          "h": 1,
+          "forest_coefficients": [
+            1,
+            15,
+            85,
+            225,
+            274,
+            120
+          ],
+          "signed_score_energy": 70,
+          "converse_representative": 0
+        }
+      ],
+      "merged_inventory": [
+        {
+          "representatives": [
+            0
+          ],
+          "weight": 1,
+          "forest_average": [
+            "1",
+            "15",
+            "85",
+            "225",
+            "274",
+            "120"
+          ],
+          "signed_score_energy": 70
+        },
+        {
+          "representatives": [
+            2,
+            23
+          ],
+          "weight": 2,
+          "forest_average": [
+            "1",
+            "15",
+            "86",
+            "234",
+            "303",
+            "153"
+          ],
+          "signed_score_energy": 62
+        },
+        {
+          "representatives": [
+            4,
+            19
+          ],
+          "weight": 10,
+          "forest_average": [
+            "1",
+            "15",
+            "87",
+            "243",
+            "326",
+            "168"
+          ],
+          "signed_score_energy": 54
+        },
+        {
+          "representatives": [
+            5,
+            11
+          ],
+          "weight": 2,
+          "forest_average": [
+            "1",
+            "15",
+            "86",
+            "234",
+            "297",
+            "135"
+          ],
+          "signed_score_energy": 62
+        },
+        {
+          "representatives": [
+            8,
+            17
+          ],
+          "weight": 18,
+          "forest_average": [
+            "1",
+            "15",
+            "88",
+            "252",
+            "349",
+            "183"
+          ],
+          "signed_score_energy": 46
+        },
+        {
+          "representatives": [
+            9
+          ],
+          "weight": 5,
+          "forest_average": [
+            "1",
+            "15",
+            "87",
+            "243",
+            "320",
+            "150"
+          ],
+          "signed_score_energy": 54
+        },
+        {
+          "representatives": [
+            10,
+            21
+          ],
+          "weight": 18,
+          "forest_average": [
+            "1",
+            "15",
+            "88",
+            "252",
+            "350",
+            "186"
+          ],
+          "signed_score_energy": 46
+        },
+        {
+          "representatives": [
+            12,
+            25
+          ],
+          "weight": 22,
+          "forest_average": [
+            "1",
+            "15",
+            "89",
+            "261",
+            "374",
+            "204"
+          ],
+          "signed_score_energy": 38
+        },
+        {
+          "representatives": [
+            16
+          ],
+          "weight": 17,
+          "forest_average": [
+            "1",
+            "15",
+            "89",
+            "261",
+            "378",
+            "216"
+          ],
+          "signed_score_energy": 38
+        },
+        {
+          "representatives": [
+            18,
+            22
+          ],
+          "weight": 30,
+          "forest_average": [
+            "1",
+            "15",
+            "89",
+            "261",
+            "380",
+            "222"
+          ],
+          "signed_score_energy": 38
+        },
+        {
+          "representatives": [
+            20,
+            26
+          ],
+          "weight": 38,
+          "forest_average": [
+            "1",
+            "15",
+            "90",
+            "270",
+            "405",
+            "243"
+          ],
+          "signed_score_energy": 30
+        },
+        {
+          "representatives": [
+            24,
+            28
+          ],
+          "weight": 46,
+          "forest_average": [
+            "1",
+            "15",
+            "91",
+            "279",
+            "430",
+            "264"
+          ],
+          "signed_score_energy": 22
+        },
+        {
+          "representatives": [
+            72,
+            178
+          ],
+          "weight": 10,
+          "forest_average": [
+            "1",
+            "15",
+            "89",
+            "261",
+            "375",
+            "207"
+          ],
+          "signed_score_energy": 38
+        },
+        {
+          "representatives": [
+            73,
+            179
+          ],
+          "weight": 26,
+          "forest_average": [
+            "1",
+            "15",
+            "89",
+            "261",
+            "375",
+            "207"
+          ],
+          "signed_score_energy": 38
+        },
+        {
+          "representatives": [
+            80,
+            176
+          ],
+          "weight": 18,
+          "forest_average": [
+            "1",
+            "15",
+            "90",
+            "270",
+            "405",
+            "243"
+          ],
+          "signed_score_energy": 30
+        },
+        {
+          "representatives": [
+            81,
+            147
+          ],
+          "weight": 46,
+          "forest_average": [
+            "1",
+            "15",
+            "90",
+            "270",
+            "406",
+            "246"
+          ],
+          "signed_score_energy": 30
+        },
+        {
+          "representatives": [
+            83
+          ],
+          "weight": 17,
+          "forest_average": [
+            "1",
+            "15",
+            "89",
+            "261",
+            "381",
+            "225"
+          ],
+          "signed_score_energy": 38
+        },
+        {
+          "representatives": [
+            87
+          ],
+          "weight": 1,
+          "forest_average": [
+            "1",
+            "15",
+            "87",
+            "243",
+            "333",
+            "189"
+          ],
+          "signed_score_energy": 54
+        },
+        {
+          "representatives": [
+            88,
+            377
+          ],
+          "weight": 22,
+          "forest_average": [
+            "1",
+            "15",
+            "92",
+            "288",
+            "459",
+            "297"
+          ],
+          "signed_score_energy": 14
+        },
+        {
+          "representatives": [
+            89,
+            150
+          ],
+          "weight": 50,
+          "forest_average": [
+            "1",
+            "15",
+            "91",
+            "279",
+            "432",
+            "270"
+          ],
+          "signed_score_energy": 22
+        },
+        {
+          "representatives": [
+            140,
+            314
+          ],
+          "weight": 6,
+          "forest_average": [
+            "1",
+            "15",
+            "90",
+            "270",
+            "400",
+            "228"
+          ],
+          "signed_score_energy": 30
+        },
+        {
+          "representatives": [
+            144
+          ],
+          "weight": 37,
+          "forest_average": [
+            "1",
+            "15",
+            "91",
+            "279",
+            "432",
+            "270"
+          ],
+          "signed_score_energy": 22
+        },
+        {
+          "representatives": [
+            145
+          ],
+          "weight": 33,
+          "forest_average": [
+            "1",
+            "15",
+            "91",
+            "279",
+            "432",
+            "270"
+          ],
+          "signed_score_energy": 22
+        },
+        {
+          "representatives": [
+            146,
+            149
+          ],
+          "weight": 62,
+          "forest_average": [
+            "1",
+            "15",
+            "91",
+            "279",
+            "433",
+            "273"
+          ],
+          "signed_score_energy": 22
+        },
+        {
+          "representatives": [
+            148,
+            313
+          ],
+          "weight": 74,
+          "forest_average": [
+            "1",
+            "15",
+            "92",
+            "288",
+            "460",
+            "300"
+          ],
+          "signed_score_energy": 14
+        },
+        {
+          "representatives": [
+            152,
+            281
+          ],
+          "weight": 74,
+          "forest_average": [
+            "1",
+            "15",
+            "92",
+            "288",
+            "459",
+            "297"
+          ],
+          "signed_score_energy": 14
+        },
+        {
+          "representatives": [
+            153
+          ],
+          "weight": 29,
+          "forest_average": [
+            "1",
+            "15",
+            "91",
+            "279",
+            "432",
+            "270"
+          ],
+          "signed_score_energy": 22
+        },
+        {
+          "representatives": [
+            154
+          ],
+          "weight": 29,
+          "forest_average": [
+            "1",
+            "15",
+            "91",
+            "279",
+            "433",
+            "273"
+          ],
+          "signed_score_energy": 22
+        },
+        {
+          "representatives": [
+            156,
+            282
+          ],
+          "weight": 66,
+          "forest_average": [
+            "1",
+            "15",
+            "92",
+            "288",
+            "459",
+            "297"
+          ],
+          "signed_score_energy": 14
+        },
+        {
+          "representatives": [
+            177,
+            181
+          ],
+          "weight": 58,
+          "forest_average": [
+            "1",
+            "15",
+            "91",
+            "279",
+            "432",
+            "270"
+          ],
+          "signed_score_energy": 22
+        },
+        {
+          "representatives": [
+            280
+          ],
+          "weight": 41,
+          "forest_average": [
+            "1",
+            "15",
+            "93",
+            "297",
+            "486",
+            "324"
+          ],
+          "signed_score_energy": 6
+        },
+        {
+          "representatives": [
+            344,
+            345
+          ],
+          "weight": 86,
+          "forest_average": [
+            "1",
+            "15",
+            "93",
+            "297",
+            "488",
+            "330"
+          ],
+          "signed_score_energy": 6
+        },
+        {
+          "representatives": [
+            408
+          ],
+          "weight": 15,
+          "forest_average": [
+            "1",
+            "15",
+            "93",
+            "297",
+            "486",
+            "324"
+          ],
+          "signed_score_energy": 6
+        },
+        {
+          "representatives": [
+            1332
+          ],
+          "weight": 15,
+          "forest_average": [
+            "1",
+            "15",
+            "93",
+            "297",
+            "489",
+            "333"
+          ],
+          "signed_score_energy": 6
+        }
+      ],
+      "full_forest_collision": null
+    }
+  ]
+}

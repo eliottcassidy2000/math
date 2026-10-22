@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "c_interval": "[1.14489062220108113396549403280491360810408690258857218456225368693641667748533804393226602099905541857659, 1.14489062220108113396549403280491360810408690258857218456225368693641667748533804393226602099905541863374]",
+  "eta_interval": "[0.38819817004875869811056096104253374291789453529173123534449148110992513929323266013195895948188701117812, 0.388198170048758698110560961042533742917894535291731235344491481109925139293232660131958959481887011203123]",
+  "exact_c_lower_bound": "35/33",
+  "exact_eta_upper_bound": "44/105",
+  "exp_3_over_8_upper_bound": "119/80",
+  "all_integer_growth_check": {
+    "polynomial": "35*m^2-66*m-66",
+    "value_at_3": 51,
+    "forward_difference": "70*m-31",
+    "minimum_difference_for_m_ge_3": 179
+  },
+  "edge_cases": {
+    "ties": "Either minimizer gives the same absolute residual; the recursive sign records the choice.",
+    "exact_termination": "Stop at zero. The finite signed identity holds, and no next index is asserted."
+  }
+}

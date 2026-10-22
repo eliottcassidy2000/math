@@ -158,3 +158,37 @@ Run from the workspace root:
     python session31-analytic-audit/independent_checks.py
 
 Files `independent_checks.json` and `.out` contain the detailed interval evidence and summary. The script has no network, source-file mutation, or git operation.
+
+## 9. Bounded extension: global nearest-residue convergence theorem
+
+The subsequently added global theorem in `GREEDY_INVERSE_CLOCKS.md` passes. This section audits that addition without changing the previously reviewed source.
+
+For every positive residual below A(3), its inverse satisfies x>3 and m=floor x>=3. Since r>=A(m+1)>=c/(m+1), while r'<=1/m^2,
+
+r'/r <= (m+1)/(c m^2) <= 4/(9c)=eta.
+
+Here (m+1)/m^2 decreases for m>=3. The proposed elementary lower bound c>35/33 is valid. The only abbreviated exponential step can be made fully explicit: for 0<t<1, n!>=2 for n>=2, strictly for n>=3, gives
+
+exp(t)<1+t+t^2/[2(1-t)].
+
+At t=3/8 the right side is 119/80<3/2. Also e>1+1+1/2+1/6=8/3, sqrt(3)>5/3, and pi<22/7. Thus c>35/33 and eta<44/105<1. Exact-rational and directed-interval checks are in `check_global_convergence.py` and its output files.
+
+Induction now gives r_j<=eta^j r_0 until termination, and all positive residuals remain in the inverse's permitted domain. Define sigma_0=1 and sigma_(j+1)=sigma_j sign(r_j-A(M_j)). The one-step identity sigma_j r_j=sigma_j A(M_j)+sigma_(j+1)r_(j+1) telescopes exactly. Moreover,
+
+sum_j A(M_j) <= sum_j (r_j+r_(j+1)) <= r_0(1+eta)/(1-eta).
+
+Hence every nonterminating expansion converges absolutely to its starting value, not just conditionally. Since r_j tends to zero, the previously proved quadratic asymptotic applies eventually. A terminating expansion is already finite and exact.
+
+For strict index increase, the displayed sufficient inequality 2(m+1)<c m^2 holds for every integer m>=3. Using the lower bound 35/33, it reduces to 35m^2-66m-66>0; the polynomial equals 51 at m=3 and has positive forward difference 70m-31 thereafter. Thus
+
+r' <= [A(m)-A(m+1)]/2 <= 1/m^2 < A(m+1)/2.
+
+If r'>0, every integer k<=m+1 has A(k)>2r', so its approximation error is greater than r'. Some sufficiently large integer has 0<A(k)<2r', giving error strictly less than r'. Consequently the next nearest index is greater than m+1, hence strictly greater than either possible current choice. This argument is independent of any tie convention.
+
+Edge cases:
+
+- At a tie, either of the two neighboring minimizers is permitted. The absolute residual is the same for either choice; their different signs are exactly handled by the sigma recursion. All convergence and strict-growth bounds survive either decision.
+- If r=A(k) exactly, the unique nearest choice is k and the new residual is zero. Stop there. The finite telescoping identity is exact; a “next index” exists only when the residual is positive. The theorem does not establish nontermination for MRB.
+- A starting residual strictly below A(3) can still select index 3. The proof covers m=3 explicitly.
+
+One scope clarification was sent to the parent: the closing generalization should refer to dictionaries satisfying the stated reciprocal lower bound and derivative bound. Monotonicity and reciprocal asymptotics alone do not force global strict index increase when early amplitude gaps are large. The actual theorem for the specified A is correct.

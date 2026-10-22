@@ -109,3 +109,11 @@ In particular, with signed score energy W_s=||(A−A^T)1||², which IS converse 
 sum_nodes w(node) W_s(node) = 2^d [n(n−1)−2(n−2)] =2^d(n²−3n+4).
 
 These are exact polynomial and moment constraints on a candidate metagraph inventory. They can reject a proposed inventory even when its unweighted node/edge totals agree. They are not sufficient realizability conditions: neither blue/black incidence nor which pair of tilings is joined is retained. A valid realization still requires those incidence coordinates. The statistics are not the signed linear-forest loop coefficients of Session30; the directed rooted-forest Laplacian here is a different object with branching allowed.
+
+### Full-polynomial hostile: counts do not recover Hamiltonian multiplicity
+
+At order5, use unordered pairs in lexicographic order, with bit0 meaning the smaller label points to the larger and bit1 reversing it. Masks40 and41 both have
+
+Fout(t)=Fin(t)=1+10t+39t²+70t³+49t⁴,
+
+but their Hamiltonian counts are respectively15 and13, and automorphism orders3 and1. Their fixed-path presentation multiplicities are therefore5 and13. The arc lists and all Hamiltonian paths are in `forest_collision.json`; a separate audit reconstructs the result without using these supplied path lists. Both whole directed forest polynomials, not merely their quadratic coefficients, therefore fail to reconstruct H or the tiling multiplicity. This is compatible with all ensemble identities above.

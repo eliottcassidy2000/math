@@ -73,3 +73,23 @@ The inverse series and the mirror tree function both require branch and discrete
 24845630402060641702669818431121505.
 
 All four integer decisions, rather than only the leading defect digits, are certified. The companion numerical script is retained as a separate numerical reproduction. This cascade computes consequences of the initial defect; it still does not derive that defect from CM data.
+
+## Global convergence theorem for the nearest-amplitude algorithm
+
+The signed nearest-residue algorithm is not merely a finite numerical construction. For every initial 0<r_0<A(3), it either terminates exactly or gives an absolutely convergent signed expansion, with its absolute residuals decreasing geometrically and eventually quadratically.
+
+Use the constant c=2 exp(−1/e)sin(pi/3)/(pi/3)>1. For m=floor x(r)>=3, we have r>=A(m+1)>=c/(m+1) and r'<=1/m², hence
+
+r'/r <= (m+1)/(c m²) <= eta:=4/(9c)<1.
+
+This proves r_j<=eta^j r_0 and keeps every new residual inside (0,A(3)), unless it is zero. If sigma_0=1 and sigma_(j+1)=sigma_j sign(r_j−A(M_j)), then
+
+r_0=sum_{j=0}^{J} sigma_j A(M_j)+sigma_(J+1) r_(J+1).
+
+Since A(M_j)<=r_j+r_(j+1), the signed series is absolutely convergent and its remainder is exactly the displayed signed residual. There is no presumption that MRB's expansion never terminates.
+
+For completeness, c>1 can be certified using elementary estimates or interval evaluation of this fixed expression. For example e>8/3 implies exp(−1/e)>exp(−3/8)>2/3 (the latter follows from exp(3/8)<1+3/8+(3/8)^2/[2(1−3/8)]=119/80<3/2); sqrt3>5/3 and pi<22/7 give sin(pi/3)/(pi/3)=3sqrt3/(2pi)>35/44. Thus c>2*(2/3)*(35/44)=35/33>1.
+
+Unless the algorithm terminates with zero residual, the next chosen integer is strictly larger than the previous chosen integer. Indeed A(m)−A(m+1)<=2/m²<A(m+1) because 2(m+1)<c m² for m>=3. Hence r'<A(m+1)/2. Every index <=m+1 has amplitude greater than2r' and cannot be closest: some sufficiently large index has amplitude in (0,2r'). Therefore the next index is >m+1, while the current chosen index is m or m+1.
+
+These convergence and growth facts are properties of a reciprocal-residue dictionary satisfying the proved derivative and reciprocal lower bounds, not consequences of monotonicity alone. They do not distinguish CM input8 from other starting values and do not explain the exceptional initial cancellation.
