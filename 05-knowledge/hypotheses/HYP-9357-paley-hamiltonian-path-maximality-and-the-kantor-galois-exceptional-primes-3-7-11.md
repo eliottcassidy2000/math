@@ -81,6 +81,7 @@ The maximum of `H` over circulant tournaments `Cay(Z_n, S)` (all connection sets
   * A regular tournament with **trivial automorphism group** has `H = 3719893`, against `3711175` for the best circulant. Its converse has the same `H`; both were found 51 times in 160 restarts of a steepest ascent over cyclic-triangle reversals.
   * It also has more Hamiltonian cycles than any circulant: 168361 against 166848.
   * This gives the lower bound `max H(13) ≥ 3719893`. OEIS A038375 stops at `n = 11`.
+  * **Update (2026-10-22, sierp lane).** Exhaustively, `3719893` is the maximum of `H` over all 1,495,297 regular 13-tournaments. It is attained only by this converse pair; `R_13` ranks 781st. The parameter-free two-loop predictor of HYP-9365 ranks the pair 7th (`reg13_argmax.out` in `04-computation/experiments/sierpinski_ocf_20261022/`).
 * At `n = 15`, 16 restarts found nothing above the rotational circulant. That search is weak; this is not evidence either way.
 * The Paley tournament wins among circulants at 7 and 11 and loses at 19, 23 and 31. At the prime power 27 it also loses to the rotational circulant.
   * Rotational/Paley ratios: `1.0098, 1.0159, 1.0205, 1.0239` at `q = 19, 23, 27, 31`; the gap grows.
