@@ -1,0 +1,5 @@
+all regular n=11 (1223 classes): residual 1st order mean +5.527e-03 sd 2.065e-03; 2nd order mean +2.830e-03 sd 1.089e-03
+  ranking of kappa: spearman with 1st-order predictor +0.8956, with 2nd-order +0.9738; argmax found: 1st True, 2nd True
+tower S_2 (n=9): exact -1.078405e-01; resid 1st -8.821e-03 (n^2 x -0.715); resid 2nd -1.059e-03 (n^3 x -0.772)
+tower S_3 (n=27): exact -4.373746e-02; resid 1st +2.384e-04 (n^2 x +0.174); resid 2nd -3.176e-06 (n^3 x -0.063)
+tower S_4 (n=81): exact -1.585955e-02; resid 1st +9.318e-05 (n^2 x +0.611); resid 2nd +1.895e-06 (n^3 x +1.007)

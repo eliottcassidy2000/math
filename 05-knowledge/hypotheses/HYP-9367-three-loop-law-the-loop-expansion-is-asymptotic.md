@@ -72,6 +72,11 @@ On `R_11 … R_35`, `n³ ×` residual = 3.19, 3.30, 3.42, 3.53, 3.61, 3.66, 3.69
 | `n = 21` (88) | 1.95e-3, 6.8e-4 | 3.8e-4, 1.8e-4 |
 | `n = 25` (208) | 1.50e-3, 3.6e-4 | 2.3e-4, 7.1e-5 |
 
+**Towers and all regular tournaments** (`second_order_regular.out`).
+* Ternary towers: the residual goes from `+2.38·10^(−4)` to `−3.2·10^(−6)` at `S_3` (27 vertices, 75 times smaller), and from `+9.32·10^(−5)` to `+1.9·10^(−6)` at `S_4` (81 vertices, 49 times smaller).
+* All 1223 regular 11-tournaments, where the bridged cores contribute: the residual mean drops from `5.5·10^(−3)` to `2.8·10^(−3)`, and the sd from `2.1·10^(−3)` to `1.1·10^(−3)`.
+* The parameter-free ranking of `κ` there improves from Spearman 0.8956 to 0.9738, and still finds `P_11`.
+
 **The doubly regular constant.** The predicted `z(q) = q²(κ_pred/e − 1 + 3/(2q))` for Paley `P_q` is 2.783, 2.845, 2.919, 2.978, 2.991, 3.018 at `q = 19, 23, 31, 43, 47, 59`.
 * Extrapolating in `1/q` gives `c_2 ≈ 3.13`. The exact-data value is 3.07–3.10 (`drt_universal_curve.out`).
 * The gap `z_exact − z_pred` is 0.334, 0.265, 0.178 at `q = 19, 23, 31`, i.e. `≈ 6/q`, the expected third order.
