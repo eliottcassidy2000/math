@@ -1,0 +1,4 @@
+       |Lambda_4| = 196560
+       20000 trials, 20000 A2^12 holes b, Fricke points v = a - b by neighbour root count: {120: 1399} [167s]
+  ok   every sampled order-6 Fricke point has the 6-neighbour with 120 roots (Coxeter number 5, i.e. A4^6)
+ALL CHECKS PASSED

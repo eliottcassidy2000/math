@@ -19,6 +19,11 @@ status: >
     max_{Lambda_4} y.mu <= 7. order4_fricke_census.py found 2046 such samples, all with a single orbit invariant,
     that of the E6^4 shallow multiple 3c (= the A2^12 (h+1)-point). This matches the predicted single class
     (VERIFIED by sampling).
+  - Order 6, a composite order (VERIFIED by sampling). An order-6 point is v = a - b, with a = 3v an A1^24 hole and
+    b = -2v an A2^12 hole. With a fixed, order6_fricke_census.py sampled 20000 holes b and found 1399 Fricke points
+    v. Every one has a 6-neighbour with exactly 120 roots, i.e. Coxeter number 5 = 6 - 1, i.e. A4^6. So the missing
+    composite step dim V'_1 = 24e holds in every sample at e = 6. Steps (ii)-(v) then make each of them the A4^6
+    (h+1)-point.
   - Prime order p, classification (PROVED as a sketch; the argument is below). Up to Co_0 x Lambda, the Fricke
     points of order p correspond bijectively to the Niemeier lattices with h = p - 1. The ingredients are:
     - (i) the orbifold at a Fricke point is V_N' with dim V_1 = 24p, so h(N') = p - 1;
@@ -42,7 +47,7 @@ source: 05-knowledge/results/leech_deep_hole_swap_theorem_20261022.md
 scripts:
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_h_plus_one.py (+ _q2.out, .out)
   - 04-computation/experiments/deep_holes_theta_20261022/leech_h_plus_one.py (+ .out), weyl_h_plus_one.py (+ .out)
-  - 04-computation/experiments/deep_holes_theta_20261022/order3_fricke_census.py (+ .out), order4_fricke_census.py (+ .out)
+  - 04-computation/experiments/deep_holes_theta_20261022/order3_fricke_census.py (+ .out), order4_fricke_census.py (+ .out), order6_fricke_census.py (+ .out)
 related:
   - THM-4759 (deep-hole twining, Fricke points, Fricke descent)
   - THM-4758 (swap theorem)
