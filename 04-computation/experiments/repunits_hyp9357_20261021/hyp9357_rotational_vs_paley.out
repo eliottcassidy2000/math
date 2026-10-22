@@ -1,0 +1,19 @@
+(V) validation of the method on the rotational circulants n = 13..23
+  ok   n = 13: H(R_13) = 3711175 = circ_counts value; Held-Karp 3711175 (match True) [8.5s]
+  ok   n = 15: H(R_15) = 198464295 = circ_counts value; Held-Karp 198464295 (match True) [4.9s]
+  ok   n = 17: H(R_17) = 13689269499 = circ_counts value; Held-Karp 13689269499 (match True) [0.0s]
+  ok   n = 19: H(R_19) = 1184212824763 = circ_counts value [0.0s]
+  ok   n = 21: H(R_21) = 125547534942879 = circ_counts value [0.8s]
+  ok   n = 23: H(R_23) = 16011537490557279 = circ_counts value [0.7s]
+(T) the decisive test at q = 27, 31 (HYP-9357 prediction (3))
+  ok   n = 27: H(R_27) = 426990256001863046739 (third modulus consistent, odd, divisible by 27) [94s]
+  ok   n = 31: H(R_31) = 20351875726012821643802839 (third modulus consistent, odd, divisible by 31) [412s]
+     n = 19: H(R_n) = 1184212824763, H(P_n) = 1172695746915; ratio H(R)/H(P) = 1.009821; H 2^(n-1)/n!: rotational 2.55197, Paley 2.52715; rotational wins: True
+     n = 23: H(R_n) = 16011537490557279, H(P_n) = 15760206976379349; ratio H(R)/H(P) = 1.015947; H 2^(n-1)/n!: rotational 2.59776, Paley 2.55698; rotational wins: True
+     n = 27: H(R_n) = 426990256001863046739, H(P_n) = 418425945688463432031; ratio H(R)/H(P) = 1.020468; H 2^(n-1)/n!: rotational 2.63157, Paley 2.57879; rotational wins: True
+     n = 31: H(R_n) = 20351875726012821643802839, H(P_n) = 19876729650849384218015865; ratio H(R)/H(P) = 1.023905; H 2^(n-1)/n!: rotational 2.65756, Paley 2.59551; rotational wins: True
+     HYP-9357 prediction (3) at q = 27 (prime power, outside its prime statement): rotational wins
+     HYP-9357 prediction (3) at q = 31: PASSED (rotational wins)
+  ok   decisive comparison computed (verdict printed above; the script does not assert the hypothesis)
+
+ALL CHECKS PASSED  (520s)
