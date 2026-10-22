@@ -36,8 +36,26 @@ status: >
     (rho, z'') (swap_fricke_proof.py). It also supplies the Leech-side facts of (10) from the N side.
   - The M24-point remark is VERIFIED (sampling plus exact orbit-size arithmetic). It is not a proof that the k = 0
     vectors form a single orbit.
-  Prior-art search (agent, 2026-10-22): no published statement of (2), (3) or (5) was found. The search predates
-  (7)-(11), which have not yet been searched. CDH Remark 2.2 asks for
+  Prior art. A first agent search (2026-10-22) found no published statement of (2), (3) or (5). A second search
+  covered (7)-(11).
+  - (10), lattice level: KNOWN. Lambda is the (h+1)-neighbour of N at rho, and the reflection s_rho exchanges the
+    h- and (h+1)-neighbours: Chenevier-Lannes, Automorphic Forms and Even Unimodular Lattices, Ergebnisse 69
+    (2019), Thm 3.4.2.10, with counts N_h, N_{h+1}.
+  - (10), N side: KNOWN. N + rho/(h+1) has the unique minimal vector of norm 2h/(h+1) (ibid. Prop 3.4.2.16,
+    adapting Borcherds' Lemma 2.2.7).
+  - (10), the cusp: KNOWN. z'' = z + r with r a simple root (Borcherds' thesis, Lemmas 3.4.1-3.4.2 and 4.1.2(b)).
+    The D24 case is Thompson's construction (SPLAG 3rd ed. p. lvi).
+  - (10), the element: KNOWN. The element rho/(h+1) of Kac type (2;1,...,1), the fact that regular elements of
+    order h+1 form one class, and the equal eigenvalue multiplicities (the height equidistribution) are in Kac,
+    'Simple Lie groups and the Legendre symbol', LNM 848 (1981), Thm 1, Lemma 2 and the remark after Cor. 2,
+    crediting Macdonald (1972).
+  - (8), p = 2: KNOWN at lattice level. Chenevier-Lannes §3.4.4 (R/2 = even-height roots; Prop 3.4.4.2) and
+    Borcherds' thesis Prop 4.5.3, the pairs with h_2 = 2h_1 + 2, e.g. D24 -> D12^2 -> D6^4 -> A3^8 and
+    E8^3 -> D8^3.
+  - The M24-point orbit O6a is in the ATLAS (p. 181); see Sun-Wang arXiv 2111.10999, §2.3 and Lemma 2.11.
+  - NOT FOUND, so new as far as we know: the Leech-side statements of (10) (they follow in a line from Borcherds'
+    lemmas); the Fricke Hauptmodul twining (7), (10); the Fricke swap theorem (11); the p = 3, 5 descents
+    (E6^4 -> A2^12, E8^3 -> A8^3, A4^6); the H -> pH + 1 reading; the D-type shell-1 family. CDH Remark 2.2 asks for
   a conceptual proof that T^X is genus zero; (2) identifies T^X as a VOA trace but does not by itself prove genus zero.
   Session opus-2026-10-22-S53.
 session: opus-2026-10-22-S53
@@ -304,6 +322,10 @@ This gives two consequences:
 - the 24 norm-2 vectors of Λ + c″ correspond to the 24 simple roots of N.
 
 So the "vertices" of a Fricke point are the simple roots.
+
+*Root-count bound.* Möller–Scheithauer (Cor. 5.12–5.13 and the remark after them) show that an n-neighbour of Λ
+has at most 24n roots, and at most 24(p − 1) for prime p with g(X_0(p)) > 0. The (h+1)-neighbours attain the
+sharpened bound with equality for p = 11, 17, 19, 23, 31 and 47.
 
 *Relation to generalised deep holes.* Möller–Scheithauer realise each V_N from V_Λ by a generalised deep hole, unique
 up to conjugacy. Their twisted sectors all have conformal weight ≥ 1 (extremality, R(g) = 0), and for V_N that

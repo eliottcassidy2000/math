@@ -182,6 +182,16 @@ Published numbers agree with the identity, but none of these sources states or u
 
 Gaps: SPLAG Ch. 24 p. 511 and Borcherds' thesis Ch. 5 could not be read.
 
+**Second search (the Fricke-point results).**
+- KNOWN: the (h+1)-neighbour and its uniqueness (Chenevier-Lannes 2019, Thm 3.4.2.10, Prop 3.4.2.16;
+  Borcherds' thesis Lemmas 3.4.1-3.4.2, 4.1.2(b); Thompson for D24).
+- KNOWN: the Kac element (2;1,...,1), its uniqueness and the eigenvalue equidistribution (Kac, LNM 848 (1981),
+  after Macdonald 1972).
+- KNOWN: the p = 2 descents as 2-neighbours (Chenevier-Lannes §3.4.4; Borcherds Prop 4.5.3).
+- KNOWN: the M24 orbit O6a (ATLAS p. 181; Sun-Wang 2111.10999).
+- NOT FOUND: the Fricke twining and Hauptmodul identification, the Fricke swap theorem, the p = 3, 5 descents,
+  the H -> pH + 1 reading, and the D-type shell-1 family.
+
 Classical inputs are cited: Garvan-Kim-Stanton (t-cores), Granville-Ono (3-cores), Kostant (1959; principal element
 ~ Coxeter element), and CDH Prop. 2.1 (T^X is a principal modulus; Remark 2.2 asks for a conceptual proof).
 
