@@ -1,0 +1,16 @@
+n=3: F(T,-1) = -2, OCF-tangent sum = -2, forest form ok: True, odd N_L vanish: True
+n=3: F(T,-1) = -2, OCF-tangent sum = -2, forest form ok: True, odd N_L vanish: True
+n=3: F(T,-1) = -2, OCF-tangent sum = -2, forest form ok: True, odd N_L vanish: True
+n=3: F(T,-1) = 6, OCF-tangent sum = 6, forest form ok: True, odd N_L vanish: True
+n=3: F(T,-1) = -2, OCF-tangent sum = -2, forest form ok: True, odd N_L vanish: True
+n=3: F(T,-1) = 6, OCF-tangent sum = 6, forest form ok: True, odd N_L vanish: True
+n=5: F(T,-1) = 0, OCF-tangent sum = 0, forest form ok: True, odd N_L vanish: True
+n=5: F(T,-1) = 16, OCF-tangent sum = 16, forest form ok: True, odd N_L vanish: True
+n=5: F(T,-1) = 0, OCF-tangent sum = 0, forest form ok: True, odd N_L vanish: True
+n=5: F(T,-1) = 0, OCF-tangent sum = 0, forest form ok: True, odd N_L vanish: True
+n=5: F(T,-1) = -16, OCF-tangent sum = -16, forest form ok: True, odd N_L vanish: True
+n=5: F(T,-1) = 0, OCF-tangent sum = 0, forest form ok: True, odd N_L vanish: True
+n=7: F(T,-1) = -80, OCF-tangent sum = -80, forest form ok: True, odd N_L vanish: True
+n=7: F(T,-1) = -144, OCF-tangent sum = -144, forest form ok: True, odd N_L vanish: True
+n=7: F(T,-1) = -16, OCF-tangent sum = -16, forest form ok: True, odd N_L vanish: True
+ALL OK
