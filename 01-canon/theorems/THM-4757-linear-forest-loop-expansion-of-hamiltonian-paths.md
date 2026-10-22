@@ -13,6 +13,10 @@ status: >
   gain rho is Wormald's (arXiv:2610.16245) in Bhattacharjee's determinant form (GitHub release v1.0.0, 2026-10-14);
   THM-4755 rederived it for blow-ups via a block walk. The single-tournament reading of rho as the one-loop part of the
   forest gas, the excess grading and the two-loop formula are new here as far as the repo and these two sources go.
+  Literature search 2026-10-22 (web): no single-tournament loop expansion found. Adler-Alon-Ross (RSA 2001) get e from a
+  Poisson count of consecutive cyclic triangles in a triangle-correlated random tournament, the same local mechanism as
+  the self-glued 2-runs here; Cuckler bounds Hamilton cycles of regular tournaments by a martingale on self-avoiding
+  walks; Wormald's generating functions use (I - AD)^-1 for blow-ups.
 session: mac-mini-2026-10-22-sierp
 source: 05-knowledge/results/sierpinski_steiner_collatz_tournaments_20261022.md
 scripts:

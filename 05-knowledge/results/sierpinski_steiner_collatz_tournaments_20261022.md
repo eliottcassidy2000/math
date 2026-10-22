@@ -275,6 +275,7 @@ The numerators `4, 28, 244, 2188` are the Collatz images `3n + 1` of the even po
 **Doubly regular tournaments are indistinguishable through three loops.** Their propagators lie in `span{I, J, Ŝ}`, and three-loop cores have at most 4 vertices.
 * A non-Paley doubly regular 19-tournament `D_19` (found by annealing, nauty-certified) has `H(D_19) = 1172732961771`, against `H(P_19) = 1172695746915`: a ratio of `1 + 3.2·10^(−5)`.
 * Their 4-subtournament censuses coincide. Their 5-subtournament censuses do not, which is where four loops begin.
+* At order 23, three non-Paley classes differ from `P_23` by `−1.6·10^(−5)` to `−1.9·10^(−5)`. The scaled gap `n³(H/H(P) − 1)` is ≈ 0.2 at both orders 19 and 23, the `O(n^(−3))` four-loop scaling (`drt_results.out`).
 
 **A non-perturbative term.** The values `κ(R_n)` split by `n mod 4`.
 * The alternating component decays like `0.6^n` and carries the sign `(−1)^((n+1)/2)`.

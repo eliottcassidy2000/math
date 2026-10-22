@@ -70,6 +70,8 @@ Let `T` be regular on `n` vertices, `Ŝ = S/n` with eigenvalues `i x_k`, and `G,
 * So every two- and three-loop term is a signed count of subtournaments on at most 4 vertices. For doubly regular tournaments these counts are fixed by `n`, because out-neighbourhoods are regular of degree `(n−3)/4`.
 * Hence non-isomorphic doubly regular tournaments of one order should agree to relative `O(n^(−3))`.
 * **Test (order 19).** `H(P_19) = 1172695746915`. A non-Paley, self-converse doubly regular 19-tournament `D_19` (simulated annealing on `SSᵀ = nI − J`, nauty-certified non-isomorphic, `drt_anneal.c`) has `H(D_19) = 1172732961771`, a ratio of `1 + 3.17·10^(−5)`. Regular 19-tournaments spread over several percent.
+* **Test (order 23).** Three further non-Paley classes (nauty-distinct) give `(H − H(P_23))/H(P_23) = −1.61·10^(−5), −1.94·10^(−5), −1.93·10^(−5)`, with `H(P_23) = 15760206976379349` (`drt_results.out`).
+* The scaled gaps `n³·(H/H(P) − 1)` are `+0.218` at order 19 and `−0.196, −0.236, −0.235` at order 23. They have the same size at both orders, as an `O(n^(−3))` (four-loop) difference requires.
 * At order 15 the annealer found one doubly regular tournament up to isomorphism and converse (the two nauty classes are converses of each other, so their equal `H` is trivial).
 * `D_19` has more Hamiltonian paths than `P_19`, though fewer than `R_19`.
 * The census agrees with the mechanism (`drt_subcounts.out`). `P_19` and `D_19` have identical 4-vertex subtournament counts (1026, 570, 570, 1710), and their 5-vertex counts differ (for example 342 against 360 transitive 5-sets). Four-loop cores have up to 6 vertices, so that is where the difference first enters.
