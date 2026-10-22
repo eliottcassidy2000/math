@@ -295,6 +295,19 @@ The map does not claim that *no conceivable future bridge exists*. It shows exac
 
 Numerically, \(r_7\approx1.53014011947\) and \(r_{21}\approx1.18794512385\) are ordinary points on the same analytic decreasing branch; no special branch, rationality, or extinction transition occurs at either index. Both are transcendental for the same reason as every other integer input except 2 and 4. The actual critical transition is at the real input \(e\), not at 7 or 21.
 
+### 7.1 A genuine tournament connection survives at the ensemble level
+
+The companion all-order result `session31-root/HAMILTONIAN_FOREST_SIZE_BIAS.md`, independently audited in `HAMILTONIAN_FOREST_AUDIT.md`, supplies a real bridge that must not be confused with the failed gap transfer. For a uniformly sampled labelled n-vertex tournament, let \(F_T(t)\) count directed rooted forests by number of arcs, and set \(\kappa=2^{n-1}H/n!\), so \(\mathbb E\kappa=1\). Put \(a=1+nt/2\). Then
+
+\[
+\mathbb E F_T(t)=a^{n-1},\qquad
+\mathbb E[\kappa F_T(t)]
+=\sum_{s=0}^{\lfloor(n-1)/2\rfloor}
+\binom{n-1-s}{s}(t^2/4)^s a^{n-1-2s}.
+\]
+
+At \(t=2\), \(\mathbb E F_T(2)=(n+1)^{n-1}=n!a_n\), exactly the integer normalization of the mirror coefficient. For n>=3, H is positively correlated with every forest coefficient of degrees 2,...,n-1. This follows from conditioning a uniform tournament on a specified Hamiltonian path, not from fitting numerical data. The ensemble average forgets individual orientations and the realization predicate, so it does not transport the 7/21 spectrum gaps. The directed-triangle hostile remains a valid warning against scalar reconstruction.
+
 ## 8. Reproduction and audit boundaries
 
 Run from this directory:

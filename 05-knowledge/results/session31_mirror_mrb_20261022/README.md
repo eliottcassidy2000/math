@@ -9,3 +9,13 @@ Current exact mechanism: the coefficient sequence is the rooted-forest generatin
 See [concept board](CONCEPT_BOARD.md) for the portfolio, inherited mechanisms, and hostile probes. Later checkpoints will add source audits, global-data obstructions, exact tournament ensemble identities, and reproducible certificates. No MRB irrationality proof, modular defect identity, Collatz closure, or metagraph classification is claimed.
 
 Git base refreshed to 9860c2977d3698700eac0cbd8f1cc8eac9386418. Incoming four/five-loop work remains subject to its own stated audit boundaries. Original user PDFs are read-only inputs, not redistributed by this packet.
+
+## Second checkpoint
+
+- [Exact tournament ensemble law](HAMILTONIAN_FOREST_SIZE_BIAS.md), independently checked by two unrelated finite algorithms and a separate proof audit. The merged-node addendum is still under its own review at this checkpoint.
+- [MRB contour audit](mrb/MRB_CONTOUR_AUDIT.md): an explicit entire-function ambiguity preserves all branch jumps and any finite prefix while changing the MRB sum.
+- [Entire deformation](ENTIRE_MRB_DEFORMATION.md), with a certified nearby unique zero.
+- [Greedy inverse clocks](GREEDY_INVERSE_CLOCKS.md), distinguishing under-, over-, and nearest-residue conventions. The first four nearest-residue indices are independently interval-certified.
+- [Independent analytic audit](analytic-audit/AUDIT.md) records the complete proof and computational scope.
+
+The requested exact modular mechanism for the original MRB defect remains OPEN. These results supply both positive analytic structure and specific obstructions; they are not a proof that every enriched modular construction is impossible.
