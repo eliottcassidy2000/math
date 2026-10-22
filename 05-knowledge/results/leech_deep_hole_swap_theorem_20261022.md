@@ -262,6 +262,18 @@ them as Collatz dynamics is ANALOGY.
 **27.** The 9+ Hauptmodul of the D10E7^2 Fricke point is x + 3 + 27/x with x = (eta/eta(9 tau))^3. A8^3 is the
 balanced hole with glue 27 = 24 + k.
 
+**Collatz remarks (NUMEROLOGY: exact arithmetic, no lattice mechanism known).**
+- The accelerated Collatz map T(H) = (3H+1)/2 sends the Mersenne Fricke chain 3, 7, 15, 31 (A1^24, D4^6, D8^3,
+  D16E8/E8^3) term by term to the Cunningham chain 5, 11, 23, 47 (A3^8, D6^4, D12^2, D24). Indeed
+  T(2^k - 1) = 3·2^(k-1) - 1, which on D-indices is n -> 3n/2.
+- The Collatz trajectory of 27 (111 steps, peak 9232) runs 27 -> 82 -> 41 -> 124 -> 62 -> 31 -> 94 -> 47 -> 142 -> 71.
+  It contains the Niemeier H-values 31, 47, 23, 10, 5, 8, 4, and the supersingular primes 41, 31, 47, 71, 23, 5, 2.
+- The Collatz orbit of 3 (3, 10, 5, 16, 8, 4, 2, 1), with the doublings 6, 12, 24, consists of D-indices of Niemeier
+  components. Every halving step in it is a Fricke descent; the odd steps 3 -> 10 and 5 -> 16 have no lattice
+  meaning.
+- The genuine 3n+1 is the Fricke ascent at the bad prime 3, H -> 3H + 1 (A2^12 -> E6^4, A8^3 -> E8^3), together with
+  the Eisenstein norm 3n + 1 of 3-cores at the A2^12 hole.
+
 HYP-9368 conjectures that the genus-zero inner automorphisms of V_Lambda are exactly 0, the 23 deep holes and the 23
 Fricke points. A first draft that allowed only the eleven bad-prime multiples was refuted by the (h+1)-points before
 registration.
