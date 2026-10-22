@@ -252,14 +252,14 @@ c″ = proj_Λ(z″)/(h + 1), a point of order e = h + 1. Then for all 23 types:
 | 8 | A6⁴ | 36q + 128q² (8A, A007265) |
 | 9 | A7²D5² | 27q + 86q² (9A) |
 | 10 | A8³ | 21q + 62q² (10D) |
-| 11 | A9²D6, D6⁴ | 17q + 46q² (11A) |
-| 13 | A11D7E6, E6⁴ | 12q + 28q² (13A) |
+| 11 | A9²D6, D6⁴ | 17q + 46q² (11A, A058205) |
+| 13 | A11D7E6, E6⁴ | 12q + 28q² (13A, A034319) |
 | 14 | A12² | 10q + 24q² (14C, A058504) |
 | 15 | D8³ | 9q + 19q² (15C) |
 | 17 | A15D9 | 7q + 14q² (17A) |
 | 19 | A17E7, D10E7² | 6q + 10q² (19A) |
 | 23 | D12² | 4q + 7q² (23A) |
-| 26 | A24 | 3q + 6q² (26+26) |
+| 26 | A24 | 3q + 6q² (26+26 = T_26B, A058597; (η(2τ)η(13τ)/(η(τ)η(26τ)))² − 2) |
 | 31 | D16E8, E8³ | 3q + 3q² (31A) |
 | 47 | D24 | q + 2q² (47A) |
 
@@ -343,9 +343,10 @@ So each X ≠ A24 has four graded traces that agree in every weight n ≥ 2:
 | V_Λ, ĝ_X (lift of g_X ∈ Co_0) | T^X | −k |
 | V^♮, g'_X ∈ M | T^X + k | 0 |
 
-**A24 is the exception.** Its Frame shape 25·1^{−1} is the only Coxeter Frame shape of a Niemeier lattice that is
-not a Conway-group Frame shape, and Γ_0(25) is the only lambency group that is not monstrous (CDH). The A24 hole
-twines the Leech VOA by the Γ_0(25) Hauptmodul with no Monster partner.
+**A24 is the exception, but only on the deep-hole side.** Its Frame shape 25·1^{−1} is the only Coxeter Frame shape
+of a Niemeier lattice that is not a Conway-group Frame shape, and Γ_0(25) is the only lambency group that is not
+monstrous (CDH). So the A24 hole twines the Leech VOA by the Γ_0(25) Hauptmodul with no Monster partner. Its Fricke
+point of order 26 = 25 + 1, by contrast, twines by T_26B + 24 (10).
 
 ## Proof
 
