@@ -64,6 +64,14 @@ the following holds:
 Equivalently, the Fricke points of Λ are exactly the 23 points c″_N. Here a Fricke point is a point with a unique
 nearest Leech point at squared distance 2 − 2/n, all of whose proper multiples are deep holes or lie in Λ.
 
+**Geometric form.** Let v be a Fricke point of order n, with nearest Leech point λ. Put c = v + (v − λ)/(n − 1), the
+extrapolation away from λ. Then (n − 1)c ∈ Λ and |c − λ|² = 2 + 2/(n − 1). The conjecture says that c is a deep hole
+of a type with Coxeter number h = n − 1, and so v = c + (λ − c)/(h + 1) is its (h+1)-point (THM-4759 (10),
+fricke_nudge.py).
+
+Equivalently, the 24 norm-2 vectors μ_i of Λ + v satisfy (v − μ_i)·(v − λ) = −1/n, and they extend to the 24 + k
+vertices of c. In short: every Fricke point is a nudged deep hole.
+
 ## Predictions
 
 - No Fricke point of order 2, 12, 16, 18, 20, 21, 22, 24, 25, 27–30, 32–46, or any order ≥ 48.
