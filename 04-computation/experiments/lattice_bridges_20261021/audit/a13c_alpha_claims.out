@@ -1,0 +1,45 @@
+n=7: 2 classes in own table; all H checks passed (see a13_alpha_ie_7.out); explicit method agrees on 2/2; session alpha_decomp agrees on 0/0 classes printed there
+n=9: 4 classes in own table; all H checks passed (see a13_alpha_ie_9.out); explicit method agrees on 4/4; session alpha_decomp agrees on 2/2 classes printed there
+   alpha_1: max 954 at ['Emin'] (unique: True)
+   alpha_2: max 354 at ['R'] (unique: True)
+   alpha_3: max 37 at ['[1, 3, 4, 7]', '[1, 4, 6, 7]'] (unique: False)
+   split vs flat [1, 2, 3, 5]: 2da1 + 4da2 = -162; sum_(k>=3) 2^k dak = 72; dH = -90; alpha_2(R) = 354 > alpha_2(flat) = 336; per-k sign of dak (k>=3): ['+']
+n=11: 4 classes in own table; all H checks passed (see a13_alpha_ie_11.out); explicit method agrees on 4/4; session alpha_decomp agrees on 2/2 classes printed there
+   alpha_1: max 21169 at ['Emin'] (unique: True)
+   alpha_2: max 11220 at ['[1, 2, 3, 4, 6]'] (unique: True)
+   alpha_3: max 1474 at ['R'] (unique: True)
+   split vs flat [1, 3, 4, 5, 9]: 2da1 + 4da2 = -4,620; sum_(k>=3) 2^k dak = 2,552; dH = -2,068; alpha_2(R) = 11,110 > alpha_2(flat) = 10,879; per-k sign of dak (k>=3): ['+']
+n=13: 6 classes in own table; all H checks passed (see a13_alpha_ie_13.out); explicit method agrees on 6/6; session alpha_decomp agrees on 2/2 classes printed there
+   alpha_1: max 645937 at ['Emin'] (unique: True)
+   alpha_2: max 443794 at ['[1, 2, 3, 4, 6, 8]'] (unique: True)
+   alpha_3: max 87568 at ['R'] (unique: True)
+   alpha_4: max 3224 at ['R'] (unique: True)
+   split vs flat [1, 2, 3, 5, 6, 9]: 2da1 + 4da2 = -90,636; sum_(k>=3) 2^k dak = 98,800; dH = 8,164; alpha_2(R) = 436,748 < alpha_2(flat) = 439,452; per-k sign of dak (k>=3): ['+', '+']
+   n=13: 8*da3 = 81,120, 16*da4 = 17,680; without alpha_4: dH = -9,516
+n=15: 16 classes in own table; all H checks passed (see a13_alpha_ie_15.out); explicit method agrees on 0/0; session alpha_decomp agrees on 0/0 classes printed there
+   alpha_1: max 28793188 at ['Emin'] (unique: True)
+   alpha_2: max 22812707 at ['Emin'] (unique: True)
+   alpha_3: max 5849428 at ['R'] (unique: True)
+   alpha_4: max 397720 at ['R'] (unique: True)
+   alpha_5: max 14900 at ['[1, 3, 4, 6, 7, 10, 13]'] (unique: True)
+   n=15 alpha_2(R) = 22,518,662 vs energy minimiser [1, 2, 3, 4, 6, 7, 10]: 22,812,707
+   n=15 alpha_2(R) = 22,518,662 vs energy minimiser [1, 2, 3, 6, 8, 10, 11]: 22,781,517
+   n=15 alpha_2(R) = 22,518,662 vs energy minimiser [1, 2, 5, 7, 9, 11, 12]: 22,779,372
+   n=15 alpha_2(R) = 22,518,662 vs energy minimiser [1, 2, 3, 5, 6, 8, 11]: 22,762,572
+n=17: 16 classes in own table; all H checks passed (see a13_alpha_ie_17.out); explicit method agrees on 0/0; session alpha_decomp agrees on 2/2 classes printed there
+   alpha_1: max 1712334018 at ['Emin'] (unique: True)
+   alpha_2: max 1499127864 at ['Emin'] (unique: True)
+   alpha_3: max 458011858 at ['R'] (unique: True)
+   alpha_4: max 45997104 at ['R'] (unique: True)
+   alpha_5: max 1800368 at ['R'] (unique: True)
+   split vs flat [1, 2, 3, 5, 7, 8, 11, 13]: 2da1 + 4da2 = -189,570,298; sum_(k>=3) 2^k dak = 318,784,408; dH = 129,214,110; alpha_2(R) = 1,482,234,998 < alpha_2(flat) = 1,499,127,864; per-k sign of dak (k>=3): ['+', '+', '+']
+n=19: 30 classes in own table; all H checks passed (see a13_alpha_ie_19.out); explicit method agrees on 0/0; session alpha_decomp agrees on 2/2 classes printed there
+   alpha_1: max 130965270477 at ['Emin'] (unique: True)
+   alpha_2: max 123659531220 at ['Emin'] (unique: True)
+   alpha_3: max 42960731622 at ['R'] (unique: True)
+   alpha_4: max 5521030944 at ['R'] (unique: True)
+   alpha_5: max 331078344 at ['R'] (unique: True)
+   alpha_6: max 4100656 at ['R'] (unique: True)
+   split vs flat [1, 4, 5, 6, 7, 9, 11, 16, 17]: 2da1 + 4da2 = -15,235,138,144; sum_(k>=3) 2^k dak = 26,752,215,992; dH = 11,517,077,848; alpha_2(R) = 122,111,579,294 < alpha_2(flat) = 123,659,531,220; per-k sign of dak (k>=3): ['+', '+', '+', '+']
+n=21: 3 classes in own table; all H checks passed (see a13_alpha_ie_21.out); explicit method agrees on 0/0; session alpha_decomp agrees on 2/2 classes printed there
+   split vs flat [1, 2, 3, 7, 10, 12, 13, 15, 16, 17]: 2da1 + 4da2 = -831,973,445,620; sum_(k>=3) 2^k dak = 2,686,870,223,200; dH = 1,854,896,777,580; alpha_2(R) = 12,330,182,836,208 < alpha_2(flat) = 12,402,025,082,712; per-k sign of dak (k>=3): ['+', '+', '+', '+', '+']

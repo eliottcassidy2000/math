@@ -3,8 +3,8 @@ id: THM-4751
 title: "The circulant H-landscape: a Paley peak at class-number distance from the rotational peak. (1) For a prime q = 3 mod 4, q > 3, the Paley tournament P_q and the rotational tournament R_q = Cay(Z_q, {1,...,(q-1)/2}) are B_q = ((q-1)/2 - (2 - (2/q)) h(-q))/2 difference-class flips apart in the circulant class graph (minimum over multipliers), and agree on a fraction 1/2 + (2 - (2/q)) h(-q)/(q-1) of their arcs (Dirichlet; the half-row imbalance of the Ogg note, the circulant companion of THM-4666). (2) B_q <= 1 iff q in {3, 7, 11}; B_q >= 2 for every q >= 19 (elementary). (3) FINITE-EXACT, odd n <= 25: the H-maximal circulant is unique and is R_n or a one-flip neighbour of R_n (P_7, Z_9{1,2,3,5}, P_11); the Paley class is a strict local maximum of H at q = 7, 11, 19, 23 and 31 (all its flip-neighbours are isomorphic); R_n is a strict local maximum at n = 13..31. (4) If every H-maximal circulant is within one flip of R_n (HYP-9362(a)), then P_q is never the circulant H-maximum for q >= 19, the circulant 'only if' of HYP-9357. (5) KNOWN facts, alignment NUMEROLOGY: among primes q = 3 mod 4 the spectral ring Z[(1+sqrt(-q))/2] of P_q is norm-Euclidean (covering radius^2 = (q+1)^2/(16q) < 1) exactly for q = 3, 7, 11, and a PID exactly for the Heegner primes 3, 7, 11, 19, 43, 67, 163. (6) The two peaks are the two extremes of the additive energy E(S) of the connection set: c_4 = n(E - m)/4 on circulants; R_n is the unique maximiser for every odd n (Lev; RLT c_4 theorem), P_q the unique minimiser for prime q = 3 mod 4 (flat spectrum, Galois); so the class number measures the distance between the energy extremes (prior art THM-140, THM-162). (7) FINITE-EXACT mechanism: in H = sum 2^k alpha_k the energy minimum wins alpha_1 (and alpha_2 from n = 13), R_n wins every alpha_k with k >= 3; at n = 13 R_n overtakes only through alpha_4."
 status: >
   AUDITED (first pass, 2026-10-22: 05-knowledge/results/lattice_bridges_audit_20261021.md; no false statement, statuses and
-  prior art corrected; MISTAKE-659, MISTAKE-660). Statement 7 and the HYP-474 refutation in the note: second pass
-  (lattice_bridges_audit_pass2_20261022.md).
+  prior art corrected; MISTAKE-659, MISTAKE-660). Second pass 2026-10-22 (lattice_bridges_audit_pass2_20261022.md):
+  statement 7, the HYP-474 refutation and the R_27..R_31 local maxima CONFIRMED by independent code.
   PROVED: statements 1 (Dirichlet's class number formula; the overlap A_q - B_q = (2 - (2/q))h(-q) is classical and already
   in the repo as the "half-row imbalance" of P_q in 05-knowledge/results/ogg_triangular_chowla_20260927.md; new here is the
   multiplier-minimised flip distance), 2 (elementary, least quadratic non-residue bound), 4 (formal consequence), 6
@@ -186,10 +186,12 @@ So statement (1) reads: **the two energy extremes are `B_q` flips apart.**
 
 Write `H = Σ_k 2^k α_k`, where `α_k` is the number of sets of `k` pairwise vertex-disjoint odd cycles (the OCF). The code `alpha_decomp.c` reproduces every `H` in the tables.
 
-* **Per-`k` champions, over all classes** (`alpha_all.out`).
-  * For `n = 17, 19` the energy minimum is the unique maximiser of `α_1` and `α_2`, and `R_n` is the unique maximiser of every `α_k` with `3 ≤ k ≤ ⌊n/3⌋`.
+* **Per-`k` champions, over all classes** (`alpha_all.out`, `alpha_all_21.out`; every `H` checked).
+  * For `n = 17, 19, 21` an energy minimiser is the unique maximiser of `α_1` and `α_2` (at `n = 21` it is `Z_21{1,2,3,4,6,9,10,13,14,16}`).
+  * `R_n` is the unique maximiser of every `α_k` with `3 ≤ k ≤ ⌊n/3⌋`, except the perfect triangle factors `α_(n/3)` when `3 | n` (`n = 15, 21`), which are maximised elsewhere.
   * For `n = 13, 15`, `R_n` uniquely maximises `α_3` and `α_4`.
-* **The split of `ΔH = H(R_n) − H(energy minimum)`** (`alpha_decomp_*.out`):
+  * The ratio `α_k(R_n)/α_k(flat)` grows with `k`: at `n = 19` it is 1.043, 1.126, 1.317, 1.846 for `k = 3..6`. The `H`-contributions `2^kΔα_k` themselves shrink after `k = 3`.
+* **The split of `ΔH = H(R_n) − H(flat)`**, flat = the energy minimum (at `n = 21`: `Z_21{1,2,3,7,10,12,13,15,16,17}`, one of the two energy minima, the other giving `ΔH = 1,834,373,228,646`; `n = 15`, with four energy minima, is omitted) (`alpha_decomp_*.out`):
 
 | `n` | `2Δα_1 + 4Δα_2` | `Σ_(k≥3) 2^kΔα_k` | `ΔH` |
 |---|---|---|---|
@@ -203,4 +205,5 @@ Write `H = Σ_k 2^k α_k`, where `α_k` is the number of sets of `k` pairwise ve
 * **The switch at 13.** Without `α_4`, `R_13` would lose (`+81,120 < 90,636`). Four disjoint odd cycles need 12 vertices, so the switch from the flat class to `R_n` comes exactly when they fit.
 * **Corrections to the March reading** (MISTAKE-660).
   * THM-137's "the interval's cycles are more independent (higher `α_2`)" holds only for `n ≤ 11`. From `n = 13` the interval has fewer pairs and wins through `α_k`, `k ≥ 3`.
-  * HYP-474 ("Paley maximises the `k`-cycle count at every odd `k`") fails at `k = p = 19, 23`: `c_19(R_19) = 34,841,356,485 > c_19(P_19) = 34,358,763,933`, and `R_23` has the most Hamiltonian cycles of any circulant class at `n = 23`.
+  * HYP-474 ("Paley maximises the `k`-cycle count at every odd `k`") fails at `k = p = 19, 23`: `c_19(R_19) = 34,841,356,485 > c_19(P_19) = 34,358,763,933`, and `R_23` has the most Hamiltonian cycles of any circulant class at `n = 23`. For every odd `5 ≤ k ≤ p − 2` Paley is still the unique maximiser.
+* Independently verified in the second audit pass: `c_k` and the Hamiltonian-cycle count by Held–Karp and by inclusion–exclusion (all classes, `n = 19, 23`); `α_k` by explicit enumeration (`n ≤ 13`) and by ranked zeta transforms (`n ≤ 21`) (`05-knowledge/results/lattice_bridges_audit_pass2_20261022.md`).

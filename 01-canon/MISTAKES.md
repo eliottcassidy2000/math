@@ -19640,11 +19640,11 @@ Prevention: specify the coordinate space, extension, group action, positivity cl
   - `c_19(R_19) = 34,841,356,485 > c_19(P_19) = 34,358,763,933`.
   - At `n = 23` the rotational tournament has the most Hamiltonian cycles of any circulant class: `382,137,819,329,585`, against `374,127,973,957,716` for `P_23`.
   - Sources: the `C` column of `04-computation/experiments/tournament_pseudoprimes_20261021/circ_19.out` and `circ_23.out`, and independently `lattice_bridges_20261021/alpha_decomp.c` at `n = 19`.
-  - At `p = 19` the odd lengths `5 ≤ k ≤ 17` still favour Paley; `c_3` is the same for every regular tournament.
+  - At `p = 19` the odd lengths `5 ≤ k ≤ 17` still favour Paley; `c_3` is the same for every regular tournament. At `p = 23` the same holds for `5 ≤ k ≤ 21`; at both primes `P_q` is the unique maximiser over all circulant classes for every odd `5 ≤ k ≤ p − 2` (audit pass 2, `a12b_analysis.out`).
 - **THM-137** (`THM-137-paley-crossover-mechanism.md`, Layer 3) says the interval's cycles are "more INDEPENDENT (higher alpha_2)". That is true at `p = 7` (and `n = 9, 11`).
   - From `n = 13` on, the interval has fewer disjoint pairs than the energy-minimal class. For example, `α_2(R_19) = 122,111,579,294 < α_2(P_19) = 123,659,531,220`.
   - The interval wins instead through every packing of `k ≥ 3` disjoint odd cycles. At `n = 13` it overtakes only through `α_4`.
   - THM-137's two-effect picture survives with "independence" read as `α_k`, `k ≥ 3`.
-- **THM-161**'s "Paley maximizes EVERY c_k simultaneously (Savchenko's theorem for DRTs)" overstates Savchenko, whose results compare doubly regular tournaments with `RLT_n`. The circulant version is HYP-474 above.
+- **THM-161**'s "Paley maximizes EVERY c_k simultaneously (Savchenko's theorem for DRTs)", THM-162's "Savchenko: c_k(Paley) = max c_k over all DRTs", and TANGENTS T134 / INV-053's "Savchenko (2024) proves c_m(DR_n) > c_m(RLT_n) for ALL m ≡ 1,2,3 mod 4" misstate Savchenko: arXiv:2403.07629 treats `m = 8` only. Since `P_19`, `P_23` are doubly regular and `R_n = RLT_n`, `c_n(RLT_n) > c_n(DR_n)` at `n = 19, 23` refutes the T134 / INV-053 paraphrase at `m = n`. The circulant version is HYP-474 above.
 - **Missing coordinate.** A mechanism verified at `p = 7, 11` was stated for all `p`. Both `H`-peaks are visible only from `n = 13`, where packings of four disjoint cycles first fit, so small-`p` mechanism checks cannot see the crossover.
-- **Second pass.** These claims went to an independent second audit pass (`05-knowledge/results/lattice_bridges_audit_pass2_20261022.md`).
+- **Second pass.** Independently verified in the second audit pass: `c_k` and the Hamiltonian-cycle count by Held–Karp and by inclusion–exclusion (all classes, `n = 19, 23`); `α_k` by explicit enumeration (`n ≤ 13`) and by ranked zeta transforms (`n ≤ 21`) (`05-knowledge/results/lattice_bridges_audit_pass2_20261022.md`). All claims CONFIRMED; the Savchenko paraphrases were found there.

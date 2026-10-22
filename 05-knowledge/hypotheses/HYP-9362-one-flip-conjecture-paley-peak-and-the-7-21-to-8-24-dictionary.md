@@ -2,8 +2,8 @@
 id: HYP-9362
 title: "(a) One-flip conjecture: for every odd n, every circulant tournament maximising the number H of Hamiltonian paths is the rotational tournament R_n or differs from it in one difference class; sharper, for odd n >= 13 the H-maximal circulant is R_n itself, the unique maximiser of the additive energy (refines HYP-480). (b) Paley peak: for every prime q = 3 mod 4 the Paley tournament is a strict local maximum of H on the circulant class graph; more generally, for odd n >= 17 every energy minimiser is. (c) The rotational/Paley ratio H(R_q)/H(P_q) increases to a finite limit greater than 1. (d) NUMEROLOGY to be explained or refuted: the H-values {7, 21}, proved never to occur, are the point counts |PG(2,2)|, |PG(2,4)| of the only projective planes that extend to 3-designs, whose extensions S(3,4,8) and S(3,6,22) < S(5,8,24) are the combinatorial skeletons of E_8 and the Leech lattice. (e) Packing law: for odd n >= 17 the energy minimiser maximises alpha_1 and alpha_2 and R_n maximises every alpha_k, 3 <= k <= floor(n/3), in the OCF H = sum 2^k alpha_k."
 status: >
-  OPEN. First-pass audit 2026-10-22 (05-knowledge/results/lattice_bridges_audit_20261021.md): every number confirmed;
-  statuses and prior art corrected here.
+  OPEN. Audited in two passes 2026-10-22 (05-knowledge/results/lattice_bridges_audit_20261021.md,
+  lattice_bridges_audit_pass2_20261022.md): every number confirmed; statuses and prior art corrected here.
   FINITE-EXACT evidence:
   - (a): complete multiplier-class tables for every odd n <= 25 (THM-4751 (3); n = 25 new, 208 classes; reproduced by the
     audit). R_n is moreover a strict local maximum at n = 27, 29, 31 against all its flip-neighbours (rot*_local_max.out).
@@ -12,7 +12,8 @@ status: >
   - (c): ratios 1.0098, 1.0159, 1.0239 at q = 19, 23, 31 (and 1.0205 at the prime power 27, where P_27 is not a circulant).
   - (d): the classical facts on both sides are cited below. No map is known; recorded as NUMEROLOGY (MISTAKE-559 kept the
     NUMEROLOGY verdict on {7, 21}).
-  - (e): n = 17, 19 over all classes (alpha_all.out); the split H(R_n) - H(energy minimum) for n = 9..21 (THM-4751 (7)).
+  - (e): n = 17, 19, 21 over all classes (alpha_all.out, alpha_all_21.out); the split H(R_n) - H(energy minimum) for
+    n = 9..21 (THM-4751 (7)); independently verified by the second audit pass.
 session: mac-mini-2026-10-21-fanopsp
 source: 01-canon/theorems/THM-4751-circulant-h-landscape-paley-peak-at-class-number-distance.md
 related:
@@ -103,14 +104,13 @@ New here is only the use of Hughes and Lam as the selection principle.
 
 ## (e) Packing law
 
-**Data.** In `H = Σ_k 2^k α_k`, over all classes at `n = 17, 19` (THM-4751 (7)):
-* the energy minimum is the unique maximiser of `α_1` and `α_2`;
-* `R_n` is the unique maximiser of every `α_k` with `3 ≤ k ≤ ⌊n/3⌋`.
+**Data.** In `H = Σ_k 2^k α_k`, over all classes at `n = 17, 19, 21` (THM-4751 (7)):
+* an energy minimiser is the unique maximiser of `α_1` and `α_2`;
+* `R_n` is the unique maximiser of every `α_k` with `3 ≤ k ≤ ⌊n/3⌋`, except the perfect triangle factors `α_7` at `n = 21`.
 
 At `n = 13, 15`, `R_n` maximises `α_3` and `α_4` (and at `n = 15` the triangle factors `α_5` are maximised elsewhere). The `H`-switch at `n = 13` comes through `α_4`, when four disjoint triangles first fit.
 
-**Conjecture.** The pattern of `n = 17, 19` holds for every odd `n ≥ 17`. It would imply (a) in the sharper form as soon as the packing terms dominate, which they do from `n = 13` on in all the data.
+**Conjecture.** The pattern of `n = 17, 19, 21` holds for every odd `n ≥ 17`, with `α_(n/3)` excepted when `3 | n`. It would imply (a) in the sharper form as soon as the packing terms dominate, which they do from `n = 13` on in all the data.
 
 **Tests.**
-* `n = 21` over all 88 classes (running: `alpha_all_21.out`).
 * `n = 23, 25` need a lower-memory version of `alpha_decomp.c`.

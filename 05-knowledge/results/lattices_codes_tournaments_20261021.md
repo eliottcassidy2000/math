@@ -345,7 +345,7 @@ Short odd cycles decide small `n`, and the progression wins from `n = 13` on. Th
 **Mechanism: disjoint packings** (FINITE-EXACT; `alpha_decomp.c`, which reproduces every `H` in the class tables).
 * Split `H = Σ_k 2^k α_k` (OCF), where `α_k` counts sets of `k` pairwise vertex-disjoint odd cycles.
 * Against the energy minimum ("flat"), `R_n` has fewer odd cycles (`α_1`) and, from `n = 13` on, fewer disjoint pairs (`α_2`).
-* But `R_n` has more packings of every size `k ≥ 3`, and the gap grows with `k`. At `n = 19`, for instance, `α_6` is 4,100,656 for `R_19` against 2,221,081 for `P_19`.
+* But `R_n` has more packings of every size `k ≥ 3`, and the ratio `α_k(R_n)/α_k(flat)` grows with `k` (1.043, 1.126, 1.317, 1.846 for `k = 3..6` at `n = 19`). At `n = 19`, for instance, `α_6` is 4,100,656 for `R_19` against 2,221,081 for `P_19`.
 
 Split of `ΔH = H(R_n) − H(flat)` (`alpha_decomp_9_13.out`, `alpha_decomp_17_19.out`, `alpha_decomp_21.out`):
 
@@ -358,8 +358,8 @@ Split of `ΔH = H(R_n) − H(flat)` (`alpha_decomp_9_13.out`, `alpha_decomp_17_1
 | 19 | `P_19` | −15,235,138,144 | +26,752,215,992 | +11,517,077,848 |
 | 21 | `Z_21{1,2,3,7,10,12,13,15,16,17}` | −831,973,445,620 | +2,686,870,223,200 | +1,854,896,777,580 |
 
-**Champions of each packing number** (all classes, `n ≤ 19`; `alpha_all.out`):
-* For `n = 17, 19` the energy minimum is the unique maximiser of `α_1` and `α_2`, and `R_n` is the unique maximiser of every `α_k` with `3 ≤ k ≤ ⌊n/3⌋`.
+**Champions of each packing number** (all classes, `n ≤ 21`; `alpha_all.out`, `alpha_all_21.out`):
+* For `n = 17, 19, 21` an energy minimiser is the unique maximiser of `α_1` and `α_2`, and `R_n` is the unique maximiser of every `α_k` with `3 ≤ k ≤ ⌊n/3⌋`, except the perfect triangle factors `α_7` at `n = 21`.
 * For `n = 13, 15`, `R_n` is the unique maximiser of `α_3` and `α_4`, and an energy minimiser maximises `α_1`.
 * At `n = 15` the triangle factors (`α_5`) are maximised elsewhere.
 
@@ -371,10 +371,12 @@ So the two peaks are the two champions: of few-cycle counts (pseudorandom) and o
 * Within these tables, the flat (pseudorandom) class is `H`-maximal exactly when the OCF stops at `α_3`, i.e. `n ≤ 11`.
 
 **Consequences.**
-* This gives characterization (1) of `{3, 7, 11}` in §4 a tournament mechanism: they are the primes `q ≡ 3 (mod 4)` with `deg I(Ω(P_q), x) = ⌊q/3⌋ ≤ 3`. It is FINITE-EXACT, and the small-numbers caveat still applies, since 12 lies in `(11, 19)`.
+* This gives characterization (1) of `{3, 7, 11}` in §4 a mechanism sketch (an observation for `n ≤ 25`, and the threshold `q ≤ 11` restated): they are the primes `q ≡ 3 (mod 4)` with `deg I(Ω(P_q), x) = ⌊q/3⌋ ≤ 3`. It is FINITE-EXACT, and the small-numbers caveat still applies, since 12 lies in `(11, 19)`.
 * **Corrections to the March reading (MISTAKE-660).**
   * HYP-474 ("Paley maximises the number of `k`-cycles at every odd `k`", CONFIRMED at `p = 7, 11`) fails at `k = p`: `c_19(R_19) = 34,841,356,485 > c_19(P_19) = 34,358,763,933`, and at `n = 23` `R_23` has the most Hamiltonian cycles of any circulant class (the `C` column of `circ_19.out`, `circ_23.out`; `alpha_decomp_17_19.out`).
   * THM-137's "the interval's cycles are more independent (higher `α_2`)" holds only for `n ≤ 11`. From `n = 13` the interval has fewer pairs and wins through `α_k`, `k ≥ 3`.
   * THM-161's "Paley maximizes every `c_k` (Savchenko's theorem for DRTs)" misreads Savchenko, whose results compare doubly regular tournaments with `RLT_n`.
+
+* Independently verified in the second audit pass: `c_k` and the Hamiltonian-cycle count by Held–Karp and by inclusion–exclusion (all classes, `n = 19, 23`); `α_k` by explicit enumeration (`n ≤ 13`) and by ranked zeta transforms (`n ≤ 21`) (`05-knowledge/results/lattice_bridges_audit_pass2_20261022.md`).
 
 **Reading.** A pseudorandom connection set maximises the number of cycles and of pairs. An arithmetic progression lays its odd cycles side by side around the circle, so it maximises the large disjoint packings. The OCF weights a packing of size `k` by `2^k`, so for `n ≥ 13` the progression wins.

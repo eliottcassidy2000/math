@@ -9212,6 +9212,7 @@ Key finding: c8(DRT_n) is INDEPENDENT of which DRT is chosen. Phase transition a
   - Locally Transitive: 720 tours, dc={3:14, 5:28, 7:17}, H=175
   - Other Regular: 1680 tours, dc={3:14, 5:36, 7:15}, H=171
 Cycle counts are CLASS INVARIANTS (exactly one vector per class). DRT maximizes directed 5-cycles and 7-cycles. LTT has "diametrically opposite" properties per Savchenko.
+**ERRATUM (2026-10-22, MISTAKE-660):** the next line misstates Savchenko (arXiv:2403.07629 treats m = 8 only), and c_n(RLT_n) > c_n(DR_n) at n = 19, 23 (Hamiltonian cycles of R_n against P_n) refutes it at m = n.
 **EXTENDED (kind-pasteur S21):** Savchenko (2024) proves c_m(DR_n) > c_m(RLT_n) for ALL m = 1,2,3 mod 4 (including all odd m). Only m = 0 mod 4 has the phase transition. This directly explains DRT's H-maximization via OCF.
 **DRT n=11 ANALYSIS (kind-pasteur S21, CORRECTED S39b per MISTAKE-017):** The connection set {1,2,3,5,8} is NOT a valid tournament (SÃ¢Ë†Â©(-S)={3,8}Ã¢â€°Â Ã¢Ë†â€¦). The ONLY valid circulant DRT at n=11 is the Paley tournament QR={1,3,4,5,9} (H=95095, c3=55, c5=594, |Aut|=55). All claims about "non-Paley DRT" H=69311, c3=44 were computed on an invalid digraph. Whether a non-circulant DRT exists at n=11 remains open.
 **Next step:** (1) Obtain Savchenko's exact polynomial c_k formulas. (2) Test at n=19 or n=23 (multiple DRT classes). (3) Prove Paley maximizes H among ALL DRTs.

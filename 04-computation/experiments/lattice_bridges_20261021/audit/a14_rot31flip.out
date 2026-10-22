@@ -1,0 +1,2 @@
+31 1 2 3 4 5 6 7 8 9 10 11 12 13 14 16 : 20284103532402676770852133  [necklaces=69273668]
+./a3_hcount ie < a14_rot31flip_sets.txt  182.76s user 0.63s system 98% cpu 3:06.04 total

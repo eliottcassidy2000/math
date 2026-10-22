@@ -1,0 +1,4 @@
+n=9 S=[1, 2, 3, 5] Emin: alpha = [1, 954, 336, 13]; sum 2^k alpha_k = 3357; equals class-table H: True; alpha_1 = sum f: True
+n=9 S=[1, 2, 3, 4] R: alpha = [1, 837, 354, 22]; sum 2^k alpha_k = 3267; equals class-table H: True; alpha_1 = sum f: True
+n=9 S=[1, 3, 4, 7] : alpha = [1, 885, 273, 37]; sum 2^k alpha_k = 3159; equals class-table H: True; alpha_1 = sum f: True
+n=9 S=[1, 4, 6, 7] : alpha = [1, 885, 273, 37]; sum 2^k alpha_k = 3159; equals class-table H: True; alpha_1 = sum f: True

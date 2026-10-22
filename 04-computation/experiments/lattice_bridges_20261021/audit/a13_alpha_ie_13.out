@@ -1,0 +1,6 @@
+n=13 S=[1, 2, 3, 4, 5, 6] R: alpha = [1, 606027, 436748, 87568, 3224]; sum 2^k alpha_k = 3711175; equals class-table H: True; alpha_1 = sum f: True
+n=13 S=[1, 2, 3, 4, 5, 7] : alpha = [1, 624877, 441428, 81796, 2353]; sum 2^k alpha_k = 3707483; equals class-table H: True; alpha_1 = sum f: True
+n=13 S=[1, 2, 3, 4, 6, 8] : alpha = [1, 639580, 443794, 77493, 1911]; sum 2^k alpha_k = 3704857; equals class-table H: True; alpha_1 = sum f: True
+n=13 S=[1, 2, 3, 5, 6, 9] Emin: alpha = [1, 645937, 439452, 77428, 2119]; sum 2^k alpha_k = 3703011; equals class-table H: True; alpha_1 = sum f: True
+n=13 S=[1, 2, 6, 8, 9, 10] : alpha = [1, 633886, 439504, 78065, 2093]; sum 2^k alpha_k = 3683797; equals class-table H: True; alpha_1 = sum f: True
+n=13 S=[1, 2, 3, 5, 7, 9] : alpha = [1, 625540, 436618, 79391, 2301]; sum 2^k alpha_k = 3669497; equals class-table H: True; alpha_1 = sum f: True

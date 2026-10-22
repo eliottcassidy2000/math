@@ -1,0 +1,4 @@
+n=11 S=[1, 3, 4, 5, 9] Emin: alpha = [1, 21169, 10879, 1155]; sum 2^k alpha_k = 95095; equals class-table H: True; odd c_k = [55, 594, 3960, 11055, 5505]; vertex sets with cycles: 793
+n=11 S=[1, 2, 3, 4, 6] : alpha = [1, 19541, 11220, 1188]; sum 2^k alpha_k = 93467; equals class-table H: True; odd c_k = [55, 550, 3586, 10197, 5153]; vertex sets with cycles: 815
+n=11 S=[1, 2, 3, 4, 5] R: alpha = [1, 18397, 11110, 1474]; sum 2^k alpha_k = 93027; equals class-table H: True; odd c_k = [55, 484, 3399, 9350, 5109]; vertex sets with cycles: 848
+n=11 S=[1, 2, 3, 5, 7] : alpha = [1, 19629, 10912, 1188]; sum 2^k alpha_k = 92411; equals class-table H: True; odd c_k = [55, 572, 3729, 10274, 4999]; vertex sets with cycles: 804

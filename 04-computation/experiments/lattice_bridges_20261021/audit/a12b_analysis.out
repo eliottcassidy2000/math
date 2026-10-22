@@ -1,0 +1,26 @@
+n=19: 30 classes; H (Held-Karp from 0) equals pass-1 class tables: True
+   session C= column agrees with own c_19 on 30 of 30 classes
+   c3, c4, c5 equal tr A^k / k (THM-118) on all classes: True
+   k= 3: P_19 = 285, R_19 = 285, max over classes = 285 at all classes (constant); P maximal: True
+   k= 5: P_19 = 11628, R_19 = 10488, max over classes = 11628 at ['P']; P maximal: True
+   k= 7: P_19 = 424080, R_19 = 391362, max over classes = 424080 at ['P']; P maximal: True
+   k= 9: P_19 = 12156390, R_19 = 10807884, max over classes = 12156390 at ['P']; P maximal: True
+   k=11: P_19 = 249208902, R_19 = 224515210, max over classes = 249208902 at ['P']; P maximal: True
+   k=13: P_19 = 3280900392, R_19 = 2961329208, max over classes = 3280900392 at ['P']; P maximal: True
+   k=15: P_19 = 23662379790, R_19 = 21901889133, max over classes = 23662379790 at ['P']; P maximal: True
+   k=17: P_19 = 69401425077, R_19 = 66503305202, max over classes = 69401425077 at ['P']; P maximal: True
+   k=19: P_19 = 34358763933, R_19 = 34841356485, max over classes = 34841356485 at ['R']; P maximal: False
+n=23: 94 classes; H (Held-Karp from 0) equals pass-1 class tables: True
+   session C= column agrees with own c_23 on 94 of 94 classes
+   c3, c4, c5 equal tr A^k / k (THM-118) on all classes: True
+   k= 3: P_23 = 506, R_23 = 506, max over classes = 506 at all classes (constant); P maximal: True
+   k= 5: P_23 = 31878, R_23 = 29348, max over classes = 31878 at ['P']; P maximal: True
+   k= 7: P_23 = 1912680, R_23 = 1791999, max over classes = 1912680 at ['P']; P maximal: True
+   k= 9: P_23 = 97774380, R_23 = 88596552, max over classes = 97774380 at ['P']; P maximal: True
+   k=11: P_23 = 3981543708, R_23 = 3624153884, max over classes = 3981543708 at ['P']; P maximal: True
+   k=13: P_23 = 121481441400, R_23 = 109824615992, max over classes = 121481441400 at ['P']; P maximal: True
+   k=15: P_23 = 2585997737290, R_23 = 2358030073663, max over classes = 2585997737290 at ['P']; P maximal: True
+   k=17: P_23 = 34841964671646, R_23 = 32147103198932, max over classes = 34841964671646 at ['P']; P maximal: True
+   k=19: P_23 = 254804306930338, R_23 = 240499887725122, max over classes = 254804306930338 at ['P']; P maximal: True
+   k=21: P_23 = 753133060365334, R_23 = 734346446683604, max over classes = 753133060365334 at ['P']; P maximal: True
+   k=23: P_23 = 374127973957716, R_23 = 382137819329585, max over classes = 382137819329585 at ['R']; P maximal: False

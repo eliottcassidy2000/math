@@ -1,0 +1,16 @@
+n=15 S=[1, 2, 3, 4, 5, 6, 7] R: alpha = [1, 27495799, 22518662, 5849428, 397720, 7472]; sum 2^k alpha_k = 198464295; equals class-table H: True; alpha_1 = sum f: True
+n=15 S=[1, 2, 3, 4, 5, 6, 8] : alpha = [1, 28006744, 22640387, 5655343, 359215, 5102]; sum 2^k alpha_k = 197728485; equals class-table H: True; alpha_1 = sum f: True
+n=15 S=[1, 2, 3, 4, 6, 7, 10] Emin: alpha = [1, 28793188, 22812707, 5416693, 315670, 3923]; sum 2^k alpha_k = 197347005; equals class-table H: True; alpha_1 = sum f: True
+n=15 S=[1, 2, 3, 6, 8, 10, 11] Emin: alpha = [1, 28735519, 22781517, 5416578, 316905, 3972]; sum 2^k alpha_k = 197127315; equals class-table H: True; alpha_1 = sum f: True
+n=15 S=[1, 2, 3, 4, 5, 8, 9] : alpha = [1, 28648234, 22791767, 5434798, 314740, 3662]; sum 2^k alpha_k = 197094945; equals class-table H: True; alpha_1 = sum f: True
+n=15 S=[1, 2, 5, 7, 9, 11, 12] Emin: alpha = [1, 28721359, 22779372, 5416233, 315825, 3912]; sum 2^k alpha_k = 197068455; equals class-table H: True; alpha_1 = sum f: True
+n=15 S=[1, 2, 5, 6, 7, 11, 12] : alpha = [1, 27446729, 22384162, 5768668, 387275, 7957]; sum 2^k alpha_k = 197030475; equals class-table H: True; alpha_1 = sum f: True
+n=15 S=[1, 2, 3, 4, 5, 7, 9] : alpha = [1, 28501909, 22733642, 5466613, 322780, 3977]; sum 2^k alpha_k = 196963035; equals class-table H: True; alpha_1 = sum f: True
+n=15 S=[1, 2, 3, 5, 6, 8, 11] Emin: alpha = [1, 28687843, 22762572, 5414778, 315660, 3978]; sum 2^k alpha_k = 196922055; equals class-table H: True; alpha_1 = sum f: True
+n=15 S=[1, 2, 4, 5, 7, 9, 12] : alpha = [1, 28343809, 22638942, 5468508, 327330, 4152]; sum 2^k alpha_k = 196361595; equals class-table H: True; alpha_1 = sum f: True
+n=15 S=[1, 2, 3, 5, 6, 7, 11] : alpha = [1, 28320949, 22628982, 5469438, 326940, 4152]; sum 2^k alpha_k = 196277235; equals class-table H: True; alpha_1 = sum f: True
+n=15 S=[1, 2, 3, 4, 7, 9, 10] : alpha = [1, 28313938, 22615907, 5471623, 328900, 4313]; sum 2^k alpha_k = 196264905; equals class-table H: True; alpha_1 = sum f: True
+n=15 S=[1, 2, 4, 7, 9, 10, 12] : alpha = [1, 28321123, 22631937, 5467938, 325785, 4218]; sum 2^k alpha_k = 196261035; equals class-table H: True; alpha_1 = sum f: True
+n=15 S=[1, 3, 4, 5, 6, 7, 13] : alpha = [1, 28438318, 22639907, 5435173, 322525, 4328]; sum 2^k alpha_k = 196216545; equals class-table H: True; alpha_1 = sum f: True
+n=15 S=[1, 2, 3, 5, 7, 9, 11] : alpha = [1, 27959704, 22463822, 5531338, 343915, 5222]; sum 2^k alpha_k = 195695145; equals class-table H: True; alpha_1 = sum f: True
+n=15 S=[1, 3, 4, 6, 7, 10, 13] : alpha = [1, 27403621, 22098647, 5582593, 304750, 14900]; sum 2^k alpha_k = 193215375; equals class-table H: True; alpha_1 = sum f: True

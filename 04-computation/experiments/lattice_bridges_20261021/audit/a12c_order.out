@@ -1,0 +1,2 @@
+n=19: 30 classes; Spearman(H, c_19) = 0.9991; discordant pairs = 2 of 435; argmax H = argmax c_19: True
+n=23: 94 classes; Spearman(H, c_23) = 0.9997; discordant pairs = 15 of 4371; argmax H = argmax c_23: True

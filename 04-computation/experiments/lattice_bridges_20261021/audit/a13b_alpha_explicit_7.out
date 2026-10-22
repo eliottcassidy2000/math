@@ -1,0 +1,2 @@
+n=7 S=[1, 2, 4] Emin: alpha = [1, 80, 7]; sum 2^k alpha_k = 189; equals class-table H: True; odd c_k = [14, 42, 24]; vertex sets with cycles: 36
+n=7 S=[1, 2, 3] R: alpha = [1, 59, 14]; sum 2^k alpha_k = 175; equals class-table H: True; odd c_k = [14, 28, 17]; vertex sets with cycles: 36
