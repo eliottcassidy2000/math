@@ -254,7 +254,7 @@ c″ = proj_Λ(z″)/(h + 1), a point of order e = h + 1. Then for all 23 types:
 | 10 | A8³ | 21q + 62q² (10D) |
 | 11 | A9²D6, D6⁴ | 17q + 46q² (11A, A058205) |
 | 13 | A11D7E6, E6⁴ | 12q + 28q² (13A, A034319) |
-| 14 | A12² | 10q + 24q² (14C, A058504) |
+| 14 | A12² | 10q + 24q² + 51q³ (14C, A058504) |
 | 15 | D8³ | 9q + 19q² (15C) |
 | 17 | A15D9 | 7q + 14q² (17A) |
 | 19 | A17E7, D10E7² | 6q + 10q² (19A) |
@@ -307,6 +307,9 @@ and so
 
 The weight-one trace is 24 + 24(ζ + … + ζ^h) = 0, by the height equidistribution. The Leech trace is this plus 24.
 N + ρ_N/(h+1) has no vectors of norm 2, and Λ + c″ has 24.
+
+The defect vector is always the pure one, v″ = 24(1_{S_{h+1}} − 1_{S_1}), with no intermediate terms for any
+composite h + 1 (swap_fricke_proof.out). Unlike THM-4758, no bad primes enter.
 
 The two theorems sit side by side:
 
