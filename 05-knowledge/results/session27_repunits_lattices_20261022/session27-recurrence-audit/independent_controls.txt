@@ -1,0 +1,52 @@
+PASS full tensor symbolic Z[t] d=0
+PASS degenerate multiplicities t=-2 d=0
+PASS degenerate multiplicities t=2 d=0
+PASS full tensor symbolic Z[t] d=1
+PASS degenerate multiplicities t=-2 d=1
+PASS degenerate multiplicities t=2 d=1
+PASS full tensor symbolic Z[t] d=2
+PASS degenerate multiplicities t=-2 d=2
+PASS degenerate multiplicities t=2 d=2
+PASS full tensor symbolic Z[t] d=3
+PASS degenerate multiplicities t=-2 d=3
+PASS degenerate multiplicities t=2 d=3
+PASS generic full tensor squarefree characteristic polynomial d=1
+PASS generic full tensor squarefree characteristic polynomial d=2
+PASS generic full tensor squarefree characteristic polynomial d=3
+PASS nilpotent ring Z/4[epsilon]/epsilon^2 t=epsilon d=2
+PASS nilpotent ring Z/4[epsilon]/epsilon^2 t=epsilon d=3
+PASS nilpotent ring Z/6[epsilon]/epsilon^2 t=epsilon d=2
+PASS nilpotent ring Z/6[epsilon]/epsilon^2 t=epsilon d=3
+PASS nilpotent ring Z/4[epsilon]/epsilon^2 t=epsilon + 2 d=2
+PASS nilpotent ring Z/4[epsilon]/epsilon^2 t=epsilon + 2 d=3
+PASS nilpotent ring Z/6[epsilon]/epsilon^2 t=epsilon + 2 d=2
+PASS nilpotent ring Z/6[epsilon]/epsilon^2 t=epsilon + 2 d=3
+PASS nilpotent ring Z/4[epsilon]/epsilon^2 t=epsilon - 2 d=2
+PASS nilpotent ring Z/4[epsilon]/epsilon^2 t=epsilon - 2 d=3
+PASS nilpotent ring Z/6[epsilon]/epsilon^2 t=epsilon - 2 d=2
+PASS nilpotent ring Z/6[epsilon]/epsilon^2 t=epsilon - 2 d=3
+PASS explicit seventh degree coefficients
+PASS initial residual n=0
+TRIPLE 0 [1, 2, 2]
+PASS initial residual n=1
+TRIPLE 1 [135, 138, 172]
+PASS initial residual n=2
+TRIPLE 2 [11161, 11468, 14258]
+PASS initial residual n=3
+TRIPLE 3 [926271, 951690, 1183258]
+PASS initial residual n=4
+TRIPLE 4 [76869289, 78978818, 98196140]
+PASS initial residual n=5
+TRIPLE 5 [6379224759, 6554290188, 8149096378]
+PASS initial residual n=6
+TRIPLE 6 [529398785665, 543927106802, 676276803218]
+PASS negative index triple
+PASS negative index residual
+PASS 1729
+PASS hostile discard multiplicities t=-2
+PASS hostile discard multiplicities t=2
+PASS hostile nonhomogeneous observable
+PASS K3 cited section lies on family
+PASS K3 cited section lies on family
+PASS K3 k has six simple roots
+ALL 44 INDEPENDENT CHECKS PASS

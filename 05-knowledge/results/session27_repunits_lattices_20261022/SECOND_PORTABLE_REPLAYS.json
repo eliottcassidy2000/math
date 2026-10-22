@@ -1,0 +1,37 @@
+[
+  {
+    "script": "session27-papers-review/check_matrix.py",
+    "status": "PASS",
+    "output_match": "byte-identical"
+  },
+  {
+    "script": "session27-papers-review/lll_control.py",
+    "status": "PASS",
+    "output_match": "byte-identical"
+  },
+  {
+    "script": "session27-papers-review/short_vectors.py",
+    "status": "PASS",
+    "output_match": "byte-identical"
+  },
+  {
+    "script": "session27-papers-review/sparse_hostile.py",
+    "status": "PASS",
+    "output_match": "byte-identical"
+  },
+  {
+    "script": "session27-lattice-controls-audit/independent_controls.py",
+    "status": "PASS",
+    "output_match": "byte-identical"
+  },
+  {
+    "script": "session27-orthogonal-audit/independent_control.py",
+    "status": "PASS",
+    "output_match": "all assertions passed; source hashes preserved"
+  },
+  {
+    "script": "session27-lattice-controls-audit/sparse_independent.cpp",
+    "status": "PASS",
+    "output_match": "byte-identical"
+  }
+]

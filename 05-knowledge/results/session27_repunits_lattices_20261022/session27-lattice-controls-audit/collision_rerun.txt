@@ -1,0 +1,9 @@
+rank-mass polynomial z**2*(z - 1)**5*(z + 1)*(3*z**2 + 4*z + 2)
+power sums [0, 0, 0, 0, 0]
+A proxy c4 difference 0
+D corrections 0
+h fourth moment 0 leading cA -28
+c5 normalized A-D defect 28*h*(3*h**3 - 24*h**2 + 67*h - 58)/5
+fifth power mass 2160
+A c5 contribution 72576
+D c5 correction 86016

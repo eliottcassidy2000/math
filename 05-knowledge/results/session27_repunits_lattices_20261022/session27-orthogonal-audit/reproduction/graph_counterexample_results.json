@@ -1,0 +1,9 @@
+{
+  "all_three_subspaces": 33880,
+  "maximal_isotropic_three_spaces": 80,
+  "dependent_K3_avoiding": 60,
+  "independent_K3_avoiding": 61,
+  "dependent_probability": "3/4",
+  "independent_probability": "61/80",
+  "status": "all assertions passed"
+}

@@ -1,0 +1,101 @@
+--- original/session27-lattice-controls-audit/independent_controls.py
++++ packaged/session27-lattice-controls-audit/independent_controls.py
+@@ -2,8 +2,8 @@
+ from fractions import Fraction
+ from math import comb, prod
+ import json, hashlib, re
+-base=Path('/workspace/shared/session27-papers-review')
+-out=Path('/workspace/shared/session27-lattice-controls-audit')
++base=Path(__file__).resolve().parent.parent/'session27-papers-review'
++out=Path(__file__).resolve().parent
+ # Independent partition Euler-product count, no signature recursion.
+ ranks=list(range(1,44))+list(range(4,44))+[6,7,8]
+ a=[1]+[0]*43
+@@ -35,6 +35,6 @@
+ assert Fraction(lines_per_generator,num_lines)==Fraction(1,q**(m-1)+1)
+ print('split orthogonal line count',num_lines,'generator incidence probability',Fraction(lines_per_generator,num_lines))
+ print('symplectic/orthogonal generator-count ratio',Fraction(q**m+1,2))
+-# Bind all audit inputs, including all inspected controls, outputs, and source PDFs.
+-paths=sorted(base.glob('*.py'))+sorted(base.glob('*.cpp'))+sorted(base.glob('*.txt'))+list(base.glob('*.json'))+[base/'REVIEW.md']+sorted(Path('/workspace/scratch/07d5532f2fce/session27-papers').glob('*.pdf'))
+-(out/'INPUT_SHA256SUMS.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+str(p)+'\n' for p in paths))
++# Bind distributed inputs only; original PDF audit manifest is preserved separately.
++paths=sorted(base.glob('*.py'))+sorted(base.glob('*.cpp'))+sorted(base.glob('*.txt'))+list(base.glob('*.json'))+[base/'REVIEW.md']
++(out/'PACKAGED_INPUT_SHA256SUMS.txt').write_text(''.join(hashlib.sha256(p.read_bytes()).hexdigest()+'  '+str(p)+'\n' for p in paths))
+
+--- original/session27-papers-review/check_matrix.py
++++ packaged/session27-papers-review/check_matrix.py
+@@ -1,5 +1,6 @@
++from pathlib import Path
+ import ast,hashlib,numpy as np,sympy as s
+-p='/workspace/shared/session27-papers-review/downloaded_G96_reduced.txt';raw=open(p,'rb').read();G=[[int(x) for x in row.split(',')] for row in raw.decode().strip().strip('[]').split(';')];print('sha256',hashlib.sha256(raw).hexdigest(),flush=True);A=np.array(G);print('shape',A.shape,'symmetric',np.array_equal(A,A.T),'even diag',all(A.diagonal()%2==0),flush=True);print('eig extrema',np.linalg.eigvalsh(A)[[0,-1]],flush=True);print('det exact',s.polys.matrices.DomainMatrix.from_Matrix(s.Matrix(G)).det(),flush=True)
++p=str(Path(__file__).with_name('downloaded_G96_reduced.txt'));raw=open(p,'rb').read();G=[[int(x) for x in row.split(',')] for row in raw.decode().strip().strip('[]').split(';')];print('sha256',hashlib.sha256(raw).hexdigest(),flush=True);A=np.array(G);print('shape',A.shape,'symmetric',np.array_equal(A,A.T),'even diag',all(A.diagonal()%2==0),flush=True);print('eig extrema',np.linalg.eigvalsh(A)[[0,-1]],flush=True);print('det exact',s.polys.matrices.DomainMatrix.from_Matrix(s.Matrix(G)).det(),flush=True)
+ from fractions import Fraction as F
+ B=[[F(x) for x in r] for r in G]; piv=[]
+ for k in range(len(B)):
+
+--- original/session27-papers-review/short_vectors.py
++++ packaged/session27-papers-review/short_vectors.py
+@@ -1,5 +1,6 @@
++from pathlib import Path
+ import numpy as np,json
+-p='/workspace/shared/session27-papers-review/downloaded_G96_reduced.txt';G=np.array([[int(x) for x in row.split(',')] for row in open(p).read().strip().strip('[]').split(';')],dtype='int64')
++p=str(Path(__file__).with_name('downloaded_G96_reduced.txt'));G=np.array([[int(x) for x in row.split(',')] for row in open(p).read().strip().strip('[]').split(';')],dtype='int64')
+ v,U=np.linalg.eigh(G); best=10000;bx=None
+ # Exact-evaluated integer vectors from rounded multiples of short real eigenvectors.
+ for j in range(4):
+@@ -11,4 +12,4 @@
+    if q<=8:break
+  if best<=8:break
+ print('RESULT',best,bx.tolist(),flush=True)
+-open('/workspace/shared/session27-papers-review/short_vector_witness.json','w').write(json.dumps({'norm':best,'vector':bx.tolist()}))
++open(str(Path(__file__).with_name('short_vector_witness.json')),'w').write(json.dumps({'norm':best,'vector':bx.tolist()}))
+
+--- original/session27-papers-review/sparse_hostile.py
++++ packaged/session27-papers-review/sparse_hostile.py
+@@ -1,5 +1,6 @@
++from pathlib import Path
+ import itertools,json
+-G=[[int(x) for x in row.split(',')] for row in open('/workspace/shared/session27-papers-review/downloaded_G96_reduced.txt').read().strip().strip('[]').split(';')];n=len(G);best=(min(G[i][i] for i in range(n)),None)
++G=[[int(x) for x in row.split(',')] for row in open(str(Path(__file__).with_name('downloaded_G96_reduced.txt'))).read().strip().strip('[]').split(';')];n=len(G);best=(min(G[i][i] for i in range(n)),None)
+ for r in [2,3,4]:
+  for I in itertools.combinations(range(n),r):
+   for ss in itertools.product([-1,1],repeat=r-1):
+
+--- original/session27-papers-review/lll_control.py
++++ packaged/session27-papers-review/lll_control.py
+@@ -1,5 +1,6 @@
++from pathlib import Path
+ import numpy as np,json
+-G=np.array([[int(x) for x in row.split(',')] for row in open('/workspace/shared/session27-papers-review/downloaded_G96_reduced.txt').read().strip().strip('[]').split(';')],dtype='int64');n=len(G);V=np.eye(n,dtype='int64');L=np.linalg.cholesky(G.astype(float));B=np.diag(L)**2;mu=L/np.diag(L)[None,:];k=1;steps=0
++G=np.array([[int(x) for x in row.split(',')] for row in open(str(Path(__file__).with_name('downloaded_G96_reduced.txt'))).read().strip().strip('[]').split(';')],dtype='int64');n=len(G);V=np.eye(n,dtype='int64');L=np.linalg.cholesky(G.astype(float));B=np.diag(L)**2;mu=L/np.diag(L)[None,:];k=1;steps=0
+ while k<n and steps<200000:
+  steps+=1
+  for j in range(k-1,-1,-1):
+@@ -13,4 +14,4 @@
+    t=mu[i,k];mu[i,k]=mu[i,k-1]-nu*t;mu[i,k-1]=t+mu[k,k-1]*mu[i,k]
+   V[[k,k-1]]=V[[k-1,k]];k=max(1,k-1)
+ H=V@G@V.T; norms=H.diagonal();i=int(np.argmin(norms));x=V[i].tolist();exact=sum(int(x[a])*int(G[a,b])*int(x[b]) for a in range(n) for b in range(n));print('steps',steps,'min basis norm',exact,'max coordinate',max(map(abs,x)));print('vector',x)
+-json.dump({'norm':exact,'vector':x,'source_sha256':'7a6a3b8f761a9f02e1a687be8040aaf403c7ac75c33d92f010f2dd131f17bc24'},open('/workspace/shared/session27-papers-review/lll_witness.json','w'))
++json.dump({'norm':exact,'vector':x,'source_sha256':'7a6a3b8f761a9f02e1a687be8040aaf403c7ac75c33d92f010f2dd131f17bc24'},open(str(Path(__file__).with_name('lll_witness.json')),'w'))
+
+--- original/session27-orthogonal-audit/independent_control.py
++++ packaged/session27-orthogonal-audit/independent_control.py
+@@ -2,7 +2,7 @@
+ from collections import Counter
+ from pathlib import Path
+ import json, hashlib
+-ROOT=Path('/workspace/shared/session27-orthogonal')
++ROOT=Path(__file__).resolve().parent.parent/'session27-orthogonal'
+ 
+ def control(r):
+     n=2*r
+
+--- original/session27-lattice-controls-audit/sparse_independent.cpp
++++ packaged/session27-lattice-controls-audit/sparse_independent.cpp
+@@ -6,5 +6,5 @@
+ #include <array>
+ #include <climits>
+ using namespace std;
+-int main(){ifstream f("/workspace/shared/session27-papers-review/downloaded_G96_reduced.txt");string s((istreambuf_iterator<char>(f)),{});for(char &c:s)if(c=='['||c==']'||c==';'||c==',')c=' ';istringstream in(s);long long g[96][96];for(auto &r:g)for(auto &x:r)if(!(in>>x))return 2;long long extra;if(in>>extra)return 3;
++int main(int argc,char**argv){ifstream f(argc>1?argv[1]:"../session27-papers-review/downloaded_G96_reduced.txt");string s((istreambuf_iterator<char>(f)),{});for(char &c:s)if(c=='['||c==']'||c==';'||c==',')c=' ';istringstream in(s);long long g[96][96];for(auto &r:g)for(auto &x:r)if(!(in>>x))return 2;long long extra;if(in>>extra)return 3;
+ for(int r=1;r<=4;r++){array<int,4>a={0,1,2,3};long long mn=LLONG_MAX,count=0;while(true){for(int signs=0;signs<(1<<(r-1));signs++){long long v=0;for(int i=0;i<r;i++){int si=i==0?1:((signs>>(i-1)&1)?1:-1);for(int j=0;j<r;j++){int sj=j==0?1:((signs>>(j-1)&1)?1:-1);v+=si*sj*g[a[i]][a[j]];}}mn=min(mn,v);count++;}int k=r-1;while(k>=0&&a[k]==96-r+k)k--;if(k<0)break;a[k]++;for(int j=k+1;j<r;j++)a[j]=a[j-1]+1;}cout<<"support "<<r<<" count "<<count<<" minimum "<<mn<<endl;}}

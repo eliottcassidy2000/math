@@ -1,0 +1,7 @@
+partition DP: all 43 per-rank counts match; type count 86 rank1..42 5565832 rank43 1556185 total 7122017
+conservative absolute sum bounds [155316, 25627140, 21040347888, 2398248955704] all below signed int64
+short_vector_witness.json exact Python integer norm 28 max coordinate 1
+lll_witness.json exact Python integer norm 20 max coordinate 1
+signed support1..4 candidate counts [96, 9120, 571520, 26575680]
+split orthogonal line count 873889719459383939104278533817072825600 generator incidence probability 1/27368747340080916344
+symplectic/orthogonal generator-count ratio 95790615690283207201

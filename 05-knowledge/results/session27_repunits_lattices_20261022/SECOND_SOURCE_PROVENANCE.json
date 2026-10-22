@@ -1,0 +1,297 @@
+[
+  {
+    "source": "/workspace/shared/session27-papers-review/REVIEW.md",
+    "relative": "session27-papers-review/REVIEW.md",
+    "sha256": "289f0968c786caaa7aad938667ff38b7937d06daeb9baedca164cd01c2074509"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/audit_ade.cpp",
+    "relative": "session27-papers-review/audit_ade.cpp",
+    "sha256": "98903b5d808f59d6319b9280a755e1369ca40da85cc33f0d94a27e539e77901a"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/ade_audit_results.txt",
+    "relative": "session27-papers-review/ade_audit_results.txt",
+    "sha256": "adf7627242f8ca68219da54b8cd20e183109bf151b588ba776e35257fe7fed2c"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/controls.py",
+    "relative": "session27-papers-review/controls.py",
+    "sha256": "60c910aa5360568d1697c18862c5fce656e849a1deffe691767ee0abc04f83c6"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/controls_results.txt",
+    "relative": "session27-papers-review/controls_results.txt",
+    "sha256": "d91a10a9c89fbfe61facd1c8ec69e6d66576f2caec337deccb3ff6b14e780ca8"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/check_matrix.py",
+    "relative": "session27-papers-review/check_matrix.py",
+    "sha256": "34cff3c058b6d01f4b4de3d80f39e49cae8505f4fe95254d56e2de1a85927c31"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/matrix_results.txt",
+    "relative": "session27-papers-review/matrix_results.txt",
+    "sha256": "e3186fe5d230ed508f953b65a5a008f64e1ee3430fff47ecbbaab83703df92fa"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/downloaded_G96_reduced.txt",
+    "relative": "session27-papers-review/downloaded_G96_reduced.txt",
+    "sha256": "7a6a3b8f761a9f02e1a687be8040aaf403c7ac75c33d92f010f2dd131f17bc24"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/root_counts.py",
+    "relative": "session27-papers-review/root_counts.py",
+    "sha256": "4bb152bd2e3bedec43502c216dbce2e33761fe957113865d146a47ddba72e7b2"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/root_counts_results.txt",
+    "relative": "session27-papers-review/root_counts_results.txt",
+    "sha256": "68bc44f0d0d67df9a931d916eae83bbc1e865b72d5713d79a422df0489d31ce6"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/collision_mechanism.py",
+    "relative": "session27-papers-review/collision_mechanism.py",
+    "sha256": "64022fa446d1efa73e4197cd222baade483bb6c3107aa5002fc1a33c17e8a0ef"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/collision_mechanism_results.txt",
+    "relative": "session27-papers-review/collision_mechanism_results.txt",
+    "sha256": "f5498f749a1ad9bdd30a7a50433a0bf04c1c13d5e1f70c2267f829f4f61a8180"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/lll_control.py",
+    "relative": "session27-papers-review/lll_control.py",
+    "sha256": "f2c654b5126f36e0c0cf03b16acb0eb18e8b7bb58b5bbb88cf9b5180be718a5e"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/lll_results.txt",
+    "relative": "session27-papers-review/lll_results.txt",
+    "sha256": "65f47be88e361dd0b243d04add61aadbd903350445a1c27c9882c7af10780391"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/lll_witness.json",
+    "relative": "session27-papers-review/lll_witness.json",
+    "sha256": "1adc1ccbfc068e06211fd2f2485c3e5287bf76e8af04530350566242855dbc9a"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/short_vectors.py",
+    "relative": "session27-papers-review/short_vectors.py",
+    "sha256": "c5d1ea1a859e33814977866deb4472ef3e5b2954515e926b4f352dc230f1065c"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/short_vector_results.txt",
+    "relative": "session27-papers-review/short_vector_results.txt",
+    "sha256": "ead8a54429fa76270cf4ec5a49b60ce52b4261fa382046b9f8283548252c3211"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/short_vector_witness.json",
+    "relative": "session27-papers-review/short_vector_witness.json",
+    "sha256": "c1e37ebcff59d59e559f1f056e89322888e64960c6e175d2496a3ea25adce567"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/sparse_hostile.py",
+    "relative": "session27-papers-review/sparse_hostile.py",
+    "sha256": "7dd19fb7ac3a428ef25475992a907a6ad697abff77cfe4e2f264195d87cedb81"
+  },
+  {
+    "source": "/workspace/shared/session27-papers-review/sparse_hostile_results.txt",
+    "relative": "session27-papers-review/sparse_hostile_results.txt",
+    "sha256": "a29a058d6ce6ec859a0eb326308fd403ec8cac58ca605b322e638867fc13ad1f"
+  },
+  {
+    "source": "/workspace/shared/session27-lattice-controls-audit/AUDIT.md",
+    "relative": "session27-lattice-controls-audit/AUDIT.md",
+    "sha256": "dfd6c09d1a2c4f62967fe9be4abbd7e1f240e85082e77d6952a2337ab36c72e2"
+  },
+  {
+    "source": "/workspace/shared/session27-lattice-controls-audit/INPUT_SHA256SUMS.txt",
+    "relative": "session27-lattice-controls-audit/INPUT_SHA256SUMS.txt",
+    "sha256": "7e0b5f03b2cb2a331d8f03643b9270dfbb69c2ffd92d1599bd50acbd572b5f3f"
+  },
+  {
+    "source": "/workspace/shared/session27-lattice-controls-audit/OUTPUT_SHA256SUMS.txt",
+    "relative": "session27-lattice-controls-audit/OUTPUT_SHA256SUMS.txt",
+    "sha256": "4eb4ae6b1440872b1c99a2224a37479af30a3fb4c463ffa316a9b89a94679afe"
+  },
+  {
+    "source": "/workspace/shared/session27-lattice-controls-audit/ade_rerun.txt",
+    "relative": "session27-lattice-controls-audit/ade_rerun.txt",
+    "sha256": "adf7627242f8ca68219da54b8cd20e183109bf151b588ba776e35257fe7fed2c"
+  },
+  {
+    "source": "/workspace/shared/session27-lattice-controls-audit/collision_rerun.txt",
+    "relative": "session27-lattice-controls-audit/collision_rerun.txt",
+    "sha256": "f5498f749a1ad9bdd30a7a50433a0bf04c1c13d5e1f70c2267f829f4f61a8180"
+  },
+  {
+    "source": "/workspace/shared/session27-lattice-controls-audit/controls_rerun.txt",
+    "relative": "session27-lattice-controls-audit/controls_rerun.txt",
+    "sha256": "d91a10a9c89fbfe61facd1c8ec69e6d66576f2caec337deccb3ff6b14e780ca8"
+  },
+  {
+    "source": "/workspace/shared/session27-lattice-controls-audit/independent_controls.py",
+    "relative": "session27-lattice-controls-audit/independent_controls.py",
+    "sha256": "e79a5a0e865621a66ebaee58d521bbb6560daa9d8e887a2886a78b3ab9f5fa7f"
+  },
+  {
+    "source": "/workspace/shared/session27-lattice-controls-audit/independent_controls_results.txt",
+    "relative": "session27-lattice-controls-audit/independent_controls_results.txt",
+    "sha256": "f96aca94cafd294b3c9e7a16f7a3e3ea736c1e3a80ea530765025b224ec4b327"
+  },
+  {
+    "source": "/workspace/shared/session27-lattice-controls-audit/matrix_rerun.txt",
+    "relative": "session27-lattice-controls-audit/matrix_rerun.txt",
+    "sha256": "e3186fe5d230ed508f953b65a5a008f64e1ee3430fff47ecbbaab83703df92fa"
+  },
+  {
+    "source": "/workspace/shared/session27-lattice-controls-audit/sparse_independent.cpp",
+    "relative": "session27-lattice-controls-audit/sparse_independent.cpp",
+    "sha256": "eaede6d2eb769b08bfa2250b409afcb214afca0b8201bab787a647d1a76346c6"
+  },
+  {
+    "source": "/workspace/shared/session27-lattice-controls-audit/sparse_independent_results.txt",
+    "relative": "session27-lattice-controls-audit/sparse_independent_results.txt",
+    "sha256": "1b8709c7175f1e0cfc07d708d3ec9d2c27e27ed5b066af7b474fb2a50e3fc1bd"
+  },
+  {
+    "source": "/workspace/shared/session27-niemeier-audit/independent-restriction-audit.md",
+    "relative": "session27-niemeier-audit/independent-restriction-audit.md",
+    "sha256": "a0b0f0f95f3e3af3abd8b02f27b63a39feeabe244316bcef50da534a8e66db4c"
+  },
+  {
+    "source": "/workspace/shared/session27-niemeier-audit/count_a3a1.py",
+    "relative": "session27-niemeier-audit/count_a3a1.py",
+    "sha256": "3d3780d6aeb1255fd5a6773b71ab310a386ba53fe9d06d4cadb994ca79dda3d0"
+  },
+  {
+    "source": "/workspace/shared/session27-niemeier-audit/count_a3a1-output.txt",
+    "relative": "session27-niemeier-audit/count_a3a1-output.txt",
+    "sha256": "11c098646b29c9c4d868ae86e77cdc07e9aca45543c95a27488361f2b59439f8"
+  },
+  {
+    "source": "/workspace/shared/session27-orthogonal/ORTHOGONAL_AVOIDANCE.md",
+    "relative": "session27-orthogonal/ORTHOGONAL_AVOIDANCE.md",
+    "sha256": "06d429392539fb063a7f657c11540c6c5b94c650d8ea204957730143e4ca6de7"
+  },
+  {
+    "source": "/workspace/shared/session27-orthogonal/verify.py",
+    "relative": "session27-orthogonal/verify.py",
+    "sha256": "f880762ce7ddba68515829f8d20353e72d84631442bf6322ea2129c26e19c7a1"
+  },
+  {
+    "source": "/workspace/shared/session27-orthogonal/verify_graph_counterexample.py",
+    "relative": "session27-orthogonal/verify_graph_counterexample.py",
+    "sha256": "e914a302ac3d356b99aa5364c14fca10009689316729c1b70b17e19c763a2381"
+  },
+  {
+    "source": "/workspace/shared/session27-orthogonal/results.json",
+    "relative": "session27-orthogonal/results.json",
+    "sha256": "5fb173f2478bdd9354faed8767a70dc887c3e1b40df23ff9afd10ba364ae3fee"
+  },
+  {
+    "source": "/workspace/shared/session27-orthogonal/graph_counterexample_results.json",
+    "relative": "session27-orthogonal/graph_counterexample_results.json",
+    "sha256": "ed12c88fc18310d7b612958646e05b77088d47dda561d06ed4992e52470def23"
+  },
+  {
+    "source": "/workspace/shared/session27-orthogonal-audit/AUDIT.md",
+    "relative": "session27-orthogonal-audit/AUDIT.md",
+    "sha256": "6b620764817657e24add430cf31d9165c3e982a2d2191779dbde074bc6c40003"
+  },
+  {
+    "source": "/workspace/shared/session27-orthogonal-audit/independent_control.py",
+    "relative": "session27-orthogonal-audit/independent_control.py",
+    "sha256": "7d47966ecd419c7140bb5fadd7f97acb30f495182b0eecd401456dea84153890"
+  },
+  {
+    "source": "/workspace/shared/session27-orthogonal-audit/independent_results.json",
+    "relative": "session27-orthogonal-audit/independent_results.json",
+    "sha256": "61428b7ba4382588b7be97ac4fea8d44a36cc92c91d58df5916345de655751d5"
+  },
+  {
+    "source": "/workspace/shared/session27-orthogonal-audit/reproduction/verify.py",
+    "relative": "session27-orthogonal-audit/reproduction/verify.py",
+    "sha256": "f880762ce7ddba68515829f8d20353e72d84631442bf6322ea2129c26e19c7a1"
+  },
+  {
+    "source": "/workspace/shared/session27-orthogonal-audit/reproduction/verify_graph_counterexample.py",
+    "relative": "session27-orthogonal-audit/reproduction/verify_graph_counterexample.py",
+    "sha256": "e914a302ac3d356b99aa5364c14fca10009689316729c1b70b17e19c763a2381"
+  },
+  {
+    "source": "/workspace/shared/session27-orthogonal-audit/reproduction/results.json",
+    "relative": "session27-orthogonal-audit/reproduction/results.json",
+    "sha256": "5fb173f2478bdd9354faed8767a70dc887c3e1b40df23ff9afd10ba364ae3fee"
+  },
+  {
+    "source": "/workspace/shared/session27-orthogonal-audit/reproduction/graph_counterexample_results.json",
+    "relative": "session27-orthogonal-audit/reproduction/graph_counterexample_results.json",
+    "sha256": "ed12c88fc18310d7b612958646e05b77088d47dda561d06ed4992e52470def23"
+  },
+  {
+    "source": "/workspace/shared/session27-orthogonal-audit/reproduction/run.log",
+    "relative": "session27-orthogonal-audit/reproduction/run.log",
+    "sha256": "7d6bfdd9db701270bbf2474fe11e3a52efefaafd687c58450e7b9567ac68bca2"
+  },
+  {
+    "source": "/workspace/shared/session27-recurrence/RECIPROCAL_POWER_THEOREM.md",
+    "relative": "session27-recurrence/RECIPROCAL_POWER_THEOREM.md",
+    "sha256": "fa9a0c037d2b4a717ca9c4e3539475c326177987870ee564037cb9d2bcbcca1f"
+  },
+  {
+    "source": "/workspace/shared/session27-recurrence/verify_reciprocal_powers.py",
+    "relative": "session27-recurrence/verify_reciprocal_powers.py",
+    "sha256": "5cbbcca6eb4073c18f304445f0c7ec744f8c0d0dd5a40a095fe7a72baabc61e4"
+  },
+  {
+    "source": "/workspace/shared/session27-recurrence/verification.txt",
+    "relative": "session27-recurrence/verification.txt",
+    "sha256": "711994fbb0a23316a7239028b5b2c12569982be5a7dda652d1257da35ef9caac"
+  },
+  {
+    "source": "/workspace/shared/session27-recurrence-audit/AUDIT.md",
+    "relative": "session27-recurrence-audit/AUDIT.md",
+    "sha256": "a8fc6e23ec7085fc0bb4a66e1667d6d3be8d132b890a0bc94ca512fd2470b632"
+  },
+  {
+    "source": "/workspace/shared/session27-recurrence-audit/INPUT_SHA256.txt",
+    "relative": "session27-recurrence-audit/INPUT_SHA256.txt",
+    "sha256": "9c18776d218531f92ba3cbcd176d0c050c2743ef03da3abe629ae033114aafd7"
+  },
+  {
+    "source": "/workspace/shared/session27-recurrence-audit/OUTPUT_SHA256.txt",
+    "relative": "session27-recurrence-audit/OUTPUT_SHA256.txt",
+    "sha256": "3e6b3c8e591a28a45922cdb1b7c6995b69b35000b83542dfea973219d749cf1e"
+  },
+  {
+    "source": "/workspace/shared/session27-recurrence-audit/independent_controls.py",
+    "relative": "session27-recurrence-audit/independent_controls.py",
+    "sha256": "9156c4805559513d2e834b6ffadc77d09acb7615ee5ef8089bfc62afcceb6e5b"
+  },
+  {
+    "source": "/workspace/shared/session27-recurrence-audit/independent_controls.txt",
+    "relative": "session27-recurrence-audit/independent_controls.txt",
+    "sha256": "75ce491d407b2d3cc204d6ebc2fec6a4d2d0c44231828c7d45c5a4e06a785222"
+  },
+  {
+    "source": "/workspace/shared/session27-recurrence-audit/replay.txt",
+    "relative": "session27-recurrence-audit/replay.txt",
+    "sha256": "711994fbb0a23316a7239028b5b2c12569982be5a7dda652d1257da35ef9caac"
+  },
+  {
+    "source": "/workspace/shared/session27-modular/PRIOR_1729_AND_E8_HOLES.md",
+    "relative": "session27-modular/PRIOR_1729_AND_E8_HOLES.md",
+    "sha256": "58e626ad65415f11b0b16aa540ba7bc4749ae47c4c2673a2d3f5dc0357d9caf1"
+  },
+  {
+    "source": "/workspace/shared/session27-modular/ramanujan_near_miss_inherited.py",
+    "relative": "session27-modular/ramanujan_near_miss_inherited.py",
+    "sha256": "fa96366a7402eb66f08f488f5deba7d080c42117625d79a052fdfd58149a06b7"
+  },
+  {
+    "source": "/workspace/shared/session27-modular/ramanujan_near_miss_replay.txt",
+    "relative": "session27-modular/ramanujan_near_miss_replay.txt",
+    "sha256": "4975d25ba92d1c299a47a6d7902ff98a6f7c506e6e27995062eb9bc612b497fd"
+  }
+]

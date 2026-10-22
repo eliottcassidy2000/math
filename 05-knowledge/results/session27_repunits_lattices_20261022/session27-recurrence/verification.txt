@@ -1,0 +1,240 @@
+PASS symbolic Z[t] symmetric d=0, dimension=1
+PASS symbolic Z[t] symmetric d=1, dimension=3
+PASS symbolic Z[t] symmetric d=2, dimension=6
+PASS symbolic Z[t] symmetric d=3, dimension=10
+PASS integer symmetric t=-3, d=0
+PASS integer symmetric t=-3, d=1
+PASS integer symmetric t=-3, d=2
+PASS integer symmetric t=-3, d=3
+PASS integer symmetric t=-3, d=4
+PASS integer symmetric t=-3, d=5
+PASS integer symmetric t=-3, d=6
+PASS integer symmetric t=-2, d=0
+PASS integer symmetric t=-2, d=1
+PASS integer symmetric t=-2, d=2
+PASS integer symmetric t=-2, d=3
+PASS integer symmetric t=-2, d=4
+PASS integer symmetric t=-2, d=5
+PASS integer symmetric t=-2, d=6
+PASS integer symmetric t=-1, d=0
+PASS integer symmetric t=-1, d=1
+PASS integer symmetric t=-1, d=2
+PASS integer symmetric t=-1, d=3
+PASS integer symmetric t=-1, d=4
+PASS integer symmetric t=-1, d=5
+PASS integer symmetric t=-1, d=6
+PASS integer symmetric t=0, d=0
+PASS integer symmetric t=0, d=1
+PASS integer symmetric t=0, d=2
+PASS integer symmetric t=0, d=3
+PASS integer symmetric t=0, d=4
+PASS integer symmetric t=0, d=5
+PASS integer symmetric t=0, d=6
+PASS integer symmetric t=1, d=0
+PASS integer symmetric t=1, d=1
+PASS integer symmetric t=1, d=2
+PASS integer symmetric t=1, d=3
+PASS integer symmetric t=1, d=4
+PASS integer symmetric t=1, d=5
+PASS integer symmetric t=1, d=6
+PASS integer symmetric t=2, d=0
+PASS integer symmetric t=2, d=1
+PASS integer symmetric t=2, d=2
+PASS integer symmetric t=2, d=3
+PASS integer symmetric t=2, d=4
+PASS integer symmetric t=2, d=5
+PASS integer symmetric t=2, d=6
+PASS integer symmetric t=3, d=0
+PASS integer symmetric t=3, d=1
+PASS integer symmetric t=3, d=2
+PASS integer symmetric t=3, d=3
+PASS integer symmetric t=3, d=4
+PASS integer symmetric t=3, d=5
+PASS integer symmetric t=3, d=6
+PASS integer symmetric t=83, d=0
+PASS integer symmetric t=83, d=1
+PASS integer symmetric t=83, d=2
+PASS integer symmetric t=83, d=3
+PASS integer symmetric t=83, d=4
+PASS integer symmetric t=83, d=5
+PASS integer symmetric t=83, d=6
+PASS modular symmetric t=-2, d=1, modulus=2
+PASS modular symmetric t=-2, d=1, modulus=4
+PASS modular symmetric t=-2, d=1, modulus=6
+PASS modular symmetric t=-2, d=1, modulus=8
+PASS modular symmetric t=-2, d=1, modulus=9
+PASS modular symmetric t=-2, d=1, modulus=25
+PASS modular symmetric t=-2, d=2, modulus=2
+PASS modular symmetric t=-2, d=2, modulus=4
+PASS modular symmetric t=-2, d=2, modulus=6
+PASS modular symmetric t=-2, d=2, modulus=8
+PASS modular symmetric t=-2, d=2, modulus=9
+PASS modular symmetric t=-2, d=2, modulus=25
+PASS modular symmetric t=-2, d=3, modulus=2
+PASS modular symmetric t=-2, d=3, modulus=4
+PASS modular symmetric t=-2, d=3, modulus=6
+PASS modular symmetric t=-2, d=3, modulus=8
+PASS modular symmetric t=-2, d=3, modulus=9
+PASS modular symmetric t=-2, d=3, modulus=25
+PASS modular symmetric t=-2, d=4, modulus=2
+PASS modular symmetric t=-2, d=4, modulus=4
+PASS modular symmetric t=-2, d=4, modulus=6
+PASS modular symmetric t=-2, d=4, modulus=8
+PASS modular symmetric t=-2, d=4, modulus=9
+PASS modular symmetric t=-2, d=4, modulus=25
+PASS modular symmetric t=0, d=1, modulus=2
+PASS modular symmetric t=0, d=1, modulus=4
+PASS modular symmetric t=0, d=1, modulus=6
+PASS modular symmetric t=0, d=1, modulus=8
+PASS modular symmetric t=0, d=1, modulus=9
+PASS modular symmetric t=0, d=1, modulus=25
+PASS modular symmetric t=0, d=2, modulus=2
+PASS modular symmetric t=0, d=2, modulus=4
+PASS modular symmetric t=0, d=2, modulus=6
+PASS modular symmetric t=0, d=2, modulus=8
+PASS modular symmetric t=0, d=2, modulus=9
+PASS modular symmetric t=0, d=2, modulus=25
+PASS modular symmetric t=0, d=3, modulus=2
+PASS modular symmetric t=0, d=3, modulus=4
+PASS modular symmetric t=0, d=3, modulus=6
+PASS modular symmetric t=0, d=3, modulus=8
+PASS modular symmetric t=0, d=3, modulus=9
+PASS modular symmetric t=0, d=3, modulus=25
+PASS modular symmetric t=0, d=4, modulus=2
+PASS modular symmetric t=0, d=4, modulus=4
+PASS modular symmetric t=0, d=4, modulus=6
+PASS modular symmetric t=0, d=4, modulus=8
+PASS modular symmetric t=0, d=4, modulus=9
+PASS modular symmetric t=0, d=4, modulus=25
+PASS modular symmetric t=2, d=1, modulus=2
+PASS modular symmetric t=2, d=1, modulus=4
+PASS modular symmetric t=2, d=1, modulus=6
+PASS modular symmetric t=2, d=1, modulus=8
+PASS modular symmetric t=2, d=1, modulus=9
+PASS modular symmetric t=2, d=1, modulus=25
+PASS modular symmetric t=2, d=2, modulus=2
+PASS modular symmetric t=2, d=2, modulus=4
+PASS modular symmetric t=2, d=2, modulus=6
+PASS modular symmetric t=2, d=2, modulus=8
+PASS modular symmetric t=2, d=2, modulus=9
+PASS modular symmetric t=2, d=2, modulus=25
+PASS modular symmetric t=2, d=3, modulus=2
+PASS modular symmetric t=2, d=3, modulus=4
+PASS modular symmetric t=2, d=3, modulus=6
+PASS modular symmetric t=2, d=3, modulus=8
+PASS modular symmetric t=2, d=3, modulus=9
+PASS modular symmetric t=2, d=3, modulus=25
+PASS modular symmetric t=2, d=4, modulus=2
+PASS modular symmetric t=2, d=4, modulus=4
+PASS modular symmetric t=2, d=4, modulus=6
+PASS modular symmetric t=2, d=4, modulus=8
+PASS modular symmetric t=2, d=4, modulus=9
+PASS modular symmetric t=2, d=4, modulus=25
+PASS modular symmetric t=3, d=1, modulus=2
+PASS modular symmetric t=3, d=1, modulus=4
+PASS modular symmetric t=3, d=1, modulus=6
+PASS modular symmetric t=3, d=1, modulus=8
+PASS modular symmetric t=3, d=1, modulus=9
+PASS modular symmetric t=3, d=1, modulus=25
+PASS modular symmetric t=3, d=2, modulus=2
+PASS modular symmetric t=3, d=2, modulus=4
+PASS modular symmetric t=3, d=2, modulus=6
+PASS modular symmetric t=3, d=2, modulus=8
+PASS modular symmetric t=3, d=2, modulus=9
+PASS modular symmetric t=3, d=2, modulus=25
+PASS modular symmetric t=3, d=3, modulus=2
+PASS modular symmetric t=3, d=3, modulus=4
+PASS modular symmetric t=3, d=3, modulus=6
+PASS modular symmetric t=3, d=3, modulus=8
+PASS modular symmetric t=3, d=3, modulus=9
+PASS modular symmetric t=3, d=3, modulus=25
+PASS modular symmetric t=3, d=4, modulus=2
+PASS modular symmetric t=3, d=4, modulus=4
+PASS modular symmetric t=3, d=4, modulus=6
+PASS modular symmetric t=3, d=4, modulus=8
+PASS modular symmetric t=3, d=4, modulus=9
+PASS modular symmetric t=3, d=4, modulus=25
+PASS modular symmetric t=83, d=1, modulus=2
+PASS modular symmetric t=83, d=1, modulus=4
+PASS modular symmetric t=83, d=1, modulus=6
+PASS modular symmetric t=83, d=1, modulus=8
+PASS modular symmetric t=83, d=1, modulus=9
+PASS modular symmetric t=83, d=1, modulus=25
+PASS modular symmetric t=83, d=2, modulus=2
+PASS modular symmetric t=83, d=2, modulus=4
+PASS modular symmetric t=83, d=2, modulus=6
+PASS modular symmetric t=83, d=2, modulus=8
+PASS modular symmetric t=83, d=2, modulus=9
+PASS modular symmetric t=83, d=2, modulus=25
+PASS modular symmetric t=83, d=3, modulus=2
+PASS modular symmetric t=83, d=3, modulus=4
+PASS modular symmetric t=83, d=3, modulus=6
+PASS modular symmetric t=83, d=3, modulus=8
+PASS modular symmetric t=83, d=3, modulus=9
+PASS modular symmetric t=83, d=3, modulus=25
+PASS modular symmetric t=83, d=4, modulus=2
+PASS modular symmetric t=83, d=4, modulus=4
+PASS modular symmetric t=83, d=4, modulus=6
+PASS modular symmetric t=83, d=4, modulus=8
+PASS modular symmetric t=83, d=4, modulus=9
+PASS modular symmetric t=83, d=4, modulus=25
+PASS full tensor t=-2, d=1, dimension=3
+PASS full tensor t=-2, d=2, dimension=9
+PASS full tensor t=-2, d=3, dimension=27
+PASS full tensor t=2, d=1, dimension=3
+PASS full tensor t=2, d=2, dimension=9
+PASS full tensor t=2, d=3, dimension=27
+PASS full tensor t=3, d=1, dimension=3
+PASS full tensor t=3, d=2, dimension=9
+PASS full tensor t=3, d=3, dimension=27
+PASS full tensor t=83, d=1, dimension=3
+PASS full tensor t=83, d=2, dimension=9
+PASS full tensor t=83, d=3, dimension=27
+F_3(t=83), factored: (x + 1)*(x**2 - 571538*x + 1)*(x**2 - 83*x + 1)*(x**2 + 6887*x + 1)
+F_3(t=83), coefficients descending: [1, -564733, -3889880904, 322812677460, 322812677460, -3889880904, -564733, 1]
+PASS factor coefficients independently computed
+Seven initial triples and actual cubic values:
+0 1 2 2 1
+PASS initial residual n=0
+1 135 138 172 -1
+PASS initial residual n=1
+2 11161 11468 14258 1
+PASS initial residual n=2
+3 926271 951690 1183258 -1
+PASS initial residual n=3
+4 76869289 78978818 98196140 1
+PASS initial residual n=4
+5 6379224759 6554290188 8149096378 -1
+PASS initial residual n=5
+6 529398785665 543927106802 676276803218 1
+PASS initial residual n=6
+PASS nonzero cube sequence A, recurrence window 0
+PASS nonzero cube sequence A, recurrence window 1
+PASS nonzero cube sequence A, recurrence window 2
+PASS nonzero cube sequence A, recurrence window 3
+PASS nonzero cube sequence A, recurrence window 4
+PASS nonzero cube sequence A, recurrence window 5
+PASS nonzero cube sequence A, recurrence window 6
+PASS nonzero cube sequence A, recurrence window 7
+PASS nonzero cube sequence B, recurrence window 0
+PASS nonzero cube sequence B, recurrence window 1
+PASS nonzero cube sequence B, recurrence window 2
+PASS nonzero cube sequence B, recurrence window 3
+PASS nonzero cube sequence B, recurrence window 4
+PASS nonzero cube sequence B, recurrence window 5
+PASS nonzero cube sequence B, recurrence window 6
+PASS nonzero cube sequence B, recurrence window 7
+PASS nonzero cube sequence C, recurrence window 0
+PASS nonzero cube sequence C, recurrence window 1
+PASS nonzero cube sequence C, recurrence window 2
+PASS nonzero cube sequence C, recurrence window 3
+PASS nonzero cube sequence C, recurrence window 4
+PASS nonzero cube sequence C, recurrence window 5
+PASS nonzero cube sequence C, recurrence window 6
+PASS nonzero cube sequence C, recurrence window 7
+PASS backward triple n=-1
+PASS backward cubic residual
+PASS 1729 rearrangement
+PASS hostile changed numerator detected
+PASS hostile dropped central factor detected
+ALL 229 EXACT CHECKS PASS

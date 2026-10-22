@@ -1,0 +1,53 @@
+{
+  "source_sha256": {
+    "verify_graph_counterexample.py": "e914a302ac3d356b99aa5364c14fca10009689316729c1b70b17e19c763a2381",
+    "results.json": "5fb173f2478bdd9354faed8767a70dc887c3e1b40df23ff9afd10ba364ae3fee",
+    "graph_counterexample_results.json": "ed12c88fc18310d7b612958646e05b77088d47dda561d06ed4992e52470def23",
+    "ORTHOGONAL_AVOIDANCE.md": "06d429392539fb063a7f657c11540c6c5b94c650d8ea204957730143e4ca6de7",
+    "verify.py": "f880762ce7ddba68515829f8d20353e72d84631442bf6322ea2129c26e19c7a1"
+  },
+  "controls": [
+    {
+      "r": 1,
+      "isotropic_points": 2,
+      "isotropic_spaces_by_dimension": [
+        1,
+        2
+      ]
+    },
+    {
+      "r": 2,
+      "isotropic_points": 16,
+      "isotropic_spaces_by_dimension": [
+        1,
+        16,
+        8
+      ],
+      "subsets_checked": 65536,
+      "histogram": {
+        "0": 41503,
+        "1": 17288,
+        "2": 5188,
+        "3": 1208,
+        "4": 284,
+        "5": 48,
+        "6": 16,
+        "8": 1
+      }
+    },
+    {
+      "r": 3,
+      "isotropic_points": 130,
+      "isotropic_spaces_by_dimension": [
+        1,
+        130,
+        520,
+        80
+      ],
+      "dependent_K3_avoiders": 60,
+      "independent_K3_avoiders": 61
+    }
+  ],
+  "threshold": 27368747340080916344,
+  "status": "PASS"
+}

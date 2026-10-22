@@ -1,0 +1,4 @@
+support 1 count 96 minimum 20
+support 2 count 9120 minimum 20
+support 3 count 571520 minimum 24
+support 4 count 26575680 minimum 20

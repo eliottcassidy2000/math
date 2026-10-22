@@ -1,0 +1,58 @@
+{
+  "field": 3,
+  "ambient_dimension": 4,
+  "all_projective_lines": 40,
+  "all_two_subspaces": 130,
+  "isotropic_lines": 16,
+  "maximal_isotropic_planes": 8,
+  "isotropic_line_incidence_degrees": [
+    2
+  ],
+  "forbidden_subsets_exhaustively_checked": 65536,
+  "span_containment_formula_subsets_checked": 65536,
+  "mobius_posets_checked": 102,
+  "avoidance_count_histogram": {
+    "0": 41503,
+    "1": 17288,
+    "2": 5188,
+    "3": 1208,
+    "4": 284,
+    "5": 48,
+    "6": 16,
+    "8": 1
+  },
+  "hostile_three_lines": [
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ]
+  ],
+  "hostile_span_rank": 2,
+  "hostile_avoiding_planes": 4,
+  "hostile_avoidance_probability": "1/2",
+  "complete_forbidden_set_avoidance": 0,
+  "status": "all assertions passed"
+}
+{
+  "all_three_subspaces": 33880,
+  "maximal_isotropic_three_spaces": 80,
+  "dependent_K3_avoiding": 60,
+  "independent_K3_avoiding": 61,
+  "dependent_probability": "3/4",
+  "independent_probability": "61/80",
+  "status": "all assertions passed"
+}

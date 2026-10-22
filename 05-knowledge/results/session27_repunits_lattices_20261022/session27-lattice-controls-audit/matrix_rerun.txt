@@ -1,0 +1,5 @@
+sha256 7a6a3b8f761a9f02e1a687be8040aaf403c7ac75c33d92f010f2dd131f17bc24
+shape (96, 96) symmetric True even diag True
+eig extrema [3.63979259e-07 3.67990608e+02]
+det exact 1
+pivots 96 first [Fraction(28, 1), Fraction(21, 1), Fraction(56, 3)] last [Fraction(63, 1742), Fraction(22, 567), Fraction(1, 22)]
