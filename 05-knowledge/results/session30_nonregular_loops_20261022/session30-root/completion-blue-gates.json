@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "bits": "000110001000000",
+      "T": {
+        "H": 41,
+        "Aut": 1,
+        "b": 9
+      },
+      "completion": {
+        "H": 175,
+        "Aut": 7,
+        "b": 9
+      },
+      "anti_involution": [
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "centralizer": 1,
+      "halfpath_endpoint_counts": [
+        4,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "even_gate": 9,
+      "completion_gate": 9,
+      "gate_flux": 0
+    },
+    {
+      "bits": "000110011000000",
+      "T": {
+        "H": 45,
+        "Aut": 3,
+        "b": 9
+      },
+      "completion": {
+        "H": 171,
+        "Aut": 3,
+        "b": 9
+      },
+      "anti_involution": [
+        1,
+        0,
+        5,
+        4,
+        3,
+        2
+      ],
+      "centralizer": 1,
+      "halfpath_endpoint_counts": [
+        3,
+        3,
+        2,
+        2,
+        4,
+        2
+      ],
+      "even_gate": 9,
+      "completion_gate": 9,
+      "gate_flux": 0
+    }
+  ]
+}

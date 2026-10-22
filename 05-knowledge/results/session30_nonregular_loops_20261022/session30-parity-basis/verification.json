@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "exact_scalar_identities": 5,
+  "core_contraction_checks": 248,
+  "maximum_absolute_error": 2.6645352591003757e-15,
+  "benchmark": [
+    {
+      "n": 10,
+      "repeats": 3,
+      "dense_four_basis_median_seconds": 0.00424686299811583,
+      "sparse_parity_quotient_median_seconds": 0.015263387002050877,
+      "ratio_dense_over_sparse": 0.2782385716581252
+    },
+    {
+      "n": 20,
+      "repeats": 3,
+      "dense_four_basis_median_seconds": 0.011072977998992428,
+      "sparse_parity_quotient_median_seconds": 0.02499707900278736,
+      "ratio_dense_over_sparse": 0.44297087662753354
+    },
+    {
+      "n": 40,
+      "repeats": 3,
+      "dense_four_basis_median_seconds": 0.07743595499778166,
+      "sparse_parity_quotient_median_seconds": 0.7613280350051355,
+      "ratio_dense_over_sparse": 0.1017116820048001
+    }
+  ]
+}

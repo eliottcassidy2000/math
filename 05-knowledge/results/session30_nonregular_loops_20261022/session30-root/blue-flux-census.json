@@ -1,0 +1,447 @@
+{
+  "status": "PASS",
+  "universe": "all15 self-converse almost-regular order8 classes",
+  "changed_classes": 8,
+  "flux_distribution": {
+    "-2": 4,
+    "0": 7,
+    "2": 4
+  },
+  "records": [
+    {
+      "bits": "0000111000011000010000000000",
+      "sigma": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "centralizer": 1,
+      "endpoint_halfpaths": [
+        8,
+        10,
+        8,
+        9,
+        9,
+        8,
+        6,
+        6
+      ],
+      "f_even": 35,
+      "f_completion": 35,
+      "blue_even": 35,
+      "blue_completion": 35,
+      "flux": 0
+    },
+    {
+      "bits": "0001011000101000100001000000",
+      "sigma": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "centralizer": 1,
+      "endpoint_halfpaths": [
+        11,
+        7,
+        9,
+        6,
+        10,
+        7,
+        7,
+        7
+      ],
+      "f_even": 35,
+      "f_completion": 37,
+      "blue_even": 35,
+      "blue_completion": 37,
+      "flux": -2
+    },
+    {
+      "bits": "0100110010011010010100010010",
+      "sigma": [
+        1,
+        0,
+        5,
+        7,
+        6,
+        2,
+        4,
+        3
+      ],
+      "centralizer": 3,
+      "endpoint_halfpaths": [
+        8,
+        10,
+        9,
+        8,
+        10,
+        9,
+        8,
+        10
+      ],
+      "f_even": 39,
+      "f_completion": 33,
+      "blue_even": 13,
+      "blue_completion": 11,
+      "flux": 2
+    },
+    {
+      "bits": "1011010100111001010010000001",
+      "sigma": [
+        2,
+        3,
+        0,
+        1,
+        6,
+        7,
+        4,
+        5
+      ],
+      "centralizer": 1,
+      "endpoint_halfpaths": [
+        6,
+        6,
+        10,
+        12,
+        8,
+        7,
+        8,
+        7
+      ],
+      "f_even": 37,
+      "f_completion": 37,
+      "blue_even": 37,
+      "blue_completion": 37,
+      "flux": 0
+    },
+    {
+      "bits": "0101100100100101101001001110",
+      "sigma": [
+        6,
+        3,
+        5,
+        1,
+        7,
+        2,
+        0,
+        4
+      ],
+      "centralizer": 1,
+      "endpoint_halfpaths": [
+        7,
+        7,
+        10,
+        7,
+        11,
+        6,
+        9,
+        7
+      ],
+      "f_even": 37,
+      "f_completion": 35,
+      "blue_even": 37,
+      "blue_completion": 35,
+      "flux": 2
+    },
+    {
+      "bits": "1110000001101101011010101100",
+      "sigma": [
+        2,
+        6,
+        0,
+        4,
+        3,
+        7,
+        1,
+        5
+      ],
+      "centralizer": 1,
+      "endpoint_halfpaths": [
+        12,
+        6,
+        6,
+        12,
+        4,
+        9,
+        6,
+        9
+      ],
+      "f_even": 39,
+      "f_completion": 39,
+      "blue_even": 39,
+      "blue_completion": 39,
+      "flux": 0
+    },
+    {
+      "bits": "1011001010110000011010110101",
+      "sigma": [
+        2,
+        5,
+        0,
+        4,
+        3,
+        1,
+        7,
+        6
+      ],
+      "centralizer": 1,
+      "endpoint_halfpaths": [
+        5,
+        11,
+        7,
+        11,
+        5,
+        5,
+        8,
+        4
+      ],
+      "f_even": 37,
+      "f_completion": 37,
+      "blue_even": 37,
+      "blue_completion": 37,
+      "flux": 0
+    },
+    {
+      "bits": "1111000100110101111010011011",
+      "sigma": [
+        1,
+        0,
+        7,
+        4,
+        3,
+        6,
+        5,
+        2
+      ],
+      "centralizer": 1,
+      "endpoint_halfpaths": [
+        7,
+        7,
+        7,
+        11,
+        7,
+        6,
+        10,
+        9
+      ],
+      "f_even": 35,
+      "f_completion": 37,
+      "blue_even": 35,
+      "blue_completion": 37,
+      "flux": -2
+    },
+    {
+      "bits": "1110010001101101001101010010",
+      "sigma": [
+        5,
+        6,
+        3,
+        2,
+        7,
+        0,
+        1,
+        4
+      ],
+      "centralizer": 1,
+      "endpoint_halfpaths": [
+        6,
+        8,
+        12,
+        6,
+        7,
+        10,
+        8,
+        7
+      ],
+      "f_even": 37,
+      "f_completion": 37,
+      "blue_even": 37,
+      "blue_completion": 37,
+      "flux": 0
+    },
+    {
+      "bits": "1000110101100011010001011100",
+      "sigma": [
+        7,
+        2,
+        1,
+        5,
+        6,
+        3,
+        4,
+        0
+      ],
+      "centralizer": 1,
+      "endpoint_halfpaths": [
+        9,
+        12,
+        6,
+        4,
+        6,
+        12,
+        6,
+        9
+      ],
+      "f_even": 39,
+      "f_completion": 39,
+      "blue_even": 39,
+      "blue_completion": 39,
+      "flux": 0
+    },
+    {
+      "bits": "1110001011010101001111110010",
+      "sigma": [
+        1,
+        0,
+        7,
+        5,
+        6,
+        3,
+        4,
+        2
+      ],
+      "centralizer": 1,
+      "endpoint_halfpaths": [
+        10,
+        8,
+        10,
+        8,
+        9,
+        10,
+        9,
+        8
+      ],
+      "f_even": 35,
+      "f_completion": 37,
+      "blue_even": 35,
+      "blue_completion": 37,
+      "flux": -2
+    },
+    {
+      "bits": "1110001010101110001111010010",
+      "sigma": [
+        7,
+        3,
+        5,
+        1,
+        6,
+        2,
+        4,
+        0
+      ],
+      "centralizer": 1,
+      "endpoint_halfpaths": [
+        7,
+        10,
+        7,
+        6,
+        11,
+        9,
+        7,
+        7
+      ],
+      "f_even": 37,
+      "f_completion": 35,
+      "blue_even": 37,
+      "blue_completion": 35,
+      "flux": 2
+    },
+    {
+      "bits": "1101001111001101111110101100",
+      "sigma": [
+        6,
+        5,
+        7,
+        4,
+        3,
+        1,
+        0,
+        2
+      ],
+      "centralizer": 1,
+      "endpoint_halfpaths": [
+        6,
+        6,
+        9,
+        8,
+        8,
+        10,
+        8,
+        9
+      ],
+      "f_even": 35,
+      "f_completion": 35,
+      "blue_even": 35,
+      "blue_completion": 35,
+      "flux": 0
+    },
+    {
+      "bits": "1101000100101111010110101110",
+      "sigma": [
+        6,
+        3,
+        7,
+        1,
+        5,
+        4,
+        0,
+        2
+      ],
+      "centralizer": 1,
+      "endpoint_halfpaths": [
+        9,
+        10,
+        10,
+        8,
+        10,
+        8,
+        9,
+        8
+      ],
+      "f_even": 37,
+      "f_completion": 35,
+      "blue_even": 37,
+      "blue_completion": 35,
+      "flux": 2
+    },
+    {
+      "bits": "0010011001001001100101000010",
+      "sigma": [
+        2,
+        5,
+        0,
+        7,
+        6,
+        1,
+        4,
+        3
+      ],
+      "centralizer": 3,
+      "endpoint_halfpaths": [
+        10,
+        9,
+        8,
+        8,
+        10,
+        9,
+        8,
+        10
+      ],
+      "f_even": 33,
+      "f_completion": 39,
+      "blue_even": 11,
+      "blue_completion": 13,
+      "flux": -2
+    }
+  ]
+}

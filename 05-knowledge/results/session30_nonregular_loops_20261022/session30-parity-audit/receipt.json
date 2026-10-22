@@ -1,0 +1,810 @@
+{
+  "status": "PASS",
+  "source_imports": "No producer-code imports; JSON inputs only",
+  "exact_scalar_identities": 5,
+  "cores": 31,
+  "old_nonzero_terms": 2364,
+  "parity_nonzero_terms": 553,
+  "original_basis_reversal_invariants": 31,
+  "odd_monomials": 0,
+  "odd_loop_terms": 0,
+  "contraction_checks": [
+    {
+      "fixture": "weighted3",
+      "z": "1.0",
+      "core_count": 31,
+      "max_absolute_difference": 5.551115123125783e-17
+    },
+    {
+      "fixture": "weighted3",
+      "z": "(0.3+0.1j)",
+      "core_count": 31,
+      "max_absolute_difference": 1.734723475976807e-18
+    },
+    {
+      "fixture": "transitive4",
+      "z": "1.0",
+      "core_count": 31,
+      "max_absolute_difference": 1.3322676295501878e-15
+    },
+    {
+      "fixture": "transitive4",
+      "z": "(0.3+0.1j)",
+      "core_count": 31,
+      "max_absolute_difference": 1.962615573354719e-17
+    },
+    {
+      "fixture": "almostregular6",
+      "z": "1.0",
+      "core_count": 31,
+      "max_absolute_difference": 6.661338147750939e-16
+    },
+    {
+      "fixture": "almostregular6",
+      "z": "(0.3+0.1j)",
+      "core_count": 31,
+      "max_absolute_difference": 1.734723475976807e-17
+    },
+    {
+      "fixture": "regular7",
+      "z": "1.0",
+      "core_count": 31,
+      "max_absolute_difference": 5.551115123125783e-16
+    },
+    {
+      "fixture": "regular7",
+      "z": "(0.3+0.1j)",
+      "core_count": 31,
+      "max_absolute_difference": 2.5033568429418485e-17
+    }
+  ],
+  "maximum_absolute_difference": 1.3322676295501878e-15,
+  "generic_sparse_timings_seconds": {
+    "old": [
+      0.09192501699726563,
+      0.09498929600522388,
+      0.1047402459953446
+    ],
+    "parity": [
+      0.01959394000004977,
+      0.027372352007660083,
+      0.02736507001100108
+    ]
+  },
+  "timing_scope": "Same direct sparse einsum evaluator on all31 cores of one regular7 fixture; not a full predictor benchmark",
+  "summary": [
+    {
+      "weight": 1,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "old_terms": 5,
+      "new_terms": 3
+    },
+    {
+      "weight": 1,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "old_terms": 9,
+      "new_terms": 4
+    },
+    {
+      "weight": 1,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "old_terms": 7,
+      "new_terms": 7
+    },
+    {
+      "weight": 1,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "old_terms": 3,
+      "new_terms": 2
+    },
+    {
+      "weight": 1,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "old_terms": 1,
+      "new_terms": 1
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "old_terms": 7,
+      "new_terms": 4
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "old_terms": 15,
+      "new_terms": 6
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "old_terms": 33,
+      "new_terms": 11
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "old_terms": 47,
+      "new_terms": 10
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "old_terms": 57,
+      "new_terms": 26
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "old_terms": 5,
+      "new_terms": 3
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "old_terms": 99,
+      "new_terms": 16
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "old_terms": 135,
+      "new_terms": 16
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "old_terms": 89,
+      "new_terms": 22
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "old_terms": 123,
+      "new_terms": 28
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "old_terms": 101,
+      "new_terms": 50
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "old_terms": 33,
+      "new_terms": 8
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "old_terms": 45,
+      "new_terms": 8
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "old_terms": 41,
+      "new_terms": 14
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "old_terms": 15,
+      "new_terms": 4
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "old_terms": 243,
+      "new_terms": 24
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "old_terms": 351,
+      "new_terms": 32
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "old_terms": 201,
+      "new_terms": 40
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "old_terms": 197,
+      "new_terms": 56
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "old_terms": 158,
+      "new_terms": 92
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "old_terms": 81,
+      "new_terms": 12
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "old_terms": 117,
+      "new_terms": 16
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "old_terms": 67,
+      "new_terms": 20
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "old_terms": 39,
+      "new_terms": 8
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "old_terms": 27,
+      "new_terms": 6
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "old_terms": 13,
+      "new_terms": 4
+    }
+  ]
+}

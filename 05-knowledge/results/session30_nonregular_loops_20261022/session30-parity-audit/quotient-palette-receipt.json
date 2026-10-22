@@ -1,0 +1,2314 @@
+{
+  "exact_integer_contraction_checks": 93,
+  "status": "PASS",
+  "cores": 31,
+  "quotient_terms": 263,
+  "loop_palette": [
+    0,
+    1
+  ],
+  "bridge_palette": [
+    0,
+    3
+  ],
+  "weight1_bridge_palette": [
+    0
+  ],
+  "basis": [
+    "G",
+    "H",
+    "O",
+    "P"
+  ],
+  "summary": [
+    {
+      "weight": 1,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "quotient_terms": 2,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 1,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "quotient_terms": 3,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 1,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "quotient_terms": 3,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 1,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "quotient_terms": 2,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 1,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "quotient_terms": 1,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "quotient_terms": 2,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "quotient_terms": 4,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "quotient_terms": 5,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "quotient_terms": 8,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "quotient_terms": 6,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "quotient_terms": 2,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "quotient_terms": 14,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            2,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "quotient_terms": 12,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            2,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "quotient_terms": 17,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "quotient_terms": 12,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "quotient_terms": 14,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "quotient_terms": 7,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "quotient_terms": 8,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "quotient_terms": 6,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "quotient_terms": 4,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "quotient_terms": 18,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            3,
+            3
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "quotient_terms": 10,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            3
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            2,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            3,
+            3
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "quotient_terms": 24,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            3
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "quotient_terms": 20,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            3
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "quotient_terms": 11,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            3
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            3
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "quotient_terms": 12,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "quotient_terms": 10,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            3
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            2,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "quotient_terms": 12,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "quotient_terms": 6,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            0
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            3
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "quotient_terms": 6,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": false,
+          "basis": [
+            "G",
+            "H",
+            "O",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            1,
+            3
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "quotient_terms": 2,
+      "palettes": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        },
+        {
+          "edge": [
+            0,
+            3
+          ],
+          "bridge": true,
+          "basis": [
+            "G",
+            "P"
+          ]
+        }
+      ]
+    }
+  ]
+}

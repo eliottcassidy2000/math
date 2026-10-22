@@ -1,0 +1,752 @@
+{
+  "status": "PASS",
+  "method": "Perfect-matching anti-involutions; pair-mask DP; full permutation Hamilton-word/automorphism checker",
+  "selfconverse_order8": 15,
+  "distribution": {
+    "-2": 4,
+    "0": 7,
+    "2": 4
+  },
+  "records": [
+    {
+      "bits": "0000111000011000010000000000",
+      "n": 8,
+      "sigma": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "endpoints": [
+        8,
+        10,
+        8,
+        9,
+        9,
+        8,
+        6,
+        6
+      ],
+      "T": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 629,
+        "labelled_blue": 35,
+        "fixed_words": 35
+      },
+      "R": {
+        "aut": 9,
+        "anti": 9,
+        "centralizer": 1,
+        "H": 3267,
+        "labelled_blue": 315,
+        "fixed_words": 35
+      },
+      "blue_T": 35,
+      "blue_R": 35,
+      "flux": 0,
+      "anti_involutions": 1
+    },
+    {
+      "bits": "0001011000101000100001000000",
+      "n": 8,
+      "sigma": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "endpoints": [
+        11,
+        7,
+        9,
+        6,
+        10,
+        7,
+        7,
+        7
+      ],
+      "T": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 661,
+        "labelled_blue": 35,
+        "fixed_words": 35
+      },
+      "R": {
+        "aut": 9,
+        "anti": 9,
+        "centralizer": 1,
+        "H": 3357,
+        "labelled_blue": 333,
+        "fixed_words": 37
+      },
+      "blue_T": 35,
+      "blue_R": 37,
+      "flux": -2,
+      "anti_involutions": 1
+    },
+    {
+      "bits": "0100110010011010010100010010",
+      "n": 8,
+      "sigma": [
+        1,
+        0,
+        5,
+        7,
+        6,
+        2,
+        4,
+        3
+      ],
+      "endpoints": [
+        8,
+        10,
+        9,
+        8,
+        10,
+        9,
+        8,
+        10
+      ],
+      "T": {
+        "aut": 9,
+        "anti": 9,
+        "centralizer": 3,
+        "H": 621,
+        "labelled_blue": 117,
+        "fixed_words": 39
+      },
+      "R": {
+        "aut": 81,
+        "anti": 81,
+        "centralizer": 3,
+        "H": 3159,
+        "labelled_blue": 891,
+        "fixed_words": 33
+      },
+      "blue_T": 13,
+      "blue_R": 11,
+      "flux": 2,
+      "anti_involutions": 3
+    },
+    {
+      "bits": "1011010100111001010010000001",
+      "n": 8,
+      "sigma": [
+        2,
+        3,
+        0,
+        1,
+        6,
+        7,
+        4,
+        5
+      ],
+      "endpoints": [
+        6,
+        6,
+        10,
+        12,
+        8,
+        7,
+        8,
+        7
+      ],
+      "T": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 657,
+        "labelled_blue": 37,
+        "fixed_words": 37
+      },
+      "R": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 3255,
+        "labelled_blue": 37,
+        "fixed_words": 37
+      },
+      "blue_T": 37,
+      "blue_R": 37,
+      "flux": 0,
+      "anti_involutions": 1
+    },
+    {
+      "bits": "0101100100100101101001001110",
+      "n": 8,
+      "sigma": [
+        6,
+        3,
+        5,
+        1,
+        7,
+        2,
+        0,
+        4
+      ],
+      "endpoints": [
+        7,
+        7,
+        10,
+        7,
+        11,
+        6,
+        9,
+        7
+      ],
+      "T": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 641,
+        "labelled_blue": 37,
+        "fixed_words": 37
+      },
+      "R": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 3249,
+        "labelled_blue": 35,
+        "fixed_words": 35
+      },
+      "blue_T": 37,
+      "blue_R": 35,
+      "flux": 2,
+      "anti_involutions": 1
+    },
+    {
+      "bits": "1110000001101101011010101100",
+      "n": 8,
+      "sigma": [
+        2,
+        6,
+        0,
+        4,
+        3,
+        7,
+        1,
+        5
+      ],
+      "endpoints": [
+        12,
+        6,
+        6,
+        12,
+        4,
+        9,
+        6,
+        9
+      ],
+      "T": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 637,
+        "labelled_blue": 39,
+        "fixed_words": 39
+      },
+      "R": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 3275,
+        "labelled_blue": 39,
+        "fixed_words": 39
+      },
+      "blue_T": 39,
+      "blue_R": 39,
+      "flux": 0,
+      "anti_involutions": 1
+    },
+    {
+      "bits": "1011001010110000011010110101",
+      "n": 8,
+      "sigma": [
+        2,
+        5,
+        0,
+        4,
+        3,
+        1,
+        7,
+        6
+      ],
+      "endpoints": [
+        5,
+        11,
+        7,
+        11,
+        5,
+        5,
+        8,
+        4
+      ],
+      "T": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 657,
+        "labelled_blue": 37,
+        "fixed_words": 37
+      },
+      "R": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 3297,
+        "labelled_blue": 37,
+        "fixed_words": 37
+      },
+      "blue_T": 37,
+      "blue_R": 37,
+      "flux": 0,
+      "anti_involutions": 1
+    },
+    {
+      "bits": "1111000100110101111010011011",
+      "n": 8,
+      "sigma": [
+        1,
+        0,
+        7,
+        4,
+        3,
+        6,
+        5,
+        2
+      ],
+      "endpoints": [
+        7,
+        7,
+        7,
+        11,
+        7,
+        6,
+        10,
+        9
+      ],
+      "T": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 657,
+        "labelled_blue": 35,
+        "fixed_words": 35
+      },
+      "R": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 3281,
+        "labelled_blue": 37,
+        "fixed_words": 37
+      },
+      "blue_T": 35,
+      "blue_R": 37,
+      "flux": -2,
+      "anti_involutions": 1
+    },
+    {
+      "bits": "1110010001101101001101010010",
+      "n": 8,
+      "sigma": [
+        5,
+        6,
+        3,
+        2,
+        7,
+        0,
+        1,
+        4
+      ],
+      "endpoints": [
+        6,
+        8,
+        12,
+        6,
+        7,
+        10,
+        8,
+        7
+      ],
+      "T": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 653,
+        "labelled_blue": 37,
+        "fixed_words": 37
+      },
+      "R": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 3255,
+        "labelled_blue": 37,
+        "fixed_words": 37
+      },
+      "blue_T": 37,
+      "blue_R": 37,
+      "flux": 0,
+      "anti_involutions": 1
+    },
+    {
+      "bits": "1000110101100011010001011100",
+      "n": 8,
+      "sigma": [
+        7,
+        2,
+        1,
+        5,
+        6,
+        3,
+        4,
+        0
+      ],
+      "endpoints": [
+        9,
+        12,
+        6,
+        4,
+        6,
+        12,
+        6,
+        9
+      ],
+      "T": {
+        "aut": 3,
+        "anti": 3,
+        "centralizer": 1,
+        "H": 621,
+        "labelled_blue": 117,
+        "fixed_words": 39
+      },
+      "R": {
+        "aut": 3,
+        "anti": 3,
+        "centralizer": 1,
+        "H": 3243,
+        "labelled_blue": 117,
+        "fixed_words": 39
+      },
+      "blue_T": 39,
+      "blue_R": 39,
+      "flux": 0,
+      "anti_involutions": 3
+    },
+    {
+      "bits": "1110001011010101001111110010",
+      "n": 8,
+      "sigma": [
+        1,
+        0,
+        7,
+        5,
+        6,
+        3,
+        4,
+        2
+      ],
+      "endpoints": [
+        10,
+        8,
+        10,
+        8,
+        9,
+        10,
+        9,
+        8
+      ],
+      "T": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 653,
+        "labelled_blue": 35,
+        "fixed_words": 35
+      },
+      "R": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 3299,
+        "labelled_blue": 37,
+        "fixed_words": 37
+      },
+      "blue_T": 35,
+      "blue_R": 37,
+      "flux": -2,
+      "anti_involutions": 1
+    },
+    {
+      "bits": "1110001010101110001111010010",
+      "n": 8,
+      "sigma": [
+        7,
+        3,
+        5,
+        1,
+        6,
+        2,
+        4,
+        0
+      ],
+      "endpoints": [
+        7,
+        10,
+        7,
+        6,
+        11,
+        9,
+        7,
+        7
+      ],
+      "T": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 657,
+        "labelled_blue": 37,
+        "fixed_words": 37
+      },
+      "R": {
+        "aut": 3,
+        "anti": 3,
+        "centralizer": 1,
+        "H": 3333,
+        "labelled_blue": 105,
+        "fixed_words": 35
+      },
+      "blue_T": 37,
+      "blue_R": 35,
+      "flux": 2,
+      "anti_involutions": 1
+    },
+    {
+      "bits": "1101001111001101111110101100",
+      "n": 8,
+      "sigma": [
+        6,
+        5,
+        7,
+        4,
+        3,
+        1,
+        0,
+        2
+      ],
+      "endpoints": [
+        6,
+        6,
+        9,
+        8,
+        8,
+        10,
+        8,
+        9
+      ],
+      "T": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 661,
+        "labelled_blue": 35,
+        "fixed_words": 35
+      },
+      "R": {
+        "aut": 3,
+        "anti": 3,
+        "centralizer": 1,
+        "H": 3279,
+        "labelled_blue": 105,
+        "fixed_words": 35
+      },
+      "blue_T": 35,
+      "blue_R": 35,
+      "flux": 0,
+      "anti_involutions": 1
+    },
+    {
+      "bits": "1101000100101111010110101110",
+      "n": 8,
+      "sigma": [
+        6,
+        3,
+        7,
+        1,
+        5,
+        4,
+        0,
+        2
+      ],
+      "endpoints": [
+        9,
+        10,
+        10,
+        8,
+        10,
+        8,
+        9,
+        8
+      ],
+      "T": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 641,
+        "labelled_blue": 37,
+        "fixed_words": 37
+      },
+      "R": {
+        "aut": 3,
+        "anti": 3,
+        "centralizer": 1,
+        "H": 3255,
+        "labelled_blue": 105,
+        "fixed_words": 35
+      },
+      "blue_T": 37,
+      "blue_R": 35,
+      "flux": 2,
+      "anti_involutions": 1
+    },
+    {
+      "bits": "0010011001001001100101000010",
+      "n": 8,
+      "sigma": [
+        2,
+        5,
+        0,
+        7,
+        6,
+        1,
+        4,
+        3
+      ],
+      "endpoints": [
+        10,
+        9,
+        8,
+        8,
+        10,
+        9,
+        8,
+        10
+      ],
+      "T": {
+        "aut": 3,
+        "anti": 3,
+        "centralizer": 3,
+        "H": 657,
+        "labelled_blue": 33,
+        "fixed_words": 33
+      },
+      "R": {
+        "aut": 3,
+        "anti": 3,
+        "centralizer": 3,
+        "H": 3303,
+        "labelled_blue": 39,
+        "fixed_words": 39
+      },
+      "blue_T": 11,
+      "blue_R": 13,
+      "flux": -2,
+      "anti_involutions": 1
+    },
+    {
+      "bits": "000110001000000",
+      "n": 6,
+      "sigma": [
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "endpoints": [
+        4,
+        2,
+        3,
+        3,
+        2,
+        2
+      ],
+      "T": {
+        "aut": 1,
+        "anti": 1,
+        "centralizer": 1,
+        "H": 41,
+        "labelled_blue": 9,
+        "fixed_words": 9
+      },
+      "R": {
+        "aut": 7,
+        "anti": 7,
+        "centralizer": 1,
+        "H": 175,
+        "labelled_blue": 63,
+        "fixed_words": 9
+      },
+      "blue_T": 9,
+      "blue_R": 9,
+      "flux": 0,
+      "anti_involutions": 1
+    },
+    {
+      "bits": "000110011000000",
+      "n": 6,
+      "sigma": [
+        1,
+        0,
+        5,
+        4,
+        3,
+        2
+      ],
+      "endpoints": [
+        3,
+        3,
+        2,
+        2,
+        4,
+        2
+      ],
+      "T": {
+        "aut": 3,
+        "anti": 3,
+        "centralizer": 1,
+        "H": 45,
+        "labelled_blue": 27,
+        "fixed_words": 9
+      },
+      "R": {
+        "aut": 3,
+        "anti": 3,
+        "centralizer": 1,
+        "H": 171,
+        "labelled_blue": 27,
+        "fixed_words": 9
+      },
+      "blue_T": 9,
+      "blue_R": 9,
+      "flux": 0,
+      "anti_involutions": 3
+    }
+  ]
+}

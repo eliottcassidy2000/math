@@ -1,0 +1,772 @@
+{
+  "status": "constructed; contractions require verification",
+  "parity_terms": 553,
+  "quotient_terms": 263,
+  "antisymmetric_monomials_killed": 0,
+  "cores": [
+    {
+      "weight": 1,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "parity_terms": 3,
+      "quotient_terms": 2,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 1,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "parity_terms": 4,
+      "quotient_terms": 3,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 1,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "parity_terms": 7,
+      "quotient_terms": 3,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 1,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "parity_terms": 2,
+      "quotient_terms": 2,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 1,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "parity_terms": 1,
+      "quotient_terms": 1,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "parity_terms": 4,
+      "quotient_terms": 2,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "parity_terms": 6,
+      "quotient_terms": 4,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "parity_terms": 11,
+      "quotient_terms": 5,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "parity_terms": 10,
+      "quotient_terms": 8,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "parity_terms": 26,
+      "quotient_terms": 6,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "parity_terms": 3,
+      "quotient_terms": 2,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "parity_terms": 16,
+      "quotient_terms": 14,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "parity_terms": 16,
+      "quotient_terms": 12,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "parity_terms": 22,
+      "quotient_terms": 17,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "parity_terms": 28,
+      "quotient_terms": 12,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "parity_terms": 50,
+      "quotient_terms": 14,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "parity_terms": 8,
+      "quotient_terms": 7,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "parity_terms": 8,
+      "quotient_terms": 8,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "parity_terms": 14,
+      "quotient_terms": 6,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "parity_terms": 4,
+      "quotient_terms": 4,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "parity_terms": 24,
+      "quotient_terms": 18,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "parity_terms": 32,
+      "quotient_terms": 10,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "parity_terms": 40,
+      "quotient_terms": 24,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "parity_terms": 56,
+      "quotient_terms": 20,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "parity_terms": 92,
+      "quotient_terms": 11,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "parity_terms": 12,
+      "quotient_terms": 12,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "parity_terms": 16,
+      "quotient_terms": 10,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "parity_terms": 20,
+      "quotient_terms": 12,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "parity_terms": 8,
+      "quotient_terms": 6,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "parity_terms": 6,
+      "quotient_terms": 6,
+      "antisymmetric_monomials_killed": 0
+    },
+    {
+      "weight": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "parity_terms": 4,
+      "quotient_terms": 2,
+      "antisymmetric_monomials_killed": 0
+    }
+  ]
+}

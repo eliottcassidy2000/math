@@ -1,0 +1,7 @@
+#include <algorithm>
+#include <iostream>
+#include <numeric>
+#include <string>
+#include <vector>
+using namespace std;
+int main(){int n;string bits;while(cin>>n>>bits){vector<vector<int>>s(n,vector<int>(n));int k=0;for(int i=0;i<n;i++)for(int j=i+1;j<n;j++){s[i][j]=bits[k++]=='1'?1:-1;s[j][i]=-s[i][j];}vector<int>p(n),par(n),fixed(n);iota(p.begin(),p.end(),0);iota(par.begin(),par.end(),0);auto root=[&](int a){while(par[a]!=a)a=par[a];return a;};long aut=0,anti=0,inv=0;do{bool a=true,b=true;for(int i=0;i<n;i++)for(int j=i+1;j<n;j++){a=a&&(s[p[i]][p[j]]==s[i][j]);b=b&&(s[p[i]][p[j]]==-s[i][j]);if(!a&&!b)goto done;}done:if(a){aut++;for(int i=0;i<n;i++)par[root(i)]=root(p[i]);}if(b){anti++;bool invol=true;for(int i=0;i<n;i++)invol=invol&&(p[p[i]]==i);if(invol){inv++;int nf=0;for(int i=0;i<n;i++)if(p[i]==i){nf++;fixed[i]++;}if(nf!=(n%2))return 2;}}}while(next_permutation(p.begin(),p.end()));vector<int>orbits,good;for(int i=0;i<n;i++){if(find(orbits.begin(),orbits.end(),root(i))==orbits.end())orbits.push_back(root(i));if(fixed[i]&&find(good.begin(),good.end(),root(i))==good.end())good.push_back(root(i));}if(n%2&&((anti>0&&good.size()!=1)||(anti==0&&good.size()!=0)))return 3;if(n%2&&anti)for(int i=0;i<n;i++)if((fixed[i]>0)!=(root(i)==good[0]))return 6;if((anti>0)!=(inv>0))return 4;if(anti&&anti!=aut)return 5;cout<<n<<" "<<bits<<" "<<aut<<" "<<anti<<" "<<inv<<" "<<orbits.size()<<" "<<good.size()<<"\n";}}

@@ -1,0 +1,12 @@
+{
+  "status": "frozen; independently audited, n=2 norm-bound correction applied",
+  "scope": "Formal finite-core predictors only; no exact Hamiltonian-count asymptotic",
+  "files": {
+    "FLAT_ALMOSTREGULAR_UNIVERSALITY.md": "31f81477f7dd76943691fd7744ddf6219efe26bcade299439f82bcf30c582dd0",
+    "check-controls.log": "4b1ab70f6e8ee32c8712e90ece23810114d18e4c565df3cbb5a222669805248a",
+    "check_controls.py": "7d63c21af765b5de0121f672c775d2121833017aa36028d174981265ccfefdff",
+    "finite-controls.json": "8cebf848e652fa5c1378ea4fa3bb931f62f74116b19f8f3ad9dffb484e72fa65",
+    "symbolic-conversion.json": "165438d8f567f09dbf00d5da8565a42ec6830b63146cc74bafce898e58896cdf",
+    "verify_formal.py": "6c8ef7e583983d463c7b57fb8c820377b3195c504226592015dc063f8a6b8804"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "all vertex permutations on100 supplied complete-census representatives",
+  "permutations": 8870400,
+  "counts": {
+    "8": {
+      "classes": 85,
+      "self_converse": 15,
+      "sum_vertex_orbits": 652
+    },
+    "9": {
+      "classes": 15,
+      "self_converse": 15,
+      "sum_vertex_orbits": 85
+    }
+  },
+  "merged_almost_regular8": 50,
+  "boundary": "n=0 must be treated separately"
+}

@@ -1,0 +1,16 @@
+{
+  "README.md": "00adf7962fb6b615654cf1bbed605a90d0d5b1e1252b997e0f075317e5038310",
+  "benchmark_hybrid.py": "17e8231f7e54613a7f7e5b0064a2b335d86b1ed41b650198be41131ee1b0ea2e",
+  "check.py": "655cc290f496ff2b9bad8992364af262fc1048d50686aa36efefedc9c33b50e5",
+  "check_structure.py": "c36b5110f97a068a4a1dd7e52d9b5d7eeb60f8f649168c8af08af36114c951eb",
+  "compressed-results.json": "35bb845585f9f09e7e3aa66b18e557ea87f9892be1c7a60a9249e82af3674743",
+  "parity-kernels.json": "6830bdcae24236c4b3890e0824b606d3a214f45053b18c07e1278a992d8ea61d",
+  "parity_engine.py": "d978cffb0f70e204a5d18c3aab7a597cd9712de59ca2898ed04f5d770176a4f2",
+  "quotient-kernels.json": "0abc31b8f8d99ea95236e64328bcbf02fa39640ec38703fbdf1b766d4f04ea31",
+  "quotient-results.json": "0c89106a4cea28d976f50a2de86571f52ccb4f2945d874738ab386b691d939ef",
+  "quotient.py": "8e57235c32b000bfdaa9e8f208cb95374a3fef4f9fa80ad5411952a655c3392d",
+  "structure-results.json": "246132f00e541136dbf36984b6258870c4d2c0d0db72bb091ed6016777e8e489",
+  "transform.py": "d4d544353942e47f073702220f5b5abc10d9b27917f4054242cde74240779408",
+  "transformation-results.json": "e4a2e370c0b6676e1c4e210826c47675bfea7fd2bafef760336c6239d68b37b7",
+  "verification.json": "375d07ce4c2b5e93c3a393a86f2198b140e29320df23f03f2b5e4c045ace32ca"
+}

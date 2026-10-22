@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "mode": "original five-basis optimized engine, reduced=False",
+  "results": [
+    {
+      "n": 4,
+      "z": "1.0",
+      "cores": 31,
+      "max_absolute_difference": 3.8510861166685117e-16
+    },
+    {
+      "n": 4,
+      "z": "(0.4+0.2j)",
+      "cores": 31,
+      "max_absolute_difference": 2.2215299868541707e-17
+    },
+    {
+      "n": 6,
+      "z": "1.0",
+      "cores": 31,
+      "max_absolute_difference": 4.440892098500626e-16
+    },
+    {
+      "n": 6,
+      "z": "(0.4+0.2j)",
+      "cores": 31,
+      "max_absolute_difference": 2.797157557069881e-17
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "planning": "Both generic engines replanned at each n with greedy intermediate cap2**24; runtime cache changes only; K4/doubled-square special routines retained",
+  "benchmarks": [
+    {
+      "n": 10,
+      "repeats": 7,
+      "old_median_seconds": 0.0030131970124784857,
+      "hybrid_median_seconds": 0.0033387199946446344,
+      "ratio_old_over_hybrid": 0.9025006641202936
+    },
+    {
+      "n": 20,
+      "repeats": 7,
+      "old_median_seconds": 0.008727710010134615,
+      "hybrid_median_seconds": 0.00898323800356593,
+      "ratio_old_over_hybrid": 0.9715550235527677
+    },
+    {
+      "n": 40,
+      "repeats": 7,
+      "old_median_seconds": 0.07575589600310195,
+      "hybrid_median_seconds": 0.06859288099803962,
+      "ratio_old_over_hybrid": 1.104427965422054
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "survivors": [
+    {
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "value": "12*z**6"
+    },
+    {
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "value": "14*z**6"
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "value": "3*z**4"
+    },
+    {
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "value": "4*z**4"
+    }
+  ],
+  "A2_coefficient": "26*z**6 + 7*z**4",
+  "Y1": "13*u**2/3 - 3*u/2",
+  "Y2": "35*u**2/24",
+  "kappa1_over_e": "20*u**2/3 - 5*u/2 + 1",
+  "kappa2_over_e": "65*u**2/8 - 5*u/2 + 1",
+  "scope": "finite five/26-core predictors only; exact Hamiltonian asymptotics not claimed"
+}

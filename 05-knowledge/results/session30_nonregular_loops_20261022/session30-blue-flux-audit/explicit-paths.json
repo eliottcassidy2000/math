@@ -1,0 +1,222 @@
+[
+  {
+    "bits": "0001011000101000100001000000",
+    "sigma": [
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "centralizer": 1,
+    "flux": -2,
+    "gate_patterns": {
+      "10": {
+        "halfpath": [
+          0,
+          4,
+          1,
+          5
+        ],
+        "T_word": [
+          0,
+          4,
+          1,
+          5,
+          2,
+          6,
+          3,
+          7
+        ],
+        "R_word": [
+          0,
+          4,
+          1,
+          5,
+          8,
+          2,
+          6,
+          3,
+          7
+        ],
+        "T_is_directed": true,
+        "R_is_directed": false
+      },
+      "01": {
+        "halfpath": [
+          0,
+          4,
+          2,
+          1
+        ],
+        "T_word": [
+          0,
+          4,
+          2,
+          1,
+          6,
+          5,
+          3,
+          7
+        ],
+        "R_word": [
+          0,
+          4,
+          2,
+          1,
+          8,
+          6,
+          5,
+          3,
+          7
+        ],
+        "T_is_directed": false,
+        "R_is_directed": true
+      },
+      "00": {
+        "halfpath": [
+          0,
+          6,
+          5,
+          3
+        ],
+        "T_word": [
+          0,
+          6,
+          5,
+          3,
+          4,
+          2,
+          1,
+          7
+        ],
+        "R_word": [
+          0,
+          6,
+          5,
+          3,
+          8,
+          4,
+          2,
+          1,
+          7
+        ],
+        "T_is_directed": false,
+        "R_is_directed": false
+      },
+      "11": {
+        "halfpath": [
+          0,
+          6,
+          5,
+          4
+        ],
+        "T_word": [
+          0,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          7
+        ],
+        "R_word": [
+          0,
+          6,
+          5,
+          4,
+          8,
+          3,
+          2,
+          1,
+          7
+        ],
+        "T_is_directed": true,
+        "R_is_directed": true
+      }
+    }
+  },
+  {
+    "bits": "0100110010011010010100010010",
+    "sigma": [
+      1,
+      0,
+      5,
+      7,
+      6,
+      2,
+      4,
+      3
+    ],
+    "centralizer": 3,
+    "flux": 2,
+    "gate_patterns": {
+      "01": {
+        "halfpath": [
+          0,
+          2,
+          4,
+          3
+        ],
+        "T_word": [
+          0,
+          2,
+          4,
+          3,
+          7,
+          6,
+          5,
+          1
+        ],
+        "R_word": [
+          0,
+          2,
+          4,
+          3,
+          8,
+          7,
+          6,
+          5,
+          1
+        ],
+        "T_is_directed": false,
+        "R_is_directed": true
+      },
+      "10": {
+        "halfpath": [
+          0,
+          2,
+          7,
+          4
+        ],
+        "T_word": [
+          0,
+          2,
+          7,
+          4,
+          6,
+          3,
+          5,
+          1
+        ],
+        "R_word": [
+          0,
+          2,
+          7,
+          4,
+          8,
+          6,
+          3,
+          5,
+          1
+        ],
+        "T_is_directed": true,
+        "R_is_directed": false
+      }
+    }
+  }
+]

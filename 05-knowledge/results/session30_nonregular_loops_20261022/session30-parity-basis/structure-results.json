@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "weighted_skew_core_checks": 186,
+  "each_compares": [
+    "sparse quotient",
+    "compressed dense",
+    "global matrix reversal"
+  ],
+  "maximum_absolute_error": 4.440892098500626e-16,
+  "loop_occurrences": 37,
+  "bridge_occurrences": 35,
+  "bridge_palette": "G/P only across the 31 audited tables; G only at weight one"
+}
