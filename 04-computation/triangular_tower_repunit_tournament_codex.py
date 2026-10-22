@@ -357,7 +357,7 @@ def print_polynomial_bridge(carriers: list[FamilyCarrier]) -> None:
     print()
     print("Small exact examples:")
     print(f"  R_2(2)={repunit_binary_value(2)} prime; R_3(2)={repunit_binary_value(3)} prime.")
-    print(f"  R_5(2)={repunit_binary_value(5)} prime; R_29(2)={repunit_binary_value(29)} prime.")
+    print(f"  R_5(2)={repunit_binary_value(5)} prime; R_29(2)={repunit_binary_value(29)} = 233*1103*2089 composite.")  # was hard-coded "prime" (MISTAKE-653)
     print()
 
 

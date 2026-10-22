@@ -88,12 +88,18 @@ and the prime lengths among them are
 ```
 
 So this one family already contributes four exact cyclotomic-irreducible rows
-in the stored window.  The first two also satisfy the base-2 Cohn condition:
+in the stored window.  Only the first also satisfies the base-2 Cohn condition:
 
 ```text
 R_5(2)=31  prime,
-R_29(2)=2^29-1=536870911  prime.
+R_29(2)=2^29-1=536870911 = 233*1103*2089  composite.
 ```
+
+*Erratum (2026-10-21, MISTAKE-653):* this section and the stored
+`triangular_tower_repunit_tournament_codex.out` (line 89) said `2^29-1` is prime.
+The line came from a hard-coded print string, while the script's own computed
+field reports `mersenne_lengths=(5,)`. The cyclotomic irreducibility of
+`R_29(x)` is unaffected; only the Cohn certificate at `L = 29` is withdrawn.
 
 ### 3. The side families contribute only the short prime lengths 2, 3, 5 in the stored window
 

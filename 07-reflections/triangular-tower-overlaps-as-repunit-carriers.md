@@ -31,8 +31,9 @@ The whole-equation family `T_n=2T_m` has lengths
 ```
 
 and already in the stored window it supplies four prime lengths.  Those give
-exact cyclotomic irreducibility without any heuristic step, and `5` and `29`
-also land on prime Mersenne values at base `2`.  So the richest
+exact cyclotomic irreducibility without any heuristic step, and `5`
+also lands on a prime Mersenne value at base `2` (`2^29 - 1 = 233·1103·2089` is
+composite; the earlier "5 and 29" was an erratum, MISTAKE-653).  So the richest
 irreducibility lane is not the exact hinge but the looser symmetric
 containment family.
 

@@ -19488,3 +19488,12 @@ the ambient space.
   2. A multiplicity polynomial derived from a census must sum cores of every size. Cross-check one value outside the census range.
   3. A finite law seen at three or four orders is FINITE-EXACT. Write it as such, not as a law "at odd `m ≥ 7`".
   4. A pre-registered comparison whose sign flips in both runs has not passed, whatever the tolerance says.
+
+## MISTAKE-653 (2026-10-21, found by mac-mini-2026-10-21-fanopsp's repo-wide repunit survey; errata in older files, not in this session's own claims) -- a composite Mersenne number printed as prime by a hard-coded string, a withdrawn "forbidden values are Mersenne numbers" gloss surviving in a write-up, and a refuted historical hypothesis still marked CONFIRMED
+- **`2^29 − 1` called prime.**
+  - `HYP-2529` §2, the reflection `triangular-tower-overlaps-as-repunit-carriers.md`, and the stored output `05-knowledge/results/triangular_tower_repunit_tournament_codex.out` (line 89) all say `R_29(2) = 2^29 − 1 = 536870911` is prime, i.e. a base-2 Cohn certificate at length 29.
+  - It is `233 · 1103 · 2089`. The claim came from a hard-coded print string in `04-computation/triangular_tower_repunit_tournament_codex.py` (line 360). The same script's computed field reports `mersenne_lengths=(5,)`.
+  - Fixed in the hypothesis, the reflection and the script; the stored `.out` is left as the historical record of the bug. The cyclotomic irreducibility of `R_29(x)` is unaffected; only the Cohn certificate at `L = 29` is withdrawn.
+- **A residue of MISTAKE-028.** `06-writeups/formal-writeup.md` still described THM-227 as "connecting forbidden H values to Mersenne numbers". Only 7 and 21 are forbidden, and 31, 63, 127 are attained. Gloss withdrawn.
+- **A stale historical hypothesis.** In `INDEX-HISTORICAL-THROUGH-2026-07-21.md` (line 4772), HYP-1154 is still marked CONFIRMED (exact) for "|PG(5,2)| = 63 = H_forb₃". MISTAKE-024 refuted this (63 is attained at `n = 8`). The frozen historical index is not edited; this entry is the correction of record.
+- **Missing coordinate.** A printed verdict must come from the computed field it summarises. When a stored output disagrees with its own computed fields, rerun the computation; do not trust the summary line.

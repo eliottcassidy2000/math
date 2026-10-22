@@ -29,7 +29,7 @@ The following results appear to be new contributions not found in prior literatu
 - **Universal signed permanent congruences** (THM-H, THM-I, THM-J): The universality criterion s_2(n-3) <= 1 and the master identity D_S = n!/2^k appear to be new.
 - **THM-130 (Paley Betti formula)**: Complete formula beta_m = m(m-3)/2, beta_{m+1} = C(m+1,2), chi = p for Paley tournaments. The per-eigenspace decomposition and Heisenberg Lie algebra connection appear new.
 - **THM-125 (Constant symbol matrix)**: For circulant tournaments, all eigenspaces have identical Omega dimensions — enables n-fold speedup in rank computation.
-- **THM-227 (k-nacci Mersenne identity)**: Tr(M_k^n) = 2^n - 1 for all 1 <= n <= k, connecting forbidden H values to Mersenne numbers via k-nacci matrices.
+- **THM-227 (k-nacci Mersenne identity)**: Tr(M_k^n) = 2^n - 1 for all 1 <= n <= k. (The earlier gloss "connecting forbidden H values to Mersenne numbers" is withdrawn: only 7 and 21 are forbidden, and 31, 63, 127 are attained; MISTAKE-024, MISTAKE-028, MISTAKE-653.)
 - **Simplicial Redei** (THM-220): sim_H in {0,1} for all tournaments on n >= 4 vertices.
 - **Unit fraction splitting characterization** (HYP-1612): 3/N = 1/b + 1/c solvable iff N has a prime factor congruent to 2 mod 3.
 - **Master splitting criterion** (HYP-1615): k/N = 1/b + 1/c solvable iff N^2 has a divisor d with d = -N mod k.
