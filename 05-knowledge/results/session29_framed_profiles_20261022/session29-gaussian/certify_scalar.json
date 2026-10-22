@@ -1,0 +1,75 @@
+{
+  "status": "EXACT dyadic outward intervals; rational coefficient and tail bounds",
+  "precision_bits": 180,
+  "theta_degree": 84,
+  "tail_absolute_bound": "1/100000000000000000000",
+  "M": "1468058589186006771/18078415936",
+  "certificates": {
+    "near_selfdual": {
+      "t_interval": [
+        "1",
+        "1.02"
+      ],
+      "quantity": "D",
+      "sign": -1,
+      "dyadic_subintervals": 1024
+    },
+    "descending": {
+      "t_interval": [
+        "1.02",
+        "1.09"
+      ],
+      "quantity": "P",
+      "sign": -1,
+      "dyadic_subintervals": 2755
+    },
+    "minimum_window": {
+      "t_interval": [
+        "1.09",
+        "1.12"
+      ],
+      "quantity": "D",
+      "sign": 1,
+      "dyadic_subintervals": 440
+    },
+    "ascending": {
+      "t_interval": [
+        "1.12",
+        "2.2"
+      ],
+      "quantity": "P",
+      "sign": 1,
+      "dyadic_subintervals": 866
+    }
+  },
+  "tail_monotonicity": {
+    "starts_at_t": "2.2",
+    "positive_constant": 30329640000,
+    "absolute_remainder_upper_integer": 20193127386
+  },
+  "unique_minimum_t_rational": [
+    "3958139749755697793/3602879701896396800",
+    "989534937438924449/900719925474099200"
+  ],
+  "unique_minimum_t_display": [
+    1.0986044712157077,
+    1.0986044712157077
+  ],
+  "minimum_r_interval": [
+    11135.87632122712,
+    11135.876321247277
+  ],
+  "minimum_r_rational": [
+    "17065680805914600404082064420744803863298529272809854939805/1532495540865888858358347027150309183618739122183602176",
+    "17065680805945491457028178473350802054196995888445134773351/1532495540865888858358347027150309183618739122183602176"
+  ],
+  "minimum_r_certified_decimal_enclosure": [
+    "27839690803/2500000",
+    "111358763213/10000000"
+  ],
+  "minimum_t_certified_decimal_enclosure": [
+    "1098604471215707/1000000000000000",
+    "274651117803927/250000000000000"
+  ],
+  "seconds": 19.292346715927124
+}

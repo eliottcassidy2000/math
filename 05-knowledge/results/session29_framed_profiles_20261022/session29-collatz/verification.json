@@ -1,0 +1,621 @@
+{
+  "status": "PASS",
+  "word_clock_cap": 11,
+  "words": 2046,
+  "compatible_words": 1023,
+  "oddpart_universal_words": 2046,
+  "oddpart_delay_receipts": [
+    {
+      "h": 1,
+      "least_odd_exponent": 3,
+      "period": 4,
+      "source_bits": 3,
+      "shortcut_clock": 1,
+      "ordinary_clock": 2
+    },
+    {
+      "h": 2,
+      "least_odd_exponent": 3,
+      "period": 8,
+      "source_bits": 3,
+      "shortcut_clock": 2,
+      "ordinary_clock": 4
+    },
+    {
+      "h": 3,
+      "least_odd_exponent": 11,
+      "period": 16,
+      "source_bits": 16,
+      "shortcut_clock": 3,
+      "ordinary_clock": 6
+    },
+    {
+      "h": 4,
+      "least_odd_exponent": 11,
+      "period": 32,
+      "source_bits": 16,
+      "shortcut_clock": 4,
+      "ordinary_clock": 8
+    },
+    {
+      "h": 5,
+      "least_odd_exponent": 11,
+      "period": 64,
+      "source_bits": 16,
+      "shortcut_clock": 5,
+      "ordinary_clock": 10
+    },
+    {
+      "h": 6,
+      "least_odd_exponent": 11,
+      "period": 128,
+      "source_bits": 16,
+      "shortcut_clock": 6,
+      "ordinary_clock": 12
+    },
+    {
+      "h": 7,
+      "least_odd_exponent": 11,
+      "period": 256,
+      "source_bits": 16,
+      "shortcut_clock": 7,
+      "ordinary_clock": 14
+    },
+    {
+      "h": 8,
+      "least_odd_exponent": 267,
+      "period": 512,
+      "source_bits": 422,
+      "shortcut_clock": 8,
+      "ordinary_clock": 16
+    },
+    {
+      "h": 9,
+      "least_odd_exponent": 267,
+      "period": 1024,
+      "source_bits": 422,
+      "shortcut_clock": 9,
+      "ordinary_clock": 18
+    },
+    {
+      "h": 10,
+      "least_odd_exponent": 1291,
+      "period": 2048,
+      "source_bits": 2045,
+      "shortcut_clock": 10,
+      "ordinary_clock": 20
+    },
+    {
+      "h": 11,
+      "least_odd_exponent": 3339,
+      "period": 4096,
+      "source_bits": 5291,
+      "shortcut_clock": 11,
+      "ordinary_clock": 22
+    },
+    {
+      "h": 12,
+      "least_odd_exponent": 7435,
+      "period": 8192,
+      "source_bits": 11783,
+      "shortcut_clock": 12,
+      "ordinary_clock": 24
+    },
+    {
+      "h": 13,
+      "least_odd_exponent": 15627,
+      "period": 16384,
+      "source_bits": 24767,
+      "shortcut_clock": 13,
+      "ordinary_clock": 26
+    },
+    {
+      "h": 14,
+      "least_odd_exponent": 15627,
+      "period": 32768,
+      "source_bits": 24767,
+      "shortcut_clock": 14,
+      "ordinary_clock": 28
+    },
+    {
+      "h": 15,
+      "least_odd_exponent": 15627,
+      "period": 65536,
+      "source_bits": 24767,
+      "shortcut_clock": 15,
+      "ordinary_clock": 30
+    },
+    {
+      "h": 16,
+      "least_odd_exponent": 15627,
+      "period": 131072,
+      "source_bits": 24767,
+      "shortcut_clock": 16,
+      "ordinary_clock": 32
+    },
+    {
+      "h": 17,
+      "least_odd_exponent": 15627,
+      "period": 262144,
+      "source_bits": 24767,
+      "shortcut_clock": 17,
+      "ordinary_clock": 34
+    }
+  ],
+  "subgroups": [
+    {
+      "L": 3,
+      "order": 2
+    },
+    {
+      "L": 4,
+      "order": 4
+    },
+    {
+      "L": 5,
+      "order": 8
+    },
+    {
+      "L": 6,
+      "order": 16
+    },
+    {
+      "L": 7,
+      "order": 32
+    },
+    {
+      "L": 8,
+      "order": 64
+    },
+    {
+      "L": 9,
+      "order": 128
+    },
+    {
+      "L": 10,
+      "order": 256
+    },
+    {
+      "L": 11,
+      "order": 512
+    },
+    {
+      "L": 12,
+      "order": 1024
+    },
+    {
+      "L": 13,
+      "order": 2048
+    },
+    {
+      "L": 14,
+      "order": 4096
+    }
+  ],
+  "initial_examples": [
+    {
+      "m": 1,
+      "word": [
+        1,
+        4
+      ],
+      "nodes": [
+        3,
+        5,
+        1
+      ]
+    },
+    {
+      "m": 2,
+      "word": [
+        2,
+        1
+      ],
+      "nodes": [
+        9,
+        7,
+        11
+      ]
+    },
+    {
+      "m": 3,
+      "word": [
+        1,
+        2
+      ],
+      "nodes": [
+        27,
+        41,
+        31
+      ]
+    },
+    {
+      "m": 4,
+      "word": [
+        2,
+        3
+      ],
+      "nodes": [
+        81,
+        61,
+        23
+      ]
+    },
+    {
+      "m": 5,
+      "word": [
+        1,
+        3
+      ],
+      "nodes": [
+        243,
+        365,
+        137
+      ]
+    },
+    {
+      "m": 6,
+      "word": [
+        2,
+        1
+      ],
+      "nodes": [
+        729,
+        547,
+        821
+      ]
+    },
+    {
+      "m": 7,
+      "word": [
+        1,
+        2
+      ],
+      "nodes": [
+        2187,
+        3281,
+        2461
+      ]
+    },
+    {
+      "m": 8,
+      "word": [
+        2,
+        2
+      ],
+      "nodes": [
+        6561,
+        4921,
+        3691
+      ]
+    },
+    {
+      "m": 9,
+      "word": [
+        1,
+        9
+      ],
+      "nodes": [
+        19683,
+        29525,
+        173
+      ]
+    },
+    {
+      "m": 10,
+      "word": [
+        2,
+        1
+      ],
+      "nodes": [
+        59049,
+        44287,
+        66431
+      ]
+    },
+    {
+      "m": 11,
+      "word": [
+        1,
+        2
+      ],
+      "nodes": [
+        177147,
+        265721,
+        199291
+      ]
+    },
+    {
+      "m": 12,
+      "word": [
+        2,
+        5
+      ],
+      "nodes": [
+        531441,
+        398581,
+        37367
+      ]
+    }
+  ],
+  "unbounded_delay_receipts": [
+    {
+      "r": 0,
+      "least_exponent": 3,
+      "period": 4,
+      "source_bits": 5,
+      "odd_steps": 2,
+      "shortcut_clock": 3,
+      "ordinary_clock": 5
+    },
+    {
+      "r": 1,
+      "least_exponent": 3,
+      "period": 8,
+      "source_bits": 5,
+      "odd_steps": 3,
+      "shortcut_clock": 4,
+      "ordinary_clock": 7
+    },
+    {
+      "r": 2,
+      "least_exponent": 3,
+      "period": 16,
+      "source_bits": 5,
+      "odd_steps": 4,
+      "shortcut_clock": 5,
+      "ordinary_clock": 9
+    },
+    {
+      "r": 3,
+      "least_exponent": 3,
+      "period": 32,
+      "source_bits": 5,
+      "odd_steps": 5,
+      "shortcut_clock": 6,
+      "ordinary_clock": 11
+    },
+    {
+      "r": 4,
+      "least_exponent": 3,
+      "period": 64,
+      "source_bits": 5,
+      "odd_steps": 6,
+      "shortcut_clock": 7,
+      "ordinary_clock": 13
+    },
+    {
+      "r": 5,
+      "least_exponent": 67,
+      "period": 128,
+      "source_bits": 107,
+      "odd_steps": 7,
+      "shortcut_clock": 8,
+      "ordinary_clock": 15
+    },
+    {
+      "r": 6,
+      "least_exponent": 67,
+      "period": 256,
+      "source_bits": 107,
+      "odd_steps": 8,
+      "shortcut_clock": 9,
+      "ordinary_clock": 17
+    },
+    {
+      "r": 7,
+      "least_exponent": 67,
+      "period": 512,
+      "source_bits": 107,
+      "odd_steps": 9,
+      "shortcut_clock": 10,
+      "ordinary_clock": 19
+    },
+    {
+      "r": 8,
+      "least_exponent": 579,
+      "period": 1024,
+      "source_bits": 918,
+      "odd_steps": 10,
+      "shortcut_clock": 11,
+      "ordinary_clock": 21
+    },
+    {
+      "r": 9,
+      "least_exponent": 579,
+      "period": 2048,
+      "source_bits": 918,
+      "odd_steps": 11,
+      "shortcut_clock": 12,
+      "ordinary_clock": 23
+    },
+    {
+      "r": 10,
+      "least_exponent": 2627,
+      "period": 4096,
+      "source_bits": 4164,
+      "odd_steps": 12,
+      "shortcut_clock": 13,
+      "ordinary_clock": 25
+    },
+    {
+      "r": 11,
+      "least_exponent": 2627,
+      "period": 8192,
+      "source_bits": 4164,
+      "odd_steps": 13,
+      "shortcut_clock": 14,
+      "ordinary_clock": 27
+    },
+    {
+      "r": 12,
+      "least_exponent": 10819,
+      "period": 16384,
+      "source_bits": 17148,
+      "odd_steps": 14,
+      "shortcut_clock": 15,
+      "ordinary_clock": 29
+    },
+    {
+      "r": 13,
+      "least_exponent": 27203,
+      "period": 32768,
+      "source_bits": 43116,
+      "odd_steps": 15,
+      "shortcut_clock": 16,
+      "ordinary_clock": 31
+    },
+    {
+      "r": 14,
+      "least_exponent": 27203,
+      "period": 65536,
+      "source_bits": 43116,
+      "odd_steps": 16,
+      "shortcut_clock": 17,
+      "ordinary_clock": 33
+    },
+    {
+      "r": 15,
+      "least_exponent": 92739,
+      "period": 131072,
+      "source_bits": 146988,
+      "odd_steps": 17,
+      "shortcut_clock": 18,
+      "ordinary_clock": 35
+    },
+    {
+      "r": 16,
+      "least_exponent": 223811,
+      "period": 262144,
+      "source_bits": 354733,
+      "odd_steps": 18,
+      "shortcut_clock": 19,
+      "ordinary_clock": 37
+    },
+    {
+      "r": 17,
+      "least_exponent": 485955,
+      "period": 524288,
+      "source_bits": 770221,
+      "odd_steps": 19,
+      "shortcut_clock": 20,
+      "ordinary_clock": 39
+    },
+    {
+      "r": 18,
+      "least_exponent": 485955,
+      "period": 1048576,
+      "source_bits": 770221,
+      "odd_steps": 20,
+      "shortcut_clock": 21,
+      "ordinary_clock": 41
+    }
+  ],
+  "second_valuation_residues": [
+    {
+      "second_valuation": 2,
+      "residue": 3,
+      "period": 4,
+      "all_exponent_density": "1/4"
+    },
+    {
+      "second_valuation": 3,
+      "residue": 5,
+      "period": 8,
+      "all_exponent_density": "1/8"
+    },
+    {
+      "second_valuation": 4,
+      "residue": 1,
+      "period": 16,
+      "all_exponent_density": "1/16"
+    },
+    {
+      "second_valuation": 5,
+      "residue": 25,
+      "period": 32,
+      "all_exponent_density": "1/32"
+    },
+    {
+      "second_valuation": 6,
+      "residue": 41,
+      "period": 64,
+      "all_exponent_density": "1/64"
+    },
+    {
+      "second_valuation": 7,
+      "residue": 73,
+      "period": 128,
+      "all_exponent_density": "1/128"
+    },
+    {
+      "second_valuation": 8,
+      "residue": 137,
+      "period": 256,
+      "all_exponent_density": "1/256"
+    },
+    {
+      "second_valuation": 9,
+      "residue": 9,
+      "period": 512,
+      "all_exponent_density": "1/512"
+    },
+    {
+      "second_valuation": 10,
+      "residue": 777,
+      "period": 1024,
+      "all_exponent_density": "1/1024"
+    },
+    {
+      "second_valuation": 11,
+      "residue": 265,
+      "period": 2048,
+      "all_exponent_density": "1/2048"
+    },
+    {
+      "second_valuation": 12,
+      "residue": 1289,
+      "period": 4096,
+      "all_exponent_density": "1/4096"
+    }
+  ],
+  "mod15_mod35_register": [
+    {
+      "odd_exponent_mod12": 1,
+      "source_mod15": 1,
+      "source_mod35": 1,
+      "source_mod105": 1
+    },
+    {
+      "odd_exponent_mod12": 3,
+      "source_mod15": 7,
+      "source_mod35": 7,
+      "source_mod105": 7
+    },
+    {
+      "odd_exponent_mod12": 5,
+      "source_mod15": 1,
+      "source_mod35": 26,
+      "source_mod105": 61
+    },
+    {
+      "odd_exponent_mod12": 7,
+      "source_mod15": 7,
+      "source_mod35": 22,
+      "source_mod105": 22
+    },
+    {
+      "odd_exponent_mod12": 9,
+      "source_mod15": 1,
+      "source_mod35": 21,
+      "source_mod105": 91
+    },
+    {
+      "odd_exponent_mod12": 11,
+      "source_mod15": 7,
+      "source_mod35": 12,
+      "source_mod105": 82
+    }
+  ],
+  "warning": "Finite tests verify implementations; all-order claims use accompanying proofs. No Collatz convergence claim."
+}

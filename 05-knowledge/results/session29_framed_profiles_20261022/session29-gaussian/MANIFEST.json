@@ -1,0 +1,36 @@
+{
+  "status": "Scalar certificate independently audited; arithmetic addendum uses cited Nesterenko theorem and elementary derivation",
+  "publish_files": [
+    {
+      "path": "REPORT.md",
+      "sha256": "3e5b87aec49b114480dbd3e104373d770924c35d26e83b4d5de88c0eda34ad88"
+    },
+    {
+      "path": "ARITHMETIC_ADDENDUM.md",
+      "sha256": "805c2db2886598057c293a98eb993fd23eaf50389adc179d2e0d521ec2234a8a"
+    },
+    {
+      "path": "certify_scalar.py",
+      "sha256": "d55e4e5527bd7e68b01cc806b12b1d3f9db6b4ce878792372da20a4268479915"
+    },
+    {
+      "path": "certify_scalar.json",
+      "sha256": "59aa8f1c31a2edbba374b2e73aa680d4ccb17a1a0f2bbbd71606c6514e733621"
+    },
+    {
+      "path": "certify_scalar.out",
+      "sha256": "e49c65b8d44be1139a6c4f3ee29031ca0354263cfb133a6745059bea785095e8"
+    }
+  ],
+  "exclude": [
+    "certify_scalar_v0.py",
+    "__pycache__"
+  ],
+  "new_results": [
+    "Exactly three scalar stationary temperatures",
+    "Exact reciprocal global minimizers and scalar threshold",
+    "Complete angular-branch zero/sign classification",
+    "Nonperfect minimum shell yields a fixed negative Gaussian direction at every finite temperature",
+    "Self-dual Gaussian Hessian is nonsingular for every actual extremal even unimodular rank24m+16 lattice"
+  ]
+}

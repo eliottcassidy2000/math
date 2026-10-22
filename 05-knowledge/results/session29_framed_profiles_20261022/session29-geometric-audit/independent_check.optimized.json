@@ -1,0 +1,37 @@
+{
+  "E8square": {
+    "M_power_traces": [
+      "1800",
+      "54720",
+      "2695680",
+      "230584320"
+    ],
+    "A_power_traces": [
+      "0",
+      "30720",
+      "1146880",
+      "132382720"
+    ]
+  },
+  "D16plus": {
+    "M_power_traces": [
+      "1800",
+      "54720",
+      "2695680",
+      "148008960"
+    ],
+    "A_power_traces": [
+      "0",
+      "30720",
+      "1146880",
+      "49807360"
+    ]
+  },
+  "tetra_direction_sum": "-1",
+  "selfdual_ratio": "8*(5*y - 81)/(3*y)",
+  "variance_dimensions_tested": [
+    2,
+    14
+  ],
+  "status": "PASS"
+}

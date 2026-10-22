@@ -1,0 +1,10 @@
+### 2026-10-22: A root-of-unity angle is not a skew eigenvalue, and finite irrational-angle configurations are not lattice-escape witnesses
+
+Two historical reflections receive warning-only corrections, preserving their original prose.
+
+- `07-reflections/equidecomposability-the-scissors-congruence-of-the-cross-problem-bridge-s599.md` identifies the directed 3-cycle's skew spectrum with ±2π/3. Its skew characteristic polynomial is λ(λ²+3), so the eigenvalues are 0 and ±i√3. The cube-root arguments ±2π/3 are a distinct observable. Shared angles or constants do not construct a scissors-congruence map between tournaments and polyhedra.
+- `07-reflections/the-hadwiger-needle-niven-equals-dehn-triviality-equals-the-HN-lattice-escape-s685.md` conflates irrational angles, nonzero classical Dehn data, lattice escape, and chromatic forcing. An irrational-angle two-edge path is 2-colorable. The square-lattice vectors (1,2),(2,1) have equal norm and angle cosine4/5, yet lie in one lattice. The angle is an irrational multiple ofπ: otherwise twice its cosine would be a rational algebraic integer, but8/5 is not an integer. Classical three-dimensional Dehn data needs a specified polyhedral carrier; a planar graph alone supplies none.
+
+The valid survivor distinguishes a finite configuration from an infinite symmetry requirement. A planar full-rank lattice has finite orthogonal automorphism group, so it cannot be invariant under an irrational-angle rotation. This does not exclude finite equal-length lattice vectors meeting at such an angle. Separate square/triangular norm-graph colorings and Niven's criterion are not retracted; no changes to THM-418/419 are proposed.
+
+Prevention: identify the operator versus angle coordinate, the geometric carrier, and the exact group action before claiming an invariant transports. Rotation-covariant harmonic tensors are not rotation-invariant scissors data. The Session29 exact hostile script and proof report provide the replacement distinctions; the repair packet records source preimages and proposed hashes for conflict-safe publication.

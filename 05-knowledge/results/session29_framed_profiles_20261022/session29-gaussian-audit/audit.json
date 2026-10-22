@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "source_sha256": "d55e4e5527bd7e68b01cc806b12b1d3f9db6b4ce878792372da20a4268479915",
+  "rational_interval_control_cases": 1698,
+  "exp_alternating_controls": [
+    0,
+    1,
+    6,
+    7,
+    14,
+    16
+  ],
+  "independent_delta_and_theta_degree": 84,
+  "independent_stationary_derivatives_orders": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "tail_n85_derivative_constants_over_n6": [
+    "404649/887410625",
+    "6888987/177482125",
+    "34494741/10440125",
+    "34544583/122825"
+  ],
+  "common_tail_bound": "6047635710723394947324535296/30626027863918381388685929778148420155048370361328125"
+}

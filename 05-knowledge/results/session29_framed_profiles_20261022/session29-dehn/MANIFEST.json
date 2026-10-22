@@ -1,0 +1,13 @@
+{
+  "test_stdout.txt": "0ddabe2ae476602cab0a4933d755c3fca556009a80f8d3e7cc7b50c21d54a986",
+  "check_dehn_angular.py": "96493c5c2788d6bf5de7077595f0bedf787383489309c1684842cfab4170c252",
+  "check_dehn_angular.json": "7344ec951787a307528ce0eca569c4d1109e17345304dabc66cf41f56b0847b9",
+  "prepare_repairs.py": "c1f884527a7e9d547de6e479491a11d12489379795aaa517ece2ae33656530af",
+  "REPORT.md": "30343da7b36f41297fc191c5e5a4348dfb4b830570fefe16f59c16f47398d08c",
+  "repair-proposals/MISTAKES_ENTRY.md": "c9801aeccf0f8fd820dba8fe1e092f14bdc98897a250b7036113a055bf8852e6",
+  "repair-proposals/the-hadwiger-needle-niven-equals-dehn-triviality-equals-the-HN-lattice-escape-s685.preimage.md": "d350887693dc497f9d3d4e6dba6a5a8dd9621e29a24cf8a08c941b92048e3829",
+  "repair-proposals/the-hadwiger-needle-niven-equals-dehn-triviality-equals-the-HN-lattice-escape-s685.proposed.md": "7cb3fee508a61ad02abb46b9188b8908746dbbd7de5323d8e7ebf2910cf70774",
+  "repair-proposals/REPAIRS.json": "9288d81b2f1fcb8fc748ccd4f0d498b7ee131407d4a3822519716ffcb4be9036",
+  "repair-proposals/equidecomposability-the-scissors-congruence-of-the-cross-problem-bridge-s599.proposed.md": "f63371a6f1b1a886a7a8f2cd3915867a33e24832be34abe0b41e5f447bd55e24",
+  "repair-proposals/equidecomposability-the-scissors-congruence-of-the-cross-problem-bridge-s599.preimage.md": "f1832c476306e075192d0edcbc614d8a3b7b4c4ea0cfa1290c6355ab3265162a"
+}

@@ -1,0 +1,68 @@
+{
+  "E8plusE8": {
+    "root_count": 480,
+    "gram_entries_verified": 18225,
+    "angular_spectrum": [
+      [
+        "32/3",
+        70
+      ],
+      [
+        "320/3",
+        1
+      ],
+      [
+        "-40/3",
+        64
+      ]
+    ],
+    "angular_trace": "0",
+    "angular_power_traces": [
+      "0",
+      "30720",
+      "1146880",
+      "132382720"
+    ]
+  },
+  "D16plus": {
+    "root_count": 480,
+    "gram_entries_verified": 18225,
+    "angular_spectrum": [
+      [
+        "128/3",
+        15
+      ],
+      [
+        "-16/3",
+        120
+      ]
+    ],
+    "angular_trace": "0",
+    "angular_power_traces": [
+      "0",
+      "30720",
+      "1146880",
+      "49807360"
+    ]
+  },
+  "selfdual_y_bounds": {
+    "lower": "9",
+    "upper": "18251134331110/1123626489111",
+    "upper_less_than_27": true,
+    "basis": "3<pi, pi\u00b2<10; sigma3(n)<=n^4; e^6>400"
+  },
+  "selfdual_inertia": {
+    "E8plusE8": [
+      71,
+      64,
+      0
+    ],
+    "D16plus": [
+      15,
+      120,
+      0
+    ]
+  },
+  "fourth_trace_gap": 82575360,
+  "status": "PASS"
+}

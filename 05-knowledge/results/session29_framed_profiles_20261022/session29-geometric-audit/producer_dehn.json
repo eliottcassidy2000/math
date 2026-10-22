@@ -1,0 +1,24 @@
+{
+  "equal_volume_Dehn_zero_boxes_harmonic_integrals": [
+    "-1/60",
+    "611/3840"
+  ],
+  "spectral_addition_hostile": {
+    "A": "Matrix([[1, 0], [0, -1]])",
+    "rotated_A": "Matrix([[-1, 0], [0, 1]])",
+    "same_spectrum": true,
+    "aligned_sum_trace_square": "8",
+    "misaligned_sum_trace_square": "0"
+  },
+  "gram_cycles_k_1_to_5": [
+    "4",
+    "8",
+    "16",
+    "32",
+    "64"
+  ],
+  "cross_polytope_angular_variance": "24/5",
+  "status": "PASS; exact SymPy rational/algebraic arithmetic",
+  "tetrahedron_harmonic_edge_sum": "-1",
+  "square_lattice_equal_norm_pair_cosine": "4/5"
+}

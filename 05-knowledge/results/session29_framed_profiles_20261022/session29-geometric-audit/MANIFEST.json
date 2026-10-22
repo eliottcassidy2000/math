@@ -1,0 +1,16 @@
+{
+  "/workspace/shared/session29-dehn/REPORT.md": "30343da7b36f41297fc191c5e5a4348dfb4b830570fefe16f59c16f47398d08c",
+  "/workspace/shared/session29-dehn/check_dehn_angular.py": "96493c5c2788d6bf5de7077595f0bedf787383489309c1684842cfab4170c252",
+  "/workspace/shared/session29-rank16/REPORT.md": "36a65a3f3ab92103587e4006320a7b0b69e6e50a12fa67a2f37f4fe1f313e249",
+  "/workspace/shared/session29-rank16/check_rank16.py": "666e023a18beb2ba3a92149f8781d1d74628c5feff019833049eecc7e7f9a4d5",
+  "/workspace/shared/session29-geometric-audit/AUDIT.md": "4c60a6fd5f1cfa8d49f8ef6e2df9b0d0ed454c8f24018a618ccf4d488266198f",
+  "/workspace/shared/session29-geometric-audit/independent_check.json": "f916885b1946effe78eb00cf082bccd6ad18b8944ed840f7020e4001d5baf149",
+  "/workspace/shared/session29-geometric-audit/independent_check.optimized.json": "f916885b1946effe78eb00cf082bccd6ad18b8944ed840f7020e4001d5baf149",
+  "/workspace/shared/session29-geometric-audit/independent_check.py": "bd40f7bc5c42a3abe4cb7be935c38fb7dac017359e8c6d8283dee9bb33306b11",
+  "/workspace/shared/session29-geometric-audit/producer_dehn.json": "d3992205aa0de055674ae0c65329d520e1491a45be666fb023f213215425b4df",
+  "/workspace/shared/session29-geometric-audit/producer_dehn.out": "0ddabe2ae476602cab0a4933d755c3fca556009a80f8d3e7cc7b50c21d54a986",
+  "/workspace/shared/session29-geometric-audit/producer_dehn.py": "32dc95f62876ee788cdb870890b8e2fc352c3d6f5c484ccd6109309100eb310c",
+  "/workspace/shared/session29-geometric-audit/producer_rank16.json": "26d6946b2c14bfca16ed224eb400e052a4fceb97ec49d2348268627fb8ea368c",
+  "/workspace/shared/session29-geometric-audit/producer_rank16.out": "26d6946b2c14bfca16ed224eb400e052a4fceb97ec49d2348268627fb8ea368c",
+  "/workspace/shared/session29-geometric-audit/producer_rank16.py": "666e023a18beb2ba3a92149f8781d1d74628c5feff019833049eecc7e7f9a4d5"
+}

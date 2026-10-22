@@ -1,0 +1,18 @@
+[
+  {
+    "repository_path": "07-reflections/equidecomposability-the-scissors-congruence-of-the-cross-problem-bridge-s599.md",
+    "preimage_sha256": "f1832c476306e075192d0edcbc614d8a3b7b4c4ea0cfa1290c6355ab3265162a",
+    "proposed_sha256": "f63371a6f1b1a886a7a8f2cd3915867a33e24832be34abe0b41e5f447bd55e24",
+    "preimage_file": "equidecomposability-the-scissors-congruence-of-the-cross-problem-bridge-s599.preimage.md",
+    "proposed_file": "equidecomposability-the-scissors-congruence-of-the-cross-problem-bridge-s599.proposed.md",
+    "operation": "insert overriding dated warning after frontmatter; preserve all old bytes in original order"
+  },
+  {
+    "repository_path": "07-reflections/the-hadwiger-needle-niven-equals-dehn-triviality-equals-the-HN-lattice-escape-s685.md",
+    "preimage_sha256": "d350887693dc497f9d3d4e6dba6a5a8dd9621e29a24cf8a08c941b92048e3829",
+    "proposed_sha256": "7cb3fee508a61ad02abb46b9188b8908746dbbd7de5323d8e7ebf2910cf70774",
+    "preimage_file": "the-hadwiger-needle-niven-equals-dehn-triviality-equals-the-HN-lattice-escape-s685.preimage.md",
+    "proposed_file": "the-hadwiger-needle-niven-equals-dehn-triviality-equals-the-HN-lattice-escape-s685.proposed.md",
+    "operation": "insert overriding dated warning after frontmatter; preserve all old bytes in original order"
+  }
+]
