@@ -49,6 +49,7 @@ scripts:
   - 04-computation/experiments/deep_holes_theta_20261022/height_descent.py (+ .out) (Fricke descent = roots of height divisible by p)
   - 04-computation/experiments/deep_holes_theta_20261022/swap_fricke_proof.py (+ .out) (the Fricke swap theorem: certificates for the 23 pairs (rho, z''))
   - 04-computation/experiments/deep_holes_theta_20261022/swap_shell_test.py (+ .out) (the next shell m = h + 2 fails)
+  - 04-computation/experiments/deep_holes_theta_20261022/fricke_nudge.py (+ .out) (Fricke point = deep hole nudged 1/(h+1) toward a second-shell point; z'' = z + Leech wall)
 related:
   - THM-4758 (swap theorem and deep-hole theta identity)
   - HYP-9363 (proved in THM-4758)
@@ -261,6 +262,18 @@ c″ = proj_Λ(z″)/(h + 1), a point of order e = h + 1. Then for all 23 types:
 | 26 | A24 | 3q + 6q² (26+26) |
 | 31 | D16E8, E8³ | 3q + 3q² (31A) |
 | 47 | D24 | q + 2q² (47A) |
+
+*Geometry: a Fricke point is a deep hole nudged towards the second shell.* fricke_nudge.py checks all 23 types.
+- **The cusp.** z″ = z + r, where r is a Leech root (a wall of the Leech chamber, r·ρ = −1) with r·z = −1. So z″ is
+  the reflection of the deep-hole cusp in a wall adjacent to it. Such walls are the Leech roots r_λ with λ in the
+  second shell of the hole, |λ − c|² = 2 + 2/h (THM-4758's r_λ·z = h(1 − |λ − c|²/2)).
+- **The point.** c″ = c + (λ − c)/(h + 1): the deep hole moved 1/(h+1) of the way towards a second-shell Leech point
+  λ. Then |c″ − λ|² = h²(2 + 2/h)/(h + 1)² = 2 − 2/(h + 1), and λ is the unique nearest Leech point.
+- **The vertices.** Exactly 24 of the 24 + k hole vertices stay at distance √2 from c″. The other k, one per
+  component, move away. In the hole diagram, which is the extended Dynkin diagram, the finite simple roots stay and
+  the k affine nodes leave.
+
+This is the geometric meaning of the defects 24 + k and 24 in (11).
 
 *Heights mod h + 1 (PROVED).* The dual automorphism on V_N is e^{2πiρ_N(0)/(h+1)}. A root α lies in its ζ^j-eigenspace
 iff ht(α) ≡ j mod (h + 1). Per component, the count is n_j + n_{h+1−j}, where n_j = #{exponents ≥ j}. Under
