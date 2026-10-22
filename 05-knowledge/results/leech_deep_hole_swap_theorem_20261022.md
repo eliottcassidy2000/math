@@ -28,7 +28,13 @@ cusp_pairs, whose single failure is a genuine counterexample. All need cypari an
   - `hauptmodul_cert.py`: lambencies, and the Atkin-Lehner component rule;
   - `multiple_cosets.py` and `deep_hole_multiples.py`: shallow multiples on both sides;
   - `exponent_law.py`: the exponent inequality;
-  - `fricke_multiples.py`: Fricke invariance of the shallow-multiple twining.
+  - `fricke_multiples.py`: Fricke invariance of the shallow-multiple twining;
+  - `leech_h_plus_one.py`, `weyl_h_plus_one.py`, `fricke_h_plus_one.py`, `fricke_nudge.py`: the (h+1) Fricke points
+    on both sides;
+  - `swap_fricke_proof.py`: the Fricke swap certificates;
+  - `swap_shell_test.py`: the next shell fails;
+  - `fricke_neighbors.py`, `height_descent.py`: Fricke descent;
+  - `order3_fricke_census.py`, `order4_fricke_census.py`: HYP-9368 evidence.
 
 ## 1. HYP-9363 is a theorem (THM-4758, PROVED for all 23 types)
 
@@ -91,7 +97,8 @@ This is a reciprocity law for the roots of II_{25,1} between the Leech cusp and 
 - Their Coxeter numbers are often d: A24 gives L_5 with h = 5, which looks like A4^6, and E8^3 gives 2, 3, 5, 6, 10.
 - At odd d the D/E types drop by one: D24 gives L_23 with h = 22, D12^2 gives L_11 with h = 10, E8^3 gives L_15 with
   h = 14.
-- Presumably these are the orbifolds of V_Lambda by powers of the deep-hole automorphism (Moller-Scheithauer).
+- Explained in THM-4759 (8): L_d is the orbifold of V_Lambda by g_c^(h/d). Its Coxeter number is d - 1 exactly when
+  h/d is a common bad prime || h (Fricke descent, roots of height divisible by h/d), and d otherwise.
 
 ## 2. h-cores, 3n+1 and 27 (corollaries; PROVED given Garvan-Kim-Stanton)
 
@@ -118,7 +125,9 @@ least-resistance reduction, and a natural recursion.
   pure-A type with glue = vertex count.
 - **A1^24.** 2-cores are staircases, so the counts are 4096 x (representations of j-1 as a sum of 24 triangular
   numbers), plus 48 tau.
-- **{25, 1}.** The A24 defect lives only on the divisors {1, 25}; c_5 = 0.
+- **{25, 1}.** The A24 defect lives only on the divisors {1, 25}; c_5 = 0. Also 25.1^-1 is the Coxeter Frame shape of
+  A24, the only one that is not a Conway-group Frame shape. Its lambency Gamma_0(25) is the only non-monstrous one,
+  but its Fricke point of order 26 = 25 + 1 twines by T_26B (section 6).
 - **{7, 21}.** The A6^4 hole (h = 7) has 28 = 7 + 21 vertices, and 28 = 3^3 + 1 is where the families 3^k + 1 and k^3 + 1 meet (k = 3).
   This is NUMEROLOGY: no map from the H-gaps.
 
@@ -134,7 +143,11 @@ Over all 276 pairs from Borcherds' 24 representatives, 275 pass with the line-ma
 
 **The one failure is A4^6 x E8^3 (m = 7).** M^* has 4 vectors of norm 12/7 in the class (3,2), i.e. 4 null vectors y
 with (y.z1, y.z2) = (-3, -2), and none in its swap (2,3). Twisted swaps with lambda = 2, 5 are symmetric below norm 2
-but do not match the lines. So the Leech cusp is special. Explaining why the Leech cusp always passes is open.
+but do not match the lines. So the Leech cusp is special.
+
+Around the Leech cusp the swap holds for exactly the two nearest cusp types of each N: m = h (THM-4758) and m = h + 1
+(the Fricke swap theorem, THM-4759 (11)). It fails for the next shell, m = h + 2 (swap_shell_test.py). Explaining
+this conceptually is open.
 
 ## 4. Prior work and literature
 
@@ -179,8 +192,11 @@ Classical inputs are cited: Garvan-Kim-Stanton (t-cores), Granville-Ono (3-cores
 2. Bad primes. Partly done (section 6): the lower bounds come from the exponent law, but the T(d) values off the
    shallow lines are still case-checked.
 3. Characterise the cusp pairs for which the swap holds.
-4. Identify the intermediate lattices L_d by type.
-5. HYP-9368: classify the genus-zero inner automorphisms of V_Lambda (section 6).
+4. Intermediate lattices L_d: DONE (THM-4759 (8)).
+5. HYP-9368: genus-zero inner automorphisms of V_Lambda. The prime orders are sketched and orders 3 and 4 are sampled;
+   the composite orders are open. They need dim V'_1 = 24e at a Fricke point, or "every Fricke point is a nudged deep
+   hole".
+6. Prior art for the (h+1)-construction and Fricke twining: a second search is running (see the close-out letter).
 
 ## 6. The umbral picture (THM-4759) and Fricke twining
 
@@ -197,7 +213,8 @@ det(x - c) = prod (x^a - 1)^(m_a), taken over the components. Then:
 - For X != A24 (CDH: pi^X is a Co_0 Frame shape and Gamma^X is monstrous), Carnahan's orbifold duality adds two more
   traces: a Conway lift with trace T^X, and a Monster element of V^nat with trace T^X + k. So four traces agree in all
   weights >= 2.
-- A24, with Frame shape 25^1 1^-1, is the unique exception: that is the {25, 1}.
+- A24, with Frame shape 25^1 1^-1, is the unique exception on the deep-hole side: that is the {25, 1}. Its Fricke
+  point (order 26) is monstrous, 26B.
 
 **Bad primes = Atkin-Lehner = shallow multiples.** The lambency of X is h + {h/p : p a bad prime of every component,
 p || h} (D_n with n even: h + h/2; E6: 12 + 4; E8: 30 + 6, 10, 15). For d | h, the coset N + d rho_N/h:
@@ -234,7 +251,8 @@ satisfies, for all 23 types:
 - Lambda + c'' has a unique vector of norm 2 - 2/(h+1) and exactly 24 vectors of norm 2;
 - its proper multiples are deep holes;
 - Tr_{V_Lambda}(e^{2 pi i c''(0)} q^(L_0 - 1)) = 24 + T_{(h+1)+}, the Fricke Hauptmodul. For example D24 gives
-  order 47 and q^-1 + q + 2q^2 (47A); E8^3 and D16E8 give 31A; A24 gives 26+26.
+  order 47 and q^-1 + q + 2q^2 (47AB); E8^3 and D16E8 give 31AB; A24 gives 26+26 = 26B. OEIS confirms
+  3A, 4A, 5A, 6B, 7A, 8A, 9A, 10D, 11A, 13A, 14C, 15C, 17A, 19A, 23A and 26B.
 
 On the N side, rho_N/(h+1) is the unique minimum of its coset, and the (h+1)-neighbour of N there is Lambda: a second
 holy construction. The prime values of h + 1 are 3, 5, 7, 11, 13, 17, 19, 23, 31 and 47, all supersingular. This is
@@ -277,3 +295,16 @@ balanced hole with glue 27 = 24 + k.
 HYP-9368 conjectures that the genus-zero inner automorphisms of V_Lambda are exactly 0, the 23 deep holes and the 23
 Fricke points. A first draft that allowed only the eleven bad-prime multiples was refuted by the (h+1)-points before
 registration.
+
+**The Fricke swap theorem (THM-4759 (11), PROVED by the same certificate).**
+theta(Lambda + c'') - theta(N + rho_N/(h+1)) = 24 Delta, with the pure defect vector 24(1_{S_{h+1}} - 1_{S_1}). Hence
+V_N twined by e^{2 pi i rho(0)/(h+1)} is exactly T_{(h+1)+}. The deep-hole defect 24 + k counts the nodes of the
+extended Dynkin diagrams; the Fricke defect 24 counts the finite simple roots.
+
+**Geometry (fricke_nudge.py).** z'' = z + r is the reflection of the deep-hole cusp in an adjacent Leech wall. On Λ,
+c'' = c + (lambda - c)/(h+1), the deep hole moved 1/(h+1) of the way towards a second-shell point lambda. Exactly 24
+hole vertices stay at sqrt 2, and the k affine nodes move away.
+
+**Levels.** The deep hole is the level-0 Weyl point rho/h (Kostant's principal element). The Fricke point is the
+level-1 Weyl point (rho^ + Lambda_0)/(1 + h), of Kac type (2;1,...,1), where the level-1 WZW S-matrix lives. The
+swap holds at levels 0 and 1 and fails at the next shell.
