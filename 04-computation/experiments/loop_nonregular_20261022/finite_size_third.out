@@ -1,0 +1,5 @@
+n=10: 13333 tournaments: one-loop third-order finite-size coefficient B3_0 mean +352.43 (sd 99.39); exact n^3 (B - B_f) mean +241.93 (sd 39.96); corr +0.986
+n=8: 85 tournaments: one-loop third-order finite-size coefficient B3_0 mean +457.42 (sd 215.97); exact n^3 (B - B_f) mean +235.00 (sd 61.33); corr +0.984
+n=12: 1500 tournaments: one-loop third-order finite-size coefficient B3_0 mean +299.82 (sd 52.73); exact n^3 (B - B_f) mean +248.12 (sd 27.69); corr +0.986
+n=14: 1500 tournaments: one-loop third-order finite-size coefficient B3_0 mean +271.81 (sd 31.66); exact n^3 (B - B_f) mean +255.28 (sd 20.70); corr +0.982
+n=16: 600 tournaments: one-loop third-order finite-size coefficient B3_0 mean +253.53 (sd 19.01); exact n^3 (B - B_f) mean +260.61 (sd 15.15); corr +0.980

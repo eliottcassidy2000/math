@@ -175,7 +175,54 @@ static void forest(void) {
     free(dp);
 }
 
+/* deficit of a self-converse tournament (deficit-six thread): a Hamiltonian word v_1..v_n is blue when positional
+ * reversal v_i -> v_(n+1-i) is an anti-automorphism, i.e. A[v_i][v_j] == A[v_(n+1-j)][v_(n+1-i)] for all i < j.
+ * Aut acts freely on Hamiltonian words and preserves blueness, so h = H/|Aut|, b = blue/|Aut|, Delta = h - b. */
+static int word[MAXN];
+static uint64_t dfs_H, dfs_blue;
+static void dfs(int depth, int used) {
+    if (depth == n) {
+        dfs_H++;
+        for (int i = 0; i < n; i++)
+            for (int j = i + 1; j < n; j++)
+                if (A[word[i]][word[j]] != A[word[n - 1 - j]][word[n - 1 - i]]) return;
+        dfs_blue++;
+        return;
+    }
+    int last = word[depth - 1];
+    for (int w = 0; w < n; w++)
+        if (!(used >> w & 1) && A[last][w]) { word[depth] = w; dfs(depth + 1, used | (1 << w)); }
+}
+
+static void deficit(void) {
+    char c1[MAXN * MAXN], c2[MAXN * MAXN]; int aut, aut2;
+    canon(c1, &aut);
+    int B[MAXN][MAXN];
+    for (int i = 0; i < n; i++) for (int j = 0; j < n; j++) B[i][j] = A[i][j];
+    for (int i = 0; i < n; i++) for (int j = 0; j < n; j++) A[i][j] = B[j][i];
+    canon(c2, &aut2);
+    for (int i = 0; i < n; i++) for (int j = 0; j < n; j++) A[i][j] = B[i][j];
+    int sc = !strcmp(c1, c2);
+    dfs_H = 0; dfs_blue = 0;
+    for (int v = 0; v < n; v++) { word[0] = v; dfs(1, 1 << v); }
+    printf("%s %llu %d %d %llu", c1, (unsigned long long)dfs_H, aut, sc, (unsigned long long)dfs_blue);
+    if (dfs_H % aut || dfs_blue % aut) printf(" NONFREE\n");
+    else printf(" %llu %llu %lld\n", (unsigned long long)(dfs_H / aut), (unsigned long long)(dfs_blue / aut),
+                (long long)(dfs_H / aut) - (long long)(dfs_blue / aut));
+}
+
 int main(int argc, char **argv) {
+    if (argc >= 3 && !strcmp(argv[1], "deficit")) {     /* ar_tool deficit n < codes : canon H aut selfconverse blue h b Delta */
+        n = atoi(argv[2]);
+        char buf[4096];
+        while (fgets(buf, sizeof buf, stdin)) {
+            char code[MAXN * MAXN]; if (sscanf(buf, "%s", code) != 1) continue;
+            int c = 0;
+            for (int a = 0; a < n; a++) { A[a][a] = 0; for (int b = a + 1; b < n; b++) { A[a][b] = code[c++] == '1'; A[b][a] = !A[a][b]; } }
+            deficit();
+        }
+        return 0;
+    }
     if (argc >= 3 && !strcmp(argv[1], "forest")) {      /* ar_tool forest n < codes : prints c_0 .. c_(n-1) per code */
         n = atoi(argv[2]);
         if (n > 16) { fprintf(stderr, "forest: n <= 16 (memory n^2 2^n)\n"); return 1; }

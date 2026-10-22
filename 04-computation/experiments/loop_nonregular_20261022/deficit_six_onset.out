@@ -1,0 +1,5 @@
+deg N = 18  deg D = 18  gcd = 1
+D == p^2 u^2: True
+N = -z**18 + z**17 - z**16 + 2*z**15 - z**14 + 3*z**10 + z**9 - 2*z**8 - 2*z**7 + z**5
+coefficients g_5..g_24 = [1, 2, 3, 4, 7, 11, 18, 29, 47, 71, 114, 175, 276, 425, 665, 1019, 1583, 2422, 3739, 5712]
+denominator recurrence sum_j d_j g_(k-j) = 0 fails at k = [18] -> holds from k = 19

@@ -1,0 +1,6 @@
+n=8: 85 tournaments (ar8_classes.txt), K = 0
+  exact cluster part A: mean -0.28916;  n (A - W1) +1.9267, n (A - W1 - W2) -3.6588 (sd 0.9638)
+  exact finite-size part B: mean +0.11744;  n (B - Bformal) +3.6719 (sd 0.9582);  n (B - Bcw) +0.9395
+  sum: n (log kappa/rho - [W1 + W2 + Bformal]) +0.0132;  
+  y1   : corr +0.8913, mean(y - pred) -0.0744, scatter 0.0614, RMSE 0.0964
+  y2   : corr +0.9354, mean(y - pred) -0.0138, scatter 0.0458, RMSE 0.0479

@@ -1,0 +1,12 @@
+n=12: 1500 uniformly random tournaments (1500 with H > 0 and spectral radius < 0.9)
+  mean kappa = 0.9876 (exact expectation 1); mean log rho = 0.9246; mean |delta|^2 = 0.9247 (expected (n-1)/n = 0.9167); mean X(-1,2) = -1.0898
+  log(kappa/rho) vs X(-1,2)                                      : corr +0.9567, mean diff +0.0343, sd diff 0.1716 (sd of log(kappa/rho) 0.5483)
+  log(kappa/rho) vs X(-1,2) + X(1,0) + E0[a]/n                   : corr +0.9566, mean diff +0.1177, sd diff 0.1670 (sd of log(kappa/rho) 0.5483)
+  log(kappa/rho) vs + second-order leaves (lollipop, X(0,2)) + star: corr +0.9172, mean diff -0.7008, sd diff 0.4269 (sd of log(kappa/rho) 0.5483)
+  corr(log kappa, log rho) = -0.0160; corr(log kappa, -|delta|^2) = +0.9553; corr(log kappa, log rho + X(-1,2)) = +0.9567
+n=14: 800 uniformly random tournaments (800 with H > 0 and spectral radius < 0.9)
+  mean kappa = 1.0115 (exact expectation 1); mean log rho = 0.9347; mean |delta|^2 = 0.9192 (expected (n-1)/n = 0.9286); mean X(-1,2) = -1.0575
+  log(kappa/rho) vs X(-1,2)                                      : corr +0.9723, mean diff +0.0451, sd diff 0.1101 (sd of log(kappa/rho) 0.4575)
+  log(kappa/rho) vs X(-1,2) + X(1,0) + E0[a]/n                   : corr +0.9723, mean diff +0.1119, sd diff 0.1082 (sd of log(kappa/rho) 0.4575)
+  log(kappa/rho) vs + second-order leaves (lollipop, X(0,2)) + star: corr +0.9700, mean diff -0.5281, sd diff 0.2797 (sd of log(kappa/rho) 0.4575)
+  corr(log kappa, log rho) = -0.0465; corr(log kappa, -|delta|^2) = +0.9700; corr(log kappa, log rho + X(-1,2)) = +0.9723
