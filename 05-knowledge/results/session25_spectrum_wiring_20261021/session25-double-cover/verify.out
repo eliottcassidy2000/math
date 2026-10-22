@@ -1,0 +1,4 @@
+{"n": 3, "labelled_vertices": 8, "labelled_edges": 6, "base_vertices": 2, "cover_vertices": 4, "base_edges": 1, "cover_edges": 2, "base_loops": 0, "blue_edges": 1, "fundamental_black_edges": 0, "base_darts": 2, "cover_darts": 4, "edge_inversions": 0, "voltage": 1}
+{"n": 4, "labelled_vertices": 64, "labelled_edges": 96, "base_vertices": 3, "cover_vertices": 6, "base_edges": 3, "cover_edges": 6, "base_loops": 1, "blue_edges": 2, "fundamental_black_edges": 1, "base_darts": 6, "cover_darts": 12, "edge_inversions": 0, "voltage": 1}
+{"n": 5, "labelled_vertices": 1024, "labelled_edges": 3840, "base_vertices": 10, "cover_vertices": 20, "base_edges": 20, "cover_edges": 40, "base_loops": 2, "blue_edges": 8, "fundamental_black_edges": 12, "base_darts": 40, "cover_darts": 80, "edge_inversions": 0, "voltage": 0}
+{"graph_cases": 2196, "base_edge_checks": 15975}
