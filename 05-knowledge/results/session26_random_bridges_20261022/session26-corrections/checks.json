@@ -1,0 +1,51 @@
+{
+  "parity_counterexample": {
+    "x": "1/2",
+    "q(2)": "0",
+    "-q(1/2)": "3/2"
+  },
+  "untruncated_parity": "PASS",
+  "cutoff_sum": "PASS",
+  "deep_well_at_3/40": "3/40 > 1/14",
+  "compressed_lcm_test": {
+    "Q": 50,
+    "L": 3099044504245996706400,
+    "runner_count": 13,
+    "primitive": true,
+    "covering_2_to_14": true,
+    "seven_far_relative_to_core_max_6": true,
+    "all_rational_times_denominator_at_most_Q_blocked": true
+  },
+  "exceptional_table_primality_arithmetic_only": "PASS",
+  "exact_maximum_witness_checks": [
+    {
+      "Q": 14,
+      "L": 360360,
+      "witness": "360361/2882880",
+      "reduced_denominator": 2882880,
+      "exact_min_distance": "1/8"
+    },
+    {
+      "Q": 20,
+      "L": 232792560,
+      "witness": "232792561/1862340480",
+      "reduced_denominator": 1862340480,
+      "exact_min_distance": "1/8"
+    },
+    {
+      "Q": 50,
+      "L": 3099044504245996706400,
+      "witness": "3099044504245996706401/24792356033967973651200",
+      "reduced_denominator": 24792356033967973651200,
+      "exact_min_distance": "1/8"
+    },
+    {
+      "Q": 100,
+      "L": 69720375229712477164533808935312303556800,
+      "witness": "69720375229712477164533808935312303556801/557763001837699817316270471482498428454400",
+      "reduced_denominator": 557763001837699817316270471482498428454400,
+      "exact_min_distance": "1/8"
+    }
+  ],
+  "universal_upper_bound": "1/8 by eight-point circular-gap proof"
+}

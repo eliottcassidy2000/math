@@ -5,6 +5,25 @@
 citation plus loneliness of the COMPRESSED covering families. Everything else — non-covering, and
 the entire far-runner tail — is now closed. This is the honest remaining surface, in Lean.*
 
+## Historical status warning (session 26 audit, 2026-10-22)
+
+The body below is the original S6 research snapshot, not a current closure
+certificate. In particular, do not infer a magnitude-independent bounded-q
+census for compressed covering families with at least seven far runners,
+or narrow the unresolved case to a one-scale cluster on that basis.
+[MISTAKE-097 and MISTAKE-098](../01-canon/MISTAKES.md) explicitly retract
+those generalizations: lcm-product adversaries block groups of denominators,
+unlike the weak one-modulus-per-runner constructions. The deep-well witness
+`t=3/40` survives; the proposed uniform denominator bound does not.
+
+The displayed conditional reduction retains its hypothesis `hcomp`; this
+warning neither disproves that implication nor discharges the hypothesis.
+Finite computations cannot justify the body's claim that *every* covering
+family satisfies the reported numerical lower bound. A fixed magnitude cap
+permits a finite search, but finiteness alone is not a completed certificate.
+The claims of universal computational verification and an exactly isolated
+one-scale crux below are historical overstatements, not established here.
+
 ## The reduction, assembled
 
 Three facts compose (`LRCEndgameAssembly.lean`, kernel-pure):

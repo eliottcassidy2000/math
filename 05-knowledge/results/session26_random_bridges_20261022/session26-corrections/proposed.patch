@@ -1,0 +1,160 @@
+--- a/01-canon/theorems/THM-368-hyperbola-triangle-q-gauge.md
++++ b/01-canon/theorems/THM-368-hyperbola-triangle-q-gauge.md
+@@ -49,7 +49,7 @@
+ has this property for every `0<L<=2`.
+ 
+ Second, the original ordinary splice is obtained pointwise from the
+-reciprocal-odd counterterm
++truncated counterterm
+ 
+ ```text
+ q_ct(x) = x - 1/x    for 0 < x < 1,
+@@ -70,11 +70,11 @@
+   = 1/2 + log(2).
+ ```
+ 
+-The counterterm has reciprocal parity
+-
+-```text
+-q_ct(1/x) = -q_ct(x).
+-```
++The untruncated function `r(x)=x-1/x` on `(0,infty)` has reciprocal
++parity `r(1/x)=-r(x)`. The splice counterterm is instead
++`q_ct(x)=min(r(x),0)` on `(0,2]`, and is not reciprocal-odd: already
++`q_ct(2)=0`, whereas `-q_ct(1/2)=3/2`. Extending the same truncation to
++all positive x does not restore reciprocal oddness.
+ 
+ ## Proof
+ 
+@@ -123,11 +123,16 @@
+ 
+ which tends to `log(2)+1/2`.
+ 
+-Finally,
+-
+-```text
+-q_ct(1/x) = 1/x - x = -q_ct(x).
+-```
++Finally, the untruncated function satisfies
++
++```text
++r(1/x) = 1/x - x = -r(x).
++```
++
++This calculation cannot be applied to `q_ct`: for `0<x<1` the reciprocal
++argument exceeds 1, where its defined value is zero (or is outside its
++stated domain if `1/x>2`). The first failed implication was replacing the
++piecewise value at the reciprocal argument by the untruncated formula.
+ 
+ ## Geometry
+ 
+@@ -170,11 +175,17 @@
+ int_{-infty}^0 e^(2t) dt + int_0^log(2) dt = 1/2 + log(2).
+ ```
+ 
+-The reciprocal-odd counterterm becomes
+-
+-```text
+-q_ct(x) = x - 1/x = 2 sinh(t).
+-```
++The untruncated reciprocal-odd function becomes `r(e^t)=2 sinh(t)`.
++The actual splice counterterm is
++
++```text
++q_ct(e^t) = 2 sinh(t)  for t < 0,
++q_ct(e^t) = 0          for 0 <= t <= log(2).
++```
++
++Thus it is not odd in t. Its contribution to the transformed integral is
++`q_ct(e^t)e^t dt=(e^(2t)-1)dt` for `t<0`, and zero above 0; the
++Jacobian must not be confused with the counterterm value.
+ 
+ The normalized mass `2 q_L(x) dx` is an exponential tail in `t`, supported on
+ `t <= log L`, with mean `log L - 1/2` and variance `1/4`.
+@@ -201,6 +212,11 @@
+ 4. the cutoff cancellation for `q_ct`;
+ 5. the log-coordinate and Mellin-transform forms.
+ 
++Historical-output caution: the stored reciprocal-parity table evaluates
++the untruncated `r`, not the piecewise `q_ct` defined here. Its global
++`2 sinh(t)` wording must be read with the same distinction. The area and
++cutoff checks are unaffected.
++
+ Stored output:
+ 
+ ```text
+--- a/07-reflections/why-h-plus-one-is-prime.md
++++ b/07-reflections/why-h-plus-one-is-prime.md
+@@ -4,6 +4,26 @@
+ **Arising from:** The Bernoulli-Coxeter chain (S18h), the classical/exceptional divide (S18i)
+ 
+ ---
++
++## Historical status warning (session 26 audit, 2026-10-22)
++
++This reflection preserves a creative historical analogy, not a proved bridge
++from Lie classification to tournament Hamiltonian-path counts. The finite
++Coxeter-number table and the primality checks below are not retracted.
++However, the source supplies no map, implication, or proof making the
++compositeness of 25 *cause* the absence of an exceptional algebra at h=24,
++or deriving the H=7 gap from G_2. Claims that G_2 root-system inclusions force
++Coxeter-number divisibility likewise have no supporting argument here and
++must not be used as a lemma. The assertions below that the classification
++“SELECTS” the numbers by primality or already “contained” forbidden path
++counts are speculative interpretations, not mathematical consequences of
++the numerical table. An observed necessary property of a finite list does
++not by itself explain that classification or a different invariant.
++
++The original prose follows unchanged for provenance. Read its causal and
++“mathematical proof” language under this warning; the analogy remains an
++invitation to construct and prove an actual bridge, not evidence that one
++has been established.
+ 
+ ## The Fact
+ 
+--- a/07-reflections/the-endgame-is-lrc13-plus-the-compressed-case.md
++++ b/07-reflections/the-endgame-is-lrc13-plus-the-compressed-case.md
+@@ -4,6 +4,25 @@
+ (S5), the top-level reduction composes into one clean statement: LRC(14) follows from the LRC(13)
+ citation plus loneliness of the COMPRESSED covering families. Everything else — non-covering, and
+ the entire far-runner tail — is now closed. This is the honest remaining surface, in Lean.*
++
++## Historical status warning (session 26 audit, 2026-10-22)
++
++The body below is the original S6 research snapshot, not a current closure
++certificate. In particular, do not infer a magnitude-independent bounded-q
++census for compressed covering families with at least seven far runners,
++or narrow the unresolved case to a one-scale cluster on that basis.
++[MISTAKE-097 and MISTAKE-098](../01-canon/MISTAKES.md) explicitly retract
++those generalizations: lcm-product adversaries block groups of denominators,
++unlike the weak one-modulus-per-runner constructions. The deep-well witness
++`t=3/40` survives; the proposed uniform denominator bound does not.
++
++The displayed conditional reduction retains its hypothesis `hcomp`; this
++warning neither disproves that implication nor discharges the hypothesis.
++Finite computations cannot justify the body's claim that *every* covering
++family satisfies the reported numerical lower bound. A fixed magnitude cap
++permits a finite search, but finiteness alone is not a completed certificate.
++The claims of universal computational verification and an exactly isolated
++one-scale crux below are historical overstatements, not established here.
+ 
+ ## The reduction, assembled
+ 
+--- a/07-reflections/the-13-comb-lever-is-the-eisenstein-resonance-types-of-numbers-and-tournaments-opus-20260703.md
++++ b/07-reflections/the-13-comb-lever-is-the-eisenstein-resonance-types-of-numbers-and-tournaments-opus-20260703.md
+@@ -4,8 +4,13 @@
+ > and "census-invisible" is WRONG — the S52 script scanned only difference-set denominators. A full Farey
+ > scan finds the deep well lonely at `3/40` (q=40, census-able). `14/183` is the covering-min ARGMAX (the
+ > tightest lonely time), not the only one. The Eisenstein *arithmetic* (14 a 6th root mod 183, `14·13≡−1`,
+-> comb tightness) stands; the census-invisibility does not. In fact (opus-S55) compressed covering ≥7-far
+-> families are census-able at BOUNDED q — the crux dissolves into the census, not a special certificate.
++> comb tightness) stands; the census-invisibility does not. **Second correction (session 26 audit,
++> 2026-10-22; MISTAKE-097/098):** opus-S55's subsequent claim that compressed covering ≥7-far
++> families are census-able at a magnitude-independent bounded q was ALSO retracted. It came from
++> a weak one-modulus-per-runner adversary; lcm-product families block groups of moduli and defeat
++> any fixed denominator bound. The deep-well witness `3/40` survives, but the general crux does
++> not dissolve into a uniform bounded-q census. The original historical discussion below must
++> not be read as restoring either retracted claim.
+ 
+ *opus-2026-07-03-S52. The owner asked me to work the 13-spaced comb lever (OPEN-Q-108, the wide-far/slow-base
+ residual) creatively — Vitali, the rational/irrational and odd/even dualities, and how types of numbers relate

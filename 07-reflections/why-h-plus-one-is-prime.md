@@ -5,6 +5,26 @@
 
 ---
 
+## Historical status warning (session 26 audit, 2026-10-22)
+
+This reflection preserves a creative historical analogy, not a proved bridge
+from Lie classification to tournament Hamiltonian-path counts. The finite
+Coxeter-number table and the primality checks below are not retracted.
+However, the source supplies no map, implication, or proof making the
+compositeness of 25 *cause* the absence of an exceptional algebra at h=24,
+or deriving the H=7 gap from G_2. Claims that G_2 root-system inclusions force
+Coxeter-number divisibility likewise have no supporting argument here and
+must not be used as a lemma. The assertions below that the classification
+“SELECTS” the numbers by primality or already “contained” forbidden path
+counts are speculative interpretations, not mathematical consequences of
+the numerical table. An observed necessary property of a finite list does
+not by itself explain that classification or a different invariant.
+
+The original prose follows unchanged for provenance. Read its causal and
+“mathematical proof” language under this warning; the analogy remains an
+invitation to construct and prove an actual bridge, not evidence that one
+has been established.
+
 ## The Fact
 
 For every exceptional simple Lie algebra, the Coxeter number plus one is prime:

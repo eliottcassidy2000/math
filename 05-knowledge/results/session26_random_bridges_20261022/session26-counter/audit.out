@@ -1,0 +1,43 @@
+{
+  "exact_mean_pairs": 244,
+  "invalid_inputs": 8,
+  "long_word_H": 166191867880640698518245268159453823630730869851,
+  "long_word_length": 100,
+  "one_apex_recurrence_cases": 8191,
+  "status": "PASS",
+  "subset_dp_cases_by_k": {
+    "0": 9,
+    "1": 255,
+    "2": 2730,
+    "3": 4680,
+    "4": 17472
+  },
+  "subset_dp_total": 25146,
+  "witness13": {
+    "H": 13,
+    "Q": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "original_base_order": [
+      4,
+      3,
+      2
+    ],
+    "original_core": [
+      0,
+      1
+    ],
+    "word": [
+      1,
+      2,
+      0
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "draws": 103,
+  "unique_paths": 103,
+  "lane_sizes": [
+    24,
+    24,
+    24,
+    31
+  ]
+}

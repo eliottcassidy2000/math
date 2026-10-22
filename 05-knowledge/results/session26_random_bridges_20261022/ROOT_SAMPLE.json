@@ -1,0 +1,128 @@
+{
+  "seed": 2600,
+  "commit": "a58ad91ac9050feb86c686a117759b90b1b37333",
+  "files": [
+    "01-canon/theorems/THM-3440-weighted-lift-cyclic-infinity-torsor-and-7x13-character-grid.md",
+    "01-canon/theorems/THM-3388-three-sheet-phase-triangle-cover-clutter.md",
+    "01-canon/theorems/THM-1261-carrier-forty-four-bv-needle-closure.md",
+    "01-canon/theorems/THM-4105-primitive-reciprocal-phase-descent-and-quantitative-arrival.md",
+    "01-canon/theorems/THM-874-moebius-log-squared-grammar.md",
+    "01-canon/theorems/THM-3106-projected-k3-z232-exact-screen-and-complete-cell-cardinality-descent.md",
+    "01-canon/theorems/THM-1780-the-atom-covering-closes-via-pairs-and-the-moment-is-a-weight-zero-projection.md",
+    "01-canon/theorems/THM-1013-dilated-sieve-compact-floor.md",
+    "05-knowledge/results/session25_spectrum_wiring_20261021/session25-additive-review/REVIEW.md",
+    "05-knowledge/results/sign_aware_augmentation_20261020/ROOT_REVIEW.md",
+    "05-knowledge/results/circulant_power_sum_exact_boundary_20261020/power_sum_boundary.md",
+    "05-knowledge/results/conductor_eight_source_exclusion_20261020/CONDUCTOR_TEN_SYNTHESIS.md",
+    "05-knowledge/results/session17_prime_surfaces_20261020/independent_audit/AUDIT.md",
+    "05-knowledge/results/converse_tournament_count_channels_20261021/README.md",
+    "05-knowledge/results/kernels_games_detours_20261020f/walks_knots.md",
+    "05-knowledge/results/paired_black_bridges_order_nine_20261020/README.md",
+    "07-reflections/the-density-floor-is-a-circle-covering-problem-macmini-S57.md",
+    "07-reflections/lrc14-colored-gate-unit-delta-split-codex-20260629.md",
+    "07-reflections/lrc-ufull-all-role-weighted-tree-spectral-closure-independent-audit-codex-20260816.md",
+    "07-reflections/the-endgame-is-lrc13-plus-the-compressed-case.md",
+    "07-reflections/FC3-invariant-ring-reduction-capacity-scan-D3-D5-transversal-kps-S158.md",
+    "07-reflections/lrc-tournament-computation-speedups-s583.md",
+    "07-reflections/the-decorrelation-half-also-reduces-to-R2-and-a-no-cherry-QC-kps-S71.md",
+    "07-reflections/why-h-plus-one-is-prime.md"
+  ],
+  "snapshot_verification": [
+    {
+      "path": "01-canon/theorems/THM-3440-weighted-lift-cyclic-infinity-torsor-and-7x13-character-grid.md",
+      "sha256": "6102c39ef44adf515e34d4141f888b3aeb8c8ccc82a6373aac71764e81e57c31"
+    },
+    {
+      "path": "01-canon/theorems/THM-3388-three-sheet-phase-triangle-cover-clutter.md",
+      "sha256": "30804bfc27f9d9d0bc54335816e23a94ae90abe497efb2b3ccebea4d870fc670"
+    },
+    {
+      "path": "01-canon/theorems/THM-1261-carrier-forty-four-bv-needle-closure.md",
+      "sha256": "cb2d4d75029b6dfd3e3dc5edeb2f313cd6b16dda162ef8fbed606afb794dd053"
+    },
+    {
+      "path": "01-canon/theorems/THM-4105-primitive-reciprocal-phase-descent-and-quantitative-arrival.md",
+      "sha256": "0466fc339bc5bfb5656f33f32e54d26a0496364cecb6d4d61269daf512102898"
+    },
+    {
+      "path": "01-canon/theorems/THM-874-moebius-log-squared-grammar.md",
+      "sha256": "baeb0ea50262754f1b840b9e842f8a0e6eaa2831103b3577263af62964c4dccf"
+    },
+    {
+      "path": "01-canon/theorems/THM-3106-projected-k3-z232-exact-screen-and-complete-cell-cardinality-descent.md",
+      "sha256": "3664d002cb528c86f60efd07d5227604a25df3357e156d2a4d98cd00fb9ae940"
+    },
+    {
+      "path": "01-canon/theorems/THM-1780-the-atom-covering-closes-via-pairs-and-the-moment-is-a-weight-zero-projection.md",
+      "sha256": "893fac126fca752f147b7c3b1c9faf49fa089e118f1323cf28fa5a7812524c8e"
+    },
+    {
+      "path": "01-canon/theorems/THM-1013-dilated-sieve-compact-floor.md",
+      "sha256": "62148f5b016e836a39df24744b8154b0aab42afc588d175d9a0d0ab21c461c10"
+    },
+    {
+      "path": "05-knowledge/results/session25_spectrum_wiring_20261021/session25-additive-review/REVIEW.md",
+      "sha256": "74718c72d3321b5b4e56f43b0d99e96dab6f303f459b69fba3a381abb51b9cf6"
+    },
+    {
+      "path": "05-knowledge/results/sign_aware_augmentation_20261020/ROOT_REVIEW.md",
+      "sha256": "bd088e79392bdb872a342f4acf8f5ca24b6a71703c4e39244603ed1de63229a9"
+    },
+    {
+      "path": "05-knowledge/results/circulant_power_sum_exact_boundary_20261020/power_sum_boundary.md",
+      "sha256": "8950f93635fe4d583a7f021f6e8d2ae6d1de1f991b88538425ab79a510612140"
+    },
+    {
+      "path": "05-knowledge/results/conductor_eight_source_exclusion_20261020/CONDUCTOR_TEN_SYNTHESIS.md",
+      "sha256": "4366ee86a86d4d8d435b18b4aa6ac886d89576b757fb76104fd07edea8270ee4"
+    },
+    {
+      "path": "05-knowledge/results/session17_prime_surfaces_20261020/independent_audit/AUDIT.md",
+      "sha256": "45517c37d637e844ef7d279e1dc17db0a48e7e09dfc4989959d0a215101c44b0"
+    },
+    {
+      "path": "05-knowledge/results/converse_tournament_count_channels_20261021/README.md",
+      "sha256": "0e16355adad0e46ec91adb0aa6929bb39556a654b62adbb8530a8c24f23e7542"
+    },
+    {
+      "path": "05-knowledge/results/kernels_games_detours_20261020f/walks_knots.md",
+      "sha256": "ef0670192a754af7477ead0a6b92ef5572795bc5049a220b7ce15a88f7d733b5"
+    },
+    {
+      "path": "05-knowledge/results/paired_black_bridges_order_nine_20261020/README.md",
+      "sha256": "c62e14ca90703efd4a24f805e48fae1e1093664f08e171fd3dd3071ca1922cd8"
+    },
+    {
+      "path": "07-reflections/the-density-floor-is-a-circle-covering-problem-macmini-S57.md",
+      "sha256": "5cdaa3b614d49dece8beed8094f1550f75c4397b21bdcf6ba8101b92b59260fd"
+    },
+    {
+      "path": "07-reflections/lrc14-colored-gate-unit-delta-split-codex-20260629.md",
+      "sha256": "4f7bca97e3e5b79453a48845a26cdf4e0932b322b6ce1fe81e6813a08527e9af"
+    },
+    {
+      "path": "07-reflections/lrc-ufull-all-role-weighted-tree-spectral-closure-independent-audit-codex-20260816.md",
+      "sha256": "fcfb826b0cf52578161850901809bfc91ab6580fc5bfac212490f67660dc8f78"
+    },
+    {
+      "path": "07-reflections/the-endgame-is-lrc13-plus-the-compressed-case.md",
+      "sha256": "ca1db9a4a94ab4df8be8d04d1ecf68a4e5c1eef7f5596083ab11ec3e1927fd9a"
+    },
+    {
+      "path": "07-reflections/FC3-invariant-ring-reduction-capacity-scan-D3-D5-transversal-kps-S158.md",
+      "sha256": "e6868b8693d05b353314ddfaedec48072d73faff553f560a6bb1c29ceb01f50f"
+    },
+    {
+      "path": "07-reflections/lrc-tournament-computation-speedups-s583.md",
+      "sha256": "6427bee623c0c5f34ddd0529b862f26ccb04e4d4f8da54780aa96f50431e5fba"
+    },
+    {
+      "path": "07-reflections/the-decorrelation-half-also-reduces-to-R2-and-a-no-cherry-QC-kps-S71.md",
+      "sha256": "4b8e2dad4d65d5171f1612cac5d77d25d1951ff22c42081c5e50c6a37fae6c48"
+    },
+    {
+      "path": "07-reflections/why-h-plus-one-is-prime.md",
+      "sha256": "fd1cc9d6e25f59a248d54abba82fc10e857beec54df7c9624b091b84ad99a090"
+    }
+  ]
+}

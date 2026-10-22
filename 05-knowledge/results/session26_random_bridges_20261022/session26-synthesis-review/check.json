@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "source_sha256": {
+    "SYNTHESIS.md": "0ec0d0e03f402bfaea30c5d0135ff7e09ad838bbe3db87c9a35950e11d083802",
+    "EXPLORATION.md": "cd559cf6596eecbf3a21455a542fe0ab4727ad57f735626d19f96868e7a3ad55"
+  },
+  "sample_paths": 103,
+  "unique_paths": 103,
+  "root_copy_hashes": 24,
+  "resolved_links": 24,
+  "electrical_words_direct_DP": 1022,
+  "boundary_rows": [
+    [
+      8,
+      55,
+      3898,
+      18,
+      1928
+    ],
+    [
+      9,
+      123,
+      15989,
+      131,
+      7929
+    ],
+    [
+      10,
+      240,
+      64751,
+      35,
+      32358
+    ]
+  ]
+}

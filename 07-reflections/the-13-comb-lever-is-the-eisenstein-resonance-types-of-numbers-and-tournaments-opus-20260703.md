@@ -4,8 +4,13 @@
 > and "census-invisible" is WRONG — the S52 script scanned only difference-set denominators. A full Farey
 > scan finds the deep well lonely at `3/40` (q=40, census-able). `14/183` is the covering-min ARGMAX (the
 > tightest lonely time), not the only one. The Eisenstein *arithmetic* (14 a 6th root mod 183, `14·13≡−1`,
-> comb tightness) stands; the census-invisibility does not. In fact (opus-S55) compressed covering ≥7-far
-> families are census-able at BOUNDED q — the crux dissolves into the census, not a special certificate.
+> comb tightness) stands; the census-invisibility does not. **Second correction (session 26 audit,
+> 2026-10-22; MISTAKE-097/098):** opus-S55's subsequent claim that compressed covering ≥7-far
+> families are census-able at a magnitude-independent bounded q was ALSO retracted. It came from
+> a weak one-modulus-per-runner adversary; lcm-product families block groups of moduli and defeat
+> any fixed denominator bound. The deep-well witness `3/40` survives, but the general crux does
+> not dissolve into a uniform bounded-q census. The original historical discussion below must
+> not be read as restoring either retracted claim.
 
 *opus-2026-07-03-S52. The owner asked me to work the 13-spaced comb lever (OPEN-Q-108, the wide-far/slow-base
 residual) creatively — Vitali, the rational/irrational and odd/even dualities, and how types of numbers relate

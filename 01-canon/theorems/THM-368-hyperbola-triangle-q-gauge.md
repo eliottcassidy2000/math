@@ -49,7 +49,7 @@ q_L(x) = 0           otherwise,
 has this property for every `0<L<=2`.
 
 Second, the original ordinary splice is obtained pointwise from the
-reciprocal-odd counterterm
+truncated counterterm
 
 ```text
 q_ct(x) = x - 1/x    for 0 < x < 1,
@@ -70,11 +70,11 @@ lim_{eps->0+} [ int_eps^2 dx/x + int_eps^1 (x - 1/x) dx ]
   = 1/2 + log(2).
 ```
 
-The counterterm has reciprocal parity
-
-```text
-q_ct(1/x) = -q_ct(x).
-```
+The untruncated function `r(x)=x-1/x` on `(0,infty)` has reciprocal
+parity `r(1/x)=-r(x)`. The splice counterterm is instead
+`q_ct(x)=min(r(x),0)` on `(0,2]`, and is not reciprocal-odd: already
+`q_ct(2)=0`, whereas `-q_ct(1/2)=3/2`. Extending the same truncation to
+all positive x does not restore reciprocal oddness.
 
 ## Proof
 
@@ -123,11 +123,16 @@ log(2) + (1-eps^2)/2,
 
 which tends to `log(2)+1/2`.
 
-Finally,
+Finally, the untruncated function satisfies
 
 ```text
-q_ct(1/x) = 1/x - x = -q_ct(x).
+r(1/x) = 1/x - x = -r(x).
 ```
+
+This calculation cannot be applied to `q_ct`: for `0<x<1` the reciprocal
+argument exceeds 1, where its defined value is zero (or is outside its
+stated domain if `1/x>2`). The first failed implication was replacing the
+piecewise value at the reciprocal argument by the untruncated formula.
 
 ## Geometry
 
@@ -170,11 +175,17 @@ The hyperbola is uniform in log coordinate, and the original splice becomes
 int_{-infty}^0 e^(2t) dt + int_0^log(2) dt = 1/2 + log(2).
 ```
 
-The reciprocal-odd counterterm becomes
+The untruncated reciprocal-odd function becomes `r(e^t)=2 sinh(t)`.
+The actual splice counterterm is
 
 ```text
-q_ct(x) = x - 1/x = 2 sinh(t).
+q_ct(e^t) = 2 sinh(t)  for t < 0,
+q_ct(e^t) = 0          for 0 <= t <= log(2).
 ```
+
+Thus it is not odd in t. Its contribution to the transformed integral is
+`q_ct(e^t)e^t dt=(e^(2t)-1)dt` for `t<0`, and zero above 0; the
+Jacobian must not be confused with the counterterm value.
 
 The normalized mass `2 q_L(x) dx` is an exponential tail in `t`, supported on
 `t <= log L`, with mean `log L - 1/2` and variance `1/4`.
@@ -200,6 +211,11 @@ in log coordinate.
 3. the base-two 30-60-90 normalization warning;
 4. the cutoff cancellation for `q_ct`;
 5. the log-coordinate and Mellin-transform forms.
+
+Historical-output caution: the stored reciprocal-parity table evaluates
+the untruncated `r`, not the piecewise `q_ct` defined here. Its global
+`2 sinh(t)` wording must be read with the same distinction. The area and
+cutoff checks are unaffected.
 
 Stored output:
 

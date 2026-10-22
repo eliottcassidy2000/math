@@ -1,0 +1,30 @@
+[
+  {
+    "path": "01-canon/theorems/THM-368-hyperbola-triangle-q-gauge.md",
+    "original_sha256": "0e1e2b1ed0cd3c6f0cedf0629c4e6cf72bb96a36c714670d94d888793d25793a",
+    "original_git_blob_sha1": "ca5eac78c68aecae11db60c697448fa65dc36d05",
+    "proposed_sha256": "10470817ec0218124a94bb78ca53ce71eaa0382e1d5b28e3ec35c884bdd96c8f",
+    "proposed_file": "A-THM-368-hyperbola-triangle-q-gauge.md"
+  },
+  {
+    "path": "07-reflections/why-h-plus-one-is-prime.md",
+    "original_sha256": "fd1cc9d6e25f59a248d54abba82fc10e857beec54df7c9624b091b84ad99a090",
+    "original_git_blob_sha1": "7a6cb5c021ad1f5054e85535a4dd940502041431",
+    "proposed_sha256": "c3f958a01be7ee88710b242a5b6029430b72af5a254a20f19d60997e88aecb91",
+    "proposed_file": "B-why-h-plus-one-is-prime.md"
+  },
+  {
+    "path": "07-reflections/the-endgame-is-lrc13-plus-the-compressed-case.md",
+    "original_sha256": "ca1db9a4a94ab4df8be8d04d1ecf68a4e5c1eef7f5596083ab11ec3e1927fd9a",
+    "original_git_blob_sha1": "cbc4d06cb312f87d763e1f8d36a9774330aed279",
+    "proposed_sha256": "9cbd0a495ac3273ff4f8c4eb5c4ca7bb49cf015e6c2ac827a92307e7c0fa4b7f",
+    "proposed_file": "C-the-endgame-is-lrc13-plus-the-compressed-case.md"
+  },
+  {
+    "path": "07-reflections/the-13-comb-lever-is-the-eisenstein-resonance-types-of-numbers-and-tournaments-opus-20260703.md",
+    "original_sha256": "3f6057714e2870c9c662800f3d8ecb27139f36c398a6ccfb449b10156e669886",
+    "original_git_blob_sha1": "76befb1ee564c3d2d09e4456f874eae2ab74a4f9",
+    "proposed_sha256": "a927037b84e2512f717eb620f8ae42456665914fb2634b911365feb65aa5f762",
+    "proposed_file": "D-the-13-comb-lever-is-the-eisenstein-resonance-types-of-numbers-and-tournaments-opus-20260703.md"
+  }
+]

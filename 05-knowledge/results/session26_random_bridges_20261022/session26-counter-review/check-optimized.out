@@ -1,0 +1,17 @@
+{
+  "backtracking_oracle_cases": 22968,
+  "covariance_cases": 3598,
+  "duality_cases": 22968,
+  "invalid_cases": 11,
+  "partial_state_mass_cases": 685,
+  "source_sha256": {
+    "SHA256SUMS": "053666f16f23fba063d8c7c59326a7cfd1f9bc074fa23b8ee045f2adac78bc9a",
+    "audit-optimized.out": "eb27cd0e9fbd97cefb65d99d5019592a113a28a55772905e695a5afe25beed5f",
+    "audit.out": "eb27cd0e9fbd97cefb65d99d5019592a113a28a55772905e695a5afe25beed5f",
+    "audit.py": "c4062c232303e57c6cf669af9a6984f4a7edaa170f1290ff5c52c8ae5f1b0970",
+    "counter.py": "a4183f98d8a3499262ffab80cddb0adadb9c169ebf2a137a261a5da38366b391",
+    "proof.md": "517a587476c64e0be3476c063827c602ed9c166f1c5ddbfe7f7e85724fccc48d",
+    "witness13.json": "209f74b04c44ffcd3c167e83ff1fd30cef30835cc45dc9abdc976f6e790fd61e"
+  },
+  "status": "PASS"
+}
