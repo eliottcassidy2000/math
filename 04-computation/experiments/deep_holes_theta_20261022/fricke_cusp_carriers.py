@@ -114,6 +114,7 @@ for name, h, n0, z2 in rows:
         Ym = np.array([int(sol[i, 0]) for i in range(24)], dtype=np.int64)
         key, verdict = cusp_data(Ym, m)
         tag = 'HAUPTMODUL' if verdict else ('IRRATIONAL' if key[6] else 'no')
+        tag += ' n2=24' if key[3] else ' n2!=24'
         tally[(c0, comp_name(len(members[c0]), h), tag)] += 1
     print(f'  {name:9s} shell 1 (m = {h + 2}): ' + '; '.join(
         f'component {c0} = {cn} ({len(groups[c0])} vectors): {t} on {k}/{min(REPS, len(groups[c0]))} tested'

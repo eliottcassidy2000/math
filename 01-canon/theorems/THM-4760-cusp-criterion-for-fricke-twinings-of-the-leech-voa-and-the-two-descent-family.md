@@ -328,6 +328,16 @@ both the twinings and the OEIS terms.
 
   The level-1 vacuum is always Galois-fixed, which is why all 23 (h+1)-points are rational. The swap theorem holds at
   levels 0 and 1 and fails at level 2, where the Fricke property survives only for the Galois-stable configurations.
+- **The label-1 rule for (ii) (VERIFIED on every shell-1 class, fricke_cusp_carriers.out).** The norm-2 vectors of
+  Λ + v correspond to the nodes of the extended Dynkin diagrams with Kac label 1. This generalises THM-4759 (10)'s
+  "the vertices of a Fricke point are the simple roots".
+  - At the (h+1)-point, the labels are (2; 1, …, 1) on every component, so the label-1 nodes are the 24 finite nodes.
+  - At a shell-1 point, the carrier has label 2 at the node(s) next to α_0 and 1 elsewhere, including α_0. The other
+    components are (3; 1, …, 1). So n_2 = 24 + 1 − deg(α_0): 24 for D, E and A1 carriers, and 23 for A_n carriers
+    (n ≥ 2).
+
+  This is why (ii) selects the D, E and A1 carriers at shell 1. At shell 2 a carrier pair θ_i + θ_j has labels
+  (2; …, 2 adjacent, …) on both carriers, so n_2 = 24 − deg_i − deg_j. That is at most 22, so (ii) fails, as observed.
 - **Two classes, one twining.** Several orders carry two inequivalent Fricke points with the same Hauptmodul:
   4 (A2¹² (h+1)-point and A1²⁴ shell-1), 7 (A5⁴D4, D4⁶), 8 (A6⁴ (h+1)-point and D4⁶ shell-1), 11, 13, 19 and 31.
   Equal twining does not determine the point; the orbifolds differ.
