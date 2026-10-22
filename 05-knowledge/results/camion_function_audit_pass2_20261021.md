@@ -58,6 +58,8 @@ References of the form `THM-4750:381` give a file and line number. Line numbers 
 
 ## 1. Findings
 
+*Numbering note.* In a draft of this report, read while it was being written, the findings from the MAJOR one onward were numbered one lower (the MAJOR finding repeated the number 12). The final numbering is: P2-M1 = finding 13, connected graphs = finding 20, the 10^6 search = finding 22. Citations of "second audit finding 12" or "finding 19" in THM-4750 or HYP-9361 mean findings 13 and 20.
+
 ### Statement 5′: rigidity, the limit, the lift (checklist 1)
 
 **1. OK, with a MINOR gap and an OK+ sharpening. The rigidity proof of 5′(a) is correct** (THM-4750:321–326).

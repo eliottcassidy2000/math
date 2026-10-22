@@ -14,7 +14,7 @@ status: >
   PROVED:
   - statements 1, 2 (with the converse for "exactly"), 3, 4(a)-(e), 5(a)-(e), 6(a), 7(a)-(d);
   - 6(b) (with its range n >= n_0(j), linear in j) and 6(c) in outline (entire-function argument, first audit finding 23,
-    second audit finding 12).
+    second audit finding 13).
   SECOND AUDIT PASS (2026-10-21, 05-knowledge/results/camion_function_audit_pass2_20261021.md; MISTAKE-655) on the
   post-audit continuation:
   - §5b (Teichmueller rigidity, Lambda_p = sigma_p - <2>^(-1/2), the Camion lift, the decomposition) is PROVED and
@@ -387,7 +387,7 @@ So, generically, the second-order Camion divisor of a zero class has degree 2, t
 * **Other structures.**
   * **Strong semicomplete digraphs (base 3).** The Camion–Wieferich primes `p ≤ 10^4` are 17 and 31 (two codes). §5b applies with `a = 3`, so `h_3(p) ≥ 2` exactly at those primes. The base-3 Wieferich prime 11 is not on the list.
   * **Connected labelled graphs.** The primes `p ≤ 10^4` with `p² | E(p)`, where `E(n) = cg(n) − 2^((n−1)/2) + 1` (rotation: `cg(p) ≡ 2^((p−1)/2) − 1`), are 5 and 197.
-    * This is NOT a tower-height list (second audit finding 19).
+    * This is NOT a tower-height list (second audit finding 20).
     * The target has a constant term, so the tower drifts: `E(p^r) ≡ εE(p^(r−1)) + (1 − ε) (mod p^r)`.
     * For `(2/p) = −1`, which holds at both 5 and 197, `p²` never passes. The passing powers need not form an initial segment: at `p = 5`, 5 and 125 pass and 25 fails.
     * The rigidity of `b_a(p^k)` holds numerically but is unproved.

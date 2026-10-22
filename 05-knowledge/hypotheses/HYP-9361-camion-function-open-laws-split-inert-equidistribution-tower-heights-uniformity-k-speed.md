@@ -13,7 +13,7 @@ status: >
     there). At p = 5 it has a double root and a ramified pair (THM-4750 (4e)).
   - (c): Camion-Wieferich primes p <= 10^5 are 3, 13, 22409, all with h = 2 (two independent searches), extended to 10^6
     in cw_flint_*.out (in progress). Base 3: 17, 31 (p <= 10^4). Connected graphs: p^2 | E(p) at 5, 197 (p <= 10^4), which is NOT a
-    tower-height list (drifted tower; second audit finding 19).
+    tower-height list (drifted tower; second audit finding 20).
   - (d): r = 2, 3, 4 (THM-4750 §4, §6b): 1226 primes for r = 2, and 60 primes <= 2200 each for r = 3, 4. The speed and
     the degree-r polynomial law are PROVED (THM-4750 (7)); only the statistics are conjectural.
   - (e): n* mod 2^140 is known (audit b7). There is no rational of height <= 2^69.5, and the closed form
