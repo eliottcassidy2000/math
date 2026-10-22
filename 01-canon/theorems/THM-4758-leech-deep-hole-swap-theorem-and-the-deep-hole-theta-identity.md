@@ -89,6 +89,30 @@ In q^{1/h}, the function η(τ)^h/η(τ/h) is the generating function of h-core 
   So the Leech lattice seen from its A2¹² deep hole is governed by the divisors of 3n + 1 (Granville–Ono). Here
   729 = 3⁶ is the size of the ternary Golay code, the glue code of N(A2¹²).
 
+**(3′) Twined form: a Hauptmodul.** Write Θ_L^{[x]}(τ) = Σ_{y∈L} e^{2πi y·x} q^{|y|²/2}. Applying τ → −1/τ to (2)
+gives Poisson duals, since Λ and N are unimodular:
+
+    Θ_Λ^{[c]} − Θ_N^{[ρ_N/h]} = (24 + k) Δ    (all 23 types).
+
+For the pure A-types, the S-transform of Garvan–Kim–Stanton gives Θ_N^{[ρ/h]} = η(τ)^{24+k}/η(hτ)^k. Hence
+
+    Θ_Λ^{[c]}(τ)/η(τ)²⁴ = 24 + T_h(τ),   T_h(τ) = (η(τ)/η(hτ))^{24/(h−1)} + 24/(h−1).
+
+Here T_h = q^{−1} + 0 + O(q) is the normalized Hauptmodul of Γ_0(h). For h = 2, 3, 4, 5, 7, 9 and 13 it is the
+Monster McKay–Thompson series of class 2B, 3B, 4C, 5B, 7B, 9B and 13B (Conway–Norton). For h = 25 it is the Γ_0(25)
+Hauptmodul.
+
+In vertex-algebra terms, the deep-hole automorphism g_c = e^{2πi c(0)} of the Leech lattice VOA has graded trace
+
+    Tr_{V_Λ}(g_c q^{L_0 − 1}) = 24 + T_h(τ),
+
+the Leech character 24 + J with J replaced by T_h. Equivalently, its twined trace coincides with that of a
+fixed-point-free Conway element of Frame shape h^k/1^k, plus the constant 24 + k, which lives on the weight-one
+space.
+
+This is checked independently by direct enumeration of Leech vectors weighted by e^{2πiλ·c}, through q⁴, for A1²⁴,
+A2¹², A4⁶, A6⁴ and A24 (twined_hauptmodul.py).
+
 **(4) Divisor lattice.** The root counts R(L_d) = 24h_d of the intermediate Niemeier lattices are tabulated in
 swap_theorem_proof.out. Often h_d = d. The D- and E-types drop at odd d; for example D24 gives L_23 with h = 22, and
 E8³ gives L_15 with h = 14.
@@ -146,3 +170,12 @@ All eight cases are also checked against exact enumeration (all_holes_J2.out).
   Σ_v R_v = Σ_u C_u = θ_{M^*} gives R(1) − C(1) = (θ_N − θ_Λ)/(h − 1) = 24hΔ/(h − 1) = (24 + k)Δ.
 - Dividing (2) by η²⁴ gives a statement about the deep-hole orbifold of the Leech VOA (Möller–Scheithauer): the
   characters of the c-twisted V_Λ-module and of the (ρ_N/h)-twisted V_N-module differ by the constant 24 + k.
+- **Conceptual reading of the proof.** The coset characters ch_{(i,j)} = θ_{M+γ(i,j)}/η²⁴ are the sector characters
+  of the Z_h × Z_h orbifold that connects V_Λ and V_N. A weight-0 vector-valued modular function is determined by its
+  principal part up to an invariant constant vector. The principal parts are exactly the vectors of M^* with norm < 2.
+  So the swap theorem says: the principal parts are swap-symmetric, and therefore the characters are swap-symmetric up
+  to constants. The constants are the weight-1 dimension differences, and they are what the bad-prime formula
+  computes.
+- **The Leech cusp is special.** The same certificate applied to arbitrary pairs of cusps of II_{25,1} passes for 275
+  of the 276 pairs of Borcherds' representatives. It fails for A4⁶ × E8³ (m = 7), whose M^* has asymmetric vectors of
+  norm 12/7 (cusp_pairs.py).

@@ -1,0 +1,111 @@
+  ok   A1: Frame shape {2: 1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 2
+  ok   A1 (h=2): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^1 eta_pi(tau) through q^29: [1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0]...
+  ok   A1: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   A2: Frame shape {3: 1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 3
+  ok   A2 (h=3): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^2 eta_pi(tau) through q^29: [1, 1, 2, 0, 2, 1, 2, 0, 1, 2, 2, 0]...
+  ok   A2: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   A2: coset Q + omega_2 has the same rho/h-shifted theta series
+  ok   A3: Frame shape {4: 1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 4
+  ok   A3 (h=4): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^3 eta_pi(tau) through q^29: [1, 1, 2, 3, 1, 3, 3, 3, 4, 4, 2, 2]...
+  ok   A3: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   A3: coset Q + omega_2 has the same rho/h-shifted theta series
+  ok   A3: coset Q + omega_3 has the same rho/h-shifted theta series
+  ok   A4: Frame shape {5: 1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 5
+  ok   A4 (h=5): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^4 eta_pi(tau) through q^29: [1, 1, 2, 3, 5, 2, 6, 5, 7, 5, 12, 6]...
+  ok   A4: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   A4: coset Q + omega_2 has the same rho/h-shifted theta series
+  ok   A4: coset Q + omega_3 has the same rho/h-shifted theta series
+  ok   A4: coset Q + omega_4 has the same rho/h-shifted theta series
+  ok   A5: Frame shape {6: 1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 6
+  ok   A5 (h=6): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^5 eta_pi(tau) through q^29: [1, 1, 2, 3, 5, 7, 5, 9, 10, 12, 12, 14]...
+  ok   A5: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   A5: coset Q + omega_2 has the same rho/h-shifted theta series
+  ok   A5: coset Q + omega_3 has the same rho/h-shifted theta series
+  ok   A5: coset Q + omega_4 has the same rho/h-shifted theta series
+  ok   A5: coset Q + omega_5 has the same rho/h-shifted theta series
+  ok   A6: Frame shape {7: 1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 7
+  ok   A6 (h=7): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^6 eta_pi(tau) through q^29: [1, 1, 2, 3, 5, 7, 11, 8, 15, 16, 21, 21]...
+  ok   A6: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   A6: coset Q + omega_2 has the same rho/h-shifted theta series
+  ok   A6: coset Q + omega_3 has the same rho/h-shifted theta series
+  ok   A6: coset Q + omega_4 has the same rho/h-shifted theta series
+  ok   A6: coset Q + omega_5 has the same rho/h-shifted theta series
+  ok   A6: coset Q + omega_6 has the same rho/h-shifted theta series
+  ok   A7: Frame shape {8: 1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 8
+  ok   A7 (h=8): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^7 eta_pi(tau) through q^29: [1, 1, 2, 3, 5, 7, 11, 15, 14, 22, 26, 32]...
+  ok   A7: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   A7: coset Q + omega_2 has the same rho/h-shifted theta series
+  ok   A7: coset Q + omega_3 has the same rho/h-shifted theta series
+  ok   A7: coset Q + omega_4 has the same rho/h-shifted theta series
+  ok   A7: coset Q + omega_5 has the same rho/h-shifted theta series
+  ok   A7: coset Q + omega_6 has the same rho/h-shifted theta series
+  ok   A7: coset Q + omega_7 has the same rho/h-shifted theta series
+  ok   A8: Frame shape {9: 1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 9
+  ok   A8 (h=9): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^8 eta_pi(tau) through q^29: [1, 1, 2, 3, 5, 7, 11, 15, 22, 21, 33, 38]...
+  ok   A8: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   A8: coset Q + omega_2 has the same rho/h-shifted theta series
+  ok   A8: coset Q + omega_3 has the same rho/h-shifted theta series
+  ok   A8: coset Q + omega_4 has the same rho/h-shifted theta series
+  ok   A8: coset Q + omega_5 has the same rho/h-shifted theta series
+  ok   A8: coset Q + omega_6 has the same rho/h-shifted theta series
+  ok   A8: coset Q + omega_7 has the same rho/h-shifted theta series
+  ok   A8: coset Q + omega_8 has the same rho/h-shifted theta series
+  ok   A12: Frame shape {13: 1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 13
+  ok   A12 (h=13): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^12 eta_pi(tau) through q^29: [1, 1, 2, 3, 5, 7, 11, 15, 22, 30, 42, 56]...
+  ok   A12: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   A12: coset Q + omega_2 has the same rho/h-shifted theta series
+  ok   A12: coset Q + omega_3 has the same rho/h-shifted theta series
+  ok   A12: coset Q + omega_4 has the same rho/h-shifted theta series
+  ok   A12: coset Q + omega_5 has the same rho/h-shifted theta series
+  ok   A12: coset Q + omega_6 has the same rho/h-shifted theta series
+  ok   A12: coset Q + omega_7 has the same rho/h-shifted theta series
+  ok   A12: coset Q + omega_8 has the same rho/h-shifted theta series
+  ok   A12: coset Q + omega_9 has the same rho/h-shifted theta series
+  ok   A12: coset Q + omega_10 has the same rho/h-shifted theta series
+  ok   A12: coset Q + omega_11 has the same rho/h-shifted theta series
+  ok   A12: coset Q + omega_12 has the same rho/h-shifted theta series
+  ok   D4: Frame shape {6: 1, 2: 1, 3: -1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 4
+  ok   D4 (h=6): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^4 eta_pi(tau) through q^29: [1, 1, 1, 3, 3, 4, 3, 4, 6, 4, 7, 7]...
+  ok   D4: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   D4: coset Q + omega_3 has the same rho/h-shifted theta series
+  ok   D4: coset Q + omega_4 has the same rho/h-shifted theta series
+  ok   D5: Frame shape {8: 1, 2: 1, 4: -1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 4
+  ok   D5 (h=8): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^5 eta_pi(tau) through q^29: [1, 1, 1, 2, 3, 4, 5, 7, 4, 7, 10, 9]...
+  ok   D5: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   D5: coset Q + omega_4 has the same rho/h-shifted theta series
+  ok   D5: coset Q + omega_5 has the same rho/h-shifted theta series
+  ok   D6: Frame shape {10: 1, 2: 1, 5: -1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 4
+  ok   D6 (h=10): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^6 eta_pi(tau) through q^29: [1, 1, 1, 2, 2, 4, 5, 6, 8, 10, 8, 11]...
+  ok   D6: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   D6: coset Q + omega_5 has the same rho/h-shifted theta series
+  ok   D6: coset Q + omega_6 has the same rho/h-shifted theta series
+  ok   D7: Frame shape {12: 1, 2: 1, 6: -1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 4
+  ok   D7 (h=12): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^7 eta_pi(tau) through q^29: [1, 1, 1, 2, 2, 3, 5, 6, 7, 10, 12, 15]...
+  ok   D7: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   D7: coset Q + omega_6 has the same rho/h-shifted theta series
+  ok   D7: coset Q + omega_7 has the same rho/h-shifted theta series
+  ok   D8: Frame shape {14: 1, 2: 1, 7: -1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 4
+  ok   D8 (h=14): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^8 eta_pi(tau) through q^29: [1, 1, 1, 2, 2, 3, 4, 6, 7, 9, 12, 14]...
+  ok   D8: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   D8: coset Q + omega_7 has the same rho/h-shifted theta series
+  ok   D8: coset Q + omega_8 has the same rho/h-shifted theta series
+  ok   D9: Frame shape {16: 1, 2: 1, 8: -1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 4
+  ok   D9 (h=16): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^9 eta_pi(tau) through q^29: [1, 1, 1, 2, 2, 3, 4, 5, 7, 9, 11, 14]...
+  ok   D9: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   D9: coset Q + omega_8 has the same rho/h-shifted theta series
+  ok   D9: coset Q + omega_9 has the same rho/h-shifted theta series
+  ok   D10: Frame shape {18: 1, 2: 1, 9: -1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 4
+  ok   D10 (h=18): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^10 eta_pi(tau) through q^29: [1, 1, 1, 2, 2, 3, 4, 5, 6, 9, 11, 13]...
+  ok   D10: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   D10: coset Q + omega_9 has the same rho/h-shifted theta series
+  ok   D10: coset Q + omega_10 has the same rho/h-shifted theta series
+  ok   E6: Frame shape {12: 1, 2: 1, 3: 1, 6: -1, 4: -1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 3
+  ok   E6 (h=12): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^6 eta_pi(tau) through q^29: [1, 1, 1, 1, 2, 3, 3, 4, 6, 7, 8, 10]...
+  ok   E6: coset Q + omega_1 has the same rho/h-shifted theta series
+  ok   E6: coset Q + omega_5 has the same rho/h-shifted theta series
+  ok   E7: Frame shape {18: 1, 3: 1, 2: 1, 9: -1, 6: -1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 2
+  ok   E7 (h=18): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^7 eta_pi(tau) through q^29: [1, 1, 1, 1, 1, 2, 2, 3, 3, 4, 5, 6]...
+  ok   E7: coset Q + omega_6 has the same rho/h-shifted theta series
+  ok   E8: Frame shape {30: 1, 5: 1, 3: 1, 2: 1, 15: -1, 10: -1, 6: -1, 1: -1} = char. poly of the Coxeter element; anti-self-dual; prod a^m = det = 1
+  ok   E8 (h=30): sum_Q q^((h/2)|x+rho/h|^2) = eta(h tau)^8 eta_pi(tau) through q^29: [1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3]...
+ALL CHECKS PASSED

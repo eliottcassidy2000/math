@@ -16,7 +16,8 @@ Gamma_rho \ SL_2(Z) of F_j|_k g is a scalar modular form of weight k [SL_2(Z) : 
 infinity exceeds its weight divided by 12, so by the valence formula N_j = 0. Hence some F_j|g = 0, and F_j = 0.
 
 Proof of the swap theorem for one type: a finite check, carried out exactly below.
-1. Enumerate the vectors of M^* with |x|^2 <= 2 and record each with its class in D.
+1. Enumerate the vectors of M^* with |x|^2 <= 2 and record each with its class in D. (The number of nonzero
+   vectors is cross-checked against PARI's qfminim.)
 2. Put E = Theta_M - sigma^* Theta_M. Check that E has no terms of exponent < 1, i.e. no differences at norms < 2.
 3. Let v_g be the q^1 coefficient of E_g, i.e. the norm-2 difference. Check that v is rho_M-invariant:
    - v is supported on isotropic classes, so it is T-invariant;
@@ -233,6 +234,10 @@ for name, h, n0, z2 in rows:
                 and all(qD(sigma(g)) == qD(g) for g in [(1, 0), (0, 1), (1, 1)]) and {sigma(g) for g in HLsub} == HNsub)
     # 1. enumerate M^* vectors of norm <= 2
     vecs = enum_dual(QD, 2.0 * den)
+    # independent count of the nonzero vectors of M^* of norm <= 2 (PARI qfminim, counts +-v), against the enumerator
+    n_pari = int(pari.qfminim(pari.matrix(24, 24, [int(x) for row in QD for x in row]), 2 * den, 0, 0)[0])
+    n_enum = sum(1 for y in vecs if 0 < int(y @ QD @ y) <= 2 * den)
+    count_ok = n_pari == n_enum
     table = {}
     qok = True
     for y in vecs:
@@ -280,8 +285,8 @@ for name, h, n0, z2 in rows:
     cd, *_ = np.linalg.lstsq(Mx, vv, rcond=None)
     recon_ok = np.allclose(Mx @ cd, vv, atol=1e-8)
     cd_int = {d: int(round(c)) for d, c in zip(divs, cd)}
-    check(ok_gen and qok and below_ok and T_ok and S_ok and len(Aline) == h and lines_ok and G == n0,
-          f'{name:9s} h={h:2d}: M^* vectors |x|^2<=2: {sum(sum(t.values()) for t in table.values())}; E = 0 below norm 2; '
+    check(ok_gen and qok and count_ok and below_ok and T_ok and S_ok and len(Aline) == h and lines_ok and G == n0,
+          f'{name:9s} h={h:2d}: M^* vectors |x|^2<=2: {sum(sum(t.values()) for t in table.values())} (PARI qfminim agrees: {count_ok}); E = 0 below norm 2; '
           f'v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); '
           f'B = sigma(A); sum over the Leech line A of v = {G} = 24 + k = {n0} => theta(Lambda+c) - theta(N+rho/h) = {n0} Delta [{time.time() - t1:.0f}s]')
     # intermediate unimodular lattices L_d (from the maximal isotropic subgroups S_d): root counts and Coxeter numbers

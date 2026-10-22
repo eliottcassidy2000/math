@@ -1,0 +1,5 @@
+PARI stack size set to 2000000000 bytes, maximum size set to 2000000000
+  ok   a3^8: Theta_Lambda^[c] = (24+8) Delta + eta^32/eta(4 tau)^8 through q^4: [1, 0, -304, 4096, -25520] vs [1, 0, -304, 4096, -25520]  [115s]
+  ok   a8^3: Theta_Lambda^[c] = (24+3) Delta + eta^27/eta(9 tau)^3 through q^4: [1, 0, -324, 4581, -30618] vs [1, 0, -324, 4581, -30618]  [115s]
+  ok   a12^2: Theta_Lambda^[c] = (24+2) Delta + eta^26/eta(13 tau)^2 through q^4: [1, 0, -325, 4602, -30797] vs [1, 0, -325, 4602, -30797]  [119s]
+ALL CHECKS PASSED
