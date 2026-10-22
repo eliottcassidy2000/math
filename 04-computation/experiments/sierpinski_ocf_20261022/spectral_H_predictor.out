@@ -1,0 +1,10 @@
+n= 7 (  2 classes): kappa/rho in [0.9022, 1.0125], spearman(kappa, rho) = -1.000, argmax agree: False
+n= 9 (  4 classes): kappa/rho in [0.8922, 0.9644], spearman(kappa, rho) = -0.200, argmax agree: False
+n=11 (  4 classes): kappa/rho in [0.9171, 0.9804], spearman(kappa, rho) = -0.400, argmax agree: False
+n=13 (  6 classes): kappa/rho in [0.9245, 0.9643], spearman(kappa, rho) = +0.600, argmax agree: True
+n=15 ( 16 classes): kappa/rho in [0.9269, 0.9680], spearman(kappa, rho) = -0.035, argmax agree: True
+n=17 ( 16 classes): kappa/rho in [0.9375, 0.9722], spearman(kappa, rho) = +0.118, argmax agree: True
+n=19 ( 30 classes): kappa/rho in [0.9425, 0.9791], spearman(kappa, rho) = -0.009, argmax agree: True
+n=21 ( 88 classes): kappa/rho in [0.9454, 0.9781], spearman(kappa, rho) = -0.025, argmax agree: True
+n=23 ( 94 classes): kappa/rho in [0.9505, 0.9819], spearman(kappa, rho) = -0.044, argmax agree: True
+n=25 (208 classes): kappa/rho in [0.9537, 0.9817], spearman(kappa, rho) = +0.092, argmax agree: True
