@@ -1,0 +1,17 @@
+{
+  "directories": {
+    "00-navigation": 17,
+    "01-canon": 239,
+    "04-computation": 144,
+    "05-knowledge": 1064,
+    "07-reflections": 257,
+    "agents": 5569
+  },
+  "term_file_counts": {
+    "mersenne": 1237,
+    "repunit": 249,
+    "trailing ones": 26,
+    "wagstaff": 30,
+    "fibonacci fan": 20
+  }
+}

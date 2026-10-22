@@ -1,0 +1,202 @@
+{
+  "status": "PASS",
+  "freeze": "Producer freeze confirmed; original packet only. Remote-search and E8-holes addenda excluded.",
+  "source_files": [
+    {
+      "path": "/workspace/shared/session27-repunits/REPORT.md",
+      "bytes": 13750,
+      "sha256": "4c5d9bc4ad690e6435d260870bb403972c48f46921bc13bf5fe76e72813739ba"
+    },
+    {
+      "path": "/workspace/shared/session27-repunits/verify_weighted.py",
+      "bytes": 1866,
+      "sha256": "c2eed1b25d3f6c2a2624a2f6943bc8a0c0552ca1748897b647754492e61eaaa6"
+    },
+    {
+      "path": "/workspace/shared/session27-repunits/verify_weighted.json",
+      "bytes": 783,
+      "sha256": "afcb5599ac853491479b50ce867db8d044912bee813ae6862f1b8f8002bd4870"
+    },
+    {
+      "path": "/workspace/shared/session27-repunits/catalogue.json",
+      "bytes": 7150856,
+      "sha256": "c3e53a8299f69aa7d3fdbd45d9070c123dbf51743605d750444d5b273f3fcb54"
+    },
+    {
+      "path": "/workspace/shared/session27-repunits/catalogue_initial.json",
+      "bytes": 2400719,
+      "sha256": "fe4554e8407b6f4707562d1ecfb9eb8347ff1cef35460065acf04573227a15be"
+    },
+    {
+      "path": "/workspace/shared/session27-repunits/catalogue_breakdown.json",
+      "bytes": 311,
+      "sha256": "6402a019d85f3fedc457e95342618eb60aef2f23640bfb0d16fa95bc3f8c562a"
+    },
+    {
+      "path": "/workspace/shared/session27-repunits/discover.py",
+      "bytes": 1529,
+      "sha256": "e0718ecb1bee508372cd8355e302c19b407bda7c9d24c0194fde3ea159a272fe"
+    },
+    {
+      "path": "/workspace/shared/session27-repunits/discovery_summary.txt",
+      "bytes": 580,
+      "sha256": "c567f4b1c4504c988e95dd5d2026c030a8f373f5dbb52827bfc2c77d6f582120"
+    },
+    {
+      "path": "/workspace/shared/session27-repunits/fetch_manifest.json",
+      "bytes": 1503,
+      "sha256": "8891f0b9c9198e4077721ea1f868846ca595bc4ba9f76de5234a09a95ca85bc9"
+    },
+    {
+      "path": "/workspace/shared/session27-repunits/corrections.patch",
+      "bytes": 1098,
+      "sha256": "0e41a13189d9ac11be58b49785e024d4ba0f3b6889607360a615ad1a73adf675"
+    },
+    {
+      "path": "/workspace/shared/session27-modular/report.md",
+      "bytes": 18811,
+      "sha256": "82e3e2384e1230f9fa9273603f70b234d9d7c03315f64fcbb14dc0ccb0942754"
+    },
+    {
+      "path": "/workspace/shared/session27-modular/check.py",
+      "bytes": 2652,
+      "sha256": "95676362295cc2e7edb2e6fa420d028193ba1d84722d8c84d5d64ba242865bd8"
+    },
+    {
+      "path": "/workspace/shared/session27-modular/check.json",
+      "bytes": 1349,
+      "sha256": "c32ee86ac66ba8b3b3096085e8fc149044213ea34c350cc28d1de51c9f55f8b8"
+    },
+    {
+      "path": "/workspace/shared/session27-modular/check_camion.py",
+      "bytes": 543,
+      "sha256": "64d1fb1458a41b4991bd05be2750f55d43a83d047790ae3dd7d6787daf9e5416"
+    },
+    {
+      "path": "/workspace/shared/session27-modular/check_camion.json",
+      "bytes": 229,
+      "sha256": "bde61a22ba3fe143424cdc6c9341319507eb9d06ac89f1361ca420357f4378a2"
+    },
+    {
+      "path": "/workspace/shared/session27-modular/historical_1729_correction_proposal.md",
+      "bytes": 2735,
+      "sha256": "78ba5535f4b69a9c0ba6e4176106f733af36a1346a0fad3929e22387823ee2cb"
+    },
+    {
+      "path": "/workspace/shared/session27-repunits/fetched/mersenne_connections_s90aq.py",
+      "bytes": 17062,
+      "sha256": "2bd819c3bac4fa112e1f6291d09ab68a47e68b7fd3c3271a2cff4b76f83c6fe3"
+    },
+    {
+      "path": "/workspace/shared/session27-repunits/fetched/repunit_gap_synthesis.py",
+      "bytes": 15282,
+      "sha256": "09e7841365c3b2c115fb549b74ef141c7f4d437423869bca2267056972da25f5"
+    },
+    {
+      "path": "/workspace/shared/session27-repunits/fetched/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "bytes": 5667,
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "path": "/workspace/shared/session27-repunits/fetched/THM-344-n8-h63-complete-omega.md",
+      "bytes": 2982,
+      "sha256": "2115ecae62413bd1b42247c48f1c951cc564fa9cbe3f633c9a9a564c5501a6a5"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/math/05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md",
+      "bytes": 15376,
+      "sha256": "40d8b722dc71233a2e6ab31f224cb5de20db56463be568148c865b438f16cdfe"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/math/05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/n8_classes.csv",
+      "bytes": 205687,
+      "sha256": "5226fb6d6cb71e2c99dc50536744f044c31af55e173e3be9f5f722a39edf3bc2"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/math/01-canon/theorems/THM-227-knacci-mersenne.md",
+      "bytes": 3129,
+      "sha256": "9ef035ba62a96c0b20c5909e92196522222888174bdbf322553c8671ee15f57a"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/math/01-canon/theorems/THM-868-e8-bridge-score-lattice.md",
+      "bytes": 6165,
+      "sha256": "298d39a4e01ea4314ee618f1f52643c232c4d6d3c355d6c56448f0855a7d76ce"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/math/01-canon/theorems/THM-489-eta-discriminant-bridge.md",
+      "bytes": 7475,
+      "sha256": "51f243e87bd3df29d96ac6cb04c98506a177bb2d17cd1f2cb82271e4dbb8fa22"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/math/07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+      "bytes": 7782,
+      "sha256": "558aeb7bec4cecedd767d516fb0a262a49df76b8b5655237a39c54f9c1c2c141"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/math/01-canon/theorems/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md",
+      "bytes": 29480,
+      "sha256": "bab46a00c24008f55702385cf96e031fd0ae9b8ef10aa00e04d62f7a7a283222"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/math/01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md",
+      "bytes": 9303,
+      "sha256": "e5b3668b30c04f79d25287c238614fffee1c705b13135fc7cc877334955e46d8"
+    }
+  ],
+  "connector_blob_checks": [
+    {
+      "file": "fetched/THM-344-n8-h63-complete-omega.md",
+      "expected_remote_blob_sha": "1441846817f00531cc443cd399567d5cc5541401",
+      "actual_local_git_blob_sha": "1441846817f00531cc443cd399567d5cc5541401",
+      "equal": true
+    },
+    {
+      "file": "fetched/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "expected_remote_blob_sha": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "actual_local_git_blob_sha": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "equal": true
+    },
+    {
+      "file": "fetched/repunit_gap_synthesis.py",
+      "expected_remote_blob_sha": "a4ee5c46e864771d1fe51373219122af37bb0b20",
+      "actual_local_git_blob_sha": "a4ee5c46e864771d1fe51373219122af37bb0b20",
+      "equal": true
+    },
+    {
+      "file": "fetched/mersenne_connections_s90aq.py",
+      "expected_remote_blob_sha": "e089ad03d577934d8aab3f5852e131113575e5d2",
+      "actual_local_git_blob_sha": "e089ad03d577934d8aab3f5852e131113575e5d2",
+      "equal": true
+    }
+  ],
+  "review_files": [
+    {
+      "path": "replay_modular.json",
+      "sha256": "c32ee86ac66ba8b3b3096085e8fc149044213ea34c350cc28d1de51c9f55f8b8"
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "d4d654b94ae7157e63f36f27911138bb88b4150e1d172c68702365b30e57d793"
+    },
+    {
+      "path": "replay_camion.json",
+      "sha256": "bde61a22ba3fe143424cdc6c9341319507eb9d06ac89f1361ca420357f4378a2"
+    },
+    {
+      "path": "independent_checks.json",
+      "sha256": "cf097f3a1d5fd3c556af36a63e50752852bbe5629dbc9a9e07f0e3d606d23fad"
+    },
+    {
+      "path": "replay_weighted.json",
+      "sha256": "afcb5599ac853491479b50ce867db8d044912bee813ae6862f1b8f8002bd4870"
+    },
+    {
+      "path": "independent_checks.py",
+      "sha256": "458f4e710256ddf26af31caf7b7d4fea96c306ea594a5d1a9c19a9a8458b60d1"
+    },
+    {
+      "path": "bind_manifest.py",
+      "sha256": "9e4227792a18abcf17c57dcf146cf0a7e232559de00ada6464b16c36b61bb9f1"
+    }
+  ]
+}

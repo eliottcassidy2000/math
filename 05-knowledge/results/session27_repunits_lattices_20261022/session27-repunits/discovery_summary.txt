@@ -1,0 +1,13 @@
+{
+  "head": "54bf96642934c6cdf01f02e364f3bba00892ae22",
+  "tracked_paths": 113808,
+  "text_files_scanned": 72894,
+  "missing_worktree_files": 40488,
+  "large_files_skipped": [
+    "05-knowledge/results/lrc14_j6_all_open_centre_child_top4_closure_thm2915.ledger.out",
+    "05-knowledge/results/occurrences_105_20261018f.jsonl.gz"
+  ],
+  "nontext_or_read_error_count": 424,
+  "regex": "repunit|mersenne|wagstaff|fibonacci[ -_]+fan|binary[ -_]+ones|all[ -_]+ones|trailing[ -_]+ones|2\\s*(?:\\^|\\*\\*)\\s*\\{?[knm]\\}?\\s*[-\u2212]\\s*1"
+}
+matching entries 7290 matching lines 12379

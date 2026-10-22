@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "independent_permutation_tournaments": 1099,
+  "n_le_5_histograms": {
+    "1": {
+      "1": 1
+    },
+    "2": {
+      "1": 2
+    },
+    "3": {
+      "1": 6,
+      "3": 2
+    },
+    "4": {
+      "1": 24,
+      "3": 16,
+      "5": 24
+    },
+    "5": {
+      "1": 120,
+      "3": 120,
+      "5": 240,
+      "9": 240,
+      "11": 120,
+      "15": 64,
+      "13": 120
+    }
+  },
+  "n8_inventory_rows": 6880,
+  "n8_H63_witnesses_independently_HP_aut_strong_checked": [
+    {
+      "code": "4588920948120421648",
+      "H": "63",
+      "aut": "1",
+      "self_converse": "0",
+      "strong": "1"
+    },
+    {
+      "code": "8007206232962306050",
+      "H": "63",
+      "aut": "1",
+      "self_converse": "0",
+      "strong": "1"
+    }
+  ],
+  "E8_coordinate_roots": 240,
+  "balanced_half_roots": 70,
+  "oscillator24": [
+    1,
+    24,
+    324,
+    3200,
+    25650,
+    176256,
+    1073720,
+    5930496,
+    30178575,
+    143184000,
+    639249300,
+    2705114880,
+    10914317934
+  ],
+  "Camion21": 16,
+  "catalogue_entries": 7290,
+  "catalogue_lines": 12379,
+  "catalogue_hashes_and_previews_checked": 7139,
+  "catalogue_paths_changed_since_capture": []
+}

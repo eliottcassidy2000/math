@@ -1,0 +1,16 @@
+{
+  "21": {
+    "s(n) mod n": 16,
+    "c(n) mod n": 16,
+    "Camion": true
+  },
+  "1729": {
+    "s(n) mod n": 1,
+    "c(n) mod n": 1,
+    "Camion": true
+  },
+  "21_not_Carmichael_witness": {
+    "a": 2,
+    "2^20 mod21": 4
+  }
+}

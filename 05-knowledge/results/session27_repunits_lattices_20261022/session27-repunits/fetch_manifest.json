@@ -1,0 +1,34 @@
+[
+  {
+    "path": "01-canon/theorems/THM-344-n8-h63-complete-omega.md",
+    "sha": "1441846817f00531cc443cd399567d5cc5541401",
+    "url": "https://github.com/eliottcassidy2000/math/blob/main/01-canon/theorems/THM-344-n8-h63-complete-omega.md",
+    "read_date": "2026-10-22",
+    "ref": "default branch (not pinned)",
+    "local_copy": "fetched/THM-344-n8-h63-complete-omega.md"
+  },
+  {
+    "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+    "sha": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+    "url": "https://github.com/eliottcassidy2000/math/blob/main/01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+    "read_date": "2026-10-22",
+    "ref": "default branch (not pinned)",
+    "local_copy": "fetched/THM-1370-h-spectrum-omits-7-21-all-n.md"
+  },
+  {
+    "path": "04-computation/repunit_gap_synthesis.py",
+    "sha": "a4ee5c46e864771d1fe51373219122af37bb0b20",
+    "url": "https://github.com/eliottcassidy2000/math/blob/main/04-computation/repunit_gap_synthesis.py",
+    "read_date": "2026-10-22",
+    "ref": "default branch (not pinned)",
+    "local_copy": "fetched/repunit_gap_synthesis.py"
+  },
+  {
+    "path": "04-computation/mersenne_connections_s90aq.py",
+    "sha": "e089ad03d577934d8aab3f5852e131113575e5d2",
+    "url": "https://github.com/eliottcassidy2000/math/blob/main/04-computation/mersenne_connections_s90aq.py",
+    "read_date": "2026-10-22",
+    "ref": "default branch (not pinned)",
+    "local_copy": "fetched/mersenne_connections_s90aq.py"
+  }
+]
