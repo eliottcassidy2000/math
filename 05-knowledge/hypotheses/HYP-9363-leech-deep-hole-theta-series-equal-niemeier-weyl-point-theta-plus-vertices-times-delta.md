@@ -2,6 +2,8 @@
 id: HYP-9363
 title: "The Leech lattice seen from a deep hole is its Niemeier lattice seen from the Weyl point, up to (24 + k) Delta: for a deep hole c of type R (Niemeier lattice N, Coxeter number h, Weyl vector rho_N, k components) theta_(Lambda + c)(tau) = theta_(N + rho_N/h)(tau) + (24 + k) Delta(tau); for the pure A-types A_(h-1)^k (k(h-1) = 24) this reads theta_(Lambda + c) = h^(k/2) (eta(tau)^h / eta(tau/h))^k + (24 + k) Delta, so the Leech points around the hole are counted by h-core partitions (Garvan-Kim-Stanton); e.g. around the A_24 hole N_k = 5 p(k-1) for 1 <= k <= 24, and the first departure is N_25 = 5 p(24) - 600 = 7275"
 status: >
+  PROVED for all 23 deep-hole types in THM-4758 (opus-2026-10-22-S53; swap theorem plus vector-valued Sturm
+  certificate). The S52 evidence below is retained.
   FINITE-EXACT evidence (exact enumeration of Leech points around explicit holes; the Leech lattice is built from
   II_{25,1} in the tournament coordinates of THM-4752).
   - A_24: hole from the cusp nu = (1/2^25 | 5/2). Exact through q^(1 + 60/25) (61 coefficients, 20,219,385 points).

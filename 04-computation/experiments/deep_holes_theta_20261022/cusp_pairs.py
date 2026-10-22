@@ -244,6 +244,17 @@ for n1, n2 in PAIRS:
                 break
     G = sum(v[g] for g in A1)
     ok = below_ok and T_ok and S_ok and lines_ok
+    if not ok:
+        # diagnostics: every twisted swap, and the classes carrying vectors of norm < 2
+        for lam2 in range(1, m):
+            if math.gcd(lam2, m) != 1:
+                continue
+            sig2 = lambda g, l=lam2: ((l * g[1]) % m, (pow(l, -1, m) * g[0]) % m)
+            bad = sum(1 for g in classes for nr in set(table.get(g, {})) | set(table.get(sig2(g), {}))
+                      if nr < 2 and table.get(g, {}).get(nr, 0) != table.get(sig2(g), {}).get(nr, 0))
+            print(f'       swap lambda = {lam2}: classes x norms with E != 0 below norm 2: {bad}; maps line 1 to line 2: {A2 == {sig2(g) for g in A1}}')
+        short = {g: dict(sorted((str(k_), c_) for k_, c_ in t.items() if k_ < 2)) for g, t in table.items() if g != (0, 0)}
+        print('       classes with vectors of norm < 2:', {g: s_ for g, s_ in short.items() if s_})
     check(ok, f'{n1} (h={h1}) x {n2} (h={h2}): m = -z1.z2 = {m}; |M^* norm<=2| = {sum(sum(t.values()) for t in table.values())}; '
               f'E = 0 below norm 2: {below_ok}; v invariant: {T_ok and S_ok}; => theta(L1 + p1) - theta(L2 + p2) = {G} Delta [{time.time() - t1:.0f}s]')
 print('ALL CHECKS PASSED' if not FAIL else f'FAILED: {FAIL}', f' ({time.time() - T0:.0f}s)')
