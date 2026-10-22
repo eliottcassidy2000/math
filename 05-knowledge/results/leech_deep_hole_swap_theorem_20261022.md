@@ -279,6 +279,9 @@ N whose height is divisible by p (height_descent.py); it is proved for prime h/p
 - E6^4 -> A2^12;
 - E8^3 -> D8^3, A8^3 and A4^6.
 
+The p = 2 cases, together with A1^24 -> Lambda, are Borcherds' nine pairs with h_2 = 2h_1 + 2 (thesis
+Prop. 4.5.3); the p = 3 and p = 5 cases appear to be new.
+
 **The 3n+1 the prompt asked about.** With H = h + 1, descent at p is H -> (H-1)/p, i.e. ascent H -> pH + 1:
 - p = 3 is literally 3n + 1: A2^12 (H = 4 = 3^1 + 1) -> E6^4 (13), and A8^3 (H = 10 = 3^2 + 1) -> E8^3 (31);
 - p = 2 gives the Cunningham chain 5 -> 11 -> 23 -> 47 and the Mersenne chain 3 -> 7 -> 15 -> 31;

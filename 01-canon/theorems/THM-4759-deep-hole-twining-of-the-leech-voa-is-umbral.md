@@ -244,6 +244,14 @@ Then h = p(h′ + 1) becomes H = pH′ + 1. Descent at the bad prime p is H ↦ 
 
 E8³ is reached in three ways: 31 = 2·15 + 1 = 3·10 + 1 = 5·6 + 1.
 
+For p = 2 these descents are the pairs with h₂ = 2h₁ + 2 in Borcherds' thesis, Prop. 4.5.3 (see also
+Chenevier–Lannes §3.4.4, where R/2 is the set of even-height roots). There are nine:
+- the eight above;
+- A1²⁴ → Λ, which is the formal step H = 3 → 1 down to the Leech lattice itself (h = 0).
+
+The p = 3 and p = 5 descents (E6⁴ → A2¹², E8³ → A8³, E8³ → A4⁶) and their realisation by Leech Fricke points were
+not found in the literature.
+
 This also explains the divisor lattices of THM-4758 (4). L_d is the orbifold of V_Λ by g_c^{h/d}:
 - Coxeter number d − 1 exactly when h/d is a common bad prime ∥ h (Fricke descent);
 - Coxeter number d otherwise; then (h/d)c is a deep hole of an A-containing type.
