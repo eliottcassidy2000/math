@@ -1,0 +1,12 @@
+paley n=7: exact kappa/rho - 1 = +1.250000e-02; 1st order -6.084656e-02 (resid +7.335e-02, n^2 resid +3.594); +2nd order -4.898904e-02 (resid +6.149e-02, n^3 resid +21.091); X_2 = +5.9520e-01
+paley n=11: exact kappa/rho - 1 = -1.961718e-02; 1st order -4.181818e-02 (resid +2.220e-02, n^2 resid +2.686); +2nd order -3.383956e-02 (resid +1.422e-02, n^3 resid +18.930); X_2 = +2.3516e-01
+paley n=19: exact kappa/rho - 1 = -2.093114e-02; 1st order -2.523284e-02 (resid +4.302e-03, n^2 resid +1.553); +2nd order -2.190400e-02 (resid +9.729e-04, n^3 resid +6.673); X_2 = +7.8605e-02
+paley n=23: exact kappa/rho - 1 = -1.813174e-02; 1st order -2.102048e-02 (resid +2.889e-03, n^2 resid +1.528); +2nd order -1.865394e-02 (resid +5.222e-04, n^3 resid +6.354); X_2 = +5.3724e-02
+paley n=31: exact kappa/rho - 1 = -1.419236e-02; 1st order -1.574671e-02 (resid +1.554e-03, n^2 resid +1.494); +2nd order -1.438339e-02 (resid +1.910e-04, n^3 resid +5.691); X_2 = +2.9666e-02
+rot n=11: exact kappa/rho - 1 = -8.290192e-02; 1st order -8.534762e-02 (resid +2.446e-03, n^2 resid +0.296); +2nd order -8.530077e-02 (resid +2.399e-03, n^3 resid +3.193); X_2 = +7.3866e-01
+rot n=15: exact kappa/rho - 1 = -6.822662e-02; 1st order -7.048088e-02 (resid +2.254e-03, n^2 resid +0.507); +2nd order -6.920459e-02 (resid +9.780e-04, n^3 resid +3.301); X_2 = +4.2752e-01
+rot n=19: exact kappa/rho - 1 = -5.746432e-02; 1st order -5.934336e-02 (resid +1.879e-03, n^2 resid +0.678); +2nd order -5.796339e-02 (resid +4.991e-04, n^3 resid +3.423); X_2 = +2.7727e-01
+rot n=23: exact kappa/rho - 1 = -4.951376e-02; 1st order -5.104148e-02 (resid +1.528e-03, n^2 resid +0.808); +2nd order -4.980405e-02 (resid +2.903e-04, n^3 resid +3.532); X_2 = +1.9397e-01
+rot n=27: exact kappa/rho - 1 = -4.345428e-02; 1st order -4.469864e-02 (resid +1.244e-03, n^2 resid +0.907); +2nd order -4.363765e-02 (resid +1.834e-04, n^3 resid +3.609); X_2 = +1.4316e-01
+rot n=31: exact kappa/rho - 1 = -3.869808e-02; 1st order -3.972235e-02 (resid +1.024e-03, n^2 resid +0.984); +2nd order -3.882093e-02 (resid +1.228e-04, n^3 resid +3.660); X_2 = +1.0994e-01
+rot n=35: exact kappa/rho - 1 = -3.487114e-02; 1st order -3.572502e-02 (resid +8.539e-04, n^2 resid +1.046); +2nd order -3.495726e-02 (resid +8.612e-05, n^3 resid +3.692); X_2 = +8.7056e-02
