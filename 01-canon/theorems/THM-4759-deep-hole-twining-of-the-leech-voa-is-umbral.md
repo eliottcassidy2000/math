@@ -292,6 +292,14 @@ This gives two consequences:
 
 So the "vertices" of a Fricke point are the simple roots.
 
+*Relation to generalised deep holes.* Möller–Scheithauer realise each V_N from V_Λ by a generalised deep hole, unique
+up to conjugacy. Their twisted sectors all have conformal weight ≥ 1 (extremality, R(g) = 0), and for V_N that
+automorphism is g_c.
+
+The Fricke point g_{c″} also has orbifold V_N, so it must fall outside their class. It does: its twisted sector has
+the single state of weight 1 − 1/(h+1) < 1. So for each N the two inner automorphisms are the extremal one (the deep
+hole) and the Fricke one, which is maximally non-extremal: one shallow state, Fricke-symmetric.
+
 Consequences:
 - **Supersingular primes.** The prime values of h + 1 are 3, 5, 7, 11, 13, 17, 19, 23, 31 and 47. Each of them is
   therefore a prime p for which X_0(p)/W_p has genus zero: Ogg's supersingular primes, here forced by a lattice. The
