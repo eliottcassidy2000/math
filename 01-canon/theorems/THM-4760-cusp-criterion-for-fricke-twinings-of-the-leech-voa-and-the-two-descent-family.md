@@ -42,6 +42,7 @@ scripts:
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_cusp_orbifolds.py (+ .out) (orbifolds of the shell-1 points and their multiples)
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_cusp_carriers.py (+ .out) (which component carries each shell-1 class)
   - 04-computation/experiments/deep_holes_theta_20261022/root_multisets.py (+ .out) (Galois action on the root spectra, (4'))
+  - 04-computation/experiments/deep_holes_theta_20261022/kac_galois_classes.py (+ .out) (exact Galois action on the level-2 Kac classes P, C, (4'))
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_cusp_distance.py (+ _A2.out, _A3.out) (cusps at distance 2 and 3 from the deep-hole cusps)
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_shell_test.py (+ .out), fricke_shell_all.py (+ .out) (q-series checks through q^2; q^4 for A1^24, D4^6)
 related:
@@ -147,6 +148,23 @@ spectra (root_multisets.py, an independent necessary check), this works out as f
 | D_n, 2n | yes (the degrees 2, 4, …, 2n − 2, n are stable) | iff (n − 2)d ≡ ±(n − 2) or ±2 mod 2n for all units d, i.e. n ∈ {2, 4, 6, 8, 12} among the Niemeier D_n | n = 10, 16, 24 are unstable |
 | E8, 32 | no | yes | |
 | E7, 20 | — | — | d ≡ ±3 mod 10 swaps P and C |
+
+**Exact Kac classes (kac_galois_classes.py).** Here dx is reduced into the fundamental alcove by W ⋉ Q in exact
+arithmetic, and its Kac coordinates are compared with P and C. Conjugacy holds either exactly or up to an
+extended-diagram symmetry; the latter is realised by glue.
+- **E8, order 32.** C is fixed by every unit. P goes to a third class when d ≡ ±3 mod 8. So the E8-carrier point of
+  D16E8 is conjugate to all its Galois powers inside W ⋉ Q, with no glue, and is rational for a structural reason.
+  E8³ is not.
+- **E7, order 20.** σ_3 swaps P and C exactly, and the swap of the two E7's of D10E7² undoes it. The units ±7 act up
+  to the E7 diagram symmetry.
+- **D_n, order 2n.** P is fixed up to a diagram symmetry for every n. C is fixed up to a diagram symmetry for n = 4,
+  6, 8, 12, and goes to another class for n = 10, 16, 24.
+- **A1, order 4.** σ_3 swaps P and C, and the all-ones Golay word (the glue (1/2)Σα_i) undoes it on all 24
+  components at once.
+- **E6, order 14.** The classes scatter.
+
+The glue compatibility in the "up to a diagram symmetry" cases is not checked; rationality itself is proved by the
+certificate (0).
 
 This reproduces all nine cases:
 - A1²⁴, D4⁶, D6⁴, D8³ and D12² are stable.
