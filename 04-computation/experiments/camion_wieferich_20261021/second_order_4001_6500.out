@@ -1,0 +1,296 @@
+p=4001 eps=+1 q2=1731 zero-classes: 3:2 1321:0 1:0 2:0  lambda_C=2
+p=4003 eps=-1 q2=1803 zero-classes: 3:2 510:0 1:2 2:0  lambda_C=4
+p=4007 eps=+1 q2=1264 zero-classes: 3:2 1123:0 1:2 2:0  lambda_C=4
+p=4013 eps=-1 q2=2667 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=4019 eps=-1 q2=3704 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=4021 eps=-1 q2=2579 zero-classes: 3:2 3075:0 1:2 2:2  lambda_C=6
+p=4027 eps=-1 q2=3908 zero-classes: 3:2 228:2 1:0 2:0  lambda_C=4
+p=4049 eps=+1 q2=2765 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=4051 eps=-1 q2=3086 zero-classes: 3:2 269:0 1627:0 1:0 2:0  lambda_C=2
+p=4057 eps=+1 q2=2912 zero-classes: 3:2 2916:0 3099:2 1:0 2:2  lambda_C=6
+p=4073 eps=+1 q2=1788 zero-classes: 3:2 255:2 1245:0 3305:0 3877:2 4055:0 1:2 2:0  lambda_C=8
+p=4079 eps=+1 q2=2650 zero-classes: 3:2 2749:0 1:2 2:0  lambda_C=4
+p=4091 eps=-1 q2=3721 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=4093 eps=-1 q2=3331 zero-classes: 3:2 1837:0 1:0 2:0  lambda_C=2
+p=4099 eps=-1 q2=239 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=4111 eps=+1 q2=1822 zero-classes: 3:2 1966:0 1:0 2:2  lambda_C=4
+p=4127 eps=+1 q2=2952 zero-classes: 3:2 3170:2 1:2 2:2  lambda_C=8
+p=4129 eps=+1 q2=282 zero-classes: 3:2 747:2 1:0 2:2  lambda_C=6
+p=4133 eps=-1 q2=3054 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=4139 eps=-1 q2=2689 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=4153 eps=+1 q2=651 zero-classes: 3:2 1279:0 1:0 2:0  lambda_C=2
+p=4157 eps=-1 q2=2993 zero-classes: 3:2 3661:2 1:0 2:0  lambda_C=4
+p=4159 eps=+1 q2=3757 zero-classes: 3:2 1747:0 1:0 2:0  lambda_C=2
+p=4177 eps=+1 q2=248 zero-classes: 3:2 1042:2 3688:2 1:2 2:0  lambda_C=8
+p=4201 eps=+1 q2=875 zero-classes: 3:2 3315:0 1:0 2:0  lambda_C=2
+p=4211 eps=-1 q2=1819 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=4217 eps=+1 q2=1498 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=4219 eps=-1 q2=3310 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=4229 eps=-1 q2=409 zero-classes: 3:2 1638:0 2280:2 1:2 2:0  lambda_C=6
+p=4231 eps=+1 q2=514 zero-classes: 3:2 483:0 1664:0 1879:2 1:0 2:2  lambda_C=6
+p=4241 eps=+1 q2=3942 zero-classes: 3:2 1725:0 1:0 2:2  lambda_C=4
+p=4243 eps=-1 q2=90 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=4253 eps=-1 q2=244 zero-classes: 3:2 299:0 1951:0 1:2 2:0  lambda_C=4
+p=4259 eps=-1 q2=3192 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=4261 eps=-1 q2=81 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=4271 eps=+1 q2=3748 zero-classes: 3:2 1895:0 3722:2 1:0 2:2  lambda_C=6
+p=4273 eps=+1 q2=2853 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=4283 eps=-1 q2=2591 zero-classes: 3:2 2527:0 1:0 2:2  lambda_C=4
+p=4289 eps=+1 q2=2782 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=4297 eps=+1 q2=526 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=4327 eps=+1 q2=3460 zero-classes: 3:2 2792:0 4214:0 1:0 2:0  lambda_C=2
+p=4337 eps=+1 q2=3280 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=4339 eps=-1 q2=395 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=4349 eps=-1 q2=1163 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=4357 eps=-1 q2=2920 zero-classes: 3:2 714:2 1:0 2:2  lambda_C=6
+p=4363 eps=-1 q2=2012 zero-classes: 3:2 2331:0 4228:0 1:2 2:0  lambda_C=4
+p=4373 eps=-1 q2=851 zero-classes: 3:2 494:0 2359:2 1:2 2:2  lambda_C=8
+p=4391 eps=+1 q2=1338 zero-classes: 3:2 2545:2 3213:2 1:2 2:2  lambda_C=10
+p=4397 eps=-1 q2=1617 zero-classes: 3:2 3663:0 1:0 2:2  lambda_C=4
+p=4409 eps=+1 q2=1993 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=4421 eps=-1 q2=1360 zero-classes: 3:2 1225:0 3140:0 4310:2 1:0 2:0  lambda_C=4
+p=4423 eps=+1 q2=1768 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=4441 eps=+1 q2=947 zero-classes: 3:2 1891:2 3962:2 1:0 2:2  lambda_C=8
+p=4447 eps=+1 q2=3575 zero-classes: 3:2 1514:0 3384:0 1:2 2:0  lambda_C=4
+p=4451 eps=-1 q2=4056 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=4457 eps=+1 q2=1066 zero-classes: 3:2 3872:2 1:0 2:2  lambda_C=6
+p=4463 eps=+1 q2=2208 zero-classes: 3:2 672:2 3399:0 1:2 2:0  lambda_C=6
+p=4481 eps=+1 q2=350 zero-classes: 3:2 4265:0 1:0 2:0  lambda_C=2
+p=4483 eps=-1 q2=525 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=4493 eps=-1 q2=1687 zero-classes: 3:2 3591:0 1:0 2:2  lambda_C=4
+p=4507 eps=-1 q2=1657 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=4513 eps=+1 q2=1708 zero-classes: 3:2 1564:2 4482:2 1:2 2:0  lambda_C=8
+p=4517 eps=-1 q2=1629 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=4519 eps=+1 q2=1773 zero-classes: 3:2 927:0 1:0 2:0  lambda_C=2
+p=4523 eps=-1 q2=1081 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=4547 eps=-1 q2=4389 zero-classes: 3:2 1686:0 1:2 2:2  lambda_C=6
+p=4549 eps=-1 q2=4067 zero-classes: 3:2 534:2 1:2 2:2  lambda_C=8
+p=4561 eps=+1 q2=2560 zero-classes: 3:2 1534:0 1884:0 1:2 2:0  lambda_C=4
+p=4567 eps=+1 q2=496 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=4583 eps=+1 q2=2159 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=4591 eps=+1 q2=1532 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=4597 eps=-1 q2=2758 zero-classes: 3:2 3349:0 1:0 2:2  lambda_C=4
+p=4603 eps=-1 q2=4133 zero-classes: 3:2 273:0 1:0 2:0  lambda_C=2
+p=4621 eps=-1 q2=613 zero-classes: 3:2 3634:2 1:0 2:2  lambda_C=6
+p=4637 eps=-1 q2=2559 zero-classes: 3:2 3519:2 1:2 2:2  lambda_C=8
+p=4639 eps=+1 q2=523 zero-classes: 3:2 3126:0 1:0 2:0  lambda_C=2
+p=4643 eps=-1 q2=2617 zero-classes: 3:2 2133:0 3971:2 1:2 2:0  lambda_C=6
+p=4649 eps=+1 q2=3848 zero-classes: 3:2 169:0 4350:2 1:2 2:0  lambda_C=6
+p=4651 eps=-1 q2=361 zero-classes: 3:2 1482:0 1:2 2:0  lambda_C=4
+p=4657 eps=+1 q2=2391 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=4663 eps=+1 q2=3368 zero-classes: 3:2 170:0 1:2 2:2  lambda_C=6
+p=4673 eps=+1 q2=2116 zero-classes: 3:2 2256:2 1:0 2:2  lambda_C=6
+p=4679 eps=+1 q2=4359 zero-classes: 3:2 3301:0 4551:2 1:0 2:2  lambda_C=6
+p=4691 eps=-1 q2=4636 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=4703 eps=+1 q2=326 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=4721 eps=+1 q2=2586 zero-classes: 3:2 839:2 3430:0 4669:2 1:2 2:2  lambda_C=10
+p=4723 eps=-1 q2=84 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=4729 eps=+1 q2=3662 zero-classes: 3:2 4391:2 1:2 2:0  lambda_C=6
+p=4733 eps=-1 q2=1895 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=4751 eps=+1 q2=3166 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=4759 eps=+1 q2=3094 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=4783 eps=+1 q2=3970 zero-classes: 3:2 263:0 1:0 2:2  lambda_C=4
+p=4787 eps=-1 q2=147 zero-classes: 3:2 3243:2 1:0 2:0  lambda_C=4
+p=4789 eps=-1 q2=4043 zero-classes: 3:2 484:0 1:0 2:2  lambda_C=4
+p=4793 eps=+1 q2=1609 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=4799 eps=+1 q2=3335 zero-classes: 3:2 3943:2 4233:2 1:2 2:2  lambda_C=10
+p=4801 eps=+1 q2=1435 zero-classes: 3:2 1115:0 2561:0 1:0 2:0  lambda_C=2
+p=4813 eps=-1 q2=3077 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=4817 eps=+1 q2=4243 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=4831 eps=+1 q2=2954 zero-classes: 3:2 2840:0 3815:0 1:2 2:2  lambda_C=6
+p=4861 eps=-1 q2=2074 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=4871 eps=+1 q2=2826 zero-classes: 3:2 241:2 1:2 2:0  lambda_C=6
+p=4877 eps=-1 q2=2027 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=4889 eps=+1 q2=174 zero-classes: 3:2 3095:2 1:0 2:2  lambda_C=6
+p=4903 eps=+1 q2=135 zero-classes: 3:2 1922:0 2789:2 1:2 2:0  lambda_C=6
+p=4909 eps=-1 q2=3119 zero-classes: 3:2 845:0 1314:0 1:2 2:2  lambda_C=6
+p=4919 eps=+1 q2=2814 zero-classes: 3:2 3490:2 1:0 2:2  lambda_C=6
+p=4931 eps=-1 q2=4828 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=4933 eps=-1 q2=4245 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=4937 eps=+1 q2=754 zero-classes: 3:2 326:2 4073:2 1:2 2:0  lambda_C=8
+p=4943 eps=+1 q2=2892 zero-classes: 3:2 115:0 1:0 2:2  lambda_C=4
+p=4951 eps=+1 q2=365 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=4957 eps=-1 q2=2913 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=4967 eps=+1 q2=2228 zero-classes: 3:2 3160:2 1:0 2:2  lambda_C=6
+p=4969 eps=+1 q2=2831 zero-classes: 3:2 4876:2 1:0 2:2  lambda_C=6
+p=4973 eps=-1 q2=4581 zero-classes: 3:2 2401:2 1:0 2:0  lambda_C=4
+p=4987 eps=-1 q2=2370 zero-classes: 3:2 3459:0 1:0 2:0  lambda_C=2
+p=4993 eps=+1 q2=1972 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=4999 eps=+1 q2=509 zero-classes: 3:2 1436:0 2168:0 1:0 2:0  lambda_C=2
+p=5003 eps=-1 q2=593 zero-classes: 3:2 819:0 1160:2 1:2 2:0  lambda_C=6
+p=5009 eps=+1 q2=4093 zero-classes: 3:2 1976:2 1:2 2:2  lambda_C=8
+p=5011 eps=-1 q2=3950 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=5021 eps=-1 q2=4651 zero-classes: 3:2 728:0 1:2 2:0  lambda_C=4
+p=5023 eps=+1 q2=1047 zero-classes: 3:2 2641:0 1:0 2:0  lambda_C=2
+p=5039 eps=+1 q2=4744 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=5051 eps=-1 q2=2012 zero-classes: 3:2 4484:2 1:2 2:0  lambda_C=6
+p=5059 eps=-1 q2=2563 zero-classes: 3:2 120:0 3977:2 1:2 2:2  lambda_C=8
+p=5077 eps=-1 q2=454 zero-classes: 3:2 428:0 4602:2 1:0 2:0  lambda_C=4
+p=5081 eps=+1 q2=3911 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=5087 eps=+1 q2=1964 zero-classes: 3:2 1037:2 2117:0 4953:0 1:2 2:0  lambda_C=6
+p=5099 eps=-1 q2=2610 zero-classes: 3:2 2085:2 4995:0 1:2 2:2  lambda_C=8
+p=5101 eps=-1 q2=1310 zero-classes: 3:2 2654:2 1:2 2:2  lambda_C=8
+p=5107 eps=-1 q2=4729 zero-classes: 3:2 2975:2 4907:0 1:2 2:0  lambda_C=6
+p=5113 eps=+1 q2=665 zero-classes: 3:2 671:2 1:2 2:2  lambda_C=8
+p=5119 eps=+1 q2=2005 zero-classes: 3:2 4626:2 1:0 2:2  lambda_C=6
+p=5147 eps=-1 q2=4597 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=5153 eps=+1 q2=1988 zero-classes: 3:2 2728:0 3899:2 1:0 2:0  lambda_C=4
+p=5167 eps=+1 q2=3893 zero-classes: 3:2 2146:2 1:0 2:0  lambda_C=4
+p=5171 eps=-1 q2=3722 zero-classes: 3:2 1393:2 2422:2 1:2 2:0  lambda_C=8
+p=5179 eps=-1 q2=5155 zero-classes: 3:2 2165:0 4132:0 1:2 2:2  lambda_C=6
+p=5189 eps=-1 q2=2686 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=5197 eps=-1 q2=4154 zero-classes: 3:2 2747:0 4292:0 1:2 2:0  lambda_C=4
+p=5209 eps=+1 q2=4990 zero-classes: 3:2 43:0 2924:2 1:2 2:0  lambda_C=6
+p=5227 eps=-1 q2=2090 zero-classes: 3:2 408:2 1:2 2:0  lambda_C=6
+p=5231 eps=+1 q2=3746 zero-classes: 3:2 3494:2 4064:2 4607:0 1:2 2:2  lambda_C=10
+p=5233 eps=+1 q2=4919 zero-classes: 3:2 4879:2 1:0 2:0  lambda_C=4
+p=5237 eps=-1 q2=4664 zero-classes: 3:2 2850:2 1:0 2:0  lambda_C=4
+p=5261 eps=-1 q2=797 zero-classes: 3:2 2446:2 1:2 2:0  lambda_C=6
+p=5273 eps=+1 q2=3026 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=5279 eps=+1 q2=2592 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=5281 eps=+1 q2=1434 zero-classes: 3:2 1064:0 1441:2 1:2 2:2  lambda_C=8
+p=5297 eps=+1 q2=3393 zero-classes: 3:2 521:2 1:2 2:2  lambda_C=8
+p=5303 eps=+1 q2=303 zero-classes: 3:2 1884:0 1:0 2:2  lambda_C=4
+p=5309 eps=-1 q2=3531 zero-classes: 3:2 1618:2 1:2 2:0  lambda_C=6
+p=5323 eps=-1 q2=3759 zero-classes: 3:2 2782:0 1:0 2:2  lambda_C=4
+p=5333 eps=-1 q2=2172 zero-classes: 3:2 5258:2 1:0 2:2  lambda_C=6
+p=5347 eps=-1 q2=1717 zero-classes: 3:2 5006:0 1:2 2:0  lambda_C=4
+p=5351 eps=+1 q2=2489 zero-classes: 3:2 3516:0 5101:0 1:2 2:0  lambda_C=4
+p=5381 eps=-1 q2=1901 zero-classes: 3:2 118:0 1:2 2:0  lambda_C=4
+p=5387 eps=-1 q2=168 zero-classes: 3:2 1971:2 1:0 2:2  lambda_C=6
+p=5393 eps=+1 q2=759 zero-classes: 3:2 311:2 1:2 2:0  lambda_C=6
+p=5399 eps=+1 q2=19 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=5407 eps=+1 q2=2881 zero-classes: 3:2 4085:0 4653:2 1:2 2:0  lambda_C=6
+p=5413 eps=-1 q2=5037 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=5417 eps=+1 q2=4374 zero-classes: 3:2 1946:0 1:0 2:2  lambda_C=4
+p=5419 eps=-1 q2=3115 zero-classes: 3:2 4883:2 1:0 2:2  lambda_C=6
+p=5431 eps=+1 q2=4222 zero-classes: 3:2 2550:0 2677:2 1:0 2:2  lambda_C=6
+p=5437 eps=-1 q2=4014 zero-classes: 3:2 3986:0 1:2 2:0  lambda_C=4
+p=5441 eps=+1 q2=1820 zero-classes: 3:2 909:0 1:2 2:2  lambda_C=6
+p=5443 eps=-1 q2=424 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=5449 eps=+1 q2=4909 zero-classes: 3:2 3084:2 1:2 2:0  lambda_C=6
+p=5471 eps=+1 q2=4649 zero-classes: 3:2 3564:2 1:2 2:0  lambda_C=6
+p=5477 eps=-1 q2=2724 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=5479 eps=+1 q2=1347 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=5483 eps=-1 q2=2301 zero-classes: 3:2 1366:0 1:0 2:2  lambda_C=4
+p=5501 eps=-1 q2=3 zero-classes: 3:2 1612:0 3527:2 4409:2 1:0 2:2  lambda_C=8
+p=5503 eps=+1 q2=3372 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=5507 eps=-1 q2=457 zero-classes: 3:2 2153:0 3192:0 1:2 2:2  lambda_C=6
+p=5519 eps=+1 q2=1238 zero-classes: 3:2 235:0 5502:0 1:0 2:2  lambda_C=4
+p=5521 eps=+1 q2=1510 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=5527 eps=+1 q2=1419 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=5531 eps=-1 q2=5412 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=5557 eps=-1 q2=483 zero-classes: 3:2 1413:2 4019:0 1:0 2:2  lambda_C=6
+p=5563 eps=-1 q2=5525 zero-classes: 3:2 1753:0 1:0 2:2  lambda_C=4
+p=5569 eps=+1 q2=2876 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=5573 eps=-1 q2=166 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=5581 eps=-1 q2=3836 zero-classes: 3:2 3317:2 5489:2 1:2 2:2  lambda_C=10
+p=5591 eps=+1 q2=1500 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=5623 eps=+1 q2=4233 zero-classes: 3:2 3496:2 4041:2 1:2 2:0  lambda_C=8
+p=5639 eps=+1 q2=4815 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=5641 eps=+1 q2=5051 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=5647 eps=+1 q2=4020 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=5651 eps=-1 q2=3945 zero-classes: 3:2 3899:2 1:0 2:2  lambda_C=6
+p=5653 eps=-1 q2=4166 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=5657 eps=+1 q2=3874 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=5659 eps=-1 q2=4064 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=5669 eps=-1 q2=2522 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=5683 eps=-1 q2=23 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=5689 eps=+1 q2=3833 zero-classes: 3:2 3389:2 4392:0 1:0 2:2  lambda_C=6
+p=5693 eps=-1 q2=676 zero-classes: 3:2 3797:0 1:0 2:0  lambda_C=2
+p=5701 eps=-1 q2=737 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=5711 eps=+1 q2=511 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=5717 eps=-1 q2=5298 zero-classes: 3:2 5461:2 1:2 2:2  lambda_C=8
+p=5737 eps=+1 q2=3173 zero-classes: 3:2 4849:0 1:0 2:0  lambda_C=2
+p=5741 eps=-1 q2=800 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=5743 eps=+1 q2=2374 zero-classes: 3:2 1638:2 1:2 2:0  lambda_C=6
+p=5749 eps=-1 q2=874 zero-classes: 3:2 3204:0 1:0 2:2  lambda_C=4
+p=5779 eps=-1 q2=5076 zero-classes: 3:2 3235:0 1:2 2:0  lambda_C=4
+p=5783 eps=+1 q2=367 zero-classes: 3:2 1214:0 1:2 2:2  lambda_C=6
+p=5791 eps=+1 q2=1787 zero-classes: 3:2 75:2 2719:0 1:0 2:2  lambda_C=6
+p=5801 eps=+1 q2=5079 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=5807 eps=+1 q2=2717 zero-classes: 3:2 428:2 1714:2 1:0 2:2  lambda_C=8
+p=5813 eps=-1 q2=4009 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=5821 eps=-1 q2=1951 zero-classes: 3:2 625:0 5316:0 1:2 2:0  lambda_C=4
+p=5827 eps=-1 q2=3373 zero-classes: 3:2 5252:0 1:2 2:0  lambda_C=4
+p=5839 eps=+1 q2=2213 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=5843 eps=-1 q2=5258 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=5849 eps=+1 q2=5399 zero-classes: 3:2 1560:2 1871:2 3296:0 1:0 2:0  lambda_C=6
+p=5851 eps=-1 q2=4803 zero-classes: 3:2 546:0 1:2 2:2  lambda_C=6
+p=5857 eps=+1 q2=1382 zero-classes: 3:2 682:2 2794:0 1:2 2:2  lambda_C=8
+p=5861 eps=-1 q2=5412 zero-classes: 3:2 5358:2 1:0 2:2  lambda_C=6
+p=5867 eps=-1 q2=3863 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=5869 eps=-1 q2=4763 zero-classes: 3:2 1162:0 3837:0 1:2 2:0  lambda_C=4
+p=5879 eps=+1 q2=5587 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=5881 eps=+1 q2=2706 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=5897 eps=+1 q2=1610 zero-classes: 3:2 652:2 1:2 2:0  lambda_C=6
+p=5903 eps=+1 q2=4022 zero-classes: 3:2 942:0 1:0 2:2  lambda_C=4
+p=5923 eps=-1 q2=917 zero-classes: 3:2 3044:0 1:2 2:2  lambda_C=6
+p=5927 eps=+1 q2=2095 zero-classes: 3:2 727:2 1395:0 3864:2 1:0 2:0  lambda_C=6
+p=5939 eps=-1 q2=2714 zero-classes: 3:2 826:2 2271:2 4733:2 1:2 2:0  lambda_C=10
+p=5953 eps=+1 q2=1526 zero-classes: 3:2 4294:0 1:0 2:0  lambda_C=2
+p=5981 eps=-1 q2=3199 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=5987 eps=-1 q2=2239 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=6007 eps=+1 q2=3084 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=6011 eps=-1 q2=4087 zero-classes: 3:2 4444:2 1:0 2:0  lambda_C=4
+p=6029 eps=-1 q2=4808 zero-classes: 3:2 117:2 1:2 2:0  lambda_C=6
+p=6037 eps=-1 q2=755 zero-classes: 3:2 5176:0 1:0 2:2  lambda_C=4
+p=6043 eps=-1 q2=2979 zero-classes: 3:2 729:0 4394:2 1:0 2:0  lambda_C=4
+p=6047 eps=+1 q2=4337 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=6053 eps=-1 q2=4865 zero-classes: 3:2 2576:0 1:0 2:2  lambda_C=4
+p=6067 eps=-1 q2=49 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=6073 eps=+1 q2=4131 zero-classes: 3:2 2479:0 1:0 2:0  lambda_C=2
+p=6079 eps=+1 q2=4807 zero-classes: 3:2 2229:2 1:0 2:2  lambda_C=6
+p=6089 eps=+1 q2=2247 zero-classes: 3:2 980:2 4537:0 1:2 2:0  lambda_C=6
+p=6091 eps=-1 q2=106 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=6101 eps=-1 q2=2542 zero-classes: 3:2 3027:0 4541:2 1:2 2:2  lambda_C=8
+p=6113 eps=+1 q2=3187 zero-classes: 3:2 4990:0 1:2 2:0  lambda_C=4
+p=6121 eps=+1 q2=5478 zero-classes: 3:2 1224:2 1:0 2:2  lambda_C=6
+p=6131 eps=-1 q2=2730 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=6133 eps=-1 q2=1242 zero-classes: 3:2 3519:0 1:0 2:2  lambda_C=4
+p=6143 eps=+1 q2=1342 zero-classes: 3:2 4024:0 1:0 2:0  lambda_C=2
+p=6151 eps=+1 q2=1357 zero-classes: 3:2 3491:0 1:0 2:2  lambda_C=4
+p=6163 eps=-1 q2=3530 zero-classes: 3:2 790:2 1938:0 1:2 2:0  lambda_C=6
+p=6173 eps=-1 q2=5273 zero-classes: 3:2 2448:0 1:0 2:2  lambda_C=4
+p=6197 eps=-1 q2=3053 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=6199 eps=+1 q2=4092 zero-classes: 3:2 1516:2 1:0 2:0  lambda_C=4
+p=6203 eps=-1 q2=478 zero-classes: 3:2 1443:0 3244:2 1:2 2:0  lambda_C=6
+p=6211 eps=-1 q2=2122 zero-classes: 3:2 3601:2 1:0 2:2  lambda_C=6
+p=6217 eps=+1 q2=5620 zero-classes: 3:2 2041:0 1:2 2:2  lambda_C=6
+p=6221 eps=-1 q2=30 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=6229 eps=-1 q2=2306 zero-classes: 3:2 1504:2 3953:2 1:0 2:2  lambda_C=8
+p=6247 eps=+1 q2=2199 zero-classes: 3:2 2471:2 1:2 2:0  lambda_C=6
+p=6257 eps=+1 q2=2056 zero-classes: 3:2 4519:0 1:2 2:0  lambda_C=4
+p=6263 eps=+1 q2=2036 zero-classes: 3:2 1658:0 1:2 2:2  lambda_C=6
+p=6269 eps=-1 q2=3498 zero-classes: 3:2 3505:0 1:0 2:2  lambda_C=4
+p=6271 eps=+1 q2=2656 zero-classes: 3:2 5943:0 1:2 2:2  lambda_C=6
+p=6277 eps=-1 q2=3606 zero-classes: 3:2 2624:0 2760:0 3048:2 1:2 2:0  lambda_C=6
+p=6287 eps=+1 q2=3329 zero-classes: 3:2 64:2 2457:2 1:0 2:2  lambda_C=8
+p=6299 eps=-1 q2=5841 zero-classes: 3:2 5640:0 1:0 2:0  lambda_C=2
+p=6301 eps=-1 q2=3348 zero-classes: 3:2 5699:0 6015:2 1:2 2:0  lambda_C=6
+p=6311 eps=+1 q2=1568 zero-classes: 3:2 5600:0 1:0 2:2  lambda_C=4
+p=6317 eps=-1 q2=1899 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=6323 eps=-1 q2=249 zero-classes: 3:2 5268:2 1:0 2:0  lambda_C=4
+p=6329 eps=+1 q2=4274 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=6337 eps=+1 q2=1958 zero-classes: 3:2 5684:2 1:2 2:2  lambda_C=8
+p=6343 eps=+1 q2=716 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=6353 eps=+1 q2=2601 zero-classes: 3:2 4537:0 1:2 2:2  lambda_C=6
+p=6359 eps=+1 q2=2788 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=6361 eps=+1 q2=2384 zero-classes: 3:2 1835:2 1:0 2:0  lambda_C=4
+p=6367 eps=+1 q2=2849 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=6373 eps=-1 q2=5149 zero-classes: 3:2 32:2 3395:2 1:2 2:0  lambda_C=8
+p=6379 eps=-1 q2=5913 zero-classes: 3:2 2124:2 2997:0 3989:0 1:2 2:0  lambda_C=6
+p=6389 eps=-1 q2=1058 zero-classes: 3:2 4806:0 1:2 2:0  lambda_C=4
+p=6397 eps=-1 q2=3578 zero-classes: 3:2 1:0 2:0  lambda_C=2
+p=6421 eps=-1 q2=1270 zero-classes: 3:2 2261:2 5363:0 5994:0 1:2 2:0  lambda_C=6
+p=6427 eps=-1 q2=1022 zero-classes: 3:2 566:2 1182:0 1:2 2:0  lambda_C=6
+p=6449 eps=+1 q2=3524 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=6451 eps=-1 q2=3772 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=6469 eps=-1 q2=4106 zero-classes: 3:2 1423:0 1:2 2:0  lambda_C=4
+p=6473 eps=+1 q2=6331 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=6481 eps=+1 q2=5177 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=6491 eps=-1 q2=4978 zero-classes: 3:2 3419:0 1:0 2:0  lambda_C=2
+SUMMARY primes=292 zero-classes=1154  checks: p|a1,p|a2 failures=0  a2-formula failures=0  direct-law checks=0 failures=0
+root-count histogram (non-Wieferich): 0:451 1:0 2:703 3:0 4:0 5:0 6:0 7:0
+root-count histogram (Wieferich): 0:0 1:0 2:0 3:0 4:0 5:0 6:0 7:0
+lambda_C parity: even=292 odd=0   linear classes (c2 = 0): 0   double roots: 0

@@ -1,0 +1,6 @@
+m=2: X(m-2) = 2   brute force (strong after making pair 01 two-way) = 2   OK
+m=3: X(m-2) = 4   brute force (strong after making pair 01 two-way) = 4   OK
+m=4: X(m-2) = 36   brute force (strong after making pair 01 two-way) = 36   OK
+m=5: X(m-2) = 680   brute force (strong after making pair 01 two-way) = 680   OK
+m=6: X(m-2) = 25152   brute force (strong after making pair 01 two-way) = 25152   OK
+m=7: X(m-2) = 1784416   brute force (strong after making pair 01 two-way) = 1784416   OK

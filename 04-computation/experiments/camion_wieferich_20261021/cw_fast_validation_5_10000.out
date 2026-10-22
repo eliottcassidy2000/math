@@ -1,0 +1,12 @@
+  p=5 q_C=3
+  p=7 q_C=2
+  p=11 q_C=7
+CAMION-WIEFERICH p=13
+  p=13 q_C=0
+  p=17 q_C=14
+  p=19 q_C=1
+  p=23 q_C=8
+  p=29 q_C=7
+  p=31 q_C=2
+  p=37 q_C=2
+searched [5,10000]

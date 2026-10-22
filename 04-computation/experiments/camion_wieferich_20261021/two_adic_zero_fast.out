@@ -1,0 +1,20 @@
+K = 72 bits; recurrence order d = 13
+matches exact s(n)/n! for n < 30: True
+n* = 16221783116972227762 mod 2^64
+rational reconstruction: 765490658 / 1598160473  check: True
+  shift 3*2^1: v2(f(n+3*2^1) - f(n)) for 6 consecutive n: [4, 3, 3, 4, 3, 3]
+  shift 3*2^2: v2(f(n+3*2^2) - f(n)) for 6 consecutive n: [5, 4, 4, 5, 4, 4]
+  shift 3*2^3: v2(f(n+3*2^3) - f(n)) for 6 consecutive n: [6, 5, 5, 6, 5, 5]
+  shift 3*2^4: v2(f(n+3*2^4) - f(n)) for 6 consecutive n: [7, 6, 6, 7, 6, 6]
+  shift 3*2^5: v2(f(n+3*2^5) - f(n)) for 6 consecutive n: [8, 7, 7, 8, 7, 7]
+  shift 3*2^6: v2(f(n+3*2^6) - f(n)) for 6 consecutive n: [9, 8, 8, 9, 8, 8]
+  shift 3*2^7: v2(f(n+3*2^7) - f(n)) for 6 consecutive n: [10, 9, 9, 10, 9, 9]
+  shift 3*2^8: v2(f(n+3*2^8) - f(n)) for 6 consecutive n: [11, 10, 10, 11, 10, 10]
+  shift 3*2^8: v2(f(n+3*2^8) - f(n)) for 6 consecutive n: [11, 10, 10, 11, 10, 10]
+  quasi-period 3*2^1 mod 2^3: failing n (1..600) = [] (count 0)
+  quasi-period 3*2^2 mod 2^4: failing n (1..600) = [] (count 0)
+  quasi-period 3*2^3 mod 2^5: failing n (1..600) = [] (count 0)
+  quasi-period 3*2^4 mod 2^6: failing n (1..600) = [] (count 0)
+  quasi-period 3*2^5 mod 2^7: failing n (1..600) = [1, 2] (count 2)
+  quasi-period 3*2^6 mod 2^8: failing n (1..600) = [1, 2] (count 2)
+  quasi-period 3*2^7 mod 2^9: failing n (1..600) = [1, 2, 3] (count 3)

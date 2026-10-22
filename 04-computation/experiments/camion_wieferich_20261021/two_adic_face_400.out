@@ -1,0 +1,10 @@
+n <= 400: e(n) = v2(s(n)) - v2(n!) checked; failures: 8
+  n=50 e=9 predicted=6
+  n=98 e=6 predicted=7
+  n=146 e=7 predicted=6
+  n=194 e=6 predicted=8
+  n=242 e=8 predicted=6
+  n=290 e=6 predicted=7
+  n=338 e=7 predicted=6
+  n=386 e=6 predicted=9
+first values e(1..40): [0, None, 0, 0, 2, 0, 0, 3, 0, 0, 2, 0, 0, 4, 0, 0, 2, 0, 0, 3, 0, 0, 2, 0, 0, 5, 0, 0, 2, 0, 0, 3, 0, 0, 2, 0, 0, 4, 0, 0]

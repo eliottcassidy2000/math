@@ -1,0 +1,4 @@
+primes 7..10000: 1226; no odd sporadic class: 748 (0.6101; Siegel-type e^-1/2 = 0.6065); no even: 712 (0.5808); neither: 423 (0.3450; e^-1 = 0.3679)
+odd-class count histogram: 0:748 1:366 2:103 3:8 4:0 5:1 6:0 7:0
+even-class count histogram: 0:712 1:413 2:92 3:6 4:3 5:0 6:0 7:0
+$SP/camion_irregular 7 10000  2.08s user 0.00s system 93% cpu 2.227 total

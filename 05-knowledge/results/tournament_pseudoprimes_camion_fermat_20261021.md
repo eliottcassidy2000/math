@@ -343,3 +343,47 @@ The owner asked to prove and test HYP-9358(d′): `s(m + φ(p^k)) ≡ (2/p)·s(m
 * C: `pk_period.c`, `run_grid.sh`, `korselt_full.c`, `tower_deep.c`, `cg_pk.c`;
 * independent Python: `freeze_check.py`, `tau_check.py`;
 * each with its `.out`.
+
+## 13. Continuation 2: the Camion function (owner request: hunt h(p) ≥ 3, HYP-9357 at 27 and 31, long hypothesis/test loops)
+
+The canon statement is THM-4750 (pre-audit); the open laws are HYP-9361. This section records how the loops went.
+
+**Loop 1: h(p) ≥ 3 hunt.**
+* The fast Camion–Wieferich test `s(p) ≡ ε + p·u_p (mod p²)` (`cw_fast.c`) took the search to `10^5`.
+* It found one new prime, **22409**, confirmed by a second code that computes `D(p) mod p³` directly.
+* Measuring its tower height required the new idea of the session. `D(p^a)` cannot be reached directly, but the higher Kummer congruences make `l ↦ ε^(−l)D(p + l(p−1))` a polynomial mod `p^K`. Evaluating it at the `p`-adic point `l = −p/(p−1)` (that is, `n = 0`) gives the **Camion limit `Λ_p`**, and `h = v_p(Λ_p)`.
+* `h(22409) = 2`. No prime `≤ 10^5` has `h ≥ 3`. The heuristic says there are finitely many such primes (`Σ 1/p² ≈ 0.09`).
+
+**Loop 2: what the congruences represent.**
+* The Mahler coefficients decay at half the Kummer rate: one power of `p` per two steps, because each power of the Fermat drift `u` arrives with the degree-2 polynomial `C(n,2)`. This is sharp at every tested non-Wieferich prime (`camion_speed.out`).
+* That suggested the curvature formula `a_2/p ≡ −q_2(p)X(m−2)`, proved and then checked in every class of every prime `≤ 10^4`.
+* Its prediction is that at Wieferich primes the counts become linear mod `p²`, so each zero class has one second-order root. At other primes the roots of a quadratic come in pairs (0 or 2).
+  * The prediction was made before the test and confirmed exactly: 4 of 4 classes at 1093 and 4 of 4 at 3511 have one root.
+  * Over 1226 primes the split:inert ratio is 1:1. The triangle class is always split, by its exact zero `D(3) = 0`.
+* Two further predictions also passed:
+  * **base 3** (strong semicomplete digraphs) is at full speed exactly at the base-3 Wieferich prime 11;
+  * **`r = 3`** (connected 3-uniform hypergraphs) gives cubic class sequences with random-cubic root statistics.
+* Recorded but not claimed: a deficit of double roots, and a slight underdispersion of the sporadic counts.
+
+**Loop 3: sparks from the random wide-net survey** (122 files sampled across canon, results, reflections and write-ups).
+* *Spark: "(E^(p−1) − ε)^r s ≡ 0 mod p^r".* REFUTED except at Wieferich primes. Half speed gives only `(E^(p−1) − ε)^(2k−1) s ≡ 0 mod p^k`.
+* *Spark: "a 2-adic Camion face via Moon's odd-order theorem".* Confirmed and sharpened into THM-4750 (6):
+  * `T ≡ Φ_3 (mod 2)` forces the parity law for strong isomorphism classes;
+  * the groupoid count `f(n) = Σ 1/|Aut|` is 2-adically quasi-periodic with period `3·2^j`, since `F_4^×` replaces `F_p^×`;
+  * on `n ≡ 2 (mod 3)` it has a single simple 2-adic zero `n* ≡ 3250 (mod 4096)`.
+  * The spark's guessed formula `3 + v_2((n−2)/6)` fails from `n = 50`. The truth is `2 + v_2(n − n*)`.
+* Repunit-side sparks (one-apex stratum, Fermat-type monoid, free-vertex doubling, carry adjacency, and others) were forwarded to opus S51, whose lane that is. Session25/26 already have the one-apex recurrence.
+* The HYP-9357 spark "Paley + sink switching class" was not run.
+
+**Loop 4: repunit archaeology.**
+* About 45 threads were catalogued and forwarded to opus S51 as raw material for THM-4748/4749 (`agents/opus/inbox/MSG-2399`).
+* The unifying reading: a base-`b` repunit truncates the fixed point `−1/(b−1)` of `x ↦ bx + 1`.
+* Three unrecorded errata were found and fixed (MISTAKE-653).
+
+**Loop 5: HYP-9357.** The rotational circulant beats Paley at `q = 27` and `q = 31` (two independent exact codes; ratios 1.0205 and 1.0239). The gap keeps growing with `q`.
+
+**What it all represents.**
+* Mod `p`, a labelled count in the `2^C(n,2)` family is a twisted exponential sum over the Teichmüller group. That is Camion pseudoprimality.
+* Mod `p^k` it is a `p`-adic analytic function of the class index. Its speed is `1/(degree of the edge count)`, and its curvature is the Fermat quotient of the number of edge states.
+* The tower heights are the valuations of one regularized value, `Λ_p`, the branch through `K1` evaluated at "zero vertices".
+* At `p = 2` the same picture is controlled by Moon's theorem and by `Φ_3`, the mod-2 shadow of the tournament EGF.

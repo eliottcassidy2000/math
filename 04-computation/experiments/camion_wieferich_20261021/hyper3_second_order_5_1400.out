@@ -1,0 +1,42 @@
+p=23 ord2=11 zero-classes: 20:1 1:0 2:3
+p=31 ord2=5 zero-classes: 1:0 2:3
+p=47 ord2=23 zero-classes: 12:1 1:0 2:1
+p=71 ord2=35 zero-classes: 25:3 1:3 2:1
+p=89 ord2=11 zero-classes: 1:1 2:3
+p=127 ord2=7 zero-classes: 1:3 2:1
+p=167 ord2=83 zero-classes: 1:2 2:1
+p=191 ord2=95 zero-classes: 64:1(deg<3) 65:3 1:0 2:1
+p=223 ord2=37 zero-classes: 1:0 2:1
+p=233 ord2=29 zero-classes: 14:0 90:0 1:0 2:1
+p=239 ord2=119 zero-classes: 1:0 2:3
+p=263 ord2=131 zero-classes: 1:0 2:3
+p=311 ord2=155 zero-classes: 1:1 2:3
+p=359 ord2=179 zero-classes: 76:0 313:3 1:0 2:3
+p=383 ord2=191 zero-classes: 286:1 1:3 2:1
+p=431 ord2=43 zero-classes: 42:3 325:1 1:1 2:3
+p=439 ord2=73 zero-classes: 1:0 2:1
+p=479 ord2=239 zero-classes: 149:1 153:0 454:3 1:0 2:3 5:0
+p=503 ord2=251 zero-classes: 336:3 497:0 1:0 2:1
+p=599 ord2=299 zero-classes: 1:0 2:3
+p=601 ord2=25 zero-classes: 1:0 2:3
+p=647 ord2=323 zero-classes: 1:1 2:1
+p=719 ord2=359 zero-classes: 202:3 660:0 1:3 2:1
+p=727 ord2=121 zero-classes: 0:1 1:1 2:1
+p=743 ord2=371 zero-classes: 1:1 2:1
+p=839 ord2=419 zero-classes: 122:1 589:1 1:1 2:1
+p=863 ord2=431 zero-classes: 580:1 1:0 2:1
+p=881 ord2=55 zero-classes: 229:1 259:3 528:1 757:1 1:3 2:1
+p=887 ord2=443 zero-classes: 1:1 2:1
+p=911 ord2=91 zero-classes: 107:0 1:1 2:1
+p=983 ord2=491 zero-classes: 113:3 1:1 2:3
+p=1031 ord2=515 zero-classes: 1:1 2:3
+p=1103 ord2=29 zero-classes: 284:0 1:0 2:3
+p=1151 ord2=575 zero-classes: 1:1 2:1
+p=1223 ord2=611 zero-classes: 7:1 469:3 1072:1 1168:0 1:0 2:3
+p=1289 ord2=161 zero-classes: 12:0 1013:3 1:3 2:3
+p=1319 ord2=659 zero-classes: 1009:1 1:1 2:1
+p=1327 ord2=221 zero-classes: 1:0 2:1
+p=1367 ord2=683 zero-classes: 1:1 2:3
+p=1399 ord2=233 zero-classes: 75:0 1:1 2:1
+SUMMARY primes=40 classes=25178  cubic-law failures (p|a1,a2,a3; p^2|a4)=0  classes with p^2|a3 (not cubic)=31  direct checks=33166 failures=0
+zero classes=119  root-count histogram: 0:30 1:54 2:1 3:34 >3:0   (random cubic: 1/3, 1/2, ~0, 1/6)

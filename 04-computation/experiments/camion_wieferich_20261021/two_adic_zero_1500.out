@@ -1,0 +1,3 @@
+n <= 1500: 499 values n = 2 (mod 3); n* determined mod 2^12: n* = 3250 (mod 2^12)  [binary 0b110010110010]
+violations of E(n) = 2 + v2(n - n*) (with v2 capped at k): [] count 0
+largest valuations: [(13, 1202), (10, 434), (9, 818), (9, 50), (8, 1394), (8, 1010), (8, 626), (8, 242)]

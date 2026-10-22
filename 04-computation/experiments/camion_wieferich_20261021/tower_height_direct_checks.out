@@ -1,0 +1,48 @@
+p=7 K=3 eps=+1  (s computed to m=31)
+  a=1: v_p(D(p^1)) = 1
+  a=2: v_p(D(p^2)) = 1
+  a=3: v_p(D(p^3)) = 1
+  a=4: v_p(D(p^4)) = 1
+  a=5: v_p(D(p^5)) = 1
+  Lambda_p (limit, up to sign): v_p = 1   => h(p) = 1
+  direct check D(p^2) mod p^3: direct=210 interpolated=210 MATCH
+p=11 K=3 eps=-1  (s computed to m=51)
+  a=1: v_p(D(p^1)) = 1
+  a=2: v_p(D(p^2)) = 1
+  a=3: v_p(D(p^3)) = 1
+  a=4: v_p(D(p^4)) = 1
+  a=5: v_p(D(p^5)) = 1
+  Lambda_p (limit, up to sign): v_p = 1   => h(p) = 1
+  direct check D(p^2) mod p^3: direct=1254 interpolated=1254 MATCH
+p=13 K=3 eps=-1  (s computed to m=61)
+  a=1: v_p(D(p^1)) = 2
+  a=2: v_p(D(p^2)) = 2
+  a=3: v_p(D(p^3)) = 2
+  a=4: v_p(D(p^4)) = 2
+  a=5: v_p(D(p^5)) = 2
+  Lambda_p (limit, up to sign): v_p = 2   => h(p) = 2
+  direct check D(p^2) mod p^3: direct=845 interpolated=845 MATCH
+p=17 K=3 eps=+1  (s computed to m=81)
+  a=1: v_p(D(p^1)) = 1
+  a=2: v_p(D(p^2)) = 1
+  a=3: v_p(D(p^3)) = 1
+  a=4: v_p(D(p^4)) = 1
+  a=5: v_p(D(p^5)) = 1
+  Lambda_p (limit, up to sign): v_p = 1   => h(p) = 1
+  direct check D(p^2) mod p^3: direct=816 interpolated=816 MATCH
+p=19 K=3 eps=-1  (s computed to m=91)
+  a=1: v_p(D(p^1)) = 1
+  a=2: v_p(D(p^2)) = 1
+  a=3: v_p(D(p^3)) = 1
+  a=4: v_p(D(p^4)) = 1
+  a=5: v_p(D(p^5)) = 1
+  Lambda_p (limit, up to sign): v_p = 1   => h(p) = 1
+  direct check D(p^2) mod p^3: direct=703 interpolated=703 MATCH
+p=23 K=3 eps=+1  (s computed to m=111)
+  a=1: v_p(D(p^1)) = 1
+  a=2: v_p(D(p^2)) = 1
+  a=3: v_p(D(p^3)) = 1
+  a=4: v_p(D(p^4)) = 1
+  a=5: v_p(D(p^5)) = 1
+  Lambda_p (limit, up to sign): v_p = 1   => h(p) = 1
+  direct check D(p^2) mod p^3: direct=8119 interpolated=8119 MATCH

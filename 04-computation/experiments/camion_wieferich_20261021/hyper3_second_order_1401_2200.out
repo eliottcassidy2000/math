@@ -1,0 +1,22 @@
+p=1433 ord2=179 zero-classes: 119:0 1:3 2:3
+p=1439 ord2=719 zero-classes: 1:1 2:1
+p=1471 ord2=245 zero-classes: 557:1 1017:0 1152:1 1:3 2:3
+p=1487 ord2=743 zero-classes: 1:3 2:1
+p=1511 ord2=755 zero-classes: 1278:0 1:3 2:3
+p=1559 ord2=779 zero-classes: 330:0 1:1 2:3
+p=1583 ord2=791 zero-classes: 732:1 1:0 2:3
+p=1607 ord2=803 zero-classes: 962:3 1:0 2:3
+p=1721 ord2=215 zero-classes: 1:1 2:3
+p=1801 ord2=25 zero-classes: 645:0 775:1 1:1 2:1
+p=1823 ord2=911 zero-classes: 1:1 2:1
+p=1831 ord2=305 zero-classes: 269:0 1512:0 1:1 2:3
+p=1847 ord2=923 zero-classes: 54:0 1:1 2:1
+p=1871 ord2=935 zero-classes: 1:3 2:1
+p=1913 ord2=239 zero-classes: 1:3 2:1
+p=2039 ord2=1019 zero-classes: 1:1 2:3
+p=2063 ord2=1031 zero-classes: 1:0 2:3
+p=2087 ord2=1043 zero-classes: 906:1 1:0 2:3
+p=2089 ord2=29 zero-classes: 1:1 2:3
+p=2111 ord2=1055 zero-classes: 799:0 1274:3 1637:3 1:1 2:1
+SUMMARY primes=20 classes=35266  cubic-law failures (p|a1,a2,a3; p^2|a4)=0  classes with p^2|a3 (not cubic)=27  direct checks=0 failures=0
+zero classes=57  root-count histogram: 0:13 1:23 2:0 3:21 >3:0   (random cubic: 1/3, 1/2, ~0, 1/6)
