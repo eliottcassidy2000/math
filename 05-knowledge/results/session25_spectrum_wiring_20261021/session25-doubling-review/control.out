@@ -1,0 +1,4 @@
+all-order enumeration 2 compatible 6 incompatible 0 solutions 2
+all-order enumeration 3 compatible 80 incompatible 40 solutions 4
+all-order enumeration 4 compatible 5040 incompatible 0 solutions 2
+PASS: parent indices and CRT/depth through M200; examples M21,63,341; exhaustive order/reversal controls M2,3,4

@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "moduli": [
+    2,
+    1000
+  ],
+  "checks": 1001997,
+  "examples": [
+    {
+      "M": 2,
+      "n": 5,
+      "nonzero_cycles": 0,
+      "reversal_assignments": 2
+    },
+    {
+      "M": 3,
+      "n": 9,
+      "nonzero_cycles": 1,
+      "reversal_assignments": 4
+    },
+    {
+      "M": 4,
+      "n": 13,
+      "nonzero_cycles": 0,
+      "reversal_assignments": 2
+    },
+    {
+      "M": 5,
+      "n": 17,
+      "nonzero_cycles": 1,
+      "reversal_assignments": 4
+    },
+    {
+      "M": 6,
+      "n": 21,
+      "nonzero_cycles": 1,
+      "reversal_assignments": 4
+    },
+    {
+      "M": 8,
+      "n": 29,
+      "nonzero_cycles": 0,
+      "reversal_assignments": 2
+    },
+    {
+      "M": 21,
+      "n": 81,
+      "nonzero_cycles": 5,
+      "reversal_assignments": 64
+    },
+    {
+      "M": 63,
+      "n": 249,
+      "nonzero_cycles": 12,
+      "reversal_assignments": 8192
+    },
+    {
+      "M": 341,
+      "n": 1361,
+      "nonzero_cycles": 37,
+      "reversal_assignments": 274877906944
+    }
+  ]
+}
