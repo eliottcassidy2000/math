@@ -1,0 +1,87 @@
+(W) w(2^k - 1) and w(2^k + 1)
+     k =  2: w(2^k-1) =  1 [3]   =   w(2^k+1) =  1 [5]   FINITE-EXACT
+     k =  3: w(2^k-1) = -1000000000 [7]   <   w(2^k+1) =  2 [3^2]   FINITE-EXACT
+     k =  4: w(2^k-1) =  2 [3*5]   >   w(2^k+1) =  1 [17]   FINITE-EXACT
+     k =  5: w(2^k-1) =  1 [31]   <   w(2^k+1) =  2 [3*11]   FINITE-EXACT
+     k =  6: w(2^k-1) =  1 [3^2*7]   <   w(2^k+1) =  2 [5*13]   FINITE-EXACT
+     k =  7: w(2^k-1) =  1 [127]   <   w(2^k+1) =  2 [3*43]   FINITE-EXACT
+     k =  8: w(2^k-1) =  3 [3*5*17]   >   w(2^k+1) =  1 [257]   FINITE-EXACT
+     k =  9: w(2^k-1) =  1 [7*73]   <   w(2^k+1) =  4 [3^3*19]   FINITE-EXACT
+     k = 10: w(2^k-1) =  3 [3*11*31]   =   w(2^k+1) =  3 [5^2*41]   FINITE-EXACT
+     k = 11: w(2^k-1) =  2 [23*89]   =   w(2^k+1) =  2 [3*683]   FINITE-EXACT
+     k = 12: w(2^k-1) =  4 [3^2*5*7*13]   >   w(2^k+1) =  2 [17*241]   FINITE-EXACT
+     k = 13: w(2^k-1) =  1 [8191]   <   w(2^k+1) =  2 [3*2731]   FINITE-EXACT
+     k = 14: w(2^k-1) =  3 [3*43*127]   =   w(2^k+1) =  3 [5*29*113]   FINITE-EXACT
+     k = 15: w(2^k-1) =  2 [7*31*151]   <   w(2^k+1) =  4 [3^2*11*331]   FINITE-EXACT
+     k = 16: w(2^k-1) =  4 [3*5*17*257]   >   w(2^k+1) =  1 [65537]   FINITE-EXACT
+     k = 17: w(2^k-1) =  1 [131071]   <   w(2^k+1) =  2 [3*43691]   conditional on V-membership of large factors
+     k = 18: w(2^k-1) =  5 [3^3*7*19*73]   >   w(2^k+1) =  4 [5*13*37*109]   FINITE-EXACT
+     k = 19: w(2^k-1) =  1 [524287]   <   w(2^k+1) =  2 [3*174763]   conditional on V-membership of large factors
+     k = 20: w(2^k-1) =  6 [3*5^2*11*31*41]   >   w(2^k+1) =  2 [17*61681]   FINITE-EXACT
+     k = 21: w(2^k-1) =  3 [7^2*127*337]   <   w(2^k+1) =  4 [3^2*43*5419]   FINITE-EXACT
+     k = 22: w(2^k-1) =  4 [3*23*89*683]   >   w(2^k+1) =  3 [5*397*2113]   FINITE-EXACT
+     k = 23: w(2^k-1) =  2 [47*178481]   =   w(2^k+1) =  2 [3*2796203]   conditional on V-membership of large factors
+     k = 24: w(2^k-1) =  6 [3^2*5*7*13*17*241]   >   w(2^k+1) =  3 [97*257*673]   FINITE-EXACT
+     k = 25: w(2^k-1) =  3 [31*601*1801]   <   w(2^k+1) =  4 [3*11*251*4051]   FINITE-EXACT
+     k = 26: w(2^k-1) =  3 [3*2731*8191]   <   w(2^k+1) =  4 [5*53*157*1613]   FINITE-EXACT
+     k = 27: w(2^k-1) =  2 [7*73*262657]   <   w(2^k+1) =  6 [3^4*19*87211]   conditional on V-membership of large factors
+     k = 28: w(2^k-1) =  6 [3*5*29*43*113*127]   >   w(2^k+1) =  2 [17*15790321]   conditional on V-membership of large factors
+     k = 29: w(2^k-1) =  3 [233*1103*2089]   =   w(2^k+1) =  3 [3*59*3033169]   conditional on V-membership of large factors
+     k = 30: w(2^k-1) =  6 [3^2*7*11*31*151*331]   =   w(2^k+1) =  6 [5^2*13*41*61*1321]   FINITE-EXACT
+     k = 31: w(2^k-1) =  1 [2147483647]   <   w(2^k+1) =  2 [3*715827883]   conditional on V-membership of large factors
+     k = 32: w(2^k-1) =  5 [3*5*17*257*65537]   >   w(2^k+1) =  2 [641*6700417]   conditional on V-membership of large factors
+     k = 33: w(2^k-1) =  3 [7*23*89*599479]   <   w(2^k+1) =  5 [3^2*67*683*20857]   conditional on V-membership of large factors
+     k = 34: w(2^k-1) =  3 [3*43691*131071]   <   w(2^k+1) =  4 [5*137*953*26317]   conditional on V-membership of large factors
+     k = 35: w(2^k-1) =  4 [31*71*127*122921]   <   w(2^k+1) =  5 [3*11*43*281*86171]   conditional on V-membership of large factors
+     k = 36: w(2^k-1) =  9 [3^3*5*7*13*19*37*73*109]   >   w(2^k+1) =  4 [17*241*433*38737]   FINITE-EXACT
+     k = 37: w(2^k-1) =  2 [223*616318177]   <   w(2^k+1) =  3 [3*1777*25781083]   conditional on V-membership of large factors
+     k = 38: w(2^k-1) =  3 [3*174763*524287]   <   w(2^k+1) =  4 [5*229*457*525313]   conditional on V-membership of large factors
+     k = 39: w(2^k-1) =  3 [7*79*8191*121369]   <   w(2^k+1) =  4 [3^2*2731*22366891]   conditional on V-membership of large factors
+     k = 40: w(2^k-1) =  8 [3*5^2*11*17*31*41*61681]   >   w(2^k+1) =  2 [257*4278255361]   conditional on V-membership of large factors
+  ok   for k <= 16 every prime factor of 2^k +- 1 is below 80,265 (degrees certified)
+  ok   7, 21 have no factorization into V; w = 1 for 31, 63, 127, 511, 8191 (63 = 3*21 = 9*7 and 511 = 7*73 are blocked)
+  ok   odd k: Phi_2(2) = 3 = H(C_3) divides 2^k + 1 and not 2^k - 1
+  ok   odd 3 <= k <= 17: (2^k + 1)/3 is a strong value below 80,265, so w(2^k + 1) >= 2
+  ok   odd k <= 17 with 2^k - 1 prime or blocked: [3, 5, 7, 9, 13, 17]; there deg N(., 2^k - 1) <= 1 < 2 <= deg N(., 2^k + 1)
+  ok   odd 5 <= k <= 40 (k > 17 conditional): w(2^k - 1) > w(2^k + 1) never occurs; ties at k = [11, 23, 29] (then the leading coefficients decide)
+  ok   k = 2^j (4, 8, 16): 2^k - 1 is a product of distinct Fermat numbers, 2^k + 1 a Fermat prime: [(4, 2, 1), (8, 3, 1), (16, 4, 1)]
+(P) the degree law on exact counts (h = 2^k +- 1 < 2100, n <= 40)
+     strong inventory below 2100: 723544 classes [153s]
+     h = 3: w = 1; N(n,h) for n = 8..14: [6, 7, 8, 9, 10, 11, 12]; 1-th difference from n = 2: [1] ok
+     h = 5: w = 1; N(n,h) for n = 8..14: [5, 6, 7, 8, 9, 10, 11]; 1-th difference from n = 3: [1] ok
+     h = 7: w = -1000000000; N(n,h) for n = 8..14: [0, 0, 0, 0, 0, 0, 0]; -1000000000-th difference from n = 3: [0] ok
+     h = 9: w = 2; N(n,h) for n = 8..14: [14, 20, 27, 35, 44, 54, 65]; 2-th difference from n = 4: [1] ok
+     h = 15: w = 2; N(n,h) for n = 8..14: [20, 30, 42, 56, 72, 90, 110]; 2-th difference from n = 5: [2] ok
+     h = 17: w = 1; N(n,h) for n = 8..14: [6, 8, 10, 12, 14, 16, 18]; 1-th difference from n = 5: [2] ok
+     h = 31: w = 1; N(n,h) for n = 8..14: [10, 14, 18, 22, 26, 30, 34]; 1-th difference from n = 6: [4] ok
+     h = 33: w = 2; N(n,h) for n = 8..14: [23, 35, 49, 65, 83, 103, 125]; 2-th difference from n = 6: [2] ok
+     h = 63: w = 1; N(n,h) for n = 8..14: [2, 4, 6, 8, 10, 12, 14]; 1-th difference from n = 7: [2] ok
+     h = 65: w = 2; N(n,h) for n = 8..14: [25, 41, 59, 79, 101, 125, 151]; 2-th difference from n = 7: [2] ok
+     h = 127: w = 1; N(n,h) for n = 8..14: [10, 22, 34, 46, 58, 70, 82]; 1-th difference from n = 9: [12] ok
+     h = 129: w = 2; N(n,h) for n = 8..14: [40, 84, 136, 196, 264, 340, 424]; 2-th difference from n = 9: [8] ok
+     h = 255: w = 3; N(n,h) for n = 8..14: [28, 91, 188, 333, 538, 815, 1176]; 3-th difference from n = 10: [12] ok
+     h = 257: w = 1; N(n,h) for n = 8..14: [30, 90, 163, 236, 309, 382, 455]; 1-th difference from n = 10: [73] ok
+     h = 511: w = 1; N(n,h) for n = 8..14: [32, 136, 290, 454, 618, 782, 946]; 1-th difference from n = 11: [164] ok
+     h = 513: w = 4; N(n,h) for n = 8..14: [35, 155, 363, 663, 1082, 1655, 2427]; 4-th difference from n = 11: [8] ok
+     h = 1023: w = 3; N(n,h) for n = 8..14: [0, 193, 602, 1229, 2112, 3283, 4770]; 3-th difference from n = 12: [24] ok
+     h = 1025: w = 3; N(n,h) for n = 8..14: [0, 168, 543, 1032, 1596, 2291, 3133]; 3-th difference from n = 12: [18] ok
+     h = 2047: w = 2; N(n,h) for n = 8..14: [0, 149, 990, 2325, 3848, 5547, 7426]; 2-th difference from n = 14: [184] ok
+     h = 2049: w = 2; N(n,h) for n = 8..14: [0, 174, 1029, 2435, 4471, 7060, 10168]; 2-th difference from n = 14: [516] ok
+  ok   every N(n, 2^k +- 1) (h < 2100) is a polynomial of degree w(h) from n = floor(3 log_5 h) on (Session24 law, exact data)
+(A) asymptotic sign of N(n, 2^k - 1) - N(n, 2^k + 1)
+     k =  4: 2^k - 1 commoner as n -> infinity
+     k =  5: 2^k - 1 rarer as n -> infinity
+     k =  6: 2^k - 1 rarer as n -> infinity
+     k =  7: 2^k - 1 rarer as n -> infinity
+     k =  8: 2^k - 1 commoner as n -> infinity
+     k =  9: 2^k - 1 rarer as n -> infinity
+     k = 10: same degree (leading coefficients decide) as n -> infinity
+     k = 11: same degree (leading coefficients decide) as n -> infinity
+     k = 12: 2^k - 1 commoner as n -> infinity
+     k = 13: 2^k - 1 rarer as n -> infinity
+     k = 14: same degree (leading coefficients decide) as n -> infinity
+     k = 15: 2^k - 1 rarer as n -> infinity
+     k = 16: 2^k - 1 commoner as n -> infinity
+  ok   asymptotic signs listed
+
+ALL CHECKS PASSED  (153s)

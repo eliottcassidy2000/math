@@ -1,0 +1,13 @@
+     m =  5:     20 configurations,     5 distinct H,    1 of them = 7 mod 8 (share 0.200); largest odd part of H + 1 among them 1; repunits so far {15: 5} [1s]
+     m =  6:    120 configurations,    14 distinct H,    3 of them = 7 mod 8 (share 0.214); largest odd part of H + 1 among them 3; repunits so far {15: 5, 31: 6} [1s]
+     m =  7:    455 configurations,    44 distinct H,    8 of them = 7 mod 8 (share 0.182); largest odd part of H + 1 among them 13; repunits so far {15: 5, 31: 6} [1s]
+     m =  8:   1330 configurations,   113 distinct H,   24 of them = 7 mod 8 (share 0.212); largest odd part of H + 1 among them 37; repunits so far {15: 5, 31: 6, 63: 8, 127: 8} [1s]
+     m =  9:   3276 configurations,   256 distinct H,   66 of them = 7 mod 8 (share 0.258); largest odd part of H + 1 among them 97; repunits so far {15: 5, 31: 6, 63: 8, 127: 8, 255: 9} [1s]
+     m = 10:   7140 configurations,   527 distinct H,  128 of them = 7 mod 8 (share 0.243); largest odd part of H + 1 among them 343; repunits so far {15: 5, 31: 6, 63: 8, 127: 8, 255: 9, 1023: 10} [1s]
+     m = 11:  14190 configurations,  1034 distinct H,  239 of them = 7 mod 8 (share 0.231); largest odd part of H + 1 among them 829; repunits so far {15: 5, 31: 6, 63: 8, 127: 8, 255: 9, 511: 11, 1023: 10} [2s]
+     m = 12:  26235 configurations,  1907 distinct H,  413 of them = 7 mod 8 (share 0.217); largest odd part of H + 1 among them 3737; repunits so far {15: 5, 31: 6, 63: 8, 127: 8, 255: 9, 511: 11, 1023: 10} [5s]
+     m = 13:  45760 configurations,  3320 distinct H,  658 of them = 7 mod 8 (share 0.198); largest odd part of H + 1 among them 7267; repunits so far {15: 5, 31: 6, 63: 8, 127: 8, 255: 9, 511: 11, 1023: 10, 2047: 13, 32767: 13} [16s]
+  ok   three reversed arcs reach 2^k - 1 for every 4 <= k <= 11 and for k = 15 (m <= 13): the bound of THM-4748 (3) is attained
+  ok   with three reversed arcs the odd parts of H + 1 (H = 7 mod 8) grow without visible bound: no finite set of lines
+
+ALL CHECKS PASSED  (16s)
