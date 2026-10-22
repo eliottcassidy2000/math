@@ -1,0 +1,195 @@
+{
+  "status": "all assertions passed",
+  "scope": "All labelled tournaments n=1..5 and every directed Hamilton path; presentation strata 1<=k<n.",
+  "results": [
+    {
+      "n": 1,
+      "labelled_tournaments": 1,
+      "ordinary_classes": 1,
+      "path_transforms_checked": 1,
+      "strata": []
+    },
+    {
+      "n": 2,
+      "labelled_tournaments": 2,
+      "ordinary_classes": 1,
+      "path_transforms_checked": 2,
+      "strata": [
+        {
+          "k": 1,
+          "m": 1,
+          "classes": 1,
+          "strong_classes": 0,
+          "self_converse_classes": 1,
+          "weighted_H": "1",
+          "weighted_fH": "2",
+          "presentations": 2,
+          "presentation_H_sum": 2,
+          "nonunique_presentations": 2,
+          "collision_presentations": 0,
+          "core_SCC_bad_presentations": 0,
+          "strong_presentations": 0
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "labelled_tournaments": 8,
+      "ordinary_classes": 2,
+      "path_transforms_checked": 12,
+      "strata": [
+        {
+          "k": 1,
+          "m": 2,
+          "classes": 2,
+          "strong_classes": 1,
+          "self_converse_classes": 2,
+          "weighted_H": "2",
+          "weighted_fH": "6",
+          "presentations": 4,
+          "presentation_H_sum": 6,
+          "nonunique_presentations": 4,
+          "collision_presentations": 0,
+          "core_SCC_bad_presentations": 0,
+          "strong_presentations": 1
+        },
+        {
+          "k": 2,
+          "m": 1,
+          "classes": 2,
+          "strong_classes": 1,
+          "self_converse_classes": 2,
+          "weighted_H": "2",
+          "weighted_fH": "6",
+          "presentations": 8,
+          "presentation_H_sum": 12,
+          "nonunique_presentations": 8,
+          "collision_presentations": 4,
+          "core_SCC_bad_presentations": 6,
+          "strong_presentations": 2
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "labelled_tournaments": 64,
+      "ordinary_classes": 4,
+      "path_transforms_checked": 192,
+      "strata": [
+        {
+          "k": 1,
+          "m": 3,
+          "classes": 4,
+          "strong_classes": 1,
+          "self_converse_classes": 2,
+          "weighted_H": "8",
+          "weighted_fH": "20",
+          "presentations": 8,
+          "presentation_H_sum": 20,
+          "nonunique_presentations": 8,
+          "collision_presentations": 0,
+          "core_SCC_bad_presentations": 0,
+          "strong_presentations": 2
+        },
+        {
+          "k": 2,
+          "m": 2,
+          "classes": 4,
+          "strong_classes": 1,
+          "self_converse_classes": 2,
+          "weighted_H": "8",
+          "weighted_fH": "48",
+          "presentations": 32,
+          "presentation_H_sum": 96,
+          "nonunique_presentations": 32,
+          "collision_presentations": 8,
+          "core_SCC_bad_presentations": 16,
+          "strong_presentations": 12
+        },
+        {
+          "k": 3,
+          "m": 1,
+          "classes": 4,
+          "strong_classes": 1,
+          "self_converse_classes": 2,
+          "weighted_H": "8",
+          "weighted_fH": "32",
+          "presentations": 64,
+          "presentation_H_sum": 192,
+          "nonunique_presentations": 64,
+          "collision_presentations": 64,
+          "core_SCC_bad_presentations": 36,
+          "strong_presentations": 24
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "labelled_tournaments": 1024,
+      "ordinary_classes": 12,
+      "path_transforms_checked": 7680,
+      "strata": [
+        {
+          "k": 1,
+          "m": 4,
+          "classes": 9,
+          "strong_classes": 3,
+          "self_converse_classes": 5,
+          "weighted_H": "43",
+          "weighted_fH": "72",
+          "presentations": 16,
+          "presentation_H_sum": 72,
+          "nonunique_presentations": 14,
+          "collision_presentations": 0,
+          "core_SCC_bad_presentations": 0,
+          "strong_presentations": 4
+        },
+        {
+          "k": 2,
+          "m": 3,
+          "classes": 12,
+          "strong_classes": 6,
+          "self_converse_classes": 8,
+          "weighted_H": "64",
+          "weighted_fH": "432",
+          "presentations": 128,
+          "presentation_H_sum": 864,
+          "nonunique_presentations": 128,
+          "collision_presentations": 16,
+          "core_SCC_bad_presentations": 40,
+          "strong_presentations": 58
+        },
+        {
+          "k": 3,
+          "m": 2,
+          "classes": 12,
+          "strong_classes": 6,
+          "self_converse_classes": 8,
+          "weighted_H": "64",
+          "weighted_fH": "640",
+          "presentations": 512,
+          "presentation_H_sum": 3840,
+          "nonunique_presentations": 512,
+          "collision_presentations": 320,
+          "core_SCC_bad_presentations": 186,
+          "strong_presentations": 272
+        },
+        {
+          "k": 4,
+          "m": 1,
+          "classes": 12,
+          "strong_classes": 6,
+          "self_converse_classes": 8,
+          "weighted_H": "64",
+          "weighted_fH": "320",
+          "presentations": 1024,
+          "presentation_H_sum": 7680,
+          "nonunique_presentations": 1024,
+          "collision_presentations": 1024,
+          "core_SCC_bad_presentations": 432,
+          "strong_presentations": 544
+        }
+      ]
+    }
+  ]
+}

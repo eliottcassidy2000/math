@@ -1,0 +1,1248 @@
+[
+  {
+    "n": 3,
+    "ordinary_classes": 2,
+    "merged_nodes": 2,
+    "selected_tilings": 2,
+    "blue_incidences": 2,
+    "internal_tilings": 2,
+    "internal_edges": 1,
+    "internal_blue_edges": 1,
+    "internal_black_edges": 0,
+    "internal_loops": 0,
+    "isolated_nodes": 0,
+    "edges": [
+      {
+        "id": 0,
+        "endpoints": [
+          "00",
+          "10"
+        ],
+        "color": "blue",
+        "tilings": [
+          0,
+          1
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "word": "00",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 1
+      },
+      {
+        "word": "10",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 1
+      }
+    ]
+  },
+  {
+    "n": 4,
+    "ordinary_classes": 4,
+    "merged_nodes": 3,
+    "selected_tilings": 8,
+    "blue_incidences": 4,
+    "internal_tilings": 8,
+    "internal_edges": 3,
+    "internal_blue_edges": 2,
+    "internal_black_edges": 1,
+    "internal_loops": 1,
+    "isolated_nodes": 0,
+    "edges": [
+      {
+        "id": 0,
+        "endpoints": [
+          "000",
+          "100"
+        ],
+        "color": "blue",
+        "tilings": [
+          0,
+          7
+        ]
+      },
+      {
+        "id": 1,
+        "endpoints": [
+          "010",
+          "100"
+        ],
+        "color": "black",
+        "tilings": [
+          1,
+          3,
+          4,
+          6
+        ]
+      },
+      {
+        "id": 2,
+        "endpoints": [
+          "100",
+          "100"
+        ],
+        "color": "blue",
+        "tilings": [
+          2,
+          5
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "word": "000",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 1
+      },
+      {
+        "word": "010",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 2
+      },
+      {
+        "word": "100",
+        "ordinary_tiling_mass": 5,
+        "merged_tiling_mass": 5
+      }
+    ]
+  },
+  {
+    "n": 5,
+    "ordinary_classes": 9,
+    "merged_nodes": 7,
+    "selected_tilings": 43,
+    "blue_incidences": 9,
+    "internal_tilings": 30,
+    "internal_edges": 9,
+    "internal_blue_edges": 3,
+    "internal_black_edges": 6,
+    "internal_loops": 1,
+    "isolated_nodes": 1,
+    "edges": [
+      {
+        "id": 0,
+        "endpoints": [
+          "0000",
+          "1010"
+        ],
+        "color": "blue",
+        "tilings": [
+          0,
+          63
+        ]
+      },
+      {
+        "id": 1,
+        "endpoints": [
+          "0010",
+          "1000"
+        ],
+        "color": "black",
+        "tilings": [
+          1,
+          31,
+          32,
+          62
+        ]
+      },
+      {
+        "id": 7,
+        "endpoints": [
+          "0100",
+          "1000"
+        ],
+        "color": "black",
+        "tilings": [
+          7,
+          11,
+          52,
+          56
+        ]
+      },
+      {
+        "id": 3,
+        "endpoints": [
+          "0100",
+          "1010"
+        ],
+        "color": "black",
+        "tilings": [
+          3,
+          15,
+          48,
+          60
+        ]
+      },
+      {
+        "id": 9,
+        "endpoints": [
+          "0100",
+          "1100"
+        ],
+        "color": "black",
+        "tilings": [
+          9,
+          23,
+          40,
+          54
+        ]
+      },
+      {
+        "id": 5,
+        "endpoints": [
+          "1000",
+          "1010"
+        ],
+        "color": "black",
+        "tilings": [
+          5,
+          27,
+          36,
+          58
+        ]
+      },
+      {
+        "id": 4,
+        "endpoints": [
+          "1000",
+          "1100"
+        ],
+        "color": "blue",
+        "tilings": [
+          4,
+          59
+        ]
+      },
+      {
+        "id": 30,
+        "endpoints": [
+          "1010",
+          "1100"
+        ],
+        "color": "blue",
+        "tilings": [
+          30,
+          33
+        ]
+      },
+      {
+        "id": 6,
+        "endpoints": [
+          "1100",
+          "1100"
+        ],
+        "color": "black",
+        "tilings": [
+          6,
+          20,
+          43,
+          57
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "word": "0000",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 1
+      },
+      {
+        "word": "0010",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 2
+      },
+      {
+        "word": "0100",
+        "ordinary_tiling_mass": 5,
+        "merged_tiling_mass": 10
+      },
+      {
+        "word": "0101",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 1
+      },
+      {
+        "word": "1000",
+        "ordinary_tiling_mass": 9,
+        "merged_tiling_mass": 9
+      },
+      {
+        "word": "1010",
+        "ordinary_tiling_mass": 9,
+        "merged_tiling_mass": 9
+      },
+      {
+        "word": "1100",
+        "ordinary_tiling_mass": 11,
+        "merged_tiling_mass": 11
+      }
+    ]
+  },
+  {
+    "n": 6,
+    "ordinary_classes": 21,
+    "merged_nodes": 12,
+    "selected_tilings": 209,
+    "blue_incidences": 9,
+    "internal_tilings": 52,
+    "internal_edges": 13,
+    "internal_blue_edges": 0,
+    "internal_black_edges": 13,
+    "internal_loops": 2,
+    "isolated_nodes": 3,
+    "edges": [
+      {
+        "id": 1,
+        "endpoints": [
+          "00010",
+          "10010"
+        ],
+        "color": "black",
+        "tilings": [
+          1,
+          511,
+          512,
+          1022
+        ]
+      },
+      {
+        "id": 19,
+        "endpoints": [
+          "00100",
+          "10000"
+        ],
+        "color": "black",
+        "tilings": [
+          19,
+          127,
+          896,
+          1004
+        ]
+      },
+      {
+        "id": 3,
+        "endpoints": [
+          "00100",
+          "10010"
+        ],
+        "color": "black",
+        "tilings": [
+          3,
+          255,
+          768,
+          1020
+        ]
+      },
+      {
+        "id": 17,
+        "endpoints": [
+          "00100",
+          "10100"
+        ],
+        "color": "black",
+        "tilings": [
+          17,
+          383,
+          640,
+          1006
+        ]
+      },
+      {
+        "id": 31,
+        "endpoints": [
+          "01000",
+          "10010"
+        ],
+        "color": "black",
+        "tilings": [
+          31,
+          55,
+          968,
+          992
+        ]
+      },
+      {
+        "id": 51,
+        "endpoints": [
+          "01000",
+          "10100"
+        ],
+        "color": "black",
+        "tilings": [
+          51,
+          95,
+          928,
+          972
+        ]
+      },
+      {
+        "id": 15,
+        "endpoints": [
+          "01010",
+          "10000"
+        ],
+        "color": "black",
+        "tilings": [
+          15,
+          183,
+          840,
+          1008
+        ]
+      },
+      {
+        "id": 23,
+        "endpoints": [
+          "01010",
+          "10010"
+        ],
+        "color": "black",
+        "tilings": [
+          23,
+          63,
+          960,
+          1000
+        ]
+      },
+      {
+        "id": 79,
+        "endpoints": [
+          "01100",
+          "11000"
+        ],
+        "color": "black",
+        "tilings": [
+          79,
+          179,
+          844,
+          944
+        ]
+      },
+      {
+        "id": 111,
+        "endpoints": [
+          "01100",
+          "11000"
+        ],
+        "color": "black",
+        "tilings": [
+          111,
+          147,
+          876,
+          912
+        ]
+      },
+      {
+        "id": 11,
+        "endpoints": [
+          "10010",
+          "10010"
+        ],
+        "color": "black",
+        "tilings": [
+          11,
+          247,
+          776,
+          1012
+        ]
+      },
+      {
+        "id": 9,
+        "endpoints": [
+          "10010",
+          "10100"
+        ],
+        "color": "black",
+        "tilings": [
+          9,
+          503,
+          520,
+          1014
+        ]
+      },
+      {
+        "id": 13,
+        "endpoints": [
+          "10100",
+          "10100"
+        ],
+        "color": "black",
+        "tilings": [
+          13,
+          439,
+          584,
+          1010
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "word": "00000",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 1
+      },
+      {
+        "word": "00010",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 2
+      },
+      {
+        "word": "00100",
+        "ordinary_tiling_mass": 5,
+        "merged_tiling_mass": 10
+      },
+      {
+        "word": "00101",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 2
+      },
+      {
+        "word": "01000",
+        "ordinary_tiling_mass": 9,
+        "merged_tiling_mass": 18
+      },
+      {
+        "word": "01001",
+        "ordinary_tiling_mass": 5,
+        "merged_tiling_mass": 5
+      },
+      {
+        "word": "01010",
+        "ordinary_tiling_mass": 9,
+        "merged_tiling_mass": 18
+      },
+      {
+        "word": "01100",
+        "ordinary_tiling_mass": 11,
+        "merged_tiling_mass": 22
+      },
+      {
+        "word": "10000",
+        "ordinary_tiling_mass": 17,
+        "merged_tiling_mass": 17
+      },
+      {
+        "word": "10010",
+        "ordinary_tiling_mass": 15,
+        "merged_tiling_mass": 30
+      },
+      {
+        "word": "10100",
+        "ordinary_tiling_mass": 19,
+        "merged_tiling_mass": 38
+      },
+      {
+        "word": "11000",
+        "ordinary_tiling_mass": 23,
+        "merged_tiling_mass": 46
+      }
+    ]
+  },
+  {
+    "n": 7,
+    "ordinary_classes": 48,
+    "merged_nodes": 29,
+    "selected_tilings": 926,
+    "blue_incidences": 34,
+    "internal_tilings": 48,
+    "internal_edges": 12,
+    "internal_blue_edges": 0,
+    "internal_black_edges": 12,
+    "internal_loops": 0,
+    "isolated_nodes": 15,
+    "edges": [
+      {
+        "id": 35,
+        "endpoints": [
+          "000100",
+          "100010"
+        ],
+        "color": "black",
+        "tilings": [
+          35,
+          4095,
+          28672,
+          32732
+        ]
+      },
+      {
+        "id": 103,
+        "endpoints": [
+          "001000",
+          "100010"
+        ],
+        "color": "black",
+        "tilings": [
+          103,
+          1023,
+          31744,
+          32664
+        ]
+      },
+      {
+        "id": 99,
+        "endpoints": [
+          "001000",
+          "101010"
+        ],
+        "color": "black",
+        "tilings": [
+          99,
+          3071,
+          29696,
+          32668
+        ]
+      },
+      {
+        "id": 511,
+        "endpoints": [
+          "001010",
+          "100000"
+        ],
+        "color": "black",
+        "tilings": [
+          511,
+          615,
+          32152,
+          32256
+        ]
+      },
+      {
+        "id": 39,
+        "endpoints": [
+          "001010",
+          "100110"
+        ],
+        "color": "black",
+        "tilings": [
+          39,
+          2047,
+          30720,
+          32728
+        ]
+      },
+      {
+        "id": 611,
+        "endpoints": [
+          "001100",
+          "101000"
+        ],
+        "color": "black",
+        "tilings": [
+          611,
+          2559,
+          30208,
+          32156
+        ]
+      },
+      {
+        "id": 547,
+        "endpoints": [
+          "001100",
+          "101100"
+        ],
+        "color": "black",
+        "tilings": [
+          547,
+          3583,
+          29184,
+          32220
+        ]
+      },
+      {
+        "id": 383,
+        "endpoints": [
+          "010010",
+          "100100"
+        ],
+        "color": "black",
+        "tilings": [
+          383,
+          743,
+          32024,
+          32384
+        ]
+      },
+      {
+        "id": 127,
+        "endpoints": [
+          "010010",
+          "100110"
+        ],
+        "color": "black",
+        "tilings": [
+          127,
+          751,
+          32016,
+          32640
+        ]
+      },
+      {
+        "id": 63,
+        "endpoints": [
+          "010110",
+          "100010"
+        ],
+        "color": "black",
+        "tilings": [
+          63,
+          1775,
+          30992,
+          32704
+        ]
+      },
+      {
+        "id": 447,
+        "endpoints": [
+          "011010",
+          "101000"
+        ],
+        "color": "black",
+        "tilings": [
+          447,
+          1639,
+          31128,
+          32320
+        ]
+      },
+      {
+        "id": 319,
+        "endpoints": [
+          "011010",
+          "101100"
+        ],
+        "color": "black",
+        "tilings": [
+          319,
+          1767,
+          31000,
+          32448
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "word": "000000",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 1
+      },
+      {
+        "word": "000010",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 2
+      },
+      {
+        "word": "000100",
+        "ordinary_tiling_mass": 5,
+        "merged_tiling_mass": 10
+      },
+      {
+        "word": "000101",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 2
+      },
+      {
+        "word": "001000",
+        "ordinary_tiling_mass": 9,
+        "merged_tiling_mass": 18
+      },
+      {
+        "word": "001001",
+        "ordinary_tiling_mass": 5,
+        "merged_tiling_mass": 10
+      },
+      {
+        "word": "001010",
+        "ordinary_tiling_mass": 9,
+        "merged_tiling_mass": 18
+      },
+      {
+        "word": "001011",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 1
+      },
+      {
+        "word": "001100",
+        "ordinary_tiling_mass": 11,
+        "merged_tiling_mass": 22
+      },
+      {
+        "word": "010000",
+        "ordinary_tiling_mass": 17,
+        "merged_tiling_mass": 34
+      },
+      {
+        "word": "010001",
+        "ordinary_tiling_mass": 9,
+        "merged_tiling_mass": 9
+      },
+      {
+        "word": "010010",
+        "ordinary_tiling_mass": 15,
+        "merged_tiling_mass": 30
+      },
+      {
+        "word": "010100",
+        "ordinary_tiling_mass": 19,
+        "merged_tiling_mass": 38
+      },
+      {
+        "word": "010101",
+        "ordinary_tiling_mass": 9,
+        "merged_tiling_mass": 9
+      },
+      {
+        "word": "010110",
+        "ordinary_tiling_mass": 15,
+        "merged_tiling_mass": 30
+      },
+      {
+        "word": "011000",
+        "ordinary_tiling_mass": 23,
+        "merged_tiling_mass": 46
+      },
+      {
+        "word": "011001",
+        "ordinary_tiling_mass": 11,
+        "merged_tiling_mass": 11
+      },
+      {
+        "word": "011010",
+        "ordinary_tiling_mass": 19,
+        "merged_tiling_mass": 38
+      },
+      {
+        "word": "011100",
+        "ordinary_tiling_mass": 23,
+        "merged_tiling_mass": 46
+      },
+      {
+        "word": "100000",
+        "ordinary_tiling_mass": 33,
+        "merged_tiling_mass": 33
+      },
+      {
+        "word": "100010",
+        "ordinary_tiling_mass": 27,
+        "merged_tiling_mass": 54
+      },
+      {
+        "word": "100100",
+        "ordinary_tiling_mass": 33,
+        "merged_tiling_mass": 66
+      },
+      {
+        "word": "100110",
+        "ordinary_tiling_mass": 25,
+        "merged_tiling_mass": 25
+      },
+      {
+        "word": "101000",
+        "ordinary_tiling_mass": 39,
+        "merged_tiling_mass": 78
+      },
+      {
+        "word": "101010",
+        "ordinary_tiling_mass": 31,
+        "merged_tiling_mass": 31
+      },
+      {
+        "word": "101100",
+        "ordinary_tiling_mass": 37,
+        "merged_tiling_mass": 74
+      },
+      {
+        "word": "110000",
+        "ordinary_tiling_mass": 47,
+        "merged_tiling_mass": 94
+      },
+      {
+        "word": "110100",
+        "ordinary_tiling_mass": 45,
+        "merged_tiling_mass": 45
+      },
+      {
+        "word": "111000",
+        "ordinary_tiling_mass": 51,
+        "merged_tiling_mass": 51
+      }
+    ]
+  },
+  {
+    "n": 8,
+    "ordinary_classes": 106,
+    "merged_nodes": 55,
+    "selected_tilings": 3898,
+    "blue_incidences": 18,
+    "internal_tilings": 24,
+    "internal_edges": 6,
+    "internal_blue_edges": 0,
+    "internal_black_edges": 6,
+    "internal_loops": 0,
+    "isolated_nodes": 47,
+    "edges": [
+      {
+        "id": 2247,
+        "endpoints": [
+          "0001010",
+          "1000010"
+        ],
+        "color": "black",
+        "tilings": [
+          2247,
+          32767,
+          2064384,
+          2094904
+        ]
+      },
+      {
+        "id": 2511,
+        "endpoints": [
+          "0010010",
+          "1000110"
+        ],
+        "color": "black",
+        "tilings": [
+          2511,
+          8191,
+          2088960,
+          2094640
+        ]
+      },
+      {
+        "id": 2503,
+        "endpoints": [
+          "0010010",
+          "1001010"
+        ],
+        "color": "black",
+        "tilings": [
+          2503,
+          24575,
+          2072576,
+          2094648
+        ]
+      },
+      {
+        "id": 4095,
+        "endpoints": [
+          "0010110",
+          "1000010"
+        ],
+        "color": "black",
+        "tilings": [
+          4095,
+          6607,
+          2090544,
+          2093056
+        ]
+      },
+      {
+        "id": 6343,
+        "endpoints": [
+          "0011010",
+          "1010010"
+        ],
+        "color": "black",
+        "tilings": [
+          6343,
+          28671,
+          2068480,
+          2090808
+        ]
+      },
+      {
+        "id": 6599,
+        "endpoints": [
+          "0011010",
+          "1010010"
+        ],
+        "color": "black",
+        "tilings": [
+          6599,
+          20479,
+          2076672,
+          2090552
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "word": "0000000",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 1
+      },
+      {
+        "word": "0000010",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 2
+      },
+      {
+        "word": "0000100",
+        "ordinary_tiling_mass": 5,
+        "merged_tiling_mass": 10
+      },
+      {
+        "word": "0000101",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 2
+      },
+      {
+        "word": "0001000",
+        "ordinary_tiling_mass": 9,
+        "merged_tiling_mass": 18
+      },
+      {
+        "word": "0001001",
+        "ordinary_tiling_mass": 5,
+        "merged_tiling_mass": 10
+      },
+      {
+        "word": "0001010",
+        "ordinary_tiling_mass": 9,
+        "merged_tiling_mass": 18
+      },
+      {
+        "word": "0001011",
+        "ordinary_tiling_mass": 1,
+        "merged_tiling_mass": 2
+      },
+      {
+        "word": "0001100",
+        "ordinary_tiling_mass": 11,
+        "merged_tiling_mass": 22
+      },
+      {
+        "word": "0010000",
+        "ordinary_tiling_mass": 17,
+        "merged_tiling_mass": 34
+      },
+      {
+        "word": "0010001",
+        "ordinary_tiling_mass": 9,
+        "merged_tiling_mass": 18
+      },
+      {
+        "word": "0010010",
+        "ordinary_tiling_mass": 15,
+        "merged_tiling_mass": 30
+      },
+      {
+        "word": "0010011",
+        "ordinary_tiling_mass": 5,
+        "merged_tiling_mass": 5
+      },
+      {
+        "word": "0010100",
+        "ordinary_tiling_mass": 19,
+        "merged_tiling_mass": 38
+      },
+      {
+        "word": "0010101",
+        "ordinary_tiling_mass": 9,
+        "merged_tiling_mass": 18
+      },
+      {
+        "word": "0010110",
+        "ordinary_tiling_mass": 15,
+        "merged_tiling_mass": 30
+      },
+      {
+        "word": "0011000",
+        "ordinary_tiling_mass": 23,
+        "merged_tiling_mass": 46
+      },
+      {
+        "word": "0011001",
+        "ordinary_tiling_mass": 11,
+        "merged_tiling_mass": 22
+      },
+      {
+        "word": "0011010",
+        "ordinary_tiling_mass": 19,
+        "merged_tiling_mass": 38
+      },
+      {
+        "word": "0011100",
+        "ordinary_tiling_mass": 23,
+        "merged_tiling_mass": 46
+      },
+      {
+        "word": "0100000",
+        "ordinary_tiling_mass": 33,
+        "merged_tiling_mass": 66
+      },
+      {
+        "word": "0100001",
+        "ordinary_tiling_mass": 17,
+        "merged_tiling_mass": 17
+      },
+      {
+        "word": "0100010",
+        "ordinary_tiling_mass": 27,
+        "merged_tiling_mass": 54
+      },
+      {
+        "word": "0100100",
+        "ordinary_tiling_mass": 33,
+        "merged_tiling_mass": 66
+      },
+      {
+        "word": "0100101",
+        "ordinary_tiling_mass": 15,
+        "merged_tiling_mass": 30
+      },
+      {
+        "word": "0100110",
+        "ordinary_tiling_mass": 25,
+        "merged_tiling_mass": 50
+      },
+      {
+        "word": "0101000",
+        "ordinary_tiling_mass": 39,
+        "merged_tiling_mass": 78
+      },
+      {
+        "word": "0101001",
+        "ordinary_tiling_mass": 19,
+        "merged_tiling_mass": 38
+      },
+      {
+        "word": "0101010",
+        "ordinary_tiling_mass": 31,
+        "merged_tiling_mass": 62
+      },
+      {
+        "word": "0101100",
+        "ordinary_tiling_mass": 37,
+        "merged_tiling_mass": 74
+      },
+      {
+        "word": "0101110",
+        "ordinary_tiling_mass": 27,
+        "merged_tiling_mass": 54
+      },
+      {
+        "word": "0110000",
+        "ordinary_tiling_mass": 47,
+        "merged_tiling_mass": 94
+      },
+      {
+        "word": "0110001",
+        "ordinary_tiling_mass": 23,
+        "merged_tiling_mass": 46
+      },
+      {
+        "word": "0110010",
+        "ordinary_tiling_mass": 37,
+        "merged_tiling_mass": 74
+      },
+      {
+        "word": "0110100",
+        "ordinary_tiling_mass": 45,
+        "merged_tiling_mass": 90
+      },
+      {
+        "word": "0110110",
+        "ordinary_tiling_mass": 33,
+        "merged_tiling_mass": 66
+      },
+      {
+        "word": "0111000",
+        "ordinary_tiling_mass": 51,
+        "merged_tiling_mass": 102
+      },
+      {
+        "word": "0111010",
+        "ordinary_tiling_mass": 39,
+        "merged_tiling_mass": 78
+      },
+      {
+        "word": "0111100",
+        "ordinary_tiling_mass": 47,
+        "merged_tiling_mass": 94
+      },
+      {
+        "word": "1000000",
+        "ordinary_tiling_mass": 65,
+        "merged_tiling_mass": 65
+      },
+      {
+        "word": "1000010",
+        "ordinary_tiling_mass": 51,
+        "merged_tiling_mass": 102
+      },
+      {
+        "word": "1000100",
+        "ordinary_tiling_mass": 61,
+        "merged_tiling_mass": 122
+      },
+      {
+        "word": "1000110",
+        "ordinary_tiling_mass": 45,
+        "merged_tiling_mass": 90
+      },
+      {
+        "word": "1001000",
+        "ordinary_tiling_mass": 69,
+        "merged_tiling_mass": 138
+      },
+      {
+        "word": "1001010",
+        "ordinary_tiling_mass": 53,
+        "merged_tiling_mass": 106
+      },
+      {
+        "word": "1001100",
+        "ordinary_tiling_mass": 63,
+        "merged_tiling_mass": 126
+      },
+      {
+        "word": "1010000",
+        "ordinary_tiling_mass": 79,
+        "merged_tiling_mass": 158
+      },
+      {
+        "word": "1010010",
+        "ordinary_tiling_mass": 61,
+        "merged_tiling_mass": 122
+      },
+      {
+        "word": "1010100",
+        "ordinary_tiling_mass": 73,
+        "merged_tiling_mass": 146
+      },
+      {
+        "word": "1011000",
+        "ordinary_tiling_mass": 81,
+        "merged_tiling_mass": 162
+      },
+      {
+        "word": "1011100",
+        "ordinary_tiling_mass": 73,
+        "merged_tiling_mass": 146
+      },
+      {
+        "word": "1100000",
+        "ordinary_tiling_mass": 95,
+        "merged_tiling_mass": 190
+      },
+      {
+        "word": "1100100",
+        "ordinary_tiling_mass": 87,
+        "merged_tiling_mass": 174
+      },
+      {
+        "word": "1101000",
+        "ordinary_tiling_mass": 97,
+        "merged_tiling_mass": 194
+      },
+      {
+        "word": "1110000",
+        "ordinary_tiling_mass": 107,
+        "merged_tiling_mass": 214
+      }
+    ]
+  }
+]

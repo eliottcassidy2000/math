@@ -1,0 +1,11 @@
+PASS profiles 1099 all labelled cores of orders 1..5
+PASS independent attachment-mask Hamiltonian subset DP 236 core/base pairs 22337 attachments
+T3 ordered profile [1, 6, 6] channels ['-1/32', '1/8', '7/16', '3/8', '3/32'] expectations m0..6 ['1', '5/2', '27/4', '79/4', '123/2', '805/4', '1371/2']
+C3 ordered profile [3, 6, 6] channels ['15/32', '9/8', '15/16', '3/8', '3/32'] expectations m0..6 ['3', '9/2', '39/4', '99/4', '141/2', '873/4', '1437/2']
+PASS C3-T3 exact finite-head formula m0..19
+PASS nonisomorphic same-profile hostile [1, 1, 1, 3] [0, 2, 2, 2] profile [3, 18, 36, 24]
+Hostile actual-H versus expectation C3+m1: (Fraction(9, 2), (3, 5))
+PASS exact rational arithmetic; no probabilistic sampling; no inherited strong/class filter
+PASS first ceil(k/2) expectation tomography 1099 labelled cores
+PASS polynomial reflection on 1099 cores
+PASS T4 negative tail atom a1= -9/32 ; shifted 5x5 Hankel det= -16238475/1024

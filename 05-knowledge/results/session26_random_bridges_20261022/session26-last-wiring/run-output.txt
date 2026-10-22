@@ -1,0 +1,92 @@
+{'n': 3, 'ordinary_classes': 2, 'merged_nodes': 2, 'selected_tilings': 2, 'blue_incidences': 2, 'internal_tilings': 2, 'internal_edges': 1, 'internal_blue_edges': 1, 'internal_black_edges': 0, 'internal_loops': 0, 'isolated_nodes': 0}
+{'n': 4, 'ordinary_classes': 4, 'merged_nodes': 3, 'selected_tilings': 8, 'blue_incidences': 4, 'internal_tilings': 8, 'internal_edges': 3, 'internal_blue_edges': 2, 'internal_black_edges': 1, 'internal_loops': 1, 'isolated_nodes': 0}
+{'n': 5, 'ordinary_classes': 9, 'merged_nodes': 7, 'selected_tilings': 43, 'blue_incidences': 9, 'internal_tilings': 30, 'internal_edges': 9, 'internal_blue_edges': 3, 'internal_black_edges': 6, 'internal_loops': 1, 'isolated_nodes': 1}
+{'n': 6, 'ordinary_classes': 21, 'merged_nodes': 12, 'selected_tilings': 209, 'blue_incidences': 9, 'internal_tilings': 52, 'internal_edges': 13, 'internal_blue_edges': 0, 'internal_black_edges': 13, 'internal_loops': 2, 'isolated_nodes': 3}
+{'n': 7, 'ordinary_classes': 48, 'merged_nodes': 29, 'selected_tilings': 926, 'blue_incidences': 34, 'internal_tilings': 48, 'internal_edges': 12, 'internal_blue_edges': 0, 'internal_black_edges': 12, 'internal_loops': 0, 'isolated_nodes': 15}
+{'n': 8, 'ordinary_classes': 106, 'merged_nodes': 55, 'selected_tilings': 3898, 'blue_incidences': 18, 'internal_tilings': 24, 'internal_edges': 6, 'internal_blue_edges': 0, 'internal_black_edges': 6, 'internal_loops': 0, 'isolated_nodes': 47}
+[
+  {
+    "id": 2247,
+    "endpoints": [
+      "0001010",
+      "1000010"
+    ],
+    "color": "black",
+    "tilings": [
+      2247,
+      32767,
+      2064384,
+      2094904
+    ]
+  },
+  {
+    "id": 2511,
+    "endpoints": [
+      "0010010",
+      "1000110"
+    ],
+    "color": "black",
+    "tilings": [
+      2511,
+      8191,
+      2088960,
+      2094640
+    ]
+  },
+  {
+    "id": 2503,
+    "endpoints": [
+      "0010010",
+      "1001010"
+    ],
+    "color": "black",
+    "tilings": [
+      2503,
+      24575,
+      2072576,
+      2094648
+    ]
+  },
+  {
+    "id": 4095,
+    "endpoints": [
+      "0010110",
+      "1000010"
+    ],
+    "color": "black",
+    "tilings": [
+      4095,
+      6607,
+      2090544,
+      2093056
+    ]
+  },
+  {
+    "id": 6343,
+    "endpoints": [
+      "0011010",
+      "1010010"
+    ],
+    "color": "black",
+    "tilings": [
+      6343,
+      28671,
+      2068480,
+      2090808
+    ]
+  },
+  {
+    "id": 6599,
+    "endpoints": [
+      "0011010",
+      "1010010"
+    ],
+    "color": "black",
+    "tilings": [
+      6599,
+      20479,
+      2076672,
+      2090552
+    ]
+  }
+]
