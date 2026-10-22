@@ -1,0 +1,7 @@
+n=3: 2 tournaments, 0 violate F = H*(x-1)^(n-1) [odd n] or H*(x-1)^(n-2)(x+1) [even n] mod 3
+n=4: 4 tournaments, 0 violate F = H*(x-1)^(n-1) [odd n] or H*(x-1)^(n-2)(x+1) [even n] mod 3
+n=5: 12 tournaments, 0 violate F = H*(x-1)^(n-1) [odd n] or H*(x-1)^(n-2)(x+1) [even n] mod 3
+n=6: 56 tournaments, 0 violate F = H*(x-1)^(n-1) [odd n] or H*(x-1)^(n-2)(x+1) [even n] mod 3
+n=7: 456 tournaments, 0 violate F = H*(x-1)^(n-1) [odd n] or H*(x-1)^(n-2)(x+1) [even n] mod 3
+n=8: 6880 tournaments, 0 violate F = H*(x-1)^(n-1) [odd n] or H*(x-1)^(n-2)(x+1) [even n] mod 3
+n=9: 191536 tournaments, 0 violate F = H*(x-1)^(n-1) [odd n] or H*(x-1)^(n-2)(x+1) [even n] mod 3

@@ -22,7 +22,7 @@
 | item | status | where |
 |---|---|---|
 | the pasted reduction is the binomial average in `F_3` (`⋆` = midpoint), and collapses to the endpoints at depth `3^k` | PROVED (classical) | §1 |
-| in tournaments the collapse lives in the forward-edge polynomial: `F(T,x) ≡ H(1 + x^(3^k) + x^(2·3^k)) (mod 3)` at `n = 2·3^k + 1` | conditional on THM-086; exhaustive at `n = 7` | §1, THM-4754 (7) |
+| in tournaments the pattern lives in the forward-step polynomial: `F(T,x) ≡ H(T)·A_n(x) (mod 3)` for every tournament (`A_n` Eulerian), i.e. `H` times a Pascal row mod 3, collapsing to three terms at `n = 2·3^k + 1`; this completes THM-086 | PROVED (THM-4756), exhaustive `n ≤ 9` | §1, THM-4756 |
 | the pasted list of profiles for `H = 21` contains two impossible profiles | corrected; the full lists are prior art | §2 |
 | `x ↦ 3x + b` are the self-similarities of the 3-adic tournament `C_3^[∞]`, halving reverses every arc, and Collatz trajectories flip the arc between them once per halving | PROVED, new as a Collatz dictionary | §3, THM-4754 |
 | the OCF weight `2^k = 3J_k + (−1)^k` is a one-step Collatz relation (Jacobsthal split) | PROVED | §3 |
@@ -43,12 +43,18 @@
 * For a regular tournament all labels are equal, so every path gets the same value.
 * At `n = 3^k + 1`, which is always even, it only counts paths by the labels of their two endpoints. It is an invariant, but carries little.
 
-**Where the Sierpinski pattern really lives** (THM-086, kind-pasteur S37, a proof sketch verified for `n ≤ 10`).
+**Where the Sierpinski pattern really lives** (THM-086, kind-pasteur S37, a proof sketch verified for `n ≤ 10`, now proved in full by THM-4756).
 * Let `F(T,x) = Σ_k F_k x^k` count permutations by their number of `T`-forward steps. For odd `n`, `F(T,x) ≡ H·(x − 1)^(n−1) (mod 3)`: a row of Pascal's triangle mod 3, scaled by `H`.
 * So the forward-step distribution of every tournament carries the Lucas/Sierpinski zero pattern (Désarménien's factorisation of the Eulerian polynomial mod 3).
 * At the orders `n = 2·3^k + 1 = 3, 7, 19, 55, 163, …` it collapses to three terms: `F ≡ H(1 + x^(3^k) + x^(2·3^k))`. Checked on all 456 classes at `n = 7` (`fwd_mod3.out`).
 * These orders contain the Heegner numbers 3, 7, 19, 163 (NUMEROLOGY).
 * At the pasted lengths `n = 3^k + 1` (even), THM-086 has two parameters, and the pattern is flat plus endpoints rather than a collapse.
+* **THM-4756 (new) proves it all**, in the form `F(T,x) ≡ H(T)·A_n(x) (mod 3)`: modulo 3, every tournament is `H` copies of the transitive one.
+  * The Taylor coefficients of `F` at `x = 1` are the ordered path-cover numbers `c_m`.
+  * `c_m ≡ 0` for `m ≥ 3` (factor `m!`).
+  * `c_2 ≡ ((−1)^n + 1)H`, from the exact identity `Σ_X H(T[X])H(T[V∖X]) = Σ_R 4^|R| 2^(n−|V(R)|)`.
+  * Modulo 2 the same argument gives `F ≡ (1 + x)^(n−1)`, the binary Sierpinski row.
+  * Exhaustive check on all 198,946 tournaments with `n ≤ 9`.
 
 **`H` mod 3.** `H ≡ I(Ω, −1) (mod 3)`, and `I(Ω, −1)` is minus the reduced Euler characteristic of the independence complex of `Ω`. Both are prior art: HYP-1028..1030, THM-467 and T274. The pasted deletion recurrence written with `⋆` is the same identity.
 * Prior work also rules out any congruence route to the 7/21 gaps. Session25 shows that every odd residue modulo every `M` is a strong `H`-value, and on strong classes of orders 5–8, `I(Ω, −1)` is never 0.

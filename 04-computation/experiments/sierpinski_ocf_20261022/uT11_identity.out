@@ -1,0 +1,2 @@
+(1) exact identity sum_X H(X)H(X^c) = sum_R 4^|R| 2^(n-|V(R)|): 76 classes n <= 6, 0 mismatches
+(2) A_n(x) = (x-1)^(n-1) [odd] / (x-1)^(n-2)(x+1) [even] mod 3 for 2 <= n <= 40: True
