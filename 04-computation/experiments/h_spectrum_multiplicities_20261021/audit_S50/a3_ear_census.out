@@ -1,0 +1,29 @@
+  ok   uncapped ear census reproduces the strong-class counts 1, 1, 6, 35, 353, 6008 (A051337) for orders 3..8: [1, 1, 6, 35, 353, 6008] [10s]
+     order 4: 1 strong classes with H <= 375; least H 5; least ear value 5 [10s]
+     order 5: 6 strong classes with H <= 375; least H 9; least ear value 9 [10s]
+     order 6: 35 strong classes with H <= 375; least H 15; least ear value 15 [10s]
+     order 7: 353 strong classes with H <= 375; least H 25; least ear value 25 [10s]
+     order 8: 3555 strong classes with H <= 375; least H 45; least ear value 45 [11s]
+     order 9: 3492 strong classes with H <= 375; least H 75; least ear value 75 [12s]
+     order 10: 1739 strong classes with H <= 375; least H 125; least ear value 125 [13s]
+     order 11: 411 strong classes with H <= 375; least H 225; least ear value 225 [13s]
+  ok   capped inventory = uncapped census restricted to H <= 375 at orders 4..8
+     order 12: least ear value 375; classes with H = 375: 4 [13s]
+     symmetry data done [14s]
+     strong classes with H <= 375 by order 3..11: [1, 1, 6, 35, 353, 3555, 3492, 1739, 411]
+  ok   order 9: 3492 classes with H <= 375 (session 3492), 816 with H <= 225 (session 816)
+  ok   order 10: 1739 classes with H <= 375 (session 1739), 239 with H <= 225 (session 239)
+  ok   order 11: 411 classes with H <= 375 (session 411)
+  ok   order 4: least H over all strong 4-classes (ear minimum) = 5 = f(4) = 5
+  ok   order 5: least H over all strong 5-classes (ear minimum) = 9 = f(5) = 9
+  ok   order 6: least H over all strong 6-classes (ear minimum) = 15 = f(6) = 15
+  ok   order 7: least H over all strong 7-classes (ear minimum) = 25 = f(7) = 25
+  ok   order 8: least H over all strong 8-classes (ear minimum) = 45 = f(8) = 45
+  ok   order 9: least H over all strong 9-classes (ear minimum) = 75 = f(9) = 75
+  ok   order 10: least H over all strong 10-classes (ear minimum) = 125 = f(10) = 125
+  ok   order 11: least H over all strong 11-classes (ear minimum) = 225 = f(11) = 225
+  ok   order 12: least H over all strong 12-classes (ear minimum) = 375 = f(12) = 375
+  ok   for m = 3..12 the strong classes with H = f(m) are exactly the optimal chains: E(m) = [1, 1, 2, 2, 1, 5, 3, 1, 9, 4]
+  ok   self-converse extremal classes [1, 1, 2, 0, 1, 1, 1, 1, 3, 0]; all extremal classes of order >= 4 rigid
+
+ALL CHECKS PASSED (14s)

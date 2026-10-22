@@ -17,8 +17,10 @@ F_N(z) = sum_k (1-z)^(-k-1) sum_{d1...dk = N} prod P_di(z) and the strong polyno
   (Q5) repunit and Cipolla probe: multiplicities of 2^k - 1, (4^k - 1)/3 and 2^k + 1 against a local baseline.
   (Q6) the converse-Gluck family: H, |Aut|, tc and uniqueness of C_3, Z_5{1,2}, P_7, C_3[C_3], Z_5{1,2}[C_3],
        P_7[C_3]; comparison with the maxima (n <= 9) and with the mean n!/2^(n-1) (n = 15, 21).
-  (Q7) Paley presentation counts tc(P_q) = 2H/(q(q-1)) for q <= 31 (H recomputed for q <= 19; q = 23, 27, 31 cited
-       from paley_h31_exact_rate_and_apery_wheel_20261014.md), factored, with Fermat/Carmichael tests.
+  (Q7) Paley path-orbit counts tc(P_q) = H(P_q)/|Aut(P_q)| for q <= 31, with |Aut| = q(q-1)/2 for prime q and
+       |Aut(P_27)| = 1053 including Frobenius (the S33/S34 orbit counts use |Aff_+| = 351 at q = 27); H recomputed for
+       q <= 19, q = 23, 27, 31 cited from paley_h31_exact_rate_and_apery_wheel_20261014.md; factored, with
+       Fermat/Carmichael tests (NUMEROLOGY; 1729 at q = 11 was already recorded in S33 and by mac-mini).
 Prints ALL CHECKS PASSED.  Runtime about 1 minute (the n = 21 DP needs about 0.4 GB)."""
 import sys, os, time
 from math import factorial, comb, gcd
@@ -233,7 +235,7 @@ for name, T, au in fam6:
 check(Hof(lex(C3, C3)) == 3159 and N[9][3159] == 1, 'H(C_3[C_3]) = 3159, attained by no other 9-class; C_3, P_7 are likewise unique, Z_5{1,2} ties at 15')
 
 # ---------------------------------------------------------------- (Q7)
-print('(Q7) Paley presentation counts tc(P_q) = H(P_q)/(q(q-1)/2)')
+print('(Q7) Paley path-orbit counts tc(P_q) = H(P_q)/|Aut(P_q)| (|Aut| = q(q-1)/2; 1053 at q = 27 with Frobenius)')
 cited = {23: 15760206976379349, 27: 418425945688463432031, 31: 19876729650849384218015865}
 pal = {}
 for q in (3, 7, 11, 19):

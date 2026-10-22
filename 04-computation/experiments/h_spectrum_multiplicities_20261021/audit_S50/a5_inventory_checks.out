@@ -1,0 +1,23 @@
+  ok   (I1) odd d < 375 with P_d = 0: [1, 7, 21]
+  ok   (I1) my P_d = the session's P_d for all 184 odd d in [3, 373] other than 7, 21
+  ok   (I1) the note's table of selected P_d (section 1) is correct
+  ok   (I2) sequence law on my complete strong inventories (orders <= 8) gives the class counts [1, 1, 2, 4, 12, 56, 456, 6880] (A000568)
+  ok   (I2) the note's N(n,h) table (n = 10, 11, 12) reproduced: {63: (6, 8, 10), 75: (70, 121, 192), 105: (59, 85, 115), 125: (43, 67, 98), 135: (146, 278, 490), 147: (70, 123, 192), 189: (102, 148, 198), 195: (126, 238, 396), 223: (82, 117, 152)}
+     small polynomials of the note: correct for all n <= 30: [3, 9, 27, 33, 49, 63]; WRONG (first n): {45: [10, 11, 12], 75: [10, 11, 12]}
+  ok   (I2) the true laws: N(n,45) = 12n-75+4C(n-6,2)+8C(n-7,2)+3C(n-7,3) (n >= 7), N(n,75) = 12n-80+8C(n-7,2)+6C(n-8,2)+3C(n-8,3) (n >= 8); e.g. N(10,45) = 96 (note polynomial gives 93), N(10,75) = 70 (note polynomial gives 64)
+  ok   (I3) converse pairing P_d = SC_d (mod 2) at orders 10 and 11 (H <= 375)
+  ok   (I3) every self-converse strong 10-class with H <= 375 (25 classes) has H = 1 (mod 4)
+  ok   (I3) |Aut| divides H for every class at orders 10, 11
+  ok   (I3) every self-converse strong 8-class (complete census) has H = 1 (mod 4)
+  ok   (I4) second-lowest strong count, orders 5..11: [11, 17, 27, 49, 81, 135, 243]
+     classes attaining the second floor at m = 7, 9, 11: {7: 3, 9: 5, 11: 8}; the all-triangle chain among them: {7: True, 9: True, 11: True}
+  ok   (I4) the note's "at odd m >= 7 the second floor is the all-triangle chain 3^((m-1)/2)" FAILS: H(IC(2,2,2,3,3)) = 675 lies in (f(13), 3^6) = (625, 729); H(IC(2,2,2,2,3,3)) = 2025 lies in (f(15), 3^7) = (1875, 2187)
+  ok   (I5) no strong class of order <= 6 has 7 | H (complete inventories)
+  ok   (I5) multiples of 7 among strong 7-classes: {35: 2, 49: 7, 77: 10, 91: 15, 105: 4, 133: 6, 147: 1, 175: 1, 189: 1}
+  ok   (I5) every non-strong 7-tournament has H <= 45; 456 classes at n = 7 (so every 7-tournament with 7 | H is strong)
+  ok   (I5) uniquely attained values at n = 7: [1, 61, 85, 87, 125, 127, 147, 155, 157, 171, 175, 189]
+  ok   (I5) regular 7-tournaments (H, |Aut|): [(171, 3), (175, 7), (189, 21)]
+  ok   (I5) odd holes of n = 7 in (45, 150): [63, 107, 119, 149]
+     primes in (45, 150) that ARE attained at n = 7 (none can borrow a product factor there either): [47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 109, 113, 127, 131, 137, 139]
+
+ALL CHECKS PASSED (3s)

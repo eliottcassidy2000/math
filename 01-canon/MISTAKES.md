@@ -19438,3 +19438,53 @@ the ambient space.
   1. Test a periodicity or non-periodicity claim from its natural threshold, and report the first failing indices. A single exceptional initial index must not decide the verdict.
   2. A hostile control must fail for the claimed reason. If its failure is confined to boundary terms, it is not a control.
   3. A script's skipped or capped branch must be counted in every summary that cites it (MISTAKE-650 (1), restated).
+
+## MISTAKE-652 (2026-10-21, opus-2026-10-21-S50 Hamiltonian-path multiplicities, THM-4744, THM-4745, HYP-9355, HYP-9356; found by the session's independent audit after the pre-audit checkpoint 93356203d1 was pushed) -- a published theorem filed as new and as an open hypothesis, although canon pointed to the source; a truncated sum giving wrong multiplicity polynomials; a small-number law stated for all orders; two "explanations" that the data refute; and a pre-registered prediction that did not replicate
+
+- **A published theorem filed as new.**
+  - THM-4744 presented the interval-chain product law `H(IC(p)) = ∏(2^(p_i − 1) + 1)` as new, together with the list of optimal compositions. Both are J. W. Moon, *Publ. Math. Debrecen* 19 (1972) 101–104, p. 102 (his chains `S_n`).
+  - HYP-9356 was filed as an open hypothesis: the extremal strong tournaments of Busch's theorem are exactly the optimal chains. That is the theorem of J. W. Moon and L. L. M. Yang, *Utilitas Math.* 72 (2007) 193–198, credited by El Sahili and Ghazo Hanna (arXiv:2101.00713, *J. Graph Theory* 2023).
+  - THM-4745 called itself a reduction of an open problem to a one-way lemma.
+  - The pre-registered tests `E(12) = 4` and `E(13) = 1` therefore confirm a known theorem.
+- **The warning sign that was missed.**
+  - THM-1370 already says that Moon 1972 "gave the chain construction".
+  - The session read Busch 2006, saw that it does not characterize equality, and concluded that the characterization was new. It did not search the papers citing Busch, or Moon's own follow-ups.
+  - This repeats the MISTAKE-580/629/632/640/641/647 pattern: a single source read for absence of prior art.
+- **Retyped.**
+  - THM-4744 (1) is KNOWN (Moon), with the session's full proof as a write-up.
+  - THM-4744 (2) is PROVED, possibly also in Moon and Yang.
+  - THM-4744 (3) and (4) are FINITE-EXACT.
+  - HYP-9356 is KNOWN.
+  - THM-4745 is now an independent computer-assisted reproof. Its statements (5), (6), the one-way lemma for parts 2, 3, 4 and its consequence, were proved after the audit.
+- **A truncated sum.**
+  - `h_multiplicities.py` built the multiplicity polynomials from cores of total size at most 9.
+  - Cores with three or more components were therefore dropped: 3·3·5 has size 10, and 3·5·5 has size 11.
+  - The laws for `h = 45` and 75 came out quadratic: `6n² − 74n + 233` and `4(n − 6)²`. Their true form is cubic: `(n³ − 12n² + 43n − 38)/2` and `n(n² − 13n + 44)/2`.
+  - Five printed values for `n = 10..12` were wrong, for `h = 45, 75, 81, 105, 121`.
+  - The docstring said "exactly for every n".
+  - The fix sums cores up to size 16. The logarithmic core bound gives at most 13 vertices for `h < 125`. A cross-check against the audit's cubic laws was added.
+- **A small-number law stated for all orders.**
+  - The note said the second-lowest strong count at odd orders `m ≥ 7` is the all-triangle chain, `3^((m−1)/2)`.
+  - At `m = 13`, `IC(2,2,2,3,3)` has 675 < 729, and `m = 15` is similar.
+  - At `m = 7, 9, 11` the value is shared by 3, 5 and 8 classes.
+- **Two explanations refuted by the data.**
+  - The holes 63, 107, 119, 149 at `n = 7` were said to be "exactly the values that cannot borrow a product factor". But no value in `(45, 150)` can be a product at `n = 7` at all, and 19 primes in that range are attained.
+  - The rarity of the repunits 31, 63, 127 was blamed on their being prime or needing the factor 7. But at `n = 8` the primes 131, 137, 139 have 24–30 classes against 10 for 127. The rarity is unexplained.
+- **A prediction that did not replicate (HYP-9355).**
+  - P2, "residue 1 is the most frequent mod 8", was marked passed at `n = 11` within its 3-standard-error tolerance, although residue 5 led in both of the session's runs.
+  - The audit's independent replication fails P2. Pooled over 10^7 samples, residue 1's excess is −0.0004 ± 0.0005.
+  - The title's "monotone 2-adic pull" was already contradicted by the file's own exact tables at `n = 7, 8`.
+  - The pull is withdrawn as a persistent law. Equidistribution stays open.
+- **Smaller fixes.**
+  - Credits: S15 had `E(7) = 1`; S33/S34 have the Paley orbit counts and 1729; mac-mini has 1729 Carmichael and `P_19`.
+  - The `q = 27` normalization.
+  - "Every deviation below 0.6%" is 0.79%.
+  - Notation: `R_5` versus `R_4`.
+  - `d = 1` omitted from the zero list.
+  - A per-vertex cost heuristic replaced by an exchange inequality.
+  - Standard errors corrected for multinomial covariance.
+- **Missing coordinates.**
+  1. Before calling anything new in a classical subject, search the papers citing the cited source. Here that means Busch 2006 and Moon 1972. Follow every "X gave the construction" pointer in canon to its paper.
+  2. A multiplicity polynomial derived from a census must sum cores of every size. Cross-check one value outside the census range.
+  3. A finite law seen at three or four orders is FINITE-EXACT. Write it as such, not as a law "at odd `m ≥ 7`".
+  4. A pre-registered comparison whose sign flips in both runs has not passed, whatever the tolerance says.

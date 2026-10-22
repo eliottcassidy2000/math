@@ -1,0 +1,7 @@
+  ok   ham_dp = ham_ie = brute force (300 random tournaments n <= 8), ham_dp = ham_ie (40 random, n = 9..12)
+  ok   ear_values (quadratic form) = direct DP on all 7720 one-vertex extensions of 60 random parents
+  ok   canon invariant under random relabeling and idempotent on decoded codes (400 random tournaments, n <= 12)
+  ok   canon(T1) == canon(T2) iff networkx VF2 says isomorphic (1500 random and arc-flip pairs, n = 4..9)
+  ok   |Aut| from canon leaf count = networkx automorphism count: C3: |Aut| = 3, Z5{1,2}: |Aut| = 5, P7: |Aut| = 21, Z7{1,2,3}: |Aut| = 7, Z9{1,2,3,5}: |Aut| = 9, C3[C3]: |Aut| = 81, P11: |Aut| = 55 (+ 20 random)
+
+ALL CHECKS PASSED (4s)

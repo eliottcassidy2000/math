@@ -1,0 +1,12 @@
+     32 session pairs + 8 extra pairs; exact gluings in the session range: 136 [422s]
+  ok   (G1) H(T) >= H(A)H(B) for every gluing (all positions, all cross orientations)
+  ok   (G1) every exact gluing is one-way and end-to-start (C_3: any vertex); exact count per pair = 2 x (3 per C_3 factor); session total 136 (session: 136)
+  ok   (G2) C_3 u C_3: at every position exactly 4 of the 14 mixed patterns violate only (U) (no path breaks (R))
+  ok   (G2) with an R_4 factor, at the end-to-start positions every mixed pattern has a Hamiltonian path breaking (R)
+  ok   (G2) least surplus of a mixed pattern at end-to-start positions: {((2,), (3,)): 4, ((3,), (2,)): 4, ((3,), (3,)): 6} (session: 4 for C_3 with R_4, 6 for R_4 with R_4)
+  ok   (G2) for every pattern: H(T) - H(A)H(B) = #(R-violating paths) + #(surplus merges), and every pair has a merge (asserted)
+  ok   (G3) the proof's bad split exists at every position t < N, built as written, for every chain with N = 3..10: cases a/b/c used {'c': 87, 'a': 511, 'b': 147}
+  ok   (G3) at t = N (the last spine vertex) no bad split exists (exhaustive over all ordered pairs of paths, N <= 7)
+
+ALL CHECKS PASSED (428s)
+exit 0

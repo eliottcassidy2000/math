@@ -1,0 +1,7 @@
+  ok   (C1) F(s,r), s,r = 3..6: H(T) > 3 H(A) (never exact)
+  ok   (C1) the witness L_X b1 R_X v L_Y b2 R_Y is a Hamiltonian path of T restricting to b1 v b2 (not a path of B)
+  ok   (C2) F'(3,3): not exact; witness b1 x0 x1 v z1 z2 b2 restricts to b1 v b2
+  ok   (C3) interior positions with the forced cross arcs: never exact (s = 4..6, all interior t, r = 3..5, both ends)
+  ok   (C3) the pair (x_1..x_t x_N x_0 x_(t+1)..x_(N-1), Q_1 v b) has at least two merges
+
+ALL CHECKS PASSED

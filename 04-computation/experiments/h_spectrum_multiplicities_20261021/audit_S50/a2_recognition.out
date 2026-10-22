@@ -1,0 +1,9 @@
+  ok   out-degrees N-1, N-t (1<=t<=N-1), 1; sorted scores (1,1,2,...,m-3,m-2,m-2), every composition, m = 4..12
+  ok   every chain of order m has exactly m - 2 cyclic triples (direct triple count), m = 3..12
+  ok   every chain (parts >= 2) is strong, m = 3..12
+  ok   |Aut(IC(p))| = 1 for m >= 4 (canon, m <= 12; networkx VF2, m <= 10); |Aut(C_3)| = 3
+  ok   the spine is recovered by the stated rule and the back arcs spell out the composition (N >= 3, m <= 12)
+  ok   chains of different compositions are non-isomorphic (canonical codes m <= 12; VF2 pairwise m <= 9); compositions per order [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+  ok   converse(IC(p)) = IC(reversed p) exactly under t -> N - t; self-converse iff palindromic (m <= 12)
+
+ALL CHECKS PASSED (0s)

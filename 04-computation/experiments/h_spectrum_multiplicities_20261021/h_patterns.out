@@ -114,7 +114,7 @@ census n <= 9 loaded [9s]
      P_7[C_3]       n = 21: H = 123156134945235, |Aut| = 45927, tc = 2681562805 = {5: 1, 22469: 1, 23869: 1}; mean n!/2^(n-1) = 4.872e+13; H/mean = 2.528
   ok   P_7[C_3]: |Aut| = 45927 divides H (free action)
   ok   H(C_3[C_3]) = 3159, attained by no other 9-class; C_3, P_7 are likewise unique, Z_5{1,2} ties at 15
-(Q7) Paley presentation counts tc(P_q) = H(P_q)/(q(q-1)/2)
+(Q7) Paley path-orbit counts tc(P_q) = H(P_q)/|Aut(P_q)| (|Aut| = q(q-1)/2; 1053 at q = 27 with Frobenius)
   ok   H(P_7) = 189, H(P_11) = 95095, H(P_19) = 1172695746915 recomputed
      q =  3: tc = 1 = {}; base-2 pseudoprime: False; Carmichael (Korselt): False; tc mod 8 = 1
   ok   q = 3: |Aut(P_q)| = 3 divides H

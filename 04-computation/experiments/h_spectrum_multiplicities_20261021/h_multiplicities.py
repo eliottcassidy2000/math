@@ -10,9 +10,10 @@ presentation count tc = H/|Aut| (Aut acts freely on Hamiltonian paths).
   (M2) PROVED + checked (the sequence law): a class is an ordered sequence of strong classes (its condensation) and
        H is the product, so N(n,h) = sum over k, ordered k-tuples of nontrivial strong classes with sizes t and product h
        of C(n - t + k, k).  Checked against (M1) for every n <= 9 and every h.
-  (M3) PROVED for h < 75 (Moon's monotonicity of the strong floor and the exhaustive f(9) = 75), and for h < 125 given
-       Busch's theorem f(n) = min 3^a 5^b (2a + 3b = n - 1): the formula of (M2) with the strong counts of n <= 9 gives
-       N(n,h) EXACTLY FOR EVERY n.  Prints the polynomials for small h and predictions for n = 10, 11, 12.
+  (M3) PROVED relative to Busch's theorem f(n) = min 3^a 5^b (2a + 3b = n - 1): every strong tournament with H < 125 has
+       order <= 9, so the strong counts of n <= 9 together with the formula of (M2), summed over cores of every size,
+       give N(n,h) EXACTLY FOR EVERY n and every odd h < 125.  Prints the polynomials for small h and the values at
+       n = 10, 11, 12.
   (M4) Patterns: spectrum sizes, holes, uniquely attained values, maximizers, prime-divisor frequencies (7 is
        suppressed: a factor 7 needs a strong atom divisible by 7), residues mod 8, the tc spectrum and its holes.
 Prints ALL CHECKS PASSED.  Runtime about 2 minutes."""
@@ -179,9 +180,15 @@ if __name__ == '__main__':
     floor_ok = all(f[m] == busch[m] for m in range(3, NMAX + 1)) and busch[10] == 125
     import sympy as sp
     nn = sp.Symbol('n')
+    # complete strong atoms with H < 125 (all of order <= 9, since f(10) = 125), and cores of ANY size: a core with
+    # product h < 125 has at most floor(3 log_3 h) <= 13 vertices (logarithmic core bound), so nmax = 16 loses nothing.
+    # (A first version used seq_counts(strong, NMAX) here, which drops cores of total size >= 10 and gave wrong
+    # polynomials for h = 45, 75 and wrong n >= 10 predictions; corrected after the S50 audit, MISTAKE-651.)
+    strong_small = {m: {h: c for h, c in S[m].items() if h < 125} for m in range(3, NMAX + 1)}
+    Aall = seq_counts(strong_small, 16, hmax=124)
     def poly(h):
         expr = 0; n0 = 0
-        for (k, t, hh), c in Aseq.items():
+        for (k, t, hh), c in Aall.items():
             if hh == h:
                 expr += c * sp.binomial(nn - t + k, k)
                 n0 = max(n0, t - k)
@@ -192,13 +199,18 @@ if __name__ == '__main__':
         p, n0 = poly(h)
         polys[h] = (p, n0)
         print(f'     N(n, {h}) = {sp.factor(p)}   (n >= {n0})')
-    pred = {n: predict(Aseq, n) for n in (10, 11, 12)}
-    print('     predictions (exact for h < 75; for h < 125 given Busch):')
+    pred = {n: predict(Aall, n) for n in (10, 11, 12)}
+    print('     exact values for n = 10..12 (every odd h < 125, relative to Busch):')
     for h in (3, 5, 9, 11, 13, 15, 25, 27, 35, 45, 49, 63, 75, 81, 105, 121):
         print(f'       h = {h}: N(10..12) = {[pred[n][h] for n in (10, 11, 12)]}')
     poly_ok = all(polys[h][0].subs(nn, n) == N[n].get(h, 0) for h in show for n in range(max(polys[h][1], 1), NMAX + 1))
     check(floor_ok and poly_ok, 'strong floor 3,5,9,15,25,45,75 = min 3^a 5^b (Moon-Busch); the multiplicity polynomials agree with '
-                                'the census wherever they apply (n >= n0) (PROVED for h < 75, conditional on Busch for h < 125)')
+                                'the census wherever they apply (n >= n0) (PROVED relative to Busch for every odd h < 125)')
+    c45 = sp.expand(12 * nn - 75 + 4 * sp.binomial(nn - 6, 2) + 8 * sp.binomial(nn - 7, 2) + 3 * sp.binomial(nn - 7, 3))
+    c75 = sp.expand(12 * nn - 80 + 8 * sp.binomial(nn - 7, 2) + 6 * sp.binomial(nn - 8, 2) + 3 * sp.binomial(nn - 8, 3))
+    check(sp.expand(sp.expand_func(c45) - polys[45][0]) == 0 and sp.expand(sp.expand_func(c75) - polys[75][0]) == 0
+          and [pred[n][81] for n in (10, 11, 12)] == [106, 170, 261],
+          'audit cross-check: N(n,45), N(n,75) are the cubic laws found by the independent audit, and N(10..12, 81) = 106, 170, 261')
 
     print('(M4) patterns')
     for n in range(5, NMAX + 1):
