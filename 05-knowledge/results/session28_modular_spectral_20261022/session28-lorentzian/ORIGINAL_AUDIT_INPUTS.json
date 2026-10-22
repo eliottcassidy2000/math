@@ -1,0 +1,9 @@
+{
+  "audit": "Original full-text cross-audit snapshot, before minor peer scope clarifications",
+  "sha256": {
+    "PRIME_DENSITY_SPECTRAL_OBSTRUCTION.md": "053b86bc0a652f8eeee4194d2d407dcbee7dd3a99450b654eb2a5597c17bbb69",
+    "check_prime_density_square.py": "8d530fec782c17e59a051390327f57e05890cd931b5d57dd6f55ad7e21df7385",
+    "check_prime_density_square.json": "63c04063a6b957947f65d0f53072bc8ad0af5f807404473d8c22c03c5ba8cba5",
+    "REPORT.md": "8df1ca404080386cdcf38ccaec39f2b3ab6726acf48e1e0b2414046b25322881"
+  }
+}

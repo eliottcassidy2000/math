@@ -1,0 +1,11 @@
+{
+  "files": {
+    "AUDIT.md": "c25c8eb1d135b43085a58b2089addb5ec59f3fdd4881262d4e22937951c0469d",
+    "check_independent.py": "14d38c72eaa5f64613ebd4b93a65359e13ab54dbd46f7a5ee7ca1d8d78dbd359",
+    "check_independent.json": "0dbc709cc09618894ca40c1b29a20c6e7849efb8777cea026663095c9ec643c3"
+  },
+  "excluded": [
+    "check_independent_optimized.out"
+  ],
+  "normal_optimized_output_match": true
+}

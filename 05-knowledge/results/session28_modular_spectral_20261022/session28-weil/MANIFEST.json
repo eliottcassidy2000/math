@@ -1,0 +1,19 @@
+{
+  "files": {
+    "Log_Scale_Explicit_Formula.md": "4215b1373ed7d94232e2bf69ff9716c87727b94e596d34ddb7aa0c0dccadcc06",
+    "REPORT.md": "e565c74e672f37ad02a962193018da81fc62ca315d51b902912aeaf953aee4e0",
+    "Tail_Criteria.md": "e13fff32725d9a83e61fef8fedb50b4f273205a11be3df70b530a9e5993ef409",
+    "check_density_moment.json": "3118796b64b62e0d3b03efb2d5ea42621b98e6a40392fac7dfae33257de710ea",
+    "check_density_moment.optimized.json": "3118796b64b62e0d3b03efb2d5ea42621b98e6a40392fac7dfae33257de710ea",
+    "check_density_moment.py": "dd0cb627f722b00698c86fb104b3b36a91fcbec2bb5e5af60e19cb484fb39192",
+    "check_log_sampling.json": "02712a5c764a4652a8bd61eee4389f513a475a78ae530f5a28f89b286724c48d",
+    "check_log_sampling.optimized.json": "02712a5c764a4652a8bd61eee4389f513a475a78ae530f5a28f89b286724c48d",
+    "check_log_sampling.py": "1cec4d4cc9721fa8d4b58113a9403d358ee714812ae7307348feefdf79bf911e",
+    "check_structural.json": "3d79f87e99da478a7c512586af83c5aaa16111c7c287dc553d2c22f53ec4813e",
+    "check_structural.optimized.json": "3d79f87e99da478a7c512586af83c5aaa16111c7c287dc553d2c22f53ec4813e",
+    "check_structural.py": "94332782396414a7bf18aaf9b974a587d110d8cdffa58cae88a13b7fdadc5482",
+    "tournament_L_function_WARNING.txt": "c5766e6925ace9c705c0c11919d776ac4f260eaa00e2622c81f64576bf317b35"
+  },
+  "publication_scope": "Authored research, warning proposal and tests only. Excludes downloaded source contents and connector receipts.",
+  "revision_note": "Log-scale artifact revised to prove unconditional locally uniform identity inside the unit disk from Montgomery\u2013Vaughan Theorem12.5; parent notified of new hash."
+}

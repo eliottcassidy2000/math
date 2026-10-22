@@ -1,0 +1,79 @@
+{
+  "composite_discriminant_magnitudes": [
+    {
+      "p": 15,
+      "a": 2,
+      "b": 5,
+      "norm_alpha": 4,
+      "index": 225,
+      "checks_passed": true
+    },
+    {
+      "p": 27,
+      "a": 1,
+      "b": 5,
+      "norm_alpha": 7,
+      "index": 729,
+      "checks_passed": true
+    },
+    {
+      "p": 35,
+      "a": 2,
+      "b": 10,
+      "norm_alpha": 9,
+      "index": 1225,
+      "checks_passed": true
+    },
+    {
+      "p": 39,
+      "a": 4,
+      "b": 10,
+      "norm_alpha": 10,
+      "index": 1521,
+      "checks_passed": true
+    },
+    {
+      "p": 51,
+      "a": 1,
+      "b": 7,
+      "norm_alpha": 13,
+      "index": 2601,
+      "checks_passed": true
+    },
+    {
+      "p": 63,
+      "a": 2,
+      "b": 11,
+      "norm_alpha": 16,
+      "index": 3969,
+      "checks_passed": true
+    },
+    {
+      "p": 75,
+      "a": 5,
+      "b": 7,
+      "norm_alpha": 19,
+      "index": 5625,
+      "checks_passed": true
+    },
+    {
+      "p": 99,
+      "a": 1,
+      "b": 14,
+      "norm_alpha": 25,
+      "index": 9801,
+      "checks_passed": true
+    },
+    {
+      "p": 147,
+      "a": 2,
+      "b": 17,
+      "norm_alpha": 37,
+      "index": 21609,
+      "checks_passed": true
+    }
+  ],
+  "count": 9,
+  "two_copy_isotropy_negative_controls": 8,
+  "U2_symmetric_gram_condition": "a=-2b-2d, determinant=-(b+d)^2-d^2; no positive definite Gram"
+}

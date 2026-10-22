@@ -1,0 +1,40 @@
+--- a/01-canon/theorems/THM-134-paley-local-max-parseval.md
++++ b/01-canon/theorems/THM-134-paley-local-max-parseval.md
+@@ -1,13 +1,16 @@
+ ---
+ theorem_id: THM-134
+ title: Paley is the unique local maximum of H on the Parseval simplex (p=7,11)
+-status: PROVED (p=7,11 — algebraic + computational)
++status: OPEN (continuous-extension claim; historical proof incomplete)
+ proved_by: opus-2026-03-12-S58
+ date: 2026-03-12
+ related_theorems: [THM-133, THM-130, THM-126]
+ related_hypotheses: [HYP-468, HYP-469, HYP-470]
+ tags: [paley, schur-concavity, maclaurin, elementary-symmetric, eigenvalue, local-max]
+ ---
++
++**Proof-scope warning (2026-10-22):** The prior status was "PROVED (p=7,11 — algebraic + computational)". That historical status is not justified for an intrinsic continuous Hamiltonian-count function on the whole Parseval simplex by the discrete interpolation evidence recorded here. Symmetry does not force all critical points to be uniform. Finite interpolation values also do not determine a Hessian: a symmetric polynomial vanishing at every sample can change the Hessian at the uniform point arbitrarily. The claimed continuous extension must be specified and its formula proved on an open set before its local-extremality conclusion is certified. This is a proof-gap diagnosis, not a counterexample to the local maximum of any particular exactly specified polynomial. Directly computed Hessians of explicitly given polynomials and separately verified discrete Hamiltonian counts remain valid within their own stated scope.
++
+ 
+ ## Main Result
+ 
+--- a/07-reflections/n-2-negative-eigenvalues.md
++++ b/07-reflections/n-2-negative-eigenvalues.md
+@@ -1,4 +1,7 @@
+ # The n-2 Negative Eigenvalues: Two Recursions on the Triangle
++
++**Historical warning (2026-10-22):** The universal n-2 negative-eigenvalue claim below is refuted. Current canon, `../01-canon/theorems/THM-300-quadratic-signature.md`, gives exact inertia (20 positive, 0 zero, 8 negative) at n=9, not 7 negative. The finite n<=8 observations remain valid; the claimed all-order proof and extrapolation do not. This reflection is retained as historical exploration.
++
+ 
+ **Filed by:** opus-2026-04-04-S6
+ 
+--- a/04-computation/tournament_L_function.py
++++ b/04-computation/tournament_L_function.py
+@@ -1,4 +1,7 @@
+ #!/usr/bin/env python3
++
++# HISTORICAL EXPLORATORY SCRIPT: the RH, functional-equation, and automorphy interpretations below are not established. The defined finite reciprocal product has poles, not zeros, at solutions of 1-Q_k*p**(-s)=0. For Q_k>0 these are s=log(Q_k)/log(p)+2*pi*i*j/log(p), j in Z; a reciprocal finite product of these entire factors has no finite zeros. For a Paley tournament (p prime, p=3 mod4), Q_k=(p+1)/4, not sqrt(p). The quadratic-residue orientation is not a tournament for p=1 mod4. Fourier-mode indexing is not an Euler product over rational primes. Treat printed 'GRH for tournaments' claims as withdrawn heuristics, not mathematical conclusions. No functional equation has been derived by the definition alone.
++
+ """
+ THE TOURNAMENT L-FUNCTION
+ opus-2026-03-13-S67g

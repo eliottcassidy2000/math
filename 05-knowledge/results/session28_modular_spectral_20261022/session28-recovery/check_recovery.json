@@ -1,0 +1,147 @@
+{
+  "decimal_prime_shells": [
+    {
+      "digits": 1,
+      "count": 4,
+      "density": "4/9"
+    },
+    {
+      "digits": 2,
+      "count": 21,
+      "density": "7/30"
+    },
+    {
+      "digits": 3,
+      "count": 143,
+      "density": "143/900"
+    },
+    {
+      "digits": 4,
+      "count": 1061,
+      "density": "1061/9000"
+    },
+    {
+      "digits": 5,
+      "count": 8363,
+      "density": "8363/90000"
+    },
+    {
+      "digits": 6,
+      "count": 68906,
+      "density": "34453/450000"
+    },
+    {
+      "digits": 7,
+      "count": 586081,
+      "density": "586081/9000000"
+    }
+  ],
+  "density_hankel_tests": [
+    {
+      "shift": 0,
+      "size": 1,
+      "determinant": "4/9",
+      "positive": true
+    },
+    {
+      "shift": 0,
+      "size": 2,
+      "determinant": "131/8100",
+      "positive": true
+    },
+    {
+      "shift": 0,
+      "size": 3,
+      "determinant": "10207/182250000",
+      "positive": true
+    },
+    {
+      "shift": 0,
+      "size": 4,
+      "determinant": "40151669/6561000000000000",
+      "positive": true
+    },
+    {
+      "shift": 1,
+      "size": 1,
+      "determinant": "7/30",
+      "positive": true
+    },
+    {
+      "shift": 1,
+      "size": 2,
+      "determinant": "229/101250",
+      "positive": true
+    },
+    {
+      "shift": 1,
+      "size": 3,
+      "determinant": "6913/6075000000",
+      "positive": true
+    }
+  ],
+  "hessian_path_audits": [
+    {
+      "n": 2,
+      "paths": 2,
+      "arcs": 1,
+      "eigenvalues": {
+        "0": 1
+      }
+    },
+    {
+      "n": 3,
+      "paths": 6,
+      "arcs": 3,
+      "eigenvalues": {
+        "1": 1,
+        "-1/2": 2
+      }
+    },
+    {
+      "n": 4,
+      "paths": 24,
+      "arcs": 6,
+      "eigenvalues": {
+        "1": 3,
+        "-1": 3
+      }
+    },
+    {
+      "n": 5,
+      "paths": 120,
+      "arcs": 10,
+      "eigenvalues": {
+        "-9/4": 4,
+        "3/2": 6
+      }
+    },
+    {
+      "n": 6,
+      "paths": 720,
+      "arcs": 15,
+      "eigenvalues": {
+        "-6": 5,
+        "3": 10
+      }
+    },
+    {
+      "n": 7,
+      "paths": 5040,
+      "arcs": 21,
+      "eigenvalues": {
+        "-75/4": 6,
+        "15/2": 15
+      }
+    }
+  ],
+  "symmetric_critical_hostile": {
+    "simplex": "x1+x2=1; t=x1-1/2",
+    "function": "t^4-t^2/8",
+    "interior_critical_t": [
+      "-1/4",
+      "0",
+      "1/4"
+    ]
+  }
+}

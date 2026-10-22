@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "polynomial_from_factors": [
+    0,
+    -1,
+    3,
+    -1,
+    -3,
+    2
+  ],
+  "square": [
+    0,
+    0,
+    1,
+    -6,
+    11,
+    0,
+    -21,
+    18,
+    5,
+    -12,
+    4
+  ],
+  "negative_square": "-2447633/22500000000",
+  "positive_uniform_control": "1/396",
+  "sieve_limit": 10000000,
+  "sieved_prime_counts": [
+    0,
+    4,
+    25,
+    168,
+    1229,
+    9592,
+    78498,
+    664579
+  ],
+  "large_counts_source": "Granville PrimesICM1.pdf Table1 printedpage2; inspected web extraction 2026-10-22",
+  "input_sha256": {
+    "PRIME_DENSITY_SPECTRAL_OBSTRUCTION.md": "053b86bc0a652f8eeee4194d2d407dcbee7dd3a99450b654eb2a5597c17bbb69",
+    "check_prime_density_square.py": "8d530fec782c17e59a051390327f57e05890cd931b5d57dd6f55ad7e21df7385",
+    "check_prime_density_square.json": "63c04063a6b957947f65d0f53072bc8ad0af5f807404473d8c22c03c5ba8cba5",
+    "session28-weil/REPORT.md": "e565c74e672f37ad02a962193018da81fc62ca315d51b902912aeaf953aee4e0"
+  }
+}

@@ -1,5 +1,8 @@
 # The n-2 Negative Eigenvalues: Two Recursions on the Triangle
 
+**Historical warning (2026-10-22):** The universal n-2 negative-eigenvalue claim below is refuted. Current canon, `../01-canon/theorems/THM-300-quadratic-signature.md`, gives exact inertia (20 positive, 0 zero, 8 negative) at n=9, not 7 negative. The finite n<=8 observations remain valid; the claimed all-order proof and extrapolation do not. This reflection is retained as historical exploration.
+
+
 **Filed by:** opus-2026-04-04-S6
 
 ## The Observation

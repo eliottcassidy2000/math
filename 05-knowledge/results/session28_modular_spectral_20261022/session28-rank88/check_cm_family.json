@@ -1,0 +1,199 @@
+{
+  "all_primes_3_mod4_below200": [
+    {
+      "p": 3,
+      "a": 1,
+      "b": 1,
+      "norm_alpha": 1,
+      "index": 9,
+      "checks_passed": true
+    },
+    {
+      "p": 7,
+      "a": 2,
+      "b": 3,
+      "norm_alpha": 2,
+      "index": 49,
+      "checks_passed": true
+    },
+    {
+      "p": 11,
+      "a": 1,
+      "b": 3,
+      "norm_alpha": 3,
+      "index": 121,
+      "checks_passed": true
+    },
+    {
+      "p": 19,
+      "a": 1,
+      "b": 6,
+      "norm_alpha": 5,
+      "index": 361,
+      "checks_passed": true
+    },
+    {
+      "p": 23,
+      "a": 2,
+      "b": 8,
+      "norm_alpha": 6,
+      "index": 529,
+      "checks_passed": true
+    },
+    {
+      "p": 31,
+      "a": 4,
+      "b": 13,
+      "norm_alpha": 8,
+      "index": 961,
+      "checks_passed": true
+    },
+    {
+      "p": 43,
+      "a": 1,
+      "b": 16,
+      "norm_alpha": 11,
+      "index": 1849,
+      "checks_passed": true
+    },
+    {
+      "p": 47,
+      "a": 2,
+      "b": 18,
+      "norm_alpha": 12,
+      "index": 2209,
+      "checks_passed": true
+    },
+    {
+      "p": 59,
+      "a": 1,
+      "b": 23,
+      "norm_alpha": 15,
+      "index": 3481,
+      "checks_passed": true
+    },
+    {
+      "p": 67,
+      "a": 1,
+      "b": 20,
+      "norm_alpha": 17,
+      "index": 4489,
+      "checks_passed": true
+    },
+    {
+      "p": 71,
+      "a": 4,
+      "b": 14,
+      "norm_alpha": 18,
+      "index": 5041,
+      "checks_passed": true
+    },
+    {
+      "p": 79,
+      "a": 4,
+      "b": 33,
+      "norm_alpha": 20,
+      "index": 6241,
+      "checks_passed": true
+    },
+    {
+      "p": 83,
+      "a": 1,
+      "b": 9,
+      "norm_alpha": 21,
+      "index": 6889,
+      "checks_passed": true
+    },
+    {
+      "p": 103,
+      "a": 2,
+      "b": 43,
+      "norm_alpha": 26,
+      "index": 10609,
+      "checks_passed": true
+    },
+    {
+      "p": 107,
+      "a": 1,
+      "b": 31,
+      "norm_alpha": 27,
+      "index": 11449,
+      "checks_passed": true
+    },
+    {
+      "p": 127,
+      "a": 2,
+      "b": 54,
+      "norm_alpha": 32,
+      "index": 16129,
+      "checks_passed": true
+    },
+    {
+      "p": 131,
+      "a": 1,
+      "b": 28,
+      "norm_alpha": 33,
+      "index": 17161,
+      "checks_passed": true
+    },
+    {
+      "p": 139,
+      "a": 1,
+      "b": 50,
+      "norm_alpha": 35,
+      "index": 19321,
+      "checks_passed": true
+    },
+    {
+      "p": 151,
+      "a": 5,
+      "b": 27,
+      "norm_alpha": 38,
+      "index": 22801,
+      "checks_passed": true
+    },
+    {
+      "p": 163,
+      "a": 1,
+      "b": 18,
+      "norm_alpha": 41,
+      "index": 26569,
+      "checks_passed": true
+    },
+    {
+      "p": 167,
+      "a": 2,
+      "b": 50,
+      "norm_alpha": 42,
+      "index": 27889,
+      "checks_passed": true
+    },
+    {
+      "p": 179,
+      "a": 1,
+      "b": 78,
+      "norm_alpha": 45,
+      "index": 32041,
+      "checks_passed": true
+    },
+    {
+      "p": 191,
+      "a": 6,
+      "b": 66,
+      "norm_alpha": 48,
+      "index": 36481,
+      "checks_passed": true
+    },
+    {
+      "p": 199,
+      "a": 4,
+      "b": 88,
+      "norm_alpha": 50,
+      "index": 39601,
+      "checks_passed": true
+    }
+  ],
+  "count": 24,
+  "two_copy_isotropy_negative_controls": 8,
+  "U2_symmetric_gram_condition": "a=-2b-2d, determinant=-(b+d)^2-d^2; no positive definite Gram"
+}

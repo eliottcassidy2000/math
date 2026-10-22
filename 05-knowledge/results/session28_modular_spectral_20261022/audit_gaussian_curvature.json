@@ -1,0 +1,14 @@
+{
+  "method": "independent four Ramanujan derivatives, log-derivative quotient rule, Machin60/25 terms, exponential120 terms, E4 first20 terms",
+  "curvature_identity": "1024*(23708225*b**2*x**4 - 1361323584*b*x**2 - 69959376)/(b*x**2)",
+  "y_interval": [
+    "57471215393911309459/1000000000000000000",
+    "2873560769695565473/50000000000000000"
+  ],
+  "P_upper": "-2141362539280786991172998626809091159/100000000000000000000000000000000",
+  "r1_less_than": 12000,
+  "tail_limit": 2723200,
+  "strict_local_maximum_at_t1": true,
+  "at_least_two_reciprocal_global_minimizers": true,
+  "limits": "No uniqueness, location, actual angular eigenvalue, or Gaussian stability claim."
+}

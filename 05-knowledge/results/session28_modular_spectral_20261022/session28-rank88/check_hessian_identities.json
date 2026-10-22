@@ -1,0 +1,24 @@
+{
+  "status": "EXACT normalizations and identities; no angular eigenvalue computation",
+  "harmonic_laplacian": "0",
+  "V_dimension": 3915,
+  "angular_constant": 2723200,
+  "asymptotic_inverse_pi_t_coefficient": 15318000,
+  "residue_classes": [
+    {
+      "rank_mod24": 0,
+      "degree2_quotient_weight": -10,
+      "degree4_quotient_weight": -8
+    },
+    {
+      "rank_mod24": 8,
+      "degree2_quotient_weight": -6,
+      "degree4_quotient_weight": -4
+    },
+    {
+      "rank_mod24": 16,
+      "degree2_quotient_weight": -2,
+      "degree4_quotient_weight": 0
+    }
+  ]
+}

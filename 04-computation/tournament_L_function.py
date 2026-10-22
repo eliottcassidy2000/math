@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+# HISTORICAL EXPLORATORY SCRIPT: the RH, functional-equation, and automorphy interpretations below are not established. The defined finite reciprocal product has poles, not zeros, at solutions of 1-Q_k*p**(-s)=0. For Q_k>0 these are s=log(Q_k)/log(p)+2*pi*i*j/log(p), j in Z; a reciprocal finite product of these entire factors has no finite zeros. For a Paley tournament (p prime, p=3 mod4), Q_k=(p+1)/4, not sqrt(p). The quadratic-residue orientation is not a tournament for p=1 mod4. Fourier-mode indexing is not an Euler product over rational primes. Treat printed 'GRH for tournaments' claims as withdrawn heuristics, not mathematical conclusions. No functional equation has been derived by the definition alone.
+
 """
 THE TOURNAMENT L-FUNCTION
 opus-2026-03-13-S67g

@@ -1,0 +1,35 @@
+{
+  "files": {
+    "REPORT.md": "5bd256763e339e17d38a823de33544a7266b89c15e1e173451bff21f5adb2499",
+    "catalogue_check.json": "c123c522d748a169c38562394574f272c005ddefe6cbbc14164809341952627d",
+    "check_catalogue.py": "824b0dbcc007bc8ed3c0ad363d0ed4e658504ace7ff588b4a6b9cd33fda82d25",
+    "check_cm163_glue.json": "ea0d097870c7fe4f2aa2d35b35189ddb77265905d4e6b603af5f5dd99e252fe6",
+    "check_cm163_glue.py": "b3ad4968b77dbeba21d4dea70bf127f00496118840150f8b5bee304862846542",
+    "check_cm_composite.json": "98c0a7e4126a6fea9d331d8c01a75887b4528fba3e3aa175feefaaf78033bea9",
+    "check_cm_composite.py": "cc388ad0b76d89c9a7f53a0f66c2fcddcecdb867a508cdb4fb2c4e7c9203dec6",
+    "check_cm_family.json": "ab0bd888d49598e064c4e644bc393b08fa4e3272e20918de188a618ae31e9a29",
+    "check_cm_family.py": "e37cd0220cef672f570c9667501284cd86a6cee451e13b1050b04eeeccb2dd68",
+    "check_hecke.json": "0d9c31e4248a057b24a28822f3fec6668956f4b48e53d9de2978d066c1d41535",
+    "check_hecke.py": "c494c15545d63dccbce63feb4330d745c3d3b3383fe062d6ddcd7e599ed290ca",
+    "check_hessian_identities.json": "5a62675e2c68cf96f2a8b76a836b49929465b18cfb564e73cf96c6dd44e7fc9b",
+    "check_hessian_identities.py": "15d77241b7217be9738f8019ef96ebbe41e854048012f657dc7cc114076b8e36",
+    "check_spectral.json": "1f923ce6f1d0842fab790fee3e8d429286df7369b5c45cf529dbfd81b9b7fe70",
+    "check_spectral.py": "f37e550bdb0bcd5cd80ca7f0d17be4ae30f6204e1c6beb7fc3a607acfeb91c16",
+    "gram88.json": "6f66f28707b9c472366a31c8873addce44f43bcad06cba38a99b01c4e4c09df0",
+    "probe_hessian.json": "7c0f407334cf8529ab5aec6b83568fd0076f0220a49bf0b401b5991e9c18533f",
+    "probe_hessian.py": "7393d55795f0d15647c8eaf444c147bf380ba8626f7b0d5f59a4745e7e5e5993",
+    "probe_hessian_coarse_historical.json": "d7ab9dfea579a5990a30aa19621d8b11237d413440602f6516e0f331db766351"
+  },
+  "exclude": [
+    "catalogue.html",
+    "*.out",
+    "__pycache__"
+  ],
+  "exact_tests": "All seven check_*.py scripts pass with python and python -O",
+  "numerical_only": [
+    "probe_hessian.py",
+    "probe_hessian.json",
+    "probe_hessian_coarse_historical.json"
+  ],
+  "correction": "Self-dual point is a certified strict local maximum, not a global minimum. Companion certificate: session28-cm-audit/scalar-followon."
+}

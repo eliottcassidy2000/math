@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "producer_input_sha256": "ea0d097870c7fe4f2aa2d35b35189ddb77265905d4e6b603af5f5dd99e252fe6",
+  "cm163": {
+    "certificate_identities": "direct matrix arithmetic, no producer execution",
+    "norm2_roots": 240,
+    "root_span_rank": 8,
+    "enumeration_nodes": 7253,
+    "positive_principal_minors": true
+  },
+  "composite_discriminant_controls": [
+    {
+      "d": 15,
+      "a": 2,
+      "b": 5,
+      "determinant": 1,
+      "norm_alpha": 4
+    },
+    {
+      "d": 27,
+      "a": 1,
+      "b": 5,
+      "determinant": 1,
+      "norm_alpha": 7
+    },
+    {
+      "d": 35,
+      "a": 2,
+      "b": 10,
+      "determinant": 1,
+      "norm_alpha": 9
+    },
+    {
+      "d": 39,
+      "a": 4,
+      "b": 10,
+      "determinant": 1,
+      "norm_alpha": 10
+    },
+    {
+      "d": 51,
+      "a": 1,
+      "b": 7,
+      "determinant": 1,
+      "norm_alpha": 13
+    },
+    {
+      "d": 55,
+      "a": 3,
+      "b": 10,
+      "determinant": 1,
+      "norm_alpha": 14
+    },
+    {
+      "d": 63,
+      "a": 2,
+      "b": 11,
+      "determinant": 1,
+      "norm_alpha": 16
+    },
+    {
+      "d": 75,
+      "a": 5,
+      "b": 7,
+      "determinant": 1,
+      "norm_alpha": 19
+    },
+    {
+      "d": 87,
+      "a": 2,
+      "b": 13,
+      "determinant": 1,
+      "norm_alpha": 22
+    },
+    {
+      "d": 91,
+      "a": 3,
+      "b": 9,
+      "determinant": 1,
+      "norm_alpha": 23
+    },
+    {
+      "d": 99,
+      "a": 1,
+      "b": 14,
+      "determinant": 1,
+      "norm_alpha": 25
+    }
+  ],
+  "harmonic_laplacian_dimensions": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "minimal_shell_isotropic_constant": 2723200,
+  "limits": [
+    "Does not enumerate rank88 short vectors or certify its minimum.",
+    "Harmonic theta modularity and rank8 classification are classical cited inputs.",
+    "No claim that all rank88 Gaussian Hessians are positive."
+  ]
+}

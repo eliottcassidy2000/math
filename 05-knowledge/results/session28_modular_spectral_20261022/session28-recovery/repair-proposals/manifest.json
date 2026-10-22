@@ -1,0 +1,29 @@
+[
+  {
+    "target": "01-canon/theorems/THM-134-paley-local-max-parseval.md",
+    "preimage_file": "THM-134-paley-local-max-parseval.md.preimage",
+    "proposed_file": "THM-134-paley-local-max-parseval.md.proposed",
+    "preimage_sha256": "85820c2ef61ef9785b0575995ce65398687687c3f80c1910d1dbaeb6669d486f",
+    "proposed_sha256": "a498662f461d637d89a658d707c814aced417ca0210049ec4bd74f654b86d2a7",
+    "ast_unchanged": null,
+    "apply_only_if_preimage_hash_matches": true
+  },
+  {
+    "target": "07-reflections/n-2-negative-eigenvalues.md",
+    "preimage_file": "n-2-negative-eigenvalues.md.preimage",
+    "proposed_file": "n-2-negative-eigenvalues.md.proposed",
+    "preimage_sha256": "2184a67dc54285a704647a3632424c9759da5b7dd22f8bd2269018130ec2762c",
+    "proposed_sha256": "159a68f0be7662127d5893c68009138455989e984a9942dd3d223f2d2a27738d",
+    "ast_unchanged": null,
+    "apply_only_if_preimage_hash_matches": true
+  },
+  {
+    "target": "04-computation/tournament_L_function.py",
+    "preimage_file": "tournament_L_function.py.preimage",
+    "proposed_file": "tournament_L_function.py.proposed",
+    "preimage_sha256": "64113216a7a3c415a86081234bc02d6c08793cd4fd227c24ef456741d34bb43b",
+    "proposed_sha256": "7964bed03f9b1b4f463e920d448736b5c588677c5eb5f0d2e8b8f58fd6806833",
+    "ast_unchanged": true,
+    "apply_only_if_preimage_hash_matches": true
+  }
+]

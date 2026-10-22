@@ -19619,3 +19619,13 @@ the ambient space.
 - **`one_twenty_eight_atlas_balance_gold_20261014.md`** said the Leech lattice comes "likewise", meaning by Construction A, from the Golay code. Plain Construction A gives the Niemeier lattice `A_1^24`, with theta series `E_4^3 − 672Δ`. Leech needs a twist or a `Z_4` lift. Fixed in place.
 - **Checked and correct:** `04-computation/golay_baer_bridge_88.py` describes Leech as the unique even unimodular 24-dimensional lattice *with no vectors of norm 2*, which is right.
 - **Missing coordinate.** Reflections that state numbers must be audited like results. Small-number "chains" between `{7, 21}` and `{8, 24}` need a map or a DICTIONARY label (MISTAKE-559).
+
+### 2026-10-22: Conflating sampled spectra, signed coordinates, and spectral interpretations
+
+Three historical scope corrections were applied with preimage hashes:
+
+- THM-134's prior continuous Parseval-simplex PROVED status was unsupported by discrete polynomial fitting and permutation symmetry. The status is now OPEN for the continuous-extension claim. Specified-polynomial Hessians and verified finite counts are not retracted. Symmetry makes the uniform point stationary under appropriate differentiability, but does not make it the only stationary point, nor determine Hessian sign.
+- The n−2 negative-eigenvalue reflection omitted the existing THM-300 refutation at n=9. Its historical finite observations are retained with a warning. A fixed-path Hessian at a transitive corner must not be confused with the full-arc unbiased Hessian or a spectral interpolation Hessian.
+- The exploratory tournament L-function script called poles of a finite reciprocal product zeros and inferred RH-style functional-equation/automorphy structure without a derivation. A comment-only, AST-preserving warning now states the correct pole geometry and Paley normalization.
+
+Prevention: specify the coordinate space, extension, group action, positivity class, and exact analytic object before transferring spectral vocabulary. For continuous conclusions, either prove an identity on an open set or explicitly declare the chosen extension. For moment claims, test exact polynomial-square positivity. A familiar singularity or numerical resemblance does not supply a self-adjoint positive realization or a modular transformation law.

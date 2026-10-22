@@ -1,0 +1,54 @@
+{
+  "r1": "8192*(304325*E4*x**2 - 17489844)/(E4*x**2)",
+  "logt_curvature_at1": "1024*(23708225*E4**2*x**4 - 1361323584*E4*x**2 - 69959376)/(E4*x**2)",
+  "x_at1": "2*pi",
+  "E4_at_i": "3*Gamma(1/4)^8/(64*pi^6)",
+  "rational_certificate": {
+    "method": "Machin alternating arctangents; positive exponential Taylor with geometric remainder; E4 first12 terms with sigma3(n)<=n^4 tail",
+    "pi_bounds": [
+      "3.141592653589793238462643",
+      "3.141592653589793238462643"
+    ],
+    "y_bounds_rounded_display": [
+      "57.471215393911309459873937",
+      "57.471215393911309459873937"
+    ],
+    "y_rational_enclosure_denominator": 1000000000000000000,
+    "y_rational_enclosure_numerators": [
+      "57471215393911309459",
+      "57471215393911309460"
+    ],
+    "curvature_polynomial_upper": "-21413.625392808041831653634595",
+    "negative_curvature_proved": true
+  },
+  "nearby_numerical_samples": [
+    {
+      "t": "0.99",
+      "r_numerical": "11900.8140494142382247449059624"
+    },
+    {
+      "t": "0.999",
+      "r_numerical": "11919.7582682651126076866204468"
+    },
+    {
+      "t": "1",
+      "r_numerical": "11919.9492158637061873146837953"
+    },
+    {
+      "t": "1.001",
+      "r_numerical": "11919.7586497524143693939770073"
+    },
+    {
+      "t": "1.01",
+      "r_numerical": "11901.1903566007661148061263546"
+    },
+    {
+      "t": "1.05",
+      "r_numerical": "11537.9153553020062744087533103"
+    },
+    {
+      "t": "1.1",
+      "r_numerical": "11136.3723367551057444131787418"
+    }
+  ]
+}

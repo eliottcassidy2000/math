@@ -1,13 +1,16 @@
 ---
 theorem_id: THM-134
 title: Paley is the unique local maximum of H on the Parseval simplex (p=7,11)
-status: PROVED (p=7,11 — algebraic + computational)
+status: OPEN (continuous-extension claim; historical proof incomplete)
 proved_by: opus-2026-03-12-S58
 date: 2026-03-12
 related_theorems: [THM-133, THM-130, THM-126]
 related_hypotheses: [HYP-468, HYP-469, HYP-470]
 tags: [paley, schur-concavity, maclaurin, elementary-symmetric, eigenvalue, local-max]
 ---
+
+**Proof-scope warning (2026-10-22):** The prior status was "PROVED (p=7,11 — algebraic + computational)". That historical status is not justified for an intrinsic continuous Hamiltonian-count function on the whole Parseval simplex by the discrete interpolation evidence recorded here. Symmetry does not force all critical points to be uniform. Finite interpolation values also do not determine a Hessian: a symmetric polynomial vanishing at every sample can change the Hessian at the uniform point arbitrarily. The claimed continuous extension must be specified and its formula proved on an open set before its local-extremality conclusion is certified. This is a proof-gap diagnosis, not a counterexample to the local maximum of any particular exactly specified polynomial. Directly computed Hessians of explicitly given polynomials and separately verified discrete Hamiltonian counts remain valid within their own stated scope.
+
 
 ## Main Result
 

@@ -1,0 +1,244 @@
+{
+  "cayley": [
+    {
+      "denominator_minus_numerator": 4,
+      "norm_squared": "1/5",
+      "x": -1,
+      "y": 1
+    },
+    {
+      "denominator_minus_numerator": -4,
+      "norm_squared": "5",
+      "x": 1,
+      "y": -1
+    },
+    {
+      "denominator_minus_numerator": 0,
+      "norm_squared": "1",
+      "x": 2,
+      "y": 0
+    },
+    {
+      "denominator_minus_numerator": 8,
+      "norm_squared": "1/9",
+      "x": 0,
+      "y": 2
+    }
+  ],
+  "fixed63": {
+    "a0_a1_a2": [
+      2,
+      4,
+      6
+    ],
+    "even_hankel": -16,
+    "even_subsequence": [
+      2,
+      6,
+      10
+    ],
+    "ordinary_hankel": -4
+  },
+  "hessian": [
+    {
+      "c": "1",
+      "entries": 1,
+      "errors": 0,
+      "n": 2,
+      "negative_eigenvalue": "0",
+      "negative_multiplicity": 0,
+      "permutations": 2,
+      "positive_eigenvalue": "2",
+      "positive_multiplicity": 0
+    },
+    {
+      "c": "1/2",
+      "entries": 9,
+      "errors": 0,
+      "n": 3,
+      "negative_eigenvalue": "-1/2",
+      "negative_multiplicity": 2,
+      "permutations": 6,
+      "positive_eigenvalue": "1",
+      "positive_multiplicity": 1
+    },
+    {
+      "c": "1/2",
+      "entries": 36,
+      "errors": 0,
+      "n": 4,
+      "negative_eigenvalue": "-1",
+      "negative_multiplicity": 3,
+      "permutations": 24,
+      "positive_eigenvalue": "1",
+      "positive_multiplicity": 3
+    },
+    {
+      "c": "3/4",
+      "entries": 100,
+      "errors": 0,
+      "n": 5,
+      "negative_eigenvalue": "-9/4",
+      "negative_multiplicity": 4,
+      "permutations": 120,
+      "positive_eigenvalue": "3/2",
+      "positive_multiplicity": 6
+    },
+    {
+      "c": "3/2",
+      "entries": 225,
+      "errors": 0,
+      "n": 6,
+      "negative_eigenvalue": "-6",
+      "negative_multiplicity": 5,
+      "permutations": 720,
+      "positive_eigenvalue": "3",
+      "positive_multiplicity": 10
+    },
+    {
+      "c": "15/4",
+      "entries": 441,
+      "errors": 0,
+      "n": 7,
+      "negative_eigenvalue": "-75/4",
+      "negative_multiplicity": 6,
+      "permutations": 5040,
+      "positive_eigenvalue": "15/2",
+      "positive_multiplicity": 15
+    }
+  ],
+  "jordan_control": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "moments": [
+    {
+      "degree": 1,
+      "even_moments": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "hankel2": [
+        -4,
+        -4
+      ]
+    },
+    {
+      "degree": 2,
+      "even_moments": [
+        1,
+        9,
+        25,
+        49
+      ],
+      "hankel2": [
+        -56,
+        -184
+      ]
+    },
+    {
+      "degree": 3,
+      "even_moments": [
+        1,
+        27,
+        125,
+        343
+      ],
+      "hankel2": [
+        -604,
+        -6364
+      ]
+    },
+    {
+      "degree": 4,
+      "even_moments": [
+        1,
+        81,
+        625,
+        2401
+      ],
+      "hankel2": [
+        -5936,
+        -196144
+      ]
+    },
+    {
+      "degree": 5,
+      "even_moments": [
+        1,
+        243,
+        3125,
+        16807
+      ],
+      "hankel2": [
+        -55924,
+        -5681524
+      ]
+    },
+    {
+      "degree": 6,
+      "even_moments": [
+        1,
+        729,
+        15625,
+        117649
+      ],
+      "hankel2": [
+        -515816,
+        -158374504
+      ]
+    },
+    {
+      "degree": 7,
+      "even_moments": [
+        1,
+        2187,
+        78125,
+        823543
+      ],
+      "hankel2": [
+        -4704844,
+        -4302427084
+      ]
+    },
+    {
+      "degree": 8,
+      "even_moments": [
+        1,
+        6561,
+        390625,
+        5764801
+      ],
+      "hankel2": [
+        -42656096,
+        -114765031264
+      ]
+    }
+  ],
+  "positive_spectral_control": {
+    "hankel2": [
+      6,
+      12,
+      24,
+      48,
+      96
+    ],
+    "moments": [
+      5,
+      8,
+      14,
+      26,
+      50,
+      98,
+      194
+    ]
+  }
+}

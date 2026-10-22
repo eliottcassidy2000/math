@@ -1,0 +1,11 @@
+{
+  "geometric_identity_error": 2.168404344971009e-19,
+  "max_single_mode_error": 3.486215796444702e-17,
+  "status": "Numerical algebra smoke tests only; synthetic rho is not asserted to be a zero",
+  "trivial_correction_errors": [
+    0.0,
+    1.3234889800848443e-23,
+    0.0,
+    0.0
+  ]
+}
