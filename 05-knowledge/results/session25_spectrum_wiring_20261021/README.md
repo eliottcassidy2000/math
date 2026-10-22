@@ -1,6 +1,8 @@
 # Session25 audited research packets
 
-Run reproduction commands from this directory, retaining the sibling packet folders. The Python checkers are self-contained; the crossfield independent checker additionally requires SymPy. Proofs and reports distinguish all-parameter arguments, finite checks, cited source claims, and remaining open problems.
+Read the [research synthesis and proof routes](SYNTHESIS.md).
+
+Run reproduction commands from this directory, retaining the sibling packet folders. Most Python checkers are self-contained. The crossfield independent checker requires SymPy. The arithmetic audit.py requires repository history including checkpoint f002fc425336 and supports --repo /path/to/math. Proofs and reports distinguish all-parameter arguments, finite checks, cited source claims, and remaining open problems.
 
 ## Frozen source mapping
 
