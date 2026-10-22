@@ -6,3 +6,15 @@ n=10 (3000 tournaments, ar10_classes.txt), degree 4 in w = z^2:
   exact Phi:             |z| median 1.2911 (range 1.2467..1.3342), median arg(w) 3.142
   truncated rho(z):      |z| median 1.4066 (range 1.3211..1.4389), median arg(w) 2.664;  median |w_exact/w_trunc| 0.8423
   truncated exp(c z^2):  |z| median 1.4699 (range 1.4699..1.4699), median arg(w) 2.667
+n=12 (1000 tournaments, ar12_samples.txt), degree 5 in w = z^2:
+  exact Phi:             |z| median 1.3302 (range 1.3000..1.3624), median arg(w) 3.142
+  truncated rho(z):      |z| median 1.4549 (range 1.3545..1.4904), median arg(w) 3.142;  median |w_exact/w_trunc| 0.8360
+  truncated exp(c z^2):  |z| median 1.5424 (range 1.5424..1.5424), median arg(w) 3.142
+n=14 (500 tournaments, ar14_samples.txt), degree 6 in w = z^2:
+  exact Phi:             |z| median 1.3735 (range 1.3505..1.3949), median arg(w) 3.142
+  truncated rho(z):      |z| median 1.5443 (range 1.4657..1.5765), median arg(w) 2.796;  median |w_exact/w_trunc| 0.7912
+  truncated exp(c z^2):  |z| median 1.6429 (range 1.6429..1.6429), median arg(w) 2.801
+n=16 (200 tournaments, ar16_samples.txt), degree 7 in w = z^2:
+  exact Phi:             |z| median 1.4186 (range 1.3981..1.4410), median arg(w) 3.142
+  truncated rho(z):      |z| median 1.5995 (range 1.5415..1.6357), median arg(w) 3.142;  median |w_exact/w_trunc| 0.7850
+  truncated exp(c z^2):  |z| median 1.7155 (range 1.7155..1.7155), median arg(w) 3.142
