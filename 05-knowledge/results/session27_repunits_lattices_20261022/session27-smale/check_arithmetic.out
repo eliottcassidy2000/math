@@ -1,0 +1,6 @@
+m | B_(2m) | Mersenne factor | abs(4 B_(2m)/m) | numerator | bP_(4m) order | constant-one E_(2m) q coefficient
+2 | -1/30 | 7 | 1/15 | 1 | 28 | 240
+3 | 1/42 | 31 | 2/63 | 2 | 992 | -504
+4 | -1/30 | 127 | 1/30 | 1 | 8128 | 480
+PASS: all three exact orders; 63 has even exponent 6, not 2m-1 for integer m.
+Theta_15 order from Milnor Table 1: 2*8128 = 16256

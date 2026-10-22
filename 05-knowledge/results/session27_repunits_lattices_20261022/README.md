@@ -73,3 +73,7 @@ At packet root, run score_root_hostile.py, score_first_failure.py and check_lore
 The initial catalogue/manifest source hashes predate the deliberate six-file repairs. A later catalogue replay can therefore report those changed paths while retaining its own original snapshot and exact line previews. Historical snapshots and the newly corrected source surface are intentionally both preserved.
 
 Run `python3 session27-final-audit/check_portable.py /path/to/math` from the packet directory to repeat the final 74 integration checks. This wrapper reconstructs the omitted correction preimages from their pinned Git blob IDs and derives proposed snapshots by applying the published patch in a temporary directory. It does not edit the checkout. A checkout with those original blobs is required; the original source-bound checker is unchanged. The portable replay is byte-identical to check_results.json.
+
+## Late primary-source check: Smale and repunit factors
+
+[Smale, binary repunits, and modular forms](session27-smale/ADDENDUM.md), with [source/arithmetic check](session27-smale/SOURCE_CHECK.md), closes the named topology thread. This CITED classical addendum distinguishes the Kervaire–Milnor subgroup order from the full homotopy-sphere group, verifies the factors 7, 31 and 127 in three exact examples, and records the Bernoulli normalization without inferring tournament rarity. It was checked after the frozen final integration audit and is outside that earlier audit scope. No earlier audited synthesis or theorem was changed.
