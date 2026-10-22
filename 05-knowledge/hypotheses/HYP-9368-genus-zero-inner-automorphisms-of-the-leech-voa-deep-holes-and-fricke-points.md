@@ -1,9 +1,18 @@
 ---
 id: HYP-9368
-title: "Fricke points of the Leech lattice and genus-zero inner automorphisms of V_Lambda. (A) The strict Fricke points (order n, a unique nearest Leech point at squared distance 2 - 2/n, all proper multiples deep holes or in Lambda) are exactly the 23 points c''_N of THM-4759 (10), one per Niemeier lattice N, of order h(N) + 1, classified by their orbifold neighbour N. (B) The genus-zero inner automorphisms (Tr_{V_Lambda}(e^{2 pi i v(0)} q^{L_0 - 1}) - 24 a normalised Hauptmodul) are 0, the 23 deep holes, the strict Fricke points, and a further family of Fricke-type points whose shallow proper multiples cancel in the twining. Its known members are seven shell-1 points of Borcherds' 2-targets (A1^24, D4^6, D6^4, D8^3, D10E7^2 with E7 carrier, D12^2, D16E8 with E8 carrier; orders 4, 8, 12, 16, 20, 24, 32), PROVED in THM-4760 to twine by 4A, 8A, 12H, 16C, 20F, 24I, 32A. Conjecture (B'): there are no others, so the Fricke orders realised by translations are exactly 3-17, 19, 20, 23, 24, 26, 31, 32, 47"
+title: "Fricke points of the Leech lattice and genus-zero inner automorphisms of V_Lambda. (A) The strict Fricke points (order n, Z_v - 24 the normalized Gamma_0(n)+n Hauptmodul - by THM-4760 equivalently rational, a unique nearest Leech point at squared distance 2 - 2/n and exactly 24 at squared distance 2 - and all proper multiples deep holes or in Lambda) are exactly the 23 points c''_N of THM-4759 (10), one per Niemeier lattice N, of order h(N) + 1, classified by their orbifold neighbour N. (B) The genus-zero inner automorphisms (Tr_{V_Lambda}(e^{2 pi i v(0)} q^{L_0 - 1}) - 24 a normalised Hauptmodul) are 0, the 23 deep holes, the strict Fricke points, and a further family of Fricke-type points whose shallow proper multiples cancel in the twining. Its known members are seven shell-1 points of Borcherds' 2-targets (A1^24, D4^6, D6^4, D8^3, D10E7^2 with E7 carrier, D12^2, D16E8 with E8 carrier; orders 4, 8, 12, 16, 20, 24, 32), PROVED in THM-4760 to twine by 4A, 8A, 12H, 16C, 20F, 24I, 32A. Conjecture (B'): there are no others, so the Fricke orders realised by translations are exactly 3-17, 19, 20, 23, 24, 26, 31, 32, 47"
 status: >
   OPEN (conjecture). The 'if' directions are PROVED in THM-4759 (3), (9), (10) and THM-4760 (3), (4); THM-4760 also
   supplies the rationality input of THM-4759 (10).
+  Part (A), REFINED after the S53 audit (order-5 census, audit_S53/order5_strict_census.out). The first wording
+  defined a strict Fricke point by geometry alone: a unique vector of norm 2 - 2/n plus deep proper multiples. At
+  order 5 the audit samples 45,890 such points in two classes.
+  - One class is the A3^8 (h+1)-point (n_2 = 24).
+  - The other has n_2 = 23, and its conjugate 2v has the shallower minimum 6/5. So its twining is irrational and not
+    a Hauptmodul.
+  So geometry alone does not suffice. The definition now requires the Fricke Hauptmodul property, which by THM-4760
+  adds rationality and n_2 = 24. The prime-order sketch below silently used exactly this, through the claim that all
+  twisted sectors are Galois transforms of one another.
   Part (A), evidence:
   - Order 2: no strict Fricke point exists, since v = -v mod Lambda pairs the minimal vectors (PROVED).
   - Order 3: a Fricke point is y/3 with y a norm-12 vector having no lambda in Lambda_4 at y.lambda = 6.
@@ -71,8 +80,13 @@ related:
 Let v ∈ Λ ⊗ Q have order n modulo Λ. Write Z_v = Tr_{V_Λ}(e^{2πi v(0)} q^{L_0 − 1}) = Θ_Λ^{[v]}/η²⁴.
 
 Call v a **strict Fricke point** if it satisfies both of these:
-- Λ + v has a unique vector of norm 2 − 2/n;
+- Z_v − 24 is the normalized Hauptmodul of Γ_0(n) + n. By THM-4760 (1) this means: Z_v is rational, Λ + v has a
+  unique vector of norm 2 − 2/n, and Λ + v has exactly 24 vectors of norm 2. Condition (iii) is vacuous when the
+  multiples are deep.
 - every proper multiple jv (j | n, 1 < j < n) is a deep hole or lies in Λ.
+
+The geometric conditions alone (a unique Fricke-norm vector and deep multiples) are not enough. The audit's order-5
+census finds an irrational class with n_2 = 23 among them.
 
 THM-4759 (10) proves that then Z_v − 24 is the Fricke Hauptmodul of Γ_0(n) + n, and that the 23 points c″_N (orders
 h(N) + 1) are strict Fricke points.
@@ -147,9 +161,10 @@ D24 cancels at every cusp, but it is irrational.
 Let v be a strict Fricke point of prime order p, and g = e^{2πi v(0)}. Prime order has no proper multiples, so (A)
 and (B) agree here.
 
-1. **Dimension.** Since gcd(i, p) = 1 for i ≠ 0, every twisted sector V_Λ(g^i) is a Galois and modular transform of
-   the g-twisted one. Its g-invariant part has character U_p F, whose constant term is c_F(0) = 24. So V′ = V_Λ^{orb(g)}
-   has dim V′_1 = 24p.
+1. **Dimension.** Since gcd(i, p) = 1 for i ≠ 0 and Z_v is rational, every twisted sector V_Λ(g^i) is a Galois and
+   modular transform of the g-twisted one. Its g-invariant part has character U_p F, whose constant term is
+   c_F(0) = 24. So V′ = V_Λ^{orb(g)} has dim V′_1 = 24p. Without rationality this step fails: in the audit's
+   irrational order-5 class, Λ + 2v has minimum 6/5, unlike Λ + v.
 2. **The orbifold is a lattice VOA.** V′ = V_{N′} with N′ Niemeier and |R(N′)| = 24(p − 1). Hence h(N′) = p − 1.
 3. **The dual automorphism.** τ = e^{2πiu(0)} with u ∈ (1/p)N′. It is regular, since its fixed lattice Λ_0 is
    rootless.

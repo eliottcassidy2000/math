@@ -1,0 +1,12 @@
+ok   D4^6     W_3 : per-component multipliers ['+0.500000-0.866025i', '+0.500000-0.866025i', '+0.500000-0.866025i', '+0.500000-0.866025i', '+0.500000-0.866025i', '+0.500000-0.866025i'] = exp(-2 pi i rank/24): True; product +1.000000-0.000000i
+ok   D6^4     W_5 : per-component multipliers ['-0.000000-1.000000i', '-0.000000-1.000000i', '-0.000000-1.000000i', '-0.000000-1.000000i'] = exp(-2 pi i rank/24): True; product +1.000000-0.000000i
+ok   D8^3     W_7 : per-component multipliers ['-0.500000-0.866025i', '-0.500000-0.866025i', '-0.500000-0.866025i'] = exp(-2 pi i rank/24): True; product +1.000000-0.000000i
+ok   D10E7^2  W_9 : per-component multipliers ['-0.866025-0.500000i', '-0.258819-0.965926i', '-0.258819-0.965926i'] = exp(-2 pi i rank/24): True; product +1.000000+0.000000i
+ok   D12^2    W_11: per-component multipliers ['-1.000000+0.000000i', '-1.000000+0.000000i'] = exp(-2 pi i rank/24): True; product +1.000000-0.000000i
+ok   D16E8    W_15: per-component multipliers ['-0.500000+0.866025i', '-0.500000-0.866025i'] = exp(-2 pi i rank/24): True; product +1.000000-0.000000i
+ok   D24      W_23: per-component multipliers ['+1.000000-0.000000i'] = exp(-2 pi i rank/24): True; product +1.000000-0.000000i
+ok   E6^4     W_4 : per-component multipliers ['+0.000000-1.000000i', '+0.000000-1.000000i', '+0.000000-1.000000i', '+0.000000-1.000000i'] = exp(-2 pi i rank/24): True; product +1.000000+0.000000i
+ok   E8^3     W_6 : per-component multipliers ['-0.500000-0.866025i', '-0.500000-0.866025i', '-0.500000-0.866025i'] = exp(-2 pi i rank/24): True; product +1.000000-0.000000i
+ok   E8^3     W_10: per-component multipliers ['-0.500000-0.866025i', '-0.500000-0.866025i', '-0.500000-0.866025i'] = exp(-2 pi i rank/24): True; product +1.000000-0.000000i
+ok   E8^3     W_15: per-component multipliers ['-0.500000-0.866025i', '-0.500000-0.866025i', '-0.500000-0.866025i'] = exp(-2 pi i rank/24): True; product +1.000000-0.000000i
+ALL CHECKS PASSED
