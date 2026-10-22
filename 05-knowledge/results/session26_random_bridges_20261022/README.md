@@ -18,4 +18,12 @@ The random manifests and exploration annotations record the sampled repository p
 
 The producer observer text's original 'independent audit pending' label is historical: the included source-bound audit supplies its completed verdict. Original audit paths identify the research workspace; the corresponding sibling packet files carry the published bytes. Producer and reviewer checksum files preserve original audit provenance rather than a promise that every sampled research input is distributed here.
 
-The observer independent checker's final proof-hash lookup is packaged using a portable sibling path; its mathematical computation is unchanged. No theorem IDs are reserved or canon statuses changed by this packet. Cut-partition asymptotics and colored wiring are separate work, not results claimed by this first checkpoint.
+The observer independent checker's final proof-hash lookup is packaged using a portable sibling path; its mathematical computation is unchanged. No theorem IDs are reserved or canon statuses changed by this packet. The initial checkpoint covered the three observer packets above; the independently reviewed continuation below supplies the cut-partition and wiring results.
+
+## One-apex continuation: cuts, spectral laws, and wiring
+
+- [Cut and Ferrers formulas](session26-tournament/CUT_ADDENDUM.md): exact weighted inversions, extremal boundaries, and exclusion of Hamiltonian count 13 throughout the one-apex stratum. [Concrete H=13 witness outside that stratum](session26-tournament/H13_WITNESS.md).
+- [Apex classification and spectral law](session26-tournament/APEX_CLASSIFICATION_AND_SPECTRAL_LAW.md): exact isomorphism counts and the strong-word law W(X)=(log 2)X+O(sqrt(X)), giving a positive lower bound on missing odd values. The ordinary/converse-merged asymptotics count strong cores, not all padded tournaments. [Source-bound independent audit](session26-cut-review/REVIEW.md).
+- [Blue incidences and forced wiring](session26-blue/RESULT.md): the feedback-number inequality for every metagraph edge, exact one-apex masses and blue incidences, and the resulting stratum constraints. [Independent audit and enumeration](session26-blue-review/AUDIT.md).
+
+Reproduce the producer finite controls with `node verify_cut.js`, `node verify_asymptotic.js`, and `node verify_wiring.js` in session26-tournament. Independent blue controls are `python3 check.py` and `python3 check_n8.py` in session26-blue-review. The cut audit records separate independent computations, but no independent cut-verifier source is distributed; do not confuse the producer scripts with those independent tests. All-order conclusions rest on the reviewed proofs.

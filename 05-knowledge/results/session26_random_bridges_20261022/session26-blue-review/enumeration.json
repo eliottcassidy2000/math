@@ -1,0 +1,77 @@
+[
+  {
+    "n": 2,
+    "A": 1,
+    "C": 1,
+    "V": 1,
+    "B": 1,
+    "only_blue_classes": [
+      "('transitive', 2)"
+    ],
+    "internal_tilings": 1,
+    "loop_tilings": 1
+  },
+  {
+    "n": 3,
+    "A": 2,
+    "C": 2,
+    "V": 2,
+    "B": 2,
+    "only_blue_classes": [
+      "10",
+      "('transitive', 3)"
+    ],
+    "internal_tilings": 2,
+    "loop_tilings": 0
+  },
+  {
+    "n": 4,
+    "A": 4,
+    "C": 2,
+    "V": 8,
+    "B": 4,
+    "only_blue_classes": [
+      "('transitive', 4)"
+    ],
+    "internal_tilings": 8,
+    "loop_tilings": 2
+  },
+  {
+    "n": 5,
+    "A": 9,
+    "C": 5,
+    "V": 43,
+    "B": 9,
+    "only_blue_classes": [
+      "0101",
+      "('transitive', 5)"
+    ],
+    "internal_tilings": 30,
+    "loop_tilings": 4
+  },
+  {
+    "n": 6,
+    "A": 21,
+    "C": 3,
+    "V": 209,
+    "B": 9,
+    "only_blue_classes": [
+      "('transitive', 6)"
+    ],
+    "internal_tilings": 52,
+    "loop_tilings": 8
+  },
+  {
+    "n": 7,
+    "A": 48,
+    "C": 10,
+    "V": 926,
+    "B": 34,
+    "only_blue_classes": [
+      "001011",
+      "('transitive', 7)"
+    ],
+    "internal_tilings": 48,
+    "loop_tilings": 0
+  }
+]

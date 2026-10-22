@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "exactClaims": "mean and dyadic product error; all integer operations within IEEE exact range",
+  "diagnosticOnly": "five-point CDF differences use floating logarithms",
+  "result": [
+    {
+      "m": 3,
+      "mean": 5,
+      "maxError": 2,
+      "cdfSupAtFivePoints": 0.3862943611198906
+    },
+    {
+      "m": 4,
+      "mean": 9.5,
+      "maxError": 2.75,
+      "cdfSupAtFivePoints": 0.3862943611198906
+    },
+    {
+      "m": 5,
+      "mean": 18.5,
+      "maxError": 2.75,
+      "cdfSupAtFivePoints": 0.13695378264465718
+    },
+    {
+      "m": 6,
+      "mean": 36.5,
+      "maxError": 3.4375,
+      "cdfSupAtFivePoints": 0.13629436111989057
+    },
+    {
+      "m": 7,
+      "mean": 72.5,
+      "maxError": 3.4375,
+      "cdfSupAtFivePoints": 0.018785868152745522
+    },
+    {
+      "m": 8,
+      "mean": 144.5,
+      "maxError": 4.109375,
+      "cdfSupAtFivePoints": 0.018785868152745522
+    },
+    {
+      "m": 9,
+      "mean": 288.5,
+      "maxError": 4.109375,
+      "cdfSupAtFivePoints": 0.011294361119890572
+    },
+    {
+      "m": 10,
+      "mean": 576.5,
+      "maxError": 4.77734375,
+      "cdfSupAtFivePoints": 0.011294361119890572
+    },
+    {
+      "m": 11,
+      "mean": 1152.5,
+      "maxError": 4.77734375,
+      "cdfSupAtFivePoints": 0.003160868152745522
+    },
+    {
+      "m": 12,
+      "mean": 2304.5,
+      "maxError": 5.4443359375,
+      "cdfSupAtFivePoints": 0.002184305652745522
+    },
+    {
+      "m": 13,
+      "mean": 4608.5,
+      "maxError": 5.4443359375,
+      "cdfSupAtFivePoints": 0.0015287361198905725
+    },
+    {
+      "m": 14,
+      "mean": 9216.5,
+      "maxError": 6.111083984375,
+      "cdfSupAtFivePoints": 0.0002571005972544782
+    },
+    {
+      "m": 15,
+      "mean": 18432.5,
+      "maxError": 6.111083984375,
+      "cdfSupAtFivePoints": 0.0007415298553428151
+    },
+    {
+      "m": 16,
+      "mean": 36864.5,
+      "maxError": 6.77777099609375,
+      "cdfSupAtFivePoints": 0.0002532486053428151
+    },
+    {
+      "m": 17,
+      "mean": 73728.5,
+      "maxError": 6.77777099609375,
+      "cdfSupAtFivePoints": 0.000058177942609427546
+    },
+    {
+      "m": 18,
+      "mean": 147456.5,
+      "maxError": 7.4444427490234375,
+      "cdfSupAtFivePoints": 0.00036335372385942755
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "receipt": [
+    {
+      "n": 3,
+      "labelledTournaments": 8,
+      "directedPathComplementInstances": 12,
+      "slackDistribution": {
+        "0": 12
+      },
+      "transitiveNeighborTau": 1
+    },
+    {
+      "n": 4,
+      "labelledTournaments": 64,
+      "directedPathComplementInstances": 192,
+      "slackDistribution": {
+        "0": 48,
+        "1": 144
+      },
+      "transitiveNeighborTau": 1
+    },
+    {
+      "n": 5,
+      "labelledTournaments": 1024,
+      "directedPathComplementInstances": 7680,
+      "slackDistribution": {
+        "0": 240,
+        "1": 3360,
+        "2": 3120,
+        "3": 960
+      },
+      "transitiveNeighborTau": 1
+    }
+  ]
+}
