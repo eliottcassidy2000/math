@@ -413,6 +413,10 @@ L_p = (p-1)H + 1, the same conjugacy that turns 3x + 1 into 3x. The towers are:
 The exact relation is H = pH' + 1; the prime-power towers are NUMEROLOGY beyond it. The prompt's 27 is E6^4 on the
 3-scale.
 
+Starting from Lambda (H = 1), the towers are the base-p repunits H = (p^k - 1)/(p - 1). E8^3 heads both the 2-tower and
+the 5-tower because H(E8^3) = 31 = 11111_2 = 111_5, the first Goormaghtigh number. The next one, 8191, is far outside
+the Niemeier range. The tournament lane meets 31 as a rare H value (HYP-9362 (d)); no map between the two is claimed.
+
 **Prior art (third agent search).**
 - The lattice side of the shell-1 cusps is KNOWN: Lambda is the (h+2)-neighbour of every Niemeier lattice through
   its highest root (Chenevier-Lannes Prop. III.4.3.4).
