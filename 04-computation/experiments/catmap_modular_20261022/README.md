@@ -11,9 +11,16 @@ They need Python 3 with numpy, sympy and mpmath. No supplied PDF or extracted te
 
 | script | output | what |
 |---|---|---|
-| `catmap_mtc.py` | `catmap_mtc.out`, `catmap_census.json` | Pisano facts. Modular data for Fibonacci, Virasoro minimal models, `SU(2)_k`, `SU(3)_k`, lattice discriminant forms (definite and indefinite), `D(Z_N)`, `D(S_3)` and a Deligne product. Census of `C = T S T⁻¹ S⁻¹` |
-| `center_check.py` | `center_check.out` | faithfulness of the cat map modulo the centre of `SL2(Z/N)` |
-| `log_catmap.py` | `log_catmap.out` | the 3p−1 W(p) torus amplitudes; S, T computed at 40 digits; eigenvalue moduli and the Lucas trace law, `p = 2..6` |
+| `catmap_mtc.py` | `catmap_mtc.out`, `catmap_census.json` | Pisano facts. Modular data for Fibonacci, Virasoro minimal models, `SU(2)_k`, `SU(3)_k`, lattice discriminant forms (definite and indefinite), `D(Z_N)`, `D(S_3)` and a Deligne product. Census of `C = T S T⁻¹ S⁻¹`. Every datum is checked for `S²` a permutation, `(ST)³ = e^(2πic/8) S²` and Verlinde integrality (rank ≤ 100) |
+| `center_check.py` | `center_check.out` | faithfulness of the cat map modulo the centre of `SL2(Z/N)`, in both directions, for all 132 data with `N ≥ 2` |
+| `log_catmap.py` | `log_catmap.out` | the 3p−1 W(p) torus amplitudes; S, T computed at 40 digits; eigenvalue moduli, the tensor form `A ⊗ M(A)` of the odd block, and the Lucas trace law against that independent `M(A)`, `p = 2..6` |
 | `rr_family.py` | `rr_family.out` | exact verification to `q^300` of 18 Rogers–Ramanujan-type identities and of the fifth-order mock theta Hecke-type identity |
 | `rr_asymptotics.py` | `rr_asymptotics.out` | effective central charges and q → 1 ratios |
 | `mrb_checks.py` | `mrb_checks.out` | checks of the supplied MRB documents (FIT bounds, prime defect, Ising-ring identity) and of the Collatz abstract's trailing-ones claim |
+
+The independent audit is in [`audit_S55/REPORT.md`](audit_S55/REPORT.md); its scripts are in the same folder (`python3` from there). After the audit:
+* the modular-relation checks were added to `catmap_mtc.py`;
+* the 8 lattices and the Deligne product, plus the converse direction, were added to `center_check.py`;
+* the tautological trace test in `log_catmap.py` was replaced.
+
+The census fields are unchanged.

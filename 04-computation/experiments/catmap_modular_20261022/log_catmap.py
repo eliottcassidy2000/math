@@ -4,11 +4,13 @@ Basis (3p - 1 functions of tau, weight 0):
     E_s = theta_(s,p)/eta,  s = 0..p          theta_(s,p) = sum_(n in Z + s/2p) q^(p n^2)          (even thetas)
     O_s = theta'_(s,p)/eta, s = 1..p-1        theta'_(s,p) = sum_(n in Z + s/2p) 2pn q^(p n^2)     (odd thetas)
     tau O_s,               s = 1..p-1
-Feigin-Gainutdinov-Semikhatov-Tipunin (CMP 265, 2006): this span is SL2(Z)-invariant and carries R_(p+1) + C^2 x R_(p-1),
-the same representation as the Lyubashenko action on the centre of the restricted quantum group at q = exp(i pi/p).
-Here the S and T matrices are computed numerically from sample points (no formulas assumed), invariance is checked by
-residuals, and the cat map rho(A) = T S T^-1 S^-1 is analysed:
-    eigenvalue moduli, and the Lucas trace law  Tr rho(A^n) = Tr R_(p+1)(A^n) + L_(2n) Tr R_(p-1)(A^n).
+Feigin-Gainutdinov-Semikhatov-Tipunin (CMP 265, 2006, eq. (1.2) and Thm 2.3): this span is SL2(Z)-invariant and carries
+R_(p+1) + C^2 x R_(p-1), the same representation as the Lyubashenko action on the centre of the restricted quantum group
+at q = exp(i pi/p).  Here the S and T matrices are computed numerically from sample points (no formulas assumed),
+invariance is checked by residuals, and the cat map rho(A) = T S T^-1 S^-1 is analysed:
+    eigenvalue moduli; the odd block in the basis (tau O, O) equals A (x) M(A), with M(A) read off as its (O, O) block;
+    and the Lucas trace law  Tr rho(A^n) = Tr R_(p+1)(A^n) + L_(2n) Tr M(A)^n  against that independent M(A).
+(The pre-audit trace test divided by L_(2n) first and was tautological; replaced after audit_S55.)
 Usage: python log_catmap.py [pmax]"""
 import sys, math, cmath
 import numpy as np
@@ -74,19 +76,19 @@ if __name__ == '__main__':
         e, o = p + 1, p - 1
         blockE = np.abs(S[:e, e:]).max() + np.abs(S[e:, :e]).max() + np.abs(T[:e, e:]).max() + np.abs(T[e:, :e]).max()
         CE = C[:e, :e]
-        # R_(p-1): action on O modulo tau*O -- read off from the 2x2 block structure: use the S, T action on the O-span
-        # projected: the C^2 x R_(p-1) block has the form gamma_def (x) R(gamma); recover R(A) as the block
-        # coefficient of the 'constant' component: (C restricted) = A_def (x) R(A) up to basis order.
         Clog = C[e:, e:]
+        # non-tautological trace law (audit_S55).  On the pairs (tau*O, O) gamma = [[a,b],[c,d]] acts by gamma (x) M(gamma);
+        # the basis here is ordered (E, O, tau*O), so the log block of rho(A) is [[1,1],[1,2]] (x) M(A) and M(A) is its
+        # (O, O) block.  Test the tensor form, and  Tr C^n = Tr C_E^n + L_(2n) Tr M(A)^n  with that independent M(A).
+        MA = C[e:e + o, e:e + o] if o else np.zeros((0, 0))
         trace_ok = []
-        for n in range(1, 11):
+        for n in range(1, 13):
             Cn = np.linalg.matrix_power(C, n)
-            Rn_even = np.trace(np.linalg.matrix_power(CE, n))
-            Rlog = np.linalg.matrix_power(Clog, n)
-            # A_def^n (x) R(A)^n : trace = L_(2n) * tr R(A)^n; and the (O,O)+(tauO,tauO) diagonal blocks sum to
-            # (a + d) R^n with a + d = L_(2n), so tr R^n = tr(Rlog)/L_(2n)
-            trR = np.trace(Rlog) / lucas(2 * n)
-            trace_ok.append(abs(np.trace(Cn) - (Rn_even + lucas(2 * n) * trR)) < 1e-6 * max(1, abs(np.trace(Cn))))
+            lhs = np.trace(Cn)
+            rhs = np.trace(np.linalg.matrix_power(CE, n)) + (lucas(2 * n) * np.trace(np.linalg.matrix_power(MA, n)) if o else 0)
+            trace_ok.append(abs(lhs - rhs) < 1e-6 * max(1, abs(lhs)))
+        tensor_ok = (np.allclose(C[e:e + o, e + o:], MA, atol=1e-8) and np.allclose(C[e + o:, e:e + o], MA, atol=1e-8)
+                     and np.allclose(C[e + o:, e + o:], 2 * MA, atol=1e-8)) if o else True
         # the log block: is it A_def (x) R? test: Clog = kron(Adef, R) in a suitable basis -> check its eigenvalues are
         # phi^(+-2) times unit-modulus numbers
         evlog = np.linalg.eigvals(Clog)
@@ -96,7 +98,7 @@ if __name__ == '__main__':
         print(f'   max |S| coupling even-odd {np.abs(S[:e, e:]).max():.1e}, |T| coupling {np.abs(T[:e, e:]).max():.1e}')
         print(f'p = {p}: dim {dim}; S residual {float(rS):.1e}, T residual {float(rT):.1e}; even/log blocks decouple: {blockE < 1e-8}; '
               f'|eig C| = {mods}; even block unitary-spectrum: {unit_ok}; log block |eig| = phi^(+-2): {ratio_ok}; '
-              f'Lucas trace law n = 1..10: {all(trace_ok)}', flush=True)
+              f'log block = A (x) M(A): {tensor_ok}; Lucas trace law with independent M(A), n = 1..12: {all(trace_ok)}', flush=True)
         if p <= 4:
             print('   eigenvalues of C on the log block:', np.round(evlog, 6))
             print('   traces Tr rho(A^n), n = 1..8:', [complex(round(np.trace(np.linalg.matrix_power(C, n)).real, 6), round(np.trace(np.linalg.matrix_power(C, n)).imag, 6)) for n in range(1, 9)])

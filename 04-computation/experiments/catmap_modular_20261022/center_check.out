@@ -1,125 +1,135 @@
-Fib = (G2)_1             N    5 ord_N A   10  first central power j =    5 (A^j = 4 I)  proj ord C    5  scalar powers are central powers: True
-M(2,5)                   N    5 ord_N A   10  first central power j =    5 (A^j = 4 I)  proj ord C    5  scalar powers are central powers: True
-M(2,7)                   N    7 ord_N A    8  first central power j =    4 (A^j = 6 I)  proj ord C    4  scalar powers are central powers: True
-M(2,9)                   N    9 ord_N A   12  first central power j =    6 (A^j = 8 I)  proj ord C    6  scalar powers are central powers: True
-M(2,11)                  N   11 ord_N A    5  first central power j =    5 (A^j = 1 I)  proj ord C    5  scalar powers are central powers: True
-M(3,4)                   N   16 ord_N A   12  first central power j =    6 (A^j = 9 I)  proj ord C    3  scalar powers are central powers: False
-M(3,5)                   N   20 ord_N A   30  first central power j =   15 (A^j = 9 I)  proj ord C   15  scalar powers are central powers: True
-M(3,7)                   N   28 ord_N A   24  first central power j =   12 (A^j = 13 I)  proj ord C   12  scalar powers are central powers: True
-M(3,8)                   N   32 ord_N A   24  first central power j =   12 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True
-M(3,10)                  N   40 ord_N A   30  first central power j =   15 (A^j = 29 I)  proj ord C   30  scalar powers are central powers: True
-M(3,11)                  N   44 ord_N A   15  first central power j =   15 (A^j = 1 I)  proj ord C   15  scalar powers are central powers: True
-M(4,5)                   N   80 ord_N A   60  first central power j =   30 (A^j = 41 I)  proj ord C   15  scalar powers are central powers: False
-M(4,7)                   N  112 ord_N A   24  first central power j =   12 (A^j = 97 I)  proj ord C   12  scalar powers are central powers: True
-M(4,9)                   N  144 ord_N A   12  first central power j =    6 (A^j = 89 I)  proj ord C    6  scalar powers are central powers: True
-M(4,11)                  N  176 ord_N A   60  first central power j =   30 (A^j = 89 I)  proj ord C   15  scalar powers are central powers: False
-M(5,6)                   N  120 ord_N A   60  first central power j =   30 (A^j = 41 I)  proj ord C   60  scalar powers are central powers: True
-M(5,7)                   N  140 ord_N A  120  first central power j =   60 (A^j = 41 I)  proj ord C   60  scalar powers are central powers: True
-M(5,8)                   N  160 ord_N A  120  first central power j =   60 (A^j = 81 I)  proj ord C   60  scalar powers are central powers: True
-M(5,9)                   N  180 ord_N A   60  first central power j =   30 (A^j = 161 I)  proj ord C   30  scalar powers are central powers: True
-M(5,11)                  N  220 ord_N A   30  first central power j =   15 (A^j = 89 I)  proj ord C   15  scalar powers are central powers: True
-M(5,12)                  N  240 ord_N A   60  first central power j =   30 (A^j = 41 I)  proj ord C   60  scalar powers are central powers: True
-M(6,7)                   N  168 ord_N A   24  first central power j =   12 (A^j = 97 I)  proj ord C   12  scalar powers are central powers: True
-M(6,11)                  N  264 ord_N A   60  first central power j =   30 (A^j = 89 I)  proj ord C   60  scalar powers are central powers: True
-SU(2)_1                  N    4 ord_N A    3  first central power j =    3 (A^j = 1 I)  proj ord C    3  scalar powers are central powers: True
-SU(2)_2                  N   16 ord_N A   12  first central power j =    6 (A^j = 9 I)  proj ord C    3  scalar powers are central powers: False
-SU(2)_3                  N   20 ord_N A   30  first central power j =   15 (A^j = 9 I)  proj ord C   15  scalar powers are central powers: True
-SU(2)_4                  N   24 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True
-SU(2)_5                  N   28 ord_N A   24  first central power j =   12 (A^j = 13 I)  proj ord C   12  scalar powers are central powers: True
-SU(2)_6                  N   32 ord_N A   24  first central power j =   12 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True
-SU(2)_7                  N   36 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C    6  scalar powers are central powers: True
-SU(2)_8                  N   40 ord_N A   30  first central power j =   15 (A^j = 29 I)  proj ord C   30  scalar powers are central powers: True
-SU(2)_9                  N   44 ord_N A   15  first central power j =   15 (A^j = 1 I)  proj ord C   15  scalar powers are central powers: True
-SU(2)_10                 N   48 ord_N A   12  first central power j =    6 (A^j = 41 I)  proj ord C   12  scalar powers are central powers: True
-SU(2)_11                 N   52 ord_N A   42  first central power j =   21 (A^j = 25 I)  proj ord C   21  scalar powers are central powers: True
-SU(2)_12                 N   56 ord_N A   24  first central power j =   12 (A^j = 41 I)  proj ord C   24  scalar powers are central powers: True
-SU(2)_13                 N   60 ord_N A   60  first central power j =   30 (A^j = 41 I)  proj ord C   60  scalar powers are central powers: True
-SU(2)_14                 N   64 ord_N A   48  first central power j =   24 (A^j = 33 I)  proj ord C   24  scalar powers are central powers: True
-SU(2)_15                 N   68 ord_N A   18  first central power j =    9 (A^j = 33 I)  proj ord C    9  scalar powers are central powers: True
-SU(2)_16                 N   72 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True
-SU(2)_17                 N   76 ord_N A    9  first central power j =    9 (A^j = 1 I)  proj ord C    9  scalar powers are central powers: True
-SU(2)_18                 N   80 ord_N A   60  first central power j =   30 (A^j = 41 I)  proj ord C   30  scalar powers are central powers: True
-SU(2)_19                 N   84 ord_N A   24  first central power j =   12 (A^j = 13 I)  proj ord C   24  scalar powers are central powers: True
-SU(2)_20                 N   88 ord_N A   30  first central power j =   15 (A^j = 45 I)  proj ord C   15  scalar powers are central powers: True
-SU(2)_21                 N   92 ord_N A   24  first central power j =   12 (A^j = 45 I)  proj ord C   12  scalar powers are central powers: True
-SU(2)_22                 N   96 ord_N A   24  first central power j =   12 (A^j = 49 I)  proj ord C   12  scalar powers are central powers: True
-SU(2)_23                 N  100 ord_N A  150  first central power j =   75 (A^j = 49 I)  proj ord C   75  scalar powers are central powers: True
-SU(2)_24                 N  104 ord_N A   42  first central power j =   21 (A^j = 77 I)  proj ord C   42  scalar powers are central powers: True
-SU(2)_25                 N  108 ord_N A   36  first central power j =   18 (A^j = 53 I)  proj ord C   18  scalar powers are central powers: True
-SU(2)_26                 N  112 ord_N A   24  first central power j =   12 (A^j = 97 I)  proj ord C   24  scalar powers are central powers: True
-SU(2)_27                 N  116 ord_N A   21  first central power j =   21 (A^j = 1 I)  proj ord C   21  scalar powers are central powers: True
-SU(2)_28                 N  120 ord_N A   60  first central power j =   30 (A^j = 41 I)  proj ord C   60  scalar powers are central powers: True
-SU(2)_29                 N  124 ord_N A   15  first central power j =   15 (A^j = 1 I)  proj ord C   15  scalar powers are central powers: True
-SU(2)_30                 N  128 ord_N A   96  first central power j =   48 (A^j = 65 I)  proj ord C   48  scalar powers are central powers: True
-SU(2)_31                 N  132 ord_N A   60  first central power j =   30 (A^j = 89 I)  proj ord C   60  scalar powers are central powers: True
-SU(2)_32                 N  136 ord_N A   18  first central power j =    9 (A^j = 101 I)  proj ord C   18  scalar powers are central powers: True
-SU(2)_33                 N  140 ord_N A  120  first central power j =   60 (A^j = 41 I)  proj ord C  120  scalar powers are central powers: True
-SU(2)_34                 N  144 ord_N A   12  first central power j =    6 (A^j = 89 I)  proj ord C   12  scalar powers are central powers: True
-SU(2)_35                 N  148 ord_N A  114  first central power j =   57 (A^j = 73 I)  proj ord C   57  scalar powers are central powers: True
-SU(2)_36                 N  152 ord_N A   18  first central power j =    9 (A^j = 77 I)  proj ord C    9  scalar powers are central powers: True
-SU(2)_37                 N  156 ord_N A   84  first central power j =   42 (A^j = 53 I)  proj ord C   84  scalar powers are central powers: True
-SU(2)_38                 N  160 ord_N A  120  first central power j =   60 (A^j = 81 I)  proj ord C   60  scalar powers are central powers: True
-SU(2)_39                 N  164 ord_N A   60  first central power j =   30 (A^j = 81 I)  proj ord C   30  scalar powers are central powers: True
-SU(2)_40                 N  168 ord_N A   24  first central power j =   12 (A^j = 97 I)  proj ord C   24  scalar powers are central powers: True
-SU(2)_41                 N  172 ord_N A  132  first central power j =   66 (A^j = 85 I)  proj ord C   66  scalar powers are central powers: True
-SU(2)_42                 N  176 ord_N A   60  first central power j =   30 (A^j = 89 I)  proj ord C   30  scalar powers are central powers: True
-SU(2)_43                 N  180 ord_N A   60  first central power j =   30 (A^j = 161 I)  proj ord C   60  scalar powers are central powers: True
-SU(2)_44                 N  184 ord_N A   24  first central power j =   12 (A^j = 137 I)  proj ord C   24  scalar powers are central powers: True
-SU(2)_45                 N  188 ord_N A   48  first central power j =   24 (A^j = 93 I)  proj ord C   24  scalar powers are central powers: True
-SU(2)_46                 N  192 ord_N A   48  first central power j =   24 (A^j = 97 I)  proj ord C   24  scalar powers are central powers: True
-SU(2)_47                 N  196 ord_N A  168  first central power j =   84 (A^j = 97 I)  proj ord C   84  scalar powers are central powers: True
-SU(2)_48                 N  200 ord_N A  150  first central power j =   75 (A^j = 149 I)  proj ord C  150  scalar powers are central powers: True
-SU(2)_49                 N  204 ord_N A   36  first central power j =   18 (A^j = 137 I)  proj ord C   36  scalar powers are central powers: True
-SU(2)_50                 N  208 ord_N A   84  first central power j =   42 (A^j = 105 I)  proj ord C   42  scalar powers are central powers: True
-SU(2)_51                 N  212 ord_N A   54  first central power j =   27 (A^j = 105 I)  proj ord C   27  scalar powers are central powers: True
-SU(2)_52                 N  216 ord_N A   36  first central power j =   18 (A^j = 161 I)  proj ord C   36  scalar powers are central powers: True
-SU(2)_53                 N  220 ord_N A   30  first central power j =   15 (A^j = 89 I)  proj ord C   30  scalar powers are central powers: True
-SU(2)_54                 N  224 ord_N A   24  first central power j =   12 (A^j = 209 I)  proj ord C   24  scalar powers are central powers: True
-SU(2)_55                 N  228 ord_N A   36  first central power j =   18 (A^j = 77 I)  proj ord C   36  scalar powers are central powers: True
-SU(2)_56                 N  232 ord_N A   42  first central power j =   21 (A^j = 117 I)  proj ord C   21  scalar powers are central powers: True
-SU(2)_57                 N  236 ord_N A   87  first central power j =   87 (A^j = 1 I)  proj ord C   87  scalar powers are central powers: True
-SU(2)_58                 N  240 ord_N A   60  first central power j =   30 (A^j = 41 I)  proj ord C   60  scalar powers are central powers: True
-SU(2)_59                 N  244 ord_N A   30  first central power j =   15 (A^j = 121 I)  proj ord C   15  scalar powers are central powers: True
-SU(2)_60                 N  248 ord_N A   30  first central power j =   15 (A^j = 125 I)  proj ord C   15  scalar powers are central powers: True
-SU(3)_1                  N    3 ord_N A    4  first central power j =    2 (A^j = 2 I)  proj ord C    4  scalar powers are central powers: True
-SU(3)_2                  N   15 ord_N A   20  first central power j =   10 (A^j = 11 I)  proj ord C   20  scalar powers are central powers: True
-SU(3)_3                  N   18 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True
-SU(3)_4                  N   21 ord_N A    8  first central power j =    4 (A^j = 13 I)  proj ord C    8  scalar powers are central powers: True
-SU(3)_5                  N   24 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True
-SU(3)_6                  N   27 ord_N A   36  first central power j =   18 (A^j = 26 I)  proj ord C   36  scalar powers are central powers: True
-SU(3)_7                  N   30 ord_N A   60  first central power j =   30 (A^j = 11 I)  proj ord C   60  scalar powers are central powers: True
-SU(3)_8                  N   33 ord_N A   20  first central power j =   10 (A^j = 23 I)  proj ord C   20  scalar powers are central powers: True
-SU(3)_9                  N   36 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True
-SU(3)_10                 N   39 ord_N A   28  first central power j =   14 (A^j = 14 I)  proj ord C   28  scalar powers are central powers: True
-D(Z_2)                   N    2 ord_N A    3  first central power j =    3 (A^j = 1 I)  proj ord C    3  scalar powers are central powers: True
-D(Z_3)                   N    3 ord_N A    4  first central power j =    2 (A^j = 2 I)  proj ord C    4  scalar powers are central powers: True
-D(Z_4)                   N    4 ord_N A    3  first central power j =    3 (A^j = 1 I)  proj ord C    3  scalar powers are central powers: True
-D(Z_5)                   N    5 ord_N A   10  first central power j =    5 (A^j = 4 I)  proj ord C   10  scalar powers are central powers: True
-D(Z_6)                   N    6 ord_N A   12  first central power j =    6 (A^j = 5 I)  proj ord C   12  scalar powers are central powers: True
-D(Z_7)                   N    7 ord_N A    8  first central power j =    4 (A^j = 6 I)  proj ord C    8  scalar powers are central powers: True
-D(Z_8)                   N    8 ord_N A    6  first central power j =    3 (A^j = 5 I)  proj ord C    6  scalar powers are central powers: True
-D(Z_9)                   N    9 ord_N A   12  first central power j =    6 (A^j = 8 I)  proj ord C   12  scalar powers are central powers: True
-D(Z_10)                  N   10 ord_N A   30  first central power j =   15 (A^j = 9 I)  proj ord C   30  scalar powers are central powers: True
-D(Z_11)                  N   11 ord_N A    5  first central power j =    5 (A^j = 1 I)  proj ord C    5  scalar powers are central powers: True
-D(Z_12)                  N   12 ord_N A   12  first central power j =    6 (A^j = 5 I)  proj ord C   12  scalar powers are central powers: True
-D(Z_13)                  N   13 ord_N A   14  first central power j =    7 (A^j = 12 I)  proj ord C   14  scalar powers are central powers: True
-D(Z_14)                  N   14 ord_N A   24  first central power j =   12 (A^j = 13 I)  proj ord C   24  scalar powers are central powers: True
-D(Z_15)                  N   15 ord_N A   20  first central power j =   10 (A^j = 11 I)  proj ord C   20  scalar powers are central powers: True
-D(Z_16)                  N   16 ord_N A   12  first central power j =    6 (A^j = 9 I)  proj ord C   12  scalar powers are central powers: True
-D(Z_17)                  N   17 ord_N A   18  first central power j =    9 (A^j = 16 I)  proj ord C   18  scalar powers are central powers: True
-D(Z_18)                  N   18 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True
-D(Z_19)                  N   19 ord_N A    9  first central power j =    9 (A^j = 1 I)  proj ord C    9  scalar powers are central powers: True
-D(Z_20)                  N   20 ord_N A   30  first central power j =   15 (A^j = 9 I)  proj ord C   30  scalar powers are central powers: True
-D(Z_21)                  N   21 ord_N A    8  first central power j =    4 (A^j = 13 I)  proj ord C    8  scalar powers are central powers: True
-D(Z_22)                  N   22 ord_N A   15  first central power j =   15 (A^j = 1 I)  proj ord C   15  scalar powers are central powers: True
-D(Z_23)                  N   23 ord_N A   24  first central power j =   12 (A^j = 22 I)  proj ord C   24  scalar powers are central powers: True
-D(Z_24)                  N   24 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True
-D(Z_25)                  N   25 ord_N A   50  first central power j =   25 (A^j = 24 I)  proj ord C   50  scalar powers are central powers: True
-D(Z_26)                  N   26 ord_N A   42  first central power j =   21 (A^j = 25 I)  proj ord C   42  scalar powers are central powers: True
-D(Z_27)                  N   27 ord_N A   36  first central power j =   18 (A^j = 26 I)  proj ord C   36  scalar powers are central powers: True
-D(Z_28)                  N   28 ord_N A   24  first central power j =   12 (A^j = 13 I)  proj ord C   24  scalar powers are central powers: True
-D(Z_29)                  N   29 ord_N A    7  first central power j =    7 (A^j = 1 I)  proj ord C    7  scalar powers are central powers: True
-D(Z_30)                  N   30 ord_N A   60  first central power j =   30 (A^j = 11 I)  proj ord C   60  scalar powers are central powers: True
-D(S_3)                   N    6 ord_N A   12  first central power j =    6 (A^j = 5 I)  proj ord C    6  scalar powers are central powers: True
+Fib = (G2)_1                   N    5 ord_N A   10  first central power j =    5 (A^j = 4 I)  proj ord C    5  scalar powers are central powers: True; central powers act by scalars: True
+M(2,5)                         N    5 ord_N A   10  first central power j =    5 (A^j = 4 I)  proj ord C    5  scalar powers are central powers: True; central powers act by scalars: True
+M(2,7)                         N    7 ord_N A    8  first central power j =    4 (A^j = 6 I)  proj ord C    4  scalar powers are central powers: True; central powers act by scalars: True
+M(2,9)                         N    9 ord_N A   12  first central power j =    6 (A^j = 8 I)  proj ord C    6  scalar powers are central powers: True; central powers act by scalars: True
+M(2,11)                        N   11 ord_N A    5  first central power j =    5 (A^j = 1 I)  proj ord C    5  scalar powers are central powers: True; central powers act by scalars: True
+M(3,4)                         N   16 ord_N A   12  first central power j =    6 (A^j = 9 I)  proj ord C    3  scalar powers are central powers: False; central powers act by scalars: True
+M(3,5)                         N   20 ord_N A   30  first central power j =   15 (A^j = 9 I)  proj ord C   15  scalar powers are central powers: True; central powers act by scalars: True
+M(3,7)                         N   28 ord_N A   24  first central power j =   12 (A^j = 13 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: True
+M(3,8)                         N   32 ord_N A   24  first central power j =   12 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: True
+M(3,10)                        N   40 ord_N A   30  first central power j =   15 (A^j = 29 I)  proj ord C   30  scalar powers are central powers: True; central powers act by scalars: False
+M(3,11)                        N   44 ord_N A   15  first central power j =   15 (A^j = 1 I)  proj ord C   15  scalar powers are central powers: True; central powers act by scalars: True
+M(4,5)                         N   80 ord_N A   60  first central power j =   30 (A^j = 41 I)  proj ord C   15  scalar powers are central powers: False; central powers act by scalars: True
+M(4,7)                         N  112 ord_N A   24  first central power j =   12 (A^j = 97 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: True
+M(4,9)                         N  144 ord_N A   12  first central power j =    6 (A^j = 89 I)  proj ord C    6  scalar powers are central powers: True; central powers act by scalars: True
+M(4,11)                        N  176 ord_N A   60  first central power j =   30 (A^j = 89 I)  proj ord C   15  scalar powers are central powers: False; central powers act by scalars: True
+M(5,6)                         N  120 ord_N A   60  first central power j =   30 (A^j = 41 I)  proj ord C   60  scalar powers are central powers: True; central powers act by scalars: False
+M(5,7)                         N  140 ord_N A  120  first central power j =   60 (A^j = 41 I)  proj ord C   60  scalar powers are central powers: True; central powers act by scalars: True
+M(5,8)                         N  160 ord_N A  120  first central power j =   60 (A^j = 81 I)  proj ord C   60  scalar powers are central powers: True; central powers act by scalars: True
+M(5,9)                         N  180 ord_N A   60  first central power j =   30 (A^j = 161 I)  proj ord C   30  scalar powers are central powers: True; central powers act by scalars: True
+M(5,11)                        N  220 ord_N A   30  first central power j =   15 (A^j = 89 I)  proj ord C   15  scalar powers are central powers: True; central powers act by scalars: True
+M(5,12)                        N  240 ord_N A   60  first central power j =   30 (A^j = 41 I)  proj ord C   60  scalar powers are central powers: True; central powers act by scalars: False
+M(6,7)                         N  168 ord_N A   24  first central power j =   12 (A^j = 97 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: True
+M(6,11)                        N  264 ord_N A   60  first central power j =   30 (A^j = 89 I)  proj ord C   60  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_1                        N    4 ord_N A    3  first central power j =    3 (A^j = 1 I)  proj ord C    3  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_2                        N   16 ord_N A   12  first central power j =    6 (A^j = 9 I)  proj ord C    3  scalar powers are central powers: False; central powers act by scalars: True
+SU(2)_3                        N   20 ord_N A   30  first central power j =   15 (A^j = 9 I)  proj ord C   15  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_4                        N   24 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_5                        N   28 ord_N A   24  first central power j =   12 (A^j = 13 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_6                        N   32 ord_N A   24  first central power j =   12 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_7                        N   36 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C    6  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_8                        N   40 ord_N A   30  first central power j =   15 (A^j = 29 I)  proj ord C   30  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_9                        N   44 ord_N A   15  first central power j =   15 (A^j = 1 I)  proj ord C   15  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_10                       N   48 ord_N A   12  first central power j =    6 (A^j = 41 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_11                       N   52 ord_N A   42  first central power j =   21 (A^j = 25 I)  proj ord C   21  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_12                       N   56 ord_N A   24  first central power j =   12 (A^j = 41 I)  proj ord C   24  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_13                       N   60 ord_N A   60  first central power j =   30 (A^j = 41 I)  proj ord C   60  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_14                       N   64 ord_N A   48  first central power j =   24 (A^j = 33 I)  proj ord C   24  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_15                       N   68 ord_N A   18  first central power j =    9 (A^j = 33 I)  proj ord C    9  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_16                       N   72 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_17                       N   76 ord_N A    9  first central power j =    9 (A^j = 1 I)  proj ord C    9  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_18                       N   80 ord_N A   60  first central power j =   30 (A^j = 41 I)  proj ord C   30  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_19                       N   84 ord_N A   24  first central power j =   12 (A^j = 13 I)  proj ord C   24  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_20                       N   88 ord_N A   30  first central power j =   15 (A^j = 45 I)  proj ord C   15  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_21                       N   92 ord_N A   24  first central power j =   12 (A^j = 45 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_22                       N   96 ord_N A   24  first central power j =   12 (A^j = 49 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_23                       N  100 ord_N A  150  first central power j =   75 (A^j = 49 I)  proj ord C   75  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_24                       N  104 ord_N A   42  first central power j =   21 (A^j = 77 I)  proj ord C   42  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_25                       N  108 ord_N A   36  first central power j =   18 (A^j = 53 I)  proj ord C   18  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_26                       N  112 ord_N A   24  first central power j =   12 (A^j = 97 I)  proj ord C   24  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_27                       N  116 ord_N A   21  first central power j =   21 (A^j = 1 I)  proj ord C   21  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_28                       N  120 ord_N A   60  first central power j =   30 (A^j = 41 I)  proj ord C   60  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_29                       N  124 ord_N A   15  first central power j =   15 (A^j = 1 I)  proj ord C   15  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_30                       N  128 ord_N A   96  first central power j =   48 (A^j = 65 I)  proj ord C   48  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_31                       N  132 ord_N A   60  first central power j =   30 (A^j = 89 I)  proj ord C   60  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_32                       N  136 ord_N A   18  first central power j =    9 (A^j = 101 I)  proj ord C   18  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_33                       N  140 ord_N A  120  first central power j =   60 (A^j = 41 I)  proj ord C  120  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_34                       N  144 ord_N A   12  first central power j =    6 (A^j = 89 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_35                       N  148 ord_N A  114  first central power j =   57 (A^j = 73 I)  proj ord C   57  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_36                       N  152 ord_N A   18  first central power j =    9 (A^j = 77 I)  proj ord C    9  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_37                       N  156 ord_N A   84  first central power j =   42 (A^j = 53 I)  proj ord C   84  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_38                       N  160 ord_N A  120  first central power j =   60 (A^j = 81 I)  proj ord C   60  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_39                       N  164 ord_N A   60  first central power j =   30 (A^j = 81 I)  proj ord C   30  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_40                       N  168 ord_N A   24  first central power j =   12 (A^j = 97 I)  proj ord C   24  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_41                       N  172 ord_N A  132  first central power j =   66 (A^j = 85 I)  proj ord C   66  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_42                       N  176 ord_N A   60  first central power j =   30 (A^j = 89 I)  proj ord C   30  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_43                       N  180 ord_N A   60  first central power j =   30 (A^j = 161 I)  proj ord C   60  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_44                       N  184 ord_N A   24  first central power j =   12 (A^j = 137 I)  proj ord C   24  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_45                       N  188 ord_N A   48  first central power j =   24 (A^j = 93 I)  proj ord C   24  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_46                       N  192 ord_N A   48  first central power j =   24 (A^j = 97 I)  proj ord C   24  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_47                       N  196 ord_N A  168  first central power j =   84 (A^j = 97 I)  proj ord C   84  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_48                       N  200 ord_N A  150  first central power j =   75 (A^j = 149 I)  proj ord C  150  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_49                       N  204 ord_N A   36  first central power j =   18 (A^j = 137 I)  proj ord C   36  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_50                       N  208 ord_N A   84  first central power j =   42 (A^j = 105 I)  proj ord C   42  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_51                       N  212 ord_N A   54  first central power j =   27 (A^j = 105 I)  proj ord C   27  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_52                       N  216 ord_N A   36  first central power j =   18 (A^j = 161 I)  proj ord C   36  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_53                       N  220 ord_N A   30  first central power j =   15 (A^j = 89 I)  proj ord C   30  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_54                       N  224 ord_N A   24  first central power j =   12 (A^j = 209 I)  proj ord C   24  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_55                       N  228 ord_N A   36  first central power j =   18 (A^j = 77 I)  proj ord C   36  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_56                       N  232 ord_N A   42  first central power j =   21 (A^j = 117 I)  proj ord C   21  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_57                       N  236 ord_N A   87  first central power j =   87 (A^j = 1 I)  proj ord C   87  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_58                       N  240 ord_N A   60  first central power j =   30 (A^j = 41 I)  proj ord C   60  scalar powers are central powers: True; central powers act by scalars: False
+SU(2)_59                       N  244 ord_N A   30  first central power j =   15 (A^j = 121 I)  proj ord C   15  scalar powers are central powers: True; central powers act by scalars: True
+SU(2)_60                       N  248 ord_N A   30  first central power j =   15 (A^j = 125 I)  proj ord C   15  scalar powers are central powers: True; central powers act by scalars: True
+SU(3)_1                        N    3 ord_N A    4  first central power j =    2 (A^j = 2 I)  proj ord C    4  scalar powers are central powers: True; central powers act by scalars: False
+SU(3)_2                        N   15 ord_N A   20  first central power j =   10 (A^j = 11 I)  proj ord C   20  scalar powers are central powers: True; central powers act by scalars: False
+SU(3)_3                        N   18 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: False
+SU(3)_4                        N   21 ord_N A    8  first central power j =    4 (A^j = 13 I)  proj ord C    8  scalar powers are central powers: True; central powers act by scalars: False
+SU(3)_5                        N   24 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: False
+SU(3)_6                        N   27 ord_N A   36  first central power j =   18 (A^j = 26 I)  proj ord C   36  scalar powers are central powers: True; central powers act by scalars: False
+SU(3)_7                        N   30 ord_N A   60  first central power j =   30 (A^j = 11 I)  proj ord C   60  scalar powers are central powers: True; central powers act by scalars: False
+SU(3)_8                        N   33 ord_N A   20  first central power j =   10 (A^j = 23 I)  proj ord C   20  scalar powers are central powers: True; central powers act by scalars: False
+SU(3)_9                        N   36 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: False
+SU(3)_10                       N   39 ord_N A   28  first central power j =   14 (A^j = 14 I)  proj ord C   28  scalar powers are central powers: True; central powers act by scalars: False
+A1 (definite)                  N    4 ord_N A    3  first central power j =    3 (A^j = 1 I)  proj ord C    3  scalar powers are central powers: True; central powers act by scalars: True
+A1 + U (Lorentzian)            N    4 ord_N A    3  first central power j =    3 (A^j = 1 I)  proj ord C    3  scalar powers are central powers: True; central powers act by scalars: True
+A1(-1) (negative definite)     N    4 ord_N A    3  first central power j =    3 (A^j = 1 I)  proj ord C    3  scalar powers are central powers: True; central powers act by scalars: True
+A2 (definite)                  N    3 ord_N A    4  first central power j =    2 (A^j = 2 I)  proj ord C    4  scalar powers are central powers: True; central powers act by scalars: False
+A2 + U (Lorentzian)            N    3 ord_N A    4  first central power j =    2 (A^j = 2 I)  proj ord C    4  scalar powers are central powers: True; central powers act by scalars: False
+A4 (definite)                  N    5 ord_N A   10  first central power j =    5 (A^j = 4 I)  proj ord C   10  scalar powers are central powers: True; central powers act by scalars: False
+D4 (definite)                  N    2 ord_N A    3  first central power j =    3 (A^j = 1 I)  proj ord C    3  scalar powers are central powers: True; central powers act by scalars: True
+golden [[2,1],[1,-2]] (indef.) N    5 ord_N A   10  first central power j =    5 (A^j = 4 I)  proj ord C   10  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_2)                         N    2 ord_N A    3  first central power j =    3 (A^j = 1 I)  proj ord C    3  scalar powers are central powers: True; central powers act by scalars: True
+D(Z_3)                         N    3 ord_N A    4  first central power j =    2 (A^j = 2 I)  proj ord C    4  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_4)                         N    4 ord_N A    3  first central power j =    3 (A^j = 1 I)  proj ord C    3  scalar powers are central powers: True; central powers act by scalars: True
+D(Z_5)                         N    5 ord_N A   10  first central power j =    5 (A^j = 4 I)  proj ord C   10  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_6)                         N    6 ord_N A   12  first central power j =    6 (A^j = 5 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_7)                         N    7 ord_N A    8  first central power j =    4 (A^j = 6 I)  proj ord C    8  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_8)                         N    8 ord_N A    6  first central power j =    3 (A^j = 5 I)  proj ord C    6  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_9)                         N    9 ord_N A   12  first central power j =    6 (A^j = 8 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_10)                        N   10 ord_N A   30  first central power j =   15 (A^j = 9 I)  proj ord C   30  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_11)                        N   11 ord_N A    5  first central power j =    5 (A^j = 1 I)  proj ord C    5  scalar powers are central powers: True; central powers act by scalars: True
+D(Z_12)                        N   12 ord_N A   12  first central power j =    6 (A^j = 5 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_13)                        N   13 ord_N A   14  first central power j =    7 (A^j = 12 I)  proj ord C   14  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_14)                        N   14 ord_N A   24  first central power j =   12 (A^j = 13 I)  proj ord C   24  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_15)                        N   15 ord_N A   20  first central power j =   10 (A^j = 11 I)  proj ord C   20  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_16)                        N   16 ord_N A   12  first central power j =    6 (A^j = 9 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_17)                        N   17 ord_N A   18  first central power j =    9 (A^j = 16 I)  proj ord C   18  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_18)                        N   18 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_19)                        N   19 ord_N A    9  first central power j =    9 (A^j = 1 I)  proj ord C    9  scalar powers are central powers: True; central powers act by scalars: True
+D(Z_20)                        N   20 ord_N A   30  first central power j =   15 (A^j = 9 I)  proj ord C   30  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_21)                        N   21 ord_N A    8  first central power j =    4 (A^j = 13 I)  proj ord C    8  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_22)                        N   22 ord_N A   15  first central power j =   15 (A^j = 1 I)  proj ord C   15  scalar powers are central powers: True; central powers act by scalars: True
+D(Z_23)                        N   23 ord_N A   24  first central power j =   12 (A^j = 22 I)  proj ord C   24  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_24)                        N   24 ord_N A   12  first central power j =    6 (A^j = 17 I)  proj ord C   12  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_25)                        N   25 ord_N A   50  first central power j =   25 (A^j = 24 I)  proj ord C   50  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_26)                        N   26 ord_N A   42  first central power j =   21 (A^j = 25 I)  proj ord C   42  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_27)                        N   27 ord_N A   36  first central power j =   18 (A^j = 26 I)  proj ord C   36  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_28)                        N   28 ord_N A   24  first central power j =   12 (A^j = 13 I)  proj ord C   24  scalar powers are central powers: True; central powers act by scalars: False
+D(Z_29)                        N   29 ord_N A    7  first central power j =    7 (A^j = 1 I)  proj ord C    7  scalar powers are central powers: True; central powers act by scalars: True
+D(Z_30)                        N   30 ord_N A   60  first central power j =   30 (A^j = 11 I)  proj ord C   60  scalar powers are central powers: True; central powers act by scalars: False
+D(S_3)                         N    6 ord_N A   12  first central power j =    6 (A^j = 5 I)  proj ord C    6  scalar powers are central powers: True; central powers act by scalars: True
+Fib = (G2)_1 x D(Z_2) x D(Z_3) N   30 ord_N A   60  first central power j =   30 (A^j = 11 I)  proj ord C   60  scalar powers are central powers: True; central powers act by scalars: False
 
-123 modular data; faithful modulo the centre on <A>: 119; exceptions: ['M(3,4)', 'M(4,5)', 'M(4,11)', 'SU(2)_2']
+132 modular data; faithful modulo the centre on <A>: 128; exceptions: ['M(3,4)', 'M(4,5)', 'M(4,11)', 'SU(2)_2']
+converse (every central power of A acts by a scalar) fails in 67: ['M(3,10)', 'M(5,6)', 'M(5,12)', 'M(6,11)', 'SU(2)_4', 'SU(2)_8', 'SU(2)_10', 'SU(2)_12', 'SU(2)_13', 'SU(2)_16', 'SU(2)_19', 'SU(2)_24', 'SU(2)_26', 'SU(2)_28', 'SU(2)_31', 'SU(2)_32', 'SU(2)_33', 'SU(2)_34', 'SU(2)_37', 'SU(2)_40', 'SU(2)_43', 'SU(2)_44', 'SU(2)_48', 'SU(2)_49', 'SU(2)_52', 'SU(2)_53', 'SU(2)_54', 'SU(2)_55', 'SU(2)_58', 'SU(3)_1', 'SU(3)_2', 'SU(3)_3', 'SU(3)_4', 'SU(3)_5', 'SU(3)_6', 'SU(3)_7', 'SU(3)_8', 'SU(3)_9', 'SU(3)_10', 'A2 (definite)', 'A2 + U (Lorentzian)', 'A4 (definite)', 'golden [[2,1],[1,-2]] (indef.)', 'D(Z_3)', 'D(Z_5)', 'D(Z_6)', 'D(Z_7)', 'D(Z_8)', 'D(Z_9)', 'D(Z_10)', 'D(Z_12)', 'D(Z_13)', 'D(Z_14)', 'D(Z_15)', 'D(Z_16)', 'D(Z_17)', 'D(Z_18)', 'D(Z_20)', 'D(Z_21)', 'D(Z_23)', 'D(Z_24)', 'D(Z_25)', 'D(Z_26)', 'D(Z_27)', 'D(Z_28)', 'D(Z_30)', 'Fib = (G2)_1 x D(Z_2) x D(Z_3)']

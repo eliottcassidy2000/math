@@ -1,0 +1,40 @@
+=== faithfulness modulo the centre, both directions ===
+M(3,4)                           N   16 ord_N A   12 central j: [(6, 9), (12, 1)] scalar j: [3, 6, 9, 12]  po 3  [C^j scalar => A^j central: False] [A^j central => C^j scalar: True]  self-dual: True
+SU(2)_2                          N   16 ord_N A   12 central j: [(6, 9), (12, 1)] scalar j: [3, 6, 9, 12]  po 3  [C^j scalar => A^j central: False] [A^j central => C^j scalar: True]  self-dual: True
+M(4,5)                           N   80 ord_N A   60 central j: [(30, 41), (60, 1)] scalar j: [15, 30, 45, 60]  po 15  [C^j scalar => A^j central: False] [A^j central => C^j scalar: True]  self-dual: True
+M(4,7)                           N  112 ord_N A   24 central j: [(12, 97), (24, 1)] scalar j: [12, 24]  po 12  [C^j scalar => A^j central: True] [A^j central => C^j scalar: True]  self-dual: True
+M(4,9)                           N  144 ord_N A   12 central j: [(6, 89), (12, 1)] scalar j: [6, 12]  po 6  [C^j scalar => A^j central: True] [A^j central => C^j scalar: True]  self-dual: True
+M(4,11)                          N  176 ord_N A   60 central j: [(30, 89), (60, 1)] scalar j: [15, 30, 45, 60]  po 15  [C^j scalar => A^j central: False] [A^j central => C^j scalar: True]  self-dual: True
+D(Z_3)                           N    3 ord_N A    4 central j: [(2, 2), (4, 1)] scalar j: [4]  po 4  [C^j scalar => A^j central: True] [A^j central => C^j scalar: False]  self-dual: False
+D(Z_5)                           N    5 ord_N A   10 central j: [(5, 4), (10, 1)] scalar j: [10]  po 10  [C^j scalar => A^j central: True] [A^j central => C^j scalar: False]  self-dual: False
+SU(3)_1                          N    3 ord_N A    4 central j: [(2, 2), (4, 1)] scalar j: [4]  po 4  [C^j scalar => A^j central: True] [A^j central => C^j scalar: False]  self-dual: False
+SU(3)_2                          N   15 ord_N A   20 central j: [(10, 11), (20, 1)] scalar j: [20]  po 20  [C^j scalar => A^j central: True] [A^j central => C^j scalar: False]  self-dual: False
+D(S_3)                           N    6 ord_N A   12 central j: [(6, 5), (12, 1)] scalar j: [6, 12]  po 6  [C^j scalar => A^j central: True] [A^j central => C^j scalar: True]  self-dual: True
+Fib                              N    5 ord_N A   10 central j: [(5, 4), (10, 1)] scalar j: [5, 10]  po 5  [C^j scalar => A^j central: True] [A^j central => C^j scalar: True]  self-dual: True
+SU(2)_4                          N   24 ord_N A   12 central j: [(6, 17), (12, 1)] scalar j: [12]  po 12  [C^j scalar => A^j central: True] [A^j central => C^j scalar: False]  self-dual: True
+A1 (definite)                    N    4 ord_N A    3 central j: [(3, 1)] scalar j: [3]  po 3  [C^j scalar => A^j central: True] [A^j central => C^j scalar: True]  self-dual: True
+A1 + U (Lorentzian)              N    4 ord_N A    3 central j: [(3, 1)] scalar j: [3]  po 3  [C^j scalar => A^j central: True] [A^j central => C^j scalar: True]  self-dual: True
+A1(-1)                           N    4 ord_N A    3 central j: [(3, 1)] scalar j: [3]  po 3  [C^j scalar => A^j central: True] [A^j central => C^j scalar: True]  self-dual: True
+A2 (definite)                    N    3 ord_N A    4 central j: [(2, 2), (4, 1)] scalar j: [4]  po 4  [C^j scalar => A^j central: True] [A^j central => C^j scalar: False]  self-dual: False
+A2 + U (Lorentzian)              N    3 ord_N A    4 central j: [(2, 2), (4, 1)] scalar j: [4]  po 4  [C^j scalar => A^j central: True] [A^j central => C^j scalar: False]  self-dual: False
+A4 (definite)                    N    5 ord_N A   10 central j: [(5, 4), (10, 1)] scalar j: [10]  po 10  [C^j scalar => A^j central: True] [A^j central => C^j scalar: False]  self-dual: False
+D4 (definite)                    N    2 ord_N A    3 central j: [(3, 1)] scalar j: [3]  po 3  [C^j scalar => A^j central: True] [A^j central => C^j scalar: True]  self-dual: True
+golden [[2,1],[1,-2]]            N    5 ord_N A   10 central j: [(5, 4), (10, 1)] scalar j: [10]  po 10  [C^j scalar => A^j central: True] [A^j central => C^j scalar: False]  self-dual: False
+Fib x D(Z_2) x D(Z_3)            N   30 ord_N A   60 central j: [(30, 11), (60, 1)] scalar j: [60]  po 60  [C^j scalar => A^j central: True] [A^j central => C^j scalar: False]  self-dual: False
+
+=== Ising in the spin-structure basis u = (chi_0 + chi_psi, chi_0 - chi_psi, sqrt2 chi_sigma) ~ sqrt(theta_3/eta), sqrt(theta_4/eta), sqrt(theta_2/eta) ===
+M(3,4): S in u-basis monomial/perm (True, [0, 2, 1]), |entries| [1. 1. 1.]; T in u-basis monomial/perm (True, [1, 0, 2]); C monomial/perm (True, [2, 0, 1]); nonzero entries of C: [0.92388-0.382683j 1.     +0.j       0.92388+0.382683j]; C^3 = I: True
+SU(2)_2: S in u-basis monomial/perm (True, [0, 2, 1]), |entries| [1. 1. 1.]; T in u-basis monomial/perm (True, [1, 0, 2]); C monomial/perm (True, [2, 0, 1]); nonzero entries of C: [0.382683-0.92388j 1.      +0.j      0.382683+0.92388j]; C^3 = I: True
+A mod 2 on nonzero vectors of (Z/2)^2: {(1, 0): (0, 1), (0, 1): (1, 1), (1, 1): (1, 0)} (a 3-cycle)
+
+=== Is M(4,p') an Ising-type x (rank (p'-1)/2) Deligne product?  test: permutation + diagonal signs matching S ===
+M(4,5): factorisations found [('Ising_7', 'd_sigma sign', 1, 'Fib-bar'), ('Ising_7', 'd_sigma sign', -1, 'Fib-bar')]
+M(4,7): factorisations found []
+M(4,9): factorisations found []
+M(4,11): factorisations found []
+
+=== M(4,p') = Ising_nu x X with X = {(r,1): r odd} extracted from M(4,p') (S_X = 2 S restricted) ===
+M(4,5) = Ising_7 x X(rank 2): True; X relations: sym 0e+00 unit 1e-16 ST3 2e-16 Verlinde int 3e-16 nonneg True; po(Ising) 3, po(X) 5, lcm 15, po(M) 15; ord: 3, 10, ord(M) 30; X twists ['0', '3/5']
+M(4,7) = Ising_13 x X(rank 3): True; X relations: sym 0e+00 unit 1e-16 ST3 2e-16 Verlinde int 4e-16 nonneg True; po(Ising) 3, po(X) 4, lcm 12, po(M) 12; ord: 3, 4, ord(M) 12; X twists ['0', '1/7', '3/7']
+M(4,9) = Ising_3 x X(rank 4): True; X relations: sym 0e+00 unit 1e-16 ST3 3e-16 Verlinde int 2e-16 nonneg True; po(Ising) 3, po(X) 6, lcm 6, po(M) 6; ord: 3, 12, ord(M) 12; X twists ['0', '8/9', '2/3', '1/3']
+M(4,11) = Ising_9 x X(rank 5): True; X relations: sym 0e+00 unit 6e-17 ST3 1e-16 Verlinde int 2e-16 nonneg True; po(Ising) 3, po(X) 5, lcm 15, po(M) 15; ord: 3, 5, ord(M) 15; X twists ['0', '8/11', '2/11', '4/11', '3/11']

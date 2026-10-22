@@ -4,10 +4,12 @@ In SL2(Z), with s = [[0,-1],[1,0]] and t = [[1,1],[0,1]], the cat map A = [[2,1]
 t s t^-1 s^-1 and the square of the Fibonacci matrix Q = [[1,1],[1,0]].  For modular data (S, T) of a modular tensor
 category the image C = T S T^-1 S^-1 does not depend on the scalar normalisations of S and T (central charge, Gauss sum
 phase): it is a canonical unitary matrix.  Its order is compared with the Pisano bounds
-    pi(N)/2  (N = order of the normalised twists, projective conductor; C^(ord of A in PSL2(Z/N)) is scalar),
-    pi(N')/2 (N' = order of T including exp(-2 pi i c/24), the linear conductor).
+    ord_N(A)  (= pi(N)/2 for N >= 3; N = order of the normalised twists, projective conductor; C^(ord_N A) is scalar),
+    ord_N'(A) (N' = order of T including exp(-2 pi i c/24), the linear conductor; ord C divides it).
 Families: SU(2)_k, SU(3)_k, Virasoro minimal models M(p,p'), Fibonacci, pointed categories from lattice discriminant
 forms (definite and indefinite Gram matrices), quantum doubles D(Z_N) and D(S_3), Deligne products.
+Every datum is checked (after audit_S55): S symmetric and unitary, S^2 a permutation matrix, (S T)^3 = Theta S^2 with
+Theta = exp(2 pi i c/8), and Verlinde integrality for rank <= 100.
 Usage: python catmap_mtc.py"""
 import sys, math, itertools, cmath
 from fractions import Fraction
@@ -59,6 +61,22 @@ class MD:
     def catmap(self):
         T, S = self.T, self.S
         return T @ S @ np.linalg.inv(T) @ np.linalg.inv(S)
+
+    def relations(self, verlinde_rank=100):
+        """modular relations: S^2 a permutation, (S T)^3 = Theta S^2 with Theta = exp(2 pi i c/8), Verlinde fusion
+        coefficients non-negative integers (rank <= verlinde_rank; None above it)."""
+        S, T, r = self.S, self.T, len(self.h)
+        S2 = S @ S
+        perm = bool(np.allclose(np.abs(S2), np.round(np.abs(S2)), atol=1e-8) and np.allclose(np.abs(S2).sum(axis=1), 1)
+                    and np.allclose(np.abs(S2).sum(axis=0), 1) and np.allclose(S2.imag, 0, atol=1e-8))
+        ST3 = np.linalg.matrix_power(S @ T, 3)
+        theta = cmath.exp(2j * math.pi * float(self.c) / 8)
+        theta_ok = bool(np.allclose(ST3, theta * S2, atol=1e-7))
+        ver = None
+        if r <= verlinde_rank:
+            Nabc = np.einsum('ax,bx,cx->abc', S, S, S.conj() / S[0][None, :], optimize=True)
+            ver = bool(np.allclose(Nabc, np.round(Nabc.real), atol=1e-6) and (np.round(Nabc.real) >= 0).all())
+        return perm, theta_ok, ver
 
 
 def root_order(z, cap):
@@ -227,9 +245,23 @@ def report(md, out):
     mN = mat_order(CAT, Np) if Np > 1 else 1               # = pi(N)/2 for N >= 3
     mL = mat_order(CAT, Nl) if Nl > 1 else 1
     sat = 'SATURATES' if po == mN else f'deficient by {mN // po}' if mN % po == 0 else 'NOT A DIVISOR'
+    perm, theta_ok, ver = md.relations()
     print(f'{md.name:30s} rank {len(md.h):4d}  N {Np:4d}  pi(N) {pisano(Np):5d}  ord_SL2(Z/N) A {mN:4d}  proj ord C {po:4d}  '
-          f'ord C {o:4d}  Nlin {Nl:5d}  ord_SL2(Z/Nlin) A {mL:4d}  [{sat}; ord C | ord_Nlin A: {mL % o == 0}]', flush=True)
-    out.append(dict(name=md.name, rank=len(md.h), N=Np, pi=pisano(Np), mN=mN, po=po, o=o, Nl=Nl, mL=mL))
+          f'ord C {o:4d}  Nlin {Nl:5d}  ord_SL2(Z/Nlin) A {mL:4d}  [{sat}; ord C | ord_Nlin A: {mL % o == 0}]  '
+          f'[S^2 perm {perm}; (ST)^3 = e(c/8) S^2 {theta_ok}; Verlinde {ver}]', flush=True)
+    out.append(dict(name=md.name, rank=len(md.h), N=Np, pi=pisano(Np), mN=mN, po=po, o=o, Nl=Nl, mL=mL,
+                    S2_perm=perm, ST3_theta=theta_ok, verlinde=ver))
+
+
+E8 = [[2, -1, 0, 0, 0, 0, 0, 0], [-1, 2, -1, 0, 0, 0, 0, 0], [0, -1, 2, -1, 0, 0, 0, -1], [0, 0, -1, 2, -1, 0, 0, 0],
+      [0, 0, 0, -1, 2, -1, 0, 0], [0, 0, 0, 0, -1, 2, -1, 0], [0, 0, 0, 0, 0, -1, 2, 0], [0, 0, -1, 0, 0, 0, 0, 2]]
+LATTICES = [('A1 (definite)', [[2]]), ('A1 + U (Lorentzian)', [[2, 0, 0], [0, 0, 1], [0, 1, 0]]),
+            ('A1(-1) (negative definite)', [[-2]]), ('A2 (definite)', [[2, -1], [-1, 2]]),
+            ('A2 + U (Lorentzian)', [[2, -1, 0, 0], [-1, 2, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]),
+            ('A4 (definite)', [[2, -1, 0, 0], [-1, 2, -1, 0], [0, -1, 2, -1], [0, 0, -1, 2]]),
+            ('D4 (definite)', [[2, -1, 0, 0], [-1, 2, -1, -1], [0, -1, 2, 0], [0, -1, 0, 2]]),
+            ('golden [[2,1],[1,-2]] (indef.)', [[2, 1], [1, -2]]),
+            ('E8 (definite, unimodular)', E8), ('U = II_1,1 (Lorentzian)', [[0, 1], [1, 0]])]
 
 
 if __name__ == '__main__':
@@ -249,16 +281,7 @@ if __name__ == '__main__':
         report(su2(k), out)
     for k in range(1, 11):
         report(su3(k), out)
-    E8 = [[2, -1, 0, 0, 0, 0, 0, 0], [-1, 2, -1, 0, 0, 0, 0, 0], [0, -1, 2, -1, 0, 0, 0, -1], [0, 0, -1, 2, -1, 0, 0, 0],
-          [0, 0, 0, -1, 2, -1, 0, 0], [0, 0, 0, 0, -1, 2, -1, 0], [0, 0, 0, 0, 0, -1, 2, 0], [0, 0, -1, 0, 0, 0, 0, 2]]
-    lattices = [('A1 (definite)', [[2]]), ('A1 + U (Lorentzian)', [[2, 0, 0], [0, 0, 1], [0, 1, 0]]),
-                ('A1(-1) (negative definite)', [[-2]]), ('A2 (definite)', [[2, -1], [-1, 2]]),
-                ('A2 + U (Lorentzian)', [[2, -1, 0, 0], [-1, 2, 0, 0], [0, 0, 0, 1], [0, 0, 1, 0]]),
-                ('A4 (definite)', [[2, -1, 0, 0], [-1, 2, -1, 0], [0, -1, 2, -1], [0, 0, -1, 2]]),
-                ('D4 (definite)', [[2, -1, 0, 0], [-1, 2, -1, -1], [0, -1, 2, 0], [0, -1, 0, 2]]),
-                ('golden [[2,1],[1,-2]] (indef.)', [[2, 1], [1, -2]]),
-                ('E8 (definite, unimodular)', E8), ('U = II_1,1 (Lorentzian)', [[0, 1], [1, 0]])]
-    for name, G in lattices:
+    for name, G in LATTICES:
         report(pointed(name, G), out)
     for N in range(2, 31):
         report(double_ZN(N), out)
@@ -270,4 +293,7 @@ if __name__ == '__main__':
     print()
     print(f'{len(out)} modular data; projective order of C divides ord_SL2(Z/N)(A) = pi(N)/2 in all: '
           f'{all(r["mN"] % r["po"] == 0 for r in out)}; ord C divides ord_SL2(Z/Nlin)(A) in all: {all(r["mL"] % r["o"] == 0 for r in out)}; '
-          f'saturating: {len(sat)}')
+          f'saturating: {len(sat)} ({sum(r["N"] >= 3 for r in sat)} with N >= 3)')
+    print(f'modular relations hold in all: S^2 permutation {all(r["S2_perm"] for r in out)}; (ST)^3 = e(c/8) S^2 '
+          f'{all(r["ST3_theta"] for r in out)}; Verlinde integrality {all(r["verlinde"] for r in out if r["verlinde"] is not None)} '
+          f'({sum(r["verlinde"] is not None for r in out)} data of rank <= 100)')

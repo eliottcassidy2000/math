@@ -1,0 +1,56 @@
+=== required list (audit item C) ===
+Fib                                rank   2 N    5 ord_N(A)   10 proj-ord C    5 ord C   10 N'    60 ord_N'(A)   60 | relations OK [mp] po|mN True o|mL True census MATCH
+M(3,4)                             rank   3 N   16 ord_N(A)   12 proj-ord C    3 ord C    3 N'    48 ord_N'(A)   12 | relations OK [mp] po|mN True o|mL True census MATCH
+M(2,5)                             rank   2 N    5 ord_N(A)   10 proj-ord C    5 ord C   10 N'    60 ord_N'(A)   60 | relations OK [mp] po|mN True o|mL True census MATCH
+M(2,7)                             rank   3 N    7 ord_N(A)    8 proj-ord C    4 ord C    4 N'    42 ord_N'(A)   24 | relations OK [mp] po|mN True o|mL True census MATCH
+M(4,5)                             rank   6 N   80 ord_N(A)   60 proj-ord C   15 ord C   30 N'   240 ord_N'(A)   60 | relations OK [mp] po|mN True o|mL True census MATCH
+SU(2)_1                            rank   2 N    4 ord_N(A)    3 proj-ord C    3 ord C    6 N'    24 ord_N'(A)   12 | relations OK [mp] po|mN True o|mL True census MATCH
+SU(2)_2                            rank   3 N   16 ord_N(A)   12 proj-ord C    3 ord C    3 N'    16 ord_N'(A)   12 | relations OK [mp] po|mN True o|mL True census MATCH
+SU(2)_3                            rank   4 N   20 ord_N(A)   30 proj-ord C   15 ord C   15 N'    40 ord_N'(A)   30 | relations OK [mp] po|mN True o|mL True census MATCH
+SU(2)_4                            rank   5 N   24 ord_N(A)   12 proj-ord C   12 ord C   12 N'    24 ord_N'(A)   12 | relations OK [mp] po|mN True o|mL True census MATCH
+SU(2)_5                            rank   6 N   28 ord_N(A)   24 proj-ord C   12 ord C   12 N'    56 ord_N'(A)   24 | relations OK [mp] po|mN True o|mL True census MATCH
+SU(2)_6                            rank   7 N   32 ord_N(A)   24 proj-ord C   12 ord C   12 N'    32 ord_N'(A)   24 | relations OK [mp] po|mN True o|mL True census MATCH
+SU(2)_7                            rank   8 N   36 ord_N(A)   12 proj-ord C    6 ord C   12 N'    72 ord_N'(A)   12 | relations OK [mp] po|mN True o|mL True census MATCH
+SU(2)_8                            rank   9 N   40 ord_N(A)   30 proj-ord C   30 ord C   30 N'    40 ord_N'(A)   30 | relations OK [mp] po|mN True o|mL True census MATCH
+SU(2)_9                            rank  10 N   44 ord_N(A)   15 proj-ord C   15 ord C   30 N'    88 ord_N'(A)   30 | relations OK [mp] po|mN True o|mL True census MATCH
+SU(2)_10                           rank  11 N   48 ord_N(A)   12 proj-ord C   12 ord C   12 N'    48 ord_N'(A)   12 | relations OK [mp] po|mN True o|mL True census MATCH
+SU(2)_11                           rank  12 N   52 ord_N(A)   42 proj-ord C   21 ord C   21 N'   104 ord_N'(A)   42 | relations OK [mp] po|mN True o|mL True census MATCH
+SU(2)_12                           rank  13 N   56 ord_N(A)   24 proj-ord C   24 ord C   24 N'    56 ord_N'(A)   24 | relations OK [mp] po|mN True o|mL True census MATCH
+SU(3)_1                            rank   3 N    3 ord_N(A)    4 proj-ord C    4 ord C    4 N'    12 ord_N'(A)   12 | relations OK [mp] po|mN True o|mL True census MATCH
+SU(3)_2                            rank   6 N   15 ord_N(A)   20 proj-ord C   20 ord C   20 N'    15 ord_N'(A)   20 | relations OK [mp] po|mN True o|mL True census MATCH
+D(Z_2)                             rank   4 N    2 ord_N(A)    3 proj-ord C    3 ord C    3 N'     2 ord_N'(A)    3 | relations OK [mp] po|mN True o|mL True census MATCH
+D(Z_3)                             rank   9 N    3 ord_N(A)    4 proj-ord C    4 ord C    4 N'     3 ord_N'(A)    4 | relations OK [mp] po|mN True o|mL True census MATCH
+D(Z_4)                             rank  16 N    4 ord_N(A)    3 proj-ord C    3 ord C    3 N'     4 ord_N'(A)    3 | relations OK [mp] po|mN True o|mL True census MATCH
+D(Z_5)                             rank  25 N    5 ord_N(A)   10 proj-ord C   10 ord C   10 N'     5 ord_N'(A)   10 | relations OK [np] po|mN True o|mL True census MATCH
+D(Z_6)                             rank  36 N    6 ord_N(A)   12 proj-ord C   12 ord C   12 N'     6 ord_N'(A)   12 | relations OK [np] po|mN True o|mL True census MATCH
+D(Z_7)                             rank  49 N    7 ord_N(A)    8 proj-ord C    8 ord C    8 N'     7 ord_N'(A)    8 | relations OK [np] po|mN True o|mL True census MATCH
+D(Z_8)                             rank  64 N    8 ord_N(A)    6 proj-ord C    6 ord C    6 N'     8 ord_N'(A)    6 | relations OK [np] po|mN True o|mL True census MATCH
+D(Z_9)                             rank  81 N    9 ord_N(A)   12 proj-ord C   12 ord C   12 N'     9 ord_N'(A)   12 | relations OK [np] po|mN True o|mL True census MATCH
+D(Z_10)                            rank 100 N   10 ord_N(A)   30 proj-ord C   30 ord C   30 N'    10 ord_N'(A)   30 | relations OK [np] po|mN True o|mL True census MATCH
+D(S_3)                             rank   8 N    6 ord_N(A)   12 proj-ord C    6 ord C    6 N'     6 ord_N'(A)   12 | relations OK [mp] po|mN True o|mL True census MATCH
+D(S_3) labels (class type, centralizer irrep): [('e', '1'), ('e', 'sgn'), ('e', '2'), ('3', 'chi0'), ('3', 'chi1'), ('3', 'chi2'), ('2', 'chi0'), ('2', 'chi1')] ; h = ['0', '0', '0', '0', '1/3', '2/3', '0', '1/2']
+A1 (definite)                      rank   2 N    4 ord_N(A)    3 proj-ord C    3 ord C    6 N'    24 ord_N'(A)   12 | relations OK [mp] po|mN True o|mL True census MATCH
+     discriminant form: q = ['0', '1/4'] ; c = signature = 1
+A1 + U (Lorentzian)                rank   2 N    4 ord_N(A)    3 proj-ord C    3 ord C    6 N'    24 ord_N'(A)   12 | relations OK [mp] po|mN True o|mL True census MATCH
+     discriminant form: q = ['0', '1/4'] ; c = signature = 1
+A1(-1) (negative definite)         rank   2 N    4 ord_N(A)    3 proj-ord C    3 ord C    6 N'    24 ord_N'(A)   12 | relations OK [mp] po|mN True o|mL True census MATCH
+     discriminant form: q = ['0', '3/4'] ; c = signature = -1
+A2 (definite)                      rank   3 N    3 ord_N(A)    4 proj-ord C    4 ord C    4 N'    12 ord_N'(A)   12 | relations OK [mp] po|mN True o|mL True census MATCH
+     discriminant form: q = ['0', '1/3', '1/3'] ; c = signature = 2
+A2 + U (Lorentzian)                rank   3 N    3 ord_N(A)    4 proj-ord C    4 ord C    4 N'    12 ord_N'(A)   12 | relations OK [mp] po|mN True o|mL True census MATCH
+     discriminant form: q = ['0', '1/3', '1/3'] ; c = signature = 2
+golden [[2,1],[1,-2]] (indef.)     rank   5 N    5 ord_N(A)   10 proj-ord C   10 ord C   10 N'     5 ord_N'(A)   10 | relations OK [mp] po|mN True o|mL True census MATCH
+     discriminant form: q = ['0', '4/5', '1/5', '1/5', '4/5'] ; c = signature = 0
+U = II_1,1 (Lorentzian)            rank   1 N    1 ord_N(A)    1 proj-ord C    1 ord C    1 N'     1 ord_N'(A)    1 | relations OK [mp] po|mN True o|mL True census MATCH
+     discriminant form: q = ['0'] ; c = signature = 0
+
+=== C for definite vs indefinite lattices (cyclic discriminant groups, ordered by a generator) ===
+C(A1) =
+ [[ 0.5-0.5j  0.5+0.5j]
+ [-0.5+0.5j  0.5+0.5j]] 
+max|C(A1) - C(A1+U)| = 0.0 ; max|C(A1) - C(A1(-1))| = 1.0 ; max|conj C(A1) - C(A1(-1))| = 0.0
+max|C(A2) - C(A2+U)| = 0.0
+
+Fib x D(Z_2) x D(Z_3)              rank  72 N   30 ord_N(A)   60 proj-ord C   60 ord C   60 N'    60 ord_N'(A)   60 | relations OK [np] po|mN True o|mL True census MATCH
+session D(S_3) S-matrix = group-theoretic S-matrix under relabelling (0, 1, 2, 3, 4, 5, 6, 7) [('e', '1'), ('e', 'sgn'), ('e', '2'), ('3', 'chi0'), ('3', 'chi1'), ('3', 'chi2'), ('2', 'chi0'), ('2', 'chi1')]
+session D(S_3) hard-coded data reproduced: True

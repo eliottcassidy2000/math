@@ -1,0 +1,17 @@
+Ising ring, exp(-2K) = sqrt5 (K = -ln5/4 < 0, antiferromagnetic):  e^(-nK) Z_periodic = 2^n L_n (n<=20): True ; e^(-nK) Z_antiperiodic = 2^n sqrt5 F_n: True ; eigenvalue ratio -3/2 + sqrt(5)/2 = -1/phi^2: True
+   unnormalised: Z_periodic(n) = 5^(-n/4) 2^n L_n, e.g. n = 2: 12*sqrt(5)/5
+
+v_2(3^k - 1) = 1 (k odd), 2 + v_2(k) (k even), k = 1..2000: failures []
+2^k - 1 -> (k steps of (3n+1)/2, all on odd values) -> 3^k - 1, k = 1..79: True
+k with v_2(3^k - 1) = k (k <= 2000): [1, 4] (k = 1 is 1 -> 2; k = 4 is 15 -> 80)
+
+S_1, S_3, S_5, S_7 = ['0.0', '-0.028036008', '0.006447893', '0.0339848']
+min odd S_N, 3 <= N <= 59: -0.028036008 at N = 3 ; min odd S_N, 5 <= N <= 59: 0.006447893 ; min |S_N| odd 3 <= N <= 59: 0.006447893 at N = 5
+min even S_N, N <= 59: 0.22387392 at N = 58 ; S_5 > 1/200: True
+n^(1/n), n = 2..30: minimal polynomial has zero trace coefficient (and degree >= 2): True
+p =   3: D_p = +2.222171+2.515198i (last block 2.1e-06), |D_p - main| = 7.221e+00, bound 7.711e+01, within: True
+p =   5: D_p = +2.223700-0.469165i (last block 3.1e-06), |D_p - main| = 2.804e+00, bound 2.837e+01, within: True
+p =   7: D_p = +1.379793-0.925713i (last block 1.6e-12), |D_p - main| = 1.477e+00, bound 1.468e+01, within: True
+p =  11: D_p = +0.610508-0.830738i (last block 1.6e-12), |D_p - main| = 6.118e-01, bound 6.057e+00, within: True
+p = 101: D_p = +0.006680-0.091468i (last block 1.6e-12), |D_p - main| = 7.979e-03, bound 7.837e-02, within: True
+p = 211: D_p = +0.001499-0.042676i (last block 1.6e-12), |D_p - main| = 1.919e-03, bound 1.845e-02, within: True

@@ -8,7 +8,10 @@
   "po": 5,
   "o": 10,
   "Nl": 60,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(2,3)",
@@ -19,7 +22,10 @@
   "po": 1,
   "o": 1,
   "Nl": 1,
-  "mL": 1
+  "mL": 1,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(2,5)",
@@ -30,7 +36,10 @@
   "po": 5,
   "o": 10,
   "Nl": 60,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(2,7)",
@@ -41,7 +50,10 @@
   "po": 4,
   "o": 4,
   "Nl": 42,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(2,9)",
@@ -52,7 +64,10 @@
   "po": 6,
   "o": 12,
   "Nl": 36,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(2,11)",
@@ -63,7 +78,10 @@
   "po": 5,
   "o": 5,
   "Nl": 33,
-  "mL": 20
+  "mL": 20,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(3,4)",
@@ -74,7 +92,10 @@
   "po": 3,
   "o": 3,
   "Nl": 48,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(3,5)",
@@ -85,7 +106,10 @@
   "po": 15,
   "o": 15,
   "Nl": 40,
-  "mL": 30
+  "mL": 30,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(3,7)",
@@ -96,7 +120,10 @@
   "po": 12,
   "o": 12,
   "Nl": 168,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(3,8)",
@@ -107,7 +134,10 @@
   "po": 12,
   "o": 12,
   "Nl": 32,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(3,10)",
@@ -118,7 +148,10 @@
   "po": 30,
   "o": 30,
   "Nl": 120,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(3,11)",
@@ -129,7 +162,10 @@
   "po": 15,
   "o": 30,
   "Nl": 88,
-  "mL": 30
+  "mL": 30,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(4,5)",
@@ -140,7 +176,10 @@
   "po": 15,
   "o": 30,
   "Nl": 240,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(4,7)",
@@ -151,7 +190,10 @@
   "po": 12,
   "o": 12,
   "Nl": 336,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(4,9)",
@@ -162,7 +204,10 @@
   "po": 6,
   "o": 12,
   "Nl": 144,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(4,11)",
@@ -173,7 +218,10 @@
   "po": 15,
   "o": 15,
   "Nl": 528,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(5,6)",
@@ -184,7 +232,10 @@
   "po": 60,
   "o": 60,
   "Nl": 120,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(5,7)",
@@ -195,7 +246,10 @@
   "po": 60,
   "o": 60,
   "Nl": 840,
-  "mL": 120
+  "mL": 120,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(5,8)",
@@ -206,7 +260,10 @@
   "po": 60,
   "o": 60,
   "Nl": 480,
-  "mL": 120
+  "mL": 120,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(5,9)",
@@ -217,7 +274,10 @@
   "po": 30,
   "o": 60,
   "Nl": 360,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(5,11)",
@@ -228,7 +288,10 @@
   "po": 15,
   "o": 15,
   "Nl": 1320,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(5,12)",
@@ -239,7 +302,10 @@
   "po": 60,
   "o": 60,
   "Nl": 240,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(6,7)",
@@ -250,7 +316,10 @@
   "po": 12,
   "o": 12,
   "Nl": 168,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "M(6,11)",
@@ -261,7 +330,10 @@
   "po": 60,
   "o": 60,
   "Nl": 264,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_1",
@@ -272,7 +344,10 @@
   "po": 3,
   "o": 6,
   "Nl": 24,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_2",
@@ -283,7 +358,10 @@
   "po": 3,
   "o": 3,
   "Nl": 16,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_3",
@@ -294,7 +372,10 @@
   "po": 15,
   "o": 15,
   "Nl": 40,
-  "mL": 30
+  "mL": 30,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_4",
@@ -305,7 +386,10 @@
   "po": 12,
   "o": 12,
   "Nl": 24,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_5",
@@ -316,7 +400,10 @@
   "po": 12,
   "o": 12,
   "Nl": 56,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_6",
@@ -327,7 +414,10 @@
   "po": 12,
   "o": 12,
   "Nl": 32,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_7",
@@ -338,7 +428,10 @@
   "po": 6,
   "o": 12,
   "Nl": 72,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_8",
@@ -349,7 +442,10 @@
   "po": 30,
   "o": 30,
   "Nl": 40,
-  "mL": 30
+  "mL": 30,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_9",
@@ -360,7 +456,10 @@
   "po": 15,
   "o": 30,
   "Nl": 88,
-  "mL": 30
+  "mL": 30,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_10",
@@ -371,7 +470,10 @@
   "po": 12,
   "o": 12,
   "Nl": 48,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_11",
@@ -382,7 +484,10 @@
   "po": 21,
   "o": 21,
   "Nl": 104,
-  "mL": 42
+  "mL": 42,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_12",
@@ -393,7 +498,10 @@
   "po": 24,
   "o": 24,
   "Nl": 56,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_13",
@@ -404,7 +512,10 @@
   "po": 60,
   "o": 60,
   "Nl": 120,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_14",
@@ -415,7 +526,10 @@
   "po": 24,
   "o": 24,
   "Nl": 64,
-  "mL": 48
+  "mL": 48,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_15",
@@ -426,7 +540,10 @@
   "po": 9,
   "o": 9,
   "Nl": 136,
-  "mL": 18
+  "mL": 18,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_16",
@@ -437,7 +554,10 @@
   "po": 12,
   "o": 12,
   "Nl": 72,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_17",
@@ -448,7 +568,10 @@
   "po": 9,
   "o": 18,
   "Nl": 152,
-  "mL": 18
+  "mL": 18,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_18",
@@ -459,7 +582,10 @@
   "po": 30,
   "o": 30,
   "Nl": 80,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_19",
@@ -470,7 +596,10 @@
   "po": 24,
   "o": 24,
   "Nl": 168,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_20",
@@ -481,7 +610,10 @@
   "po": 15,
   "o": 15,
   "Nl": 88,
-  "mL": 30
+  "mL": 30,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_21",
@@ -492,7 +624,10 @@
   "po": 12,
   "o": 12,
   "Nl": 184,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_22",
@@ -503,7 +638,10 @@
   "po": 12,
   "o": 12,
   "Nl": 96,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_23",
@@ -514,7 +652,10 @@
   "po": 75,
   "o": 75,
   "Nl": 200,
-  "mL": 150
+  "mL": 150,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_24",
@@ -525,7 +666,10 @@
   "po": 42,
   "o": 42,
   "Nl": 104,
-  "mL": 42
+  "mL": 42,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_25",
@@ -536,7 +680,10 @@
   "po": 18,
   "o": 18,
   "Nl": 216,
-  "mL": 36
+  "mL": 36,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_26",
@@ -547,7 +694,10 @@
   "po": 24,
   "o": 24,
   "Nl": 112,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_27",
@@ -558,7 +708,10 @@
   "po": 21,
   "o": 42,
   "Nl": 232,
-  "mL": 42
+  "mL": 42,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_28",
@@ -569,7 +722,10 @@
   "po": 60,
   "o": 60,
   "Nl": 120,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_29",
@@ -580,7 +736,10 @@
   "po": 15,
   "o": 30,
   "Nl": 248,
-  "mL": 30
+  "mL": 30,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_30",
@@ -591,7 +750,10 @@
   "po": 48,
   "o": 48,
   "Nl": 128,
-  "mL": 96
+  "mL": 96,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_31",
@@ -602,7 +764,10 @@
   "po": 60,
   "o": 60,
   "Nl": 264,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_32",
@@ -613,7 +778,10 @@
   "po": 18,
   "o": 18,
   "Nl": 136,
-  "mL": 18
+  "mL": 18,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_33",
@@ -624,7 +792,10 @@
   "po": 120,
   "o": 120,
   "Nl": 280,
-  "mL": 120
+  "mL": 120,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_34",
@@ -635,7 +806,10 @@
   "po": 12,
   "o": 12,
   "Nl": 144,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_35",
@@ -646,7 +820,10 @@
   "po": 57,
   "o": 57,
   "Nl": 296,
-  "mL": 114
+  "mL": 114,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_36",
@@ -657,7 +834,10 @@
   "po": 9,
   "o": 9,
   "Nl": 152,
-  "mL": 18
+  "mL": 18,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_37",
@@ -668,7 +848,10 @@
   "po": 84,
   "o": 84,
   "Nl": 312,
-  "mL": 84
+  "mL": 84,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_38",
@@ -679,7 +862,10 @@
   "po": 60,
   "o": 60,
   "Nl": 160,
-  "mL": 120
+  "mL": 120,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_39",
@@ -690,7 +876,10 @@
   "po": 30,
   "o": 60,
   "Nl": 328,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_40",
@@ -701,7 +890,10 @@
   "po": 24,
   "o": 24,
   "Nl": 168,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_41",
@@ -712,7 +904,10 @@
   "po": 66,
   "o": 66,
   "Nl": 344,
-  "mL": 132
+  "mL": 132,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_42",
@@ -723,7 +918,10 @@
   "po": 30,
   "o": 30,
   "Nl": 176,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_43",
@@ -734,7 +932,10 @@
   "po": 60,
   "o": 60,
   "Nl": 360,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_44",
@@ -745,7 +946,10 @@
   "po": 24,
   "o": 24,
   "Nl": 184,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_45",
@@ -756,7 +960,10 @@
   "po": 24,
   "o": 24,
   "Nl": 376,
-  "mL": 48
+  "mL": 48,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_46",
@@ -767,7 +974,10 @@
   "po": 24,
   "o": 24,
   "Nl": 192,
-  "mL": 48
+  "mL": 48,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_47",
@@ -778,7 +988,10 @@
   "po": 84,
   "o": 168,
   "Nl": 392,
-  "mL": 168
+  "mL": 168,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_48",
@@ -789,7 +1002,10 @@
   "po": 150,
   "o": 150,
   "Nl": 200,
-  "mL": 150
+  "mL": 150,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_49",
@@ -800,7 +1016,10 @@
   "po": 36,
   "o": 36,
   "Nl": 408,
-  "mL": 36
+  "mL": 36,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_50",
@@ -811,7 +1030,10 @@
   "po": 42,
   "o": 42,
   "Nl": 208,
-  "mL": 84
+  "mL": 84,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_51",
@@ -822,7 +1044,10 @@
   "po": 27,
   "o": 27,
   "Nl": 424,
-  "mL": 54
+  "mL": 54,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_52",
@@ -833,7 +1058,10 @@
   "po": 36,
   "o": 36,
   "Nl": 216,
-  "mL": 36
+  "mL": 36,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_53",
@@ -844,7 +1072,10 @@
   "po": 30,
   "o": 30,
   "Nl": 440,
-  "mL": 30
+  "mL": 30,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_54",
@@ -855,7 +1086,10 @@
   "po": 24,
   "o": 24,
   "Nl": 224,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_55",
@@ -866,7 +1100,10 @@
   "po": 36,
   "o": 36,
   "Nl": 456,
-  "mL": 36
+  "mL": 36,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_56",
@@ -877,7 +1114,10 @@
   "po": 21,
   "o": 21,
   "Nl": 232,
-  "mL": 42
+  "mL": 42,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_57",
@@ -888,7 +1128,10 @@
   "po": 87,
   "o": 174,
   "Nl": 472,
-  "mL": 174
+  "mL": 174,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_58",
@@ -899,7 +1142,10 @@
   "po": 60,
   "o": 60,
   "Nl": 240,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_59",
@@ -910,7 +1156,10 @@
   "po": 15,
   "o": 15,
   "Nl": 488,
-  "mL": 30
+  "mL": 30,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(2)_60",
@@ -921,7 +1170,10 @@
   "po": 15,
   "o": 15,
   "Nl": 248,
-  "mL": 30
+  "mL": 30,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(3)_1",
@@ -932,7 +1184,10 @@
   "po": 4,
   "o": 4,
   "Nl": 12,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(3)_2",
@@ -943,7 +1198,10 @@
   "po": 20,
   "o": 20,
   "Nl": 15,
-  "mL": 20
+  "mL": 20,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(3)_3",
@@ -954,7 +1212,10 @@
   "po": 12,
   "o": 12,
   "Nl": 18,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(3)_4",
@@ -965,7 +1226,10 @@
   "po": 8,
   "o": 8,
   "Nl": 21,
-  "mL": 8
+  "mL": 8,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(3)_5",
@@ -976,7 +1240,10 @@
   "po": 12,
   "o": 12,
   "Nl": 24,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(3)_6",
@@ -987,7 +1254,10 @@
   "po": 36,
   "o": 36,
   "Nl": 27,
-  "mL": 36
+  "mL": 36,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(3)_7",
@@ -998,7 +1268,10 @@
   "po": 60,
   "o": 60,
   "Nl": 30,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(3)_8",
@@ -1009,7 +1282,10 @@
   "po": 20,
   "o": 20,
   "Nl": 33,
-  "mL": 20
+  "mL": 20,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(3)_9",
@@ -1020,7 +1296,10 @@
   "po": 12,
   "o": 12,
   "Nl": 36,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "SU(3)_10",
@@ -1031,7 +1310,10 @@
   "po": 28,
   "o": 28,
   "Nl": 39,
-  "mL": 28
+  "mL": 28,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "A1 (definite)",
@@ -1042,7 +1324,10 @@
   "po": 3,
   "o": 6,
   "Nl": 24,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "A1 + U (Lorentzian)",
@@ -1053,7 +1338,10 @@
   "po": 3,
   "o": 6,
   "Nl": 24,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "A1(-1) (negative definite)",
@@ -1064,7 +1352,10 @@
   "po": 3,
   "o": 6,
   "Nl": 24,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "A2 (definite)",
@@ -1075,7 +1366,10 @@
   "po": 4,
   "o": 4,
   "Nl": 12,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "A2 + U (Lorentzian)",
@@ -1086,7 +1380,10 @@
   "po": 4,
   "o": 4,
   "Nl": 12,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "A4 (definite)",
@@ -1097,7 +1394,10 @@
   "po": 10,
   "o": 10,
   "Nl": 30,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "D4 (definite)",
@@ -1108,7 +1408,10 @@
   "po": 3,
   "o": 3,
   "Nl": 6,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "golden [[2,1],[1,-2]] (indef.)",
@@ -1119,7 +1422,10 @@
   "po": 10,
   "o": 10,
   "Nl": 5,
-  "mL": 10
+  "mL": 10,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "E8 (definite, unimodular)",
@@ -1130,7 +1436,10 @@
   "po": 1,
   "o": 1,
   "Nl": 3,
-  "mL": 4
+  "mL": 4,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "U = II_1,1 (Lorentzian)",
@@ -1141,7 +1450,10 @@
   "po": 1,
   "o": 1,
   "Nl": 1,
-  "mL": 1
+  "mL": 1,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "D(Z_2)",
@@ -1152,7 +1464,10 @@
   "po": 3,
   "o": 3,
   "Nl": 2,
-  "mL": 3
+  "mL": 3,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "D(Z_3)",
@@ -1163,7 +1478,10 @@
   "po": 4,
   "o": 4,
   "Nl": 3,
-  "mL": 4
+  "mL": 4,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "D(Z_4)",
@@ -1174,7 +1492,10 @@
   "po": 3,
   "o": 3,
   "Nl": 4,
-  "mL": 3
+  "mL": 3,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "D(Z_5)",
@@ -1185,7 +1506,10 @@
   "po": 10,
   "o": 10,
   "Nl": 5,
-  "mL": 10
+  "mL": 10,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "D(Z_6)",
@@ -1196,7 +1520,10 @@
   "po": 12,
   "o": 12,
   "Nl": 6,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "D(Z_7)",
@@ -1207,7 +1534,10 @@
   "po": 8,
   "o": 8,
   "Nl": 7,
-  "mL": 8
+  "mL": 8,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "D(Z_8)",
@@ -1218,7 +1548,10 @@
   "po": 6,
   "o": 6,
   "Nl": 8,
-  "mL": 6
+  "mL": 6,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "D(Z_9)",
@@ -1229,7 +1562,10 @@
   "po": 12,
   "o": 12,
   "Nl": 9,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "D(Z_10)",
@@ -1240,7 +1576,10 @@
   "po": 30,
   "o": 30,
   "Nl": 10,
-  "mL": 30
+  "mL": 30,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "D(Z_11)",
@@ -1251,7 +1590,10 @@
   "po": 5,
   "o": 5,
   "Nl": 11,
-  "mL": 5
+  "mL": 5,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_12)",
@@ -1262,7 +1604,10 @@
   "po": 12,
   "o": 12,
   "Nl": 12,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_13)",
@@ -1273,7 +1618,10 @@
   "po": 14,
   "o": 14,
   "Nl": 13,
-  "mL": 14
+  "mL": 14,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_14)",
@@ -1284,7 +1632,10 @@
   "po": 24,
   "o": 24,
   "Nl": 14,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_15)",
@@ -1295,7 +1646,10 @@
   "po": 20,
   "o": 20,
   "Nl": 15,
-  "mL": 20
+  "mL": 20,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_16)",
@@ -1306,7 +1660,10 @@
   "po": 12,
   "o": 12,
   "Nl": 16,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_17)",
@@ -1317,7 +1674,10 @@
   "po": 18,
   "o": 18,
   "Nl": 17,
-  "mL": 18
+  "mL": 18,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_18)",
@@ -1328,7 +1688,10 @@
   "po": 12,
   "o": 12,
   "Nl": 18,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_19)",
@@ -1339,7 +1702,10 @@
   "po": 9,
   "o": 9,
   "Nl": 19,
-  "mL": 9
+  "mL": 9,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_20)",
@@ -1350,7 +1716,10 @@
   "po": 30,
   "o": 30,
   "Nl": 20,
-  "mL": 30
+  "mL": 30,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_21)",
@@ -1361,7 +1730,10 @@
   "po": 8,
   "o": 8,
   "Nl": 21,
-  "mL": 8
+  "mL": 8,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_22)",
@@ -1372,7 +1744,10 @@
   "po": 15,
   "o": 15,
   "Nl": 22,
-  "mL": 15
+  "mL": 15,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_23)",
@@ -1383,7 +1758,10 @@
   "po": 24,
   "o": 24,
   "Nl": 23,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_24)",
@@ -1394,7 +1772,10 @@
   "po": 12,
   "o": 12,
   "Nl": 24,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_25)",
@@ -1405,7 +1786,10 @@
   "po": 50,
   "o": 50,
   "Nl": 25,
-  "mL": 50
+  "mL": 50,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_26)",
@@ -1416,7 +1800,10 @@
   "po": 42,
   "o": 42,
   "Nl": 26,
-  "mL": 42
+  "mL": 42,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_27)",
@@ -1427,7 +1814,10 @@
   "po": 36,
   "o": 36,
   "Nl": 27,
-  "mL": 36
+  "mL": 36,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_28)",
@@ -1438,7 +1828,10 @@
   "po": 24,
   "o": 24,
   "Nl": 28,
-  "mL": 24
+  "mL": 24,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_29)",
@@ -1449,7 +1842,10 @@
   "po": 7,
   "o": 7,
   "Nl": 29,
-  "mL": 7
+  "mL": 7,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(Z_30)",
@@ -1460,7 +1856,10 @@
   "po": 60,
   "o": 60,
   "Nl": 30,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": null
  },
  {
   "name": "D(S_3)",
@@ -1471,7 +1870,10 @@
   "po": 6,
   "o": 6,
   "Nl": 6,
-  "mL": 12
+  "mL": 12,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  },
  {
   "name": "Fib = (G2)_1 x D(Z_2) x D(Z_3)",
@@ -1482,6 +1884,9 @@
   "po": 60,
   "o": 60,
   "Nl": 60,
-  "mL": 60
+  "mL": 60,
+  "S2_perm": true,
+  "ST3_theta": true,
+  "verlinde": true
  }
 ]

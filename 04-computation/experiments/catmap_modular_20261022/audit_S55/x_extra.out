@@ -1,0 +1,6 @@
+N = 3: F C F^-1 is a 0/1 permutation matrix: True; induced map linear: True, matrix mod N = [[2, 2], [2, 1]], trace 0 (= 3 mod N: True), det 1
+N = 4: F C F^-1 is a 0/1 permutation matrix: True; induced map linear: True, matrix mod N = [[2, 3], [3, 1]], trace 3 (= 3 mod N: True), det 1
+N = 5: F C F^-1 is a 0/1 permutation matrix: True; induced map linear: True, matrix mod N = [[2, 4], [4, 1]], trace 3 (= 3 mod N: True), det 1
+N = 6: F C F^-1 is a 0/1 permutation matrix: True; induced map linear: True, matrix mod N = [[2, 5], [5, 1]], trace 3 (= 3 mod N: True), det 1
+N = 8: F C F^-1 is a 0/1 permutation matrix: True; induced map linear: True, matrix mod N = [[2, 7], [7, 1]], trace 3 (= 3 mod N: True), det 1
+Ad(A) eigenvalues: [0.14589803 1.         6.85410197] ; phi^-4, 1, phi^4 = [0.14589803 1.         6.85410197] ; rapidity in SO(2,1) = log(phi^4) = 1.9248473 ; 2 log phi = 0.96242365

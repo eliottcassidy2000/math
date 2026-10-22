@@ -1,0 +1,21 @@
+p = 2: dim 5; pointwise |F(g tau) - rho(g) F(tau)|/|F| max = 1.39e-40; rho(s)^2 = I: 0.0, (st)^3 = s^2: 2.1e-41; M_s^2 = -I: 0.0, M rel 2.1e-41; R_s^2 = I: 0.0, R rel 1.3e-41; rho(A) = R(A) + A_def (x) M(A): 0.0
+       |eig rho(A)| = ['0.38196601125', '1.0', '2.61803398875'] (phi^-2 = 0.38196601125, phi^2 = 2.61803398875); ord R_(p+1)(A) = 3, ord R_(p-1)(A) = 1; trace law n=1..12: True; spectral radius = dilatation for random hyperbolic words: True; Dehn twist Jordan: True
+       Tr rho(A^n), n = 1..8: [(3-0j), (7-0j), (21+0j), (47-0j), (123-0j), (325+0j), (843-0j), (2207-0j)]
+       p = 2: R_1 = M is the character M(s) = (0.0 - 1.0j), M(t) = (0.866025 + 0.5j) (= exp(2 pi i/12)): NOT the trivial representation; M(A) = (1.0 + 5.96947e-46j)
+       FGST characters chi^(+-)_s (s=1..p): rank of coefficient matrix on (E,O) = 4 (= 2p = 4)
+p = 3: dim 8; pointwise |F(g tau) - rho(g) F(tau)|/|F| max = 1.11e-40; rho(s)^2 = I: 3.4e-41, (st)^3 = s^2: 5.7e-41; M_s^2 = -I: 1.1e-41, M rel 5.7e-41; R_s^2 = I: 3.4e-41, R rel 5.6e-41; rho(A) = R(A) + A_def (x) M(A): 0.0
+       |eig rho(A)| = ['0.38196601125', '1.0', '2.61803398875'] (phi^-2 = 0.38196601125, phi^2 = 2.61803398875); ord R_(p+1)(A) = 12, ord R_(p-1)(A) = 6; trace law n=1..12: True; spectral radius = dilatation for random hyperbolic words: True; Dehn twist Jordan: True
+       Tr rho(A^n), n = 1..8: [(3+0j), (-5+0j), (-36+0j), (-49-0j), (123-0j), (640-0j), (843+0j), (-2209+0j)]
+       FGST characters chi^(+-)_s (s=1..p): rank of coefficient matrix on (E,O) = 6 (= 2p = 6)
+p = 4: dim 11; pointwise |F(g tau) - rho(g) F(tau)|/|F| max = 2.18e-40; rho(s)^2 = I: 2.3e-41, (st)^3 = s^2: 5.6e-41; M_s^2 = -I: 2.3e-41, M rel 4.4e-41; R_s^2 = I: 2.3e-41, R rel 5.6e-41; rho(A) = R(A) + A_def (x) M(A): 0.0
+       |eig rho(A)| = ['0.38196601125', '1.0', '2.61803398875'] (phi^-2 = 0.38196601125, phi^2 = 2.61803398875); ord R_(p+1)(A) = 6, ord R_(p-1)(A) = 3; trace law n=1..12: True; spectral radius = dilatation for random hyperbolic words: True; Dehn twist Jordan: True
+       Tr rho(A^n), n = 1..8: [(1-0j), (-1+0j), (55-0j), (-1-0j), (1+0j), (971-0j), (1-0j), (-1+0j)]
+       FGST characters chi^(+-)_s (s=1..p): rank of coefficient matrix on (E,O) = 8 (= 2p = 8)
+p = 5: dim 14; pointwise |F(g tau) - rho(g) F(tau)|/|F| max = 2.07e-40; rho(s)^2 = I: 3.4e-41, (st)^3 = s^2: 8.0e-41; M_s^2 = -I: 3.4e-41, M rel 3.9e-41; R_s^2 = I: 3.4e-41, R rel 8.0e-41; rho(A) = R(A) + A_def (x) M(A): 0.0
+       |eig rho(A)| = ['0.38196601125', '1.0', '2.61803398875'] (phi^-2 = 0.38196601125, phi^2 = 2.61803398875); ord R_(p+1)(A) = 30, ord R_(p-1)(A) = 15; trace law n=1..12: True; spectral radius = dilatation for random hyperbolic words: True; Dehn twist Jordan: True
+       Tr rho(A^n), n = 1..8: [(-0.23606798-0j), (11.94427191-0j), (-57.01315562+0j), (-30.66563146+0j), (-243+0j), (401.24995673+0j), (1363.38461853-0j), (3571.61904716-0j)]
+       FGST characters chi^(+-)_s (s=1..p): rank of coefficient matrix on (E,O) = 10 (= 2p = 10)
+p = 6: dim 17; pointwise |F(g tau) - rho(g) F(tau)|/|F| max = 1.44e-40; rho(s)^2 = I: 5.5e-41, (st)^3 = s^2: 9.9e-41; M_s^2 = -I: 5.5e-41, M rel 8.6e-41; R_s^2 = I: 4.6e-41, R rel 9.9e-41; rho(A) = R(A) + A_def (x) M(A): 0.0
+       |eig rho(A)| = ['0.38196601125', '1.0', '2.61803398875'] (phi^-2 = 0.38196601125, phi^2 = 2.61803398875); ord R_(p+1)(A) = 12, ord R_(p-1)(A) = 12; trace law n=1..12: True; spectral radius = dilatation for random hyperbolic words: True; Dehn twist Jordan: True
+       Tr rho(A^n), n = 1..8: [(1+0j), (-13+0j), (55+0j), (95-0j), (1-0j), (317-0j), (1+0j), (4415-0j)]
+       FGST characters chi^(+-)_s (s=1..p): rank of coefficient matrix on (E,O) = 12 (= 2p = 12)
