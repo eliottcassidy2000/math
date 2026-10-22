@@ -23,10 +23,16 @@ status: >
   - The structural explanation of (5), V_Lambda^{orb(g^2)} = V_N^{orb(g_N^{e/2})} with g_N^{e/2} conjugate to the
     principal involution of N, is a SKETCH (standard cyclic-orbifold duality plus the vector-representation
     count below). It is not used in the proofs of (1)-(4).
-  Prior art (pending the S53 agent search, item added 2026-10-22). The principal-part method is standard
-  (Conway-Norton; THM-4759 (7)). Borcherds' pairs h_2 = 2h_1 + 2 are KNOWN (Borcherds' thesis Prop. 4.5.3;
-  Chenevier-Lannes §3.4.4). NOT FOUND so far: Fricke Hauptmodul twinings of V_Lambda by translations of orders 12,
-  16, 20, 24, 32, and the cancellation mechanism.
+  Prior art (third S53 agent search, 2026-10-22).
+  - Lattice side of the shell-1 cusps: KNOWN. Chenevier-Lannes, Ergebnisse 69 (2019), Prop. III.4.3.4, shows that
+    Lambda is a (2h + 1 - rho.alpha)-neighbour of every Niemeier lattice with roots. Taking alpha the highest root
+    gives the (h+2)-neighbour, i.e. the orbifold of v is N, for all 23 types.
+  - Borcherds' pairs h_2 = 2h_1 + 2: KNOWN (Borcherds' thesis Prop. 4.5.3; Chenevier-Lannes §III.4.4).
+  - Method analogues of the criterion, CITED: Tuite, CMP 166 (1995) §4.1; Paquette-Persson-Volpato (2017) §6; van
+    Ekeren-Moller-Scheithauer, arXiv 1704.00478, Lemmas 4.5-4.8.
+  - The principal-part method is standard (Conway-Norton; THM-4759 (7)).
+  - NOT FOUND: the criterion for lattice-VOA translations; any twining of V_Lambda by a translation equal to 24 +
+    T_X for X = 4A, 8A, 12H, 16C, 20F, 24I, 32A; the cancellation mechanism; the level-2 / Galois reading.
   Session opus-2026-10-22-S53.
 session: opus-2026-10-22-S53
 source: 05-knowledge/results/leech_deep_hole_swap_theorem_20261022.md

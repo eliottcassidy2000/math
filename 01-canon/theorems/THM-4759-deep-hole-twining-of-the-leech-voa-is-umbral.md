@@ -6,8 +6,18 @@ status: >
   - (1) The per-component identity theta_{Q + rho/h} = eta^l eta_pi(tau/h) is CLASSICAL: Kostant's conjugacy of the
     principal element with a Coxeter element, applied to the lattice VOA V_Q (equivalently Lepowsky and
     Kac-Kazhdan-Lepowsky-Wilson, the principally specialised basic representation; Garvan-Kim-Stanton for type A).
+    Explicitly: Kac-Peterson, '112 constructions of the basic representation of the loop group of E8' (1985),
+    eqs. (11.6)-(11.7), for a Coxeter element (Q^w = 0); Lepowsky, Ann. ENS 12 (1979), Thm 17.6 and Table 4
+    (eta^l/eta_Cox for every simply-laced type). Found by the third S53 agent search.
     Independently VERIFIED through q^29 for A_1..A_8, A_12, D_4..D_10, E_6, E_7, E_8 (principal_cores.py).
   - (2) and (3) are PROVED from (1), the glue-coset lemma proved below, and THM-4758.
+    - The A1^24 case of (3) is at least numerically KNOWN: the Leech theta series about the 'octahedral' (A1^24) deep
+      hole, 48, 4096, 97152, 1130496, ..., is in SPLAG p. 511 (OEIS A004034), and equals 4096 eta^48/eta(tau/2)^24
+      + 48 Delta.
+    - SPLAG Ch. 4 eq. (144) may already give it in closed form (UNVERIFIED).
+    - (2a), T^X as the twining of V_N, is NOT FOUND, though it follows in a line from Kac-Peterson (11.6').
+    - (2b), the deep-hole twining T^X + 24 + k, is NOT FOUND. Moller-Scheithauer (Ann. Math. 2023, Props. 6.2-6.3)
+      and van Ekeren-Lam-Moller-Shimakura (2021, Prop. 5.5) prove only the orbifold statements.
   - (4) T^X is a Hauptmodul for the CDH lambency group. This is CITED (Cheng-Duncan-Harvey 2014, Prop. 2.1, proved
     by inspection) and independently re-certified here (hauptmodul_cert.py).
   - (5) The shallow-multiple law has three parts.
@@ -53,6 +63,8 @@ status: >
     Borcherds' thesis Prop 4.5.3, the pairs with h_2 = 2h_1 + 2, e.g. D24 -> D12^2 -> D6^4 -> A3^8 and
     E8^3 -> D8^3.
   - The M24-point orbit O6a is in the ATLAS (p. 181); see Sun-Wang arXiv 2111.10999, §2.3 and Lemma 2.11.
+    Conway 1969 / SPLAG Ch. 10 Thm 29: Co_0 is transitive on the type-6_32 vectors (stabiliser M24) and on the type
+    6_22 vectors (stabiliser PSU6(2).2). The orbit sizes 452,088,000 + 33,965,568,000 add up to all of type 6.
   - NOT FOUND, so new as far as we know: the Leech-side statements of (10) (they follow in a line from Borcherds'
     lemmas); the Fricke Hauptmodul twining (7), (10); the Fricke swap theorem (11); the p = 3, 5 descents
     (E6^4 -> A2^12, E8^3 -> A8^3, A4^6); the H -> pH + 1 reading; the shell-1 Fricke family (THM-4760). CDH Remark 2.2 asks for

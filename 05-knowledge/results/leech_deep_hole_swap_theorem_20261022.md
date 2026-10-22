@@ -413,6 +413,15 @@ L_p = (p-1)H + 1, the same conjugacy that turns 3x + 1 into 3x. The towers are:
 The exact relation is H = pH' + 1; the prime-power towers are NUMEROLOGY beyond it. The prompt's 27 is E6^4 on the
 3-scale.
 
+**Prior art (third agent search).**
+- The lattice side of the shell-1 cusps is KNOWN: Lambda is the (h+2)-neighbour of every Niemeier lattice through
+  its highest root (Chenevier-Lannes Prop. III.4.3.4).
+- The per-component identity is KNOWN: Kac-Peterson 1985 (11.6), Lepowsky 1979 Thm 17.6.
+- The A1^24 deep-hole theta series is KNOWN numerically: SPLAG p. 511, OEIS A004034.
+- The Co_0 orbits of type 6 are KNOWN: SPLAG Ch. 10 Thm 29.
+- NOT FOUND: all the twining statements (umbral T^X + 24 + k, the Fricke twinings, the shell-1 family) and the cusp
+  criterion.
+
 **Conjecture (HYP-9368 (B')).** The 30 classes are all the Fricke Hauptmodul twinings of V_Lambda by translations,
 realising the 23 orders 3-17, 19, 20, 23, 24, 26, 31, 32 and 47. None exists at 18, 21, 25, 27, 29, 35, 36, 39, 41,
 49, 50, 59 or 71.
