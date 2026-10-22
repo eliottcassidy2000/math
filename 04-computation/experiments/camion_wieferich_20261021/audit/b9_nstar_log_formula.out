@@ -1,0 +1,4 @@
+K = 150, deg Q = 18; unit root rho = zeta (mod 2), v_2(Q(rho)) >= 150
+f(n) = Tr(c rho^(-n)) mod 2^100 for n = 1500..2200 (step 37): True
+v_2 of the log coefficients: log u -> 46, log v -> 45
+closed form log(-c zeta/sigma(c zeta)) / log(w/sigma w) = n* : agreement with b7's n* to 90 bits (of 90 available)

@@ -1,0 +1,9 @@
+CAMION-WIEFERICH base 2: p=3
+CAMION-WIEFERICH base 2: p=13
+  base-2 Wieferich prime p=1093 is not Camion-Wieferich
+base 2, primes in [3,3000]: 429 tested, 2 Camion-Wieferich
+  base-3 Wieferich prime p=11 is not Camion-Wieferich
+CAMION-WIEFERICH base 3: p=17
+CAMION-WIEFERICH base 3: p=31
+base 3, primes in [5,3000]: 428 tested, 2 Camion-Wieferich
+bash -c "$SP/cwb 2 3 3000; $SP/cwb 3 5 3000"  4.88s user 0.02s system 95% cpu 5.143 total

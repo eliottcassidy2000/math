@@ -1,0 +1,4 @@
+p=23: extrapolating each class cubic down to n = r: n=1: b=1, cubic=299 !=; n=2: b=0, cubic=0 =; n=3: b=1, cubic=484 !=; n=4: b=11, cubic=11 =; n=5: b=429, cubic=429 =
+p=31: extrapolating each class cubic down to n = r: n=1: b=1, cubic=775 !=; n=2: b=0, cubic=0 =; n=3: b=1, cubic=714 !=; n=4: b=11, cubic=11 =; n=5: b=958, cubic=958 =
+p=47: extrapolating each class cubic down to n = r: n=1: b=1, cubic=423 !=; n=2: b=0, cubic=0 =; n=3: b=1, cubic=1364 !=; n=4: b=11, cubic=11 =; n=5: b=958, cubic=958 =
+p=71: extrapolating each class cubic down to n = r: n=1: b=1, cubic=2556 !=; n=2: b=0, cubic=0 =; n=3: b=1, cubic=4190 !=; n=4: b=11, cubic=11 =; n=5: b=958, cubic=958 =

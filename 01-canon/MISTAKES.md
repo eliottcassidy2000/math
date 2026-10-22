@@ -19497,3 +19497,32 @@ the ambient space.
 - **A residue of MISTAKE-028.** `06-writeups/formal-writeup.md` still described THM-227 as "connecting forbidden H values to Mersenne numbers". Only 7 and 21 are forbidden, and 31, 63, 127 are attained. Gloss withdrawn.
 - **A stale historical hypothesis.** In `INDEX-HISTORICAL-THROUGH-2026-07-21.md` (line 4772), HYP-1154 is still marked CONFIRMED (exact) for "|PG(5,2)| = 63 = H_forb₃". MISTAKE-024 refuted this (63 is attained at `n = 8`). The frozen historical index is not edited; this entry is the correction of record.
 - **Missing coordinate.** A printed verdict must come from the computed field it summarises. When a stored output disagrees with its own computed fields, rerun the computation; do not trust the summary line.
+
+## MISTAKE-654 (2026-10-21, mac-mini-2026-10-21-fanopsp Camion-function packet, THM-4750 and HYP-9361; found by the session's independent audit after the pre-audit checkpoint be53c09bdd was pushed) -- a trichotomy stated as a dichotomy, a misread computer output cited as evidence, and several range and expectation slips
+- **A dichotomy missing its third case (MAJOR, M1).**
+  - THM-4750 (4) said that the two second-order Camion zeros of a zero class are "split in Z_p or an inert conjugate pair", and that "the triangle class is always split".
+  - A double root mod p (`χ(Δ) = 0`) can be a **ramified** pair:
+    - at `p = 5` for the triangle class, with `v_5(D(3+4l)) = 2` on the whole disc;
+    - at `p = 7` for class 2, with `v_7(D(8+6l)) = 2` on the whole disc.
+  - The session's own output tagged both as double roots.
+  - The correct statement is a trichotomy: split, inert, or congruent mod p, where a congruent pair may be split, unramified or ramified. The triangle class is split whenever p is not Wieferich and `l = 0` is a simple root.
+- **A misread output used as evidence (MAJOR, M2).**
+  - THM-4750 (6c) and HYP-9361 (e) claimed that "rational reconstruction at 2^64 finds no fraction with numerator and denominator below 2^31".
+  - The session's own output printed such a fraction, `765490658/1598160473`, with "check: True". At modulus 2^64 rational reconstruction almost always returns some generic fraction of height about 2^31.
+  - The conclusion (n* is not a small rational) was rescued by the audit's computation of n* mod 2^140: that fraction fails mod 2^80, and no rational of height `≤ 2^69.5` exists.
+- **Smaller slips (MINOR).**
+  - The (4e) valuation range was off by one for even n; the correct bound is `< ⌈n/2⌉`.
+  - 5(e) was missing the hypothesis `p ≥ 2K − 1`.
+  - "Full speed exactly at base-a Wieferich primes" was stated without its converse. The converse follows from `X_a(1) = a^3 − 2a` and `X_a(2) = a^6 − 4a^3 − 2a^2 + 6a`.
+  - The expected number of linear classes was given as 5.5; it is 4.0, because the triangle class is never linear (`X(1) = 4`).
+  - The mod `2^(j+3)` sub-claim in 6(b) fails at `n = 1, 4`.
+  - The r = 3 forced root was presented as a consequence of the theorem. It is an observation, because the cubic law holds at `m = 2`, below the proved threshold.
+  - "Two independent codes" overstated the Camion–Wieferich search; only one code searched `(10^4, 10^5]` until the audit's FLINT run.
+  - A histogram was cited to the wrong file.
+  - An output file contained a duplicated line.
+  - The 17158 direct checks had no committed output.
+  - "Sharp at every tested prime" was false at `p = 3, 5, 7`.
+- **Missing coordinates.**
+  1. A statement about "two roots, split or inert" must say what happens when the discriminant vanishes. Test the double-root cases the code already tags.
+  2. Read a printed check line before citing it as evidence. A reconstruction that "checks" mod `2^k` is not a refutation; only failure at higher precision is.
+  3. When a law is observed below its proved threshold, label the observation FINITE-EXACT. Do not derive it from the theorem.

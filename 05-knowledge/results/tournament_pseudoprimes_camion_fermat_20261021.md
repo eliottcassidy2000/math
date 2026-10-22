@@ -355,7 +355,9 @@ The canon statement is THM-4750 (pre-audit); the open laws are HYP-9361. This se
 * `h(22409) = 2`. No prime `≤ 10^5` has `h ≥ 3`. The heuristic says there are finitely many such primes (`Σ 1/p² ≈ 0.09`).
 
 **Loop 2: what the congruences represent.**
-* The Mahler coefficients decay at half the Kummer rate: one power of `p` per two steps, because each power of the Fermat drift `u` arrives with the degree-2 polynomial `C(n,2)`. This is sharp at every tested non-Wieferich prime (`camion_speed.out`).
+* The Mahler coefficients decay at half the Kummer rate: one power of `p` per two steps, because each power of the Fermat drift `u` arrives with the degree-2 polynomial `C(n,2)`.
+  * This is sharp at every tested non-Wieferich prime `p ≥ 7`.
+  * At `p = 3, 5, 7` there is an extra `v_p((2k−1)!!)` (`camion_speed.out`; audit finding 28).
 * That suggested the curvature formula `a_2/p ≡ −q_2(p)X(m−2)`, proved and then checked in every class of every prime `≤ 10^4`.
 * Its prediction is that at Wieferich primes the counts become linear mod `p²`, so each zero class has one second-order root. At other primes the roots of a quadratic come in pairs (0 or 2).
   * The prediction was made before the test and confirmed exactly: 4 of 4 classes at 1093 and 4 of 4 at 3511 have one root.
@@ -387,3 +389,16 @@ The canon statement is THM-4750 (pre-audit); the open laws are HYP-9361. This se
 * Mod `p^k` it is a `p`-adic analytic function of the class index. Its speed is `1/(degree of the edge count)`, and its curvature is the Fermat quotient of the number of edge states.
 * The tower heights are the valuations of one regularized value, `Λ_p`, the branch through `K1` evaluated at "zero vertices".
 * At `p = 2` the same picture is controlled by Moon's theorem and by `Φ_3`, the mod-2 shadow of the tournament EGF.
+
+**Audit (2026-10-21; [report](camion_function_audit_20261021.md); MISTAKE-654).**
+* The core proofs are sound, and every FINITE-EXACT number reproduced with independent code (audit b1–b11).
+* Two MAJOR fixes were applied:
+  * **M1.** A double root mod `p` can be a ramified pair of zeros: the triangle class at `p = 5`, class 2 at `p = 7`.
+  * **M2.** The `n*` rational-reconstruction evidence was replaced by a computation mod `2^140`: no rational of height `≤ 2^69.5`.
+* Sixteen MINOR fixes and four upgrades were applied: the congruence mod `p^(a+1)`, the cheaper `Λ_p` formula, the exact double-factorial excess, and an entire-function proof sketch for the 2-adic statements.
+* Post-audit continuation, not covered by that audit:
+  * Teichmüller rigidity, `Λ_p = σ_p − ⟨2⟩^(−1/2)`, and the **Camion lift** `κ(2) = ω(2)σ_p^(−2)` with `h(p) = v_p(2 − κ(2))` (THM-4750 §5b);
+  * the `r = 4` `S_4` statistics (§6b);
+  * the Camion–Wieferich lists for base 3 (17, 31) and connected graphs (5, 197);
+  * the FLINT search to `10^6`.
+

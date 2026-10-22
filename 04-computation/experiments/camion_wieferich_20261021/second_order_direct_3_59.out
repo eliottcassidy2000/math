@@ -1,0 +1,20 @@
+p=3 eps=-1 q2=1 zero-classes: 1:2CW 2:1L  lambda_C=3
+p=5 eps=-1 q2=3 zero-classes: 3:1D 1:0L 2:0  lambda_C=1
+p=7 eps=+1 q2=2 zero-classes: 3:2 1:2 2:1D  lambda_C=5
+p=11 eps=-1 q2=5 zero-classes: 3:2 1:2 2:0  lambda_C=4
+p=13 eps=-1 q2=3 zero-classes: 3:2 1:2CW 2:2  lambda_C=6
+p=17 eps=+1 q2=13 zero-classes: 3:2 8:0 1:0 2:0  lambda_C=2
+p=19 eps=-1 q2=3 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=23 eps=+1 q2=17 zero-classes: 3:2 16:1L 1:0 2:1L  lambda_C=4
+p=29 eps=-1 q2=1 zero-classes: 3:2 1:0 2:2  lambda_C=4
+p=31 eps=+1 q2=6 zero-classes: 3:2 6:0 1:2 2:2  lambda_C=6
+p=37 eps=-1 q2=1 zero-classes: 3:2 1:2 2:2  lambda_C=6
+p=41 eps=+1 q2=23 zero-classes: 3:2 18:0 1:2 2:2  lambda_C=6
+p=43 eps=-1 q2=25 zero-classes: 3:2 28:2 39:0 1:0 2:0  lambda_C=4
+p=47 eps=+1 q2=44 zero-classes: 3:2 17:2 24:2 1:0 2:2  lambda_C=8
+p=53 eps=-1 q2=36 zero-classes: 3:2 10:2 38:2 1:0 2:2  lambda_C=8
+p=59 eps=-1 q2=8 zero-classes: 3:2 21:2 1:2 2:0  lambda_C=6
+SUMMARY primes=16 zero-classes=58  checks: p|a1,p|a2 failures=0  a2-formula failures=0  direct-law checks=17158 failures=0
+root-count histogram (non-Wieferich): 0:16 1:5 2:37 3:0 4:0 5:0 6:0 7:0
+root-count histogram (Wieferich): 0:0 1:0 2:0 3:0 4:0 5:0 6:0 7:0
+lambda_C parity: even=13 odd=3   linear classes (c2 = 0): 4   double roots: 2

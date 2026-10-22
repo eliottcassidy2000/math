@@ -1,0 +1,14 @@
+p=7: kappa(1) = 1; multiplicative mod p^3: 13/36 pairs, mod p^2: 15/36; kappa(a) = omega(a) mod p^2 for a in [1]; kappa(-1) = 167 (omega(-1) = 342)
+p=11: kappa(1) = 1; multiplicative mod p^3: 19/100 pairs, mod p^2: 26/100; kappa(a) = omega(a) mod p^2 for a in [1]; kappa(-1) = 307 (omega(-1) = 1330)
+p=13: kappa(1) = 1; multiplicative mod p^3: 23/144 pairs, mod p^2: 32/144; kappa(a) = omega(a) mod p^2 for a in [1, 4, 12]; kappa(-1) = 337 (omega(-1) = 2196)
+p=17: kappa(1) = 1; multiplicative mod p^3: 31/256 pairs, mod p^2: 48/256; kappa(a) = omega(a) mod p^2 for a in [1]; kappa(-1) = 186 (omega(-1) = 4912)
+rigidity of sigma_p for residues a = 3, 5, p-1 and their lifts a + t p (t = 1, 2, 7):
+  p=7 a=3: equal for all lifts: True
+  p=7 a=5: equal for all lifts: True
+  p=7 a=6: equal for all lifts: True
+  p=11 a=3: equal for all lifts: True
+  p=11 a=5: equal for all lifts: True
+  p=11 a=10: equal for all lifts: True
+  p=13 a=3: equal for all lifts: True
+  p=13 a=5: equal for all lifts: True
+  p=13 a=12: equal for all lifts: True

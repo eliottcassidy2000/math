@@ -1,0 +1,4 @@
+CONNECTED-CW p=5
+CONNECTED-CW p=197
+connected graphs, primes in [3,4000]: 549 tested, 2 with p^2 | cg(p) - 2^((p-1)/2) + 1, rotation-congruence failures 0
+$SP/cwc 3 4000  5.57s user 0.03s system 95% cpu 5.888 total

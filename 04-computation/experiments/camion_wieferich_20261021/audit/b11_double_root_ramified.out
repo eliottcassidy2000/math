@@ -1,0 +1,6 @@
+p=5 base m=3: g = 0 + 4 l + 3 C(l,2) mod 5, discriminant 0 (double root at l=0); q_2 X(m-2) != 0 mod p: True
+   valid points on the disc: 39, residues mod p^2 covered: [0, 5, 10, 15, 20]; valuations: [2]
+   => RAMIFIED pair (neither split nor inert)
+p=7 base m=8: g = 5 + 1 l + 3 C(l,2) mod 7, discriminant 0 (double root at l=6); q_2 X(m-2) != 0 mod p: True
+   valid points on the disc: 19, residues mod p^2 covered: [6, 13, 20, 27, 34, 41, 48]; valuations: [2]
+   => RAMIFIED pair (neither split nor inert)

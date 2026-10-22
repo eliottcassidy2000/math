@@ -64,3 +64,7 @@ diff = ((rt[0] - t[0]) % M, (rt[1] - t[1]) % M)
 def v2(x): return (x & -x).bit_length() - 1 if x else K
 print("v_2(r^N - t) for N = n* mod 2^64:", min(v2(diff[0]), v2(diff[1])), "(>= 64 + v_2(r - 1) expected if n* = log t / log r)")
 print("v_2(r - 1) =", min(v2((r[0] - 1) % M), v2(r[1])))
+# quasi-period exponent: f(n + 3*2^j) - f(n) = Tr(C rho^-n (rho^(-3*2^j) - 1)), rho^3 = w^3, so the exponent is j + v_2(w^3 - 1)
+w3 = power(w, 3)
+print("v_2(w^3 - 1) =", min(v2((w3[0] - 1) % M), v2(w3[1])), " (predicts f(n + 3*2^j) = f(n) mod 2^(j + that))")
+print("v_2(C) =", min(v2(C[0]), v2(C[1])))

@@ -1,0 +1,82 @@
+# b8_hyper3.c (compiled in scratch, cc -O2): ./b8 2200 400
+p=23 ord2=11: K=2 bases failing the cubic law: 1 3
+   K=3: bases failing v(a_i) >= min(3, ceil(i/3)): 1 2 3 4 5 6 ; min over classes (m in [8, p+6]) of v(a_i), i=0..9: 0 1 1 1 2 2 2 3 3 3
+p=31 ord2=5: K=2 bases failing the cubic law: 1 3
+   K=3: bases failing v(a_i) >= min(3, ceil(i/3)): 1 2 3 4 5 6 ; min over classes (m in [8, p+6]) of v(a_i), i=0..9: 0 1 1 1 2 2 2 3 3 3
+p=47 ord2=23: K=2 bases failing the cubic law: 1 3
+   K=3: bases failing v(a_i) >= min(3, ceil(i/3)): 1 2 3 4 5 6 ; min over classes (m in [8, p+6]) of v(a_i), i=0..9: 0 1 1 1 2 2 2 3 3 3
+p=71 ord2=35: K=2 bases failing the cubic law: 1 3
+   K=3: bases failing v(a_i) >= min(3, ceil(i/3)): 1 2 3 4 5 6 ; min over classes (m in [8, p+6]) of v(a_i), i=0..9: 0 1 1 1 2 2 2 3 3 3
+p=89 ord2=11: K=2 bases failing the cubic law: 1 3
+   K=3: bases failing v(a_i) >= min(3, ceil(i/3)): 1 2 3 4 5 6 ; min over classes (m in [8, p+6]) of v(a_i), i=0..9: 0 1 1 1 2 2 2 3 3 3
+p=127 ord2=7: K=2 bases failing the cubic law: 1 3
+   K=3: bases failing v(a_i) >= min(3, ceil(i/3)): 1 2 3 4 5 6 ; min over classes (m in [8, p+6]) of v(a_i), i=0..9: 0 1 1 1 2 2 2 3 3 3
+p=167 ord2=83: K=2 bases failing the cubic law: 1 3
+   K=3: bases failing v(a_i) >= min(3, ceil(i/3)): 1 2 3 4 5 6 ; min over classes (m in [8, p+6]) of v(a_i), i=0..9: 0 1 1 1 2 2 2 3 3 3
+p=191 ord2=95: K=2 bases failing the cubic law: 1 3
+   K=3: bases failing v(a_i) >= min(3, ceil(i/3)): 1 2 3 4 5 6 ; min over classes (m in [8, p+6]) of v(a_i), i=0..9: 0 1 1 1 2 2 2 3 3 3
+p=223 ord2=37: K=2 bases failing the cubic law: 1 3
+   K=3: bases failing v(a_i) >= min(3, ceil(i/3)): 1 2 3 4 5 6 ; min over classes (m in [8, p+6]) of v(a_i), i=0..9: 0 1 1 1 2 2 2 3 3 3
+p=233 ord2=29: K=2 bases failing the cubic law: 1 3
+   K=3: bases failing v(a_i) >= min(3, ceil(i/3)): 1 2 3 4 5 6 ; min over classes (m in [8, p+6]) of v(a_i), i=0..9: 0 1 1 1 2 2 2 3 3 3
+p=239 ord2=119: K=2 bases failing the cubic law: 1 3
+   K=3: bases failing v(a_i) >= min(3, ceil(i/3)): 1 2 3 4 5 6 ; min over classes (m in [8, p+6]) of v(a_i), i=0..9: 0 1 1 1 2 2 2 3 3 3
+p=263 ord2=131: K=2 bases failing the cubic law: 1 3
+   K=3: bases failing v(a_i) >= min(3, ceil(i/3)): 1 2 3 4 5 6 ; min over classes (m in [8, p+6]) of v(a_i), i=0..9: 0 1 1 1 2 2 2 3 3 3
+p=311 ord2=155: K=2 bases failing the cubic law: 1 3
+   K=3: bases failing v(a_i) >= min(3, ceil(i/3)): 1 2 3 4 5 6 ; min over classes (m in [8, p+6]) of v(a_i), i=0..9: 0 1 1 1 2 2 2 3 3 3
+p=359 ord2=179: K=2 bases failing the cubic law: 1 3
+   K=3: bases failing v(a_i) >= min(3, ceil(i/3)): 1 2 3 4 5 6 ; min over classes (m in [8, p+6]) of v(a_i), i=0..9: 0 1 1 1 2 2 2 3 3 3
+p=383 ord2=191: K=2 bases failing the cubic law: 1 3
+   K=3: bases failing v(a_i) >= min(3, ceil(i/3)): 1 2 3 4 5 6 ; min over classes (m in [8, p+6]) of v(a_i), i=0..9: 0 1 1 1 2 2 2 3 3 3
+p=431 ord2=43: K=2 bases failing the cubic law: 1 3
+p=439 ord2=73: K=2 bases failing the cubic law: 1 3
+p=479 ord2=239: K=2 bases failing the cubic law: 1 3
+p=503 ord2=251: K=2 bases failing the cubic law: 1 3
+p=599 ord2=299: K=2 bases failing the cubic law: 1 3
+p=601 ord2=25: K=2 bases failing the cubic law: 1 3
+p=647 ord2=323: K=2 bases failing the cubic law: 1 3
+p=719 ord2=359: K=2 bases failing the cubic law: 1 3
+p=727 ord2=121: K=2 bases failing the cubic law: 1 3
+p=743 ord2=371: K=2 bases failing the cubic law: 1 3
+p=839 ord2=419: K=2 bases failing the cubic law: 1 3
+p=863 ord2=431: K=2 bases failing the cubic law: 1 3
+p=881 ord2=55: K=2 bases failing the cubic law: 1 3
+p=887 ord2=443: K=2 bases failing the cubic law: 1 3
+p=911 ord2=91: K=2 bases failing the cubic law: 1 3
+p=983 ord2=491: K=2 bases failing the cubic law: 1 3
+p=1031 ord2=515: K=2 bases failing the cubic law: 1 3
+p=1103 ord2=29: K=2 bases failing the cubic law: 1 3
+p=1151 ord2=575: K=2 bases failing the cubic law: 1 3
+p=1223 ord2=611: K=2 bases failing the cubic law: 1 3
+p=1289 ord2=161: K=2 bases failing the cubic law: 1 3
+p=1319 ord2=659: K=2 bases failing the cubic law: 1 3
+p=1327 ord2=221: K=2 bases failing the cubic law: 1 3
+p=1367 ord2=683: K=2 bases failing the cubic law: 1 3
+p=1399 ord2=233: K=2 bases failing the cubic law: 1 3
+p=1433 ord2=179: K=2 bases failing the cubic law: 1 3
+p=1439 ord2=719: K=2 bases failing the cubic law: 1 3
+p=1471 ord2=245: K=2 bases failing the cubic law: 1 3
+p=1487 ord2=743: K=2 bases failing the cubic law: 1 3
+p=1511 ord2=755: K=2 bases failing the cubic law: 1 3
+p=1559 ord2=779: K=2 bases failing the cubic law: 1 3
+p=1583 ord2=791: K=2 bases failing the cubic law: 1 3
+p=1607 ord2=803: K=2 bases failing the cubic law: 1 3
+p=1721 ord2=215: K=2 bases failing the cubic law: 1 3
+p=1801 ord2=25: K=2 bases failing the cubic law: 1 3
+p=1823 ord2=911: K=2 bases failing the cubic law: 1 3
+p=1831 ord2=305: K=2 bases failing the cubic law: 1 3
+p=1847 ord2=923: K=2 bases failing the cubic law: 1 3
+p=1871 ord2=935: K=2 bases failing the cubic law: 1 3
+p=1913 ord2=239: K=2 bases failing the cubic law: 1 3
+p=2039 ord2=1019: K=2 bases failing the cubic law: 1 3
+p=2063 ord2=1031: K=2 bases failing the cubic law: 1 3
+p=2087 ord2=1043: K=2 bases failing the cubic law: 1 3
+p=2089 ord2=29: K=2 bases failing the cubic law: 1 3
+p=2111 ord2=1055: K=2 bases failing the cubic law: 1 3
+SUMMARY primes=60 (gcd(ord_p 2, 6) = 1, 5 <= p <= 2200); classes (m in [6,p+4]) = 60444, not cubic (p^2 | a_3) = 58
+  cubic-law failures at bases m >= 5: 0; failing bases m < 64 seen anywhere: 1 3
+  class 1: b(p) = 2^((p-1)(p-2)/6) - 1 = 0 mod p failures: 0
+  zero classes 176; root histogram [0,1,2,3,>3]: class1 22 25 1 12 0 | class2 0 31 0 29 0 | sporadic 21 21 0 14 0
+  class 2: 60 zero classes, cubic vanishes at l = -1 (n = 2) in 60; base m = 2 already obeys the cubic law at 60 of 60 primes
+./b8 2200 400  25.93s user 0.15s system 96% cpu 27.017 total

@@ -1,0 +1,6 @@
+validation: identity + FLINT inversion vs direct recurrence mod p^2 for 5 <= p <= 400: mismatches []
+validation: numpy/discrete-log coefficient builder vs plain loop for 5 <= p <= 3000: mismatches []
+validation vs cw_fast_validation_5_10000.out values q_C(5..37): True
+  CAMION-WIEFERICH 13
+  CAMION-WIEFERICH 22409
+searched all 9590 primes 5 <= p <= 100000: Camion-Wieferich primes [13, 22409]  (plus p = 3, where D(3) = 0)  [168.1s]

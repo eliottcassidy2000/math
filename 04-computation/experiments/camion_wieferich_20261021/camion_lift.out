@@ -1,0 +1,18 @@
+p=  7 eps=+1  sigma_p(a) equal for a = 2 mod p: True [2, 9, 16, 37, 44]   v_p(Lambda) = 1  v_p(2 - kappa) = 1  v_p(2 - omega) = 1
+p= 11 eps=-1  sigma_p(a) equal for a = 2 mod p: True [2, 13, 24, 57, 112]   v_p(Lambda) = 1  v_p(2 - kappa) = 1  v_p(2 - omega) = 1
+p= 13 eps=-1  sigma_p(a) equal for a = 2 mod p: True [2, 15, 28, 67, 158]   v_p(Lambda) = 2  v_p(2 - kappa) = 2  v_p(2 - omega) = 1
+p= 17 eps=+1  sigma_p(a) equal for a = 2 mod p: True [2, 19, 36, 87, 274]   v_p(Lambda) = 1  v_p(2 - kappa) = 1  v_p(2 - omega) = 1
+p= 19 eps=-1  sigma_p(a) equal for a = 2 mod p: True [2, 21, 40, 97, 344]   v_p(Lambda) = 1  v_p(2 - kappa) = 1  v_p(2 - omega) = 1
+p= 23 eps=+1  sigma_p(a) equal for a = 2 mod p: True [2, 25, 48, 117, 508]   v_p(Lambda) = 1  v_p(2 - kappa) = 1  v_p(2 - omega) = 1
+p= 29 eps=-1  sigma_p(a) equal for a = 2 mod p: True [2, 31, 60, 147, 814]   v_p(Lambda) = 1  v_p(2 - kappa) = 1  v_p(2 - omega) = 1
+p= 31 eps=+1  sigma_p(a) equal for a = 2 mod p: True [2, 33, 64, 157, 932]   v_p(Lambda) = 1  v_p(2 - kappa) = 1  v_p(2 - omega) = 1
+p= 37 eps=-1  sigma_p(a) equal for a = 2 mod p: True [2, 39, 76, 187, 1334]   v_p(Lambda) = 1  v_p(2 - kappa) = 1  v_p(2 - omega) = 1
+p= 41 eps=+1  sigma_p(a) equal for a = 2 mod p: True [2, 43, 84, 207, 1642]   v_p(Lambda) = 1  v_p(2 - kappa) = 1  v_p(2 - omega) = 1
+p= 43 eps=-1  sigma_p(a) equal for a = 2 mod p: True [2, 45, 88, 217, 1808]   v_p(Lambda) = 1  v_p(2 - kappa) = 1  v_p(2 - omega) = 1
+cross-check Lambda_p (D-interpolation) = sigma_p - <2>^(-1/2) mod p^K:
+  p=7: direct 210, formula 210, MATCH
+  p=11: direct 1254, formula 1254, MATCH
+  p=13: direct 845, formula 845, MATCH
+  p=17: direct 816, formula 816, MATCH
+  p=19: direct 703, formula 703, MATCH
+  p=23: direct 8119, formula 8119, MATCH

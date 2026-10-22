@@ -3,3 +3,5 @@ f(n) = Tr(C rho^-n) mod 2^72 at large n: True
 norms: N(r) = True  N(t) = True
 v_2(r^N - t) for N = n* mod 2^64: 66 (>= 64 + v_2(r - 1) expected if n* = log t / log r)
 v_2(r - 1) = 2
+v_2(w^3 - 1) = 2  (predicts f(n + 3*2^j) = f(n) mod 2^(j + that))
+v_2(C) = 0

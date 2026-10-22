@@ -1,0 +1,21 @@
+files: ['second_order_3_4000.out', 'second_order_4001_6500.out', 'second_order_6501_8500.out', 'second_order_8501_10000.out']
+primes present: 1228 (min 3, max 9973); missing odd primes in [3,10^4]: []
+primes 7..10^4: 1226
+zero classes (7 <= p <= 10^4): 4906
+table  class: [0 roots, 1 root, 2 roots, >2]
+   1        : [633, 2, 591, 0]  (total 1226)
+   2        : [612, 5, 609, 0]  (total 1226)
+   3        : [0, 2, 1224, 0]  (total 1226)
+   sporadic : [618, 5, 605, 0]  (total 1228)
+Wieferich lines: [(1093, [(3, 1, 'L'), (468, 1, 'L'), (1, 1, 'L'), (2, 1, 'L')], 4), (3511, [(3, 1, 'L'), (15, 1, 'L'), (1, 1, 'L'), (2, 1, 'L')], 4)]
+linear classes (tag L): 13 -> [(23, 16, 1, False), (23, 2, 1, False), (97, 24, 1, False), (389, 2, 1, False), (1093, 3, 1, True), (1093, 468, 1, True), (1093, 1, 1, True), (1093, 2, 1, True), (3511, 3, 1, True), (3511, 15, 1, True), (3511, 1, 1, True), (3511, 2, 1, True), (3989, 2275, 1, False)]
+double-root classes (tag D): 1 -> [(7, 2, 1)]
+expected under the 1/p model (non-Wieferich): linear 4.02, double 5.47; Poisson P(<=1 | mean 5.47) = 0.0272
+lambda_C = sum of roots consistent on every line: True []
+odd lambda_C primes: [(7, 5, [(2, 1, 'D')]), (97, 5, [(24, 1, 'L')]), (389, 5, [(2, 1, 'L')]), (3989, 3, [(2275, 1, 'L')])]
+even lambda_C: 1222, odd: 4
+(class1, class2) contingency over 1221 primes: {(0, 0): 320, (0, 2): 312, (2, 0): 292, (2, 2): 297}; chi-square (1 df) = 0.136
+split rate (non-triangle classes, 0/2 roots, non-Wieferich) by eps: eps=+1 inert/split [917, 857] (0.483 split); eps=-1 [946, 948] (0.501 split)
+sporadic classes per prime, histogram 0..: [423, 473, 250, 67, 11, 2]; mean 1.0016, variance 0.8744
+Poisson fit (bins 0,1,2,3,>=4): observed [423, 473, 250, 67, 13], expected [450.3, 451.0, 225.9, 75.4, 23.4], chi-square 10.86
+binomial model: total observed 1228 vs expected 1220.2 (z = 0.22); sum of squared deviations 1070.2 vs expected 1219.0, sd 60.3: dispersion z = -2.47

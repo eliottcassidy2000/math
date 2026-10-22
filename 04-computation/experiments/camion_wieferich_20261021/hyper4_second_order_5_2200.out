@@ -1,0 +1,62 @@
+p=23 ord2=11 zero-classes: 14:0 18:0 1:1 2:1 3:1
+p=31 ord2=5 zero-classes: 1:1 2:1 3:4
+p=47 ord2=23 zero-classes: 1:2 2:4 3:2
+p=71 ord2=35 zero-classes: 29:4 35:1 37:2 44:2 1:1 2:3 3:1
+p=89 ord2=11 zero-classes: 1:1 2:2 3:2
+p=127 ord2=7 zero-classes: 95:0 1:0 2:1 3:2
+p=167 ord2=83 zero-classes: 93:0 1:0 2:2 3:2
+p=191 ord2=95 zero-classes: 139:0 1:4 2:2 3:1
+p=223 ord2=37 zero-classes: 1:1 2:4 3:1
+p=233 ord2=29 zero-classes: 1:0 2:2 3:2
+p=239 ord2=119 zero-classes: 1:2 2:2 3:2
+p=263 ord2=131 zero-classes: 57:0 1:1 2:1 3:1
+p=311 ord2=155 zero-classes: 276:1 1:2 2:2 3:4
+p=359 ord2=179 zero-classes: 1:1 2:1 3:1
+p=383 ord2=191 zero-classes: 8:2 185:1 1:0 2:4 3:2
+p=431 ord2=43 zero-classes: 129:0 393:2 1:1 2:2 3:4
+p=439 ord2=73 zero-classes: 15:2 168:0 308:0 1:0 2:1 3:2
+p=479 ord2=239 zero-classes: 53:2 471:2 1:2 2:4 3:1
+p=503 ord2=251 zero-classes: 122:0 149:0 1:1 2:1 3:2
+p=599 ord2=299 zero-classes: 91:1 523:0 1:1 2:2 3:4
+p=601 ord2=25 zero-classes: 1:1 2:1 3:4
+p=647 ord2=323 zero-classes: 1:0 2:1 3:1
+p=719 ord2=359 zero-classes: 1:0 2:2 3:4
+p=727 ord2=121 zero-classes: 1:2 2:2 3:1
+p=743 ord2=371 zero-classes: 1:2 2:1 3:2
+p=839 ord2=419 zero-classes: 250:1 1:2 2:1 3:1
+p=863 ord2=431 zero-classes: 115:2 1:0 2:2 3:2
+p=881 ord2=55 zero-classes: 1:0 2:2 3:2
+p=887 ord2=443 zero-classes: 1:0 2:2 3:4
+p=911 ord2=91 zero-classes: 133:1 318:2 736:4 1:0 2:2 3:2
+p=983 ord2=491 zero-classes: 195:1 197:1 442:1 1:0 2:2 3:1
+p=1031 ord2=515 zero-classes: 323:1 1:0 2:1 3:2
+p=1103 ord2=29 zero-classes: 144:0 1:2 2:1 3:2
+p=1151 ord2=575 zero-classes: 1:0 2:2 3:1
+p=1223 ord2=611 zero-classes: 1:2 2:2 3:2
+p=1289 ord2=161 zero-classes: 1:2 2:2 3:1
+p=1319 ord2=659 zero-classes: 702:0 1:0 2:2 3:1
+p=1327 ord2=221 zero-classes: 1:0 2:2 3:2
+p=1367 ord2=683 zero-classes: 1:0 2:2 3:2
+p=1399 ord2=233 zero-classes: 1:2 2:2 3:1
+p=1433 ord2=179 zero-classes: 1:1 2:4 3:2
+p=1439 ord2=719 zero-classes: 945:1 1:1 2:4 3:1
+p=1471 ord2=245 zero-classes: 897:1 1:1 2:1 3:4
+p=1487 ord2=743 zero-classes: 721:1 1:2 2:2 3:1
+p=1511 ord2=755 zero-classes: 1475:1 1:2 2:1 3:1
+p=1559 ord2=779 zero-classes: 452:0 584:0 1:2 2:2 3:4
+p=1583 ord2=791 zero-classes: 1:0 2:1 3:2
+p=1607 ord2=803 zero-classes: 34:1 904:1 1:1 2:4 3:1
+p=1721 ord2=215 zero-classes: 737:2 1:1 2:1 3:2
+p=1801 ord2=25 zero-classes: 1:0 2:4 3:2
+p=1823 ord2=911 zero-classes: 308:1 1:0 2:2 3:4
+p=1831 ord2=305 zero-classes: 69:1 1:0 2:2 3:4
+p=1847 ord2=923 zero-classes: 243:2 1:2 2:2 3:2
+p=1871 ord2=935 zero-classes: 1:0 2:2 3:2
+p=1913 ord2=239 zero-classes: 190:0 1:0 2:2 3:4
+p=2039 ord2=1019 zero-classes: 1:1 2:2 3:1
+p=2063 ord2=1031 zero-classes: 1:2 2:2 3:4
+p=2087 ord2=1043 zero-classes: 662:2 800:0 939:1 1:4 2:1 3:2
+p=2089 ord2=29 zero-classes: 1365:0 1462:2 1496:4 1562:0 1929:0 1:1 2:4 3:2
+p=2111 ord2=1055 zero-classes: 1:1 2:2 3:1
+SUMMARY r=4 primes=60 classes=60444 degree-r law failures=0 classes with p^2|a_r=50 zero classes=236
+root-count histogram: 0:44 1:77 2:87 3:1 4:27

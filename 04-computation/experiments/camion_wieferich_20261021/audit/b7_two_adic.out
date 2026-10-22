@@ -1,0 +1,31 @@
+exact s(n), n <= 1500: 387.1s; s(1..8) = [1, 0, 2, 24, 544, 22320, 1677488, 236522496]
+(a) parity law e(n) = 0 iff n != 2 mod 3, 1 <= n <= 1500 (n = 2 has s = 0): failures []
+    e(1..30) = [0, None, 0, 0, 2, 0, 0, 3, 0, 0, 2, 0, 0, 4, 0, 0, 2, 0, 0, 3, 0, 0, 2, 0, 0, 5, 0, 0, 2, 0]
+    A051337 parity vs (n mod 3 != 2): True
+(c) e(n) = 2 + v_2(n - 3250) for all 499 n = 2 mod 3, 5 <= n <= 1500: failures []
+    exact data determine n* = 3250 mod 2^12
+(b) j=1: f(n+6) = f(n) mod 2^3 fails at n = [] (n <= 1494); mod 2^4 on n = 1 mod 3 fails at 0 n []; (n != 1 mod 3 that happen to hold mod 2^4: 0)
+(b) j=2: f(n+12) = f(n) mod 2^4 fails at n = [] (n <= 1488); mod 2^5 on n = 1 mod 3 fails at 0 n []; (n != 1 mod 3 that happen to hold mod 2^5: 0)
+(b) j=3: f(n+24) = f(n) mod 2^5 fails at n = [] (n <= 1476); mod 2^6 on n = 1 mod 3 fails at 0 n []; (n != 1 mod 3 that happen to hold mod 2^6: 0)
+(b) j=4: f(n+48) = f(n) mod 2^6 fails at n = [] (n <= 1452); mod 2^7 on n = 1 mod 3 fails at 1 n [1]; (n != 1 mod 3 that happen to hold mod 2^7: 1)
+(b) j=5: f(n+96) = f(n) mod 2^7 fails at n = [1, 2] (n <= 1404); mod 2^8 on n = 1 mod 3 fails at 1 n [1]; (n != 1 mod 3 that happen to hold mod 2^8: 0)
+(b) j=6: f(n+192) = f(n) mod 2^8 fails at n = [1, 2] (n <= 1308); mod 2^9 on n = 1 mod 3 fails at 1 n [1]; (n != 1 mod 3 that happen to hold mod 2^9: 1)
+(b) j=7: f(n+384) = f(n) mod 2^9 fails at n = [1, 2, 3] (n <= 1116); mod 2^10 on n = 1 mod 3 fails at 2 n [1, 4]; (n != 1 mod 3 that happen to hold mod 2^10: 0)
+(b) j=8: f(n+768) = f(n) mod 2^10 fails at n = [1, 2, 3, 4] (n <= 732); mod 2^11 on n = 1 mod 3 fails at 2 n [1, 4]; (n != 1 mod 3 that happen to hold mod 2^11: 0)
+[part A 387.5s]
+(B) K = 160 bits, recurrence order d = 19; Kitamasa values agree with exact f(n) for n < 200 (mod 2^64)
+    n* mod 2^140 = 1090019148193376184792522869885760632192178
+    n* mod 4096 = 3250;  n* mod 2^64 = 16221783116972227762  (session: 16221783116972227762) AGREE
+    law v_2(f(n)) = 2 + v_2(n - n*) at 300 random huge n = 2 mod 3: violations 0
+    v_2(f(n)) = 0 at 100 random huge n = 0,1 mod 3: violations 0
+    candidate 765490658/1598160473 = n* mod 2^64? True
+    candidate 765490658/1598160473 = n* mod 2^80? False
+    candidate 765490658/1598160473 = n* mod 2^100? False
+    candidate 765490658/1598160473 = n* mod 2^140? False
+    rational reconstruction at 2^64: 765490658/1598160473 (|num| ~ 2^30, |den| ~ 2^31), valid True
+    rational reconstruction at 2^96: 97892880784772/269874989187218 (|num| ~ 2^47, |den| ~ 2^48), valid False
+    rational reconstruction at 2^128: 7819924140269599706/12871682439347868085 (|num| ~ 2^63, |den| ~ 2^64), valid True
+    rational reconstruction at 2^140: 305743546144046270476/-976245613707762548874 (|num| ~ 2^69, |den| ~ 2^70), valid False
+    the 2^128 reconstruction 7819924140269599706/12871682439347868085 matches n* mod 2^140? False
+[total 403.8s]
+python3 -I  1500  388.57s user 2.52s system 96% cpu 6:43.82 total

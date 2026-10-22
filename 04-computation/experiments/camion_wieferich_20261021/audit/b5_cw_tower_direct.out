@@ -1,0 +1,37 @@
+# b5_cw_tower_direct.c (compiled in scratch, cc -O2): ./b5 5 7 11 13 17 19 23 29 1093 3511 22409
+p=5: consistency of the u128 (mod p^3) and u64 (mod p^2) recurrences on n <= p: ok
+p=5 eps=-1: D(p) mod p^3 = 40, v_p(D(p)) = 1; Camion quotient D(p)/p mod p = 3; p|a1: yes, p|a2: yes
+   F_p(-p/(p-1)) mod p^3 = 40  ->  v_p(Lambda_p) = 1  => h(p) = 1
+p=7: consistency of the u128 (mod p^3) and u64 (mod p^2) recurrences on n <= p: ok
+p=7 eps=+1: D(p) mod p^3 = 210, v_p(D(p)) = 1; Camion quotient D(p)/p mod p = 2; p|a1: yes, p|a2: yes
+   F_p(-p/(p-1)) mod p^3 = 210  ->  v_p(Lambda_p) = 1  => h(p) = 1
+p=11: consistency of the u128 (mod p^3) and u64 (mod p^2) recurrences on n <= p: ok
+p=11 eps=-1: D(p) mod p^3 = 1166, v_p(D(p)) = 1; Camion quotient D(p)/p mod p = 7; p|a1: yes, p|a2: yes
+   F_p(-p/(p-1)) mod p^3 = 77  ->  v_p(Lambda_p) = 1  => h(p) = 1
+p=13: consistency of the u128 (mod p^3) and u64 (mod p^2) recurrences on n <= p: ok
+p=13 eps=-1: D(p) mod p^3 = 1014, v_p(D(p)) = 2; Camion quotient D(p)/p mod p = 0; p|a1: yes, p|a2: yes
+   F_p(-p/(p-1)) mod p^3 = 1352  ->  v_p(Lambda_p) = 2  => h(p) = 2
+   g_p(l) = c0 + c1 l + c2 C(l,2) with c0 = 0: c1 = 1, c2 = 11, c1 - c2/2 = 2 (root l=0 simple)
+p=17: consistency of the u128 (mod p^3) and u64 (mod p^2) recurrences on n <= p: ok
+p=17 eps=+1: D(p) mod p^3 = 238, v_p(D(p)) = 1; Camion quotient D(p)/p mod p = 14; p|a1: yes, p|a2: yes
+   F_p(-p/(p-1)) mod p^3 = 816  ->  v_p(Lambda_p) = 1  => h(p) = 1
+p=19: consistency of the u128 (mod p^3) and u64 (mod p^2) recurrences on n <= p: ok
+p=19 eps=-1: D(p) mod p^3 = 2907, v_p(D(p)) = 1; Camion quotient D(p)/p mod p = 1; p|a1: yes, p|a2: yes
+   F_p(-p/(p-1)) mod p^3 = 6156  ->  v_p(Lambda_p) = 1  => h(p) = 1
+p=23: consistency of the u128 (mod p^3) and u64 (mod p^2) recurrences on n <= p: ok
+p=23 eps=+1: D(p) mod p^3 = 5474, v_p(D(p)) = 1; Camion quotient D(p)/p mod p = 8; p|a1: yes, p|a2: yes
+   F_p(-p/(p-1)) mod p^3 = 8119  ->  v_p(Lambda_p) = 1  => h(p) = 1
+p=29: consistency of the u128 (mod p^3) and u64 (mod p^2) recurrences on n <= p: ok
+p=29 eps=-1: D(p) mod p^3 = 1044, v_p(D(p)) = 1; Camion quotient D(p)/p mod p = 7; p|a1: yes, p|a2: yes
+   F_p(-p/(p-1)) mod p^3 = 23751  ->  v_p(Lambda_p) = 1  => h(p) = 1
+p=1093: consistency of the u128 (mod p^3) and u64 (mod p^2) recurrences on n <= p: ok
+p=1093 eps=-1: D(p) mod p^3 = 734603114, v_p(D(p)) = 1; Camion quotient D(p)/p mod p = 996; p|a1: yes, p|a2: yes
+   F_p(-p/(p-1)) mod p^3 = 1169455350  ->  v_p(Lambda_p) = 1  => h(p) = 1
+p=3511: consistency of the u128 (mod p^3) and u64 (mod p^2) recurrences on n <= p: ok
+p=3511 eps=+1: D(p) mod p^3 = 10914010209, v_p(D(p)) = 1; Camion quotient D(p)/p mod p = 1284; p|a1: yes, p|a2: yes
+   F_p(-p/(p-1)) mod p^3 = 28492484755  ->  v_p(Lambda_p) = 1  => h(p) = 1
+p=22409: consistency of the u128 (mod p^3) and u64 (mod p^2) recurrences on n <= p: ok
+p=22409 eps=+1: D(p) mod p^3 = 6885662909072, v_p(D(p)) = 2; Camion quotient D(p)/p mod p = 0; p|a1: yes, p|a2: yes
+   F_p(-p/(p-1)) mod p^3 = 5060801545918  ->  v_p(Lambda_p) = 2  => h(p) = 2
+   g_p(l) = c0 + c1 l + c2 C(l,2) with c0 = 0: c1 = 5668, c2 = 18604, c1 - c2/2 = 18775 (root l=0 simple)
+./b5 5 7 11 13 17 19 23 29 1093 3511 22409  4.83s user 0.03s system 94% cpu 5.167 total

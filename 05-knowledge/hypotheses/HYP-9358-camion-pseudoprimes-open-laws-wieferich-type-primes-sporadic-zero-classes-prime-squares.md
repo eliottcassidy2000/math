@@ -9,9 +9,12 @@ status: >
     are exactly 3, 13, 22409; the equivalence with "p^2 passes" is PROVED by Lemma B of the audit, THM-4746 (7).
   - (b): the 75 primes 7 <= p <= 400. Observed 31, 25, 13, 4, 2, 0 primes with 0..5 sporadic classes, against the
     Poisson prediction 29.1, 27.5, 13.0, 4.1, 1.0, 0.2 (camion_sporadic.out; reproduced exactly by the audit).
-    Extended to the 1226 primes 7 <= p <= 10^4 (THM-4750 (4), camion_irregular_10000.out): 423, 473, 250, 67, 11, 2,
-    mean 1.002 and variance 0.875 (slightly underdispersed). No odd sporadic class: 0.610 (Siegel-type e^(-1/2) = 0.607);
-    no even one: 0.581; neither: 0.345 (e^(-1) = 0.368).
+    Extended to the 1226 primes 7 <= p <= 10^4 (joint histogram from second_order_*.out, reproduced by
+    THM-4750 audit b4): 423, 473, 250, 67, 11, 2, mean 1.0016 and variance 0.874. Against the binomial model
+    Bin(p-4, 1/p) this is underdispersed, with dispersion z = -2.47 (two-sided about 1.4%), mild evidence against the exact
+    Poisson form; chi^2 = 10.86 on bins 0,1,2,3,>=4 (3 df once the mean is fitted). The separate odd/even classes
+    (camion_irregular_10000.out): no odd sporadic class 0.610 (Siegel-type e^(-1/2) = 0.607), no even one 0.581,
+    neither 0.345 (e^(-1) = 0.368).
   - (c): up to 20000 there are 2145 squarefree Camion pseudoprimes. Of these 857 are 3p and 1228 are 2p, leaving
     60 exotic ones (37 odd, 23 even).
   - (d'): PROVED for every odd prime p and k >= 1, from m >= 2k - 1, by the Session25 filtered-Hurwitz proof.
@@ -56,7 +59,8 @@ scripts:
   * The search to `10^5` found one new Camion–Wieferich prime, **22409**, with `h(22409) = 2`. So every prime `p ≤ 10^5` has `h(p) ≤ 2`.
   * For `p ≥ 5`, `h(p) ≥ 3` needs the class-1 Camion zero to satisfy `ℓ ≡ p (mod p²)`, a second `1/p` event.
   * Neither Wieferich prime (1093, 3511) is Camion–Wieferich. Wieferich primes instead make the Camion curvature vanish (THM-4750 (3)).
-  * The search to `10^5` is the end of the feasible range for `O(p²)` methods. The expected number of further Camion–Wieferich primes in `(10^5, 10^6]` is about `0.2`.
+  * The search to `10^5` is the end of the feasible range for `O(p²)` methods.
+  * A quasi-linear FLINT power-series method (audit b6, `cw_flint_np.py`) makes `10^6` routine. The expected number of further Camion–Wieferich primes in `(10^5, 10^6]` is about `0.2` (results in `cw_flint_*.out`).
 
 **(b) Sporadic classes.** Besides the universal classes `{1, 2, 3}`, a prime `p` has the classes `r ∈ [4, p−1]` with `p | D(r)`.
 

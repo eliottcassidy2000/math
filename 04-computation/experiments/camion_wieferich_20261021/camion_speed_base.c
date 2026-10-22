@@ -1,4 +1,4 @@
-/* camion_speed.c -- p-adic speed of the Camion functions.
+/* camion_speed_base.c (from camion_speed.c) -- p-adic speed of the Camion functions.
  *
  * For a prime p and K >= 1, computes s(n) mod p^K (Wright's recurrence), and for every base m in
  * [2K-1, 2K-1 + p-2] (one per residue class mod p-1) the Mahler coefficients

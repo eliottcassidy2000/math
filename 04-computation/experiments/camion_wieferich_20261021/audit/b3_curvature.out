@@ -1,0 +1,7 @@
+X(0..6) exact via S''+2S'^2T: [2, 4, 36, 680, 25152, 1784416, 244023264]
+brute force m=2..6 (tournaments made strong by a two-way pair {0,1}): [2, 4, 36, 680, 25152] match
+C(n,2) X(n-2) = 2 (d/da) s_a(n)|_{a=2} for n = 2..7: True
+curvature formula a_2/p = -q_2 X(m-2) mod p: primes 5..400, 13806 classes, failures 0; p|a_1, p|a_2 failures 0
+direct quadratic law mod p^2, l = 0..p+1, all classes, p <= 61: 20928 checks, failures 0
+p=1091: classes (base m in [3,p+1]) with p^2 | a_2: [603];  classes with X(m-2) = 0 mod p: [603]
+p=1097: classes (base m in [3,p+1]) with p^2 | a_2: [558, 843];  classes with X(m-2) = 0 mod p: [558, 843]

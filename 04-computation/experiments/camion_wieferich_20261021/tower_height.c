@@ -31,9 +31,9 @@ int main(int argc,char**argv){ u64 p=atoll(argv[1]); int K=atoi(argv[2]); int di
   printf("p=%llu K=%d eps=%+d  (s computed to m=%ld)\n",p,K,eps,M);
   u64 pa=p; for(int a=1;a<=K+2;a++){ /* j_a = (p^a - p)/(p-1) mod Q, computed exactly via the integer for small a, else via p-adic formula */
     u64 ja; { /* (p^a - p)/(p-1) = p + p^2 + ... + p^(a-1)  (a>=2), 0 for a=1 */ u64 acc=0, t=p%Q; for(int i=1;i<a;i++){ acc=(acc+t)%Q; t=mulm(t,p); } ja=acc; }
-    u64 val; EVAL(ja,val); u64 Dpa=(eps==1||!(a&1))? val : val; /* A(j) = eps^-j D: D(p^a) = eps^(j_a) * A(j_a); parity of j_a = (a-1) mod 2 */
+    u64 val; EVAL(ja,val); /* A(j) = eps^-j D: D(p^a) = eps^(j_a) * A(j_a); parity of j_a = (a-1) mod 2 */
     long par=(a-1)&1; u64 Dv=(eps==1||par==0)?val:(Q-val)%Q;
-    printf("  a=%d: v_p(D(p^%d)) = %s%d\n",a,a,(vp(Dv,p,K)==K)?">=":"",vp(Dv,p,K)); (void)Dpa; pa*=p; }
+    printf("  a=%d: v_p(D(p^%d)) = %s%d\n",a,a,(vp(Dv,p,K)==K)?">=":"",vp(Dv,p,K)); pa*=p; }
   /* p-adic limit point j_inf = -p/(p-1) */
   u64 jinf=(Q-mulm(p%Q,inv((p-1)%Q)))%Q; u64 lam; EVAL(jinf,lam);
   printf("  Lambda_p (limit, up to sign): v_p = %s%d   => h(p) %s %d\n",(vp(lam,p,K)==K)?">=":"",vp(lam,p,K),(vp(lam,p,K)<K)?"=":">=",vp(lam,p,K));
