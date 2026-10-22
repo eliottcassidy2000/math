@@ -308,3 +308,38 @@ The independent adversarial audit reproduced every number and checked every proo
   * The "climbs towards e" remark was replaced.
 * **Credits added.** Specker–Blatter; Mani–Stones; Alon (1990) and Wormald; Adler–Alon–Ross; Peterson/Sagan and Anderson–Benjamin–Rouse for the rotation proofs; Gessel.
 * **Overclaim fixed.** "The triangle exactly separates the two tests" now reads "the universal residue sets differ by the triangle class".
+
+## 12. Continuation: every odd prime power (owner request, 2026-10-21)
+
+The owner asked to prove and test HYP-9358(d′): `s(m + φ(p^k)) ≡ (2/p)·s(m) (mod p^k)` for `m ≥ 2k − 1`.
+
+**Proof.** The concurrent **Session25** lane published the proof first ([additive proof](session25_spectrum_wiring_20261021/session25-congruence-review/ADDITIVE_PRIME_POWER_PROOF.md), [independent review](session25_spectrum_wiring_20261021/session25-additive-review/REVIEW.md)). It is now PROVED in THM-4746 §7.
+
+* This session found the same proof independently, by the same method:
+  * write `2^C(m,2) = ω^C(m,2)·(1+pu)^C(m,2)`, with `ω` the Teichmüller lift;
+  * expand in divided derivatives `C(m,d)·x^(m−d)` over Teichmüller nodes, with the coefficient of degree `d` divisible by `p^⌈d/2⌉`;
+  * show that this filtration is closed under products and that `T` is invertible in it (Neumann series);
+  * conclude that the delta terms vanish mod `p^k` once `m ≥ 2k − 1`.
+* It is credited to Session25 and not filed as a separate theorem.
+* Session25 also proved the general-base, shift (connected graphs, `n ≥ 2r`) and unrestricted CRT corollaries.
+
+**New here (THM-4746 §7b, statement 9).**
+
+* **Prime-power towers (PROVED).** `D(p^a) ≡ (2/p)D(p^(a−1)) (mod p^a)`. So the exponents with `p^a` a Camion pseudoprime form an initial segment `{1, …, h(p)}`, and `h(p)` equals the frozen eventual value of `v_p(D(p^a))`.
+  * `h(p) ≥ 2` iff `p` is Camion–Wieferich.
+  * `h(3) = h(13) = 2`, and `h(p) = 1` for every other odd `p ≤ 10^4`.
+  * So for `p ≤ 10^4` the odd prime-power Camion pseudoprimes are exactly the primes, `9` and `169`.
+  * This mirrors the classical fact that `p^a` is a base-2 Fermat pseudoprime iff `a ≤ v_p(2^(p−1) − 1)`.
+* **Independent replication (FINITE-EXACT).**
+  * 48 pairs `(p, k)`, every index up to `φ(p^k) + 4k + 20`, with no failure at `m ≥ 2k − 1`.
+  * The unrestricted CRT criterion against direct `s(n) mod n` for all 2569 composites `n ≤ 3000`.
+  * Towers to `3^9, 5^6, 7^5, 11^4, 13^3, 17^3, 19^3, 23^3`.
+  * Connected graphs, 15 pairs.
+  * Valuations and ten threshold entries were recomputed by an independent Python implementation.
+* **Thresholds (data for HYP-9358(e)).** `2k − 1` is sharp for generic `p`. It is lower for `p < 2k − 1`; for example `τ(3,10) = 13` against the sufficient 19. The table and the conjectures (e1), (e2) are in HYP-9358.
+* **Literature.** The connected-graph congruence of Mani–Stones, as quoted by Kotek–Makowsky (Prop. 1.11; the original was not accessible here), is stated for `n ≥ p^r`. The Hurwitz argument extends it to `n ≥ 2r`.
+
+**Scripts.** `04-computation/experiments/tournament_pseudoprimes_20261021/modpk/`:
+* C: `pk_period.c`, `run_grid.sh`, `korselt_full.c`, `tower_deep.c`, `cg_pk.c`;
+* independent Python: `freeze_check.py`, `tau_check.py`;
+* each with its `.out`.

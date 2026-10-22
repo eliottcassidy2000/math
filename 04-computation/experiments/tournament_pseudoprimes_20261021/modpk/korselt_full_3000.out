@@ -1,0 +1,4 @@
+(A) composites 4..3000: agree 2569, disagree 0; passing 514; with a squared odd prime factor: 565 (passing 50)
+  p^2 = 9 passes (p^a | D(p^(a-1)))
+  p^2 = 169 passes (p^a | D(p^(a-1)))
+(B) tower checks: 455, failures 0

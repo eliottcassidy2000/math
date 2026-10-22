@@ -1,0 +1,15 @@
+p=3 k=2 L=6: cg-law fails at n: 1 2   failures at n >= 2k: 0 OK
+p=3 k=3 L=18: cg-law fails at n: 1 2 3   failures at n >= 2k: 0 OK
+p=3 k=4 L=54: cg-law fails at n: 1 2 3 4   failures at n >= 2k: 0 OK
+p=3 k=5 L=162: cg-law fails at n: 1 2 3 4 5   failures at n >= 2k: 0 OK
+p=3 k=6 L=486: cg-law fails at n: 1 2 3 4 5 6   failures at n >= 2k: 0 OK
+p=5 k=2 L=20: cg-law fails at n: 1   failures at n >= 2k: 0 OK
+p=5 k=3 L=100: cg-law fails at n: 1 2 3 4   failures at n >= 2k: 0 OK
+p=5 k=4 L=500: cg-law fails at n: 1 2 3 4   failures at n >= 2k: 0 OK
+p=7 k=2 L=42: cg-law fails at n: 1 2   failures at n >= 2k: 0 OK
+p=7 k=3 L=294: cg-law fails at n: 1 2 3 4   failures at n >= 2k: 0 OK
+p=7 k=4 L=2058: cg-law fails at n: 1 2 3 4 5 6   failures at n >= 2k: 0 OK
+p=11 k=2 L=110: cg-law fails at n: 1 2   failures at n >= 2k: 0 OK
+p=11 k=3 L=1210: cg-law fails at n: 1 2 3 4   failures at n >= 2k: 0 OK
+p=13 k=3 L=2028: cg-law fails at n: 1 2 3 4   failures at n >= 2k: 0 OK
+p=17 k=3 L=4624: cg-law fails at n: 1 2 3 4   failures at n >= 2k: 0 OK

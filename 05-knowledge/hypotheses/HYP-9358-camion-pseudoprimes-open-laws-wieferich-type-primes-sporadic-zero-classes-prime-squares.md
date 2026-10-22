@@ -3,7 +3,8 @@ id: HYP-9358
 title: "Open laws for Camion pseudoprimes (THM-4746). (a) The Camion-Wieferich primes, with s(p) = 2^((p-1)/2) (mod p^2), equivalently (THM-4746 (7)) p^2 a Camion pseudoprime, are infinite in number but of density zero, like Wieferich primes (only 3 and 13 below 10000). (b) The sporadic zero classes {r >= 4 : p | s(r) - c(r)} are Poisson with mean (p-4)/p. (c) The Camion pseudoprimes up to x number 5x/(6 log x)(1 + o(1)), all but o(x/log x) of them of the form 2p or 3p. (d') For every odd prime p and k >= 1, s(m + phi(p^k)) = (2/p) s(m) (mod p^k) for all m >= 2k - 1 (PROVED for every k >= 1 by the independently audited Session25 continuation). (e) Thresholds: for each class of labelled structures obtained from 2^C(m,2) by Hurwitz inversion and shifts, determine the exact index from which the mod-p law holds."
 status: >
   PARTIALLY PROVED: (d') is PROVED for all odd primes p and k >= 1 by the Session25 continuation.
-  Parts (a), (b), (c), and the exact-threshold classification in (e) remain OPEN. FINITE-EXACT evidence:
+  Parts (a), (b), (c), and the exact-threshold classification in (e) remain OPEN; (a) gained the PROVED tower-height
+  statement THM-4746 (9) and the open sub-question (a') h(p) <= 2 (mac-mini continuation, 2026-10-21). FINITE-EXACT evidence:
   - (a): p <= 10000 (camion_wieferich_10000.out); the equivalence with "p^2 passes" is PROVED by Lemma B of the audit,
     THM-4746 (7).
   - (b): the 75 primes 7 <= p <= 400. Observed 31, 25, 13, 4, 2, 0 primes with 0..5 sporadic classes, against the
@@ -45,6 +46,7 @@ scripts:
 * `q_C` shows no relation to the Euler quotient of 2 (scratch comparison for `p ≤ 139`). So Camion–Wieferich primes are not Wieferich primes in disguise.
 * The random model predicts about `log log x` zeros up to `x`. That is infinitely many, but very sparse: the same heuristic as for the Wieferich primes 1093 and 3511.
 * Curiosity: `3511 | D(15)`.
+* **Tower height (THM-4746 (9), PROVED).** The exponents `a` with `p^a` a Camion pseudoprime form an initial segment `{1, …, h(p)}`, and `h(p)` is the frozen value of `v_p(D(p^a))`. `h(p) ≥ 2` iff `p` is Camion–Wieferich; `h(3) = h(13) = 2` exactly; `h(p) = 1` for every other odd `p ≤ 10^4`. Open sub-question (a′), the analogue of the absence of Wieferich primes of order 3: is `h(p) ≤ 2` for every `p`?
 
 **(b) Sporadic classes.** Besides the universal classes `{1, 2, 3}`, a prime `p` has the classes `r ∈ [4, p−1]` with `p | D(r)`.
 
@@ -62,10 +64,27 @@ scripts:
 
 **(d′) Higher prime powers — PROVED.** The [Session25 filtered-Hurwitz/Newton proof](../results/session25_spectrum_wiring_20261021/session25-congruence-review/ADDITIVE_PRIME_POWER_PROOF.md), with [independent audit](../results/session25_spectrum_wiring_20261021/session25-additive-review/REVIEW.md), proves `s(m + phi(p^k)) ≡ (2/p)s(m) (mod p^k)` and the same law for `D`, for every odd prime `p`, `k ≥ 1`, and `m ≥ 2k − 1`. This extends the incoming audit's square-case Lemma B; it does not claim that the sufficient threshold is always minimal. The full prime-power CRT criterion in the same proof removes the squarefree/cube-free restriction for the aggregate discrepancy.
 
-**(e) Thresholds.**
+**(e) Exact thresholds.** The proved sufficient thresholds are `m ≥ 2k − 1` for the strong count (Session25; THM-4746 §7) and `n ≥ 2k` for connected graphs (one shift). Let `τ(p,k)` be the least `m_0` such that `s(m + φ(p^k)) ≡ (2/p)s(m) (mod p^k)` for every `m ≥ m_0`. Since the law holds from `2k − 1`, `τ(p,k) − 1` is the largest failing index below it.
 
-* The audit observed (`a10`, `a17`) that both the mod-`p` and the mod-`p²` laws for connected graphs start at small indices.
-* Conjecture: for any finite combination of inversions and shifts the threshold is bounded by the number of shifts plus the power of `p`.
+* **Data (FINITE-EXACT, `modpk/pk_period_*.out`).**
+
+| `p` | `k = 2` | `k = 3` | `k = 4` | `k = 5` | `k = 6` | `k = 7..10` |
+|---|---|---|---|---|---|---|
+| 3 | 3 | 3 | 5 | 7 | 9 | 9, 9, 11, 13 |
+| 5 | 3 | 4 | 5 | 7 | 8 | — |
+| 7 | 2 | 5 | 6 | 7 | — | — |
+| 11 | 3 | 5 | 7 | — | — | — |
+| 13 | 2 | 5 | 7 | — | — | — |
+| 17, 19, 23 | 3 | 5 | — | — | — | — |
+| 29 … 97 | 3 | — | — | — | — | — |
+
+  The sufficient value is `2k − 1 = 3, 5, 7, 9, 11, 13–19`.
+
+* **Conjecture (e1), generic sharpness.** For each fixed `k`, `τ(p,k) = 2k − 1` for all primes `p` outside a set of density zero.
+  * The exceptions at `k = 2` (`p = 7, 13`, where `τ = 2`) are accidental zeros of `s(2 + φ(p²)) mod p²`.
+  * Heuristically, an exception at level `k` has probability about `1/p`.
+* **Conjecture (e2), small primes.** For `p < 2k − 1`, `τ(p,k) < 2k − 1`. Every tested case fits: `p = 3` with `k ≥ 3`, `p = 5` with `k ≥ 4`, `p = 7` with `k = 5`. At `p = 2k − 1` both behaviours occur: `τ(3,2) = 3`, `τ(5,3) = 4`, `τ(7,4) = 6`. The reason is presumably extra `p`-divisibility of the delta coefficients `β_(0,m)`. Mod `p^k`, `s(m + φ(p^k)) − (2/p)s(m) ≡ (2/p)·β_(0,m)`, where `β_(0,m)` is the `δ_m` coefficient of `e − S` in the filtered algebra. A plausible source of the extra divisibility is the odd double factorials `(2j−1)!!` in the Newton coefficients of `C(C(m,2), j)`. This mechanism is HEURISTIC; no formula for `τ(3,k)` is proposed.
+* **Connected graphs.** The failures in 15 tested pairs stop at `n ≤ 2k − 2`, one below the proved `2k` (`modpk/cg_pk.out`).
 * **Hostile control.** Rooted counts such as `m·s(m)` are genuinely not `(p−1)`-quasi-periodic. Their quasi-period is `p(p−1)` (`camion_controls.out`).
 
 ## What would refute
@@ -73,3 +92,5 @@ scripts:
 * (a): a proof that the Camion quotient vanishes only finitely often.
 * (b): a structured excess of sporadic classes, e.g. a residue `r ≥ 4` that is a zero class for a positive proportion of primes.
 * The former (d′) falsification target is closed by the proof above; the remaining open parts retain their stated scope.
+* (a′): a prime with `p³ | D(p²)`, i.e. `h(p) ≥ 3`.
+* (e1): a positive proportion of primes with `τ(p,k) < 2k − 1` at some fixed `k`.
