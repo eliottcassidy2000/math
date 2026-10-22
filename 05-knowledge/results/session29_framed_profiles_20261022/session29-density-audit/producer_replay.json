@@ -1,0 +1,299 @@
+{
+  "status": "PASS",
+  "h_exact_tail_checks": 200,
+  "literal_endpoint_checks": 14970,
+  "density_rows": [
+    {
+      "h": 1,
+      "first_contracting_clock": 2,
+      "bad_density": "1/2",
+      "endpoint_descent_density": "1/2",
+      "uniform_source_threshold": "2"
+    },
+    {
+      "h": 2,
+      "first_contracting_clock": 4,
+      "bad_density": "1/2",
+      "endpoint_descent_density": "1/2",
+      "uniform_source_threshold": "20/7"
+    },
+    {
+      "h": 3,
+      "first_contracting_clock": 5,
+      "bad_density": "5/16",
+      "endpoint_descent_density": "11/16",
+      "uniform_source_threshold": "76/5"
+    },
+    {
+      "h": 4,
+      "first_contracting_clock": 7,
+      "bad_density": "11/32",
+      "endpoint_descent_density": "21/32",
+      "uniform_source_threshold": "520/47"
+    },
+    {
+      "h": 5,
+      "first_contracting_clock": 8,
+      "bad_density": "29/128",
+      "endpoint_descent_density": "99/128",
+      "uniform_source_threshold": "1688/13"
+    },
+    {
+      "h": 6,
+      "first_contracting_clock": 10,
+      "bad_density": "65/256",
+      "endpoint_descent_density": "191/256",
+      "uniform_source_threshold": "2128/59"
+    },
+    {
+      "h": 7,
+      "first_contracting_clock": 12,
+      "bad_density": "281/1024",
+      "endpoint_descent_density": "743/1024",
+      "uniform_source_threshold": "65888/1909"
+    },
+    {
+      "h": 8,
+      "first_contracting_clock": 13,
+      "bad_density": "397/2048",
+      "endpoint_descent_density": "1651/2048",
+      "uniform_source_threshold": "201760/1631"
+    },
+    {
+      "h": 9,
+      "first_contracting_clock": 15,
+      "bad_density": "3473/16384",
+      "endpoint_descent_density": "12911/16384",
+      "uniform_source_threshold": "1226944/13085"
+    },
+    {
+      "h": 10,
+      "first_contracting_clock": 16,
+      "bad_density": "309/2048",
+      "endpoint_descent_density": "1739/2048",
+      "uniform_source_threshold": "3713600/6487"
+    },
+    {
+      "h": 11,
+      "first_contracting_clock": 18,
+      "bad_density": "10889/65536",
+      "endpoint_descent_density": "54647/65536",
+      "uniform_source_threshold": "22412672/84997"
+    },
+    {
+      "h": 12,
+      "first_contracting_clock": 20,
+      "bad_density": "11773/65536",
+      "endpoint_descent_density": "53763/65536",
+      "uniform_source_threshold": "27000064/103427"
+    },
+    {
+      "h": 13,
+      "first_contracting_clock": 21,
+      "bad_density": "34495/262144",
+      "endpoint_descent_density": "227649/262144",
+      "uniform_source_threshold": "406049536/502829"
+    },
+    {
+      "h": 14,
+      "first_contracting_clock": 23,
+      "bad_density": "300185/2097152",
+      "endpoint_descent_density": "1796967/2097152",
+      "uniform_source_threshold": "2440491520/3605639"
+    },
+    {
+      "h": 15,
+      "first_contracting_clock": 24,
+      "bad_density": "440485/4194304",
+      "endpoint_descent_density": "3753819/4194304",
+      "uniform_source_threshold": "7329863168/2428309"
+    },
+    {
+      "h": 16,
+      "first_contracting_clock": 26,
+      "bad_density": "962689/8388608",
+      "endpoint_descent_density": "7425919/8388608",
+      "uniform_source_threshold": "44012733440/24062143"
+    },
+    {
+      "h": 17,
+      "first_contracting_clock": 27,
+      "bad_density": "5658537/67108864",
+      "endpoint_descent_density": "61450327/67108864",
+      "uniform_source_threshold": "132105309184/5077565"
+    },
+    {
+      "h": 18,
+      "first_contracting_clock": 29,
+      "bad_density": "24821333/268435456",
+      "endpoint_descent_density": "243614123/268435456",
+      "uniform_source_threshold": "792900290560/149450423"
+    },
+    {
+      "h": 19,
+      "first_contracting_clock": 31,
+      "bad_density": "53818201/536870912",
+      "endpoint_descent_density": "483052711/536870912",
+      "uniform_source_threshold": "4758475485184/985222181"
+    },
+    {
+      "h": 20,
+      "first_contracting_clock": 32,
+      "bad_density": "1255043/16777216",
+      "endpoint_descent_density": "15522173/16777216",
+      "uniform_source_threshold": "219654983680/12433583"
+    },
+    {
+      "h": 50,
+      "first_contracting_clock": 80,
+      "bad_density": "112485791421522936711/9444732965739290427392",
+      "endpoint_descent_density": "9332247174317767490681/9444732965739290427392",
+      "uniform_source_threshold": "70076099412841229908241809408000/44638893811161507812357"
+    },
+    {
+      "h": 100,
+      "first_contracting_clock": 159,
+      "bad_density": "23808003150185564971277879739687259762707989/45671926166590716193865151022383844364247891968",
+      "endpoint_descent_density": "45648118163440530628893873142644157104485183979/45671926166590716193865151022383844364247891968",
+      "uniform_source_threshold": "297094913321448486608347694936613854677116986809684144200613888000/215373297933440128065381286592520237125858749487"
+    },
+    {
+      "h": 200,
+      "first_contracting_clock": 317,
+      "bad_density": "22202629325957510060992984511033882372118968806103102321933299316451401108188466316934063/16687398718132110018711107079449625895333629080911349765211262561111091607661254297054391304192",
+      "endpoint_descent_density": "16687376515502784061201046086465114861451256961942543662108940627811775156260146108588074370129/16687398718132110018711107079449625895333629080911349765211262561111091607661254297054391304192",
+      "uniform_source_threshold": "44132693760739494931655639403332199449305981777555116678696837622147607654561240759036445552622509813700141899326249157309497344000/1384390614238990960596391235414387496104612641187100268805239238684974821277885758485561823071"
+    }
+  ],
+  "finite_exceptions_observed": [],
+  "endpoint_not_first_descent_witness": {
+    "k": 9,
+    "n": 4921,
+    "h": 2,
+    "first_descent": 1,
+    "endpoint": 5537
+  },
+  "guarded_tail_rows": [
+    {
+      "h": 1,
+      "bad_given_k_3mod4": "1",
+      "bad_given_k_1mod4": "0"
+    },
+    {
+      "h": 2,
+      "bad_given_k_3mod4": "3/4",
+      "bad_given_k_1mod4": "1/4"
+    },
+    {
+      "h": 3,
+      "bad_given_k_3mod4": "1/2",
+      "bad_given_k_1mod4": "1/8"
+    },
+    {
+      "h": 4,
+      "bad_given_k_3mod4": "1/2",
+      "bad_given_k_1mod4": "3/16"
+    },
+    {
+      "h": 5,
+      "bad_given_k_3mod4": "11/32",
+      "bad_given_k_1mod4": "7/64"
+    },
+    {
+      "h": 6,
+      "bad_given_k_3mod4": "93/256",
+      "bad_given_k_1mod4": "37/256"
+    },
+    {
+      "h": 7,
+      "bad_given_k_3mod4": "193/512",
+      "bad_given_k_1mod4": "11/64"
+    },
+    {
+      "h": 8,
+      "bad_given_k_3mod4": "281/1024",
+      "bad_given_k_1mod4": "29/256"
+    },
+    {
+      "h": 9,
+      "bad_given_k_3mod4": "595/2048",
+      "bad_given_k_1mod4": "1093/8192"
+    },
+    {
+      "h": 10,
+      "bad_given_k_3mod4": "3473/16384",
+      "bad_given_k_1mod4": "1471/16384"
+    },
+    {
+      "h": 11,
+      "bad_given_k_3mod4": "14893/65536",
+      "bad_given_k_1mod4": "6885/65536"
+    },
+    {
+      "h": 12,
+      "bad_given_k_3mod4": "15751/65536",
+      "bad_given_k_1mod4": "7795/65536"
+    },
+    {
+      "h": 13,
+      "bad_given_k_3mod4": "11773/65536",
+      "bad_given_k_1mod4": "10949/131072"
+    },
+    {
+      "h": 14,
+      "bad_given_k_3mod4": "200965/1048576",
+      "bad_given_k_1mod4": "24805/262144"
+    },
+    {
+      "h": 15,
+      "bad_given_k_3mod4": "300185/2097152",
+      "bad_given_k_1mod4": "35075/524288"
+    },
+    {
+      "h": 16,
+      "bad_given_k_3mod4": "1289565/8388608",
+      "bad_given_k_1mod4": "635813/8388608"
+    },
+    {
+      "h": 17,
+      "bad_given_k_3mod4": "962689/8388608",
+      "bad_given_k_1mod4": "1807781/33554432"
+    },
+    {
+      "h": 18,
+      "bad_given_k_3mod4": "16628809/134217728",
+      "bad_given_k_1mod4": "2048131/33554432"
+    },
+    {
+      "h": 19,
+      "bad_given_k_3mod4": "35558423/268435456",
+      "bad_given_k_1mod4": "9129889/134217728"
+    },
+    {
+      "h": 20,
+      "bad_given_k_3mod4": "53818201/536870912",
+      "bad_given_k_1mod4": "26504551/536870912"
+    },
+    {
+      "h": 21,
+      "bad_given_k_3mod4": "462411533/4294967296",
+      "bad_given_k_1mod4": "236618693/4294967296"
+    },
+    {
+      "h": 22,
+      "bad_given_k_3mod4": "349515113/4294967296",
+      "bad_given_k_1mod4": "172106453/4294967296"
+    },
+    {
+      "h": 23,
+      "bad_given_k_3mod4": "376808753/4294967296",
+      "bad_given_k_1mod4": "6008329/134217728"
+    },
+    {
+      "h": 24,
+      "bad_given_k_3mod4": "50396491/536870912",
+      "bad_given_k_1mod4": "424650931/8589934592"
+    }
+  ],
+  "scope": "Exponent density of finite descent, NOT convergence or uniform first-descent bound"
+}

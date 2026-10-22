@@ -1,0 +1,5 @@
+PASS exact two-line path-only amendment; all other reviewed sources unchanged.
+PASS isolated scratch copy from /tmp; normal and optimized results byte-identical.
+COMMON THREE-STATE COMPRESSION PASS all18
+PER LETTER MIRROR ADJOINT PASS all18
+HOMOGENEOUS INITIALIZATION PASS all18

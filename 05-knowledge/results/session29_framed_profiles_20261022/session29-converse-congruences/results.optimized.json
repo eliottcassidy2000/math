@@ -1,0 +1,284 @@
+{
+  "examples": {
+    "1:1": {
+      "H": 1,
+      "alpha": {
+        "0": 1
+      },
+      "code": 0,
+      "fixed_odd_cycles": 0,
+      "odd_cycles": 0,
+      "overlapping_pair_orbits": 0
+    },
+    "2:1": {
+      "H": 1,
+      "alpha": {
+        "0": 1
+      },
+      "code": 0,
+      "fixed_odd_cycles": 0,
+      "odd_cycles": 0,
+      "overlapping_pair_orbits": 0
+    },
+    "3:1": {
+      "H": 1,
+      "alpha": {
+        "0": 1
+      },
+      "code": 0,
+      "fixed_odd_cycles": 0,
+      "odd_cycles": 0,
+      "overlapping_pair_orbits": 0
+    },
+    "3:3": {
+      "H": 3,
+      "alpha": {
+        "0": 1,
+        "1": 1
+      },
+      "code": 1,
+      "fixed_odd_cycles": 1,
+      "odd_cycles": 1,
+      "overlapping_pair_orbits": 0
+    },
+    "4:1": {
+      "H": 1,
+      "alpha": {
+        "0": 1
+      },
+      "code": 0,
+      "fixed_odd_cycles": 0,
+      "odd_cycles": 0,
+      "overlapping_pair_orbits": 0
+    },
+    "4:5": {
+      "H": 5,
+      "alpha": {
+        "0": 1,
+        "1": 2
+      },
+      "code": 2,
+      "fixed_odd_cycles": 0,
+      "odd_cycles": 2,
+      "overlapping_pair_orbits": 1
+    },
+    "5:1": {
+      "H": 1,
+      "alpha": {
+        "0": 1
+      },
+      "code": 0,
+      "fixed_odd_cycles": 0,
+      "odd_cycles": 0,
+      "overlapping_pair_orbits": 0
+    },
+    "5:3": {
+      "H": 3,
+      "alpha": {
+        "0": 1,
+        "1": 1
+      },
+      "code": 3,
+      "fixed_odd_cycles": 1,
+      "odd_cycles": 1,
+      "overlapping_pair_orbits": 0
+    },
+    "5:5": {
+      "H": 13,
+      "alpha": {
+        "0": 1,
+        "1": 6
+      },
+      "code": 4,
+      "fixed_odd_cycles": 2,
+      "odd_cycles": 6,
+      "overlapping_pair_orbits": 2
+    },
+    "5:7": {
+      "H": 15,
+      "alpha": {
+        "0": 1,
+        "1": 7
+      },
+      "code": 6,
+      "fixed_odd_cycles": 3,
+      "odd_cycles": 7,
+      "overlapping_pair_orbits": 2
+    },
+    "6:1": {
+      "H": 1,
+      "alpha": {
+        "0": 1
+      },
+      "code": 0,
+      "fixed_odd_cycles": 0,
+      "odd_cycles": 0,
+      "overlapping_pair_orbits": 0
+    },
+    "6:5": {
+      "H": 5,
+      "alpha": {
+        "0": 1,
+        "1": 2
+      },
+      "code": 5,
+      "fixed_odd_cycles": 0,
+      "odd_cycles": 2,
+      "overlapping_pair_orbits": 1
+    },
+    "7:1": {
+      "H": 25,
+      "alpha": {
+        "0": 1,
+        "1": 12
+      },
+      "code": 68,
+      "fixed_odd_cycles": 4,
+      "odd_cycles": 12,
+      "overlapping_pair_orbits": 4
+    },
+    "7:3": {
+      "H": 155,
+      "alpha": {
+        "0": 1,
+        "1": 57,
+        "2": 10
+      },
+      "code": 795,
+      "fixed_odd_cycles": 13,
+      "odd_cycles": 57,
+      "overlapping_pair_orbits": 22
+    },
+    "7:5": {
+      "H": 157,
+      "alpha": {
+        "0": 1,
+        "1": 54,
+        "2": 12
+      },
+      "code": 305,
+      "fixed_odd_cycles": 10,
+      "odd_cycles": 54,
+      "overlapping_pair_orbits": 20
+    },
+    "7:7": {
+      "H": 15,
+      "alpha": {
+        "0": 1,
+        "1": 7
+      },
+      "code": 41,
+      "fixed_odd_cycles": 3,
+      "odd_cycles": 7,
+      "overlapping_pair_orbits": 2
+    },
+    "8:1": {
+      "H": 641,
+      "alpha": {
+        "0": 1,
+        "1": 200,
+        "2": 60
+      },
+      "code": 5178,
+      "fixed_odd_cycles": 0,
+      "odd_cycles": 200,
+      "overlapping_pair_orbits": 94
+    },
+    "8:5": {
+      "H": 29,
+      "alpha": {
+        "0": 1,
+        "1": 12,
+        "2": 1
+      },
+      "code": 5524,
+      "fixed_odd_cycles": 0,
+      "odd_cycles": 12,
+      "overlapping_pair_orbits": 5
+    }
+  },
+  "hostile_n4_H3_outmasks": [
+    10,
+    12,
+    9,
+    0
+  ],
+  "orders": {
+    "1": {
+      "H_mod8": {
+        "1": 1
+      },
+      "coverage": "complete fixed reversal-involution universe",
+      "tested": 1,
+      "universe": 1
+    },
+    "2": {
+      "H_mod8": {
+        "1": 2
+      },
+      "coverage": "complete fixed reversal-involution universe",
+      "tested": 2,
+      "universe": 2
+    },
+    "3": {
+      "H_mod8": {
+        "1": 2,
+        "3": 2
+      },
+      "coverage": "complete fixed reversal-involution universe",
+      "tested": 4,
+      "universe": 4
+    },
+    "4": {
+      "H_mod8": {
+        "1": 8,
+        "5": 8
+      },
+      "coverage": "complete fixed reversal-involution universe",
+      "tested": 16,
+      "universe": 16
+    },
+    "5": {
+      "H_mod8": {
+        "1": 24,
+        "3": 16,
+        "5": 8,
+        "7": 16
+      },
+      "coverage": "complete fixed reversal-involution universe",
+      "tested": 64,
+      "universe": 64
+    },
+    "6": {
+      "H_mod8": {
+        "1": 256,
+        "5": 256
+      },
+      "coverage": "complete fixed reversal-involution universe",
+      "tested": 512,
+      "universe": 512
+    },
+    "7": {
+      "H_mod8": {
+        "1": 6,
+        "3": 5,
+        "5": 7,
+        "7": 14
+      },
+      "coverage": "deterministic sample",
+      "tested": 32,
+      "universe": 4096
+    },
+    "8": {
+      "H_mod8": {
+        "1": 8,
+        "5": 24
+      },
+      "coverage": "deterministic sample",
+      "tested": 32,
+      "universe": 65536
+    }
+  },
+  "status": "PASS",
+  "total": 663
+}

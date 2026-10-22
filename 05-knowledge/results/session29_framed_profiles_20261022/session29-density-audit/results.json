@@ -1,0 +1,125 @@
+{
+  "exact_tail_depths": 300,
+  "input_sha256": {
+    "DENSITY_ONE_DESCENT.md": "66e436ec2fb4fff957f8444c33418dc0da352f47e8dc68f0b1d4136524a95aba",
+    "verify_density.py": "092e0c3040d14284d9e63508fa968494c13e87c2b495ff0acc6d18b25ed493cf"
+  },
+  "literal_endpoint_cases": 12040,
+  "modular_frequency_rows": [
+    {
+      "bad_density": "1/2",
+      "h": 1,
+      "period": 12,
+      "six_guarded_bad_densities": [
+        "0",
+        "1",
+        "0",
+        "1",
+        "0",
+        "1"
+      ],
+      "valuation_threshold": 2
+    },
+    {
+      "bad_density": "1/2",
+      "h": 2,
+      "period": 48,
+      "six_guarded_bad_densities": [
+        "1/4",
+        "3/4",
+        "1/4",
+        "3/4",
+        "1/4",
+        "3/4"
+      ],
+      "valuation_threshold": 4
+    },
+    {
+      "bad_density": "5/16",
+      "h": 3,
+      "period": 96,
+      "six_guarded_bad_densities": [
+        "1/8",
+        "1/2",
+        "1/8",
+        "1/2",
+        "1/8",
+        "1/2"
+      ],
+      "valuation_threshold": 5
+    },
+    {
+      "bad_density": "11/32",
+      "h": 4,
+      "period": 384,
+      "six_guarded_bad_densities": [
+        "3/16",
+        "1/2",
+        "3/16",
+        "1/2",
+        "3/16",
+        "1/2"
+      ],
+      "valuation_threshold": 7
+    },
+    {
+      "bad_density": "29/128",
+      "h": 5,
+      "period": 768,
+      "six_guarded_bad_densities": [
+        "7/64",
+        "11/32",
+        "7/64",
+        "11/32",
+        "7/64",
+        "11/32"
+      ],
+      "valuation_threshold": 8
+    },
+    {
+      "bad_density": "65/256",
+      "h": 6,
+      "period": 3072,
+      "six_guarded_bad_densities": [
+        "37/256",
+        "93/256",
+        "37/256",
+        "93/256",
+        "37/256",
+        "93/256"
+      ],
+      "valuation_threshold": 10
+    },
+    {
+      "bad_density": "281/1024",
+      "h": 7,
+      "period": 12288,
+      "six_guarded_bad_densities": [
+        "11/64",
+        "193/512",
+        "11/64",
+        "193/512",
+        "11/64",
+        "193/512"
+      ],
+      "valuation_threshold": 12
+    },
+    {
+      "bad_density": "397/2048",
+      "h": 8,
+      "period": 24576,
+      "six_guarded_bad_densities": [
+        "29/256",
+        "281/1024",
+        "29/256",
+        "281/1024",
+        "29/256",
+        "281/1024"
+      ],
+      "valuation_threshold": 13
+    }
+  ],
+  "modular_source_cases": 20622,
+  "scope": "Natural odd-exponent density of some finite descent, including each source register; no pointwise convergence or original-source credit.",
+  "status": "ACCEPTED"
+}

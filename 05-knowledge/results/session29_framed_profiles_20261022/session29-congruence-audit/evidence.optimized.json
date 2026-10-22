@@ -1,0 +1,59 @@
+{
+  "antiinvolutions_conjugacy_checked": 155,
+  "literal_port_and_mirror_seam_cases": 285,
+  "orders": {
+    "1": {
+      "cases": 1,
+      "mod8": {
+        "1": 1
+      }
+    },
+    "2": {
+      "cases": 2,
+      "mod8": {
+        "1": 2
+      }
+    },
+    "3": {
+      "cases": 4,
+      "mod8": {
+        "1": 2,
+        "3": 2
+      }
+    },
+    "4": {
+      "cases": 16,
+      "mod8": {
+        "1": 8,
+        "5": 8
+      }
+    },
+    "5": {
+      "cases": 64,
+      "mod8": {
+        "1": 24,
+        "3": 16,
+        "5": 8,
+        "7": 16
+      }
+    },
+    "6": {
+      "cases": 40,
+      "mod8": {
+        "1": 17,
+        "5": 23
+      }
+    },
+    "7": {
+      "cases": 40,
+      "mod8": {
+        "1": 5,
+        "3": 12,
+        "5": 10,
+        "7": 13
+      }
+    }
+  },
+  "self_converse_cases": 167,
+  "status": "PASS"
+}

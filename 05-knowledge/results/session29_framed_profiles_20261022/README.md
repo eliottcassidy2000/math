@@ -16,4 +16,13 @@ The user's text attachment is treated as inspiration, not an authority for mathe
 - [Self-dual arithmetic nonsingularity](session29-gaussian/ARITHMETIC_ADDENDUM.md): a classical transcendence theorem supplies a precise additional obstruction.
 - [Scalar audit](session29-gaussian-audit/AUDIT.md) and [arithmetic audit](session29-gaussian-audit/ARITHMETIC_AUDIT.md).
 
-These results do not prove Collatz convergence, uniform153N coverage, complete tournament wiring, or rank88 Gaussian optimality. The next wave is examining the actual strong-target metagraph ports of the profile-collision family. Historical-warning proposals are recorded but not yet applied in this checkpoint.
+These results do not prove Collatz convergence, uniform153N coverage, complete tournament wiring, or rank88 Gaussian optimality. The historical warnings were applied in commit49dc0a9, preserving original prose and modes. Complete global wiring remains open; the next wave is reconstructing the distinct strong-target classes and boundary adjacency from intrinsic cuts.
+
+## Audited second wave
+
+- [Actual outward edges and exact seam transfer](session29-profiles/ADDENDUM.md): constructive all-length port counting, letterwise mirror adjoint, and total/blue/black Hamiltonian-weighted generating functions. [Independent wiring audit](session29-wiring-audit/AUDIT.md).
+- [Sharp indefinite moment observer](LORENTZ_MOMENT_COROLLARIES.md): every shifted Hankel matrix has signature(2,1), with an explicit negative square and an algebraic endpoint-count asymptotic. [Independent moment audit](session29-moment-audit/AUDIT.md).
+- [Density-one finite descent](session29-collatz/phase2/DENSITY_ONE_DESCENT.md): exact endpoint densities and exponential exceptional bounds in every retained guard class. This is not convergence. [Independent density audit](session29-density-audit/AUDIT.md).
+- [Converse-symmetry congruences](session29-converse-congruences/REPORT.md): the mod8 odd-cycle formula, fixed-packing quotient, universal port parity, and ordinary-class multiplicity constraints. [Independent congruence audit](session29-congruence-audit/AUDIT.md).
+
+The session is still ACTIVE. Distinct-target reconstruction and the half-path algorithm are a separate forthcoming checkpoint, not silently included in these audits.
