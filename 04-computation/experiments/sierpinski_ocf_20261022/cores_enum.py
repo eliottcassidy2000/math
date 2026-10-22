@@ -65,6 +65,67 @@ def degree_preserving_perms(degs):
 def canon(edges, perms):
     return min(tuple(sorted((min(p[a], p[b]), max(p[a], p[b])) for a, b in edges)) for p in perms)
 
+def refine(V, M, colors):
+    """colour refinement (1-dim Weisfeiler-Leman) of a multigraph given by its multiplicity matrix M (M[v][v] =
+    loops); colours are relabelled canonically by the sorted order of their signatures"""
+    k = len(set(colors))
+    while True:
+        sig = [(colors[v], tuple(sorted((colors[w], M[v][w]) for w in range(V) if w != v and M[v][w])))
+               for v in range(V)]
+        uniq = sorted(set(sig))
+        idx = {s: i for i, s in enumerate(uniq)}
+        colors = [idx[s] for s in sig]
+        if len(uniq) == k: return colors
+        k = len(uniq)
+
+def canon_ir(V, M):
+    """canonical form by individualisation-refinement: the lexicographically smallest upper-triangular
+    multiplicity vector over all leaves of the search tree (no automorphism pruning; fine for V <= 8)"""
+    deg = [2 * M[v][v] + sum(M[v][w] for w in range(V) if w != v) for v in range(V)]
+    init = sorted(set((deg[v], M[v][v]) for v in range(V)))
+    colors = [init.index((deg[v], M[v][v])) for v in range(V)]
+    best = [None]
+    def search(colors):
+        colors = refine(V, M, colors)
+        if len(set(colors)) == V:
+            order = sorted(range(V), key=lambda v: colors[v])
+            vec = tuple(M[order[i]][order[j]] for i in range(V) for j in range(i, V))
+            if best[0] is None or vec < best[0]: best[0] = vec
+            return
+        cnt = defaultdict(int)
+        for c in colors: cnt[c] += 1
+        c0 = min(c for c, k in cnt.items() if k > 1)
+        for w in range(V):
+            if colors[w] == c0:
+                search([2 * c if v == w else 2 * c + 1 for v, c in enumerate(colors)])
+    search(colors)
+    return best[0]
+
+def vec_to_edges(V, vec):
+    edges, k = [], 0
+    for i in range(V):
+        for j in range(i, V):
+            edges += [[i, j]] * vec[k]; k += 1
+    return edges
+
+def cores_ir(excess, vmax=None):
+    """as cores(), with individualisation-refinement canonical forms (needed for V = 7, 8 at excess 4)"""
+    found = []
+    for V in range(1, (vmax or 2 * excess) + 1):
+        E = V + excess
+        for degs in degree_sequences(V, 2 * E):
+            seen = set()
+            for edges in labelled_multigraphs(degs):
+                if not connected(V, edges): continue
+                M = [[0] * V for _ in range(V)]
+                for a, b in edges:
+                    if a == b: M[a][a] += 1
+                    else: M[a][b] += 1; M[b][a] += 1
+                c = canon_ir(V, M)
+                if c in seen: continue
+                seen.add(c); found.append((V, vec_to_edges(V, c)))
+    return found
+
 def cores(excess):
     found = []
     for V in range(1, 2 * excess + 1):
@@ -79,7 +140,7 @@ def cores(excess):
                 seen.add(c); found.append((V, [list(x) for x in c]))
     return found
 
-def configuration_check(max_excess):
+def configuration_check(max_excess, top_file=None, vmax=None):
     """Completeness and automorphism check: exp(sum over cores of x^V y^E/|G|), truncated at excess <= max_excess,
     must equal the weighted count of all (possibly disconnected) multigraphs with loops and minimum degree >= 3,
     (1/V!) sum over labelled degree sequences of (2E-1)!!/prod d_v! (configuration model), at every (V, E)."""
@@ -101,7 +162,8 @@ def configuration_check(max_excess):
         return s * dfact(2 * E - 1) / factorial(V)
     C = {}
     for e in range(1, max_excess + 1):
-        for c in json.load(open(f'cores_e{e}.json')):
+        fn = top_file if (e == max_excess and top_file) else f'cores_e{e}.json'
+        for c in json.load(open(fn)):
             key = (c['V'], c['V'] + e); C[key] = C.get(key, 0) + Fraction(1, c['aut'])
     def mul(P, Q):
         R = {}
@@ -113,14 +175,16 @@ def configuration_check(max_excess):
     for k in range(1, max_excess + 1):
         term = {key: v / k for key, v in mul(term, C).items()}
         for key, v in term.items(): A[key] = A.get(key, 0) + v
-    return all(total(V, E) == v for (V, E), v in A.items() if (V, E) != (0, 0)), len(A) - 1
+    pts = [(V, E) for (V, E) in A if (V, E) != (0, 0) and (vmax is None or E - V < max_excess or V <= vmax)]
+    return all(total(V, E) == A[(V, E)] for (V, E) in pts), len(pts)
 
 if __name__ == '__main__':
     sys.path.insert(0, '.')
     from loop_engine import automorphisms
     exc = int(sys.argv[1])
+    vmax = int(sys.argv[2]) if len(sys.argv) > 2 else None          # optional: only cores with V <= vmax
     t0 = time.time()
-    cs = cores(exc)
+    cs = cores(exc) if exc <= 3 and vmax is None else cores_ir(exc, vmax)   # excess <= 3 files keep their labelling
     out = []
     for V, edges in cs:
         out.append({'V': V, 'edges': edges, 'aut': automorphisms(V, [tuple(e) for e in edges])})
@@ -130,8 +194,12 @@ if __name__ == '__main__':
     from fractions import Fraction
     s = sum(Fraction(1, c['aut']) for c in out)
     print(f"excess {exc}: {len(out)} cores ({dict(sorted(by_v.items()))} by V), sum 1/|Aut| = {s} = {float(s):.6f}, {time.time() - t0:.1f}s")
-    json.dump(out, open(f'cores_e{exc}.json', 'w'))
+    fname = f'cores_e{exc}.json' if vmax is None else f'cores_e{exc}_v{vmax}.json'
+    json.dump(out, open(fname, 'w'))
     import os
-    if all(os.path.exists(f'cores_e{e}.json') for e in range(1, exc + 1)):
+    if vmax is None and all(os.path.exists(f'cores_e{e}.json') for e in range(1, exc + 1)):
         ok, npts = configuration_check(exc)
         print(f"configuration-model check, excess <= {exc}, {npts} (V, E) points: {'exact agreement' if ok else 'MISMATCH'}")
+    if vmax is not None and all(os.path.exists(f'cores_e{e}.json') for e in range(1, exc)):
+        ok, npts = configuration_check(exc, fname, vmax)
+        print(f"configuration-model check, excess <= {exc} (top level V <= {vmax}), {npts} (V, E) points: {'exact agreement' if ok else 'MISMATCH'}")
