@@ -27,7 +27,13 @@ status: >
       and checked exactly for E_6, E_7, E_8 and for 2815 pairs (R, e) (exponent_law.py).
     - The uniqueness of the minimal vector and the norm-2 counts are VERIFIED for all 23 types by exact enumeration
       on both sides (multiple_cosets.py on the Niemeier side, deep_hole_multiples.py on the Leech side).
-    - The component rule for Atkin-Lehner invariance is PROVED for A_n and D_n and checked for E (360 pairs).
+    - The component rule for Atkin-Lehner invariance is PROVED for A_n and D_n and checked for E (360 pairs), as a
+      symmetry of Frame shapes.
+    - As functions it holds only up to a constant. The S53 audit found T^R∘W_e ≠ T^R for single components.
+      al_multipliers.py identifies the multiplier as T^R∘W_e = e^{−2πiℓ/24} T^R (ℓ = rank R, the central-charge
+      phase of V_Q), checked for all 11 component-involution pairs that occur.
+    - Over a Niemeier root system the phases multiply to e^{−2πi·24/24} = 1, so W_e fixes T^X exactly (VERIFIED; the
+      audit's we_niemeier_check matches the CDH lambencies for all 23).
   - The Monster corner (6) is CITED: CDH Section 2.3 and Carnahan, "51 constructions of the Moonshine module" (2017),
     Cor. 4.6.
   - (7) Fricke twining is PROVED, given the VERIFIED uniqueness of the shallow vector, by a principal-part argument
@@ -175,8 +181,12 @@ Equality holds on the right exactly when e = 1, or e = h/p for a bad prime p of 
 minimum on the left attains the bound. The case e = h of the middle term is the strange formula:
 Σ_i m_i(h − m_i) = ℓh(h+1)/6.
 
-Consequently **S_X = {1} ∪ {h/p : p a bad prime of every component of X with p ∥ h}**. The component rule holds for
-every irreducible R: π_R is W_e-invariant (e ∥ h, e > 1) if and only if e = h/p for a bad prime p ∥ h(R). Concretely:
+Consequently **S_X = {1} ∪ {h/p : p a bad prime of every component of X with p ∥ h}**.
+
+The component rule holds for every irreducible R: the Frame shape π_R is W_e-invariant (e ∥ h, e > 1) if and only if
+e = h/p for a bad prime p ∥ h(R). As functions, T^R∘W_e = e^{−2πiℓ/24} T^R, where ℓ is the rank of R. This
+central-charge phase cancels over the 24 dimensions of a Niemeier root system (al_multipliers.py). It is not 1 for a
+single component; the first version said "fixes", and the S53 audit caught this. Concretely:
 - D_n: e = n − 1 when n is even;
 - E_6: e = 4;
 - E_7: e = 9;
