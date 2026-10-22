@@ -334,7 +334,11 @@ Twined by the element of Kac type (2;1,…,1) and order h + 1, it gives the Fric
   modular data S_{0λ} ∝ Π sin(π(λ + ρ, α)/(1 + h)) live.
 
 So the two swap theorems are the levels 0 and 1, the level of V_N itself. The next shell would be level 2, and there
-the swap fails. Equivalently, the deep hole sees the 24 + k nodes of the affine diagrams and the Fricke point sees
+the swap fails.
+
+The (h+2)-neighbour of N at ρ/(h+2) is still rootless, i.e. it is Λ, for A1²⁴, A2¹², D4⁶, A24, E8³ and D24. But its
+coset minimum is |ρ/(h+2)|² = 2h(h+1)/(h+2)², which is below the Fricke value 2 − 2/(h+2). The twining therefore has a
+pole of higher order at 0, and is not of Fricke type. Equivalently, the deep hole sees the 24 + k nodes of the affine diagrams and the Fricke point sees
 the 24 finite simple roots.
 
 *Only the two nearest cusp types.* The cusps w of type N adjacent to z satisfy −w·ρ = (h/2)|y − ρ_N/h|², where y runs
