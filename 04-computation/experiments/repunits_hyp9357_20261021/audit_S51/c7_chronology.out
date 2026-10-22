@@ -1,0 +1,43 @@
+(G) commits (author date = when the commit object was first made; committer date = after pull --rebase)
+     a52d1d335c: author 2026-10-21T18:51:58-06:00  committer 2026-10-21T18:51:58-06:00  opus-2026-10-21-S51: reserve THM-4748..4749, HYP-9359..9360 (repunit rarity in the Hamilto
+     07d115c74e: author 2026-10-21T19:29:06-06:00  committer 2026-10-21T19:29:06-06:00  opus-2026-10-21-S51: pre-register out-of-sample repunit predictions (R1-R7) before the str
+     917fef912a: author 2026-10-21T19:29:06-06:00  committer 2026-10-21T19:29:14-06:00  opus-2026-10-21-S51: pre-register out-of-sample repunit predictions (R1-R7) before the str
+     eaf70543a9: author 2026-10-21T19:48:18-06:00  committer 2026-10-21T19:48:18-06:00  opus-2026-10-21-S51: second pre-registration (G1-G4, mechanism decomposition out of sample
+     be7c76115f: author 2026-10-21T19:48:18-06:00  committer 2026-10-21T19:48:21-06:00  opus-2026-10-21-S51: second pre-registration (G1-G4, mechanism decomposition out of sample
+     07c46ff196: author 2026-10-21T19:56:25-06:00  committer 2026-10-21T19:56:25-06:00  opus-2026-10-21-S51: checkpoint - repunit_rarity.py (strong inventory below 2100, 723,544 
+     ce5e055a0a: author 2026-10-21T19:56:25-06:00  committer 2026-10-21T19:56:30-06:00  opus-2026-10-21-S51: checkpoint - repunit_rarity.py (strong inventory below 2100, 723,544 
+     b1c598b6fa: author 2026-10-21T20:00:11-06:00  committer 2026-10-21T20:00:11-06:00  opus-2026-10-21-S51: repunit_degrees.py (degree law: w(2^k +- 1) for k <= 40, certified k 
+     4712463a7b: author 2026-10-21T20:10:51-06:00  committer 2026-10-21T20:10:51-06:00  opus-2026-10-21-S51: checkpoint (pre-audit) - THM-4748 (two reversed arcs: exact formulas 
+  ok   the rebased pre-registration commits keep the author dates of the originals (07d115c74e -> 917fef912a, eaf70543a9 -> be7c76115f)
+(F) data files (birth = creation time; NTFS tunnelling preserves it across git rebase rewrites)
+     scratch rep1.py            birth 18:54:07.905629  mtime 18:54:07.914713
+     scratch census_H_n9.pkl    birth 19:18:33.843995  mtime 19:18:33.846502
+     scratch inv.py             birth 19:08:29.518075  mtime 19:08:29.519783
+     scratch inv_1100.pkl       birth 19:13:47.281180  mtime 19:13:47.290696
+     scratch inv_2100.log       birth 19:27:12.951822  mtime 19:29:15.654916
+     scratch inv_2100.pkl       birth 19:29:15.595309  mtime 19:29:15.654916
+     scratch regress_train.py   birth 19:27:54.252351  mtime 19:27:54.253357
+     scratch evaluate_R.py      birth 19:30:25.907234  mtime 19:30:25.907234
+     scratch evaluate_R7.py     birth 19:30:50.730401  mtime 19:30:50.739905
+     scratch N_seq_2100.pkl     birth 19:30:51.257303  mtime 19:30:51.258302
+     scratch decomp2.py         birth 19:39:57.244016  mtime 19:39:57.255044
+     scratch decomp2_1100.pkl   birth 19:40:10.263628  mtime 19:40:10.275690
+     scratch autcheck.py        birth 19:41:03.505317  mtime 19:41:03.514166
+     scratch aut_1100.pkl       birth 19:41:05.932947  mtime 19:41:05.949076
+     committed repunit_rarity.py                birth 19:49:30.340257  mtime 19:56:29.543143
+     committed repunit_rarity.out               birth 19:49:31.817956  mtime 19:56:29.541141
+     committed two_arc_formulas.out             birth 19:43:16.985846  mtime 19:56:29.543648
+     committed PREREGISTRATION_out_of_sample.md birth 19:29:00.180876  mtime 19:48:21.541688
+     R1-R7 commit object created 19:29:06; inventory-2100 log created 19:27:12 (run start); pickle created 19:29:15.595309
+  ok   the 2100 inventory was launched before the R1-R7 commit and its result file appeared after it
+     margin: the result file appeared 9.6 s after the R1-R7 commit object (and 1.6 s after its rebase)
+  ok   the R1-R7 evaluation scripts and N(n,h) tables were created after the inventory finished
+  ok   repunit_rarity.py (first test-range decomposition) was created after the G1-G4 commit object
+  ok   the training-range decomposition files (cap 1100) predate G1-G4, as stated
+  ok   caveat: rep1.py (mtime before R1-R7) correlated the n = 9 class counts N(9,h) = S_9(h) (h > 661) over h <= 0.7 max H = 2349 with 3 | h, 5 | h, primality: the order-9 slice of the test range had been examined
+(S) server-side: public GitHub push events (upper bounds only)
+     push at 2026-10-22T01:35:48Z UTC: before 917fef912a head 6ff383b6d9
+     push at 2026-10-22T02:00:18Z UTC: before ce5e055a0a head b1c598b6fa
+     => 917fef912a was on the remote no later than 19:35:48 local, i.e. 392 s AFTER the 2100 inventory existed: the order prereg < data is supported only by local timestamps
+
+ALL CHECKS PASSED

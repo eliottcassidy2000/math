@@ -1,0 +1,20 @@
+(a) three back arcs with spans >= 2; (b) all spans (every tournament with fa <= 3)
+     m =  5: spans >= 2: (20, 5, 1, 1) (configs, distinct H, # = 7 mod 8, max odd part of H+1); session (20, 5, 1, 1); fa <= 3 world: 7 distinct H [1s]
+     m =  6: spans >= 2: (120, 14, 3, 3) (configs, distinct H, # = 7 mod 8, max odd part of H+1); session (120, 14, 3, 3); fa <= 3 world: 17 distinct H [1s]
+     m =  7: spans >= 2: (455, 44, 8, 13) (configs, distinct H, # = 7 mod 8, max odd part of H+1); session (455, 44, 8, 13); fa <= 3 world: 49 distinct H [1s]
+     m =  8: spans >= 2: (1330, 113, 24, 37) (configs, distinct H, # = 7 mod 8, max odd part of H+1); session (1330, 113, 24, 37); fa <= 3 world: 116 distinct H [1s]
+     m =  9: spans >= 2: (3276, 256, 66, 97) (configs, distinct H, # = 7 mod 8, max odd part of H+1); session (3276, 256, 66, 97); fa <= 3 world: 261 distinct H [1s]
+     m = 10: spans >= 2: (7140, 527, 128, 343) (configs, distinct H, # = 7 mod 8, max odd part of H+1); session (7140, 527, 128, 343); fa <= 3 world: 537 distinct H [1s]
+     m = 11: spans >= 2: (14190, 1034, 239, 829) (configs, distinct H, # = 7 mod 8, max odd part of H+1); session (14190, 1034, 239, 829); fa <= 3 world: 1045 distinct H [2s]
+     m = 12: spans >= 2: (26235, 1907, 413, 3737) (configs, distinct H, # = 7 mod 8, max odd part of H+1); session (26235, 1907, 413, 3737); fa <= 3 world: 1928 distinct H [3s]
+     m = 13: spans >= 2: (45760, 3320, 658, 7267) (configs, distinct H, # = 7 mod 8, max odd part of H+1); session (45760, 3320, 658, 7267); fa <= 3 world: 3351 distinct H [8s]
+  ok   three_arc_census.out reproduced at every m = 5..13 (configurations, distinct H, count = 7 mod 8, largest odd part)
+     first order of 2^k - 1 (three arcs, spans >= 2): {15: 5, 31: 6, 63: 8, 127: 8, 255: 9, 511: 11, 1023: 10, 2047: 13, 32767: 13}
+     first order of 2^k - 1 (fa <= 3, all spans):      {3: 5, 15: 5, 31: 6, 63: 8, 127: 8, 255: 9, 511: 11, 1023: 10, 2047: 13, 32767: 13}
+  ok   repunit first orders match the session table
+  ok   three arcs reach 2^k - 1 for 4 <= k <= 11 and k = 15 at m <= 13, and NOT k = 12, 13, 14 (the list in (6) is exact for m <= 13)
+  ok   allowing span-1 arcs and fewer arcs (all fa <= 3 tournaments) changes no first-occurrence order of 2^k - 1, k >= 4
+(c) an explicit three-arc family with unbounded odd parts of H + 1 (H = 7 mod 8)
+  ok   family H = 3(2^(r+2) + 2*3^r - 1), r odd: = 7 mod 8, DP-confirmed for r = 1,3,5,7, odd parts of H+1 [5, 1, 115, 229, 7765, 33983, 604015, 675677]... are >= 3^(r+1)/(4(r+1)) for r >= 5 (so "no finitely many lines" is PROVABLE, not only FINITE-EXACT)
+
+ALL CHECKS PASSED (8s)

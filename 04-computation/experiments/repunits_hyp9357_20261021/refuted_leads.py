@@ -130,6 +130,12 @@ for m in (5, 6, 7):
     tot = sum(dist.values())
     share = {k: round(c / tot, 3) for k, c in sorted(dist.items())}
     print(f'     order {m} -> {m + 1}: v_2(Delta H) shares {share}')
+    tv = {}
+    for pr, row in sorted(trans.items()):
+        t = sum(row.values())
+        tv[pr] = 0.5 * sum(abs(row[c] / t - 0.25) for c in (1, 3, 5, 7))
+    print(f'     order {m} -> {m + 1}: H(child) mod 8 given H(parent) mod 8, total-variation distance from uniform by parent residue '
+          + str({k: round(v, 3) for k, v in tv.items()}) + f' (parents: {len(strong[m])} classes)')
     check(abs(share[1] - 0.5) < 0.04 and abs(share[2] - 0.25) < 0.03, f'order {m}: valuations are geometric (no inheritance of the 2-adic residue)')
 
 print('(b) I(Omega, -1) on strong classes')

@@ -1,0 +1,8 @@
+     no cover, 3 not | Aut (script): training 3|d -0.015, 1 mod 8 +0.046 +- 0.012; test 3|d +0.010, 1 mod 8 +0.017, 7 mod 8 -0.012
+  ok   G2 and G3 pass under the reading "no cover, 3 not | Aut (script)"
+     no cover, |Aut| = 1 (prereg baseline wording): training 3|d -0.016, 1 mod 8 +0.046 +- 0.012; test 3|d +0.010, 1 mod 8 +0.017, 7 mod 8 -0.012
+  ok   G2 and G3 pass under the reading "no cover, |Aut| = 1 (prereg baseline wording)"
+     test-range classes by order: {9: 95847, 10: 223721, 11: 155670, 12: 79760, 13: 27432, 14: 4545, 15: 56}; order <= 9 share 0.163
+  ok   the order-9 slice is a non-negligible part (>10%) of the test-range classes
+
+ALL CHECKS PASSED (11s)

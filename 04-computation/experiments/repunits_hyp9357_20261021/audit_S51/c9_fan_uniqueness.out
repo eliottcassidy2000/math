@@ -1,0 +1,11 @@
+     k = 5, H = 31: strong classes 4, least-fa distribution {3: 4}; with fa <= 3: (4, [6, 7], 1, True)
+     k = 6, H = 63: strong classes 2, least-fa distribution {3: 2}; with fa <= 3: (2, [8], 2, False)
+     k = 7, H = 127: strong classes 12, least-fa distribution {3: 4, 4: 7, 5: 1}; with fa <= 3: (4, [8, 9], 2, False)
+     k = 8, H = 255: strong classes 107, least-fa distribution {3: 24, 4: 58, 5: 21, 6: 4}; with fa <= 3: (24, [9, 10, 11], 2, False)
+     k = 9, H = 511: strong classes 164, least-fa distribution {3: 2, 4: 40, 5: 70, 6: 40, 7: 12}; with fa <= 3: (2, [11], 2, False)
+     k = 10, H = 1023: strong classes 663, least-fa distribution {3: 8, 4: 48, 5: 231, 6: 252, 7: 120, 8: 4}; with fa <= 3: (8, [10, 11, 12], 2, False)
+     k = 11, H = 2047: strong classes 1599, least-fa distribution {3: 2, 4: 36, 5: 248, 6: 576, 7: 539, 8: 165, 9: 33}; with fa <= 3: (2, [13], 2, False)
+  ok   fan_uniqueness.out reproduced: number of strong classes with fa <= 3, their orders, fan/converse among them, fan self-converse
+  ok   least feedback arc number over ALL strong classes with H = 2^k - 1 is exactly 3 for 5 <= k <= 11
+
+ALL CHECKS PASSED (1s)

@@ -55,3 +55,18 @@ Predictions for the strong classes with `1101 ≤ H ≤ 2099`:
 * **(G2)** With classes that have `3 | |Aut|` also removed: `|β(3|d)| < 0.04`.
 * **(G3)** In the generic part, `β(d ≡ 1 mod 8) > 0` and `|β(d ≡ 7 mod 8)| < 0.03`.
 * **(G4)** The share of classes with `3 | |Aut|` is smaller than on `[301, 1098]`.
+
+## Audit annotation (added after the independent audit, MISTAKE-657; the text above is unchanged)
+
+The blindness claims above are overstated. The audit's chronology (`audit_S51/c7_chronology.out`) shows three things.
+
+* **The order-9 slice was not blind.** It is 16% of the classes of the test range. It had been examined in exploratory form: a scratch script correlated the `n = 9` class counts, up to `h ≤ 2349`, with `3|h`, `5|h` and primality, and the S50 census was public.
+* **R1–R7 timing.** The R1–R7 commit object precedes the completion of the order-≥10 test data by 9.6 s, on local timestamps only.
+* **G1–G4 timing.** G1–G4 were committed after the test-range `S(d)` and the R verdicts were known. They were blind only to the decomposition.
+
+Two further discrepancies do not change any verdict:
+
+* the quoted baseline `+0.049 ± 0.016` comes from an exploratory fit; the committed fit gives `+0.046 ± 0.012`;
+* "trivial Aut" should read `3 ∤ |Aut|`; G2 and G3 pass under both readings.
+
+All eleven verdicts were reproduced by independent code.

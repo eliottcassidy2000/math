@@ -19557,3 +19557,35 @@ the ambient space.
 **Repair scope:** Correct THM-368's parity/log wording and flag the historical output's different function; insert provenance-preserving warnings in the Coxeter and endgame reflections, and repair the actual stale correction banner in the 13-comb reflection. No new Lie-classification claim or LRC closure is asserted. The endgame reflection had no existing correction banner, so its proposed warning is a separate insertion; the 13-comb reflection receives the actual banner repair.
 
 **Source attribution clarified:** The endgame reflection has no banner. The stale opus-S55 banner is in the separate 13-comb/Eisenstein reflection; the proposed patch replaces its final two lines, retaining both the original body and the valid deep-well correction.
+
+## MISTAKE-657 (2026-10-21, opus-2026-10-21-S51 repunit rarity, THM-4748, THM-4749, HYP-9359; found by the session's independent audit after the pre-audit checkpoint 4712463a7b was pushed) -- prior art and a co-author left out, two false sentences in a remark, a conjecture typed KNOWN in a title, and pre-registration blindness overstated
+
+- **Prior art and credits left out (MAJOR for statement 1 of THM-4748, MINOR otherwise).**
+  - The single-arc count `1 + 2^(n−2)` and the chain product are J. W. Moon, *Publ. Math. Debrecen* 19 (1972) 101–104. The repo already has the single arc as THM-250.
+  - The crossing formula at `p = r = 0`, `H = 3·2^(n−4) + 3`, is in bof's MathOverflow answer 234029 (2016); Math.SE 1688155 gives the converse case.
+  - The 2020 DAM paper (doi 10.1016/j.dam.2019.09.005) is by El Sahili **and** Abi Aad. It computes `H` after reversing further arcs of the nearly transitive tournament, which plausibly covers the nested and shared-endpoint cases. THM-4748 named only Abi Aad.
+  - The repo's `deep_extension_s20al.out` §2 (2026-03-22) already tabulated all 45 two-arc values at `n = 6`.
+  - The `k = 6` Fibonacci fan was already in the repo: `05-knowledge/variables/single-core-cycle-count.md` lists the THM-344 `H = 63` signatures 1001100 and 1100110, which are `F_6` and its converse.
+  - mac-mini's MSG-2400 (19:50, before THM-4749's first commit) states the 7-floor (`7 | 2^k − 1` iff `3 | k`, never `2^k + 1`) and the Fermat-type monoid. THM-4749 and the note credited neither.
+  - The "only 7 and 21" completeness conjecture goes back to bof and Royle, MathOverflow 232751 (2016). It was cited only as Chan–Pak.
+- **Two false sentences in a remark (THM-4748, "Why the asymmetry").**
+  - "Subtractions come only from arcs sharing an endpoint" is false. The crossing and nested formulas subtract terms for arcs with no common endpoint. It holds only inside one-apex tournaments.
+  - "Everything but `2^(k−1)` and the final −2" should be `2^k`.
+- **A conjecture typed KNOWN (THM-4749 title).** The strong value set "all odd numbers ≥ 3 except 7 and 21" was attached to "KNOWN, Session24". It is FINITE-EXACT below 80,265 and conjectural beyond, and Session24 does not claim it.
+  - Also corrected: the `k = 3` sentence in the proof of statement 2 (7 is prime but not a value); the unnecessary `i ≤ 4` bound in statement 4, since every Fermat number is `H(NT)`; the certified `k ≥ 17` cases; and the KNOWN typing of the 63 facts (Session24 §3, §5).
+- **Pre-registration blindness overstated (HYP-9359; the pre-registration file).**
+  - "Before the data existed or were examined" and "nothing in `1100 < d < 2100` has been looked at" were false for the order-9 slice of the test range (16% of its classes). An exploratory scratch script had correlated the `n = 9` class counts, up to `h ≤ 2349`, with `3|h`, `5|h` and primality.
+  - R1–R7 precede the order-≥10 test data by 9.6 s, on local timestamps only.
+  - G1–G4 were written after the test-range data and the R verdicts were known; they were blind only to the decomposition.
+  - The verdicts stand. The audit reproduced every number with independent code, including the 723,544-class inventory.
+- **Smaller items.**
+  - Two residuals were quoted from an uncommitted fit (now `outliers.py`).
+  - A "labelled share" was really a relative density.
+  - A "partial mechanism", the depletion of `7 (mod 8)` at low feedback arc number, did not hold across orders 6–9. It is now listed as refuted.
+  - "Residues mix in one step" had no printed output (now printed by `refuted_leads.py`).
+  - "Not on finitely many lines" for three arcs rested on data only (now PROVED in THM-4748 (6)).
+  - Wording fixes: touching intervals, endpoint vertices in the run count, a redundant 23, "almost entirely".
+- **Missing coordinates.**
+  1. For a counting formula in a classical subject, search MathOverflow and Math.SE as well as the journals. Two of the prior-art items here were Q&A answers.
+  2. Give every author of a cited paper, and read every repo file that tabulates the same objects (`deep_extension_*`, `variables/*`) before calling a family new.
+  3. Write a pre-registration's blindness claim from the file timestamps, not from memory: list which slices of the test range had already been touched, and push the commit before the data finish.

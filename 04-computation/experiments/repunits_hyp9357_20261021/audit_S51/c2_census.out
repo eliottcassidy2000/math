@@ -1,0 +1,43 @@
+(C) class census n <= 9 by one-vertex extension and the auditor's canonical form
+     n = 1: 1 classes, 1 strong, 1 self-converse [3s]
+     n = 2: 1 classes, 0 strong, 1 self-converse [4s]
+     n = 3: 2 classes, 1 strong, 2 self-converse [4s]
+     n = 4: 4 classes, 1 strong, 2 self-converse [4s]
+     n = 5: 12 classes, 6 strong, 8 self-converse [4s]
+     n = 6: 56 classes, 35 strong, 12 self-converse [4s]
+     n = 7: 456 classes, 353 strong, 88 self-converse [4s]
+     n = 8: 6880 classes, 6008 strong, 176 self-converse [5s]
+     n = 9: 191536 classes, 178133 strong, 2752 self-converse [7s]
+  ok   class counts n = 1..9: [1, 1, 2, 4, 12, 56, 456, 6880, 191536] (A000568)
+  ok   strong class counts n = 3..9: [1, 1, 6, 35, 353, 6008, 178133] (A051337: 1, 1, 6, 35, 353, 6008, 178133)
+  ok   sum of n!/|Aut| = 2^C(n,2) for every n <= 9 (orbit-stabilizer: |Aut| exact)
+  ok   |Aut| divides H for every class n <= 9
+(K) THM-4748 (6) and statement 2 on the census
+     least fa over all classes n <= 9: 15: 2, 17: 1, 31: 3, 33: 1, 63: 3, 65: 1, 127: 3, 129: 1, 255: 3, 257: 3, 511: 4, 513: 3, 1023: 5, 2047: 7
+  ok   least fa = 3 for H = 31, 63, 127, 255 (classes n <= 9)
+  ok   least fa = 1 for H = 33, 65
+     fa distribution of the classes with H = 2^k - 1 (k >= 5), by n: n=6,H=31: {3: 2}; n=7,H=31: {3: 6}; n=7,H=127: {5: 1}; n=8,H=31: {3: 10}; n=8,H=63: {3: 2}; n=8,H=127: {3: 2, 4: 6, 5: 2}; n=8,H=255: {4: 12, 5: 12, 6: 4}; n=8,H=511: {5: 2, 6: 18, 7: 12}; n=9,H=31: {3: 14}; n=9,H=63: {3: 4}; n=9,H=127: {3: 6, 4: 13, 5: 3}; n=9,H=255: {3: 6, 4: 44, 5: 33, 6: 8}; n=9,H=511: {4: 8, 5: 46, 6: 58, 7: 24}; n=9,H=1023: {5: 17, 6: 68, 7: 104, 8: 4}; n=9,H=2047: {7: 49, 8: 67, 9: 33}
+  ok   classes with fa <= 2 (n <= 9) have H = 7 mod 8 only on the lines: [15, 23, 39, 47, 79, 95, 159, 191]
+  ok   no minimum-feedback ordering has a back arc of span 1: 2251 minimum orderings of the 1044 classes with 1 <= fa <= 3, n <= 8
+(T) THM-4749 (6), n = 8 row, from the full census (not from the strong inventory)
+  ok   n = 8: [(20, 6), (10, 23), (2, 25), (10, 40), (28, 30), (32, 35), (0, 0), (0, 0)]
+  ok   n = 9 (repunit_rarity.out line 22): [(30, 8), (14, 35), (4, 41), (22, 84), (91, 90), (136, 155), (193, 168), (149, 174)]
+(O) census-derived numbers printed by the session
+     relative density of H mod 8 by octave H/f(m), strong classes: {6: {'2-4': {1: 1.41, 3: 0.47, 5: 1.65, 7: 0.47}, '<2': {1: 0.89, 3: 0.89, 5: 0.89, 7: 1.33}}, 7: {'2-4': {1: 1.3, 3: 1.33, 5: 0.84, 7: 0.53}, '4-8': {1: 0.81, 3: 0.91, 5: 1.15, 7: 1.13}, '<2': {1: 1.68, 3: 0.74, 5: 0.95, 7: 0.63}}, 8: {'4-8': {1: 0.94, 3: 0.98, 5: 1.07, 7: 1.01}, '>=8': {1: 1.14, 3: 0.93, 5: 0.97, 7: 0.96}, '2-4': {1: 1.05, 3: 1.22, 5: 0.95, 7: 0.78}, '<2': {1: 1.41, 3: 0.57, 5: 1.29, 7: 0.73}}, 9: {'>=8': {1: 1.01, 3: 0.99, 5: 0.99, 7: 1.0}, '4-8': {1: 1.01, 3: 0.98, 5: 1.03, 7: 0.98}, '2-4': {1: 1.03, 3: 1.02, 5: 1.06, 7: 0.89}, '<2': {1: 0.92, 3: 1.08, 5: 1.0, 7: 1.0}}}
+  ok   second octave [2f, 4f): 7 mod 8 relative density 0.47, 0.53, 0.78, 0.89 at orders 6-9 (note section 5)
+  ok   octave [4f, 8f): 1.13, 1.01, 0.98 at orders 7-9 ("about 1")
+     n = 8: corr(residual, least fa) = -0.194; mean residual by least fa {1: (0.645, 2), 2: (0.095, 28), 3: (-0.005, 73), 4: (-0.061, 48), 5: (-0.311, 2)}
+  ok   n = 8 regression: corr = -0.194 and mean residual +0.645 for the two least-fa-1 values (repunit_rarity.out (O))
+     share of 7 mod 8 by least fa (strong classes): {6: {1: (0.0, 1), 2: (0.462, 13), 3: (0.118, 17), 4: (0.0, 4)}, 7: {1: (0.0, 1), 2: (0.174, 23), 3: (0.173, 104), 4: (0.15, 147), 5: (0.313, 67), 6: (0.556, 9), 7: (0.0, 2)}, 8: {1: (0.0, 1), 2: (0.114, 35), 3: (0.192, 313), 4: (0.221, 1121), 5: (0.251, 2007), 6: (0.244, 1779), 7: (0.259, 686), 8: (0.121, 66)}, 9: {1: (0.0, 1), 2: (0.082, 49), 3: (0.332, 695), 4: (0.21, 4406), 5: (0.248, 16082), 6: (0.247, 36582), 7: (0.255, 52058), 8: (0.248, 44300), 9: (0.244, 19986), 10: (0.261, 3748), 11: (0.339, 218), 12: (0.375, 8)}}
+  ok   refuted_leads.out (c) fa shares reproduced (orders 6-9)
+  ok   n = 9 classes by H mod 3: (66320, 62129, 63087) (66,320 / 62,129 / 63,087)
+  ok   n = 9 labelled relative shares by H mod 3 within 2% of uniform: [1.0164, 0.9842, 0.9994]
+  ok   labelled relative density of H = 7 mod 8 at n = 5..9: [0.25, 0.7969, 0.8069, 0.9383, 0.993] (note: "0.25, 0.80, 0.81, 0.94, 0.993"; these are densities relative to 1/4, not shares)
+     order-7 strong spectrum in (45, 150): holes [63, 107, 119, 149]; values with one class [61, 85, 87, 125, 127, 147] (self-converse: [1, 1, 1, 1, 1, 1])
+  ok   order-7 holes in (45,150) are exactly 63, 107, 119, 149
+  ok   S_7(63) = 0 and S_7(127) = 1
+  ok   the thin values 61, 85, 87, 125, 127 are each attained by exactly one strong 7-class, and it is self-converse
+     all order-7 strong values attained by exactly one class: [25, 61, 85, 87, 125, 127, 147, 155, 157, 171, 175, 189]
+  ok   N(8, h) = 2 S_7(h) + S_8(h) for every odd h > 45 (note section 5)
+
+ALL CHECKS PASSED (9s)

@@ -1,0 +1,23 @@
+(a) ear increments
+     order 5 -> 6: v_2(Delta H) shares {1: 0.511, 2: 0.267, 3: 0.122, 4: 0.067, 5: 0.033}
+     order 5 -> 6: P(child H mod 8 | parent H mod 8): {1: {1: 0.267, 3: 0.167, 5: 0.267, 7: 0.3}, 3: {1: 0.267, 3: 0.133, 5: 0.4, 7: 0.2}, 5: {1: 0.267, 3: 0.133, 5: 0.467, 7: 0.133}, 7: {1: 0.4, 3: 0.3, 5: 0.2, 7: 0.1}}
+     max total-variation distance of a row from uniform: 0.234
+  ok   refuted_leads.out (a) order-5 shares reproduced
+     order 6 -> 7: v_2(Delta H) shares {1: 0.525, 2: 0.246, 3: 0.118, 4: 0.054, 5: 0.024, 6: 0.033}
+     order 6 -> 7: P(child H mod 8 | parent H mod 8): {1: {1: 0.281, 3: 0.31, 5: 0.229, 7: 0.181}, 3: {1: 0.22, 3: 0.253, 5: 0.317, 7: 0.21}, 5: {1: 0.271, 3: 0.236, 5: 0.218, 7: 0.274}, 7: {1: 0.331, 3: 0.258, 5: 0.25, 7: 0.161}}
+     max total-variation distance of a row from uniform: 0.091
+     order 7 -> 8: v_2(Delta H) shares {1: 0.506, 2: 0.253, 3: 0.119, 4: 0.061, 5: 0.03, 6: 0.031}
+     order 7 -> 8: P(child H mod 8 | parent H mod 8): {1: {1: 0.256, 3: 0.247, 5: 0.257, 7: 0.24}, 3: {1: 0.273, 3: 0.238, 5: 0.25, 7: 0.239}, 5: {1: 0.264, 3: 0.246, 5: 0.239, 7: 0.251}, 7: {1: 0.266, 3: 0.252, 5: 0.253, 7: 0.228}}
+     max total-variation distance of a row from uniform: 0.023
+  ok   refuted_leads.out (a) order-7 shares reproduced
+  ok   "residues mix in one step": every row of the order-7 transition matrix is within TV distance 0.023 of uniform
+(b) I(Omega, -1) on strong classes of orders 5-8
+     order 5: I(Omega,-1) in [-6, -3], zero 0 times (6 classes; H = 1 + 2 a1 + 4 a2 checked)
+     order 6: I(Omega,-1) in [-18, -4], zero 0 times (35 classes; H = 1 + 2 a1 + 4 a2 checked)
+     order 7: I(Omega,-1) in [-72, -5], zero 0 times (353 classes; H = 1 + 2 a1 + 4 a2 checked)
+     order 8: I(Omega,-1) in [-162, -3], zero 0 times (6008 classes; H = 1 + 2 a1 + 4 a2 checked)
+  ok   refuted_leads.out (b) ranges reproduced; I(Omega,-1) never 0
+(d) one-apex toy model
+  ok   one-apex word multiplicities <= 8 for 16 <= r < 1100 (max 8)
+
+ALL CHECKS PASSED (4s)

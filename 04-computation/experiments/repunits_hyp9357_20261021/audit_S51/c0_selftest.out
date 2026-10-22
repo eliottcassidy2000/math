@@ -1,0 +1,12 @@
+  ok   ham (subset DP) = brute force on 300 random tournaments, n <= 8
+  ok   ham_subsets = ham of every induced subtournament (40 random tournaments)
+  ok   is_strong_mask = networkx strong connectivity on 300 random induced subtournaments
+  ok   fas (subset DP) = brute force over all orderings, 150 random tournaments n <= 7
+  ok   canon is relabelling-invariant and decode(canon) is a representative with the same code and H (300 random, n <= 12)
+  ok   class counts by extension n = 1..7: [1, 1, 2, 4, 12, 56, 456] (OEIS A000568: 1, 1, 2, 4, 12, 56, 456)
+  ok   |Aut| from the canonical search = brute-force automorphism count, every class n <= 6
+  ok   |Aut| = brute force on 60 random classes at n = 7
+  ok   ear_all (quadratic form) = DP of every one-vertex extension, 60 random tournaments n <= 8
+  ok   one_apex_paths (path decomposition, any A) = DP for every in-set A, m <= 10
+
+ALL CHECKS PASSED (5s)

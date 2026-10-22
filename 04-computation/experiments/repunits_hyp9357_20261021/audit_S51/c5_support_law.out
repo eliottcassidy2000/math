@@ -1,0 +1,48 @@
+     inventory: 723544 strong classes, orders [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] [0s]
+(R) the arithmetic-support model
+     training [301,1098]: 399 values, s.d. 0.100: 3|d +0.239(0.014), 9|d +0.088(0.018), 5|d +0.065(0.014), prime -0.002(0.014), blocked +0.028(0.023), 7 mod 8 -0.027(0.012)
+     test [1101,2099]:   500 values, s.d. 0.047: 3|d +0.219(0.006), 9|d +0.060(0.008), 5|d +0.054(0.006), prime +0.005(0.006), blocked +0.008(0.010), 7 mod 8 -0.015(0.005)
+  ok   value counts 399 / 500 and residual s.d. 0.100 / 0.047
+  ok   training coefficients and standard errors = HYP-9359 table (to 0.0005)
+  ok   test coefficients and standard errors = HYP-9359 table (to 0.0005)
+     R5 residual of S(1365) = 1037: cubic on [1101,2099] (session): +0.148; cubic on [1101,2099] without 1365: +0.149; cubic on [301,2099]: +0.144; cubic on training [301,1098], extrapolated: +0.042
+     R6: order-14 classes at 249 values d in [1125, 2099]; beta(3|d): session model [1, L, L^2, 3|d, 5|d]: +1.191 (0.100); [1, L, L^2, 3|d]: +1.126 (0.109); full F6 (cubic + six indicators): +0.710 (0.117); F5 (cubic + 3,9,5 | d, 1 and 7 mod 8): +0.894 (0.110)
+  ok   N(n, h) by the auditor's convolution reproduces the session table (spot values n = 10, 12, 14)
+     pre-registered R1-R7 recomputed: {'R1': 'PASS', 'R2': 'PASS', 'R3': 'PASS', 'R4': 'PASS', 'R5': 'PASS', 'R6': 'PASS', 'R7': 'PASS'}
+  ok   R1-R7 all PASS on the auditor's data with the session's operationalisation
+  ok   R5 is robust: S(1365) lies above every natural cubic smooth fit tried
+  ok   R6 is robust: the order-14 beta(3|d) >= 0.4 under every model tried
+(D) mechanism: exact one-vertex covers and 3 | |Aut|
+     order 3: covers done [2s]
+     order 4: covers done [2s]
+     order 5: covers done [2s]
+     order 6: covers done [2s]
+     order 7: covers done [2s]
+     order 8: covers done [2s]
+     order 9: covers done [3s]
+     order 10: covers done [5s]
+     order 11: covers done [8s]
+     order 12: covers done [10s]
+     order 13: covers done [11s]
+     order 14: covers done [11s]
+     order 15: covers done [11s]
+     [301..] all            : 3|d +0.237(0.012), 9|d +0.088(0.018), 5|d +0.064(0.012), 1 mod 8 +0.038(0.012), 7 mod 8 -0.015(0.012)
+     [301..] no exact cover : 3|d +0.139(0.012), 9|d +0.005(0.018), 5|d -0.003(0.012), 1 mod 8 +0.045(0.012), 7 mod 8 -0.011(0.012)
+     [301..] generic        : 3|d -0.015(0.012), 9|d +0.024(0.019), 5|d +0.002(0.013), 1 mod 8 +0.046(0.012), 7 mod 8 -0.011(0.012)
+     [1101..] all            : 3|d +0.217(0.005), 9|d +0.060(0.008), 5|d +0.052(0.005), 1 mod 8 +0.013(0.005), 7 mod 8 -0.011(0.005)
+     [1101..] no exact cover : 3|d +0.135(0.005), 9|d -0.009(0.008), 5|d -0.005(0.005), 1 mod 8 +0.014(0.005), 7 mod 8 -0.010(0.005)
+     [1101..] generic        : 3|d +0.010(0.005), 9|d -0.007(0.008), 5|d -0.005(0.005), 1 mod 8 +0.017(0.005), 7 mod 8 -0.012(0.005)
+     share of classes with 3 | |Aut|: training 0.0514, test 0.0447; classes with an exact cover: 37618
+  ok   every mechanism-fit coefficient printed in repunit_rarity.out (D) is reproduced (to 0.0005)
+  ok   3 | |Aut| shares 0.0514 / 0.0447
+     pre-registered G1-G4 recomputed: {'G1': 'PASS', 'G2': 'PASS', 'G3': 'PASS', 'G4': 'PASS'}
+  ok   G1-G4 all PASS on the auditor's data
+     prereg baseline quoted "+0.049 +- 0.016" for the training generic 1 mod 8; recomputed +0.046 +- 0.012 (F5 model)
+  ok   per-value table S / without exact cover / generic reproduced for the 14 repunit-side values
+  ok   |Aut| divides H for every class (free action)
+  ok   exact-cover flags agree with a slow independent re-implementation on 270 classes of orders 5-9 (52 with a cover)
+(X) the quoted post-model residuals of 63 (-1.68) and 127 (-0.55)
+     fit ranges reproducing (-1.68, -0.55): [(25, 1097, 'F6', np.float64(-1.679), np.float64(-0.554)), (25, 1098, 'F6', np.float64(-1.679), np.float64(-0.554)), (25, 1099, 'F6', np.float64(-1.681), np.float64(-0.554)), (27, 1097, 'F6', np.float64(-1.679), np.float64(-0.555)), (27, 1098, 'F6', np.float64(-1.679), np.float64(-0.555)), (27, 1099, 'F6', np.float64(-1.681), np.float64(-0.555))]
+  ok   the quoted residuals of 63 and 127 are reproducible by some natural fit range (the committed scripts do not print them)
+
+ALL CHECKS PASSED (13s)

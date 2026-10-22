@@ -1,9 +1,12 @@
 (a) ear increments of strong classes
      order 5 -> 6: v_2(Delta H) shares {1: 0.511, 2: 0.267, 3: 0.122, 4: 0.067, 5: 0.033}
+     order 5 -> 6: H(child) mod 8 given H(parent) mod 8, total-variation distance from uniform by parent residue {1: 0.083, 3: 0.167, 5: 0.233, 7: 0.2} (parents: 6 classes)
   ok   order 5: valuations are geometric (no inheritance of the 2-adic residue)
      order 6 -> 7: v_2(Delta H) shares {1: 0.525, 2: 0.246, 3: 0.118, 4: 0.054, 5: 0.024, 6: 0.033}
+     order 6 -> 7: H(child) mod 8 given H(parent) mod 8, total-variation distance from uniform by parent residue {1: 0.09, 3: 0.07, 5: 0.045, 7: 0.089} (parents: 35 classes)
   ok   order 6: valuations are geometric (no inheritance of the 2-adic residue)
      order 7 -> 8: v_2(Delta H) shares {1: 0.506, 2: 0.253, 3: 0.119, 4: 0.061, 5: 0.03, 6: 0.031}
+     order 7 -> 8: H(child) mod 8 given H(parent) mod 8, total-variation distance from uniform by parent residue {1: 0.014, 3: 0.023, 5: 0.016, 7: 0.022} (parents: 353 classes)
   ok   order 7: valuations are geometric (no inheritance of the 2-adic residue)
 (b) I(Omega, -1) on strong classes
      order 5: I(Omega,-1) ranges over [-6, -3], zero 0 times, H = I(Omega,-1) (mod 3) for all 6 classes
