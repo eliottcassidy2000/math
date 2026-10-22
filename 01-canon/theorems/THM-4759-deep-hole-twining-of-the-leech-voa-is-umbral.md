@@ -131,6 +131,9 @@ exactly the cusps 1/(h/e) for e ∈ S_X, all simple. Γ_0(h) + S_X is the CDH la
   deep hole, of order e and hence of Coxeter number e. In all 39 instances its type contains A_{e−1}: A1²⁴, A2¹²,
   A3⁸, A4⁶, A5⁴D4 (5 instances, never D4⁶), A7²D5², A8³ or A9²D6 (never D6⁴).
 
+  Partial reason. The orbifold of V_Λ by g_c^d is the divisor lattice L_e, and L_e ⊇ {x ∈ N : d | x·ρ_N}. So
+  R(L_e) contains X_d = {α : d | ht α}. On an A_{h−1} component, X_d = {e_i − e_j : i ≡ j mod d} = A_{e−1}^d.
+
 **(5′) The exponent law behind (5).** Let R be irreducible with rank ℓ, Coxeter number h and exponents m_1, …, m_ℓ.
 For a divisor e of h put J_e(m) = r(e − r), where r = m mod e. Then:
 
