@@ -124,5 +124,24 @@ X_1(9): F_p-rational supersingular points against 6 [p = 8 mod 9] n_p:
    X_0(9): []
    X_1(7): []
 
+== identity levels: primes p < 2000 where #X^ss(F_p) >= #X^ss / 2 ==
+   X_0(8): [[7, 4, 6], [23, 12, 22]]
+   X_1(8): []
+   X_1(9): []
+   X_0(7): [[5, 2, 4]]
+   X_0(9): [[5, 2, 4]]
+   X_1(7): []
+
+== local numbers over complete residue systems mod 4N ==
+   X_0(2): all 4 odd residues r mod 8 coprime to 2 follow the table
+   X_0(4): all 8 odd residues r mod 16 coprime to 4 follow the table
+   X_0(8): all 16 odd residues r mod 32 coprime to 8 follow the table
+   X_1(8): all 16 odd residues r mod 32 coprime to 8 follow the table
+   X_0(7): all 12 odd residues r mod 28 coprime to 7 follow the table
+   X_0(9): all 12 odd residues r mod 36 coprime to 9 follow the table
+   X_1(7): all 12 odd residues r mod 28 coprime to 7 follow the table
+   X_1(9): all 12 odd residues r mod 36 coprime to 9 follow the table
+   residue classes checked: 92, deviations: 0
+
 failures: 0
 ALL CHECKS PASSED

@@ -2,7 +2,7 @@
 
 **Session:** opus-2026-10-22-ssj (temporary identity: this worktree has no `.machine-id`), 2026-10-22.
 **Brief (relayed from the session working on HYP-9371):** merge an arXiv source and a set of classical identities; compute F, U, S at n = p^2, pq, p^2 q; relate them to the {p^2 q r, p, p^3} work and to the supersingular count / F_p-F_{p^2} split; look for genuine connections with Bailey mod 9, Dyson mod 27, Göllnitz–Gordon, Jackson–Slater, Rogers mod 14 and Rogers–Selberg.
-**Status:** pre-audit at the checkpoint; the audit record is in section 10. Labels are per item:
+**Status:** independently audited: PASS WITH CORRECTIONS ([report](../../04-computation/experiments/supersingular_fus_qseries_20261022/audit_ssj/REPORT.md)). All corrections are applied, and the audit's errors are logged as MISTAKE-666 (section 10). Labels are per item:
 * PROVED (elementary; classical in substance, no priority claimed);
 * CITED (Deuring, Eichler, Deligne–Rapoport, Katz–Mazur, Delfs–Galbraith, Ogg, Tate, Kubert);
 * FINITE-EXACT (scripts in [`04-computation/experiments/supersingular_fus_qseries_20261022/`](../../04-computation/experiments/supersingular_fus_qseries_20261022/README.md));
@@ -15,7 +15,7 @@ No HYP was opened. Every conjectural formula that came up was either proved here
 
 1. **The arXiv link is not a paper on supersingular curves.** arXiv:2610.05474v1 is Bizeul–Klartag–Lehec, *Presenting a proof of the Kannan–Lovász–Simonovits conjecture* (math.FA, 4 Oct 2026). Section 1 records what it proves and what it uses.
    * The supersingular facts in the brief are standard. They were checked computationally against standard formulas, not against that paper: for all primes 5 ≤ p < 3000 by one route, cross-checked by a second route for p < 700 and a third for p < 2000.
-   * Which paper was meant must be confirmed by the user.
+   * Which paper was meant must be confirmed by the user. By topic, plausible candidates are 2610.21488 and 2609.17819 (section 1).
 2. **F, U, S are counts of divisors, and at the three shapes they are constants.** Here D(N) = {d : d | N, 1 < d < N}, F = |D|, S = #squarefree elements of D, U = #prime elements of D (DB1).
 
    | N | D(N) | F | U | S | F − U − S |
@@ -26,19 +26,19 @@ No HYP was opened. Every conjectural formula that came up was either proved here
 
    These values do not depend on the primes (PROVED; trial division over all primes < 400 as a control).
    * The three shapes are exactly the solution sets of F = U + S − 1 (p^2, p^2 q) and F = U + S − 2 (pq). These are the first two levels below the balanced set {p, p^3, p^2 q r}.
-   * A new prime-adjunction recursion, δ(Nr) = 2δ(N) + U(N) − [N squarefree] − [N prime], builds the chain p^2 → p^2 q → p^2 q r (defects −1, −1, 0). Raising the exponent instead gives p^2 → p^3 (−1 → 0).
+   * A prime-adjunction recursion (a two-line consequence of DB1), δ(Nr) = 2δ(N) + U(N) − [N squarefree] − [N prime], builds the chain p^2 → p^2 q → p^2 q r (defects −1, −1, 0). Raising the exponent instead gives p^2 → p^3 (−1 → 0).
 3. **F, U, S cannot see supersingular counts.** No identity between them is possible.
    * F, U, S are prime-blind, while every supersingular count grows linearly in the prime: slope ψ(M)/12 plus a bounded correction.
-   * The only genuine meeting point is the bad reduction of X_0(N). The divisors of the ℓ-part of N index the components of the fibre at ℓ, and the supersingular points glue them.
+   * The natural meeting point is the bad reduction of X_0(N). The divisors of the ℓ-part of N index the components of the fibre at ℓ, and the supersingular points glue them.
    * At pq: g(X_0(pq)) = 2g(X_0(q)) + H(p,q) − 1 = 2g(X_0(p)) + H(q,p) − 1.
    * At p^2 q: g(X_0(p^2 q)) = 2g(X_0(p^2)) + H(q,p^2) − 1.
    * At p^2: three components (divisors 1, p, p^2) meet at the ss(p) supersingular points. The middle component, the unique element of D(p^2), has multiplicity p − 1.
 4. **The six identity families are three theta families, and their products are coordinates on genus-zero modular curves.**
-   * The three theta families sit at levels 7, 8, 9: Rogers mod 14 is Rogers–Selberg at q^2, Dyson mod 27 is Bailey at q^3, and Jackson–Slater is Göllnitz–Gordon at −q.
+   * The three theta families sit at levels 7, 8, 9. In their theta numerators, Rogers mod 14 is Rogers–Selberg at q^2, Dyson mod 27 is Bailey at q^3, and Jackson–Slater is Göllnitz–Gordon at −q.
    * Ratios of their product sides are Hauptmoduln of X_1(7), X_1(8), X_1(9) (explicit j-maps of degrees 24, 24, 36, verified to O(q^520)).
    * This is the genuine link to supersingular curves:
      * **mod 12:** X_1(N) has exactly (p−1)d_N/12 supersingular points, that is 2(p−1), 2(p−1), 3(p−1), with no mod-12 correction, because Γ_1(N) is torsion-free. Among X_0(7), X_0(8), X_0(9) only X_0(7) keeps a correction, mod 3, from its two elliptic points of order 3.
-     * **F_p / F_{p^2}:** on the supersingular locus the p^2-Frobenius is the diamond operator ⟨p⟩. It permutes the identities of each family through the class of p in (Z/N)^×/±1, which is the identities' own index set.
+     * **F_p / F_{p^2}:** on the supersingular locus the p^2-Frobenius is the diamond operator ⟨p⟩. It acts through the image of p in (Z/N)^×/±1, the group that indexes each family and permutes its product sides. The Galois group over F_{p^2} is ⟨p⟩, which is trivial for p ≡ ±1 mod N.
      * **class numbers:** #X^ss(F_p) = (h(−4p) s(floor) + [p ≡ 3 mod 4] h(−p) s(surface))/2. The local numbers s are explicit; for example (1 + (−p/7)) n_p on X_0(7), and on X_1(8) a rule that depends on p mod 16.
    * The moduli 14 and 27, the class-number-one reading of 7, 9, 14, 27, and the shapes of 9, 14, 12 (= p^2, pq, p^2 q) are typed NUMEROLOGY, each with a hostile test.
 
@@ -48,7 +48,13 @@ No HYP was opened. Every conjectural formula that came up was either proved here
 * The arXiv API and the HTML page (sha256 prefix `ebf2bf23e635b236`, fetched 2026-10-22) both give *Presenting a proof of the Kannan–Lovász–Simonovits conjecture*, by Pierre Bizeul, Boaz Klartag and Joseph Lehec, arXiv:2610.05474v1 [math.FA], 04 Oct 2026.
 * The full page text contains no "supersingular", "elliptic curve" or "j-invariant"; the only "elliptic" is elliptic regularity.
 * Sixteen neighbouring identifiers were checked through the arXiv API: 2610.05473 and 2610.05475; the transpositions 2610.05447, 2610.04574 and 2610.05744; and 05474 in eleven other months (2410, 2510, 2601–2609). None is about elliptic curves.
-* An arXiv API search for abstracts containing both "supersingular" and "j-invariant", sorted by date, returns 2609.11037 (supersingularity testing on twisted Hessian curves), 2609.03249 (memetic search for supersingular curves over F_p) and 2608.13371 (Gross vectors mod 2) as the most recent. They were listed, not read.
+* An arXiv API search for abstracts containing both "supersingular" and "j-invariant", sorted by date, returns 2609.11037 (supersingularity testing on twisted Hessian curves), 2609.03249 (memetic search for supersingular curves over F_p) and 2608.13371 (Gross vectors mod 2). These are recent, not the most recent.
+* The audit's broader search (all:supersingular, by date) lists later papers, among them:
+  * 2610.21488 (15 Oct), *Smoothness of shortest isogenies to Frobenius conjugates* (isogenies E → E^(p));
+  * 2610.10139, generating sets for maximal orders in quaternion algebras;
+  * 2609.22018, the supersingular isogeny problem in time p^{1/3+o(1)};
+  * 2609.17819, *Only finitely many modular Jacobians are supersingular modulo a given prime*.
+* 2610.21488 and 2609.17819 are the closest to the brief's F_p/F_{p^2} and level themes, so they are the candidates to offer the user. None was read beyond its abstract.
 * The brief's description fits any introduction to the subject, so the intended source is unknown.
 
 **What the KLS paper proves.**
@@ -75,9 +81,9 @@ Script: `supersingular_census.gp`, run on all 428 primes 5 ≤ p < 3000 with 0 f
 | every root lies in F_{p^2} | every irreducible factor of ss_p over F_p has degree ≤ 2, and ss_p is squarefree |
 | #{ss j ∈ F_p} = (h(−4p) + [p ≡ 3 (4)] h(−p))/2 (Delfs–Galbraith), i.e. h(−4p)/2, h(−p), 2h(−p) for p ≡ 1 (4), 7 (8), 3 (8) | linear factors against PARI `qfbclassno`, which is cross-checked by an independent reduced-form count |
 | #{conjugate pairs in F_{p^2} \ F_p} = g(X_0(p)^+) = (2g + 2 − h(−4p) − [p ≡ 3 (4)]h(−p))/4 | quadratic factors on 428 primes |
-| all ss j lie in F_p iff p ∈ {2,3,5,7,11,13,17,19,23,29,31,41,47,59,71} (Ogg 1975) | reproduced for p < 3000 |
+| all ss j lie in F_p iff p ∈ {2,3,5,7,11,13,17,19,23,29,31,41,47,59,71} (Ogg 1975) | reproduced for 5 ≤ p < 3000 (2 and 3 by hand) |
 
-Three routes compute ss_p.
+Two routes compute ss_p, and a third counts its F_p-roots.
 * **Route A (Hasse invariant):** E_{p−1} ≡ 1 (mod p) as a q-expansion. Hence ss_p(j) = j^δ (j − 1728)^ε f(j), where f is the polynomial part in j of 1/(Δ^m E_4^δ E_6^ε) and p − 1 = 12m + 4δ + 6ε.
 * **Route B (Legendre line):** the squarefree part of Res_λ(H_p(λ), 256(λ^2−λ+1)^3 − jλ^2(λ−1)^2). It equals route A on 123 primes p < 700. Auer–Top (math/0106273, §3; already in CORE-PAPERS) identifies the roots of the Deuring polynomial H_p with the supersingular Legendre parameters.
 * **Route C (point counting):** #{j ∈ F_p : a_p(E_j) = 0} equals the number of linear factors on 301 primes p < 2000.
@@ -130,7 +136,7 @@ This inherits and extends [ogg_triangular_chowla_20260927 §2](ogg_triangular_ch
 ## 4. Why F, U, S do not see supersingular counts, and where divisors and supersingular points meet
 
 **Obstruction** (PROVED, one line).
-* F, U, S are bounded functions of the exponent profile: F(p^2) = 1 for every p.
+* F, U, S are functions of the exponent profile only: F(p^2) = 1 for every p.
 * Every supersingular count at these levels grows linearly in a prime: ss(p) ≥ (p − 1)/12, H(p, q) ≥ (p − 1)(q + 1)/12.
 * So no identity of the form "count = expression in F, U, S" holds. The same applies to the F_p / F_{p^2} split, which depends on p through class numbers and residues (sections 2 and 6).
 
@@ -144,7 +150,7 @@ This inherits and extends [ogg_triangular_chowla_20260927 §2](ogg_triangular_ch
 
 | shape | bad fibres | genus identity (tested) |
 |---|---|---|
-| p^2 | at p: 3 components (1, p, p^2; the middle one of multiplicity p − 1) through the ss(p) supersingular points | (no Deligne–Rapoport form; the fibre is non-reduced) |
+| p^2 | at p: 3 components (1, p, p^2; the middle one of multiplicity p − 1) through the ss(p) supersingular points | (no Deligne–Rapoport form; the fibre is non-reduced for p ≥ 3, while at p = 2 the middle multiplicity is φ(2) = 1) |
 | pq | at p: 2 × X_0(q) glued at H(p,q); at q: 2 × X_0(p) glued at H(q,p) | g(X_0(pq)) = 2g(X_0(q)) + H(p,q) − 1 = 2g(X_0(p)) + H(q,p) − 1: on 1332 ordered pairs < 160 |
 | p^2 q | at q: 2 × X_0(p^2) glued at H(q, p^2); at p: 3 × X_0(q) through the H(p,q) points | g(X_0(p^2 q)) = 2g(X_0(p^2)) + H(q,p^2) − 1: on 408 pairs with p^2 q ≤ 40,000 |
 
@@ -207,6 +213,8 @@ GG_a-sum(−q)  ψ(q)    = JS_a-sum(q)    f(−q^2)         (a = 1, 3)
 * The minimal-model characters of S55 have the same ratios, because (q;q)_∞ cancels. So M7 = q^{−1} χ_2^2 χ_3/χ_1^3 for the M(2,7) characters χ_a ∝ θ_7(a)/(q;q)_∞. The characters are coordinates on X_1(7). This is the bridge between the conformal lane and this one: the same q-series in a different carrier (META-PATTERNS: "the same representation is not the same carrier").
 
 **Diamond operators** (FINITE-EXACT). The diamond ⟨d⟩ permutes the Klein forms, f_a ↦ f_{da}.
+* Convention: ⟨d⟩ is the moduli operator (E, ±P) ↦ (E, ±dP) of the Q-rational Z/N-model. On these coordinates it is realised by γ ∈ Γ_0(N) with upper-left entry ≡ d (mod N); the audit checked numerically that M7(γτ) = μ(M7) for γ = [[2,1],[7,4]].
+* In the lower-right convention of Diamond–Shurman the same map is ⟨2⟩^{−1}. The Frobenius test T4 does not depend on this choice.
 * On M7, ⟨2⟩ is x ↦ (x − 1)/x, which has order 3. It permutes the width-1 cusps 0, 1, ∞.
 * On M9, ⟨2⟩ is the same Möbius map, x ↦ (x − 1)/x.
 * On x = 1/M8, ⟨3⟩ is x ↦ 1/x. This is equivalent to the palindromic j-map.
@@ -242,7 +250,7 @@ This is the whole precise content of "the moduli against the supersingular count
 **Proposition.** Let p ∤ N and N ≥ 4. On the supersingular locus of X_1(N) over F̄_p, the p^2-Frobenius acts as the diamond operator ⟨p⟩.
 
 *Proof.*
-1. Let E/F_{p^2} have Frobenius π_{p^2} = −p. Every subgroup of E is then π-stable, so every isogeny out of E is defined over F_{p^2}, and its target again has Frobenius −p.
+1. Let E/F_{p^2} have Frobenius π_{p^2} = −p. For example, take the base change of any supersingular E_0/F_p: one exists for p ≥ 5 since n_p ≥ 1, and a_p = 0 gives π_p^2 = −p. Every subgroup of E is then π-stable, so every isogeny out of E is defined over F_{p^2}, and its target again has Frobenius −p.
 2. The supersingular isogeny graph is connected, so every supersingular j has such a model.
 3. Then σ(E, ±P) = (E, ±π P) = (E, ±pP) = ⟨p⟩(E, ±P). ∎
 
@@ -264,12 +272,12 @@ Tests (all primes 5 ≤ p < 400):
   | 9 (g = 2) | p ≡ ±1 | p ≡ ±2 | p ≡ ±4 |
   | 8 (g = 3) | p ≡ ±1 | p ≡ ±3 | — |
 
-**Reading for the identities.** The diamond operators permute the Klein forms, so Frobenius on the supersingular locus permutes each family's product sides through the class of p in (Z/N)^×/±1.
+**Reading for the identities.** Frobenius acts on points; the diamond operators act on functions. The operator ⟨p⟩ that equals Frobenius on the supersingular locus is the one that permutes each family's product sides (the Klein forms) by f_a ↦ f_{pa}.
 * The three Rogers–Selberg products are cycled for p ≢ ±1 (mod 7).
 * The three Bailey products are cycled for p ≢ ±1 (mod 9).
 * The two Göllnitz–Gordon products are exchanged for p ≡ ±3 (mod 8).
 
-So the F_{p^2}-Frobenius acts through the identity index set (Z/N)^×/±1, as its element p; its orbits have length k(p) = ord(p). At level 1 the group is trivial, which is why every supersingular j lies in F_{p^2}.
+So the F_{p^2}-Frobenius acts through the image of p in (Z/N)^×/±1. The Galois group over F_{p^2} is ⟨p⟩, of order k(p), trivial for p ≡ ±1 mod N. At level 1 the group is trivial, consistent with every supersingular j lying in F_{p^2}. That fact is an input to the proof, not a consequence of it.
 
 ### 6.3 Class-number content: F_p-rational supersingular points (PROVED modulo CITED inputs; FINITE-EXACT)
 
@@ -282,13 +290,18 @@ where s_X(O) is the number of level structures of type X fixed by π on O/NO. Fo
 *Ingredients.*
 * (a) **Delfs–Galbraith** (CITED). For a supersingular curve over F_p, End_{F_p}(E) is Z[√−p] (the floor) or, only for p ≡ 3 mod 4, Z[(1+√−p)/2] (the surface). There are h(O) F_p-classes with End_{F_p} = O, and each supersingular j ∈ F_p has two F_p-classes. The induced count n_p = (h(−4p) + [p ≡ 3 (4)]h(−p))/2 is checked in section 2.
 * (b) **Tate's theorem** (CITED). T_ℓ E is free of rank one over O ⊗ Z_ℓ for ℓ ≠ p, since quadratic orders are Gorenstein. So π acts on E[N] as multiplication on O/NO.
-* (c) **A twisted Burnside lemma** (elementary). The F_p-points of X over a supersingular j are the Frobenius-stable orbits of G = Aut(E)/±1 on level structures. Their number is (1/|G|) ∑_{g ∈ G} #Fix(g π). The two F_p-twists of j correspond to the classes of gπ, which gives the factor 1/2 over the two F_p-classes per j, including at j = 0 and 1728.
+* (c) **A twisted Burnside lemma** (elementary). The F_p-points of X over a supersingular j are the Frobenius-stable orbits of G = Aut(E)/±1 on level structures. Their number is (1/|G|) ∑_{g ∈ G} #Fix(g π). To pass to the two F_p-classes of j:
+  * for generic j, G is trivial and the two twists have Frobenius ±π, which act identically on level structures;
+  * at j = 1728 (G = Z/2) the two twists correspond to the two classes of gπ;
+  * at j = 0 (G = Z/3) all gπ are conjugate, so there is one twisted class, and the two twists again differ by −1.
+
+  In every case the count is the average of s over the two F_p-classes of j, which gives the factor 1/2.
 
 *Local numbers* (exact enumeration on (Z/N)^2, `level_fp_counts.gp`, `level_supersingular.gp`):
 
 | X | s(floor) | s(surface) | #X^ss(F_p) |
 |---|---|---|---|
-| X_0(ℓ), X_0(ℓ^2), ℓ odd (here 7, 9) | 1 + (−p/ℓ) | 1 + (−p/ℓ) | (1 + (−p/ℓ)) n_p |
+| X_0(ℓ^e), ℓ an odd prime ≠ p: here N = 7 (ℓ = 7, e = 1) and N = 9 (ℓ = 3, e = 2) | 1 + (−p/ℓ) | 1 + (−p/ℓ) | (1 + (−p/ℓ)) n_p |
 | X_1(7), X_1(9) | 6[p ≡ −1 mod N] | 6[p ≡ −1 mod N] | 6 [p ≡ −1 mod N] n_p |
 | X_0(2) | 1 | 3 | (h(−4p) + 3[p ≡ 3 (4)] h(−p))/2 |
 | X_0(4) | 0 (p ≡ 1 mod 4), 2 (p ≡ 3 mod 4) | 0 (p ≡ 3 mod 8), 4 (p ≡ 7 mod 8) | 3 [p ≡ 3 mod 4] h(−p) |
@@ -301,19 +314,27 @@ Verification:
   * For X_1(8) the obvious ansatz "a constant multiple of n_p for each p mod 8" fails at p ≡ 7 mod 8 (ratios 2 and 6 both occur).
   * The local computation explains the failure: at p ≡ 7 mod 8 the surface number depends on p mod 16. The mod-16 rule then holds on all 301 primes.
 * **The local formula** on 1505 (curve, prime) pairs.
+* **Complete residue systems.** s(floor) depends only on p mod N, and s(surface) only on p mod 4N.
+  * All 92 odd residue classes mod 4N, over the eight rows, follow the table, so the table holds for every prime p ≥ 5 with p ∤ N (`level_fp_counts.gp`; the audit's `audit_local_numbers.py` is an independent check).
+  * The closed forms in the last column also use h(−4p) = h(−p) for p ≡ 7 mod 8 and h(−4p) = 3h(−p) for p ≡ 3 mod 8, p > 3. This is the class number formula for orders.
 * **Independent check through Atkin–Lehner traces** (`al_genus_check.gp`).
   * The Deligne–Rapoport picture gives g(X_0(Np)/w_p) = g(X_0(N)) + (H(p,N) − #X_0(N)^ss(F_p))/2, the level-N form of g(X_0(p)^+) = (ss − ss(F_p))/2.
   * The left side is computed from PARI's Atkin–Lehner operator on S_2(Γ_0(Np)), independently of the Hauptmodul root counts.
   * Result: all 114 pairs agree (N ∈ {1, 2, 4, 7, 8, 9}, 5 ≤ p < 150, Np ≤ 300; 0 mismatches). Example: g(X_0(46)/w_23) = 0 with H(23, 2) = 6 = #X_0(2)^ss(F_23).
 
-For ℓ = 7 and 9 the formula reads #X_0(ℓ^e)^ss(F_p) = (1 + (−p/ℓ)) n_p. For example, X_0(7) has no F_p-rational supersingular point when (p/7) = 1.
+For N = 7 (ℓ = 7) and N = 9 (ℓ = 3, e = 2) the formula reads #X_0(ℓ^e)^ss(F_p) = (1 + (−p/ℓ)) n_p. For example, X_0(7) has no F_p-rational supersingular point when (p/7) = 1, and X_0(9) has none when p ≡ 1 mod 3.
 
 **Level-N Ogg lists** (p < 2000): the primes for which every supersingular point of the curve is F_p-rational.
 * X_0(2): {5, 7, 11, 23}.
 * X_0(4): {7}.
 * X_0(7), X_0(8), X_0(9), X_1(7), X_1(8), X_1(9): empty.
 
-By the genus relation above, this is the generalised Ogg condition g(X_0(Np)/w_p) = g(X_0(N)). For N ≥ 2 the list is finite, since n_p = O(√p log p) while H(p, N) is of order ψ(N) p/12. At the identity levels the split is F_{p^2}-heavy for every p.
+* For the X_0(N) lists, the genus relation above makes this the generalised Ogg condition g(X_0(Np)/w_p) = g(X_0(N)).
+* For every N the list is finite (N = 1 gives Ogg's fifteen), since n_p = O(√p log p) while the total grows like p. The lists above are complete only for p < 2000; no explicit class-number bound was worked out.
+* At the identity levels the F_p-rational points are a minority for every 5 ≤ p < 2000, with these exceptions (`level_fp_counts.out`):
+  * X_0(8) is F_p-heavy at p = 7 (4 of 6) and p = 23 (12 of 22);
+  * X_0(7) and X_0(9) split evenly at p = 5 (2 of 4).
+* For large p a minority is forced by the same size argument.
 
 ## 7. Connection ledger
 
@@ -328,10 +349,10 @@ Columns: source → target, map, what is preserved and lost, cheapest decisive t
 | C5 | moduli → "supersingular count mod 12" | mass formula on X_1(N), X_0(N) | the elliptic-point correction | root counts on the coordinates, 75–76 primes each | PROVED + FINITE-EXACT: no correction on X_1(N); only X_0(7) keeps mod 3 |
 | C6 | identity index (Z/N)^×/±1 → F_{p^2}-Frobenius | Frobenius = ⟨p⟩ | orbit lengths; exceptional fibres | factor degrees over F_{p^2}; x^{p^2} = μ^e(x) | PROVED + FINITE-EXACT |
 | C7 | moduli → class numbers | (h(−4p) s_floor + h(−p) s_surface)/2 | local factors at N | fibre counts, totals, local formula, Atkin–Lehner traces | PROVED (mod CITED) + FINITE-EXACT |
-| C8 | 14, 27 → the genus-one curves X_0(14), X_0(27) (27a: CM by discriminant −27) | none | — | C3: the products are θ_7(a; q^2), θ_9(a; q^3); no elliptic-curve structure of X_0(14) or X_0(27) is used | NUMEROLOGY |
+| C8 | 14, 27 → the genus-one curves X_0(14), X_0(27) (X_0(27) = 27a1: j = 0, CM by discriminant −3; discriminant −27 belongs to the isogenous curves with j = −12288000) | none | — | C3: the products are θ_7(a; q^2), θ_9(a; q^3); no elliptic-curve structure of X_0(14) or X_0(27) is used | NUMEROLOGY |
 | C9 | moduli 7, 9, 14, 27 → class-number-one discriminants | none | — | −9 and −14 are not discriminants; h(−36) = 2, h(−56) = 4 | NUMEROLOGY |
 | C10 | shapes 9 = p^2, 14 = pq, 12 = p^2 q (the period of ss(p)); 7 = p, 8 and 27 = p^3, 60 = p^2 q r; \|PSL_2(F_l)\| = 6, 12, 60 = pq, p^2 q, p^2 q r (defects −2, −1, 0) | none for F, U, S | — | F(12) = φ(12) = 4 but F(18) = 4, φ(18) = 6; A_5 has no subgroups of order 15, 20, 30 although F(60) counts them | NUMEROLOGY; the genuine parts are 12 = \|D_{−4}\|·\|D_{−3}\| and #ss(X(l)) = (p−1)\|PSL_2(F_l)\|/12 |
-| C11 | Ogg's fifteen primes → the identities | none | — | the level-7, 8, 9 Ogg lists are empty (section 6.3) | NUMEROLOGY for the list (agrees with S55 §7); the genuine generalisation is the level-N Ogg condition |
+| C11 | Ogg's fifteen primes → the identities | none | — | the level-7, 8, 9 Ogg lists are empty for p < 2000 (section 6.3) | NUMEROLOGY for the list (agrees with S55 §7); the genuine generalisation is the level-N Ogg condition |
 | C12 | S55's characters (conformal lane) → this lane | the same q-series | characters ↔ coordinates on X_1(N) | M7 = q^{−1} χ_2^2 χ_3/χ_1^3 identically | STRUCTURAL (same series, different carrier) |
 
 ## 8. Inheritance pass and board
@@ -354,7 +375,7 @@ Columns: source → target, map, what is preserved and lost, cheapest decisive t
 * No consequence for LRC(14), Collatz or tournaments.
 * No arithmetic consequence of F = U + S. THM-4733's "NOT PROVED: any arithmetic consequence for F = U + S" stands, and C1 shows that none of the identity type can exist.
 * The KLS paper is recorded, not audited.
-* No HYP was opened. Every formula that started as a fit (X_1(8) by p mod 16, the 2-power tables) is a theorem once the local numbers are computed.
+* No HYP was opened. Every formula that started as a fit (X_1(8) by p mod 16, the 2-power tables) is a theorem once the local numbers are computed. s(floor) depends only on p mod N and s(surface) only on p mod 4N, so the complete residue enumeration covers every prime.
 
 **Next questions.**
 1. Which supersingular paper did the user intend (section 1)?
@@ -367,4 +388,20 @@ Columns: source → target, map, what is preserved and lost, cheapest decisive t
 Commands, run order and times are in the experiment [README](../../04-computation/experiments/supersingular_fus_qseries_20261022/README.md). All outputs end with `ALL CHECKS PASSED` unless stated below.
 * `fus_shapes.out`, `supersingular_census.out`, `qseries_identities.out`, `level_hauptmoduln.out`, `level_supersingular.out`, `level_fp_counts.out`, `dr_genus.out`, `numerology_checks.out`: all pass.
 * `al_genus_check.out`: 114 pairs, 0 mismatches, ALL CHECKS PASSED. The run took 270 s with about 1 GB peak memory; a 512 MB PARI stack overflowed when the level cap was 700.
-* Audit: pending (an independent adversarial audit is run before this note is marked audited).
+* **Audit** ([REPORT](../../04-computation/experiments/supersingular_fus_qseries_20261022/audit_ssj/REPORT.md); its scripts and outputs are beside it). The verdict is PASS WITH CORRECTIONS.
+  * The audit independently re-derived everything proved here: point counting, Tate normal forms, Hecke traces, numerical Hauptmodul evaluation at three points of the upper half-plane, and its own genus formula.
+  * Corrections applied (MISTAKE-666):
+    * F1: "F_{p^2}-heavy for every p" was false (X_0(8) at p = 7, 23).
+    * F2: the "most recent" arXiv list was wrong.
+    * F3: "ℓ = 7 and 9" should be ℓ = 7 and ℓ = 3, e = 2.
+    * F4: X_0(27) has j = 0 and CM by discriminant −3, not −27.
+    * F5: the route ranges were overstated.
+    * F6: the diamond convention is now stated.
+    * F7: the "Galois group" reading was overclaimed.
+    * F8: "new" was dropped.
+    * F9: the twist wording in 6.3(c) was corrected.
+    * F10: the model step in the 6.2 proof was filled in.
+    * F11: the Ogg-list ranges are now stated.
+    * F12: minor wording.
+    * F13: `level_hauptmoduln.gp` appended to `level_relations.gp` on rerun; it now deletes the file first.
+  * No error reached a proved result or changed a ledger verdict.

@@ -138,6 +138,49 @@ slocal(M, N, typ) = {
       for (i = 1, #roots, tot += #polrootsmod(A - lift(roots[i]) * B, p));
       if (tot == more[c][5](p), listput(L, p)));
     print("   ", more[c][1], ": ", Vec(L)));
+  \\ F_p-heavy or even cases at the identity levels (audit finding F1): primes where at least half of the
+  \\ supersingular points are F_p-rational
+  print("\n== identity levels: primes p < ", PMAX, " where #X^ss(F_p) >= #X^ss / 2 ==");
+  my(lev = [[3, "X_0(8)", (p) -> eichler(p, 8)], [4, "X_1(8)", (p) -> 2 * (p - 1)], [5, "X_1(9)", (p) -> 3 * (p - 1)]]);
+  for (c = 1, #lev,
+    my(L = List(), k = lev[c][1]);
+    forprime (p = 5, PMAX - 1, if (k == 5 && p == 3, next);
+      my(key = if (k == 5, p % 9, p % 8), lst = Vec(mapget(data[k], key)), actual = select(v -> v[1] == p, lst)[1][5], total = lev[c][3](p));
+      if (2 * actual >= total, listput(L, [p, actual, total])));
+    print("   ", lev[c][2], ": ", Vec(L)));
+  for (c = 1, #more,
+    my(L = List(), A = more[c][2], B = more[c][3], bp = more[c][4]);
+    forprime (p = 5, PMAX - 1, if (p == bp, next);
+      my(roots = polrootsmod(ssA(p), p), tot = 0, total = more[c][5](p));
+      for (i = 1, #roots, tot += #polrootsmod(A - lift(roots[i]) * B, p));
+      if (2 * tot >= total, listput(L, [p, tot, total])));
+    print("   ", more[c][1], ": ", Vec(L)));
+
+  \\ complete residue enumeration of the local numbers: s(floor) depends only on p mod N and s(surface)
+  \\ (p = 3 mod 4) only on p mod 4N, so checking every odd residue class mod 4N covers every prime p >= 5
+  print("\n== local numbers over complete residue systems mod 4N ==");
+  my(rules = [
+    [2, 0, (r) -> 1, (r) -> 3],
+    [4, 0, (r) -> if (r % 4 == 1, 0, 2), (r) -> if (r % 8 == 3, 0, 4)],
+    [8, 0, (r) -> 4 * (r % 8 == 7), (r) -> 4 * (r % 8 == 7)],
+    [8, 1, (r) -> 4 * (r % 8 == 7), (r) -> 8 * (r % 16 == 15)],
+    [7, 0, (r) -> 1 + kronecker(-r, 7), (r) -> 1 + kronecker(-r, 7)],
+    [9, 0, (r) -> 1 + kronecker(-r, 3), (r) -> 1 + kronecker(-r, 3)],
+    [7, 1, (r) -> 6 * (r % 7 == 6), (r) -> 6 * (r % 7 == 6)],
+    [9, 1, (r) -> 6 * (r % 9 == 8), (r) -> 6 * (r % 9 == 8)]]);
+  my(rdev = 0, rtot = 0);
+  for (k = 1, #rules,
+    my(N = rules[k][1], typ = rules[k][2], M = 4 * N, nres = 0);
+    for (r = 1, M - 1, if (r % 2 == 0 || gcd(r, N) > 1, next);
+      my(sf = slocal(Mod([0, -r; 1, 0], N), N, typ), ss);
+      nres++; rtot++;
+      if (sf != rules[k][3](r), rdev++; print("   floor rule fails: N=", N, " typ=", typ, " r=", r, ": ", sf));
+      if (r % 4 == 3, my(cc = (1 + r) / 4, W = Mod([0, -cc; 1, 1], N));
+        ss = slocal(2 * W - 1, N, typ);
+        if (ss != rules[k][4](r), rdev++; print("   surface rule fails: N=", N, " typ=", typ, " r=", r, ": ", ss))));
+    print("   ", if (typ, "X_1(", "X_0("), N, "): all ", nres, " odd residues r mod ", M, " coprime to ", N, " follow the table"));
+  print("   residue classes checked: ", rtot, ", deviations: ", rdev);
+  bad += rdev;
   print("\nfailures: ", bad);
   if (bad == 0, print("ALL CHECKS PASSED"));
 }

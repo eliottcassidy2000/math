@@ -186,7 +186,8 @@ norm_rel(T, M, d, K) = {
   print("  N = 8: <3> acts as x -> 1/x on x = 1/M8 (equivalent to the palindromic j-map checked above)");
 }
 
-\\ save relations for the supersingular script
+\\ save relations for the supersingular script (write appends, so remove any previous copy first)
+system("rm -f level_relations.gp");
 write("level_relations.gp", "A5=", A5, ";B5=", B5, ";P8=", P8, ";Q8=", Q8, ";A7=", A7, ";B7=", B7, ";A8=", A8, ";B8=", B8, ";A9=", A9, ";B9=", B9, ";MU=", MU, ";MU9=", MU9, ";");
 print("\nrelations written to level_relations.gp");
 quit;

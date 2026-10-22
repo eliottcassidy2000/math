@@ -19831,3 +19831,41 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - A census test supports only the direction it computes; test the converse before writing "exactly when".
   - A verification must not divide out the quantity it verifies.
   - Coefficient growth is set by the dominant cusp, so check q -> roots of unity as well as q -> 1.
+
+## MISTAKE-666 (2026-10-22, supersingular / divisor-shape / q-series note `05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md` (opus-2026-10-22-ssj, pre-audit commit 33f9f99615); found by the independent audit `04-computation/experiments/supersingular_fus_qseries_20261022/audit_ssj/REPORT.md`) -- a "for every p" that contradicted the note's own output rows, a newest-papers list taken from a narrow search, l and l^e conflated in a Legendre symbol, a misremembered CM discriminant, and overstated route ranges
+
+- **Claims.**
+  - Section 6.3: "At the identity levels the split is F_{p^2}-heavy for every p."
+  - Section 1: "The most recent arXiv papers on supersingular curves are 2609.11037, 2609.03249, 2608.13371."
+  - Section 6.3: "For l = 7 and 9 ... #X_0(l^e)^ss(F_p) = (1 + (-p/l)) n_p", and the table row "X_0(l), X_0(l^2), l odd (here 7, 9)".
+  - Ledger row C8: "X_0(27) (27a: CM by discriminant -27)".
+  - Sections 0 and 2: "for all primes 5 <= p < 3000 by three independent routes" and "Three routes compute ss_p".
+  - Minor:
+    - an unstated diamond-operator convention;
+    - "the identity index set is the Galois group of the F_{p^2}-structure ... which is why every supersingular j lies in F_{p^2}";
+    - "new" for a two-line consequence of DB1;
+    - the twist wording at generic j;
+    - the Ogg-list range.
+- **First failed implications.**
+  - **Exceptions in the note's own output.**
+    - al_genus_check.out contains the rows [8,7,5,1,6,4] and [8,23,21,5,22,12]. So X_0(8) is F_p-heavy at p = 7 (4 of 6) and p = 23 (12 of 22), and X_0(7), X_0(9) split evenly at p = 5.
+    - The asymptotic size argument (n_p = O(sqrt(p) log p)) was read as a statement for every p.
+  - **Narrow search.** The list came from abstracts containing both "supersingular" and "j-invariant". A plain all:supersingular search lists later papers: 2610.21488, 2610.10139, 2609.22018, 2609.17819.
+  - **l versus l^e.** (-p/9) = 1 for every p != 3; the local factor for N = 9 is 1 + (-p/3). The scripts used (-p/3); only the prose conflated the two.
+  - **CM discriminant.**
+    - 27a1 = [0,0,1,0,-7] = X_0(27) has c_4 = 0, so j = 0 and CM by -3. Discriminant -27 (j = -12288000) belongs to other curves in the isogeny class.
+    - The value was recalled, not computed.
+  - **Ranges.**
+    - Route A covers 428 primes p < 3000.
+    - Route B covers 123 primes p < 700.
+    - Route C covers 301 primes p < 2000, and it counts F_p-roots rather than computing ss_p.
+- **Strongest survivor.**
+  - The audit re-derived every proved result by independent routes: point counting, Tate normal forms, Hecke traces, numerical Hauptmodul evaluation and its own genus formula.
+  - No error reached a proved result or a ledger verdict. The corrected statements are in the note.
+  - A complete residue enumeration (92 classes) now covers the local-number table for every prime.
+- **Missing coordinates.**
+  - Before writing "for every p", scan the exception rows already present in the session's own outputs.
+  - A "most recent" bibliographic claim needs the broadest search, not a conjunction of keywords.
+  - When a formula is stated for prime powers, keep l and l^e separate in every symbol.
+  - Compute an invariant (here j, via c_4) before using it in a numerology row.
+  - State each verification route's range separately.
