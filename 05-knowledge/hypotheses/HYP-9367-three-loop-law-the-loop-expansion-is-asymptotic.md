@@ -109,6 +109,17 @@ The checks at `q = 43, 59, 83` approach these limits like `1/q` (`drt_c2_terms.o
 * **Data.** The exact values `n²(κ/e − 1 + 3/(2n)) = 3.19, 3.12/3.13, 3.10–3.11, 3.09, 3.10` at `n = 15..31` scatter around `25/8 = 3.125`, with `O(1/n)` third-order corrections.
 * That the constants 25, 29, 21, 189 echo the prompt's numbers is NUMEROLOGY.
 
+## Four loops seen directly: one five-vertex statistic fixes `H` of doubly regular 23-tournaments
+
+Through three loops every doubly regular tournament of one order is identical. Four-loop cores have up to 6 vertices, so the first non-universal terms see the 5- and 6-vertex censuses.
+
+Data: 9 classes at order 23, namely `P_23` and 8 non-Paley classes from `drt_anneal.c`, nauty-distinct (`drt_census_hierarchy.out`).
+* **One parameter.** The 5-vertex census differences have rank 1 across the 11 census types. One free five-vertex parameter remains, for example the number `TT5` of transitive 5-sets: 1466–1494 for the non-Paley classes, 1518 for `P_23`.
+* **Linear law.** Over the 8 non-Paley classes, `H = 1.575385·10^16 + 4.126153·10^9·TT5`, with maximal relative residual `1.7·10^(−7)`, against a spread of `7.3·10^(−6)`. Each extra transitive 5-set is worth `+2.6·10^(−7)` of `H`.
+* **Equal censuses.** The two classes with equal 5-censuses (audit 2's `D_23.2`, `D_23.3`; their 6-censuses differ) agree to `2.8·10^(−8)`.
+* **Paley is off the line** by `+5.7·10^(−6)`. Its census lies far from the others, and its 6-census presumably differs too.
+* So the non-universal part of `H` for doubly regular tournaments is organised level by level: five-vertex structure first (about `10^(−5)`), then six-vertex structure (below `10^(−7)`). This is what the loop expansion predicts (FINITE-EXACT).
+
 ## Status of the expansion
 
 The coefficients grow with the order: excess-2 clusters carry Möbius weights up to `(s−1)!`, and `q² X_2 ≈ 29` against `c_2 ≈ 3`. So the loop expansion is presumably asymptotic, not convergent. The non-perturbative alternating end (HYP-9366) is exponentially small and invisible to it.

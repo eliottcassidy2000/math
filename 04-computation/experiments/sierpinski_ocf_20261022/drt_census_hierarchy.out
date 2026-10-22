@@ -1,0 +1,43 @@
+9 distinct classes (P_23 included); H(P_23) = 15760206976379349
+  classes 0,1: same 5-census False; |H_i/H_j - 1| = 3.267e-06
+  classes 0,2: same 5-census False; |H_i/H_j - 1| = 3.240e-06
+  classes 0,3: same 5-census False; |H_i/H_j - 1| = 1.998e-06
+  classes 0,4: same 5-census False; |H_i/H_j - 1| = 3.734e-06
+  classes 0,5: same 5-census False; |H_i/H_j - 1| = 4.029e-06
+  classes 0,6: same 5-census False; |H_i/H_j - 1| = 1.594e-06
+  classes 0,7: same 5-census False; |H_i/H_j - 1| = 8.299e-07
+  classes 0,8: same 5-census False; |H_i/H_j - 1| = 1.611e-05
+  classes 1,2: same 5-census True; |H_i/H_j - 1| = 2.767e-08
+  classes 1,3: same 5-census False; |H_i/H_j - 1| = 1.269e-06
+  classes 1,4: same 5-census False; |H_i/H_j - 1| = 7.001e-06
+  classes 1,5: same 5-census False; |H_i/H_j - 1| = 7.296e-06
+  classes 1,6: same 5-census False; |H_i/H_j - 1| = 4.861e-06
+  classes 1,7: same 5-census False; |H_i/H_j - 1| = 4.097e-06
+  classes 1,8: same 5-census False; |H_i/H_j - 1| = 1.937e-05
+  classes 2,3: same 5-census False; |H_i/H_j - 1| = 1.241e-06
+  classes 2,4: same 5-census False; |H_i/H_j - 1| = 6.974e-06
+  classes 2,5: same 5-census False; |H_i/H_j - 1| = 7.269e-06
+  classes 2,6: same 5-census False; |H_i/H_j - 1| = 4.833e-06
+  classes 2,7: same 5-census False; |H_i/H_j - 1| = 4.069e-06
+  classes 2,8: same 5-census False; |H_i/H_j - 1| = 1.935e-05
+  classes 3,4: same 5-census False; |H_i/H_j - 1| = 5.733e-06
+  classes 3,5: same 5-census False; |H_i/H_j - 1| = 6.028e-06
+  classes 3,6: same 5-census False; |H_i/H_j - 1| = 3.592e-06
+  classes 3,7: same 5-census False; |H_i/H_j - 1| = 2.828e-06
+  classes 3,8: same 5-census False; |H_i/H_j - 1| = 1.810e-05
+  classes 4,5: same 5-census False; |H_i/H_j - 1| = 2.949e-07
+  classes 4,6: same 5-census False; |H_i/H_j - 1| = 2.140e-06
+  classes 4,7: same 5-census False; |H_i/H_j - 1| = 2.904e-06
+  classes 4,8: same 5-census False; |H_i/H_j - 1| = 1.237e-05
+  classes 5,6: same 5-census False; |H_i/H_j - 1| = 2.435e-06
+  classes 5,7: same 5-census False; |H_i/H_j - 1| = 3.199e-06
+  classes 5,8: same 5-census False; |H_i/H_j - 1| = 1.208e-05
+  classes 6,7: same 5-census False; |H_i/H_j - 1| = 7.640e-07
+  classes 6,8: same 5-census False; |H_i/H_j - 1| = 1.451e-05
+  classes 7,8: same 5-census False; |H_i/H_j - 1| = 1.528e-05
+5-census types: 11 ; rank of census differences: 1
+  fit H/H(P) - 1 on the first 1 census direction(s): max |resid| = 2.523e-06 (data range -1.937e-05..-1.208e-05)
+  census coordinates of each class (first direction): [334.66 435.06 435.06 401.6  217.53 200.8  284.46 301.2 ]  y: ['-1.611e-05', '-1.937e-05', '-1.935e-05', '-1.810e-05', '-1.237e-05', '-1.208e-05', '-1.451e-05', '-1.528e-05']
+TT5 counts: [1478, 1466, 1466, 1470, 1492, 1494, 1484, 1482, 1518]  (Paley index 8 )
+  non-Paley fit H = 1.575385e+16 + 4.126153e+09 TT5: max relative residual 1.657e-07 (spread of H/H(P): 7.296e-06)
+  Paley off the line by +5.685e-06 (relative)
