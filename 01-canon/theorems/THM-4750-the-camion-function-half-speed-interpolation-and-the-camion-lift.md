@@ -31,7 +31,7 @@ status: >
   - the quadratic law directly for p <= 59 (17158 checks);
   - the root table over 1226 primes 7 <= p <= 10^4 (4906 zero classes);
   - the Camion-Wieferich primes p <= 10^5 are exactly 3, 13, 22409 (cw_fast.c and the audit's independent FLINT search
-    b6), with h(22409) = 2 (two codes);
+    b6), and there are none in (10^5, 10^6] (cw_flint_np.py), with h(22409) = 2 (two codes);
   - the 2-adic quasi-period;
   - n* mod 2^140, not a rational of height <= 2^69.5, equal to the log-ratio closed form to 90 bits;
   - the r = 3 and r = 4 root statistics (random-cubic and random-quartic proportions).
@@ -364,6 +364,8 @@ So, generically, the second-order Camion divisor of a zero class has degree 2, t
   * No relation `ρ_C ≡ αq_2 + βw_p + γB_(p−3) + δ` with small rationals survives past `p = 67`.
 * **Structure of `κ` and `ρ_C`.** `κ` is not multiplicative. As a function on `F_p^×` (`p ≤ 19`), `ρ_C` has no symmetry under `a ↦ 1/a` or `a ↦ −a`, and its Lagrange degree is the generic `p − 2`.
 * **Explicit formula** (second audit finding 4). `ρ_C(a) ≡ ε_a·[x^p] (Σ_(k<p) a^C(k,2) x^k/k!)^(−1) (mod p)`, the quantity `u_p` of `cw_fast.c`. It visibly depends only on `a mod p`. Checked at 301 primes.
+  * *Combinatorial reading* (`camion_residue_orbits.out`). For `a = 2`, `u_p = (2^C(p,2) − s(p))/p!`. So `ρ_C(2) ≡ −ε·ns(p)/p (mod p)`, where `ns(p)` counts non-strong labelled tournaments and `ns(p)/p` is the number of their rotation orbits on `Z_p`. `Z_p` acts freely on them, since a rotation-invariant tournament is a circulant and hence strong.
+  * The Camion–Wieferich condition then reads: the number of rotation orbits of non-strong tournaments on `Z_p` is `≡ −ε q_2(p)/2 (mod p)`. Checked at 76 primes `p < 400`.
 
 **Reading.**
 * Each residue `a mod p` has two canonical `p`-adic lifts:
@@ -382,8 +384,8 @@ So, generically, the second-order Camion divisor of a zero class has degree 2, t
   * `cw_fast.c` uses `s(p) ≡ ε + p·u_p (mod p²)` with `u_p = [x^p] 1/T_(<p)(x)`.
   * The audit's independent quasi-linear FLINT search (b6) covered all 9590 primes `5 ≤ p ≤ 10^5`.
 * **`h(22409) = 2`.** It was found by `tower_height.c` and confirmed by audit b5 through `D(22409) mod p³`. The root `l = 0` is simple.
-* **The search to `10^6`** (`cw_flint_np.py`, an `O(p log p)` method; validated by the second audit, c6): IN PROGRESS. Results will appear in `cw_flint_*.out`.
-* **Every prime `p ≤ 10^5` has `h(p) ≤ 2`.** The heuristic expected number with `h ≥ 3` is `Σ_(p≥5) 1/p² ≈ 0.09`.
+* **The search to `10^6`** (`cw_flint_np.py`, an `O(p log p)` method using FLINT power-series inversion; validated by the second audit, c6) is complete. There are **no Camion–Wieferich primes in `(10^5, 10^6]`** (`cw_flint_*.out`; about 2 h on 4 cores). The heuristic expectation was about 0.18.
+* **Every prime `p ≤ 10^6` has `h(p) ≤ 2`.** The Camion–Wieferich primes `p ≤ 10^6` are exactly 3, 13, 22409. The heuristic expected number with `h ≥ 3` is `Σ_(p≥5) 1/p² ≈ 0.09`.
 * **Other structures.**
   * **Strong semicomplete digraphs (base 3).** The Camion–Wieferich primes `p ≤ 10^4` are 17 and 31 (two codes). §5b applies with `a = 3`, so `h_3(p) ≥ 2` exactly at those primes. The base-3 Wieferich prime 11 is not on the list.
   * **Connected labelled graphs.** The primes `p ≤ 10^4` with `p² | E(p)`, where `E(n) = cg(n) − 2^((n−1)/2) + 1` (rotation: `cg(p) ≡ 2^((p−1)/2) − 1`), are 5 and 197.

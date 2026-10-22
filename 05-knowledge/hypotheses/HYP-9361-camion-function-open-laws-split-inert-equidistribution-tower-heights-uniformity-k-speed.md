@@ -11,8 +11,8 @@ status: >
     audit b4.
   - (b): the triangle class is split in all 1224 non-Wieferich cases with 7 <= p <= 10^4 (no double root occurs
     there). At p = 5 it has a double root and a ramified pair (THM-4750 (4e)).
-  - (c): Camion-Wieferich primes p <= 10^5 are 3, 13, 22409, all with h = 2 (two independent searches), extended to 10^6
-    in cw_flint_*.out (in progress). Base 3: 17, 31 (p <= 10^4). Connected graphs: p^2 | E(p) at 5, 197 (p <= 10^4), which is NOT a
+  - (c): Camion-Wieferich primes p <= 10^6 are exactly 3, 13, 22409, all with h = 2 (two independent searches to 10^5; the
+    FLINT search cw_flint_*.out found none in (10^5, 10^6]). Base 3: 17, 31 (p <= 10^4). Connected graphs: p^2 | E(p) at 5, 197 (p <= 10^4), which is NOT a
     tower-height list (drifted tower; second audit finding 20).
   - (d): r = 2, 3, 4 (THM-4750 §4, §6b): 1226 primes for r = 2, and 60 primes <= 2200 each for r = 3, 4. The speed and
     the degree-r polynomial law are PROVED (THM-4750 (7)); only the statistics are conjectural.
@@ -73,7 +73,7 @@ Each base `a` has its own Camion lift (THM-4750 §5b), and hence its own sparse 
 
 | structure | condition | primes found | range |
 |---|---|---|---|
-| strong tournaments (base 2) | `p² ∣ s(p) − 2^((p−1)/2)` | 3, 13, 22409 | `≤ 10^5`; search to `10^6` in progress (`cw_flint_*.out`) |
+| strong tournaments (base 2) | `p² ∣ s(p) − 2^((p−1)/2)` | 3, 13, 22409 | `≤ 10^6` (none in `(10^5, 10^6]`, `cw_flint_*.out`) |
 | strong semicomplete digraphs (base 3) | `p² ∣ s_3(p) − 3^((p−1)/2)` | 17, 31 | `≤ 10^4` |
 | connected labelled graphs | `p² ∣ cg(p) − 2^((p−1)/2) + 1` (not a height list: the tower drifts, `E(p^r) ≡ εE(p^(r−1)) + 1 − ε`) | 5, 197 | `≤ 10^4` |
 | Wieferich, base 2 / base 3 (classical) | `a^(p−1) ≡ 1 (mod p²)` | 1093, 3511 / 11, 1006003 | classical |
@@ -118,7 +118,7 @@ Open questions:
 
 ## (f) The Camion residue and the Camion lift
 
-`ρ_C(a) = (σ_p(a) − 1)/p mod p` is lift-independent (THM-4750 (5′)). Explicitly, `ρ_C(a) ≡ ε_a [x^p](Σ_(k<p) a^C(k,2) x^k/k!)^(−1) (mod p)` (second audit finding 4).
+`ρ_C(a) = (σ_p(a) − 1)/p mod p` is lift-independent (THM-4750 (5′)). Explicitly, `ρ_C(a) ≡ ε_a [x^p](Σ_(k<p) a^C(k,2) x^k/k!)^(−1) (mod p)` (second audit finding 4). For `a = 2` this is `−ε` times the number of rotation orbits of non-strong labelled tournaments on `Z_p`, mod `p`.
 
 * As a function on `F_p^×` (`p ≤ 19`) it has no symmetry under `a ↦ 1/a` or `a ↦ −a`, and its Lagrange degree is generic.
 * For `a = 2` and `p ≤ 2000` it satisfies no small-rational relation with `q_2`, `w_p` or `B_(p−3)`.

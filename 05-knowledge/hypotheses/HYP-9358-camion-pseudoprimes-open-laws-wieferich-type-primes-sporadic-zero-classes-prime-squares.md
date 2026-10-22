@@ -60,7 +60,7 @@ scripts:
   * For `p ≥ 5`, `h(p) ≥ 3` needs the class-1 Camion zero to satisfy `ℓ ≡ p (mod p²)`, a second `1/p` event.
   * Neither Wieferich prime (1093, 3511) is Camion–Wieferich. Wieferich primes instead make the Camion curvature vanish (THM-4750 (3)).
   * The search to `10^5` is the end of the feasible range for `O(p²)` methods.
-  * A quasi-linear FLINT power-series method (audit b6, `cw_flint_np.py`) makes `10^6` routine. The expected number of further Camion–Wieferich primes in `(10^5, 10^6]` is about `0.2` (results in `cw_flint_*.out`).
+  * A quasi-linear FLINT power-series method (audit b6, `cw_flint_np.py`) makes `10^6` routine. The search of `(10^5, 10^6]` is complete and found **no** Camion–Wieferich prime, where about `0.18` were expected (`cw_flint_*.out`). So every `p ≤ 10^6` has `h(p) ≤ 2`.
 
 **(b) Sporadic classes.** Besides the universal classes `{1, 2, 3}`, a prime `p` has the classes `r ∈ [4, p−1]` with `p | D(r)`.
 
