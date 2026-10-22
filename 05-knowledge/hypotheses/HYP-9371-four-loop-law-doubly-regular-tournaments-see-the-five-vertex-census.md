@@ -1,8 +1,11 @@
 ---
 id: HYP-9371
-title: "Four-loop law for doubly regular tournaments. (1) The four-loop (excess-3) term X_3 of the linear-forest loop expansion (111 cores) is computed by a validated engine. (2) For a doubly regular T, X_3 is an affine function of the 5-vertex census (PROVED), so across the doubly regular 23-tournaments it is exactly affine in the number TT5 of transitive 5-sets, Paley included. (3) Exact forest numbers give N_8(D) - N_8(D') = 7168 (TT5(D) - TT5(D')) at n = 19 and 23, which is the four-loop z^8 coefficient. (4) The strict four-loop prediction of H(D)/H(P_23) - 1 has the right sign and order but 38% of the exact TT5 slope (1.006e-7 against 2.665e-7). It has no Paley offset: the offset and the scatter first appear at forest length 10, where five-loop clusters see the six-vertex census. Conjecture: the 5-census of a doubly regular tournament is affine in TT5 with an n-independent direction, hence N_8 = U_8(n) + 7168 TT5 for every order."
+title: "Four-loop law for doubly regular tournaments. (1) The four-loop (excess-3) term X_3 of the linear-forest loop expansion (111 cores) is computed by a validated engine. (2) For a doubly regular T, X_3 is an affine function of the 5-vertex census (PROVED), so across the doubly regular 23-tournaments it is exactly affine in the number TT5 of transitive 5-sets, Paley included. (3) Exact forest numbers give N_8(D) - N_8(D') = 7168 (TT5(D) - TT5(D')) at n = 19 and 23, which is the four-loop z^8 coefficient. (4) The strict four-loop prediction of H(D)/H(P_23) - 1 has the right sign and order but 38% of the exact TT5 slope (1.006e-7 against 2.665e-7). It has no Paley offset: the offset and the scatter first appear at forest length 10, where only five-loop clusters see the six-vertex census. Conjecture: the 5-census of a doubly regular tournament is affine in TT5 with an n-independent direction, hence N_8 = U_8(n) + 7168 TT5 for every order."
 status: >
-  OPEN, pre-audit (mac-mini-2026-10-22-loop4).
+  OPEN (mac-mini-2026-10-22-loop4); independently audited 2026-10-22
+  (04-computation/experiments/sierpinski_ocf_20261022/audit_loop4/REPORT.md). The audit reproduced the forest numbers of
+  all 13 classes with its own DP, checked the engine on two further tournaments to z^16 and confirmed the Proposition.
+  Its three errors and six minor items are corrected here.
   Engine: VERIFIED. Exact blow-up scaling and exact set partitions agree to 2.3e-12 at excess 3, and the z^8
   coefficients of the 13 doubly regular 23-tournament differences agree exactly with exact forest numbers.
   Census reduction (2): PROVED below from THM-4757 (2).
@@ -43,7 +46,7 @@ A tournament is *doubly regular* (DRT) if `S Sᵀ = nI − J`. `TT5` is the numb
 | cores | 1 | 7 | 20 | 36 | 30 | 17 |
 
 * `Σ 1/|G| = 1661/240`, where `|G|` is the automorphism count of `loop_engine.automorphisms`.
-* Completeness check: `exp(Σ_cores x^V y^E/|G|)`, summed over excess ≤ 3, equals the configuration-model count `(1/V!) Σ_d (2E−1)!!/Π d_v!` exactly, at every `(V, E)` (`cores_enum.py`). The connected cubic part, `1105/1152`, is the Janson–Knuth–Łuczak–Pittel value `85085/82944` with the disconnected kernels removed.
+* Completeness check: `exp(Σ_cores x^V y^E/|G|)`, summed over excess ≤ 3, equals the configuration-model count `(1/V!) Σ_d (2E−1)!!/Π d_v!` exactly, at all 12 `(V, E)` points (`cores_enum.py`, `cores_enum.out`). The connected cubic part, `1105/1152`, is the Janson–Knuth–Łuczak–Pittel value `85085/82944` with the disconnected kernels removed.
 
 **Decompositions.**
 * `decomp.c` is a line-by-line C port of `loop_engine.decompositions_fast`. Its descriptor maps equal the Python ones key for key on all 3 + 15 cores of excess 1 and 2, and on the 8 excess-3 cores with `V ≤ 2`.
@@ -53,7 +56,7 @@ A tournament is *doubly regular* (DRT) if `S Sᵀ = nI − J`. `TT5` is the numb
 **Contraction.**
 * An exact dynamic program over subsets of the ≤ 10 operands (the weight tensor and the edge propagators) minimises the multiply-add count under a cap on intermediate size.
 * Each pairwise step is a batched matmul.
-* Worst core at `n = 7`: about `10⁸` multiply-adds.
+* Worst core at `n = 7`: `≈ 4·10⁸` multiply-adds (core 105).
 
 **Validation** (`excess3_validate.out`). The z-series coefficients of `X_3`, from Cauchy sums of the engine, were compared with two exact rational computations that use no core theory: the blow-up scaling `log Ψ(Ŝ ⊗ J_m/m) = Σ_e m^(−e) X_e` (audit 2's `b_mscaling.py`) and set-partition enumeration (`b_partitions.py`).
 
@@ -63,7 +66,8 @@ A tournament is *doubly regular* (DRT) if `S Sᵀ = nI − J`. `TT5` is the numb
 | `R_9` and two non-vertex-transitive regular 9-tournaments | `z⁶ … z¹⁰` (m-scaling), `z⁶, z⁸` (set partitions, equal to m-scaling as rationals) | 1.4e-12 |
 | `P_11`, a non-vertex-transitive regular 11-tournament | `z⁶, z⁸` | 3.6e-16 |
 
-* The overall maximum is `2.3·10^(−12)`. The largest errors are at the vanishing `z², z⁴` coefficients; they are the Cauchy-sum roundoff.
+* The overall maximum is `2.3·10^(−12)`, attained at the vanishing `z², z⁴` coefficients (Cauchy-sum roundoff). At `z⁶ … z¹²` the errors are ≤ `6·10^(−13)`.
+* The audit added a non-vertex-transitive regular 9-tournament (gentourng class 8, exact `X_3 = −4304/59049, −1413992/4782969, −113969696/387420489` at `L = 6, 8, 10`) and a further random regular 11-tournament, agreeing to `10^(−15)`. It also pushed the non-circulant 7-tournament to `z¹⁶`, agreeing to `4·10^(−13)`; there the 6-vertex cores contribute about `10^(−4)`.
 * `X_1` and `X_2` from the same engine equal the THM-4757 closed form and the HYP-9367 engine to 13 digits, at real and complex `z`.
 
 **Doubly regular reduction.**
@@ -73,7 +77,7 @@ A tournament is *doubly regular* (DRT) if `S Sᵀ = nI − J`. `TT5` is the numb
 
 **Power counting** (`paley_x3_scaling.out`, `q = 19 … 83`).
 * `q X_1 → −7/2` and `q² X_2 → 29` (both reproduced).
-* `q³ X_3(P_q)` = −370.3, −363.5, …, −345.5, extrapolating to `≈ −341 ± 1`. The fit residual is 0.03, not 10^(−7), because `TT5(P_q)` carries arithmetic fluctuations.
+* `q³ X_3(P_q)` = −370.3, −363.5, …, −345.5, extrapolating to `≈ −341 ± 1`. The fit residual is 0.03, not 10^(−7), because `TT5(P_q)` carries arithmetic fluctuations. Adding `TT5(P_q)` as a regressor drops the residual to `4·10^(−5)`, with limit −340.7 (audit).
 * The loop coefficients grow like 3.5, 29, 341 (ratios 8.3 and 11.8). This is the asymptotic-series signature of HYP-9367.
 
 ## 2. Four loops see exactly the five-vertex census (PROVED)
@@ -87,15 +91,16 @@ where `c_τ` counts the 5-subtournaments of type `τ`, and the coefficients `A_n
 *Proof.* By THM-4757 (2), `X_3 = Σ μ(π) Z_π / p!` over connected clusters of excess 3. Here `Z_π = Σ_f Π_arcs (zŜ)_(f(·) f(·))` is a homomorphism sum, over all maps `f`, of the quotient multigraph. That multigraph is a subdivided core with ≤ 6 branch vertices.
 
 1. *Collapse onto the core.* Summing over the images of the degree-2 blocks of a core path gives a product of factors `±zŜ`, i.e. `±(zŜ)^λ`. For a DRT, `Ŝ² = −P/n`, so this lies in `span{P, Ŝ}`. Odd `λ` gives a multiple of `Ŝ`, even `λ ≥ 2` a multiple of `P`. Hence `Z_π = Σ_(f: core → [n]) Π_e (a_e P + c_e Ŝ)` with scalar coefficients.
-2. *Parity.* In a given cluster each core path has a definite length `λ_e`. So the cluster's term carries one labelling `t ∈ {P, Ŝ}^E`, with `Ŝ` on the odd paths, and its total length is `L = Σ λ_e ≡ #Ŝ(t) (mod 2)`. Reversing an odd run is a sign-reversing involution on clusters that preserves the partition, and hence the excess (THM-4757 §1). So `X_3` has only even powers of `z`: the clusters with odd `#Ŝ` cancel, and `X_3` is the sum over clusters with even `#Ŝ`.
+2. *Parity.* In a given cluster each core path has a definite length `λ_e`. So the cluster's term carries one labelling `t ∈ {P, Ŝ}^E`, with `Ŝ` on the odd paths, and its total length is `L = Σ λ_e ≡ #Ŝ(t) (mod 2)`. Reversing an odd run is a sign-reversing involution on clusters: it maps `π` to its mirror image and preserves the excess (THM-4757 §1). So `X_3` has only even powers of `z`: the clusters with odd `#Ŝ` cancel, and `X_3` is the sum over clusters with even `#Ŝ`.
 3. *Reduction to five vertices.* Split each homomorphism sum by the kernel of `f` into injective sums. Inside an injective sum, `P` between distinct points is `−1/n`, `P` on a point is `1 − 1/n`, and an `Ŝ`-loop is 0.
    * A 6-vertex core has 9 edges, so an even `#Ŝ` is at most 8. Then some vertex `w` has `Ŝ`-degree ≤ 2.
    * Summing `f(w)` over the points not used by the other five vertices gives, by `Ŝ1 = 0`, `Ŝ_xx = 0` and `ŜŜᵀ = (nI − J)/n²`, an `n`-dependent combination of injective sums on ≤ 5 vertices.
+   * *Step 2 is not needed for the conclusion* (audit). An all-`Ŝ` 9-edge labelling of a cubic 6-vertex core never sees the 6-census: loops give 0, a double edge reduces to fewer vertices, and `K_(3,3)` and the prism each have an automorphism reversing an odd number of edges, so the injective sum vanishes.
 4. *Census.* An injective `Ŝ`-digraph sum on `k ≤ 5` vertices is a fixed linear combination of the `k`-vertex census counts, times `n^(−#arcs)`. For DRTs the census on ≤ 4 vertices is determined by `n` (HYP-9365 (d)). Every out- and in-neighbourhood is a regular tournament of order `(n−1)/2`, which fixes the numbers of `TT4`, of 3-cycles with a source and of 3-cycles with a sink, hence all four 4-vertex counts. ∎
 
 **Hierarchy.** The same count says what the next order sees. At excess 4:
 * a 6-vertex core has 10 edges, an even number, so all can carry `Ŝ` with every degree ≥ 3, giving genuinely 6-vertex counts;
-* a 7-vertex core has 11 edges, so at most 10 carry `Ŝ`, and it reduces to 6 vertices;
+* a 7-vertex core has 11 edges, so at most 10 carry `Ŝ`, and it reduces to 6-vertex counts by the argument of step 3;
 * an 8-vertex cubic core has 12 edges, all of which can carry `Ŝ`, giving 8-vertex structure.
 
 So the first dependence of `log Φ` on more than the 5-census is at five loops.
@@ -104,10 +109,11 @@ So the first dependence of `log Φ` on more than the 5-census is at five loops.
 * Over the 13 classes, `X_1`, `X_2` and the `V ≤ 4` part of `X_3` coincide exactly; the series differ by at most `8.8·10^(−22)`.
 * `ΔX_3` is affine in `TT5` with residual `3·10^(−18)`, and `P_23` lies on the line.
 * The genuinely 6-vertex part of `ΔX_3` (the 6-vertex cores minus their 15 single vertex merges) is nonzero, `≈ 0.36%` of `ΔX_3`. It is also exactly affine in `TT5`, as step 3 says it must be.
+* Hostile control (audit): a 10-edge statistic (prism plus a chord) separates `D23_1` and `D23_2`, which share their 5-census, as 71920 against 67824. The 6-vertex part of `ΔX_3` is nevertheless identical for the two. So it is not the case that the 6-census happens to be affine in `TT5`.
 
 ## 3. Prediction against the exact doubly regular 23-tournaments (FINITE-EXACT)
 
-**Data.** The 13 nauty classes of `drt23_codes_all.txt` plus `P_23`; class order as in `drt_census_hierarchy.out`.
+**Data.** The 15 codes of `drt23_codes_all.txt` fall into 12 nauty classes; with `P_23` that makes 13. Class order as in `drt_census_hierarchy.out`.
 * `H` was recomputed for all 13 (`hk64.c`). It reproduces the four values of `drt_results.out`.
 * The classes 6/10 and 7/11 are converse pairs (`drt23_classes.json`).
 
@@ -176,8 +182,9 @@ All 13 classes pass these checks: `f_0 = f_22 = H`, `Σ f_k = 23!`, `f` palindro
 | exact `Δc_L` | −3.661e-6 | +1.711e-6 | −6.61e-7 | +2.61e-7 | −1.08e-7 |
 | four-loop `δ_L` | −3.661e-6 | −3.18e-7 | −4.2e-8 | −3.0e-9 | −2.6e-10 |
 
-* The exact coefficients alternate. The successive ratios −0.47, −0.39, −0.39, −0.41 approach `−1/u_0 = −0.448` per `z²`, where `u_0` is the zero of the forest polynomial `Φ(u)` (`u = z²`) nearest 0: −2.23181 for `P_23`, −2.23167 for `D23_0`. So `log Φ_T` has radius `|z| = 1.49`.
-* Every individual `X_e` is singular only at `z² = ±n`, so no finite loop order sees this zero. At `z¹⁰` the higher-loop terms `Δc_10 − δ_10` are −0.38 to −0.61 times the four-loop `δ_8`, against `δ_10/δ_8 = +0.087`.
+* The exact coefficients alternate. The successive ratios −0.47, −0.39, −0.39, −0.41 approach `1/u_0 = −0.448` per `z²`, where `u_0` is the zero of the forest polynomial `Φ(u)` (`u = z²`) nearest 0: −2.23181 for `P_23`, −2.23167 for `D23_0`. So `log Φ_T` has radius `|z| = 1.49`.
+* Every individual `X_e` is singular only at `z² = ±n`, so no finite loop order sees this zero. The zero is on the negative `z²` axis (`z = ±1.494i`), like the nearest forest-polynomial zeros of almost-regular tournaments in the S54 lane: `arg z² = π`, `|z|` 1.26–1.37 for `n = 8–14`, growing with `n` (`04-computation/experiments/loop_nonregular_20261022/phi_zeros_model.out`).
+* At `z¹⁰` the higher-loop terms `Δc_10 − δ_10` are −0.38 to −0.61 times the four-loop `δ_8`, against `δ_10/δ_8 = +0.087`.
 
 **Where the `H` difference lives.** Exactly, `ΔH/H = Σ_L g(L) Δφ_L / κ`:
 
@@ -190,12 +197,12 @@ All 13 classes pass these checks: `f_0 = f_22 = H`, `Σ f_k = 23!`, `f` palindro
 
 * The four-loop term gives the `L = 8` slice exactly, and nothing else exactly.
 * Propagated through the exact `Φ_(P_23)`, the four-loop `ΔX_3` overshoots every `L ≥ 10` slice. Its sum, `−8.4·10^(−4)` for D23_0, is 50 times too large, because the exact response weights grow to `w_22 ≈ 1.4·10⁷` at the top of the forest series. The same happens with the loop measure `exp(X_0 + X_1 + X_2)`, whose `Σ_L g φ_L` is 214 instead of `κ = 2.557` (negative control in `drt23_four_loop.out`).
-* Paley's offset, by forest length: `L = 10` 62%, `L = 12` 34%, `L = 14` 5%, none at `L = 8`.
+* Paley's offset, by forest length: `L = 10` 62%, `L = 12` 34%, `L = 14` 5%, −0.7% at `L ≥ 16`, none at `L = 8`. At `L = 10` only five-loop clusters (6 blocks) can carry the 6-census. At `L ≥ 12` excess 4–6 clusters with 6–8 vertices can contribute.
 * `D23_1` and `D23_2` (equal 5-census) first differ at `L = 10`, consistent with the six-vertex census entering at five loops.
 
 ## 5. Why four loops do not account for the differences, and what they do give
 
-* **Structurally,** the four-loop term is a pure five-vertex effect (§2). The doubly regular 23-tournaments span a one-parameter 5-census, so four loops predict an exact line in `TT5` through Paley. The observed offset of Paley and the `3.7·10^(−7)` scatter first appear at `L = 10`, where five-loop clusters bring in the 6-vertex census.
+* **Structurally,** the four-loop term is a pure five-vertex effect (§2). The doubly regular 23-tournaments span a one-parameter 5-census, so four loops predict an exact line in `TT5` through Paley. The observed offset of Paley and the `3.7·10^(−7)` scatter first appear at `L = 10`, where only five-loop clusters bring in the 6-vertex census. Their `L ≥ 12` parts may also involve higher loops.
 * **Quantitatively,** at `n = 19` and `23` the `n^(−4)` correction is larger than the `n^(−3)` term, so the strict truncation is not quantitatively useful at these orders.
   * The strict four-loop term is 20–27% of each `n = 23` difference and 38% of the exact `TT5` slope.
   * Its own `n^(−4)` finite-size response is twice itself: `dressed/strict = 2.98`, with factor `1 + (8D_1 + 28)/n = 2.88` on the dominant `z⁸` coefficient. It brings the slope to 112% of exact at `n = 23` and the `n = 19` difference to 92%.
@@ -204,34 +211,37 @@ All 13 classes pass these checks: `f_0 = f_22 = H`, `Σ f_k = 23!`, `f` palindro
 
 ## 6. Conjectures
 
-**(C1)** The 5-vertex census of a doubly regular tournament of order `n` is affine in `TT5`, with an `n`-independent direction. Per transitive 5-set, the change by type (scores | Hamiltonian paths) is:
+**(C1)** The 5-vertex census of a doubly regular tournament of order `n` is affine in `TT5`, with an `n`-independent direction. Per transitive 5-set, the change in each of the 12 isomorphism types of 5-tournaments is as follows. Types are labelled by scores and number of Hamiltonian paths; the two types with key `(1,1,2,3,3)|9` are split by whom the score-2 vertex beats.
 
 | type | change |
 |---|---|
-| `(0,1,2,3,4)\|1` | +1 |
+| `(0,1,2,3,4)\|1` (transitive) | +1 |
 | `(0,1,3,3,3)\|3` | −1 |
 | `(0,2,2,2,4)\|3` | −1 |
 | `(0,2,2,3,3)\|5` | +1 |
 | `(1,1,1,3,4)\|3` | −1 |
 | `(1,1,2,2,4)\|5` | +1 |
-| `(1,1,2,3,3)\|9` | +2 |
+| `(1,1,2,3,3)\|9`, score-2 vertex beats both score-1 vertices | −3 |
+| `(1,1,2,3,3)\|9`, score-2 vertex beats a score-1 and a score-3 vertex | +5 |
 | `(1,2,2,2,3)\|11` | +1 |
 | `(1,2,2,2,3)\|13` | −7 |
 | `(1,2,2,2,3)\|15` | +3 |
 | `(2,2,2,2,2)\|15` | +1 |
 
-FINITE-EXACT, on 16 non-Paley classes at three orders, each against the Paley tournament of its order:
+The census is by complete isomorphism type (`drt_census5_direction.py`, canonical forms). The earlier key `(scores | Hamiltonian paths)`, used in `drt_census_hierarchy.py` and in HYP-9367's "rank 1 across the 11 census types", merges the two `(1,1,2,3,3)|9` types into a net +2. With all 12 types the differences still have rank 1 (audit).
+
+FINITE-EXACT, on 16 non-Paley classes (14 up to converse) at three orders, each against the Paley tournament of its order:
 * `n = 19`: `D_19` (`drt_census5_direction.out`);
 * `n = 23`: the 12 annealed classes, plus the doubled-Paley class with `ΔTT5 = −88`, which was not used to find the vector;
-* `n = 31`: two classes from the twice-doubled Paley skew-Hadamard matrix of order 32, both with `ΔTT5 = −300` (`drt_c1_test.out`).
+* `n = 31`: two classes from the twice-doubled Paley skew-Hadamard matrix of order 32, not converse to each other, both with `ΔTT5 = −300` and hence one census data point (`drt_c1_test.out`).
 
 The Paley switching families of `P_27` and `P_31` are single classes.
 
-**(C2)** For every doubly regular `T`, `N_8(T) = U_8(n) + 7168 TT5(T)`. This follows from (C1). The `z⁸` part of `X_3` involves only single-arc paths on 5-vertex cores, so `n⁸ [z⁸] X_3` is an `n`-independent integer combination of 5-census counts.
+**(C2)** For every doubly regular `T`, `N_8(T) = U_8(n) + 7168 TT5(T)`. This follows from (C1). The non-universal part of `[z⁸] X_3` involves only single-arc paths on 5-vertex cores, so the non-universal part of `n⁸ [z⁸] X_3` is an `n`-independent linear combination of 5-census counts.
 * FINITE-EXACT from exact forest numbers at `n = 19` (1 pair) and `n = 23` (13 pairs).
 * VERIFIED by the engine at `n = 31` (2 pairs): `n⁸ Δδ_8/ΔTT5 = 7168.000000`.
 
-**(C3)** The asymptotic reading of HYP-9367 for differences: `log H(D) − log H(D′) = ΔX_3(1)(1 + O(1/n)) + O(n^(−4))`, where the `O(n^(−4))` term carries the 6-census. At `n = 19–23` the `O(1/n)` factor is ≈ 2.6–3.7: 2.65 for the slope, 3.25 for the doubled-Paley class, 3.72 at `n = 19`. Most of it is the finite-size dressing.
+**(C3)** The asymptotic reading of HYP-9367 for differences: `log H(D) − log H(D′) = ΔX_3(1)(1 + O(1/n)) + O(n^(−4))`. The `O(n^(−4))` term carries the 6-vertex census and the 8-vertex cubic structure of excess 4; the 6-census comes first, at `L = 10`. At `n = 19–23` the `O(1/n)` factor is ≈ 2.6–3.7: 2.65 for the slope, 3.25 for the doubled-Paley class, 3.72 at `n = 19`. That most of it is the first-order finite-size dressing is a HEURISTIC reading: the first-order weights are far from the exact response weights (`w_8 = 2.88` against 19.3).
 
 ## 7. Refutation targets and next steps
 

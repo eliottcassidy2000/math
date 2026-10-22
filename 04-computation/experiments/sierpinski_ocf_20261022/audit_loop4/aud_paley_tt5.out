@@ -1,0 +1,14 @@
+q:       [19, 23, 31, 43, 47, 59, 67, 71, 79, 83]
+q^3 X_3: [np.float64(-370.3494), np.float64(-363.5059), np.float64(-356.1392), np.float64(-351.0156), np.float64(-349.9999), np.float64(-347.762), np.float64(-346.8239), np.float64(-346.4425), np.float64(-345.7683), np.float64(-345.5076)]
+TT5(P_q): [342, 1518, 10695, 74046, 122153, 441438, 879978, 1202740, 2147457, 2790460]
+degree 3: limit -340.549, max resid 3.4e-02 | + r(q): limit -348.019, coeff of r +1.042, max resid 1.1e-03 | + r, r/q: limit -347.494, max resid 9.2e-05
+degree 4: limit -340.595, max resid 3.3e-02 | + r(q): limit -348.037, coeff of r +1.041, max resid 2.1e-04 | + r, r/q: limit -347.695, max resid 4.6e-05
+degree 5: limit -341.750, max resid 2.6e-02 | + r(q): limit -348.030, coeff of r +1.038, max resid 1.5e-04 | + r, r/q: limit -347.676, max resid 4.1e-05
+TT5(P_q) minus its degree-5 polynomial fit in q: [ -208.    270.1   212.7  -220.5 -1088.8  2788.5  -413.6 -3402.9  3648.7
+ -1586.2]
+TT5/q^5 polynomial fit in 1/q, degree 2: limit 9.5876e-04 (1/1024 = 9.7656e-04), max resid 7.1e-06
+TT5/q^5 polynomial fit in 1/q, degree 3: limit 1.0003e-03 (1/1024 = 9.7656e-04), max resid 4.5e-06
+TT5/q^5 polynomial fit in 1/q, degree 4: limit 9.9773e-04 (1/1024 = 9.7656e-04), max resid 4.4e-06
+degree 3 + r(q): implied lim q^3 X_3 = -348.019 + 1.042 x 7 = -340.727
+degree 4 + r(q): implied lim q^3 X_3 = -348.037 + 1.041 x 7 = -340.753
+degree 5 + r(q): implied lim q^3 X_3 = -348.030 + 1.038 x 7 = -340.764

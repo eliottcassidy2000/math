@@ -1,0 +1,39 @@
+(a) required spot check: own DP, p = 1000000007, x = 2, 5
+   class 0 (D23_0): x = 2: own F mod p = 504879828, stored sum f_k x^k mod p = 504879828, equal: True
+   class 0 (D23_0): x = 5: own F mod p = 361527801, stored sum f_k x^k mod p = 361527801, equal: True
+   class 12 (P_23): x = 2: own F mod p = 700210698, stored sum f_k x^k mod p = 700210698, equal: True
+   class 12 (P_23): x = 5: own F mod p = 267752070, stored sum f_k x^k mod p = 267752070, equal: True
+   [5s]
+
+(b)-(e) full independent reconstruction for all 13 classes (x = 0..22, primes 2^61-1 and 4611686018427387847)
+   D23_0  : TT5 own 1478 (json 1478); N_2,4,6,8,10 = 506, 91080, 7832880, 358074624, 9296560640; f_equal_stored=True, N_equal_stored=True, f0_eq_H=True, palin=True, sum_nfact=True, odd_zero=True, forest_identity=True, TT5_equal_json=True  [53s]
+   D23_1  : TT5 own 1466 (json 1466); N_2,4,6,8,10 = 506, 91080, 7832880, 357988608, 9284313600; f_equal_stored=True, N_equal_stored=True, f0_eq_H=True, palin=True, sum_nfact=True, odd_zero=True, forest_identity=True, TT5_equal_json=True  [103s]
+   D23_2  : TT5 own 1466 (json 1466); N_2,4,6,8,10 = 506, 91080, 7832880, 357988608, 9284575744; f_equal_stored=True, N_equal_stored=True, f0_eq_H=True, palin=True, sum_nfact=True, odd_zero=True, forest_identity=True, TT5_equal_json=True  [153s]
+   D23_3  : TT5 own 1470 (json 1470); N_2,4,6,8,10 = 506, 91080, 7832880, 358017280, 9289531904; f_equal_stored=True, N_equal_stored=True, f0_eq_H=True, palin=True, sum_nfact=True, odd_zero=True, forest_identity=True, TT5_equal_json=True  [201s]
+   D23_4  : TT5 own 1492 (json 1492); N_2,4,6,8,10 = 506, 91080, 7832880, 358174976, 9309909504; f_equal_stored=True, N_equal_stored=True, f0_eq_H=True, palin=True, sum_nfact=True, odd_zero=True, forest_identity=True, TT5_equal_json=True  [251s]
+   D23_5  : TT5 own 1494 (json 1494); N_2,4,6,8,10 = 506, 91080, 7832880, 358189312, 9310355968; f_equal_stored=True, N_equal_stored=True, f0_eq_H=True, palin=True, sum_nfact=True, odd_zero=True, forest_identity=True, TT5_equal_json=True  [302s]
+   D23_6  : TT5 own 1484 (json 1484); N_2,4,6,8,10 = 506, 91080, 7832880, 358117632, 9302356480; f_equal_stored=True, N_equal_stored=True, f0_eq_H=True, palin=True, sum_nfact=True, odd_zero=True, forest_identity=True, TT5_equal_json=True  [352s]
+   D23_7  : TT5 own 1482 (json 1482); N_2,4,6,8,10 = 506, 91080, 7832880, 358103296, 9298633216; f_equal_stored=True, N_equal_stored=True, f0_eq_H=True, palin=True, sum_nfact=True, odd_zero=True, forest_identity=True, TT5_equal_json=True  [400s]
+   D23_8  : TT5 own 1490 (json 1490); N_2,4,6,8,10 = 506, 91080, 7832880, 358160640, 9310380544; f_equal_stored=True, N_equal_stored=True, f0_eq_H=True, palin=True, sum_nfact=True, odd_zero=True, forest_identity=True, TT5_equal_json=True  [449s]
+   D23_9  : TT5 own 1486 (json 1486); N_2,4,6,8,10 = 506, 91080, 7832880, 358131968, 9304113664; f_equal_stored=True, N_equal_stored=True, f0_eq_H=True, palin=True, sum_nfact=True, odd_zero=True, forest_identity=True, TT5_equal_json=True  [497s]
+   D23_10 : TT5 own 1484 (json 1484); N_2,4,6,8,10 = 506, 91080, 7832880, 358117632, 9302356480; f_equal_stored=True, N_equal_stored=True, f0_eq_H=True, palin=True, sum_nfact=True, odd_zero=True, forest_identity=True, TT5_equal_json=True  [544s]
+   D23_11 : TT5 own 1482 (json 1482); N_2,4,6,8,10 = 506, 91080, 7832880, 358103296, 9298633216; f_equal_stored=True, N_equal_stored=True, f0_eq_H=True, palin=True, sum_nfact=True, odd_zero=True, forest_identity=True, TT5_equal_json=True  [590s]
+   P_23   : TT5 own 1518 (json 1518); N_2,4,6,8,10 = 506, 91080, 7832880, 358361344, 9370763776; f_equal_stored=True, N_equal_stored=True, f0_eq_H=True, palin=True, sum_nfact=True, odd_zero=True, forest_identity=True, TT5_equal_json=True  [640s]
+
+(e) Delta N_8 against 7168 Delta TT5 (own N, own TT5), relative to P_23:
+   D23_0  : Delta N_8 =   -286720, Delta TT5 =  -40, 7168 Delta TT5 =   -286720, equal: True;  Delta N_2,4,6 = [0, 0, 0]
+   D23_1  : Delta N_8 =   -372736, Delta TT5 =  -52, 7168 Delta TT5 =   -372736, equal: True;  Delta N_2,4,6 = [0, 0, 0]
+   D23_2  : Delta N_8 =   -372736, Delta TT5 =  -52, 7168 Delta TT5 =   -372736, equal: True;  Delta N_2,4,6 = [0, 0, 0]
+   D23_3  : Delta N_8 =   -344064, Delta TT5 =  -48, 7168 Delta TT5 =   -344064, equal: True;  Delta N_2,4,6 = [0, 0, 0]
+   D23_4  : Delta N_8 =   -186368, Delta TT5 =  -26, 7168 Delta TT5 =   -186368, equal: True;  Delta N_2,4,6 = [0, 0, 0]
+   D23_5  : Delta N_8 =   -172032, Delta TT5 =  -24, 7168 Delta TT5 =   -172032, equal: True;  Delta N_2,4,6 = [0, 0, 0]
+   D23_6  : Delta N_8 =   -243712, Delta TT5 =  -34, 7168 Delta TT5 =   -243712, equal: True;  Delta N_2,4,6 = [0, 0, 0]
+   D23_7  : Delta N_8 =   -258048, Delta TT5 =  -36, 7168 Delta TT5 =   -258048, equal: True;  Delta N_2,4,6 = [0, 0, 0]
+   D23_8  : Delta N_8 =   -200704, Delta TT5 =  -28, 7168 Delta TT5 =   -200704, equal: True;  Delta N_2,4,6 = [0, 0, 0]
+   D23_9  : Delta N_8 =   -229376, Delta TT5 =  -32, 7168 Delta TT5 =   -229376, equal: True;  Delta N_2,4,6 = [0, 0, 0]
+   D23_10 : Delta N_8 =   -243712, Delta TT5 =  -34, 7168 Delta TT5 =   -243712, equal: True;  Delta N_2,4,6 = [0, 0, 0]
+   D23_11 : Delta N_8 =   -258048, Delta TT5 =  -36, 7168 Delta TT5 =   -258048, equal: True;  Delta N_2,4,6 = [0, 0, 0]
+   all 12 equal: True
+   D23_1 vs D23_2: N_8 equal True, N_10 9284313600 vs 9284575744 (differ: True), first differing L: 10
+   own 4-census (score sequences) of all 13 classes identical: True {(0, 1, 2, 3): 2530, (1, 1, 2, 2): 3795, (1, 1, 1, 3): 1265, (0, 2, 2, 2): 1265}
+done [640s]

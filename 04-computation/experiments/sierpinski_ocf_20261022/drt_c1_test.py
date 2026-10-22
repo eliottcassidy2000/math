@@ -6,8 +6,9 @@
 # representative per nauty class.  For each non-Paley class against the Paley tournament of the same order:
 #   (C1) is Delta(5-census)/Delta TT5 the integer direction found at n = 19, 23 (drt_census5_direction.out)?
 #   (C2) is n^8 [z^8] Delta X_3 = 7168 Delta TT5 (four-loop engine, two-matrix reduction)?
+# Census by complete isomorphism type (drt_census5_direction.census5_full), after audit_loop4/REPORT.md.
 # Output: drt_c1_test.out.  mac-mini-2026-10-22-loop4.
-import sys, itertools, subprocess
+import sys, itertools, subprocess, json
 from collections import Counter
 from fractions import Fraction
 import numpy as np
@@ -15,9 +16,9 @@ sys.path.insert(0, '.')
 import loop_engine4 as LE4
 from drt_switch import family, d6
 
-V = {'(0, 1, 2, 3, 4)|1': 1, '(0, 1, 3, 3, 3)|3': -1, '(0, 2, 2, 2, 4)|3': -1, '(0, 2, 2, 3, 3)|5': 1,
-     '(1, 1, 1, 3, 4)|3': -1, '(1, 1, 2, 2, 4)|5': 1, '(1, 1, 2, 3, 3)|9': 2, '(1, 2, 2, 2, 3)|11': 1,
-     '(1, 2, 2, 2, 3)|13': -7, '(1, 2, 2, 2, 3)|15': 3, '(2, 2, 2, 2, 2)|15': 1}
+from drt_census5_direction import census5_full
+# per-TT5 direction of the 5-census (12 isomorphism types), from the n = 19 and 23 data (drt_census5_direction.py)
+V = {k: Fraction(v) for k, v in json.load(open('drt_census5_direction.json')).items()}
 
 def gf27():
     els = [(a, b, c) for a in range(3) for b in range(3) for c in range(3)]      # a + b x + c x^2
@@ -39,15 +40,7 @@ def paley_prime(q):
     sq = {(t * t) % q for t in range(1, q)}
     return np.array([[0 if i == j else (1 if (j - i) % q in sq else -1) for j in range(q)] for i in range(q)])
 
-perms5 = list(itertools.permutations(range(5)))
-def census5(S):
-    n = S.shape[0]; cnt = Counter()
-    for X in itertools.combinations(range(n), 5):
-        sub = S[np.ix_(X, X)]
-        sc = tuple(sorted(int((sub[i] == 1).sum()) for i in range(5)))
-        h = sum(1 for p in perms5 if all(sub[p[i], p[i + 1]] == 1 for i in range(4)))
-        cnt[f'{sc}|{h}'] += 1
-    return cnt
+census5 = census5_full                                  # complete isomorphism-type census
 
 def delta8(S, K=64, R=1.0):
     n = S.shape[0]; cores = LE4.load_cores(3)

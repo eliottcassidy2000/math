@@ -124,3 +124,19 @@ Data: 13 nauty classes at order 23, namely `P_23` (self-converse) and 12 non-Pal
 ## Status of the expansion
 
 The coefficients grow with the order: excess-2 clusters carry Möbius weights up to `(s−1)!`, and `q² X_2 ≈ 29` against `c_2 ≈ 3`. So the loop expansion is presumably asymptotic, not convergent. The non-perturbative alternating end (HYP-9366) is exponentially small and invisible to it.
+
+## Addendum (mac-mini-2026-10-22-loop4, audited): four loops computed (HYP-9371)
+
+The excess-3 engine covers all 111 four-loop cores and matches exact blow-up scaling and set partitions to `2.3·10^(−12)`. It was applied to the doubly regular 23-tournaments in [HYP-9371](HYP-9371-four-loop-law-doubly-regular-tournaments-see-the-five-vertex-census.md).
+
+**Correction to "Four loops seen directly"** (MISTAKE-663).
+* "Four-loop cores have up to 6 vertices, so the first non-universal terms see the 5- and 6-vertex censuses" is wrong for doubly regular tournaments. `X_3` depends only on the 5-vertex census (HYP-9371 §2, PROVED). A 6-vertex core has 9 edges, so at most 8 carry `Ŝ`, and the resulting vertex of `Ŝ`-degree ≤ 2 reduces the count to 5 vertices. The 6-vertex census first enters at five loops, at `z¹⁰`.
+* "then six-vertex structure (below `10^(−7)`)" holds only for the scatter among the non-Paley classes. Paley's `+5.5·10^(−6)` offset cannot come from the 5-census at any loop order: all 13 classes lie on one line in 5-census space. Exact forest numbers place it at forest lengths 10–14.
+* "rank 1 across the 11 census types": the key `(scores | Hamiltonian paths)` merges two of the 12 isomorphism types of 5-tournaments. With all 12 types the rank is still 1.
+
+**Size of the four-loop term.**
+* `ΔX_3` is exactly affine in `TT5`, with Paley on the line.
+* The strict four-loop slope is `1.006·10^(−7)` per transitive 5-set, against the exact `2.665·10^(−7)`.
+* Exact forest numbers give `ΔN_8 = 7168 ΔTT5`, which is the four-loop `z⁸` coefficient.
+* `q³ X_3(P_q) → ≈ −341`.
+

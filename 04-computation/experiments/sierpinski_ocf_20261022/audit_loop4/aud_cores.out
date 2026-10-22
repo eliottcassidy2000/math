@@ -1,0 +1,23 @@
+excess 1: 3 cores, by V {1: 1, 2: 2}; valid + own |Aut| == stored aut: True; pairwise non-isomorphic: True; sum 1/|Aut| = 1/3; connected cubic part = 5/24
+excess 2: 15 cores, by V {1: 1, 2: 4, 3: 5, 4: 5}; valid + own |Aut| == stored aut: True; pairwise non-isomorphic: True; sum 1/|Aut| = 13/12; connected cubic part = 5/16
+excess 3: 111 cores, by V {1: 1, 2: 7, 3: 20, 4: 36, 5: 30, 6: 17}; valid + own |Aut| == stored aut: True; pairwise non-isomorphic: True; sum 1/|Aut| = 1661/240; connected cubic part = 1105/1152
+   (V, E) = (1, 2): exp(cores) = 1/8, configuration model = 1/8, equal: True
+   (V, E) = (1, 3): exp(cores) = 1/48, configuration model = 1/48, equal: True
+   (V, E) = (1, 4): exp(cores) = 1/384, configuration model = 1/384, equal: True
+   (V, E) = (2, 3): exp(cores) = 5/24, configuration model = 5/24, equal: True
+   (V, E) = (2, 4): exp(cores) = 91/384, configuration model = 91/384, equal: True
+   (V, E) = (2, 5): exp(cores) = 19/160, configuration model = 19/160, equal: True
+   (V, E) = (3, 4): exp(cores) = 0, configuration model = 0, equal: True
+   (V, E) = (3, 5): exp(cores) = 35/64, configuration model = 35/64, equal: True
+   (V, E) = (3, 6): exp(cores) = 2849/3072, configuration model = 2849/3072, equal: True
+   (V, E) = (4, 5): exp(cores) = 0, configuration model = 0, equal: True
+   (V, E) = (4, 6): exp(cores) = 385/1152, configuration model = 385/1152, equal: True
+   (V, E) = (4, 7): exp(cores) = 23023/9216, configuration model = 23023/9216, equal: True
+   (V, E) = (5, 6): exp(cores) = 0, configuration model = 0, equal: True
+   (V, E) = (5, 7): exp(cores) = 0, configuration model = 0, equal: True
+   (V, E) = (5, 8): exp(cores) = 25025/9216, configuration model = 25025/9216, equal: True
+   (V, E) = (6, 7): exp(cores) = 0, configuration model = 0, equal: True
+   (V, E) = (6, 8): exp(cores) = 0, configuration model = 0, equal: True
+   (V, E) = (6, 9): exp(cores) = 85085/82944, configuration model = 85085/82944, equal: True
+configuration-model identity at every (V, E) with 1 <= E - V <= 3: True
+JKLP e_1, e_2, e_3 = 5/24, 385/1152, 85085/82944; connected cubic excess-3 part = 1105/1152

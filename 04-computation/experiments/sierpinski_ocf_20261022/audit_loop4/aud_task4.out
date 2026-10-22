@@ -1,0 +1,52 @@
+== Section 3: exact log H differences, strict / dressed (engine values from drt23_four_loop.json) ==
+   D23_0   TT5 1478: exact -1.61059e-05 (json -1.61059e-05); strict -4.0245e-06; dressed -1.1989e-05 (recomputed from 24 stored coefficients -1.1989e-05); exact/strict 4.002; strict/exact 0.250; dressed/exact 0.744
+   D23_1   TT5 1466: exact -1.93731e-05 (json -1.93731e-05); strict -5.2318e-06; dressed -1.5585e-05 (recomputed from 24 stored coefficients -1.5585e-05); exact/strict 3.703; strict/exact 0.270; dressed/exact 0.804
+   D23_2   TT5 1466: exact -1.93455e-05 (json -1.93455e-05); strict -5.2318e-06; dressed -1.5585e-05 (recomputed from 24 stored coefficients -1.5585e-05); exact/strict 3.698; strict/exact 0.270; dressed/exact 0.806
+   D23_3   TT5 1470: exact -1.81044e-05 (json -1.81044e-05); strict -4.8294e-06; dressed -1.4387e-05 (recomputed from 24 stored coefficients -1.4387e-05); exact/strict 3.749; strict/exact 0.267; dressed/exact 0.795
+   D23_4   TT5 1492: exact -1.23716e-05 (json -1.23716e-05); strict -2.6159e-06; dressed -7.7927e-06 (recomputed from 24 stored coefficients -7.7927e-06); exact/strict 4.729; strict/exact 0.211; dressed/exact 0.630
+   D23_5   TT5 1494: exact -1.20767e-05 (json -1.20767e-05); strict -2.4147e-06; dressed -7.1933e-06 (recomputed from 24 stored coefficients -7.1933e-06); exact/strict 5.001; strict/exact 0.200; dressed/exact 0.596
+   D23_6   TT5 1484: exact -1.45120e-05 (json -1.45120e-05); strict -3.4208e-06; dressed -1.0190e-05 (recomputed from 24 stored coefficients -1.0190e-05); exact/strict 4.242; strict/exact 0.236; dressed/exact 0.702
+   D23_7   TT5 1482: exact -1.52759e-05 (json -1.52759e-05); strict -3.6220e-06; dressed -1.0790e-05 (recomputed from 24 stored coefficients -1.0790e-05); exact/strict 4.217; strict/exact 0.237; dressed/exact 0.706
+   D23_8   TT5 1490: exact -1.25599e-05 (json -1.25599e-05); strict -2.8171e-06; dressed -8.3921e-06 (recomputed from 24 stored coefficients -8.3921e-06); exact/strict 4.458; strict/exact 0.224; dressed/exact 0.668
+   D23_9   TT5 1486: exact -1.39486e-05 (json -1.39486e-05); strict -3.2196e-06; dressed -9.5910e-06 (recomputed from 24 stored coefficients -9.5910e-06); exact/strict 4.332; strict/exact 0.231; dressed/exact 0.688
+   D23_10  TT5 1484: exact -1.45120e-05 (json -1.45120e-05); strict -3.4208e-06; dressed -1.0190e-05 (recomputed from 24 stored coefficients -1.0190e-05); exact/strict 4.242; strict/exact 0.236; dressed/exact 0.702
+   D23_11  TT5 1482: exact -1.52759e-05 (json -1.52759e-05); strict -3.6220e-06; dressed -1.0790e-05 (recomputed from 24 stored coefficients -1.0790e-05); exact/strict 4.217; strict/exact 0.237; dressed/exact 0.706
+   TT5 law exact   : slope 2.66485e-07 (x H(P_23) = 4.19985e+09), line at 1518 -5.4729e-06, max residual 3.75e-07
+   TT5 law strict  : slope 1.00612e-07 (x H(P_23) = 1.58567e+09), line at 1518 -2.8731e-18, max residual 2.76e-18
+   TT5 law dressed : slope 2.99720e-07 (x H(P_23) = 4.72364e+09), line at 1518 -1.0300e-17, max residual 1.67e-17
+   strict/exact slope 0.3776, dressed/exact slope 1.1247, dressed/strict slope 2.9790; factor 1 + (8 D_1 + 28)/n = 2.8841
+   D23_1 - D23_2 relative H difference: -2.767e-08; exact H monotone in TT5: True
+
+== Section 4: exact Delta c_L (own N) vs four-loop delta_L (engine) ==
+   D23_0  : Delta c_8 = -3.661299867077e-06 = Delta N_8/23^8 exactly: True; engine delta_8 -3.661299867078e-06 (rel diff 1.5e-13); (Delta c_10 - delta_10)/delta_8 = -0.5543; delta_10/delta_8 = +0.0870; Delta c_6 = 0.0e+00
+   D23_1  : Delta c_8 = -4.759689827200e-06 = Delta N_8/23^8 exactly: True; engine delta_8 -4.759689827202e-06 (rel diff 4.5e-13); (Delta c_10 - delta_10)/delta_8 = -0.6050; delta_10/delta_8 = +0.0870; Delta c_6 = 0.0e+00
+   D23_2  : Delta c_8 = -4.759689827200e-06 = Delta N_8/23^8 exactly: True; engine delta_8 -4.759689827202e-06 (rel diff 4.5e-13); (Delta c_10 - delta_10)/delta_8 = -0.6064; delta_10/delta_8 = +0.0870; Delta c_6 = 0.0e+00
+   D23_3  : Delta c_8 = -4.393559840492e-06 = Delta N_8/23^8 exactly: True; engine delta_8 -4.393559840495e-06 (rel diff 6.3e-13); (Delta c_10 - delta_10)/delta_8 = -0.5972; delta_10/delta_8 = +0.0870; Delta c_6 = 0.0e+00
+   D23_4  : Delta c_8 = -2.379844913600e-06 = Delta N_8/23^8 exactly: True; engine delta_8 -2.379844913601e-06 (rel diff 4.5e-13); (Delta c_10 - delta_10)/delta_8 = -0.4262; delta_10/delta_8 = +0.0870; Delta c_6 = 0.0e+00
+   D23_5  : Delta c_8 = -2.196779920246e-06 = Delta N_8/23^8 exactly: True; engine delta_8 -2.196779920249e-06 (rel diff 1.4e-12); (Delta c_10 - delta_10)/delta_8 = -0.3797; delta_10/delta_8 = +0.0870; Delta c_6 = 0.0e+00
+   D23_6  : Delta c_8 = -3.112104887016e-06 = Delta N_8/23^8 exactly: True; engine delta_8 -3.112104887019e-06 (rel diff 1.0e-12); (Delta c_10 - delta_10)/delta_8 = -0.5129; delta_10/delta_8 = +0.0870; Delta c_6 = 0.0e+00
+   D23_7  : Delta c_8 = -3.295169880369e-06 = Delta N_8/23^8 exactly: True; engine delta_8 -3.295169880371e-06 (rel diff 3.6e-13); (Delta c_10 - delta_10)/delta_8 = -0.5151; delta_10/delta_8 = +0.0870; Delta c_6 = 0.0e+00
+   D23_8  : Delta c_8 = -2.562909906954e-06 = Delta N_8/23^8 exactly: True; engine delta_8 -2.562909906956e-06 (rel diff 9.7e-13); (Delta c_10 - delta_10)/delta_8 = -0.4748; delta_10/delta_8 = +0.0870; Delta c_6 = 0.0e+00
+   D23_9  : Delta c_8 = -2.929039893662e-06 = Delta N_8/23^8 exactly: True; engine delta_8 -2.929039893663e-06 (rel diff 6.3e-13); (Delta c_10 - delta_10)/delta_8 = -0.4942; delta_10/delta_8 = +0.0870; Delta c_6 = 0.0e+00
+   D23_10 : Delta c_8 = -3.112104887016e-06 = Delta N_8/23^8 exactly: True; engine delta_8 -3.112104887019e-06 (rel diff 1.0e-12); (Delta c_10 - delta_10)/delta_8 = -0.5129; delta_10/delta_8 = +0.0870; Delta c_6 = 0.0e+00
+   D23_11 : Delta c_8 = -3.295169880369e-06 = Delta N_8/23^8 exactly: True; engine delta_8 -3.295169880371e-06 (rel diff 3.6e-13); (Delta c_10 - delta_10)/delta_8 = -0.5151; delta_10/delta_8 = +0.0870; Delta c_6 = 0.0e+00
+   D23_0 Delta c_L: L8 -3.6613e-06, L10 +1.7109e-06, L12 -6.6108e-07, L14 +2.6055e-07, L16 -1.0791e-07; ratios -0.467, -0.386, -0.394, -0.414
+   D23_0 delta_L : L8 -3.6613e-06, L10 -3.1837e-07, L12 -4.1527e-08, L14 -3.0092e-09, L16 -2.6167e-10; Delta c_10 - delta_10 = +2.0293e-06
+   P_23: zero of Phi(u) (u = z^2) nearest 0: -2.2318064; 1/u0 = -0.448068; radius in z = 1.49392
+   D23_0: zero of Phi(u) (u = z^2) nearest 0: -2.2316692; 1/u0 = -0.448095; radius in z = 1.49388
+   exact response weights: w_8 = 19.33, w_10 = 217.7, w_22 = 1.373e+07
+   four-loop Delta X_3 through exact P_23 weights (D23_0): -8.4369e-04 vs exact -1.6106e-05 (ratio 52.4)
+
+   shares of Delta H/H by forest length (own N):
+   D23_0  : L8 35.2%, L10 43.4%, L12 17.8%, L14 3.43%, L>=16 0.19%
+   D23_1  : L8 38.1%, L10 42.0%, L12 16.4%, L14 3.28%, L>=16 0.24%
+   D23_4  : L8 29.8%, L10 46.3%, L12 20.1%, L14 3.66%, L>=16 0.06%
+   L = 8 share over the 12 classes: 28.2% .. 38.1%
+   Paley offset by forest length (fit a + b TT5 of g(L) Delta phi_L/kappa over 12 non-Paley classes; offset = 0 - line(1518)):
+   L8: +5.421e-20 (0.0%), L10: +3.377e-06 (61.7%), L12: +1.860e-06 (34.0%), L14: +2.730e-07 (5.0%), L16: -2.448e-08 (-0.4%), L18: -1.369e-08 (-0.3%), L20: +1.026e-09 (0.0%), L22: +3.704e-11 (0.0%); total +5.4730e-06
+
+== n = 19: own forest numbers for P_19 and D_19.1 ==
+   P_19: H 1172695746915, own TT5 342, N_8 = 46577664, N_10 = 605159424, forest identity exact: True
+   D_19.1: H 1172732961771, own TT5 360, N_8 = 46706688, N_10 = 616771584, forest identity exact: True
+   Delta TT5 = 18; Delta N_2,4,6 = [0, 0, 0]; Delta N_8 = 129024 = 7168 x 18
+   exact H(D_19)/H(P_19) - 1 = +3.1734e-05 (sum of slices +3.1734e-05); shares: L8 52.8%, L10 43.2%, L12 0.36%, L14 3.46%, L>=16 0.20%

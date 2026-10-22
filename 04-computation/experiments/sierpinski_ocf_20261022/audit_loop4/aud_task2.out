@@ -1,0 +1,16 @@
+n = 9 class 8: canonical form differs from R_9, class 2, class 14: True
+n = 11 seed 2026: differs from the seed-5 tournament and P_11: True; diag(S^4) values [np.int64(142), np.int64(174), np.int64(206), np.int64(270)] (non-constant => not vertex-transitive)
+regular 9-tournament, gentourng class 8: m-scaling 3s, engine 27s
+   L= 2: exact X_3^(L) =                                        0 = +0.0000000000000e+00; engine (K=32,r=0.5) -4.9026857064211e-15 diff -4.9e-15; engine (K=48,r=0.7) diff -1.5e-16
+   L= 4: exact X_3^(L) =                                        0 = +0.0000000000000e+00; engine (K=32,r=0.5) -1.7479648960513e-15 diff -1.7e-15; engine (K=48,r=0.7) diff -7.5e-17
+   L= 6: exact X_3^(L) =                              -4304/59049 = -7.2888617927484e-02; engine (K=32,r=0.5) -7.2888617927485e-02 diff -5.7e-16; engine (K=48,r=0.7) diff -4.2e-17
+   L= 8: exact X_3^(L) =                         -1413992/4782969 = -2.9563060099281e-01; engine (K=32,r=0.5) -2.9563060099281e-01 diff +2.2e-16; engine (K=48,r=0.7) diff +1.7e-16
+   L=10: exact X_3^(L) =                     -113969696/387420489 = -2.9417570633442e-01; engine (K=32,r=0.5) -2.9417570633442e-01 diff +1.2e-15; engine (K=48,r=0.7) diff +6.1e-16
+   exact excess profile at L = 10: X_0: +5.974050e-04, X_1: -6.954497e-03, X_2: +7.765354e-02, X_3: -2.941757e-01, X_4: +5.585152e-01, X_5: -4.419353e-01, X_6: +1.669306e-01, X_7: -2.823351e-02, X_8: +1.498651e-03
+random regular 11-tournament, seed 2026: m-scaling 3s, engine 13s
+   L= 2: exact X_3^(L) =                                        0 = +0.0000000000000e+00; engine (K=32,r=0.5) -1.9309519087793e-15 diff -1.9e-15; engine (K=48,r=0.7) diff -4.7e-17
+   L= 4: exact X_3^(L) =                                        0 = +0.0000000000000e+00; engine (K=32,r=0.5) -6.8108929159546e-16 diff -6.8e-16; engine (K=48,r=0.7) diff -1.9e-17
+   L= 6: exact X_3^(L) =                             -6780/161051 = -4.2098465703411e-02; engine (K=32,r=0.5) -4.2098465703411e-02 diff -2.6e-16; engine (K=48,r=0.7) diff -2.8e-17
+   L= 8: exact X_3^(L) =                      -36186188/214358881 = -1.6881123763657e-01; engine (K=32,r=0.5) -1.6881123763657e-01 diff -5.6e-17; engine (K=48,r=0.7) diff -5.6e-17
+   exact excess profile at L = 8: X_1: -2.119009e-02, X_2: +7.883536e-02, X_3: -1.688112e-01, X_4: +7.936224e-02, X_5: -1.345501e-02, X_6: +6.465792e-04
+max |engine - exact| (K=32, r=0.5): 4.9e-15

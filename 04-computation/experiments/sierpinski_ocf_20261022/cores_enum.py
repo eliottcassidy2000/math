@@ -79,6 +79,42 @@ def cores(excess):
                 seen.add(c); found.append((V, [list(x) for x in c]))
     return found
 
+def configuration_check(max_excess):
+    """Completeness and automorphism check: exp(sum over cores of x^V y^E/|G|), truncated at excess <= max_excess,
+    must equal the weighted count of all (possibly disconnected) multigraphs with loops and minimum degree >= 3,
+    (1/V!) sum over labelled degree sequences of (2E-1)!!/prod d_v! (configuration model), at every (V, E)."""
+    from fractions import Fraction
+    from math import factorial
+    def dfact(m):
+        r = 1
+        for k in range(m, 0, -2): r *= k
+        return r
+    def total(V, E):
+        s = Fraction(0)
+        def rec(i, rem, acc):
+            nonlocal s
+            if i == V:
+                if rem == 0: s += acc
+                return
+            for d in range(3, rem - 3 * (V - i - 1) + 1): rec(i + 1, rem - d, acc / factorial(d))
+        rec(0, 2 * E, Fraction(1))
+        return s * dfact(2 * E - 1) / factorial(V)
+    C = {}
+    for e in range(1, max_excess + 1):
+        for c in json.load(open(f'cores_e{e}.json')):
+            key = (c['V'], c['V'] + e); C[key] = C.get(key, 0) + Fraction(1, c['aut'])
+    def mul(P, Q):
+        R = {}
+        for (v1, e1), a in P.items():
+            for (v2, e2), b in Q.items():
+                if (e1 - v1) + (e2 - v2) <= max_excess: R[(v1 + v2, e1 + e2)] = R.get((v1 + v2, e1 + e2), 0) + a * b
+        return R
+    A = {(0, 0): Fraction(1)}; term = {(0, 0): Fraction(1)}
+    for k in range(1, max_excess + 1):
+        term = {key: v / k for key, v in mul(term, C).items()}
+        for key, v in term.items(): A[key] = A.get(key, 0) + v
+    return all(total(V, E) == v for (V, E), v in A.items() if (V, E) != (0, 0)), len(A) - 1
+
 if __name__ == '__main__':
     sys.path.insert(0, '.')
     from loop_engine import automorphisms
@@ -95,3 +131,7 @@ if __name__ == '__main__':
     s = sum(Fraction(1, c['aut']) for c in out)
     print(f"excess {exc}: {len(out)} cores ({dict(sorted(by_v.items()))} by V), sum 1/|Aut| = {s} = {float(s):.6f}, {time.time() - t0:.1f}s")
     json.dump(out, open(f'cores_e{exc}.json', 'w'))
+    import os
+    if all(os.path.exists(f'cores_e{e}.json') for e in range(1, exc + 1)):
+        ok, npts = configuration_check(exc)
+        print(f"configuration-model check, excess <= {exc}, {npts} (V, E) points: {'exact agreement' if ok else 'MISMATCH'}")

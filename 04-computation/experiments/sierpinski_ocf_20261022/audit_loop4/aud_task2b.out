@@ -1,0 +1,12 @@
+tournament: 110010111001110101111  max |x_k| = 0.5331501153669822
+m-scaling to z^16: 11s, maxrss 1010 MB
+engine series (K=64, r=1.0): 45s, maxrss 1629 MB
+   L= 2: exact X_3^(L) +0.000000000000000e+00  engine -3.143322793874501e-11  diff -3.1e-11   (6-vertex cores: -1.2306e-12)
+   L= 4: exact X_3^(L) +0.000000000000000e+00  engine -1.084167773468085e-11  diff -1.1e-11   (6-vertex cores: -4.5581e-13)
+   L= 6: exact X_3^(L) -1.420836556196823e-01  engine -1.420836556234028e-01  diff -3.7e-12   (6-vertex cores: -1.6730e-13)
+   L= 8: exact X_3^(L) -5.568108942528979e-01  engine -5.568108942541683e-01  diff -1.3e-12   (6-vertex cores: -6.0891e-14)
+   L=10: exact X_3^(L) -6.257547046183859e-01  engine -6.257547046188172e-01  diff -4.3e-13   (6-vertex cores: -3.6704e-05)
+   L=12: exact X_3^(L) -5.423174913571392e-01  engine -5.423174913572847e-01  diff -1.5e-13   (6-vertex cores: +1.9646e-05)
+   L=14: exact X_3^(L) -3.763675369694058e-01  engine -3.763675369694541e-01  diff -4.8e-14   (6-vertex cores: +8.6993e-05)
+   L=16: exact X_3^(L) -2.350024965807813e-01  engine -2.350024965807970e-01  diff -1.6e-14   (6-vertex cores: +9.9766e-05)
+max relative deviation (absolute where exact = 0): 3.1e-11

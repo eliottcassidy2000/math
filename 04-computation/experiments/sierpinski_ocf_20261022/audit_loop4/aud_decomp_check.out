@@ -1,0 +1,26 @@
+excess 1 core  0 (V=1, E=2): decomp.c tensor == CoreB.Wb: True (nonzero 17, python 0.0s)
+excess 1 core  1 (V=2, E=3): decomp.c tensor == CoreB.Wb: True (nonzero 41, python 0.0s)
+excess 1 core  2 (V=2, E=3): decomp.c tensor == CoreB.Wb: True (nonzero 45, python 0.0s)
+excess 2 core  0 (V=1, E=3): decomp.c tensor == CoreB.Wb: True (nonzero 99, python 0.0s)
+excess 2 core  1 (V=2, E=4): decomp.c tensor == CoreB.Wb: True (nonzero 243, python 0.0s)
+excess 2 core  2 (V=2, E=4): decomp.c tensor == CoreB.Wb: True (nonzero 255, python 0.0s)
+excess 2 core  3 (V=2, E=4): decomp.c tensor == CoreB.Wb: True (nonzero 227, python 0.0s)
+excess 2 core  4 (V=2, E=4): decomp.c tensor == CoreB.Wb: True (nonzero 211, python 0.0s)
+excess 2 core  5 (V=3, E=5): decomp.c tensor == CoreB.Wb: True (nonzero 519, python 0.1s)
+excess 2 core  6 (V=3, E=5): decomp.c tensor == CoreB.Wb: True (nonzero 439, python 0.1s)
+excess 2 core  7 (V=3, E=5): decomp.c tensor == CoreB.Wb: True (nonzero 555, python 0.1s)
+excess 2 core  8 (V=3, E=5): decomp.c tensor == CoreB.Wb: True (nonzero 427, python 0.1s)
+excess 2 core  9 (V=3, E=5): decomp.c tensor == CoreB.Wb: True (nonzero 603, python 0.1s)
+excess 2 core 10 (V=4, E=6): decomp.c tensor == CoreB.Wb: True (nonzero 835, python 0.5s)
+excess 2 core 11 (V=4, E=6): decomp.c tensor == CoreB.Wb: True (nonzero 1251, python 0.5s)
+excess 2 core 12 (V=4, E=6): decomp.c tensor == CoreB.Wb: True (nonzero 963, python 0.5s)
+excess 2 core 13 (V=4, E=6): decomp.c tensor == CoreB.Wb: True (nonzero 735, python 0.6s)
+excess 2 core 14 (V=4, E=6): decomp.c tensor == CoreB.Wb: True (nonzero 1431, python 0.4s)
+excess 3 core  0 (V=1, E=4): decomp.c tensor == CoreB.Wb: True (nonzero 545, python 0.2s), stored decomp_e3 tensor equal: True
+excess 3 core  1 (V=2, E=5): decomp.c tensor == CoreB.Wb: True (nonzero 1465, python 0.6s), stored decomp_e3 tensor equal: True
+excess 3 core  2 (V=2, E=5): decomp.c tensor == CoreB.Wb: True (nonzero 1485, python 0.6s), stored decomp_e3 tensor equal: True
+excess 3 core  3 (V=2, E=5): decomp.c tensor == CoreB.Wb: True (nonzero 1325, python 0.7s), stored decomp_e3 tensor equal: True
+excess 3 core  4 (V=2, E=5): decomp.c tensor == CoreB.Wb: True (nonzero 1253, python 0.6s), stored decomp_e3 tensor equal: True
+excess 3 core  5 (V=2, E=5): decomp.c tensor == CoreB.Wb: True (nonzero 1385, python 0.5s), stored decomp_e3 tensor equal: True
+excess 3 core  6 (V=2, E=5): decomp.c tensor == CoreB.Wb: True (nonzero 1161, python 0.5s), stored decomp_e3 tensor equal: True
+excess 3 core  7 (V=2, E=5): decomp.c tensor == CoreB.Wb: True (nonzero 1445, python 0.4s), stored decomp_e3 tensor equal: True

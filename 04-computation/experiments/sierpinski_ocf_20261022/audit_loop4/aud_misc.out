@@ -1,0 +1,13 @@
+regular 7-tournament gentourng class 1, z = 0.645+0.273j: X_1 engine 1.1804789001504e-02-8.9534291044264e-02j closed form 1.1804789001504e-02-8.9534291044264e-02j (|diff| 5.6e-17); X_2 engine -4.4261535412191e-02+3.4299557322999e-02j HYP-9367 engine -4.4261535412191e-02+3.4299557322999e-02j (|diff| 1.1e-16)
+regular 7-tournament gentourng class 1, z = 0.500+0.600j: X_1 engine 1.0898992706785e-01+5.6481158667192e-02j closed form 1.0898992706785e-01+5.6481158667192e-02j (|diff| 7.1e-17); X_2 engine 3.3283161658377e-02-4.7893037945003e-02j HYP-9367 engine 3.3283161658377e-02-4.7893037945003e-02j (|diff| 4.0e-16)
+P_11, z = 0.645+0.273j: X_1 engine 3.7797931484653e-03-6.2796755393938e-02j closed form 3.7797931484652e-03-6.2796755393938e-02j (|diff| 1.7e-17); X_2 engine -1.6346233074808e-02+1.7505464806396e-02j HYP-9367 engine -1.6346233074808e-02+1.7505464806396e-02j (|diff| 6.6e-17)
+P_11, z = 0.500+0.600j: X_1 engine 8.6076394936385e-02+3.6900600593116e-02j closed form 8.6076394936385e-02+3.6900600593116e-02j (|diff| 4.4e-17); X_2 engine 1.3930688823821e-02-2.9403599148602e-02j HYP-9367 engine 1.3930688823821e-02-2.9403599148602e-02j (|diff| 2.0e-16)
+n = 7: DP-optimal contraction cost (multiply-adds, with W, 5-basis): max 4.194e+08 (core 105, V = 6), median 1.40e+06, total 1.42e+09
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/.claude/worktrees/gifted-chatterjee-298788/04-computation/experiments/sierpinski_ocf_20261022/audit_loop4/aud_misc.py", line 21, in <module>
+    cost, tree, opn, ops, out = LE4.network(3, i).plan(5, n, True)
+  File "/Users/e/Documents/GitHub/math/.claude/worktrees/gifted-chatterjee-298788/04-computation/experiments/sierpinski_ocf_20261022/loop_engine4.py", line 135, in plan
+    cost, tree, opn = dp_plan(ops, dims, out, memcap=cap); break
+  File "/Users/e/Documents/GitHub/math/.claude/worktrees/gifted-chatterjee-298788/04-computation/experiments/sierpinski_ocf_20261022/loop_engine4.py", line 75, in dp_plan
+    if full not in best: raise ValueError('no contraction tree within the memory cap')
+ValueError: no contraction tree within the memory cap

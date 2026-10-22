@@ -1,0 +1,4 @@
+n = 5: brute-force linear forests N_L = [1, 0, 12, 0, 48]; via own F + conversion [1, 0, 12, 0, 48]; equal: True; odd L zero: True
+n = 6: brute-force linear forests N_L = [1, 0, 0, 0, -56, 0]; via own F + conversion [1, 0, 0, 0, -56, 0]; equal: True; odd L zero: True
+n = 7: brute-force linear forests N_L = [1, 0, -14, 0, -88, 0, 48]; via own F + conversion [1, 0, -14, 0, -88, 0, 48]; equal: True; odd L zero: True
+n = 8: brute-force linear forests N_L = [1, 0, 8, 0, -416, 0, 192, 0]; via own F + conversion [1, 0, 8, 0, -416, 0, 192, 0]; equal: True; odd L zero: True
