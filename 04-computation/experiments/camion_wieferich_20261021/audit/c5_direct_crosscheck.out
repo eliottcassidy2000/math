@@ -1,0 +1,3 @@
+p <= 2000: connected cg(p) mod p^2, direct (b' = T' T^-1) vs FLINT: 0 mismatches over 302 primes; direct summary: SUMMARY primes=302 rotation-congruence failures=0 connected-CW=2
+p <= 2000: base-3 s_3(p) mod p^2, direct (T' = S' T^2) vs FLINT: 0 mismatches over 301 primes; direct base-3 CW primes: [17, 31]
+direct connected-CW primes: [5, 197]

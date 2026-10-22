@@ -1,0 +1,356 @@
+P 23 11 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=484 b(m)=1
+Z 20 20 10 2 8 20
+Z 23 1 22 10 2 1
+Z 24 2 9 9 14 14
+P 31 5 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=714 b(m)=1
+Z 31 1 20 12 3 17
+Z 32 2 23 23 11 11
+P 47 23 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=1364 b(m)=1
+Z 12 12 12 30 5 23
+Z 47 1 32 12 25 36
+Z 48 2 40 40 38 38
+P 71 35 0 3
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=4190 b(m)=1
+Z 25 25 49 34 29 8
+Z 71 1 16 21 11 41
+Z 72 2 43 43 36 36
+P 89 11 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=4985 b(m)=1
+Z 89 1 84 81 57 73
+Z 90 2 79 79 9 9
+P 127 7 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=6097 b(m)=1
+Z 127 1 87 96 112 56
+Z 128 2 4 4 34 34
+P 167 83 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=8518 b(m)=1
+Z 167 1 163 3 74 37
+Z 168 2 38 38 91 91
+P 191 95 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=21584 b(m)=1
+Z 64 64 152 23 0 0
+Z 65 65 27 123 81 26
+Z 191 1 55 76 123 157
+Z 192 2 189 189 39 39
+P 223 37 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=14496 b(m)=1
+Z 223 1 81 134 166 83
+Z 224 2 116 116 123 123
+P 233 29 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=54057 b(m)=1
+Z 14 14 129 19 179 121
+Z 90 90 144 230 31 230
+Z 233 1 48 5 111 172
+Z 234 2 100 100 96 96
+P 239 119 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=45411 b(m)=1
+Z 239 1 99 0 1 120
+Z 240 2 172 172 51 51
+P 263 131 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=62595 b(m)=1
+Z 263 1 41 54 112 56
+Z 264 2 22 22 55 55
+P 311 155 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=18661 b(m)=1
+Z 311 1 164 199 276 138
+Z 312 2 133 133 227 227
+P 359 179 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=88674 b(m)=1
+Z 76 76 233 32 88 319
+Z 313 313 293 258 341 224
+Z 359 1 308 151 286 143
+Z 360 2 221 221 99 99
+P 383 191 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=73154 b(m)=1
+Z 286 286 51 345 256 285
+Z 383 1 181 332 110 55
+Z 384 2 312 312 325 325
+P 431 43 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=113785 b(m)=1
+Z 42 42 56 85 385 152
+Z 325 325 364 291 66 264
+Z 431 1 45 299 375 403
+Z 432 2 289 289 239 239
+P 439 73 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=174284 b(m)=1
+Z 439 1 34 226 266 133
+Z 440 2 30 30 56 56
+P 479 239 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=57002 b(m)=1
+Z 149 149 132 267 220 93
+Z 153 153 227 390 436 124
+Z 454 454 33 289 134 413
+Z 479 1 64 345 229 354
+Z 480 2 119 119 228 228
+Z 483 5 265 350 58 450
+P 503 251 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=201201 b(m)=1
+Z 336 336 316 149 351 389
+Z 497 497 68 134 198 402
+Z 503 1 157 84 33 268
+Z 504 2 40 40 464 464
+P 599 299 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=91049 b(m)=1
+Z 599 1 193 550 18 9
+Z 600 2 389 389 276 276
+P 601 25 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=164675 b(m)=1
+Z 601 1 143 324 34 17
+Z 602 2 209 209 492 492
+P 647 323 0 4
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=79582 b(m)=1
+Z 647 1 464 49 309 478
+Z 648 2 320 320 313 313
+P 719 359 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=350873 b(m)=1
+Z 202 202 36 425 608 112
+Z 660 660 53 300 464 373
+Z 719 1 397 347 667 693
+Z 720 2 511 511 621 621
+P 727 121 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=115594 b(m)=1
+Z 726 0 245 697 262 572
+Z 727 1 581 149 91 409
+Z 728 2 200 200 359 359
+P 743 371 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=323206 b(m)=1
+Z 743 1 271 140 221 482
+Z 744 2 56 56 272 272
+P 839 419 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=546190 b(m)=1
+Z 122 122 434 804 830 63
+Z 589 589 172 522 141 470
+Z 839 1 28 715 403 621
+Z 840 2 167 167 527 527
+P 863 431 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=85438 b(m)=1
+Z 580 580 713 132 302 534
+Z 863 1 350 856 414 207
+Z 864 2 615 615 305 305
+P 881 55 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=186773 b(m)=1
+Z 229 229 445 435 40 353
+Z 259 259 553 870 297 801
+Z 528 528 145 186 784 166
+Z 757 757 216 304 797 293
+Z 881 1 354 441 451 666
+Z 882 2 864 864 546 546
+P 887 443 0 2
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=271423 b(m)=1
+Z 887 1 212 596 116 58
+Z 888 2 617 617 356 356
+P 911 91 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=126630 b(m)=1
+Z 107 107 102 825 46 95
+Z 911 1 407 181 826 413
+Z 912 2 321 321 299 299
+P 983 491 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=234938 b(m)=1
+Z 113 113 10 84 779 852
+Z 983 1 855 180 74 37
+Z 984 2 1 1 553 553
+P 1031 515 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=129907 b(m)=1
+Z 1031 1 436 446 819 925
+Z 1032 2 919 919 167 167
+P 1103 29 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=472085 b(m)=1
+Z 284 284 233 323 177 457
+Z 1103 1 762 1087 324 162
+Z 1104 2 144 144 27 27
+P 1151 575 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=384435 b(m)=1
+Z 1151 1 437 1020 1086 543
+Z 1152 2 94 94 962 962
+P 1223 611 0 2
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=840202 b(m)=1
+Z 7 7 9 672 933 58
+Z 469 469 576 89 539 465
+Z 1072 1072 471 596 1202 1055
+Z 1168 1168 286 173 1060 555
+Z 1223 1 782 31 800 400
+Z 1224 2 186 186 263 263
+P 1289 161 0 2
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=877810 b(m)=1
+Z 12 12 11 1042 587 328
+Z 1013 1013 740 1029 732 49
+Z 1289 1 1236 765 874 437
+Z 1290 2 708 708 203 203
+P 1319 659 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=1735805 b(m)=1
+Z 1009 1009 952 1011 555 1232
+Z 1319 1 415 1314 564 282
+Z 1320 2 839 839 195 195
+P 1327 221 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=1624249 b(m)=1
+Z 1327 1 246 1297 824 412
+Z 1328 2 491 491 222 222
+P 1367 683 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=1417580 b(m)=1
+Z 1367 1 1050 360 199 783
+Z 1368 2 1055 1055 972 972
+P 1399 233 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=341357 b(m)=1
+Z 75 75 607 833 251 514
+Z 1399 1 117 138 940 470
+Z 1400 2 524 524 24 24
+P 1433 179 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=1862901 b(m)=1
+Z 119 119 658 1191 673 1415
+Z 1433 1 162 761 369 901
+Z 1434 2 386 386 1112 1112
+P 1439 719 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=1977187 b(m)=1
+Z 1439 1 182 166 90 45
+Z 1440 2 1085 1085 1286 1286
+P 1471 245 0 2
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=1291539 b(m)=1
+Z 557 557 1323 720 1277 3
+Z 1017 1017 1295 1157 488 1214
+Z 1152 1152 1410 705 615 978
+Z 1471 1 16 532 345 908
+Z 1472 2 820 820 350 350
+P 1487 743 0 2
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=795546 b(m)=1
+Z 1487 1 1118 571 244 122
+Z 1488 2 1182 1182 871 871
+P 1511 755 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=1414297 b(m)=1
+Z 1278 1278 970 1430 230 869
+Z 1511 1 193 494 864 432
+Z 1512 2 682 682 724 724
+P 1559 779 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=1931602 b(m)=1
+Z 330 330 1503 585 1151 1180
+Z 1559 1 775 1502 740 370
+Z 1560 2 96 96 1348 1348
+P 1583 791 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=1123931 b(m)=1
+Z 732 732 1469 1218 1095 790
+Z 1583 1 217 138 701 1142
+Z 1584 2 529 529 1532 1532
+P 1607 803 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=1308099 b(m)=1
+Z 962 962 257 686 1569 144
+Z 1607 1 464 1312 650 325
+Z 1608 2 1070 1070 916 916
+P 1721 215 0 2
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=1898264 b(m)=1
+Z 1721 1 41 1005 1124 562
+Z 1722 2 1278 1278 534 534
+P 1801 25 0 3
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=1945081 b(m)=1
+Z 645 645 478 262 975 948
+Z 775 775 436 1466 1000 926
+Z 1801 1 408 345 1227 1514
+Z 1802 2 612 612 1094 1094
+P 1823 911 0 2
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=741962 b(m)=1
+Z 1823 1 775 304 585 1204
+Z 1824 2 43 43 1354 1354
+P 1831 305 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=897191 b(m)=1
+Z 269 269 1634 1774 1707 1372
+Z 1512 1512 245 1476 220 303
+Z 1831 1 503 254 1181 1506
+Z 1832 2 1015 1015 939 939
+P 1847 923 0 2
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=2279199 b(m)=1
+Z 54 54 404 1704 1268 686
+Z 1847 1 976 1312 1026 513
+Z 1848 2 1007 1007 434 434
+P 1871 935 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=3233089 b(m)=1
+Z 1871 1 541 48 1593 1732
+Z 1872 2 864 864 1677 1677
+P 1913 239 0 2
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=1691093 b(m)=1
+Z 1913 1 166 1853 1355 1634
+Z 1914 2 653 653 847 847
+P 2039 1019 0 0
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=795211 b(m)=1
+Z 2039 1 82 732 97 1068
+Z 2040 2 145 145 581 581
+P 2063 1031 0 2
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=3562802 b(m)=1
+Z 2063 1 1411 1417 1229 1646
+Z 2064 2 993 993 1228 1228
+P 2087 1043 0 2
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=3439377 b(m)=1
+Z 906 906 1508 872 233 256
+Z 2087 1 1293 973 676 338
+Z 2088 2 1127 1127 1581 1581
+P 2089 29 0 2
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=1364118 b(m)=1
+Z 2089 1 1893 1060 1869 1979
+Z 2090 2 1413 1413 1854 1854
+P 2111 1055 0 1
+B 2 law=1 zeroclass=1 gminus1_over_p=0 value_mod_p2=0 b(m)=0
+B 3 law=0 zeroclass=0 gminus1_over_p=999999 value_mod_p2=4059454 b(m)=1
+Z 799 799 31 1172 300 1957
+Z 1274 1274 514 578 1323 1866
+Z 1637 1637 110 1195 1174 579
+Z 2111 1 74 1354 1970 985
+Z 2112 2 1610 1610 632 632

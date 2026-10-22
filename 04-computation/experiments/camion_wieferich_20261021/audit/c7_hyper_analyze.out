@@ -1,0 +1,26 @@
+===== r = 4 =====
+primes: session 60, audit 60, same set: True
+audit: degree-4 law failures over all classes m in [r+3, r+p+1]: 0; classes with p^2 | a_r (not genuine degree 4): 50
+per-prime per-class root counts, session vs audit: 0 primes differ
+table (class: counts of 0..r roots)   session  |  audit
+   class 1        : 23 / 19 / 16 / 0 / 2   |  23 / 19 / 16 / 0 / 2   (n = 60)
+   class 2        : 0 / 18 / 32 / 1 / 9   |  0 / 18 / 32 / 1 / 9   (n = 60)
+   class 3        : 0 / 21 / 26 / 0 / 13   |  0 / 21 / 26 / 0 / 13   (n = 60)
+   class sporadic : 21 / 19 / 13 / 0 / 3   |  21 / 19 / 13 / 0 / 3   (n = 56)
+forced root at l = -1 (n = 2, 3): {(2, True): 60, (3, True): 60}
+low bases (m, law holds at base m, class is a zero class, class polynomial of base m+(p-1) vanishes at l=-1 mod p^2): {(2, 1, 1, True): 60, (3, 1, 1, True): 60}
+zero classes not genuinely of degree 4 (p, class, roots, degree of g): [(23, 1, 1, 1)]
+S_4 fixed points: ['3/8', '1/3', '1/4', '0', '1/24'];  forced root + S_3: ['0', '1/3', '1/2', '0', '1/6']
+   anomalous class 2 at p=71: c = [12, 12, 69, 67, 69], g = 65*x^4 + 59*x^3 + 6*x^2 + 24*x + 12, factorisation (65, [(x + 12, 1), (x + 59, 1), (x + 1, 2)])
+===== r = 3 =====
+primes: session 60, audit 60, same set: True
+audit: degree-3 law failures over all classes m in [r+3, r+p+1]: 0; classes with p^2 | a_r (not genuine degree 3): 58
+per-prime per-class root counts, session vs audit: 0 primes differ
+table (class: counts of 0..r roots)   session  |  audit
+   class 1        : 22 / 25 / 1 / 12   |  22 / 25 / 1 / 12   (n = 60)
+   class 2        : 0 / 31 / 0 / 29   |  0 / 31 / 0 / 29   (n = 60)
+   class sporadic : 21 / 21 / 0 / 14   |  21 / 21 / 0 / 14   (n = 56)
+forced root at l = -1 (n = 2): {(2, True): 60}
+low bases (m, law holds at base m, class is a zero class, class polynomial of base m+(p-1) vanishes at l=-1 mod p^2): {(2, 1, 1, True): 60, (3, 0, 0, False): 60}
+zero classes not genuinely of degree 3 (p, class, roots, degree of g): [(191, 64, 1, 1)]
+S_3 fixed points: ['1/3', '1/2', '0', '1/6'];  forced root + S_2: ['0', '1/2', '0', '1/2']

@@ -1,0 +1,2 @@
+p=5: 500 integer bases a < 5^4: tower height from direct D_a(p^k) (k <= 4) vs v_p(a - kappa(a)) (both capped at 4): 0 mismatches; height histogram {1: 400, 2: 80, 3: 16, 4: 4}
+p=7: 294 integer bases a < 7^3: tower height from direct D_a(p^k) (k <= 3) vs v_p(a - kappa(a)) (both capped at 3): 0 mismatches; height histogram {1: 252, 2: 36, 3: 6}

@@ -402,3 +402,13 @@ The canon statement is THM-4750 (pre-audit); the open laws are HYP-9361. This se
   * the Camion–Wieferich lists for base 3 (17, 31) and connected graphs (5, 197);
   * the FLINT search to `10^6`.
 
+**Second audit pass (2026-10-21; [report](camion_function_audit_pass2_20261021.md); MISTAKE-655).**
+* §5b is confirmed:
+  * direct rigidity `s_a(p^k) ≡ s_(a′)(p^k) (mod p^(k+1))`;
+  * tower height `= v_p(a − κ(a))` for all 794 integer bases below `5^4` and `7^3`;
+  * designed heights exact.
+* The `r = 4` table, the base-3 list (17, 31) and the connected list (5, 197, extended to `10^4`) are confirmed.
+* `cw_flint_np.py` is validated.
+* One MAJOR fix: 6(b) holds only for `n ≥ n_0(j)`, which grows linearly in `j`. The first counterexample beyond `n ≤ 4` is `j = 11`, `n = 5`.
+* The connected-graph list is not a tower-height list, because the tower drifts by `1 − ε`.
+

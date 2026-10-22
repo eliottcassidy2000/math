@@ -1,8 +1,8 @@
 p=11: rho_C(a) for a=1..10: [0, 1, 1, 7, 10, 6, 4, 10, 6, 3]
-   rho(1/a)=rho(a): False  rho(-a)=rho(a): False  rho(-a)=-rho(a): False  min Lagrange degree: 9 (generic 10)
+   rho(1/a)=rho(a): False  rho(-a)=rho(a): False  rho(-a)=-rho(a): False  min Lagrange degree (value at 0 free): 9 (generic p-2 = 9)
 p=13: rho_C(a) for a=1..12: [0, 8, 7, 0, 2, 12, 1, 11, 8, 10, 3, 0]
-   rho(1/a)=rho(a): False  rho(-a)=rho(a): False  rho(-a)=-rho(a): False  min Lagrange degree: 11 (generic 12)
+   rho(1/a)=rho(a): False  rho(-a)=rho(a): False  rho(-a)=-rho(a): False  min Lagrange degree (value at 0 free): 11 (generic p-2 = 11)
 p=17: rho_C(a) for a=1..16: [0, 12, 5, 12, 11, 2, 5, 1, 11, 2, 13, 9, 4, 10, 9, 14]
-   rho(1/a)=rho(a): False  rho(-a)=rho(a): False  rho(-a)=-rho(a): False  min Lagrange degree: 15 (generic 16)
+   rho(1/a)=rho(a): False  rho(-a)=rho(a): False  rho(-a)=-rho(a): False  min Lagrange degree (value at 0 free): 15 (generic p-2 = 15)
 p=19: rho_C(a) for a=1..18: [0, 10, 12, 7, 12, 5, 12, 3, 13, 5, 3, 15, 16, 12, 11, 14, 16, 10]
-   rho(1/a)=rho(a): False  rho(-a)=rho(a): False  rho(-a)=-rho(a): False  min Lagrange degree: 17 (generic 18)
+   rho(1/a)=rho(a): False  rho(-a)=rho(a): False  rho(-a)=-rho(a): False  min Lagrange degree (value at 0 free): 17 (generic p-2 = 17)

@@ -1,0 +1,12 @@
+p= 5 a= 3: kappa(a) mod p^6 =    8313; v(a - kappa) = 1, v(Lambda_p(a)) = 1;  valuation patterns v(D_b(p^k)), k=1..5: kappa:23456 h=1:11111 h=2:22222 h=3:23333 h=4:23444 h=5:23455
+p= 5 a= 4: kappa(a) mod p^6 =   11719; v(a - kappa) = 1, v(Lambda_p(a)) = 1;  valuation patterns v(D_b(p^k)), k=1..5: kappa:23456 h=1:11111 h=2:22222 h=3:23333 h=4:23444 h=5:23455
+p= 7 a= 3: kappa(a) mod p^5 =    6856; v(a - kappa) = 1, v(Lambda_p(a)) = 1;  valuation patterns v(D_b(p^k)), k=1..4: kappa:2345 h=1:1111 h=2:2222 h=3:2333 h=4:2344
+p= 7 a= 5: kappa(a) mod p^5 =   11114; v(a - kappa) = 1, v(Lambda_p(a)) = 1;  valuation patterns v(D_b(p^k)), k=1..4: kappa:2345 h=1:1111 h=2:2222 h=3:2333 h=4:2344
+p= 7 a= 6: kappa(a) mod p^5 =    8742; v(a - kappa) = 1, v(Lambda_p(a)) = 1;  valuation patterns v(D_b(p^k)), k=1..4: kappa:2345 h=1:1111 h=2:2222 h=3:2333 h=4:2344
+p=11 a= 3: kappa(a) mod p^4 =    2962; v(a - kappa) = 1, v(Lambda_p(a)) = 1;  valuation patterns v(D_b(p^k)), k=1..3: kappa:234 h=1:111 h=2:222 h=3:233
+p=11 a= 5: kappa(a) mod p^4 =   12237; v(a - kappa) = 1, v(Lambda_p(a)) = 1;  valuation patterns v(D_b(p^k)), k=1..3: kappa:234 h=1:111 h=2:222 h=3:233
+p=11 a=10: kappa(a) mod p^4 =   12286; v(a - kappa) = 1, v(Lambda_p(a)) = 1;  valuation patterns v(D_b(p^k)), k=1..3: kappa:234 h=1:111 h=2:222 h=3:233
+p=13 a= 3: kappa(a) mod p^4 =   12275; v(a - kappa) = 1, v(Lambda_p(a)) = 1;  valuation patterns v(D_b(p^k)), k=1..3: kappa:234 h=1:111 h=2:222 h=3:233
+p=13 a= 5: kappa(a) mod p^4 =    7922; v(a - kappa) = 1, v(Lambda_p(a)) = 1;  valuation patterns v(D_b(p^k)), k=1..3: kappa:234 h=1:111 h=2:222 h=3:233
+p=13 a=12: kappa(a) mod p^4 =   15716; v(a - kappa) = 1, v(Lambda_p(a)) = 1;  valuation patterns v(D_b(p^k)), k=1..3: kappa:234 h=1:111 h=2:222 h=3:233
+all designed-height patterns as predicted: True

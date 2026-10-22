@@ -1,0 +1,461 @@
+selftest p=7 M=2401: T'=S'T^2 recurrence vs Wright recurrence, bases 2..5, n<=60: 0 mismatches
+   s_2(1..8) mod M: 1 0 2 24 544 711 1590 2387 
+selftest p=13 M=2197: T'=S'T^2 recurrence vs Wright recurrence, bases 2..5, n<=60: 0 mismatches
+   s_2(1..8) mod M: 1 0 2 24 544 350 1177 67 
+selftest p=3 M=243: T'=S'T^2 recurrence vs Wright recurrence, bases 2..5, n<=60: 0 mismatches
+   s_2(1..8) mod M: 1 0 2 24 58 207 59 147 
+p=3 eps=-1 base a=2 (mod p^10):  k=1: eps^k s(p^k)=7, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=25, eps^k D(p^k)=9 [v=2]  k=3: eps^k s(p^k)=79, eps^k D(p^k)=9 [v=2]  k=4: eps^k s(p^k)=241, eps^k D(p^k)=9 [v=2]  k=5: eps^k s(p^k)=727, eps^k D(p^k)=252 [v=2]  k=6: eps^k s(p^k)=2185, eps^k D(p^k)=252 [v=2]  k=7: eps^k s(p^k)=6559, eps^k D(p^k)=4626 [v=2]  k=8: eps^k s(p^k)=19681, eps^k D(p^k)=11187 [v=2]  k=9: eps^k s(p^k)=59047, eps^k D(p^k)=30870 [v=2]
+   tower relations (s and D) for k=2..9: OK
+p=3 eps=-1 base a=5 (mod p^10):  k=1: eps^k s(p^k)=7, eps^k D(p^k)=3 [v=1]  k=2: eps^k s(p^k)=25, eps^k D(p^k)=21 [v=1]  k=3: eps^k s(p^k)=79, eps^k D(p^k)=75 [v=1]  k=4: eps^k s(p^k)=241, eps^k D(p^k)=75 [v=1]  k=5: eps^k s(p^k)=727, eps^k D(p^k)=561 [v=1]  k=6: eps^k s(p^k)=2185, eps^k D(p^k)=2019 [v=1]  k=7: eps^k s(p^k)=6559, eps^k D(p^k)=6393 [v=1]  k=8: eps^k s(p^k)=19681, eps^k D(p^k)=19515 [v=1]  k=9: eps^k s(p^k)=59047, eps^k D(p^k)=19515 [v=1]
+   tower relations (s and D) for k=2..9: OK
+p=3 eps=-1 base a=8 (mod p^10):  k=1: eps^k s(p^k)=7, eps^k D(p^k)=6 [v=1]  k=2: eps^k s(p^k)=25, eps^k D(p^k)=6 [v=1]  k=3: eps^k s(p^k)=79, eps^k D(p^k)=33 [v=1]  k=4: eps^k s(p^k)=241, eps^k D(p^k)=114 [v=1]  k=5: eps^k s(p^k)=727, eps^k D(p^k)=600 [v=1]  k=6: eps^k s(p^k)=2185, eps^k D(p^k)=2058 [v=1]  k=7: eps^k s(p^k)=6559, eps^k D(p^k)=4245 [v=1]  k=8: eps^k s(p^k)=19681, eps^k D(p^k)=4245 [v=1]  k=9: eps^k s(p^k)=59047, eps^k D(p^k)=43611 [v=1]
+   tower relations (s and D) for k=2..9: OK
+p=3 eps=-1 base a=17 (mod p^10):  k=1: eps^k s(p^k)=7, eps^k D(p^k)=6 [v=1]  k=2: eps^k s(p^k)=25, eps^k D(p^k)=15 [v=1]  k=3: eps^k s(p^k)=79, eps^k D(p^k)=69 [v=1]  k=4: eps^k s(p^k)=241, eps^k D(p^k)=231 [v=1]  k=5: eps^k s(p^k)=727, eps^k D(p^k)=231 [v=1]  k=6: eps^k s(p^k)=2185, eps^k D(p^k)=231 [v=1]  k=7: eps^k s(p^k)=6559, eps^k D(p^k)=4605 [v=1]  k=8: eps^k s(p^k)=19681, eps^k D(p^k)=11166 [v=1]  k=9: eps^k s(p^k)=59047, eps^k D(p^k)=50532 [v=1]
+   tower relations (s and D) for k=2..9: OK
+p=3 eps=-1 base a=8 (mod p^10):  k=1: eps^k s(p^k)=7, eps^k D(p^k)=6 [v=1]  k=2: eps^k s(p^k)=25, eps^k D(p^k)=6 [v=1]  k=3: eps^k s(p^k)=79, eps^k D(p^k)=33 [v=1]  k=4: eps^k s(p^k)=241, eps^k D(p^k)=114 [v=1]  k=5: eps^k s(p^k)=727, eps^k D(p^k)=600 [v=1]  k=6: eps^k s(p^k)=2185, eps^k D(p^k)=2058 [v=1]  k=7: eps^k s(p^k)=6559, eps^k D(p^k)=4245 [v=1]  k=8: eps^k s(p^k)=19681, eps^k D(p^k)=4245 [v=1]  k=9: eps^k s(p^k)=59047, eps^k D(p^k)=43611 [v=1]
+   tower relations (s and D) for k=2..9: OK
+p=3 eps=-1 base a=59048 (mod p^10):  k=1: eps^k s(p^k)=7, eps^k D(p^k)=6 [v=1]  k=2: eps^k s(p^k)=25, eps^k D(p^k)=24 [v=1]  k=3: eps^k s(p^k)=79, eps^k D(p^k)=78 [v=1]  k=4: eps^k s(p^k)=241, eps^k D(p^k)=240 [v=1]  k=5: eps^k s(p^k)=727, eps^k D(p^k)=726 [v=1]  k=6: eps^k s(p^k)=2185, eps^k D(p^k)=2184 [v=1]  k=7: eps^k s(p^k)=6559, eps^k D(p^k)=6558 [v=1]  k=8: eps^k s(p^k)=19681, eps^k D(p^k)=19680 [v=1]  k=9: eps^k s(p^k)=59047, eps^k D(p^k)=59046 [v=1]
+   tower relations (s and D) for k=2..9: OK
+p=3 eps=-1 base a=23189 (mod p^10):  k=1: eps^k s(p^k)=7, eps^k D(p^k)=3 [v=1]  k=2: eps^k s(p^k)=25, eps^k D(p^k)=12 [v=1]  k=3: eps^k s(p^k)=79, eps^k D(p^k)=66 [v=1]  k=4: eps^k s(p^k)=241, eps^k D(p^k)=66 [v=1]  k=5: eps^k s(p^k)=727, eps^k D(p^k)=309 [v=1]  k=6: eps^k s(p^k)=2185, eps^k D(p^k)=1038 [v=1]  k=7: eps^k s(p^k)=6559, eps^k D(p^k)=3225 [v=1]  k=8: eps^k s(p^k)=19681, eps^k D(p^k)=16347 [v=1]  k=9: eps^k s(p^k)=59047, eps^k D(p^k)=55713 [v=1]
+   tower relations (s and D) for k=2..9: OK
+RIGIDITY p=3 residue 2 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 7)
+RIGIDITY p=3 residue 2 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 25)
+RIGIDITY p=3 residue 2 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 79)
+RIGIDITY p=3 residue 2 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 241)
+RIGIDITY p=3 residue 2 level k=5 (mod p^6): sigma equal for all 7 lifts: YES  (sigma = 727)
+RIGIDITY p=3 residue 2 level k=6 (mod p^7): sigma equal for all 7 lifts: YES  (sigma = 2185)
+RIGIDITY p=3 residue 2 level k=7 (mod p^8): sigma equal for all 7 lifts: YES  (sigma = 6559)
+RIGIDITY p=3 residue 2 level k=8 (mod p^9): sigma equal for all 7 lifts: YES  (sigma = 19681)
+RIGIDITY p=3 residue 2 level k=9 (mod p^10): sigma equal for all 7 lifts: YES  (sigma = 59047)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=5 eps=-1 base a=2 (mod p^7):  k=1: eps^k s(p^k)=6, eps^k D(p^k)=10 [v=1]  k=2: eps^k s(p^k)=56, eps^k D(p^k)=85 [v=1]  k=3: eps^k s(p^k)=56, eps^k D(p^k)=460 [v=1]  k=4: eps^k s(p^k)=1306, eps^k D(p^k)=2335 [v=1]  k=5: eps^k s(p^k)=7556, eps^k D(p^k)=14835 [v=1]  k=6: eps^k s(p^k)=23181, eps^k D(p^k)=46085 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=-1 base a=7 (mod p^7):  k=1: eps^k s(p^k)=6, eps^k D(p^k)=5 [v=1]  k=2: eps^k s(p^k)=56, eps^k D(p^k)=105 [v=1]  k=3: eps^k s(p^k)=56, eps^k D(p^k)=355 [v=1]  k=4: eps^k s(p^k)=1306, eps^k D(p^k)=2855 [v=1]  k=5: eps^k s(p^k)=7556, eps^k D(p^k)=9105 [v=1]  k=6: eps^k s(p^k)=23181, eps^k D(p^k)=71605 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=-1 base a=12 (mod p^7):  k=1: eps^k s(p^k)=6, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=56, eps^k D(p^k)=50 [v=2]  k=3: eps^k s(p^k)=56, eps^k D(p^k)=425 [v=2]  k=4: eps^k s(p^k)=1306, eps^k D(p^k)=1050 [v=2]  k=5: eps^k s(p^k)=7556, eps^k D(p^k)=1050 [v=2]  k=6: eps^k s(p^k)=23181, eps^k D(p^k)=16675 [v=2]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=-1 base a=27 (mod p^7):  k=1: eps^k s(p^k)=6, eps^k D(p^k)=10 [v=1]  k=2: eps^k s(p^k)=56, eps^k D(p^k)=60 [v=1]  k=3: eps^k s(p^k)=56, eps^k D(p^k)=435 [v=1]  k=4: eps^k s(p^k)=1306, eps^k D(p^k)=435 [v=1]  k=5: eps^k s(p^k)=7556, eps^k D(p^k)=6685 [v=1]  k=6: eps^k s(p^k)=23181, eps^k D(p^k)=53560 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=-1 base a=22 (mod p^7):  k=1: eps^k s(p^k)=6, eps^k D(p^k)=15 [v=1]  k=2: eps^k s(p^k)=56, eps^k D(p^k)=90 [v=1]  k=3: eps^k s(p^k)=56, eps^k D(p^k)=465 [v=1]  k=4: eps^k s(p^k)=1306, eps^k D(p^k)=1715 [v=1]  k=5: eps^k s(p^k)=7556, eps^k D(p^k)=14215 [v=1]  k=6: eps^k s(p^k)=23181, eps^k D(p^k)=14215 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=-1 base a=45807 (mod p^7):  k=1: eps^k s(p^k)=6, eps^k D(p^k)=5 [v=1]  k=2: eps^k s(p^k)=56, eps^k D(p^k)=55 [v=1]  k=3: eps^k s(p^k)=56, eps^k D(p^k)=55 [v=1]  k=4: eps^k s(p^k)=1306, eps^k D(p^k)=1305 [v=1]  k=5: eps^k s(p^k)=7556, eps^k D(p^k)=7555 [v=1]  k=6: eps^k s(p^k)=23181, eps^k D(p^k)=23180 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=-1 base a=54927 (mod p^7):  k=1: eps^k s(p^k)=6, eps^k D(p^k)=10 [v=1]  k=2: eps^k s(p^k)=56, eps^k D(p^k)=35 [v=1]  k=3: eps^k s(p^k)=56, eps^k D(p^k)=535 [v=1]  k=4: eps^k s(p^k)=1306, eps^k D(p^k)=1160 [v=1]  k=5: eps^k s(p^k)=7556, eps^k D(p^k)=10535 [v=1]  k=6: eps^k s(p^k)=23181, eps^k D(p^k)=57410 [v=1]
+   tower relations (s and D) for k=2..6: OK
+RIGIDITY p=5 residue 2 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 6)
+RIGIDITY p=5 residue 2 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 56)
+RIGIDITY p=5 residue 2 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 56)
+RIGIDITY p=5 residue 2 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 1306)
+RIGIDITY p=5 residue 2 level k=5 (mod p^6): sigma equal for all 7 lifts: YES  (sigma = 7556)
+RIGIDITY p=5 residue 2 level k=6 (mod p^7): sigma equal for all 7 lifts: YES  (sigma = 23181)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=5 eps=-1 base a=3 (mod p^7):  k=1: eps^k s(p^k)=6, eps^k D(p^k)=15 [v=1]  k=2: eps^k s(p^k)=56, eps^k D(p^k)=115 [v=1]  k=3: eps^k s(p^k)=306, eps^k D(p^k)=365 [v=1]  k=4: eps^k s(p^k)=2181, eps^k D(p^k)=2240 [v=1]  k=5: eps^k s(p^k)=2181, eps^k D(p^k)=11615 [v=1]  k=6: eps^k s(p^k)=2181, eps^k D(p^k)=27240 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=-1 base a=8 (mod p^7):  k=1: eps^k s(p^k)=6, eps^k D(p^k)=20 [v=1]  k=2: eps^k s(p^k)=56, eps^k D(p^k)=70 [v=1]  k=3: eps^k s(p^k)=306, eps^k D(p^k)=195 [v=1]  k=4: eps^k s(p^k)=2181, eps^k D(p^k)=2695 [v=1]  k=5: eps^k s(p^k)=2181, eps^k D(p^k)=5820 [v=1]  k=6: eps^k s(p^k)=2181, eps^k D(p^k)=52695 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=-1 base a=13 (mod p^7):  k=1: eps^k s(p^k)=6, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=56, eps^k D(p^k)=75 [v=2]  k=3: eps^k s(p^k)=306, eps^k D(p^k)=200 [v=2]  k=4: eps^k s(p^k)=2181, eps^k D(p^k)=200 [v=2]  k=5: eps^k s(p^k)=2181, eps^k D(p^k)=200 [v=2]  k=6: eps^k s(p^k)=2181, eps^k D(p^k)=47075 [v=2]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=-1 base a=28 (mod p^7):  k=1: eps^k s(p^k)=6, eps^k D(p^k)=15 [v=1]  k=2: eps^k s(p^k)=56, eps^k D(p^k)=15 [v=1]  k=3: eps^k s(p^k)=306, eps^k D(p^k)=15 [v=1]  k=4: eps^k s(p^k)=2181, eps^k D(p^k)=15 [v=1]  k=5: eps^k s(p^k)=2181, eps^k D(p^k)=3140 [v=1]  k=6: eps^k s(p^k)=2181, eps^k D(p^k)=18765 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=-1 base a=23 (mod p^7):  k=1: eps^k s(p^k)=6, eps^k D(p^k)=10 [v=1]  k=2: eps^k s(p^k)=56, eps^k D(p^k)=110 [v=1]  k=3: eps^k s(p^k)=306, eps^k D(p^k)=110 [v=1]  k=4: eps^k s(p^k)=2181, eps^k D(p^k)=110 [v=1]  k=5: eps^k s(p^k)=2181, eps^k D(p^k)=6360 [v=1]  k=6: eps^k s(p^k)=2181, eps^k D(p^k)=6360 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=-1 base a=32318 (mod p^7):  k=1: eps^k s(p^k)=6, eps^k D(p^k)=5 [v=1]  k=2: eps^k s(p^k)=56, eps^k D(p^k)=55 [v=1]  k=3: eps^k s(p^k)=306, eps^k D(p^k)=305 [v=1]  k=4: eps^k s(p^k)=2181, eps^k D(p^k)=2180 [v=1]  k=5: eps^k s(p^k)=2181, eps^k D(p^k)=2180 [v=1]  k=6: eps^k s(p^k)=2181, eps^k D(p^k)=2180 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=-1 base a=54928 (mod p^7):  k=1: eps^k s(p^k)=6, eps^k D(p^k)=15 [v=1]  k=2: eps^k s(p^k)=56, eps^k D(p^k)=40 [v=1]  k=3: eps^k s(p^k)=306, eps^k D(p^k)=165 [v=1]  k=4: eps^k s(p^k)=2181, eps^k D(p^k)=2665 [v=1]  k=5: eps^k s(p^k)=2181, eps^k D(p^k)=12040 [v=1]  k=6: eps^k s(p^k)=2181, eps^k D(p^k)=43290 [v=1]
+   tower relations (s and D) for k=2..6: OK
+RIGIDITY p=5 residue 3 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 6)
+RIGIDITY p=5 residue 3 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 56)
+RIGIDITY p=5 residue 3 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 306)
+RIGIDITY p=5 residue 3 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 2181)
+RIGIDITY p=5 residue 3 level k=5 (mod p^6): sigma equal for all 7 lifts: YES  (sigma = 2181)
+RIGIDITY p=5 residue 3 level k=6 (mod p^7): sigma equal for all 7 lifts: YES  (sigma = 2181)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=5 eps=+1 base a=4 (mod p^7):  k=1: eps^k s(p^k)=11, eps^k D(p^k)=20 [v=1]  k=2: eps^k s(p^k)=11, eps^k D(p^k)=45 [v=1]  k=3: eps^k s(p^k)=261, eps^k D(p^k)=170 [v=1]  k=4: eps^k s(p^k)=2136, eps^k D(p^k)=2670 [v=1]  k=5: eps^k s(p^k)=2136, eps^k D(p^k)=2670 [v=1]  k=6: eps^k s(p^k)=64636, eps^k D(p^k)=2670 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=+1 base a=9 (mod p^7):  k=1: eps^k s(p^k)=11, eps^k D(p^k)=5 [v=1]  k=2: eps^k s(p^k)=11, eps^k D(p^k)=30 [v=1]  k=3: eps^k s(p^k)=261, eps^k D(p^k)=530 [v=1]  k=4: eps^k s(p^k)=2136, eps^k D(p^k)=1780 [v=1]  k=5: eps^k s(p^k)=2136, eps^k D(p^k)=1780 [v=1]  k=6: eps^k s(p^k)=64636, eps^k D(p^k)=1780 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=+1 base a=14 (mod p^7):  k=1: eps^k s(p^k)=11, eps^k D(p^k)=15 [v=1]  k=2: eps^k s(p^k)=11, eps^k D(p^k)=90 [v=1]  k=3: eps^k s(p^k)=261, eps^k D(p^k)=90 [v=1]  k=4: eps^k s(p^k)=2136, eps^k D(p^k)=1965 [v=1]  k=5: eps^k s(p^k)=2136, eps^k D(p^k)=8215 [v=1]  k=6: eps^k s(p^k)=64636, eps^k D(p^k)=23840 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=+1 base a=29 (mod p^7):  k=1: eps^k s(p^k)=11, eps^k D(p^k)=20 [v=1]  k=2: eps^k s(p^k)=11, eps^k D(p^k)=95 [v=1]  k=3: eps^k s(p^k)=261, eps^k D(p^k)=220 [v=1]  k=4: eps^k s(p^k)=2136, eps^k D(p^k)=2720 [v=1]  k=5: eps^k s(p^k)=2136, eps^k D(p^k)=2720 [v=1]  k=6: eps^k s(p^k)=64636, eps^k D(p^k)=2720 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=+1 base a=24 (mod p^7):  k=1: eps^k s(p^k)=11, eps^k D(p^k)=10 [v=1]  k=2: eps^k s(p^k)=11, eps^k D(p^k)=60 [v=1]  k=3: eps^k s(p^k)=261, eps^k D(p^k)=560 [v=1]  k=4: eps^k s(p^k)=2136, eps^k D(p^k)=3060 [v=1]  k=5: eps^k s(p^k)=2136, eps^k D(p^k)=15560 [v=1]  k=6: eps^k s(p^k)=64636, eps^k D(p^k)=15560 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=+1 base a=78124 (mod p^7):  k=1: eps^k s(p^k)=11, eps^k D(p^k)=10 [v=1]  k=2: eps^k s(p^k)=11, eps^k D(p^k)=10 [v=1]  k=3: eps^k s(p^k)=261, eps^k D(p^k)=260 [v=1]  k=4: eps^k s(p^k)=2136, eps^k D(p^k)=2135 [v=1]  k=5: eps^k s(p^k)=2136, eps^k D(p^k)=2135 [v=1]  k=6: eps^k s(p^k)=64636, eps^k D(p^k)=64635 [v=1]
+   tower relations (s and D) for k=2..6: OK
+p=5 eps=+1 base a=54929 (mod p^7):  k=1: eps^k s(p^k)=11, eps^k D(p^k)=20 [v=1]  k=2: eps^k s(p^k)=11, eps^k D(p^k)=20 [v=1]  k=3: eps^k s(p^k)=261, eps^k D(p^k)=20 [v=1]  k=4: eps^k s(p^k)=2136, eps^k D(p^k)=1895 [v=1]  k=5: eps^k s(p^k)=2136, eps^k D(p^k)=8145 [v=1]  k=6: eps^k s(p^k)=64636, eps^k D(p^k)=70645 [v=1]
+   tower relations (s and D) for k=2..6: OK
+RIGIDITY p=5 residue 4 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 11)
+RIGIDITY p=5 residue 4 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 11)
+RIGIDITY p=5 residue 4 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 261)
+RIGIDITY p=5 residue 4 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 2136)
+RIGIDITY p=5 residue 4 level k=5 (mod p^6): sigma equal for all 7 lifts: YES  (sigma = 2136)
+RIGIDITY p=5 residue 4 level k=6 (mod p^7): sigma equal for all 7 lifts: YES  (sigma = 64636)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=7 eps=+1 base a=2 (mod p^6):  k=1: eps^k s(p^k)=22, eps^k D(p^k)=14 [v=1]  k=2: eps^k s(p^k)=267, eps^k D(p^k)=210 [v=1]  k=3: eps^k s(p^k)=1639, eps^k D(p^k)=2268 [v=1]  k=4: eps^k s(p^k)=8842, eps^k D(p^k)=9471 [v=1]  k=5: eps^k s(p^k)=25649, eps^k D(p^k)=9471 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=+1 base a=9 (mod p^6):  k=1: eps^k s(p^k)=22, eps^k D(p^k)=28 [v=1]  k=2: eps^k s(p^k)=267, eps^k D(p^k)=273 [v=1]  k=3: eps^k s(p^k)=1639, eps^k D(p^k)=1988 [v=1]  k=4: eps^k s(p^k)=8842, eps^k D(p^k)=13993 [v=1]  k=5: eps^k s(p^k)=25649, eps^k D(p^k)=13993 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=+1 base a=16 (mod p^6):  k=1: eps^k s(p^k)=22, eps^k D(p^k)=42 [v=1]  k=2: eps^k s(p^k)=267, eps^k D(p^k)=91 [v=1]  k=3: eps^k s(p^k)=1639, eps^k D(p^k)=777 [v=1]  k=4: eps^k s(p^k)=8842, eps^k D(p^k)=777 [v=1]  k=5: eps^k s(p^k)=25649, eps^k D(p^k)=34391 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=+1 base a=37 (mod p^6):  k=1: eps^k s(p^k)=22, eps^k D(p^k)=35 [v=1]  k=2: eps^k s(p^k)=267, eps^k D(p^k)=133 [v=1]  k=3: eps^k s(p^k)=1639, eps^k D(p^k)=2191 [v=1]  k=4: eps^k s(p^k)=8842, eps^k D(p^k)=16597 [v=1]  k=5: eps^k s(p^k)=25649, eps^k D(p^k)=16597 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=+1 base a=44 (mod p^6):  k=1: eps^k s(p^k)=22, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=267, eps^k D(p^k)=0 [v=3]  k=3: eps^k s(p^k)=1639, eps^k D(p^k)=686 [v=3]  k=4: eps^k s(p^k)=8842, eps^k D(p^k)=10290 [v=3]  k=5: eps^k s(p^k)=25649, eps^k D(p^k)=111132 [v=3]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=+1 base a=34967 (mod p^6):  k=1: eps^k s(p^k)=22, eps^k D(p^k)=21 [v=1]  k=2: eps^k s(p^k)=267, eps^k D(p^k)=266 [v=1]  k=3: eps^k s(p^k)=1639, eps^k D(p^k)=1638 [v=1]  k=4: eps^k s(p^k)=8842, eps^k D(p^k)=8841 [v=1]  k=5: eps^k s(p^k)=25649, eps^k D(p^k)=25648 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=+1 base a=17229 (mod p^6):  k=1: eps^k s(p^k)=22, eps^k D(p^k)=21 [v=1]  k=2: eps^k s(p^k)=267, eps^k D(p^k)=119 [v=1]  k=3: eps^k s(p^k)=1639, eps^k D(p^k)=462 [v=1]  k=4: eps^k s(p^k)=8842, eps^k D(p^k)=10066 [v=1]  k=5: eps^k s(p^k)=25649, eps^k D(p^k)=77294 [v=1]
+   tower relations (s and D) for k=2..5: OK
+RIGIDITY p=7 residue 2 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 22)
+RIGIDITY p=7 residue 2 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 267)
+RIGIDITY p=7 residue 2 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 1639)
+RIGIDITY p=7 residue 2 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 8842)
+RIGIDITY p=7 residue 2 level k=5 (mod p^6): sigma equal for all 7 lifts: YES  (sigma = 25649)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=7 eps=-1 base a=3 (mod p^6):  k=1: eps^k s(p^k)=15, eps^k D(p^k)=42 [v=1]  k=2: eps^k s(p^k)=162, eps^k D(p^k)=42 [v=1]  k=3: eps^k s(p^k)=1534, eps^k D(p^k)=385 [v=1]  k=4: eps^k s(p^k)=13539, eps^k D(p^k)=2786 [v=1]  k=5: eps^k s(p^k)=13539, eps^k D(p^k)=103628 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=10 (mod p^6):  k=1: eps^k s(p^k)=15, eps^k D(p^k)=35 [v=1]  k=2: eps^k s(p^k)=162, eps^k D(p^k)=280 [v=1]  k=3: eps^k s(p^k)=1534, eps^k D(p^k)=623 [v=1]  k=4: eps^k s(p^k)=13539, eps^k D(p^k)=623 [v=1]  k=5: eps^k s(p^k)=13539, eps^k D(p^k)=67851 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=17 (mod p^6):  k=1: eps^k s(p^k)=15, eps^k D(p^k)=28 [v=1]  k=2: eps^k s(p^k)=162, eps^k D(p^k)=28 [v=1]  k=3: eps^k s(p^k)=1534, eps^k D(p^k)=28 [v=1]  k=4: eps^k s(p^k)=13539, eps^k D(p^k)=12033 [v=1]  k=5: eps^k s(p^k)=13539, eps^k D(p^k)=79261 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=38 (mod p^6):  k=1: eps^k s(p^k)=15, eps^k D(p^k)=7 [v=1]  k=2: eps^k s(p^k)=162, eps^k D(p^k)=105 [v=1]  k=3: eps^k s(p^k)=1534, eps^k D(p^k)=1820 [v=1]  k=4: eps^k s(p^k)=13539, eps^k D(p^k)=16226 [v=1]  k=5: eps^k s(p^k)=13539, eps^k D(p^k)=49840 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=45 (mod p^6):  k=1: eps^k s(p^k)=15, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=162, eps^k D(p^k)=294 [v=2]  k=3: eps^k s(p^k)=1534, eps^k D(p^k)=1666 [v=2]  k=4: eps^k s(p^k)=13539, eps^k D(p^k)=4067 [v=2]  k=5: eps^k s(p^k)=13539, eps^k D(p^k)=54488 [v=2]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=34968 (mod p^6):  k=1: eps^k s(p^k)=15, eps^k D(p^k)=14 [v=1]  k=2: eps^k s(p^k)=162, eps^k D(p^k)=161 [v=1]  k=3: eps^k s(p^k)=1534, eps^k D(p^k)=1533 [v=1]  k=4: eps^k s(p^k)=13539, eps^k D(p^k)=13538 [v=1]  k=5: eps^k s(p^k)=13539, eps^k D(p^k)=13538 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=17230 (mod p^6):  k=1: eps^k s(p^k)=15, eps^k D(p^k)=14 [v=1]  k=2: eps^k s(p^k)=162, eps^k D(p^k)=63 [v=1]  k=3: eps^k s(p^k)=1534, eps^k D(p^k)=1092 [v=1]  k=4: eps^k s(p^k)=13539, eps^k D(p^k)=15498 [v=1]  k=5: eps^k s(p^k)=13539, eps^k D(p^k)=15498 [v=1]
+   tower relations (s and D) for k=2..5: OK
+RIGIDITY p=7 residue 3 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 15)
+RIGIDITY p=7 residue 3 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 162)
+RIGIDITY p=7 residue 3 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 1534)
+RIGIDITY p=7 residue 3 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 13539)
+RIGIDITY p=7 residue 3 level k=5 (mod p^6): sigma equal for all 7 lifts: YES  (sigma = 13539)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=7 eps=-1 base a=5 (mod p^6):  k=1: eps^k s(p^k)=43, eps^k D(p^k)=21 [v=1]  k=2: eps^k s(p^k)=288, eps^k D(p^k)=266 [v=1]  k=3: eps^k s(p^k)=2346, eps^k D(p^k)=1981 [v=1]  k=4: eps^k s(p^k)=14351, eps^k D(p^k)=6783 [v=1]  k=5: eps^k s(p^k)=31158, eps^k D(p^k)=40397 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=12 (mod p^6):  k=1: eps^k s(p^k)=43, eps^k D(p^k)=7 [v=1]  k=2: eps^k s(p^k)=288, eps^k D(p^k)=56 [v=1]  k=3: eps^k s(p^k)=2346, eps^k D(p^k)=1771 [v=1]  k=4: eps^k s(p^k)=14351, eps^k D(p^k)=8974 [v=1]  k=5: eps^k s(p^k)=31158, eps^k D(p^k)=76202 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=19 (mod p^6):  k=1: eps^k s(p^k)=43, eps^k D(p^k)=42 [v=1]  k=2: eps^k s(p^k)=288, eps^k D(p^k)=287 [v=1]  k=3: eps^k s(p^k)=2346, eps^k D(p^k)=2002 [v=1]  k=4: eps^k s(p^k)=14351, eps^k D(p^k)=2002 [v=1]  k=5: eps^k s(p^k)=31158, eps^k D(p^k)=69230 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=40 (mod p^6):  k=1: eps^k s(p^k)=43, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=288, eps^k D(p^k)=196 [v=2]  k=3: eps^k s(p^k)=2346, eps^k D(p^k)=1911 [v=2]  k=4: eps^k s(p^k)=14351, eps^k D(p^k)=16317 [v=2]  k=5: eps^k s(p^k)=31158, eps^k D(p^k)=49931 [v=2]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=47 (mod p^6):  k=1: eps^k s(p^k)=43, eps^k D(p^k)=35 [v=1]  k=2: eps^k s(p^k)=288, eps^k D(p^k)=133 [v=1]  k=3: eps^k s(p^k)=2346, eps^k D(p^k)=476 [v=1]  k=4: eps^k s(p^k)=14351, eps^k D(p^k)=12481 [v=1]  k=5: eps^k s(p^k)=31158, eps^k D(p^k)=79709 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=82682 (mod p^6):  k=1: eps^k s(p^k)=43, eps^k D(p^k)=42 [v=1]  k=2: eps^k s(p^k)=288, eps^k D(p^k)=287 [v=1]  k=3: eps^k s(p^k)=2346, eps^k D(p^k)=2345 [v=1]  k=4: eps^k s(p^k)=14351, eps^k D(p^k)=14350 [v=1]  k=5: eps^k s(p^k)=31158, eps^k D(p^k)=31157 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=17232 (mod p^6):  k=1: eps^k s(p^k)=43, eps^k D(p^k)=14 [v=1]  k=2: eps^k s(p^k)=288, eps^k D(p^k)=259 [v=1]  k=3: eps^k s(p^k)=2346, eps^k D(p^k)=259 [v=1]  k=4: eps^k s(p^k)=14351, eps^k D(p^k)=5061 [v=1]  k=5: eps^k s(p^k)=31158, eps^k D(p^k)=55482 [v=1]
+   tower relations (s and D) for k=2..5: OK
+RIGIDITY p=7 residue 5 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 43)
+RIGIDITY p=7 residue 5 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 288)
+RIGIDITY p=7 residue 5 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 2346)
+RIGIDITY p=7 residue 5 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 14351)
+RIGIDITY p=7 residue 5 level k=5 (mod p^6): sigma equal for all 7 lifts: YES  (sigma = 31158)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=7 eps=-1 base a=6 (mod p^6):  k=1: eps^k s(p^k)=36, eps^k D(p^k)=7 [v=1]  k=2: eps^k s(p^k)=36, eps^k D(p^k)=56 [v=1]  k=3: eps^k s(p^k)=2094, eps^k D(p^k)=2114 [v=1]  k=4: eps^k s(p^k)=14099, eps^k D(p^k)=4515 [v=1]  k=5: eps^k s(p^k)=47713, eps^k D(p^k)=71743 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=13 (mod p^6):  k=1: eps^k s(p^k)=36, eps^k D(p^k)=28 [v=1]  k=2: eps^k s(p^k)=36, eps^k D(p^k)=126 [v=1]  k=3: eps^k s(p^k)=2094, eps^k D(p^k)=1155 [v=1]  k=4: eps^k s(p^k)=14099, eps^k D(p^k)=13160 [v=1]  k=5: eps^k s(p^k)=47713, eps^k D(p^k)=80388 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=20 (mod p^6):  k=1: eps^k s(p^k)=36, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=36, eps^k D(p^k)=245 [v=2]  k=3: eps^k s(p^k)=2094, eps^k D(p^k)=1274 [v=2]  k=4: eps^k s(p^k)=14099, eps^k D(p^k)=3675 [v=2]  k=5: eps^k s(p^k)=47713, eps^k D(p^k)=104517 [v=2]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=41 (mod p^6):  k=1: eps^k s(p^k)=36, eps^k D(p^k)=14 [v=1]  k=2: eps^k s(p^k)=36, eps^k D(p^k)=210 [v=1]  k=3: eps^k s(p^k)=2094, eps^k D(p^k)=2268 [v=1]  k=4: eps^k s(p^k)=14099, eps^k D(p^k)=7070 [v=1]  k=5: eps^k s(p^k)=47713, eps^k D(p^k)=40684 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=48 (mod p^6):  k=1: eps^k s(p^k)=36, eps^k D(p^k)=35 [v=1]  k=2: eps^k s(p^k)=36, eps^k D(p^k)=182 [v=1]  k=3: eps^k s(p^k)=2094, eps^k D(p^k)=868 [v=1]  k=4: eps^k s(p^k)=14099, eps^k D(p^k)=15274 [v=1]  k=5: eps^k s(p^k)=47713, eps^k D(p^k)=32081 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=117648 (mod p^6):  k=1: eps^k s(p^k)=36, eps^k D(p^k)=35 [v=1]  k=2: eps^k s(p^k)=36, eps^k D(p^k)=35 [v=1]  k=3: eps^k s(p^k)=2094, eps^k D(p^k)=2093 [v=1]  k=4: eps^k s(p^k)=14099, eps^k D(p^k)=14098 [v=1]  k=5: eps^k s(p^k)=47713, eps^k D(p^k)=47712 [v=1]
+   tower relations (s and D) for k=2..5: OK
+p=7 eps=-1 base a=17233 (mod p^6):  k=1: eps^k s(p^k)=36, eps^k D(p^k)=42 [v=1]  k=2: eps^k s(p^k)=36, eps^k D(p^k)=91 [v=1]  k=3: eps^k s(p^k)=2094, eps^k D(p^k)=91 [v=1]  k=4: eps^k s(p^k)=14099, eps^k D(p^k)=14497 [v=1]  k=5: eps^k s(p^k)=47713, eps^k D(p^k)=64918 [v=1]
+   tower relations (s and D) for k=2..5: OK
+RIGIDITY p=7 residue 6 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 36)
+RIGIDITY p=7 residue 6 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 36)
+RIGIDITY p=7 residue 6 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 2094)
+RIGIDITY p=7 residue 6 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 14099)
+RIGIDITY p=7 residue 6 level k=5 (mod p^6): sigma equal for all 7 lifts: YES  (sigma = 47713)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=11 eps=-1 base a=2 (mod p^5):  k=1: eps^k s(p^k)=12, eps^k D(p^k)=44 [v=1]  k=2: eps^k s(p^k)=859, eps^k D(p^k)=1254 [v=1]  k=3: eps^k s(p^k)=8845, eps^k D(p^k)=14564 [v=1]  k=4: eps^k s(p^k)=38127, eps^k D(p^k)=43846 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=-1 base a=13 (mod p^5):  k=1: eps^k s(p^k)=12, eps^k D(p^k)=77 [v=1]  k=2: eps^k s(p^k)=859, eps^k D(p^k)=198 [v=1]  k=3: eps^k s(p^k)=8845, eps^k D(p^k)=12177 [v=1]  k=4: eps^k s(p^k)=38127, eps^k D(p^k)=41459 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=-1 base a=24 (mod p^5):  k=1: eps^k s(p^k)=12, eps^k D(p^k)=110 [v=1]  k=2: eps^k s(p^k)=859, eps^k D(p^k)=1199 [v=1]  k=3: eps^k s(p^k)=8845, eps^k D(p^k)=7854 [v=1]  k=4: eps^k s(p^k)=38127, eps^k D(p^k)=124982 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=-1 base a=57 (mod p^5):  k=1: eps^k s(p^k)=12, eps^k D(p^k)=88 [v=1]  k=2: eps^k s(p^k)=859, eps^k D(p^k)=572 [v=1]  k=3: eps^k s(p^k)=8845, eps^k D(p^k)=572 [v=1]  k=4: eps^k s(p^k)=38127, eps^k D(p^k)=44495 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=-1 base a=112 (mod p^5):  k=1: eps^k s(p^k)=12, eps^k D(p^k)=11 [v=1]  k=2: eps^k s(p^k)=859, eps^k D(p^k)=737 [v=1]  k=3: eps^k s(p^k)=8845, eps^k D(p^k)=8723 [v=1]  k=4: eps^k s(p^k)=38127, eps^k D(p^k)=125851 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=-1 base a=27216 (mod p^5):  k=1: eps^k s(p^k)=12, eps^k D(p^k)=11 [v=1]  k=2: eps^k s(p^k)=859, eps^k D(p^k)=858 [v=1]  k=3: eps^k s(p^k)=8845, eps^k D(p^k)=8844 [v=1]  k=4: eps^k s(p^k)=38127, eps^k D(p^k)=38126 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=-1 base a=87067 (mod p^5):  k=1: eps^k s(p^k)=12, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=859, eps^k D(p^k)=605 [v=2]  k=3: eps^k s(p^k)=8845, eps^k D(p^k)=13915 [v=2]  k=4: eps^k s(p^k)=38127, eps^k D(p^k)=57838 [v=2]
+   tower relations (s and D) for k=2..4: OK
+RIGIDITY p=11 residue 2 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 12)
+RIGIDITY p=11 residue 2 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 859)
+RIGIDITY p=11 residue 2 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 8845)
+RIGIDITY p=11 residue 2 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 38127)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=11 eps=+1 base a=3 (mod p^5):  k=1: eps^k s(p^k)=12, eps^k D(p^k)=11 [v=1]  k=2: eps^k s(p^k)=375, eps^k D(p^k)=132 [v=1]  k=3: eps^k s(p^k)=1706, eps^k D(p^k)=13442 [v=1]  k=4: eps^k s(p^k)=16347, eps^k D(p^k)=145211 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=+1 base a=14 (mod p^5):  k=1: eps^k s(p^k)=12, eps^k D(p^k)=33 [v=1]  k=2: eps^k s(p^k)=375, eps^k D(p^k)=517 [v=1]  k=3: eps^k s(p^k)=1706, eps^k D(p^k)=4510 [v=1]  k=4: eps^k s(p^k)=16347, eps^k D(p^k)=77715 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=+1 base a=25 (mod p^5):  k=1: eps^k s(p^k)=12, eps^k D(p^k)=55 [v=1]  k=2: eps^k s(p^k)=375, eps^k D(p^k)=781 [v=1]  k=3: eps^k s(p^k)=1706, eps^k D(p^k)=10098 [v=1]  k=4: eps^k s(p^k)=16347, eps^k D(p^k)=156508 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=+1 base a=58 (mod p^5):  k=1: eps^k s(p^k)=12, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=375, eps^k D(p^k)=847 [v=2]  k=3: eps^k s(p^k)=1706, eps^k D(p^k)=12826 [v=2]  k=4: eps^k s(p^k)=16347, eps^k D(p^k)=159236 [v=2]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=+1 base a=113 (mod p^5):  k=1: eps^k s(p^k)=12, eps^k D(p^k)=110 [v=1]  k=2: eps^k s(p^k)=375, eps^k D(p^k)=1199 [v=1]  k=3: eps^k s(p^k)=1706, eps^k D(p^k)=7854 [v=1]  k=4: eps^k s(p^k)=16347, eps^k D(p^k)=110341 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=+1 base a=46709 (mod p^5):  k=1: eps^k s(p^k)=12, eps^k D(p^k)=11 [v=1]  k=2: eps^k s(p^k)=375, eps^k D(p^k)=374 [v=1]  k=3: eps^k s(p^k)=1706, eps^k D(p^k)=1705 [v=1]  k=4: eps^k s(p^k)=16347, eps^k D(p^k)=16346 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=+1 base a=87068 (mod p^5):  k=1: eps^k s(p^k)=12, eps^k D(p^k)=22 [v=1]  k=2: eps^k s(p^k)=375, eps^k D(p^k)=264 [v=1]  k=3: eps^k s(p^k)=1706, eps^k D(p^k)=4257 [v=1]  k=4: eps^k s(p^k)=16347, eps^k D(p^k)=33539 [v=1]
+   tower relations (s and D) for k=2..4: OK
+RIGIDITY p=11 residue 3 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 12)
+RIGIDITY p=11 residue 3 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 375)
+RIGIDITY p=11 residue 3 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 1706)
+RIGIDITY p=11 residue 3 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 16347)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=11 eps=+1 base a=5 (mod p^5):  k=1: eps^k s(p^k)=111, eps^k D(p^k)=11 [v=1]  k=2: eps^k s(p^k)=1200, eps^k D(p^k)=979 [v=1]  k=3: eps^k s(p^k)=1200, eps^k D(p^k)=7634 [v=1]  k=4: eps^k s(p^k)=45123, eps^k D(p^k)=124762 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=+1 base a=16 (mod p^5):  k=1: eps^k s(p^k)=111, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=1200, eps^k D(p^k)=242 [v=2]  k=3: eps^k s(p^k)=1200, eps^k D(p^k)=2904 [v=2]  k=4: eps^k s(p^k)=45123, eps^k D(p^k)=76109 [v=2]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=+1 base a=27 (mod p^5):  k=1: eps^k s(p^k)=111, eps^k D(p^k)=110 [v=1]  k=2: eps^k s(p^k)=1200, eps^k D(p^k)=473 [v=1]  k=3: eps^k s(p^k)=1200, eps^k D(p^k)=7128 [v=1]  k=4: eps^k s(p^k)=45123, eps^k D(p^k)=94974 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=+1 base a=60 (mod p^5):  k=1: eps^k s(p^k)=111, eps^k D(p^k)=77 [v=1]  k=2: eps^k s(p^k)=1200, eps^k D(p^k)=319 [v=1]  k=3: eps^k s(p^k)=1200, eps^k D(p^k)=5643 [v=1]  k=4: eps^k s(p^k)=45123, eps^k D(p^k)=108130 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=+1 base a=115 (mod p^5):  k=1: eps^k s(p^k)=111, eps^k D(p^k)=22 [v=1]  k=2: eps^k s(p^k)=1200, eps^k D(p^k)=1232 [v=1]  k=3: eps^k s(p^k)=1200, eps^k D(p^k)=2563 [v=1]  k=4: eps^k s(p^k)=45123, eps^k D(p^k)=61127 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=+1 base a=104450 (mod p^5):  k=1: eps^k s(p^k)=111, eps^k D(p^k)=110 [v=1]  k=2: eps^k s(p^k)=1200, eps^k D(p^k)=1199 [v=1]  k=3: eps^k s(p^k)=1200, eps^k D(p^k)=1199 [v=1]  k=4: eps^k s(p^k)=45123, eps^k D(p^k)=45122 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=+1 base a=87070 (mod p^5):  k=1: eps^k s(p^k)=111, eps^k D(p^k)=66 [v=1]  k=2: eps^k s(p^k)=1200, eps^k D(p^k)=1276 [v=1]  k=3: eps^k s(p^k)=1200, eps^k D(p^k)=5269 [v=1]  k=4: eps^k s(p^k)=45123, eps^k D(p^k)=107756 [v=1]
+   tower relations (s and D) for k=2..4: OK
+RIGIDITY p=11 residue 5 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 111)
+RIGIDITY p=11 residue 5 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 1200)
+RIGIDITY p=11 residue 5 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 1200)
+RIGIDITY p=11 residue 5 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 45123)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=11 eps=-1 base a=10 (mod p^5):  k=1: eps^k s(p^k)=34, eps^k D(p^k)=88 [v=1]  k=2: eps^k s(p^k)=1123, eps^k D(p^k)=572 [v=1]  k=3: eps^k s(p^k)=14433, eps^k D(p^k)=11220 [v=1]  k=4: eps^k s(p^k)=102279, eps^k D(p^k)=99066 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=-1 base a=21 (mod p^5):  k=1: eps^k s(p^k)=34, eps^k D(p^k)=22 [v=1]  k=2: eps^k s(p^k)=1123, eps^k D(p^k)=264 [v=1]  k=3: eps^k s(p^k)=14433, eps^k D(p^k)=10912 [v=1]  k=4: eps^k s(p^k)=102279, eps^k D(p^k)=54835 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=-1 base a=32 (mod p^5):  k=1: eps^k s(p^k)=34, eps^k D(p^k)=77 [v=1]  k=2: eps^k s(p^k)=1123, eps^k D(p^k)=198 [v=1]  k=3: eps^k s(p^k)=14433, eps^k D(p^k)=5522 [v=1]  k=4: eps^k s(p^k)=102279, eps^k D(p^k)=49445 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=-1 base a=65 (mod p^5):  k=1: eps^k s(p^k)=34, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=1123, eps^k D(p^k)=121 [v=2]  k=3: eps^k s(p^k)=14433, eps^k D(p^k)=10769 [v=2]  k=4: eps^k s(p^k)=102279, eps^k D(p^k)=157179 [v=2]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=-1 base a=120 (mod p^5):  k=1: eps^k s(p^k)=34, eps^k D(p^k)=33 [v=1]  k=2: eps^k s(p^k)=1123, eps^k D(p^k)=396 [v=1]  k=3: eps^k s(p^k)=14433, eps^k D(p^k)=7051 [v=1]  k=4: eps^k s(p^k)=102279, eps^k D(p^k)=36333 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=-1 base a=161050 (mod p^5):  k=1: eps^k s(p^k)=34, eps^k D(p^k)=33 [v=1]  k=2: eps^k s(p^k)=1123, eps^k D(p^k)=1122 [v=1]  k=3: eps^k s(p^k)=14433, eps^k D(p^k)=14432 [v=1]  k=4: eps^k s(p^k)=102279, eps^k D(p^k)=102278 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=11 eps=-1 base a=87075 (mod p^5):  k=1: eps^k s(p^k)=34, eps^k D(p^k)=55 [v=1]  k=2: eps^k s(p^k)=1123, eps^k D(p^k)=781 [v=1]  k=3: eps^k s(p^k)=14433, eps^k D(p^k)=2112 [v=1]  k=4: eps^k s(p^k)=102279, eps^k D(p^k)=75317 [v=1]
+   tower relations (s and D) for k=2..4: OK
+RIGIDITY p=11 residue 10 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 34)
+RIGIDITY p=11 residue 10 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 1123)
+RIGIDITY p=11 residue 10 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 14433)
+RIGIDITY p=11 residue 10 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 102279)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=13 eps=-1 base a=2 (mod p^5):  k=1: eps^k s(p^k)=105, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=2133, eps^k D(p^k)=845 [v=2]  k=3: eps^k s(p^k)=24103, eps^k D(p^k)=22815 [v=2]  k=4: eps^k s(p^k)=24103, eps^k D(p^k)=79937 [v=2]
+   tower relations (s and D) for k=2..4: OK
+p=13 eps=-1 base a=15 (mod p^5):  k=1: eps^k s(p^k)=105, eps^k D(p^k)=130 [v=1]  k=2: eps^k s(p^k)=2133, eps^k D(p^k)=1651 [v=1]  k=3: eps^k s(p^k)=24103, eps^k D(p^k)=8242 [v=1]  k=4: eps^k s(p^k)=24103, eps^k D(p^k)=8242 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=13 eps=-1 base a=28 (mod p^5):  k=1: eps^k s(p^k)=105, eps^k D(p^k)=91 [v=1]  k=2: eps^k s(p^k)=2133, eps^k D(p^k)=91 [v=1]  k=3: eps^k s(p^k)=24103, eps^k D(p^k)=19864 [v=1]  k=4: eps^k s(p^k)=24103, eps^k D(p^k)=276913 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=13 eps=-1 base a=67 (mod p^5):  k=1: eps^k s(p^k)=105, eps^k D(p^k)=143 [v=1]  k=2: eps^k s(p^k)=2133, eps^k D(p^k)=988 [v=1]  k=3: eps^k s(p^k)=24103, eps^k D(p^k)=25155 [v=1]  k=4: eps^k s(p^k)=24103, eps^k D(p^k)=339326 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=13 eps=-1 base a=158 (mod p^5):  k=1: eps^k s(p^k)=105, eps^k D(p^k)=39 [v=1]  k=2: eps^k s(p^k)=2133, eps^k D(p^k)=1560 [v=1]  k=3: eps^k s(p^k)=24103, eps^k D(p^k)=10348 [v=1]  k=4: eps^k s(p^k)=24103, eps^k D(p^k)=181714 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=13 eps=-1 base a=119056 (mod p^5):  k=1: eps^k s(p^k)=105, eps^k D(p^k)=104 [v=1]  k=2: eps^k s(p^k)=2133, eps^k D(p^k)=2132 [v=1]  k=3: eps^k s(p^k)=24103, eps^k D(p^k)=24102 [v=1]  k=4: eps^k s(p^k)=24103, eps^k D(p^k)=24102 [v=1]
+   tower relations (s and D) for k=2..4: OK
+p=13 eps=-1 base a=162736 (mod p^5):  k=1: eps^k s(p^k)=105, eps^k D(p^k)=39 [v=1]  k=2: eps^k s(p^k)=2133, eps^k D(p^k)=1560 [v=1]  k=3: eps^k s(p^k)=24103, eps^k D(p^k)=8151 [v=1]  k=4: eps^k s(p^k)=24103, eps^k D(p^k)=65273 [v=1]
+   tower relations (s and D) for k=2..4: OK
+RIGIDITY p=13 residue 2 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 105)
+RIGIDITY p=13 residue 2 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 2133)
+RIGIDITY p=13 residue 2 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 24103)
+RIGIDITY p=13 residue 2 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 24103)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=13 eps=+1 base a=3 (mod p^4):  k=1: eps^k s(p^k)=92, eps^k D(p^k)=39 [v=1]  k=2: eps^k s(p^k)=1106, eps^k D(p^k)=1898 [v=1]  k=3: eps^k s(p^k)=25273, eps^k D(p^k)=17277 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=+1 base a=16 (mod p^4):  k=1: eps^k s(p^k)=92, eps^k D(p^k)=13 [v=1]  k=2: eps^k s(p^k)=1106, eps^k D(p^k)=1365 [v=1]  k=3: eps^k s(p^k)=25273, eps^k D(p^k)=5759 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=+1 base a=29 (mod p^4):  k=1: eps^k s(p^k)=92, eps^k D(p^k)=156 [v=1]  k=2: eps^k s(p^k)=1106, eps^k D(p^k)=1001 [v=1]  k=3: eps^k s(p^k)=25273, eps^k D(p^k)=27365 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=+1 base a=68 (mod p^4):  k=1: eps^k s(p^k)=92, eps^k D(p^k)=78 [v=1]  k=2: eps^k s(p^k)=1106, eps^k D(p^k)=923 [v=1]  k=3: eps^k s(p^k)=25273, eps^k D(p^k)=25090 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=+1 base a=159 (mod p^4):  k=1: eps^k s(p^k)=92, eps^k D(p^k)=65 [v=1]  k=2: eps^k s(p^k)=1106, eps^k D(p^k)=65 [v=1]  k=3: eps^k s(p^k)=25273, eps^k D(p^k)=15444 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=+1 base a=20933 (mod p^4):  k=1: eps^k s(p^k)=92, eps^k D(p^k)=91 [v=1]  k=2: eps^k s(p^k)=1106, eps^k D(p^k)=1105 [v=1]  k=3: eps^k s(p^k)=25273, eps^k D(p^k)=25272 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=+1 base a=19932 (mod p^4):  k=1: eps^k s(p^k)=92, eps^k D(p^k)=65 [v=1]  k=2: eps^k s(p^k)=1106, eps^k D(p^k)=65 [v=1]  k=3: eps^k s(p^k)=25273, eps^k D(p^k)=4459 [v=1]
+   tower relations (s and D) for k=2..3: OK
+RIGIDITY p=13 residue 3 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 92)
+RIGIDITY p=13 residue 3 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 1106)
+RIGIDITY p=13 residue 3 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 25273)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=13 eps=-1 base a=5 (mod p^4):  k=1: eps^k s(p^k)=27, eps^k D(p^k)=104 [v=1]  k=2: eps^k s(p^k)=1886, eps^k D(p^k)=949 [v=1]  k=3: eps^k s(p^k)=15068, eps^k D(p^k)=7540 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=-1 base a=18 (mod p^4):  k=1: eps^k s(p^k)=27, eps^k D(p^k)=156 [v=1]  k=2: eps^k s(p^k)=1886, eps^k D(p^k)=1846 [v=1]  k=3: eps^k s(p^k)=15068, eps^k D(p^k)=15028 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=-1 base a=31 (mod p^4):  k=1: eps^k s(p^k)=27, eps^k D(p^k)=39 [v=1]  k=2: eps^k s(p^k)=1886, eps^k D(p^k)=1222 [v=1]  k=3: eps^k s(p^k)=15068, eps^k D(p^k)=18798 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=-1 base a=70 (mod p^4):  k=1: eps^k s(p^k)=27, eps^k D(p^k)=26 [v=1]  k=2: eps^k s(p^k)=1886, eps^k D(p^k)=1209 [v=1]  k=3: eps^k s(p^k)=15068, eps^k D(p^k)=20982 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=-1 base a=161 (mod p^4):  k=1: eps^k s(p^k)=27, eps^k D(p^k)=52 [v=1]  k=2: eps^k s(p^k)=1886, eps^k D(p^k)=1404 [v=1]  k=3: eps^k s(p^k)=15068, eps^k D(p^k)=27768 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=-1 base a=239 (mod p^4):  k=1: eps^k s(p^k)=27, eps^k D(p^k)=26 [v=1]  k=2: eps^k s(p^k)=1886, eps^k D(p^k)=1885 [v=1]  k=3: eps^k s(p^k)=15068, eps^k D(p^k)=15067 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=-1 base a=19934 (mod p^4):  k=1: eps^k s(p^k)=27, eps^k D(p^k)=52 [v=1]  k=2: eps^k s(p^k)=1886, eps^k D(p^k)=1404 [v=1]  k=3: eps^k s(p^k)=15068, eps^k D(p^k)=21177 [v=1]
+   tower relations (s and D) for k=2..3: OK
+RIGIDITY p=13 residue 5 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 27)
+RIGIDITY p=13 residue 5 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 1886)
+RIGIDITY p=13 residue 5 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 15068)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=13 eps=+1 base a=12 (mod p^4):  k=1: eps^k s(p^k)=1, eps^k D(p^k)=78 [v=1]  k=2: eps^k s(p^k)=170, eps^k D(p^k)=923 [v=1]  k=3: eps^k s(p^k)=22140, eps^k D(p^k)=5317 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=+1 base a=25 (mod p^4):  k=1: eps^k s(p^k)=1, eps^k D(p^k)=156 [v=1]  k=2: eps^k s(p^k)=170, eps^k D(p^k)=1001 [v=1]  k=3: eps^k s(p^k)=22140, eps^k D(p^k)=16380 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=+1 base a=38 (mod p^4):  k=1: eps^k s(p^k)=1, eps^k D(p^k)=65 [v=1]  k=2: eps^k s(p^k)=170, eps^k D(p^k)=403 [v=1]  k=3: eps^k s(p^k)=22140, eps^k D(p^k)=4797 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=+1 base a=77 (mod p^4):  k=1: eps^k s(p^k)=1, eps^k D(p^k)=130 [v=1]  k=2: eps^k s(p^k)=170, eps^k D(p^k)=1144 [v=1]  k=3: eps^k s(p^k)=22140, eps^k D(p^k)=14326 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=+1 base a=168 (mod p^4):  k=1: eps^k s(p^k)=1, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=170, eps^k D(p^k)=1183 [v=2]  k=3: eps^k s(p^k)=22140, eps^k D(p^k)=7774 [v=2]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=+1 base a=28560 (mod p^4):  k=1: eps^k s(p^k)=1, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=170, eps^k D(p^k)=169 [v=2]  k=3: eps^k s(p^k)=22140, eps^k D(p^k)=22139 [v=2]
+   tower relations (s and D) for k=2..3: OK
+p=13 eps=+1 base a=19941 (mod p^4):  k=1: eps^k s(p^k)=1, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=170, eps^k D(p^k)=1183 [v=2]  k=3: eps^k s(p^k)=22140, eps^k D(p^k)=12168 [v=2]
+   tower relations (s and D) for k=2..3: OK
+RIGIDITY p=13 residue 12 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=13 residue 12 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 170)
+RIGIDITY p=13 residue 12 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 22140)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=17 eps=+1 base a=2 (mod p^4):  k=1: eps^k s(p^k)=205, eps^k D(p^k)=238 [v=1]  k=2: eps^k s(p^k)=494, eps^k D(p^k)=816 [v=1]  k=3: eps^k s(p^k)=20146, eps^k D(p^k)=15555 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=17 eps=+1 base a=19 (mod p^4):  k=1: eps^k s(p^k)=205, eps^k D(p^k)=170 [v=1]  k=2: eps^k s(p^k)=494, eps^k D(p^k)=4794 [v=1]  k=3: eps^k s(p^k)=20146, eps^k D(p^k)=14620 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=17 eps=+1 base a=36 (mod p^4):  k=1: eps^k s(p^k)=205, eps^k D(p^k)=102 [v=1]  k=2: eps^k s(p^k)=494, eps^k D(p^k)=4726 [v=1]  k=3: eps^k s(p^k)=20146, eps^k D(p^k)=44030 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=17 eps=+1 base a=87 (mod p^4):  k=1: eps^k s(p^k)=205, eps^k D(p^k)=187 [v=1]  k=2: eps^k s(p^k)=494, eps^k D(p^k)=4811 [v=1]  k=3: eps^k s(p^k)=20146, eps^k D(p^k)=4811 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=17 eps=+1 base a=274 (mod p^4):  k=1: eps^k s(p^k)=205, eps^k D(p^k)=17 [v=1]  k=2: eps^k s(p^k)=494, eps^k D(p^k)=1462 [v=1]  k=3: eps^k s(p^k)=20146, eps^k D(p^k)=6375 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=17 eps=+1 base a=59978 (mod p^4):  k=1: eps^k s(p^k)=205, eps^k D(p^k)=204 [v=1]  k=2: eps^k s(p^k)=494, eps^k D(p^k)=493 [v=1]  k=3: eps^k s(p^k)=20146, eps^k D(p^k)=20145 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=17 eps=+1 base a=14707 (mod p^4):  k=1: eps^k s(p^k)=205, eps^k D(p^k)=85 [v=1]  k=2: eps^k s(p^k)=494, eps^k D(p^k)=374 [v=1]  k=3: eps^k s(p^k)=20146, eps^k D(p^k)=39678 [v=1]
+   tower relations (s and D) for k=2..3: OK
+RIGIDITY p=17 residue 2 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 205)
+RIGIDITY p=17 residue 2 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 494)
+RIGIDITY p=17 residue 2 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 20146)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=19 eps=-1 base a=2 (mod p^4):  k=1: eps^k s(p^k)=191, eps^k D(p^k)=342 [v=1]  k=2: eps^k s(p^k)=4162, eps^k D(p^k)=703 [v=1]  k=3: eps^k s(p^k)=24739, eps^k D(p^k)=703 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=19 eps=-1 base a=21 (mod p^4):  k=1: eps^k s(p^k)=191, eps^k D(p^k)=76 [v=1]  k=2: eps^k s(p^k)=4162, eps^k D(p^k)=1881 [v=1]  k=3: eps^k s(p^k)=24739, eps^k D(p^k)=125343 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=19 eps=-1 base a=40 (mod p^4):  k=1: eps^k s(p^k)=191, eps^k D(p^k)=171 [v=1]  k=2: eps^k s(p^k)=4162, eps^k D(p^k)=3420 [v=1]  k=3: eps^k s(p^k)=24739, eps^k D(p^k)=113164 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=19 eps=-1 base a=97 (mod p^4):  k=1: eps^k s(p^k)=191, eps^k D(p^k)=95 [v=1]  k=2: eps^k s(p^k)=4162, eps^k D(p^k)=3344 [v=1]  k=3: eps^k s(p^k)=24739, eps^k D(p^k)=17062 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=19 eps=-1 base a=344 (mod p^4):  k=1: eps^k s(p^k)=191, eps^k D(p^k)=247 [v=1]  k=2: eps^k s(p^k)=4162, eps^k D(p^k)=1691 [v=1]  k=3: eps^k s(p^k)=24739, eps^k D(p^k)=118294 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=19 eps=-1 base a=32606 (mod p^4):  k=1: eps^k s(p^k)=191, eps^k D(p^k)=190 [v=1]  k=2: eps^k s(p^k)=4162, eps^k D(p^k)=4161 [v=1]  k=3: eps^k s(p^k)=24739, eps^k D(p^k)=24738 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=19 eps=-1 base a=8856 (mod p^4):  k=1: eps^k s(p^k)=191, eps^k D(p^k)=209 [v=1]  k=2: eps^k s(p^k)=4162, eps^k D(p^k)=3458 [v=1]  k=3: eps^k s(p^k)=24739, eps^k D(p^k)=72048 [v=1]
+   tower relations (s and D) for k=2..3: OK
+RIGIDITY p=19 residue 2 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 191)
+RIGIDITY p=19 residue 2 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 4162)
+RIGIDITY p=19 residue 2 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 24739)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=23 eps=+1 base a=2 (mod p^4):  k=1: eps^k s(p^k)=116, eps^k D(p^k)=184 [v=1]  k=2: eps^k s(p^k)=8580, eps^k D(p^k)=8119 [v=1]  k=3: eps^k s(p^k)=32914, eps^k D(p^k)=105455 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=23 eps=+1 base a=25 (mod p^4):  k=1: eps^k s(p^k)=116, eps^k D(p^k)=322 [v=1]  k=2: eps^k s(p^k)=8580, eps^k D(p^k)=3496 [v=1]  k=3: eps^k s(p^k)=32914, eps^k D(p^k)=210335 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=23 eps=+1 base a=48 (mod p^4):  k=1: eps^k s(p^k)=116, eps^k D(p^k)=460 [v=1]  k=2: eps^k s(p^k)=8580, eps^k D(p^k)=2576 [v=1]  k=3: eps^k s(p^k)=32914, eps^k D(p^k)=75578 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=23 eps=+1 base a=117 (mod p^4):  k=1: eps^k s(p^k)=116, eps^k D(p^k)=345 [v=1]  k=2: eps^k s(p^k)=8580, eps^k D(p^k)=9867 [v=1]  k=3: eps^k s(p^k)=32914, eps^k D(p^k)=107203 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=23 eps=+1 base a=508 (mod p^4):  k=1: eps^k s(p^k)=116, eps^k D(p^k)=46 [v=1]  k=2: eps^k s(p^k)=8580, eps^k D(p^k)=7452 [v=1]  k=3: eps^k s(p^k)=32914, eps^k D(p^k)=262959 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=23 eps=+1 base a=133034 (mod p^4):  k=1: eps^k s(p^k)=116, eps^k D(p^k)=115 [v=1]  k=2: eps^k s(p^k)=8580, eps^k D(p^k)=8579 [v=1]  k=3: eps^k s(p^k)=32914, eps^k D(p^k)=32913 [v=1]
+   tower relations (s and D) for k=2..3: OK
+p=23 eps=+1 base a=144442 (mod p^4):  k=1: eps^k s(p^k)=116, eps^k D(p^k)=322 [v=1]  k=2: eps^k s(p^k)=8580, eps^k D(p^k)=6141 [v=1]  k=3: eps^k s(p^k)=32914, eps^k D(p^k)=18308 [v=1]
+   tower relations (s and D) for k=2..3: OK
+RIGIDITY p=23 residue 2 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 116)
+RIGIDITY p=23 residue 2 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 8580)
+RIGIDITY p=23 residue 2 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 32914)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=29 eps=-1 base a=2 (mod p^3):  k=1: eps^k s(p^k)=233, eps^k D(p^k)=638 [v=1]  k=2: eps^k s(p^k)=21258, eps^k D(p^k)=638 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=29 eps=-1 base a=31 (mod p^3):  k=1: eps^k s(p^k)=233, eps^k D(p^k)=435 [v=1]  k=2: eps^k s(p^k)=21258, eps^k D(p^k)=2958 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=29 eps=-1 base a=60 (mod p^3):  k=1: eps^k s(p^k)=233, eps^k D(p^k)=232 [v=1]  k=2: eps^k s(p^k)=21258, eps^k D(p^k)=3596 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=29 eps=-1 base a=147 (mod p^3):  k=1: eps^k s(p^k)=233, eps^k D(p^k)=464 [v=1]  k=2: eps^k s(p^k)=21258, eps^k D(p^k)=19807 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=29 eps=-1 base a=814 (mod p^3):  k=1: eps^k s(p^k)=233, eps^k D(p^k)=0 [v=2]  k=2: eps^k s(p^k)=21258, eps^k D(p^k)=15138 [v=2]
+   tower relations (s and D) for k=2..2: OK
+p=29 eps=-1 base a=21926 (mod p^3):  k=1: eps^k s(p^k)=233, eps^k D(p^k)=232 [v=1]  k=2: eps^k s(p^k)=21258, eps^k D(p^k)=21257 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=29 eps=-1 base a=10152 (mod p^3):  k=1: eps^k s(p^k)=233, eps^k D(p^k)=232 [v=1]  k=2: eps^k s(p^k)=21258, eps^k D(p^k)=6119 [v=1]
+   tower relations (s and D) for k=2..2: OK
+RIGIDITY p=29 residue 2 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 233)
+RIGIDITY p=29 residue 2 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 21258)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=31 eps=+1 base a=2 (mod p^3):  k=1: eps^k s(p^k)=156, eps^k D(p^k)=62 [v=1]  k=2: eps^k s(p^k)=14571, eps^k D(p^k)=8711 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=31 eps=+1 base a=33 (mod p^3):  k=1: eps^k s(p^k)=156, eps^k D(p^k)=310 [v=1]  k=2: eps^k s(p^k)=14571, eps^k D(p^k)=21452 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=31 eps=+1 base a=64 (mod p^3):  k=1: eps^k s(p^k)=156, eps^k D(p^k)=558 [v=1]  k=2: eps^k s(p^k)=14571, eps^k D(p^k)=28427 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=31 eps=+1 base a=157 (mod p^3):  k=1: eps^k s(p^k)=156, eps^k D(p^k)=341 [v=1]  k=2: eps^k s(p^k)=14571, eps^k D(p^k)=14756 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=31 eps=+1 base a=932 (mod p^3):  k=1: eps^k s(p^k)=156, eps^k D(p^k)=775 [v=1]  k=2: eps^k s(p^k)=14571, eps^k D(p^k)=27683 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=31 eps=+1 base a=10945 (mod p^3):  k=1: eps^k s(p^k)=156, eps^k D(p^k)=155 [v=1]  k=2: eps^k s(p^k)=14571, eps^k D(p^k)=14570 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=31 eps=+1 base a=25143 (mod p^3):  k=1: eps^k s(p^k)=156, eps^k D(p^k)=341 [v=1]  k=2: eps^k s(p^k)=14571, eps^k D(p^k)=6107 [v=1]
+   tower relations (s and D) for k=2..2: OK
+RIGIDITY p=31 residue 2 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 156)
+RIGIDITY p=31 residue 2 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 14571)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=37 eps=-1 base a=2 (mod p^3):  k=1: eps^k s(p^k)=630, eps^k D(p^k)=1295 [v=1]  k=2: eps^k s(p^k)=30748, eps^k D(p^k)=13616 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=37 eps=-1 base a=39 (mod p^3):  k=1: eps^k s(p^k)=630, eps^k D(p^k)=962 [v=1]  k=2: eps^k s(p^k)=30748, eps^k D(p^k)=31080 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=37 eps=-1 base a=76 (mod p^3):  k=1: eps^k s(p^k)=630, eps^k D(p^k)=629 [v=1]  k=2: eps^k s(p^k)=30748, eps^k D(p^k)=19795 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=37 eps=-1 base a=187 (mod p^3):  k=1: eps^k s(p^k)=630, eps^k D(p^k)=999 [v=1]  k=2: eps^k s(p^k)=30748, eps^k D(p^k)=16058 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=37 eps=-1 base a=1334 (mod p^3):  k=1: eps^k s(p^k)=630, eps^k D(p^k)=259 [v=1]  k=2: eps^k s(p^k)=30748, eps^k D(p^k)=5735 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=37 eps=-1 base a=43884 (mod p^3):  k=1: eps^k s(p^k)=630, eps^k D(p^k)=629 [v=1]  k=2: eps^k s(p^k)=30748, eps^k D(p^k)=30747 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=37 eps=-1 base a=36595 (mod p^3):  k=1: eps^k s(p^k)=630, eps^k D(p^k)=518 [v=1]  k=2: eps^k s(p^k)=30748, eps^k D(p^k)=1887 [v=1]
+   tower relations (s and D) for k=2..2: OK
+RIGIDITY p=37 residue 2 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 630)
+RIGIDITY p=37 residue 2 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 30748)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=41 eps=+1 base a=2 (mod p^3):  k=1: eps^k s(p^k)=288, eps^k D(p^k)=656 [v=1]  k=2: eps^k s(p^k)=27184, eps^k D(p^k)=27552 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=41 eps=+1 base a=43 (mod p^3):  k=1: eps^k s(p^k)=288, eps^k D(p^k)=246 [v=1]  k=2: eps^k s(p^k)=27184, eps^k D(p^k)=47314 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=41 eps=+1 base a=84 (mod p^3):  k=1: eps^k s(p^k)=288, eps^k D(p^k)=1517 [v=1]  k=2: eps^k s(p^k)=27184, eps^k D(p^k)=45223 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=41 eps=+1 base a=207 (mod p^3):  k=1: eps^k s(p^k)=288, eps^k D(p^k)=287 [v=1]  k=2: eps^k s(p^k)=27184, eps^k D(p^k)=45674 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=41 eps=+1 base a=1642 (mod p^3):  k=1: eps^k s(p^k)=288, eps^k D(p^k)=1066 [v=1]  k=2: eps^k s(p^k)=27184, eps^k D(p^k)=38048 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=41 eps=+1 base a=64085 (mod p^3):  k=1: eps^k s(p^k)=288, eps^k D(p^k)=287 [v=1]  k=2: eps^k s(p^k)=27184, eps^k D(p^k)=27183 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=41 eps=+1 base a=26037 (mod p^3):  k=1: eps^k s(p^k)=288, eps^k D(p^k)=861 [v=1]  k=2: eps^k s(p^k)=27184, eps^k D(p^k)=15990 [v=1]
+   tower relations (s and D) for k=2..2: OK
+RIGIDITY p=41 residue 2 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 288)
+RIGIDITY p=41 residue 2 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 27184)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+p=43 eps=-1 base a=2 (mod p^3):  k=1: eps^k s(p^k)=775, eps^k D(p^k)=1161 [v=1]  k=2: eps^k s(p^k)=4473, eps^k D(p^k)=51084 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=43 eps=-1 base a=45 (mod p^3):  k=1: eps^k s(p^k)=775, eps^k D(p^k)=1634 [v=1]  k=2: eps^k s(p^k)=4473, eps^k D(p^k)=29369 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=43 eps=-1 base a=88 (mod p^3):  k=1: eps^k s(p^k)=775, eps^k D(p^k)=258 [v=1]  k=2: eps^k s(p^k)=4473, eps^k D(p^k)=52030 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=43 eps=-1 base a=217 (mod p^3):  k=1: eps^k s(p^k)=775, eps^k D(p^k)=1677 [v=1]  k=2: eps^k s(p^k)=4473, eps^k D(p^k)=68241 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=43 eps=-1 base a=1808 (mod p^3):  k=1: eps^k s(p^k)=775, eps^k D(p^k)=688 [v=1]  k=2: eps^k s(p^k)=4473, eps^k D(p^k)=58007 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=43 eps=-1 base a=33585 (mod p^3):  k=1: eps^k s(p^k)=775, eps^k D(p^k)=774 [v=1]  k=2: eps^k s(p^k)=4473, eps^k D(p^k)=4472 [v=1]
+   tower relations (s and D) for k=2..2: OK
+p=43 eps=-1 base a=48635 (mod p^3):  k=1: eps^k s(p^k)=775, eps^k D(p^k)=1763 [v=1]  k=2: eps^k s(p^k)=4473, eps^k D(p^k)=22102 [v=1]
+   tower relations (s and D) for k=2..2: OK
+RIGIDITY p=43 residue 2 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 775)
+RIGIDITY p=43 residue 2 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 4473)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK

@@ -19526,3 +19526,22 @@ the ambient space.
   1. A statement about "two roots, split or inert" must say what happens when the discriminant vanishes. Test the double-root cases the code already tags.
   2. Read a printed check line before citing it as evidence. A reconstruction that "checks" mod `2^k` is not a refutation; only failure at higher precision is.
   3. When a law is observed below its proved threshold, label the observation FINITE-EXACT. Do not derive it from the theorem.
+
+## MISTAKE-655 (2026-10-21, mac-mini-2026-10-21-fanopsp Camion-function continuation, THM-4750 §5b, §6, §6b and HYP-9361; found by the second independent audit pass) -- a congruence promoted to "PROVED in outline" without the range its own proof requires, and a structure assigned a "lift" and "height list" that its tower law does not support
+- **A range dropped on upgrade (MAJOR, P2-M1).**
+  - After the first audit, 6(b) was relabelled "PROVED in outline" as the unqualified congruence `f(n + 3·2^j) ≡ f(n) (mod 2^(j+2))`. The listed exceptions were "`n ≤ 3` for `j ≤ 7`, `n ≤ 4` for `j = 8`", which was only the first audit's data range.
+  - The exception set grows linearly in `j`. The first failure beyond `n ≤ 4` is `j = 11`, `n = 5, 6`; `n ≤ 10` fail at `j = 17`.
+  - The outline proves exactly the ranged statement: the congruence holds iff `v_2(r_n) ≥ j + 2`, in particular for `n ≥ 2(j−1)/3`.
+- **A lift where there is none (MINOR, substantive).**
+  - "Each Hurwitz-closed structure has its own lift and therefore its own list" was applied to connected graphs.
+  - Their circulant target `2^((n−1)/2) − 1` has a constant term, so the tower drifts: `E(p^r) ≡ εE(p^(r−1)) + (1 − ε)`.
+  - For `(2/p) = −1`, which is the case at both listed primes 5 and 197, `p²` never passes. At `p = 5` the passing powers are 5 and 125 but not 25.
+- **Smaller items (MINOR).**
+  - The existence of `σ_p` was asserted without the one-line tower argument.
+  - `σ_p ≡ 1 (mod p)`, `h_a(p)`, the convention for `p`-adic bases, and `c_a(n)` for even `n` were not stated.
+  - A nearly tautological cross-check (`D` against `s` on the same interpolation nodes) was cited as evidence.
+  - A capped value at `p = 7` was misreported.
+  - "Inside the analytic range" contradicted "below the proved threshold" in HYP-9361.
+  - The `10^6` search was cited before it finished.
+  - A printout mislabelled the generic Lagrange degree.
+- **Missing coordinate.** When a statement is relabelled from FINITE-EXACT to PROVED, restate it with exactly the hypotheses the proof uses. The data range of the first audit is not a theorem's range.

@@ -1,6 +1,6 @@
 ---
 id: HYP-9361
-title: "Open laws for the Camion function (THM-4750). (a) Split/inert equidistribution: over primes p, a non-triangle zero class (class 1, class 2 or sporadic) has 2 second-order roots (split) or 0 (inert) with density 1/2 each, independently of the class and of the other classes at the same prime. (b) The partner root of the triangle class has no closed form and is equidistributed mod p. (c) Tower heights: h(p) <= 2 for all odd p, with h(p) = 2 exactly for the Camion-Wieferich primes (3, 13, 22409 below 1e5); heuristically there are infinitely many Camion-Wieferich primes but only finitely many p with h >= 3; every Hurwitz-closed structure has its own sparse list. (d) The S_r law: for structures built from 2^C(n,r) (connected r-uniform hypergraphs at primes with gcd(ord_p 2, r!) = 1), the second-order Camion zeros of a zero class are distributed like the roots of a random degree-r polynomial over F_p (root count = fixed points of a uniform permutation in S_r), with forced rational roots at exact zeros inside the analytic range. (e) The 2-adic zero n* of the strong groupoid count on n = 2 mod 3 is irrational (indeed transcendental). (f) The Camion residue rho_C(a) and the Camion lift kappa have no closed form."
+title: "Open laws for the Camion function (THM-4750). (a) Split/inert equidistribution: over primes p, a non-triangle zero class (class 1, class 2 or sporadic) has 2 second-order roots (split) or 0 (inert) with density 1/2 each, independently of the class and of the other classes at the same prime. (b) The partner root of the triangle class has no closed form and is equidistributed mod p. (c) Tower heights: h(p) <= 2 for all odd p, with h(p) = 2 exactly for the Camion-Wieferich primes (3, 13, 22409 below 1e5); heuristically there are infinitely many Camion-Wieferich primes but only finitely many p with h >= 3; structures covered by THM-4750 §5b (any base a) have their own Camion lift and sparse list. (d) The S_r law: for structures built from 2^C(n,r) (connected r-uniform hypergraphs at primes with gcd(ord_p 2, r!) = 1), the second-order Camion zeros of a zero class are distributed like the roots of a random degree-r polynomial over F_p (root count = fixed points of a uniform permutation in S_r), with forced rational roots at exact zeros where the class polynomial already holds (below the proved threshold; FINITE-EXACT). (e) The 2-adic zero n* of the strong groupoid count on n = 2 mod 3 is irrational (indeed transcendental). (f) The Camion residue rho_C(a) and the Camion lift kappa have no closed form."
 status: >
   OPEN.
   AUDITED 2026-10-21 with THM-4750 (MISTAKE-654): the (b) wording ("as (4d) forces") and the (e) evidence
@@ -12,7 +12,8 @@ status: >
   - (b): the triangle class is split in all 1224 non-Wieferich cases with 7 <= p <= 10^4 (no double root occurs
     there). At p = 5 it has a double root and a ramified pair (THM-4750 (4e)).
   - (c): Camion-Wieferich primes p <= 10^5 are 3, 13, 22409, all with h = 2 (two independent searches), extended to 10^6
-    in cw_flint_*.out. Base 3: 17, 31 (p <= 10^4). Connected graphs: 5, 197 (p <= 4000).
+    in cw_flint_*.out (in progress). Base 3: 17, 31 (p <= 10^4). Connected graphs: p^2 | E(p) at 5, 197 (p <= 10^4), which is NOT a
+    tower-height list (drifted tower; second audit finding 19).
   - (d): r = 2, 3, 4 (THM-4750 §4, §6b): 1226 primes for r = 2, and 60 primes <= 2200 each for r = 3, 4. The speed and
     the degree-r polynomial law are PROVED (THM-4750 (7)); only the statistics are conjectural.
   - (e): n* mod 2^140 is known (audit b7). There is no rational of height <= 2^69.5, and the closed form
@@ -68,13 +69,13 @@ By THM-4750 (5) and (5′), `h(p) = v_p(Λ_p) = v_p(2 − κ(2))`, where `κ(2)`
 * **When `h ≥ 3`.** For a Camion–Wieferich prime with a simple root, `h(p) ≥ 3` iff the class-1 Camion zero satisfies `ℓ ≡ p (mod p²)`, a second `1/p` event.
 * **Counting heuristic.** `Σ 1/p² < ∞`, so finitely many `p` should have `h ≥ 3` (expected total about `0.09` for `p ≥ 5`). The Camion–Wieferich primes themselves should be infinite with density zero, since `Σ 1/p = ∞` (HYP-9358 (a)).
 
-Each Hurwitz-closed structure has its own lift, and hence its own sparse list:
+Each base `a` has its own Camion lift (THM-4750 §5b), and hence its own sparse list. Connected graphs are different, as the table notes:
 
 | structure | condition | primes found | range |
 |---|---|---|---|
-| strong tournaments (base 2) | `p² ∣ s(p) − 2^((p−1)/2)` | 3, 13, 22409 | `≤ 10^5`; `10^6` in `cw_flint_*.out` |
+| strong tournaments (base 2) | `p² ∣ s(p) − 2^((p−1)/2)` | 3, 13, 22409 | `≤ 10^5`; search to `10^6` in progress (`cw_flint_*.out`) |
 | strong semicomplete digraphs (base 3) | `p² ∣ s_3(p) − 3^((p−1)/2)` | 17, 31 | `≤ 10^4` |
-| connected labelled graphs | `p² ∣ cg(p) − 2^((p−1)/2) + 1` | 5, 197 | `≤ 4000` |
+| connected labelled graphs | `p² ∣ cg(p) − 2^((p−1)/2) + 1` (not a height list: the tower drifts, `E(p^r) ≡ εE(p^(r−1)) + 1 − ε`) | 5, 197 | `≤ 10^4` |
 | Wieferich, base 2 / base 3 (classical) | `a^(p−1) ≡ 1 (mod p²)` | 1093, 3511 / 11, 1006003 | classical |
 
 No prime appears in two lists. The base-3 Wieferich prime 11 is not base-3 Camion–Wieferich.
@@ -83,7 +84,7 @@ NUMEROLOGY, with no mechanism proposed: the base-3 list begins with the Fermat p
 
 ## (d) The `S_r` law
 
-THM-4750 (7) proves Mahler speed `1/r` and the degree-`r` class polynomial mod `p²` at primes with `gcd(ord_p(2), r!) = 1`. The open claim is statistical. For a zero class, the `r` second-order zeros behave like the roots of a uniformly random degree-`r` polynomial over `F_p`: Frobenius acts on them like a uniform element of `S_r`. An exact zero inside the analytic range is a forced rational root, and `S_(r−1)` governs the rest.
+THM-4750 (7) proves Mahler speed `1/r` and the degree-`r` class polynomial mod `p²` at primes with `gcd(ord_p(2), r!) = 1`. The open claim is statistical. For a zero class, the `r` second-order zeros behave like the roots of a uniformly random degree-`r` polynomial over `F_p`: Frobenius acts on them like a uniform element of `S_r`. An exact zero where the class polynomial already holds (below the proved threshold) is a forced rational root, and `S_(r−1)` governs the rest.
 
 | `r` | class | observed (0 / 1 / 2 / 3 / 4 roots) | prediction |
 |---|---|---|---|
@@ -117,7 +118,7 @@ Open questions:
 
 ## (f) The Camion residue and the Camion lift
 
-`ρ_C(a) = (σ_p(a) − 1)/p mod p` is lift-independent (THM-4750 (5′)).
+`ρ_C(a) = (σ_p(a) − 1)/p mod p` is lift-independent (THM-4750 (5′)). Explicitly, `ρ_C(a) ≡ ε_a [x^p](Σ_(k<p) a^C(k,2) x^k/k!)^(−1) (mod p)` (second audit finding 4).
 
 * As a function on `F_p^×` (`p ≤ 19`) it has no symmetry under `a ↦ 1/a` or `a ↦ −a`, and its Lagrange degree is generic.
 * For `a = 2` and `p ≤ 2000` it satisfies no small-rational relation with `q_2`, `w_p` or `B_(p−3)`.

@@ -1,0 +1,4 @@
+p= 3: lifts [2, 5, 8, 17]: connected b_a(p^k) mod p^(k+1) lift-independent for k=1..4: [True, True, True, True]; strong s_a (control): [True, True, True, True]; values {2: [4, 23, 31, 50], 5: [4, 23, 31, 50], 8: [4, 23, 31, 50], 17: [4, 23, 31, 50]}
+p= 5: lifts [2, 7, 12, 27]: connected b_a(p^k) mod p^(k+1) lift-independent for k=1..3: [True, True, True]; strong s_a (control): [True, True, True]; values {2: [3, 97, 403], 7: [3, 97, 403], 12: [3, 97, 403], 27: [3, 97, 403]}
+p= 7: lifts [2, 9, 16, 37]: connected b_a(p^k) mod p^(k+1) lift-independent for k=1..2: [True, True]; strong s_a (control): [True, True]; values {2: [42, 238], 9: [42, 238], 16: [42, 238], 37: [42, 238]}
+p=11: lifts [2, 13, 24, 57]: connected b_a(p^k) mod p^(k+1) lift-independent for k=1..2: [True, True]; strong s_a (control): [True, True]; values {2: [9, 596], 13: [9, 596], 24: [9, 596], 57: [9, 596]}

@@ -26,4 +26,4 @@ for p in (11, 13, 17, 19):
     neg = all(rho[a] == rho[p - a] for a in range(1, p))
     antineg = all((rho[a] + rho[p - a]) % p == 0 for a in range(1, p))
     print(f"p={p}: rho_C(a) for a=1..{p-1}: {[rho[a] for a in range(1, p)]}")
-    print(f"   rho(1/a)=rho(a): {inv}  rho(-a)=rho(a): {neg}  rho(-a)=-rho(a): {antineg}  min Lagrange degree: {lagrange_degree(rho, p)} (generic {p-1})")
+    print(f"   rho(1/a)=rho(a): {inv}  rho(-a)=rho(a): {neg}  rho(-a)=-rho(a): {antineg}  min Lagrange degree (value at 0 free): {lagrange_degree(rho, p)} (generic p-2 = {p-2})")

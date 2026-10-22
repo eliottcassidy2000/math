@@ -1,0 +1,3 @@
+p=100003: D(p) mod p = 0 (Euler: 0); q(p) by T'/T^2 mod p^2 = 94550; session code path 94550: MATCH
+p=499979: D(p) mod p = 0 (Euler: 0); q(p) by T'/T^2 mod p^2 = 377978; session code path 377978: MATCH
+p=999983: D(p) mod p = 0 (Euler: 0); q(p) by T'/T^2 mod p^2 = 555418; session code path 555418: MATCH

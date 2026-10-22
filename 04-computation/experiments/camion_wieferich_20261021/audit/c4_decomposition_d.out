@@ -1,0 +1,6 @@
+primes 5..2000: 301
+(A) sigma from base 2 = sigma from omega(2), mod p^2: failures 0
+(d) eps D(p)/p = rho_C - q_2/2 (mod p): failures 0
+(B) FLINT rho_C = eps [x^p] 1/T_<p  vs (A): failures 0
+(C) session camion_residue_2000.out (rho_C, q_2, q_C) vs (A): failures 0; primes not in the session file: [] (0)
+rho_C(2) = 0 at p = [199, 809, 929]

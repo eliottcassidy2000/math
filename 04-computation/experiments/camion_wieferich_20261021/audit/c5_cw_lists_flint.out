@@ -1,0 +1,4 @@
+self-test (FLINT mod p^2 vs exact integers, p = 5..31, bases 2, 3 and connected): PASS
+base 2: primes 3..10000 tested 1228 (p != 2); Euler/rotation failures 0; mod-p identity mismatches 0; Camion-Wieferich [3, 13]; base-2 Wieferich [1093, 3511]  (16.9s)
+base 3: primes 3..10000 tested 1227 (p != 3); Euler/rotation failures 0; mod-p identity mismatches 0; Camion-Wieferich [17, 31]; base-3 Wieferich [11]  (33.6s)
+connected graphs: primes 3..10000 tested 1228; rotation-congruence failures 0; p^2 | cg(p) - 2^((p-1)/2) + 1 at [5, 197]  (37.9s)

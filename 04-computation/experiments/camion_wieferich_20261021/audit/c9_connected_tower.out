@@ -1,0 +1,5 @@
+p= 3 eps=-1: E(3^1) mod 3^1 = 0 (v_p = 1); E(3^2) mod 3^2 = 8 (v_p = 0); E(3^3) mod 3^3 = 21 (v_p = 1); E(3^4) mod 3^4 = 62 (v_p = 0); E(3^5) mod 3^5 = 183 (v_p = 1)  | drifted tower r=3: E(p^r) - eps E(p^(r-1)) - (1 - eps) = 0 mod p^r: True; r=4: E(p^r) - eps E(p^(r-1)) - (1 - eps) = 0 mod p^r: True; r=5: E(p^r) - eps E(p^(r-1)) - (1 - eps) = 0 mod p^r: True
+p= 5 eps=-1: E(5^1) mod 5^1 = 0 (v_p = 2); E(5^2) mod 5^2 = 2 (v_p = 0); E(5^3) mod 5^3 = 0 (v_p = 4)  | drifted tower r=2: E(p^r) - eps E(p^(r-1)) - (1 - eps) = 0 mod p^r: True; r=3: E(p^r) - eps E(p^(r-1)) - (1 - eps) = 0 mod p^r: True
+p= 7 eps=+1: E(7^1) mod 7^1 = 0 (v_p = 1); E(7^2) mod 7^2 = 35 (v_p = 1)  | drifted tower r=2: E(p^r) - eps E(p^(r-1)) - (1 - eps) = 0 mod p^r: True
+p=11 eps=-1: E(11^1) mod 11^1 = 0 (v_p = 1); E(11^2) mod 11^2 = 24 (v_p = 0)  | drifted tower r=2: E(p^r) - eps E(p^(r-1)) - (1 - eps) = 0 mod p^r: True
+p=13 eps=-1: E(13^1) mod 13^1 = 0 (v_p = 1); E(13^2) mod 13^2 = 93 (v_p = 0)  | drifted tower r=2: E(p^r) - eps E(p^(r-1)) - (1 - eps) = 0 mod p^r: True

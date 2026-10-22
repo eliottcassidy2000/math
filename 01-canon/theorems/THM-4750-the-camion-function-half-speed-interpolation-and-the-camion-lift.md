@@ -13,10 +13,16 @@ status: >
   Lambda_p formula, the exact double-factorial excess, and the proof sketch for 6(b), 6(c)).
   PROVED:
   - statements 1, 2 (with the converse for "exactly"), 3, 4(a)-(e), 5(a)-(e), 6(a), 7(a)-(d);
-  - 6(b), 6(c) in outline (entire-function argument of the audit, finding 23).
-  POST-AUDIT CONTINUATION, PROVED and checked numerically but not yet independently audited:
-  - §5b (Teichmueller rigidity of sigma_p, Lambda_p = sigma_p - <2>^(-1/2), the Camion lift kappa, the quotient decomposition);
-  - the r = 4 data in §6b.
+  - 6(b) (with its range n >= n_0(j), linear in j) and 6(c) in outline (entire-function argument, first audit finding 23,
+    second audit finding 12).
+  SECOND AUDIT PASS (2026-10-21, 05-knowledge/results/camion_function_audit_pass2_20261021.md; MISTAKE-655) on the
+  post-audit continuation:
+  - §5b (Teichmueller rigidity, Lambda_p = sigma_p - <2>^(-1/2), the Camion lift, the decomposition) is PROVED and
+    confirmed numerically (direct rigidity to mod 3^10; tower height = v_p(a - kappa(a)) for all 794 integer bases
+    below 5^4 and 7^3);
+  - the r = 4 data, the base-3 list and the connected list (extended to 10^4) are confirmed;
+  - one MAJOR fix: 6(b) needs its range (P2-M1);
+  - the connected-graph list is not a tower-height list (drifted tower).
   FINITE-EXACT:
   - sharpness of ceil(i/2) for every tested non-Wieferich p >= 7;
   - extra divisibility exactly v_p((2k-1)!!) at p = 3, 5, 7;
@@ -303,11 +309,19 @@ So, generically, the second-order Camion divisor of a zero class has degree 2, t
 
 ### 5b. Teichmüller rigidity and the Camion lift (PROVED; post-audit continuation)
 
-**Notation.** For a base `a` prime to `p`, let `s_a = e − T_a^(−1)` with `T_a(n) = a^C(n,2)`. Put `c_a(n) = a^((n−1)/2)` for odd `n`, `D_a = s_a − c_a` and `ε_a = (a/p)`. Call `n` a **Camion pseudoprime to base `a`** if `s_a(n) ≡ c_a(n) (mod n)`. Tournaments are `a = 2`.
+**Notation.**
+* For a base `a` prime to `p`, let `s_a = e − T_a^(−1)` with `T_a(n) = a^C(n,2)`.
+* Put `c_a(n) = a^((n−1)/2)` for odd `n`, `c_a(n) = 0` for even `n`, `D_a = s_a − c_a` and `ε_a = (a/p)`.
+* Call `n` a **Camion pseudoprime to base `a`** if `s_a(n) ≡ c_a(n) (mod n)`. Tournaments are `a = 2`.
+* Let `h_a(p) = max{k : p^k | D_a(p^k)}`.
+* **`p`-adic bases.** For `a ∈ Z_p^×` the same recurrence defines `s_a`, and `s_a(n) mod p^r` depends only on `a mod p^r`, because it is an integer polynomial in `a`. "`p^k` is a Camion pseudoprime to base `a`" then means `p^k | D_a(p^k)` in `Z_p`.
+* With this convention `κ(a)` below is a genuinely `p`-adic object. An integer base `≡ κ(a) (mod p^K)` has height at least `K`, and in general no integer base passes every `p^k`.
 
 **Statement 5′.**
 
-* **(a) Rigidity.** `σ_p(a) := lim_k ε_a^k s_a(p^k)` exists and depends only on `a mod p`, not on the lift of `a` to `Z_p`.
+* **(a) Rigidity.**
+  * Finite level: if `a ≡ a′ (mod p)`, then `s_a(p^k) ≡ s_(a′)(p^k) (mod p^(k+1))` for every `k ≥ 1`.
+  * Consequently `σ_p(a) := lim_k ε_a^k s_a(p^k)` exists, `σ_p(a) ≡ 1 (mod p)`, and `σ_p(a)` depends only on `a mod p`.
 * **(b) The limit splits.** `Λ_p(a) := lim_k ε_a^k D_a(p^k) = σ_p(a) − ⟨a⟩^(−1/2)`, where `⟨a⟩ = a/ω(a)`.
 * **(c) Height = distance to a canonical lift.** Put `κ(a) := ω(a)·σ_p(a)^(−2)`, the **Camion lift** of `a mod p`. Then
       h_a(p) = v_p(Λ_p(a)) = v_p(a − κ(a)),
@@ -323,7 +337,10 @@ So, generically, the second-order Camion divisor of a zero class has degree 2, t
   * `C(n,d)t_0(n) = Σ_α c_α α^d (δ_d ∗ E_α)(n)`.
   * `δ_d ∗ δ_e = C(d+e,d) δ_(d+e)`.
   * Along `n = p^k`: for unit `β`, `ε^k p^j C(p^k,d) β^(p^k−d)` has valuation at least `k − v_p(d!) → ∞`. For nonunit `β` the valuation is at least `j + p^k − d → ∞`.
-  * So only the grade-0 part `e − A^(−1)` survives in the limit. `A = ω(a)^C(n,2)` depends only on `a mod p`.
+  * A sharper bound holds: `v_p(C(p^k,d)) = k − v_p(d)`, and `v_p(d) ≤ j − 1` because `d ≤ 2j < p^j`. So each `d ≥ 1` term has valuation at least `k + 1` at `n = p^k`. This is the finite-level statement (second audit, finding 1).
+  * So only the grade-0 part `e − A^(−1)` survives. `A = ω(a)^C(n,2)` depends only on `a mod p`, and the image `e − A^(−1) = s_(ω(a))` is unique.
+  * *Existence.* Session25 §7 gives the tower relation `ε^k s_a(p^k) ≡ ε^(k−1) s_a(p^(k−1)) (mod p^k)`, so the sequence is Cauchy.
+  * *`σ_p ≡ 1`.* `σ_p ≡ ε s_a(p) (mod p²)` and `s_a(p) ≡ ε (mod p)`.
 * **(b)** `c_a(p^k) = ω(a)^((p^k−1)/2) ⟨a⟩^((p^k−1)/2)`. Here `ω(a)^((p^k−1)/2) = ε_a^(1+p+…+p^(k−1)) = ε_a^k`, and `(p^k−1)/2 → −1/2` in `Z_p`.
 * **(c)**
   * Both `σ_p` and `⟨a⟩^(−1/2)` are `≡ 1 (mod p)`, and for `x ≡ 1` and odd `p`, `v(x − 1) = v(x² − 1)`. So `v(σ_p − ⟨a⟩^(−1/2)) = v(σ_p²⟨a⟩ − 1) = v(a − ω(a)σ_p^(−2))`.
@@ -333,14 +350,20 @@ So, generically, the second-order Camion divisor of a zero class has degree 2, t
 
 **FINITE-EXACT** (`camion_lift.out`, `camion_lift_check.out`, `camion_lift_map.out`, `camion_residue_2000.out`, `camion_residue_fish.out`, `camion_residue_symmetry.out`).
 
-* **Rigidity.** `σ_p(a)` is identical mod `p³` for the lifts `2, 2+p, 2+2p, 2+5p, 2−p+p²` at every prime `7 ≤ p ≤ 43`. The same holds for `a = 3, 5, p−1` at `p = 7, 11, 13`.
-* **Height formula.** `v_p(Λ_p) = v_p(2 − κ(2))` at every tested prime: 2 at `p = 13`, 1 otherwise.
-* **`Λ_p` cross-check.** `Λ_p` from the `D`-interpolation equals `σ_p − ⟨2⟩^(−1/2)` exactly mod `p³` for `p = 7..23`. It also equals `D(p²) mod p³`, confirming the mod-`p^(a+1)` congruence (a).
-* **Every `p^k` passes for the base `κ(2)`.** For the integer base `≡ κ(2) (mod p^K)`, `v_p(D_κ(p^k)) = 2, 3, 4` for `k = 1, 2, 3` (capped) at `p = 7, 11, 13`. Bases 2 and `2 + p` give 1, except base 2 at the Camion–Wieferich prime 13, which gives 2.
+* **Rigidity, by interpolation.** `σ_p(a)` is identical mod `p³` for the lifts `2, 2+p, 2+2p, 2+5p, 2−p+p²` at every prime `7 ≤ p ≤ 43`. The same holds for `a = 3, 5, p−1` at `p = 7, 11, 13`.
+* **Rigidity, directly** (second audit c1). `s_a(p^k) mod p^(k+1)` agrees across 7 lifts per residue: 115 level checks, up to mod `3^10`, `5^7`, `7^6`, `11^5` and `13^5`.
+* **Height formula.**
+  * `v_p(Λ_p) = v_p(2 − κ(2))` at every tested prime: 2 at `p = 3, 13`, 1 otherwise.
+  * Direct `Λ_p` from `D(p^k)` equals `σ_p(ω(2)) − ⟨2⟩^(−1/2)` at every level for 13 primes `3 ≤ p ≤ 43` (second audit c2). This is the genuine test; the session's interpolation cross-check of `D` against `s` is nearly tautological.
+* **Designed and all bases** (second audit c2, c3, c3b).
+  * For the base `κ(a) + 3p^h`, `v(D(p^k)) = k + 1` for `k < h` and `= h` from `k = h` on, for every `h` tested and residues `2, 3, 5, p−1`.
+  * For every integer base below `5^4` and `7^3` (794 in all), the tower height equals `v_p(a − κ(a))`. The heights are distributed `(1 − 1/p)p^(−h+1)`.
+* **Every `p^k` passes for the base `κ(2)`.** For the integer base `≡ κ(2) (mod p^K)`, `v_p(D_κ(p^k)) = 2, 3, 4` at `p = 11, 13`, and `2, 3, 3` at `p = 7` (capped at `K = 3`). The second audit gives `2, 3, 4, 5, 6` at `p = 7` with `K = 6`. Bases 2 and `2 + p` give 1, except base 2 at the Camion–Wieferich prime 13, which gives 2.
 * **Decomposition (d).** It holds for all 301 primes `5 ≤ p ≤ 2000`.
   * `ρ_C(2) = 0` exactly at `p = 199, 809, 929`. There the two lifts agree mod `p²`, so Camion–Wieferich ⟺ Wieferich at those primes.
   * No relation `ρ_C ≡ αq_2 + βw_p + γB_(p−3) + δ` with small rationals survives past `p = 67`.
-* **Structure of `κ` and `ρ_C`.** `κ` is not multiplicative. As a function on `F_p^×` (`p ≤ 19`), `ρ_C` has no symmetry under `a ↦ 1/a` or `a ↦ −a`, and its Lagrange degree is generic.
+* **Structure of `κ` and `ρ_C`.** `κ` is not multiplicative. As a function on `F_p^×` (`p ≤ 19`), `ρ_C` has no symmetry under `a ↦ 1/a` or `a ↦ −a`, and its Lagrange degree is the generic `p − 2`.
+* **Explicit formula** (second audit finding 4). `ρ_C(a) ≡ ε_a·[x^p] (Σ_(k<p) a^C(k,2) x^k/k!)^(−1) (mod p)`, the quantity `u_p` of `cw_fast.c`. It visibly depends only on `a mod p`. Checked at 301 primes.
 
 **Reading.**
 * Each residue `a mod p` has two canonical `p`-adic lifts:
@@ -359,11 +382,15 @@ So, generically, the second-order Camion divisor of a zero class has degree 2, t
   * `cw_fast.c` uses `s(p) ≡ ε + p·u_p (mod p²)` with `u_p = [x^p] 1/T_(<p)(x)`.
   * The audit's independent quasi-linear FLINT search (b6) covered all 9590 primes `5 ≤ p ≤ 10^5`.
 * **`h(22409) = 2`.** It was found by `tower_height.c` and confirmed by audit b5 through `D(22409) mod p³`. The root `l = 0` is simple.
-* **The search to `10^6`** (`cw_flint_np.py`, an `O(p log p)` method): the results are in `cw_flint_*.out`.
+* **The search to `10^6`** (`cw_flint_np.py`, an `O(p log p)` method; validated by the second audit, c6): IN PROGRESS. Results will appear in `cw_flint_*.out`.
 * **Every prime `p ≤ 10^5` has `h(p) ≤ 2`.** The heuristic expected number with `h ≥ 3` is `Σ_(p≥5) 1/p² ≈ 0.09`.
-* **Other structures.** Each Hurwitz-closed structure has its own lift and therefore its own list:
-  * strong semicomplete digraphs (base 3, `p ≤ 10^4`): 17, 31;
-  * connected labelled graphs (`p² | cg(p) − 2^((p−1)/2) + 1`, `p ≤ 4000`): 5, 197.
+* **Other structures.**
+  * **Strong semicomplete digraphs (base 3).** The Camion–Wieferich primes `p ≤ 10^4` are 17 and 31 (two codes). §5b applies with `a = 3`, so `h_3(p) ≥ 2` exactly at those primes. The base-3 Wieferich prime 11 is not on the list.
+  * **Connected labelled graphs.** The primes `p ≤ 10^4` with `p² | E(p)`, where `E(n) = cg(n) − 2^((n−1)/2) + 1` (rotation: `cg(p) ≡ 2^((p−1)/2) − 1`), are 5 and 197.
+    * This is NOT a tower-height list (second audit finding 19).
+    * The target has a constant term, so the tower drifts: `E(p^r) ≡ εE(p^(r−1)) + (1 − ε) (mod p^r)`.
+    * For `(2/p) = −1`, which holds at both 5 and 197, `p²` never passes. The passing powers need not form an initial segment: at `p = 5`, 5 and 125 pass and 25 fails.
+    * The rigidity of `b_a(p^k)` holds numerically but is unproved.
 
 ## 6. The prime 2: Moon parity and the third cyclotomic polynomial
 
@@ -378,10 +405,23 @@ Every tournament automorphism group has odd order (Moon): an involution would ha
   * *Proof.* `v_2(2^C(n,2)/n!) = C(n,2) − v_2(n!) ≥ (n−1)(n−2)/2 ≥ 1` for `n ≥ 3`, so `T(x) ≡ 1 + x + x² = Φ_3(x) (mod 2)` in `Z_(2)[[x]]`.
   * Then `S = 1 − 1/T ≡ 1 − (1+x)/(1+x³) (mod 2)`, whose coefficients are 1 exactly at `n ≢ 2 (mod 3)`, `n ≥ 1`. ∎
   * The OEIS data of A051337 and A000568 agree up to `n = 19`. OEIS records no parity comment on either sequence.
-* **(b) PROVED in outline; FINITE-EXACT.** `f(n + 3·2^j) ≡ f(n) (mod 2^(j+2))`.
-  * *Data* (`n ≤ 1500`, audit b7). The congruence fails only at `n ≤ 3` for `j ≤ 7`, and at `n ≤ 4` for `j = 8`. On the class `n ≡ 1 (mod 3)` it even holds mod `2^(j+3)` for `7 ≤ n ≤ 1500 − 3·2^j` and `j ≤ 8`; this fails at `n = 1` (`j ≥ 4`) and `n = 4` (`j ≥ 7`).
+* **(b) PROVED in outline, with its range; FINITE-EXACT.**
+
+      f(n + 3·2^j) ≡ f(n)  (mod 2^(j+2))   whenever v_2(r_n) ≥ j + 2,
+
+  where `r_n` is the remainder below. In particular this holds for all `n ≥ 2(j−1)/3`, using the observed bound `v_2(r_n) ≥ 3n/2 + 3`.
+  * *Failures below the range.* They occur for every `j ≥ 5`, and the exception set grows linearly in `j` (second audit c8, MISTAKE-655):
+    * `n ≤ 2` for `j = 5, 6`;
+    * `n ≤ 3` for `j = 7`;
+    * `n ≤ 4` for `j = 8..10`;
+    * `n ≤ 6` for `j = 11, 12`;
+    * `n ≤ 8` for `j = 14..16`;
+    * `n ≤ 10` for `j = 17, 18`.
+  * The exact rule "congruence ⟺ `v_2(r_n) ≥ j + 2`" is FINITE-EXACT for `j ≤ 18` and `n ≤ 60`.
+  * *Class `n ≡ 1 (mod 3)`.* The congruence holds mod `2^(j+3)` for `7 ≤ n ≤ 1500 − 3·2^j` and `j ≤ 8`. Its exceptions also grow: `n = 1` for `j ≥ 4`, `n = 4` for `j ≥ 7`, `n = 7` for `j ≥ 12`, `n = 10` for `j ≥ 16`.
   * *Reason.* `T` is entire on `C_2`, since `v_2(τ_n) ≈ n²/2`. By its Newton polygon its only zeros in the closed unit disc are two conjugate units `ρ, σ(ρ) ∈ Z_2[ζ_3]` with `ρ ≡ ζ_3`; all other zeros satisfy `|x| ≥ 2^(3/2)`.
-  * Hence `f(n) = Tr_(Q_2(ζ_3)/Q_2)(C ρ^(−n)) + r_n`, with `C = 1/(ρT′(ρ))` and `v_2(r_n) ≥ (3/2)n − O(1)`.
+  * Hence `f(n) = Tr_(Q_2(ζ_3)/Q_2)(C ρ^(−n)) + r_n`, with `C = 1/(ρT′(ρ))`.
+  * The remainder satisfies `v_2(r_n) ≥ (3/2)n − O(1)` from the next zeros on `|x| = 2^(3/2)`. Observed exactly: `v_2(r_n) = 3n/2 + 3, 9/2, 3, 7/2` by `n mod 4`, for `n ≤ 120` (second audit c8). The Newton polygon has slopes `0, 3/2, 4, 5, 8, 19/2` (2 zeros each).
   * Writing `ρ = ζw`, `v_2(w³ − 1) = 2` gives the exponent `j + 2`.
   * *Checks.* `f(n) ≡ Tr(Cρ^(−n))` mod `2^72` at `n = 10^5, …, 3·10^6 + 5` (`two_adic_regulator.out`), and mod `2^100` for `n ∈ [1500, 2200]` (audit b9).
   * At `p = 2` the role of `F_p^×` (order `p − 1`) is played by `F_4^×` (order 3), because the reduction of the tournament EGF is the irreducible `Φ_3`.
@@ -390,7 +430,9 @@ Every tournament automorphism group has odd order (Moon): an involution would ha
       v_2(f(n)) = 2 + v_2(n − n*),   n* = log t / log r,
 
   with `r = σ(w)/w` and `t = −ζσ(C)/C`, both in the norm-one torus of `Q_2(√−3)`.
-  * *Proof.* On this class `Tr(Cρ^(−n)) = Cζw^(−n)(1 − t r^(−n))`, with `v(C) = 0` and `v(r − 1) = 2`. This holds whenever `2 + v_2(n − n*)` is below the decay rate of `r_n`.
+  * *Proof.* On this class `Tr(Cρ^(−n)) = Cζw^(−n)(1 − t r^(−n))`, with `v(C) = 0` and `v(r − 1) = 2`.
+    * `t ∈ r^(Z_2)`: the group `N^1 ∩ (1 + 4O)` is torsion-free of rank 1, `r` generates it (`v(r − 1) = 2` is minimal), and `v(t − 1) = 3`. Hence `v_2(n*) = 1`.
+    * The valuation law holds whenever `2 + v_2(n − n*)` is below the decay rate of `r_n`.
   * *Values:*
 
         n* ≡ 16221783116972227762  (mod 2^64),   n* ≡ 3250 (mod 4096),
@@ -450,10 +492,10 @@ Let `r ≥ 2` and `T_r(n) = 2^C(n,r)`, and let `b_r` count connected labelled `r
   * Their second-order structure is governed by the Fermat quotient through the quadratic edge count.
   * Their zero divisor has degree 2, the degree of `C(n,2)`. In general the degree is `r`, with `S_r` statistics.
   * The tower heights `h(p)` are the valuations of `Λ_p`, the class-1 branch at `n = 0`, equivalently the distance from 2 to its Camion lift.
-  * **The universal residues of THM-4746 have `p`-adic avatars.**
+  * **Reading.** The universal residues of THM-4746 can be seen as having `p`-adic avatars. Each sub-claim is proved; the word "avatar" and the `K2` identification across `p = 2` and odd `p` (through `F_4^×` in place of `F_p^×`) are interpretive.
     * K1 (class 1) carries the Camion limit `Λ_p` and the tower heights.
     * The absent strong K2 (class 2) is the only 2-adic zero class, with its simple zero `n*`.
-    * The triangle (class 3) is the one exact zero inside the analytic range, and it forces a split second-order zero at every non-Wieferich prime where the root is simple.
+    * The triangle (class 3) is the one exact zero with `n ≥ 3`. For `p ≥ 5` it forces a split second-order zero at every non-Wieferich prime where the root is simple.
   * The prime 2 behaves differently. Moon's odd-order theorem makes the groupoid counts `Σ 1/|Aut|` the natural 2-adic object, and `Φ_3` replaces `F_p^×`.
 * **Does not say.**
   * Nothing about the infinitude or density of Camion–Wieferich primes (HYP-9358 (a)).

@@ -1,0 +1,25 @@
+# residue a = 1 (sigma_p(1) = 1 exactly, since s_1(n) = (-1)^(n+1)):
+RIGIDITY p=3 residue 1 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=3 residue 1 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=3 residue 1 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=3 residue 1 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=3 residue 1 level k=5 (mod p^6): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=3 residue 1 level k=6 (mod p^7): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=3 residue 1 level k=7 (mod p^8): sigma equal for all 7 lifts: YES  (sigma = 1)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+RIGIDITY p=5 residue 1 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=5 residue 1 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=5 residue 1 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=5 residue 1 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=5 residue 1 level k=5 (mod p^6): sigma equal for all 7 lifts: YES  (sigma = 1)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+RIGIDITY p=7 residue 1 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=7 residue 1 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=7 residue 1 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=7 residue 1 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 1)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK
+RIGIDITY p=11 residue 1 level k=1 (mod p^2): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=11 residue 1 level k=2 (mod p^3): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=11 residue 1 level k=3 (mod p^4): sigma equal for all 7 lifts: YES  (sigma = 1)
+RIGIDITY p=11 residue 1 level k=4 (mod p^5): sigma equal for all 7 lifts: YES  (sigma = 1)
+   level consistency sigma_(k+1) = sigma_k mod p^(k+1): OK

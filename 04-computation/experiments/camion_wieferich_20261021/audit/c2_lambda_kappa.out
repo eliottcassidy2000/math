@@ -1,0 +1,54 @@
+=== (b), (c): Lambda_p, sigma_p, kappa(2) from direct values ===
+p= 3 eps=-1 K=9: sigma(2)=sigma(omega) at all levels: True; Lambda = sigma - <2>^(-1/2) at all levels: True; v(Lambda)=2 v(2-kappa)=2 v(2-omega)=1; kappa(2) mod p^9 = 14762
+p= 5 eps=-1 K=7: sigma(2)=sigma(omega) at all levels: True; Lambda = sigma - <2>^(-1/2) at all levels: True; v(Lambda)=1 v(2-kappa)=1 v(2-omega)=1; kappa(2) mod p^7 = 54562
+p= 7 eps=+1 K=6: sigma(2)=sigma(omega) at all levels: True; Lambda = sigma - <2>^(-1/2) at all levels: True; v(Lambda)=1 v(2-kappa)=1 v(2-omega)=1; kappa(2) mod p^6 = 110147; session kappa mod p^3 = 44: MATCH; Lambda mod p^3 = 210 (session 210: MATCH)
+p=11 eps=-1 K=5: sigma(2)=sigma(omega) at all levels: True; Lambda = sigma - <2>^(-1/2) at all levels: True; v(Lambda)=1 v(2-kappa)=1 v(2-omega)=1; kappa(2) mod p^5 = 124577; session kappa mod p^4 = 7449: MATCH; Lambda mod p^3 = 1254 (session 1254: MATCH)
+p=13 eps=-1 K=5: sigma(2)=sigma(omega) at all levels: True; Lambda = sigma - <2>^(-1/2) at all levels: True; v(Lambda)=2 v(2-kappa)=2 v(2-omega)=1; kappa(2) mod p^5 = 203140; session kappa mod p^4 = 3213: MATCH; Lambda mod p^3 = 845 (session 845: MATCH)
+p=17 eps=+1 K=4: sigma(2)=sigma(omega) at all levels: True; Lambda = sigma - <2>^(-1/2) at all levels: True; v(Lambda)=1 v(2-kappa)=1 v(2-omega)=1; kappa(2) mod p^4 = 58584; Lambda mod p^3 = 816 (session 816: MATCH)
+p=19 eps=-1 K=4: sigma(2)=sigma(omega) at all levels: True; Lambda = sigma - <2>^(-1/2) at all levels: True; v(Lambda)=1 v(2-kappa)=1 v(2-omega)=1; kappa(2) mod p^4 = 38344; Lambda mod p^3 = 703 (session 703: MATCH)
+p=23 eps=+1 K=4: sigma(2)=sigma(omega) at all levels: True; Lambda = sigma - <2>^(-1/2) at all levels: True; v(Lambda)=1 v(2-kappa)=1 v(2-omega)=1; kappa(2) mod p^4 = 217214; Lambda mod p^3 = 8119 (session 8119: MATCH)
+p=29 eps=-1 K=3: sigma(2)=sigma(omega) at all levels: True; Lambda = sigma - <2>^(-1/2) at all levels: True; v(Lambda)=1 v(2-kappa)=1 v(2-omega)=1; kappa(2) mod p^3 = 13429
+p=31 eps=+1 K=3: sigma(2)=sigma(omega) at all levels: True; Lambda = sigma - <2>^(-1/2) at all levels: True; v(Lambda)=1 v(2-kappa)=1 v(2-omega)=1; kappa(2) mod p^3 = 11286
+p=37 eps=-1 K=3: sigma(2)=sigma(omega) at all levels: True; Lambda = sigma - <2>^(-1/2) at all levels: True; v(Lambda)=1 v(2-kappa)=1 v(2-omega)=1; kappa(2) mod p^3 = 23571
+p=41 eps=+1 K=3: sigma(2)=sigma(omega) at all levels: True; Lambda = sigma - <2>^(-1/2) at all levels: True; v(Lambda)=1 v(2-kappa)=1 v(2-omega)=1; kappa(2) mod p^3 = 56213
+p=43 eps=-1 K=3: sigma(2)=sigma(omega) at all levels: True; Lambda = sigma - <2>^(-1/2) at all levels: True; v(Lambda)=1 v(2-kappa)=1 v(2-omega)=1; kappa(2) mod p^3 = 43432
+
+=== (c) designed heights: base a_h = kappa(2) + 3 p^h has h_a(p) = h; base kappa mod p^K passes every level ===
+  p= 5 kappa itself (h >= K)  base    54562: v_p(D_a(p^k)) k=1..6 (cap k+1): [2, 3, 4, 5, 6, 7]  predicted [2, 3, 4, 5, 6, 7]  OK
+  p= 5 designed h=1           base    54577: v_p(D_a(p^k)) k=1..6 (cap k+1): [1, 1, 1, 1, 1, 1]  predicted [1, 1, 1, 1, 1, 1]  OK
+  p= 5 designed h=2           base    54637: v_p(D_a(p^k)) k=1..6 (cap k+1): [2, 2, 2, 2, 2, 2]  predicted [2, 2, 2, 2, 2, 2]  OK
+  p= 5 designed h=3           base    54937: v_p(D_a(p^k)) k=1..6 (cap k+1): [2, 3, 3, 3, 3, 3]  predicted [2, 3, 3, 3, 3, 3]  OK
+  p= 5 designed h=4           base    56437: v_p(D_a(p^k)) k=1..6 (cap k+1): [2, 3, 4, 4, 4, 4]  predicted [2, 3, 4, 4, 4, 4]  OK
+  p= 5 designed h=5           base    63937: v_p(D_a(p^k)) k=1..6 (cap k+1): [2, 3, 4, 5, 5, 5]  predicted [2, 3, 4, 5, 5, 5]  OK
+  p= 5 designed h=6           base    23312: v_p(D_a(p^k)) k=1..6 (cap k+1): [2, 3, 4, 5, 6, 6]  predicted [2, 3, 4, 5, 6, 6]  OK
+  p= 7 kappa itself (h >= K)  base   110147: v_p(D_a(p^k)) k=1..5 (cap k+1): [2, 3, 4, 5, 6]  predicted [2, 3, 4, 5, 6]  OK
+  p= 7 designed h=1           base   110168: v_p(D_a(p^k)) k=1..5 (cap k+1): [1, 1, 1, 1, 1]  predicted [1, 1, 1, 1, 1]  OK
+  p= 7 designed h=2           base   110294: v_p(D_a(p^k)) k=1..5 (cap k+1): [2, 2, 2, 2, 2]  predicted [2, 2, 2, 2, 2]  OK
+  p= 7 designed h=3           base   111176: v_p(D_a(p^k)) k=1..5 (cap k+1): [2, 3, 3, 3, 3]  predicted [2, 3, 3, 3, 3]  OK
+  p= 7 designed h=4           base   117350: v_p(D_a(p^k)) k=1..5 (cap k+1): [2, 3, 4, 4, 4]  predicted [2, 3, 4, 4, 4]  OK
+  p= 7 designed h=5           base    42919: v_p(D_a(p^k)) k=1..5 (cap k+1): [2, 3, 4, 5, 5]  predicted [2, 3, 4, 5, 5]  OK
+  p=11 kappa itself (h >= K)  base   124577: v_p(D_a(p^k)) k=1..4 (cap k+1): [2, 3, 4, 5]  predicted [2, 3, 4, 5]  OK
+  p=11 designed h=1           base   124610: v_p(D_a(p^k)) k=1..4 (cap k+1): [1, 1, 1, 1]  predicted [1, 1, 1, 1]  OK
+  p=11 designed h=2           base   124940: v_p(D_a(p^k)) k=1..4 (cap k+1): [2, 2, 2, 2]  predicted [2, 2, 2, 2]  OK
+  p=11 designed h=3           base   128570: v_p(D_a(p^k)) k=1..4 (cap k+1): [2, 3, 3, 3]  predicted [2, 3, 3, 3]  OK
+  p=11 designed h=4           base     7449: v_p(D_a(p^k)) k=1..4 (cap k+1): [2, 3, 4, 4]  predicted [2, 3, 4, 4]  OK
+  p=13 kappa itself (h >= K)  base   203140: v_p(D_a(p^k)) k=1..4 (cap k+1): [2, 3, 4, 5]  predicted [2, 3, 4, 5]  OK
+  p=13 designed h=1           base   203179: v_p(D_a(p^k)) k=1..4 (cap k+1): [1, 1, 1, 1]  predicted [1, 1, 1, 1]  OK
+  p=13 designed h=2           base   203647: v_p(D_a(p^k)) k=1..4 (cap k+1): [2, 2, 2, 2]  predicted [2, 2, 2, 2]  OK
+  p=13 designed h=3           base   209731: v_p(D_a(p^k)) k=1..4 (cap k+1): [2, 3, 3, 3]  predicted [2, 3, 3, 3]  OK
+  p=13 designed h=4           base   288823: v_p(D_a(p^k)) k=1..4 (cap k+1): [2, 3, 4, 4]  predicted [2, 3, 4, 4]  OK
+
+=== 5(e): class-polynomial value at z vs direct Lambda (own implementation) ===
+p= 3: K=3: direct Lambda mod p^3 = 9, full interpolation = n/a (needs i! invertible, i <= 2K-2 < p), cheap formula = 9 MATCH  [p < 2K-1 = 5: outside the stated range] | K=4: direct Lambda mod p^4 = 9, full interpolation = n/a (needs i! invertible, i <= 2K-2 < p)  [p < 2K-1 = 7: outside the stated range]
+p= 5: K=3: direct Lambda mod p^3 = 85, full interpolation = 85 MATCH, cheap formula = 85 MATCH | K=4: direct Lambda mod p^4 = 460, full interpolation = n/a (needs i! invertible, i <= 2K-2 < p)  [p < 2K-1 = 7: outside the stated range]
+p= 7: K=3: direct Lambda mod p^3 = 210, full interpolation = 210 MATCH, cheap formula = 210 MATCH | K=4: direct Lambda mod p^4 = 2268, full interpolation = 2268 MATCH
+p=11: K=3: direct Lambda mod p^3 = 1254, full interpolation = 1254 MATCH, cheap formula = 1254 MATCH | K=4: direct Lambda mod p^4 = 14564, full interpolation = 14564 MATCH
+p=13: K=3: direct Lambda mod p^3 = 845, full interpolation = 845 MATCH, cheap formula = 845 MATCH | K=4: direct Lambda mod p^4 = 22815, full interpolation = 22815 MATCH
+p=17: K=3: direct Lambda mod p^3 = 816, full interpolation = 816 MATCH, cheap formula = 816 MATCH | K=4: direct Lambda mod p^4 = 15555, full interpolation = 15555 MATCH
+p=19: K=3: direct Lambda mod p^3 = 703, full interpolation = 703 MATCH, cheap formula = 703 MATCH | K=4: direct Lambda mod p^4 = 703, full interpolation = 703 MATCH
+p=23: K=3: direct Lambda mod p^3 = 8119, full interpolation = 8119 MATCH, cheap formula = 8119 MATCH | K=4: direct Lambda mod p^4 = 105455, full interpolation = 105455 MATCH
+p=29: K=3: direct Lambda mod p^3 = 638, full interpolation = 638 MATCH, cheap formula = 638 MATCH
+p=31: K=3: direct Lambda mod p^3 = 8711, full interpolation = 8711 MATCH, cheap formula = 8711 MATCH
+p=37: K=3: direct Lambda mod p^3 = 13616, full interpolation = 13616 MATCH, cheap formula = 13616 MATCH
+p=41: K=3: direct Lambda mod p^3 = 27552, full interpolation = 27552 MATCH, cheap formula = 27552 MATCH
+p=43: K=3: direct Lambda mod p^3 = 51084, full interpolation = 51084 MATCH, cheap formula = 51084 MATCH

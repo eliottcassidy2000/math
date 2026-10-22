@@ -1,0 +1,4 @@
+[1] session code path vs direct recurrence, primes 3..3000: 429 primes, 0 mismatches of q(p); hits [3, 13]
+[2] p=100003: vectorised 2^C(k,2), k! (all k) and 1/k! (every 997th k) equal plain loops: True; q(p) = 94550; max residue product 1.000e+10 < 2^63 = 9.223e+18; time per prime 0.06s
+[2] p=499979: vectorised 2^C(k,2), k! (all k) and 1/k! (every 997th k) equal plain loops: True; q(p) = 377978; max residue product 2.500e+11 < 2^63 = 9.223e+18; time per prime 0.44s
+[2] p=999983: vectorised 2^C(k,2), k! (all k) and 1/k! (every 997th k) equal plain loops: True; q(p) = 555418; max residue product 1.000e+12 < 2^63 = 9.223e+18; time per prime 1.06s

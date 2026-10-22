@@ -3,7 +3,8 @@
 # because every grade >= 1 term of the Session25 expansion carries C(n,d) with d >= 1, which vanishes at the p-adic point n = 0
 # of the branch n = 1 mod (p-1).  The circulant part contributes lim eps^k a^((p^k-1)/2) = <a>^(-1/2).  Hence
 #   Lambda_p(a) = sigma_p - <a>^(-1/2),   h_a(p) = v_p(a - kappa(a)),   kappa(a) := omega(a) * sigma_p^(-2)  ("Camion lift"),
-# parallel to the Wieferich order v_p(a - omega(a)).  Exactly one lift of each residue mod p^2 is Camion-Wieferich.
+# parallel to the Wieferich order v_p(a - omega(a)).  (Consequence, not checked here: exactly one lift of each residue mod p^2
+# is Camion-Wieferich.)  Interpolation needs p >= 2K - 1; run for 7 <= p <= 43.
 # Computes sigma_p(a) mod p^K by the degree-(2K-2) interpolation of l -> eps^-l s_a(p + l(p-1)) at l = -p/(p-1).
 # mac-mini-2026-10-21-fanopsp.
 import sys

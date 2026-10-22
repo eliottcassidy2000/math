@@ -1,0 +1,35 @@
+(1) Newton polygon of T over Q_2 (first segments): (slope s, number of zeros; these zeros have v_2(x) = -s, |x| = 2^s): [('0', 2), ('3/2', 2), ('4', 2), ('5', 2), ('8', 2), ('19/2', 2)]
+    zeros in the closed unit disc (slope <= 0): 2 ; next slope: 3/2 -> |x| = 2^3/2
+(2) rho = zeta*w with v(T(rho)) >= 1000000000: v(w - 1) = 2, v(w^3 - 1) = 2, v(C) = 0, v(r - 1) = 2, v(t - 1) = 3, N(r) = 1: True, N(t) = 1: True
+    f(n) mod 2^160 from the truncated series agrees with exact s(n)/n! for n <= 25: True
+(3) v_2(r_n) - 3n/2, r_n = f(n) - Tr(C rho^-n), n = 1..40: ['9/2', '3', '7/2', '3', '9/2', '3', '7/2', '3', '9/2', '3', '7/2', '3', '9/2', '3', '7/2', '3', '9/2', '3', '7/2', '3', '9/2', '3', '7/2', '3', '9/2', '3', '7/2', '3', '9/2', '3', '7/2', '3', '9/2', '3', '7/2', '3', '9/2', '3', '7/2', '3']
+    v_2(r_n) - 3n/2 by n mod 4 (n <= 120): {0: ['3'], 1: ['9/2'], 2: ['3'], 3: ['7/2']}
+    rule 'f(n+3*2^j) = f(n) mod 2^(j+2) iff v_2(r_n) >= j+2' on all j <= 18, n <= 60: True
+    min over 5 <= n <= 100 of v_2(r_n) - 3n/2 = 3
+(4) f(n + 3*2^j) = f(n) mod 2^(j+2): failing n in [1, 60], and (class n = 1 mod 3) failures mod 2^(j+3):
+    j= 0: fails mod 2^(j+2) at n = [];  n = 1 (mod 3) fails mod 2^(j+3) at n = []
+    j= 1: fails mod 2^(j+2) at n = [];  n = 1 (mod 3) fails mod 2^(j+3) at n = []
+    j= 2: fails mod 2^(j+2) at n = [];  n = 1 (mod 3) fails mod 2^(j+3) at n = []
+    j= 3: fails mod 2^(j+2) at n = [];  n = 1 (mod 3) fails mod 2^(j+3) at n = []
+    j= 4: fails mod 2^(j+2) at n = [];  n = 1 (mod 3) fails mod 2^(j+3) at n = [1]
+    j= 5: fails mod 2^(j+2) at n = [1, 2];  n = 1 (mod 3) fails mod 2^(j+3) at n = [1]
+    j= 6: fails mod 2^(j+2) at n = [1, 2];  n = 1 (mod 3) fails mod 2^(j+3) at n = [1]
+    j= 7: fails mod 2^(j+2) at n = [1, 2, 3];  n = 1 (mod 3) fails mod 2^(j+3) at n = [1, 4]
+    j= 8: fails mod 2^(j+2) at n = [1, 2, 3, 4];  n = 1 (mod 3) fails mod 2^(j+3) at n = [1, 4]
+    j= 9: fails mod 2^(j+2) at n = [1, 2, 3, 4];  n = 1 (mod 3) fails mod 2^(j+3) at n = [1, 4]
+    j=10: fails mod 2^(j+2) at n = [1, 2, 3, 4];  n = 1 (mod 3) fails mod 2^(j+3) at n = [1, 4]
+    j=11: fails mod 2^(j+2) at n = [1, 2, 3, 4, 5, 6];  n = 1 (mod 3) fails mod 2^(j+3) at n = [1, 4]
+    j=12: fails mod 2^(j+2) at n = [1, 2, 3, 4, 5, 6];  n = 1 (mod 3) fails mod 2^(j+3) at n = [1, 4, 7]
+    j=13: fails mod 2^(j+2) at n = [1, 2, 3, 4, 5, 6, 7];  n = 1 (mod 3) fails mod 2^(j+3) at n = [1, 4, 7]
+    j=14: fails mod 2^(j+2) at n = [1, 2, 3, 4, 5, 6, 7, 8];  n = 1 (mod 3) fails mod 2^(j+3) at n = [1, 4, 7]
+    j=15: fails mod 2^(j+2) at n = [1, 2, 3, 4, 5, 6, 7, 8];  n = 1 (mod 3) fails mod 2^(j+3) at n = [1, 4, 7]
+    j=16: fails mod 2^(j+2) at n = [1, 2, 3, 4, 5, 6, 7, 8];  n = 1 (mod 3) fails mod 2^(j+3) at n = [1, 4, 7, 10]
+    j=17: fails mod 2^(j+2) at n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];  n = 1 (mod 3) fails mod 2^(j+3) at n = [1, 4, 7, 10]
+    j=18: fails mod 2^(j+2) at n = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];  n = 1 (mod 3) fails mod 2^(j+3) at n = [1, 4, 7, 10]
+(5) explicit counterexamples to the unqualified 6(b): v_2(f(n + 3*2^j) - f(n)) against j + 2, and v_2(r_n):
+    j=11, n=5: v_2(f(n+3*2^j) - f(n)) = 12 < j+2 = 13;  v_2(r_n) = 12
+    j=11, n=6: v_2(f(n+3*2^j) - f(n)) = 12 < j+2 = 13;  v_2(r_n) = 12
+    j=13, n=7: v_2(f(n+3*2^j) - f(n)) = 14 < j+2 = 15;  v_2(r_n) = 14
+    j=14, n=8: v_2(f(n+3*2^j) - f(n)) = 15 < j+2 = 16;  v_2(r_n) = 15
+    j=17, n=9: v_2(f(n+3*2^j) - f(n)) = 18 < j+2 = 19;  v_2(r_n) = 18
+    j=17, n=10: v_2(f(n+3*2^j) - f(n)) = 18 < j+2 = 19;  v_2(r_n) = 18
