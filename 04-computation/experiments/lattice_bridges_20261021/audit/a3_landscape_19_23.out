@@ -1,0 +1,23 @@
+n=19: sets=512 classes=30 self-loop classes=3  IE==DP: True  BFS distance == min-over-multipliers set distance (to R, P): True
+   session data: 30 classes, H agrees on 30; classes missing in data: []; extra in data: []
+   global max H=1184212824763 at ['[R]'] dR=[0] dP=[3]   H(R)=1184212824763 H(P)=1172695746915 d(R,P)=3
+   strict local maxima (vs distinct neighbour classes): 4: [R] H=1184212824763 dR=0 dP=3; [P] H=1172695746915 dR=3 dP=0; [1, 2, 3, 5, 8, 9, 12, 13, 15] H=1169262412601 dR=2 dP=3; [1, 2, 5, 9, 11, 12, 13, 15, 16] H=1167653827609 dR=3 dP=4
+   (counting self-loops as neighbours: 3: ['[R]', '[1, 2, 3, 5, 8, 9, 12, 13, 15]', '[P]'])
+   P neighbour classes: 1 -> ['[1, 2, 3, 8, 10, 12, 13, 14, 15]'], H = [1163848601583], margin = ['0.992456']
+   energy: E in [369,489]; argmax ['[R]']; argmin ['[P]']; 4c4-nE constant: True [-171]; 2c5+nE constant: True [30267]
+   H-max is E-max: True; H-max is E-min: False; E-min classes strict local max of H: [True]; H-rank of E-min: [3]
+n=21: sets=1024 classes=88 self-loop classes=14  IE==DP: True  BFS distance == min-over-multipliers set distance (to R): True
+   session data: 88 classes, H agrees on 88; classes missing in data: []; extra in data: []
+   global max H=125547534942879 at ['[R]'] dR=[0]   H(R)=125547534942879
+   strict local maxima (vs distinct neighbour classes): 6: [R] H=125547534942879 dR=0; [1, 2, 3, 7, 8, 9, 10, 15, 16, 17] H=125056114727355 dR=3; [1, 2, 3, 4, 6, 9, 10, 13, 14, 16] H=123713161714233 dR=3; [1, 2, 3, 7, 10, 12, 13, 15, 16, 17] H=123692638165299 dR=3; [1, 2, 4, 9, 10, 13, 14, 15, 16, 18] H=123655358727411 dR=3; [1, 2, 3, 4, 5, 8, 9, 11, 14, 15] H=123607491584199 dR=2
+   (counting self-loops as neighbours: 5: ['[R]', '[1, 2, 3, 4, 5, 8, 9, 11, 14, 15]', '[1, 2, 3, 4, 6, 9, 10, 13, 14, 16]', '[1, 2, 3, 7, 10, 12, 13, 15, 16, 17]', '[1, 2, 4, 9, 10, 13, 14, 15, 16, 18]'])
+   energy: E in [514,670]; argmax ['[R]']; argmin ['[1, 2, 3, 4, 6, 9, 10, 13, 14, 16]', '[1, 2, 3, 7, 10, 12, 13, 15, 16, 17]']; 4c4-nE constant: True [-210]; 2c5+nE constant: True [50106]
+   H-max is E-max: True; H-max is E-min: False; E-min classes strict local max of H: [True, True]; H-rank of E-min: [11, 12]
+n=23: sets=2048 classes=94 self-loop classes=5  IE==DP: None  BFS distance == min-over-multipliers set distance (to R, P): True
+   session data: 94 classes, H agrees on 94; classes missing in data: []; extra in data: []
+   global max H=16011537490557279 at ['[R]'] dR=[0] dP=[4]   H(R)=16011537490557279 H(P)=15760206976379349 d(R,P)=4
+   strict local maxima (vs distinct neighbour classes): 7: [R] H=16011537490557279 dR=0 dP=4; [P] H=15760206976379349 dR=4 dP=0; [1, 2, 3, 4, 7, 8, 10, 12, 14, 17, 18] H=15737613712279183 dR=3 dP=4; [1, 2, 3, 4, 5, 6, 9, 10, 12, 15, 16] H=15730165459061293 dR=3 dP=3; [1, 2, 3, 4, 5, 8, 10, 12, 14, 16, 17] H=15721380561423969 dR=2 dP=4; [1, 2, 5, 6, 7, 8, 9, 11, 13, 19, 20] H=15720696951606199 dR=3 dP=5; [1, 2, 3, 4, 7, 8, 11, 13, 14, 17, 18] H=15715934325633987 dR=3 dP=4
+   (counting self-loops as neighbours: 6: ['[R]', '[1, 2, 3, 4, 5, 6, 9, 10, 12, 15, 16]', '[1, 2, 3, 4, 5, 8, 10, 12, 14, 16, 17]', '[P]', '[1, 2, 3, 4, 7, 8, 10, 12, 14, 17, 18]', '[1, 2, 3, 4, 7, 8, 11, 13, 14, 17, 18]'])
+   P neighbour classes: 1 -> ['[1, 2, 3, 4, 5, 6, 8, 9, 12, 13, 16]'], H = [15688038105929693], margin = ['0.995421']
+   energy: E in [671,891]; argmax ['[R]']; argmin ['[P]']; 4c4-nE constant: True [-253]; 2c5+nE constant: True [79189]
+   H-max is E-max: True; H-max is E-min: False; E-min classes strict local max of H: [True]; H-rank of E-min: [8]

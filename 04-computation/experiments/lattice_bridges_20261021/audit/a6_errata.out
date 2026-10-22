@@ -1,0 +1,9 @@
+P_7: c3 = 14, c5 = 42, c7 = 24, alpha_1 = 80, alpha_2 = 7; 1 + 2a1 + 4a2 = 189; H (DP) = 189
+cyclic triples = dev{0,1,3} u dev{0,1,5}: True; disjoint: True; both Fano planes: True, True; distinct underlying triples: 14 (so no triple carries both orientations)
+out-neighbourhood lines {1,2,4}+t form dev{0,1,3}: True
+oriented Fano plane (P_7 orientation): |Aut| = 21; unoriented Fano plane: |Aut| = 168 (= |GL(3,2)| = 168)
+labelled regular 5-tournaments: 24; their H values: [15]  (HYP-1363 says 13)
+Coxeter numbers h = |roots|/rank: {'E6': 12, 'E8': 30, 'G2': 6, 'A6': 7}
+dodecahedron (V,E,F) = (20,30,12), Euler: 2 ; icosahedron (12,30,20), Euler: 2 ; 240 = 20*12 = (vertices of dodecahedron) x (vertices of icosahedron)
+E_8 Epstein zeta at s = 6: partial sum (m <= 20000) = 4.5858909344516; 240*2^-s*zeta(s)zeta(s-3) = 4.58589093952472; 240*zeta(s)zeta(s-3) = 293.497020129582
+   continued value at s = 2 (roots of norm 2): 240*2^-2*zeta(2)*zeta(-1) = -8.22467033424 = -5 pi^2/6 = -8.22467033424; residue at the only pole s = 4: 16.2348485057; zeta(s)zeta(s-3) at s = 1 is finite (zeta(-2) = 0): limit = -0.03044845706

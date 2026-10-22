@@ -1,0 +1,8 @@
+[8,4,4] from P_7: 14 weight-4 words; S(3,4,8): True; derived at point 7 (the parity point): 7 blocks, Fano 2-(7,3,1): True
+[24,12,8] from P_23: 759 octads; S(5,8,24): True
+derived at 1 point: 253 blocks of size 7 on 23 points, S(4,7,23): True
+derived at 2 points: 77 blocks of size 6 on 22 points, S(3,6,22): True
+derived at 3 points: 21 blocks of size 5 on 21 points; 2-(21,5,1): True; 5 lines per point: True; any two lines meet in one point: True  -> a projective plane of order 4 (unique: PG(2,4))
+hyperovals (6-arcs) of the derived plane: 168 (PG(2,4) has 168)
+S(4,5,9) admissible: False ; S(6,9,25) admissible: False ; S(3,4,8), S(3,6,22), S(4,7,23), S(5,8,24) admissible: [True, True, True, True]
+orders n <= 199 for which a 3-(n^2+n+2, n+2, 1) extension passes divisibility ((n+2) | 12): [1, 2, 4, 10]

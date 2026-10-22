@@ -1,0 +1,8 @@
+primes q = 3 mod 4 below 20000: 1136 (including q = 3); with 7 <= q < 20000: 1135
+Dirichlet formula A_q - B_q = (2 - (2/q)) h(-q) with h from reduced forms, flip distance = B_q = d(a in QR) < d(a in NQR) = A_q: mismatches = []
+B_q <= 1 at (q, B, h): [(7, 1, 1), (11, 1, 1)]
+class number one among these primes (q < 20000): [3, 7, 11, 19, 43, 67, 163]
+Heegner primes B_q: [(7, 1), (11, 1), (19, 3), (43, 9), (67, 15), (163, 39)]
+q > 11 attaining the maximal possible B_q = (m-3)/2 [(2-(2/q))h = 3]: (q, h, (2/q)) = [(19, 1, -1), (23, 3, 1), (31, 3, 1), (43, 1, -1), (67, 1, -1), (163, 1, -1)]
+  -> 'least correlated with R_q' is shared by the h = 1 primes q = 3 mod 8 and the h = 3 primes q = 7 mod 8
+arc overlap check q=23: common arcs 161 of 253 = 0.636364; formula 1/2 + h/(q-1) with h=3: 0.636364

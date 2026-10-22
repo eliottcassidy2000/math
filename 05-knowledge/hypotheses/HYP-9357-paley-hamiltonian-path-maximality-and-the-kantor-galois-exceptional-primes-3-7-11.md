@@ -30,6 +30,13 @@ status: >
   P_11, R_11, P_19, P_23. Method B (S51, repunits_hyp9357_20261021/hyp9357_rotational_vs_paley.py): Karp inclusion-exclusion
   modulo three 58-bit primes. H(P_27) and H(P_31) also equal |Aut| times S50's orbit counts (1053 * 397365570454381227,
   465 * 42745655163116955307561).
+  MECHANISM (2026-10-22, THM-4751 (2), (6), (7); HYP-9362):
+  - P_q is B_q = ((q-1)/2 - (2-(2/q))h(-q))/2 flips from R_q, and B_q <= 1 iff q in {3, 7, 11}.
+  - The circulant H-maximum is the additive-energy minimum for n <= 11 and R_n for 13 <= n <= 25. The complete n = 25
+    table is new, and R_n is a strict local maximum to n = 31.
+  - In H = sum 2^k alpha_k the flat class wins alpha_1, alpha_2 and R_n wins every alpha_k with k >= 3. At n = 13 R_n
+    overtakes only through alpha_4, i.e. once four disjoint triangles fit. This is a tournament reason for the
+    cut-off at 11, with the small-numbers caveat.
 session: mac-mini-2026-10-21-fanopsp
 source: 05-knowledge/results/tournament_pseudoprimes_camion_fermat_20261021.md
 related:

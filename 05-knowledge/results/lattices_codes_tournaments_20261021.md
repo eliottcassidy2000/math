@@ -25,11 +25,12 @@
 
 | item | status | where |
 |---|---|---|
-| the circulant `H`-landscape has a rotational peak and a Paley peak; their flip distance is `B_q = ((q−1)/2 − (2 − (2/q))h(−q))/2` | PROVED (distance) + FINITE-EXACT (peaks, `n ≤ 23`, `q ≤ 31`) | THM-4751, §1 |
-| the `H`-maximal circulant is within one flip of rotational, and this would give HYP-9357's circulant "only if" | FINITE-EXACT (`n ≤ 23`) + conjecture | HYP-9362 (a), THM-4751 (4) |
+| the circulant `H`-landscape has a rotational peak and a Paley peak; their flip distance is `B_q = ((q−1)/2 − (2 − (2/q))h(−q))/2` | PROVED (distance) + FINITE-EXACT (peaks, `n ≤ 25`, `q ≤ 31`) | THM-4751, §1 |
+| the `H`-maximal circulant is within one flip of rotational, and this would give HYP-9357's circulant "only if" | FINITE-EXACT (`n ≤ 25`; `R_n` a strict local maximum to `n = 31`) + conjecture; refines HYP-480 | HYP-9362 (a), THM-4751 (4) |
+| the two peaks are the two extremes of additive energy; the flat class wins single cycles and pairs, the progression every packing of `≥ 3` disjoint odd cycles; HYP-474 fails at `p = 19, 23` | PROVED (extremes; prior art THM-140, THM-162, Savchenko) + FINITE-EXACT (packing law) | §13, THM-4751 (6)–(7), MISTAKE-660 |
 | `P_7`, `P_23`, `P_47` generate the extended QR codes `[8,4,4]`, `[24,12,8]`, `[48,24,12]`, hence `E_8` (theta `E_4`) and `N(A_1^24)` | KNOWN; proved in the repo as THM-481 (Kim–Solé 2008); re-checked here | §2 |
-| `{7, 21}` are the point counts of the only extendable projective planes; one extension gives 8, three give 24, and the extensions are the Steiner systems behind `E_8` and Leech | DICTIONARY (new reading; the "Baer tower" reading HYP-1348 was refuted) | HYP-9362 (d), §3 |
-| `{3, 7, 11}` = norm-Euclidean `Q(√−q)` = `H`-maximal Paley = Kantor = Galois | DICTIONARY with a small-numbers caveat; only the one-flip lens has a tournament mechanism | §4 |
+| `{7, 21}` are the point counts of the only extendable projective planes; one extension gives 8, three give 24, and the extensions are the Steiner systems behind `E_8` and Leech | NUMEROLOGY (MISTAKE-559); the chains are old (S80, S88, S100, the 2026-05-02 reflection), new is only the Hughes/Lam selection; the "Baer tower" reading HYP-1348 was refuted | HYP-9362 (d), §3 |
+| `{3, 7, 11}` = norm-Euclidean `Q(√−q)` = `H`-maximal Paley = Kantor = Galois | NUMEROLOGY, except the one-flip lens (PROVED) and the packing threshold (FINITE-EXACT, §13) | §4 |
 | scores and `II_{25,1}` | PROVED identity (Session27, credited to S52) + my cross-checks | §5 |
 | `E_8` roots via `A_8`: `240 = 72 + 168` | numerical DICTIONARY | §6 |
 | modular forms; 1729; Smale | Session27 and S52 lanes; pointers and cross-checks only | §7–§9 |
@@ -48,14 +49,14 @@
 
 **Distance between the peaks.**
 * It is `B_q = |NQR ∩ [1, m]|`, minimised over multipliers.
-* By Dirichlet's class number formula, `B_q = (m − (2 − (2/q))h(−q))/2`. Checked for all 1135 primes `q ≡ 3 (mod 4)` below 20000 (`class_number_distance.out`).
+* By Dirichlet's class number formula, `B_q = (m − (2 − (2/q))h(−q))/2`. Checked for all 1135 primes `q ≡ 3 (mod 4)` with `7 ≤ q < 20000` (`class_number_distance.out`; the audit confirms by counting reduced forms).
 * The overlap of the two tournaments is `1/2 + (2 − (2/q))h(−q)/(q − 1)` of all arcs.
-* Prior art: the half-row imbalance (`ogg_triangular_chowla_20260927.md`) and its linear-order companion THM-4666 (ranking excess `p·h(−p)`).
+* Prior art: the half-row imbalance (`ogg_triangular_chowla_20260927.md`) and its linear-order companion THM-4666 (ranking excess `p·h(−p)`); the orientation-cube program THM-134/135/137/139/140 and HYP-480 (Paley against interval, March 2026; THM-139 already notes that no single flip improves `P_19`).
 
 **Which peak wins.**
-* `B_q ≤ 1` exactly for `q = 3, 7, 11`. These are exactly the `H`-maximal Paley primes.
-* The Heegner primes 19, 43, 67, 163 have `h = 1`, so for their size they are as far from `R_q` as possible: `B_q = 3, 9, 15, 39`.
-* On odd `n ≤ 23` the global maximum is always `R_n` or a one-flip neighbour of it. If that holds for every `n` (HYP-9362 (a)), Paley is never the circulant maximum for `q ≥ 19`.
+* `B_q ≤ 1` exactly for `q = 3, 7, 11`. For `q ≤ 31` these are exactly the primes at which `P_q` is the circulant `H`-maximum (FINITE-EXACT; conjecturally all `q`, HYP-9357).
+* The Heegner primes 19, 43, 67, 163 have `h = 1`, so for their size they are as far from `R_q` as possible: `B_q = 3, 9, 15, 39` (so are `q = 23, 31`, where `h = 3` and `(2/q) = 1`).
+* On odd `n ≤ 25` the global maximum is always `R_n` or a one-flip neighbour of it. If that holds for every `n` (HYP-9362 (a)), Paley is never the circulant maximum for `q ≥ 19`.
 
 **Reading.** The class number measures how far the Paley peak sits from the rotational peak. Paley wins only when the two peaks touch.
 
@@ -85,7 +86,7 @@ Re-checked here (`paley_codes.out`):
 * The two attached 96-dimensional preprints also work over it (§11).
 * The `[72,36,16]` code remains the open "72 problem". The `P_71` gauge gives `d = 12`.
 
-## 3. {7, 21} → {8, 24}: extendable projective planes (DICTIONARY; HYP-9362 (d))
+## 3. {7, 21} → {8, 24}: extendable projective planes (NUMEROLOGY; HYP-9362 (d))
 
 **Facts.**
 * A projective plane of order `n` extends to a 3-design only if `n ∈ {2, 4, 10}` (Hughes 1965). There is no plane of order 10 (Lam–Thiel–Swiercz 1989).
@@ -93,33 +94,34 @@ Re-checked here (`paley_codes.out`):
 * `PG(2,2)` extends once: `PG(2,2) → S(3,4,8)` (`7 + 1 = 8`). `S(3,4,8)` is the set of 14 weight-4 words of `[8,4,4]`, whose Construction A is `E_8`. It extends no further, since there is no `S(4,5,9)`.
 * `PG(2,4)` extends three times: `PG(2,4) → S(3,6,22) → S(4,7,23) → S(5,8,24)` (`21 + 3 = 24`). The 759 octads of `S(5,8,24)` are the weight-8 Golay words from which Leech is built (Witt; `M_21 = PSL(3,4)` inside `M_24`).
 
-**The tournament side.** `H = 7` and `H = 21` are the only values never taken by `H` (THM-029, THM-079, THM-1370).
+**The tournament side.** `H = 7` and `H = 21` are never taken by `H` (THM-029, THM-079, `01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md`, PROVED). That no other odd value is missed is a CONJECTURE (FINITE-EXACT below 80,265, THM-4749).
 
 **Status.**
-* No map is known, so this is a DICTIONARY.
+* No map is known, so by MISTAKE-559 this is NUMEROLOGY.
+* The chains themselves are old: opus S80 (`fano_hamming_forbidden.out`), opus S88 (`golay_baer_bridge_88.py`, "7 → 21 → 24"), kind-pasteur S100 (`projective_geometry_deep.out`, "PG(2,4) + 3 = 24"), the 2026-05-02 reflection, and concurrently opus S52 (also NUMEROLOGY). New here is only the Hughes/Lam selection.
 * Session27 noted that the proposal "still owes a map", and that the QR length rule `q → q + 1` pairs 7 with 8 but 23, not 21, with 24. The extendable-plane reading is the pairing that does send 21 to 24. It is selected by a classification theorem (Hughes, Lam), not by fitting.
 * Unlike the refuted "Baer tower" `|PG(2, 2^(2^k))|` of HYP-1348 (273 is attained), this reading predicts nothing at `q = 16`.
 * The unaudited reflection `sphere-packing-eight-twentyfour.md` had both chains with several errors. They are listed in its errata banner (MISTAKE-659).
 
 **What would make it mathematics.** A map from the OCF obstruction behind `H ∉ {7, 21}` to the extendability of `PG(2,2)` and `PG(2,4)`. Both point counts are `Φ_3` values: `7 = Φ_3(2)` and `21 = Φ_3(4)`. But `13 = Φ_3(3)` and `31 = Φ_3(5)` are attained, and `43 = Φ_3(6)` too (HYP-1317). So the selection must use extendability or the prime-power order, not `Φ_3` alone.
 
-## 4. Heegner and Euclidean (DICTIONARY; THM-4751 (5))
+## 4. Heegner and Euclidean (KNOWN facts; alignment NUMEROLOGY; THM-4751 (5))
 
 **The spectral ring.** The nontrivial eigenvalues of `P_q`, `(−1 ± √−q)/2`, generate `O_K` with `K = Q(√−q)`.
 * It is a PID exactly for the Heegner primes `3, 7, 11, 19, 43, 67, 163`.
 * It is norm-Euclidean exactly for `3, 7, 11`. The deep hole of `Z[(1 + √−q)/2] ⊂ C` has squared distance `(q + 1)²/(16q)`, which is `< 1` exactly then: a covering-radius condition in two dimensions.
 
 **Characterizations of `{3, 7, 11}` among primes `q ≡ 3 (mod 4)`:**
-1. `P_q` is `H`-maximal (FINITE-EXACT; HYP-9357);
+1. `P_q` is the circulant `H`-maximum (FINITE-EXACT for `q ≤ 31`; among all tournaments known only for `q ≤ 11`, A038375; conjecturally exactly `{3, 7, 11}`, HYP-9357);
 2. the Paley design is 2-transitive (Kantor);
 3. Galois' exceptional primes;
 4. `P_q` is within one flip of `R_q` (PROVED; THM-4751 (2));
 5. `Q(√−q)` is norm-Euclidean (classical);
 6. `H(P_q)/|Aut P_q| − 1` is a cube: 0, 8, 1728. It is not a cube at 19, 23, 27, 31 (`numerology_checks.out`; S52's 1729 lane has the same test).
 
-Only (4) comes with a tournament mechanism, and it is conditional on HYP-9362 (a).
+Only (4) and the packing threshold of §13 come with a tournament mechanism. (4) is conditional on HYP-9362 (a). The threshold says the flat class wins while the OCF stops at `α_3`, i.e. `n ≤ 11`, and is FINITE-EXACT.
 
-**Caution.** No prime `≡ 3 (mod 4)` lies between 11 and 19, so any threshold in `(11, 19)` gives this set. The repo has already rejected "Heegner numbers as tournament constants" and the LRC Heegner claims (MISTAKE-225/229/230/233, MISTAKE-576). Session27 confirms that the owner's nine-value Heegner list, including 1, is the correct radicand list.
+**Caution.** No prime `≡ 3 (mod 4)` lies between 11 and 19, so any threshold in `(11, 19)` gives this set. The repo has rejected Heegner-based LRC and chromatic-number claims (MISTAKE-229, MISTAKE-230, MISTAKE-568, MISTAKE-576); the historical entries HYP-1202/HYP-1220 ("Heegner numbers are tournament constants") remain CONFIRMED numerology. Session27 confirms that the owner's nine-value Heegner list, including 1, is the correct radicand list.
 
 ## 5. Score vectors, permutohedra and II_{25,1} (Session27 + S52 lane; my cross-checks)
 
@@ -191,10 +193,11 @@ So `240 = 72 + 168` and `248 = 80 + 84 + 84` (`su(9) ⊕ Λ³ ⊕ Λ⁶`).
 **Primary.** Session27, `session27-smale/ADDENDUM.md`, checked against Milnor 2011; MISTAKE-563 corrected the old `bP` script.
 * The odd parts of `|bP_(4m)|` contain `2^(2m−1) − 1 = 7, 31, 127, 511, 2047, …`.
 
-**Against THM-4749.** Every one of these with exponent `≤ 40` is either forbidden (7) or rarer than its Fermat partner `2^(2m−1) + 1`:
+**Against THM-4749.** Every one of these with exponent `≤ 40` is forbidden (7) or has degree at most that of its Fermat partner `2^(2m−1) + 1`:
 * by degree;
 * at `k = 11` by leading coefficient;
 * at `k = 23, 29` the degrees tie and the coefficients are not yet decided.
+* For odd `k ≥ 17` other than 21 and 25 the degrees are conditional on `V`-membership of large prime factors (THM-4749 status).
 
 **Why.** The tournament reason is the triangle: `3 = Φ_2(2) = H(C_3)` divides `2^k + 1` for odd `k`.
 * The even exponent `63 = 2^6 − 1` is rare as well (`Φ_3(2) = 7` divides it), though it is not a `bP` factor.
@@ -209,15 +212,15 @@ So the `bP` list is the odd-exponent half of a pattern governed by the cyclotomi
 * **THM-4748.** For `k ≥ 5`, every tournament with `H = 2^k − 1` needs at least three reversed arcs from transitive, while `2^k + 1` needs one. The bound is attained by the Fibonacci fan.
 * **THM-4749.** The number of tournament classes with `H = h` grows like `n^w(h)`, where `w(h)` is the longest factorization of `h` into strong values. Strong values are all odd numbers `≥ 3` except 7 and 21, FINITE-EXACT below 80,265. Read through `2^k ± 1 = ∏ Φ_d(2)`:
   * `2^k − 1` is the rarer value for `k = 5, 6, 7, 9, 13, 15`;
-  * it is the commoner value for `k = 4, 8, 12, 16` (Fermat products);
-  * ties at `k = 10, 11, 14` are decided by the leading coefficients.
+  * it is the commoner value for `k = 4, 8, 16` (Fermat products) and `k = 12` (`4095 = 3²·5·7·13`, the 7 absorbed into 35);
+  * the degrees tie at `k = 10, 11, 14`; THM-4749 decides `k = 10` (1023 commoner) and `k = 11` (2047 rarer); `k = 14` is not computed.
 * **HYP-9359.** The arithmetic bias comes from divisibility by 3 (the triangle) and from order-3 automorphisms.
 * **Catalogs of earlier repunit work:**
   * mine, about 45 threads (MSG-2399, previous session);
   * Session27's measure-aware recovery (`session27-repunits/REPORT.md`, with bounded remote search).
 
   The unifying reading is that a base-`b` repunit truncates the fixed point `−1/(b−1)` of `x ↦ bx + 1`.
-* **Lattice side (ANALOGY only).** `2^k − 1 = |PG(k−1, 2)|` is the length of the Hamming codes, the perfect binary codes besides the Golay code of length 23.
+* **Lattice side (ANALOGY only).** `2^k − 1 = |PG(k−1, 2)|` is the length of the Hamming codes, the nontrivial perfect binary codes besides the Golay code of length 23 (up to parameters; Tietäväinen, van Lint 1973).
 
 ## 11. The four attached preprints ("SRFP311T1 collaboration", 2026)
 
@@ -301,36 +304,37 @@ Then the OCF gives `H(T) = I(Ω(T), 2)`, and `Ω(T)` is the disjoint union of th
 
 ## 12. What would turn the dictionaries into mathematics
 
-* Prove the one-flip conjecture HYP-9362 (a), or at least that `R_n` is always a strict local maximum. That alone does not exclude Paley, but it is the first step. The complete class table at `n = 25` is in §13.
+* Prove the packing law HYP-9362 (e), or the one-flip conjecture HYP-9362 (a), or at least that `R_n` is always a strict local maximum. That alone does not exclude Paley, but it is the first step. The complete class table at `n = 25` is in §13.
 * Find a map from the OCF obstruction behind `H ∉ {7, 21}` to the extendability of `PG(2,2)` and `PG(2,4)` (§3).
 * Find a tournament statistic whose value at `P_q` is the covering radius of `O_(Q(√−q))` (§4).
 * Compute the tournament version of the rank-43 threshold (§11, bridge paragraph): within a parametrized family of strong tournaments, how many coefficients of `log I(Ω, x)` determine the strong-component multiset?
 
-## 13. The two peaks are the two extremes of additive energy (new; FINITE-EXACT to n = 25, part PROVED)
+## 13. The two peaks are the two extremes of additive energy (extremes KNOWN/PROVED, THM-140; landscape and packings FINITE-EXACT to n = 25)
 
 **Setting.** Let `E(S) = #{(a, b, c, d) ∈ S⁴ : a + b ≡ c + d (mod n)}` be the additive energy of the connection set.
-* **Exact relations.** On circulant tournaments, `c_4 − nE/4` and `c_5 + nE/2` are constant. They follow from `tr A^k = k c_k` for `k = 4, 5` (THM-118), the normality of `A`, and `Σ_j |λ_j|⁴ = nE(S)`. Checked over every class table (`spectral_peaks.out`).
+* **Exact relations.** On circulant tournaments, `c_4 = n(E − m)/4` and `2c_5 + nE` is constant. They follow from `tr A^k = k c_k` for `k = 4, 5` (THM-118), the normality of `A`, and `Σ_j |λ_j|⁴ = nE(S)`. Checked over every class table (`spectral_peaks.out`).
 * So maximising `E` is the same as maximising the 4-cycle count `c_4` and the fourth spectral moment, and the same as minimising `c_5`.
-* **Prior art.** The Paley end is THM-162 (kind-pasteur S60: the flat spectrum minimises `Σ|λ|⁴`). On cycle counts of regular tournaments see Savchenko, cited in THM-161/162.
+* **Prior art.** The relations are the circulant case of Savchenko's identity `c_5 + 2c_4 = n(n²−1)(n²−9)/160` for every regular tournament (J. Graph Theory 83 (2016) 44–77; Prop. A.1 of arXiv:2403.19555); new is `c_4 = n(E − m)/4` on circulants. The energy extremes and the two-mechanism reading are THM-140 (kind-pasteur S58: interval maximum and Paley minimum of `E`, `E`–`H` sign reversal) and THM-137; the Paley end is THM-162 and HYP-464.
 
 **The two extremes.**
-* **Maximum.** For prime `p`, Lev's rearrangement theorem (Duke Math. J. 107 (2001)) says arithmetic progressions maximise the number of solutions of linear equations with variables in sets of given size. So `R_p` maximises `E` among all half-sets. Its uniqueness up to multipliers is FINITE-EXACT: `n ≤ 25`, composite `n` included.
-* **Minimum.** For prime `q ≡ 3 (mod 4)`, `P_q` minimises `E`, by Cauchy–Schwarz with equality exactly for a flat spectrum.
+* **Maximum.** For prime `p`, Lev's rearrangement theorem (Duke Math. J. 107 (2001)) says arithmetic progressions maximise the number of solutions of linear equations with variables in sets of given size. So `R_p` maximises `E` among all half-sets. It is the unique maximiser up to multipliers for every odd `n ≥ 5`: `RLT_n = R_n` uniquely maximises `c_4` among `n`-tournaments (arXiv:2403.19555 §1), `c_4 = n(E − m)/4`, and `Aut(R_n) = Z_n` makes isomorphic circulants multiplier-equivalent (FINITE-EXACT check `n ≤ 25`).
+* **Minimum.** For prime `q ≡ 3 (mod 4)`, `P_q` minimises `E` uniquely, by Cauchy–Schwarz with equality exactly for a flat spectrum, and a flat spectrum forces `S` to be `QR`-invariant.
 * **Consequence.** The class-number formula of §1 says that **the two energy extremes are `B_q` flips apart**.
 
-**The landscape against energy** (complete class tables; `energy_peaks_table.out`; `n = 25` new here, `circ25_landscape.out`):
+**The landscape against energy** (complete class tables; `energy_peaks_table.out`; `n = 25` new here, `circ25_landscape.out`). Local maxima are counted in the hypercube convention, where a flip landing in the same multiplier class is a tie; THM-4751 (3) lists the five extra classes of the loopless class-graph convention.
 
 | `n` | global `H`-maximum | energy minimum |
 |---|---|---|
-| 7, 9, 11 | the energy minimum (`P_7`, `Z_9{1,2,3,5}`, `P_11`) | the only strict local maximum |
-| 13, 15 | `R_n` = the energy maximum | not a local maximum |
+| 7, 9, 11 | the energy minimum (`P_7`, `Z_9{1,2,3,5}`, `P_11`) | the only strict local maximum (at `n = 11` the loopless class graph also has `Z_11{1,2,3,4,6}`) |
+| 13, 15 | `R_n` = the energy maximum | not a local maximum (at `n = 15` one of the four energy minimisers, `Z_15{1,2,5,7,9,11,12}`, is strict in the loopless class graph) |
 | 17, 19, 21, 23, 25 | `R_n` | a strict local maximum of `H`: a second peak, `P_19` and `P_23` at prime `q ≡ 3 (mod 4)`, `H`-rank 3, 3, 11–12, 8, 23 |
 
 At `n = 25` (208 classes) the global maximum is `R_25`, `H = 2,418,453,569,285,650,675`. There are 6 strict local maxima, and the energy minimum `Z_25{1,2,3,4,5,7,9,10,13,14,17,19}` is the highest of the others.
 
 **Rotational local-maximum tests** (`rot_local_max.py`; inclusion–exclusion, exact):
-* `R_27` is a strict local maximum; its best neighbour flips `{13, 14}`, ratio 0.99613.
-* `R_29`: in progress or see `rot29_local_max.out`.
+* `R_27`, `R_29` and `R_31` are strict local maxima. This completes the partial test pre-registered in HYP-9362 (a).
+* In every case, including `n = 25`, the best neighbour flips the last class `{m, m + 1}`. Its ratio is 0.99585, 0.99613, 0.99641, 0.99667 at `n = 25, 27, 29, 31`, so `n(1 − ratio) ≈ 0.104` (`rot27/29/31_local_max.out`).
+* The rotational peak's margin therefore decays like `1/n`. The Paley peak's margin decays at least quadratically: `(1 − margin)q²` falls from 3.63 to 1.72 (HYP-9362 (b)).
 
 **Reading.** `H` on circulants trades off two kinds of structure:
 * the pseudorandom end: flat spectrum, the most 5-cycles, minimum energy, Paley;
@@ -354,6 +358,13 @@ Split of `ΔH = H(R_n) − H(flat)` (`alpha_decomp_9_13.out`, `alpha_decomp_17_1
 | 19 | `P_19` | −15,235,138,144 | +26,752,215,992 | +11,517,077,848 |
 | 21 | `Z_21{1,2,3,7,10,12,13,15,16,17}` | −831,973,445,620 | +2,686,870,223,200 | +1,854,896,777,580 |
 
+**Champions of each packing number** (all classes, `n ≤ 19`; `alpha_all.out`):
+* For `n = 17, 19` the energy minimum is the unique maximiser of `α_1` and `α_2`, and `R_n` is the unique maximiser of every `α_k` with `3 ≤ k ≤ ⌊n/3⌋`.
+* For `n = 13, 15`, `R_n` is the unique maximiser of `α_3` and `α_4`, and an energy minimiser maximises `α_1`.
+* At `n = 15` the triangle factors (`α_5`) are maximised elsewhere.
+
+So the two peaks are the two champions: of few-cycle counts (pseudorandom) and of many-cycle packings (progression).
+
 **The crossover.**
 * At `n = 13` the rotational class wins only through `α_4`, since `+81,120 < 90,636` without it.
 * So `R_n` overtakes the flat class exactly when four disjoint triangles fit, at `n ≥ 12`.
@@ -361,6 +372,9 @@ Split of `ΔH = H(R_n) − H(flat)` (`alpha_decomp_9_13.out`, `alpha_decomp_17_1
 
 **Consequences.**
 * This gives characterization (1) of `{3, 7, 11}` in §4 a tournament mechanism: they are the primes `q ≡ 3 (mod 4)` with `deg I(Ω(P_q), x) = ⌊q/3⌋ ≤ 3`. It is FINITE-EXACT, and the small-numbers caveat still applies, since 12 lies in `(11, 19)`.
-* **Caveat to THM-161.** THM-161 found that Paley maximises every `c_k` among circulants at `p = 11`. That extrapolation fails at `p = 19`: `c_19(R_19) = 34,841,356,485 > c_19(P_19) = 34,358,763,933`, so the rotational tournament also has more Hamiltonian cycles. Savchenko's theorem is about doubly regular tournaments, and `R_19` is not one, so there is no conflict.
+* **Corrections to the March reading (MISTAKE-660).**
+  * HYP-474 ("Paley maximises the number of `k`-cycles at every odd `k`", CONFIRMED at `p = 7, 11`) fails at `k = p`: `c_19(R_19) = 34,841,356,485 > c_19(P_19) = 34,358,763,933`, and at `n = 23` `R_23` has the most Hamiltonian cycles of any circulant class (the `C` column of `circ_19.out`, `circ_23.out`; `alpha_decomp_17_19.out`).
+  * THM-137's "the interval's cycles are more independent (higher `α_2`)" holds only for `n ≤ 11`. From `n = 13` the interval has fewer pairs and wins through `α_k`, `k ≥ 3`.
+  * THM-161's "Paley maximizes every `c_k` (Savchenko's theorem for DRTs)" misreads Savchenko, whose results compare doubly regular tournaments with `RLT_n`.
 
 **Reading.** A pseudorandom connection set maximises the number of cycles and of pairs. An arithmetic progression lays its odd cycles side by side around the circle, so it maximises the large disjoint packings. The OCF weights a packing of size `k` by `2^k`, so for `n ≥ 13` the progression wins.

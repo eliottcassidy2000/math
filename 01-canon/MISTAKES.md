@@ -19611,14 +19611,18 @@ the ambient space.
   - "`P_7` has exactly 7 cycles, `Ω(T_7) = K_7`": it has 80 odd cycles, with `α_2 = 7`.
   - The 14 cyclic triples are called the 7 Fano lines in both orientations. They are two disjoint Fano planes.
   - The dodecahedron is said to have 20 faces. It has 12 faces and 20 vertices.
-  - The Epstein zeta function of `E_8` is called a weight-4 modular form with a pole at 1. It is `240ζ(s)ζ(s−3)`, with its pole at 4.
+  - The Epstein zeta function of `E_8` is called a weight-4 modular form with a pole at 1. For the reflection's own `Z_E8(s) = Σ_(v≠0)|v|^(−2s)` it is `2^(−s)·240ζ(s)ζ(s−3)` (roots of norm 2), with its only pole at 4; its "`s = 2`" value is the continuation `−5π²/6`.
+  - "The automorphism group of the oriented Fano plane is `G_2`": the collineations preserving `P_7`'s line orientations form a group of order 21; `G_2` is `Aut(O)`.
+  - Bott periodicity is credited to Atiyah–Hirzebruch (1961); it is Bott's (1957/59).
+  - "regular (= self-complementary)" is false as an equivalence.
+  - The "complete conflict graph `Ω(T_7)`" sentence falls with the `K_7` error.
   - The mass formula paragraph is garbled.
   - The `ζ_M` values rest on MISTAKE-028.
-  - An errata banner was added; the body is unchanged.
+  - An errata banner was added; the body is unchanged. The last five items were found by the independent audit (`05-knowledge/results/lattice_bridges_audit_20261021.md`).
 - **HYP-1363** (frozen historical index) is marked CONFIRMED (exhaustive) for "all regular tournaments on n = 5 have H = 13". The correct value is `H = 15` (`Z_5{1,2}`; `circ_small.out`). The index is not edited; this entry is the correction of record.
 - **`one_twenty_eight_atlas_balance_gold_20261014.md`** said the Leech lattice comes "likewise", meaning by Construction A, from the Golay code. Plain Construction A gives the Niemeier lattice `A_1^24`, with theta series `E_4^3 − 672Δ`. Leech needs a twist or a `Z_4` lift. Fixed in place.
 - **Checked and correct:** `04-computation/golay_baer_bridge_88.py` describes Leech as the unique even unimodular 24-dimensional lattice *with no vectors of norm 2*, which is right.
-- **Missing coordinate.** Reflections that state numbers must be audited like results. Small-number "chains" between `{7, 21}` and `{8, 24}` need a map or a DICTIONARY label (MISTAKE-559).
+- **Missing coordinate.** Reflections that state numbers must be audited like results. Small-number "chains" between `{7, 21}` and `{8, 24}` need a map; without one they are NUMEROLOGY (MISTAKE-559).
 
 ### 2026-10-22: Conflating sampled spectra, signed coordinates, and spectral interpretations
 
@@ -19629,3 +19633,18 @@ Three historical scope corrections were applied with preimage hashes:
 - The exploratory tournament L-function script called poles of a finite reciprocal product zeros and inferred RH-style functional-equation/automorphy structure without a derivation. A comment-only, AST-preserving warning now states the correct pole geometry and Paley normalization.
 
 Prevention: specify the coordinate space, extension, group action, positivity class, and exact analytic object before transferring spectral vocabulary. For continuous conclusions, either prove an identity on an open set or explicitly declare the chosen extension. For moment claims, test exact polynomial-square positivity. A familiar singularity or numerical resemblance does not supply a self-adjoint positive realization or a modular transformation law.
+
+## MISTAKE-660 (2026-10-22, found by the mac-mini-2026-10-21-fanopsp packing decomposition, THM-4751 (7)) -- the March 2026 Paley/interval mechanism extrapolated two small-p facts
+
+- **HYP-474** ("Paley maximizes total odd cycles at EVERY length for p ≡ 3 mod 4", CONFIRMED at `p = 7, 11` in `INDEX-HISTORICAL-THROUGH-2026-07-21.md`) is false at `k = p` for `p = 19, 23`.
+  - `c_19(R_19) = 34,841,356,485 > c_19(P_19) = 34,358,763,933`.
+  - At `n = 23` the rotational tournament has the most Hamiltonian cycles of any circulant class: `382,137,819,329,585`, against `374,127,973,957,716` for `P_23`.
+  - Sources: the `C` column of `04-computation/experiments/tournament_pseudoprimes_20261021/circ_19.out` and `circ_23.out`, and independently `lattice_bridges_20261021/alpha_decomp.c` at `n = 19`.
+  - At `p = 19` the odd lengths `5 ≤ k ≤ 17` still favour Paley; `c_3` is the same for every regular tournament.
+- **THM-137** (`THM-137-paley-crossover-mechanism.md`, Layer 3) says the interval's cycles are "more INDEPENDENT (higher alpha_2)". That is true at `p = 7` (and `n = 9, 11`).
+  - From `n = 13` on, the interval has fewer disjoint pairs than the energy-minimal class. For example, `α_2(R_19) = 122,111,579,294 < α_2(P_19) = 123,659,531,220`.
+  - The interval wins instead through every packing of `k ≥ 3` disjoint odd cycles. At `n = 13` it overtakes only through `α_4`.
+  - THM-137's two-effect picture survives with "independence" read as `α_k`, `k ≥ 3`.
+- **THM-161**'s "Paley maximizes EVERY c_k simultaneously (Savchenko's theorem for DRTs)" overstates Savchenko, whose results compare doubly regular tournaments with `RLT_n`. The circulant version is HYP-474 above.
+- **Missing coordinate.** A mechanism verified at `p = 7, 11` was stated for all `p`. Both `H`-peaks are visible only from `n = 13`, where packings of four disjoint cycles first fit, so small-`p` mechanism checks cannot see the crossover.
+- **Second pass.** These claims went to an independent second audit pass (`05-knowledge/results/lattice_bridges_audit_pass2_20261022.md`).

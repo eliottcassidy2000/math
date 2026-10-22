@@ -9,10 +9,14 @@
 > * §2 item 2: `P_7` does not have "exactly 7 cycles" with `Ω(T_7) = K_7`. It has 14 + 42 + 24 = 80 odd cycles, with `α_2 = 7`, so `H = 1 + 2·80 + 4·7 = 189`.
 > * The 14 cyclic triples of `P_7` are two disjoint Fano planes, `dev{0,1,3}` and `dev{0,1,5}`, each with one orientation. They are not the 7 lines in both orientations.
 > * "240 = 20 × 12 = |faces of dodecahedron| × |vertices of icosahedron|": the dodecahedron has 12 faces and 20 vertices.
-> * The Epstein zeta function of `E_8` is `Z_(E8)(s) = 240 ζ(s) ζ(s−3)`, a Dirichlet series with its pole at `s = 4`. The weight-4 modular form is the theta series `E_4`.
+> * The Epstein zeta function `Z_(E8)(s) = Σ_(v≠0)|v|^(−2s)` is `2^(−s)·240 ζ(s) ζ(s−3)` (roots of norm 2; `240ζ(s)ζ(s−3)` is `Σ(|v|²/2)^(−s)`), a Dirichlet series with its only pole at `s = 4`; the "`s = 2`" value is the continuation `−5π²/6`. The weight-4 modular form is the theta series `E_4`.
+> * §1.1: the oriented Fano plane's automorphism group has order 21; `G_2` is `Aut(O)`.
+> * §1.2: "regular (= self-complementary)" is false as an equivalence.
+> * §2.2: the "complete conflict graph `Ω(T_7)`" falls with the `K_7` error.
+> * §3.1: Bott periodicity is Bott's (1957/59), not Atiyah–Hirzebruch's.
 > * The mass-formula paragraph is garbled.
 > * The `ζ_M` values rest on the k-nacci numerology refuted in MISTAKE-028.
-> * The `{7, 21} ↔ {8, 24}` chains are DICTIONARY, not mechanism (MISTAKE-559). The current statement is THM-4751 and HYP-9362 (d).
+> * The `{7, 21} ↔ {8, 24}` chains are NUMEROLOGY, not mechanism (MISTAKE-559). The current statement is HYP-9362 (d), with Hughes/Lam as the selection principle.
 
 
 **Session:** oracle-2026-05-02

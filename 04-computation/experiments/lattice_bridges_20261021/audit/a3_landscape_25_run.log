@@ -1,0 +1,6 @@
+n=25: sets=4096 classes=208 self-loop classes=0  IE==DP: None  BFS distance == min-over-multipliers set distance (to R): True
+   global max H=2418453569285650675 at ['[R]'] dR=[0]   H(R)=2418453569285650675
+   strict local maxima (vs distinct neighbour classes): 6: [R] H=2418453569285650675 dR=0; [1, 2, 3, 4, 5, 7, 9, 10, 13, 14, 17, 19] H=2372516150525327975 dR=4; [1, 2, 3, 5, 7, 8, 11, 12, 15, 16, 19, 21] H=2371359040567241625 dR=4; [1, 2, 3, 4, 5, 7, 10, 11, 12, 16, 17, 19] H=2371352927305910875 dR=3; [1, 2, 3, 4, 5, 8, 9, 11, 13, 15, 18, 19] H=2371229691778667425 dR=4; [1, 2, 3, 4, 7, 9, 11, 12, 15, 17, 19, 20] H=2369513698630018625 dR=2
+   energy: E in [880,1156]; argmax ['[R]']; argmin ['[1, 2, 3, 4, 5, 7, 9, 10, 13, 14, 17, 19]']; 4c4-nE constant: True [-300]; 2c5+nE constant: True [120420]
+   H-max is E-max: True; H-max is E-min: False; E-min classes strict local max of H: [True]; H-rank of E-min: [23]
+python3 a3_landscape.py 25 21 25  419.38s user 1.20s system 99% cpu 7:02.43 total

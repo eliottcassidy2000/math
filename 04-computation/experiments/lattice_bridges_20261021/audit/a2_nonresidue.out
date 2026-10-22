@@ -1,0 +1,5 @@
+primes q = 3 mod 4 below 2000000: proof-step failures = []
+q with B_q <= 1 (direct count, q < 20000): [(3, 0), (7, 1), (11, 1)]
+first q = 7 mod 8 for which the bound n0 < 1/2 + sqrt(q+1/4) alone forces 2 n0 <= m: q = 23
+largest least non-residue among q = 7 mod 8 below 2000000: n0 = 43 at q = 1884791
+q = 23: n0 = 5 ; 10 is a non-residue: True ; m = 11

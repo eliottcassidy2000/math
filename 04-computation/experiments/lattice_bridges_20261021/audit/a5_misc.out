@@ -1,0 +1,40 @@
+q=7: rank of A(P_q) over GF(2) = 4 (= (q+1)/2: True); extended code [8,4,4], doubly even True, self-dual True; weight enumerator {0: 1, 4: 14, 8: 1}
+   row space [7,4,3] perfect (t=1): True; weights {0: 1, 3: 7, 4: 7, 7: 1}
+   kernel of A(P_7) over GF(2): dim 3, weights {0: 1, 4: 7}; kernel == even-weight subcode of row space: True
+q=23: rank of A(P_q) over GF(2) = 12 (= (q+1)/2: True); extended code [24,12,8], doubly even True, self-dual True; weight enumerator {0: 1, 8: 759, 12: 2576, 16: 759, 24: 1}
+   row space [23,12,7] perfect (t=3): True; weights {0: 1, 7: 253, 8: 506, 11: 1288, 12: 1288, 15: 506, 16: 253, 23: 1}
+   kernel of A(P_23) over GF(2): dim 11, weights {0: 1, 8: 506, 12: 1288, 16: 253}; kernel == even-weight subcode of row space: True
+q=31: rank of A(P_q) over GF(2) = 16 (= (q+1)/2: True); extended code [32,16,8], doubly even True, self-dual True; weight enumerator {0: 1, 8: 620, 12: 13888, 16: 36518, 20: 13888, 24: 620, 32: 1}
+q=47: rank of A(P_q) over GF(2) = 24 (= (q+1)/2: True); extended code [48,24,12], doubly even True, self-dual True; weight enumerator {0: 1, 12: 17296, 16: 535095, 20: 3995376, 24: 7681680, 28: 3995376, 32: 535095, 36: 17296, 48: 1}
+Hamming [7,4,3] and Golay [23,12,7] sphere-packing equalities: True True ; extended [24,12,8] perfect? False
+q=71: rank of A(P_71) over GF(2) = 36 (extended QR code [72,36]; d = 12 is classical, not recomputed)
+E_4 = [1, 240, 2160, 6720, 17520] ; Delta = [0, 1, -24, 252, -1472]
+E_8 = E_4^2: True ; E_10 = E_4 E_6: True ; E_14 = E_4^2 E_6: True
+E_4^3 - 672 Delta = [1, 48, 195408, 16785216] ; E_4^3 - 720 Delta = [1, 0, 196560, 16773120]
+Construction A of [8,4,4]: theta (integer powers) = [1, 240, 2160, 6720, 17520] ; only integer powers: True
+Construction A of [24,12,8]: theta = [1, 48, 195408, 16785216] ; equals E_4^3 - 672 Delta: True
+THM-489 identity W_g24 = W_e8^3 - 42 P_24: True
+P_24 under Construction A = [0, 16, -384, 4032, -23552] ; 16 Delta = [0, 16, -384, 4032, -23552]
+Leech minimal vectors 4*C(24,2) + 759*2^7 + 24*2^12 = 196560
+theta_Leech / Delta = q^-1 * [1, 24, 196884, 21493760]  (j - 720 = q^-1 + 24 + 196884 q + ...)
+E_8 via A_8: |roots A_8| = 72; class [3] norm-2 vectors = 84 (all in A_8+[3]: True); class [6] = 84 (in A_8+[6]: True); norms 2: True; total 240
+   brute-force norm-2 vectors in A_8+[3] with |c_i| <= 2: 84
+   rank of A_8 + Z[3] = 8; determinant of its Gram matrix = 1 (E_8 is unimodular; det A_8 = 9.00000000000000)
+248 = 80 + 84 + 84: True ; dim sl_9 = 80 ; C(9,3) = 84 ; 240 = 72 + 168: True
+labelled score vectors n=1..8: [1, 2, 7, 38, 291, 2932, 36961, 561948] ; labelled forests: [1, 2, 7, 38, 291, 2932, 36961, 561948] ; equal: True
+c_3 = (n^3-n)/24 - |s - sbar|^2/2 on 560 random tournaments n = 3..30: True
+c_3 identity symbolic: C(n,3) - (sum s^2 - C(n,2))/2 with sum s^2 = |s-sbar|^2 + n(n-1)^2/4 gives n*(n - 1)*(n + 1)/24
+N < 10^6 with 1^2 + ... + N^2 a square: [1, 24]
+P_7: H = 189; reversing the cyclic triangle (0, 1, 3): H = 171, scores unchanged: True
+q=3: H/|Aut| = 1 (exact: True), minus 1 is a cube: True
+q=7: H/|Aut| = 9 (exact: True), minus 1 is a cube: True
+q=11: H/|Aut| = 1729 (exact: True), minus 1 is a cube: True
+q=19: H/|Aut| = 6857869865 (exact: True), minus 1 is a cube: False
+q=23: H/|Aut| = 62293308207033 (exact: True), minus 1 is a cube: False
+q=27: H/|Aut| = 397365570454381227 (exact: True), minus 1 is a cube: False
+q=31: H/|Aut| = 42745655163116955307561 (exact: True), minus 1 is a cube: False
+|M_12| = 95040 = 1728*55: True ; 95040 + 55 = 95095 ; 1729 = 7*13*19 Korselt: True
+|bP_4m| m=2..6: [28, 992, 8128, 261632, 1448424448] ; divisible by 2^(2m-1)-1: [True, True, True, True, True]
+k: w(2^k-1), w(2^k+1), all prime factors < 80265 -> 2:1,1 3:-1,2 4:2,1 5:1,2 6:1,2 7:1,2 8:3,1 9:1,4 10:3,3 11:2,2 12:4,2 13:1,2 14:3,3 15:2,4 16:4,1 17:1,2* 18:5,4 19:1,2* 20:6,2 21:3,4 22:4,3 23:2,2* 24:6,3 25:3,4 26:3,4 27:2,6* 28:6,2* 29:3,3* 30:6,6 31:1,2* 32:5,2* 33:3,5* 34:3,4* 35:4,5* 36:9,4 37:2,3* 38:3,4* 39:3,4* 40:8,2*
+odd k <= 40 with tie: [11, 23, 29] ; odd k with Mersenne side larger: [] ; certified k (<= 40): [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20, 21, 22, 24, 25, 26, 30, 36]
+rarer (w_- < w_+) for k <= 16: [3, 5, 6, 7, 9, 13, 15] ; commoner: [4, 8, 12, 16] ; ties: [2, 10, 11, 14]

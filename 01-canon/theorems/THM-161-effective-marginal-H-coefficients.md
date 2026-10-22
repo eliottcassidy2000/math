@@ -3,6 +3,8 @@
 **Status:** VERIFIED (p=7, p=11)
 **Session:** kind-pasteur-2026-03-13-S60
 
+> **Erratum (2026-10-22, MISTAKE-660).** "Paley maximizes EVERY c_k simultaneously (Savchenko's theorem for DRTs)" overstates Savchenko, whose results compare doubly regular tournaments with `RLT_n`. Among circulants it holds at `p = 7, 11` but fails at `k = p = 19, 23` (HYP-474).
+
 ## Context
 
 For circulant tournaments on Z_p with orientation set S:

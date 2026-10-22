@@ -1,0 +1,5 @@
+q=7: classes=2, BFS d([R],[P]) = 1, min over multipliers = 1, B_q = 1, eccentricity of [R] = 1
+q=11: classes=4, BFS d([R],[P]) = 1, min over multipliers = 1, B_q = 1, eccentricity of [R] = 1
+q=19: classes=30, BFS d([R],[P]) = 3, min over multipliers = 3, B_q = 3, eccentricity of [R] = 3
+q=23: classes=94, BFS d([R],[P]) = 4, min over multipliers = 4, B_q = 4, eccentricity of [R] = 4
+q=31: classes=1096, BFS d([R],[P]) = 6, min over multipliers = 6, B_q = 6, eccentricity of [R] = 6

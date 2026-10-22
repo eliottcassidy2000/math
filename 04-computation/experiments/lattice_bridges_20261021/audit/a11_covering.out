@@ -1,0 +1,9 @@
+q=3: grid max-min |z-a|^2 = 0.333333; at z* = 0.333333; (q+1)^2/(16q) = 0.333333; norm-Euclidean (<1): True
+q=7: grid max-min |z-a|^2 = 0.568600; at z* = 0.571429; (q+1)^2/(16q) = 0.571429; norm-Euclidean (<1): True
+q=11: grid max-min |z-a|^2 = 0.815156; at z* = 0.818182; (q+1)^2/(16q) = 0.818182; norm-Euclidean (<1): True
+q=19: grid max-min |z-a|^2 = 1.314211; at z* = 1.315789; (q+1)^2/(16q) = 1.315789; norm-Euclidean (<1): False
+q=23: grid max-min |z-a|^2 = 1.555200; at z* = 1.565217; (q+1)^2/(16q) = 1.565217; norm-Euclidean (<1): False
+q=43: grid max-min |z-a|^2 = 2.797300; at z* = 2.813953; (q+1)^2/(16q) = 2.813953; norm-Euclidean (<1): False
+q=67: grid max-min |z-a|^2 = 4.300622; at z* = 4.313433; (q+1)^2/(16q) = 4.313433; norm-Euclidean (<1): False
+q=163: grid max-min |z-a|^2 = 10.300456; at z* = 10.312883; (q+1)^2/(16q) = 10.312883; norm-Euclidean (<1): False
+primes q = 3 mod 4 below 10^4 with (q+1)^2 < 16q: [3, 7, 11] ; 7 + sqrt(48) = 13.928203230275509

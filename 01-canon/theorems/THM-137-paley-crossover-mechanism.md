@@ -9,6 +9,8 @@ related_hypotheses: [HYP-474, HYP-479, HYP-480, HYP-481, HYP-482]
 tags: [paley, interval, crossover, hamiltonian-path, spectral, additive-combinatorics]
 ---
 
+> **Erratum (2026-10-22, MISTAKE-660; THM-4751 (7)).** Effect (1) relies on HYP-474, which fails at `k = p` for `p = 19, 23`: `R_19` and `R_23` have more Hamiltonian cycles than `P_19` and `P_23`. Effect (2)'s "higher alpha_2" holds only for `n <= 11`. From `n = 13` the interval has fewer disjoint pairs and wins through `alpha_k`, `k >= 3` (at `n = 13` only through `alpha_4`).
+
 ## Main Result
 
 **Theorem (THM-137):** The Paley tournament T_P maximizes H among circulant
