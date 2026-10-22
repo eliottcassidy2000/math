@@ -1,0 +1,2 @@
+checks (a)-(d) for k <= 5: True
+check (e): arc flips once per halving along shared parity vectors (2000 random pairs, Z/3^12): False

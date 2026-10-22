@@ -1,0 +1,3 @@
+outdegrees [3, 3, 3, 3, 3, 3, 3]  tournament: 1
+rho = chi_S(d)/|chi_S(i d)| = 3088/1287   Wormald 3088/1287 = 2.3993783993783993783993783993783993784
+normal matrix? A*A~ == A~*A : 1

@@ -1,0 +1,3 @@
+circ n=3 necklaces=4 H=3
+circ n=9 necklaces=60 H=3159
+circ n=27 necklaces=4971068 H=417382500592116023859
