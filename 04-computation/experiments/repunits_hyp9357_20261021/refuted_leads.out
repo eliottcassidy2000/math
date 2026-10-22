@@ -1,0 +1,33 @@
+(a) ear increments of strong classes
+     order 5 -> 6: v_2(Delta H) shares {1: 0.511, 2: 0.267, 3: 0.122, 4: 0.067, 5: 0.033}
+  ok   order 5: valuations are geometric (no inheritance of the 2-adic residue)
+     order 6 -> 7: v_2(Delta H) shares {1: 0.525, 2: 0.246, 3: 0.118, 4: 0.054, 5: 0.024, 6: 0.033}
+  ok   order 6: valuations are geometric (no inheritance of the 2-adic residue)
+     order 7 -> 8: v_2(Delta H) shares {1: 0.506, 2: 0.253, 3: 0.119, 4: 0.061, 5: 0.03, 6: 0.031}
+  ok   order 7: valuations are geometric (no inheritance of the 2-adic residue)
+(b) I(Omega, -1) on strong classes
+     order 5: I(Omega,-1) ranges over [-6, -3], zero 0 times, H = I(Omega,-1) (mod 3) for all 6 classes
+  ok   order 5: I(Omega,-1) is never 0
+     order 6: I(Omega,-1) ranges over [-18, -4], zero 0 times, H = I(Omega,-1) (mod 3) for all 35 classes
+  ok   order 6: I(Omega,-1) is never 0
+     order 7: I(Omega,-1) ranges over [-72, -5], zero 0 times, H = I(Omega,-1) (mod 3) for all 353 classes
+  ok   order 7: I(Omega,-1) is never 0
+     order 8: I(Omega,-1) ranges over [-162, -3], zero 0 times, H = I(Omega,-1) (mod 3) for all 6008 classes
+  ok   order 8: I(Omega,-1) is never 0
+(c) H mod 8 by least feedback arc number (strong classes, complete census)
+     order 6: fa 1: share of 7 mod 8 = 0.000 (1); fa 2: share of 7 mod 8 = 0.462 (13); fa 3: share of 7 mod 8 = 0.118 (17); fa 4: share of 7 mod 8 = 0.000 (4)
+     order 7: fa 1: share of 7 mod 8 = 0.000 (1); fa 2: share of 7 mod 8 = 0.174 (23); fa 3: share of 7 mod 8 = 0.173 (104); fa 4: share of 7 mod 8 = 0.150 (147); fa 5: share of 7 mod 8 = 0.313 (67); fa 6: share of 7 mod 8 = 0.556 (9); fa 7: share of 7 mod 8 = 0.000 (2)
+     order 8: fa 1: share of 7 mod 8 = 0.000 (1); fa 2: share of 7 mod 8 = 0.114 (35); fa 3: share of 7 mod 8 = 0.192 (313); fa 4: share of 7 mod 8 = 0.221 (1121); fa 5: share of 7 mod 8 = 0.251 (2007); fa 6: share of 7 mod 8 = 0.244 (1779); fa 7: share of 7 mod 8 = 0.259 (686); fa 8: share of 7 mod 8 = 0.121 (66)
+     order 9: fa 1: share of 7 mod 8 = 0.000 (1); fa 2: share of 7 mod 8 = 0.082 (49); fa 3: share of 7 mod 8 = 0.332 (695); fa 4: share of 7 mod 8 = 0.210 (4406); fa 5: share of 7 mod 8 = 0.248 (16082); fa 6: share of 7 mod 8 = 0.247 (36582); fa 7: share of 7 mod 8 = 0.255 (52058); fa 8: share of 7 mod 8 = 0.248 (44300); fa 9: share of 7 mod 8 = 0.244 (19986); fa 10: share of 7 mod 8 = 0.261 (3748); fa 11: share of 7 mod 8 = 0.339 (218); fa 12: share of 7 mod 8 = 0.375 (8)
+  ok   feedback-arc shares listed
+(d) the one-apex toy model
+     r around 2^4: 13:2 14:0 15:1 16:4 17:0 18:2 19:2
+     r around 2^5: 29:0 30:4 31:2 32:2 33:0 34:2 35:0
+     r around 2^6: 61:2 62:0 63:3 64:4 65:0 66:0 67:0
+     r around 2^7: 125:0 126:2 127:2 128:4 129:2 130:0 131:0
+     r around 2^8: 253:2 254:0 255:2 256:5 257:0 258:2 259:0
+     r around 2^9: 509:4 510:4 511:2 512:4 513:0 514:0 515:2
+     r around 2^10: 1021:2 1022:4 1023:2 1024:4 1025:2 1026:0 1027:3
+  ok   one-apex word multiplicities are tiny (at most 8 per value for 16 <= r < 1100): no rarity signal at this level
+
+ALL CHECKS PASSED  (11s)
