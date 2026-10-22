@@ -1,0 +1,34 @@
+{
+  "2": {
+    "count": 2,
+    "H_distinct": [
+      1
+    ],
+    "residual_min": -0.9135802469135799,
+    "residual_max": -0.9135802469135799,
+    "residual_mean": -0.9135802469135799,
+    "residual_sd": 0.0
+  },
+  "4": {
+    "count": 24,
+    "H_distinct": [
+      5
+    ],
+    "residual_min": -1.2897594529226082,
+    "residual_max": -1.2897594529226042,
+    "residual_mean": -1.2897594529226066,
+    "residual_sd": 1.6849562393979368e-15
+  },
+  "6": {
+    "count": 2640,
+    "H_distinct": [
+      41,
+      43,
+      45
+    ],
+    "residual_min": -0.9470879445810307,
+    "residual_max": -0.7320854132737649,
+    "residual_mean": -0.8198988217994082,
+    "residual_sd": 0.08364719882009142
+  }
+}

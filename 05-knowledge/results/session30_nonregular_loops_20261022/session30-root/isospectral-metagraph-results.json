@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "universe": "two explicit six-vertex witnesses; all720 permutations for each",
+  "witnesses": [
+    {
+      "bits": "000110001000000",
+      "H": 41,
+      "Aut": 1,
+      "anti": 1,
+      "h": 41,
+      "b": 9,
+      "deficit": 32,
+      "fundamental_black_degree": 16,
+      "charpoly": [
+        1,
+        0,
+        15,
+        0,
+        15,
+        0,
+        1
+      ],
+      "rho": "66637/27755"
+    },
+    {
+      "bits": "000110011000000",
+      "H": 45,
+      "Aut": 3,
+      "anti": 3,
+      "h": 15,
+      "b": 9,
+      "deficit": 6,
+      "fundamental_black_degree": 3,
+      "charpoly": [
+        1,
+        0,
+        15,
+        0,
+        15,
+        0,
+        1
+      ],
+      "rho": "66637/27755"
+    }
+  ]
+}
