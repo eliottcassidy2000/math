@@ -1,0 +1,58 @@
+R_7 (n = 7, vertex-transitive hint True): engine 22s, m-scaling 1s
+   X_1(0.8) engine -1.9390333792054e-01 closed form -1.9390333792054e-01;  X_2(0.8) engine +2.2284647970671e-01 old engine +2.2284647970671e-01
+   L= 2: [z^L] X_3 engine -2.3001246670870e-12   blow-up scaling (exact) +0.0000000000000e+00   diff -2.3e-12
+   L= 4: [z^L] X_3 engine -1.2098881132664e-12   blow-up scaling (exact) +0.0000000000000e+00   diff -1.2e-12
+   L= 6: [z^L] X_3 engine -1.4208365562031e-01   blow-up scaling (exact) -1.4208365561968e-01   diff -6.3e-13
+   L= 8: [z^L] X_3 engine -6.3796547357000e-01   blow-up scaling (exact) -6.3796547356969e-01   diff -3.2e-13
+   L=10: [z^L] X_3 engine -9.7903892457510e-01   blow-up scaling (exact) -9.7903892457495e-01   diff -1.6e-13
+   L=12: [z^L] X_3 engine -1.1335988409277e+00   blow-up scaling (exact) -1.1335988409276e+00   diff -5.4e-14
+P_7 (n = 7, vertex-transitive hint True): engine 22s, m-scaling 1s
+   X_1(0.8) engine -1.5808611355351e-01 closed form -1.5808611355351e-01;  X_2(0.8) engine +1.3671986402967e-01 old engine +1.3671986402967e-01
+   L= 2: [z^L] X_3 engine -4.1822152276349e-17   blow-up scaling (exact) +0.0000000000000e+00   diff -4.2e-17
+   L= 4: [z^L] X_3 engine -3.3310633258358e-17   blow-up scaling (exact) +0.0000000000000e+00   diff -3.3e-17
+   L= 6: [z^L] X_3 engine -1.4208365561968e-01   blow-up scaling (exact) -1.4208365561968e-01   diff -2.8e-17
+   L= 8: [z^L] X_3 engine -4.9233130510489e-01   blow-up scaling (exact) -4.9233130510489e-01   diff +3.9e-16
+   L=10: [z^L] X_3 engine -3.7855530485788e-01   blow-up scaling (exact) -3.7855530485788e-01   diff +2.8e-15
+   L=12: [z^L] X_3 engine -2.2300479855492e-01   blow-up scaling (exact) -2.2300479855493e-01   diff +2.0e-14
+N_7 (non-circulant) (n = 7, vertex-transitive hint False): engine 23s, m-scaling 2s
+   X_1(0.8) engine -1.7234121481859e-01 closed form -1.7234121481859e-01;  X_2(0.8) engine +1.6829175950831e-01 old engine +1.6829175950831e-01
+   L= 2: [z^L] X_3 engine -6.1049081189349e-14   blow-up scaling (exact) +0.0000000000000e+00   diff -6.1e-14
+   L= 4: [z^L] X_3 engine -2.4710556430931e-14   blow-up scaling (exact) +0.0000000000000e+00   diff -2.5e-14
+   L= 6: [z^L] X_3 engine -1.4208365561969e-01   blow-up scaling (exact) -1.4208365561968e-01   diff -9.8e-15
+   L= 8: [z^L] X_3 engine -5.5681089425290e-01   blow-up scaling (exact) -5.5681089425290e-01   diff -3.4e-15
+   L=10: [z^L] X_3 engine -6.2575470461839e-01   blow-up scaling (exact) -6.2575470461839e-01   diff +4.4e-16
+   L=12: [z^L] X_3 engine -5.4231749135712e-01   blow-up scaling (exact) -5.4231749135714e-01   diff +1.5e-14
+R_9 (n = 9, vertex-transitive hint True): engine 27s, m-scaling 3s, partitions 38s
+   X_1(0.8) engine -1.6364048104490e-01 closed form -1.6364048104490e-01;  X_2(0.8) engine +1.4949223729325e-01 old engine +1.4949223729325e-01
+   L= 2: [z^L] X_3 engine -1.3714708006814e-12   blow-up scaling (exact) +0.0000000000000e+00   diff -1.4e-12
+   L= 4: [z^L] X_3 engine -7.3033108401637e-13   blow-up scaling (exact) +0.0000000000000e+00   diff -7.3e-13
+   L= 6: [z^L] X_3 engine -7.2888617927866e-02   blow-up scaling (exact) -7.2888617927484e-02   diff -3.8e-13   set partitions (exact) -7.2888617927484e-02 (== m-scaling: True)
+   L= 8: [z^L] X_3 engine -3.4270429099602e-01   blow-up scaling (exact) -3.4270429099582e-01   diff -2.0e-13   set partitions (exact) -3.4270429099582e-01 (== m-scaling: True)
+   L=10: [z^L] X_3 engine -5.2161676973166e-01   blow-up scaling (exact) -5.2161676973156e-01   diff -9.9e-14
+N_9a (gentourng class 2) (n = 9, vertex-transitive hint False): engine 25s, m-scaling 3s, partitions 38s
+   X_1(0.8) engine -1.4421827112170e-01 closed form -1.4421827112170e-01;  X_2(0.8) engine +1.1034257554351e-01 old engine +1.1034257554351e-01
+   L= 2: [z^L] X_3 engine -2.5952678888774e-14   blow-up scaling (exact) +0.0000000000000e+00   diff -2.6e-14
+   L= 4: [z^L] X_3 engine -1.0498930959569e-14   blow-up scaling (exact) +0.0000000000000e+00   diff -1.0e-14
+   L= 6: [z^L] X_3 engine -7.2888617927488e-02   blow-up scaling (exact) -7.2888617927484e-02   diff -4.1e-15   set partitions (exact) -7.2888617927484e-02 (== m-scaling: True)
+   L= 8: [z^L] X_3 engine -2.9652265500083e-01   blow-up scaling (exact) -2.9652265500083e-01   diff -1.5e-15   set partitions (exact) -2.9652265500083e-01 (== m-scaling: True)
+   L=10: [z^L] X_3 engine -3.1347094465793e-01   blow-up scaling (exact) -3.1347094465793e-01   diff +3.3e-16
+N_9b (gentourng class 14) (n = 9, vertex-transitive hint False): engine 24s, m-scaling 3s, partitions 38s
+   X_1(0.8) engine -1.3729104402799e-01 closed form -1.3729104402799e-01;  X_2(0.8) engine +9.7544617344808e-02 old engine +9.7544617344808e-02
+   L= 2: [z^L] X_3 engine -9.9853836985651e-16   blow-up scaling (exact) +0.0000000000000e+00   diff -1.0e-15
+   L= 4: [z^L] X_3 engine -3.2580036464316e-16   blow-up scaling (exact) +0.0000000000000e+00   diff -3.3e-16
+   L= 6: [z^L] X_3 engine -7.2888617927484e-02   blow-up scaling (exact) -7.2888617927484e-02   diff -5.6e-17   set partitions (exact) -7.2888617927484e-02 (== m-scaling: True)
+   L= 8: [z^L] X_3 engine -2.7787277920657e-01   blow-up scaling (exact) -2.7787277920657e-01   diff +0.0e+00   set partitions (exact) -2.7787277920657e-01 (== m-scaling: True)
+   L=10: [z^L] X_3 engine -2.3609495091348e-01   blow-up scaling (exact) -2.3609495091348e-01   diff +4.2e-16
+P_11 (n = 11, vertex-transitive hint True): engine 14s, m-scaling 3s
+   X_1(0.8) engine -1.1063684239659e-01 closed form -1.1063684239659e-01;  X_2(0.8) engine +5.8738972797948e-02 old engine +5.8738972797949e-02
+   L= 2: [z^L] X_3 engine -5.4231003136740e-19   blow-up scaling (exact) +0.0000000000000e+00   diff -5.4e-19
+   L= 4: [z^L] X_3 engine +8.9789723708842e-18   blow-up scaling (exact) +0.0000000000000e+00   diff +9.0e-18
+   L= 6: [z^L] X_3 engine -4.2098465703411e-02   blow-up scaling (exact) -4.2098465703411e-02   diff -2.8e-17
+   L= 8: [z^L] X_3 engine -1.4923972289256e-01   blow-up scaling (exact) -1.4923972289256e-01   diff +1.7e-16
+N_11 (3-cycle-reversal chain, seed 5) (n = 11, vertex-transitive hint False): engine 12s, m-scaling 3s
+   X_1(0.8) engine -1.1684186949500e-01 closed form -1.1684186949500e-01;  X_2(0.8) engine +6.7542111375126e-02 old engine +6.7542111375126e-02
+   L= 2: [z^L] X_3 engine -3.6131812693739e-16   blow-up scaling (exact) +0.0000000000000e+00   diff -3.6e-16
+   L= 4: [z^L] X_3 engine -1.1841786401555e-16   blow-up scaling (exact) +0.0000000000000e+00   diff -1.2e-16
+   L= 6: [z^L] X_3 engine -4.2098465703411e-02   blow-up scaling (exact) -4.2098465703411e-02   diff -4.2e-17
+   L= 8: [z^L] X_3 engine -1.6329077590212e-01   blow-up scaling (exact) -1.6329077590212e-01   diff -2.8e-17
+max |engine - exact| over all cases and orders: 2.3e-12
