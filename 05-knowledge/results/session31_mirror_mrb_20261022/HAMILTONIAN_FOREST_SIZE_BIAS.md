@@ -1,6 +1,6 @@
 # Exact Hamiltonian-size-biased forest law for random tournaments
 
-Status: PROVED, with independent proof and finite-exact audits in mirror/HAMILTONIAN_FOREST_AUDIT.md. Later addenda on asymptotics and merged-node mass are undergoing their own check. No novelty assertion against the literature. This is an ensemble identity, not reconstruction of a tournament or its metagraph from a forest statistic.
+Status: PROVED, with independent proof and finite-exact audits in mirror/HAMILTONIAN_FOREST_AUDIT.md. Asymptotics, merged-node masses and the full-polynomial hostile are independently audited in bridge-audit/HAMILTONIAN_ADDENDA_AUDIT.md. No novelty assertion against the literature. This is an ensemble identity, not reconstruction of a tournament or its metagraph from a forest statistic.
 
 ## Objects and target
 

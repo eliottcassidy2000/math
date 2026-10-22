@@ -1,0 +1,457 @@
+{
+  "status": "PASS",
+  "universe": "Fixed directed path 0->1->...->n-1; all other arcs fair; blue is reflection-fixed",
+  "moments": [
+    {
+      "n": 2,
+      "D": 0,
+      "fixed_edges": 0,
+      "orbits": 0,
+      "all_tilings": 1,
+      "blue_tilings": 1,
+      "blue_energy_sum": 2,
+      "blue_energy_mean": "2",
+      "all_energy_mean_formula": 2,
+      "all_energy_sum_enumerated": 2
+    },
+    {
+      "n": 3,
+      "D": 1,
+      "fixed_edges": 1,
+      "orbits": 1,
+      "all_tilings": 2,
+      "blue_tilings": 2,
+      "blue_energy_sum": 8,
+      "blue_energy_mean": "4",
+      "all_energy_mean_formula": 4,
+      "all_energy_sum_enumerated": 8,
+      "blue_lines": 1,
+      "literal_black_lines": 0,
+      "fundamental_black_edges": 0,
+      "klein_orbits_enumerated": {
+        "2": 1,
+        "4": 0
+      }
+    },
+    {
+      "n": 4,
+      "D": 3,
+      "fixed_edges": 1,
+      "orbits": 2,
+      "all_tilings": 8,
+      "blue_tilings": 4,
+      "blue_energy_sum": 32,
+      "blue_energy_mean": "8",
+      "all_energy_mean_formula": 8,
+      "all_energy_sum_enumerated": 64,
+      "black_energy_mean": "8",
+      "blue_lines": 2,
+      "literal_black_lines": 2,
+      "fundamental_black_edges": 1,
+      "klein_orbits_enumerated": {
+        "2": 2,
+        "4": 1
+      }
+    },
+    {
+      "n": 5,
+      "D": 6,
+      "fixed_edges": 2,
+      "orbits": 4,
+      "all_tilings": 64,
+      "blue_tilings": 16,
+      "blue_energy_sum": 192,
+      "blue_energy_mean": "12",
+      "all_energy_mean_formula": 14,
+      "all_energy_sum_enumerated": 896,
+      "black_energy_mean": "44/3",
+      "blue_lines": 8,
+      "literal_black_lines": 24,
+      "fundamental_black_edges": 12,
+      "klein_orbits_enumerated": {
+        "2": 8,
+        "4": 12
+      }
+    },
+    {
+      "n": 6,
+      "D": 10,
+      "fixed_edges": 2,
+      "orbits": 6,
+      "all_tilings": 1024,
+      "blue_tilings": 64,
+      "blue_energy_sum": 1408,
+      "blue_energy_mean": "22",
+      "all_energy_mean_formula": 22,
+      "all_energy_sum_enumerated": 22528,
+      "black_energy_mean": "22",
+      "blue_lines": 32,
+      "literal_black_lines": 480,
+      "fundamental_black_edges": 240,
+      "klein_orbits_enumerated": {
+        "2": 32,
+        "4": 240
+      }
+    },
+    {
+      "n": 7,
+      "D": 15,
+      "fixed_edges": 3,
+      "orbits": 9,
+      "all_tilings": 32768,
+      "blue_tilings": 512,
+      "blue_energy_sum": 14336,
+      "blue_energy_mean": "28",
+      "all_energy_mean_formula": 32,
+      "all_energy_sum_enumerated": 1048576,
+      "black_energy_mean": "2020/63",
+      "blue_lines": 256,
+      "literal_black_lines": 16128,
+      "fundamental_black_edges": 8064,
+      "klein_orbits_enumerated": {
+        "2": 256,
+        "4": 8064
+      }
+    },
+    {
+      "n": 8,
+      "D": 21,
+      "fixed_edges": 3,
+      "orbits": 12,
+      "all_tilings": 2097152,
+      "blue_tilings": 4096,
+      "blue_energy_sum": 180224,
+      "blue_energy_mean": "44",
+      "all_energy_mean_formula": 44,
+      "blue_lines": 2048,
+      "literal_black_lines": 1046528,
+      "fundamental_black_edges": 523264
+    },
+    {
+      "n": 9,
+      "D": 28,
+      "fixed_edges": 4,
+      "orbits": 16,
+      "all_tilings": 268435456,
+      "blue_tilings": 65536,
+      "blue_energy_sum": 3407872,
+      "blue_energy_mean": "52",
+      "all_energy_mean_formula": 58,
+      "blue_lines": 32768,
+      "literal_black_lines": 134184960,
+      "fundamental_black_edges": 67092480
+    }
+  ],
+  "full_polynomials": [
+    {
+      "n": 2,
+      "blue_total_coefficients": [
+        1,
+        1
+      ],
+      "blue_mean_coefficients": [
+        "1",
+        "1"
+      ],
+      "all_mean_coefficients": [
+        "1",
+        "1"
+      ],
+      "blue_minus_all_coefficients": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "n": 3,
+      "blue_total_coefficients": [
+        2,
+        6,
+        5
+      ],
+      "blue_mean_coefficients": [
+        "1",
+        "3",
+        "5/2"
+      ],
+      "all_mean_coefficients": [
+        "1",
+        "3",
+        "5/2"
+      ],
+      "blue_minus_all_coefficients": [
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "n": 4,
+      "blue_total_coefficients": [
+        4,
+        24,
+        50,
+        36
+      ],
+      "blue_mean_coefficients": [
+        "1",
+        "6",
+        "25/2",
+        "9"
+      ],
+      "all_mean_coefficients": [
+        "1",
+        "6",
+        "25/2",
+        "9"
+      ],
+      "blue_minus_all_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "n": 5,
+      "blue_total_coefficients": [
+        16,
+        160,
+        616,
+        1080,
+        728
+      ],
+      "blue_mean_coefficients": [
+        "1",
+        "10",
+        "77/2",
+        "135/2",
+        "91/2"
+      ],
+      "all_mean_coefficients": [
+        "1",
+        "10",
+        "153/4",
+        "265/4",
+        "701/16"
+      ],
+      "blue_minus_all_coefficients": [
+        "0",
+        "0",
+        "1/4",
+        "5/4",
+        "27/16"
+      ]
+    },
+    {
+      "n": 6,
+      "blue_total_coefficients": [
+        64,
+        960,
+        5824,
+        17856,
+        27680,
+        17376
+      ],
+      "blue_mean_coefficients": [
+        "1",
+        "15",
+        "91",
+        "279",
+        "865/2",
+        "543/2"
+      ],
+      "all_mean_coefficients": [
+        "1",
+        "15",
+        "91",
+        "279",
+        "6915/16",
+        "4329/16"
+      ],
+      "blue_minus_all_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "5/16",
+        "15/16"
+      ]
+    },
+    {
+      "n": 7,
+      "blue_total_coefficients": [
+        512,
+        10752,
+        94976,
+        451584,
+        1218944,
+        1771392,
+        1083168
+      ],
+      "blue_mean_coefficients": [
+        "1",
+        "21",
+        "371/2",
+        "882",
+        "9523/4",
+        "13839/4",
+        "33849/16"
+      ],
+      "all_mean_coefficients": [
+        "1",
+        "21",
+        "185",
+        "875",
+        "37491/16",
+        "53893/16",
+        "129949/64"
+      ],
+      "blue_minus_all_coefficients": [
+        "0",
+        "0",
+        "1/2",
+        "7",
+        "601/16",
+        "1463/16",
+        "5447/64"
+      ]
+    },
+    {
+      "n": 8,
+      "blue_total_coefficients": [
+        4096,
+        114688,
+        1382400,
+        9297920,
+        37692416,
+        92123136,
+        125745920,
+        73985024
+      ],
+      "blue_mean_coefficients": [
+        "1",
+        "28",
+        "675/2",
+        "2270",
+        "36809/4",
+        "22491",
+        "491195/16",
+        "72251/4"
+      ],
+      "all_mean_coefficients": [
+        "1",
+        "28",
+        "675/2",
+        "2270",
+        "73605/8",
+        "44943/2",
+        "489953/16",
+        "71841/4"
+      ],
+      "blue_minus_all_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "13/8",
+        "39/2",
+        "621/8",
+        "205/2"
+      ]
+    }
+  ],
+  "constraint_enumeration": [
+    {
+      "n": 2,
+      "all_coefficients": [
+        1,
+        1
+      ],
+      "blue_coefficients": [
+        1,
+        1
+      ],
+      "path_compatible_forests": 2,
+      "rejected_reflection_conflicts": 0
+    },
+    {
+      "n": 3,
+      "all_coefficients": [
+        2,
+        6,
+        5
+      ],
+      "blue_coefficients": [
+        2,
+        6,
+        5
+      ],
+      "path_compatible_forests": 9,
+      "rejected_reflection_conflicts": 0
+    },
+    {
+      "n": 4,
+      "all_coefficients": [
+        8,
+        48,
+        100,
+        72
+      ],
+      "blue_coefficients": [
+        4,
+        24,
+        50,
+        36
+      ],
+      "path_compatible_forests": 64,
+      "rejected_reflection_conflicts": 7
+    },
+    {
+      "n": 5,
+      "all_coefficients": [
+        64,
+        640,
+        2448,
+        4240,
+        2804
+      ],
+      "blue_coefficients": [
+        16,
+        160,
+        616,
+        1080,
+        728
+      ],
+      "path_compatible_forests": 625,
+      "rejected_reflection_conflicts": 65
+    },
+    {
+      "n": 6,
+      "all_coefficients": [
+        1024,
+        15360,
+        93184,
+        285696,
+        442560,
+        277056
+      ],
+      "blue_coefficients": [
+        64,
+        960,
+        5824,
+        17856,
+        27680,
+        17376
+      ],
+      "path_compatible_forests": 7776,
+      "rejected_reflection_conflicts": 1535
+    }
+  ],
+  "hostile_controls": [
+    "n=5: replacing correlated blue arcs by their identical marginal means fails already at t^2, difference 1/4.",
+    "n=6: equal all/blue score-energy means do not imply equal forest laws; difference (5/16)t^4(1+3t).",
+    "n=3: all presentations are blue, so conditional black expectations are undefined.",
+    "n=2: the complement involution is identity, so blue-line count B/2 must not be used."
+  ]
+}

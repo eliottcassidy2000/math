@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "input": "z=log(3)/3",
+  "certification_scope": "All enclosure endpoints are computed with exact fractions, then rounded outward. log(3) is enclosed by its positive atanh series and a proved geometric tail. Lambert W is used only as a numerical diagnostic.",
+  "log3_terms": 100,
+  "log3_lower_exact": "1163005345113490277599589008738855232921071946653900571083820784570089120155587884859469466770571330532010235559345509330104187554819919764990125373/1058613085898981511731145167908424083576066833451219330575422845310253750533250873673419624134893149606321572165315402670083727587992610763964416000",
+  "log3_upper_exact": "581502672556745138799794504369427616460535973326950285541910394470041378284457659258778102443907966730002725996124572586169306653355868754005933249/529306542949490755865572583954212041788033416725609665287711422655126875266625436836709812067446574803160786082657701335041863793996305381982208000",
+  "log3_tail_exact": "1/242245910172042784037950785420430262330222101312756019921682432",
+  "b": "2719/1000",
+  "e_upper": "4697191/1728000",
+  "b_times_z_upper_approx": "0.99570893762953008363455726639744913031217560890669",
+  "input_width_approx": "1.37601222285e-63",
+  "mirror_certificates": [
+    {
+      "N": 4,
+      "lower_decimal_certified": "2.273045112910156897222447768864809023960906570130340533719597",
+      "upper_decimal_certified": "4.457265401803100810079777159695630585769262319948186800898115",
+      "bracket_width_approx": "2.184220288892944",
+      "raw_series_degree": 7,
+      "raw_series_width_approx": "8.424883643079924",
+      "width_improvement_factor_approx": "3.857158403811923",
+      "moment_indices_used": "0..8"
+    },
+    {
+      "N": 8,
+      "lower_decimal_certified": "2.422812256557289012009166648910540439562322266591976157440065",
+      "upper_decimal_certified": "2.726046174006029102188564658594493370433009037875054164855855",
+      "bracket_width_approx": "0.3032339174487401",
+      "raw_series_degree": 15,
+      "raw_series_width_approx": "3.142582433549155",
+      "width_improvement_factor_approx": "10.36355846994059",
+      "moment_indices_used": "0..16"
+    },
+    {
+      "N": 16,
+      "lower_decimal_certified": "2.472241254221837254815394592094866570067873244425772189047244",
+      "upper_decimal_certified": "2.491794639992103503497125575542725249089245880240700062246260",
+      "bracket_width_approx": "0.01955338577026625",
+      "raw_series_degree": 31,
+      "raw_series_width_approx": "1.082689702924134",
+      "width_improvement_factor_approx": "55.37095803482386",
+      "moment_indices_used": "0..32"
+    },
+    {
+      "N": 32,
+      "lower_decimal_certified": "2.477976633245683245465645615523409160192410480566519047106391",
+      "upper_decimal_certified": "2.478177051754693951033779751478413693358136419536610145950931",
+      "bracket_width_approx": "0.0002004185090107056",
+      "raw_series_degree": 63,
+      "raw_series_width_approx": "0.3388523638018985",
+      "width_improvement_factor_approx": "1690.723903069243",
+      "moment_indices_used": "0..64"
+    },
+    {
+      "N": 64,
+      "lower_decimal_certified": "2.478052666984991255845343341327140725699400658342168358878463",
+      "upper_decimal_certified": "2.478052699570190519812004143717774468873226376897534097046115",
+      "bracket_width_approx": "3.258519926396666e-8",
+      "raw_series_degree": 127,
+      "raw_series_width_approx": "0.09055318395900805",
+      "width_improvement_factor_approx": "2778966.70894824",
+      "moment_indices_used": "0..128"
+    }
+  ],
+  "endpoint_model_diagnostics": [
+    {
+      "k": 10,
+      "M0": "7.985357455291548320899941846424479988263",
+      "kernel_error": "0.057405149482379189299",
+      "error_scaled_by_k2_over_log2k": "1.0827282661076909834",
+      "one_node_bad_kernel_over_k": "1.0511370061117778075"
+    },
+    {
+      "k": 100,
+      "M0": "95.92148855654357415338958028568897831578",
+      "kernel_error": "0.0013398854925848687774",
+      "error_scaled_by_k2_over_log2k": "0.63179519139418587973",
+      "one_node_bad_kernel_over_k": "1.0057065285003850596"
+    },
+    {
+      "k": 1000,
+      "M0": "993.6621259296745120229893911787329429446",
+      "kernel_error": "0.000026867289291263553131",
+      "error_scaled_by_k2_over_log2k": "0.56305389192524231404",
+      "one_node_bad_kernel_over_k": "1.000576559744993874"
+    },
+    {
+      "k": 10000,
+      "M0": "9991.365911929787274669847530796179929452",
+      "kernel_error": "4.614890747631005529e-7",
+      "error_scaled_by_k2_over_log2k": "0.54401398464617481072",
+      "one_node_bad_kernel_over_k": "1.0000577150076674521"
+    },
+    {
+      "k": 1000000,
+      "M0": "999986.7616908686349965437988498137838439",
+      "kernel_error": "1.010444192920207611e-10",
+      "error_scaled_by_k2_over_log2k": "0.52939331656169714013",
+      "one_node_bad_kernel_over_k": "1.0000005772150090234"
+    }
+  ],
+  "reference_value_diagnostic": "2.4780526802883024118937365168946903078681423126890991635912638100871125221670146"
+}

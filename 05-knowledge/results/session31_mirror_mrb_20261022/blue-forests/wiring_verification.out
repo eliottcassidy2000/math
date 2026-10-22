@@ -1,0 +1,245 @@
+{
+  "status": "PASS",
+  "inherited_law_checks": [
+    {
+      "n": 3,
+      "blue_presentations": 2,
+      "all_presentations": 2
+    },
+    {
+      "n": 4,
+      "blue_presentations": 4,
+      "all_presentations": 8
+    },
+    {
+      "n": 5,
+      "blue_presentations": 16,
+      "all_presentations": 64
+    },
+    {
+      "n": 6,
+      "blue_presentations": 64,
+      "all_presentations": 1024
+    },
+    {
+      "n": 7,
+      "blue_presentations": 512,
+      "all_presentations": 32768
+    },
+    {
+      "n": 8,
+      "blue_presentations": 4096
+    },
+    {
+      "n": 9,
+      "blue_presentations": 65536
+    }
+  ],
+  "zero_flux_loop_checks": [
+    {
+      "n": 4,
+      "candidates": 2,
+      "loop_endpoints": 2,
+      "first_nonloop": []
+    },
+    {
+      "n": 6,
+      "candidates": 24,
+      "loop_endpoints": 4,
+      "first_nonloop": [
+        {
+          "orbit_mask": 3,
+          "orbits": [
+            [
+              [
+                0,
+                2
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            [
+              [
+                0,
+                3
+              ],
+              [
+                2,
+                5
+              ]
+            ],
+            [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                5
+              ]
+            ],
+            [
+              [
+                0,
+                5
+              ]
+            ],
+            [
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                4
+              ]
+            ],
+            [
+              [
+                1,
+                4
+              ]
+            ]
+          ],
+          "adjacency": [
+            [
+              0,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "complement_adjacency": [
+            [
+              0,
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ]
+          ],
+          "outdegrees": [
+            3,
+            1,
+            2,
+            3,
+            4,
+            2
+          ],
+          "complement_outdegrees": [
+            3,
+            4,
+            3,
+            2,
+            1,
+            2
+          ],
+          "forest_coefficients": [
+            1,
+            15,
+            91,
+            279,
+            433,
+            273
+          ],
+          "complement_forest_coefficients": [
+            1,
+            15,
+            91,
+            279,
+            432,
+            270
+          ],
+          "energy": 22,
+          "cyclic_triangles": 6,
+          "isomorphic": false
+        }
+      ]
+    }
+  ]
+}

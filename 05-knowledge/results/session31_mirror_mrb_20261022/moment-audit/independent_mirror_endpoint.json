@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "method": "Independent exact rational atanh bounds plus monotonicity of log(r)/r on (1,e); no Lambert-W numerics and no Pad\u00e9 solver needed.",
+  "source_sha256": {
+    "verify_tree_moments.py": "2233511a719bb900aaa52989d834f04831e11d5cd7f26aad37ab8077da5f3e56",
+    "SOURCES.json": "d274f27348e3ab8dec3fb49b81eac9e06f1a754e6d0e4d2557341ed149a8ba3e",
+    "mirror_endpoint_verification.out": "500cf315f723ba0308272fad1fd588c466c3955e698d7cf13a8731813f11b2bb",
+    "mirror_endpoint_verification.json": "1e098e0f6662c3502821f32ddb077a981590699c529992b507ec6163b5347fe8",
+    "verification.out": "78ddea8c3e78cf6a7ccbb77bed430d0e7476fe4b7989918ba44d96bbc779a7bc",
+    "verification.json": "cdfdbf79b1e887f7df33273e560499d1d9f4b380b982e6d63c3060525978fa75",
+    "TREE_MOMENT_BRIDGE.md": "1f0ad801160e1b3eb76e6a9827bfd6cb262839469014a35fbc8b44579ab304ee",
+    "verify_mirror_endpoint.py": "8bf3f771480c64264cff42ee75e9aa8bd3816ecd7f3ea27bfc274795dc9bbb41"
+  },
+  "mirror_endpoint_checks": [
+    {
+      "N": 4,
+      "lower_decimal_certified": "2.273045112910156897222447768864809023960906570130340533719597",
+      "upper_decimal_certified": "4.457265401803100810079777159695630585769262319948186800898115",
+      "upper_method": "upper endpoint exceeds certified upper bound for e",
+      "independent_strict_rational_proof": "PASS"
+    },
+    {
+      "N": 8,
+      "lower_decimal_certified": "2.422812256557289012009166648910540439562322266591976157440065",
+      "upper_decimal_certified": "2.726046174006029102188564658594493370433009037875054164855855",
+      "upper_method": "upper endpoint exceeds certified upper bound for e",
+      "independent_strict_rational_proof": "PASS"
+    },
+    {
+      "N": 16,
+      "lower_decimal_certified": "2.472241254221837254815394592094866570067873244425772189047244",
+      "upper_decimal_certified": "2.491794639992103503497125575542725249089245880240700062246260",
+      "upper_method": "log(upper)/upper is greater than the certified upper bound for log(3)/3",
+      "independent_strict_rational_proof": "PASS"
+    },
+    {
+      "N": 32,
+      "lower_decimal_certified": "2.477976633245683245465645615523409160192410480566519047106391",
+      "upper_decimal_certified": "2.478177051754693951033779751478413693358136419536610145950931",
+      "upper_method": "log(upper)/upper is greater than the certified upper bound for log(3)/3",
+      "independent_strict_rational_proof": "PASS"
+    },
+    {
+      "N": 64,
+      "lower_decimal_certified": "2.478052666984991255845343341327140725699400658342168358878463",
+      "upper_decimal_certified": "2.478052699570190519812004143717774468873226376897534097046115",
+      "upper_method": "log(upper)/upper is greater than the certified upper bound for log(3)/3",
+      "independent_strict_rational_proof": "PASS"
+    }
+  ],
+  "endpoint_model_diagnostics": [
+    {
+      "p": "0.01",
+      "integral_absolute_error": "0.0",
+      "positive": true
+    },
+    {
+      "p": "0.1",
+      "integral_absolute_error": "0.0",
+      "positive": true
+    },
+    {
+      "p": "0.5",
+      "integral_absolute_error": "1.4287342e-101",
+      "positive": true
+    },
+    {
+      "p": "1.0",
+      "integral_absolute_error": "3.5718356e-102",
+      "positive": true
+    },
+    {
+      "p": "2.0",
+      "integral_absolute_error": "0.0",
+      "positive": true
+    }
+  ],
+  "endpoint_asymptotic_diagnostics": [
+    {
+      "k": "1000.0",
+      "signed_error_times_k2_over_log2k": "-0.5630538919252423140397018013286378268763"
+    },
+    {
+      "k": "1000000.0",
+      "signed_error_times_k2_over_log2k": "-0.5293933165616971401256707732584869198782"
+    },
+    {
+      "k": "1000000000000.0",
+      "signed_error_times_k2_over_log2k": "-0.5149957683574403855535826239762397213716"
+    },
+    {
+      "k": "100000000000000000000.0",
+      "signed_error_times_k2_over_log2k": "-0.5090707346754467524730459903071316333235"
+    }
+  ]
+}

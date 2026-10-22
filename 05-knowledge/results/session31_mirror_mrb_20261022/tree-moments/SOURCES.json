@@ -1,0 +1,14 @@
+{
+  "checked_date_utc": "2026-10-22",
+  "scope": "Primary-source provenance; no originality claim for the known Stieltjes or Nuttall-Bouwkamp identities.",
+  "sources": [
+    {"title":"Stieltjes and other integral representations for functions of Lambert W", "authors":"G. A. Kalugin, D. J. Jeffrey, R. M. Corless, P. B. Borwein", "year":2012, "doi":"10.1080/10652469.2011.613830", "url":"https://www.uwo.ca/apmaths/faculty/jeffrey/pdfs/StieltjesLamW.pdf", "used_for":"Theorem 2.1; boundary-density Stieltjes representation and attribution."},
+    {"title":"Bernstein, Pick, Poisson and related integral expressions for Lambert W", "authors":"G. A. Kalugin, D. J. Jeffrey, R. M. Corless", "year":2012, "doi":"10.1080/10652469.2011.640327", "url":"https://www.uwo.ca/apmaths/faculty/jeffrey/pdfs/BersteinPick.pdf", "used_for":"Theorem 2.2 and Corollary 2.4; elementary v integral and earlier Nuttall-Bouwkamp provenance."},
+    {"title":"A Conjectured Definite Integral (A. H. Nuttall)", "authors":"C. J. Bouwkamp", "year":1986, "doi":"10.1137/1028165", "url":"https://pure.tue.nl/ws/files/3257614/Metis219248.pdf", "used_for":"Original published solution, pages 568-569; deformed Hankel integral. Full text checked."},
+    {"title":"DLMF 5.9.2_5", "url":"https://dlmf.nist.gov/5.9.E2_5", "used_for":"Complex reciprocal-gamma integral for Re p>0, equivalent to the complete fractional-moment formula. Attributed by DLMF to Temme (1996), equation (3.38), page 71."},
+    {"title":"DLMF 5.5.3", "url":"https://dlmf.nist.gov/5.5.E3", "used_for":"Euler reflection identity."},
+    {"title":"DLMF 5.7", "url":"https://dlmf.nist.gov/5.7", "used_for":"Gamma expansion at the Mellin endpoint."},
+    {"title":"DLMF 6.6.2", "url":"https://dlmf.nist.gov/6.6.E2", "used_for":"Exponential-integral expansion for the continuous endpoint model."},
+    {"title":"Stieltjes, Poisson and other integral representations for functions of Lambert W", "authors":"G. A. Kalugin, D. J. Jeffrey, R. M. Corless", "year":2011, "url":"https://arxiv.org/abs/1103.5640", "used_for":"Bibliographic distinction: earlier three-author combined preprint, not identical to the four-author published Stieltjes paper."}
+  ]
+}

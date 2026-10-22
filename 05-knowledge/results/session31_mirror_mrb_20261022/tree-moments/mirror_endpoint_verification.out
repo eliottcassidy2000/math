@@ -1,0 +1,7 @@
+N= 4: exact-rational width=2.184220288892944; raw degree 7 width=8.424883643079924; factor=3.857158403811923; seconds=0.00
+N= 8: exact-rational width=0.3032339174487401; raw degree 15 width=3.142582433549155; factor=10.36355846994059; seconds=0.01
+N=16: exact-rational width=0.01955338577026625; raw degree 31 width=1.082689702924134; factor=55.37095803482386; seconds=0.06
+N=32: exact-rational width=0.0002004185090107056; raw degree 63 width=0.3388523638018985; factor=1690.723903069243; seconds=2.56
+N=64: exact-rational width=3.258519926396666e-8; raw degree 127 width=0.09055318395900805; factor=2778966.70894824; seconds=265.72
+PASS: directed rational mirror-input certificate and endpoint diagnostics.
+R(log(3)/3), numerical diagnostic: 2.4780526802883024118937365168946903078681423126890991635912638100871125221670146

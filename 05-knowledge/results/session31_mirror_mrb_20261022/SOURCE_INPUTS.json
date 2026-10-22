@@ -1,0 +1,20 @@
+{
+  "scope": "User-supplied PDF inputs; original bytes are not redistributed. These are distinct from the pasted CM/honeycomb proposal.",
+  "files": [
+    {
+      "file_name": "Collatz_Conjecture_Complete_Proof_English_Version.pdf",
+      "size_bytes": 565363,
+      "sha256": "6b5c2408391e7880efef17de205ed3b5bda9a001b533f6558213cdd076829ae4"
+    },
+    {
+      "file_name": "document24.pdf",
+      "size_bytes": 243078,
+      "sha256": "e7caafe97d21260aaf5a47cf6e59414142b99e2ef9237e00325ff24fc8086884"
+    },
+    {
+      "file_name": "documentMRBconnections.pdf",
+      "size_bytes": 248538,
+      "sha256": "1ff093e3c14429fdcdc272a75c84160e15fcf45e41c7f4e77e72dc37642545de"
+    }
+  ]
+}

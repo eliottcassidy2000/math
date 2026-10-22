@@ -1,0 +1,602 @@
+{
+  "status": "PASS",
+  "method": "Independent small exact audit. No imports from the submission.\n\nDeterminants: signed subset assignment DP on every principal minor.\nForests: undirected union-find rejection while assigning outgoing arcs.\nAll-presentation enumeration stops at n=6 (1,024 presentations).\n",
+  "cube_checks": [
+    {
+      "n": 2,
+      "all_presentations": 1,
+      "blue_presentations": 1,
+      "all_energy_sum": 2,
+      "blue_energy_sum": 2,
+      "all_polynomial_sum": [
+        1,
+        1
+      ],
+      "blue_polynomial_sum": [
+        1,
+        1
+      ],
+      "blue_minus_all": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "n": 3,
+      "all_presentations": 2,
+      "blue_presentations": 2,
+      "all_energy_sum": 8,
+      "blue_energy_sum": 8,
+      "all_polynomial_sum": [
+        2,
+        6,
+        5
+      ],
+      "blue_polynomial_sum": [
+        2,
+        6,
+        5
+      ],
+      "blue_minus_all": [
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "n": 4,
+      "all_presentations": 8,
+      "blue_presentations": 4,
+      "all_energy_sum": 64,
+      "blue_energy_sum": 32,
+      "all_polynomial_sum": [
+        8,
+        48,
+        100,
+        72
+      ],
+      "blue_polynomial_sum": [
+        4,
+        24,
+        50,
+        36
+      ],
+      "blue_minus_all": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "n": 5,
+      "all_presentations": 64,
+      "blue_presentations": 16,
+      "all_energy_sum": 896,
+      "blue_energy_sum": 192,
+      "all_polynomial_sum": [
+        64,
+        640,
+        2448,
+        4240,
+        2804
+      ],
+      "blue_polynomial_sum": [
+        16,
+        160,
+        616,
+        1080,
+        728
+      ],
+      "blue_minus_all": [
+        "0",
+        "0",
+        "1/4",
+        "5/4",
+        "27/16"
+      ]
+    },
+    {
+      "n": 6,
+      "all_presentations": 1024,
+      "blue_presentations": 64,
+      "all_energy_sum": 22528,
+      "blue_energy_sum": 1408,
+      "all_polynomial_sum": [
+        1024,
+        15360,
+        93184,
+        285696,
+        442560,
+        277056
+      ],
+      "blue_polynomial_sum": [
+        64,
+        960,
+        5824,
+        17856,
+        27680,
+        17376
+      ],
+      "blue_minus_all": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "5/16",
+        "15/16"
+      ]
+    }
+  ],
+  "orbit_gram_checks": [
+    {
+      "n": 2,
+      "blue_energy_mean": 2,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 3,
+      "blue_energy_mean": 4,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 4,
+      "blue_energy_mean": 8,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 5,
+      "blue_energy_mean": 12,
+      "center_sharing_orbits": 1
+    },
+    {
+      "n": 6,
+      "blue_energy_mean": 22,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 7,
+      "blue_energy_mean": 28,
+      "center_sharing_orbits": 2
+    },
+    {
+      "n": 8,
+      "blue_energy_mean": 44,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 9,
+      "blue_energy_mean": 52,
+      "center_sharing_orbits": 3
+    },
+    {
+      "n": 10,
+      "blue_energy_mean": 74,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 11,
+      "blue_energy_mean": 84,
+      "center_sharing_orbits": 4
+    },
+    {
+      "n": 12,
+      "blue_energy_mean": 112,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 13,
+      "blue_energy_mean": 124,
+      "center_sharing_orbits": 5
+    },
+    {
+      "n": 14,
+      "blue_energy_mean": 158,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 15,
+      "blue_energy_mean": 172,
+      "center_sharing_orbits": 6
+    },
+    {
+      "n": 16,
+      "blue_energy_mean": 212,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 17,
+      "blue_energy_mean": 228,
+      "center_sharing_orbits": 7
+    },
+    {
+      "n": 18,
+      "blue_energy_mean": 274,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 19,
+      "blue_energy_mean": 292,
+      "center_sharing_orbits": 8
+    },
+    {
+      "n": 20,
+      "blue_energy_mean": 344,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 21,
+      "blue_energy_mean": 364,
+      "center_sharing_orbits": 9
+    },
+    {
+      "n": 22,
+      "blue_energy_mean": 422,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 23,
+      "blue_energy_mean": 444,
+      "center_sharing_orbits": 10
+    },
+    {
+      "n": 24,
+      "blue_energy_mean": 508,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 25,
+      "blue_energy_mean": 532,
+      "center_sharing_orbits": 11
+    },
+    {
+      "n": 26,
+      "blue_energy_mean": 602,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 27,
+      "blue_energy_mean": 628,
+      "center_sharing_orbits": 12
+    },
+    {
+      "n": 28,
+      "blue_energy_mean": 704,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 29,
+      "blue_energy_mean": 732,
+      "center_sharing_orbits": 13
+    },
+    {
+      "n": 30,
+      "blue_energy_mean": 814,
+      "center_sharing_orbits": 0
+    },
+    {
+      "n": 31,
+      "blue_energy_mean": 844,
+      "center_sharing_orbits": 14
+    }
+  ],
+  "forest_occurrence_checks": [
+    {
+      "n": 2,
+      "path_compatible_forests": 2,
+      "blue_orbit_conflicts": 0,
+      "all_occurrence_total": [
+        1,
+        1
+      ],
+      "blue_occurrence_total": [
+        1,
+        1
+      ]
+    },
+    {
+      "n": 3,
+      "path_compatible_forests": 9,
+      "blue_orbit_conflicts": 0,
+      "all_occurrence_total": [
+        2,
+        6,
+        5
+      ],
+      "blue_occurrence_total": [
+        2,
+        6,
+        5
+      ]
+    },
+    {
+      "n": 4,
+      "path_compatible_forests": 64,
+      "blue_orbit_conflicts": 7,
+      "all_occurrence_total": [
+        8,
+        48,
+        100,
+        72
+      ],
+      "blue_occurrence_total": [
+        4,
+        24,
+        50,
+        36
+      ]
+    },
+    {
+      "n": 5,
+      "path_compatible_forests": 625,
+      "blue_orbit_conflicts": 65,
+      "all_occurrence_total": [
+        64,
+        640,
+        2448,
+        4240,
+        2804
+      ],
+      "blue_occurrence_total": [
+        16,
+        160,
+        616,
+        1080,
+        728
+      ]
+    },
+    {
+      "n": 6,
+      "path_compatible_forests": 7776,
+      "blue_orbit_conflicts": 1535,
+      "all_occurrence_total": [
+        1024,
+        15360,
+        93184,
+        285696,
+        442560,
+        277056
+      ],
+      "blue_occurrence_total": [
+        64,
+        960,
+        5824,
+        17856,
+        27680,
+        17376
+      ]
+    }
+  ],
+  "merged_inventory_checks": [
+    {
+      "n": 2,
+      "ordinary_classes": 1,
+      "distinct_converse_pairs_with_different_polynomials": 0,
+      "blue_polynomial_mass": [
+        "1",
+        "1"
+      ],
+      "fundamental_black_incidence_polynomial_mass": [
+        "0",
+        "0"
+      ]
+    },
+    {
+      "n": 3,
+      "ordinary_classes": 2,
+      "distinct_converse_pairs_with_different_polynomials": 0,
+      "blue_polynomial_mass": [
+        "2",
+        "6",
+        "5"
+      ],
+      "fundamental_black_incidence_polynomial_mass": [
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "n": 4,
+      "ordinary_classes": 4,
+      "distinct_converse_pairs_with_different_polynomials": 1,
+      "blue_polynomial_mass": [
+        "4",
+        "24",
+        "50",
+        "36"
+      ],
+      "fundamental_black_incidence_polynomial_mass": [
+        "2",
+        "12",
+        "25",
+        "18"
+      ]
+    },
+    {
+      "n": 5,
+      "ordinary_classes": 12,
+      "distinct_converse_pairs_with_different_polynomials": 2,
+      "blue_polynomial_mass": [
+        "16",
+        "160",
+        "616",
+        "1080",
+        "728"
+      ],
+      "fundamental_black_incidence_polynomial_mass": [
+        "24",
+        "240",
+        "916",
+        "1580",
+        "1038"
+      ]
+    }
+  ],
+  "zero_flux_checks": [
+    {
+      "n": 4,
+      "candidate_endpoints": 2,
+      "loop_endpoints": 2
+    },
+    {
+      "n": 6,
+      "candidate_endpoints": 24,
+      "loop_endpoints": 4
+    }
+  ],
+  "witness": {
+    "adjacency": [
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "complement_adjacency": [
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "forest_polynomial": [
+      1,
+      15,
+      91,
+      279,
+      433,
+      273
+    ],
+    "complement_forest_polynomial": [
+      1,
+      15,
+      91,
+      279,
+      432,
+      270
+    ],
+    "outdegrees": [
+      3,
+      1,
+      2,
+      3,
+      4,
+      2
+    ],
+    "complement_outdegrees": [
+      3,
+      4,
+      3,
+      2,
+      1,
+      2
+    ],
+    "energy": 22,
+    "cyclic_triangles": 6,
+    "isomorphism_count": 0,
+    "converse_isomorphism_count": 0,
+    "self_converse_permutation": [
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ]
+  },
+  "source_sha256": {
+    "BLUE_FOREST_CONSTRAINTS.md": "fe8f6cc2b8dc3497a2e09688e9fc458b3ab286ed9ad9242d20a9699912161a07",
+    "check_blue_forests.py": "c210ee8301bf367aa34f8b7e1108a9121bfa3af5bf063d2bd9dab8f86432a312",
+    "check_wiring.py": "8b26a27f01858b09892df966f7246f6d382d5b36292284173cc1d865cc3f9592",
+    "probe.py": "cef614685f96d8f579e0c055cd469e164c3dd67a587af31ff8c54b32723afc08",
+    "verification.json": "ecec547ac8d239634fc95cf52cfaf558f22f6e45c4e71d882d139602fd06ba7d",
+    "wiring_verification.json": "da16dc679c8cdbbedf7ff7dbd09978a0bbd51d0d77fe99addc4a62ad0239cb0b"
+  }
+}

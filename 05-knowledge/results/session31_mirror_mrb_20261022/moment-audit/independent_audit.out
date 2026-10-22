@@ -1,0 +1,6 @@
+PASS: independent exact replay of all submitted Gauss/Padé coefficients, bounds, and 80-place outward rounding.
+PASS: exact counterexample when bz<1 is omitted.
+PASS: original-density real/complex Mellin integration and full complex kernel reconstruction diagnostics.
+PASS: branch-bank signs, both endpoint asymptotics, Jensen/chord and negative-axis remainder diagnostics.
+Largest audited N: 32
+Largest-N exact enclosure width, diagnostic decimal: 4.590587295233499953945335e-18

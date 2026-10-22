@@ -1,0 +1,12 @@
+PASS: 40 exact Hankel determinants; 101 exact ratio identities; 100 strict log-convexity tests.
+PASS: exact rational Gauss and modified-Gauss bounds at z=1/3.
+  N= 1: width=1.16507828639283; raw degree  1 width=1.77482339069327; factor=1.52335118714491
+  N= 2: width=0.232811622129261; raw degree  3 width=0.684731246409441; factor=2.94113859156596
+  N= 4: width=0.014458087720796; raw degree  7 width=0.192536644615386; factor=13.3168817573605
+  N= 8: width=7.98975401917504e-5; raw degree 15 width=0.0338439110918232; factor=423.591402321015
+  N=12: width=4.82607869473684e-7; raw degree 23 width=0.00863596373885439; factor=17894.3699121038
+  N=16: width=2.98119472256263e-9; raw degree 31 width=0.00258932540385328; factor=868552.927541579
+  N=24: width=1.1633748968099e-13; raw degree 47 width=0.000295660386839267; factor=2541402497.59557
+  N=32: width=4.5905872952335e-18; raw degree 63 width=3.99641576232267e-5; factor=8705674253209.88
+PASS: all high-precision diagnostics (separate from exact certification).
+R(1/3), diagnostic: 1.857183860207835336456980982062766699904415331788908057379508223478812056765266204
