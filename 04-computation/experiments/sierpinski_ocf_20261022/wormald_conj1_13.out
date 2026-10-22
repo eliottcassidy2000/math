@@ -1,0 +1,5 @@
+d=13: 1495297 regular classes; max rho = 2.6404182020 (attained by 1 class(es)); rho(R_d) = 2.6404182020; R_d is the maximiser: True; second = 2.6170585197; min rho = 2.5255145931; doubly-regular bound = 2.5216263717
+
+real	1m36.251s
+user	1m35.702s
+sys	0m0.306s

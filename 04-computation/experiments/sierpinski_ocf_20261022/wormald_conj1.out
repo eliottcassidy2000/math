@@ -1,0 +1,4 @@
+d=5: 1 regular classes; max rho = 2.3157894737 (attained by 1 class(es)); rho(R_d) = 2.3157894737; R_d is the maximiser: True; second = -; min rho = 2.3157894737; doubly-regular bound = 2.2500000000
+d=7: 3 regular classes; max rho = 2.4630381803 (attained by 1 class(es)); rho(R_d) = 2.4630381803; R_d is the maximiser: True; second = 2.3993783994; min rho = 2.3703703704; doubly-regular bound = 2.3703703704
+d=9: 15 regular classes; max rho = 2.5475143943 (attained by 1 class(es)); rho(R_d) = 2.5475143943; R_d is the maximiser: True; second = 2.4981158008; min rho = 2.4537141180; doubly-regular bound = 2.4414062500
+d=11: 1223 regular classes; max rho = 2.6021808258 (attained by 1 class(es)); rho(R_d) = 2.6021808258; R_d is the maximiser: True; second = 2.5682251025; min rho = 2.4883200000; doubly-regular bound = 2.4883200000

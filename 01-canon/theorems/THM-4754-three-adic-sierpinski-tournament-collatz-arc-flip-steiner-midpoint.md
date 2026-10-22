@@ -1,9 +1,9 @@
 ---
 id: THM-4754
-title: "The 3-adic Sierpinski tournament and Collatz. (1) S_k = Cay(Z/3^k, {x : unit part of x = 1 mod 3}) is the k-fold lexicographic power C_3^[k]; on Z_3 the same rule defines S_infinity. (2) The maps x -> 3x + b (b = 0, 1, 2) are its self-similarities: they embed S_(k-1) onto the residue classes, and class b dominates class b+1. So '3x+1' is one of the three Sierpinski maps, and its fixed point -1/2 = ...111 (base 3) is the all-ones address. (3) Multiplication by a unit lambda is an automorphism if lambda = 1 mod 3 and reverses every arc if lambda = 2 mod 3; in particular halving reverses S_infinity, because 2 = -1 mod 3. (4) Collatz arc-flip law: if x = y mod 2^t (same parity vector for t steps), the arc between C^t(x) and C^t(y) in S_infinity equals the arc between x and y exactly when the number of halvings is even. (5) The pasted Steiner rule x*y = -x-y is the midpoint (x+y)/2 in F_3; the triangular reduction is binomial averaging, which collapses to the two endpoints at depth 3^k. (6) Jacobsthal split: H(T) = 3 sum_k J_k alpha_k + I(Omega(T), -1), with J_k = (2^k - (-1)^k)/3, so that each OCF weight 2^k = 3 J_k + (-1)^k is a one-step Collatz relation (J_(2m) = (4^m - 1)/3 = 1, 5, 21, 85, 341 are the predecessors of 4^m). (7) Conditional on THM-086, at the orders n = 2*3^k + 1 = 3, 7, 19, 55, 163, ... every tournament has F(T,x) = H (1 + x^(3^k) + x^(2*3^k)) mod 3."
+title: "The 3-adic Sierpinski tournament and Collatz. (1) S_k = Cay(Z/3^k, {x : unit part of x = 1 mod 3}) is the k-fold lexicographic power C_3^[k]; on Z_3 the same rule defines S_infinity. (2) The maps x -> 3x + b (b = 0, 1, 2) are its self-similarities: they embed S_(k-1) onto the residue classes, and class b dominates class b+1. So '3x+1' is one of the three Sierpinski maps, and its fixed point -1/2 = ...111 (base 3) is the all-ones address. (3) Multiplication by a unit lambda is an automorphism if lambda = 1 mod 3 and reverses every arc if lambda = 2 mod 3; in particular halving reverses S_infinity, because 2 = -1 mod 3. (4) Collatz arc-flip law: if x = y mod 2^t (same parity vector for t steps), the arc between C^t(x) and C^t(y) in S_infinity equals the arc between x and y exactly when the number of halvings is even. (5) The pasted Steiner rule x*y = -x-y is the midpoint (x+y)/2 in F_3; the triangular reduction is binomial averaging, which collapses to the two endpoints at depth 3^k. (6) Jacobsthal split: H(T) = 3 sum_k J_k alpha_k + I(Omega(T), -1), with J_k = (2^k - (-1)^k)/3, so that each OCF weight 2^k = 3 J_k + (-1)^k is a one-step Collatz relation (J_(2m) = (4^m - 1)/3 = 1, 5, 21, 85, 341 are the predecessors of 4^m). (7) By THM-4756 (which completes THM-086), at the orders n = 2*3^k + 1 = 3, 7, 19, 55, 163, ... every tournament has F(T,x) = H (1 + x^(3^k) + x^(2*3^k)) mod 3."
 status: >
-  PROVED (elementary), pre-audit: statements 1-6. Statement 7 is conditional on THM-086 (a proof sketch, verified n <= 10)
-  and is checked exhaustively here at n = 7 (all 456 classes).
+  PROVED (elementary), pre-audit: statements 1-7. Statement 7 follows from THM-4756, which proves THM-086 in full
+  (F(T,x) = H(T) A_n(x) mod 3), and is checked exhaustively here at n = 7 (all 456 classes).
   PRIOR ART: C_3^[k] as a Cayley tournament on F_3^k whose affine lines are cyclic triangles
   (05-knowledge/results/tournament_pseudoprimes_camion_fermat_20261021.md, line 253); C_3[C_3] = Z_9{1,3,4,7} (THM-4743,
   HYP-9353); |Aut(C_3^[k])| = 3^((3^k-1)/2) (Session24 PATHCOVERS); H = I(Omega,-1) mod 3 (HYP-1028..1030) and
@@ -72,9 +72,9 @@ With `J_k = (2^k − (−1)^k)/3` (0, 1, 1, 3, 5, 11, 21, 43, 85, …) we have `
 * **The mod-3 reduction.** `H ≡ I(Ω, −1) (mod 3)`, which is minus the reduced Euler characteristic of the independence complex (prior art).
 * **Checked** on every class with `n ≤ 9` (`sierp_ocf.c`, which aborts on any mismatch).
 
-## 7. The Steiner collapse in the forward-edge polynomial (conditional on THM-086)
+## 7. The Steiner collapse in the forward-edge polynomial (by THM-4756)
 
-THM-086 states `F(T, x) ≡ H·(x − 1)^(n−1) (mod 3)` for odd `n`. Its constant is `c_(n−1) ≡ F_(n−1) = H`.
+THM-4756 proves `F(T, x) ≡ H(T)·A_n(x)`, which is `H·(x − 1)^(n−1) (mod 3)` for odd `n`; this is THM-086's statement, now proved.
 * For `n − 1 = 2·3^k`, Lucas gives `(x − 1)^(2·3^k) ≡ 1 + x^(3^k) + x^(2·3^k) (mod 3)`.
 * So the numbers of permutations with `i` `T`-forward steps vanish mod 3 except at `i = 0, 3^k, 2·3^k`, where they equal `H`.
 * This holds for all 456 classes at `n = 7` (`fwd_mod3.out`).

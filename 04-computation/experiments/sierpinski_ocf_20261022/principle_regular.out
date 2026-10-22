@@ -1,0 +1,3 @@
+n=7: 3 regular classes; kappa/rho in [0.9022, 1.0125], mean 0.9399; kappa in [2.1714, 2.4000], rho in [2.3704, 2.4630]; spearman(kappa, rho) = -0.500; argmax kappa = argmax rho: False
+n=9: 15 regular classes; kappa/rho in [0.8922, 0.9644], mean 0.9331; kappa in [2.2286, 2.3683], rho in [2.4537, 2.5475]; spearman(kappa, rho) = -0.721; argmax kappa = argmax rho: False
+n=11: 1223 regular classes; kappa/rho in [0.9166, 0.9804], mean 0.9478; kappa in [2.3446, 2.4395], rho in [2.4883, 2.6022]; spearman(kappa, rho) = -0.743; argmax kappa = argmax rho: False
