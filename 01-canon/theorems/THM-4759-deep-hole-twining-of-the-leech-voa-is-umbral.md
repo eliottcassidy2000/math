@@ -22,8 +22,10 @@ status: >
     Cor. 4.6.
   - (7) Fricke twining is PROVED, given the VERIFIED uniqueness of the shallow vector, by a principal-part argument
     on X_0(e). The q-series are checked through q^3 for all eleven Fricke points (fricke_multiples.py).
-  - (8) Fricke descent is VERIFIED for all eleven cases by exact root enumeration (fricke_neighbors.py). It agrees with
-    the divisor-lattice table of THM-4758 (4). The Borel-de Siebenthal description is an observation; a proof is open.
+  - (8) Fricke descent is VERIFIED for all eleven cases by exact root enumeration (fricke_neighbors.py), and agrees
+    with the divisor-lattice table of THM-4758 (4).
+    - It is identified as the subsystem of roots of height divisible by p (height_descent.py).
+    - It is PROVED for prime e = h/p by the inclusion R(L_e) >= X_p together with the root count 24(e - 1).
   - (9) is PROVED from (3), (5) and (7).
   - The M24-point remark is VERIFIED (sampling plus exact orbit-size arithmetic). It is not a proof that the k = 0
     vectors form a single orbit.
@@ -42,6 +44,7 @@ scripts:
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_multiples.py (+ .out) (Fricke twining, eleven Fricke points)
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_neighbors.py (+ .out) (Fricke descent: neighbour root systems)
   - 04-computation/experiments/deep_holes_theta_20261022/order3_fricke_census.py (+ .out) (the order-3 Fricke point is the M24-point)
+  - 04-computation/experiments/deep_holes_theta_20261022/height_descent.py (+ .out) (Fricke descent = roots of height divisible by p)
 related:
   - THM-4758 (swap theorem and deep-hole theta identity)
   - HYP-9363 (proved in THM-4758)
@@ -184,6 +187,29 @@ All eleven cases:
 
 So p = 2 halves the D-index: D24 → D12² → D6⁴ → D3⁸ = A3⁸, and D16E8 → D8³ → D4⁶ → D2¹² = A1²⁴. The corresponding
 Fricke levels are 23, 11, 5 = 3·2^k − 1 and 15, 7, 3 = 2^k − 1.
+
+*Mechanism.* X_p is exactly the set of roots of N whose height α·ρ_N is divisible by p, i.e. the fixed-point subsystem
+of the principal element exp(2πiρ_N/p) of order p (height_descent.py, all eleven cases).
+
+Its size is 24(h/p − 1). Per component this is the exponent identity Σ_i (m_i mod p) = ℓp/2, since
+#{α : p | ht α} = 2Σ_i ⌊m_i/p⌋ and Σ_i m_i = ℓh/2:
+- D_n with n even, p = 2: all exponents are odd;
+- E6, p = 3: residues 1, 1, 2, 1, 2, 2;
+- E7, p = 2: all exponents are odd;
+- E8, p = 2, 3, 5: likewise.
+
+**Conceptual proof for prime e = h/p.** The descent lattice is L_e. Its classes S_e meet the Niemeier line in the
+classes of height ≡ 0 mod p, so R(L_e) ⊇ X_p. The Fricke twining (7) gives dim V′_1 = 24e, i.e. |R(L_e)| = 24(e − 1)
+= |X_p|. Hence R(L_e) = X_p. For composite e this is verified only.
+
+**The Coxeter numbers move by the affine maps H ↦ pH + 1.** Write H = h + 1, the order of the Fricke point in (10).
+Then h = p(h′ + 1) becomes H = pH′ + 1. Descent at the bad prime p is H ↦ (H − 1)/p:
+- p = 2, the Cunningham chain 5 → 11 → 23 → 47: A3⁸ → D6⁴ → D12² → D24;
+- p = 2, the Mersenne chain 3 → 7 → 15 → 31: A1²⁴ → D4⁶ → D8³ → D16E8 or E8³; also 9 → 19: A7²D5² → D10E7²;
+- p = 3, the Collatz map 3n + 1: A2¹² (H = 4 = 3¹ + 1) → E6⁴ (H = 13), and A8³ (H = 10 = 3² + 1) → E8³ (H = 31);
+- p = 5: A4⁶ (H = 6) → E8³ (H = 31).
+
+E8³ is reached in three ways: 31 = 2·15 + 1 = 3·10 + 1 = 5·6 + 1.
 
 This also explains the divisor lattices of THM-4758 (4). L_d is the orbifold of V_Λ by g_c^{h/d}:
 - Coxeter number d − 1 exactly when h/d is a common bad prime ∥ h (Fricke descent);

@@ -1,0 +1,12 @@
+  ok   d4^6      p=2: roots of height divisible by 2: 48 = 24(h/p - 1) = 48; type A1^24 (Fricke descent on the Leech side: A1^24)
+  ok   d6^4      p=2: roots of height divisible by 2: 96 = 24(h/p - 1) = 96; type A3^8 (Fricke descent on the Leech side: A3^8)
+  ok   e6^4      p=3: roots of height divisible by 3: 72 = 24(h/p - 1) = 72; type A2^12 (Fricke descent on the Leech side: A2^12)
+  ok   d8^3      p=2: roots of height divisible by 2: 144 = 24(h/p - 1) = 144; type D4^6 (Fricke descent on the Leech side: D4^6)
+  ok   d10e7^2   p=2: roots of height divisible by 2: 192 = 24(h/p - 1) = 192; type A7^2D5^2 (Fricke descent on the Leech side: A7^2D5^2)
+  ok   d12^2     p=2: roots of height divisible by 2: 240 = 24(h/p - 1) = 240; type D6^4 (Fricke descent on the Leech side: D6^4)
+  ok   d16e8     p=2: roots of height divisible by 2: 336 = 24(h/p - 1) = 336; type D8^3 (Fricke descent on the Leech side: D8^3)
+  ok   e8^3      p=2: roots of height divisible by 2: 336 = 24(h/p - 1) = 336; type D8^3 (Fricke descent on the Leech side: D8^3)
+  ok   e8^3      p=3: roots of height divisible by 3: 216 = 24(h/p - 1) = 216; type A8^3 (Fricke descent on the Leech side: A8^3)
+  ok   e8^3      p=5: roots of height divisible by 5: 120 = 24(h/p - 1) = 120; type A4^6 (Fricke descent on the Leech side: A4^6)
+  ok   d24       p=2: roots of height divisible by 2: 528 = 24(h/p - 1) = 528; type D12^2 (Fricke descent on the Leech side: D12^2)
+ALL CHECKS PASSED

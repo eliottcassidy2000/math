@@ -225,5 +225,43 @@ are deep holes. F o W_e has the same principal parts, because the shallow vector
 holomorphic function on X_0(e) that is odd under W_e, hence 0.
 
 So one deep hole carries both kinds of moonshine: non-Fricke through its Niemeier lattice, and Fricke through its
-bad-prime multiples. The Fricke levels that occur are 3, 4, 5, 6, 7, 9, 10, 11, 15 and 23. Level 2 is impossible: an
-order-2 point v is congruent to -v mod Lambda, so its minimal vectors come in pairs.
+bad-prime multiples. Level 2 is impossible: an order-2 point v is congruent to -v mod Lambda, so its minimal vectors
+come in pairs.
+
+**Every Niemeier lattice has a Fricke point (THM-4759 (10)).** Recall rho = (rho_N, h, h+1) in II_{25,1} = N + U. The
+second cusp z'' of type N adjacent to the Leech cusp has -z''.rho = h + 1. Its Leech-side point c'' (order h + 1)
+satisfies, for all 23 types:
+- Lambda + c'' has a unique vector of norm 2 - 2/(h+1) and exactly 24 vectors of norm 2;
+- its proper multiples are deep holes;
+- Tr_{V_Lambda}(e^{2 pi i c''(0)} q^(L_0 - 1)) = 24 + T_{(h+1)+}, the Fricke Hauptmodul. For example D24 gives
+  order 47 and q^-1 + q + 2q^2 (47A); E8^3 and D16E8 give 31A; A24 gives 26+26.
+
+On the N side, rho_N/(h+1) is the unique minimum of its coset, and the (h+1)-neighbour of N there is Lambda: a second
+holy construction. The prime values of h + 1 are 3, 5, 7, 11, 13, 17, 19, 23, 31 and 47, all supersingular. This is
+forced: the twining gives a degree-1 function on X_0(p)/W_p.
+
+**The eleven bad-prime multiples are the (h+1)-points of the descents.** For example, D4^6's 2c is A1^24's
+(h+1)-point, which is the M24-fixed point (2^24)/(3 sqrt 8).
+
+The Leech orbifold at pc is the Niemeier lattice of the **Borel-de Siebenthal descent** X_p. Its roots are the roots of
+N whose height is divisible by p (height_descent.py); it is proved for prime h/p:
+- D24 -> D12^2 -> D6^4 -> A3^8 (D-index halving);
+- D16E8 -> D8^3 -> D4^6 -> A1^24;
+- D10E7^2 -> A7^2D5^2;
+- E6^4 -> A2^12;
+- E8^3 -> D8^3, A8^3 and A4^6.
+
+**The 3n+1 the prompt asked about.** With H = h + 1, descent at p is H -> (H-1)/p, i.e. ascent H -> pH + 1:
+- p = 3 is literally 3n + 1: A2^12 (H = 4 = 3^1 + 1) -> E6^4 (13), and A8^3 (H = 10 = 3^2 + 1) -> E8^3 (31);
+- p = 2 gives the Cunningham chain 5 -> 11 -> 23 -> 47 and the Mersenne chain 3 -> 7 -> 15 -> 31;
+- p = 5 gives 6 -> 31.
+
+So 31 (E8^3) has three ascent predecessors: 31 = 2·15 + 1 = 3·10 + 1 = 5·6 + 1. The affine maps are exact; reading
+them as Collatz dynamics is ANALOGY.
+
+**27.** The 9+ Hauptmodul of the D10E7^2 Fricke point is x + 3 + 27/x with x = (eta/eta(9 tau))^3. A8^3 is the
+balanced hole with glue 27 = 24 + k.
+
+HYP-9368 conjectures that the genus-zero inner automorphisms of V_Lambda are exactly 0, the 23 deep holes and the 23
+Fricke points. A first draft that allowed only the eleven bad-prime multiples was refuted by the (h+1)-points before
+registration.
