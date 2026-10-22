@@ -82,6 +82,10 @@ A nonconstant eventually polynomial positive sequence violates eventual even-sub
 
 [Proof and survivors](session28-weil/REPORT.md).
 
+The sharper survivor is now constructive and optimal. A polynomial tail of degree d with positive leading coefficient has an indefinite self-adjoint scalar realization of dimension d+1 with exactly floor((d+1)/2) negative directions, and no such realization can use fewer. Its Gram matrix is G_ij=Delta^(i+j)P(0), and the evolution is a single Jordan block. Thus degrees1 and2 permit a one-negative-direction Lorentzian observer; degree3 already does not. The fixed-H tails for31,63,127 have minimal negative index1, whereas255 has index2. This observer metric is not an identification with the integral score lattice or with a lattice isometry.
+
+[Exact realization, minimality and provenance](session28-weil-lorentzian-addendum/ADDENDUM.md).
+
 ## 8. Explicit formulas yield a rigorous sampling map, not an RH proof
 
 For normalized Chebyshev-psi blocks at bases such as6 or10, finite zero truncations give poles at b^(1−rho). The real part of rho controls radius; height controls phase modulo2pi/log b. Aliased zeros cannot cancel in this particular finite model. Two multiplicatively independent bases determine a single matched zero uniquely, but do not solve matching or stable recovery.
@@ -104,7 +108,7 @@ The broad recovery replay inspected72,889 readable present files among114,041 tr
 
 Three narrow repairs preserve the old calculations while correcting current status: THM134's unsupported continuous Parseval-simplex claim becomes OPEN; the old n−2 reflection points to its existing THM300 refutation; a historical finite reciprocal 'L-function' script gains an AST-preserving warning that its claimed zeros are poles.
 
-[Recovery and inventory](session28-recovery/REPORT.md), [correction scope](session28-recovery/CORRECTIONS.md), [exploration record](EXPLORATION.md).
+[Recovery and inventory](session28-recovery/REPORT.md), [correction scope](session28-recovery/CORRECTIONS.md), [exploration record](EXPLORATION.md), [integration audit](AUDIT_SUMMARY.md), and [incoming-work scope](INCOMING_SCOPE.md).
 
 ## Next substantive obligations
 

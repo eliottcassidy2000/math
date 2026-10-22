@@ -28,3 +28,7 @@ The search reopened factorial-Hankel positivity and reciprocal-Gamma sign revers
 ## Not settled
 
 No proof of RH, general Weil positivity, universal Gaussian stability, globally optimal rank88 packing, complete tournament metagraph wiring, complete Hamiltonian-count spectrum, Collatz, or Hadwiger–Nelson follows. The new results identify concrete operators, maps, counterexamples, and finite missing geometric data, rather than converting shared numbers into a conjecture proof.
+
+## Final constructive survivor
+
+The positive-moment obstruction was not the end of the spectral lane. A finite-difference Hankel form realizes every positive-leading polynomial in an indefinite inner product, with a provably minimal number of negative directions. This makes the Lorentzian versus positive-Euclidean distinction explicit and connects the earlier strong-factor padding degree to an observer signature. It does not identify that abstract metric with the tournament-score lattice. The exact all-degree proof and32 rational controls are supplied separately.

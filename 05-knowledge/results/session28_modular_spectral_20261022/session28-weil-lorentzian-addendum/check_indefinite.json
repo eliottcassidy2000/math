@@ -1,0 +1,598 @@
+{
+  "arithmetic": "Exact Fraction; failures enforced under python -O",
+  "case_count": 32,
+  "cases": [
+    {
+      "degree": 1,
+      "determinant": "-1",
+      "inertia": [
+        1,
+        1,
+        0
+      ],
+      "moments_checked": 9,
+      "newton_coefficients": [
+        "1",
+        "1"
+      ],
+      "variant": 0
+    },
+    {
+      "degree": 1,
+      "determinant": "-4",
+      "inertia": [
+        1,
+        1,
+        0
+      ],
+      "moments_checked": 9,
+      "newton_coefficients": [
+        "-1",
+        "2"
+      ],
+      "variant": 1
+    },
+    {
+      "degree": 1,
+      "determinant": "-9",
+      "inertia": [
+        1,
+        1,
+        0
+      ],
+      "moments_checked": 9,
+      "newton_coefficients": [
+        "1",
+        "3"
+      ],
+      "variant": 2
+    },
+    {
+      "degree": 1,
+      "determinant": "-16",
+      "inertia": [
+        1,
+        1,
+        0
+      ],
+      "moments_checked": 9,
+      "newton_coefficients": [
+        "-1",
+        "4"
+      ],
+      "variant": 3
+    },
+    {
+      "degree": 2,
+      "determinant": "-8",
+      "inertia": [
+        2,
+        1,
+        0
+      ],
+      "moments_checked": 11,
+      "newton_coefficients": [
+        "1",
+        "-1",
+        "2"
+      ],
+      "variant": 0
+    },
+    {
+      "degree": 2,
+      "determinant": "-64",
+      "inertia": [
+        2,
+        1,
+        0
+      ],
+      "moments_checked": 11,
+      "newton_coefficients": [
+        "-1",
+        "7/2",
+        "4"
+      ],
+      "variant": 1
+    },
+    {
+      "degree": 2,
+      "determinant": "-216",
+      "inertia": [
+        2,
+        1,
+        0
+      ],
+      "moments_checked": 11,
+      "newton_coefficients": [
+        "1",
+        "5/3",
+        "6"
+      ],
+      "variant": 2
+    },
+    {
+      "degree": 2,
+      "determinant": "-512",
+      "inertia": [
+        2,
+        1,
+        0
+      ],
+      "moments_checked": 11,
+      "newton_coefficients": [
+        "-1",
+        "21/4",
+        "8"
+      ],
+      "variant": 3
+    },
+    {
+      "degree": 3,
+      "determinant": "1296",
+      "inertia": [
+        2,
+        2,
+        0
+      ],
+      "moments_checked": 13,
+      "newton_coefficients": [
+        "1",
+        "2",
+        "12",
+        "6"
+      ],
+      "variant": 0
+    },
+    {
+      "degree": 3,
+      "determinant": "20736",
+      "inertia": [
+        2,
+        2,
+        0
+      ],
+      "moments_checked": 13,
+      "newton_coefficients": [
+        "-1",
+        "3/2",
+        "8",
+        "12"
+      ],
+      "variant": 1
+    },
+    {
+      "degree": 3,
+      "determinant": "104976",
+      "inertia": [
+        2,
+        2,
+        0
+      ],
+      "moments_checked": 13,
+      "newton_coefficients": [
+        "1",
+        "10/3",
+        "64/3",
+        "18"
+      ],
+      "variant": 2
+    },
+    {
+      "degree": 3,
+      "determinant": "331776",
+      "inertia": [
+        2,
+        2,
+        0
+      ],
+      "moments_checked": 13,
+      "newton_coefficients": [
+        "-1",
+        "15/4",
+        "21",
+        "24"
+      ],
+      "variant": 3
+    },
+    {
+      "degree": 4,
+      "determinant": "7962624",
+      "inertia": [
+        3,
+        2,
+        0
+      ],
+      "moments_checked": 15,
+      "newton_coefficients": [
+        "1",
+        "-2",
+        "-4",
+        "12",
+        "24"
+      ],
+      "variant": 0
+    },
+    {
+      "degree": 4,
+      "determinant": "254803968",
+      "inertia": [
+        3,
+        2,
+        0
+      ],
+      "moments_checked": 15,
+      "newton_coefficients": [
+        "-1",
+        "4",
+        "39",
+        "87",
+        "48"
+      ],
+      "variant": 1
+    },
+    {
+      "degree": 4,
+      "determinant": "1934917632",
+      "inertia": [
+        3,
+        2,
+        0
+      ],
+      "moments_checked": 15,
+      "newton_coefficients": [
+        "1",
+        "4/3",
+        "100/3",
+        "96",
+        "72"
+      ],
+      "variant": 2
+    },
+    {
+      "degree": 4,
+      "determinant": "8153726976",
+      "inertia": [
+        3,
+        2,
+        0
+      ],
+      "moments_checked": 15,
+      "newton_coefficients": [
+        "-1",
+        "11/2",
+        "127/2",
+        "309/2",
+        "96"
+      ],
+      "variant": 3
+    },
+    {
+      "degree": 5,
+      "determinant": "-2985984000000",
+      "inertia": [
+        3,
+        3,
+        0
+      ],
+      "moments_checked": 17,
+      "newton_coefficients": [
+        "1",
+        "3",
+        "82",
+        "306",
+        "360",
+        "120"
+      ],
+      "variant": 0
+    },
+    {
+      "degree": 5,
+      "determinant": "-191102976000000",
+      "inertia": [
+        3,
+        3,
+        0
+      ],
+      "moments_checked": 17,
+      "newton_coefficients": [
+        "-1",
+        "1",
+        "29",
+        "207",
+        "408",
+        "240"
+      ],
+      "variant": 1
+    },
+    {
+      "degree": 5,
+      "determinant": "-2176782336000000",
+      "inertia": [
+        3,
+        3,
+        0
+      ],
+      "moments_checked": 17,
+      "newton_coefficients": [
+        "1",
+        "11/3",
+        "114",
+        "522",
+        "776",
+        "360"
+      ],
+      "variant": 2
+    },
+    {
+      "degree": 5,
+      "determinant": "-12230590464000000",
+      "inertia": [
+        3,
+        3,
+        0
+      ],
+      "moments_checked": 17,
+      "newton_coefficients": [
+        "-1",
+        "7/2",
+        "199/2",
+        "1077/2",
+        "912",
+        "480"
+      ],
+      "variant": 3
+    },
+    {
+      "degree": 6,
+      "determinant": "-100306130042880000000",
+      "inertia": [
+        4,
+        3,
+        0
+      ],
+      "moments_checked": 19,
+      "newton_coefficients": [
+        "1",
+        "-3",
+        "-66",
+        "-204",
+        "240",
+        "1080",
+        "720"
+      ],
+      "variant": 0
+    },
+    {
+      "degree": 6,
+      "determinant": "-12839184645488640000000",
+      "inertia": [
+        4,
+        3,
+        0
+      ],
+      "moments_checked": 19,
+      "newton_coefficients": [
+        "-1",
+        "9/2",
+        "198",
+        "1512",
+        "3888",
+        "4020",
+        "1440"
+      ],
+      "variant": 1
+    },
+    {
+      "degree": 6,
+      "determinant": "-219369506403778560000000",
+      "inertia": [
+        4,
+        3,
+        0
+      ],
+      "moments_checked": 19,
+      "newton_coefficients": [
+        "1",
+        "1",
+        "130",
+        "1292",
+        "4096",
+        "5080",
+        "2160"
+      ],
+      "variant": 2
+    },
+    {
+      "degree": 6,
+      "determinant": "-1643415634622545920000000",
+      "inertia": [
+        4,
+        3,
+        0
+      ],
+      "moments_checked": 19,
+      "newton_coefficients": [
+        "-1",
+        "23/4",
+        "295",
+        "2436",
+        "6732",
+        "7470",
+        "2880"
+      ],
+      "variant": 3
+    },
+    {
+      "degree": 7,
+      "determinant": "416336312719673760153600000000",
+      "inertia": [
+        4,
+        4,
+        0
+      ],
+      "moments_checked": 21,
+      "newton_coefficients": [
+        "1",
+        "4",
+        "432",
+        "4842",
+        "18000",
+        "28680",
+        "20160",
+        "5040"
+      ],
+      "variant": 0
+    },
+    {
+      "degree": 7,
+      "determinant": "106582096056236482599321600000000",
+      "inertia": [
+        4,
+        4,
+        0
+      ],
+      "moments_checked": 21,
+      "newton_coefficients": [
+        "-1",
+        "1/2",
+        "78",
+        "1884",
+        "11328",
+        "26820",
+        "27360",
+        "10080"
+      ],
+      "variant": 1
+    },
+    {
+      "degree": 7,
+      "determinant": "2731582547753779540367769600000000",
+      "inertia": [
+        4,
+        4,
+        0
+      ],
+      "moments_checked": 21,
+      "newton_coefficients": [
+        "1",
+        "4",
+        "508",
+        "6710",
+        "29296",
+        "55480",
+        "47520",
+        "15120"
+      ],
+      "variant": 2
+    },
+    {
+      "degree": 7,
+      "determinant": "27285016590396539545426329600000000",
+      "inertia": [
+        4,
+        4,
+        0
+      ],
+      "moments_checked": 21,
+      "newton_coefficients": [
+        "-1",
+        "13/4",
+        "396",
+        "6150",
+        "30192",
+        "62970",
+        "58680",
+        "20160"
+      ],
+      "variant": 3
+    },
+    {
+      "degree": 8,
+      "determinant": "281633758444745849464726940024832000000000",
+      "inertia": [
+        5,
+        4,
+        0
+      ],
+      "moments_checked": 23,
+      "newton_coefficients": [
+        "1",
+        "-4",
+        "-448",
+        "-5616",
+        "-16776",
+        "3480",
+        "75600",
+        "100800",
+        "40320"
+      ],
+      "variant": 0
+    },
+    {
+      "degree": 8,
+      "determinant": "144196484323709874925940193292713984000000000",
+      "inertia": [
+        5,
+        4,
+        0
+      ],
+      "moments_checked": 23,
+      "newton_coefficients": [
+        "-1",
+        "5",
+        "901",
+        "17991",
+        "113976",
+        "320820",
+        "448200",
+        "304920",
+        "80640"
+      ],
+      "variant": 1
+    },
+    {
+      "degree": 8,
+      "determinant": "5543397267467932555014220360508768256000000000",
+      "inertia": [
+        5,
+        4,
+        0
+      ],
+      "moments_checked": 23,
+      "newton_coefficients": [
+        "1",
+        "2/3",
+        "472",
+        "12660",
+        "98568",
+        "327080",
+        "526320",
+        "406560",
+        "120960"
+      ],
+      "variant": 2
+    },
+    {
+      "degree": 8,
+      "determinant": "73828599973739455962081378965869559808000000000",
+      "inertia": [
+        5,
+        4,
+        0
+      ],
+      "moments_checked": 23,
+      "newton_coefficients": [
+        "-1",
+        "6",
+        "2509/2",
+        "54153/2",
+        "182988",
+        "545970",
+        "805860",
+        "578340",
+        "161280"
+      ],
+      "variant": 3
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Session28: modular realizations, prime densities, and Lorentzian score geometry
 
-Status: audited research packet,2026-10-22; publication verification in progress. This is not yet the session close-out.
+Status: completed research packet,2026-10-22. Proofs, finite computations, cited inputs and open obligations are distinguished throughout.
 
 Start with the [synthesis](SYNTHESIS.md) and [exploration record](EXPLORATION.md).
 
@@ -13,6 +13,8 @@ Start with the [synthesis](SYNTHESIS.md) and [exploration record](EXPLORATION.md
 - [Weil, spectral and representation audit](session28-weil/REPORT.md)
 - [Log-scale explicit formula](session28-weil/Log_Scale_Explicit_Formula.md)
 - [Prior-work recovery](session28-recovery/REPORT.md)
+- [Sharp indefinite polynomial realization](session28-weil-lorentzian-addendum/ADDENDUM.md)
+- [Integration audit](AUDIT_SUMMARY.md) and [incoming-work scope](INCOMING_SCOPE.md)
 - [Historical corrections](session28-recovery/CORRECTIONS.md)
 
 Independent audits and exact scripts accompany the reports. Source existence/minimum claims, finite computations, proved deductions and remaining questions are labelled separately. No RH, Collatz, globally optimal rank88 packing or complete tournament-metagraph classification is claimed.
