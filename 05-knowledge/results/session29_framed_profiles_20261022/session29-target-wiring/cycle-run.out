@@ -1,0 +1,84 @@
+{
+  "vertices": 94,
+  "target_nodes": 91,
+  "multigraph_edges": 324,
+  "underlying_simple_edges": 133,
+  "underlying_simple_leaf_targets": 55,
+  "restricted_multigraph_bridges": [
+    {
+      "edge": 8,
+      "source": "AA",
+      "target_key": [
+        333,
+        333
+      ],
+      "H": 521
+    },
+    {
+      "edge": 10,
+      "source": "AA",
+      "target_key": [
+        367,
+        367
+      ],
+      "H": 349
+    },
+    {
+      "edge": 169,
+      "source": "BB",
+      "target_key": [
+        842,
+        842
+      ],
+      "H": 585
+    },
+    {
+      "edge": 194,
+      "source": "BB",
+      "target_key": [
+        335,
+        335
+      ],
+      "H": 221
+    },
+    {
+      "edge": 219,
+      "source": "BB",
+      "target_key": [
+        332,
+        332
+      ],
+      "H": 849
+    },
+    {
+      "edge": 248,
+      "source": "BB",
+      "target_key": [
+        74,
+        74
+      ],
+      "H": 385
+    },
+    {
+      "edge": 306,
+      "source": "BB",
+      "target_key": [
+        77,
+        77
+      ],
+      "H": 489
+    },
+    {
+      "edge": 315,
+      "source": "BB",
+      "target_key": [
+        78,
+        78
+      ],
+      "H": 401
+    }
+  ],
+  "full_metagraph_certified_nonbridge_edges": 316,
+  "black_core_vertices": 86,
+  "black_core_edges": 306
+}

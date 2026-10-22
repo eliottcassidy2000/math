@@ -25,4 +25,12 @@ These results do not prove Collatz convergence, uniform153N coverage, complete t
 - [Density-one finite descent](session29-collatz/phase2/DENSITY_ONE_DESCENT.md): exact endpoint densities and exponential exceptional bounds in every retained guard class. This is not convergence. [Independent density audit](session29-density-audit/AUDIT.md).
 - [Converse-symmetry congruences](session29-converse-congruences/REPORT.md): the mod8 odd-cycle formula, fixed-packing quotient, universal port parity, and ordinary-class multiplicity constraints. [Independent congruence audit](session29-congruence-audit/AUDIT.md).
 
-The session is still ACTIVE. Distinct-target reconstruction and the half-path algorithm are a separate forthcoming checkpoint, not silently included in these audits.
+The session is still ACTIVE. The following third wave adds distinct-target reconstruction and half-path enumeration with separate audits.
+
+## Audited third wave
+
+- [Intrinsic-cut reconstruction and complete family-boundary wiring](session29-target-wiring/REPORT.md): the13/17/5 rooted alphabet, exact distinct-target class and Hamiltonian-mass series, and polynomial cut recognition. [Independent reconstruction audit](session29-reconstruction-audit/AUDIT.md).
+- [All324 selected edges are global nonbridges](session29-bridge-extension/REPORT.md): full64 alphabet expansion resolves six old boundary leaves; explicit4+6 detours resolve the final two. This supersedes only the eight unresolved selected-edge cases in the earlier reconstruction report. Thirteen other target-boundary leaves remain globally unclassified. [Independent detour audit](session29-detour-audit/AUDIT.md).
+- [Half-path algorithm and centralizer census](session29-halfpath/REPORT.md): fixed-cycle/fixed-path distinctions, blue quotient, signed-pair isomorphism, exact labelled expectation and census checksums. P7 has three blue tiles among nine, not pure blue. [Independent half-path audit](session29-halfpath-audit/AUDIT.md).
+
+Signed-controller spectrum and asymptotic explorations continue separately. This checkpoint remains ACTIVE and does not claim a general maximum formula or global metagraph classification.

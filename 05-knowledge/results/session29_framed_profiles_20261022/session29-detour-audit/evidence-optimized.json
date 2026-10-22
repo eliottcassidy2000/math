@@ -1,0 +1,224 @@
+{
+  "base_columns": 33,
+  "base_rows": 12,
+  "base_tiles": 64,
+  "boundary_bridges": 19,
+  "boundary_edges": 4096,
+  "global_nonbridges_certified": 324,
+  "implementation": "independent integer-bit adjacency, Tarjan, subset DP, explicit permutation checks",
+  "literal_detours": [
+    {
+      "H_T": 585,
+      "T": 34051591637519,
+      "U": 23708219209456,
+      "U_SCC_types": [
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          81
+        ]
+      ],
+      "V": 30137802689039,
+      "converse": true,
+      "old_to_new": [
+        8,
+        5,
+        7,
+        6,
+        9,
+        1,
+        2,
+        4,
+        3,
+        0
+      ],
+      "word": [
+        689,
+        689
+      ]
+    },
+    {
+      "H_T": 221,
+      "T": 35013664310799,
+      "U": 22746146536176,
+      "U_SCC_types": [
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          81
+        ]
+      ],
+      "V": 30651051279887,
+      "converse": false,
+      "old_to_new": [
+        0,
+        3,
+        2,
+        1,
+        4,
+        5,
+        9,
+        7,
+        6,
+        8
+      ],
+      "word": [
+        721,
+        661
+      ]
+    }
+  ],
+  "local_repairs": [
+    {
+      "alternate": [
+        [
+          693,
+          753
+        ],
+        [
+          691,
+          945
+        ],
+        [
+          915,
+          915
+        ]
+      ],
+      "original": [
+        723,
+        917
+      ]
+    },
+    {
+      "alternate": [
+        [
+          693,
+          753
+        ],
+        [
+          691,
+          945
+        ],
+        [
+          945,
+          691
+        ]
+      ],
+      "original": [
+        753,
+        693
+      ]
+    },
+    {
+      "alternate": [
+        [
+          661,
+          721
+        ],
+        [
+          661,
+          945
+        ],
+        [
+          669,
+          981
+        ]
+      ],
+      "original": [
+        727,
+        981
+      ]
+    },
+    {
+      "alternate": [
+        [
+          661,
+          721
+        ],
+        [
+          661,
+          945
+        ],
+        [
+          761,
+          699
+        ]
+      ],
+      "original": [
+        761,
+        701
+      ]
+    },
+    {
+      "alternate": [
+        [
+          661,
+          721
+        ],
+        [
+          661,
+          977
+        ],
+        [
+          923,
+          919
+        ]
+      ],
+      "original": [
+        979,
+        919
+      ]
+    },
+    {
+      "alternate": [
+        [
+          661,
+          721
+        ],
+        [
+          661,
+          977
+        ],
+        [
+          765,
+          727
+        ]
+      ],
+      "original": [
+        981,
+        727
+      ]
+    }
+  ],
+  "remaining_unclassified_target_leaf_tiles": [
+    657,
+    659,
+    665,
+    697,
+    729,
+    913,
+    921,
+    977,
+    985,
+    987,
+    989,
+    1009,
+    1017
+  ],
+  "selected_edges": 324,
+  "selected_intrinsic_nonbridges": 316,
+  "small_multigraph_controls": 81,
+  "source_leaf_tiles": [
+    767,
+    991,
+    1021,
+    1023
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,671 @@
+{
+  "tile_count": 64,
+  "source_classes": 12,
+  "root_classes": 33,
+  "boundary_source_nodes": 78,
+  "boundary_target_nodes": 561,
+  "boundary_edges": 4096,
+  "base_incidence": [
+    {
+      "tile": 657,
+      "source_class": 10,
+      "root_class": 840
+    },
+    {
+      "tile": 659,
+      "source_class": 8,
+      "root_class": 845
+    },
+    {
+      "tile": 661,
+      "source_class": 41,
+      "root_class": 844
+    },
+    {
+      "tile": 663,
+      "source_class": 10,
+      "root_class": 844
+    },
+    {
+      "tile": 665,
+      "source_class": 12,
+      "root_class": 328
+    },
+    {
+      "tile": 667,
+      "source_class": 8,
+      "root_class": 333
+    },
+    {
+      "tile": 669,
+      "source_class": 12,
+      "root_class": 332
+    },
+    {
+      "tile": 671,
+      "source_class": 4,
+      "root_class": 364
+    },
+    {
+      "tile": 689,
+      "source_class": 41,
+      "root_class": 842
+    },
+    {
+      "tile": 691,
+      "source_class": 12,
+      "root_class": 844
+    },
+    {
+      "tile": 693,
+      "source_class": 40,
+      "root_class": 844
+    },
+    {
+      "tile": 695,
+      "source_class": 8,
+      "root_class": 844
+    },
+    {
+      "tile": 697,
+      "source_class": 76,
+      "root_class": 330
+    },
+    {
+      "tile": 699,
+      "source_class": 12,
+      "root_class": 334
+    },
+    {
+      "tile": 701,
+      "source_class": 41,
+      "root_class": 334
+    },
+    {
+      "tile": 703,
+      "source_class": 4,
+      "root_class": 366
+    },
+    {
+      "tile": 721,
+      "source_class": 41,
+      "root_class": 335
+    },
+    {
+      "tile": 723,
+      "source_class": 40,
+      "root_class": 333
+    },
+    {
+      "tile": 725,
+      "source_class": 76,
+      "root_class": 334
+    },
+    {
+      "tile": 727,
+      "source_class": 41,
+      "root_class": 332
+    },
+    {
+      "tile": 729,
+      "source_class": 12,
+      "root_class": 72
+    },
+    {
+      "tile": 731,
+      "source_class": 8,
+      "root_class": 77
+    },
+    {
+      "tile": 733,
+      "source_class": 12,
+      "root_class": 76
+    },
+    {
+      "tile": 735,
+      "source_class": 4,
+      "root_class": 108
+    },
+    {
+      "tile": 753,
+      "source_class": 40,
+      "root_class": 367
+    },
+    {
+      "tile": 755,
+      "source_class": 41,
+      "root_class": 364
+    },
+    {
+      "tile": 757,
+      "source_class": 41,
+      "root_class": 366
+    },
+    {
+      "tile": 759,
+      "source_class": 10,
+      "root_class": 364
+    },
+    {
+      "tile": 761,
+      "source_class": 41,
+      "root_class": 74
+    },
+    {
+      "tile": 763,
+      "source_class": 10,
+      "root_class": 93
+    },
+    {
+      "tile": 765,
+      "source_class": 10,
+      "root_class": 78
+    },
+    {
+      "tile": 767,
+      "source_class": 2,
+      "root_class": 110
+    },
+    {
+      "tile": 913,
+      "source_class": 8,
+      "root_class": 382
+    },
+    {
+      "tile": 915,
+      "source_class": 12,
+      "root_class": 333
+    },
+    {
+      "tile": 917,
+      "source_class": 40,
+      "root_class": 366
+    },
+    {
+      "tile": 919,
+      "source_class": 41,
+      "root_class": 334
+    },
+    {
+      "tile": 921,
+      "source_class": 8,
+      "root_class": 75
+    },
+    {
+      "tile": 923,
+      "source_class": 10,
+      "root_class": 77
+    },
+    {
+      "tile": 925,
+      "source_class": 8,
+      "root_class": 92
+    },
+    {
+      "tile": 927,
+      "source_class": 4,
+      "root_class": 93
+    },
+    {
+      "tile": 945,
+      "source_class": 12,
+      "root_class": 367
+    },
+    {
+      "tile": 947,
+      "source_class": 76,
+      "root_class": 332
+    },
+    {
+      "tile": 949,
+      "source_class": 41,
+      "root_class": 364
+    },
+    {
+      "tile": 951,
+      "source_class": 12,
+      "root_class": 332
+    },
+    {
+      "tile": 953,
+      "source_class": 12,
+      "root_class": 74
+    },
+    {
+      "tile": 955,
+      "source_class": 41,
+      "root_class": 76
+    },
+    {
+      "tile": 957,
+      "source_class": 10,
+      "root_class": 93
+    },
+    {
+      "tile": 959,
+      "source_class": 4,
+      "root_class": 92
+    },
+    {
+      "tile": 977,
+      "source_class": 10,
+      "root_class": 79
+    },
+    {
+      "tile": 979,
+      "source_class": 41,
+      "root_class": 77
+    },
+    {
+      "tile": 981,
+      "source_class": 41,
+      "root_class": 78
+    },
+    {
+      "tile": 983,
+      "source_class": 40,
+      "root_class": 76
+    },
+    {
+      "tile": 985,
+      "source_class": 9,
+      "root_class": 8
+    },
+    {
+      "tile": 987,
+      "source_class": 9,
+      "root_class": 40
+    },
+    {
+      "tile": 989,
+      "source_class": 9,
+      "root_class": 12
+    },
+    {
+      "tile": 991,
+      "source_class": 5,
+      "root_class": 41
+    },
+    {
+      "tile": 1009,
+      "source_class": 8,
+      "root_class": 111
+    },
+    {
+      "tile": 1011,
+      "source_class": 12,
+      "root_class": 108
+    },
+    {
+      "tile": 1013,
+      "source_class": 10,
+      "root_class": 110
+    },
+    {
+      "tile": 1015,
+      "source_class": 8,
+      "root_class": 108
+    },
+    {
+      "tile": 1017,
+      "source_class": 9,
+      "root_class": 10
+    },
+    {
+      "tile": 1019,
+      "source_class": 9,
+      "root_class": 41
+    },
+    {
+      "tile": 1021,
+      "source_class": 11,
+      "root_class": 14
+    },
+    {
+      "tile": 1023,
+      "source_class": 0,
+      "root_class": 43
+    }
+  ],
+  "original_eight": [
+    {
+      "old_edge": 8,
+      "old_source": "AA",
+      "tile": 723,
+      "actual_original_word": [
+        723,
+        917
+      ],
+      "root": 333,
+      "base_source_class": 40,
+      "row_degree": 5,
+      "column_degree": 3,
+      "column_tiles": [
+        667,
+        723,
+        915
+      ],
+      "alternate_normalized_pairs": [
+        [
+          693,
+          693
+        ],
+        [
+          691,
+          691
+        ],
+        [
+          915,
+          915
+        ]
+      ],
+      "alternate_actual_words": [
+        [
+          693,
+          753
+        ],
+        [
+          691,
+          945
+        ],
+        [
+          915,
+          915
+        ]
+      ],
+      "H": 521
+    },
+    {
+      "old_edge": 10,
+      "old_source": "AA",
+      "tile": 753,
+      "actual_original_word": [
+        753,
+        693
+      ],
+      "root": 367,
+      "base_source_class": 40,
+      "row_degree": 5,
+      "column_degree": 2,
+      "column_tiles": [
+        753,
+        945
+      ],
+      "alternate_normalized_pairs": [
+        [
+          693,
+          693
+        ],
+        [
+          691,
+          691
+        ],
+        [
+          945,
+          945
+        ]
+      ],
+      "alternate_actual_words": [
+        [
+          693,
+          753
+        ],
+        [
+          691,
+          945
+        ],
+        [
+          945,
+          691
+        ]
+      ],
+      "H": 349
+    },
+    {
+      "old_edge": 169,
+      "old_source": "BB",
+      "tile": 689,
+      "actual_original_word": [
+        689,
+        689
+      ],
+      "root": 842,
+      "base_source_class": 41,
+      "row_degree": 13,
+      "column_degree": 1,
+      "column_tiles": [
+        689
+      ],
+      "alternate_normalized_pairs": null,
+      "alternate_actual_words": null,
+      "H": 585
+    },
+    {
+      "old_edge": 194,
+      "old_source": "BB",
+      "tile": 721,
+      "actual_original_word": [
+        721,
+        661
+      ],
+      "root": 335,
+      "base_source_class": 41,
+      "row_degree": 13,
+      "column_degree": 1,
+      "column_tiles": [
+        721
+      ],
+      "alternate_normalized_pairs": null,
+      "alternate_actual_words": null,
+      "H": 221
+    },
+    {
+      "old_edge": 219,
+      "old_source": "BB",
+      "tile": 727,
+      "actual_original_word": [
+        727,
+        981
+      ],
+      "root": 332,
+      "base_source_class": 41,
+      "row_degree": 13,
+      "column_degree": 4,
+      "column_tiles": [
+        669,
+        727,
+        947,
+        951
+      ],
+      "alternate_normalized_pairs": [
+        [
+          661,
+          661
+        ],
+        [
+          661,
+          691
+        ],
+        [
+          669,
+          727
+        ]
+      ],
+      "alternate_actual_words": [
+        [
+          661,
+          721
+        ],
+        [
+          661,
+          945
+        ],
+        [
+          669,
+          981
+        ]
+      ],
+      "H": 849
+    },
+    {
+      "old_edge": 248,
+      "old_source": "BB",
+      "tile": 761,
+      "actual_original_word": [
+        761,
+        701
+      ],
+      "root": 74,
+      "base_source_class": 41,
+      "row_degree": 13,
+      "column_degree": 2,
+      "column_tiles": [
+        761,
+        953
+      ],
+      "alternate_normalized_pairs": [
+        [
+          661,
+          661
+        ],
+        [
+          661,
+          691
+        ],
+        [
+          761,
+          953
+        ]
+      ],
+      "alternate_actual_words": [
+        [
+          661,
+          721
+        ],
+        [
+          661,
+          945
+        ],
+        [
+          761,
+          699
+        ]
+      ],
+      "H": 385
+    },
+    {
+      "old_edge": 306,
+      "old_source": "BB",
+      "tile": 979,
+      "actual_original_word": [
+        979,
+        919
+      ],
+      "root": 77,
+      "base_source_class": 41,
+      "row_degree": 13,
+      "column_degree": 3,
+      "column_tiles": [
+        731,
+        923,
+        979
+      ],
+      "alternate_normalized_pairs": [
+        [
+          661,
+          661
+        ],
+        [
+          661,
+          663
+        ],
+        [
+          923,
+          979
+        ]
+      ],
+      "alternate_actual_words": [
+        [
+          661,
+          721
+        ],
+        [
+          661,
+          977
+        ],
+        [
+          923,
+          919
+        ]
+      ],
+      "H": 489
+    },
+    {
+      "old_edge": 315,
+      "old_source": "BB",
+      "tile": 981,
+      "actual_original_word": [
+        981,
+        727
+      ],
+      "root": 78,
+      "base_source_class": 41,
+      "row_degree": 13,
+      "column_degree": 2,
+      "column_tiles": [
+        765,
+        981
+      ],
+      "alternate_normalized_pairs": [
+        [
+          661,
+          661
+        ],
+        [
+          661,
+          663
+        ],
+        [
+          765,
+          981
+        ]
+      ],
+      "alternate_actual_words": [
+        [
+          661,
+          721
+        ],
+        [
+          661,
+          977
+        ],
+        [
+          765,
+          727
+        ]
+      ],
+      "H": 401
+    }
+  ],
+  "all_boundary_bridge_tiles": [
+    657,
+    659,
+    665,
+    689,
+    697,
+    721,
+    729,
+    767,
+    913,
+    921,
+    977,
+    985,
+    987,
+    989,
+    991,
+    1009,
+    1017,
+    1021,
+    1023
+  ]
+}

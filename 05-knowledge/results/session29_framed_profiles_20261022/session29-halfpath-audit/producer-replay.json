@@ -1,0 +1,409 @@
+{
+  "status": "PASS",
+  "exhaustive_fixed_involution_orientations_n1_to_6": 599,
+  "fixed_involution_ensemble": [
+    {
+      "self_converse_classes": 1,
+      "centralizer_reciprocal_mass": "1",
+      "global_blue_tiles": 1,
+      "n": 1,
+      "orientations": 1,
+      "total_fixed_hp": 1,
+      "mean_fixed_hp": 1
+    },
+    {
+      "self_converse_classes": 1,
+      "centralizer_reciprocal_mass": "1",
+      "global_blue_tiles": 1,
+      "n": 2,
+      "orientations": 2,
+      "total_fixed_hp": 2,
+      "mean_fixed_hp": 1
+    },
+    {
+      "self_converse_classes": 2,
+      "centralizer_reciprocal_mass": "2",
+      "global_blue_tiles": 2,
+      "n": 3,
+      "orientations": 4,
+      "total_fixed_hp": 4,
+      "mean_fixed_hp": 1
+    },
+    {
+      "self_converse_classes": 2,
+      "centralizer_reciprocal_mass": "2",
+      "global_blue_tiles": 4,
+      "n": 4,
+      "orientations": 16,
+      "total_fixed_hp": 32,
+      "mean_fixed_hp": 2
+    },
+    {
+      "self_converse_classes": 8,
+      "centralizer_reciprocal_mass": "8",
+      "global_blue_tiles": 16,
+      "n": 5,
+      "orientations": 64,
+      "total_fixed_hp": 128,
+      "mean_fixed_hp": 2
+    },
+    {
+      "self_converse_classes": 12,
+      "centralizer_reciprocal_mass": "32/3",
+      "global_blue_tiles": 64,
+      "n": 6,
+      "orientations": 512,
+      "total_fixed_hp": 3072,
+      "mean_fixed_hp": 6
+    }
+  ],
+  "named_and_larger_cases": [
+    {
+      "name": "C3",
+      "outmasks": [
+        2,
+        4,
+        1
+      ],
+      "sigma": [
+        0,
+        2,
+        1
+      ],
+      "canonical_spine": [
+        2,
+        4,
+        1
+      ],
+      "H": 3,
+      "aut": 3,
+      "centralizer": 1,
+      "fixed_hp": 1,
+      "blue_tiles": 1,
+      "tiles": 1,
+      "fixed_odd_cycles": 1,
+      "cycle_by_length": {
+        "3": 1
+      },
+      "dp_nonzero_states": 2
+    },
+    {
+      "name": "C5{1,2}",
+      "outmasks": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ],
+      "sigma": [
+        0,
+        4,
+        3,
+        2,
+        1
+      ],
+      "canonical_spine": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ],
+      "H": 15,
+      "aut": 5,
+      "centralizer": 1,
+      "fixed_hp": 3,
+      "blue_tiles": 3,
+      "tiles": 3,
+      "fixed_odd_cycles": 3,
+      "cycle_by_length": {
+        "3": 1,
+        "5": 2
+      },
+      "dp_nonzero_states": 8
+    },
+    {
+      "name": "Paley P7",
+      "outmasks": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ],
+      "sigma": [
+        0,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "canonical_spine": [
+        14,
+        84,
+        104,
+        50,
+        37,
+        67,
+        25
+      ],
+      "H": 189,
+      "aut": 21,
+      "centralizer": 3,
+      "fixed_hp": 9,
+      "blue_tiles": 3,
+      "tiles": 9,
+      "fixed_odd_cycles": 12,
+      "cycle_by_length": {
+        "5": 6,
+        "7": 6
+      },
+      "dp_nonzero_states": 30
+    },
+    {
+      "name": "seed A",
+      "outmasks": [
+        16,
+        9,
+        3,
+        5,
+        14
+      ],
+      "sigma": [
+        4,
+        1,
+        3,
+        2,
+        0
+      ],
+      "canonical_spine": [
+        2,
+        28,
+        9,
+        17,
+        5
+      ],
+      "H": 15,
+      "aut": 3,
+      "centralizer": 1,
+      "fixed_hp": 1,
+      "blue_tiles": 1,
+      "tiles": 5,
+      "fixed_odd_cycles": 3,
+      "cycle_by_length": {
+        "3": 2,
+        "5": 1
+      },
+      "dp_nonzero_states": 8
+    },
+    {
+      "name": "seed B",
+      "outmasks": [
+        18,
+        8,
+        3,
+        5,
+        14
+      ],
+      "sigma": [
+        3,
+        4,
+        2,
+        0,
+        1
+      ],
+      "canonical_spine": [
+        2,
+        12,
+        9,
+        17,
+        7
+      ],
+      "H": 13,
+      "aut": 1,
+      "centralizer": 1,
+      "fixed_hp": 3,
+      "blue_tiles": 3,
+      "tiles": 13,
+      "fixed_odd_cycles": 2,
+      "cycle_by_length": {
+        "5": 2
+      },
+      "dp_nonzero_states": 8
+    },
+    {
+      "name": "sample n7-374",
+      "outmasks": [
+        108,
+        85,
+        32,
+        70,
+        109,
+        10,
+        36
+      ],
+      "sigma": [
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "canonical_spine": [
+        2,
+        12,
+        73,
+        113,
+        103,
+        71,
+        3
+      ],
+      "H": 49,
+      "aut": 1,
+      "centralizer": 1,
+      "fixed_hp": 5,
+      "blue_tiles": 5,
+      "tiles": 49,
+      "fixed_odd_cycles": 6,
+      "cycle_by_length": {
+        "5": 4,
+        "7": 2
+      },
+      "dp_nonzero_states": 26
+    },
+    {
+      "name": "sample n7-977",
+      "outmasks": [
+        34,
+        124,
+        33,
+        37,
+        45,
+        64,
+        29
+      ],
+      "sigma": [
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "canonical_spine": [
+        2,
+        60,
+        57,
+        49,
+        33,
+        65,
+        31
+      ],
+      "H": 85,
+      "aut": 1,
+      "centralizer": 1,
+      "fixed_hp": 7,
+      "blue_tiles": 7,
+      "tiles": 85,
+      "fixed_odd_cycles": 6,
+      "cycle_by_length": {
+        "5": 2,
+        "7": 4
+      },
+      "dp_nonzero_states": 34
+    },
+    {
+      "name": "sample n8-15217",
+      "outmasks": [
+        226,
+        216,
+        155,
+        97,
+        105,
+        6,
+        164,
+        56
+      ],
+      "sigma": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "canonical_spine": [
+        6,
+        124,
+        184,
+        49,
+        225,
+        193,
+        141,
+        11
+      ],
+      "H": 565,
+      "aut": 1,
+      "centralizer": 1,
+      "fixed_hp": 35,
+      "blue_tiles": 35,
+      "tiles": 565,
+      "fixed_odd_cycles": 0,
+      "cycle_by_length": {},
+      "dp_nonzero_states": 128
+    },
+    {
+      "name": "sample n8-53773",
+      "outmasks": [
+        26,
+        16,
+        43,
+        210,
+        164,
+        11,
+        183,
+        39
+      ],
+      "sigma": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "canonical_spine": [
+        2,
+        28,
+        57,
+        113,
+        97,
+        67,
+        135,
+        63
+      ],
+      "H": 261,
+      "aut": 1,
+      "centralizer": 1,
+      "fixed_hp": 21,
+      "blue_tiles": 21,
+      "tiles": 261,
+      "fixed_odd_cycles": 0,
+      "cycle_by_length": {},
+      "dp_nonzero_states": 128
+    }
+  ],
+  "verification": "Independent full permutations, normalized spine-tile sets, automorphisms, centralizers, and directed odd-cycle enumeration."
+}

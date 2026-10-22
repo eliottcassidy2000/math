@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "strong_tournaments": 570,
+  "arc_deletions": 5590,
+  "strong_bridge_instances": 1438,
+  "method": "independent all-arc deletion, Boolean transitive closure, and exhaustive cuts; no producer code imported"
+}

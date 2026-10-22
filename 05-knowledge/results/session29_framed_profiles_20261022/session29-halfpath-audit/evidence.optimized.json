@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "independent_full_controls": 599,
+  "named": {
+    "C3": {
+      "H": 3,
+      "aut": 3,
+      "centralizer": 1,
+      "fixed_HP": 1,
+      "blue": 1,
+      "tiles": 1,
+      "fixed_cycles": 1
+    },
+    "C5": {
+      "H": 15,
+      "aut": 5,
+      "centralizer": 1,
+      "fixed_HP": 3,
+      "blue": 3,
+      "tiles": 3,
+      "fixed_cycles": 3
+    },
+    "P7": {
+      "H": 189,
+      "aut": 21,
+      "centralizer": 3,
+      "fixed_HP": 9,
+      "blue": 3,
+      "tiles": 9,
+      "fixed_cycles": 12
+    },
+    "A": {
+      "H": 15,
+      "aut": 3,
+      "centralizer": 1,
+      "fixed_HP": 1,
+      "blue": 1,
+      "tiles": 5,
+      "fixed_cycles": 3
+    },
+    "B": {
+      "H": 13,
+      "aut": 1,
+      "centralizer": 1,
+      "fixed_HP": 3,
+      "blue": 3,
+      "tiles": 13,
+      "fixed_cycles": 2
+    }
+  },
+  "complete_census_n1_to_6": [
+    {
+      "n": 1,
+      "labelled": 1,
+      "classes": 1,
+      "mean": 1,
+      "centralizer_mass": "1",
+      "blue": 1
+    },
+    {
+      "n": 2,
+      "labelled": 2,
+      "classes": 1,
+      "mean": 1,
+      "centralizer_mass": "1",
+      "blue": 1
+    },
+    {
+      "n": 3,
+      "labelled": 4,
+      "classes": 2,
+      "mean": 1,
+      "centralizer_mass": "2",
+      "blue": 2
+    },
+    {
+      "n": 4,
+      "labelled": 16,
+      "classes": 2,
+      "mean": 2,
+      "centralizer_mass": "2",
+      "blue": 4
+    },
+    {
+      "n": 5,
+      "labelled": 64,
+      "classes": 8,
+      "mean": 2,
+      "centralizer_mass": "8",
+      "blue": 16
+    },
+    {
+      "n": 6,
+      "labelled": 512,
+      "classes": 12,
+      "mean": 6,
+      "centralizer_mass": "32/3",
+      "blue": 64
+    }
+  ],
+  "methods": "Bitmask recursion with partner exclusion; directed path/cycle DFS; full vertex-permutation automorphisms; directly normalized spine tiles."
+}

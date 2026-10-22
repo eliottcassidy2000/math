@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "alphabet": {
+    "A": [
+      693,
+      723,
+      753,
+      917,
+      983
+    ],
+    "B": [
+      661,
+      689,
+      701,
+      721,
+      727,
+      755,
+      757,
+      761,
+      919,
+      949,
+      955,
+      979,
+      981
+    ]
+  },
+  "a": 13,
+  "b": 17,
+  "f": 5,
+  "full_target_DP_checks": 324,
+  "literal_isomorphism_witnesses": 324,
+  "ordinary_targets_r2": 169,
+  "merged_targets_r2": 91,
+  "r2_blue": 18,
+  "restricted_bridges": 8,
+  "globally_certified_nonbridges": 316,
+  "black_boundary_vertices": 86,
+  "black_boundary_edges": 306,
+  "root_automorphism_products": {
+    "1": 289,
+    "3": 34,
+    "9": 1
+  },
+  "B": [
+    [
+      163,
+      -23,
+      383
+    ],
+    [
+      23,
+      -4,
+      64
+    ],
+    [
+      383,
+      -64,
+      664
+    ]
+  ],
+  "v": [
+    121,
+    17,
+    281
+  ],
+  "ordinary_H_GF": "(-4057812*z**4 - 3359832*z**3 - 93313*z**2)/(45180*z**3 + 37140*z**2 + 823*z - 1)",
+  "ordinary_H_r2": 93313,
+  "merged_H_r2": 50487,
+  "fixed_target_moment_representation": "independent nine-coordinate Kronecker with exact denominator annihilation"
+}

@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "r2_targets_checked": 324,
+  "small_strong_tournaments_checked": 570,
+  "large_tests": [
+    {
+      "r": 2,
+      "vertices": 10,
+      "candidates": 16,
+      "strong_bridges": 2,
+      "one_arc_cuts": 3
+    },
+    {
+      "r": 3,
+      "vertices": 15,
+      "candidates": 26,
+      "strong_bridges": 2,
+      "one_arc_cuts": 2
+    },
+    {
+      "r": 4,
+      "vertices": 20,
+      "candidates": 37,
+      "strong_bridges": 4,
+      "one_arc_cuts": 6
+    },
+    {
+      "r": 7,
+      "vertices": 35,
+      "candidates": 67,
+      "strong_bridges": 8,
+      "one_arc_cuts": 9
+    },
+    {
+      "r": 10,
+      "vertices": 50,
+      "candidates": 97,
+      "strong_bridges": 10,
+      "one_arc_cuts": 12
+    },
+    {
+      "r": 15,
+      "vertices": 75,
+      "candidates": 147,
+      "strong_bridges": 16,
+      "one_arc_cuts": 16
+    },
+    {
+      "r": 20,
+      "vertices": 100,
+      "candidates": 196,
+      "strong_bridges": 20,
+      "one_arc_cuts": 21
+    }
+  ]
+}

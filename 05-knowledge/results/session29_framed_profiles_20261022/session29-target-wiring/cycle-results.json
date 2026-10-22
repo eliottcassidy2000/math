@@ -1,0 +1,1994 @@
+{
+  "vertices": 94,
+  "target_nodes": 91,
+  "multigraph_edges": 324,
+  "underlying_simple_edges": 133,
+  "underlying_simple_leaf_targets": 55,
+  "restricted_multigraph_bridges": [
+    {
+      "edge": 8,
+      "source": "AA",
+      "target_key": [
+        333,
+        333
+      ],
+      "H": 521
+    },
+    {
+      "edge": 10,
+      "source": "AA",
+      "target_key": [
+        367,
+        367
+      ],
+      "H": 349
+    },
+    {
+      "edge": 169,
+      "source": "BB",
+      "target_key": [
+        842,
+        842
+      ],
+      "H": 585
+    },
+    {
+      "edge": 194,
+      "source": "BB",
+      "target_key": [
+        335,
+        335
+      ],
+      "H": 221
+    },
+    {
+      "edge": 219,
+      "source": "BB",
+      "target_key": [
+        332,
+        332
+      ],
+      "H": 849
+    },
+    {
+      "edge": 248,
+      "source": "BB",
+      "target_key": [
+        74,
+        74
+      ],
+      "H": 385
+    },
+    {
+      "edge": 306,
+      "source": "BB",
+      "target_key": [
+        77,
+        77
+      ],
+      "H": 489
+    },
+    {
+      "edge": 315,
+      "source": "BB",
+      "target_key": [
+        78,
+        78
+      ],
+      "H": 401
+    }
+  ],
+  "full_metagraph_certified_nonbridge_edges": 316,
+  "black_core_vertices": 86,
+  "black_core_edges": 306,
+  "cycle_certificates": [
+    {
+      "edge": 0,
+      "alternative_path": [
+        12
+      ]
+    },
+    {
+      "edge": 1,
+      "alternative_path": [
+        17
+      ]
+    },
+    {
+      "edge": 2,
+      "alternative_path": [
+        0,
+        54,
+        28
+      ]
+    },
+    {
+      "edge": 3,
+      "alternative_path": [
+        7
+      ]
+    },
+    {
+      "edge": 4,
+      "alternative_path": [
+        22
+      ]
+    },
+    {
+      "edge": 5,
+      "alternative_path": [
+        13
+      ]
+    },
+    {
+      "edge": 6,
+      "alternative_path": [
+        18
+      ]
+    },
+    {
+      "edge": 7,
+      "alternative_path": [
+        3
+      ]
+    },
+    {
+      "edge": 9,
+      "alternative_path": [
+        23
+      ]
+    },
+    {
+      "edge": 11,
+      "alternative_path": [
+        15
+      ]
+    },
+    {
+      "edge": 12,
+      "alternative_path": [
+        0
+      ]
+    },
+    {
+      "edge": 13,
+      "alternative_path": [
+        5
+      ]
+    },
+    {
+      "edge": 14,
+      "alternative_path": [
+        20
+      ]
+    },
+    {
+      "edge": 15,
+      "alternative_path": [
+        11
+      ]
+    },
+    {
+      "edge": 16,
+      "alternative_path": [
+        0,
+        54,
+        70
+      ]
+    },
+    {
+      "edge": 17,
+      "alternative_path": [
+        1
+      ]
+    },
+    {
+      "edge": 18,
+      "alternative_path": [
+        6
+      ]
+    },
+    {
+      "edge": 19,
+      "alternative_path": [
+        21
+      ]
+    },
+    {
+      "edge": 20,
+      "alternative_path": [
+        14
+      ]
+    },
+    {
+      "edge": 21,
+      "alternative_path": [
+        19
+      ]
+    },
+    {
+      "edge": 22,
+      "alternative_path": [
+        4
+      ]
+    },
+    {
+      "edge": 23,
+      "alternative_path": [
+        9
+      ]
+    },
+    {
+      "edge": 24,
+      "alternative_path": [
+        0,
+        54,
+        87
+      ]
+    },
+    {
+      "edge": 25,
+      "alternative_path": [
+        107
+      ]
+    },
+    {
+      "edge": 26,
+      "alternative_path": [
+        97
+      ]
+    },
+    {
+      "edge": 27,
+      "alternative_path": [
+        127
+      ]
+    },
+    {
+      "edge": 28,
+      "alternative_path": [
+        92
+      ]
+    },
+    {
+      "edge": 29,
+      "alternative_path": [
+        152
+      ]
+    },
+    {
+      "edge": 30,
+      "alternative_path": [
+        34
+      ]
+    },
+    {
+      "edge": 31,
+      "alternative_path": [
+        67
+      ]
+    },
+    {
+      "edge": 32,
+      "alternative_path": [
+        36
+      ]
+    },
+    {
+      "edge": 33,
+      "alternative_path": [
+        147
+      ]
+    },
+    {
+      "edge": 34,
+      "alternative_path": [
+        30
+      ]
+    },
+    {
+      "edge": 35,
+      "alternative_path": [
+        80
+      ]
+    },
+    {
+      "edge": 36,
+      "alternative_path": [
+        32
+      ]
+    },
+    {
+      "edge": 37,
+      "alternative_path": [
+        112
+      ]
+    },
+    {
+      "edge": 38,
+      "alternative_path": [
+        108
+      ]
+    },
+    {
+      "edge": 39,
+      "alternative_path": [
+        98
+      ]
+    },
+    {
+      "edge": 40,
+      "alternative_path": [
+        128
+      ]
+    },
+    {
+      "edge": 41,
+      "alternative_path": [
+        93
+      ]
+    },
+    {
+      "edge": 42,
+      "alternative_path": [
+        153
+      ]
+    },
+    {
+      "edge": 43,
+      "alternative_path": [
+        47
+      ]
+    },
+    {
+      "edge": 44,
+      "alternative_path": [
+        123
+      ]
+    },
+    {
+      "edge": 45,
+      "alternative_path": [
+        49
+      ]
+    },
+    {
+      "edge": 46,
+      "alternative_path": [
+        148
+      ]
+    },
+    {
+      "edge": 47,
+      "alternative_path": [
+        43
+      ]
+    },
+    {
+      "edge": 48,
+      "alternative_path": [
+        143
+      ]
+    },
+    {
+      "edge": 49,
+      "alternative_path": [
+        45
+      ]
+    },
+    {
+      "edge": 50,
+      "alternative_path": [
+        113
+      ]
+    },
+    {
+      "edge": 51,
+      "alternative_path": [
+        105
+      ]
+    },
+    {
+      "edge": 52,
+      "alternative_path": [
+        95
+      ]
+    },
+    {
+      "edge": 53,
+      "alternative_path": [
+        125
+      ]
+    },
+    {
+      "edge": 54,
+      "alternative_path": [
+        90
+      ]
+    },
+    {
+      "edge": 55,
+      "alternative_path": [
+        150
+      ]
+    },
+    {
+      "edge": 56,
+      "alternative_path": [
+        60
+      ]
+    },
+    {
+      "edge": 57,
+      "alternative_path": [
+        120
+      ]
+    },
+    {
+      "edge": 58,
+      "alternative_path": [
+        62
+      ]
+    },
+    {
+      "edge": 59,
+      "alternative_path": [
+        145
+      ]
+    },
+    {
+      "edge": 60,
+      "alternative_path": [
+        56
+      ]
+    },
+    {
+      "edge": 61,
+      "alternative_path": [
+        140
+      ]
+    },
+    {
+      "edge": 62,
+      "alternative_path": [
+        58
+      ]
+    },
+    {
+      "edge": 63,
+      "alternative_path": [
+        110
+      ]
+    },
+    {
+      "edge": 64,
+      "alternative_path": [
+        106
+      ]
+    },
+    {
+      "edge": 65,
+      "alternative_path": [
+        96
+      ]
+    },
+    {
+      "edge": 66,
+      "alternative_path": [
+        126
+      ]
+    },
+    {
+      "edge": 67,
+      "alternative_path": [
+        31
+      ]
+    },
+    {
+      "edge": 68,
+      "alternative_path": [
+        151
+      ]
+    },
+    {
+      "edge": 69,
+      "alternative_path": [
+        73
+      ]
+    },
+    {
+      "edge": 70,
+      "alternative_path": [
+        121
+      ]
+    },
+    {
+      "edge": 71,
+      "alternative_path": [
+        75
+      ]
+    },
+    {
+      "edge": 72,
+      "alternative_path": [
+        146
+      ]
+    },
+    {
+      "edge": 73,
+      "alternative_path": [
+        69
+      ]
+    },
+    {
+      "edge": 74,
+      "alternative_path": [
+        83
+      ]
+    },
+    {
+      "edge": 75,
+      "alternative_path": [
+        71
+      ]
+    },
+    {
+      "edge": 76,
+      "alternative_path": [
+        111
+      ]
+    },
+    {
+      "edge": 77,
+      "alternative_path": [
+        109
+      ]
+    },
+    {
+      "edge": 78,
+      "alternative_path": [
+        99
+      ]
+    },
+    {
+      "edge": 79,
+      "alternative_path": [
+        129
+      ]
+    },
+    {
+      "edge": 80,
+      "alternative_path": [
+        35
+      ]
+    },
+    {
+      "edge": 81,
+      "alternative_path": [
+        154
+      ]
+    },
+    {
+      "edge": 82,
+      "alternative_path": [
+        86
+      ]
+    },
+    {
+      "edge": 83,
+      "alternative_path": [
+        74
+      ]
+    },
+    {
+      "edge": 84,
+      "alternative_path": [
+        88
+      ]
+    },
+    {
+      "edge": 85,
+      "alternative_path": [
+        149
+      ]
+    },
+    {
+      "edge": 86,
+      "alternative_path": [
+        82
+      ]
+    },
+    {
+      "edge": 87,
+      "alternative_path": [
+        144
+      ]
+    },
+    {
+      "edge": 88,
+      "alternative_path": [
+        84
+      ]
+    },
+    {
+      "edge": 89,
+      "alternative_path": [
+        114
+      ]
+    },
+    {
+      "edge": 90,
+      "alternative_path": [
+        54
+      ]
+    },
+    {
+      "edge": 91,
+      "alternative_path": [
+        31
+      ]
+    },
+    {
+      "edge": 92,
+      "alternative_path": [
+        28
+      ]
+    },
+    {
+      "edge": 93,
+      "alternative_path": [
+        41
+      ]
+    },
+    {
+      "edge": 94,
+      "alternative_path": [
+        35
+      ]
+    },
+    {
+      "edge": 95,
+      "alternative_path": [
+        52
+      ]
+    },
+    {
+      "edge": 96,
+      "alternative_path": [
+        65
+      ]
+    },
+    {
+      "edge": 97,
+      "alternative_path": [
+        26
+      ]
+    },
+    {
+      "edge": 98,
+      "alternative_path": [
+        39
+      ]
+    },
+    {
+      "edge": 99,
+      "alternative_path": [
+        78
+      ]
+    },
+    {
+      "edge": 100,
+      "alternative_path": [
+        58
+      ]
+    },
+    {
+      "edge": 101,
+      "alternative_path": [
+        71
+      ]
+    },
+    {
+      "edge": 102,
+      "alternative_path": [
+        32
+      ]
+    },
+    {
+      "edge": 103,
+      "alternative_path": [
+        45
+      ]
+    },
+    {
+      "edge": 104,
+      "alternative_path": [
+        84
+      ]
+    },
+    {
+      "edge": 105,
+      "alternative_path": [
+        51
+      ]
+    },
+    {
+      "edge": 106,
+      "alternative_path": [
+        64
+      ]
+    },
+    {
+      "edge": 107,
+      "alternative_path": [
+        25
+      ]
+    },
+    {
+      "edge": 108,
+      "alternative_path": [
+        38
+      ]
+    },
+    {
+      "edge": 109,
+      "alternative_path": [
+        77
+      ]
+    },
+    {
+      "edge": 110,
+      "alternative_path": [
+        63
+      ]
+    },
+    {
+      "edge": 111,
+      "alternative_path": [
+        76
+      ]
+    },
+    {
+      "edge": 112,
+      "alternative_path": [
+        37
+      ]
+    },
+    {
+      "edge": 113,
+      "alternative_path": [
+        50
+      ]
+    },
+    {
+      "edge": 114,
+      "alternative_path": [
+        89
+      ]
+    },
+    {
+      "edge": 115,
+      "alternative_path": [
+        56
+      ]
+    },
+    {
+      "edge": 116,
+      "alternative_path": [
+        69
+      ]
+    },
+    {
+      "edge": 117,
+      "alternative_path": [
+        30
+      ]
+    },
+    {
+      "edge": 118,
+      "alternative_path": [
+        43
+      ]
+    },
+    {
+      "edge": 119,
+      "alternative_path": [
+        82
+      ]
+    },
+    {
+      "edge": 120,
+      "alternative_path": [
+        57
+      ]
+    },
+    {
+      "edge": 121,
+      "alternative_path": [
+        70
+      ]
+    },
+    {
+      "edge": 122,
+      "alternative_path": [
+        31
+      ]
+    },
+    {
+      "edge": 123,
+      "alternative_path": [
+        44
+      ]
+    },
+    {
+      "edge": 124,
+      "alternative_path": [
+        74
+      ]
+    },
+    {
+      "edge": 125,
+      "alternative_path": [
+        53
+      ]
+    },
+    {
+      "edge": 126,
+      "alternative_path": [
+        66
+      ]
+    },
+    {
+      "edge": 127,
+      "alternative_path": [
+        27
+      ]
+    },
+    {
+      "edge": 128,
+      "alternative_path": [
+        40
+      ]
+    },
+    {
+      "edge": 129,
+      "alternative_path": [
+        79
+      ]
+    },
+    {
+      "edge": 130,
+      "alternative_path": [
+        58
+      ]
+    },
+    {
+      "edge": 131,
+      "alternative_path": [
+        71
+      ]
+    },
+    {
+      "edge": 132,
+      "alternative_path": [
+        32
+      ]
+    },
+    {
+      "edge": 133,
+      "alternative_path": [
+        45
+      ]
+    },
+    {
+      "edge": 134,
+      "alternative_path": [
+        84
+      ]
+    },
+    {
+      "edge": 135,
+      "alternative_path": [
+        56
+      ]
+    },
+    {
+      "edge": 136,
+      "alternative_path": [
+        69
+      ]
+    },
+    {
+      "edge": 137,
+      "alternative_path": [
+        30
+      ]
+    },
+    {
+      "edge": 138,
+      "alternative_path": [
+        43
+      ]
+    },
+    {
+      "edge": 139,
+      "alternative_path": [
+        82
+      ]
+    },
+    {
+      "edge": 140,
+      "alternative_path": [
+        61
+      ]
+    },
+    {
+      "edge": 141,
+      "alternative_path": [
+        74
+      ]
+    },
+    {
+      "edge": 142,
+      "alternative_path": [
+        35
+      ]
+    },
+    {
+      "edge": 143,
+      "alternative_path": [
+        48
+      ]
+    },
+    {
+      "edge": 144,
+      "alternative_path": [
+        87
+      ]
+    },
+    {
+      "edge": 145,
+      "alternative_path": [
+        59
+      ]
+    },
+    {
+      "edge": 146,
+      "alternative_path": [
+        72
+      ]
+    },
+    {
+      "edge": 147,
+      "alternative_path": [
+        33
+      ]
+    },
+    {
+      "edge": 148,
+      "alternative_path": [
+        46
+      ]
+    },
+    {
+      "edge": 149,
+      "alternative_path": [
+        85
+      ]
+    },
+    {
+      "edge": 150,
+      "alternative_path": [
+        55
+      ]
+    },
+    {
+      "edge": 151,
+      "alternative_path": [
+        68
+      ]
+    },
+    {
+      "edge": 152,
+      "alternative_path": [
+        29
+      ]
+    },
+    {
+      "edge": 153,
+      "alternative_path": [
+        42
+      ]
+    },
+    {
+      "edge": 154,
+      "alternative_path": [
+        81
+      ]
+    },
+    {
+      "edge": 155,
+      "alternative_path": [
+        197
+      ]
+    },
+    {
+      "edge": 156,
+      "alternative_path": [
+        171
+      ]
+    },
+    {
+      "edge": 157,
+      "alternative_path": [
+        249
+      ]
+    },
+    {
+      "edge": 158,
+      "alternative_path": [
+        155,
+        25,
+        28
+      ]
+    },
+    {
+      "edge": 159,
+      "alternative_path": [
+        314
+      ]
+    },
+    {
+      "edge": 160,
+      "alternative_path": [
+        164
+      ]
+    },
+    {
+      "edge": 161,
+      "alternative_path": [
+        236
+      ]
+    },
+    {
+      "edge": 162,
+      "alternative_path": [
+        166
+      ]
+    },
+    {
+      "edge": 163,
+      "alternative_path": [
+        301
+      ]
+    },
+    {
+      "edge": 164,
+      "alternative_path": [
+        160
+      ]
+    },
+    {
+      "edge": 165,
+      "alternative_path": [
+        288
+      ]
+    },
+    {
+      "edge": 166,
+      "alternative_path": [
+        162
+      ]
+    },
+    {
+      "edge": 167,
+      "alternative_path": [
+        210
+      ]
+    },
+    {
+      "edge": 168,
+      "alternative_path": [
+        195
+      ]
+    },
+    {
+      "edge": 170,
+      "alternative_path": [
+        247
+      ]
+    },
+    {
+      "edge": 171,
+      "alternative_path": [
+        156
+      ]
+    },
+    {
+      "edge": 172,
+      "alternative_path": [
+        312
+      ]
+    },
+    {
+      "edge": 173,
+      "alternative_path": [
+        177
+      ]
+    },
+    {
+      "edge": 174,
+      "alternative_path": [
+        234
+      ]
+    },
+    {
+      "edge": 175,
+      "alternative_path": [
+        179
+      ]
+    },
+    {
+      "edge": 176,
+      "alternative_path": [
+        299
+      ]
+    },
+    {
+      "edge": 177,
+      "alternative_path": [
+        173
+      ]
+    },
+    {
+      "edge": 178,
+      "alternative_path": [
+        286
+      ]
+    },
+    {
+      "edge": 179,
+      "alternative_path": [
+        175
+      ]
+    },
+    {
+      "edge": 180,
+      "alternative_path": [
+        208
+      ]
+    },
+    {
+      "edge": 181,
+      "alternative_path": [
+        201
+      ]
+    },
+    {
+      "edge": 182,
+      "alternative_path": [
+        175
+      ]
+    },
+    {
+      "edge": 183,
+      "alternative_path": [
+        253
+      ]
+    },
+    {
+      "edge": 184,
+      "alternative_path": [
+        162
+      ]
+    },
+    {
+      "edge": 185,
+      "alternative_path": [
+        263
+      ]
+    },
+    {
+      "edge": 186,
+      "alternative_path": [
+        190
+      ]
+    },
+    {
+      "edge": 187,
+      "alternative_path": [
+        240
+      ]
+    },
+    {
+      "edge": 188,
+      "alternative_path": [
+        192
+      ]
+    },
+    {
+      "edge": 189,
+      "alternative_path": [
+        267
+      ]
+    },
+    {
+      "edge": 190,
+      "alternative_path": [
+        186
+      ]
+    },
+    {
+      "edge": 191,
+      "alternative_path": [
+        269
+      ]
+    },
+    {
+      "edge": 192,
+      "alternative_path": [
+        188
+      ]
+    },
+    {
+      "edge": 193,
+      "alternative_path": [
+        214
+      ]
+    },
+    {
+      "edge": 195,
+      "alternative_path": [
+        168
+      ]
+    },
+    {
+      "edge": 196,
+      "alternative_path": [
+        246
+      ]
+    },
+    {
+      "edge": 197,
+      "alternative_path": [
+        155
+      ]
+    },
+    {
+      "edge": 198,
+      "alternative_path": [
+        311
+      ]
+    },
+    {
+      "edge": 199,
+      "alternative_path": [
+        203
+      ]
+    },
+    {
+      "edge": 200,
+      "alternative_path": [
+        233
+      ]
+    },
+    {
+      "edge": 201,
+      "alternative_path": [
+        181
+      ]
+    },
+    {
+      "edge": 202,
+      "alternative_path": [
+        298
+      ]
+    },
+    {
+      "edge": 203,
+      "alternative_path": [
+        199
+      ]
+    },
+    {
+      "edge": 204,
+      "alternative_path": [
+        285
+      ]
+    },
+    {
+      "edge": 205,
+      "alternative_path": [
+        181
+      ]
+    },
+    {
+      "edge": 206,
+      "alternative_path": [
+        207
+      ]
+    },
+    {
+      "edge": 207,
+      "alternative_path": [
+        206
+      ]
+    },
+    {
+      "edge": 208,
+      "alternative_path": [
+        180
+      ]
+    },
+    {
+      "edge": 209,
+      "alternative_path": [
+        258
+      ]
+    },
+    {
+      "edge": 210,
+      "alternative_path": [
+        167
+      ]
+    },
+    {
+      "edge": 211,
+      "alternative_path": [
+        323
+      ]
+    },
+    {
+      "edge": 212,
+      "alternative_path": [
+        216
+      ]
+    },
+    {
+      "edge": 213,
+      "alternative_path": [
+        245
+      ]
+    },
+    {
+      "edge": 214,
+      "alternative_path": [
+        193
+      ]
+    },
+    {
+      "edge": 215,
+      "alternative_path": [
+        310
+      ]
+    },
+    {
+      "edge": 216,
+      "alternative_path": [
+        212
+      ]
+    },
+    {
+      "edge": 217,
+      "alternative_path": [
+        297
+      ]
+    },
+    {
+      "edge": 218,
+      "alternative_path": [
+        193
+      ]
+    },
+    {
+      "edge": 220,
+      "alternative_path": [
+        199
+      ]
+    },
+    {
+      "edge": 221,
+      "alternative_path": [
+        173
+      ]
+    },
+    {
+      "edge": 222,
+      "alternative_path": [
+        251
+      ]
+    },
+    {
+      "edge": 223,
+      "alternative_path": [
+        160
+      ]
+    },
+    {
+      "edge": 224,
+      "alternative_path": [
+        276
+      ]
+    },
+    {
+      "edge": 225,
+      "alternative_path": [
+        229
+      ]
+    },
+    {
+      "edge": 226,
+      "alternative_path": [
+        238
+      ]
+    },
+    {
+      "edge": 227,
+      "alternative_path": [
+        186
+      ]
+    },
+    {
+      "edge": 228,
+      "alternative_path": [
+        280
+      ]
+    },
+    {
+      "edge": 229,
+      "alternative_path": [
+        225
+      ]
+    },
+    {
+      "edge": 230,
+      "alternative_path": [
+        282
+      ]
+    },
+    {
+      "edge": 231,
+      "alternative_path": [
+        186
+      ]
+    },
+    {
+      "edge": 232,
+      "alternative_path": [
+        212
+      ]
+    },
+    {
+      "edge": 233,
+      "alternative_path": [
+        200
+      ]
+    },
+    {
+      "edge": 234,
+      "alternative_path": [
+        174
+      ]
+    },
+    {
+      "edge": 235,
+      "alternative_path": [
+        252
+      ]
+    },
+    {
+      "edge": 236,
+      "alternative_path": [
+        161
+      ]
+    },
+    {
+      "edge": 237,
+      "alternative_path": [
+        317
+      ]
+    },
+    {
+      "edge": 238,
+      "alternative_path": [
+        226
+      ]
+    },
+    {
+      "edge": 239,
+      "alternative_path": [
+        155,
+        25,
+        70
+      ]
+    },
+    {
+      "edge": 240,
+      "alternative_path": [
+        187
+      ]
+    },
+    {
+      "edge": 241,
+      "alternative_path": [
+        304
+      ]
+    },
+    {
+      "edge": 242,
+      "alternative_path": [
+        226
+      ]
+    },
+    {
+      "edge": 243,
+      "alternative_path": [
+        291
+      ]
+    },
+    {
+      "edge": 244,
+      "alternative_path": [
+        187
+      ]
+    },
+    {
+      "edge": 245,
+      "alternative_path": [
+        213
+      ]
+    },
+    {
+      "edge": 246,
+      "alternative_path": [
+        196
+      ]
+    },
+    {
+      "edge": 247,
+      "alternative_path": [
+        170
+      ]
+    },
+    {
+      "edge": 249,
+      "alternative_path": [
+        157
+      ]
+    },
+    {
+      "edge": 250,
+      "alternative_path": [
+        313
+      ]
+    },
+    {
+      "edge": 251,
+      "alternative_path": [
+        222
+      ]
+    },
+    {
+      "edge": 252,
+      "alternative_path": [
+        235
+      ]
+    },
+    {
+      "edge": 253,
+      "alternative_path": [
+        183
+      ]
+    },
+    {
+      "edge": 254,
+      "alternative_path": [
+        300
+      ]
+    },
+    {
+      "edge": 255,
+      "alternative_path": [
+        222
+      ]
+    },
+    {
+      "edge": 256,
+      "alternative_path": [
+        287
+      ]
+    },
+    {
+      "edge": 257,
+      "alternative_path": [
+        183
+      ]
+    },
+    {
+      "edge": 258,
+      "alternative_path": [
+        209
+      ]
+    },
+    {
+      "edge": 259,
+      "alternative_path": [
+        181
+      ]
+    },
+    {
+      "edge": 260,
+      "alternative_path": [
+        175
+      ]
+    },
+    {
+      "edge": 261,
+      "alternative_path": [
+        183
+      ]
+    },
+    {
+      "edge": 262,
+      "alternative_path": [
+        162
+      ]
+    },
+    {
+      "edge": 263,
+      "alternative_path": [
+        185
+      ]
+    },
+    {
+      "edge": 264,
+      "alternative_path": [
+        186
+      ]
+    },
+    {
+      "edge": 265,
+      "alternative_path": [
+        187
+      ]
+    },
+    {
+      "edge": 266,
+      "alternative_path": [
+        188
+      ]
+    },
+    {
+      "edge": 267,
+      "alternative_path": [
+        189
+      ]
+    },
+    {
+      "edge": 268,
+      "alternative_path": [
+        186
+      ]
+    },
+    {
+      "edge": 269,
+      "alternative_path": [
+        191
+      ]
+    },
+    {
+      "edge": 270,
+      "alternative_path": [
+        188
+      ]
+    },
+    {
+      "edge": 271,
+      "alternative_path": [
+        193
+      ]
+    },
+    {
+      "edge": 272,
+      "alternative_path": [
+        199
+      ]
+    },
+    {
+      "edge": 273,
+      "alternative_path": [
+        173
+      ]
+    },
+    {
+      "edge": 274,
+      "alternative_path": [
+        222
+      ]
+    },
+    {
+      "edge": 275,
+      "alternative_path": [
+        160
+      ]
+    },
+    {
+      "edge": 276,
+      "alternative_path": [
+        224
+      ]
+    },
+    {
+      "edge": 277,
+      "alternative_path": [
+        225
+      ]
+    },
+    {
+      "edge": 278,
+      "alternative_path": [
+        226
+      ]
+    },
+    {
+      "edge": 279,
+      "alternative_path": [
+        186
+      ]
+    },
+    {
+      "edge": 280,
+      "alternative_path": [
+        228
+      ]
+    },
+    {
+      "edge": 281,
+      "alternative_path": [
+        225
+      ]
+    },
+    {
+      "edge": 282,
+      "alternative_path": [
+        230
+      ]
+    },
+    {
+      "edge": 283,
+      "alternative_path": [
+        186
+      ]
+    },
+    {
+      "edge": 284,
+      "alternative_path": [
+        212
+      ]
+    },
+    {
+      "edge": 285,
+      "alternative_path": [
+        204
+      ]
+    },
+    {
+      "edge": 286,
+      "alternative_path": [
+        178
+      ]
+    },
+    {
+      "edge": 287,
+      "alternative_path": [
+        256
+      ]
+    },
+    {
+      "edge": 288,
+      "alternative_path": [
+        165
+      ]
+    },
+    {
+      "edge": 289,
+      "alternative_path": [
+        321
+      ]
+    },
+    {
+      "edge": 290,
+      "alternative_path": [
+        230
+      ]
+    },
+    {
+      "edge": 291,
+      "alternative_path": [
+        243
+      ]
+    },
+    {
+      "edge": 292,
+      "alternative_path": [
+        191
+      ]
+    },
+    {
+      "edge": 293,
+      "alternative_path": [
+        308
+      ]
+    },
+    {
+      "edge": 294,
+      "alternative_path": [
+        230
+      ]
+    },
+    {
+      "edge": 295,
+      "alternative_path": [
+        155,
+        25,
+        87
+      ]
+    },
+    {
+      "edge": 296,
+      "alternative_path": [
+        191
+      ]
+    },
+    {
+      "edge": 297,
+      "alternative_path": [
+        217
+      ]
+    },
+    {
+      "edge": 298,
+      "alternative_path": [
+        202
+      ]
+    },
+    {
+      "edge": 299,
+      "alternative_path": [
+        176
+      ]
+    },
+    {
+      "edge": 300,
+      "alternative_path": [
+        254
+      ]
+    },
+    {
+      "edge": 301,
+      "alternative_path": [
+        163
+      ]
+    },
+    {
+      "edge": 302,
+      "alternative_path": [
+        319
+      ]
+    },
+    {
+      "edge": 303,
+      "alternative_path": [
+        228
+      ]
+    },
+    {
+      "edge": 304,
+      "alternative_path": [
+        241
+      ]
+    },
+    {
+      "edge": 305,
+      "alternative_path": [
+        189
+      ]
+    },
+    {
+      "edge": 307,
+      "alternative_path": [
+        228
+      ]
+    },
+    {
+      "edge": 308,
+      "alternative_path": [
+        293
+      ]
+    },
+    {
+      "edge": 309,
+      "alternative_path": [
+        189
+      ]
+    },
+    {
+      "edge": 310,
+      "alternative_path": [
+        215
+      ]
+    },
+    {
+      "edge": 311,
+      "alternative_path": [
+        198
+      ]
+    },
+    {
+      "edge": 312,
+      "alternative_path": [
+        172
+      ]
+    },
+    {
+      "edge": 313,
+      "alternative_path": [
+        250
+      ]
+    },
+    {
+      "edge": 314,
+      "alternative_path": [
+        159
+      ]
+    },
+    {
+      "edge": 316,
+      "alternative_path": [
+        224
+      ]
+    },
+    {
+      "edge": 317,
+      "alternative_path": [
+        237
+      ]
+    },
+    {
+      "edge": 318,
+      "alternative_path": [
+        185
+      ]
+    },
+    {
+      "edge": 319,
+      "alternative_path": [
+        302
+      ]
+    },
+    {
+      "edge": 320,
+      "alternative_path": [
+        224
+      ]
+    },
+    {
+      "edge": 321,
+      "alternative_path": [
+        289
+      ]
+    },
+    {
+      "edge": 322,
+      "alternative_path": [
+        185
+      ]
+    },
+    {
+      "edge": 323,
+      "alternative_path": [
+        211
+      ]
+    }
+  ]
+}

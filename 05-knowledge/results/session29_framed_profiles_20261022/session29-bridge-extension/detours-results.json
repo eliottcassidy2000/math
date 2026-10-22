@@ -1,0 +1,146 @@
+[
+  {
+    "old_edge": 169,
+    "tile": 689,
+    "target_mask": 34051591637519,
+    "target_to_U_path": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      0
+    ],
+    "U_mask": 23708219209456,
+    "U_scc_key": [
+      [
+        4,
+        4
+      ],
+      [
+        6,
+        81
+      ]
+    ],
+    "U_to_V_path": [
+      1,
+      2,
+      3,
+      4,
+      7,
+      5,
+      6,
+      8,
+      9,
+      0
+    ],
+    "V_mask": 30137802689039,
+    "V_address": [
+      335,
+      842
+    ],
+    "V_to_canonical_permutation": [
+      8,
+      5,
+      7,
+      6,
+      9,
+      1,
+      2,
+      4,
+      3,
+      0
+    ],
+    "V_converse": true,
+    "boundary_path_normalized": [
+      [
+        689,
+        721
+      ]
+    ],
+    "boundary_path_actual": [
+      [
+        689,
+        661
+      ]
+    ],
+    "alternative_source_classes": 2,
+    "neighbor_paths_tested": 14
+  },
+  {
+    "old_edge": 194,
+    "tile": 721,
+    "target_mask": 35013664310799,
+    "target_to_U_path": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      0
+    ],
+    "U_mask": 22746146536176,
+    "U_scc_key": [
+      [
+        4,
+        4
+      ],
+      [
+        6,
+        81
+      ]
+    ],
+    "U_to_V_path": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      5,
+      8,
+      9,
+      0
+    ],
+    "V_mask": 30651051279887,
+    "V_address": [
+      335,
+      842
+    ],
+    "V_to_canonical_permutation": [
+      0,
+      3,
+      2,
+      1,
+      4,
+      5,
+      9,
+      7,
+      6,
+      8
+    ],
+    "V_converse": false,
+    "boundary_path_normalized": [
+      [
+        689,
+        721
+      ]
+    ],
+    "boundary_path_actual": [
+      [
+        689,
+        661
+      ]
+    ],
+    "alternative_source_classes": 2,
+    "neighbor_paths_tested": 13
+  }
+]
