@@ -12,8 +12,10 @@
 (E) 'E8 mass kernel' (e8.pdf): zeta_E8(10) = 240 * 2^-5 zeta(5) zeta(2) = (5/4) pi^2 zeta(5) (classical), checked by a
     direct convergent sum; and the correct Leech analogue at s = 10 (only by analytic continuation, the series
     converges for s > 24): zeta_Leech(s) = (65520/691) 2^(-s/2) [zeta(s/2) zeta(s/2 - 11) - L(Delta, s/2)], so
-    zeta_Leech(10) = -(65520/691) 2^-5 L(Delta, 5) because zeta(-6) = 0.  L(Delta, s) by the rapidly convergent
-    incomplete-gamma formula, validated against the absolutely convergent Dirichlet series at s = 10.
+    zeta_Leech(10) = -(65520/691) 2^-5 L(Delta, 5) because zeta(-6) = 0.  Inside the convergent range the 'odd zeta'
+    Leech value the PDF anticipates carries an irremovable cusp term: zeta_Leech(26) = (65520/691) 2^-13 [zeta(13)
+    zeta(2) - L(Delta, 13)], checked against the direct shell sum.  L(Delta, s) by the rapidly convergent
+    incomplete-gamma formula, validated against the absolutely convergent Dirichlet series at s = 10 and s = 13.
 The 'Bit Depth' trace claim of e8.pdf is tested separately in bitdepth_trace_test.py.  Prints ALL CHECKS PASSED."""
 import math
 from fractions import Fraction
@@ -131,6 +133,20 @@ check(abs(L_delta(10) - direct10) < mpmath.mpf(10) ** -10, f'L(Delta, 10) by the
 L5 = L_delta(5)
 zl = -mpmath.mpf(65520) / 691 * mpmath.mpf(2) ** -5 * L5
 check(abs(mpmath.zeta(-6)) < mpmath.mpf(10) ** -30 and L5 > 0, f'L(Delta, 5) = {mpmath.nstr(L5, 20)}; zeta(-6) = 0, so zeta_Leech(10) = -(65520/691) 2^-5 L(Delta, 5) = {mpmath.nstr(zl, 20)} (analytic continuation)')
+# inside the convergent range the 'odd zeta' Leech value carries an irremovable cusp term: s = 26
+L13 = L_delta(13)
+direct13 = mpmath.fsum(mpmath.mpf(tau3000[n]) / mpmath.mpf(n) ** 13 for n in range(1, 3001))
+z26 = mpmath.mpf(65520) / 691 * mpmath.mpf(2) ** -13 * (mpmath.zeta(13) * mpmath.zeta(2) - L13)
+# direct shell sum sum_n a(n) (2n)^-13 with a(n) = (65520/691)(sigma_11(n) - tau(n)), plus the mean-value tail
+M2 = 3000
+sig11 = [0] * (M2 + 1)
+for d in range(1, M2 + 1):
+    for m in range(d, M2 + 1, d):
+        sig11[m] += d ** 11
+shells = mpmath.fsum(mpmath.mpf(65520 * (sig11[k] - tau3000[k])) / 691 / (2 * mpmath.mpf(k)) ** 13 for k in range(1, M2 + 1))
+tail26 = mpmath.mpf(65520) / 691 * mpmath.mpf(2) ** -13 * mpmath.zeta(12) / M2   # mean sigma_11(n) = zeta(12) n^11; sum_{n > M} n^-2 ~ 1/M
+check(abs(L13 - direct13) < mpmath.mpf(10) ** -12 and abs(shells + tail26 - z26) < 1e-5 * z26,
+      f'zeta_Leech(26) = (65520/691) 2^-13 [zeta(13) zeta(2) - L(Delta, 13)] = {mpmath.nstr(z26, 15)} (shell sum {mpmath.nstr(shells + tail26, 10)}); L(Delta, 13) = {mpmath.nstr(L13, 15)} is not removable')
 
 print()
 print('ALL CHECKS PASSED' if not FAIL else f'FAILED: {FAIL}')
