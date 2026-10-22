@@ -336,3 +336,61 @@ hole vertices stay at sqrt 2, and the k affine nodes move away.
 **Levels.** The deep hole is the level-0 Weyl point rho/h (Kostant's principal element). The Fricke point is the
 level-1 Weyl point (rho^ + Lambda_0)/(1 + h), of Kac type (2;1,...,1), where the level-1 WZW S-matrix lives. The
 swap holds at levels 0 and 1 and fails at the next shell.
+
+## 7. The cusp criterion and the 2-descent family (THM-4760)
+
+**The criterion (PROVED).** For a type-0 point v of order e, Z_v - 24 is the Gamma_0(e)+e Hauptmodul iff four
+conditions hold:
+- (0') rationality;
+- (i) a unique vector of norm 2 - 2/e in Lambda + v;
+- (ii) exactly 24 of norm 2;
+- (iii) at each cusp 1/c (1 < c < e), the twined shallow vectors of Lambda + cv cancel, i.e. Phi_c divides their
+  residue polynomial.
+
+Rationality is certified through q^1 by vector-valued Sturm on the theta vector of M = {x : x.v in Z}, and refuted by
+a Galois-conjugate coset with a different low-norm profile. The proof is the principal-part argument with the
+Fricke constant n_2 - 24 (fricke_cusp_certificate.py).
+
+**Verdicts on the cusps adjacent to the deep-hole cusps.**
+- Shell 0: all 23 (h+1)-points pass. This also supplies the rationality input that the THM-4759 (10) proof left
+  implicit.
+- Shell 1: exactly seven classes pass, the D-type components of A1^24, D4^6, D6^4, D8^3, D10E7^2, D12^2 and D16E8.
+  Their twinings are 4A, 8A, 12H, 16C, 20F, 24I and 32A, with the names certified by Ligozat orders and
+  W_e-symmetry of the OEIS eta quotients (fricke_monster_classes.py).
+- Shell 2 of all types, and shells 2-8 of the h >= 16 types: nothing passes. This covers every missing genus-zero
+  Fricke level from 18 to 50.
+
+**Why D.** In the seven D-type points the only shallow multiple is 2v, with a pair +-mu of opposite eigenvalue, which
+cancels the pole at 1/2. The cancellation holds for all nine lattices with -1 in W. What fails for E7, E8 and D24 is
+rationality: some d v has a shallower coset (E8, d = 3: 15/8 < 31/16), and the fields contain Q(sqrt 5), Q(sqrt 2)
+and Q(sqrt 3).
+
+**Doubling = Borcherds' 2-descent (fricke_cusp_orbifolds.py).** For the nine lattices with -1 in W, the orbifold of
+V_Lambda at 2v is Borcherds' source N_1, with h = 2h_1 + 2:
+
+| N | orbifold of 2v |
+|---|---|
+| A1^24 | Lambda |
+| D4^6 | A1^24 |
+| D6^4 | A3^8 |
+| D8^3 | D4^6 |
+| D10E7^2 | A7^2D5^2 |
+| D12^2 | D6^4 |
+| D16E8, E8^3 | D8^3 |
+| D24 | D12^2 |
+
+For the other even h, 2v is the (h/2+1)-point of the lattice of Coxeter number h/2. Its single shallow vector leaves a
+pole.
+
+**Scale.** On K = h + 2 the Borcherds relation is K -> 2K. The Fricke descent H -> pH + 1 is multiplication by p on
+L_p = (p-1)H + 1, the same conjugacy that turns 3x + 1 into 3x. The towers are:
+- p = 2: Lambda -> A1^24 -> D4^6 -> D8^3 -> D16E8, at K = 2 -> 4 -> 8 -> 16 -> 32;
+- p = 3: Lambda -> A2^12 -> E6^4, at L_3 = 3 -> 9 -> 27;
+- p = 5: Lambda -> A4^6 -> E8^3, at L_5 = 5 -> 25 -> 125.
+
+The exact relation is H = pH' + 1; the prime-power towers are NUMEROLOGY beyond it. The prompt's 27 is E6^4 on the
+3-scale.
+
+**Conjecture (HYP-9368 (B')).** The 30 classes are all the Fricke Hauptmodul twinings of V_Lambda by translations,
+realising the 23 orders 3-17, 19, 20, 23, 24, 26, 31, 32 and 47. None exists at 18, 21, 25, 27, 29, 35, 36, 39, 41,
+49, 50, 59 or 71.

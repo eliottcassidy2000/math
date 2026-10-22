@@ -1,0 +1,8 @@
+  ok   4A   e =  4: Ligozat True; cusp orders {1: '-1', 2: '2', 4: '-1'}; W_e-symmetric True; E - 24 = q^-1 + [276, 2048, 11202, 49152] (OEIS A107080 True, twining [276, 2048] True)
+  ok   8A   e =  8: Ligozat True; cusp orders {1: '-1', 2: '1', 4: '1', 8: '-1'}; W_e-symmetric True; E - 8 = q^-1 + [36, 128, 386, 1024] (OEIS A007265 True, twining [36, 128] True)
+  ok   12H  e = 12: Ligozat True; cusp orders {1: '-1', 2: '0', 3: '1', 4: '1', 6: '0', 12: '-1'}; W_e-symmetric True; E - 4 = q^-1 + [14, 36, 85, 180] (OEIS A058486 True, twining [14, 36] True)
+  ok   16C  e = 16: Ligozat True; cusp orders {1: '-1', 2: '0', 4: '1', 8: '0', 16: '-1'}; W_e-symmetric True; E - 2 = q^-1 + [8, 16, 34, 64] (OEIS A058516 True, twining [8, 16] True)
+  ok   20F  e = 20: Ligozat True; cusp orders {1: '-1', 2: '0', 4: '1', 5: '1', 10: '0', 20: '-1'}; W_e-symmetric True; E - 2 = q^-1 + [5, 10, 18, 30] (OEIS A058555 True, twining [5, 10] True)
+  ok   24I  e = 24: Ligozat True; cusp orders {1: '-1', 2: '0', 3: '0', 4: '1', 6: '1', 8: '0', 12: '0', 24: '-1'}; W_e-symmetric True; E - 1 = q^-1 + [4, 6, 11, 18] (OEIS A058579 True, twining [4, 6] True)
+  ok   32A  e = 32: Ligozat True; cusp orders {1: '-1', 2: '1', 4: '0', 8: '0', 16: '1', 32: '-1'}; W_e-symmetric True; E - 2 = q^-1 + [2, 4, 6, 8] (OEIS A058629 True, twining [2, 4] True)
+ALL CHECKS PASSED

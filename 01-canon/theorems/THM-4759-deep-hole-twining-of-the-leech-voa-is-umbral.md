@@ -30,7 +30,7 @@ status: >
   - (10) The (h+1)-points are covered as follows.
     - VERIFIED for all 23 types: the unique minimal vector of norm 2 - 2/(h+1), the 24 norm-2 vectors and the deep
       proper multiples (leech_h_plus_one.py, fricke_h_plus_one.py), and the nudge geometry (fricke_nudge.py).
-    - PROVED from those: the Fricke twining.
+    - PROVED from those and the rationality certificate of THM-4760 (3): the Fricke twining.
     - PROVED: the height equidistribution mod h+1.
   - (11) The Fricke swap theorem is PROVED by the same vector-valued Sturm certificate as THM-4758, run on the 23 pairs
     (rho, z'') (swap_fricke_proof.py). It also supplies the Leech-side facts of (10) from the N side.
@@ -77,6 +77,7 @@ scripts:
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_shell_test.py (+ .out) (shell-1 points: Fricke-invariant twining for the seven D-types despite shallow multiples)
 related:
   - THM-4758 (swap theorem and deep-hole theta identity)
+  - THM-4760 (cusp criterion for Fricke twinings; rationality input of (10); the D-type shell-1 family)
   - HYP-9363 (proved in THM-4758)
   - HYP-9368 (genus-zero inner automorphisms of V_Lambda: deep holes and Fricke points)
 ---
@@ -397,14 +398,17 @@ over the shells of N + ρ_N/h. Shell 0 gives m = h + 1. The next shell, m = h + 
 types (swap_shell_test.py): the coset theta series already differ below norm 2. So the swap holds
 exactly for m = h and m = h + 1.
 
-*But the Fricke twining extends one shell further for the D-types.* The shell-1 Leech points (m = h + 2) still have
-a unique minimal vector at the Fricke norm 2 − 2/(h + 2). For the seven D-type lattices A1²⁴ = D2¹², D4⁶, D6⁴, D8³,
-D10E7², D12² and D16E8, their twining is Fricke-invariant through q², and the series are 4A, 8A, 12H, 16C, ... at
-orders 4, 8, 12, 16, 20, 24 and 32.
+*But the Fricke twining extends one shell further for the D-types (now THM-4760).* The shell-1 Leech points
+(m = h + 2) still have a unique minimal vector at the Fricke norm 2 − 2/(h + 2). For the D-type components of the
+seven lattices A1²⁴ = D2¹², D4⁶, D6⁴, D8³, D10E7², D12² and D16E8, the twining is the Fricke Hauptmodul. The classes
+are 4A, 8A, 12H, 16C, 20F, 24I and 32A, at orders 4, 8, 12, 16, 20, 24 and 32. This is PROVED in THM-4760 by a cusp
+criterion with Ligozat certificates for the names.
 
-In each case some proper multiple is shallow. For A1²⁴, 2c_w is λ/2 with |λ|² = 4, with two minimal vectors ±λ/2
-whose twined contributions cancel. These points are not strict Fricke points and not swap pairs. They are the (B)
-family of HYP-9368, and they refute the first registered form of that hypothesis (fricke_shell_test.py).
+In each case 2c_w is shallow. For A1²⁴, 2c_w is λ/2 with |λ|² = 4, with two minimal vectors ±λ/2 whose twined
+contributions cancel. In general the orbifold of 2c_w is Borcherds' 2-descent source.
+
+These points are not strict Fricke points and not swap pairs. They are the (B) family of HYP-9368, and they refute
+the first registered form of that hypothesis (fricke_shell_test.py).
 
 **(6) The Monster corner (CITED).** For X ≠ A24:
 - π^X is the Frame shape of a fixed-point-free element g_X ∈ Co_0, so Z_{V_Λ}(ĝ_X) = 1/η_{π^X} = T^X as well (CDH
@@ -550,8 +554,15 @@ multiples, through q³ for all 23 types (fricke_h_plus_one.out; through q² in f
 
 *On the N side,* weyl_h_plus_one.py enumerates N + ρ_N/(h+1) and the (h+1)-neighbour, which is rootless and hence Λ.
 
-*Twining.* The Fricke identity follows from the principal-part argument of (7). Its inputs are the unique shallow
-vector and the deep proper multiples, both verified.
+*Twining.* The Fricke identity follows from the principal-part argument of (7). It has three inputs:
+- the unique shallow vector (verified);
+- the deep proper multiples (verified);
+- the rationality of Θ_Λ^{[c″]}, so that F is Γ_0(e)-invariant.
+
+The first version of this proof left the third input implicit; it is not automatic. The E8 shell-1 points pass the
+first two conditions but are irrational (THM-4760 (4)). For the 23 (h+1)-points rationality is certified by
+THM-4760 (2)–(3): vector-valued Sturm on the theta vector of {x : x·c″ ∈ Z}. For the multiples of (7) it follows
+from (3), since Θ^{[c]} = η²⁴(T^X + 24 + k) is rational.
 
 *Root-lattice part of uniqueness.* ρ/(h+1) has Kac coordinates (2; 1, …, 1), so it lies strictly inside the
 fundamental alcove: θ(ρ/(h+1)) = (h − 1)/(h + 1) < 1. That alcove lies in the Voronoi cell of 0 in Q, so 0 is the

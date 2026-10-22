@@ -1,0 +1,53 @@
+       a1^24: shell 1 has 98304 vectors
+       a1^24 m=4: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant True: x4; Z = [1, 24, 276, 2048]
+       a2^12: shell 1 has 8748 vectors
+       a2^12 m=5: unique-Fricke-norm True, norm-2 23, multiples deep True, Fricke-invariant False: x4; Z = [1, 24, 123, 825]
+       a3^8: shell 1 has 2048 vectors
+       a3^8 m=6: unique-Fricke-norm True, norm-2 23, multiples deep False, Fricke-invariant False: x4; Z = [1, 24, 69, 400]
+       a4^6: shell 1 has 750 vectors
+       a4^6 m=7: unique-Fricke-norm True, norm-2 23, multiples deep True, Fricke-invariant False: x4; Z = [1, 24, 43, 226]
+       a5^4d4: shell 1 has 360 vectors
+       a5^4d4 m=8: unique-Fricke-norm True, norm-2 23, multiples deep False, Fricke-invariant False: x1; Z = [1, 24, 29, 138]
+       a5^4d4 m=8: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant False: x3; Z = [1, 24, 35, 141]
+       d4^6: shell 1 has 384 vectors
+       d4^6 m=8: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant True: x4; Z = [1, 24, 36, 128]
+       a6^4: shell 1 has 196 vectors
+       a6^4 m=9: unique-Fricke-norm True, norm-2 23, multiples deep True, Fricke-invariant False: x4; Z = [1, 24, 21, 105]
+       a7^2d5^2: shell 1 has 128 vectors
+       a7^2d5^2 m=10: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant False: x4; Z = [1, 24, 20, 74]
+       a8^3: shell 1 has 81 vectors
+       a8^3 m=11: unique-Fricke-norm True, norm-2 23, multiples deep True, Fricke-invariant False: x4; Z = [1, 24, 12, 60]
+       a9^2d6: shell 1 has 60 vectors
+       a9^2d6 m=12: unique-Fricke-norm True, norm-2 23, multiples deep False, Fricke-invariant False: x4; Z = [1, 24, 10, 53]
+       d6^4: shell 1 has 64 vectors
+       d6^4 m=12: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant True: x4; Z = [1, 24, 14, 36]
+       a11d7e6: shell 1 has 36 vectors
+       a11d7e6 m=14: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant False: x1; Z = [1, 24, 10, 29]
+       a11d7e6 m=14: unique-Fricke-norm True, norm-2 23, multiples deep False, Fricke-invariant False: x2; Z = [1, 24, 7, 35]
+       a11d7e6 m=14: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant False: x1; Z = [1, 24, 9, 36]
+       e6^4: shell 1 has 36 vectors
+       e6^4 m=14: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant False: x4; Z = [1, 24, 10, 29]
+       a12^2: shell 1 has 26 vectors
+       a12^2 m=15: unique-Fricke-norm True, norm-2 23, multiples deep True, Fricke-invariant False: x4; Z = [1, 24, 5, 24]
+       d8^3: shell 1 has 24 vectors
+       d8^3 m=16: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant True: x4; Z = [1, 24, 8, 16]
+       a15d9: shell 1 has 16 vectors
+       a15d9 m=18: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant False: x3; Z = [1, 24, 6, 19]
+       a15d9 m=18: unique-Fricke-norm True, norm-2 23, multiples deep False, Fricke-invariant False: x1; Z = [1, 24, 3, 16]
+       a17e7: shell 1 has 12 vectors
+       a17e7 m=20: unique-Fricke-norm True, norm-2 23, multiples deep False, Fricke-invariant False: x4; Z = [1, 24, 3, 24]
+       d10e7^2: shell 1 has 12 vectors
+       d10e7^2 m=20: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant False: x3; Z = [1, 24, 6, 6]
+       d10e7^2 m=20: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant True: x1; Z = [1, 24, 5, 10]
+       d12^2: shell 1 has 8 vectors
+       d12^2 m=24: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant True: x4; Z = [1, 24, 4, 6]
+       a24: shell 1 has 5 vectors
+       a24 m=27: unique-Fricke-norm True, norm-2 23, multiples deep True, Fricke-invariant False: x4; Z = [1, 24, 0, -1]
+       d16e8: shell 1 has 4 vectors
+       d16e8 m=32: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant True: x2; Z = [1, 24, 2, 4]
+       d16e8 m=32: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant False: x2; Z = [1, 24, 3, -2]
+       e8^3: shell 1 has 3 vectors
+       e8^3 m=32: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant False: x3; Z = [1, 24, 3, -2]
+       d24: shell 1 has 2 vectors
+       d24 m=48: unique-Fricke-norm True, norm-2 24, multiples deep False, Fricke-invariant False: x2; Z = [1, 24, 1, -5]
+ALL CHECKS PASSED
