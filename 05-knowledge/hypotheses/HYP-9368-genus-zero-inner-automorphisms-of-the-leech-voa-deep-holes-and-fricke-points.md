@@ -111,8 +111,9 @@ X_0^+(48) not having genus zero.
 ## Evidence for (A)
 
 - **Order 2.** Impossible: v ≡ −v pairs the minimal vectors.
-- **Order 3.** One class, the M24-point (2²⁴)/(3√8). This rests on the two-orbit decomposition of the norm-12 vectors
-  (order3_fricke_census.py).
+- **Order 3.** One class, the M24-point (2²⁴)/(3√8). This rests on the two-orbit decomposition of the norm-12 vectors,
+  which is classical: orbits O6a and O6b, ATLAS p. 181; see Sun–Wang, arXiv 2111.10999, §2.3, whose Lemma 2.11 gives
+  the unique minimal vector of the class (order3_fricke_census.py).
 - **Order 4, with 2v deep.** One invariant in 2046 samples, that of the A2¹² point (order4_fricke_census.py).
 - **Order 6.** All 1399 samples have neighbour A4⁶ (order6_fricke_census.py).
 - **Prime orders.** The sketch below.
@@ -129,7 +130,8 @@ and (B) agree here.
 3. **The dual automorphism.** τ = e^{2πiu(0)} with u ∈ (1/p)N′. It is regular, since its fixed lattice Λ_0 is
    rootless.
 4. **Kac coordinates.** A regular element of order h + 1 has Kac coordinates 2 at one special node and 1 elsewhere.
-   Ω permutes the special nodes transitively, so u_i ∈ W·(ρ_i/p) + P_i.
+   Ω permutes the special nodes transitively, so u_i ∈ W·(ρ_i/p) + P_i. This is Kac, LNM 848 (1981), Thm 1: the
+   regular elements of order h + 1 form one conjugacy class, credited to Macdonald (1972).
 5. **Glue.** gcd(p, |P/N′|) = 1, so u ≡ w(ρ′/p) mod N′.
 6. **Duality.** Orbifold duality recovers (V_Λ, g) from (V_{N′}, τ).
 
