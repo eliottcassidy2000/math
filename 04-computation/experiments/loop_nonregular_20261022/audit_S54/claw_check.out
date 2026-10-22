@@ -1,0 +1,44 @@
+class (2, 0): claw cores selected by my predicate: [(((0, 0), (0, 1), (1, 2), (1, 3), (2, 2), (3, 3)), 48)]
+class (1, 1): claw cores selected by my predicate: [(((0, 0), (0, 1), (1, 2), (1, 3), (2, 2)), 8)]
+class (0, 2): claw cores selected by my predicate: [(((0, 0), (0, 1), (1, 2), (1, 3)), 4)]
+class (-1, 3): claw cores selected by my predicate: [(((0, 1), (0, 2), (0, 3)), 6)]
+class (1, 0): two-arm cores: [(((0, 0), (0, 1), (1, 1)), 8)]
+class (0, 1): two-arm cores: [(((0, 0), (0, 1)), 2)]
+class (-1, 2): two-arm cores: [(((0, 1),), 2)]
+ar8_classes.txt[0] (n=8, ||S1||^2=8):
+   claw cores per class (2, 0): 1 core(s) +1.186681e-04, (1, 1): 1 core(s) -1.500063e-03, (0, 2): 1 core(s) +6.317685e-03, (-1, 3): 1 core(s) -8.864573e-03
+   claw sum -3.928282576493e-03  Y(u) -3.928282576493e-03  diff -8.7e-18  | with Q := M instead: diff -9.9e-04
+   two-arm cores (1, 0): 1 -8.599718e-03, (0, 1): 1 +7.398900e-02, (-1, 2): 1 -1.593045e-01; sum -9.391524014141e-02  -u^T G u -9.391524014141e-02  diff +5.6e-17
+ar8_classes.txt[7] (n=8, ||S1||^2=8):
+   claw cores per class (2, 0): 1 core(s) +7.203562e-05, (1, 1): 1 core(s) -9.585066e-04, (0, 2): 1 core(s) +4.247709e-03, (-1, 3): 1 core(s) -6.269454e-03
+   claw sum -2.908215399133e-03  Y(u) -2.908215399133e-03  diff -1.0e-17  | with Q := M instead: diff -7.4e-04
+   two-arm cores (1, 0): 1 -7.086172e-03, (0, 1): 1 +6.215898e-02, (-1, 2): 1 -1.364823e-01; sum -8.140946909874e-02  -u^T G u -8.140946909874e-02  diff -9.7e-17
+ar10_classes.txt[0] (n=10, ||S1||^2=10):
+   claw cores per class (2, 0): 1 core(s) +2.149196e-05, (1, 1): 1 core(s) -3.409889e-04, (0, 2): 1 core(s) +1.803030e-03, (-1, 3): 1 core(s) -3.177314e-03
+   claw sum -1.693781005373e-03  Y(u) -1.693781005373e-03  diff -4.1e-18  | with Q := M instead: diff -4.4e-04
+   two-arm cores (1, 0): 1 -3.758422e-03, (0, 1): 1 +4.045462e-02, (-1, 2): 1 -1.089669e-01; sum -7.227069564982e-02  -u^T G u -7.227069564982e-02  diff -5.6e-17
+ar10_classes.txt[7] (n=10, ||S1||^2=10):
+   claw cores per class (2, 0): 1 core(s) +2.338973e-05, (1, 1): 1 core(s) -3.777147e-04, (0, 2): 1 core(s) +2.033475e-03, (-1, 3): 1 core(s) -3.649545e-03
+   claw sum -1.970394675911e-03  Y(u) -1.970394675911e-03  diff +7.8e-18  | with Q := M instead: diff -2.6e-04
+   two-arm cores (1, 0): 1 -4.101368e-03, (0, 1): 1 +4.377773e-02, (-1, 2): 1 -1.168788e-01; sum -7.720243963781e-02  -u^T G u -7.720243963781e-02  diff +2.8e-17
+uniform random 7 (n=7, ||S1||^2=16):
+   claw cores per class (2, 0): 1 core(s) +1.361778e-03, (1, 1): 1 core(s) -1.561673e-02, (0, 2): 1 core(s) +5.970444e-02, (-1, 3): 1 core(s) -7.609529e-02
+   claw sum -3.064579552736e-02  Y(u) -3.064579552736e-02  diff +4.2e-17  | with Q := M instead: diff -4.5e-03
+   two-arm cores (1, 0): 1 -2.484126e-02, (0, 1): 1 +1.903026e-01, (-1, 2): 1 -3.645751e-01; sum -1.991138075578e-01  -u^T G u -1.991138075578e-01  diff -2.5e-16
+uniform random 9 (n=9, ||S1||^2=48):
+   claw cores per class (2, 0): 1 core(s) +1.427809e-03, (1, 1): 1 core(s) -2.066573e-02, (0, 2): 1 core(s) +9.970347e-02, (-1, 3): 1 core(s) -1.603425e-01
+   claw sum -7.987698250319e-02  Y(u) -7.987698250319e-02  diff -1.1e-16  | with Q := M instead: diff -2.4e-02
+   two-arm cores (1, 0): 1 -3.274890e-02, (0, 1): 1 +3.158833e-01, (-1, 2): 1 -7.617280e-01; sum -4.785935338537e-01  -u^T G u -4.785935338537e-01  diff +0.0e+00
+uniform random 12 (n=12, ||S1||^2=132):
+   claw cores per class (2, 0): 1 core(s) +1.074547e-03, (1, 1): 1 core(s) -2.063837e-02, (0, 2): 1 core(s) +1.321317e-01, (-1, 3): 1 core(s) -2.819810e-01
+   claw sum -1.694131518125e-01  Y(u) -1.694131518125e-01  diff +5.6e-17  | with Q := M instead: diff -3.9e-02
+   two-arm cores (1, 0): 1 -2.590137e-02, (0, 1): 1 +3.316358e-01, (-1, 2): 1 -1.061570e+00; sum -7.558355925042e-01  -u^T G u -7.558355925042e-01  diff -1.1e-16
+transitive 6 (n=6, ||S1||^2=70):
+   claw cores per class (2, 0): 1 core(s) +1.494998e-01, (1, 1): 1 core(s) -1.387694e+00, (0, 2): 1 core(s) +4.293642e+00, (-1, 3): 1 core(s) -4.428295e+00
+   claw sum -1.372847748111e+00  Y(u) -1.372847748111e+00  diff -5.3e-15  | with Q := M instead: diff -7.0e-01
+   two-arm cores (1, 0): 1 -3.300687e-01, (0, 1): 1 +2.042520e+00, (-1, 2): 1 -3.159863e+00; sum -1.447411914038e+00  -u^T G u -1.447411914038e+00  diff -1.1e-15
+C_3[K_2] x-ish: P_7 minus vertex (n=6, ||S1||^2=6):
+   claw cores per class (2, 0): 1 core(s) +2.428662e-04, (1, 1): 1 core(s) -2.530036e-03, (0, 2): 1 core(s) +8.785473e-03, (-1, 3): 1 core(s) -1.016910e-02
+   claw sum -3.670792761870e-03  Y(u) -3.670792761870e-03  diff -7.8e-18  | with Q := M instead: diff -2.0e-04
+   two-arm cores (1, 0): 1 -1.421695e-02, (0, 1): 1 +9.873583e-02, (-1, 2): 1 -1.714286e-01; sum -8.690969243719e-02  -u^T G u -8.690969243719e-02  diff +0.0e+00
+max |claw - Y(u)| = 5.33e-15; max |two-arm - (-u^T G u)| = 1.11e-15

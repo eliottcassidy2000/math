@@ -1,0 +1,5 @@
+n=3 tournaments=2^3 sumH=12 sumH2=24
+n=4 tournaments=2^6 sumH=192 sumH2=768
+n=5 tournaments=2^10 sumH=7680 sumH2=75840
+n=6 tournaments=2^15 sumH=737280 sumH2=21381120
+n=7 tournaments=2^21 sumH=165150720 sumH2=16386048000

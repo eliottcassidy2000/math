@@ -19775,3 +19775,28 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **Third.** "Rank 1 across the 11 census types" used the key (scores | Hamiltonian paths), which merges two of the 12 isomorphism types of 5-tournaments. With all 12 types the rank is still 1.
 - **Strongest survivor.** The non-universal part of `H` is organised by census level: the 5-census first (four loops, exact affine dependence on TT5), the 6-census from five loops at `z^10`. The four-loop term gives the exact `z^8` forest-number difference, `Delta N_8 = 7168 Delta TT5`, but only 38% of the TT5 slope of `H`. The rest is finite-size dressing and higher loops (HYP-9371).
 - **Missing coordinate.** The census level a core sees is set by its vertex count after the parity and degree-2 reductions, not by its raw vertex count. A census key must be a complete invariant before a rank statement is made.
+
+## MISTAKE-664 (2026-10-22, THM-4761 / HYP-9370 / HYP-9369 (opus-2026-10-22-S54, pre-audit commit 62e239388d); found by the independent audit `04-computation/experiments/loop_nonregular_20261022/audit_S54/REPORT.md`) -- a dropped orientation sign, sample minima reported as family minima, a heuristic mechanism stated as fact, and a symbol imported from another lane with a different meaning
+
+- **Claims.**
+  - THM-4761 (1) displayed `N_L = sum_F 2^p(F) chi_F` with `chi_F = prod_(ij in F, i<j) s_ij`.
+  - HYP-9370's title and table gave "min t_0 = 1.300, 1.349, 1.396" at n = 12, 14, 16. Its mechanism section said "along the real z-axis P_T(w), w > 0, is a positive sum; along the imaginary axis P_T(-t^2) alternates, and its first sign change is the nearest zero" (Szego picture). It also asked for coefficient bounds "C n^-3 a^L with a < r".
+  - HYP-9369 section 4 wrote the claw identity "with Session30's notation (G, Q)". Section 3 said "n^3 X(-1,3) -> 0".
+- **First failed implications.**
+  - **Dropped sign.** A directed path multiplies `+-s_ij`, with -1 for each arc traversed from a larger to a smaller label, so `N_L = sum_F 2^p(F) eps_F chi_F`. Transitive T_3 has N_2 = -2, while the unsigned display gives 6. The second moment was unaffected (eps^2 = 1).
+  - **Sample minima.** The n = 12-16 minima were MCMC sample minima. The chain's start tournament R_(n+1) - v, which is the exact census minimiser at n = 6, 8, 10, lies lower (1.2789, 1.3095, 1.3357).
+  - **Unchecked mechanism.** P_T has negative coefficients and positive real roots in 22/85 (n = 8) and 5379/13,333 (n = 10) classes. At even w-degree the truncated models have complex, not negative-real, nearest zeros, so the "Szego picture" does not explain (b).
+  - **Coefficient bound.** The decay condition must read `a^(-L)` with `1 < a < r`.
+  - **Symbol clash.** Session30's Q is zShat; the identity needs `Q~ = Shat (I + Shat^2)^-1`, which is what the script used. With Session30's Q the displayed identity fails by up to 0.70.
+  - **Exponent slip.** class_scaling.out shows n^3 X(-1,3) ~ -2.2; the limit 0 is for n^2 X(-1,3).
+  - **Attribution.** |Aut| <= 3^((n-1)/2) is Dixon (1967), not Moon.
+- **Strongest survivor.**
+  - Every number in the three documents was reproduced independently.
+  - THM-4761 holds, with a classical bonus: kappa_2 = 8 c_3/(n(n-1)) - (n-2)/3, so Moran's CLT gives sqrt(n)(kappa - 1) => N(0, 2).
+  - HYP-9370 (a), (b) and (c) survive with the corrected minima and new circulant data.
+  - The claw identity holds even for random and transitive tournaments.
+- **Missing coordinates.**
+  - Fix an orientation gauge before writing a Walsh character for a signed path.
+  - A sampled minimum is a family minimum only after the extremal candidates (here the chain's own starting point) are checked.
+  - A mechanism must be tested on the coefficients it asserts.
+  - A borrowed symbol's definition must be read at the source.

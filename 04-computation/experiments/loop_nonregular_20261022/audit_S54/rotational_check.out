@@ -1,0 +1,9 @@
+R_5: t0 = 1.1180;  R_5 - v (almost-regular 4): t0 = 1.4142
+R_7: t0 = 1.1414;  R_7 - v (almost-regular 6): t0 = 1.2335
+R_9: t0 = 1.1876;  R_9 - v (almost-regular 8): t0 = 1.2222
+R_11: t0 = 1.2350;  R_11 - v (almost-regular 10): t0 = 1.2467
+R_13: t0 = 1.2763;  R_13 - v (almost-regular 12): t0 = 1.2789
+R_15: t0 = 1.3100;  R_15 - v (almost-regular 14): t0 = 1.3095
+R_17: t0 = 1.3370;  R_17 - v (almost-regular 16): t0 = 1.3357
+n=8: R_9 - v is class #[50] of the census (H = 629)
+n=10: R_11 - v is class #[2589] of the census (H = 14937)

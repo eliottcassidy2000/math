@@ -1,0 +1,53 @@
+== (1) E kappa^2: brute force over all tournaments vs permutation pairs vs THM-4761 (2) ==
+n=3: formula(literal) 4/3 = 1.333333; closed form equal True; pairs 4/3 equal True; brute E kappa = 1, E kappa^2 = 4/3; equal True
+n=4: formula(literal) 4/3 = 1.333333; closed form equal True; pairs 4/3 equal True; brute E kappa = 1, E kappa^2 = 4/3; equal True
+n=5: formula(literal) 79/60 = 1.316667; closed form equal True; pairs 79/60 equal True; brute E kappa = 1, E kappa^2 = 79/60; equal True
+n=6: formula(literal) 58/45 = 1.288889; closed form equal True; pairs 58/45 equal True; brute E kappa = 1, E kappa^2 = 58/45; equal True
+n=7: formula(literal) 635/504 = 1.259921; closed form equal True; pairs 635/504 equal True; brute E kappa = 1, E kappa^2 = 635/504; equal True
+n=8: formula(literal) 691/560 = 1.233929; closed form equal True; pairs 691/560 equal True; brute: -
+n=9: formula(literal) 6281/5184 = 1.211613; closed form equal True; pairs 6281/5184 equal True; brute: -
+n=10: formula(literal) 19321/16200 = 1.192654; closed form equal True; pairs 19321/16200 equal True; brute: -
+
+== (2) exact Var kappa, n Var, n^3 (Var - 2/n), score share, n^2 (share - 1 + 1/n), E(kappa-2+W/n(n-1))^2 ==
+n=8: n Var = 1.871429; n^3(Var - 2/n) = -8.22857; share = 0.916031; n^2(share - 1 + 1/n) = 2.62595; n^2 E(kappa - 1 - kappa_2)^2 = 1.25714
+n=12: n Var = 1.952858; n^3(Var - 2/n) = -6.78843; share = 0.931036; n^2(share - 1 + 1/n) = 2.06923; n^2 E(kappa - 1 - kappa_2)^2 = 1.61612
+n=20: n Var = 1.985485; n^3(Var - 2/n) = -5.80605; share = 0.954294; n^2(share - 1 + 1/n) = 1.71771; n^2 E(kappa - 1 - kappa_2)^2 = 1.81496
+n=30: n Var = 1.994017; n^3(Var - 2/n) = -5.38490; share = 0.968414; n^2(share - 1 + 1/n) = 1.57292; n^2 E(kappa - 1 - kappa_2)^2 = 1.88947
+n=50: n Var = 1.997968; n^3(Var - 2/n) = -5.07903; share = 0.980588; n^2(share - 1 + 1/n) = 1.46981; n^2 E(kappa - 1 - kappa_2)^2 = 1.93924
+n=100: n Var = 1.999513; n^3(Var - 2/n) = -4.86626; share = 0.990140; n^2(share - 1 + 1/n) = 1.39904; n^2 E(kappa - 1 - kappa_2)^2 = 1.97154
+n=200: n Var = 1.999881; n^3(Var - 2/n) = -4.76488; share = 0.995034; n^2(share - 1 + 1/n) = 1.36558; n^2 E(kappa - 1 - kappa_2)^2 = 1.98623
+n=400: n Var = 1.999971; n^3(Var - 2/n) = -4.71538; share = 0.997508; n^2(share - 1 + 1/n) = 1.34931; n^2 E(kappa - 1 - kappa_2)^2 = 1.99322
+n=1000 (L <= 24): n^3(Var - 2/n) = -4.686061 (target -14/3 = -4.666667); n*(n^3(Var-2/n) + 14/3) = -19.3946; n^2(share - 1 + 1/n) = 1.339690 (target 4/3); n^2 E(kappa-1-kappa_2)^2 = 1.997316 (target 2)
+n=10000 (L <= 24): n^3(Var - 2/n) = -4.668601 (target -14/3 = -4.666667); n*(n^3(Var-2/n) + 14/3) = -19.3394; n^2(share - 1 + 1/n) = 1.333967 (target 4/3); n^2 E(kappa-1-kappa_2)^2 = 1.999733 (target 2)
+n=100000 (L <= 24): n^3(Var - 2/n) = -4.666860 (target -14/3 = -4.666667); n*(n^3(Var-2/n) + 14/3) = -19.3339; n^2(share - 1 + 1/n) = 1.333397 (target 4/3); n^2 E(kappa-1-kappa_2)^2 = 1.999973 (target 2)
+shape (2): -2*x**4 - 2*x**3 - 2*x**2 + 2*x
+shape (2,2): -18*x**4 - 6*x**3 + 2*x**2
+shape (4): 4*x**4 + 2*x**3
+shape (2,2,2): -8*x**4 + 4*x**3/3
+shape (4,2): 4*x**4
+sum of shapes through x^4 (x = 1/n): -14*x**3/3 + 2*x
+share series: 1 - x + 4*x**2/3 + O(x**3)
+
+== (3) sign check of N_L = sum_F 2^p chi_F (chi_F = prod over undirected edges ij, i<j, of s_ij) ==
+n=3 code 111: exact N_L [1, 0, -2]; unsigned sum_F 2^p chi_F [1, 0, np.int64(6)]; with descent sign [1, 0, np.int64(-2)]; unsigned ok False; signed ok True
+n=3 code 000: exact N_L [1, 0, -2]; unsigned sum_F 2^p chi_F [1, 0, np.int64(6)]; with descent sign [1, 0, np.int64(-2)]; unsigned ok False; signed ok True
+n=3 code 100: exact N_L [1, 0, -2]; unsigned sum_F 2^p chi_F [1, 0, np.int64(-2)]; with descent sign [1, 0, np.int64(-2)]; unsigned ok True; signed ok True
+n=3 code 001: exact N_L [1, 0, -2]; unsigned sum_F 2^p chi_F [1, 0, np.int64(-2)]; with descent sign [1, 0, np.int64(-2)]; unsigned ok True; signed ok True
+n=4 code 111111: exact N_L [1, 0, -8, 0]; unsigned sum_F 2^p chi_F [1, 0, np.int64(24), 0]; with descent sign [1, 0, np.int64(-8), 0]; unsigned ok False; signed ok True
+n=4 code 000100: exact N_L [1, 0, -8, 0]; unsigned sum_F 2^p chi_F [1, 0, np.int64(8), 0]; with descent sign [1, 0, np.int64(-8), 0]; unsigned ok False; signed ok True
+n=4 code 001100: exact N_L [1, 0, 8, 0]; unsigned sum_F 2^p chi_F [1, 0, np.int64(-8), 0]; with descent sign [1, 0, np.int64(8), 0]; unsigned ok False; signed ok True
+n=4 code 100010: exact N_L [1, 0, 8, 0]; unsigned sum_F 2^p chi_F [1, 0, np.int64(0), 0]; with descent sign [1, 0, np.int64(8), 0]; unsigned ok False; signed ok True
+n=5 code 1111111111: exact N_L [1, 0, -20, 0, 16]; unsigned sum_F 2^p chi_F [1, 0, np.int64(60), 0, np.int64(120)]; with descent sign [1, 0, np.int64(-20), 0, np.int64(16)]; unsigned ok False; signed ok True
+n=5 code 0000111110: exact N_L [1, 0, -20, 0, 16]; unsigned sum_F 2^p chi_F [1, 0, np.int64(4), 0, np.int64(24)]; with descent sign [1, 0, np.int64(-20), 0, np.int64(16)]; unsigned ok False; signed ok True
+n=5 code 0101011001: exact N_L [1, 0, 4, 0, 0]; unsigned sum_F 2^p chi_F [1, 0, np.int64(-12), 0, np.int64(-8)]; with descent sign [1, 0, np.int64(4), 0, np.int64(0)]; unsigned ok False; signed ok True
+n=5 code 1111001100: exact N_L [1, 0, -4, 0, -16]; unsigned sum_F 2^p chi_F [1, 0, np.int64(-4), 0, np.int64(-8)]; with descent sign [1, 0, np.int64(-4), 0, np.int64(-16)]; unsigned ok False; signed ok True
+n=6 code 111111111111111: exact N_L [1, 0, -40, 0, 136, 0]; unsigned sum_F 2^p chi_F [1, 0, np.int64(120), 0, np.int64(1080), 0]; with descent sign [1, 0, np.int64(-40), 0, np.int64(136), 0]; unsigned ok False; signed ok True
+n=6 code 011100111011111: exact N_L [1, 0, 0, 0, 8, 0]; unsigned sum_F 2^p chi_F [1, 0, np.int64(16), 0, np.int64(-40), 0]; with descent sign [1, 0, np.int64(0), 0, np.int64(8), 0]; unsigned ok False; signed ok True
+n=6 code 000000001011001: exact N_L [1, 0, -16, 0, -24, 0]; unsigned sum_F 2^p chi_F [1, 0, np.int64(32), 0, np.int64(-72), 0]; with descent sign [1, 0, np.int64(-16), 0, np.int64(-24), 0]; unsigned ok False; signed ok True
+n=6 code 110011111011000: exact N_L [1, 0, 16, 0, -24, 0]; unsigned sum_F 2^p chi_F [1, 0, np.int64(16), 0, np.int64(56), 0]; with descent sign [1, 0, np.int64(16), 0, np.int64(-24), 0]; unsigned ok False; signed ok True
+
+== (4) N_2 = n(n-1) - ||S1||^2 on random tournaments ==
+n=5: 20 random tournaments, violations 0
+n=8: 20 random tournaments, violations 0
+n=11: 20 random tournaments, violations 0
+n=13: 20 random tournaments, violations 0

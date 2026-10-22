@@ -1,0 +1,29 @@
+C_3: n=3, H=3, c_L=[6, 0, 6], N_L=[1, 0, 6], P(w)=2*w/3 + 1, roots in w [-3/2], t0 = sqrt(6)/2 = 1.224745
+almost-regular 4 (file): n=4, H=5, c_L=[24, 0, 16, 0], N_L=[1, 0, 8, 0], P(w)=w/2 + 1, roots in w [-2], t0 = sqrt(2) = 1.414214
+C_5 (rotational): n=5, H=15, c_L=[120, 0, 120, 0, 0], N_L=[1, 0, 20, 0, 0], P(w)=4*w/5 + 1, roots in w [-5/4], t0 = sqrt(5)/2 = 1.118034
+P_7 (Paley): n=7, H=189, c_L=[5040, 0, 5040, 0, 1008, 0, 1008], N_L=[1, 0, 42, 0, 168, 0, 1008], P(w)=144*w**3/16807 + 24*w**2/343 + 6*w/7 + 1, roots in w [7*CRootOf(144*x**3 + 168*x**2 + 294*x + 49, 0), 7*CRootOf(144*x**3 + 168*x**2 + 294*x + 49, 1), 7*CRootOf(144*x**3 + 168*x**2 + 294*x + 49, 2)], t0 = sqrt(7)*sqrt(-CRootOf(144*x**3 + 168*x**2 + 294*x + 49, 0)) = 1.131082
+C_7(1,2,3): n=7, H=175, c_L=[5040, 0, 5040, 0, 1008, 0, 112], N_L=[1, 0, 42, 0, 168, 0, 112], P(w)=16*w**3/16807 + 24*w**2/343 + 6*w/7 + 1, roots in w [7*CRootOf(16*x**3 + 168*x**2 + 294*x + 49, 0), 7*CRootOf(16*x**3 + 168*x**2 + 294*x + 49, 1), 7*CRootOf(16*x**3 + 168*x**2 + 294*x + 49, 2)], t0 = sqrt(7)*sqrt(-CRootOf(16*x**3 + 168*x**2 + 294*x + 49, 2)) = 1.141383
+all labelled almost-regular 4 (24): 24 tournaments; t0 min 1.4142 median 1.4142 max 1.4142; kinds {'neg': 24}; any |z|<=1.1: False
+   class 001000: H=5 N=[1, 0, 8, 0] |Aut|=1 labelled 24 = 4!/|Aut|: True; self-converse True; t0 = 1.414214 (neg); constant on class True
+   1 classes; per-class t0 min 1.4142 median 1.4142 max 1.4142; self-converse 1
+all labelled almost-regular 6 (2640): 2640 tournaments; t0 min 1.2335 median 1.2735 max 1.3257; kinds {'neg': 2640}; any |z|<=1.1: False
+   class 000110001000000: H=41 N=[1, 0, 24, 0, 8, 0] |Aut|=1 labelled 720 = 6!/|Aut|: True; self-converse True; t0 = 1.233464 (neg); constant on class True
+   class 010010001010000: H=43 N=[1, 0, 24, 0, 40, 0] |Aut|=1 labelled 720 = 6!/|Aut|: True; self-converse False; t0 = 1.273485 (neg); constant on class True
+   class 000110100000010: H=43 N=[1, 0, 24, 0, 40, 0] |Aut|=1 labelled 720 = 6!/|Aut|: True; self-converse False; t0 = 1.273485 (neg); constant on class True
+   class 010010010100101: H=45 N=[1, 0, 24, 0, 72, 0] |Aut|=3 labelled 240 = 6!/|Aut|: True; self-converse True; t0 = 1.325654 (neg); constant on class True
+   class 010010010100010: H=45 N=[1, 0, 24, 0, 72, 0] |Aut|=3 labelled 240 = 6!/|Aut|: True; self-converse True; t0 = 1.325654 (neg); constant on class True
+   5 classes; per-class t0 min 1.2335 median 1.2735 max 1.3257; self-converse 3
+all labelled regular 5 (24): 24 tournaments; t0 min 1.1180 median 1.1180 max 1.1180; kinds {'neg': 24}; any |z|<=1.1: False
+   class 0011001000: H=15 N=[1, 0, 20, 0, 0] |Aut|=5 labelled 24 = 5!/|Aut|: True; self-converse True; t0 = 1.118034 (neg); constant on class True
+   1 classes; per-class t0 min 1.1180 median 1.1180 max 1.1180; self-converse 1
+all labelled regular 7 (2640): 2640 tournaments; t0 min 1.1311 median 1.1445 max 1.1445; kinds {'neg': 2640}; any |z|<=1.1: False
+   class 000111010010010100010: H=189 N=[1, 0, 42, 0, 168, 0, 1008] |Aut|=21 labelled 240 = 7!/|Aut|: True; self-converse True; t0 = 1.131082 (neg); constant on class True
+   class 000111000110001000000: H=175 N=[1, 0, 42, 0, 168, 0, 112] |Aut|=7 labelled 720 = 7!/|Aut|: True; self-converse True; t0 = 1.141383 (neg); constant on class True
+   class 000111000110100000010: H=171 N=[1, 0, 42, 0, 168, 0, -144] |Aut|=3 labelled 1680 = 7!/|Aut|: True; self-converse True; t0 = 1.144534 (neg); constant on class True
+   3 classes; per-class t0 min 1.1311 median 1.1414 max 1.1445; self-converse 3
+almost-regular 8, all 85 classes (file): 85 tournaments; t0 min 1.2222 median 1.2603 max 1.2950; kinds {'neg': 85}; any |z|<=1.1: False
+   H agrees with file: 85/85
+   minimising class 0001110001100010000000111111: N = [1, 0, 48, 0, 224, 0, 128, 0], t0 = 1.222249
+   first class P_T(w) coefficients [1.0, 0.75, 0.07031, 0.00049]  (HYP-9370 quotes 1 + 0.75w + 0.0703w^2 + 0.00049w^3)
+regular 9, my completions of the 85 classes (with repeats): 85 tournaments; t0 min 1.1790 median 1.1865 max 1.2111; kinds {'neg': 85}; any |z|<=1.1: False
+   distinct regular 9-classes 15, mass 3230080, self-converse 15; per-class t0 min 1.1790 median 1.1876 max 1.2111; kinds 15/15 negative real

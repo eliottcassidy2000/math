@@ -1,0 +1,8 @@
+ar10_classes: n=10, 13333 tournaments
+  H agrees with the file for 13333/13333
+  t0: min 1.2467  5% 1.2718  median 1.2915  max 1.3431
+  zero in |z| <= 1.0: 0 (0.0000%)
+  zero in |z| <= 1.1: 0 (0.0000%)
+  zero in |z| <= 1.2: 0 (0.0000%)
+  smallest zero kind: neg 13333 (100.0%), pos 0 (0.0%), complex 0 (0.0%), none 0 (0.0%)
+  minimiser 000011110000111000011000010000000001111111111 H=14937 N=[1, 0, 80, 0, 1040, 0, 2048, 0, -2304, 0] w-root -1.5542667200801885

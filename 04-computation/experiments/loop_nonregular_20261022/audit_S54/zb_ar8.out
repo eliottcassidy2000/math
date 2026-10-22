@@ -1,0 +1,8 @@
+ar8_classes: n=8, 85 tournaments
+  H agrees with the file for 85/85
+  t0: min 1.2222  5% 1.2379  median 1.2603  max 1.2950
+  zero in |z| <= 1.0: 0 (0.0000%)
+  zero in |z| <= 1.1: 0 (0.0000%)
+  zero in |z| <= 1.2: 0 (0.0000%)
+  smallest zero kind: neg 85 (100.0%), pos 0 (0.0%), complex 0 (0.0%), none 0 (0.0%)
+  minimiser 0001110001100010000000111111 H=629 N=[1, 0, 48, 0, 224, 0, 128, 0] w-root -1.4938918673925128

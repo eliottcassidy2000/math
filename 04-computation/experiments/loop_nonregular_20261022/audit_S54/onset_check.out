@@ -1,0 +1,5 @@
+reduced numerator: -z**18 + z**17 - z**16 + 2*z**15 - z**14 + 3*z**10 + z**9 - 2*z**8 - 2*z**7 + z**5
+reduced denominator degree 18 ; equals p^2 u^2: True
+gcd(num, den) = Poly(1, z, domain='ZZ')
+g_5..g_16 = [1, 2, 3, 4, 7, 11, 18, 29, 47, 71, 114, 175]
+residual of the D-recurrence at k = 15..25: [2, -1, 1, -1, 0, 0, 0, 0, 0, 0, 0]

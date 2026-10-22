@@ -1,0 +1,12 @@
+n=8: truncated exp(c z^2), degree 3 in w: smallest |z| = 1.3506, arg w = 3.142; sqrt(0.2785 m / c) = 0.9771
+n=10: truncated exp(c z^2), degree 4 in w: smallest |z| = 1.4699, arg w = 2.667; sqrt(0.2785 m / c) = 1.1125
+n=12: truncated exp(c z^2), degree 5 in w: smallest |z| = 1.5424, arg w = 3.142; sqrt(0.2785 m / c) = 1.2324
+n=14: truncated exp(c z^2), degree 6 in w: smallest |z| = 1.6429, arg w = 2.801; sqrt(0.2785 m / c) = 1.3414
+n=16: truncated exp(c z^2), degree 7 in w: smallest |z| = 1.7155, arg w = 3.142; sqrt(0.2785 m / c) = 1.4419
+n=100: truncated exp(c z^2), degree 49 in w: smallest |z| = 3.8426, arg w = 3.142; sqrt(0.2785 m / c) = 3.7125
+ar8_classes: 85 tournaments; P_T has a negative coefficient in 22; a positive real root w > 0 in 22
+ar10_classes: 13333 tournaments; P_T has a negative coefficient in 5379; a positive real root w > 0 in 5364
+ar12_samples: 3000 tournaments; P_T has a negative coefficient in 1412; a positive real root w > 0 in 1341
+ar14_samples: 3000 tournaments; P_T has a negative coefficient in 1655; a positive real root w > 0 in 1470
+ar16_samples: 1500 tournaments; P_T has a negative coefficient in 895; a positive real root w > 0 in 750
+ar10_classes_completed: 13333 tournaments; P_T has a negative coefficient in 8094; a positive real root w > 0 in 6976

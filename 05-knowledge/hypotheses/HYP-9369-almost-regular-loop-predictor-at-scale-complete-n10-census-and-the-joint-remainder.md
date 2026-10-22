@@ -2,14 +2,18 @@
 id: HYP-9369
 title: "The loop expansion beyond regular tournaments, tested at scale, and the joint remainder. On almost-regular even-order tournaments the weight-graded second-order predictor (Session30 decorated cores, w = excess + leaves) has RMSE(y - y2) of about 200/n^4 in y = n(1 - kappa/rho): 0.048, 0.020, 0.0096, 0.0053, 0.0030, 0.0010 at n = 8 (all 85 classes), 10 (all 13,333 classes), 12, 14, 16, 20 (samples). The remainder must be bounded jointly: after second order the cluster part log Phi(1) - log rho and the finite-size part log(kappa/Phi(1)) miss by -(234..260)/n^3 and +(235..261)/n^3, per-tournament correlation -0.998 to -0.999, while their sum misses by about 1/n^3 on average with per-tournament spread about 200/n^5 (all 13 doubly regular 23-tournaments: -218.5, +225.3, joint +6.85). A terminal leaf acts as a pendant loop with the vector 1 in place of the loop diagonal d (decoration rule; square and claw identities)."
 status: >
-  OPEN (opus-2026-10-22-S54). FINITE-EXACT: H for every class (Held-Karp, ar_tool.c) and exact forest numbers for
+  OPEN (opus-2026-10-22-S54; sections 3-5 independently audited 2026-10-22,
+  04-computation/experiments/loop_nonregular_20261022/audit_S54/REPORT.md: numbers confirmed, claw identity re-verified
+  with Session30's engine on nine tournaments including random and transitive ones, notation and attribution corrected;
+  sections 1-2 were outside the audit scope and are reproducible from the committed files). FINITE-EXACT: H for every class (Held-Karp, ar_tool.c) and exact forest numbers for
   n <= 16; the class lists at n = 4, 6, 8, 10 are complete (labelled masses 24, 2640, 3,230,080, 48,251,508,480 = the
   numbers of labelled regular 5-, 7-, 9-, 11-tournaments, count_regular.py). Samples at n = 12..20 come from a
   score-preserving 3-cycle-reversal chain (uniform in the limit; mixing not certified). Predictions are double precision,
   no fitted parameters. The predictor and its 5 + 26 cores are Session30's
   (05-knowledge/results/session30_nonregular_loops_20261022, imported unchanged); its n = 8 census numbers are reproduced
   exactly on this lane's independently generated class list. The decoration rule is PROVED for the two-arm family
-  (algebra of proved closed forms) and VERIFIED to 1e-17 for the three-arm (claw) family; the general rule is conjectural.
+  (algebra of proved closed forms) and VERIFIED to machine precision for the three-arm (claw) family, on almost-regular and
+  (audit) on uniform random and transitive tournaments; the general rule is conjectural.
 session: opus-2026-10-22-S54
 source: 05-knowledge/results/session30_nonregular_loops_20261022/SYNTHESIS.md
 scripts:
@@ -116,9 +120,9 @@ The same pattern already holds one order down for doubly regular tournaments:
 
 ## 3. Documented failures and boundaries
 
-* **Asymptotic orders are the wrong bookkeeping at accessible n.** On flat almost-regular tournaments the lollipop and Y-tree are demoted by one power of `n`: `Σδ = 0`; `class_scaling.out` gives `n²X(0,1) → 4.0` and `n³X(−1,3) → 0`. Grouping classes by these measured orders gives a second-order predictor that is clearly worse at small `n`. At `n = 8` its RMSE is 0.210 against 0.048 for the weight grading `w = e + ℓ`. The leaves must be counted by weight, as Session30 does.
+* **Asymptotic orders are the wrong bookkeeping at accessible n.** On flat almost-regular tournaments the lollipop and Y-tree are demoted by one power of `n`: `Σδ = 0`; `class_scaling.out` gives `n²X(0,1) → 4.0` and `n²X(−1,3) → 0` (with `n³X(−1,3) ≈ −2.2`). Grouping classes by these measured orders gives a second-order predictor that is clearly worse at small `n`. At `n = 8` its RMSE is 0.210 against 0.048 for the weight grading `w = e + ℓ`. The leaves must be counted by weight, as Session30 does.
 * **Exact finite-size weights do not resum the expansion.** Replacing the `1/n` expansion of `n^L/(n)_L` by its exact values, applied to the Taylor coefficients of `exp(X0 + W1 + W2)` truncated to `L ≤ n − 1`, is catastrophic (`budget_cw8.out`):
-  * At `n = 8`, `y` is off by +5.1 to −8.9 for the truncations `T0`, `T1`, `T2`, against RMSE 0.048 for the formal predictor.
+  * At `n = 8`, the mean error in `y` is +8.3 (`T0`), −8.9 (`T1`) and +5.1 (`T2`), against RMSE 0.048 for the formal predictor.
   * The exact forest measure is strongly suppressed at large `L` by vertex exclusion (`φ_6 = 0.00049` against 0.127 for the one-loop series).
   * The falling-factorial weights (13.0 at `L = 6`, 52.0 at `L = 7`) amplify exactly those coefficients.
   * The formal expansion works because its two halves are expanded consistently in `1/n` (§2).
@@ -126,7 +130,7 @@ The same pattern already holds one order down for doubly regular tournaments:
 
 ## 4. The decoration rule: a leaf is a loop with 1 in place of d
 
-Let `d = diag(H − G)`, the diagonal of the loop propagator, and `u = d + 1`. With Session30's notation (`G`, `Q`), summing a skeleton over its pendant decorations replaces the end vector by `u`:
+Let `d = diag(H − G)`, the diagonal of the loop propagator, and `u = d + 1`. Use Session30's `G = −Ŝ²(I + Ŝ²)^(−1)` and `Q̃ = Ŝ(I + Ŝ²)^(−1)` (Session30's `h = Q̃1`; their `Q` is `zŜ`). Summing a skeleton over its pendant decorations replaces the end vector by `u`:
 
 * **Two arms (square identity, PROVED).**
 ```
@@ -135,11 +139,16 @@ dumbbell + lollipop + path tree = −dᵀGd − 2dᵀG1 − 1ᵀG1 = −uᵀGu.
 The three closed forms are THM-4757 (4) and Session30's lollipop and path kernels.
 * **Three arms (claw identity, VERIFIED).** The claws are a centre joined by three bridges to ends that are leaves or carry one loop: one core each in classes `(2,0)`, `(1,1)`, `(0,2)`, `(−1,3)`. Their sum is
 ```
-Y(u) = −(2/3) Σ_w [ (Gu)_w³ + 3 (Gu)_w (Qu)_w² ],
+Y(u) = −(2/3) Σ_w [ (Gu)_w³ + 3 (Gu)_w (Q̃u)_w² ],
 ```
-the Y-tree formula with `1 → u`. Agreement is better than `1e-17` at `n = 8, 12, 16` (`decoration_rule.out`).
+the Y-tree formula with `1 → u`.
+  * Agreement is to machine precision: absolute differences below `1e-17`, relative about `1e-15`, at `n = 8, 12, 16` (`decoration_rule.out`).
+  * The audit re-verified it with Session30's engine on nine tournaments, including uniform random and transitive ones: max difference `5e-15`; two-arm `1e-15`.
+  * The identities therefore appear to hold for all tournaments, not only almost-regular ones.
+  * The lane's brute-force self-test reaches only `L ≤ 6`. The `(1,1)` and `(2,0)` claw cores first occur at `L = 8` and `10`, so this check rests on the engines, which were validated against brute force at lower orders.
 * **Conjecture (general rule).** For every skeleton, the sum over leaf-or-pendant-loop decorations of its pendant ends equals the skeleton with end vector `u`.
   * The local reason is that the lollipop kernel factorises as tail kernel × loop insertion: `4x²y²/((1 − x⁴)(1 + y²))` (Session30) is the path kernel `y²/(1 + y²)` times `4x²/(1 − x⁴)`, whose sum is `2·diag(H − G)`.
+  * ANALOGY (audit, no identical statement found): tadpole dressing of an external source, and the articulation-point topological reduction of Mayer expansions.
   * On flat almost-regular families `d = −(2/n)1 + O(n^(−2))`, so decoration renormalises every leaf by `1 − 2/n`. This is why `n²X(0,1) → 4`: `X(0,1) ≈ (4/n)·(−X(−1,2))` with `X(−1,2) ≈ −1/n`.
 
 ## 5. Merge with the deficit-six thread
@@ -167,7 +176,7 @@ b ≤ 2^⌊n/2⌋ ⌊n/2⌋!.
 ```
 The observed maxima (39, 193) are far below the bound (384, 3840). For regular and almost-regular `T`:
 * `H ≥ n!/(2 + o(1))^n` (Cuckler's lower bound for Hamilton cycles of regular tournaments, applied to `T` or to its regular completion);
-* `|Aut| ≤ 3^((n−1)/2)` (Moon).
+* `|Aut| ≤ 3^((n−1)/2)` (Dixon 1967, Canad. Math. Bull. 10; Moon, Topics on Tournaments, §28 Ex. 5).
 
 Then `n!/(n/2)! ≥ (n/2)^(n/2)` gives `h/b ≥ (n/(48 + o(1)))^(n/2) → ∞`, and a bounded deficit occurs in this family for only finitely many orders.
 

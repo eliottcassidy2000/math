@@ -1,0 +1,27 @@
+C_5: H=15 |Aut|=5 self-converse=True anti-auts=5 anti-involutions=5 #blue=15 (distinct psi 5) h=3 b=3 Delta=0 bound_ok=True
+C_3[K_2]: H=45 |Aut|=3 self-converse=True anti-auts=3 anti-involutions=3 #blue=27 (distinct psi 3) h=15 b=9 Delta=6 bound_ok=True
+P_7: H=189 |Aut|=21 self-converse=True anti-auts=21 anti-involutions=7 #blue=63 (distinct psi 7) h=9 b=3 Delta=6 bound_ok=True
+C_7(1,2,3): H=175 |Aut|=7 self-converse=True anti-auts=7 anti-involutions=7 #blue=63 (distinct psi 7) h=25 b=9 Delta=16 bound_ok=True
+C_3[C_3]: H=3159 |Aut|=81 self-converse=True anti-auts=81 anti-involutions=27 #blue=891 (distinct psi 27) h=39 b=11 Delta=28 bound_ok=True
+-- almost-regular 6 (all classes, ar6_classes.txt)
+  100101100100111: H=43 |Aut|=1 self-converse=False anti-auts=0 anti-involutions=0 #blue=0 (distinct psi 0) h=43 b=0 Delta=43 bound_ok=True
+  001100100000111: H=41 |Aut|=1 self-converse=True anti-auts=1 anti-involutions=1 #blue=9 (distinct psi 1) h=41 b=9 Delta=32 bound_ok=True
+  101001010001010: H=45 |Aut|=3 self-converse=True anti-auts=3 anti-involutions=1 #blue=9 (distinct psi 1) h=15 b=3 Delta=12 bound_ok=True
+  101001010001101: H=45 |Aut|=3 self-converse=True anti-auts=3 anti-involutions=3 #blue=27 (distinct psi 3) h=15 b=9 Delta=6 bound_ok=True
+  001100001000010: H=43 |Aut|=1 self-converse=False anti-auts=0 anti-involutions=0 #blue=0 (distinct psi 0) h=43 b=0 Delta=43 bound_ok=True
+-- regular 7: the three classes
+  000111010010010100010: H=189 |Aut|=21 self-converse=True anti-auts=21 anti-involutions=7 #blue=63 (distinct psi 7) h=9 b=3 Delta=6 bound_ok=True
+  000111000110001000000: H=175 |Aut|=7 self-converse=True anti-auts=7 anti-involutions=7 #blue=63 (distinct psi 7) h=25 b=9 Delta=16 bound_ok=True
+  000111000110100000010: H=171 |Aut|=3 self-converse=True anti-auts=3 anti-involutions=3 #blue=27 (distinct psi 3) h=57 b=9 Delta=48 bound_ok=True
+-- almost-regular 8: every row of deficit_ar8.txt (current version) recomputed (file columns: canon H aut sc blue h b Delta)
+  rows 15, mismatches 0, self-converse 15, min Delta (self-converse) 56, max b 39
+-- regular 9: all 15 rows of deficit_reg9.txt
+  rows 15, mismatches 0, min Delta 28, max b 39
+-- deficit_ar10.txt: rows 229, self-converse 229, min Delta 1592, max b 193, nonfree rows 0, Delta = 6 rows 0
+   spot check 100011100100111000011100000010000001011111111: file ['14877', '9', '1', '549', '1653', '61', '1592'] mine [14877, 9, 1, 549, 1653, 61, 1592] agree True
+   spot check 010001110000101101011000011000000000111101111: file ['15125', '1', '1', '193', '15125', '193', '14932'] mine [15125, 1, 1, 193, 15125, 193, 14932] agree True
+   spot check 110011000011001101010100100011010010110100111: file ['15565', '5', '1', '935', '3113', '187', '2926'] mine [15565, 5, 1, 935, 3113, 187, 2926] agree True
+   spot check 110011000011101001000011101010001011001110101: file ['15745', '5', '1', '175', '3149', '35', '3114'] mine [15745, 5, 1, 175, 3149, 35, 3114] agree True
+-- deficit_reg11.txt: rows 229, self-converse 229, min Delta 1692, max b 193, nonfree rows 0, Delta = 6 rows 0
+   spot check 1111100000110011100011110101000111110101010110110001010: file ['95095', '55', '1', '2035', '1729', '37', '1692'] mine [95095, 55, 1, 2035, 1729, 37, 1692] agree True
+   spot check 1111100000000011111010101100011100101001110001101111110: file ['92407', '1', '1', '193', '92407', '193', '92214'] mine [92407, 1, 1, 193, 92407, 193, 92214] agree True
