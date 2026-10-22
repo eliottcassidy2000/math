@@ -284,6 +284,15 @@ c″ = proj_Λ(z″)/(h + 1), a point of order e = h + 1. Then for all 23 types:
 
 This is the geometric meaning of the defects 24 + k and 24 in (11).
 
+*Worked example: A1²⁴ in standard Leech coordinates.*
+- c = (1²⁴)/√8 is an A1²⁴ deep hole, fixed by M24. Its 48 vertices are (1²⁴ ∓ 4e_i)/√8. Both shapes, (−3, 1²³) and
+  (5, 1²³), are Leech vectors.
+- The origin lies in its second shell: |c|² = 3 = 2 + 2/h.
+- So c″ = c + (0 − c)/3 = (2/3)c = (2²⁴)/(3√8), which is the M24-point of the order-3 census.
+- From c″, the vertices (1²⁴ − 4e_i)/√8 stay at squared distance (23/9 + 121/9)/8 = 2, while the partners
+  (1²⁴ + 4e_i)/√8 move to (23/9 + 169/9)/8 = 8/3.
+- The deep hole and the Fricke point both lie on the M24-fixed line through (1²⁴).
+
 *Heights mod h + 1 (PROVED).* The dual automorphism on V_N is e^{2πiρ_N(0)/(h+1)}. A root α lies in its ζ^j-eigenspace
 iff ht(α) ≡ j mod (h + 1). Per component, the count is n_j + n_{h+1−j}, where n_j = #{exponents ≥ j}. Under
 m ↦ h − m this equals ℓ. So the roots of N are equidistributed: exactly 24 in each nonzero class of ht mod h + 1, and
