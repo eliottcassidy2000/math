@@ -1,0 +1,26 @@
+RR (mod 5)
+   G  : c_eff = 2/5    (numeric +0.4000); 6/c_eff = 15    ; ratio to first at t = 5e-4: 1.000000
+   H  : c_eff = 2/5    (numeric +0.4000); 6/c_eff = 15    ; ratio to first at t = 5e-4: 0.618096
+Rogers-Selberg (mod 7)
+   A  : c_eff = 1/14   (numeric +0.0714); 6/c_eff = 84    ; ratio to first at t = 5e-4: 1.000000
+   B  : c_eff = 1/14   (numeric +0.0714); 6/c_eff = 84    ; ratio to first at t = 5e-4: 0.801995
+   C  : c_eff = 1/14   (numeric +0.0714); 6/c_eff = 84    ; ratio to first at t = 5e-4: 0.445137
+Rogers (mod 14)
+   A  : c_eff = 11/14  (numeric +0.7857); 6/c_eff = 84/11 ; ratio to first at t = 5e-4: 1.000000
+   B  : c_eff = 11/14  (numeric +0.7857); 6/c_eff = 84/11 ; ratio to first at t = 5e-4: 0.802052
+   C  : c_eff = 11/14  (numeric +0.7857); 6/c_eff = 84/11 ; ratio to first at t = 5e-4: 0.445233
+Goellnitz-Gordon (mod 8)
+   1  : c_eff = 3/8    (numeric +0.3750); 6/c_eff = 16    ; ratio to first at t = 5e-4: 1.000000
+   2  : c_eff = 3/8    (numeric +0.3750); 6/c_eff = 16    ; ratio to first at t = 5e-4: 0.414317
+Bailey (mod 9)
+   A  : c_eff = 0      (numeric +0.0000); 6/c_eff = inf   ; ratio to first at t = 5e-4: 1.000000
+   B  : c_eff = 0      (numeric -0.0000); 6/c_eff = inf   ; ratio to first at t = 5e-4: 0.652812
+   C  : c_eff = 0      (numeric -0.0000); 6/c_eff = inf   ; ratio to first at t = 5e-4: 0.347412
+Dyson (mod 27)
+   A  : c_eff = 8/9    (numeric +0.8889); 6/c_eff = 27/4  ; ratio to first at t = 5e-4: 1.000000
+   B  : c_eff = 8/9    (numeric +0.8889); 6/c_eff = 27/4  ; ratio to first at t = 5e-4: 0.879532
+   C  : c_eff = 8/9    (numeric +0.8889); 6/c_eff = 27/4  ; ratio to first at t = 5e-4: 0.653030
+   D  : c_eff = 8/9    (numeric +0.8889); 6/c_eff = 27/4  ; ratio to first at t = 5e-4: 0.347644
+Jackson-Slater (Ising vacuum)
+   JS : c_eff = 1/2    (numeric +0.5000); 6/c_eff = 12    ; ratio to first at t = 5e-4: 1.000000
+reference ratios: 1/phi = 0.6180339887498948 ; sin(k pi/7)/sin(3 pi/7): [0.801938, 0.445042] ; sin(k pi/9)/sin(4 pi/9): [0.652704, 0.347296] ; sin(k pi/27)/sin(12 pi/27): [0.879385, 0.652704, 0.347296] ; sin(k pi/14)/sin(6 pi/14): [0.801938, 0.445042]

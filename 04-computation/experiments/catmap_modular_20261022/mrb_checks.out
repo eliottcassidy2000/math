@@ -1,0 +1,19 @@
+S_5 = 0.00644789297757 > 1/200: True ; min odd S_N (N=5..59): 0.006447893 ; min even S_N: 0.22387392 ; C_MRB ~ 0.187859642462067
+p =   3: D_p = +2.222171+2.515250i, main term -4.355172i, |D_p - main| = 7.22e+00 (stated bound 7.71e+01); D_p != 0: True
+p =   5: D_p = +2.223700-0.469173i, main term -2.177586i, |D_p - main| = 2.80e+00 (stated bound 2.84e+01); D_p != 0: True
+p =   7: D_p = +1.379793-0.925711i, main term -1.451724i, |D_p - main| = 1.48e+00 (stated bound 1.47e+01); D_p != 0: True
+p =  11: D_p = +0.610508-0.830739i, main term -0.871034i, |D_p - main| = 6.12e-01 (stated bound 6.06e+00); D_p != 0: True
+p = 101: D_p = +0.006680-0.091468i, main term -0.087103i, |D_p - main| = 7.98e-03 (stated bound 7.84e-02); D_p != 0: True
+p = 211: D_p = +0.001499-0.042676i, main term -0.041478i, |D_p - main| = 1.92e-03 (stated bound 1.85e-02); D_p != 0: True
+Ising ring identity n = 2..12: True
+  trailing-ones run k =  2: m =     3 -> after k rising steps       8 = 2^3 * 1 (claimed huge factor 2^2)
+  trailing-ones run k =  3: m =     7 -> after k rising steps      26 = 2^1 * 13 (claimed huge factor 2^3)
+  trailing-ones run k =  4: m =    15 -> after k rising steps      80 = 2^4 * 5 (claimed huge factor 2^4)
+  trailing-ones run k =  5: m =    31 -> after k rising steps     242 = 2^1 * 121 (claimed huge factor 2^5)
+  trailing-ones run k =  6: m =    63 -> after k rising steps     728 = 2^3 * 91 (claimed huge factor 2^6)
+  trailing-ones run k =  7: m =   127 -> after k rising steps    2186 = 2^1 * 1093 (claimed huge factor 2^7)
+  trailing-ones run k =  8: m =   255 -> after k rising steps    6560 = 2^5 * 205 (claimed huge factor 2^8)
+  trailing-ones run k =  9: m =   511 -> after k rising steps   19682 = 2^1 * 9841 (claimed huge factor 2^9)
+  trailing-ones run k = 10: m =  1023 -> after k rising steps   59048 = 2^3 * 7381 (claimed huge factor 2^10)
+  trailing-ones run k = 11: m =  2047 -> after k rising steps  177146 = 2^1 * 88573 (claimed huge factor 2^11)
+  trailing-ones run k = 12: m =  4095 -> after k rising steps  531440 = 2^4 * 33215 (claimed huge factor 2^12)

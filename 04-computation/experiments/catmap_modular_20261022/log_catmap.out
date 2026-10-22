@@ -1,0 +1,18 @@
+   max |S| coupling even-odd 9.8e-37, |T| coupling 2.8e-37
+p = 2: dim 5; S residual 2.3e-39, T residual 2.3e-39; even/log blocks decouple: True; |eig C| = [np.float64(0.381966), np.float64(1.0), np.float64(2.618034)]; even block unitary-spectrum: True; log block |eig| = phi^(+-2): True; Lucas trace law n = 1..10: True
+   eigenvalues of C on the log block: [0.381966+0.j 2.618034-0.j]
+   traces Tr rho(A^n), n = 1..8: [(3-0j), (7-0j), (21-0j), (47-0j), (123+0j), (325+0j), (843-0j), (2207-0j)]
+   max |S| coupling even-odd 4.8e-32, |T| coupling 2.0e-32
+p = 3: dim 8; S residual 4.5e-35, T residual 4.5e-35; even/log blocks decouple: True; |eig C| = [np.float64(0.381966), np.float64(1.0), np.float64(2.618034)]; even block unitary-spectrum: True; log block |eig| = phi^(+-2): True; Lucas trace law n = 1..10: True
+   eigenvalues of C on the log block: [1.309017-2.267284j 1.309017+2.267284j 0.190983-0.330792j
+ 0.190983+0.330792j]
+   traces Tr rho(A^n), n = 1..8: [(3+0j), (-5+0j), (-36+0j), (-49+0j), (123+0j), (640-0j), (843+0j), (-2209+0j)]
+   max |S| coupling even-odd 2.2e-28, |T| coupling 4.9e-28
+p = 4: dim 11; S residual 4.2e-31, T residual 4.7e-31; even/log blocks decouple: True; |eig C| = [np.float64(0.381966), np.float64(1.0), np.float64(2.618034)]; even block unitary-spectrum: True; log block |eig| = phi^(+-2): True; Lucas trace law n = 1..10: True
+   eigenvalues of C on the log block: [-1.309017-2.267284j  2.618034+0.j       -1.309017+2.267284j
+ -0.190983-0.330792j  0.381966+0.j       -0.190983+0.330792j]
+   traces Tr rho(A^n), n = 1..8: [(1+0j), (-1+0j), (55+0j), (-1+0j), (1+0j), (971+0j), (1+0j), (-1+0j)]
+   max |S| coupling even-odd 7.1e-23, |T| coupling 4.9e-22
+p = 5: dim 14; S residual 4.1e-25, T residual 4.0e-25; even/log blocks decouple: True; |eig C| = [np.float64(0.381966), np.float64(1.0), np.float64(2.618034)]; even block unitary-spectrum: True; log block |eig| = phi^(+-2): True; Lucas trace law n = 1..10: True
+   max |S| coupling even-odd 7.1e-17, |T| coupling 6.8e-17
+p = 6: dim 17; S residual 2.2e-20, T residual 2.2e-20; even/log blocks decouple: True; |eig C| = [np.float64(0.381966), np.float64(1.0), np.float64(2.618034)]; even block unitary-spectrum: True; log block |eig| = phi^(+-2): True; Lucas trace law n = 1..10: True
