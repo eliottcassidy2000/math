@@ -37,3 +37,21 @@ These are evaluated by `S(d)` from `inv.py 2100`, which is complete for `d ≤ 2
   * for `k ∈ {4, 8, 10}`: `N(n, 2^k − 1) > N(n, 2^k + 1)`.
 
 Any failure is recorded as a failure.
+
+## Second pre-registration: the mechanism decomposition out of sample
+
+Added after R1–R7 were evaluated (all passed; `repunit_rarity.py`), and before the decomposition was run on `1101 ≤ d ≤ 2099`.
+
+On the training range `d < 1100`, the divisibility bias of `S(d)` splits into two mechanisms:
+
+* exact one-vertex covers `A ∪_v B` with `H = H(A)H(B)`;
+* automorphisms of order 3, which force `3 | H` because Aut acts freely on Hamiltonian paths.
+
+On `[301, 1098]`, removing both leaves `β(3|d) = −0.015`. The generic remainder, with no exact cover and trivial Aut, keeps only `β(d ≡ 1 mod 8) = +0.049 ± 0.016`.
+
+Predictions for the strong classes with `1101 ≤ H ≤ 2099`:
+
+* **(G1)** With every class that has an exact one-vertex cover removed: `|β(5|d)| < 0.03` and `|β(9|d)| < 0.03`, while `β(3|d) > 0.08`.
+* **(G2)** With classes that have `3 | |Aut|` also removed: `|β(3|d)| < 0.04`.
+* **(G3)** In the generic part, `β(d ≡ 1 mod 8) > 0` and `|β(d ≡ 7 mod 8)| < 0.03`.
+* **(G4)** The share of classes with `3 | |Aut|` is smaller than on `[301, 1098]`.
