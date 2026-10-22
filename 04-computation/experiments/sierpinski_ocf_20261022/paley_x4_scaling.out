@@ -1,0 +1,7 @@
+P_19: q^4 X_4 = +6340.7731  (78s)
+P_23: q^4 X_4 = +6055.0577  (77s)
+P_31: q^4 X_4 = +5739.4560  (71s)
+P_43: q^4 X_4 = +5512.5521  (73s)
+fit of degree 1 in 1/q (last 2 points): limit +4926.4
+fit of degree 2 in 1/q (all points): limit +5038.3
+loop coefficients of P_q at z = 1 (limits): q X_1 -> -3.5, q^2 X_2 -> +29, q^3 X_3 -> about -341, q^4 X_4 -> see fits; alternating in sign, ratios about 8.3, 11.8, 14-15 (asymptotic series)

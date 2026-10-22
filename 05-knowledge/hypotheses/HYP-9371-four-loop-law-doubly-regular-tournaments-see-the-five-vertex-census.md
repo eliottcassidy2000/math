@@ -1,11 +1,13 @@
 ---
 id: HYP-9371
-title: "Four-loop law for doubly regular tournaments. (1) The four-loop (excess-3) term X_3 of the linear-forest loop expansion (111 cores) is computed by a validated engine. (2) For a doubly regular T, X_3 is an affine function of the 5-vertex census (PROVED), so across the doubly regular 23-tournaments it is exactly affine in the number TT5 of transitive 5-sets, Paley included. (3) Exact forest numbers give N_8(D) - N_8(D') = 7168 (TT5(D) - TT5(D')) at n = 19 and 23, which is the four-loop z^8 coefficient. (4) The strict four-loop prediction of H(D)/H(P_23) - 1 has the right sign and order but 38% of the exact TT5 slope (1.006e-7 against 2.665e-7). It has no Paley offset: the offset and the scatter first appear at forest length 10, where only five-loop clusters see the six-vertex census. Conjecture: the 5-census of a doubly regular tournament is affine in TT5 with an n-independent direction, hence N_8 = U_8(n) + 7168 TT5 for every order."
+title: "Four-loop law for doubly regular tournaments. (1) The four-loop (excess-3) term X_3 of the linear-forest loop expansion (111 cores) is computed by a validated engine. (2) For a doubly regular T, X_3 is an affine function of the 5-vertex census (PROVED), so across the doubly regular 23-tournaments it is exactly affine in the number TT5 of transitive 5-sets, Paley included. (3) Exact forest numbers give N_8(D) - N_8(D') = 7168 (TT5(D) - TT5(D')) at n = 19 and 23, which is the four-loop z^8 coefficient. (4) The strict four-loop prediction of H(D)/H(P_23) - 1 has the right sign and order but 38% of the exact TT5 slope (1.006e-7 against 2.665e-7). It has no Paley offset: the offset and the scatter first appear at forest length 10, where only five-loop clusters see the six-vertex census. Conjecture: the 5-census of a doubly regular tournament is affine in TT5 with an n-independent direction, hence N_8 = U_8(n) + 7168 TT5 for every order. (5) Five loops (section 8): with the 1076 excess-4 cores and the excess-5 cores with 5 vertices, Delta c_10 = delta_10 + Delta X_4^(10) + Delta X_5^(10) holds exactly for every class, so the six-vertex census (Paley's offset) enters at forest length 10 through five loops; loops <= 5 predict the L <= 10 forest-length slices, 75-83% of every H difference, with no fitted parameters."
 status: >
   OPEN (mac-mini-2026-10-22-loop4); independently audited 2026-10-22
   (04-computation/experiments/sierpinski_ocf_20261022/audit_loop4/REPORT.md). The audit reproduced the forest numbers of
   all 13 classes with its own DP, checked the engine on two further tournaments to z^16 and confirmed the Proposition.
   Its three errors and six minor items are corrected here.
+  Section 8 (five loops, same session, later): pre-audit. Engine VERIFIED (equal to decomp.c on all excess <= 3 cores;
+  X_4 equal to exact blow-up scaling on five tournaments); the z^10 identity on 13 classes FINITE-EXACT.
   Engine: VERIFIED. Exact blow-up scaling and exact set partitions agree to 2.3e-12 at excess 3, and the z^8
   coefficients of the 13 doubly regular 23-tournament differences agree exactly with exact forest numbers.
   Census reduction (2): PROVED below from THM-4757 (2).
@@ -22,6 +24,8 @@ scripts:
   - 04-computation/experiments/sierpinski_ocf_20261022/drt23_classes.py (+ .json, .out), drt23_four_loop.py (+ .json, .out)
   - 04-computation/experiments/sierpinski_ocf_20261022/forest_numbers.c, drt23_forest_exact.py (+ .json, .out), drt23_anatomy.py (+ .json, .out), drt19_check.py (+ .out), drt_census5_direction.py (+ .out)
   - 04-computation/experiments/sierpinski_ocf_20261022/drt_c1_test.py (+ .out), drt23_doubled_check.py (+ .out, drt23_doubled.json): (C1), (C2) and the TT5 law on DRTs built by skew-Hadamard doubling
+  - 04-computation/experiments/sierpinski_ocf_20261022/loop_engine5.py, cores_e4.json, cores_e5_v5.json, sign_network_basis5_check.py (+ .out), excess4_validate.py (+ .out), excess4_validate_R7_contour.py (+ .out): five-loop sign-network engine and its validation
+  - 04-computation/experiments/sierpinski_ocf_20261022/drt23_five_loop.py (+ .out, .json), drt23_five_loop_analysis.py (+ .out, .json), paley_x4_scaling.py (+ .out): five loops on DRT(23)
 related:
   - 01-canon/theorems/THM-4757-linear-forest-loop-expansion-of-hamiltonian-paths.md
   - 05-knowledge/hypotheses/HYP-9365-two-loop-law-for-hamiltonian-paths-in-regular-tournaments.md
@@ -252,3 +256,73 @@ The Paley switching families of `P_27` and `P_31` are single classes.
 **Next steps.**
 * **Five loops.** `ΔX_4` needs the excess-4 cores (up to 8 vertices, 12 edges) and their decompositions (`4⁸ · 2^12` configurations for a cubic 8-vertex core). Testable target: the exact `Δc_10 − δ_10`, e.g. `+2.029·10^(−6)` for D23_0, which is `ΔX_4^(10) + ΔX_5^(10)`. `K_5` enters at excess 5, `z¹⁰`.
 * **Third-order doubly regular constant.** The engine makes the universal `n^(−3)` coefficient of `κ_DRT = e(1 − 3/(2n) + 25/(8n²) + c_3/n³ + …)` computable from `q³X_3(P_q) → ≈ −341` plus cross and finite-size terms.
+
+## 8. Five loops (same session, after the audit; pre-audit)
+
+**Cores.**
+* Excess 4 has 1076 cores. By vertex count `V = 1 … 8`: 1, 10, 48, 153, 277, 323, 193, 71. The 71 with 8 vertices are the connected cubic multigraphs with loops on 8 vertices.
+* For `z¹⁰` the excess-5 cores with `V ≤ 5` are also needed: 2046 of them, 1451 with `V = 5`.
+* Canonical forms are by individualisation–refinement (`cores_enum.py`; it reproduces excess 1–3). The configuration-model identity holds exactly at all 20 `(V, E)` points up to excess 4, and at all 25 up to excess 5 (top level `V ≤ 5`).
+
+**Engine.** Explicit enumeration does not scale: a cubic 8-vertex core has `4⁸ · 2¹² = 2.7·10⁸` configurations, and a dense weight tensor `5¹²` entries. `loop_engine5.py` instead writes the decomposition sum of a core as a tensor network over half-edge orientation signs `o(x) = ±1`.
+* A vertex carries `Σ_π mob(d − k − |π|) Π_(pairs) [o_x = −o_y]` over partial matchings `π` of its free half-edges, where `k` counts pairs already fixed.
+* An edge carries an m1 term `R_(o_t) [o_t = −o_h]` and an m2 term `Q_(o_t, −o_h)`.
+* The contraction also counts closed runs, cycles of m1 edges joined by pass-throughs. Inclusion–exclusion over sets `A` of half-edge-disjoint closed trails removes them: `Valid = Σ_A (−1)^|A| N(A)`. In `N(A)`, the runs of `A` are forced, with one orientation sign per run, and everything else is free.
+* For a doubly regular `T` the edge weights are Ising-like:
+  * m1: `P` coefficient `a`, `Ŝ` coefficient `g·o_t`;
+  * m2: `P` coefficient `((b − a) + (b + a) o_t o_h)/2`, `Ŝ` coefficient `(h/2)(o_t − o_h)`;
+  * with `u² = −z²/n`: `a = u²/(1 − u²)`, `b = u²/(1 + u²)`, `g = z/(1 − u²)`, `h = −2u²z/((1 + u²)(1 − u²))`.
+
+**Validation.**
+* The 5-basis weight tensors equal `decomp.c`'s integer tensors on all 129 cores of excess ≤ 3, in 4.6 s against 209 s (`sign_network_basis5_check.out`).
+* In matrix mode, `X_1 … X_3` equal `loop_engine4` to `10^(−16)` on a non-vertex-transitive regular 11-tournament.
+* The `X_4` z-series equals the exact blow-up scaling (`excess4_validate.out`):
+
+| tournament | orders | max relative error |
+|---|---|---|
+| `P_7` | `z⁶ … z¹⁴` | `4.5·10^(−14)` |
+| non-circulant 7-tournament | `z⁶ … z¹⁴` | `4.8·10^(−11)` |
+| non-vertex-transitive 9-tournament | `z⁶ … z¹⁰` | `3.9·10^(−11)` |
+| `R_7`, `R_9` | `z⁶ … z¹⁴`, `z⁶ … z¹⁰` | `2·10^(−9)` |
+
+  The `R_7`, `R_9` errors are contour aliasing: their largest eigenvalues are the biggest. With 64 points on `|z| = 0.35`, `R_7` agrees to ≤ `3·10^(−14)` at every order (`excess4_validate_R7_contour.out`).
+* For the DRT(23) classes, the cores with ≤ 4 vertices are universal at excess 4 (class differences ≤ `2·10^(−18)`).
+
+**Power counting** (`paley_x4_scaling.out`). `q⁴ X_4(P_q)` = 6341, 6055, 5739, 5513 at `q = 19, 23, 31, 43`, extrapolating to about `5.0·10³` (4926 from the last two points, 5038 from a quadratic fit in `1/q`). The universal loop terms of `P_q` alternate in sign and grow: about `−3.5/q`, `+29/q²`, `−341/q³`, `+5·10³/q⁴`. At `q = 23` they are −0.143, +0.054, −0.030, +0.022.
+
+**The `z¹⁰` identity (FINITE-EXACT).** At `L = 10` only excess 3, 4 and 5 can differ between doubly regular tournaments of one order: excess ≥ 6 has ≤ 4 blocks there, and excess-5 cores with ≥ 6 vertices have ≥ 11 edges. So, class by class,
+
+    Δc_10 (exact, forest numbers) = δ_10 + ΔX_4^(10) + ΔX_5^(10).
+
+It holds to ≤ `3·10^(−18)` for all 13 non-Paley classes (`drt23_five_loop.out`). For D23_0: `+1.7109136619·10^(−6) = −3.183739·10^(−7) + 2.74117952·10^(−6) − 7.11891954·10^(−7)`.
+* The non-TT5 part of `Δc_10` is reproduced exactly. That is Paley's offset `+8.694·10^(−7)`, the scatter, and the `6.33·10^(−9)` split of D23_1 / D23_2, whose 5-censuses are equal. The six-vertex census enters through excess-4 clusters with 6 blocks.
+* `ΔX_4` and `ΔX_5` have no `z⁸` term (≤ `2·10^(−18)`), so `Δc_8 = δ_8` is again exact.
+* At `z¹⁰` the loop orders do not decrease at `n = 23`: `ΔX_4^(10)` is 8.6 times `δ_10` and of opposite sign, and `ΔX_5^(10)` is a quarter of `ΔX_4^(10)`, again of opposite sign.
+
+**Predictions** (`drt23_five_loop_analysis.out`; 13 non-Paley classes including the doubled-Paley one).
+
+| class | exact | strict `n^(−3)` | strict `n^(−4)` (complete) | loops ≤ 5, slices `L ≤ 10` |
+|---|---|---|---|---|
+| D23_0 | −1.6106e-5 | −4.02e-6 (25%) | −8.44e-6 (52%) | −1.266e-5 (79%) |
+| D23_1 | −1.9373e-5 | −5.23e-6 (27%) | −1.071e-5 (55%) | −1.552e-5 (80%) |
+| D23_4 | −1.2372e-5 | −2.62e-6 (21%) | −5.83e-6 (47%) | −9.42e-6 (76%) |
+| D23_5 | −1.2077e-5 | −2.41e-6 (20%) | −5.49e-6 (45%) | −9.09e-6 (75%) |
+| D23_dbl | −2.8815e-5 | −8.85e-6 (31%) | −1.744e-5 (61%) | −2.384e-5 (83%) |
+
+* **Strict `n^(−4)`.** It is `ΔX_3(1) + ΔX_4(1)` plus the first-order finite-size response of `ΔX_3`, the complete `n^(−4)` difference.
+  * It gives 45–61% of each difference and a `TT5` slope of `1.87·10^(−7)`, 71% of the exact `2.650·10^(−7)`.
+  * Paley's offset comes out `+9.6·10^(−7)`, 17% of the exact `+5.53·10^(−6)`. The non-`TT5` residuals correlate with the exact ones at `+0.994`, at about a fifth of their size.
+  * `ΔX_4(1)` itself (`+3.5·10^(−6)` for D23_0) has the sign opposite to the differences. The `n^(−4)` gain comes from the finite-size response of `ΔX_3`.
+* **By forest length.** Loops ≤ 5 fix `Δφ_8 = δ_8` and `Δφ_10 = Δc_10 + φ_2 Δc_8` exactly. With `g(L) = n^L/(n)_L` and the universal `κ = e(1 − 3/(2n) + 25/(8n²))`, with no exact input, they give:
+  * 75–83% of every difference;
+  * a `TT5` slope of `2.32·10^(−7)` (88%);
+  * a Paley offset of `+3.39·10^(−6)` (61%).
+
+  These slices equal the exact ones. The remainder sits at `L ≥ 12`, where excess 4–6 clusters on 6–8 vertices contribute.
+
+**What this settles.**
+* Paley's offset, the scatter and the equal-5-census split are six-vertex census effects. They first appear at forest length 10, through five loops, and the engine reproduces them exactly there.
+* The strict `1/n` expansion improves slowly at `n = 23`: 25% at `n^(−3)`, 52% at `n^(−4)` for D23_0.
+* Organised by forest length, the expansion is exact slice by slice. Through five loops it fixes about four fifths of every difference.
+* Next step: `z¹²` needs excess 5 with ≤ 7 vertices and excess 6 with ≤ 6 vertices. The exact target is in `drt23_anatomy.out`.
+

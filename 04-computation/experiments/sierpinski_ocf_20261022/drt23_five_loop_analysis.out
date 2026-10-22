@@ -1,0 +1,50 @@
+Per class (relative to P_23).  s3 = Delta X_3(1);  s4 = s3 + Delta X_4(1) + dressing (complete n^-4)
+class      TT5        exact           s3  Delta X_4(1)     dressing           s4  s4/exact
+D23_0     1478 -1.61059e-05 -4.02449e-06 +3.544140e-06 -7.96429e-06 -8.44464e-06     0.524
+D23_1     1466 -1.93731e-05 -5.23184e-06 +4.874496e-06 -1.03536e-05 -1.07109e-05     0.553
+D23_2     1466 -1.93455e-05 -5.23184e-06 +4.881811e-06 -1.03536e-05 -1.07036e-05     0.553
+D23_3     1470 -1.81044e-05 -4.82939e-06 +4.460999e-06 -9.55715e-06 -9.92554e-06     0.548
+D23_4     1492 -1.23716e-05 -2.61592e-06 +1.966437e-06 -5.17679e-06 -5.82627e-06     0.471
+D23_5     1494 -1.20767e-05 -2.41469e-06 +1.702033e-06 -4.77858e-06 -5.49124e-06     0.455
+D23_6     1484 -1.45120e-05 -3.42082e-06 +2.869896e-06 -6.76965e-06 -7.32057e-06     0.504
+D23_7     1482 -1.52759e-05 -3.62204e-06 +3.047171e-06 -7.16786e-06 -7.74273e-06     0.507
+D23_8     1490 -1.25599e-05 -2.81714e-06 +2.255059e-06 -5.57501e-06 -6.13709e-06     0.489
+D23_9     1486 -1.39486e-05 -3.21959e-06 +2.640528e-06 -6.37143e-06 -6.95050e-06     0.498
+D23_10    1484 -1.45120e-05 -3.42082e-06 +2.869896e-06 -6.76965e-06 -7.32057e-06     0.504
+D23_11    1482 -1.52759e-05 -3.62204e-06 +3.047171e-06 -7.16786e-06 -7.74273e-06     0.507
+D23_dbl   1430 -2.88147e-05 -8.85388e-06 +8.936865e-06 -1.75214e-05 -1.74385e-05     0.605
+
+Laws over the 13 non-Paley classes: slope per TT5, Paley offset (0 minus the line at TT5 = 1518), max residual
+   exact : slope +2.6498e-07, Paley offset +5.5260e-06, max residual 3.85e-07
+   s3    : slope +1.0061e-07, Paley offset +2.6021e-18, max residual 2.93e-18
+   x4    : slope -1.1246e-07, Paley offset +9.6202e-07, max residual 6.83e-08
+   dress : slope +1.9911e-07, Paley offset +2.2226e-18, max residual 5.67e-18
+   s4    : slope +1.8726e-07, Paley offset +9.6202e-07, max residual 6.83e-08
+   non-TT5 residuals: corr(exact, s4) = +0.9935; max |exact - s4| after removing both lines 3.17e-07
+   D23_1 vs D23_2 (equal 5-census): exact difference -2.767e-08, Delta X_4(1) difference -7.314e-09
+
+Delta X_4(1) by core vertex count (class D23_0): V=1: +0.000e+00, V=2: +0.000e+00, V=3: +0.000e+00, V=4: +0.000e+00, V=5: +3.587e-06, V=6: -1.666e-07, V=7: +1.187e-07, V=8: +5.306e-09
+
+Per coefficient: exact Delta c_L against loops through five (excess 5 complete at L = 10 only), class D23_0 and the TT5 slopes
+   L =  8: D23_0 exact -3.661300e-06, loops 3-4 -3.661300e-06; max |exact - loops| over classes 2.41e-18; slope exact +9.153e-08 vs loops +9.153e-08; Paley offset exact +2.711e-20 vs loops -5.421e-20
+   L = 10: D23_0 exact +1.710914e-06, loops 3-5 +1.710914e-06; max |exact - loops| over classes 3.05e-18; slope exact -6.433e-08 vs loops -6.433e-08; Paley offset exact +8.694e-07 vs loops +8.694e-07
+   L = 12: D23_0 exact -6.610831e-07, loops 3-4 +6.257121e-07; max |exact - loops| over classes 3.74e-06; slope exact +3.358e-08 vs loops -1.755e-08; Paley offset exact -6.890e-07 vs loops +7.703e-08
+   L = 14: D23_0 exact +2.605467e-07, loops 3-4 +1.152513e-07; max |exact - loops| over classes 7.51e-07; slope exact -1.592e-08 vs loops -3.221e-09; Paley offset exact +3.805e-07 vs loops +1.374e-08
+   L = 16: D23_0 exact -1.079135e-07, loops 3-4 +1.515966e-08; max |exact - loops| over classes 4.91e-07; slope exact +7.286e-09 vs loops -4.179e-10; Paley offset exact -1.857e-07 vs loops +1.587e-09
+
+Slices L = 8, 10 from loops <= 5 alone (universal kappa = 2.557060) against the exact H difference
+class      loops: L=8  loops: L=10          sum  exact total   share
+D23_0    -5.67182e-06 -6.98984e-06 -1.26617e-05 -1.61059e-05   0.786
+D23_1    -7.37336e-06 -8.14349e-06 -1.55169e-05 -1.93731e-05   0.801
+D23_2    -7.37336e-06 -8.11880e-06 -1.54922e-05 -1.93455e-05   0.801
+D23_3    -6.80618e-06 -7.65194e-06 -1.44581e-05 -1.81044e-05   0.799
+D23_4    -3.68668e-06 -5.73239e-06 -9.41907e-06 -1.23716e-05   0.761
+D23_5    -3.40309e-06 -5.69034e-06 -9.09343e-06 -1.20767e-05   0.753
+D23_6    -4.82104e-06 -6.44388e-06 -1.12649e-05 -1.45120e-05   0.776
+D23_7    -5.10463e-06 -6.79460e-06 -1.18992e-05 -1.52759e-05   0.779
+D23_8    -3.97027e-06 -5.68802e-06 -9.65829e-06 -1.25599e-05   0.769
+D23_9    -4.53745e-06 -6.27835e-06 -1.08158e-05 -1.39486e-05   0.775
+D23_10   -4.82104e-06 -6.44388e-06 -1.12649e-05 -1.45120e-05   0.776
+D23_11   -5.10463e-06 -6.79460e-06 -1.18992e-05 -1.52759e-05   0.779
+D23_dbl  -1.24780e-05 -1.13575e-05 -2.38355e-05 -2.88147e-05   0.827
+   loop slices L <= 10: TT5 slope +2.3241e-07 (exact +2.6498e-07), Paley offset +3.3926e-06 (exact +5.5260e-06)
