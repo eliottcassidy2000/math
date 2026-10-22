@@ -1,0 +1,72 @@
+{
+  "checks": 701482,
+  "completed_contraction": "4/9, sharp over real span",
+  "finite_child_arrival_checks": 6631,
+  "frozen_base_verifier_sha256": "fb69bee26e2617a8853ba2daef1528288f32435eb0c20d4319aea32e349fbe62",
+  "literal_clusters": 64647,
+  "outside_bank_cross_terms": "retained by REPORT section4, with new bank partition",
+  "scales": [
+    {
+      "N": 4096,
+      "distinct_original_sources": 767,
+      "families": {
+        "A": 85,
+        "B": 86,
+        "C": 85,
+        "D": 85
+      }
+    },
+    {
+      "N": 8192,
+      "distinct_original_sources": 1537,
+      "families": {
+        "A": 171,
+        "B": 171,
+        "C": 171,
+        "D": 170
+      }
+    },
+    {
+      "N": 32768,
+      "distinct_original_sources": 6145,
+      "families": {
+        "A": 683,
+        "B": 683,
+        "C": 683,
+        "D": 682
+      }
+    },
+    {
+      "N": 63666,
+      "distinct_original_sources": 11936,
+      "families": {
+        "A": 1327,
+        "B": 1326,
+        "C": 1326,
+        "D": 1326
+      }
+    },
+    {
+      "N": 65536,
+      "distinct_original_sources": 12289,
+      "families": {
+        "A": 1366,
+        "B": 1366,
+        "C": 1365,
+        "D": 1365
+      }
+    },
+    {
+      "N": 100000,
+      "distinct_original_sources": 18749,
+      "families": {
+        "A": 2083,
+        "B": 2084,
+        "C": 2083,
+        "D": 2083
+      }
+    }
+  ],
+  "source_clock_register_hash": "83d27e0593a4fe3bf61fca310fb6c83c7e90904818c7db350b8b9f3d756e49ae",
+  "uniform153N": "OPEN"
+}

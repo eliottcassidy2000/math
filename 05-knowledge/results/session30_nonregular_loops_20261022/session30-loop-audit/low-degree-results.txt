@@ -1,0 +1,7 @@
+n=1 cases=1 scope=ALL_LABELLED almost_regular=0 numerator4_range=0,0 PASS
+n=2 cases=2 scope=ALL_LABELLED almost_regular=2 numerator4_range=0,0 PASS
+n=3 cases=8 scope=ALL_LABELLED almost_regular=0 numerator4_range=-36,-4 PASS
+n=4 cases=64 scope=ALL_LABELLED almost_regular=24 numerator4_range=-64,0 PASS
+n=5 cases=1024 scope=ALL_LABELLED almost_regular=0 numerator4_range=-400,-16 PASS
+n=6 cases=32768 scope=ALL_LABELLED almost_regular=2640 numerator4_range=-1328,208 PASS
+n=7 cases=128 scope=SEEDED_SAMPLE almost_regular=0 numerator4_range=-2324,716 PASS

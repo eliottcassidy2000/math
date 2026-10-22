@@ -1,0 +1,107 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 1778,
+    "sha256": "3fdd37aaf184756cb72c87d987377e32a3b5c4e45d9e5082517f44371346b3de"
+  },
+  {
+    "path": "check_engine.out",
+    "bytes": 1039,
+    "sha256": "409a269fd8934093304a46f38423d0b3345ce535ece6d3e563dba7c771a4cfbb"
+  },
+  {
+    "path": "check_engine.py",
+    "bytes": 745,
+    "sha256": "86cb43fff55e127029e09495f0275bb6370a97ebd14a183c78761d5b9f1d659b"
+  },
+  {
+    "path": "check_weight2.py",
+    "bytes": 858,
+    "sha256": "a98184f93a2b2ada9d2e965bef5a9956d03626c78ecb77c983afbf801a14f16c"
+  },
+  {
+    "path": "closed_kernel_proof.out",
+    "bytes": 234,
+    "sha256": "c1e5bad2f6f0155eb301712ffe6608acf2ab64f82d92470ef52c7f5285dcf5d2"
+  },
+  {
+    "path": "cluster_shapes.py",
+    "bytes": 1582,
+    "sha256": "d3a5b97e98af93c2e413811b63f710a1d38d3029c44d612dbbd0d0758bf19085"
+  },
+  {
+    "path": "compare_engine.py",
+    "bytes": 860,
+    "sha256": "7cf09955c58ae754693524ff3c25df1fdf528e9f0f7735f69753197cb572237a"
+  },
+  {
+    "path": "compare_symbolic.py",
+    "bytes": 1442,
+    "sha256": "f31db713ca8fd25c8addf09d0a5a5cc6232cf93f2a4d55b6e9e9c937248454a1"
+  },
+  {
+    "path": "core_kernel.py",
+    "bytes": 1371,
+    "sha256": "404e51782188213f2dec864cd1dad91274b742d3f075fb6d61a1d0944447265b"
+  },
+  {
+    "path": "decorated_engine.py",
+    "bytes": 3243,
+    "sha256": "408f5251c41ad7fcdba843979a003d81fb5cc86c90bd43fea9e0f32d0d516848"
+  },
+  {
+    "path": "engine_comparison.json",
+    "bytes": 964,
+    "sha256": "176e726a32dde5efbac985c458edfe660a268612147853fe0c401572c87328a7"
+  },
+  {
+    "path": "engine_inventory.txt",
+    "bytes": 1957,
+    "sha256": "e16834349f7b24dcaf6c9f60a263e28f85c1b5406ef4eb522ba7bc1aee7ca4a1"
+  },
+  {
+    "path": "lollipop_limit_proof.md",
+    "bytes": 3098,
+    "sha256": "951859a67f5f82ba826937b8442ca92f5e2a93793e2b9b1cee2400c05b1aa602"
+  },
+  {
+    "path": "lollipop_obstruction.json",
+    "bytes": 938,
+    "sha256": "90d98076c3c1a8da9335a682d868f8da3374b4da9f5cf114c35cf8021433f10d"
+  },
+  {
+    "path": "lollipop_obstruction.py",
+    "bytes": 822,
+    "sha256": "025d62c5d889ac1170c2c8fa0bc18c59567b69cf98fe6a8c06eda362f3131212"
+  },
+  {
+    "path": "nonregular_forest_extension.md",
+    "bytes": 13525,
+    "sha256": "92742d2f8cb178c60fbe88c57d8c19eb8f982d064ab55ce519ab8b389a5ab6e1"
+  },
+  {
+    "path": "prove_closed_kernels.py",
+    "bytes": 1186,
+    "sha256": "6fb244020cc19dfd10eab382212a2b099f065fc082b0c81103ca344d22fb18d1"
+  },
+  {
+    "path": "symbolic_comparison.json",
+    "bytes": 8917,
+    "sha256": "ef1e296ea18c9937f780834b72f1107c728fcd875909bd3dcfbcdce286ba8c18"
+  },
+  {
+    "path": "symbolic_comparison.out",
+    "bytes": 1427,
+    "sha256": "32ef8e74277e8352abef8a539476eb7f0efed091031b8a8d1baed683d9312f75"
+  },
+  {
+    "path": "weight2_fixtures.json",
+    "bytes": 948,
+    "sha256": "eb673d0f8b2ef663d13349c93108583a239ad93c78c981be6a60b75ccb1fa533"
+  },
+  {
+    "path": "weight2_fixtures.out",
+    "bytes": 990,
+    "sha256": "deac1edecd9a59b2d349156bd1a63517ddfebc89b4b818abf23f2f258b72bd7d"
+  }
+]

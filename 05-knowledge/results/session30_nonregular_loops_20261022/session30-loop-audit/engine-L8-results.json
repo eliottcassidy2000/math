@@ -1,0 +1,142 @@
+[
+  {
+    "n": 3,
+    "L": 8,
+    "connected_partitions": 1585529,
+    "rows": [
+      {
+        "excess": -1,
+        "leaves": 2,
+        "numerator": -48,
+        "denominator": 16807,
+        "observed_real": -0.002855952876771567,
+        "observed_imag": -1.6930901125533637e-15,
+        "absolute_error": 6.201731426261637e-15
+      },
+      {
+        "excess": -1,
+        "leaves": 3,
+        "numerator": -5856,
+        "denominator": 823543,
+        "observed_real": -0.007110739815650184,
+        "observed_imag": 3.946495907847236e-17,
+        "absolute_error": 3.947448937541845e-17
+      },
+      {
+        "excess": 0,
+        "leaves": 1,
+        "numerator": 3328,
+        "denominator": 117649,
+        "observed_real": 0.02828753325570136,
+        "observed_imag": -5.342948306008566e-16,
+        "absolute_error": 5.402208547302005e-16
+      },
+      {
+        "excess": 0,
+        "leaves": 2,
+        "numerator": 713024,
+        "denominator": 5764801,
+        "observed_real": 0.12368579591906098,
+        "observed_imag": -2.5153490401663703e-16,
+        "absolute_error": 3.4486110730473784e-16
+      },
+      {
+        "excess": 1,
+        "leaves": 0,
+        "numerator": -11556,
+        "denominator": 117649,
+        "observed_real": -0.09822437929774125,
+        "observed_imag": 9.645062526431047e-16,
+        "absolute_error": 1.0203949608775757e-15
+      },
+      {
+        "excess": 1,
+        "leaves": 1,
+        "numerator": -3443136,
+        "denominator": 5764801,
+        "observed_real": -0.5972688389417076,
+        "observed_imag": 1.2741543931049648e-15,
+        "absolute_error": 1.5531678346816526e-15
+      },
+      {
+        "excess": 2,
+        "leaves": 0,
+        "numerator": 6968688,
+        "denominator": 5764801,
+        "observed_real": 1.2088340950537593,
+        "observed_imag": -2.614384132359343e-16,
+        "absolute_error": 1.1405898510521449e-15
+      }
+    ]
+  },
+  {
+    "n": 4,
+    "L": 8,
+    "connected_partitions": 1585529,
+    "rows": [
+      {
+        "excess": -1,
+        "leaves": 2,
+        "numerator": -985,
+        "denominator": 16384,
+        "observed_real": -0.06011962890621003,
+        "observed_imag": -1.4654943925052066e-14,
+        "absolute_error": 4.257006829356713e-14
+      },
+      {
+        "excess": -1,
+        "leaves": 3,
+        "numerator": -4583,
+        "denominator": 8192,
+        "observed_real": -0.5594482421874993,
+        "observed_imag": 2.220446049250313e-15,
+        "absolute_error": 2.318213734067276e-15
+      },
+      {
+        "excess": 0,
+        "leaves": 1,
+        "numerator": 501,
+        "denominator": 2048,
+        "observed_real": 0.2446289062500011,
+        "observed_imag": -3.3861802251067274e-15,
+        "absolute_error": 3.563539207208429e-15
+      },
+      {
+        "excess": 0,
+        "leaves": 2,
+        "numerator": 9425,
+        "denominator": 4096,
+        "observed_real": 2.301025390624999,
+        "observed_imag": -3.12944115066216e-15,
+        "absolute_error": 3.2530390130889477e-15
+      },
+      {
+        "excess": 1,
+        "leaves": 0,
+        "numerator": -7395,
+        "denominator": 32768,
+        "observed_real": -0.225677490234375,
+        "observed_imag": 1.48318857196017e-15,
+        "absolute_error": 1.48318857196017e-15
+      },
+      {
+        "excess": 1,
+        "leaves": 1,
+        "numerator": -13747,
+        "denominator": 4096,
+        "observed_real": -3.3562011718749973,
+        "observed_imag": 2.5587171270657905e-15,
+        "absolute_error": 3.69415504321745e-15
+      },
+      {
+        "excess": 2,
+        "leaves": 0,
+        "numerator": 15005,
+        "denominator": 8192,
+        "observed_real": 1.8316650390624962,
+        "observed_imag": -1.2079299691568346e-15,
+        "absolute_error": 3.963318673907229e-15
+      }
+    ]
+  }
+]

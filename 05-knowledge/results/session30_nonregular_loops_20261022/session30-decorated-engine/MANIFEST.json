@@ -1,0 +1,107 @@
+{
+  "status": "FROZEN initial formal second-order packet",
+  "files": [
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/README.md",
+      "name": "README.md",
+      "bytes": 8782,
+      "sha256": "0e7e143ffca1515ae0b48721138f7c57fc9a6bea301be0e82acddd4ff1d5e6d2"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/check_kernels.py",
+      "name": "check_kernels.py",
+      "bytes": 1755,
+      "sha256": "e140c3a55dacdff37074b373fb0936c5cf1929c901306e01fa697816e5021035"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/check_prediction_stability.py",
+      "name": "check_prediction_stability.py",
+      "bytes": 490,
+      "sha256": "6f7d54c6c6124ff6f666ddf52ba4e344d91127ef36ca85f5a03569257dca3e61"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/core-census.json",
+      "name": "core-census.json",
+      "bytes": 12049,
+      "sha256": "231bb3ccca6bdf1a1706170ba0144a78af79e4f3da3272305f8d3edfdcf22496"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/decorated.py",
+      "name": "decorated.py",
+      "bytes": 2619,
+      "sha256": "16863bd752161755416a0fcf0036b6622660f1e12a1b07185f846ee7502d2d37"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/exact_kernel.py",
+      "name": "exact_kernel.py",
+      "bytes": 1371,
+      "sha256": "404e51782188213f2dec864cd1dad91274b742d3f075fb6d61a1d0944447265b"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/export_kernels.py",
+      "name": "export_kernels.py",
+      "bytes": 675,
+      "sha256": "5984c95650f3ac0a38a2ceeaa3c373a268e2cf39e64ce7404efe0ca8157898a8"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/first-predictions.json",
+      "name": "first-predictions.json",
+      "bytes": 1984,
+      "sha256": "cd7fee1c923729c4bd653c67f37bf8252bc5a0d348524b16dccc123161d36ad4"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/fixtures.json",
+      "name": "fixtures.json",
+      "bytes": 60533,
+      "sha256": "1dd04802b383c2854108abbba627de13761c73e8ca2b1b9898fb2f719bd233b7"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/fixtures.py",
+      "name": "fixtures.py",
+      "bytes": 541,
+      "sha256": "227f7eb3d7df9633850bda8987e57414b2185ea47cfd40765b604e3e6298432c"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/kernel-check-L6.json",
+      "name": "kernel-check-L6.json",
+      "bytes": 1750,
+      "sha256": "7f42047e6753b55ed8f5466867dc358b57bcc99ee391acf30a040b28aa094557"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/kernel-check-L8.json",
+      "name": "kernel-check-L8.json",
+      "bytes": 1764,
+      "sha256": "5da854c2be07f5b95c21d3fd23d9ac46fa2b986c434fdc0f6abb97f23e86f84e"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/loop_engine.py",
+      "name": "loop_engine.py",
+      "bytes": 16833,
+      "sha256": "b8695310d8f24aaa4c070502cba576df4463352a0eb1acc39fe8f2809210e63c"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/loop_engine_fast.py",
+      "name": "loop_engine_fast.py",
+      "bytes": 7154,
+      "sha256": "d9be33dedc61f362bf278e3ea53f9bb481a25bb42beec70e83e68e1700941f22"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/predict.py",
+      "name": "predict.py",
+      "bytes": 1583,
+      "sha256": "615406a01267826de037a2657374c8c669ec7c7d26924524e60b06967ae82df0"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/prediction-stability.json",
+      "name": "prediction-stability.json",
+      "bytes": 474,
+      "sha256": "f3840aad9f2efc8db2176434f7693c64c0f317042ada5b1208cad02c7bcf0495"
+    },
+    {
+      "path": "/workspace/scratch/07d5532f2fce/session30-decorated-engine/symbolic-kernels.json",
+      "name": "symbolic-kernels.json",
+      "bytes": 344409,
+      "sha256": "27ce64a50e16fd71aa8b989b465ad103819d5205d866e977e4a9933c9b914418"
+    }
+  ]
+}

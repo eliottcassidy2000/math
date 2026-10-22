@@ -1,0 +1,820 @@
+{
+  "1": {
+    "count": 5,
+    "by_type": {
+      "(1, 0)": 3,
+      "(0, 1)": 1,
+      "(-1, 2)": 1
+    },
+    "cores": [
+      {
+        "V": 1,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "excess": 1,
+        "leaves": 0,
+        "weight": 1,
+        "automorphisms": 8
+      },
+      {
+        "V": 2,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "excess": 1,
+        "leaves": 0,
+        "weight": 1,
+        "automorphisms": 8
+      },
+      {
+        "V": 2,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "excess": 1,
+        "leaves": 0,
+        "weight": 1,
+        "automorphisms": 12
+      },
+      {
+        "V": 2,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "excess": 0,
+        "leaves": 1,
+        "weight": 1,
+        "automorphisms": 2
+      },
+      {
+        "V": 2,
+        "edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "excess": -1,
+        "leaves": 2,
+        "weight": 1,
+        "automorphisms": 2
+      }
+    ],
+    "seconds": 0.003977537155151367
+  },
+  "2": {
+    "count": 26,
+    "by_type": {
+      "(2, 0)": 15,
+      "(1, 1)": 7,
+      "(0, 2)": 3,
+      "(-1, 3)": 1
+    },
+    "cores": [
+      {
+        "V": 1,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "excess": 2,
+        "leaves": 0,
+        "weight": 2,
+        "automorphisms": 48
+      },
+      {
+        "V": 2,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "excess": 2,
+        "leaves": 0,
+        "weight": 2,
+        "automorphisms": 16
+      },
+      {
+        "V": 2,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "excess": 2,
+        "leaves": 0,
+        "weight": 2,
+        "automorphisms": 12
+      },
+      {
+        "V": 2,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "excess": 2,
+        "leaves": 0,
+        "weight": 2,
+        "automorphisms": 16
+      },
+      {
+        "V": 2,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "excess": 2,
+        "leaves": 0,
+        "weight": 2,
+        "automorphisms": 48
+      },
+      {
+        "V": 2,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "excess": 1,
+        "leaves": 1,
+        "weight": 2,
+        "automorphisms": 8
+      },
+      {
+        "V": 3,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "excess": 2,
+        "leaves": 0,
+        "weight": 2,
+        "automorphisms": 8
+      },
+      {
+        "V": 3,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "excess": 2,
+        "leaves": 0,
+        "weight": 2,
+        "automorphisms": 16
+      },
+      {
+        "V": 3,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "excess": 2,
+        "leaves": 0,
+        "weight": 2,
+        "automorphisms": 8
+      },
+      {
+        "V": 3,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "excess": 2,
+        "leaves": 0,
+        "weight": 2,
+        "automorphisms": 12
+      },
+      {
+        "V": 3,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "excess": 2,
+        "leaves": 0,
+        "weight": 2,
+        "automorphisms": 8
+      },
+      {
+        "V": 3,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "excess": 1,
+        "leaves": 1,
+        "weight": 2,
+        "automorphisms": 4
+      },
+      {
+        "V": 3,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "excess": 1,
+        "leaves": 1,
+        "weight": 2,
+        "automorphisms": 4
+      },
+      {
+        "V": 3,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "excess": 1,
+        "leaves": 1,
+        "weight": 2,
+        "automorphisms": 6
+      },
+      {
+        "V": 3,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "excess": 0,
+        "leaves": 2,
+        "weight": 2,
+        "automorphisms": 4
+      },
+      {
+        "V": 4,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "excess": 2,
+        "leaves": 0,
+        "weight": 2,
+        "automorphisms": 16
+      },
+      {
+        "V": 4,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "excess": 2,
+        "leaves": 0,
+        "weight": 2,
+        "automorphisms": 48
+      },
+      {
+        "V": 4,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "excess": 2,
+        "leaves": 0,
+        "weight": 2,
+        "automorphisms": 8
+      },
+      {
+        "V": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "excess": 2,
+        "leaves": 0,
+        "weight": 2,
+        "automorphisms": 16
+      },
+      {
+        "V": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "excess": 2,
+        "leaves": 0,
+        "weight": 2,
+        "automorphisms": 24
+      },
+      {
+        "V": 4,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "excess": 1,
+        "leaves": 1,
+        "weight": 2,
+        "automorphisms": 4
+      },
+      {
+        "V": 4,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "excess": 1,
+        "leaves": 1,
+        "weight": 2,
+        "automorphisms": 8
+      },
+      {
+        "V": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "excess": 1,
+        "leaves": 1,
+        "weight": 2,
+        "automorphisms": 4
+      },
+      {
+        "V": 4,
+        "edges": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "excess": 0,
+        "leaves": 2,
+        "weight": 2,
+        "automorphisms": 4
+      },
+      {
+        "V": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "excess": 0,
+        "leaves": 2,
+        "weight": 2,
+        "automorphisms": 4
+      },
+      {
+        "V": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "excess": -1,
+        "leaves": 3,
+        "weight": 2,
+        "automorphisms": 6
+      }
+    ],
+    "seconds": 4.573346376419067
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "actual_first_arrival_child_checks": 6631,
+  "checks": 811022,
+  "frontier_sha256": "391f6d3380bcae4afb9a1bbd9522b74b1e9006012fa10a92be5bf0bbf938754f",
+  "literal_children": 40711,
+  "literal_clusters": 32563,
+  "producer_imports": false,
+  "selected_scales": [
+    {
+      "N": 4096,
+      "clusters": {
+        "A": 85,
+        "B": 86,
+        "C": 85,
+        "D": 85
+      },
+      "distinct_sources": 767
+    },
+    {
+      "N": 7958,
+      "clusters": {
+        "A": 166,
+        "B": 165,
+        "C": 167,
+        "D": 166
+      },
+      "distinct_sources": 1495
+    },
+    {
+      "N": 7959,
+      "clusters": {
+        "A": 166,
+        "B": 165,
+        "C": 166,
+        "D": 166
+      },
+      "distinct_sources": 1492
+    },
+    {
+      "N": 8192,
+      "clusters": {
+        "A": 171,
+        "B": 171,
+        "C": 171,
+        "D": 170
+      },
+      "distinct_sources": 1537
+    },
+    {
+      "N": 63666,
+      "clusters": {
+        "A": 1327,
+        "B": 1326,
+        "C": 1326,
+        "D": 1326
+      },
+      "distinct_sources": 11936
+    },
+    {
+      "N": 65536,
+      "clusters": {
+        "A": 1366,
+        "B": 1366,
+        "C": 1365,
+        "D": 1365
+      },
+      "distinct_sources": 12289
+    },
+    {
+      "N": 100000,
+      "clusters": {
+        "A": 2083,
+        "B": 2084,
+        "C": 2083,
+        "D": 2083
+      },
+      "distinct_sources": 18749
+    }
+  ],
+  "source_clock_register_digest": "46fc204f1cfd7839f939e52b5b7b981408ce6cebd13c7f7ced9382d24bfd0e74",
+  "status": "PASS",
+  "symbolic_identities": 11,
+  "uniform_153N": "NOT PROVED"
+}

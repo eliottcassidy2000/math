@@ -1,0 +1,766 @@
+[
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "automorphisms": 8,
+    "weight": 1,
+    "nonzero_tensor_entries": 5,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "automorphisms": 8,
+    "weight": 1,
+    "nonzero_tensor_entries": 9,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "automorphisms": 12,
+    "weight": 1,
+    "nonzero_tensor_entries": 7,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "automorphisms": 2,
+    "weight": 1,
+    "nonzero_tensor_entries": 3,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        1
+      ]
+    ],
+    "automorphisms": 2,
+    "weight": 1,
+    "nonzero_tensor_entries": 1,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "automorphisms": 48,
+    "weight": 2,
+    "nonzero_tensor_entries": 7,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "automorphisms": 16,
+    "weight": 2,
+    "nonzero_tensor_entries": 15,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "automorphisms": 12,
+    "weight": 2,
+    "nonzero_tensor_entries": 33,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "automorphisms": 16,
+    "weight": 2,
+    "nonzero_tensor_entries": 47,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "automorphisms": 48,
+    "weight": 2,
+    "nonzero_tensor_entries": 57,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "automorphisms": 8,
+    "weight": 2,
+    "nonzero_tensor_entries": 5,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "automorphisms": 8,
+    "weight": 2,
+    "nonzero_tensor_entries": 99,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "automorphisms": 16,
+    "weight": 2,
+    "nonzero_tensor_entries": 135,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "automorphisms": 8,
+    "weight": 2,
+    "nonzero_tensor_entries": 89,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "automorphisms": 12,
+    "weight": 2,
+    "nonzero_tensor_entries": 123,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "automorphisms": 8,
+    "weight": 2,
+    "nonzero_tensor_entries": 101,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "automorphisms": 4,
+    "weight": 2,
+    "nonzero_tensor_entries": 33,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "automorphisms": 4,
+    "weight": 2,
+    "nonzero_tensor_entries": 45,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "automorphisms": 6,
+    "weight": 2,
+    "nonzero_tensor_entries": 41,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "automorphisms": 4,
+    "weight": 2,
+    "nonzero_tensor_entries": 15,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "automorphisms": 16,
+    "weight": 2,
+    "nonzero_tensor_entries": 243,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "automorphisms": 48,
+    "weight": 2,
+    "nonzero_tensor_entries": 351,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "automorphisms": 8,
+    "weight": 2,
+    "nonzero_tensor_entries": 201,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "automorphisms": 16,
+    "weight": 2,
+    "nonzero_tensor_entries": 197,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "automorphisms": 24,
+    "weight": 2,
+    "nonzero_tensor_entries": 158,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "automorphisms": 4,
+    "weight": 2,
+    "nonzero_tensor_entries": 81,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "automorphisms": 8,
+    "weight": 2,
+    "nonzero_tensor_entries": 117,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "automorphisms": 4,
+    "weight": 2,
+    "nonzero_tensor_entries": 67,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "automorphisms": 4,
+    "weight": 2,
+    "nonzero_tensor_entries": 39,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "automorphisms": 4,
+    "weight": 2,
+    "nonzero_tensor_entries": 27,
+    "exact_equal": true
+  },
+  {
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "automorphisms": 6,
+    "weight": 2,
+    "nonzero_tensor_entries": 13,
+    "exact_equal": true
+  }
+]

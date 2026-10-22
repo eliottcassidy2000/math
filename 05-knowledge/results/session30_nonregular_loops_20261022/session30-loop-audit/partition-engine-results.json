@@ -1,0 +1,392 @@
+[
+  {
+    "control": "weighted_skew3",
+    "L": 2,
+    "connected_partitions": 2,
+    "hom_cache": 2,
+    "seconds": 0.0006837844848632812,
+    "rows": [
+      {
+        "excess": 1,
+        "leaves": 0,
+        "exact": "0",
+        "engine_real": 5.089112238197267e-18,
+        "engine_imag": -3.3189862423025654e-19,
+        "absolute_error": 5.099923535675328e-18
+      },
+      {
+        "excess": 0,
+        "leaves": 1,
+        "exact": "0",
+        "engine_real": -3.2083533675591466e-18,
+        "engine_imag": -9.403794353190601e-19,
+        "absolute_error": 3.3433284034774553e-18
+      },
+      {
+        "excess": -1,
+        "leaves": 2,
+        "exact": "-6/49",
+        "engine_real": -0.12244897959183669,
+        "engine_imag": 8.186832731012994e-18,
+        "absolute_error": 4.243066320615432e-17
+      },
+      {
+        "excess": 2,
+        "leaves": 0,
+        "exact": "0",
+        "engine_real": -8.408098480499832e-18,
+        "engine_imag": 1.7701259958947015e-18,
+        "absolute_error": 8.59240746817362e-18
+      },
+      {
+        "excess": 1,
+        "leaves": 1,
+        "exact": "0",
+        "engine_real": 5.75290948665778e-18,
+        "engine_imag": -1.5488602464078638e-18,
+        "absolute_error": 5.957762635803789e-18
+      },
+      {
+        "excess": 0,
+        "leaves": 2,
+        "exact": "0",
+        "engine_real": -3.0977204928157275e-18,
+        "engine_imag": -3.042404055444018e-19,
+        "absolute_error": 3.1126250137105073e-18
+      },
+      {
+        "excess": -1,
+        "leaves": 3,
+        "exact": "0",
+        "engine_real": 5.877371470744126e-19,
+        "engine_imag": -5.531643737170942e-20,
+        "absolute_error": 5.903345342216293e-19
+      }
+    ]
+  },
+  {
+    "control": "weighted_skew3",
+    "L": 4,
+    "connected_partitions": 78,
+    "hom_cache": 34,
+    "seconds": 0.0028607845306396484,
+    "rows": [
+      {
+        "excess": 1,
+        "leaves": 0,
+        "exact": "-957/2401",
+        "engine_real": -0.39858392336526444,
+        "engine_imag": 1.0498834031773421e-17,
+        "absolute_error": 5.649525136722822e-17
+      },
+      {
+        "excess": 0,
+        "leaves": 1,
+        "exact": "416/2401",
+        "engine_real": 0.17326114119117034,
+        "engine_imag": -1.4280672096982128e-17,
+        "absolute_error": 1.4280672096982128e-17
+      },
+      {
+        "excess": -1,
+        "leaves": 2,
+        "exact": "-12/343",
+        "engine_real": -0.03498542274052457,
+        "engine_imag": -7.225004064876333e-17,
+        "absolute_error": 2.269152601471556e-16
+      },
+      {
+        "excess": 2,
+        "leaves": 0,
+        "exact": "12/49",
+        "engine_real": 0.2448979591836734,
+        "engine_imag": -1.3546882621643123e-18,
+        "absolute_error": 5.552767860542365e-17
+      },
+      {
+        "excess": 1,
+        "leaves": 1,
+        "exact": "-468/2401",
+        "engine_real": -0.19491878384006658,
+        "engine_imag": 1.2643757113533582e-17,
+        "absolute_error": 5.693287718854202e-17
+      },
+      {
+        "excess": 0,
+        "leaves": 2,
+        "exact": "296/2401",
+        "engine_real": 0.12328196584756351,
+        "engine_imag": -6.2089878682530986e-18,
+        "absolute_error": 6.2089878682530986e-18
+      },
+      {
+        "excess": -1,
+        "leaves": 3,
+        "exact": "-24/2401",
+        "engine_real": -0.009995835068721358,
+        "engine_imag": 1.502857290838534e-18,
+        "absolute_error": 8.802852860820345e-18
+      }
+    ]
+  },
+  {
+    "control": "weighted_skew3",
+    "L": 6,
+    "connected_partitions": 8014,
+    "hom_cache": 853,
+    "seconds": 0.2527298927307129,
+    "rows": [
+      {
+        "excess": 1,
+        "leaves": 0,
+        "exact": "-19664/117649",
+        "engine_real": -0.16714124216950332,
+        "engine_imag": -8.257147502715809e-16,
+        "absolute_error": 1.2127100865569936e-15
+      },
+      {
+        "excess": 0,
+        "leaves": 1,
+        "exact": "832/16807",
+        "engine_real": 0.049503183197476666,
+        "engine_imag": 3.6125020324381667e-16,
+        "absolute_error": 6.798492435943358e-16
+      },
+      {
+        "excess": -1,
+        "leaves": 2,
+        "exact": "-24/2401",
+        "engine_real": -0.009995835068717063,
+        "engine_imag": -6.192860627036857e-16,
+        "absolute_error": 4.348175589756571e-15
+      },
+      {
+        "excess": 2,
+        "leaves": 0,
+        "exact": "122656/117649",
+        "engine_real": 1.0425587977798356,
+        "engine_imag": 6.524621017770974e-16,
+        "absolute_error": 1.2877507362308975e-15
+      },
+      {
+        "excess": 1,
+        "leaves": 1,
+        "exact": "-76416/117649",
+        "engine_real": -0.6495252828328326,
+        "engine_imag": -3.501915235526794e-16,
+        "absolute_error": 7.525744895722721e-16
+      },
+      {
+        "excess": 0,
+        "leaves": 2,
+        "exact": "21184/117649",
+        "engine_real": 0.1800610289930212,
+        "engine_imag": 2.506634063324442e-16,
+        "absolute_error": 4.859689684218894e-16
+      },
+      {
+        "excess": -1,
+        "leaves": 3,
+        "exact": "-1312/117649",
+        "engine_real": -0.011151815995036013,
+        "engine_imag": -1.2556209232645413e-17,
+        "absolute_error": 7.051583688266104e-17
+      }
+    ]
+  },
+  {
+    "control": "transitive4",
+    "L": 2,
+    "connected_partitions": 2,
+    "hom_cache": 2,
+    "seconds": 0.00035190582275390625,
+    "rows": [
+      {
+        "excess": 1,
+        "leaves": 0,
+        "exact": "0",
+        "engine_real": -3.3189862423025653e-18,
+        "engine_imag": -4.425314989736754e-19,
+        "absolute_error": 3.3483583745139334e-18
+      },
+      {
+        "excess": 0,
+        "leaves": 1,
+        "exact": "0",
+        "engine_real": -6.195440985631455e-18,
+        "engine_imag": 6.195440985631455e-18,
+        "absolute_error": 8.761676666762139e-18
+      },
+      {
+        "excess": -1,
+        "leaves": 2,
+        "exact": "-5/4",
+        "engine_real": -1.2500000000000002,
+        "engine_imag": -1.7701259958947017e-17,
+        "absolute_error": 2.2274905427509106e-16
+      },
+      {
+        "excess": 2,
+        "leaves": 0,
+        "exact": "0",
+        "engine_real": 7.744301232039319e-18,
+        "engine_imag": 1.9913917453815393e-18,
+        "absolute_error": 7.996239282071258e-18
+      },
+      {
+        "excess": 1,
+        "leaves": 1,
+        "exact": "0",
+        "engine_real": 4.425314989736754e-18,
+        "engine_imag": -7.523035482552481e-18,
+        "absolute_error": 8.728085450437138e-18
+      },
+      {
+        "excess": 0,
+        "leaves": 2,
+        "exact": "0",
+        "engine_real": -3.540251991789403e-18,
+        "engine_imag": 1.3275944969210261e-17,
+        "absolute_error": 1.37398725973303e-17
+      },
+      {
+        "excess": -1,
+        "leaves": 3,
+        "exact": "0",
+        "engine_real": -1.3275944969210262e-18,
+        "engine_imag": -7.965566981526157e-18,
+        "absolute_error": 8.075442061301334e-18
+      }
+    ]
+  },
+  {
+    "control": "transitive4",
+    "L": 4,
+    "connected_partitions": 78,
+    "hom_cache": 34,
+    "seconds": 0.002270221710205078,
+    "rows": [
+      {
+        "excess": 1,
+        "leaves": 0,
+        "exact": "-67/128",
+        "engine_real": -0.5234375,
+        "engine_imag": 2.754532799734102e-17,
+        "absolute_error": 2.754532799734102e-17
+      },
+      {
+        "excess": 0,
+        "leaves": 1,
+        "exact": "15/16",
+        "engine_real": 0.9375000000000001,
+        "engine_imag": -1.8062510162190833e-18,
+        "absolute_error": 1.1103699467660272e-16
+      },
+      {
+        "excess": -1,
+        "leaves": 2,
+        "exact": "-29/64",
+        "engine_real": -0.453124999999999,
+        "engine_imag": 8.381004715256546e-16,
+        "absolute_error": 1.3041527838186244e-15
+      },
+      {
+        "excess": 2,
+        "leaves": 0,
+        "exact": "9/64",
+        "engine_real": 0.14062500000000003,
+        "engine_imag": 0.0,
+        "absolute_error": 2.7755575615628914e-17
+      },
+      {
+        "excess": 1,
+        "leaves": 1,
+        "exact": "-15/32",
+        "engine_real": -0.46875,
+        "engine_imag": -1.2643757113533582e-17,
+        "absolute_error": 1.2643757113533582e-17
+      },
+      {
+        "excess": 0,
+        "leaves": 2,
+        "exact": "35/32",
+        "engine_real": 1.0937500000000002,
+        "engine_imag": 4.515627540547708e-18,
+        "absolute_error": 2.2209051638554537e-16
+      },
+      {
+        "excess": -1,
+        "leaves": 3,
+        "exact": "-17/32",
+        "engine_real": -0.53125,
+        "engine_imag": 2.1675012194628998e-17,
+        "absolute_error": 2.1675012194628998e-17
+      }
+    ]
+  },
+  {
+    "control": "transitive4",
+    "L": 6,
+    "connected_partitions": 8014,
+    "hom_cache": 853,
+    "seconds": 0.3663947582244873,
+    "rows": [
+      {
+        "excess": 1,
+        "leaves": 0,
+        "exact": "-235/768",
+        "engine_real": -0.30598958333333304,
+        "engine_imag": -7.888524846344568e-16,
+        "absolute_error": 8.362568028359742e-16
+      },
+      {
+        "excess": 0,
+        "leaves": 1,
+        "exact": "87/256",
+        "engine_real": 0.3398437499999989,
+        "engine_imag": 8.109698440167313e-16,
+        "absolute_error": 1.3748699037772092e-15
+      },
+      {
+        "excess": -1,
+        "leaves": 2,
+        "exact": "-169/1024",
+        "engine_real": -0.16503906249996883,
+        "engine_imag": 2.8310220009311348e-15,
+        "absolute_error": 3.1297813462026516e-14
+      },
+      {
+        "excess": 2,
+        "leaves": 0,
+        "exact": "149/128",
+        "engine_real": 1.1640624999999996,
+        "engine_imag": 4.865819064100387e-16,
+        "absolute_error": 6.587694421805558e-16
+      },
+      {
+        "excess": 1,
+        "leaves": 1,
+        "exact": "-177/64",
+        "engine_real": -2.765624999999999,
+        "engine_imag": -1.3860211879558679e-15,
+        "absolute_error": 1.646182140190935e-15
+      },
+      {
+        "excess": 0,
+        "leaves": 2,
+        "exact": "1299/512",
+        "engine_real": 2.537109374999999,
+        "engine_imag": 2.2707155632468477e-15,
+        "absolute_error": 2.4382391339637836e-15
+      },
+      {
+        "excess": -1,
+        "leaves": 3,
+        "exact": "-541/768",
+        "engine_real": -0.7044270833333327,
+        "engine_imag": -5.234441720471629e-16,
+        "absolute_error": 8.471883264286395e-16
+      }
+    ]
+  }
+]

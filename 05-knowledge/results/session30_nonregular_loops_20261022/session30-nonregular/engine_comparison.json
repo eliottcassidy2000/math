@@ -1,0 +1,50 @@
+[
+  {
+    "name": "transitive4",
+    "weight": "1",
+    "max_absolute_error": 6.661338147750939e-16,
+    "cores": 5
+  },
+  {
+    "name": "transitive4",
+    "weight": "2",
+    "max_absolute_error": 5.329070518200751e-15,
+    "cores": 26
+  },
+  {
+    "name": "transitive6",
+    "weight": "1",
+    "max_absolute_error": 8.881784197001252e-16,
+    "cores": 5
+  },
+  {
+    "name": "transitive6",
+    "weight": "2",
+    "max_absolute_error": 3.1086244689504383e-15,
+    "cores": 26
+  },
+  {
+    "name": "regular7",
+    "weight": "1",
+    "max_absolute_error": 1.491862189340054e-16,
+    "cores": 5
+  },
+  {
+    "name": "regular7",
+    "weight": "2",
+    "max_absolute_error": 2.7755575615628914e-16,
+    "cores": 26
+  },
+  {
+    "name": "deleted_regular7",
+    "weight": "1",
+    "max_absolute_error": 5.551115123125783e-16,
+    "cores": 5
+  },
+  {
+    "name": "deleted_regular7",
+    "weight": "2",
+    "max_absolute_error": 2.220446049250313e-16,
+    "cores": 26
+  }
+]
