@@ -315,4 +315,4 @@ The `i` comes from the skew spectrum. The mod-4 structure of the whole expansion
 
 **A universal curve for doubly regular tournaments.** Paley and non-Paley classes together give `n²(κ/e − 1 + 3/(2n)) = 3.19, 3.12/3.13, 3.11/3.10/3.10/3.10, 3.09, 3.10` at `n = 15, 19, 23, 27, 31` (`drt_universal_curve.out`). So `κ_DRT(n) = e(1 − 3/(2n) + c_2/n² + …)` with `c_2 ≈ 3.10`, the same for every doubly regular tournament.
 * The two-loop finite-`n` part gives `y_pred = 1/2 − 1/(3n) + O(n^(−2))` exactly for doubly regular tournaments. Together with `ρ = e(1 − 1/n + 5/(6n²) + …)` this accounts for `5/3` of `c_2`.
-* The remaining ≈ 1.43 is three-loop: clusters on at most 4 core vertices, which are the same for every doubly regular tournament of one order. Deriving it is open.
+* The remaining ≈ 1.43 is the full second order: the three-loop clusters (on at most 4 core vertices), the second-order finite-size terms of `n^L/(n)_L`, and the cross terms of one and two loops. All of these are fixed by `n` for doubly regular tournaments. Deriving the number is open.
