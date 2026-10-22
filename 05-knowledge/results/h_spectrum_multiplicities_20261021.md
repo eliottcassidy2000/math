@@ -36,7 +36,7 @@ Session opus-2026-10-21-S50.
 ## 0. What was known, what was concurrent, what is new
 
 * **Literature.**
-  * J. W. Moon, *Publ. Math. Debrecen* 19 (1972) 101–104, defined the chains `S_n`. He proved `h(S_n) = ∏(1 + 2^(p_i − 1))` and listed the minimizing patterns (p. 102, as read by the audit).
+  * J. W. Moon, *Publ. Math. Debrecen* 19 (1972) 101–104, defined the chains `S_n`. He stated `h(S_n) = ∏(1 + 2^(p_i − 1))` with a proof sketch and listed the minimizing patterns (p. 102, as read by the audit).
   * A. H. Busch, *EJC* 13 (2006) N3, proved that Moon's upper bound is the minimum `f(m)`.
   * J. W. Moon and L. L. M. Yang, *Utilitas Math.* 72 (2007) 193–198, "Strong tournaments with the fewest Hamiltonian paths", proved that the special chains are the **only** tournaments attaining it. This is cited via El Sahili and Ghazo Hanna, arXiv:2101.00713 (*J. Graph Theory* 2023); the primary paper was not accessed.
   * This session rediscovered the chains, the formula and the characterization from its census before checking the literature. THM-1370 had already noted that Moon "gave the chain construction".
@@ -68,7 +68,7 @@ Session opus-2026-10-21-S50.
   * The exact multiplicity polynomials, determined for every odd `h < 625` and computed explicitly for `h < 375`.
   * An independent finite confirmation of Moon–Yang through order 13, with two predictions committed before computing.
   * A written proof of Moon's product law, and the recognition and rigidity of chains.
-  * An independent computer-assisted reproof of the Moon–Yang uniqueness theorem (THM-4745 (5), (6)).
+  * An independent computer-assisted reproof of the Moon–Yang uniqueness theorem (THM-4745 (5), (6); the second audit pass found a gap at `C_3` blocks and supplied the patch, now Step 4 of the proof).
   * The residue data (HYP-9355), the late-seven facts, and the alignment table (§5).
 
 ## 1. How often each value occurs
@@ -142,7 +142,8 @@ The answer is known: they are Moon's chains (Moon 1972, Moon–Yang 2007). This 
   * single-path constraints;
   * an explicit witness excluding junction configurations;
   * a double-merge witness excluding interior positions;
-  * one finite check: blocks of 3–5 vertices at end positions, in `exact_gluings.py`.
+  * one finite check: single blocks of 3–5 vertices, in `exact_gluings.py`;
+  * three witness paths for `C_3` blocks holding `v` at a middle or a wrong-end position (the second audit pass's patch).
 * **The second floor** (the second-lowest strong count) at orders 5–11 is 11, 17, 27, 49, 81, 135, 243.
   * At orders 7, 9, 11 it equals `3^((m−1)/2)`, shared by 3, 5 and 8 classes, among them the all-triangle chain.
   * It is not a law: at order 13, `IC(2,2,2,3,3)` has 675 < 729, and order 15 behaves the same way (audit).
@@ -174,7 +175,7 @@ The answer is known: they are Moon's chains (Moon 1972, Moon–Yang 2007). This 
   * `H(Z_5{1,2}[C_3]) = 197,030,475` and `H(P_7[C_3]) = 123,156,134,945,235` (Session24's path-cover table, reproduced by DP) are 2.47 and 2.53 times the mean. No maximality claim is made.
 * **Paley path orbits (NUMEROLOGY; S33/S34 and mac-mini already have them).**
   * `H(P_q)/|Aut(P_q)|` is 1, 9, 1729, 6857869865, 62293308207033 and 42745655163116955307561 for `q = 3, 7, 11, 19, 23, 31`.
-  * For `q = 27`, with Frobenius (`|Aut| = 1053`), it is 397365570454381227, `≡ 3 (mod 8)`; normalized by `|AΓ_+| = 351` it is 1192096711363143681, `≡ 1`.
+  * For `q = 27`, with Frobenius (`|Aut| = 1053`), it is 397365570454381227, `≡ 3 (mod 8)`; normalized by 351, the order of the affine group without Frobenius (`AΓ` itself, with Frobenius, has order 1053), it is 1192096711363143681, `≡ 1`.
   * Only `q = 11` gives a pseudoprime (1729).
 
 ## 4. The pre-registered tests
@@ -229,4 +230,4 @@ It found:
 * the contradicted monotone 2-adic statement;
 * several credits and wording errors.
 
-All are corrected above (MISTAKE-652). THM-4745 (5), (6) were added after the audit and have had a further audit pass.
+All are corrected above (MISTAKE-652). THM-4745 (5), (6) were added after the audit. A second audit pass confirmed the proof except for the `C_3` blocks holding `v` at a middle or wrong-end position (6,688 configurations for chains with `N ≤ 8`), and supplied the patch (THM-4745 Step 4, checked by `audit_S50/b2_patch_witnesses.py`).

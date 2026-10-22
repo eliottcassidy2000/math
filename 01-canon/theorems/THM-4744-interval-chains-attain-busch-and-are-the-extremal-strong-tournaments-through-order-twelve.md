@@ -120,5 +120,5 @@ Thus `H(T) = H(A)·H(B)`, and induction gives the product. ∎
 
 ## What this does and does not say
 
-* Statement 4 is a finite confirmation of the Moon–Yang theorem. The characterization at every order is theirs (HYP-9356, KNOWN). An independent computer-assisted reproof is THM-4745 (5), (6).
+* Statement 4 is a finite confirmation of the Moon–Yang theorem. The characterization at every order is theirs (HYP-9356, KNOWN). An independent computer-assisted reproof is THM-4745 (5), (6), with the `C_3` patch from the second audit pass.
 * **Why only parts 2, 3, 4 occur.** Moon (1972) lists the minimizing patterns. An exchange inequality gives the same: for `p ≥ 5`, `2^(p−1) + 1 > 3·(2^(p−3) + 1)`, so splitting a part `p ≥ 5` into `2` and `p − 2` lowers the product. Two 2s cost the same as one 4 (9), and three 2s cost more than two 3s (27 > 25).

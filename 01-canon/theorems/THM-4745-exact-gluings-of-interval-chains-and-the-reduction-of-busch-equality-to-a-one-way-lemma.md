@@ -1,17 +1,20 @@
 ---
 id: THM-4745
-title: "Exact gluings of interval chains, and an independent computer-assisted reproof of the Moon-Yang uniqueness theorem for Busch's equality case. Let A, B be tournaments on vertex sets meeting in one vertex v, T a tournament on their union inducing A and B, A' = A - v, B' = B - v. (1) H(T) >= H(A) H(B), with equality iff every Hamiltonian path of T restricts to Hamiltonian paths of A and of B and every pair of such paths has exactly one merge. (2) If A and B are interval chains, every cross arc goes from A' to B', and H(T) = H(A) H(B), then v is the last spine vertex of A and the first spine vertex of B (any vertex of a 3-cycle factor), so T is the concatenated chain; symmetrically when every cross arc goes from B' to A'. (3) FINITE-EXACT: for all chains with at most 6 vertices and (|A|-1)(|B|-1) <= 16, and for C_3, R_4 with the optimal 7-chain IC(3,3), every exact gluing is one-way and a concatenation. (4) Reduction: if exact gluings of Busch-extremal chains of compatible orders are one-way, the Busch-extremal strong tournaments are exactly the optimal interval chains. (5) The one-way lemma holds for all chains whose parts lie in {2, 3, 4}: every exact gluing of two such chains is one-way and a concatenation (PROVED, computer-assisted at one finite step). (6) Hence (KNOWN: Moon-Yang 2007) for every m the strong m-tournaments with exactly f(m) Hamiltonian paths are exactly the optimal interval chains"
+title: "Exact gluings of interval chains, and an independent computer-assisted reproof of the Moon-Yang uniqueness theorem for Busch's equality case. Let A, B be tournaments on vertex sets meeting in one vertex v, T a tournament on their union inducing A and B, A' = A - v, B' = B - v. (1) H(T) >= H(A) H(B), with equality iff every Hamiltonian path of T restricts to Hamiltonian paths of A and of B and every pair of such paths has exactly one merge. (2) If A and B are interval chains, every cross arc goes from A' to B', and H(T) = H(A) H(B), then v is the last spine vertex of A and the first spine vertex of B (any vertex of a 3-cycle factor), so T is the concatenated chain; symmetrically when every cross arc goes from B' to A'. (3) FINITE-EXACT: for all chains with at most 6 vertices and (|A|-1)(|B|-1) <= 16, and for C_3, R_4 with the optimal 7-chain IC(3,3), every exact gluing is one-way and a concatenation. (4) Reduction: if exact gluings of Busch-extremal chains of compatible orders are one-way, the Busch-extremal strong tournaments are exactly the optimal interval chains. (5) The one-way lemma holds for all chains whose parts lie in {2, 3, 4}: every exact gluing of two such chains is one-way and a concatenation, a C_3 factor counting each vertex as both ends (PROVED, computer-assisted at one finite step; a gap at C_3 blocks, found by the second audit pass, is closed by its patch). (6) Hence (KNOWN: Moon-Yang 2007) for every m the strong m-tournaments with exactly f(m) Hamiltonian paths are exactly the optimal interval chains"
 status: >
   PROVED: statements 1, 2, 4 (all orders; statement 1 is Busch's merge argument, Lemma 2 of his note, with its equality
-  case made explicit). PROVED, computer-assisted: statement 5. Its only finite input is Step 3, the single-block end
-  positions for blocks of 3, 4, 5 vertices, which exact_gluings.py checks exhaustively; oneway_proof_checks.py confirms
-  the excluded configurations by exact counts. FINITE-EXACT: statement 3.
+  case made explicit). PROVED, computer-assisted: statement 5. Its only finite input is Step 3, the single blocks of
+  3, 4, 5 vertices, which exact_gluings.py checks exhaustively; oneway_proof_checks.py confirms the excluded
+  configurations by exact counts. The second audit pass found that the first written proof missed the C_3 blocks
+  holding v at a middle or a wrong-end position (6,688 configurations for chains with N <= 8); Step 4 below is its
+  patch, checked by audit_S50/b2_patch_witnesses.py on all of them. FINITE-EXACT: statement 3.
   Statement 6 is KNOWN: J. W. Moon and L. L. M. Yang, Utilitas Math. 72 (2007) 193-198, CITED via El Sahili and Ghazo
   Hanna (arXiv:2101.00713); the primary paper was not accessed. The proof here is an independent reproof, not a new
   result.
   The S50 audit confirmed statements 1-4: every bad-split construction was checked at all 745 positions for N = 3..10,
-  and the census was reproduced. Statements 5 and 6 were added after that audit and have had a separate audit pass
-  (see below). The novelty first claimed for the reduction was retracted (MISTAKE-652).
+  and the census was reproduced. Statements 5 and 6 were added after that audit; the second audit pass confirmed
+  Steps 0-3 and 5 and the induction, and supplied the C_3 patch (Step 4). The novelty first claimed for the reduction
+  was retracted (MISTAKE-652).
   Session opus-2026-10-21-S50.
 session: opus-2026-10-21-S50
 source: 05-knowledge/results/h_spectrum_multiplicities_20261021.md
@@ -19,6 +22,8 @@ scripts:
   - 04-computation/experiments/h_spectrum_multiplicities_20261021/exact_gluings.py (+ .out)
   - 04-computation/experiments/h_spectrum_multiplicities_20261021/gluing_failure_modes.py (+ .out)
   - 04-computation/experiments/h_spectrum_multiplicities_20261021/oneway_proof_checks.py (+ .out)
+  - 04-computation/experiments/h_spectrum_multiplicities_20261021/audit_S50/b1_oneway_gap.py, b2_patch_witnesses.py,
+    b4_steps12.py (+ .out; the auditor's second-pass scripts)
 related:
   - THM-4744 (Moon's interval chains: product law, recognition, the extremal classes through order 13)
   - HYP-9356 (the Moon-Yang characterization; KNOWN)
@@ -57,7 +62,7 @@ related:
    * For every gluing vertex and every cross orientation, every exact gluing is one-way and a concatenation.
    * There are 136 exact gluings in all (`exact_gluings.py`). The audit reproduced this, plus 8 further pairs.
 4. **Reduction (PROVED).** If every exact gluing of two Busch-extremal chains of orders `a, b` with `f(a)f(b) = f(a+b−1)` is one-way, then for every `m` the strong `m`-tournaments with `H = f(m)` are exactly the optimal chains.
-5. **One-way lemma (PROVED, computer-assisted).** Let `A`, `B` be chains whose parts lie in `{2, 3, 4}`, so every block has 3, 4 or 5 vertices. If `T = A ∪_v B` is exact, then either every cross arc is forward with `v = x_N = y_0`, or every cross arc is backward with `v = x_0 = y_M`.
+5. **One-way lemma (PROVED, computer-assisted).** Let `A`, `B` be chains whose parts lie in `{2, 3, 4}`, so every block has 3, 4 or 5 vertices. If `T = A ∪_v B` is exact, then either every cross arc is forward with `v = x_N = y_0`, or every cross arc is backward with `v = x_0 = y_M`. As in statement 2, if a factor is `C_3`, every vertex counts as both its first and its last spine vertex, by rotation.
 6. **The Moon–Yang theorem (KNOWN; reproved).** For every `m ≥ 3`, the strong `m`-tournaments with exactly `f(m)` Hamiltonian paths are exactly the optimal interval chains:
    * the parts lie in `{2, 3, 4}`, with product `f(m)`;
    * `E(3q) = q`, `E(3q+1) = 1`, `E(3q+2) = q(q+3)/2`;
@@ -164,9 +169,33 @@ So `v = x_N`. The converse of `T` reverses every cross arc and every spine (THM-
   * The vertex `b` can follow `v` directly (since `b → x_N`), or follow `x_0` (since `x_0 → b` and `b → x_(t+1)`, or `b` comes last). That gives two merges, so (U) fails.
 * **The mirror case**, an end of `A` with an interior position of `B`, follows by symmetry.
 
-*Step 3: end positions of single blocks (FINITE-EXACT).* `exact_gluings.py` checks every ordered pair of blocks among `NT_3`, `NT_4`, `NT_5`, every gluing position and every cross orientation. Exactness occurs only at `(x_N, y_0)` with all arcs forward, or at `(x_0, y_M)` with all arcs backward.
+*Step 3: single blocks (FINITE-EXACT).* `exact_gluings.py` checks every ordered pair of blocks among `NT_3`, `NT_4`, `NT_5`, every gluing position and every cross orientation.
+* Exactness occurs only with every arc forward, `v` the end of `A_loc` and the start of `B_loc`; or with every arc backward, `v` the start of `A_loc` and the end of `B_loc`.
+* For a block `NT_3 = C_3` this says nothing about where `v` sits: by rotation, every vertex of a 3-cycle is both a start and an end.
+* So after Steps 1–3 the local arcs all point one way, and `v` is at the matching end of every local block with 4 or 5 vertices. A local `C_3` block may hold `v` at any of its three vertices.
 
-*Step 4: globalization.* Take `v = x_N = y_0` with the local arcs forward; the backward case is the converse picture.
+*Step 4: `C_3` blocks at the other positions.* The first written proof missed this step; the second audit pass found the gap and supplied the patch. Take the local arcs forward; the backward case is the converse picture, which maps `x_0 ↔ x_N` and keeps middle vertices in the middle. By Steps 1–3, `v` is not a junction, not interior to a block with 4 or 5 vertices, and at the matching end of such a block. So on the `A` side, `v = x_N`, or `v` is the middle vertex of a `C_3` block, or `v = x_0` with the first block a `C_3`. On the `B` side, `v = y_0`, or the middle vertex of a `C_3` block, or `v = y_M` with the last block a `C_3`. Three configurations remain besides `v = x_N = y_0`:
+* **(M) `v` is the middle vertex `x_t` of a `C_3` block of `A`, with `A` having at least 2 blocks.**
+  * Then `A − v` is strong (statement 2, case (a)), so `Init(A − v) = Term(A − v) = A'`.
+  * The block is `x_(t−1) → v → x_(t+1) → x_(t−1)`, and `x_(t+1) → b` for every `b ∈ B_loc'`. That is the configuration (F1) with `a = x_(t+1)`.
+  * The middle vertex `y_t` of a `C_3` block of `B` is excluded the same way by (F2), with `b = y_(t−1)`. Under the converse, (B1) and (B2) do the same job.
+* **(E) `v = x_0`, where `A` has at least 2 blocks and its first block is `C_3 = {x_0, x_1, x_2}`.** By (M), on the `B` side `v = y_0`, or `v = y_M` with the last block of `B` a `C_3`.
+  * The witness is `x_1 Q' v W`:
+    * `Q'` is a Hamiltonian path of `B'` that starts in `B_loc'` and ends at an in-neighbour of `v`;
+    * `W` is a Hamiltonian path of the strong chain `A − {x_0, x_1} = IC(p_2, …, p_k)` starting at an out-neighbour `x_j`, `j ≥ 3`, of `v` (Camion).
+  * It is a Hamiltonian path of `T`, since `x_1 → first(Q')` is a local forward arc. Its restriction to `A` begins `x_1 v`, but `v → x_1`, so (R) fails.
+  * `Q'` exists in both cases:
+    * for `v = y_0`: take `y_1 ⋯ y_(m_2 − 1)`, then a Hamiltonian path of the strong tail chain on `y_(m_2), …, y_M` that ends at `y_(m_2)`, the only in-neighbour of `y_0` (simply `y_1 ⋯ y_M` when `B` is one block);
+    * for `v = y_M`: start at `y_(M−2)`, cover the strong chain on `y_0, …, y_(M−2)`, and end with `y_(M−1) → y_M`.
+* **(E′) `v = y_M`, where `B` has at least 2 blocks and its last block is `C_3 = {y_(M−2), y_(M−1), y_M}`.** By (M) and (E), on the `A` side `v = x_N`.
+  * The witness is `Z v Q'' y_(M−1)`:
+    * `Z` is a Hamiltonian path of the strong chain `B − {y_(M−1), y_M}` that ends at an in-neighbour `y_j`, `j ≤ M − 3`, of `v`;
+    * `Q''` is a Hamiltonian path of `A'` that starts at `x_(l_k)`, the only out-neighbour of `x_N`, covers the strong chain on `x_0, …, x_(l_k)`, and ends with `x_(l_k + 1) ⋯ x_(N−1)`.
+  * It is a Hamiltonian path of `T`, since `x_(N−1) → y_(M−1)` is a local forward arc. Its restriction to `B` ends `v y_(M−1)`, but `y_(M−1) → v`, so (R) fails.
+
+Every witness uses only arcs of `A`, of `B` and local cross arcs, so it rules out every completion. `audit_S50/b2_patch_witnesses.py` builds the stated witness in each of the 6,688 configurations, for all chains with `N ≤ 8`, that the first written proof did not reach (`audit_S50/b1_oneway_gap.py` lists them).
+
+*Step 5: globalization.* Take `v = x_N = y_0` with the local arcs forward; the backward case is the converse picture.
 * **The A side.** If `A` has `k ≥ 2` blocks, then:
   * `Init(A − v) = {x_0, …, x_(l_k)}`;
   * `N^-_A(v) = A' − {x_(l_k)}`;
@@ -192,3 +221,8 @@ So every cross arc is forward, and `T = IC(σ τ)` by statement 2. ∎
   * `F'(3,3)`;
   * every interior configuration with `s ≤ 6`, `r ≤ 5`;
   * the witness paths.
+* **The second audit pass.**
+  * It confirmed (T1) without strongness, the four (T3) witnesses and the Init/Term lemma (400 random tournaments), and (T4).
+  * It confirmed Step 1: all 196 back-arc choices for `F`, and all 78 one-way combinations with both sub-gluings exact. It confirmed Step 2 (35 configurations), Step 3 (all 9 ordered pairs), and the Step 5 identities for all 237 chains with `N ≤ 14`.
+  * It found the `C_3` gap closed by Step 4 above. Statement 5 had lacked the rotation convention, and Step 3 had read "only at `(x_N, y_0)`", which is false for `NT_3`.
+  * Before the patch existed, every missed configuration with `|T| ≤ 13` already had a certificate path, and 574 had been checked over all completions.

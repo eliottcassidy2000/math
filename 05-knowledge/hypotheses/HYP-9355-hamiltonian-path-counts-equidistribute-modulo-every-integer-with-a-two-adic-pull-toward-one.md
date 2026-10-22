@@ -70,6 +70,6 @@ scripts:
   * Pooled, residue 5 minus residue 1 is +0.0023 (2.6 s.e., with the multinomial covariance), and residue 1's excess is −0.0004 ± 0.0005.
 * **P3 passed.**
 * **P4 was not monotone.**
-* **The excess of `3 | H`** decays: 1.016, 1.0034, 1.0010, 0.996 at `n = 9, 10, 11, 12`.
+* **The excess of `3 | H`** decays: 1.016, 1.0034, 1.0010 at `n = 9, 10, 11`. At `n = 12` the session's single run gave 0.996 ± 0.002, and the audit's run gave 1.0002 ± 0.0014.
 
 **Verdict.** Equidistribution is supported through `n = 12`. The 2-adic pull is a small-`n` effect: resolved through `n = 10`, absent at `n = 11`.

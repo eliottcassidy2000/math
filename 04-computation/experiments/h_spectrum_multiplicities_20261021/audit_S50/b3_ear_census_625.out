@@ -1,0 +1,17 @@
+     order 4: 1 strong classes with H <= 625; least ear value 5 [2s]
+     order 5: 6 strong classes with H <= 625; least ear value 9 [2s]
+     order 6: 35 strong classes with H <= 625; least ear value 15 [3s]
+     order 7: 353 strong classes with H <= 625; least ear value 25 [3s]
+     order 8: 5925 strong classes with H <= 625; least ear value 45 [3s]
+     order 9: 13439 strong classes with H <= 625; least ear value 75 [4s]
+     order 10: 8769 strong classes with H <= 625; least ear value 125 [5s]
+     order 11: 3536 strong classes with H <= 625; least ear value 225 [6s]
+     order 12: 658 strong classes with H <= 625; least ear value 375 [6s]
+     order 13: least ear value 625; classes with H = 625: 1 [6s]
+  ok   strong classes with H <= 625 at orders 9..12: [13439, 8769, 3536, 658] (THM-4744 (3): 13,439 / 8,769 / 3,536 / 658)
+  ok   least ear value = f(n) for n = 4..13: [5, 9, 15, 25, 45, 75, 125, 225, 375, 625]
+  ok   E(13) = 1: the only strong 13-class with H = 625 is IC(3,3,3,3)
+  ok   odd d < 625 attained by no strong tournament: [1, 7, 21]
+  ok   P_d(1) for odd d = 375..623 agrees with strong_ears_625.out entry by entry (125 values)
+
+ALL CHECKS PASSED (6s)

@@ -1,0 +1,7 @@
+  ok   (S1a) configuration F, s, r in {3,4,5}: all 196 witness choices are Hamiltonian paths restricting to b1 v b2
+  ok   (S1a) configuration F': the witness b1 x0 x1 v z1 z2 b2 is valid and T is not exact
+  ok   (S1b) junction of A_loc: in all 78 of 1044 one-way combinations where both sub-gluings are exact, T_loc is not exact (A blocks of 3-5 vertices, B_loc any chain of <= 6 vertices, every position)
+  ok   (S2a) both interior: an in-neighbour of v in A and one in B are forced to beat each other (contradiction)
+  ok   (S2b) interior in A, end of B: the stated pair has >= 2 merges and T_loc is not exact (35 configurations)
+
+ALL CHECKS PASSED (1s)

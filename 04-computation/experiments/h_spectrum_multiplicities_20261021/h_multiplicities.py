@@ -183,7 +183,7 @@ if __name__ == '__main__':
     # complete strong atoms with H < 125 (all of order <= 9, since f(10) = 125), and cores of ANY size: a core with
     # product h < 125 has at most floor(3 log_3 h) <= 13 vertices (logarithmic core bound), so nmax = 16 loses nothing.
     # (A first version used seq_counts(strong, NMAX) here, which drops cores of total size >= 10 and gave wrong
-    # polynomials for h = 45, 75 and wrong n >= 10 predictions; corrected after the S50 audit, MISTAKE-651.)
+    # polynomials for h = 45, 75 and wrong n >= 10 predictions; corrected after the S50 audit, MISTAKE-652.)
     strong_small = {m: {h: c for h, c in S[m].items() if h < 125} for m in range(3, NMAX + 1)}
     Aall = seq_counts(strong_small, 16, hmax=124)
     def poly(h):

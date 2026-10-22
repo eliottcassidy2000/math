@@ -1,0 +1,4 @@
+     patch usage over 6688 uncovered cases (N <= 8): {("E'", 'bwd'): 250, ('M', 'fwd'): 2744, ('M', 'bwd'): 2744, ("E'", 'fwd'): 250, ('E', 'fwd'): 350, ('E', 'bwd'): 350}
+  ok   every uncovered case is closed by its explicit patch witness (a Hamiltonian path of every completion, built only from arcs of A, B and the local cross arcs, whose restriction to A or B is not a path)
+
+ALL CHECKS PASSED (1s)

@@ -19455,7 +19455,7 @@ the ambient space.
   - THM-4744 (2) is PROVED, possibly also in Moon and Yang.
   - THM-4744 (3) and (4) are FINITE-EXACT.
   - HYP-9356 is KNOWN.
-  - THM-4745 is now an independent computer-assisted reproof. Its statements (5), (6), the one-way lemma for parts 2, 3, 4 and its consequence, were proved after the audit.
+  - THM-4745 is now an independent computer-assisted reproof. Its statements (5), (6), the one-way lemma for parts 2, 3, 4 and its consequence, were proved after the audit. A second audit pass found that this proof missed the `C_3` blocks holding `v` at a middle or a wrong-end position (6,688 configurations for chains with `N ≤ 8`, none a counterexample), and supplied the three-witness patch now in THM-4745 Step 4.
 - **A truncated sum.**
   - `h_multiplicities.py` built the multiplicity polynomials from cores of total size at most 9.
   - Cores with three or more components were therefore dropped: 3·3·5 has size 10, and 3·5·5 has size 11.

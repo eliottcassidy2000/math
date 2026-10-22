@@ -1,0 +1,10 @@
+     23 chains, 28561 (A, B, i, j) positions; covered: {'step4': 1250, 'step3 (local gluing not exact)': 3312, 'step2': 13144, 'step1': 9792}
+     UNCOVERED (survive Steps 1-3, not of the form assumed in Step 4): 6688 (case, orientation) pairs; types {'END_B': 1260, 'MID_B': 3528, 'END_A': 1260, 'MID_A': 3528}
+     smallest examples: [((2,), (2, 2), 'v=x_0', 'v=y_0', 'bwd', ('END_B',)), ((2,), (2, 2), 'v=x_0', 'v=y_1', 'fwd', ('MID_B',)), ((2,), (2, 2), 'v=x_0', 'v=y_1', 'bwd', ('MID_B',)), ((2,), (2, 2), 'v=x_0', 'v=y_3', 'fwd', ('MID_B',)), ((2,), (2, 2), 'v=x_0', 'v=y_3', 'bwd', ('MID_B',)), ((2,), (2, 2), 'v=x_0', 'v=y_4', 'fwd', ('END_B',))]
+  ok   (G1) the written proof of THM-4745 (5) does not reach these configurations (C_3 blocks at non-end positions, or the wrong end of a terminal C_3 block); Step 3 allows them locally and Step 4 assumes v = x_N = y_0
+  ok   (G2) every uncovered case with |T| <= 13 (2238 cases) has a certificate: a Hamiltonian path using only arcs of A, B and the local cross arcs whose restriction is not a path (2238 found)
+  ok   (G3) exhaustive completions: 574 uncovered cases (<= 14 free arcs, |T| <= 12) have no exact completion
+  ok   (G4) Step 4 identities hold for all 237 chains with parts in {2,3,4}, N <= 14, k >= 2, and the arcs left after (B1), (B2) are exactly the local ones (all pairs with N <= 8)
+  ok   (G5) in 400 random tournaments (n <= 8): the possible last (first) vertices of Hamiltonian paths are exactly the terminal (initial) strong component
+
+ALL CHECKS PASSED (22s)

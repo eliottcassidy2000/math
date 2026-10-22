@@ -41,7 +41,7 @@ scripts:
 
   Moon (1972) had shown that his chains `S_n` attain this value.
 * **The chains.** For `m − 1 = p_1 + … + p_k` with every `p_i ≥ 2`, the chain `IC(p)` is the transitive order `0 → 1 → … → m−1` with one back arc per block. Each block is nearly transitive and has `2^(p_i − 1) + 1` paths.
-* **Moon–Yang (2007), as reported.** The strong `m`-tournaments with exactly `f(m)` paths are exactly the optimal chains:
+* **Moon–Yang (2007), as reported.** The strong `m`-tournaments with exactly `f(m)` paths are exactly the optimal chains. (The secondary source does not define Moon–Yang's "special chains"; identifying them with the optimal `IC(p)` is an inference, consistent with Moon 1972 and with THM-4745 (6).)
   * `m = 3q`: one 2 and `q − 1` 3s;
   * `m = 3q + 1`: `q` 3s;
   * `m = 3q + 2`: two 2s and `q − 1` 3s, or one 4 and `q − 1` 3s.
