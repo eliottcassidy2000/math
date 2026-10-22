@@ -1,0 +1,8 @@
+doubled-Paley DRT(23): new nauty class (not among the 13 annealed/Paley classes): True
+H = 15759752857737405, TT5 = 1430, H/H(P_23) - 1 = -2.881426e-05
+TT5 law of the annealed classes (H = 1.575375e+16 + 4.199788e+09 TT5) predicts H = 1.575975e+16: relative error -1.090e-07 (in-sample max residual 3.7e-7)
+Delta N_L for L = 2, 4, 6: [0, 0, 0]; Delta N_8 = -630784 = 7168 x Delta TT5
+per forest length g(L) Delta phi_L/kappa: L8:-1.248e-05 L10:-1.136e-05 L12:-4.011e-06 L14:-8.735e-07 L16:-9.793e-08 L18:+4.314e-09 L20:-2.844e-10 L22:+4.454e-10  (sum -2.8814e-05)
+   fractions: L8:0.433 L10:0.394 L12:0.139 L14:0.030
+four-loop strict -8.8539e-06 (exact/strict 3.254), dressed -2.6375e-05 (dressed/exact 0.915); exact -2.8814e-05
+exact relative to Paley per TT5: 3.2743e-07 (annealed-class slope 2.6648e-07, line through Paley would need 3.2743e-07)

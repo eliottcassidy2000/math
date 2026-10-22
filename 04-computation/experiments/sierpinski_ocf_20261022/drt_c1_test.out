@@ -1,0 +1,7 @@
+P_27: its own switching family has 1 nauty class(es)
+P_31: its own switching family has 1 nauty class(es)
+P_23 and the row normalisations of the doubled Paley skew-Hadamard matrix of order 24: 2 nauty classes (Paley included)
+   class &V^~??^@}?K]...: Delta TT5 = -88; (C1) census direction equal to the n = 19/23 vector: True; n^8 Delta delta_8 / Delta TT5 = 7168.000000 (C2 predicts 7168)
+P_31 and the row normalisations of the doubled Paley skew-Hadamard matrix of order 32: 3 nauty classes (Paley included)
+   class &^^~{??F{@~_...: Delta TT5 = -300; (C1) census direction equal to the n = 19/23 vector: True; n^8 Delta delta_8 / Delta TT5 = 7168.000000 (C2 predicts 7168)
+   class &^^~{??F{@~_...: Delta TT5 = -300; (C1) census direction equal to the n = 19/23 vector: True; n^8 Delta delta_8 / Delta TT5 = 7168.000000 (C2 predicts 7168)
