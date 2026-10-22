@@ -1,2 +1,3 @@
 fc8da89dd0f8eb5032809947a193cb242cf9af92
 Thu Oct 22 06:42:26 MDT 2026
+The audited text is fc8da89dd0 plus uncommitted.diff (see SNAPSHOT_INFO.txt). The verbatim .md copies were removed after the close-out commit 0c9d14cfec, so that no canon frontmatter IDs are duplicated outside 01-canon/ and 05-knowledge/.
