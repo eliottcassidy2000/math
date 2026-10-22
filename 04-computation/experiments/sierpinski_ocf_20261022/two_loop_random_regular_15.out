@@ -1,0 +1,4 @@
+n=15: 200 random regular tournaments (3-cycle-reversal chain, seed 1)
+  y in [0.4757, 0.7087], sd 0.0353;  y_pred in [0.5533, 0.7382], sd 0.0283
+  corr(y, y_pred) = +0.9926, spearman = +0.9898, mean(y - y_pred) = -0.0591, rms scatter = 0.0079
+  empirical a + b M4: a = 0.207, b = 5.894, corr = +0.9836

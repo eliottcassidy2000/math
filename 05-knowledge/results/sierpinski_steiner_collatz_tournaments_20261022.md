@@ -283,3 +283,36 @@ The numerators `4, 28, 244, 2188` are the Collatz images `3n + 1` of the even po
 * An exponentially small term with an alternating sign, invisible to the loop expansion, is the analogue of an instanton correction. The analogy is an interpretation, not a theorem.
 
 **Least resistance, once more.** All two-loop graphs are series–parallel, built from three propagators by series composition (matrix products) and parallel composition (entrywise products). So the first correction to the blow-up gain is literally a resistance-network computation (cf. §8). The tetrahedron `K_4`, the first non-series–parallel vacuum graph, enters at three loops. There the arithmetic of the tournament (Paley character sums, subtournament censuses) appears for the first time.
+
+## 12. The loop expansion, continued (same session, after §11)
+
+**Random regular tournaments.** A 3-cycle-reversal Markov chain from `R_n` preserves scores and connects all regular tournaments. On its samples, with no fitted parameters (`two_loop_random_regular_*.out`):
+
+| `n` | samples | corr(`y`, `y_pred`) | Spearman | scatter of `y − y_pred` | sd of `y` | best two-parameter `a + b·M4` corr |
+|---|---|---|---|---|---|---|
+| 15 | 200 | 0.9926 | 0.9898 | 0.0079 | 0.035 | 0.9836 |
+| 21 | 150 | 0.9975 | 0.9965 | 0.0028 | 0.018 | 0.9925 |
+
+**The `H`-maximal circulant, predicted.** Rank circulant classes by `κ_2 = ρ(1 − y_pred/n)` (`two_loop_argmax.out`). The top class is the true maximiser at every `n = 7, …, 25`:
+* `P_7`, `{2,3,4,8}` and `P_11` at `n = 7, 9, 11`;
+* `R_n` from 13 on.
+
+`ρ` alone ranks the true maximiser 2nd, 4th and 4th at `n = 7, 9, 11`. From `n = 19` the predicted winning margins match the true ones to about `10^(−4)`. So the flat-to-rotational crossover of THM-4751 (7) has a parameter-free explanation: the two-loop penalty `y/n` is larger for concentrated spectra, and it outweighs the one-loop advantage of `R_n` until `n ≈ 13`.
+
+**A Gamma-integral form of the exact identity.** Write `(n − L)! = ∫_0^∞ t^(n−L) e^(−t) dt`. Then
+
+    κ(T) = ∫_0^∞ (t^n e^(−t)/n!) Φ_T(n/t) dt,      Φ_T(z) = Σ_L N_L(S) (z/n)^L.
+
+So `κ` is the `Gamma(n+1)` average of the forest polynomial at `z = n/t`.
+* **Perturbative part.** The saddle `t = n` gives `z = 1`, and its width (`Var(n/t) = 1/(n−1)`) produces the `E[C(L,2)]/n` correction.
+* **Non-perturbative part.** The region `t = O(1)` sees only the top coefficients of `Φ_T`, i.e. `F(T, −1)` and its neighbours. This is where the `n mod 4` term of HYP-9366 lives, as an endpoint contribution far from the saddle.
+
+**Propagators are resolvents at the fourth roots of unity.** Because the kernels are 4-periodic in every length, a path class is a resolvent `R_ω = ωŜ(I − ωŜ)^(−1)` with `ω⁴ = 1`:
+* `H = (R_1 + R_(−1))/2`, `O = (R_1 − R_(−1))/2`, `G = (R_i + R_(−i))/2`;
+* and `ρ² = Π_(ω⁴=1) det(I − ωŜ)^(ω²)`.
+
+The `i` comes from the skew spectrum. The mod-4 structure of the whole expansion is Fourier analysis on `Z/4`.
+
+**A universal curve for doubly regular tournaments.** Paley and non-Paley classes together give `n²(κ/e − 1 + 3/(2n)) = 3.19, 3.12/3.13, 3.11/3.10/3.10/3.10, 3.09, 3.10` at `n = 15, 19, 23, 27, 31` (`drt_universal_curve.out`). So `κ_DRT(n) = e(1 − 3/(2n) + c_2/n² + …)` with `c_2 ≈ 3.10`, the same for every doubly regular tournament.
+* The two-loop finite-`n` part gives `y_pred = 1/2 − 1/(3n) + O(n^(−2))` exactly for doubly regular tournaments. Together with `ρ = e(1 − 1/n + 5/(6n²) + …)` this accounts for `5/3` of `c_2`.
+* The remaining ≈ 1.43 is three-loop: clusters on at most 4 core vertices, which are the same for every doubly regular tournament of one order. Deriving it is open.
