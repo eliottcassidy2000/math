@@ -292,6 +292,15 @@ balanced hole with glue 27 = 24 + k.
 - The genuine 3n+1 is the Fricke ascent at the bad prime 3, H -> 3H + 1 (A2^12 -> E6^4, A8^3 -> E8^3), together with
   the Eisenstein norm 3n + 1 of 3-cores at the A2^12 hole.
 
+**Projective spaces (exact observation).** Ascent H -> pH + 1 is the recursion |P^n(F_p)| = p|P^(n-1)(F_p)| + 1.
+- p = 2: 3, 7, 15, 31 = |P^1|, ..., |P^4| over F_2, i.e. A1^24 -> D4^6 (the Fano plane) -> D8^3 -> D16E8/E8^3.
+- p = 3: 4 -> 13 = |P^1(F_3)| -> |P^2(F_3)|, i.e. A2^12 -> E6^4.
+- p = 5: 6 -> 31 = |P^1(F_5)| -> |P^2(F_5)|, i.e. A4^6 -> E8^3.
+
+For the pure A-types, h is a prime power and H = h + 1 = |P^1(F_h)|. The prompt's 3^k + 1 are |P^1(F_(3^k))|: 4
+(A2^12) and 10 (A8^3). k^3 + 1 = 9 is A7^2D5^2. Their meeting point 28 = 3^3 + 1 would need h = 27, which is just
+outside the Niemeier world (A26 has rank 26).
+
 HYP-9368 conjectures that the genus-zero inner automorphisms of V_Lambda are exactly 0, the 23 deep holes and the 23
 Fricke points. A first draft that allowed only the eleven bad-prime multiples was refuted by the (h+1)-points before
 registration.
