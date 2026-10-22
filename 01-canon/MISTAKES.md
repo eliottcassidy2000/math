@@ -19800,3 +19800,34 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - A sampled minimum is a family minimum only after the extremal candidates (here the chain's own starting point) are checked.
   - A mechanism must be tested on the coefficients it asserts.
   - A borrowed symbol's definition must be read at the source.
+
+## MISTAKE-665 (2026-10-22, THM-4762 / THM-4763 / HYP-9372 / HYP-9373 and the signature-axis note (opus-2026-10-22-S55, pre-audit commit e212bd63c2); found by the independent audit `04-computation/experiments/catmap_modular_20261022/audit_S55/REPORT.md`) -- a decomposition the cited paper states as its own theorem was presented as derived here, a "predicted" case was the companion paper's theorem, a one-directional census statement was titled "exactly when", a trace test divided out what it tested, and q -> 1 asymptotics were applied to families dominated by another cusp
+
+- **Claims.**
+  - THM-4763 said the decomposition R_(p+1) + C^2 x R_(p-1) of the W(p) torus amplitudes is "elementary from the classical modularity of unary theta series", and cited FGST (CMP 265 (2006)) only for the identification of the span and the equivalence with the quantum-group centre.
+  - HYP-9373 called K = 2 for W(p,p') "the predicted next case" and its C^3 = Sym^2 C^2 piece UNVERIFIED, citing "J. Math. Phys. 2006". It also said "PROVED for K = 0".
+  - HYP-9372 (b) said "C^j is scalar exactly when A^j is a central matrix", with evidence "119 of 123". Its background said |<A> cap Z| in {1, 2, 4}.
+  - THM-4763's status said the Lucas trace law was verified for n = 1..10.
+  - THM-4762 and the note listed A_1(-1) among lattices with C identical to that of A_1, gave the cat map's rapidity as 2 log phi, and placed Dong-Lin-Ng in Adv. Math.
+  - The note said coefficients of all seven Rogers-Ramanujan-type families grow like exp(2 pi sqrt(c_eff n/6)), with "no growth" for Bailey mod 9. It also said every sum side has a mock-modular companion.
+- **First failed implications.**
+  - **Prior art in the cited paper.** FGST CMP 265 (2006) state Z_cft = R_(p+1) + C^2 x R_(p-1) explicitly (eq. (1.2), Thm 2.3). The theorem was cited without reading past the abstract's wording. Only the cat-map corollary (Lucas traces, spectral radius phi^2) is new, and it is one line from FGST.
+  - **Prior art in the companion paper.** FGST Nucl. Phys. B 757 (2006) 303-343, Thm 1.2(3), gives R_min + R_proj + C^2 x (R + R') + C^3 x R_min for W(p,p'). Their footnote 2 is the HYP's own "Why" argument. The J. Math. Phys. paper (48 (2007) 032303) is the KL-dual quantum group. "PROVED for K = 0" needs rationality (Dong-Lin-Ng).
+  - **Overstated equivalence.** center_check.py tested only "scalar powers of C are central powers of A". The converse fails in 67 of 132 cases: -I acts as the non-scalar charge conjugation (D(Z_3), SU(3)_1, A_2, ...), and in SU(2)_4 the central A^6 = 17I acts non-scalarly. The script had also skipped 9 data, so the one-directional count is 128 of 132.
+  - **Conflated groups.** pi/alpha in {1, 2, 4} counts central elements of <Q>, not of <A> = <Q^2>. For <A> the count is 1 or 2, since pi/alpha = 4 exactly when alpha is odd.
+  - **Tautological test.** log_catmap.py set trR = Tr(Clog^n)/L_(2n) and then checked Tr C^n = Tr CE^n + L_(2n) trR. That tests only block-diagonality. The law is true: the audit's analytic construction confirms it, and the replaced test reads M(A) from the (O, O) block.
+  - **Wrong example.** A_1(-1) has discriminant form (Z/2, 3/4), not isomorphic to (Z/2, 1/4); its C is the complex conjugate of C(A_1).
+  - **Spinor versus vector rapidity.** A has spinor eigenvalues phi^(+-2), so its SO(2,1) rapidity is 4 log phi.
+  - **Wrong cusp.** For Rogers-Selberg, q -> -1 dominates (c* = 11/28, alternating signs). For Bailey mod 9, q -> e^(+-2 pi i/3) dominates (c* = 8/27, signs + - -). The mock companion was verified only for Rogers-Ramanujan.
+- **Strongest survivor.**
+  - Every number in the five documents was reproduced independently, and all 135 census rows were rebuilt with the audit's own builders.
+  - THM-4762 (1)-(4) hold. The D(Z_N) case is a theorem (permutation representation on (Z/N)^2).
+  - THM-4763's mathematics holds analytically for p = 2..6.
+  - HYP-9372 (a) is sharpened (r in {1, 2} when faithful), (b) holds one-directionally in 128 of 132, and (c) is proved for the Ising-type factor (C monomial over the 3-cycle, phase product 1), with M(4,p') = Ising_nu x X verified.
+  - The 18 identities, the c_eff values, the q -> 1 ratios, the mock identity, the Ising ring and the LTE claim were all confirmed.
+- **Missing coordinates.**
+  - Before calling a structure derived here, read the cited paper's numbered theorems and equations, not only its abstract.
+  - Search the cited group's companion papers before calling a case "predicted".
+  - A census test supports only the direction it computes; test the converse before writing "exactly when".
+  - A verification must not divide out the quantity it verifies.
+  - Coefficient growth is set by the dominant cusp, so check q -> roots of unity as well as q -> 1.
