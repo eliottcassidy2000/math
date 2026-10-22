@@ -48,6 +48,7 @@ scripts:
   - 04-computation/experiments/deep_holes_theta_20261022/order3_fricke_census.py (+ .out) (the order-3 Fricke point is the M24-point)
   - 04-computation/experiments/deep_holes_theta_20261022/height_descent.py (+ .out) (Fricke descent = roots of height divisible by p)
   - 04-computation/experiments/deep_holes_theta_20261022/swap_fricke_proof.py (+ .out) (the Fricke swap theorem: certificates for the 23 pairs (rho, z''))
+  - 04-computation/experiments/deep_holes_theta_20261022/swap_shell_test.py (+ .out) (the next shell m = h + 2 fails)
 related:
   - THM-4758 (swap theorem and deep-hole theta identity)
   - HYP-9363 (proved in THM-4758)
@@ -154,14 +155,14 @@ A_n has no bad primes.
 | X | d | e | Z − 24, through q³ | Γ |
 |---|---|---|---|---|
 | D4⁶ | 2 | 3 | q⁻¹ + 783q + 8672q² + 65367q³ | 3+ (T_3A) |
-| E6⁴ | 3 | 4 | q⁻¹ + 276q + 2048q² + 11202q³ | 4+ (T_4A) |
+| E6⁴ | 3 | 4 | q⁻¹ + 276q + 2048q² + 11202q³ | 4+ (T_4A, A107080) |
 | D6⁴ | 2 | 5 | q⁻¹ + 134q + 760q² + 3345q³ | 5+ (T_5A) |
-| E8³ | 5 | 6 | q⁻¹ + 78q + 364q² + 1365q³ | 6+6 |
+| E8³ | 5 | 6 | q⁻¹ + 78q + 364q² + 1365q³ | 6+6 (T_6B, OEIS A007255) |
 | D8³ | 2 | 7 | q⁻¹ + 51q + 204q² + 681q³ | 7+ (T_7A) |
-| D10E7² | 2 | 9 | q⁻¹ + 27q + 86q² + 243q³ | 9+ |
-| E8³ | 3 | 10 | q⁻¹ + 21q + 62q² + 162q³ | 10+10 |
+| D10E7² | 2 | 9 | q⁻¹ + 27q + 86q² + 243q³ | 9+ (T_9A, A007266) |
+| E8³ | 3 | 10 | q⁻¹ + 21q + 62q² + 162q³ | 10+10 (T_10D, A058100) |
 | D12² | 2 | 11 | q⁻¹ + 17q + 46q² + 116q³ | 11+ (T_11A) |
-| D16E8, E8³ | 2 | 15 | q⁻¹ + 9q + 19q² + 42q³ | 15+15 |
+| D16E8, E8³ | 2 | 15 | q⁻¹ + 9q + 19q² + 42q³ | 15+15 (T_15C, A058510) |
 | D24 | 2 | 23 | q⁻¹ + 4q + 7q² + 13q³ | 23+ (T_23A) |
 
 The squarefree composite levels have the eta-quotient Hauptmoduln (η(pτ)η(qτ)/(η(τ)η(pqτ)))^{24/((p−1)(q−1))} minus
@@ -226,7 +227,9 @@ Tr_{V_Λ}(g_c^m q^{L_0 − 1}) − 24 is the normalized Hauptmodul of a genus-ze
 - T^{X′} + k′, if mc is a deep hole of type X′;
 - T_{e+e}, if mc is a Fricke point.
 
-All of these groups are monstrous except Γ_0(25), which arises from the A24 hole and its powers prime to 5.
+All of these groups are monstrous except Γ_0(25), which arises from the A24 hole and its powers prime to 5. The
+composite Fricke levels are the Monster classes 6B, 10D and 15C, identified through OEIS A007255, A058100 and
+A058510.
 
 **(10) Every Niemeier lattice has a Fricke point: the (h+1)-construction.** Let z″ be the cusp of type N with
 z·z″ = −1 and z″·ρ = −(h + 1). It exists because ρ = (ρ_N, h, h + 1) in II_{25,1} = N ⊕ U. Let
@@ -243,15 +246,15 @@ c″ = proj_Λ(z″)/(h + 1), a point of order e = h + 1. Then for all 23 types:
 | 3 | A1²⁴ | 783q + 8672q² (3A) |
 | 4 | A2¹² | 276q + 2048q² (4A) |
 | 5 | A3⁸ | 134q + 760q² (5A) |
-| 6 | A4⁶ | 78q + 364q² (6+6) |
+| 6 | A4⁶ | 78q + 364q² (6B) |
 | 7 | A5⁴D4, D4⁶ | 51q + 204q² (7A) |
-| 8 | A6⁴ | 36q + 128q² (8+8) |
-| 9 | A7²D5² | 27q + 86q² (9+) |
-| 10 | A8³ | 21q + 62q² (10+10) |
+| 8 | A6⁴ | 36q + 128q² (8A, A007265) |
+| 9 | A7²D5² | 27q + 86q² (9A) |
+| 10 | A8³ | 21q + 62q² (10D) |
 | 11 | A9²D6, D6⁴ | 17q + 46q² (11A) |
 | 13 | A11D7E6, E6⁴ | 12q + 28q² (13A) |
-| 14 | A12² | 10q + 24q² (14+14) |
-| 15 | D8³ | 9q + 19q² (15+15) |
+| 14 | A12² | 10q + 24q² (14C, A058504) |
+| 15 | D8³ | 9q + 19q² (15C) |
 | 17 | A15D9 | 7q + 14q² (17A) |
 | 19 | A17E7, D10E7² | 6q + 10q² (19A) |
 | 23 | D12² | 4q + 7q² (23A) |
@@ -301,6 +304,11 @@ The two theorems sit side by side:
 
 The twining sides are parallel too. V_N twined by the principal element of order h gives the non-Fricke umbral T^X.
 Twined by the element of Kac type (2;1,…,1) and order h + 1, it gives the Fricke T_{(h+1)+}.
+
+*Only the two nearest cusp types.* The cusps w of type N adjacent to z satisfy −w·ρ = (h/2)|y − ρ_N/h|², where y runs
+over the shells of N + ρ_N/h. Shell 0 gives m = h + 1. The next shell, m = h + 2, FAILS the certificate for A1²⁴,
+A2¹², D4⁶, A24, E8³ and D24 (swap_shell_test.py): the coset theta series already differ below norm 2. So the swap holds
+exactly for m = h and m = h + 1.
 
 **(6) The Monster corner (CITED).** For X ≠ A24:
 - π^X is the Frame shape of a fixed-point-free element g_X ∈ Co_0, so Z_{V_Λ}(ĝ_X) = 1/η_{π^X} = T^X as well (CDH

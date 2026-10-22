@@ -410,8 +410,8 @@ for name, h, n0, z2 in rows:
     recon_ok = np.allclose(Mx @ cd, vv, atol=1e-8)
     cd_int = {d: int(round(c)) for d, c in zip(divs, cd)}
     check(ok_gen and qok and count_ok and below_ok and T_ok and S_ok and len(Aline) == h and lines_ok and G == n0,
-          f'{name:9s} h={h:2d}: M^* vectors |x|^2<=2: {sum(sum(t.values()) for t in table.values())} (PARI qfminim agrees: {count_ok}); E = 0 below norm 2; '
-          f'v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); '
+          f'{name:9s} h={h:2d}: M^* vectors |x|^2<=2: {sum(sum(t.values()) for t in table.values())} (PARI qfminim agrees: {count_ok}); E = 0 below norm 2: {below_ok}; '
+          f'v (norm-2 swap defect) rho_M-invariant: T {T_ok}, S {S_ok} (exact); all => Theta_M - sigma^*Theta_M = Delta v; '
           f'B = sigma(A); sum over the Leech line A of v = {G} (expected 24) => theta(Lambda+c2) - theta(N+rho/(h+1)) = {G} Delta [{time.time() - t1:.0f}s]')
     # intermediate unimodular lattices L_d (from the maximal isotropic subgroups S_d): root counts and Coxeter numbers
     roots_d = {}
