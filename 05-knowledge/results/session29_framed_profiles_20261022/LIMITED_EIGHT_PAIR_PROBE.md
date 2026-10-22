@@ -1,0 +1,7 @@
+# A bounded eight-pair probe, not a maximum computation
+
+The exact maximum is established only through seven pairs in the accompanying packet. As a deliberately small next test, the root checked two eight-pair controller types: the cyclic locally transitive R7 with difference set{1,2,3}, and Paley P7 with difference set{1,2,4}, each followed by a terminal sink. For each type, the three core difference labels and the common terminal-edge label were varied over all16 translation-invariant assignments. Every remaining star phase was optimized by the proved independent-phase identity, and the resulting literal16-vertex tournament was recounted by used-pair/signed-endpoint DP.
+
+The best values in these restricted families were63917 for R7+sink and63623 for P7+sink. Both are below the candidate C8=66465. This is neither a proof of a smaller maximum nor a counterexample to the matching conjecture: non-translation-invariant labels and other controller classes were not covered.
+
+`test_cyclic_controllers.py` is standard-library-only, records all32 tests and literal outmasks, and checks each optimized result by the direct DP. Its normal and optimized runs agree. The constructor retains the directed sign convention; it does not use the rejected unsigned-coherence relaxation. This scoped negative result is preserved so that a future search does not mistake a highly symmetric sample for the full optimization problem.

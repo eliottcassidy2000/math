@@ -1,0 +1,10 @@
+m 1 max 1 DP_calls 1 histogram 1:1
+top count 1 centralizers 1:1
+m 2 max 3 DP_calls 4 histogram 3:2
+top count 2 centralizers 1:2
+m 3 max 9 DP_calls 44 histogram 9:8
+top count 8 centralizers 1:6 3:2
+m 4 max 39 DP_calls 1664 histogram 37:32 39:32
+top count 32 centralizers 1:24 3:8
+m 5 max 195 DP_calls 237568 histogram 185:24 189:480 191:240 193:240 195:40
+top count 40 centralizers 3:40

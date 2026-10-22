@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": 737,
+  "targets": 91,
+  "edges": 324,
+  "blue": 18,
+  "black": 306,
+  "global_nonbridges": 324,
+  "full_merged_target_degree_sum": 84097,
+  "captured_incidence_sum": 324,
+  "source_sha256": {
+    "session29-target-wiring/wiring-results.json": "f9030c1e3a1068db33481abedb634256fed51eee8f7a4fcd5ed7696a66805edb",
+    "session29-target-wiring/cycle-results.json": "fe7414f0772e6cbbe037540b0731c3cdf72138ec7f49fd9222cf9e1234e57843",
+    "session29-target-wiring/all-length-results.json": "b5d29742a44f00b671bec037c52e8604642c07c46f9a8ef8f20ccc78a96a465a",
+    "session29-bridge-extension/verify-normal.json": "398c94dac616cc6e66b59dce53cb90d6e0a76e200a95e3e1bf9e39c1c82cbb8e"
+  }
+}

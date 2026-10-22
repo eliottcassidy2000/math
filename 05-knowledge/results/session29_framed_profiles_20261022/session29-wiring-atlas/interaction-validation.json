@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "method": "Node.js VM with minimal DOM harness; no browser rendering",
+  "all_91_click_handlers": true,
+  "selector_change_handler": true,
+  "unique_ids": true,
+  "embedded_data": true,
+  "network_dependencies": 0,
+  "browser_rendering": "NOT VERIFIED: sandbox Chromium socket creation failed; escalated launcher failed before browser startup",
+  "keyboard_and_layout": "NOT VERIFIED",
+  "screenshots": []
+}
