@@ -1,0 +1,32 @@
+k=3 one_groups=7 total=8
+collision_groups=1 max_size=2
+probe=1,2 remaining_groups=0
+two_collisions=0
+k=4 one_groups=56 total=64
+collision_groups=8 max_size=2
+probe=1,2 remaining_groups=4
+probe=1,4 remaining_groups=2
+probe=2,4 remaining_groups=0
+two_collisions=0
+k=5 one_groups=932 total=1024
+collision_groups=92 max_size=2
+probe=1,2 remaining_groups=56
+probe=1,4 remaining_groups=40
+probe=1,8 remaining_groups=32
+probe=2,4 remaining_groups=16
+probe=2,8 remaining_groups=8
+probe=4,8 remaining_groups=0
+two_collisions=0
+k=6 one_groups=31244 total=32768
+collision_groups=1484 max_size=4
+probe=1,2 remaining_groups=1060
+probe=1,4 remaining_groups=838
+probe=1,8 remaining_groups=722
+probe=1,16 remaining_groups=664
+probe=2,4 remaining_groups=448
+probe=2,8 remaining_groups=320
+probe=2,16 remaining_groups=256
+probe=4,8 remaining_groups=128
+probe=4,16 remaining_groups=64
+probe=8,16 remaining_groups=0
+two_collisions=0

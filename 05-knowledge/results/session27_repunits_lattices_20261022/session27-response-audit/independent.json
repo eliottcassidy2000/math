@@ -1,0 +1,60 @@
+{
+  "independent_permutation_one_port_checks": 1098,
+  "tomography_batteries": 75,
+  "single_edge_flip_checks": 410,
+  "hostiles": [
+    {
+      "H": 657,
+      "core_H": 189,
+      "scores": [
+        4,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "deviation": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "-1/2",
+        "-1/2",
+        "-1/2",
+        "-1/2",
+        "1/2"
+      ],
+      "norm_squared": 2,
+      "permutations": 40320
+    },
+    {
+      "H": 643,
+      "core_H": 171,
+      "scores": [
+        4,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "deviation": [
+        "1/2",
+        "1/2",
+        "1/2",
+        "-1/2",
+        "-1/2",
+        "-1/2",
+        "-1/2",
+        "1/2"
+      ],
+      "norm_squared": 2,
+      "permutations": 40320
+    }
+  ],
+  "automaton_vs_permutation_checks": 100
+}

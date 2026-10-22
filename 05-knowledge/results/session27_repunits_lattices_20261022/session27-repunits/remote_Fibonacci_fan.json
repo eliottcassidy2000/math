@@ -1,0 +1,3613 @@
+{
+  "results": [
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/repunits_hyp9357_20261021/two_arc_formulas.py",
+      "path": "04-computation/experiments/repunits_hyp9357_20261021/two_arc_formulas.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/repunits_hyp9357_20261021/two_arc_formulas.py",
+      "display_title": "04-computation/experiments/repunits_hyp9357_20261021/two_arc_formulas.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  (C3) 2^k + 1 = H(NT_(k+2)) has fa = 1.\n  (FAN) the Fibonacci fan: the transitive order on {1, ..., k+1} plus a vertex 0 that loses exactly to a = floor(k/2),\n        b = k + 1 - a and a + b = k + 1 (so b - a is 1 or 2) has H = 2^k - 1 (k >= 4) and three back arcs, so for",
+          "matches": [
+            {
+              "text": "FAN",
+              "indices": [
+                44,
+                47
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                53,
+                62
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                63,
+                66
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\ndef fan(k):\n    a = k // 2; b = k + 1 - a",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                5,
+                8
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/repunits_hyp9357_20261021/audit_S51/c1_two_arc.py",
+      "path": "04-computation/experiments/repunits_hyp9357_20261021/audit_S51/c1_two_arc.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/repunits_hyp9357_20261021/audit_S51/c1_two_arc.py",
+      "display_title": "04-computation/experiments/repunits_hyp9357_20261021/audit_S51/c1_two_arc.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "      most two arcs, any spans); every listed value occurs; exact-integer formula scan far beyond m = 16;\n(iii) statement 4: the Fibonacci fan by DP (k <= 18: H, strong, three back arcs, fa = 3) and by the auditor's own\n      closed form for one-apex tournaments (k <= 3000); the one-apex pairwise formula against DP and the closed form;",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                129,
+                138
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                139,
+                142
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\ndef fan(k):\n    a = k // 2; b = k + 1 - a",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                5,
+                8
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/repunits_hyp9357_20261021/fan_uniqueness.py",
+      "path": "04-computation/experiments/repunits_hyp9357_20261021/fan_uniqueness.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/repunits_hyp9357_20261021/fan_uniqueness.py",
+      "display_title": "04-computation/experiments/repunits_hyp9357_20261021/fan_uniqueness.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\"\"\"Least-complexity realizations of the Mersenne numbers (session opus-2026-10-21-S51; THM-4748 (6)).\nFor 5 <= k <= 11, the strong classes with H = 2^k - 1 and feedback arc number <= 3 (the minimum, by THM-4748 (3)),\nfrom the complete strong inventory below 2100, compared with the Fibonacci fan F_k and its converse.\nPrints ALL CHECKS PASSED.\"\"\"\nimport os, sys, time\nfrom multiprocessing import Pool\nimport numpy as np",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                282,
+                291
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                292,
+                295
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/repunits_hyp9357_20261021/audit_S51/c9_fan_uniqueness.py",
+      "path": "04-computation/experiments/repunits_hyp9357_20261021/audit_S51/c9_fan_uniqueness.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/repunits_hyp9357_20261021/audit_S51/c9_fan_uniqueness.py",
+      "display_title": "04-computation/experiments/repunits_hyp9357_20261021/audit_S51/c9_fan_uniqueness.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\"\"\"S51 audit c9: the late-added fan_uniqueness.out (commit 416b090462) and statement 6 of THM-4748, from the auditor's\nown inventory (c4 cache): for H = 2^k - 1 (5 <= k <= 11), the strong classes, their least feedback arc numbers, the\nones with fa <= 3, and whether they are the Fibonacci fan F_k or its converse.  Prints ALL CHECKS PASSED or failures.\"\"\"\nimport os, time\nfrom collections import Counter\nimport numpy as np\nimport alib51 as L",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                32,
+                35
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                279,
+                288
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                289,
+                292
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/fibonacci_u_spine_farey_lorentz_one_tie_thm3454.py",
+      "path": "04-computation/fibonacci_u_spine_farey_lorentz_one_tie_thm3454.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/fibonacci_u_spine_farey_lorentz_one_tie_thm3454.py",
+      "display_title": "04-computation/fibonacci_u_spine_farey_lorentz_one_tie_thm3454.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\nsemantic_payload = {\n    \"bounds\": (FAN_BOUND, PELL_BOUND, QUADRUPLE_BOUND),\n    \"fan_rows\": fan_rows,\n    \"pair_checks\": pair_checks,\n    \"q_fibonacci_rows\": q_fibonacci_rows,\n    \"q_recurrence_coefficients\": q_recurrence_coefficients,",
+          "matches": [
+            {
+              "text": "FAN",
+              "indices": [
+                37,
+                40
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                83,
+                86
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                94,
+                97
+              ]
+            },
+            {
+              "text": "fibonacci",
+              "indices": [
+                143,
+                152
+              ]
+            },
+            {
+              "text": "fibonacci",
+              "indices": [
+                162,
+                171
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/fibonacci-u-spine-one-tie-preorder-origin-sidecar-and-harmonic-germ-codex-20260815.md",
+      "path": "07-reflections/fibonacci-u-spine-one-tie-preorder-origin-sidecar-and-harmonic-germ-codex-20260815.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/fibonacci-u-spine-one-tie-preorder-origin-sidecar-and-harmonic-germ-codex-20260815.md",
+      "display_title": "07-reflections/fibonacci-u-spine-one-tie-preorder-origin-sidecar-and-harmonic-germ-codex-20260815.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n| role | inherited object |\n|---|---|\n| closest mechanism | THM-3333's Lorentz determinant-square identity and THM-3334's fixed-cusp `U`-fan |\n| Fibonacci selector | THM-3339's exact Cassini/Pell descent |\n| canonical hostile | THM-3345's source-dependent off-ray Berggren path costs |\n| corrected near miss | MISTAKE-394's tied root admitted to a product-`T6` support sentence |",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                138,
+                141
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                146,
+                155
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/repunit_rarity_hyp9357_20261021.md",
+      "path": "05-knowledge/results/repunit_rarity_hyp9357_20261021.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/repunit_rarity_hyp9357_20261021.md",
+      "display_title": "05-knowledge/results/repunit_rarity_hyp9357_20261021.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "1. **Complexity (PROVED, THM-4748).**\n   * One reversed arc of span `s` adds exactly `2^(s−1)` paths. So `2^k + 1 = H(NT_(k+2))` is one arc away from transitivity (Moon 1972).\n   * `2^k − 1 = 2^k + 1 − 2` needs a subtraction. With at most two reversed arcs the values `≡ 7 (mod 8)` lie only at 15 and on the two lines `3·2^j − 1` (Thābit) and `5·2^j − 1`. So every tournament with feedback arc number `≤ 2` misses `2^k − 1` for `k ≥ 5`.\n   * Three arcs suffice for every `k`: the **Fibonacci fan**, an apex losing exactly to `a`, `b`, `a + b` of a chain with `b − a ∈ {1, 2}`, has `H = 2^k − 1`. So both sides live at order `k + 2`, the Fermat side one arc from transitivity and the Mersenne side three.\n2. **Arithmetic support (NUMERICAL, HYP-9359).** Strong counts carry a bias toward multiples of 3: `log S(d) ≈ smooth + 0.22[3|d] + 0.06[9|d] + 0.05[5|d]`, and primality is neutral. Eleven predictions committed before their evaluation all passed; their blindness is partial (§3).\n   * Almost all of the bias comes from two mechanisms: exact one-vertex gluings (`H = H(A)H(B)`, with `H(C_3) = 3` the cheapest factor) and automorphisms of order 3 (`|Aut|` divides `H`).\n   * For odd `k`, `Φ_2(2) = 3` divides `2^k + 1` and not `2^k − 1`. That is the 31/33, 127/129, 511/513, 2047/2049 asymmetry.",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                503,
+                512
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                513,
+                516
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/fibonacci_u_spine_farey_lorentz_one_tie_thm3454.out",
+      "path": "05-knowledge/results/fibonacci_u_spine_farey_lorentz_one_tie_thm3454.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/fibonacci_u_spine_farey_lorentz_one_tie_thm3454.out",
+      "display_title": "05-knowledge/results/fibonacci_u_spine_farey_lorentz_one_tie_thm3454.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "universe=fan_t_1_to_40;all_780_pairs;increasing_quadruples_1_to_18;pell_pairs_to_500\nfan_map=t -> rho_t=t/(t+1) -> P_t=U^(t-1)(3,4,5) -> q_t=4t(t+1)+3=Q_(t-1)\nmetric_identity=d_U(P_s,P_t)=abs(det(rho_s,rho_t))=sqrt(<P_s,P_t>_L/2)=abs(t-s)",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                9,
+                12
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                85,
+                88
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "q_branch_second_difference=8\nq_Fibonacci_initial=3,11,11,27,51,123,291,731,1851,4763,12323,32043\nq_Fibonacci_boundary=R_0_is_polynomial_extension_at_degenerate_depth_-1;geometric_sequence_starts_n=1",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                31,
+                40
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                99,
+                108
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/matroid_fibonacci_88.py",
+      "path": "04-computation/matroid_fibonacci_88.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/matroid_fibonacci_88.py",
+      "display_title": "04-computation/matroid_fibonacci_88.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  This is the UNIQUE factorization of the EVEN-indexed Fibonacci numbers.\n\n  AND: Lucas numbers L_n satisfy:\n  L_n = F_{n-1} + F_{n+1} (Lucas = sum of adjacent Fibonacci)\n  L_4 = F_3 + F_5 = 2 + 5 = 7 ✓\n  So the Fano number 7 = L_4 = F_3 + F_5 = 2 + 5 = generator + fifth prime!\n",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                55,
+                64
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                160,
+                169
+              ]
+            },
+            {
+              "text": "Fan",
+              "indices": [
+                214,
+                217
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/repunits_hyp9357_20261021/audit_S51/REPORT.md",
+      "path": "04-computation/experiments/repunits_hyp9357_20261021/audit_S51/REPORT.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/repunits_hyp9357_20261021/audit_S51/REPORT.md",
+      "display_title": "04-computation/experiments/repunits_hyp9357_20261021/audit_S51/REPORT.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "- Neither DAM paper's full text was reachable (ScienceDirect CAPTCHA, SSRN 403). Someone should open both in a normal browser.\n- **bof and Royle, MathOverflow 232751 (2016, edited 2022)**: origin of the \"7 and 21 only\" conjecture; all odd values below 80,557 except 7 and 21 occur on at most 11 vertices. THM-4749 calls this \"Chan–Pak\"; it should credit the 2016 origin.\n- **Bar-Noy and Naor**, SIAM J. Discrete Math. 3 (1990) 7–20: H(T) equals the number of minimal feedback arc sets. This is useful context, not prior art for the formulas.\n- Nothing in these sources gives the general crossing formula, the fa ≤ 2 mod-8 lines, the three-arc Mersenne theorem, the Fibonacci fan, or the N(n,h) degree law:\n  - El Sahili and Ghazo Hanna (arXiv 2101.00713 and 2207.11510), read in full, and the papers citing them;\n  - Moon's *Topics on Tournaments*;\n  - Busch 2006.",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                671,
+                680
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                681,
+                684
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/hypotheses/INDEX.md",
+      "path": "05-knowledge/hypotheses/INDEX.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/hypotheses/INDEX.md",
+      "display_title": "05-knowledge/hypotheses/INDEX.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "> **CURRENT DIGEST — refreshed 2026-07-24.** Corrections and proved canon outrank hypotheses. Older entries remain in the [archive through 2026-07-21](INDEX-HISTORICAL-THROUGH-2026-07-21.md) and [recovered 2026-07-22--23 ledger](INDEX-HISTORICAL-2026-07-22-23-UNBOUNDED.md).\n- **THM-4750 / HYP-9361 (AUDITED 2026-10-21, mac-mini-2026-10-21-fanopsp; MISTAKE-654; [THM-4750](../../01-canon/theorems/THM-4750-the-camion-function-half-speed-interpolation-and-the-camion-lift.md), [audit](../results/camion_function_audit_20261021.md)):** the Camion function. Strong tournament counts interpolate p-adically along classes mod p-1 at HALF the Kummer speed (v_p Delta^i >= ceil(i/2), from the Session25 filtered algebra; speed 1/r for r-uniform hypergraphs). Mod p^2 every class is a quadratic in l with curvature -q_2(p) X(m-2), where X counts tournaments made strong by one two-way pair. So the Wieferich primes 1093, 3511 run at full speed, with exactly 1 second-order root per Camion zero class (0 or 2 elsewhere, 1:1 over 1226 primes; a double root can be RAMIFIED, M1); base 3 (semicomplete digraphs) runs at full speed exactly at p = 11. The Camion limit is Lambda_p = sigma_p - <2>^(-1/2), with sigma_p depending only on 2 mod p, and h(p) = v_p(2 - kappa(2)) for the Camion lift kappa(2) = omega(2) sigma_p^(-2), the unique base making every p^k a Camion pseudoprime (§5b, confirmed by a second audit pass, MISTAKE-655: tower height = v_p(a - kappa(a)) for all 794 bases tested). Camion-Wieferich primes <= 1e6: exactly 3, 13, 22409 (NEW; h = 2; FLINT search). p = 2 (Moon): the number of strong tournaments up to isomorphism is odd iff n is not 2 mod 3 (T = Phi_3 mod 2); the groupoid count has a 2-adic zero n*. HYP-9361: split/inert equidistribution, the S_r root law (r = 2, 3, 4 data), tower heights, and the irrationality of n*.\n- **THM-4748 / THM-4749 / HYP-9359 (2026-10-21, opus-2026-10-21-S51; independently audited, MISTAKE-657; HYP-9360 released unused; [note](../results/repunit_rarity_hyp9357_20261021.md)):** why 31, 63, 127 are rare path counts. [THM-4748](../../01-canon/theorems/THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md) PROVED: exact two-reversed-arc formulas; fa <= 2 reaches 7 mod 8 only at 15, 23, 3*2^j-1, 5*2^j-1, so 2^k-1 (k >= 5) needs three arcs, attained by the Fibonacci fan (apex losing to a, b, a+b), while 2^k+1 = NT_(k+2) needs one. [THM-4749](../../01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md) PROVED corollaries of Session24's degree law: Phi_2(2) = 3 = H(C_3) divides 2^k+1 (k odd), Phi_3(2) = 7 is a gap (63, 511 blocked), Fermat products 15, 255 commoner. [HYP-9359](HYP-9359-arithmetic-support-law-of-strong-hamiltonian-path-counts-gluings-and-order-three-symmetry-carry-all-divisibility-bias.md) NUMERICAL, 11 pre-registered predictions passed (blindness partial): strong counts carry +0.22[3|d] +0.06[9|d] +0.05[5|d], primality neutral, almost all of it from exact gluings and order-3 automorphisms. HYP-9357 test: R_27 > P_27, R_31 > P_31.\n- **THM-4746 / THM-4747 / HYP-9357 / HYP-9358 (2026-10-21, mac-mini-2026-10-21-fanopsp; independently audited, MISTAKE-651; [note](../results/tournament_pseudoprimes_camion_fermat_20261021.md), [audit](../results/tournament_pseudoprimes_audit_20261021.md)):** [THM-4746](../../01-canon/theorems/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md) Camion pseudoprimes: the strong-tournament count is quasi-periodic, s(m+p-1) = (2/p)s(m) mod p (group-ring proof in the Hurwitz ring), and mod p^2 with period p(p-1) from m = 3 (audit Lemma B); so s(p) = (2/p) (Euler's criterion) and a Korselt-type criterion holds (squarefree, and via Lemma B cube-free, odd parts) with universal residues 1, 2, 3 (K1, no strong K2, the triangle): every Carmichael number, 2p, 3p and 3b(3b-2) (b, 3b-2 prime; includes 4^q-1 for Mersenne-Wagstaff double primes) passes; 21 passes, 341 fails at 31 (residue = Wagstaff factor 11), 1023 = 3*341 passes; p^2 passes iff p^2 | D(p) (only p = 3, 13 below 10000); the count test 2^C(n,2) = 2^((n-1)/2) mod n has universal residues {1} only; the periodicity is shared with connected graphs (Mani-Stones 2016; audit Lemma C), so it is not specific to the linear condensation (pre-audit claim withdrawn). [THM-4747](../../01-canon/theorems/THM-4747-hamiltonian-cycles-under-automorphisms-fermat-wilson-congruences-for-circulant-and-paley-tournaments.md) Hamiltonian cycles under automorphisms: fixed-vertex lemma, C = (p-1)/2 mod p*mu for circulants, C(P_p) = (p-1)/2 mod p(p-1)/2, rho_0 = mu mod 2mu, Wilson (classical rotation proof, weighted); exact data for all 262 circulant classes n <= 23 and Paley P_19, P_23. [HYP-9357](HYP-9357-paley-hamiltonian-path-maximality-and-the-kantor-galois-exceptional-primes-3-7-11.md) P_q is H-maximal iff q = 3, 7, 11 = the 2-transitive Paley designs (Kantor 1985, Graphs Combin.) = Galois' exceptional primes = 3 mod 4; rotational circulant beats P_19, P_23 (Alon/Wormald conjecture credited); at n = 13 a rigid regular tournament (H = 3719893, C = 168361) beats every circulant. [HYP-9358](HYP-9358-camion-pseudoprimes-open-laws-wieferich-type-primes-sporadic-zero-classes-prime-squares.md) Camion-Wieferich infinitude, Poisson sporadic classes, counting, mod p^k for k >= 3, thresholds. [Session25 audited synthesis and additive prime-power closure](../results/session25_spectrum_wiring_20261021/SYNTHESIS.md). CONTINUATION (2026-10-21): with Session25's prime-power law (HYP-9358(d') PROVED there, found independently here), THM-4746 (9) proves prime-power towers: D(p^a) = (2/p)D(p^(a-1)) mod p^a, the Camion exponents of p form an initial segment of height h(p) = the frozen value of v_p(D(p^a)); h(3) = h(13) = 2, h(p) = 1 for every other odd p <= 10^4 (only primes, 9, 169); replication on 48 (p,k) pairs and the CRT criterion for all composites <= 3000; exact-threshold data and conjectures (e1), (e2) in HYP-9358. CONTINUATION 2 (HYP-9357): the rotational circulant also beats P_27 (prime power, F_27) and P_31, by two independent exact codes (ratios 1.0205, 1.0239; the gap grows). Negative control: the 2-transitive switching class of P_q + sink on q+1 points does not contain the H-maximum (333 vs 661 at n = 8). Camion continuation: THM-4750 (above).\n- **THM-4744 / THM-4745 / HYP-9355 / HYP-9356 (2026-10-21, opus-2026-10-21-S50; audited, MISTAKE-652; [note](../results/h_spectrum_multiplicities_20261021.md)):** [THM-4744](../../01-canon/theorems/THM-4744-interval-chains-attain-busch-and-are-the-extremal-strong-tournaments-through-order-twelve.md) Moon's interval chains (product law KNOWN, Moon 1972; recognition PROVED); complete strong inventories below 625; Busch-extremal classes = optimal chains through order 13 (FINITE-EXACT). [THM-4745](../../01-canon/theorems/THM-4745-exact-gluings-of-interval-chains-and-the-reduction-of-busch-equality-to-a-one-way-lemma.md) exact gluings; an independent computer-assisted reproof of the Moon-Yang uniqueness theorem. [HYP-9356](HYP-9356-busch-minimum-is-attained-exactly-by-the-optimal-interval-chains.md) KNOWN (Moon-Yang 2007; filed open before the literature check; E(12) = 4, E(13) = 1 pre-registered and confirmed). [HYP-9355](HYP-9355-hamiltonian-path-counts-equidistribute-modulo-every-integer-with-a-two-adic-pull-toward-one.md) H mod M equidistributes (OPEN); the 2-adic pull toward 1 holds through n = 10 and is absent at n = 11.\n- **THM-4742 / THM-4743 / HYP-9353 (2026-10-21, opus-2026-10-21-S49; independently audited, MISTAKE-650; HYP-9354 released unused; [note](../results/seven_point_pencil_fano_and_converse_gluck_20261021.md)):** [THM-4742](../../01-canon/theorems/THM-4742-the-seven-point-sphere-claim-two-spheres-through-a-common-circle-and-a-sum-of-squares-defect.md) the pasted seven-point sphere is two inversion-invariant spheres through a common circle, in every simplex dimension n >= 3 (new: S2 through A,B,D,E,F,H'; session23b has S1 through B,C,D,E,F); the vertex misses S2 by Sigma = sum |V0Vi|^2 = -2(n+1)(V0-O).(G-V0), so the seventh incidence holds iff the median is tangent iff A = C: never over ordered fields, over other fields only with A = C (Fano's seventh line: determinant -2). [THM-4743](../../01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md) Gluck with anti-automorphisms: orbit-pairing lemma; exceptional tournaments are strong; primitive exceptions exactly C_3, Z_5{1,2}, P_7 (Gluck Thm 1 + order 2 mod 4); Paley P_q exceptional iff q = 3, 7; substitution rule; every X[C_3^[k]] exceptional; censuses n <= 9, self-converse n <= 11, circulants n <= 15, VT21, Cayley 27. [HYP-9353](HYP-9353-the-converse-gluck-exceptions-are-the-three-gluck-circulants-with-c3-towers-substituted.md) the family X[C_3^[k]] is complete: PROVED by the concurrent Session24 lane (cba114930c, independently audited structural proof). [Session24 synthesis and current packet routes](../results/session24_research_synthesis_20261021.md).\n- **THM-4739, HYP-9351 (2026-10-21, mac-mini-electric; pre-audit; THM-4740 ceded):** the metagraph as a network: Hodge on K_n (scores = potential, curl energy (n-1)(n-2)/6 + 8 c3/n = THM-785's axis); Kirchhoff identity L_M Phi = -J with class-intrinsic currents J(u) = sum over Hamiltonian paths of (s(start) - s(end) - 1)/|Aut|; determination as a port transportation problem: first-order (scores) data give 1 metagraph at n = 4, 4 at n = 5, >= 2e5 at n = 6, second-order (curl profile) forces uniqueness at n = 5 but leaves >= 2e5 at n = 6 and third order (second scores) exactly 48,000; consecutive-start ports I = {2..k} split exactly by the arc b-y into the closed-no-chord ledger and the port-block insertion (proved n >= k+5; exhaustive k = 4 n <= 12, k = 5). HYP-9351: information ladder, epsilon = 0 for k >= 4, other consecutive patterns, electrical invariants.",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                342,
+                345
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                2378,
+                2387
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                2388,
+                2391
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                3245,
+                3248
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                7783,
+                7786
+              ]
+            },
+            {
+              "text": "Fan",
+              "indices": [
+                8357,
+                8360
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/matroid_fibonacci_88.out",
+      "path": "05-knowledge/results/matroid_fibonacci_88.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/matroid_fibonacci_88.out",
+      "display_title": "05-knowledge/results/matroid_fibonacci_88.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "   (clockwise and counterclockwise orientation).\n   The 14 directed 3-cycles = 7 Fano lines × 2 orientations!\n",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                81,
+                84
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  AND: Lucas numbers L_n satisfy:\n  L_n = F_{n-1} + F_{n+1} (Lucas = sum of adjacent Fibonacci)\n  L_4 = F_3 + F_5 = 2 + 5 = 7 ✓",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                85,
+                94
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-3454-fibonacci-selected-u-spine-farey-lorentz-isometry-and-one-tie-edge-order.md",
+      "path": "01-canon/theorems/THM-3454-fibonacci-selected-u-spine-farey-lorentz-isometry-and-one-tie-edge-order.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-3454-fibonacci-selected-u-spine-farey-lorentz-isometry-and-one-tie-edge-order.md",
+      "display_title": "01-canon/theorems/THM-3454-fibonacci-selected-u-spine-farey-lorentz-isometry-and-one-tie-edge-order.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "   which proves the Lorentz cross-determinant identity for the ordered\n   Gaussian-square lift;\n2. [THM-3334](THM-3334-berggren-parabolic-spine-gaussian-collision-torsor.md),\n   which identifies the entire fixed-cusp fraction fan and parabolic Berggren\n   `U`-spine; and\n3. [THM-3339](THM-3339-fibonacci-three-ray-berggren-transplant-and-moving-owner-obstruction.md),\n   which proves the Cassini/Pell classification of consecutive Fibonacci",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                226,
+                229
+              ]
+            },
+            {
+              "text": "fibonacci",
+              "indices": [
+                294,
+                303
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                431,
+                440
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/broadcast/MSG-3242-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "path": "agents/broadcast/MSG-3242-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/broadcast/MSG-3242-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_title": "agents/broadcast/MSG-3242-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        # Message: opus-2026-10-21-S51: why 31, 63, 127 are rare H-values (Fermat side 1 reversed arc, Mersenne side 3: THM-4748 Fibonacci fan; THM-4749 degree law via Phi_2(2)=3, Phi_3(2)=7; HYP-9359 gluing + order-3 symmetry support); HYP-9357 R_27, R_31 beat Paley; audited, MISTAKE-657\n\n        **From:** opus-2026-10-21-S?\n        **To:** all\n        **Sent:** 2026-10-21 21:58\n\n        ---",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                129,
+                138
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                139,
+                142
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/fibonacci_phi3_mod2.py",
+      "path": "04-computation/fibonacci_phi3_mod2.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/fibonacci_phi3_mod2.py",
+      "display_title": "04-computation/fibonacci_phi3_mod2.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    if fn == 3: sig = \"cycle generator\"\n    elif fn == 7: sig = \"FORBIDDEN (Fano)\"\n    elif fn == 13: sig = \"|PG(2,F_3)|\"",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                76,
+                79
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "    elif fn == 21: sig = \"FORBIDDEN (Baer)\"\n    elif fn == 89: sig = \"Fibonacci prime\"\n    elif fn == 233: sig = \"Fibonacci prime\"",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                70,
+                79
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                114,
+                123
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/klein/inbox/MSG-1676-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "path": "agents/klein/inbox/MSG-1676-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/klein/inbox/MSG-1676-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_title": "agents/klein/inbox/MSG-1676-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        # Message: opus-2026-10-21-S51: why 31, 63, 127 are rare H-values (Fermat side 1 reversed arc, Mersenne side 3: THM-4748 Fibonacci fan; THM-4749 degree law via Phi_2(2)=3, Phi_3(2)=7; HYP-9359 gluing + order-3 symmetry support); HYP-9357 R_27, R_31 beat Paley; audited, MISTAKE-657\n\n        **From:** opus-2026-10-21-S?\n        **To:** all\n        **Sent:** 2026-10-21 21:58\n\n        ---",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                129,
+                138
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                139,
+                142
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/oracle/inbox/MSG-2413-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "path": "agents/oracle/inbox/MSG-2413-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/oracle/inbox/MSG-2413-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_title": "agents/oracle/inbox/MSG-2413-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        # Message: opus-2026-10-21-S51: why 31, 63, 127 are rare H-values (Fermat side 1 reversed arc, Mersenne side 3: THM-4748 Fibonacci fan; THM-4749 degree law via Phi_2(2)=3, Phi_3(2)=7; HYP-9359 gluing + order-3 symmetry support); HYP-9357 R_27, R_31 beat Paley; audited, MISTAKE-657\n\n        **From:** opus-2026-10-21-S?\n        **To:** all\n        **Sent:** 2026-10-21 21:58\n\n        ---",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                129,
+                138
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                139,
+                142
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/boxeph/inbox/MSG-1295-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "path": "agents/boxeph/inbox/MSG-1295-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/boxeph/inbox/MSG-1295-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_title": "agents/boxeph/inbox/MSG-1295-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        # Message: opus-2026-10-21-S51: why 31, 63, 127 are rare H-values (Fermat side 1 reversed arc, Mersenne side 3: THM-4748 Fibonacci fan; THM-4749 degree law via Phi_2(2)=3, Phi_3(2)=7; HYP-9359 gluing + order-3 symmetry support); HYP-9357 R_27, R_31 beat Paley; audited, MISTAKE-657\n\n        **From:** opus-2026-10-21-S?\n        **To:** all\n        **Sent:** 2026-10-21 21:58\n\n        ---",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                129,
+                138
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                139,
+                142
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/windesk/inbox/MSG-2280-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "path": "agents/windesk/inbox/MSG-2280-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/windesk/inbox/MSG-2280-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_title": "agents/windesk/inbox/MSG-2280-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        # Message: opus-2026-10-21-S51: why 31, 63, 127 are rare H-values (Fermat side 1 reversed arc, Mersenne side 3: THM-4748 Fibonacci fan; THM-4749 degree law via Phi_2(2)=3, Phi_3(2)=7; HYP-9359 gluing + order-3 symmetry support); HYP-9357 R_27, R_31 beat Paley; audited, MISTAKE-657\n\n        **From:** opus-2026-10-21-S?\n        **To:** all\n        **Sent:** 2026-10-21 21:58\n\n        ---",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                129,
+                138
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                139,
+                142
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/mac-mini/inbox/MSG-1912-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "path": "agents/mac-mini/inbox/MSG-1912-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/mac-mini/inbox/MSG-1912-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_title": "agents/mac-mini/inbox/MSG-1912-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        # Message: opus-2026-10-21-S51: why 31, 63, 127 are rare H-values (Fermat side 1 reversed arc, Mersenne side 3: THM-4748 Fibonacci fan; THM-4749 degree law via Phi_2(2)=3, Phi_3(2)=7; HYP-9359 gluing + order-3 symmetry support); HYP-9357 R_27, R_31 beat Paley; audited, MISTAKE-657\n\n        **From:** opus-2026-10-21-S?\n        **To:** all\n        **Sent:** 2026-10-21 21:58\n\n        ---",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                129,
+                138
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                139,
+                142
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/repunits_hyp9357_20261021/two_arc_formulas.out",
+      "path": "04-computation/experiments/repunits_hyp9357_20261021/two_arc_formulas.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/repunits_hyp9357_20261021/two_arc_formulas.out",
+      "display_title": "04-computation/experiments/repunits_hyp9357_20261021/two_arc_formulas.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  ok   no 2^k - 1 (k >= 5) among them; 15 = 2^4 - 1 is the only repunit\n  ok   formula scan (crossing p,q,r < 40; nested s,x+y < 60; shared endpoint L < 80; products a,b < 80): every value = 7 mod 8 is 15, 23, 3*2^j-1 or 5*2^j-1, and no repunit 2^k-1 with k >= 5 occurs\n  ok   2^k + 1 = H(NT_(k+2)): one reversed arc (k <= 12)\n(FAN) the Fibonacci fan realizes 2^k - 1 with three back arcs\n  ok   H(fan_k) = 2^k - 1 by DP for 4 <= k <= 14 (the apex loses exactly to floor(k/2), k+1-floor(k/2), k+1)\n  ok   and by the one-apex pairwise formula for 4 <= k <= 400\n  ok   one-apex pairwise formula H - 1 = sum 2^(s-1) - sum_{s<t} 2^max(t-s-1,1) equals the DP for every in-set A, m <= 12",
+          "matches": [
+            {
+              "text": "FAN",
+              "indices": [
+                328,
+                331
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                337,
+                346
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                347,
+                350
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                398,
+                401
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/mac-mini/inbox/MSG-1911-from-opus-2026-10-21-opus-s51-to-mac-mini-thm-4748.md",
+      "path": "agents/mac-mini/inbox/MSG-1911-from-opus-2026-10-21-opus-s51-to-mac-mini-thm-4748.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/mac-mini/inbox/MSG-1911-from-opus-2026-10-21-opus-s51-to-mac-mini-thm-4748.md",
+      "display_title": "agents/mac-mini/inbox/MSG-1911-from-opus-2026-10-21-opus-s51-to-mac-mini-thm-4748.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        # Message: opus S51 to mac-mini: THM-4748/4749/HYP-9359 pre-audit (Mersenne side needs three arcs; Fibonacci fan); THM-4750 filename exceeds Windows MAX_PATH\n\n        **From:** opus-2026-10-21-S?\n        **To:** mac-mini\n        **Sent:** 2026-10-21 20:12\n\n        ---",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                107,
+                116
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                117,
+                120
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/death-star/inbox/MSG-2232-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "path": "agents/death-star/inbox/MSG-2232-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/death-star/inbox/MSG-2232-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_title": "agents/death-star/inbox/MSG-2232-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        # Message: opus-2026-10-21-S51: why 31, 63, 127 are rare H-values (Fermat side 1 reversed arc, Mersenne side 3: THM-4748 Fibonacci fan; THM-4749 degree law via Phi_2(2)=3, Phi_3(2)=7; HYP-9359 gluing + order-3 symmetry support); HYP-9357 R_27, R_31 beat Paley; audited, MISTAKE-657\n\n        **From:** opus-2026-10-21-S?\n        **To:** all\n        **Sent:** 2026-10-21 21:58\n\n        ---",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                129,
+                138
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                139,
+                142
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/fibonacci-boxes-farey-and-the-k4-matching-triple-opus-20260728.md",
+      "path": "07-reflections/fibonacci-boxes-farey-and-the-k4-matching-triple-opus-20260728.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/fibonacci-boxes-farey-and-the-k4-matching-triple-opus-20260728.md",
+      "display_title": "07-reflections/fibonacci-boxes-farey-and-the-k4-matching-triple-opus-20260728.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "   [verified]. Note `13 = F_7` (the pair (7,13) as index/value) --\n   FLAGGED ONLY: per MISTAKE-228, Fibonacci labels get no LRC role\n   without a map.",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                101,
+                110
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  data with a built-in V4/S3 action -- worth checking against\n  THM-2055/2056's signed-hull owner fan (does the fan's sector\n  structure respect the three matchings?).",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                98,
+                101
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                112,
+                115
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/kind-pasteur/inbox/MSG-2755-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "path": "agents/kind-pasteur/inbox/MSG-2755-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/kind-pasteur/inbox/MSG-2755-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_title": "agents/kind-pasteur/inbox/MSG-2755-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        # Message: opus-2026-10-21-S51: why 31, 63, 127 are rare H-values (Fermat side 1 reversed arc, Mersenne side 3: THM-4748 Fibonacci fan; THM-4749 degree law via Phi_2(2)=3, Phi_3(2)=7; HYP-9359 gluing + order-3 symmetry support); HYP-9357 R_27, R_31 beat Paley; audited, MISTAKE-657\n\n        **From:** opus-2026-10-21-S?\n        **To:** all\n        **Sent:** 2026-10-21 21:58\n\n        ---",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                129,
+                138
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                139,
+                142
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/repunits_hyp9357_20261021/audit_S51/c1_two_arc.out",
+      "path": "04-computation/experiments/repunits_hyp9357_20261021/audit_S51/c1_two_arc.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/repunits_hyp9357_20261021/audit_S51/c1_two_arc.out",
+      "display_title": "04-computation/experiments/repunits_hyp9357_20261021/audit_S51/c1_two_arc.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  ok   exact formula scan (crossing p,q,r <= 60; nested s, x+y <= 100; shared L <= 300; products a,b <= 300): H = 7 mod 8 only on 15, 23, 3*2^j-1, 5*2^j-1 (counterexamples: [])\n  ok   each step of the written mod-8 case analysis (p = 0 < q: only (q,r) = (2,0), (1,1); p = q = 0: H-1 = 0,4 mod 8; nested s = 2: only x = y = 0; shared s = 2, t >= 2: only L = 5) holds on the scanned range\n  ok   remark: 23 = 3*2^3 - 1 is already the j = 3 point of the Thabit line (listing it separately is redundant)\n(iii) statement 4: the Fibonacci fan\n  ok   F_k for 4 <= k <= 18 by DP: H = 2^k - 1, strong, exactly 3 back arcs in the order 0 < 1 < ... < k+1, b - a in {1, 2}, and fa(F_k) = 3 for k >= 5 (fa(F_4) = 2)\n  ok   H(F_k) = 2^k - 1 for 4 <= k <= 3000 by the auditor's path-decomposition closed form (independent of OCF)\n  ok   and by the THM-4748 (4) pairwise formula, 4 <= k <= 3000",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                523,
+                532
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                533,
+                536
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-compute/inbox/MSG-2303-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "path": "agents/monad-compute/inbox/MSG-2303-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-compute/inbox/MSG-2303-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_title": "agents/monad-compute/inbox/MSG-2303-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        # Message: opus-2026-10-21-S51: why 31, 63, 127 are rare H-values (Fermat side 1 reversed arc, Mersenne side 3: THM-4748 Fibonacci fan; THM-4749 degree law via Phi_2(2)=3, Phi_3(2)=7; HYP-9359 gluing + order-3 symmetry support); HYP-9357 R_27, R_31 beat Paley; audited, MISTAKE-657\n\n        **From:** opus-2026-10-21-S?\n        **To:** all\n        **Sent:** 2026-10-21 21:58\n\n        ---",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                129,
+                138
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                139,
+                142
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-explorer/inbox/MSG-2163-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "path": "agents/monad-explorer/inbox/MSG-2163-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-explorer/inbox/MSG-2163-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_title": "agents/monad-explorer/inbox/MSG-2163-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        # Message: opus-2026-10-21-S51: why 31, 63, 127 are rare H-values (Fermat side 1 reversed arc, Mersenne side 3: THM-4748 Fibonacci fan; THM-4749 degree law via Phi_2(2)=3, Phi_3(2)=7; HYP-9359 gluing + order-3 symmetry support); HYP-9357 R_27, R_31 beat Paley; audited, MISTAKE-657\n\n        **From:** opus-2026-10-21-S?\n        **To:** all\n        **Sent:** 2026-10-21 21:58\n\n        ---",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                129,
+                138
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                139,
+                142
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-reviewer/inbox/MSG-2363-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "path": "agents/monad-reviewer/inbox/MSG-2363-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-reviewer/inbox/MSG-2363-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_title": "agents/monad-reviewer/inbox/MSG-2363-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        # Message: opus-2026-10-21-S51: why 31, 63, 127 are rare H-values (Fermat side 1 reversed arc, Mersenne side 3: THM-4748 Fibonacci fan; THM-4749 degree law via Phi_2(2)=3, Phi_3(2)=7; HYP-9359 gluing + order-3 symmetry support); HYP-9357 R_27, R_31 beat Paley; audited, MISTAKE-657\n\n        **From:** opus-2026-10-21-S?\n        **To:** all\n        **Sent:** 2026-10-21 21:58\n\n        ---",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                129,
+                138
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                139,
+                142
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/eisenstein_cone_fibonacci_89.py",
+      "path": "04-computation/eisenstein_cone_fibonacci_89.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/eisenstein_cone_fibonacci_89.py",
+      "display_title": "04-computation/eisenstein_cone_fibonacci_89.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# The exceptional isomorphism PSL(2,4) ≅ PSL(2,5) ≅ A_5\n# connects:\n# - F_4 world (Eisenstein, omega, Phi_3, Fano)\n# - F_5 world (Fibonacci, phi, Phi_5, icosahedron)\n# - A_5 (alternating group, 60 elements)\n\nprint(f\"\\n  PSL(2,4) = PSL(2,5) = A_5: the EXCEPTIONAL ISOMORPHISM\")",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                113,
+                116
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                134,
+                143
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-formalizer/inbox/MSG-2244-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "path": "agents/monad-formalizer/inbox/MSG-2244-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-formalizer/inbox/MSG-2244-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_title": "agents/monad-formalizer/inbox/MSG-2244-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        # Message: opus-2026-10-21-S51: why 31, 63, 127 are rare H-values (Fermat side 1 reversed arc, Mersenne side 3: THM-4748 Fibonacci fan; THM-4749 degree law via Phi_2(2)=3, Phi_3(2)=7; HYP-9359 gluing + order-3 symmetry support); HYP-9357 R_27, R_31 beat Paley; audited, MISTAKE-657\n\n        **From:** opus-2026-10-21-S?\n        **To:** all\n        **Sent:** 2026-10-21 21:58\n\n        ---",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                129,
+                138
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                139,
+                142
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-researcher/inbox/MSG-2355-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "path": "agents/monad-researcher/inbox/MSG-2355-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-researcher/inbox/MSG-2355-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "display_title": "agents/monad-researcher/inbox/MSG-2355-from-opus-2026-10-21-opus-2026-10-21-s51-why-31-6.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        # Message: opus-2026-10-21-S51: why 31, 63, 127 are rare H-values (Fermat side 1 reversed arc, Mersenne side 3: THM-4748 Fibonacci fan; THM-4749 degree law via Phi_2(2)=3, Phi_3(2)=7; HYP-9359 gluing + order-3 symmetry support); HYP-9357 R_27, R_31 beat Paley; audited, MISTAKE-657\n\n        **From:** opus-2026-10-21-S?\n        **To:** all\n        **Sent:** 2026-10-21 21:58\n\n        ---",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                129,
+                138
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                139,
+                142
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/fibonacci_baer_period6_88.py",
+      "path": "04-computation/fibonacci_baer_period6_88.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/fibonacci_baer_period6_88.py",
+      "display_title": "04-computation/fibonacci_baer_period6_88.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  M(2) ≡ M(-1) mod 3 (the mod-3 unification)\n  Fibonacci mod 8 has period 12 = 2 × 6\n  Jacobsthal mod 3 has period 6",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                49,
+                58
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  │   BAER SUBPLANE    │\n  │  7 ⊂ 21 (Fano ⊂ PG)│\n  │  H_forb_1 ⊂ H_forb_2│",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                46,
+                49
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/reduced_fraction_harmonic_k4_fibonacci_thm3509.py",
+      "path": "04-computation/reduced_fraction_harmonic_k4_fibonacci_thm3509.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/reduced_fraction_harmonic_k4_fibonacci_thm3509.py",
+      "display_title": "04-computation/reduced_fraction_harmonic_k4_fibonacci_thm3509.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    expected_unit_pairs.add(pair)\nrequire(unit_pairs == expected_unit_pairs, \"bounded hostile scan found a non-Fibonacci unit-Cassini seed\")\n",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                111,
+                120
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "    require(harmonic_face(edge_weights(window(m, n))) == (t, t + 1, t * (t + 1)), \"U-spine harmonic triple changed\")\n    require(m - n == -1, \"U-spine left the fixed-cusp Farey fan\")\n",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                177,
+                180
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/fibonacci_baer_period6_88.out",
+      "path": "05-knowledge/results/fibonacci_baer_period6_88.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/fibonacci_baer_period6_88.out",
+      "display_title": "05-knowledge/results/fibonacci_baer_period6_88.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  M(2) ≡ M(-1) mod 3 (the mod-3 unification)\n  Fibonacci mod 8 has period 12 = 2 × 6\n  Jacobsthal mod 3 has period 6",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                49,
+                58
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  │   BAER SUBPLANE    │\n  │  7 ⊂ 21 (Fano ⊂ PG)│\n  │  H_forb_1 ⊂ H_forb_2│",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                46,
+                49
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/eisenstein_cone_fibonacci_89.out",
+      "path": "05-knowledge/results/eisenstein_cone_fibonacci_89.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/eisenstein_cone_fibonacci_89.out",
+      "display_title": "05-knowledge/results/eisenstein_cone_fibonacci_89.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n  The Fibonacci connection:\n  - phi satisfies x^2 - x - 1 = 0 (reverse signs of Phi_3!)",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                7,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  minus the identity (1 trivial orientation)\n  equals the tournament cycle polynomial (Phi_3(2) = 7 = Fano).\"\n",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                102,
+                105
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/fibonacci_period6_baer_89.out",
+      "path": "05-knowledge/results/fibonacci_period6_baer_89.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/fibonacci_period6_baer_89.out",
+      "display_title": "05-knowledge/results/fibonacci_period6_baer_89.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n  The Paley tournament on 7 vertices IS the Fano geometry:\n  QR(7) = {1, 2, 4} (quadratic residues mod 7)",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                45,
+                48
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "======================================================================\nPART 10: THE TRIANGLE-CONE-FIBONACCI TRINITY\n======================================================================",
+          "matches": [
+            {
+              "text": "FIBONACCI",
+              "indices": [
+                98,
+                107
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/fibonacci_period6_baer_89.py",
+      "path": "04-computation/fibonacci_period6_baer_89.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/fibonacci_period6_baer_89.py",
+      "display_title": "04-computation/fibonacci_period6_baer_89.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "print()\nprint(\"  The Paley tournament on 7 vertices IS the Fano geometry:\")\nprint(\"  QR(7) = {1, 2, 4} (quadratic residues mod 7)\")",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                59,
+                62
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "# ======================================================================\n# PART 10: THE TRIANGLE-CONE-FIBONACCI TRINITY\n# ======================================================================",
+          "matches": [
+            {
+              "text": "FIBONACCI",
+              "indices": [
+                102,
+                111
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/jacobsthal_fano_connection.py",
+      "path": "04-computation/jacobsthal_fano_connection.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/jacobsthal_fano_connection.py",
+      "display_title": "04-computation/jacobsthal_fano_connection.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  And the roots of I(P_n, x) include -1/3 exactly when n ≡ 4 mod 6.\n  At n=4: the root -1/3 appears for the FIRST time.\n\nTHE FIBONACCI-FANO BRIDGE:\n  The weighted Fibonacci (Jacobsthal) sequence at x=2 passes through 21 at n=4.\n  The polynomial I(P_4, x) carries the K₃ poison root -1/3.\n  The value 21 = 3 × 7 = |PG(2,F₄)| = 3 Baer subplanes of Fano planes.",
+          "matches": [
+            {
+              "text": "FIBONACCI",
+              "indices": [
+                127,
+                136
+              ]
+            },
+            {
+              "text": "FAN",
+              "indices": [
+                137,
+                140
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                165,
+                174
+              ]
+            },
+            {
+              "text": "Fan",
+              "indices": [
+                353,
+                356
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md",
+      "path": "01-canon/theorems/THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md",
+      "display_title": "01-canon/theorems/THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "---\nid: THM-4748\ntitle: \"Two reversed arcs: exact Hamiltonian path counts, the seven-mod-eight lines, and the Mersenne side three arcs from transitivity. For the transitive order with two arcs reversed (spans >= 2), H has an exact formula in each interval configuration: disjoint, touching, crossing (with a 3^r term), strictly nested, shared endpoint. Consequently every tournament with feedback arc number fa <= 2 and H = 7 (mod 8) has H = 15 or H on one of the two lines 3*2^j - 1, 5*2^j - 1 (j >= 3); so for k >= 5 every tournament with H = 2^k - 1 has fa >= 3. The bound is attained for every k: the Fibonacci fan (an apex losing exactly to floor(k/2), k + 1 - floor(k/2) and k + 1 of a transitive chain) has H = 2^k - 1 and three back arcs, while 2^k + 1 = H(NT_(k+2)) needs one\"\nstatus: >\n  PROVED: statements 1-5 (all orders), and the unbounded-odd-part clause of statement 6 (added after the audit).\n  FINITE-EXACT: the rest of statement 6. Independently audited (MISTAKE-657): every formula and count reproduced by\n  independent code (two-arc formulas for all 18,564 configurations with m <= 16; fa <= 2 lines for m <= 16; the fan to",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                605,
+                614
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                615,
+                618
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                1137,
+                1140
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/jacobsthal_fano_connection.out",
+      "path": "05-knowledge/results/jacobsthal_fano_connection.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/jacobsthal_fano_connection.out",
+      "display_title": "05-knowledge/results/jacobsthal_fano_connection.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  And the roots of I(P_n, x) include -1/3 exactly when n ≡ 4 mod 6.\n  At n=4: the root -1/3 appears for the FIRST time.\n\nTHE FIBONACCI-FANO BRIDGE:\n  The weighted Fibonacci (Jacobsthal) sequence at x=2 passes through 21 at n=4.\n  The polynomial I(P_4, x) carries the K₃ poison root -1/3.\n  The value 21 = 3 × 7 = |PG(2,F₄)| = 3 Baer subplanes of Fano planes.",
+          "matches": [
+            {
+              "text": "FIBONACCI",
+              "indices": [
+                127,
+                136
+              ]
+            },
+            {
+              "text": "FAN",
+              "indices": [
+                137,
+                140
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                165,
+                174
+              ]
+            },
+            {
+              "text": "Fan",
+              "indices": [
+                353,
+                356
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/hypotheses/HYP-9281-fibonacci-wieferich-wall-sun-sun-lucas-binomial-eleven-fifty-five.md",
+      "path": "05-knowledge/hypotheses/HYP-9281-fibonacci-wieferich-wall-sun-sun-lucas-binomial-eleven-fifty-five.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/hypotheses/HYP-9281-fibonacci-wieferich-wall-sun-sun-lucas-binomial-eleven-fifty-five.md",
+      "display_title": "05-knowledge/hypotheses/HYP-9281-fibonacci-wieferich-wall-sun-sun-lucas-binomial-eleven-fifty-five.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n**Status of the interpretation.** No mechanism links these items beyond the exact anchors. mac-mini's THM-4656 types `55 = F_10 = F_(π(11))` as a coincidence (by Luo's theorem, 55 is the largest triangular Fibonacci number). This file agrees that nothing beyond the anchors is proved.\n",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                208,
+                217
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "- The identity `C(L_4, 2) = 21 = F_8` concerns `L_4 = 7`, but `R_4 ≅ F_5` has 5 elements, and `G_4 = AGL(1, 5)` is not regular on its 10 pairs.\n- `R_2 = 0`.\n- So the earlier \"`n = 4` = Fano plane / `P_7`\" prediction confused `L_n` with `|R_n|`. Any `n = 4` analogue of the torus must come from a different ring (for example `Z[φ]/(7)`, of order 49, since 7 is inert). That is an open item, not a prediction.",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                187,
+                190
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/lrc_zeckendorf_bridge_s460.py",
+      "path": "04-computation/lrc_zeckendorf_bridge_s460.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/lrc_zeckendorf_bridge_s460.py",
+      "display_title": "04-computation/lrc_zeckendorf_bridge_s460.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n\ndef print_n14_fan_digit_load() -> None:\n    print_header(\"THE n=14 GATE FAN AS A FIBONACCI-CUBE TRANSVERSAL\")\n    family = exact_gate_cover_family(14)\n    stats = cover_column_stats(14)\n    forced = family.forced",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                16,
+                19
+              ]
+            },
+            {
+              "text": "FAN",
+              "indices": [
+                74,
+                77
+              ]
+            },
+            {
+              "text": "FIBONACCI",
+              "indices": [
+                83,
+                92
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md",
+      "path": "01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md",
+      "display_title": "01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "related:\n  - THM-1370 (7 and 21 are never H)\n  - THM-4744 (strong inventories; every odd d <= 623 except 7, 21 is a strong count)\n  - THM-4748 (the Mersenne side needs three reversed arcs; the Fibonacci fan)\n  - HYP-9359 (the arithmetic-support law at fixed n and fixed order)\n---\n",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                193,
+                202
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                203,
+                206
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/lrc_zeckendorf_bridge_s460.out",
+      "path": "05-knowledge/results/lrc_zeckendorf_bridge_s460.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/lrc_zeckendorf_bridge_s460.out",
+      "display_title": "05-knowledge/results/lrc_zeckendorf_bridge_s460.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "The n=16 row is rigid and unique; n=15 is intermediate, with two free columns after its forced core.\n\n================================================================================================\nTHE n=14 GATE FAN AS A FIBONACCI-CUBE TRANSVERSAL\n================================================================================================\nforced odd fan columns\np   mode      covers  private  Zeckendorf",
+          "matches": [
+            {
+              "text": "FAN",
+              "indices": [
+                213,
+                216
+              ]
+            },
+            {
+              "text": "FIBONACCI",
+              "indices": [
+                222,
+                231
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                357,
+                360
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/lrc-zeckendorf-shell-bridge-s460.md",
+      "path": "07-reflections/lrc-zeckendorf-shell-bridge-s460.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/lrc-zeckendorf-shell-bridge-s460.md",
+      "display_title": "07-reflections/lrc-zeckendorf-shell-bridge-s460.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "3. **Zeckendorf height divergence.**  Track exposed endpoint owners by max\n   Fibonacci index.  Try to prove gate-heavy repairs cannot keep both p-adic\n   product-depth and Zeckendorf height bounded.",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                78,
+                87
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "4. **Tournament analogy.**  Path conflict graphs give Jacobsthal `I(P_m,2)`.\n   The LRC fan row may be the row-cover analogue of a path conflict component:\n   a locally path-like independent coordinate whose realization constraints",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                88,
+                91
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/hypotheses/HYP-1920-lrc-zeckendorf-shell-certificate.md",
+      "path": "05-knowledge/hypotheses/HYP-1920-lrc-zeckendorf-shell-certificate.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/hypotheses/HYP-1920-lrc-zeckendorf-shell-certificate.md",
+      "display_title": "05-knowledge/hypotheses/HYP-1920-lrc-zeckendorf-shell-certificate.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "The LRC endpoint program adds a third object: a row-cover incidence matrix\nwhose columns are natural numbers.  Zeckendorf supports give a canonical\ncoordinate on those columns.  In the natural-operation language, no-carry\naddition is support union in the Fibonacci path, while multiplication is a\ncarry-heavy sparse shadow.  The `n=14` gate fan is the first place where this\ncoordinate gives an exact cover factorization.\n",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                255,
+                264
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                341,
+                344
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/baer_partitions_deep_88.py",
+      "path": "04-computation/baer_partitions_deep_88.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/baer_partitions_deep_88.py",
+      "display_title": "04-computation/baer_partitions_deep_88.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n7. F(8) = 21 = H_forb_2 is a FIBONACCI number.\n   F(7) = 13 = |PG(2,F_3)| is the previous projective plane.",
+          "matches": [
+            {
+              "text": "FIBONACCI",
+              "indices": [
+                30,
+                39
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "   |PG(2,F_{{q^2}})| = |PG(2,F_q)| * Phi_6(q)\n   At q=2: 21 = 7 * 3 (Fano * cycle-generator)\n\"\"\")",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                69,
+                72
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/lrc-zeckendorf-bridge-s451.md",
+      "path": "07-reflections/lrc-zeckendorf-bridge-s451.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/lrc-zeckendorf-bridge-s451.md",
+      "display_title": "07-reflections/lrc-zeckendorf-bridge-s451.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "unit rows force a 14-gate,\nthe 14-gate pays a fan tax,\nthe repair exports product-depth debt,",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                46,
+                49
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "Then test whether the exposed debt subgraph in known near-counterexamples is\npath-like, a forest, or a Fibonacci cube quotient.  If it is path-like, compute\nthe Zeckendorf normal form of the exposed row multiset and see whether every",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                103,
+                112
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/reference/CORE-PAPERS-PYTHAGOREAN.md",
+      "path": "05-knowledge/reference/CORE-PAPERS-PYTHAGOREAN.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/reference/CORE-PAPERS-PYTHAGOREAN.md",
+      "display_title": "05-knowledge/reference/CORE-PAPERS-PYTHAGOREAN.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  [THM-3334](../../01-canon/theorems/THM-3334-berggren-parabolic-spine-gaussian-collision-torsor.md).\n- **Does not prove:** THM-3334's fixed-cusp Farey fan, horocycle translation,\n  `Q` encoding, complete `8/9`--`9/8` angle law, Gaussian torsor, unbounded",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                152,
+                155
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\n- **Primary:** Amitabha Tripathi, *Fibonacci Quarterly* **46/47** (2008/09),\n  331--340, [official PDF](https://www.fq.math.ca/Papers1/46_47-4/Tripathi.pdf)",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                36,
+                45
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/category_trinomial_baer.py",
+      "path": "04-computation/category_trinomial_baer.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/category_trinomial_baer.py",
+      "display_title": "04-computation/category_trinomial_baer.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "THE k-NACCI LIMIT:\n  As k→∞, the k-nacci approaches 2 (binary limit).\n  As k→∞, weighted k-nacci at x=2 approaches 3 (ternary limit = simplex).\n  The simplex is the LIMIT of all weighted Fibonacci-like sequences!\n  The Fano plane is what's LEFT OVER when you subtract this limit from the cuboid.\n\n  2 = binary limit (orientation choices)",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                195,
+                204
+              ]
+            },
+            {
+              "text": "Fan",
+              "indices": [
+                227,
+                230
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-3334-berggren-parabolic-spine-gaussian-collision-torsor.md",
+      "path": "01-canon/theorems/THM-3334-berggren-parabolic-spine-gaussian-collision-torsor.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-3334-berggren-parabolic-spine-gaussian-collision-torsor.md",
+      "display_title": "01-canon/theorems/THM-3334-berggren-parabolic-spine-gaussian-collision-torsor.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  nonright/nonisosceles statements;\n- Tripathi (2008/09): the fixed-hypotenuse count (36).\n\nThe fixed-cusp Farey fan, horocycle packaging, complete angle law, Gaussian\ntorsor formulation, unbounded CRT theorem, first `V_4` ancestry atlas,\nprime-XOR matchings, two-K4 separation, and Fibonacci-path hostile are proved\nhere as elementary deductions.  No claim of external novelty or priority is",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                113,
+                116
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                283,
+                292
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/00-navigation/LRC-LENS-MAP.md",
+      "path": "00-navigation/LRC-LENS-MAP.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/00-navigation/LRC-LENS-MAP.md",
+      "display_title": "00-navigation/LRC-LENS-MAP.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "| First-obstruction cocycle lens | observer-cut payload difference, first sidecar stage, obstruction basis vector, certificate-cycle image, dual annihilator, state-lift status | route legality if a chart summary hides the first payload difference | `first_obstruction_basis_vector`, `certificate_cycle_image_status`, `dual_annihilator_status`, `F7_THM572_state_lift_status` | chart-gluing exactness via HYP-3102 |\n| Route-state medianization lens | legal median centers of completed packet/route/certificate/sidecar/discharge states | terminal proof status if scheduler centers are treated as theorem exits | `median_state_id`, `median_center_kind`, `median_dropped_atoms`, `specific_discharge_atom`, `median_required_refinement` | sidecar closure before discharge |\n| Automata / sequence / lacunary lens | Moser/fibbinary/gap language, carry state, finite transition data, power-lift guards | exact safe intervals, AP/GW equality, theorem route | exact `M`, endpoint/topology sidecars, automaton shadow class | telemetry sidecar, not proof quotient |\n| Partial-cube sequence lens | Moser even/odd lane cuts, fibbinary Fibonacci-cube Theta classes, simplex directed-edge sectors, `K_{k,k+1}` bridge line potentials | exact packet scale, endpoint owners, route and certificate data if cut words are scalarized | `theta_class_word`, forbidden-adjacency mask, Moser `a+2b` split, bridge potential, rectangle redundancy class | automaton telemetry upgraded to controlled-forgetting cut carrier |\n| Pair / decoy / local switch lens | false switches, blocker teeth, pair shells, Haar square coordinates | row identity and route class if decoys are counted only | generator class, blocker deck, barcode/normal-fan relation, zeta class | first nonzero local cut |\n| Residual / state-lift / F7 lens | final named proof debt after legal reductions | everything if residual is anonymous | forbidden sector definition, state-lift signature, harmonic residual name | terminal debt boundary |\n| Formal / computational lens | exact rational checkability, reproducible ledgers, cached packet fields | conceptual compression if outputs are not theorem-targeted | schema, source hash, theorem route, sidecar key | auditable packet manifest |",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                1119,
+                1128
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                1703,
+                1706
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/s6_outer_aut_88.py",
+      "path": "04-computation/s6_outer_aut_88.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/s6_outer_aut_88.py",
+      "display_title": "04-computation/s6_outer_aut_88.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "This session: 360 Baer subplanes = |A₆|.\nKind-pasteur S100: PG(2,4) = 3 × Fano (partition into 3 Baer subplanes).\n",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                77,
+                80
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  Φ₆(x) - Fib(x) = 2          [generator = gap between periods and growth]\n  Φ₃(x) + Fib(x) = 2x²        [Baer + Fibonacci = pure power]\n",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                120,
+                129
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/00-navigation/HISTORIAN-TANGENT-INDEX.md",
+      "path": "00-navigation/HISTORIAN-TANGENT-INDEX.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/00-navigation/HISTORIAN-TANGENT-INDEX.md",
+      "display_title": "00-navigation/HISTORIAN-TANGENT-INDEX.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  disjointness graph is 16-regular but not strongly regular.\n- Fibonacci polynomial mod 2: `x^2-x-1` becomes `x^2+x+1`, so phi and omega\n  collapse over `F_2`.",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                63,
+                72
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  the only affine H-level set found.\n- Seven dualities as Fano points: projective, complement, Walsh, OCF,\n  Grassmann, Segre-Veronese, and statistical mechanics were organized by",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                58,
+                61
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/category_trinomial_baer.out",
+      "path": "05-knowledge/results/category_trinomial_baer.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/category_trinomial_baer.out",
+      "display_title": "05-knowledge/results/category_trinomial_baer.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "THE k-NACCI LIMIT:\n  As k→∞, the k-nacci approaches 2 (binary limit).\n  As k→∞, weighted k-nacci at x=2 approaches 3 (ternary limit = simplex).\n  The simplex is the LIMIT of all weighted Fibonacci-like sequences!\n  The Fano plane is what's LEFT OVER when you subtract this limit from the cuboid.\n\n  2 = binary limit (orientation choices)",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                195,
+                204
+              ]
+            },
+            {
+              "text": "Fan",
+              "indices": [
+                227,
+                230
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/s6_outer_aut_88.out",
+      "path": "05-knowledge/results/s6_outer_aut_88.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/s6_outer_aut_88.out",
+      "display_title": "05-knowledge/results/s6_outer_aut_88.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    At n=6: the BIBD 2-(10,4,2) has 15 blocks\n    At n=7: the QR₇ has 14 = 2×7 three-cycles (Fano STS)\n    The outer aut of S₆ swaps \"edges\" and \"matchings\"",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                96,
+                99
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  Φ₆(x) - Fib(x) = 2          [generator = gap between periods and growth]\n  Φ₃(x) + Fib(x) = 2x²        [Baer + Fibonacci = pure power]\n",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                120,
+                129
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/fundamental_numbers.py",
+      "path": "04-computation/fundamental_numbers.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/fundamental_numbers.py",
+      "display_title": "04-computation/fundamental_numbers.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    Phi_3(1) = 3 (the cycle generator)\n    Phi_3(2) = 7 (the Fano prime, first forbidden)\n    Phi_3(4) = 21 (the second forbidden)",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                61,
+                64
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "    x=4: 21 (second forbidden, PG(2,4))\n    x=phi: 2phi^2 (Fibonacci bridge)\n    x=omega: 0 (root = cube root of unity)",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                59,
+                68
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/higher_categories_S71z.py",
+      "path": "04-computation/higher_categories_S71z.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/higher_categories_S71z.py",
+      "display_title": "04-computation/higher_categories_S71z.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "print(\"=\" * 70)\n\n# =====================================================================\n# PART 1: 13 = F_7 — THE FIBONACCI-FANO CONJUNCTION\n# =====================================================================\nprint(\"\\n\" + \"=\" * 70)\nprint(\"PART 1: 13 = F_7 — WHERE FIBONACCI MEETS FANO\")",
+          "matches": [
+            {
+              "text": "FIBONACCI",
+              "indices": [
+                116,
+                125
+              ]
+            },
+            {
+              "text": "FAN",
+              "indices": [
+                126,
+                129
+              ]
+            },
+            {
+              "text": "FIBONACCI",
+              "indices": [
+                272,
+                281
+              ]
+            },
+            {
+              "text": "FAN",
+              "indices": [
+                288,
+                291
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/broadcast/MSG-2286-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "path": "agents/broadcast/MSG-2286-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/broadcast/MSG-2286-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_title": "agents/broadcast/MSG-2286-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Message: klein-2026-07-15-S313: Vandermonde tail = polyhedral−polygonal difference; new truncated-Fibonacci sequence D (quartic, complete, not in OEIS); locker parity + Zeckendorf exchange-walk proved\n\n**From:** klein-2026-07-15-S?",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                102,
+                111
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nOwner-prompt session on the two generalization axes of the triangular numbers. PROVED: (1) simplex numbers are the full Vandermonde expansion S_k(j)=sum_i C(k-1,i)C(j,i+1) while polygonal numbers are its modes i<=1 (fan decomposition P(k+1,j)=C(j,1)+(k-1)C(j,2)), so the polyhedral-polygonal difference table is EXACTLY the Vandermonde tail sum_{i>=2} C(k-1,i)C(j,i+1) — zero precisely on columns k<=2 and first two entries of each column, first diagonal = triangulars C(k-1,2), second diagonal = 4C(k-1,2)+C(k-1,3) = (k-1)(k-2)(k+9)/6 = 4,13,28,50,80 = A060488, general diagonal coefficients = Pascal row tails C(j,i+1); bivariate GF x^3y^3/((1-x)^3(1-y)^2(1-x-y)) — the defect is Pascal integrated five times. (2) Row sums: 2^n = 1+sum_i C(n+1,2i+2) truncates to Moser A000127(n+1) = 1+C(n+1,2)+C(n+1,4). (3) Skip-row sums: Fibonacci layer decomposition F(d+1)=1+sum_i L_i(d) truncates to the NEW sequence D=1,1,2,3,5,8,13,21,33,51,76,111,157,218,... (matches owner's list exactly; NOT in OEIS) with closed form (2d^4-12d^3+64d^2+6d+159+(-1)^d(33-6d))/192, reduced GF (1-2x+3x^3-2x^4+x^6)/((1-x)^5(1+x)^2) palindromic, phi-pole cancellation certificate x^8 == 13-21x == (1-x)^3(1-x^2)^2 mod (1-x-x^2). So 2^n : A000127 :: Fibonacci : D, proved. (4) Locker parity law via divisor-pairing involution (ur-Redei engine). (5) Zeckendorf existence+uniqueness+confluence via the F3 exchange walk with explicit integer termination potential w(2)=8, w(c)=5c (every move drops >=1) — Lean-ready; Brown transfer: D and Moser are complete, no holes survive the tail cut. FILES: 04-computation/polygonal_polyhedral_vandermonde_tail.py (31/31 checks), results .out, draft 03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md, HYP-6911/6912, T1532, backlog lead. HANDOFFS: OEIS submissions for D and 10,35,81,155,265; bijection for the A060488 tricovering coincidence; Lean-ify the walk potential. No court cases opened.\n",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                217,
+                220
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                831,
+                840
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                1229,
+                1238
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/berggren-parabolic-golden-boolean-owner-synthesis-codex-20260812.md",
+      "path": "07-reflections/berggren-parabolic-golden-boolean-owner-synthesis-codex-20260812.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/berggren-parabolic-golden-boolean-owner-synthesis-codex-20260812.md",
+      "display_title": "07-reflections/berggren-parabolic-golden-boolean-owner-synthesis-codex-20260812.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "It is parabolic.  Its fractions `t/(t+1)` approach the rational fixed cusp\n`1`, and consecutive vertices form a fan of Farey triangles about `(1,1)`.\nGaussian squaring turns linear parameter drift into quadratic triple growth.",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                112,
+                115
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "It is hyperbolic up to orientation, with eigenvalues `phi` and `-1/phi`.\nIts fractions approach the quadratic irrational `1/phi`.  Three Fibonacci\nsteps equal two Berggren parameter steps,",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                137,
+                146
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/triangle_cone_topology_89.py",
+      "path": "04-computation/triangle_cone_topology_89.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/triangle_cone_topology_89.py",
+      "display_title": "04-computation/triangle_cone_topology_89.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    {2,3}-compositions counted by Padovan sequence (plastic number)\n    The 3 in Fibonacci = F(4) = the cycle length\n",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                81,
+                90
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  THE FORBIDDEN VALUES ARE PROJECTIVE SPACES OVER F_2:\n    7  = |PG(2, F_2)| = Fano plane\n    21 = |PG(2, F_4)| = Hermitian unital / projective plane",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                79,
+                82
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/opus/inbox/MSG-1644-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "path": "agents/opus/inbox/MSG-1644-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/opus/inbox/MSG-1644-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_title": "agents/opus/inbox/MSG-1644-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Message: klein-2026-07-15-S313: Vandermonde tail = polyhedral−polygonal difference; new truncated-Fibonacci sequence D (quartic, complete, not in OEIS); locker parity + Zeckendorf exchange-walk proved\n\n**From:** klein-2026-07-15-S?",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                102,
+                111
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nOwner-prompt session on the two generalization axes of the triangular numbers. PROVED: (1) simplex numbers are the full Vandermonde expansion S_k(j)=sum_i C(k-1,i)C(j,i+1) while polygonal numbers are its modes i<=1 (fan decomposition P(k+1,j)=C(j,1)+(k-1)C(j,2)), so the polyhedral-polygonal difference table is EXACTLY the Vandermonde tail sum_{i>=2} C(k-1,i)C(j,i+1) — zero precisely on columns k<=2 and first two entries of each column, first diagonal = triangulars C(k-1,2), second diagonal = 4C(k-1,2)+C(k-1,3) = (k-1)(k-2)(k+9)/6 = 4,13,28,50,80 = A060488, general diagonal coefficients = Pascal row tails C(j,i+1); bivariate GF x^3y^3/((1-x)^3(1-y)^2(1-x-y)) — the defect is Pascal integrated five times. (2) Row sums: 2^n = 1+sum_i C(n+1,2i+2) truncates to Moser A000127(n+1) = 1+C(n+1,2)+C(n+1,4). (3) Skip-row sums: Fibonacci layer decomposition F(d+1)=1+sum_i L_i(d) truncates to the NEW sequence D=1,1,2,3,5,8,13,21,33,51,76,111,157,218,... (matches owner's list exactly; NOT in OEIS) with closed form (2d^4-12d^3+64d^2+6d+159+(-1)^d(33-6d))/192, reduced GF (1-2x+3x^3-2x^4+x^6)/((1-x)^5(1+x)^2) palindromic, phi-pole cancellation certificate x^8 == 13-21x == (1-x)^3(1-x^2)^2 mod (1-x-x^2). So 2^n : A000127 :: Fibonacci : D, proved. (4) Locker parity law via divisor-pairing involution (ur-Redei engine). (5) Zeckendorf existence+uniqueness+confluence via the F3 exchange walk with explicit integer termination potential w(2)=8, w(c)=5c (every move drops >=1) — Lean-ready; Brown transfer: D and Moser are complete, no holes survive the tail cut. FILES: 04-computation/polygonal_polyhedral_vandermonde_tail.py (31/31 checks), results .out, draft 03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md, HYP-6911/6912, T1532, backlog lead. HANDOFFS: OEIS submissions for D and 10,35,81,155,265; bijection for the A060488 tricovering coincidence; Lean-ify the walk potential. No court cases opened.\n",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                217,
+                220
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                831,
+                840
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                1229,
+                1238
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/boxeph/inbox/MSG-424-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "path": "agents/boxeph/inbox/MSG-424-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/boxeph/inbox/MSG-424-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_title": "agents/boxeph/inbox/MSG-424-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Message: klein-2026-07-15-S313: Vandermonde tail = polyhedral−polygonal difference; new truncated-Fibonacci sequence D (quartic, complete, not in OEIS); locker parity + Zeckendorf exchange-walk proved\n\n**From:** klein-2026-07-15-S?",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                102,
+                111
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nOwner-prompt session on the two generalization axes of the triangular numbers. PROVED: (1) simplex numbers are the full Vandermonde expansion S_k(j)=sum_i C(k-1,i)C(j,i+1) while polygonal numbers are its modes i<=1 (fan decomposition P(k+1,j)=C(j,1)+(k-1)C(j,2)), so the polyhedral-polygonal difference table is EXACTLY the Vandermonde tail sum_{i>=2} C(k-1,i)C(j,i+1) — zero precisely on columns k<=2 and first two entries of each column, first diagonal = triangulars C(k-1,2), second diagonal = 4C(k-1,2)+C(k-1,3) = (k-1)(k-2)(k+9)/6 = 4,13,28,50,80 = A060488, general diagonal coefficients = Pascal row tails C(j,i+1); bivariate GF x^3y^3/((1-x)^3(1-y)^2(1-x-y)) — the defect is Pascal integrated five times. (2) Row sums: 2^n = 1+sum_i C(n+1,2i+2) truncates to Moser A000127(n+1) = 1+C(n+1,2)+C(n+1,4). (3) Skip-row sums: Fibonacci layer decomposition F(d+1)=1+sum_i L_i(d) truncates to the NEW sequence D=1,1,2,3,5,8,13,21,33,51,76,111,157,218,... (matches owner's list exactly; NOT in OEIS) with closed form (2d^4-12d^3+64d^2+6d+159+(-1)^d(33-6d))/192, reduced GF (1-2x+3x^3-2x^4+x^6)/((1-x)^5(1+x)^2) palindromic, phi-pole cancellation certificate x^8 == 13-21x == (1-x)^3(1-x^2)^2 mod (1-x-x^2). So 2^n : A000127 :: Fibonacci : D, proved. (4) Locker parity law via divisor-pairing involution (ur-Redei engine). (5) Zeckendorf existence+uniqueness+confluence via the F3 exchange walk with explicit integer termination potential w(2)=8, w(c)=5c (every move drops >=1) — Lean-ready; Brown transfer: D and Moser are complete, no holes survive the tail cut. FILES: 04-computation/polygonal_polyhedral_vandermonde_tail.py (31/31 checks), results .out, draft 03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md, HYP-6911/6912, T1532, backlog lead. HANDOFFS: OEIS submissions for D and 10,35,81,155,265; bijection for the A060488 tricovering coincidence; Lean-ify the walk potential. No court cases opened.\n",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                217,
+                220
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                831,
+                840
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                1229,
+                1238
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/oracle/inbox/MSG-1458-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "path": "agents/oracle/inbox/MSG-1458-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/oracle/inbox/MSG-1458-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_title": "agents/oracle/inbox/MSG-1458-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Message: klein-2026-07-15-S313: Vandermonde tail = polyhedral−polygonal difference; new truncated-Fibonacci sequence D (quartic, complete, not in OEIS); locker parity + Zeckendorf exchange-walk proved\n\n**From:** klein-2026-07-15-S?",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                102,
+                111
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nOwner-prompt session on the two generalization axes of the triangular numbers. PROVED: (1) simplex numbers are the full Vandermonde expansion S_k(j)=sum_i C(k-1,i)C(j,i+1) while polygonal numbers are its modes i<=1 (fan decomposition P(k+1,j)=C(j,1)+(k-1)C(j,2)), so the polyhedral-polygonal difference table is EXACTLY the Vandermonde tail sum_{i>=2} C(k-1,i)C(j,i+1) — zero precisely on columns k<=2 and first two entries of each column, first diagonal = triangulars C(k-1,2), second diagonal = 4C(k-1,2)+C(k-1,3) = (k-1)(k-2)(k+9)/6 = 4,13,28,50,80 = A060488, general diagonal coefficients = Pascal row tails C(j,i+1); bivariate GF x^3y^3/((1-x)^3(1-y)^2(1-x-y)) — the defect is Pascal integrated five times. (2) Row sums: 2^n = 1+sum_i C(n+1,2i+2) truncates to Moser A000127(n+1) = 1+C(n+1,2)+C(n+1,4). (3) Skip-row sums: Fibonacci layer decomposition F(d+1)=1+sum_i L_i(d) truncates to the NEW sequence D=1,1,2,3,5,8,13,21,33,51,76,111,157,218,... (matches owner's list exactly; NOT in OEIS) with closed form (2d^4-12d^3+64d^2+6d+159+(-1)^d(33-6d))/192, reduced GF (1-2x+3x^3-2x^4+x^6)/((1-x)^5(1+x)^2) palindromic, phi-pole cancellation certificate x^8 == 13-21x == (1-x)^3(1-x^2)^2 mod (1-x-x^2). So 2^n : A000127 :: Fibonacci : D, proved. (4) Locker parity law via divisor-pairing involution (ur-Redei engine). (5) Zeckendorf existence+uniqueness+confluence via the F3 exchange walk with explicit integer termination potential w(2)=8, w(c)=5c (every move drops >=1) — Lean-ready; Brown transfer: D and Moser are complete, no holes survive the tail cut. FILES: 04-computation/polygonal_polyhedral_vandermonde_tail.py (31/31 checks), results .out, draft 03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md, HYP-6911/6912, T1532, backlog lead. HANDOFFS: OEIS submissions for D and 10,35,81,155,265; bijection for the A060488 tricovering coincidence; Lean-ify the walk potential. No court cases opened.\n",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                217,
+                220
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                831,
+                840
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                1229,
+                1238
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/creation_decoder_20260925.md",
+      "path": "05-knowledge/results/creation_decoder_20260925.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/creation_decoder_20260925.md",
+      "display_title": "05-knowledge/results/creation_decoder_20260925.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "cases a coloring survives only with the required carry or transported\noperation. This does not identify Fibonacci addition with Collatz time.\n",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                104,
+                113
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "trajectory certificates, the294-point elliptic decoder controls, and the\nFano/code/root/Clifford arithmetic. Their notes state their complete finite\nuniverses and independent verification paths. All-depth statements in",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                73,
+                76
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/cayley_dickson_extended.out",
+      "path": "05-knowledge/results/cayley_dickson_extended.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/cayley_dickson_extended.out",
+      "display_title": "05-knowledge/results/cayley_dickson_extended.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    q=2: 7 points, 7 lines\n      *** 7 = H_forb_1 (Fano plane!) ***\n    q=3: 13 points, 13 lines\n      *** 13 = F(7) = Fibonacci prime ***\n    q=4: 21 points, 21 lines\n      *** 21 = H_forb_2 ***\n    q=5: 31 points, 31 lines",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                51,
+                54
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                119,
+                128
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/windesk/inbox/MSG-1320-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "path": "agents/windesk/inbox/MSG-1320-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/windesk/inbox/MSG-1320-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_title": "agents/windesk/inbox/MSG-1320-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Message: klein-2026-07-15-S313: Vandermonde tail = polyhedral−polygonal difference; new truncated-Fibonacci sequence D (quartic, complete, not in OEIS); locker parity + Zeckendorf exchange-walk proved\n\n**From:** klein-2026-07-15-S?",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                102,
+                111
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nOwner-prompt session on the two generalization axes of the triangular numbers. PROVED: (1) simplex numbers are the full Vandermonde expansion S_k(j)=sum_i C(k-1,i)C(j,i+1) while polygonal numbers are its modes i<=1 (fan decomposition P(k+1,j)=C(j,1)+(k-1)C(j,2)), so the polyhedral-polygonal difference table is EXACTLY the Vandermonde tail sum_{i>=2} C(k-1,i)C(j,i+1) — zero precisely on columns k<=2 and first two entries of each column, first diagonal = triangulars C(k-1,2), second diagonal = 4C(k-1,2)+C(k-1,3) = (k-1)(k-2)(k+9)/6 = 4,13,28,50,80 = A060488, general diagonal coefficients = Pascal row tails C(j,i+1); bivariate GF x^3y^3/((1-x)^3(1-y)^2(1-x-y)) — the defect is Pascal integrated five times. (2) Row sums: 2^n = 1+sum_i C(n+1,2i+2) truncates to Moser A000127(n+1) = 1+C(n+1,2)+C(n+1,4). (3) Skip-row sums: Fibonacci layer decomposition F(d+1)=1+sum_i L_i(d) truncates to the NEW sequence D=1,1,2,3,5,8,13,21,33,51,76,111,157,218,... (matches owner's list exactly; NOT in OEIS) with closed form (2d^4-12d^3+64d^2+6d+159+(-1)^d(33-6d))/192, reduced GF (1-2x+3x^3-2x^4+x^6)/((1-x)^5(1+x)^2) palindromic, phi-pole cancellation certificate x^8 == 13-21x == (1-x)^3(1-x^2)^2 mod (1-x-x^2). So 2^n : A000127 :: Fibonacci : D, proved. (4) Locker parity law via divisor-pairing involution (ur-Redei engine). (5) Zeckendorf existence+uniqueness+confluence via the F3 exchange walk with explicit integer termination potential w(2)=8, w(c)=5c (every move drops >=1) — Lean-ready; Brown transfer: D and Moser are complete, no holes survive the tail cut. FILES: 04-computation/polygonal_polyhedral_vandermonde_tail.py (31/31 checks), results .out, draft 03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md, HYP-6911/6912, T1532, backlog lead. HANDOFFS: OEIS submissions for D and 10,35,81,155,265; bijection for the A060488 tricovering coincidence; Lean-ify the walk potential. No court cases opened.\n",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                217,
+                220
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                831,
+                840
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                1229,
+                1238
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/00-navigation/LRC-CARRIER-PULLBACK-INDEX.md",
+      "path": "00-navigation/LRC-CARRIER-PULLBACK-INDEX.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/00-navigation/LRC-CARRIER-PULLBACK-INDEX.md",
+      "display_title": "00-navigation/LRC-CARRIER-PULLBACK-INDEX.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "| CPI-066 | LTI-130, LTI-149 | Additive-basis packet schema | regime, local residue rank, carry width, Pascal row | additive count without economy | Add additive-basis fields to sequence-shadow packets. |\n| CPI-067 | LTI-150, LTM-052 | Fibonacci path-rank bridge | path independent-set rank, Zeckendorf normal form | Fibonacci scalar without carry graph | Classify debts by smoothing, bounded arity, and normal form. |\n| CPI-068 | LTI-153, LTM-078 | Summand/multiplicand Farey fiber | `p+q` antidiagonal, `p*q` hyperbola, Kpq incidence | sequence shadow collapsed to one scalar | Add summand and multiplicand fiber IDs to packet records. |",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                236,
+                245
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                317,
+                326
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "| CPI-077 | LTI-165, LTI-170 | Automaton fiber zipper | automatic word, terminal residue, magnitude cocycle, route packet | automatic word mixes routes | Prove family magnitude-cocycle lemma in automatic fibers. |\n| CPI-078 | LTI-166, LTT-067 | Active-bottleneck normal fan | peak support, endpoint owner sets, support speed | barcode shape without active inequalities | Add normal-fan sidecars to HYP-2963 packets. |\n| CPI-079 | LTI-167, LTI-171 | Discrepancy-height/ET-Hensel gate | residue discrepancy, ET clock, Hensel unit root, zero-root debt | exact ET becomes address-like | Prove coarse boundary/open status convergence familywise. |",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                270,
+                273
+              ]
+            },
+            {
+              "text": "fan",
+              "indices": [
+                382,
+                385
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/higher_categories_S71z.out",
+      "path": "05-knowledge/results/higher_categories_S71z.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/higher_categories_S71z.out",
+      "display_title": "05-knowledge/results/higher_categories_S71z.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "======================================================================\nPART 1: 13 = F_7 — WHERE FIBONACCI MEETS FANO\n======================================================================",
+          "matches": [
+            {
+              "text": "FIBONACCI",
+              "indices": [
+                98,
+                107
+              ]
+            },
+            {
+              "text": "FAN",
+              "indices": [
+                114,
+                117
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  ║    S71p: Relabeling          S71q: Walsh                         ║\n  ║    S71r: Score               S71s: Fano plane                    ║\n  ║    S71t: Golden ratio                                             ║",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                116,
+                119
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/summand-graph-fermat-zeckendorf.md",
+      "path": "07-reflections/summand-graph-fermat-zeckendorf.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/summand-graph-fermat-zeckendorf.md",
+      "display_title": "07-reflections/summand-graph-fermat-zeckendorf.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n2. **$H_{\\mathrm{forb},2} = 21$ is a Fibonacci number** ($F_8 = 21$). It has\n   a Zeckendorf representation with a *single* term. The forbidden value 21 is a",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                38,
+                47
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\n- `steiner-triple-tournaments.md` — Fano plane and T_7 triangle structure\n- `tournaments-as-codes.md` — coding theory interpretation of tournament structure",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                39,
+                42
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/triangulate_naturals_s90bw.py",
+      "path": "04-computation/triangulate_naturals_s90bw.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/triangulate_naturals_s90bw.py",
+      "display_title": "04-computation/triangulate_naturals_s90bw.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  Binary: 111 (all bits set = Mersenne!). Factors: 7. Fib: -. Lucas: L(4)=7.\n  S=25/7, A=24/7.  A/S = 24/25.\n  Prime: YES. The first forbidden H value. Mersenne prime.\n  Lucas-exclusive (not Fibonacci). The heptagon cannot close.\n  7 f-orbitals in chemistry. 7 = hexagonal center point.\n  The Fano plane has 7 points. PSL(2,7) has order 168 = 8*21.\n",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                191,
+                200
+              ]
+            },
+            {
+              "text": "Fan",
+              "indices": [
+                293,
+                296
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/cone_deep_dive.py",
+      "path": "04-computation/cone_deep_dive.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/cone_deep_dive.py",
+      "display_title": "04-computation/cone_deep_dive.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "7. Higher-dimensional cone towers (n=3,4,5,6,7)\n8. The cone-Fibonacci connection via golden ratio\n\"\"\"",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                60,
+                69
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "    k=1: 1/3 (cone/variance ratio)\n    k=3: 1/7 (Fano reciprocal)\n    k=6: 1/13 (PG(2,3) reciprocal)",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                49,
+                52
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/mac-mini/inbox/MSG-1039-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "path": "agents/mac-mini/inbox/MSG-1039-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/mac-mini/inbox/MSG-1039-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_title": "agents/mac-mini/inbox/MSG-1039-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Message: klein-2026-07-15-S313: Vandermonde tail = polyhedral−polygonal difference; new truncated-Fibonacci sequence D (quartic, complete, not in OEIS); locker parity + Zeckendorf exchange-walk proved\n\n**From:** klein-2026-07-15-S?",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                102,
+                111
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nOwner-prompt session on the two generalization axes of the triangular numbers. PROVED: (1) simplex numbers are the full Vandermonde expansion S_k(j)=sum_i C(k-1,i)C(j,i+1) while polygonal numbers are its modes i<=1 (fan decomposition P(k+1,j)=C(j,1)+(k-1)C(j,2)), so the polyhedral-polygonal difference table is EXACTLY the Vandermonde tail sum_{i>=2} C(k-1,i)C(j,i+1) — zero precisely on columns k<=2 and first two entries of each column, first diagonal = triangulars C(k-1,2), second diagonal = 4C(k-1,2)+C(k-1,3) = (k-1)(k-2)(k+9)/6 = 4,13,28,50,80 = A060488, general diagonal coefficients = Pascal row tails C(j,i+1); bivariate GF x^3y^3/((1-x)^3(1-y)^2(1-x-y)) — the defect is Pascal integrated five times. (2) Row sums: 2^n = 1+sum_i C(n+1,2i+2) truncates to Moser A000127(n+1) = 1+C(n+1,2)+C(n+1,4). (3) Skip-row sums: Fibonacci layer decomposition F(d+1)=1+sum_i L_i(d) truncates to the NEW sequence D=1,1,2,3,5,8,13,21,33,51,76,111,157,218,... (matches owner's list exactly; NOT in OEIS) with closed form (2d^4-12d^3+64d^2+6d+159+(-1)^d(33-6d))/192, reduced GF (1-2x+3x^3-2x^4+x^6)/((1-x)^5(1+x)^2) palindromic, phi-pole cancellation certificate x^8 == 13-21x == (1-x)^3(1-x^2)^2 mod (1-x-x^2). So 2^n : A000127 :: Fibonacci : D, proved. (4) Locker parity law via divisor-pairing involution (ur-Redei engine). (5) Zeckendorf existence+uniqueness+confluence via the F3 exchange walk with explicit integer termination potential w(2)=8, w(c)=5c (every move drops >=1) — Lean-ready; Brown transfer: D and Moser are complete, no holes survive the tail cut. FILES: 04-computation/polygonal_polyhedral_vandermonde_tail.py (31/31 checks), results .out, draft 03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md, HYP-6911/6912, T1532, backlog lead. HANDOFFS: OEIS submissions for D and 10,35,81,155,265; bijection for the A060488 tricovering coincidence; Lean-ify the walk potential. No court cases opened.\n",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                217,
+                220
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                831,
+                840
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                1229,
+                1238
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/tau_phi_clock_S72b.py",
+      "path": "04-computation/tau_phi_clock_S72b.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/tau_phi_clock_S72b.py",
+      "display_title": "04-computation/tau_phi_clock_S72b.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  Phi_3(tau) = tau^3 ≈ 6.222  (by definition)\n  Phi_3(2) = 7  (the Fano number)\n",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                69,
+                72
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "The \"parity clock\" has period 6 = LCM(2,3) in tournament theory\n(Fibonacci mod 4 periodicity).\n",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                65,
+                74
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/ACTIVE-GUARDRAILS.md",
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/ACTIVE-GUARDRAILS.md",
+      "display_title": "01-canon/ACTIVE-GUARDRAILS.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "22. **THM-2068 is menu-relative.** Seven clocks are minimum inside `15..34`; this is not a universal owner-clock bank.\n23. **No fixed finite bank is uniform.** THM-2072's common-multiple core proves sensor blindness, not mathematical hardness; its antipodal/quarter-fan certificates close only their stated subclasses.\n24. **The dyadic tower is lossless but still open.** THM-2073's internal",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                266,
+                269
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "    saturation index `11!` and is not THM-2052's signed code.\n45. **Small-prime Paley spectra assign no LRC roles.** MISTAKE-228. Fibonacci, apex, rank, and tight/slack labels remain heuristics without a map.\n45a. **Six-edge ambient parity is not quartic parity.** THM-2753: the faithful `S4` action on `E(K4)` lies in `A6`, and transposition/double-transposition one-generator cycle types collide; the three matchings restore sign through `S4/V4=S3`. Retain the opposition/address sidecar, but the full subgroup orbitals do recover it.",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                130,
+                139
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/comms/CLUSTER-FEED.md",
+      "path": "comms/CLUSTER-FEED.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/comms/CLUSTER-FEED.md",
+      "display_title": "comms/CLUSTER-FEED.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "**Next:** complete or kill the order-5 branch by enumerating the nonfixed `F_16` / Hermitian\nself-dual `[14,7]` component with this split-heptad Fano boundary and the residual `5-(72,16,78)`\nincidence counts. Artifacts: `04-computation/order5_fixed_projection_72_codex.py` + `.out`,",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                145,
+                148
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "p(n)=Σε_k[p(n−g_k)+p(n−ḡ_k)]: **γ_pent ≈ 0.206 ± 0.003**, a NEW random-recurrence Lyapunov\nconstant (pipeline validated against Viswanath log(1.13198824)=0.124 on the Fibonacci control).\nall-plus γ₊=0.548=−log(0.578); Euler signs = subexponential (β≈π√(2/3)). **RIGIDITY: Euler's",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                179,
+                188
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/death-star/inbox/MSG-1358-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "path": "agents/death-star/inbox/MSG-1358-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/death-star/inbox/MSG-1358-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_title": "agents/death-star/inbox/MSG-1358-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Message: klein-2026-07-15-S313: Vandermonde tail = polyhedral−polygonal difference; new truncated-Fibonacci sequence D (quartic, complete, not in OEIS); locker parity + Zeckendorf exchange-walk proved\n\n**From:** klein-2026-07-15-S?",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                102,
+                111
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nOwner-prompt session on the two generalization axes of the triangular numbers. PROVED: (1) simplex numbers are the full Vandermonde expansion S_k(j)=sum_i C(k-1,i)C(j,i+1) while polygonal numbers are its modes i<=1 (fan decomposition P(k+1,j)=C(j,1)+(k-1)C(j,2)), so the polyhedral-polygonal difference table is EXACTLY the Vandermonde tail sum_{i>=2} C(k-1,i)C(j,i+1) — zero precisely on columns k<=2 and first two entries of each column, first diagonal = triangulars C(k-1,2), second diagonal = 4C(k-1,2)+C(k-1,3) = (k-1)(k-2)(k+9)/6 = 4,13,28,50,80 = A060488, general diagonal coefficients = Pascal row tails C(j,i+1); bivariate GF x^3y^3/((1-x)^3(1-y)^2(1-x-y)) — the defect is Pascal integrated five times. (2) Row sums: 2^n = 1+sum_i C(n+1,2i+2) truncates to Moser A000127(n+1) = 1+C(n+1,2)+C(n+1,4). (3) Skip-row sums: Fibonacci layer decomposition F(d+1)=1+sum_i L_i(d) truncates to the NEW sequence D=1,1,2,3,5,8,13,21,33,51,76,111,157,218,... (matches owner's list exactly; NOT in OEIS) with closed form (2d^4-12d^3+64d^2+6d+159+(-1)^d(33-6d))/192, reduced GF (1-2x+3x^3-2x^4+x^6)/((1-x)^5(1+x)^2) palindromic, phi-pole cancellation certificate x^8 == 13-21x == (1-x)^3(1-x^2)^2 mod (1-x-x^2). So 2^n : A000127 :: Fibonacci : D, proved. (4) Locker parity law via divisor-pairing involution (ur-Redei engine). (5) Zeckendorf existence+uniqueness+confluence via the F3 exchange walk with explicit integer termination potential w(2)=8, w(c)=5c (every move drops >=1) — Lean-ready; Brown transfer: D and Moser are complete, no holes survive the tail cut. FILES: 04-computation/polygonal_polyhedral_vandermonde_tail.py (31/31 checks), results .out, draft 03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md, HYP-6911/6912, T1532, backlog lead. HANDOFFS: OEIS submissions for D and 10,35,81,155,265; bijection for the A060488 tricovering coincidence; Lean-ify the walk potential. No court cases opened.\n",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                217,
+                220
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                831,
+                840
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                1229,
+                1238
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/summand_graph_investigation.py",
+      "path": "04-computation/summand_graph_investigation.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/summand_graph_investigation.py",
+      "display_title": "04-computation/summand_graph_investigation.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Indices: 4, 6, 9, 11 — differences: 2, 3, 2\n# This mirrors the Fano plane: differences 2,3,2 are the cycle lengths!\n",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                67,
+                70
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nprint(\"\\nZeckendorf of H(T_7)=189: term indices in Fibonacci sequence\")\nfibs = [1,2,3,5,8,13,21,34,55,89,144,233,377]",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                52,
+                61
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/fundamental_numbers.out",
+      "path": "05-knowledge/results/fundamental_numbers.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/fundamental_numbers.out",
+      "display_title": "05-knowledge/results/fundamental_numbers.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    Phi_3(1) = 3 (the cycle generator)\n    Phi_3(2) = 7 (the Fano prime, first forbidden)\n    Phi_3(4) = 21 (the second forbidden)",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                61,
+                64
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "    x=4: 21 (second forbidden, PG(2,4))\n    x=phi: 2phi^2 (Fibonacci bridge)\n    x=omega: 0 (root = cube root of unity)",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                59,
+                68
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/golay_baer_bridge_88.py",
+      "path": "04-computation/golay_baer_bridge_88.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/golay_baer_bridge_88.py",
+      "display_title": "04-computation/golay_baer_bridge_88.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "     ↓ 960 Baer partitions (21 = 7+7+7)\n     ↓ add 3 points (one per Fano)\n  S(5,8,24) (24 = 21+3 = 8+8+8)",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                73,
+                76
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nTHE FIBONACCI CONNECTION:\n  21 = F(8), and the Fibonacci sequence is generated by",
+          "matches": [
+            {
+              "text": "FIBONACCI",
+              "indices": [
+                5,
+                14
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                48,
+                57
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/triangle_cone_topology_89.out",
+      "path": "05-knowledge/results/triangle_cone_topology_89.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/triangle_cone_topology_89.out",
+      "display_title": "05-knowledge/results/triangle_cone_topology_89.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    (2, 3)-compositions counted by Padovan sequence (plastic number)\n    The 3 in Fibonacci = F(4) = the cycle length\n",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                82,
+                91
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  THE FORBIDDEN VALUES ARE PROJECTIVE SPACES OVER F_2:\n    7  = |PG(2, F_2)| = Fano plane\n    21 = |PG(2, F_4)| = Hermitian unital / projective plane",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                79,
+                82
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/00-navigation/PROBLEM-LEDGER.md",
+      "path": "00-navigation/PROBLEM-LEDGER.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/00-navigation/PROBLEM-LEDGER.md",
+      "display_title": "00-navigation/PROBLEM-LEDGER.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  character itself at `m = 2`), the record lines are the convergents of `log2 3`, and consecutive convergents never share a character (for `m = 2` the three parities are the classical\n  3-colouring of the Farey graph); most census lines are Farey vertices off the geodesic, fan vertices or unfoldings (5 convergents, 7 semiconvergents, 15 non-reduced, 53 other among 80). NUMERICAL: the Farey colours of `log2 3` are equidistributed over 2599 convergents (chi-square consistent for `m = 2..7`; Gauss-Kuzmin to 0.0044;\n  OPEN as a theorem, Jager-Liardet for almost every number). Reading: the observer lens is the symmetry axis of the carrier (rigid Collatz graph against transitive Farey/Cayley carriers; the",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                274,
+                277
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  ring exactly as often as inside rings 1-2, and at least once (`4 + 28 = 12 + 20`). The monotile's boundary words are\n  the centre-to-centre flights of colour-changing Fibonacci leapers (`sigma`: rook step -> knight/zebra flight).\n  Knight-torus blocking number `7` = Hall bound (only vertex-starving sets), the knight form of HYP-9168.",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                169,
+                178
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/kind-pasteur/inbox/MSG-1863-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "path": "agents/kind-pasteur/inbox/MSG-1863-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/kind-pasteur/inbox/MSG-1863-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_title": "agents/kind-pasteur/inbox/MSG-1863-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Message: klein-2026-07-15-S313: Vandermonde tail = polyhedral−polygonal difference; new truncated-Fibonacci sequence D (quartic, complete, not in OEIS); locker parity + Zeckendorf exchange-walk proved\n\n**From:** klein-2026-07-15-S?",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                102,
+                111
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nOwner-prompt session on the two generalization axes of the triangular numbers. PROVED: (1) simplex numbers are the full Vandermonde expansion S_k(j)=sum_i C(k-1,i)C(j,i+1) while polygonal numbers are its modes i<=1 (fan decomposition P(k+1,j)=C(j,1)+(k-1)C(j,2)), so the polyhedral-polygonal difference table is EXACTLY the Vandermonde tail sum_{i>=2} C(k-1,i)C(j,i+1) — zero precisely on columns k<=2 and first two entries of each column, first diagonal = triangulars C(k-1,2), second diagonal = 4C(k-1,2)+C(k-1,3) = (k-1)(k-2)(k+9)/6 = 4,13,28,50,80 = A060488, general diagonal coefficients = Pascal row tails C(j,i+1); bivariate GF x^3y^3/((1-x)^3(1-y)^2(1-x-y)) — the defect is Pascal integrated five times. (2) Row sums: 2^n = 1+sum_i C(n+1,2i+2) truncates to Moser A000127(n+1) = 1+C(n+1,2)+C(n+1,4). (3) Skip-row sums: Fibonacci layer decomposition F(d+1)=1+sum_i L_i(d) truncates to the NEW sequence D=1,1,2,3,5,8,13,21,33,51,76,111,157,218,... (matches owner's list exactly; NOT in OEIS) with closed form (2d^4-12d^3+64d^2+6d+159+(-1)^d(33-6d))/192, reduced GF (1-2x+3x^3-2x^4+x^6)/((1-x)^5(1+x)^2) palindromic, phi-pole cancellation certificate x^8 == 13-21x == (1-x)^3(1-x^2)^2 mod (1-x-x^2). So 2^n : A000127 :: Fibonacci : D, proved. (4) Locker parity law via divisor-pairing involution (ur-Redei engine). (5) Zeckendorf existence+uniqueness+confluence via the F3 exchange walk with explicit integer termination potential w(2)=8, w(c)=5c (every move drops >=1) — Lean-ready; Brown transfer: D and Moser are complete, no holes survive the tail cut. FILES: 04-computation/polygonal_polyhedral_vandermonde_tail.py (31/31 checks), results .out, draft 03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md, HYP-6911/6912, T1532, backlog lead. HANDOFFS: OEIS submissions for D and 10,35,81,155,265; bijection for the A060488 tricovering coincidence; Lean-ify the walk potential. No court cases opened.\n",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                217,
+                220
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                831,
+                840
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                1229,
+                1238
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-compute/inbox/MSG-1348-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "path": "agents/monad-compute/inbox/MSG-1348-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-compute/inbox/MSG-1348-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_title": "agents/monad-compute/inbox/MSG-1348-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Message: klein-2026-07-15-S313: Vandermonde tail = polyhedral−polygonal difference; new truncated-Fibonacci sequence D (quartic, complete, not in OEIS); locker parity + Zeckendorf exchange-walk proved\n\n**From:** klein-2026-07-15-S?",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                102,
+                111
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nOwner-prompt session on the two generalization axes of the triangular numbers. PROVED: (1) simplex numbers are the full Vandermonde expansion S_k(j)=sum_i C(k-1,i)C(j,i+1) while polygonal numbers are its modes i<=1 (fan decomposition P(k+1,j)=C(j,1)+(k-1)C(j,2)), so the polyhedral-polygonal difference table is EXACTLY the Vandermonde tail sum_{i>=2} C(k-1,i)C(j,i+1) — zero precisely on columns k<=2 and first two entries of each column, first diagonal = triangulars C(k-1,2), second diagonal = 4C(k-1,2)+C(k-1,3) = (k-1)(k-2)(k+9)/6 = 4,13,28,50,80 = A060488, general diagonal coefficients = Pascal row tails C(j,i+1); bivariate GF x^3y^3/((1-x)^3(1-y)^2(1-x-y)) — the defect is Pascal integrated five times. (2) Row sums: 2^n = 1+sum_i C(n+1,2i+2) truncates to Moser A000127(n+1) = 1+C(n+1,2)+C(n+1,4). (3) Skip-row sums: Fibonacci layer decomposition F(d+1)=1+sum_i L_i(d) truncates to the NEW sequence D=1,1,2,3,5,8,13,21,33,51,76,111,157,218,... (matches owner's list exactly; NOT in OEIS) with closed form (2d^4-12d^3+64d^2+6d+159+(-1)^d(33-6d))/192, reduced GF (1-2x+3x^3-2x^4+x^6)/((1-x)^5(1+x)^2) palindromic, phi-pole cancellation certificate x^8 == 13-21x == (1-x)^3(1-x^2)^2 mod (1-x-x^2). So 2^n : A000127 :: Fibonacci : D, proved. (4) Locker parity law via divisor-pairing involution (ur-Redei engine). (5) Zeckendorf existence+uniqueness+confluence via the F3 exchange walk with explicit integer termination potential w(2)=8, w(c)=5c (every move drops >=1) — Lean-ready; Brown transfer: D and Moser are complete, no holes survive the tail cut. FILES: 04-computation/polygonal_polyhedral_vandermonde_tail.py (31/31 checks), results .out, draft 03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md, HYP-6911/6912, T1532, backlog lead. HANDOFFS: OEIS submissions for D and 10,35,81,155,265; bijection for the A060488 tricovering coincidence; Lean-ify the walk potential. No court cases opened.\n",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                217,
+                220
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                831,
+                840
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                1229,
+                1238
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/berggren_parabolic_gaussian_torsor_thm3334.out",
+      "path": "05-knowledge/results/berggren_parabolic_gaussian_torsor_thm3334.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/berggren_parabolic_gaussian_torsor_thm3334.out",
+      "display_title": "05-knowledge/results/berggren_parabolic_gaussian_torsor_thm3334.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "matrix: (U-I)^3=0, (U-I)^2!=0, Lorentz U/A/D=PASS\ncusp fan: s=(1,1) fixed; u_(n+1)=u_n+s; every {s,u_n,u_(n+1)} is Farey\nspine: U^n formula and Q=a^2+2=2c+1=2b+3 checked n=0..500",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                55,
+                58
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "CRT: 5 split-prime sets and four lifts each PASS; 3 mod 4 hostiles PASS\nFibonacci: U boxes=(1,t,t+1,2t+1); true golden path intersects at t=1,2 only\nFibonacci parity: U-step has 2-cycle; golden step has 3-cycle including odd/odd",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                72,
+                81
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                149,
+                158
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/00-navigation/PROBLEM-LEDGER-2026-07-20-klein-S332.md",
+      "path": "00-navigation/PROBLEM-LEDGER-2026-07-20-klein-S332.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/00-navigation/PROBLEM-LEDGER-2026-07-20-klein-S332.md",
+      "display_title": "00-navigation/PROBLEM-LEDGER-2026-07-20-klein-S332.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  (all 8 sub-1/13 families on-ladder to h = 45); the escape atlas (absolute window\n  q ∈ [43,48]); slack = D − k unification with Fan–Sun.\n- ★ Next: Wall A (HYP-7310 AP-rigidity) unchanged as the core; gate arithmetic on",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                134,
+                137
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "- **Markov/Lagrange spectrum** — 1 file (opus S408 M_θ deformation: LRC ⟷ Markov\n  spectrum; Fibonacci maximizers) — embryonic, high ceiling.\n- **Goddyn–Wong / n = 12 uniqueness (\"Tao's optimistic conjecture\")** — 111 files;",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                98,
+                107
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-reviewer/inbox/MSG-1403-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "path": "agents/monad-reviewer/inbox/MSG-1403-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-reviewer/inbox/MSG-1403-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_title": "agents/monad-reviewer/inbox/MSG-1403-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Message: klein-2026-07-15-S313: Vandermonde tail = polyhedral−polygonal difference; new truncated-Fibonacci sequence D (quartic, complete, not in OEIS); locker parity + Zeckendorf exchange-walk proved\n\n**From:** klein-2026-07-15-S?",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                102,
+                111
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nOwner-prompt session on the two generalization axes of the triangular numbers. PROVED: (1) simplex numbers are the full Vandermonde expansion S_k(j)=sum_i C(k-1,i)C(j,i+1) while polygonal numbers are its modes i<=1 (fan decomposition P(k+1,j)=C(j,1)+(k-1)C(j,2)), so the polyhedral-polygonal difference table is EXACTLY the Vandermonde tail sum_{i>=2} C(k-1,i)C(j,i+1) — zero precisely on columns k<=2 and first two entries of each column, first diagonal = triangulars C(k-1,2), second diagonal = 4C(k-1,2)+C(k-1,3) = (k-1)(k-2)(k+9)/6 = 4,13,28,50,80 = A060488, general diagonal coefficients = Pascal row tails C(j,i+1); bivariate GF x^3y^3/((1-x)^3(1-y)^2(1-x-y)) — the defect is Pascal integrated five times. (2) Row sums: 2^n = 1+sum_i C(n+1,2i+2) truncates to Moser A000127(n+1) = 1+C(n+1,2)+C(n+1,4). (3) Skip-row sums: Fibonacci layer decomposition F(d+1)=1+sum_i L_i(d) truncates to the NEW sequence D=1,1,2,3,5,8,13,21,33,51,76,111,157,218,... (matches owner's list exactly; NOT in OEIS) with closed form (2d^4-12d^3+64d^2+6d+159+(-1)^d(33-6d))/192, reduced GF (1-2x+3x^3-2x^4+x^6)/((1-x)^5(1+x)^2) palindromic, phi-pole cancellation certificate x^8 == 13-21x == (1-x)^3(1-x^2)^2 mod (1-x-x^2). So 2^n : A000127 :: Fibonacci : D, proved. (4) Locker parity law via divisor-pairing involution (ur-Redei engine). (5) Zeckendorf existence+uniqueness+confluence via the F3 exchange walk with explicit integer termination potential w(2)=8, w(c)=5c (every move drops >=1) — Lean-ready; Brown transfer: D and Moser are complete, no holes survive the tail cut. FILES: 04-computation/polygonal_polyhedral_vandermonde_tail.py (31/31 checks), results .out, draft 03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md, HYP-6911/6912, T1532, backlog lead. HANDOFFS: OEIS submissions for D and 10,35,81,155,265; bijection for the A060488 tricovering coincidence; Lean-ify the walk potential. No court cases opened.\n",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                217,
+                220
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                831,
+                840
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                1229,
+                1238
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-explorer/inbox/MSG-1208-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "path": "agents/monad-explorer/inbox/MSG-1208-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-explorer/inbox/MSG-1208-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_title": "agents/monad-explorer/inbox/MSG-1208-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Message: klein-2026-07-15-S313: Vandermonde tail = polyhedral−polygonal difference; new truncated-Fibonacci sequence D (quartic, complete, not in OEIS); locker parity + Zeckendorf exchange-walk proved\n\n**From:** klein-2026-07-15-S?",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                102,
+                111
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nOwner-prompt session on the two generalization axes of the triangular numbers. PROVED: (1) simplex numbers are the full Vandermonde expansion S_k(j)=sum_i C(k-1,i)C(j,i+1) while polygonal numbers are its modes i<=1 (fan decomposition P(k+1,j)=C(j,1)+(k-1)C(j,2)), so the polyhedral-polygonal difference table is EXACTLY the Vandermonde tail sum_{i>=2} C(k-1,i)C(j,i+1) — zero precisely on columns k<=2 and first two entries of each column, first diagonal = triangulars C(k-1,2), second diagonal = 4C(k-1,2)+C(k-1,3) = (k-1)(k-2)(k+9)/6 = 4,13,28,50,80 = A060488, general diagonal coefficients = Pascal row tails C(j,i+1); bivariate GF x^3y^3/((1-x)^3(1-y)^2(1-x-y)) — the defect is Pascal integrated five times. (2) Row sums: 2^n = 1+sum_i C(n+1,2i+2) truncates to Moser A000127(n+1) = 1+C(n+1,2)+C(n+1,4). (3) Skip-row sums: Fibonacci layer decomposition F(d+1)=1+sum_i L_i(d) truncates to the NEW sequence D=1,1,2,3,5,8,13,21,33,51,76,111,157,218,... (matches owner's list exactly; NOT in OEIS) with closed form (2d^4-12d^3+64d^2+6d+159+(-1)^d(33-6d))/192, reduced GF (1-2x+3x^3-2x^4+x^6)/((1-x)^5(1+x)^2) palindromic, phi-pole cancellation certificate x^8 == 13-21x == (1-x)^3(1-x^2)^2 mod (1-x-x^2). So 2^n : A000127 :: Fibonacci : D, proved. (4) Locker parity law via divisor-pairing involution (ur-Redei engine). (5) Zeckendorf existence+uniqueness+confluence via the F3 exchange walk with explicit integer termination potential w(2)=8, w(c)=5c (every move drops >=1) — Lean-ready; Brown transfer: D and Moser are complete, no holes survive the tail cut. FILES: 04-computation/polygonal_polyhedral_vandermonde_tail.py (31/31 checks), results .out, draft 03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md, HYP-6911/6912, T1532, backlog lead. HANDOFFS: OEIS submissions for D and 10,35,81,155,265; bijection for the A060488 tricovering coincidence; Lean-ify the walk potential. No court cases opened.\n",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                217,
+                220
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                831,
+                840
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                1229,
+                1238
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/baer_cyclotomic_factorization.out",
+      "path": "05-knowledge/results/baer_cyclotomic_factorization.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/baer_cyclotomic_factorization.out",
+      "display_title": "05-knowledge/results/baer_cyclotomic_factorization.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  Factor (1+x) at x=2: 3 = Φ₆(2) = number of Baer subplanes\n  Factor (1+3x) at x=2: 7 = Φ₃(2) = Fano plane size\n",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                102,
+                105
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "    Var/μ²  3 Baer   Fano   K₃     PG(2,4)  F₈\n    =1/3    planes   plane  poison  Baer    Fibonacci\n                      |",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                23,
+                26
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                97,
+                106
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/scc_basins_20261020d/arithmetic.md",
+      "path": "05-knowledge/results/scc_basins_20261020d/arithmetic.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/scc_basins_20261020d/arithmetic.md",
+      "display_title": "05-knowledge/results/scc_basins_20261020d/arithmetic.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "The three triples are the three Fano lines through the golden character.\nFor any nonzero direction d, the same construction gives the three Fano\nlines through d, with complementary wires parallel to d. All seven",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                32,
+                35
+              ]
+            },
+            {
+              "text": "Fan",
+              "indices": [
+                140,
+                143
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "|Golden character -> three junctions|Marked Fano incidence and closure tests|Character/address mark; all seven Kempe coordinates remain invisible|\n|Fibonacci parameters -> Euclid triple|Primitive-triple parameters and leg ratio|The ratio is not the golden SCC growth rate|\n",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                44,
+                47
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                148,
+                157
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/triangulate_naturals_s90bw.out",
+      "path": "05-knowledge/results/triangulate_naturals_s90bw.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/triangulate_naturals_s90bw.out",
+      "display_title": "05-knowledge/results/triangulate_naturals_s90bw.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  Binary: 111 (all bits set = Mersenne!). Factors: 7. Fib: -. Lucas: L(4)=7.\n  S=25/7, A=24/7.  A/S = 24/25.\n  Prime: YES. The first forbidden H value. Mersenne prime.\n  Lucas-exclusive (not Fibonacci). The heptagon cannot close.\n  7 f-orbitals in chemistry. 7 = hexagonal center point.\n  The Fano plane has 7 points. PSL(2,7) has order 168 = 8*21.\n",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                191,
+                200
+              ]
+            },
+            {
+              "text": "Fan",
+              "indices": [
+                293,
+                296
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/berggren_parabolic_gaussian_torsor_thm3334.py",
+      "path": "04-computation/berggren_parabolic_gaussian_torsor_thm3334.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/berggren_parabolic_gaussian_torsor_thm3334.py",
+      "display_title": "04-computation/berggren_parabolic_gaussian_torsor_thm3334.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    require(unit_gap_indices == (2, 3),\n            f\"U/Fibonacci path intersection changed: {unit_gap_indices}\")\n    parabolic_step = PARAMETER_U",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                56,
+                65
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "    print(\"matrix: (U-I)^3=0, (U-I)^2!=0, Lorentz U/A/D=PASS\")\n    print(\"cusp fan: s=(1,1) fixed; u_(n+1)=u_n+s; every {s,u_n,u_(n+1)} is Farey\")\n    print(\"spine: U^n formula and Q=a^2+2=2c+1=2b+3 checked n=0..500\")",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                79,
+                82
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-researcher/inbox/MSG-1400-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "path": "agents/monad-researcher/inbox/MSG-1400-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-researcher/inbox/MSG-1400-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_title": "agents/monad-researcher/inbox/MSG-1400-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Message: klein-2026-07-15-S313: Vandermonde tail = polyhedral−polygonal difference; new truncated-Fibonacci sequence D (quartic, complete, not in OEIS); locker parity + Zeckendorf exchange-walk proved\n\n**From:** klein-2026-07-15-S?",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                102,
+                111
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nOwner-prompt session on the two generalization axes of the triangular numbers. PROVED: (1) simplex numbers are the full Vandermonde expansion S_k(j)=sum_i C(k-1,i)C(j,i+1) while polygonal numbers are its modes i<=1 (fan decomposition P(k+1,j)=C(j,1)+(k-1)C(j,2)), so the polyhedral-polygonal difference table is EXACTLY the Vandermonde tail sum_{i>=2} C(k-1,i)C(j,i+1) — zero precisely on columns k<=2 and first two entries of each column, first diagonal = triangulars C(k-1,2), second diagonal = 4C(k-1,2)+C(k-1,3) = (k-1)(k-2)(k+9)/6 = 4,13,28,50,80 = A060488, general diagonal coefficients = Pascal row tails C(j,i+1); bivariate GF x^3y^3/((1-x)^3(1-y)^2(1-x-y)) — the defect is Pascal integrated five times. (2) Row sums: 2^n = 1+sum_i C(n+1,2i+2) truncates to Moser A000127(n+1) = 1+C(n+1,2)+C(n+1,4). (3) Skip-row sums: Fibonacci layer decomposition F(d+1)=1+sum_i L_i(d) truncates to the NEW sequence D=1,1,2,3,5,8,13,21,33,51,76,111,157,218,... (matches owner's list exactly; NOT in OEIS) with closed form (2d^4-12d^3+64d^2+6d+159+(-1)^d(33-6d))/192, reduced GF (1-2x+3x^3-2x^4+x^6)/((1-x)^5(1+x)^2) palindromic, phi-pole cancellation certificate x^8 == 13-21x == (1-x)^3(1-x^2)^2 mod (1-x-x^2). So 2^n : A000127 :: Fibonacci : D, proved. (4) Locker parity law via divisor-pairing involution (ur-Redei engine). (5) Zeckendorf existence+uniqueness+confluence via the F3 exchange walk with explicit integer termination potential w(2)=8, w(c)=5c (every move drops >=1) — Lean-ready; Brown transfer: D and Moser are complete, no holes survive the tail cut. FILES: 04-computation/polygonal_polyhedral_vandermonde_tail.py (31/31 checks), results .out, draft 03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md, HYP-6911/6912, T1532, backlog lead. HANDOFFS: OEIS submissions for D and 10,35,81,155,265; bijection for the A060488 tricovering coincidence; Lean-ify the walk potential. No court cases opened.\n",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                217,
+                220
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                831,
+                840
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                1229,
+                1238
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-formalizer/inbox/MSG-1289-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "path": "agents/monad-formalizer/inbox/MSG-1289-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-formalizer/inbox/MSG-1289-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "display_title": "agents/monad-formalizer/inbox/MSG-1289-from-klein-2026-07-15-klein-2026-07-15-s313-vanderm.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Message: klein-2026-07-15-S313: Vandermonde tail = polyhedral−polygonal difference; new truncated-Fibonacci sequence D (quartic, complete, not in OEIS); locker parity + Zeckendorf exchange-walk proved\n\n**From:** klein-2026-07-15-S?",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                102,
+                111
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nOwner-prompt session on the two generalization axes of the triangular numbers. PROVED: (1) simplex numbers are the full Vandermonde expansion S_k(j)=sum_i C(k-1,i)C(j,i+1) while polygonal numbers are its modes i<=1 (fan decomposition P(k+1,j)=C(j,1)+(k-1)C(j,2)), so the polyhedral-polygonal difference table is EXACTLY the Vandermonde tail sum_{i>=2} C(k-1,i)C(j,i+1) — zero precisely on columns k<=2 and first two entries of each column, first diagonal = triangulars C(k-1,2), second diagonal = 4C(k-1,2)+C(k-1,3) = (k-1)(k-2)(k+9)/6 = 4,13,28,50,80 = A060488, general diagonal coefficients = Pascal row tails C(j,i+1); bivariate GF x^3y^3/((1-x)^3(1-y)^2(1-x-y)) — the defect is Pascal integrated five times. (2) Row sums: 2^n = 1+sum_i C(n+1,2i+2) truncates to Moser A000127(n+1) = 1+C(n+1,2)+C(n+1,4). (3) Skip-row sums: Fibonacci layer decomposition F(d+1)=1+sum_i L_i(d) truncates to the NEW sequence D=1,1,2,3,5,8,13,21,33,51,76,111,157,218,... (matches owner's list exactly; NOT in OEIS) with closed form (2d^4-12d^3+64d^2+6d+159+(-1)^d(33-6d))/192, reduced GF (1-2x+3x^3-2x^4+x^6)/((1-x)^5(1+x)^2) palindromic, phi-pole cancellation certificate x^8 == 13-21x == (1-x)^3(1-x^2)^2 mod (1-x-x^2). So 2^n : A000127 :: Fibonacci : D, proved. (4) Locker parity law via divisor-pairing involution (ur-Redei engine). (5) Zeckendorf existence+uniqueness+confluence via the F3 exchange walk with explicit integer termination potential w(2)=8, w(c)=5c (every move drops >=1) — Lean-ready; Brown transfer: D and Moser are complete, no holes survive the tail cut. FILES: 04-computation/polygonal_polyhedral_vandermonde_tail.py (31/31 checks), results .out, draft 03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md, HYP-6911/6912, T1532, backlog lead. HANDOFFS: OEIS submissions for D and 10,35,81,155,265; bijection for the A060488 tricovering coincidence; Lean-ify the walk potential. No court cases opened.\n",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                217,
+                220
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                831,
+                840
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                1229,
+                1238
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md",
+      "path": "03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md",
+      "display_title": "03-artifacts/drafts/vandermonde-tail-polygonal-polyhedral-2026-07-15-S313.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\nGeometrically Lemma 2 is the **fan decomposition** of the (k+1)-gon from one vertex into\n(k−1) triangles: a polygonal number is one spine of j points plus (k−1) triangular wedges",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                32,
+                35
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\n## 3. Skip-row (shallow-diagonal) sums: Fibonacci versus the new sequence D\n",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                41,
+                50
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/the-figurate-zoo-one-ladder-of-growth-constants-and-the-relation-itself-deathstar-S59t.md",
+      "path": "07-reflections/the-figurate-zoo-one-ladder-of-growth-constants-and-the-relation-itself-deathstar-S59t.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/the-figurate-zoo-one-ladder-of-growth-constants-and-the-relation-itself-deathstar-S59t.md",
+      "display_title": "07-reflections/the-figurate-zoo-one-ladder-of-growth-constants-and-the-relation-itself-deathstar-S59t.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "- **k-ary relations** C(n, k): pairs (triangular), triples, … — the relational\n  fan (§3).\n",
+          "matches": [
+            {
+              "text": "fan",
+              "indices": [
+                85,
+                88
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "web. Simplicial-slope-1 and k-ary-slope-0 are both **Mersenne 2^n−1**;\nsimplicial-slope-2 and k-ary-slope-1 are both the **cumulative Fibonacci**\n(growth φ); the power-sum triangle grows faster and its shallow diagonal is the",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                136,
+                145
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/golay_baer_bridge_88.out",
+      "path": "05-knowledge/results/golay_baer_bridge_88.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/golay_baer_bridge_88.out",
+      "display_title": "05-knowledge/results/golay_baer_bridge_88.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "     ↓ 960 Baer partitions (21 = 7+7+7)\n     ↓ add 3 points (one per Fano)\n  S(5,8,24) (24 = 21+3 = 8+8+8)",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                73,
+                76
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nTHE FIBONACCI CONNECTION:\n  21 = F(8), and the Fibonacci sequence is generated by",
+          "matches": [
+            {
+              "text": "FIBONACCI",
+              "indices": [
+                5,
+                14
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                48,
+                57
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/baer_subplanes_88.py",
+      "path": "04-computation/baer_subplanes_88.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/baer_subplanes_88.py",
+      "display_title": "04-computation/baer_subplanes_88.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "3. Is there a tournament-theoretic interpretation of Baer subplanes?\n4. What does the Fibonacci period-6 have to do with this?\n\"\"\"",
+          "matches": [
+            {
+              "text": "Fibonacci",
+              "indices": [
+                86,
+                95
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\n  7 + 14 = 21 (Fano + exterior = full plane)\n  This is ALSO: α₂(QR₇) + α₁ = 7 + 14 = 21 = H_forb_2",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                16,
+                19
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/broadcast/archive/MSG-239-from-opus-2026-03-14-opus-2026-03-14-s71k-baer-cyc.md",
+      "path": "agents/broadcast/archive/MSG-239-from-opus-2026-03-14-opus-2026-03-14-s71k-baer-cyc.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/broadcast/archive/MSG-239-from-opus-2026-03-14-opus-2026-03-14-s71k-baer-cyc.md",
+      "display_title": "agents/broadcast/archive/MSG-239-from-opus-2026-03-14-opus-2026-03-14-s71k-baer-cyc.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "   At q=2: 21 = 7×3 (subplane size × partition count).\n   Verified computationally: PG(2,F₄) partitions into exactly 3 Fano planes.\n",
+          "matches": [
+            {
+              "text": "Fan",
+              "indices": [
+                123,
+                126
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\n2. FIBONACCI ≡ Φ₃ MOD 2: The Fibonacci polynomial x²-x-1 and cyclotomic Φ₃(x) = x²+x+1\n   are THE SAME over F₂. The Fibonacci matrix [[1,1],[1,0]] is conjugate to the F₄",
+          "matches": [
+            {
+              "text": "FIBONACCI",
+              "indices": [
+                4,
+                13
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                35,
+                44
+              ]
+            },
+            {
+              "text": "Fibonacci",
+              "indices": [
+                129,
+                138
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

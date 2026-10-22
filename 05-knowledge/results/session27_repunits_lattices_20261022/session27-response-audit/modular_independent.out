@@ -1,0 +1,40 @@
+{
+  "verdict": "PASS",
+  "exhaustive_orders": [
+    2,
+    3
+  ],
+  "contrast_checks_by_core_order": {
+    "2": 4,
+    "3": 192,
+    "4": 20
+  },
+  "method": "full vertex permutations for every randomized edge assignment; per-word cancellation also checked",
+  "queries_per_contrast": "2^(2k-3)",
+  "expected_contrast": "2Q_uv",
+  "moduli_checked": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "odd_H_response_checks": 2184
+}

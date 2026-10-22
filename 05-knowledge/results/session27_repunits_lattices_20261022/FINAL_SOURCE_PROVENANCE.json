@@ -1,0 +1,602 @@
+[
+  {
+    "source": "/workspace/shared/session27-response/odd_cycle_faithfulness-optimized.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/odd_cycle_faithfulness-optimized.out",
+    "sha256": "35da6fdd86903b512dfda5b9403fd16ea99d35544c1f9745f3948e91ac57f538"
+  },
+  {
+    "source": "/workspace/shared/session27-response/structure-optimized.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/structure-optimized.out",
+    "sha256": "d9b78d8dcc006f2b4b3dfeb1d2f311063fae2c00f3c9e6e4c8e53a5d9252b7b7"
+  },
+  {
+    "source": "/workspace/shared/session27-response/modular_faithfulness.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/modular_faithfulness.py",
+    "sha256": "c0a58eae6bf0266d28e45cb5c04e3abdd0e69f0ba9f7611d7480c812dd4a055c"
+  },
+  {
+    "source": "/workspace/shared/session27-response/equivalence.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/equivalence.py",
+    "sha256": "dc32916d6b0fbdb4f574c5119b3aca1faa62a8bf2bfda30fb953df9ec7b299ee"
+  },
+  {
+    "source": "/workspace/shared/session27-response/audit.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/audit.py",
+    "sha256": "f72c7dc942f3b8a9bf03aa4d7a97c050755355830855987434f53c04789cdd9b"
+  },
+  {
+    "source": "/workspace/shared/session27-response/ODD_CYCLE_FAITHFULNESS.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/ODD_CYCLE_FAITHFULNESS.md",
+    "sha256": "89fce379cd4c47b2b87866bc9af7d82a5b82746b924299f78adf533cb0e46950"
+  },
+  {
+    "source": "/workspace/shared/session27-response/audit-optimized.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/audit-optimized.out",
+    "sha256": "6773b03787623030a99a9525ef95bdb2e860bb3ef55802bb23fa94657cc3604b"
+  },
+  {
+    "source": "/workspace/shared/session27-response/MODULAR-FAITHFULNESS-SHA256SUMS",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/MODULAR-FAITHFULNESS-SHA256SUMS",
+    "sha256": "9fef08272e27932ca8496e384b8971eff0b70501a39a56d319bd032adafaf9bc"
+  },
+  {
+    "source": "/workspace/shared/session27-response/faithfulness-proof.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/faithfulness-proof.md",
+    "sha256": "e64ae1527002562379b8de71448eb355aa27217be71d3c32dba77ad79a5ebfe4"
+  },
+  {
+    "source": "/workspace/shared/session27-response/census.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/census.out",
+    "sha256": "af0be0653e89263fa44e85039ec664e31558ccd56f94a703af2d240f99851b41"
+  },
+  {
+    "source": "/workspace/shared/session27-response/two_port.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/two_port.out",
+    "sha256": "50f85fe61b96e5e556d37336080a7814aeffe0ac764d591c5504e27c5a00bd41"
+  },
+  {
+    "source": "/workspace/shared/session27-response/proof.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/proof.md",
+    "sha256": "48aaefa2d059a56fb201a41d5f78bcd043eb2fbcb58f1ab9918c3e4d987917d7"
+  },
+  {
+    "source": "/workspace/shared/session27-response/faithfulness-optimized.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/faithfulness-optimized.out",
+    "sha256": "0a96359b621abfef68091c5d6765ceb6838665103d0fdc5d38afd93641404c28"
+  },
+  {
+    "source": "/workspace/shared/session27-response/two_port-optimized.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/two_port-optimized.out",
+    "sha256": "50f85fe61b96e5e556d37336080a7814aeffe0ac764d591c5504e27c5a00bd41"
+  },
+  {
+    "source": "/workspace/shared/session27-response/ODD-CYCLE-FAITHFULNESS-SHA256SUMS",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/ODD-CYCLE-FAITHFULNESS-SHA256SUMS",
+    "sha256": "39696d13c5fcb1724a21b09957301bf005d8067b8452267027133d6ceb2964aa"
+  },
+  {
+    "source": "/workspace/shared/session27-response/SHA256SUMS",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/SHA256SUMS",
+    "sha256": "ccf09a74721bc6270097047cb3212e5d7ee2c2df80bcd99c0d0a5f068d966133"
+  },
+  {
+    "source": "/workspace/shared/session27-response/MODULAR_FAITHFULNESS.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/MODULAR_FAITHFULNESS.md",
+    "sha256": "2ace16955a840be4634770cc57f61ebdeba7432012c16159546128575540eab5"
+  },
+  {
+    "source": "/workspace/shared/session27-response/audit.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/audit.out",
+    "sha256": "6773b03787623030a99a9525ef95bdb2e860bb3ef55802bb23fa94657cc3604b"
+  },
+  {
+    "source": "/workspace/shared/session27-response/structure.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/structure.out",
+    "sha256": "d9b78d8dcc006f2b4b3dfeb1d2f311063fae2c00f3c9e6e4c8e53a5d9252b7b7"
+  },
+  {
+    "source": "/workspace/shared/session27-response/faithfulness.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/faithfulness.out",
+    "sha256": "0a96359b621abfef68091c5d6765ceb6838665103d0fdc5d38afd93641404c28"
+  },
+  {
+    "source": "/workspace/shared/session27-response/FAITHFULNESS-SHA256SUMS",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/FAITHFULNESS-SHA256SUMS",
+    "sha256": "b069e496e954024e2bb0d70cee6fad529d1f2173e7636010216febf90903d1a9"
+  },
+  {
+    "source": "/workspace/shared/session27-response/common.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/common.py",
+    "sha256": "24ac5d2694e703b15effc27ffa1f279d4d903d72942eb07480505f6b4c7f5d76"
+  },
+  {
+    "source": "/workspace/shared/session27-response/structure.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/structure.py",
+    "sha256": "71a927035ba48f57e6dd7ee76ecbf231d7fc8315314bf8472b697bc7aec4a497"
+  },
+  {
+    "source": "/workspace/shared/session27-response/modular_faithfulness.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/modular_faithfulness.out",
+    "sha256": "78f177f621716fc26da6e7537c045941b8837c7c2c1d89ed81eb1018b218a7f1"
+  },
+  {
+    "source": "/workspace/shared/session27-response/odd_cycle_faithfulness.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/odd_cycle_faithfulness.out",
+    "sha256": "35da6fdd86903b512dfda5b9403fd16ea99d35544c1f9745f3948e91ac57f538"
+  },
+  {
+    "source": "/workspace/shared/session27-response/odd_cycle_faithfulness.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/odd_cycle_faithfulness.py",
+    "sha256": "099a801c0ef6952eab480667021f686f39b266b156863c2808e1c9b93ec51214"
+  },
+  {
+    "source": "/workspace/shared/session27-response/census.cpp",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/census.cpp",
+    "sha256": "cab04e7286e97f5517be446f383dd66cde6d62c48154cc05f0ab46b486b6b862"
+  },
+  {
+    "source": "/workspace/shared/session27-response/modular_faithfulness-optimized.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/modular_faithfulness-optimized.out",
+    "sha256": "78f177f621716fc26da6e7537c045941b8837c7c2c1d89ed81eb1018b218a7f1"
+  },
+  {
+    "source": "/workspace/shared/session27-response/two_port.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/two_port.py",
+    "sha256": "cd450124c28493fce8292655d4c348d923f3da243f8cb50b0d80e98a14048147"
+  },
+  {
+    "source": "/workspace/shared/session27-response/faithfulness.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/faithfulness.py",
+    "sha256": "cd077722d03cbb0c0e8d80d99c66ebdd1ad683d90ca70066b2ff8297ec5e3b69"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/root_addendum_independent.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/root_addendum_independent.out",
+    "sha256": "dbd23975ae0b93beb828440cfa86c7f05da193bd15e8ccc97c4ada80ac5dad39"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/faithfulness-rerun.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/faithfulness-rerun.out",
+    "sha256": "0a96359b621abfef68091c5d6765ceb6838665103d0fdc5d38afd93641404c28"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/independent.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/independent.json",
+    "sha256": "aa9c1d595d975638aacd9c9c4fdfb180c1dea19e7983c47a707deecf42016e9c"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/ROOT_ADDENDUM_SOURCE_SHA256SUMS",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/ROOT_ADDENDUM_SOURCE_SHA256SUMS",
+    "sha256": "e23af37be8fd6025adae2c34aa41a76556e0dfdc0083ba305348fb14d1e993e5"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/ROOT_ADDENDUM_REVIEW.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/ROOT_ADDENDUM_REVIEW.md",
+    "sha256": "9f13703f6932c1e365480bcd334a0049a11c1e8cf1b8e37756a9b9354b4f2e00"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/reconstruction_independent.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/reconstruction_independent.py",
+    "sha256": "a203ef0657d1d0ab56753ce0f4b6f6791ad46f7179935780dcffccc187adb6d7"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/two-port-rerun.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/two-port-rerun.out",
+    "sha256": "50f85fe61b96e5e556d37336080a7814aeffe0ac764d591c5504e27c5a00bd41"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/REVIEW.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/REVIEW.md",
+    "sha256": "c01197d85f5c4e88d80bbaffc8fe778c424809dd9cce0a63b56cc8f4690e4a6e"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/root_addendum_independent.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/root_addendum_independent.json",
+    "sha256": "dbd23975ae0b93beb828440cfa86c7f05da193bd15e8ccc97c4ada80ac5dad39"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/RECONSTRUCTION_SOURCE_SHA256SUMS",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/RECONSTRUCTION_SOURCE_SHA256SUMS",
+    "sha256": "ca8f70c59c2da8fb3573baf37dc1c5276992e5755f875ad3c208d7382dec1ae3"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/faithfulness-optimized-rerun.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/faithfulness-optimized-rerun.out",
+    "sha256": "0a96359b621abfef68091c5d6765ceb6838665103d0fdc5d38afd93641404c28"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/modular_independent.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/modular_independent.py",
+    "sha256": "c1247669fc28c353af348f27062aa4c2e180295f1c1e5ebe652614c8043b4270"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/ROOT_ADDENDUM_SHA256SUMS",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/ROOT_ADDENDUM_SHA256SUMS",
+    "sha256": "0c79ae0b26333c691d2866b3c31e59d06ee143040d4c67b114348dcba9e01d2c"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/modular-producer-rerun.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/modular-producer-rerun.out",
+    "sha256": "78f177f621716fc26da6e7537c045941b8837c7c2c1d89ed81eb1018b218a7f1"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/modular_independent.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/modular_independent.json",
+    "sha256": "1c552a9055fe480ca03f62cb621742e06c84ec57b11f26f67f3ed7b80d030cae"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/MODULAR_REVIEW.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/MODULAR_REVIEW.md",
+    "sha256": "e3651961702a77900b396cc01b36765b860c0daf18bc99ee2d9f148a26b151f3"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/SOURCE_SHA256SUMS",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/SOURCE_SHA256SUMS",
+    "sha256": "3d66eecb48b07d03a778c8ffe58cb63f97f6f8f4196490094b0b07aec3538471"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/RECONSTRUCTION_SHA256SUMS",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/RECONSTRUCTION_SHA256SUMS",
+    "sha256": "61785404c1fe918ade0b13de336a9e10427adb920dbfb61f5257fff74aeef1b6"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/modular_independent.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/modular_independent.out",
+    "sha256": "1c552a9055fe480ca03f62cb621742e06c84ec57b11f26f67f3ed7b80d030cae"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/two-port-optimized-rerun.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/two-port-optimized-rerun.out",
+    "sha256": "50f85fe61b96e5e556d37336080a7814aeffe0ac764d591c5504e27c5a00bd41"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/reconstruction_independent.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/reconstruction_independent.json",
+    "sha256": "8616b0ff672ac64ea6812c554f9cc32c5aa4c8ce5aa25f862c15d3ba2f18e161"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/independent.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/independent.py",
+    "sha256": "d96ac03b43dc08aeeca12cad28cf4d7785e5430d656ca215a9400719278d098e"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/audit-optimized-rerun.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/audit-optimized-rerun.out",
+    "sha256": "6773b03787623030a99a9525ef95bdb2e860bb3ef55802bb23fa94657cc3604b"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/SHA256SUMS",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/SHA256SUMS",
+    "sha256": "540dbbe847624d228213022f33afa1a9ac55bade95aa7b260dcdecd8bd3cd01b"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/modular-producer-optimized-rerun.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/modular-producer-optimized-rerun.out",
+    "sha256": "78f177f621716fc26da6e7537c045941b8837c7c2c1d89ed81eb1018b218a7f1"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/independent.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/independent.out",
+    "sha256": "16323826c203b926e65636e93d0f2839d6018ac9a6820bea94cd4be37370d961"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/reconstruction_independent.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/reconstruction_independent.out",
+    "sha256": "8616b0ff672ac64ea6812c554f9cc32c5aa4c8ce5aa25f862c15d3ba2f18e161"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/odd-cycle-rerun.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/odd-cycle-rerun.out",
+    "sha256": "35da6fdd86903b512dfda5b9403fd16ea99d35544c1f9745f3948e91ac57f538"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/census-rerun.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/census-rerun.out",
+    "sha256": "af0be0653e89263fa44e85039ec664e31558ccd56f94a703af2d240f99851b41"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/audit-rerun.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/audit-rerun.out",
+    "sha256": "6773b03787623030a99a9525ef95bdb2e860bb3ef55802bb23fa94657cc3604b"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/odd-cycle-optimized-rerun.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/odd-cycle-optimized-rerun.out",
+    "sha256": "35da6fdd86903b512dfda5b9403fd16ea99d35544c1f9745f3948e91ac57f538"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/structure-rerun.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/structure-rerun.out",
+    "sha256": "d9b78d8dcc006f2b4b3dfeb1d2f311063fae2c00f3c9e6e4c8e53a5d9252b7b7"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/ODD_CYCLE_SUPPLEMENT_SOURCE_SHA256SUMS",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/ODD_CYCLE_SUPPLEMENT_SOURCE_SHA256SUMS",
+    "sha256": "f33693ba0939e0356cf00ce22a8eaddaca1fb3b86421c52455e818ef1a53f71d"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/equivariance-converse.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/equivariance-converse.json",
+    "sha256": "6e0223b9e92b3882a7b10d6669470108266ad0328572e5db8b893976bf5105dc"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/MODULAR_SHA256SUMS",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/MODULAR_SHA256SUMS",
+    "sha256": "406b1a95c4ea1017bb42254c60981e905561584c4068b49328d4ca1dba600bf7"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/ODD_CYCLE_SUPPLEMENT_REVIEW.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/ODD_CYCLE_SUPPLEMENT_REVIEW.md",
+    "sha256": "662dfc4bf2943e69cc97d64c0c87b4981053bba4df0e84ed3c8dbaa6031122f2"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/modular_independent-optimized.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/modular_independent-optimized.out",
+    "sha256": "1c552a9055fe480ca03f62cb621742e06c84ec57b11f26f67f3ed7b80d030cae"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/score_first_failure-rerun.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/score_first_failure-rerun.json",
+    "sha256": "7534f75f4b4b34e2ae185435615a962a7ddcbf07724e1772ad4b7897b49db7e1"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/MODULAR_SOURCE_SHA256SUMS",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/MODULAR_SOURCE_SHA256SUMS",
+    "sha256": "c8b0367cba6e22d861a9e0138af9139519247c3f214cde938854b35907af4411"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/ODD_CYCLE_SUPPLEMENT_SHA256SUMS",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/ODD_CYCLE_SUPPLEMENT_SHA256SUMS",
+    "sha256": "f32ecdf79d8582eb118bbc63b34e2b092a0e99044dc92f28f2087c5a584f181c"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/reconstruction_independent-optimized.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/reconstruction_independent-optimized.out",
+    "sha256": "8616b0ff672ac64ea6812c554f9cc32c5aa4c8ce5aa25f862c15d3ba2f18e161"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/RECONSTRUCTION_REVIEW.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/RECONSTRUCTION_REVIEW.md",
+    "sha256": "d9696b0bf111d6144b58e83824eef77e8d2400afddd3e703fe2c17beb706fa7c"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/root-current-rerun.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/root-current-rerun.json",
+    "sha256": "23d911f6af6cdfed3cd701e4ecb12e7a9b57e40e9db0d3d6d2ec30ee5d862ac2"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/root-hostile-rerun.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/root-hostile-rerun.json",
+    "sha256": "2d301a780cb32a260286b78074b7c93b6b81c54da3af66bf68df6b3e89861c40"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/root_addendum_independent-optimized.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/root_addendum_independent-optimized.out",
+    "sha256": "dbd23975ae0b93beb828440cfa86c7f05da193bd15e8ccc97c4ada80ac5dad39"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/source-manifest-check.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/source-manifest-check.out",
+    "sha256": "db3c3b633d0161226e8da82f8600d7259329d2e1274b7d791a3ea74752800578"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/root_addendum_independent.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/root_addendum_independent.py",
+    "sha256": "da9e6a8f5ae3f6e60b9ac6e56fb199c805a7f94f2a7eb3e90160a6d3479ae9ee"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/portable-score-root-rerun.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/portable-score-root-rerun.json",
+    "sha256": "2d301a780cb32a260286b78074b7c93b6b81c54da3af66bf68df6b3e89861c40"
+  },
+  {
+    "source": "/workspace/shared/session27-response-audit/independent-optimized.out",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-response-audit/independent-optimized.out",
+    "sha256": "16323826c203b926e65636e93d0f2839d6018ac9a6820bea94cd4be37370d961"
+  },
+  {
+    "source": "/workspace/scratch/07d5532f2fce/session27-root/SYNTHESIS.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/SYNTHESIS.md",
+    "sha256": "df71f5b5e0792695a1d732a6bd92d93ee940a173b23ef99f2e0ab8999ae3302a"
+  },
+  {
+    "source": "/workspace/scratch/07d5532f2fce/session27-root/EXPLORATION.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/EXPLORATION.md",
+    "sha256": "587f98e51f63e875ed85db73867e34df13bb050d9bb9030af4c30f5f223bf271"
+  },
+  {
+    "source": "/workspace/scratch/07d5532f2fce/session27-root/SCORE_ROOT_COLLISION.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/SCORE_ROOT_COLLISION.md",
+    "sha256": "5b4fe17656af6ebe2ad908639b2ae101b2f1e04ce9fc53bf756467f3de84b36c"
+  },
+  {
+    "source": "/workspace/scratch/07d5532f2fce/session27-root/score_root_hostile.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/score_root_hostile.py",
+    "sha256": "f057c0f790435c043f22638349ac9dbed61c0af1a5f5cb5a5870766ce937aeda"
+  },
+  {
+    "source": "/workspace/scratch/07d5532f2fce/session27-root/score_root_hostile.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/score_root_hostile.json",
+    "sha256": "2d301a780cb32a260286b78074b7c93b6b81c54da3af66bf68df6b3e89861c40"
+  },
+  {
+    "source": "/workspace/scratch/07d5532f2fce/session27-root/score_first_failure.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/score_first_failure.py",
+    "sha256": "377c49f3d071f5e9d682595f527452b6cfd0342a5ee0d9490dcc0c099ed0a528"
+  },
+  {
+    "source": "/workspace/scratch/07d5532f2fce/session27-root/score_first_failure.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/score_first_failure.json",
+    "sha256": "7534f75f4b4b34e2ae185435615a962a7ddcbf07724e1772ad4b7897b49db7e1"
+  },
+  {
+    "source": "/workspace/scratch/07d5532f2fce/session27-root/ODD_CYCLE_PARITY_CHARACTER.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/ODD_CYCLE_PARITY_CHARACTER.md",
+    "sha256": "0b125bd8058aaefd8e16ca81284aab4f81fb0cf8122b4c77ae08d8a8ad3769dc"
+  },
+  {
+    "source": "/workspace/scratch/07d5532f2fce/session27-root/LORENTZIAN_SCORE_BRIDGE.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/LORENTZIAN_SCORE_BRIDGE.md",
+    "sha256": "662cd827e092b4ecc513c351c841ed4810167ad9847b590ead25f3f5dfd7b95c"
+  },
+  {
+    "source": "/workspace/scratch/07d5532f2fce/session27-root/check_lorentzian_score.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/check_lorentzian_score.py",
+    "sha256": "d1c67a12f5dfee2f782f0f6a1628793ee33fa0df55b9b692616a423210491142"
+  },
+  {
+    "source": "/workspace/scratch/07d5532f2fce/session27-root/lorentzian_score.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/lorentzian_score.json",
+    "sha256": "e1aafa001c3278baad83d3c31489032c08e23d143b6ed8eab64eb3b276ac661e"
+  },
+  {
+    "source": "/workspace/scratch/07d5532f2fce/session27-root/TOPOLOGY_SCOPE.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/TOPOLOGY_SCOPE.md",
+    "sha256": "e7e1e0d990c59054c43f296ec6d495f3c03f68bdbbf999043a56a011a7169803"
+  },
+  {
+    "source": "/workspace/shared/session27-recurrence-audit/LORENTZIAN_AUDIT.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-recurrence-audit/LORENTZIAN_AUDIT.md",
+    "sha256": "e6017c2f951d3a65b6fc3b00471b2686fdfe110660af2a661fb05cc57463b0df"
+  },
+  {
+    "source": "/workspace/shared/session27-recurrence-audit/LORENTZIAN_SHA256.txt",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-recurrence-audit/LORENTZIAN_SHA256.txt",
+    "sha256": "e594e5202bab540fde7adeb60310c8a94d225c4d5fab9de4a8eb0d5816d29d8a"
+  },
+  {
+    "source": "/workspace/shared/session27-recurrence-audit/lorentzian_independent.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-recurrence-audit/lorentzian_independent.json",
+    "sha256": "ac0ca2f4b9fd23cafa46fbdd5aa7e49d904f108a2d71b9b5040ff6397b8dc7f6"
+  },
+  {
+    "source": "/workspace/shared/session27-recurrence-audit/lorentzian_independent.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-recurrence-audit/lorentzian_independent.py",
+    "sha256": "973e06a5de57ffa5a252879ba05715a78c8a884ee2bbc7fcb25d15fb09babd73"
+  },
+  {
+    "source": "/workspace/shared/session27-recurrence-audit/lorentzian_replay.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-recurrence-audit/lorentzian_replay.json",
+    "sha256": "e1aafa001c3278baad83d3c31489032c08e23d143b6ed8eab64eb3b276ac661e"
+  },
+  {
+    "source": "/workspace/shared/session27-repunits/remote_repunit.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-repunits/remote_repunit.json",
+    "sha256": "d77d1d4186bc168f098cd215ddfe3f7dd2e827973d3e82f5904b1750ef9302bb"
+  },
+  {
+    "source": "/workspace/shared/session27-repunits/remote_fetch_manifest.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-repunits/remote_fetch_manifest.json",
+    "sha256": "e88ac47e54e88b92f6245c1dd175cfd6b4845440feaf370e1c34a86954a26ef7"
+  },
+  {
+    "source": "/workspace/shared/session27-repunits/remote_Wagstaff.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-repunits/remote_Wagstaff.json",
+    "sha256": "c464defbbd7378441d450fa0cba40e6aaf0f6f4062e8cef6d4d3178060411507"
+  },
+  {
+    "source": "/workspace/shared/session27-repunits/REMOTE_SEARCH.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-repunits/REMOTE_SEARCH.md",
+    "sha256": "276457a75b6eea7554e1205971916986d705449b0642368446ba12c1db91ea9a"
+  },
+  {
+    "source": "/workspace/shared/session27-repunits/remote_1729.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-repunits/remote_1729.json",
+    "sha256": "d1926ed0c855dcae8e9f19a0109e1a2c8a4f7ca9c73e925771200c99caa7fa11"
+  },
+  {
+    "source": "/workspace/shared/session27-repunits/remote_summary.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-repunits/remote_summary.json",
+    "sha256": "4418e70a9ff5ac827d3d492735407ef413886f426b26ccb934cfbf618cbcaf1a"
+  },
+  {
+    "source": "/workspace/shared/session27-repunits/remote_Fibonacci_fan.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-repunits/remote_Fibonacci_fan.json",
+    "sha256": "3acf2fd29ded0badb039891ae7f2690c37d91f7acb3b8b3cc873eb7fad28716d"
+  },
+  {
+    "source": "/workspace/shared/session27-repunits/remote_index.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-repunits/remote_index.json",
+    "sha256": "bcac1f881502212aa4f6a0815dbc863559118fc9762846e7c01639480307f270"
+  },
+  {
+    "source": "/workspace/shared/session27-repunits/remote_Mersenne.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-repunits/remote_Mersenne.json",
+    "sha256": "f51e3f71ce736bbc138ceff0d285bfc6c6ead1fd0fc8d74a5a14cee1b75be70d"
+  },
+  {
+    "source": "/workspace/shared/session27-repunits/remote_fetched/witt_necklace_s90at.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-repunits/remote_fetched/witt_necklace_s90at.py",
+    "sha256": "4d84570e5200cad1de4b07055f3548ea76759e620d647de98aa28cfb09db639b"
+  },
+  {
+    "source": "/workspace/shared/session27-repunits/remote_fetched/mersenne_cyclotomic_ocf.py",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-repunits/remote_fetched/mersenne_cyclotomic_ocf.py",
+    "sha256": "ae02e2b6338493930985a60a9939a6002ae4f9bb8ce546e805b3f4abd7eb0399"
+  },
+  {
+    "source": "/workspace/shared/session27-repunits/remote_fetched/REPORT.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-repunits/remote_fetched/REPORT.md",
+    "sha256": "f99dbcf9ccfc44f2b6f4f56725a519243ebb4a75796e7e66c3acb6ed9b6ea938"
+  },
+  {
+    "source": "/workspace/shared/session27-corrections/RATIONALE.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-corrections/RATIONALE.md",
+    "sha256": "acfad224e86a569be15371ffb10a8303faac22f1c6d5f1c779ec7396094eb8dd"
+  },
+  {
+    "source": "/workspace/shared/session27-corrections/SHA256SUMS",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-corrections/SHA256SUMS",
+    "sha256": "95b9bbb087d8ec46ca97943e82f0823f2ec82502e31076cd05b971eb89ec54d7"
+  },
+  {
+    "source": "/workspace/shared/session27-corrections/manifest.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-corrections/manifest.json",
+    "sha256": "aa228c263a0f59a4a1cf2bdcb7196f0409a3e6de2e21c2579883e5f5da0caa8b"
+  },
+  {
+    "source": "/workspace/shared/session27-corrections/corrections.patch",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-corrections/corrections.patch",
+    "sha256": "5ef5300a7a1d4b50be159e41bc7e2eb77170111d0bc47a3d542840d4da5179f4"
+  },
+  {
+    "source": "/workspace/shared/session27-corrections/validation.json",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-corrections/validation.json",
+    "sha256": "8513f8c460a4e8739e63c4a3aa6dc132236734a4f1bf1e09efeb37d3d112c3f3"
+  },
+  {
+    "source": "/workspace/shared/session27-corrections/MISTAKE-PENDING.md",
+    "destination": "05-knowledge/results/session27_repunits_lattices_20261022/session27-corrections/MISTAKE-PENDING.md",
+    "sha256": "21f8b8822575fb724334679064ac2ace5558d65ffbd289e758e288d89195812d"
+  },
+  {
+    "source": "/workspace/shared/session27-corrections/proposed/01-canon/theorems/THM-227-knacci-mersenne.md",
+    "destination": "01-canon/theorems/THM-227-knacci-mersenne.md",
+    "sha256": "10c453491199d14d95281790c1262752833da8347cf9926471692685f7993387"
+  },
+  {
+    "source": "/workspace/shared/session27-corrections/proposed/07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+    "destination": "07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+    "sha256": "f5368f1695aff406178f8ce9577c76d400d7bc9a26c80c321012646860d6fb98"
+  },
+  {
+    "source": "/workspace/shared/session27-corrections/proposed/07-reflections/the-modular-tournament.md",
+    "destination": "07-reflections/the-modular-tournament.md",
+    "sha256": "0de34619059458f715bc86e66bf91cefbbc8f6beb721a273b1df55d99e4b57b0"
+  },
+  {
+    "source": "/workspace/shared/session27-corrections/proposed/04-computation/repunit_gap_synthesis.py",
+    "destination": "04-computation/repunit_gap_synthesis.py",
+    "sha256": "a565c861ead4c6fbd9b1a67737aca97e81de4db75185e585759425172c3f103e"
+  },
+  {
+    "source": "/workspace/shared/session27-corrections/proposed/05-knowledge/results/repunit_gap_synthesis.out",
+    "destination": "05-knowledge/results/repunit_gap_synthesis.out",
+    "sha256": "46de020f517b5709e6d9bb75a2acdf73c46e1ad5be2db08a61a229029d722da5"
+  },
+  {
+    "source": "/workspace/shared/session27-corrections/proposed/04-computation/ramanujan_near_miss_kpc1.py",
+    "destination": "04-computation/ramanujan_near_miss_kpc1.py",
+    "sha256": "5ef271938cd1f07d908468064a67f3aa393abfc23edeb041d7623f77221bae71"
+  }
+]

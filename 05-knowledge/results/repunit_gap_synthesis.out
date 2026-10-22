@@ -1,3 +1,20 @@
+STATUS CORRECTION — 2026-10-22, Session27. HISTORICAL EXPERIMENT, NOT A GLOBAL COMPLETENESS PROOF.
+The old text/output below is preserved unchanged after this warning. Its proposed
+alpha=(T-13,3,1) gives H=1+2(T-13)+4*3+8=2T-5, not 2T+1.
+Even repairing the arithmetic to alpha=(T-10,3,1) does not prove realization:
+an independent triple forces at least three singleton cycles and three pairs,
+so alpha_3>=1 implies alpha_1>=3 and alpha_2>=3. In particular alpha=(0,3,1)
+is impossible. The threshold H>=27 (T>=13) follows from the full (1+x)^3
+substructure, not from the cubic coefficient alone, and is only necessary.
+The valid identities 7=Phi_3(2), 21=Phi_3(4), and the all-order omissions 7,21
+survive. Claims below that all larger odd H occur or that there are exactly two
+gaps are unsupported; global H-spectrum completeness remains OPEN, as recorded
+in THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md.
+The displayed H mod 8 inference also overstates the separate coefficients:
+H=21 mod 8 gives alpha_1+2*alpha_2=2 mod 4, not alpha_1=2 mod 4 AND alpha_2 odd.
+No historical computational branch or old output line has been rewritten.
+
+--- BEGIN PRESERVED HISTORICAL OUTPUT ---
 ======================================================================
 THE REPUNIT GAP THEOREM
 Permanent gaps as repunits in power-of-2 bases

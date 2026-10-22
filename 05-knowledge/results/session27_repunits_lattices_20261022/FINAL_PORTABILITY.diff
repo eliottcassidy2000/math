@@ -1,0 +1,32 @@
+--- original/session27-response-audit/independent.py
++++ packaged/session27-response-audit/independent.py
+@@ -3,7 +3,7 @@
+ from pathlib import Path
+ from fractions import Fraction
+ OUT=Path(__file__).parent
+-ROOT=Path('/workspace/scratch/07d5532f2fce/session27-root')
++ROOT=Path(__file__).resolve().parent.parent
+ def H(q):
+  n=len(q)
+  return sum(all(q[p[i]][p[i+1]] for i in range(n-1)) for p in itertools.permutations(range(n)))
+@@ -72,7 +72,7 @@
+  if [sum(x<<v for v,x in enumerate(row)) for row in built]!=record['out_masks']:raise RuntimeError('construction mismatch')
+ # Common realization checked against a separate permutation enumerator, not endpoint DP.
+ import sys,random
+-sys.path.insert(0,'/workspace/shared/session27-response')
++sys.path.insert(0,str(Path(__file__).resolve().parent.parent/'session27-response'))
+ import equivalence as eq
+ rng=random.Random(2702);ac=0
+ for k,maxm in [(0,7),(1,5),(2,4),(3,3),(4,3)]:
+
+--- original/session27-response-audit/root_addendum_independent.py
++++ packaged/session27-response-audit/root_addendum_independent.py
+@@ -1,7 +1,7 @@
+ from itertools import permutations,combinations
+ from pathlib import Path
+ import json,math
+-ROOT=Path('/workspace/scratch/07d5532f2fce/session27-root');OUT=Path(__file__).parent
++ROOT=Path(__file__).resolve().parent.parent;OUT=Path(__file__).parent
+ 
+ def count(out):
+  n=len(out)

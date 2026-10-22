@@ -1,0 +1,4 @@
+all labelled cores through 2 PASS; 4 tests, 8 DP queries
+all labelled cores through 3 PASS; 52 tests, 392 DP queries
+all labelled cores through 4 PASS; 820 tests, 24968 DP queries
+TOTAL PASS: 840 tests, 27528 DP queries; moduli2,3,4,5,6,8,11; both fixed-endpoint directions.

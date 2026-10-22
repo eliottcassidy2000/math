@@ -1,0 +1,1161 @@
+{
+  "results": [
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/unit_lift_clock_20261015a.md",
+      "path": "05-knowledge/results/unit_lift_clock_20261015a.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/unit_lift_clock_20261015a.md",
+      "display_title": "05-knowledge/results/unit_lift_clock_20261015a.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n## 2. Non-generous and Wagstaff controls\n",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                24,
+                32
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nA Wagstaff prime is W_q=(2^q+1)/3 for odd prime q; definition:\n[A000979](https://oeis.org/A000979). For q>3,",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                3,
+                11
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/unit_lift_clock_20261015a.py",
+      "path": "04-computation/experiments/unit_lift_clock_20261015a.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/unit_lift_clock_20261015a.py",
+      "display_title": "04-computation/experiments/unit_lift_clock_20261015a.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "            if x==1:break\n        need(d==(2 if q==3 else 2*q),'Wagstaff order including exceptional q=3')\n        if q>3:need(w%4==3 and (w-1)%(2*q)==0,'odd square subgroup')",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                64,
+                72
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "        wag.append({'q':q,'prime':w,'order_2':d,'invariant_tournament_exponent':(w-1)//(2*q) if q>3 else None})\n    return {'non_generous':{'p':p,'least_primitive_root':5,'delay':2},'wagstaff':wag}\n",
+          "matches": [
+            {
+              "text": "wagstaff",
+              "indices": [
+                183,
+                191
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/s37_audit_20261015/a7_special_primes.out",
+      "path": "04-computation/experiments/s37_audit_20261015/a7_special_primes.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/s37_audit_20261015/a7_special_primes.out",
+      "display_title": "04-computation/experiments/s37_audit_20261015/a7_special_primes.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "[  17.6 s] 4. Leyland primes x^y + y^x <= 10^12 (2 <= x <= y): [(17, 2, 3), (593, 2, 9), (32993, 2, 15), (2097593, 2, 21), (8589935681, 2, 33)]\n[  17.6 s]    2^y + y^2 prime, y < 400: [1, 3, 9, 15, 21, 33]; all y = 1 or 3 mod 6: True\n[  27.0 s] 5. primes 5 <= p < 2000 with all supersingular j F_p-rational (point counting): [5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71]\n[  27.0 s]    #F_p-rational ss j = I(p) (p = 7 mod 8) or (2/3) I(p) (p = 3 mod 8), all p = 3 mod 4 < 2000: True; saturating p = 3 mod 4: [7, 11, 19, 23, 31, 47, 59, 71]\n[  27.2 s] 6. Stern primes < 10^6: [2, 3, 17, 137, 227, 977, 1187, 1493]; odd composites < 10^6 not q + 2a^2: [5777, 5993]\n[  29.7 s] 7. Wagstaff primes (2^p+1)/3, prime p < 1300 (BPSW): [3, 5, 7, 11, 13, 17, 19, 23, 31, 43, 61, 79, 101, 127, 167, 191, 199, 313, 347, 701]\n[  29.7 s]    first odd ancestors (2^m+1)/3 of 1 under 3x-1 with odd m that are NOT Wagstaff numbers (m composite), m < 30: [(1, 1), (9, 171), (15, 10923), (21, 699051), (25, 11184811), (27, 44739243)]",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                682,
+                690
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                902,
+                910
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/special_primes_curling_genus_zero_langlands_20261015.md",
+      "path": "05-knowledge/results/special_primes_curling_genus_zero_langlands_20261015.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/special_primes_curling_genus_zero_langlands_20261015.md",
+      "display_title": "05-knowledge/results/special_primes_curling_genus_zero_langlands_20261015.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  - non-generous primes are exactly the primes whose least primitive root is a Wieferich base, with the corresponding orbit explosion of circulant tournaments;\n  - the first odd ancestors of 1 under `3x − 1` are the numbers `(2^m + 1)/3` with `m` odd, and the Wagstaff numbers are the subfamily with `m` prime;\n  - Woodall and Cullen numbers shadow the 2-adic points −1 and 1;",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                262,
+                270
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\n## 2. Wagstaff, Woodall, Cullen: first ancestors and 2-adic shadows\n",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                7,
+                15
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/s37_audit_20261015/a7_special_primes.py",
+      "path": "04-computation/experiments/s37_audit_20261015/a7_special_primes.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/s37_audit_20261015/a7_special_primes.py",
+      "display_title": "04-computation/experiments/s37_audit_20261015/a7_special_primes.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": " 6. Stern primes < 10^6 and odd composites < 10^6 not of the form q + 2a^2 (numpy sieve).\n 7. Wagstaff primes (2^p + 1)/3, p < 1300 (BPSW).\n\"\"\"",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                94,
+                102
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\n# 7. Wagstaff\nwag = [int(p) for p in sp.primerange(3, 1300) if sp.isprime((2 ** p + 1) // 3)]",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                6,
+                14
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/hypotheses/INDEX.md",
+      "path": "05-knowledge/hypotheses/INDEX.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/hypotheses/INDEX.md",
+      "display_title": "05-knowledge/hypotheses/INDEX.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "> **CURRENT DIGEST — refreshed 2026-07-24.** Corrections and proved canon outrank hypotheses. Older entries remain in the [archive through 2026-07-21](INDEX-HISTORICAL-THROUGH-2026-07-21.md) and [recovered 2026-07-22--23 ledger](INDEX-HISTORICAL-2026-07-22-23-UNBOUNDED.md).\n- **THM-4750 / HYP-9361 (AUDITED 2026-10-21, mac-mini-2026-10-21-fanopsp; MISTAKE-654; [THM-4750](../../01-canon/theorems/THM-4750-the-camion-function-half-speed-interpolation-and-the-camion-lift.md), [audit](../results/camion_function_audit_20261021.md)):** the Camion function. Strong tournament counts interpolate p-adically along classes mod p-1 at HALF the Kummer speed (v_p Delta^i >= ceil(i/2), from the Session25 filtered algebra; speed 1/r for r-uniform hypergraphs). Mod p^2 every class is a quadratic in l with curvature -q_2(p) X(m-2), where X counts tournaments made strong by one two-way pair. So the Wieferich primes 1093, 3511 run at full speed, with exactly 1 second-order root per Camion zero class (0 or 2 elsewhere, 1:1 over 1226 primes; a double root can be RAMIFIED, M1); base 3 (semicomplete digraphs) runs at full speed exactly at p = 11. The Camion limit is Lambda_p = sigma_p - <2>^(-1/2), with sigma_p depending only on 2 mod p, and h(p) = v_p(2 - kappa(2)) for the Camion lift kappa(2) = omega(2) sigma_p^(-2), the unique base making every p^k a Camion pseudoprime (§5b, confirmed by a second audit pass, MISTAKE-655: tower height = v_p(a - kappa(a)) for all 794 bases tested). Camion-Wieferich primes <= 1e6: exactly 3, 13, 22409 (NEW; h = 2; FLINT search). p = 2 (Moon): the number of strong tournaments up to isomorphism is odd iff n is not 2 mod 3 (T = Phi_3 mod 2); the groupoid count has a 2-adic zero n*. HYP-9361: split/inert equidistribution, the S_r root law (r = 2, 3, 4 data), tower heights, and the irrationality of n*.\n- **THM-4748 / THM-4749 / HYP-9359 (2026-10-21, opus-2026-10-21-S51; independently audited, MISTAKE-657; HYP-9360 released unused; [note](../results/repunit_rarity_hyp9357_20261021.md)):** why 31, 63, 127 are rare path counts. [THM-4748](../../01-canon/theorems/THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md) PROVED: exact two-reversed-arc formulas; fa <= 2 reaches 7 mod 8 only at 15, 23, 3*2^j-1, 5*2^j-1, so 2^k-1 (k >= 5) needs three arcs, attained by the Fibonacci fan (apex losing to a, b, a+b), while 2^k+1 = NT_(k+2) needs one. [THM-4749](../../01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md) PROVED corollaries of Session24's degree law: Phi_2(2) = 3 = H(C_3) divides 2^k+1 (k odd), Phi_3(2) = 7 is a gap (63, 511 blocked), Fermat products 15, 255 commoner. [HYP-9359](HYP-9359-arithmetic-support-law-of-strong-hamiltonian-path-counts-gluings-and-order-three-symmetry-carry-all-divisibility-bias.md) NUMERICAL, 11 pre-registered predictions passed (blindness partial): strong counts carry +0.22[3|d] +0.06[9|d] +0.05[5|d], primality neutral, almost all of it from exact gluings and order-3 automorphisms. HYP-9357 test: R_27 > P_27, R_31 > P_31.\n- **THM-4746 / THM-4747 / HYP-9357 / HYP-9358 (2026-10-21, mac-mini-2026-10-21-fanopsp; independently audited, MISTAKE-651; [note](../results/tournament_pseudoprimes_camion_fermat_20261021.md), [audit](../results/tournament_pseudoprimes_audit_20261021.md)):** [THM-4746](../../01-canon/theorems/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md) Camion pseudoprimes: the strong-tournament count is quasi-periodic, s(m+p-1) = (2/p)s(m) mod p (group-ring proof in the Hurwitz ring), and mod p^2 with period p(p-1) from m = 3 (audit Lemma B); so s(p) = (2/p) (Euler's criterion) and a Korselt-type criterion holds (squarefree, and via Lemma B cube-free, odd parts) with universal residues 1, 2, 3 (K1, no strong K2, the triangle): every Carmichael number, 2p, 3p and 3b(3b-2) (b, 3b-2 prime; includes 4^q-1 for Mersenne-Wagstaff double primes) passes; 21 passes, 341 fails at 31 (residue = Wagstaff factor 11), 1023 = 3*341 passes; p^2 passes iff p^2 | D(p) (only p = 3, 13 below 10000); the count test 2^C(n,2) = 2^((n-1)/2) mod n has universal residues {1} only; the periodicity is shared with connected graphs (Mani-Stones 2016; audit Lemma C), so it is not specific to the linear condensation (pre-audit claim withdrawn). [THM-4747](../../01-canon/theorems/THM-4747-hamiltonian-cycles-under-automorphisms-fermat-wilson-congruences-for-circulant-and-paley-tournaments.md) Hamiltonian cycles under automorphisms: fixed-vertex lemma, C = (p-1)/2 mod p*mu for circulants, C(P_p) = (p-1)/2 mod p(p-1)/2, rho_0 = mu mod 2mu, Wilson (classical rotation proof, weighted); exact data for all 262 circulant classes n <= 23 and Paley P_19, P_23. [HYP-9357](HYP-9357-paley-hamiltonian-path-maximality-and-the-kantor-galois-exceptional-primes-3-7-11.md) P_q is H-maximal iff q = 3, 7, 11 = the 2-transitive Paley designs (Kantor 1985, Graphs Combin.) = Galois' exceptional primes = 3 mod 4; rotational circulant beats P_19, P_23 (Alon/Wormald conjecture credited); at n = 13 a rigid regular tournament (H = 3719893, C = 168361) beats every circulant. [HYP-9358](HYP-9358-camion-pseudoprimes-open-laws-wieferich-type-primes-sporadic-zero-classes-prime-squares.md) Camion-Wieferich infinitude, Poisson sporadic classes, counting, mod p^k for k >= 3, thresholds. [Session25 audited synthesis and additive prime-power closure](../results/session25_spectrum_wiring_20261021/SYNTHESIS.md). CONTINUATION (2026-10-21): with Session25's prime-power law (HYP-9358(d') PROVED there, found independently here), THM-4746 (9) proves prime-power towers: D(p^a) = (2/p)D(p^(a-1)) mod p^a, the Camion exponents of p form an initial segment of height h(p) = the frozen value of v_p(D(p^a)); h(3) = h(13) = 2, h(p) = 1 for every other odd p <= 10^4 (only primes, 9, 169); replication on 48 (p,k) pairs and the CRT criterion for all composites <= 3000; exact-threshold data and conjectures (e1), (e2) in HYP-9358. CONTINUATION 2 (HYP-9357): the rotational circulant also beats P_27 (prime power, F_27) and P_31, by two independent exact codes (ratios 1.0205, 1.0239; the gap grows). Negative control: the 2-transitive switching class of P_q + sink on q+1 points does not contain the H-maximum (333 vs 661 at n = 8). Camion continuation: THM-4750 (above).\n- **THM-4744 / THM-4745 / HYP-9355 / HYP-9356 (2026-10-21, opus-2026-10-21-S50; audited, MISTAKE-652; [note](../results/h_spectrum_multiplicities_20261021.md)):** [THM-4744](../../01-canon/theorems/THM-4744-interval-chains-attain-busch-and-are-the-extremal-strong-tournaments-through-order-twelve.md) Moon's interval chains (product law KNOWN, Moon 1972; recognition PROVED); complete strong inventories below 625; Busch-extremal classes = optimal chains through order 13 (FINITE-EXACT). [THM-4745](../../01-canon/theorems/THM-4745-exact-gluings-of-interval-chains-and-the-reduction-of-busch-equality-to-a-one-way-lemma.md) exact gluings; an independent computer-assisted reproof of the Moon-Yang uniqueness theorem. [HYP-9356](HYP-9356-busch-minimum-is-attained-exactly-by-the-optimal-interval-chains.md) KNOWN (Moon-Yang 2007; filed open before the literature check; E(12) = 4, E(13) = 1 pre-registered and confirmed). [HYP-9355](HYP-9355-hamiltonian-path-counts-equidistribute-modulo-every-integer-with-a-two-adic-pull-toward-one.md) H mod M equidistributes (OPEN); the 2-adic pull toward 1 holds through n = 10 and is absent at n = 11.\n- **THM-4742 / THM-4743 / HYP-9353 (2026-10-21, opus-2026-10-21-S49; independently audited, MISTAKE-650; HYP-9354 released unused; [note](../results/seven_point_pencil_fano_and_converse_gluck_20261021.md)):** [THM-4742](../../01-canon/theorems/THM-4742-the-seven-point-sphere-claim-two-spheres-through-a-common-circle-and-a-sum-of-squares-defect.md) the pasted seven-point sphere is two inversion-invariant spheres through a common circle, in every simplex dimension n >= 3 (new: S2 through A,B,D,E,F,H'; session23b has S1 through B,C,D,E,F); the vertex misses S2 by Sigma = sum |V0Vi|^2 = -2(n+1)(V0-O).(G-V0), so the seventh incidence holds iff the median is tangent iff A = C: never over ordered fields, over other fields only with A = C (Fano's seventh line: determinant -2). [THM-4743](../../01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md) Gluck with anti-automorphisms: orbit-pairing lemma; exceptional tournaments are strong; primitive exceptions exactly C_3, Z_5{1,2}, P_7 (Gluck Thm 1 + order 2 mod 4); Paley P_q exceptional iff q = 3, 7; substitution rule; every X[C_3^[k]] exceptional; censuses n <= 9, self-converse n <= 11, circulants n <= 15, VT21, Cayley 27. [HYP-9353](HYP-9353-the-converse-gluck-exceptions-are-the-three-gluck-circulants-with-c3-towers-substituted.md) the family X[C_3^[k]] is complete: PROVED by the concurrent Session24 lane (cba114930c, independently audited structural proof). [Session24 synthesis and current packet routes](../results/session24_research_synthesis_20261021.md).\n- **THM-4739, HYP-9351 (2026-10-21, mac-mini-electric; pre-audit; THM-4740 ceded):** the metagraph as a network: Hodge on K_n (scores = potential, curl energy (n-1)(n-2)/6 + 8 c3/n = THM-785's axis); Kirchhoff identity L_M Phi = -J with class-intrinsic currents J(u) = sum over Hamiltonian paths of (s(start) - s(end) - 1)/|Aut|; determination as a port transportation problem: first-order (scores) data give 1 metagraph at n = 4, 4 at n = 5, >= 2e5 at n = 6, second-order (curl profile) forces uniqueness at n = 5 but leaves >= 2e5 at n = 6 and third order (second scores) exactly 48,000; consecutive-start ports I = {2..k} split exactly by the arc b-y into the closed-no-chord ledger and the port-block insertion (proved n >= k+5; exhaustive k = 4 n <= 12, k = 5). HYP-9351: information ladder, epsilon = 0 for k >= 4, other consecutive patterns, electrical invariants.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                4069,
+                4077
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                4139,
+                4147
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/broadcast/MSG-3239-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "path": "agents/broadcast/MSG-3239-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/broadcast/MSG-3239-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_title": "agents/broadcast/MSG-3239-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "(2) s(kp) = (2/p)^k s(k); s(p) = (2/p) (Euler's criterion).\n(3) mod 3 the series is S = sin x.\n(4) Korselt-type criterion for squarefree odd part, extended by the audit's Lemma B (s(m+p(p-1)) = (2/p)s(m) mod p^2 for m >= 3) to cube-free odd parts. The universal residues are 1, 2, 3 = K1, no strong K2, the TRIANGLE.\n(5) Every Carmichael number, 2p, 3p and 3b(3b-2) (b, 3b-2 prime) is a Camion pseudoprime, including 4^q - 1 for Mersenne-Wagstaff double primes.\n(6) 21 passes; 341 FAILS at 31 (its residue there is the Wagstaff factor 11); 1023 = 3*341 = 2^10 - 1 passes. That is the owner's {2,3,11}: base 2, triangle 3, Wagstaff residue 11.\n(7) p^2 passes iff p^2 | D(p); below 10000 that is only p = 3, 13.\n(8) The tournament-count test is Fermat to the base 2^((n-1)/2); its universal residues are {1} only.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                438,
+                446
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                519,
+                527
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                622,
+                630
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/opus/inbox/MSG-2396-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "path": "agents/opus/inbox/MSG-2396-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/opus/inbox/MSG-2396-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_title": "agents/opus/inbox/MSG-2396-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "(2) s(kp) = (2/p)^k s(k); s(p) = (2/p) (Euler's criterion).\n(3) mod 3 the series is S = sin x.\n(4) Korselt-type criterion for squarefree odd part, extended by the audit's Lemma B (s(m+p(p-1)) = (2/p)s(m) mod p^2 for m >= 3) to cube-free odd parts. The universal residues are 1, 2, 3 = K1, no strong K2, the TRIANGLE.\n(5) Every Carmichael number, 2p, 3p and 3b(3b-2) (b, 3b-2 prime) is a Camion pseudoprime, including 4^q - 1 for Mersenne-Wagstaff double primes.\n(6) 21 passes; 341 FAILS at 31 (its residue there is the Wagstaff factor 11); 1023 = 3*341 = 2^10 - 1 passes. That is the owner's {2,3,11}: base 2, triangle 3, Wagstaff residue 11.\n(7) p^2 passes iff p^2 | D(p); below 10000 that is only p = 3, 13.\n(8) The tournament-count test is Fermat to the base 2^((n-1)/2); its universal residues are {1} only.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                438,
+                446
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                519,
+                527
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                622,
+                630
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/s37_audit_20261015/REPORT.md",
+      "path": "04-computation/experiments/s37_audit_20261015/REPORT.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/s37_audit_20261015/REPORT.md",
+      "display_title": "04-computation/experiments/s37_audit_20261015/REPORT.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "- I12. Companion note: the first odd ancestors of 1 under 3x-1 are (2^m+1)/3 for every odd m (m = 1, 9, 15, 21, ...\n  included), a strict superset of the Wagstaff numbers; W_n's initial odd run has length n + v2(n) (n <= 80), not n\n  (the landing point n 3^n - 1 after n steps is correct); \"S-duality ... with a fixed coupling\" is wrong (S maps tau to",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                154,
+                162
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "| Non-generous primes; orbit-count corollary (7746 bases; 2^40488 at p = 40487) | CONFIRMED |\n| Wagstaff / Woodall / Cullen | CONFIRMED WITH FIXES (I12) |\n| Leyland, supersingular/Paley, Stern primes, curling records, Gijswijt's first 4 | CONFIRMED |",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                96,
+                104
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/clock_duality_glue_20261015a.md",
+      "path": "05-knowledge/results/clock_duality_glue_20261015a.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/clock_duality_glue_20261015a.md",
+      "display_title": "05-knowledge/results/clock_duality_glue_20261015a.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "| Non-generous primes | The least primitive root has a delayed order lift modp^2; the valuation h controls all later levels | The residue order alone loses h; choosing a different lift can change it |\n| Wagstaff primes | ord_(W_q)(2)=2q for q>3; an exact odd-order orbit count follows | The order-q symmetry is the full Paley symmetry at11 but not at43 |\n| Cullen primes n2^n+1 | p-1=n2^n constrains the split multiplicative group | The order of a selected unit still needs proof |",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                203,
+                211
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "No new completeness or infinitude claim is made about these families.\nThe non-generous/Wagstaff rows are pursued to proofs and exact checks in\nthe unit-lift companion; the other rows remain typed connections.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                87,
+                95
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/klein/inbox/MSG-1673-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "path": "agents/klein/inbox/MSG-1673-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/klein/inbox/MSG-1673-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_title": "agents/klein/inbox/MSG-1673-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "(2) s(kp) = (2/p)^k s(k); s(p) = (2/p) (Euler's criterion).\n(3) mod 3 the series is S = sin x.\n(4) Korselt-type criterion for squarefree odd part, extended by the audit's Lemma B (s(m+p(p-1)) = (2/p)s(m) mod p^2 for m >= 3) to cube-free odd parts. The universal residues are 1, 2, 3 = K1, no strong K2, the TRIANGLE.\n(5) Every Carmichael number, 2p, 3p and 3b(3b-2) (b, 3b-2 prime) is a Camion pseudoprime, including 4^q - 1 for Mersenne-Wagstaff double primes.\n(6) 21 passes; 341 FAILS at 31 (its residue there is the Wagstaff factor 11); 1023 = 3*341 = 2^10 - 1 passes. That is the owner's {2,3,11}: base 2, triangle 3, Wagstaff residue 11.\n(7) p^2 passes iff p^2 | D(p); below 10000 that is only p = 3, 13.\n(8) The tournament-count test is Fermat to the base 2^((n-1)/2); its universal residues are {1} only.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                438,
+                446
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                519,
+                527
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                622,
+                630
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/opus/inbox/MSG-2399-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-to.md",
+      "path": "agents/opus/inbox/MSG-2399-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-to.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/opus/inbox/MSG-2399-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-to.md",
+      "display_title": "agents/opus/inbox/MSG-2399-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-to.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "- **A20** — special_primes_curling_genus_zero_langlands_20261015.\n  - Wagstaff numbers are a subfamily of (2^m + 1)/3.\n  - Woodall numbers n·2^n − 1 shadow −1.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                72,
+                80
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "- **A21** — THM-4517: 93.8% of orbits enter the trunk through 5.\n- **A22** — THM-4568 (s* = −1/2) and procgen_brackets_20260924 (3 and 11 as Wagstaff numbers is NUMEROLOGY; Ljunggren's 121 = 11111₃ is real but unrelated).\n",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                147,
+                155
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/boxeph/inbox/MSG-1292-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "path": "agents/boxeph/inbox/MSG-1292-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/boxeph/inbox/MSG-1292-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_title": "agents/boxeph/inbox/MSG-1292-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "(2) s(kp) = (2/p)^k s(k); s(p) = (2/p) (Euler's criterion).\n(3) mod 3 the series is S = sin x.\n(4) Korselt-type criterion for squarefree odd part, extended by the audit's Lemma B (s(m+p(p-1)) = (2/p)s(m) mod p^2 for m >= 3) to cube-free odd parts. The universal residues are 1, 2, 3 = K1, no strong K2, the TRIANGLE.\n(5) Every Carmichael number, 2p, 3p and 3b(3b-2) (b, 3b-2 prime) is a Camion pseudoprime, including 4^q - 1 for Mersenne-Wagstaff double primes.\n(6) 21 passes; 341 FAILS at 31 (its residue there is the Wagstaff factor 11); 1023 = 3*341 = 2^10 - 1 passes. That is the owner's {2,3,11}: base 2, triangle 3, Wagstaff residue 11.\n(7) p^2 passes iff p^2 | D(p); below 10000 that is only p = 3, 13.\n(8) The tournament-count test is Fermat to the base 2^((n-1)/2); its universal residues are {1} only.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                438,
+                446
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                519,
+                527
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                622,
+                630
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/oracle/inbox/MSG-2410-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "path": "agents/oracle/inbox/MSG-2410-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/oracle/inbox/MSG-2410-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_title": "agents/oracle/inbox/MSG-2410-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "(2) s(kp) = (2/p)^k s(k); s(p) = (2/p) (Euler's criterion).\n(3) mod 3 the series is S = sin x.\n(4) Korselt-type criterion for squarefree odd part, extended by the audit's Lemma B (s(m+p(p-1)) = (2/p)s(m) mod p^2 for m >= 3) to cube-free odd parts. The universal residues are 1, 2, 3 = K1, no strong K2, the TRIANGLE.\n(5) Every Carmichael number, 2p, 3p and 3b(3b-2) (b, 3b-2 prime) is a Camion pseudoprime, including 4^q - 1 for Mersenne-Wagstaff double primes.\n(6) 21 passes; 341 FAILS at 31 (its residue there is the Wagstaff factor 11); 1023 = 3*341 = 2^10 - 1 passes. That is the owner's {2,3,11}: base 2, triangle 3, Wagstaff residue 11.\n(7) p^2 passes iff p^2 | D(p); below 10000 that is only p = 3, 13.\n(8) The tournament-count test is Fermat to the base 2^((n-1)/2); its universal residues are {1} only.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                438,
+                446
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                519,
+                527
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                622,
+                630
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/windesk/inbox/MSG-2277-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "path": "agents/windesk/inbox/MSG-2277-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/windesk/inbox/MSG-2277-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_title": "agents/windesk/inbox/MSG-2277-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "(2) s(kp) = (2/p)^k s(k); s(p) = (2/p) (Euler's criterion).\n(3) mod 3 the series is S = sin x.\n(4) Korselt-type criterion for squarefree odd part, extended by the audit's Lemma B (s(m+p(p-1)) = (2/p)s(m) mod p^2 for m >= 3) to cube-free odd parts. The universal residues are 1, 2, 3 = K1, no strong K2, the TRIANGLE.\n(5) Every Carmichael number, 2p, 3p and 3b(3b-2) (b, 3b-2 prime) is a Camion pseudoprime, including 4^q - 1 for Mersenne-Wagstaff double primes.\n(6) 21 passes; 341 FAILS at 31 (its residue there is the Wagstaff factor 11); 1023 = 3*341 = 2^10 - 1 passes. That is the owner's {2,3,11}: base 2, triangle 3, Wagstaff residue 11.\n(7) p^2 passes iff p^2 | D(p); below 10000 that is only p = 3, 13.\n(8) The tournament-count test is Fermat to the base 2^((n-1)/2); its universal residues are {1} only.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                438,
+                446
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                519,
+                527
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                622,
+                630
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/death-star/inbox/MSG-2229-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "path": "agents/death-star/inbox/MSG-2229-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/death-star/inbox/MSG-2229-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_title": "agents/death-star/inbox/MSG-2229-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "(2) s(kp) = (2/p)^k s(k); s(p) = (2/p) (Euler's criterion).\n(3) mod 3 the series is S = sin x.\n(4) Korselt-type criterion for squarefree odd part, extended by the audit's Lemma B (s(m+p(p-1)) = (2/p)s(m) mod p^2 for m >= 3) to cube-free odd parts. The universal residues are 1, 2, 3 = K1, no strong K2, the TRIANGLE.\n(5) Every Carmichael number, 2p, 3p and 3b(3b-2) (b, 3b-2 prime) is a Camion pseudoprime, including 4^q - 1 for Mersenne-Wagstaff double primes.\n(6) 21 passes; 341 FAILS at 31 (its residue there is the Wagstaff factor 11); 1023 = 3*341 = 2^10 - 1 passes. That is the owner's {2,3,11}: base 2, triangle 3, Wagstaff residue 11.\n(7) p^2 passes iff p^2 | D(p); below 10000 that is only p = 3, 13.\n(8) The tournament-count test is Fermat to the base 2^((n-1)/2); its universal residues are {1} only.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                438,
+                446
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                519,
+                527
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                622,
+                630
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/kind-pasteur/inbox/MSG-2752-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "path": "agents/kind-pasteur/inbox/MSG-2752-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/kind-pasteur/inbox/MSG-2752-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_title": "agents/kind-pasteur/inbox/MSG-2752-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "(2) s(kp) = (2/p)^k s(k); s(p) = (2/p) (Euler's criterion).\n(3) mod 3 the series is S = sin x.\n(4) Korselt-type criterion for squarefree odd part, extended by the audit's Lemma B (s(m+p(p-1)) = (2/p)s(m) mod p^2 for m >= 3) to cube-free odd parts. The universal residues are 1, 2, 3 = K1, no strong K2, the TRIANGLE.\n(5) Every Carmichael number, 2p, 3p and 3b(3b-2) (b, 3b-2 prime) is a Camion pseudoprime, including 4^q - 1 for Mersenne-Wagstaff double primes.\n(6) 21 passes; 341 FAILS at 31 (its residue there is the Wagstaff factor 11); 1023 = 3*341 = 2^10 - 1 passes. That is the owner's {2,3,11}: base 2, triangle 3, Wagstaff residue 11.\n(7) p^2 passes iff p^2 | D(p); below 10000 that is only p = 3, 13.\n(8) The tournament-count test is Fermat to the base 2^((n-1)/2); its universal residues are {1} only.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                438,
+                446
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                519,
+                527
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                622,
+                630
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-compute/inbox/MSG-2300-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "path": "agents/monad-compute/inbox/MSG-2300-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-compute/inbox/MSG-2300-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_title": "agents/monad-compute/inbox/MSG-2300-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "(2) s(kp) = (2/p)^k s(k); s(p) = (2/p) (Euler's criterion).\n(3) mod 3 the series is S = sin x.\n(4) Korselt-type criterion for squarefree odd part, extended by the audit's Lemma B (s(m+p(p-1)) = (2/p)s(m) mod p^2 for m >= 3) to cube-free odd parts. The universal residues are 1, 2, 3 = K1, no strong K2, the TRIANGLE.\n(5) Every Carmichael number, 2p, 3p and 3b(3b-2) (b, 3b-2 prime) is a Camion pseudoprime, including 4^q - 1 for Mersenne-Wagstaff double primes.\n(6) 21 passes; 341 FAILS at 31 (its residue there is the Wagstaff factor 11); 1023 = 3*341 = 2^10 - 1 passes. That is the owner's {2,3,11}: base 2, triangle 3, Wagstaff residue 11.\n(7) p^2 passes iff p^2 | D(p); below 10000 that is only p = 3, 13.\n(8) The tournament-count test is Fermat to the base 2^((n-1)/2); its universal residues are {1} only.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                438,
+                446
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                519,
+                527
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                622,
+                630
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-explorer/inbox/MSG-2160-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "path": "agents/monad-explorer/inbox/MSG-2160-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-explorer/inbox/MSG-2160-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_title": "agents/monad-explorer/inbox/MSG-2160-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "(2) s(kp) = (2/p)^k s(k); s(p) = (2/p) (Euler's criterion).\n(3) mod 3 the series is S = sin x.\n(4) Korselt-type criterion for squarefree odd part, extended by the audit's Lemma B (s(m+p(p-1)) = (2/p)s(m) mod p^2 for m >= 3) to cube-free odd parts. The universal residues are 1, 2, 3 = K1, no strong K2, the TRIANGLE.\n(5) Every Carmichael number, 2p, 3p and 3b(3b-2) (b, 3b-2 prime) is a Camion pseudoprime, including 4^q - 1 for Mersenne-Wagstaff double primes.\n(6) 21 passes; 341 FAILS at 31 (its residue there is the Wagstaff factor 11); 1023 = 3*341 = 2^10 - 1 passes. That is the owner's {2,3,11}: base 2, triangle 3, Wagstaff residue 11.\n(7) p^2 passes iff p^2 | D(p); below 10000 that is only p = 3, 13.\n(8) The tournament-count test is Fermat to the base 2^((n-1)/2); its universal residues are {1} only.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                438,
+                446
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                519,
+                527
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                622,
+                630
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-reviewer/inbox/MSG-2360-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "path": "agents/monad-reviewer/inbox/MSG-2360-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-reviewer/inbox/MSG-2360-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_title": "agents/monad-reviewer/inbox/MSG-2360-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "(2) s(kp) = (2/p)^k s(k); s(p) = (2/p) (Euler's criterion).\n(3) mod 3 the series is S = sin x.\n(4) Korselt-type criterion for squarefree odd part, extended by the audit's Lemma B (s(m+p(p-1)) = (2/p)s(m) mod p^2 for m >= 3) to cube-free odd parts. The universal residues are 1, 2, 3 = K1, no strong K2, the TRIANGLE.\n(5) Every Carmichael number, 2p, 3p and 3b(3b-2) (b, 3b-2 prime) is a Camion pseudoprime, including 4^q - 1 for Mersenne-Wagstaff double primes.\n(6) 21 passes; 341 FAILS at 31 (its residue there is the Wagstaff factor 11); 1023 = 3*341 = 2^10 - 1 passes. That is the owner's {2,3,11}: base 2, triangle 3, Wagstaff residue 11.\n(7) p^2 passes iff p^2 | D(p); below 10000 that is only p = 3, 13.\n(8) The tournament-count test is Fermat to the base 2^((n-1)/2); its universal residues are {1} only.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                438,
+                446
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                519,
+                527
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                622,
+                630
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-formalizer/inbox/MSG-2241-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "path": "agents/monad-formalizer/inbox/MSG-2241-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-formalizer/inbox/MSG-2241-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_title": "agents/monad-formalizer/inbox/MSG-2241-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "(2) s(kp) = (2/p)^k s(k); s(p) = (2/p) (Euler's criterion).\n(3) mod 3 the series is S = sin x.\n(4) Korselt-type criterion for squarefree odd part, extended by the audit's Lemma B (s(m+p(p-1)) = (2/p)s(m) mod p^2 for m >= 3) to cube-free odd parts. The universal residues are 1, 2, 3 = K1, no strong K2, the TRIANGLE.\n(5) Every Carmichael number, 2p, 3p and 3b(3b-2) (b, 3b-2 prime) is a Camion pseudoprime, including 4^q - 1 for Mersenne-Wagstaff double primes.\n(6) 21 passes; 341 FAILS at 31 (its residue there is the Wagstaff factor 11); 1023 = 3*341 = 2^10 - 1 passes. That is the owner's {2,3,11}: base 2, triangle 3, Wagstaff residue 11.\n(7) p^2 passes iff p^2 | D(p); below 10000 that is only p = 3, 13.\n(8) The tournament-count test is Fermat to the base 2^((n-1)/2); its universal residues are {1} only.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                438,
+                446
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                519,
+                527
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                622,
+                630
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-researcher/inbox/MSG-2352-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "path": "agents/monad-researcher/inbox/MSG-2352-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/agents/monad-researcher/inbox/MSG-2352-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "display_title": "agents/monad-researcher/inbox/MSG-2352-from-mac-mini-2026-10-21-mac-mini-2026-10-21-fanopsp-c.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "(2) s(kp) = (2/p)^k s(k); s(p) = (2/p) (Euler's criterion).\n(3) mod 3 the series is S = sin x.\n(4) Korselt-type criterion for squarefree odd part, extended by the audit's Lemma B (s(m+p(p-1)) = (2/p)s(m) mod p^2 for m >= 3) to cube-free odd parts. The universal residues are 1, 2, 3 = K1, no strong K2, the TRIANGLE.\n(5) Every Carmichael number, 2p, 3p and 3b(3b-2) (b, 3b-2 prime) is a Camion pseudoprime, including 4^q - 1 for Mersenne-Wagstaff double primes.\n(6) 21 passes; 341 FAILS at 31 (its residue there is the Wagstaff factor 11); 1023 = 3*341 = 2^10 - 1 passes. That is the owner's {2,3,11}: base 2, triangle 3, Wagstaff residue 11.\n(7) p^2 passes iff p^2 | D(p); below 10000 that is only p = 3, 13.\n(8) The tournament-count test is Fermat to the base 2^((n-1)/2); its universal residues are {1} only.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                438,
+                446
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                519,
+                527
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                622,
+                630
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/procgen_repunit_20260924.out",
+      "path": "05-knowledge/results/procgen_repunit_20260924.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/procgen_repunit_20260924.out",
+      "display_title": "05-knowledge/results/procgen_repunit_20260924.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "      sigma(2^k-1)              Mersenne (2^p-1 prime)      14   +0.402   0.085\n      sigma(2^k-1)              Wagstaff ((2^p+1)/3 prime)  16   -0.199   0.365\n      sigma(2^k-1)              base-3 ((3^p-1)/2 prime)     9   -0.559   0.085",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                112,
+                120
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "      tau of tail               Mersenne (2^p-1 prime)      14   +0.123   0.540\n      tau of tail               Wagstaff ((2^p+1)/3 prime)  16   -0.377   0.117\n      tau of tail               base-3 ((3^p-1)/2 prime)     9   -0.162   0.657",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                112,
+                120
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/special_primes_collatz_tournament_bridges_20261015.out",
+      "path": "05-knowledge/results/special_primes_collatz_tournament_bridges_20261015.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/special_primes_collatz_tournament_bridges_20261015.out",
+      "display_title": "05-knowledge/results/special_primes_collatz_tournament_bridges_20261015.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n  I = sum(legendre_symbol(a, p) for a in range(1, (p - 1) // 2 + 1))\n(2) 3*W_p - 1 = 2^p for odd p < 200: True; 3 | 2^m + 1 iff m odd (m < 200): True\n    Wagstaff primes (2^p+1)/3, prime p < 1300: p = [3, 5, 7, 11, 13, 17, 19, 23, 31, 43, 61, 79, 101, 127, 167, 191, 199, 313, 347, 701]\n(3) Woodall n 2^n - 1: n odd T-steps then n 3^n - 1 (2 <= n <= 60): True; Cullen n 2^n + 1 follows (OE)^j through 3^j n 2^(n-2j) + 1: True\n(4) 2^y + y^2 prime, y < 400: y = [1, 3, 9, 15, 21, 33]; all y = 1 or 3 mod 6: True\n    Leyland primes x^y + y^x below 1e+12: [(17, 3, 2), (593, 9, 2), (32993, 15, 2), (2097593, 21, 2), (8589935681, 33, 2)]",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                155,
+                163
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/tournament_pseudoprimes_camion_fermat_20261021.md",
+      "path": "05-knowledge/results/tournament_pseudoprimes_camion_fermat_20261021.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/tournament_pseudoprimes_camion_fermat_20261021.md",
+      "display_title": "05-knowledge/results/tournament_pseudoprimes_camion_fermat_20261021.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "     * this includes `4^q − 1` whenever `2^q − 1` and `(2^q+1)/3` are both prime;\n     * `21` is one; `341` is not, because its residue at 31 is the Wagstaff factor 11; `3·341 = 1023 = 2^10 − 1` is one;\n     * `p²` passes iff `p² | D(p)`, which below 10000 happens only for `p = 3, 13`.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                153,
+                161
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "| `3b(3b−2)`, `b ≥ 5`, both prime | `3` at both large primes, `1` at 3 | 195, 399, 1023, 1443, 4623, 12099, 16383, 19599 |\n| `4^q − 1` (Mersenne–Wagstaff double primes) | as above | `q = 5, 7, 13, 17, 19, 31, …`; among `2^k − 1`, `k ≤ 64`, exactly `k = 4, 6, 10, 12, 14, 26, 34, 38, 62` pass (audit) |\n| sporadic | uses `Z_p \\ {1,2,3}` | odd: 1239, 3765, 8401, 12019, 14317; even: 186, 530, 1898, 3290, 7202, 8282, 17066 |",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                153,
+                161
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/procgen_repunit_20260924_digits_rotation_repunits.md",
+      "path": "05-knowledge/results/procgen_repunit_20260924_digits_rotation_repunits.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/procgen_repunit_20260924_digits_rotation_repunits.md",
+      "display_title": "05-knowledge/results/procgen_repunit_20260924_digits_rotation_repunits.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  * `-1/3` is *not* a fixed point of `T` (`T(-1/3) = 0`). It is the fixed point of the ladder map `p -> 4p+1` and half of a Bernstein–Lagarias 2-cycle.\n  * The minus-trunk numbers are *all* `(2^k+1)/3` with `k` odd (`1, 3, 11, 43, 171, 683, ...`). The list `3, 11, 43, 683` gives only the prime ones (Wagstaff primes).\n* **OPEN:**",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                303,
+                311
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "| (c) \"the repunits of bases 2 and 4 are exactly Collatz's 2-adic fixed points `-1` and `-1/3`\" | **CORRECTED**. `-1` is `T`-fixed, but `T(-1/3) = 0`. The fixed-point reading is right one level up: `-1` and `1/3` (bases 2 and `-2`) are the known odd fixed points of the Bernstein–Lagarias conjugacy, and `-1/3` (base 4) lies on its known 2-cycle | §4.4, §4.5 |\n| (c) base `-2`: `(2^k+1)/3`, `k` odd, are the Jacobsthal/Wagstaff minus-trunk numbers `3, 11, 43, 683, ...` | **TRUE with a correction**: all odd `k` give minus-trunk numbers (`1, 3, 11, 43, 171, 683, ...`), `171 = 3^2*19` included; the listed ones are the primes. The even-length base `-2` repunits `-(4^j-1)/3` are the negative trunk of `3n-1` | §4.2 |\n| \"the dictionary: which bases and signs give which Collatz objects\" | **COMPLETE for even `b`**: shadowing lemma plus the orbit of `xi_b` for every even `|b| <= 64` on both sheets | §4.3, §4.4 |",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                423,
+                431
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-4473-collatz-digit-chains-rotation-repunits.md",
+      "path": "01-canon/theorems/THM-4473-collatz-digit-chains-rotation-repunits.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-4473-collatz-digit-chains-rotation-repunits.md",
+      "display_title": "01-canon/theorems/THM-4473-collatz-digit-chains-rotation-repunits.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  * For even `b`, `T` acts on these limits by the Möbius map `b -> -(b+2)/(b-4)`.\n* **The parity-vector map** `Q(x) = sum_j (T^j x mod 2) 2^j` is the inverse of the Bernstein–Lagarias conjugacy.\n  * It fixes `0`, `-1` and `1/3`.\n  * It has the 2-cycle `{1, -1/3}`.\n  * It also has the **odd 2-cycle `{-1/5, 5/7}`**. The orbits are `-1/5 -> 1/5 -> 4/5 -> 2/5 -> 1/5 -> ...`, with parity word `1(100)^inf = 5/7`, and `5/7 -> 11/7 -> 20/7 -> 10/7 -> 5/7`, with parity word `(1100)^inf = -1/5`.\n  * Whether this cycle appears in the literature after Bernstein–Lagarias 1996 (for example Hotzel 2003) is UNVERIFIED.\n* **The lengths of repunit primes.** Treating them (Mersenne, Wagstaff, base-3 and base-10 exponents) as hidden Collatz structure is NUMEROLOGY: 24 tests, none significant. What is real is that the length of the binary all-ones tail of `n` equals the length of its rising run, `v_2(n+1)`.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                678,
+                686
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/procgen_repunit_20260924_dictionary.py",
+      "path": "04-computation/experiments/procgen_repunit_20260924_dictionary.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/procgen_repunit_20260924_dictionary.py",
+      "display_title": "04-computation/experiments/procgen_repunit_20260924_dictionary.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        T^(k+1)(2^k-1) = (3^k-1)/2;  trunk (4^k-1)/3: T = 2^(2k-1), sigma = 2, tau = 2k;\n        Wagstaff/minus-trunk (2^k+1)/3, k odd: T = 2^(k-1)+1, T^(1+2i) = 3^i 2^(k-1-2i)+1, sigma = 5 (k >= 5),\n        minus sheet T_-(W) = 2^(k-1); base-3 repunits: sigma = 1 (k even), 2 (k odd);",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                97,
+                105
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "KM = int(os.environ.get(\"PR_DICT_KM\", \"12000\"))       # Mersenne family range\nKW = int(os.environ.get(\"PR_DICT_KW\", \"12000\"))       # Wagstaff family range\nK3 = int(os.environ.get(\"PR_DICT_K3\", \"6000\"))        # base-3 repunit family range",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                134,
+                142
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/procgen_brackets_20260924.out",
+      "path": "05-knowledge/results/procgen_brackets_20260924.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/procgen_brackets_20260924.out",
+      "display_title": "05-knowledge/results/procgen_brackets_20260924.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "     k <= 400 with (3^k - 1)/2 a square: [1, 2, 5] -> values [1, 4, 121]  (Ljunggren 1943: these are all, for every k)\n     E-graph climb from 1 (x -> 3x+1): 1, 4, 13, 40, 121, 364, ... = (3^k-1)/2; its odd squares are 1 and 121 = 11^2 only.\n     brackets B_m = (3^a, (3^(a+1)-1)/2] for m < 10^5: [5] (B_5 = (81,121]; unique for all m by Ljunggren)\n     minus trunk (2^(2n+1)+1)/3: [1, 3, 11, 43, 171, 683, 2731, 10923] ; its primes (Wagstaff): [3, 11, 43, 683, 2731, 43691, 174763, 2796203]\n     trunk members in S_2: [3, 11] ; all odd members of S_2: [3, 11]\n     => S_2's odd part {3,11} equals the minus trunk inside (1, 12.5] because (1,12.5] holds only the\n        trunk values 1, 3, 11; a random 2-subset of the odd primes {3,5,7,11} hits {3,11} with chance 1/6.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                434,
+                442
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/tournament_pseudoprimes_audit_20261021.md",
+      "path": "05-knowledge/results/tournament_pseudoprimes_audit_20261021.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/tournament_pseudoprimes_audit_20261021.md",
+      "display_title": "05-knowledge/results/tournament_pseudoprimes_audit_20261021.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "* **ANALOGY items.** The ANALOGY and DICTIONARY items of note §7 (7/21/341 cyclotomic, `{2,3,11}`, Fano/tetrahedron, sunflowers) are correctly typed. Arithmetic checked:\n  * `Φ_3(2) = 7`, `Φ_3(4) = 21 = 7·3`, `Φ_5(4) = 341`;\n  * Cipolla residues;\n  * Mersenne primes `≡ 7 (mod 8)` and Wagstaff primes `≡ 3 (mod 8)`;\n  * `F_7 \\ e = M(K_4)` with stabiliser `S_4`;\n  * arXiv:2610.26686 is Bucić–He–Lee, \"Proof of the Erdős–Szemerédi sunflower conjecture\" (the bound `3(2 − 1/(16k³))^n` was not checked).\n  * One detail: in `C_3^[k]` every line is a cyclic triangle, but not every cyclic triangle is a line (e.g. `(0,0), (1,0), (2,1)`). The note's wording is consistent with this, but should not be read as a bijection.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                292,
+                300
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/special_primes_collatz_tournament_bridges_20261015.py",
+      "path": "04-computation/experiments/special_primes_collatz_tournament_bridges_20261015.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/special_primes_collatz_tournament_bridges_20261015.py",
+      "display_title": "04-computation/experiments/special_primes_collatz_tournament_bridges_20261015.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    members 2, 40487, 6692367337 and that no other prime below LIMIT is non-generous.\n(2) Wagstaff numbers W_p = (2^p + 1)/3 (p odd) are exactly the odd n with 3n - 1 a power of 2: the first odd\n    ancestors of 1 under the 3x-1 map, as (4^k - 1)/3 are under 3x+1.  Check the 3x-1 itinerary.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                90,
+                98
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "    print(f'(2) 3*W_p - 1 = 2^p for odd p < 200: {ok}; 3 | 2^m + 1 iff m odd (m < 200): {conv}')\n    print(f'    Wagstaff primes (2^p+1)/3, prime p < 1300: p = {wag}')\n",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                113,
+                121
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/procgen_brackets_20260924_pairings_transitions.md",
+      "path": "05-knowledge/results/procgen_brackets_20260924_pairings_transitions.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/procgen_brackets_20260924_pairings_transitions.md",
+      "display_title": "05-knowledge/results/procgen_brackets_20260924_pairings_transitions.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n**1.6 Is `{2,3,11}` special beyond `m <= 2`? No (NUMEROLOGY), with one real but unrelated fact.**\n- **Wieferich.** `11` is a base-3 Wieferich prime (`3^5 = 2*11^2 + 1`; below `2*10^6` the list is `11, 1006003`). The solutions of `b^(p-1) = 1 (mod p^2)` are the `p-1` roots of unity mod `p^2`, one per nonzero class mod `p`. So a fixed base is Wieferich for `p` with chance about `1/p`, a 1-in-11 event. Smallest Wieferich bases: `2 -> 5`, `3 -> 8`, `5 -> 7`, `7 -> 18`, `11 -> 3`, `13 -> 19`.\n- **Trunk.** `3, 11` are the minus-trunk (Wagstaff) numbers `(2^(2n+1)+1)/3` inside `(1, 12.5]`. That window holds only the trunk values `1, 3, 11`, and a random pair of the odd primes `{3,5,7,11}` equals `{3,11}` with chance `1/6`.\n- **Ljunggren (REAL, unrelated).** `(3^k-1)/2` is a square only for `k = 1, 2, 5` (Ljunggren 1943; checked `k <= 400`). So `B_5 = (81,121] = (3^4, (3^5-1)/2]` is the unique bracket bounded by a power of 3 and a base-3 repunit. The `E`-graph climb `1 -> 4 -> 13 -> 40 -> 121` meets an odd square `> 1` only at `11^2`. This concerns `11^2`, not `11 in B_2`, and no mechanism ties it to the escape property.\n- **Figurate identities at the bracket tops (exact).** `T^2((2m+1)^2) = 3m^2+3m+1 = (m+1)^3 - m^3`: odd squares reach the centred hexagonal numbers in two steps, so they have stopping time 2. Likewise `U((2m+1)^2) = 6m(m+1)+1`, a star number.\n",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                536,
+                544
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/procgen_repunit_20260924_collatz_repunits.c",
+      "path": "04-computation/experiments/procgen_repunit_20260924_collatz_repunits.c",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/procgen_repunit_20260924_collatz_repunits.c",
+      "display_title": "04-computation/experiments/procgen_repunit_20260924_collatz_repunits.c",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": " *\n * Collatz statistics of repunit families, as functions of the length k.\n *   family M  : n = 2^k - 1          (base-2 repunits, Mersenne numbers), k = 2..K\n *   family W  : n = (2^k + 1)/3      (base -2 repunits of odd length, Wagstaff / minus-trunk numbers), odd k = 3..K\n *   family R3 : n = (3^k - 1)/2      (base-3 repunits), k = 2..K\n *   family R10: n = (10^k - 1)/9     (base-10 repunits), k = 2..K\n * For every n the shortcut orbit T(x) = x/2, (3x+1)/2 is followed to 1 (Syracuse-compressed) and one line",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                231,
+                239
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/procgen_brackets_20260924_escape_sets.py",
+      "path": "04-computation/experiments/procgen_brackets_20260924_escape_sets.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/procgen_brackets_20260924_escape_sets.py",
+      "display_title": "04-computation/experiments/procgen_brackets_20260924_escape_sets.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "trunk_minus = [(2**(2 * n + 1) + 1) // 3 for n in range(0, 12)]\ntrunk_plus = [(4**n - 1) // 3 for n in range(1, 12)]\nisp = lambda x: x > 1 and all(x % d for d in range(2, math.isqrt(x) + 1))\nprint(\"     minus trunk (2^(2n+1)+1)/3:\", trunk_minus[:8], \"; its primes (Wagstaff):\", [t for t in trunk_minus if isp(t)])\nprint(\"     trunk members in S_2:\", [t for t in trunk_minus + trunk_plus if t in S_rational(Fr(2), 100)],\n      \"; all odd members of S_2:\", [n for n in S_rational(Fr(2), 100) if n % 2])\nprint(\"     => S_2's odd part {3,11} equals the minus trunk inside (1, 12.5] because (1,12.5] holds only the\")",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                265,
+                273
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/collatz_octave_memory_bias_energy_budgets_20261015.md",
+      "path": "05-knowledge/results/collatz_octave_memory_bias_energy_budgets_20261015.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/collatz_octave_memory_bias_energy_budgets_20261015.md",
+      "display_title": "05-knowledge/results/collatz_octave_memory_bias_energy_budgets_20261015.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "audits ([incoming-work audit](collatz_incoming_audit_20261015b.md), [floor residues](collatz_conductor_wiener_20261015d.md));\nledger MISTAKE-618 and MISTAKE-620 (theirs), MISTAKE-619 and MISTAKE-621 (this session's).\n\n**Owner's prompt (verbatim).** \"keep working for a long session of next targets and think the mean-current and refinement-energy bounds, preserving source and integer clock. pull in recent repo work and use Q–Pell and golden-tree controls to close the dyadic energy gaps, merge in new ideas on these and other problems and pursue whatever most mathematically relevant for major proof progress. consider the connection between the geometric Langlands correspondence and S-duality, a property of certain quantum field theories. also think of the field of rational functions on the Riemann sphere and the gijswijt sequence. also merge in the 15 supersingular primes, stern sprimes, non-generous primes, wagstaff primes, woodall primes and cullen primes and leyland primes. adjust targets as necessary and be free in your creative exploration and conjecture proposal and investigation\"\n\nThe special primes, curling numbers and Langlands threads are in the companion note [special_primes_curling_genus_zero_langlands_20261015.md](special_primes_curling_genus_zero_langlands_20261015.md).\n",
+          "matches": [
+            {
+              "text": "wagstaff",
+              "indices": [
+                920,
+                928
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/session25_spectrum_wiring_20261021/session25-congruence-review/REVIEW.md",
+      "path": "05-knowledge/results/session25_spectrum_wiring_20261021/session25-congruence-review/REVIEW.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/session25_spectrum_wiring_20261021/session25-congruence-review/REVIEW.md",
+      "display_title": "05-knowledge/results/session25_spectrum_wiring_20261021/session25-congruence-review/REVIEW.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "- n=1023: s(n)=2, c(n)=2 modulo1023.\n- n=9: s(n)=c(n)=7 modulo9, explicitly covering the exceptional p=3 endpoint of “every3p”.\n\nThe families 2p, 3p (p odd prime), Carmichael numbers, and 3b(3b-2) with b>=5 and both displayed factors prime are valid. For 3p with p>=5, use CRT; p=3 is the separately checked finite n=9 case. The Mersenne–Wagstaff conditional family is valid when its hypotheses and b>=5 hold; q=3 lies outside that family and gives63, which must be treated separately if included. Small-prime “Z_p contains {1,2,3}” language should instead restrict to the representatives that actually lie in1..p-1; at p=3 the representative3 does not exist.\n\nD(r)>0 for r>=4 is justified because all circulants are strong and a nonregular strong tournament exists: substitute a transitive tournament of size r-2 into one vertex of a directed triangle. This is strong and nonregular.\n",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                344,
+                352
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/unit_lift_clock_20261015a.json",
+      "path": "05-knowledge/results/unit_lift_clock_20261015a.json",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/unit_lift_clock_20261015a.json",
+      "display_title": "05-knowledge/results/unit_lift_clock_20261015a.json",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "      \"least_primitive_root\": 5,\n      \"delay\": 2\n    },\n    \"wagstaff\": [\n      {\n        \"q\": 3,\n        \"prime\": 3,",
+          "matches": [
+            {
+              "text": "wagstaff",
+              "indices": [
+                62,
+                70
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md",
+      "path": "01-canon/theorems/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md",
+      "display_title": "01-canon/theorems/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "---\nid: THM-4746\ntitle: \"Camion pseudoprimes. Let s(m) be the number of strong labelled tournaments on m vertices (equivalently Hamiltonian by Camion's theorem for m >= 3; s(1) = 1 uses the strong-singleton convention) (A054946) and c(m) the number of circulant tournaments on Z_m (2^((m-1)/2) for odd m, 0 for even m >= 2). (1) For every odd prime p and every m >= 1, s(m+p-1) = (2/p) s(m) (mod p), and the same holds for D = s - c. (2) Hence s(kp) = (2/p)^k s(k) (mod p) and s(p) = (2/p) (mod p): the strong count obeys Euler's criterion. (3) Modulo 3 the strong exponential generating function is sin x; for odd n the moduli 3 and 5 impose no condition. (4) Korselt-type criterion: if n is composite with squarefree odd part, then s(n) = c(n) (mod n) iff p divides D(r_p) for every odd prime p | n, where r_p = n (mod p-1) taken in 1..p-1. (5) D(1) = D(2) = D(3) = 0 (K1, no strong K2, the triangle), so every Carmichael number, every 2p and every 3p is a Camion pseudoprime, and so is every 3ab with b >= 5 and a = 3b-2 both prime (both large primes in the triangle class 3, the factor 3 in class 1), in particular 4^q - 1 whenever the Mersenne number 2^q - 1 and the Wagstaff number (2^q+1)/3 are both prime; 21 = 3*7 is one and the base-2 pseudoprime 341 = 11*31 is not (its residue at 31 is the Wagstaff factor 11, and 31 does not divide D(11)), while 3*341 = 1023 = 2^10 - 1 is. (6) For odd n the tournament-count test 2^C(n,2) = c(n) (mod n) is the Fermat test to the base c(n) = 2^((n-1)/2); the universal residue sets of the two tests differ exactly by the triangle class 3. (7) Modulo p^2 (Lemma B of the independent audit): s(m + p(p-1)) = (2/p) s(m) (mod p^2) for all m >= 3; hence p^2 is a Camion pseudoprime iff p^2 | D(p) (only p = 3, 13 below 10000), the factor 9 never obstructs, and the criterion extends to cube-free odd parts. (8) The same quasi-periodicity holds for strong semicomplete digraphs (with (3/p), p >= 5) and, for m >= 2, for connected labelled graphs (Mani-Stones 2016; audit Lemma C): it is a property of the exponential family generated by 2^C(m,2) modulo p, not of the linear condensation. (9) Prime-power towers (with the Session25 prime-power law): D(p^a) = (2/p) D(p^(a-1)) (mod p^a), so the exponents a with p^a a Camion pseudoprime form an initial segment {1, ..., h(p)}, and h(p) equals the eventual (frozen) value of v_p(D(p^a)); for every odd prime p <= 10^4 the odd prime powers that are Camion pseudoprimes are exactly the primes, 9 and 169, mirroring the Wieferich bound for base-2 Fermat pseudoprimes.\"\nstatus: >\n  PROVED: statements 1-8 (elementary). Statement 1 is proved by a group-ring argument in the Hurwitz ring of binomial\n  convolution over F_p or F_(p^2); statement 2 also by the rotation action; statement 3 by an integer identity;\n  statement 4 by the Chinese remainder theorem, statement 1 and the free action of 2-subgroups of rotations.",
+          "matches": [
+            {
+              "text": "Wagstaff",
+              "indices": [
+                1172,
+                1180
+              ]
+            },
+            {
+              "text": "Wagstaff",
+              "indices": [
+                1302,
+                1310
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

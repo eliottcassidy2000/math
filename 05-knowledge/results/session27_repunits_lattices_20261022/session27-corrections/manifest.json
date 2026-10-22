@@ -1,0 +1,48 @@
+{
+  "source_head": "e762f976d9d70c0f38e0303b12bd31b21aeaba34",
+  "policy": "No repository or Git mutations; absent worktree files read from pinned HEAD blobs. Recheck hashes before applying.",
+  "files": [
+    {
+      "path": "01-canon/theorems/THM-227-knacci-mersenne.md",
+      "source": "worktree",
+      "original_sha256": "9ef035ba62a96c0b20c5909e92196522222888174bdbf322553c8671ee15f57a",
+      "proposed_sha256": "10c453491199d14d95281790c1262752833da8347cf9926471692685f7993387",
+      "git_blob_oid": "f85b7dae891835a0b98ca1b5a6c967b7d34309fd"
+    },
+    {
+      "path": "07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+      "source": "worktree",
+      "original_sha256": "558aeb7bec4cecedd767d516fb0a262a49df76b8b5655237a39c54f9c1c2c141",
+      "proposed_sha256": "f5368f1695aff406178f8ce9577c76d400d7bc9a26c80c321012646860d6fb98",
+      "git_blob_oid": "6fe428459c822f7542369d4b8ac04f5ddd441bc4"
+    },
+    {
+      "path": "07-reflections/the-modular-tournament.md",
+      "source": "worktree",
+      "original_sha256": "37e0afbfa76591bc8aafb14bf4340e80e48680f034a1127bc5d4cd539b6a96b0",
+      "proposed_sha256": "0de34619059458f715bc86e66bf91cefbbc8f6beb721a273b1df55d99e4b57b0",
+      "git_blob_oid": "03a0c2d41388d2180059ba013f02d9869b358e16"
+    },
+    {
+      "path": "04-computation/repunit_gap_synthesis.py",
+      "source": "HEAD blob",
+      "original_sha256": "09e7841365c3b2c115fb549b74ef141c7f4d437423869bca2267056972da25f5",
+      "proposed_sha256": "a565c861ead4c6fbd9b1a67737aca97e81de4db75185e585759425172c3f103e",
+      "git_blob_oid": "a4ee5c46e864771d1fe51373219122af37bb0b20"
+    },
+    {
+      "path": "05-knowledge/results/repunit_gap_synthesis.out",
+      "source": "worktree",
+      "original_sha256": "bd74bb4851648a6399eb7214adaee341aa6f57a7e1cab7cdfd84c7d81d0c35e7",
+      "proposed_sha256": "46de020f517b5709e6d9bb75a2acdf73c46e1ad5be2db08a61a229029d722da5",
+      "git_blob_oid": "d12902aac15beaedf519e005e86764ae0588c8ce"
+    },
+    {
+      "path": "04-computation/ramanujan_near_miss_kpc1.py",
+      "source": "HEAD blob",
+      "original_sha256": "e9601a1add2fc71d554b4f3229c3ac89f7db57aa50dde580a71c94ad90237026",
+      "proposed_sha256": "5ef271938cd1f07d908468064a67f3aa393abfc23edeb041d7623f77221bae71",
+      "git_blob_oid": "f07102825c638e26d88fbf00b0c06314446c6c9a"
+    }
+  ]
+}

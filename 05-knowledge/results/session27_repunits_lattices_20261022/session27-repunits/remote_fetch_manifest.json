@@ -1,0 +1,20 @@
+[
+  {
+    "path": "04-computation/experiments/repunits_hyp9357_20261021/audit_S51/REPORT.md",
+    "sha": "58dcb90118696f7c222fd6670e56b86e3dee871c",
+    "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/experiments/repunits_hyp9357_20261021/audit_S51/REPORT.md",
+    "ref": "54bf96642934c6cdf01f02e364f3bba00892ae22"
+  },
+  {
+    "path": "04-computation/witt_necklace_s90at.py",
+    "sha": "9b48272fe70d4642746ab41a5dac57d488e1ee63",
+    "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/witt_necklace_s90at.py",
+    "ref": "54bf96642934c6cdf01f02e364f3bba00892ae22"
+  },
+  {
+    "path": "04-computation/mersenne_cyclotomic_ocf.py",
+    "sha": "933f238d81f611def2a048d28d2859b54a2ea8a9",
+    "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/mersenne_cyclotomic_ocf.py",
+    "ref": "54bf96642934c6cdf01f02e364f3bba00892ae22"
+  }
+]

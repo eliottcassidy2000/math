@@ -54,9 +54,9 @@ t(k+1) = sum_{m=1}^{k} t(m) = sum_{m=1}^{k} (2^m - 1) = (2^{k+1} - 2) - k = 2^{k
 
 ## Connections
 
-1. **Forbidden H values:** Tr(M_3^3) = 7, the first forbidden Hamiltonian path count. The forbidden value of the k-nacci theory at power k is the k-th Mersenne number.
+1. **Trace values versus Hamiltonian counts:** Tr(M_3^3) = 7 coincides with a forbidden Hamiltonian path count. The general trace value Tr(M_k^k) = 2^k - 1 is not generally forbidden as a Hamiltonian count: 31, 63 and 127 are attained (MISTAKE-028; [THM-344](THM-344-n8-h63-complete-omega.md); [THM-4748](THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md)). The trace identity does not imply a tournament-spectrum obstruction.
 
-2. **Mersenne primes:** When 2^k - 1 is prime (k = 2, 3, 5, 7, 13, 17, 19, ...), the forbidden value is a Mersenne prime.
+2. **Mersenne primes:** When 2^k - 1 is prime (k = 2, 3, 5, 7, 13, 17, 19, ...), the diagonal trace value is a Mersenne prime; this arithmetic description does not imply a forbidden Hamiltonian count.
 
 3. **Cayley line:** tanh(k*ln(2)/2) = (2^k - 1)/(2^k + 1). The numerator of the Cayley address of 2^k is Tr(M_k^k).
 

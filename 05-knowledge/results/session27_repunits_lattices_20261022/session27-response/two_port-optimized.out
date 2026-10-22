@@ -1,0 +1,6 @@
+Exact sidecar recovery and triangle curl checks PASS: 97 cores
+Cyclic vertex-transitive control: {'k': 3, 'H': 3, 'S': [1, 1, 1], 'E': [1, 1, 1], 'A': [4, 4, 4], 'D01': -2}
+Cyclic vertex-transitive control: {'k': 5, 'H': 15, 'S': [3, 3, 3, 3, 3], 'E': [3, 3, 3, 3, 3], 'A': [24, 24, 24, 24, 24], 'D01': -2}
+Cyclic vertex-transitive control: {'k': 7, 'H': 175, 'S': [25, 25, 25, 25, 25, 25, 25], 'E': [25, 25, 25, 25, 25, 25, 25], 'A': [284, 284, 284, 284, 284, 284, 284], 'D01': -18}
+Hostile to D_uv=±2H(Q−{u,v}): k2 arc0→1, D01=0 but H(empty)=1, so RHS=±2.
+Orientation hostile: transitive3 arc0→2 has J02=-2, opposite to its arc; adjacent arc currents vanish.

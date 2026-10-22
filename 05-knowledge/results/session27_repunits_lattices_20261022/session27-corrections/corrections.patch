@@ -1,0 +1,95 @@
+--- a/01-canon/theorems/THM-227-knacci-mersenne.md
++++ b/01-canon/theorems/THM-227-knacci-mersenne.md
+@@ -54,9 +54,9 @@
+ 
+ ## Connections
+ 
+-1. **Forbidden H values:** Tr(M_3^3) = 7, the first forbidden Hamiltonian path count. The forbidden value of the k-nacci theory at power k is the k-th Mersenne number.
++1. **Trace values versus Hamiltonian counts:** Tr(M_3^3) = 7 coincides with a forbidden Hamiltonian path count. The general trace value Tr(M_k^k) = 2^k - 1 is not generally forbidden as a Hamiltonian count: 31, 63 and 127 are attained (MISTAKE-028; [THM-344](THM-344-n8-h63-complete-omega.md); [THM-4748](THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md)). The trace identity does not imply a tournament-spectrum obstruction.
+ 
+-2. **Mersenne primes:** When 2^k - 1 is prime (k = 2, 3, 5, 7, 13, 17, 19, ...), the forbidden value is a Mersenne prime.
++2. **Mersenne primes:** When 2^k - 1 is prime (k = 2, 3, 5, 7, 13, 17, 19, ...), the diagonal trace value is a Mersenne prime; this arithmetic description does not imply a forbidden Hamiltonian count.
+ 
+ 3. **Cayley line:** tanh(k*ln(2)/2) = (2^k - 1)/(2^k + 1). The numerator of the Cayley address of 2^k is Tr(M_k^k).
+ 
+--- a/07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md
++++ b/07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md
+@@ -1,3 +1,7 @@
++> **STATUS CORRECTION — 2026-10-22, Session27.** The historical text below is preserved as provenance, not as a theorem of nonmodularity. Its p=19 and p=23 factorizations refute the proposed uniform split-prime pattern behind r(11)=1729. They do not rule out other modular interpretations, prove an asymptotic limit, or establish that Paley tournaments universally maximize H. In particular, lack of small-prime smoothness does not imply distance from every special j-value or absence of all arithmetic structure. The exact identity r(11)=1729 and the numerical table are unaffected. The normalized R(p)=H(T_p)2^(p-1)/p! is different from r(p)=H(T_p)/|Aut(T_p)|; an asserted R-limit cannot be called an r-limit. THM-438 (01-canon/theorems/THM-438-paley-cluster-integrals-are-catalan.md) separately claims R(p)→e; this narrow correction neither audits nor retracts that theorem. The later fixed-H rational-series modular obstruction also has a different sequence and explicit hypotheses, not a blanket prohibition on future bridges. The unbenchmarked minutes-scale Held–Karp estimate at the end is not a certified runtime guarantee; standard subset DP has exponential work and memory.
++>
++> **Strongest conclusion established here:** r(11)=1729=j(i)+1 is an exact numerical identity, but its suggested all-split factorization explanation fails at p=19. These tests do not settle whether a differently defined modular map exists. Claims below of “no modular structure,” a universally closed question, universal Paley maximality, or governance by e are superseded as conclusions of this reflection.
++
+ # The 1729 resonance is isolated: the canonical tournament ratio has no modular structure
+ 
+ *monad-explorer-2026-06-07 (deep-research lane). Builds on `the-tessellation.md` (Layer 6,
+--- a/07-reflections/the-modular-tournament.md
++++ b/07-reflections/the-modular-tournament.md
+@@ -1,3 +1,5 @@
++> **STATUS CORRECTION — 2026-10-22, Session27.** The modular-group interpretation below is a historical analogy, not a constructed PSL(2,Z) action on finite tournaments. Complement/reversal is an involution, but adding a vertex increases order and is not a bijection of the set of ordinary finite tournaments (nor even a uniquely specified operation without an incidence rule). A group generator must act bijectively. Separate order-two and order-three analogies do not specify common operators satisfying S²=(ST)³=1. Vertex addition also cannot fix a finite transitive tournament. Consequently the asserted action, cusp identification, and “tournament theory IS modular group theory” conclusion are not established. Numerical identities such as 1729=1728+1 survive, but do not define an equivariant map or a modular transformation law for Delta_T. This refutes this literal proposed action, not all possible enriched spaces, different actions, or future tournament/modular bridges. The historical prose below is retained for provenance.
++
+ # The Modular Tournament
+ 
+ **Session:** kind-pasteur-2026-03-21-S18e
+--- a/04-computation/repunit_gap_synthesis.py
++++ b/04-computation/repunit_gap_synthesis.py
+@@ -1,3 +1,19 @@
++# STATUS CORRECTION — 2026-10-22, Session27. HISTORICAL EXPERIMENT, NOT A GLOBAL COMPLETENESS PROOF.
++# The old text/output below is preserved unchanged after this warning. Its proposed
++# alpha=(T-13,3,1) gives H=1+2(T-13)+4*3+8=2T-5, not 2T+1.
++# Even repairing the arithmetic to alpha=(T-10,3,1) does not prove realization:
++# an independent triple forces at least three singleton cycles and three pairs,
++# so alpha_3>=1 implies alpha_1>=3 and alpha_2>=3. In particular alpha=(0,3,1)
++# is impossible. The threshold H>=27 (T>=13) follows from the full (1+x)^3
++# substructure, not from the cubic coefficient alone, and is only necessary.
++# The valid identities 7=Phi_3(2), 21=Phi_3(4), and the all-order omissions 7,21
++# survive. Claims below that all larger odd H occur or that there are exactly two
++# gaps are unsupported; global H-spectrum completeness remains OPEN, as recorded
++# in THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md.
++# The displayed H mod 8 inference also overstates the separate coefficients:
++# H=21 mod 8 gives alpha_1+2*alpha_2=2 mod 4, not alpha_1=2 mod 4 AND alpha_2 odd.
++# No historical computational branch or old output line has been rewritten.
++
+ """
+ repunit_gap_synthesis.py -- kind-pasteur-2026-03-14-S66
+ 
+--- a/05-knowledge/results/repunit_gap_synthesis.out
++++ b/05-knowledge/results/repunit_gap_synthesis.out
+@@ -1,3 +1,20 @@
++STATUS CORRECTION — 2026-10-22, Session27. HISTORICAL EXPERIMENT, NOT A GLOBAL COMPLETENESS PROOF.
++The old text/output below is preserved unchanged after this warning. Its proposed
++alpha=(T-13,3,1) gives H=1+2(T-13)+4*3+8=2T-5, not 2T+1.
++Even repairing the arithmetic to alpha=(T-10,3,1) does not prove realization:
++an independent triple forces at least three singleton cycles and three pairs,
++so alpha_3>=1 implies alpha_1>=3 and alpha_2>=3. In particular alpha=(0,3,1)
++is impossible. The threshold H>=27 (T>=13) follows from the full (1+x)^3
++substructure, not from the cubic coefficient alone, and is only necessary.
++The valid identities 7=Phi_3(2), 21=Phi_3(4), and the all-order omissions 7,21
++survive. Claims below that all larger odd H occur or that there are exactly two
++gaps are unsupported; global H-spectrum completeness remains OPEN, as recorded
++in THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md.
++The displayed H mod 8 inference also overstates the separate coefficients:
++H=21 mod 8 gives alpha_1+2*alpha_2=2 mod 4, not alpha_1=2 mod 4 AND alpha_2 odd.
++No historical computational branch or old output line has been rewritten.
++
++--- BEGIN PRESERVED HISTORICAL OUTPUT ---
+ ======================================================================
+ THE REPUNIT GAP THEOREM
+ Permanent gaps as repunits in power-of-2 bases
+--- a/04-computation/ramanujan_near_miss_kpc1.py
++++ b/04-computation/ramanujan_near_miss_kpc1.py
+@@ -1,4 +1,15 @@
+ #!/usr/bin/env python3
++# STATUS CORRECTION — 2026-10-22, Session27: the historical commentary printed
++# below is preserved, but two claims in its coda are superseded here.
++# (1) X^3+Y^3=Z^3+W^3 is a homogeneous cubic surface, not a quartic;
++#     it must not be identified with the separately associated elliptic K3 surface.
++# (2) Finiteness of the Eisenstein unit group does not force an arbitrary integral
++#     residual x^3+y^3-z^3 to be a unit: 1^3+1^3-2^3=-6. Only if a residual
++#     is ASSUMED to be both a rational integer and a unit is it necessarily +/-1.
++# The exact recurrence, reversible integer extension, n=-1 taxicab identity,
++# and tensor-cube Cayley-Hamilton verification are unchanged. These corrections
++# concern commentary, not the recurrence proof or the separate cited K3 result.
++
+ # ramanujan_near_miss_kpc1.py -- session kind-pasteur-2026-06-10-S1, Thread D (HYP-2370)
+ # Ramanujan's near-miss family (lost notebook; cf. Hirschhorn, Math. Mag. 68 (1995);
+ # Ono & Trebat-Leder, "The 1729 K3 surface", Res. Number Theory (2015/16), arXiv:1510.00735).

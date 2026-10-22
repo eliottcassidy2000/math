@@ -1,3 +1,5 @@
+> **STATUS CORRECTION — 2026-10-22, Session27.** The modular-group interpretation below is a historical analogy, not a constructed PSL(2,Z) action on finite tournaments. Complement/reversal is an involution, but adding a vertex increases order and is not a bijection of the set of ordinary finite tournaments (nor even a uniquely specified operation without an incidence rule). A group generator must act bijectively. Separate order-two and order-three analogies do not specify common operators satisfying S²=(ST)³=1. Vertex addition also cannot fix a finite transitive tournament. Consequently the asserted action, cusp identification, and “tournament theory IS modular group theory” conclusion are not established. Numerical identities such as 1729=1728+1 survive, but do not define an equivariant map or a modular transformation law for Delta_T. This refutes this literal proposed action, not all possible enriched spaces, different actions, or future tournament/modular bridges. The historical prose below is retained for provenance.
+
 # The Modular Tournament
 
 **Session:** kind-pasteur-2026-03-21-S18e

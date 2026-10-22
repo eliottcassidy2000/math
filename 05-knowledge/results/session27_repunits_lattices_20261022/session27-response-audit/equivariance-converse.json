@@ -1,0 +1,5 @@
+{
+  "checks": 160,
+  "verdict": "PASS",
+  "method": "independent full permutation enumeration"
+}

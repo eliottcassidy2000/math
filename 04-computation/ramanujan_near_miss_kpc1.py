@@ -1,4 +1,15 @@
 #!/usr/bin/env python3
+# STATUS CORRECTION — 2026-10-22, Session27: the historical commentary printed
+# below is preserved, but two claims in its coda are superseded here.
+# (1) X^3+Y^3=Z^3+W^3 is a homogeneous cubic surface, not a quartic;
+#     it must not be identified with the separately associated elliptic K3 surface.
+# (2) Finiteness of the Eisenstein unit group does not force an arbitrary integral
+#     residual x^3+y^3-z^3 to be a unit: 1^3+1^3-2^3=-6. Only if a residual
+#     is ASSUMED to be both a rational integer and a unit is it necessarily +/-1.
+# The exact recurrence, reversible integer extension, n=-1 taxicab identity,
+# and tensor-cube Cayley-Hamilton verification are unchanged. These corrections
+# concern commentary, not the recurrence proof or the separate cited K3 result.
+
 # ramanujan_near_miss_kpc1.py -- session kind-pasteur-2026-06-10-S1, Thread D (HYP-2370)
 # Ramanujan's near-miss family (lost notebook; cf. Hirschhorn, Math. Mag. 68 (1995);
 # Ono & Trebat-Leder, "The 1729 K3 surface", Res. Number Theory (2015/16), arXiv:1510.00735).

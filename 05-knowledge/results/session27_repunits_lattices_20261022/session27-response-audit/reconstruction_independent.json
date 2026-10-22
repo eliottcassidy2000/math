@@ -1,0 +1,15 @@
+{
+  "verdict": "PASS",
+  "exhaustive_orders": [
+    2,
+    3
+  ],
+  "contrast_checks_by_core_order": {
+    "2": 4,
+    "3": 192,
+    "4": 20
+  },
+  "method": "full vertex permutations for every randomized edge assignment; per-word cancellation also checked",
+  "queries_per_contrast": "4^(k-1)",
+  "expected_contrast": "2(2Q_uv-1)"
+}

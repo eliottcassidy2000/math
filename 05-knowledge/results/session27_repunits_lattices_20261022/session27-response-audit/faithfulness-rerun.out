@@ -1,0 +1,4 @@
+all labelled cores through 2 PASS; cumulative arc tests 2 DP queries 8
+all labelled cores through 3 PASS; cumulative arc tests 26 DP queries 392
+all labelled cores through 4 PASS; cumulative arc tests 410 DP queries 24968
+TOTAL PASS: 428 arc tests, 27656 direct DP queries; includes k5 samples and reversed-base controls.

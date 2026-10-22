@@ -1,0 +1,57 @@
+{
+  "verdict": "PASS",
+  "tournaments_exhaustively_checked": 1099,
+  "score_multiset_classes": {
+    "1": 1,
+    "2": 1,
+    "3": 2,
+    "4": 4,
+    "5": 9
+  },
+  "first_failure_order": 5,
+  "witnesses": [
+    {
+      "out_masks": [
+        12,
+        17,
+        2,
+        22,
+        5
+      ],
+      "H": 13,
+      "cycles": {
+        "3": 4,
+        "5": 2
+      },
+      "scores": [
+        2,
+        2,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "out_masks": [
+        10,
+        20,
+        1,
+        22,
+        5
+      ],
+      "H": 11,
+      "cycles": {
+        "3": 4,
+        "5": 1
+      },
+      "scores": [
+        2,
+        2,
+        1,
+        3,
+        2
+      ]
+    }
+  ],
+  "cycle_counter": "all ordered distinct tuples divided by length, independently of min-vertex canonicalization"
+}

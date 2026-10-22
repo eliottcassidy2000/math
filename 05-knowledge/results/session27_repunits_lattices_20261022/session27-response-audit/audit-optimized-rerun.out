@@ -1,0 +1,3 @@
+one-base polynomial independent DP checks: 33866 groups: {1: 1, 2: 2, 3: 7, 4: 56, 5: 932}
+automaton independent DP checks: 4869
+equivalence positive/negative controls PASS; C3: {'equivalent': False, 'word': (1, 2), 'difference': 2, 'basis_size': 64, 'bound': 323}

@@ -1,12 +1,14 @@
-# Session27: repunit rarity and typed lattice connections
+# Session27: repunits, lattice observables, and reconstruction from one bit
 
-This independently audited research packet recovers prior repunit work, distinguishes labelled from unlabelled tournament counts, and states precise modular/lattice bridges and obstructions. No theorem IDs are reserved and no canon correction is applied here.
+Start with the [final synthesis](SYNTHESIS.md), [exploration record](EXPLORATION.md), and [final source-bound audit](session27-final-audit/AUDIT.md).
+
+This independently audited research packet recovers prior repunit work, distinguishes labelled from unlabelled tournament counts, and states precise modular/lattice bridges and obstructions. No theorem IDs are reserved. The final checkpoint applies six narrowly reviewed historical repairs, recorded as MISTAKE-658; all other concurrent canon is preserved.
 
 - [Repunit recovery and measure-aware rarity](session27-repunits/REPORT.md): provenance routes, full local-search catalogues, and the automorphism-weighted SCC counting law.
 - [Typed modular and lattice synthesis](session27-modular/report.md): theta/eta normalizations, E8 and rank-24 characters, the rational-versus-positive-weight modular obstruction, and carefully separated 1729 mechanisms.
 - [Independent audit](session27-repunit-modular-audit/REVIEW.md) and [source-bound manifest](session27-repunit-modular-audit/manifest.json).
 
-The complete plain-text JSON catalogues are included: the initial and expanded passes record their own commits, available worktree files, omissions, line previews and hashes. They are discovery indexes, not exhaustive recovery of every historical Git blob or every use of 31, 63 and 127. Initial fetched sources retain their connector provenance. The later remote-search addendum is not included here. The E8-holes/1729 addendum is included in the second checkpoint with its separate, bounded recurrence audit; it was not part of the initial audit.
+The complete plain-text JSON catalogues are included: the initial and expanded passes record their own commits, available worktree files, omissions, line previews and hashes. They are discovery indexes, not exhaustive recovery of every historical Git blob or every use of 31, 63 and 127. Initial fetched sources retain their connector provenance. The bounded remote-search addendum and its raw results are now included, with explicit caps and missing-coverage limits. The E8-holes/1729 addendum is included in the second checkpoint with its separate, bounded recurrence audit; it was not part of the initial audit.
 
 ## Reproduction
 
@@ -18,7 +20,7 @@ Only the independent checker's two workspace paths were adapted for distribution
 
 ## Correction proposals and boundaries
 
-`session27-repunits/corrections.patch` and `session27-modular/historical_1729_correction_proposal.md` are proposals only. Their inclusion does not apply them, upgrade historical claims, or change canon status. Read the audit's scope and limits before relying on a claim. Imported identities remain cited results; finite checks corroborate but do not prove all-parameter statements. No result here solves LRC(14) or supplies a universal repunit-rarity law.
+The initial `session27-repunits/corrections.patch` and `session27-modular/historical_1729_correction_proposal.md` remain historical proposals, not the applied patch. The final authoritative six-file repair is `session27-corrections/corrections.patch`, with exact preimage/proposed hashes and rationale in that directory, applied at the original repository paths and logged as MISTAKE-658. Its scope differs from the initial proposals; do not apply the older proposal mechanically. Read the audit's scope and limits before relying on a claim. Imported identities remain cited results; finite checks corroborate but do not prove all-parameter statements. No result here solves LRC(14) or supplies a universal repunit-rarity law.
 
 
 ## Second checkpoint: manuscript controls and new mechanisms
@@ -49,3 +51,25 @@ In session27-lattice-controls-audit, run `python3 independent_controls.py`. It w
 In session27-orthogonal run `python3 verify.py` and `python3 verify_graph_counterexample.py`; in session27-orthogonal-audit run `python3 independent_control.py`. In session27-recurrence run `python3 verify_reciprocal_powers.py`; in session27-recurrence-audit run `python3 independent_controls.py`. The inherited modular script is retained with its original replay and historical scope, not upgraded to a newly independent audit.
 
 Seven scripts receive packaging-only path/output-manifest adaptations, recorded in SECOND_PORTABILITY.diff. Their mathematical operations are unchanged and reruns are recorded in SECOND_PORTABLE_REPLAYS.json. Original INPUT/OUTPUT checksum files bind the original workspace scripts and omitted source PDFs/texts; those original-source audit records do not assert that every referenced input is distributed or that adapted script hashes are unchanged. SECOND_SOURCE_PROVENANCE.json records source hashes before packaging. The original audit outputs remain historical evidence; portable reruns do not reproduce the omitted manuscript-reading portion of an audit.
+
+
+## Final checkpoint: faithful marked responses and repaired history
+
+The headline theorem reconstructs every arc of a labelled k-vertex tournament using attachment experiments with k-1 ordered base vertices. The second least significant bit ((H-1)/2) mod 2 of each Hamiltonian-path response suffices. Separately, the signed full-H reconstruction implies faithfulness for every raw modulus M>=3; raw H mod 2 is constant and fails. This distinguishes a transformed bit from dividing by 2 in an arbitrary residue ring. Two ports have exact tomography formulas and finite injectivity through k=6, not a proved all-order two-port theorem.
+
+- [Integer reconstruction](session27-response/faithfulness-proof.md), [raw-modulus refinement](session27-response/MODULAR_FAITHFULNESS.md), and [odd-cycle cancellation proof](ODD_CYCLE_PARITY_CHARACTER.md), with the corresponding source-bound reviews in session27-response-audit.
+- [Identical E8 root, different Hamiltonian counts](SCORE_ROOT_COLLISION.md), [Lorentzian score bridge and its domain boundary](LORENTZIAN_SCORE_BRIDGE.md), and [topology scope](TOPOLOGY_SCOPE.md). No numerical analogy is promoted to a target-preserving equivalence.
+- [Bounded remote discovery](session27-repunits/REMOTE_SEARCH.md) adds five raw query records and three recovered full repository sources. Four queries hit their 100-result caps; this does not claim all remote history was recovered.
+- [Final historical repairs](session27-corrections/RATIONALE.md): six source-bound corrections preserve valid numerical and proof survivors. MISTAKE-658 records the failed implications and missing coordinates. Original/proposed duplicate trees are omitted; the patch, source hashes and pinned preimages retain reconstruction provenance.
+
+### Final reproduction and packaging
+
+The response directory includes standard-library Python controls and census.cpp. From that directory run audit.py, structure.py, two_port.py, faithfulness.py, modular_faithfulness.py and odd_cycle_faithfulness.py; the saved normal and optimized-mode outputs are included. Compile census.cpp with a C++ compiler and follow its documented scope. The unfinished order-seven census output and all binaries/caches are omitted. The finite complete census ends at core order six.
+
+From session27-response-audit run independent.py, modular_independent.py, reconstruction_independent.py and root_addendum_independent.py. The two historical workspace paths in independent.py and root_addendum_independent.py are adapted to packet-relative inputs; FINAL_PORTABILITY.diff records those changes and FINAL_PORTABLE_REPLAYS.json records byte-identical reruns. These adaptations do not alter mathematics. Original audit hash manifests retain the original script hashes and original source locations.
+
+At packet root, run score_root_hostile.py, score_first_failure.py and check_lorentzian_score.py for the explicit score examples and Lorentzian identities. The added Lorentzian independent audit and checker are in session27-recurrence-audit. The final audit may refer to its original workspace and full-repository preimages: its source-bound findings remain distinct from portable computational replay, and omitted manuscript PDFs are not silently supplied by these checks.
+
+The initial catalogue/manifest source hashes predate the deliberate six-file repairs. A later catalogue replay can therefore report those changed paths while retaining its own original snapshot and exact line previews. Historical snapshots and the newly corrected source surface are intentionally both preserved.
+
+Run `python3 session27-final-audit/check_portable.py /path/to/math` from the packet directory to repeat the final 74 integration checks. This wrapper reconstructs the omitted correction preimages from their pinned Git blob IDs and derives proposed snapshots by applying the published patch in a temporary directory. It does not edit the checkout. A checkout with those original blobs is required; the original source-bound checker is unchanged. The portable replay is byte-identical to check_results.json.

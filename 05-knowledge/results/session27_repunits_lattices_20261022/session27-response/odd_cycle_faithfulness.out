@@ -1,0 +1,3 @@
+PASS: 206 odd-cycle XOR experiments; 1864 extensions; all odd-cycle parities agree with Hamiltonian second bit.
+Triangle-only hostile: {'mask': 41, 'sorted_scores': [1, 2, 2, 2, 3], 'H': 13, 'odd_cycle_counts': {3: 4, 5: 2}, 'second_bit': 0}
+Triangle-only hostile: {'mask': 12, 'sorted_scores': [1, 2, 2, 2, 3], 'H': 11, 'odd_cycle_counts': {3: 4, 5: 1}, 'second_bit': 1}

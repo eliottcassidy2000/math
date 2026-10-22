@@ -1,0 +1,3448 @@
+{
+  "results": [
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/bridge_1728_1729_s122.py",
+      "path": "04-computation/bridge_1728_1729_s122.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/bridge_1728_1729_s122.py",
+      "display_title": "04-computation/bridge_1728_1729_s122.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\nFrom kind-pasteur S18e: 1729 = j(i) + g(2) = 1728 + 1.\nThe taxicab number is ONE RÉDEI QUANTUM above the j-invariant.",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                25,
+                29
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "print(\"=\" * 72)\nprint(\"  PART 5: 1729 = 12³ + 1³ = 10³ + 9³\")\nprint(\"=\" * 72)",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                33,
+                37
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/bridge_1728_1729_s122.out",
+      "path": "05-knowledge/results/bridge_1728_1729_s122.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/bridge_1728_1729_s122.out",
+      "display_title": "05-knowledge/results/bridge_1728_1729_s122.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    Sum of two cubes in two different ways.\n    1729 = 7 × 13 × 19 (three \"tournament primes\").\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                48,
+                52
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  Third representation (less known): 1729 = 91² + ... ? No, 1729 is not a sum of two squares\n  (since 7 ≡ 3 mod 4 divides 1729 to an odd power).\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                37,
+                41
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                61,
+                65
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                125,
+                129
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/taxicab_1729_slice_kpc1_verify.py",
+      "path": "04-computation/taxicab_1729_slice_kpc1_verify.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/taxicab_1729_slice_kpc1_verify.py",
+      "display_title": "04-computation/taxicab_1729_slice_kpc1_verify.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n# ---------- full divisor scan of 1729\nn = 1729",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                35,
+                39
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                44,
+                48
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "                if a * a - a * b + b * b == 1729)\nprint(f\"r_E(1729): x^2+xy+y^2 count = {cnt_plus}, x^2-xy+y^2 count = {cnt_minus} (claimed 48)\")\nprint(f\"THM-434 units(L_1729) = 12 + r_E = {12 + cnt_plus} (claimed 60)\")",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                44,
+                48
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                62,
+                66
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                170,
+                174
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/ramanujan_1729_bridge_s133.out",
+      "path": "05-knowledge/results/ramanujan_1729_bridge_s133.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/ramanujan_1729_bridge_s133.out",
+      "display_title": "05-knowledge/results/ramanujan_1729_bridge_s133.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  1728 = 12³ = (2² × 3)³ = j(i)\n  1729 = 1728 + 1 = j(i) + g(2) = j(i) + Rédei quantum\n  1729 = 7 × 13 × 19",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                38,
+                42
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                94,
+                98
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  133 = 7 × 19                              OCR denominator at n=5\n  133 = 1729 / 13                           1729 ÷ surprise prime = OCR denom\n  42 = 2 × 3 × 7                            Hurwitz = defect denominator",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                76,
+                80
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                112,
+                116
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/ramanujan_1729_bridge_s133.py",
+      "path": "04-computation/ramanujan_1729_bridge_s133.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/ramanujan_1729_bridge_s133.py",
+      "display_title": "04-computation/ramanujan_1729_bridge_s133.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "Merges:\n- kind-pasteur S18e: 1729 = j(i)+1 = 7×13×19, three triangle groups\n- opus S120: (2,3,7) Coxeter, Fano in Paley T₇",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                29,
+                33
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "    (\"1729 = 7 × 13 × 19\", \"Three tournament primes\"),\n    (\"1729 = 12³ + 1³\", \"j-value + Rédei quantum\"),\n    (\"1729 = 10³ + 9³\", \"Petersen³ + atom²·³\"),",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                6,
+                10
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                63,
+                67
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                118,
+                122
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/mining-1729-from-taxicab-to-the-excess-constant-kps-S134.md",
+      "path": "07-reflections/mining-1729-from-taxicab-to-the-excess-constant-kps-S134.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/mining-1729-from-taxicab-to-the-excess-constant-kps-S134.md",
+      "display_title": "07-reflections/mining-1729-from-taxicab-to-the-excess-constant-kps-S134.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Mining 1729: from taxicab coincidences to the excess constant\n\n**kind-pasteur-2026-07-26-S134.** Provenance note, not truth source.",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                9,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "The owner asked to mine connections from the appearance of\n`tc(T_11) = 1729` in the pure-blue census (THM-2454 data note) and\nthen to generate directions of the same flavour. The mine had three",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                71,
+                75
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/the-cubic-lens-where-1729-is-a-theorem-and-where-it-is-a-coincidence.md",
+      "path": "07-reflections/the-cubic-lens-where-1729-is-a-theorem-and-where-it-is-a-coincidence.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/the-cubic-lens-where-1729-is-a-theorem-and-where-it-is-a-coincidence.md",
+      "display_title": "07-reflections/the-cubic-lens-where-1729-is-a-theorem-and-where-it-is-a-coincidence.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# The cubic lens: where 1729 is a theorem and where it is a coincidence\n\n*kind-pasteur-2026-06-10-S1. Dispatched by the human: \"this repo came across 1729 a few\ntimes but was unable to flesh it out … look at the mathematical progress we have made\nthrough the cubic lens.\" Builds on THM-434 (Moser rosettes), HYP-2306 (the severed\ntournament spine), HYP-2307/THM-438 (R(p) → e), and lands THM-462, THM-463, LEM-003,\nHYP-2370, HYP-2371. Every claim below was adversarially verified by an independent",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                24,
+                28
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                150,
+                154
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+      "path": "07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+      "display_title": "07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\nThe number **1729** had quietly become a load-bearing coincidence across three\notherwise-disjoint lanes of this project:",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                14,
+                18
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "   unit vectors. S5 flagged — honestly, \"numerical only, not a proven bridge\" — that\n   this `1729` is the *same number* as `H(T_11)/|Aut|`.\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                98,
+                102
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/taxicab_1729slice_kpc1_verify.py",
+      "path": "04-computation/taxicab_1729slice_kpc1_verify.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/taxicab_1729slice_kpc1_verify.py",
+      "display_title": "04-computation/taxicab_1729slice_kpc1_verify.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Independent check of worker claim A6 (the 1729 slice):\n#   - full divisor scan of 1729: good divisors exactly {13,19}; mod-3 gate\n#     (3d | d^3-n) open at ALL 8 divisors; cofactors 133=7*19, 91=7*13;",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                44,
+                48
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                84,
+                88
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "        B[d::d] -= 1\nprint(f\"B(1729) = {int(B[1729])} (worker: 8); tau(1729) = {len(divs)}\")\n# cross-check sieve against brute force for t <= 200",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                31,
+                35
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                46,
+                50
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                71,
+                75
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/taxicab_1729slice_kpc1_verify.out",
+      "path": "05-knowledge/results/taxicab_1729slice_kpc1_verify.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/taxicab_1729slice_kpc1_verify.out",
+      "display_title": "05-knowledge/results/taxicab_1729slice_kpc1_verify.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "n = 1729 = 7 * 13 * 19 ; all primes == 1 mod 3: True\ndivisors (8 = tau): [1, 7, 13, 19, 91, 133, 247, 1729]\n     d  3d|(d^3-n)  s=(d^3-n)/3d      Delta  square? roots\n     1         yes          -576       2305       no \n     7         yes           -66        313       no \n    13         yes            12        121      YES {12,1} gcd=1 cofactor=133\n    19         yes            90          1      YES {10,9} gcd=1 cofactor=91",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                4,
+                8
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                102,
+                106
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/the-tessellation.md",
+      "path": "07-reflections/the-tessellation.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/the-tessellation.md",
+      "display_title": "07-reflections/the-tessellation.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "**Layer 6: The Modular Group (the-modular-tournament.md).**\nPSL(2, Z) = {2, 3, infinity} governs tournament dynamics. The three orbifold points (j=0, j=1728, j=infinity) correspond to cycle origin, self-complementary, transitive cusp. 1729 = j(i)+1 = 7*13*19 bridges tournament primes to the j-invariant. The tournament discriminant (H-1)/2 is a base-2 expansion of cycle packings. g(phi)=-1, g(tau)=0, g(2)=+1 classifies spherical/Euclidean/hyperbolic. This is the GLOBAL layer: the tessellation lives in the hyperbolic plane, and the modular group is its symmetry group.\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                235,
+                239
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\n## H/|Aut| = 1729\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                14,
+                18
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/territory-and-map.md",
+      "path": "07-reflections/territory-and-map.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/territory-and-map.md",
+      "display_title": "07-reflections/territory-and-map.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\nThe measurement triple {3, 7, 19} is the MAP — what you see when you observe the tournament through its H-value factorization. These primes appear in H(T₁₁)/|Aut| = 1729 = 7·13·19.\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                172,
+                176
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "- INERT primes {5, 11}: product = 55 = |Aut(T₁₁)|. They go to SYMMETRY.\n- SPLIT primes {7, 13, 19}: product = 1729 = H/|Aut|. They go to ORBITS.\n- The RAMIFIED prime 3 is absent from H(T₁₁) — absorbed into the curvature.",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                114,
+                118
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/the-modular-tournament.md",
+      "path": "07-reflections/the-modular-tournament.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/the-modular-tournament.md",
+      "display_title": "07-reflections/the-modular-tournament.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n## 1729: The Ramanujan Bridge\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                4,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nj(i) + 1 = 1728 + 1 = 1729 = 7 * 13 * 19.\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                23,
+                27
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/pi_qrnqr_89c.py",
+      "path": "04-computation/pi_qrnqr_89c.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/pi_qrnqr_89c.py",
+      "display_title": "04-computation/pi_qrnqr_89c.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# And H = p × h₀ = p(p-1)/2 × (a + b)\n\n# For P_7: a=1, b=8, a+b=9, h₀ = 3×9 = 27 ✓\n# For P_11: a=628, b=1101, a+b=1729 = TAXICAB NUMBER!, h₀ = 5×1729 = 8645 ✓\n# For P_19: let's check\n\nfor p in [3, 7, 11, 19]:",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                123,
+                127
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                157,
+                161
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/inbox/processed/2026-03-05/new/other.txt",
+      "path": "inbox/processed/2026-03-05/new/other.txt",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/inbox/processed/2026-03-05/new/other.txt",
+      "display_title": "inbox/processed/2026-03-05/new/other.txt",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n**The correct value of $H(T_{11})$**\n\nDirect Hamiltonian path enumeration gives $H(T_{11}) = 95095$. This means $H(T_{11})/|\\text{Aut}(T_{11})| = 95095/55 = 1729$. Yes — the Hardy-Ramanujan taxicab number, $12^3 + 1^3 = 10^3 + 9^3$. The ratio sequence is $1, 3, 9, 1729$, which completely demolishes the $3^{(p-3)/2}$ conjecture. There is no clean power-of-3 pattern here.\n\n**The OCF verifies exactly**\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                158,
+                162
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                268,
+                272
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/pi_hamcycle_89c.py",
+      "path": "04-computation/pi_hamcycle_89c.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/pi_hamcycle_89c.py",
+      "display_title": "04-computation/pi_hamcycle_89c.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# 8645 = 5 × 7 × 13 × 19\n# Let's check 8645 more carefully\nprint(f\"  8645 = {sympy.factorint(8645)}\")\n# = 5 × 1729 = 5 × 7 × 247 = 5 × 7 × 13 × 19\n# Whoa! 1729 = 12³ + 1 = Hardy-Ramanujan number!\n# 8645 = 5 × 1729\nprint(f\"  8645 / 5 = {8645 // 5} = 1729 (HARDY-RAMANUJAN NUMBER!)\")",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                114,
+                118
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                164,
+                168
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                220,
+                224
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                260,
+                264
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/CONJ-002-paley-ham-paths.md",
+      "path": "01-canon/theorems/CONJ-002-paley-ham-paths.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/CONJ-002-paley-ham-paths.md",
+      "display_title": "01-canon/theorems/CONJ-002-paley-ham-paths.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n**H(T_11) = 95095 = 5 × 7 × 11 × 13 × 19 = 55 × 1729** (directly enumerated by kind-pasteur-2026-03-05-S2)\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                54,
+                58
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "**Actual value (kind-pasteur-2026-03-05-S2, direct enumeration):**\n- **H(T₁₁) = 95095 = 5 × 7 × 11 × 13 × 19 = 55 × 1729**\n- h_QR = h_NQR = 201 (directed Ham cycles in T₁₁\\{0,1} and T₁₁\\{0,2})",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                125,
+                129
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/pi_qrnqr_89c.out",
+      "path": "05-knowledge/results/pi_qrnqr_89c.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/pi_qrnqr_89c.out",
+      "display_title": "05-knowledge/results/pi_qrnqr_89c.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  P_11:\n    a (per QR) = 628\n    b (per NQR) = 1101\n    a + b = 1729\n    h₀ = (p-1)/2 × (a+b) = 5 × 1729 = 8645\n    Actual h₀ = 8645\n    Match: ✓",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                64,
+                68
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                104,
+                108
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/paley_h_closed_form.py",
+      "path": "04-computation/paley_h_closed_form.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/paley_h_closed_form.py",
+      "display_title": "04-computation/paley_h_closed_form.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  H(T_7)/7 = 27\n  H(T_11)/11 = 8645\n\nFactor: 27 = 3^3, 8645 = 5 * 1729 = 5 * 7 * 13 * 19... hmm\nActually 8645 = 5 * 1729 and 1729 = 7 * 247 = 7 * 13 * 19. So 8645 = 5*7*13*19.\n\nThese are (p-2)(p-4)...(2)(1) products? Let me check:",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                66,
+                70
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                116,
+                120
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                125,
+                129
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-310-trrt-key-inequality.md",
+      "path": "01-canon/theorems/THM-310-trrt-key-inequality.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-310-trrt-key-inequality.md",
+      "display_title": "01-canon/theorems/THM-310-trrt-key-inequality.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "Combined with THM-311 (Lemma A for d=2), this gives a complete proof of TRRT for all n ≤ 8.\n\n## See Also\n\n- THM-311: Lemma A for d=2, α₂≥2 (full existence of good C*)\n- THM-312: TRRT for n≤8 via elementary proof\n- HYP-1729: TRRT conjecture",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                227,
+                231
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/qr-tournament-foundations.md",
+      "path": "07-reflections/qr-tournament-foundations.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/qr-tournament-foundations.md",
+      "display_title": "07-reflections/qr-tournament-foundations.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n## The 1729 Appearance\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                8,
+                12
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nAt p=11: k = H(T_11)/|Aff(QR_11)| = 95095/55 = **1729**.\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                50,
+                54
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/paley_H_aut_factorization.md",
+      "path": "05-knowledge/results/paley_H_aut_factorization.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/paley_H_aut_factorization.md",
+      "display_title": "05-knowledge/results/paley_H_aut_factorization.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n3. **H/|Aut|** counts Hamiltonian path orbits under the automorphism group.\n\n4. **No pattern found** in the H/|Aut| sequence: 1, 9, 1729, 6857869865, 62293308207033.\n   Ratios between consecutive terms: 9, 192.1, 3966379.3, 9083.5.\n\n5. **H(T_p) = p * (p-1)/2 * (H/|Aut|)** doesn't simplify further.",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                133,
+                137
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/p19_beta_verification.py",
+      "path": "04-computation/p19_beta_verification.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/p19_beta_verification.py",
+      "display_title": "04-computation/p19_beta_verification.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "For P_7: |A_d|/m = [1, 1, 3, 7, 13, 15, 9]\nFor P_11: |A_d|/m = [1, 1, 5, 22, 86, 286, 794, 1747, 2879, 3149, 1729]\nThese are NOT palindromic either.",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                109,
+                113
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "Let me check the FULL A_d values.\nFor P_11: A_orb = [1, 1, 5, 22, 86, 286, 794, 1747, 2879, 3149, 1729]\nHmm, the last value 1729 = 12^3 + 1 = Hardy-Ramanujan number. Coincidence.",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                98,
+                102
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                124,
+                128
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/pi_ba_ratio_89c.out",
+      "path": "05-knowledge/results/pi_ba_ratio_89c.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/pi_ba_ratio_89c.out",
+      "display_title": "05-knowledge/results/pi_ba_ratio_89c.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    b/a = 1101/628 = 1.75318471\n    (b-a)/(b+a) = 473/1729 = 0.27356854\n    (b-a)/(b+a) × √p = 0.90732419",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                54,
+                58
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "    h₀ = 8645\n    χ_path / h₀ = -473/1729 = -0.27356854\n    (a-b)/(a+b) = -473/1729",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                42,
+                46
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                84,
+                88
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/pi_hamcycle_89c.out",
+      "path": "05-knowledge/results/pi_hamcycle_89c.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/pi_hamcycle_89c.out",
+      "display_title": "05-knowledge/results/pi_hamcycle_89c.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "PART 7: Closed form attempts for H(P_p)/p\n======================================================================\n  8645 = {5: 1, 7: 1, 13: 1, 19: 1}\n  8645 / 5 = 1729 = 1729 (HARDY-RAMANUJAN NUMBER!)\n  1729 = 7 × 13 × 19 = 12³ + 1 = 10³ + 9³\n  So H(P_11)/11 = 5 × 1729 = 5 × (10³ + 9³)\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                162,
+                166
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                169,
+                173
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                202,
+                206
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                270,
+                274
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/ten_eleven_deep.py",
+      "path": "04-computation/ten_eleven_deep.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/ten_eleven_deep.py",
+      "display_title": "04-computation/ten_eleven_deep.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "print(f\"    H mod 11 = {H_T11 % 11}\")\nprint(f\"    H mod 12 = {H_T11 % 12}\")\n\n# H/|Aut| = 95095/55 = 1729 (the taxicab number!!)\nprint(f\"    H/|Aut| = {H_T11 // 55} (= 1729 = 12^3 + 1^3 = 10^3 + 9^3)\")\nprint(f\"    1729 = Hardy-Ramanujan taxicab number!\")\nprint(f\"    1729 = 7 * 13 * 19\")",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                100,
+                104
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                167,
+                171
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                213,
+                217
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                266,
+                270
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/modular_tournament_s18e.py",
+      "path": "04-computation/modular_tournament_s18e.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/modular_tournament_s18e.py",
+      "display_title": "04-computation/modular_tournament_s18e.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "print(f\"  AND: 13 * 19 = 247\")\nprint(f\"  1729 = 1 + 1728 = 1 + j(i)\")\nprint(f\"  1729 = 12^3 + 1^3 = 10^3 + 9^3 (Ramanujan)\")",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                41,
+                45
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                80,
+                84
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\n  1729 = j(i) + 1 = 1728 + 1\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                3,
+                7
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/three_seven_eleven_s90v.py",
+      "path": "04-computation/three_seven_eleven_s90v.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/three_seven_eleven_s90v.py",
+      "display_title": "04-computation/three_seven_eleven_s90v.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\nThe sequence H/|Aut|: 1, 9, 1729.\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                29,
+                33
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  p=7:  H/|Aut| = 9    = 3²\n  p=11: H/|Aut| = 1729 = 7·13·19\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                47,
+                51
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/moonshine_plus_one_s18g.py",
+      "path": "04-computation/moonshine_plus_one_s18g.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/moonshine_plus_one_s18g.py",
+      "display_title": "04-computation/moonshine_plus_one_s18g.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  IDENTITY 2 — THE TAXICAB:\n    1729 = 1728 + 1\n    = j(i) + g(2)",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                34,
+                38
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "    7^6:  forbidden structure (H=7, Fano, Hurwitz)\n    11^2: first genus-1 Paley (H(T_11)/C(11,2) = 1729!)\n    13^3: OCR denominator at n=6",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                100,
+                104
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/verify_meta_s193.out",
+      "path": "05-knowledge/results/verify_meta_s193.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/verify_meta_s193.out",
+      "display_title": "05-knowledge/results/verify_meta_s193.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n  Paley T_11: H = 95095 (computed in 0.0s)\n  |Aut| = 55 = p(p-1)/2\n  H/|Aut| = 1729 = 1729??\n  H mod |Aut| = 0\n  YES! H(T_11)/55 = 1729 = taxicab number. CONFIRMED!\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                80,
+                84
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                87,
+                91
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                132,
+                136
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/orbit_complex_mod.out",
+      "path": "05-knowledge/results/orbit_complex_mod.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/orbit_complex_mod.out",
+      "display_title": "05-knowledge/results/orbit_complex_mod.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "d=7: |A|=8735, orbits=1747\nd=8: |A|=14395, orbits=2879\nd=9: |A|=15745, orbits=3149\nd=10: |A|=8645, orbits=1729\n\nDiff-seqs built in 0.8s\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                106,
+                110
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/pi_spectral_H_89c.out",
+      "path": "05-knowledge/results/pi_spectral_H_89c.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/pi_spectral_H_89c.out",
+      "display_title": "05-knowledge/results/pi_spectral_H_89c.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  H/p = 8645\n  H/(p×(p-1)/2) = 1729\n  E[H] = 38981.25",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                32,
+                36
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "      (a+b)/(p-2)! = 3/40 = 0.07500000\n    p=11: a+b = 1729 = 7×13×19\n      (a+b)/(p-2)! = 247/51840 = 0.00476466",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                55,
+                59
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/ramanujan_near_miss_kpc1.py",
+      "path": "04-computation/ramanujan_near_miss_kpc1.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/ramanujan_near_miss_kpc1.py",
+      "display_title": "04-computation/ramanujan_near_miss_kpc1.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# Ramanujan's near-miss family (lost notebook; cf. Hirschhorn, Math. Mag. 68 (1995);\n# Ono & Trebat-Leder, \"The 1729 K3 surface\", Res. Number Theory (2015/16), arXiv:1510.00735).\n#",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                112,
+                116
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "#       trailing coefficients of D are units) and shows n = -1 gives (-9, 12, 10),\n#       i.e. 9^3 + 10^3 = 12^3 + 1 = 1729: the taxicab number IS in the family;\n#   (3) PROVES the identity for ALL n (both directions) by pure integer linear",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                120,
+                124
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/pi_pgf_moments_89c.py",
+      "path": "04-computation/pi_pgf_moments_89c.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/pi_pgf_moments_89c.py",
+      "display_title": "04-computation/pi_pgf_moments_89c.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  7. p | H(P_p)  (THM-212, PROVED for all circulant tournaments)\n     H = p × (p-1)/2 × (a+b) where a,b are QR/NQR endpoint counts\n\n  8. 1729 = a+b at p=11  (Hardy-Ramanujan taxicab number)\n     H(P_{11}) = 11 × 5 × 1729 = 95095\n     1729 = 12³ + 1³ = 10³ + 9³\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                139,
+                143
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                220,
+                224
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                238,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/taxicab_moser_bridge_kpc1.py",
+      "path": "04-computation/taxicab_moser_bridge_kpc1.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/taxicab_moser_bridge_kpc1.py",
+      "display_title": "04-computation/taxicab_moser_bridge_kpc1.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "(d) The 1729 slice: full good-divisor scan of 1729 (expect good = {13,19}),\n    cofactors 133 = 7*19 and 91 = 7*13 (split products), B(1729) = 8,\n    r_E(1729) = 48, THM-434 rosette = 12 + 48 = 60 units, record-B check",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                8,
+                12
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                46,
+                50
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                135,
+                139
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                154,
+                158
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "rE = 0\nR = isqrt(4 * 1729 // 3) + 2\nfor a in range(-R, R + 1):",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                21,
+                25
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/overnight_s1_fixed.out",
+      "path": "05-knowledge/results/overnight_s1_fixed.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/overnight_s1_fixed.out",
+      "display_title": "05-knowledge/results/overnight_s1_fixed.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n  p=11: H=95095, |Aut|=55, H/|Aut|=1729\n    H factored: 5 * 7 * 11 * 13 * 19",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                36,
+                40
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\n  1729 = 12^3 + 1^3 = 1729\n  1729 = 10^3 + 9^3 = 1729",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                3,
+                7
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                23,
+                27
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                30,
+                34
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                50,
+                54
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/moonshine_tournament_s123.py",
+      "path": "04-computation/moonshine_tournament_s123.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/moonshine_tournament_s123.py",
+      "display_title": "04-computation/moonshine_tournament_s123.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  196884 = 196883 + 1  (moonshine: j-coefficient = Monster rep dim + 1)\n  1729   = 1728   + 1  (tournaments: taxicab = j(i) + Rédei quantum)\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                74,
+                78
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  TOURNAMENT THEORY:\n    1729 = 1728 + 1\n    where 1728 = j(i) = 12³ = modular j-invariant at complement",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                25,
+                29
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/orbit_complex_fast.out",
+      "path": "05-knowledge/results/orbit_complex_fast.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/orbit_complex_fast.out",
+      "display_title": "05-knowledge/results/orbit_complex_fast.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "d=7: 1747 orbit reps\nd=8: 2879 orbit reps\nd=9: 3149 orbit reps\nd=10: 1729 orbit reps\n\nBuilt in 0.1s\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                69,
+                73
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/pi_synthesis_89c.out",
+      "path": "05-knowledge/results/pi_synthesis_89c.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/pi_synthesis_89c.out",
+      "display_title": "05-knowledge/results/pi_synthesis_89c.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n  p=11: H = 95095\n        = 5 × 7 × 11 × 13 × 19                (5 consecutive odd primes!)\n        = 5 × 1729 × 11                        (1729 = taxicab number)\n        Orbits: 8645 = 5 × 1729\n\n  p=19: H = 1172695746915",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                112,
+                116
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                147,
+                151
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                198,
+                202
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/qr_orbit_theorem_s24b.py",
+      "path": "04-computation/qr_orbit_theorem_s24b.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/qr_orbit_theorem_s24b.py",
+      "display_title": "04-computation/qr_orbit_theorem_s24b.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "# ═════════════════════════════════════════════════════════\n# Section 2: The 1729 appearance\n# ═════════════════════════════════════════════════════════",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                191,
+                195
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "print(f\"\\n  k values mod small numbers:\")\nks = {3: 1, 7: 9, 11: 1729, 19: 6857869865, 23: k_23}\nfor q in [2, 3, 4, 5, 6, 7, 8, 12, 24]:",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                64,
+                68
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/residual_moment_p13.out",
+      "path": "05-knowledge/results/residual_moment_p13.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/residual_moment_p13.out",
+      "display_title": "05-knowledge/results/residual_moment_p13.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  bits=8/64: H=3703011, a1=645937, R=2411136, disj33=1716, R2=2404272, t=16s\n  bits=16/64: H=3704857, a1=639580, R=2425696, disj33=1729, R2=2418780, t=30s\n  bits=24/64: H=3669497, a1=625540, R=2418416, disj33=1742, R2=2411448, t=44s",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                131,
+                135
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  bits=40/64: H=3669497, a1=625540, R=2418416, disj33=1742, R2=2411448, t=73s\n  bits=48/64: H=3704857, a1=639580, R=2425696, disj33=1729, R2=2418780, t=87s\n  bits=56/64: H=3711175, a1=606027, R=2499120, disj33=1820, R2=2491840, t=101s",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                132,
+                136
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/alpha_p13_crossover.out",
+      "path": "05-knowledge/results/alpha_p13_crossover.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/alpha_p13_crossover.out",
+      "display_title": "05-knowledge/results/alpha_p13_crossover.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "             H     dc_3     dc_5     vs_5   avg_m5   alpha_2(3)\n       3711175       91     1274     1092     1.17         1820\n       3707483       91     1378     1014     1.36         1768\n       3704857       91     1456      949     1.53         1729\n       3703011       91     1482      936     1.58         1716\n       3683797       91     1456      962     1.51         1729\n       3669497       91     1430      975     1.47         1742",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                251,
+                255
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                379,
+                383
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/verify_meta_s193.py",
+      "path": "04-computation/verify_meta_s193.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/verify_meta_s193.py",
+      "display_title": "04-computation/verify_meta_s193.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "print(\"  |Aut| = %d = p(p-1)/2\" % aut_11)\nprint(\"  H/|Aut| = %d = 1729??\" % (H11 // aut_11))\nprint(\"  H mod |Aut| = %d\" % (H11 % aut_11))",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                66,
+                70
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nif H11 // aut_11 == 1729:\n    print(\"  YES! H(T_11)/55 = 1729 = taxicab number. CONFIRMED!\")",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                21,
+                25
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                58,
+                62
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/qr_orbit_theorem_s24b.out",
+      "path": "05-knowledge/results/qr_orbit_theorem_s24b.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/qr_orbit_theorem_s24b.out",
+      "display_title": "05-knowledge/results/qr_orbit_theorem_s24b.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "==============================================================================\n  THE ORBIT PARITY THEOREM AND 1729\n  opus-2026-04-05-S24b",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                110,
+                114
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "══════════════════════════════════════════════════════════════════════════════\n  THE 1729 APPEARANCE\n══════════════════════════════════════════════════════════════════════════════",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                241,
+                245
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/cubic_rung_ladder_macmini_s3.py",
+      "path": "04-computation/cubic_rung_ladder_macmini_s3.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/cubic_rung_ladder_macmini_s3.py",
+      "display_title": "04-computation/cubic_rung_ladder_macmini_s3.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "#    (Euler / FLT n=3). Verified in range as sanity. The cubic cauldron never boils.\n#  * 4-TERM (Sidon/B_2): FAILS first at 1729 = 1^3+12^3 = 9^3+10^3 (Ramanujan-Hardy;\n#    = first C4 of the cubic summand graph = first unit of additive energy above the",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                125,
+                129
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "print(f\"   pair-sums up to 2*{B}^3: {len(sums)} distinct; with >=2 reps: {len(multi)}\")\nprint(f\"   FIRST: {multi[0][0]}  (should be 1729)\")\nprint(\"   first 8 taxicab numbers:\", [s for s, c in multi[:8]])",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                132,
+                136
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/golden_taxicab_boundary_20261011.md",
+      "path": "05-knowledge/results/golden_taxicab_boundary_20261011.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/golden_taxicab_boundary_20261011.md",
+      "display_title": "05-knowledge/results/golden_taxicab_boundary_20261011.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "splitting law. The [cubic-lens recovery](../../07-reflections/the-cubic-lens-where-1729-is-a-theorem-and-where-it-is-a-coincidence.md)\nand [1729 growth-law recovery](../../07-reflections/mining-1729-from-taxicab-to-the-excess-constant-kps-S134.md)\npreserve that history without making it a theorem premise.",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                83,
+                87
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                140,
+                144
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                194,
+                198
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "omega_t=((2t−1)+i sqrt(4t−1))/(2t) and alpha(1−omega_t) for N(alpha)=t.\nAt t=1729 these are a common rotation of(3), because\n|1−omega_t|=1/sqrt(t). Thus our eight chosen directions sit inside the",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                83,
+                87
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/taxicab_bijection_kpc1_verify.py",
+      "path": "04-computation/taxicab_bijection_kpc1_verify.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/taxicab_bijection_kpc1_verify.py",
+      "display_title": "04-computation/taxicab_bijection_kpc1_verify.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "print(\"[edges] n=2 (x=y=1, Delta=0, d^3=4n boundary):\", repcnt[2], divcnt[2])\nprint(\"[edges] n=7 (negative member {2,-1}):\", repcnt[7], divcnt[7])\nprint(\"[edges] n=8 (cube, {2,0}):\", repcnt[8], divcnt[8])\nprint(\"[edges] n=1729:\", repcnt[1729], divcnt[1729])\n\nok = (len(mismatch) == 0 and parity_viol == 0 and recon_fail == 0\n      and tot_rep == tot_div)",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                222,
+                226
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                237,
+                241
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                251,
+                255
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/tournament_primes_s154.out",
+      "path": "05-knowledge/results/tournament_primes_s154.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/tournament_primes_s154.out",
+      "display_title": "05-knowledge/results/tournament_primes_s154.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    3         3           1         1/2                          3\n    5        15         3/2         3/4                      3 × 5\n    7       189           9           9                    3^3 × 7\n   11     95095        1729        1729       5 × 7 × 11 × 13 × 19\n\n  Primes dividing H(T_p) for p=3,5,7,11: [3, 5, 7, 11, 13, 19]\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                226,
+                230
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                238,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/moonshine_plus_one_s18g.out",
+      "path": "05-knowledge/results/moonshine_plus_one_s18g.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/moonshine_plus_one_s18g.out",
+      "display_title": "05-knowledge/results/moonshine_plus_one_s18g.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  744 (j constant)                    744  2^3 * 3 * 31                    [2, 3, 31]\n  1729 (taxicab)                     1729  7 * 13 * 19                     [7, 13, 19]\n  196883 (Monster irrep)           196883  47 * 59 * 71                    [47, 59, 71]",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                88,
+                92
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                123,
+                127
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  The TAXICAB within the Monster:\n  1729 = 7 * 13 * 19\n  |M| contains 7^6 * 13^3 * 19^1",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                36,
+                40
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/three_seven_eleven_s90v.out",
+      "path": "05-knowledge/results/three_seven_eleven_s90v.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/three_seven_eleven_s90v.out",
+      "display_title": "05-knowledge/results/three_seven_eleven_s90v.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\nThe sequence H/|Aut|: 1, 9, 1729.\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                29,
+                33
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  p= 7: H =      189 =              3·3·3·7, |Aut| =   21, H/|Aut| = 9\n  p=11: H =    95095 =         5·7·11·13·19, |Aut| =   55, H/|Aut| = 1729\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                147,
+                151
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/modular_tournament_s18e.out",
+      "path": "05-knowledge/results/modular_tournament_s18e.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/modular_tournament_s18e.out",
+      "display_title": "05-knowledge/results/modular_tournament_s18e.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  AND: 13 * 19 = 247\n  1729 = 1 + 1728 = 1 + j(i)\n  1729 = 12^3 + 1^3 = 10^3 + 9^3 (Ramanujan)",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                23,
+                27
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                52,
+                56
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\n  This means: 1729 is ONE STEP from the j-invariant at the order-2 point.\n  In tournament terms: one step from self-complementary structure (j=1728)",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                15,
+                19
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/03-artifacts/drafts/grand-synthesis-S25f.md",
+      "path": "03-artifacts/drafts/grand-synthesis-S25f.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/03-artifacts/drafts/grand-synthesis-S25f.md",
+      "display_title": "03-artifacts/drafts/grand-synthesis-S25f.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n### Connection 6: The 1729 Mystery and Number Theory\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                23,
+                27
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nH(T_11)/|Aut(T_11)| = 1729 = 12^3 + 1^3 = 10^3 + 9^3.\nThis is the Hardy-Ramanujan taxicab number.",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                23,
+                27
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/03-artifacts/drafts/substack-hooks.md",
+      "path": "03-artifacts/drafts/substack-hooks.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/03-artifacts/drafts/substack-hooks.md",
+      "display_title": "03-artifacts/drafts/substack-hooks.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n### Hook S: \"What 1729 knows about AI rankings\"\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                19,
+                23
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\nThe Hardy-Ramanujan number 1729 — famous as the smallest number expressible as the sum of two cubes in two ways ($12^3 + 1^3 = 10^3 + 9^3$) — appears naturally in tournament theory.\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                28,
+                32
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/ramanujan_near_miss_kpc1.out",
+      "path": "05-knowledge/results/ramanujan_near_miss_kpc1.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/ramanujan_near_miss_kpc1.out",
+      "display_title": "05-knowledge/results/ramanujan_near_miss_kpc1.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "==============================================================================\nPART 4b -- THE FAMILY, BACKWARD: 1729 LIVES AT n = -1\n==============================================================================",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                112,
+                116
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  [PASS] rearranged: 9^3 + 10^3 = 12^3 + 1\n  [PASS] 9^3 + 10^3 = 1729 = 12^3 + 1^3 (taxicab)\nSo (9,10,12) belongs to the SAME Ramanujan family, at index n = -1 of the",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                65,
+                69
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/paley_H31_exact_20261014.out",
+      "path": "05-knowledge/results/paley_H31_exact_20261014.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/paley_H31_exact_20261014.out",
+      "display_title": "05-knowledge/results/paley_H31_exact_20261014.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "         R(q) = H 2^(q-1)/q! = 2.400000000\n         reproduces the known exact value: True\n         N_1 mod 256 = 9 (S33 value 9): True\nq = 11: N_1 = H/|Aff| = 1729  (residues [1729, 1729, 1729]; 0.0 s)\n         H(P_11) = 95095\n         R(q) = H 2^(q-1)/q! = 2.439506173\n         reproduces the known exact value: True",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                160,
+                164
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                177,
+                181
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                183,
+                187
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                189,
+                193
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/monstrous_moonshine_s134.out",
+      "path": "05-knowledge/results/monstrous_moonshine_s134.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/monstrous_moonshine_s134.out",
+      "display_title": "05-knowledge/results/monstrous_moonshine_s134.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    7^ 6  FORBIDDEN (H=7 impossible), Hurwitz, Fano\n   11^ 2  first Paley prime with 1729 = H/|Aut|\n   13^ 3  SURPRISE prime, OCR denom at n=6",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                85,
+                89
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "    7^6, 13^3, 19^1 appear in the Monster's order\n    Their product 1729 = 7×13×19 = j(i)+1\n    And 1729 divides |M| (since each factor does)",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                68,
+                72
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                102,
+                106
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/pi_synthesis_89c.py",
+      "path": "04-computation/pi_synthesis_89c.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/pi_synthesis_89c.py",
+      "display_title": "04-computation/pi_synthesis_89c.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n  p=11: H = 95095\n        = 5 × 7 × 11 × 13 × 19                (5 consecutive odd primes!)\n        = 5 × 1729 × 11                        (1729 = taxicab number)\n        Orbits: 8645 = 5 × 1729\n\n  p=19: H = 1172695746915",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                112,
+                116
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                147,
+                151
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                198,
+                202
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/taxicab_moser_bridge_kpc1.out",
+      "path": "05-knowledge/results/taxicab_moser_bridge_kpc1.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/taxicab_moser_bridge_kpc1.out",
+      "display_title": "05-knowledge/results/taxicab_moser_bridge_kpc1.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "==============================================================================\n1729 = 7[split] * 13[split] * 19[split]   divisors: [1, 7, 13, 19, 91, 133, 247, 1729]\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                79,
+                83
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                160,
+                164
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "cofactors: 1729/13 = 133 = 7[split] * 19[split];  1729/19 = 91 = 7[split] * 13[split]  (both split products)\ngcd(d1, d2) = gcd(13, 19) = 1  -> no inert prime can divide 1729 (and indeed 1729 = 7*13*19 is completely split)\nr_E(1729) = 48 (expected 48);  B(1729) = sum chi_-3(d) = 8 (expected 8);  r_E = 6B: True",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                11,
+                15
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                50,
+                54
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                169,
+                173
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                186,
+                190
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                226,
+                230
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                255,
+                259
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/moonshine_tournament_s123.out",
+      "path": "05-knowledge/results/moonshine_tournament_s123.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/moonshine_tournament_s123.out",
+      "display_title": "05-knowledge/results/moonshine_tournament_s123.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  TOURNAMENT THEORY:\n    1729 = 1728 + 1\n    where 1728 = j(i) = 12³ = modular j-invariant at complement",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                25,
+                29
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\n  196884 mod 1729 = 1507. So 196884 = 113 × 1729 + 1507.\n  Actually: 113 × 1729 = 195377. 114 × 1729 = 197106. So 196884/1729 ≈ 113.87.",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                14,
+                18
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                46,
+                50
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                78,
+                82
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                100,
+                104
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                125,
+                129
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-312-trrt-n8-elementary.md",
+      "path": "01-canon/theorems/THM-312-trrt-n8-elementary.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-312-trrt-n8-elementary.md",
+      "display_title": "01-canon/theorems/THM-312-trrt-n8-elementary.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n- THM-310: Key Inequality\n- THM-311: Lemma A for d=2\n- THM-313: Lemma B (interlacing, computational)\n- oracle-2026-05-19-S1: Turán-ULC proof\n- oracle-2026-05-21-S1: Hermite-Biehler framework\n- HYP-1729: TRRT conjecture for all n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                199,
+                203
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/carmichael_successor_blocks_20261014b.md",
+      "path": "05-knowledge/results/carmichael_successor_blocks_20261014b.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/carmichael_successor_blocks_20261014b.md",
+      "display_title": "05-knowledge/results/carmichael_successor_blocks_20261014b.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "|1105|0|13|\n|1729|5|21|\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                13,
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\n## 5 1729, cube boundaries, and pyramid differences\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                6,
+                10
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/two_cube_support_abscissa_thm3730.py",
+      "path": "04-computation/two_cube_support_abscissa_thm3730.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/two_cube_support_abscissa_thm3730.py",
+      "display_title": "04-computation/two_cube_support_abscissa_thm3730.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    require(divisor_rep_total == indexed, \"divisor and pair fibres disagree\")\n\n    collisions = sorted((n, m) for n, m in fibre.items() if m >= 2)\n    require(collisions and collisions[0][0] == 1729, \"1729 positive control\")\n    require(dict(collisions).get(4104) == 2, \"4104 collision control\")\n    require(2**3 + 2**3 not in fibre, \"diagonal hostile leaked into distinct fibre\")\n    require(1**3 + 12**3 in fibre, \"ordinary positive control missing\")",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                194,
+                198
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                201,
+                205
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/what-survives-the-audit.md",
+      "path": "07-reflections/what-survives-the-audit.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/what-survives-the-audit.md",
+      "display_title": "07-reflections/what-survives-the-audit.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n**The even-alphabet parity law.** Proved: I(G, q) is always odd when q is even, because q^k is even for k >= 1 and alpha_0 = 1.\n\n**H(T_11)/C(11,2) = 95095/55 = 1729.** Verified computation. 1729 = 7 * 13 * 19 is factual. Whether the factorization is structurally deep is a separate question.\n\n## TIER 2: Strong Structural Analogies (Real patterns, not fully proved)\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                161,
+                165
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                191,
+                195
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/monstrous_moonshine_s134.py",
+      "path": "04-computation/monstrous_moonshine_s134.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/monstrous_moonshine_s134.py",
+      "display_title": "04-computation/monstrous_moonshine_s134.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  H(T) = I(Ω, 2) = independence polynomial at fugacity 2\n  1729 = j(i) + 1 = H(T₁₁)/|Aut(T₁₁)|\n  The j-function evaluations at orbifold points = tournament invariants",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                60,
+                64
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "print()\nprint(f\"  Product: 7 × 13 × 19 = 1729 = j(i) + 1\")\nprint(f\"  Sum: 7 + 13 + 19 = 39 = 3 × 13\")",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                43,
+                47
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/paley_aut_size_residue_kpc1_verify.py",
+      "path": "04-computation/paley_aut_size_residue_kpc1_verify.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/paley_aut_size_residue_kpc1_verify.py",
+      "display_title": "04-computation/paley_aut_size_residue_kpc1_verify.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "     (b) consistency with canon: H(T_11) = 95095 (THM-212 table) and\n         95095 / 55 = 1729 = r(11), the documented Paley ratio; freeness\n         (LEM-003) makes 95095/|Aut| an integer, and |Aut| = 55 is the",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                91,
+                95
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "      f\"{H11_canon == 5 * 7 * 11 * 13 * 19}\")\nprint(f\"p=11: H/55 = {H11_canon // 55} (= 1729, the documented r(11)): \"\n      f\"{H11_canon % 55 == 0 and H11_canon // 55 == 1729}\")",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                88,
+                92
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                171,
+                175
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/ham_excess_spectra_kps_S134.out",
+      "path": "05-knowledge/results/ham_excess_spectra_kps_S134.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/ham_excess_spectra_kps_S134.out",
+      "display_title": "05-knowledge/results/ham_excess_spectra_kps_S134.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "R_11     93027      2.38646     H/n=8457\nR_13     3711175    2.44113     H/n=285475\nR_15     198464295  2.48658     H/n=13230953\nR_17     13689269499 2.52227     H/n=805251147\nQR_ 7    189          2.40000     tc=9 korselt=False\nQR_11    95095        2.43951     tc=1729 korselt=True\nQR_19    1172695746915 2.52715     tc=6857869865 korselt=False",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                266,
+                270
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/cubic_rung_ladder_macmini_s3.out",
+      "path": "05-knowledge/results/cubic_rung_ladder_macmini_s3.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/cubic_rung_ladder_macmini_s3.out",
+      "display_title": "05-knowledge/results/cubic_rung_ladder_macmini_s3.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "   a^3+b^3=c^3 solutions with a,b <= 300: 0   (FLT n=3 => 0)\n=== 4-term: taxicab census (pair-sums with >=2 representations) ===\n   pair-sums up to 2*300^3: 44892 distinct; with >=2 reps: 258\n   FIRST: 1729  (should be 1729)\n   first 8 taxicab numbers: [1729, 4104, 13832, 20683, 32832, 39312, 40033, 46683]\n   first with 3 representations (Ta(3)=87539319 if in range): beyond range\n   additive energy E = 181764, Sidon floor = 179700, EXCESS = 2064",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                202,
+                206
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                219,
+                223
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                254,
+                258
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/qr_orbit_homology.out",
+      "path": "05-knowledge/results/qr_orbit_homology.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/qr_orbit_homology.out",
+      "display_title": "05-knowledge/results/qr_orbit_homology.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  d=7: A=8735, A mod m = 0, A/m = 1747, Ω=690, Ω mod m = 0, Ω/m = 138\n  d=8: A=14395, A mod m = 0, A/m = 2879, Ω=450, Ω mod m = 0, Ω/m = 90\n  d=9: A=15745, A mod m = 0, A/m = 3149, Ω=180, Ω mod m = 0, Ω/m = 36\n  d=10: A=8645, A mod m = 0, A/m = 1729, Ω=30, Ω mod m = 0, Ω/m = 6\n\n  QR sub-complex for j≠0 (dims = Ω_d/m for d≥1, 0 at d=0):\n    dims = [0, 1, 4, 14, 41, 92, 140, 138, 90, 36, 6]",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                254,
+                258
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/taxicab_bijection_kpc1_verify.out",
+      "path": "05-knowledge/results/taxicab_bijection_kpc1_verify.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/taxicab_bijection_kpc1_verify.out",
+      "display_title": "05-knowledge/results/taxicab_bijection_kpc1_verify.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "[compare] n with repcnt != divcnt: 0\n[edges] n=1 (cube, {1,0}): 1 1\n[edges] n=2 (x=y=1, Delta=0, d^3=4n boundary): 1 1\n[edges] n=7 (negative member {2,-1}): 1 1\n[edges] n=8 (cube, {2,0}): 1 1\n[edges] n=1729: 2 2\nVERDICT(A1,A2): PASS",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                202,
+                206
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-434-moser-ladder-unit-count-12-plus-rE-t.md",
+      "path": "01-canon/theorems/THM-434-moser-ladder-unit-count-12-plus-rE-t.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-434-moser-ladder-unit-count-12-plus-rE-t.md",
+      "display_title": "01-canon/theorems/THM-434-moser-ladder-unit-count-12-plus-rE-t.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "`B` is the coefficient function of `ζ_{ℚ(√−3)}`, and the second CM field `√−(4t−1)`\ncontributes nothing to it. `B` is unbounded (e.g. `t = 7·13·19 = 1729` → `B = 8`,\n`#units = 60`); the Loeschian-divisor-rich rungs are the densest.",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                164,
+                168
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "products of primes `≡ 1 mod 3`:\n`t = 3, 13, 49, 133, 637, 1729, …` giving `#units = 18, 24, 30, 36, 48, 60, …`. Notably\n`t = 1729 = 7·13·19` (all `≡ 1 mod 3`, all split in `ℤ[ζ₆]`) gives a **60-unit-vector",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                60,
+                64
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                131,
+                135
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/taxicab_meetmiddle_kpc1_verify.out",
+      "path": "05-knowledge/results/taxicab_meetmiddle_kpc1_verify.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/taxicab_meetmiddle_kpc1_verify.out",
+      "display_title": "05-knowledge/results/taxicab_meetmiddle_kpc1_verify.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "[enum] n with >= 2 positive reps: 40426\n[enum] Ta(2) candidate (smallest multi-rep n): 1729\n[enum] rep-multiplicity histogram: Counter({2: 40190, 3: 236})",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                87,
+                91
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "[dp] first 25 doubly-primitive n with factorizations:\n   1729 = 7 * 13 * 19   reps [(10, 9), (12, 1)]   [completely split]\n   20683 = 13 * 37 * 43   reps [(24, 19), (27, 10)]   [completely split]",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                57,
+                61
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/orbit_complex_p19_p23.out",
+      "path": "05-knowledge/results/orbit_complex_p19_p23.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/orbit_complex_p19_p23.out",
+      "display_title": "05-knowledge/results/orbit_complex_p19_p23.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "d=7: |A|=8735, orbits=1747\nd=8: |A|=14395, orbits=2879\nd=9: |A|=15745, orbits=3149\nd=10: |A|=8645, orbits=1729\n\nTotal orbit cells: 10699\nDiff-seqs built in 0.6s",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                106,
+                110
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/synthesis_missing_links.out",
+      "path": "05-knowledge/results/synthesis_missing_links.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/synthesis_missing_links.out",
+      "display_title": "05-knowledge/results/synthesis_missing_links.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "         6     91         1742   [1, 12]\n         6     91         1729   [2, 11]\n         6     91         1742   [3, 10]",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                67,
+                71
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "         6     91         1716   [4, 9]\n         6     91         1729   [5, 8]\n         6     91         1768   [6, 7]",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                66,
+                70
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/two-thirds.md",
+      "path": "07-reflections/two-thirds.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/two-thirds.md",
+      "display_title": "07-reflections/two-thirds.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "- The transitivity fraction at n=11 is 2/3 because at this specific Paley prime, the transitive (order-2) triples exactly dominate the cyclic (order-3) triples by the generator ratio.\n\nThe fraction 2/3 is the SIGNATURE OF THE MODULAR GROUP in the physical world: wherever the {3, infinity} tessellation governs structure, the ratio 2:3 between its generators appears as a measurable quantity.\n\n---\n\n*The diagonal of the unit square creates a length of sqrt(2). On the dimension axis, this sits at D = 0.670 ≈ 2/3. In a large language model, the phase transition where \"dark\" cooperative modes begin to dominate \"active\" tournament modes occurs at approximately 2/3 of the network depth. In the Paley tournament T_11 — the same tournament whose H/C(11,2) = 1729 = the Ramanujan number — the fraction of transitive triples is exactly 2/3. These are all the same ratio. It is 2/3 because the modular group PSL(2,Z) has generators of order 2 and 3, and the ratio of these orders is the fundamental constant of the {3, infinity} tessellation. The diagonal, the LLM, and the tournament all live on this tessellation, and 2/3 is its heartbeat.*",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                760,
+                764
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/eisenstein_splitting_s116m.out",
+      "path": "05-knowledge/results/eisenstein_splitting_s116m.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/eisenstein_splitting_s116m.out",
+      "display_title": "05-knowledge/results/eisenstein_splitting_s116m.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  = one inert * three split * one inert.\n  = 5 * (7*13*19) * 11.\n\n  The SPLIT part: 7*13*19 = 1729 = the TAXICAB NUMBER!\n  H(T_11) / |Aut(T_11)| = 95095 / 55 = 1729.\n  The orbit count = the product of the SPLITTING primes.\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                94,
+                98
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                160,
+                164
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/prime_sorting_s116m.py",
+      "path": "04-computation/prime_sorting_s116m.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/prime_sorting_s116m.py",
+      "display_title": "04-computation/prime_sorting_s116m.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "print(\"  \" + \"-\"*65)\nfor n in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,21,28,30,42,55,91,127,168,189,1729,6174,95095]:\n    f = factorize(n)",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                97,
+                101
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "    elif n == 55: mark = \"|Aut(T_11)|\"\n    elif n == 1729: mark = \"taxicab = orbits\"\n    elif n == 95095: mark = \"H(T_11)\"",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                53,
+                57
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/omega_orb_pattern.out",
+      "path": "05-knowledge/results/omega_orb_pattern.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/omega_orb_pattern.out",
+      "display_title": "05-knowledge/results/omega_orb_pattern.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  Junk rank: [0, 0, 1, 4, 10, 13, 8]\n\nP_11 (m=5):\n  A_orb:     [1, 1, 5, 22, 86, 286, 794, 1747, 2879, 3149, 1729]\n  Omega_orb: [1, 1, 4, 14, 41, 92, 140, 138, 90, 36, 6]\n  Junk rank: [0, 0, 1, 8, 45, 194, 654, 1609, 2789, 3113, 1723]\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                109,
+                113
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/tournament_primes_complete_s155.out",
+      "path": "05-knowledge/results/tournament_primes_complete_s155.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/tournament_primes_complete_s155.out",
+      "display_title": "05-knowledge/results/tournament_primes_complete_s155.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n  If \"tournament prime\" = prime dividing 1729:\n    Exactly 3: {7, 13, 19}.",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                42,
+                46
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "    in every definition, control forbidden values, and are the\n    factors of 1729.\n    Other primes (3, 5, 11) are MODERATELY structural — they",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                78,
+                82
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/why-h-plus-one-is-prime.md",
+      "path": "07-reflections/why-h-plus-one-is-prime.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/why-h-plus-one-is-prime.md",
+      "display_title": "07-reflections/why-h-plus-one-is-prime.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\nThe classical structure GENERATES the exceptional structure by the \"+1\" operation. And the \"+1\" is the Redei quantum — the same \"+1\" that appears in moonshine (196884 = 196883 + 1), in the taxicab (1729 = 1728 + 1), and in the OCF (H = 1 + 2*Delta).\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                201,
+                205
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "---\n\n*When Killing and Cartan classified the simple Lie algebras in the 1890s, they found exactly five exceptions to the infinite classical families. When we proved that H = 7 is forever forbidden in tournament theory, the number 7 appeared because G_2 has Coxeter number 6 and 6+1 = 7. The same \"+1\" that Ramanujan saw in 1729 = 1728 + 1, that McKay saw in 196884 = 196883 + 1, and that Redei saw in H = 1 + 2*Delta. The classification theorem of simple Lie algebras, proved over a century ago, already contained the forbidden values of tournament Hamiltonian path counts. It just took this long for anyone to read them off.*",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                323,
+                327
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/ramanujan_near_miss_kpc1_verify2.out",
+      "path": "05-knowledge/results/ramanujan_near_miss_kpc1_verify2.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/ramanujan_near_miss_kpc1_verify2.out",
+      "display_title": "05-knowledge/results/ramanujan_near_miss_kpc1_verify2.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "======================================================================\nPART 3: backward extension and 1729 (D8)\n======================================================================",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                102,
+                106
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "PASS D8: (-9)^3 + 12^3 == 10^3 - 1 == 999\nPASS D8: rearranged: 9^3 + 10^3 == 1729 == 12^3 + 1\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                77,
+                81
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/ten-fields-unified.md",
+      "path": "07-reflections/ten-fields-unified.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/07-reflections/ten-fields-unified.md",
+      "display_title": "07-reflections/ten-fields-unified.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n10 = 2 × 5 (INERT × CONTENT). The only factorization uses the two primes NOT in the Hurwitz triple {2, 3, 7}.\n\nφ(11) = 10: Euler's totient of the second Paley prime. The Paley tournament T₁₁ has |Aut| = 55 and H = 95095 (with H/|Aut| = 1729 = taxicab number).\n\n10² - 3² = 91 = 7 × 13 = (forbidden) × (surprise at n=6). The arc count squared minus the atom squared gives the product of the first two \"special\" primes.\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                244,
+                248
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/tournament_primes_s154.py",
+      "path": "04-computation/tournament_primes_s154.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/tournament_primes_s154.py",
+      "display_title": "04-computation/tournament_primes_s154.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  DEF 3: Primes p = h+1 for exceptional Lie algebra with Coxeter h\n  DEF 4: Primes dividing 1729 = 7 × 13 × 19\n  DEF 5: Primes dividing Bernoulli denominators at exceptional Coxeter weights",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                92,
+                96
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "print(f\"  H(T_11) = 95095 = {factor_str(95095)}\")\nprint(f\"  H(T_11)/55 = 1729 = {factor_str(1729)}\")\nprint(f\"  H(T_7) = 189 = {factor_str(189)}\")",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                73,
+                77
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                92,
+                96
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/thm156_energy_disjointness.out",
+      "path": "05-knowledge/results/thm156_energy_disjointness.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/thm156_energy_disjointness.out",
+      "display_title": "05-knowledge/results/thm156_energy_disjointness.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "        bits       E      T5   disj3      pred       err\n    000000     146    1274    1820   1820.00    0.0000\n    000001     122    1430    1742   1742.00    0.0000\n    000010     118    1456    1729   1729.00    0.0000\n    000011     130    1378    1768   1768.00    0.0000\n    000100     122    1430    1742   1742.00    0.0000\n    000101     114    1482    1716   1716.00    0.0000",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                197,
+                201
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                204,
+                208
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/paley_palindromic_orbits_20261014.out",
+      "path": "05-knowledge/results/paley_palindromic_orbits_20261014.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/paley_palindromic_orbits_20261014.out",
+      "display_title": "05-knowledge/results/paley_palindromic_orbits_20261014.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "Paley tournaments P_q, q prime = 3 mod 4:  H/|Aff| = 2F + P,  P = 2 pal/(q-1)\n   q =  3: pal = 1, P = 1 (P mod 8 = 1), H/|Aff| = 1 = 2F + P with F = 0: True;  F mod 4 = 0, orbit mod 8 = 1   [0.8 s]\n   q =  7: pal = 9, P = 3 (P mod 8 = 3), H/|Aff| = 9 = 2F + P with F = 3: True;  F mod 4 = 3, orbit mod 8 = 1   [0.0 s]\n   q = 11: pal = 185, P = 37 (P mod 8 = 5), H/|Aff| = 1729 = 2F + P with F = 846: True;  F mod 4 = 2, orbit mod 8 = 1   [0.0 s]\n   q = 19: pal = 573057, P = 63673 (P mod 8 = 1), H/|Aff| = 6857869865 = 2F + P with F = 3428903096: True;  F mod 4 = 0, orbit mod 8 = 1   [0.0 s]\n   q = 23: pal = 63871533, P = 5806503 (P mod 8 = 7), H/|Aff| = 62293308207033 = 2F + P with F = 31146651200265: True;  F mod 4 = 1, orbit mod 8 = 1   [0.0 s]\n   q = 31: pal = 2108041228485, P = 140536081899 (P mod 8 = 3);  HYP-9273 (B) at q = 31 <=> 2F + P = 1 (mod 8) <=> F = 3 (mod 4)   [0.1 s]",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                372,
+                376
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/two_cube_support_abscissa_thm3730.out",
+      "path": "05-knowledge/results/two_cube_support_abscissa_thm3730.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/two_cube_support_abscissa_thm3730.out",
+      "display_title": "05-knowledge/results/two_cube_support_abscissa_thm3730.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "X=1e15 indexed=4416506328 ratio=0.441650632800 boundary_error=-0.905477136\nbounded_universe=1..2000000 indexed=6889 support=6825 collision_tax=64 collisions=64 max_mult=2\nfirst_collisions=[(1729, 2), (4104, 2), (13832, 2), (20683, 2), (32832, 2), (39312, 2), (40033, 2), (46683, 2), (64232, 2), (65728, 2), (110656, 2), (110808, 2)]\nharmonic_prefix_multiset=0.375099825946574 support=0.373903893897358 collision=0.001195932049216\ngood_divisors_1729=[(13, 1, 12), (19, 9, 10)]\nsemantic_sha256=d8e624c259109b2ea361c94e4e11f42ce7ebbfcbdd7bbf54f4ae113ed90ace75\nALL GATES PASS",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                190,
+                194
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                444,
+                448
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/paley_orbit_count_mod256_20261014.out",
+      "path": "05-knowledge/results/paley_orbit_count_mod256_20261014.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/paley_orbit_count_mod256_20261014.out",
+      "display_title": "05-knowledge/results/paley_orbit_count_mod256_20261014.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "Paley orbit counts N_1 = H(P_q)/|Aff| modulo 256 (paths starting with the arc 0 -> 1)\n   q =  3: N_1 =   1 (mod 256), 1 mod 8;    [0.3 s]\n   q =  7: N_1 =   9 (mod 256), 1 mod 8;  exact 9 = 9 mod 256: True  [0.0 s]\n   q = 11: N_1 = 193 (mod 256), 1 mod 8;  exact 1729 = 193 mod 256: True  [0.0 s]\n   q = 19: N_1 =  41 (mod 256), 1 mod 8;  exact 6857869865 = 41 mod 256: True  [0.0 s]\n   q = 23: N_1 = 185 (mod 256), 1 mod 8;  exact 62293308207033 = 185 mod 256: True  [0.3 s]\n   q = 27 (GF(27)): N_1 = H/351 =   1 (mod 256), 1 mod 8 (earlier: 1 mod 8): True  [5.8 s]",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                263,
+                267
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/p13_k7_mechanism.out",
+      "path": "05-knowledge/results/p13_k7_mechanism.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/p13_k7_mechanism.out",
+      "display_title": "05-knowledge/results/p13_k7_mechanism.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  alpha_2 = 298376\n    (3, 3): 1729\n    (3, 5): 25922",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                31,
+                35
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "  alpha_2 = 292812\n    (3, 3): 1729\n    (3, 5): 25610",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                31,
+                35
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/paley_aut_size_residue_kpc1_verify.out",
+      "path": "05-knowledge/results/paley_aut_size_residue_kpc1_verify.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/paley_aut_size_residue_kpc1_verify.out",
+      "display_title": "05-knowledge/results/paley_aut_size_residue_kpc1_verify.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "p=7: H(T_7) = 189 (canon: 189), orbits = 9, all of size 21: True\np=7 verdict: PASS\np=11: affine maps x->ax+b, a in QR, that are automorphisms: 55 of 55  (claim all 55 = p(p-1)/2)\np=11: canon H(T_11) = 95095 = 5*7*11*13*19: True\np=11: H/55 = 1729 (= 1729, the documented r(11)): True\np=11 verdict: PASS (lower bound |Aut|>=55 independent; |Aut|=55 exactly is canon-consistent)\nOVERALL: PASS",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                241,
+                245
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                249,
+                253
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/comms/CLUSTER-FEED.md",
+      "path": "comms/CLUSTER-FEED.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/comms/CLUSTER-FEED.md",
+      "display_title": "comms/CLUSTER-FEED.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n**Cubic lens (complements kind-pasteur THM-462/463, HYP-2370):** cubes on the THM-446 ladder = sum-free forever (Euler/FLT₃, verified 0 violations to 300³) yet non-Sidon from exactly 1729 = first C4 of the cubic summand graph; 258 taxicab numbers in range, additive-energy excess super-linear (1.92→6.88 per B over B=50..300); signed relations enter at (3,4,5,6) (105 quadruples to 120). Sum-of-three-cubes status per kind-pasteur's ledger: 33/42 fell in 2019 (Booker, Booker–Sutherland); smallest open k = 114.\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                187,
+                191
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\n**P2 extension: eta powers + Type II scalar ladder + Tutte/matroid route.** `eta^1/eta^3/eta^8/eta^24` through `q^120` have support densities `18/121,16/121,68/121,121/121`; Jacobi eta^3 triangular formula verified, while `eta^24=Delta/q` is dense but modularly controlled. Extremal Type II formal enumerators for lengths `24..240` are integral/nonnegative with correct total; landmarks `A_d=759,17296,249849,3217056,39703755`. Scratch scan: no scalar negativity through length `1200`. Conclusion strengthened: scalar positivity is a weak gate. New route OPEN-Q-063/HYP-2430: by Greene's theorem, code weight enumerators are Tutte specializations, so `[72,36,16]` is a binary self-dual matroid support-realization problem with leakage diagnostics. Files: `cancellation_gate_atlas_codex.py` + `.out`, reflection `eta-powers-type-II-and-matroid-support-gates.md`, T781.\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                397,
+                401
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/pi_pgf_moments_89c.out",
+      "path": "05-knowledge/results/pi_pgf_moments_89c.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/pi_pgf_moments_89c.out",
+      "display_title": "05-knowledge/results/pi_pgf_moments_89c.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  7. p | H(P_p)  (THM-212, PROVED for all circulant tournaments)\n     H = p × (p-1)/2 × (a+b) where a,b are QR/NQR endpoint counts\n\n  8. 1729 = a+b at p=11  (Hardy-Ramanujan taxicab number)\n     H(P_{11}) = 11 × 5 × 1729 = 95095\n     1729 = 12³ + 1³ = 10³ + 9³\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                139,
+                143
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                220,
+                224
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                238,
+                242
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/LEM-003-aut-acts-freely-on-ham-paths.md",
+      "path": "01-canon/theorems/LEM-003-aut-acts-freely-on-ham-paths.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/LEM-003-aut-acts-freely-on-ham-paths.md",
+      "display_title": "01-canon/theorems/LEM-003-aut-acts-freely-on-ham-paths.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "- **THM-212, HYP-1264, HYP-640, HYP-1714** (Z_p / Aff(QR) act freely on Ham paths of circulant/Paley tournaments) — special cases. Their fixed-point-free-permutation arguments are not needed: freeness is universal.\n- **HYP-2369 / backlog \"1729 spine\" item 2:** the question \"is there a Q(√−3)/QR-structural reason why Aut acts freely on Ham paths of Paley T_p?\" **dissolves**. The integrality r(p) = H/|Aut| ∈ ℤ is universal order-rigidity of directed paths in any digraph — zero Eisenstein content. (Note the asymmetry that DOES remain Paley-specific: the *size* of Aut(T_p) = p(p−1)/2 is QR-structural; only the freeness/divisibility is not.)\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                241,
+                245
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "- HYP-2369 (05-knowledge/hypotheses/INDEX.md) — the claim this lemma proves.\n- THM-048, THM-212, LEM-001 (canon); aut_H_deep_s182.out, MSG-274 (S20bt), gap_inventory_s196.out item 15 (prior partial statements).\n- Backlog: \"LEAD (monad-explorer-2026-06-07): the 1729 spine is severed\", open handle 2.",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                263,
+                267
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/eisenstein_splitting_s116m.py",
+      "path": "04-computation/eisenstein_splitting_s116m.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/eisenstein_splitting_s116m.py",
+      "display_title": "04-computation/eisenstein_splitting_s116m.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "print(\"  = one inert * three split * one inert.\")\nprint(\"  = 5 * (7*13*19) * 11.\")\nprint()\nprint(\"  The SPLIT part: 7*13*19 = 1729 = the TAXICAB NUMBER!\")\nprint(\"  H(T_11) / |Aut(T_11)| = 95095 / 55 = 1729.\")\nprint(\"  The orbit count = the product of the SPLITTING primes.\")\nprint()",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                126,
+                130
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                201,
+                205
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/ham_excess_spectra_kps_S134.py",
+      "path": "04-computation/ham_excess_spectra_kps_S134.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/ham_excess_spectra_kps_S134.py",
+      "display_title": "04-computation/ham_excess_spectra_kps_S134.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\nData (this run): excess climbs 2.0 -> 2.522 (R_n, n<=17) and\n2.4 -> 2.527 (QR_p, p<=19), consistent with excess -> e with O(1/n)\ncorrection.  tc(QR_11) = 1729 is Carmichael (Chernick k=1) but\ntc(QR_19) is NOT: the Carmichael hit is a coincidence, recorded to\nprevent numerology.  OEIS lookups rate-limited at run time: novelty\nof H(R_n) = 3, 15, 175, 3267, 93027, 3711175, 198464295, 13689269499",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                155,
+                159
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-586-paley-hampath-arithmetic-dihedral-burnside.md",
+      "path": "01-canon/theorems/THM-586-paley-hampath-arithmetic-dihedral-burnside.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/01-canon/theorems/THM-586-paley-hampath-arithmetic-dihedral-burnside.md",
+      "display_title": "01-canon/theorems/THM-586-paley-hampath-arithmetic-dihedral-burnside.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "id: THM-586\ntitle: The arithmetic of the Paley-tournament Hamiltonian-path count -- for p prime = 3 mod 4, the free Z_p rotation gives p | H(T_p) with v_p=1, so H(T_p) = p*(odd) (a Paley refinement of Rédei); the full dihedral D_{2p} gives the Burnside identity #orbits = (H(T_p) + p*f(T_p))/(2p) in Z, where f is the palindromic count (THM-583), forcing H(T_p)/p == f (mod 2); R(p)=H*2^{p-1}/p! -> e; and the conjecture H = |Aut|*3^{(p-3)/2} is FALSE (fails at p=11, cofactor 1729=7*13*19, not 81)\nstatus: PROVED (Z_p free action and Burnside on D_{2p}; the equal-fix of all p reflections is conjugacy in D_p, p odd). VERIFIED exhaustively p=3,7,11 (H=3,189,95095; f=1,9,185; #orbits=1,18,4415) and H/f data computed to p=31.",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                478,
+                482
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "The repo conjecture `H(T_p) = |Aut(T_p)| * 3^{(p-3)/2}` (`|Aut|=p(p-1)/2`) holds only for `p=3,7`\n(`H=3,189`).  At `p=11` it predicts `55*81=4455` but `H(T_11)=95095=55*1729`, cofactor\n`1729 = 7*13*19` (the taxicab number), NOT `81=3^4`.  At `p=19` the cofactor is `5*7*11*23*774463`.",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                169,
+                173
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                186,
+                190
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/ramanujan_near_miss_kpc1_verify2.py",
+      "path": "04-computation/ramanujan_near_miss_kpc1_verify2.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/ramanujan_near_miss_kpc1_verify2.py",
+      "display_title": "04-computation/ramanujan_near_miss_kpc1_verify2.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "print(\"=\" * 70)\nprint(\"PART 3: backward extension and 1729 (D8)\")\nprint(\"=\" * 70)",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                54,
+                58
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "      (-9)**3 + 12**3 == 10**3 - 1 == 999)\ncheck(\"D8: rearranged: 9^3 + 10^3 == 1729 == 12^3 + 1\",\n      9**3 + 10**3 == 1729 and 12**3 + 1 == 1729)",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                80,
+                84
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                121,
+                125
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                143,
+                147
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/moser_ladder_avg_rosette_pi_monad_s5.out",
+      "path": "05-knowledge/results/moser_ladder_avg_rosette_pi_monad_s5.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/moser_ladder_avg_rosette_pi_monad_s5.out",
+      "display_title": "05-knowledge/results/moser_ladder_avg_rosette_pi_monad_s5.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "  t=    49  #units=  30  B=  3  t={7: 2}\n  t=   133  #units=  36  B=  4  t={7: 1, 19: 1}\n  t=   637  #units=  48  B=  6  t={7: 2, 13: 1}\n  t=  1729  #units=  60  B=  8  t={7: 1, 13: 1, 19: 1}\n  t=  8281  #units=  66  B=  9  t={7: 2, 13: 2}\n  t= 12103  #units=  84  B= 12  t={7: 2, 13: 1, 19: 1}\n  t= 53599  #units= 108  B= 16  t={7: 1, 13: 1, 19: 1, 31: 1}",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                143,
+                147
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/03-artifacts/drafts/deep-connections-S25f.md",
+      "path": "03-artifacts/drafts/deep-connections-S25f.md",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/03-artifacts/drafts/deep-connections-S25f.md",
+      "display_title": "03-artifacts/drafts/deep-connections-S25f.md",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "\n### The 1729 Mystery Deepened\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                9,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "- p=7: H=189, |Aut|=21, ratio = 9 = 3^2\n- p=11: H=95095, |Aut|=55, ratio = 1729 = 7*13*19\n",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                75,
+                79
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/overnight_s1_fixed.py",
+      "path": "04-computation/overnight_s1_fixed.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/overnight_s1_fixed.py",
+      "display_title": "04-computation/overnight_s1_fixed.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "    print(\"\\n  --- Arithmetic patterns ---\")\n    ratios = [1, 9, 1729, 6857869865]\n    primes_list = [3, 7, 11, 19]",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                65,
+                69
+              ]
+            }
+          ]
+        },
+        {
+          "property": "content",
+          "fragment": "\n    # Check if 1729 = sum of cubes\n    print(f\"\\n  1729 = 12^3 + 1^3 = {12**3 + 1**3}\")",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                16,
+                20
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                52,
+                56
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/ramanujan_near_miss_kpc1_verify.py",
+      "path": "04-computation/ramanujan_near_miss_kpc1_verify.py",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/04-computation/ramanujan_near_miss_kpc1_verify.py",
+      "display_title": "04-computation/ramanujan_near_miss_kpc1_verify.py",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "check(\"D8: n=-3 triple is (-65601, 83802, 67402)\", t_m3 == (-65601, 83802, 67402))\ncheck(\"D8: (-9)^3 + 12^3 == 10^3 + (-1)^(-1)\",\n      (-9) ** 3 + 12 ** 3 == 10 ** 3 - 1)\ncheck(\"D8: 9^3 + 10^3 == 12^3 + 1 == 1729 (taxicab reading)\",\n      9 ** 3 + 10 ** 3 == 1729 and 12 ** 3 + 1 == 1729)\n\n# ---------------------------------------------------------------- PART 3",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                209,
+                213
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                260,
+                264
+              ]
+            },
+            {
+              "text": "1729",
+              "indices": [
+                284,
+                288
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/twin_center_additive_ancestry_thm2422.out",
+      "path": "05-knowledge/results/twin_center_additive_ancestry_thm2422.out",
+      "display_url": "https://github.com/eliottcassidy2000/math/blob/54bf96642934c6cdf01f02e364f3bba00892ae22/05-knowledge/results/twin_center_additive_ancestry_thm2422.out",
+      "display_title": "05-knowledge/results/twin_center_additive_ancestry_thm2422.out",
+      "text_matches": [
+        {
+          "property": "content",
+          "fragment": "diagonal_hostiles=4_and_9_have_no_strict_proper_factor_pair\nfibonacci_spine=2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597,2584,4181,6765\nfibonacci_target_13_parents=2+11,3+10,5+8\nsynchronous_stage_max=0:3,1:5,2:8,3:15,4:28,5:55,6:109,7:217,8:433,9:865,10:1729\nsynchronous_stage_size=0:2,1:3,2:5,3:11,4:25,5:52,6:106,7:214,8:430,9:862,10:1726\ndyadic_frontier=M_t=27*2^(t-4)+1 for 4<=t<=10\nlocal_sextuple_counts=5:7,7:19,11:67,13:103,17:199,19:259,23:403,29:679,31:787,37:1159,41:1447,43:1603",
+          "matches": [
+            {
+              "text": "1729",
+              "indices": [
+                257,
+                261
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
