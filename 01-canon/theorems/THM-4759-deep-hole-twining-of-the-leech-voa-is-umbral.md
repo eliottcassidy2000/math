@@ -268,9 +268,9 @@ c″ = proj_Λ(z″)/(h + 1), a point of order e = h + 1. Then for all 23 types:
 | 17 | A15D9 | 7q + 14q² + 29q³ (17A, A058530) |
 | 19 | A17E7, D10E7² | 6q + 10q² + 21q³ (19A, A058549) |
 | 23 | D12² | 4q + 7q² + 13q³ (23AB, A058570) |
-| 26 | A24 | 3q + 6q² (26+26 = T_26B, A058597; (η(2τ)η(13τ)/(η(τ)η(26τ)))² − 2) |
-| 31 | D16E8, E8³ | 3q + 3q² (31AB) |
-| 47 | D24 | q + 2q² (47AB) |
+| 26 | A24 | 3q + 6q² + 9q³ (26+26 = T_26B, A058597; (η(2τ)η(13τ)/(η(τ)η(26τ)))² − 2) |
+| 31 | D16E8, E8³ | 3q + 3q² + 6q³ (31AB, A058628) |
+| 47 | D24 | q + 2q² (47AB, A058690) |
 
 *Geometry: a Fricke point is a deep hole nudged towards the second shell.* fricke_nudge.py checks all 23 types.
 - **The cusp.** z″ = z + r, where r is a Leech root (a wall of the Leech chamber, r·ρ = −1) with r·z = −1. So z″ is
