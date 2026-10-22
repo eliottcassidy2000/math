@@ -10,6 +10,9 @@ status: >
   - One class is the A3^8 (h+1)-point (n_2 = 24).
   - The other has n_2 = 23, and its conjugate 2v has the shallower minimum 6/5. So its twining is irrational and not
     a Hauptmodul.
+  The irrational class is the A2^12 shell-1 point. Its y.lambda distribution over Lambda_4 coincides with that class's
+  (order5_compare.py), and THM-4760 (4) lists it as IRRATIONAL. The rational class is the A3^8 (h+1)-point. So the
+  random order-5 census finds exactly the two cusp families of THM-4760, and nothing else.
   So geometry alone does not suffice. The definition now requires the Fricke Hauptmodul property, which by THM-4760
   adds rationality and n_2 = 24. The prime-order sketch below silently used exactly this, through the claim that all
   twisted sectors are Galois transforms of one another.
