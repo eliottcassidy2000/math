@@ -114,11 +114,11 @@ The checks at `q = 43, 59, 83` approach these limits like `1/q` (`drt_c2_terms.o
 
 Through three loops every doubly regular tournament of one order is identical. Four-loop cores have up to 6 vertices, so the first non-universal terms see the 5- and 6-vertex censuses.
 
-Data: 9 classes at order 23, namely `P_23` and 8 non-Paley classes from `drt_anneal.c`, nauty-distinct (`drt_census_hierarchy.out`).
+Data: 13 nauty classes at order 23, namely `P_23` (self-converse) and 12 non-Paley classes from `drt_anneal.c`. These are 10 classes up to converse; two of the 12 form converse pairs, whose equal `H` is trivial (`drt_census_hierarchy.out`).
 * **One parameter.** The 5-vertex census differences have rank 1 across the 11 census types. One free five-vertex parameter remains, for example the number `TT5` of transitive 5-sets: 1466–1494 for the non-Paley classes, 1518 for `P_23`.
-* **Linear law.** Over the 8 non-Paley classes, `H = 1.575385·10^16 + 4.126153·10^9·TT5`, with maximal relative residual `1.7·10^(−7)`, against a spread of `7.3·10^(−6)`. Each extra transitive 5-set is worth `+2.6·10^(−7)` of `H`.
-* **Equal censuses.** The two classes with equal 5-censuses (audit 2's `D_23.2`, `D_23.3`; their 6-censuses differ) agree to `2.8·10^(−8)`.
-* **Paley is off the line** by `+5.7·10^(−6)`. Its census lies far from the others, and its 6-census presumably differs too.
+* **Linear law.** Over the 12 non-Paley classes, `H = 1.575375·10^16 + 4.199788·10^9·TT5`, with maximal relative residual `3.7·10^(−7)`, against a spread of `7.3·10^(−6)`. Each extra transitive 5-set is worth `+2.7·10^(−7)` of `H`. (On the first 8 classes the fit was `4.126·10^9`, with residual `1.7·10^(−7)`.)
+* **Equal censuses.** The only pair with equal 5-censuses that is not a converse pair (audit 2's `D_23.2`, `D_23.3`; their 6-censuses differ) agrees to `2.8·10^(−8)`.
+* **Paley is off the line** by `+5.5·10^(−6)`. Its census lies far from the others, and its 6-census presumably differs too.
 * So the non-universal part of `H` for doubly regular tournaments is organised level by level: five-vertex structure first (about `10^(−5)`), then six-vertex structure (below `10^(−7)`). This is what the loop expansion predicts (FINITE-EXACT).
 
 ## Status of the expansion
