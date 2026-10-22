@@ -137,6 +137,7 @@ def enum_dual(Q, Bnd):
 
 
 X = symbols('X')
+INTER = {}
 for name, h, n0, z2 in rows:
     if ONLY and name not in ONLY:
         continue
@@ -283,7 +284,15 @@ for name, h, n0, z2 in rows:
           f'{name:9s} h={h:2d}: M^* vectors |x|^2<=2: {sum(sum(t.values()) for t in table.values())}; E = 0 below norm 2; '
           f'v (norm-2 swap defect) is rho_M-invariant (T, S exact) => Theta_M - sigma^*Theta_M = Delta v (PROVED); '
           f'B = sigma(A); sum over the Leech line A of v = {G} = 24 + k = {n0} => theta(Lambda+c) - theta(N+rho/h) = {n0} Delta [{time.time() - t1:.0f}s]')
+    # intermediate unimodular lattices L_d (from the maximal isotropic subgroups S_d): root counts and Coxeter numbers
+    roots_d = {}
+    for d in divs:
+        Sd = Ssets[d]
+        roots_d[d] = sum(table.get(g, {}).get(Fraction(2), 0) for g in Sd)
+    inter = {d: (roots_d[d], roots_d[d] // 24 if roots_d[d] % 24 == 0 else None) for d in divs}
     print(f'       v = sum_d c_d 1_(S_d): {recon_ok}; c_d = {cd_int}', flush=True)
+    print(f'       intermediate lattices L_d: (roots, Coxeter number) = {inter}', flush=True)
+    INTER[name] = (h, inter, cd_int)
 
 print()
 print('ALL CHECKS PASSED' if not FAIL else f'FAILED: {FAIL}', f' ({time.time() - T0:.0f}s)')

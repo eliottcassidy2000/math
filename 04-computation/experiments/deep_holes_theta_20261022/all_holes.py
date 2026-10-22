@@ -270,6 +270,25 @@ for name, h, n0, n1, n2, z2 in rows:
           f'N_j - N\'_j = {n0} tau(1 + j/h) [h | j], 0 otherwise, for j <= {JMAX} [{time.time() - t1:.0f}s]')
     if not good:
         print('       j, N_j, N\'_j, diff:', [(j, int(NL[j]), int(NN[j]), diffs[j]) for j in range(JMAX + 1) if diffs[j] != ((n0 * TAU[1 + j // h]) if j % h == 0 else 0)][:12])
+    # pure A-types: theta(N + rho/h) = h^(k/2) (eta(tau)^h / eta(tau/h))^k, k = 24/(h-1)
+    if name.startswith('a') and 'd' not in name and 'e' not in name:
+        kc = 24 // (h - 1)
+        L = JMAX + 2
+        def prodpow(step, e):
+            sr = [0] * L; sr[0] = 1
+            for mm in range(1, L // step + 2):
+                for _ in range(abs(e)):
+                    if e > 0:
+                        sr = [sr[t] - (sr[t - step * mm] if t >= step * mm else 0) for t in range(L)]
+                    else:
+                        for t in range(step * mm, L):
+                            sr[t] += sr[t - step * mm]
+            return sr
+        A_ = prodpow(h, h * kc); B_ = prodpow(1, -kc)
+        Eq = [sum(A_[i] * B_[t - i] for i in range(t + 1)) for t in range(L)]
+        glue = round(h ** (kc / 2))
+        predN = [glue * Eq[j - 1] if j >= 1 else 0 for j in range(JMAX + 1)]   # coefficient of q^(1 + j/h)
+        check([int(t) for t in NN] == predN, f'{name}: theta(N + rho/h) = {glue} (eta^{h}/eta(tau/{h}))^{kc} (h-cores, Garvan-Kim-Stanton) for j <= {JMAX}')
     summary.append((name, h, n0, good))
 
 print()
