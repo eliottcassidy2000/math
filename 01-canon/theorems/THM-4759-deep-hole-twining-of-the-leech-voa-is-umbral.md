@@ -56,6 +56,7 @@ scripts:
   - 04-computation/experiments/deep_holes_theta_20261022/swap_fricke_proof.py (+ .out) (the Fricke swap theorem: certificates for the 23 pairs (rho, z''))
   - 04-computation/experiments/deep_holes_theta_20261022/swap_shell_test.py (+ .out) (the next shell m = h + 2 fails)
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_nudge.py (+ .out) (Fricke point = deep hole nudged 1/(h+1) toward a second-shell point; z'' = z + Leech wall)
+  - 04-computation/experiments/deep_holes_theta_20261022/fricke_shell_test.py (+ .out) (shell-1 points: Fricke-invariant twining for the seven D-types despite shallow multiples)
 related:
   - THM-4758 (swap theorem and deep-hole theta identity)
   - HYP-9363 (proved in THM-4758)
@@ -365,6 +366,15 @@ the 24 finite simple roots.
 over the shells of N + ρ_N/h. Shell 0 gives m = h + 1. The next shell, m = h + 2, FAILS the certificate for all 23
 types (swap_shell_test.py): the coset theta series already differ below norm 2. So the swap holds
 exactly for m = h and m = h + 1.
+
+*But the Fricke twining extends one shell further for the D-types.* The shell-1 Leech points (m = h + 2) still have
+a unique minimal vector at the Fricke norm 2 − 2/(h + 2). For the seven D-type lattices A1²⁴ = D2¹², D4⁶, D6⁴, D8³,
+D10E7², D12² and D16E8, their twining is Fricke-invariant through q², and the series are 4A, 8A, 12H, 16C, ... at
+orders 4, 8, 12, 16, 20, 24 and 32.
+
+In each case some proper multiple is shallow. For A1²⁴, 2c_w is λ/2 with |λ|² = 4, with two minimal vectors ±λ/2
+whose twined contributions cancel. These points are not strict Fricke points and not swap pairs. They are the (B)
+family of HYP-9368, and they refute the first registered form of that hypothesis (fricke_shell_test.py).
 
 **(6) The Monster corner (CITED).** For X ≠ A24:
 - π^X is the Frame shape of a fixed-point-free element g_X ∈ Co_0, so Z_{V_Λ}(ĝ_X) = 1/η_{π^X} = T^X as well (CDH

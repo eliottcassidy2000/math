@@ -301,9 +301,15 @@ For the pure A-types, h is a prime power and H = h + 1 = |P^1(F_h)|. The prompt'
 (A2^12) and 10 (A8^3). k^3 + 1 = 9 is A7^2D5^2. Their meeting point 28 = 3^3 + 1 would need h = 27, which is just
 outside the Niemeier world (A26 has rank 26).
 
-HYP-9368 conjectures that the genus-zero inner automorphisms of V_Lambda are exactly 0, the 23 deep holes and the 23
-Fricke points. A first draft that allowed only the eleven bad-prime multiples was refuted by the (h+1)-points before
-registration.
+HYP-9368 has two parts.
+- (A) The strict Fricke points (unique Fricke-norm vector, all proper multiples deep) are exactly the 23 (h+1)-points.
+  The prime orders are sketched; orders 3, 4 and 6 are sampled.
+- (B) The genus-zero inner automorphisms also include a family whose shallow multiples cancel in the twining. Its
+  known members are the shell-1 points (order h + 2) of the seven D-types, twining by 4A, 8A, 12H (A058486), 16C
+  (A058516), ... (fricke_shell_test.py).
+
+This refuted two earlier versions within the session. The first allowed only the eleven bad-prime multiples. The
+second claimed that 0, the deep holes and the Fricke points were all of the genus-zero cases.
 
 **The Fricke swap theorem (THM-4759 (11), PROVED by the same certificate).**
 theta(Lambda + c'') - theta(N + rho_N/(h+1)) = 24 Delta, with the pure defect vector 24(1_{S_{h+1}} - 1_{S_1}). Hence
