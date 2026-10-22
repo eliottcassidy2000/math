@@ -1,0 +1,225 @@
+{
+  "seed": 2603,
+  "commit": "cf6f4b3b81d36c1f6a02fdc28f85e0de9e583397",
+  "algorithm": "sorted markdown candidates by topic regex, random shuffle sequentially with seed2603, prefer three distinct top-level path types, fallback fill; topic order as listed",
+  "samples": [
+    {
+      "index": 1,
+      "stratum": "collatz",
+      "path": "05-knowledge/results/collatz_log_gap_20261014a.md",
+      "local": "sample_01.md",
+      "bytes": 13011
+    },
+    {
+      "index": 2,
+      "stratum": "collatz",
+      "path": "07-reflections/collatz-the-missing-insight-lives-where-choice-would-be-procgen-20260922.md",
+      "local": "sample_02.md",
+      "bytes": 27161
+    },
+    {
+      "index": 3,
+      "stratum": "collatz",
+      "path": "01-canon/theorems/THM-4634-collatz-parity-number-dictionary-irrationality-exponents-of-parity-vectors-and-jarnik-strata.md",
+      "local": "sample_03.md",
+      "bytes": 16600
+    },
+    {
+      "index": 4,
+      "stratum": "palette",
+      "path": "05-knowledge/results/unit_distance_carry_20261019/README.md",
+      "local": "sample_04.md",
+      "bytes": 28768
+    },
+    {
+      "index": 5,
+      "stratum": "palette",
+      "path": "07-reflections/lrc14-unit-distance21-difficulty-bridge-s641.md",
+      "local": "sample_05.md",
+      "bytes": 2859
+    },
+    {
+      "index": 6,
+      "stratum": "palette",
+      "path": "01-canon/theorems/THM-431-unit-distance-u21-equals-57.md",
+      "local": "sample_06.md",
+      "bytes": 8971
+    },
+    {
+      "index": 7,
+      "stratum": "algebra",
+      "path": "01-canon/theorems/THM-4180-repeated-top-delta-zero-planar-jacobian-exclusion.md",
+      "local": "sample_07.md",
+      "bytes": 15705
+    },
+    {
+      "index": 8,
+      "stratum": "algebra",
+      "path": "07-reflections/gaussian-moments-the-explicit-failing-mathieu-space-and-why-gmc2-resists-deathstar-S61e.md",
+      "local": "sample_08.md",
+      "bytes": 7658
+    },
+    {
+      "index": 9,
+      "stratum": "algebra",
+      "path": "05-knowledge/results/jacobian_elliptic_bridge_20261016c.md",
+      "local": "sample_09.md",
+      "bytes": 18259
+    },
+    {
+      "index": 10,
+      "stratum": "geometry",
+      "path": "01-canon/theorems/THM-3362-odd-berggren-determinant-ray-factorial-closure.md",
+      "local": "sample_10.md",
+      "bytes": 14296
+    },
+    {
+      "index": 11,
+      "stratum": "geometry",
+      "path": "07-reflections/khinchin-duffin-schaeffer-rational-edge-berggren-lcm-synthesis-20260824.md",
+      "local": "sample_11.md",
+      "bytes": 18468
+    },
+    {
+      "index": 12,
+      "stratum": "geometry",
+      "path": "05-knowledge/results/elliptic_crossedges_20261016c.md",
+      "local": "sample_12.md",
+      "bytes": 28408
+    },
+    {
+      "index": 13,
+      "stratum": "automata",
+      "path": "05-knowledge/results/zeckendorf_guard_automaton_20261003.md",
+      "local": "sample_13.md",
+      "bytes": 11496
+    },
+    {
+      "index": 14,
+      "stratum": "automata",
+      "path": "07-reflections/three-p-affine-cover-automaton-harmonic-rank-spectrum-codex-20260815.md",
+      "local": "sample_14.md",
+      "bytes": 6229
+    },
+    {
+      "index": 15,
+      "stratum": "automata",
+      "path": "01-canon/theorems/THM-4250-odd-core-suffix-lift-automaton-and-density-one-compiler.md",
+      "local": "sample_15.md",
+      "bytes": 18834
+    },
+    {
+      "index": 16,
+      "stratum": "number",
+      "path": "07-reflections/lrc-n18-proof-attempt-parity-vacuity-prime-power-s534o.md",
+      "local": "sample_16.md",
+      "bytes": 5488
+    },
+    {
+      "index": 17,
+      "stratum": "number",
+      "path": "05-knowledge/results/prime_pairs_local_symmetry_20261019/power-depth-rough-pairs.md",
+      "local": "sample_17.md",
+      "bytes": 12550
+    },
+    {
+      "index": 18,
+      "stratum": "number",
+      "path": ".scratch/thm2779_merge/root_all_prime_candidate.md",
+      "local": "sample_18.md",
+      "bytes": 21708
+    },
+    {
+      "index": 19,
+      "stratum": "games",
+      "path": "06-writeups/amm12592-minimal-c-frontier-synthesis.md",
+      "local": "sample_19.md",
+      "bytes": 12896
+    },
+    {
+      "index": 20,
+      "stratum": "games",
+      "path": "01-canon/theorems/THM-4393-lrc14-minimal-ternary-unit-norm-eighteen-shell.md",
+      "local": "sample_20.md",
+      "bytes": 14087
+    },
+    {
+      "index": 21,
+      "stratum": "games",
+      "path": "poke-forum/posts/20260629-lrc14-minimal-bad-core-cover-extractor/post.md",
+      "local": "sample_21.md",
+      "bytes": 2304
+    },
+    {
+      "index": 22,
+      "stratum": "other",
+      "path": "01-canon/theorems/THM-3793-inert-prime-sum-all-scale-two-cube-singleton.md",
+      "local": "sample_22.md",
+      "bytes": 28646
+    },
+    {
+      "index": 23,
+      "stratum": "other",
+      "path": "07-reflections/lrc14-legC-closed-proof-synthesis-claudeopus-0622-S3.md",
+      "local": "sample_23.md",
+      "bytes": 5220
+    },
+    {
+      "index": 24,
+      "stratum": "other",
+      "path": "05-knowledge/hypotheses/HYP-9259-one-sided-walks-meta-fibonacci-integer-comb-conway-generation-map-hofstadter-q-resonator.md",
+      "local": "sample_24.md",
+      "bytes": 19099
+    },
+    {
+      "index": 25,
+      "stratum": "actual-cellular",
+      "path": "01-canon/theorems/THM-3507-rule30-normalized-dyadic-displacement-sibling-trace-and-assouad-spectrum.md",
+      "local": "sample_25.md",
+      "bytes": 10776
+    },
+    {
+      "index": 26,
+      "stratum": "actual-games",
+      "path": "05-knowledge/results/kernels_games_detours_20261020f/game.md",
+      "local": "sample_26.md",
+      "bytes": 8847
+    },
+    {
+      "index": 27,
+      "stratum": "dated-june",
+      "path": "poke-forum/posts/20260624-202829Z-lrc14-cocycle-normal-form-atlas/post.md",
+      "local": "sample_27.md",
+      "bytes": 2997
+    },
+    {
+      "index": 28,
+      "stratum": "dated-july",
+      "path": "07-reflections/lrc14-root-zero-full-target-semantic-clutch-20260728.md",
+      "local": "sample_28.md",
+      "bytes": 17418
+    },
+    {
+      "index": 29,
+      "stratum": "dated-august",
+      "path": "07-reflections/lrc-r5-ufull-owner-node-common-base-current-codex-20260816.md",
+      "local": "sample_29.md",
+      "bytes": 8932
+    },
+    {
+      "index": 30,
+      "stratum": "dated-september",
+      "path": "05-knowledge/results/collatz_catalan_ramsey_20260927.md",
+      "local": "sample_30.md",
+      "bytes": 17170
+    },
+    {
+      "index": 31,
+      "stratum": "dated-october",
+      "path": "05-knowledge/results/sixth_clock_branches_20261004.md",
+      "local": "sample_31.md",
+      "bytes": 30139
+    }
+  ],
+  "supplement_algorithm": "Independent Random(2603); sorted candidates; one choice each for actual cellular/game and explicit June..October date regex strata. Original games regex had incidental minimal matches; original draws retained transparently."
+}

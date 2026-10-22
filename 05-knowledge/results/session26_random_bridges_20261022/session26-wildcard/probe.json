@@ -1,0 +1,1279 @@
+{
+  "fibonacci": [
+    {
+      "modulus": 1,
+      "reachable": 3,
+      "minimal": 3
+    },
+    {
+      "modulus": 2,
+      "reachable": 9,
+      "minimal": 9
+    },
+    {
+      "modulus": 3,
+      "reachable": 19,
+      "minimal": 19
+    },
+    {
+      "modulus": 4,
+      "reachable": 33,
+      "minimal": 33
+    },
+    {
+      "modulus": 5,
+      "reachable": 51,
+      "minimal": 51
+    },
+    {
+      "modulus": 6,
+      "reachable": 73,
+      "minimal": 73
+    },
+    {
+      "modulus": 7,
+      "reachable": 99,
+      "minimal": 99
+    },
+    {
+      "modulus": 8,
+      "reachable": 129,
+      "minimal": 129
+    },
+    {
+      "modulus": 9,
+      "reachable": 163,
+      "minimal": 163
+    },
+    {
+      "modulus": 10,
+      "reachable": 201,
+      "minimal": 201
+    },
+    {
+      "modulus": 11,
+      "reachable": 243,
+      "minimal": 243
+    },
+    {
+      "modulus": 12,
+      "reachable": 289,
+      "minimal": 289
+    },
+    {
+      "modulus": 13,
+      "reachable": 339,
+      "minimal": 339
+    },
+    {
+      "modulus": 14,
+      "reachable": 393,
+      "minimal": 393
+    },
+    {
+      "modulus": 15,
+      "reachable": 451,
+      "minimal": 451
+    },
+    {
+      "modulus": 16,
+      "reachable": 513,
+      "minimal": 513
+    },
+    {
+      "modulus": 17,
+      "reachable": 579,
+      "minimal": 579
+    },
+    {
+      "modulus": 18,
+      "reachable": 649,
+      "minimal": 649
+    },
+    {
+      "modulus": 19,
+      "reachable": 723,
+      "minimal": 723
+    },
+    {
+      "modulus": 20,
+      "reachable": 801,
+      "minimal": 801
+    },
+    {
+      "modulus": 21,
+      "reachable": 883,
+      "minimal": 883
+    },
+    {
+      "modulus": 22,
+      "reachable": 969,
+      "minimal": 969
+    },
+    {
+      "modulus": 23,
+      "reachable": 1059,
+      "minimal": 1059
+    },
+    {
+      "modulus": 24,
+      "reachable": 1153,
+      "minimal": 1153
+    },
+    {
+      "modulus": 25,
+      "reachable": 1251,
+      "minimal": 1251
+    },
+    {
+      "modulus": 26,
+      "reachable": 1353,
+      "minimal": 1353
+    },
+    {
+      "modulus": 27,
+      "reachable": 1459,
+      "minimal": 1459
+    },
+    {
+      "modulus": 28,
+      "reachable": 1569,
+      "minimal": 1569
+    },
+    {
+      "modulus": 29,
+      "reachable": 1683,
+      "minimal": 1683
+    },
+    {
+      "modulus": 30,
+      "reachable": 1801,
+      "minimal": 1801
+    },
+    {
+      "modulus": 31,
+      "reachable": 1923,
+      "minimal": 1923
+    },
+    {
+      "modulus": 32,
+      "reachable": 2049,
+      "minimal": 2049
+    },
+    {
+      "modulus": 33,
+      "reachable": 2179,
+      "minimal": 2179
+    },
+    {
+      "modulus": 34,
+      "reachable": 2313,
+      "minimal": 2313
+    },
+    {
+      "modulus": 35,
+      "reachable": 2451,
+      "minimal": 2451
+    },
+    {
+      "modulus": 36,
+      "reachable": 2593,
+      "minimal": 2593
+    },
+    {
+      "modulus": 37,
+      "reachable": 2739,
+      "minimal": 2739
+    },
+    {
+      "modulus": 38,
+      "reachable": 2889,
+      "minimal": 2889
+    },
+    {
+      "modulus": 39,
+      "reachable": 3043,
+      "minimal": 3043
+    },
+    {
+      "modulus": 40,
+      "reachable": 3201,
+      "minimal": 3201
+    }
+  ],
+  "lucas": [
+    {
+      "modulus": 1,
+      "reachable": 3,
+      "minimal": 3
+    },
+    {
+      "modulus": 2,
+      "reachable": 9,
+      "minimal": 9
+    },
+    {
+      "modulus": 3,
+      "reachable": 19,
+      "minimal": 19
+    },
+    {
+      "modulus": 4,
+      "reachable": 33,
+      "minimal": 33
+    },
+    {
+      "modulus": 5,
+      "reachable": 11,
+      "minimal": 11
+    },
+    {
+      "modulus": 6,
+      "reachable": 73,
+      "minimal": 73
+    },
+    {
+      "modulus": 7,
+      "reachable": 99,
+      "minimal": 99
+    },
+    {
+      "modulus": 8,
+      "reachable": 129,
+      "minimal": 129
+    },
+    {
+      "modulus": 9,
+      "reachable": 163,
+      "minimal": 163
+    },
+    {
+      "modulus": 10,
+      "reachable": 41,
+      "minimal": 41
+    },
+    {
+      "modulus": 11,
+      "reachable": 243,
+      "minimal": 243
+    },
+    {
+      "modulus": 12,
+      "reachable": 289,
+      "minimal": 289
+    },
+    {
+      "modulus": 13,
+      "reachable": 339,
+      "minimal": 339
+    },
+    {
+      "modulus": 14,
+      "reachable": 393,
+      "minimal": 393
+    },
+    {
+      "modulus": 15,
+      "reachable": 91,
+      "minimal": 91
+    },
+    {
+      "modulus": 16,
+      "reachable": 513,
+      "minimal": 513
+    },
+    {
+      "modulus": 17,
+      "reachable": 579,
+      "minimal": 579
+    },
+    {
+      "modulus": 18,
+      "reachable": 649,
+      "minimal": 649
+    },
+    {
+      "modulus": 19,
+      "reachable": 723,
+      "minimal": 723
+    },
+    {
+      "modulus": 20,
+      "reachable": 161,
+      "minimal": 161
+    },
+    {
+      "modulus": 21,
+      "reachable": 883,
+      "minimal": 883
+    },
+    {
+      "modulus": 22,
+      "reachable": 969,
+      "minimal": 969
+    },
+    {
+      "modulus": 23,
+      "reachable": 1059,
+      "minimal": 1059
+    },
+    {
+      "modulus": 24,
+      "reachable": 1153,
+      "minimal": 1153
+    },
+    {
+      "modulus": 25,
+      "reachable": 251,
+      "minimal": 251
+    },
+    {
+      "modulus": 26,
+      "reachable": 1353,
+      "minimal": 1353
+    },
+    {
+      "modulus": 27,
+      "reachable": 1459,
+      "minimal": 1459
+    },
+    {
+      "modulus": 28,
+      "reachable": 1569,
+      "minimal": 1569
+    },
+    {
+      "modulus": 29,
+      "reachable": 1683,
+      "minimal": 1683
+    },
+    {
+      "modulus": 30,
+      "reachable": 361,
+      "minimal": 361
+    },
+    {
+      "modulus": 31,
+      "reachable": 1923,
+      "minimal": 1923
+    },
+    {
+      "modulus": 32,
+      "reachable": 2049,
+      "minimal": 2049
+    },
+    {
+      "modulus": 33,
+      "reachable": 2179,
+      "minimal": 2179
+    },
+    {
+      "modulus": 34,
+      "reachable": 2313,
+      "minimal": 2313
+    },
+    {
+      "modulus": 35,
+      "reachable": 491,
+      "minimal": 491
+    },
+    {
+      "modulus": 36,
+      "reachable": 2593,
+      "minimal": 2593
+    },
+    {
+      "modulus": 37,
+      "reachable": 2739,
+      "minimal": 2739
+    },
+    {
+      "modulus": 38,
+      "reachable": 2889,
+      "minimal": 2889
+    },
+    {
+      "modulus": 39,
+      "reachable": 3043,
+      "minimal": 3043
+    },
+    {
+      "modulus": 40,
+      "reachable": 641,
+      "minimal": 641
+    }
+  ],
+  "hostiles": {
+    "noninvertible_M_zero": {
+      "modulus": 5,
+      "reachable": 3,
+      "minimal": 3
+    },
+    "unobservable_output": {
+      "modulus": 5,
+      "reachable": 51,
+      "minimal": 3
+    },
+    "scalar_state_2_vs_8": {
+      "modulus": 3,
+      "prefixes": [
+        "10",
+        "10000"
+      ],
+      "value_residues": [
+        2,
+        2
+      ],
+      "shift_residues": [
+        0,
+        1
+      ],
+      "after_zero_values": [
+        3,
+        13
+      ]
+    }
+  },
+  "bounded_runs": [
+    {
+      "modulus": 1,
+      "reachable": 4,
+      "minimal": 4,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 1,
+      "reachable": 4,
+      "minimal": 4,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 2,
+      "reachable": 13,
+      "minimal": 13,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 2,
+      "reachable": 13,
+      "minimal": 13,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 3,
+      "reachable": 28,
+      "minimal": 28,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 3,
+      "reachable": 28,
+      "minimal": 28,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 4,
+      "reachable": 49,
+      "minimal": 49,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 4,
+      "reachable": 49,
+      "minimal": 49,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 5,
+      "reachable": 76,
+      "minimal": 76,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 5,
+      "reachable": 16,
+      "minimal": 16,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 6,
+      "reachable": 109,
+      "minimal": 109,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 6,
+      "reachable": 109,
+      "minimal": 109,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 7,
+      "reachable": 148,
+      "minimal": 148,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 7,
+      "reachable": 148,
+      "minimal": 148,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 8,
+      "reachable": 193,
+      "minimal": 193,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 8,
+      "reachable": 193,
+      "minimal": 193,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 9,
+      "reachable": 244,
+      "minimal": 244,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 9,
+      "reachable": 244,
+      "minimal": 244,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 10,
+      "reachable": 301,
+      "minimal": 301,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 10,
+      "reachable": 61,
+      "minimal": 61,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 11,
+      "reachable": 364,
+      "minimal": 364,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 11,
+      "reachable": 364,
+      "minimal": 364,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 12,
+      "reachable": 433,
+      "minimal": 433,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 12,
+      "reachable": 433,
+      "minimal": 433,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 13,
+      "reachable": 508,
+      "minimal": 508,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 13,
+      "reachable": 508,
+      "minimal": 508,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 14,
+      "reachable": 589,
+      "minimal": 589,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 14,
+      "reachable": 589,
+      "minimal": 589,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 15,
+      "reachable": 676,
+      "minimal": 676,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 15,
+      "reachable": 136,
+      "minimal": 136,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 16,
+      "reachable": 769,
+      "minimal": 769,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 16,
+      "reachable": 769,
+      "minimal": 769,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 17,
+      "reachable": 868,
+      "minimal": 868,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 17,
+      "reachable": 868,
+      "minimal": 868,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 18,
+      "reachable": 973,
+      "minimal": 973,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 18,
+      "reachable": 973,
+      "minimal": 973,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 19,
+      "reachable": 1084,
+      "minimal": 1084,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 19,
+      "reachable": 1084,
+      "minimal": 1084,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 20,
+      "reachable": 1201,
+      "minimal": 1201,
+      "run_cap": 2,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 20,
+      "reachable": 241,
+      "minimal": 241,
+      "run_cap": 2,
+      "family": "lucas"
+    },
+    {
+      "modulus": 1,
+      "reachable": 5,
+      "minimal": 5,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 1,
+      "reachable": 5,
+      "minimal": 5,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 2,
+      "reachable": 17,
+      "minimal": 17,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 2,
+      "reachable": 17,
+      "minimal": 17,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 3,
+      "reachable": 37,
+      "minimal": 37,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 3,
+      "reachable": 37,
+      "minimal": 37,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 4,
+      "reachable": 65,
+      "minimal": 65,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 4,
+      "reachable": 65,
+      "minimal": 65,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 5,
+      "reachable": 101,
+      "minimal": 101,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 5,
+      "reachable": 21,
+      "minimal": 21,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 6,
+      "reachable": 145,
+      "minimal": 145,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 6,
+      "reachable": 145,
+      "minimal": 145,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 7,
+      "reachable": 197,
+      "minimal": 197,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 7,
+      "reachable": 197,
+      "minimal": 197,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 8,
+      "reachable": 257,
+      "minimal": 257,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 8,
+      "reachable": 257,
+      "minimal": 257,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 9,
+      "reachable": 325,
+      "minimal": 325,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 9,
+      "reachable": 325,
+      "minimal": 325,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 10,
+      "reachable": 401,
+      "minimal": 401,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 10,
+      "reachable": 81,
+      "minimal": 81,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 11,
+      "reachable": 485,
+      "minimal": 485,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 11,
+      "reachable": 485,
+      "minimal": 485,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 12,
+      "reachable": 577,
+      "minimal": 577,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 12,
+      "reachable": 577,
+      "minimal": 577,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 13,
+      "reachable": 677,
+      "minimal": 677,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 13,
+      "reachable": 677,
+      "minimal": 677,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 14,
+      "reachable": 785,
+      "minimal": 785,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 14,
+      "reachable": 785,
+      "minimal": 785,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 15,
+      "reachable": 901,
+      "minimal": 901,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 15,
+      "reachable": 181,
+      "minimal": 181,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 16,
+      "reachable": 1025,
+      "minimal": 1025,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 16,
+      "reachable": 1025,
+      "minimal": 1025,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 17,
+      "reachable": 1157,
+      "minimal": 1157,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 17,
+      "reachable": 1157,
+      "minimal": 1157,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 18,
+      "reachable": 1297,
+      "minimal": 1297,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 18,
+      "reachable": 1297,
+      "minimal": 1297,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 19,
+      "reachable": 1445,
+      "minimal": 1445,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 19,
+      "reachable": 1445,
+      "minimal": 1445,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 20,
+      "reachable": 1601,
+      "minimal": 1601,
+      "run_cap": 3,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 20,
+      "reachable": 321,
+      "minimal": 321,
+      "run_cap": 3,
+      "family": "lucas"
+    },
+    {
+      "modulus": 1,
+      "reachable": 6,
+      "minimal": 6,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 1,
+      "reachable": 6,
+      "minimal": 6,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 2,
+      "reachable": 21,
+      "minimal": 21,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 2,
+      "reachable": 21,
+      "minimal": 21,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 3,
+      "reachable": 46,
+      "minimal": 46,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 3,
+      "reachable": 46,
+      "minimal": 46,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 4,
+      "reachable": 81,
+      "minimal": 81,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 4,
+      "reachable": 81,
+      "minimal": 81,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 5,
+      "reachable": 126,
+      "minimal": 126,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 5,
+      "reachable": 26,
+      "minimal": 26,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 6,
+      "reachable": 181,
+      "minimal": 181,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 6,
+      "reachable": 181,
+      "minimal": 181,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 7,
+      "reachable": 246,
+      "minimal": 246,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 7,
+      "reachable": 246,
+      "minimal": 246,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 8,
+      "reachable": 321,
+      "minimal": 321,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 8,
+      "reachable": 321,
+      "minimal": 321,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 9,
+      "reachable": 406,
+      "minimal": 406,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 9,
+      "reachable": 406,
+      "minimal": 406,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 10,
+      "reachable": 501,
+      "minimal": 501,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 10,
+      "reachable": 101,
+      "minimal": 101,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 11,
+      "reachable": 606,
+      "minimal": 606,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 11,
+      "reachable": 606,
+      "minimal": 606,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 12,
+      "reachable": 721,
+      "minimal": 721,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 12,
+      "reachable": 721,
+      "minimal": 721,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 13,
+      "reachable": 846,
+      "minimal": 846,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 13,
+      "reachable": 846,
+      "minimal": 846,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 14,
+      "reachable": 981,
+      "minimal": 981,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 14,
+      "reachable": 981,
+      "minimal": 981,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 15,
+      "reachable": 1126,
+      "minimal": 1126,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 15,
+      "reachable": 226,
+      "minimal": 226,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 16,
+      "reachable": 1281,
+      "minimal": 1281,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 16,
+      "reachable": 1281,
+      "minimal": 1281,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 17,
+      "reachable": 1446,
+      "minimal": 1446,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 17,
+      "reachable": 1446,
+      "minimal": 1446,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 18,
+      "reachable": 1621,
+      "minimal": 1621,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 18,
+      "reachable": 1621,
+      "minimal": 1621,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 19,
+      "reachable": 1806,
+      "minimal": 1806,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 19,
+      "reachable": 1806,
+      "minimal": 1806,
+      "run_cap": 4,
+      "family": "lucas"
+    },
+    {
+      "modulus": 20,
+      "reachable": 2001,
+      "minimal": 2001,
+      "run_cap": 4,
+      "family": "fibonacci"
+    },
+    {
+      "modulus": 20,
+      "reachable": 401,
+      "minimal": 401,
+      "run_cap": 4,
+      "family": "lucas"
+    }
+  ]
+}

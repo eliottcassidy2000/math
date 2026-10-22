@@ -1,0 +1,8 @@
+{
+  "family": "(1,N), all even N=2,...,80",
+  "family_formula_checks": 40,
+  "independent_fixed_threshold_wall_checks": 200,
+  "checks": 240,
+  "unbounded_minimal_order": "N-1",
+  "status": "FINITE-EXACT verification of independently proved formula"
+}

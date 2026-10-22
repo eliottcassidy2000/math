@@ -1,0 +1,1 @@
+PASS: independent full atom maps match all 164 original census/control rows; normal and optimized artifacts byte-match.

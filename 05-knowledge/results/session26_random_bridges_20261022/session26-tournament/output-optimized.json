@@ -1,0 +1,445 @@
+{
+  "word_dp_controls": 511,
+  "modular_states": [
+    {
+      "M": 1,
+      "reachable": 2,
+      "minimal": 1
+    },
+    {
+      "M": 2,
+      "reachable": 2,
+      "minimal": 1
+    },
+    {
+      "M": 3,
+      "reachable": 18,
+      "minimal": 18
+    },
+    {
+      "M": 4,
+      "reachable": 8,
+      "minimal": 8
+    },
+    {
+      "M": 5,
+      "reachable": 50,
+      "minimal": 50
+    },
+    {
+      "M": 6,
+      "reachable": 18,
+      "minimal": 18
+    },
+    {
+      "M": 7,
+      "reachable": 98,
+      "minimal": 98
+    },
+    {
+      "M": 8,
+      "reachable": 32,
+      "minimal": 32
+    },
+    {
+      "M": 9,
+      "reachable": 162,
+      "minimal": 162
+    },
+    {
+      "M": 10,
+      "reachable": 50,
+      "minimal": 50
+    },
+    {
+      "M": 11,
+      "reachable": 242,
+      "minimal": 242
+    },
+    {
+      "M": 12,
+      "reachable": 72,
+      "minimal": 72
+    },
+    {
+      "M": 13,
+      "reachable": 338,
+      "minimal": 338
+    },
+    {
+      "M": 14,
+      "reachable": 98,
+      "minimal": 98
+    },
+    {
+      "M": 15,
+      "reachable": 450,
+      "minimal": 450
+    },
+    {
+      "M": 16,
+      "reachable": 128,
+      "minimal": 128
+    },
+    {
+      "M": 17,
+      "reachable": 578,
+      "minimal": 578
+    },
+    {
+      "M": 18,
+      "reachable": 162,
+      "minimal": 162
+    },
+    {
+      "M": 19,
+      "reachable": 722,
+      "minimal": 722
+    },
+    {
+      "M": 20,
+      "reachable": 200,
+      "minimal": 200
+    },
+    {
+      "M": 21,
+      "reachable": 882,
+      "minimal": 882
+    },
+    {
+      "M": 22,
+      "reachable": 242,
+      "minimal": 242
+    },
+    {
+      "M": 23,
+      "reachable": 1058,
+      "minimal": 1058
+    },
+    {
+      "M": 24,
+      "reachable": 288,
+      "minimal": 288
+    },
+    {
+      "M": 25,
+      "reachable": 1250,
+      "minimal": 1250
+    },
+    {
+      "M": 26,
+      "reachable": 338,
+      "minimal": 338
+    },
+    {
+      "M": 27,
+      "reachable": 1458,
+      "minimal": 1458
+    },
+    {
+      "M": 28,
+      "reachable": 392,
+      "minimal": 392
+    },
+    {
+      "M": 29,
+      "reachable": 1682,
+      "minimal": 1682
+    },
+    {
+      "M": 30,
+      "reachable": 450,
+      "minimal": 450
+    },
+    {
+      "M": 31,
+      "reachable": 1922,
+      "minimal": 1922
+    },
+    {
+      "M": 32,
+      "reachable": 512,
+      "minimal": 512
+    },
+    {
+      "M": 33,
+      "reachable": 2178,
+      "minimal": 2178
+    },
+    {
+      "M": 34,
+      "reachable": 578,
+      "minimal": 578
+    },
+    {
+      "M": 35,
+      "reachable": 2450,
+      "minimal": 2450
+    },
+    {
+      "M": 36,
+      "reachable": 648,
+      "minimal": 648
+    },
+    {
+      "M": 37,
+      "reachable": 2738,
+      "minimal": 2738
+    },
+    {
+      "M": 38,
+      "reachable": 722,
+      "minimal": 722
+    },
+    {
+      "M": 39,
+      "reachable": 3042,
+      "minimal": 3042
+    },
+    {
+      "M": 40,
+      "reachable": 800,
+      "minimal": 800
+    },
+    {
+      "M": 41,
+      "reachable": 3362,
+      "minimal": 3362
+    },
+    {
+      "M": 42,
+      "reachable": 882,
+      "minimal": 882
+    },
+    {
+      "M": 43,
+      "reachable": 3698,
+      "minimal": 3698
+    },
+    {
+      "M": 44,
+      "reachable": 968,
+      "minimal": 968
+    },
+    {
+      "M": 45,
+      "reachable": 4050,
+      "minimal": 4050
+    },
+    {
+      "M": 46,
+      "reachable": 1058,
+      "minimal": 1058
+    },
+    {
+      "M": 47,
+      "reachable": 4418,
+      "minimal": 4418
+    },
+    {
+      "M": 48,
+      "reachable": 1152,
+      "minimal": 1152
+    },
+    {
+      "M": 49,
+      "reachable": 4802,
+      "minimal": 4802
+    },
+    {
+      "M": 50,
+      "reachable": 1250,
+      "minimal": 1250
+    },
+    {
+      "M": 51,
+      "reachable": 5202,
+      "minimal": 5202
+    },
+    {
+      "M": 52,
+      "reachable": 1352,
+      "minimal": 1352
+    },
+    {
+      "M": 53,
+      "reachable": 5618,
+      "minimal": 5618
+    },
+    {
+      "M": 54,
+      "reachable": 1458,
+      "minimal": 1458
+    },
+    {
+      "M": 55,
+      "reachable": 6050,
+      "minimal": 6050
+    },
+    {
+      "M": 56,
+      "reachable": 1568,
+      "minimal": 1568
+    },
+    {
+      "M": 57,
+      "reachable": 6498,
+      "minimal": 6498
+    },
+    {
+      "M": 58,
+      "reachable": 1682,
+      "minimal": 1682
+    },
+    {
+      "M": 59,
+      "reachable": 6962,
+      "minimal": 6962
+    },
+    {
+      "M": 60,
+      "reachable": 1800,
+      "minimal": 1800
+    },
+    {
+      "M": 61,
+      "reachable": 7442,
+      "minimal": 7442
+    },
+    {
+      "M": 62,
+      "reachable": 1922,
+      "minimal": 1922
+    },
+    {
+      "M": 63,
+      "reachable": 7938,
+      "minimal": 7938
+    },
+    {
+      "M": 64,
+      "reachable": 2048,
+      "minimal": 2048
+    },
+    {
+      "M": 65,
+      "reachable": 8450,
+      "minimal": 8450
+    },
+    {
+      "M": 66,
+      "reachable": 2178,
+      "minimal": 2178
+    },
+    {
+      "M": 67,
+      "reachable": 8978,
+      "minimal": 8978
+    },
+    {
+      "M": 68,
+      "reachable": 2312,
+      "minimal": 2312
+    },
+    {
+      "M": 69,
+      "reachable": 9522,
+      "minimal": 9522
+    },
+    {
+      "M": 70,
+      "reachable": 2450,
+      "minimal": 2450
+    },
+    {
+      "M": 71,
+      "reachable": 10082,
+      "minimal": 10082
+    },
+    {
+      "M": 72,
+      "reachable": 2592,
+      "minimal": 2592
+    },
+    {
+      "M": 73,
+      "reachable": 10658,
+      "minimal": 10658
+    },
+    {
+      "M": 74,
+      "reachable": 2738,
+      "minimal": 2738
+    },
+    {
+      "M": 75,
+      "reachable": 11250,
+      "minimal": 11250
+    },
+    {
+      "M": 76,
+      "reachable": 2888,
+      "minimal": 2888
+    },
+    {
+      "M": 77,
+      "reachable": 11858,
+      "minimal": 11858
+    },
+    {
+      "M": 78,
+      "reachable": 3042,
+      "minimal": 3042
+    },
+    {
+      "M": 79,
+      "reachable": 12482,
+      "minimal": 12482
+    },
+    {
+      "M": 80,
+      "reachable": 3200,
+      "minimal": 3200
+    }
+  ],
+  "hankel_rows": [
+    "",
+    "1",
+    "10",
+    "11"
+  ],
+  "hankel_columns": [
+    "",
+    "0",
+    "10",
+    "00"
+  ],
+  "hankel": [
+    [
+      1,
+      1,
+      3,
+      1
+    ],
+    [
+      1,
+      3,
+      5,
+      5
+    ],
+    [
+      3,
+      5,
+      9,
+      9
+    ],
+    [
+      1,
+      5,
+      9,
+      11
+    ]
+  ],
+  "determinant": -16,
+  "checks": 751
+}
