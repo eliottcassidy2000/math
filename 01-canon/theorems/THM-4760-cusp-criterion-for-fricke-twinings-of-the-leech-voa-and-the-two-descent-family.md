@@ -37,7 +37,7 @@ status: >
 session: opus-2026-10-22-S53
 source: 05-knowledge/results/leech_deep_hole_swap_theorem_20261022.md
 scripts:
-  - 04-computation/experiments/deep_holes_theta_20261022/fricke_cusp_certificate.py (+ .out: shells 0-2, all 23 types; _deep.out: shells 0-8 of the large-h types)
+  - 04-computation/experiments/deep_holes_theta_20261022/fricke_cusp_certificate.py (+ .out: shells 0-2, all 23 types; _deep.out: shells 0-8 of the large-h types; _small.out: shells 0-6 of the 14 types with h <= 14)
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_monster_classes.py (+ .out) (Ligozat certificates for 4A, 8A, 12H, 16C, 20F, 24I, 32A)
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_cusp_orbifolds.py (+ .out) (orbifolds of the shell-1 points and their multiples)
   - 04-computation/experiments/deep_holes_theta_20261022/fricke_cusp_carriers.py (+ .out) (which component carries each shell-1 class)
@@ -98,7 +98,9 @@ the twining 24 + T_{(h+1)+(h+1)} of THM-4759 (10), and it supplies the rationali
 leaves implicit.
 
 **(3′) Deeper shells and farther cusps (FINITE-EXACT, sampled where large).**
-- No cusp in shell 2 of any type, and none in shells 2-8 of the eight lattices with h ≥ 16, satisfies the criterion.
+- No cusp in shell 2 of any type satisfies the criterion. Nor does any in shells 2-6 of the 14 lattices with h ≤ 14
+  (fricke_cusp_certificate_small.out), or in shells 2-8 of the eight with h ≥ 16. For h ≤ 7 this includes every root
+  cusp y = α, at height 2h + 1 − ht α (Chenevier-Lannes' neighbours).
   The orders reached include every missing genus-zero Fricke level between 18 and 50: 18, 21, 25, 27, 29, 35, 36, 39,
   49 and 50.
 - Every cusp w has w·z = −A for some A ≥ 1, w = Az′ + y + (y²/2A)z, of height (h/2A)|y − Aρ_N/h|². At A = 2 (14 types

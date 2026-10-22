@@ -25,22 +25,26 @@ status: >
   cancel.
   - The members found are PROVED in THM-4760 by its cusp criterion: rationality (vector-valued Sturm), a unique
     Fricke-norm vector, 24 norm-2 vectors, and Phi_c | P at the intermediate cusps. They are seven shell-1
-    points (carriers A1, D4, D6, D8, E7 in D10E7^2, D12, E8 in D16E8), of orders 4, 8, 12, 16, 20, 24 and 32, twining by 4A, 8A, 12H, 16C, 20F, 24I and 32A (Ligozat
-    certificates for the eta quotients; q^4 agreement for 4A and 8A).
+    points (carriers A1, D4, D6, D8, E7 in D10E7^2, D12, E8 in D16E8), of orders 4, 8, 12, 16, 20, 24 and 32,
+    twining by 4A, 8A, 12H, 16C, 20F, 24I and 32A (Ligozat certificates for the eta quotients; q^4 agreement for 4A
+    and 8A).
   - Their only shallow multiple is 2v. It carries a pair +-mu with opposite eigenvalues, and its orbifold is
     Borcherds' 2-descent source N_1 (h = 2h_1 + 2).
   - The orbifold of v is N itself, of Coxeter number e - 2, so dim V'_1 = 24(e - 1), not 24e.
   - All other shell-1 classes fail, each provably. The D10 (in D10E7^2), D16 (in D16E8), E8^3 and D24 points
     pass (i)-(iii) and fail only rationality (fields contain Q(sqrt 5), Q(sqrt 2), Q(sqrt 2), Q(sqrt 3)). The selection
     is Galois acting on component Kac classes, THM-4760 (4'): E7 at order 20 has its two classes swapped by d = 3, which
-    the swap of the two E7's undoes. The other A-free cases fail at a single shallow
-    vector of 2v, and odd h fails at n_2 = 23.
-  - Shell 2 of every type, and shells 2-8 of the eight types with h >= 16, give nothing (sampled where large).
+    the swap of the two E7's undoes. The even-h lattices outside the nine fail at the single
+    shallow vector of 2v (a pole at 1/2), and odd h fails at n_2 = 23.
+  - Shell 2 of every type, shells 2-6 of the 14 types with h <= 14, and shells 2-8 of the eight types with h >= 16
+    give nothing (sampled where large).
   - (B') below is the sharpened conjecture.
   OPEN:
-  - (B') for cusps not adjacent to a deep-hole cusp.
+  - (B') for cusps not adjacent to a deep-hole cusp. The cusps at distance 2 and 3 have been sampled and give only the
+    30 known classes.
   - A referenced write-up of the prime-order sketch.
-  - A conjugacy proof of the rationality (THM-4760 (4') explains it on root spectra; the certificate proves it).
+  - The glue compatibility in THM-4760 (4'). The exact Kac-class Galois action is computed there: E8's carrier class
+    is fixed and E7's classes are swapped by d = 3. Rationality itself is proved by the certificate.
   History:
   - The first S53 draft allowed only the eleven bad-prime multiples; the (h+1)-points refuted it.
   - The second version (registered as c31e9a6a3f..23dc8edd9e) claimed the 'only if' for all orders; the shell-1
