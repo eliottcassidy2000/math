@@ -98,6 +98,24 @@ savings or reusing the153N source budget. The N7 hostile still fails.
 For the inherited decomposition Delta=A+R'+J' and A+M=153N, a paying bound
 proves the compensated inequality R'<=M-J'. It does not silently discard J'.
 
+### October 23 continuation: authenticated children
+
+A [sixteen-edge extension](weighted_tail_20261022/extension/README.md) of
+the original ordinary native states grounds respectively 146, 247 and 471
+original owner fibres at these three scales. They contain 302, 554 and 954
+source addresses within their separate N-specific carriers. The full
+ownership table, source guards and integer clocks remain attached.
+
+At depths121,126,146 the recomputed whole weighted bounds are441842,
+837316,3173911. All17 additional synchronized cuts are independently
+checked against owner-by-owner transport; the unchanged earlier receipt and
+the final gate cover the preceding and all subsequent finite horizons.
+This extends an ordinary state, not the optional-pulse relaxation. No
+separate savings are added. N7 fully grounds but still gives1097>1071,
+demonstrating that grounding and budget coverage are distinct obligations.
+The root independently replayed676143 checks under optimized Python and
+reviewed the boundary, clock and source-partition logic.
+
 ## What the external and older ideas actually contributed
 
 The pasted [incidence-moment paper](https://srfp311t1.com/incidence_moments_metric_decks)

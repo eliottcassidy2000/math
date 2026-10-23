@@ -1,0 +1,47 @@
+{
+  "checks": 1512369,
+  "hostile": {
+    "d02": 1,
+    "d03": 3,
+    "d13": 3,
+    "impossible_a03": -3
+  },
+  "rows": [
+    {
+      "blue_tilings": 2,
+      "fundamental_black_lines": 0,
+      "fundamental_blue_lines": 1,
+      "n": 3,
+      "tilings": 2
+    },
+    {
+      "blue_tilings": 4,
+      "fundamental_black_lines": 1,
+      "fundamental_blue_lines": 2,
+      "n": 4,
+      "tilings": 8
+    },
+    {
+      "blue_tilings": 16,
+      "fundamental_black_lines": 12,
+      "fundamental_blue_lines": 8,
+      "n": 5,
+      "tilings": 64
+    },
+    {
+      "blue_tilings": 64,
+      "fundamental_black_lines": 240,
+      "fundamental_blue_lines": 32,
+      "n": 6,
+      "tilings": 1024
+    },
+    {
+      "blue_tilings": 512,
+      "fundamental_black_lines": 8064,
+      "fundamental_blue_lines": 256,
+      "n": 7,
+      "tilings": 32768
+    }
+  ],
+  "scope": "all fixed-path masks n=3..7"
+}

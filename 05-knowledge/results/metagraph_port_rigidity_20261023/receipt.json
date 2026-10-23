@@ -1,0 +1,123 @@
+{
+  "checks": 388733,
+  "chiral_strong_letter": {
+    "mask": 18,
+    "n": 6
+  },
+  "dihedral_necklaces_through_length_eight": 1374,
+  "five_vertex_cut_witness": [
+    {
+      "Aut": 3,
+      "H": 3,
+      "anti": 0,
+      "root_score": 3
+    },
+    {
+      "Aut": 3,
+      "H": 3,
+      "anti": 0,
+      "root_score": 1
+    },
+    {
+      "Aut": 3,
+      "H": 3,
+      "anti": 3,
+      "root_score": 2
+    }
+  ],
+  "hostiles": {
+    "missing_score": "four transitive cyclic rotations",
+    "unrealizable_root_curls": [
+      3,
+      3,
+      3
+    ],
+    "unsigned_cycle_support": "C3 and its converse, same root score"
+  },
+  "labelled": [
+    {
+      "fibre_histogram": {
+        "2": 1
+      },
+      "labelled_tournaments": 2,
+      "n": 2,
+      "root_curl_fibres": 1
+    },
+    {
+      "fibre_histogram": {
+        "1": 2,
+        "3": 2
+      },
+      "labelled_tournaments": 8,
+      "n": 3,
+      "root_curl_fibres": 4
+    },
+    {
+      "fibre_histogram": {
+        "1": 24,
+        "2": 8,
+        "4": 6
+      },
+      "labelled_tournaments": 64,
+      "n": 4,
+      "root_curl_fibres": 38
+    },
+    {
+      "fibre_histogram": {
+        "1": 544,
+        "2": 120,
+        "3": 40,
+        "5": 24
+      },
+      "labelled_tournaments": 1024,
+      "n": 5,
+      "root_curl_fibres": 728
+    },
+    {
+      "fibre_histogram": {
+        "1": 22320,
+        "2": 3304,
+        "3": 720,
+        "4": 240,
+        "6": 120
+      },
+      "labelled_tournaments": 32768,
+      "n": 6,
+      "root_curl_fibres": 26704
+    }
+  ],
+  "ports": [
+    {
+      "blue_ports": 2,
+      "closed_open_pairs": 1,
+      "n": 3,
+      "ports": 2
+    },
+    {
+      "blue_ports": 4,
+      "closed_open_pairs": 4,
+      "n": 4,
+      "ports": 8
+    },
+    {
+      "blue_ports": 16,
+      "closed_open_pairs": 32,
+      "n": 5,
+      "ports": 64
+    },
+    {
+      "blue_ports": 64,
+      "closed_open_pairs": 512,
+      "n": 6,
+      "ports": 1024
+    },
+    {
+      "blue_ports": 512,
+      "closed_open_pairs": 16384,
+      "n": 7,
+      "ports": 32768
+    }
+  ],
+  "scope": "FINITE-EXACT: all labelled tournaments n=2..6; all fixed-path ports n=3..7",
+  "source_sha256": "e008c8b0ad044ac866d26d5d65e0c5c9bff6387701f64999c4ddf88891a544d6"
+}
