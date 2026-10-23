@@ -46,4 +46,4 @@ python -B agents/check_docs.py
 
 The reproduction driver verifies inherited file hashes and checks every frozen receipt after execution. The current-frontier edit only adds the new route, retaining the explicit open status of guarded wiring and Collatz. The two inherited CRLF-only TSV status entries are unrelated and are not staged.
 
-Final replay: all five checkers pass in normal and optimized modes with byte-identical frozen receipts. The documentation check passes its bounded-startup, status, correction and router checks; all local Markdown links in this packet resolve.
+The first five checkers passed in normal and optimized modes with byte-identical frozen receipts. After integrating incoming Session43 commits, a sixth checker covers the incomparable graph quotients and the phase-cycle/representative-cut extension. A sibling independently audited the cycle, all-modulus alias criterion and labelled dipole holonomy. The documentation check passes its bounded-startup, status, correction and router checks; all local Markdown links in this packet resolve.

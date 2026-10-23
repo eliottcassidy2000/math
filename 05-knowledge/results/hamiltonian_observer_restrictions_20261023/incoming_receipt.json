@@ -1,0 +1,219 @@
+{
+  "status": "FINITE-EXACT",
+  "checks": 3846,
+  "phase_cases": [
+    {
+      "p": 3,
+      "cycle_vertices": 6,
+      "cut_vertices": 5
+    },
+    {
+      "p": 4,
+      "cycle_vertices": 8,
+      "cut_vertices": 7
+    },
+    {
+      "p": 5,
+      "cycle_vertices": 10,
+      "cut_vertices": 9
+    },
+    {
+      "p": 6,
+      "cycle_vertices": 12,
+      "cut_vertices": 11
+    },
+    {
+      "p": 7,
+      "cycle_vertices": 14,
+      "cut_vertices": 13
+    },
+    {
+      "p": 8,
+      "cycle_vertices": 16,
+      "cut_vertices": 15
+    },
+    {
+      "p": 9,
+      "cycle_vertices": 18,
+      "cut_vertices": 17
+    },
+    {
+      "p": 10,
+      "cycle_vertices": 20,
+      "cut_vertices": 19
+    },
+    {
+      "p": 11,
+      "cycle_vertices": 22,
+      "cut_vertices": 21
+    },
+    {
+      "p": 12,
+      "cycle_vertices": 24,
+      "cut_vertices": 23
+    },
+    {
+      "p": 13,
+      "cycle_vertices": 26,
+      "cut_vertices": 25
+    },
+    {
+      "p": 14,
+      "cycle_vertices": 28,
+      "cut_vertices": 27
+    },
+    {
+      "p": 15,
+      "cycle_vertices": 30,
+      "cut_vertices": 29
+    },
+    {
+      "p": 16,
+      "cycle_vertices": 32,
+      "cut_vertices": 31
+    },
+    {
+      "p": 17,
+      "cycle_vertices": 34,
+      "cut_vertices": 33
+    },
+    {
+      "p": 18,
+      "cycle_vertices": 36,
+      "cut_vertices": 35
+    },
+    {
+      "p": 19,
+      "cycle_vertices": 38,
+      "cut_vertices": 37
+    },
+    {
+      "p": 20,
+      "cycle_vertices": 40,
+      "cut_vertices": 39
+    },
+    {
+      "p": 21,
+      "cycle_vertices": 42,
+      "cut_vertices": 41
+    },
+    {
+      "p": 22,
+      "cycle_vertices": 44,
+      "cut_vertices": 43
+    },
+    {
+      "p": 23,
+      "cycle_vertices": 46,
+      "cut_vertices": 45
+    },
+    {
+      "p": 24,
+      "cycle_vertices": 48,
+      "cut_vertices": 47
+    },
+    {
+      "p": 25,
+      "cycle_vertices": 50,
+      "cut_vertices": 49
+    },
+    {
+      "p": 26,
+      "cycle_vertices": 52,
+      "cut_vertices": 51
+    },
+    {
+      "p": 27,
+      "cycle_vertices": 54,
+      "cut_vertices": 53
+    },
+    {
+      "p": 28,
+      "cycle_vertices": 56,
+      "cut_vertices": 55
+    },
+    {
+      "p": 29,
+      "cycle_vertices": 58,
+      "cut_vertices": 57
+    },
+    {
+      "p": 30,
+      "cycle_vertices": 60,
+      "cut_vertices": 59
+    },
+    {
+      "p": 31,
+      "cycle_vertices": 62,
+      "cut_vertices": 61
+    },
+    {
+      "p": 32,
+      "cycle_vertices": 64,
+      "cut_vertices": 63
+    },
+    {
+      "p": 33,
+      "cycle_vertices": 66,
+      "cut_vertices": 65
+    },
+    {
+      "p": 34,
+      "cycle_vertices": 68,
+      "cut_vertices": 67
+    },
+    {
+      "p": 35,
+      "cycle_vertices": 70,
+      "cut_vertices": 69
+    },
+    {
+      "p": 36,
+      "cycle_vertices": 72,
+      "cut_vertices": 71
+    },
+    {
+      "p": 37,
+      "cycle_vertices": 74,
+      "cut_vertices": 73
+    },
+    {
+      "p": 38,
+      "cycle_vertices": 76,
+      "cut_vertices": 75
+    },
+    {
+      "p": 39,
+      "cycle_vertices": 78,
+      "cut_vertices": 77
+    },
+    {
+      "p": 40,
+      "cycle_vertices": 80,
+      "cut_vertices": 79
+    }
+  ],
+  "p3_mod8_survivors": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "scope": "quotient carriers and representative cut only"
+}

@@ -25,6 +25,7 @@ def main():
         ("compiler/check.py", "compiler/receipt.json"),
         ("history/check_gain_lift.py", "history/gain_lift_receipt.json"),
         ("trace/check_trace.py", "trace/trace_receipt.json"),
+        ("check_incoming.py", "incoming_receipt.json"),
     ]
     mode = ["-O"] if "--optimized" in sys.argv else []
     env = dict(os.environ, PYTHONHASHSEED="0", PYTHONIOENCODING="utf-8")

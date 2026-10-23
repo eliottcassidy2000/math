@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-23 — observer descent and selection: missing boundary and retained gauge
+
+- **Affected drafts:** the unpublished strong-four descent argument and selector paragraph in `hamiltonian_observer_restrictions_20261023`. No incorrect theorem was published.
+- **First failed implication / minimal boundary witness:** a new Hamiltonian ordering of a contiguous block need not remain Hamiltonian after reattaching its suffix. With compressed edges `{01,12,13}` at native order five, the tempting prefix `(2,0,3,1)` ends at vertex 1, but the required exit `1->4` is reversed. Preserving crossing backward-arc count does not certify this junction.
+- **Repair / strongest survivor:** choose the compressed center with two neighbors and a nonneighbor, placing that nonneighbor at compressed index 3. The missing edge certifies the exit; separate matching, star and complete-graph moves close the degree exceptions. This proves exactly two components for the **compressed-graph/native-tournament incidence**, with a `2(e-1)` descent bound; it does not preserve a fixed source or arbitrary pinned guards. [Proof](../05-knowledge/results/hamiltonian_observer_restrictions_20261023/coupling/NATIVE_CONNECTEDNESS.md), [independent audit and hostile](../05-knowledge/results/hamiltonian_observer_restrictions_20261023/compiler/AUDIT_NATIVE_DESCENT.md).
+- **Selector correction:** a distinguished reference path is already symmetry-breaking input. The no-equivariant-selector argument applies to an unpointed candidate fibre and its observed pins, not to a chart-dependent completion algorithm given that reference. The conditional counts and actual kernel moves survive unchanged. [Corrected scope](../05-knowledge/results/hamiltonian_observer_restrictions_20261023/compiler/README.md), [audit](../05-knowledge/results/hamiltonian_observer_restrictions_20261023/history/AUDIT_COMPILER.md).
+- **Reproduction repair:** the late-incoming receipt initially compared Python coordinate tuples with JSON coordinate lists. Canonicalizing the receipt coordinates to lists fixes replay; the mathematical checks and saved numeric values did not change. Normal and optimized replay both pass.
+
 ## 2026-10-23 — square-sum draft: a Hamiltonian cycle's chord insertion was missed
 
 - **Affected draft:** the unpublished `square_sum_ports_20261023/README.md` and `cuts.py` said a Hamiltonian cycle proves edge omission but not inclusion of every noncycle edge. That boundary was too weak and the asserted nonimplication was false.

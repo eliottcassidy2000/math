@@ -97,6 +97,8 @@ The recovered spherical/Euclidean/hyperbolic mechanism uses a different indispen
 
 ## 7. Reproduction, provenance and audits
 
+The [late incoming integration](INCOMING.md) distinguishes Session43's full backward graph from our compressed graph: their isomorphism partitions are incomparable from order five onward. It also extends the incoming native phase assembly to an exact `C_(2p)`-to-`P_(2p-1)` representative-cut construction, and connects bounded-range modular guards to the incoming bounded-degree Jacobian result without claiming a general transfer.
+
 Run `python -B 05-knowledge/results/hamiltonian_observer_restrictions_20261023/reproduce.py` from the worktree root. This runs each exact checker and verifies that frozen receipts reproduce. [SOURCE_PROVENANCE.json](SOURCE_PROVENANCE.json) pins the inherited inputs. [AUDIT.md](AUDIT.md) records proof reviews, hostile controls and scope boundaries.
 
 No theorem ID was reserved, no old frontier was silently promoted, and no proof of Collatz, LRC, Hadwiger–Nelson or the planar Jacobian conjecture is asserted. The progress is a constructive all-size incidence result and a more precise native shared-frame compiler, with the guard and clock obligations explicitly exposed.
