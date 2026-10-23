@@ -185,15 +185,17 @@ def main():
             H = count_ham_paths(A, p)
 
             r = representation_function(S, p)
-            # The profile (sorted r values for n > 0) characterizes r_S up to relabeling
-            profile = tuple(sorted(r[1:]))  # exclude r(0) = m (always)
+            # 2026-10-23 correction: this is SUM convolution. A skew set
+            # S disjoint from -S has r(0)=0. DIFFERENCE convolution has m.
+            # The sorted profile forgets which residue owns each value.
+            profile = tuple(sorted(r[1:]))  # exclude r(0) = 0
             profiles[profile].append((H, S))
 
         print(f"    Distinct r-profiles: {len(profiles)}")
         for profile, items in sorted(profiles.items()):
             H_vals = sorted(set(h for h, s in items))
             count = len(items)
-            E = sum(x**2 for x in profile) + m**2  # include r(0)=m
+            E = sum(x**2 for x in profile)  # sum-convolution r(0)=0
             print(f"    profile={profile}, count={count}, E={E}, H={H_vals}")
 
     # PART 4: Higher energies

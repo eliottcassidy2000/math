@@ -155,10 +155,14 @@ The finite progression is useful: joint score/triangle neighbor data plus
 endpoint/color capacities forces all aggregated ordinary-class line
 multiplicities at order6; adding each vertex's
 strong-four incidence identifies all456 classes at order7 and forces its
-aggregated line multiplicities. At order8, that first-round signature has two collision pairs.
-One more round recording which vertex profiles are outneighbors separates
-all6880 classes, without a Hamiltonian-count sidecar. The order8 claim is
-complete class separation, not a replay of all2^21 fixed-path ports.
+aggregated line multiplicities. At order8, that first-round signature has two
+collision pairs. The [full wiring and minimal-overlap
+extension](incidence_wiring_20261023/README.md) now replays all2^21 fixed-path
+ports: J4 leaves884 units of genuinely ambiguous port mass, while one
+common-source overlap bit on each exceptional signature separates all6880
+classes and fixes every aggregated port count. Even the full incidence table
+between first-round profile types still misses these pairs. A complete second
+round also works, but is more information than this finite repair needs.
 
 ## 5. Compression depends on which operations must survive
 
@@ -203,6 +207,16 @@ vertices are blue-isolated, so these are admissible potentials. This
 connects the incidence obstruction to a concrete electrical obstruction
 one dyadic layer deeper. It detects this pinned switch; it is not a claim
 that the half-energy form alone characterizes tournament wiring.
+
+The [order-eight extension](incidence_wiring_20261023/README.md) proves the
+all-size rank-two switch criterion and supplies a stronger hostile: doubling
+its native feasible capacity switch preserves the entire half-energy form,
+but changes the quarter-energy form. Its full wiring has3,358 critical-group
+factors of exact2-adic valuation1, four of exact valuation2, and one divisible
+by16. The same packet recovers a historical order13 H collision that remains
+invisible to every unrooted incidence-refinement round; marking the actual
+source makes both examples discrete in three rounds. Stable cells must be
+odd, but need not be singletons.
 
 Next targets: choose only the triangle or incidence coordinates needed to
 separate the surviving targets at each ambiguous port; certify their joint

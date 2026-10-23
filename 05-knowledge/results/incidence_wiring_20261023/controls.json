@@ -1,0 +1,161 @@
+{
+  "status": "FINITE-EXACT controls for elementary all-size proofs",
+  "labelled_tournaments": 1099,
+  "tournament_partition_pairs": 54253,
+  "equal_degree_doubleton_decodings": 2502,
+  "balanced_assignment_counts_t_orbits_treebits": [
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      3,
+      3,
+      2
+    ],
+    [
+      5,
+      10,
+      4
+    ],
+    [
+      7,
+      35,
+      6
+    ],
+    [
+      9,
+      126,
+      8
+    ]
+  ],
+  "electrical_switch_cases_by_rank": {
+    "2": 15,
+    "0": 177
+  },
+  "stable_refinement_hostile_and_source_repair": [
+    {
+      "steps": [
+        2,
+        7,
+        8,
+        9,
+        10,
+        12
+      ],
+      "tag": [
+        6,
+        21,
+        112
+      ],
+      "H": 3683797,
+      "unrooted_cells": [
+        [
+          13
+        ]
+      ],
+      "source_marked_cells": [
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          6,
+          6
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          4
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "difference_energy_2": 118,
+      "difference_energy_3": 450,
+      "sum_energy_2": 118,
+      "sum_energy_3": 420
+    },
+    {
+      "steps": [
+        1,
+        2,
+        4,
+        7,
+        8,
+        10
+      ],
+      "tag": [
+        6,
+        21,
+        112
+      ],
+      "H": 3704857,
+      "unrooted_cells": [
+        [
+          13
+        ]
+      ],
+      "source_marked_cells": [
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          6,
+          6
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          4
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "difference_energy_2": 118,
+      "difference_energy_3": 462,
+      "sum_energy_2": 118,
+      "sum_energy_3": 408
+    }
+  ],
+  "historical_energy_repair_skew_sets": 126,
+  "checks": 71845
+}

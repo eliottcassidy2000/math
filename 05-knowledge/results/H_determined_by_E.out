@@ -1,3 +1,8 @@
+CORRECTION 2026-10-23: Part 3 energy displays repaired: sum-convolution r(0)=0,
+not |S|. H values and Parts 1/4 are unchanged. This is historical exploratory
+output; its other heuristic/interpolation/spectral claims are not current canon.
+Repair controls: incidence_wiring_20261023/controls.py (126 skew sets).
+
 ======================================================================
 IS H DETERMINED BY E(S)? (Additive Energy)
 ======================================================================
@@ -61,24 +66,24 @@ E(S) = sum r_S(n)^2. But is H determined by the full r_S profile?
 
   p=7:
     Distinct r-profiles: 2
-    profile=(0, 1, 1, 2, 2, 3), count=6, E=28, H=[175]
-    profile=(1, 1, 1, 2, 2, 2), count=2, E=24, H=[189]
+    profile=(0, 1, 1, 2, 2, 3), count=6, E=19, H=[175]
+    profile=(1, 1, 1, 2, 2, 2), count=2, E=15, H=[189]
 
   p=11:
     Distinct r-profiles: 4
-    profile=(0, 1, 1, 2, 2, 3, 3, 4, 4, 5), count=10, E=110, H=[93027]
-    profile=(1, 1, 2, 2, 2, 3, 3, 3, 4, 4), count=10, E=98, H=[93467]
-    profile=(1, 2, 2, 2, 2, 3, 3, 3, 3, 4), count=10, E=94, H=[92411]
-    profile=(2, 2, 2, 2, 2, 3, 3, 3, 3, 3), count=2, E=90, H=[95095]
+    profile=(0, 1, 1, 2, 2, 3, 3, 4, 4, 5), count=10, E=85, H=[93027]
+    profile=(1, 1, 2, 2, 2, 3, 3, 3, 4, 4), count=10, E=73, H=[93467]
+    profile=(1, 2, 2, 2, 2, 3, 3, 3, 3, 4), count=10, E=69, H=[92411]
+    profile=(2, 2, 2, 2, 2, 3, 3, 3, 3, 3), count=2, E=65, H=[95095]
 
   p=13:
     Distinct r-profiles: 6
-    profile=(0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6), count=12, E=182, H=[3711175]
-    profile=(1, 1, 2, 2, 2, 3, 3, 4, 4, 4, 5, 5), count=12, E=166, H=[3707483]
-    profile=(1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5), count=12, E=158, H=[3669497]
-    profile=(1, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4), count=12, E=154, H=[3704857]
-    profile=(2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 5), count=12, E=154, H=[3683797]
-    profile=(2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4), count=4, E=150, H=[3703011]
+    profile=(0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6), count=12, E=146, H=[3711175]
+    profile=(1, 1, 2, 2, 2, 3, 3, 4, 4, 4, 5, 5), count=12, E=130, H=[3707483]
+    profile=(1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5), count=12, E=122, H=[3669497]
+    profile=(1, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4), count=12, E=118, H=[3704857]
+    profile=(2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 5), count=12, E=118, H=[3683797]
+    profile=(2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4), count=4, E=114, H=[3703011]
 
 --- PART 4: HIGHER ENERGY INVARIANTS ---
 E_2 = sum r(n)^2 (standard additive energy)

@@ -1,0 +1,341 @@
+{
+  "status": "FINITE-EXACT",
+  "scope": "all 6880 ordinary n=8 tournaments and all 2^21 ascending fixed-path tilings",
+  "sources": {
+    "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n8.tsv": "7d13cd79f9273d903bb8f7e5b34f413cd36a2a98cd4b05e9994fe2baa79c29ab"
+  },
+  "orbit_audit": {
+    "labelled_mass": 268435456,
+    "score_preserving_permutations": 403193
+  },
+  "incidence": {
+    "J4_signatures": 6878,
+    "repaired_signatures": 6880,
+    "collisions": [
+      {
+        "classes": [
+          3490,
+          3676
+        ],
+        "canons": [
+          27467784,
+          27467793
+        ],
+        "H": [
+          523,
+          527
+        ],
+        "doubleton_type": 4,
+        "equal_complete_type_incidence": true,
+        "separators": [
+          {
+            "observer_types": [
+              0,
+              3
+            ],
+            "values": [
+              0,
+              1
+            ]
+          },
+          {
+            "observer_types": [
+              1,
+              3
+            ],
+            "values": [
+              1,
+              0
+            ]
+          }
+        ],
+        "decoders": [
+          {
+            "doubleton_type": 4,
+            "mixed_observer_types": [
+              0,
+              1,
+              3
+            ],
+            "tree_bits": 2
+          },
+          {
+            "doubleton_type": 4,
+            "mixed_observer_types": [
+              0,
+              1,
+              3
+            ],
+            "tree_bits": 2
+          }
+        ]
+      },
+      {
+        "classes": [
+          4239,
+          5173
+        ],
+        "canons": [
+          6427781,
+          6427778
+        ],
+        "H": [
+          523,
+          527
+        ],
+        "doubleton_type": 5,
+        "equal_complete_type_incidence": true,
+        "separators": [
+          {
+            "observer_types": [
+              3,
+              6
+            ],
+            "values": [
+              1,
+              0
+            ]
+          },
+          {
+            "observer_types": [
+              4,
+              6
+            ],
+            "values": [
+              0,
+              1
+            ]
+          }
+        ],
+        "decoders": [
+          {
+            "doubleton_type": 5,
+            "mixed_observer_types": [
+              3,
+              4,
+              6
+            ],
+            "tree_bits": 2
+          },
+          {
+            "doubleton_type": 5,
+            "mixed_observer_types": [
+              3,
+              4,
+              6
+            ],
+            "tree_bits": 2
+          }
+        ]
+      }
+    ]
+  },
+  "ports": {
+    "producer": {
+      "classes": 6880,
+      "tilings": 2097152,
+      "literal_paths": 2143304,
+      "closed_ports": 1048576,
+      "blue_tilings": 4096,
+      "aggregated_port_entries": 956339,
+      "merged_colored_entries": 438374
+    },
+    "binary_sha256": {
+      "owners": "5d195cc793e3d05af189407333960e0ceffa00fb0bc40d77d419cf8342f80110",
+      "ports": "5f5a3525737267230c582f0696c1a2698184a5b1f01aba6013a0d1db3d2c7aaf",
+      "edges": "599a78c50b4118e8a6b20c0b7719f001a5eeaa4fe1ef0893b6456a7dc365f33d"
+    },
+    "J4_ambiguity": [
+      {
+        "target_classes": [
+          3490,
+          3676
+        ],
+        "candidate_rows": 185,
+        "two_candidate_rows": 185,
+        "unresolved_rows": 185,
+        "unresolved_mass": 442
+      },
+      {
+        "target_classes": [
+          4239,
+          5173
+        ],
+        "candidate_rows": 185,
+        "two_candidate_rows": 185,
+        "unresolved_rows": 185,
+        "unresolved_mass": 442
+      }
+    ],
+    "J4_unresolved_mass": 884,
+    "one_bit_repair_unresolved_mass": 0,
+    "reflected_counterfeit": {
+      "port_edits": [
+        [
+          1763,
+          4239,
+          6,
+          4,
+          0,
+          -1
+        ],
+        [
+          1763,
+          5173,
+          6,
+          4,
+          0,
+          1
+        ],
+        [
+          3481,
+          4239,
+          6,
+          4,
+          0,
+          1
+        ],
+        [
+          3481,
+          5173,
+          6,
+          4,
+          0,
+          -1
+        ],
+        [
+          3826,
+          3490,
+          3,
+          1,
+          0,
+          -1
+        ],
+        [
+          3826,
+          3676,
+          3,
+          1,
+          0,
+          1
+        ],
+        [
+          4959,
+          3490,
+          3,
+          1,
+          0,
+          1
+        ],
+        [
+          4959,
+          3676,
+          3,
+          1,
+          0,
+          -1
+        ]
+      ],
+      "merged_edits": [
+        [
+          1763,
+          3490,
+          0,
+          -2
+        ],
+        [
+          1763,
+          3676,
+          0,
+          2
+        ],
+        [
+          3481,
+          3490,
+          0,
+          2
+        ],
+        [
+          3481,
+          3676,
+          0,
+          -2
+        ]
+      ]
+    }
+  },
+  "electrical": {
+    "merged_nodes": 3528,
+    "full_components": 1,
+    "paired_black_components": 4,
+    "paired_black_component_sizes": [
+      1,
+      1,
+      1,
+      3525
+    ],
+    "blue_components": 3353,
+    "blue_nodes": 176,
+    "blue_bicycle_dimension": 11,
+    "critical_group_2_rank": 3363,
+    "half_energy_rank": 3358,
+    "smith_factors_divisible_by_4": 5,
+    "quarter_energy_matrix": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "quarter_energy_rank": 4,
+    "smith_factors_divisible_by_8": 1,
+    "eighth_energy_matrix": [
+      [
+        0
+      ]
+    ],
+    "eighth_energy_rank": 0,
+    "smith_factors_divisible_by_16": 1,
+    "blue_half_rank": 4,
+    "nonzero_half_diagonal_entries": 3357,
+    "counterfeit_half_difference_rank": 2,
+    "doubled_counterfeit_feasible": true,
+    "doubled_counterfeit_half_difference_rank": 0,
+    "doubled_counterfeit_quarter_difference_rank": 2,
+    "literal_blue_lines": 2048,
+    "literal_black_lines": 1046528,
+    "blue_loops": 4,
+    "literal_black_loops": 618
+  },
+  "checks": 970653
+}
