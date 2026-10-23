@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "old_json_objects": 2,
+  "old_disjoint_union_equals_new_receipt": true,
+  "independent_census_agreement": true,
+  "explicit_require_calls": 6,
+  "assert_statements": 0,
+  "source_sha256": "9558de0c37e5c3787406439b7f40f4b82c4979793f0bdea4bb2e820301179e6b",
+  "receipt_sha256": "6f72a3250878b37bfedc69a84a568e23ad96856a76064e6bd8d1c60ab9a51bea"
+}

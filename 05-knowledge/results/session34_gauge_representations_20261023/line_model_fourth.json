@@ -1,0 +1,11 @@
+{
+  "fourth_coefficients": [
+    -203,
+    -11,
+    -11,
+    -203
+  ],
+  "line_model_gap": "36 h^3/J^2 + 192 h^4/J^3 + O(h^5/J^4)",
+  "scope": "exact implicit-polynomial coefficients; fixed h>0, J/h -> infinity",
+  "status": "PASS"
+}

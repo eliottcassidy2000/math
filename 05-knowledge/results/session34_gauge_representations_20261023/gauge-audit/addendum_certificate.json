@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "checks": 20,
+  "edge_kinetic_fourth_path_sum": "518",
+  "edge_kinetic_fourth_order_scalar": "-77",
+  "edge_kinetic_second_order": 21,
+  "edge_kinetic_third_order_transition_count": 7,
+  "edge_kinetic_third_order_each": 6,
+  "S3_full_symbolic_integral": "x**4/216 + x**2*y**2/12 + x**2*z**2/18 + x*y**2*z/3 + x*z**3/27 + y**4/8 + y**2*z**2/3 + z**4/36",
+  "S3_full_flat_count": 216,
+  "D8_rooted_histogram": {
+    "4": 1,
+    "2": 42,
+    "1": 168,
+    "0": 301
+  },
+  "kernel_weight_enumerator": {
+    "0": 1,
+    "3": 7,
+    "6": 28,
+    "7": 42,
+    "8": 105,
+    "9": 182,
+    "10": 147,
+    "11": 147,
+    "12": 182,
+    "13": 105,
+    "14": 42,
+    "15": 28,
+    "18": 7,
+    "21": 1
+  },
+  "logical_distance_and_minimizer_multiplicities": [
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      3,
+      1,
+      7
+    ],
+    [
+      6,
+      3,
+      7
+    ],
+    [
+      9,
+      35,
+      1
+    ]
+  ]
+}

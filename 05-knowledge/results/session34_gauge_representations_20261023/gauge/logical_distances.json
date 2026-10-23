@@ -1,0 +1,247 @@
+{
+  "status": "PASS",
+  "kernel_weight_enumerator": {
+    "0": 1,
+    "3": 7,
+    "6": 28,
+    "7": 42,
+    "8": 105,
+    "9": 182,
+    "10": 147,
+    "11": 147,
+    "12": 182,
+    "13": 105,
+    "14": 42,
+    "15": 28,
+    "18": 7,
+    "21": 1
+  },
+  "logical_distance_histogram": {
+    "0": 1,
+    "3": 7,
+    "6": 7,
+    "9": 1
+  },
+  "logical_cosets": [
+    {
+      "line_mask": 0,
+      "line_weight": 0,
+      "minimal_edge_weight": 0,
+      "minimizer_count": 1,
+      "edge_weight_enumerator": {
+        "0": 1,
+        "6": 7,
+        "10": 21,
+        "12": 35
+      }
+    },
+    {
+      "line_mask": 13,
+      "line_weight": 3,
+      "minimal_edge_weight": 3,
+      "minimizer_count": 1,
+      "edge_weight_enumerator": {
+        "3": 1,
+        "7": 6,
+        "9": 21,
+        "11": 18,
+        "13": 15,
+        "15": 3
+      }
+    },
+    {
+      "line_mask": 23,
+      "line_weight": 4,
+      "minimal_edge_weight": 6,
+      "minimizer_count": 3,
+      "edge_weight_enumerator": {
+        "6": 3,
+        "8": 15,
+        "10": 18,
+        "12": 21,
+        "14": 6,
+        "18": 1
+      }
+    },
+    {
+      "line_mask": 26,
+      "line_weight": 3,
+      "minimal_edge_weight": 3,
+      "minimizer_count": 1,
+      "edge_weight_enumerator": {
+        "3": 1,
+        "7": 6,
+        "9": 21,
+        "11": 18,
+        "13": 15,
+        "15": 3
+      }
+    },
+    {
+      "line_mask": 35,
+      "line_weight": 3,
+      "minimal_edge_weight": 3,
+      "minimizer_count": 1,
+      "edge_weight_enumerator": {
+        "3": 1,
+        "7": 6,
+        "9": 21,
+        "11": 18,
+        "13": 15,
+        "15": 3
+      }
+    },
+    {
+      "line_mask": 46,
+      "line_weight": 4,
+      "minimal_edge_weight": 6,
+      "minimizer_count": 3,
+      "edge_weight_enumerator": {
+        "6": 3,
+        "8": 15,
+        "10": 18,
+        "12": 21,
+        "14": 6,
+        "18": 1
+      }
+    },
+    {
+      "line_mask": 52,
+      "line_weight": 3,
+      "minimal_edge_weight": 3,
+      "minimizer_count": 1,
+      "edge_weight_enumerator": {
+        "3": 1,
+        "7": 6,
+        "9": 21,
+        "11": 18,
+        "13": 15,
+        "15": 3
+      }
+    },
+    {
+      "line_mask": 57,
+      "line_weight": 4,
+      "minimal_edge_weight": 6,
+      "minimizer_count": 3,
+      "edge_weight_enumerator": {
+        "6": 3,
+        "8": 15,
+        "10": 18,
+        "12": 21,
+        "14": 6,
+        "18": 1
+      }
+    },
+    {
+      "line_mask": 70,
+      "line_weight": 3,
+      "minimal_edge_weight": 3,
+      "minimizer_count": 1,
+      "edge_weight_enumerator": {
+        "3": 1,
+        "7": 6,
+        "9": 21,
+        "11": 18,
+        "13": 15,
+        "15": 3
+      }
+    },
+    {
+      "line_mask": 75,
+      "line_weight": 4,
+      "minimal_edge_weight": 6,
+      "minimizer_count": 3,
+      "edge_weight_enumerator": {
+        "6": 3,
+        "8": 15,
+        "10": 18,
+        "12": 21,
+        "14": 6,
+        "18": 1
+      }
+    },
+    {
+      "line_mask": 81,
+      "line_weight": 3,
+      "minimal_edge_weight": 3,
+      "minimizer_count": 1,
+      "edge_weight_enumerator": {
+        "3": 1,
+        "7": 6,
+        "9": 21,
+        "11": 18,
+        "13": 15,
+        "15": 3
+      }
+    },
+    {
+      "line_mask": 92,
+      "line_weight": 4,
+      "minimal_edge_weight": 6,
+      "minimizer_count": 3,
+      "edge_weight_enumerator": {
+        "6": 3,
+        "8": 15,
+        "10": 18,
+        "12": 21,
+        "14": 6,
+        "18": 1
+      }
+    },
+    {
+      "line_mask": 101,
+      "line_weight": 4,
+      "minimal_edge_weight": 6,
+      "minimizer_count": 3,
+      "edge_weight_enumerator": {
+        "6": 3,
+        "8": 15,
+        "10": 18,
+        "12": 21,
+        "14": 6,
+        "18": 1
+      }
+    },
+    {
+      "line_mask": 104,
+      "line_weight": 3,
+      "minimal_edge_weight": 3,
+      "minimizer_count": 1,
+      "edge_weight_enumerator": {
+        "3": 1,
+        "7": 6,
+        "9": 21,
+        "11": 18,
+        "13": 15,
+        "15": 3
+      }
+    },
+    {
+      "line_mask": 114,
+      "line_weight": 4,
+      "minimal_edge_weight": 6,
+      "minimizer_count": 3,
+      "edge_weight_enumerator": {
+        "6": 3,
+        "8": 15,
+        "10": 18,
+        "12": 21,
+        "14": 6,
+        "18": 1
+      }
+    },
+    {
+      "line_mask": 127,
+      "line_weight": 7,
+      "minimal_edge_weight": 9,
+      "minimizer_count": 35,
+      "edge_weight_enumerator": {
+        "9": 35,
+        "11": 21,
+        "15": 7,
+        "21": 1
+      }
+    }
+  ]
+}

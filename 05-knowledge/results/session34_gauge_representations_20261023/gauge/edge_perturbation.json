@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "quotient_dimension": 32768,
+  "ground_dimension": 16,
+  "single_edge_step_count": 21,
+  "second_order_return_counts": {
+    "0": 21
+  },
+  "third_order_ground_counts": {
+    "8351": 6,
+    "1001": 6,
+    "20066": 6,
+    "12916": 6,
+    "23689": 6,
+    "27924": 6,
+    "4354": 6
+  },
+  "third_order_denominator_counts": {
+    "(Fraction(1, 1), Fraction(1, 1))": 42
+  },
+  "distinct_ordered_pair_costs": {
+    "3/2": 168,
+    "2": 210,
+    "1": 42
+  },
+  "fourth_order_scalar": "-77",
+  "crown_spectrum": {
+    "7": 1,
+    "1": 7,
+    "-1": 7,
+    "-7": 1
+  }
+}
