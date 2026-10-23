@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "checks": 8256,
+  "method": "real-space signed syndrome quotients and Schur complement; direct independent incidence/DP",
+  "full_sector_charpolys": [
+    {
+      "polynomial": "(-8*t + z - 1)**6*(-8*t*z + 7*t + z**2 - z)",
+      "multiplicity": 1,
+      "cubic": -42
+    },
+    {
+      "polynomial": "(-10*t + z - 1)**2*(-6*t + z - 1)**3*(-120*t**3 + 92*t**2*z - 70*t**2 - 18*t*z**2 + 25*t*z - 7*t + z**3 - 2*z**2 + z)",
+      "multiplicity": 7,
+      "cubic": -6
+    },
+    {
+      "polynomial": "(-8*t + z - 1)**3*(-4*t + z - 1)**2*(-384*t**3 + 176*t**2*z - 112*t**2 - 24*t*z**2 + 31*t*z - 7*t + z**3 - 2*z**2 + z)",
+      "multiplicity": 7,
+      "cubic": 6
+    },
+    {
+      "polynomial": "(-6*t + z - 1)**6*(84*t**2 - 20*t*z + 7*t + z**2 - z)",
+      "multiplicity": 1,
+      "cubic": 42
+    }
+  ],
+  "n5_closed": {
+    "0": 1,
+    "4": 5,
+    "6": 10
+  },
+  "n5_c4_numerator": {
+    "2": 2,
+    "4": 5,
+    "6": 8,
+    "8": 1
+  },
+  "Fano_H_histogram": {
+    "189": 16,
+    "171": 112
+  },
+  "Fano_R_histogram": {
+    "21": 16,
+    "-3": 112
+  },
+  "full_rainbow_histogram": {
+    "21": 1024,
+    "13": 21504,
+    "9": 143360,
+    "5": 322560,
+    "1": 688128,
+    "-3": 637952,
+    "-7": 282624
+  },
+  "rainbow_rank": 11,
+  "rainbow_kernel_dimension": 10
+}

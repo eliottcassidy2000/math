@@ -1,0 +1,115 @@
+{
+  "checks": 16534,
+  "effective_code_graph_spectrum": {
+    "-7": 1,
+    "-1": 7,
+    "1": 7,
+    "7": 1
+  },
+  "full_gap_asymptotic": "36 h^3/J^2 + O(h^4/J^3), fixed h>0, J/h -> infinity",
+  "invariant_gap": "sqrt((J-6h)^2+28h^2)",
+  "scope": "finite128-state quantum Hamiltonian; code symmetry is not identified with physical Yang-Mills gauge",
+  "sectors": [
+    {
+      "extra_eigenvalues": [
+        [
+          "8*t + 1",
+          6
+        ]
+      ],
+      "low_branch": "7t-7t^2+(-42)t^3+O(t^4)",
+      "reduced_charpoly": "-8*t*z + 7*t + z**2 - z",
+      "sector_multiplicity": 1,
+      "weights": [
+        [
+          0,
+          1
+        ],
+        [
+          4,
+          7
+        ]
+      ]
+    },
+    {
+      "extra_eigenvalues": [
+        [
+          "6*t + 1",
+          3
+        ],
+        [
+          "10*t + 1",
+          2
+        ]
+      ],
+      "low_branch": "7t-7t^2+(-6)t^3+O(t^4)",
+      "reduced_charpoly": "-120*t**3 + 92*t**2*z - 70*t**2 - 18*t*z**2 + 25*t*z - 7*t + z**3 - 2*z**2 + z",
+      "sector_multiplicity": 7,
+      "weights": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          3
+        ]
+      ]
+    },
+    {
+      "extra_eigenvalues": [
+        [
+          "4*t + 1",
+          2
+        ],
+        [
+          "8*t + 1",
+          3
+        ]
+      ],
+      "low_branch": "7t-7t^2+(6)t^3+O(t^4)",
+      "reduced_charpoly": "-384*t**3 + 176*t**2*z - 112*t**2 - 24*t*z**2 + 31*t*z - 7*t + z**3 - 2*z**2 + z",
+      "sector_multiplicity": 7,
+      "weights": [
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          1
+        ]
+      ]
+    },
+    {
+      "extra_eigenvalues": [
+        [
+          "6*t + 1",
+          6
+        ]
+      ],
+      "low_branch": "7t-7t^2+(42)t^3+O(t^4)",
+      "reduced_charpoly": "84*t**2 - 20*t*z + 7*t + z**2 - z",
+      "sector_multiplicity": 1,
+      "weights": [
+        [
+          3,
+          7
+        ],
+        [
+          7,
+          1
+        ]
+      ]
+    }
+  ],
+  "status": "PASS"
+}

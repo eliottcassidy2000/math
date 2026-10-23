@@ -1,0 +1,187 @@
+{
+  "representation_direct_orbits": [
+    {
+      "n": 1,
+      "orbits": 1,
+      "self_converse": 1,
+      "permutations_checked": 1,
+      "class_fixed": {
+        "(1,)": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "orbits": 1,
+      "self_converse": 1,
+      "permutations_checked": 2,
+      "class_fixed": {
+        "(1, 1)": [
+          2,
+          0
+        ],
+        "(2,)": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "orbits": 2,
+      "self_converse": 2,
+      "permutations_checked": 6,
+      "class_fixed": {
+        "(1, 1, 1)": [
+          8,
+          0
+        ],
+        "(2, 1)": [
+          0,
+          4
+        ],
+        "(3,)": [
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "orbits": 4,
+      "self_converse": 2,
+      "permutations_checked": 24,
+      "class_fixed": {
+        "(1, 1, 1, 1)": [
+          64,
+          0
+        ],
+        "(2, 1, 1)": [
+          0,
+          0
+        ],
+        "(3, 1)": [
+          4,
+          0
+        ],
+        "(2, 2)": [
+          0,
+          16
+        ],
+        "(4,)": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "n": 5,
+      "orbits": 12,
+      "self_converse": 8,
+      "permutations_checked": 120,
+      "class_fixed": {
+        "(1, 1, 1, 1, 1)": [
+          1024,
+          0
+        ],
+        "(2, 1, 1, 1)": [
+          0,
+          0
+        ],
+        "(3, 1, 1)": [
+          16,
+          0
+        ],
+        "(2, 2, 1)": [
+          0,
+          64
+        ],
+        "(4, 1)": [
+          0,
+          0
+        ],
+        "(3, 2)": [
+          0,
+          0
+        ],
+        "(5,)": [
+          4,
+          0
+        ]
+      }
+    }
+  ],
+  "winner_all_associators_and_ideal": [
+    {
+      "n": 1,
+      "tournaments": 1,
+      "associative": 1,
+      "with_unit": 1,
+      "SCC_distribution": {
+        "1": 1
+      }
+    },
+    {
+      "n": 2,
+      "tournaments": 2,
+      "associative": 2,
+      "with_unit": 2,
+      "SCC_distribution": {
+        "2": 2
+      }
+    },
+    {
+      "n": 3,
+      "tournaments": 8,
+      "associative": 6,
+      "with_unit": 6,
+      "SCC_distribution": {
+        "3": 6,
+        "1": 2
+      }
+    },
+    {
+      "n": 4,
+      "tournaments": 64,
+      "associative": 24,
+      "with_unit": 32,
+      "SCC_distribution": {
+        "4": 24,
+        "2": 16,
+        "1": 24
+      }
+    },
+    {
+      "n": 5,
+      "tournaments": 1024,
+      "associative": 120,
+      "with_unit": 320,
+      "SCC_distribution": {
+        "5": 120,
+        "3": 120,
+        "2": 240,
+        "1": 544
+      }
+    },
+    {
+      "n": 6,
+      "tournaments": 32768,
+      "associative": 720,
+      "with_unit": 6144,
+      "SCC_distribution": {
+        "6": 720,
+        "4": 960,
+        "3": 2160,
+        "2": 6608,
+        "1": 22320
+      }
+    }
+  ],
+  "semion_exact_phase_checks": {
+    "pentagon": 16,
+    "hexagon": 16,
+    "nontrivial_normalized_coboundary_obstruction": "delta f(1,1,1)=1 for every normalized 2-cochain on Z2, whereas omega(1,1,1)=-1"
+  }
+}

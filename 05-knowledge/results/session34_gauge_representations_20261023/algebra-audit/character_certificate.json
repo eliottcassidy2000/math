@@ -1,0 +1,50 @@
+[
+  {
+    "n": 1,
+    "partitions": 1,
+    "characters_checked": 1,
+    "all_multiplicities_match": true
+  },
+  {
+    "n": 2,
+    "partitions": 2,
+    "characters_checked": 4,
+    "all_multiplicities_match": true
+  },
+  {
+    "n": 3,
+    "partitions": 3,
+    "characters_checked": 9,
+    "all_multiplicities_match": true
+  },
+  {
+    "n": 4,
+    "partitions": 5,
+    "characters_checked": 25,
+    "all_multiplicities_match": true
+  },
+  {
+    "n": 5,
+    "partitions": 7,
+    "characters_checked": 49,
+    "all_multiplicities_match": true
+  },
+  {
+    "n": 6,
+    "partitions": 11,
+    "characters_checked": 121,
+    "all_multiplicities_match": true
+  },
+  {
+    "n": 7,
+    "partitions": 15,
+    "characters_checked": 225,
+    "all_multiplicities_match": true
+  },
+  {
+    "n": 8,
+    "partitions": 22,
+    "characters_checked": 484,
+    "all_multiplicities_match": true
+  }
+]

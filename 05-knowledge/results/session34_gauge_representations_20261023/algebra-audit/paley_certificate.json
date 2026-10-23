@@ -1,0 +1,21 @@
+{
+  "paths": 189,
+  "cycles_mod_rotation": 24,
+  "automorphisms": 21,
+  "translation_fixed_cycles": [
+    24,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "anti_inversion_fixed_paths": 9,
+  "anti_affine_fixed_path_sum": 63,
+  "converse_trace_on_aut_orbits": 3,
+  "plus_minus": [
+    6,
+    3
+  ]
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "n": 1,
+    "marked_states": 1,
+    "supported_permutations": 1,
+    "twisted_character_per_supported_permutation": 1,
+    "chord_orbits": 0
+  },
+  {
+    "n": 2,
+    "marked_states": 2,
+    "supported_permutations": 1,
+    "twisted_character_per_supported_permutation": 2,
+    "chord_orbits": 0
+  },
+  {
+    "n": 3,
+    "marked_states": 12,
+    "supported_permutations": 3,
+    "twisted_character_per_supported_permutation": 4,
+    "chord_orbits": 1
+  },
+  {
+    "n": 4,
+    "marked_states": 192,
+    "supported_permutations": 3,
+    "twisted_character_per_supported_permutation": 32,
+    "chord_orbits": 2
+  },
+  {
+    "n": 5,
+    "marked_states": 7680,
+    "supported_permutations": 15,
+    "twisted_character_per_supported_permutation": 128,
+    "chord_orbits": 4
+  },
+  {
+    "n": 6,
+    "marked_states": 737280,
+    "supported_permutations": 15,
+    "twisted_character_per_supported_permutation": 3072,
+    "chord_orbits": 6
+  }
+]

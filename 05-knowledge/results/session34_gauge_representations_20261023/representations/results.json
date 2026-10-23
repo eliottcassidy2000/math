@@ -1,0 +1,882 @@
+[
+  {
+    "n": 1,
+    "unlabelled": 1,
+    "self_converse": 1,
+    "tournament_irreps": {
+      "(1,)": {
+        "multiplicity": 1,
+        "converse_trace": 1,
+        "plus": 1,
+        "minus": 0
+      }
+    },
+    "marked_chords": 0,
+    "marked_fixed_chord_orbits": 0,
+    "marked_irreps": {
+      "(1,)": {
+        "dimension_multiplicity": 1,
+        "converse_trace": 1,
+        "plus": 1,
+        "minus": 0
+      }
+    }
+  },
+  {
+    "n": 2,
+    "unlabelled": 1,
+    "self_converse": 1,
+    "tournament_irreps": {
+      "(2,)": {
+        "multiplicity": 1,
+        "converse_trace": 1,
+        "plus": 1,
+        "minus": 0
+      },
+      "(1, 1)": {
+        "multiplicity": 1,
+        "converse_trace": -1,
+        "plus": 0,
+        "minus": 1
+      }
+    },
+    "marked_chords": 0,
+    "marked_fixed_chord_orbits": 0,
+    "marked_irreps": {
+      "(2,)": {
+        "dimension_multiplicity": 1,
+        "converse_trace": 1,
+        "plus": 1,
+        "minus": 0
+      },
+      "(1, 1)": {
+        "dimension_multiplicity": 1,
+        "converse_trace": -1,
+        "plus": 0,
+        "minus": 1
+      }
+    }
+  },
+  {
+    "n": 3,
+    "unlabelled": 2,
+    "self_converse": 2,
+    "tournament_irreps": {
+      "(3,)": {
+        "multiplicity": 2,
+        "converse_trace": 2,
+        "plus": 2,
+        "minus": 0
+      },
+      "(2, 1)": {
+        "multiplicity": 2,
+        "converse_trace": 0,
+        "plus": 1,
+        "minus": 1
+      },
+      "(1, 1, 1)": {
+        "multiplicity": 2,
+        "converse_trace": -2,
+        "plus": 0,
+        "minus": 2
+      }
+    },
+    "marked_chords": 1,
+    "marked_fixed_chord_orbits": 1,
+    "marked_irreps": {
+      "(3,)": {
+        "dimension_multiplicity": 2,
+        "converse_trace": 2,
+        "plus": 2,
+        "minus": 0
+      },
+      "(2, 1)": {
+        "dimension_multiplicity": 4,
+        "converse_trace": 0,
+        "plus": 2,
+        "minus": 2
+      },
+      "(1, 1, 1)": {
+        "dimension_multiplicity": 2,
+        "converse_trace": -2,
+        "plus": 0,
+        "minus": 2
+      }
+    }
+  },
+  {
+    "n": 4,
+    "unlabelled": 4,
+    "self_converse": 2,
+    "tournament_irreps": {
+      "(4,)": {
+        "multiplicity": 4,
+        "converse_trace": 2,
+        "plus": 3,
+        "minus": 1
+      },
+      "(3, 1)": {
+        "multiplicity": 8,
+        "converse_trace": -2,
+        "plus": 3,
+        "minus": 5
+      },
+      "(2, 2)": {
+        "multiplicity": 4,
+        "converse_trace": 4,
+        "plus": 4,
+        "minus": 0
+      },
+      "(2, 1, 1)": {
+        "multiplicity": 8,
+        "converse_trace": -2,
+        "plus": 3,
+        "minus": 5
+      },
+      "(1, 1, 1, 1)": {
+        "multiplicity": 4,
+        "converse_trace": 2,
+        "plus": 3,
+        "minus": 1
+      }
+    },
+    "marked_chords": 3,
+    "marked_fixed_chord_orbits": 2,
+    "marked_irreps": {
+      "(4,)": {
+        "dimension_multiplicity": 8,
+        "converse_trace": 4,
+        "plus": 6,
+        "minus": 2
+      },
+      "(3, 1)": {
+        "dimension_multiplicity": 24,
+        "converse_trace": -4,
+        "plus": 10,
+        "minus": 14
+      },
+      "(2, 2)": {
+        "dimension_multiplicity": 16,
+        "converse_trace": 8,
+        "plus": 12,
+        "minus": 4
+      },
+      "(2, 1, 1)": {
+        "dimension_multiplicity": 24,
+        "converse_trace": -4,
+        "plus": 10,
+        "minus": 14
+      },
+      "(1, 1, 1, 1)": {
+        "dimension_multiplicity": 8,
+        "converse_trace": 4,
+        "plus": 6,
+        "minus": 2
+      }
+    }
+  },
+  {
+    "n": 5,
+    "unlabelled": 12,
+    "self_converse": 8,
+    "tournament_irreps": {
+      "(5,)": {
+        "multiplicity": 12,
+        "converse_trace": 8,
+        "plus": 10,
+        "minus": 2
+      },
+      "(4, 1)": {
+        "multiplicity": 36,
+        "converse_trace": 0,
+        "plus": 18,
+        "minus": 18
+      },
+      "(3, 2)": {
+        "multiplicity": 40,
+        "converse_trace": 8,
+        "plus": 24,
+        "minus": 16
+      },
+      "(3, 1, 1)": {
+        "multiplicity": 52,
+        "converse_trace": -16,
+        "plus": 18,
+        "minus": 34
+      },
+      "(2, 2, 1)": {
+        "multiplicity": 40,
+        "converse_trace": 8,
+        "plus": 24,
+        "minus": 16
+      },
+      "(2, 1, 1, 1)": {
+        "multiplicity": 36,
+        "converse_trace": 0,
+        "plus": 18,
+        "minus": 18
+      },
+      "(1, 1, 1, 1, 1)": {
+        "multiplicity": 12,
+        "converse_trace": 8,
+        "plus": 10,
+        "minus": 2
+      }
+    },
+    "marked_chords": 6,
+    "marked_fixed_chord_orbits": 4,
+    "marked_irreps": {
+      "(5,)": {
+        "dimension_multiplicity": 64,
+        "converse_trace": 16,
+        "plus": 40,
+        "minus": 24
+      },
+      "(4, 1)": {
+        "dimension_multiplicity": 256,
+        "converse_trace": 0,
+        "plus": 128,
+        "minus": 128
+      },
+      "(3, 2)": {
+        "dimension_multiplicity": 320,
+        "converse_trace": 16,
+        "plus": 168,
+        "minus": 152
+      },
+      "(3, 1, 1)": {
+        "dimension_multiplicity": 384,
+        "converse_trace": -32,
+        "plus": 176,
+        "minus": 208
+      },
+      "(2, 2, 1)": {
+        "dimension_multiplicity": 320,
+        "converse_trace": 16,
+        "plus": 168,
+        "minus": 152
+      },
+      "(2, 1, 1, 1)": {
+        "dimension_multiplicity": 256,
+        "converse_trace": 0,
+        "plus": 128,
+        "minus": 128
+      },
+      "(1, 1, 1, 1, 1)": {
+        "dimension_multiplicity": 64,
+        "converse_trace": 16,
+        "plus": 40,
+        "minus": 24
+      }
+    }
+  },
+  {
+    "n": 6,
+    "unlabelled": 56,
+    "self_converse": 12,
+    "tournament_irreps": {
+      "(6,)": {
+        "multiplicity": 56,
+        "converse_trace": 12,
+        "plus": 34,
+        "minus": 22
+      },
+      "(5, 1)": {
+        "multiplicity": 240,
+        "converse_trace": -12,
+        "plus": 114,
+        "minus": 126
+      },
+      "(4, 2)": {
+        "multiplicity": 408,
+        "converse_trace": 32,
+        "plus": 220,
+        "minus": 188
+      },
+      "(4, 1, 1)": {
+        "multiplicity": 464,
+        "converse_trace": -20,
+        "plus": 222,
+        "minus": 242
+      },
+      "(3, 3)": {
+        "multiplicity": 224,
+        "converse_trace": -32,
+        "plus": 96,
+        "minus": 128
+      },
+      "(3, 2, 1)": {
+        "multiplicity": 712,
+        "converse_trace": 0,
+        "plus": 356,
+        "minus": 356
+      },
+      "(3, 1, 1, 1)": {
+        "multiplicity": 464,
+        "converse_trace": 20,
+        "plus": 242,
+        "minus": 222
+      },
+      "(2, 2, 2)": {
+        "multiplicity": 224,
+        "converse_trace": 32,
+        "plus": 128,
+        "minus": 96
+      },
+      "(2, 2, 1, 1)": {
+        "multiplicity": 408,
+        "converse_trace": -32,
+        "plus": 188,
+        "minus": 220
+      },
+      "(2, 1, 1, 1, 1)": {
+        "multiplicity": 240,
+        "converse_trace": 12,
+        "plus": 126,
+        "minus": 114
+      },
+      "(1, 1, 1, 1, 1, 1)": {
+        "multiplicity": 56,
+        "converse_trace": -12,
+        "plus": 22,
+        "minus": 34
+      }
+    },
+    "marked_chords": 10,
+    "marked_fixed_chord_orbits": 6,
+    "marked_irreps": {
+      "(6,)": {
+        "dimension_multiplicity": 1024,
+        "converse_trace": 64,
+        "plus": 544,
+        "minus": 480
+      },
+      "(5, 1)": {
+        "dimension_multiplicity": 5120,
+        "converse_trace": -64,
+        "plus": 2528,
+        "minus": 2592
+      },
+      "(4, 2)": {
+        "dimension_multiplicity": 9216,
+        "converse_trace": 192,
+        "plus": 4704,
+        "minus": 4512
+      },
+      "(4, 1, 1)": {
+        "dimension_multiplicity": 10240,
+        "converse_trace": -128,
+        "plus": 5056,
+        "minus": 5184
+      },
+      "(3, 3)": {
+        "dimension_multiplicity": 5120,
+        "converse_trace": -192,
+        "plus": 2464,
+        "minus": 2656
+      },
+      "(3, 2, 1)": {
+        "dimension_multiplicity": 16384,
+        "converse_trace": 0,
+        "plus": 8192,
+        "minus": 8192
+      },
+      "(3, 1, 1, 1)": {
+        "dimension_multiplicity": 10240,
+        "converse_trace": 128,
+        "plus": 5184,
+        "minus": 5056
+      },
+      "(2, 2, 2)": {
+        "dimension_multiplicity": 5120,
+        "converse_trace": 192,
+        "plus": 2656,
+        "minus": 2464
+      },
+      "(2, 2, 1, 1)": {
+        "dimension_multiplicity": 9216,
+        "converse_trace": -192,
+        "plus": 4512,
+        "minus": 4704
+      },
+      "(2, 1, 1, 1, 1)": {
+        "dimension_multiplicity": 5120,
+        "converse_trace": 64,
+        "plus": 2592,
+        "minus": 2528
+      },
+      "(1, 1, 1, 1, 1, 1)": {
+        "dimension_multiplicity": 1024,
+        "converse_trace": -64,
+        "plus": 480,
+        "minus": 544
+      }
+    }
+  },
+  {
+    "n": 7,
+    "unlabelled": 456,
+    "self_converse": 88,
+    "tournament_irreps": {
+      "(7,)": {
+        "multiplicity": 456,
+        "converse_trace": 88,
+        "plus": 272,
+        "minus": 184
+      },
+      "(6, 1)": {
+        "multiplicity": 2584,
+        "converse_trace": 0,
+        "plus": 1292,
+        "minus": 1292
+      },
+      "(5, 2)": {
+        "multiplicity": 5872,
+        "converse_trace": 168,
+        "plus": 3020,
+        "minus": 2852
+      },
+      "(5, 1, 1)": {
+        "multiplicity": 6328,
+        "converse_trace": -256,
+        "plus": 3036,
+        "minus": 3292
+      },
+      "(4, 3)": {
+        "multiplicity": 5808,
+        "converse_trace": 0,
+        "plus": 2904,
+        "minus": 2904
+      },
+      "(4, 2, 1)": {
+        "multiplicity": 14528,
+        "converse_trace": 88,
+        "plus": 7308,
+        "minus": 7220
+      },
+      "(4, 1, 1, 1)": {
+        "multiplicity": 8392,
+        "converse_trace": 0,
+        "plus": 4196,
+        "minus": 4196
+      },
+      "(3, 3, 1)": {
+        "multiplicity": 8656,
+        "converse_trace": -256,
+        "plus": 4200,
+        "minus": 4456
+      },
+      "(3, 2, 2)": {
+        "multiplicity": 8656,
+        "converse_trace": 256,
+        "plus": 4456,
+        "minus": 4200
+      },
+      "(3, 2, 1, 1)": {
+        "multiplicity": 14528,
+        "converse_trace": -88,
+        "plus": 7220,
+        "minus": 7308
+      },
+      "(3, 1, 1, 1, 1)": {
+        "multiplicity": 6328,
+        "converse_trace": 256,
+        "plus": 3292,
+        "minus": 3036
+      },
+      "(2, 2, 2, 1)": {
+        "multiplicity": 5808,
+        "converse_trace": 0,
+        "plus": 2904,
+        "minus": 2904
+      },
+      "(2, 2, 1, 1, 1)": {
+        "multiplicity": 5872,
+        "converse_trace": -168,
+        "plus": 2852,
+        "minus": 3020
+      },
+      "(2, 1, 1, 1, 1, 1)": {
+        "multiplicity": 2584,
+        "converse_trace": 0,
+        "plus": 1292,
+        "minus": 1292
+      },
+      "(1, 1, 1, 1, 1, 1, 1)": {
+        "multiplicity": 456,
+        "converse_trace": -88,
+        "plus": 184,
+        "minus": 272
+      }
+    },
+    "marked_chords": 15,
+    "marked_fixed_chord_orbits": 9,
+    "marked_irreps": {
+      "(7,)": {
+        "dimension_multiplicity": 32768,
+        "converse_trace": 512,
+        "plus": 16640,
+        "minus": 16128
+      },
+      "(6, 1)": {
+        "dimension_multiplicity": 196608,
+        "converse_trace": 0,
+        "plus": 98304,
+        "minus": 98304
+      },
+      "(5, 2)": {
+        "dimension_multiplicity": 458752,
+        "converse_trace": 1024,
+        "plus": 229888,
+        "minus": 228864
+      },
+      "(5, 1, 1)": {
+        "dimension_multiplicity": 491520,
+        "converse_trace": -1536,
+        "plus": 244992,
+        "minus": 246528
+      },
+      "(4, 3)": {
+        "dimension_multiplicity": 458752,
+        "converse_trace": 0,
+        "plus": 229376,
+        "minus": 229376
+      },
+      "(4, 2, 1)": {
+        "dimension_multiplicity": 1146880,
+        "converse_trace": 512,
+        "plus": 573696,
+        "minus": 573184
+      },
+      "(4, 1, 1, 1)": {
+        "dimension_multiplicity": 655360,
+        "converse_trace": 0,
+        "plus": 327680,
+        "minus": 327680
+      },
+      "(3, 3, 1)": {
+        "dimension_multiplicity": 688128,
+        "converse_trace": -1536,
+        "plus": 343296,
+        "minus": 344832
+      },
+      "(3, 2, 2)": {
+        "dimension_multiplicity": 688128,
+        "converse_trace": 1536,
+        "plus": 344832,
+        "minus": 343296
+      },
+      "(3, 2, 1, 1)": {
+        "dimension_multiplicity": 1146880,
+        "converse_trace": -512,
+        "plus": 573184,
+        "minus": 573696
+      },
+      "(3, 1, 1, 1, 1)": {
+        "dimension_multiplicity": 491520,
+        "converse_trace": 1536,
+        "plus": 246528,
+        "minus": 244992
+      },
+      "(2, 2, 2, 1)": {
+        "dimension_multiplicity": 458752,
+        "converse_trace": 0,
+        "plus": 229376,
+        "minus": 229376
+      },
+      "(2, 2, 1, 1, 1)": {
+        "dimension_multiplicity": 458752,
+        "converse_trace": -1024,
+        "plus": 228864,
+        "minus": 229888
+      },
+      "(2, 1, 1, 1, 1, 1)": {
+        "dimension_multiplicity": 196608,
+        "converse_trace": 0,
+        "plus": 98304,
+        "minus": 98304
+      },
+      "(1, 1, 1, 1, 1, 1, 1)": {
+        "dimension_multiplicity": 32768,
+        "converse_trace": -512,
+        "plus": 16128,
+        "minus": 16640
+      }
+    }
+  },
+  {
+    "n": 8,
+    "unlabelled": 6880,
+    "self_converse": 176,
+    "tournament_irreps": {
+      "(8,)": {
+        "multiplicity": 6880,
+        "converse_trace": 176,
+        "plus": 3528,
+        "minus": 3352
+      },
+      "(7, 1)": {
+        "multiplicity": 47376,
+        "converse_trace": -176,
+        "plus": 23600,
+        "minus": 23776
+      },
+      "(6, 2)": {
+        "multiplicity": 134032,
+        "converse_trace": 688,
+        "plus": 67360,
+        "minus": 66672
+      },
+      "(6, 1, 1)": {
+        "multiplicity": 140912,
+        "converse_trace": -512,
+        "plus": 70200,
+        "minus": 70712
+      },
+      "(5, 3)": {
+        "multiplicity": 186608,
+        "converse_trace": -688,
+        "plus": 92960,
+        "minus": 93648
+      },
+      "(5, 2, 1)": {
+        "multiplicity": 426752,
+        "converse_trace": 0,
+        "plus": 213376,
+        "minus": 213376
+      },
+      "(5, 1, 1, 1)": {
+        "multiplicity": 233984,
+        "converse_trace": 512,
+        "plus": 117248,
+        "minus": 116736
+      },
+      "(4, 4)": {
+        "multiplicity": 93072,
+        "converse_trace": 1024,
+        "plus": 47048,
+        "minus": 46024
+      },
+      "(4, 3, 1)": {
+        "multiplicity": 465152,
+        "converse_trace": -336,
+        "plus": 232408,
+        "minus": 232744
+      },
+      "(4, 2, 2)": {
+        "multiplicity": 372080,
+        "converse_trace": 1360,
+        "plus": 186720,
+        "minus": 185360
+      },
+      "(4, 2, 1, 1)": {
+        "multiplicity": 599184,
+        "converse_trace": -1024,
+        "plus": 299080,
+        "minus": 300104
+      },
+      "(4, 1, 1, 1, 1)": {
+        "multiplicity": 233984,
+        "converse_trace": 512,
+        "plus": 117248,
+        "minus": 116736
+      },
+      "(3, 3, 2)": {
+        "multiplicity": 278544,
+        "converse_trace": -1024,
+        "plus": 138760,
+        "minus": 139784
+      },
+      "(3, 3, 1, 1)": {
+        "multiplicity": 372080,
+        "converse_trace": 1360,
+        "plus": 186720,
+        "minus": 185360
+      },
+      "(3, 2, 2, 1)": {
+        "multiplicity": 465152,
+        "converse_trace": -336,
+        "plus": 232408,
+        "minus": 232744
+      },
+      "(3, 2, 1, 1, 1)": {
+        "multiplicity": 426752,
+        "converse_trace": 0,
+        "plus": 213376,
+        "minus": 213376
+      },
+      "(3, 1, 1, 1, 1, 1)": {
+        "multiplicity": 140912,
+        "converse_trace": -512,
+        "plus": 70200,
+        "minus": 70712
+      },
+      "(2, 2, 2, 2)": {
+        "multiplicity": 93072,
+        "converse_trace": 1024,
+        "plus": 47048,
+        "minus": 46024
+      },
+      "(2, 2, 2, 1, 1)": {
+        "multiplicity": 186608,
+        "converse_trace": -688,
+        "plus": 92960,
+        "minus": 93648
+      },
+      "(2, 2, 1, 1, 1, 1)": {
+        "multiplicity": 134032,
+        "converse_trace": 688,
+        "plus": 67360,
+        "minus": 66672
+      },
+      "(2, 1, 1, 1, 1, 1, 1)": {
+        "multiplicity": 47376,
+        "converse_trace": -176,
+        "plus": 23600,
+        "minus": 23776
+      },
+      "(1, 1, 1, 1, 1, 1, 1, 1)": {
+        "multiplicity": 6880,
+        "converse_trace": 176,
+        "plus": 3528,
+        "minus": 3352
+      }
+    },
+    "marked_chords": 21,
+    "marked_fixed_chord_orbits": 12,
+    "marked_irreps": {
+      "(8,)": {
+        "dimension_multiplicity": 2097152,
+        "converse_trace": 4096,
+        "plus": 1050624,
+        "minus": 1046528
+      },
+      "(7, 1)": {
+        "dimension_multiplicity": 14680064,
+        "converse_trace": -4096,
+        "plus": 7337984,
+        "minus": 7342080
+      },
+      "(6, 2)": {
+        "dimension_multiplicity": 41943040,
+        "converse_trace": 16384,
+        "plus": 20979712,
+        "minus": 20963328
+      },
+      "(6, 1, 1)": {
+        "dimension_multiplicity": 44040192,
+        "converse_trace": -12288,
+        "plus": 22013952,
+        "minus": 22026240
+      },
+      "(5, 3)": {
+        "dimension_multiplicity": 58720256,
+        "converse_trace": -16384,
+        "plus": 29351936,
+        "minus": 29368320
+      },
+      "(5, 2, 1)": {
+        "dimension_multiplicity": 134217728,
+        "converse_trace": 0,
+        "plus": 67108864,
+        "minus": 67108864
+      },
+      "(5, 1, 1, 1)": {
+        "dimension_multiplicity": 73400320,
+        "converse_trace": 12288,
+        "plus": 36706304,
+        "minus": 36694016
+      },
+      "(4, 4)": {
+        "dimension_multiplicity": 29360128,
+        "converse_trace": 24576,
+        "plus": 14692352,
+        "minus": 14667776
+      },
+      "(4, 3, 1)": {
+        "dimension_multiplicity": 146800640,
+        "converse_trace": -8192,
+        "plus": 73396224,
+        "minus": 73404416
+      },
+      "(4, 2, 2)": {
+        "dimension_multiplicity": 117440512,
+        "converse_trace": 32768,
+        "plus": 58736640,
+        "minus": 58703872
+      },
+      "(4, 2, 1, 1)": {
+        "dimension_multiplicity": 188743680,
+        "converse_trace": -24576,
+        "plus": 94359552,
+        "minus": 94384128
+      },
+      "(4, 1, 1, 1, 1)": {
+        "dimension_multiplicity": 73400320,
+        "converse_trace": 12288,
+        "plus": 36706304,
+        "minus": 36694016
+      },
+      "(3, 3, 2)": {
+        "dimension_multiplicity": 88080384,
+        "converse_trace": -24576,
+        "plus": 44027904,
+        "minus": 44052480
+      },
+      "(3, 3, 1, 1)": {
+        "dimension_multiplicity": 117440512,
+        "converse_trace": 32768,
+        "plus": 58736640,
+        "minus": 58703872
+      },
+      "(3, 2, 2, 1)": {
+        "dimension_multiplicity": 146800640,
+        "converse_trace": -8192,
+        "plus": 73396224,
+        "minus": 73404416
+      },
+      "(3, 2, 1, 1, 1)": {
+        "dimension_multiplicity": 134217728,
+        "converse_trace": 0,
+        "plus": 67108864,
+        "minus": 67108864
+      },
+      "(3, 1, 1, 1, 1, 1)": {
+        "dimension_multiplicity": 44040192,
+        "converse_trace": -12288,
+        "plus": 22013952,
+        "minus": 22026240
+      },
+      "(2, 2, 2, 2)": {
+        "dimension_multiplicity": 29360128,
+        "converse_trace": 24576,
+        "plus": 14692352,
+        "minus": 14667776
+      },
+      "(2, 2, 2, 1, 1)": {
+        "dimension_multiplicity": 58720256,
+        "converse_trace": -16384,
+        "plus": 29351936,
+        "minus": 29368320
+      },
+      "(2, 2, 1, 1, 1, 1)": {
+        "dimension_multiplicity": 41943040,
+        "converse_trace": 16384,
+        "plus": 20979712,
+        "minus": 20963328
+      },
+      "(2, 1, 1, 1, 1, 1, 1)": {
+        "dimension_multiplicity": 14680064,
+        "converse_trace": -4096,
+        "plus": 7337984,
+        "minus": 7342080
+      },
+      "(1, 1, 1, 1, 1, 1, 1, 1)": {
+        "dimension_multiplicity": 2097152,
+        "converse_trace": 4096,
+        "plus": 1050624,
+        "minus": 1046528
+      }
+    }
+  }
+]

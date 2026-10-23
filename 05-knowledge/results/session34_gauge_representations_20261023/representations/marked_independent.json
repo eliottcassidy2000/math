@@ -1,0 +1,43 @@
+{
+  "marked_census": [
+    {
+      "n": 1,
+      "marked_objects": 1,
+      "twisted_fixed_count_histogram": {
+        "1": 1
+      }
+    },
+    {
+      "n": 2,
+      "marked_objects": 2,
+      "twisted_fixed_count_histogram": {
+        "0": 1,
+        "2": 1
+      }
+    },
+    {
+      "n": 3,
+      "marked_objects": 12,
+      "twisted_fixed_count_histogram": {
+        "0": 3,
+        "4": 3
+      }
+    },
+    {
+      "n": 4,
+      "marked_objects": 192,
+      "twisted_fixed_count_histogram": {
+        "0": 21,
+        "32": 3
+      }
+    }
+  ],
+  "paley7": {
+    "paths": 189,
+    "fixed_by_negative_reverse": 9,
+    "automorphism_orbits": 9,
+    "converse_trace_on_aut_orbits": 3,
+    "converse_plus_multiplicity": 6,
+    "converse_minus_multiplicity": 3
+  }
+}
