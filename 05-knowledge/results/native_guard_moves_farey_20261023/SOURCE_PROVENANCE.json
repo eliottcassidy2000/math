@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-23",
+  "initial_inherited_commit": "2489ccd2d9",
+  "incoming_reviewed_commits": [
+    "8efadb5d07",
+    "d9eca22ceb",
+    "53689348b0"
+  ],
+  "first_published_checkpoint": "0a36c32af8",
+  "scope": "Byte-pinned inputs; inherited sources are used only in the scopes stated in README and audits.",
+  "inherited_sha256": {
+    "05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+    "05-knowledge/results/metagraph_order8_20261023/owner_map.u16.gz": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a",
+    "05-knowledge/results/metagraph_order8_20261023/merged_edges.tsv.gz": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a",
+    "05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json": "d8ef442adbe0261bf8ae9892db925e220bd35bd67546d2933d1ab7b2f1c8f0d4",
+    "05-knowledge/results/metagraph_hall_bott_20261023/README.md": "ae86e09accef472e284e976f4c9b975bf405347ee60e4cb8cf835c3984fdda6a",
+    "05-knowledge/results/hamiltonian_observer_restrictions_20261023/compiler/README.md": "80916b65ea984a480dd0edbfb503b15ed7c624608a1cd5b49ece451ba07f4c3d",
+    "05-knowledge/results/hamiltonian_observer_restrictions_20261023/coupling/RESTRICTIONS.md": "712cd12bcba2de1b32231876e8832aae11fb3a96beaa099ad5729cdc873a36da",
+    "05-knowledge/results/hamiltonian_observer_restrictions_20261023/coupling/NATIVE_CONNECTEDNESS.md": "fb84548153d1a2157435a7d63f40b228c41277cb531575f68b871bd18fa8ec55",
+    "05-knowledge/results/session43_observers_phase_guards_20261023/native-branch-width/THEOREM.md": "71a2296fa95a9b456da3e9b8e99df9a75d1a9525899bca57c23c9bdfbcac61aa",
+    "05-knowledge/results/session43_observers_phase_guards_20261023/native-complexity/THEOREM.md": "fba1e9a1a1fbd46004168c5f427f8f202ce429253ba5385fe6bb9ac6a2ba1d6f",
+    "05-knowledge/results/session43_observers_phase_guards_20261023/cyclotomic-lattice/NOTE.md": "611160ea28fd087a94a8f156021383234038d47f89cd5ffa488d03f3c93e2fd0",
+    "05-knowledge/results/shared_frame_restrictions_20261023/RETURN_COST.md": "21a01ede51af495c0d675f6e8fdce1cdfaa451aee73b2417d627e8b856617a9b",
+    "05-knowledge/results/shared_frame_restrictions_20261023/RESTRICTIONS.md": "d821a9da5100f204c5e5c840569040e7950627b0a6ea4188c095243d8cb22f02",
+    "01-canon/theorems/THM-4057-stern-brocot-depth-pullback-and-rational-edge-tournament-gauge.md": "5ddfc01ae446f3d20e5d8a9ce362c76c072da07745c1c405fe882173efcda4f5",
+    "01-canon/theorems/THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md": "68d2b2d69316a07e3939471ffc753196b090a261b21526acc1f7cd15d5cc0391",
+    "05-knowledge/results/ternary_berggren_20260925.md": "23b3c7098884da81a7dcb24fb2bed6c51a9815ef25fd0ee9ac46d45b84425e44",
+    "05-knowledge/results/procgen_repunit_20260924_digits_rotation_repunits.md": "838838929a5d7d8d988750ce48f12fbc8b4ce2e825095c3562051432f1c1b55e",
+    "05-knowledge/results/procgen_tension_20260926_ranks_christoffel_duality.md": "3166d48db0366f9b8ea3b55d5282d2ef03cc670faf784f500c5381eba5687584",
+    "05-knowledge/results/one_twenty_eight_atlas_balance_gold_20261014.md": "d9224629ff36572fe0a81b715ba64cb98d199ec1a2cf956c1b54ba0291578100",
+    "05-knowledge/results/odd_square_20260921_edges.md": "3e13bfeb2cc06584ecaee94ff5ef334df448d93cc987dbeb642c60fbf5cf3da8",
+    "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n3.json": "a89c55cafcc7d7169bb06988ce0aece9b5d3443a8af7c5a516a6878154a16a4d",
+    "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n4.json": "495dc4b893ecde6f90a06c39f0614f759e9d4ce79def05175ac1fe18cf952583",
+    "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n5.json": "4ce7be5999eba12343833aee77dcc90e1423ef40fdfcb11535c21c14e7fc2a0a",
+    "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n6.json": "0449c0ba6fba2e7a6f18e2c81c1fb155d5faa50eeee630a0764f495877f37d60"
+  }
+}

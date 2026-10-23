@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-23 — balanced electrical blocks: aggregate capacity does not supply distinct ports
+
+- **Affected proposal:** an unpublished doubling test for the two new native order-eight selected-port rectangles. No false realization theorem was published.
+- **First failed implication:** doubling a balanced Laplacian update can cancel a higher dyadic defect and keep nonnegative even aggregate edge weights, yet fail to admit enough distinct actual path witnesses.
+- **Literal witness:** in the original source 1238, target 2843 has exactly one actual Hamiltonian path; target 2762, in the other rectangle, also has exactly one. Two selected observer/converse pairs cannot both use that unique ordinary-source path. The stronger rectangle's doubled shadow passes modulus128, but its literal distinct-port capacity is one.
+- **Repair / strongest survivor:** the unit paired rectangles are authenticated, preserve actual endpoint/arc pins, black type, source/target counts and original mod8 phases, and have exact higher defects. Their paired aggregate guards persist through moduli16 and64 respectively. Each rectangle has absolute admissible amplitude at most one in the declared distinct-port menu; their disjoint target debts require amplitudes divisible by four for modulus256. No nonzero combination of these two blocks closes that debt.
+- **Missing coordinate / next question:** retain an injective assignment of selected paths, not only edge multiplicity or phase sums. Search additional target rectangles and compatible shared-pin matchings. This finite obstruction does not rule out larger native blocks. [Proof and exact witnesses](../05-knowledge/results/native_guard_moves_farey_20261023/native_moves/NATIVE_GUARDED_MOVES.md); [independent audit](../05-knowledge/results/native_guard_moves_farey_20261023/farey/AUDIT_NATIVE_MOVES.md).
+
 ## 2026-10-23 — observer descent and selection: missing boundary and retained gauge
 
 - **Affected drafts:** the unpublished strong-four descent argument and selector paragraph in `hamiltonian_observer_restrictions_20261023`. No incorrect theorem was published.

@@ -2,6 +2,8 @@
 
 23 October 2026. Status: **PROVED** statements on the explicitly declared carriers below, with **FINITE-EXACT** controls and independent audits. The all-size native tournament-metagraph wiring rule remains **OPEN**. The native incidence coupling, the automorphism-frame graph, and the auxiliary return chain are three different graphs/operators.
 
+Follow-up: [the actual guard and coupled-move packet](../native_guard_moves_farey_20261023/README.md) proves that the original electrical phase is constant on the automorphism kernels considered here, measures its larger dependence on complete path fibres, and authenticates target-changing pinned moves and balanced selected-port rectangles. It resolves that kernel-specific guard obligation while keeping the broader native wiring and higher-character obligations open.
+
 ## 1. A Hamiltonian path is an observer, with a retained choice
 
 Every finite tournament has a directed Hamiltonian path. The elementary insertion proof constructs one: given a path through all but `v`, insert `v` before the first path vertex it beats; the preceding vertex, if any, beats `v`. If it beats no vertex, append it. The new consecutive arcs are directed correctly. This is the standard existence mechanism, not a new theorem of this session.
