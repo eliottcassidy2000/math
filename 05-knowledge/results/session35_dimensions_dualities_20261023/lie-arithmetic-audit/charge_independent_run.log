@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "independent_method": "binomial quadratic-field expansion, not producer recurrence",
+  "max_exponent": 80,
+  "moments_through_degree": 20,
+  "first_charges": [
+    "1",
+    "38/5",
+    "1007/50",
+    "12413/500",
+    "82517/5000",
+    "216353/50000"
+  ],
+  "exact_checks": [
+    "norm",
+    "denominator including m=1",
+    "square class via explicit imaginary coordinate",
+    "strict interval",
+    "distinctness",
+    "charge recurrence",
+    "doubling identity",
+    "Laurent constant moments",
+    "lag-one correlation"
+  ],
+  "analytic_proof_review": [
+    "infinite order",
+    "Gelfond-Schneider angle ratio",
+    "consecutive-index geometric sums",
+    "cosine pushforward arcsine density",
+    "fixed-lag covariance"
+  ],
+  "not_certified_by_finite_tests": [
+    "equidistribution",
+    "transcendence",
+    "all-index denominator"
+  ]
+}

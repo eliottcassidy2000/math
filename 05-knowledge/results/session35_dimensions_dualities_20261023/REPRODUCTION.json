@@ -1,0 +1,413 @@
+{
+  "status": "PASS",
+  "completed_scripts": 21,
+  "executions": 42,
+  "rows": [
+    {
+      "script": "session35-root/check_dimension_positivity.py",
+      "source_sha256": "98fb9eb105f4834dc889c48051c00ed6130b4dfd13c820626218e410b4ae1e5c",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "18eb4f3ed0a286f0435d2a2ece95800c2d1d566a8b658465c93ddc330e4b11ff",
+          "seconds": 0.404
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "18eb4f3ed0a286f0435d2a2ece95800c2d1d566a8b658465c93ddc330e4b11ff",
+          "seconds": 0.486
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-root/check_singer_heisenberg.py",
+      "source_sha256": "14e2559615ab9a936e9dce71e5453b9fecf0501e7b9a21eb8c688d0fc0b0b1b5",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "1d9d32aa3b7742439fb4721c8c585406f327b5fcd1dbb5092ec48649358ad093",
+          "seconds": 0.377
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "1d9d32aa3b7742439fb4721c8c585406f327b5fcd1dbb5092ec48649358ad093",
+          "seconds": 1.846
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-root/check_actual_tournament_lift.py",
+      "source_sha256": "75f35ab96ca9f6049c58703c43b556ecd9d59ee6e09def8e3dead303d14a3d99",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "c4b39e79d44775575d124e9bae6f1a958bc2824b82b99d56a046dce5fc17abd7",
+          "seconds": 0.024
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "c4b39e79d44775575d124e9bae6f1a958bc2824b82b99d56a046dce5fc17abd7",
+          "seconds": 0.071
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-root/scan_marked_spectra.py",
+      "source_sha256": "2d3e4637f16cf4749c3c24fc63547358578363dced1ef37561ff018b610bead0",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "52e3a2f453e3a901410f36c4c2c3a3a5d8ec6533b701d937df3143251d8ee3e9",
+          "seconds": 4.521
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "52e3a2f453e3a901410f36c4c2c3a3a5d8ec6533b701d937df3143251d8ee3e9",
+          "seconds": 4.547
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-lie/exact_checks.py",
+      "source_sha256": "141d90cbf0f26c3196565975a640b76eb664c311cecfaaea322a5e0f5545e30b",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "1aa6689f5193d8dccf02889cd2966622011c9346cd5a92472296953d315e53ff",
+          "seconds": 0.036
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "1aa6689f5193d8dccf02889cd2966622011c9346cd5a92472296953d315e53ff",
+          "seconds": 0.089
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-lie/completion_checks.py",
+      "source_sha256": "5218c7e883922b420c2f92f8d446dfecccfad683b7126551117bedf29823c09f",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "4e7854597fb797ba3329d6b4d92ed930a1282fe7346dbd3faf45ba83fec7cec9",
+          "seconds": 0.024
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "4e7854597fb797ba3329d6b4d92ed930a1282fe7346dbd3faf45ba83fec7cec9",
+          "seconds": 0.09
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-lie/equality_checks.py",
+      "source_sha256": "c084ebef99ed3b6a65d71773d4f97126a6c42629aa9fa9c27e75c8fe0c6b7989",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "2aae2a42a3da7fb7cdee705d2e23c5f4e39efbd1b99b517cbebba2a7820bfe66",
+          "seconds": 0.03
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "2aae2a42a3da7fb7cdee705d2e23c5f4e39efbd1b99b517cbebba2a7820bfe66",
+          "seconds": 0.115
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-lie/ungraded_checks.py",
+      "source_sha256": "73b611a877b7b54948947cf168132f1e07c09898867d244d951e1bfccab1d10f",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "d19e5328cadec16e9a7faf7f690f93f70da7f753e17969b9d42c59c2f69123a7",
+          "seconds": 0.024
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "d19e5328cadec16e9a7faf7f690f93f70da7f753e17969b9d42c59c2f69123a7",
+          "seconds": 0.141
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-lie/coulomb_checks.py",
+      "source_sha256": "b18003950ecce27498db2b813d96403a8adc14fb47459d4f16bec6c398088d4f",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "399233cb71d8fff7ad43f33a39955ba5765809ba66aca45c4a9191355ba01a78",
+          "seconds": 0.045
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "399233cb71d8fff7ad43f33a39955ba5765809ba66aca45c4a9191355ba01a78",
+          "seconds": 0.102
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-lie/powering_checks.py",
+      "source_sha256": "03653360aed06e4514a4c3601131396496ed421842c98f3ca6aeb119ae1b5ba0",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "d562c53b522b791d1b71a25bd8bd5b2deb169213a1a57fefe8e6e738ce00ebb4",
+          "seconds": 0.427
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "d562c53b522b791d1b71a25bd8bd5b2deb169213a1a57fefe8e6e738ce00ebb4",
+          "seconds": 0.092
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-arithmetic/check.py",
+      "source_sha256": "d7a16dc47aa72e52ae2d391ddae25975a285262be7c48cef42fb9524afb6d23e",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "5cb28c22f61a0a856c015ac932a4c675ddbae6b8e1edeee27ee99ab8593d8f5d",
+          "seconds": 0.103
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "5cb28c22f61a0a856c015ac932a4c675ddbae6b8e1edeee27ee99ab8593d8f5d",
+          "seconds": 0.166
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-arithmetic/check_singer.py",
+      "source_sha256": "69b5f2545c6159c03c52c31ee840f47ebf68492c78b45b499308fd45ab6bd2e3",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "31f945573ff12cca51efe4703e96c7b57aaf299833439b0b2943c9f155d4eaac",
+          "seconds": 0.312
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "31f945573ff12cca51efe4703e96c7b57aaf299833439b0b2943c9f155d4eaac",
+          "seconds": 0.353
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-arithmetic/check_goodcuts.py",
+      "source_sha256": "ad3d16df5c656d521b0088d36b8a312ba4905bee046141c7b06d0169d6a06869",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "f88b8d0f6ae5ca3fc0278464edc26f1e10d2d65b43e9d1d41daa15253954a490",
+          "seconds": 0.978
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "f88b8d0f6ae5ca3fc0278464edc26f1e10d2d65b43e9d1d41daa15253954a490",
+          "seconds": 1.098
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-recursions/check.py",
+      "source_sha256": "c8ae4071f9a1db4aa1d3d4bf9d58c343b5277cf43c89b234cee94817e4b08f83",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "12af5b63a29181f7eaeb3d536db2a4716552b90a1aa2280fe8f02404019dae21",
+          "seconds": 1.053
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "12af5b63a29181f7eaeb3d536db2a4716552b90a1aa2280fe8f02404019dae21",
+          "seconds": 2.601
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-recursions/collision.py",
+      "source_sha256": "1cf019e37d8ee56b969790ed7bbf0fb91497ff043f4e2485996c653caa7865c2",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "0039e28c381c0b7e8e64445c411a2b8dd209f3459c1e35718c33336dab3d953f",
+          "seconds": 1.558
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "0039e28c381c0b7e8e64445c411a2b8dd209f3459c1e35718c33336dab3d953f",
+          "seconds": 3.353
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-recursions/augmentation.py",
+      "source_sha256": "c0828455486925d0a2d8d4236195297ea2facc7f0a291374fdaae2bf41480387",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "d38b73d2f7829c6b4d8bc985aebbbdddf7fb00ec4db05a1e475b77f60e19c83f",
+          "seconds": 0.264
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "d38b73d2f7829c6b4d8bc985aebbbdddf7fb00ec4db05a1e475b77f60e19c83f",
+          "seconds": 1.876
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-recursions/augmentation7.py",
+      "source_sha256": "3fb15d1e7ccf1e04a8d837ca8e4556d807e7acefd24e8a92397cacbbe6b719d4",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "8a79718cbe11632847e3baf514f344d642ed9ddcf1556e519e1dd199358124a6",
+          "seconds": 1.564
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "8a79718cbe11632847e3baf514f344d642ed9ddcf1556e519e1dd199358124a6",
+          "seconds": 2.997
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-recursions/fano_paths.py",
+      "source_sha256": "a237a58fb8b337c93859349406a3a3418414f473251552d06f5107a595fc5e77",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "44b6317f1c0b6cd0d0320c4f86e3af271e81d911f3dccf4fc20425cff7b15382",
+          "seconds": 0.145
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "44b6317f1c0b6cd0d0320c4f86e3af271e81d911f3dccf4fc20425cff7b15382",
+          "seconds": 0.181
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-zeta/check.py",
+      "source_sha256": "a214029ef0567ef1efe24e1e11b928839696882569278eba0acec61b0aa56f13",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "aa63b0b3e4855c8d186d036da47738897b3cfa0cbbab728da3bfc34c705f40bf",
+          "seconds": 2.08
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "aa63b0b3e4855c8d186d036da47738897b3cfa0cbbab728da3bfc34c705f40bf",
+          "seconds": 2.318
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-zeta/CONFERENCE_COLLAPSE.py",
+      "source_sha256": "62a87ff7672d3eb50d01f649d274a91ae19dd0e36ebb287f1553322a93d3f08d",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "7f0f6609a58c96099bbb22fd4aa0ba06998e4bd1421efcd9ddfba4e730e34c14",
+          "seconds": 0.368
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "7f0f6609a58c96099bbb22fd4aa0ba06998e4bd1421efcd9ddfba4e730e34c14",
+          "seconds": 1.887
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    },
+    {
+      "script": "session35-charge-dynamics/checks.py",
+      "source_sha256": "20e89a881f4633993397251399f41f428ed5bf786da3c5b034c5536af744df8b",
+      "runs": [
+        {
+          "optimized": false,
+          "exit": 0,
+          "stdout_sha256": "f1266ee9c71a89911063a13431a8da1f26a09261c7fdf4be4c4736019a4243c8",
+          "seconds": 0.035
+        },
+        {
+          "optimized": true,
+          "exit": 0,
+          "stdout_sha256": "f1266ee9c71a89911063a13431a8da1f26a09261c7fdf4be4c4736019a4243c8",
+          "seconds": 0.101
+        }
+      ],
+      "optimized_note": "normal validation plus output stability; bare assertions, if present, are not active under -O"
+    }
+  ],
+  "scope": "Local original-source-layout replay of producer scripts. This is not a Git publication receipt. Source and stdout hashes are recorded; independent audits are separate.",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  }
+}

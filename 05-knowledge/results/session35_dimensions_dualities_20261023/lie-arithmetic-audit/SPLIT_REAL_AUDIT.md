@@ -1,0 +1,11 @@
+# Independent split-real corollary audit
+
+Status: PASS, major errors0. Source: session35-lie/SPLIT_REAL_COROLLARY.md. This is separate from the frozen complex ungraded audit. No Git mutation.
+
+The specified real56 is the split real fundamental representation whose complexification is irreducible. Absolute irreducibility is therefore available, not inferred for arbitrary real E7 forms. Complexifying a real injective Lie map and a nondegenerate invariant symmetric form preserves both conditions and real/complex dimension. Hence the complex theorem supplies the lower bound and, at equality, L_C=E8.
+
+The centralizer is the kernel of finitely many linear adjoint maps, so scalar extension commutes with it. It has real dimension3. Similarly the real multiplicity space Hom_s(V_R,L_R) has dimension2, and End_s(V_R)=R because its complexification is the scalar complex endomorphism algebra. Real complete reducibility and the same invariant-pairing argument give the nondegenerate alternating multiplicity form. The action T_R→sp2(R) complexifies to the faithful isomorphism already proved; hence it is faithful and dimension3 forces it to be onto. A compact centralizer cannot satisfy this representation requirement.
+
+Choose the split Cartan of embedded E7(7) and a split Cartan line in this commuting sl2(R). Their intersection is zero because the simple E7 algebra has zero center. In finite-dimensional representations of a split real semisimple algebra, the split Cartan acts real-diagonalizably; this also follows by complexifying the weight decomposition, whose weights on the split Cartan are real. Commuting real-diagonalizable operators admit simultaneous real diagonalization. Thus their direct sum is an8-dimensional split toral subalgebra of L_R. Since its complexification is E8 of rank8, full real split rank proves L_R is the split real form E8(8). This argument does not depend on an unaudited table of all real forms.
+
+The split Chevalley contact grading supplies existence and a nondegenerate real Killing form. Therefore minimum248 and unique ambient real isomorphism type E8(8) hold for the specified split original algebra, without a grading hypothesis. Arbitrary real E7 forms, marked embeddings and metric normalization remain outside the assertion.

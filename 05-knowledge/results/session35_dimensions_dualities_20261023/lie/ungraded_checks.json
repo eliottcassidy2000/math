@@ -1,0 +1,25 @@
+{
+  "paired_lower_bound": 247,
+  "proved_minimum": 248,
+  "isotropic_restriction_bound": 380,
+  "centralizer_dimensions_at_candidates": [
+    2,
+    3
+  ],
+  "multiplicity_module_dimension": 2,
+  "sl2_relations_verified": true,
+  "symplectic_multiplicity_action_verified": true,
+  "automatic_grading_dimensions": {
+    "-2": 1,
+    "-1": 56,
+    "0": 134,
+    "1": 56,
+    "2": 1
+  },
+  "same_H57_symplectic_control": {
+    "levi": 1596,
+    "semidirect": 1653,
+    "completion": 1711
+  },
+  "scope": "Exact matrix/dimension controls only; abstract proof in UNGRADED_METRIC_COMPLETION.md."
+}

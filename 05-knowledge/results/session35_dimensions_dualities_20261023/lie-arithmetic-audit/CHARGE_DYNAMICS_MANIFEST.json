@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "major_errors": 0,
+  "report": "CHARGE_DYNAMICS_AUDIT.md",
+  "files": {
+    "session35-charge-dynamics/ELLIPTIC_CHARGE_DYNAMICS.md": "4fa73a99130195096456f974dd6bcd461a29279effc3f1cf8b3b73091326d7dc",
+    "session35-charge-dynamics/checks.py": "20e89a881f4633993397251399f41f428ed5bf786da3c5b034c5536af744df8b",
+    "session35-charge-dynamics/checks.json": "f1266ee9c71a89911063a13431a8da1f26a09261c7fdf4be4c4736019a4243c8"
+  },
+  "independent_check": "charge_independent_checks.py",
+  "receipt": "charge_independent_receipt.json",
+  "scope": "Consecutive positive integer powers; no dyadic genericity, VOA realization or positive-real mirror interpretation."
+}

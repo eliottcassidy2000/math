@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "major_errors": 0,
+  "source": "session35-lie/SPLIT_REAL_COROLLARY.md",
+  "sha256": "dfe960e6eb48b15f2a72fb6749a0245d404618be8ca6113ff99187680b297438",
+  "report": "SPLIT_REAL_AUDIT.md",
+  "scope": "Specified split real E7(7) and absolutely irreducible real56 only; no general real-form classification."
+}

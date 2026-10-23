@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "major_errors": 0,
+  "scope": "Ungraded complex completion theorem, automatic grading, and classical constructive controls through section10. Excludes later real-form addenda.",
+  "hashes": {
+    "session35-lie/UNGRADED_METRIC_COMPLETION.md": "c654e06ea78273c716a024f29d2957da72ae4bd8f73f9e4bca4e5590f7a357d2",
+    "session35-lie/ungraded_checks.py": "73b611a877b7b54948947cf168132f1e07c09898867d244d951e1bfccab1d10f",
+    "session35-lie/ungraded_checks.json": "d19e5328cadec16e9a7faf7f690f93f70da7f753e17969b9d42c59c2f69123a7"
+  },
+  "report": "UNGRADED_AUDIT.md",
+  "independent_checks": "ungraded_independent_checks.py"
+}

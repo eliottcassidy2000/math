@@ -1,15 +1,14 @@
-# Session35: dimensions, arithmetic and tournament recursions
+# Session35: dimensions, dualities and observable completion
 
-Audited first checkpoint, 2026-10-23.
+Final audited synthesis: [SYNTHESIS](SYNTHESIS.md). [Reproduction receipt](REPRODUCTION.json).
 
-- [Dimension and positivity](DIMENSION_POSITIVITY_HORIZON.md): finite dimension positivity horizon and representation-theoretic controls.
-- [Lie and Virasoro dimensions](lie/RESEARCH_NOTE.md), with [homogeneous completion](lie/COMPLETION_ADDENDUM.md).
-- [Arithmetic](arithmetic/ARITHMETIC.md): 57, Blum/Leyland calculations and explicitly typed fibre correspondences.
-- [Tournament recursions](recursions/RESULT.md): exact extension/deletion closure. The marked skew pair is equivalent to the ordinary adjacency characteristic polynomial, not a stronger independent spectral invariant.
-- [Tournament zeta](zeta/RESULTS.md): primitive-cycle and spectral statements, with the Paley adjacency/skew normalization distinguished.
+- [Dimension positivity](DIMENSION_POSITIVITY_HORIZON.md) and [observable completion](OBSERVABLE_COMPLETION_SYNTHESIS.md).
+- [Ungraded metric completion](lie/UNGRADED_METRIC_COMPLETION.md), with independent audits in lie-arithmetic-audit.
+- [Arithmetic and 57](arithmetic/ARITHMETIC.md), including the [good-cut correction](arithmetic/GOOD_CUT_RECOVERY.md).
+- [Tournament recursion](recursions/RESULT.md) and [tournament zeta](zeta/RESULTS.md).
 
-Independent audits: [algebra](algebra-audit/AUDIT.md), [Lie/arithmetic](lie-arithmetic-audit/AUDIT.md), [zeta](zeta-audit/AUDIT.md).
+The packet retains proof scopes and independent audit reports. The marked skew pair equals the ordinary adjacency characteristic polynomial; it is not a stronger spectral invariant. Finite exact calculations and metric-Lie completion results do not establish continuum Yang–Mills mass gap or a new unitary VOA realization.
 
-Run checkers from this packet directory, for example `python3 lie-arithmetic-audit/independent_checks.py`; all included Python scripts are standalone checks. Python dependencies include SymPy. Run normally for assertion-based checks; `python3 -O` establishes output stability but disables Python assertions. Explicit exception checks remain active. Audit MANIFEST paths are relative to this packet.
+Run standalone Python checkers from this packet directory. SymPy is required by some checks. Normal-mode assertions provide validation; optimized runs establish output stability for assertion-based scripts, whereas explicit exceptions remain active. Audit output paths have been made packet-relative without changing mathematics. Original manifest source paths record the authoring layout.
 
-This checkpoint excludes evolving collision/Singer addenda and all unapproved attachment-derived work. Finite exact calculations and conditional constructions do not establish a continuum Yang–Mills mass gap, unitary VOA realization, or a new independent invariant.
+No input PDFs, attachment-derived private critiques, or previously withheld audit materials are included.

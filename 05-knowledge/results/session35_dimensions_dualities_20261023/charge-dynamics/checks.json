@@ -1,0 +1,36 @@
+{
+  "status": "PASS_FINITE_EXACT",
+  "max_exponent": 150,
+  "first_charges": [
+    "1",
+    "38/5",
+    "1007/50",
+    "12413/500",
+    "82517/5000",
+    "216353/50000",
+    "845477/500000",
+    "57473993/5000000"
+  ],
+  "checks": [
+    "quadratic field norm and trace",
+    "integer recurrence",
+    "strict open interval",
+    "reduced denominator 10^m/2",
+    "pairwise distinct finite values",
+    "charge affine recurrence",
+    "nonzero discriminant U identity",
+    "P2 maps exponent m to 2m",
+    "hostile finite-order c=13"
+  ],
+  "proof_only_not_computationally_certified": [
+    "infinite multiplicative order",
+    "angle/pi transcendence by Gelfond-Schneider",
+    "all-integer arcsine limiting law",
+    "all-index denominator and square-class statements"
+  ],
+  "not_claimed": [
+    "specific doubling orbit density or equidistribution",
+    "intermediate-E7.5 VOA realization",
+    "positive real mirror interpretation"
+  ]
+}
