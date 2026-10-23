@@ -1,0 +1,10 @@
+{
+  "commit": "91fc07698b9a5089457844f6c72a94ccd1529c6c",
+  "scope": "Bounded source/proof inspection only; not full certificate replay.",
+  "files": {
+    "05-knowledge/results/guarded_coverage_20261023/CUBES.md": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034",
+    "05-knowledge/results/guarded_coverage_20261023/PORTS.md": "7edb7e7bf542d7bcf5e0cf9d4724e6c2b758537f2d3f4c27d3f486c3a3f94d47",
+    "05-knowledge/results/guarded_coverage_20261023/LIFTING.md": "b96ea8183715bfc3d206909f7a4aca699e64aeda22a8d847b45b74488d7b7854",
+    "05-knowledge/results/guarded_coverage_20261023/SYNTHESIS.md": "543ad38a202b1863fe6b18513b2feec061f7fd88c12fb4c4ae48f56a82d75558"
+  }
+}

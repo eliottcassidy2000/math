@@ -1,0 +1,240 @@
+{
+  "status": "PASS",
+  "scope": "Final prose and underlying proof/audit review pins. Commit identifiers are parent-supplied provenance.",
+  "files": [
+    {
+      "base": "bundle",
+      "path": "SYNTHESIS.md",
+      "bytes": 15300,
+      "sha256": "80b1bd02ec47494832c81da8fcde92e718dedac41d29c0b9464adff9492f74cc"
+    },
+    {
+      "base": "bundle",
+      "path": "README.md",
+      "bytes": 2819,
+      "sha256": "0c80da50fb1b072897fbbb411f477c9514b1d054be939aa59bbf9688a9a57066"
+    },
+    {
+      "base": "bundle",
+      "path": "RESEARCH_MAP.md",
+      "bytes": 6527,
+      "sha256": "fefe34360336810ca5cf9cc9614c8f674864007fdc793cc2506998a1e63421dd"
+    },
+    {
+      "base": "bundle",
+      "path": "dyadic-constraints/THEOREM.md",
+      "bytes": 14575,
+      "sha256": "d6efea63d4ad34b6dac89dae3c32c043115450ea2f4895a5f4699dce327f66a8"
+    },
+    {
+      "base": "bundle",
+      "path": "dyadic-constraints/SOURCE_PINS.json",
+      "bytes": 1419,
+      "sha256": "f448d8311d629bdca88bc04c627fc256e1659170609de2382a313d4a521d3221"
+    },
+    {
+      "base": "bundle",
+      "path": "dyadic-constraints/MANIFEST.json",
+      "bytes": 2482,
+      "sha256": "946f1af382dc8d2aab2bf40d1c7f786cbbe5de4a720d539888c113b574b902b3"
+    },
+    {
+      "base": "bundle",
+      "path": "multisource-trades/THEOREM.md",
+      "bytes": 15390,
+      "sha256": "e3de4f8946e99d3f7d45d2b68cf1c931d995d6303cc41f73acc5c4d5b18778e3"
+    },
+    {
+      "base": "bundle",
+      "path": "multisource-trades/SOURCE_PINS.json",
+      "bytes": 888,
+      "sha256": "f927d3d0ba0a103a467e865d44e2db52b35a78666b5aaf2de43df8683b6c57ce"
+    },
+    {
+      "base": "bundle",
+      "path": "multisource-trades/MANIFEST.json",
+      "bytes": 2556,
+      "sha256": "b3f086b3b447b1c95f0a869d55fc902a47ae59f076843538a447599476b0df02"
+    },
+    {
+      "base": "bundle",
+      "path": "source-circuits/THEOREM.md",
+      "bytes": 10890,
+      "sha256": "9b86c39ff766012f7dc72b667fdc89c888dd5ce26aeacc81909a6ad1de3cae2d"
+    },
+    {
+      "base": "bundle",
+      "path": "source-circuits/SOURCE_PINS.json",
+      "bytes": 946,
+      "sha256": "f50085f06d9bc1bd5edeebf91962eeb41705a1110be1bc94a29af787785b0913"
+    },
+    {
+      "base": "bundle",
+      "path": "source-circuits/MANIFEST.json",
+      "bytes": 3459,
+      "sha256": "8b1be49210d23ae8f24943fe36a89389438aeb20154a4d306b977d702d18c07b"
+    },
+    {
+      "base": "bundle",
+      "path": "injective-completion/THEOREM.md",
+      "bytes": 25546,
+      "sha256": "4268616ccb2432c999c5827e227ab4658ba4ad48d10c0aba11309336d96ca3ea"
+    },
+    {
+      "base": "bundle",
+      "path": "injective-completion/SOURCE_PINS.json",
+      "bytes": 1853,
+      "sha256": "ab5cc3d5d50b88b1bab72decd7f37db401ae92fcbdbe3ac732039f62aa8104ec"
+    },
+    {
+      "base": "bundle",
+      "path": "injective-completion/MANIFEST.json",
+      "bytes": 3416,
+      "sha256": "c9a9b5cc70ceda71285e1f3125b85d8c3b1c18127bb0d0a3c17339862b04abf3"
+    },
+    {
+      "base": "bundle",
+      "path": "balanced-circuits/THEOREM.md",
+      "bytes": 15231,
+      "sha256": "130ad9f105e174b1689a4879177ce479fed924c075837e9cb06b832bed1ab8e2"
+    },
+    {
+      "base": "bundle",
+      "path": "balanced-circuits/SOURCE_PINS.json",
+      "bytes": 1568,
+      "sha256": "109e5347b27177a5fb8d9b2de8de84b18d28d522218794e4d2e7acb711c370b6"
+    },
+    {
+      "base": "bundle",
+      "path": "balanced-circuits/MANIFEST.json",
+      "bytes": 3149,
+      "sha256": "23d81130206f0ffe8da6659478e6bc81e3ad5fa1032afd84ce9eda4697212d28"
+    },
+    {
+      "base": "bundle",
+      "path": "audit-dyadic/AUDIT.md",
+      "bytes": 9622,
+      "sha256": "a280f561fcea18934e214f487d4cc6755b5616f25425017e292baa8b5cbcec29"
+    },
+    {
+      "base": "bundle",
+      "path": "audit-dyadic/MANIFEST.json",
+      "bytes": 1550,
+      "sha256": "0dfb1fb6df9680943cb6285d7dde33bbdc77d01ce1d1c4c57f72e39665f58ff9"
+    },
+    {
+      "base": "bundle",
+      "path": "audit-completion/AUDIT.md",
+      "bytes": 13553,
+      "sha256": "1f7b7dd31c833cf2fc5bfd0f107481b8ef89f2f680e4da0b5177abe54925b31c"
+    },
+    {
+      "base": "bundle",
+      "path": "audit-completion/MANIFEST.json",
+      "bytes": 3131,
+      "sha256": "b860dbd121fb33132cd10070b6d673f4fd5e39af01ad488a7de2a60981971d7d"
+    },
+    {
+      "base": "bundle",
+      "path": "audit-large-circuits/AUDIT.md",
+      "bytes": 12717,
+      "sha256": "48dc6caf81ba3cb9047c5ba216934c44bcfd71f3bfbc80f5f70ee63120e934f4"
+    },
+    {
+      "base": "bundle",
+      "path": "audit-large-circuits/MANIFEST.json",
+      "bytes": 11086,
+      "sha256": "c8b228f3ddb7f80caa4a675b06730448b248309094b71633d86f2d6e92f348c1"
+    },
+    {
+      "base": "bundle",
+      "path": "incoming-integration/INTEGRATION.md",
+      "bytes": 8219,
+      "sha256": "79fd35410c12cfc528e74182f83f61776913ecb304d596505f33f311418f6b6c"
+    },
+    {
+      "base": "bundle",
+      "path": "incoming-integration/WORKSPACE_BOUNDARY.md",
+      "bytes": 5658,
+      "sha256": "dc19e7b6057117b6d8b09139b131dd82bce6a83c0682916b1a716d2f2505b2ca"
+    },
+    {
+      "base": "bundle",
+      "path": "incoming-integration/SOURCE_PINS.json",
+      "bytes": 1030,
+      "sha256": "5df43e6487323c082f62f5dcdc3685b323f6e8c22c3441d9e5aeea961845f77e"
+    },
+    {
+      "base": "bundle",
+      "path": "incoming-integration/WORKSPACE_SOURCE_PINS.json",
+      "bytes": 687,
+      "sha256": "bf6dc05c6406da42f68e1bdd1ebfdd726d734d6b25b400e3c4167a0602a95d0f"
+    },
+    {
+      "base": "bundle",
+      "path": "incoming-integration/MANIFEST.json",
+      "bytes": 662,
+      "sha256": "2f3a77511c8fe2e1f506bea2c922529f1246630b53b9422eeb84a7643181e9b0"
+    },
+    {
+      "base": "repo",
+      "path": "05-knowledge/results/guarded_native_routing_20261023/PORT_PERMUTATIONS.md",
+      "bytes": 6607,
+      "sha256": "5c28d20770c00022e990c6aebf91c0926cc70c0fa3b1a17cd4ee170d0a02c8b0"
+    },
+    {
+      "base": "repo",
+      "path": "05-knowledge/results/guarded_native_routing_20261023/CARRY_GAP.md",
+      "bytes": 9023,
+      "sha256": "87756a3a8e5e1bd67d081737c6a4eb691afe60c9b1b1c1f1bdb9fa7df4cbce49"
+    },
+    {
+      "base": "repo",
+      "path": "05-knowledge/results/injective_native_blocks_20261023/electrical/ELECTRICAL_CODES.md",
+      "bytes": 15164,
+      "sha256": "22641fbdff4a2900686a4afacf51a2a4e38a8c8a008327c198ac37e488448632"
+    },
+    {
+      "base": "repo",
+      "path": "05-knowledge/results/injective_native_blocks_20261023/assembly/BINARY_ASSEMBLY.md",
+      "bytes": 18306,
+      "sha256": "201ba7a4427ca88cef1ac494081497f81842fdb29618103ed8d781d176038e3e"
+    },
+    {
+      "base": "repo",
+      "path": "05-knowledge/results/injective_native_blocks_20261023/dyadic/TRANSPORT_LIFTS.md",
+      "bytes": 7489,
+      "sha256": "31011ed6cfcbd14ec6e2320bd839875998aca7e8ea313ac375ccf4eef0b996a5"
+    },
+    {
+      "base": "repo",
+      "path": "05-knowledge/results/injective_native_blocks_20261023/search/LARGER_CIRCUITS.md",
+      "bytes": 8248,
+      "sha256": "36e0b433ae2adf0ecc8034b35af3bfafd6b8753c7a79bea830d0aae7acc1fe03"
+    },
+    {
+      "base": "repo",
+      "path": "05-knowledge/results/guarded_coverage_20261023/CUBES.md",
+      "bytes": 9596,
+      "sha256": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034"
+    },
+    {
+      "base": "repo",
+      "path": "05-knowledge/results/guarded_coverage_20261023/PORTS.md",
+      "bytes": 10570,
+      "sha256": "7edb7e7bf542d7bcf5e0cf9d4724e6c2b758537f2d3f4c27d3f486c3a3f94d47"
+    },
+    {
+      "base": "repo",
+      "path": "05-knowledge/results/guarded_coverage_20261023/LIFTING.md",
+      "bytes": 6204,
+      "sha256": "b96ea8183715bfc3d206909f7a4aca699e64aeda22a8d847b45b74488d7b7854"
+    },
+    {
+      "base": "repo",
+      "path": "05-knowledge/results/guarded_coverage_20261023/SYNTHESIS.md",
+      "bytes": 9255,
+      "sha256": "543ad38a202b1863fe6b18513b2feec061f7fd88c12fb4c4ae48f56a82d75558"
+    }
+  ]
+}

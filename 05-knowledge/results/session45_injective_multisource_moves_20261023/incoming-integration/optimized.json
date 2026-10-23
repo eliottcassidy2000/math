@@ -1,0 +1,197 @@
+{
+  "status": "PASS",
+  "checks": 7063,
+  "shared_corner_tests": [
+    {
+      "rows": 1,
+      "columns": 1,
+      "matrices": 2
+    },
+    {
+      "rows": 1,
+      "columns": 2,
+      "matrices": 4
+    },
+    {
+      "rows": 1,
+      "columns": 3,
+      "matrices": 8
+    },
+    {
+      "rows": 2,
+      "columns": 1,
+      "matrices": 4
+    },
+    {
+      "rows": 2,
+      "columns": 2,
+      "matrices": 16
+    },
+    {
+      "rows": 2,
+      "columns": 3,
+      "matrices": 64
+    },
+    {
+      "rows": 3,
+      "columns": 1,
+      "matrices": 8
+    },
+    {
+      "rows": 3,
+      "columns": 2,
+      "matrices": 64
+    },
+    {
+      "rows": 3,
+      "columns": 3,
+      "matrices": 512
+    }
+  ],
+  "source_parity_reports": [
+    {
+      "sources": [
+        1238,
+        2242,
+        2246,
+        2315
+      ],
+      "augmented_rows": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "binary_kernel": [
+        0
+      ]
+    },
+    {
+      "sources": [
+        1425,
+        1921,
+        1477,
+        2837
+      ],
+      "augmented_rows": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "binary_kernel": [
+        0,
+        15
+      ]
+    },
+    {
+      "sources": [
+        1981,
+        2458,
+        2659
+      ],
+      "augmented_rows": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "binary_kernel": [
+        0,
+        5
+      ]
+    }
+  ],
+  "source_sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+  "scope": "Bounded independent tests of incoming arithmetic mechanisms, not a replay of all routing, assembly or wiring proofs."
+}

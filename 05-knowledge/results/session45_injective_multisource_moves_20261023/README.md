@@ -1,6 +1,8 @@
 # Session45: injective multi-source native moves
 
-Status: ACTIVE RESEARCH. This first checkpoint is not the session close-out.
+Status: audited research packet. See the synthesis for proved results, exact finite scopes and the remaining all-size obligations.
+
+Start with the [session synthesis](SYNTHESIS.md) and its [final scope audit](audit-synthesis/AUDIT.md).
 
 - [Dyadic charge compiler](dyadic-constraints/THEOREM.md): the full paired-black all-dyadic guard reduces to the exact finite group (Z/2)^4 plus Z/128 for the original order-eight network. Every shared physical row, binary cut and integer carry is retained.
 - [Independent charge audit](audit-dyadic/AUDIT.md): separate reconstruction of the original dyadic filtration and complete reduced harmonic banks, plus signed/overlapping-role tests.
@@ -18,4 +20,9 @@ Status: ACTIVE RESEARCH. This first checkpoint is not the session close-out.
 - [Six through sixteen-slot native circuits](balanced-circuits/THEOREM.md): complete six-clock pinned families, direct integer image witnesses, full resource injection and exact high-dyadic atomicity.
 - [Independent large-circuit audit](audit-large-circuits/AUDIT.md): all joint states, the sharp sixteen-support ceiling within the fixed twenty-option supply, lower-modulus routes and the Boolean projection boundary.
 
-The final synthesis and incoming-work comparison are still being integrated. No selected packet is promoted to a rewiring of the complete canonical atlas merely because it passes electrical tests.
+## Incoming work and remaining boundary
+
+- [Incoming algebra and native-state comparison](incoming-integration/INTEGRATION.md): independent shared-corner arithmetic controls and exact source-parity kernels, with bounded review of concurrent research.
+- [Workspace projection obstruction](incoming-integration/WORKSPACE_BOUNDARY.md): why extra resource vacancy can repair a capacity barrier without automatically paying a higher-current defect.
+
+No selected packet is promoted to a rewiring of the complete canonical atlas merely because it passes electrical tests. The complete all-size wiring classification remains open.

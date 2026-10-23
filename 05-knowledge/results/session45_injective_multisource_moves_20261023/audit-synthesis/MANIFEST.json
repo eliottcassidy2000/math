@@ -1,0 +1,48 @@
+{
+  "status": "PASS within stated scopes after prose/provenance corrections",
+  "independent_synthesis_checks": 946,
+  "bounded_integration_replay_checks": 7063,
+  "normal_optimized_identical": true,
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "bytes": 12640,
+      "sha256": "2e00712229a565f326e2f1dcef1e18b239e550c052318467f0055339c0460d60"
+    },
+    {
+      "path": "REVIEWED_INPUTS.json",
+      "bytes": 7903,
+      "sha256": "ae3f91c8ac53c99f64e53cd3ca8353ae98b91d360d3449eaa570927d144e2fc1"
+    },
+    {
+      "path": "check.py",
+      "bytes": 11056,
+      "sha256": "03ada548ae966328aabe14e5a769563f885264b1c69dac9ab6d09f2d143a34d0"
+    },
+    {
+      "path": "integration.normal.json",
+      "bytes": 2704,
+      "sha256": "79be2ca8873f03572a414d6b82b3dbe787e09885f55b2d397c7839dad92a39f4"
+    },
+    {
+      "path": "integration.optimized.json",
+      "bytes": 2704,
+      "sha256": "79be2ca8873f03572a414d6b82b3dbe787e09885f55b2d397c7839dad92a39f4"
+    },
+    {
+      "path": "normal.json",
+      "bytes": 4587,
+      "sha256": "1941359b0ef2c4aad3c0dd8d1716a2ff6f1ce540ea0059a0787865ce2c995f41"
+    },
+    {
+      "path": "optimized.json",
+      "bytes": 4587,
+      "sha256": "1941359b0ef2c4aad3c0dd8d1716a2ff6f1ce540ea0059a0787865ce2c995f41"
+    },
+    {
+      "path": "original-prose-hashes.json",
+      "bytes": 354,
+      "sha256": "4ba29dd09e70ea06941432f25352b66b9b5680bde59bfcaa47de9641df32d3d8"
+    }
+  ]
+}

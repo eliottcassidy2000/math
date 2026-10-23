@@ -1,0 +1,11 @@
+{
+  "review_scope": "Bounded read/proof integration plus stated independent arithmetic tests",
+  "files": {
+    "05-knowledge/results/guarded_native_routing_20261023/PORT_PERMUTATIONS.md": "5c28d20770c00022e990c6aebf91c0926cc70c0fa3b1a17cd4ee170d0a02c8b0",
+    "05-knowledge/results/guarded_native_routing_20261023/CARRY_GAP.md": "87756a3a8e5e1bd67d081737c6a4eb691afe60c9b1b1c1f1bdb9fa7df4cbce49",
+    "05-knowledge/results/injective_native_blocks_20261023/electrical/ELECTRICAL_CODES.md": "22641fbdff4a2900686a4afacf51a2a4e38a8c8a008327c198ac37e488448632",
+    "05-knowledge/results/injective_native_blocks_20261023/assembly/BINARY_ASSEMBLY.md": "201ba7a4427ca88cef1ac494081497f81842fdb29618103ed8d781d176038e3e",
+    "05-knowledge/results/injective_native_blocks_20261023/dyadic/TRANSPORT_LIFTS.md": "31011ed6cfcbd14ec6e2320bd839875998aca7e8ea313ac375ccf4eef0b996a5",
+    "05-knowledge/results/injective_native_blocks_20261023/search/LARGER_CIRCUITS.md": "36e0b433ae2adf0ecc8034b35af3bfafd6b8753c7a79bea830d0aae7acc1fe03"
+  }
+}
